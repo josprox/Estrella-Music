@@ -46,4 +46,22 @@
   <string name="current">Текущий</string>
   <string name="newString">Новый</string>
   <string name="link_copied">Скопированная ссылка</string>
+  <string name="customization">Настройка</string>
+  <string name="data_and_privacy">Данные и конфиденциальность</string>
+  <string name="about_the_app">О применении</string>
+  <string name="interface_">Интерфейс</string>
+  <string name="content_preferences">Контент предпочтения</string>
+  <string name="lyrics_sources">Источники письма</string>
+  <string name="downloads">Дессаргас</string>
+  <string name="clean">Чистый</string>
+  <string name="backup_info">Создайте файл резервного копирования, который включает ваш список воспроизведения, фавориты и конфигурацию приложения. Примите во внимание, что загруженные песни не являются частью этой копии.</string>
+  <string name="backup_desc">Держите свои списки, фавориты и настройки в файле, который вы можете безопасно хранить или перейти на другое устройство.</string>
+  <string name="restore_desc">Выберите файл резервного копирования, чтобы восстановить ваши данные. Текущие корректировки и списки будут заменены.</string>
+  <string name="testMode">Тестовый режим</string>
+  <string name="credits">Кредитос</string>
+  <string name="links">Ссылки</string>
+  <string name="update_info">Обновить информацию</string>
+  <string name="error_fetching_update">Ошибка получения деталей обновления</string>
+  <string name="latestVersion_is">Самая последняя версия: %1$s</string>
+  <string name="download_update">Скачать обновление</string>
 </resources>

@@ -19,7 +19,7 @@ import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.minimumInteractiveComponentSize
 import androidx.compose.material3.ripple
-import androidx.compose.material3.tokens.IconButtonTokens
+import androidx.compose.ui.unit.dp
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.remember
@@ -68,10 +68,13 @@ fun IconButton(
     interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
     content: @Composable () -> Unit,
 ) {
+    // Valor que reemplaza a IconButtonTokens.StateLayerSize
+    val iconButtonSize = 40.dp
+
     Box(
         modifier = modifier
             .minimumInteractiveComponentSize()
-            .size(IconButtonTokens.StateLayerSize)
+            .size(iconButtonSize)
             .clip(CircleShape)
             .background(color = colors.containerColor(enabled))
             .combinedClickable(
@@ -82,7 +85,8 @@ fun IconButton(
                 interactionSource = interactionSource,
                 indication = ripple(
                     bounded = false,
-                    radius = IconButtonTokens.StateLayerSize / 2
+                    // Y reemplazo aquí
+                    radius = iconButtonSize / 2
                 )
             ),
         contentAlignment = Alignment.Center

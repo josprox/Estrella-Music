@@ -45,4 +45,22 @@
   <string name="current">Current</string>
   <string name="newString">New</string>
   <string name="link_copied">Copied link</string>
+  <string name="customization">Customization</string>
+  <string name="data_and_privacy">Data and privacy</string>
+  <string name="about_the_app">About application</string>
+  <string name="interface_">Interface</string>
+  <string name="content_preferences">Content preferences</string>
+  <string name="lyrics_sources">Letter sources</string>
+  <string name="downloads">Descargas</string>
+  <string name="clean">Clean</string>
+  <string name="backup_info">Create a backup file that includes your playlist, favorites and app configuration. </string>
+  <string name="backup_desc">Keep your lists, favorites and settings in a file that you can safely store or move to another device.</string>
+  <string name="restore_desc">Select an backup file to recover your data. </string>
+  <string name="testMode">Test mode</string>
+  <string name="credits">Créditos</string>
+  <string name="links">Links</string>
+  <string name="update_info">Update information</string>
+  <string name="error_fetching_update">Error obtaining update details</string>
+  <string name="latestVersion_is">The most recent version is: %1$s</string>
+  <string name="download_update">Download update</string>
 </resources>

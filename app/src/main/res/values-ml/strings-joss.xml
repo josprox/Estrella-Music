@@ -47,4 +47,20 @@
   <string name="current">ഒഴുകിക്കൊണ്ടിരിക്കുന്ന</string>
   <string name="newString">നവീനമായ</string>
   <string name="link_copied">പകർത്തിയ ലിങ്ക്</string>
+  <string name="customization">ഇഷ്ടാനുസൃതമാക്കൽ</string>
+  <string name="data_and_privacy">ഡാറ്റയും സ്വകാര്യതയും</string>
+  <string name="about_the_app">അപ്ലിക്കേഷനെക്കുറിച്ച്</string>
+  <string name="interface_">ഇന്റർഫേസ്</string>
+  <string name="content_preferences">ഉള്ളടക്ക മുൻഗണനകൾ</string>
+  <string name="lyrics_sources">അക്ഷര സ്രോതസ്സുകൾ</string>
+  <string name="downloads">Descargas</string>
+  <string name="clean">ശുചിയാക്കുക</string>
+  <string name="backup_info">നിങ്ങളുടെ പ്ലേലിസ്റ്റ്, പ്രിയങ്കരങ്ങൾ, അപ്ലിക്കേഷൻ കോൺഫിഗറേഷൻ എന്നിവ ഉൾപ്പെടുന്ന ഒരു ബാക്കപ്പ് ഫയൽ സൃഷ്ടിക്കുക. ഡ download ൺലോഡ് ചെയ്ത ഗാനങ്ങൾ ഈ പകർപ്പിന്റെ ഭാഗമല്ലെന്ന് കണക്കിലെടുക്കുക.</string>
+  <string name="backup_desc">നിങ്ങൾക്ക് സുരക്ഷിതമായി സംഭരിക്കാനോ മറ്റൊരു ഉപകരണത്തിലേക്ക് നീങ്ങാനോ കഴിയുന്ന ഒരു ഫയലിലെ നിങ്ങളുടെ ലിസ്റ്റുകൾ, പ്രിയങ്കരങ്ങൾ, ക്രമീകരണങ്ങൾ എന്നിവ സൂക്ഷിക്കുക.</string>
+  <string name="restore_desc">നിങ്ങളുടെ ഡാറ്റ വീണ്ടെടുക്കുന്നതിന് ഒരു ബാക്കപ്പ് ഫയൽ തിരഞ്ഞെടുക്കുക. നിലവിലെ ക്രമീകരണങ്ങളും ലിസ്റ്റുകളും മാറ്റിസ്ഥാപിക്കും.</string>
+  <string name="testMode">ടെസ്റ്റ് മോഡ്</string>
+  <string name="credits">Créditos</string>
+  <string name="links">ലിങ്കുകൾ</string>
+  <string name="update_info">വിവരങ്ങൾ അപ്ഡേറ്റുചെയ്യുക</string>
+  <string name="download_update">അപ്ഡേറ്റ് ഡൗൺലോഡുചെയ്യുക</string>
 </resources>

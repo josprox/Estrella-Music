@@ -46,4 +46,22 @@
   <string name="current">Huidig</string>
   <string name="newString">Nieuw</string>
   <string name="link_copied">Gekopieerde link</string>
+  <string name="customization">Aanpassing</string>
+  <string name="data_and_privacy">Gegevens en privacy</string>
+  <string name="about_the_app">Over applicatie</string>
+  <string name="interface_">Interface</string>
+  <string name="content_preferences">Inhoudsvoorkeuren</string>
+  <string name="lyrics_sources">Briefbronnen</string>
+  <string name="downloads">Descargas</string>
+  <string name="clean">Schoon</string>
+  <string name="backup_info">Maak een back -upbestand met uw afspeellijst, favorieten en app -configuratie. Houd er rekening mee dat gedownloade nummers geen deel uitmaken van dit exemplaar.</string>
+  <string name="backup_desc">Bewaar uw lijsten, favorieten en instellingen in een bestand dat u veilig kunt opslaan of naar een ander apparaat kunt gaan.</string>
+  <string name="restore_desc">Selecteer een back -upbestand om uw gegevens te herstellen. De huidige aanpassingen en lijsten worden vervangen.</string>
+  <string name="testMode">Testmodus</string>
+  <string name="credits">Créditos</string>
+  <string name="links">Links</string>
+  <string name="update_info">Informatie bijwerken</string>
+  <string name="error_fetching_update">Fout bij het verkrijgen van updategegevens</string>
+  <string name="latestVersion_is">De meest recente versie is: %1$s</string>
+  <string name="download_update">Download update</string>
 </resources>

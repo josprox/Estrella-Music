@@ -20,9 +20,12 @@ import com.google.material.color.dynamiccolor.DynamicScheme
 import com.google.material.color.hct.Hct
 import com.google.material.color.scheme.SchemeTonalSpot
 import com.google.material.color.score.Score
+import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
+import androidx.compose.material3.MaterialExpressiveTheme
 
 val DefaultThemeColor = Color(0xFF4285F4)
 
+@OptIn(ExperimentalMaterial3ExpressiveApi::class) // 1. Se añade la anotación OptIn para la API experimental
 @Composable
 fun InnerTuneTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
@@ -43,7 +46,7 @@ fun InnerTuneTheme(
     }
 
     // 2. Reemplazamos MaterialTheme con MaterialExpressiveTheme
-    MaterialTheme(
+    MaterialExpressiveTheme(
         colorScheme = colorScheme,
         typography = MaterialTheme.typography,
         content = content

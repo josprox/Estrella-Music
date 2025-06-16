@@ -1,28 +1,27 @@
 package com.zionhuang.music.ui.screens.settings
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
-import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.WindowInsetsSides
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.only
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.layout.windowInsetsPadding
-import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.Button
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Gavel
+import androidx.compose.material.icons.filled.Info
+import androidx.compose.material.icons.filled.PrivacyTip
+import androidx.compose.material.icons.filled.SupportAgent
+import androidx.compose.material3.AssistChip
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FilledTonalIconButton
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarScrollBehavior
@@ -30,22 +29,19 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.BlendMode
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.zionhuang.music.BuildConfig
 import com.zionhuang.music.LocalPlayerAwareWindowInsets
 import com.zionhuang.music.R
+import com.zionhuang.music.ui.component.ExpressivePreferenceEntry
 import com.zionhuang.music.ui.component.IconButton
+import com.zionhuang.music.ui.component.SettingsHeader
 import com.zionhuang.music.ui.utils.backToMain
-
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -55,324 +51,214 @@ fun AboutScreen(
 ) {
     val uriHandler = LocalUriHandler.current
 
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .windowInsetsPadding(LocalPlayerAwareWindowInsets.current.only(WindowInsetsSides.Horizontal + WindowInsetsSides.Bottom))
-            .verticalScroll(rememberScrollState()),
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Spacer(Modifier.windowInsetsPadding(LocalPlayerAwareWindowInsets.current.only(WindowInsetsSides.Top)))
-
-        Spacer(Modifier.height(4.dp))
-
-        Image(
-            painter = painterResource(R.drawable.joss_music_logo),
-            contentDescription = null,
-            colorFilter = ColorFilter.tint(MaterialTheme.colorScheme.onBackground, BlendMode.SrcIn),
-            modifier = Modifier
-                .size(100.dp) // Ajusta el tamaño de la imagen aquí
-                .clip(CircleShape)
-                .background(MaterialTheme.colorScheme.surfaceContainer)
-                .clickable { }
-        )
-
-        Row(
-            verticalAlignment = Alignment.Top,
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = { Text(stringResource(R.string.about)) },
+                navigationIcon = {
+                    IconButton(onClick = navController::navigateUp, onLongClick = navController::backToMain) {
+                        Icon(painterResource(R.drawable.arrow_back), contentDescription = null)
+                    }
+                },
+                scrollBehavior = scrollBehavior
+            )
+        },
+        contentWindowInsets = LocalPlayerAwareWindowInsets.current
+    ) { innerPadding ->
+        LazyColumn(
+            contentPadding = innerPadding,
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
-            Text(
-                text = "Joss Music",
-                style = MaterialTheme.typography.headlineSmall,
-                fontWeight = FontWeight.Bold,
-                modifier = Modifier.padding(top = 8.dp, bottom = 4.dp)
-            )
-        }
+            item {
+                AppHeader()
+            }
 
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            Text(
-                text = "Github Version",
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.secondary,
-                modifier = Modifier
-                    .border(
-                        width = 1.dp,
-                        color = MaterialTheme.colorScheme.secondary,
-                        shape = CircleShape
-                    )
-                    .padding(
-                        horizontal = 6.dp,
-                        vertical = 2.dp
-                    )
-            )
-
-            Spacer(Modifier.width(4.dp))
-
-            Text(
-                text = BuildConfig.FLAVOR.uppercase(),
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.secondary,
-                modifier = Modifier
-                    .border(
-                        width = 1.dp,
-                        color = MaterialTheme.colorScheme.secondary,
-                        shape = CircleShape
-                    )
-                    .padding(
-                        horizontal = 6.dp,
-                        vertical = 2.dp
-                    )
-            )
-
-            if (BuildConfig.DEBUG) {
-                Spacer(Modifier.width(4.dp))
-
+            item {
                 Text(
-                    text = "Modo prueba",
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.secondary,
-                    modifier = Modifier
-                        .border(
-                            width = 1.dp,
-                            color = MaterialTheme.colorScheme.secondary,
-                            shape = CircleShape
-                        )
-                        .padding(
-                            horizontal = 6.dp,
-                            vertical = 2.dp
-                        )
+                    text = stringResource(R.string.aboutScreenText1),
+                    style = MaterialTheme.typography.bodyLarge,
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier.padding(horizontal = 16.dp)
+                )
+            }
+
+            item {
+                ImportantMessageCard()
+            }
+
+            item { SettingsHeader(title = stringResource(R.string.links)) }
+
+            item {
+                Column(modifier = Modifier.padding(horizontal = 16.dp)) {
+                    ExpressivePreferenceEntry(
+                        title = { Text(stringResource(R.string.websupport)) },
+                        description = { Text("josprox.com/soporte") },
+                        icon = {
+                            Icon(
+                                imageVector = Icons.Default.SupportAgent,
+                                contentDescription = null,
+                                tint = MaterialTheme.colorScheme.primary
+                            )
+                        },
+                        onClick = { uriHandler.openUri("https://josprox.com/soporte/") }
+                    )
+                    ExpressivePreferenceEntry(
+                        title = { Text(stringResource(R.string.privacyPolicy)) },
+                        description = { Text("josprox.com/privacidad") },
+                        icon = {
+                            Icon(
+                                imageVector = Icons.Default.PrivacyTip,
+                                contentDescription = null,
+                                tint = MaterialTheme.colorScheme.primary
+                            )
+                        },
+                        onClick = { uriHandler.openUri("https://josprox.com/privacidad/") }
+                    )
+                    ExpressivePreferenceEntry(
+                        title = { Text(stringResource(R.string.termsConditions)) },
+                        description = { Text("josprox.com/terminos-y-condiciones") },
+                        icon = {
+                            Icon(
+                                imageVector = Icons.Default.Gavel,
+                                contentDescription = null,
+                                tint = MaterialTheme.colorScheme.primary
+                            )
+                        },
+                        onClick = { uriHandler.openUri("https://josprox.com/terminos-y-condiciones/") }
+                    )
+                }
+            }
+
+            item { HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp)) }
+
+            item { SettingsHeader(title = stringResource(R.string.credits)) }
+
+            item {
+                CreditEntry(
+                    name = "Zion Huang (innertune)",
+                    links = listOf(
+                        "https://liberapay.com/zionhuang" to R.drawable.liberapay,
+                        "https://www.buymeacoffee.com/zionhuang" to R.drawable.buymeacoffee
+                    )
+                )
+            }
+            item {
+                CreditEntry(
+                    name = "ViMusic Team",
+                    links = listOf("https://github.com/vfsfitvnm/ViMusic" to R.drawable.github)
+                )
+            }
+
+            item {
+                Text(
+                    text = stringResource(R.string.gplMessage),
+                    style = MaterialTheme.typography.bodySmall,
+                    textAlign = TextAlign.Center,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.padding(16.dp)
                 )
             }
         }
+    }
+}
 
-        Spacer(Modifier.height(4.dp))
+@Composable
+private fun AppHeader() {
+    val uriHandler = LocalUriHandler.current
+
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.spacedBy(8.dp),
+        modifier = Modifier.padding(vertical = 16.dp)
+    ) {
+        Image(
+            painter = painterResource(R.drawable.joss_music_logo),
+            contentDescription = "App Logo",
+            modifier = Modifier
+                .size(100.dp)
+                .clip(CircleShape)
+        )
+
+        Text(
+            text = "Joss Music",
+            style = MaterialTheme.typography.headlineMedium
+        )
 
         Text(
             text = stringResource(R.string.appByJosproxMx),
             style = MaterialTheme.typography.titleMedium,
-            color = MaterialTheme.colorScheme.secondary
+            color = MaterialTheme.colorScheme.onSurfaceVariant
         )
 
-        Spacer(Modifier.height(8.dp))
-
-        Row {
-            IconButton(
-                onClick = { uriHandler.openUri("https://github.com/josprox/Joss-Music") }
-            ) {
-                Icon(
-                    painter = painterResource(R.drawable.joss_music_logo),
-                    contentDescription = null,
-                    modifier = Modifier
-                        .clip(CircleShape)
-                        .padding(
-                            horizontal = 6.dp,
-                            vertical = 2.dp
-                        )
-                )
-            }
-
-            IconButton(
-                onClick = { uriHandler.openUri("https://github.com/josprox/") }
-            ) {
-                Icon(
-                    painter = painterResource(R.drawable.github),
-                    contentDescription = null
-                )
-            }
-
-            IconButton(
-                onClick = { uriHandler.openUri("https://www.facebook.com/Josproxmx") }
-            ) {
-                Icon(
-                    painter = painterResource(R.drawable.facebook),
-                    contentDescription = null,
-                    modifier = Modifier
-                        .padding(
-                            horizontal = 6.dp,
-                            vertical = 2.dp
-                        )
-                )
-            }
-
-            IconButton(
-                onClick = { uriHandler.openUri("https://play.google.com/store/apps/dev?id=8312669195856231840") }
-            ) {
-                Icon(
-                    painter = painterResource(R.drawable.google_play),
-                    contentDescription = null,
-                    modifier = Modifier
-                        .padding(
-                            horizontal = 6.dp,
-                            vertical = 2.dp
-                        )
-                )
+        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            AssistChip(onClick = {}, label = { Text("Github Version") })
+            AssistChip(onClick = {}, label = { Text(BuildConfig.FLAVOR.uppercase()) })
+            if (BuildConfig.DEBUG) {
+                AssistChip(onClick = {}, label = { Text(stringResource(R.string.testMode)) })
             }
         }
 
-        Spacer(Modifier.height(8.dp))
-
-        // Descripción de la Aplicación
-        Text(
-            text = stringResource(R.string.aboutScreenText1),
-            fontSize = 14.sp,
-            modifier = Modifier.padding(10.dp),
-            textAlign = androidx.compose.ui.text.style.TextAlign.Center
-        )
-
-        // Soporte
-        Text(
-            text = stringResource(R.string.support),
-            fontSize = 18.sp,
-            fontWeight = FontWeight.Bold,
-            modifier = Modifier.padding(top = 10.dp)
-        )
-        Button(
-            onClick = {
-                uriHandler.openUri("https://josprox.com/soporte/")
-            },
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 20.dp)
-        ) {
-            Text(text = stringResource(R.string.websupport))
-        }
-
-        // Web del Creador
-        Text(
-            text = "JOSPROX MX",
-            fontSize = 18.sp,
-            fontWeight = FontWeight.Bold,
-            modifier = Modifier.padding(top = 10.dp)
-        )
-        Button(
-            onClick = {
-                uriHandler.openUri("https://josprox.com/")
-            },
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 20.dp)
-        ) {
-            Text(stringResource(R.string.website_url))
-        }
-
-        // Aviso Importante
-        Text(
-            text = stringResource(R.string.importantmessage),
-            fontSize = 18.sp,
-            fontWeight = FontWeight.Bold,
-            color = Color.Red,
-            modifier = Modifier.padding(top = 10.dp)
-        )
-        Text(
-            text = stringResource(R.string.aboutScreenText2),
-            fontSize = 14.sp,
-            modifier = Modifier.padding(10.dp),
-            textAlign = androidx.compose.ui.text.style.TextAlign.Center
-        )
-
-        // Política de Privacidad
-        Text(
-            text = stringResource(R.string.privacyPolicy),
-            fontSize = 18.sp,
-            fontWeight = FontWeight.Bold,
-            modifier = Modifier.padding(top = 10.dp)
-        )
-        Button(
-            onClick = {
-                uriHandler.openUri("https://josprox.com/privacidad/")
-            },
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 20.dp)
-        ) {
-            Text(text = stringResource(R.string.privacyPolicy))
-        }
-
-        // Términos y Condiciones
-        Text(
-            text = stringResource(R.string.termsConditions),
-            fontSize = 18.sp,
-            fontWeight = FontWeight.Bold,
-            modifier = Modifier.padding(top = 10.dp)
-        )
-        Button(
-            onClick = {
-                uriHandler.openUri("https://josprox.com/terminos-y-condiciones/")
-            },
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 20.dp)
-        ) {
-            Text(text = stringResource(R.string.termsConditions))
-        }
-
-        Spacer(Modifier.height(6.dp))
-
-        Text(
-            text = "Zion Huang (innertune)",
-            style = MaterialTheme.typography.titleMedium,
-            color = MaterialTheme.colorScheme.secondary
-        )
-
-        Spacer(Modifier.height(8.dp))
-
-        Row {
-            IconButton(
-                onClick = { uriHandler.openUri("https://liberapay.com/zionhuang") }
-            ) {
-                Icon(
-                    painter = painterResource(R.drawable.liberapay),
-                    contentDescription = null
-                )
-            }
-
-            IconButton(
-                onClick = { uriHandler.openUri("https://www.buymeacoffee.com/zionhuang") }
-            ) {
-                Icon(
-                    painter = painterResource(R.drawable.buymeacoffee),
-                    contentDescription = null
-                )
+        Row(horizontalArrangement = Arrangement.spacedBy(16.dp), modifier = Modifier.padding(top = 8.dp)) {
+            val links = mapOf(
+                R.drawable.github to "https://github.com/josprox/",
+                R.drawable.facebook to "https://www.facebook.com/Josproxmx",
+                R.drawable.google_play to "https://play.google.com/store/apps/dev?id=8312669195856231840"
+            )
+            links.forEach { (iconRes, url) ->
+                FilledTonalIconButton(onClick = { uriHandler.openUri(url) }) {
+                    Icon(painterResource(iconRes), contentDescription = null)
+                }
             }
         }
+    }
+}
 
-        Text(
-            text = "ViMusic",
-            style = MaterialTheme.typography.titleMedium,
-            color = MaterialTheme.colorScheme.secondary
-        )
-
-        Spacer(Modifier.height(8.dp))
-
-        IconButton(
-            onClick = { uriHandler.openUri("https://github.com/vfsfitvnm/ViMusic") }
-        ) {
-            Icon(
-                painter = painterResource(R.drawable.github),
-                contentDescription = null
+@Composable
+private fun ImportantMessageCard() {
+    Card(
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.errorContainer),
+        modifier = Modifier.padding(horizontal = 16.dp)
+    ) {
+        Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                Icon(
+                    imageVector = Icons.Default.Info,
+                    contentDescription = "Important",
+                    tint = MaterialTheme.colorScheme.onErrorContainer
+                )
+                Text(
+                    text = stringResource(R.string.importantmessage),
+                    style = MaterialTheme.typography.titleMedium,
+                    color = MaterialTheme.colorScheme.onErrorContainer,
+                )
+            }
+            Text(
+                text = stringResource(R.string.aboutScreenText2),
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onErrorContainer
             )
         }
-
-        Text(
-            text = stringResource(R.string.gplMessage),
-            style = MaterialTheme.typography.labelSmall,
-            color = MaterialTheme.colorScheme.secondary
-        )
-
     }
+}
 
-    TopAppBar(
-        title = { Text(stringResource(R.string.about)) },
-        navigationIcon = {
-            IconButton(
-                onClick = navController::navigateUp,
-                onLongClick = navController::backToMain
-            ) {
-                Icon(
-                    painterResource(R.drawable.arrow_back),
-                    contentDescription = null
-                )
+@Composable
+private fun CreditEntry(name: String, links: List<Pair<String, Int>>) {
+    val uriHandler = LocalUriHandler.current
+    Column(
+        modifier = Modifier.padding(horizontal = 16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text(text = name, style = MaterialTheme.typography.titleSmall)
+        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            links.forEach { (url, iconRes) ->
+                IconButton(
+                    onClick = { uriHandler.openUri(url) },
+                    onLongClick = { uriHandler.openUri(url) }
+                ) {
+                    Icon(painterResource(iconRes), contentDescription = name)
+                }
             }
-        },
-        scrollBehavior = scrollBehavior
-    )
+        }
+    }
 }

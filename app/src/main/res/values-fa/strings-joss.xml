@@ -12,4 +12,21 @@
   <string name="current">جاری</string>
   <string name="newString">جدید</string>
   <string name="link_copied">پیوند کپی شده</string>
+  <string name="customization">سفارشی سازی</string>
+  <string name="data_and_privacy">داده ها و حریم خصوصی</string>
+  <string name="about_the_app">در مورد کاربرد</string>
+  <string name="interface_">رابط</string>
+  <string name="content_preferences">ترجیحات محتوا</string>
+  <string name="lyrics_sources">منابع نامه</string>
+  <string name="downloads">دسراگاس</string>
+  <string name="clean">تمیز</string>
+  <string name="backup_info">یک فایل پشتیبان ایجاد کنید که شامل لیست پخش ، موارد دلخواه و پیکربندی برنامه شما باشد. در نظر بگیرید که آهنگ های بارگیری شده بخشی از این نسخه نیستند.</string>
+  <string name="backup_desc">لیست ها ، موارد دلخواه و تنظیمات خود را در پرونده ای نگه دارید که می توانید با خیال راحت به دستگاه دیگری منتقل کنید.</string>
+  <string name="restore_desc">برای بازیابی اطلاعات خود ، یک فایل پشتیبان را انتخاب کنید. تنظیمات و لیست های فعلی جایگزین می شود.</string>
+  <string name="testMode">حالت تست</string>
+  <string name="credits">کله</string>
+  <string name="links">لینک</string>
+  <string name="update_info">اطلاعات به روزرسانی</string>
+  <string name="error_fetching_update">خطای بدست آوردن جزئیات به روزرسانی</string>
+  <string name="download_update">به روزرسانی بارگیری</string>
 </resources>

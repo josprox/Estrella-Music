@@ -12,4 +12,22 @@
   <string name="current">Trenutni</string>
   <string name="newString">Novi</string>
   <string name="link_copied">Kopirana veza</string>
+  <string name="customization">Prilagođavanje</string>
+  <string name="data_and_privacy">Podaci i privatnost</string>
+  <string name="about_the_app">O aplikaciji</string>
+  <string name="interface_">Sučelje</string>
+  <string name="content_preferences">Sklonosti sadržaja</string>
+  <string name="lyrics_sources">Izvori slova</string>
+  <string name="downloads">Descargas</string>
+  <string name="clean">Čist</string>
+  <string name="backup_info">Stvorite datoteku sigurnosne kopije koja uključuje vaš popis za reprodukciju, favorite i konfiguraciju aplikacija. Uzmite u obzir da preuzete pjesme nisu dio ove kopije.</string>
+  <string name="backup_desc">Držite svoje popise, favorite i postavke u datoteci koju možete sigurno pohraniti ili premjestiti na drugi uređaj.</string>
+  <string name="restore_desc">Odaberite datoteku sigurnosne kopije za oporavak podataka. Trenutačna prilagodbe i popisi bit će zamijenjeni.</string>
+  <string name="testMode">Način ispitivanja</string>
+  <string name="credits">Créditos</string>
+  <string name="links">Veze</string>
+  <string name="update_info">Ažurirajte informacije</string>
+  <string name="error_fetching_update">Pogreška Dobivanje detalja o ažuriranju</string>
+  <string name="latestVersion_is">Najnovija verzija je: %1$s</string>
+  <string name="download_update">Preuzmite ažuriranje</string>
 </resources>

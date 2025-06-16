@@ -1,21 +1,25 @@
 package com.zionhuang.music.ui.screens.settings
 
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.WindowInsetsSides
-import androidx.compose.foundation.layout.only
-import androidx.compose.foundation.layout.windowInsetsPadding
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
+import androidx.compose.material3.LargeTopAppBar
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarScrollBehavior
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.zionhuang.music.LocalPlayerAwareWindowInsets
 import com.zionhuang.music.R
@@ -28,13 +32,14 @@ import com.zionhuang.music.constants.PersistentQueueKey
 import com.zionhuang.music.constants.SkipSilenceKey
 import com.zionhuang.music.constants.SleepFinishSong
 import com.zionhuang.music.constants.StopMusicOnTaskClearKey
-import com.zionhuang.music.ui.component.EnumListPreference
+import com.zionhuang.music.ui.component.EnumSelectionDialog
+import com.zionhuang.music.ui.component.ExpressivePreferenceEntry
 import com.zionhuang.music.ui.component.IconButton
-import com.zionhuang.music.ui.component.PreferenceGroupTitle
-import com.zionhuang.music.ui.component.SwitchPreference
+import com.zionhuang.music.ui.component.SettingsHeader
 import com.zionhuang.music.ui.utils.backToMain
 import com.zionhuang.music.utils.rememberEnumPreference
 import com.zionhuang.music.utils.rememberPreference
+import androidx.compose.foundation.layout.padding
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -51,111 +56,139 @@ fun PlayerSettings(
     val (stopMusicOnTaskClear, onStopMusicOnTaskClearChange) = rememberPreference(StopMusicOnTaskClearKey, defaultValue = false)
     val (sleepFinishSong, onSleepFinishSongChange) = rememberPreference(key = SleepFinishSong, defaultValue = false)
 
-    Column(
-        Modifier
-            .windowInsetsPadding(LocalPlayerAwareWindowInsets.current.only(WindowInsetsSides.Horizontal + WindowInsetsSides.Bottom))
-            .verticalScroll(rememberScrollState())
-    ) {
-        Spacer(Modifier.windowInsetsPadding(LocalPlayerAwareWindowInsets.current.only(WindowInsetsSides.Top)))
+    // --- ESTADO PARA CONTROLAR EL DIÁLOGO ---
+    var showAudioQualityDialog by remember { mutableStateOf(false) }
 
-        PreferenceGroupTitle(
-            title = stringResource(R.string.player)
-        )
-
-        EnumListPreference(
-            title = { Text(stringResource(R.string.audio_quality)) },
-            icon = { Icon(painterResource(R.drawable.graphic_eq), null) },
-            selectedValue = audioQuality,
-            onValueSelected = onAudioQualityChange,
-            valueText = {
+    if (showAudioQualityDialog) {
+        EnumSelectionDialog(
+            title = stringResource(R.string.audio_quality),
+            options = AudioQuality.entries,
+            selectedOption = audioQuality,
+            onOptionSelected = onAudioQualityChange,
+            optionText = {
                 when (it) {
                     AudioQuality.AUTO -> stringResource(R.string.audio_quality_auto)
                     AudioQuality.HIGH -> stringResource(R.string.audio_quality_high)
                     AudioQuality.LOW -> stringResource(R.string.audio_quality_low)
                 }
-            }
-        )
-
-        SwitchPreference(
-            title = { Text(stringResource(R.string.skip_silence)) },
-            icon = { Icon(painterResource(R.drawable.fast_forward), null) },
-            checked = skipSilence,
-            onCheckedChange = onSkipSilenceChange
-        )
-
-        SwitchPreference(
-            title = { Text(stringResource(R.string.audio_normalization)) },
-            icon = { Icon(painterResource(R.drawable.volume_up), null) },
-            checked = audioNormalization,
-            onCheckedChange = onAudioNormalizationChange
-        )
-
-        PreferenceGroupTitle(
-            title = stringResource(R.string.queue)
-        )
-
-        SwitchPreference(
-            title = { Text(stringResource(R.string.persistent_queue)) },
-            description = stringResource(R.string.persistent_queue_desc),
-            icon = { Icon(painterResource(R.drawable.queue_music), null) },
-            checked = persistentQueue,
-            onCheckedChange = onPersistentQueueChange
-        )
-
-        SwitchPreference(
-            title = { Text(stringResource(R.string.auto_load_more)) },
-            description = stringResource(R.string.auto_load_more_desc),
-            icon = { Icon(painterResource(R.drawable.playlist_add), null) },
-            checked = autoLoadMore,
-            onCheckedChange = onAutoLoadMoreChange
-        )
-
-        SwitchPreference(
-            title = { Text(stringResource(R.string.auto_skip_next_on_error)) },
-            description = stringResource(R.string.auto_skip_next_on_error_desc),
-            icon = { Icon(painterResource(R.drawable.skip_next), null) },
-            checked = autoSkipNextOnError,
-            onCheckedChange = onAutoSkipNextOnErrorChange
-        )
-
-        PreferenceGroupTitle(
-            title = stringResource(R.string.misc)
-        )
-
-        SwitchPreference(
-            title = { Text(stringResource(R.string.stop_music_on_task_clear)) },
-            icon = { Icon(painterResource(R.drawable.clear_all), null) },
-            checked = stopMusicOnTaskClear,
-            onCheckedChange = onStopMusicOnTaskClearChange
-        )
-
-        SwitchPreference(
-            title = { Text(stringResource(R.string.sleepTimerSong)) },
-            description = stringResource(R.string.sleepTimerSongText),
-            icon = {
-                Icon(
-                    painter = painterResource(id = R.drawable.bedtime),
-                    contentDescription = null
-                )
             },
-            checked = sleepFinishSong,
-            onCheckedChange = onSleepFinishSongChange
+            onDismiss = { showAudioQualityDialog = false }
         )
     }
 
-    TopAppBar(
-        title = { Text(stringResource(R.string.player_and_audio)) },
-        navigationIcon = {
-            IconButton(
-                onClick = navController::navigateUp,
-                onLongClick = navController::backToMain
-            ) {
-                Icon(
-                    painterResource(R.drawable.arrow_back),
-                    contentDescription = null
+    Scaffold(
+        modifier = Modifier.nestedScroll(scrollBehavior.nestedScrollConnection),
+        topBar = {
+            LargeTopAppBar(
+                title = { Text(stringResource(R.string.player_and_audio)) },
+                navigationIcon = {
+                    IconButton(
+                        onClick = navController::navigateUp,
+                        onLongClick = navController::backToMain
+                    ) {
+                        Icon(painterResource(R.drawable.arrow_back), contentDescription = null)
+                    }
+                },
+                scrollBehavior = scrollBehavior
+            )
+        },
+        contentWindowInsets = LocalPlayerAwareWindowInsets.current
+    ) { innerPadding ->
+        LazyColumn(contentPadding = innerPadding) {
+
+            // --- Grupo: Reproductor ---
+            item { SettingsHeader(title = stringResource(R.string.player)) }
+
+            item {
+                val valueText = when (audioQuality) {
+                    AudioQuality.AUTO -> stringResource(R.string.audio_quality_auto)
+                    AudioQuality.HIGH -> stringResource(R.string.audio_quality_high)
+                    AudioQuality.LOW -> stringResource(R.string.audio_quality_low)
+                }
+                ExpressivePreferenceEntry(
+                    title = { Text(stringResource(R.string.audio_quality)) },
+                    description = { Text(valueText) },
+                    icon = { Icon(painterResource(R.drawable.graphic_eq), null, tint = MaterialTheme.colorScheme.primary) },
+                    onClick = { showAudioQualityDialog = true }
                 )
             }
-        },
-        scrollBehavior = scrollBehavior
-    )
+
+            item {
+                ExpressivePreferenceEntry(
+                    title = { Text(stringResource(R.string.skip_silence)) },
+                    icon = { Icon(painterResource(R.drawable.fast_forward), null, tint = MaterialTheme.colorScheme.primary) },
+                    onClick = { onSkipSilenceChange(!skipSilence) },
+                    trailingContent = { Switch(checked = skipSilence, onCheckedChange = onSkipSilenceChange) }
+                )
+            }
+
+            item {
+                ExpressivePreferenceEntry(
+                    title = { Text(stringResource(R.string.audio_normalization)) },
+                    icon = { Icon(painterResource(R.drawable.volume_up), null, tint = MaterialTheme.colorScheme.primary) },
+                    onClick = { onAudioNormalizationChange(!audioNormalization) },
+                    trailingContent = { Switch(checked = audioNormalization, onCheckedChange = onAudioNormalizationChange) }
+                )
+            }
+
+            item { HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp)) }
+
+            // --- Grupo: Cola de Reproducción ---
+            item { SettingsHeader(title = stringResource(R.string.queue)) }
+
+            item {
+                ExpressivePreferenceEntry(
+                    title = { Text(stringResource(R.string.persistent_queue)) },
+                    description = { Text(stringResource(R.string.persistent_queue_desc)) },
+                    icon = { Icon(painterResource(R.drawable.queue_music), null, tint = MaterialTheme.colorScheme.primary) },
+                    onClick = { onPersistentQueueChange(!persistentQueue) },
+                    trailingContent = { Switch(checked = persistentQueue, onCheckedChange = onPersistentQueueChange) }
+                )
+            }
+
+            item {
+                ExpressivePreferenceEntry(
+                    title = { Text(stringResource(R.string.auto_load_more)) },
+                    description = { Text(stringResource(R.string.auto_load_more_desc)) },
+                    icon = { Icon(painterResource(R.drawable.playlist_add), null, tint = MaterialTheme.colorScheme.primary) },
+                    onClick = { onAutoLoadMoreChange(!autoLoadMore) },
+                    trailingContent = { Switch(checked = autoLoadMore, onCheckedChange = onAutoLoadMoreChange) }
+                )
+            }
+
+            item {
+                ExpressivePreferenceEntry(
+                    title = { Text(stringResource(R.string.auto_skip_next_on_error)) },
+                    description = { Text(stringResource(R.string.auto_skip_next_on_error_desc)) },
+                    icon = { Icon(painterResource(R.drawable.skip_next), null, tint = MaterialTheme.colorScheme.primary) },
+                    onClick = { onAutoSkipNextOnErrorChange(!autoSkipNextOnError) },
+                    trailingContent = { Switch(checked = autoSkipNextOnError, onCheckedChange = onAutoSkipNextOnErrorChange) }
+                )
+            }
+
+            item { HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp)) }
+
+            // --- Grupo: Misceláneo ---
+            item { SettingsHeader(title = stringResource(R.string.misc)) }
+
+            item {
+                ExpressivePreferenceEntry(
+                    title = { Text(stringResource(R.string.stop_music_on_task_clear)) },
+                    icon = { Icon(painterResource(R.drawable.clear_all), null, tint = MaterialTheme.colorScheme.primary) },
+                    onClick = { onStopMusicOnTaskClearChange(!stopMusicOnTaskClear) },
+                    trailingContent = { Switch(checked = stopMusicOnTaskClear, onCheckedChange = onStopMusicOnTaskClearChange) }
+                )
+            }
+
+            item {
+                ExpressivePreferenceEntry(
+                    title = { Text(stringResource(R.string.sleepTimerSong)) },
+                    description = { Text(stringResource(R.string.sleepTimerSongText)) },
+                    icon = { Icon(painterResource(id = R.drawable.bedtime), null, tint = MaterialTheme.colorScheme.primary) },
+                    onClick = { onSleepFinishSongChange(!sleepFinishSong) },
+                    trailingContent = { Switch(checked = sleepFinishSong, onCheckedChange = onSleepFinishSongChange) }
+                )
+            }
+        }
+    }
 }

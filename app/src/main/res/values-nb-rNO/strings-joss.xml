@@ -46,4 +46,22 @@
   <string name="current">Nåværende</string>
   <string name="newString">Ny</string>
   <string name="link_copied">Kopiert lenke</string>
+  <string name="customization">Tilpasning</string>
+  <string name="data_and_privacy">Data og personvern</string>
+  <string name="about_the_app">Om søknad</string>
+  <string name="interface_">Grensesnitt</string>
+  <string name="content_preferences">Innholdsinnstillinger</string>
+  <string name="lyrics_sources">Brevkilder</string>
+  <string name="downloads">Descargas</string>
+  <string name="clean">Rengjøre</string>
+  <string name="backup_info">Lag en sikkerhetskopifil som inkluderer spilleliste, favoritter og appkonfigurasjon. Ta hensyn til at nedlastede sanger ikke er en del av denne kopien.</string>
+  <string name="backup_desc">Hold listene, favorittene og innstillingene i en fil som du trygt kan lagre eller flytte til en annen enhet.</string>
+  <string name="restore_desc">Velg en sikkerhetskopifil for å gjenopprette dataene dine. Gjeldende justeringer og lister blir erstattet.</string>
+  <string name="testMode">Testmodus</string>
+  <string name="credits">Créditos</string>
+  <string name="links">Lenker</string>
+  <string name="update_info">Oppdater informasjon</string>
+  <string name="error_fetching_update">Feil innhenting av oppdateringsdetaljer</string>
+  <string name="latestVersion_is">Den siste versjonen er: %1$s</string>
+  <string name="download_update">Last ned oppdatering</string>
 </resources>

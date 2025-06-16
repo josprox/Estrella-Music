@@ -46,4 +46,22 @@
   <string name="current">Ток</string>
   <string name="newString">Ново</string>
   <string name="link_copied">Копирана връзка</string>
+  <string name="customization">Персонализиране</string>
+  <string name="data_and_privacy">Данни и поверителност</string>
+  <string name="about_the_app">Относно приложението</string>
+  <string name="interface_">Интерфейс</string>
+  <string name="content_preferences">Предпочитания за съдържание</string>
+  <string name="lyrics_sources">Източници на писма</string>
+  <string name="downloads">Декаргас</string>
+  <string name="clean">Чисти</string>
+  <string name="backup_info">Създайте резервен файл, който включва вашия списък, фаворити и конфигурация на приложението. Вземете предвид, че изтеглените песни не са част от това копие.</string>
+  <string name="backup_desc">Съхранявайте списъците, любимите и настройките си във файл, който можете безопасно да съхранявате или да се преместите на друго устройство.</string>
+  <string name="restore_desc">Изберете резервен файл, за да възстановите вашите данни. Текущите корекции и списъци ще бъдат заменени.</string>
+  <string name="testMode">Режим на тестване</string>
+  <string name="credits">Кредитос</string>
+  <string name="links">Връзки</string>
+  <string name="update_info">Актуализирайте информация</string>
+  <string name="error_fetching_update">Грешка Получаване на подробности за актуализацията</string>
+  <string name="latestVersion_is">Най -новата версия е: %1$s</string>
+  <string name="download_update">Изтеглете актуализация</string>
 </resources>

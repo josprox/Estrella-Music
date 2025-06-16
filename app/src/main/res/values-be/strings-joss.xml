@@ -70,4 +70,22 @@
   <string name="current">Бягучы</string>
   <string name="newString">Новы</string>
   <string name="link_copied">Скапіраваная спасылка</string>
+  <string name="customization">Налада</string>
+  <string name="data_and_privacy">Дадзеныя і канфідэнцыяльнасць</string>
+  <string name="about_the_app">Пра прыкладанне</string>
+  <string name="interface_">Інтэрфейс</string>
+  <string name="content_preferences">Перавагі да зместу</string>
+  <string name="lyrics_sources">Крыніцы ліста</string>
+  <string name="downloads">Дэскаргас</string>
+  <string name="clean">Чысты</string>
+  <string name="backup_info">Стварыце рэзервовы файл, які ўключае ў сябе ваш спіс прайгравання, абранае і канфігурацыю прыкладанняў. Улічыце, што загружаныя песні не ўваходзяць у гэтую копію.</string>
+  <string name="backup_desc">Захоўвайце спісы, абраныя і налады ў файле, які вы можаце смела захоўваць альбо перайсці на іншую прыладу.</string>
+  <string name="restore_desc">Выберыце рэзервовы файл, каб аднавіць дадзеныя. Бягучыя карэкціроўкі і спісы будуць заменены.</string>
+  <string name="testMode">Рэжым выпрабаванняў</string>
+  <string name="credits">Créditos</string>
+  <string name="links">Сувязі</string>
+  <string name="update_info">Інфармацыя абнаўлення</string>
+  <string name="error_fetching_update">Памылка атрымання рэквізітаў абнаўлення</string>
+  <string name="latestVersion_is">Апошняя версія: %1$s</string>
+  <string name="download_update">Спампаваць абнаўленне</string>
 </resources>

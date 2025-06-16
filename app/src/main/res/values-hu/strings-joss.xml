@@ -59,4 +59,22 @@
   <string name="current">Jelenlegi</string>
   <string name="newString">Új</string>
   <string name="link_copied">Másolt link</string>
+  <string name="customization">Testreszabás</string>
+  <string name="data_and_privacy">Adatok és magánélet</string>
+  <string name="about_the_app">A jelentkezésről</string>
+  <string name="interface_">Felület</string>
+  <string name="content_preferences">Tartalmi preferenciák</string>
+  <string name="lyrics_sources">Levélforrások</string>
+  <string name="downloads">Descargas</string>
+  <string name="clean">Tiszta</string>
+  <string name="backup_info">Hozzon létre egy biztonsági másolatot, amely tartalmazza a lejátszási listát, a kedvenceket és az alkalmazáskonfigurációt. Vegye figyelembe, hogy a letöltött dalok nem tartoznak ennek a példánynak.</string>
+  <string name="backup_desc">Tartsa a listáit, a kedvenceit és a beállításait egy olyan fájlban, amelyet biztonságosan tárolhat, vagy áthelyezhet egy másik eszközre.</string>
+  <string name="restore_desc">Válasszon egy biztonsági mentési fájlt az adatok helyreállításához. A jelenlegi beállításokat és listákat kicseréljük.</string>
+  <string name="testMode">Teszt mód</string>
+  <string name="credits">Créditos</string>
+  <string name="links">Linkek</string>
+  <string name="update_info">Információk frissítése</string>
+  <string name="error_fetching_update">Hiba a frissítési részletek megszerzésének hiba</string>
+  <string name="latestVersion_is">A legfrissebb verzió: %1$s</string>
+  <string name="download_update">Letöltés frissítés</string>
 </resources>

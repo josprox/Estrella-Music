@@ -12,4 +12,22 @@
   <string name="current">Nuvarande</string>
   <string name="newString">Ny</string>
   <string name="link_copied">Kopierad länk</string>
+  <string name="customization">Anpassning</string>
+  <string name="data_and_privacy">Data och integritet</string>
+  <string name="about_the_app">Om tillämpning</string>
+  <string name="interface_">Gränssnitt</string>
+  <string name="content_preferences">Innehållspreferenser</string>
+  <string name="lyrics_sources">Brevkällor</string>
+  <string name="downloads">Descargas</string>
+  <string name="clean">Rena</string>
+  <string name="backup_info">Skapa en säkerhetskopieringsfil som innehåller din spellista, favoriter och appkonfiguration. Ta hänsyn till att nedladdade låtar inte ingår i denna kopia.</string>
+  <string name="backup_desc">Håll dina listor, favoriter och inställningar i en fil som du säkert kan lagra eller flytta till en annan enhet.</string>
+  <string name="restore_desc">Välj en säkerhetskopieringsfil för att återställa dina data. De aktuella justeringarna och listorna kommer att ersättas.</string>
+  <string name="testMode">Testläge</string>
+  <string name="credits">Créditos</string>
+  <string name="links">Länkar</string>
+  <string name="update_info">Uppdatera information</string>
+  <string name="error_fetching_update">Fel att få uppdateringsinformation</string>
+  <string name="latestVersion_is">Den senaste versionen är: %1$s</string>
+  <string name="download_update">Nedladdningsuppdatering</string>
 </resources>

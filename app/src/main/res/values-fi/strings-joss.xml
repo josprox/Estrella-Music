@@ -46,4 +46,22 @@
   <string name="current">Nykyinen</string>
   <string name="newString">Uusi</string>
   <string name="link_copied">Kopioitu linkki</string>
+  <string name="customization">Räätälöinti</string>
+  <string name="data_and_privacy">Tiedot ja yksityisyys</string>
+  <string name="about_the_app">Hakemuksesta</string>
+  <string name="interface_">Rajapinta</string>
+  <string name="content_preferences">Sisältöasetukset</string>
+  <string name="lyrics_sources">Kirjelähteet</string>
+  <string name="downloads">Descargas</string>
+  <string name="clean">Puhdas</string>
+  <string name="backup_info">Luo varmuuskopiotiedosto, joka sisältää soittolistan, suosikit ja sovellusmääritykset. Ota huomioon, että ladattuja kappaleita ei ole osa tätä kopiota.</string>
+  <string name="backup_desc">Pidä luettelot, suosikit ja asetukset tiedostossa, jonka voit tallentaa turvallisesti tai siirtyä toiseen laitteeseen.</string>
+  <string name="restore_desc">Valitse varmuuskopiotiedosto palauttaaksesi tietosi. Nykyiset säädöt ja luettelot korvataan.</string>
+  <string name="testMode">Koetila</string>
+  <string name="credits">Créditos</string>
+  <string name="links">Linkit</string>
+  <string name="update_info">Päivitystiedot</string>
+  <string name="error_fetching_update">Virhe päivitystietojen hankkiminen</string>
+  <string name="latestVersion_is">Viimeisin versio on: %1$s</string>
+  <string name="download_update">Lataa päivitys</string>
 </resources>

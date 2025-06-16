@@ -67,4 +67,22 @@
   <string name="current">ਮੌਜੂਦਾ</string>
   <string name="newString">ਨਵਾਂ</string>
   <string name="link_copied">ਲਿੰਕ ਦੀ ਨਕਲ ਕੀਤੀ</string>
+  <string name="customization">ਅਨੁਕੂਲਤਾ</string>
+  <string name="data_and_privacy">ਡਾਟਾ ਅਤੇ ਗੋਪਨੀਯਤਾ</string>
+  <string name="about_the_app">ਐਪਲੀਕੇਸ਼ਨ ਬਾਰੇ</string>
+  <string name="interface_">ਇੰਟਰਫੇਸ</string>
+  <string name="content_preferences">ਸਮਗਰੀ ਪਸੰਦ</string>
+  <string name="lyrics_sources">ਪੱਤਰ ਸਰੋਤ</string>
+  <string name="downloads">ਦੇਸਕਾਰਸਸ</string>
+  <string name="clean">ਸਾਫ਼</string>
+  <string name="backup_info">ਬੈਕਅਪ ਫਾਈਲ ਬਣਾਓ ਜਿਸ ਵਿੱਚ ਤੁਹਾਡੀ ਪਲੇਲਿਸਟ, ਮਨਪਸੰਦ ਅਤੇ ਐਪ ਕੌਂਫਿਗਰੇਸ਼ਨ ਸ਼ਾਮਲ ਹਨ. ਡਾਉਨਲੋਡ ਕੀਤੇ ਗਾਣੇ ਇਸ ਕਾੱਪੀ ਦਾ ਹਿੱਸਾ ਨਹੀਂ ਹਨ.</string>
+  <string name="backup_desc">ਆਪਣੀਆਂ ਸੂਚੀਆਂ, ਮਨਪਸੰਦਾਂ ਅਤੇ ਸੈਟਿੰਗਾਂ ਨੂੰ ਇੱਕ ਫਾਈਲ ਵਿੱਚ ਰੱਖੋ ਜਿਸ ਨੂੰ ਤੁਸੀਂ ਸੁਰੱਖਿਅਤ safely ੰਗ ਨਾਲ ਸਟੋਰ ਕਰ ਸਕਦੇ ਹੋ ਜਾਂ ਕਿਸੇ ਹੋਰ ਡਿਵਾਈਸ ਤੇ ਜਾ ਸਕਦੇ ਹੋ.</string>
+  <string name="restore_desc">ਆਪਣੇ ਡੇਟਾ ਨੂੰ ਮੁੜ ਪ੍ਰਾਪਤ ਕਰਨ ਲਈ ਬੈਕਅਪ ਫਾਈਲ ਦੀ ਚੋਣ ਕਰੋ. ਮੌਜੂਦਾ ਵਿਵਸਥਾਂ ਅਤੇ ਸੂਚੀਆਂ ਨੂੰ ਤਬਦੀਲ ਕਰ ਦਿੱਤਾ ਜਾਵੇਗਾ.</string>
+  <string name="testMode">ਟੈਸਟ ਮੋਡ</string>
+  <string name="credits">Créditos</string>
+  <string name="links">ਲਿੰਕ</string>
+  <string name="update_info">ਜਾਣਕਾਰੀ ਨੂੰ ਅਪਡੇਟ ਕਰੋ</string>
+  <string name="error_fetching_update">ਅਪਡੇਟ ਵੇਰਵੇ ਪ੍ਰਾਪਤ ਕਰਨ ਵਿੱਚ ਗਲਤੀ</string>
+  <string name="latestVersion_is">ਸਭ ਤੋਂ ਨਵਾਂ ਸੰਸਕਰਣ ਇਹ ਹੈ: %1$s</string>
+  <string name="download_update">ਡਾਉਨਲੋਡ ਅਪਡੇਟ</string>
 </resources>

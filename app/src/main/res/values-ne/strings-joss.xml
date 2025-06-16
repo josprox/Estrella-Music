@@ -12,4 +12,22 @@
   <string name="current">हालको</string>
   <string name="newString">नंया</string>
   <string name="link_copied">प्रतिलिपि गरिएको लिंक</string>
+  <string name="customization">अनुकूलकरण</string>
+  <string name="data_and_privacy">डाटा र गोपनीयता</string>
+  <string name="about_the_app">अनुप्रयोगको बारेमा</string>
+  <string name="interface_">इन्टरपोर्ट</string>
+  <string name="content_preferences">सामग्री प्राथमिकताहरू</string>
+  <string name="lyrics_sources">पत्र स्रोतहरू</string>
+  <string name="downloads">Dessargasas</string>
+  <string name="clean">सफा हुनु</string>
+  <string name="backup_info">एक ब्याकअप फाइल सिर्जना गर्नुहोस् जुन तपाईंको प्लेलिस्ट, मनपर्ने र अनुप्रयोग कन्फिगरेसनमा समावेश गर्दछ। ध्यान दिनुहोस् कि डाउनलोड गरिएको गीतहरू यस प्रतिलिपिको अंश होइन।</string>
+  <string name="backup_desc">तपाईंको सूची, मनपर्ने र सेटिंग्स फाइलमा राख्नुहोस् जुन तपाईं सुरक्षित रूपमा भण्डार गर्न सक्नुहुनेछ वा अर्को उपकरणमा सर्न सक्नुहुन्छ।</string>
+  <string name="restore_desc">तपाईंको डाटा पुन: प्राप्ति गर्न ब्याकअप फाइल चयन गर्नुहोस्। वर्तमान समायोजन र सूचिहरू प्रतिस्थापन गरिनेछ।</string>
+  <string name="testMode">जांच मोड</string>
+  <string name="credits">Créditos</string>
+  <string name="links">समारोह</string>
+  <string name="update_info">जानकारी अपडेट गर्नुहोस्</string>
+  <string name="error_fetching_update">अपडेट विवरण प्राप्त गर्दा त्रुटि</string>
+  <string name="latestVersion_is">सब भन्दा भर्खरको संस्करण हो: %1$s</string>
+  <string name="download_update">अपडेट डाउनलोड गर्नुहोस्</string>
 </resources>

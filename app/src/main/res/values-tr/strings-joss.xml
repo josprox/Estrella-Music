@@ -46,4 +46,22 @@
   <string name="current">Akım</string>
   <string name="newString">Yeni</string>
   <string name="link_copied">Kopyalanan bağlantı</string>
+  <string name="customization">Özelleştirme</string>
+  <string name="data_and_privacy">Veri ve Gizlilik</string>
+  <string name="about_the_app">Uygulama Hakkında</string>
+  <string name="interface_">Arayüz</string>
+  <string name="content_preferences">İçerik Tercihleri</string>
+  <string name="lyrics_sources">Mektup kaynakları</string>
+  <string name="downloads">Descargas</string>
+  <string name="clean">Temiz</string>
+  <string name="backup_info">Çalma listenizi, favorilerinizi ve uygulama yapılandırmanızı içeren bir yedekleme dosyası oluşturun. İndirilen şarkıların bu kopyanın bir parçası olmadığını dikkate alın.</string>
+  <string name="backup_desc">Listelerinizi, favorilerinizi ve ayarlarınızı güvenli bir şekilde saklayabileceğiniz veya başka bir cihaza taşıyabileceğiniz bir dosyada tutun.</string>
+  <string name="restore_desc">Verilerinizi kurtarmak için bir yedekleme dosyası seçin. Geçerli ayarlamalar ve listeler değiştirilecektir.</string>
+  <string name="testMode">Test modu</string>
+  <string name="credits">Créditos</string>
+  <string name="links">Bağlar</string>
+  <string name="update_info">Bilgileri Güncelle</string>
+  <string name="error_fetching_update">Güncelleme Ayrıntıları Alma Hatası</string>
+  <string name="latestVersion_is">En son sürüm: %1$s</string>
+  <string name="download_update">Güncellemeyi İndir</string>
 </resources>

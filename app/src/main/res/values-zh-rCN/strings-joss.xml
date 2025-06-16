@@ -46,4 +46,22 @@
   <string name="current">当前的</string>
   <string name="newString">新的</string>
   <string name="link_copied">复制的链接</string>
+  <string name="customization">定制</string>
+  <string name="data_and_privacy">数据和隐私</string>
+  <string name="about_the_app">关于应用</string>
+  <string name="interface_">界面</string>
+  <string name="content_preferences">内容首选项</string>
+  <string name="lyrics_sources">信件来源</string>
+  <string name="downloads">Descargas</string>
+  <string name="clean">干净的</string>
+  <string name="backup_info">创建一个备份文件，其中包括您的播放列表，收藏夹和应用程序配置。考虑到下载的歌曲不是此副本的一部分。</string>
+  <string name="backup_desc">将您的列表，收藏夹和设置保留在您可以安全存储或移至其他设备的文件中。</string>
+  <string name="restore_desc">选择一个备份文件以恢复您的数据。当前的调整和列表将被替换。</string>
+  <string name="testMode">测试模式</string>
+  <string name="credits">克雷迪托斯</string>
+  <string name="links">链接</string>
+  <string name="update_info">更新信息</string>
+  <string name="error_fetching_update">获取更新详细信息的错误</string>
+  <string name="latestVersion_is">最新版本是：%1$s</string>
+  <string name="download_update">下载更新</string>
 </resources>

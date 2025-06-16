@@ -12,4 +12,22 @@
   <string name="current">Voolu-</string>
   <string name="newString">Uus</string>
   <string name="link_copied">Kopeeritud link</string>
+  <string name="customization">Kohandamine</string>
+  <string name="data_and_privacy">Andmed ja privaatsus</string>
+  <string name="about_the_app">Rakenduse kohta</string>
+  <string name="interface_">Liides</string>
+  <string name="content_preferences">Sisu eelistused</string>
+  <string name="lyrics_sources">Kirjaallikad</string>
+  <string name="downloads">Descargas</string>
+  <string name="clean">Koristama</string>
+  <string name="backup_info">Looge varufail, mis sisaldab teie esitusloendit, lemmikuid ja rakenduste konfiguratsiooni. Võtke arvesse, et allalaaditud laulud ei kuulu sellesse eksemplari.</string>
+  <string name="backup_desc">Hoidke oma nimekirju, lemmikuid ja seadeid failis, mida saate ohutult salvestada või teise seadmesse kolida.</string>
+  <string name="restore_desc">Valige andmete taastamiseks varufail. Praegused kohandused ja loendid asendatakse.</string>
+  <string name="testMode">Katserežiim</string>
+  <string name="credits">Créditos</string>
+  <string name="links">Lingid</string>
+  <string name="update_info">Teave värskendama</string>
+  <string name="error_fetching_update">Viga värskenduse üksikasjade saamine</string>
+  <string name="latestVersion_is">Viimane versioon on: %1$s</string>
+  <string name="download_update">Laadige alla värskendus</string>
 </resources>

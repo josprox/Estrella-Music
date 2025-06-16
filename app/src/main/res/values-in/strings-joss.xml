@@ -46,4 +46,22 @@
   <string name="current">Saat ini</string>
   <string name="newString">Baru</string>
   <string name="link_copied">Tautan yang disalin</string>
+  <string name="customization">Kustomisasi</string>
+  <string name="data_and_privacy">Data dan privasi</string>
+  <string name="about_the_app">Tentang aplikasi</string>
+  <string name="interface_">Antarmuka</string>
+  <string name="content_preferences">Preferensi konten</string>
+  <string name="lyrics_sources">Sumber Surat</string>
+  <string name="downloads">Descargas</string>
+  <string name="clean">Membersihkan</string>
+  <string name="backup_info">Buat file cadangan yang menyertakan daftar putar, favorit, dan konfigurasi aplikasi Anda. Mempertimbangkan lagu yang diunduh bukan bagian dari salinan ini.</string>
+  <string name="backup_desc">Simpan daftar, favorit, dan pengaturan Anda dalam file yang dapat Anda simpan dengan aman atau pindah ke perangkat lain.</string>
+  <string name="restore_desc">Pilih file cadangan untuk memulihkan data Anda. Penyesuaian dan daftar saat ini akan diganti.</string>
+  <string name="testMode">Mode uji</string>
+  <string name="credits">Créditos</string>
+  <string name="links">Tautan</string>
+  <string name="update_info">Perbarui informasi</string>
+  <string name="error_fetching_update">Kesalahan memperoleh detail pembaruan</string>
+  <string name="latestVersion_is">Versi terbaru adalah: %1$s</string>
+  <string name="download_update">Unduh Pembaruan</string>
 </resources>

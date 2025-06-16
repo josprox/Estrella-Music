@@ -69,4 +69,21 @@
   <string name="current">ସାମ୍ପ୍ରତିକ</string>
   <string name="newString">ନୂତନ</string>
   <string name="link_copied">ନକଲ ଲିଙ୍କ |</string>
+  <string name="customization">କଷ୍ଟମାଇଜେସନ୍</string>
+  <string name="data_and_privacy">ତଥ୍ୟ ଏବଂ ଗୋପନୀୟତା |</string>
+  <string name="about_the_app">ପ୍ରୟୋଗ ବିଷୟରେ</string>
+  <string name="interface_">ଇଣ୍ଟରଫେସ୍</string>
+  <string name="content_preferences">ବିଷୟବସ୍ତୁ ପସନ୍ଦଗୁଡିକ</string>
+  <string name="lyrics_sources">ଅକ୍ଷର ଉତ୍ସ |</string>
+  <string name="downloads">ଡେସକାର୍କସ୍</string>
+  <string name="clean">ପରିଷ୍କାର</string>
+  <string name="backup_info">ଏକ ବ୍ୟାକଅପ୍ ଫାଇଲ୍ ସୃଷ୍ଟି କରନ୍ତୁ ଯେଉଁଥିରେ ଆପଣଙ୍କର ପ୍ଲେଲିଷ୍ଟ, ପ୍ରିୟ ଏବଂ ଆପ୍ ସଂରଚନା ଅନ୍ତର୍ଭୁକ୍ତ | ଡାଉନଲୋଡ୍ ହୋଇଥିବା ଗୀତଗୁଡିକୁ ଧ୍ୟାନ ଦିଅନ୍ତୁ ଯେ ଏହି କପି ର ଅଂଶ ନୁହେଁ |</string>
+  <string name="backup_desc">ଆପଣଙ୍କର ତାଲିକା, ପ୍ରିୟ ଏବଂ ସେଟିଂସମୂହକୁ ଏକ ଫାଇଲ୍ ରେ ରଖନ୍ତୁ ଯାହା ଆପଣ ସୁରକ୍ଷିତ ଭାବରେ ଅନ୍ୟ ଉପକରଣକୁ ସଂରକ୍ଷଣ କିମ୍ବା ଘୁଞ୍ଚାଇ ପାରିବେ |</string>
+  <string name="restore_desc">ଆପଣଙ୍କର ତଥ୍ୟ ପୁନରୁଦ୍ଧାର ପାଇଁ ଏକ ବ୍ୟାକଅପ୍ ଫାଇଲ୍ ଚୟନ କରନ୍ତୁ | ବର୍ତ୍ତମାନର ଆଡଜଷ୍ଟମେଣ୍ଟ୍ ଏବଂ ତାଲିକାଗୁଡ଼ିକ ବଦଳାଯିବ |</string>
+  <string name="testMode">ପରୀକ୍ଷା ମୋଡ୍</string>
+  <string name="credits">କ୍ରାଇଡିଟୋସ୍ |</string>
+  <string name="links">ଲିଙ୍କ୍</string>
+  <string name="update_info">ସୂଚନା ଅଦ୍ୟତନ କରନ୍ତୁ |</string>
+  <string name="error_fetching_update">ଅଦ୍ୟତନ ବିବରଣୀ ପାଇବା ତ୍ରୁଟି |</string>
+  <string name="download_update">ଅଦ୍ୟତନ ଡାଉନଲୋଡ୍ କରନ୍ତୁ |</string>
 </resources>

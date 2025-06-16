@@ -46,4 +46,22 @@
   <string name="current">Proud</string>
   <string name="newString">Nový</string>
   <string name="link_copied">Zkopírovaný odkaz</string>
+  <string name="customization">Přizpůsobení</string>
+  <string name="data_and_privacy">Data a soukromí</string>
+  <string name="about_the_app">O aplikaci</string>
+  <string name="interface_">Rozhraní</string>
+  <string name="content_preferences">Předvolby obsahu</string>
+  <string name="lyrics_sources">Zdroje dopisů</string>
+  <string name="downloads">Descargas</string>
+  <string name="clean">Čistý</string>
+  <string name="backup_info">Vytvořte záložní soubor, který obsahuje váš seznam skladeb, oblíbené a konfiguraci aplikace. Vezměte v úvahu, že stažené písně nejsou součástí této kopie.</string>
+  <string name="backup_desc">Udržujte své seznamy, oblíbené a nastavení v souboru, který můžete bezpečně ukládat nebo přesunout do jiného zařízení.</string>
+  <string name="restore_desc">Vyberte záložní soubor pro obnovení vašich dat. Aktuální úpravy a seznamy budou vyměněny.</string>
+  <string name="testMode">Testovací režim</string>
+  <string name="credits">Créditos</string>
+  <string name="links">Odkazy</string>
+  <string name="update_info">Aktualizovat informace</string>
+  <string name="error_fetching_update">Chyba získání podrobností o aktualizaci</string>
+  <string name="latestVersion_is">Poslední verze je: %1$s</string>
+  <string name="download_update">Stahování aktualizace</string>
 </resources>

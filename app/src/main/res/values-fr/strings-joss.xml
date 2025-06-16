@@ -43,4 +43,22 @@
   <string name="current">Actuel</string>
   <string name="newString">Nouveau</string>
   <string name="link_copied">Lien copié</string>
+  <string name="customization">Personnalisation</string>
+  <string name="data_and_privacy">Données et confidentialité</string>
+  <string name="about_the_app">À propos de l\'application</string>
+  <string name="interface_">Interface</string>
+  <string name="content_preferences">Préférences de contenu</string>
+  <string name="lyrics_sources">Sources de lettres</string>
+  <string name="downloads">Descargas</string>
+  <string name="clean">Faire le ménage</string>
+  <string name="backup_info">Créez un fichier de sauvegarde qui inclut votre playlist, vos favoris et votre configuration d\'application. Tenez compte du fait que les chansons téléchargées ne font pas partie de cette copie.</string>
+  <string name="backup_desc">Gardez vos listes, vos favoris et vos paramètres dans un fichier que vous pouvez stocker ou passer en toute sécurité vers un autre appareil.</string>
+  <string name="restore_desc">Sélectionnez un fichier de sauvegarde pour récupérer vos données. Les ajustements et listes actuels seront remplacés.</string>
+  <string name="testMode">Mode de test</string>
+  <string name="credits">Crêtos</string>
+  <string name="links">Links</string>
+  <string name="update_info">Mettre à jour les informations</string>
+  <string name="error_fetching_update">Erreur d\'obtention des détails de mise à jour</string>
+  <string name="latestVersion_is">La version la plus récente est: %1$s</string>
+  <string name="download_update">Télécharger la mise à jour</string>
 </resources>

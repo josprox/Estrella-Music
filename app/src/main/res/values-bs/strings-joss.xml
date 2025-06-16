@@ -12,4 +12,22 @@
   <string name="current">Struja</string>
   <string name="newString">Nervozan</string>
   <string name="link_copied">Kopirana veza</string>
+  <string name="customization">Prilagođavanje</string>
+  <string name="data_and_privacy">Podaci i privatnost</string>
+  <string name="about_the_app">O nanosu</string>
+  <string name="interface_">Sučelje</string>
+  <string name="content_preferences">Postavke sadržaja</string>
+  <string name="lyrics_sources">Izvori slova</string>
+  <string name="downloads">Descargas</string>
+  <string name="clean">Čist</string>
+  <string name="backup_info">Kreirajte rezervnu datoteku koja uključuje vašu listu reprodukcije, favoritu i konfiguraciju aplikacija. Uzmite u obzir da preuzete pjesme nisu dio ove kopije.</string>
+  <string name="backup_desc">Držite svoje liste, favorite i postavke u datoteci koju možete sigurno pohraniti ili preći na drugi uređaj.</string>
+  <string name="restore_desc">Odaberite sigurnosnu kopiju datoteku za povrat podataka. Trenutna prilagođavanja i popisi bit će zamijenjeni.</string>
+  <string name="testMode">Test mod</string>
+  <string name="credits">Créditos</string>
+  <string name="links">Linkove</string>
+  <string name="update_info">Informacije o ažuriranju</string>
+  <string name="error_fetching_update">Pogreška prilikom dobijanja detalja o ažuriranju</string>
+  <string name="latestVersion_is">Najnovija verzija je: %1$s</string>
+  <string name="download_update">Preuzmite ažuriranje</string>
 </resources>

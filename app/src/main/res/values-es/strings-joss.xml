@@ -46,4 +46,22 @@
   <string name="current">Actual</string>
   <string name="newString">Nuevo</string>
   <string name="link_copied">Enlace copiado</string>
+  <string name="customization">Personalización</string>
+  <string name="data_and_privacy">Datos y Privacidad</string>
+  <string name="about_the_app">Acerca de la aplicación</string>
+  <string name="interface_">Interfaz</string>
+  <string name="content_preferences">Preferencias de contenido</string>
+  <string name="lyrics_sources">Fuentes de letras</string>
+  <string name="downloads">Descargas</string>
+  <string name="clean">Limpiar</string>
+  <string name="backup_info">Crea un archivo de respaldo que incluye tus listas de reproducción, favoritos y la configuración de la app. Toma en cuenta que las canciones descargadas no forman parte de esta copia.</string>
+  <string name="backup_desc">Guarda tus listas, favoritos y ajustes en un archivo que puedes almacenar de forma segura o mover a otro dispositivo.</string>
+  <string name="restore_desc">Selecciona un archivo de respaldo para recuperar tus datos. Los ajustes y listas actuales serán reemplazados.</string>
+  <string name="testMode">Modo de prueba</string>
+  <string name="credits">Créditos</string>
+  <string name="links">Enlaces</string>
+  <string name="update_info">Información de la actualización</string>
+  <string name="error_fetching_update">Error al obtener detalles de la actualización</string>
+  <string name="latestVersion_is">La versión más reciente es: %1$s</string>
+  <string name="download_update">Descargar actualización</string>
 </resources>

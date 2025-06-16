@@ -12,4 +12,22 @@
   <string name="current">நடப்பு</string>
   <string name="newString">புதியது</string>
   <string name="link_copied">நகலெடுக்கப்பட்ட இணைப்பு</string>
+  <string name="customization">தனிப்பயனாக்கம்</string>
+  <string name="data_and_privacy">தரவு மற்றும் தனியுரிமை</string>
+  <string name="about_the_app">பயன்பாடு பற்றி</string>
+  <string name="interface_">இடைமுகம்</string>
+  <string name="content_preferences">உள்ளடக்க விருப்பத்தேர்வுகள்</string>
+  <string name="lyrics_sources">கடிதம் ஆதாரங்கள்</string>
+  <string name="downloads">டெஸ்கர்காஸ்</string>
+  <string name="clean">சுத்தமான</string>
+  <string name="backup_info">உங்கள் பிளேலிஸ்ட், பிடித்தவை மற்றும் பயன்பாட்டு உள்ளமைவை உள்ளடக்கிய காப்பு கோப்பை உருவாக்கவும். பதிவிறக்கம் செய்யப்பட்ட பாடல்கள் இந்த நகலின் ஒரு பகுதியாக இல்லை என்பதை கணக்கில் எடுத்துக்கொள்ளுங்கள்.</string>
+  <string name="backup_desc">உங்கள் பட்டியல்கள், பிடித்தவை மற்றும் அமைப்புகளை நீங்கள் பாதுகாப்பாக சேமிக்க அல்லது மற்றொரு சாதனத்திற்கு செல்லக்கூடிய கோப்பில் வைத்திருங்கள்.</string>
+  <string name="restore_desc">உங்கள் தரவை மீட்டெடுக்க காப்புப்பிரதி கோப்பைத் தேர்ந்தெடுக்கவும். தற்போதைய சரிசெய்தல் மற்றும் பட்டியல்கள் மாற்றப்படும்.</string>
+  <string name="testMode">சோதனை முறை</string>
+  <string name="credits">க்ரெடிடோஸ்</string>
+  <string name="links">இணைப்புகள்</string>
+  <string name="update_info">தகவலைப் புதுப்பிக்கவும்</string>
+  <string name="error_fetching_update">Error al obtener detalles de la actualización</string>
+  <string name="latestVersion_is">La versión más reciente es: %1$s</string>
+  <string name="download_update">புதுப்பிப்பைப் பதிவிறக்கவும்</string>
 </resources>

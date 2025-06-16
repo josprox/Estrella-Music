@@ -46,4 +46,22 @@
   <string name="current">Aktualny</string>
   <string name="newString">Nowy</string>
   <string name="link_copied">Skopiowany link</string>
+  <string name="customization">Dostosowywanie</string>
+  <string name="data_and_privacy">Dane i prywatność</string>
+  <string name="about_the_app">O aplikacji</string>
+  <string name="interface_">Interfejs</string>
+  <string name="content_preferences">Preferencje treści</string>
+  <string name="lyrics_sources">Źródła listów</string>
+  <string name="downloads">Descargas</string>
+  <string name="clean">Czysty</string>
+  <string name="backup_info">Utwórz plik kopii zapasowej, który zawiera listę odtwarzania, ulubione i konfigurację aplikacji. Weź pod uwagę, że pobrane utwory nie są częścią tej kopii.</string>
+  <string name="backup_desc">Zachowaj swoje listy, ulubione i ustawienia w pliku, który możesz bezpiecznie przechowywać lub przenieść na inne urządzenie.</string>
+  <string name="restore_desc">Wybierz plik kopii zapasowej, aby odzyskać dane. Obecne korekty i listy zostaną wymienione.</string>
+  <string name="testMode">Tryb testowy</string>
+  <string name="credits">Créditos</string>
+  <string name="links">Spinki do mankietów</string>
+  <string name="update_info">Zaktualizuj informacje</string>
+  <string name="error_fetching_update">Błąd uzyskiwania szczegółów aktualizacji</string>
+  <string name="latestVersion_is">Najnowsza wersja to: %1$s</string>
+  <string name="download_update">Pobierz aktualizację</string>
 </resources>

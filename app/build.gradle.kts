@@ -27,7 +27,7 @@ android {
         minSdk = 26
         targetSdk = 35
         versionCode = 46
-        versionName = "2.1.0"
+        versionName = "2.1.1"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -182,9 +182,9 @@ dependencies {
     // Joss Music
     implementation(libs.onesignal)
     implementation(libs.dotenv.vault.kotlin)
-    implementation(libs.markwon)
-    implementation(libs.markwon.html)
     implementation(libs.coil.compose.v240)
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.androidx.material.icons.extended)
+    implementation(libs.richtext.ui.material3)
+    implementation(libs.richtext.commonmark)
 }

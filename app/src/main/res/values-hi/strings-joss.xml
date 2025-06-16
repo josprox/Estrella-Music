@@ -12,4 +12,22 @@
   <string name="current">मौजूदा</string>
   <string name="newString">नया</string>
   <string name="link_copied">कॉपी किया हुआ लिंक</string>
+  <string name="customization">अनुकूलन</string>
+  <string name="data_and_privacy">आंकड़ा और गोपनीयता</string>
+  <string name="about_the_app">आवेदन के बारे में</string>
+  <string name="interface_">इंटरफ़ेस</string>
+  <string name="content_preferences">सामग्री प्राथमिकताएँ</string>
+  <string name="lyrics_sources">पत्र स्रोत</string>
+  <string name="downloads">डेसार्गस</string>
+  <string name="clean">साफ</string>
+  <string name="backup_info">एक बैकअप फ़ाइल बनाएं जिसमें आपकी प्लेलिस्ट, पसंदीदा और ऐप कॉन्फ़िगरेशन शामिल है। ध्यान रखें कि डाउनलोड किए गए गाने इस प्रति का हिस्सा नहीं हैं।</string>
+  <string name="backup_desc">अपनी सूची, पसंदीदा और सेटिंग्स को एक फ़ाइल में रखें जिसे आप सुरक्षित रूप से स्टोर कर सकते हैं या किसी अन्य डिवाइस पर ले जा सकते हैं।</string>
+  <string name="restore_desc">अपना डेटा पुनर्प्राप्त करने के लिए एक बैकअप फ़ाइल का चयन करें। वर्तमान समायोजन और सूचियों को बदल दिया जाएगा।</string>
+  <string name="testMode">परीक्षण मोड</string>
+  <string name="credits">क्रेडिटोस</string>
+  <string name="links">लिंक</string>
+  <string name="update_info">अद्यतन जानकारी</string>
+  <string name="error_fetching_update">अद्यतन विवरण प्राप्त करने में त्रुटि</string>
+  <string name="latestVersion_is">सबसे हालिया संस्करण है: %1$s</string>
+  <string name="download_update">डाउनलोड अद्यतन</string>
 </resources>

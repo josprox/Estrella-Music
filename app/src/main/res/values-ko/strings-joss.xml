@@ -46,4 +46,22 @@
   <string name="current">현재의</string>
   <string name="newString">새로운</string>
   <string name="link_copied">복사 링크</string>
+  <string name="customization">사용자 정의</string>
+  <string name="data_and_privacy">데이터 및 개인 정보</string>
+  <string name="about_the_app">응용 프로그램 정보</string>
+  <string name="interface_">인터페이스</string>
+  <string name="content_preferences">내용 선호도</string>
+  <string name="lyrics_sources">편지 출처</string>
+  <string name="downloads">Descargas</string>
+  <string name="clean">깨끗한</string>
+  <string name="backup_info">재생 목록, 즐겨 찾기 및 앱 구성이 포함 된 백업 파일을 만듭니다. 다운로드 된 노래는이 사본의 일부가 아니라는 점을 고려하십시오.</string>
+  <string name="backup_desc">다른 장치로 안전하게 저장하거나 이동할 수있는 파일에 목록, 즐겨 찾기 및 설정을 유지하십시오.</string>
+  <string name="restore_desc">백업 파일을 선택하여 데이터를 복구하십시오. 현재 조정 및 목록이 대체됩니다.</string>
+  <string name="testMode">테스트 모드</string>
+  <string name="credits">Créditos</string>
+  <string name="links">모래밭</string>
+  <string name="update_info">정보 업데이트</string>
+  <string name="error_fetching_update">업데이트 세부 정보를 얻는 오류</string>
+  <string name="latestVersion_is">가장 최근 버전은 다음과 같습니다. %1$s</string>
+  <string name="download_update">업데이트 다운로드</string>
 </resources>

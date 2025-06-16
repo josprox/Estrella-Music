@@ -46,4 +46,22 @@
   <string name="current">Hiện hành</string>
   <string name="newString">Mới</string>
   <string name="link_copied">Liên kết đã sao chép</string>
+  <string name="customization">Tùy chỉnh</string>
+  <string name="data_and_privacy">Dữ liệu và quyền riêng tư</string>
+  <string name="about_the_app">Về ứng dụng</string>
+  <string name="interface_">Giao diện</string>
+  <string name="content_preferences">Tùy chọn nội dung</string>
+  <string name="lyrics_sources">Nguồn thư</string>
+  <string name="downloads">Descargas</string>
+  <string name="clean">Lau dọn</string>
+  <string name="backup_info">Tạo một tệp sao lưu bao gồm danh sách phát, yêu thích và cấu hình ứng dụng của bạn. Có tính đến rằng các bài hát đã tải xuống không phải là một phần của bản sao này.</string>
+  <string name="backup_desc">Giữ danh sách, mục yêu thích và cài đặt của bạn trong một tệp mà bạn có thể lưu trữ một cách an toàn hoặc chuyển sang thiết bị khác.</string>
+  <string name="restore_desc">Chọn một tệp sao lưu để khôi phục dữ liệu của bạn. Các điều chỉnh và danh sách hiện tại sẽ được thay thế.</string>
+  <string name="testMode">Chế độ kiểm tra</string>
+  <string name="credits">Créditos</string>
+  <string name="links">Liên kết</string>
+  <string name="update_info">Cập nhật thông tin</string>
+  <string name="error_fetching_update">Lỗi có được chi tiết cập nhật</string>
+  <string name="latestVersion_is">Phiên bản gần đây nhất là: %1$s</string>
+  <string name="download_update">Tải xuống cập nhật</string>
 </resources>

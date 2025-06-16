@@ -46,4 +46,22 @@
   <string name="current">現在</string>
   <string name="newString">新しい</string>
   <string name="link_copied">コピーされたリンク</string>
+  <string name="customization">カスタマイズ</string>
+  <string name="data_and_privacy">データとプライバシー</string>
+  <string name="about_the_app">アプリケーションについて</string>
+  <string name="interface_">インタフェース</string>
+  <string name="content_preferences">コンテンツの好み</string>
+  <string name="lyrics_sources">レターソース</string>
+  <string name="downloads">デカルガ</string>
+  <string name="clean">クリーン</string>
+  <string name="backup_info">プレイリスト、お気に入り、アプリの構成を含むバックアップファイルを作成します。ダウンロードされた曲がこのコピーの一部ではないことを考慮してください。</string>
+  <string name="backup_desc">リスト、お気に入り、設定を安全に保存または別のデバイスに移動できるファイルに保管してください。</string>
+  <string name="restore_desc">バックアップファイルを選択してデータを回復します。現在の調整とリストが交換されます。</string>
+  <string name="testMode">テストモード</string>
+  <string name="credits">クレディトス</string>
+  <string name="links">リンク</string>
+  <string name="update_info">情報を更新します</string>
+  <string name="error_fetching_update">更新の詳細の取得エラー</string>
+  <string name="latestVersion_is">最新のバージョンは次のとおりです。%1$s</string>
+  <string name="download_update">更新をダウンロードしてください</string>
 </resources>

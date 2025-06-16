@@ -46,4 +46,21 @@
   <string name="current">حاضِر</string>
   <string name="newString">جديد</string>
   <string name="link_copied">رابط نسخ</string>
+  <string name="customization">التخصيص</string>
+  <string name="data_and_privacy">البيانات والخصوصية</string>
+  <string name="about_the_app">حول التطبيق</string>
+  <string name="interface_">واجهة</string>
+  <string name="content_preferences">تفضيلات المحتوى</string>
+  <string name="lyrics_sources">مصادر الرسالة</string>
+  <string name="downloads">ديكارغاس</string>
+  <string name="clean">ينظف</string>
+  <string name="backup_info">قم بإنشاء ملف نسخ احتياطي يتضمن قائمة التشغيل والمفضلات وتكوين التطبيق. خذ في الاعتبار أن الأغاني التي تم تنزيلها ليست جزءًا من هذه النسخة.</string>
+  <string name="backup_desc">حافظ على قوائمك والمفضلة والإعدادات في ملف يمكنك تخزينه بأمان أو الانتقال إلى جهاز آخر.</string>
+  <string name="restore_desc">حدد ملف النسخ الاحتياطي لاستعادة بياناتك. سيتم استبدال التعديلات والقوائم الحالية.</string>
+  <string name="testMode">وضع الاختبار</string>
+  <string name="credits">كريديتوس</string>
+  <string name="links">الروابط</string>
+  <string name="update_info">تحديث المعلومات</string>
+  <string name="error_fetching_update">خطأ في الحصول على تفاصيل التحديث</string>
+  <string name="download_update">تنزيل التحديث</string>
 </resources>

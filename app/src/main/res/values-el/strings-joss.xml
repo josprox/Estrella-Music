@@ -46,4 +46,22 @@
   <string name="current">Ρεύμα</string>
   <string name="newString">Νέος</string>
   <string name="link_copied">Αντιγραφεί σύνδεσμος</string>
+  <string name="customization">Προσαρμογή</string>
+  <string name="data_and_privacy">Δεδομένα και ιδιωτικότητα</string>
+  <string name="about_the_app">Σχετικά με την εφαρμογή</string>
+  <string name="interface_">Διασυνδέομαι</string>
+  <string name="content_preferences">Προτιμήσεις περιεχομένου</string>
+  <string name="lyrics_sources">Πηγές επιστολών</string>
+  <string name="downloads">Ντεσκάργκας</string>
+  <string name="clean">Καθαρός</string>
+  <string name="backup_info">Δημιουργήστε ένα αρχείο αντιγράφων ασφαλείας που περιλαμβάνει τη λίστα αναπαραγωγής, τα αγαπημένα και τη διαμόρφωση της εφαρμογής. Λάβετε υπόψη ότι τα λήψη τραγουδιών δεν αποτελούν μέρος αυτού του αντιγράφου.</string>
+  <string name="backup_desc">Κρατήστε τις λίστες, τα αγαπημένα και τις ρυθμίσεις σας σε ένα αρχείο που μπορείτε να αποθηκεύσετε με ασφάλεια ή να μετακινηθείτε σε άλλη συσκευή.</string>
+  <string name="restore_desc">Επιλέξτε ένα αρχείο αντιγράφων ασφαλείας για να ανακτήσετε τα δεδομένα σας. Οι τρέχουσες προσαρμογές και οι λίστες θα αντικατασταθούν.</string>
+  <string name="testMode">Λειτουργία δοκιμής</string>
+  <string name="credits">Créditos</string>
+  <string name="links">Εδαφος διά παιγνίδι γκολφ</string>
+  <string name="update_info">Ενημέρωση πληροφοριών</string>
+  <string name="error_fetching_update">Σφάλμα λήψης λεπτομερειών ενημέρωσης</string>
+  <string name="latestVersion_is">Η πιο πρόσφατη έκδοση είναι: %1$s</string>
+  <string name="download_update">Ενημέρωση λήψης</string>
 </resources>

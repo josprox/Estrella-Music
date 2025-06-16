@@ -46,4 +46,22 @@
   <string name="current">Поточний</string>
   <string name="newString">Новачок</string>
   <string name="link_copied">Скопійоване посилання</string>
+  <string name="customization">Налаштування</string>
+  <string name="data_and_privacy">Дані та конфіденційність</string>
+  <string name="about_the_app">Про застосування</string>
+  <string name="interface_">Інтерфейс</string>
+  <string name="content_preferences">Зміст налаштувань</string>
+  <string name="lyrics_sources">Джерела букви</string>
+  <string name="downloads">Дезкаргас</string>
+  <string name="clean">Чистий</string>
+  <string name="backup_info">Створіть файл резервного копіювання, який включає ваш список відтворення, вибране та конфігурацію додатків. Враховуйте, що завантажені пісні не є частиною цієї копії.</string>
+  <string name="backup_desc">Зберігайте свої списки, улюблені та налаштування у файлі, який ви можете безпечно зберігати або переходити на інший пристрій.</string>
+  <string name="restore_desc">Виберіть файл резервного копіювання для відновлення даних. Поточні коригування та списки будуть замінені.</string>
+  <string name="testMode">Тестовий режим</string>
+  <string name="credits">Кредітос</string>
+  <string name="links">Посилання</string>
+  <string name="update_info">Оновити інформацію</string>
+  <string name="error_fetching_update">Помилка отримання деталей оновлення</string>
+  <string name="latestVersion_is">Найновіша версія: %1$s</string>
+  <string name="download_update">Завантажте оновлення</string>
 </resources>

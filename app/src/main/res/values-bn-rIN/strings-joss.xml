@@ -70,4 +70,20 @@
   <string name="current">কারেন্ট</string>
   <string name="newString">নতুন</string>
   <string name="link_copied">অনুলিপি লিঙ্ক</string>
+  <string name="customization">কাস্টমাইজেশন</string>
+  <string name="data_and_privacy">ডেটা এবং গোপনীয়তা</string>
+  <string name="about_the_app">আবেদন সম্পর্কে</string>
+  <string name="interface_">ইন্টারফেস</string>
+  <string name="content_preferences">বিষয়বস্তু পছন্দ</string>
+  <string name="lyrics_sources">চিঠি উত্স</string>
+  <string name="downloads">ডেসকারগাস</string>
+  <string name="clean">পরিষ্কার</string>
+  <string name="backup_info">আপনার প্লেলিস্ট, প্রিয় এবং অ্যাপ্লিকেশন কনফিগারেশন অন্তর্ভুক্ত একটি ব্যাকআপ ফাইল তৈরি করুন। অ্যাকাউন্টে নিন যে ডাউনলোড করা গানগুলি এই অনুলিপিটির অংশ নয়।</string>
+  <string name="backup_desc">আপনার তালিকাগুলি, প্রিয় এবং সেটিংস এমন কোনও ফাইলে রাখুন যা আপনি নিরাপদে সঞ্চয় করতে বা অন্য ডিভাইসে যেতে পারেন।</string>
+  <string name="restore_desc">আপনার ডেটা পুনরুদ্ধার করতে একটি ব্যাকআপ ফাইল নির্বাচন করুন। বর্তমান সমন্বয় এবং তালিকাগুলি প্রতিস্থাপন করা হবে।</string>
+  <string name="testMode">পরীক্ষা মোড</string>
+  <string name="credits">ক্রেডিটোস</string>
+  <string name="links">লিঙ্কগুলি</string>
+  <string name="update_info">তথ্য আপডেট করুন</string>
+  <string name="download_update">আপডেট ডাউনলোড করুন</string>
 </resources>
