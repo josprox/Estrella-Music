@@ -7,6 +7,7 @@ import androidx.compose.animation.fadeOut
 import androidx.compose.animation.shrinkOut
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxScope
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -251,41 +252,120 @@ fun SongListItem(
     showLikedIcon: Boolean = true,
     showInLibraryIcon: Boolean = false,
     showDownloadIcon: Boolean = true,
-    badges: @Composable RowScope.() -> Unit = {
-        if (showLikedIcon && song.song.liked) {
-            Icon.Favorite()
-        }
-        if (showInLibraryIcon && song.song.inLibrary != null) {
-            Icon.Library()
-        }
-        if (showDownloadIcon) {
-            val download by LocalDownloadUtil.current.getDownload(song.id).collectAsState(initial = null)
-            Icon.Download(download?.state)
-        }
-    },
+    badges: @Composable RowScope.() -> Unit = {}, // Este parámetro ya no se usa visualmente, pero se mantiene para no romper la firma.
     isActive: Boolean = false,
     isPlaying: Boolean = false,
     trailingContent: @Composable RowScope.() -> Unit = {},
-) = ListItem(
-    title = song.song.title,
-    subtitle = joinByBullet(
-        song.artists.joinToString { it.name },
-        makeTimeString(song.song.duration * 1000L)
-    ),
-    badges = badges,
-    thumbnailContent = {
+) {
+    // La nueva estructura se basa en una Fila (Row) para un control total.
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(8.dp))
+            .background(
+                if (isActive) MaterialTheme.colorScheme.onSurface.copy(alpha = 0.08f) else Color.Transparent
+            )
+            .padding(horizontal = 8.dp, vertical = 8.dp)
+    ) {
+        // 1. Thumbnail a la izquierda
         ItemThumbnail(
             thumbnailUrl = song.song.thumbnailUrl,
             albumIndex = albumIndex,
             isActive = isActive,
             isPlaying = isPlaying,
             shape = RoundedCornerShape(ThumbnailCornerRadius),
-            modifier = Modifier.size(ListThumbnailSize)
+            modifier = Modifier.size(48.dp)
         )
-    },
-    trailingContent = trailingContent,
-    modifier = modifier
-)
+
+        Spacer(Modifier.width(16.dp))
+
+        // 2. Columna central para Título y Artista/Badges
+        Column(
+            modifier = Modifier.weight(1f),
+            verticalArrangement = Arrangement.Center
+        ) {
+            // Título de la canción
+            Text(
+                text = song.song.title,
+                style = MaterialTheme.typography.bodyLarge,
+                fontWeight = FontWeight.Medium,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+                color = if (isActive) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurface
+            )
+
+            Spacer(Modifier.height(2.dp))
+
+            // Fila para información secundaria (Badges + Artista)
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(6.dp)
+            ) {
+                // Lógica de Badges integrada directamente aquí con íconos más pequeños
+                if (showLikedIcon && song.song.liked) {
+                    Icon(
+                        painter = painterResource(R.drawable.favorite),
+                        contentDescription = "Favorito",
+                        tint = MaterialTheme.colorScheme.error,
+                        modifier = Modifier.size(14.dp)
+                    )
+                }
+                if (showInLibraryIcon && song.song.inLibrary != null) {
+                    Icon(
+                        painter = painterResource(R.drawable.library_music),
+                        contentDescription = "En biblioteca",
+                        tint = MaterialTheme.colorScheme.primary,
+                        modifier = Modifier.size(14.dp)
+                    )
+                }
+                if (showDownloadIcon) {
+                    val download by LocalDownloadUtil.current.getDownload(song.id).collectAsState(initial = null)
+                    when (download?.state) {
+                        Download.STATE_COMPLETED -> Icon(
+                            painter = painterResource(R.drawable.offline),
+                            contentDescription = "Descargado",
+                            tint = MaterialTheme.colorScheme.primary,
+                            modifier = Modifier.size(14.dp)
+                        )
+                        Download.STATE_DOWNLOADING -> CircularProgressIndicator(
+                            strokeWidth = 1.5.dp,
+                            modifier = Modifier.size(14.dp)
+                        )
+                        else -> {} // No muestra nada si no está descargado
+                    }
+                }
+
+                // Nombre del artista
+                Text(
+                    text = song.artists.joinToString { it.name },
+                    style = MaterialTheme.typography.bodyMedium,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+        }
+
+        Spacer(Modifier.width(8.dp))
+
+        // 3. Contenido final a la derecha
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.End
+        ) {
+            // Se muestra la duración de la canción
+            Text(
+                text = makeTimeString(song.song.duration * 1000L),
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                modifier = Modifier.padding(end = 8.dp)
+            )
+            // Se renderiza el contenido final original (usualmente el menú '...')
+            trailingContent()
+        }
+    }
+}
 
 @Composable
 fun SongGridItem(
@@ -773,6 +853,7 @@ fun YouTubeGridItem(
     fillMaxWidth = fillMaxWidth,
     modifier = modifier
 )
+
 
 @Composable
 fun ItemThumbnail(
