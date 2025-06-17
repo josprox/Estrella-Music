@@ -173,7 +173,7 @@ fun NavGraphBuilder.navigationBuilder(
             }
         )
     ) {
-        LocalPlaylistScreen(navController, scrollBehavior)
+        LocalPlaylistScreen(navController)
     }
     composable(
         route = "youtube_browse/{browseId}?params={params}",
