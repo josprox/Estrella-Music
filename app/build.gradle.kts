@@ -187,4 +187,6 @@ dependencies {
     implementation(libs.androidx.material.icons.extended)
     implementation(libs.richtext.ui.material3)
     implementation(libs.richtext.commonmark)
+    implementation(libs.coil.compose.v260)
+    implementation(libs.androidx.palette.ktx)
 }
