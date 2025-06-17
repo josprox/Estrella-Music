@@ -1,5 +1,6 @@
 package com.zionhuang.music.ui.screens
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.drawable.BitmapDrawable
 import androidx.activity.compose.BackHandler
@@ -8,53 +9,19 @@ import androidx.compose.animation.core.tween
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.combinedClickable
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.asPaddingValues
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Checkbox
-import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.FloatingActionButton
-import androidx.compose.material3.FloatingActionButtonDefaults
-import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
-import androidx.compose.material3.LocalContentColor
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
-import androidx.compose.material3.TopAppBarDefaults
-import androidx.compose.material3.TopAppBarScrollBehavior
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.derivedStateOf
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableIntStateOf
-import androidx.compose.runtime.mutableStateListOf
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.listSaver
 import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.compose.runtime.setValue
-import androidx.compose.runtime.toMutableStateList
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -94,8 +61,6 @@ import com.zionhuang.music.LocalDownloadUtil
 import com.zionhuang.music.LocalPlayerAwareWindowInsets
 import com.zionhuang.music.LocalPlayerConnection
 import com.zionhuang.music.R
-import com.zionhuang.music.constants.AlbumThumbnailSize
-import com.zionhuang.music.constants.ThumbnailCornerRadius
 import com.zionhuang.music.db.entities.Album
 import com.zionhuang.music.db.entities.AlbumEntity
 import com.zionhuang.music.db.entities.ArtistEntity
@@ -107,7 +72,6 @@ import com.zionhuang.music.ui.component.LocalMenuState
 import com.zionhuang.music.ui.component.NavigationTitle
 import com.zionhuang.music.ui.component.SongListItem
 import com.zionhuang.music.ui.component.YouTubeGridItem
-import com.zionhuang.music.ui.component.shimmer.ButtonPlaceholder
 import com.zionhuang.music.ui.component.shimmer.ListItemPlaceHolder
 import com.zionhuang.music.ui.component.shimmer.ShimmerHost
 import com.zionhuang.music.ui.component.shimmer.TextPlaceholder
@@ -146,7 +110,6 @@ private suspend fun fetchDominantColor(context: Context, imageUrl: String?, defa
 @Composable
 fun AlbumScreen(
     navController: NavController,
-    scrollBehavior: TopAppBarScrollBehavior, // Este ya no se usará directamente, pero se mantiene para no romper la firma del método.
     viewModel: AlbumViewModel = hiltViewModel(),
 ) {
     // --- LÓGICA ORIGINAL (INTACTA) ---
@@ -188,9 +151,8 @@ fun AlbumScreen(
                 else Download.STATE_STOPPED
         }
     }
-    // --- FIN DE LÓGICA ORIGINAL ---
 
-    // --- NUEVOS ESTADOS DE UI (SIN ALTERAR LÓGICA) ---
+    // --- NUEVOS ESTADOS DE UI ---
     val defaultColor = MaterialTheme.colorScheme.surface
     var dominantColor by remember { mutableStateOf(defaultColor) }
     val animatedBackgroundColor by animateColorAsState(dominantColor, tween(500))
@@ -209,39 +171,17 @@ fun AlbumScreen(
             .fillMaxSize()
             .background(Brush.verticalGradient(listOf(animatedBackgroundColor.copy(alpha = 0.4f), MaterialTheme.colorScheme.surface)))
     ) {
-        // El contenido principal de la pantalla
-        LazyColumn(
-            state = listState,
-            contentPadding = LocalPlayerAwareWindowInsets.current.asPaddingValues()
-        ) {
-            val albumData = albumWithSongs
+        val albumData = albumWithSongs
 
-            // Marcador de posición mientras carga la data
-            if (albumData == null || albumData.songs.isEmpty()) {
-                item {
-                    // Mantenemos el Shimmer original
-                    ShimmerHost {
-                        Column(Modifier.padding(12.dp)) {
-                            Row(verticalAlignment = Alignment.CenterVertically) {
-                                Spacer(modifier = Modifier.size(AlbumThumbnailSize).clip(RoundedCornerShape(ThumbnailCornerRadius)).background(MaterialTheme.colorScheme.onSurface))
-                                Spacer(Modifier.width(16.dp))
-                                Column(verticalArrangement = Arrangement.Center) {
-                                    TextPlaceholder()
-                                    TextPlaceholder()
-                                    TextPlaceholder()
-                                }
-                            }
-                            Spacer(Modifier.padding(8.dp))
-                            Row {
-                                ButtonPlaceholder(Modifier.weight(1f))
-                                Spacer(Modifier.width(12.dp))
-                                ButtonPlaceholder(Modifier.weight(1f))
-                            }
-                        }
-                        repeat(6) { ListItemPlaceHolder() }
-                    }
-                }
-            } else {
+        // Ahora el Shimmer/Skeleton vive en su propio Composable para mayor claridad.
+        if (albumData == null || albumData.songs.isEmpty()) {
+            AlbumScreenSkeleton()
+        } else {
+            // El contenido principal de la pantalla
+            LazyColumn(
+                state = listState,
+                contentPadding = LocalPlayerAwareWindowInsets.current.asPaddingValues()
+            ) {
                 // Cabecera del Álbum
                 item {
                     AlbumHeader(
@@ -272,7 +212,6 @@ fun AlbumScreen(
                             }
                         },
                         onMenuClick = {
-                            // LÓGICA INTACTA: La llamada al menú es idéntica a la original.
                             menuState.show {
                                 AlbumMenu(
                                     originalAlbum = Album(albumData.album, albumData.artists),
@@ -321,7 +260,7 @@ fun AlbumScreen(
                     )
                 }
 
-                // Otras versiones (lógica intacta)
+                // Otras versiones
                 if (otherVersions.isNotEmpty()) {
                     item { NavigationTitle(title = stringResource(R.string.other_versions)) }
                     item {
@@ -384,6 +323,7 @@ fun AlbumScreen(
 
 // --- NUEVOS COMPONENTES DE UI ---
 
+@SuppressLint("FrequentlyChangedStateReadInComposition")
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 private fun AlbumHeader(
@@ -395,16 +335,14 @@ private fun AlbumHeader(
     val scrollOffset = listState.firstVisibleItemScrollOffset.toFloat()
     val headerHeightPx = with(LocalDensity.current) { 300.dp.toPx() }
 
-    // Efecto Parallax: La imagen se desplaza más lento que el resto del contenido
     val imageTranslationY = -scrollOffset * 0.2f
-    // Efecto de desvanecimiento para el texto
     val textAlpha = (1f - (scrollOffset / (headerHeightPx / 2))).coerceIn(0f, 1f)
 
     Column(
         modifier = Modifier
             .fillMaxWidth()
             .height(300.dp)
-            .graphicsLayer { translationY = imageTranslationY }, // Aplicar parallax
+            .graphicsLayer { translationY = imageTranslationY },
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
@@ -421,7 +359,7 @@ private fun AlbumHeader(
         Spacer(Modifier.height(16.dp))
 
         Column(
-            modifier = Modifier.graphicsLayer { alpha = textAlpha }, // Aplicar desvanecimiento
+            modifier = Modifier.graphicsLayer { alpha = textAlpha },
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
@@ -513,7 +451,7 @@ private fun ActionControls(
     }
 }
 
-@OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun CollapsingTopAppBar(
     albumTitle: String,
@@ -557,4 +495,66 @@ private fun CollapsingTopAppBar(
         },
         colors = TopAppBarDefaults.topAppBarColors(containerColor = Color.Transparent)
     )
+}
+
+/**
+ * Un esqueleto de carga que imita la nueva UI de la pantalla del álbum.
+ */
+@Composable
+private fun AlbumScreenSkeleton() {
+    ShimmerHost {
+        // Usamos LazyColumn para que el comportamiento del scroll sea consistente
+        // con la pantalla cargada, especialmente en dispositivos pequeños.
+        LazyColumn(
+            contentPadding = LocalPlayerAwareWindowInsets.current.asPaddingValues()
+        ) {
+            // Placeholder para AlbumHeader
+            item {
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(300.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.Center
+                ) {
+                    Spacer(
+                        modifier = Modifier
+                            .size(200.dp)
+                            .clip(RoundedCornerShape(12.dp))
+                            .background(MaterialTheme.colorScheme.onSurface.copy(alpha = 0.1f))
+                    )
+                    Spacer(Modifier.height(16.dp))
+                    TextPlaceholder() // Title
+                    Spacer(Modifier.height(8.dp))
+                    TextPlaceholder() // Artist
+                }
+            }
+
+            // Placeholder para ActionControls
+            item {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 16.dp, vertical = 8.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.SpaceBetween
+                ) {
+                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        Spacer(Modifier.size(24.dp).clip(CircleShape).background(MaterialTheme.colorScheme.onSurface.copy(alpha = 0.1f)))
+                        Spacer(Modifier.size(24.dp).clip(CircleShape).background(MaterialTheme.colorScheme.onSurface.copy(alpha = 0.1f)))
+                        Spacer(Modifier.size(24.dp).clip(CircleShape).background(MaterialTheme.colorScheme.onSurface.copy(alpha = 0.1f)))
+                    }
+                    Row(horizontalArrangement = Arrangement.spacedBy(16.dp), verticalAlignment = Alignment.CenterVertically) {
+                        Spacer(Modifier.size(48.dp).clip(CircleShape).background(MaterialTheme.colorScheme.onSurface.copy(alpha = 0.1f)))
+                        Spacer(Modifier.size(56.dp).clip(CircleShape).background(MaterialTheme.colorScheme.onSurface.copy(alpha = 0.1f)))
+                    }
+                }
+            }
+
+            // Placeholders para la lista de canciones
+            items(7) {
+                ListItemPlaceHolder(modifier = Modifier.padding(horizontal = 8.dp))
+            }
+        }
+    }
 }
