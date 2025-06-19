@@ -61,4 +61,5 @@
   <string name="error_fetching_update">Erreur d\'obtention des détails de mise à jour</string>
   <string name="latestVersion_is">La version la plus récente est: %1$s</string>
   <string name="download_update">Télécharger la mise à jour</string>
+  <string name="album_art_blur">Couverture (manqué)</string>
 </resources>

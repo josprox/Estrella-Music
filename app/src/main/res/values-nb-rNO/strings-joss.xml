@@ -64,4 +64,5 @@
   <string name="error_fetching_update">Feil innhenting av oppdateringsdetaljer</string>
   <string name="latestVersion_is">Den siste versjonen er: %1$s</string>
   <string name="download_update">Last ned oppdatering</string>
+  <string name="album_art_blur">Cover (savnet)</string>
 </resources>

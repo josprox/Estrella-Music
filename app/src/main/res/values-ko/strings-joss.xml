@@ -64,4 +64,5 @@
   <string name="error_fetching_update">업데이트 세부 정보를 얻는 오류</string>
   <string name="latestVersion_is">가장 최근 버전은 다음과 같습니다. %1$s</string>
   <string name="download_update">업데이트 다운로드</string>
+  <string name="album_art_blur">커버 (누락)</string>
 </resources>

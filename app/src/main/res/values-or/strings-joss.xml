@@ -86,4 +86,5 @@
   <string name="update_info">ସୂଚନା ଅଦ୍ୟତନ କରନ୍ତୁ |</string>
   <string name="error_fetching_update">ଅଦ୍ୟତନ ବିବରଣୀ ପାଇବା ତ୍ରୁଟି |</string>
   <string name="download_update">ଅଦ୍ୟତନ ଡାଉନଲୋଡ୍ କରନ୍ତୁ |</string>
+  <string name="album_art_blur">ଆଚ୍ଛାଦନ (ବଞ୍ଚିତ)</string>
 </resources>

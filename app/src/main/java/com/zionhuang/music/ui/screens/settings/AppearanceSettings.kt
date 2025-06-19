@@ -96,7 +96,7 @@ fun AppearanceSettings(
         when (preferenceKey) {
             EditingPreferenceKey.DARK_MODE -> EnumSelectionDialog(
                 title = stringResource(R.string.dark_theme),
-                options = DarkMode.values().toList(),
+                options = DarkMode.entries,
                 selectedOption = darkMode,
                 onOptionSelected = onDarkModeChange,
                 optionText = {
@@ -110,7 +110,7 @@ fun AppearanceSettings(
             )
             EditingPreferenceKey.GRID_CELL_SIZE -> EnumSelectionDialog(
                 title = stringResource(R.string.grid_cell_size),
-                options = GridCellSize.values().toList(),
+                options = GridCellSize.entries,
                 selectedOption = gridCellSize,
                 onOptionSelected = onGridCellSizeChange,
                 optionText = {
@@ -123,7 +123,7 @@ fun AppearanceSettings(
             )
             EditingPreferenceKey.DEFAULT_OPEN_TAB -> EnumSelectionDialog(
                 title = stringResource(R.string.default_open_tab),
-                options = NavigationTab.values().toList(),
+                options = NavigationTab.entries,
                 selectedOption = defaultOpenTab,
                 onOptionSelected = onDefaultOpenTabChange,
                 optionText = {
@@ -139,7 +139,7 @@ fun AppearanceSettings(
             )
             EditingPreferenceKey.PLAYER_TEXT_ALIGNMENT -> EnumSelectionDialog(
                 title = stringResource(R.string.player_text_alignment),
-                options = PlayerTextAlignment.values().toList(),
+                options = PlayerTextAlignment.entries,
                 selectedOption = playerTextAlignment,
                 onOptionSelected = onPlayerTextAlignmentChange,
                 optionText = {
@@ -152,13 +152,14 @@ fun AppearanceSettings(
             )
             EditingPreferenceKey.PLAYER_BACKGROUND -> EnumSelectionDialog(
                 title = stringResource(R.string.selectPlayerBackground),
-                options = PlayerBackgroundStyle.values().toList(),
+                options = PlayerBackgroundStyle.entries,
                 selectedOption = playerBackgroundStyle,
                 onOptionSelected = onPlayerBackgroundStyleChange,
                 optionText = {
                     when(it) {
                         PlayerBackgroundStyle.DEFAULT -> stringResource(R.string.defaultText)
                         PlayerBackgroundStyle.TRANSPARENT -> stringResource(R.string.transparent)
+                        PlayerBackgroundStyle.BLUR -> stringResource(R.string.album_art_blur)
                     }
                 },
                 onDismiss = { editingPreference = null }
@@ -319,6 +320,7 @@ fun AppearanceSettings(
                 val valueText = when (playerBackgroundStyle) {
                     PlayerBackgroundStyle.DEFAULT -> stringResource(R.string.defaultText)
                     PlayerBackgroundStyle.TRANSPARENT -> stringResource(R.string.transparent)
+                    PlayerBackgroundStyle.BLUR -> stringResource(R.string.album_art_blur)
                 }
                 ExpressivePreferenceEntry(
                     title = { Text(stringResource(R.string.selectPlayerBackground)) },
@@ -328,6 +330,7 @@ fun AppearanceSettings(
                             imageVector = when (playerBackgroundStyle) {
                                 PlayerBackgroundStyle.DEFAULT -> Icons.Filled.Layers
                                 PlayerBackgroundStyle.TRANSPARENT -> Icons.Filled.LayersClear
+                                PlayerBackgroundStyle.BLUR -> Icons.Filled.LayersClear
                             },
                             contentDescription = null,
                             tint = MaterialTheme.colorScheme.primary

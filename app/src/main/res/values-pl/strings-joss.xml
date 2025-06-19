@@ -64,4 +64,5 @@
   <string name="error_fetching_update">Błąd uzyskiwania szczegółów aktualizacji</string>
   <string name="latestVersion_is">Najnowsza wersja to: %1$s</string>
   <string name="download_update">Pobierz aktualizację</string>
+  <string name="album_art_blur">Okładka (brak)</string>
 </resources>

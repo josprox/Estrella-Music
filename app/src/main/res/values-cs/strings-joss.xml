@@ -64,4 +64,5 @@
   <string name="error_fetching_update">Chyba získání podrobností o aktualizaci</string>
   <string name="latestVersion_is">Poslední verze je: %1$s</string>
   <string name="download_update">Stahování aktualizace</string>
+  <string name="album_art_blur">Obal (zmeškaný)</string>
 </resources>

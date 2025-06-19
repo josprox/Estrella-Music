@@ -30,4 +30,5 @@
   <string name="error_fetching_update">Viga värskenduse üksikasjade saamine</string>
   <string name="latestVersion_is">Viimane versioon on: %1$s</string>
   <string name="download_update">Laadige alla värskendus</string>
+  <string name="album_art_blur">Kate (igatsenud)</string>
 </resources>

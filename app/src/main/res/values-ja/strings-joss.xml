@@ -64,4 +64,5 @@
   <string name="error_fetching_update">更新の詳細の取得エラー</string>
   <string name="latestVersion_is">最新のバージョンは次のとおりです。%1$s</string>
   <string name="download_update">更新をダウンロードしてください</string>
+  <string name="album_art_blur">カバー（逃した）</string>
 </resources>

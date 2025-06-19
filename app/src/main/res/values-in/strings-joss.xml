@@ -64,4 +64,5 @@
   <string name="error_fetching_update">Kesalahan memperoleh detail pembaruan</string>
   <string name="latestVersion_is">Versi terbaru adalah: %1$s</string>
   <string name="download_update">Unduh Pembaruan</string>
+  <string name="album_art_blur">Penutup (terlewatkan)</string>
 </resources>

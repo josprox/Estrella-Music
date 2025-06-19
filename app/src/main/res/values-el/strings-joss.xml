@@ -64,4 +64,5 @@
   <string name="error_fetching_update">Σφάλμα λήψης λεπτομερειών ενημέρωσης</string>
   <string name="latestVersion_is">Η πιο πρόσφατη έκδοση είναι: %1$s</string>
   <string name="download_update">Ενημέρωση λήψης</string>
+  <string name="album_art_blur">Κάλυμμα (έχασε)</string>
 </resources>

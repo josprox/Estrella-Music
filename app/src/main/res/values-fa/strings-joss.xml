@@ -29,4 +29,5 @@
   <string name="update_info">اطلاعات به روزرسانی</string>
   <string name="error_fetching_update">خطای بدست آوردن جزئیات به روزرسانی</string>
   <string name="download_update">به روزرسانی بارگیری</string>
+  <string name="album_art_blur">پوشش (از دست رفته)</string>
 </resources>

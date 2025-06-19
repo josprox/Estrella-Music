@@ -18,6 +18,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.WindowInsetsSides
 import androidx.compose.foundation.layout.asPaddingValues
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
@@ -31,10 +32,12 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Slider
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -46,11 +49,13 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.draw.blur
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.lerp
 import androidx.compose.ui.input.nestedscroll.nestedScroll
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
@@ -64,6 +69,7 @@ import androidx.media3.common.Player.REPEAT_MODE_ONE
 import androidx.media3.common.Player.STATE_ENDED
 import androidx.media3.common.Player.STATE_READY
 import androidx.navigation.NavController
+import coil.compose.AsyncImage
 import com.zionhuang.music.LocalPlayerConnection
 import com.zionhuang.music.R
 import com.zionhuang.music.constants.DarkModeKey
@@ -115,24 +121,37 @@ fun BottomSheetPlayer(
         defaultValue = PlayerBackgroundStyle.DEFAULT
     )
 
-    val backgroundColor = if (useBlackBackground && state.value > state.collapsedBound) {
-        when (backgroundStyle) {
-            PlayerBackgroundStyle.TRANSPARENT -> lerp(
-                MaterialTheme.colorScheme.surfaceContainer,
-                Color.Black.copy(alpha = 0.85f),
-                state.progress
-            )
-            PlayerBackgroundStyle.DEFAULT -> lerp(
-                MaterialTheme.colorScheme.surfaceContainer,
-                Color.Black,
-                state.progress
-            )
+    val backgroundColor = when (backgroundStyle) {
+        PlayerBackgroundStyle.BLUR -> Color.Transparent
+        else -> {
+            if (useBlackBackground && state.value > state.collapsedBound) {
+                when (backgroundStyle) {
+                    PlayerBackgroundStyle.TRANSPARENT -> lerp(
+                        MaterialTheme.colorScheme.surfaceContainer,
+                        Color.Black.copy(alpha = 0.85f),
+                        state.progress
+                    )
+                    else -> lerp(
+                        MaterialTheme.colorScheme.surfaceContainer,
+                        Color.Black,
+                        state.progress
+                    )
+                }
+            } else {
+                when (backgroundStyle) {
+                    PlayerBackgroundStyle.TRANSPARENT -> MaterialTheme.colorScheme.surfaceContainer.copy(alpha = 0.95f)
+                    else -> MaterialTheme.colorScheme.surfaceContainer
+                }
+            }
         }
+    }
+
+    // Usaremos Blanco para el fondo desenfocado para asegurar el contraste,
+    // y el color por defecto del tema para los demás casos.
+    val contentColor = if (backgroundStyle == PlayerBackgroundStyle.BLUR) {
+        Color.White
     } else {
-        when (backgroundStyle) {
-            PlayerBackgroundStyle.TRANSPARENT -> MaterialTheme.colorScheme.surfaceContainer.copy(alpha = 0.95f)
-            PlayerBackgroundStyle.DEFAULT -> MaterialTheme.colorScheme.surfaceContainer
-        }
+        LocalContentColor.current
     }
 
     val playerTextAlignment by rememberEnumPreference(PlayerTextAlignmentKey, PlayerTextAlignment.CENTER)
@@ -185,6 +204,8 @@ fun BottomSheetPlayer(
             MiniPlayer(
                 position = position,
                 duration = duration,
+                backgroundStyle = backgroundStyle,
+                contentColor = contentColor
             )
         }
     ) {
@@ -382,7 +403,10 @@ fun BottomSheetPlayer(
                     Image(
                         painter = painterResource(if (playbackState == STATE_ENDED) R.drawable.replay else if (isPlaying) R.drawable.pause else R.drawable.play),
                         contentDescription = null,
-                        colorFilter = ColorFilter.tint(MaterialTheme.colorScheme.onSurface),
+                        // Cuando el fondo sea BLUR, será blanco; si no, será el onSurface del tema.
+                        colorFilter = ColorFilter.tint(
+                            if (backgroundStyle == PlayerBackgroundStyle.BLUR) contentColor else MaterialTheme.colorScheme.onSurface
+                        ),
                         modifier = Modifier
                             .align(Alignment.Center)
                             .size(36.dp)
@@ -420,71 +444,88 @@ fun BottomSheetPlayer(
             }
         }
 
-        when (LocalConfiguration.current.orientation) {
-            Configuration.ORIENTATION_LANDSCAPE -> {
-                Row(
+        Box(modifier = Modifier.fillMaxSize()) {
+            if (backgroundStyle == PlayerBackgroundStyle.BLUR && mediaMetadata?.thumbnailUrl != null) {
+                AsyncImage(
+                    model = mediaMetadata?.thumbnailUrl,
+                    contentDescription = "Blurred background",
+                    contentScale = ContentScale.Crop,
                     modifier = Modifier
-                        .windowInsetsPadding(WindowInsets.systemBars.only(WindowInsetsSides.Horizontal))
-                        .padding(bottom = queueSheetState.collapsedBound)
-                ) {
-                    Box(
-                        contentAlignment = Alignment.Center,
-                        modifier = Modifier.weight(1f)
-                    ) {
-                        Thumbnail(
-                            sliderPositionProvider = { sliderPosition },
-                            modifier = Modifier.nestedScroll(state.preUpPostDownNestedScrollConnection)
-                        )
-                    }
+                        .fillMaxSize()
+                        .blur(radius = 25.dp)
+                )
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .background(Color.Black.copy(alpha = 0.4f))
+                )
+            }
 
-                    Column(
-                        horizontalAlignment = Alignment.CenterHorizontally,
-                        modifier = Modifier
-                            .weight(1f)
-                            .windowInsetsPadding(WindowInsets.systemBars.only(WindowInsetsSides.Top))
-                    ) {
-                        Spacer(Modifier.weight(1f))
+            // <<< NUEVO: Envolvemos todo el contenido en un CompositionLocalProvider.
+            // Esto establece nuestro 'contentColor' (blanco sobre el fondo borroso)
+            // como el color por defecto para todos los Text e Iconos dentro de este bloque.
+            CompositionLocalProvider(LocalContentColor provides contentColor) {
+                when (LocalConfiguration.current.orientation) {
+                    Configuration.ORIENTATION_LANDSCAPE -> {
+                        Row(
+                            modifier = Modifier
+                                .windowInsetsPadding(WindowInsets.systemBars.only(WindowInsetsSides.Horizontal))
+                                .padding(bottom = queueSheetState.collapsedBound)
+                        ) {
+                            Box(
+                                contentAlignment = Alignment.Center,
+                                modifier = Modifier.weight(1f)
+                            ) {
+                                Thumbnail(
+                                    sliderPositionProvider = { sliderPosition },
+                                    modifier = Modifier.nestedScroll(state.preUpPostDownNestedScrollConnection)
+                                )
+                            }
 
-                        mediaMetadata?.let {
-                            controlsContent(it)
+                            Column(
+                                horizontalAlignment = Alignment.CenterHorizontally,
+                                modifier = Modifier
+                                    .weight(1f)
+                                    .windowInsetsPadding(WindowInsets.systemBars.only(WindowInsetsSides.Top))
+                            ) {
+                                Spacer(Modifier.weight(1f))
+                                mediaMetadata?.let { controlsContent(it) }
+                                Spacer(Modifier.weight(1f))
+                            }
                         }
+                    }
 
-                        Spacer(Modifier.weight(1f))
+                    else -> { // ORIENTATION_PORTRAIT
+                        Column(
+                            horizontalAlignment = Alignment.CenterHorizontally,
+                            modifier = Modifier
+                                .windowInsetsPadding(WindowInsets.systemBars.only(WindowInsetsSides.Horizontal))
+                                .padding(bottom = queueSheetState.collapsedBound)
+                        ) {
+                            Box(
+                                contentAlignment = Alignment.Center,
+                                modifier = Modifier.weight(1f)
+                            ) {
+                                Thumbnail(
+                                    sliderPositionProvider = { sliderPosition },
+                                    modifier = Modifier.nestedScroll(state.preUpPostDownNestedScrollConnection)
+                                )
+                            }
+
+                            mediaMetadata?.let { controlsContent(it) }
+
+                            Spacer(Modifier.height(24.dp))
+                        }
                     }
                 }
             }
 
-            else -> {
-                Column(
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                    modifier = Modifier
-                        .windowInsetsPadding(WindowInsets.systemBars.only(WindowInsetsSides.Horizontal))
-                        .padding(bottom = queueSheetState.collapsedBound)
-                ) {
-                    Box(
-                        contentAlignment = Alignment.Center,
-                        modifier = Modifier.weight(1f)
-                    ) {
-                        Thumbnail(
-                            sliderPositionProvider = { sliderPosition },
-                            modifier = Modifier.nestedScroll(state.preUpPostDownNestedScrollConnection)
-                        )
-                    }
-
-                    mediaMetadata?.let {
-                        controlsContent(it)
-                    }
-
-                    Spacer(Modifier.height(24.dp))
-                }
-            }
+            Queue(
+                state = queueSheetState,
+                playerBottomSheetState = state,
+                backgroundColor = MaterialTheme.colorScheme.surfaceContainer.copy(alpha = 0.95f),
+                navController = navController,
+            )
         }
-
-        Queue(
-            state = queueSheetState,
-            playerBottomSheetState = state,
-            backgroundColor = backgroundColor,
-            navController = navController,
-        )
     }
 }

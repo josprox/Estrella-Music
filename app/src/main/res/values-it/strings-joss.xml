@@ -30,4 +30,5 @@
   <string name="error_fetching_update">Errore per ottenere dettagli di aggiornamento</string>
   <string name="latestVersion_is">La versione più recente è: %1$s</string>
   <string name="download_update">Scarica l\'aggiornamento</string>
+  <string name="album_art_blur">Copertura (mancato)</string>
 </resources>

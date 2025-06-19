@@ -30,4 +30,5 @@
   <string name="error_fetching_update">अपडेट विवरण प्राप्त गर्दा त्रुटि</string>
   <string name="latestVersion_is">सब भन्दा भर्खरको संस्करण हो: %1$s</string>
   <string name="download_update">अपडेट डाउनलोड गर्नुहोस्</string>
+  <string name="album_art_blur">कभर (छुटेका)</string>
 </resources>

@@ -63,4 +63,5 @@
   <string name="update_info">تحديث المعلومات</string>
   <string name="error_fetching_update">خطأ في الحصول على تفاصيل التحديث</string>
   <string name="download_update">تنزيل التحديث</string>
+  <string name="album_art_blur">الغلاف (مفقود)</string>
 </resources>

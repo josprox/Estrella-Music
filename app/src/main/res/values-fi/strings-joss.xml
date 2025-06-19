@@ -64,4 +64,5 @@
   <string name="error_fetching_update">Virhe päivitystietojen hankkiminen</string>
   <string name="latestVersion_is">Viimeisin versio on: %1$s</string>
   <string name="download_update">Lataa päivitys</string>
+  <string name="album_art_blur">Kansi (unohdettu)</string>
 </resources>

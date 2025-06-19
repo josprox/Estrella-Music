@@ -30,4 +30,5 @@
   <string name="error_fetching_update">Error al obtener detalles de la actualización</string>
   <string name="latestVersion_is">La versión más reciente es: %1$s</string>
   <string name="download_update">புதுப்பிப்பைப் பதிவிறக்கவும்</string>
+  <string name="album_art_blur">கவர் (தவறவிட்ட)</string>
 </resources>

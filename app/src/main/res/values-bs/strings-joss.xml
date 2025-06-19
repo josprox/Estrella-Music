@@ -30,4 +30,5 @@
   <string name="error_fetching_update">Pogreška prilikom dobijanja detalja o ažuriranju</string>
   <string name="latestVersion_is">Najnovija verzija je: %1$s</string>
   <string name="download_update">Preuzmite ažuriranje</string>
+  <string name="album_art_blur">Poklopac (propušten)</string>
 </resources>

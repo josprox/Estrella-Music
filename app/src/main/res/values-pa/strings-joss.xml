@@ -85,4 +85,5 @@
   <string name="error_fetching_update">ਅਪਡੇਟ ਵੇਰਵੇ ਪ੍ਰਾਪਤ ਕਰਨ ਵਿੱਚ ਗਲਤੀ</string>
   <string name="latestVersion_is">ਸਭ ਤੋਂ ਨਵਾਂ ਸੰਸਕਰਣ ਇਹ ਹੈ: %1$s</string>
   <string name="download_update">ਡਾਉਨਲੋਡ ਅਪਡੇਟ</string>
+  <string name="album_art_blur">ਕਵਰ (ਖੁੰਝ ਗਿਆ)</string>
 </resources>

@@ -64,4 +64,5 @@
   <string name="error_fetching_update">獲取更新詳細信息的錯誤</string>
   <string name="latestVersion_is">最新版本是：%1$s</string>
   <string name="download_update">下載更新</string>
+  <string name="album_art_blur">封面（錯過）</string>
 </resources>

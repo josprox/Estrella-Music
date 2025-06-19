@@ -30,4 +30,5 @@
   <string name="error_fetching_update">अद्यतन विवरण प्राप्त करने में त्रुटि</string>
   <string name="latestVersion_is">सबसे हालिया संस्करण है: %1$s</string>
   <string name="download_update">डाउनलोड अद्यतन</string>
+  <string name="album_art_blur">कवर (छूटा)</string>
 </resources>

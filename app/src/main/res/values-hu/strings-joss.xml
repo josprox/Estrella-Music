@@ -77,4 +77,5 @@
   <string name="error_fetching_update">Hiba a frissítési részletek megszerzésének hiba</string>
   <string name="latestVersion_is">A legfrissebb verzió: %1$s</string>
   <string name="download_update">Letöltés frissítés</string>
+  <string name="album_art_blur">Borító (elmulasztott)</string>
 </resources>

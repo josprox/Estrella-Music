@@ -63,4 +63,5 @@
   <string name="links">ലിങ്കുകൾ</string>
   <string name="update_info">വിവരങ്ങൾ അപ്ഡേറ്റുചെയ്യുക</string>
   <string name="download_update">അപ്ഡേറ്റ് ഡൗൺലോഡുചെയ്യുക</string>
+  <string name="album_art_blur">കവർ (നഷ്ടമായി)</string>
 </resources>

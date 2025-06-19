@@ -64,4 +64,5 @@
   <string name="error_fetching_update">Lỗi có được chi tiết cập nhật</string>
   <string name="latestVersion_is">Phiên bản gần đây nhất là: %1$s</string>
   <string name="download_update">Tải xuống cập nhật</string>
+  <string name="album_art_blur">Bìa (bỏ lỡ)</string>
 </resources>
