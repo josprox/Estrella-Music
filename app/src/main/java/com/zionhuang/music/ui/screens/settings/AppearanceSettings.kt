@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Gradient
 import androidx.compose.material.icons.filled.Layers
 import androidx.compose.material.icons.filled.LayersClear
 import androidx.compose.material.icons.rounded.MoreHoriz
@@ -55,7 +56,6 @@ import com.zionhuang.music.utils.rememberEnumPreference
 import com.zionhuang.music.utils.rememberPreference
 import me.saket.squiggles.SquigglySlider
 
-// Un enum para rastrear qué preferencia se está editando y así mostrar el diálogo correcto
 private enum class EditingPreferenceKey {
     DARK_MODE,
     GRID_CELL_SIZE,
@@ -88,10 +88,8 @@ fun AppearanceSettings(
         darkMode == DarkMode.ON || (darkMode == DarkMode.AUTO && isSystemInDarkTheme)
     }
 
-    // --- ESTADO PARA CONTROLAR EL DIÁLOGO ---
     var editingPreference by remember { mutableStateOf<EditingPreferenceKey?>(null) }
 
-    // --- LÓGICA DEL DIÁLOGO ---
     editingPreference?.let { preferenceKey ->
         when (preferenceKey) {
             EditingPreferenceKey.DARK_MODE -> EnumSelectionDialog(
@@ -160,6 +158,7 @@ fun AppearanceSettings(
                         PlayerBackgroundStyle.DEFAULT -> stringResource(R.string.defaultText)
                         PlayerBackgroundStyle.TRANSPARENT -> stringResource(R.string.transparent)
                         PlayerBackgroundStyle.BLUR -> stringResource(R.string.album_art_blur)
+                        PlayerBackgroundStyle.GRADIENT -> stringResource(R.string.gradientBackground)
                     }
                 },
                 onDismiss = { editingPreference = null }
@@ -190,7 +189,6 @@ fun AppearanceSettings(
             contentPadding = innerPadding,
             verticalArrangement = Arrangement.spacedBy(4.dp),
         ) {
-            // --- Grupo: Tema ---
             item { SettingsHeader(title = stringResource(R.string.theme)) }
 
             item {
@@ -231,7 +229,6 @@ fun AppearanceSettings(
 
             item { HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp)) }
 
-            // --- Grupo: Interfaz ---
             item { SettingsHeader(title = stringResource(R.string.interface_)) }
 
             item {
@@ -275,7 +272,6 @@ fun AppearanceSettings(
 
             item { HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp)) }
 
-            // --- Grupo: Reproductor ---
             item { SettingsHeader(title = stringResource(R.string.player)) }
 
             item {
@@ -321,6 +317,7 @@ fun AppearanceSettings(
                     PlayerBackgroundStyle.DEFAULT -> stringResource(R.string.defaultText)
                     PlayerBackgroundStyle.TRANSPARENT -> stringResource(R.string.transparent)
                     PlayerBackgroundStyle.BLUR -> stringResource(R.string.album_art_blur)
+                    PlayerBackgroundStyle.GRADIENT -> stringResource(R.string.gradientBackground)
                 }
                 ExpressivePreferenceEntry(
                     title = { Text(stringResource(R.string.selectPlayerBackground)) },
@@ -329,8 +326,8 @@ fun AppearanceSettings(
                         Icon(
                             imageVector = when (playerBackgroundStyle) {
                                 PlayerBackgroundStyle.DEFAULT -> Icons.Filled.Layers
-                                PlayerBackgroundStyle.TRANSPARENT -> Icons.Filled.LayersClear
-                                PlayerBackgroundStyle.BLUR -> Icons.Filled.LayersClear
+                                PlayerBackgroundStyle.GRADIENT -> Icons.Filled.Gradient // Nuevo icono
+                                else -> Icons.Filled.LayersClear
                             },
                             contentDescription = null,
                             tint = MaterialTheme.colorScheme.primary
@@ -342,9 +339,6 @@ fun AppearanceSettings(
         }
     }
 }
-//================================================================================
-// ENUMS
-//================================================================================
 
 enum class DarkMode {
     ON, OFF, AUTO

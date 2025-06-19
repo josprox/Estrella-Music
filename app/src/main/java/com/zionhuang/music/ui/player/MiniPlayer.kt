@@ -50,6 +50,7 @@ import com.zionhuang.music.models.MediaMetadata
 import androidx.compose.runtime.*
 import androidx.compose.material3.*
 import androidx.compose.ui.draw.blur
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.layout.ContentScale
 import com.zionhuang.music.constants.PlayerBackgroundStyle
 import com.zionhuang.music.ui.component.ResizableIconButton
@@ -60,6 +61,7 @@ fun MiniPlayer(
     duration: Long,
     backgroundStyle: PlayerBackgroundStyle,
     contentColor: Color,
+    gradientColors: List<Color>,
     modifier: Modifier = Modifier,
 ) {
     val playerConnection = LocalPlayerConnection.current ?: return
@@ -75,45 +77,47 @@ fun MiniPlayer(
         modifier = modifier
             .fillMaxWidth()
             .height(MiniPlayerHeight)
-            // Es una buena práctica cortar los bordes para que el blur no se "salga"
             .clip(RoundedCornerShape(topStart = 12.dp, topEnd = 12.dp))
     ) {
-        // --- FONDO DINÁMICO ---
-        when (backgroundStyle) {
-            PlayerBackgroundStyle.BLUR -> {
-                // Si el estilo es BLUR, creamos nuestro propio fondo desenfocado
-                if (mediaMetadata != null) {
-                    AsyncImage(
-                        model = mediaMetadata?.thumbnailUrl,
-                        contentDescription = "Blurred background",
-                        contentScale = ContentScale.Crop, // Rellena el espacio sin deformar
-                        modifier = Modifier
-                            .fillMaxSize()
-                            .blur(radius = 25.dp) // El efecto de desenfoque
-                    )
-                    // Capa oscura (scrim) para mejorar la legibilidad del texto
-                    Box(
-                        modifier = Modifier
-                            .fillMaxSize()
-                            .background(Color.Black.copy(alpha = 0.4f))
-                    )
-                }
+        when {
+            backgroundStyle == PlayerBackgroundStyle.GRADIENT && gradientColors.isNotEmpty() -> {
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .background(Brush.verticalGradient(colors = gradientColors))
+                )
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .background(Color.Black.copy(alpha = 0.2f))
+                )
             }
-            PlayerBackgroundStyle.DEFAULT -> {
-                // Si el estilo es DEFAULT, usamos un fondo sólido del tema
+            backgroundStyle == PlayerBackgroundStyle.BLUR && mediaMetadata != null -> {
+                AsyncImage(
+                    model = mediaMetadata?.thumbnailUrl,
+                    contentDescription = "Blurred background",
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .blur(radius = 25.dp)
+                )
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .background(Color.Black.copy(alpha = 0.4f))
+                )
+            }
+            backgroundStyle == PlayerBackgroundStyle.DEFAULT -> {
                 Box(
                     modifier = Modifier
                         .fillMaxSize()
                         .background(MaterialTheme.colorScheme.surfaceContainer)
                 )
             }
-            PlayerBackgroundStyle.TRANSPARENT -> {
-                // Si es TRANSPARENT, no hacemos nada para que sea transparente
+            else -> {
+                // Para TRANSPARENT y otros casos, no se dibuja fondo.
             }
         }
-
-        // --- CONTENIDO DEL REPRODUCTOR ---
-        // El contenido (controles, texto, etc.) va encima del fondo
         Box(
             modifier = Modifier
                 .fillMaxSize()

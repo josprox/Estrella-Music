@@ -65,4 +65,5 @@
   <string name="latestVersion_is">De meest recente versie is: %1$s</string>
   <string name="download_update">Download update</string>
   <string name="album_art_blur">Cover (gemist)</string>
+  <string name="gradientBackground">Gradiëntachtergrond</string>
 </resources>

@@ -64,4 +64,5 @@
   <string name="error_fetching_update">خطأ في الحصول على تفاصيل التحديث</string>
   <string name="download_update">تنزيل التحديث</string>
   <string name="album_art_blur">الغلاف (مفقود)</string>
+  <string name="gradientBackground">خلفية التدرج</string>
 </resources>

@@ -65,4 +65,5 @@
   <string name="latestVersion_is">Найновіша версія: %1$s</string>
   <string name="download_update">Завантажте оновлення</string>
   <string name="album_art_blur">Обкладинка (пропущена)</string>
+  <string name="gradientBackground">Фон градієнта</string>
 </resources>

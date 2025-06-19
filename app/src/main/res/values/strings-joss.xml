@@ -64,4 +64,5 @@
   <string name="latestVersion_is">The most recent version is: %1$s</string>
   <string name="download_update">Download update</string>
   <string name="album_art_blur">Cover (missed)</string>
+  <string name="gradientBackground">Gradient background</string>
 </resources>

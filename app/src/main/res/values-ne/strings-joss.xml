@@ -31,4 +31,5 @@
   <string name="latestVersion_is">सब भन्दा भर्खरको संस्करण हो: %1$s</string>
   <string name="download_update">अपडेट डाउनलोड गर्नुहोस्</string>
   <string name="album_art_blur">कभर (छुटेका)</string>
+  <string name="gradientBackground">ग्रेडियन्ट पृष्ठभूमि</string>
 </resources>

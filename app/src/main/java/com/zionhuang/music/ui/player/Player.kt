@@ -51,25 +51,28 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.blur
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.lerp
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.util.fastForEachIndexed
+import androidx.core.graphics.drawable.toBitmap
 import androidx.media3.common.C
-import androidx.media3.common.Player.REPEAT_MODE_ALL
-import androidx.media3.common.Player.REPEAT_MODE_OFF
-import androidx.media3.common.Player.REPEAT_MODE_ONE
-import androidx.media3.common.Player.STATE_ENDED
-import androidx.media3.common.Player.STATE_READY
+import androidx.media3.common.Player
 import androidx.navigation.NavController
+import androidx.palette.graphics.Palette
 import coil.compose.AsyncImage
+import coil.imageLoader
+import coil.request.ImageRequest
+import coil.size.Size
 import com.zionhuang.music.LocalPlayerConnection
 import com.zionhuang.music.R
 import com.zionhuang.music.constants.DarkModeKey
@@ -95,8 +98,10 @@ import com.zionhuang.music.ui.screens.settings.PlayerTextAlignment
 import com.zionhuang.music.utils.makeTimeString
 import com.zionhuang.music.utils.rememberEnumPreference
 import com.zionhuang.music.utils.rememberPreference
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
+import kotlinx.coroutines.withContext
 import me.saket.squiggles.SquigglySlider
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -107,6 +112,7 @@ fun BottomSheetPlayer(
     modifier: Modifier = Modifier,
 ) {
     val playerConnection = LocalPlayerConnection.current ?: return
+    val context = LocalContext.current
     val menuState = LocalMenuState.current
 
     val isSystemInDarkTheme = isSystemInDarkTheme()
@@ -121,8 +127,10 @@ fun BottomSheetPlayer(
         defaultValue = PlayerBackgroundStyle.DEFAULT
     )
 
+    var gradientColors by remember { mutableStateOf<List<Color>>(emptyList()) }
+
     val backgroundColor = when (backgroundStyle) {
-        PlayerBackgroundStyle.BLUR -> Color.Transparent
+        PlayerBackgroundStyle.BLUR, PlayerBackgroundStyle.GRADIENT -> Color.Transparent
         else -> {
             if (useBlackBackground && state.value > state.collapsedBound) {
                 when (backgroundStyle) {
@@ -146,39 +154,62 @@ fun BottomSheetPlayer(
         }
     }
 
-    // Usaremos Blanco para el fondo desenfocado para asegurar el contraste,
-    // y el color por defecto del tema para los demás casos.
-    val contentColor = if (backgroundStyle == PlayerBackgroundStyle.BLUR) {
+    val mediaMetadata by playerConnection.mediaMetadata.collectAsState()
+
+    val defaultGradientColors = listOf(MaterialTheme.colorScheme.surface, MaterialTheme.colorScheme.surfaceVariant)
+
+    LaunchedEffect(mediaMetadata, backgroundStyle) {
+        if (backgroundStyle == PlayerBackgroundStyle.GRADIENT && mediaMetadata?.thumbnailUrl != null) {
+            try {
+                val request = ImageRequest.Builder(context)
+                    .data(mediaMetadata?.thumbnailUrl)
+                    .size(Size(128, 128))
+                    .allowHardware(false)
+                    .build()
+
+                val result = context.imageLoader.execute(request).drawable
+                if (result != null) {
+                    val bitmap = result.toBitmap()
+                    val palette = withContext(Dispatchers.Default) {
+                        Palette.from(bitmap).generate()
+                    }
+                    val dominantColor = palette.dominantSwatch?.rgb?.let { Color(it) }
+                    val vibrantColor = palette.vibrantSwatch?.rgb?.let { Color(it) }
+
+                    if (dominantColor != null && vibrantColor != null) {
+                        gradientColors = listOf(vibrantColor, dominantColor)
+                    } else {
+                        gradientColors = defaultGradientColors
+                    }
+                }
+            } catch (e: Exception) {
+                gradientColors = defaultGradientColors
+                e.printStackTrace()
+            }
+        }
+    }
+
+    val contentColor = if (backgroundStyle == PlayerBackgroundStyle.BLUR || backgroundStyle == PlayerBackgroundStyle.GRADIENT) {
         Color.White
     } else {
         LocalContentColor.current
     }
 
-    val playerTextAlignment by rememberEnumPreference(PlayerTextAlignmentKey, PlayerTextAlignment.CENTER)
-    val sliderStyle by rememberEnumPreference(SliderStyleKey, SliderStyle.DEFAULT)
-
+    val playerTextAlignment by rememberEnumPreference(PlayerTextAlignmentKey, defaultValue = PlayerTextAlignment.CENTER)
+    val sliderStyle by rememberEnumPreference(SliderStyleKey, defaultValue = SliderStyle.DEFAULT)
     val playbackState by playerConnection.playbackState.collectAsState()
     val isPlaying by playerConnection.isPlaying.collectAsState()
     val repeatMode by playerConnection.repeatMode.collectAsState()
-    val mediaMetadata by playerConnection.mediaMetadata.collectAsState()
     val currentSong by playerConnection.currentSong.collectAsState(initial = null)
     var showLyrics by rememberPreference(ShowLyricsKey, defaultValue = false)
-
     val canSkipPrevious by playerConnection.canSkipPrevious.collectAsState()
     val canSkipNext by playerConnection.canSkipNext.collectAsState()
-
-    var position by rememberSaveable(playbackState) {
-        mutableLongStateOf(playerConnection.player.currentPosition)
-    }
-    var duration by rememberSaveable(playbackState) {
-        mutableLongStateOf(playerConnection.player.duration)
-    }
-    var sliderPosition by remember {
-        mutableStateOf<Long?>(null)
-    }
+    var position by rememberSaveable(playbackState) { mutableLongStateOf(playerConnection.player.currentPosition) }
+    var duration by rememberSaveable(playbackState) { mutableLongStateOf(playerConnection.player.duration) }
+    var sliderPosition by remember { mutableStateOf<Long?>(null) }
 
     LaunchedEffect(playbackState) {
-        if (playbackState == STATE_READY) {
+        if (playbackState == Player.STATE_READY) {
             while (isActive) {
                 delay(100)
                 position = playerConnection.player.currentPosition
@@ -205,7 +236,8 @@ fun BottomSheetPlayer(
                 position = position,
                 duration = duration,
                 backgroundStyle = backgroundStyle,
-                contentColor = contentColor
+                contentColor = contentColor,
+                gradientColors = gradientColors
             )
         }
     ) {
@@ -392,7 +424,7 @@ fun BottomSheetPlayer(
                         .clip(RoundedCornerShape(playPauseRoundness))
                         .background(MaterialTheme.colorScheme.secondaryContainer)
                         .clickable {
-                            if (playbackState == STATE_ENDED) {
+                            if (playbackState == Player.STATE_ENDED) {
                                 playerConnection.player.seekTo(0, 0)
                                 playerConnection.player.playWhenReady = true
                             } else {
@@ -401,11 +433,10 @@ fun BottomSheetPlayer(
                         }
                 ) {
                     Image(
-                        painter = painterResource(if (playbackState == STATE_ENDED) R.drawable.replay else if (isPlaying) R.drawable.pause else R.drawable.play),
+                        painter = painterResource(if (playbackState == Player.STATE_ENDED) R.drawable.replay else if (isPlaying) R.drawable.pause else R.drawable.play),
                         contentDescription = null,
-                        // Cuando el fondo sea BLUR, será blanco; si no, será el onSurface del tema.
                         colorFilter = ColorFilter.tint(
-                            if (backgroundStyle == PlayerBackgroundStyle.BLUR) contentColor else MaterialTheme.colorScheme.onSurface
+                            if (backgroundStyle == PlayerBackgroundStyle.BLUR || backgroundStyle == PlayerBackgroundStyle.GRADIENT) contentColor else MaterialTheme.colorScheme.onSurface
                         ),
                         modifier = Modifier
                             .align(Alignment.Center)
@@ -429,15 +460,15 @@ fun BottomSheetPlayer(
                 Box(modifier = Modifier.weight(1f)) {
                     ResizableIconButton(
                         icon = when (repeatMode) {
-                            REPEAT_MODE_OFF, REPEAT_MODE_ALL -> R.drawable.repeat
-                            REPEAT_MODE_ONE -> R.drawable.repeat_one
+                            Player.REPEAT_MODE_OFF, Player.REPEAT_MODE_ALL -> R.drawable.repeat
+                            Player.REPEAT_MODE_ONE -> R.drawable.repeat_one
                             else -> throw IllegalStateException()
                         },
                         modifier = Modifier
                             .size(32.dp)
                             .padding(4.dp)
                             .align(Alignment.Center)
-                            .alpha(if (repeatMode == REPEAT_MODE_OFF) 0.5f else 1f),
+                            .alpha(if (repeatMode == Player.REPEAT_MODE_OFF) 0.5f else 1f),
                         onClick = playerConnection.player::toggleRepeatMode
                     )
                 }
@@ -445,25 +476,36 @@ fun BottomSheetPlayer(
         }
 
         Box(modifier = Modifier.fillMaxSize()) {
-            if (backgroundStyle == PlayerBackgroundStyle.BLUR && mediaMetadata?.thumbnailUrl != null) {
-                AsyncImage(
-                    model = mediaMetadata?.thumbnailUrl,
-                    contentDescription = "Blurred background",
-                    contentScale = ContentScale.Crop,
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .blur(radius = 25.dp)
-                )
-                Box(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .background(Color.Black.copy(alpha = 0.4f))
-                )
+            when {
+                backgroundStyle == PlayerBackgroundStyle.BLUR && mediaMetadata?.thumbnailUrl != null -> {
+                    AsyncImage(
+                        model = mediaMetadata?.thumbnailUrl,
+                        contentDescription = "Blurred background",
+                        contentScale = ContentScale.Crop,
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .blur(radius = 25.dp)
+                    )
+                    Box(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .background(Color.Black.copy(alpha = 0.4f))
+                    )
+                }
+                backgroundStyle == PlayerBackgroundStyle.GRADIENT && gradientColors.isNotEmpty() -> {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .background(Brush.verticalGradient(colors = gradientColors))
+                    )
+                    Box(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .background(Color.Black.copy(alpha = 0.2f))
+                    )
+                }
             }
 
-            // <<< NUEVO: Envolvemos todo el contenido en un CompositionLocalProvider.
-            // Esto establece nuestro 'contentColor' (blanco sobre el fondo borroso)
-            // como el color por defecto para todos los Text e Iconos dentro de este bloque.
             CompositionLocalProvider(LocalContentColor provides contentColor) {
                 when (LocalConfiguration.current.orientation) {
                     Configuration.ORIENTATION_LANDSCAPE -> {

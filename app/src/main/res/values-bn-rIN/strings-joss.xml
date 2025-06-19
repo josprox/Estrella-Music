@@ -87,4 +87,5 @@
   <string name="update_info">তথ্য আপডেট করুন</string>
   <string name="download_update">আপডেট ডাউনলোড করুন</string>
   <string name="album_art_blur">কভার (মিস)</string>
+  <string name="gradientBackground">গ্রেডিয়েন্ট ব্যাকগ্রাউন্ড</string>
 </resources>

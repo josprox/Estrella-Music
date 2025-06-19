@@ -65,4 +65,5 @@
   <string name="latestVersion_is">En son sürüm: %1$s</string>
   <string name="download_update">Güncellemeyi İndir</string>
   <string name="album_art_blur">Kapak (kaçırıldı)</string>
+  <string name="gradientBackground">Gradyan arka plan</string>
 </resources>

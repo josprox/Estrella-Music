@@ -31,4 +31,5 @@
   <string name="latestVersion_is">Den senaste versionen är: %1$s</string>
   <string name="download_update">Nedladdningsuppdatering</string>
   <string name="album_art_blur">Omslag (missad)</string>
+  <string name="gradientBackground">Gradientbakgrund</string>
 </resources>

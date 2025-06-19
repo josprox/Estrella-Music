@@ -65,4 +65,5 @@
   <string name="latestVersion_is">Най -новата версия е: %1$s</string>
   <string name="download_update">Изтеглете актуализация</string>
   <string name="album_art_blur">Покритие (пропуснато)</string>
+  <string name="gradientBackground">Градиентен фон</string>
 </resources>

@@ -86,4 +86,5 @@
   <string name="latestVersion_is">ਸਭ ਤੋਂ ਨਵਾਂ ਸੰਸਕਰਣ ਇਹ ਹੈ: %1$s</string>
   <string name="download_update">ਡਾਉਨਲੋਡ ਅਪਡੇਟ</string>
   <string name="album_art_blur">ਕਵਰ (ਖੁੰਝ ਗਿਆ)</string>
+  <string name="gradientBackground">ਗਰੇਡੀਐਂਟ ਬੈਕਗ੍ਰਾਉਂਡ</string>
 </resources>

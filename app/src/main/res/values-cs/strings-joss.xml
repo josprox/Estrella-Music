@@ -65,4 +65,5 @@
   <string name="latestVersion_is">Poslední verze je: %1$s</string>
   <string name="download_update">Stahování aktualizace</string>
   <string name="album_art_blur">Obal (zmeškaný)</string>
+  <string name="gradientBackground">Gradientní pozadí</string>
 </resources>
