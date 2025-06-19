@@ -30,7 +30,6 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import coil.annotation.ExperimentalCoilApi
 import coil.imageLoader
-import com.zionhuang.music.BuildConfig.FLAVOR
 import com.zionhuang.music.LocalPlayerAwareWindowInsets
 import com.zionhuang.music.LocalPlayerConnection
 import com.zionhuang.music.R
@@ -44,7 +43,6 @@ import com.zionhuang.music.ui.component.IconButton
 import com.zionhuang.music.ui.component.SettingsHeader
 import com.zionhuang.music.ui.utils.backToMain
 import com.zionhuang.music.ui.utils.formatFileSize
-import com.zionhuang.music.utils.TranslationHelper
 import com.zionhuang.music.utils.rememberPreference
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -179,19 +177,6 @@ fun StorageSettings(
                         coroutineScope.launch(Dispatchers.IO) { downloadCache.keys.forEach { downloadCache.removeResource(it) } }
                     }
                 )
-            }
-
-
-            if (FLAVOR != "foss") {
-                item { HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp)) }
-                item { SettingsHeader(title = stringResource(R.string.translation_models)) }
-                item {
-                    ExpressivePreferenceEntry(
-                        title = { Text(stringResource(R.string.clear_translation_models)) },
-                        icon = { Icon(painterResource(R.drawable.language), null, tint = MaterialTheme.colorScheme.primary) },
-                        onClick = { coroutineScope.launch(Dispatchers.IO) { TranslationHelper.clearModels() } }
-                    )
-                }
             }
         }
     }

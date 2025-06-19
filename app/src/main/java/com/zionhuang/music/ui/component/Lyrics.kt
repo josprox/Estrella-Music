@@ -18,7 +18,6 @@ import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
-import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -46,11 +45,9 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Velocity
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.zionhuang.music.BuildConfig
 import com.zionhuang.music.LocalPlayerConnection
 import com.zionhuang.music.R
 import com.zionhuang.music.constants.PlayerTextAlignmentKey
-import com.zionhuang.music.constants.TranslateLyricsKey
 import com.zionhuang.music.db.entities.LyricsEntity.Companion.LYRICS_NOT_FOUND
 import com.zionhuang.music.lyrics.LyricsEntry
 import com.zionhuang.music.lyrics.LyricsEntry.Companion.HEAD_LYRICS_ENTRY
@@ -62,7 +59,6 @@ import com.zionhuang.music.ui.menu.LyricsMenu
 import com.zionhuang.music.ui.screens.settings.PlayerTextAlignment
 import com.zionhuang.music.ui.utils.fadingEdge
 import com.zionhuang.music.utils.rememberEnumPreference
-import com.zionhuang.music.utils.rememberPreference
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
 import kotlin.time.Duration.Companion.seconds
@@ -77,14 +73,13 @@ fun Lyrics(
     val density = LocalDensity.current
 
     val playerTextAlignment by rememberEnumPreference(PlayerTextAlignmentKey, PlayerTextAlignment.CENTER)
-    var translationEnabled by rememberPreference(TranslateLyricsKey, false)
 
     val mediaMetadata by playerConnection.mediaMetadata.collectAsState()
-    val translating by playerConnection.translating.collectAsState()
+
     val lyricsEntity by playerConnection.currentLyrics.collectAsState(initial = null)
-    val lyrics = remember(lyricsEntity, translating) {
-        if (translating) null
-        else lyricsEntity?.lyrics
+
+    val lyrics = remember(lyricsEntity) {
+        lyricsEntity?.lyrics
     }
 
     val lines = remember(lyrics) {
@@ -99,8 +94,6 @@ fun Lyrics(
     var currentLineIndex by remember {
         mutableIntStateOf(-1)
     }
-    // Because LaunchedEffect has delay, which leads to inconsistent with current line color and scroll animation,
-    // we use deferredCurrentLineIndex when user is scrolling
     var deferredCurrentLineIndex by rememberSaveable {
         mutableIntStateOf(0)
     }
@@ -180,7 +173,7 @@ fun Lyrics(
         ) {
             val displayedCurrentLineIndex = if (isSeeking) deferredCurrentLineIndex else currentLineIndex
 
-            if (lyrics == null || translating) {
+            if (lyrics == null) {
                 item {
                     ShimmerHost {
                         repeat(10) {
@@ -247,19 +240,6 @@ fun Lyrics(
                     .align(Alignment.BottomEnd)
                     .padding(end = 12.dp)
             ) {
-                if (BuildConfig.FLAVOR != "foss") {
-                    IconButton(
-                        onClick = {
-                            translationEnabled = !translationEnabled
-                        }
-                    ) {
-                        Icon(
-                            painter = painterResource(id = R.drawable.translate),
-                            contentDescription = null,
-                            tint = LocalContentColor.current.copy(alpha = if (translationEnabled) 1f else 0.3f)
-                        )
-                    }
-                }
 
                 IconButton(
                     onClick = {
