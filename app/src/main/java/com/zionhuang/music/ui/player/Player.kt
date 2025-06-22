@@ -524,6 +524,7 @@ fun BottomSheetPlayer(
                             ) {
                                 Thumbnail(
                                     sliderPositionProvider = { sliderPosition },
+                                    backgroundStyle = backgroundStyle,
                                     modifier = Modifier.nestedScroll(state.preUpPostDownNestedScrollConnection)
                                 )
                             }
@@ -554,6 +555,7 @@ fun BottomSheetPlayer(
                             ) {
                                 Thumbnail(
                                     sliderPositionProvider = { sliderPosition },
+                                    backgroundStyle = backgroundStyle,
                                     modifier = Modifier.nestedScroll(state.preUpPostDownNestedScrollConnection)
                                 )
                             }

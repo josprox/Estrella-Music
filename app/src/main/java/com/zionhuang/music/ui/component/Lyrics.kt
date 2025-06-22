@@ -34,6 +34,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.nestedscroll.NestedScrollConnection
 import androidx.compose.ui.input.nestedscroll.NestedScrollSource
 import androidx.compose.ui.input.nestedscroll.nestedScroll
@@ -47,6 +48,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.zionhuang.music.LocalPlayerConnection
 import com.zionhuang.music.R
+import com.zionhuang.music.constants.PlayerBackgroundStyle
 import com.zionhuang.music.constants.PlayerTextAlignmentKey
 import com.zionhuang.music.db.entities.LyricsEntity.Companion.LYRICS_NOT_FOUND
 import com.zionhuang.music.lyrics.LyricsEntry
@@ -66,6 +68,7 @@ import kotlin.time.Duration.Companion.seconds
 @Composable
 fun Lyrics(
     sliderPositionProvider: () -> Long?,
+    backgroundStyle: PlayerBackgroundStyle,
     modifier: Modifier = Modifier,
 ) {
     val playerConnection = LocalPlayerConnection.current ?: return
@@ -77,6 +80,11 @@ fun Lyrics(
     val mediaMetadata by playerConnection.mediaMetadata.collectAsState()
 
     val lyricsEntity by playerConnection.currentLyrics.collectAsState(initial = null)
+
+    val isSpecialBackground = backgroundStyle == PlayerBackgroundStyle.BLUR || backgroundStyle == PlayerBackgroundStyle.GRADIENT
+
+    val activeColor = if (isSpecialBackground) Color.White else MaterialTheme.colorScheme.primary
+    val inactiveColor = if (isSpecialBackground) Color.White.copy(alpha = 0.6f) else MaterialTheme.colorScheme.secondary
 
     val lyrics = remember(lyricsEntity) {
         lyricsEntity?.lyrics
@@ -198,7 +206,7 @@ fun Lyrics(
                     Text(
                         text = item.text,
                         fontSize = 20.sp,
-                        color = if (index == displayedCurrentLineIndex) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.secondary,
+                        color = if (index == displayedCurrentLineIndex) activeColor else inactiveColor,
                         textAlign = when (playerTextAlignment) {
                             PlayerTextAlignment.SIDED -> TextAlign.Start
                             PlayerTextAlignment.CENTER -> TextAlign.Center

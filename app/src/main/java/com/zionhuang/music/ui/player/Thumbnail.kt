@@ -25,6 +25,7 @@ import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.zionhuang.music.LocalPlayerConnection
+import com.zionhuang.music.constants.PlayerBackgroundStyle
 import com.zionhuang.music.constants.PlayerHorizontalPadding
 import com.zionhuang.music.constants.ShowLyricsKey
 import com.zionhuang.music.constants.ThumbnailCornerRadius
@@ -34,6 +35,7 @@ import com.zionhuang.music.utils.rememberPreference
 @Composable
 fun Thumbnail(
     sliderPositionProvider: () -> Long?,
+    backgroundStyle: PlayerBackgroundStyle,
     modifier: Modifier = Modifier,
 ) {
     val playerConnection = LocalPlayerConnection.current ?: return
@@ -102,7 +104,8 @@ fun Thumbnail(
             enter = fadeIn(),
             exit = fadeOut()
         ) {
-            Lyrics(sliderPositionProvider = sliderPositionProvider)
+            Lyrics(sliderPositionProvider = sliderPositionProvider,
+                    backgroundStyle = backgroundStyle)
         }
 
         AnimatedVisibility(
