@@ -4,7 +4,6 @@ import android.content.res.Configuration
 import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.animation.core.tween
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.basicMarquee
 import androidx.compose.foundation.clickable
@@ -29,6 +28,17 @@ import androidx.compose.foundation.layout.systemBars
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.filled.Pause
+import androidx.compose.material.icons.filled.PlayArrow
+import androidx.compose.material.icons.filled.Repeat
+import androidx.compose.material.icons.filled.RepeatOne
+import androidx.compose.material.icons.filled.Replay
+import androidx.compose.material.icons.filled.SkipNext
+import androidx.compose.material.icons.filled.SkipPrevious
+import androidx.compose.material.icons.outlined.FavoriteBorder
+import androidx.compose.material.icons.rounded.Lyrics
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -53,13 +63,11 @@ import androidx.compose.ui.draw.blur
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.lerp
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -74,12 +82,10 @@ import coil.imageLoader
 import coil.request.ImageRequest
 import coil.size.Size
 import com.zionhuang.music.LocalPlayerConnection
-import com.zionhuang.music.R
 import com.zionhuang.music.constants.DarkModeKey
 import com.zionhuang.music.constants.PlayerBackgroundStyle
 import com.zionhuang.music.constants.PlayerHorizontalPadding
 import com.zionhuang.music.constants.PlayerMode
-import com.zionhuang.music.constants.PlayerTextAlignmentKey
 import com.zionhuang.music.constants.PureBlackKey
 import com.zionhuang.music.constants.QueuePeekHeight
 import com.zionhuang.music.constants.ShowLyricsKey
@@ -90,11 +96,8 @@ import com.zionhuang.music.extensions.toggleRepeatMode
 import com.zionhuang.music.models.MediaMetadata
 import com.zionhuang.music.ui.component.BottomSheet
 import com.zionhuang.music.ui.component.BottomSheetState
-import com.zionhuang.music.ui.component.LocalMenuState
-import com.zionhuang.music.ui.component.ResizableIconButton
 import com.zionhuang.music.ui.component.rememberBottomSheetState
 import com.zionhuang.music.ui.screens.settings.DarkMode
-import com.zionhuang.music.ui.screens.settings.PlayerTextAlignment
 import com.zionhuang.music.utils.makeTimeString
 import com.zionhuang.music.utils.rememberEnumPreference
 import com.zionhuang.music.utils.rememberPreference
@@ -113,7 +116,7 @@ fun BottomSheetPlayer(
 ) {
     val playerConnection = LocalPlayerConnection.current ?: return
     val context = LocalContext.current
-    val menuState = LocalMenuState.current
+    // val menuState = LocalMenuState.current
 
     val isSystemInDarkTheme = isSystemInDarkTheme()
     val darkTheme by rememberEnumPreference(DarkModeKey, defaultValue = DarkMode.AUTO)
@@ -195,7 +198,7 @@ fun BottomSheetPlayer(
         LocalContentColor.current
     }
 
-    val playerTextAlignment by rememberEnumPreference(PlayerTextAlignmentKey, defaultValue = PlayerTextAlignment.CENTER)
+    // val playerTextAlignment by rememberEnumPreference(PlayerTextAlignmentKey, defaultValue = PlayerTextAlignment.CENTER)
     val sliderStyle by rememberEnumPreference(SliderStyleKey, defaultValue = SliderStyle.DEFAULT)
     val playbackState by playerConnection.playbackState.collectAsState()
     val isPlaying by playerConnection.isPlaying.collectAsState()
@@ -308,14 +311,17 @@ fun BottomSheetPlayer(
                             .clip(RoundedCornerShape(24.dp))
                             .background(MaterialTheme.colorScheme.primary)
                     ) {
-                        ResizableIconButton(
-                            icon = if (currentSong?.song?.liked == true) R.drawable.favorite else R.drawable.favorite_border,
-                            color = MaterialTheme.colorScheme.onPrimary,
-                            modifier = Modifier
-                                .align(Alignment.Center)
-                                .size(24.dp),
-                            onClick = playerConnection::toggleLike
-                        )
+                        IconButton(
+                            onClick = playerConnection::toggleLike,
+                            modifier = Modifier.align(Alignment.Center)
+                        ) {
+                            Icon(
+                                imageVector = if (currentSong?.song?.liked == true) Icons.Filled.Favorite else Icons.Outlined.FavoriteBorder,
+                                contentDescription = "Favorite",
+                                tint = MaterialTheme.colorScheme.onPrimary,
+                                modifier = Modifier.size(24.dp)
+                            )
+                        }
                     }
                 }
             }
@@ -398,8 +404,8 @@ fun BottomSheetPlayer(
                 Box(modifier = Modifier.weight(1f)) {
                     IconButton(onClick = { showLyrics = !showLyrics }) {
                         Icon(
-                            painter = painterResource(R.drawable.lyrics),
-                            contentDescription = null,
+                            imageVector = Icons.Rounded.Lyrics,
+                            contentDescription = "Lyrics",
                             tint = contentColor,
                             modifier = Modifier.alpha(if (showLyrics) 1f else 0.5f)
                         )
@@ -407,15 +413,19 @@ fun BottomSheetPlayer(
                 }
 
                 Box(modifier = Modifier.weight(1f)) {
-                    ResizableIconButton(
-                        icon = R.drawable.skip_previous,
+                    // MODIFICADO: Reemplazado ResizableIconButton
+                    IconButton(
+                        onClick = playerConnection::seekToPrevious,
                         enabled = canSkipPrevious,
-                        color = contentColor,
-                        modifier = Modifier
-                            .size(32.dp)
-                            .align(Alignment.Center),
-                        onClick = playerConnection::seekToPrevious
-                    )
+                        modifier = Modifier.align(Alignment.Center)
+                    ) {
+                        Icon(
+                            imageVector = Icons.Filled.SkipPrevious,
+                            contentDescription = "Skip Previous",
+                            tint = contentColor,
+                            modifier = Modifier.size(32.dp)
+                        )
+                    }
                 }
 
                 Spacer(Modifier.width(8.dp))
@@ -434,12 +444,16 @@ fun BottomSheetPlayer(
                             }
                         }
                 ) {
-                    Image(
-                        painter = painterResource(if (playbackState == Player.STATE_ENDED) R.drawable.replay else if (isPlaying) R.drawable.pause else R.drawable.play),
-                        contentDescription = null,
-                        colorFilter = ColorFilter.tint(
-                            if (backgroundStyle == PlayerBackgroundStyle.BLUR || backgroundStyle == PlayerBackgroundStyle.GRADIENT) contentColor else MaterialTheme.colorScheme.onSurface
-                        ),
+                    // MODIFICADO: Reemplazado Image por Icon
+                    val playPauseIcon = when {
+                        playbackState == Player.STATE_ENDED -> Icons.Filled.Replay
+                        isPlaying -> Icons.Filled.Pause
+                        else -> Icons.Filled.PlayArrow
+                    }
+                    Icon(
+                        imageVector = playPauseIcon,
+                        contentDescription = "Play/Pause",
+                        tint = if (backgroundStyle == PlayerBackgroundStyle.BLUR || backgroundStyle == PlayerBackgroundStyle.GRADIENT) contentColor else MaterialTheme.colorScheme.onSurface,
                         modifier = Modifier
                             .align(Alignment.Center)
                             .size(36.dp)
@@ -449,32 +463,40 @@ fun BottomSheetPlayer(
                 Spacer(Modifier.width(8.dp))
 
                 Box(modifier = Modifier.weight(1f)) {
-                    ResizableIconButton(
-                        icon = R.drawable.skip_next,
+                    // MODIFICADO: Reemplazado ResizableIconButton
+                    IconButton(
+                        onClick = playerConnection::seekToNext,
                         enabled = canSkipNext,
-                        color = contentColor,
-                        modifier = Modifier
-                            .size(32.dp)
-                            .align(Alignment.Center),
-                        onClick = playerConnection::seekToNext
-                    )
+                        modifier = Modifier.align(Alignment.Center)
+                    ) {
+                        Icon(
+                            imageVector = Icons.Filled.SkipNext,
+                            contentDescription = "Skip Next",
+                            tint = contentColor,
+                            modifier = Modifier.size(32.dp)
+                        )
+                    }
                 }
 
                 Box(modifier = Modifier.weight(1f)) {
-                    ResizableIconButton(
-                        icon = when (repeatMode) {
-                            Player.REPEAT_MODE_OFF, Player.REPEAT_MODE_ALL -> R.drawable.repeat
-                            Player.REPEAT_MODE_ONE -> R.drawable.repeat_one
-                            else -> throw IllegalStateException()
-                        },
-                        color = contentColor,
+                    IconButton(
+                        onClick = playerConnection.player::toggleRepeatMode,
                         modifier = Modifier
-                            .size(32.dp)
-                            .padding(4.dp)
                             .align(Alignment.Center)
-                            .alpha(if (repeatMode == Player.REPEAT_MODE_OFF) 0.5f else 1f),
-                        onClick = playerConnection.player::toggleRepeatMode
-                    )
+                            .alpha(if (repeatMode == Player.REPEAT_MODE_OFF) 0.5f else 1f)
+                    ) {
+                        Icon(
+                            imageVector = when (repeatMode) {
+                                Player.REPEAT_MODE_ONE -> Icons.Filled.RepeatOne
+                                else -> Icons.Filled.Repeat
+                            },
+                            contentDescription = "Repeat Mode",
+                            tint = contentColor,
+                            modifier = Modifier
+                                .size(32.dp)
+                                .padding(4.dp)
+                        )
+                    }
                 }
             }
         }

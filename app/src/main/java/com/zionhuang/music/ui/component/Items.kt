@@ -86,6 +86,10 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.rounded.LibraryMusic
+import androidx.compose.material.icons.rounded.OfflinePin
 
 const val ActiveBoxAlpha = 0.6f
 
@@ -252,12 +256,11 @@ fun SongListItem(
     showLikedIcon: Boolean = true,
     showInLibraryIcon: Boolean = false,
     showDownloadIcon: Boolean = true,
-    badges: @Composable RowScope.() -> Unit = {}, // Este parámetro ya no se usa visualmente, pero se mantiene para no romper la firma.
+    badges: @Composable RowScope.() -> Unit = {},
     isActive: Boolean = false,
     isPlaying: Boolean = false,
     trailingContent: @Composable RowScope.() -> Unit = {},
 ) {
-    // La nueva estructura se basa en una Fila (Row) para un control total.
     Row(
         verticalAlignment = Alignment.CenterVertically,
         modifier = modifier
@@ -302,18 +305,18 @@ fun SongListItem(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(6.dp)
             ) {
-                // Lógica de Badges integrada directamente aquí con íconos más pequeños
+                // Lógica de Badges integrada directamente aquí con íconos de Material
                 if (showLikedIcon && song.song.liked) {
                     Icon(
-                        painter = painterResource(R.drawable.favorite),
+                        imageVector = Icons.Filled.Favorite,
                         contentDescription = "Favorito",
-                        tint = MaterialTheme.colorScheme.error,
+                        tint = MaterialTheme.colorScheme.primary,
                         modifier = Modifier.size(14.dp)
                     )
                 }
                 if (showInLibraryIcon && song.song.inLibrary != null) {
                     Icon(
-                        painter = painterResource(R.drawable.library_music),
+                        imageVector = Icons.Rounded.LibraryMusic,
                         contentDescription = "En biblioteca",
                         tint = MaterialTheme.colorScheme.primary,
                         modifier = Modifier.size(14.dp)
@@ -323,7 +326,7 @@ fun SongListItem(
                     val download by LocalDownloadUtil.current.getDownload(song.id).collectAsState(initial = null)
                     when (download?.state) {
                         Download.STATE_COMPLETED -> Icon(
-                            painter = painterResource(R.drawable.offline),
+                            imageVector = Icons.Rounded.OfflinePin,
                             contentDescription = "Descargado",
                             tint = MaterialTheme.colorScheme.primary,
                             modifier = Modifier.size(14.dp)
@@ -332,7 +335,7 @@ fun SongListItem(
                             strokeWidth = 1.5.dp,
                             modifier = Modifier.size(14.dp)
                         )
-                        else -> {} // No muestra nada si no está descargado
+                        else -> {}
                     }
                 }
 
@@ -354,18 +357,17 @@ fun SongListItem(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.End
         ) {
-            // Se muestra la duración de la canción
             Text(
                 text = makeTimeString(song.song.duration * 1000L),
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.padding(end = 8.dp)
             )
-            // Se renderiza el contenido final original (usualmente el menú '...')
             trailingContent()
         }
     }
 }
+
 
 @Composable
 fun SongGridItem(
