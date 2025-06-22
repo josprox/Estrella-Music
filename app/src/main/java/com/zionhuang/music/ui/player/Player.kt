@@ -400,6 +400,7 @@ fun BottomSheetPlayer(
                         Icon(
                             painter = painterResource(R.drawable.lyrics),
                             contentDescription = null,
+                            tint = contentColor,
                             modifier = Modifier.alpha(if (showLyrics) 1f else 0.5f)
                         )
                     }
@@ -409,6 +410,7 @@ fun BottomSheetPlayer(
                     ResizableIconButton(
                         icon = R.drawable.skip_previous,
                         enabled = canSkipPrevious,
+                        color = contentColor,
                         modifier = Modifier
                             .size(32.dp)
                             .align(Alignment.Center),
@@ -450,6 +452,7 @@ fun BottomSheetPlayer(
                     ResizableIconButton(
                         icon = R.drawable.skip_next,
                         enabled = canSkipNext,
+                        color = contentColor,
                         modifier = Modifier
                             .size(32.dp)
                             .align(Alignment.Center),
@@ -464,6 +467,7 @@ fun BottomSheetPlayer(
                             Player.REPEAT_MODE_ONE -> R.drawable.repeat_one
                             else -> throw IllegalStateException()
                         },
+                        color = contentColor,
                         modifier = Modifier
                             .size(32.dp)
                             .padding(4.dp)
