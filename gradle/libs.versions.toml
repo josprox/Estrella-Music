@@ -14,6 +14,7 @@ material3 = "1.4.0-alpha15"
 materialIconsExtended = "1.7.8"
 media3 = "1.7.1"
 media3DatasourceVersion = "1.7.1"
+media3Exoplayer = "1.3.1"
 okhttp = "4.12.0"
 onesignal = "5.1.33"
 paletteKtx = "1.0.0"
@@ -28,12 +29,14 @@ jetbrainsKotlinJvm = "2.0.10"
 lifecycleProcess = "2.9.1"
 markwon = "4.6.2"
 media3ExoplayerWorkmanager = "1.7.1"
+media3Ui = "1.7.1"
 
 [libraries]
 
 #noinspection SimilarGradleDependency
 androidx-material-icons-extended = { module = "androidx.compose.material:material-icons-extended", version.ref = "materialIconsExtended" }
 androidx-media3-datasource-v161 = { module = "androidx.media3:media3-datasource", version.ref = "media3DatasourceVersion" }
+androidx-media3-exoplayer-v131 = { module = "androidx.media3:media3-exoplayer", version.ref = "media3Exoplayer" }
 androidx-palette-ktx = { module = "androidx.palette:palette-ktx", version.ref = "paletteKtx" }
 coil-compose-v240 = { module = "io.coil-kt:coil-compose", version.ref = "coilCompose" }
 coil-compose-v260 = { module = "io.coil-kt:coil-compose", version.ref = "coilComposeVersion" }
@@ -134,6 +137,7 @@ lifecycle-process = { group = "androidx.lifecycle", name = "lifecycle-process", 
 nanojson = { group = "com.github.TeamNewPipe", name = "nanojson", version = "1d9e1aea9049fc9f85e68b43ba39fe7be1c1f751" }
 androidx-webkit = { group = "androidx.webkit", name = "webkit", version = "1.14.0" }
 androidx-media3-exoplayer-workmanager = { group = "androidx.media3", name = "media3-exoplayer-workmanager", version.ref = "media3ExoplayerWorkmanager" }
+androidx-media3-ui = { group = "androidx.media3", name = "media3-ui", version.ref = "media3Ui" }
 
 [plugins]
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }

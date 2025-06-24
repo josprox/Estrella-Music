@@ -170,6 +170,7 @@ dependencies {
     implementation(libs.androidx.media3.exoplayer.workmanager)
 
     implementation(libs.room.runtime)
+    implementation(libs.androidx.media3.ui)
     ksp(libs.room.compiler)
     implementation(libs.room.ktx)
 
@@ -201,7 +202,7 @@ dependencies {
     implementation(libs.runtime.livedata)
     implementation(libs.lifecycle.process)
     implementation(libs.onesignal)
-
+    implementation(libs.androidx.media3.exoplayer.v131)
 
     // --- DEPENDENCIAS PARA LA VERSIÓN "full" ---
     "fullImplementation"(platform(libs.firebase.bom))

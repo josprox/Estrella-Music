@@ -1,5 +1,6 @@
 package com.zionhuang.music
 
+import BottomSheetPlayer
 import android.Manifest
 import android.annotation.SuppressLint
 import android.content.ComponentName
@@ -136,7 +137,6 @@ import com.zionhuang.music.ui.component.getIconForDate
 import com.zionhuang.music.ui.component.rememberBottomSheetState
 import com.zionhuang.music.ui.component.shimmer.ShimmerTheme
 import com.zionhuang.music.ui.menu.YouTubeSongMenu
-import com.zionhuang.music.ui.player.BottomSheetPlayer
 import com.zionhuang.music.ui.screens.Screens
 import com.zionhuang.music.ui.screens.navigationBuilder
 import com.zionhuang.music.ui.screens.search.LocalSearchScreen
