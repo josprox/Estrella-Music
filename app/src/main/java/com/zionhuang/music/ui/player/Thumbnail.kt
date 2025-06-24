@@ -1,5 +1,3 @@
-// package com.zionhuang.music.ui.player
-
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.Crossfade
 import androidx.compose.animation.fadeIn
