@@ -4,6 +4,7 @@ annotation = "1.9.1"
 coilCompose = "2.7.0"
 coilComposeVersion = "2.6.0"
 dotenvVaultKotlin = "0.0.2"
+hiltAndroid = "2.48"
 json = "20240303"
 kotlin = "2.1.20"
 compose = "1.8.2"
@@ -36,6 +37,7 @@ androidx-media3-datasource-v161 = { module = "androidx.media3:media3-datasource"
 androidx-palette-ktx = { module = "androidx.palette:palette-ktx", version.ref = "paletteKtx" }
 coil-compose-v240 = { module = "io.coil-kt:coil-compose", version.ref = "coilCompose" }
 coil-compose-v260 = { module = "io.coil-kt:coil-compose", version.ref = "coilComposeVersion" }
+hilt-android-v248 = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 logging-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "okhttp" }
 markwon = { group = "io.noties.markwon", name = "core", version.ref = "markwon" }
