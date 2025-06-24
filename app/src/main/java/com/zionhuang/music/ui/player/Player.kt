@@ -80,7 +80,7 @@ fun BottomSheetPlayer(
     val context = LocalContext.current
     val audioPlayer = playerConnection.player
 
-    var showVideoPlayer by rememberSaveable { mutableStateOf(false) }
+    var showVideoPlayer by rememberPreference(ShowVideoPlayerKey, false)
 
     //region Background and Color Logic
     val isSystemInDarkTheme = isSystemInDarkTheme()
@@ -209,7 +209,6 @@ fun BottomSheetPlayer(
             return@LaunchedEffect
         }
 
-        showVideoPlayer = false
         isVideoReady = false
         exoPlayer.stop()
         exoPlayer.clearMediaItems()

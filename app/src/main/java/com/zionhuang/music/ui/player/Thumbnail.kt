@@ -61,9 +61,12 @@ fun Thumbnail(
     val showLyrics by rememberPreference(ShowLyricsKey, false)
     var dragAmount by remember { mutableStateOf(0f) }
 
-    DisposableEffect(showLyrics) {
-        currentView.keepScreenOn = showLyrics
+    // Después
+    DisposableEffect(showLyrics, showVideoPlayer) {
+        // La pantalla se mantendrá encendida si se muestran las letras O si se muestra el video.
+        currentView.keepScreenOn = showLyrics || showVideoPlayer
         onDispose {
+            // Al salir del componente, se desactiva.
             currentView.keepScreenOn = false
         }
     }
