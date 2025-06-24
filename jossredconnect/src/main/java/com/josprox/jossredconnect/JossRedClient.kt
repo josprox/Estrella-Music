@@ -1,3 +1,5 @@
+package com.josprox.jossredconnect
+
 import androidx.media3.datasource.DataSpec
 import okhttp3.OkHttpClient
 import okhttp3.Request

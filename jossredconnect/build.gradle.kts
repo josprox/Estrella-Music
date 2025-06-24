@@ -15,12 +15,12 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_21
-        targetCompatibility = JavaVersion.VERSION_21
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     kotlinOptions {
-        jvmTarget = "21"
+        jvmTarget = "17"
     }
 
     buildFeatures {
@@ -35,4 +35,5 @@ dependencies {
 
     // Media3 para soporte de streaming (DataSpec, etc.)
     implementation(libs.androidx.media3.datasource.v161)
+    implementation(libs.hilt.android.v248)
 }
