@@ -355,7 +355,7 @@ class MainActivity : ComponentActivity() {
 
                     val navController = rememberNavController()
 
-                    // Inicializar DeepLinkHandler y manejar el deep link inicial cuando todo esté listo.
+                    // Inicializar DeepLinkHandler y manejar el deep link inicial cuando esté listo.
                     LaunchedEffect(navController) {
                         this@MainActivity.navController = navController
                         deepLinkHandler = DeepLinkHandler(navController, lifecycleScope)
