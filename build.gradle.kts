@@ -1,6 +1,6 @@
 plugins {
-    alias(libs.plugins.hilt) apply (false)
-    alias(libs.plugins.kotlin.ksp) apply (false)
+    alias(libs.plugins.hilt) apply false
+    alias(libs.plugins.kotlin.ksp) apply false
     alias(libs.plugins.compose.compiler) apply false
     alias(libs.plugins.jetbrains.kotlin.jvm) apply false
 }
@@ -15,6 +15,7 @@ buildscript {
         mavenCentral()
         maven { setUrl("https://jitpack.io") }
     }
+
     dependencies {
         classpath(libs.gradle)
         classpath(kotlin("gradle-plugin", libs.versions.kotlin.get()))
@@ -31,12 +32,21 @@ tasks.register<Delete>("Clean") {
 }
 
 subprojects {
-    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
-        kotlinOptions {
+    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinJvmCompile>().configureEach {
+        compilerOptions {
             if (project.findProperty("enableComposeCompilerReports") == "true") {
-                arrayOf("reports", "metrics").forEach {
-                    freeCompilerArgs = freeCompilerArgs + listOf(
-                        "-P", "plugin:androidx.compose.compiler.plugins.kotlin:${it}Destination=${project.buildDir.absolutePath}/compose_metrics"
+                arrayOf("reports", "metrics").forEach { reportType ->
+                    val outputDir = project.layout.buildDirectory
+                        .dir("compose_metrics")
+                        .get()
+                        .asFile
+                        .absolutePath
+
+                    freeCompilerArgs.addAll(
+                        listOf(
+                            "-P",
+                            "plugin:androidx.compose.compiler.plugins.kotlin:${reportType}Destination=$outputDir"
+                        )
                     )
                 }
             }

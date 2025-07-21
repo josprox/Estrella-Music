@@ -28,8 +28,8 @@ android {
         applicationId = "com.josprox.jossmusic"
         minSdk = 26
         targetSdk = 36
-        versionCode = 47
-        versionName = "2.1.2"
+        versionCode = 48
+        versionName = "2.1.3"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -42,6 +42,7 @@ android {
             buildConfigField("String", "DOTENV_KEY", System.getenv("DOTENV_KEY") ?: "\"\"")
             signingConfig = signingConfigs.getByName("debug")
         }
+
         debug {
             applicationIdSuffix = ".debug"
             buildConfigField("String", "DOTENV_KEY", System.getenv("DOTENV_KEY") ?: "\"\"")

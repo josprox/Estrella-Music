@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.jossred.client" // Nombre del paquete registrado en Joss Red
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         minSdk = 21
@@ -19,9 +19,18 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
 
-    kotlinOptions {
-        jvmTarget = "17"
+    // REMOVE THIS BLOCK:
+    // kotlinOptions {
+    //     jvmTarget = "17"
+    // }
+
+    // ADD THIS BLOCK OR MERGE WITH EXISTING compilerOptions IF PRESENT:
+    kotlin {
+        compilerOptions {
+            jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
+        }
     }
+
 
     buildFeatures {
         buildConfig = true

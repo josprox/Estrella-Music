@@ -106,3 +106,6 @@
 # Keep jdk.dynalink classes
 -keep class jdk.dynalink.** { *; }
 -dontwarn jdk.dynalink.**
+
+# This is generated automatically by the Android Gradle plugin.
+-dontwarn okhttp3.internal.Util

@@ -48,7 +48,7 @@ import androidx.compose.ui.unit.dp
 import androidx.core.net.toUri
 import androidx.navigation.NavController
 import com.halilibo.richtext.markdown.Markdown
-import com.halilibo.richtext.ui.RichText
+import com.halilibo.richtext.ui.material3.RichText
 import com.zionhuang.music.BuildConfig
 import com.zionhuang.music.LocalPlayerAwareWindowInsets
 import com.zionhuang.music.R
@@ -199,6 +199,7 @@ fun UpdateDetails(details: Updater.ReleaseDetails, showUpdate: Boolean) {
         )
         Spacer(Modifier.height(16.dp))
 
+        // ¡AQUÍ ESTÁ EL CAMBIO!
         RichText(
             modifier = Modifier.fillMaxWidth(),
         ) {
@@ -227,7 +228,6 @@ fun UpdateDetails(details: Updater.ReleaseDetails, showUpdate: Boolean) {
         }
     }
 }
-
 // --- Clase de Estado para manejar los resultados ---
 private sealed class ReleaseState {
     object Loading : ReleaseState()
