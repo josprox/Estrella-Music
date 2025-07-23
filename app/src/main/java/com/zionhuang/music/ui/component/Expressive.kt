@@ -16,7 +16,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.selection.selectable
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.DeleteSweep
@@ -51,11 +50,10 @@ import com.zionhuang.music.R
 fun SettingsHeader(title: String, modifier: Modifier = Modifier) {
     Text(
         text = title,
-        style = MaterialTheme.typography.labelLarge,
-        color = MaterialTheme.colorScheme.primary,
+        style = MaterialTheme.typography.displaySmall,
+        color = MaterialTheme.colorScheme.onSurface,
         modifier = modifier
-            .padding(horizontal = 16.dp, vertical = 8.dp)
-            .padding(top = 16.dp) // Espacio extra arriba de cada sección
+            .padding(horizontal = 24.dp, vertical = 16.dp)
     )
 }
 
@@ -73,7 +71,7 @@ fun <T> EnumSelectionDialog(
 ) {
     AlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(text = title) },
+        title = { Text(text = title, style = MaterialTheme.typography.headlineMedium) },
         text = {
             LazyColumn {
                 items(options.size) { index ->
@@ -81,7 +79,7 @@ fun <T> EnumSelectionDialog(
                     Row(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .height(56.dp)
+                            .height(64.dp)
                             .selectable(
                                 selected = (option == selectedOption),
                                 onClick = {
@@ -90,27 +88,35 @@ fun <T> EnumSelectionDialog(
                                 },
                                 role = Role.RadioButton
                             )
-                            .padding(horizontal = 16.dp),
+                            .padding(horizontal = 24.dp),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         RadioButton(
                             selected = (option == selectedOption),
-                            onClick = null // El onClick de la Row ya maneja la selección
+                            onClick = null,
+                            colors = androidx.compose.material3.RadioButtonDefaults.colors(
+                                selectedColor = MaterialTheme.colorScheme.primary,
+                                unselectedColor = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
                         )
                         Text(
                             text = optionText(option),
                             style = MaterialTheme.typography.bodyLarge,
-                            modifier = Modifier.padding(start = 16.dp)
+                            modifier = Modifier.padding(start = 24.dp)
                         )
                     }
                 }
             }
         },
         confirmButton = {
-            TextButton(onClick = onDismiss) {
+            TextButton(
+                onClick = onDismiss,
+                shape = RoundedCornerShape(12.dp)
+            ) {
                 Text(stringResource(android.R.string.cancel))
             }
-        }
+        },
+        shape = RoundedCornerShape(28.dp)
     )
 }
 
@@ -129,9 +135,9 @@ fun ExpressivePreferenceEntry(
         leadingContent = {
             Box(
                 modifier = Modifier
-                    .size(40.dp)
-                    .clip(CircleShape)
-                    .background(MaterialTheme.colorScheme.surfaceContainerHighest),
+                    .size(56.dp)
+                    .clip(RoundedCornerShape(16.dp))
+                    .background(MaterialTheme.colorScheme.primaryContainer),
                 contentAlignment = Alignment.Center
             ) {
                 icon()
@@ -141,7 +147,9 @@ fun ExpressivePreferenceEntry(
         modifier = modifier
             .fillMaxWidth()
             .clickable(onClick = onClick)
+            .padding(vertical = 8.dp, horizontal = 16.dp)
     )
+    HorizontalDivider(modifier = Modifier.padding(horizontal = 16.dp))
 }
 
 @Composable
@@ -153,16 +161,16 @@ fun <T> InlineSelectPreference(
     onValueSelected: (T) -> Unit
 ) {
     Column(
-        modifier = Modifier.padding(bottom = 8.dp)
+        modifier = Modifier.padding(bottom = 16.dp)
     ) {
         ListItem(
             headlineContent = title,
             leadingContent = {
                 Box(
                     modifier = Modifier
-                        .size(40.dp)
-                        .clip(CircleShape)
-                        .background(MaterialTheme.colorScheme.surfaceContainerHighest),
+                        .size(56.dp)
+                        .clip(RoundedCornerShape(16.dp))
+                        .background(MaterialTheme.colorScheme.primaryContainer),
                     contentAlignment = Alignment.Center
                 ) {
                     icon()
@@ -170,16 +178,25 @@ fun <T> InlineSelectPreference(
             }
         )
         Row(
-            horizontalArrangement = Arrangement.spacedBy(16.dp),
-            modifier = Modifier.padding(top = 8.dp, start = 16.dp, end = 16.dp)
+            horizontalArrangement = Arrangement.spacedBy(12.dp),
+            modifier = Modifier.padding(top = 8.dp, start = 24.dp, end = 24.dp)
         ) {
             options.forEach { (optionValue, content) ->
+                val isSelected = (selectedValue == optionValue)
                 Box(
                     modifier = Modifier
                         .weight(1f)
+                        .clip(RoundedCornerShape(20.dp))
+                        .background(if (isSelected) MaterialTheme.colorScheme.tertiaryContainer else MaterialTheme.colorScheme.surfaceContainerHigh)
+                        .border(
+                            width = 2.dp,
+                            color = if (isSelected) MaterialTheme.colorScheme.tertiary else MaterialTheme.colorScheme.outlineVariant,
+                            shape = RoundedCornerShape(20.dp)
+                        )
                         .clickable { onValueSelected(optionValue) }
+                        .padding(16.dp)
                 ) {
-                    content(selectedValue == optionValue)
+                    content(isSelected)
                 }
             }
         }
@@ -194,27 +211,28 @@ fun SliderPreview(
 ) {
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
-        // Centramos el contenido verticalmente
         verticalArrangement = Arrangement.Center,
         modifier = Modifier
-            // Aseguramos una altura mínima para que no se sienta apretado
-            .defaultMinSize(minHeight = 100.dp)
-            .clip(RoundedCornerShape(16.dp))
+            .defaultMinSize(minHeight = 120.dp)
+            .clip(RoundedCornerShape(24.dp))
             .border(
-                width = 2.dp,
+                width = 3.dp,
                 color = if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outlineVariant,
-                shape = RoundedCornerShape(16.dp)
+                shape = RoundedCornerShape(24.dp)
             )
-            .padding(16.dp)
+            .background(if (isSelected) MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.2f) else MaterialTheme.colorScheme.surfaceContainer)
+            .padding(24.dp)
     ) {
         content(
             Modifier
-                // Eliminamos .weight(1f) para que el slider no se estire
                 .pointerInput(Unit) { detectTapGestures(onPress = {}) }
         )
-        // CAMBIO 4 (Opcional pero recomendado): Añadimos un pequeño espacio extra
-        Spacer(Modifier.height(8.dp))
-        Text(text = label, style = MaterialTheme.typography.labelLarge)
+        Spacer(Modifier.height(12.dp))
+        Text(
+            text = label,
+            style = MaterialTheme.typography.titleSmall,
+            color = if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurface
+        )
     }
 }
 
@@ -234,33 +252,44 @@ fun EditTextDialog(
 
     AlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(text = title) },
+        title = { Text(text = title, style = MaterialTheme.typography.headlineSmall) },
         text = {
-            // Usamos un OutlinedTextField para el estilo estándar de Material 3
             OutlinedTextField(
                 value = text,
                 onValueChange = { text = it },
                 singleLine = true,
                 placeholder = placeholder,
                 supportingText = supportingText,
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier.fillMaxWidth(),
+                shape = RoundedCornerShape(16.dp),
+                colors = androidx.compose.material3.OutlinedTextFieldDefaults.colors(
+                    focusedBorderColor = MaterialTheme.colorScheme.primary,
+                    unfocusedBorderColor = MaterialTheme.colorScheme.outlineVariant,
+                    focusedLabelColor = MaterialTheme.colorScheme.primary,
+                    unfocusedLabelColor = MaterialTheme.colorScheme.onSurfaceVariant
+                )
             )
         },
         confirmButton = {
             TextButton(
                 onClick = {
-                    onValueChange(text) // Guardar el valor
+                    onValueChange(text)
                     onDismiss()
-                }
+                },
+                shape = RoundedCornerShape(12.dp)
             ) {
                 Text(stringResource(android.R.string.ok))
             }
         },
         dismissButton = {
-            TextButton(onClick = onDismiss) {
+            TextButton(
+                onClick = onDismiss,
+                shape = RoundedCornerShape(12.dp)
+            ) {
                 Text(stringResource(android.R.string.cancel))
             }
-        }
+        },
+        shape = RoundedCornerShape(28.dp)
     )
 }
 
@@ -272,18 +301,25 @@ fun CacheInfoCard(
     onClearClick: () -> Unit,
     maxSizePreference: @Composable () -> Unit,
 ) {
-    OutlinedCard(modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)) {
-        Column(modifier = Modifier.padding(top = 16.dp)) {
+    OutlinedCard(
+        modifier = Modifier
+            .padding(horizontal = 16.dp, vertical = 12.dp),
+        shape = RoundedCornerShape(24.dp)
+    ) {
+        Column(modifier = Modifier.padding(top = 24.dp)) {
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 16.dp),
+                    .padding(horizontal = 24.dp),
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
-                Text(text = title, style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
-                TextButton(onClick = onClearClick) {
-                    Icon(Icons.Default.DeleteSweep, contentDescription = stringResource(R.string.clean), modifier = Modifier.padding(end = 4.dp))
+                Text(text = title, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.SemiBold)
+                TextButton(
+                    onClick = onClearClick,
+                    shape = RoundedCornerShape(16.dp)
+                ) {
+                    Icon(Icons.Default.DeleteSweep, contentDescription = stringResource(R.string.clean), modifier = Modifier.padding(end = 8.dp))
                     Text(stringResource(R.string.clean))
                 }
             }
@@ -291,17 +327,22 @@ fun CacheInfoCard(
                 progress = { progress },
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 16.dp, vertical = 8.dp)
+                    .padding(horizontal = 24.dp, vertical = 12.dp),
+                color = MaterialTheme.colorScheme.tertiary
             )
             Text(
                 text = usageText,
-                style = MaterialTheme.typography.bodySmall,
+                style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier
-                    .padding(horizontal = 16.dp)
+                    .padding(horizontal = 24.dp)
                     .align(Alignment.End)
             )
-            HorizontalDivider(modifier = Modifier.padding(top = 16.dp))
+            HorizontalDivider(
+                modifier = Modifier.padding(top = 24.dp),
+                thickness = 1.dp,
+                color = MaterialTheme.colorScheme.outlineVariant
+            )
             maxSizePreference()
         }
     }
@@ -323,22 +364,27 @@ fun ConfirmationDialog(
 ) {
     AlertDialog(
         onDismissRequest = onDismissRequest,
-        title = { Text(text = title) },
-        text = { Text(text = text, style = MaterialTheme.typography.bodyMedium) },
+        title = { Text(text = title, style = MaterialTheme.typography.headlineSmall) },
+        text = { Text(text = text, style = MaterialTheme.typography.bodyLarge) },
         confirmButton = {
             TextButton(
                 onClick = {
                     onConfirm()
                     onDismissRequest()
-                }
+                },
+                shape = RoundedCornerShape(12.dp)
             ) {
                 Text(stringResource(android.R.string.ok))
             }
         },
         dismissButton = {
-            TextButton(onClick = onDismissRequest) {
+            TextButton(
+                onClick = onDismissRequest,
+                shape = RoundedCornerShape(12.dp)
+            ) {
                 Text(stringResource(android.R.string.cancel))
             }
-        }
+        },
+        shape = RoundedCornerShape(28.dp)
     )
 }
