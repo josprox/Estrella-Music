@@ -25,12 +25,21 @@
 - Abre enlaces de YouTube/YouTube Music (`watch`, `playlist`, `channel`)
 - ...
 
-## Installation
+---
+
+## Instalación
+
+Descarga la última versión de Joss Music desde:
+
+* **GitHub Releases:** Encuentra el archivo APK más reciente directamente en las [releases de GitHub](https://github.com/josprox/Joss-Music/releases/latest).
+
+* **AppGallery:** Descarga la aplicación desde la tienda oficial de Huawei [AppGallery](https://appgallery.huawei.com/app/C114184037).
 
 [<img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
 alt="Get it on Google Play"
 height="80">](https://play.google.com/store/apps/details?id=com.josprox.jossmusic)
 
+---
 
 ## Agradecimientos
 - [**Innertune**](https://github.com/z-huang/InnerTune): Gracias a su proyecto, pudimos modificar esta aplicación (fork).
@@ -40,10 +49,14 @@ height="80">](https://play.google.com/store/apps/details?id=com.josprox.jossmusi
 
 <a href="https://www.flaticon.com/authors/ilham-fitrotul-hayat" title="íconos de música">Ícono de aplicación basado en el ícono creado por Ilham Fitrotul Hayat - Flaticon</a>
 
+---
+
 ## Traducciones
 Si deseas ayudar a traducir la aplicación, puedes mandar un pull request y nosotros aceptaremos la traducción, también usamos las traducciones de innertune.
 
 [![Translation status](https://hosted.weblate.org/widget/innertune/multi-auto.svg)](https://hosted.weblate.org/engage/innertune/)
+
+---
 
 ## Aviso legal
 Este proyecto y sus contenidos no están afiliados, financiados, autorizados, respaldados ni asociados de ninguna manera con YouTube, Google LLC o cualquiera de sus filiales y subsidiarias.
