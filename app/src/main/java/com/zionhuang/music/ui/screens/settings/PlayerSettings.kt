@@ -40,6 +40,7 @@ import com.zionhuang.music.ui.utils.backToMain
 import com.zionhuang.music.utils.rememberEnumPreference
 import com.zionhuang.music.utils.rememberPreference
 import androidx.compose.foundation.layout.padding
+import com.zionhuang.music.ui.component.CustomSwitchPreference
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -118,7 +119,7 @@ fun PlayerSettings(
                     title = { Text(stringResource(R.string.skip_silence)) },
                     icon = { Icon(painterResource(R.drawable.fast_forward), null, tint = MaterialTheme.colorScheme.primary) },
                     onClick = { onSkipSilenceChange(!skipSilence) },
-                    trailingContent = { Switch(checked = skipSilence, onCheckedChange = onSkipSilenceChange) }
+                    trailingContent = { CustomSwitchPreference(checked = skipSilence, onCheckedChange = onSkipSilenceChange) }
                 )
             }
 
@@ -127,7 +128,7 @@ fun PlayerSettings(
                     title = { Text(stringResource(R.string.audio_normalization)) },
                     icon = { Icon(painterResource(R.drawable.volume_up), null, tint = MaterialTheme.colorScheme.primary) },
                     onClick = { onAudioNormalizationChange(!audioNormalization) },
-                    trailingContent = { Switch(checked = audioNormalization, onCheckedChange = onAudioNormalizationChange) }
+                    trailingContent = { CustomSwitchPreference(checked = audioNormalization, onCheckedChange = onAudioNormalizationChange) }
                 )
             }
 
@@ -142,7 +143,7 @@ fun PlayerSettings(
                     description = { Text(stringResource(R.string.persistent_queue_desc)) },
                     icon = { Icon(painterResource(R.drawable.queue_music), null, tint = MaterialTheme.colorScheme.primary) },
                     onClick = { onPersistentQueueChange(!persistentQueue) },
-                    trailingContent = { Switch(checked = persistentQueue, onCheckedChange = onPersistentQueueChange) }
+                    trailingContent = { CustomSwitchPreference(checked = persistentQueue, onCheckedChange = onPersistentQueueChange) }
                 )
             }
 
@@ -152,7 +153,7 @@ fun PlayerSettings(
                     description = { Text(stringResource(R.string.auto_load_more_desc)) },
                     icon = { Icon(painterResource(R.drawable.playlist_add), null, tint = MaterialTheme.colorScheme.primary) },
                     onClick = { onAutoLoadMoreChange(!autoLoadMore) },
-                    trailingContent = { Switch(checked = autoLoadMore, onCheckedChange = onAutoLoadMoreChange) }
+                    trailingContent = { CustomSwitchPreference(checked = autoLoadMore, onCheckedChange = onAutoLoadMoreChange) }
                 )
             }
 
@@ -162,7 +163,7 @@ fun PlayerSettings(
                     description = { Text(stringResource(R.string.auto_skip_next_on_error_desc)) },
                     icon = { Icon(painterResource(R.drawable.skip_next), null, tint = MaterialTheme.colorScheme.primary) },
                     onClick = { onAutoSkipNextOnErrorChange(!autoSkipNextOnError) },
-                    trailingContent = { Switch(checked = autoSkipNextOnError, onCheckedChange = onAutoSkipNextOnErrorChange) }
+                    trailingContent = { CustomSwitchPreference(checked = autoSkipNextOnError, onCheckedChange = onAutoSkipNextOnErrorChange) }
                 )
             }
 
@@ -176,7 +177,7 @@ fun PlayerSettings(
                     title = { Text(stringResource(R.string.stop_music_on_task_clear)) },
                     icon = { Icon(painterResource(R.drawable.clear_all), null, tint = MaterialTheme.colorScheme.primary) },
                     onClick = { onStopMusicOnTaskClearChange(!stopMusicOnTaskClear) },
-                    trailingContent = { Switch(checked = stopMusicOnTaskClear, onCheckedChange = onStopMusicOnTaskClearChange) }
+                    trailingContent = { CustomSwitchPreference(checked = stopMusicOnTaskClear, onCheckedChange = onStopMusicOnTaskClearChange) }
                 )
             }
 
@@ -186,7 +187,7 @@ fun PlayerSettings(
                     description = { Text(stringResource(R.string.sleepTimerSongText)) },
                     icon = { Icon(painterResource(id = R.drawable.bedtime), null, tint = MaterialTheme.colorScheme.primary) },
                     onClick = { onSleepFinishSongChange(!sleepFinishSong) },
-                    trailingContent = { Switch(checked = sleepFinishSong, onCheckedChange = onSleepFinishSongChange) }
+                    trailingContent = { CustomSwitchPreference(checked = sleepFinishSong, onCheckedChange = onSleepFinishSongChange) }
                 )
             }
         }

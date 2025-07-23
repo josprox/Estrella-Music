@@ -18,6 +18,8 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Close // Importa el ícono de "close"
+import androidx.compose.material.icons.filled.Done // Importa el ícono de "Done" para "check"
 import androidx.compose.material.icons.filled.DeleteSweep
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.HorizontalDivider
@@ -28,6 +30,8 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
+import androidx.compose.material3.Switch
+import androidx.compose.material3.SwitchDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -39,6 +43,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.font.FontWeight
@@ -200,6 +205,65 @@ fun <T> InlineSelectPreference(
             }
         }
     }
+}
+
+@Composable
+fun CustomSwitchPreference(
+    modifier: Modifier = Modifier,
+    checked: Boolean,
+    onCheckedChange: (Boolean) -> Unit,
+    isEnabled: Boolean = true,
+) {
+    Switch(
+        modifier = modifier,
+        checked = checked,
+        onCheckedChange = onCheckedChange,
+        enabled = isEnabled,
+        thumbContent = {
+            // Usamos Icons.Filled.Done para el estado checked (similar a un "check")
+            // y Icons.Filled.Close para el estado unchecked.
+            Icon(
+                imageVector = if (checked) Icons.Filled.Done else Icons.Filled.Close,
+                contentDescription = null, // Es un elemento puramente decorativo, no necesita descripción para accesibilidad
+                modifier = Modifier.size(SwitchDefaults.IconSize),
+            )
+        }
+    )
+}
+@Composable
+fun SwitchPreference(
+    modifier: Modifier = Modifier,
+    title: @Composable () -> Unit,
+    description: String? = null,
+    icon: (@Composable () -> Unit)? = null,
+    checked: Boolean,
+    onCheckedChange: (Boolean) -> Unit,
+    isEnabled: Boolean = true,
+) {
+    PreferenceEntry( // Asegúrate de que esta función 'PreferenceEntry' esté definida en algún lugar.
+        modifier = modifier,
+        title = title,
+        description = description,
+        icon = icon,
+        trailingContent = {
+            Switch(
+                checked = checked,
+                onCheckedChange = onCheckedChange,
+                enabled = isEnabled,
+                thumbContent = {
+                    // Usamos Icons.Filled.Done para el estado checked (similar a un "check")
+                    // y Icons.Filled.Close para el estado unchecked.
+                    Icon(
+                        imageVector = if (checked) Icons.Filled.Done else Icons.Filled.Close,
+                        contentDescription = null, // La descripción de contenido puede ser nula para elementos puramente decorativos
+                        modifier = Modifier.size(SwitchDefaults.IconSize),
+                    )
+                }
+            )
+        },
+        onClick = { onCheckedChange(!checked) },
+        isEnabled = isEnabled
+    )
 }
 
 @Composable

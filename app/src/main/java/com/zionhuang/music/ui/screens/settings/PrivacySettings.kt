@@ -36,6 +36,7 @@ import com.zionhuang.music.ui.component.SettingsHeader
 import com.zionhuang.music.ui.utils.backToMain
 import com.zionhuang.music.utils.rememberPreference
 import androidx.compose.foundation.layout.padding
+import com.zionhuang.music.ui.component.CustomSwitchPreference
 
 private enum class PrivacyDialogKey {
     CLEAR_LISTEN_HISTORY,
@@ -108,7 +109,7 @@ fun PrivacySettings(
                     title = { Text(stringResource(R.string.pause_listen_history)) },
                     icon = { Icon(painterResource(R.drawable.history), null, tint = MaterialTheme.colorScheme.primary) },
                     onClick = { onPauseListenHistoryChange(!pauseListenHistory) },
-                    trailingContent = { Switch(checked = pauseListenHistory, onCheckedChange = onPauseListenHistoryChange) }
+                    trailingContent = { CustomSwitchPreference(checked = pauseListenHistory, onCheckedChange = onPauseListenHistoryChange) }
                 )
             }
             item {
@@ -128,7 +129,7 @@ fun PrivacySettings(
                     title = { Text(stringResource(R.string.pause_search_history)) },
                     icon = { Icon(painterResource(R.drawable.search_off), null, tint = MaterialTheme.colorScheme.primary) },
                     onClick = { onPauseSearchHistoryChange(!pauseSearchHistory) },
-                    trailingContent = { Switch(checked = pauseSearchHistory, onCheckedChange = onPauseSearchHistoryChange) }
+                    trailingContent = { CustomSwitchPreference(checked = pauseSearchHistory, onCheckedChange = onPauseSearchHistoryChange) }
                 )
             }
             item {
@@ -154,7 +155,7 @@ fun PrivacySettings(
                         onUseLoginForBrowseChange(newValue)
                     },
                     trailingContent = {
-                        Switch(
+                        CustomSwitchPreference(
                             checked = useLoginForBrowse,
                             onCheckedChange = {
                                 YouTube.useLoginForBrowse = it
@@ -175,7 +176,7 @@ fun PrivacySettings(
                     description = { Text(stringResource(R.string.disable_screenshot_desc)) },
                     icon = { Icon(painterResource(R.drawable.screenshot), null, tint = MaterialTheme.colorScheme.primary) },
                     onClick = { onDisableScreenshotChange(!disableScreenshot) },
-                    trailingContent = { Switch(checked = disableScreenshot, onCheckedChange = onDisableScreenshotChange) }
+                    trailingContent = { CustomSwitchPreference(checked = disableScreenshot, onCheckedChange = onDisableScreenshotChange) }
                 )
             }
         }

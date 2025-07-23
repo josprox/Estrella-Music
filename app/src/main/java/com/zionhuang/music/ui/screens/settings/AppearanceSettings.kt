@@ -45,12 +45,14 @@ import com.zionhuang.music.constants.PureBlackKey
 import com.zionhuang.music.constants.SliderStyle
 import com.zionhuang.music.constants.SliderStyleKey
 import com.zionhuang.music.constants.SlimNavBarKey
+import com.zionhuang.music.ui.component.CustomSwitchPreference
 import com.zionhuang.music.ui.component.EnumSelectionDialog
 import com.zionhuang.music.ui.component.ExpressivePreferenceEntry
 import com.zionhuang.music.ui.component.IconButton
 import com.zionhuang.music.ui.component.InlineSelectPreference
 import com.zionhuang.music.ui.component.SettingsHeader
 import com.zionhuang.music.ui.component.SliderPreview
+import com.zionhuang.music.ui.component.SwitchPreference
 import com.zionhuang.music.ui.utils.backToMain
 import com.zionhuang.music.utils.rememberEnumPreference
 import com.zionhuang.music.utils.rememberPreference
@@ -197,7 +199,7 @@ fun AppearanceSettings(
                     icon = { Icon(painterResource(R.drawable.palette), null, tint = MaterialTheme.colorScheme.primary) },
                     onClick = { onDynamicThemeChange(!dynamicTheme) },
                     trailingContent = {
-                        Switch(checked = dynamicTheme, onCheckedChange = onDynamicThemeChange)
+                        CustomSwitchPreference(checked = dynamicTheme, onCheckedChange = onDynamicThemeChange)
                     }
                 )
             }
@@ -221,7 +223,7 @@ fun AppearanceSettings(
                         icon = { Icon(painterResource(R.drawable.contrast), null, tint = MaterialTheme.colorScheme.primary) },
                         onClick = { onPureBlackChange(!pureBlack) },
                         trailingContent = {
-                            Switch(checked = pureBlack, onCheckedChange = onPureBlackChange)
+                            CustomSwitchPreference(checked = pureBlack, onCheckedChange = onPureBlackChange)
                         }
                     )
                 }
@@ -238,7 +240,7 @@ fun AppearanceSettings(
                     icon = { Icon(Icons.Rounded.MoreHoriz, null, tint = MaterialTheme.colorScheme.primary) },
                     onClick = { onSlimNavChange(!slimNav) },
                     trailingContent = {
-                        Switch(checked = slimNav, onCheckedChange = onSlimNavChange)
+                        CustomSwitchPreference(checked = slimNav, onCheckedChange = onSlimNavChange)
                     }
                 )
             }

@@ -59,6 +59,7 @@ import com.zionhuang.music.utils.rememberPreference
 import java.net.Proxy
 import androidx.compose.foundation.layout.padding
 import androidx.compose.ui.input.nestedscroll.nestedScroll
+import com.zionhuang.music.ui.component.CustomSwitchPreference
 
 private enum class ContentEditingKey {
     LANGUAGE,
@@ -201,7 +202,7 @@ fun ContentSettings(
                     title = { Text(stringResource(R.string.hide_explicit)) },
                     icon = { Icon(painterResource(R.drawable.explicit), null, tint = MaterialTheme.colorScheme.primary) },
                     onClick = { onHideExplicitChange(!hideExplicit) },
-                    trailingContent = { Switch(checked = hideExplicit, onCheckedChange = onHideExplicitChange) }
+                    trailingContent = { CustomSwitchPreference(checked = hideExplicit, onCheckedChange = onHideExplicitChange) }
                 )
             }
 
@@ -214,7 +215,7 @@ fun ContentSettings(
                     title = { Text(stringResource(R.string.enable_lrclib)) },
                     icon = { Icon(painterResource(R.drawable.lyrics), null, tint = MaterialTheme.colorScheme.primary) },
                     onClick = { onEnableLrcLibChange(!enableLrcLib) },
-                    trailingContent = { Switch(checked = enableLrcLib, onCheckedChange = onEnableLrcLibChange) }
+                    trailingContent = { CustomSwitchPreference(checked = enableLrcLib, onCheckedChange = onEnableLrcLibChange) }
                 )
             }
             item {
@@ -222,7 +223,7 @@ fun ContentSettings(
                     title = { Text(stringResource(R.string.enable_kugou)) },
                     icon = { Icon(painterResource(R.drawable.lyrics), null, tint = MaterialTheme.colorScheme.primary) },
                     onClick = { onEnableKugouChange(!enableKugou) },
-                    trailingContent = { Switch(checked = enableKugou, onCheckedChange = onEnableKugouChange) }
+                    trailingContent = { CustomSwitchPreference(checked = enableKugou, onCheckedChange = onEnableKugouChange) }
                 )
             }
 
@@ -235,7 +236,7 @@ fun ContentSettings(
                     title = { Text(stringResource(R.string.enable_proxy)) },
                     icon = { Icon(painterResource(R.drawable.wifi_proxy), null, tint = MaterialTheme.colorScheme.primary) },
                     onClick = { onProxyEnabledChange(!proxyEnabled) },
-                    trailingContent = { Switch(checked = proxyEnabled, onCheckedChange = onProxyEnabledChange) }
+                    trailingContent = { CustomSwitchPreference(checked = proxyEnabled, onCheckedChange = onProxyEnabledChange) }
                 )
             }
             item {

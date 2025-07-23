@@ -28,6 +28,7 @@ import com.zionhuang.music.R
 import com.zionhuang.music.constants.AutoSkipNextOnErrorKey
 import com.zionhuang.music.constants.JossRedEnabledKey
 import com.zionhuang.music.constants.JossRedMultimedia
+import com.zionhuang.music.ui.component.CustomSwitchPreference
 import com.zionhuang.music.ui.component.ExpressivePreferenceEntry
 import com.zionhuang.music.ui.component.IconButton
 import com.zionhuang.music.ui.utils.backToMain
@@ -93,7 +94,7 @@ fun JossRedSettings(
                     },
                     onClick = { onJossRedEnabledChange(!jossRedEnabled) },
                     trailingContent = {
-                        Switch(checked = jossRedEnabled, onCheckedChange = onJossRedEnabledChange)
+                        CustomSwitchPreference(checked = jossRedEnabled, onCheckedChange = onJossRedEnabledChange)
                     }
                 )
             }
@@ -111,7 +112,7 @@ fun JossRedSettings(
                     },
                     onClick = { onJossRedMultimediaChange(!jossRedMultimedia) },
                     trailingContent = {
-                        Switch(checked = jossRedMultimedia, onCheckedChange = onJossRedMultimediaChange)
+                        CustomSwitchPreference(checked = jossRedMultimedia, onCheckedChange = onJossRedMultimediaChange)
                     }
                 )
             }
@@ -129,7 +130,7 @@ fun JossRedSettings(
                     },
                     onClick = { onAutoSkipNextOnErrorChange(!autoSkipNextOnError) },
                     trailingContent = {
-                        Switch(checked = autoSkipNextOnError, onCheckedChange = onAutoSkipNextOnErrorChange)
+                        CustomSwitchPreference(checked = autoSkipNextOnError, onCheckedChange = onAutoSkipNextOnErrorChange)
                     }
                 )
             }

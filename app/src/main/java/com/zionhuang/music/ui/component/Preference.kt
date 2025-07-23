@@ -163,32 +163,6 @@ inline fun <reified T : Enum<T>> EnumListPreference(
 }
 
 @Composable
-fun SwitchPreference(
-    modifier: Modifier = Modifier,
-    title: @Composable () -> Unit,
-    description: String? = null,
-    icon: (@Composable () -> Unit)? = null,
-    checked: Boolean,
-    onCheckedChange: (Boolean) -> Unit,
-    isEnabled: Boolean = true,
-) {
-    PreferenceEntry(
-        modifier = modifier,
-        title = title,
-        description = description,
-        icon = icon,
-        trailingContent = {
-            Switch(
-                checked = checked,
-                onCheckedChange = onCheckedChange
-            )
-        },
-        onClick = { onCheckedChange(!checked) },
-        isEnabled = isEnabled
-    )
-}
-
-@Composable
 fun EditTextPreference(
     modifier: Modifier = Modifier,
     title: @Composable () -> Unit,
