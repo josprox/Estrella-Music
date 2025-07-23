@@ -149,7 +149,6 @@ fun ExpressivePreferenceEntry(
             .clickable(onClick = onClick)
             .padding(vertical = 8.dp, horizontal = 16.dp)
     )
-    HorizontalDivider(modifier = Modifier.padding(horizontal = 16.dp))
 }
 
 @Composable
