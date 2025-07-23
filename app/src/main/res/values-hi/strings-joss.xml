@@ -32,4 +32,6 @@
   <string name="download_update">डाउनलोड अद्यतन</string>
   <string name="album_art_blur">कवर (छूटा)</string>
   <string name="gradientBackground">ढाल पृष्ठभूमि</string>
+  <string name="subscribed">सदस्यता लिया</string>
+  <string name="subscribe">सदस्यता लें</string>
 </resources>

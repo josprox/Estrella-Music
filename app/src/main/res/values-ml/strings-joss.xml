@@ -65,4 +65,6 @@
   <string name="download_update">അപ്ഡേറ്റ് ഡൗൺലോഡുചെയ്യുക</string>
   <string name="album_art_blur">കവർ (നഷ്ടമായി)</string>
   <string name="gradientBackground">ഗ്രേഡിയന്റ് പശ്ചാത്തലം</string>
+  <string name="subscribed">സബ്സ്ക്രൈബുചെയ്തു</string>
+  <string name="subscribe">സബ്സ്ക്രൈബുചെയ്യുക</string>
 </resources>

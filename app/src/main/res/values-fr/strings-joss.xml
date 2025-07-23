@@ -63,4 +63,6 @@
   <string name="download_update">Télécharger la mise à jour</string>
   <string name="album_art_blur">Couverture (manqué)</string>
   <string name="gradientBackground">Contexte de dégradé</string>
+  <string name="subscribed">Souscrit</string>
+  <string name="subscribe">S\'abonner</string>
 </resources>

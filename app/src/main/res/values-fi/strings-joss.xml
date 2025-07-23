@@ -66,4 +66,6 @@
   <string name="download_update">Lataa päivitys</string>
   <string name="album_art_blur">Kansi (unohdettu)</string>
   <string name="gradientBackground">Gradientin tausta</string>
+  <string name="subscribed">Tilattu</string>
+  <string name="subscribe">Tilata</string>
 </resources>

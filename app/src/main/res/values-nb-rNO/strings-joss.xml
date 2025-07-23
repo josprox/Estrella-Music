@@ -66,4 +66,6 @@
   <string name="download_update">Last ned oppdatering</string>
   <string name="album_art_blur">Cover (savnet)</string>
   <string name="gradientBackground">Gradientbakgrunn</string>
+  <string name="subscribed">Abonnerer</string>
+  <string name="subscribe">Abonner</string>
 </resources>

@@ -66,4 +66,6 @@
   <string name="download_update">更新をダウンロードしてください</string>
   <string name="album_art_blur">カバー（逃した）</string>
   <string name="gradientBackground">勾配の背景</string>
+  <string name="subscribed">購読</string>
+  <string name="subscribe">購読する</string>
 </resources>

@@ -88,4 +88,6 @@
   <string name="download_update">আপডেট ডাউনলোড করুন</string>
   <string name="album_art_blur">কভার (মিস)</string>
   <string name="gradientBackground">গ্রেডিয়েন্ট ব্যাকগ্রাউন্ড</string>
+  <string name="subscribed">সাবস্ক্রাইব</string>
+  <string name="subscribe">সাবস্ক্রাইব করুন</string>
 </resources>

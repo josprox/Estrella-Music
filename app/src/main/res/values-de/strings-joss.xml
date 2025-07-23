@@ -66,4 +66,6 @@
   <string name="download_update">Update herunterladen</string>
   <string name="album_art_blur">Deckung (vermisst)</string>
   <string name="gradientBackground">Gradientenhintergrund</string>
+  <string name="subscribed">Gezeichnet</string>
+  <string name="subscribe">Abonnieren</string>
 </resources>

@@ -90,4 +90,6 @@
   <string name="download_update">Спампаваць абнаўленне</string>
   <string name="album_art_blur">Вокладка (прапушчана)</string>
   <string name="gradientBackground">Фон градыенту</string>
+  <string name="subscribed">Падпісаны</string>
+  <string name="subscribe">Падпісвацца</string>
 </resources>

@@ -66,4 +66,6 @@
   <string name="download_update">下載更新</string>
   <string name="album_art_blur">封面（錯過）</string>
   <string name="gradientBackground">梯度背景</string>
+  <string name="subscribed">訂閱</string>
+  <string name="subscribe">訂閱</string>
 </resources>

@@ -66,4 +66,6 @@
   <string name="download_update">Baixe atualização</string>
   <string name="album_art_blur">Capa (perdida)</string>
   <string name="gradientBackground">Antecedentes de gradiente</string>
+  <string name="subscribed">Inscrito</string>
+  <string name="subscribe">Inscreva -se</string>
 </resources>

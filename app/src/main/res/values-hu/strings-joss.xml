@@ -79,4 +79,6 @@
   <string name="download_update">Letöltés frissítés</string>
   <string name="album_art_blur">Borító (elmulasztott)</string>
   <string name="gradientBackground">Gradiens háttér</string>
+  <string name="subscribed">Feliratkozott</string>
+  <string name="subscribe">Feliratkozás</string>
 </resources>

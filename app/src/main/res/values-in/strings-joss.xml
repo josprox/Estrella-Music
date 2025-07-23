@@ -66,4 +66,6 @@
   <string name="download_update">Unduh Pembaruan</string>
   <string name="album_art_blur">Penutup (terlewatkan)</string>
   <string name="gradientBackground">Latar belakang gradien</string>
+  <string name="subscribed">Berlangganan</string>
+  <string name="subscribe">Berlangganan</string>
 </resources>

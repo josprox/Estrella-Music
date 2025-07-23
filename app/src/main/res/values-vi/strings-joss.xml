@@ -66,4 +66,6 @@
   <string name="download_update">Tải xuống cập nhật</string>
   <string name="album_art_blur">Bìa (bỏ lỡ)</string>
   <string name="gradientBackground">Bối cảnh gradient</string>
+  <string name="subscribed">Đăng ký</string>
+  <string name="subscribe">Đặt mua</string>
 </resources>

@@ -88,4 +88,6 @@
   <string name="download_update">ଅଦ୍ୟତନ ଡାଉନଲୋଡ୍ କରନ୍ତୁ |</string>
   <string name="album_art_blur">ଆଚ୍ଛାଦନ (ବଞ୍ଚିତ)</string>
   <string name="gradientBackground">ଗ୍ରେଡିଏଣ୍ଟ୍ ପୃଷ୍ଠଭୂମି</string>
+  <string name="subscribed">ସଦସ୍ୟତା |</string>
+  <string name="subscribe">ସବସ୍କ୍ରାଇବ କରନ୍ତୁ |</string>
 </resources>

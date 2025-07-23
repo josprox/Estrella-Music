@@ -66,4 +66,6 @@
   <string name="download_update">Descargar actualización</string>
   <string name="album_art_blur">Carátula (desenfocada)</string>
   <string name="gradientBackground">Fondo de gradiente</string>
+  <string name="subscribed">Suscrito</string>
+  <string name="subscribe">Suscribir</string>
 </resources>

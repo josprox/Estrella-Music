@@ -66,4 +66,6 @@
   <string name="download_update">Download update</string>
   <string name="album_art_blur">Cover (gemist)</string>
   <string name="gradientBackground">Gradiëntachtergrond</string>
+  <string name="subscribed">Geabonneerd</string>
+  <string name="subscribe">Abonneren</string>
 </resources>

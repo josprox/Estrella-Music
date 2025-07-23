@@ -32,4 +32,6 @@
   <string name="download_update">புதுப்பிப்பைப் பதிவிறக்கவும்</string>
   <string name="album_art_blur">கவர் (தவறவிட்ட)</string>
   <string name="gradientBackground">சாய்வு பின்னணி</string>
+  <string name="subscribed">சந்தா</string>
+  <string name="subscribe">குழுசேர்</string>
 </resources>

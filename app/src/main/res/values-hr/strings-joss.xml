@@ -32,4 +32,6 @@
   <string name="download_update">Preuzmite ažuriranje</string>
   <string name="album_art_blur">Poklopac (propušteno)</string>
   <string name="gradientBackground">Gradijentna pozadina</string>
+  <string name="subscribed">Pretplaćen</string>
+  <string name="subscribe">Pretplatiti se</string>
 </resources>

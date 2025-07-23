@@ -302,6 +302,10 @@ fun BottomSheetPlayer(
                 animationSpec = tween(durationMillis = 100, easing = LinearEasing),
                 label = "playPauseRoundness"
             )
+
+            // Estado para controlar la visibilidad del pop-up de artistas
+            var showArtistsPopup by remember { mutableStateOf(false) }
+
             Row(
                 horizontalArrangement = Arrangement.Start,
                 verticalAlignment = Alignment.CenterVertically,
@@ -325,20 +329,27 @@ fun BottomSheetPlayer(
                             }
                     )
                     Row {
-                        mediaMetadata.artists.fastForEachIndexed { index, artist ->
-                            Text(
-                                text = artist.name,
-                                style = MaterialTheme.typography.titleMedium,
-                                maxLines = 1,
-                                modifier = Modifier.clickable(enabled = artist.id != null) {
-                                    navController.navigate("artist/${artist.id}")
-                                    state.collapseSoft()
-                                }
-                            )
-                            if (index != mediaMetadata.artists.lastIndex) {
-                                Text(text = ", ", style = MaterialTheme.typography.titleMedium)
-                            }
+                        val artistString = remember(mediaMetadata.artists) {
+                            mediaMetadata.artists.joinToString(", ") { it.name }
                         }
+                        Text(
+                            text = artistString,
+                            style = MaterialTheme.typography.titleMedium,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis,
+                            modifier = Modifier
+                                .basicMarquee(iterations = Int.MAX_VALUE, initialDelayMillis = 3000, velocity = 30.dp)
+                                .clickable(enabled = mediaMetadata.artists.isNotEmpty()) {
+                                    if (mediaMetadata.artists.size == 1 && mediaMetadata.artists.first().id != null) {
+                                        // Si es un solo artista y tiene ID, navegar directamente a su página
+                                        navController.navigate("artist/${mediaMetadata.artists.first().id}")
+                                        state.collapseSoft()
+                                    } else if (mediaMetadata.artists.size > 1) {
+                                        // Si son varios artistas, mostrar el pop-up
+                                        showArtistsPopup = true
+                                    }
+                                }
+                        )
                     }
                 }
 
@@ -477,6 +488,46 @@ fun BottomSheetPlayer(
                         tint = contentColor
                     )
                 }
+            }
+
+            // Pop-up de Artistas
+            if (showArtistsPopup) {
+                AlertDialog(
+                    onDismissRequest = { showArtistsPopup = false },
+                    title = { Text("Artistas") },
+                    text = {
+                        Column {
+                            mediaMetadata.artists.forEach { artist ->
+                                if (artist.id != null) {
+                                    Text(
+                                        text = artist.name,
+                                        style = MaterialTheme.typography.bodyLarge,
+                                        fontWeight = FontWeight.Bold,
+                                        modifier = Modifier
+                                            .fillMaxWidth()
+                                            .clickable {
+                                                navController.navigate("artist/${artist.id}")
+                                                state.collapseSoft() // Colapsar el reproductor
+                                                showArtistsPopup = false // Cerrar el pop-up
+                                            }
+                                            .padding(vertical = 8.dp)
+                                    )
+                                } else {
+                                    Text(
+                                        text = artist.name,
+                                        style = MaterialTheme.typography.bodyLarge,
+                                        modifier = Modifier.padding(vertical = 8.dp)
+                                    )
+                                }
+                            }
+                        }
+                    },
+                    confirmButton = {
+                        TextButton(onClick = { showArtistsPopup = false }) {
+                            Text("Cerrar")
+                        }
+                    }
+                )
             }
         }
 

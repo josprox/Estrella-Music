@@ -66,4 +66,6 @@
   <string name="download_update">Güncellemeyi İndir</string>
   <string name="album_art_blur">Kapak (kaçırıldı)</string>
   <string name="gradientBackground">Gradyan arka plan</string>
+  <string name="subscribed">Abone olmuş</string>
+  <string name="subscribe">Abone</string>
 </resources>

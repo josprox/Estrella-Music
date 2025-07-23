@@ -32,4 +32,6 @@
   <string name="download_update">Laadige alla värskendus</string>
   <string name="album_art_blur">Kate (igatsenud)</string>
   <string name="gradientBackground">Gradiendi taust</string>
+  <string name="subscribed">Tellitud</string>
+  <string name="subscribe">Tellima</string>
 </resources>

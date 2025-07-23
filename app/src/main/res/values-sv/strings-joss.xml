@@ -32,4 +32,6 @@
   <string name="download_update">Nedladdningsuppdatering</string>
   <string name="album_art_blur">Omslag (missad)</string>
   <string name="gradientBackground">Gradientbakgrund</string>
+  <string name="subscribed">Prenumererad</string>
+  <string name="subscribe">Prenumerera</string>
 </resources>

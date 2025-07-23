@@ -66,4 +66,6 @@
   <string name="download_update">Pobierz aktualizację</string>
   <string name="album_art_blur">Okładka (brak)</string>
   <string name="gradientBackground">Tło gradientu</string>
+  <string name="subscribed">Subskrybowane</string>
+  <string name="subscribe">Subskrybować</string>
 </resources>

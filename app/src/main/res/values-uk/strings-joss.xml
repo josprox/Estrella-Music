@@ -66,4 +66,6 @@
   <string name="download_update">Завантажте оновлення</string>
   <string name="album_art_blur">Обкладинка (пропущена)</string>
   <string name="gradientBackground">Фон градієнта</string>
+  <string name="subscribed">Підписаний</string>
+  <string name="subscribe">Підписатися</string>
 </resources>

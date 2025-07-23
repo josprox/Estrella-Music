@@ -66,4 +66,6 @@
   <string name="download_update">Ενημέρωση λήψης</string>
   <string name="album_art_blur">Κάλυμμα (έχασε)</string>
   <string name="gradientBackground">Φόντο κλίσης</string>
+  <string name="subscribed">Καταγεγραμμένος</string>
+  <string name="subscribe">Συνεισφέρω</string>
 </resources>

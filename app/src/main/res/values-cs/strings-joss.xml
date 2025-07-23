@@ -66,4 +66,6 @@
   <string name="download_update">Stahování aktualizace</string>
   <string name="album_art_blur">Obal (zmeškaný)</string>
   <string name="gradientBackground">Gradientní pozadí</string>
+  <string name="subscribed">Předplatné</string>
+  <string name="subscribe">Upsat</string>
 </resources>

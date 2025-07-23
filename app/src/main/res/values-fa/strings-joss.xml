@@ -31,4 +31,6 @@
   <string name="download_update">به روزرسانی بارگیری</string>
   <string name="album_art_blur">پوشش (از دست رفته)</string>
   <string name="gradientBackground">پیش زمینه شیب</string>
+  <string name="subscribed">مشترک</string>
+  <string name="subscribe">مشترک شدن</string>
 </resources>

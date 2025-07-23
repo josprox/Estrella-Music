@@ -32,4 +32,6 @@
   <string name="download_update">अपडेट डाउनलोड गर्नुहोस्</string>
   <string name="album_art_blur">कभर (छुटेका)</string>
   <string name="gradientBackground">ग्रेडियन्ट पृष्ठभूमि</string>
+  <string name="subscribed">सदस्य हुनु</string>
+  <string name="subscribe">सदस्यता लिनुहोस्</string>
 </resources>

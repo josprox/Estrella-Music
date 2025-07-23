@@ -32,4 +32,6 @@
   <string name="download_update">Scarica l\'aggiornamento</string>
   <string name="album_art_blur">Copertura (mancato)</string>
   <string name="gradientBackground">Sfondo gradiente</string>
+  <string name="subscribed">Sottoscritto</string>
+  <string name="subscribe">Iscriviti</string>
 </resources>

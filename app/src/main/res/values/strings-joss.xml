@@ -65,4 +65,6 @@
   <string name="download_update">Download update</string>
   <string name="album_art_blur">Cover (missed)</string>
   <string name="gradientBackground">Gradient background</string>
+  <string name="subscribed">Subscribed</string>
+  <string name="subscribe">Subscribe</string>
 </resources>
