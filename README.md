@@ -3,18 +3,23 @@
   <h1>Joss Music</h1>
   <p><em>Una aplicación Android para transmitir música desde YouTube Music, basada en ViMusic e InnerTune</em></p>
 
-  <p>
-    <a href="https://github.com/josprox/Joss-Music/releases/latest">
-      <img alt="Download on GitHub" height="60" src="https://img.shields.io/badge/Download-GitHub_Releases-181717?style=for-the-badge&logo=github">
-    </a>
-    <a href="https://appgallery.huawei.com/app/C114184037">
-      <img alt="AppGallery" height="60" src="./assets/AppGallery Gadge JOSPROX MX.png">
-    </a>
-    <a href="https://play.google.com/store/apps/details?id=com.josprox.jossmusic">
-      <img alt="Get it on Google Play" height="80" src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg">
-    </a>
-  </p>
+  <!-- Contenedor del scroll -->
+  <div style="max-width: 700px; margin: auto; overflow-x: auto;">
+    <!-- Fila deslizable -->
+    <div style="display: flex; gap: 10px; padding: 10px;">
+      <a href="https://github.com/josprox/Joss-Music/releases/latest" style="flex: 0 0 auto;">
+        <img alt="Download on GitHub" src="https://img.shields.io/badge/Download-GitHub_Releases-181717?style=for-the-badge&logo=github" style="object-fit: cover; margin-top:60px;">
+      </a>
+      <a href="https://appgallery.huawei.com/app/C114184037" style="flex: 0 0 auto;">
+        <img alt="AppGallery" src="./assets/AppGallery Gadge JOSPROX MX.png" height="150" width="200" style="object-fit: cover;">
+      </a>
+      <a href="https://play.google.com/store/apps/details?id=com.josprox.jossmusic" style="flex: 0 0 auto;">
+        <img alt="Get it on Google Play" src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" style="object-fit: cover; margin-top:50px;">
+      </a>
+    </div>
+  </div>
 </div>
+
 
 ---
 
@@ -37,6 +42,26 @@
 - 📌 Cola persistente
 - 🔗 Apertura de enlaces de YouTube/YouTube Music (`watch`, `playlist`, `channel`)
 - Y mucho más...
+
+---
+
+## 📸 Capturas de pantalla
+
+<div align="center">
+  <p>Desliza las imágenes hacia los lados 👉</p>
+  <div style="display: flex; overflow-x: auto; gap: 0px; padding: 10px;">
+    <img src="./assets/1.png" height="400" alt="Captura 1"/>
+    <img src="./assets/2.png" height="400" alt="Captura 2"/>
+    <img src="./assets/3.png" height="400" alt="Captura 3"/>
+    <img src="./assets/4.png" height="400" alt="Captura 4"/>
+    <img src="./assets/5.png" height="400" alt="Captura 5"/>
+    <img src="./assets/6.png" height="400" alt="Captura 6"/>
+    <img src="./assets/7.png" height="400" alt="Captura 7"/>
+    <img src="./assets/8.png" height="400" alt="Captura 8"/>
+  </div>
+</div>
+
+
 
 ---
 
