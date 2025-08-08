@@ -1,64 +1,74 @@
 <div align="center">
-    <img src="./app/src/main/ic_launcher-playstore.png" width="128" height="128" style="display: block; margin: 0 auto"/>
-    <h1>Joss Music</h1>
-    <p>Una aplicación de Android de transmisión de música desde YouTube Music basado en ViMusic e innertune</p>
+  <img src="./app/src/main/ic_launcher-playstore.png" width="128" height="128" alt="App icon"/>
+  <h1>Joss Music</h1>
+  <p><em>Una aplicación Android para transmitir música desde YouTube Music, basada en ViMusic e InnerTune</em></p>
+
+  <p>
+    <a href="https://github.com/josprox/Joss-Music/releases/latest">
+      <img alt="Download on GitHub" height="60" src="https://img.shields.io/badge/Download-GitHub_Releases-181717?style=for-the-badge&logo=github">
+    </a>
+    <a href="https://appgallery.huawei.com/app/C114184037">
+      <img alt="AppGallery" height="60" src="./assets/AppGallery Gadge JOSPROX MX.png">
+    </a>
+    <a href="https://play.google.com/store/apps/details?id=com.josprox.jossmusic">
+      <img alt="Get it on Google Play" height="80" src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg">
+    </a>
+  </p>
 </div>
 
 ---
 
-## Características
-- Reproduce (casi) cualquier canción o video de YouTube Music
-- Reproducción en segundo plano
-- Almacena fragmentos de audio en caché para reproducción sin conexión
-- Busca canciones, álbumes, videos de artistas y listas de reproducción
-- Marca artistas y álbumes como favoritos
-- Importa listas de reproducción
-- Obtiene, muestra y edita letras de canciones o letras sincronizadas
-- Administración de listas de reproducción locales
-- Reordena canciones en listas de reproducción o colas
-- Tema claro/oscuro/dinámico
-- Omite silencios
-- Temporizador de apagado automático
-- Normalización de audio
-- Android Auto
-- Cola persistente
-- Abre enlaces de YouTube/YouTube Music (`watch`, `playlist`, `channel`)
-- ...
+## 🚀 Características
+
+- 🎵 Reproduce (casi) cualquier canción o video de YouTube Music
+- 🔊 Reproducción en segundo plano
+- 💾 Caché de fragmentos de audio para reproducción sin conexión
+- 🔎 Búsqueda de canciones, álbumes, artistas, videos y listas de reproducción
+- 🌟 Marca artistas y álbumes como favoritos
+- 📥 Importación de listas de reproducción
+- 📝 Letras de canciones (incluye sincronizadas y editables)
+- 🎼 Gestión y edición de listas de reproducción locales
+- 🔃 Reordenamiento de canciones en colas y listas
+- 🌗 Tema claro, oscuro o dinámico
+- 🔇 Omitir silencios
+- ⏲ Temporizador de apagado automático
+- 📐 Normalización de volumen
+- 🚗 Soporte para Android Auto
+- 📌 Cola persistente
+- 🔗 Apertura de enlaces de YouTube/YouTube Music (`watch`, `playlist`, `channel`)
+- Y mucho más...
 
 ---
 
-## Instalación
+## 📥 Instalación
 
-Descarga la última versión de Joss Music desde:
+Puedes instalar Joss Music desde cualquiera de las siguientes plataformas oficiales:
 
-* **GitHub Releases:** Encuentra el archivo APK más reciente directamente en las [releases de GitHub](https://github.com/josprox/Joss-Music/releases/latest).
-
-* **AppGallery:** Descarga la aplicación desde la tienda oficial de Huawei [AppGallery](https://appgallery.huawei.com/app/C114184037).
-
-[<img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-alt="Get it on Google Play"
-height="80">](https://play.google.com/store/apps/details?id=com.josprox.jossmusic)
+- **[GitHub Releases](https://github.com/josprox/Joss-Music/releases/latest)**
+- **[AppGallery - Huawei](https://appgallery.huawei.com/app/C114184037)**
+- **[Google Play Store](https://play.google.com/store/apps/details?id=com.josprox.jossmusic)**
 
 ---
 
-## Agradecimientos
-- [**Innertune**](https://github.com/z-huang/InnerTune): Gracias a su proyecto, pudimos modificar esta aplicación (fork).
+## 🙏 Agradecimientos
 
-- [**YouTube-Internal-Clients**](https://github.com/zerodytrash/YouTube-Internal-Clients): Un script de Python que descubre clientes API de YouTube ocultos. Solo un proyecto de investigación.
-- [**ionicons**](https://github.com/ionic-team/ionicons): Íconos premium hechos a mano y creados por Ionic, para aplicaciones Ionic y aplicaciones web en todas partes.
-
-<a href="https://www.flaticon.com/authors/ilham-fitrotul-hayat" title="íconos de música">Ícono de aplicación basado en el ícono creado por Ilham Fitrotul Hayat - Flaticon</a>
+- [**Innertune**](https://github.com/z-huang/InnerTune): Base principal sobre la cual se desarrolló esta app.
+- [**YouTube-Internal-Clients**](https://github.com/zerodytrash/YouTube-Internal-Clients): Script que permitió el acceso a clientes internos de la API de YouTube.
+- [**ionicons**](https://github.com/ionic-team/ionicons): Íconos modernos usados en la interfaz.
 
 ---
 
-## Traducciones
-Si deseas ayudar a traducir la aplicación, puedes mandar un pull request y nosotros aceptaremos la traducción, también usamos las traducciones de innertune.
+## 🌍 Traducciones
+
+¿Quieres ayudar a traducir Joss Music a tu idioma?  
+Puedes contribuir mediante Pull Requests o ayudando directamente en la plataforma de traducción:
 
 [![Translation status](https://hosted.weblate.org/widget/innertune/multi-auto.svg)](https://hosted.weblate.org/engage/innertune/)
 
 ---
 
-## Aviso legal
-Este proyecto y sus contenidos no están afiliados, financiados, autorizados, respaldados ni asociados de ninguna manera con YouTube, Google LLC o cualquiera de sus filiales y subsidiarias.
+## ⚠️ Aviso Legal
 
-Todas las marcas comerciales, marcas de servicio, nombres comerciales u otros derechos de propiedad intelectual utilizados en este proyecto son propiedad de sus respectivos propietarios.
+Este proyecto **no está afiliado, patrocinado, respaldado ni aprobado** por YouTube, Google LLC, ni ninguna de sus filiales.
+
+Todas las marcas y logos usados son propiedad de sus respectivos dueños.
