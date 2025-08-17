@@ -152,4 +152,10 @@
   <string name="update_now">Оновлення зараз</string>
   <string name="backup_cloud_empty">Резервного копіювання немає</string>
   <string name="btn_edit_profile">Редагувати профіль</string>
+  <string name="backup_restore_found_title">Знайдено резервне копіювання</string>
+  <string name="backup_restore_found_msg">Є хмарне резервне копіювання від</string>
+  <string name="restore_now">Відновити зараз</string>
+  <string name="maybeLater">Можливо пізніше</string>
+  <string name="backup_restore_checking">Перевірка хмарних резервних копій ...</string>
+  <string name="backup_restore_restoring">Відновлення ...</string>
 </resources>

@@ -118,4 +118,10 @@
   <string name="update_now">Aggiorna ora</string>
   <string name="backup_cloud_empty">Non c\'è backup</string>
   <string name="btn_edit_profile">Modifica profilo</string>
+  <string name="backup_restore_found_title">Backup trovato</string>
+  <string name="backup_restore_found_msg">C\'è un backup di cloud da</string>
+  <string name="restore_now">Ripristina ora</string>
+  <string name="maybeLater">Forse più tardi</string>
+  <string name="backup_restore_checking">Controllando i backup del cloud…</string>
+  <string name="backup_restore_restoring">Ripristino…</string>
 </resources>

@@ -118,4 +118,10 @@
   <string name="update_now">Uuendage kohe</string>
   <string name="backup_cloud_empty">Varundamist pole</string>
   <string name="btn_edit_profile">Redigeerimisprofiili</string>
+  <string name="backup_restore_found_title">Varundamine leiti</string>
+  <string name="backup_restore_found_msg">Seal on pilve varukoopia</string>
+  <string name="restore_now">Taasta kohe</string>
+  <string name="maybeLater">Võib -olla hiljem</string>
+  <string name="backup_restore_checking">Pilve varukoopiate kontrollimine ...</string>
+  <string name="backup_restore_restoring">Taastamine ...</string>
 </resources>

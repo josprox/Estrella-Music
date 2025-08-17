@@ -151,4 +151,10 @@
   <string name="update_now">تحديث الآن</string>
   <string name="backup_cloud_empty">لا يوجد نسخة احتياطية</string>
   <string name="btn_edit_profile">تحرير الملف الشخصي</string>
+  <string name="backup_restore_found_title">وجدت النسخ الاحتياطي</string>
+  <string name="backup_restore_found_msg">هناك نسخة احتياطية من السحابة من</string>
+  <string name="restore_now">استعادة الآن</string>
+  <string name="maybeLater">ربما في وقت لاحق</string>
+  <string name="backup_restore_checking">فحص النسخ الاحتياطية السحابية ...</string>
+  <string name="backup_restore_restoring">استعادة ...</string>
 </resources>

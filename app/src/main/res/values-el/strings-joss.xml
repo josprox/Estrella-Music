@@ -152,4 +152,10 @@
   <string name="update_now">Ενημέρωση τώρα</string>
   <string name="backup_cloud_empty">Δεν υπάρχει αντίγραφο ασφαλείας</string>
   <string name="btn_edit_profile">Επεξεργασία προφίλ</string>
+  <string name="backup_restore_found_title">Βρέθηκε αντίγραφο ασφαλείας</string>
+  <string name="backup_restore_found_msg">Υπάρχει ένα αντίγραφο ασφαλείας σύννεφων από</string>
+  <string name="restore_now">Επαναφορά τώρα</string>
+  <string name="maybeLater">Ίσως αργότερα</string>
+  <string name="backup_restore_checking">Έλεγχος αντιγράφων ασφαλείας σύννεφων…</string>
+  <string name="backup_restore_restoring">Επαναφορά…</string>
 </resources>

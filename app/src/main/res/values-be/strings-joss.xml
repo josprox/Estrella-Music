@@ -174,4 +174,10 @@
   <string name="update_now">Абнавіце зараз</string>
   <string name="backup_cloud_empty">Рэзервовага капіявання няма</string>
   <string name="btn_edit_profile">Рэдагаваць профіль</string>
+  <string name="backup_restore_found_title">Рэзервовая копія знойдзена</string>
+  <string name="backup_restore_found_msg">Ёсць рэзервовая копія воблака ад</string>
+  <string name="restore_now">Аднавіць зараз зараз</string>
+  <string name="maybeLater">Магчыма, пазней</string>
+  <string name="backup_restore_checking">Праверка рэзервовых копій хмар ...</string>
+  <string name="backup_restore_restoring">Аднаўленне ...</string>
 </resources>

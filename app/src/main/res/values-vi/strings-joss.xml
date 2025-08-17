@@ -152,4 +152,10 @@
   <string name="update_now">Cập nhật ngay bây giờ</string>
   <string name="backup_cloud_empty">Không có bản sao lưu</string>
   <string name="btn_edit_profile">Chỉnh sửa hồ sơ</string>
+  <string name="backup_restore_found_title">Sao lưu tìm thấy</string>
+  <string name="backup_restore_found_msg">Có một bản sao lưu đám mây từ</string>
+  <string name="restore_now">Khôi phục ngay bây giờ</string>
+  <string name="maybeLater">Có lẽ sau này</string>
+  <string name="backup_restore_checking">Kiểm tra bản sao lưu đám mây…</string>
+  <string name="backup_restore_restoring">Khôi phục</string>
 </resources>

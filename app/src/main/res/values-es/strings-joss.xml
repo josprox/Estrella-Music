@@ -152,4 +152,10 @@
   <string name="update_now">Actualizar ahora</string>
   <string name="backup_cloud_empty">No existe ninguna copia de seguridad</string>
   <string name="btn_edit_profile">Editar perfil</string>
+  <string name="backup_restore_found_title">Copia de seguridad encontrada</string>
+  <string name="backup_restore_found_msg">Hay una copia de seguridad de la nube de</string>
+  <string name="restore_now">Restaurar ahora</string>
+  <string name="maybeLater">Tal vez más tarde</string>
+  <string name="backup_restore_checking">Verificar copias de seguridad de la nube ...</string>
+  <string name="backup_restore_restoring">Restaurando ...</string>
 </resources>

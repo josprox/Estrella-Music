@@ -152,4 +152,10 @@
   <string name="update_now">Aktualizacja teraz</string>
   <string name="backup_cloud_empty">Nie ma kopii zapasowej</string>
   <string name="btn_edit_profile">Edytuj profil</string>
+  <string name="backup_restore_found_title">Znaleziono kopię zapasową</string>
+  <string name="backup_restore_found_msg">Jest kopia zapasowa w chmurze</string>
+  <string name="restore_now">Przywróć teraz</string>
+  <string name="maybeLater">Może później</string>
+  <string name="backup_restore_checking">Sprawdzanie kopii zapasowych w chmurze…</string>
+  <string name="backup_restore_restoring">Przywracanie…</string>
 </resources>

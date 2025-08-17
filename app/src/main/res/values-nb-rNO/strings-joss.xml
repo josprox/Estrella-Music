@@ -152,4 +152,10 @@
   <string name="update_now">Oppdatering nå</string>
   <string name="backup_cloud_empty">Det er ingen sikkerhetskopi</string>
   <string name="btn_edit_profile">Rediger profil</string>
+  <string name="backup_restore_found_title">Sikkerhetskopiering funnet</string>
+  <string name="backup_restore_found_msg">Det er en skybackup fra</string>
+  <string name="restore_now">Gjenopprett nå</string>
+  <string name="maybeLater">Kanskje senere</string>
+  <string name="backup_restore_checking">Kontrollere sikkerhetskopier av skyen ...</string>
+  <string name="backup_restore_restoring">Gjenopprette ...</string>
 </resources>

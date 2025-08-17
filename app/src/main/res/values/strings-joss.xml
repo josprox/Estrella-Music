@@ -151,4 +151,10 @@
   <string name="update_now">Update now</string>
   <string name="backup_cloud_empty">There is no backup</string>
   <string name="btn_edit_profile">Edit profile</string>
+  <string name="backup_restore_found_title">Backup found</string>
+  <string name="backup_restore_found_msg">There is a cloud backup from</string>
+  <string name="restore_now">Restore now</string>
+  <string name="maybeLater">Maybe later</string>
+  <string name="backup_restore_checking">Checking cloud backups…</string>
+  <string name="backup_restore_restoring">Restoring…</string>
 </resources>

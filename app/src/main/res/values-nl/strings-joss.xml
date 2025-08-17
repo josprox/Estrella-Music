@@ -152,4 +152,10 @@
   <string name="update_now">Update nu</string>
   <string name="backup_cloud_empty">Er is geen back -up</string>
   <string name="btn_edit_profile">Bewerk profiel</string>
+  <string name="backup_restore_found_title">Back -up gevonden</string>
+  <string name="backup_restore_found_msg">Er is een cloud -back -up van</string>
+  <string name="restore_now">Herstel nu</string>
+  <string name="maybeLater">Misschien later</string>
+  <string name="backup_restore_checking">Cloud -back -ups controleren ...</string>
+  <string name="backup_restore_restoring">Herstellen ...</string>
 </resources>

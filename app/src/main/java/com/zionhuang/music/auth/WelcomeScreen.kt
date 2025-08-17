@@ -7,42 +7,14 @@ import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.ColumnScope
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Checkbox
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.SnackbarHost
-import androidx.compose.material3.SnackbarHostState
-import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
-import androidx.compose.material3.TextFieldColors
-import androidx.compose.material3.TextFieldDefaults
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.runtime.setValue
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -63,6 +35,12 @@ import com.zionhuang.music.auth.AuthViewModel
 import com.zionhuang.music.ui.onboarding.AnimatedBlobsBackground
 import kotlinx.coroutines.launch
 
+// === NUEVO: para backups en login ===
+import com.josprox.jossredconnect.services.BackupService
+import com.zionhuang.music.viewmodels.BackupRestoreViewModel
+import org.dotenv.vault.dotenvVault
+import com.zionhuang.music.BuildConfig
+
 @Composable
 fun WelcomeRoute(
     onAuthSuccess: () -> Unit,
@@ -74,16 +52,80 @@ fun WelcomeRoute(
     val scope = rememberCoroutineScope()
     val context = LocalContext.current
 
+    // ViewModel de backup
+    val backupVm: BackupRestoreViewModel = hiltViewModel()
+
+    // === Cargar credenciales desde env.vault (igual que en Settings) ===
+    val (baseUrl, apiToken) = remember {
+        var url = ""
+        var token = ""
+        try {
+            val (dirPath, fileName) = ensureVaultOnDisk(context, "env.vault")
+            val dv = dotenvVault(BuildConfig.DOTENV_KEY) {
+                directory = dirPath
+                filename = fileName
+            }
+            url = dv.get("JOSSRED").orEmpty()       // debe incluir /api/
+            token = dv.get("JOSSRED_API").orEmpty() // header X-JossRed-Auth
+        } catch (_: Exception) { }
+        url to token
+    }
+
+    val backupService = remember(baseUrl, apiToken) {
+        BackupService(
+            context = context,
+            baseUrl = baseUrl,
+            apiToken = apiToken
+        )
+    }
+
+    // Estado del diálogo de restauración
+    var showRestoreDialog by rememberSaveable { mutableStateOf(false) }
+    var latestBackupName by rememberSaveable { mutableStateOf<String?>(null) }
+    var latestBackupDate by rememberSaveable { mutableStateOf<String?>(null) }
+    var dialogChecking by rememberSaveable { mutableStateOf(false) }
+    var dialogRestoring by rememberSaveable { mutableStateOf(false) }
+    var dialogError by rememberSaveable { mutableStateOf<String?>(null) }
+
+    // Manejo de eventos de auth
     LaunchedEffect(Unit) {
         viewModel.events.collect { ev ->
             when (ev) {
                 is AuthEvent.ShowMessageText -> scope.launch { snackbarHost.showSnackbar(ev.text) }
                 is AuthEvent.ShowMessageRes -> scope.launch { snackbarHost.showSnackbar(context.getString(ev.resId)) }
-                AuthEvent.Success -> onAuthSuccess()
+                AuthEvent.Success -> {
+                    // 1) Al autenticar, intentar ver si hay backup
+                    dialogChecking = true
+                    dialogError = null
+                    latestBackupName = null
+                    latestBackupDate = null
+
+                    val result = backupService.listBackups()
+                    result.fold(onSuccess = { list ->
+                        val candidates = list.files
+                            .filter { it.app_name == "jossmusic_backup" }
+                            .sortedByDescending { it.updated_at ?: it.created_at ?: "" }
+                        val first = candidates.firstOrNull()
+                        if (first != null) {
+                            latestBackupName = first.name
+                            latestBackupDate = first.updated_at ?: first.created_at
+                            showRestoreDialog = true  // 2) Mostrar diálogo
+                        } else {
+                            // No hay backup -> entrar directo
+                            onAuthSuccess()
+                        }
+                        dialogChecking = false
+                    }, onFailure = {
+                        // En caso de error al listar, seguimos sin bloquear el login
+                        dialogChecking = false
+                        onAuthSuccess()
+                    })
+                }
             }
         }
     }
 
+    // UI principal
     Scaffold(
         snackbarHost = { SnackbarHost(snackbarHost) },
         containerColor = Color.Transparent
@@ -128,6 +170,75 @@ fun WelcomeRoute(
                         )
                     }
                 }
+            }
+
+            // === Diálogo de restauración (solo si hay backup) ===
+            if (showRestoreDialog) {
+                AlertDialog(
+                    onDismissRequest = { /* Obliga a elegir, pero podrías permitir dismiss */ },
+                    title = { Text(stringResource(R.string.backup_restore)) },
+                    text = {
+                        Column {
+                            if (dialogChecking) {
+                                Text(stringResource(R.string.backup_restore_checking))
+                                LinearProgressIndicator(Modifier.fillMaxWidth().padding(top = 8.dp))
+                            } else if (dialogRestoring) {
+                                Text(stringResource(R.string.backup_restore_restoring))
+                                LinearProgressIndicator(Modifier.fillMaxWidth().padding(top = 8.dp))
+                            } else if (dialogError != null) {
+                                Text(dialogError!!, color = MaterialTheme.colorScheme.error)
+                            } else {
+                                val msg = buildString {
+                                    append(stringResource(R.string.backup_restore_found_msg)) // “There is a cloud backup from”
+                                    if (!latestBackupDate.isNullOrBlank()) append(" ${latestBackupDate}")
+                                }
+                                Text(msg)
+                            }
+                        }
+                    },
+                    confirmButton = {
+                        TextButton(
+                            enabled = !dialogChecking && !dialogRestoring && latestBackupName != null,
+                            onClick = {
+                                // Restaurar ahora
+                                val name = latestBackupName ?: return@TextButton
+                                dialogRestoring = true
+                                dialogError = null
+                                // Llamar restoreOnline
+                                val job = scope.launch {
+                                    val res = runCatching {
+                                        backupVm.restoreOnline(
+                                            context = context,
+                                            backupService = backupService,
+                                            remoteFileName = name
+                                        )
+                                    }
+                                    dialogRestoring = false
+                                    // Pase lo que pase, entrar a la app
+                                    showRestoreDialog = false
+                                    onAuthSuccess()
+                                    if (res.isFailure) {
+                                        // Si quieres, también puedes mostrar un snackbar aquí
+                                    }
+                                }
+                            }
+                        ) {
+                            Text(stringResource(R.string.restore_now))
+                        }
+                    },
+                    dismissButton = {
+                        TextButton(
+                            enabled = !dialogChecking && !dialogRestoring,
+                            onClick = {
+                                // Entrar sin restaurar
+                                showRestoreDialog = false
+                                onAuthSuccess()
+                            }
+                        ) {
+                            Text(stringResource(R.string.maybeLater))
+                        }
+                    }
+                )
             }
         }
     }
@@ -498,7 +609,6 @@ private fun AuthCard(content: @Composable ColumnScope.() -> Unit) {
     ) { content() }
 }
 
-/** Colores de TextField para inputs blancos sobre fondo oscuro */
 @Composable
 private fun authTextFieldColors(): TextFieldColors =
     TextFieldDefaults.colors(
@@ -532,21 +642,18 @@ private fun authTextFieldColors(): TextFieldColors =
         errorSupportingTextColor = MaterialTheme.colorScheme.error,
     )
 
-/* Indicador simple de fuerza de contraseña */
 @Composable
 fun PasswordStrengthIndicator(
     password: String,
     validColor: Color = MaterialTheme.colorScheme.primary,
     invalidColor: Color = Color.Gray
 ) {
-    // 1) Lee strings EN contexto composable
     val reqLen    = stringResource(R.string.password_req_length)
     val reqUpper  = stringResource(R.string.password_req_upper)
     val reqLower  = stringResource(R.string.password_req_lower)
     val reqDigit  = stringResource(R.string.password_req_digit)
     val reqSpec   = stringResource(R.string.password_req_special)
 
-    // 2) Memoriza solo los cálculos (no composables) si quieres
     val checks = remember(password) {
         listOf(
             reqLen   to (password.length >= 8),
@@ -573,3 +680,16 @@ fun PasswordStrengthIndicator(
     }
 }
 
+/* === Util para leer env.vault desde assets al cache y que dotenvVault lo lea vía ruta absoluta === */
+private fun ensureVaultOnDisk(context: android.content.Context, assetFileName: String): Pair<String, String> {
+    val cacheDir = context.cacheDir
+    val outFile = java.io.File(cacheDir, assetFileName)
+    if (!outFile.exists()) {
+        context.assets.open(assetFileName).use { input ->
+            java.io.FileOutputStream(outFile).use { output ->
+                input.copyTo(output)
+            }
+        }
+    }
+    return cacheDir.absolutePath to assetFileName
+}

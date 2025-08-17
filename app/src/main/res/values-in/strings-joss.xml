@@ -152,4 +152,10 @@
   <string name="update_now">Perbarui sekarang</string>
   <string name="backup_cloud_empty">Tidak ada cadangan</string>
   <string name="btn_edit_profile">Edit profil</string>
+  <string name="backup_restore_found_title">Cadangan ditemukan</string>
+  <string name="backup_restore_found_msg">Ada cadangan cloud dari</string>
+  <string name="restore_now">Kembalikan sekarang</string>
+  <string name="maybeLater">mungkin nanti</string>
+  <string name="backup_restore_checking">Memeriksa cadangan cloud…</string>
+  <string name="backup_restore_restoring">Memulihkan ...</string>
 </resources>

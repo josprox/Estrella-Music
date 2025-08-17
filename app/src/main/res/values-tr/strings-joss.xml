@@ -152,4 +152,10 @@
   <string name="update_now">Şimdi Güncelle</string>
   <string name="backup_cloud_empty">Yedekleme yok</string>
   <string name="btn_edit_profile">Profili Düzenle</string>
+  <string name="backup_restore_found_title">Yedek bulundu</string>
+  <string name="backup_restore_found_msg">Bir bulut yedekleme var</string>
+  <string name="restore_now">Şimdi geri yükleyin</string>
+  <string name="maybeLater">Belki sonra</string>
+  <string name="backup_restore_checking">Bulut yedeklerini kontrol etmek…</string>
+  <string name="backup_restore_restoring">Geri yükleme…</string>
 </resources>

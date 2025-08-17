@@ -118,4 +118,10 @@
   <string name="update_now">Ažurirajte sada</string>
   <string name="backup_cloud_empty">Nema sigurnosne kopije</string>
   <string name="btn_edit_profile">Uredi profil</string>
+  <string name="backup_restore_found_title">Rezervna kopija pronađeno</string>
+  <string name="backup_restore_found_msg">Postoji sigurnosna kopija u oblaku</string>
+  <string name="restore_now">Vrati sada</string>
+  <string name="maybeLater">Možda kasnije</string>
+  <string name="backup_restore_checking">Provjera rezervnih kopija oblaka ...</string>
+  <string name="backup_restore_restoring">Vraćanje ...</string>
 </resources>

@@ -149,4 +149,10 @@
   <string name="update_now">Mettre à jour maintenant</string>
   <string name="backup_cloud_empty">Il n\'y a pas de sauvegarde</string>
   <string name="btn_edit_profile">Modifier le profil</string>
+  <string name="backup_restore_found_title">Sauvegarde trouvée</string>
+  <string name="backup_restore_found_msg">Il y a une sauvegarde de cloud de</string>
+  <string name="restore_now">Restaurer maintenant</string>
+  <string name="maybeLater">Peut-être plus tard</string>
+  <string name="backup_restore_checking">Vérification des sauvegardes cloud…</string>
+  <string name="backup_restore_restoring">Restaurer…</string>
 </resources>

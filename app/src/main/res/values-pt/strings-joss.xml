@@ -118,4 +118,10 @@
   <string name="update_now">Atualizar agora</string>
   <string name="backup_cloud_empty">Não há backup</string>
   <string name="btn_edit_profile">Editar perfil</string>
+  <string name="backup_restore_found_title">Backup encontrado</string>
+  <string name="backup_restore_found_msg">Há um backup de nuvem de</string>
+  <string name="restore_now">Restaurar agora</string>
+  <string name="maybeLater">Talvez mais tarde</string>
+  <string name="backup_restore_checking">Verificando os backups da nuvem…</string>
+  <string name="backup_restore_restoring">Restaurando ...</string>
 </resources>

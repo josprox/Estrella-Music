@@ -118,4 +118,10 @@
   <string name="update_now">இப்போது புதுப்பிக்கவும்</string>
   <string name="backup_cloud_empty">காப்புப்பிரதி இல்லை</string>
   <string name="btn_edit_profile">சுயவிவரத்தைத் திருத்து</string>
+  <string name="backup_restore_found_title">காப்புப்பிரதி காணப்பட்டது</string>
+  <string name="backup_restore_found_msg">ஒரு மேகக்கணி காப்புப்பிரதி உள்ளது</string>
+  <string name="restore_now">இப்போது மீட்டமைக்கவும்</string>
+  <string name="maybeLater">ஒருவேளை பின்னர்</string>
+  <string name="backup_restore_checking">கிளவுட் காப்புப்பிரதிகளை சரிபார்க்கிறது…</string>
+  <string name="backup_restore_restoring">மீட்டமைத்தல்…</string>
 </resources>

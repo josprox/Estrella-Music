@@ -172,4 +172,10 @@
   <string name="update_now">এখনই আপডেট করুন</string>
   <string name="backup_cloud_empty">কোনও ব্যাকআপ নেই</string>
   <string name="btn_edit_profile">প্রোফাইল সম্পাদনা করুন</string>
+  <string name="backup_restore_found_title">ব্যাকআপ পাওয়া গেছে</string>
+  <string name="backup_restore_found_msg">একটি মেঘ ব্যাকআপ আছে</string>
+  <string name="restore_now">এখন পুনরুদ্ধার</string>
+  <string name="maybeLater">হতে পারে পরে</string>
+  <string name="backup_restore_checking">ক্লাউড ব্যাকআপগুলি পরীক্ষা করা…</string>
+  <string name="backup_restore_restoring">পুনরুদ্ধার…</string>
 </resources>

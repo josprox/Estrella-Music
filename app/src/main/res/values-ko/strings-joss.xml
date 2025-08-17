@@ -152,4 +152,10 @@
   <string name="update_now">지금 업데이트하십시오</string>
   <string name="backup_cloud_empty">백업이 없습니다</string>
   <string name="btn_edit_profile">프로필 편집</string>
+  <string name="backup_restore_found_title">백업이 발견되었습니다</string>
+  <string name="backup_restore_found_msg">클라우드 백업이 있습니다</string>
+  <string name="restore_now">지금 복원하십시오</string>
+  <string name="maybeLater">아마도 나중에</string>
+  <string name="backup_restore_checking">클라우드 백업 확인…</string>
+  <string name="backup_restore_restoring">복원…</string>
 </resources>

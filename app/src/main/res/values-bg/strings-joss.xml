@@ -152,4 +152,10 @@
   <string name="update_now">Актуализирайте сега</string>
   <string name="backup_cloud_empty">Няма резервно копие</string>
   <string name="btn_edit_profile">Редактиране на профил</string>
+  <string name="backup_restore_found_title">Намерено резервно копие</string>
+  <string name="backup_restore_found_msg">Има облачно резервно копие от</string>
+  <string name="restore_now">Възстановете сега</string>
+  <string name="maybeLater">Може би по -късно</string>
+  <string name="backup_restore_checking">Проверка на облачните резервни копия ...</string>
+  <string name="backup_restore_restoring">Възстановяване ...</string>
 </resources>

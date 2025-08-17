@@ -151,4 +151,10 @@
   <string name="update_now">ഇപ്പോൾ അപ്ഡേറ്റ് ചെയ്യുക</string>
   <string name="backup_cloud_empty">ബാക്കപ്പ് ഇല്ല</string>
   <string name="btn_edit_profile">പ്രൊഫൈൽ എഡിറ്റുചെയ്യുക</string>
+  <string name="backup_restore_found_title">ബാക്കപ്പ് കണ്ടെത്തി</string>
+  <string name="backup_restore_found_msg">ഒരു ക്ലൗഡ് ബാക്കപ്പ് ഉണ്ട്</string>
+  <string name="restore_now">ഇപ്പോൾ പുന restore സ്ഥാപിക്കുക</string>
+  <string name="maybeLater">ഒരുപക്ഷേ പിന്നീട്</string>
+  <string name="backup_restore_checking">ക്ലൗഡ് ബാക്കപ്പുകൾ പരിശോധിക്കുന്നു ...</string>
+  <string name="backup_restore_restoring">പുന oring സ്ഥാപിക്കുന്നു ...</string>
 </resources>

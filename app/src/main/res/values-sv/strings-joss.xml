@@ -118,4 +118,10 @@
   <string name="update_now">Uppdatera nu</string>
   <string name="backup_cloud_empty">Det finns ingen säkerhetskopia</string>
   <string name="btn_edit_profile">Redigera profil</string>
+  <string name="backup_restore_found_title">Säkerhetskopiering hittades</string>
+  <string name="backup_restore_found_msg">Det finns en molnbackup från</string>
+  <string name="restore_now">Återställ nu</string>
+  <string name="maybeLater">Kanske senare</string>
+  <string name="backup_restore_checking">Kontrollera molnens säkerhetskopior ...</string>
+  <string name="backup_restore_restoring">Återställ ...</string>
 </resources>

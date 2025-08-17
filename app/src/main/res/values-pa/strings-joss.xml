@@ -172,4 +172,10 @@
   <string name="update_now">ਹੁਣ ਅਪਡੇਟ ਕਰੋ</string>
   <string name="backup_cloud_empty">ਕੋਈ ਬੈਕਅਪ ਨਹੀਂ ਹੈ</string>
   <string name="btn_edit_profile">ਪ੍ਰੋਫਾਈਲ ਸੋਧੋ</string>
+  <string name="backup_restore_found_title">ਬੈਕਅਪ ਮਿਲਿਆ</string>
+  <string name="backup_restore_found_msg">ਤੋਂ ਇੱਕ ਬੱਦਲ ਦਾ ਬੈਕਅਪ ਹੈ</string>
+  <string name="restore_now">ਹੁਣ ਰੀਸਟੋਰ ਕਰੋ</string>
+  <string name="maybeLater">ਸ਼ਾਇਦ ਬਾਅਦ ਵਿਚ</string>
+  <string name="backup_restore_checking">ਬੱਦਲ ਦੇ ਬੈਕਅਪਾਂ ਦੀ ਜਾਂਚ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ ...</string>
+  <string name="backup_restore_restoring">ਰੀਸਟੋਰ ਕਰ ਰਿਹਾ ਹੈ ...</string>
 </resources>

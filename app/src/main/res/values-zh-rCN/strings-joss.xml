@@ -152,4 +152,10 @@
   <string name="update_now">立即更新</string>
   <string name="backup_cloud_empty">没有备份</string>
   <string name="btn_edit_profile">编辑个人资料</string>
+  <string name="backup_restore_found_title">找到了备份</string>
+  <string name="backup_restore_found_msg">有一个云</string>
+  <string name="restore_now">现在还原</string>
+  <string name="maybeLater">也许以后</string>
+  <string name="backup_restore_checking">检查云备份…</string>
+  <string name="backup_restore_restoring">恢复…</string>
 </resources>

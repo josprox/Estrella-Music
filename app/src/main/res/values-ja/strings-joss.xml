@@ -152,4 +152,10 @@
   <string name="update_now">今すぐ更新してください</string>
   <string name="backup_cloud_empty">バックアップはありません</string>
   <string name="btn_edit_profile">プロファイルを編集します</string>
+  <string name="backup_restore_found_title">バックアップが見つかりました</string>
+  <string name="backup_restore_found_msg">からクラウドバックアップがあります</string>
+  <string name="restore_now">今すぐ復元してください</string>
+  <string name="maybeLater">多分後で</string>
+  <string name="backup_restore_checking">クラウドバックアップのチェック…</string>
+  <string name="backup_restore_restoring">復元…</string>
 </resources>

@@ -152,4 +152,10 @@
   <string name="update_now">Aktualisieren Sie jetzt</string>
   <string name="backup_cloud_empty">Es gibt keine Sicherung</string>
   <string name="btn_edit_profile">Profil bearbeiten</string>
+  <string name="backup_restore_found_title">Backup gefunden</string>
+  <string name="backup_restore_found_msg">Es gibt eine Wolkensicherung von</string>
+  <string name="restore_now">Jetzt wiederherstellen</string>
+  <string name="maybeLater">Vielleicht später</string>
+  <string name="backup_restore_checking">Überprüfen Sie Cloud -Backups…</string>
+  <string name="backup_restore_restoring">Wiederherstellung…</string>
 </resources>

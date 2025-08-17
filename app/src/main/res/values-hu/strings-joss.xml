@@ -163,4 +163,10 @@
   <string name="update_now">Frissítse most</string>
   <string name="backup_cloud_empty">Nincs biztonsági másolat</string>
   <string name="btn_edit_profile">Profil szerkesztése</string>
+  <string name="backup_restore_found_title">Biztonsági mentés található</string>
+  <string name="backup_restore_found_msg">Van egy felhő biztonsági mentése</string>
+  <string name="restore_now">Vissza kell állítani most</string>
+  <string name="maybeLater">Talán később</string>
+  <string name="backup_restore_checking">A felhő biztonsági mentések ellenőrzése…</string>
+  <string name="backup_restore_restoring">Helyreállítás…</string>
 </resources>

@@ -152,4 +152,10 @@
   <string name="update_now">Aktualizace nyní</string>
   <string name="backup_cloud_empty">Neexistuje žádná záloha</string>
   <string name="btn_edit_profile">Upravit profil</string>
+  <string name="backup_restore_found_title">Nalezena záloha</string>
+  <string name="backup_restore_found_msg">Existuje cloudová záloha z</string>
+  <string name="restore_now">Obnovit hned</string>
+  <string name="maybeLater">Možná později</string>
+  <string name="backup_restore_checking">Kontrola záloh cloudu ...</string>
+  <string name="backup_restore_restoring">Obnovení ...</string>
 </resources>

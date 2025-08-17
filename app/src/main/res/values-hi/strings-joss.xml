@@ -118,4 +118,10 @@
   <string name="update_now">अभी अद्यतन करें</string>
   <string name="backup_cloud_empty">कोई बैकअप नहीं है</string>
   <string name="btn_edit_profile">प्रोफ़ाइल संपादित करें</string>
+  <string name="backup_restore_found_title">बैकअप मिला</string>
+  <string name="backup_restore_found_msg">से क्लाउड बैकअप है</string>
+  <string name="restore_now">अब पुनर्स्थापित करें</string>
+  <string name="maybeLater">शायद बाद में</string>
+  <string name="backup_restore_checking">क्लाउड बैकअप की जाँच…</string>
+  <string name="backup_restore_restoring">बहाल…</string>
 </resources>

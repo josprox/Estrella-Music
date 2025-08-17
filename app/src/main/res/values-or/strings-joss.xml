@@ -173,4 +173,10 @@
   <string name="update_now">ବର୍ତ୍ତମାନ ଅଦ୍ୟତନ କରନ୍ତୁ |</string>
   <string name="backup_cloud_empty">କ no ଣସି ବ୍ୟାକଅପ୍ ନାହିଁ |</string>
   <string name="btn_edit_profile">ପ୍ରୋଫାଇଲ୍ ସଂପାଦନ କରନ୍ତୁ |</string>
+  <string name="backup_restore_found_title">ବ୍ୟାକଅପ୍ ମିଳିଲା |</string>
+  <string name="backup_restore_found_msg">ଏଥିରୁ ଏକ କ୍ଲାଉଡ୍ ବ୍ୟାକଅପ୍ ଅଛି |</string>
+  <string name="restore_now">ବର୍ତ୍ତମାନ ପୁନ restore ସ୍ଥାପନ କରନ୍ତୁ |</string>
+  <string name="maybeLater">ବୋଧହୁଏ ପରେ</string>
+  <string name="backup_restore_checking">କ୍ଲାଉଡ୍ ବ୍ୟାକଅପ୍ ଯାଞ୍ଚ କରୁଛି ...</string>
+  <string name="backup_restore_restoring">ପୁନରୁଦ୍ଧାର ...</string>
 </resources>

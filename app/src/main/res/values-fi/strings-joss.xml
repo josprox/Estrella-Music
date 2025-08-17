@@ -152,4 +152,10 @@
   <string name="update_now">Päivitys nyt</string>
   <string name="backup_cloud_empty">Varmuuskopiota ei ole</string>
   <string name="btn_edit_profile">Muokkausprofiili</string>
+  <string name="backup_restore_found_title">Varmuuskopio löytyi</string>
+  <string name="backup_restore_found_msg">Siellä on pilvivarmuuskopio</string>
+  <string name="restore_now">Palauta nyt</string>
+  <string name="maybeLater">Ehkä myöhemmin</string>
+  <string name="backup_restore_checking">Pilvivarmuuskopioiden tarkistaminen…</string>
+  <string name="backup_restore_restoring">Palauttaminen…</string>
 </resources>
