@@ -97,4 +97,8 @@
   <string name="error_connection">இணைப்பு பிழை</string>
   <string name="error_no_session">நீங்கள் உள்நுழையவில்லை.</string>
   <string name="btn_edit_profile">சுயவிவரத்தைத் திருத்து</string>
+  <string name="hello">வணக்கம்</string>
+  <string name="onboarding_brand_subtitle">உங்கள் இசை, உங்கள் விதிகள்.</string>
+  <string name="next">அடுத்து</string>
+  <string name="getStarted">தொடங்கவும்</string>
 </resources>

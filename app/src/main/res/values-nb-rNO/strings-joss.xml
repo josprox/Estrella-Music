@@ -131,4 +131,8 @@
   <string name="error_connection">Tilkoblingsfeil</string>
   <string name="error_no_session">Du er ikke logget inn.</string>
   <string name="btn_edit_profile">Rediger profil</string>
+  <string name="hello">Hallo</string>
+  <string name="onboarding_brand_subtitle">Musikken din, dine regler.</string>
+  <string name="next">NESTE</string>
+  <string name="getStarted">Kom i gang</string>
 </resources>

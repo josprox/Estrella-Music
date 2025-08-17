@@ -131,4 +131,8 @@
   <string name="error_connection">Ошибка соединения</string>
   <string name="error_no_session">Вы не вошли в систему.</string>
   <string name="btn_edit_profile">Редактировать профиль</string>
+  <string name="hello">Привет</string>
+  <string name="onboarding_brand_subtitle">Ваша музыка, ваши правила.</string>
+  <string name="next">Следующий</string>
+  <string name="getStarted">Начните</string>
 </resources>

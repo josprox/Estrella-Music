@@ -25,6 +25,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import androidx.compose.ui.res.stringResource
+import com.zionhuang.music.R
 
 private enum class Step { Initial, Hola, Blank, Bienvenido, Carousel }
 
@@ -72,7 +74,7 @@ fun OnboardingScreen(
 @Composable
 private fun Hola() {
     Text(
-        text = "Hola",
+        text = stringResource(R.string.hello),
         style = MaterialTheme.typography.displayLarge.copy(fontWeight = FontWeight.SemiBold),
         color = Color.White
     )
@@ -88,7 +90,7 @@ private fun Bienvenido() {
         )
         Spacer(Modifier.height(12.dp))
         Text(
-            text = "Tu música, tus reglas.",
+            text = stringResource(R.string.onboarding_brand_subtitle),
             textAlign = TextAlign.Center,
             style = MaterialTheme.typography.bodyLarge,
             color = Color.White.copy(alpha = 0.75f)
@@ -128,14 +130,14 @@ private fun Carousel(
                 )
                 Spacer(Modifier.height(32.dp))
                 Text(
-                    text = item.title,
+                    text = item.title,            // <- ya te llega de strings
                     textAlign = TextAlign.Center,
                     style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Bold),
                     color = Color.White
                 )
                 Spacer(Modifier.height(12.dp))
                 Text(
-                    text = item.description,
+                    text = item.description,      // <- ya te llega de strings
                     textAlign = TextAlign.Center,
                     style = MaterialTheme.typography.bodyMedium,
                     color = Color.White.copy(alpha = 0.75f)
@@ -170,9 +172,7 @@ private fun Carousel(
                 if (pagerState.currentPage == items.lastIndex) {
                     onFinish()
                 } else {
-                    scope.launch {
-                        pagerState.animateScrollToPage(pagerState.currentPage + 1)
-                    }
+                    scope.launch { pagerState.animateScrollToPage(pagerState.currentPage + 1) }
                 }
             },
             colors = ButtonDefaults.buttonColors(
@@ -183,7 +183,10 @@ private fun Carousel(
                 .padding(horizontal = 8.dp)
         ) {
             Text(
-                text = if (pagerState.currentPage == items.lastIndex) "Comenzar" else "Siguiente"
+                text = if (pagerState.currentPage == items.lastIndex)
+                    stringResource(R.string.getStarted)     // "Comenzar"
+                else
+                    stringResource(R.string.next)      // "Siguiente"
             )
         }
         Spacer(Modifier.height(24.dp))

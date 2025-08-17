@@ -128,4 +128,8 @@
   <string name="error_connection">Erreur de connexion</string>
   <string name="error_no_session">Vous n\'êtes pas connecté.</string>
   <string name="btn_edit_profile">Modifier le profil</string>
+  <string name="hello">Bonjour</string>
+  <string name="onboarding_brand_subtitle">Votre musique, vos règles.</string>
+  <string name="next">Suivant</string>
+  <string name="getStarted">Commencer</string>
 </resources>

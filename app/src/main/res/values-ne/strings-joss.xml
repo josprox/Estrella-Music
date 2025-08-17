@@ -97,4 +97,8 @@
   <string name="error_connection">सम्पर्क त्रुटि</string>
   <string name="error_no_session">तपाईं लग इन हुनुहुन्न।</string>
   <string name="btn_edit_profile">प्रोफाइल सम्पादन गर</string>
+  <string name="hello">अभिवादन</string>
+  <string name="onboarding_brand_subtitle">तपाईंको संगीत, तपाईंको नियमहरू।</string>
+  <string name="next">अर्को</string>
+  <string name="getStarted">सुरु गर</string>
 </resources>

@@ -131,4 +131,8 @@
   <string name="error_connection">Kesalahan koneksi</string>
   <string name="error_no_session">Anda tidak masuk.</string>
   <string name="btn_edit_profile">Edit profil</string>
+  <string name="hello">Halo</string>
+  <string name="onboarding_brand_subtitle">Musik Anda, aturan Anda.</string>
+  <string name="next">Berikutnya</string>
+  <string name="getStarted">Mulai</string>
 </resources>

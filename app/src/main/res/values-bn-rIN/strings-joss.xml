@@ -151,4 +151,8 @@
   <string name="error_connection">সংযোগ ত্রুটি</string>
   <string name="error_no_session">আপনি লগ ইন করবেন না।</string>
   <string name="btn_edit_profile">প্রোফাইল সম্পাদনা করুন</string>
+  <string name="hello">হ্যালো</string>
+  <string name="onboarding_brand_subtitle">আপনার সংগীত, আপনার নিয়ম।</string>
+  <string name="next">পরবর্তী</string>
+  <string name="getStarted">শুরু করুন</string>
 </resources>

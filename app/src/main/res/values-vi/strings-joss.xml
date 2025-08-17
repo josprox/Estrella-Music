@@ -131,4 +131,8 @@
   <string name="error_connection">Lỗi kết nối</string>
   <string name="error_no_session">Bạn không đăng nhập.</string>
   <string name="btn_edit_profile">Chỉnh sửa hồ sơ</string>
+  <string name="hello">Xin chào</string>
+  <string name="onboarding_brand_subtitle">Âm nhạc của bạn, quy tắc của bạn.</string>
+  <string name="next">Kế tiếp</string>
+  <string name="getStarted">Bắt đầu</string>
 </resources>

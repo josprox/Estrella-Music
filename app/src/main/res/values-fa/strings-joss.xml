@@ -96,4 +96,8 @@
   <string name="error_connection">خطای اتصال</string>
   <string name="error_no_session">شما وارد سیستم نشده اید.</string>
   <string name="btn_edit_profile">نمایه ویرایش</string>
+  <string name="hello">سلام</string>
+  <string name="onboarding_brand_subtitle">موسیقی شما ، قوانین شما.</string>
+  <string name="next">طرف دیگر</string>
+  <string name="getStarted">شروع کردن</string>
 </resources>

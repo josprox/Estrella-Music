@@ -131,4 +131,8 @@
   <string name="error_connection">Verbindingsfout</string>
   <string name="error_no_session">U bent niet ingelogd.</string>
   <string name="btn_edit_profile">Bewerk profiel</string>
+  <string name="hello">Hallo</string>
+  <string name="onboarding_brand_subtitle">Uw muziek, uw regels.</string>
+  <string name="next">Volgende</string>
+  <string name="getStarted">Aan de slag gaan</string>
 </resources>

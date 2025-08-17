@@ -130,4 +130,8 @@
   <string name="error_connection">കണക്ഷൻ പിശക്</string>
   <string name="error_no_session">നിങ്ങൾ ലോഗിൻ ചെയ്തിട്ടില്ല.</string>
   <string name="btn_edit_profile">പ്രൊഫൈൽ എഡിറ്റുചെയ്യുക</string>
+  <string name="hello">ഹലോ</string>
+  <string name="onboarding_brand_subtitle">നിങ്ങളുടെ സംഗീതം, നിങ്ങളുടെ നിയമങ്ങൾ.</string>
+  <string name="next">അടുത്തത്</string>
+  <string name="getStarted">ആരംഭിക്കുക</string>
 </resources>

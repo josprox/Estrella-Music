@@ -131,4 +131,8 @@
   <string name="error_connection">连接错误</string>
   <string name="error_no_session">您没有登录。</string>
   <string name="btn_edit_profile">编辑个人资料</string>
+  <string name="hello">你好</string>
+  <string name="onboarding_brand_subtitle">您的音乐，规则。</string>
+  <string name="next">下一个</string>
+  <string name="getStarted">开始</string>
 </resources>

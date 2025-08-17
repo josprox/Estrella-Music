@@ -97,4 +97,8 @@
   <string name="error_connection">Errore di connessione</string>
   <string name="error_no_session">Non hai effettuato l\'accesso.</string>
   <string name="btn_edit_profile">Modifica profilo</string>
+  <string name="hello">Ciao</string>
+  <string name="onboarding_brand_subtitle">La tua musica, le tue regole.</string>
+  <string name="next">Prossimo</string>
+  <string name="getStarted">Inizia</string>
 </resources>

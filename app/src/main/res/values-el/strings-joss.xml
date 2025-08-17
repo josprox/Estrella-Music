@@ -131,4 +131,8 @@
   <string name="error_connection">Σφάλμα σύνδεσης</string>
   <string name="error_no_session">Δεν είστε συνδεδεμένοι.</string>
   <string name="btn_edit_profile">Επεξεργασία προφίλ</string>
+  <string name="hello">Γειά σου</string>
+  <string name="onboarding_brand_subtitle">Η μουσική σας, οι κανόνες σας.</string>
+  <string name="next">Επόμενος</string>
+  <string name="getStarted">Ξεκίνημα</string>
 </resources>

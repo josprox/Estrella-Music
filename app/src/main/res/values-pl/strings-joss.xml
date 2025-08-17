@@ -131,4 +131,8 @@
   <string name="error_connection">Błąd połączenia</string>
   <string name="error_no_session">Nie jesteś zalogowany.</string>
   <string name="btn_edit_profile">Edytuj profil</string>
+  <string name="hello">Cześć</string>
+  <string name="onboarding_brand_subtitle">Twoja muzyka, twoje zasady.</string>
+  <string name="next">Następny</string>
+  <string name="getStarted">Zacznij</string>
 </resources>

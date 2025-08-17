@@ -131,4 +131,8 @@
   <string name="error_connection">Грешка в връзката</string>
   <string name="error_no_session">Не сте влезли.</string>
   <string name="btn_edit_profile">Редактиране на профил</string>
+  <string name="hello">Здравейте</string>
+  <string name="onboarding_brand_subtitle">Вашата музика, вашите правила.</string>
+  <string name="next">След това</string>
+  <string name="getStarted">Започнете</string>
 </resources>

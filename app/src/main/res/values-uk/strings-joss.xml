@@ -131,4 +131,8 @@
   <string name="error_connection">Помилка з\'єднання</string>
   <string name="error_no_session">Ви не ввійшли в систему.</string>
   <string name="btn_edit_profile">Редагувати профіль</string>
+  <string name="hello">Привіт</string>
+  <string name="onboarding_brand_subtitle">Ваша музика, ваші правила.</string>
+  <string name="next">Наступний</string>
+  <string name="getStarted">Розпочати</string>
 </resources>

@@ -97,4 +97,8 @@
   <string name="error_connection">Anslutningsfel</string>
   <string name="error_no_session">Du är inte inloggad.</string>
   <string name="btn_edit_profile">Redigera profil</string>
+  <string name="hello">Hej</string>
+  <string name="onboarding_brand_subtitle">Din musik, dina regler.</string>
+  <string name="next">Nästa</string>
+  <string name="getStarted">Komma igång</string>
 </resources>

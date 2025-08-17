@@ -131,4 +131,8 @@
   <string name="error_connection">Chyba připojení</string>
   <string name="error_no_session">Nejste přihlášeni.</string>
   <string name="btn_edit_profile">Upravit profil</string>
+  <string name="hello">Ahoj</string>
+  <string name="onboarding_brand_subtitle">Vaše hudba, vaše pravidla.</string>
+  <string name="next">Další</string>
+  <string name="getStarted">Začněte</string>
 </resources>

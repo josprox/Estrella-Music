@@ -130,4 +130,8 @@
   <string name="error_connection">خطأ في الاتصال</string>
   <string name="error_no_session">أنت لم تسجل الدخول.</string>
   <string name="btn_edit_profile">تحرير الملف الشخصي</string>
+  <string name="hello">مرحبًا</string>
+  <string name="onboarding_brand_subtitle">موسيقاك ، قواعدك.</string>
+  <string name="next">التالي</string>
+  <string name="getStarted">ابدأ</string>
 </resources>

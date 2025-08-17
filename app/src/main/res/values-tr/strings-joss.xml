@@ -131,4 +131,8 @@
   <string name="error_connection">Bağlantı hatası</string>
   <string name="error_no_session">Giriş yapmadın.</string>
   <string name="btn_edit_profile">Profili Düzenle</string>
+  <string name="hello">Merhaba</string>
+  <string name="onboarding_brand_subtitle">Müziğiniz, kurallarınız.</string>
+  <string name="next">Sonraki</string>
+  <string name="getStarted">Başlamak</string>
 </resources>

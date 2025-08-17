@@ -151,4 +151,8 @@
   <string name="error_connection">ਕੁਨੈਕਸ਼ਨ ਗਲਤੀ</string>
   <string name="error_no_session">ਤੁਸੀਂ ਲੌਗਇਨ ਨਹੀਂ ਹੋ.</string>
   <string name="btn_edit_profile">ਪ੍ਰੋਫਾਈਲ ਸੋਧੋ</string>
+  <string name="hello">ਸਤ ਸ੍ਰੀ ਅਕਾਲ</string>
+  <string name="onboarding_brand_subtitle">ਤੁਹਾਡਾ ਸੰਗੀਤ, ਤੁਹਾਡੇ ਨਿਯਮ.</string>
+  <string name="next">ਅਗਲਾ</string>
+  <string name="getStarted">ਸ਼ੁਰੂ ਕਰੋ</string>
 </resources>

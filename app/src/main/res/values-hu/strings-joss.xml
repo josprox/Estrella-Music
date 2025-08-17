@@ -142,4 +142,8 @@
   <string name="error_connection">Csatlakozási hiba</string>
   <string name="error_no_session">Nincs bejelentkezve.</string>
   <string name="btn_edit_profile">Profil szerkesztése</string>
+  <string name="hello">Helló</string>
+  <string name="onboarding_brand_subtitle">A zenéd, a szabályaid.</string>
+  <string name="next">Következő</string>
+  <string name="getStarted">Elindul</string>
 </resources>

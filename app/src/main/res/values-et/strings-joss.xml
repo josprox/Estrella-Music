@@ -97,4 +97,8 @@
   <string name="error_connection">Ühendusviga</string>
   <string name="error_no_session">Te ei ole sisse logitud.</string>
   <string name="btn_edit_profile">Redigeerimisprofiili</string>
+  <string name="hello">Tere</string>
+  <string name="onboarding_brand_subtitle">Teie muusika, reeglid.</string>
+  <string name="next">Järgmine</string>
+  <string name="getStarted">Alustama</string>
 </resources>

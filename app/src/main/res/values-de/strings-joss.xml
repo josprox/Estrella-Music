@@ -131,4 +131,8 @@
   <string name="error_connection">Verbindungsfehler</string>
   <string name="error_no_session">Sie sind nicht angemeldet.</string>
   <string name="btn_edit_profile">Profil bearbeiten</string>
+  <string name="hello">Hallo</string>
+  <string name="onboarding_brand_subtitle">Deine Musik, deine Regeln.</string>
+  <string name="next">Nächste</string>
+  <string name="getStarted">Fangen an</string>
 </resources>

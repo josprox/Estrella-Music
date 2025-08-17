@@ -131,4 +131,8 @@
   <string name="error_connection">연결 오류</string>
   <string name="error_no_session">로그인하지 않습니다.</string>
   <string name="btn_edit_profile">프로필 편집</string>
+  <string name="hello">안녕하세요</string>
+  <string name="onboarding_brand_subtitle">당신의 음악, 당신의 규칙.</string>
+  <string name="next">다음</string>
+  <string name="getStarted">시작하세요</string>
 </resources>

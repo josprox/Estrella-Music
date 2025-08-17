@@ -131,4 +131,8 @@
   <string name="error_connection">接続エラー</string>
   <string name="error_no_session">ログインしていません。</string>
   <string name="btn_edit_profile">プロファイルを編集します</string>
+  <string name="hello">こんにちは</string>
+  <string name="onboarding_brand_subtitle">あなたの音楽、あなたのルール。</string>
+  <string name="next">次</string>
+  <string name="getStarted">始めましょう</string>
 </resources>

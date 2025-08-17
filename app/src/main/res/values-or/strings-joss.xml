@@ -152,4 +152,8 @@
   <string name="error_connection">ସଂଯୋଗ ତ୍ରୁଟି |</string>
   <string name="error_no_session">ଆପଣ ଲଗ୍ ଇନ୍ ନୁହଁନ୍ତି |</string>
   <string name="btn_edit_profile">ପ୍ରୋଫାଇଲ୍ ସଂପାଦନ କରନ୍ତୁ |</string>
+  <string name="hello">ନମସ୍କାର</string>
+  <string name="onboarding_brand_subtitle">ତୁମର ସଂଗୀତ, ତୁମର ନିୟମ |</string>
+  <string name="next">ପରବର୍ତ୍ତୀ</string>
+  <string name="getStarted">ଆରମ୍ଭ କର</string>
 </resources>

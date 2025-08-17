@@ -97,4 +97,8 @@
   <string name="error_connection">Erro de conexão</string>
   <string name="error_no_session">Você não está conectado.</string>
   <string name="btn_edit_profile">Editar perfil</string>
+  <string name="hello">Olá</string>
+  <string name="onboarding_brand_subtitle">Sua música, suas regras.</string>
+  <string name="next">Próximo</string>
+  <string name="getStarted">Comece</string>
 </resources>
