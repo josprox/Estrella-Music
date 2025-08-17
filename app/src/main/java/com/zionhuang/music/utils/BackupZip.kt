@@ -14,7 +14,7 @@ import java.util.zip.ZipOutputStream
 object BackupZip {
     const val SETTINGS_FILENAME = "settings.preferences_pb"
 
-    /** Genera el ZIP (mismo contenido que tu backup local) y lo devuelve como ByteArray */
+    /** Genera el ZIP (mismo contenido que el backup local) y lo devuelve como ByteArray */
     suspend fun buildZipBytes(context: Context, database: MusicDatabase): ByteArray =
         withContext(Dispatchers.IO) {
             val baos = ByteArrayOutputStream()

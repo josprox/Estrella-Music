@@ -7,7 +7,6 @@ import com.josprox.jossredconnect.models.UploadBackupResponse
 import com.josprox.jossredconnect.net.ProgressRequestBody
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import okhttp3.*
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
@@ -22,6 +21,7 @@ class BackupService(
     /**
      * Debe incluir /api/ (y puede o no venir con slash final). Ej:
      *   https://tu-dominio.com/api/
+     *   Joss Red lo hace de manera sencilla y cifrada
      */
     baseUrl: String,
     private val apiToken: String,    // X-JossRed-Auth (igual que AuthService)
@@ -55,7 +55,7 @@ class BackupService(
 
     /**
      * SUBIR backup
-     * - appName permitido por tu backend: "jossmusic_backup" (extensión .backup) o "otp_backup" (.dat)
+     * - appName permitido por backend
      * - fileNameWithAllowedExtension debe respetar la extensión validada por ALLOWED_BACKUPS.
      *
      * Endpoint real (POST):  {baseUrlNormalized}backup/{appName}
@@ -63,7 +63,7 @@ class BackupService(
      */
     suspend fun uploadBackup(
         appName: String,
-        fileNameWithAllowedExtension: String, // ej: jossmusic_20250817_1410.backup
+        fileNameWithAllowedExtension: String,
         bytes: ByteArray,
         onProgress: ((Long, Long) -> Unit)? = null
     ): Result<UploadBackupResponse> = withContext(Dispatchers.IO) {
@@ -83,7 +83,6 @@ class BackupService(
                 .build()
 
             val req = Request.Builder()
-                // ✅ Ruta correcta (sin "storage" ni invertir segmentos)
                 .url("${baseUrlNormalized}backup/$appName")
                 .post(multipart)
                 .also { baseHeaders(it) }
