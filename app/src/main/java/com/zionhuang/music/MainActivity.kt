@@ -18,17 +18,22 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.core.content.ContextCompat
 import androidx.core.view.WindowCompat
+import androidx.datastore.preferences.core.edit
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.ProcessLifecycleOwner
 import androidx.lifecycle.lifecycleScope
 import com.onesignal.OneSignal
 import com.zionhuang.music.constants.DisableScreenshotKey
+import com.zionhuang.music.constants.OnboardingShownKey
 import com.zionhuang.music.constants.StopMusicOnTaskClearKey
 import com.zionhuang.music.db.MusicDatabase
 import com.zionhuang.music.playback.DownloadUtil
 import com.zionhuang.music.playback.MusicService
 import com.zionhuang.music.playback.MusicService.MusicBinder
 import com.zionhuang.music.playback.PlayerConnection
+import com.zionhuang.music.ui.onboarding.CarouselItem
+import com.zionhuang.music.ui.onboarding.OnboardingActivity
+import com.zionhuang.music.ui.onboarding.OnboardingScreen
 import com.zionhuang.music.ui.screens.NotificationPermissionScreen
 import com.zionhuang.music.utils.UpdateChecker
 import com.zionhuang.music.utils.UpdateMainViewModel
@@ -57,6 +62,7 @@ class MainActivity : ComponentActivity() {
 
     private var isServiceBound = false
     private var playerConnection by mutableStateOf<PlayerConnection?>(null)
+
     private val serviceConnection = object : ServiceConnection {
         override fun onServiceConnected(name: ComponentName?, service: IBinder?) {
             if (service is MusicBinder) {
@@ -71,9 +77,9 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    // Deep links
+    // Deep link que arrancó la Activity (lo consume la UI principal)
     private var initialIntent: Intent? = null
-    // Updates VM
+
     private val updateViewModel: UpdateMainViewModel by viewModels {
         UpdateMainViewModelFactory(application)
     }
@@ -108,10 +114,10 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         WindowCompat.setDecorFitsSystemWindows(window, false)
 
-        // Guarda el intent de arranque
+        // Guarda el intent inicial (deep link)
         initialIntent = intent
 
-        // OneSignal + actualizaciones
+        // OneSignal + checker de updates
         OneSignal.initWithContext(this, ONESIGNAL_APP_ID)
         UpdateChecker(this).checkForUpdates()
 
@@ -122,17 +128,21 @@ class MainActivity : ComponentActivity() {
                 .distinctUntilChanged()
                 .collectLatest { secure ->
                     if (secure) {
-                        window.setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE)
+                        window.setFlags(
+                            WindowManager.LayoutParams.FLAG_SECURE,
+                            WindowManager.LayoutParams.FLAG_SECURE
+                        )
                     } else {
                         window.clearFlags(WindowManager.LayoutParams.FLAG_SECURE)
                     }
                 }
         }
 
-        // Pide permiso; si lo tiene, lanza la app
+        // 1) Primero: permiso de notificaciones
         requestNotificationPermission()
     }
 
+    // --------------------- Servicio de música ---------------------
     private fun bindMusicService() {
         val serviceIntent = Intent(this, MusicService::class.java)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
@@ -147,7 +157,7 @@ class MainActivity : ComponentActivity() {
         bindService(serviceIntent, serviceConnection, BIND_AUTO_CREATE)
     }
 
-    // ---------- separada: aquí SOLO se monta el composable del diseño ----------
+    // --------------------- Monta UI principal ---------------------
     private fun initializeApp() {
         setContent {
             InnerTuneMainScreen(
@@ -164,38 +174,115 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    // Pantalla de permiso
+    // --------------------- Si hay permiso, decidir Onboarding o App ---------------------
+    private fun maybeStartOnboardingOrApp() {
+        lifecycleScope.launch {
+            val hasDeepLink = intent?.data != null
+            val alreadyShown = applicationContext.dataStore[OnboardingShownKey] == true
+
+            if (alreadyShown) {
+                // Ya lo vio → directo a la app
+                initializeApp()
+            } else {
+                if (hasDeepLink) {
+                    // 1) Maneja el deep link ya mismo
+                    initializeApp()
+                    // 2) Luego muestra el onboarding ENCIMA como actividad aparte
+                    window.decorView.post {
+                        startActivity(Intent(this@MainActivity, OnboardingActivity::class.java))
+                    }
+                } else {
+                    // Sin deep link → muestra onboarding primero
+                    setContent {
+                        val items = jossOnboardingItems()
+                        OnboardingScreen(
+                            items = items,
+                            onFinish = {
+                                lifecycleScope.launch {
+                                    applicationContext.dataStore.edit { it[OnboardingShownKey] = true }
+                                }
+                                initializeApp()
+                            }
+                        )
+                    }
+                }
+            }
+        }
+    }
+
+    // --------------------- Pantalla para guiar al permiso ---------------------
     private fun showNotificationPermissionScreen() {
         setContent {
             NotificationPermissionScreen(
                 context = this,
-                onPermissionGranted = { initializeApp() },
+                onPermissionGranted = { maybeStartOnboardingOrApp() },
                 onBackPressed = { finish() }
             )
         }
     }
 
+    // --------------------- Pedir permiso de notificaciones ---------------------
     @SuppressLint("ObsoleteSdkInt")
     private fun requestNotificationPermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            registerForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
+            registerForActivityResult(
+                ActivityResultContracts.RequestPermission()
+            ) { granted ->
                 if (granted) {
-                    initializeApp()
+                    // Concedido → ahora sí, Onboarding (si aplica) o App
+                    maybeStartOnboardingOrApp()
                 } else {
+                    // No concedido → pantalla que guía a habilitar
                     showNotificationPermissionScreen()
                 }
             }.launch(Manifest.permission.POST_NOTIFICATIONS)
         } else {
-            initializeApp()
+            // En Android < 13 no hace falta pedir permiso
+            maybeStartOnboardingOrApp()
         }
     }
 
+    // --------------------- Apariencia de barras del sistema ---------------------
     private fun setSystemBarAppearance(isDark: Boolean) {
         WindowCompat.getInsetsController(window, window.decorView.rootView).apply {
             isAppearanceLightStatusBars = !isDark
             isAppearanceLightNavigationBars = !isDark
         }
     }
+
+    // --------------------- Items de Onboarding (Joss Music) ---------------------
+    private fun jossOnboardingItems(): List<CarouselItem> = listOf(
+        CarouselItem(
+            R.drawable.joss_music_logo,
+            "Bienvenido a Joss Music",
+            "Tu música en un solo lugar: rápido, limpio y pensado para ti."
+        ),
+        CarouselItem(
+            R.drawable.download,
+            "Descargas inteligentes",
+            "Guarda canciones, álbumes y playlists para escucharlos sin conexión. Elige calidad y controla el espacio."
+        ),
+        CarouselItem(
+            R.drawable.media3_icon_feed,
+            "Enlaces internos seguros",
+            "Abrimos jossmusic.com directamente en la app con App Links verificados y deep links confiables."
+        ),
+        CarouselItem(
+            R.drawable.offline,
+            "Modo sin conexión",
+            "Tu música suena aun sin internet: sin cortes, sin preocupaciones."
+        ),
+        CarouselItem(
+            R.drawable.search,
+            "Búsqueda y descubrimiento",
+            "Encuentra rápido en YouTube Music y en tu biblioteca local, todo en un mismo sitio."
+        ),
+        CarouselItem(
+            R.drawable.library_add,
+            "Listas y biblioteca",
+            "Crea, organiza y comparte playlists; gestiona tu colección como quieras."
+        )
+    )
 
     companion object {
         const val ACTION_SEARCH = "com.zionhuang.music.action.SEARCH"
