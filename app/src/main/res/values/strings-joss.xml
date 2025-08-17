@@ -129,9 +129,26 @@
   <string name="error_profile">Error retrieving profile</string>
   <string name="error_connection">Connection error</string>
   <string name="error_no_session">You are not logged in.</string>
-  <string name="btn_edit_profile">Edit profile</string>
   <string name="hello">Hello</string>
   <string name="onboarding_brand_subtitle">Your music, your rules.</string>
   <string name="next">Next</string>
   <string name="getStarted">Get started</string>
+  <string name="restore_success">Restoration of the database completed</string>
+  <string name="backup_cloud_title">Cloud</string>
+  <string name="backup_cloud_desc">Create an encrypted/zip support and open it to your account.</string>
+  <string name="backup_cloud_login_hint">Locate session to activate cloud support.</string>
+  <string name="action_backup_now">Back now</string>
+  <string name="backup_cloud_error">Error listing backups</string>
+  <string name="backup_cloud_card_title">Cloud Backup</string>
+  <string name="backup_cloud_login_required">Sign in to activate cloud backups.</string>
+  <string name="backup_cloud_loading">Searching your latest backup…</string>
+  <string name="backup_cloud_none">You don’t have any backups in the cloud yet.</string>
+  <string name="backup_cloud_restoring">Restoring…</string>
+  <string name="backup_cloud_restore_now">Restore backup</string>
+  <string name="backup_cloud_latest">Latest backup:</string>
+  <string name="updated">Updated:</string>
+  <string name="backup_cloud_uploading">Uploading…</string>
+  <string name="update_now">Update now</string>
+  <string name="backup_cloud_empty">There is no backup</string>
+  <string name="btn_edit_profile">Edit profile</string>
 </resources>

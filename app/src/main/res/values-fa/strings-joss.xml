@@ -95,9 +95,26 @@
   <string name="error_profile">پروفایل بازیابی خطا</string>
   <string name="error_connection">خطای اتصال</string>
   <string name="error_no_session">شما وارد سیستم نشده اید.</string>
-  <string name="btn_edit_profile">نمایه ویرایش</string>
   <string name="hello">سلام</string>
   <string name="onboarding_brand_subtitle">موسیقی شما ، قوانین شما.</string>
   <string name="next">طرف دیگر</string>
   <string name="getStarted">شروع کردن</string>
+  <string name="restore_success">ترمیم بانک اطلاعاتی تکمیل شد</string>
+  <string name="backup_cloud_title">ابری</string>
+  <string name="backup_cloud_desc">یک پشتیبانی رمزگذاری شده/زیپ ایجاد کرده و آن را به حساب خود باز کنید.</string>
+  <string name="backup_cloud_login_hint">برای فعال کردن پشتیبانی ابر ، جلسه را پیدا کنید.</string>
+  <string name="action_backup_now">اکنون</string>
+  <string name="backup_cloud_error">لیست خطای پشتیبان گیری</string>
+  <string name="backup_cloud_card_title">پشتیبان ابری</string>
+  <string name="backup_cloud_login_required">برای فعال کردن نسخه پشتیبان از ابر وارد سیستم شوید.</string>
+  <string name="backup_cloud_loading">جستجوی آخرین نسخه پشتیبان شما</string>
+  <string name="backup_cloud_none">شما هنوز هیچ نسخه پشتیبان در ابر ندارید.</string>
+  <string name="backup_cloud_restoring">بازگرداندن ...</string>
+  <string name="backup_cloud_restore_now">بازیابی پشتیبان گیری</string>
+  <string name="backup_cloud_latest">آخرین نسخه پشتیبان:</string>
+  <string name="updated">به روز شده:</string>
+  <string name="backup_cloud_uploading">بارگذاری ...</string>
+  <string name="update_now">اکنون به روز کنید</string>
+  <string name="backup_cloud_empty">پشتیبان گیری وجود ندارد</string>
+  <string name="btn_edit_profile">نمایه ویرایش</string>
 </resources>

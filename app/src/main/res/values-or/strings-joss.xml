@@ -151,9 +151,26 @@
   <string name="error_profile">ପ୍ରୋଫାଇଲ୍ ପୁନରୁଦ୍ଧାର ପାଇଁ ତ୍ରୁଟି |</string>
   <string name="error_connection">ସଂଯୋଗ ତ୍ରୁଟି |</string>
   <string name="error_no_session">ଆପଣ ଲଗ୍ ଇନ୍ ନୁହଁନ୍ତି |</string>
-  <string name="btn_edit_profile">ପ୍ରୋଫାଇଲ୍ ସଂପାଦନ କରନ୍ତୁ |</string>
   <string name="hello">ନମସ୍କାର</string>
   <string name="onboarding_brand_subtitle">ତୁମର ସଂଗୀତ, ତୁମର ନିୟମ |</string>
   <string name="next">ପରବର୍ତ୍ତୀ</string>
   <string name="getStarted">ଆରମ୍ଭ କର</string>
+  <string name="restore_success">ଡାଟାବେସ୍ ର ପୁନରୁଦ୍ଧାର ସମାପ୍ତ ହୋଇଛି |</string>
+  <string name="backup_cloud_title">ମେଘ</string>
+  <string name="backup_cloud_desc">ଏକ ଏନକ୍ରିପ୍ଟେଡ୍ / ଜିପ୍ ସମର୍ଥନ ସୃଷ୍ଟି କରନ୍ତୁ ଏବଂ ଏହାକୁ ଆପଣଙ୍କ ଆକାଉଣ୍ଟରେ ଖୋଲନ୍ତୁ |</string>
+  <string name="backup_cloud_login_hint">କ୍ଲାଉଡ୍ ସମର୍ଥନ ସକ୍ରିୟ କରିବାକୁ ଅଧିବେଶନ ଖୋଜ |</string>
+  <string name="action_backup_now">ଏବେ ବରଗଳ</string>
+  <string name="backup_cloud_error">ବ୍ୟାକଅପ୍ ରିପଅପ୍ କରିବାରେ ତ୍ରୁଟି |</string>
+  <string name="backup_cloud_card_title">କ୍ଲାଉଡ୍ ବ୍ୟାକଅପ୍ |</string>
+  <string name="backup_cloud_login_required">କ୍ଲାଉଡ୍ ବ୍ୟାକଅପ୍ ସକ୍ରିୟ କରିବାକୁ ସାଇନ୍ ଇନ୍ କରନ୍ତୁ |</string>
+  <string name="backup_cloud_loading">ତୁମର ସର୍ବଶେଷ ବ୍ୟାକଅପ୍ ଖୋଜ ...</string>
+  <string name="backup_cloud_none">ତୁମର ମେଘରେ କ comp ଣସି ବ୍ୟାକଅପ୍ ନାହିଁ |</string>
+  <string name="backup_cloud_restoring">ପୁନରୁଦ୍ଧାର ...</string>
+  <string name="backup_cloud_restore_now">ବ୍ୟାକଅପ୍ ପୁନ restore ସ୍ଥାପନ କରନ୍ତୁ |</string>
+  <string name="backup_cloud_latest">ସର୍ବଶେଷ ବ୍ୟାକଅପ୍:</string>
+  <string name="updated">ଅଦ୍ୟତନ:</string>
+  <string name="backup_cloud_uploading">ଅପଲୋଡ୍ ...</string>
+  <string name="update_now">ବର୍ତ୍ତମାନ ଅଦ୍ୟତନ କରନ୍ତୁ |</string>
+  <string name="backup_cloud_empty">କ no ଣସି ବ୍ୟାକଅପ୍ ନାହିଁ |</string>
+  <string name="btn_edit_profile">ପ୍ରୋଫାଇଲ୍ ସଂପାଦନ କରନ୍ତୁ |</string>
 </resources>

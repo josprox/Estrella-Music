@@ -96,9 +96,26 @@
   <string name="error_profile">प्रोफाइल पुन: प्राप्ति त्रुटि</string>
   <string name="error_connection">सम्पर्क त्रुटि</string>
   <string name="error_no_session">तपाईं लग इन हुनुहुन्न।</string>
-  <string name="btn_edit_profile">प्रोफाइल सम्पादन गर</string>
   <string name="hello">अभिवादन</string>
   <string name="onboarding_brand_subtitle">तपाईंको संगीत, तपाईंको नियमहरू।</string>
   <string name="next">अर्को</string>
   <string name="getStarted">सुरु गर</string>
+  <string name="restore_success">डाटाबेस पूरा भयो</string>
+  <string name="backup_cloud_title">समुह</string>
+  <string name="backup_cloud_desc">ईन्क्रिप्टेड / जीप समर्थन सिर्जना गर्नुहोस् र तपाईंको खातामा यसलाई खोल्नुहोस्।</string>
+  <string name="backup_cloud_login_hint">क्लाउड समर्थन सक्रिय गर्न सत्र फेला पार्नुहोस्।</string>
+  <string name="action_backup_now">अब फिर्ता</string>
+  <string name="backup_cloud_error">ब्याकअपहरू सूचीबद्ध गर्दा त्रुटि</string>
+  <string name="backup_cloud_card_title">क्लाउड ब्याकअप</string>
+  <string name="backup_cloud_login_required">क्लाउड ब्याकअपहरू सक्रिय गर्न साइन इन गर्नुहोस्।</string>
+  <string name="backup_cloud_loading">तपाईंको भर्खरको ब्याकअप खोजी गर्दै ...</string>
+  <string name="backup_cloud_none">तपाईंसँग क्लाउडमा कुनै ब्याकअपहरू छैनन्।</string>
+  <string name="backup_cloud_restoring">पुनर्स्थापना ...</string>
+  <string name="backup_cloud_restore_now">ब्याकअप पुनर्स्थापना गर्नुहोस्</string>
+  <string name="backup_cloud_latest">पछिल्लो ब्याकअप:</string>
+  <string name="updated">अपडेट गरिएको:</string>
+  <string name="backup_cloud_uploading">अपलोड गर्दै ...</string>
+  <string name="update_now">अब अपडेट गर्नुहोस्</string>
+  <string name="backup_cloud_empty">कुनै ब्याकअप छैन</string>
+  <string name="btn_edit_profile">प्रोफाइल सम्पादन गर</string>
 </resources>

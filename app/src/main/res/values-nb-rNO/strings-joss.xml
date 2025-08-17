@@ -130,9 +130,26 @@
   <string name="error_profile">Feil å hente profil</string>
   <string name="error_connection">Tilkoblingsfeil</string>
   <string name="error_no_session">Du er ikke logget inn.</string>
-  <string name="btn_edit_profile">Rediger profil</string>
   <string name="hello">Hallo</string>
   <string name="onboarding_brand_subtitle">Musikken din, dine regler.</string>
   <string name="next">NESTE</string>
   <string name="getStarted">Kom i gang</string>
+  <string name="restore_success">Restaurering av databasen fullført</string>
+  <string name="backup_cloud_title">Sky</string>
+  <string name="backup_cloud_desc">Opprett en kryptert/zip -støtte og åpne den for kontoen din.</string>
+  <string name="backup_cloud_login_hint">Finn økt for å aktivere skystøtte.</string>
+  <string name="action_backup_now">Tilbake nå</string>
+  <string name="backup_cloud_error">Feiloppføring av sikkerhetskopiering</string>
+  <string name="backup_cloud_card_title">Cloud Backup</string>
+  <string name="backup_cloud_login_required">Logg på for å aktivere sikkerhetskopier av skyen.</string>
+  <string name="backup_cloud_loading">Søker i den siste sikkerhetskopien din ...</string>
+  <string name="backup_cloud_none">Du har ingen sikkerhetskopier i skyen ennå.</string>
+  <string name="backup_cloud_restoring">Gjenopprette ...</string>
+  <string name="backup_cloud_restore_now">Gjenopprett sikkerhetskopi</string>
+  <string name="backup_cloud_latest">Siste sikkerhetskopi:</string>
+  <string name="updated">Oppdatert:</string>
+  <string name="backup_cloud_uploading">Last opp ...</string>
+  <string name="update_now">Oppdatering nå</string>
+  <string name="backup_cloud_empty">Det er ingen sikkerhetskopi</string>
+  <string name="btn_edit_profile">Rediger profil</string>
 </resources>

@@ -130,9 +130,26 @@
   <string name="error_profile">Błąd PROFIL PROFIL</string>
   <string name="error_connection">Błąd połączenia</string>
   <string name="error_no_session">Nie jesteś zalogowany.</string>
-  <string name="btn_edit_profile">Edytuj profil</string>
   <string name="hello">Cześć</string>
   <string name="onboarding_brand_subtitle">Twoja muzyka, twoje zasady.</string>
   <string name="next">Następny</string>
   <string name="getStarted">Zacznij</string>
+  <string name="restore_success">Przywrócenie ukończonej bazy danych</string>
+  <string name="backup_cloud_title">Chmura</string>
+  <string name="backup_cloud_desc">Utwórz obsługę szyfrowanej/zip i otwórz je na swoje konto.</string>
+  <string name="backup_cloud_login_hint">Znajdź sesję, aby aktywować obsługę chmur.</string>
+  <string name="action_backup_now">Z powrotem teraz</string>
+  <string name="backup_cloud_error">Wymień błąd kopii zapasowych</string>
+  <string name="backup_cloud_card_title">Kopia zapasowa w chmurze</string>
+  <string name="backup_cloud_login_required">Zaloguj się, aby aktywować kopie zapasowe w chmurze.</string>
+  <string name="backup_cloud_loading">Wyszukiwanie najnowszej kopii zapasowej…</string>
+  <string name="backup_cloud_none">Nie masz jeszcze żadnych kopii zapasowych w chmurze.</string>
+  <string name="backup_cloud_restoring">Przywracanie…</string>
+  <string name="backup_cloud_restore_now">Przywróć kopię zapasową</string>
+  <string name="backup_cloud_latest">Najnowsza kopia zapasowa:</string>
+  <string name="updated">Zaktualizowano:</string>
+  <string name="backup_cloud_uploading">Przesyłanie ...</string>
+  <string name="update_now">Aktualizacja teraz</string>
+  <string name="backup_cloud_empty">Nie ma kopii zapasowej</string>
+  <string name="btn_edit_profile">Edytuj profil</string>
 </resources>

@@ -130,9 +130,26 @@
   <string name="error_profile">Fehlerabrufprofil</string>
   <string name="error_connection">Verbindungsfehler</string>
   <string name="error_no_session">Sie sind nicht angemeldet.</string>
-  <string name="btn_edit_profile">Profil bearbeiten</string>
   <string name="hello">Hallo</string>
   <string name="onboarding_brand_subtitle">Deine Musik, deine Regeln.</string>
   <string name="next">Nächste</string>
   <string name="getStarted">Fangen an</string>
+  <string name="restore_success">Wiederherstellung der Datenbank abgeschlossen</string>
+  <string name="backup_cloud_title">Wolke</string>
+  <string name="backup_cloud_desc">Erstellen Sie einen verschlüsselten/ZIP -Support und öffnen Sie ihn für Ihr Konto.</string>
+  <string name="backup_cloud_login_hint">Suchen Sie die Sitzung, um die Cloud -Unterstützung zu aktivieren.</string>
+  <string name="action_backup_now">Zurück jetzt zurück</string>
+  <string name="backup_cloud_error">Fehlerlistensicherungen</string>
+  <string name="backup_cloud_card_title">Wolkensicherung</string>
+  <string name="backup_cloud_login_required">Melden Sie sich an, um Cloud -Backups zu aktivieren.</string>
+  <string name="backup_cloud_loading">Suche nach Ihrer neuesten Sicherung…</string>
+  <string name="backup_cloud_none">Sie haben noch keine Sicherungen in der Cloud.</string>
+  <string name="backup_cloud_restoring">Wiederherstellung…</string>
+  <string name="backup_cloud_restore_now">Backup wiederherstellen</string>
+  <string name="backup_cloud_latest">Neueste Backup:</string>
+  <string name="updated">Aktualisiert:</string>
+  <string name="backup_cloud_uploading">Hochladen ...</string>
+  <string name="update_now">Aktualisieren Sie jetzt</string>
+  <string name="backup_cloud_empty">Es gibt keine Sicherung</string>
+  <string name="btn_edit_profile">Profil bearbeiten</string>
 </resources>

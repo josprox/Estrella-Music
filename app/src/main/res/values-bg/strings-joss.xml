@@ -130,9 +130,26 @@
   <string name="error_profile">Профил за извличане на грешка</string>
   <string name="error_connection">Грешка в връзката</string>
   <string name="error_no_session">Не сте влезли.</string>
-  <string name="btn_edit_profile">Редактиране на профил</string>
   <string name="hello">Здравейте</string>
   <string name="onboarding_brand_subtitle">Вашата музика, вашите правила.</string>
   <string name="next">След това</string>
   <string name="getStarted">Започнете</string>
+  <string name="restore_success">Възстановяването на попълнената база данни</string>
+  <string name="backup_cloud_title">Облак</string>
+  <string name="backup_cloud_desc">Създайте криптирана/цип поддръжка и я отворете към вашия акаунт.</string>
+  <string name="backup_cloud_login_hint">Намерете сесията, за да активирате облачната поддръжка.</string>
+  <string name="action_backup_now">Обратно сега</string>
+  <string name="backup_cloud_error">Грешки в списъка за изброяване на резервни копия</string>
+  <string name="backup_cloud_card_title">Облачно архивиране</string>
+  <string name="backup_cloud_login_required">Влезте, за да активирате облачните резервни копия.</string>
+  <string name="backup_cloud_loading">Търсене на най -новото си резервно копие ...</string>
+  <string name="backup_cloud_none">Все още нямате резервни копия в облака.</string>
+  <string name="backup_cloud_restoring">Възстановяване ...</string>
+  <string name="backup_cloud_restore_now">Възстановяване на резервно копие</string>
+  <string name="backup_cloud_latest">Последно архивиране:</string>
+  <string name="updated">Актуализирано:</string>
+  <string name="backup_cloud_uploading">Качване ...</string>
+  <string name="update_now">Актуализирайте сега</string>
+  <string name="backup_cloud_empty">Няма резервно копие</string>
+  <string name="btn_edit_profile">Редактиране на профил</string>
 </resources>

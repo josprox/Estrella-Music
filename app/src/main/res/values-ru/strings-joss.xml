@@ -130,9 +130,26 @@
   <string name="error_profile">Ошибка получения профиля</string>
   <string name="error_connection">Ошибка соединения</string>
   <string name="error_no_session">Вы не вошли в систему.</string>
-  <string name="btn_edit_profile">Редактировать профиль</string>
   <string name="hello">Привет</string>
   <string name="onboarding_brand_subtitle">Ваша музыка, ваши правила.</string>
   <string name="next">Следующий</string>
   <string name="getStarted">Начните</string>
+  <string name="restore_success">Восстановление базы данных завершено</string>
+  <string name="backup_cloud_title">Облако</string>
+  <string name="backup_cloud_desc">Создайте поддержку зашифрованного/ZIP и откройте ее в свою учетную запись.</string>
+  <string name="backup_cloud_login_hint">Найдите сеанс, чтобы активировать облачную поддержку.</string>
+  <string name="action_backup_now">Вернувшись сейчас</string>
+  <string name="backup_cloud_error">Ошибка перечисления резервных копий</string>
+  <string name="backup_cloud_card_title">Облачная резервная копия</string>
+  <string name="backup_cloud_login_required">Войдите в систему, чтобы активировать облачные резервные копии.</string>
+  <string name="backup_cloud_loading">Поиск вашего последнего резервного копирования ...</string>
+  <string name="backup_cloud_none">У вас еще нет резервных копий в облаке.</string>
+  <string name="backup_cloud_restoring">Восстановление…</string>
+  <string name="backup_cloud_restore_now">Восстановить резервную копию</string>
+  <string name="backup_cloud_latest">Последняя резервная копия:</string>
+  <string name="updated">Обновлено:</string>
+  <string name="backup_cloud_uploading">Загрузка ...</string>
+  <string name="update_now">Обновление сейчас</string>
+  <string name="backup_cloud_empty">Нет резервной копии</string>
+  <string name="btn_edit_profile">Редактировать профиль</string>
 </resources>

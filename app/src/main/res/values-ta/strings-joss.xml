@@ -96,9 +96,26 @@
   <string name="error_profile">சுயவிவரத்தை மீட்டெடுப்பதில் பிழை</string>
   <string name="error_connection">இணைப்பு பிழை</string>
   <string name="error_no_session">நீங்கள் உள்நுழையவில்லை.</string>
-  <string name="btn_edit_profile">சுயவிவரத்தைத் திருத்து</string>
   <string name="hello">வணக்கம்</string>
   <string name="onboarding_brand_subtitle">உங்கள் இசை, உங்கள் விதிகள்.</string>
   <string name="next">அடுத்து</string>
   <string name="getStarted">தொடங்கவும்</string>
+  <string name="restore_success">தரவுத்தளத்தின் மறுசீரமைப்பு முடிந்தது</string>
+  <string name="backup_cloud_title">மேகம்</string>
+  <string name="backup_cloud_desc">மறைகுறியாக்கப்பட்ட/ஜிப் ஆதரவை உருவாக்கி அதை உங்கள் கணக்கில் திறக்கவும்.</string>
+  <string name="backup_cloud_login_hint">கிளவுட் ஆதரவை செயல்படுத்த அமர்வைக் கண்டறியவும்.</string>
+  <string name="action_backup_now">இப்போது மீண்டும்</string>
+  <string name="backup_cloud_error">காப்புப்பிரதிகளை பட்டியலிடுவது பிழை</string>
+  <string name="backup_cloud_card_title">கிளவுட் காப்புப்பிரதி</string>
+  <string name="backup_cloud_login_required">கிளவுட் காப்புப்பிரதிகளை செயல்படுத்த உள்நுழைக.</string>
+  <string name="backup_cloud_loading">உங்கள் சமீபத்திய காப்புப்பிரதியைத் தேடுகிறது…</string>
+  <string name="backup_cloud_none">உங்களிடம் இன்னும் மேகக்கட்டத்தில் காப்புப்பிரதிகள் இல்லை.</string>
+  <string name="backup_cloud_restoring">மீட்டமைத்தல்…</string>
+  <string name="backup_cloud_restore_now">காப்புப்பிரதியை மீட்டமைக்கவும்</string>
+  <string name="backup_cloud_latest">சமீபத்திய காப்புப்பிரதி:</string>
+  <string name="updated">புதுப்பிக்கப்பட்டது:</string>
+  <string name="backup_cloud_uploading">பதிவேற்றுதல் ...</string>
+  <string name="update_now">இப்போது புதுப்பிக்கவும்</string>
+  <string name="backup_cloud_empty">காப்புப்பிரதி இல்லை</string>
+  <string name="btn_edit_profile">சுயவிவரத்தைத் திருத்து</string>
 </resources>

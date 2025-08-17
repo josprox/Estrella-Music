@@ -150,9 +150,26 @@
   <string name="error_profile">প্রোফাইল পুনরুদ্ধার করার ত্রুটি</string>
   <string name="error_connection">সংযোগ ত্রুটি</string>
   <string name="error_no_session">আপনি লগ ইন করবেন না।</string>
-  <string name="btn_edit_profile">প্রোফাইল সম্পাদনা করুন</string>
   <string name="hello">হ্যালো</string>
   <string name="onboarding_brand_subtitle">আপনার সংগীত, আপনার নিয়ম।</string>
   <string name="next">পরবর্তী</string>
   <string name="getStarted">শুরু করুন</string>
+  <string name="restore_success">ডাটাবেস পুনরুদ্ধার সম্পন্ন</string>
+  <string name="backup_cloud_title">মেঘ</string>
+  <string name="backup_cloud_desc">একটি এনক্রিপ্ট করা/জিপ সমর্থন তৈরি করুন এবং এটি আপনার অ্যাকাউন্টে খুলুন।</string>
+  <string name="backup_cloud_login_hint">মেঘ সমর্থন সক্রিয় করতে সেশন সনাক্ত করুন।</string>
+  <string name="action_backup_now">এখন ফিরে</string>
+  <string name="backup_cloud_error">ব্যাকআপগুলি তালিকাভুক্ত করার ত্রুটি</string>
+  <string name="backup_cloud_card_title">ক্লাউড ব্যাকআপ</string>
+  <string name="backup_cloud_login_required">ক্লাউড ব্যাকআপগুলি সক্রিয় করতে সাইন ইন করুন।</string>
+  <string name="backup_cloud_loading">আপনার সর্বশেষ ব্যাকআপ অনুসন্ধান করা…</string>
+  <string name="backup_cloud_none">মেঘে এখনও আপনার কোনও ব্যাকআপ নেই।</string>
+  <string name="backup_cloud_restoring">পুনরুদ্ধার…</string>
+  <string name="backup_cloud_restore_now">ব্যাকআপ পুনরুদ্ধার করুন</string>
+  <string name="backup_cloud_latest">সর্বশেষ ব্যাকআপ:</string>
+  <string name="updated">আপডেট:</string>
+  <string name="backup_cloud_uploading">আপলোড হচ্ছে ...</string>
+  <string name="update_now">এখনই আপডেট করুন</string>
+  <string name="backup_cloud_empty">কোনও ব্যাকআপ নেই</string>
+  <string name="btn_edit_profile">প্রোফাইল সম্পাদনা করুন</string>
 </resources>

@@ -96,9 +96,26 @@
   <string name="error_profile">Felhämtningsprofil</string>
   <string name="error_connection">Anslutningsfel</string>
   <string name="error_no_session">Du är inte inloggad.</string>
-  <string name="btn_edit_profile">Redigera profil</string>
   <string name="hello">Hej</string>
   <string name="onboarding_brand_subtitle">Din musik, dina regler.</string>
   <string name="next">Nästa</string>
   <string name="getStarted">Komma igång</string>
+  <string name="restore_success">Återställning av databasen klar</string>
+  <string name="backup_cloud_title">Moln</string>
+  <string name="backup_cloud_desc">Skapa ett krypterat/zip -stöd och öppna det för ditt konto.</string>
+  <string name="backup_cloud_login_hint">Hitta session för att aktivera molnstöd.</string>
+  <string name="action_backup_now">Tillbaka nu</string>
+  <string name="backup_cloud_error">Fellista säkerhetskopiering</string>
+  <string name="backup_cloud_card_title">Molnbackup</string>
+  <string name="backup_cloud_login_required">Logga in för att aktivera molnens säkerhetskopior.</string>
+  <string name="backup_cloud_loading">Söker din senaste säkerhetskopia ...</string>
+  <string name="backup_cloud_none">Du har inga säkerhetskopior i molnet än.</string>
+  <string name="backup_cloud_restoring">Återställ ...</string>
+  <string name="backup_cloud_restore_now">Återställa säkerhetskopiering</string>
+  <string name="backup_cloud_latest">Senaste säkerhetskopiering:</string>
+  <string name="updated">Uppdaterad:</string>
+  <string name="backup_cloud_uploading">Ladda upp ...</string>
+  <string name="update_now">Uppdatera nu</string>
+  <string name="backup_cloud_empty">Det finns ingen säkerhetskopia</string>
+  <string name="btn_edit_profile">Redigera profil</string>
 </resources>

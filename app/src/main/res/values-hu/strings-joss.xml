@@ -141,9 +141,26 @@
   <string name="error_profile">Hiba a profil lekérdezése</string>
   <string name="error_connection">Csatlakozási hiba</string>
   <string name="error_no_session">Nincs bejelentkezve.</string>
-  <string name="btn_edit_profile">Profil szerkesztése</string>
   <string name="hello">Helló</string>
   <string name="onboarding_brand_subtitle">A zenéd, a szabályaid.</string>
   <string name="next">Következő</string>
   <string name="getStarted">Elindul</string>
+  <string name="restore_success">Az elvégzett adatbázis helyreállítása</string>
+  <string name="backup_cloud_title">Felhő</string>
+  <string name="backup_cloud_desc">Hozzon létre egy titkosított/ZIP támogatást, és nyissa meg a fiókjába.</string>
+  <string name="backup_cloud_login_hint">Keresse meg a munkamenetet a felhő -támogatás aktiválásához.</string>
+  <string name="action_backup_now">Most</string>
+  <string name="backup_cloud_error">Hiba a biztonsági mentések felsorolását</string>
+  <string name="backup_cloud_card_title">Felhőalapú biztonsági mentés</string>
+  <string name="backup_cloud_login_required">Jelentkezzen be a felhő biztonsági mentések aktiválásához.</string>
+  <string name="backup_cloud_loading">A legújabb biztonsági mentés keresése…</string>
+  <string name="backup_cloud_none">Még nincs biztonsági másolata a felhőben.</string>
+  <string name="backup_cloud_restoring">Helyreállítás…</string>
+  <string name="backup_cloud_restore_now">Visszaállítani a biztonsági mentést</string>
+  <string name="backup_cloud_latest">Legfrissebb biztonsági mentés:</string>
+  <string name="updated">Frissítve:</string>
+  <string name="backup_cloud_uploading">Feltöltés ...</string>
+  <string name="update_now">Frissítse most</string>
+  <string name="backup_cloud_empty">Nincs biztonsági másolat</string>
+  <string name="btn_edit_profile">Profil szerkesztése</string>
 </resources>

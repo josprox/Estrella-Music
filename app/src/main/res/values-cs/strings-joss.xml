@@ -130,9 +130,26 @@
   <string name="error_profile">Profil načítání chyb</string>
   <string name="error_connection">Chyba připojení</string>
   <string name="error_no_session">Nejste přihlášeni.</string>
-  <string name="btn_edit_profile">Upravit profil</string>
   <string name="hello">Ahoj</string>
   <string name="onboarding_brand_subtitle">Vaše hudba, vaše pravidla.</string>
   <string name="next">Další</string>
   <string name="getStarted">Začněte</string>
+  <string name="restore_success">Obnovení dokončené databáze</string>
+  <string name="backup_cloud_title">Mrak</string>
+  <string name="backup_cloud_desc">Vytvořte šifrovanou/zip podporu a otevřete ji svému účtu.</string>
+  <string name="backup_cloud_login_hint">Vyhledejte relaci pro aktivaci podpory cloudu.</string>
+  <string name="action_backup_now">Zpátky teď</string>
+  <string name="backup_cloud_error">Zálohování chyb</string>
+  <string name="backup_cloud_card_title">Cloud zálohování</string>
+  <string name="backup_cloud_login_required">Přihlaste se k aktivaci záloh cloudu.</string>
+  <string name="backup_cloud_loading">Prohledávání vaší nejnovější zálohy ...</string>
+  <string name="backup_cloud_none">V cloudu ještě nemáte žádné zálohy.</string>
+  <string name="backup_cloud_restoring">Obnovení ...</string>
+  <string name="backup_cloud_restore_now">Obnovit zálohu</string>
+  <string name="backup_cloud_latest">Nejnovější záloha:</string>
+  <string name="updated">Aktualizováno:</string>
+  <string name="backup_cloud_uploading">Nahrávání ...</string>
+  <string name="update_now">Aktualizace nyní</string>
+  <string name="backup_cloud_empty">Neexistuje žádná záloha</string>
+  <string name="btn_edit_profile">Upravit profil</string>
 </resources>

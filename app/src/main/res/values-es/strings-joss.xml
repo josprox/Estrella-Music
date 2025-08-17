@@ -130,9 +130,26 @@
   <string name="error_profile">Error de recuperación del perfil</string>
   <string name="error_connection">Error de conexión</string>
   <string name="error_no_session">No has iniciado sesión.</string>
-  <string name="btn_edit_profile">Perfil de edición</string>
   <string name="hello">Hola</string>
   <string name="onboarding_brand_subtitle">Tu música, tus reglas.</string>
   <string name="next">Próximo</string>
   <string name="getStarted">Empezar</string>
+  <string name="restore_success">Restauración de la base de datos completada</string>
+  <string name="backup_cloud_title">Respaldar en la nube</string>
+  <string name="backup_cloud_desc">Crea un respaldo cifrado/zip y súbelo a tu cuenta.</string>
+  <string name="backup_cloud_login_hint">Inicia sesión para activar el respaldo en la nube.</string>
+  <string name="action_backup_now">Respaldar ahora</string>
+  <string name="backup_cloud_error">Copias de seguridad de la lista de errores</string>
+  <string name="backup_cloud_card_title">Copia de seguridad de la nube</string>
+  <string name="backup_cloud_login_required">Inicie sesión para activar las copias de seguridad de la nube.</string>
+  <string name="backup_cloud_loading">Buscando su última copia de seguridad…</string>
+  <string name="backup_cloud_none">Todavía no tienes copias de seguridad en la nube.</string>
+  <string name="backup_cloud_restoring">Restaurando…</string>
+  <string name="backup_cloud_restore_now">Restaurar copia de seguridad</string>
+  <string name="backup_cloud_latest">Última copia de seguridad:</string>
+  <string name="updated">Actualizado:</string>
+  <string name="backup_cloud_uploading">Subiendo…</string>
+  <string name="update_now">Actualizar ahora</string>
+  <string name="backup_cloud_empty">No existe ninguna copia de seguridad</string>
+  <string name="btn_edit_profile">Editar perfil</string>
 </resources>

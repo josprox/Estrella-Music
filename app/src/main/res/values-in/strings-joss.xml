@@ -130,9 +130,26 @@
   <string name="error_profile">Profil Pengambilan Kesalahan</string>
   <string name="error_connection">Kesalahan koneksi</string>
   <string name="error_no_session">Anda tidak masuk.</string>
-  <string name="btn_edit_profile">Edit profil</string>
   <string name="hello">Halo</string>
   <string name="onboarding_brand_subtitle">Musik Anda, aturan Anda.</string>
   <string name="next">Berikutnya</string>
   <string name="getStarted">Mulai</string>
+  <string name="restore_success">Pemulihan database selesai</string>
+  <string name="backup_cloud_title">Awan</string>
+  <string name="backup_cloud_desc">Buat dukungan terenkripsi/zip dan buka ke akun Anda.</string>
+  <string name="backup_cloud_login_hint">Temukan sesi untuk mengaktifkan dukungan cloud.</string>
+  <string name="action_backup_now">Kembali sekarang</string>
+  <string name="backup_cloud_error">Pencadangan daftar kesalahan</string>
+  <string name="backup_cloud_card_title">Cloud Backup</string>
+  <string name="backup_cloud_login_required">Masuk untuk mengaktifkan cadangan cloud.</string>
+  <string name="backup_cloud_loading">Mencari cadangan terbaru Anda…</string>
+  <string name="backup_cloud_none">Anda belum memiliki cadangan di cloud.</string>
+  <string name="backup_cloud_restoring">Memulihkan ...</string>
+  <string name="backup_cloud_restore_now">Kembalikan cadangan</string>
+  <string name="backup_cloud_latest">Cadangan Terbaru:</string>
+  <string name="updated">Diperbarui:</string>
+  <string name="backup_cloud_uploading">Mengunggah ...</string>
+  <string name="update_now">Perbarui sekarang</string>
+  <string name="backup_cloud_empty">Tidak ada cadangan</string>
+  <string name="btn_edit_profile">Edit profil</string>
 </resources>

@@ -130,9 +130,26 @@
   <string name="error_profile">오류 검색 프로필</string>
   <string name="error_connection">연결 오류</string>
   <string name="error_no_session">로그인하지 않습니다.</string>
-  <string name="btn_edit_profile">프로필 편집</string>
   <string name="hello">안녕하세요</string>
   <string name="onboarding_brand_subtitle">당신의 음악, 당신의 규칙.</string>
   <string name="next">다음</string>
   <string name="getStarted">시작하세요</string>
+  <string name="restore_success">데이터베이스 복원이 완료되었습니다</string>
+  <string name="backup_cloud_title">구름</string>
+  <string name="backup_cloud_desc">암호화 된/zip 지원을 작성하여 계정으로 열어줍니다.</string>
+  <string name="backup_cloud_login_hint">클라우드 지원을 활성화하기 위해 세션을 찾으십시오.</string>
+  <string name="action_backup_now">지금 돌아 왔습니다</string>
+  <string name="backup_cloud_error">오류 나열 백업</string>
+  <string name="backup_cloud_card_title">클라우드 백업</string>
+  <string name="backup_cloud_login_required">클라우드 백업을 활성화하려면 로그인하십시오.</string>
+  <string name="backup_cloud_loading">최신 백업 검색…</string>
+  <string name="backup_cloud_none">아직 클라우드에 백업이 없습니다.</string>
+  <string name="backup_cloud_restoring">복원…</string>
+  <string name="backup_cloud_restore_now">백업을 복원하십시오</string>
+  <string name="backup_cloud_latest">최신 백업 :</string>
+  <string name="updated">업데이트 :</string>
+  <string name="backup_cloud_uploading">업로드 ...</string>
+  <string name="update_now">지금 업데이트하십시오</string>
+  <string name="backup_cloud_empty">백업이 없습니다</string>
+  <string name="btn_edit_profile">프로필 편집</string>
 </resources>

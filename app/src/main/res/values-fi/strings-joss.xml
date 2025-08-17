@@ -130,9 +130,26 @@
   <string name="error_profile">Virheen hakuprofiili</string>
   <string name="error_connection">Liitäntävirhe</string>
   <string name="error_no_session">Et ole kirjautunut sisään.</string>
-  <string name="btn_edit_profile">Muokkausprofiili</string>
   <string name="hello">Hei</string>
   <string name="onboarding_brand_subtitle">Musiikkisi, säännöt.</string>
   <string name="next">Seuraava</string>
   <string name="getStarted">Aloittaa</string>
+  <string name="restore_success">Tietokannan palauttaminen valmis</string>
+  <string name="backup_cloud_title">Pilvi</string>
+  <string name="backup_cloud_desc">Luo salattu/zip -tuki ja avaa se tilillesi.</string>
+  <string name="backup_cloud_login_hint">Etsi istunto pilvituen aktivoimiseksi.</string>
+  <string name="action_backup_now">Nyt</string>
+  <string name="backup_cloud_error">Virhekeskukset Varmuuskopioinnit</string>
+  <string name="backup_cloud_card_title">Pilvivarmuuskopio</string>
+  <string name="backup_cloud_login_required">Kirjaudu sisään aktivoidaksesi pilvivarmuuskopioita.</string>
+  <string name="backup_cloud_loading">Uusimman varmuuskopion etsiminen ...</string>
+  <string name="backup_cloud_none">Sinulla ei ole vielä varmuuskopioita pilvessä.</string>
+  <string name="backup_cloud_restoring">Palauttaminen…</string>
+  <string name="backup_cloud_restore_now">Palauttaa varmuuskopio</string>
+  <string name="backup_cloud_latest">Viimeisin varmuuskopio:</string>
+  <string name="updated">Päivitetty:</string>
+  <string name="backup_cloud_uploading">Lataus ...</string>
+  <string name="update_now">Päivitys nyt</string>
+  <string name="backup_cloud_empty">Varmuuskopiota ei ole</string>
+  <string name="btn_edit_profile">Muokkausprofiili</string>
 </resources>

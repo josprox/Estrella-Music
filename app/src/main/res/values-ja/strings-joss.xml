@@ -130,9 +130,26 @@
   <string name="error_profile">プロファイルの取得エラー</string>
   <string name="error_connection">接続エラー</string>
   <string name="error_no_session">ログインしていません。</string>
-  <string name="btn_edit_profile">プロファイルを編集します</string>
   <string name="hello">こんにちは</string>
   <string name="onboarding_brand_subtitle">あなたの音楽、あなたのルール。</string>
   <string name="next">次</string>
   <string name="getStarted">始めましょう</string>
+  <string name="restore_success">データベースの復元が完了しました</string>
+  <string name="backup_cloud_title">雲</string>
+  <string name="backup_cloud_desc">暗号化/zipサポートを作成し、アカウントに開きます。</string>
+  <string name="backup_cloud_login_hint">セッションを見つけて、クラウドサポートをアクティブにします。</string>
+  <string name="action_backup_now">今すぐ戻ってきます</string>
+  <string name="backup_cloud_error">バックアップのエラーリスト</string>
+  <string name="backup_cloud_card_title">クラウドバックアップ</string>
+  <string name="backup_cloud_login_required">クラウドバックアップをアクティブにするには、サインインします。</string>
+  <string name="backup_cloud_loading">最新のバックアップを検索します…</string>
+  <string name="backup_cloud_none">クラウドにはまだバックアップがありません。</string>
+  <string name="backup_cloud_restoring">復元…</string>
+  <string name="backup_cloud_restore_now">バックアップを復元します</string>
+  <string name="backup_cloud_latest">最新のバックアップ：</string>
+  <string name="updated">更新：</string>
+  <string name="backup_cloud_uploading">アップロード...</string>
+  <string name="update_now">今すぐ更新してください</string>
+  <string name="backup_cloud_empty">バックアップはありません</string>
+  <string name="btn_edit_profile">プロファイルを編集します</string>
 </resources>

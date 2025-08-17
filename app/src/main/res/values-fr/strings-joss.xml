@@ -127,9 +127,26 @@
   <string name="error_profile">Profil de récupération d\'erreur</string>
   <string name="error_connection">Erreur de connexion</string>
   <string name="error_no_session">Vous n\'êtes pas connecté.</string>
-  <string name="btn_edit_profile">Modifier le profil</string>
   <string name="hello">Bonjour</string>
   <string name="onboarding_brand_subtitle">Votre musique, vos règles.</string>
   <string name="next">Suivant</string>
   <string name="getStarted">Commencer</string>
+  <string name="restore_success">La restauration de la base de données terminée</string>
+  <string name="backup_cloud_title">Nuage</string>
+  <string name="backup_cloud_desc">Créez une prise en charge cryptée / zip et ouvrez-la à votre compte.</string>
+  <string name="backup_cloud_login_hint">Localisez la session pour activer la prise en charge du cloud.</string>
+  <string name="action_backup_now">De retour maintenant</string>
+  <string name="backup_cloud_error">Backups de liste d\'erreurs</string>
+  <string name="backup_cloud_card_title">Sauvegarde des nuages</string>
+  <string name="backup_cloud_login_required">Connectez-vous pour activer les sauvegardes cloud.</string>
+  <string name="backup_cloud_loading">Recherche de votre dernière sauvegarde…</string>
+  <string name="backup_cloud_none">Vous n\'avez pas encore de sauvegardes dans le cloud.</string>
+  <string name="backup_cloud_restoring">Restaurer…</string>
+  <string name="backup_cloud_restore_now">Restaurer la sauvegarde</string>
+  <string name="backup_cloud_latest">Dernière sauvegarde:</string>
+  <string name="updated">Mis à jour:</string>
+  <string name="backup_cloud_uploading">Téléchargement …</string>
+  <string name="update_now">Mettre à jour maintenant</string>
+  <string name="backup_cloud_empty">Il n\'y a pas de sauvegarde</string>
+  <string name="btn_edit_profile">Modifier le profil</string>
 </resources>

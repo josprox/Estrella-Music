@@ -96,9 +96,26 @@
   <string name="error_profile">Pogreška prilikom preuzimanja profila</string>
   <string name="error_connection">Pogreška veze</string>
   <string name="error_no_session">Niste prijavljeni.</string>
-  <string name="btn_edit_profile">Uredi profil</string>
   <string name="hello">Zdravo</string>
   <string name="onboarding_brand_subtitle">Vaša muzika, vaša pravila.</string>
   <string name="next">Sljedeći</string>
   <string name="getStarted">Započnite</string>
+  <string name="restore_success">Obnova baze podataka je završena</string>
+  <string name="backup_cloud_title">Oblak</string>
+  <string name="backup_cloud_desc">Kreirajte šifrirani / zip podršku i otvorite ga na svoj račun.</string>
+  <string name="backup_cloud_login_hint">Pronađite sesiju za aktiviranje Cloud podrške.</string>
+  <string name="action_backup_now">Nazad sad</string>
+  <string name="backup_cloud_error">Pogreška prilikom popisa sigurnosnih kopija</string>
+  <string name="backup_cloud_card_title">Backup Cloud</string>
+  <string name="backup_cloud_login_required">Prijavite se da biste aktivirali sigurnosne kopije u oblaku.</string>
+  <string name="backup_cloud_loading">Pretraživanje najnovije sigurnosne kopije ...</string>
+  <string name="backup_cloud_none">Još nemate rezervne kopije u oblaku.</string>
+  <string name="backup_cloud_restoring">Vraćanje ...</string>
+  <string name="backup_cloud_restore_now">Vrati sigurnosnu kopiju</string>
+  <string name="backup_cloud_latest">Najnovija sigurnosna kopija:</string>
+  <string name="updated">Ažurirano:</string>
+  <string name="backup_cloud_uploading">Prenos ...</string>
+  <string name="update_now">Ažurirajte sada</string>
+  <string name="backup_cloud_empty">Nema sigurnosne kopije</string>
+  <string name="btn_edit_profile">Uredi profil</string>
 </resources>

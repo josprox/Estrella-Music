@@ -129,9 +129,26 @@
   <string name="error_profile">خطأ استرداد الملف الشخصي</string>
   <string name="error_connection">خطأ في الاتصال</string>
   <string name="error_no_session">أنت لم تسجل الدخول.</string>
-  <string name="btn_edit_profile">تحرير الملف الشخصي</string>
   <string name="hello">مرحبًا</string>
   <string name="onboarding_brand_subtitle">موسيقاك ، قواعدك.</string>
   <string name="next">التالي</string>
   <string name="getStarted">ابدأ</string>
+  <string name="restore_success">اكتمال استعادة قاعدة البيانات</string>
+  <string name="backup_cloud_title">سحاب</string>
+  <string name="backup_cloud_desc">قم بإنشاء دعم مشفر/ZIP وفتحه على حسابك.</string>
+  <string name="backup_cloud_login_hint">حدد موقع الجلسة لتفعيل الدعم السحابي.</string>
+  <string name="action_backup_now">العودة الآن</string>
+  <string name="backup_cloud_error">خطأ في قائمة النسخ الاحتياطية</string>
+  <string name="backup_cloud_card_title">نسخة احتياطية سحابة</string>
+  <string name="backup_cloud_login_required">تسجيل الدخول لتفعيل النسخ الاحتياطية السحابية.</string>
+  <string name="backup_cloud_loading">البحث عن أحدث نسخة احتياطية ...</string>
+  <string name="backup_cloud_none">ليس لديك أي نسخ احتياطية في السحابة حتى الآن.</string>
+  <string name="backup_cloud_restoring">استعادة ...</string>
+  <string name="backup_cloud_restore_now">استعادة النسخ الاحتياطي</string>
+  <string name="backup_cloud_latest">آخر النسخ الاحتياطي:</string>
+  <string name="updated">تحديث:</string>
+  <string name="backup_cloud_uploading">تحميل ...</string>
+  <string name="update_now">تحديث الآن</string>
+  <string name="backup_cloud_empty">لا يوجد نسخة احتياطية</string>
+  <string name="btn_edit_profile">تحرير الملف الشخصي</string>
 </resources>

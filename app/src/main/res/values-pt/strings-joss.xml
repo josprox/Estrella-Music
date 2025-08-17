@@ -96,9 +96,26 @@
   <string name="error_profile">Erro de recuperação do perfil</string>
   <string name="error_connection">Erro de conexão</string>
   <string name="error_no_session">Você não está conectado.</string>
-  <string name="btn_edit_profile">Editar perfil</string>
   <string name="hello">Olá</string>
   <string name="onboarding_brand_subtitle">Sua música, suas regras.</string>
   <string name="next">Próximo</string>
   <string name="getStarted">Comece</string>
+  <string name="restore_success">Restauração do banco de dados concluído</string>
+  <string name="backup_cloud_title">Nuvem</string>
+  <string name="backup_cloud_desc">Crie um suporte criptografado/ZIP e abra -o para sua conta.</string>
+  <string name="backup_cloud_login_hint">Localize a sessão para ativar o suporte à nuvem.</string>
+  <string name="action_backup_now">De volta agora</string>
+  <string name="backup_cloud_error">Erro listando backups</string>
+  <string name="backup_cloud_card_title">Backup em nuvem</string>
+  <string name="backup_cloud_login_required">Faça login para ativar backups da nuvem.</string>
+  <string name="backup_cloud_loading">Pesquisando seu último backup…</string>
+  <string name="backup_cloud_none">Você ainda não tem backups na nuvem.</string>
+  <string name="backup_cloud_restoring">Restaurando ...</string>
+  <string name="backup_cloud_restore_now">Restaurar backup</string>
+  <string name="backup_cloud_latest">Último backup:</string>
+  <string name="updated">Atualizado:</string>
+  <string name="backup_cloud_uploading">Enviando ...</string>
+  <string name="update_now">Atualizar agora</string>
+  <string name="backup_cloud_empty">Não há backup</string>
+  <string name="btn_edit_profile">Editar perfil</string>
 </resources>

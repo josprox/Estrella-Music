@@ -130,9 +130,26 @@
   <string name="error_profile">Προφίλ ανάκτησης σφαλμάτων</string>
   <string name="error_connection">Σφάλμα σύνδεσης</string>
   <string name="error_no_session">Δεν είστε συνδεδεμένοι.</string>
-  <string name="btn_edit_profile">Επεξεργασία προφίλ</string>
   <string name="hello">Γειά σου</string>
   <string name="onboarding_brand_subtitle">Η μουσική σας, οι κανόνες σας.</string>
   <string name="next">Επόμενος</string>
   <string name="getStarted">Ξεκίνημα</string>
+  <string name="restore_success">Η αποκατάσταση της βάσης δεδομένων ολοκληρώθηκε</string>
+  <string name="backup_cloud_title">Σύννεφο</string>
+  <string name="backup_cloud_desc">Δημιουργήστε μια κρυπτογραφημένη/υποστήριξη zip και ανοίξτε το στο λογαριασμό σας.</string>
+  <string name="backup_cloud_login_hint">Εντοπίστε τη συνεδρία για να ενεργοποιήσετε την υποστήριξη cloud.</string>
+  <string name="action_backup_now">Πίσω τώρα</string>
+  <string name="backup_cloud_error">Αντίγραφα ασφαλείας σφαλμάτων</string>
+  <string name="backup_cloud_card_title">Αντίγραφο ασφαλείας</string>
+  <string name="backup_cloud_login_required">Συνδεθείτε για να ενεργοποιήσετε τα αντίγραφα ασφαλείας cloud.</string>
+  <string name="backup_cloud_loading">Αναζήτηση του τελευταίου σας αντιγράφου ασφαλείας…</string>
+  <string name="backup_cloud_none">Δεν έχετε ακόμη αντίγραφα ασφαλείας στο σύννεφο.</string>
+  <string name="backup_cloud_restoring">Επαναφορά…</string>
+  <string name="backup_cloud_restore_now">Επαναφορά αντιγράφου ασφαλείας</string>
+  <string name="backup_cloud_latest">Τελευταία αντίγραφα ασφαλείας:</string>
+  <string name="updated">Ενημερώθηκε:</string>
+  <string name="backup_cloud_uploading">Μεταφόρτωση ...</string>
+  <string name="update_now">Ενημέρωση τώρα</string>
+  <string name="backup_cloud_empty">Δεν υπάρχει αντίγραφο ασφαλείας</string>
+  <string name="btn_edit_profile">Επεξεργασία προφίλ</string>
 </resources>

@@ -130,9 +130,26 @@
   <string name="error_profile">Помилка отримання профілю</string>
   <string name="error_connection">Помилка з\'єднання</string>
   <string name="error_no_session">Ви не ввійшли в систему.</string>
-  <string name="btn_edit_profile">Редагувати профіль</string>
   <string name="hello">Привіт</string>
   <string name="onboarding_brand_subtitle">Ваша музика, ваші правила.</string>
   <string name="next">Наступний</string>
   <string name="getStarted">Розпочати</string>
+  <string name="restore_success">Відновлення завершеної бази даних</string>
+  <string name="backup_cloud_title">Хмара</string>
+  <string name="backup_cloud_desc">Створіть зашифровану/поштову підтримку та відкрийте її до свого облікового запису.</string>
+  <string name="backup_cloud_login_hint">Знайдіть сеанс для активації хмарної підтримки.</string>
+  <string name="action_backup_now">Назад зараз</string>
+  <string name="backup_cloud_error">Перелік помилок Резервні копії</string>
+  <string name="backup_cloud_card_title">Резервне копіювання хмари</string>
+  <string name="backup_cloud_login_required">Увійдіть, щоб активувати хмарні резервні копії.</string>
+  <string name="backup_cloud_loading">Пошук останньої резервної копії ...</string>
+  <string name="backup_cloud_none">У вас ще немає резервних копій у хмарі.</string>
+  <string name="backup_cloud_restoring">Відновлення ...</string>
+  <string name="backup_cloud_restore_now">Відновити резервну копію</string>
+  <string name="backup_cloud_latest">Останнє резервне копіювання:</string>
+  <string name="updated">Оновлено:</string>
+  <string name="backup_cloud_uploading">Завантаження ...</string>
+  <string name="update_now">Оновлення зараз</string>
+  <string name="backup_cloud_empty">Резервного копіювання немає</string>
+  <string name="btn_edit_profile">Редагувати профіль</string>
 </resources>

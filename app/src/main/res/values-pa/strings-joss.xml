@@ -150,9 +150,26 @@
   <string name="error_profile">ਪ੍ਰੋਫਾਈਲ ਨੂੰ ਪ੍ਰਾਪਤ ਕਰਨ ਦੌਰਾਨ ਗਲਤੀ</string>
   <string name="error_connection">ਕੁਨੈਕਸ਼ਨ ਗਲਤੀ</string>
   <string name="error_no_session">ਤੁਸੀਂ ਲੌਗਇਨ ਨਹੀਂ ਹੋ.</string>
-  <string name="btn_edit_profile">ਪ੍ਰੋਫਾਈਲ ਸੋਧੋ</string>
   <string name="hello">ਸਤ ਸ੍ਰੀ ਅਕਾਲ</string>
   <string name="onboarding_brand_subtitle">ਤੁਹਾਡਾ ਸੰਗੀਤ, ਤੁਹਾਡੇ ਨਿਯਮ.</string>
   <string name="next">ਅਗਲਾ</string>
   <string name="getStarted">ਸ਼ੁਰੂ ਕਰੋ</string>
+  <string name="restore_success">ਡਾਟਾਬੇਸ ਨੂੰ ਪੂਰਾ ਕਰਨ ਲਈ ਬਹਾਲੀ</string>
+  <string name="backup_cloud_title">ਬੱਦਲ</string>
+  <string name="backup_cloud_desc">ਇੱਕ ਇਨਕ੍ਰਿਪਟਡ / ਜ਼ਿਪ ਸਪੋਰਟ ਬਣਾਓ ਅਤੇ ਆਪਣੇ ਖਾਤੇ ਵਿੱਚ ਖੋਲ੍ਹੋ.</string>
+  <string name="backup_cloud_login_hint">ਕਲਾਉਡ ਸਹਾਇਤਾ ਨੂੰ ਸਰਗਰਮ ਕਰਨ ਲਈ ਸੈਸ਼ਨ ਦਾ ਪਤਾ ਲਗਾਓ.</string>
+  <string name="action_backup_now">ਵਾਪਸ ਹੁਣ</string>
+  <string name="backup_cloud_error">ਬੈਕਅਪ ਸੂਚੀਬੱਧ ਕਰਨ ਵਿੱਚ ਗਲਤੀ</string>
+  <string name="backup_cloud_card_title">ਕਲਾਉਡ ਬੈਕਅਪ</string>
+  <string name="backup_cloud_login_required">ਕਲਾਉਡ ਬੈਕਅਪ ਨੂੰ ਸਰਗਰਮ ਕਰਨ ਲਈ ਸਾਈਨ ਇਨ ਕਰੋ.</string>
+  <string name="backup_cloud_loading">ਤੁਹਾਡੇ ਨਵੀਨਤਮ ਬੈਕਅਪ ਦੀ ਭਾਲ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ ...</string>
+  <string name="backup_cloud_none">ਤੁਹਾਡੇ ਕੋਲ ਅਜੇ ਬੱਦਲ ਵਿੱਚ ਕੋਈ ਬੈਕਅਪ ਨਹੀਂ ਹੈ.</string>
+  <string name="backup_cloud_restoring">ਰੀਸਟੋਰ ਕਰ ਰਿਹਾ ਹੈ ...</string>
+  <string name="backup_cloud_restore_now">ਬੈਕਅਪ ਰੀਸਟੋਰ ਕਰੋ</string>
+  <string name="backup_cloud_latest">ਤਾਜ਼ਾ ਬੈਕਅਪ:</string>
+  <string name="updated">ਅਪਡੇਟ ਕੀਤਾ:</string>
+  <string name="backup_cloud_uploading">ਅਪਲੋਡ ...</string>
+  <string name="update_now">ਹੁਣ ਅਪਡੇਟ ਕਰੋ</string>
+  <string name="backup_cloud_empty">ਕੋਈ ਬੈਕਅਪ ਨਹੀਂ ਹੈ</string>
+  <string name="btn_edit_profile">ਪ੍ਰੋਫਾਈਲ ਸੋਧੋ</string>
 </resources>

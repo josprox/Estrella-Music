@@ -130,9 +130,26 @@
   <string name="error_profile">Profil Alma Hata</string>
   <string name="error_connection">Bağlantı hatası</string>
   <string name="error_no_session">Giriş yapmadın.</string>
-  <string name="btn_edit_profile">Profili Düzenle</string>
   <string name="hello">Merhaba</string>
   <string name="onboarding_brand_subtitle">Müziğiniz, kurallarınız.</string>
   <string name="next">Sonraki</string>
   <string name="getStarted">Başlamak</string>
+  <string name="restore_success">Veritabanının restorasyonu tamamlandı</string>
+  <string name="backup_cloud_title">Bulut</string>
+  <string name="backup_cloud_desc">Şifreli/zip desteği oluşturun ve hesabınıza açın.</string>
+  <string name="backup_cloud_login_hint">Bulut desteğini etkinleştirmek için oturumu bulun.</string>
+  <string name="action_backup_now">Şimdi geri dön</string>
+  <string name="backup_cloud_error">Yedeklemeleri listeleme hatası</string>
+  <string name="backup_cloud_card_title">Bulut yedekleme</string>
+  <string name="backup_cloud_login_required">Bulut yedeklemelerini etkinleştirmek için oturum açın.</string>
+  <string name="backup_cloud_loading">En son yedeklemenizi arıyorum…</string>
+  <string name="backup_cloud_none">Bulutta henüz yedeklemeniz yok.</string>
+  <string name="backup_cloud_restoring">Geri yükleme…</string>
+  <string name="backup_cloud_restore_now">Yedeklemeyi geri yükle</string>
+  <string name="backup_cloud_latest">Son yedekleme:</string>
+  <string name="updated">Güncellendi:</string>
+  <string name="backup_cloud_uploading">Yükleme ...</string>
+  <string name="update_now">Şimdi Güncelle</string>
+  <string name="backup_cloud_empty">Yedekleme yok</string>
+  <string name="btn_edit_profile">Profili Düzenle</string>
 </resources>

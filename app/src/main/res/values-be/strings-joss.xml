@@ -152,9 +152,26 @@
   <string name="error_profile">Профіль атрымання памылкі</string>
   <string name="error_connection">Памылка злучэння</string>
   <string name="error_no_session">Вы не ўвайшлі ў сістэму.</string>
-  <string name="btn_edit_profile">Рэдагаваць профіль</string>
   <string name="hello">Прывітанне</string>
   <string name="onboarding_brand_subtitle">Ваша музыка, вашы правілы.</string>
   <string name="next">Наступны</string>
   <string name="getStarted">Пачніце</string>
+  <string name="restore_success">Аднаўленне базы дадзеных завершана</string>
+  <string name="backup_cloud_title">Хмара</string>
+  <string name="backup_cloud_desc">Стварыце зашыфраваную/паштовую апору і адкрыйце яго ў свой уліковы запіс.</string>
+  <string name="backup_cloud_login_hint">Знайдзіце сеанс, каб актываваць падтрымку воблака.</string>
+  <string name="action_backup_now">Назад зараз</string>
+  <string name="backup_cloud_error">Пералік памылак рэзервовых копій</string>
+  <string name="backup_cloud_card_title">Воблачная рэзервовая копія</string>
+  <string name="backup_cloud_login_required">Увайдзіце, каб актываваць рэзервовыя копіі Cloud.</string>
+  <string name="backup_cloud_loading">Пошук вашай апошняй рэзервовай копіі ...</string>
+  <string name="backup_cloud_none">У вас яшчэ няма рэзервовых копій у воблаку.</string>
+  <string name="backup_cloud_restoring">Аднаўленне ...</string>
+  <string name="backup_cloud_restore_now">Аднавіць рэзервовую копію</string>
+  <string name="backup_cloud_latest">Апошняя рэзервовая копія:</string>
+  <string name="updated">Абноўлена:</string>
+  <string name="backup_cloud_uploading">Загрузка ...</string>
+  <string name="update_now">Абнавіце зараз</string>
+  <string name="backup_cloud_empty">Рэзервовага капіявання няма</string>
+  <string name="btn_edit_profile">Рэдагаваць профіль</string>
 </resources>

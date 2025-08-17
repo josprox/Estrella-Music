@@ -129,9 +129,26 @@
   <string name="error_profile">പ്രൊഫൈൽ വീണ്ടെടുക്കുന്നതിൽ പിശക്</string>
   <string name="error_connection">കണക്ഷൻ പിശക്</string>
   <string name="error_no_session">നിങ്ങൾ ലോഗിൻ ചെയ്തിട്ടില്ല.</string>
-  <string name="btn_edit_profile">പ്രൊഫൈൽ എഡിറ്റുചെയ്യുക</string>
   <string name="hello">ഹലോ</string>
   <string name="onboarding_brand_subtitle">നിങ്ങളുടെ സംഗീതം, നിങ്ങളുടെ നിയമങ്ങൾ.</string>
   <string name="next">അടുത്തത്</string>
   <string name="getStarted">ആരംഭിക്കുക</string>
+  <string name="restore_success">ഡാറ്റാബേസ് പൂർത്തിയായി</string>
+  <string name="backup_cloud_title">മേഘം</string>
+  <string name="backup_cloud_desc">ഒരു എൻക്രിപ്റ്റ് / സിപ്പ് പിന്തുണ സൃഷ്ടിച്ച് നിങ്ങളുടെ അക്കൗണ്ടിലേക്ക് തുറക്കുക.</string>
+  <string name="backup_cloud_login_hint">ക്ലൗഡ് പിന്തുണ സജീവമാക്കുന്നതിന് സെഷൻ കണ്ടെത്തുക.</string>
+  <string name="action_backup_now">ഇപ്പോൾ മടങ്ങുക</string>
+  <string name="backup_cloud_error">ബാക്കപ്പുകൾ ലിസ്റ്റിംഗ് ചെയ്യുന്നതിൽ പിശക്</string>
+  <string name="backup_cloud_card_title">ക്ലൗഡ് ബാക്കപ്പ്</string>
+  <string name="backup_cloud_login_required">ക്ലൗഡ് ബാക്കപ്പുകൾ സജീവമാക്കുന്നതിന് പ്രവേശിക്കുക.</string>
+  <string name="backup_cloud_loading">നിങ്ങളുടെ ഏറ്റവും പുതിയ ബാക്കപ്പ് തിരയുന്നു ...</string>
+  <string name="backup_cloud_none">നിങ്ങൾക്ക് ഇതുവരെ മേഘത്തിൽ ബാക്കപ്പുകൾ ഇല്ല.</string>
+  <string name="backup_cloud_restoring">പുന oring സ്ഥാപിക്കുന്നു ...</string>
+  <string name="backup_cloud_restore_now">ബാക്കപ്പ് പുന ore സ്ഥാപിക്കുക</string>
+  <string name="backup_cloud_latest">ഏറ്റവും പുതിയ ബാക്കപ്പ്:</string>
+  <string name="updated">അപ്ഡേറ്റുചെയ്തു:</string>
+  <string name="backup_cloud_uploading">അപ്ലോഡുചെയ്യുന്നു ...</string>
+  <string name="update_now">ഇപ്പോൾ അപ്ഡേറ്റ് ചെയ്യുക</string>
+  <string name="backup_cloud_empty">ബാക്കപ്പ് ഇല്ല</string>
+  <string name="btn_edit_profile">പ്രൊഫൈൽ എഡിറ്റുചെയ്യുക</string>
 </resources>

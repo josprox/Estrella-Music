@@ -130,9 +130,26 @@
   <string name="error_profile">Lỗi truy xuất hồ sơ</string>
   <string name="error_connection">Lỗi kết nối</string>
   <string name="error_no_session">Bạn không đăng nhập.</string>
-  <string name="btn_edit_profile">Chỉnh sửa hồ sơ</string>
   <string name="hello">Xin chào</string>
   <string name="onboarding_brand_subtitle">Âm nhạc của bạn, quy tắc của bạn.</string>
   <string name="next">Kế tiếp</string>
   <string name="getStarted">Bắt đầu</string>
+  <string name="restore_success">Phục hồi cơ sở dữ liệu đã hoàn thành</string>
+  <string name="backup_cloud_title">Đám mây</string>
+  <string name="backup_cloud_desc">Tạo hỗ trợ được mã hóa/zip và mở nó vào tài khoản của bạn.</string>
+  <string name="backup_cloud_login_hint">Xác định vị trí phiên để kích hoạt hỗ trợ đám mây.</string>
+  <string name="action_backup_now">Trở lại bây giờ</string>
+  <string name="backup_cloud_error">Lỗi liệt kê các bản sao lưu</string>
+  <string name="backup_cloud_card_title">Sao lưu đám mây</string>
+  <string name="backup_cloud_login_required">Đăng nhập để kích hoạt bản sao lưu đám mây.</string>
+  <string name="backup_cloud_loading">Tìm kiếm bản sao lưu mới nhất của bạn</string>
+  <string name="backup_cloud_none">Bạn không có bất kỳ bản sao lưu nào trên đám mây.</string>
+  <string name="backup_cloud_restoring">Khôi phục</string>
+  <string name="backup_cloud_restore_now">Khôi phục sao lưu</string>
+  <string name="backup_cloud_latest">Sao lưu mới nhất:</string>
+  <string name="updated">Cập nhật:</string>
+  <string name="backup_cloud_uploading">Tải lên ...</string>
+  <string name="update_now">Cập nhật ngay bây giờ</string>
+  <string name="backup_cloud_empty">Không có bản sao lưu</string>
+  <string name="btn_edit_profile">Chỉnh sửa hồ sơ</string>
 </resources>

@@ -96,9 +96,26 @@
   <string name="error_profile">Profilo di recupero degli errori</string>
   <string name="error_connection">Errore di connessione</string>
   <string name="error_no_session">Non hai effettuato l\'accesso.</string>
-  <string name="btn_edit_profile">Modifica profilo</string>
   <string name="hello">Ciao</string>
   <string name="onboarding_brand_subtitle">La tua musica, le tue regole.</string>
   <string name="next">Prossimo</string>
   <string name="getStarted">Inizia</string>
+  <string name="restore_success">Restauro del database completato</string>
+  <string name="backup_cloud_title">Nuvola</string>
+  <string name="backup_cloud_desc">Crea un supporto crittografato/zip e aprilo al tuo account.</string>
+  <string name="backup_cloud_login_hint">Individua la sessione per attivare il supporto del cloud.</string>
+  <string name="action_backup_now">Indietro adesso</string>
+  <string name="backup_cloud_error">Errori di backup di elenchi</string>
+  <string name="backup_cloud_card_title">Backup del cloud</string>
+  <string name="backup_cloud_login_required">Accedi per attivare i backup del cloud.</string>
+  <string name="backup_cloud_loading">Cerca il tuo ultimo backup…</string>
+  <string name="backup_cloud_none">Non hai ancora backup nel cloud.</string>
+  <string name="backup_cloud_restoring">Ripristino…</string>
+  <string name="backup_cloud_restore_now">Ripristina il backup</string>
+  <string name="backup_cloud_latest">Ultimo backup:</string>
+  <string name="updated">Aggiornato:</string>
+  <string name="backup_cloud_uploading">Caricamento…</string>
+  <string name="update_now">Aggiorna ora</string>
+  <string name="backup_cloud_empty">Non c\'è backup</string>
+  <string name="btn_edit_profile">Modifica profilo</string>
 </resources>

@@ -130,9 +130,26 @@
   <string name="error_profile">Fout bij het ophalen van profiel</string>
   <string name="error_connection">Verbindingsfout</string>
   <string name="error_no_session">U bent niet ingelogd.</string>
-  <string name="btn_edit_profile">Bewerk profiel</string>
   <string name="hello">Hallo</string>
   <string name="onboarding_brand_subtitle">Uw muziek, uw regels.</string>
   <string name="next">Volgende</string>
   <string name="getStarted">Aan de slag gaan</string>
+  <string name="restore_success">Herstel van de database voltooid</string>
+  <string name="backup_cloud_title">Wolk</string>
+  <string name="backup_cloud_desc">Maak een gecodeerde/zip -ondersteuning en open deze voor uw account.</string>
+  <string name="backup_cloud_login_hint">Zoek de sessie om cloudondersteuning te activeren.</string>
+  <string name="action_backup_now">Nu terug</string>
+  <string name="backup_cloud_error">Foutlijstback -ups</string>
+  <string name="backup_cloud_card_title">Wolkenback -up</string>
+  <string name="backup_cloud_login_required">Log in om cloudback -ups te activeren.</string>
+  <string name="backup_cloud_loading">Het zoeken naar uw laatste back -up ...</string>
+  <string name="backup_cloud_none">Je hebt nog geen back -ups in de cloud.</string>
+  <string name="backup_cloud_restoring">Herstellen ...</string>
+  <string name="backup_cloud_restore_now">Herstel de back -up</string>
+  <string name="backup_cloud_latest">Laatste back -up:</string>
+  <string name="updated">Bijgewerkt:</string>
+  <string name="backup_cloud_uploading">Uploaden ...</string>
+  <string name="update_now">Update nu</string>
+  <string name="backup_cloud_empty">Er is geen back -up</string>
+  <string name="btn_edit_profile">Bewerk profiel</string>
 </resources>

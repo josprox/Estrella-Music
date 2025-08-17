@@ -130,9 +130,26 @@
   <string name="error_profile">错误检索轮廓</string>
   <string name="error_connection">连接错误</string>
   <string name="error_no_session">您没有登录。</string>
-  <string name="btn_edit_profile">编辑个人资料</string>
   <string name="hello">你好</string>
   <string name="onboarding_brand_subtitle">您的音乐，规则。</string>
   <string name="next">下一个</string>
   <string name="getStarted">开始</string>
+  <string name="restore_success">恢复数据库已完成</string>
+  <string name="backup_cloud_title">云</string>
+  <string name="backup_cloud_desc">创建一个加密/拉链支持并将其打开到您的帐户。</string>
+  <string name="backup_cloud_login_hint">定位会话以激活云支持。</string>
+  <string name="action_backup_now">现在回来</string>
+  <string name="backup_cloud_error">错误列表备份</string>
+  <string name="backup_cloud_card_title">云备份</string>
+  <string name="backup_cloud_login_required">登录以激活云备份。</string>
+  <string name="backup_cloud_loading">搜索您的最新备份…</string>
+  <string name="backup_cloud_none">您还没有云中的任何备份。</string>
+  <string name="backup_cloud_restoring">恢复…</string>
+  <string name="backup_cloud_restore_now">还原备份</string>
+  <string name="backup_cloud_latest">最新备份：</string>
+  <string name="updated">更新：</string>
+  <string name="backup_cloud_uploading">上传...</string>
+  <string name="update_now">立即更新</string>
+  <string name="backup_cloud_empty">没有备份</string>
+  <string name="btn_edit_profile">编辑个人资料</string>
 </resources>
