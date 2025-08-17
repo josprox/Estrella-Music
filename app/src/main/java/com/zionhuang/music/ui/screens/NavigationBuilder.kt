@@ -12,6 +12,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.NavType
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
+import com.zionhuang.music.ui.auth.WelcomeRoute
 import com.zionhuang.music.ui.screens.artist.ArtistItemsScreen
 import com.zionhuang.music.ui.screens.artist.ArtistScreen
 import com.zionhuang.music.ui.screens.artist.ArtistSongsScreen
@@ -29,6 +30,7 @@ import com.zionhuang.music.ui.screens.settings.ContentSettings
 import com.zionhuang.music.ui.screens.settings.DataUpdate
 import com.zionhuang.music.ui.screens.settings.DiscordLoginScreen
 import com.zionhuang.music.ui.screens.settings.DiscordSettings
+import com.zionhuang.music.ui.screens.settings.JossRedAccountCard
 import com.zionhuang.music.ui.screens.settings.JossRedSettings
 import com.zionhuang.music.ui.screens.settings.PlayerSettings
 import com.zionhuang.music.ui.screens.settings.PrivacySettings
@@ -196,6 +198,33 @@ fun NavGraphBuilder.navigationBuilder(
     composable("JossRedSettings") {
         JossRedSettings(navController, scrollBehavior)
     }
+    // En tu NavHost
+    composable("auth/welcome") {
+        WelcomeRoute(
+            onAuthSuccess = {
+                val popped = navController.popBackStack()
+                if (!popped) {
+                    navController.navigate("settings") {
+                        popUpTo(navController.graph.startDestinationId) { saveState = true }
+                        launchSingleTop = true
+                        restoreState = true
+                    }
+                }
+            },
+            onSkip = {
+                // 👈 evita el login y regresa a donde estabas (p.ej. Ajustes)
+                val popped = navController.popBackStack()
+                if (!popped) {
+                    navController.navigate("settings") {
+                        popUpTo(navController.graph.startDestinationId) { saveState = true }
+                        launchSingleTop = true
+                        restoreState = true
+                    }
+                }
+            }
+        )
+    }
+
     composable("settings/appearance") {
         AppearanceSettings(navController, scrollBehavior)
     }

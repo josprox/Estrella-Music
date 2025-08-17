@@ -22,6 +22,7 @@ import androidx.datastore.preferences.core.edit
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.ProcessLifecycleOwner
 import androidx.lifecycle.lifecycleScope
+import com.josprox.jossredconnect.services.AuthService
 import com.onesignal.OneSignal
 import com.zionhuang.music.constants.DisableScreenshotKey
 import com.zionhuang.music.constants.OnboardingShownKey
@@ -31,8 +32,8 @@ import com.zionhuang.music.playback.DownloadUtil
 import com.zionhuang.music.playback.MusicService
 import com.zionhuang.music.playback.MusicService.MusicBinder
 import com.zionhuang.music.playback.PlayerConnection
+import com.zionhuang.music.ui.auth.WelcomeRoute
 import com.zionhuang.music.ui.onboarding.CarouselItem
-import com.zionhuang.music.ui.onboarding.OnboardingActivity
 import com.zionhuang.music.ui.onboarding.OnboardingScreen
 import com.zionhuang.music.ui.screens.NotificationPermissionScreen
 import com.zionhuang.music.utils.UpdateChecker
@@ -41,24 +42,26 @@ import com.zionhuang.music.utils.UpdateMainViewModelFactory
 import com.zionhuang.music.utils.dataStore
 import com.zionhuang.music.utils.get
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
-import org.dotenv.vault.dotenvVault
+import kotlinx.coroutines.withContext
 import timber.log.Timber
 import javax.inject.Inject
-
-val dotenv = dotenvVault(BuildConfig.DOTENV_KEY) {
-    directory = "/assets"
-    filename = "env.vault"
-}
-val ONESIGNAL_APP_ID: String = dotenv["ONESIGNAL_APP_ID"]
+import javax.inject.Named
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     @Inject lateinit var database: MusicDatabase
     @Inject lateinit var downloadUtil: DownloadUtil
+
+    // Inyectado: servicio de auth ya configurado con claves del vault
+    @Inject lateinit var auth: AuthService
+
+    // Inyectado: OneSignal App Id (oculto detrás de SecureKeys/SecretsModule)
+    @Inject @Named("OneSignalAppId") lateinit var oneSignalAppId: String
 
     private var isServiceBound = false
     private var playerConnection by mutableStateOf<PlayerConnection?>(null)
@@ -77,7 +80,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    // Deep link que arrancó la Activity (lo consume la UI principal)
+    // Deep link de arranque (lo consume la UI principal)
     private var initialIntent: Intent? = null
 
     private val updateViewModel: UpdateMainViewModel by viewModels {
@@ -117,11 +120,15 @@ class MainActivity : ComponentActivity() {
         // Guarda el intent inicial (deep link)
         initialIntent = intent
 
-        // OneSignal + checker de updates
-        OneSignal.initWithContext(this, ONESIGNAL_APP_ID)
+        // OneSignal (solo si hay App Id válido) + checker de updates
+        if (oneSignalAppId.isNotBlank()) {
+            OneSignal.initWithContext(this, oneSignalAppId)
+        } else {
+            Timber.w("OneSignal App Id vacío; se omite inicialización.")
+        }
         UpdateChecker(this).checkForUpdates()
 
-        // Secure flag por preferencia
+        // Secure flag (bloquear screenshots) según preferencia
         lifecycleScope.launch {
             dataStore.data
                 .map { it[DisableScreenshotKey] == true }
@@ -174,29 +181,55 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    // --------------------- Si hay permiso, decidir Onboarding o App ---------------------
-    private fun maybeStartOnboardingOrApp() {
+    // --------------------- Welcome/Auth (login/registro/recuperar/skip) ---------------------
+    private fun showWelcome() {
+        setContent {
+            WelcomeRoute(
+                onAuthSuccess = { initializeApp() },
+                onSkip = { initializeApp() } // “No iniciar sesión por ahora”
+            )
+        }
+    }
+
+    // --------------------- Comprobar sesión con AuthService ---------------------
+    private suspend fun ensureValidSession(): Boolean = withContext(Dispatchers.IO) {
+        try {
+            // checkToken() refresca si faltan <= 15 días (via shouldRefreshToken).
+            // Si ya caducó o falla, devolvemos false y cerramos sesión local.
+            val res = auth.checkToken()
+            val ok = (res["success"] == true && (res["valid"] as? Boolean ?: false))
+            if (!ok) {
+                auth.logout() // limpia storage si token inválido/expirado
+            }
+            ok
+        } catch (e: Exception) {
+            Timber.e(e, "Error comprobando sesión")
+            false
+        }
+    }
+
+    // --------------------- Flujo tras conceder permiso ---------------------
+    private fun maybeStartWelcomeOrApp() {
         lifecycleScope.launch {
             val hasDeepLink = intent?.data != null
             val alreadyShown = applicationContext.dataStore[OnboardingShownKey] == true
 
-            if (alreadyShown) {
-                // Ya lo vio → directo a la app
+            // Deep link tiene prioridad para manejar de inmediato en la app
+            if (hasDeepLink) {
                 initializeApp()
-            } else {
-                if (hasDeepLink) {
-                    // 1) Maneja el deep link ya mismo
+                return@launch
+            }
+
+            val loggedIn = ensureValidSession()
+
+            if (loggedIn) {
+                // Usuario autenticado → onboarding solo si nunca lo vio
+                if (alreadyShown) {
                     initializeApp()
-                    // 2) Luego muestra el onboarding ENCIMA como actividad aparte
-                    window.decorView.post {
-                        startActivity(Intent(this@MainActivity, OnboardingActivity::class.java))
-                    }
                 } else {
-                    // Sin deep link → muestra onboarding primero
                     setContent {
-                        val items = jossOnboardingItems()
                         OnboardingScreen(
-                            items = items,
+                            items = jossOnboardingItems(),
                             onFinish = {
                                 lifecycleScope.launch {
                                     applicationContext.dataStore.edit { it[OnboardingShownKey] = true }
@@ -205,6 +238,23 @@ class MainActivity : ComponentActivity() {
                             }
                         )
                     }
+                }
+            } else {
+                // No autenticado → onboarding (si aplica) y luego Welcome
+                if (!alreadyShown) {
+                    setContent {
+                        OnboardingScreen(
+                            items = jossOnboardingItems(),
+                            onFinish = {
+                                lifecycleScope.launch {
+                                    applicationContext.dataStore.edit { it[OnboardingShownKey] = true }
+                                }
+                                showWelcome()
+                            }
+                        )
+                    }
+                } else {
+                    showWelcome()
                 }
             }
         }
@@ -215,7 +265,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             NotificationPermissionScreen(
                 context = this,
-                onPermissionGranted = { maybeStartOnboardingOrApp() },
+                onPermissionGranted = { maybeStartWelcomeOrApp() },
                 onBackPressed = { finish() }
             )
         }
@@ -229,16 +279,13 @@ class MainActivity : ComponentActivity() {
                 ActivityResultContracts.RequestPermission()
             ) { granted ->
                 if (granted) {
-                    // Concedido → ahora sí, Onboarding (si aplica) o App
-                    maybeStartOnboardingOrApp()
+                    maybeStartWelcomeOrApp()
                 } else {
-                    // No concedido → pantalla que guía a habilitar
                     showNotificationPermissionScreen()
                 }
             }.launch(Manifest.permission.POST_NOTIFICATIONS)
         } else {
-            // En Android < 13 no hace falta pedir permiso
-            maybeStartOnboardingOrApp()
+            maybeStartWelcomeOrApp()
         }
     }
 

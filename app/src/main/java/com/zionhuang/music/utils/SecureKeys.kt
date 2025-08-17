@@ -1,14 +1,52 @@
+// app/src/main/java/com/zionhuang/music/utils/SecureKeys.kt
 package com.zionhuang.music.utils
 
+import android.content.Context
+import com.josprox.jossredconnect.services.AuthService
 import com.zionhuang.music.BuildConfig
 import org.dotenv.vault.dotenvVault
+import timber.log.Timber
 
 object SecureKeys {
-    fun getJossRedKey(): String {
-        val dotenv = dotenvVault(BuildConfig.DOTENV_KEY) {
+
+    // Cargamos el vault solo una vez
+    private val vault by lazy {
+        dotenvVault(BuildConfig.DOTENV_KEY) {
             directory = "/assets"
             filename = "env.vault"
         }
-        return dotenv["STREAMING_HEAD_JOSSRED"] ?: ""
+    }
+
+    // Getter seguro con fallback + log
+    private fun get(key: String, def: String = ""): String {
+        val v = runCatching { vault[key] }.getOrNull()
+        if (v.isNullOrBlank()) {
+            Timber.w("SecureKeys: clave faltante o vacía: %s", key)
+            return def
+        }
+        return v
+    }
+
+    // ---- Getters públicos ----
+    val oneSignalAppId: String
+        get() = get("ONESIGNAL_APP_ID")
+
+    val jossRedBaseUrl: String
+        get() = get("JOSSRED").let { if (it.endsWith("/")) it else "$it/" }
+
+    val jossRedApiToken: String
+        get() = get("JOSSRED_API")
+
+    val homepageUrl: String get() = get("HOMEPAGE")
+    // Opción A: función (para evitar colisiones nombre/propiedad)
+    fun getJossRedKey(): String = get("STREAMING_HEAD_JOSSRED")
+
+    // ---- Constructor de servicios ya configurados ----
+    fun createAuthService(context: Context): AuthService {
+        return AuthService(
+            context = context,
+            baseUrl = jossRedBaseUrl,
+            apiToken = jossRedApiToken
+        )
     }
 }

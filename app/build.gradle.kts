@@ -172,6 +172,7 @@ dependencies {
 
     implementation(libs.room.runtime)
     implementation(libs.androidx.media3.ui)
+    implementation(libs.androidx.foundation)
     ksp(libs.room.compiler)
     implementation(libs.room.ktx)
 

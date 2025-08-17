@@ -4,39 +4,13 @@ import android.content.Intent
 import android.net.Uri
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.border
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.WindowInsetsSides
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.only
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.windowInsetsPadding
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
-import androidx.compose.material3.TopAppBar
-import androidx.compose.material3.TopAppBarScrollBehavior
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.runtime.setValue
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
@@ -49,20 +23,15 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import coil.compose.AsyncImage
 import com.my.kizzy.rpc.KizzyRPC
-import com.zionhuang.music.BuildConfig
 import com.zionhuang.music.LocalPlayerAwareWindowInsets
 import com.zionhuang.music.LocalPlayerConnection
 import com.zionhuang.music.R
-import com.zionhuang.music.constants.DiscordInfoDismissedKey
-import com.zionhuang.music.constants.DiscordNameKey
-import com.zionhuang.music.constants.DiscordTokenKey
-import com.zionhuang.music.constants.DiscordUsernameKey
-import com.zionhuang.music.constants.EnableDiscordRPCKey
+import com.zionhuang.music.constants.*
 import com.zionhuang.music.db.entities.Song
-import com.zionhuang.music.dotenv
 import com.zionhuang.music.ui.component.IconButton
 import com.zionhuang.music.ui.component.PreferenceEntry
 import com.zionhuang.music.ui.component.PreferenceGroupTitle
@@ -71,16 +40,16 @@ import com.zionhuang.music.ui.utils.backToMain
 import com.zionhuang.music.utils.rememberPreference
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import org.dotenv.vault.dotenvVault
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DiscordSettings(
     navController: NavController,
-    scrollBehavior: TopAppBarScrollBehavior,
+    scrollBehavior: TopAppBarScrollBehavior
 ) {
     val playerConnection = LocalPlayerConnection.current ?: return
     val song by playerConnection.currentSong.collectAsState(null)
+    val envVm: DiscordEnvViewModel = hiltViewModel()
 
     val coroutineScope = rememberCoroutineScope()
 
@@ -89,16 +58,9 @@ fun DiscordSettings(
     var discordName by rememberPreference(DiscordNameKey, "")
     var infoDismissed by rememberPreference(DiscordInfoDismissedKey, false)
 
-    val dotenv = dotenvVault(BuildConfig.DOTENV_KEY) {
-        directory = "/assets"
-        filename = "env.vault" // instead of '.env', use 'env'
-    }
-
     LaunchedEffect(discordToken) {
         val token = discordToken
-        if (token.isEmpty()) {
-            return@LaunchedEffect
-        }
+        if (token.isEmpty()) return@LaunchedEffect
         coroutineScope.launch(Dispatchers.IO) {
             KizzyRPC.getUserInfo(token).onSuccess {
                 discordUsername = it.username
@@ -108,10 +70,7 @@ fun DiscordSettings(
     }
 
     val (discordRPC, onDiscordRPCChange) = rememberPreference(key = EnableDiscordRPCKey, defaultValue = true)
-
-    val isLoggedIn = remember(discordToken) {
-        discordToken != ""
-    }
+    val isLoggedIn = discordToken.isNotEmpty()
 
     Column(
         Modifier
@@ -120,45 +79,27 @@ fun DiscordSettings(
     ) {
         Spacer(Modifier.windowInsetsPadding(LocalPlayerAwareWindowInsets.current.only(WindowInsetsSides.Top)))
 
-        AnimatedVisibility(
-            visible = !infoDismissed
-        ) {
+        AnimatedVisibility(visible = !infoDismissed) {
             Card(
-                colors = CardDefaults.cardColors(
-                    containerColor = MaterialTheme.colorScheme.surfaceVariant,
-                ),
+                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(16.dp)
             ) {
-                Icon(
-                    painter = painterResource(R.drawable.info),
-                    contentDescription = null,
-                    modifier = Modifier.padding(16.dp)
-                )
-
+                Icon(painterResource(R.drawable.info), contentDescription = null, modifier = Modifier.padding(16.dp))
                 Text(
                     text = stringResource(R.string.discord_information),
                     textAlign = TextAlign.Start,
                     modifier = Modifier.padding(horizontal = 16.dp),
                 )
-
                 TextButton(
-                    onClick = {
-                        infoDismissed = true
-                    },
-                    modifier = Modifier
-                        .align(Alignment.End)
-                        .padding(16.dp)
-                ) {
-                    Text(stringResource(R.string.dismiss))
-                }
+                    onClick = { infoDismissed = true },
+                    modifier = Modifier.align(Alignment.End).padding(16.dp)
+                ) { Text(stringResource(R.string.dismiss)) }
             }
         }
 
-        PreferenceGroupTitle(
-            title = stringResource(R.string.account)
-        )
+        PreferenceGroupTitle(title = stringResource(R.string.account))
 
         PreferenceEntry(
             title = {
@@ -167,9 +108,7 @@ fun DiscordSettings(
                     modifier = Modifier.alpha(if (isLoggedIn) 1f else 0.5f)
                 )
             },
-            description = if (discordUsername.isNotEmpty()) {
-                "@$discordUsername"
-            } else null,
+            description = if (discordUsername.isNotEmpty()) "@$discordUsername" else null,
             icon = { Icon(painterResource(R.drawable.discord), null) },
             trailingContent = {
                 if (isLoggedIn) {
@@ -177,35 +116,26 @@ fun DiscordSettings(
                         discordName = ""
                         discordToken = ""
                         discordUsername = ""
-                    }) {
-                        Text(stringResource(R.string.logout))
-                    }
+                    }) { Text(stringResource(R.string.logout)) }
                 } else {
-                    OutlinedButton(onClick = {
-                        navController.navigate("settings/discord/login")
-                    }) {
+                    OutlinedButton(onClick = { navController.navigate("settings/discord/login") }) {
                         Text(stringResource(R.string.login))
                     }
                 }
             }
         )
 
-        PreferenceGroupTitle(
-            title = stringResource(R.string.options)
-        )
+        PreferenceGroupTitle(title = stringResource(R.string.options))
 
         SwitchPreference(
             title = { Text(stringResource(R.string.enable_discord_rpc)) },
             checked = discordRPC,
             onCheckedChange = onDiscordRPCChange,
-            isEnabled = isLoggedIn
+            isEnabled = isLoggedIn // <- sólo si hay sesión
         )
 
-        PreferenceGroupTitle(
-            title = stringResource(R.string.preview)
-        )
-
-        RichPresence(song)
+        PreferenceGroupTitle(title = stringResource(R.string.preview))
+        RichPresence(song = song, homepageUrl = envVm.homepageUrl)
     }
 
     TopAppBar(
@@ -214,20 +144,16 @@ fun DiscordSettings(
             IconButton(
                 onClick = navController::navigateUp,
                 onLongClick = navController::backToMain
-            ) {
-                Icon(
-                    painterResource(R.drawable.arrow_back),
-                    contentDescription = null
-                )
-            }
+            ) { Icon(painterResource(R.drawable.arrow_back), contentDescription = null) }
         },
         scrollBehavior = scrollBehavior
     )
 }
 
 @Composable
-fun RichPresence(
+private fun RichPresence(
     song: Song?,
+    homepageUrl: String, // <- viene inyectado desde VM
 ) {
     val context = LocalContext.current
 
@@ -253,12 +179,8 @@ fun RichPresence(
 
             Spacer(Modifier.height(16.dp))
 
-            Row(
-                verticalAlignment = Alignment.Top
-            ) {
-                Box(
-                    Modifier.size(108.dp)
-                ) {
+            Row(verticalAlignment = Alignment.Top) {
+                Box(Modifier.size(108.dp)) {
                     AsyncImage(
                         model = song?.song?.thumbnailUrl,
                         contentDescription = null,
@@ -304,7 +226,6 @@ fun RichPresence(
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis,
                     )
-
                     Text(
                         text = song?.artists?.joinToString { it.name } ?: "Artist",
                         color = MaterialTheme.colorScheme.secondary,
@@ -312,7 +233,6 @@ fun RichPresence(
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis,
                     )
-
                     song?.album?.title?.let {
                         Text(
                             text = it,
@@ -330,23 +250,22 @@ fun RichPresence(
             OutlinedButton(
                 enabled = song != null,
                 onClick = {
-                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://music.youtube.com/watch?v=${song?.id}"))
+                    val intent = Intent(
+                        Intent.ACTION_VIEW,
+                        Uri.parse("https://music.youtube.com/watch?v=${song?.id}")
+                    )
                     context.startActivity(intent)
                 },
                 modifier = Modifier.fillMaxWidth()
-            ) {
-                Text("Listen on YouTube Music")
-            }
+            ) { Text("Listen on YouTube Music") }
 
             OutlinedButton(
                 onClick = {
-                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(dotenv["HOMEPAGE"]))
-                    context.startActivity(intent)
+                    val url = homepageUrl.ifBlank { "https://jossmusic.com" }
+                    context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
                 },
                 modifier = Modifier.fillMaxWidth()
-            ) {
-                Text("Visit Joss Music")
-            }
+            ) { Text("Visit Joss Music") }
         }
     }
 }

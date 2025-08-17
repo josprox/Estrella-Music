@@ -1,5 +1,7 @@
 package com.zionhuang.music.ui.screens.settings
 
+import android.content.Context
+import android.content.SharedPreferences
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -11,13 +13,14 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.LargeTopAppBar
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarScrollBehavior
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.input.nestedscroll.nestedScroll
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
@@ -44,6 +47,9 @@ fun JossRedSettings(
     val (jossRedMultimedia, onJossRedMultimediaChange) = rememberPreference(key = JossRedMultimedia, defaultValue = false)
     val (autoSkipNextOnError, onAutoSkipNextOnErrorChange) = rememberPreference(AutoSkipNextOnErrorKey, defaultValue = false)
 
+    // 🔐 Detecta si hay sesión iniciada (token válido)
+    val isLoggedIn by rememberIsLoggedIn()
+
     Scaffold(
         modifier = Modifier.nestedScroll(scrollBehavior.nestedScrollConnection),
         topBar = {
@@ -64,7 +70,17 @@ fun JossRedSettings(
     ) { innerPadding ->
         LazyColumn(contentPadding = innerPadding) {
 
-            // --- Mensaje de Bienvenida Estilizado ---
+            // ---- Tarjeta de cuenta / acceso ----
+            item {
+                JossRedAccountCard(
+                    modifier = Modifier.padding(16.dp),
+                    onLoginClick = { navController.navigate("auth/welcome") }
+                )
+            }
+
+            item { HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp)) }
+
+            // Mensaje de bienvenida
             item {
                 Text(
                     text = stringResource(R.string.jossredSettings_welcome),
@@ -75,11 +91,11 @@ fun JossRedSettings(
                 )
             }
 
-            item {
-                HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))
-            }
+            item { HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp)) }
 
+            // Preferencia: habilitar proxy Joss Red
             item {
+                val enabled = isLoggedIn
                 ExpressivePreferenceEntry(
                     title = { Text(stringResource(R.string.enable_proxy) + " Joss Red") },
                     icon = {
@@ -92,14 +108,23 @@ fun JossRedSettings(
                                 .background(MaterialTheme.colorScheme.surfaceContainer)
                         )
                     },
-                    onClick = { onJossRedEnabledChange(!jossRedEnabled) },
+                    onClick = {
+                        if (enabled) onJossRedEnabledChange(!jossRedEnabled)
+                    },
                     trailingContent = {
-                        CustomSwitchPreference(checked = jossRedEnabled, onCheckedChange = onJossRedEnabledChange)
-                    }
+                        CustomSwitchPreference(
+                            checked = jossRedEnabled,
+                            onCheckedChange = { if (enabled) onJossRedEnabledChange(it) },
+                            isEnabled = enabled // 👈 requiere el parámetro 'enabled' en tu CustomSwitchPreference
+                        )
+                    },
+                    modifier = Modifier.alpha(if (enabled) 1f else 0.5f) // feedback visual
                 )
             }
 
+            // Preferencia: reproducir con JR
             item {
+                val enabled = isLoggedIn
                 ExpressivePreferenceEntry(
                     title = { Text(stringResource(R.string.playSongJR)) },
                     description = { Text(stringResource(R.string.playSongJRDesc)) },
@@ -110,14 +135,23 @@ fun JossRedSettings(
                             tint = MaterialTheme.colorScheme.primary
                         )
                     },
-                    onClick = { onJossRedMultimediaChange(!jossRedMultimedia) },
+                    onClick = {
+                        if (enabled) onJossRedMultimediaChange(!jossRedMultimedia)
+                    },
                     trailingContent = {
-                        CustomSwitchPreference(checked = jossRedMultimedia, onCheckedChange = onJossRedMultimediaChange)
-                    }
+                        CustomSwitchPreference(
+                            checked = jossRedMultimedia,
+                            onCheckedChange = { if (enabled) onJossRedMultimediaChange(it) },
+                            isEnabled = enabled
+                        )
+                    },
+                    modifier = Modifier.alpha(if (enabled) 1f else 0.5f)
                 )
             }
 
+            // Preferencia: auto-skip
             item {
+                val enabled = isLoggedIn
                 ExpressivePreferenceEntry(
                     title = { Text(stringResource(R.string.auto_skip_next_on_error)) },
                     description = { Text(stringResource(R.string.auto_skip_next_on_error_desc)) },
@@ -128,12 +162,54 @@ fun JossRedSettings(
                             tint = MaterialTheme.colorScheme.primary
                         )
                     },
-                    onClick = { onAutoSkipNextOnErrorChange(!autoSkipNextOnError) },
+                    onClick = {
+                        if (enabled) onAutoSkipNextOnErrorChange(!autoSkipNextOnError)
+                    },
                     trailingContent = {
-                        CustomSwitchPreference(checked = autoSkipNextOnError, onCheckedChange = onAutoSkipNextOnErrorChange)
-                    }
+                        CustomSwitchPreference(
+                            checked = autoSkipNextOnError,
+                            onCheckedChange = { if (enabled) onAutoSkipNextOnErrorChange(it) },
+                            isEnabled = enabled
+                        )
+                    },
+                    modifier = Modifier.alpha(if (enabled) 1f else 0.5f)
                 )
             }
         }
     }
+}
+
+/* ---------------- Helpers ---------------- */
+
+@Composable
+private fun rememberIsLoggedIn(): State<Boolean> {
+    val context = LocalContext.current
+    val state = remember { mutableStateOf(false) }
+
+    // Revisa al entrar
+    LaunchedEffect(Unit) {
+        state.value = context.isTokenValidNow()
+    }
+
+    // Escucha cambios en SharedPreferences para actualizar en vivo (login/logout)
+    DisposableEffect(Unit) {
+        val prefs = context.getSharedPreferences("jossred_prefs", Context.MODE_PRIVATE)
+        val listener = SharedPreferences.OnSharedPreferenceChangeListener { _, key ->
+            if (key == "jwt_token" || key == "token_expiration") {
+                state.value = context.isTokenValidNow()
+            }
+        }
+        prefs.registerOnSharedPreferenceChangeListener(listener)
+        onDispose { prefs.unregisterOnSharedPreferenceChangeListener(listener) }
+    }
+
+    return state
+}
+
+private fun Context.isTokenValidNow(): Boolean {
+    val prefs = getSharedPreferences("jossred_prefs", Context.MODE_PRIVATE)
+    val token = prefs.getString("jwt_token", null)
+    val exp = prefs.getLong("token_expiration", -1L) // segundos UNIX
+    val now = System.currentTimeMillis() / 1000L
+    return !token.isNullOrBlank() && exp > now
 }
