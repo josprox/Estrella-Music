@@ -3,38 +3,60 @@ package com.zionhuang.music.ui.screens.settings
 import android.content.Intent
 import android.net.Uri
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material3.*
-import androidx.compose.runtime.*
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.LinearProgressIndicator
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.josprox.jossredconnect.services.AuthService
+import com.zionhuang.music.BuildConfig
+import com.zionhuang.music.R
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import org.dotenv.vault.dotenvVault
 import org.json.JSONObject
 import timber.log.Timber
-import com.josprox.jossredconnect.services.AuthService
-import org.dotenv.vault.dotenvVault
-import com.zionhuang.music.BuildConfig
-import com.zionhuang.music.R
 
 @Composable
 fun JossRedAccountCard(
     modifier: Modifier = Modifier,
-    // Si tienes navegación al flujo de auth, pásala aquí:
     onLoginClick: (() -> Unit)? = null,
 ) {
     val ctx = LocalContext.current
     val scope = rememberCoroutineScope()
 
-    // Carga segura del env.vault (no crashea si falta algo)
     val (baseUrl, apiToken) = remember {
         val dv = runCatching {
             dotenvVault(BuildConfig.DOTENV_KEY) {
@@ -42,13 +64,11 @@ fun JossRedAccountCard(
                 filename = "env.vault"
             }
         }.getOrNull()
-        val url = runCatching { dv?.get("JOSSRED") }.getOrNull()
-            ?: "" // <-- tu fallback si aplica
+        val url = runCatching { dv?.get("JOSSRED") }.getOrNull().orEmpty()
         val token = runCatching { dv?.get("JOSSRED_API") }.getOrNull().orEmpty()
         url to token
     }
 
-    // Un AuthService por composición
     val auth = remember(baseUrl, apiToken) {
         AuthService(ctx.applicationContext, baseUrl, apiToken)
     }
@@ -63,23 +83,20 @@ fun JossRedAccountCard(
             error = null
             user = null
             try {
-                // 1) Verifica/Refresca token si faltan <= 15 días (la lib ya lo hace)
                 val check = withContext(Dispatchers.IO) { auth.checkToken() }
                 if (check["success"] == true && check["valid"] == true) {
-                    // 2) Trae perfil
                     val prof = withContext(Dispatchers.IO) { auth.fetchUserProfile() }
                     if (prof["success"] == true) {
                         user = prof["user"] as? JSONObject
                     } else {
-                        error = (prof["message"] as? String) ?: "Error al obtener perfil"
+                        error = (prof["message"] as? String) ?: ctx.getString(R.string.error_profile)
                     }
                 } else {
-                    // No hay sesión o refresh falló
                     error = check["message"] as? String
                 }
             } catch (e: Exception) {
                 Timber.e(e)
-                error = "Error de conexión"
+                error = ctx.getString(R.string.error_connection)
             } finally {
                 loading = false
             }
@@ -100,14 +117,14 @@ fun JossRedAccountCard(
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Text(
-                    text = "Cuenta Joss Red",
+                    text = stringResource(R.string.account_joss_red),
                     style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
                     modifier = Modifier.weight(1f)
                 )
                 IconButton(onClick = { refresh() }) {
                     Icon(
                         painter = painterResource(id = R.drawable.replay),
-                        contentDescription = "Refrescar"
+                        contentDescription = stringResource(R.string.refresh)
                     )
                 }
             }
@@ -117,14 +134,12 @@ fun JossRedAccountCard(
                     Spacer(Modifier.height(8.dp))
                     LinearProgressIndicator(modifier = Modifier.fillMaxWidth())
                     Spacer(Modifier.height(8.dp))
-                    Text("Verificando sesión…", color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    Text(stringResource(R.string.checking_session), color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
 
-                // Sesión NO válida o sin token
                 user == null -> {
-                    // Muestra mensaje y botón de iniciar sesión
                     Text(
-                        text = error ?: "No has iniciado sesión.",
+                        text = error ?: stringResource(R.string.error_no_session),
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                     Spacer(Modifier.height(12.dp))
@@ -132,11 +147,10 @@ fun JossRedAccountCard(
                         onClick = { onLoginClick?.invoke() },
                         enabled = onLoginClick != null
                     ) {
-                        Text("Iniciar sesión")
+                        Text(stringResource(R.string.btn_login))
                     }
                 }
 
-                // Sesión válida
                 else -> {
                     val first = user?.optString("first_name").orEmpty()
                     val last = user?.optString("last_name").orEmpty()
@@ -173,20 +187,18 @@ fun JossRedAccountCard(
                     }
 
                     Spacer(Modifier.height(16.dp))
-                    // Acciones
                     Row(
                         horizontalArrangement = Arrangement.spacedBy(12.dp),
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         OutlinedButton(
                             onClick = {
-                                // “Editar perfil” -> Play Store
                                 val url = "https://play.google.com/store/apps/details?id=com.josprox.jossestrada"
                                 ctx.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
                             },
                             modifier = Modifier.weight(1f)
                         ) {
-                            Text("Editar perfil")
+                            Text(stringResource(R.string.btn_edit_profile))
                         }
                         Button(
                             onClick = {
@@ -200,7 +212,7 @@ fun JossRedAccountCard(
                             colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.error),
                             modifier = Modifier.weight(1f)
                         ) {
-                            Text("Cerrar sesión")
+                            Text(stringResource(R.string.logout))
                         }
                     }
                 }

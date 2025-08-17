@@ -30,7 +30,11 @@ import com.my.kizzy.rpc.KizzyRPC
 import com.zionhuang.music.LocalPlayerAwareWindowInsets
 import com.zionhuang.music.LocalPlayerConnection
 import com.zionhuang.music.R
-import com.zionhuang.music.constants.*
+import com.zionhuang.music.constants.DiscordInfoDismissedKey
+import com.zionhuang.music.constants.DiscordNameKey
+import com.zionhuang.music.constants.DiscordTokenKey
+import com.zionhuang.music.constants.DiscordUsernameKey
+import com.zionhuang.music.constants.EnableDiscordRPCKey
 import com.zionhuang.music.db.entities.Song
 import com.zionhuang.music.ui.component.IconButton
 import com.zionhuang.music.ui.component.PreferenceEntry
@@ -40,6 +44,7 @@ import com.zionhuang.music.ui.utils.backToMain
 import com.zionhuang.music.utils.rememberPreference
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import androidx.core.net.toUri
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -119,7 +124,7 @@ fun DiscordSettings(
                     }) { Text(stringResource(R.string.logout)) }
                 } else {
                     OutlinedButton(onClick = { navController.navigate("settings/discord/login") }) {
-                        Text(stringResource(R.string.login))
+                        Text(stringResource(R.string.btn_login))
                     }
                 }
             }
@@ -131,7 +136,7 @@ fun DiscordSettings(
             title = { Text(stringResource(R.string.enable_discord_rpc)) },
             checked = discordRPC,
             onCheckedChange = onDiscordRPCChange,
-            isEnabled = isLoggedIn // <- sólo si hay sesión
+            isEnabled = isLoggedIn
         )
 
         PreferenceGroupTitle(title = stringResource(R.string.preview))
@@ -153,7 +158,7 @@ fun DiscordSettings(
 @Composable
 private fun RichPresence(
     song: Song?,
-    homepageUrl: String, // <- viene inyectado desde VM
+    homepageUrl: String,
 ) {
     val context = LocalContext.current
 
@@ -170,9 +175,8 @@ private fun RichPresence(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
-                text = "Listening to Joss Music",
+                text = stringResource(R.string.listening_to_joss),
                 style = MaterialTheme.typography.labelLarge,
-                textAlign = TextAlign.Start,
                 fontWeight = FontWeight.ExtraBold,
                 modifier = Modifier.fillMaxWidth()
             )
@@ -188,11 +192,6 @@ private fun RichPresence(
                             .size(96.dp)
                             .clip(RoundedCornerShape(12.dp))
                             .align(Alignment.TopStart)
-                            .run {
-                                if (song == null) {
-                                    border(2.dp, MaterialTheme.colorScheme.onSurface, RoundedCornerShape(12.dp))
-                                } else this
-                            }
                     )
 
                     song?.artists?.firstOrNull()?.thumbnailUrl?.let {
@@ -219,7 +218,7 @@ private fun RichPresence(
                         .padding(horizontal = 6.dp)
                 ) {
                     Text(
-                        text = song?.song?.title ?: "Song Title",
+                        text = song?.song?.title ?: stringResource(R.string.song_title_placeholder),
                         color = MaterialTheme.colorScheme.onSurface,
                         fontSize = 20.sp,
                         fontWeight = FontWeight.ExtraBold,
@@ -227,7 +226,7 @@ private fun RichPresence(
                         overflow = TextOverflow.Ellipsis,
                     )
                     Text(
-                        text = song?.artists?.joinToString { it.name } ?: "Artist",
+                        text = song?.artists?.joinToString { it.name } ?: stringResource(R.string.artist),
                         color = MaterialTheme.colorScheme.secondary,
                         fontSize = 16.sp,
                         maxLines = 1,
@@ -252,12 +251,12 @@ private fun RichPresence(
                 onClick = {
                     val intent = Intent(
                         Intent.ACTION_VIEW,
-                        Uri.parse("https://music.youtube.com/watch?v=${song?.id}")
+                        "https://music.youtube.com/watch?v=${song?.id}".toUri()
                     )
                     context.startActivity(intent)
                 },
                 modifier = Modifier.fillMaxWidth()
-            ) { Text("Listen on YouTube Music") }
+            ) { Text(stringResource(R.string.listening_to_joss)) }
 
             OutlinedButton(
                 onClick = {
@@ -265,7 +264,7 @@ private fun RichPresence(
                     context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
                 },
                 modifier = Modifier.fillMaxWidth()
-            ) { Text("Visit Joss Music") }
+            ) { Text(stringResource(R.string.btn_visit_joss)) }
         }
     }
 }

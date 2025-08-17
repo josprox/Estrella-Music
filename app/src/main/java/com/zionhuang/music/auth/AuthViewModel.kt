@@ -1,5 +1,6 @@
 package com.zionhuang.music.auth
 
+import androidx.annotation.StringRes
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -9,6 +10,7 @@ import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
+import com.zionhuang.music.R
 
 enum class AuthMode { WELCOME, LOGIN, REGISTER, FORGOT }
 
@@ -18,7 +20,8 @@ data class AuthUiState(
 )
 
 sealed interface AuthEvent {
-    data class ShowMessage(val text: String) : AuthEvent
+    data class ShowMessageText(val text: String) : AuthEvent
+    data class ShowMessageRes(@StringRes val resId: Int) : AuthEvent
     object Success : AuthEvent
 }
 
@@ -42,15 +45,19 @@ class AuthViewModel @Inject constructor(
         val res = repo.login(email.trim(), password.trim())
         _state.value = _state.value.copy(isLoading = false)
         if (res.success) {
-            _events.emit(AuthEvent.Success) // AuthService ya guardó token en prefs
+            _events.emit(AuthEvent.Success)
         } else {
-            val msg = when (res.message) {
-                "EMAIL_NOT_FOUND" -> "El correo no existe"
-                "INVALID_PASSWORD" -> "Contraseña incorrecta"
-                null, "" -> "Error al iniciar sesión"
-                else -> res.message!!
+            val resId = when (res.message) {
+                "EMAIL_NOT_FOUND" -> R.string.error_email_not_found
+                "INVALID_PASSWORD" -> R.string.error_invalid_password
+                null, "" -> R.string.error_login
+                else -> null
             }
-            _events.emit(AuthEvent.ShowMessage(msg))
+            if (resId != null) {
+                _events.emit(AuthEvent.ShowMessageRes(resId))
+            } else {
+                _events.emit(AuthEvent.ShowMessageText(res.message!!))
+            }
         }
     }
 
@@ -64,21 +71,25 @@ class AuthViewModel @Inject constructor(
         agree: Boolean
     ) = viewModelScope.launch {
         if (!agree) {
-            _events.emit(AuthEvent.ShowMessage("Debes aceptar el acceso a tus datos en Joss Red."))
+            _events.emit(AuthEvent.ShowMessageRes(R.string.error_must_accept))
             return@launch
         }
         if (password != confirm) {
-            _events.emit(AuthEvent.ShowMessage("No coinciden las contraseñas."))
+            _events.emit(AuthEvent.ShowMessageRes(R.string.error_password_mismatch))
             return@launch
         }
         _state.value = _state.value.copy(isLoading = true)
         val res = repo.register(username, firstName, lastName, email, password)
         _state.value = _state.value.copy(isLoading = false)
         if (res.success) {
-            _events.emit(AuthEvent.ShowMessage(res.message ?: "Registro exitoso"))
+            // Si el backend regresa mensaje, lo mostramos. Si no, mostramos el “register_success” estándar.
+            _events.emit(
+                if (!res.message.isNullOrBlank()) AuthEvent.ShowMessageText(res.message!!)
+                else AuthEvent.ShowMessageRes(R.string.register_success)
+            )
             _state.value = _state.value.copy(mode = AuthMode.LOGIN)
         } else {
-            _events.emit(AuthEvent.ShowMessage(res.message ?: "Error en el registro"))
+            _events.emit(AuthEvent.ShowMessageRes(R.string.error_register))
         }
     }
 
@@ -86,7 +97,9 @@ class AuthViewModel @Inject constructor(
         _state.value = _state.value.copy(isLoading = true)
         val res = repo.sendRecoveryEmail(email.trim())
         _state.value = _state.value.copy(isLoading = false)
-        _events.emit(AuthEvent.ShowMessage(res.message ?: ""))
+        if (!res.message.isNullOrBlank()) {
+            _events.emit(AuthEvent.ShowMessageText(res.message!!))
+        }
         if (res.success) _state.value = _state.value.copy(mode = AuthMode.LOGIN)
     }
 }

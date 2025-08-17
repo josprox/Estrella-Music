@@ -47,12 +47,16 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalFocusManager
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.zionhuang.music.R
 import com.zionhuang.music.auth.AuthEvent
 import com.zionhuang.music.auth.AuthMode
 import com.zionhuang.music.auth.AuthViewModel
@@ -68,11 +72,13 @@ fun WelcomeRoute(
     val state by viewModel.state.collectAsState()
     val snackbarHost = remember { SnackbarHostState() }
     val scope = rememberCoroutineScope()
+    val context = LocalContext.current
 
     LaunchedEffect(Unit) {
         viewModel.events.collect { ev ->
             when (ev) {
-                is AuthEvent.ShowMessage -> scope.launch { snackbarHost.showSnackbar(ev.text) }
+                is AuthEvent.ShowMessageText -> scope.launch { snackbarHost.showSnackbar(ev.text) }
+                is AuthEvent.ShowMessageRes -> scope.launch { snackbarHost.showSnackbar(context.getString(ev.resId)) }
                 AuthEvent.Success -> onAuthSuccess()
             }
         }
@@ -102,14 +108,12 @@ fun WelcomeRoute(
                             onRegister = { viewModel.setMode(AuthMode.REGISTER) },
                             onSkip = onSkip
                         )
-
                         AuthMode.LOGIN -> LoginForm(
                             isLoading = state.isLoading,
                             onBack = { viewModel.setMode(AuthMode.WELCOME) },
                             onForgotPassword = { viewModel.setMode(AuthMode.FORGOT) },
                             onLogin = { email, pass -> viewModel.login(email, pass) }
                         )
-
                         AuthMode.REGISTER -> RegisterForm(
                             isLoading = state.isLoading,
                             onBack = { viewModel.setMode(AuthMode.WELCOME) },
@@ -117,7 +121,6 @@ fun WelcomeRoute(
                                 viewModel.register(u, n, l, e, p, c, agree)
                             }
                         )
-
                         AuthMode.FORGOT -> ForgotPasswordForm(
                             isLoading = state.isLoading,
                             onBack = { viewModel.setMode(AuthMode.LOGIN) },
@@ -143,14 +146,14 @@ fun WelcomeView(
     ) {
         Spacer(Modifier.height(48.dp))
         Text(
-            text = "Bienvenido a Joss Red",
+            text = stringResource(R.string.welcome_title),
             color = Color.White,
             style = MaterialTheme.typography.headlineLarge.copy(fontWeight = FontWeight.Bold),
             textAlign = TextAlign.Center
         )
         Spacer(Modifier.height(12.dp))
         Text(
-            text = "Escucha, descarga y organiza tu música en tu dispositivo.",
+            text = stringResource(R.string.welcome_subtitle),
             color = Color.White.copy(alpha = 0.75f),
             textAlign = TextAlign.Center
         )
@@ -163,7 +166,7 @@ fun WelcomeView(
                     containerColor = Color.White, contentColor = Color(0xFF1A1A2E)
                 ),
                 modifier = Modifier.weight(1f)
-            ) { Text("Iniciar sesión", fontWeight = FontWeight.Bold) }
+            ) { Text(stringResource(R.string.btn_login), fontWeight = FontWeight.Bold) }
 
             Spacer(Modifier.width(16.dp))
 
@@ -173,14 +176,13 @@ fun WelcomeView(
                     containerColor = Color(0xFFE94560), contentColor = Color.White
                 ),
                 modifier = Modifier.weight(1f)
-            ) { Text("Crear cuenta", fontWeight = FontWeight.Bold) }
+            ) { Text(stringResource(R.string.btn_register), fontWeight = FontWeight.Bold) }
         }
 
-        // 👇 Tercer botón: “No iniciar sesión por ahora”
         Spacer(Modifier.height(12.dp))
         TextButton(onClick = onSkip) {
             Text(
-                "No iniciar sesión por ahora",
+                stringResource(R.string.btn_skip),
                 color = Color.White.copy(alpha = 0.9f)
             )
         }
@@ -197,7 +199,8 @@ fun LoginForm(
     onForgotPassword: () -> Unit,
     onLogin: (email: String, password: String) -> Unit
 ) {
-    val focus = androidx.compose.ui.platform.LocalFocusManager.current
+    val focus = LocalFocusManager.current
+    val context = LocalContext.current
     var email by remember { mutableStateOf("") }
     var pass by remember { mutableStateOf("") }
     var emailError by remember { mutableStateOf<String?>(null) }
@@ -205,7 +208,7 @@ fun LoginForm(
 
     AuthCard {
         Text(
-            "¡Qué gusto verte de nuevo!",
+            stringResource(R.string.login_greeting),
             color = Color.White,
             style = MaterialTheme.typography.headlineSmall.copy(fontWeight = FontWeight.Bold)
         )
@@ -214,7 +217,7 @@ fun LoginForm(
         OutlinedTextField(
             value = email,
             onValueChange = { email = it; emailError = null },
-            label = { Text("Correo") },
+            label = { Text(stringResource(R.string.label_email)) },
             isError = emailError != null,
             supportingText = {
                 if (emailError != null) Text(emailError!!, color = MaterialTheme.colorScheme.error)
@@ -228,7 +231,7 @@ fun LoginForm(
         OutlinedTextField(
             value = pass,
             onValueChange = { pass = it; passError = null },
-            label = { Text("Contraseña") },
+            label = { Text(stringResource(R.string.label_password)) },
             isError = passError != null,
             supportingText = {
                 if (passError != null) Text(passError!!, color = MaterialTheme.colorScheme.error)
@@ -244,8 +247,8 @@ fun LoginForm(
             onClick = {
                 val okEmail = email.isNotBlank() && "@" in email && !email.contains(" ")
                 val okPass = pass.isNotBlank()
-                emailError = if (!okEmail) "Ingresa un correo válido" else null
-                passError = if (!okPass) "Ingresa tu contraseña" else null
+                emailError = if (!okEmail) context.getString(R.string.error_invalid_email) else null
+                passError = if (!okPass) context.getString(R.string.error_empty_password) else null
                 if (okEmail && okPass) {
                     focus.clearFocus()
                     onLogin(email, pass)
@@ -256,12 +259,12 @@ fun LoginForm(
                 containerColor = Color(0xFFE94560), contentColor = Color.White
             ),
             modifier = Modifier.fillMaxWidth()
-        ) { Text(if (isLoading) "Entrando..." else "Iniciar sesión") }
+        ) { Text(if (isLoading) stringResource(R.string.btn_entering) else stringResource(R.string.btn_login)) }
 
         Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-            TextButton(onClick = onBack) { Text("Volver", color = Color.White.copy(alpha = 0.7f)) }
+            TextButton(onClick = onBack) { Text(stringResource(R.string.btn_back), color = Color.White.copy(alpha = 0.7f)) }
             TextButton(onClick = onForgotPassword) {
-                Text("¿Olvidaste tu contraseña?", color = Color.White.copy(alpha = 0.7f))
+                Text(stringResource(R.string.forgot_password), color = Color.White.copy(alpha = 0.7f))
             }
         }
     }
@@ -274,8 +277,9 @@ fun RegisterForm(
     onBack: () -> Unit,
     onSubmit: (String, String, String, String, String, String, Boolean) -> Unit
 ) {
-    val focus = androidx.compose.ui.platform.LocalFocusManager.current
+    val focus = LocalFocusManager.current
     val scroll = rememberScrollState()
+    val context = LocalContext.current
 
     var user by remember { mutableStateOf("") }
     var name by remember { mutableStateOf("") }
@@ -295,7 +299,7 @@ fun RegisterForm(
     AuthCard {
         Column(Modifier.verticalScroll(scroll)) {
             Text(
-                "Crear cuenta",
+                stringResource(R.string.register_title),
                 color = Color.White,
                 style = MaterialTheme.typography.headlineSmall.copy(fontWeight = FontWeight.Black)
             )
@@ -303,7 +307,7 @@ fun RegisterForm(
 
             OutlinedTextField(
                 user, { user = it; userErr = null },
-                label = { Text("Usuario") },
+                label = { Text(stringResource(R.string.label_username)) },
                 isError = userErr != null,
                 supportingText = {
                     if (userErr != null) Text(userErr!!, color = MaterialTheme.colorScheme.error)
@@ -315,7 +319,7 @@ fun RegisterForm(
             Spacer(Modifier.height(16.dp))
             OutlinedTextField(
                 name, { name = it; nameErr = null },
-                label = { Text("Nombre") },
+                label = { Text(stringResource(R.string.label_firstname)) },
                 isError = nameErr != null,
                 supportingText = {
                     if (nameErr != null) Text(nameErr!!, color = MaterialTheme.colorScheme.error)
@@ -327,7 +331,7 @@ fun RegisterForm(
             Spacer(Modifier.height(16.dp))
             OutlinedTextField(
                 last, { last = it; lastErr = null },
-                label = { Text("Apellidos") },
+                label = { Text(stringResource(R.string.label_lastname)) },
                 isError = lastErr != null,
                 supportingText = {
                     if (lastErr != null) Text(lastErr!!, color = MaterialTheme.colorScheme.error)
@@ -339,7 +343,7 @@ fun RegisterForm(
             Spacer(Modifier.height(16.dp))
             OutlinedTextField(
                 email, { email = it; emailErr = null },
-                label = { Text("Correo") },
+                label = { Text(stringResource(R.string.label_email)) },
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
                 isError = emailErr != null,
                 supportingText = {
@@ -352,7 +356,7 @@ fun RegisterForm(
             Spacer(Modifier.height(16.dp))
             OutlinedTextField(
                 pass, { pass = it; passErr = null },
-                label = { Text("Contraseña") },
+                label = { Text(stringResource(R.string.label_password)) },
                 visualTransformation = PasswordVisualTransformation(),
                 isError = passErr != null,
                 supportingText = {
@@ -367,7 +371,7 @@ fun RegisterForm(
             Spacer(Modifier.height(16.dp))
             OutlinedTextField(
                 confirm, { confirm = it; confirmErr = null },
-                label = { Text("Repite la contraseña") },
+                label = { Text(stringResource(R.string.label_confirm_password)) },
                 visualTransformation = PasswordVisualTransformation(),
                 isError = confirmErr != null,
                 supportingText = {
@@ -381,7 +385,7 @@ fun RegisterForm(
             Spacer(Modifier.height(16.dp))
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Checkbox(checked = agree, onCheckedChange = { agree = it })
-                Text("Acepto el acceso a mis datos en Joss Red", color = Color.White)
+                Text(stringResource(R.string.accept_terms), color = Color.White)
             }
 
             Spacer(Modifier.height(24.dp))
@@ -399,12 +403,12 @@ fun RegisterForm(
                             pass.any { it in "!@#$%^&*(),.?\":{}|<>" }
                     val okConfirm = confirm == pass
 
-                    userErr = if (!okUser) "Usuario inválido" else null
-                    nameErr = if (!okName) "Ingresa tu nombre" else null
-                    lastErr = if (!okLast) "Ingresa tus apellidos" else null
-                    emailErr = if (!okEmail) "Correo inválido" else null
-                    passErr = if (!okPass) "Revisa los requisitos de contraseña" else null
-                    confirmErr = if (!okConfirm) "Las contraseñas no coinciden" else null
+                    userErr    = if (!okUser)   context.getString(R.string.error_invalid_username) else null
+                    nameErr    = if (!okName)   context.getString(R.string.error_empty_firstname) else null
+                    lastErr    = if (!okLast)   context.getString(R.string.error_empty_lastname) else null
+                    emailErr   = if (!okEmail)  context.getString(R.string.error_invalid_email_format) else null
+                    passErr    = if (!okPass)   context.getString(R.string.error_invalid_password_requirements) else null
+                    confirmErr = if (!okConfirm) context.getString(R.string.error_password_mismatch) else null
 
                     if (okUser && okName && okLast && okEmail && okPass && okConfirm) {
                         focus.clearFocus()
@@ -417,10 +421,10 @@ fun RegisterForm(
                     contentColor = Color.White
                 ),
                 modifier = Modifier.fillMaxWidth()
-            ) { Text(if (isLoading) "Creando..." else "Crear cuenta") }
+            ) { Text(if (isLoading) stringResource(R.string.btn_creating) else stringResource(R.string.btn_register)) }
 
             TextButton(onClick = onBack) {
-                Text("Volver", color = MaterialTheme.colorScheme.primary)
+                Text(stringResource(R.string.btn_back), color = MaterialTheme.colorScheme.primary)
             }
         }
     }
@@ -433,13 +437,14 @@ fun ForgotPasswordForm(
     onBack: () -> Unit,
     onSend: (email: String) -> Unit
 ) {
-    val focus = androidx.compose.ui.platform.LocalFocusManager.current
+    val focus = LocalFocusManager.current
+    val context = LocalContext.current
     var email by remember { mutableStateOf("") }
     var emailErr by remember { mutableStateOf<String?>(null) }
 
     AuthCard {
         Text(
-            "Recuperar contraseña",
+            stringResource(R.string.forgot_title),
             color = Color.White,
             style = MaterialTheme.typography.headlineSmall.copy(fontWeight = FontWeight.Bold)
         )
@@ -447,7 +452,7 @@ fun ForgotPasswordForm(
         OutlinedTextField(
             value = email,
             onValueChange = { email = it; emailErr = null },
-            label = { Text("Correo") },
+            label = { Text(stringResource(R.string.label_email)) },
             singleLine = true,
             isError = emailErr != null,
             supportingText = {
@@ -461,7 +466,7 @@ fun ForgotPasswordForm(
         Button(
             onClick = {
                 val ok = email.isNotBlank() && "@" in email
-                emailErr = if (!ok) "Ingresa un correo válido" else null
+                emailErr = if (!ok) context.getString(R.string.error_invalid_email) else null
                 if (ok) { focus.clearFocus(); onSend(email) }
             },
             enabled = !isLoading,
@@ -469,10 +474,10 @@ fun ForgotPasswordForm(
                 containerColor = Color(0xFFE94560), contentColor = Color.White
             ),
             modifier = Modifier.fillMaxWidth()
-        ) { Text(if (isLoading) "Enviando..." else "Enviar correo de recuperación") }
+        ) { Text(if (isLoading) stringResource(R.string.btn_sending) else stringResource(R.string.btn_send_recovery)) }
 
         TextButton(onClick = onBack) {
-            Text("Volver", color = Color.White.copy(alpha = 0.7f))
+            Text(stringResource(R.string.btn_back), color = Color.White.copy(alpha = 0.7f))
         }
     }
 }
@@ -497,36 +502,30 @@ private fun AuthCard(content: @Composable ColumnScope.() -> Unit) {
 @Composable
 private fun authTextFieldColors(): TextFieldColors =
     TextFieldDefaults.colors(
-        // texto
         focusedTextColor = Color.White,
         unfocusedTextColor = Color.White,
         disabledTextColor = Color.White.copy(alpha = 0.6f),
 
-        // contenedor (fondo del TextField)
         focusedContainerColor = Color.White.copy(alpha = 0.08f),
         unfocusedContainerColor = Color.White.copy(alpha = 0.06f),
         disabledContainerColor = Color.White.copy(alpha = 0.04f),
 
-        // cursor / borde (indicator en OutlinedTextField)
         cursorColor = Color.White,
         focusedIndicatorColor = Color.White.copy(alpha = 0.70f),
         unfocusedIndicatorColor = Color.White.copy(alpha = 0.35f),
         disabledIndicatorColor = Color.White.copy(alpha = 0.20f),
         errorIndicatorColor = MaterialTheme.colorScheme.error,
 
-        // label
         focusedLabelColor = Color.White,
         unfocusedLabelColor = Color.White.copy(alpha = 0.70f),
         disabledLabelColor = Color.White.copy(alpha = 0.6f),
         errorLabelColor = MaterialTheme.colorScheme.error,
 
-        // placeholders -> usar las *cuatro* variantes
         focusedPlaceholderColor = Color.White.copy(alpha = 0.55f),
         unfocusedPlaceholderColor = Color.White.copy(alpha = 0.55f),
         disabledPlaceholderColor = Color.White.copy(alpha = 0.40f),
         errorPlaceholderColor = Color.White.copy(alpha = 0.55f),
 
-        // (opcional) supporting text
         focusedSupportingTextColor = Color.White.copy(alpha = 0.85f),
         unfocusedSupportingTextColor = Color.White.copy(alpha = 0.85f),
         disabledSupportingTextColor = Color.White.copy(alpha = 0.6f),
@@ -540,22 +539,27 @@ fun PasswordStrengthIndicator(
     validColor: Color = MaterialTheme.colorScheme.primary,
     invalidColor: Color = Color.Gray
 ) {
+    // 1) Lee strings EN contexto composable
+    val reqLen    = stringResource(R.string.password_req_length)
+    val reqUpper  = stringResource(R.string.password_req_upper)
+    val reqLower  = stringResource(R.string.password_req_lower)
+    val reqDigit  = stringResource(R.string.password_req_digit)
+    val reqSpec   = stringResource(R.string.password_req_special)
+
+    // 2) Memoriza solo los cálculos (no composables) si quieres
     val checks = remember(password) {
         listOf(
-            "8+ caracteres" to (password.length >= 8),
-            "Mayúscula"      to password.any { it.isUpperCase() },
-            "Minúscula"      to password.any { it.isLowerCase() },
-            "Número"         to password.any { it.isDigit() },
-            "Especial"       to password.any { it in "!@#$%^&*(),.?\":{}|<>" }
+            reqLen   to (password.length >= 8),
+            reqUpper to password.any { it.isUpperCase() },
+            reqLower to password.any { it.isLowerCase() },
+            reqDigit to password.any { it.isDigit() },
+            reqSpec  to password.any { it in "!@#$%^&*(),.?\":{}|<>" }
         )
     }
 
     Column(Modifier.fillMaxWidth()) {
         checks.forEach { (label, ok) ->
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                modifier = Modifier.padding(vertical = 2.dp)
-            ) {
+            Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(vertical = 2.dp)) {
                 Box(
                     modifier = Modifier
                         .size(10.dp)
@@ -568,3 +572,4 @@ fun PasswordStrengthIndicator(
         }
     }
 }
+

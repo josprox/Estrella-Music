@@ -13,9 +13,11 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
+import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.res.stringResource
 import androidx.core.content.ContextCompat
 import androidx.core.view.WindowCompat
 import androidx.datastore.preferences.core.edit
@@ -298,36 +300,37 @@ class MainActivity : ComponentActivity() {
     }
 
     // --------------------- Items de Onboarding (Joss Music) ---------------------
-    private fun jossOnboardingItems(): List<CarouselItem> = listOf(
+    @Composable
+    fun jossOnboardingItems(): List<CarouselItem> = listOf(
         CarouselItem(
             R.drawable.joss_music_logo,
-            "Bienvenido a Joss Music",
-            "Tu música en un solo lugar: rápido, limpio y pensado para ti."
+            stringResource(R.string.onboarding_welcome_title),
+            stringResource(R.string.onboarding_welcome_desc)
         ),
         CarouselItem(
             R.drawable.download,
-            "Descargas inteligentes",
-            "Guarda canciones, álbumes y playlists para escucharlos sin conexión. Elige calidad y controla el espacio."
+            stringResource(R.string.onboarding_downloads_title),
+            stringResource(R.string.onboarding_downloads_desc)
         ),
         CarouselItem(
             R.drawable.media3_icon_feed,
-            "Enlaces internos seguros",
-            "Abrimos jossmusic.com directamente en la app con App Links verificados y deep links confiables."
+            stringResource(R.string.onboarding_links_title),
+            stringResource(R.string.onboarding_links_desc)
         ),
         CarouselItem(
             R.drawable.offline,
-            "Modo sin conexión",
-            "Tu música suena aun sin internet: sin cortes, sin preocupaciones."
+            stringResource(R.string.onboarding_offline_title),
+            stringResource(R.string.onboarding_offline_desc)
         ),
         CarouselItem(
             R.drawable.search,
-            "Búsqueda y descubrimiento",
-            "Encuentra rápido en YouTube Music y en tu biblioteca local, todo en un mismo sitio."
+            stringResource(R.string.onboarding_search_title),
+            stringResource(R.string.onboarding_search_desc)
         ),
         CarouselItem(
             R.drawable.library_add,
-            "Listas y biblioteca",
-            "Crea, organiza y comparte playlists; gestiona tu colección como quieras."
+            stringResource(R.string.onboarding_library_title),
+            stringResource(R.string.onboarding_library_desc)
         )
     )
 
