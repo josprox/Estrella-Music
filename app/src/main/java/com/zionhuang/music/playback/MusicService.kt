@@ -592,6 +592,23 @@ class MusicService : MediaLibraryService(),
             .setCacheWriteDataSinkFactory(null)
             .setFlags(FLAG_IGNORE_CACHE_ON_ERROR)
 
+    private fun hasJwt(): Boolean {
+        val sp = getSharedPreferences("jossred_prefs", Context.MODE_PRIVATE)
+        val jwt = sp.getString("jwt_token", null)
+        if (jwt.isNullOrBlank()) return false
+
+        // Opcional: valida expiración si la guardas
+        val exp = sp.getLong("token_expiration", -1L)
+        val now = System.currentTimeMillis() / 1000L
+        return exp <= 0L || exp > now // si no hay exp guardada, lo consideramos válido
+    }
+
+    private suspend fun shouldUseJossRedFirst(): Boolean {
+        val switchOn = dataStore.data.map { it[JossRedMultimedia] ?: false }.first()
+        return switchOn && hasJwt()
+    }
+
+
     private fun createDataSourceFactory(): DataSource.Factory {
         return ResolvingDataSource.Factory(createCacheDataSource()) { dataSpec ->
             val mediaId = dataSpec.key ?: error("No media id")
@@ -608,20 +625,18 @@ class MusicService : MediaLibraryService(),
             }
 
             // 2) ¿Usar fuente alternativa (JossRed)?
-            val useAlternativeSource = runBlocking {
-                dataStore.data.map { prefs -> prefs[JossRedMultimedia] ?: false }.first()
-            }
+            val tryJossFirst = runBlocking { shouldUseJossRedFirst() }
 
-            if (useAlternativeSource) {
+            if (tryJossFirst) {
                 try {
                     Timber.i(getString(R.string.usingJossRedMusicPlayback))
                     scope.launch(Dispatchers.IO) { recoverSong(mediaId) }
 
                     if (jossRedKey.isBlank()) {
-                        Timber.w("JossRed key vacía: se usa YouTube como fallback")
+                        Timber.w("JossRed key vacía: fallback a YouTube")
                     } else {
                         val modifiedDataSpec = JossRedClient.resolveDataSpec(
-                            context = this,
+                            context = this@MusicService,
                             original = dataSpec,
                             mediaId = mediaId,
                             secretKey = jossRedKey
@@ -631,23 +646,18 @@ class MusicService : MediaLibraryService(),
                 } catch (e: Exception) {
                     when {
                         e is JossRedClient.JossRedException && e.statusCode == 401 -> {
-                            // JWT inválido/expirado, continúa con YouTube o dispara un flujo de re-login si lo deseas
-                            Timber.w("JWT inválido/expirado para JossRed (401). Usando fallback YouTube.")
+                            Timber.w("JWT inválido/expirado (401). Fallback a YouTube.")
                         }
                         e is JossRedClient.JossRedException && e.statusCode == 403 -> {
                             Timber.w(getString(R.string.errorJossRed403))
                         }
                         e is JossRedClient.JossRedException && e.statusCode in 400..499 -> {
-                            Timber.w("Error ${e.statusCode} en JossRed, continuando con YouTube")
-                            throw PlaybackException(
-                                getString(R.string.errorAlternativeSource), e,
-                                PlaybackException.ERROR_CODE_IO_BAD_HTTP_STATUS
-                            )
+                            Timber.w("Error ${e.statusCode} en JossRed; seguimos con YouTube")
+                            // No arrojamos: dejamos que continúe YouTube
                         }
-                        else -> {
-                            Timber.e(e, getString(R.string.errorAlternativeSourceTryYT))
-                        }
+                        else -> Timber.e(e, getString(R.string.errorAlternativeSourceTryYT))
                     }
+                    // -> Continuar a YouTube abajo
                 }
             }
 
@@ -689,6 +699,24 @@ class MusicService : MediaLibraryService(),
                 }
             }
 
+            // 4) RESCATE: probar JossRed aunque el switch esté APAGADO, si el usuario está logueado
+            if (hasJwt() && jossRedKey.isNotBlank()) {
+                try {
+                    Timber.i("Rescate: intentando JossRed porque YouTube falló")
+                    val modifiedDataSpec = JossRedClient.resolveDataSpec(
+                        context = this,
+                        original = dataSpec,
+                        mediaId = mediaId,
+                        secretKey = jossRedKey
+                    )
+                    return@Factory modifiedDataSpec
+                } catch (e: Exception) {
+                    Timber.e(e, "Rescate JossRed falló; reportando error final")
+                    // cae al handlePlaybackError
+                }
+            }
+
+            // 5) Error final (tu metodo actual)
             handlePlaybackError(lastError ?: Exception("Error desconocido al obtener URL de streaming"))
         }
     }
