@@ -180,4 +180,6 @@
   <string name="maybeLater">Магчыма, пазней</string>
   <string name="backup_restore_checking">Праверка рэзервовых копій хмар ...</string>
   <string name="backup_restore_restoring">Аднаўленне ...</string>
+  <string name="backup_always_title">Стварыце заўсёды інтэрнэт -рэзервовую копію</string>
+  <string name="backup_always_desc">Аўтаматычна падымаецца рэзервовая копія кожныя 24 гадзіны (праз 40 мін для першапачатковага выкарыстання).</string>
 </resources>

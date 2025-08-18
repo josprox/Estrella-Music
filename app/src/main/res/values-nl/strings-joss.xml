@@ -158,4 +158,6 @@
   <string name="maybeLater">Misschien later</string>
   <string name="backup_restore_checking">Cloud -back -ups controleren ...</string>
   <string name="backup_restore_restoring">Herstellen ...</string>
+  <string name="backup_always_title">Maak een altijd online back -up</string>
+  <string name="backup_always_desc">Stijgt automatisch elke 24 uur een back -up op (na 40 minuten voor eerste gebruik).</string>
 </resources>

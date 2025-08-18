@@ -124,4 +124,6 @@
   <string name="maybeLater">ஒருவேளை பின்னர்</string>
   <string name="backup_restore_checking">கிளவுட் காப்புப்பிரதிகளை சரிபார்க்கிறது…</string>
   <string name="backup_restore_restoring">மீட்டமைத்தல்…</string>
+  <string name="backup_always_title">எப்போதும் ஆன்லைன் காப்புப்பிரதியை உருவாக்கவும்</string>
+  <string name="backup_always_desc">ஒவ்வொரு 24 மணி நேரத்திற்கும் ஒரு காப்புப்பிரதியை தானாக உயர்த்தும் (ஆரம்ப பயன்பாட்டிற்கு 40 நிமிடங்களுக்குப் பிறகு).</string>
 </resources>

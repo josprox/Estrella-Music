@@ -158,4 +158,6 @@
   <string name="maybeLater">Có lẽ sau này</string>
   <string name="backup_restore_checking">Kiểm tra bản sao lưu đám mây…</string>
   <string name="backup_restore_restoring">Khôi phục</string>
+  <string name="backup_always_title">Tạo bản sao lưu luôn trực tuyến</string>
+  <string name="backup_always_desc">Tự động tăng một bản sao lưu cứ sau 24 giờ (sau 40 phút để sử dụng ban đầu).</string>
 </resources>

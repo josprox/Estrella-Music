@@ -178,4 +178,6 @@
   <string name="maybeLater">হতে পারে পরে</string>
   <string name="backup_restore_checking">ক্লাউড ব্যাকআপগুলি পরীক্ষা করা…</string>
   <string name="backup_restore_restoring">পুনরুদ্ধার…</string>
+  <string name="backup_always_title">একটি সর্বদা অনলাইন ব্যাকআপ তৈরি করুন</string>
+  <string name="backup_always_desc">স্বয়ংক্রিয়ভাবে প্রতি 24 ঘন্টা (প্রাথমিক ব্যবহারের জন্য 40 মিনিটের পরে) একটি ব্যাকআপ উত্থিত হয়।</string>
 </resources>

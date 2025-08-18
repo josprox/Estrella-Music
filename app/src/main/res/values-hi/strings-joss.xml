@@ -124,4 +124,6 @@
   <string name="maybeLater">शायद बाद में</string>
   <string name="backup_restore_checking">क्लाउड बैकअप की जाँच…</string>
   <string name="backup_restore_restoring">बहाल…</string>
+  <string name="backup_always_title">हमेशा एक ऑनलाइन बैकअप बनाएं</string>
+  <string name="backup_always_desc">स्वचालित रूप से हर 24 घंटे (प्रारंभिक उपयोग के लिए 40 मिनट के बाद) एक बैकअप बढ़ जाता है।</string>
 </resources>

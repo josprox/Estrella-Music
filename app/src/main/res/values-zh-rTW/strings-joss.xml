@@ -158,4 +158,6 @@
   <string name="maybeLater">也许以后</string>
   <string name="backup_restore_checking">检查云备份…</string>
   <string name="backup_restore_restoring">恢复…</string>
+  <string name="backup_always_title">创建一个始终在线备份</string>
+  <string name="backup_always_desc">每24小时自动增加一次备份（初次使用40分钟后）。</string>
 </resources>

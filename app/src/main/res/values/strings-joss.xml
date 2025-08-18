@@ -157,4 +157,6 @@
   <string name="maybeLater">Maybe later</string>
   <string name="backup_restore_checking">Checking cloud backups…</string>
   <string name="backup_restore_restoring">Restoring…</string>
+  <string name="backup_always_title">Create an always online backup</string>
+  <string name="backup_always_desc">Automatically rises a backup every 24 hours (after 40 min for initial use).</string>
 </resources>

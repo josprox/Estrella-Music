@@ -158,4 +158,6 @@
   <string name="maybeLater">Belki sonra</string>
   <string name="backup_restore_checking">Bulut yedeklerini kontrol etmek…</string>
   <string name="backup_restore_restoring">Geri yükleme…</string>
+  <string name="backup_always_title">Her zaman çevrimiçi bir yedekleme oluşturun</string>
+  <string name="backup_always_desc">Otomatik olarak bir yedeklemeyi 24 saatte bir yükseltir (ilk kullanım için 40 dakika sonra).</string>
 </resources>

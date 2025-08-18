@@ -24,9 +24,16 @@ import androidx.datastore.preferences.core.edit
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.ProcessLifecycleOwner
 import androidx.lifecycle.lifecycleScope
+import androidx.work.Constraints
+import androidx.work.ExistingPeriodicWorkPolicy
+import androidx.work.NetworkType
+import androidx.work.PeriodicWorkRequestBuilder
+import androidx.work.WorkManager
 import com.josprox.jossredconnect.services.AuthService
 import com.onesignal.OneSignal
+import com.zionhuang.music.constants.AlwaysCloudBackupKey
 import com.zionhuang.music.constants.DisableScreenshotKey
+import com.zionhuang.music.constants.FirstUseAtKey
 import com.zionhuang.music.constants.OnboardingShownKey
 import com.zionhuang.music.constants.StopMusicOnTaskClearKey
 import com.zionhuang.music.db.MusicDatabase
@@ -43,6 +50,7 @@ import com.zionhuang.music.utils.UpdateMainViewModel
 import com.zionhuang.music.utils.UpdateMainViewModelFactory
 import com.zionhuang.music.utils.dataStore
 import com.zionhuang.music.utils.get
+import com.zionhuang.music.work.CloudBackupWorker
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collectLatest
@@ -51,6 +59,7 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import timber.log.Timber
+import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 import javax.inject.Named
 
@@ -58,11 +67,7 @@ import javax.inject.Named
 class MainActivity : ComponentActivity() {
     @Inject lateinit var database: MusicDatabase
     @Inject lateinit var downloadUtil: DownloadUtil
-
-    // Inyectado: servicio de auth ya configurado con claves del vault
     @Inject lateinit var auth: AuthService
-
-    // Inyectado: OneSignal App Id (oculto detrás de SecureKeys/SecretsModule)
     @Inject @Named("OneSignalAppId") lateinit var oneSignalAppId: String
 
     private var isServiceBound = false
@@ -82,7 +87,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    // Deep link de arranque (lo consume la UI principal)
+    // Deep link inicial
     private var initialIntent: Intent? = null
 
     private val updateViewModel: UpdateMainViewModel by viewModels {
@@ -122,7 +127,7 @@ class MainActivity : ComponentActivity() {
         // Guarda el intent inicial (deep link)
         initialIntent = intent
 
-        // OneSignal (solo si hay App Id válido) + checker de updates
+        // OneSignal + checker de updates
         if (oneSignalAppId.isNotBlank()) {
             OneSignal.initWithContext(this, oneSignalAppId)
         } else {
@@ -147,7 +152,7 @@ class MainActivity : ComponentActivity() {
                 }
         }
 
-        // 1) Primero: permiso de notificaciones
+        // 1) Pedir permiso de notificaciones
         requestNotificationPermission()
     }
 
@@ -181,28 +186,30 @@ class MainActivity : ComponentActivity() {
                 setSystemBarAppearance = ::setSystemBarAppearance
             )
         }
+
+        // Intentar programar el backup si ya es elegible
+        lifecycleScope.launch { tryScheduleDailyCloudBackup() }
     }
 
-    // --------------------- Welcome/Auth (login/registro/recuperar/skip) ---------------------
+    // --------------------- Welcome/Auth ---------------------
     private fun showWelcome() {
         setContent {
             WelcomeRoute(
-                onAuthSuccess = { initializeApp() },
-                onSkip = { initializeApp() } // “No iniciar sesión por ahora”
+                onAuthSuccess = {
+                    initializeApp()
+                    lifecycleScope.launch { tryScheduleDailyCloudBackup() }
+                },
+                onSkip = { initializeApp() }
             )
         }
     }
 
-    // --------------------- Comprobar sesión con AuthService ---------------------
+    // --------------------- Sesión válida ---------------------
     private suspend fun ensureValidSession(): Boolean = withContext(Dispatchers.IO) {
         try {
-            // checkToken() refresca si faltan <= 15 días (via shouldRefreshToken).
-            // Si ya caducó o falla, devolvemos false y cerramos sesión local.
             val res = auth.checkToken()
             val ok = (res["success"] == true && (res["valid"] as? Boolean ?: false))
-            if (!ok) {
-                auth.logout() // limpia storage si token inválido/expirado
-            }
+            if (!ok) auth.logout()
             ok
         } catch (e: Exception) {
             Timber.e(e, "Error comprobando sesión")
@@ -210,13 +217,12 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    // --------------------- Flujo tras conceder permiso ---------------------
+    // --------------------- Flujo tras permiso ---------------------
     private fun maybeStartWelcomeOrApp() {
         lifecycleScope.launch {
             val hasDeepLink = intent?.data != null
             val alreadyShown = applicationContext.dataStore[OnboardingShownKey] == true
 
-            // Deep link tiene prioridad para manejar de inmediato en la app
             if (hasDeepLink) {
                 initializeApp()
                 return@launch
@@ -225,7 +231,6 @@ class MainActivity : ComponentActivity() {
             val loggedIn = ensureValidSession()
 
             if (loggedIn) {
-                // Usuario autenticado → onboarding solo si nunca lo vio
                 if (alreadyShown) {
                     initializeApp()
                 } else {
@@ -242,7 +247,6 @@ class MainActivity : ComponentActivity() {
                     }
                 }
             } else {
-                // No autenticado → onboarding (si aplica) y luego Welcome
                 if (!alreadyShown) {
                     setContent {
                         OnboardingScreen(
@@ -262,7 +266,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    // --------------------- Pantalla para guiar al permiso ---------------------
+    // --------------------- Pantalla para guiar al permiso (necesaria) ---------------------
     private fun showNotificationPermissionScreen() {
         setContent {
             NotificationPermissionScreen(
@@ -299,7 +303,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    // --------------------- Items de Onboarding (Joss Music) ---------------------
+    // --------------------- Items de Onboarding ---------------------
     @Composable
     fun jossOnboardingItems(): List<CarouselItem> = listOf(
         CarouselItem(
@@ -334,6 +338,64 @@ class MainActivity : ComponentActivity() {
         )
     )
 
+    // --------------------- AUTO BACKUP: lógica de programación ---------------------
+    /**
+     * Programa el respaldo cada 24h si:
+     *  - hay sesión válida,
+     *  - el switch “siempre crear backup en línea” está ON (o no ha sido tocado → true),
+     *  - han pasado ≥ 40 minutos desde el primer uso real de la app.
+     */
+    private suspend fun tryScheduleDailyCloudBackup() {
+        val loggedIn = ensureValidSession()
+        if (!loggedIn) {
+            Timber.d("Auto-backup: no programo porque no hay sesión.")
+            return
+        }
+
+        // Switch ON por defecto si no existe aún
+        val autoAlways = applicationContext.dataStore[AlwaysCloudBackupKey] ?: true
+        if (!autoAlways) {
+            Timber.d("Auto-backup: usuario lo desactivó.")
+            return
+        }
+
+        val now = System.currentTimeMillis()
+        val firstUse = applicationContext.dataStore[FirstUseAtKey]
+
+        if (firstUse == null || firstUse == 0L) {
+            // Primera vez: guardamos el timestamp y no programamos todavía
+            applicationContext.dataStore.edit { it[FirstUseAtKey] = now }
+            Timber.d("Auto-backup: registré primer uso; esperar 40 minutos.")
+            return
+        }
+
+        val elapsed = now - firstUse
+        val needMs = TimeUnit.MINUTES.toMillis(40)
+        if (elapsed < needMs) {
+            val remainMin = ((needMs - elapsed) / 60000).coerceAtLeast(0)
+            Timber.d("Auto-backup: aún faltan ~${remainMin} min para llegar a 40.")
+            return
+        }
+
+        // Ya cumple condiciones → programamos job (único) cada 24h
+        val constraints = Constraints.Builder()
+            .setRequiredNetworkType(NetworkType.CONNECTED)
+            .build()
+
+        val request = PeriodicWorkRequestBuilder<CloudBackupWorker>(24, TimeUnit.HOURS)
+            .setConstraints(constraints)
+            .build()
+
+        WorkManager.getInstance(this)
+            .enqueueUniquePeriodicWork(
+                "auto_cloud_backup",
+                ExistingPeriodicWorkPolicy.KEEP, // si ya existe, no duplica
+                request
+            )
+
+        Timber.i("Auto-backup: ¡Programado cada 24h!")
+    }
+
     companion object {
         const val ACTION_SEARCH = "com.zionhuang.music.action.SEARCH"
         const val ACTION_SONGS = "com.zionhuang.music.action.SONGS"
@@ -341,3 +403,4 @@ class MainActivity : ComponentActivity() {
         const val ACTION_PLAYLISTS = "com.zionhuang.music.action.PLAYLISTS"
     }
 }
+

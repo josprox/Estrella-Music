@@ -158,4 +158,6 @@
   <string name="maybeLater">Ehkä myöhemmin</string>
   <string name="backup_restore_checking">Pilvivarmuuskopioiden tarkistaminen…</string>
   <string name="backup_restore_restoring">Palauttaminen…</string>
+  <string name="backup_always_title">Luo aina online -varmuuskopiointi</string>
+  <string name="backup_always_desc">Nousee varmuuskopion automaattisesti 24 tunnin välein (40 minuutin kuluttua ensimmäistä käyttöä varten).</string>
 </resources>

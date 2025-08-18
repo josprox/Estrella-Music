@@ -178,4 +178,6 @@
   <string name="maybeLater">ਸ਼ਾਇਦ ਬਾਅਦ ਵਿਚ</string>
   <string name="backup_restore_checking">ਬੱਦਲ ਦੇ ਬੈਕਅਪਾਂ ਦੀ ਜਾਂਚ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ ...</string>
   <string name="backup_restore_restoring">ਰੀਸਟੋਰ ਕਰ ਰਿਹਾ ਹੈ ...</string>
+  <string name="backup_always_title">ਹਮੇਸ਼ਾਂ contact ਨਲਾਈਨ ਬੈਕਅਪ ਬਣਾਓ</string>
+  <string name="backup_always_desc">ਆਪਣੇ ਆਪ ਹਰ 24 ਘੰਟਿਆਂ ਬਾਅਦ ਬੈਕਅਪ (ਸ਼ੁਰੂਆਤੀ ਵਰਤੋਂ ਲਈ 40 ਮਿੰਟ ਬਾਅਦ).</string>
 </resources>

@@ -55,6 +55,7 @@ import com.josprox.jossredconnect.services.BackupService
 import com.zionhuang.music.BuildConfig
 import com.zionhuang.music.LocalPlayerAwareWindowInsets
 import com.zionhuang.music.R
+import com.zionhuang.music.constants.AlwaysCloudBackupKey
 import com.zionhuang.music.constants.JossRedMultimedia
 import com.zionhuang.music.ui.component.CustomSwitchPreference
 import com.zionhuang.music.ui.component.ExpressivePreferenceEntry
@@ -73,6 +74,11 @@ fun JossRedSettings(
 ) {
     val (jossRedMultimedia, onJossRedMultimediaChange) = rememberPreference(
         key = JossRedMultimedia, defaultValue = false
+    )
+
+    // ✅ Nueva preferencia: “Crear un backup en línea siempre” (por defecto: true)
+    val (autoCloudAlways, onAutoCloudAlwaysChange) = rememberPreference(
+        key = AlwaysCloudBackupKey, defaultValue = true
     )
 
     val context = LocalContext.current
@@ -161,8 +167,7 @@ fun JossRedSettings(
 
             item { HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp)) }
 
-            // Preferencias varias...
-
+            // ---- Reproducir con JR ----
             item {
                 val enabled = isLoggedIn
                 ExpressivePreferenceEntry(
@@ -187,6 +192,32 @@ fun JossRedSettings(
                 )
             }
 
+            // ---- NUEVO switch: Crear backup en línea siempre ----
+            item {
+                val enabled = isLoggedIn
+                ExpressivePreferenceEntry(
+                    title = { Text(stringResource(R.string.backup_always_title)) },
+                    description = { Text(stringResource(R.string.backup_always_desc)) },
+                    icon = {
+                        Icon(
+                            imageVector = Icons.Filled.CloudUpload,
+                            contentDescription = null,
+                            tint = MaterialTheme.colorScheme.primary
+                        )
+                    },
+                    onClick = { if (enabled) onAutoCloudAlwaysChange(!autoCloudAlways) },
+                    trailingContent = {
+                        CustomSwitchPreference(
+                            checked = autoCloudAlways,
+                            onCheckedChange = { if (enabled) onAutoCloudAlwaysChange(it) },
+                            isEnabled = enabled
+                        )
+                    },
+                    modifier = Modifier
+                        .padding(top = 4.dp)
+                        .alpha(if (enabled) 1f else 0.5f)
+                )
+            }
 
             // ---- Tarjeta: Respaldo en la nube ----
             item(key = "backup_cloud_card") {

@@ -158,4 +158,6 @@
   <string name="maybeLater">Може би по -късно</string>
   <string name="backup_restore_checking">Проверка на облачните резервни копия ...</string>
   <string name="backup_restore_restoring">Възстановяване ...</string>
+  <string name="backup_always_title">Създайте винаги онлайн резервно копие</string>
+  <string name="backup_always_desc">Автоматично издига резервно копие на всеки 24 часа (след 40 минути за първоначална употреба).</string>
 </resources>

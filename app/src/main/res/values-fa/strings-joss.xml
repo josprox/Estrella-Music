@@ -123,4 +123,6 @@
   <string name="maybeLater">شاید بعداً</string>
   <string name="backup_restore_checking">بررسی نسخه پشتیبان از ابر ...</string>
   <string name="backup_restore_restoring">بازگرداندن ...</string>
+  <string name="backup_always_title">یک نسخه پشتیبان همیشه آنلاین ایجاد کنید</string>
+  <string name="backup_always_desc">به طور خودکار هر 24 ساعت یک نسخه پشتیبان تهیه می کند (بعد از 40 دقیقه برای استفاده اولیه).</string>
 </resources>

@@ -157,4 +157,6 @@
   <string name="maybeLater">ربما في وقت لاحق</string>
   <string name="backup_restore_checking">فحص النسخ الاحتياطية السحابية ...</string>
   <string name="backup_restore_restoring">استعادة ...</string>
+  <string name="backup_always_title">قم بإنشاء نسخة احتياطية عبر الإنترنت دائمًا</string>
+  <string name="backup_always_desc">يرتفع تلقائيًا نسخة احتياطية كل 24 ساعة (بعد 40 دقيقة للاستخدام الأولي).</string>
 </resources>

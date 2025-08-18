@@ -124,4 +124,6 @@
   <string name="maybeLater">Forse più tardi</string>
   <string name="backup_restore_checking">Controllando i backup del cloud…</string>
   <string name="backup_restore_restoring">Ripristino…</string>
+  <string name="backup_always_title">Crea un backup sempre online</string>
+  <string name="backup_always_desc">Solleva automaticamente un backup ogni 24 ore (dopo 40 minuti per uso iniziale).</string>
 </resources>

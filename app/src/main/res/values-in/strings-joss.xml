@@ -158,4 +158,6 @@
   <string name="maybeLater">mungkin nanti</string>
   <string name="backup_restore_checking">Memeriksa cadangan cloud…</string>
   <string name="backup_restore_restoring">Memulihkan ...</string>
+  <string name="backup_always_title">Buat cadangan selalu online</string>
+  <string name="backup_always_desc">Secara otomatis naik cadangan setiap 24 jam (setelah 40 menit untuk penggunaan awal).</string>
 </resources>

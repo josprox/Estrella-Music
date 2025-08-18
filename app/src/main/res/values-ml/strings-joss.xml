@@ -157,4 +157,6 @@
   <string name="maybeLater">ഒരുപക്ഷേ പിന്നീട്</string>
   <string name="backup_restore_checking">ക്ലൗഡ് ബാക്കപ്പുകൾ പരിശോധിക്കുന്നു ...</string>
   <string name="backup_restore_restoring">പുന oring സ്ഥാപിക്കുന്നു ...</string>
+  <string name="backup_always_title">എല്ലായ്പ്പോഴും ഓൺലൈൻ ബാക്കപ്പ് സൃഷ്ടിക്കുക</string>
+  <string name="backup_always_desc">ഓരോ 24 മണിക്കൂറിലും സ്വപ്രേരിതമായി ഒരു ബാക്കപ്പ് ഉയർത്തുന്നു (പ്രാരംഭ ഉപയോഗത്തിനായി 40 മിനുട്ടിന് ശേഷം).</string>
 </resources>

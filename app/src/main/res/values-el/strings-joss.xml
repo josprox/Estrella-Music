@@ -158,4 +158,6 @@
   <string name="maybeLater">Ίσως αργότερα</string>
   <string name="backup_restore_checking">Έλεγχος αντιγράφων ασφαλείας σύννεφων…</string>
   <string name="backup_restore_restoring">Επαναφορά…</string>
+  <string name="backup_always_title">Δημιουργήστε ένα πάντα online αντίγραφο ασφαλείας</string>
+  <string name="backup_always_desc">Αυξάται αυτόματα ένα αντίγραφο ασφαλείας κάθε 24 ώρες (μετά από 40 λεπτά για αρχική χρήση).</string>
 </resources>

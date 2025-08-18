@@ -158,4 +158,6 @@
   <string name="maybeLater">Может позже</string>
   <string name="backup_restore_checking">Проверка резервных копий облаков ...</string>
   <string name="backup_restore_restoring">Восстановление…</string>
+  <string name="backup_always_title">Создать всегда онлайн -резервную копию</string>
+  <string name="backup_always_desc">Автоматически поднимается резервное копирование каждые 24 часа (через 40 минут для первоначального использования).</string>
 </resources>

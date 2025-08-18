@@ -4,6 +4,7 @@ annotation = "1.9.1"
 coilComposeVersion = "2.7.0"
 dotenvVaultKotlin = "0.0.3"
 hiltAndroid = "2.57"
+hiltWork = "1.2.0"
 json = "20250517"
 kotlin = "2.2.0"
 compose = "1.8.3"
@@ -33,6 +34,7 @@ foundation = "1.9.0"
 [libraries]
 
 #noinspection SimilarGradleDependency
+androidx-hilt-work = { module = "androidx.hilt:hilt-work", version.ref = "hiltWork" }
 androidx-material-icons-extended = { module = "androidx.compose.material:material-icons-extended", version.ref = "materialIconsExtended" }
 androidx-media3-datasource-v161 = { module = "androidx.media3:media3-datasource", version.ref = "media3DatasourceVersion" }
 #noinspection SimilarGradleDependency

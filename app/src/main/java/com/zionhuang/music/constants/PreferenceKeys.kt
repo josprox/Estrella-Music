@@ -3,6 +3,7 @@ package com.zionhuang.music.constants
 import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.floatPreferencesKey
 import androidx.datastore.preferences.core.intPreferencesKey
+import androidx.datastore.preferences.core.longPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
 
 val DynamicThemeKey = booleanPreferencesKey("dynamicTheme")
@@ -34,6 +35,8 @@ val ProxyEnabledKey = booleanPreferencesKey("proxyEnabled")
 val ProxyUrlKey = stringPreferencesKey("proxyUrl")
 val ProxyTypeKey = stringPreferencesKey("proxyType")
 val JossRedMultimedia = booleanPreferencesKey("JossRedMultimedia")
+val AlwaysCloudBackupKey = booleanPreferencesKey("alwaysCloudBackupEnabled")
+val FirstUseAtKey = longPreferencesKey("firstUseAtMillis")
 val PlayerMode = stringPreferencesKey("PlayerMode")
 val SleepFinishSong = booleanPreferencesKey("SleepFinishSong")
 

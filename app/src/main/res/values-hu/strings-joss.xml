@@ -169,4 +169,6 @@
   <string name="maybeLater">Talán később</string>
   <string name="backup_restore_checking">A felhő biztonsági mentések ellenőrzése…</string>
   <string name="backup_restore_restoring">Helyreállítás…</string>
+  <string name="backup_always_title">Hozzon létre egy mindig online biztonsági másolatot</string>
+  <string name="backup_always_desc">Automatikusan 24 óránként (40 perc elteltével kezdeti használat után) felemelkedik a biztonsági mentés.</string>
 </resources>

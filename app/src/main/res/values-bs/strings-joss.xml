@@ -124,4 +124,6 @@
   <string name="maybeLater">Možda kasnije</string>
   <string name="backup_restore_checking">Provjera rezervnih kopija oblaka ...</string>
   <string name="backup_restore_restoring">Vraćanje ...</string>
+  <string name="backup_always_title">Stvorite uvijek sigurnosnu kopiju na mreži</string>
+  <string name="backup_always_desc">Automatski se vrši sigurnosnu kopiju svaka 24 sata (nakon 40 min za početnu upotrebu).</string>
 </resources>

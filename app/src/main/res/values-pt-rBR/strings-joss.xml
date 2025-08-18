@@ -158,4 +158,6 @@
   <string name="maybeLater">Talvez mais tarde</string>
   <string name="backup_restore_checking">Verificando os backups da nuvem…</string>
   <string name="backup_restore_restoring">Restaurando ...</string>
+  <string name="backup_always_title">Crie um backup sempre online</string>
+  <string name="backup_always_desc">Aumenta automaticamente um backup a cada 24 horas (após 40 minutos para uso inicial).</string>
 </resources>

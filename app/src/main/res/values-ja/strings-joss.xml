@@ -158,4 +158,6 @@
   <string name="maybeLater">多分後で</string>
   <string name="backup_restore_checking">クラウドバックアップのチェック…</string>
   <string name="backup_restore_restoring">復元…</string>
+  <string name="backup_always_title">常にオンラインバックアップを作成します</string>
+  <string name="backup_always_desc">24時間ごとにバックアップを自動的に上昇させます（最初の使用のために40分後）。</string>
 </resources>

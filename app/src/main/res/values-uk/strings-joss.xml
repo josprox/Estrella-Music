@@ -158,4 +158,6 @@
   <string name="maybeLater">Можливо пізніше</string>
   <string name="backup_restore_checking">Перевірка хмарних резервних копій ...</string>
   <string name="backup_restore_restoring">Відновлення ...</string>
+  <string name="backup_always_title">Створіть завжди онлайн -резервну копію</string>
+  <string name="backup_always_desc">Автоматично піднімається резервне копіювання кожні 24 години (після 40 хв для початкового використання).</string>
 </resources>

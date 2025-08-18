@@ -155,4 +155,6 @@
   <string name="maybeLater">Peut-être plus tard</string>
   <string name="backup_restore_checking">Vérification des sauvegardes cloud…</string>
   <string name="backup_restore_restoring">Restaurer…</string>
+  <string name="backup_always_title">Créer une sauvegarde toujours en ligne</string>
+  <string name="backup_always_desc">Augmente automatiquement une sauvegarde toutes les 24 heures (après 40 min pour une utilisation initiale).</string>
 </resources>

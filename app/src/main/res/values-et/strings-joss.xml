@@ -124,4 +124,6 @@
   <string name="maybeLater">Võib -olla hiljem</string>
   <string name="backup_restore_checking">Pilve varukoopiate kontrollimine ...</string>
   <string name="backup_restore_restoring">Taastamine ...</string>
+  <string name="backup_always_title">Looge alati veebipõhine varukoopia</string>
+  <string name="backup_always_desc">Tõstab varukoopia automaatselt iga 24 tunni järel (40 minuti pärast esmaseks kasutamiseks).</string>
 </resources>

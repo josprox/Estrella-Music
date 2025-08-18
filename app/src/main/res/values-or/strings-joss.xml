@@ -179,4 +179,6 @@
   <string name="maybeLater">ବୋଧହୁଏ ପରେ</string>
   <string name="backup_restore_checking">କ୍ଲାଉଡ୍ ବ୍ୟାକଅପ୍ ଯାଞ୍ଚ କରୁଛି ...</string>
   <string name="backup_restore_restoring">ପୁନରୁଦ୍ଧାର ...</string>
+  <string name="backup_always_title">ସର୍ବଦା ଅନଲାଇନ୍ ବ୍ୟାକଅପ୍ ସୃଷ୍ଟି କରନ୍ତୁ |</string>
+  <string name="backup_always_desc">ପ୍ରତି 24 ଘଣ୍ଟାରେ ସ୍ୱୟଂଚାଳିତ ଭାବରେ ଏକ ବ୍ୟାକଅପ୍ ବ ris େ (ପ୍ରାରମ୍ଭିକ ବ୍ୟବହାର ପାଇଁ 40 ମିନିଟ୍ ପରେ) |</string>
 </resources>

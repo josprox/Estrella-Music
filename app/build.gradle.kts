@@ -206,6 +206,9 @@ dependencies {
     implementation(libs.onesignal)
     implementation(libs.androidx.media3.exoplayer.v131)
 
+    implementation("androidx.work:work-runtime-ktx:2.10.3")
+    implementation("androidx.hilt:hilt-work:1.2.0")
+
     // --- DEPENDENCIAS PARA LA VERSIÓN "full" ---
     "fullImplementation"(platform(libs.firebase.bom))
     "fullImplementation"(libs.firebase.analytics)
