@@ -621,14 +621,19 @@ class MusicService : MediaLibraryService(),
                         Timber.w("JossRed key vacía: se usa YouTube como fallback")
                     } else {
                         val modifiedDataSpec = JossRedClient.resolveDataSpec(
+                            context = this,
                             original = dataSpec,
                             mediaId = mediaId,
-                            secretKey = jossRedKey   // <- usar sin ()
+                            secretKey = jossRedKey
                         )
                         return@Factory modifiedDataSpec
                     }
                 } catch (e: Exception) {
                     when {
+                        e is JossRedClient.JossRedException && e.statusCode == 401 -> {
+                            // JWT inválido/expirado, continúa con YouTube o dispara un flujo de re-login si lo deseas
+                            Timber.w("JWT inválido/expirado para JossRed (401). Usando fallback YouTube.")
+                        }
                         e is JossRedClient.JossRedException && e.statusCode == 403 -> {
                             Timber.w(getString(R.string.errorJossRed403))
                         }

@@ -72,7 +72,7 @@ android {
         create("universal") {
             dimension = "abi"
             ndk {
-                abiFilters.addAll(listOf("armeabi-v7a", "arm64-v8a"))
+                abiFilters.addAll(listOf("armeabi-v7a", "arm64-v8a", "x86_64", "x86"))
             }
             setProperty("archivesBaseName", "jossmusic-universal")
         }
