@@ -14,6 +14,7 @@ import androidx.media3.exoplayer.offline.DownloadManager
 import androidx.media3.exoplayer.offline.DownloadNotificationHelper
 import androidx.media3.exoplayer.offline.DownloadRequest
 import androidx.media3.exoplayer.offline.DownloadService
+import com.josprox.jossredconnect.JossRedClient
 import com.zionhuang.innertube.YouTube
 import com.zionhuang.music.constants.AudioQuality
 import com.zionhuang.music.constants.AudioQualityKey
@@ -23,6 +24,7 @@ import com.zionhuang.music.db.entities.SongEntity
 import com.zionhuang.music.di.AppModule.PlayerCache
 import com.zionhuang.music.di.DownloadCache
 import com.zionhuang.music.models.MediaMetadata
+import com.zionhuang.music.utils.SecureKeys
 import com.zionhuang.music.utils.YTPlayerUtils
 import com.zionhuang.music.utils.enumPreference
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -49,9 +51,26 @@ class DownloadUtil @Inject constructor(
     private val connectivityManager = context.getSystemService<ConnectivityManager>()!!
     private val audioQuality by enumPreference(context, AudioQualityKey, AudioQuality.AUTO)
     private val songUrlCache = HashMap<String, Pair<String, Long>>()
+
+    // Clave segura Joss Red (igual que en playback)
+    private val jossRedKey: String by lazy { SecureKeys.getJossRedKey() }
+
+    // Helpers JWT almacenado por tu AuthService
+    private fun hasJwt(): Boolean {
+        val sp = context.getSharedPreferences("jossred_prefs", Context.MODE_PRIVATE)
+        val jwt = sp.getString("jwt_token", null) ?: return false
+        val exp = sp.getLong("token_expiration", -1L)
+        val now = System.currentTimeMillis() / 1000L
+        val skew = 60 // margen de 1 min
+        return exp <= 0L || (exp - now) > skew
+    }
+    private fun readJwtOrNull(): String? =
+        context.getSharedPreferences("jossred_prefs", Context.MODE_PRIVATE)
+            .getString("jwt_token", null)
+
     private val dataSourceFactory = ResolvingDataSource.Factory(
         CacheDataSource.Factory()
-            .setCache(playerCache)
+            .setCache(playerCache) // ok: DownloadManager ya persiste en downloadCache internamente
             .setUpstreamDataSourceFactory(
                 OkHttpDataSource.Factory(
                     OkHttpClient.Builder()
@@ -63,25 +82,25 @@ class DownloadUtil @Inject constructor(
         val mediaId = dataSpec.key ?: error("No media id")
         val length = if (dataSpec.length >= 0) dataSpec.length else 1
 
-        // 1. Si ya está en cache local, no se hace nada más.
+        // 1) Si ya está en cache local, usarlo
         if (playerCache.isCached(mediaId, dataSpec.position, length)) {
             return@Factory dataSpec
         }
 
-        // La opción 2 está deshabilitado ya que ahora no usaremos cache de las canciones, evitamos problemas de desofuscación.
-        // 2. Si está en el songUrlCache y no ha expirado, usamos esa URL.
-//        songUrlCache[mediaId]?.takeIf { it.second > System.currentTimeMillis() }?.let {
-//            return@Factory dataSpec.withUri(it.first.toUri())
-//        }
+        // 2) (opcional) cache en memoria
+        // songUrlCache[mediaId]?.takeIf { it.second > System.currentTimeMillis() }?.let {
+        //     return@Factory dataSpec.withUri(it.first.toUri())
+        // }
 
         var lastError: Exception? = null
 
-        repeat(3) retry@{ attempt ->
+        // 3) Intentar YouTube/NewPipe (hasta 3 intentos, como antes)
+        repeat(3) retry@{
             try {
-                // 3. Obtener formato reproducido previamente (desde BD)
-                val playedFormat = runBlocking(Dispatchers.IO) { database.format(mediaId).first() }
+                // (a) formato previo (si lo usas para algo adicional)
+                runBlocking(Dispatchers.IO) { database.format(mediaId).first() }
 
-                // 4. Pedir nueva URL con lógica actual
+                // (b) player response -> streamUrl
                 val playbackData = runBlocking(Dispatchers.IO) {
                     YTPlayerUtils.playerResponseForPlayback(
                         mediaId,
@@ -92,7 +111,7 @@ class DownloadUtil @Inject constructor(
 
                 val format = playbackData.format
 
-                // Guardar formato actualizado en la base de datos
+                // (c) guardar formato
                 database.query {
                     upsert(
                         FormatEntity(
@@ -108,32 +127,66 @@ class DownloadUtil @Inject constructor(
                     )
                 }
 
-                // Generar la URL final con rango forzado
+                // (d) URL con rango forzado (tu lógica)
                 val streamUrl = playbackData.streamUrl.let {
                     "${it}&range=0-${format.contentLength ?: 10000000}"
                 }
 
-                // Cachear la URL hasta que expire
-                songUrlCache[mediaId] = streamUrl to System.currentTimeMillis() + (playbackData.streamExpiresInSeconds * 1000L)
+                // (e) cache simple en memoria
+                songUrlCache[mediaId] = streamUrl to
+                        System.currentTimeMillis() + (playbackData.streamExpiresInSeconds * 1000L)
 
-                // Retornar nuevo DataSpec con la URL resuelta
                 return@Factory dataSpec.withUri(streamUrl.toUri())
 
             } catch (e: Exception) {
                 lastError = e
-
-                // Si no es error 403, no tiene sentido reintentar
                 val is403 = e.message?.contains("403") == true || e.message?.contains("Forbidden") == true
-                if (!is403) return@Factory dataSpec // usar el original (fallará, pero se verá en logs)
+                if (!is403) {
+                    // No vale la pena reintentar YouTube -> salimos del bucle
+                    return@retry
+                }
+                // en 403, se reintenta hasta agotar
             }
         }
 
-        // Si se llegó aquí, falló 3 veces: regresar el DataSpec original sin tocar nada (se maneja como error en otro lado si aplica)
+        // 4) EMERGENCIA: intentar Joss Red si hay sesión y key
+        if (hasJwt() && jossRedKey.isNotBlank()) {
+            try {
+                val url = JossRedClient.getStreamingUrl(
+                    context = context,
+                    mediaId = mediaId,
+                    secretKey = jossRedKey
+                )
+                val jwt = readJwtOrNull()!!
+                return@Factory dataSpec.buildUpon()
+                    .setUri(url.toUri())
+                    .setHttpRequestHeaders(
+                        mapOf(
+                            "X-JossRed-Auth" to jossRedKey,
+                            "Authorization" to "Bearer $jwt",
+                        )
+                    )
+                    .build()
+            } catch (e: Exception) {
+                // Si también falla, dejamos seguir el flujo como error
+                lastError = e
+            }
+        }
+
+        // 5) Si falla, devolvemos el DataSpec original (el DownloadManager marcará el fallo)
         return@Factory dataSpec
     }
 
-    val downloadNotificationHelper = DownloadNotificationHelper(context, ExoDownloadService.CHANNEL_ID)
-    val downloadManager: DownloadManager = DownloadManager(context, databaseProvider, downloadCache, dataSourceFactory, Executor(Runnable::run)).apply {
+    val downloadNotificationHelper =
+        DownloadNotificationHelper(context, ExoDownloadService.CHANNEL_ID)
+
+    val downloadManager: DownloadManager = DownloadManager(
+        context,
+        databaseProvider,
+        downloadCache,
+        dataSourceFactory,
+        Executor(Runnable::run)
+    ).apply {
         maxParallelDownloads = 3
         addListener(
             ExoDownloadService.TerminalStateNotificationHelper(
@@ -143,8 +196,8 @@ class DownloadUtil @Inject constructor(
             )
         )
     }
-    val downloads = MutableStateFlow<Map<String, Download>>(emptyMap())
 
+    val downloads = MutableStateFlow<Map<String, Download>>(emptyMap())
 
     fun getDownload(songId: String): Flow<Download?> = downloads.map { it[songId] }
 
@@ -162,16 +215,16 @@ class DownloadUtil @Inject constructor(
 
     private fun downloadSong(id: String, title: String) {
         val downloadRequest = DownloadRequest.Builder(id, id.toUri())
-            .setCustomCacheKey(id)
+            .setCustomCacheKey(id) // importante: key = mediaId para el resolver
             .setData(title.toByteArray())
             .build()
         DownloadService.sendAddDownload(
             context,
             ExoDownloadService::class.java,
             downloadRequest,
-            false)
+            false
+        )
     }
-
 
     init {
         val result = mutableMapOf<String, Download>()
@@ -182,11 +235,13 @@ class DownloadUtil @Inject constructor(
         downloads.value = result
         downloadManager.addListener(
             object : DownloadManager.Listener {
-                override fun onDownloadChanged(downloadManager: DownloadManager, download: Download, finalException: Exception?) {
+                override fun onDownloadChanged(
+                    downloadManager: DownloadManager,
+                    download: Download,
+                    finalException: Exception?
+                ) {
                     downloads.update { map ->
-                        map.toMutableMap().apply {
-                            set(download.request.id, download)
-                        }
+                        map.toMutableMap().apply { set(download.request.id, download) }
                     }
                 }
             }
