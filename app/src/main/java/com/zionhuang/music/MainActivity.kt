@@ -87,7 +87,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    // Deep link inicial
+    // Deep link inicial (se conserva para consumirlo después del login)
     private var initialIntent: Intent? = null
 
     private val updateViewModel: UpdateMainViewModel by viewModels {
@@ -156,6 +156,25 @@ class MainActivity : ComponentActivity() {
         requestNotificationPermission()
     }
 
+    // manejar deep links recibidos con la app viva, sin saltar login
+    override fun onNewIntent(intent: Intent) {
+        super.onNewIntent(intent)
+        setIntent(intent)          // <- asigna el nuevo intent a la Activity
+        initialIntent = intent     // <- lo conservamos para que la UI lo consuma tras login
+
+        lifecycleScope.launch {
+            val loggedIn = ensureValidSession()
+            if (!loggedIn) {
+                // Llevamos al login; tras autenticarse, initializeApp() consumirá initialIntent
+                showWelcome()
+            } else {
+                // Ya logeado: la UI podrá consumir el deep link
+                initializeApp()
+            }
+        }
+    }
+
+
     // --------------------- Servicio de música ---------------------
     private fun bindMusicService() {
         val serviceIntent = Intent(this, MusicService::class.java)
@@ -196,10 +215,14 @@ class MainActivity : ComponentActivity() {
         setContent {
             WelcomeRoute(
                 onAuthSuccess = {
+                    // Tras iniciar sesión, arrancamos la app y el deep link (si había) se consumirá
                     initializeApp()
                     lifecycleScope.launch { tryScheduleDailyCloudBackup() }
                 },
-                onSkip = { initializeApp() }
+                onSkip = {
+                    // Si decides mantener "skip" para debugging, quita esto en producción
+                    initializeApp()
+                }
             )
         }
     }
@@ -220,16 +243,23 @@ class MainActivity : ComponentActivity() {
     // --------------------- Flujo tras permiso ---------------------
     private fun maybeStartWelcomeOrApp() {
         lifecycleScope.launch {
+            // VALIDAMOS SESIÓN PRIMERO (cambia el orden)
+            val loggedIn = ensureValidSession()
             val hasDeepLink = intent?.data != null
             val alreadyShown = applicationContext.dataStore[OnboardingShownKey] == true
 
+            // Si hay deep link: SOLO dejamos pasar si ya hay sesión
             if (hasDeepLink) {
-                initializeApp()
+                if (loggedIn) {
+                    initializeApp()
+                } else {
+                    // guardamos initialIntent (ya está) y pedimos login
+                    showWelcome()
+                }
                 return@launch
             }
 
-            val loggedIn = ensureValidSession()
-
+            // Sin deep link: flujo normal
             if (loggedIn) {
                 if (alreadyShown) {
                     initializeApp()
@@ -403,4 +433,3 @@ class MainActivity : ComponentActivity() {
         const val ACTION_PLAYLISTS = "com.zionhuang.music.action.PLAYLISTS"
     }
 }
-
