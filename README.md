@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./app/src/main/ic_launcher-playstore.png" width="128" height="128" alt="App icon"/>
+  <img src="./app/src/main/play_store_512.png" width="128" height="128" alt="App icon" />
   <h1>Estrella Music</h1>
   <p><em>Una aplicación Android para transmitir música desde YouTube Music, basada en ViMusic e InnerTune</em></p>
 
@@ -48,7 +48,7 @@
 ## 📸 Capturas de pantalla
 
 <div align="center">
-  <p>Desliza las imágenes hacia los lados 👉</p>
+  <p>Desliza las imágenes hacia los lados 👉 (anteriormente Joss Music)</p>
   <div style="display: flex; overflow-x: auto; gap: 0px; padding: 10px;">
     <img src="./assets/1.png" height="400" alt="Captura 1"/>
     <img src="./assets/2.png" height="400" alt="Captura 2"/>
