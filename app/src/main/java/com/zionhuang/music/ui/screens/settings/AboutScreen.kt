@@ -181,7 +181,7 @@ private fun AppHeader() {
         )
 
         Text(
-            text = "Joss Music",
+            text = "Estrella Music",
             style = MaterialTheme.typography.headlineMedium
         )
 

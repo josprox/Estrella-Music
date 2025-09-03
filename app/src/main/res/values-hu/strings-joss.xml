@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <!-- Traducciones de Joss Music con Joss Red Traductor -->
+  <!-- Traducciones de Estrella Music con Joss Red Traductor -->
   <string name="card_donation">Adománya segít nekünk az alkalmazás ingyenességének megőrzésében és funkcióinak fejlesztésében</string>
   <string name="website_url">menj a weboldalra</string>
   <string name="latestVersion">Legújabb verzió</string>
@@ -39,7 +39,7 @@
   <string name="privacyPolicy">Adatvédelmi szabályzat</string>
   <string name="termsConditions">Általános Szerződési Feltételek</string>
   <string name="appByJosproxMx">A JOSPROX MX által fejlesztett alkalmazás</string>
-  <string name="musicDescNotification">A "Joss Music" -nak az előtérben kell maradnia, hogy folytathassa a zenéjét. Ez lehetővé teszi, hogy megszakítások nélkül élvezze dalait, és bármikor folytatja őket.</string>
+  <string name="musicDescNotification">A "Estrella Music" -nak az előtérben kell maradnia, hogy folytathassa a zenéjét. Ez lehetővé teszi, hogy megszakítások nélkül élvezze dalait, és bármikor folytatja őket.</string>
   <string name="musicTitleNotification">🎵 Joss zene mindig veled</string>
   <string name="transparentMode">Átlátható mód</string>
   <string name="transparentModeText">Aktiválja vagy deaktiválja az átlátszó módot a lejátszóban.</string>
@@ -119,7 +119,7 @@
   <string name="forgot_title">Helyezze vissza a jelszót</string>
   <string name="btn_sending">Küldés ...</string>
   <string name="btn_send_recovery">Küldje el a helyreállítási e -mailt</string>
-  <string name="onboarding_welcome_title">Üdvözöljük a Joss Music -ban</string>
+  <string name="onboarding_welcome_title">Üdvözöljük a Estrella Music -ban</string>
   <string name="onboarding_welcome_desc">A zenéd egy helyen: gyors, tiszta és neked készült.</string>
   <string name="onboarding_downloads_title">Intelligens letöltések</string>
   <string name="onboarding_downloads_desc">Mentse el a dalokat, albumokat és lejátszási listákat az offline hallgatáshoz. </string>
@@ -133,8 +133,8 @@
   <string name="onboarding_library_desc">Készítsen, szervezzen és megossza a lejátszási listákat; </string>
   <string name="song_title_placeholder">Dalcím</string>
   <string name="artist">Művész</string>
-  <string name="listening_to_joss">Joss Music hallgatása</string>
-  <string name="btn_visit_joss">Látogasson el a Joss Musicba</string>
+  <string name="listening_to_joss">Estrella Music hallgatása</string>
+  <string name="btn_visit_joss">Látogasson el a Estrella Musicba</string>
   <string name="account_joss_red">Joss Red fiók</string>
   <string name="refresh">Frissít</string>
   <string name="checking_session">Ellenőrző munkamenet…</string>

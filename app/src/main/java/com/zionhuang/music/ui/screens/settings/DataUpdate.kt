@@ -171,7 +171,7 @@ private fun AppHeader() {
             contentDescription = "App Logo",
             modifier = Modifier.size(100.dp).clip(CircleShape)
         )
-        Text(text = "Joss Music", style = MaterialTheme.typography.headlineMedium)
+        Text(text = "Estrella Music", style = MaterialTheme.typography.headlineMedium)
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             AssistChip(onClick = {}, label = { Text("Google Play") })
             AssistChip(onClick = {}, label = { Text(BuildConfig.FLAVOR.uppercase()) })

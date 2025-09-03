@@ -83,7 +83,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
-            <!-- Configuración de Joss Music -->
+            <!-- Configuración de Estrella Music -->
 
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />

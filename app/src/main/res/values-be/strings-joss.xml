@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <!-- Traducciones de Joss Music con Joss Red Traductor -->
+  <!-- Traducciones de Estrella Music con Joss Red Traductor -->
   <string name="card_donation">Ваша ахвяраванне дапамагае нам падтрымліваць праграму бясплатнай і паляпшаць яе функцыі</string>
   <string name="website_url">перайсці на сайт</string>
   <string name="latestVersion">Апошняя версія</string>
@@ -50,8 +50,8 @@
   <string name="privacyPolicy">Палітыка прыватнасці</string>
   <string name="termsConditions">Правілы і ўмовы</string>
   <string name="appByJosproxMx">Дадатак, распрацаванае JOSPROX MX</string>
-  <string name="musicDescNotification">"Joss Music" павінна застацца на пярэднім плане, каб працягваць граць музыку. Гэта дазваляе вам атрымліваць асалоду ад песнямі без перапынкаў і аднавіць іх у любы час.</string>
-  <string name="musicTitleNotification">🎵 Joss Music заўсёды з табой</string>
+  <string name="musicDescNotification">"Estrella Music" павінна застацца на пярэднім плане, каб працягваць граць музыку. Гэта дазваляе вам атрымліваць асалоду ад песнямі без перапынкаў і аднавіць іх у любы час.</string>
+  <string name="musicTitleNotification">🎵 Estrella Music заўсёды з табой</string>
   <string name="transparentMode">Празрысты рэжым</string>
   <string name="transparentModeText">Актываваць альбо дэактываваць празрысты рэжым у прайгравальніку.</string>
   <string name="sleepTimerSong">Скончыце песню перад Паусарам</string>
@@ -130,7 +130,7 @@
   <string name="forgot_title">Аднавіць пароль</string>
   <string name="btn_sending">Адпраўка …</string>
   <string name="btn_send_recovery">Адпраўце аднаўленне электроннай пошты</string>
-  <string name="onboarding_welcome_title">Сардэчна запрашаем у Joss Music</string>
+  <string name="onboarding_welcome_title">Сардэчна запрашаем у Estrella Music</string>
   <string name="onboarding_welcome_desc">Ваша музыка ў адным месцы: хутка, чыста і зроблена для вас.</string>
   <string name="onboarding_downloads_title">Разумныя загрузкі</string>
   <string name="onboarding_downloads_desc">Захавайце песні, альбомы і спісы прайгравання, каб паслухаць у аўтаномным рэжыме. </string>
@@ -144,8 +144,8 @@
   <string name="onboarding_library_desc">Стварыць, арганізоўваць і дзяліцца спісамі прайгравання; </string>
   <string name="song_title_placeholder">Назва песні</string>
   <string name="artist">Мастак</string>
-  <string name="listening_to_joss">Праслухоўванне ад Joss Music</string>
-  <string name="btn_visit_joss">Наведайце Joss Music</string>
+  <string name="listening_to_joss">Праслухоўванне ад Estrella Music</string>
+  <string name="btn_visit_joss">Наведайце Estrella Music</string>
   <string name="account_joss_red">Уліковы запіс Джосса Рэд</string>
   <string name="refresh">Асвяжаць</string>
   <string name="checking_session">Праверка сесіі …</string>

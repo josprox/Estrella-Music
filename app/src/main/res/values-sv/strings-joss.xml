@@ -74,7 +74,7 @@
   <string name="forgot_title">Återställa lösenord</string>
   <string name="btn_sending">Sändning...</string>
   <string name="btn_send_recovery">Skicka e -postmeddelande</string>
-  <string name="onboarding_welcome_title">Välkommen till Joss Music</string>
+  <string name="onboarding_welcome_title">Välkommen till Estrella Music</string>
   <string name="onboarding_welcome_desc">Din musik på ett ställe: Snabb, ren och gjord för dig.</string>
   <string name="onboarding_downloads_title">Smarta nedladdningar</string>
   <string name="onboarding_downloads_desc">Spara låtar, album och spellistor för att lyssna offline. </string>
@@ -88,8 +88,8 @@
   <string name="onboarding_library_desc">Skapa, organisera och dela spellistor; </string>
   <string name="song_title_placeholder">Såttitel</string>
   <string name="artist">Konstnär</string>
-  <string name="listening_to_joss">Lyssnar från Joss Music</string>
-  <string name="btn_visit_joss">Besök Joss Music</string>
+  <string name="listening_to_joss">Lyssnar från Estrella Music</string>
+  <string name="btn_visit_joss">Besök Estrella Music</string>
   <string name="account_joss_red">Joss Red Account</string>
   <string name="refresh">Uppdatera</string>
   <string name="checking_session">Kontrollsession ...</string>

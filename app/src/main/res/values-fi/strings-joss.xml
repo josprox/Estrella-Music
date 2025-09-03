@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <!-- Traducciones de Joss Music con Joss Red Traductor -->
+  <!-- Traducciones de Estrella Music con Joss Red Traductor -->
   <string name="card_donation">Lahjoituksesi auttaa meitä pitämään sovelluksen maksuttomana ja parantamaan sen ominaisuuksia</string>
   <string name="website_url">mene verkkosivulle</string>
   <string name="latestVersion">Uusin versio</string>
@@ -28,7 +28,7 @@
   <string name="privacyPolicy">Tietosuojakäytäntö</string>
   <string name="termsConditions">Ehdot</string>
   <string name="appByJosproxMx">JOSPROX MX:n kehittämä sovellus</string>
-  <string name="musicDescNotification">"Joss Music" on pysyttävä etualalla musiikin pelaamiseksi. Tämän avulla voit nauttia kappaleistasi keskeytyksiä ja jatkaa niitä milloin tahansa.</string>
+  <string name="musicDescNotification">"Estrella Music" on pysyttävä etualalla musiikin pelaamiseksi. Tämän avulla voit nauttia kappaleistasi keskeytyksiä ja jatkaa niitä milloin tahansa.</string>
   <string name="musicTitleNotification">🎵 Joss -musiikki aina kanssasi</string>
   <string name="transparentMode">Läpinäkyvä tila</string>
   <string name="transparentModeText">Aktivoi tai deaktivoi läpinäkyvä tila soittimessa.</string>
@@ -122,7 +122,7 @@
   <string name="onboarding_library_desc">Luoda, järjestä ja jaa soittolistoja; </string>
   <string name="song_title_placeholder">Kappaleen otsikko</string>
   <string name="artist">Taiteilija</string>
-  <string name="listening_to_joss">Kuunteleminen Joss Musicista</string>
+  <string name="listening_to_joss">Kuunteleminen Estrella Musicista</string>
   <string name="btn_visit_joss">Käy Joss -musiikissa</string>
   <string name="account_joss_red">Joss Red -tili</string>
   <string name="refresh">Virkistää</string>

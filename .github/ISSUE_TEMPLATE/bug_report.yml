@@ -72,9 +72,9 @@ body:
   - type: input
     id: app-version
     attributes:
-      label: Versión de Joss Music
+      label: Versión de Estrella Music
       description: |
-        Puedes encontrar la versión de Joss Music en **Configuración**.
+        Puedes encontrar la versión de Estrella Music en **Configuración**.
       placeholder: |
         Ejemplo: "0.5.6"
     validations:

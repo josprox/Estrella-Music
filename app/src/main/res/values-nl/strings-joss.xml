@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <!-- Traducciones de Joss Music con Joss Red Traductor -->
+  <!-- Traducciones de Estrella Music con Joss Red Traductor -->
   <string name="card_donation">Jouw donatie helpt ons de app gratis te houden en de functies ervan te verbeteren</string>
   <string name="website_url">ga naar website</string>
   <string name="latestVersion">Nieuwste versie</string>
@@ -28,8 +28,8 @@
   <string name="privacyPolicy">Privacybeleid</string>
   <string name="termsConditions">Algemene voorwaarden</string>
   <string name="appByJosproxMx">Een applicatie ontwikkeld door JOSPROX MX</string>
-  <string name="musicDescNotification">"Joss Music" moet op de voorgrond blijven om je muziek te blijven spelen. Hierdoor kunt u van uw liedjes genieten zonder onderbrekingen en ze op elk gewenst moment hervatten.</string>
-  <string name="musicTitleNotification">🎵 Joss Music altijd bij je</string>
+  <string name="musicDescNotification">"Estrella Music" moet op de voorgrond blijven om je muziek te blijven spelen. Hierdoor kunt u van uw liedjes genieten zonder onderbrekingen en ze op elk gewenst moment hervatten.</string>
+  <string name="musicTitleNotification">🎵 Estrella Music altijd bij je</string>
   <string name="transparentMode">Transparante modus</string>
   <string name="transparentModeText">Activeer of deactiveer de transparante modus in de speler.</string>
   <string name="sleepTimerSong">Voltooid lied voor Pausar</string>
@@ -108,7 +108,7 @@
   <string name="forgot_title">Herstel het wachtwoord</string>
   <string name="btn_sending">Verzenden ...</string>
   <string name="btn_send_recovery">Stuur herstel -e -mail</string>
-  <string name="onboarding_welcome_title">Welkom bij Joss Music</string>
+  <string name="onboarding_welcome_title">Welkom bij Estrella Music</string>
   <string name="onboarding_welcome_desc">Je muziek op één plek: snel, schoon en voor jou gemaakt.</string>
   <string name="onboarding_downloads_title">Slimme downloads</string>
   <string name="onboarding_downloads_desc">Sla nummers, albums en afspeellijsten op om offline te luisteren. </string>
@@ -122,8 +122,8 @@
   <string name="onboarding_library_desc">Creëer, organiseren en delen afspeellijsten; </string>
   <string name="song_title_placeholder">Songtitel</string>
   <string name="artist">Artiest</string>
-  <string name="listening_to_joss">Luisteren vanuit Joss Music</string>
-  <string name="btn_visit_joss">Bezoek Joss Music</string>
+  <string name="listening_to_joss">Luisteren vanuit Estrella Music</string>
+  <string name="btn_visit_joss">Bezoek Estrella Music</string>
   <string name="account_joss_red">Joss Red Account</string>
   <string name="refresh">Opfrissen</string>
   <string name="checking_session">Controle sessie…</string>

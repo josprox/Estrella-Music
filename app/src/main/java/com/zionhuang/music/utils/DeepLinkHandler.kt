@@ -36,7 +36,7 @@ class DeepLinkHandler(
     }
 
     /**
-     * Centraliza el manejo de URIs, decidiendo si es un enlace de Joss Music o de YouTube.
+     * Centraliza el manejo de URIs, decidiendo si es un enlace de Estrella Music o de YouTube.
      */
     private fun handleUri(uri: Uri, onSharedSong: ((SongItem) -> Unit)? = null) {
         when (uri.host) {

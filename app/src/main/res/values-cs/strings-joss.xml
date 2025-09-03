@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <!-- Traducciones de Joss Music con Joss Red Traductor -->
+  <!-- Traducciones de Estrella Music con Joss Red Traductor -->
   <string name="card_donation">Váš dar nám pomáhá udržovat aplikaci zdarma a zlepšovat její funkce</string>
   <string name="website_url">přejděte na webovou stránku</string>
   <string name="latestVersion">Nejnovější verze</string>
@@ -29,7 +29,7 @@
   <string name="termsConditions">Smluvní podmínky</string>
   <string name="appByJosproxMx">Aplikace vyvinutá společností JOSPROX MX</string>
   <string name="musicDescNotification">„Jossova hudba“ musí zůstat v popředí, aby mohla hrát hudbu. To vám umožní užít si své písně bez přerušení a obnovit je kdykoli.</string>
-  <string name="musicTitleNotification">🎵 Joss Music vždy s vámi</string>
+  <string name="musicTitleNotification">🎵 Estrella Music vždy s vámi</string>
   <string name="transparentMode">Transparentní režim</string>
   <string name="transparentModeText">Aktivujte nebo deaktivujte transparentní režim v přehrávači.</string>
   <string name="sleepTimerSong">Dokončete píseň před Pausar</string>
@@ -122,7 +122,7 @@
   <string name="onboarding_library_desc">Vytvářet, organizovat a sdílet seznamy skladeb; </string>
   <string name="song_title_placeholder">Název písně</string>
   <string name="artist">Umělec</string>
-  <string name="listening_to_joss">Poslech z Joss Music</string>
+  <string name="listening_to_joss">Poslech z Estrella Music</string>
   <string name="btn_visit_joss">Navštivte hudbu Joss</string>
   <string name="account_joss_red">Joss Red Account</string>
   <string name="refresh">Obnovit</string>

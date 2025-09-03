@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <!-- Traducciones de Joss Music con Joss Red Traductor -->
+  <!-- Traducciones de Estrella Music con Joss Red Traductor -->
   <string name="card_donation">あなたの寄付は、アプリを無料で維持し、機能を改善するのに役立ちます</string>
   <string name="website_url">ウェブサイトに行く</string>
   <string name="latestVersion">最新バージョン</string>
@@ -28,7 +28,7 @@
   <string name="privacyPolicy">プライバシーポリシー</string>
   <string name="termsConditions">利用規約</string>
   <string name="appByJosproxMx">JOSPROX MX によって開発されたアプリケーション</string>
-  <string name="musicDescNotification">「Joss Music」は、音楽を演奏し続けるために前景にとどまる必要があります。これにより、中断することなく曲を楽しんで、いつでも再開できます。</string>
+  <string name="musicDescNotification">「Estrella Music」は、音楽を演奏し続けるために前景にとどまる必要があります。これにより、中断することなく曲を楽しんで、いつでも再開できます。</string>
   <string name="musicTitleNotification">🎵ジョス音楽はいつもあなたと一緒です</string>
   <string name="transparentMode">透明モード</string>
   <string name="transparentModeText">プレーヤーの透明モードをアクティブ化または非アクティブ化します。</string>
@@ -108,7 +108,7 @@
   <string name="forgot_title">パスワードを回復します</string>
   <string name="btn_sending">送信...</string>
   <string name="btn_send_recovery">回復メールを送信します</string>
-  <string name="onboarding_welcome_title">Joss Musicへようこそ</string>
+  <string name="onboarding_welcome_title">Estrella Musicへようこそ</string>
   <string name="onboarding_welcome_desc">あなたの音楽は1つの場所で：速く、きれいで、あなたのために作られています。</string>
   <string name="onboarding_downloads_title">スマートダウンロード</string>
   <string name="onboarding_downloads_desc">歌、アルバム、プレイリストを保存して、オフラインで聴く。</string>
@@ -122,8 +122,8 @@
   <string name="onboarding_library_desc">プレイリストを作成、整理、共有します。</string>
   <string name="song_title_placeholder">曲名</string>
   <string name="artist">アーティスト</string>
-  <string name="listening_to_joss">Joss Musicから聞く</string>
-  <string name="btn_visit_joss">Joss Musicをご覧ください</string>
+  <string name="listening_to_joss">Estrella Musicから聞く</string>
+  <string name="btn_visit_joss">Estrella Musicをご覧ください</string>
   <string name="account_joss_red">Joss Redアカウント</string>
   <string name="refresh">リフレッシュします</string>
   <string name="checking_session">チェックセッション…</string>

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <!-- Traducciones de Joss Music con Joss Red Traductor -->
+  <!-- Traducciones de Estrella Music con Joss Red Traductor -->
   <string name="card_donation">Bağışınız, uygulamayı ücretsiz tutmamıza ve özelliklerini geliştirmemize yardımcı olur</string>
   <string name="website_url">web sitesine git</string>
   <string name="latestVersion">En son sürüm</string>
@@ -28,8 +28,8 @@
   <string name="privacyPolicy">Gizlilik Politikası</string>
   <string name="termsConditions">Şartlar ve koşullar</string>
   <string name="appByJosproxMx">JOSPROX MX tarafından geliştirilen bir uygulama</string>
-  <string name="musicDescNotification">"Joss Music", müziğinizi çalmaya devam etmek için ön planda kalmalıdır. Bu, şarkılarınızın kesintisiz olarak tadını çıkarmanıza ve istediğiniz zaman devam etmenize olanak tanır.</string>
-  <string name="musicTitleNotification">🎵 Joss müzik her zaman seninle</string>
+  <string name="musicDescNotification">"Estrella Music", müziğinizi çalmaya devam etmek için ön planda kalmalıdır. Bu, şarkılarınızın kesintisiz olarak tadını çıkarmanıza ve istediğiniz zaman devam etmenize olanak tanır.</string>
+  <string name="musicTitleNotification">🎵 Estrella Müzik her zaman seninle</string>
   <string name="transparentMode">Şeffaf mod</string>
   <string name="transparentModeText">Oynatıcıdaki şeffaf modu etkinleştirin veya devre dışı bırakın.</string>
   <string name="sleepTimerSong">Pausar\'dan Önce Şarkıyı Bitir</string>
@@ -108,7 +108,7 @@
   <string name="forgot_title">Parolayı kurtar</string>
   <string name="btn_sending">Gönderme …</string>
   <string name="btn_send_recovery">Kurtarma E -postası Gönder</string>
-  <string name="onboarding_welcome_title">Joss Music\'e Hoş Geldiniz</string>
+  <string name="onboarding_welcome_title">Estrella Music\'e Hoş Geldiniz</string>
   <string name="onboarding_welcome_desc">Müziğiniz tek bir yerde: hızlı, temiz ve sizin için yapılmış.</string>
   <string name="onboarding_downloads_title">Akıllı İndirmeler</string>
   <string name="onboarding_downloads_desc">Çevrimdışı dinlemek için şarkıları, albümleri ve çalma listelerini kaydedin. </string>
@@ -122,8 +122,8 @@
   <string name="onboarding_library_desc">Çalma listeleri oluşturmak, düzenlemek ve paylaşmak; </string>
   <string name="song_title_placeholder">Şarkı Başlığı</string>
   <string name="artist">Sanatçı</string>
-  <string name="listening_to_joss">Joss Music\'ten Dinleme</string>
-  <string name="btn_visit_joss">Joss Music\'i ziyaret edin</string>
+  <string name="listening_to_joss">Estrella Music\'ten Dinleme</string>
+  <string name="btn_visit_joss">Estrella Music\'i ziyaret edin</string>
   <string name="account_joss_red">Joss Red Hesabı</string>
   <string name="refresh">Yenilemek</string>
   <string name="checking_session">Kontrol oturumu…</string>

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <!-- Traducciones de Joss Music con Joss Red Traductor -->
+  <!-- Traducciones de Estrella Music con Joss Red Traductor -->
   <string name="card_donation">Votre don nous aide à garder l\'application gratuite et à améliorer ses fonctionnalités</string>
   <string name="website_url">aller sur le site Web</string>
   <string name="latestVersion">Dernière version</string>
@@ -25,8 +25,8 @@
   <string name="privacyPolicy">politique de confidentialité</string>
   <string name="termsConditions">Termes et conditions</string>
   <string name="appByJosproxMx">Une application développée par JOSPROX MX</string>
-  <string name="musicDescNotification">"Joss Music" doit rester au premier plan pour continuer à jouer votre musique. Cela vous permet de profiter de vos chansons sans interruptions et de les reprendre à tout moment.</string>
-  <string name="musicTitleNotification">🎵 Joss Musique toujours avec toi</string>
+  <string name="musicDescNotification">"Estrella Music" doit rester au premier plan pour continuer à jouer votre musique. Cela vous permet de profiter de vos chansons sans interruptions et de les reprendre à tout moment.</string>
+  <string name="musicTitleNotification">🎵 Estrella Musique toujours avec toi</string>
   <string name="transparentMode">Mode transparent</string>
   <string name="transparentModeText">Activez ou désactivez le mode transparent dans le lecteur.</string>
   <string name="sleepTimerSong">Terminer la chanson avant Pausar</string>
@@ -105,7 +105,7 @@
   <string name="forgot_title">Récupérer le mot de passe</string>
   <string name="btn_sending">Envoi…</string>
   <string name="btn_send_recovery">Envoyer un e-mail de récupération</string>
-  <string name="onboarding_welcome_title">Bienvenue à Joss Music</string>
+  <string name="onboarding_welcome_title">Bienvenue à Estrella Music</string>
   <string name="onboarding_welcome_desc">Votre musique en un seul endroit: rapide, propre et fait pour vous.</string>
   <string name="onboarding_downloads_title">Téléchargements intelligents</string>
   <string name="onboarding_downloads_desc">Enregistrez des chansons, des albums et des listes de lecture pour écouter hors ligne. </string>

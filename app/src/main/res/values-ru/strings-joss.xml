@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <!-- Traducciones de Joss Music con Joss Red Traductor -->
+  <!-- Traducciones de Estrella Music con Joss Red Traductor -->
   <string name="card_donation">Ваше пожертвование поможет нам сохранить приложение бесплатным и улучшить его функции.</string>
   <string name="website_url">перейти на сайт</string>
   <string name="latestVersion">Последняя версия</string>
@@ -28,8 +28,8 @@
   <string name="privacyPolicy">политика конфиденциальности</string>
   <string name="termsConditions">Условия и положения</string>
   <string name="appByJosproxMx">Приложение, разработанное JOSPROX MX.</string>
-  <string name="musicDescNotification">«Joss Music» нужно оставаться на переднем плане, чтобы продолжать играть в свою музыку. Это позволяет вам наслаждаться своими песнями без перерывов и возобновить их в любое время.</string>
-  <string name="musicTitleNotification">🎵 Joss Music всегда с вами</string>
+  <string name="musicDescNotification">«Estrella Music» нужно оставаться на переднем плане, чтобы продолжать играть в свою музыку. Это позволяет вам наслаждаться своими песнями без перерывов и возобновить их в любое время.</string>
+  <string name="musicTitleNotification">🎵 Estrella Music всегда с вами</string>
   <string name="transparentMode">Прозрачный режим</string>
   <string name="transparentModeText">Активировать или деактивировать прозрачный режим у игрока.</string>
   <string name="sleepTimerSong">Финал песни перед Паусаром</string>
@@ -108,7 +108,7 @@
   <string name="forgot_title">Восстановить пароль</string>
   <string name="btn_sending">Отправка ...</string>
   <string name="btn_send_recovery">Отправить электронное письмо с помощью восстановления</string>
-  <string name="onboarding_welcome_title">Добро пожаловать в Joss Music</string>
+  <string name="onboarding_welcome_title">Добро пожаловать в Estrella Music</string>
   <string name="onboarding_welcome_desc">Ваша музыка в одном месте: быстрая, чистая и сделанная для вас.</string>
   <string name="onboarding_downloads_title">Умные загрузки</string>
   <string name="onboarding_downloads_desc">Сохраните песни, альбомы и плейлисты, чтобы слушать в автономном режиме. </string>
@@ -122,8 +122,8 @@
   <string name="onboarding_library_desc">Создавать, организовать и делиться плейлистами; </string>
   <string name="song_title_placeholder">Название песни</string>
   <string name="artist">Художник</string>
-  <string name="listening_to_joss">Слушание от Joss Music</string>
-  <string name="btn_visit_joss">Посетите Joss Music</string>
+  <string name="listening_to_joss">Слушание от Estrella Music</string>
+  <string name="btn_visit_joss">Посетите Estrella Music</string>
   <string name="account_joss_red">Joss Red Account</string>
   <string name="refresh">Обновлять</string>
   <string name="checking_session">Проверка сеанса…</string>

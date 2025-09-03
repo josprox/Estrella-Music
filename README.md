@@ -1,6 +1,6 @@
 <div align="center">
   <img src="./app/src/main/ic_launcher-playstore.png" width="128" height="128" alt="App icon"/>
-  <h1>Joss Music</h1>
+  <h1>Estrella Music</h1>
   <p><em>Una aplicación Android para transmitir música desde YouTube Music, basada en ViMusic e InnerTune</em></p>
 
   <!-- Contenedor del scroll -->
@@ -67,7 +67,7 @@
 
 ## 📥 Instalación
 
-Puedes instalar Joss Music desde cualquiera de las siguientes plataformas oficiales:
+Puedes instalar Estrella Music desde cualquiera de las siguientes plataformas oficiales:
 
 - **[GitHub Releases](https://github.com/josprox/Joss-Music/releases/latest)**
 - **[AppGallery - Huawei](https://appgallery.huawei.com/app/C114184037)**
@@ -85,7 +85,7 @@ Puedes instalar Joss Music desde cualquiera de las siguientes plataformas oficia
 
 ## 🌍 Traducciones
 
-¿Quieres ayudar a traducir Joss Music a tu idioma?  
+¿Quieres ayudar a traducir Estrella Music a tu idioma?  
 Puedes contribuir mediante Pull Requests o ayudando directamente en la plataforma de traducción:
 
 [![Translation status](https://hosted.weblate.org/widget/innertune/multi-auto.svg)](https://hosted.weblate.org/engage/innertune/)

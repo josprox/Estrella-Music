@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <!-- Traducciones de Joss Music con Joss Red Traductor -->
+  <!-- Traducciones de Estrella Music con Joss Red Traductor -->
   <string name="card_donation">Η δωρεά σας μας βοηθά να διατηρήσουμε την εφαρμογή δωρεάν και να βελτιώσουμε τις δυνατότητές της</string>
   <string name="website_url">μεταβείτε στον ιστότοπο</string>
   <string name="latestVersion">Τελευταία έκδοση</string>
@@ -28,7 +28,7 @@
   <string name="privacyPolicy">Πολιτική Απορρήτου</string>
   <string name="termsConditions">Όροι και Προϋποθέσεις</string>
   <string name="appByJosproxMx">Μια εφαρμογή που αναπτύχθηκε από την JOSPROX MX</string>
-  <string name="musicDescNotification">Το "Joss Music" πρέπει να παραμείνει στο προσκήνιο για να συνεχίσει να παίζει τη μουσική σας. Αυτό σας επιτρέπει να απολαύσετε τα τραγούδια σας χωρίς διακοπές και να τα επαναλάβετε ανά πάσα στιγμή.</string>
+  <string name="musicDescNotification">Το "Estrella Music" πρέπει να παραμείνει στο προσκήνιο για να συνεχίσει να παίζει τη μουσική σας. Αυτό σας επιτρέπει να απολαύσετε τα τραγούδια σας χωρίς διακοπές και να τα επαναλάβετε ανά πάσα στιγμή.</string>
   <string name="musicTitleNotification">🎵 joss μουσική πάντα μαζί σου</string>
   <string name="transparentMode">Διαφανής λειτουργία</string>
   <string name="transparentModeText">Ενεργοποιήστε ή απενεργοποιήστε τη διαφανή λειτουργία στη συσκευή αναπαραγωγής.</string>

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <!-- Traducciones de Joss Music con Joss Red Traductor -->
+  <!-- Traducciones de Estrella Music con Joss Red Traductor -->
   <string name="card_donation">Donasjonen din hjelper oss å holde appen gratis og forbedre funksjonene</string>
   <string name="website_url">gå til nettsiden</string>
   <string name="latestVersion">Siste versjon</string>
@@ -28,8 +28,8 @@
   <string name="privacyPolicy">Personvernerklæring</string>
   <string name="termsConditions">Vilkår og betingelser</string>
   <string name="appByJosproxMx">En applikasjon utviklet av JOSPROX MX</string>
-  <string name="musicDescNotification">"Joss Music" må være i forgrunnen for å fortsette å spille musikken din. Dette lar deg glede deg over sangene dine uten avbrudd og gjenoppta dem når som helst.</string>
-  <string name="musicTitleNotification">🎵 Joss musikk alltid med deg</string>
+  <string name="musicDescNotification">"Estrella Music" må være i forgrunnen for å fortsette å spille musikken din. Dette lar deg glede deg over sangene dine uten avbrudd og gjenoppta dem når som helst.</string>
+  <string name="musicTitleNotification">🎵 Estrella Musikk alltid med deg</string>
   <string name="transparentMode">Gjennomsiktig modus</string>
   <string name="transparentModeText">Aktiver eller deaktiver gjennomsiktig modus i spilleren.</string>
   <string name="sleepTimerSong">Fullfør sangen før Pausar</string>
@@ -108,7 +108,7 @@
   <string name="forgot_title">Gjenopprett passord</string>
   <string name="btn_sending">Sende ...</string>
   <string name="btn_send_recovery">Send gjenoppretting av e -post</string>
-  <string name="onboarding_welcome_title">Velkommen til Joss Music</string>
+  <string name="onboarding_welcome_title">Velkommen til Estrella Music</string>
   <string name="onboarding_welcome_desc">Musikken din på ett sted: rask, ren og laget for deg.</string>
   <string name="onboarding_downloads_title">Smarte nedlastinger</string>
   <string name="onboarding_downloads_desc">Lagre sanger, album og spillelister for å høre offline. </string>
@@ -122,8 +122,8 @@
   <string name="onboarding_library_desc">Lage, organisere og dele spillelister; </string>
   <string name="song_title_placeholder">Sangtittel</string>
   <string name="artist">Artist</string>
-  <string name="listening_to_joss">Lytter fra Joss Music</string>
-  <string name="btn_visit_joss">Besøk Joss Music</string>
+  <string name="listening_to_joss">Lytter fra Estrella Music</string>
+  <string name="btn_visit_joss">Besøk Estrella Music</string>
   <string name="account_joss_red">Joss Red Account</string>
   <string name="refresh">Forfriske</string>
   <string name="checking_session">Sjekk økt ...</string>

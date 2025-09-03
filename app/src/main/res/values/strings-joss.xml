@@ -27,8 +27,8 @@
   <string name="privacyPolicy">Privacy Policy</string>
   <string name="termsConditions">Terms and Conditions</string>
   <string name="appByJosproxMx">An application developed by JOSPROX MX</string>
-  <string name="musicDescNotification">"Joss Music" needs to stay in the foreground to keep playing your music. This allows you to enjoy your songs without interruptions and resume them anytime.</string>
-  <string name="musicTitleNotification">🎵 Joss Music always with you</string>
+  <string name="musicDescNotification">"Estrella Music" needs to stay in the foreground to keep playing your music. This allows you to enjoy your songs without interruptions and resume them anytime.</string>
+  <string name="musicTitleNotification">🎵 Estrella Music always with you</string>
   <string name="transparentMode">Transparent mode</string>
   <string name="transparentModeText">Activate or deactivate transparent mode in the player.</string>
   <string name="sleepTimerSong">Finish song before Pausar</string>
@@ -107,7 +107,7 @@
   <string name="forgot_title">Recover password</string>
   <string name="btn_sending">Sending…</string>
   <string name="btn_send_recovery">Send recovery email</string>
-  <string name="onboarding_welcome_title">Welcome to Joss Music</string>
+  <string name="onboarding_welcome_title">Welcome to Estrella Music</string>
   <string name="onboarding_welcome_desc">Your music in one place: fast, clean, and made for you.</string>
   <string name="onboarding_downloads_title">Smart downloads</string>
   <string name="onboarding_downloads_desc">Save songs, albums, and playlists to listen offline. Choose quality and control storage space.</string>
@@ -121,8 +121,8 @@
   <string name="onboarding_library_desc">Create, organize, and share playlists; manage your collection your way.</string>
   <string name="song_title_placeholder">Song Title</string>
   <string name="artist">Artist</string>
-  <string name="listening_to_joss">Listening from Joss Music</string>
-  <string name="btn_visit_joss">Visit Joss Music</string>
+  <string name="listening_to_joss">Listening from Estrella Music</string>
+  <string name="btn_visit_joss">Visit Estrella Music</string>
   <string name="account_joss_red">Joss Red Account</string>
   <string name="refresh">Refresh</string>
   <string name="checking_session">Checking session…</string>

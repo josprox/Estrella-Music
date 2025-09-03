@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <!-- Traducciones de Joss Music con Joss Red Traductor -->
+  <!-- Traducciones de Estrella Music con Joss Red Traductor -->
   <string name="card_donation">Khoản đóng góp của bạn giúp chúng tôi duy trì ứng dụng miễn phí và cải thiện các tính năng của ứng dụng</string>
   <string name="website_url">truy cập trang web</string>
   <string name="latestVersion">Phiên bản mới nhất</string>
@@ -28,8 +28,8 @@
   <string name="privacyPolicy">Chính sách bảo mật</string>
   <string name="termsConditions">Điều khoản và Điều kiện</string>
   <string name="appByJosproxMx">Một ứng dụng được phát triển bởi JOSPROX MX</string>
-  <string name="musicDescNotification">"Joss Music" cần phải ở trong tiền cảnh để tiếp tục chơi nhạc của bạn. Điều này cho phép bạn thưởng thức các bài hát của mình mà không bị gián đoạn và tiếp tục chúng bất cứ lúc nào.</string>
-  <string name="musicTitleNotification">🎵 Joss Music luôn với bạn</string>
+  <string name="musicDescNotification">"Estrella Music" cần phải ở trong tiền cảnh để tiếp tục chơi nhạc của bạn. Điều này cho phép bạn thưởng thức các bài hát của mình mà không bị gián đoạn và tiếp tục chúng bất cứ lúc nào.</string>
+  <string name="musicTitleNotification">🎵 Estrella Music luôn với bạn</string>
   <string name="transparentMode">Chế độ trong suốt</string>
   <string name="transparentModeText">Kích hoạt hoặc hủy kích hoạt chế độ trong suốt trong trình phát.</string>
   <string name="sleepTimerSong">Kết thúc bài hát trước khi pausar</string>
@@ -108,7 +108,7 @@
   <string name="forgot_title">Khôi phục mật khẩu</string>
   <string name="btn_sending">Gửi ...</string>
   <string name="btn_send_recovery">Gửi email phục hồi</string>
-  <string name="onboarding_welcome_title">Chào mừng đến với Joss Music</string>
+  <string name="onboarding_welcome_title">Chào mừng đến với Estrella Music</string>
   <string name="onboarding_welcome_desc">Âm nhạc của bạn ở một nơi: Nhanh chóng, sạch sẽ và được tạo ra cho bạn.</string>
   <string name="onboarding_downloads_title">Tải xuống thông minh</string>
   <string name="onboarding_downloads_desc">Lưu các bài hát, album và danh sách phát để nghe ngoại tuyến. </string>
@@ -122,8 +122,8 @@
   <string name="onboarding_library_desc">Tạo, tổ chức và chia sẻ danh sách phát; </string>
   <string name="song_title_placeholder">Tiêu đề bài hát</string>
   <string name="artist">Nghệ sĩ</string>
-  <string name="listening_to_joss">Lắng nghe từ Joss Music</string>
-  <string name="btn_visit_joss">Ghé thăm Joss Music</string>
+  <string name="listening_to_joss">Lắng nghe từ Estrella Music</string>
+  <string name="btn_visit_joss">Ghé thăm Estrella Music</string>
   <string name="account_joss_red">Tài khoản Joss Red</string>
   <string name="refresh">Làm cho khỏe lại</string>
   <string name="checking_session">Kiểm tra phiên</string>

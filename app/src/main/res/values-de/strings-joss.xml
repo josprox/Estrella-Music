@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <!-- Traducciones de Joss Music con Joss Red Traductor -->
+  <!-- Traducciones de Estrella Music con Joss Red Traductor -->
   <string name="website_url">Gehe zur Website</string>
   <string name="latestVersion">Neueste Version</string>
   <string name="close">Schließen</string>
@@ -28,8 +28,8 @@
   <string name="privacyPolicy">Datenschutzrichtlinie</string>
   <string name="termsConditions">Geschäftsbedingungen</string>
   <string name="appByJosproxMx">Eine von JOSPROX MX entwickelte Anwendung</string>
-  <string name="musicDescNotification">"Joss Music" muss im Vordergrund bleiben, um Ihre Musik weiter zu spielen. Auf diese Weise können Sie Ihre Songs ohne Unterbrechungen genießen und sie jederzeit wieder aufnehmen.</string>
-  <string name="musicTitleNotification">🎵 Joss Musik immer mit dir</string>
+  <string name="musicDescNotification">"Estrella Music" muss im Vordergrund bleiben, um Ihre Musik weiter zu spielen. Auf diese Weise können Sie Ihre Songs ohne Unterbrechungen genießen und sie jederzeit wieder aufnehmen.</string>
+  <string name="musicTitleNotification">🎵 Estrella Musik immer mit dir</string>
   <string name="transparentMode">Transparenter Modus</string>
   <string name="transparentModeText">Aktivieren oder deaktivieren Sie den transparenten Modus im Spieler.</string>
   <string name="sleepTimerSong">Beenden Sie das Lied vor Pausar</string>
@@ -108,7 +108,7 @@
   <string name="forgot_title">Passwort wiederherstellen</string>
   <string name="btn_sending">Senden ...</string>
   <string name="btn_send_recovery">Wiederherstellungs -E -Mail senden</string>
-  <string name="onboarding_welcome_title">Willkommen bei Joss Music</string>
+  <string name="onboarding_welcome_title">Willkommen bei Estrella Music</string>
   <string name="onboarding_welcome_desc">Ihre Musik an einem Ort: schnell, sauber und für Sie gemacht.</string>
   <string name="onboarding_downloads_title">Smart Downloads</string>
   <string name="onboarding_downloads_desc">Speichern Sie Songs, Alben und Wiedergabelisten, um offline zu hören. </string>
@@ -122,8 +122,8 @@
   <string name="onboarding_library_desc">Wiedergabelisten erstellen, organisieren und teilen; </string>
   <string name="song_title_placeholder">Songtitel</string>
   <string name="artist">Künstler</string>
-  <string name="listening_to_joss">Hören von Joss Musik</string>
-  <string name="btn_visit_joss">Besuchen Sie Joss Musik</string>
+  <string name="listening_to_joss">Hören von Estrella Musik</string>
+  <string name="btn_visit_joss">Besuchen Sie Estrella Musik</string>
   <string name="account_joss_red">Joss Red Account</string>
   <string name="refresh">Aktualisieren</string>
   <string name="checking_session">Sitzung überprüfen…</string>

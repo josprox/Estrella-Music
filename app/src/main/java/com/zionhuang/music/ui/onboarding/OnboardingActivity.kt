@@ -18,7 +18,7 @@ class OnboardingActivity : ComponentActivity() {
 
         // Puedes reutilizar los mismos items que en MainActivity, o definirlos aquí:
         val items = listOf(
-            CarouselItem(R.drawable.joss_music_logo, "Bienvenido a Joss Music", "Tu música en un solo lugar: rápido, limpio y pensado para ti."),
+            CarouselItem(R.drawable.joss_music_logo, "Bienvenido a Estrella Music", "Tu música en un solo lugar: rápido, limpio y pensado para ti."),
             CarouselItem(R.drawable.download, "Descargas inteligentes", "Guarda canciones, álbumes y playlists para escucharlos sin conexión."),
             CarouselItem(R.drawable.media3_icon_feed, "Enlaces internos seguros", "App Links verificados y deep links confiables."),
             CarouselItem(R.drawable.offline, "Modo sin conexión", "Tu música suena aun sin internet."),

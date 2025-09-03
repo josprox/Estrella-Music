@@ -74,7 +74,7 @@
   <string name="forgot_title">Oporavak lozinke</string>
   <string name="btn_sending">Slanje ...</string>
   <string name="btn_send_recovery">Pošalji e-poštu za oporavak</string>
-  <string name="onboarding_welcome_title">Dobrodošli u Joss Music</string>
+  <string name="onboarding_welcome_title">Dobrodošli u Estrella Music</string>
   <string name="onboarding_welcome_desc">Vaša muzika na jednom mestu: brzo, čisto i napravljeno za vas.</string>
   <string name="onboarding_downloads_title">Smart preuzimanja</string>
   <string name="onboarding_downloads_desc">Spremi pjesme, albume i liste reprodukcije za slušanje offline. </string>
@@ -88,8 +88,8 @@
   <string name="onboarding_library_desc">Stvoriti, organizovati i dijeliti liste reprodukcije; </string>
   <string name="song_title_placeholder">Naslov pjesme</string>
   <string name="artist">Umjetnik</string>
-  <string name="listening_to_joss">Slušanje iz Joss Music</string>
-  <string name="btn_visit_joss">Posjetite Joss Music</string>
+  <string name="listening_to_joss">Slušanje iz Estrella Music</string>
+  <string name="btn_visit_joss">Posjetite Estrella Music</string>
   <string name="account_joss_red">Joss crveni račun</string>
   <string name="refresh">Osvježiti</string>
   <string name="checking_session">Provjera sesije ...</string>

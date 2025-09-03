@@ -1,5 +1,5 @@
 name: Solicitud de función
-description: Sugiere una idea para Joss Music
+description: Sugiere una idea para Estrella Music
 labels: [mejora]
 body:
   - type: checkboxes

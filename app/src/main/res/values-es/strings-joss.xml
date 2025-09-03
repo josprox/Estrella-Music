@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <!-- Traducciones de Joss Music con Joss Red Traductor -->
+  <!-- Traducciones de Estrella Music con Joss Red Traductor -->
   <string name="card_donation">Tu donación nos ayuda a mantener la aplicación gratuita y mejorar sus funciones</string>
   <string name="website_url">ir al sitio web</string>
   <string name="latestVersion">Versión más reciente</string>
@@ -28,8 +28,8 @@
   <string name="privacyPolicy">política de privacidad</string>
   <string name="termsConditions">Términos y condiciones</string>
   <string name="appByJosproxMx">Una aplicación desarrollada por JOSPROX MX</string>
-  <string name="musicDescNotification">"Joss Music" debe permanecer en primer plano para seguir tocando tu música. Esto le permite disfrutar de sus canciones sin interrupciones y reanudarlas en cualquier momento.</string>
-  <string name="musicTitleNotification">🎵 Joss Music siempre contigo</string>
+  <string name="musicDescNotification">"Estrella Music" debe permanecer en primer plano para seguir tocando tu música. Esto le permite disfrutar de sus canciones sin interrupciones y reanudarlas en cualquier momento.</string>
+  <string name="musicTitleNotification">🎵 Estrella Music siempre contigo</string>
   <string name="transparentMode">Modo transparente</string>
   <string name="transparentModeText">Active o desactive el modo transparente en el reproductor.</string>
   <string name="sleepTimerSong">Finalizar canción antes de pausar</string>
@@ -108,7 +108,7 @@
   <string name="forgot_title">Recuperar contraseña</string>
   <string name="btn_sending">Envío…</string>
   <string name="btn_send_recovery">Enviar correo electrónico de recuperación</string>
-  <string name="onboarding_welcome_title">Bienvenido a Joss Music</string>
+  <string name="onboarding_welcome_title">Bienvenido a Estrella Music</string>
   <string name="onboarding_welcome_desc">Tu música en un solo lugar: rápido, limpio y hecho para ti.</string>
   <string name="onboarding_downloads_title">Descargas inteligentes</string>
   <string name="onboarding_downloads_desc">Guarde canciones, álbumes y listas de reproducción para escuchar fuera de línea. </string>
@@ -122,8 +122,8 @@
   <string name="onboarding_library_desc">Crear, organizar y compartir listas de reproducción; </string>
   <string name="song_title_placeholder">Título de canciones</string>
   <string name="artist">Artista</string>
-  <string name="listening_to_joss">Escuchando desde Joss Music</string>
-  <string name="btn_visit_joss">Visita Joss Music</string>
+  <string name="listening_to_joss">Escuchando desde Estrella Music</string>
+  <string name="btn_visit_joss">Visita Estrella Music</string>
   <string name="account_joss_red">Cuenta de Joss Red</string>
   <string name="refresh">Refrescar</string>
   <string name="checking_session">Comprobando sesión…</string>

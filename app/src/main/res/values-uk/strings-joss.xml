@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <!-- Traducciones de Joss Music con Joss Red Traductor -->
+  <!-- Traducciones de Estrella Music con Joss Red Traductor -->
   <string name="card_donation">Ваша пожертва допомагає нам залишати програму безкоштовною та покращувати її функції</string>
   <string name="website_url">перейти на сайт</string>
   <string name="latestVersion">Остання версія</string>
@@ -28,7 +28,7 @@
   <string name="privacyPolicy">Політика конфіденційності</string>
   <string name="termsConditions">Правила та умови</string>
   <string name="appByJosproxMx">Додаток, розроблений JOSPROX MX</string>
-  <string name="musicDescNotification">"Joss Music" повинен залишатися на передньому плані, щоб продовжувати грати музику. Це дозволяє насолоджуватися своїми піснями без перерв та відновити їх у будь -який час.</string>
+  <string name="musicDescNotification">"Estrella Music" повинен залишатися на передньому плані, щоб продовжувати грати музику. Це дозволяє насолоджуватися своїми піснями без перерв та відновити їх у будь -який час.</string>
   <string name="musicTitleNotification">🎵 Музика Джосса завжди з вами</string>
   <string name="transparentMode">Прозорий режим</string>
   <string name="transparentModeText">Активуйте або деактивувати прозорий режим у гравці.</string>
@@ -108,7 +108,7 @@
   <string name="forgot_title">Відновити пароль</string>
   <string name="btn_sending">Відправлення …</string>
   <string name="btn_send_recovery">Надіслати електронну пошту відновлення</string>
-  <string name="onboarding_welcome_title">Ласкаво просимо до Joss Music</string>
+  <string name="onboarding_welcome_title">Ласкаво просимо до Estrella Music</string>
   <string name="onboarding_welcome_desc">Ваша музика в одному місці: швидка, чиста і створена для вас.</string>
   <string name="onboarding_downloads_title">Розумні завантаження</string>
   <string name="onboarding_downloads_desc">Збережіть пісні, альбоми та списки відтворення, щоб слухати в автономному режимі. </string>

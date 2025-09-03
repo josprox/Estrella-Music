@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <!-- Traducciones de Joss Music con Joss Red Traductor -->
+  <!-- Traducciones de Estrella Music con Joss Red Traductor -->
   <string name="card_donation">Donasi Anda membantu kami menjaga aplikasi tetap gratis dan meningkatkan fitur-fiturnya</string>
   <string name="website_url">pergi ke situs web</string>
   <string name="latestVersion">Versi terbaru</string>
@@ -28,7 +28,7 @@
   <string name="privacyPolicy">Kebijakan Privasi</string>
   <string name="termsConditions">syarat dan Ketentuan</string>
   <string name="appByJosproxMx">Aplikasi yang dikembangkan oleh JOSPROX MX</string>
-  <string name="musicDescNotification">"Joss Music" perlu tetap di latar depan untuk terus memainkan musik Anda. Ini memungkinkan Anda untuk menikmati lagu Anda tanpa gangguan dan melanjutkannya kapan saja.</string>
+  <string name="musicDescNotification">"Estrella Music" perlu tetap di latar depan untuk terus memainkan musik Anda. Ini memungkinkan Anda untuk menikmati lagu Anda tanpa gangguan dan melanjutkannya kapan saja.</string>
   <string name="musicTitleNotification">🎵 Musik Joss selalu bersamamu</string>
   <string name="transparentMode">Mode transparan</string>
   <string name="transparentModeText">Mengaktifkan atau menonaktifkan mode transparan di pemain.</string>
@@ -108,7 +108,7 @@
   <string name="forgot_title">Pulihkan Kata Sandi</string>
   <string name="btn_sending">Mengirim ...</string>
   <string name="btn_send_recovery">Kirim Email Pemulihan</string>
-  <string name="onboarding_welcome_title">Selamat datang di Joss Music</string>
+  <string name="onboarding_welcome_title">Selamat datang di Estrella Music</string>
   <string name="onboarding_welcome_desc">Musik Anda di satu tempat: Cepat, bersih, dan dibuat untuk Anda.</string>
   <string name="onboarding_downloads_title">Unduhan pintar</string>
   <string name="onboarding_downloads_desc">Simpan lagu, album, dan daftar putar untuk mendengarkan Offline. </string>
@@ -122,8 +122,8 @@
   <string name="onboarding_library_desc">Membuat, mengatur, dan berbagi daftar putar; </string>
   <string name="song_title_placeholder">Judul lagu</string>
   <string name="artist">Artis</string>
-  <string name="listening_to_joss">Mendengarkan Joss Music</string>
-  <string name="btn_visit_joss">Kunjungi Joss Music</string>
+  <string name="listening_to_joss">Mendengarkan Estrella Music</string>
+  <string name="btn_visit_joss">Kunjungi Estrella Music</string>
   <string name="account_joss_red">Akun Red Joss</string>
   <string name="refresh">Menyegarkan</string>
   <string name="checking_session">Memeriksa sesi…</string>

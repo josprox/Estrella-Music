@@ -74,7 +74,7 @@
   <string name="forgot_title">Recuperar senha</string>
   <string name="btn_sending">Enviando ...</string>
   <string name="btn_send_recovery">Enviar email de recuperação</string>
-  <string name="onboarding_welcome_title">Bem -vindo ao Joss Music</string>
+  <string name="onboarding_welcome_title">Bem -vindo ao Estrella Music</string>
   <string name="onboarding_welcome_desc">Sua música em um só lugar: rápido, limpo e feito para você.</string>
   <string name="onboarding_downloads_title">Downloads inteligentes</string>
   <string name="onboarding_downloads_desc">Save músicas, álbuns e listas de reprodução para ouvir offline. </string>
@@ -88,8 +88,8 @@
   <string name="onboarding_library_desc">Criar, organizar e compartilhar listas de reprodução; </string>
   <string name="song_title_placeholder">Título da música</string>
   <string name="artist">Artista</string>
-  <string name="listening_to_joss">Ouvindo Joss Music</string>
-  <string name="btn_visit_joss">Visite Joss Music</string>
+  <string name="listening_to_joss">Ouvindo Estrella Music</string>
+  <string name="btn_visit_joss">Visite Estrella Music</string>
   <string name="account_joss_red">Conta Joss Red</string>
   <string name="refresh">Atualizar</string>
   <string name="checking_session">Sessão de verificação…</string>

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <!-- Traducciones de Joss Music con Joss Red Traductor -->
+  <!-- Traducciones de Estrella Music con Joss Red Traductor -->
   <string name="card_donation">Вашето дарение ни помага да поддържаме приложението безплатно и да подобряваме функциите му</string>
   <string name="website_url">отидете на уебсайт</string>
   <string name="latestVersion">Последна версия</string>
@@ -28,7 +28,7 @@
   <string name="privacyPolicy">Политика за поверителност</string>
   <string name="termsConditions">Правила и условия</string>
   <string name="appByJosproxMx">Приложение, разработено от JOSPROX MX</string>
-  <string name="musicDescNotification">"Joss Music" трябва да остане на преден план, за да продължи да свири музиката си. Това ви позволява да се наслаждавате на песните си без прекъсвания и да ги възобновите по всяко време.</string>
+  <string name="musicDescNotification">"Estrella Music" трябва да остане на преден план, за да продължи да свири музиката си. Това ви позволява да се наслаждавате на песните си без прекъсвания и да ги възобновите по всяко време.</string>
   <string name="musicTitleNotification">🎵 Joss музика винаги с вас</string>
   <string name="transparentMode">Прозрачен режим</string>
   <string name="transparentModeText">Активирайте или деактивирайте прозрачния режим в плейъра.</string>
@@ -108,7 +108,7 @@
   <string name="forgot_title">Възстановяване на парола</string>
   <string name="btn_sending">Изпращане …</string>
   <string name="btn_send_recovery">Изпратете имейл за възстановяване</string>
-  <string name="onboarding_welcome_title">Добре дошли в Joss Music</string>
+  <string name="onboarding_welcome_title">Добре дошли в Estrella Music</string>
   <string name="onboarding_welcome_desc">Вашата музика на едно място: Бърза, чиста и направена за вас.</string>
   <string name="onboarding_downloads_title">Интелигентни изтегляния</string>
   <string name="onboarding_downloads_desc">Запазете песни, албуми и плейлисти, за да слушате офлайн. </string>
@@ -122,8 +122,8 @@
   <string name="onboarding_library_desc">Създайте, организирайте и споделяйте плейлисти; </string>
   <string name="song_title_placeholder">Заглавие на песента</string>
   <string name="artist">Художник</string>
-  <string name="listening_to_joss">Слушане от Joss Music</string>
-  <string name="btn_visit_joss">Посетете Joss Music</string>
+  <string name="listening_to_joss">Слушане от Estrella Music</string>
+  <string name="btn_visit_joss">Посетете Estrella Music</string>
   <string name="account_joss_red">Joss Red акаунт</string>
   <string name="refresh">Опресняване</string>
   <string name="checking_session">Проверка на сесията …</string>
