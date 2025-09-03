@@ -40,11 +40,12 @@ import com.josprox.jossredconnect.services.BackupService
 import com.zionhuang.music.viewmodels.BackupRestoreViewModel
 import org.dotenv.vault.dotenvVault
 import com.zionhuang.music.BuildConfig
+import java.util.Locale
 
 @Composable
 fun WelcomeRoute(
     onAuthSuccess: () -> Unit,
-    onSkip: () -> Unit = {},
+    onSkip: () -> Unit = {}, // compatibilidad, ya no se usa
     viewModel: AuthViewModel = hiltViewModel()
 ) {
     val state by viewModel.state.collectAsState()
@@ -94,7 +95,6 @@ fun WelcomeRoute(
                 is AuthEvent.ShowMessageText -> scope.launch { snackbarHost.showSnackbar(ev.text) }
                 is AuthEvent.ShowMessageRes -> scope.launch { snackbarHost.showSnackbar(context.getString(ev.resId)) }
                 AuthEvent.Success -> {
-                    // 1) Al autenticar, intentar ver si hay backup
                     dialogChecking = true
                     dialogError = null
                     latestBackupName = null
@@ -109,14 +109,12 @@ fun WelcomeRoute(
                         if (first != null) {
                             latestBackupName = first.name
                             latestBackupDate = first.updated_at ?: first.created_at
-                            showRestoreDialog = true  // 2) Mostrar diálogo
+                            showRestoreDialog = true
                         } else {
-                            // No hay backup -> entrar directo
                             onAuthSuccess()
                         }
                         dialogChecking = false
                     }, onFailure = {
-                        // En caso de error al listar, seguimos sin bloquear el login
                         dialogChecking = false
                         onAuthSuccess()
                     })
@@ -147,8 +145,7 @@ fun WelcomeRoute(
                     when (mode) {
                         AuthMode.WELCOME -> WelcomeView(
                             onLogin = { viewModel.setMode(AuthMode.LOGIN) },
-                            onRegister = { viewModel.setMode(AuthMode.REGISTER) },
-                            onSkip = onSkip
+                            onRegister = { viewModel.setMode(AuthMode.REGISTER) }
                         )
                         AuthMode.LOGIN -> LoginForm(
                             isLoading = state.isLoading,
@@ -175,7 +172,7 @@ fun WelcomeRoute(
             // === Diálogo de restauración (solo si hay backup) ===
             if (showRestoreDialog) {
                 AlertDialog(
-                    onDismissRequest = { /* Obliga a elegir, pero podrías permitir dismiss */ },
+                    onDismissRequest = { /* Obliga a elegir */ },
                     title = { Text(stringResource(R.string.backup_restore)) },
                     text = {
                         Column {
@@ -189,7 +186,7 @@ fun WelcomeRoute(
                                 Text(dialogError!!, color = MaterialTheme.colorScheme.error)
                             } else {
                                 val msg = buildString {
-                                    append(stringResource(R.string.backup_restore_found_msg)) // “There is a cloud backup from”
+                                    append(stringResource(R.string.backup_restore_found_msg))
                                     if (!latestBackupDate.isNullOrBlank()) append(" ${latestBackupDate}")
                                 }
                                 Text(msg)
@@ -200,7 +197,6 @@ fun WelcomeRoute(
                         TextButton(
                             enabled = !dialogChecking && !dialogRestoring && latestBackupName != null,
                             onClick = {
-                                // Restaurar ahora
                                 val name = latestBackupName ?: return@TextButton
                                 dialogRestoring = true
                                 dialogError = null
@@ -214,29 +210,23 @@ fun WelcomeRoute(
                                         )
                                     }
                                     dialogRestoring = false
-                                    // Pase lo que pase, entrar a la app
                                     showRestoreDialog = false
                                     onAuthSuccess()
                                     if (res.isFailure) {
-                                        // Si quieres, también puedes mostrar un snackbar aquí
+                                        // opcional: snackbar
                                     }
                                 }
                             }
-                        ) {
-                            Text(stringResource(R.string.restore_now))
-                        }
+                        ) { Text(stringResource(R.string.restore_now)) }
                     },
                     dismissButton = {
                         TextButton(
                             enabled = !dialogChecking && !dialogRestoring,
                             onClick = {
-                                // Entrar sin restaurar
                                 showRestoreDialog = false
                                 onAuthSuccess()
                             }
-                        ) {
-                            Text(stringResource(R.string.maybeLater))
-                        }
+                        ) { Text(stringResource(R.string.maybeLater)) }
                     }
                 )
             }
@@ -249,7 +239,6 @@ fun WelcomeRoute(
 fun WelcomeView(
     onLogin: () -> Unit,
     onRegister: () -> Unit,
-    onSkip: () -> Unit
 ) {
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -290,17 +279,11 @@ fun WelcomeView(
             ) { Text(stringResource(R.string.btn_register), fontWeight = FontWeight.Bold) }
         }
 
-        Spacer(Modifier.height(12.dp))
-        TextButton(onClick = onSkip) {
-            Text(
-                stringResource(R.string.btn_skip),
-                color = Color.White.copy(alpha = 0.9f)
-            )
-        }
-
+        // Ya no hay botón de "Saltar"
         Spacer(Modifier.height(60.dp))
     }
 }
+
 
 /* ---------- Login ----------- */
 @Composable
@@ -314,8 +297,8 @@ fun LoginForm(
     val context = LocalContext.current
     var email by remember { mutableStateOf("") }
     var pass by remember { mutableStateOf("") }
-    var emailError by remember { mutableStateOf<String?>(null) }
-    var passError by remember { mutableStateOf<String?>(null) }
+    var emailErr by remember { mutableStateOf<Int?>(null) }
+    var passErr by remember { mutableStateOf<Int?>(null) }
 
     AuthCard {
         Text(
@@ -327,12 +310,13 @@ fun LoginForm(
 
         OutlinedTextField(
             value = email,
-            onValueChange = { email = it; emailError = null },
-            label = { Text(stringResource(R.string.label_email)) },
-            isError = emailError != null,
-            supportingText = {
-                if (emailError != null) Text(emailError!!, color = MaterialTheme.colorScheme.error)
+            onValueChange = {
+                email = it.replace(" ", "")
+                emailErr = errEmail(email) ?: if (email.isBlank()) null else null
             },
+            label = { Text(stringResource(R.string.label_email)) },
+            isError = emailErr != null,
+            supportingText = { emailErr?.let { Text(stringResource(it), color = MaterialTheme.colorScheme.error) } },
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
             singleLine = true,
             colors = authTextFieldColors(),
@@ -341,14 +325,16 @@ fun LoginForm(
         Spacer(Modifier.height(16.dp))
         OutlinedTextField(
             value = pass,
-            onValueChange = { pass = it; passError = null },
-            label = { Text(stringResource(R.string.label_password)) },
-            isError = passError != null,
-            supportingText = {
-                if (passError != null) Text(passError!!, color = MaterialTheme.colorScheme.error)
+            onValueChange = {
+                pass = noSpaces(it)
+                passErr = if (pass.isBlank()) null else null
             },
+            label = { Text(stringResource(R.string.label_password)) },
+            isError = passErr != null,
+            supportingText = { passErr?.let { Text(stringResource(it), color = MaterialTheme.colorScheme.error) } },
             singleLine = true,
             visualTransformation = PasswordVisualTransformation(),
+            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
             colors = authTextFieldColors(),
             modifier = Modifier.fillMaxWidth()
         )
@@ -358,8 +344,8 @@ fun LoginForm(
             onClick = {
                 val okEmail = email.isNotBlank() && "@" in email && !email.contains(" ")
                 val okPass = pass.isNotBlank()
-                emailError = if (!okEmail) context.getString(R.string.error_invalid_email) else null
-                passError = if (!okPass) context.getString(R.string.error_empty_password) else null
+                emailErr = if (!okEmail) R.string.error_invalid_email else null
+                passErr = if (!okPass) R.string.error_empty_password else null
                 if (okEmail && okPass) {
                     focus.clearFocus()
                     onLogin(email, pass)
@@ -400,12 +386,13 @@ fun RegisterForm(
     var confirm by remember { mutableStateOf("") }
     var agree by remember { mutableStateOf(true) }
 
-    var userErr by remember { mutableStateOf<String?>(null) }
-    var nameErr by remember { mutableStateOf<String?>(null) }
-    var lastErr by remember { mutableStateOf<String?>(null) }
-    var emailErr by remember { mutableStateOf<String?>(null) }
-    var passErr by remember { mutableStateOf<String?>(null) }
-    var confirmErr by remember { mutableStateOf<String?>(null) }
+    var userErr by remember { mutableStateOf<Int?>(null) }
+    var nameErr by remember { mutableStateOf<Int?>(null) }
+    var lastErr by remember { mutableStateOf<Int?>(null) }
+    var emailErr by remember { mutableStateOf<Int?>(null) }
+    var passErr by remember { mutableStateOf<Int?>(null) }
+    var confirmErr by remember { mutableStateOf<Int?>(null) }
+    var termsErr by remember { mutableStateOf<Int?>(null) }
 
     AuthCard {
         Column(Modifier.verticalScroll(scroll)) {
@@ -416,114 +403,154 @@ fun RegisterForm(
             )
             Spacer(Modifier.height(24.dp))
 
+            // Username (saneamos y validamos en vivo)
             OutlinedTextField(
-                user, { user = it; userErr = null },
+                value = user,
+                onValueChange = {
+                    val sanitized = sanitizeUsernameInline(it)
+                    user = sanitized
+                    userErr = errUsername(user)
+                },
                 label = { Text(stringResource(R.string.label_username)) },
                 isError = userErr != null,
-                supportingText = {
-                    if (userErr != null) Text(userErr!!, color = MaterialTheme.colorScheme.error)
-                },
+                supportingText = { userErr?.let { Text(stringResource(it), color = MaterialTheme.colorScheme.error) } },
                 singleLine = true,
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Ascii),
                 colors = authTextFieldColors(),
                 modifier = Modifier.fillMaxWidth()
             )
             Spacer(Modifier.height(16.dp))
+
+            // Nombres
             OutlinedTextField(
-                name, { name = it; nameErr = null },
+                value = name,
+                onValueChange = {
+                    val lettersAndSpaces = it.replace(Regex("[^\\p{L}\\p{M}\\s]"), "")
+                    name = toTitleCaseWordsStreaming(lettersAndSpaces, Locale.getDefault())
+                    nameErr = errHumanName(name)
+                },
                 label = { Text(stringResource(R.string.label_firstname)) },
                 isError = nameErr != null,
-                supportingText = {
-                    if (nameErr != null) Text(nameErr!!, color = MaterialTheme.colorScheme.error)
-                },
+                supportingText = { nameErr?.let { Text(stringResource(it), color = MaterialTheme.colorScheme.error) } },
                 singleLine = true,
                 colors = authTextFieldColors(),
                 modifier = Modifier.fillMaxWidth()
             )
             Spacer(Modifier.height(16.dp))
+
+            // Apellidos
             OutlinedTextField(
-                last, { last = it; lastErr = null },
+                value = last,
+                onValueChange = {
+                    val lettersAndSpaces = it.replace(Regex("[^\\p{L}\\p{M}\\s]"), "")
+                    last = toTitleCaseWordsStreaming(lettersAndSpaces, Locale.getDefault())
+                    lastErr = errHumanName(last)
+                },
                 label = { Text(stringResource(R.string.label_lastname)) },
                 isError = lastErr != null,
-                supportingText = {
-                    if (lastErr != null) Text(lastErr!!, color = MaterialTheme.colorScheme.error)
-                },
+                supportingText = { lastErr?.let { Text(stringResource(it), color = MaterialTheme.colorScheme.error) } },
                 singleLine = true,
                 colors = authTextFieldColors(),
                 modifier = Modifier.fillMaxWidth()
             )
             Spacer(Modifier.height(16.dp))
+
+            // Email
             OutlinedTextField(
-                email, { email = it; emailErr = null },
+                value = email,
+                onValueChange = {
+                    email = it.replace(" ", "")
+                    emailErr = errEmail(email)
+                },
                 label = { Text(stringResource(R.string.label_email)) },
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
                 isError = emailErr != null,
-                supportingText = {
-                    if (emailErr != null) Text(emailErr!!, color = MaterialTheme.colorScheme.error)
-                },
+                supportingText = { emailErr?.let { Text(stringResource(it), color = MaterialTheme.colorScheme.error) } },
                 singleLine = true,
                 colors = authTextFieldColors(),
                 modifier = Modifier.fillMaxWidth()
             )
             Spacer(Modifier.height(16.dp))
+
+            // Password
             OutlinedTextField(
-                pass, { pass = it; passErr = null },
+                value = pass,
+                onValueChange = {
+                    pass = noSpaces(it)
+                    passErr = errPass(pass)
+                    confirmErr = errConfirm(pass, confirm)
+                },
                 label = { Text(stringResource(R.string.label_password)) },
                 visualTransformation = PasswordVisualTransformation(),
                 isError = passErr != null,
-                supportingText = {
-                    if (passErr != null) Text(passErr!!, color = MaterialTheme.colorScheme.error)
-                },
+                supportingText = { passErr?.let { Text(stringResource(it), color = MaterialTheme.colorScheme.error) } },
                 singleLine = true,
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
                 colors = authTextFieldColors(),
                 modifier = Modifier.fillMaxWidth()
             )
             Spacer(Modifier.height(8.dp))
             PasswordStrengthIndicator(password = pass)
             Spacer(Modifier.height(16.dp))
+
+            // Confirmación
             OutlinedTextField(
-                confirm, { confirm = it; confirmErr = null },
+                value = confirm,
+                onValueChange = {
+                    confirm = noSpaces(it)
+                    confirmErr = errConfirm(pass, confirm)
+                },
                 label = { Text(stringResource(R.string.label_confirm_password)) },
                 visualTransformation = PasswordVisualTransformation(),
                 isError = confirmErr != null,
-                supportingText = {
-                    if (confirmErr != null) Text(confirmErr!!, color = MaterialTheme.colorScheme.error)
-                },
+                supportingText = { confirmErr?.let { Text(stringResource(it), color = MaterialTheme.colorScheme.error) } },
                 singleLine = true,
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
                 colors = authTextFieldColors(),
                 modifier = Modifier.fillMaxWidth()
             )
 
             Spacer(Modifier.height(16.dp))
             Row(verticalAlignment = Alignment.CenterVertically) {
-                Checkbox(checked = agree, onCheckedChange = { agree = it })
-                Text(stringResource(R.string.accept_terms), color = Color.White)
+                Checkbox(checked = agree, onCheckedChange = {
+                    agree = it
+                    termsErr = null
+                })
+                Column {
+                    Text(stringResource(R.string.accept_terms), color = Color.White)
+                    termsErr?.let {
+                        Text(
+                            stringResource(it),
+                            color = MaterialTheme.colorScheme.error,
+                            style = MaterialTheme.typography.bodySmall
+                        )
+                    }
+                }
             }
 
             Spacer(Modifier.height(24.dp))
             Button(
                 onClick = {
-                    val okUser = user.isNotBlank() && !user.contains(" ") &&
-                            user.matches(Regex("^[a-zA-Z0-9_]+$"))
-                    val okName = name.isNotBlank()
-                    val okLast = last.isNotBlank()
-                    val okEmail = email.isNotBlank() && "@" in email
-                    val okPass = pass.length >= 8 &&
-                            pass.any { it.isUpperCase() } &&
-                            pass.any { it.isLowerCase() } &&
-                            pass.any { it.isDigit() } &&
-                            pass.any { it in "!@#$%^&*(),.?\":{}|<>" }
+                    // Validaciones finales
+                    val okUser = isValidUsername(user)
+                    val okName = isValidHumanName(name.trim())
+                    val okLast = isValidHumanName(last.trim())
+                    val okEmail = isValidEmailStrict(email)
+                    val okPass = isStrongPasswordNoSpaces(pass)
                     val okConfirm = confirm == pass
+                    val okTerms = agree
 
-                    userErr    = if (!okUser)   context.getString(R.string.error_invalid_username) else null
-                    nameErr    = if (!okName)   context.getString(R.string.error_empty_firstname) else null
-                    lastErr    = if (!okLast)   context.getString(R.string.error_empty_lastname) else null
-                    emailErr   = if (!okEmail)  context.getString(R.string.error_invalid_email_format) else null
-                    passErr    = if (!okPass)   context.getString(R.string.error_invalid_password_requirements) else null
-                    confirmErr = if (!okConfirm) context.getString(R.string.error_password_mismatch) else null
+                    userErr    = if (!okUser)    R.string.error_invalid_username else null
+                    nameErr    = if (!okName)    R.string.error_empty_firstname else null
+                    lastErr    = if (!okLast)    R.string.error_empty_lastname else null
+                    emailErr   = if (!okEmail)   R.string.error_invalid_email_format else null
+                    passErr    = if (!okPass)    R.string.error_invalid_password_requirements else null
+                    confirmErr = if (!okConfirm) R.string.error_password_mismatch else null
+                    termsErr   = if (!okTerms)   R.string.error_accept_terms else null
 
-                    if (okUser && okName && okLast && okEmail && okPass && okConfirm) {
+                    if (okUser && okName && okLast && okEmail && okPass && okConfirm && okTerms) {
                         focus.clearFocus()
-                        onSubmit(user, name, last, email, pass, confirm, agree)
+                        onSubmit(user, name.trim(), last.trim(), email, pass, confirm, agree)
                     }
                 },
                 enabled = !isLoading,
@@ -541,6 +568,7 @@ fun RegisterForm(
     }
 }
 
+
 /* ---------- Forgot ----------- */
 @Composable
 fun ForgotPasswordForm(
@@ -551,7 +579,7 @@ fun ForgotPasswordForm(
     val focus = LocalFocusManager.current
     val context = LocalContext.current
     var email by remember { mutableStateOf("") }
-    var emailErr by remember { mutableStateOf<String?>(null) }
+    var emailErr by remember { mutableStateOf<Int?>(null) }
 
     AuthCard {
         Text(
@@ -562,13 +590,14 @@ fun ForgotPasswordForm(
         Spacer(Modifier.height(24.dp))
         OutlinedTextField(
             value = email,
-            onValueChange = { email = it; emailErr = null },
+            onValueChange = {
+                email = it.replace(" ", "")
+                emailErr = errEmail(email)
+            },
             label = { Text(stringResource(R.string.label_email)) },
             singleLine = true,
             isError = emailErr != null,
-            supportingText = {
-                if (emailErr != null) Text(emailErr!!, color = MaterialTheme.colorScheme.error)
-            },
+            supportingText = { emailErr?.let { Text(stringResource(it), color = MaterialTheme.colorScheme.error) } },
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
             colors = authTextFieldColors(),
             modifier = Modifier.fillMaxWidth()
@@ -576,8 +605,8 @@ fun ForgotPasswordForm(
         Spacer(Modifier.height(24.dp))
         Button(
             onClick = {
-                val ok = email.isNotBlank() && "@" in email
-                emailErr = if (!ok) context.getString(R.string.error_invalid_email) else null
+                val ok = email.isNotBlank() && "@" in email && !email.contains(" ")
+                emailErr = if (!ok) R.string.error_invalid_email else null
                 if (ok) { focus.clearFocus(); onSend(email) }
             },
             enabled = !isLoading,
@@ -593,7 +622,7 @@ fun ForgotPasswordForm(
     }
 }
 
-/* ---------- Helpers ----------- */
+/* ---------- Helpers UI ----------- */
 @Composable
 private fun AuthCard(content: @Composable ColumnScope.() -> Unit) {
     Column(
@@ -616,9 +645,11 @@ private fun authTextFieldColors(): TextFieldColors =
         unfocusedTextColor = Color.White,
         disabledTextColor = Color.White.copy(alpha = 0.6f),
 
+        // 👉 Fondo consistente (también en error)
         focusedContainerColor = Color.White.copy(alpha = 0.08f),
         unfocusedContainerColor = Color.White.copy(alpha = 0.06f),
         disabledContainerColor = Color.White.copy(alpha = 0.04f),
+        errorContainerColor = Color.White.copy(alpha = 0.06f),
 
         cursorColor = Color.White,
         focusedIndicatorColor = Color.White.copy(alpha = 0.70f),
@@ -693,3 +724,111 @@ private fun ensureVaultOnDisk(context: android.content.Context, assetFileName: S
     }
     return cacheDir.absolutePath to assetFileName
 }
+
+/* ---------- Helpers de saneo/validación dura ----------- */
+
+// Quita todos los espacios (para username/password)
+private fun noSpaces(s: String): String =
+    s.replace(Regex("\\s+"), "")
+
+// Colapsa espacios múltiples a uno y recorta
+private fun collapseSpaces(s: String): String =
+    s.replace(Regex("\\s+"), " ").trim()
+
+// Nombres/Apellidos: solo letras (incluye acentos) y un espacio simple entre palabras.
+// Sin puntos ni guiones, sin dobles espacios. (2-100 chars)
+private fun isValidHumanName(name: String): Boolean {
+    val re = Regex("^(?!.* {2,})(?=.{2,100}$)[\\p{L}\\p{M}]+(?: [\\p{L}\\p{M}]+)*\$", RegexOption.IGNORE_CASE)
+    return re.matches(name)
+}
+
+// Username: 3-30, [a-z0-9._-], sin espacios, no empieza/termina con ._- , sin "..", "__", "--"
+private fun sanitizeUsernameInline(username: String): String {
+    var u = username.trim().lowercase()
+    u = u.replace(Regex("\\s+"), "")
+    u = u.replace(Regex("[._-]{2,}"), "-")             // colapsa repeticiones
+    u = u.replace(Regex("^[._-]+|[._-]+\$"), "")       // quita ._- al inicio/fin
+    return u
+}
+private fun isValidUsername(username: String): Boolean {
+    if (username.length !in 3..30) return false
+    if (!Regex("^[a-z0-9._-]+\$").matches(username)) return false
+    if (Regex("(\\.|_|-){2,}").containsMatchIn(username)) return false
+    if (Regex("^[._-]|[._-]\$").containsMatchIn(username)) return false
+    return true
+}
+
+// Email fuerte (sin espacios; estructura general user@domain.tld)
+private fun isValidEmailStrict(email: String): Boolean {
+    if (email.isBlank() || email.contains(" ")) return false
+    val re = Regex("^[^\\s@]+@[^\\s@]+\\.[^\\s@]{2,}\$")
+    return re.matches(email)
+}
+
+// Password fuerte y sin espacios
+private fun isStrongPasswordNoSpaces(pw: String): Boolean {
+    if (pw.length < 8) return false
+    if (pw.any { it.isWhitespace() }) return false
+    val hasUpper = pw.any { it.isUpperCase() }
+    val hasLower = pw.any { it.isLowerCase() }
+    val hasDigit = pw.any { it.isDigit() }
+    val hasSym   = pw.any { it in "!@#\$%^&*(),.?\":{}|<>_-=+[];'`~\\/|" }
+    return hasUpper && hasLower && hasDigit && hasSym
+}
+
+// Title Case en streaming
+private fun toTitleCaseWordsStreaming(
+    input: String,
+    locale: Locale = Locale.getDefault()
+): String {
+    val hadTrailingSpace = input.endsWith(" ")
+    val lowered = input.lowercase(locale)
+    val noLeading = lowered.trimStart()
+    val collapsed = noLeading.replace(Regex(" {2,}"), " ")
+    val parts = collapsed.split(' ')
+    val titled = parts.joinToString(" ") { word ->
+        if (word.isEmpty()) "" else word.replaceFirstChar { ch -> ch.titlecase(locale) }
+    }
+    return if (hadTrailingSpace && titled.isNotEmpty() && !titled.endsWith(" ")) {
+        "$titled "
+    } else {
+        titled
+    }
+}
+
+/* ---------- Helpers de error en vivo: DEVUELVEN Int? (IDs) ----------- */
+
+private fun errUsername(u: String): Int? =
+    when {
+        u.isBlank() -> null // no molestes en vacío
+        !isValidUsername(u) -> R.string.invalidUsername
+        else -> null
+    }
+
+private fun errHumanName(n: String): Int? =
+    when {
+        n.isBlank() -> null
+        !isValidHumanName(n.trim()) -> R.string.errorHumanName
+        else -> null
+    }
+
+private fun errEmail(e: String): Int? =
+    when {
+        e.isBlank() -> null
+        !isValidEmailStrict(e) -> R.string.error_invalid_email
+        else -> null
+    }
+
+private fun errPass(p: String): Int? =
+    when {
+        p.isBlank() -> null
+        !isStrongPasswordNoSpaces(p) -> R.string.error_invalid_password_requirements
+        else -> null
+    }
+
+private fun errConfirm(p: String, c: String): Int? =
+    when {
+        c.isBlank() -> null
+        p != c -> R.string.error_password_mismatch
+        else -> null
+    }

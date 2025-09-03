@@ -111,13 +111,7 @@
   <string name="error_empty_lastname">Írja be a vezetéknevét</string>
   <string name="error_invalid_email_format">Érvénytelen e -mail</string>
   <string name="error_invalid_password_requirements">Ellenőrizze a jelszó követelményeit</string>
-  <string name="password_req_length">8 karakter</string>
-  <string name="password_req_upper">Nagybetű</string>
-  <string name="password_req_lower">Kisbetű</string>
-  <string name="password_req_digit">Szám</string>
-  <string name="password_req_special">Különleges karakter</string>
   <string name="forgot_title">Helyezze vissza a jelszót</string>
-  <string name="btn_sending">Küldés ...</string>
   <string name="btn_send_recovery">Küldje el a helyreállítási e -mailt</string>
   <string name="onboarding_welcome_title">Üdvözöljük a Estrella Music -ban</string>
   <string name="onboarding_welcome_desc">A zenéd egy helyen: gyors, tiszta és neked készült.</string>
@@ -171,4 +165,13 @@
   <string name="backup_restore_restoring">Helyreállítás…</string>
   <string name="backup_always_title">Hozzon létre egy mindig online biztonsági másolatot</string>
   <string name="backup_always_desc">Automatikusan 24 óránként (40 perc elteltével kezdeti használat után) felemelkedik a biztonsági mentés.</string>
+  <string name="error_accept_terms">El kell fogadnia a feltételeket.</string>
+  <string name="password_req_upper">Írjon be legalább egy tőkét</string>
+  <string name="password_req_lower">Írjon be legalább egy kisbetűt</string>
+  <string name="password_req_digit">Írjon be legalább egy számot</string>
+  <string name="password_req_special">Írjon be legalább egy különleges karaktert</string>
+  <string name="password_req_length">Írjon be legalább nyolc karaktert</string>
+  <string name="btn_sending">Küldés</string>
+  <string name="invalidUsername">A felhasználó csak betűket, számokat, pontot, szkriptet és alacsony szkriptet tartalmazhat; Ismételten</string>
+  <string name="errorHumanName">Csak betűk és egy egyszerű hely a szavak között</string>
 </resources>

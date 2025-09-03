@@ -66,13 +66,7 @@
   <string name="error_empty_lastname">अपना अंतिम नाम दर्ज करें</string>
   <string name="error_invalid_email_format">अमान्य ईमेल</string>
   <string name="error_invalid_password_requirements">पासवर्ड आवश्यकताओं की जाँच करें</string>
-  <string name="password_req_length">8 अक्षर</string>
-  <string name="password_req_upper">बड़े अक्षर</string>
-  <string name="password_req_lower">छोटा अक्षर</string>
-  <string name="password_req_digit">संख्या</string>
-  <string name="password_req_special">विशेष संप्रतीक</string>
   <string name="forgot_title">पासवर्ड की वसूली</string>
-  <string name="btn_sending">भेजना ...</string>
   <string name="btn_send_recovery">रिकवरी ईमेल भेजें</string>
   <string name="onboarding_welcome_title">जॉस संगीत में आपका स्वागत है</string>
   <string name="onboarding_welcome_desc">आपका संगीत एक ही स्थान पर: तेज़, साफ और आपके लिए बनाया गया।</string>
@@ -126,4 +120,13 @@
   <string name="backup_restore_restoring">बहाल…</string>
   <string name="backup_always_title">हमेशा एक ऑनलाइन बैकअप बनाएं</string>
   <string name="backup_always_desc">स्वचालित रूप से हर 24 घंटे (प्रारंभिक उपयोग के लिए 40 मिनट के बाद) एक बैकअप बढ़ जाता है।</string>
+  <string name="error_accept_terms">आपको हमारे नियमों और शर्तों को मानना ​​होगा।</string>
+  <string name="password_req_upper">कम से कम एक पूंजी दर्ज करें</string>
+  <string name="password_req_lower">कम से कम एक लोअरकेस दर्ज करें</string>
+  <string name="password_req_digit">कम से कम एक नंबर दर्ज करें</string>
+  <string name="password_req_special">कम से कम एक विशेष चरित्र दर्ज करें</string>
+  <string name="password_req_length">कम से कम आठ अक्षर दर्ज करें</string>
+  <string name="btn_sending">भेजना</string>
+  <string name="invalidUsername">उपयोगकर्ता में केवल अक्षर, संख्या, बिंदु, स्क्रिप्ट और कम स्क्रिप्ट शामिल हो सकते हैं; बिना बार -बार</string>
+  <string name="errorHumanName">केवल अक्षर और शब्दों के बीच एक सरल स्थान</string>
 </resources>

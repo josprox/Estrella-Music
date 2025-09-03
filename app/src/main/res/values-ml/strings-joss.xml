@@ -99,13 +99,7 @@
   <string name="error_empty_lastname">നിങ്ങളുടെ അവസാന നാമം നൽകുക</string>
   <string name="error_invalid_email_format">അസാധുവായ ഇമെയിൽ</string>
   <string name="error_invalid_password_requirements">പാസ്വേഡ് ആവശ്യകതകൾ പരിശോധിക്കുക</string>
-  <string name="password_req_length">8 പ്രതീകങ്ങൾ</string>
-  <string name="password_req_upper">വലിയക്ഷരം</string>
-  <string name="password_req_lower">ചെറിയ അക്ഷരം</string>
-  <string name="password_req_digit">അക്കം</string>
-  <string name="password_req_special">പ്രത്യേക പ്രതീകം</string>
   <string name="forgot_title">പാസ്വേഡ് വീണ്ടെടുക്കുക</string>
-  <string name="btn_sending">അയയ്ക്കുന്നു ...</string>
   <string name="btn_send_recovery">വീണ്ടെടുക്കൽ ഇമെയിൽ അയയ്ക്കുക</string>
   <string name="onboarding_welcome_title">ജോസ് സംഗീതത്തിലേക്ക് സ്വാഗതം</string>
   <string name="onboarding_welcome_desc">നിങ്ങളുടെ സംഗീതം ഒരിടത്ത്: വേഗത്തിൽ, വൃത്തിയാക്കി നിങ്ങൾക്കായി നിർമ്മിക്കുക.</string>
@@ -159,4 +153,13 @@
   <string name="backup_restore_restoring">പുന oring സ്ഥാപിക്കുന്നു ...</string>
   <string name="backup_always_title">എല്ലായ്പ്പോഴും ഓൺലൈൻ ബാക്കപ്പ് സൃഷ്ടിക്കുക</string>
   <string name="backup_always_desc">ഓരോ 24 മണിക്കൂറിലും സ്വപ്രേരിതമായി ഒരു ബാക്കപ്പ് ഉയർത്തുന്നു (പ്രാരംഭ ഉപയോഗത്തിനായി 40 മിനുട്ടിന് ശേഷം).</string>
+  <string name="error_accept_terms">നിബന്ധനകളും വ്യവസ്ഥകളും നിങ്ങൾ അംഗീകരിക്കണം.</string>
+  <string name="password_req_upper">കുറഞ്ഞത് ഒരു മൂലധനമെങ്കിലും നൽകുക</string>
+  <string name="password_req_lower">കുറഞ്ഞത് ഒരു ചെറിയക്ഷരെങ്കിലും നൽകുക</string>
+  <string name="password_req_digit">കുറഞ്ഞത് ഒരു നമ്പറെങ്കിലും നൽകുക</string>
+  <string name="password_req_special">കുറഞ്ഞത് ഒരു പ്രത്യേക പ്രതീകമെങ്കിലും നൽകുക</string>
+  <string name="password_req_length">കുറഞ്ഞത് എട്ട് പ്രതീകങ്ങളെങ്കിലും നൽകുക</string>
+  <string name="btn_sending">അയയ്ക്കുന്നു</string>
+  <string name="invalidUsername">ഉപയോക്താവിന് അക്ഷരങ്ങൾ, അക്കങ്ങൾ, സ്ക്രിപ്റ്റ്, കുറഞ്ഞ സ്ക്രിപ്റ്റ് എന്നിവ മാത്രമേ അടങ്ങിയിട്ടുള്ളൂ; ആവർത്തിക്കാതെ</string>
+  <string name="errorHumanName">അക്ഷരങ്ങളും വാക്കുകൾക്കിടയിലുള്ള ഒരു ലളിതമായ ഇടവും</string>
 </resources>

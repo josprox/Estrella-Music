@@ -66,13 +66,7 @@
   <string name="error_empty_lastname">உங்கள் கடைசி பெயரை உள்ளிடவும்</string>
   <string name="error_invalid_email_format">தவறான மின்னஞ்சல்</string>
   <string name="error_invalid_password_requirements">கடவுச்சொல் தேவைகளை சரிபார்க்கவும்</string>
-  <string name="password_req_length">8 எழுத்துக்கள்</string>
-  <string name="password_req_upper">பெரிய எழுத்து</string>
-  <string name="password_req_lower">சிறிய எழுத்து</string>
-  <string name="password_req_digit">எண்</string>
-  <string name="password_req_special">சிறப்பு எழுத்து</string>
   <string name="forgot_title">கடவுச்சொல்லை மீட்டெடுக்கவும்</string>
-  <string name="btn_sending">அனுப்புகிறது ...</string>
   <string name="btn_send_recovery">மீட்பு மின்னஞ்சலை அனுப்பவும்</string>
   <string name="onboarding_welcome_title">ஜோஸ் இசைக்கு வருக</string>
   <string name="onboarding_welcome_desc">ஒரே இடத்தில் உங்கள் இசை: வேகமான, சுத்தமான, உங்களுக்காக தயாரிக்கப்பட்டது.</string>
@@ -126,4 +120,13 @@
   <string name="backup_restore_restoring">மீட்டமைத்தல்…</string>
   <string name="backup_always_title">எப்போதும் ஆன்லைன் காப்புப்பிரதியை உருவாக்கவும்</string>
   <string name="backup_always_desc">ஒவ்வொரு 24 மணி நேரத்திற்கும் ஒரு காப்புப்பிரதியை தானாக உயர்த்தும் (ஆரம்ப பயன்பாட்டிற்கு 40 நிமிடங்களுக்குப் பிறகு).</string>
+  <string name="error_accept_terms">விதிமுறைகளையும் நிபந்தனைகளையும் நீங்கள் ஏற்க வேண்டும்.</string>
+  <string name="password_req_upper">குறைந்தது ஒரு மூலதனத்தை உள்ளிடவும்</string>
+  <string name="password_req_lower">குறைந்தது ஒரு சிறிய எழுத்தை உள்ளிடவும்</string>
+  <string name="password_req_digit">குறைந்தது ஒரு எண்ணையாவது உள்ளிடவும்</string>
+  <string name="password_req_special">குறைந்தது ஒரு சிறப்பு எழுத்தை உள்ளிடவும்</string>
+  <string name="password_req_length">குறைந்தது எட்டு எழுத்துக்களை உள்ளிடவும்</string>
+  <string name="btn_sending">அனுப்புகிறது</string>
+  <string name="invalidUsername">பயனரில் எழுத்துக்கள், எண்கள், புள்ளி, ஸ்கிரிப்ட் மற்றும் குறைந்த ஸ்கிரிப்ட் மட்டுமே இருக்க முடியும்; மீண்டும் மீண்டும் இல்லாமல்</string>
+  <string name="errorHumanName">கடிதங்கள் மற்றும் சொற்களுக்கு இடையில் ஒரு எளிய இடம் மட்டுமே</string>
 </resources>

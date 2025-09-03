@@ -65,13 +65,7 @@
   <string name="error_empty_lastname">نام خانوادگی خود را وارد کنید</string>
   <string name="error_invalid_email_format">ایمیل نامعتبر</string>
   <string name="error_invalid_password_requirements">الزامات رمز عبور را بررسی کنید</string>
-  <string name="password_req_length">8 حرف</string>
-  <string name="password_req_upper">حرف بزرگ</string>
-  <string name="password_req_lower">حرف کوچک</string>
-  <string name="password_req_digit">شماره</string>
-  <string name="password_req_special">شخصیت خاص</string>
   <string name="forgot_title">بازیابی رمز عبور</string>
-  <string name="btn_sending">ارسال ...</string>
   <string name="btn_send_recovery">ارسال ایمیل بازیابی</string>
   <string name="onboarding_welcome_title">به موسیقی Joss خوش آمدید</string>
   <string name="onboarding_welcome_desc">موسیقی شما در یک مکان: سریع ، تمیز و ساخته شده برای شما.</string>
@@ -125,4 +119,13 @@
   <string name="backup_restore_restoring">بازگرداندن ...</string>
   <string name="backup_always_title">یک نسخه پشتیبان همیشه آنلاین ایجاد کنید</string>
   <string name="backup_always_desc">به طور خودکار هر 24 ساعت یک نسخه پشتیبان تهیه می کند (بعد از 40 دقیقه برای استفاده اولیه).</string>
+  <string name="error_accept_terms">شما باید شرایط و ضوابط را بپذیرید.</string>
+  <string name="password_req_upper">حداقل یک سرمایه را وارد کنید</string>
+  <string name="password_req_lower">حداقل یک حروف کوچک را وارد کنید</string>
+  <string name="password_req_digit">حداقل یک شماره را وارد کنید</string>
+  <string name="password_req_special">حداقل یک شخصیت خاص را وارد کنید</string>
+  <string name="password_req_length">حداقل هشت حرف را وارد کنید</string>
+  <string name="btn_sending">ارسال</string>
+  <string name="invalidUsername">کاربر فقط می تواند حاوی حروف ، اعداد ، نقطه ، اسکریپت و اسکریپت پایین باشد. بدون تکرار</string>
+  <string name="errorHumanName">فقط حروف و یک فضای ساده بین کلمات</string>
 </resources>

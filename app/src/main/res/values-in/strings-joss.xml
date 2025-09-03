@@ -100,13 +100,7 @@
   <string name="error_empty_lastname">Masukkan nama belakang Anda</string>
   <string name="error_invalid_email_format">Email tidak valid</string>
   <string name="error_invalid_password_requirements">Periksa persyaratan kata sandi</string>
-  <string name="password_req_length">8 karakter</string>
-  <string name="password_req_upper">Surat huruf besar</string>
-  <string name="password_req_lower">Huruf kecil</string>
-  <string name="password_req_digit">Nomor</string>
-  <string name="password_req_special">Karakter khusus</string>
   <string name="forgot_title">Pulihkan Kata Sandi</string>
-  <string name="btn_sending">Mengirim ...</string>
   <string name="btn_send_recovery">Kirim Email Pemulihan</string>
   <string name="onboarding_welcome_title">Selamat datang di Estrella Music</string>
   <string name="onboarding_welcome_desc">Musik Anda di satu tempat: Cepat, bersih, dan dibuat untuk Anda.</string>
@@ -160,4 +154,13 @@
   <string name="backup_restore_restoring">Memulihkan ...</string>
   <string name="backup_always_title">Buat cadangan selalu online</string>
   <string name="backup_always_desc">Secara otomatis naik cadangan setiap 24 jam (setelah 40 menit untuk penggunaan awal).</string>
+  <string name="error_accept_terms">Anda harus menerima syarat dan ketentuan.</string>
+  <string name="password_req_upper">Masukkan setidaknya satu modal</string>
+  <string name="password_req_lower">Masukkan setidaknya satu huruf kecil</string>
+  <string name="password_req_digit">Masukkan setidaknya satu nomor</string>
+  <string name="password_req_special">Masukkan setidaknya satu karakter khusus</string>
+  <string name="password_req_length">Masukkan setidaknya delapan karakter</string>
+  <string name="btn_sending">Mengirim</string>
+  <string name="invalidUsername">Pengguna hanya dapat berisi huruf, angka, titik, skrip, dan skrip rendah; Tanpa diulang</string>
+  <string name="errorHumanName">Hanya huruf dan ruang sederhana di antara kata -kata</string>
 </resources>

@@ -100,13 +100,7 @@
   <string name="error_empty_lastname">Kirjoita sukunimesi</string>
   <string name="error_invalid_email_format">Virheellinen sähköposti</string>
   <string name="error_invalid_password_requirements">Tarkista salasanavaatimukset</string>
-  <string name="password_req_length">8 merkkiä</string>
-  <string name="password_req_upper">Iso kirjain</string>
-  <string name="password_req_lower">Pieni kirjain</string>
-  <string name="password_req_digit">Määrä</string>
-  <string name="password_req_special">Erikoishahmo</string>
   <string name="forgot_title">Palauta salasana</string>
-  <string name="btn_sending">Lähetetään ...</string>
   <string name="btn_send_recovery">Lähetä Refleed -sähköposti</string>
   <string name="onboarding_welcome_title">Tervetuloa Joss -musiikkiin</string>
   <string name="onboarding_welcome_desc">Musiikkisi yhdessä paikassa: Nopea, puhdas ja tehty sinulle.</string>
@@ -160,4 +154,13 @@
   <string name="backup_restore_restoring">Palauttaminen…</string>
   <string name="backup_always_title">Luo aina online -varmuuskopiointi</string>
   <string name="backup_always_desc">Nousee varmuuskopion automaattisesti 24 tunnin välein (40 minuutin kuluttua ensimmäistä käyttöä varten).</string>
+  <string name="error_accept_terms">Sinun on hyväksyttävä ehdot.</string>
+  <string name="password_req_upper">Syötä vähintään yksi pääoma</string>
+  <string name="password_req_lower">Syötä vähintään yksi pieni kirjain</string>
+  <string name="password_req_digit">Kirjoita vähintään yksi numero</string>
+  <string name="password_req_special">Kirjoita ainakin yksi erityishahmo</string>
+  <string name="password_req_length">Kirjoita vähintään kahdeksan merkkiä</string>
+  <string name="btn_sending">Lähetys</string>
+  <string name="invalidUsername">Käyttäjä voi sisältää vain kirjaimia, numeroita, pistettä, komentosarjaa ja alhaisen komentosarjan; Toistuvasti</string>
+  <string name="errorHumanName">Vain kirjaimet ja yksinkertainen tila sanojen välillä</string>
 </resources>

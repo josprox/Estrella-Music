@@ -66,13 +66,7 @@
   <string name="error_empty_lastname">तपाईंको अन्तिम नाम प्रविष्ट गर्नुहोस्</string>
   <string name="error_invalid_email_format">अवैध ईमेल</string>
   <string name="error_invalid_password_requirements">पासवर्ड आवश्यकताहरू जाँच गर्नुहोस्</string>
-  <string name="password_req_length">Characters क्यारेक्टर</string>
-  <string name="password_req_upper">अपरकेस पत्र</string>
-  <string name="password_req_lower">लोअरकेस पत्र</string>
-  <string name="password_req_digit">संख्या</string>
-  <string name="password_req_special">विशेष पात्र</string>
   <string name="forgot_title">पासवर्ड पुन: प्राप्ति गर्नुहोस्</string>
-  <string name="btn_sending">पठाउँदै ...</string>
   <string name="btn_send_recovery">रिकभरी ईमेल पठाउनुहोस्</string>
   <string name="onboarding_welcome_title">Joss संगीतमा स्वागत छ</string>
   <string name="onboarding_welcome_desc">तपाईंको संगीत एक ठाउँमा: छिटो, सफा, र तपाईंको लागि बनाइएको।</string>
@@ -126,4 +120,13 @@
   <string name="backup_restore_restoring">पुनर्स्थापना ...</string>
   <string name="backup_always_title">सँधै अनलाइन ब्याकअप सिर्जना गर्नुहोस्</string>
   <string name="backup_always_desc">स्वचालित रूपमा प्रत्येक 2 hours घण्टा ब्याकअप बढ्दछ (प्रारम्भिक प्रयोगको लागि 400 मिनेट पछि)।</string>
+  <string name="error_accept_terms">तपाईंले नियम र सर्तहरू स्वीकार्नु पर्छ।</string>
+  <string name="password_req_upper">कम्तिमा एउटा राजधानी प्रविष्ट गर्नुहोस्</string>
+  <string name="password_req_lower">कम्तिमा एउटा लोअरकेस प्रविष्ट गर्नुहोस्</string>
+  <string name="password_req_digit">कम्तिमा एउटा नम्बर प्रविष्ट गर्नुहोस्</string>
+  <string name="password_req_special">कम्तिमा एउटा विशेष चरित्र प्रविष्ट गर्नुहोस्</string>
+  <string name="password_req_length">कम्तिमा आठ वर्णहरू प्रविष्ट गर्नुहोस्</string>
+  <string name="btn_sending">पठाउँउको</string>
+  <string name="invalidUsername">प्रयोगकर्ताले केवल अक्षरहरू, नम्बरहरू, बुँदा, लिपि र उत्तम स्क्रिप्ट पनि समावेश गर्न सक्दछ; दोहोरिएको बिना</string>
+  <string name="errorHumanName">केवल अक्षर र शब्दहरू बीच एक साधारण ठाउँ</string>
 </resources>

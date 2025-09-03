@@ -66,13 +66,7 @@
   <string name="error_empty_lastname">Unesite svoje prezime</string>
   <string name="error_invalid_email_format">Nevažeća e -pošta</string>
   <string name="error_invalid_password_requirements">Provjerite zahtjeve lozinke</string>
-  <string name="password_req_length">8 znakova</string>
-  <string name="password_req_upper">Veliko slovo</string>
-  <string name="password_req_lower">Malo slovo</string>
-  <string name="password_req_digit">Broj</string>
-  <string name="password_req_special">Poseban lik</string>
   <string name="forgot_title">Oporaviti lozinku</string>
-  <string name="btn_sending">Slanje ...</string>
   <string name="btn_send_recovery">Pošaljite e -poštu za oporavak</string>
   <string name="onboarding_welcome_title">Dobrodošli u Estrella Music</string>
   <string name="onboarding_welcome_desc">Vaša glazba na jednom mjestu: brza, čista i napravljena za vas.</string>
@@ -126,4 +120,13 @@
   <string name="backup_restore_restoring">Obnova ...</string>
   <string name="backup_always_title">Stvorite uvijek internetsku sigurnosnu kopiju</string>
   <string name="backup_always_desc">Automatski raste sigurnosnu kopiju svaka 24 sata (nakon 40 min za početnu upotrebu).</string>
+  <string name="error_accept_terms">Morate prihvatiti uvjete.</string>
+  <string name="password_req_upper">Unesite barem jedan kapital</string>
+  <string name="password_req_lower">Unesite najmanje jedno malo</string>
+  <string name="password_req_digit">Unesite barem jedan broj</string>
+  <string name="password_req_special">Unesite barem jedan poseban lik</string>
+  <string name="password_req_length">Unesite najmanje osam znakova</string>
+  <string name="btn_sending">Slanje</string>
+  <string name="invalidUsername">Korisnik može sadržavati samo slova, brojeve, točku, skriptu i nisku skriptu; Bez ponovljenog</string>
+  <string name="errorHumanName">Samo slova i jednostavan prostor između riječi</string>
 </resources>

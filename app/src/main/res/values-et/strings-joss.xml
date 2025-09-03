@@ -66,13 +66,7 @@
   <string name="error_empty_lastname">Sisestage oma perekonnanimi</string>
   <string name="error_invalid_email_format">Kehtetu e -post</string>
   <string name="error_invalid_password_requirements">Kontrollige parooli nõudeid</string>
-  <string name="password_req_length">8 tähemärki</string>
-  <string name="password_req_upper">Suurtäht</string>
-  <string name="password_req_lower">Väiketäht</string>
-  <string name="password_req_digit">Arv</string>
-  <string name="password_req_special">Erimärk</string>
   <string name="forgot_title">Parooli taastamine</string>
-  <string name="btn_sending">Saadav …</string>
   <string name="btn_send_recovery">Saada taastamise e -post</string>
   <string name="onboarding_welcome_title">Tere tulemast Jossi muusikasse</string>
   <string name="onboarding_welcome_desc">Teie muusika ühes kohas: kiire, puhas ja teile tehtud.</string>
@@ -126,4 +120,13 @@
   <string name="backup_restore_restoring">Taastamine ...</string>
   <string name="backup_always_title">Looge alati veebipõhine varukoopia</string>
   <string name="backup_always_desc">Tõstab varukoopia automaatselt iga 24 tunni järel (40 minuti pärast esmaseks kasutamiseks).</string>
+  <string name="error_accept_terms">Peate nõustuma tingimustega.</string>
+  <string name="password_req_upper">Sisestage vähemalt üks pealinn</string>
+  <string name="password_req_lower">Sisestage vähemalt üks väiketäht</string>
+  <string name="password_req_digit">Sisestage vähemalt üks number</string>
+  <string name="password_req_special">Sisestage vähemalt üks eriline tegelane</string>
+  <string name="password_req_length">Sisestage vähemalt kaheksa tähemärki</string>
+  <string name="btn_sending">Saatmine</string>
+  <string name="invalidUsername">Kasutaja võib sisaldada ainult tähti, numbreid, punkte, skripti ja madalat skripti; Korduvalt</string>
+  <string name="errorHumanName">Ainult tähed ja lihtne ruum sõnade vahel</string>
 </resources>

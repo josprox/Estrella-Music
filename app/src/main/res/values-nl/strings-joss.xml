@@ -100,13 +100,7 @@
   <string name="error_empty_lastname">Voer uw achternaam in</string>
   <string name="error_invalid_email_format">Ongeldige e -mail</string>
   <string name="error_invalid_password_requirements">Controleer de wachtwoordvereisten</string>
-  <string name="password_req_length">8 tekens</string>
-  <string name="password_req_upper">Hoofdletter</string>
-  <string name="password_req_lower">Kleine letter</string>
-  <string name="password_req_digit">Nummer</string>
-  <string name="password_req_special">Speciaal karakter</string>
   <string name="forgot_title">Herstel het wachtwoord</string>
-  <string name="btn_sending">Verzenden ...</string>
   <string name="btn_send_recovery">Stuur herstel -e -mail</string>
   <string name="onboarding_welcome_title">Welkom bij Estrella Music</string>
   <string name="onboarding_welcome_desc">Je muziek op één plek: snel, schoon en voor jou gemaakt.</string>
@@ -160,4 +154,13 @@
   <string name="backup_restore_restoring">Herstellen ...</string>
   <string name="backup_always_title">Maak een altijd online back -up</string>
   <string name="backup_always_desc">Stijgt automatisch elke 24 uur een back -up op (na 40 minuten voor eerste gebruik).</string>
+  <string name="error_accept_terms">U moet de algemene voorwaarden accepteren.</string>
+  <string name="password_req_upper">Voer ten minste één kapitaal in</string>
+  <string name="password_req_lower">Voer ten minste één kleine letters in</string>
+  <string name="password_req_digit">Voer ten minste één nummer in</string>
+  <string name="password_req_special">Voer ten minste één speciaal personage in</string>
+  <string name="password_req_length">Voer minstens acht tekens in</string>
+  <string name="btn_sending">Verzending</string>
+  <string name="invalidUsername">De gebruiker kan alleen letters, cijfers, punt, script en laag script bevatten; Zonder herhaald</string>
+  <string name="errorHumanName">Alleen letters en een eenvoudige ruimte tussen woorden</string>
 </resources>

@@ -100,13 +100,7 @@
   <string name="error_empty_lastname">Εισαγάγετε το επώνυμό σας</string>
   <string name="error_invalid_email_format">Μη έγκυρο email</string>
   <string name="error_invalid_password_requirements">Ελέγξτε τις απαιτήσεις κωδικού πρόσβασης</string>
-  <string name="password_req_length">8 χαρακτήρες</string>
-  <string name="password_req_upper">Κεφαλαία επιστολή</string>
-  <string name="password_req_lower">Πεζά επιστολή</string>
-  <string name="password_req_digit">Αριθμός</string>
-  <string name="password_req_special">Ειδικός χαρακτήρας</string>
   <string name="forgot_title">Ανάκτηση κωδικού πρόσβασης</string>
-  <string name="btn_sending">Αποστολή ...</string>
   <string name="btn_send_recovery">Αποστολή email ανάκτησης</string>
   <string name="onboarding_welcome_title">Καλώς ήλθατε στη μουσική Joss</string>
   <string name="onboarding_welcome_desc">Η μουσική σας σε ένα μέρος: Γρήγορα, καθαρή και φτιαγμένη για εσάς.</string>
@@ -160,4 +154,13 @@
   <string name="backup_restore_restoring">Επαναφορά…</string>
   <string name="backup_always_title">Δημιουργήστε ένα πάντα online αντίγραφο ασφαλείας</string>
   <string name="backup_always_desc">Αυξάται αυτόματα ένα αντίγραφο ασφαλείας κάθε 24 ώρες (μετά από 40 λεπτά για αρχική χρήση).</string>
+  <string name="error_accept_terms">Πρέπει να αποδεχτείτε τους όρους και τις προϋποθέσεις.</string>
+  <string name="password_req_upper">Εισαγάγετε τουλάχιστον ένα κεφάλαιο</string>
+  <string name="password_req_lower">Εισαγάγετε τουλάχιστον μία πεζά</string>
+  <string name="password_req_digit">Εισαγάγετε τουλάχιστον έναν αριθμό</string>
+  <string name="password_req_special">Εισαγάγετε τουλάχιστον έναν ειδικό χαρακτήρα</string>
+  <string name="password_req_length">Εισαγάγετε τουλάχιστον οκτώ χαρακτήρες</string>
+  <string name="btn_sending">Αποστολή</string>
+  <string name="invalidUsername">Ο χρήστης μπορεί να περιέχει γράμματα, αριθμούς, σημείο, σενάριο και χαμηλό σενάριο. Χωρίς επαναλαμβανόμενο</string>
+  <string name="errorHumanName">Μόνο γράμματα και απλό χώρο μεταξύ των λέξεων</string>
 </resources>

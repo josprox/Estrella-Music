@@ -120,13 +120,7 @@
   <string name="error_empty_lastname">ਆਪਣਾ ਆਖਰੀ ਨਾਮ ਦਰਜ ਕਰੋ</string>
   <string name="error_invalid_email_format">ਗਲਤ ਈਮੇਲ</string>
   <string name="error_invalid_password_requirements">ਪਾਸਵਰਡ ਦੀਆਂ ਜ਼ਰੂਰਤਾਂ ਦੀ ਜਾਂਚ ਕਰੋ</string>
-  <string name="password_req_length">8 ਅੱਖਰ</string>
-  <string name="password_req_upper">ਵੱਡੇ ਅੱਖਰ</string>
-  <string name="password_req_lower">ਛੋਟੇ ਅੱਖਰ</string>
-  <string name="password_req_digit">ਨੰਬਰ</string>
-  <string name="password_req_special">ਵਿਸ਼ੇਸ਼ ਪਾਤਰ</string>
   <string name="forgot_title">ਪਾਸਵਰਡ ਮੁੜ ਪ੍ਰਾਪਤ ਕਰੋ</string>
-  <string name="btn_sending">ਭੇਜਣਾ ...</string>
   <string name="btn_send_recovery">ਰਿਕਵਰੀ ਈਮੇਲ ਭੇਜੋ</string>
   <string name="onboarding_welcome_title">ਜੌਸ ਸੰਗੀਤ ਵਿੱਚ ਤੁਹਾਡਾ ਸਵਾਗਤ ਹੈ</string>
   <string name="onboarding_welcome_desc">ਇਕ ਜਗ੍ਹਾ \'ਤੇ ਤੁਹਾਡਾ ਸੰਗੀਤ: ਤੇਜ਼, ਸਾਫ਼ ਅਤੇ ਤੁਹਾਡੇ ਲਈ ਬਣਾਇਆ.</string>
@@ -180,4 +174,13 @@
   <string name="backup_restore_restoring">ਰੀਸਟੋਰ ਕਰ ਰਿਹਾ ਹੈ ...</string>
   <string name="backup_always_title">ਹਮੇਸ਼ਾਂ contact ਨਲਾਈਨ ਬੈਕਅਪ ਬਣਾਓ</string>
   <string name="backup_always_desc">ਆਪਣੇ ਆਪ ਹਰ 24 ਘੰਟਿਆਂ ਬਾਅਦ ਬੈਕਅਪ (ਸ਼ੁਰੂਆਤੀ ਵਰਤੋਂ ਲਈ 40 ਮਿੰਟ ਬਾਅਦ).</string>
+  <string name="error_accept_terms">ਤੁਹਾਨੂੰ ਨਿਯਮ ਅਤੇ ਸ਼ਰਤਾਂ ਨੂੰ ਸਵੀਕਾਰ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ.</string>
+  <string name="password_req_upper">ਘੱਟੋ ਘੱਟ ਇਕ ਪੂੰਜੀ ਦਰਜ ਕਰੋ</string>
+  <string name="password_req_lower">ਘੱਟੋ ਘੱਟ ਇੱਕ ਛੋਟੇ ਅੱਖਰ ਦਾਖਲ ਕਰੋ</string>
+  <string name="password_req_digit">ਘੱਟੋ ਘੱਟ ਇੱਕ ਨੰਬਰ ਦਰਜ ਕਰੋ</string>
+  <string name="password_req_special">ਘੱਟੋ ਘੱਟ ਇਕ ਵਿਸ਼ੇਸ਼ ਪਾਤਰ ਦਰਜ ਕਰੋ</string>
+  <string name="password_req_length">ਘੱਟੋ ਘੱਟ ਅੱਠ ਅੱਖਰ ਦਾਖਲ ਕਰੋ</string>
+  <string name="btn_sending">ਭੇਜਣਾ</string>
+  <string name="invalidUsername">ਉਪਭੋਗਤਾ ਵਿੱਚ ਸਿਰਫ ਅੱਖਰ, ਨੰਬਰ, ਪੁਆਇੰਟ, ਸਕ੍ਰਿਪਟ ਅਤੇ ਨੀਵੀਂ ਸਕ੍ਰਿਪਟ ਸ਼ਾਮਲ ਹੋ ਸਕਦੀ ਹੈ; ਬਿਨਾਂ ਦੁਹਰਾਏ</string>
+  <string name="errorHumanName">ਸਿਰਫ ਅੱਖਰ ਅਤੇ ਸ਼ਬਦਾਂ ਦੇ ਵਿਚਕਾਰ ਇੱਕ ਸਧਾਰਣ ਸਪੇਸ</string>
 </resources>

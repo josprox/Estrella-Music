@@ -97,13 +97,7 @@
   <string name="error_empty_lastname">Entrez votre nom de famille</string>
   <string name="error_invalid_email_format">E-mail non valide</string>
   <string name="error_invalid_password_requirements">Vérifiez les exigences du mot de passe</string>
-  <string name="password_req_length">8 caractères</string>
-  <string name="password_req_upper">Lettre majuscule</string>
-  <string name="password_req_lower">Lettre minuscule</string>
-  <string name="password_req_digit">Nombre</string>
-  <string name="password_req_special">Caractère spécial</string>
   <string name="forgot_title">Récupérer le mot de passe</string>
-  <string name="btn_sending">Envoi…</string>
   <string name="btn_send_recovery">Envoyer un e-mail de récupération</string>
   <string name="onboarding_welcome_title">Bienvenue à Estrella Music</string>
   <string name="onboarding_welcome_desc">Votre musique en un seul endroit: rapide, propre et fait pour vous.</string>
@@ -157,4 +151,13 @@
   <string name="backup_restore_restoring">Restaurer…</string>
   <string name="backup_always_title">Créer une sauvegarde toujours en ligne</string>
   <string name="backup_always_desc">Augmente automatiquement une sauvegarde toutes les 24 heures (après 40 min pour une utilisation initiale).</string>
+  <string name="error_accept_terms">Vous devez accepter les termes et conditions.</string>
+  <string name="password_req_upper">Entrez au moins un capital</string>
+  <string name="password_req_lower">Entrez au moins une minuscule</string>
+  <string name="password_req_digit">Entrez au moins un numéro</string>
+  <string name="password_req_special">Entrez au moins un personnage spécial</string>
+  <string name="password_req_length">Entrez au moins huit caractères</string>
+  <string name="btn_sending">Envoi</string>
+  <string name="invalidUsername">L\'utilisateur ne peut contenir que des lettres, des nombres, du point, du script et du script bas; Sans répétition</string>
+  <string name="errorHumanName">Seulement des lettres et un espace simple entre les mots</string>
 </resources>

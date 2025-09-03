@@ -100,13 +100,7 @@
   <string name="error_empty_lastname">Skriv inn etternavnet ditt</string>
   <string name="error_invalid_email_format">Ugyldig e -post</string>
   <string name="error_invalid_password_requirements">Sjekk passordkravene</string>
-  <string name="password_req_length">8 tegn</string>
-  <string name="password_req_upper">Store bokstaver</string>
-  <string name="password_req_lower">Små bokstaver</string>
-  <string name="password_req_digit">Tall</string>
-  <string name="password_req_special">Spesiell karakter</string>
   <string name="forgot_title">Gjenopprett passord</string>
-  <string name="btn_sending">Sende ...</string>
   <string name="btn_send_recovery">Send gjenoppretting av e -post</string>
   <string name="onboarding_welcome_title">Velkommen til Estrella Music</string>
   <string name="onboarding_welcome_desc">Musikken din på ett sted: rask, ren og laget for deg.</string>
@@ -160,4 +154,13 @@
   <string name="backup_restore_restoring">Gjenopprette ...</string>
   <string name="backup_always_title">Lag en alltid online sikkerhetskopi</string>
   <string name="backup_always_desc">Automatisk stiger en sikkerhetskopi hver 24. time (etter 40 minutter for innledende bruk).</string>
+  <string name="error_accept_terms">Du må godta vilkårene og betingelsene.</string>
+  <string name="password_req_upper">Skriv inn minst en kapital</string>
+  <string name="password_req_lower">Skriv inn minst en små bokstaver</string>
+  <string name="password_req_digit">Skriv inn minst ett tall</string>
+  <string name="password_req_special">Skriv inn minst ett spesielt tegn</string>
+  <string name="password_req_length">Skriv inn minst åtte tegn</string>
+  <string name="btn_sending">Sending</string>
+  <string name="invalidUsername">Brukeren kan bare inneholde bokstaver, tall, punkt, skript og lavt skript; Uten gjentatt</string>
+  <string name="errorHumanName">Bare bokstaver og et enkelt mellomrom mellom ord</string>
 </resources>

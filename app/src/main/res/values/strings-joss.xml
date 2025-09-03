@@ -99,13 +99,7 @@
   <string name="error_empty_lastname">Enter your last name</string>
   <string name="error_invalid_email_format">Invalid email</string>
   <string name="error_invalid_password_requirements">Check the password requirements</string>
-  <string name="password_req_length">8+ characters</string>
-  <string name="password_req_upper">Uppercase letter</string>
-  <string name="password_req_lower">Lowercase letter</string>
-  <string name="password_req_digit">Number</string>
-  <string name="password_req_special">Special character</string>
   <string name="forgot_title">Recover password</string>
-  <string name="btn_sending">Sending…</string>
   <string name="btn_send_recovery">Send recovery email</string>
   <string name="onboarding_welcome_title">Welcome to Estrella Music</string>
   <string name="onboarding_welcome_desc">Your music in one place: fast, clean, and made for you.</string>
@@ -159,4 +153,13 @@
   <string name="backup_restore_restoring">Restoring…</string>
   <string name="backup_always_title">Create an always online backup</string>
   <string name="backup_always_desc">Automatically rises a backup every 24 hours (after 40 min for initial use).</string>
+  <string name="error_accept_terms">You must accept the terms and conditions.</string>
+  <string name="password_req_upper">Enter at least one capital</string>
+  <string name="password_req_lower">Enter at least one lowercase</string>
+  <string name="password_req_digit">Enter at least one number</string>
+  <string name="password_req_special">Enter at least one special character</string>
+  <string name="password_req_length">Enter at least eight characters</string>
+  <string name="btn_sending">Sending</string>
+  <string name="invalidUsername">The user can only contain letters, numbers, point, script and low script; </string>
+  <string name="errorHumanName">Only letters and a simple space between words</string>
 </resources>

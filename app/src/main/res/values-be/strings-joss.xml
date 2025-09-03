@@ -122,13 +122,7 @@
   <string name="error_empty_lastname">Увядзіце сваё прозвішча</string>
   <string name="error_invalid_email_format">Несапраўдная электронная пошта</string>
   <string name="error_invalid_password_requirements">Праверце патрабаванні пароля</string>
-  <string name="password_req_length">8 сімвалаў</string>
-  <string name="password_req_upper">Вялікі ліст</string>
-  <string name="password_req_lower">Малая літара</string>
-  <string name="password_req_digit">Нумар</string>
-  <string name="password_req_special">Асаблівы характар</string>
   <string name="forgot_title">Аднавіць пароль</string>
-  <string name="btn_sending">Адпраўка …</string>
   <string name="btn_send_recovery">Адпраўце аднаўленне электроннай пошты</string>
   <string name="onboarding_welcome_title">Сардэчна запрашаем у Estrella Music</string>
   <string name="onboarding_welcome_desc">Ваша музыка ў адным месцы: хутка, чыста і зроблена для вас.</string>
@@ -182,4 +176,13 @@
   <string name="backup_restore_restoring">Аднаўленне ...</string>
   <string name="backup_always_title">Стварыце заўсёды інтэрнэт -рэзервовую копію</string>
   <string name="backup_always_desc">Аўтаматычна падымаецца рэзервовая копія кожныя 24 гадзіны (праз 40 мін для першапачатковага выкарыстання).</string>
+  <string name="error_accept_terms">Вы павінны прыняць умовы і ўмовы.</string>
+  <string name="password_req_upper">Увядзіце хаця б адзін капітал</string>
+  <string name="password_req_lower">Увядзіце па меншай меры адзін малы.</string>
+  <string name="password_req_digit">Увядзіце па меншай меры адзін нумар</string>
+  <string name="password_req_special">Увядзіце хаця б адзін асаблівы персанаж</string>
+  <string name="password_req_length">Увядзіце па меншай меры восем сімвалаў</string>
+  <string name="btn_sending">Адпраўка</string>
+  <string name="invalidUsername">Карыстальнік можа ўтрымліваць толькі літары, лічбы, кропку, сцэнар і нізкі сцэнар; Без паўтарэння</string>
+  <string name="errorHumanName">Толькі літары і простае месца паміж словамі</string>
 </resources>

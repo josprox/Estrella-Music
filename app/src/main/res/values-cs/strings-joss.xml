@@ -100,13 +100,7 @@
   <string name="error_empty_lastname">Zadejte své příjmení</string>
   <string name="error_invalid_email_format">Neplatný e -mail</string>
   <string name="error_invalid_password_requirements">Zkontrolujte požadavky hesla</string>
-  <string name="password_req_length">8 znaků</string>
-  <string name="password_req_upper">Uppercase Letter</string>
-  <string name="password_req_lower">Malé písmeno</string>
-  <string name="password_req_digit">Číslo</string>
-  <string name="password_req_special">Speciální charakter</string>
   <string name="forgot_title">Obnovit heslo</string>
-  <string name="btn_sending">Odeslání ...</string>
   <string name="btn_send_recovery">Odeslat e -mail s obnovou</string>
   <string name="onboarding_welcome_title">Vítejte v hudbě Joss</string>
   <string name="onboarding_welcome_desc">Vaše hudba na jednom místě: Rychlá, čistá a vyrobená pro vás.</string>
@@ -160,4 +154,13 @@
   <string name="backup_restore_restoring">Obnovení ...</string>
   <string name="backup_always_title">Vytvořte vždy online zálohu</string>
   <string name="backup_always_desc">Automaticky stoupá zálohu každých 24 hodin (po 40 minutách pro počáteční použití).</string>
+  <string name="error_accept_terms">Smluvní podmínky musíte přijmout.</string>
+  <string name="password_req_upper">Zadejte alespoň jeden kapitál</string>
+  <string name="password_req_lower">Zadejte alespoň jedno malé písmena</string>
+  <string name="password_req_digit">Zadejte alespoň jedno číslo</string>
+  <string name="password_req_special">Zadejte alespoň jeden speciální znak</string>
+  <string name="password_req_length">Zadejte nejméně osm znaků</string>
+  <string name="btn_sending">Odeslání</string>
+  <string name="invalidUsername">Uživatel může obsahovat pouze písmena, čísla, bod, skript a nízký skript; Bez opakování</string>
+  <string name="errorHumanName">Pouze písmena a jednoduchý prostor mezi slovy</string>
 </resources>

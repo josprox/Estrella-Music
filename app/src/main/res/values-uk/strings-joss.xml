@@ -100,13 +100,7 @@
   <string name="error_empty_lastname">Введіть своє прізвище</string>
   <string name="error_invalid_email_format">Недійсна електронна пошта</string>
   <string name="error_invalid_password_requirements">Перевірте вимоги пароля</string>
-  <string name="password_req_length">8 символів</string>
-  <string name="password_req_upper">Верхній літер</string>
-  <string name="password_req_lower">МАЛЬНИЙ ЛЕСТ</string>
-  <string name="password_req_digit">Число</string>
-  <string name="password_req_special">Особливий персонаж</string>
   <string name="forgot_title">Відновити пароль</string>
-  <string name="btn_sending">Відправлення …</string>
   <string name="btn_send_recovery">Надіслати електронну пошту відновлення</string>
   <string name="onboarding_welcome_title">Ласкаво просимо до Estrella Music</string>
   <string name="onboarding_welcome_desc">Ваша музика в одному місці: швидка, чиста і створена для вас.</string>
@@ -160,4 +154,13 @@
   <string name="backup_restore_restoring">Відновлення ...</string>
   <string name="backup_always_title">Створіть завжди онлайн -резервну копію</string>
   <string name="backup_always_desc">Автоматично піднімається резервне копіювання кожні 24 години (після 40 хв для початкового використання).</string>
+  <string name="error_accept_terms">Ви повинні прийняти умови.</string>
+  <string name="password_req_upper">Введіть щонайменше один капітал</string>
+  <string name="password_req_lower">Введіть щонайменше одну малі літери</string>
+  <string name="password_req_digit">Введіть щонайменше один номер</string>
+  <string name="password_req_special">Введіть щонайменше один спеціальний персонаж</string>
+  <string name="password_req_length">Введіть щонайменше вісім символів</string>
+  <string name="btn_sending">Надсилання</string>
+  <string name="invalidUsername">Користувач може містити лише листи, цифри, точку, сценарій та низький сценарій; Без повторного</string>
+  <string name="errorHumanName">Тільки літери та простий простір між словами</string>
 </resources>

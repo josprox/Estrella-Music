@@ -100,13 +100,7 @@
   <string name="error_empty_lastname">Nhập họ của bạn</string>
   <string name="error_invalid_email_format">Email không hợp lệ</string>
   <string name="error_invalid_password_requirements">Kiểm tra các yêu cầu mật khẩu</string>
-  <string name="password_req_length">8 ký tự</string>
-  <string name="password_req_upper">Chữ hoa</string>
-  <string name="password_req_lower">Chữ thường</string>
-  <string name="password_req_digit">Con số</string>
-  <string name="password_req_special">Nhân vật đặc biệt</string>
   <string name="forgot_title">Khôi phục mật khẩu</string>
-  <string name="btn_sending">Gửi ...</string>
   <string name="btn_send_recovery">Gửi email phục hồi</string>
   <string name="onboarding_welcome_title">Chào mừng đến với Estrella Music</string>
   <string name="onboarding_welcome_desc">Âm nhạc của bạn ở một nơi: Nhanh chóng, sạch sẽ và được tạo ra cho bạn.</string>
@@ -160,4 +154,13 @@
   <string name="backup_restore_restoring">Khôi phục</string>
   <string name="backup_always_title">Tạo bản sao lưu luôn trực tuyến</string>
   <string name="backup_always_desc">Tự động tăng một bản sao lưu cứ sau 24 giờ (sau 40 phút để sử dụng ban đầu).</string>
+  <string name="error_accept_terms">Bạn phải chấp nhận các điều khoản và điều kiện.</string>
+  <string name="password_req_upper">Nhập ít nhất một vốn</string>
+  <string name="password_req_lower">Nhập ít nhất một chữ thường</string>
+  <string name="password_req_digit">Nhập ít nhất một số</string>
+  <string name="password_req_special">Nhập ít nhất một ký tự đặc biệt</string>
+  <string name="password_req_length">Nhập ít nhất tám ký tự</string>
+  <string name="btn_sending">Gửi</string>
+  <string name="invalidUsername">Người dùng chỉ có thể chứa các chữ cái, số, điểm, tập lệnh và tập lệnh thấp; Mà không lặp lại</string>
+  <string name="errorHumanName">Chỉ chữ cái và một khoảng trống đơn giản giữa các từ</string>
 </resources>

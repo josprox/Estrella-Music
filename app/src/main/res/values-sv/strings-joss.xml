@@ -66,13 +66,7 @@
   <string name="error_empty_lastname">Ange ditt efternamn</string>
   <string name="error_invalid_email_format">Ogiltig e -post</string>
   <string name="error_invalid_password_requirements">Kontrollera lösenordskraven</string>
-  <string name="password_req_length">8 tecken</string>
-  <string name="password_req_upper">Versaler</string>
-  <string name="password_req_lower">Liten bokstav</string>
-  <string name="password_req_digit">Antal</string>
-  <string name="password_req_special">Speciell karaktär</string>
   <string name="forgot_title">Återställa lösenord</string>
-  <string name="btn_sending">Sändning...</string>
   <string name="btn_send_recovery">Skicka e -postmeddelande</string>
   <string name="onboarding_welcome_title">Välkommen till Estrella Music</string>
   <string name="onboarding_welcome_desc">Din musik på ett ställe: Snabb, ren och gjord för dig.</string>
@@ -126,4 +120,13 @@
   <string name="backup_restore_restoring">Återställ ...</string>
   <string name="backup_always_title">Skapa en alltid online -säkerhetskopia</string>
   <string name="backup_always_desc">Stiger automatiskt en säkerhetskopia var 24: e timme (efter 40 minuter för initial användning).</string>
+  <string name="error_accept_terms">Du måste acceptera villkoren.</string>
+  <string name="password_req_upper">Ange minst ett kapital</string>
+  <string name="password_req_lower">Ange minst en liten bokstav</string>
+  <string name="password_req_digit">Ange minst ett nummer</string>
+  <string name="password_req_special">Ange minst en speciell karaktär</string>
+  <string name="password_req_length">Ange minst åtta tecken</string>
+  <string name="btn_sending">Sändning</string>
+  <string name="invalidUsername">Användaren kan bara innehålla bokstäver, nummer, punkt, skript och lågt skript; Utan upprepad</string>
+  <string name="errorHumanName">Endast bokstäver och ett enkelt utrymme mellan ord</string>
 </resources>

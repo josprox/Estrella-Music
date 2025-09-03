@@ -100,13 +100,7 @@
   <string name="error_empty_lastname">输入您的姓氏</string>
   <string name="error_invalid_email_format">无效的电子邮件</string>
   <string name="error_invalid_password_requirements">检查密码要求</string>
-  <string name="password_req_length">8个字符</string>
-  <string name="password_req_upper">大写字母</string>
-  <string name="password_req_lower">小写字母</string>
-  <string name="password_req_digit">数字</string>
-  <string name="password_req_special">特殊角色</string>
   <string name="forgot_title">恢复密码</string>
-  <string name="btn_sending">发送...</string>
   <string name="btn_send_recovery">发送恢复电子邮件</string>
   <string name="onboarding_welcome_title">欢迎来到乔斯音乐</string>
   <string name="onboarding_welcome_desc">您的音乐在一个地方：快速，干净，并为您制作。</string>
@@ -160,4 +154,13 @@
   <string name="backup_restore_restoring">恢复…</string>
   <string name="backup_always_title">创建一个始终在线备份</string>
   <string name="backup_always_desc">每24小时自动增加一次备份（初次使用40分钟后）。</string>
+  <string name="error_accept_terms">您必须接受条款和条件。</string>
+  <string name="password_req_upper">至少输入一个资本</string>
+  <string name="password_req_lower">至少输入一个小写</string>
+  <string name="password_req_digit">至少输入一个数字</string>
+  <string name="password_req_special">至少输入一个特殊角色</string>
+  <string name="password_req_length">输入至少八个字符</string>
+  <string name="btn_sending">发送</string>
+  <string name="invalidUsername">用户只能包含字母，数字，点，脚本和低脚本；没有重复</string>
+  <string name="errorHumanName">单词之间只有字母和简单的空间</string>
 </resources>

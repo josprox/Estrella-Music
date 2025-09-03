@@ -100,13 +100,7 @@
   <string name="error_empty_lastname">姓を入力してください</string>
   <string name="error_invalid_email_format">無効なメール</string>
   <string name="error_invalid_password_requirements">パスワード要件を確認してください</string>
-  <string name="password_req_length">8文字</string>
-  <string name="password_req_upper">大文字</string>
-  <string name="password_req_lower">小文字</string>
-  <string name="password_req_digit">番号</string>
-  <string name="password_req_special">特別なキャラクター</string>
   <string name="forgot_title">パスワードを回復します</string>
-  <string name="btn_sending">送信...</string>
   <string name="btn_send_recovery">回復メールを送信します</string>
   <string name="onboarding_welcome_title">Estrella Musicへようこそ</string>
   <string name="onboarding_welcome_desc">あなたの音楽は1つの場所で：速く、きれいで、あなたのために作られています。</string>
@@ -160,4 +154,13 @@
   <string name="backup_restore_restoring">復元…</string>
   <string name="backup_always_title">常にオンラインバックアップを作成します</string>
   <string name="backup_always_desc">24時間ごとにバックアップを自動的に上昇させます（最初の使用のために40分後）。</string>
+  <string name="error_accept_terms">利用規約を受け入れる必要があります。</string>
+  <string name="password_req_upper">少なくとも1つの首都を入力してください</string>
+  <string name="password_req_lower">少なくとも1つの小文字を入力します</string>
+  <string name="password_req_digit">少なくとも1つの番号を入力します</string>
+  <string name="password_req_special">少なくとも1つの特別なキャラクターを入力してください</string>
+  <string name="password_req_length">少なくとも8文字を入力します</string>
+  <string name="btn_sending">送信</string>
+  <string name="invalidUsername">ユーザーは、文字、数字、ポイント、スクリプト、および低いスクリプトのみを含めることができます。繰り返されることなく</string>
+  <string name="errorHumanName">文字と単語間の単純なスペースのみ</string>
 </resources>

@@ -100,13 +100,7 @@
   <string name="error_empty_lastname">Soyadınızı Girin</string>
   <string name="error_invalid_email_format">Geçersiz e -posta</string>
   <string name="error_invalid_password_requirements">Parola gereksinimlerini kontrol edin</string>
-  <string name="password_req_length">8 karakter</string>
-  <string name="password_req_upper">Büyük harf</string>
-  <string name="password_req_lower">Küçük harf</string>
-  <string name="password_req_digit">Sayı</string>
-  <string name="password_req_special">Özel karakter</string>
   <string name="forgot_title">Parolayı kurtar</string>
-  <string name="btn_sending">Gönderme …</string>
   <string name="btn_send_recovery">Kurtarma E -postası Gönder</string>
   <string name="onboarding_welcome_title">Estrella Music\'e Hoş Geldiniz</string>
   <string name="onboarding_welcome_desc">Müziğiniz tek bir yerde: hızlı, temiz ve sizin için yapılmış.</string>
@@ -160,4 +154,13 @@
   <string name="backup_restore_restoring">Geri yükleme…</string>
   <string name="backup_always_title">Her zaman çevrimiçi bir yedekleme oluşturun</string>
   <string name="backup_always_desc">Otomatik olarak bir yedeklemeyi 24 saatte bir yükseltir (ilk kullanım için 40 dakika sonra).</string>
+  <string name="error_accept_terms">Şartlar ve koşulları kabul etmelisiniz.</string>
+  <string name="password_req_upper">En az bir sermaye girin</string>
+  <string name="password_req_lower">En az bir küçük harf girin</string>
+  <string name="password_req_digit">En az bir numara girin</string>
+  <string name="password_req_special">En az bir özel karakter girin</string>
+  <string name="password_req_length">En az sekiz karakter girin</string>
+  <string name="btn_sending">Gönderme</string>
+  <string name="invalidUsername">Kullanıcı yalnızca harfler, sayılar, nokta, komut dosyası ve düşük komut dosyası içerebilir; Tekrarsız</string>
+  <string name="errorHumanName">Sadece harfler ve kelimeler arasında basit bir alan</string>
 </resources>

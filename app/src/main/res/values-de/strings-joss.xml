@@ -100,13 +100,7 @@
   <string name="error_empty_lastname">Geben Sie Ihren Nachnamen ein</string>
   <string name="error_invalid_email_format">Ungültige E -Mail</string>
   <string name="error_invalid_password_requirements">Überprüfen Sie die Passwortanforderungen</string>
-  <string name="password_req_length">8 Zeichen</string>
-  <string name="password_req_upper">Großbuchstabe</string>
-  <string name="password_req_lower">Kleinbuchstaben</string>
-  <string name="password_req_digit">Nummer</string>
-  <string name="password_req_special">Sonderzeichen</string>
   <string name="forgot_title">Passwort wiederherstellen</string>
-  <string name="btn_sending">Senden ...</string>
   <string name="btn_send_recovery">Wiederherstellungs -E -Mail senden</string>
   <string name="onboarding_welcome_title">Willkommen bei Estrella Music</string>
   <string name="onboarding_welcome_desc">Ihre Musik an einem Ort: schnell, sauber und für Sie gemacht.</string>
@@ -160,4 +154,13 @@
   <string name="backup_restore_restoring">Wiederherstellung…</string>
   <string name="backup_always_title">Erstellen Sie ein immer Online -Backup</string>
   <string name="backup_always_desc">Steigt automatisch alle 24 Stunden ein Backup (nach 40 min zur ersten Verwendung).</string>
+  <string name="error_accept_terms">Sie müssen die Allgemeinen Geschäftsbedingungen akzeptieren.</string>
+  <string name="password_req_upper">Geben Sie mindestens ein Kapital ein</string>
+  <string name="password_req_lower">Geben Sie mindestens einen Kleinbuchstaben ein</string>
+  <string name="password_req_digit">Geben Sie mindestens eine Nummer ein</string>
+  <string name="password_req_special">Geben Sie mindestens einen besonderen Charakter ein</string>
+  <string name="password_req_length">Geben Sie mindestens acht Zeichen ein</string>
+  <string name="btn_sending">Senden</string>
+  <string name="invalidUsername">Der Benutzer kann nur Buchstaben, Zahlen, Punkte, Skript und niedriges Skript enthalten. Ohne wiederholt</string>
+  <string name="errorHumanName">Nur Buchstaben und ein einfacher Raum zwischen den Wörtern</string>
 </resources>

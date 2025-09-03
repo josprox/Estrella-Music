@@ -120,13 +120,7 @@
   <string name="error_empty_lastname">আপনার শেষ নাম লিখুন</string>
   <string name="error_invalid_email_format">অবৈধ ইমেল</string>
   <string name="error_invalid_password_requirements">পাসওয়ার্ডের প্রয়োজনীয়তা পরীক্ষা করুন</string>
-  <string name="password_req_length">8 অক্ষর</string>
-  <string name="password_req_upper">বড় হাতের চিঠি</string>
-  <string name="password_req_lower">ছোট হাতের চিঠি</string>
-  <string name="password_req_digit">সংখ্যা</string>
-  <string name="password_req_special">বিশেষ চরিত্র</string>
   <string name="forgot_title">পাসওয়ার্ড পুনরুদ্ধার করুন</string>
-  <string name="btn_sending">প্রেরণ …</string>
   <string name="btn_send_recovery">পুনরুদ্ধার ইমেল প্রেরণ করুন</string>
   <string name="onboarding_welcome_title">জাস মিউজিক স্বাগতম</string>
   <string name="onboarding_welcome_desc">এক জায়গায় আপনার সংগীত: দ্রুত, পরিষ্কার এবং আপনার জন্য তৈরি।</string>
@@ -180,4 +174,13 @@
   <string name="backup_restore_restoring">পুনরুদ্ধার…</string>
   <string name="backup_always_title">একটি সর্বদা অনলাইন ব্যাকআপ তৈরি করুন</string>
   <string name="backup_always_desc">স্বয়ংক্রিয়ভাবে প্রতি 24 ঘন্টা (প্রাথমিক ব্যবহারের জন্য 40 মিনিটের পরে) একটি ব্যাকআপ উত্থিত হয়।</string>
+  <string name="error_accept_terms">আপনাকে অবশ্যই শর্তাদি এবং শর্তাদি গ্রহণ করতে হবে।</string>
+  <string name="password_req_upper">কমপক্ষে একটি মূলধন প্রবেশ করান</string>
+  <string name="password_req_lower">কমপক্ষে একটি ছোট হাতের প্রবেশ করুন</string>
+  <string name="password_req_digit">কমপক্ষে একটি নম্বর লিখুন</string>
+  <string name="password_req_special">কমপক্ষে একটি বিশেষ চরিত্র লিখুন</string>
+  <string name="password_req_length">কমপক্ষে আটটি অক্ষর লিখুন</string>
+  <string name="btn_sending">প্রেরণ</string>
+  <string name="invalidUsername">ব্যবহারকারী কেবলমাত্র অক্ষর, সংখ্যা, পয়েন্ট, স্ক্রিপ্ট এবং কম স্ক্রিপ্ট থাকতে পারে; পুনরাবৃত্তি ছাড়া</string>
+  <string name="errorHumanName">শব্দের মধ্যে কেবল অক্ষর এবং একটি সাধারণ স্থান</string>
 </resources>

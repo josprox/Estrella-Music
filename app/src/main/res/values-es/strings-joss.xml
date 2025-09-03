@@ -100,13 +100,7 @@
   <string name="error_empty_lastname">Ingrese su apellido</string>
   <string name="error_invalid_email_format">Correo electrónico no válido</string>
   <string name="error_invalid_password_requirements">Verifique los requisitos de contraseña</string>
-  <string name="password_req_length">8 caracteres</string>
-  <string name="password_req_upper">Carta de mayúsculas</string>
-  <string name="password_req_lower">Letra minúscula</string>
-  <string name="password_req_digit">Número</string>
-  <string name="password_req_special">Personaje especial</string>
   <string name="forgot_title">Recuperar contraseña</string>
-  <string name="btn_sending">Envío…</string>
   <string name="btn_send_recovery">Enviar correo electrónico de recuperación</string>
   <string name="onboarding_welcome_title">Bienvenido a Estrella Music</string>
   <string name="onboarding_welcome_desc">Tu música en un solo lugar: rápido, limpio y hecho para ti.</string>
@@ -160,4 +154,13 @@
   <string name="backup_restore_restoring">Restaurando ...</string>
   <string name="backup_always_title">Crear un backup en línea siempre</string>
   <string name="backup_always_desc">Sube automáticamente un backup cada 24 horas (después de 40 min de uso inicial).</string>
+  <string name="error_accept_terms">Debes aceptar los términos y condiciones.</string>
+  <string name="password_req_upper">Ingrese al menos una mayúscula</string>
+  <string name="password_req_lower">Ingrese al menos una minúscula</string>
+  <string name="password_req_digit">Ingrese al menos un número</string>
+  <string name="password_req_special">Ingrese al menos un caracter especial</string>
+  <string name="password_req_length">Ingrese al menos ocho carácteres</string>
+  <string name="btn_sending">Enviando</string>
+  <string name="invalidUsername">El usuario solo puede contener letras, números, punto, guion y guion bajo; sin repetidos</string>
+  <string name="errorHumanName">Solo letras y un espacio simple entre palabras</string>
 </resources>
