@@ -386,4 +386,12 @@ class AuthService(
         }
         return map
     }
+
+    /* NUEVO METODO: Verifica si existe un token localmente, SIN hacer una llamada de red.
+    * Devuelve 'true' si hay credenciales guardadas, 'false' en caso contrario.
+    */
+    fun isLoggedInLocally(): Boolean {
+        val token = prefs.getString("jwt_token", null)
+        return !token.isNullOrBlank()
+    }
 }

@@ -3,8 +3,11 @@ package com.zionhuang.music
 import android.Manifest
 import android.annotation.SuppressLint
 import android.content.ComponentName
+import android.content.Context
 import android.content.Intent
 import android.content.ServiceConnection
+import android.net.ConnectivityManager
+import android.net.NetworkCapabilities
 import android.os.Build
 import android.os.Bundle
 import android.os.IBinder
@@ -87,7 +90,6 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    // Deep link inicial (se conserva para consumirlo después del login)
     private var initialIntent: Intent? = null
 
     private val updateViewModel: UpdateMainViewModel by viewModels {
@@ -124,10 +126,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         WindowCompat.setDecorFitsSystemWindows(window, false)
 
-        // Guarda el intent inicial (deep link)
         initialIntent = intent
 
-        // OneSignal + checker de updates
         if (oneSignalAppId.isNotBlank()) {
             OneSignal.initWithContext(this, oneSignalAppId)
         } else {
@@ -135,7 +135,6 @@ class MainActivity : ComponentActivity() {
         }
         UpdateChecker(this).checkForUpdates()
 
-        // Secure flag (bloquear screenshots) según preferencia
         lifecycleScope.launch {
             dataStore.data
                 .map { it[DisableScreenshotKey] == true }
@@ -152,30 +151,24 @@ class MainActivity : ComponentActivity() {
                 }
         }
 
-        // 1) Pedir permiso de notificaciones
         requestNotificationPermission()
     }
 
-    // manejar deep links recibidos con la app viva, sin saltar login
     override fun onNewIntent(intent: Intent) {
         super.onNewIntent(intent)
-        setIntent(intent)          // <- asigna el nuevo intent a la Activity
-        initialIntent = intent     // <- lo conservamos para que la UI lo consuma tras login
+        setIntent(intent)
+        initialIntent = intent
 
         lifecycleScope.launch {
             val loggedIn = ensureValidSession()
             if (!loggedIn) {
-                // Llevamos al login; tras autenticarse, initializeApp() consumirá initialIntent
                 showWelcome()
             } else {
-                // Ya logeado: la UI podrá consumir el deep link
                 initializeApp()
             }
         }
     }
 
-
-    // --------------------- Servicio de música ---------------------
     private fun bindMusicService() {
         val serviceIntent = Intent(this, MusicService::class.java)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
@@ -190,7 +183,6 @@ class MainActivity : ComponentActivity() {
         bindService(serviceIntent, serviceConnection, BIND_AUTO_CREATE)
     }
 
-    // --------------------- Monta UI principal ---------------------
     private fun initializeApp() {
         setContent {
             InnerTuneMainScreen(
@@ -205,61 +197,111 @@ class MainActivity : ComponentActivity() {
                 setSystemBarAppearance = ::setSystemBarAppearance
             )
         }
-
-        // Intentar programar el backup si ya es elegible
         lifecycleScope.launch { tryScheduleDailyCloudBackup() }
     }
 
-    // --------------------- Welcome/Auth ---------------------
     private fun showWelcome() {
         setContent {
             WelcomeRoute(
                 onAuthSuccess = {
-                    // Tras iniciar sesión, arrancamos la app y el deep link (si había) se consumirá
                     initializeApp()
                     lifecycleScope.launch { tryScheduleDailyCloudBackup() }
                 },
                 onSkip = {
-                    // Si decides mantener "skip" para debugging, quita esto en producción
                     initializeApp()
                 }
             )
         }
     }
 
-    // --------------------- Sesión válida ---------------------
+    // =================================================================================
+    // =========== CAMBIO PRINCIPAL: LÓGICA DE VERIFICACIÓN DE SESIÓN ===================
+    // =================================================================================
+
+    /**
+     * Comprueba si el usuario tiene una sesión válida.
+     * - Si hay internet, valida el token contra el servidor.
+     * - Si NO hay internet, comprueba si ya existen credenciales guardadas localmente.
+     * - Si existen, devuelve `true` (permite modo offline).
+     * - Si no existen, devuelve `false` (requiere login).
+     */
     private suspend fun ensureValidSession(): Boolean = withContext(Dispatchers.IO) {
-        try {
-            val res = auth.checkToken()
-            val ok = (res["success"] == true && (res["valid"] as? Boolean ?: false))
-            if (!ok) auth.logout()
-            ok
-        } catch (e: Exception) {
-            Timber.e(e, "Error comprobando sesión")
-            false
+        if (isNetworkAvailable()) {
+            // Conexión disponible: Validar token con el servidor.
+            try {
+                Timber.d("Hay conexión. Validando token con el servidor...")
+                val res = auth.checkToken()
+                val ok = (res["success"] == true && (res["valid"] as? Boolean ?: false))
+                if (!ok) {
+                    Timber.w("Token inválido o sesión expirada según el servidor. Cerrando sesión.")
+                    auth.logout()
+                }
+                ok
+            } catch (e: Exception) {
+                // Si hay un error de red a pesar de tener conexión (ej: servidor caído),
+                // es más seguro cerrar sesión para evitar un estado inconsistente.
+                Timber.e(e, "Error inesperado durante la comprobación de sesión con internet.")
+                auth.logout()
+                false
+            }
+        } else {
+            // Sin conexión a internet:
+            Timber.d("No hay conexión a internet.")
+            // Verificamos si el usuario YA TENÍA credenciales guardadas localmente.
+            // Esto evita cerrar la sesión solo por no tener red.
+            val hasLocalCredentials = auth.isLoggedInLocally() // Debes implementar este método
+
+            if (hasLocalCredentials) {
+                Timber.i("Usuario sin internet pero con credenciales locales. Permitiendo acceso offline.")
+                true // Permitimos continuar en modo offline.
+            } else {
+                Timber.w("Usuario sin internet y sin credenciales locales. Se requiere login.")
+                false // No hay credenciales, debe ir a la pantalla de login.
+            }
         }
     }
 
-    // --------------------- Flujo tras permiso ---------------------
+    /**
+     * NUEVA FUNCIÓN: Verifica si el dispositivo tiene una conexión a internet activa.
+     */
+    private fun isNetworkAvailable(): Boolean {
+        val connectivityManager = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            val network = connectivityManager.activeNetwork ?: return false
+            val activeNetwork = connectivityManager.getNetworkCapabilities(network) ?: return false
+            return when {
+                activeNetwork.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) -> true
+                activeNetwork.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR) -> true
+                activeNetwork.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET) -> true
+                else -> false
+            }
+        } else {
+            @Suppress("DEPRECATION")
+            val networkInfo = connectivityManager.activeNetworkInfo ?: return false
+            @Suppress("DEPRECATION")
+            return networkInfo.isConnected
+        }
+    }
+
+    // =================================================================================
+    // ======================= FIN DE LOS CAMBIOS PRINCIPALES ==========================
+    // =================================================================================
+
     private fun maybeStartWelcomeOrApp() {
         lifecycleScope.launch {
-            // VALIDAMOS SESIÓN PRIMERO (cambia el orden)
             val loggedIn = ensureValidSession()
             val hasDeepLink = intent?.data != null
             val alreadyShown = applicationContext.dataStore[OnboardingShownKey] == true
 
-            // Si hay deep link: SOLO dejamos pasar si ya hay sesión
             if (hasDeepLink) {
                 if (loggedIn) {
                     initializeApp()
                 } else {
-                    // guardamos initialIntent (ya está) y pedimos login
                     showWelcome()
                 }
                 return@launch
             }
 
-            // Sin deep link: flujo normal
             if (loggedIn) {
                 if (alreadyShown) {
                     initializeApp()
@@ -296,7 +338,6 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    // --------------------- Pantalla para guiar al permiso (necesaria) ---------------------
     private fun showNotificationPermissionScreen() {
         setContent {
             NotificationPermissionScreen(
@@ -307,7 +348,6 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    // --------------------- Pedir permiso de notificaciones ---------------------
     @SuppressLint("ObsoleteSdkInt")
     private fun requestNotificationPermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
@@ -325,7 +365,6 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    // --------------------- Apariencia de barras del sistema ---------------------
     private fun setSystemBarAppearance(isDark: Boolean) {
         WindowCompat.getInsetsController(window, window.decorView.rootView).apply {
             isAppearanceLightStatusBars = !isDark
@@ -333,7 +372,6 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    // --------------------- Items de Onboarding ---------------------
     @Composable
     fun jossOnboardingItems(): List<CarouselItem> = listOf(
         CarouselItem(
@@ -368,37 +406,24 @@ class MainActivity : ComponentActivity() {
         )
     )
 
-    // --------------------- AUTO BACKUP: lógica de programación ---------------------
-    /**
-     * Programa el respaldo cada 24h si:
-     *  - hay sesión válida,
-     *  - el switch “siempre crear backup en línea” está ON (o no ha sido tocado → true),
-     *  - han pasado ≥ 40 minutos desde el primer uso real de la app.
-     */
     private suspend fun tryScheduleDailyCloudBackup() {
         val loggedIn = ensureValidSession()
         if (!loggedIn) {
             Timber.d("Auto-backup: no programo porque no hay sesión.")
             return
         }
-
-        // Switch ON por defecto si no existe aún
         val autoAlways = applicationContext.dataStore[AlwaysCloudBackupKey] ?: true
         if (!autoAlways) {
             Timber.d("Auto-backup: usuario lo desactivó.")
             return
         }
-
         val now = System.currentTimeMillis()
         val firstUse = applicationContext.dataStore[FirstUseAtKey]
-
         if (firstUse == null || firstUse == 0L) {
-            // Primera vez: guardamos el timestamp y no programamos todavía
             applicationContext.dataStore.edit { it[FirstUseAtKey] = now }
             Timber.d("Auto-backup: registré primer uso; esperar 40 minutos.")
             return
         }
-
         val elapsed = now - firstUse
         val needMs = TimeUnit.MINUTES.toMillis(40)
         if (elapsed < needMs) {
@@ -406,23 +431,18 @@ class MainActivity : ComponentActivity() {
             Timber.d("Auto-backup: aún faltan ~${remainMin} min para llegar a 40.")
             return
         }
-
-        // Ya cumple condiciones → programamos job (único) cada 24h
         val constraints = Constraints.Builder()
             .setRequiredNetworkType(NetworkType.CONNECTED)
             .build()
-
         val request = PeriodicWorkRequestBuilder<CloudBackupWorker>(24, TimeUnit.HOURS)
             .setConstraints(constraints)
             .build()
-
         WorkManager.getInstance(this)
             .enqueueUniquePeriodicWork(
                 "auto_cloud_backup",
-                ExistingPeriodicWorkPolicy.KEEP, // si ya existe, no duplica
+                ExistingPeriodicWorkPolicy.KEEP,
                 request
             )
-
         Timber.i("Auto-backup: ¡Programado cada 24h!")
     }
 

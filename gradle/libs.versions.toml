@@ -1,5 +1,5 @@
 [versions]
-androidGradlePlugin = "8.12.2"
+androidGradlePlugin = "8.12.3"
 annotation = "1.9.1"
 coilComposeVersion = "2.7.0"
 dotenvVaultKotlin = "0.0.3"
