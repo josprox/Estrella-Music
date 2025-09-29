@@ -1,5 +1,6 @@
 package com.zionhuang.innertube.pages
 
+import com.zionhuang.innertube.models.Menu
 import com.zionhuang.innertube.models.MusicResponsiveListItemRenderer.FlexColumn
 import com.zionhuang.innertube.models.Run
 
@@ -21,5 +22,17 @@ object PageHelper {
             }
         }
         return filteredRuns
+    }
+
+    fun extractFeedbackToken(menu: Menu.MenuRenderer.Item.ToggleMenuServiceRenderer?, type: String): String? {
+        if (menu == null) return null
+        val defaultToken = menu.defaultServiceEndpoint.feedbackEndpoint?.feedbackToken
+        val toggledToken = menu.toggledServiceEndpoint?.feedbackEndpoint?.feedbackToken
+
+        return if (menu.defaultIcon.iconType == type) {
+            defaultToken
+        } else {
+            toggledToken
+        }
     }
 }

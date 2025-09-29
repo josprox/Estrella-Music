@@ -88,6 +88,9 @@ data class AlbumPage(
                         name = it.text,
                         id = it.navigationEndpoint?.browseEndpoint?.browseId
                     )
+                }.ifEmpty {
+                    // Fallback to album artists if no artists found in song data
+                    album?.artists ?: emptyList()
                 },
                 album = album?.let {
                     Album(it.title, it.browseId)
@@ -103,7 +106,13 @@ data class AlbumPage(
                 thumbnail = renderer.thumbnail?.musicThumbnailRenderer?.getThumbnailUrl() ?: album?.thumbnail!!,
                 explicit = renderer.badges?.find {
                     it.musicInlineBadgeRenderer?.icon?.iconType == "MUSIC_EXPLICIT_BADGE"
-                } != null
+                } != null,
+                libraryAddToken = PageHelper.extractFeedbackToken(renderer.menu?.menuRenderer?.items?.find {
+                    it.toggleMenuServiceItemRenderer?.defaultIcon?.iconType?.startsWith("LIBRARY_") == true
+                }?.toggleMenuServiceItemRenderer, "LIBRARY_ADD"),
+                libraryRemoveToken = PageHelper.extractFeedbackToken(renderer.menu?.menuRenderer?.items?.find {
+                    it.toggleMenuServiceItemRenderer?.defaultIcon?.iconType?.startsWith("LIBRARY_") == true
+                }?.toggleMenuServiceItemRenderer, "LIBRARY_SAVED")
             )
         }
     }

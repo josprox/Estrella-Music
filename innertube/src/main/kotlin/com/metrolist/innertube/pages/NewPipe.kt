@@ -16,7 +16,7 @@ import org.schabi.newpipe.extractor.services.youtube.YoutubeJavaScriptPlayerMana
 import java.io.IOException
 import java.net.Proxy
 
-private class NewPipeDownloaderImpl(proxy: Proxy?) : Downloader() {
+private class NewPipeDownloaderImpl(proxy: Proxy?, proxyAuth: String?) : Downloader() {
 
     private val client = OkHttpClient.Builder()
         .proxy(proxy)
@@ -64,7 +64,7 @@ private class NewPipeDownloaderImpl(proxy: Proxy?) : Downloader() {
 object NewPipeUtils {
 
     init {
-        NewPipe.init(NewPipeDownloaderImpl(YouTube.proxy))
+        NewPipe.init(NewPipeDownloaderImpl(YouTube.proxy, YouTube.proxyAuth))
     }
 
     fun getSignatureTimestamp(videoId: String): Result<Int> = runCatching {

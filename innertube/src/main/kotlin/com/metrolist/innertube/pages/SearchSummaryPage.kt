@@ -141,7 +141,7 @@ data class SearchSummaryPage(
                             renderer.onTap.browseEndpoint.browseId
                                 .removePrefix("VL"),
                         title =
-                            renderer.header.musicCardShelfHeaderBasicRenderer.title.runs
+                            renderer.header?.musicCardShelfHeaderBasicRenderer?.title?.runs
                                 ?.joinToString(separator = "") { it.text }
                                 ?: return null,
                         author =
@@ -191,29 +191,6 @@ data class SearchSummaryPage(
                     ?.splitBySeparator()
                     ?: emptyList()
             val listRun = (secondaryLine + thirdLine).clean()
-            var album: Album? = null
-            val artist: MutableList<Artist> = mutableListOf()
-            listRun.forEach { runs ->
-                runs.forEach {
-                    val pageType =
-                        it.navigationEndpoint
-                            ?.browseEndpoint
-                            ?.browseEndpointContextSupportedConfigs
-                            ?.browseEndpointContextMusicConfig
-                            ?.pageType
-                    if (pageType == MUSIC_PAGE_TYPE_ALBUM
-                    ) {
-                        album = Album(name = it.text, id = it.navigationEndpoint.browseEndpoint.browseId)
-                    } else if (pageType == MUSIC_PAGE_TYPE_ARTIST || pageType == MUSIC_PAGE_TYPE_USER_CHANNEL) {
-                        artist.add(
-                            Artist(
-                                name = it.text,
-                                id = it.navigationEndpoint.browseEndpoint.browseId,
-                            ),
-                        )
-                    }
-                }
-            }
             return when {
                 renderer.isSong -> {
                     SongItem(
@@ -226,15 +203,18 @@ data class SearchSummaryPage(
                                 ?.runs
                                 ?.firstOrNull()
                                 ?.text ?: return null,
-                        artists =
-                            if (artist.isEmpty()) {
-                                secondaryLine.getOrNull(0)?.oddElements()?.map {
-                                    Artist(name = it.text, id = it.navigationEndpoint?.browseEndpoint?.browseId)
-                                } ?: return null
-                            } else {
-                                artist
-                            },
-                        album = album,
+                        artists = listRun.getOrNull(0)?.oddElements()?.map {
+                            Artist(
+                                name = it.text,
+                                id = it.navigationEndpoint?.browseEndpoint?.browseId
+                            )
+                        } ?: return null,
+                        album = listRun.getOrNull(1)?.firstOrNull()?.takeIf { it.navigationEndpoint?.browseEndpoint != null }?.let {
+                            Album(
+                                name = it.text,
+                                id = it.navigationEndpoint?.browseEndpoint?.browseId!!
+                            )
+                        },
                         duration =
                             secondaryLine
                                 .lastOrNull()
@@ -246,6 +226,12 @@ data class SearchSummaryPage(
                             renderer.badges?.find {
                                 it.musicInlineBadgeRenderer?.icon?.iconType == "MUSIC_EXPLICIT_BADGE"
                             } != null,
+                        libraryAddToken = PageHelper.extractFeedbackToken(renderer.menu?.menuRenderer?.items?.find {
+                            it.toggleMenuServiceItemRenderer?.defaultIcon?.iconType?.startsWith("LIBRARY_") == true
+                        }?.toggleMenuServiceItemRenderer, "LIBRARY_ADD"),
+                        libraryRemoveToken = PageHelper.extractFeedbackToken(renderer.menu?.menuRenderer?.items?.find {
+                            it.toggleMenuServiceItemRenderer?.defaultIcon?.iconType?.startsWith("LIBRARY_") == true
+                        }?.toggleMenuServiceItemRenderer, "LIBRARY_SAVED")
                     )
                 }
 
