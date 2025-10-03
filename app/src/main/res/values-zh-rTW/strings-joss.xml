@@ -164,4 +164,9 @@
   <string name="invalidUsername">用户只能包含字母，数字，点，脚本和低脚本；没有重复</string>
   <string name="errorHumanName">单词之间只有字母和简单的空间</string>
   <string name="search_in_playlist">在播放列表上搜索</string>
+  <string name="accept">接受</string>
+  <string name="cancel">取消</string>
+  <string name="addAllLikeSounds">我喜欢所有歌曲吗？</string>
+  <string name="addAllLikeSoundsDesc">这将把所有歌曲添加到收藏夹和您的图书馆中。该动作不能撤消。</string>
+  <string name="songsAddedFavorites">歌曲被添加到收藏夹中</string>
 </resources>

@@ -184,4 +184,9 @@
   <string name="invalidUsername">ਉਪਭੋਗਤਾ ਵਿੱਚ ਸਿਰਫ ਅੱਖਰ, ਨੰਬਰ, ਪੁਆਇੰਟ, ਸਕ੍ਰਿਪਟ ਅਤੇ ਨੀਵੀਂ ਸਕ੍ਰਿਪਟ ਸ਼ਾਮਲ ਹੋ ਸਕਦੀ ਹੈ; ਬਿਨਾਂ ਦੁਹਰਾਏ</string>
   <string name="errorHumanName">ਸਿਰਫ ਅੱਖਰ ਅਤੇ ਸ਼ਬਦਾਂ ਦੇ ਵਿਚਕਾਰ ਇੱਕ ਸਧਾਰਣ ਸਪੇਸ</string>
   <string name="search_in_playlist">ਪਲੇਬੈਕ ਲਿਸਟ \'ਤੇ ਖੋਜ ਕਰੋ</string>
+  <string name="accept">ਸਵੀਕਾਰ ਕਰੋ</string>
+  <string name="cancel">ਰੱਦ ਕਰੋ</string>
+  <string name="addAllLikeSounds">ਕੀ ਮੈਨੂੰ ਸਾਰੇ ਗਾਣੇ ਪਸੰਦ ਹਨ?</string>
+  <string name="addAllLikeSoundsDesc">ਇਹ ਸਾਰੇ ਗਾਣੇ ਮਨਪਸੰਦਾਂ ਅਤੇ ਤੁਹਾਡੀ ਲਾਇਬ੍ਰੇਰੀ ਵਿੱਚ ਸ਼ਾਮਲ ਕਰੇਗਾ. ਇਸ ਕਿਰਿਆ ਨੂੰ ਵਾਪਸ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ.</string>
+  <string name="songsAddedFavorites">ਗਾਣਾਂ ਨੂੰ ਮਨਪਸੰਦ ਵਿੱਚ ਸ਼ਾਮਲ ਕੀਤੇ ਗਏ ਸਨ</string>
 </resources>

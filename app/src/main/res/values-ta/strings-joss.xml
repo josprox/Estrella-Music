@@ -130,4 +130,9 @@
   <string name="invalidUsername">பயனரில் எழுத்துக்கள், எண்கள், புள்ளி, ஸ்கிரிப்ட் மற்றும் குறைந்த ஸ்கிரிப்ட் மட்டுமே இருக்க முடியும்; மீண்டும் மீண்டும் இல்லாமல்</string>
   <string name="errorHumanName">கடிதங்கள் மற்றும் சொற்களுக்கு இடையில் ஒரு எளிய இடம் மட்டுமே</string>
   <string name="search_in_playlist">பிளேபேக் பட்டியலில் தேடுங்கள்</string>
+  <string name="accept">ஏற்றுக்கொள்</string>
+  <string name="cancel">ரத்துசெய்</string>
+  <string name="addAllLikeSounds">எல்லா பாடல்களும் எனக்கு பிடிக்குமா?</string>
+  <string name="addAllLikeSoundsDesc">இது அனைத்து பாடல்களையும் பிடித்தவை மற்றும் உங்கள் நூலகத்தில் சேர்க்கும். இந்த செயலை செயல்தவிர்க்க முடியாது.</string>
+  <string name="songsAddedFavorites">பாடல்கள் பிடித்தவைகளில் சேர்க்கப்பட்டன</string>
 </resources>

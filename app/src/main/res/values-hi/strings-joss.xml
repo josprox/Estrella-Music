@@ -130,4 +130,9 @@
   <string name="invalidUsername">उपयोगकर्ता में केवल अक्षर, संख्या, बिंदु, स्क्रिप्ट और कम स्क्रिप्ट शामिल हो सकते हैं; बिना बार -बार</string>
   <string name="errorHumanName">केवल अक्षर और शब्दों के बीच एक सरल स्थान</string>
   <string name="search_in_playlist">प्लेबैक सूची पर खोजें</string>
+  <string name="accept">स्वीकार करना</string>
+  <string name="cancel">रद्द करना</string>
+  <string name="addAllLikeSounds">क्या मुझे सभी गाने पसंद हैं?</string>
+  <string name="addAllLikeSoundsDesc">यह सभी गीतों को पसंदीदा और आपकी लाइब्रेरी में जोड़ देगा। इस एक्शन को वापस नहीं किया जा सकता।</string>
+  <string name="songsAddedFavorites">गाने पसंदीदा में जोड़े गए थे</string>
 </resources>

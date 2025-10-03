@@ -163,4 +163,9 @@
   <string name="invalidUsername">يمكن للمستخدم فقط احتواء الحروف والأرقام والنقطة والبرنامج النصي والنصوص المنخفضة ؛ دون تكرار</string>
   <string name="errorHumanName">الحروف فقط ومساحة بسيطة بين الكلمات</string>
   <string name="search_in_playlist">ابحث في قائمة التشغيل</string>
+  <string name="accept">يقبل</string>
+  <string name="cancel">يلغي</string>
+  <string name="addAllLikeSounds">هل أحب كل الأغاني؟</string>
+  <string name="addAllLikeSoundsDesc">سيؤدي هذا إلى إضافة جميع الأغاني إلى المفضلة ومكتبتك. لا يمكن التراجع عن هذا الإجراء.</string>
+  <string name="songsAddedFavorites">تمت إضافة الأغاني إلى المفضلة</string>
 </resources>

@@ -130,4 +130,9 @@
   <string name="invalidUsername">प्रयोगकर्ताले केवल अक्षरहरू, नम्बरहरू, बुँदा, लिपि र उत्तम स्क्रिप्ट पनि समावेश गर्न सक्दछ; दोहोरिएको बिना</string>
   <string name="errorHumanName">केवल अक्षर र शब्दहरू बीच एक साधारण ठाउँ</string>
   <string name="search_in_playlist">प्लेब्याक सूचीमा खोजी गर्नुहोस्</string>
+  <string name="accept">ग्रहण गर्नु</string>
+  <string name="cancel">रद्द गर्नु</string>
+  <string name="addAllLikeSounds">मलाई सबै गीत मन पर्छ?</string>
+  <string name="addAllLikeSoundsDesc">यसले मनपर्ने र तपाईंको पुस्तकालयमा सबै गीतहरू थप्नेछ। यो कार्य पूर्ववत गर्न सकिदैन।</string>
+  <string name="songsAddedFavorites">गीतहरू मनपर्नेमा थपिए</string>
 </resources>

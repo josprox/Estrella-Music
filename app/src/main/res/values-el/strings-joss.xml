@@ -164,4 +164,9 @@
   <string name="invalidUsername">Ο χρήστης μπορεί να περιέχει γράμματα, αριθμούς, σημείο, σενάριο και χαμηλό σενάριο. Χωρίς επαναλαμβανόμενο</string>
   <string name="errorHumanName">Μόνο γράμματα και απλό χώρο μεταξύ των λέξεων</string>
   <string name="search_in_playlist">Αναζήτηση στη λίστα αναπαραγωγής</string>
+  <string name="accept">Αποδέχομαι</string>
+  <string name="cancel">Ματαίωση</string>
+  <string name="addAllLikeSounds">Μου αρέσουν όλα τα τραγούδια;</string>
+  <string name="addAllLikeSoundsDesc">Αυτό θα προσθέσει όλα τα τραγούδια στα αγαπημένα και τη βιβλιοθήκη σας. Αυτή η ενέργεια δεν μπορεί να ανατραπεί.</string>
+  <string name="songsAddedFavorites">Τα τραγούδια προστέθηκαν στα αγαπημένα</string>
 </resources>

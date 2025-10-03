@@ -164,4 +164,9 @@
   <string name="invalidUsername">El usuario solo puede contener letras, números, punto, guion y guion bajo; sin repetidos</string>
   <string name="errorHumanName">Solo letras y un espacio simple entre palabras</string>
   <string name="search_in_playlist">Buscar en la lista de reproducción</string>
+  <string name="accept">Aceptar</string>
+  <string name="cancel">Cancelar</string>
+  <string name="addAllLikeSounds">¿Darle me gusta a todas las canciones?</string>
+  <string name="addAllLikeSoundsDesc">Esto añadirá todas las canciones a favoritos y a tu biblioteca. Esta acción no se puede deshacer.</string>
+  <string name="songsAddedFavorites">Se agregaron las canciones a favoritos</string>
 </resources>

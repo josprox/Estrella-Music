@@ -130,4 +130,9 @@
   <string name="invalidUsername">L\'utente può contenere solo lettere, numeri, punto, script e script basso; Senza ripetuti</string>
   <string name="errorHumanName">Solo lettere e uno spazio semplice tra le parole</string>
   <string name="search_in_playlist">Cerca nell\'elenco delle riproduzioni</string>
+  <string name="accept">Accettare</string>
+  <string name="cancel">Cancellare</string>
+  <string name="addAllLikeSounds">Mi piacciono tutte le canzoni?</string>
+  <string name="addAllLikeSoundsDesc">Ciò aggiungerà tutti i brani ai preferiti e alla tua biblioteca. Questa azione non può essere annullata.</string>
+  <string name="songsAddedFavorites">Le canzoni sono state aggiunte ai preferiti</string>
 </resources>

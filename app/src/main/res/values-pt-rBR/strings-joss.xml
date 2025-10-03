@@ -164,4 +164,9 @@
   <string name="invalidUsername">O usuário pode conter apenas letras, números, ponto, script e baixo script; Sem repetido</string>
   <string name="errorHumanName">Apenas letras e um espaço simples entre as palavras</string>
   <string name="search_in_playlist">Pesquise na lista de reprodução</string>
+  <string name="accept">Aceitar</string>
+  <string name="cancel">Cancelar</string>
+  <string name="addAllLikeSounds">Eu gosto de todas as músicas?</string>
+  <string name="addAllLikeSoundsDesc">Isso adicionará todas as músicas aos favoritos e sua biblioteca. Esta ação não pode ser desfeita.</string>
+  <string name="songsAddedFavorites">As músicas foram adicionadas aos favoritos</string>
 </resources>

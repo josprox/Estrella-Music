@@ -164,4 +164,9 @@
   <string name="invalidUsername">Kullanıcı yalnızca harfler, sayılar, nokta, komut dosyası ve düşük komut dosyası içerebilir; Tekrarsız</string>
   <string name="errorHumanName">Sadece harfler ve kelimeler arasında basit bir alan</string>
   <string name="search_in_playlist">Oynatma listesinde arama</string>
+  <string name="accept">Kabul etmek</string>
+  <string name="cancel">İptal etmek</string>
+  <string name="addAllLikeSounds">Tüm şarkıları beğendim mi?</string>
+  <string name="addAllLikeSoundsDesc">Bu, tüm şarkıları favorilere ve kütüphanenize ekleyecektir. Bu eylem geri alınamaz.</string>
+  <string name="songsAddedFavorites">Şarkılar favorilere eklendi</string>
 </resources>

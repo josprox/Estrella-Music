@@ -164,4 +164,9 @@
   <string name="invalidUsername">ユーザーは、文字、数字、ポイント、スクリプト、および低いスクリプトのみを含めることができます。繰り返されることなく</string>
   <string name="errorHumanName">文字と単語間の単純なスペースのみ</string>
   <string name="search_in_playlist">再生リストで検索します</string>
+  <string name="accept">受け入れる</string>
+  <string name="cancel">キャンセル</string>
+  <string name="addAllLikeSounds">私はすべての曲が好きですか？</string>
+  <string name="addAllLikeSoundsDesc">これにより、すべての曲がお気に入りとライブラリに追加されます。このアクションを元に戻すことはできません。</string>
+  <string name="songsAddedFavorites">曲はお気に入りに追加されました</string>
 </resources>

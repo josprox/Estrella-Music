@@ -164,4 +164,9 @@
   <string name="invalidUsername">Пользователь может содержать только буквы, цифры, точку, скрипт и низкий сценарий; Без повторения</string>
   <string name="errorHumanName">Только буквы и простое пространство между словами</string>
   <string name="search_in_playlist">Поиск в списке воспроизведения</string>
+  <string name="accept">Принимать</string>
+  <string name="cancel">Отмена</string>
+  <string name="addAllLikeSounds">Мне нравятся все песни?</string>
+  <string name="addAllLikeSoundsDesc">Это добавит все песни в фавориты и вашу библиотеку. Это действие не может быть отменено.</string>
+  <string name="songsAddedFavorites">Песни были добавлены в фавориты</string>
 </resources>

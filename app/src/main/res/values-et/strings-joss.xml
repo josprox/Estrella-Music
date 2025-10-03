@@ -130,4 +130,9 @@
   <string name="invalidUsername">Kasutaja võib sisaldada ainult tähti, numbreid, punkte, skripti ja madalat skripti; Korduvalt</string>
   <string name="errorHumanName">Ainult tähed ja lihtne ruum sõnade vahel</string>
   <string name="search_in_playlist">Otsi taasesituse loendis</string>
+  <string name="accept">Aktsepteerima</string>
+  <string name="cancel">Tühistama</string>
+  <string name="addAllLikeSounds">Kas mulle meeldivad kõik laulud?</string>
+  <string name="addAllLikeSoundsDesc">See lisab lemmikutesse ja teie raamatukogule kõik laulud. Seda toimingut ei saa tagasi võtta.</string>
+  <string name="songsAddedFavorites">Laulud lisati lemmikutesse</string>
 </resources>

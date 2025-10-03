@@ -164,4 +164,9 @@
   <string name="invalidUsername">Користувач може містити лише листи, цифри, точку, сценарій та низький сценарій; Без повторного</string>
   <string name="errorHumanName">Тільки літери та простий простір між словами</string>
   <string name="search_in_playlist">Пошук у списку відтворення</string>
+  <string name="accept">Приймати</string>
+  <string name="cancel">Скасувати</string>
+  <string name="addAllLikeSounds">Мені подобаються всі пісні?</string>
+  <string name="addAllLikeSoundsDesc">Це додасть усі пісні фаворитам та вашій бібліотеці. Цю дію не можна скасувати.</string>
+  <string name="songsAddedFavorites">Пісні були додані до фаворитів</string>
 </resources>

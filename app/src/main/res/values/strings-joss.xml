@@ -163,4 +163,9 @@
   <string name="invalidUsername">The user can only contain letters, numbers, point, script and low script; </string>
   <string name="errorHumanName">Only letters and a simple space between words</string>
   <string name="search_in_playlist">Search on the playback list</string>
+  <string name="accept">Accept</string>
+  <string name="cancel">Cancel</string>
+  <string name="addAllLikeSounds">Do I like all the songs?</string>
+  <string name="addAllLikeSoundsDesc">This will add all the songs to favorites and your library. </string>
+  <string name="songsAddedFavorites">The songs were added to favorites</string>
 </resources>

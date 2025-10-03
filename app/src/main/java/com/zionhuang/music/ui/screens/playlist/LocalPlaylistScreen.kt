@@ -18,6 +18,7 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.listSaver
@@ -89,6 +90,7 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import sh.calvin.reorderable.ReorderableItem
 import sh.calvin.reorderable.rememberReorderableLazyListState
+import java.time.LocalDateTime
 
 @OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class)
 @Composable
@@ -143,6 +145,8 @@ fun LocalPlaylistScreen(
 
     var showEditDialog by remember { mutableStateOf(false) }
     var showRemoveDownloadDialog by remember { mutableStateOf(false) }
+    var showLikeAllDialog by remember { mutableStateOf(false) }
+    val msg = stringResource(R.string.songsAddedFavorites)
 
     if (showEditDialog) {
         playlist?.playlist?.let { playlistEntity ->
@@ -169,6 +173,41 @@ fun LocalPlaylistScreen(
                 }
             )
         }
+    }
+
+    if (showLikeAllDialog) {
+        AlertDialog(
+            onDismissRequest = { showLikeAllDialog = false },
+            icon = { Icon(Icons.Default.Favorite, contentDescription = null) },
+            title = { Text(text=stringResource(R.string.addAllLikeSounds)) },
+            text = { Text(text=stringResource(R.string.addAllLikeSoundsDesc)) },
+            confirmButton = {
+                TextButton(
+                    onClick = {
+                        coroutineScope.launch(Dispatchers.IO) {
+                            database.transaction {
+                                songs.forEach { playlistSong ->
+                                    val songToUpdate = playlistSong.song.song.copy(
+                                        liked = true,
+                                        inLibrary = LocalDateTime.now()
+                                    )
+                                    update(songToUpdate)
+                                }
+                            }
+                            snackbarHostState.showSnackbar(msg)
+                        }
+                        showLikeAllDialog = false
+                    }
+                ) {
+                    Text(text=stringResource(R.string.accept))
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = { showLikeAllDialog = false }) {
+                    Text(text = stringResource(R.string.cancel))
+                }
+            }
+        )
     }
 
     Box(modifier = Modifier.fillMaxSize().background(MaterialTheme.colorScheme.surface)) {
@@ -212,7 +251,7 @@ fun LocalPlaylistScreen(
                     val lazyListState = rememberLazyListState()
                     var dragInfo by remember { mutableStateOf<Pair<Int, Int>?>(null) }
                     val reorderableState = rememberReorderableLazyListState(lazyListState = lazyListState) { from, to ->
-                        val headerItemCount = 1 // Controls + Sort Header
+                        val headerItemCount = 1
                         if (to.index >= headerItemCount && from.index >= headerItemCount) {
                             val currentDragInfo = dragInfo
                             val finalFrom = from.index - headerItemCount
@@ -257,7 +296,8 @@ fun LocalPlaylistScreen(
                             onQueryChange = { query = it },
                             focusRequester = focusRequester,
                             onSearchClose = { isSearching = false; query = TextFieldValue() },
-                            onSearchConfirmed = { isSearching = true }
+                            onSearchConfirmed = { isSearching = true },
+                            onLikeAllClick = { showLikeAllDialog = true } // Pasar la acción
                         )
 
                         LazyColumn(
@@ -290,7 +330,6 @@ fun LocalPlaylistScreen(
                             } else {
                                 itemsIndexed(items = if (isSearching) filteredSongs else mutableSongs, key = { _, song -> song.map.id }) { index, song ->
                                     ReorderableItem(state = reorderableState, key = song.map.id) {
-                                        // Resto del código del item sin cambios
                                         var dismissJob: Job? by remember { mutableStateOf(null) }
                                         val currentItem by rememberUpdatedState(song)
                                         fun deleteFromPlaylist() {
@@ -359,12 +398,11 @@ fun LocalPlaylistScreen(
                         }
                     }
                 } else {
-                    // Mantiene la estructura original para el modo vertical, pero con los componentes refactorizados
                     val lazyListState = rememberLazyListState()
                     val showTopBarTitle by remember { derivedStateOf { lazyListState.firstVisibleItemIndex > 0 } }
                     var dragInfo by remember { mutableStateOf<Pair<Int, Int>?>(null) }
                     val reorderableState = rememberReorderableLazyListState(lazyListState = lazyListState) { from, to ->
-                        val headerItemCount = 2 // Header + Controls
+                        val headerItemCount = 2
                         if (to.index >= headerItemCount && from.index >= headerItemCount) {
                             val currentDragInfo = dragInfo
                             dragInfo = if (currentDragInfo == null) (from.index - headerItemCount) to (to.index - headerItemCount)
@@ -380,7 +418,6 @@ fun LocalPlaylistScreen(
                             }
                         }
                     }
-
 
                     LazyColumn(
                         state = lazyListState,
@@ -417,7 +454,6 @@ fun LocalPlaylistScreen(
                         } else {
                             itemsIndexed(items = if (isSearching) filteredSongs else mutableSongs, key = { _, song -> song.map.id }) { index, song ->
                                 ReorderableItem(state = reorderableState, key = song.map.id) {
-                                    // El mismo código del item que en la versión horizontal
                                     var dismissJob: Job? by remember { mutableStateOf(null) }
                                     val currentItem by rememberUpdatedState(song)
                                     fun deleteFromPlaylist() {
@@ -501,7 +537,8 @@ fun LocalPlaylistScreen(
                         onNavIconLongClick = { navController.backToMain() },
                         allSelected = if (songs.isEmpty()) false else selection.size == songs.size,
                         onSelectAllClick = onSelectAllClick,
-                        onSelectionMenuClick = onSelectionMenuClick
+                        onSelectionMenuClick = onSelectionMenuClick,
+                        onLikeAllClick = { showLikeAllDialog = true } // Pasar la acción
                     )
                 }
             }
@@ -580,7 +617,7 @@ private fun LocalPlaylistLandscapeHeader(
     inSelectMode: Boolean, selectionCount: Int, allSelected: Boolean, onNavIconClick: () -> Unit,
     onSelectAllClick: () -> Unit, onSelectionMenuClick: () -> Unit, isSearching: Boolean,
     query: TextFieldValue, onQueryChange: (TextFieldValue) -> Unit, focusRequester: FocusRequester,
-    onSearchClose: () -> Unit, onSearchConfirmed: () -> Unit
+    onSearchClose: () -> Unit, onSearchConfirmed: () -> Unit, onLikeAllClick: () -> Unit
 ) {
     val playlistLength = remember(songs) { songs.fastSumBy { it.song.song.duration } }
 
@@ -593,7 +630,8 @@ private fun LocalPlaylistLandscapeHeader(
             onNavIconClick = onNavIconClick, onSelectAllClick = onSelectAllClick,
             onSelectionMenuClick = onSelectionMenuClick, isSearching = isSearching, query = query,
             onQueryChange = onQueryChange, focusRequester = focusRequester,
-            onSearchClose = onSearchClose, onSearchConfirmed = onSearchConfirmed
+            onSearchClose = onSearchClose, onSearchConfirmed = onSearchConfirmed,
+            onLikeAllClick = onLikeAllClick
         )
 
         Column(
@@ -618,11 +656,11 @@ private fun LocalPlaylistLandscapeHeader(
     }
 }
 
-
 @Composable
 private fun LocalPlaylistActionControls(
     playlist: Playlist, songs: List<PlaylistSong>, onPlayClick: () -> Unit, onShuffleClick: () -> Unit,
-    onShowEditDialog: () -> Unit, onShowRemoveDownloadDialog: () -> Unit, snackbarHostState: SnackbarHostState
+    onShowEditDialog: () -> Unit, onShowRemoveDownloadDialog: () -> Unit,
+    snackbarHostState: SnackbarHostState
 ) {
     val context = LocalContext.current
     val database = LocalDatabase.current
@@ -726,7 +764,8 @@ private fun LocalPlaylistCollapsingTopAppBar(
     isSearching: Boolean, query: TextFieldValue, onQueryChange: (TextFieldValue) -> Unit, focusRequester: FocusRequester,
     onSearchClose: () -> Unit, onSearchConfirmed: () -> Unit,
     onNavIconClick: () -> Unit, onNavIconLongClick: () -> Unit,
-    allSelected: Boolean, onSelectAllClick: (Boolean) -> Unit, onSelectionMenuClick: () -> Unit
+    allSelected: Boolean, onSelectAllClick: (Boolean) -> Unit, onSelectionMenuClick: () -> Unit,
+    onLikeAllClick: () -> Unit
 ) {
     val animatedColor by animateColorAsState(if (showTitle || inSelectMode || isSearching) MaterialTheme.colorScheme.surfaceColorAtElevation(3.dp).copy(alpha = 0.95f) else Color.Transparent, label = "TopBarColor")
 
@@ -765,7 +804,10 @@ private fun LocalPlaylistCollapsingTopAppBar(
                         Icon(painterResource(R.drawable.more_vert), null)
                     }
                 }
-                !isSearching -> IconButton(onClick = onSearchConfirmed) { Icon(painterResource(R.drawable.search), null) }
+                !isSearching -> {
+                    IconButton(onClick = onLikeAllClick) { Icon(Icons.Default.Favorite, null) }
+                    IconButton(onClick = onSearchConfirmed) { Icon(painterResource(R.drawable.search), null) }
+                }
             }
         }
     )
@@ -777,7 +819,8 @@ private fun PlaylistActionBar(
     modifier: Modifier = Modifier, inSelectMode: Boolean, selectionCount: Int, allSelected: Boolean,
     onNavIconClick: () -> Unit, onSelectAllClick: () -> Unit, onSelectionMenuClick: () -> Unit,
     isSearching: Boolean, query: TextFieldValue, onQueryChange: (TextFieldValue) -> Unit,
-    focusRequester: FocusRequester, onSearchClose: () -> Unit, onSearchConfirmed: () -> Unit
+    focusRequester: FocusRequester, onSearchClose: () -> Unit, onSearchConfirmed: () -> Unit,
+    onLikeAllClick: () -> Unit
 ) {
     AnimatedContent(
         targetState = when { inSelectMode -> "select"; isSearching -> "search"; else -> "normal" },
@@ -819,7 +862,10 @@ private fun PlaylistActionBar(
                         Spacer(Modifier.width(8.dp))
                         Text(stringResource(R.string.back))
                     }
-                    IconButton(onClick = onSearchConfirmed) { Icon(painterResource(R.drawable.search), null) }
+                    Row {
+                        IconButton(onClick = onLikeAllClick) { Icon(Icons.Default.Favorite, null) }
+                        IconButton(onClick = onSearchConfirmed) { Icon(painterResource(R.drawable.search), null) }
+                    }
                 }
             }
         }
@@ -839,10 +885,14 @@ private fun LocalPlaylistScreenSkeleton() {
                     ) {
                         Row(modifier = Modifier.fillMaxWidth().height(56.dp), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
                             Spacer(modifier = Modifier.size(width = 80.dp, height = 32.dp).clip(CircleShape).background(MaterialTheme.colorScheme.onSurface.copy(alpha = 0.1f)))
-                            Spacer(modifier = Modifier.size(24.dp).clip(CircleShape).background(MaterialTheme.colorScheme.onSurface.copy(alpha = 0.1f)))
+                            Row {
+                                Spacer(modifier = Modifier.size(24.dp).clip(CircleShape).background(MaterialTheme.colorScheme.onSurface.copy(alpha = 0.1f)))
+                                Spacer(modifier = Modifier.width(8.dp))
+                                Spacer(modifier = Modifier.size(24.dp).clip(CircleShape).background(MaterialTheme.colorScheme.onSurface.copy(alpha = 0.1f)))
+                            }
                         }
                         Column(modifier = Modifier.weight(1f), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
-                            Spacer(modifier = Modifier.fillMaxWidth(0.6f).aspectRatio(1f).clip(RoundedCornerShape(12.dp)).background(MaterialTheme.colorScheme.onSurface.copy(alpha = 0.1f)))
+                            Spacer(modifier = Modifier.fillMaxWidth(0.5f).aspectRatio(1f).clip(RoundedCornerShape(12.dp)).background(MaterialTheme.colorScheme.onSurface.copy(alpha = 0.1f)))
                             Spacer(Modifier.height(24.dp))
                             TextPlaceholder()
                             Spacer(Modifier.height(8.dp))

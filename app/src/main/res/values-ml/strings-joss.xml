@@ -163,4 +163,9 @@
   <string name="invalidUsername">ഉപയോക്താവിന് അക്ഷരങ്ങൾ, അക്കങ്ങൾ, സ്ക്രിപ്റ്റ്, കുറഞ്ഞ സ്ക്രിപ്റ്റ് എന്നിവ മാത്രമേ അടങ്ങിയിട്ടുള്ളൂ; ആവർത്തിക്കാതെ</string>
   <string name="errorHumanName">അക്ഷരങ്ങളും വാക്കുകൾക്കിടയിലുള്ള ഒരു ലളിതമായ ഇടവും</string>
   <string name="search_in_playlist">പ്ലേബാക്ക് പട്ടികയിൽ തിരയുക</string>
+  <string name="accept">അംഗീകരിക്കുക</string>
+  <string name="cancel">റദ്ദാക്കുക</string>
+  <string name="addAllLikeSounds">എല്ലാ പാട്ടുകളും എനിക്ക് ഇഷ്ടമാണോ?</string>
+  <string name="addAllLikeSoundsDesc">ഇത് എല്ലാ ഗാനങ്ങളും പ്രിയങ്കരങ്ങളിലേക്ക് ചേർക്കും, നിങ്ങളുടെ ലൈബ്രറിയും. ഈ പ്രവർത്തനം പഴയപടിയാക്കാൻ കഴിയില്ല.</string>
+  <string name="songsAddedFavorites">പാട്ടുകൾ പ്രിയങ്കരങ്ങളിലേക്ക് ചേർത്തു</string>
 </resources>

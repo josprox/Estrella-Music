@@ -130,4 +130,9 @@
   <string name="invalidUsername">Användaren kan bara innehålla bokstäver, nummer, punkt, skript och lågt skript; Utan upprepad</string>
   <string name="errorHumanName">Endast bokstäver och ett enkelt utrymme mellan ord</string>
   <string name="search_in_playlist">Sök på uppspelningslistan</string>
+  <string name="accept">Acceptera</string>
+  <string name="cancel">Avboka</string>
+  <string name="addAllLikeSounds">Gillar jag alla låtar?</string>
+  <string name="addAllLikeSoundsDesc">Detta kommer att lägga till alla låtar till favoriter och ditt bibliotek. Denna åtgärd kan inte ångras.</string>
+  <string name="songsAddedFavorites">Låtarna lades till i favoriterna</string>
 </resources>

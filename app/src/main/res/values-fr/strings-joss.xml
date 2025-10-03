@@ -161,4 +161,9 @@
   <string name="invalidUsername">L\'utilisateur ne peut contenir que des lettres, des nombres, du point, du script et du script bas; Sans répétition</string>
   <string name="errorHumanName">Seulement des lettres et un espace simple entre les mots</string>
   <string name="search_in_playlist">Rechercher sur la liste de lecture</string>
+  <string name="accept">Accepter</string>
+  <string name="cancel">Annuler</string>
+  <string name="addAllLikeSounds">Est-ce que j\'aime toutes les chansons?</string>
+  <string name="addAllLikeSoundsDesc">Cela ajoutera toutes les chansons aux favoris et à votre bibliothèque. Cette action ne peut pas être annulée.</string>
+  <string name="songsAddedFavorites">Les chansons ont été ajoutées aux favoris</string>
 </resources>

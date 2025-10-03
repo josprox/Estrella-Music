@@ -164,4 +164,9 @@
   <string name="invalidUsername">Người dùng chỉ có thể chứa các chữ cái, số, điểm, tập lệnh và tập lệnh thấp; Mà không lặp lại</string>
   <string name="errorHumanName">Chỉ chữ cái và một khoảng trống đơn giản giữa các từ</string>
   <string name="search_in_playlist">Tìm kiếm trong danh sách phát lại</string>
+  <string name="accept">Chấp nhận</string>
+  <string name="cancel">Hủy bỏ</string>
+  <string name="addAllLikeSounds">Tôi có thích tất cả các bài hát không?</string>
+  <string name="addAllLikeSoundsDesc">Điều này sẽ thêm tất cả các bài hát vào mục yêu thích và thư viện của bạn. Hành động này không thể được hoàn tác.</string>
+  <string name="songsAddedFavorites">Các bài hát đã được thêm vào yêu thích</string>
 </resources>

@@ -164,4 +164,9 @@
   <string name="invalidUsername">De gebruiker kan alleen letters, cijfers, punt, script en laag script bevatten; Zonder herhaald</string>
   <string name="errorHumanName">Alleen letters en een eenvoudige ruimte tussen woorden</string>
   <string name="search_in_playlist">Zoek op de afspeellijst</string>
+  <string name="accept">Accepteren</string>
+  <string name="cancel">Annuleren</string>
+  <string name="addAllLikeSounds">Vind ik alle nummers leuk?</string>
+  <string name="addAllLikeSoundsDesc">Dit voegt alle nummers toe aan favorieten en je bibliotheek. Deze actie kan niet ongedaan worden gemaakt.</string>
+  <string name="songsAddedFavorites">De nummers zijn toegevoegd aan favorieten</string>
 </resources>

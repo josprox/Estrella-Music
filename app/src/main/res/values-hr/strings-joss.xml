@@ -130,4 +130,9 @@
   <string name="invalidUsername">Korisnik može sadržavati samo slova, brojeve, točku, skriptu i nisku skriptu; Bez ponovljenog</string>
   <string name="errorHumanName">Samo slova i jednostavan prostor između riječi</string>
   <string name="search_in_playlist">Pretražite na popisu reprodukcije</string>
+  <string name="accept">Prihvatiti</string>
+  <string name="cancel">Otkazati</string>
+  <string name="addAllLikeSounds">Sviđa li mi se sve pjesme?</string>
+  <string name="addAllLikeSoundsDesc">To će dodati sve pjesme u favorite i vašu biblioteku. Ova se radnja ne može poništiti.</string>
+  <string name="songsAddedFavorites">Pjesme su dodane u favorite</string>
 </resources>

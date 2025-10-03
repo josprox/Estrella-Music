@@ -164,4 +164,9 @@
   <string name="invalidUsername">Pengguna hanya dapat berisi huruf, angka, titik, skrip, dan skrip rendah; Tanpa diulang</string>
   <string name="errorHumanName">Hanya huruf dan ruang sederhana di antara kata -kata</string>
   <string name="search_in_playlist">Cari di daftar pemutaran</string>
+  <string name="accept">Menerima</string>
+  <string name="cancel">Membatalkan</string>
+  <string name="addAllLikeSounds">Apakah saya menyukai semua lagu?</string>
+  <string name="addAllLikeSoundsDesc">Ini akan menambahkan semua lagu ke favorit dan perpustakaan Anda. Tindakan ini tidak bisa dibatalkan.</string>
+  <string name="songsAddedFavorites">Lagu -lagunya ditambahkan ke favorit</string>
 </resources>

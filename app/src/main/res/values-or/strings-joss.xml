@@ -185,4 +185,9 @@
   <string name="invalidUsername">ଉପଭୋକ୍ତା କେବଳ ଅକ୍ଷର, ସଂଖ୍ୟା, ପଏଣ୍ଟ, ସ୍କ୍ରିପ୍ଟ ଏବଂ ନିମ୍ନ ସ୍କ୍ରିପ୍ଟ ଧାରଣ କରିପାରନ୍ତି | ବାରମ୍ବାର |</string>
   <string name="errorHumanName">କେବଳ ଅକ୍ଷର ଏବଂ ଶବ୍ଦ ମଧ୍ୟରେ ଏକ ସରଳ ସ୍ଥାନ |</string>
   <string name="search_in_playlist">ପ୍ଲେକ୍ ତାଲିକାରେ ସନ୍ଧାନ କରନ୍ତୁ |</string>
+  <string name="accept">ଗ୍ରହଣ କର</string>
+  <string name="cancel">ବାତିଲ୍ କରନ୍ତୁ |</string>
+  <string name="addAllLikeSounds">ମୁଁ ସମସ୍ତ ଗୀତକୁ ପସନ୍ଦ କରେ କି?</string>
+  <string name="addAllLikeSoundsDesc">ଏହା ପସନ୍ଦ କରେ ଏବଂ ତୁମର ଲାଇବ୍ରେରୀର ସମସ୍ତ ଗୀତ ଯୋଗ କରିବ | ଏହି କାର୍ଯ୍ୟକୁ ପୂର୍ବବତ୍ କରାଯାଇପାରିବ ନାହିଁ |</string>
+  <string name="songsAddedFavorites">ଗୀତଗୁଡ଼ିକ ପସନ୍ଦରେ ଯୋଗ କରାଯାଇଥିଲା |</string>
 </resources>

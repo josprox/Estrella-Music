@@ -164,4 +164,9 @@
   <string name="invalidUsername">Потребителят може да съдържа само букви, цифри, точка, скрипт и нисък скрипт; Без повтаряне</string>
   <string name="errorHumanName">Само букви и просто пространство между думите</string>
   <string name="search_in_playlist">Търсене в списъка за възпроизвеждане</string>
+  <string name="accept">Приемете</string>
+  <string name="cancel">Отказ</string>
+  <string name="addAllLikeSounds">Харесвам ли всички песни?</string>
+  <string name="addAllLikeSoundsDesc">Това ще добави всички песни към любими и вашата библиотека. Това действие не може да бъде отменено.</string>
+  <string name="songsAddedFavorites">Песните бяха добавени към любими</string>
 </resources>

@@ -175,4 +175,9 @@
   <string name="invalidUsername">A felhasználó csak betűket, számokat, pontot, szkriptet és alacsony szkriptet tartalmazhat; Ismételten</string>
   <string name="errorHumanName">Csak betűk és egy egyszerű hely a szavak között</string>
   <string name="search_in_playlist">Keresés a lejátszási listán</string>
+  <string name="accept">Elfogad</string>
+  <string name="cancel">Töröl</string>
+  <string name="addAllLikeSounds">Tetszik az összes dal?</string>
+  <string name="addAllLikeSoundsDesc">Ez hozzáadja az összes dalt a kedvencekhez és a könyvtárhoz. Ezt a műveletet nem lehet visszavonni.</string>
+  <string name="songsAddedFavorites">A dalokat hozzáadták a kedvencekhez</string>
 </resources>

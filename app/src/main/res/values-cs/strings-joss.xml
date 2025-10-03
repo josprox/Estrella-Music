@@ -164,4 +164,9 @@
   <string name="invalidUsername">Uživatel může obsahovat pouze písmena, čísla, bod, skript a nízký skript; Bez opakování</string>
   <string name="errorHumanName">Pouze písmena a jednoduchý prostor mezi slovy</string>
   <string name="search_in_playlist">Vyhledejte seznam přehrávání</string>
+  <string name="accept">Přijmout</string>
+  <string name="cancel">Zrušit</string>
+  <string name="addAllLikeSounds">Líbí se mi všechny písně?</string>
+  <string name="addAllLikeSoundsDesc">Tím se přidá všechny skladby do oblíbených a vaší knihovny. Tuto akci nelze vrátit zpět.</string>
+  <string name="songsAddedFavorites">Písně byly přidány do oblíbených</string>
 </resources>

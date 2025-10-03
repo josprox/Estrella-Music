@@ -129,4 +129,9 @@
   <string name="invalidUsername">کاربر فقط می تواند حاوی حروف ، اعداد ، نقطه ، اسکریپت و اسکریپت پایین باشد. بدون تکرار</string>
   <string name="errorHumanName">فقط حروف و یک فضای ساده بین کلمات</string>
   <string name="search_in_playlist">در لیست پخش جستجو کنید</string>
+  <string name="accept">قبول کردن</string>
+  <string name="cancel">لغو کردن</string>
+  <string name="addAllLikeSounds">آیا من همه آهنگ ها را دوست دارم؟</string>
+  <string name="addAllLikeSoundsDesc">این همه آهنگ ها را به موارد دلخواه و کتابخانه شما اضافه می کند. این عمل نمی تواند خنثی شود.</string>
+  <string name="songsAddedFavorites">آهنگ ها به موارد دلخواه اضافه شدند</string>
 </resources>

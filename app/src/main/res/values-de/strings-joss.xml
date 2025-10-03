@@ -164,4 +164,9 @@
   <string name="invalidUsername">Der Benutzer kann nur Buchstaben, Zahlen, Punkte, Skript und niedriges Skript enthalten. Ohne wiederholt</string>
   <string name="errorHumanName">Nur Buchstaben und ein einfacher Raum zwischen den Wörtern</string>
   <string name="search_in_playlist">Suche auf der Wiedergabliste</string>
+  <string name="accept">Akzeptieren</string>
+  <string name="cancel">Stornieren</string>
+  <string name="addAllLikeSounds">Mag ich alle Songs?</string>
+  <string name="addAllLikeSoundsDesc">Dadurch werden alle Songs zu Favoriten und Ihrer Bibliothek hinzugefügt. Diese Aktion kann nicht rückgängig gemacht werden.</string>
+  <string name="songsAddedFavorites">Die Songs wurden zu Favoriten hinzugefügt</string>
 </resources>

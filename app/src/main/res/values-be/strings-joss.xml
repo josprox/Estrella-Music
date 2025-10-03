@@ -186,4 +186,9 @@
   <string name="invalidUsername">Карыстальнік можа ўтрымліваць толькі літары, лічбы, кропку, сцэнар і нізкі сцэнар; Без паўтарэння</string>
   <string name="errorHumanName">Толькі літары і простае месца паміж словамі</string>
   <string name="search_in_playlist">Пошук у спісе прайгравання</string>
+  <string name="accept">Прымаць</string>
+  <string name="cancel">Ануляваць</string>
+  <string name="addAllLikeSounds">Ці падабаюцца мне ўсе песні?</string>
+  <string name="addAllLikeSoundsDesc">Гэта дадасць усе песні ў фаварыты і вашу бібліятэку. Гэта дзеянне не можа быць адменена.</string>
+  <string name="songsAddedFavorites">Песні былі дададзены ў абраныя</string>
 </resources>
