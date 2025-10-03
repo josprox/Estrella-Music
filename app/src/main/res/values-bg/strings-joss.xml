@@ -163,4 +163,5 @@
   <string name="btn_sending">Изпращане</string>
   <string name="invalidUsername">Потребителят може да съдържа само букви, цифри, точка, скрипт и нисък скрипт; Без повтаряне</string>
   <string name="errorHumanName">Само букви и просто пространство между думите</string>
+  <string name="search_in_playlist">Търсене в списъка за възпроизвеждане</string>
 </resources>

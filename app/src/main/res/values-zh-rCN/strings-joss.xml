@@ -163,4 +163,5 @@
   <string name="btn_sending">发送</string>
   <string name="invalidUsername">用户只能包含字母，数字，点，脚本和低脚本；没有重复</string>
   <string name="errorHumanName">单词之间只有字母和简单的空间</string>
+  <string name="search_in_playlist">在播放列表上搜索</string>
 </resources>

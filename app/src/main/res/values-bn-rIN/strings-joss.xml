@@ -183,4 +183,5 @@
   <string name="btn_sending">প্রেরণ</string>
   <string name="invalidUsername">ব্যবহারকারী কেবলমাত্র অক্ষর, সংখ্যা, পয়েন্ট, স্ক্রিপ্ট এবং কম স্ক্রিপ্ট থাকতে পারে; পুনরাবৃত্তি ছাড়া</string>
   <string name="errorHumanName">শব্দের মধ্যে কেবল অক্ষর এবং একটি সাধারণ স্থান</string>
+  <string name="search_in_playlist">প্লেব্যাক তালিকায় অনুসন্ধান করুন</string>
 </resources>

@@ -163,4 +163,5 @@
   <string name="btn_sending">Αποστολή</string>
   <string name="invalidUsername">Ο χρήστης μπορεί να περιέχει γράμματα, αριθμούς, σημείο, σενάριο και χαμηλό σενάριο. Χωρίς επαναλαμβανόμενο</string>
   <string name="errorHumanName">Μόνο γράμματα και απλό χώρο μεταξύ των λέξεων</string>
+  <string name="search_in_playlist">Αναζήτηση στη λίστα αναπαραγωγής</string>
 </resources>

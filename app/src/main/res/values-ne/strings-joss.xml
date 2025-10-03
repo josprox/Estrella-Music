@@ -129,4 +129,5 @@
   <string name="btn_sending">पठाउँउको</string>
   <string name="invalidUsername">प्रयोगकर्ताले केवल अक्षरहरू, नम्बरहरू, बुँदा, लिपि र उत्तम स्क्रिप्ट पनि समावेश गर्न सक्दछ; दोहोरिएको बिना</string>
   <string name="errorHumanName">केवल अक्षर र शब्दहरू बीच एक साधारण ठाउँ</string>
+  <string name="search_in_playlist">प्लेब्याक सूचीमा खोजी गर्नुहोस्</string>
 </resources>

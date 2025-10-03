@@ -162,4 +162,5 @@
   <string name="btn_sending">അയയ്ക്കുന്നു</string>
   <string name="invalidUsername">ഉപയോക്താവിന് അക്ഷരങ്ങൾ, അക്കങ്ങൾ, സ്ക്രിപ്റ്റ്, കുറഞ്ഞ സ്ക്രിപ്റ്റ് എന്നിവ മാത്രമേ അടങ്ങിയിട്ടുള്ളൂ; ആവർത്തിക്കാതെ</string>
   <string name="errorHumanName">അക്ഷരങ്ങളും വാക്കുകൾക്കിടയിലുള്ള ഒരു ലളിതമായ ഇടവും</string>
+  <string name="search_in_playlist">പ്ലേബാക്ക് പട്ടികയിൽ തിരയുക</string>
 </resources>

@@ -128,4 +128,5 @@
   <string name="btn_sending">ارسال</string>
   <string name="invalidUsername">کاربر فقط می تواند حاوی حروف ، اعداد ، نقطه ، اسکریپت و اسکریپت پایین باشد. بدون تکرار</string>
   <string name="errorHumanName">فقط حروف و یک فضای ساده بین کلمات</string>
+  <string name="search_in_playlist">در لیست پخش جستجو کنید</string>
 </resources>

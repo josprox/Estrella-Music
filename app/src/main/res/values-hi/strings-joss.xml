@@ -129,4 +129,5 @@
   <string name="btn_sending">भेजना</string>
   <string name="invalidUsername">उपयोगकर्ता में केवल अक्षर, संख्या, बिंदु, स्क्रिप्ट और कम स्क्रिप्ट शामिल हो सकते हैं; बिना बार -बार</string>
   <string name="errorHumanName">केवल अक्षर और शब्दों के बीच एक सरल स्थान</string>
+  <string name="search_in_playlist">प्लेबैक सूची पर खोजें</string>
 </resources>

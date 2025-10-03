@@ -162,4 +162,5 @@
   <string name="btn_sending">إرسال</string>
   <string name="invalidUsername">يمكن للمستخدم فقط احتواء الحروف والأرقام والنقطة والبرنامج النصي والنصوص المنخفضة ؛ دون تكرار</string>
   <string name="errorHumanName">الحروف فقط ومساحة بسيطة بين الكلمات</string>
+  <string name="search_in_playlist">ابحث في قائمة التشغيل</string>
 </resources>

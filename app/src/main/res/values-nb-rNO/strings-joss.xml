@@ -163,4 +163,5 @@
   <string name="btn_sending">Sending</string>
   <string name="invalidUsername">Brukeren kan bare inneholde bokstaver, tall, punkt, skript og lavt skript; Uten gjentatt</string>
   <string name="errorHumanName">Bare bokstaver og et enkelt mellomrom mellom ord</string>
+  <string name="search_in_playlist">Søk på avspillingslisten</string>
 </resources>

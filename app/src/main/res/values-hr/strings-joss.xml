@@ -129,4 +129,5 @@
   <string name="btn_sending">Slanje</string>
   <string name="invalidUsername">Korisnik može sadržavati samo slova, brojeve, točku, skriptu i nisku skriptu; Bez ponovljenog</string>
   <string name="errorHumanName">Samo slova i jednostavan prostor između riječi</string>
+  <string name="search_in_playlist">Pretražite na popisu reprodukcije</string>
 </resources>

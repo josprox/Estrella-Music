@@ -129,4 +129,5 @@
   <string name="btn_sending">Invio</string>
   <string name="invalidUsername">L\'utente può contenere solo lettere, numeri, punto, script e script basso; Senza ripetuti</string>
   <string name="errorHumanName">Solo lettere e uno spazio semplice tra le parole</string>
+  <string name="search_in_playlist">Cerca nell\'elenco delle riproduzioni</string>
 </resources>

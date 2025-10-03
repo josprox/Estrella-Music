@@ -163,4 +163,5 @@
   <string name="btn_sending">Przesyłka</string>
   <string name="invalidUsername">Użytkownik może zawierać tylko litery, liczby, punkt, skrypt i niski skrypt; Bez powtórzenia</string>
   <string name="errorHumanName">Tylko litery i prosta przestrzeń między słowami</string>
+  <string name="search_in_playlist">Wyszukaj na liście odtwarzania</string>
 </resources>

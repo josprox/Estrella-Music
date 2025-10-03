@@ -163,4 +163,5 @@
   <string name="btn_sending">Mengirim</string>
   <string name="invalidUsername">Pengguna hanya dapat berisi huruf, angka, titik, skrip, dan skrip rendah; Tanpa diulang</string>
   <string name="errorHumanName">Hanya huruf dan ruang sederhana di antara kata -kata</string>
+  <string name="search_in_playlist">Cari di daftar pemutaran</string>
 </resources>

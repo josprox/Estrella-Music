@@ -183,4 +183,5 @@
   <string name="btn_sending">ਭੇਜਣਾ</string>
   <string name="invalidUsername">ਉਪਭੋਗਤਾ ਵਿੱਚ ਸਿਰਫ ਅੱਖਰ, ਨੰਬਰ, ਪੁਆਇੰਟ, ਸਕ੍ਰਿਪਟ ਅਤੇ ਨੀਵੀਂ ਸਕ੍ਰਿਪਟ ਸ਼ਾਮਲ ਹੋ ਸਕਦੀ ਹੈ; ਬਿਨਾਂ ਦੁਹਰਾਏ</string>
   <string name="errorHumanName">ਸਿਰਫ ਅੱਖਰ ਅਤੇ ਸ਼ਬਦਾਂ ਦੇ ਵਿਚਕਾਰ ਇੱਕ ਸਧਾਰਣ ਸਪੇਸ</string>
+  <string name="search_in_playlist">ਪਲੇਬੈਕ ਲਿਸਟ \'ਤੇ ਖੋਜ ਕਰੋ</string>
 </resources>

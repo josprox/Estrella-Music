@@ -184,4 +184,5 @@
   <string name="btn_sending">ପଠାଇବା</string>
   <string name="invalidUsername">ଉପଭୋକ୍ତା କେବଳ ଅକ୍ଷର, ସଂଖ୍ୟା, ପଏଣ୍ଟ, ସ୍କ୍ରିପ୍ଟ ଏବଂ ନିମ୍ନ ସ୍କ୍ରିପ୍ଟ ଧାରଣ କରିପାରନ୍ତି | ବାରମ୍ବାର |</string>
   <string name="errorHumanName">କେବଳ ଅକ୍ଷର ଏବଂ ଶବ୍ଦ ମଧ୍ୟରେ ଏକ ସରଳ ସ୍ଥାନ |</string>
+  <string name="search_in_playlist">ପ୍ଲେକ୍ ତାଲିକାରେ ସନ୍ଧାନ କରନ୍ତୁ |</string>
 </resources>

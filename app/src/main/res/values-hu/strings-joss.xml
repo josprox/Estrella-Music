@@ -174,4 +174,5 @@
   <string name="btn_sending">Küldés</string>
   <string name="invalidUsername">A felhasználó csak betűket, számokat, pontot, szkriptet és alacsony szkriptet tartalmazhat; Ismételten</string>
   <string name="errorHumanName">Csak betűk és egy egyszerű hely a szavak között</string>
+  <string name="search_in_playlist">Keresés a lejátszási listán</string>
 </resources>

@@ -163,4 +163,5 @@
   <string name="btn_sending">Надсилання</string>
   <string name="invalidUsername">Користувач може містити лише листи, цифри, точку, сценарій та низький сценарій; Без повторного</string>
   <string name="errorHumanName">Тільки літери та простий простір між словами</string>
+  <string name="search_in_playlist">Пошук у списку відтворення</string>
 </resources>

@@ -129,4 +129,5 @@
   <string name="btn_sending">அனுப்புகிறது</string>
   <string name="invalidUsername">பயனரில் எழுத்துக்கள், எண்கள், புள்ளி, ஸ்கிரிப்ட் மற்றும் குறைந்த ஸ்கிரிப்ட் மட்டுமே இருக்க முடியும்; மீண்டும் மீண்டும் இல்லாமல்</string>
   <string name="errorHumanName">கடிதங்கள் மற்றும் சொற்களுக்கு இடையில் ஒரு எளிய இடம் மட்டுமே</string>
+  <string name="search_in_playlist">பிளேபேக் பட்டியலில் தேடுங்கள்</string>
 </resources>

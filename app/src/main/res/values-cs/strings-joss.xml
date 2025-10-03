@@ -163,4 +163,5 @@
   <string name="btn_sending">Odeslání</string>
   <string name="invalidUsername">Uživatel může obsahovat pouze písmena, čísla, bod, skript a nízký skript; Bez opakování</string>
   <string name="errorHumanName">Pouze písmena a jednoduchý prostor mezi slovy</string>
+  <string name="search_in_playlist">Vyhledejte seznam přehrávání</string>
 </resources>

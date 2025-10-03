@@ -185,4 +185,5 @@
   <string name="btn_sending">Адпраўка</string>
   <string name="invalidUsername">Карыстальнік можа ўтрымліваць толькі літары, лічбы, кропку, сцэнар і нізкі сцэнар; Без паўтарэння</string>
   <string name="errorHumanName">Толькі літары і простае месца паміж словамі</string>
+  <string name="search_in_playlist">Пошук у спісе прайгравання</string>
 </resources>

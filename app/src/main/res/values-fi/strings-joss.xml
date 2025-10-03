@@ -163,4 +163,5 @@
   <string name="btn_sending">Lähetys</string>
   <string name="invalidUsername">Käyttäjä voi sisältää vain kirjaimia, numeroita, pistettä, komentosarjaa ja alhaisen komentosarjan; Toistuvasti</string>
   <string name="errorHumanName">Vain kirjaimet ja yksinkertainen tila sanojen välillä</string>
+  <string name="search_in_playlist">Hae toistoluettelosta</string>
 </resources>
