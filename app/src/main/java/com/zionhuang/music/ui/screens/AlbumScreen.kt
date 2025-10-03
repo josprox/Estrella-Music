@@ -475,7 +475,7 @@ private fun LandscapeHeader(
                 contentDescription = "Album Art",
                 contentScale = ContentScale.Crop,
                 modifier = Modifier
-                    .fillMaxWidth(0.8f)
+                    .fillMaxWidth(0.5f)
                     .aspectRatio(1f)
                     .clip(RoundedCornerShape(12.dp))
                     .shadow(elevation = 8.dp, shape = RoundedCornerShape(12.dp))

@@ -452,7 +452,7 @@ private fun PlaylistLandscapeHeader(
                 model = playlist.thumbnail,
                 contentDescription = "Playlist Thumbnail",
                 modifier = Modifier
-                    .fillMaxWidth(0.8f)
+                    .fillMaxWidth(0.5f)
                     .aspectRatio(1f)
                     .clip(RoundedCornerShape(12.dp))
                     .shadow(8.dp, RoundedCornerShape(12.dp))
