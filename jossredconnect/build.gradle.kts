@@ -14,21 +14,9 @@ android {
         consumerProguardFiles("consumer-rules.pro")
     }
 
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
-    }
-
-    // REMOVE THIS BLOCK:
-    // kotlinOptions {
-    //     jvmTarget = "17"
-    // }
-
-    // ADD THIS BLOCK OR MERGE WITH EXISTING compilerOptions IF PRESENT:
+    // Simplificado
     kotlin {
-        compilerOptions {
-            jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
-        }
+        jvmToolchain(21)
     }
 
 

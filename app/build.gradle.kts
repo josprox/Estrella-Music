@@ -22,7 +22,7 @@ if (isFullBuild && System.getenv("PULL_REQUEST") == null) {
 android {
     namespace = "com.zionhuang.music"
     compileSdk = 36
-    buildToolsVersion = "36.0.0"
+    // buildToolsVersion = "36.0.0"
 
     defaultConfig {
         applicationId = "com.josprox.jossmusic"
@@ -94,20 +94,20 @@ android {
         compose = true
     }
 
-    compileOptions {
-        isCoreLibraryDesugaringEnabled = true
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
-    }
+//    compileOptions {
+//        isCoreLibraryDesugaringEnabled = true
+//        sourceCompatibility = JavaVersion.VERSION_17
+//        targetCompatibility = JavaVersion.VERSION_17
+//    }
 
     kotlin {
-        jvmToolchain(17)
+        jvmToolchain(21)
     }
 
-    kotlinOptions {
-        freeCompilerArgs = freeCompilerArgs + "-Xcontext-receivers"
-        jvmTarget = "17"
-    }
+//    kotlinOptions {
+//        freeCompilerArgs = freeCompilerArgs + "-Xcontext-receivers"
+//        jvmTarget = "17"
+//    }
 
     testOptions {
         unitTests.isIncludeAndroidResources = true

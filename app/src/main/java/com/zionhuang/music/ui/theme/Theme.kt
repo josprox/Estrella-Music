@@ -12,7 +12,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.Saver
 import androidx.compose.runtime.saveable.SaverScope
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.palette.graphics.Palette
@@ -20,12 +19,9 @@ import com.google.material.color.dynamiccolor.DynamicScheme
 import com.google.material.color.hct.Hct
 import com.google.material.color.scheme.SchemeTonalSpot
 import com.google.material.color.score.Score
-import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
-import androidx.compose.material3.MaterialExpressiveTheme
 
 val DefaultThemeColor = Color(0xFF4285F4)
 
-@OptIn(ExperimentalMaterial3ExpressiveApi::class) // 1. Se añade la anotación OptIn para la API experimental
 @Composable
 fun InnerTuneTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
@@ -45,8 +41,8 @@ fun InnerTuneTheme(
         }
     }
 
-    // 2. Reemplazamos MaterialTheme con MaterialExpressiveTheme
-    MaterialExpressiveTheme(
+    // Se utiliza el MaterialTheme estándar y público
+    MaterialTheme(
         colorScheme = colorScheme,
         typography = MaterialTheme.typography,
         content = content
@@ -99,9 +95,21 @@ fun DynamicScheme.toColorScheme() = ColorScheme(
     surfaceContainerHigh = Color(surfaceContainerHigh),
     surfaceContainerHighest = Color(surfaceContainerHighest),
     surfaceContainerLow = Color(surfaceContainerLow),
-    surfaceContainerLowest = Color(surfaceContainerLowest)
+    surfaceContainerLowest = Color(surfaceContainerLowest),
+    // --- NUEVOS COLORES REQUERIDOS ---
+    primaryFixed = Color(primaryFixed),
+    primaryFixedDim = Color(primaryFixedDim),
+    onPrimaryFixed = Color(onPrimaryFixed),
+    onPrimaryFixedVariant = Color(onPrimaryFixedVariant),
+    secondaryFixed = Color(secondaryFixed),
+    secondaryFixedDim = Color(secondaryFixedDim),
+    onSecondaryFixed = Color(onSecondaryFixed),
+    onSecondaryFixedVariant = Color(onSecondaryFixedVariant),
+    tertiaryFixed = Color(tertiaryFixed),
+    tertiaryFixedDim = Color(tertiaryFixedDim),
+    onTertiaryFixed = Color(onTertiaryFixed),
+    onTertiaryFixedVariant = Color(onTertiaryFixedVariant),
 )
-
 fun ColorScheme.pureBlack(apply: Boolean) =
     if (apply) copy(
         surface = Color.Black,
@@ -113,18 +121,3 @@ val ColorSaver = object : Saver<Color, Int> {
     override fun SaverScope.save(value: Color): Int = value.toArgb()
 }
 
-fun Bitmap.extractGradientColors(): List<Color> {
-    val extractedColors = Palette.from(this)
-        .maximumColorCount(16)
-        .generate()
-        .swatches
-        .associate { it.rgb to it.population }
-
-    val orderedColors = Score.score(extractedColors, 2, 0xff4285f4.toInt(), true)
-        .sortedByDescending { Color(it).luminance() }
-
-    return if (orderedColors.size >= 2)
-        listOf(Color(orderedColors[0]), Color(orderedColors[1]))
-    else
-        listOf(Color(0xFF595959), Color(0xFF0D0D0D))
-}

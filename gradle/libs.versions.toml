@@ -3,38 +3,35 @@ androidGradlePlugin = "8.12.3"
 annotation = "1.9.1"
 coilComposeVersion = "2.7.0"
 dotenvVaultKotlin = "0.0.3"
-hiltAndroid = "2.57"
-hiltWork = "1.2.0"
+hiltAndroid = "2.57.2"
 json = "20250517"
-kotlin = "2.2.0"
-compose = "1.8.3"
+kotlin = "2.2.20"
+compose = "1.9.2"
 kotlinxSerializationJson = "1.9.0"
-lifecycle = "2.9.2"
-material3 = "1.4.0-alpha18"
+lifecycle = "2.9.4"
+material3 = "1.4.0"
 materialIconsExtended = "1.7.8"
-media3 = "1.7.1"
-media3DatasourceVersion = "1.7.1"
-media3Exoplayer = "1.7.1"
+media3 = "1.8.0"
+media3DatasourceVersion = "1.8.0"
+media3Exoplayer = "1.8.0"
 okhttp = "5.1.0"
-onesignal = "5.1.35"
+onesignal = "5.1.37"
 paletteKtx = "1.0.0"
 richtextUiMaterial3 = "0.20.0"
-room = "2.7.2"
-hilt = "2.57"
-ktor = "3.2.2"
-ksp = "2.1.20-2.0.0"
+room = "2.8.1"
+hilt = "2.57.2"
+ktor = "3.3.0"
+ksp = "2.2.20-2.0.3"
 billingKtx = "8.0.0"
-runtimeLivedata = "1.8.3"
-jetbrainsKotlinJvm = "2.2.0"
-lifecycleProcess = "2.9.2"
-media3ExoplayerWorkmanager = "1.7.1"
-media3Ui = "1.7.1"
-foundation = "1.9.0"
+runtimeLivedata = "1.9.2"
+jetbrainsKotlinJvm = "2.2.20"
+lifecycleProcess = "2.9.4"
+media3ExoplayerWorkmanager = "1.8.0"
+media3Ui = "1.8.0"
+foundation = "1.9.2"
 
 [libraries]
 
-#noinspection SimilarGradleDependency
-androidx-hilt-work = { module = "androidx.hilt:hilt-work", version.ref = "hiltWork" }
 androidx-material-icons-extended = { module = "androidx.compose.material:material-icons-extended", version.ref = "materialIconsExtended" }
 androidx-media3-datasource-v161 = { module = "androidx.media3:media3-datasource", version.ref = "media3DatasourceVersion" }
 #noinspection SimilarGradleDependency
@@ -48,18 +45,19 @@ kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serializa
 logging-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "okhttp" }
 annotation = { module = "androidx.annotation:annotation", version.ref = "annotation" }
 dotenv-vault-kotlin = { module = "com.github.dotenv-org:dotenv-vault-kotlin", version.ref = "dotenvVaultKotlin" }
-guava = { group = "com.google.guava", name = "guava", version = "33.4.8-android" }
+guava = { group = "com.google.guava", name = "guava", version = "33.5.0-android" }
 coroutines-guava = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-guava", version = "1.10.2" }
 concurrent-futures = { group = "androidx.concurrent", name = "concurrent-futures-ktx", version = "1.3.0" }
 
 gradle = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
-activity = { group = "androidx.activity", name = "activity-compose", version = "1.10.1" }
-navigation = { group = "androidx.navigation", name = "navigation-compose", version = "2.9.2" }
-hilt-navigation = { group = "androidx.hilt", name = "hilt-navigation-compose", version = "1.2.0" }
+activity = { group = "androidx.activity", name = "activity-compose", version = "1.11.0" }
+navigation = { group = "androidx.navigation", name = "navigation-compose", version = "2.9.5" }
+hilt-navigation = { group = "androidx.hilt", name = "hilt-navigation-compose", version = "1.3.0" }
 datastore = { group = "androidx.datastore", name = "datastore-preferences", version = "1.1.7" }
 
 compose-runtime = { group = "androidx.compose.runtime", name = "runtime", version.ref = "compose" }
-compose-foundation = { group = "androidx.compose.foundation", name = "foundation", version = "1.8.3" }
+#noinspection SimilarGradleDependency
+compose-foundation = { group = "androidx.compose.foundation", name = "foundation", version = "1.9.2" }
 compose-ui = { group = "androidx.compose.ui", name = "ui", version.ref = "compose" }
 compose-ui-util = { group = "androidx.compose.ui", name = "ui-util", version.ref = "compose" }
 compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling", version.ref = "compose" }
@@ -67,7 +65,7 @@ compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling", versi
 compose-animation = { group = "androidx.compose.animation", name = "animation-graphics", version.ref = "compose" }
 #noinspection SimilarGradleDependency
 compose-animation-graphics = { group = "androidx.compose.animation", name = "animation-graphics", version.ref = "compose" }
-compose-reorderable = { module = "sh.calvin.reorderable:reorderable", version = "2.5.1" }
+compose-reorderable = { module = "sh.calvin.reorderable:reorderable", version = "3.0.0" }
 
 okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
 onesignal = { module = "com.onesignal:OneSignal", version.ref = "onesignal" }
@@ -95,7 +93,7 @@ room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "
 room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
 room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
 
-apache-lang3 = { group = "org.apache.commons", name = "commons-lang3", version = "3.18.0" }
+apache-lang3 = { group = "org.apache.commons", name = "commons-lang3", version = "3.19.0" }
 
 #noinspection SimilarGradleDependency
 hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
@@ -111,7 +109,7 @@ json = { module = "org.json:json", version.ref = "json" }
 
 brotli = { group = "org.brotli", name = "dec", version = "0.1.2" }
 
-opencc4j = { group = "com.github.houbb", name = "opencc4j", version = "1.13.1" }
+opencc4j = { group = "com.github.houbb", name = "opencc4j", version = "1.14.0" }
 
 desugaring = { group = "com.android.tools", name = "desugar_jdk_libs", version = "2.1.5" }
 
@@ -120,13 +118,13 @@ junit = { group = "junit", name = "junit", version = "4.13.2" }
 timber = { group = "com.jakewharton.timber", name = "timber", version = "5.0.1" }
 
 google-services = { module = "com.google.gms:google-services", version = "4.4.3" }
-firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version = "33.16.0" }
+firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version = "34.3.0" }
 firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics-ktx" }
 firebase-crashlytics = { group = "com.google.firebase", name = "firebase-crashlytics-ktx" }
-firebase-crashlytics-plugin = { module = "com.google.firebase:firebase-crashlytics-gradle", version = "3.0.4" }
+firebase-crashlytics-plugin = { module = "com.google.firebase:firebase-crashlytics-gradle", version = "3.0.6" }
 firebase-config = { group = "com.google.firebase", name = "firebase-config-ktx" }
 firebase-perf = { group = "com.google.firebase", name = "firebase-perf-ktx" }
-firebase-perf-plugin = { module = "com.google.firebase:perf-plugin", version = "1.4.2" }
+firebase-perf-plugin = { module = "com.google.firebase:perf-plugin", version = "2.0.1" }
 
 #Use newpipe-extractor latest version
 newpipe-extractor = { group = "com.github.TeamNewPipe", name = "NewPipeExtractor", version = "v0.24.6" }
@@ -139,6 +137,7 @@ nanojson = { group = "com.github.TeamNewPipe", name = "nanojson", version = "1d9
 androidx-webkit = { group = "androidx.webkit", name = "webkit", version = "1.14.0" }
 androidx-media3-exoplayer-workmanager = { group = "androidx.media3", name = "media3-exoplayer-workmanager", version.ref = "media3ExoplayerWorkmanager" }
 androidx-media3-ui = { group = "androidx.media3", name = "media3-ui", version.ref = "media3Ui" }
+#noinspection SimilarGradleDependency
 androidx-foundation = { group = "androidx.compose.foundation", name = "foundation", version.ref = "foundation" }
 
 [plugins]
