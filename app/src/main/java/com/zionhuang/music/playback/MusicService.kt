@@ -209,23 +209,6 @@ class MusicService : MediaLibraryService(),
         val notificationManager = getSystemService(NotificationManager::class.java)
         notificationManager.createNotificationChannel(channel)
 
-        val notification = NotificationCompat.Builder(this, "MUSIC_CHANNEL")
-            .setContentTitle(getString(R.string.musicTitleNotification))
-            .setContentText(getString(R.string.musicDescNotification))
-            .setSmallIcon(R.drawable.joss_music_logo)
-            .setPriority(NotificationCompat.PRIORITY_LOW)
-            .build()
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
-            if (checkSelfPermission(android.Manifest.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK) == PackageManager.PERMISSION_GRANTED) {
-                startForeground(1, notification)
-            } else {
-                Timber.tag("MusicService").w("Falta permiso FOREGROUND_SERVICE_MEDIA_PLAYBACK")
-            }
-        } else {
-            startForeground(1, notification)
-        }
-
         setMediaNotificationProvider(
             DefaultMediaNotificationProvider(this, { NOTIFICATION_ID }, CHANNEL_ID, R.string.music_player)
                 .apply { setSmallIcon(R.drawable.joss_music_logo) }
@@ -355,6 +338,24 @@ class MusicService : MediaLibraryService(),
                 if (dataStore.get(PersistentQueueKey, true)) saveQueueToDisk()
             }
         }
+    }
+
+
+    // Este metodo se ejecuta cuando se llama a startForegroundService()
+    override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
+        super.onStartCommand(intent, flags, startId)
+        // Creamos la notificación que se mostrará
+        val notification = NotificationCompat.Builder(this, "MUSIC_CHANNEL")
+            .setContentTitle(getString(R.string.musicTitleNotification))
+            .setContentText(getString(R.string.musicDescNotification))
+            .setSmallIcon(R.drawable.joss_music_logo)
+            .setPriority(NotificationCompat.PRIORITY_LOW)
+            .build()
+
+        startForeground(1, notification)
+
+        // Devuelve el comportamiento deseado para el servicio
+        return START_STICKY
     }
 
     private fun updateNotification() {

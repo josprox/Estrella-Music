@@ -171,15 +171,16 @@ class MainActivity : ComponentActivity() {
 
     private fun bindMusicService() {
         val serviceIntent = Intent(this, MusicService::class.java)
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
-            if (ProcessLifecycleOwner.get().lifecycle.currentState.isAtLeast(Lifecycle.State.STARTED)) {
-                ContextCompat.startForegroundService(this, serviceIntent)
-            } else {
-                Timber.tag("MainActivity").w("No se puede iniciar el servicio en background")
-            }
+
+        // 1. La condición ahora es para Android 8 (Oreo) o superior.
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            ContextCompat.startForegroundService(this, serviceIntent)
         } else {
+            // Esto solo se ejecutará en versiones muy antiguas de Android (anteriores a Oreo).
             startService(serviceIntent)
         }
+
+        // 2. El bindService se hace después de iniciar el servicio correctamente.
         bindService(serviceIntent, serviceConnection, BIND_AUTO_CREATE)
     }
 
