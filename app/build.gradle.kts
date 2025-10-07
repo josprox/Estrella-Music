@@ -12,7 +12,7 @@ plugins {
     kotlin("plugin.serialization") version "1.9.0"
 }
 
-// Los plugins de Firebase se aplicarán solo si la variable isFullBuild es verdadera
+// Plugins de Firebase solo si isFullBuild es true y no es pull request
 if (isFullBuild && System.getenv("PULL_REQUEST") == null) {
     apply(plugin = "com.google.gms.google-services")
     apply(plugin = "com.google.firebase.crashlytics")
@@ -22,7 +22,6 @@ if (isFullBuild && System.getenv("PULL_REQUEST") == null) {
 android {
     namespace = "com.zionhuang.music"
     compileSdk = 36
-    // buildToolsVersion = "36.0.0"
 
     defaultConfig {
         applicationId = "com.josprox.jossmusic"
@@ -38,7 +37,10 @@ android {
             isMinifyEnabled = true
             isShrinkResources = true
             isCrunchPngs = false
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
             buildConfigField("String", "DOTENV_KEY", System.getenv("DOTENV_KEY") ?: "\"\"")
             signingConfig = signingConfigs.getByName("debug")
         }
@@ -49,40 +51,31 @@ android {
         }
     }
 
-    // Dimensiones de Flavors: una para la versión (full/foss) y otra para la arquitectura (abi)
     flavorDimensions += listOf("version", "abi")
 
     productFlavors {
-        // --- Sabores de Versión ---
-        create("full") {
-            dimension = "version"
-        }
-        create("foss") {
-            dimension = "version"
-        }
+        // Version flavors
+        create("full") { dimension = "version" }
+        create("foss") { dimension = "version" }
 
-        // --- Sabores de Arquitectura (ABI) ---
+        // ABI flavors
         create("arm64") {
             dimension = "abi"
-            ndk {
-                abiFilters.add("arm64-v8a")
-            }
+            ndk { abiFilters.add("arm64-v8a") }
             setProperty("archivesBaseName", "jossmusic-arm64")
         }
         create("universal") {
             dimension = "abi"
-            ndk {
-                abiFilters.addAll(listOf("armeabi-v7a", "arm64-v8a", "x86_64", "x86"))
-            }
+            ndk { abiFilters.addAll(listOf("armeabi-v7a", "arm64-v8a", "x86_64", "x86")) }
             setProperty("archivesBaseName", "jossmusic-universal")
         }
     }
 
     signingConfigs {
         getByName("debug") {
-            if (System.getenv("MUSIC_DEBUG_SIGNING_STORE_PASSWORD") != null) {
+            System.getenv("MUSIC_DEBUG_SIGNING_STORE_PASSWORD")?.let {
                 storeFile = file(System.getenv("MUSIC_DEBUG_KEYSTORE_FILE"))
-                storePassword = System.getenv("MUSIC_DEBUG_SIGNING_STORE_PASSWORD")
+                storePassword = it
                 keyAlias = "debug"
                 keyPassword = System.getenv("MUSIC_DEBUG_SIGNING_KEY_PASSWORD")
             }
@@ -94,20 +87,9 @@ android {
         compose = true
     }
 
-//    compileOptions {
-//        isCoreLibraryDesugaringEnabled = true
-//        sourceCompatibility = JavaVersion.VERSION_17
-//        targetCompatibility = JavaVersion.VERSION_17
-//    }
-
     kotlin {
         jvmToolchain(21)
     }
-
-//    kotlinOptions {
-//        freeCompilerArgs = freeCompilerArgs + "-Xcontext-receivers"
-//        jvmTarget = "17"
-//    }
 
     testOptions {
         unitTests.isIncludeAndroidResources = true
@@ -133,7 +115,7 @@ ksp {
 }
 
 dependencies {
-    // --- DEPENDENCIAS BASE (COMUNES A TODAS LAS VERSIONES) ---
+    // --- DEPENDENCIAS BASE ---
     implementation(libs.guava)
     implementation(libs.coroutines.guava)
     implementation(libs.concurrent.futures)
@@ -206,11 +188,10 @@ dependencies {
     implementation(libs.onesignal)
     implementation(libs.androidx.media3.exoplayer.v131)
 
-    implementation("androidx.work:work-runtime-ktx:2.10.3")
-    implementation("androidx.hilt:hilt-work:1.2.0")
+    implementation("androidx.work:work-runtime-ktx:2.10.5")
+    implementation("androidx.hilt:hilt-work:1.3.0")
 
     // --- DEPENDENCIAS PARA LA VERSIÓN "full" ---
-    "fullImplementation"(platform(libs.firebase.bom))
     "fullImplementation"(libs.firebase.analytics)
     "fullImplementation"(libs.firebase.crashlytics)
     "fullImplementation"(libs.firebase.config)
