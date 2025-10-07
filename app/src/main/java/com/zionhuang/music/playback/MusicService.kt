@@ -1,5 +1,6 @@
 package com.zionhuang.music.playback
 
+
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
@@ -181,6 +182,7 @@ class MusicService : MediaLibraryService(),
     val playerVolume = MutableStateFlow(dataStore.get(PlayerVolumeKey, 1f).coerceIn(0f, 1f))
     private val sleepTimerFinish = MutableStateFlow(dataStore.get(SleepFinishSong, false))
 
+    // --- Clave segura de JossRed cargada perezosamente (sin paréntesis al usarla) ---
     private val jossRedKey: String by lazy{ SecureKeys.getJossRedKey() }
 
     lateinit var sleepTimer: SleepTimer
@@ -340,25 +342,6 @@ class MusicService : MediaLibraryService(),
                 if (dataStore.get(PersistentQueueKey, true)) saveQueueToDisk()
             }
         }
-    }
-
-
-    // Este metodo se ejecuta cuando se llama a startForegroundService()
-    override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-        super.onStartCommand(intent, flags, startId)
-        // Creamos la notificación que se mostrará
-        val notification =
-            NotificationCompat.Builder(this, "MUSIC_CHANNEL")
-                .setContentTitle(getString(R.string.musicTitleNotification))
-                .setContentText(getString(R.string.musicDescNotification))
-                .setSmallIcon(R.drawable.joss_music_logo)
-                .setPriority(NotificationCompat.PRIORITY_LOW)
-                .build()
-
-        startForeground(1, notification)
-
-        // Devuelve el comportamiento deseado para el servicio
-        return START_STICKY
     }
 
     private fun updateNotification() {
@@ -637,86 +620,80 @@ class MusicService : MediaLibraryService(),
     }
 
 
-    private fun
-            createDataSourceFactory(): DataSource.Factory {
+    private fun createDataSourceFactory(): DataSource.Factory {
         return ResolvingDataSource.Factory(createCacheDataSource()) { dataSpec ->
             val mediaId = dataSpec.key ?: error("No media id")
-            Timber.d("Resolving DataSpec for mediaId: $mediaId")
+            Timber.d("Resolviendo DataSpec para mediaId: $mediaId")
 
-            // 1) Si está descargado, usar cache
+            // 1. Verificar caché de descargas
             if (downloadCache.isCached(mediaId, dataSpec.position, if (dataSpec.length >= 0) dataSpec.length else 1)) {
                 Timber.i("Media '$mediaId' encontrado en la caché de descargas. Usando el archivo local.")
                 scope.launch(Dispatchers.IO) { recoverSong(mediaId) }
                 return@Factory dataSpec
             }
 
-            // 2) Decidir la estrategia de streaming
-            val useJossRed = runBlocking { shouldUseJossRedFirst() }
-            Timber.i("Evaluando estrategia: ¿Usar Joss Red como fuente principal? -> $useJossRed")
+            val useJossRedAsPrimary = runBlocking { shouldUseJossRedFirst() }
 
-            if (useJossRed) {
+            // 2. Estrategia Principal: JOSS RED (si está activado por el usuario)
+            if (useJossRedAsPrimary) {
+                Timber.i("Estrategia Principal: JOSS RED (Activado por el usuario).")
                 try {
-                    Timber.i("Estrategia: JOSS RED. Intentando obtener stream desde la API...")
                     if (jossRedKey.isBlank()) {
-                        Timber.e("La clave de Joss Red está vacía. No se puede continuar por esta vía.")
                         throw JossRedClient.JossRedException(-1, "La clave de Joss Red está vacía en la app.")
                     }
-                    val modifiedDataSpec = JossRedClient.resolveDataSpec(
-                        context = this@MusicService,
-                        original = dataSpec,
-                        mediaId = mediaId,
-                        secretKey = jossRedKey
-                    )
+                    val modifiedDataSpec = JossRedClient.resolveDataSpec(this@MusicService, dataSpec, mediaId, jossRedKey)
                     Timber.i("Joss Red resolvió la URL del CDN exitosamente para '$mediaId'.")
+                    scope.launch(Dispatchers.IO) { recoverSong(mediaId) }
                     return@Factory modifiedDataSpec
                 } catch (e: Exception) {
-                    Timber.e(e, "Falló la obtención del stream desde Joss Red. Esto es un error fatal para la reproducción actual.")
-                    // IMPORTANTE: En lugar de continuar, propagamos el error para que ExoPlayer lo muestre.
-                    // Esto evita el fallback al metodo roto de NewPipe.
-                    handlePlaybackError(e)
+                    Timber.e(e, "La estrategia principal (Joss Red) falló. Esto es un error fatal para la reproducción.")
+                    handlePlaybackError(e) // Lanza el error para que el usuario sepa qué falló.
                 }
-            } else {
-                // Este bloque solo se ejecuta si el switch de Joss Red está apagado o no hay JWT
-                Timber.w("Estrategia: FALLBACK. Joss Red no fue seleccionado. Intentando con el método de YouTube (NewPipe)...")
+            }
 
-                var retryCount = 0
-                var lastError: Throwable? = null
-
-                while (retryCount < 4) {
-                    try {
-                        val playbackData = runBlocking(Dispatchers.IO) {
-                            YTPlayerUtils.playerResponseForPlayback(
-                                mediaId,
-                                audioQuality = audioQuality,
-                                connectivityManager = connectivityManager,
-                            ).getOrThrow()
-                        }
-
-                        updateFormatInfo(mediaId, playbackData.format, playbackData.audioConfig?.loudnessDb)
-                        scope.launch(Dispatchers.IO) { recoverSong(mediaId, playbackData) }
-
-                        val streamUrl = playbackData.streamUrl
-                        Timber.i("Fallback de YouTube exitoso (intento ${retryCount + 1}): $streamUrl")
-                        return@Factory dataSpec.withUri(streamUrl.toUri())
-
-                    } catch (e: Exception) {
-                        lastError = e
-                        if (e is YTPlayerUtils.PlaybackException && e.statusCode == 403) {
-                            retryCount++
-                            if (retryCount < 4) {
-                                Timber.w(e, "Fallback de YouTube falló con 403 (intento $retryCount), reintentando...")
-                            }
-                        } else {
-                            Timber.e(e, "Fallback de YouTube falló con un error no recuperable.")
-                            break
-                        }
+            // 3. Estrategia Principal: YOUTUBE/NEWPIPE (si Joss Red está desactivado)
+            Timber.i("Estrategia Principal: YOUTUBE/NEWPIPE (Joss Red desactivado o sin login).")
+            var lastError: Throwable? = null
+            repeat(4) { attempt ->
+                try {
+                    val playbackData = runBlocking(Dispatchers.IO) {
+                        YTPlayerUtils.playerResponseForPlayback(mediaId, null, audioQuality, connectivityManager).getOrThrow()
+                    }
+                    updateFormatInfo(mediaId, playbackData.format, playbackData.audioConfig?.loudnessDb)
+                    scope.launch(Dispatchers.IO) { recoverSong(mediaId, playbackData) }
+                    val streamUrl = playbackData.streamUrl
+                    Timber.i("YouTube/NewPipe exitoso (intento ${attempt + 1}): $streamUrl")
+                    return@Factory dataSpec.withUri(streamUrl.toUri())
+                } catch (e: Exception) {
+                    lastError = e
+                    if (e is YTPlayerUtils.PlaybackException && e.statusCode == 403) {
+                        Timber.w(e, "YouTube/NewPipe falló con 403 (intento ${attempt + 1}), reintentando...")
+                    } else {
+                        Timber.e(e, "YouTube/NewPipe falló con un error no recuperable.")
+                        return@repeat // Salir del bucle de reintentos
                     }
                 }
-
-                // Si llegamos aquí, todos los intentos de fallback fallaron.
-                Timber.e(lastError, "Todos los métodos de fallback para '$mediaId' han fallado.")
-                handlePlaybackError(lastError ?: Exception("Error desconocido al obtener URL de streaming desde el fallback."))
             }
+
+            // 4. FALLBACK INTELIGENTE A JOSS RED
+            // Se llega aquí SOLO si la estrategia de YouTube/NewPipe falló.
+            Timber.w("La estrategia principal (YouTube/NewPipe) falló. Verificando si es posible un fallback inteligente a Joss Red.")
+            if (hasJwt() && jossRedKey.isNotBlank()) {
+                Timber.i("Usuario logueado. Intentando fallback inteligente a Joss Red...")
+                try {
+                    val modifiedDataSpec = JossRedClient.resolveDataSpec(this@MusicService, dataSpec, mediaId, jossRedKey)
+                    Timber.i("¡Fallback inteligente a Joss Red exitoso para '$mediaId'!")
+                    scope.launch(Dispatchers.IO) { recoverSong(mediaId) }
+                    return@Factory modifiedDataSpec
+                } catch (fallbackError: Exception) {
+                    Timber.e(fallbackError, "El fallback inteligente a Joss Red también falló. Reportando el error original de YouTube/NewPipe.")
+                    handlePlaybackError(lastError ?: fallbackError) // Reportar el error original es más informativo
+                }
+            }
+
+            // 5. Error Final
+            Timber.e(lastError, "Todos los métodos de obtención de stream para '$mediaId' han fallado.")
+            handlePlaybackError(lastError ?: Exception("No se pudo obtener la URL del stream por ningún método."))
         }
     }
 
@@ -744,14 +721,14 @@ class MusicService : MediaLibraryService(),
             }
             is JossRedClient.JossRedException -> { // Manejo específico para tus errores
                 throw PlaybackException(
-                    throwable.message,
+                    throwable.message ?: "Error en la API de Joss Red",
                     throwable,
                     PlaybackException.ERROR_CODE_REMOTE_ERROR
                 )
             }
             else -> throw
             PlaybackException(
-                getString(R.string.error_unknown),
+                throwable.message ?: getString(R.string.error_unknown),
                 throwable,
                 PlaybackException.ERROR_CODE_REMOTE_ERROR
             )
