@@ -135,4 +135,8 @@
   <string name="addAllLikeSounds">मलाई सबै गीत मन पर्छ?</string>
   <string name="addAllLikeSoundsDesc">यसले मनपर्ने र तपाईंको पुस्तकालयमा सबै गीतहरू थप्नेछ। यो कार्य पूर्ववत गर्न सकिदैन।</string>
   <string name="songsAddedFavorites">गीतहरू मनपर्नेमा थपिए</string>
+  <string name="previous_track">अघिल्लो ट्रयाक</string>
+  <string name="next_track">अर्को ट्र्याक</string>
+  <string name="play_pause">पज गर्नुहोस्</string>
+  <string name="music_widget_description">यो मुख्य एस्ट्रेला संगीत विजेट हो, तपाईंको सबै सामग्री एक ठाउँमा प्रबन्ध गर्नुहोस्</string>
 </resources>

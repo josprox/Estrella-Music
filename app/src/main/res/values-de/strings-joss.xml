@@ -169,4 +169,8 @@
   <string name="addAllLikeSounds">Mag ich alle Songs?</string>
   <string name="addAllLikeSoundsDesc">Dadurch werden alle Songs zu Favoriten und Ihrer Bibliothek hinzugefügt. Diese Aktion kann nicht rückgängig gemacht werden.</string>
   <string name="songsAddedFavorites">Die Songs wurden zu Favoriten hinzugefügt</string>
+  <string name="previous_track">Vorheriger Titel</string>
+  <string name="next_track">Nächster Track</string>
+  <string name="play_pause">Spielpause</string>
+  <string name="music_widget_description">Dies ist das Haupt -Widget von Estrella Music und verwaltet Ihren gesamten Inhalt an einem Ort</string>
 </resources>

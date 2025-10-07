@@ -190,4 +190,8 @@
   <string name="addAllLikeSounds">ମୁଁ ସମସ୍ତ ଗୀତକୁ ପସନ୍ଦ କରେ କି?</string>
   <string name="addAllLikeSoundsDesc">ଏହା ପସନ୍ଦ କରେ ଏବଂ ତୁମର ଲାଇବ୍ରେରୀର ସମସ୍ତ ଗୀତ ଯୋଗ କରିବ | ଏହି କାର୍ଯ୍ୟକୁ ପୂର୍ବବତ୍ କରାଯାଇପାରିବ ନାହିଁ |</string>
   <string name="songsAddedFavorites">ଗୀତଗୁଡ଼ିକ ପସନ୍ଦରେ ଯୋଗ କରାଯାଇଥିଲା |</string>
+  <string name="previous_track">ପୂର୍ବ ଟ୍ରାକ୍</string>
+  <string name="next_track">ପରବର୍ତ୍ତୀ ଟ୍ରାକ୍ |</string>
+  <string name="play_pause">ବିରାମ ଖେଳନ୍ତୁ |</string>
+  <string name="music_widget_description">ଏହା ହେଉଛି ମୁଖ୍ୟ ପିତୃଲା ମ୍ୟୁଜିକ୍ ୱିଜେଟ୍, ଗୋଟିଏ ସ୍ଥାନରେ ଆପଣଙ୍କର ସମସ୍ତ ବିଷୟବସ୍ତୁ ପରିଚାଳନା କରନ୍ତୁ |</string>
 </resources>

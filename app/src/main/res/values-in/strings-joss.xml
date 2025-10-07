@@ -169,4 +169,8 @@
   <string name="addAllLikeSounds">Apakah saya menyukai semua lagu?</string>
   <string name="addAllLikeSoundsDesc">Ini akan menambahkan semua lagu ke favorit dan perpustakaan Anda. Tindakan ini tidak bisa dibatalkan.</string>
   <string name="songsAddedFavorites">Lagu -lagunya ditambahkan ke favorit</string>
+  <string name="previous_track">Trek sebelumnya</string>
+  <string name="next_track">Trek berikutnya</string>
+  <string name="play_pause">Mainkan jeda</string>
+  <string name="music_widget_description">Ini adalah widget utama Estrella Music, kelola semua konten Anda di satu tempat</string>
 </resources>

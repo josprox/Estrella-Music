@@ -50,13 +50,14 @@
         <!-- Widget de música -->
         <receiver
             android:name=".MusicWidgetProvider"
-            android:exported="true">
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
+
             <meta-data
                 android:name="android.appwidget.provider"
-                android:resource="@xml/widget_provider" />
+                android:resource="@xml/appwidget_provider_info" />
         </receiver>
 
         <uses-library

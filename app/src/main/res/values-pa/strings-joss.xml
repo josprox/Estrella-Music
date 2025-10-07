@@ -189,4 +189,8 @@
   <string name="addAllLikeSounds">ਕੀ ਮੈਨੂੰ ਸਾਰੇ ਗਾਣੇ ਪਸੰਦ ਹਨ?</string>
   <string name="addAllLikeSoundsDesc">ਇਹ ਸਾਰੇ ਗਾਣੇ ਮਨਪਸੰਦਾਂ ਅਤੇ ਤੁਹਾਡੀ ਲਾਇਬ੍ਰੇਰੀ ਵਿੱਚ ਸ਼ਾਮਲ ਕਰੇਗਾ. ਇਸ ਕਿਰਿਆ ਨੂੰ ਵਾਪਸ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ.</string>
   <string name="songsAddedFavorites">ਗਾਣਾਂ ਨੂੰ ਮਨਪਸੰਦ ਵਿੱਚ ਸ਼ਾਮਲ ਕੀਤੇ ਗਏ ਸਨ</string>
+  <string name="previous_track">ਪਿਛਲਾ ਟਰੈਕ</string>
+  <string name="next_track">ਅਗਲਾ ਟਰੈਕ</string>
+  <string name="play_pause">ਖੇਡੋ ਖੇਡੋ</string>
+  <string name="music_widget_description">ਇਹ ਐਸਟਰੇਲਾ ਸੰਗੀਤ ਦਾ ਮੁੱਖ ਵਿਜੇਟ ਹੈ, ਤੁਹਾਡੀ ਪੂਰੀ ਸਮੱਗਰੀ ਨੂੰ ਇਕ ਜਗ੍ਹਾ ਤੇ ਪ੍ਰਬੰਧਨ ਕਰਦਾ ਹੈ</string>
 </resources>

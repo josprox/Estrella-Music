@@ -135,4 +135,8 @@
   <string name="addAllLikeSounds">Kas mulle meeldivad kõik laulud?</string>
   <string name="addAllLikeSoundsDesc">See lisab lemmikutesse ja teie raamatukogule kõik laulud. Seda toimingut ei saa tagasi võtta.</string>
   <string name="songsAddedFavorites">Laulud lisati lemmikutesse</string>
+  <string name="previous_track">Eelmine pala</string>
+  <string name="next_track">Järgmine pala</string>
+  <string name="play_pause">Pausi mängima</string>
+  <string name="music_widget_description">See on peamine Estrella muusika vidin, hallake kogu oma sisu ühes kohas</string>
 </resources>

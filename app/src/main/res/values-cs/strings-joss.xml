@@ -169,4 +169,8 @@
   <string name="addAllLikeSounds">Líbí se mi všechny písně?</string>
   <string name="addAllLikeSoundsDesc">Tím se přidá všechny skladby do oblíbených a vaší knihovny. Tuto akci nelze vrátit zpět.</string>
   <string name="songsAddedFavorites">Písně byly přidány do oblíbených</string>
+  <string name="previous_track">Předchozí skladba</string>
+  <string name="next_track">Další skladba</string>
+  <string name="play_pause">Hrajte pauzu</string>
+  <string name="music_widget_description">Toto je hlavní hudební widget Estrella, spravujte veškerý svůj obsah na jednom místě</string>
 </resources>

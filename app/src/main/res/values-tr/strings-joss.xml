@@ -169,4 +169,8 @@
   <string name="addAllLikeSounds">Tüm şarkıları beğendim mi?</string>
   <string name="addAllLikeSoundsDesc">Bu, tüm şarkıları favorilere ve kütüphanenize ekleyecektir. Bu eylem geri alınamaz.</string>
   <string name="songsAddedFavorites">Şarkılar favorilere eklendi</string>
+  <string name="previous_track">Önceki parça</string>
+  <string name="next_track">Sonraki parça</string>
+  <string name="play_pause">Duraklamak</string>
+  <string name="music_widget_description">Bu ana Estrella Müzik widget\'idir, tüm içeriğinizi tek bir yerden yönetin</string>
 </resources>

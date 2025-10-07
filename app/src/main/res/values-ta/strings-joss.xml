@@ -135,4 +135,8 @@
   <string name="addAllLikeSounds">எல்லா பாடல்களும் எனக்கு பிடிக்குமா?</string>
   <string name="addAllLikeSoundsDesc">இது அனைத்து பாடல்களையும் பிடித்தவை மற்றும் உங்கள் நூலகத்தில் சேர்க்கும். இந்த செயலை செயல்தவிர்க்க முடியாது.</string>
   <string name="songsAddedFavorites">பாடல்கள் பிடித்தவைகளில் சேர்க்கப்பட்டன</string>
+  <string name="previous_track">முந்தைய பாடல்</string>
+  <string name="next_track">அடுத்த பாடல்</string>
+  <string name="play_pause">இடைநிறுத்தம் விளையாடுங்கள்</string>
+  <string name="music_widget_description">இது முக்கிய எஸ்ட்ரெல்லா இசை விட்ஜெட், உங்கள் எல்லா உள்ளடக்கத்தையும் ஒரே இடத்தில் நிர்வகிக்கவும்</string>
 </resources>

@@ -189,4 +189,8 @@
   <string name="addAllLikeSounds">আমি কি সব গান পছন্দ করি?</string>
   <string name="addAllLikeSoundsDesc">এটি সমস্ত গান প্রিয় এবং আপনার লাইব্রেরিতে যুক্ত করবে। এই ক্রিয়াটি পূর্বাবস্থায় ফিরে যেতে পারে না।</string>
   <string name="songsAddedFavorites">গানগুলি প্রিয়তে যুক্ত করা হয়েছিল</string>
+  <string name="previous_track">পূর্ববর্তী ট্র্যাক</string>
+  <string name="next_track">পরবর্তী ট্র্যাক</string>
+  <string name="play_pause">বিরতি খেলুন</string>
+  <string name="music_widget_description">এটি প্রধান এস্ট্রেলা মিউজিক উইজেট, আপনার সমস্ত সামগ্রী এক জায়গায় পরিচালনা করুন</string>
 </resources>

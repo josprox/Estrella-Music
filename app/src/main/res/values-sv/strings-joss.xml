@@ -135,4 +135,8 @@
   <string name="addAllLikeSounds">Gillar jag alla låtar?</string>
   <string name="addAllLikeSoundsDesc">Detta kommer att lägga till alla låtar till favoriter och ditt bibliotek. Denna åtgärd kan inte ångras.</string>
   <string name="songsAddedFavorites">Låtarna lades till i favoriterna</string>
+  <string name="previous_track">Föregående spår</string>
+  <string name="next_track">Nästa spår</string>
+  <string name="play_pause">Spela paus</string>
+  <string name="music_widget_description">Detta är den viktigaste widgeten för Estrella Music, hanterar hela innehållet på ett ställe</string>
 </resources>

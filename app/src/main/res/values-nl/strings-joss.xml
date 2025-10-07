@@ -169,4 +169,8 @@
   <string name="addAllLikeSounds">Vind ik alle nummers leuk?</string>
   <string name="addAllLikeSoundsDesc">Dit voegt alle nummers toe aan favorieten en je bibliotheek. Deze actie kan niet ongedaan worden gemaakt.</string>
   <string name="songsAddedFavorites">De nummers zijn toegevoegd aan favorieten</string>
+  <string name="previous_track">Vorig nummer</string>
+  <string name="next_track">Volgende nummer</string>
+  <string name="play_pause">Speel pauze</string>
+  <string name="music_widget_description">Dit is de belangrijkste Estrella Music-widget, beheer al uw inhoud op één plek</string>
 </resources>

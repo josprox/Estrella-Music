@@ -135,4 +135,8 @@
   <string name="addAllLikeSounds">क्या मुझे सभी गाने पसंद हैं?</string>
   <string name="addAllLikeSoundsDesc">यह सभी गीतों को पसंदीदा और आपकी लाइब्रेरी में जोड़ देगा। इस एक्शन को वापस नहीं किया जा सकता।</string>
   <string name="songsAddedFavorites">गाने पसंदीदा में जोड़े गए थे</string>
+  <string name="previous_track">पिछला ट्रैक</string>
+  <string name="next_track">अगला ट्रैक</string>
+  <string name="play_pause">खेल को रोकना</string>
+  <string name="music_widget_description">यह एस्ट्रेला संगीत का मुख्य विजेट है, एक स्थान पर आपकी पूरी सामग्री का प्रबंधन करता है</string>
 </resources>

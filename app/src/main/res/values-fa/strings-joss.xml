@@ -134,4 +134,8 @@
   <string name="addAllLikeSounds">آیا من همه آهنگ ها را دوست دارم؟</string>
   <string name="addAllLikeSoundsDesc">این همه آهنگ ها را به موارد دلخواه و کتابخانه شما اضافه می کند. این عمل نمی تواند خنثی شود.</string>
   <string name="songsAddedFavorites">آهنگ ها به موارد دلخواه اضافه شدند</string>
+  <string name="previous_track">مسیر قبلی</string>
+  <string name="next_track">مسیر بعدی</string>
+  <string name="play_pause">مکث</string>
+  <string name="music_widget_description">این ویجت اصلی موسیقی استرلا است ، تمام مطالب خود را در یک مکان مدیریت کنید</string>
 </resources>

@@ -168,4 +168,8 @@
   <string name="addAllLikeSounds">എല്ലാ പാട്ടുകളും എനിക്ക് ഇഷ്ടമാണോ?</string>
   <string name="addAllLikeSoundsDesc">ഇത് എല്ലാ ഗാനങ്ങളും പ്രിയങ്കരങ്ങളിലേക്ക് ചേർക്കും, നിങ്ങളുടെ ലൈബ്രറിയും. ഈ പ്രവർത്തനം പഴയപടിയാക്കാൻ കഴിയില്ല.</string>
   <string name="songsAddedFavorites">പാട്ടുകൾ പ്രിയങ്കരങ്ങളിലേക്ക് ചേർത്തു</string>
+  <string name="previous_track">മുമ്പത്തെ ട്രാക്ക്</string>
+  <string name="next_track">അടുത്ത ട്രാക്ക്</string>
+  <string name="play_pause">താൽക്കാലികമായി നിർത്തുക</string>
+  <string name="music_widget_description">ഇതാണ് പ്രധാന വക്രത സംഗീത വിജറ്റ്, നിങ്ങളുടെ എല്ലാ ഉള്ളടക്കവും ഒരിടത്ത് കൈകാര്യം ചെയ്യുക</string>
 </resources>

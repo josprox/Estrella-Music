@@ -135,4 +135,8 @@
   <string name="addAllLikeSounds">Sviđa li mi se sve pjesme?</string>
   <string name="addAllLikeSoundsDesc">To će dodati sve pjesme u favorite i vašu biblioteku. Ova se radnja ne može poništiti.</string>
   <string name="songsAddedFavorites">Pjesme su dodane u favorite</string>
+  <string name="previous_track">Prethodna pjesma</string>
+  <string name="next_track">Sljedeća pjesma</string>
+  <string name="play_pause">Pauza</string>
+  <string name="music_widget_description">Ovo je glavni widget Estrella Music, upravlja cijelim sadržajem na jednom mjestu</string>
 </resources>

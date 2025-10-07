@@ -169,4 +169,8 @@
   <string name="addAllLikeSounds">Tôi có thích tất cả các bài hát không?</string>
   <string name="addAllLikeSoundsDesc">Điều này sẽ thêm tất cả các bài hát vào mục yêu thích và thư viện của bạn. Hành động này không thể được hoàn tác.</string>
   <string name="songsAddedFavorites">Các bài hát đã được thêm vào yêu thích</string>
+  <string name="previous_track">Bản nhạc trước</string>
+  <string name="next_track">Theo dõi tiếp theo</string>
+  <string name="play_pause">Chơi tạm dừng</string>
+  <string name="music_widget_description">Đây là tiện ích chính của âm nhạc estrella, quản lý toàn bộ nội dung của bạn ở một nơi</string>
 </resources>

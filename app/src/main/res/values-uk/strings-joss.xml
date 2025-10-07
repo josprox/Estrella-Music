@@ -169,4 +169,8 @@
   <string name="addAllLikeSounds">Мені подобаються всі пісні?</string>
   <string name="addAllLikeSoundsDesc">Це додасть усі пісні фаворитам та вашій бібліотеці. Цю дію не можна скасувати.</string>
   <string name="songsAddedFavorites">Пісні були додані до фаворитів</string>
+  <string name="previous_track">Попередній трек</string>
+  <string name="next_track">Наступний трек</string>
+  <string name="play_pause">Грати паузу</string>
+  <string name="music_widget_description">Це головний віджет Estrella Music, керуйте всім своїм вмістом в одному місці</string>
 </resources>

@@ -169,4 +169,8 @@
   <string name="addAllLikeSounds">Харесвам ли всички песни?</string>
   <string name="addAllLikeSoundsDesc">Това ще добави всички песни към любими и вашата библиотека. Това действие не може да бъде отменено.</string>
   <string name="songsAddedFavorites">Песните бяха добавени към любими</string>
+  <string name="previous_track">Предишна песен</string>
+  <string name="next_track">Следваща песен</string>
+  <string name="play_pause">Играйте пауза</string>
+  <string name="music_widget_description">Това е основната джаджа на Estrella Music, управлява цялото ви съдържание на едно място</string>
 </resources>

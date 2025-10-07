@@ -191,4 +191,8 @@
   <string name="addAllLikeSounds">Ці падабаюцца мне ўсе песні?</string>
   <string name="addAllLikeSoundsDesc">Гэта дадасць усе песні ў фаварыты і вашу бібліятэку. Гэта дзеянне не можа быць адменена.</string>
   <string name="songsAddedFavorites">Песні былі дададзены ў абраныя</string>
+  <string name="previous_track">Папярэдні трэк</string>
+  <string name="next_track">Наступны трэк</string>
+  <string name="play_pause">Гуляць у паўзу</string>
+  <string name="music_widget_description">Гэта галоўны музычны віджэт Estrella, кіруйце ўсім сваім зместам у адным месцы</string>
 </resources>

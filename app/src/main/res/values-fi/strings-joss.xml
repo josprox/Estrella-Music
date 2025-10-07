@@ -169,4 +169,8 @@
   <string name="addAllLikeSounds">Pidänkö kaikista kappaleista?</string>
   <string name="addAllLikeSoundsDesc">Tämä lisää kaikki kappaleet suosikkeihin ja kirjastoon. Tätä toimintaa ei voida kumota.</string>
   <string name="songsAddedFavorites">Kappaleet lisättiin suosikkeihin</string>
+  <string name="previous_track">Edellinen kappale</string>
+  <string name="next_track">Seuraava rata</string>
+  <string name="play_pause">Tauko</string>
+  <string name="music_widget_description">Tämä on Estrella -musiikin pääwidget, hallitsee koko sisältöäsi yhdessä paikassa</string>
 </resources>

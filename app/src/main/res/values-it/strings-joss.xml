@@ -135,4 +135,8 @@
   <string name="addAllLikeSounds">Mi piacciono tutte le canzoni?</string>
   <string name="addAllLikeSoundsDesc">Ciò aggiungerà tutti i brani ai preferiti e alla tua biblioteca. Questa azione non può essere annullata.</string>
   <string name="songsAddedFavorites">Le canzoni sono state aggiunte ai preferiti</string>
+  <string name="previous_track">Traccia precedente</string>
+  <string name="next_track">Traccia successiva</string>
+  <string name="play_pause">Riproduci in pausa</string>
+  <string name="music_widget_description">Questo è il widget principale di Estrella Music, gestisci tutti i tuoi contenuti in un unico posto</string>
 </resources>

@@ -169,4 +169,8 @@
   <string name="addAllLikeSounds">Eu gosto de todas as músicas?</string>
   <string name="addAllLikeSoundsDesc">Isso adicionará todas as músicas aos favoritos e sua biblioteca. Esta ação não pode ser desfeita.</string>
   <string name="songsAddedFavorites">As músicas foram adicionadas aos favoritos</string>
+  <string name="previous_track">Faixa anterior</string>
+  <string name="next_track">Próxima faixa</string>
+  <string name="play_pause">Pausa na reprodução</string>
+  <string name="music_widget_description">Este é o principal widget da música Estrella, gerencia todo o seu conteúdo em um só lugar</string>
 </resources>

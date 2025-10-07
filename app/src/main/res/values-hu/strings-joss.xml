@@ -180,4 +180,8 @@
   <string name="addAllLikeSounds">Tetszik az összes dal?</string>
   <string name="addAllLikeSoundsDesc">Ez hozzáadja az összes dalt a kedvencekhez és a könyvtárhoz. Ezt a műveletet nem lehet visszavonni.</string>
   <string name="songsAddedFavorites">A dalokat hozzáadták a kedvencekhez</string>
+  <string name="previous_track">Előző sáv</string>
+  <string name="next_track">Következő pálya</string>
+  <string name="play_pause">Szünetet játszik</string>
+  <string name="music_widget_description">Ez az Estrella Music fő widgetje, egy helyen kezeli a teljes tartalmat</string>
 </resources>
