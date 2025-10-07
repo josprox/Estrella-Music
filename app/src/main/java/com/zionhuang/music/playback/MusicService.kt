@@ -277,6 +277,14 @@ class MusicService : MediaLibraryService(),
             dataStore.edit {settings -> settings[PlayerVolumeKey] = volume }
         }
 
+        // This collector specifically listens for changes in the current song data
+        // (like 'liked' status) and updates the widget accordingly.
+        currentSong
+            .collectLatest(scope) {
+                // When song data changes, launch a coroutine to update the widget.
+                notifyWidget()
+            }
+
         currentSong.debounce(1000).collect(scope){ song ->
             updateNotification()
             if (song != null) discordRpc?.updateSong(song) else discordRpc?.closeRPC()
@@ -356,6 +364,10 @@ class MusicService : MediaLibraryService(),
             }
             MusicWidgetProvider.ACTION_NEXT -> player.seekToNextMediaItem()
             MusicWidgetProvider.ACTION_PREV -> player.seekToPreviousMediaItem()
+            MusicWidgetProvider.ACTION_TOGGLE_LIKE -> {
+                toggleLike()
+                // The reactive `currentSong` collector in onCreate will now handle the widget update automatically.
+            }
         }
         // Let the MediaLibraryService handle its own lifecycle and foreground management
         return super.onStartCommand(intent, flags, startId)
@@ -544,7 +556,7 @@ class MusicService : MediaLibraryService(),
         }
         if (events.containsAny(EVENT_TIMELINE_CHANGED, EVENT_POSITION_DISCONTINUITY, EVENT_IS_PLAYING_CHANGED)) {
             currentMediaMetadata.value = player.currentMetadata
-            notifyWidget()
+            scope.launch { notifyWidget() }
         }
     }
 
@@ -864,7 +876,7 @@ class MusicService : MediaLibraryService(),
     }
 
     // Widget
-    private fun notifyWidget() {
+    private suspend fun notifyWidget() {
         val intent = Intent(this, MusicWidgetProvider::class.java).apply {
             action = MusicWidgetProvider.UPDATE_WIDGET_ACTION
             component = ComponentName(this@MusicService, MusicWidgetProvider::class.java)
@@ -875,6 +887,9 @@ class MusicService : MediaLibraryService(),
                 putString("ARTIST_NAME", metadata?.artist?.toString() ?: getString(R.string.unknownArtist))
                 putBoolean("IS_PLAYING", player.isPlaying)
                 putString("IMAGE_URL", metadata?.artworkUri?.toString())
+                // Añadir estado de "Me Gusta"
+                val isLiked = currentSong.value?.song?.liked ?: false
+                putBoolean("IS_LIKED", isLiked)
             }
             putExtras(extras)
         }

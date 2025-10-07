@@ -1,93 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/widget_root"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
     android:background="@drawable/widget_background"
     android:padding="16dp">
 
-    <!-- Portada del Álbum -->
-    <ImageView
-        android:id="@+id/image_cover"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:src="@drawable/joss_music_logo"
-        android:scaleType="centerCrop"
-        android:contentDescription="@string/albums" />
-
-    <!-- Contenedor para Texto y Controles -->
     <LinearLayout
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:layout_marginStart="16dp"
+        android:orientation="horizontal"
         android:gravity="center_vertical">
 
-        <!-- Título de la Canción -->
-        <TextView
-            android:id="@+id/txt_song_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/untitled"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:maxLines="1"
-            android:ellipsize="end" />
+        <!-- Portada del Álbum -->
+        <ImageView
+            android:id="@+id/image_cover"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/joss_music_logo"
+            android:contentDescription="@string/albums" />
 
-        <!-- Nombre del Artista -->
-        <TextView
-            android:id="@+id/txt_artist_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/unknownArtist"
-            android:textColor="#B3FFFFFF"
-            android:textSize="14sp"
-            android:maxLines="1"
-            android:ellipsize="end"
-            android:layout_marginTop="4dp" />
-
-        <!-- Controles de Reproducción -->
+        <!-- Contenedor para Texto y Controles -->
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="12dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp"
             android:gravity="center_vertical">
 
-            <ImageButton
-                android:id="@+id/btn_prev"
-                android:layout_width="0dp"
-                android:layout_height="48dp"
-                android:layout_weight="1"
-                android:src="@drawable/media3_icon_previous"
-                android:background="?android:attr/selectableItemBackgroundBorderless"
-                android:contentDescription="@string/previous_track"
-                app:tint="@android:color/white" />
+            <!-- Título y Artista -->
+            <TextView
+                android:id="@+id/txt_song_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/untitled"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:ellipsize="end" />
+            <TextView
+                android:id="@+id/txt_artist_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/unknownArtist"
+                android:textColor="#B3FFFFFF"
+                android:textSize="14sp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_marginTop="2dp"/>
 
-            <ImageButton
-                android:id="@+id/btn_play_pause"
-                android:layout_width="0dp"
-                android:layout_height="48dp"
-                android:layout_weight="1"
-                android:src="@drawable/play"
-                android:background="?android:attr/selectableItemBackgroundBorderless"
-                android:contentDescription="@string/play_pause"
-                app:tint="@android:color/white" />
+            <!-- Controles de Reproducción -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical">
 
-            <ImageButton
-                android:id="@+id/btn_next"
-                android:layout_width="0dp"
-                android:layout_height="48dp"
-                android:layout_weight="1"
-                android:src="@drawable/media3_icon_next"
-                android:background="?android:attr/selectableItemBackgroundBorderless"
-                android:contentDescription="@string/next_track"
-                app:tint="@android:color/white" />
+                <ImageButton
+                    android:id="@+id/btn_prev"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/media3_icon_previous"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/previous_track" />
+                <ImageButton
+                    android:id="@+id/btn_play_pause"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_play_arrow"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/play_pause" />
+                <ImageButton
+                    android:id="@+id/btn_next"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/media3_icon_next"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/next_track" />
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+
+    <!-- Botón de Me Gusta -->
+    <ImageButton
+        android:id="@+id/btn_like"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="top|end"
+        android:src="@drawable/favorite_border"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/action_like" />
+
+</FrameLayout>
+

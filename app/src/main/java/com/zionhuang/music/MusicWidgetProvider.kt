@@ -48,6 +48,8 @@ class MusicWidgetProvider : AppWidgetProvider() {
         const val ACTION_PLAY_PAUSE = "com.josprox.jossmusic.PLAY_PAUSE"
         const val ACTION_NEXT = "com.josprox.jossmusic.NEXT"
         const val ACTION_PREV = "com.josprox.jossmusic.PREV"
+        const val ACTION_TOGGLE_LIKE = "com.josprox.jossmusic.TOGGLE_LIKE"
+
 
         private val coroutineScope = CoroutineScope(Dispatchers.IO + Job())
 
@@ -70,10 +72,19 @@ class MusicWidgetProvider : AppWidgetProvider() {
                 if (isPlaying) R.drawable.ic_pause else R.drawable.ic_play_arrow
             )
 
+            // Configurar icono de Me Gusta
+            val isLiked = extras?.getBoolean("IS_LIKED", false) ?: false
+            views.setImageViewResource(
+                R.id.btn_like,
+                if (isLiked) R.drawable.favorite else R.drawable.favorite_border
+            )
+
             // Configurar PendingIntents para los botones
             views.setOnClickPendingIntent(R.id.btn_play_pause, getPendingIntent(context, ACTION_PLAY_PAUSE))
             views.setOnClickPendingIntent(R.id.btn_next, getPendingIntent(context, ACTION_NEXT))
             views.setOnClickPendingIntent(R.id.btn_prev, getPendingIntent(context, ACTION_PREV))
+            views.setOnClickPendingIntent(R.id.btn_like, getPendingIntent(context, ACTION_TOGGLE_LIKE))
+
 
             // Actualización inicial para texto y controles
             appWidgetManager.updateAppWidget(appWidgetId, views)
