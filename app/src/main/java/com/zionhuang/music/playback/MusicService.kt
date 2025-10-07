@@ -11,6 +11,7 @@ import android.database.SQLException
 import android.media.audiofx.AudioEffect
 import android.net.ConnectivityManager
 import android.os.Binder
+import android.os.Bundle
 import androidx.core.app.NotificationCompat
 import androidx.core.content.getSystemService
 import androidx.core.net.toUri
@@ -20,6 +21,7 @@ import androidx.media3.common.C
 import androidx.media3.common.MediaItem
 import androidx.media3.common.PlaybackException
 import androidx.media3.common.Player
+import androidx.media3.common.Player.EVENT_IS_PLAYING_CHANGED
 import androidx.media3.common.Player.EVENT_POSITION_DISCONTINUITY
 import androidx.media3.common.Player.EVENT_TIMELINE_CHANGED
 import androidx.media3.common.Player.REPEAT_MODE_ALL
@@ -148,8 +150,11 @@ import kotlin.math.min
 import kotlin.math.pow
 import kotlin.time.Duration.Companion.seconds
 
+
 @OptIn(ExperimentalCoroutinesApi::class, FlowPreview::class)
+
 @AndroidEntryPoint
+
 class MusicService : MediaLibraryService(),
     Player.Listener,
     PlaybackStatsListener.Callback {
@@ -344,6 +349,19 @@ class MusicService : MediaLibraryService(),
         }
     }
 
+    override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
+        when (intent?.action) {
+            MusicWidgetProvider.ACTION_PLAY_PAUSE -> {
+                if (player.isPlaying) player.pause() else player.play()
+            }
+            MusicWidgetProvider.ACTION_NEXT -> player.seekToNextMediaItem()
+            MusicWidgetProvider.ACTION_PREV -> player.seekToPreviousMediaItem()
+        }
+        // Let the MediaLibraryService handle its own lifecycle and foreground management
+        return super.onStartCommand(intent, flags, startId)
+    }
+
+
     private fun updateNotification() {
         mediaSession.setCustomLayout(
             listOf(
@@ -407,29 +425,6 @@ class MusicService : MediaLibraryService(),
             if (song == null)
                 insert(mediaMetadata.copy(duration = duration))
             else if (song.song.duration == -1) update(song.song.copy(duration = duration))
-        }
-
-        val mediaMetadataSong =
-            withContext(Dispatchers.Main) { player.mediaMetadata }
-        notifyWidget(
-            mediaMetadataSong.title.toString(),
-            mediaMetadataSong.artist.toString(),
-            mediaMetadataSong.durationMs.toString()
-        )
-
-        if (!database.hasRelatedSongs(mediaId))
-        {
-            val relatedEndpoint =
-                YouTube.next(WatchEndpoint(videoId = mediaId)).getOrNull()?.relatedEndpoint ?: return
-            val relatedPage =
-                YouTube.related(relatedEndpoint).getOrNull() ?: return
-            database.query {
-                relatedPage.songs
-                    .map(SongItem::toMediaMetadata)
-                    .onEach(::insert)
-                    .map { RelatedSongMap(songId = mediaId, relatedSongId = it.id) }
-                    .forEach(::insert)
-            }
         }
     }
 
@@ -547,21 +542,15 @@ class MusicService : MediaLibraryService(),
             if (isBufferingOrReady && player.playWhenReady) openAudioEffectSession() else
                 closeAudioEffectSession()
         }
-        if (events.containsAny(EVENT_TIMELINE_CHANGED,EVENT_POSITION_DISCONTINUITY)) {
+        if (events.containsAny(EVENT_TIMELINE_CHANGED, EVENT_POSITION_DISCONTINUITY, EVENT_IS_PLAYING_CHANGED)) {
             currentMediaMetadata.value = player.currentMetadata
+            notifyWidget()
         }
     }
 
     override fun
             onShuffleModeEnabledChanged(shuffleModeEnabled: Boolean) {
         updateNotification()
-        if (shuffleModeEnabled) {
-            val shuffledIndices = IntArray(player.mediaItemCount) { it }
-            shuffledIndices.shuffle()
-            shuffledIndices[shuffledIndices.indexOf(player.currentMediaItemIndex)] = shuffledIndices[0]
-            shuffledIndices[0] = player.currentMediaItemIndex
-            player.setShuffleOrder(DefaultShuffleOrder(shuffledIndices, System.currentTimeMillis()))
-        }
     }
 
     override fun
@@ -875,15 +864,19 @@ class MusicService : MediaLibraryService(),
     }
 
     // Widget
-    private fun notifyWidget(songTitle:
-                             String, artistName: String, imageAlbum: String) {
-        val intent = Intent(this,
-            MusicWidgetProvider::class.java).apply {
-            action =
-                "UPDATE_WIDGET"
-            putExtra("SONG_TITLE", songTitle)
-            putExtra("ARTIST_NAME", artistName)
-            putExtra("IMAGE_ALBUM", imageAlbum)
+    private fun notifyWidget() {
+        val intent = Intent(this, MusicWidgetProvider::class.java).apply {
+            action = MusicWidgetProvider.UPDATE_WIDGET_ACTION
+            component = ComponentName(this@MusicService, MusicWidgetProvider::class.java)
+
+            val extras = Bundle().apply {
+                val metadata = player.currentMediaItem?.mediaMetadata
+                putString("SONG_TITLE", metadata?.title?.toString() ?: getString(R.string.untitled))
+                putString("ARTIST_NAME", metadata?.artist?.toString() ?: getString(R.string.unknownArtist))
+                putBoolean("IS_PLAYING", player.isPlaying)
+                putString("IMAGE_URL", metadata?.artworkUri?.toString())
+            }
+            putExtras(extras)
         }
         sendBroadcast(intent)
     }
