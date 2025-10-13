@@ -6,7 +6,7 @@ dotenvVaultKotlin = "0.0.3"
 hiltAndroid = "2.57.2"
 json = "20250517"
 kotlin = "2.2.20"
-compose = "1.9.2"
+compose = "1.9.3"
 kotlinxSerializationJson = "1.9.0"
 lifecycle = "2.9.4"
 material3 = "1.4.0"
@@ -18,17 +18,17 @@ okhttp = "5.1.0"
 onesignal = "5.1.37"
 paletteKtx = "1.0.0"
 richtextUiMaterial3 = "0.20.0"
-room = "2.8.1"
+room = "2.8.2"
 hilt = "2.57.2"
 ktor = "3.3.0"
 ksp = "2.2.20-2.0.3"
 billingKtx = "8.0.0"
-runtimeLivedata = "1.9.2"
+runtimeLivedata = "1.9.3"
 jetbrainsKotlinJvm = "2.2.20"
 lifecycleProcess = "2.9.4"
 media3ExoplayerWorkmanager = "1.8.0"
 media3Ui = "1.8.0"
-foundation = "1.9.2"
+foundation = "1.9.3"
 
 [libraries]
 
@@ -57,7 +57,7 @@ datastore = { group = "androidx.datastore", name = "datastore-preferences", vers
 
 compose-runtime = { group = "androidx.compose.runtime", name = "runtime", version.ref = "compose" }
 #noinspection SimilarGradleDependency
-compose-foundation = { group = "androidx.compose.foundation", name = "foundation", version = "1.9.2" }
+compose-foundation = { group = "androidx.compose.foundation", name = "foundation", version = "1.9.3" }
 compose-ui = { group = "androidx.compose.ui", name = "ui", version.ref = "compose" }
 compose-ui-util = { group = "androidx.compose.ui", name = "ui-util", version.ref = "compose" }
 compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling", version.ref = "compose" }
@@ -118,13 +118,13 @@ junit = { group = "junit", name = "junit", version = "4.13.2" }
 timber = { group = "com.jakewharton.timber", name = "timber", version = "5.0.1" }
 
 # 🔥 Firebase (sin BOM)
-firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics-ktx", version = "22.1.2" }
-firebase-crashlytics = { group = "com.google.firebase", name = "firebase-crashlytics-ktx", version = "19.1.0" }
-firebase-config = { group = "com.google.firebase", name = "firebase-config-ktx", version = "22.0.1" }
-firebase-perf = { group = "com.google.firebase", name = "firebase-perf-ktx", version = "21.0.1" }
-firebase-crashlytics-plugin = { module = "com.google.firebase:firebase-crashlytics-gradle", version = "3.0.2" }
-firebase-perf-plugin = { module = "com.google.firebase:perf-plugin", version = "1.4.2" }
-google-services = { module = "com.google.gms:google-services", version = "4.4.2" }
+firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics-ktx", version = "22.5.0" }
+firebase-crashlytics = { group = "com.google.firebase", name = "firebase-crashlytics-ktx", version = "19.4.4" }
+firebase-config = { group = "com.google.firebase", name = "firebase-config-ktx", version = "22.1.2" }
+firebase-perf = { group = "com.google.firebase", name = "firebase-perf-ktx", version = "21.0.5" }
+firebase-crashlytics-plugin = { module = "com.google.firebase:firebase-crashlytics-gradle", version = "3.0.6" }
+firebase-perf-plugin = { module = "com.google.firebase:perf-plugin", version = "2.0.1" }
+google-services = { module = "com.google.gms:google-services", version = "4.4.4" }
 
 #Use newpipe-extractor latest version
 newpipe-extractor = { group = "com.github.TeamNewPipe", name = "NewPipeExtractor", version = "v0.24.6" }

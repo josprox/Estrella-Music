@@ -173,4 +173,5 @@
   <string name="next_track">下一曲目</string>
   <string name="play_pause">暂停</string>
   <string name="music_widget_description">这是Estrella音乐的主要小部件，在一个地方管理您的整个内容</string>
+  <string name="notification_initializing">启动音乐服务</string>
 </resources>

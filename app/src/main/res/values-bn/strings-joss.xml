@@ -193,4 +193,5 @@
   <string name="next_track">পরবর্তী ট্র্যাক</string>
   <string name="play_pause">বিরতি খেলুন</string>
   <string name="music_widget_description">এটি প্রধান এস্ট্রেলা মিউজিক উইজেট, আপনার সমস্ত সামগ্রী এক জায়গায় পরিচালনা করুন</string>
+  <string name="notification_initializing">সংগীত পরিষেবা শুরু করা</string>
 </resources>

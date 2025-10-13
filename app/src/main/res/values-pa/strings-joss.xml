@@ -193,4 +193,5 @@
   <string name="next_track">ਅਗਲਾ ਟਰੈਕ</string>
   <string name="play_pause">ਖੇਡੋ ਖੇਡੋ</string>
   <string name="music_widget_description">ਇਹ ਐਸਟਰੇਲਾ ਸੰਗੀਤ ਦਾ ਮੁੱਖ ਵਿਜੇਟ ਹੈ, ਤੁਹਾਡੀ ਪੂਰੀ ਸਮੱਗਰੀ ਨੂੰ ਇਕ ਜਗ੍ਹਾ ਤੇ ਪ੍ਰਬੰਧਨ ਕਰਦਾ ਹੈ</string>
+  <string name="notification_initializing">ਸੰਗੀਤ ਸੇਵਾ ਸ਼ੁਰੂ ਕਰਨਾ</string>
 </resources>

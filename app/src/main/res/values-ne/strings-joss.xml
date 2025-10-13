@@ -139,4 +139,5 @@
   <string name="next_track">अर्को ट्र्याक</string>
   <string name="play_pause">पज गर्नुहोस्</string>
   <string name="music_widget_description">यो मुख्य एस्ट्रेला संगीत विजेट हो, तपाईंको सबै सामग्री एक ठाउँमा प्रबन्ध गर्नुहोस्</string>
+  <string name="notification_initializing">संगीत सेवा सुरू गर्दै</string>
 </resources>

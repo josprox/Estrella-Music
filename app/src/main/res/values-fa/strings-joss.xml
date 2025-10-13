@@ -138,4 +138,5 @@
   <string name="next_track">مسیر بعدی</string>
   <string name="play_pause">مکث</string>
   <string name="music_widget_description">این ویجت اصلی موسیقی استرلا است ، تمام مطالب خود را در یک مکان مدیریت کنید</string>
+  <string name="notification_initializing">شروع سرویس موسیقی</string>
 </resources>

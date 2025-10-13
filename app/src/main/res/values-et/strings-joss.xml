@@ -139,4 +139,5 @@
   <string name="next_track">Järgmine pala</string>
   <string name="play_pause">Pausi mängima</string>
   <string name="music_widget_description">See on peamine Estrella muusika vidin, hallake kogu oma sisu ühes kohas</string>
+  <string name="notification_initializing">Muusikateenuse alustamine</string>
 </resources>

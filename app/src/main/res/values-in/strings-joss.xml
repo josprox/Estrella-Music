@@ -173,4 +173,5 @@
   <string name="next_track">Trek berikutnya</string>
   <string name="play_pause">Mainkan jeda</string>
   <string name="music_widget_description">Ini adalah widget utama Estrella Music, kelola semua konten Anda di satu tempat</string>
+  <string name="notification_initializing">Memulai layanan musik</string>
 </resources>

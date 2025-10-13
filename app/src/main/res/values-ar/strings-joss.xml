@@ -172,4 +172,5 @@
   <string name="next_track">المسار التالي</string>
   <string name="play_pause">لعب وقفة</string>
   <string name="music_widget_description">هذا هو عنصر واجهة المستخدم الرئيسية لموسيقى Estrella ، ويدير محتواك بالكامل في مكان واحد</string>
+  <string name="notification_initializing">بدء خدمة الموسيقى</string>
 </resources>

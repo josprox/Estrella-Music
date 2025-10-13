@@ -139,4 +139,5 @@
   <string name="next_track">Sljedeća pjesma</string>
   <string name="play_pause">Igrajte pauzu</string>
   <string name="music_widget_description">Ovo je glavni estrella muzički widget, upravljate sa svim svojim sadržajem na jednom mjestu</string>
+  <string name="notification_initializing">Pokretanje muzičke usluge</string>
 </resources>

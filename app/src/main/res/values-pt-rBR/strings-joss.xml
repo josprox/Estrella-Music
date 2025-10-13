@@ -173,4 +173,5 @@
   <string name="next_track">Próxima faixa</string>
   <string name="play_pause">Pausa na reprodução</string>
   <string name="music_widget_description">Este é o principal widget da música Estrella, gerencia todo o seu conteúdo em um só lugar</string>
+  <string name="notification_initializing">Iniciando serviço de música</string>
 </resources>

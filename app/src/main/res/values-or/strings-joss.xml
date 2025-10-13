@@ -194,4 +194,5 @@
   <string name="next_track">ପରବର୍ତ୍ତୀ ଟ୍ରାକ୍ |</string>
   <string name="play_pause">ବିରାମ ଖେଳନ୍ତୁ |</string>
   <string name="music_widget_description">ଏହା ହେଉଛି ମୁଖ୍ୟ ପିତୃଲା ମ୍ୟୁଜିକ୍ ୱିଜେଟ୍, ଗୋଟିଏ ସ୍ଥାନରେ ଆପଣଙ୍କର ସମସ୍ତ ବିଷୟବସ୍ତୁ ପରିଚାଳନା କରନ୍ତୁ |</string>
+  <string name="notification_initializing">ମ୍ୟୁଜିକ୍ ସେବା ଆରମ୍ଭ କରିବା |</string>
 </resources>

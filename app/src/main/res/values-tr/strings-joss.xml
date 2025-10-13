@@ -173,4 +173,5 @@
   <string name="next_track">Sonraki parça</string>
   <string name="play_pause">Duraklamak</string>
   <string name="music_widget_description">Bu ana Estrella Müzik widget\'idir, tüm içeriğinizi tek bir yerden yönetin</string>
+  <string name="notification_initializing">Müzik hizmeti başlatılıyor</string>
 </resources>

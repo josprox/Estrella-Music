@@ -58,6 +58,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -111,6 +112,8 @@ class MainActivity : ComponentActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
+        // En onDestroy, un bloqueo corto es menos problemático, pero es buena práctica evitarlo.
+        // Por simplicidad y bajo riesgo, lo dejamos así, ya que el ANR ocurre al inicio.
         if (dataStore.get(StopMusicOnTaskClearKey, false) &&
             playerConnection?.isPlaying?.value == true && isFinishing
         ) {
@@ -172,15 +175,12 @@ class MainActivity : ComponentActivity() {
     private fun bindMusicService() {
         val serviceIntent = Intent(this, MusicService::class.java)
 
-        // 1. La condición ahora es para Android 8 (Oreo) o superior.
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             ContextCompat.startForegroundService(this, serviceIntent)
         } else {
-            // Esto solo se ejecutará en versiones muy antiguas de Android (anteriores a Oreo).
             startService(serviceIntent)
         }
 
-        // 2. El bindService se hace después de iniciar el servicio correctamente.
         bindService(serviceIntent, serviceConnection, BIND_AUTO_CREATE)
     }
 
@@ -215,20 +215,8 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    // =================================================================================
-    // =========== CAMBIO PRINCIPAL: LÓGICA DE VERIFICACIÓN DE SESIÓN ===================
-    // =================================================================================
-
-    /**
-     * Comprueba si el usuario tiene una sesión válida.
-     * - Si hay internet, valida el token contra el servidor.
-     * - Si NO hay internet, comprueba si ya existen credenciales guardadas localmente.
-     * - Si existen, devuelve `true` (permite modo offline).
-     * - Si no existen, devuelve `false` (requiere login).
-     */
     private suspend fun ensureValidSession(): Boolean = withContext(Dispatchers.IO) {
         if (isNetworkAvailable()) {
-            // Conexión disponible: Validar token con el servidor.
             try {
                 Timber.d("Hay conexión. Validando token con el servidor...")
                 val res = auth.checkToken()
@@ -239,32 +227,23 @@ class MainActivity : ComponentActivity() {
                 }
                 ok
             } catch (e: Exception) {
-                // Si hay un error de red a pesar de tener conexión (ej: servidor caído),
-                // es más seguro cerrar sesión para evitar un estado inconsistente.
                 Timber.e(e, "Error inesperado durante la comprobación de sesión con internet.")
                 auth.logout()
                 false
             }
         } else {
-            // Sin conexión a internet:
             Timber.d("No hay conexión a internet.")
-            // Verificamos si el usuario YA TENÍA credenciales guardadas localmente.
-            // Esto evita cerrar la sesión solo por no tener red.
-            val hasLocalCredentials = auth.isLoggedInLocally() // Debes implementar este método
-
+            val hasLocalCredentials = auth.isLoggedInLocally()
             if (hasLocalCredentials) {
                 Timber.i("Usuario sin internet pero con credenciales locales. Permitiendo acceso offline.")
-                true // Permitimos continuar en modo offline.
+                true
             } else {
                 Timber.w("Usuario sin internet y sin credenciales locales. Se requiere login.")
-                false // No hay credenciales, debe ir a la pantalla de login.
+                false
             }
         }
     }
 
-    /**
-     * NUEVA FUNCIÓN: Verifica si el dispositivo tiene una conexión a internet activa.
-     */
     private fun isNetworkAvailable(): Boolean {
         val connectivityManager = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -284,15 +263,15 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    // =================================================================================
-    // ======================= FIN DE LOS CAMBIOS PRINCIPALES ==========================
-    // =================================================================================
-
     private fun maybeStartWelcomeOrApp() {
         lifecycleScope.launch {
             val loggedIn = ensureValidSession()
             val hasDeepLink = intent?.data != null
-            val alreadyShown = applicationContext.dataStore[OnboardingShownKey] == true
+
+            // Leer DataStore de forma asíncrona para no bloquear el hilo principal.
+            val alreadyShown = withContext(Dispatchers.IO) {
+                applicationContext.dataStore.data.first()[OnboardingShownKey] ?: false
+            }
 
             if (hasDeepLink) {
                 if (loggedIn) {
@@ -375,36 +354,12 @@ class MainActivity : ComponentActivity() {
 
     @Composable
     fun jossOnboardingItems(): List<CarouselItem> = listOf(
-        CarouselItem(
-            R.drawable.joss_music_logo,
-            stringResource(R.string.onboarding_welcome_title),
-            stringResource(R.string.onboarding_welcome_desc)
-        ),
-        CarouselItem(
-            R.drawable.download,
-            stringResource(R.string.onboarding_downloads_title),
-            stringResource(R.string.onboarding_downloads_desc)
-        ),
-        CarouselItem(
-            R.drawable.media3_icon_feed,
-            stringResource(R.string.onboarding_links_title),
-            stringResource(R.string.onboarding_links_desc)
-        ),
-        CarouselItem(
-            R.drawable.offline,
-            stringResource(R.string.onboarding_offline_title),
-            stringResource(R.string.onboarding_offline_desc)
-        ),
-        CarouselItem(
-            R.drawable.search,
-            stringResource(R.string.onboarding_search_title),
-            stringResource(R.string.onboarding_search_desc)
-        ),
-        CarouselItem(
-            R.drawable.library_add,
-            stringResource(R.string.onboarding_library_title),
-            stringResource(R.string.onboarding_library_desc)
-        )
+        CarouselItem(R.drawable.joss_music_logo, stringResource(R.string.onboarding_welcome_title), stringResource(R.string.onboarding_welcome_desc)),
+        CarouselItem(R.drawable.download, stringResource(R.string.onboarding_downloads_title), stringResource(R.string.onboarding_downloads_desc)),
+        CarouselItem(R.drawable.media3_icon_feed, stringResource(R.string.onboarding_links_title), stringResource(R.string.onboarding_links_desc)),
+        CarouselItem(R.drawable.offline, stringResource(R.string.onboarding_offline_title), stringResource(R.string.onboarding_offline_desc)),
+        CarouselItem(R.drawable.search, stringResource(R.string.onboarding_search_title), stringResource(R.string.onboarding_search_desc)),
+        CarouselItem(R.drawable.library_add, stringResource(R.string.onboarding_library_title), stringResource(R.string.onboarding_library_desc))
     )
 
     private suspend fun tryScheduleDailyCloudBackup() {
@@ -413,18 +368,25 @@ class MainActivity : ComponentActivity() {
             Timber.d("Auto-backup: no programo porque no hay sesión.")
             return
         }
-        val autoAlways = applicationContext.dataStore[AlwaysCloudBackupKey] ?: true
+
+        // ✅ CORRECCIÓN: Leer DataStore de forma asíncrona.
+        val preferences = withContext(Dispatchers.IO) {
+            applicationContext.dataStore.data.first()
+        }
+        val autoAlways = preferences[AlwaysCloudBackupKey] ?: true
         if (!autoAlways) {
             Timber.d("Auto-backup: usuario lo desactivó.")
             return
         }
+
         val now = System.currentTimeMillis()
-        val firstUse = applicationContext.dataStore[FirstUseAtKey]
+        val firstUse = preferences[FirstUseAtKey]
         if (firstUse == null || firstUse == 0L) {
             applicationContext.dataStore.edit { it[FirstUseAtKey] = now }
             Timber.d("Auto-backup: registré primer uso; esperar 40 minutos.")
             return
         }
+
         val elapsed = now - firstUse
         val needMs = TimeUnit.MINUTES.toMillis(40)
         if (elapsed < needMs) {
@@ -432,6 +394,7 @@ class MainActivity : ComponentActivity() {
             Timber.d("Auto-backup: aún faltan ~${remainMin} min para llegar a 40.")
             return
         }
+
         val constraints = Constraints.Builder()
             .setRequiredNetworkType(NetworkType.CONNECTED)
             .build()
@@ -439,11 +402,7 @@ class MainActivity : ComponentActivity() {
             .setConstraints(constraints)
             .build()
         WorkManager.getInstance(this)
-            .enqueueUniquePeriodicWork(
-                "auto_cloud_backup",
-                ExistingPeriodicWorkPolicy.KEEP,
-                request
-            )
+            .enqueueUniquePeriodicWork("auto_cloud_backup", ExistingPeriodicWorkPolicy.KEEP, request)
         Timber.i("Auto-backup: ¡Programado cada 24h!")
     }
 
@@ -454,3 +413,4 @@ class MainActivity : ComponentActivity() {
         const val ACTION_PLAYLISTS = "com.zionhuang.music.action.PLAYLISTS"
     }
 }
+
