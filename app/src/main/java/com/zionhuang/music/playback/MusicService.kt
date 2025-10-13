@@ -294,6 +294,13 @@ class MusicService : MediaLibraryService(),
             if (song != null) discordRpc?.updateSong(song) else discordRpc?.closeRPC()
         }
 
+        // NUEVO: Colector para el Widget.
+        // Este reaccionará a CUALQUIER cambio en la canción actual.
+        currentSong.collect(scope) {
+            // No usamos debounce porque queremos que la UI reaccione al instante.
+            notifyWidget()
+        }
+
         combine(
             currentMediaMetadata.distinctUntilChangedBy { it?.id },
             dataStore.data.map { it[ShowLyricsKey] ?: false }.distinctUntilChanged()
