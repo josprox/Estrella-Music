@@ -139,5 +139,5 @@
   <string name="next_track">Traccia successiva</string>
   <string name="play_pause">Riproduci in pausa</string>
   <string name="music_widget_description">Questo è il widget principale di Estrella Music, gestisci tutti i tuoi contenuti in un unico posto</string>
-  <string name="notification_initializing">Avvio del servizio musicale</string>
+  <string name="like_all">Come tutti</string>
 </resources>

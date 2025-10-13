@@ -173,5 +173,5 @@
   <string name="next_track">Seuraava rata</string>
   <string name="play_pause">Tauko</string>
   <string name="music_widget_description">Tämä on Estrella -musiikin pääwidget, hallitsee koko sisältöäsi yhdessä paikassa</string>
-  <string name="notification_initializing">Musiikkipalvelun perustaminen</string>
+  <string name="like_all">Kuin kaikki</string>
 </resources>

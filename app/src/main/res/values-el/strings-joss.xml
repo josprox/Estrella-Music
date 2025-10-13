@@ -173,5 +173,5 @@
   <string name="next_track">Επόμενο κομμάτι</string>
   <string name="play_pause">Παίζω παύση</string>
   <string name="music_widget_description">Αυτό είναι το κύριο widget μουσικής Estrella, διαχειριστείτε όλο το περιεχόμενό σας σε ένα μέρος</string>
-  <string name="notification_initializing">Εκκίνηση μουσικής υπηρεσίας</string>
+  <string name="like_all">Όπως όλοι</string>
 </resources>

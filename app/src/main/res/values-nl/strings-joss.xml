@@ -173,5 +173,5 @@
   <string name="next_track">Volgende nummer</string>
   <string name="play_pause">Speel pauze</string>
   <string name="music_widget_description">Dit is de belangrijkste Estrella Music-widget, beheer al uw inhoud op één plek</string>
-  <string name="notification_initializing">Muziekservice starten</string>
+  <string name="like_all">Zoals allemaal</string>
 </resources>

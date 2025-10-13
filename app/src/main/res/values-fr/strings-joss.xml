@@ -170,5 +170,5 @@
   <string name="next_track">Piste suivante</string>
   <string name="play_pause">Lecture en pause</string>
   <string name="music_widget_description">Ceci est le principal widget d\'Estrella Music, gère votre contenu entier en un seul endroit</string>
-  <string name="notification_initializing">Démarrage du service de musique</string>
+  <string name="like_all">Comme tout</string>
 </resources>

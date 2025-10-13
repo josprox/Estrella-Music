@@ -173,5 +173,5 @@
   <string name="next_track">Neste spor</string>
   <string name="play_pause">Spill pause</string>
   <string name="music_widget_description">Dette er den viktigste Estrella Music Widget, administrerer alt innholdet ditt på ett sted</string>
-  <string name="notification_initializing">Starter musikktjeneste</string>
+  <string name="like_all">Som alle</string>
 </resources>

@@ -2,11 +2,25 @@ package com.zionhuang.music.ui.screens.playlist
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.animation.animateColorAsState
-import androidx.compose.animation.core.tween
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.combinedClickable
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.asPaddingValues
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.ime
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.union
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.itemsIndexed
@@ -14,17 +28,52 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material3.*
-import androidx.compose.runtime.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.Checkbox
+import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FloatingActionButton
+import androidx.compose.material3.FloatingActionButtonDefaults
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.SnackbarDuration
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
+import androidx.compose.material3.SnackbarResult
+import androidx.compose.material3.SwipeToDismissBox
+import androidx.compose.material3.SwipeToDismissBoxValue
+import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
+import androidx.compose.material3.TextField
+import androidx.compose.material3.TextFieldDefaults
+import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
+import androidx.compose.material3.rememberSwipeToDismissBoxState
+import androidx.compose.material3.surfaceColorAtElevation
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.derivedStateOf
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateListOf
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.saveable.listSaver
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
+import androidx.compose.runtime.toMutableStateList
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
@@ -42,7 +91,6 @@ import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.util.fastAny
-import androidx.compose.ui.util.fastForEachIndexed
 import androidx.compose.ui.util.fastForEachReversed
 import androidx.compose.ui.util.fastSumBy
 import androidx.core.net.toUri
@@ -60,7 +108,10 @@ import com.zionhuang.music.LocalDownloadUtil
 import com.zionhuang.music.LocalPlayerAwareWindowInsets
 import com.zionhuang.music.LocalPlayerConnection
 import com.zionhuang.music.R
-import com.zionhuang.music.constants.*
+import com.zionhuang.music.constants.PlaylistEditLockKey
+import com.zionhuang.music.constants.PlaylistSongSortDescendingKey
+import com.zionhuang.music.constants.PlaylistSongSortType
+import com.zionhuang.music.constants.PlaylistSongSortTypeKey
 import com.zionhuang.music.db.entities.Playlist
 import com.zionhuang.music.db.entities.PlaylistSong
 import com.zionhuang.music.db.entities.PlaylistSongMap
@@ -70,7 +121,13 @@ import com.zionhuang.music.extensions.togglePlayPause
 import com.zionhuang.music.models.toMediaMetadata
 import com.zionhuang.music.playback.ExoDownloadService
 import com.zionhuang.music.playback.queues.ListQueue
-import com.zionhuang.music.ui.component.*
+import com.zionhuang.music.ui.component.DefaultDialog
+import com.zionhuang.music.ui.component.EmptyPlaceholder
+import com.zionhuang.music.ui.component.IconButton
+import com.zionhuang.music.ui.component.LocalMenuState
+import com.zionhuang.music.ui.component.SongListItem
+import com.zionhuang.music.ui.component.SortHeader
+import com.zionhuang.music.ui.component.TextFieldDialog
 import com.zionhuang.music.ui.component.shimmer.ListItemPlaceHolder
 import com.zionhuang.music.ui.component.shimmer.ShimmerHost
 import com.zionhuang.music.ui.component.shimmer.TextPlaceholder
@@ -86,6 +143,7 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import sh.calvin.reorderable.ReorderableItem
 import sh.calvin.reorderable.rememberReorderableLazyListState
+import java.time.LocalDateTime
 
 @OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class)
 @Composable
@@ -169,7 +227,12 @@ fun LocalPlaylistScreen(
     var showRemoveDownloadDialog by remember { mutableStateOf(false) }
     // --- FIN DE LÓGICA Y ESTADO ORIGINAL ---
 
-    // --- DIÁLOGOS (LÓGICA INTACTA) ---
+    // ================== INICIO DE LA MODIFICACIÓN ==================
+    var showLikeAllDialog by remember { mutableStateOf(false) }
+    // =================== FIN DE LA MODIFICACIÓN ====================
+
+
+    // --- DIÁLOGOS (LÓGICA INTACTA Y AÑADIDA) ---
     if (showEditDialog) {
         playlist?.playlist?.let { playlistEntity ->
             TextFieldDialog(
@@ -195,7 +258,46 @@ fun LocalPlaylistScreen(
         )
     }
 
-    // --- NUEVA ESTRUCTURA VISUAL ---
+    // ================== INICIO DE LA MODIFICACIÓN ==================
+    if (showLikeAllDialog) {
+        AlertDialog(
+            onDismissRequest = { showLikeAllDialog = false },
+            icon = { Icon(Icons.Default.Favorite, contentDescription = null) },
+            // Asegúrate de tener estos strings en tu archivo strings.xml
+            title = { Text(text = stringResource(R.string.addAllLikeSounds)) },
+            text = { Text(text = stringResource(R.string.addAllLikeSoundsDesc)) },
+            confirmButton = {
+                TextButton(
+                    onClick = {
+                        coroutineScope.launch(Dispatchers.IO) {
+                            database.transaction {
+                                songs.forEach { playlistSong ->
+                                    val songToUpdate = playlistSong.song.song.copy(
+                                        liked = true,
+                                        inLibrary = LocalDateTime.now()
+                                    )
+                                    update(songToUpdate)
+                                }
+                            }
+                            snackbarHostState.showSnackbar(context.getString(R.string.songsAddedFavorites))
+                        }
+                        showLikeAllDialog = false
+                    }
+                ) {
+                    Text(text = stringResource(android.R.string.ok))
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = { showLikeAllDialog = false }) {
+                    Text(text = stringResource(android.R.string.cancel))
+                }
+            }
+        )
+    }
+    // =================== FIN DE LA MODIFICACIÓN ====================
+
+
+    // --- ESTRUCTURA VISUAL ---
     Box(modifier = Modifier.fillMaxSize().background(MaterialTheme.colorScheme.surface)) {
         if (playlist == null) {
             LocalPlaylistScreenSkeleton()
@@ -337,7 +439,10 @@ fun LocalPlaylistScreen(
                         }
                     )
                 }
-            }
+            },
+            // ================== INICIO DE LA MODIFICACIÓN ==================
+            onLikeAllClick = { showLikeAllDialog = true }
+            // =================== FIN DE LA MODIFICACIÓN ====================
         )
         SnackbarHost(
             hostState = snackbarHostState,
@@ -347,7 +452,7 @@ fun LocalPlaylistScreen(
 }
 
 
-// --- NUEVOS COMPONENTES DE UI AUXILIARES ---
+// --- COMPONENTES DE UI AUXILIARES (NO MODIFICADOS) ---
 
 @Composable
 private fun LocalPlaylistScreenHeader(
@@ -432,7 +537,6 @@ private fun LocalPlaylistScreenHeader(
                             val playlistPage = YouTube.playlist(playlist.playlist.browseId!!).completed().getOrNull() ?: return@launch
                             database.transaction {
                                 clearPlaylist(playlist.id)
-                                // ================== INICIO DE LA CORRECCIÓN ==================
                                 playlistPage.songs.map(SongItem::toMediaMetadata).onEach(::insert).mapIndexed { position, song ->
                                     PlaylistSongMap(
                                         songId = song.id,
@@ -440,7 +544,6 @@ private fun LocalPlaylistScreenHeader(
                                         position = position
                                     )
                                 }.forEach(::insert)
-                                // =================== FIN DE LA CORRECCIÓN ====================
                             }
                             snackbarHostState.showSnackbar(context.getString(R.string.playlist_synced))
                         }
@@ -512,7 +615,10 @@ private fun LocalPlaylistCollapsingTopAppBar(
     isSearching: Boolean, query: TextFieldValue, onQueryChange: (TextFieldValue) -> Unit, focusRequester: FocusRequester,
     onSearchClose: () -> Unit, onSearchConfirmed: () -> Unit,
     onNavIconClick: () -> Unit, onNavIconLongClick: () -> Unit,
-    allSelected: Boolean, onSelectAllClick: (Boolean) -> Unit, onSelectionMenuClick: () -> Unit
+    allSelected: Boolean, onSelectAllClick: (Boolean) -> Unit, onSelectionMenuClick: () -> Unit,
+    // ================== INICIO DE LA MODIFICACIÓN ==================
+    onLikeAllClick: () -> Unit
+    // =================== FIN DE LA MODIFICACIÓN ====================
 ) {
     val animatedColor by animateColorAsState(if (showTitle || inSelectMode || isSearching) MaterialTheme.colorScheme.surfaceColorAtElevation(3.dp).copy(alpha = 0.8f) else Color.Transparent, label = "TopBarColor")
 
@@ -551,7 +657,16 @@ private fun LocalPlaylistCollapsingTopAppBar(
                         Icon(painterResource(R.drawable.more_vert), null)
                     }
                 }
-                !isSearching -> IconButton(onClick = onSearchConfirmed) { Icon(painterResource(R.drawable.search), null) }
+                // ================== INICIO DE LA MODIFICACIÓN ==================
+                !isSearching -> {
+                    IconButton(onClick = onLikeAllClick) {
+                        Icon(Icons.Default.Favorite, contentDescription = stringResource(R.string.like_all))
+                    }
+                    IconButton(onClick = onSearchConfirmed) {
+                        Icon(painterResource(R.drawable.search), null)
+                    }
+                }
+                // =================== FIN DE LA MODIFICACIÓN ====================
             }
         }
     )

@@ -172,5 +172,5 @@
   <string name="next_track">അടുത്ത ട്രാക്ക്</string>
   <string name="play_pause">താൽക്കാലികമായി നിർത്തുക</string>
   <string name="music_widget_description">ഇതാണ് പ്രധാന വക്രത സംഗീത വിജറ്റ്, നിങ്ങളുടെ എല്ലാ ഉള്ളടക്കവും ഒരിടത്ത് കൈകാര്യം ചെയ്യുക</string>
-  <string name="notification_initializing">സംഗീത സേവനം ആരംഭിക്കുന്നു</string>
+  <string name="like_all">എല്ലാം പോലെ</string>
 </resources>

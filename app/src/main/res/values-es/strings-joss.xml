@@ -158,7 +158,7 @@
   <string name="password_req_upper">Ingrese al menos una mayúscula</string>
   <string name="password_req_lower">Ingrese al menos una minúscula</string>
   <string name="password_req_digit">Ingrese al menos un número</string>
-  <string name="password_req_special">Ingrese al menos un caracter especial</string>
+  <string name="password_req_special">Ingrese al menos un carácter especial</string>
   <string name="password_req_length">Ingrese al menos ocho carácteres</string>
   <string name="btn_sending">Enviando</string>
   <string name="invalidUsername">El usuario solo puede contener letras, números, punto, guion y guion bajo; sin repetidos</string>
@@ -173,5 +173,5 @@
   <string name="next_track">Siguiente pista</string>
   <string name="play_pause">Hacer una pausa</string>
   <string name="music_widget_description">Este es el widget principal de Estrella Music, administra todo tu contenido en un solo lugar</string>
-  <string name="notification_initializing">Iniciando servicio de música</string>
+  <string name="like_all">como todos</string>
 </resources>
