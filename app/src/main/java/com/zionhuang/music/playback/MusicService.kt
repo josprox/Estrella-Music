@@ -60,8 +60,9 @@ import com.josprox.jossredconnect.JossRedClient
 import com.zionhuang.innertube.YouTube
 import com.zionhuang.innertube.models.WatchEndpoint
 import com.zionhuang.innertube.models.response.PlayerResponse
+import com.zionhuang.music.ClassicMusicWidgetProvider
 import com.zionhuang.music.MainActivity
-import com.zionhuang.music.MusicWidgetProvider
+import com.zionhuang.music.ModernMusicWidgetProvider
 import com.zionhuang.music.R
 import com.zionhuang.music.constants.AudioNormalizationKey
 import com.zionhuang.music.constants.AudioQuality
@@ -369,10 +370,10 @@ class MusicService : MediaLibraryService(),
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         when (intent?.action) {
-            MusicWidgetProvider.ACTION_PLAY_PAUSE -> if (player.isPlaying) player.pause() else player.play()
-            MusicWidgetProvider.ACTION_NEXT -> player.seekToNextMediaItem()
-            MusicWidgetProvider.ACTION_PREV -> player.seekToPreviousMediaItem()
-            MusicWidgetProvider.ACTION_TOGGLE_LIKE -> toggleLike()
+            ModernMusicWidgetProvider.ACTION_PLAY_PAUSE -> if (player.isPlaying) player.pause() else player.play()
+            ModernMusicWidgetProvider.ACTION_NEXT -> player.seekToNextMediaItem()
+            ModernMusicWidgetProvider.ACTION_PREV -> player.seekToPreviousMediaItem()
+            ModernMusicWidgetProvider.ACTION_TOGGLE_LIKE -> toggleLike()
         }
         return super.onStartCommand(intent, flags, startId)
     }
@@ -743,20 +744,47 @@ class MusicService : MediaLibraryService(),
     }
 
     private suspend fun notifyWidget() {
-        val intent = Intent(this, MusicWidgetProvider::class.java).apply {
-            action = MusicWidgetProvider.UPDATE_WIDGET_ACTION
-            component = ComponentName(this@MusicService, MusicWidgetProvider::class.java)
-            val extras = Bundle().apply {
-                val metadata = player.currentMediaItem?.mediaMetadata
-                putString("SONG_TITLE", metadata?.title?.toString() ?: getString(R.string.untitled))
-                putString("ARTIST_NAME", metadata?.artist?.toString() ?: getString(R.string.unknownArtist))
-                putBoolean("IS_PLAYING", player.isPlaying)
-                putString("IMAGE_URL", metadata?.artworkUri?.toString())
-                val isLiked = currentSong.value?.song?.liked ?: false
-                putBoolean("IS_LIKED", isLiked)
+        val extras = Bundle().apply {
+            // --- Datos de la canción actual ---
+            val currentMetadata = player.currentMediaItem?.mediaMetadata
+            putString("SONG_TITLE", currentMetadata?.title?.toString() ?: getString(R.string.untitled))
+            putString("ARTIST_NAME", currentMetadata?.artist?.toString() ?: getString(R.string.unknownArtist))
+            putBoolean("IS_PLAYING", player.isPlaying)
+            putString("IMAGE_URL", currentMetadata?.artworkUri?.toString())
+            val isLiked = currentSong.value?.song?.liked ?: false
+            putBoolean("IS_LIKED", isLiked)
+
+            // --- Datos de las siguientes canciones (para el widget moderno) ---
+            val currentIndex = player.currentMediaItemIndex
+            val totalItems = player.mediaItemCount
+
+            if (currentIndex + 1 < totalItems) {
+                val nextMetadata = player.getMediaItemAt(currentIndex + 1).mediaMetadata
+                putString("UP_NEXT_1_TITLE", nextMetadata.title?.toString())
+                putString("UP_NEXT_1_ARTIST", nextMetadata.artist?.toString())
+                putString("UP_NEXT_1_IMAGE_URL", nextMetadata.artworkUri?.toString())
             }
+
+            if (currentIndex + 2 < totalItems) {
+                val nextNextMetadata = player.getMediaItemAt(currentIndex + 2).mediaMetadata
+                putString("UP_NEXT_2_TITLE", nextNextMetadata.title?.toString())
+                putString("UP_NEXT_2_ARTIST", nextNextMetadata.artist?.toString())
+                putString("UP_NEXT_2_IMAGE_URL", nextNextMetadata.artworkUri?.toString())
+            }
+        }
+
+        // Crear y enviar intent para el WIDGET CLÁSICO
+        val classicIntent = Intent(this, ClassicMusicWidgetProvider::class.java).apply {
+            action = ClassicMusicWidgetProvider.UPDATE_WIDGET_ACTION
             putExtras(extras)
         }
-        sendBroadcast(intent)
+        sendBroadcast(classicIntent)
+
+        // Crear y enviar intent para el WIDGET MODERNO
+        val modernIntent = Intent(this, ModernMusicWidgetProvider::class.java).apply {
+            action = ModernMusicWidgetProvider.UPDATE_WIDGET_ACTION
+            putExtras(extras)
+        }
+        sendBroadcast(modernIntent)
     }
 }
