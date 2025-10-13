@@ -1,28 +1,68 @@
 import android.content.res.Configuration
 import android.util.Log
-import androidx.compose.animation.core.LinearEasing
-import androidx.compose.animation.core.animateDpAsState
-import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
 import androidx.compose.foundation.basicMarquee
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.isSystemInDarkTheme
-import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ColumnScope
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.WindowInsetsSides
+import androidx.compose.foundation.layout.asPaddingValues
+import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.only
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.systemBars
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.windowInsetsPadding
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.*
+import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.filled.Pause
+import androidx.compose.material.icons.filled.PlayArrow
+import androidx.compose.material.icons.filled.Repeat
+import androidx.compose.material.icons.filled.RepeatOne
+import androidx.compose.material.icons.filled.Replay
+import androidx.compose.material.icons.filled.SkipNext
+import androidx.compose.material.icons.filled.SkipPrevious
 import androidx.compose.material.icons.outlined.FavoriteBorder
 import androidx.compose.material.icons.rounded.Lyrics
 import androidx.compose.material.icons.rounded.Videocam
 import androidx.compose.material.icons.rounded.VideocamOff
-import androidx.compose.material3.*
-import androidx.compose.runtime.*
+import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FilledIconButton
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.IconButtonDefaults
+import androidx.compose.material3.LocalContentColor
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Slider
+import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableLongStateOf
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.blur
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.lerp
@@ -33,7 +73,6 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.util.fastForEachIndexed
 import androidx.core.graphics.drawable.toBitmap
 import androidx.media3.common.C
 import androidx.media3.common.MediaItem
@@ -48,7 +87,15 @@ import coil.size.Size
 import com.zionhuang.innertube.YouTube
 import com.zionhuang.innertube.models.YouTubeClient
 import com.zionhuang.music.LocalPlayerConnection
-import com.zionhuang.music.constants.*
+import com.zionhuang.music.constants.DarkModeKey
+import com.zionhuang.music.constants.PlayerBackgroundStyle
+import com.zionhuang.music.constants.PlayerMode
+import com.zionhuang.music.constants.PureBlackKey
+import com.zionhuang.music.constants.QueuePeekHeight
+import com.zionhuang.music.constants.ShowLyricsKey
+import com.zionhuang.music.constants.ShowVideoPlayerKey
+import com.zionhuang.music.constants.SliderStyle
+import com.zionhuang.music.constants.SliderStyleKey
 import com.zionhuang.music.extensions.togglePlayPause
 import com.zionhuang.music.extensions.toggleRepeatMode
 import com.zionhuang.music.models.MediaMetadata
@@ -68,6 +115,9 @@ import kotlinx.coroutines.withContext
 import me.saket.squiggles.SquigglySlider
 import timber.log.Timber
 import kotlin.math.abs
+
+// Se define el padding horizontal como una constante para mantener la consistencia.
+private val PlayerHorizontalPadding = 24.dp
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -190,7 +240,6 @@ fun BottomSheetPlayer(
     //endregion
 
     //region Player Synchronization
-    // Main loop to update the UI progress bar from the audio player
     LaunchedEffect(isPlaying, playbackState) {
         while (isActive && isPlaying && playbackState == Player.STATE_READY) {
             position = audioPlayer.currentPosition
@@ -201,7 +250,6 @@ fun BottomSheetPlayer(
         duration = audioPlayer.duration
     }
 
-    // Fetches video URL and prepares the video player
     LaunchedEffect(currentSong) {
         val songId = currentSong?.song?.id
         if (songId == null) {
@@ -226,15 +274,13 @@ fun BottomSheetPlayer(
             exoPlayer.setMediaItem(MediaItem.fromUri(url))
             exoPlayer.prepare()
 
-            // <<< El listener correcto para saber si el video está listo.
             val listener = object : Player.Listener {
                 override fun onPlaybackStateChanged(playbackState: Int) {
                     if (playbackState == Player.STATE_READY) {
                         Timber.tag("PlayerSync").d("Video player is now in STATE_READY.")
                         isVideoReady = true
-                        // Sincronizamos la posición una vez que está listo.
                         exoPlayer.seekTo(audioPlayer.currentPosition)
-                        exoPlayer.removeListener(this) // El listener solo se necesita una vez.
+                        exoPlayer.removeListener(this)
                     }
                 }
             }
@@ -243,7 +289,6 @@ fun BottomSheetPlayer(
         Log.d("BottomSheetPlayer", "Video URL for $songId: $videoUrl")
     }
 
-    // Efecto de sincronización activa
     LaunchedEffect(showVideoPlayer, isPlaying, isVideoReady) {
         if (showVideoPlayer && isPlaying && isVideoReady) {
             exoPlayer.playWhenReady = true
@@ -261,7 +306,6 @@ fun BottomSheetPlayer(
         }
     }
 
-    // Syncs seeking between players
     val seekTo: (Long) -> Unit = { newPosition ->
         audioPlayer.seekTo(newPosition)
         if (showVideoPlayer && isVideoReady) {
@@ -296,239 +340,66 @@ fun BottomSheetPlayer(
             )
         }
     ) {
-        val controlsContent: @Composable ColumnScope.(MediaMetadata) -> Unit = { mediaMetadata ->
-            val playPauseRoundness by animateDpAsState(
-                targetValue = if (isPlaying) 24.dp else 36.dp,
-                animationSpec = tween(durationMillis = 100, easing = LinearEasing),
-                label = "playPauseRoundness"
+        // La UI principal se divide en componentes más pequeños
+        val controlsContent: @Composable ColumnScope.(MediaMetadata) -> Unit = { metadata ->
+            PlayerHeader(
+                mediaMetadata = metadata,
+                showVideoPlayer = showVideoPlayer,
+                isLiked = currentSong?.song?.liked == true,
+                contentColor = contentColor,
+                onVideoToggle = { showVideoPlayer = !showVideoPlayer },
+                onLikeToggle = playerConnection::toggleLike,
+                onTitleClick = {
+                    metadata.album?.id?.let {
+                        navController.navigate("album/$it")
+                        state.collapseSoft()
+                    }
+                },
+                onArtistClick = { artists ->
+                    if (artists.size == 1 && artists.first().id != null) {
+                        navController.navigate("artist/${artists.first().id}")
+                        state.collapseSoft()
+                    }
+                }
             )
 
-            // Estado para controlar la visibilidad del pop-up de artistas
-            var showArtistsPopup by remember { mutableStateOf(false) }
+            Spacer(Modifier.height(16.dp))
 
-            Row(
-                horizontalArrangement = Arrangement.Start,
-                verticalAlignment = Alignment.CenterVertically,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = PlayerHorizontalPadding)
-            ) {
-                // Song Title and Artist
-                Column(modifier = Modifier.weight(1f)) {
-                    Text(
-                        text = mediaMetadata.title,
-                        style = MaterialTheme.typography.titleLarge,
-                        fontWeight = FontWeight.Bold,
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis,
-                        modifier = Modifier
-                            .basicMarquee(iterations = Int.MAX_VALUE, initialDelayMillis = 3000, velocity = 30.dp)
-                            .clickable(enabled = mediaMetadata.album != null) {
-                                navController.navigate("album/${mediaMetadata.album!!.id}")
-                                state.collapseSoft()
-                            }
-                    )
-                    Row {
-                        val artistString = remember(mediaMetadata.artists) {
-                            mediaMetadata.artists.joinToString(", ") { it.name }
-                        }
-                        Text(
-                            text = artistString,
-                            style = MaterialTheme.typography.titleMedium,
-                            maxLines = 1,
-                            overflow = TextOverflow.Ellipsis,
-                            modifier = Modifier
-                                .basicMarquee(iterations = Int.MAX_VALUE, initialDelayMillis = 3000, velocity = 30.dp)
-                                .clickable(enabled = mediaMetadata.artists.isNotEmpty()) {
-                                    if (mediaMetadata.artists.size == 1 && mediaMetadata.artists.first().id != null) {
-                                        // Si es un solo artista y tiene ID, navegar directamente a su página
-                                        navController.navigate("artist/${mediaMetadata.artists.first().id}")
-                                        state.collapseSoft()
-                                    } else if (mediaMetadata.artists.size > 1) {
-                                        // Si son varios artistas, mostrar el pop-up
-                                        showArtistsPopup = true
-                                    }
-                                }
-                        )
+            PlayerSeekBar(
+                position = sliderPosition ?: position,
+                duration = duration,
+                sliderStyle = sliderStyle,
+                isPlaying = isPlaying,
+                onValueChange = { sliderPosition = it },
+                onValueChangeFinished = {
+                    sliderPosition?.let { seekTo(it) }
+                    sliderPosition = null
+                }
+            )
+
+            Spacer(Modifier.height(16.dp))
+
+            PlayerControls(
+                isPlaying = isPlaying,
+                playbackState = playbackState,
+                showLyrics = showLyrics,
+                repeatMode = repeatMode,
+                canSkipPrevious = canSkipPrevious,
+                canSkipNext = canSkipNext,
+                contentColor = contentColor,
+                onPlayPauseToggle = {
+                    if (playbackState == Player.STATE_ENDED) {
+                        seekTo(0)
+                        audioPlayer.playWhenReady = true
+                    } else {
+                        audioPlayer.togglePlayPause()
                     }
-                }
-
-                Spacer(modifier = Modifier.width(16.dp))
-
-                // Video Toggle Button
-                IconButton(onClick = { showVideoPlayer = !showVideoPlayer }) {
-                    Icon(
-                        imageVector = if (showVideoPlayer) Icons.Rounded.VideocamOff else Icons.Rounded.Videocam,
-                        contentDescription = "Toggle Video",
-                        tint = contentColor
-                    )
-                }
-
-                // Favorite Button
-                IconButton(onClick = playerConnection::toggleLike) {
-                    Icon(
-                        imageVector = if (currentSong?.song?.liked == true) Icons.Filled.Favorite else Icons.Outlined.FavoriteBorder,
-                        contentDescription = "Favorite",
-                        tint = contentColor
-                    )
-                }
-            }
-
-            Spacer(Modifier.height(12.dp))
-
-            // Seek Bar
-            when (sliderStyle) {
-                SliderStyle.DEFAULT -> Slider(
-                    value = (sliderPosition ?: position).toFloat(),
-                    valueRange = 0f..(if (duration == C.TIME_UNSET) 0f else duration.toFloat()),
-                    onValueChange = { sliderPosition = it.toLong() },
-                    onValueChangeFinished = {
-                        sliderPosition?.let { seekTo(it) }
-                        sliderPosition = null
-                    },
-                    modifier = Modifier.padding(horizontal = PlayerHorizontalPadding)
-                )
-                SliderStyle.SQUIGGLY -> SquigglySlider(
-                    value = (sliderPosition ?: position).toFloat(),
-                    valueRange = 0f..(if (duration == C.TIME_UNSET) 0f else duration.toFloat()),
-                    onValueChange = { sliderPosition = it.toLong() },
-                    onValueChangeFinished = {
-                        sliderPosition?.let { seekTo(it) }
-                        sliderPosition = null
-                    },
-                    squigglesSpec = SquigglySlider.SquigglesSpec(
-                        amplitude = if (isPlaying) 2.dp else 0.dp,
-                        strokeWidth = 4.dp,
-                    ),
-                    modifier = Modifier.padding(horizontal = PlayerHorizontalPadding),
-                )
-            }
-
-            Spacer(Modifier.height(4.dp))
-
-            // Time Indicators
-            Row(
-                horizontalArrangement = Arrangement.SpaceBetween,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = PlayerHorizontalPadding + 4.dp)
-            ) {
-                Text(
-                    text = makeTimeString(sliderPosition ?: position),
-                    style = MaterialTheme.typography.labelMedium,
-                )
-                Text(
-                    text = if (duration != C.TIME_UNSET) makeTimeString(duration) else "",
-                    style = MaterialTheme.typography.labelMedium,
-                )
-            }
-
-            Spacer(Modifier.height(12.dp))
-
-            // Control Buttons
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.SpaceAround,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = PlayerHorizontalPadding)
-            ) {
-                IconButton(onClick = { showLyrics = !showLyrics }) {
-                    Icon(
-                        imageVector = Icons.Rounded.Lyrics,
-                        contentDescription = "Lyrics",
-                        tint = contentColor,
-                        modifier = Modifier.alpha(if (showLyrics) 1f else 0.5f)
-                    )
-                }
-
-                IconButton(onClick = playerConnection::seekToPrevious, enabled = canSkipPrevious) {
-                    Icon(Icons.Filled.SkipPrevious, "Skip Previous", tint = contentColor, modifier = Modifier.size(32.dp))
-                }
-
-                // Play/Pause Button
-                Box(
-                    modifier = Modifier
-                        .size(72.dp)
-                        .clip(RoundedCornerShape(playPauseRoundness))
-                        .background(MaterialTheme.colorScheme.secondaryContainer)
-                        .clickable {
-                            if (playbackState == Player.STATE_ENDED) {
-                                seekTo(0)
-                                audioPlayer.playWhenReady = true
-                            } else {
-                                audioPlayer.togglePlayPause()
-                            }
-                        }
-                ) {
-                    val playPauseIcon = when {
-                        playbackState == Player.STATE_ENDED -> Icons.Filled.Replay
-                        isPlaying -> Icons.Filled.Pause
-                        else -> Icons.Filled.PlayArrow
-                    }
-                    Icon(
-                        imageVector = playPauseIcon,
-                        contentDescription = "Play/Pause",
-                        tint = MaterialTheme.colorScheme.onSecondaryContainer,
-                        modifier = Modifier.align(Alignment.Center).size(36.dp)
-                    )
-                }
-
-                IconButton(onClick = playerConnection::seekToNext, enabled = canSkipNext) {
-                    Icon(Icons.Filled.SkipNext, "Skip Next", tint = contentColor, modifier = Modifier.size(32.dp))
-                }
-
-                IconButton(
-                    onClick = audioPlayer::toggleRepeatMode,
-                    modifier = Modifier.alpha(if (repeatMode == Player.REPEAT_MODE_OFF) 0.5f else 1f)
-                ) {
-                    Icon(
-                        imageVector = if (repeatMode == Player.REPEAT_MODE_ONE) Icons.Filled.RepeatOne else Icons.Filled.Repeat,
-                        contentDescription = "Repeat Mode",
-                        tint = contentColor
-                    )
-                }
-            }
-
-            // Pop-up de Artistas
-            if (showArtistsPopup) {
-                AlertDialog(
-                    onDismissRequest = { showArtistsPopup = false },
-                    title = { Text("Artistas") },
-                    text = {
-                        Column {
-                            mediaMetadata.artists.forEach { artist ->
-                                if (artist.id != null) {
-                                    Text(
-                                        text = artist.name,
-                                        style = MaterialTheme.typography.bodyLarge,
-                                        fontWeight = FontWeight.Bold,
-                                        modifier = Modifier
-                                            .fillMaxWidth()
-                                            .clickable {
-                                                navController.navigate("artist/${artist.id}")
-                                                state.collapseSoft() // Colapsar el reproductor
-                                                showArtistsPopup = false // Cerrar el pop-up
-                                            }
-                                            .padding(vertical = 8.dp)
-                                    )
-                                } else {
-                                    Text(
-                                        text = artist.name,
-                                        style = MaterialTheme.typography.bodyLarge,
-                                        modifier = Modifier.padding(vertical = 8.dp)
-                                    )
-                                }
-                            }
-                        }
-                    },
-                    confirmButton = {
-                        TextButton(onClick = { showArtistsPopup = false }) {
-                            Text("Cerrar")
-                        }
-                    }
-                )
-            }
+                },
+                onLyricsToggle = { showLyrics = !showLyrics },
+                onSkipPrevious = playerConnection::seekToPrevious,
+                onSkipNext = playerConnection::seekToNext,
+                onRepeatModeToggle = audioPlayer::toggleRepeatMode
+            )
         }
 
         Box(modifier = Modifier.fillMaxSize()) {
@@ -550,32 +421,40 @@ fun BottomSheetPlayer(
             }
 
             CompositionLocalProvider(LocalContentColor provides contentColor) {
-                // Main Content (Thumbnail/Video + Controls)
                 if (LocalConfiguration.current.orientation == Configuration.ORIENTATION_LANDSCAPE) {
                     Row(
+                        verticalAlignment = Alignment.CenterVertically,
                         modifier = Modifier
                             .windowInsetsPadding(WindowInsets.systemBars.only(WindowInsetsSides.Horizontal))
                             .padding(bottom = queueSheetState.collapsedBound)
+                            .fillMaxSize()
                     ) {
-                        Box(contentAlignment = Alignment.Center, modifier = Modifier.weight(1f)) {
+                        Box(
+                            contentAlignment = Alignment.Center,
+                            modifier = Modifier
+                                .weight(1f)
+                                .padding(12.dp)
+                        ) {
                             Thumbnail(
                                 exoPlayer = exoPlayer,
                                 showVideoPlayer = showVideoPlayer,
                                 isVideoReady = isVideoReady,
                                 sliderPositionProvider = { sliderPosition },
                                 backgroundStyle = backgroundStyle,
-                                modifier = Modifier.nestedScroll(state.preUpPostDownNestedScrollConnection)
+                                modifier = Modifier
+                                    .fillMaxHeight()
+                                    .aspectRatio(1f)
+                                    .nestedScroll(state.preUpPostDownNestedScrollConnection)
                             )
                         }
                         Column(
                             horizontalAlignment = Alignment.CenterHorizontally,
+                            verticalArrangement = Arrangement.Center,
                             modifier = Modifier
                                 .weight(1f)
                                 .windowInsetsPadding(WindowInsets.systemBars.only(WindowInsetsSides.Top))
                         ) {
-                            Spacer(Modifier.weight(1f))
                             mediaMetadata?.let { controlsContent(it) }
-                            Spacer(Modifier.weight(1f))
                         }
                     }
                 } else { // ORIENTATION_PORTRAIT
@@ -584,6 +463,7 @@ fun BottomSheetPlayer(
                         modifier = Modifier
                             .windowInsetsPadding(WindowInsets.systemBars.only(WindowInsetsSides.Horizontal))
                             .padding(bottom = queueSheetState.collapsedBound)
+                            .fillMaxSize()
                     ) {
                         Box(
                             contentAlignment = Alignment.Center,
@@ -613,4 +493,278 @@ fun BottomSheetPlayer(
             )
         }
     }
+}
+
+/**
+ * Componente para mostrar el título, artista y botones de acción secundarios.
+ */
+@Composable
+private fun PlayerHeader(
+    mediaMetadata: MediaMetadata,
+    showVideoPlayer: Boolean,
+    isLiked: Boolean,
+    contentColor: Color,
+    onVideoToggle: () -> Unit,
+    onLikeToggle: () -> Unit,
+    onTitleClick: () -> Unit,
+    onArtistClick: (List<MediaMetadata.Artist>) -> Unit,
+    modifier: Modifier = Modifier
+) {
+    // Estado para controlar el diálogo de artistas múltiples
+    var showArtistsDialog by remember { mutableStateOf(false) }
+
+    Row(
+        horizontalArrangement = Arrangement.SpaceBetween,
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = modifier
+            .fillMaxWidth()
+            .padding(horizontal = PlayerHorizontalPadding)
+    ) {
+        Column(modifier = Modifier.weight(1f)) {
+            Text(
+                text = mediaMetadata.title,
+                style = MaterialTheme.typography.titleLarge,
+                fontWeight = FontWeight.Bold,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+                modifier = Modifier
+                    .basicMarquee(iterations = Int.MAX_VALUE, initialDelayMillis = 3000, velocity = 30.dp)
+                    .clickable(enabled = mediaMetadata.album != null, onClick = onTitleClick)
+            )
+
+            val artistString = remember(mediaMetadata.artists) {
+                mediaMetadata.artists.joinToString(", ") { it.name }
+            }
+            Text(
+                text = artistString,
+                style = MaterialTheme.typography.bodyLarge,
+                color = LocalContentColor.current.copy(alpha = 0.8f),
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+                modifier = Modifier
+                    .basicMarquee(iterations = Int.MAX_VALUE, initialDelayMillis = 3000, velocity = 30.dp)
+                    .clickable(enabled = mediaMetadata.artists.isNotEmpty()) {
+                        if (mediaMetadata.artists.size > 1) {
+                            showArtistsDialog = true
+                        } else {
+                            onArtistClick(mediaMetadata.artists)
+                        }
+                    }
+            )
+        }
+
+        Spacer(modifier = Modifier.width(16.dp))
+
+        // Botones de acción
+        Row {
+            IconButton(onClick = onVideoToggle) {
+                Icon(
+                    imageVector = if (showVideoPlayer) Icons.Rounded.VideocamOff else Icons.Rounded.Videocam,
+                    contentDescription = "Toggle Video",
+                    tint = contentColor
+                )
+            }
+            IconButton(onClick = onLikeToggle) {
+                Icon(
+                    imageVector = if (isLiked) Icons.Filled.Favorite else Icons.Outlined.FavoriteBorder,
+                    contentDescription = "Favorite",
+                    tint = if (isLiked) MaterialTheme.colorScheme.primary else contentColor
+                )
+            }
+        }
+    }
+
+    if (showArtistsDialog) {
+        ArtistsDialog(
+            artists = mediaMetadata.artists,
+            onDismiss = { showArtistsDialog = false },
+            onArtistSelected = { artist ->
+                showArtistsDialog = false
+            }
+        )
+    }
+}
+
+/**
+ * Componente para el slider de progreso y los indicadores de tiempo.
+ */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun PlayerSeekBar(
+    position: Long,
+    duration: Long,
+    sliderStyle: SliderStyle,
+    isPlaying: Boolean,
+    onValueChange: (Long) -> Unit,
+    onValueChangeFinished: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    val finalDuration = if (duration == C.TIME_UNSET) 0f else duration.toFloat()
+
+    Column(modifier = modifier.padding(horizontal = PlayerHorizontalPadding)) {
+        when (sliderStyle) {
+            SliderStyle.DEFAULT -> Slider(
+                value = position.toFloat(),
+                valueRange = 0f..finalDuration,
+                onValueChange = { onValueChange(it.toLong()) },
+                onValueChangeFinished = onValueChangeFinished
+            )
+            SliderStyle.SQUIGGLY -> SquigglySlider(
+                value = position.toFloat(),
+                valueRange = 0f..finalDuration,
+                onValueChange = { onValueChange(it.toLong()) },
+                onValueChangeFinished = onValueChangeFinished,
+                squigglesSpec = SquigglySlider.SquigglesSpec(
+                    amplitude = if (isPlaying) 2.dp else 0.dp,
+                    strokeWidth = 4.dp,
+                )
+            )
+        }
+
+        Row(
+            horizontalArrangement = Arrangement.SpaceBetween,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 4.dp) // Pequeño padding para alinear con el slider
+        ) {
+            Text(
+                text = makeTimeString(position),
+                style = MaterialTheme.typography.labelMedium,
+            )
+            Text(
+                text = if (duration != C.TIME_UNSET) makeTimeString(duration) else "0:00",
+                style = MaterialTheme.typography.labelMedium,
+            )
+        }
+    }
+}
+
+/**
+ * Componente para los controles principales (play/pause, skip, etc.).
+ */
+@Composable
+private fun PlayerControls(
+    isPlaying: Boolean,
+    playbackState: Int,
+    showLyrics: Boolean,
+    repeatMode: Int,
+    canSkipPrevious: Boolean,
+    canSkipNext: Boolean,
+    contentColor: Color,
+    onPlayPauseToggle: () -> Unit,
+    onLyricsToggle: () -> Unit,
+    onSkipPrevious: () -> Unit,
+    onSkipNext: () -> Unit,
+    onRepeatModeToggle: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    val playPauseIcon = when {
+        playbackState == Player.STATE_ENDED -> Icons.Filled.Replay
+        isPlaying -> Icons.Filled.Pause
+        else -> Icons.Filled.PlayArrow
+    }
+
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.SpaceEvenly,
+        modifier = modifier
+            .fillMaxWidth()
+            .padding(horizontal = PlayerHorizontalPadding)
+    ) {
+        // Botón de Letras
+        IconButton(onClick = onLyricsToggle) {
+            Icon(
+                imageVector = Icons.Rounded.Lyrics,
+                contentDescription = "Lyrics",
+                tint = contentColor.copy(alpha = if (showLyrics) 1f else 0.6f)
+            )
+        }
+
+        // Botón de Anterior
+        IconButton(onClick = onSkipPrevious, enabled = canSkipPrevious) {
+            Icon(
+                Icons.Filled.SkipPrevious,
+                "Skip Previous",
+                tint = contentColor,
+                modifier = Modifier.size(36.dp)
+            )
+        }
+
+        // Botón de Play/Pause
+        FilledIconButton(
+            onClick = onPlayPauseToggle,
+            modifier = Modifier.size(72.dp),
+            shape = CircleShape,
+            colors = IconButtonDefaults.filledIconButtonColors(
+                containerColor = MaterialTheme.colorScheme.primaryContainer,
+                contentColor = MaterialTheme.colorScheme.onPrimaryContainer
+            )
+        ) {
+            Icon(
+                imageVector = playPauseIcon,
+                contentDescription = "Play/Pause",
+                modifier = Modifier.size(40.dp)
+            )
+        }
+
+        // Botón de Siguiente
+        IconButton(onClick = onSkipNext, enabled = canSkipNext) {
+            Icon(
+                Icons.Filled.SkipNext,
+                "Skip Next",
+                tint = contentColor,
+                modifier = Modifier.size(36.dp)
+            )
+        }
+
+        // Botón de Repetir
+        IconButton(onClick = onRepeatModeToggle) {
+            val (icon, alpha) = when (repeatMode) {
+                Player.REPEAT_MODE_ONE -> Icons.Filled.RepeatOne to 1f
+                Player.REPEAT_MODE_ALL -> Icons.Filled.Repeat to 1f
+                else -> Icons.Filled.Repeat to 0.6f
+            }
+            Icon(
+                imageVector = icon,
+                contentDescription = "Repeat Mode",
+                tint = contentColor.copy(alpha = alpha)
+            )
+        }
+    }
+}
+
+/**
+ * Diálogo para mostrar una lista de artistas cuando hay más de uno.
+ */
+@Composable
+private fun ArtistsDialog(
+    artists: List<MediaMetadata.Artist>,
+    onDismiss: () -> Unit,
+    onArtistSelected: (MediaMetadata.Artist) -> Unit
+) {
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text("Artistas") },
+        text = {
+            Column {
+                artists.forEach { artist ->
+                    val isClickable = artist.id != null
+                    Text(
+                        text = artist.name,
+                        style = MaterialTheme.typography.bodyLarge,
+                        fontWeight = if (isClickable) FontWeight.Medium else FontWeight.Normal,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .clickable(enabled = isClickable) { onArtistSelected(artist) }
+                            .padding(vertical = 12.dp)
+                    )
+                }
+            }
+        },
+        confirmButton = {
+            TextButton(onClick = onDismiss) {
+                Text("Cerrar")
+            }
+        }
+    )
 }
