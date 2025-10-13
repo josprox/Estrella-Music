@@ -174,4 +174,6 @@
   <string name="play_pause">Mainkan jeda</string>
   <string name="music_widget_description">Ini adalah widget utama Estrella Music, kelola semua konten Anda di satu tempat</string>
   <string name="like_all">Seperti semuanya</string>
+  <string name="nowPlaying">apakah kamu mendengarkan</string>
+  <string name="upNext">Selanjutnya</string>
 </resources>

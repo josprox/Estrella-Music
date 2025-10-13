@@ -174,4 +174,6 @@
   <string name="play_pause">Zagraj w pauzę</string>
   <string name="music_widget_description">To jest główny widget Estrella Music, zarządzaj całą swoją zawartością w jednym miejscu</string>
   <string name="like_all">Jak wszyscy</string>
+  <string name="nowPlaying">czy słuchasz?</string>
+  <string name="upNext">Następny</string>
 </resources>

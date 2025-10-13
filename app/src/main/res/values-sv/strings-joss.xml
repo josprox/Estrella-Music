@@ -140,4 +140,6 @@
   <string name="play_pause">Spela paus</string>
   <string name="music_widget_description">Detta är den viktigaste widgeten för Estrella Music, hanterar hela innehållet på ett ställe</string>
   <string name="like_all">Som alla</string>
+  <string name="nowPlaying">Lyssnar du</string>
+  <string name="upNext">Nästa</string>
 </resources>

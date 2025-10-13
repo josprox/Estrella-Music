@@ -194,4 +194,6 @@
   <string name="play_pause">ਖੇਡੋ ਖੇਡੋ</string>
   <string name="music_widget_description">ਇਹ ਐਸਟਰੇਲਾ ਸੰਗੀਤ ਦਾ ਮੁੱਖ ਵਿਜੇਟ ਹੈ, ਤੁਹਾਡੀ ਪੂਰੀ ਸਮੱਗਰੀ ਨੂੰ ਇਕ ਜਗ੍ਹਾ ਤੇ ਪ੍ਰਬੰਧਨ ਕਰਦਾ ਹੈ</string>
   <string name="like_all">ਸਭ ਪਸੰਦ ਹੈ</string>
+  <string name="nowPlaying">ਕੀ ਤੁਸੀਂ ਸੁਣ ਰਹੇ ਹੋ?</string>
+  <string name="upNext">ਅੱਗੇ</string>
 </resources>

@@ -140,4 +140,6 @@
   <string name="play_pause">पज गर्नुहोस्</string>
   <string name="music_widget_description">यो मुख्य एस्ट्रेला संगीत विजेट हो, तपाईंको सबै सामग्री एक ठाउँमा प्रबन्ध गर्नुहोस्</string>
   <string name="like_all">सबै जस्तो</string>
+  <string name="nowPlaying">के तपाई सुन्नुहुन्छ</string>
+  <string name="upNext">अर्को माथि</string>
 </resources>

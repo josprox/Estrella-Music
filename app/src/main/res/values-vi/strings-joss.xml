@@ -174,4 +174,6 @@
   <string name="play_pause">Chơi tạm dừng</string>
   <string name="music_widget_description">Đây là tiện ích chính của âm nhạc estrella, quản lý toàn bộ nội dung của bạn ở một nơi</string>
   <string name="like_all">Giống như tất cả</string>
+  <string name="nowPlaying">bạn có đang nghe không</string>
+  <string name="upNext">Tiếp theo</string>
 </resources>

@@ -174,4 +174,6 @@
   <string name="play_pause">Hrajte pauzu</string>
   <string name="music_widget_description">Toto je hlavní hudební widget Estrella, spravujte veškerý svůj obsah na jednom místě</string>
   <string name="like_all">Jako všichni</string>
+  <string name="nowPlaying">Posloucháš</string>
+  <string name="upNext">Nahoru další</string>
 </resources>

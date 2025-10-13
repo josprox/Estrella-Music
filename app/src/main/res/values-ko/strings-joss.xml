@@ -174,4 +174,6 @@
   <string name="play_pause">일시 중지</string>
   <string name="music_widget_description">이것은 Estrella 음악의 주요 위젯이며 전체 콘텐츠를 한 곳에서 관리합니다.</string>
   <string name="like_all">모두처럼</string>
+  <string name="nowPlaying">듣고 있어?</string>
+  <string name="upNext">다음</string>
 </resources>

@@ -174,4 +174,6 @@
   <string name="play_pause">Tauko</string>
   <string name="music_widget_description">Tämä on Estrella -musiikin pääwidget, hallitsee koko sisältöäsi yhdessä paikassa</string>
   <string name="like_all">Kuin kaikki</string>
+  <string name="nowPlaying">Kuunteletko</string>
+  <string name="upNext">Seuraavaksi</string>
 </resources>

@@ -42,7 +42,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="NOW PLAYING"
+                    android:text="@string/nowPlaying"
                     android:textColor="#FFC1C1"
                     android:textSize="10sp"
                     android:textStyle="bold"
@@ -127,7 +127,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="UP NEXT"
+            android:text="@string/upNext"
             android:textColor="#B3FFFFFF"
             android:textSize="10sp"
             android:textStyle="bold"

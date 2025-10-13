@@ -185,4 +185,6 @@
   <string name="play_pause">Szünetet játszik</string>
   <string name="music_widget_description">Ez az Estrella Music fő widgetje, egy helyen kezeli a teljes tartalmat</string>
   <string name="like_all">Mint minden</string>
+  <string name="nowPlaying">hallgatsz</string>
+  <string name="upNext">Fel</string>
 </resources>

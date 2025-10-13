@@ -174,4 +174,6 @@
   <string name="play_pause">Duraklamak</string>
   <string name="music_widget_description">Bu ana Estrella Müzik widget\'idir, tüm içeriğinizi tek bir yerden yönetin</string>
   <string name="like_all">Herkes gibi</string>
+  <string name="nowPlaying">dinliyor musun</string>
+  <string name="upNext">Sıradaki</string>
 </resources>

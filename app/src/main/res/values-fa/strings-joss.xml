@@ -139,4 +139,6 @@
   <string name="play_pause">مکث</string>
   <string name="music_widget_description">این ویجت اصلی موسیقی استرلا است ، تمام مطالب خود را در یک مکان مدیریت کنید</string>
   <string name="like_all">مثل همه</string>
+  <string name="nowPlaying">آیا شما گوش می دهید</string>
+  <string name="upNext">بعد</string>
 </resources>

@@ -174,4 +174,6 @@
   <string name="play_pause">Играть в паузу</string>
   <string name="music_widget_description">Это основной виджет Estrella Music, управляйте всем своим контентом в одном месте.</string>
   <string name="like_all">Как и все</string>
+  <string name="nowPlaying">ты слушаешь?</string>
+  <string name="upNext">Далее</string>
 </resources>

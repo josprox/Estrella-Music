@@ -140,4 +140,6 @@
   <string name="play_pause">Riproduci in pausa</string>
   <string name="music_widget_description">Questo è il widget principale di Estrella Music, gestisci tutti i tuoi contenuti in un unico posto</string>
   <string name="like_all">Come tutti</string>
+  <string name="nowPlaying">stai ascoltando?</string>
+  <string name="upNext">Il prossimo</string>
 </resources>

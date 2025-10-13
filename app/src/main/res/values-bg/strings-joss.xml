@@ -174,4 +174,6 @@
   <string name="play_pause">Играйте пауза</string>
   <string name="music_widget_description">Това е основната джаджа на Estrella Music, управлява цялото ви съдържание на едно място</string>
   <string name="like_all">Като всички</string>
+  <string name="nowPlaying">Слушате ли</string>
+  <string name="upNext">Напред</string>
 </resources>

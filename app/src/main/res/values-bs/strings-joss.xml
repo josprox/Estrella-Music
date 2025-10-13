@@ -140,4 +140,6 @@
   <string name="play_pause">Igrajte pauzu</string>
   <string name="music_widget_description">Ovo je glavni estrella muzički widget, upravljate sa svim svojim sadržajem na jednom mjestu</string>
   <string name="like_all">Kao i svi</string>
+  <string name="nowPlaying">slušate li</string>
+  <string name="upNext">Sledeći</string>
 </resources>

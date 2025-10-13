@@ -196,4 +196,6 @@
   <string name="play_pause">Гуляць у паўзу</string>
   <string name="music_widget_description">Гэта галоўны музычны віджэт Estrella, кіруйце ўсім сваім зместам у адным месцы</string>
   <string name="like_all">Як і ўсе</string>
+  <string name="nowPlaying">Вы слухаеце</string>
+  <string name="upNext">Далей</string>
 </resources>

@@ -173,4 +173,6 @@
   <string name="play_pause">لعب وقفة</string>
   <string name="music_widget_description">هذا هو عنصر واجهة المستخدم الرئيسية لموسيقى Estrella ، ويدير محتواك بالكامل في مكان واحد</string>
   <string name="like_all">مثل الكل</string>
+  <string name="nowPlaying">هل تستمع</string>
+  <string name="upNext">التالي</string>
 </resources>

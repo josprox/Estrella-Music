@@ -140,4 +140,6 @@
   <string name="play_pause">खेल को रोकना</string>
   <string name="music_widget_description">यह एस्ट्रेला संगीत का मुख्य विजेट है, एक स्थान पर आपकी पूरी सामग्री का प्रबंधन करता है</string>
   <string name="like_all">सभी की तरह</string>
+  <string name="nowPlaying">क्या तुम सुन रहे हो</string>
+  <string name="upNext">आगे</string>
 </resources>

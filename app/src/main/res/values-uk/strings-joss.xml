@@ -174,4 +174,6 @@
   <string name="play_pause">Грати паузу</string>
   <string name="music_widget_description">Це головний віджет Estrella Music, керуйте всім своїм вмістом в одному місці</string>
   <string name="like_all">Як і все</string>
+  <string name="nowPlaying">Ви слухаєте</string>
+  <string name="upNext">Вгору</string>
 </resources>

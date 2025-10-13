@@ -174,4 +174,6 @@
   <string name="play_pause">再生一時停止</string>
   <string name="music_widget_description">これはメインの Estrella Music ウィジェットで、すべてのコンテンツを 1 か所で管理します</string>
   <string name="like_all">みんなと同じように</string>
+  <string name="nowPlaying">聞いていますか</string>
+  <string name="upNext">次へ</string>
 </resources>

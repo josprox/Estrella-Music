@@ -140,4 +140,6 @@
   <string name="play_pause">இடைநிறுத்தம் விளையாடுங்கள்</string>
   <string name="music_widget_description">இது முக்கிய எஸ்ட்ரெல்லா இசை விட்ஜெட், உங்கள் எல்லா உள்ளடக்கத்தையும் ஒரே இடத்தில் நிர்வகிக்கவும்</string>
   <string name="like_all">எல்லாவற்றையும் போல</string>
+  <string name="nowPlaying">நீங்கள் கேட்கிறீர்களா?</string>
+  <string name="upNext">அடுத்து</string>
 </resources>

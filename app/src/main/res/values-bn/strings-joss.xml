@@ -194,4 +194,6 @@
   <string name="play_pause">বিরতি খেলুন</string>
   <string name="music_widget_description">এটি প্রধান এস্ট্রেলা মিউজিক উইজেট, আপনার সমস্ত সামগ্রী এক জায়গায় পরিচালনা করুন</string>
   <string name="like_all">সবার মতো</string>
+  <string name="nowPlaying">আপনি কি শুনছেন?</string>
+  <string name="upNext">পরবর্তী</string>
 </resources>
