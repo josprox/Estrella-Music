@@ -7,10 +7,12 @@ import android.app.PendingIntent
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.database.SQLException
 import android.media.audiofx.AudioEffect
 import android.net.ConnectivityManager
 import android.os.Binder
+import android.os.Build
 import android.os.Bundle
 import androidx.core.app.NotificationCompat
 import androidx.core.content.getSystemService
@@ -49,8 +51,11 @@ import androidx.media3.extractor.mkv.MatroskaExtractor
 import androidx.media3.extractor.mp4.FragmentedMp4Extractor
 import androidx.media3.session.CommandButton
 import androidx.media3.session.DefaultMediaNotificationProvider
+import androidx.media3.session.MediaController
 import androidx.media3.session.MediaLibraryService
 import androidx.media3.session.MediaSession
+import androidx.media3.session.SessionToken
+import com.google.common.util.concurrent.MoreExecutors
 import com.josprox.jossredconnect.JossRedClient
 import com.zionhuang.innertube.YouTube
 import com.zionhuang.innertube.models.WatchEndpoint
@@ -61,23 +66,18 @@ import com.zionhuang.music.R
 import com.zionhuang.music.constants.AudioNormalizationKey
 import com.zionhuang.music.constants.AudioQuality
 import com.zionhuang.music.constants.AudioQualityKey
-import com.zionhuang.music.constants.AutoLoadMoreKey
-import com.zionhuang.music.constants.AutoSkipNextOnErrorKey
 import com.zionhuang.music.constants.DiscordTokenKey
 import com.zionhuang.music.constants.EnableDiscordRPCKey
-import com.zionhuang.music.constants.HideExplicitKey
 import com.zionhuang.music.constants.JossRedMultimedia
 import com.zionhuang.music.constants.MediaSessionConstants.CommandToggleLibrary
 import com.zionhuang.music.constants.MediaSessionConstants.CommandToggleLike
 import com.zionhuang.music.constants.MediaSessionConstants.CommandToggleRepeatMode
 import com.zionhuang.music.constants.MediaSessionConstants.CommandToggleShuffle
-import com.zionhuang.music.constants.PauseListenHistoryKey
 import com.zionhuang.music.constants.PersistentQueueKey
 import com.zionhuang.music.constants.PlayerVolumeKey
 import com.zionhuang.music.constants.RepeatModeKey
 import com.zionhuang.music.constants.ShowLyricsKey
 import com.zionhuang.music.constants.SkipSilenceKey
-import com.zionhuang.music.constants.SleepFinishSong
 import com.zionhuang.music.db.MusicDatabase
 import com.zionhuang.music.db.entities.Event
 import com.zionhuang.music.db.entities.FormatEntity
@@ -85,6 +85,8 @@ import com.zionhuang.music.db.entities.LyricsEntity
 import com.zionhuang.music.di.AppModule.PlayerCache
 import com.zionhuang.music.di.DownloadCache
 import com.zionhuang.music.extensions.SilentHandler
+import com.zionhuang.music.extensions.collect
+import com.zionhuang.music.extensions.collectLatest
 import com.zionhuang.music.extensions.currentMetadata
 import com.zionhuang.music.extensions.findNextMediaItemById
 import com.zionhuang.music.extensions.mediaItems
@@ -103,6 +105,7 @@ import com.zionhuang.music.utils.SecureKeys
 import com.zionhuang.music.utils.YTPlayerUtils
 import com.zionhuang.music.utils.dataStore
 import com.zionhuang.music.utils.enumPreference
+import com.zionhuang.music.utils.get
 import com.zionhuang.music.utils.isInternetAvailable
 import com.zionhuang.music.utils.reportException
 import dagger.hilt.android.AndroidEntryPoint
@@ -119,12 +122,9 @@ import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.distinctUntilChangedBy
-import kotlinx.coroutines.flow.drop
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.flatMapLatest
-import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.map
-import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
@@ -199,16 +199,53 @@ class MusicService : MediaLibraryService(),
     private var discordRpc: DiscordRPC? = null
 
     override fun onCreate() {
-        // 1. super.onCreate() PRIMERO para que Hilt inyecte las dependencias.
         super.onCreate()
 
-        // 2. AHORA inicializamos el player y la sesión, ya que las dependencias están listas.
+        // Canal y notificación para servicio foreground
+        val channel = NotificationChannel(
+            "MUSIC_CHANNEL",
+            getString(R.string.music_player),
+            NotificationManager.IMPORTANCE_LOW
+        ).apply {
+            description = getString(R.string.musicDescNotification)
+        }
+        val notificationManager = getSystemService(NotificationManager::class.java)
+        notificationManager.createNotificationChannel(channel)
+
+        val notification = NotificationCompat.Builder(this, "MUSIC_CHANNEL")
+            .setContentTitle(getString(R.string.musicTitleNotification))
+            .setContentText(getString(R.string.musicDescNotification))
+            .setSmallIcon(R.drawable.joss_music_logo)
+            .setPriority(NotificationCompat.PRIORITY_LOW)
+            .build()
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+            if (checkSelfPermission(android.Manifest.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK) == PackageManager.PERMISSION_GRANTED) {
+                startForeground(1, notification)
+            } else {
+                Timber.tag("MusicService").w("Falta permiso FOREGROUND_SERVICE_MEDIA_PLAYBACK")
+            }
+        } else {
+            startForeground(1, notification)
+        }
+
+        setMediaNotificationProvider(
+            DefaultMediaNotificationProvider(this, { NOTIFICATION_ID }, CHANNEL_ID, R.string.music_player)
+                .apply { setSmallIcon(R.drawable.joss_music_logo) }
+        )
+
         player = ExoPlayer.Builder(this)
             .setMediaSourceFactory(createMediaSourceFactory())
             .setRenderersFactory(createRenderersFactory())
             .setHandleAudioBecomingNoisy(true)
             .setWakeMode(C.WAKE_MODE_NETWORK)
-            .setAudioAttributes(AudioAttributes.Builder().setUsage(C.USAGE_MEDIA).setContentType(C.AUDIO_CONTENT_TYPE_MUSIC).build(), true)
+            .setAudioAttributes(
+                AudioAttributes.Builder()
+                    .setUsage(C.USAGE_MEDIA)
+                    .setContentType(C.AUDIO_CONTENT_TYPE_MUSIC)
+                    .build(),
+                true
+            )
             .setSeekBackIncrementMs(5000)
             .setSeekForwardIncrementMs(5000)
             .build()
@@ -224,108 +261,70 @@ class MusicService : MediaLibraryService(),
             toggleLibrary = ::toggleLibrary
         }
 
-        mediaSession =
-            MediaLibraryService.MediaLibrarySession.Builder(this, player, mediaLibrarySessionCallback)
-                .setSessionActivity(PendingIntent.getActivity(this, 0, Intent(this, MainActivity::class.java), PendingIntent.FLAG_IMMUTABLE))
-                .setBitmapLoader(CoilBitmapLoader(this, scope))
-                .build()
-
-        // 3. Creamos el canal y mostramos la notificación inicial para evitar crashes.
-        val channel = NotificationChannel(CHANNEL_ID, getString(R.string.music_player), NotificationManager.IMPORTANCE_LOW)
-            .apply { description = getString(R.string.musicDescNotification) }
-        getSystemService(NotificationManager::class.java).createNotificationChannel(channel)
-
-        val notification = NotificationCompat.Builder(this, CHANNEL_ID)
-            .setSmallIcon(R.drawable.joss_music_logo)
-            .setContentTitle(getString(R.string.app_name))
-            .setContentText(getString(R.string.notification_initializing))
+        mediaSession = MediaLibrarySession.Builder(this, player, mediaLibrarySessionCallback)
+            .setSessionActivity(
+                PendingIntent.getActivity(
+                    this,
+                    0,
+                    Intent(this, MainActivity::class.java),
+                    PendingIntent.FLAG_IMMUTABLE
+                )
+            )
+            .setBitmapLoader(CoilBitmapLoader(this, scope))
             .build()
-        startForeground(NOTIFICATION_ID, notification)
 
-        // 4. Configuramos el resto de componentes del servicio.
-        setMediaNotificationProvider(
-            DefaultMediaNotificationProvider(this, { NOTIFICATION_ID }, CHANNEL_ID, R.string.music_player)
-                .apply { setSmallIcon(R.drawable.joss_music_logo) }
-        )
+        player.repeatMode = dataStore.get(RepeatModeKey, REPEAT_MODE_OFF)
+
+        // Controlador para mantener notificación viva
+        val sessionToken = SessionToken(this, ComponentName(this, MusicService::class.java))
+        val controllerFuture = MediaController.Builder(this, sessionToken).buildAsync()
+        controllerFuture.addListener({ controllerFuture.get() }, MoreExecutors.directExecutor())
 
         connectivityManager = getSystemService()!!
-        initializeServiceState()
-    }
 
-    // ... (El resto de tus métodos como initializeServiceState, etc. permanecen igual) ...
-    private fun initializeServiceState() {
-        // Carga la configuración inicial y la cola persistente de forma asíncrona.
-        loadInitialSettingsAndQueue()
-
-        // Sincroniza el estado del SleepTimer con DataStore en ambas direcciones.
-        // 1. Cuando DataStore cambia, actualiza el estado en vivo del timer.
-        settingsState.map { it.sleepFinishSong }
-            .distinctUntilChanged()
-            .onEach { fromSettings -> sleepTimerFinish.value = fromSettings }
-            .launchIn(scope)
-
-        // 2. Cuando el timer cambia (ej. se desactiva solo), guárdalo en DataStore.
-        sleepTimerFinish
-            .drop(1) // Ignora el valor inicial para no escribir innecesariamente.
-            .distinctUntilChanged()
-            .onEach { fromLogic ->
-                if (settingsState.value.sleepFinishSong != fromLogic) {
-                    dataStore.edit { it[SleepFinishSong] = fromLogic }
-                }
-            }
-            .launchIn(scope)
-
-        // El resto de los collectors son reactivos y no bloquean.
         combine(playerVolume, normalizeFactor) { vol, norm -> vol * norm }
-            .onEach { player.volume = it }
-            .launchIn(scope)
+            .collectLatest(scope) { player.volume = it }
 
-        playerVolume.debounce(1000)
-            .onEach { volume -> dataStore.edit { settings -> settings[PlayerVolumeKey] = volume } }
-            .launchIn(scope)
+        playerVolume.debounce(1000).collect(scope) { volume ->
+            dataStore.edit { settings -> settings[PlayerVolumeKey] = volume }
+        }
 
-        currentSong
-            .onEach { notifyWidget() }
-            .launchIn(scope)
-
-        currentSong.debounce(1000)
-            .onEach { song ->
-                updateNotification()
-                if (song != null) discordRpc?.updateSong(song) else discordRpc?.closeRPC()
-            }
-            .launchIn(scope)
+        currentSong.debounce(1000).collect(scope) { song ->
+            updateNotification()
+            if (song != null) discordRpc?.updateSong(song) else discordRpc?.closeRPC()
+        }
 
         combine(
             currentMediaMetadata.distinctUntilChangedBy { it?.id },
             dataStore.data.map { it[ShowLyricsKey] ?: false }.distinctUntilChanged()
         ) { mediaMetadata, showLyrics -> mediaMetadata to showLyrics }
-            .onEach { (mediaMetadata, showLyrics) ->
+            .collectLatest(scope) { (mediaMetadata, showLyrics) ->
                 if (showLyrics && mediaMetadata != null && database.lyrics(mediaMetadata.id).first() == null) {
                     val lyrics = lyricsHelper.getLyrics(mediaMetadata)
                     database.query { upsert(LyricsEntity(id = mediaMetadata.id, lyrics = lyrics)) }
                 }
             }
-            .launchIn(scope)
 
-        dataStore.data.map { it[SkipSilenceKey] ?: false }.distinctUntilChanged()
-            .onEach { player.skipSilenceEnabled = it }
-            .launchIn(scope)
+        dataStore.data
+            .map { it[SkipSilenceKey] ?: false }
+            .distinctUntilChanged()
+            .collectLatest(scope) { player.skipSilenceEnabled = it }
 
         combine(
             currentFormat,
             dataStore.data.map { it[AudioNormalizationKey] ?: true }.distinctUntilChanged()
         ) { format, normalize -> format to normalize }
-            .onEach { (format, normalize) ->
+            .collectLatest(scope) { (format, normalize) ->
                 normalizeFactor.value = if (normalize && format?.loudnessDb != null) {
                     min(10f.pow(-format.loudnessDb.toFloat() / 20), 1f)
                 } else 1f
             }
-            .launchIn(scope)
 
-        dataStore.data.map { it[DiscordTokenKey] to (it[EnableDiscordRPCKey] ?: true) }
+        dataStore.data
+            .map { it[DiscordTokenKey] to (it[EnableDiscordRPCKey] ?: true) }
             .debounce(300)
             .distinctUntilChanged()
-            .onEach { (key, enabled) ->
+            .collect(scope) { (key, enabled) ->
                 if (discordRpc?.isRpcRunning() == true) discordRpc?.closeRPC()
                 discordRpc = null
                 if (key != null && enabled) {
@@ -333,62 +332,30 @@ class MusicService : MediaLibraryService(),
                     currentSong.value?.let { discordRpc?.updateSong(it) }
                 }
             }
-            .launchIn(scope)
 
-        // Tarea periódica para guardar la cola.
-        scope.launch(Dispatchers.IO) {
-            while (isActive) {
-                delay(30.seconds)
-                if (settingsState.value.persistentQueue) {
-                    saveQueueToDisk()
+        if (dataStore.get(PersistentQueueKey, true)) {
+            runCatching {
+                filesDir.resolve(PERSISTENT_QUEUE_FILE).inputStream().use { fis ->
+                    ObjectInputStream(fis).use { ois -> ois.readObject() as PersistQueue }
                 }
+            }.onSuccess { queue ->
+                playQueue(
+                    queue = ListQueue(
+                        title = queue.title,
+                        items = queue.items.map { it.toMediaItem() },
+                        startIndex = queue.mediaItemIndex,
+                        position = queue.position
+                    ),
+                    playWhenReady = false
+                )
             }
         }
-    }
 
-    private fun loadInitialSettingsAndQueue() {
-        // Se suscribe a los cambios de DataStore y actualiza el StateFlow central.
-        dataStore.data.onEach { preferences ->
-            val newSettings = MusicServiceSettings(
-                playerVolume = (preferences[PlayerVolumeKey] ?: 1f).coerceIn(0f, 1f),
-                repeatMode = preferences[RepeatModeKey] ?: REPEAT_MODE_OFF,
-                sleepFinishSong = preferences[SleepFinishSong] ?: false,
-                autoLoadMore = preferences[AutoLoadMoreKey] ?: true,
-                hideExplicit = preferences[HideExplicitKey] ?: false,
-                autoSkipOnError = preferences[AutoSkipNextOnErrorKey] ?: false,
-                pauseHistory = preferences[PauseListenHistoryKey] ?: false,
-                persistentQueue = preferences[PersistentQueueKey] ?: true
-            )
-            settingsState.value = newSettings
-
-            // Aplica configuraciones que afectan directamente al reproductor.
-            player.repeatMode = newSettings.repeatMode
-            playerVolume.value = newSettings.playerVolume
-        }.launchIn(scope)
-
-        // Carga la cola inicial por separado pero también de forma asíncrona.
-        scope.launch(Dispatchers.IO) {
-            // Lee la preferencia una sola vez para decidir si cargar la cola.
-            if (dataStore.data.first()[PersistentQueueKey] ?: true) {
-                val queue = runCatching {
-                    filesDir.resolve(PERSISTENT_QUEUE_FILE).inputStream().use { fis ->
-                        ObjectInputStream(fis).use { ois -> ois.readObject() as PersistQueue }
-                    }
-                }.getOrNull()
-
-                withContext(Dispatchers.Main) { // Cambia al hilo principal para interactuar con el reproductor.
-                    queue?.let {
-                        playQueue(
-                            queue = ListQueue(
-                                title = it.title,
-                                items = it.items.map { item -> item.toMediaItem() },
-                                startIndex = it.mediaItemIndex,
-                                position = it.position
-                            ),
-                            playWhenReady = false
-                        )
-                    }
-                }
+        // Guardado periódico de la cola
+        scope.launch {
+            while (isActive) {
+                delay(30.seconds)
+                if (dataStore.get(PersistentQueueKey, true)) saveQueueToDisk()
             }
         }
     }
