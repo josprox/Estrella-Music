@@ -90,6 +90,7 @@ import com.zionhuang.music.ui.component.NavigationTile
 import com.zionhuang.music.ui.component.NavigationTitle
 import com.zionhuang.music.ui.component.SongGridItem
 import com.zionhuang.music.ui.component.SongListItem
+import com.zionhuang.music.ui.component.WrappedStoryTile
 import com.zionhuang.music.ui.component.YouTubeGridItem
 import com.zionhuang.music.ui.component.shimmer.GridItemPlaceHolder
 import com.zionhuang.music.ui.component.shimmer.ShimmerHost
@@ -370,7 +371,8 @@ fun HomeScreen(
                         .windowInsetsPadding(WindowInsets.systemBars.only(WindowInsetsSides.Horizontal))
                         .padding(horizontal = 12.dp, vertical = 6.dp)
                         .fillMaxWidth()
-                        .animateItem()
+                        .animateItem(),
+                    verticalAlignment = Alignment.Top // Alinear al Top para que el texto no desajuste
                 ) {
                     NavigationTile(
                         title = stringResource(R.string.history),
@@ -395,11 +397,9 @@ fun HomeScreen(
                         modifier = Modifier.weight(1f)
                     )
 
-                    NavigationTile(
-                        title = "Mi Wrapped",
-                        icon = R.drawable.celebration,
-                        onClick = { navController.navigate("wrapped") },
-                        modifier = Modifier.weight(1f)
+                    WrappedStoryTile(
+                        modifier = Modifier.weight(1f),
+                        onClick = { navController.navigate("wrapped") }
                     )
                 }
             }

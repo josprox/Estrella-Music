@@ -115,6 +115,9 @@ ksp {
 }
 
 dependencies {
+    // --- ¡¡BOM DE COMPOSE AÑADIDO AQUÍ!! ---
+    implementation(platform(libs.compose.bom))
+
     // --- DEPENDENCIAS BASE ---
     implementation(libs.guava)
     implementation(libs.coroutines.guava)
@@ -125,6 +128,7 @@ dependencies {
     implementation(libs.hilt.navigation)
     implementation(libs.datastore)
 
+    // --- Dependencias de Compose (ahora sin versión) ---
     implementation(libs.compose.runtime)
     implementation(libs.compose.foundation)
     implementation(libs.compose.ui)
@@ -133,11 +137,14 @@ dependencies {
     implementation(libs.compose.animation)
     implementation(libs.compose.animation.graphics)
     implementation(libs.compose.reorderable)
+    implementation(libs.material3)
+    implementation(libs.androidx.material.icons.extended)
+    implementation(libs.runtime.livedata)
+    implementation(libs.androidx.foundation) // Asegúrate de que esta línea esté (ya la tenías)
 
     implementation(libs.viewmodel)
     implementation(libs.viewmodel.compose)
 
-    implementation(libs.material3)
     implementation(libs.palette)
     implementation(projects.materialColorUtilities)
     implementation(libs.squigglyslider)
@@ -154,7 +161,6 @@ dependencies {
 
     implementation(libs.room.runtime)
     implementation(libs.androidx.media3.ui)
-    implementation(libs.androidx.foundation)
     ksp(libs.room.compiler)
     implementation(libs.room.ktx)
 
@@ -178,18 +184,16 @@ dependencies {
     implementation(libs.androidx.webkit)
     implementation(libs.dotenv.vault.kotlin)
     implementation(libs.kotlinx.serialization.json)
-    implementation(libs.androidx.material.icons.extended)
     implementation(libs.richtext.ui.material3)
     implementation(libs.richtext.commonmark)
     implementation(libs.androidx.palette.ktx)
     implementation(libs.billing.ktx)
-    implementation(libs.runtime.livedata)
     implementation(libs.lifecycle.process)
     implementation(libs.onesignal)
     implementation(libs.androidx.media3.exoplayer.v131)
 
-    implementation("androidx.work:work-runtime-ktx:2.10.5")
-    implementation("androidx.hilt:hilt-work:1.3.0")
+    implementation("androidx.work:work-runtime-ktx:2.10.5") // Esta versión parece bien
+    implementation("androidx.hilt:hilt-work:1.3.0") // Esta versión parece bien
 
     // --- DEPENDENCIAS PARA LA VERSIÓN "full" ---
     "fullImplementation"(libs.firebase.analytics)

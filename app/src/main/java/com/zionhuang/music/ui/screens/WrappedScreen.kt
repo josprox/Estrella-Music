@@ -1,11 +1,31 @@
 package com.zionhuang.music.ui.screens
 
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.animateColor
+import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.LinearEasing
+import androidx.compose.animation.core.RepeatMode
+import androidx.compose.animation.core.infiniteRepeatable
+import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.tween
-import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.slideInVertically
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.FlowRow
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.navigationBarsPadding
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.pager.HorizontalPager
@@ -14,25 +34,46 @@ import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.SkipNext
+import androidx.compose.material.icons.filled.SkipPrevious
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.LinearProgressIndicator
+import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.State
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.produceState
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.graphics.toArgb
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.util.lerp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import androidx.palette.graphics.Palette
+import coil.imageLoader
+import coil.request.ImageRequest
+import coil.size.Size
+import com.zionhuang.music.R
 import com.zionhuang.music.db.entities.ArtistStats
 import com.zionhuang.music.db.entities.SimpleWrappedData
 import com.zionhuang.music.db.entities.SongStats
@@ -42,13 +83,110 @@ import com.zionhuang.music.viewmodels.WrappedViewModel
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
-import androidx.compose.foundation.layout.ExperimentalLayoutApi
-import androidx.compose.material.icons.filled.SkipNext
-import androidx.compose.material.icons.filled.SkipPrevious
-import androidx.compose.ui.res.painterResource
-import com.zionhuang.music.R
+import kotlin.math.absoluteValue
 
-@OptIn(ExperimentalFoundationApi::class)
+@Composable
+fun AnimatedGradientBackground(modifier: Modifier = Modifier) {
+    val infiniteTransition = rememberInfiniteTransition(label = "gradient-transition")
+
+    val color1 by infiniteTransition.animateColor(
+        initialValue = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.5f),
+        targetValue = MaterialTheme.colorScheme.secondaryContainer.copy(alpha = 0.6f),
+        animationSpec = infiniteRepeatable(
+            tween(12000, easing = LinearEasing),
+            RepeatMode.Reverse
+        ), label = "color1"
+    )
+    val color2 by infiniteTransition.animateColor(
+        initialValue = MaterialTheme.colorScheme.tertiaryContainer.copy(alpha = 0.6f),
+        targetValue = MaterialTheme.colorScheme.primary.copy(alpha = 0.4f),
+        animationSpec = infiniteRepeatable(
+            tween(10000, easing = LinearEasing),
+            RepeatMode.Reverse
+        ), label = "color2"
+    )
+    val color3 by infiniteTransition.animateColor(
+        initialValue = MaterialTheme.colorScheme.secondary.copy(alpha = 0.5f),
+        targetValue = MaterialTheme.colorScheme.tertiary.copy(alpha = 0.5f),
+        animationSpec = infiniteRepeatable(
+            tween(11000, easing = LinearEasing),
+            RepeatMode.Reverse
+        ), label = "color3"
+    )
+
+    val gradient = Brush.linearGradient(
+        colors = listOf(color1, color2, color3, color1),
+        start = androidx.compose.ui.geometry.Offset(0f, 0f),
+        end = androidx.compose.ui.geometry.Offset(Float.POSITIVE_INFINITY, Float.POSITIVE_INFINITY)
+    )
+
+    Box(
+        modifier = modifier
+            .fillMaxSize()
+            .background(brush = gradient)
+    )
+}
+
+@Composable
+fun rememberDominantColor(
+    url: String?,
+    defaultColor: Color = MaterialTheme.colorScheme.surface
+): State<Color> {
+    val context = LocalContext.current
+
+    return produceState(initialValue = defaultColor, key1 = url) {
+        if (url.isNullOrEmpty()) {
+            value = defaultColor
+            return@produceState
+        }
+
+        val request = ImageRequest.Builder(context)
+            .data(url)
+            .size(Size(128, 128))
+            .allowHardware(false)
+            .build()
+
+        try {
+            val drawable = context.imageLoader.execute(request).drawable
+            if (drawable != null) {
+                val bitmap = (drawable as? android.graphics.drawable.BitmapDrawable)?.bitmap
+                if (bitmap != null && !bitmap.isRecycled) {
+                    val palette = Palette.from(bitmap).generate()
+                    val dominantSwatch = palette.dominantSwatch
+                        ?: palette.vibrantSwatch
+                        ?: palette.mutedSwatch
+
+                    if (dominantSwatch != null) {
+                        value = Color(dominantSwatch.rgb)
+                    }
+                }
+            }
+        } catch (_: Exception) {
+            value = defaultColor
+        }
+    }
+}
+
+fun adjustColorToPastel(color: Color, minBrightness: Float = 0.6f, maxSaturation: Float = 0.5f): Color {
+    val hsv = FloatArray(3)
+
+    // Usamos la utilidad estática de android.graphics.Color
+    android.graphics.Color.colorToHSV(color.toArgb(), hsv)
+
+    val h = hsv[0] // Hue
+    var s = hsv[1] // Saturation
+    var v = hsv[2] // Value (Brightness)
+
+    // Asegurarse de que el brillo (Value) sea al menos minBrightness
+    v = v.coerceAtLeast(minBrightness)
+    // Asegurarse de que la saturación no exceda maxSaturation
+    s = s.coerceAtMost(maxSaturation)
+
+    // --- ¡CORRECCIÓN! Reconstruimos usando hsv, no hsl ---
+    return androidx.compose.ui.graphics.Color.hsv(h, s, v, color.alpha)
+}
+
+
 @Composable
 fun WrappedScreen(
     navController: NavController,
@@ -67,7 +205,6 @@ fun WrappedScreen(
     }
 
     LaunchedEffect(pagerState.currentPage, pagerState.isScrollInProgress) {
-        // Detener en la última página
         if (pagerState.isScrollInProgress || pagerState.currentPage == 5) {
             progress.stop()
         } else {
@@ -90,10 +227,10 @@ fun WrappedScreen(
     }
 
     Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(MaterialTheme.colorScheme.background)
+        modifier = Modifier.fillMaxSize()
     ) {
+        AnimatedGradientBackground(modifier = Modifier.matchParentSize())
+
         if (isLoading || wrappedData == null) {
             Text(
                 text = "Preparando tu Wrapped...",
@@ -102,18 +239,48 @@ fun WrappedScreen(
                 modifier = Modifier.align(Alignment.Center)
             )
         } else {
-            // El wrapper 'Capturable' ha sido eliminado
             HorizontalPager(
                 state = pagerState,
                 modifier = Modifier.fillMaxSize()
             ) { page ->
-                when (page) {
-                    0 -> TopArtistPage(wrappedData!!.topArtists.firstOrNull())
-                    1 -> TopArtistsPage(wrappedData!!.topArtists.take(5))
-                    2 -> TopSongPage(wrappedData!!.topSongs.firstOrNull())
-                    3 -> TopSongsPage(wrappedData!!.topSongs.take(5))
-                    4 -> StatsPage(wrappedData!!)
-                    5 -> SharePage(wrappedData!!.period)
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .graphicsLayer {
+                            val pageOffset = (pagerState.currentPage - page) + pagerState.currentPageOffsetFraction
+
+                            val scale = lerp(
+                                start = 0.85f,
+                                stop = 1f,
+                                fraction = 1f - pageOffset.absoluteValue.coerceIn(0f, 1f)
+                            )
+                            scaleX = scale
+                            scaleY = scale
+
+                            alpha = lerp(
+                                start = 0.4f,
+                                stop = 1f,
+                                fraction = 1f - pageOffset.absoluteValue.coerceIn(0f, 1f)
+                            )
+                        }
+                ) {
+                    AnimatedVisibility(
+                        visible = pagerState.currentPage == page,
+                        enter = slideInVertically(
+                            initialOffsetY = { it / 2 },
+                            animationSpec = tween(durationMillis = 700, easing = LinearEasing)
+                        ) + fadeIn(animationSpec = tween(700)),
+                        modifier = Modifier.fillMaxSize()
+                    ) {
+                        when (page) {
+                            0 -> TopArtistPage(wrappedData!!.topArtists.firstOrNull())
+                            1 -> TopArtistsPage(wrappedData!!.topArtists.take(5))
+                            2 -> TopSongPage(wrappedData!!.topSongs.firstOrNull())
+                            3 -> TopSongsPage(wrappedData!!.topSongs.take(5))
+                            4 -> StatsPage(wrappedData!!)
+                            5 -> SharePage(wrappedData!!.period)
+                        }
+                    }
                 }
             }
 
@@ -122,13 +289,11 @@ fun WrappedScreen(
                 pagerState = pagerState,
                 progress = progress.value,
                 scope = coroutineScope
-                // El callback onShareClick ha sido eliminado
             )
         }
     }
 }
 
-@OptIn(ExperimentalFoundationApi::class)
 @Composable
 private fun BottomControls(
     modifier: Modifier = Modifier,
@@ -139,7 +304,7 @@ private fun BottomControls(
     Surface(
         modifier = modifier.fillMaxWidth(),
         shadowElevation = 8.dp,
-        color = MaterialTheme.colorScheme.surface
+        color = MaterialTheme.colorScheme.surface.copy(alpha = 0.7f)
     ) {
         Column(
             modifier = Modifier.navigationBarsPadding()
@@ -148,7 +313,7 @@ private fun BottomControls(
                 progress = { progress },
                 modifier = Modifier.fillMaxWidth(),
                 color = MaterialTheme.colorScheme.primary,
-                trackColor = MaterialTheme.colorScheme.surfaceVariant
+                trackColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f)
             )
             Row(
                 modifier = Modifier
@@ -157,7 +322,6 @@ private fun BottomControls(
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                // Botón Anterior
                 IconButton(
                     onClick = {
                         scope.launch {
@@ -172,14 +336,12 @@ private fun BottomControls(
                     )
                 }
 
-                // Contador de páginas
                 Text(
                     text = "${pagerState.currentPage + 1} / ${pagerState.pageCount}",
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
 
-                // Botón Siguiente
                 IconButton(
                     onClick = {
                         scope.launch {
@@ -198,7 +360,6 @@ private fun BottomControls(
     }
 }
 
-// Padding inferior para dejar espacio a los controles
 val PageBottomPadding = 100.dp
 
 @Composable
@@ -213,8 +374,9 @@ private fun TopArtistPage(topArtist: ArtistStats?) {
     ) {
         Text(
             text = "Tu artista top",
-            style = MaterialTheme.typography.headlineMedium,
-            color = MaterialTheme.colorScheme.onSurfaceVariant
+            style = MaterialTheme.typography.headlineLarge,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            fontWeight = FontWeight.Bold
         )
 
         if (topArtist != null) {
@@ -229,7 +391,7 @@ private fun TopArtistPage(topArtist: ArtistStats?) {
                     text = topArtist.name,
                     style = MaterialTheme.typography.displayMedium,
                     color = MaterialTheme.colorScheme.primary,
-                    fontWeight = FontWeight.Bold,
+                    fontWeight = FontWeight.ExtraBold,
                     textAlign = TextAlign.Center
                 )
                 Spacer(modifier = Modifier.height(16.dp))
@@ -265,7 +427,8 @@ private fun TopArtistsPage(topArtists: List<ArtistStats>) {
             text = "Tus artistas más escuchados",
             style = MaterialTheme.typography.headlineMedium,
             color = MaterialTheme.colorScheme.onBackground,
-            modifier = Modifier.padding(top = 32.dp)
+            modifier = Modifier.padding(top = 32.dp),
+            fontWeight = FontWeight.Bold
         )
 
         Spacer(modifier = Modifier.height(32.dp))
@@ -276,47 +439,76 @@ private fun TopArtistsPage(topArtists: List<ArtistStats>) {
                 verticalArrangement = Arrangement.spacedBy(16.dp),
                 contentPadding = PaddingValues(bottom = 16.dp)
             ) {
-                itemsIndexed(topArtists) { index, artist ->
-                    Card(
-                        modifier = Modifier.fillMaxWidth(),
-                        shape = RoundedCornerShape(24.dp),
-                        colors = CardDefaults.cardColors(
-                            containerColor = MaterialTheme.colorScheme.secondaryContainer.copy(alpha = 0.6f)
-                        )
+                itemsIndexed(topArtists, key = { _, artist -> artist.name }) { index, artist ->
+
+                    AnimatedVisibility(
+                        visible = true,
+                        enter = fadeIn(animationSpec = tween(300, delayMillis = index * 75)) +
+                                slideInVertically(
+                                    initialOffsetY = { it / 2 },
+                                    animationSpec = tween(400, delayMillis = index * 75)
+                                ),
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(bottom = 4.dp)
                     ) {
-                        Row(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .padding(16.dp),
-                            verticalAlignment = Alignment.CenterVertically
+
+                        val defaultCardColor = MaterialTheme.colorScheme.secondaryContainer
+                        val cardColor by rememberDominantColor(
+                            url = artist.thumbnailUrl,
+                            defaultColor = defaultCardColor
+                        )
+
+                        val adjustedCardColor = remember(cardColor) {
+                            adjustColorToPastel(cardColor)
+                        }
+
+                        val animatedColor by animateColorAsState(
+                            targetValue = adjustedCardColor.copy(alpha = 0.9f),
+                            animationSpec = tween(500), label = "cardColor"
+                        )
+
+                        Card(
+                            modifier = Modifier.fillMaxWidth(),
+                            shape = RoundedCornerShape(24.dp),
+                            colors = CardDefaults.cardColors(
+                                containerColor = animatedColor
+                            )
                         ) {
-                            Text(
-                                text = "${index + 1}.",
-                                style = MaterialTheme.typography.titleMedium,
-                                color = MaterialTheme.colorScheme.primary,
-                                modifier = Modifier.padding(end = 8.dp)
-                            )
-                            ArtistArt(
-                                thumbnailUrl = artist.thumbnailUrl,
-                                size = 56.dp,
-                                modifier = Modifier.clip(CircleShape)
-                            )
-                            Spacer(modifier = Modifier.width(16.dp))
-                            Column(
-                                modifier = Modifier.weight(1f)
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(16.dp),
+                                verticalAlignment = Alignment.CenterVertically
                             ) {
                                 Text(
-                                    text = artist.name,
-                                    style = MaterialTheme.typography.titleLarge,
-                                    color = MaterialTheme.colorScheme.onSecondaryContainer,
-                                    maxLines = 1,
-                                    overflow = TextOverflow.Ellipsis
+                                    text = "${index + 1}.",
+                                    style = MaterialTheme.typography.titleMedium,
+                                    fontWeight = FontWeight.ExtraBold,
+                                    modifier = Modifier.padding(end = 8.dp)
                                 )
-                                Text(
-                                    text = "${artist.playCount} plays",
-                                    style = MaterialTheme.typography.labelMedium,
-                                    color = MaterialTheme.colorScheme.onSecondaryContainer.copy(alpha = 0.7f)
+                                ArtistArt(
+                                    thumbnailUrl = artist.thumbnailUrl,
+                                    size = 56.dp,
+                                    modifier = Modifier.clip(CircleShape)
                                 )
+                                Spacer(modifier = Modifier.width(16.dp))
+                                Column(
+                                    modifier = Modifier.weight(1f)
+                                ) {
+                                    Text(
+                                        text = artist.name,
+                                        style = MaterialTheme.typography.titleLarge,
+                                        maxLines = 1,
+                                        overflow = TextOverflow.Ellipsis,
+                                        fontWeight = FontWeight.Bold
+                                    )
+                                    Text(
+                                        text = "${artist.playCount} plays",
+                                        style = MaterialTheme.typography.labelMedium,
+                                        color = LocalContentColor.current.copy(alpha = 0.8f)
+                                    )
+                                }
                             }
                         }
                     }
@@ -345,8 +537,9 @@ private fun TopSongPage(topSong: SongStats?) {
     ) {
         Text(
             text = "Tu canción del año",
-            style = MaterialTheme.typography.headlineMedium,
-            color = MaterialTheme.colorScheme.onSurfaceVariant
+            style = MaterialTheme.typography.headlineLarge,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            fontWeight = FontWeight.Bold
         )
 
         if (topSong != null) {
@@ -361,7 +554,7 @@ private fun TopSongPage(topSong: SongStats?) {
                     text = topSong.title,
                     style = MaterialTheme.typography.displaySmall,
                     color = MaterialTheme.colorScheme.primary,
-                    fontWeight = FontWeight.Bold,
+                    fontWeight = FontWeight.ExtraBold,
                     textAlign = TextAlign.Center
                 )
                 Spacer(modifier = Modifier.height(8.dp))
@@ -423,7 +616,8 @@ private fun TopSongsPage(topSongs: List<SongStats>) {
             text = "Tus canciones más escuchadas",
             style = MaterialTheme.typography.headlineMedium,
             color = MaterialTheme.colorScheme.onBackground,
-            modifier = Modifier.padding(top = 32.dp)
+            modifier = Modifier.padding(top = 32.dp),
+            fontWeight = FontWeight.Bold
         )
         Spacer(modifier = Modifier.height(32.dp))
         if (topSongs.isNotEmpty()) {
@@ -432,53 +626,80 @@ private fun TopSongsPage(topSongs: List<SongStats>) {
                 verticalArrangement = Arrangement.spacedBy(16.dp),
                 contentPadding = PaddingValues(bottom = 16.dp)
             ) {
-                itemsIndexed(topSongs) { index, song ->
-                    Card(
-                        modifier = Modifier.fillMaxWidth(),
-                        shape = RoundedCornerShape(24.dp),
-                        colors = CardDefaults.cardColors(
-                            containerColor = MaterialTheme.colorScheme.tertiaryContainer.copy(alpha = 0.6f)
-                        )
+                itemsIndexed(topSongs, key = { _, song -> song.id }) { index, song ->
+
+                    AnimatedVisibility(
+                        visible = true,
+                        enter = fadeIn(animationSpec = tween(300, delayMillis = index * 75)) +
+                                slideInVertically(
+                                    initialOffsetY = { it / 2 },
+                                    animationSpec = tween(400, delayMillis = index * 75)
+                                ),
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(bottom = 4.dp)
                     ) {
-                        Row(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .padding(16.dp),
-                            verticalAlignment = Alignment.CenterVertically
+                        val defaultCardColor = MaterialTheme.colorScheme.tertiaryContainer
+                        val cardColor by rememberDominantColor(
+                            url = song.thumbnailUrl ?: song.getFallbackThumbnail(),
+                            defaultColor = defaultCardColor
+                        )
+
+                        val adjustedCardColor = remember(cardColor) {
+                            adjustColorToPastel(cardColor)
+                        }
+
+                        val animatedColor by animateColorAsState(
+                            targetValue = adjustedCardColor.copy(alpha = 0.9f),
+                            animationSpec = tween(500), label = "cardColor"
+                        )
+
+                        Card(
+                            modifier = Modifier.fillMaxWidth(),
+                            shape = RoundedCornerShape(24.dp),
+                            colors = CardDefaults.cardColors(
+                                containerColor = animatedColor
+                            )
                         ) {
-                            AlbumArt(
-                                thumbnailUrl = song.thumbnailUrl ?: song.getFallbackThumbnail(),
-                                size = 64.dp,
-                                modifier = Modifier.clip(RoundedCornerShape(16.dp))
-                            )
-                            Spacer(modifier = Modifier.width(16.dp))
-                            Column(
-                                modifier = Modifier.weight(1f)
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(16.dp),
+                                verticalAlignment = Alignment.CenterVertically
                             ) {
-                                Text(
-                                    text = "${index + 1}. ${song.title}",
-                                    style = MaterialTheme.typography.titleLarge,
-                                    color = MaterialTheme.colorScheme.onTertiaryContainer,
-                                    maxLines = 1,
-                                    overflow = TextOverflow.Ellipsis
+                                AlbumArt(
+                                    thumbnailUrl = song.thumbnailUrl ?: song.getFallbackThumbnail(),
+                                    size = 64.dp,
+                                    modifier = Modifier.clip(RoundedCornerShape(16.dp))
                                 )
-                                song.albumName?.let { albumName ->
+                                Spacer(modifier = Modifier.width(16.dp))
+                                Column(
+                                    modifier = Modifier.weight(1f)
+                                ) {
                                     Text(
-                                        text = albumName,
-                                        style = MaterialTheme.typography.bodyMedium,
-                                        color = MaterialTheme.colorScheme.onTertiaryContainer.copy(alpha = 0.8f),
+                                        text = "${index + 1}. ${song.title}",
+                                        style = MaterialTheme.typography.titleLarge,
                                         maxLines = 1,
-                                        overflow = TextOverflow.Ellipsis
+                                        overflow = TextOverflow.Ellipsis,
+                                        fontWeight = FontWeight.Bold
                                     )
+                                    song.albumName?.let { albumName ->
+                                        Text(
+                                            text = albumName,
+                                            style = MaterialTheme.typography.bodyMedium,
+                                            color = LocalContentColor.current.copy(alpha = 0.8f),
+                                            maxLines = 1,
+                                            overflow = TextOverflow.Ellipsis
+                                        )
+                                    }
                                 }
+                                Spacer(modifier = Modifier.width(16.dp))
+                                Text(
+                                    text = "${song.playCount}",
+                                    style = MaterialTheme.typography.titleMedium,
+                                    fontWeight = FontWeight.Bold
+                                )
                             }
-                            Spacer(modifier = Modifier.width(16.dp))
-                            Text(
-                                text = "${song.playCount}",
-                                style = MaterialTheme.typography.titleMedium,
-                                color = MaterialTheme.colorScheme.onTertiaryContainer,
-                                fontWeight = FontWeight.Bold
-                            )
                         }
                     }
                 }
@@ -494,7 +715,6 @@ private fun TopSongsPage(topSongs: List<SongStats>) {
     }
 }
 
-@OptIn(ExperimentalLayoutApi::class)
 @Composable
 private fun StatsPage(wrappedData: SimpleWrappedData) {
     Column(
@@ -509,7 +729,8 @@ private fun StatsPage(wrappedData: SimpleWrappedData) {
             text = "Tus estadísticas",
             style = MaterialTheme.typography.headlineMedium,
             color = MaterialTheme.colorScheme.onBackground,
-            modifier = Modifier.padding(top = 32.dp)
+            modifier = Modifier.padding(top = 32.dp),
+            fontWeight = FontWeight.Bold
         )
         Spacer(modifier = Modifier.height(32.dp))
         FlowRow(
@@ -547,7 +768,7 @@ private fun SharePage(year: String) {
             text = "Tu Wrapped $year",
             style = MaterialTheme.typography.displayLarge,
             color = MaterialTheme.colorScheme.primary,
-            fontWeight = FontWeight.Bold,
+            fontWeight = FontWeight.ExtraBold,
             textAlign = TextAlign.Center
         )
         Surface(
@@ -593,10 +814,19 @@ private fun formatDuration(seconds: Int): String {
 
 @Composable
 private fun StatItem(label: String, value: String, modifier: Modifier = Modifier) {
+    val originalBgColor = MaterialTheme.colorScheme.secondaryContainer
+    val adjustedBgColor = remember(originalBgColor) {
+        adjustColorToPastel(originalBgColor, minBrightness = 0.8f, maxSaturation = 0.3f)
+    }
     Surface(
         modifier = modifier,
-        shape = RoundedCornerShape(28.dp),
-        color = MaterialTheme.colorScheme.secondaryContainer.copy(alpha = 0.8f),
+        shape = RoundedCornerShape(
+            topStart = 32.dp,
+            topEnd = 12.dp,
+            bottomStart = 28.dp,
+            bottomEnd = 16.dp
+        ),
+        color = adjustedBgColor.copy(alpha = 0.8f),
         tonalElevation = 2.dp
     ) {
         Column(
@@ -607,8 +837,7 @@ private fun StatItem(label: String, value: String, modifier: Modifier = Modifier
             Text(
                 text = value,
                 style = MaterialTheme.typography.headlineLarge,
-                color = MaterialTheme.colorScheme.onSecondaryContainer,
-                fontWeight = FontWeight.Bold,
+                fontWeight = FontWeight.ExtraBold,
                 textAlign = TextAlign.Center,
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis
@@ -617,7 +846,6 @@ private fun StatItem(label: String, value: String, modifier: Modifier = Modifier
             Text(
                 text = label,
                 style = MaterialTheme.typography.titleMedium,
-                color = MaterialTheme.colorScheme.onSecondaryContainer,
                 textAlign = TextAlign.Center
             )
         }
