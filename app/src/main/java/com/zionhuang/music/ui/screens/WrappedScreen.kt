@@ -1,32 +1,52 @@
-// En WrappedScreen.kt, actualiza las páginas:
 package com.zionhuang.music.ui.screens
 
+import androidx.compose.animation.core.Animatable
+import androidx.compose.animation.core.LinearEasing
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.pager.HorizontalPager
+import androidx.compose.foundation.pager.PagerState
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
-import coil.compose.AsyncImage
 import com.zionhuang.music.db.entities.ArtistStats
 import com.zionhuang.music.db.entities.SimpleWrappedData
 import com.zionhuang.music.db.entities.SongStats
 import com.zionhuang.music.ui.component.AlbumArt
 import com.zionhuang.music.ui.component.ArtistArt
 import com.zionhuang.music.viewmodels.WrappedViewModel
-import kotlinx.coroutines.delay
-import java.util.concurrent.TimeUnit
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.launch
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.material.icons.filled.SkipNext
+import androidx.compose.material.icons.filled.SkipPrevious
+import androidx.compose.ui.res.painterResource
+import com.zionhuang.music.R
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
@@ -37,22 +57,35 @@ fun WrappedScreen(
     val wrappedData by viewModel.wrappedData.collectAsState()
     val isLoading by viewModel.isLoading.collectAsState()
 
-    val pagerState = rememberPagerState(pageCount = { 7 }) // Añadimos una página más
-    var currentPage by remember { mutableStateOf(0) }
+    val pagerState = rememberPagerState(pageCount = { 6 })
+    val coroutineScope = rememberCoroutineScope()
+
+    val progress = remember { Animatable(0f) }
 
     LaunchedEffect(Unit) {
         viewModel.loadWrappedData()
     }
 
-    LaunchedEffect(pagerState.currentPage) {
-        currentPage = pagerState.currentPage
-    }
+    LaunchedEffect(pagerState.currentPage, pagerState.isScrollInProgress) {
+        // Detener en la última página
+        if (pagerState.isScrollInProgress || pagerState.currentPage == 5) {
+            progress.stop()
+        } else {
+            progress.snapTo(0f)
+            try {
+                progress.animateTo(
+                    targetValue = 1f,
+                    animationSpec = tween(durationMillis = 10000, easing = LinearEasing)
+                )
 
-    // Auto-advance pages
-    LaunchedEffect(currentPage) {
-        if (currentPage < 6) { // Ajustado para 7 páginas
-            delay(TimeUnit.SECONDS.toMillis(5))
-            pagerState.animateScrollToPage(currentPage + 1)
+                coroutineScope.launch {
+                    if (pagerState.currentPage < 5) {
+                        pagerState.animateScrollToPage(pagerState.currentPage + 1)
+                    }
+                }
+            } catch (e: CancellationException) {
+                progress.snapTo(0f)
+            }
         }
     }
 
@@ -62,7 +95,6 @@ fun WrappedScreen(
             .background(MaterialTheme.colorScheme.background)
     ) {
         if (isLoading || wrappedData == null) {
-            // Loading screen
             Text(
                 text = "Preparando tu Wrapped...",
                 style = MaterialTheme.typography.headlineMedium,
@@ -70,39 +102,95 @@ fun WrappedScreen(
                 modifier = Modifier.align(Alignment.Center)
             )
         } else {
+            // El wrapper 'Capturable' ha sido eliminado
             HorizontalPager(
                 state = pagerState,
                 modifier = Modifier.fillMaxSize()
             ) { page ->
                 when (page) {
-                    0 -> WelcomePage(wrappedData!!.period)
-                    1 -> TopArtistPage(wrappedData!!.topArtists.firstOrNull())
-                    2 -> TopArtistsPage(wrappedData!!.topArtists.take(5))
-                    3 -> TopSongPage(wrappedData!!.topSongs.firstOrNull())
-                    4 -> TopSongsPage(wrappedData!!.topSongs.take(5)) // Nueva página
-                    5 -> StatsPage(wrappedData!!)
-                    6 -> SharePage(wrappedData!!.period)
+                    0 -> TopArtistPage(wrappedData!!.topArtists.firstOrNull())
+                    1 -> TopArtistsPage(wrappedData!!.topArtists.take(5))
+                    2 -> TopSongPage(wrappedData!!.topSongs.firstOrNull())
+                    3 -> TopSongsPage(wrappedData!!.topSongs.take(5))
+                    4 -> StatsPage(wrappedData!!)
+                    5 -> SharePage(wrappedData!!.period)
                 }
             }
 
-            // Page indicators
+            BottomControls(
+                modifier = Modifier.align(Alignment.BottomCenter),
+                pagerState = pagerState,
+                progress = progress.value,
+                scope = coroutineScope
+                // El callback onShareClick ha sido eliminado
+            )
+        }
+    }
+}
+
+@OptIn(ExperimentalFoundationApi::class)
+@Composable
+private fun BottomControls(
+    modifier: Modifier = Modifier,
+    pagerState: PagerState,
+    progress: Float,
+    scope: CoroutineScope
+) {
+    Surface(
+        modifier = modifier.fillMaxWidth(),
+        shadowElevation = 8.dp,
+        color = MaterialTheme.colorScheme.surface
+    ) {
+        Column(
+            modifier = Modifier.navigationBarsPadding()
+        ) {
+            LinearProgressIndicator(
+                progress = { progress },
+                modifier = Modifier.fillMaxWidth(),
+                color = MaterialTheme.colorScheme.primary,
+                trackColor = MaterialTheme.colorScheme.surfaceVariant
+            )
             Row(
                 modifier = Modifier
-                    .align(Alignment.TopCenter)
-                    .padding(top = 32.dp),
-                horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    .fillMaxWidth()
+                    .padding(horizontal = 16.dp),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
             ) {
-                repeat(7) { index -> // Ajustado para 7 páginas
-                    Box(
-                        modifier = Modifier
-                            .size(8.dp)
-                            .clip(CircleShape)
-                            .background(
-                                if (index == currentPage)
-                                    MaterialTheme.colorScheme.primary
-                                else
-                                    MaterialTheme.colorScheme.onBackground.copy(alpha = 0.3f)
-                            )
+                // Botón Anterior
+                IconButton(
+                    onClick = {
+                        scope.launch {
+                            pagerState.animateScrollToPage(pagerState.currentPage - 1)
+                        }
+                    },
+                    enabled = pagerState.currentPage > 0
+                ) {
+                    Icon(
+                        Icons.Filled.SkipPrevious,
+                        contentDescription = "Página anterior"
+                    )
+                }
+
+                // Contador de páginas
+                Text(
+                    text = "${pagerState.currentPage + 1} / ${pagerState.pageCount}",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+
+                // Botón Siguiente
+                IconButton(
+                    onClick = {
+                        scope.launch {
+                            pagerState.animateScrollToPage(pagerState.currentPage + 1)
+                        }
+                    },
+                    enabled = pagerState.currentPage < pagerState.pageCount - 1
+                ) {
+                    Icon(
+                        Icons.Filled.SkipNext,
+                        contentDescription = "Siguiente página"
                     )
                 }
             }
@@ -110,75 +198,47 @@ fun WrappedScreen(
     }
 }
 
-@Composable
-private fun WelcomePage(year: String) {
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(32.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
-    ) {
-        Text(
-            text = "Tu Wrapped $year",
-            style = MaterialTheme.typography.displayLarge,
-            color = MaterialTheme.colorScheme.primary,
-            fontWeight = FontWeight.Bold,
-            textAlign = TextAlign.Center
-        )
-
-        Spacer(modifier = Modifier.height(24.dp))
-
-        Text(
-            text = "Un viaje por tu música del año",
-            style = MaterialTheme.typography.headlineSmall,
-            color = MaterialTheme.colorScheme.onBackground,
-            textAlign = TextAlign.Center
-        )
-    }
-}
+// Padding inferior para dejar espacio a los controles
+val PageBottomPadding = 100.dp
 
 @Composable
 private fun TopArtistPage(topArtist: ArtistStats?) {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(32.dp),
+            .padding(32.dp)
+            .padding(bottom = PageBottomPadding),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
+        verticalArrangement = Arrangement.SpaceAround
     ) {
         Text(
             text = "Tu artista top",
             style = MaterialTheme.typography.headlineMedium,
-            color = MaterialTheme.colorScheme.onBackground
+            color = MaterialTheme.colorScheme.onSurfaceVariant
         )
 
-        Spacer(modifier = Modifier.height(32.dp))
-
         if (topArtist != null) {
-            // Mostrar imagen del artista
-            ArtistArt(
-                thumbnailUrl = topArtist.thumbnailUrl,
-                size = 180.dp
-            )
-
-            Spacer(modifier = Modifier.height(24.dp))
-
-            Text(
-                text = topArtist.name,
-                style = MaterialTheme.typography.displayMedium,
-                color = MaterialTheme.colorScheme.primary,
-                fontWeight = FontWeight.Bold,
-                textAlign = TextAlign.Center
-            )
-
-            Spacer(modifier = Modifier.height(16.dp))
-
-            Text(
-                text = "${topArtist.playCount} veces escuchado",
-                style = MaterialTheme.typography.bodyLarge,
-                color = MaterialTheme.colorScheme.onBackground
-            )
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                ArtistArt(
+                    thumbnailUrl = topArtist.thumbnailUrl,
+                    size = 240.dp,
+                    modifier = Modifier.clip(CircleShape)
+                )
+                Spacer(modifier = Modifier.height(32.dp))
+                Text(
+                    text = topArtist.name,
+                    style = MaterialTheme.typography.displayMedium,
+                    color = MaterialTheme.colorScheme.primary,
+                    fontWeight = FontWeight.Bold,
+                    textAlign = TextAlign.Center
+                )
+                Spacer(modifier = Modifier.height(16.dp))
+                Text(
+                    text = "${topArtist.playCount} veces escuchado",
+                    style = MaterialTheme.typography.titleLarge,
+                    color = MaterialTheme.colorScheme.onBackground
+                )
+            }
         } else {
             Text(
                 text = "No hay datos suficientes",
@@ -187,6 +247,7 @@ private fun TopArtistPage(topArtist: ArtistStats?) {
                 textAlign = TextAlign.Center
             )
         }
+        Spacer(modifier = Modifier.height(32.dp))
     }
 }
 
@@ -195,53 +256,69 @@ private fun TopArtistsPage(topArtists: List<ArtistStats>) {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(32.dp),
+            .padding(horizontal = 24.dp, vertical = 32.dp)
+            .padding(bottom = PageBottomPadding),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
+        verticalArrangement = Arrangement.Top
     ) {
         Text(
             text = "Tus artistas más escuchados",
             style = MaterialTheme.typography.headlineMedium,
-            color = MaterialTheme.colorScheme.onBackground
+            color = MaterialTheme.colorScheme.onBackground,
+            modifier = Modifier.padding(top = 32.dp)
         )
 
         Spacer(modifier = Modifier.height(32.dp))
 
         if (topArtists.isNotEmpty()) {
-            Column(
+            LazyColumn(
                 modifier = Modifier.fillMaxWidth(),
-                horizontalAlignment = Alignment.CenterHorizontally
+                verticalArrangement = Arrangement.spacedBy(16.dp),
+                contentPadding = PaddingValues(bottom = 16.dp)
             ) {
-                topArtists.forEachIndexed { index, artist ->
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(vertical = 8.dp),
-                        horizontalArrangement = Arrangement.SpaceBetween,
-                        verticalAlignment = Alignment.CenterVertically
+                itemsIndexed(topArtists) { index, artist ->
+                    Card(
+                        modifier = Modifier.fillMaxWidth(),
+                        shape = RoundedCornerShape(24.dp),
+                        colors = CardDefaults.cardColors(
+                            containerColor = MaterialTheme.colorScheme.secondaryContainer.copy(alpha = 0.6f)
+                        )
                     ) {
-                        // Imagen del artista
-                        ArtistArt(
-                            thumbnailUrl = artist.thumbnailUrl,
-                            size = 50.dp,
-                            modifier = Modifier.weight(0.2f)
-                        )
-
-                        // Nombre del artista
-                        Text(
-                            text = "${index + 1}. ${artist.name}",
-                            style = MaterialTheme.typography.titleLarge,
-                            color = MaterialTheme.colorScheme.onBackground,
-                            modifier = Modifier.weight(0.6f)
-                        )
-
-                        // Contador de reproducciones
-                        Text(
-                            text = "${artist.playCount}",
-                            style = MaterialTheme.typography.bodyMedium,
-                            color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.7f),
-                            modifier = Modifier.weight(0.2f)
-                        )
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(16.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Text(
+                                text = "${index + 1}.",
+                                style = MaterialTheme.typography.titleMedium,
+                                color = MaterialTheme.colorScheme.primary,
+                                modifier = Modifier.padding(end = 8.dp)
+                            )
+                            ArtistArt(
+                                thumbnailUrl = artist.thumbnailUrl,
+                                size = 56.dp,
+                                modifier = Modifier.clip(CircleShape)
+                            )
+                            Spacer(modifier = Modifier.width(16.dp))
+                            Column(
+                                modifier = Modifier.weight(1f)
+                            ) {
+                                Text(
+                                    text = artist.name,
+                                    style = MaterialTheme.typography.titleLarge,
+                                    color = MaterialTheme.colorScheme.onSecondaryContainer,
+                                    maxLines = 1,
+                                    overflow = TextOverflow.Ellipsis
+                                )
+                                Text(
+                                    text = "${artist.playCount} plays",
+                                    style = MaterialTheme.typography.labelMedium,
+                                    color = MaterialTheme.colorScheme.onSecondaryContainer.copy(alpha = 0.7f)
+                                )
+                            }
+                        }
                     }
                 }
             }
@@ -261,62 +338,65 @@ private fun TopSongPage(topSong: SongStats?) {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(32.dp),
+            .padding(32.dp)
+            .padding(bottom = PageBottomPadding),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
+        verticalArrangement = Arrangement.SpaceAround
     ) {
         Text(
             text = "Tu canción del año",
             style = MaterialTheme.typography.headlineMedium,
-            color = MaterialTheme.colorScheme.onBackground
+            color = MaterialTheme.colorScheme.onSurfaceVariant
         )
 
-        Spacer(modifier = Modifier.height(32.dp))
-
         if (topSong != null) {
-            // Mostrar carátula del álbum
-            AlbumArt(
-                thumbnailUrl = topSong.thumbnailUrl ?: topSong.getFallbackThumbnail(),
-                size = 200.dp
-            )
-
-            Spacer(modifier = Modifier.height(24.dp))
-
-            Text(
-                text = topSong.title,
-                style = MaterialTheme.typography.displaySmall,
-                color = MaterialTheme.colorScheme.primary,
-                fontWeight = FontWeight.Bold,
-                textAlign = TextAlign.Center
-            )
-
-            Spacer(modifier = Modifier.height(8.dp))
-
-            // Mostrar álbum si está disponible
-            topSong.albumName?.let { albumName ->
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                AlbumArt(
+                    thumbnailUrl = topSong.thumbnailUrl ?: topSong.getFallbackThumbnail(),
+                    size = 280.dp,
+                    modifier = Modifier.clip(RoundedCornerShape(32.dp))
+                )
+                Spacer(modifier = Modifier.height(32.dp))
                 Text(
-                    text = "Del álbum: $albumName",
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.8f),
+                    text = topSong.title,
+                    style = MaterialTheme.typography.displaySmall,
+                    color = MaterialTheme.colorScheme.primary,
+                    fontWeight = FontWeight.Bold,
                     textAlign = TextAlign.Center
                 )
+                Spacer(modifier = Modifier.height(8.dp))
+                topSong.albumName?.let { albumName ->
+                    Text(
+                        text = albumName,
+                        style = MaterialTheme.typography.titleMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        textAlign = TextAlign.Center,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis
+                    )
+                }
+                Spacer(modifier = Modifier.height(24.dp))
+                Row(
+                    horizontalArrangement = Arrangement.spacedBy(16.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Text(
+                        text = "${topSong.playCount} plays",
+                        style = MaterialTheme.typography.titleMedium,
+                        color = MaterialTheme.colorScheme.onBackground
+                    )
+                    Text(
+                        text = "•",
+                        style = MaterialTheme.typography.titleMedium,
+                        color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.7f)
+                    )
+                    Text(
+                        text = formatDuration(topSong.duration),
+                        style = MaterialTheme.typography.titleMedium,
+                        color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.7f)
+                    )
+                }
             }
-
-            Spacer(modifier = Modifier.height(16.dp))
-
-            Text(
-                text = "${topSong.playCount} veces reproducida",
-                style = MaterialTheme.typography.bodyLarge,
-                color = MaterialTheme.colorScheme.onBackground
-            )
-
-            Spacer(modifier = Modifier.height(8.dp))
-
-            Text(
-                text = formatDuration(topSong.duration),
-                style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.7f)
-            )
         } else {
             Text(
                 text = "No hay datos suficientes",
@@ -325,6 +405,7 @@ private fun TopSongPage(topSong: SongStats?) {
                 textAlign = TextAlign.Center
             )
         }
+        Spacer(modifier = Modifier.height(32.dp))
     }
 }
 
@@ -333,65 +414,72 @@ private fun TopSongsPage(topSongs: List<SongStats>) {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(32.dp),
+            .padding(horizontal = 24.dp, vertical = 32.dp)
+            .padding(bottom = PageBottomPadding),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
+        verticalArrangement = Arrangement.Top
     ) {
         Text(
             text = "Tus canciones más escuchadas",
             style = MaterialTheme.typography.headlineMedium,
-            color = MaterialTheme.colorScheme.onBackground
+            color = MaterialTheme.colorScheme.onBackground,
+            modifier = Modifier.padding(top = 32.dp)
         )
-
         Spacer(modifier = Modifier.height(32.dp))
-
         if (topSongs.isNotEmpty()) {
-            Column(
+            LazyColumn(
                 modifier = Modifier.fillMaxWidth(),
-                horizontalAlignment = Alignment.CenterHorizontally
+                verticalArrangement = Arrangement.spacedBy(16.dp),
+                contentPadding = PaddingValues(bottom = 16.dp)
             ) {
-                topSongs.forEachIndexed { index, song ->
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(vertical = 8.dp),
-                        horizontalArrangement = Arrangement.SpaceBetween,
-                        verticalAlignment = Alignment.CenterVertically
+                itemsIndexed(topSongs) { index, song ->
+                    Card(
+                        modifier = Modifier.fillMaxWidth(),
+                        shape = RoundedCornerShape(24.dp),
+                        colors = CardDefaults.cardColors(
+                            containerColor = MaterialTheme.colorScheme.tertiaryContainer.copy(alpha = 0.6f)
+                        )
                     ) {
-                        // Carátula de la canción/álbum
-                        AlbumArt(
-                            thumbnailUrl = song.thumbnailUrl ?: song.getFallbackThumbnail(),
-                            size = 50.dp,
-                            modifier = Modifier.weight(0.2f)
-                        )
-
-                        // Información de la canción
-                        Column(
-                            modifier = Modifier.weight(0.6f)
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(16.dp),
+                            verticalAlignment = Alignment.CenterVertically
                         ) {
-                            Text(
-                                text = "${index + 1}. ${song.title}",
-                                style = MaterialTheme.typography.titleMedium,
-                                color = MaterialTheme.colorScheme.onBackground,
-                                maxLines = 1
+                            AlbumArt(
+                                thumbnailUrl = song.thumbnailUrl ?: song.getFallbackThumbnail(),
+                                size = 64.dp,
+                                modifier = Modifier.clip(RoundedCornerShape(16.dp))
                             )
-                            song.albumName?.let { albumName ->
+                            Spacer(modifier = Modifier.width(16.dp))
+                            Column(
+                                modifier = Modifier.weight(1f)
+                            ) {
                                 Text(
-                                    text = albumName,
-                                    style = MaterialTheme.typography.bodySmall,
-                                    color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.7f),
-                                    maxLines = 1
+                                    text = "${index + 1}. ${song.title}",
+                                    style = MaterialTheme.typography.titleLarge,
+                                    color = MaterialTheme.colorScheme.onTertiaryContainer,
+                                    maxLines = 1,
+                                    overflow = TextOverflow.Ellipsis
                                 )
+                                song.albumName?.let { albumName ->
+                                    Text(
+                                        text = albumName,
+                                        style = MaterialTheme.typography.bodyMedium,
+                                        color = MaterialTheme.colorScheme.onTertiaryContainer.copy(alpha = 0.8f),
+                                        maxLines = 1,
+                                        overflow = TextOverflow.Ellipsis
+                                    )
+                                }
                             }
+                            Spacer(modifier = Modifier.width(16.dp))
+                            Text(
+                                text = "${song.playCount}",
+                                style = MaterialTheme.typography.titleMedium,
+                                color = MaterialTheme.colorScheme.onTertiaryContainer,
+                                fontWeight = FontWeight.Bold
+                            )
                         }
-
-                        // Contador de reproducciones
-                        Text(
-                            text = "${song.playCount}",
-                            style = MaterialTheme.typography.bodyMedium,
-                            color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.7f),
-                            modifier = Modifier.weight(0.2f)
-                        )
                     }
                 }
             }
@@ -406,11 +494,88 @@ private fun TopSongsPage(topSongs: List<SongStats>) {
     }
 }
 
-// ... (el resto de las funciones StatsPage, SharePage, etc. se mantienen igual)
+@OptIn(ExperimentalLayoutApi::class)
+@Composable
+private fun StatsPage(wrappedData: SimpleWrappedData) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(horizontal = 24.dp, vertical = 32.dp)
+            .padding(bottom = PageBottomPadding),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Top
+    ) {
+        Text(
+            text = "Tus estadísticas",
+            style = MaterialTheme.typography.headlineMedium,
+            color = MaterialTheme.colorScheme.onBackground,
+            modifier = Modifier.padding(top = 32.dp)
+        )
+        Spacer(modifier = Modifier.height(32.dp))
+        FlowRow(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.spacedBy(16.dp),
+            verticalArrangement = Arrangement.spacedBy(16.dp),
+            maxItemsInEachRow = 2
+        ) {
+            StatItem("Artistas diferentes", wrappedData.uniqueArtistsCount.toString(), modifier = Modifier.weight(1f))
+            StatItem("Canciones diferentes", wrappedData.uniqueSongsCount.toString(), modifier = Modifier.weight(1f))
+            StatItem("Tiempo total", formatListeningTime(wrappedData.totalListeningTime), modifier = Modifier.weight(1f))
+            StatItem("Artista top", wrappedData.topArtists.firstOrNull()?.name ?: "N/A", modifier = Modifier.fillMaxWidth())
+            StatItem("Canción top", wrappedData.topSongs.firstOrNull()?.title ?: "N/A", modifier = Modifier.fillMaxWidth())
+        }
+    }
+}
 
-// Función de extensión para obtener thumbnail por defecto
+@Composable
+private fun SharePage(year: String) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(32.dp)
+            .padding(bottom = PageBottomPadding),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.SpaceEvenly
+    ) {
+        Icon(
+            painterResource(id = R.drawable.joss_music_logo),
+            contentDescription = "Icono de la aplicación",
+            modifier = Modifier.size(80.dp),
+            tint = Color.Unspecified
+        )
+        Text(
+            text = "Tu Wrapped $year",
+            style = MaterialTheme.typography.displayLarge,
+            color = MaterialTheme.colorScheme.primary,
+            fontWeight = FontWeight.Bold,
+            textAlign = TextAlign.Center
+        )
+        Surface(
+            shape = RoundedCornerShape(32.dp),
+            color = MaterialTheme.colorScheme.primaryContainer,
+            tonalElevation = 4.dp
+        ) {
+            Text(
+                text = "#MiWrapped$year",
+                style = MaterialTheme.typography.displaySmall,
+                color = MaterialTheme.colorScheme.onPrimaryContainer,
+                fontWeight = FontWeight.Bold,
+                modifier = Modifier.padding(horizontal = 32.dp, vertical = 16.dp)
+            )
+        }
+        Text(
+            text = "¡Gracias por este viaje musical con nosotros!",
+            style = MaterialTheme.typography.headlineSmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            textAlign = TextAlign.Center
+        )
+    }
+}
+
+
+// --- FUNCIONES HELPER ---
+
 private fun SongStats.getFallbackThumbnail(): String? {
-    // Puedes retornar una imagen por defecto o null
     return this.thumbnailUrl
 }
 
@@ -426,87 +591,35 @@ private fun formatDuration(seconds: Int): String {
     return String.format("%d:%02d", minutes, remainingSeconds)
 }
 
-// Mantén las funciones StatItem, StatsPage y SharePage igual que antes
 @Composable
-private fun StatsPage(wrappedData: SimpleWrappedData) {
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(32.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
+private fun StatItem(label: String, value: String, modifier: Modifier = Modifier) {
+    Surface(
+        modifier = modifier,
+        shape = RoundedCornerShape(28.dp),
+        color = MaterialTheme.colorScheme.secondaryContainer.copy(alpha = 0.8f),
+        tonalElevation = 2.dp
     ) {
-        Text(
-            text = "Tus estadísticas",
-            style = MaterialTheme.typography.headlineMedium,
-            color = MaterialTheme.colorScheme.onBackground
-        )
-
-        Spacer(modifier = Modifier.height(32.dp))
-
-        StatItem("Artistas diferentes", wrappedData.uniqueArtistsCount.toString())
-        Spacer(modifier = Modifier.height(16.dp))
-        StatItem("Canciones diferentes", wrappedData.uniqueSongsCount.toString())
-        Spacer(modifier = Modifier.height(16.dp))
-        StatItem("Tiempo total", formatListeningTime(wrappedData.totalListeningTime))
-        Spacer(modifier = Modifier.height(16.dp))
-        StatItem("Artista top", wrappedData.topArtists.firstOrNull()?.name ?: "N/A")
-        Spacer(modifier = Modifier.height(16.dp))
-        StatItem("Canción top", wrappedData.topSongs.firstOrNull()?.title ?: "N/A")
-    }
-}
-
-@Composable
-private fun SharePage(year: String) {
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(32.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
-    ) {
-        Text(
-            text = "¡Comparte tu Wrapped!",
-            style = MaterialTheme.typography.headlineMedium,
-            color = MaterialTheme.colorScheme.onBackground,
-            textAlign = TextAlign.Center
-        )
-
-        Spacer(modifier = Modifier.height(32.dp))
-
-        Text(
-            text = "#MiWrapped$year",
-            style = MaterialTheme.typography.displaySmall,
-            color = MaterialTheme.colorScheme.primary,
-            fontWeight = FontWeight.Bold
-        )
-
-        Spacer(modifier = Modifier.height(24.dp))
-
-        Text(
-            text = "Gracias por escuchar música con nosotros",
-            style = MaterialTheme.typography.bodyLarge,
-            color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.7f),
-            textAlign = TextAlign.Center
-        )
-    }
-}
-
-@Composable
-private fun StatItem(label: String, value: String) {
-    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-        Text(
-            text = value,
-            style = MaterialTheme.typography.displaySmall,
-            color = MaterialTheme.colorScheme.primary,
-            fontWeight = FontWeight.Bold,
-            textAlign = TextAlign.Center
-        )
-        Text(
-            text = label,
-            style = MaterialTheme.typography.bodyMedium,
-            color = MaterialTheme.colorScheme.onBackground,
-            textAlign = TextAlign.Center
-        )
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center,
+            modifier = Modifier.padding(vertical = 24.dp, horizontal = 16.dp)
+        ) {
+            Text(
+                text = value,
+                style = MaterialTheme.typography.headlineLarge,
+                color = MaterialTheme.colorScheme.onSecondaryContainer,
+                fontWeight = FontWeight.Bold,
+                textAlign = TextAlign.Center,
+                maxLines = 2,
+                overflow = TextOverflow.Ellipsis
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+            Text(
+                text = label,
+                style = MaterialTheme.typography.titleMedium,
+                color = MaterialTheme.colorScheme.onSecondaryContainer,
+                textAlign = TextAlign.Center
+            )
+        }
     }
 }
