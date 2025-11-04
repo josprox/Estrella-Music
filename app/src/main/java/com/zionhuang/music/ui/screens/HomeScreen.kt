@@ -394,6 +394,13 @@ fun HomeScreen(
                         },
                         modifier = Modifier.weight(1f)
                     )
+
+                    NavigationTile(
+                        title = "Mi Wrapped",
+                        icon = R.drawable.celebration,
+                        onClick = { navController.navigate("wrapped") },
+                        modifier = Modifier.weight(1f)
+                    )
                 }
             }
 

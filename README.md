@@ -2,7 +2,7 @@
   <img src="./app/src/main/play_store_512.png" width="128" height="128" alt="App icon" />
   <h1>Estrella Music</h1>
   <p><em>Una aplicación Android para transmitir música desde YouTube Music, basada en ViMusic e InnerTune</em></p>
-
+    
   <!-- Contenedor del scroll -->
   <div style="max-width: 700px; margin: auto; overflow-x: auto;">
     <!-- Fila deslizable -->
@@ -19,6 +19,7 @@
     </div>
   </div>
 </div>
+
 
 
 ---
@@ -91,6 +92,9 @@ Puedes contribuir mediante Pull Requests o ayudando directamente en la plataform
 [![Translation status](https://hosted.weblate.org/widget/innertune/multi-auto.svg)](https://hosted.weblate.org/engage/innertune/)
 
 ---
+
+#### Documentación disponible con DeepWiki
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/josprox/Joss-Music)
 
 ## ⚠️ Aviso Legal
 

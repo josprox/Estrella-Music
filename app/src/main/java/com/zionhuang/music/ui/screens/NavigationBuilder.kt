@@ -258,4 +258,7 @@ fun NavGraphBuilder.navigationBuilder(
     composable("login") {
         LoginScreen(navController)
     }
+    composable("wrapped") {
+        WrappedScreen(navController = navController)
+    }
 }

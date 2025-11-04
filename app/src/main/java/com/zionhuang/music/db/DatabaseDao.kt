@@ -24,6 +24,7 @@ import com.zionhuang.music.db.entities.AlbumEntity
 import com.zionhuang.music.db.entities.AlbumWithSongs
 import com.zionhuang.music.db.entities.Artist
 import com.zionhuang.music.db.entities.ArtistEntity
+import com.zionhuang.music.db.entities.ArtistStats
 import com.zionhuang.music.db.entities.Event
 import com.zionhuang.music.db.entities.EventWithSong
 import com.zionhuang.music.db.entities.FormatEntity
@@ -38,6 +39,7 @@ import com.zionhuang.music.db.entities.Song
 import com.zionhuang.music.db.entities.SongAlbumMap
 import com.zionhuang.music.db.entities.SongArtistMap
 import com.zionhuang.music.db.entities.SongEntity
+import com.zionhuang.music.db.entities.SongStats
 import com.zionhuang.music.extensions.reversed
 import com.zionhuang.music.extensions.toSQLiteQuery
 import com.zionhuang.music.models.MediaMetadata
@@ -863,4 +865,57 @@ interface DatabaseDao {
     fun checkpoint() {
         raw("PRAGMA wal_checkpoint(FULL)".toSQLiteQuery())
     }
+// Añade estas queries al final de DatabaseDao.kt, antes de los métodos de inserción
+
+    @Query("""
+    SELECT COUNT(DISTINCT artist.id) as count
+    FROM event 
+    JOIN song_artist_map ON event.songId = song_artist_map.songId
+    JOIN artist ON song_artist_map.artistId = artist.id
+    WHERE event.timestamp > :startTime AND event.timestamp < :endTime
+""")
+    fun uniqueArtistsCount(startTime: Long, endTime: Long): Flow<Int>
+
+    @Query("""
+    SELECT COUNT(DISTINCT song.id) as count
+    FROM event 
+    JOIN song ON event.songId = song.id
+    WHERE event.timestamp > :startTime AND event.timestamp < :endTime
+""")
+    fun uniqueSongsCount(startTime: Long, endTime: Long): Flow<Int>
+
+    @Query("""
+    SELECT SUM(playTime) as totalTime
+    FROM event 
+    WHERE event.timestamp > :startTime AND event.timestamp < :endTime
+""")
+    fun totalListeningTime(startTime: Long, endTime: Long): Flow<Long?>
+
+
+    // En DatabaseDao.kt, reemplaza las queries problemáticas con estas:
+
+    @Query("""
+    SELECT artist.id, artist.name, artist.thumbnailUrl,
+           COUNT(*) as playCount
+    FROM event 
+    JOIN song_artist_map ON event.songId = song_artist_map.songId
+    JOIN artist ON song_artist_map.artistId = artist.id
+    WHERE event.timestamp > :startTime AND event.timestamp < :endTime
+    GROUP BY artist.id
+    ORDER BY playCount DESC
+    LIMIT :limit
+""")
+    fun topArtistsSimple(startTime: Long, endTime: Long, limit: Int = 10): Flow<List<ArtistStats>>
+
+    @Query("""
+    SELECT song.id, song.title, song.thumbnailUrl, song.duration,
+           COUNT(*) as playCount
+    FROM event 
+    JOIN song ON event.songId = song.id
+    WHERE event.timestamp > :startTime AND event.timestamp < :endTime
+    GROUP BY song.id
+    ORDER BY playCount DESC
+    LIMIT :limit
+""")
+    fun topSongsSimple(startTime: Long, endTime: Long, limit: Int = 20): Flow<List<SongStats>>
 }
