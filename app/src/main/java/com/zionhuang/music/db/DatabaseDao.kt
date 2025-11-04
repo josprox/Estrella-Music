@@ -909,6 +909,7 @@ interface DatabaseDao {
 
     @Query("""
     SELECT song.id, song.title, song.thumbnailUrl, song.duration,
+           song.albumId, song.albumName,
            COUNT(*) as playCount
     FROM event 
     JOIN song ON event.songId = song.id
@@ -918,4 +919,11 @@ interface DatabaseDao {
     LIMIT :limit
 """)
     fun topSongsSimple(startTime: Long, endTime: Long, limit: Int = 20): Flow<List<SongStats>>
+
+    @Query("""
+    SELECT album.thumbnailUrl
+    FROM album
+    WHERE album.id = :albumId
+""")
+    fun getAlbumThumbnail(albumId: String?): Flow<String?>
 }

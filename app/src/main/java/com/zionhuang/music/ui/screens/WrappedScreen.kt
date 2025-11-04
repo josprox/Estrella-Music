@@ -1,29 +1,15 @@
+// En WrappedScreen.kt, actualiza las páginas:
 package com.zionhuang.music.ui.screens
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -32,9 +18,12 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import coil.compose.AsyncImage
 import com.zionhuang.music.db.entities.ArtistStats
 import com.zionhuang.music.db.entities.SimpleWrappedData
 import com.zionhuang.music.db.entities.SongStats
+import com.zionhuang.music.ui.component.AlbumArt
+import com.zionhuang.music.ui.component.ArtistArt
 import com.zionhuang.music.viewmodels.WrappedViewModel
 import kotlinx.coroutines.delay
 import java.util.concurrent.TimeUnit
@@ -48,7 +37,7 @@ fun WrappedScreen(
     val wrappedData by viewModel.wrappedData.collectAsState()
     val isLoading by viewModel.isLoading.collectAsState()
 
-    val pagerState = rememberPagerState(pageCount = { 6 })
+    val pagerState = rememberPagerState(pageCount = { 7 }) // Añadimos una página más
     var currentPage by remember { mutableStateOf(0) }
 
     LaunchedEffect(Unit) {
@@ -61,7 +50,7 @@ fun WrappedScreen(
 
     // Auto-advance pages
     LaunchedEffect(currentPage) {
-        if (currentPage < 5) { // Don't auto-advance from last page
+        if (currentPage < 6) { // Ajustado para 7 páginas
             delay(TimeUnit.SECONDS.toMillis(5))
             pagerState.animateScrollToPage(currentPage + 1)
         }
@@ -90,8 +79,9 @@ fun WrappedScreen(
                     1 -> TopArtistPage(wrappedData!!.topArtists.firstOrNull())
                     2 -> TopArtistsPage(wrappedData!!.topArtists.take(5))
                     3 -> TopSongPage(wrappedData!!.topSongs.firstOrNull())
-                    4 -> StatsPage(wrappedData!!)
-                    5 -> SharePage(wrappedData!!.period)
+                    4 -> TopSongsPage(wrappedData!!.topSongs.take(5)) // Nueva página
+                    5 -> StatsPage(wrappedData!!)
+                    6 -> SharePage(wrappedData!!.period)
                 }
             }
 
@@ -102,7 +92,7 @@ fun WrappedScreen(
                     .padding(top = 32.dp),
                 horizontalArrangement = Arrangement.spacedBy(8.dp)
             ) {
-                repeat(6) { index ->
+                repeat(7) { index -> // Ajustado para 7 páginas
                     Box(
                         modifier = Modifier
                             .size(8.dp)
@@ -166,6 +156,14 @@ private fun TopArtistPage(topArtist: ArtistStats?) {
         Spacer(modifier = Modifier.height(32.dp))
 
         if (topArtist != null) {
+            // Mostrar imagen del artista
+            ArtistArt(
+                thumbnailUrl = topArtist.thumbnailUrl,
+                size = 180.dp
+            )
+
+            Spacer(modifier = Modifier.height(24.dp))
+
             Text(
                 text = topArtist.name,
                 style = MaterialTheme.typography.displayMedium,
@@ -210,24 +208,42 @@ private fun TopArtistsPage(topArtists: List<ArtistStats>) {
         Spacer(modifier = Modifier.height(32.dp))
 
         if (topArtists.isNotEmpty()) {
-            topArtists.forEachIndexed { index, artist ->
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween
-                ) {
-                    Text(
-                        text = "${index + 1}. ${artist.name}",
-                        style = MaterialTheme.typography.titleLarge,
-                        color = MaterialTheme.colorScheme.onBackground,
-                        modifier = Modifier.weight(1f)
-                    )
-                    Text(
-                        text = "${artist.playCount} veces",
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.7f)
-                    )
+            Column(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                topArtists.forEachIndexed { index, artist ->
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(vertical = 8.dp),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        // Imagen del artista
+                        ArtistArt(
+                            thumbnailUrl = artist.thumbnailUrl,
+                            size = 50.dp,
+                            modifier = Modifier.weight(0.2f)
+                        )
+
+                        // Nombre del artista
+                        Text(
+                            text = "${index + 1}. ${artist.name}",
+                            style = MaterialTheme.typography.titleLarge,
+                            color = MaterialTheme.colorScheme.onBackground,
+                            modifier = Modifier.weight(0.6f)
+                        )
+
+                        // Contador de reproducciones
+                        Text(
+                            text = "${artist.playCount}",
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.7f),
+                            modifier = Modifier.weight(0.2f)
+                        )
+                    }
                 }
-                Spacer(modifier = Modifier.height(16.dp))
             }
         } else {
             Text(
@@ -258,6 +274,14 @@ private fun TopSongPage(topSong: SongStats?) {
         Spacer(modifier = Modifier.height(32.dp))
 
         if (topSong != null) {
+            // Mostrar carátula del álbum
+            AlbumArt(
+                thumbnailUrl = topSong.thumbnailUrl ?: topSong.getFallbackThumbnail(),
+                size = 200.dp
+            )
+
+            Spacer(modifier = Modifier.height(24.dp))
+
             Text(
                 text = topSong.title,
                 style = MaterialTheme.typography.displaySmall,
@@ -265,6 +289,18 @@ private fun TopSongPage(topSong: SongStats?) {
                 fontWeight = FontWeight.Bold,
                 textAlign = TextAlign.Center
             )
+
+            Spacer(modifier = Modifier.height(8.dp))
+
+            // Mostrar álbum si está disponible
+            topSong.albumName?.let { albumName ->
+                Text(
+                    text = "Del álbum: $albumName",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.8f),
+                    textAlign = TextAlign.Center
+                )
+            }
 
             Spacer(modifier = Modifier.height(16.dp))
 
@@ -292,6 +328,105 @@ private fun TopSongPage(topSong: SongStats?) {
     }
 }
 
+@Composable
+private fun TopSongsPage(topSongs: List<SongStats>) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(32.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
+    ) {
+        Text(
+            text = "Tus canciones más escuchadas",
+            style = MaterialTheme.typography.headlineMedium,
+            color = MaterialTheme.colorScheme.onBackground
+        )
+
+        Spacer(modifier = Modifier.height(32.dp))
+
+        if (topSongs.isNotEmpty()) {
+            Column(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                topSongs.forEachIndexed { index, song ->
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(vertical = 8.dp),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        // Carátula de la canción/álbum
+                        AlbumArt(
+                            thumbnailUrl = song.thumbnailUrl ?: song.getFallbackThumbnail(),
+                            size = 50.dp,
+                            modifier = Modifier.weight(0.2f)
+                        )
+
+                        // Información de la canción
+                        Column(
+                            modifier = Modifier.weight(0.6f)
+                        ) {
+                            Text(
+                                text = "${index + 1}. ${song.title}",
+                                style = MaterialTheme.typography.titleMedium,
+                                color = MaterialTheme.colorScheme.onBackground,
+                                maxLines = 1
+                            )
+                            song.albumName?.let { albumName ->
+                                Text(
+                                    text = albumName,
+                                    style = MaterialTheme.typography.bodySmall,
+                                    color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.7f),
+                                    maxLines = 1
+                                )
+                            }
+                        }
+
+                        // Contador de reproducciones
+                        Text(
+                            text = "${song.playCount}",
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.7f),
+                            modifier = Modifier.weight(0.2f)
+                        )
+                    }
+                }
+            }
+        } else {
+            Text(
+                text = "No hay datos de canciones",
+                style = MaterialTheme.typography.bodyLarge,
+                color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.7f),
+                textAlign = TextAlign.Center
+            )
+        }
+    }
+}
+
+// ... (el resto de las funciones StatsPage, SharePage, etc. se mantienen igual)
+
+// Función de extensión para obtener thumbnail por defecto
+private fun SongStats.getFallbackThumbnail(): String? {
+    // Puedes retornar una imagen por defecto o null
+    return this.thumbnailUrl
+}
+
+private fun formatListeningTime(millis: Long): String {
+    val hours = millis / (1000 * 60 * 60)
+    val minutes = (millis % (1000 * 60 * 60)) / (1000 * 60)
+    return "${hours}h ${minutes}m"
+}
+
+private fun formatDuration(seconds: Int): String {
+    val minutes = seconds / 60
+    val remainingSeconds = seconds % 60
+    return String.format("%d:%02d", minutes, remainingSeconds)
+}
+
+// Mantén las funciones StatItem, StatsPage y SharePage igual que antes
 @Composable
 private fun StatsPage(wrappedData: SimpleWrappedData) {
     Column(
@@ -374,16 +509,4 @@ private fun StatItem(label: String, value: String) {
             textAlign = TextAlign.Center
         )
     }
-}
-
-private fun formatListeningTime(millis: Long): String {
-    val hours = millis / (1000 * 60 * 60)
-    val minutes = (millis % (1000 * 60 * 60)) / (1000 * 60)
-    return "${hours}h ${minutes}m"
-}
-
-private fun formatDuration(seconds: Int): String {
-    val minutes = seconds / 60
-    val remainingSeconds = seconds % 60
-    return String.format("%d:%02d", minutes, remainingSeconds)
 }

@@ -12,10 +12,11 @@ data class SongStats(
     val title: String,
     val thumbnailUrl: String?,
     val duration: Int,
+    val albumId: String?,
+    val albumName: String?,
     val playCount: Int
 )
 
-// Para la UI - versión simplificada
 data class SimpleWrappedData(
     val topArtists: List<ArtistStats>,
     val topSongs: List<SongStats>,
