@@ -670,6 +670,20 @@ class MusicService : MediaLibraryService(),
         }
     }
 
+    private fun saveQueueToDiskIO(persistQueue: PersistQueue?) {
+        val queueFile = filesDir.resolve(PERSISTENT_QUEUE_FILE)
+        if (persistQueue == null) {
+            queueFile.delete()
+            return
+        }
+
+        runCatching {
+            queueFile.outputStream().use { fos ->
+                ObjectOutputStream(fos).use { oos -> oos.writeObject(persistQueue) }
+            }
+        }.onFailure { reportException(it) }
+    }
+
     private suspend fun saveQueueToDisk() {
         val persistQueue: PersistQueue? = withContext(Dispatchers.Main) {
             if (player.playbackState == STATE_IDLE || player.mediaItemCount == 0) {
@@ -685,24 +699,26 @@ class MusicService : MediaLibraryService(),
         }
 
         withContext(Dispatchers.IO) {
-            val queueFile = filesDir.resolve(PERSISTENT_QUEUE_FILE)
-            if (persistQueue == null) {
-                queueFile.delete()
-                return@withContext
-            }
-
-            runCatching {
-                queueFile.outputStream().use { fos ->
-                    ObjectOutputStream(fos).use { oos -> oos.writeObject(persistQueue) }
-                }
-            }.onFailure { reportException(it) }
+            saveQueueToDiskIO(persistQueue)
         }
     }
 
     override fun onDestroy() {
-        scope.launch {
-            if (settingsState.value.persistentQueue) {
-                saveQueueToDisk()
+        // Capture state BEFORE releasing the player
+        if (settingsState.value.persistentQueue) {
+            val persistQueue = if (player.playbackState == STATE_IDLE || player.mediaItemCount == 0) {
+                null
+            } else {
+                PersistQueue(
+                    title = queueTitle,
+                    items = player.mediaItems.mapNotNull { it.metadata },
+                    mediaItemIndex = player.currentMediaItemIndex,
+                    position = player.currentPosition
+                )
+            }
+            // Block briefly to save data safely
+            runBlocking(Dispatchers.IO) {
+                saveQueueToDiskIO(persistQueue)
             }
         }
 
