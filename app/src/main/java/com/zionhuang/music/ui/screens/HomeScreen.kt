@@ -3,8 +3,10 @@ package com.zionhuang.music.ui.screens
 import android.annotation.SuppressLint
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.background
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.gestures.snapping.rememberSnapFlingBehavior
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
@@ -33,7 +35,6 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.pulltorefresh.PullToRefreshDefaults.Indicator
 import androidx.compose.material3.pulltorefresh.pullToRefresh
 import androidx.compose.material3.pulltorefresh.rememberPullToRefreshState
 import androidx.compose.runtime.Composable
@@ -46,6 +47,7 @@ import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalHapticFeedback
@@ -336,6 +338,14 @@ fun HomeScreen(
     BoxWithConstraints(
         modifier = Modifier
             .fillMaxSize()
+            .background(
+                brush = Brush.verticalGradient(
+                    colors = listOf(
+                        MaterialTheme.colorScheme.background,
+                        MaterialTheme.colorScheme.surfaceContainerLowest // Un toque sutil en el fondo degradado
+                    )
+                )
+            )
             .pullToRefresh(
                 state = pullRefreshState,
                 isRefreshing = isRefreshing,
@@ -364,46 +374,53 @@ fun HomeScreen(
 
         LazyColumn(
             state = lazylistState,
-            contentPadding = LocalPlayerAwareWindowInsets.current.asPaddingValues()
+            contentPadding = LocalPlayerAwareWindowInsets.current.asPaddingValues(),
+            verticalArrangement = Arrangement.spacedBy(8.dp) // Espaciado reducido
         ) {
+            
+            // --- BANNER WRAPPED ---
+            if (isWrappedAvailable()) {
+                item {
+                    WrappedStoryTile(
+                        modifier = Modifier.animateItem(),
+                        onClick = { navController.navigate("wrapped") }
+                    )
+                }
+            }
+
+            // --- TOP NAVIGATION ROW REIMAGINED ---
             item {
                 Row(
                     modifier = Modifier
                         .windowInsetsPadding(WindowInsets.systemBars.only(WindowInsetsSides.Horizontal))
-                        .padding(horizontal = 12.dp, vertical = 6.dp)
+                        .padding(horizontal = 16.dp, vertical = 12.dp)
                         .fillMaxWidth()
                         .animateItem(),
-                    verticalAlignment = Alignment.Top // Alinear al Top para que el texto no desajuste
+                    horizontalArrangement = Arrangement.spacedBy(12.dp),
+                    verticalAlignment = Alignment.CenterVertically
                 ) {
+                    val navModifier = Modifier.weight(1f)
+                    
                     NavigationTile(
                         title = stringResource(R.string.history),
                         icon = R.drawable.history,
                         onClick = { navController.navigate("history") },
-                        modifier = Modifier.weight(1f)
+                        modifier = navModifier
                     )
 
                     NavigationTile(
                         title = stringResource(R.string.stats),
                         icon = R.drawable.trending_up,
                         onClick = { navController.navigate("stats") },
-                        modifier = Modifier.weight(1f)
+                        modifier = navModifier
                     )
 
                     NavigationTile(
                         title = stringResource(R.string.account),
                         icon = R.drawable.person,
-                        onClick = {
-                            navController.navigate("account")
-                        },
-                        modifier = Modifier.weight(1f)
+                        onClick = { navController.navigate("account") },
+                        modifier = navModifier
                     )
-
-                    if (isWrappedAvailable()) {
-                        WrappedStoryTile(
-                            modifier = Modifier.weight(1f),
-                            onClick = { navController.navigate("wrapped") }
-                        )
-                    }
                 }
             }
 
@@ -421,7 +438,7 @@ fun HomeScreen(
                 item {
                     NavigationTitle(
                         title = stringResource(R.string.quick_picks),
-                        modifier = Modifier.animateItem()
+                        modifier = Modifier.animateItem().padding(horizontal = 16.dp)
                     )
                 }
 
@@ -430,9 +447,7 @@ fun HomeScreen(
                         state = quickPicksLazyGridState,
                         rows = GridCells.Fixed(4),
                         flingBehavior = rememberSnapFlingBehavior(quickPicksSnapLayoutInfoProvider),
-                        contentPadding = WindowInsets.systemBars
-                            .only(WindowInsetsSides.Horizontal)
-                            .asPaddingValues(),
+                        contentPadding = PaddingValues(horizontal = 16.dp),
                         modifier = Modifier
                             .fillMaxWidth()
                             .height(ListItemHeight * 4)
@@ -480,7 +495,7 @@ fun HomeScreen(
                 item {
                     NavigationTitle(
                         title = stringResource(R.string.forgotten_favorites),
-                        modifier = Modifier.animateItem()
+                        modifier = Modifier.animateItem().padding(horizontal = 16.dp)
                     )
                 }
 
@@ -492,9 +507,7 @@ fun HomeScreen(
                         state = forgottenFavoritesLazyGridState,
                         rows = GridCells.Fixed(rows),
                         flingBehavior = rememberSnapFlingBehavior(forgottenFavoritesSnapLayoutInfoProvider),
-                        contentPadding = WindowInsets.systemBars
-                            .only(WindowInsetsSides.Horizontal)
-                            .asPaddingValues(),
+                        contentPadding = PaddingValues(horizontal = 16.dp),
                         modifier = Modifier
                             .fillMaxWidth()
                             .height(ListItemHeight * rows)
@@ -542,7 +555,7 @@ fun HomeScreen(
                 item {
                     NavigationTitle(
                         title = stringResource(R.string.keep_listening),
-                        modifier = Modifier.animateItem()
+                        modifier = Modifier.animateItem().padding(horizontal = 16.dp)
                     )
                 }
 
@@ -551,6 +564,7 @@ fun HomeScreen(
                     LazyHorizontalGrid(
                         state = rememberLazyGridState(),
                         rows = GridCells.Fixed(rows),
+                        contentPadding = PaddingValues(horizontal = 16.dp),
                         modifier = Modifier
                             .fillMaxWidth()
                             .height((GridThumbnailHeight + 24.dp + with(LocalDensity.current) {
@@ -573,15 +587,14 @@ fun HomeScreen(
                         onClick = {
                             navController.navigate("account")
                         },
-                        modifier = Modifier.animateItem()
+                        modifier = Modifier.animateItem().padding(horizontal = 16.dp)
                     )
                 }
 
                 item {
                     LazyRow(
-                        contentPadding = WindowInsets.systemBars
-                            .only(WindowInsetsSides.Horizontal)
-                            .asPaddingValues(),
+                        contentPadding = PaddingValues(horizontal = 16.dp),
+                        horizontalArrangement = Arrangement.spacedBy(16.dp),
                         modifier = Modifier.animateItem()
                     ) {
                         items(
@@ -620,15 +633,14 @@ fun HomeScreen(
                                 is Playlist -> {}
                             }
                         },
-                        modifier = Modifier.animateItem()
+                        modifier = Modifier.animateItem().padding(horizontal = 16.dp)
                     )
                 }
 
                 item {
                     LazyRow(
-                        contentPadding = WindowInsets.systemBars
-                            .only(WindowInsetsSides.Horizontal)
-                            .asPaddingValues(),
+                        contentPadding = PaddingValues(horizontal = 16.dp),
+                        horizontalArrangement = Arrangement.spacedBy(16.dp),
                         modifier = Modifier.animateItem()
                     ) {
                         items(it.items) { item ->
@@ -666,15 +678,14 @@ fun HomeScreen(
                                     navController.navigate("browse/$browseId")
                             }
                         },
-                        modifier = Modifier.animateItem()
+                        modifier = Modifier.animateItem().padding(horizontal = 16.dp)
                     )
                 }
 
                 item {
                     LazyRow(
-                        contentPadding = WindowInsets.systemBars
-                            .only(WindowInsetsSides.Horizontal)
-                            .asPaddingValues(),
+                        contentPadding = PaddingValues(horizontal = 16.dp),
+                        horizontalArrangement = Arrangement.spacedBy(16.dp),
                         modifier = Modifier.animateItem()
                     ) {
                         items(it.items) { item ->
@@ -711,7 +722,7 @@ fun HomeScreen(
                         onClick = {
                             navController.navigate("mood_and_genres")
                         },
-                        modifier = Modifier.animateItem()
+                        modifier = Modifier.animateItem().padding(horizontal = 16.dp)
                     )
                 }
                 item {
@@ -798,14 +809,6 @@ fun HomeScreen(
                     }
                 }
             }
-        )
-
-        Indicator(
-            isRefreshing = isRefreshing,
-            state = pullRefreshState,
-            modifier = Modifier
-                .align(Alignment.TopCenter)
-                .padding(LocalPlayerAwareWindowInsets.current.asPaddingValues()),
         )
     }
 }

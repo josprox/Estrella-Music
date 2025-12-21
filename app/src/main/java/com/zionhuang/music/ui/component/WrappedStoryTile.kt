@@ -11,12 +11,17 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -24,87 +29,145 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.zionhuang.music.R
 
 /**
- * Un "tile" estilo "historia de Instagram" para destacar el Wrapped.
- * Incluye un borde de gradiente animado que gira.
- *
- * @param modifier El modificador a aplicar al componente.
- * @param onClick La acción a ejecutar cuando se hace clic.
+ * A prominent promotional card for Wrapped 2025.
+ * Uses a vibrant gradient and animated elements to attract attention.
  */
 @Composable
 fun WrappedStoryTile(
     modifier: Modifier = Modifier,
     onClick: () -> Unit
 ) {
-    Column(
+    val infiniteTransition = rememberInfiniteTransition(label = "wrapped-card-bg")
+    
+    // Animate the gradient start/end slightly for a dynamic feel
+    val offset by infiniteTransition.animateFloat(
+        initialValue = 0f,
+        targetValue = 1000f,
+        animationSpec = infiniteRepeatable(
+            animation = tween(10000, easing = LinearEasing),
+            repeatMode = RepeatMode.Reverse
+        ), label = "gradient-offset"
+    )
+
+    val gradient = Brush.linearGradient(
+        colors = listOf(
+            Color(0xFF8E2DE2), // Purple
+            Color(0xFF4A00E0), // Deep Purple
+            Color(0xFF00C6FF)  // Cyan
+        ),
+        start = androidx.compose.ui.geometry.Offset(offset, 0f),
+        end = androidx.compose.ui.geometry.Offset(offset + 500f, 500f)
+    )
+
+    Box(
         modifier = modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp, vertical = 8.dp)
+            .height(140.dp) // Large banner height
+            .clip(RoundedCornerShape(24.dp))
+            .background(gradient)
             .clickable(onClick = onClick)
-            .padding(vertical = 4.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
     ) {
-        // 1. Gradiente animado que gira
-        val infiniteTransition = rememberInfiniteTransition(label = "wrapped-border")
-        val angle by infiniteTransition.animateFloat(
-            initialValue = 0f,
-            targetValue = 360f,
-            animationSpec = infiniteRepeatable(
-                animation = tween(2500, easing = LinearEasing),
-                repeatMode = RepeatMode.Restart
-            ), label = "wrapped-angle"
-        )
-
-        val gradientBrush = Brush.sweepGradient(
-            colors = listOf(
-                Color(0xFFB400D4), // Morado
-                Color(0xFFFF005C), // Rosa
-                Color(0xFFFFB800), // Naranja
-                Color(0xFFB400D4)  // Morado otra vez para cerrar el ciclo
-            )
-        )
-
-        // 2. Círculo exterior (el borde)
+        // Decorative circles
         Box(
             modifier = Modifier
-                .size(56.dp) // Tamaño del círculo
-                .graphicsLayer { rotationZ = angle } // Aplica la rotación
-                .background(gradientBrush, CircleShape)
-                .padding(3.dp), // Grosor del borde
-            contentAlignment = Alignment.Center
+                .align(Alignment.TopEnd)
+                .offset(x = 30.dp, y = (-30).dp)
+                .size(100.dp)
+                .background(Color.White.copy(alpha = 0.1f), CircleShape)
+        )
+        Box(
+            modifier = Modifier
+                .align(Alignment.BottomStart)
+                .offset(x = (-20).dp, y = 20.dp)
+                .size(80.dp)
+                .background(Color.White.copy(alpha = 0.1f), CircleShape)
+        )
+
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(24.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.SpaceBetween
         ) {
-            // 3. Círculo interior (el ícono)
+            Column(
+                modifier = Modifier.weight(1f)
+            ) {
+                Text(
+                    text = "Estrella Wrapped",
+                    style = MaterialTheme.typography.displaySmall.copy(
+                        shadow = androidx.compose.ui.graphics.Shadow(
+                            color = Color.Black.copy(alpha = 0.3f),
+                            blurRadius = 10f
+                        )
+                    ),
+                    color = Color.White,
+                    fontWeight = FontWeight.Black,
+                    fontSize = 28.sp
+                )
+                Spacer(modifier = Modifier.height(4.dp))
+                Text(
+                    text = stringResource(R.string.yearMusic),
+                    style = MaterialTheme.typography.titleMedium,
+                    color = Color.White.copy(alpha = 0.9f),
+                    fontWeight = FontWeight.Medium
+                )
+                Spacer(modifier = Modifier.height(12.dp))
+                
+                // CTA Pill
+                Box(
+                    modifier = Modifier
+                        .clip(RoundedCornerShape(50))
+                        .background(Color.White.copy(alpha = 0.2f))
+                        .padding(horizontal = 12.dp, vertical = 6.dp)
+                ) {
+                    Text(
+                        text = "WATCH NOW",
+                        style = MaterialTheme.typography.labelSmall,
+                        color = Color.White,
+                        fontWeight = FontWeight.Bold,
+                        letterSpacing = 1.sp
+                    )
+                }
+            }
+
+            // Play Icon with Glow
             Box(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .background(MaterialTheme.colorScheme.surface, CircleShape),
                 contentAlignment = Alignment.Center
             ) {
+                Box(
+                    modifier = Modifier
+                        .size(48.dp)
+                        .background(Color.White.copy(alpha = 0.2f), CircleShape)
+                )
                 Icon(
-                    painter = painterResource(id = R.drawable.celebration),
-                    contentDescription = "Mi Wrapped",
-                    modifier = Modifier.size(28.dp),
-                    tint = MaterialTheme.colorScheme.primary
+                    imageVector = Icons.AutoMirrored.Filled.ArrowForward,
+                    contentDescription = null,
+                    tint = Color.White,
+                    modifier = Modifier.size(24.dp)
                 )
             }
         }
-
-        Spacer(modifier = Modifier.height(8.dp))
-
-        // 4. Texto
-        Text(
-            text = "Mi Wrapped",
-            style = MaterialTheme.typography.labelMedium,
-            color = MaterialTheme.colorScheme.onSurface,
-            maxLines = 1,
-            overflow = TextOverflow.Ellipsis
-        )
     }
 }
+
+// Extension to help with offset in Box logic above
+fun Modifier.offset(x: androidx.compose.ui.unit.Dp, y: androidx.compose.ui.unit.Dp) = this.then(
+    Modifier.graphicsLayer {
+        translationX = x.toPx()
+        translationY = y.toPx()
+    }
+)

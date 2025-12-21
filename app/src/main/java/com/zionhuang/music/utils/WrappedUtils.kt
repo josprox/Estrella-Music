@@ -18,11 +18,6 @@ object WrappedUtils {
             return true
         }
 
-        // Enero 1 - 5
-        if (month == Month.JANUARY && day <= 5) {
-            return true
-        }
-
         return false
     }
 }
