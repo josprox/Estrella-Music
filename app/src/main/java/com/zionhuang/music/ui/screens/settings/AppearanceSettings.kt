@@ -36,6 +36,7 @@ import com.zionhuang.music.R
 import com.zionhuang.music.constants.DarkModeKey
 import com.zionhuang.music.constants.DefaultOpenTabKey
 import com.zionhuang.music.constants.DynamicThemeKey
+import com.zionhuang.music.constants.ModernDesignKey
 import com.zionhuang.music.constants.GridCellSize
 import com.zionhuang.music.constants.GridCellSizeKey
 import com.zionhuang.music.constants.PlayerBackgroundStyle
@@ -73,6 +74,7 @@ fun AppearanceSettings(
     scrollBehavior: TopAppBarScrollBehavior,
 ) {
     val (dynamicTheme, onDynamicThemeChange) = rememberPreference(DynamicThemeKey, defaultValue = true)
+    val (modernDesign, onModernDesignChange) = rememberPreference(ModernDesignKey, defaultValue = true)
     val (darkMode, onDarkModeChange) = rememberEnumPreference(DarkModeKey, defaultValue = DarkMode.AUTO)
     val (pureBlack, onPureBlackChange) = rememberPreference(PureBlackKey, defaultValue = false)
     val (playerTextAlignment, onPlayerTextAlignmentChange) = rememberEnumPreference(PlayerTextAlignmentKey, defaultValue = PlayerTextAlignment.CENTER)
@@ -192,6 +194,18 @@ fun AppearanceSettings(
             verticalArrangement = Arrangement.spacedBy(4.dp),
         ) {
             item { SettingsHeader(title = stringResource(R.string.theme)) }
+
+            item {
+                ExpressivePreferenceEntry(
+                    title = { Text("Modern Design") },
+                    description = { Text("Use vibrant gradients and modern card layouts") },
+                    icon = { Icon(painterResource(R.drawable.celebration), null, tint = MaterialTheme.colorScheme.primary) },
+                    onClick = { onModernDesignChange(!modernDesign) },
+                    trailingContent = {
+                        CustomSwitchPreference(checked = modernDesign, onCheckedChange = onModernDesignChange)
+                    }
+                )
+            }
 
             item {
                 ExpressivePreferenceEntry(

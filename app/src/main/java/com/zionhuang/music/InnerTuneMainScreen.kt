@@ -124,6 +124,7 @@ fun InnerTuneMainScreen(
     val latestVersionName by updateViewModel.latestVersionName.collectAsState()
 
     val enableDynamicTheme by rememberPreference(DynamicThemeKey, defaultValue = true)
+    val modernDesign by rememberPreference(ModernDesignKey, defaultValue = true) // NEW
     val darkTheme by rememberEnumPreference(DarkModeKey, defaultValue = DarkMode.AUTO)
     val pureBlack by rememberPreference(PureBlackKey, defaultValue = false)
     val systemDark = isSystemInDarkTheme()
@@ -158,7 +159,7 @@ fun InnerTuneMainScreen(
         }
     }
 
-    InnerTuneTheme(darkTheme = useDarkTheme, pureBlack = pureBlack, themeColor = themeColor) {
+    InnerTuneTheme(darkTheme = useDarkTheme, pureBlack = pureBlack, modernDesign = modernDesign, themeColor = themeColor) {
         BoxWithConstraints(
             modifier = Modifier
                 .fillMaxSize()

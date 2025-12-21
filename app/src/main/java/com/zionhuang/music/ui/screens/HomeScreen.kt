@@ -72,6 +72,7 @@ import com.zionhuang.music.constants.GridThumbnailHeight
 import com.zionhuang.music.constants.InnerTubeCookieKey
 import com.zionhuang.music.constants.ListItemHeight
 import com.zionhuang.music.constants.ListThumbnailSize
+import com.zionhuang.music.constants.ModernDesignKey
 import com.zionhuang.music.constants.ThumbnailCornerRadius
 import com.zionhuang.music.db.entities.Album
 import com.zionhuang.music.db.entities.Artist
@@ -92,7 +93,8 @@ import com.zionhuang.music.ui.component.NavigationTile
 import com.zionhuang.music.ui.component.NavigationTitle
 import com.zionhuang.music.ui.component.SongGridItem
 import com.zionhuang.music.ui.component.SongListItem
-import com.zionhuang.music.ui.component.WrappedStoryTile
+import com.zionhuang.music.ui.component.WrappedBanner
+import com.zionhuang.music.ui.component.WrappedIcon
 import com.zionhuang.music.ui.component.YouTubeGridItem
 import com.zionhuang.music.ui.component.shimmer.GridItemPlaceHolder
 import com.zionhuang.music.ui.component.shimmer.ShimmerHost
@@ -151,6 +153,8 @@ fun HomeScreen(
     rememberLazyGridState()
 
     val innerTubeCookie by rememberPreference(InnerTubeCookieKey, "")
+    val modernDesign by rememberPreference(ModernDesignKey, defaultValue = true)
+
     val isLoggedIn = remember(innerTubeCookie) {
         "SAPISID" in parseCookieString(innerTubeCookie)
     }
@@ -339,12 +343,16 @@ fun HomeScreen(
         modifier = Modifier
             .fillMaxSize()
             .background(
-                brush = Brush.verticalGradient(
-                    colors = listOf(
-                        MaterialTheme.colorScheme.background,
-                        MaterialTheme.colorScheme.surfaceContainerLowest // Un toque sutil en el fondo degradado
+                if (modernDesign) {
+                    Brush.verticalGradient(
+                        colors = listOf(
+                            MaterialTheme.colorScheme.background,
+                            MaterialTheme.colorScheme.surfaceContainerLowest
+                        )
                     )
-                )
+                } else {
+                    androidx.compose.ui.graphics.SolidColor(MaterialTheme.colorScheme.background)
+                }
             )
             .pullToRefresh(
                 state = pullRefreshState,
@@ -375,13 +383,13 @@ fun HomeScreen(
         LazyColumn(
             state = lazylistState,
             contentPadding = LocalPlayerAwareWindowInsets.current.asPaddingValues(),
-            verticalArrangement = Arrangement.spacedBy(8.dp) // Espaciado reducido
+            verticalArrangement = Arrangement.spacedBy(if (modernDesign) 8.dp else 12.dp)
         ) {
             
-            // --- BANNER WRAPPED ---
-            if (isWrappedAvailable()) {
+            // --- BANNER WRAPPED (MODERN ONLY) ---
+            if ( modernDesign && isWrappedAvailable()) {
                 item {
-                    WrappedStoryTile(
+                    WrappedBanner(
                         modifier = Modifier.animateItem(),
                         onClick = { navController.navigate("wrapped") }
                     )
@@ -421,6 +429,14 @@ fun HomeScreen(
                         onClick = { navController.navigate("account") },
                         modifier = navModifier
                     )
+
+                    // --- WRAPPED ICON (CLASSIC ONLY) ---
+                    if (!modernDesign && isWrappedAvailable()) {
+                        WrappedIcon(
+                            modifier = navModifier,
+                            onClick = { navController.navigate("wrapped") }
+                        )
+                    }
                 }
             }
 

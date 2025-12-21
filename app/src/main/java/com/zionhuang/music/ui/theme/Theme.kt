@@ -17,6 +17,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.palette.graphics.Palette
 import com.google.material.color.dynamiccolor.DynamicScheme
 import com.google.material.color.hct.Hct
+import com.google.material.color.scheme.SchemeExpressive
 import com.google.material.color.scheme.SchemeTonalSpot
 import com.google.material.color.score.Score
 
@@ -26,18 +27,23 @@ val DefaultThemeColor = Color(0xFF4285F4)
 fun InnerTuneTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     pureBlack: Boolean = false,
+    modernDesign: Boolean = true, // NEW param
     themeColor: Color = DefaultThemeColor,
     content: @Composable () -> Unit,
 ) {
     val context = LocalContext.current
-    val colorScheme = remember(darkTheme, pureBlack, themeColor) {
+    val colorScheme = remember(darkTheme, pureBlack, themeColor, modernDesign) {
         if (themeColor == DefaultThemeColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             if (darkTheme) dynamicDarkColorScheme(context).pureBlack(pureBlack)
             else dynamicLightColorScheme(context)
         } else {
-            SchemeTonalSpot(Hct.fromInt(themeColor.toArgb()), darkTheme, 0.0)
-                .toColorScheme()
-                .pureBlack(darkTheme && pureBlack)
+            val hct = Hct.fromInt(themeColor.toArgb())
+            val scheme = if (modernDesign) {
+                SchemeExpressive(hct, darkTheme, 0.0)
+            } else {
+                SchemeTonalSpot(hct, darkTheme, 0.0)
+            }
+            scheme.toColorScheme().pureBlack(darkTheme && pureBlack)
         }
     }
 
