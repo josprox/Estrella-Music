@@ -196,4 +196,14 @@
   <string name="like_all">সবার মতো</string>
   <string name="nowPlaying">আপনি কি শুনছেন?</string>
   <string name="upNext">পরবর্তী</string>
+  <string name="startingShare">শেয়ার শুরু হচ্ছে</string>
+  <string name="errorSavingImage">ছবি সংরক্ষণে ত্রুটি</string>
+  <string name="preparingWrapped">আপনার মোড়ানো প্রস্তুত করা হচ্ছে</string>
+  <string name="yourTopArtist">আপনার শীর্ষ শিল্পী</string>
+  <string name="timesHeard">বার শুনেছি</string>
+  <string name="mostListArtists">আপনার সবচেয়ে বেশি শিল্পী শোনা</string>
+  <string name="yourSongTheYear">আপনার বছরের গান</string>
+  <string name="yourMostListenedSongs">আপনার সবচেয়ে বেশি শোনা গান</string>
+  <string name="tUThisMusicaWUS">আমাদের সাথে এই সঙ্গীত যাত্রার জন্য আপনাকে ধন্যবাদ!</string>
+  <string name="yourWrapped">আপনার মোড়ানো</string>
 </resources>

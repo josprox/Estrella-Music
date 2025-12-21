@@ -176,4 +176,14 @@
   <string name="like_all">Като всички</string>
   <string name="nowPlaying">Слушате ли</string>
   <string name="upNext">Напред</string>
+  <string name="startingShare">Стартиране на споделянето</string>
+  <string name="errorSavingImage">Грешка при запазване на изображението</string>
+  <string name="preparingWrapped">Подготовка на вашата опаковка</string>
+  <string name="yourTopArtist">Вашият най-добър артист</string>
+  <string name="timesHeard">пъти чуто</string>
+  <string name="mostListArtists">Вашите най-слушани изпълнители</string>
+  <string name="yourSongTheYear">твоята песен на годината</string>
+  <string name="yourMostListenedSongs">Вашите най-слушани песни</string>
+  <string name="tUThisMusicaWUS">Благодарим ви за това музикално пътешествие с нас!</string>
+  <string name="yourWrapped">Вашият опакован</string>
 </resources>

@@ -176,4 +176,14 @@
   <string name="like_all">Seperti semuanya</string>
   <string name="nowPlaying">apakah kamu mendengarkan</string>
   <string name="upNext">Selanjutnya</string>
+  <string name="startingShare">Mulai berbagi</string>
+  <string name="errorSavingImage">Terjadi kesalahan saat menyimpan gambar</string>
+  <string name="preparingWrapped">Mempersiapkan Bungkus Anda</string>
+  <string name="yourTopArtist">Artis papan atasmu</string>
+  <string name="timesHeard">kali terdengar</string>
+  <string name="mostListArtists">Artis yang paling banyak Anda dengarkan</string>
+  <string name="yourSongTheYear">lagu Anda tahun ini</string>
+  <string name="yourMostListenedSongs">Lagu yang paling banyak Anda dengarkan</string>
+  <string name="tUThisMusicaWUS">Terima kasih atas perjalanan musikal ini bersama kami!</string>
+  <string name="yourWrapped">Bungkus Anda</string>
 </resources>

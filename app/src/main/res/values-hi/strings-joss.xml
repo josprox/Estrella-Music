@@ -142,4 +142,14 @@
   <string name="like_all">सभी की तरह</string>
   <string name="nowPlaying">क्या तुम सुन रहे हो</string>
   <string name="upNext">आगे</string>
+  <string name="startingShare">आरंभिक शेयर</string>
+  <string name="errorSavingImage">छवि सहेजने में त्रुटि</string>
+  <string name="preparingWrapped">आपका रैप्ड तैयार किया जा रहा है</string>
+  <string name="yourTopArtist">आपका शीर्ष कलाकार</string>
+  <string name="timesHeard">कई बार सुना</string>
+  <string name="mostListArtists">आपके सबसे ज्यादा सुने जाने वाले कलाकार</string>
+  <string name="yourSongTheYear">वर्ष का आपका गीत</string>
+  <string name="yourMostListenedSongs">आपके सबसे ज़्यादा सुने जाने वाले गाने</string>
+  <string name="tUThisMusicaWUS">हमारे साथ इस संगीतमय यात्रा के लिए धन्यवाद!</string>
+  <string name="yourWrapped">आपका लपेटा हुआ</string>
 </resources>

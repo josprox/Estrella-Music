@@ -176,4 +176,14 @@
   <string name="like_all">Όπως όλοι</string>
   <string name="nowPlaying">Ακούτε</string>
   <string name="upNext">Επάνω</string>
+  <string name="startingShare">Αρχική κοινή χρήση</string>
+  <string name="errorSavingImage">Σφάλμα κατά την αποθήκευση της εικόνας</string>
+  <string name="preparingWrapped">Προετοιμασία του τυλιγμένου σας</string>
+  <string name="yourTopArtist">Ο κορυφαίος καλλιτέχνης σας</string>
+  <string name="timesHeard">φορές ακούστηκε</string>
+  <string name="mostListArtists">Οι καλλιτέχνες που ακούς περισσότερο</string>
+  <string name="yourSongTheYear">το τραγούδι σου της χρονιάς</string>
+  <string name="yourMostListenedSongs">Τα πιο ακουστά τραγούδια σου</string>
+  <string name="tUThisMusicaWUS">Σας ευχαριστούμε για αυτό το μουσικό ταξίδι μαζί μας!</string>
+  <string name="yourWrapped">Τα τυλιγμένα σας</string>
 </resources>

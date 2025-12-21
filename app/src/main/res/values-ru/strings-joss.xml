@@ -176,4 +176,14 @@
   <string name="like_all">Как и все</string>
   <string name="nowPlaying">ты слушаешь?</string>
   <string name="upNext">Далее</string>
+  <string name="startingShare">Стартовая доля</string>
+  <string name="errorSavingImage">Ошибка сохранения изображения.</string>
+  <string name="preparingWrapped">Подготовка упаковки</string>
+  <string name="yourTopArtist">Ваш лучший артист</string>
+  <string name="timesHeard">раз слышал</string>
+  <string name="mostListArtists">Ваши самые слушаемые артисты</string>
+  <string name="yourSongTheYear">твоя песня года</string>
+  <string name="yourMostListenedSongs">Ваши самые прослушиваемые песни</string>
+  <string name="tUThisMusicaWUS">Спасибо за это музыкальное путешествие вместе с нами!</string>
+  <string name="yourWrapped">Ваша упаковка</string>
 </resources>

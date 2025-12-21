@@ -198,4 +198,14 @@
   <string name="like_all">Як і ўсе</string>
   <string name="nowPlaying">Вы слухаеце</string>
   <string name="upNext">Далей</string>
+  <string name="startingShare">Пачатак долі</string>
+  <string name="errorSavingImage">Памылка захавання выявы</string>
+  <string name="preparingWrapped">Падрыхтоўка Wrapped</string>
+  <string name="yourTopArtist">Ваш галоўны артыст</string>
+  <string name="timesHeard">разоў чуў</string>
+  <string name="mostListArtists">Выканаўцы, якіх вы найбольш слухаеце</string>
+  <string name="yourSongTheYear">твая песня года</string>
+  <string name="yourMostListenedSongs">Вашы самыя папулярныя песні</string>
+  <string name="tUThisMusicaWUS">Дзякуй за гэта музычнае падарожжа з намі!</string>
+  <string name="yourWrapped">Ваш загорнуты</string>
 </resources>

@@ -142,4 +142,14 @@
   <string name="like_all">Kao i svi</string>
   <string name="nowPlaying">slušate li</string>
   <string name="upNext">Sledeći</string>
+  <string name="startingShare">Početak dijeljenja</string>
+  <string name="errorSavingImage">Greška prilikom pohranjivanja slike</string>
+  <string name="preparingWrapped">Priprema vašeg Wrapped</string>
+  <string name="yourTopArtist">Vaš vrhunski umjetnik</string>
+  <string name="timesHeard">puta čuo</string>
+  <string name="mostListArtists">Vaši najslušaniji umjetnici</string>
+  <string name="yourSongTheYear">tvoja pesma godine</string>
+  <string name="yourMostListenedSongs">Vaše najslušanije pesme</string>
+  <string name="tUThisMusicaWUS">Hvala vam na ovom muzičkom putovanju sa nama!</string>
+  <string name="yourWrapped">Your Wrapped</string>
 </resources>

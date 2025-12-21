@@ -176,4 +176,14 @@
   <string name="like_all">Kuin kaikki</string>
   <string name="nowPlaying">Kuunteletko</string>
   <string name="upNext">Seuraavaksi</string>
+  <string name="startingShare">Aloitus jakaminen</string>
+  <string name="errorSavingImage">Virhe kuvan tallentamisessa</string>
+  <string name="preparingWrapped">Wrappedin valmistelu</string>
+  <string name="yourTopArtist">Huippuartistisi</string>
+  <string name="timesHeard">kertaa kuultu</string>
+  <string name="mostListArtists">Kuunelluimmat artistit</string>
+  <string name="yourSongTheYear">vuoden laulusi</string>
+  <string name="yourMostListenedSongs">Kuuntelemasi kappaleet</string>
+  <string name="tUThisMusicaWUS">Kiitos tästä musiikillisesta matkasta kanssamme!</string>
+  <string name="yourWrapped">Sinun Kääritty</string>
 </resources>

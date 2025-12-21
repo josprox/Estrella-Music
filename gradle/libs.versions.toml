@@ -2,13 +2,7 @@
 # --- SE AÑADIÓ EL BOM ---
 compose-bom = "2025.10.01"
 
-# --- VERSIONES DE COMPOSE ANTIGUAS ELIMINADAS ---
-# compose = "1.9.3" (ELIMINADA)
-# material3 = "1.4.0" (ELIMINADA)
-# runtimeLivedata = "1.9.3" (ELIMINADA)
-# foundation = "1.9.3" (ELIMINADA)
-
-androidGradlePlugin = "8.13.0"
+androidGradlePlugin = "8.13.2"
 annotation = "1.9.1"
 coilComposeVersion = "2.7.0"
 dotenvVaultKotlin = "0.0.3"

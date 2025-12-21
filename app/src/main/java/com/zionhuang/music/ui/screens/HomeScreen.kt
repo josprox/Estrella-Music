@@ -103,6 +103,7 @@ import com.zionhuang.music.ui.menu.YouTubeArtistMenu
 import com.zionhuang.music.ui.menu.YouTubePlaylistMenu
 import com.zionhuang.music.ui.menu.YouTubeSongMenu
 import com.zionhuang.music.ui.utils.SnapLayoutInfoProvider
+import com.zionhuang.music.utils.WrappedUtils.isWrappedAvailable
 import com.zionhuang.music.utils.rememberPreference
 import com.zionhuang.music.viewmodels.HomeViewModel
 import kotlinx.coroutines.Dispatchers
@@ -397,10 +398,12 @@ fun HomeScreen(
                         modifier = Modifier.weight(1f)
                     )
 
-                    WrappedStoryTile(
-                        modifier = Modifier.weight(1f),
-                        onClick = { navController.navigate("wrapped") }
-                    )
+                    if (isWrappedAvailable()) {
+                        WrappedStoryTile(
+                            modifier = Modifier.weight(1f),
+                            onClick = { navController.navigate("wrapped") }
+                        )
+                    }
                 }
             }
 

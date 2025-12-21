@@ -176,4 +176,14 @@
   <string name="like_all">像所有人一样</string>
   <string name="nowPlaying">你在听吗</string>
   <string name="upNext">接下来</string>
+  <string name="startingShare">开始分享</string>
+  <string name="errorSavingImage">保存图像时出错</string>
+  <string name="preparingWrapped">准备你的包裹</string>
+  <string name="yourTopArtist">您的顶级艺术家</string>
+  <string name="timesHeard">听到的次数</string>
+  <string name="mostListArtists">您最常聆听的艺术家</string>
+  <string name="yourSongTheYear">你的年度歌曲</string>
+  <string name="yourMostListenedSongs">您最常听的歌曲</string>
+  <string name="tUThisMusicaWUS">感谢您与我们一起度过这段音乐之旅！</string>
+  <string name="yourWrapped">你的包裹</string>
 </resources>

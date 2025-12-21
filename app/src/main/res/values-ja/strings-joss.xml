@@ -176,4 +176,14 @@
   <string name="like_all">みんなと同じように</string>
   <string name="nowPlaying">聞いていますか</string>
   <string name="upNext">次へ</string>
+  <string name="startingShare">開始シェア</string>
+  <string name="errorSavingImage">画像の保存中にエラーが発生しました</string>
+  <string name="preparingWrapped">ラップの準備</string>
+  <string name="yourTopArtist">あなたのトップアーティスト</string>
+  <string name="timesHeard">聞いた回数</string>
+  <string name="mostListArtists">最もよく聴いているアーティスト</string>
+  <string name="yourSongTheYear">あなたの今年の歌</string>
+  <string name="yourMostListenedSongs">最もよく聴いた曲</string>
+  <string name="tUThisMusicaWUS">私たちと一緒にこの音楽の旅をありがとう！</string>
+  <string name="yourWrapped">あなたの包まれた</string>
 </resources>

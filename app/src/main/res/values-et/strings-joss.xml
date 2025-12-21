@@ -142,4 +142,14 @@
   <string name="like_all">Nagu kõik</string>
   <string name="nowPlaying">Kas sa kuulad</string>
   <string name="upNext">Järgmisena üles</string>
+  <string name="startingShare">Jagamise alustamine</string>
+  <string name="errorSavingImage">Viga pildi salvestamisel</string>
+  <string name="preparingWrapped">Wrappedi ettevalmistamine</string>
+  <string name="yourTopArtist">Sinu tippkunstnik</string>
+  <string name="timesHeard">korda kuuldud</string>
+  <string name="mostListArtists">Teie enimkuulatud artistid</string>
+  <string name="yourSongTheYear">sinu aasta laul</string>
+  <string name="yourMostListenedSongs">Teie enimkuulatud laulud</string>
+  <string name="tUThisMusicaWUS">Aitäh selle muusikalise teekonna eest meiega!</string>
+  <string name="yourWrapped">Teie mähitud</string>
 </resources>

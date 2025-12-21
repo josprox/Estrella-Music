@@ -187,4 +187,14 @@
   <string name="like_all">Mint minden</string>
   <string name="nowPlaying">hallgatsz</string>
   <string name="upNext">Fel</string>
+  <string name="startingShare">Kezdő megosztás</string>
+  <string name="errorSavingImage">Hiba a kép mentése közben</string>
+  <string name="preparingWrapped">A Wrapped előkészítése</string>
+  <string name="yourTopArtist">A legjobb művészed</string>
+  <string name="timesHeard">alkalommal hallottam</string>
+  <string name="mostListArtists">A leghallgatottabb előadóid</string>
+  <string name="yourSongTheYear">az év dala</string>
+  <string name="yourMostListenedSongs">A leghallgatottabb dalaid</string>
+  <string name="tUThisMusicaWUS">Köszönjük ezt a zenés utazást velünk!</string>
+  <string name="yourWrapped">A becsomagolt</string>
 </resources>

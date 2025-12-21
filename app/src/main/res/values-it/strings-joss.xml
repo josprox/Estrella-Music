@@ -142,4 +142,14 @@
   <string name="like_all">Come tutti</string>
   <string name="nowPlaying">stai ascoltando?</string>
   <string name="upNext">Il prossimo</string>
+  <string name="startingShare">Condivisione iniziale</string>
+  <string name="errorSavingImage">Errore durante il salvataggio dell\'immagine</string>
+  <string name="preparingWrapped">Preparare il Wrapped</string>
+  <string name="yourTopArtist">Il tuo miglior artista</string>
+  <string name="timesHeard">volte sentito</string>
+  <string name="mostListArtists">I tuoi artisti più ascoltati</string>
+  <string name="yourSongTheYear">la tua canzone dell\'anno</string>
+  <string name="yourMostListenedSongs">Le tue canzoni più ascoltate</string>
+  <string name="tUThisMusicaWUS">Grazie per questo viaggio musicale con noi!</string>
+  <string name="yourWrapped">Il tuo avvolto</string>
 </resources>

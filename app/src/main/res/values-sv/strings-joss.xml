@@ -142,4 +142,14 @@
   <string name="like_all">Som alla</string>
   <string name="nowPlaying">Lyssnar du</string>
   <string name="upNext">Nästa</string>
+  <string name="startingShare">Börjar dela</string>
+  <string name="errorSavingImage">Det gick inte att spara bilden</string>
+  <string name="preparingWrapped">Förbereder din Wrapped</string>
+  <string name="yourTopArtist">Din bästa artist</string>
+  <string name="timesHeard">gånger hört</string>
+  <string name="mostListArtists">Dina mest lyssnade på artister</string>
+  <string name="yourSongTheYear">din årets låt</string>
+  <string name="yourMostListenedSongs">Dina mest lyssnade på låtar</string>
+  <string name="tUThisMusicaWUS">Tack för denna musikaliska resa med oss!</string>
+  <string name="yourWrapped">Din insvept</string>
 </resources>

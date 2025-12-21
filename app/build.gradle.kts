@@ -189,6 +189,14 @@ dependencies {
     implementation(libs.androidx.palette.ktx)
     implementation(libs.billing.ktx)
     implementation(libs.lifecycle.process)
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.7") // Trying 2.8.7 stable first as 2.9.4 might be unstable or not fully available
+    // But since user has 2.9.4 for process, let's try to match it if previous failed? 
+    // Actually, let's stick to a known stable version for these specific libraries if implicit resolution failed.
+    // 2.8.7 IS stable. 
+    // Wait, the previous error was Unresolved Reference. 
+    // Maybe I should add lifecycle-common-java8 or just lifecycle-common?
+    implementation("androidx.lifecycle:lifecycle-common-java8:2.8.7")
+    implementation("androidx.savedstate:savedstate-ktx:1.2.1")
     implementation(libs.onesignal)
     implementation(libs.androidx.media3.exoplayer.v131)
 

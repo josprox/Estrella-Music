@@ -175,4 +175,14 @@
   <string name="like_all">എല്ലാം പോലെ</string>
   <string name="nowPlaying">നിങ്ങൾ ശ്രദ്ധിക്കുന്നുണ്ടോ</string>
   <string name="upNext">അടുത്തതായി</string>
+  <string name="startingShare">പങ്കിടൽ ആരംഭിക്കുന്നു</string>
+  <string name="errorSavingImage">ചിത്രം സംരക്ഷിക്കുന്നതിൽ പിശക്</string>
+  <string name="preparingWrapped">നിങ്ങളുടെ പൊതിഞ്ഞത് തയ്യാറാക്കുന്നു</string>
+  <string name="yourTopArtist">നിങ്ങളുടെ മികച്ച കലാകാരൻ</string>
+  <string name="timesHeard">കേട്ട തവണ</string>
+  <string name="mostListArtists">നിങ്ങൾ ഏറ്റവും കൂടുതൽ ശ്രവിച്ചത് കലാകാരന്മാരെയാണ്</string>
+  <string name="yourSongTheYear">നിങ്ങളുടെ ഈ വർഷത്തെ ഗാനം</string>
+  <string name="yourMostListenedSongs">നിങ്ങൾ ഏറ്റവും കൂടുതൽ ശ്രവിച്ച പാട്ടുകൾ</string>
+  <string name="tUThisMusicaWUS">ഞങ്ങളോടൊപ്പമുള്ള ഈ സംഗീത യാത്രയ്ക്ക് നന്ദി!</string>
+  <string name="yourWrapped">നിങ്ങളുടെ പൊതിഞ്ഞത്</string>
 </resources>

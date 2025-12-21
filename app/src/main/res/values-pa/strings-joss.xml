@@ -196,4 +196,14 @@
   <string name="like_all">ਸਭ ਪਸੰਦ ਹੈ</string>
   <string name="nowPlaying">ਕੀ ਤੁਸੀਂ ਸੁਣ ਰਹੇ ਹੋ?</string>
   <string name="upNext">ਅੱਗੇ</string>
+  <string name="startingShare">ਸਾਂਝਾਕਰਨ ਸ਼ੁਰੂ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ</string>
+  <string name="errorSavingImage">ਚਿੱਤਰ ਨੂੰ ਸੁਰੱਖਿਅਤ ਕਰਨ ਵਿੱਚ ਤਰੁੱਟੀ</string>
+  <string name="preparingWrapped">ਤੁਹਾਡੇ ਲਪੇਟੇ ਨੂੰ ਤਿਆਰ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ</string>
+  <string name="yourTopArtist">ਤੁਹਾਡਾ ਚੋਟੀ ਦਾ ਕਲਾਕਾਰ</string>
+  <string name="timesHeard">ਵਾਰ ਸੁਣਿਆ</string>
+  <string name="mostListArtists">ਤੁਹਾਡੇ ਸਭ ਤੋਂ ਵੱਧ ਸੁਣੇ ਗਏ ਕਲਾਕਾਰ</string>
+  <string name="yourSongTheYear">ਤੁਹਾਡਾ ਸਾਲ ਦਾ ਗੀਤ</string>
+  <string name="yourMostListenedSongs">ਤੁਹਾਡੇ ਸਭ ਤੋਂ ਵੱਧ ਸੁਣੇ ਗਏ ਗੀਤ</string>
+  <string name="tUThisMusicaWUS">ਸਾਡੇ ਨਾਲ ਇਸ ਸੰਗੀਤਕ ਸਫ਼ਰ ਲਈ ਤੁਹਾਡਾ ਧੰਨਵਾਦ!</string>
+  <string name="yourWrapped">ਤੁਹਾਡਾ ਲਪੇਟਿਆ</string>
 </resources>

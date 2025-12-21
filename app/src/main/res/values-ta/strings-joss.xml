@@ -142,4 +142,14 @@
   <string name="like_all">எல்லாவற்றையும் போல</string>
   <string name="nowPlaying">நீங்கள் கேட்கிறீர்களா?</string>
   <string name="upNext">அடுத்து</string>
+  <string name="startingShare">ஆரம்ப பகிர்வு</string>
+  <string name="errorSavingImage">படத்தை சேமிப்பதில் பிழை</string>
+  <string name="preparingWrapped">உங்கள் போர்வை தயார் செய்கிறது</string>
+  <string name="yourTopArtist">உங்கள் சிறந்த கலைஞர்</string>
+  <string name="timesHeard">முறை கேட்டது</string>
+  <string name="mostListArtists">நீங்கள் கலைஞர்களை அதிகம் கேட்டீர்கள்</string>
+  <string name="yourSongTheYear">உங்கள் ஆண்டின் பாடல்</string>
+  <string name="yourMostListenedSongs">நீங்கள் அதிகம் கேட்ட பாடல்கள்</string>
+  <string name="tUThisMusicaWUS">எங்களுடனான இந்த இசை பயணத்திற்கு நன்றி!</string>
+  <string name="yourWrapped">உங்கள் மூடப்பட்டது</string>
 </resources>

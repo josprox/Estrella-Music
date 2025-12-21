@@ -175,4 +175,14 @@
   <string name="like_all">Like all</string>
   <string name="nowPlaying">are you listening</string>
   <string name="upNext">Up next</string>
+  <string name="startingShare">Starting share</string>
+  <string name="errorSavingImage">Error saving image</string>
+  <string name="preparingWrapped">Preparing your Wrapped</string>
+  <string name="yourTopArtist">Your top artist</string>
+  <string name="timesHeard">times heard</string>
+  <string name="mostListArtists">Your most listened to artists</string>
+  <string name="yourSongTheYear">your song of the year</string>
+  <string name="yourMostListenedSongs">Your most listened to songs</string>
+  <string name="tUThisMusicaWUS">Thank you for this musical journey with us!</string>
+  <string name="yourWrapped">Your Wrapped</string>
 </resources>

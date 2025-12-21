@@ -141,4 +141,14 @@
   <string name="like_all">مثل همه</string>
   <string name="nowPlaying">آیا شما گوش می دهید</string>
   <string name="upNext">بعد</string>
+  <string name="startingShare">شروع اشتراک</string>
+  <string name="errorSavingImage">خطا در ذخیره تصویر</string>
+  <string name="preparingWrapped">در حال آماده کردن بسته بندی شما</string>
+  <string name="yourTopArtist">هنرمند برتر شما</string>
+  <string name="timesHeard">بارها شنیده شد</string>
+  <string name="mostListArtists">پر شنیده ترین هنرمندان شما</string>
+  <string name="yourSongTheYear">آهنگ سال شما</string>
+  <string name="yourMostListenedSongs">پر شنیده ترین آهنگ های شما</string>
+  <string name="tUThisMusicaWUS">با تشکر از شما برای این سفر موسیقی با ما!</string>
+  <string name="yourWrapped">شما پیچیده شده است</string>
 </resources>

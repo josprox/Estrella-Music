@@ -176,4 +176,14 @@
   <string name="like_all">Zoals allemaal</string>
   <string name="nowPlaying">luister je</string>
   <string name="upNext">Volgende</string>
+  <string name="startingShare">Startaandeel</string>
+  <string name="errorSavingImage">Fout bij opslaan van afbeelding</string>
+  <string name="preparingWrapped">Je Wrapped voorbereiden</string>
+  <string name="yourTopArtist">Je topartiest</string>
+  <string name="timesHeard">keer gehoord</string>
+  <string name="mostListArtists">Je meest beluisterde artiesten</string>
+  <string name="yourSongTheYear">jouw lied van het jaar</string>
+  <string name="yourMostListenedSongs">Je meest beluisterde nummers</string>
+  <string name="tUThisMusicaWUS">Bedankt voor deze muzikale reis met ons!</string>
+  <string name="yourWrapped">Je ingepakt</string>
 </resources>

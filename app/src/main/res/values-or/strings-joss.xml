@@ -197,4 +197,14 @@
   <string name="like_all">ସବୁ ପରି</string>
   <string name="nowPlaying">ଆପଣ ଶୁଣୁଛନ୍ତି କି</string>
   <string name="upNext">ପରବର୍ତ୍ତୀ</string>
+  <string name="startingShare">ଅଂଶୀଦାର ଆରମ୍ଭ</string>
+  <string name="errorSavingImage">ପ୍ରତିଛବି ସଂରକ୍ଷଣରେ ତ୍ରୁଟି |</string>
+  <string name="preparingWrapped">ତୁମର ଗୁଡ଼ାଇ ପ୍ରସ୍ତୁତ କରିବା |</string>
+  <string name="yourTopArtist">ତୁମର ଶ୍ରେଷ୍ଠ କଳାକାର |</string>
+  <string name="timesHeard">ସମୟ ଶୁଣିଛି |</string>
+  <string name="mostListArtists">ତୁମର ସର୍ବାଧିକ କଳାକାରମାନେ ଶୁଣିଲେ |</string>
+  <string name="yourSongTheYear">ତୁମର ବର୍ଷର ଗୀତ</string>
+  <string name="yourMostListenedSongs">ତୁମର ସବୁଠୁ ଗୀତ ଶୁଣୁଛ |</string>
+  <string name="tUThisMusicaWUS">ଆମ ସହିତ ଏହି ସଂଗୀତ ଯାତ୍ରା ପାଇଁ ଧନ୍ୟବାଦ!</string>
+  <string name="yourWrapped">ତୁମର ଆବୃତ</string>
 </resources>

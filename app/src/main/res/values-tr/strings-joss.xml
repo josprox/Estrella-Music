@@ -176,4 +176,14 @@
   <string name="like_all">Herkes gibi</string>
   <string name="nowPlaying">dinliyor musun</string>
   <string name="upNext">Sıradaki</string>
+  <string name="startingShare">Paylaşım başlatılıyor</string>
+  <string name="errorSavingImage">Resim kaydedilirken hata oluştu</string>
+  <string name="preparingWrapped">Paketlemenizi Hazırlamak</string>
+  <string name="yourTopArtist">En iyi sanatçınız</string>
+  <string name="timesHeard">kez duyuldu</string>
+  <string name="mostListArtists">En çok dinlediğiniz sanatçılar</string>
+  <string name="yourSongTheYear">yılın şarkın</string>
+  <string name="yourMostListenedSongs">En çok dinlediğiniz şarkılar</string>
+  <string name="tUThisMusicaWUS">Bizimle bu müzikal yolculuk için teşekkür ederiz!</string>
+  <string name="yourWrapped">Paketlenmiş</string>
 </resources>

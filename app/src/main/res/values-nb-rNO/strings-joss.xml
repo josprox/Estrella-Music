@@ -176,4 +176,14 @@
   <string name="like_all">Som alle</string>
   <string name="nowPlaying">lytter du</string>
   <string name="upNext">Opp neste</string>
+  <string name="startingShare">Starter deling</string>
+  <string name="errorSavingImage">Feil under lagring av bildet</string>
+  <string name="preparingWrapped">Forbereder din Wrapped</string>
+  <string name="yourTopArtist">Din beste artist</string>
+  <string name="timesHeard">ganger hørt</string>
+  <string name="mostListArtists">De mest lyttende artistene dine</string>
+  <string name="yourSongTheYear">årets sang</string>
+  <string name="yourMostListenedSongs">Sangene du har hørt mest på</string>
+  <string name="tUThisMusicaWUS">Takk for denne musikalske reisen med oss!</string>
+  <string name="yourWrapped">Din innpakket</string>
 </resources>

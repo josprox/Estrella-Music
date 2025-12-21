@@ -176,4 +176,14 @@
   <string name="like_all">Giống như tất cả</string>
   <string name="nowPlaying">bạn có đang nghe không</string>
   <string name="upNext">Tiếp theo</string>
+  <string name="startingShare">Bắt đầu chia sẻ</string>
+  <string name="errorSavingImage">Lỗi lưu hình ảnh</string>
+  <string name="preparingWrapped">Chuẩn bị gói của bạn</string>
+  <string name="yourTopArtist">Nghệ sĩ hàng đầu của bạn</string>
+  <string name="timesHeard">lần nghe</string>
+  <string name="mostListArtists">Nghệ sĩ được bạn nghe nhiều nhất</string>
+  <string name="yourSongTheYear">bài hát của năm của bạn</string>
+  <string name="yourMostListenedSongs">Bài hát bạn nghe nhiều nhất</string>
+  <string name="tUThisMusicaWUS">Cảm ơn bạn vì hành trình âm nhạc này cùng chúng tôi!</string>
+  <string name="yourWrapped">Gói của bạn</string>
 </resources>

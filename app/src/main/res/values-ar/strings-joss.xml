@@ -175,4 +175,14 @@
   <string name="like_all">مثل الكل</string>
   <string name="nowPlaying">هل تستمع</string>
   <string name="upNext">التالي</string>
+  <string name="startingShare">بدء المشاركة</string>
+  <string name="errorSavingImage">خطأ في حفظ الصورة</string>
+  <string name="preparingWrapped">إعداد ملفوفة الخاص بك</string>
+  <string name="yourTopArtist">فنانك الأعلى</string>
+  <string name="timesHeard">مرات سمعت</string>
+  <string name="mostListArtists">الأكثر استماعا للفنانين</string>
+  <string name="yourSongTheYear">أغنيتك لهذا العام</string>
+  <string name="yourMostListenedSongs">الأغاني الأكثر استماعاً لديك</string>
+  <string name="tUThisMusicaWUS">شكرا لك على هذه الرحلة الموسيقية معنا!</string>
+  <string name="yourWrapped">ملفوفة الخاص بك</string>
 </resources>

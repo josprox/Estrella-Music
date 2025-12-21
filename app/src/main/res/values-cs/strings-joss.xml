@@ -176,4 +176,14 @@
   <string name="like_all">Jako všichni</string>
   <string name="nowPlaying">Posloucháš</string>
   <string name="upNext">Nahoru další</string>
+  <string name="startingShare">Počáteční sdílení</string>
+  <string name="errorSavingImage">Při ukládání obrázku došlo k chybě</string>
+  <string name="preparingWrapped">Příprava vašeho Wrapped</string>
+  <string name="yourTopArtist">Váš nejlepší umělec</string>
+  <string name="timesHeard">časy slyšeli</string>
+  <string name="mostListArtists">Vaši nejposlouchanější umělci</string>
+  <string name="yourSongTheYear">vaše píseň roku</string>
+  <string name="yourMostListenedSongs">Vaše nejposlouchanější písničky</string>
+  <string name="tUThisMusicaWUS">Děkujeme za tuto hudební cestu s námi!</string>
+  <string name="yourWrapped">Vaše zabalené</string>
 </resources>
