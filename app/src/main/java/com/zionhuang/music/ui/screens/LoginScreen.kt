@@ -6,19 +6,31 @@ import android.webkit.JavascriptInterface
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.activity.compose.BackHandler
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.navigation.NavController
 import com.zionhuang.innertube.YouTube
@@ -53,71 +65,105 @@ fun LoginScreen(
 
     var webView: WebView? = null
 
-    AndroidView(
+    Box(
         modifier = Modifier
+            .fillMaxSize()
+            .background(
+                brush = Brush.verticalGradient(
+                    colors = listOf(
+                        Color(0xFF2E2E2E),
+                        Color(0xFF000000)
+                    )
+                )
+            )
             .windowInsetsPadding(LocalPlayerAwareWindowInsets.current)
-            .fillMaxSize(),
-        factory = { context ->
-            WebView(context).apply {
-                webViewClient = object : WebViewClient() {
-                    override fun onPageFinished(view: WebView, url: String?) {
-                        loadUrl("javascript:Android.onRetrieveVisitorData(window.yt.config_.VISITOR_DATA)")
-                        loadUrl("javascript:Android.onRetrieveDataSyncId(window.yt.config_.DATASYNC_ID)")
+    ) {
+        AndroidView(
+            modifier = Modifier.fillMaxSize(),
+            factory = { context ->
+                WebView(context).apply {
+                    webViewClient = object : WebViewClient() {
+                        override fun onPageFinished(view: WebView, url: String?) {
+                            loadUrl("javascript:Android.onRetrieveVisitorData(window.yt.config_.VISITOR_DATA)")
+                            loadUrl("javascript:Android.onRetrieveDataSyncId(window.yt.config_.DATASYNC_ID)")
 
-                        if (url?.startsWith("https://music.youtube.com") == true) {
-                            innerTubeCookie = CookieManager.getInstance().getCookie(url)
-                            coroutineScope.launch {
-                                YouTube.accountInfo().onSuccess {
-                                    accountName = it.name
-                                    accountEmail = it.email.orEmpty()
-                                    accountChannelHandle = it.channelHandle.orEmpty()
-                                }.onFailure {
-                                    reportException(it)
+                            if (url?.startsWith("https://music.youtube.com") == true) {
+                                innerTubeCookie = CookieManager.getInstance().getCookie(url)
+                                coroutineScope.launch {
+                                    YouTube.accountInfo().onSuccess {
+                                        accountName = it.name
+                                        accountEmail = it.email.orEmpty()
+                                        accountChannelHandle = it.channelHandle.orEmpty()
+                                    }.onFailure {
+                                        reportException(it)
+                                    }
                                 }
                             }
                         }
                     }
-                }
-                settings.apply {
-                    javaScriptEnabled = true
-                    setSupportZoom(true)
-                    builtInZoomControls = true
-                    displayZoomControls = false
-                }
-                addJavascriptInterface(object {
-                    @JavascriptInterface
-                    fun onRetrieveVisitorData(newVisitorData: String?) {
-                        if (newVisitorData != null) {
-                            visitorData = newVisitorData
-                        }
+                    settings.apply {
+                        javaScriptEnabled = true
+                        setSupportZoom(true)
+                        builtInZoomControls = true
+                        displayZoomControls = false
+                        // Optional: Try to make transparent if the page supports it (Google Login usually doesn't, but good for loading)
+                        setBackgroundColor(0x00000000)
                     }
-                    @JavascriptInterface
-                    fun onRetrieveDataSyncId(newDataSyncId: String?) {
-                        if (newDataSyncId != null) {
-                            dataSyncId = newDataSyncId.substringBefore("||")
+                    addJavascriptInterface(object {
+                        @JavascriptInterface
+                        fun onRetrieveVisitorData(newVisitorData: String?) {
+                            if (newVisitorData != null) {
+                                visitorData = newVisitorData
+                            }
                         }
-                    }
-                }, "Android")
-                webView = this
-                loadUrl("https://accounts.google.com/ServiceLogin?continue=https%3A%2F%2Fmusic.youtube.com")
+                        @JavascriptInterface
+                        fun onRetrieveDataSyncId(newDataSyncId: String?) {
+                            if (newDataSyncId != null) {
+                                dataSyncId = newDataSyncId.substringBefore("||")
+                            }
+                        }
+                    }, "Android")
+                    webView = this
+                    loadUrl("https://accounts.google.com/ServiceLogin?continue=https%3A%2F%2Fmusic.youtube.com")
+                }
             }
-        }
-    )
+        )
 
-    TopAppBar(
-        title = { Text(stringResource(R.string.login)) },
-        navigationIcon = {
+        // Custom Glass Header
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .background(
+                    brush = Brush.verticalGradient(
+                        colors = listOf(
+                            Color.Black.copy(alpha = 0.7f),
+                            Color.Transparent
+                        )
+                    )
+                )
+                .padding(16.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
             IconButton(
                 onClick = navController::navigateUp,
                 onLongClick = navController::backToMain
             ) {
                 Icon(
                     painterResource(R.drawable.arrow_back),
-                    contentDescription = null
+                    contentDescription = null,
+                    tint = Color.White
                 )
             }
+            Spacer(modifier = Modifier.width(16.dp))
+            Text(
+                text = stringResource(R.string.login),
+                style = MaterialTheme.typography.titleLarge.copy(
+                    fontWeight = FontWeight.Bold,
+                    color = Color.White
+                )
+            )
         }
-    )
+    }
 
     BackHandler(enabled = webView?.canGoBack() == true) {
         webView?.goBack()

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
   <string name="card_donation">Votre don nous aide à garder l\'application gratuite et à améliorer ses fonctionnalités</string>
   <string name="website_url">aller sur le site Web</string>
   <string name="latestVersion">Dernière version</string>
@@ -122,7 +122,7 @@
   <string name="error_no_session">Vous n\'êtes pas connecté.</string>
   <string name="hello">Bonjour</string>
   <string name="onboarding_brand_subtitle">Votre musique, vos règles.</string>
-  <string name="onboarding_brand_subtitle_2">Soutenez notre application !</string>
+    <string name="onboarding_brand_subtitle_2" tools:ignore="ExtraTranslation">Soutenez notre application !</string>
   <string name="next">Suivant</string>
   <string name="getStarted">Commencer</string>
   <string name="restore_success">La restauration de la base de données terminée</string>
