@@ -3,7 +3,16 @@ package com.zionhuang.music.ui.menu
 import android.content.Intent
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.layout.ContentScale
+
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
@@ -57,6 +66,8 @@ import com.zionhuang.music.constants.ListItemHeight
 import com.zionhuang.music.constants.ListThumbnailSize
 import com.zionhuang.music.db.entities.Event
 import com.zionhuang.music.db.entities.Song
+import com.zionhuang.music.constants.ModernDesignKey
+import com.zionhuang.music.utils.rememberPreference
 import com.zionhuang.music.extensions.toMediaItem
 import com.zionhuang.music.models.toMediaMetadata
 import com.zionhuang.music.playback.ExoDownloadService
@@ -84,6 +95,7 @@ fun SongMenu(
     val songState = database.song(originalSong.id).collectAsState(initial = originalSong)
     val song = songState.value ?: originalSong
     val download by LocalDownloadUtil.current.getDownload(originalSong.id).collectAsState(initial = null)
+    val modernDesign by rememberPreference(ModernDesignKey, defaultValue = true)
 
     val scope = rememberCoroutineScope()
     var refetchIconDegree by remember { mutableFloatStateOf(0f) }
@@ -173,27 +185,84 @@ fun SongMenu(
         }
     }
 
-    SongListItem(
-        song = song,
-        badges = {},
-        trailingContent = {
-            IconButton(
-                onClick = {
-                    database.query {
-                        update(song.song.toggleLike())
-                    }
-                }
-            ) {
-                Icon(
-                    painter = painterResource(if (song.song.liked) R.drawable.favorite else R.drawable.favorite_border),
-                    tint = if (song.song.liked) MaterialTheme.colorScheme.error else LocalContentColor.current,
-                    contentDescription = null
+    if (modernDesign) {
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(vertical = 24.dp, horizontal = 16.dp)
+        ) {
+            Box(contentAlignment = Alignment.BottomEnd) {
+                AsyncImage(
+                    model = song.song.thumbnailUrl,
+                    contentDescription = null,
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier
+                        .size(160.dp)
+                        .clip(RoundedCornerShape(16.dp))
                 )
+                // Favorite Button Overlay
+                IconButton(
+                    onClick = {
+                        database.query {
+                            update(song.song.toggleLike())
+                        }
+                    },
+                    modifier = Modifier
+                        .padding(8.dp)
+                        .background(MaterialTheme.colorScheme.surface.copy(alpha = 0.7f), CircleShape)
+                        .size(36.dp)
+                ) {
+                    Icon(
+                        painter = painterResource(if (song.song.liked) R.drawable.favorite else R.drawable.favorite_border),
+                        tint = if (song.song.liked) MaterialTheme.colorScheme.error else MaterialTheme.colorScheme.onSurface,
+                        contentDescription = null,
+                        modifier = Modifier.size(20.dp)
+                    )
+                }
             }
+            Spacer(modifier = Modifier.height(16.dp))
+            Text(
+                text = song.song.title,
+                style = MaterialTheme.typography.titleLarge,
+                fontWeight = FontWeight.Bold,
+                textAlign = TextAlign.Center,
+                maxLines = 2,
+                overflow = TextOverflow.Ellipsis
+            )
+            Spacer(modifier = Modifier.height(4.dp))
+            Text(
+                text = song.artists.joinToString { it.name },
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                textAlign = TextAlign.Center,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis
+            )
         }
-    )
+    } else {
+        SongListItem(
+            song = song,
+            badges = {},
+            trailingContent = {
+                IconButton(
+                    onClick = {
+                        database.query {
+                            update(song.song.toggleLike())
+                        }
+                    }
+                ) {
+                    Icon(
+                        painter = painterResource(if (song.song.liked) R.drawable.favorite else R.drawable.favorite_border),
+                        tint = if (song.song.liked) MaterialTheme.colorScheme.error else LocalContentColor.current,
+                        contentDescription = null
+                    )
+                }
+            }
+        )
 
-    HorizontalDivider()
+        HorizontalDivider()
+    }
 
     GridMenu(
         contentPadding = PaddingValues(

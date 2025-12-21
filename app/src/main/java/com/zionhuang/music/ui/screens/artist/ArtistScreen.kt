@@ -98,7 +98,13 @@ import com.zionhuang.music.ui.menu.YouTubeSongMenu
 import com.zionhuang.music.ui.utils.backToMain
 import com.zionhuang.music.ui.utils.fadingEdge
 import com.zionhuang.music.ui.utils.resize
+import com.zionhuang.music.constants.ModernDesignKey
+import com.zionhuang.music.utils.rememberPreference
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.TileMode
+import androidx.compose.foundation.layout.BoxWithConstraints
 import com.zionhuang.music.viewmodels.ArtistViewModel
+
 
 @OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class)
 @Composable
@@ -118,6 +124,7 @@ fun ArtistScreen(
     val artistPage = viewModel.artistPage
     val libraryArtist by viewModel.libraryArtist.collectAsState()
     val librarySongs by viewModel.librarySongs.collectAsState()
+    val modernDesign by rememberPreference(ModernDesignKey, defaultValue = true)
 
     val lazyListState = rememberLazyListState()
     val snackbarHostState = remember { SnackbarHostState() }
@@ -221,132 +228,250 @@ fun ArtistScreen(
                     val thumbnail = artistPage.artist.thumbnail
                     val artistName = artistPage.artist.title
 
-                    Column {
-                        if (thumbnail != null) {
-                            Box(
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .aspectRatio(1.2f / 1),
-                            ) {
+                    if (modernDesign) {
+                        // --- MODERN DESIGN HEADER ---
+                        Box(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .height(380.dp) // Taller header
+                        ) {
+                            if (thumbnail != null) {
                                 AsyncImage(
                                     model = thumbnail.resize(1200, 1000),
                                     contentDescription = null,
                                     modifier = Modifier
-                                        .fillMaxWidth()
-                                        .align(Alignment.TopCenter)
+                                        .fillMaxSize()
                                         .fadingEdge(
-                                            bottom = 200.dp,
+                                            bottom = 150.dp, // Smoother fade
                                         ),
+                                    contentScale = androidx.compose.ui.layout.ContentScale.Crop
+                                )
+                                // Gradient Overlay for text readability
+                                Box(
+                                    modifier = Modifier
+                                        .fillMaxSize()
+                                        .background(
+                                            Brush.verticalGradient(
+                                                colors = listOf(
+                                                    Color.Transparent,
+                                                    MaterialTheme.colorScheme.background.copy(alpha = 0.6f),
+                                                    MaterialTheme.colorScheme.background
+                                                ),
+                                                startY = 300f
+                                            )
+                                        )
                                 )
                             }
-                        }
-
-                        Column(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .padding(top = 8.dp, start = 16.dp, end = 16.dp, bottom = 0.dp)
-                        ) {
-                            Text(
-                                text = artistName,
-                                style = MaterialTheme.typography.headlineLarge,
-                                fontWeight = FontWeight.Bold,
-                                maxLines = 1,
-                                overflow = TextOverflow.Ellipsis,
-                                fontSize = 32.sp,
-                                modifier = Modifier.padding(bottom = 16.dp)
-                            )
-
-                            Row(
-                                modifier = Modifier.fillMaxWidth(),
-                                verticalAlignment = Alignment.CenterVertically
+                            
+                            Column(
+                                modifier = Modifier
+                                    .align(Alignment.BottomStart)
+                                    .padding(start = 24.dp, end = 24.dp, bottom = 24.dp)
                             ) {
-                                OutlinedButton(
-                                    onClick = {
-                                        database.transaction {
-                                            val artist = libraryArtist?.artist
-                                            if (artist != null) {
-                                                update(artist.toggleLike())
-                                            } else {
-                                                artistPage.artist.let {
-                                                    insert(
-                                                        ArtistEntity(
-                                                            id = it.id,
-                                                            name = it.title,
-                                                            thumbnailUrl = it.thumbnail,
-                                                        ).toggleLike()
-                                                    )
-                                                }
-                                            }
-                                        }
-                                    },
-                                    colors = ButtonDefaults.outlinedButtonColors(
-                                        containerColor = if (libraryArtist?.artist?.bookmarkedAt != null)
-                                            MaterialTheme.colorScheme.surface
-                                        else
-                                            Color.Transparent
-                                    ),
-                                    shape = RoundedCornerShape(50),
-                                    modifier = Modifier.height(40.dp)
-                                ) {
-                                    val isSubscribed = libraryArtist?.artist?.bookmarkedAt != null
-                                    Text(
-                                        text = stringResource(if (isSubscribed) R.string.subscribed else R.string.subscribe),
-                                        fontSize = 14.sp,
-                                        color = if (!isSubscribed) MaterialTheme.colorScheme.error else LocalContentColor.current
-                                    )
-                                }
-
-                                Spacer(modifier = Modifier.weight(1f))
+                                Text(
+                                    text = artistName,
+                                    style = MaterialTheme.typography.displayMedium, // Larger, decorative font
+                                    fontWeight = FontWeight.Black,
+                                    maxLines = 2,
+                                    overflow = TextOverflow.Ellipsis,
+                                    color = MaterialTheme.colorScheme.onBackground,
+                                    modifier = Modifier.padding(bottom = 12.dp)
+                                )
 
                                 Row(
-                                    horizontalArrangement = Arrangement.spacedBy(16.dp),
+                                    horizontalArrangement = Arrangement.spacedBy(12.dp),
                                     verticalAlignment = Alignment.CenterVertically
                                 ) {
+                                    // Subscribe Button (Filled)
+                                    val isSubscribed = libraryArtist?.artist?.bookmarkedAt != null
+                                    androidx.compose.material3.Button(
+                                        onClick = {
+                                            database.transaction {
+                                                val artist = libraryArtist?.artist
+                                                if (artist != null) {
+                                                    update(artist.toggleLike())
+                                                } else {
+                                                    artistPage.artist.let {
+                                                        insert(
+                                                            ArtistEntity(
+                                                                id = it.id,
+                                                                name = it.title,
+                                                                thumbnailUrl = it.thumbnail,
+                                                            ).toggleLike()
+                                                        )
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        colors = ButtonDefaults.buttonColors(
+                                            containerColor = if (isSubscribed) MaterialTheme.colorScheme.surfaceContainerHighest else MaterialTheme.colorScheme.primary,
+                                            contentColor = if (isSubscribed) MaterialTheme.colorScheme.onSurface else MaterialTheme.colorScheme.onPrimary
+                                        ),
+                                        shape = RoundedCornerShape(50),
+                                        contentPadding = androidx.compose.foundation.layout.PaddingValues(horizontal = 20.dp, vertical = 0.dp)
+                                    ) {
+                                        Text(stringResource(if (isSubscribed) R.string.subscribed else R.string.subscribe))
+                                    }
+
+                                    Spacer(modifier = Modifier.weight(1f))
+
+                                    // Radio Button
                                     artistPage.artist.radioEndpoint?.let { radioEndpoint ->
-                                        OutlinedButton(
-                                            onClick = {
-                                                playerConnection.playQueue(YouTubeQueue(radioEndpoint))
-                                            },
-                                            shape = RoundedCornerShape(50),
-                                            modifier = Modifier.height(40.dp)
+                                        androidx.compose.material3.FilledTonalIconToggleButton(
+                                            checked = false,
+                                            onCheckedChange = { playerConnection.playQueue(YouTubeQueue(radioEndpoint)) },
+                                            modifier = Modifier.size(48.dp)
                                         ) {
-                                            Icon(
-                                                painter = painterResource(R.drawable.radio),
-                                                contentDescription = null,
-                                                modifier = Modifier.size(20.dp)
-                                            )
-                                            Spacer(modifier = Modifier.width(8.dp))
-                                            Text(
-                                                text = stringResource(R.string.radio),
-                                                fontSize = 14.sp
-                                            )
+                                            Icon(painterResource(R.drawable.radio), null)
                                         }
                                     }
 
+                                    // Shuffle Button
                                     artistPage.artist.shuffleEndpoint?.let { shuffleEndpoint ->
-                                        IconButton(
-                                            onClick = {
-                                                playerConnection.playQueue(YouTubeQueue(shuffleEndpoint))
-                                            },
-                                            modifier = Modifier
-                                                .size(48.dp)
-                                                .background(
-                                                    MaterialTheme.colorScheme.primary,
-                                                    RoundedCornerShape(24.dp)
-                                                )
-                                        ) {
-                                            Icon(
-                                                painter = painterResource(R.drawable.shuffle),
-                                                contentDescription = "Shuffle",
-                                                tint = MaterialTheme.colorScheme.onPrimary,
-                                                modifier = Modifier.size(20.dp)
+                                        androidx.compose.material3.FilledIconButton(
+                                            onClick = { playerConnection.playQueue(YouTubeQueue(shuffleEndpoint)) },
+                                            modifier = Modifier.size(48.dp),
+                                            colors = androidx.compose.material3.IconButtonDefaults.filledIconButtonColors(
+                                                containerColor = MaterialTheme.colorScheme.primaryContainer,
+                                                contentColor = MaterialTheme.colorScheme.onPrimaryContainer
                                             )
+                                        ) {
+                                            Icon(painterResource(R.drawable.shuffle), null)
                                         }
                                     }
                                 }
                             }
                         }
-                        Spacer(modifier = Modifier.height(16.dp))
+                        Spacer(modifier = Modifier.height(24.dp))
+                    } else {
+                        // --- CLASSIC DESIGN HEADER ---
+                        Column {
+                            if (thumbnail != null) {
+                                Box(
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .aspectRatio(1.2f / 1),
+                                ) {
+                                    AsyncImage(
+                                        model = thumbnail.resize(1200, 1000),
+                                        contentDescription = null,
+                                        modifier = Modifier
+                                            .fillMaxWidth()
+                                            .align(Alignment.TopCenter)
+                                            .fadingEdge(
+                                                bottom = 200.dp,
+                                            ),
+                                    )
+                                }
+                            }
+
+                            Column(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(top = 8.dp, start = 16.dp, end = 16.dp, bottom = 0.dp)
+                            ) {
+                                Text(
+                                    text = artistName,
+                                    style = MaterialTheme.typography.headlineLarge,
+                                    fontWeight = FontWeight.Bold,
+                                    maxLines = 1,
+                                    overflow = TextOverflow.Ellipsis,
+                                    fontSize = 32.sp,
+                                    modifier = Modifier.padding(bottom = 16.dp)
+                                )
+
+                                Row(
+                                    modifier = Modifier.fillMaxWidth(),
+                                    verticalAlignment = Alignment.CenterVertically
+                                ) {
+                                    OutlinedButton(
+                                        onClick = {
+                                            database.transaction {
+                                                val artist = libraryArtist?.artist
+                                                if (artist != null) {
+                                                    update(artist.toggleLike())
+                                                } else {
+                                                    artistPage.artist.let {
+                                                        insert(
+                                                            ArtistEntity(
+                                                                id = it.id,
+                                                                name = it.title,
+                                                                thumbnailUrl = it.thumbnail,
+                                                            ).toggleLike()
+                                                        )
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        colors = ButtonDefaults.outlinedButtonColors(
+                                            containerColor = if (libraryArtist?.artist?.bookmarkedAt != null)
+                                                MaterialTheme.colorScheme.surface
+                                            else
+                                                Color.Transparent
+                                        ),
+                                        shape = RoundedCornerShape(50),
+                                        modifier = Modifier.height(40.dp)
+                                    ) {
+                                        val isSubscribed = libraryArtist?.artist?.bookmarkedAt != null
+                                        Text(
+                                            text = stringResource(if (isSubscribed) R.string.subscribed else R.string.subscribe),
+                                            fontSize = 14.sp,
+                                            color = if (!isSubscribed) MaterialTheme.colorScheme.error else LocalContentColor.current
+                                        )
+                                    }
+
+                                    Spacer(modifier = Modifier.weight(1f))
+
+                                    Row(
+                                        horizontalArrangement = Arrangement.spacedBy(16.dp),
+                                        verticalAlignment = Alignment.CenterVertically
+                                    ) {
+                                        artistPage.artist.radioEndpoint?.let { radioEndpoint ->
+                                            OutlinedButton(
+                                                onClick = {
+                                                    playerConnection.playQueue(YouTubeQueue(radioEndpoint))
+                                                },
+                                                shape = RoundedCornerShape(50),
+                                                modifier = Modifier.height(40.dp)
+                                            ) {
+                                                Icon(
+                                                    painter = painterResource(R.drawable.radio),
+                                                    contentDescription = null,
+                                                    modifier = Modifier.size(20.dp)
+                                                )
+                                                Spacer(modifier = Modifier.width(8.dp))
+                                                Text(
+                                                    text = stringResource(R.string.radio),
+                                                    fontSize = 14.sp
+                                                )
+                                            }
+                                        }
+
+                                        artistPage.artist.shuffleEndpoint?.let { shuffleEndpoint ->
+                                            IconButton(
+                                                onClick = {
+                                                    playerConnection.playQueue(YouTubeQueue(shuffleEndpoint))
+                                                },
+                                                modifier = Modifier
+                                                    .size(48.dp)
+                                                    .background(
+                                                        MaterialTheme.colorScheme.primary,
+                                                        RoundedCornerShape(24.dp)
+                                                    )
+                                            ) {
+                                                Icon(
+                                                    painter = painterResource(R.drawable.shuffle),
+                                                    contentDescription = "Shuffle",
+                                                    tint = MaterialTheme.colorScheme.onPrimary,
+                                                    modifier = Modifier.size(20.dp)
+                                                )
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            Spacer(modifier = Modifier.height(16.dp))
+                        }
                     }
                 }
 
