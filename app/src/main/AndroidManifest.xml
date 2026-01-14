@@ -37,18 +37,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.InnerTune"
         android:enableOnBackInvokedCallback="true"
-        tools:targetApi="tiramisu">
+        tools:targetApi="tiramisu"
+        tools:replace="android:allowBackup">
 
-        <!-- Configuración de servicios de anuncios -->
         <property
             android:name="android.adservices.AD_SERVICES_CONFIG"
             android:resource="@xml/gma_ad_services_config"
             tools:replace="android:resource" />
 
-        <!-- Configuración de metadatos -->
         <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-9451235108408321~9379363896" />
+            android:name="com.huawei.hms.client.appid"
+            android:value="appid=114184037" />
         <!-- Widget de música -->
         <receiver
             android:name=".ClassicMusicWidgetProvider"
@@ -112,6 +111,7 @@
 
                 <data android:scheme="https" />
                 <data android:host="jossmusic.com" />
+                <data android:host="jossred.josprox.com" />
             </intent-filter>
 
             <!-- Intent Filter para manejar otros enlaces de YouTube o cualquier otro deep link adicional -->

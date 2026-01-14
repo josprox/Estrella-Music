@@ -1,5 +1,6 @@
 [versions]
 # --- SE AÑADIÓ EL BOM ---
+agcp = "1.9.4.300"
 compose-bom = "2025.10.01"
 
 androidGradlePlugin = "8.13.2"
@@ -32,6 +33,7 @@ media3Ui = "1.8.0"
 
 [libraries]
 # --- LIBRERÍA DEL BOM AÑADIDA ---
+agcp = { module = "com.huawei.agconnect:agcp", version.ref = "agcp" }
 compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "compose-bom" }
 
 # --- VERSIONES ELIMINADAS DE LAS LIBRERÍAS DE COMPOSE ---
@@ -61,7 +63,7 @@ guava = { group = "com.google.guava", name = "guava", version = "33.5.0-android"
 coroutines-guava = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-guava", version = "1.10.2" }
 concurrent-futures = { group = "androidx.concurrent", name = "concurrent-futures-ktx", version = "1.3.0" }
 gradle = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
-activity = { group = "androidx.activity", name = "activity-compose", version = "1.11.0" }
+activity = { group = "androidx.activity", name = "activity-compose", version = "1.9.3" }
 navigation = { group = "androidx.navigation", name = "navigation-compose", version = "2.9.5" }
 hilt-navigation = { group = "androidx.hilt", name = "hilt-navigation-compose", version = "1.3.0" }
 datastore = { group = "androidx.datastore", name = "datastore-preferences", version = "1.1.7" }

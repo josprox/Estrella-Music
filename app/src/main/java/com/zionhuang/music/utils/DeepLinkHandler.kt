@@ -40,7 +40,7 @@ class DeepLinkHandler(
      */
     private fun handleUri(uri: Uri, onSharedSong: ((SongItem) -> Unit)? = null) {
         when (uri.host) {
-            "jossmusic.com" -> handleJossMusicLink(uri, onSharedSong)
+            "jossmusic.com", "jossred.josprox.com" -> handleJossMusicLink(uri, onSharedSong)
             "youtu.be", "youtube.com", "www.youtube.com", "music.youtube.com" -> {
                 // La lógica original para enlaces de YouTube
                 handleYouTubeLink(uri, onSharedSong)
@@ -79,7 +79,7 @@ class DeepLinkHandler(
                 // Es una playlist. El ID es directo.
                 navController.navigate("online_playlist/$id")
             }
-            "channel" -> {
+            "channel", "artist" -> {
                 // Es un canal/artista. El ID del canal es el ID del artista.
                 navController.navigate("artist/$id")
             }

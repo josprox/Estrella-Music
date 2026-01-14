@@ -75,6 +75,7 @@ import com.zionhuang.music.db.entities.PlaylistSongMap
 import com.zionhuang.music.extensions.togglePlayPause
 import com.zionhuang.music.models.toMediaMetadata
 import com.zionhuang.music.playback.queues.YouTubeQueue
+import com.zionhuang.music.ui.component.PetalAdsBanner
 import com.zionhuang.music.ui.component.IconButton
 import com.zionhuang.music.ui.component.LocalMenuState
 import com.zionhuang.music.ui.component.YouTubeListItem
@@ -238,6 +239,11 @@ fun OnlinePlaylistScreen(
                                     }
                                 )
                             }
+                            item {
+                                PetalAdsBanner(
+                                    modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp)
+                                )
+                            }
                             items(items = filteredSongs, key = { (index, _) -> index }) { (index, song) ->
                                 val onCheckedChange: (Boolean) -> Unit = { if (it) selection.add(index) else selection.remove(index) }
                                 YouTubeListItem(
@@ -317,6 +323,11 @@ fun OnlinePlaylistScreen(
                                         }
                                     }
                                 )
+                            }
+                        }
+                        if (!isSearching) {
+                            item(key = "ad_banner") {
+                                PetalAdsBanner(modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp))
                             }
                         }
                         items(items = filteredSongs, key = { (index, _) -> index }) { (index, song) ->

@@ -54,6 +54,7 @@ import com.zionhuang.music.constants.GridCellSizeKey
 import com.zionhuang.music.constants.GridThumbnailHeight
 import com.zionhuang.music.constants.LibraryViewType
 import com.zionhuang.music.constants.SmallGridThumbnailHeight
+import com.zionhuang.music.ui.component.PetalAdsBanner
 import com.zionhuang.music.ui.component.ArtistGridItem
 import com.zionhuang.music.ui.component.ArtistListItem
 import com.zionhuang.music.ui.component.ChipsRow
@@ -170,6 +171,10 @@ fun LibraryArtistsScreen(
                     state = lazyListState,
                     contentPadding = LocalPlayerAwareWindowInsets.current.asPaddingValues()
                 ) {
+                    item(key = "ad_banner") {
+                        PetalAdsBanner(modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp))
+                    }
+
                     item(
                         key = "filter",
                         contentType = CONTENT_TYPE_HEADER
@@ -242,6 +247,13 @@ fun LibraryArtistsScreen(
                     ),
                     contentPadding = LocalPlayerAwareWindowInsets.current.asPaddingValues()
                 ) {
+                    item(
+                        key = "ad_banner",
+                        span = { GridItemSpan(maxLineSpan) }
+                    ) {
+                        PetalAdsBanner(modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp))
+                    }
+
                     item(
                         key = "filter",
                         span = { GridItemSpan(maxLineSpan) },

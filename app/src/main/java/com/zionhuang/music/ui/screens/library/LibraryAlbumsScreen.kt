@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.asPaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.grid.GridCells
@@ -50,6 +51,7 @@ import com.zionhuang.music.constants.CONTENT_TYPE_HEADER
 import com.zionhuang.music.constants.GridThumbnailHeight
 import com.zionhuang.music.constants.LibraryViewType
 import com.zionhuang.music.constants.LibraryViewTypeKey
+import com.zionhuang.music.ui.component.PetalAdsBanner
 import com.zionhuang.music.ui.component.ChipsRow
 import com.zionhuang.music.ui.component.EmptyPlaceholder
 import com.zionhuang.music.ui.component.LibraryAlbumGridItem
@@ -182,6 +184,10 @@ fun LibraryAlbumsScreen(
                     state = lazyListState,
                     contentPadding = LocalPlayerAwareWindowInsets.current.asPaddingValues()
                 ) {
+                    item(key = "ad_banner") {
+                        PetalAdsBanner(modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp))
+                    }
+
                     item(
                         key = "filter",
                         contentType = CONTENT_TYPE_HEADER
@@ -229,6 +235,13 @@ fun LibraryAlbumsScreen(
                     columns = GridCells.Adaptive(minSize = GridThumbnailHeight + 24.dp),
                     contentPadding = LocalPlayerAwareWindowInsets.current.asPaddingValues()
                 ) {
+                    item(
+                        key = "ad_banner",
+                        span = { GridItemSpan(maxLineSpan) }
+                    ) {
+                        PetalAdsBanner(modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp))
+                    }
+
                     item(
                         key = "filter",
                         span = { GridItemSpan(maxLineSpan) },

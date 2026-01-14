@@ -251,7 +251,7 @@ private fun RichPresence(
                 onClick = {
                     val intent = Intent(
                         Intent.ACTION_VIEW,
-                        "https://music.youtube.com/watch?v=${song?.id}".toUri()
+                        "https://jossred.josprox.com/sound/${song?.id}".toUri()
                     )
                     context.startActivity(intent)
                 },
@@ -260,7 +260,7 @@ private fun RichPresence(
 
             OutlinedButton(
                 onClick = {
-                    val url = homepageUrl.ifBlank { "https://jossmusic.com" }
+                    val url = homepageUrl.ifBlank { "https://jossred.josprox.com" }
                     context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
                 },
                 modifier = Modifier.fillMaxWidth()

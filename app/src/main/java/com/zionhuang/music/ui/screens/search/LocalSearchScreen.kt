@@ -44,6 +44,7 @@ import com.zionhuang.music.db.entities.Song
 import com.zionhuang.music.extensions.toMediaItem
 import com.zionhuang.music.extensions.togglePlayPause
 import com.zionhuang.music.playback.queues.ListQueue
+import com.zionhuang.music.ui.component.PetalAdsBanner
 import com.zionhuang.music.ui.component.AlbumListItem
 import com.zionhuang.music.ui.component.ArtistListItem
 import com.zionhuang.music.ui.component.ChipsRow
@@ -108,6 +109,10 @@ fun LocalSearchScreen(
                 .asPaddingValues(),
             modifier = Modifier.weight(1f)
         ) {
+            item {
+                PetalAdsBanner(modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp))
+            }
+
             result.map.forEach { (filter, items) ->
                 if (result.filter == LocalFilter.ALL) {
                     item(

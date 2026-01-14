@@ -144,6 +144,10 @@ interface DatabaseDao {
     fun artistSongsPreview(artistId: String, previewSize: Int = 3): Flow<List<Song>>
 
     @Transaction
+    @Query("SELECT * FROM album WHERE id IN (SELECT albumId FROM album_artist_map WHERE artistId = :artistId) ORDER BY year DESC")
+    fun artistAlbums(artistId: String): Flow<List<Album>>
+
+    @Transaction
     @Query(
         """
         SELECT song.*

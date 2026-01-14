@@ -28,6 +28,15 @@ object SecureKeys {
     }
 
     // ---- Getters públicos ----
+    val adMobBannerId: String
+        get() = get("ADMOB_BANNER_ID")
+
+    val petalBannerId: String
+        get() = if (BuildConfig.DEBUG) {
+            "testw6vs28auh3" // Test ID para Debug
+        } else {
+            get("PETALBANNER") // ID real para Release
+        }
     val oneSignalAppId: String
         get() = get("ONESIGNAL_APP_ID")
 

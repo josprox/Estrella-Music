@@ -84,6 +84,7 @@ import com.zionhuang.music.models.toMediaMetadata
 import com.zionhuang.music.playback.queues.LocalAlbumRadio
 import com.zionhuang.music.playback.queues.YouTubeAlbumRadio
 import com.zionhuang.music.playback.queues.YouTubeQueue
+import com.zionhuang.music.ui.component.PetalAdsBanner
 import com.zionhuang.music.ui.component.AlbumGridItem
 import com.zionhuang.music.ui.component.ArtistGridItem
 import com.zionhuang.music.ui.component.ChipsRow
@@ -385,6 +386,10 @@ fun HomeScreen(
             contentPadding = LocalPlayerAwareWindowInsets.current.asPaddingValues(),
             verticalArrangement = Arrangement.spacedBy(if (modernDesign) 8.dp else 12.dp)
         ) {
+
+            item(key = "ad_banner") {
+                PetalAdsBanner(modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp))
+            }
             
             // --- BANNER WRAPPED (MODERN ONLY) ---
             if ( modernDesign && isWrappedAvailable()) {

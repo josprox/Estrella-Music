@@ -6,6 +6,7 @@ pluginManagement {
         mavenCentral() // Repositorio Maven Central
         gradlePluginPortal() // Repositorio oficial de plugins de Gradle
         maven { setUrl("https://jitpack.io") }
+        maven { setUrl("https://developer.huawei.com/repo/") }
     }
 }
 
@@ -15,6 +16,7 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         maven("https://jitpack.io")
+        maven { setUrl("https://developer.huawei.com/repo/") }
     }
 }
 

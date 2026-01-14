@@ -1,3 +1,5 @@
+@file:Suppress("UnstableApiUsage")
+
 plugins {
     alias(libs.plugins.hilt) apply false
     alias(libs.plugins.kotlin.ksp) apply false
@@ -6,19 +8,15 @@ plugins {
 }
 
 buildscript {
+    // Variable para identificar si es un build con servicios (full) o sin ellos (foss)
     val isFullBuild by extra {
         gradle.startParameter.taskNames.none { task -> task.contains("foss", ignoreCase = true) }
-    }
-
-    repositories {
-        google()
-        mavenCentral()
-        maven { setUrl("https://jitpack.io") }
     }
 
     dependencies {
         classpath(libs.gradle)
         classpath(kotlin("gradle-plugin", libs.versions.kotlin.get()))
+        classpath(libs.agcp)
         if (isFullBuild) {
             classpath(libs.google.services)
             classpath(libs.firebase.crashlytics.plugin)

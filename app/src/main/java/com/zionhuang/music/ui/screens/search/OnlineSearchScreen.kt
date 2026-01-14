@@ -45,6 +45,7 @@ import com.zionhuang.music.constants.SuggestionItemHeight
 import com.zionhuang.music.extensions.togglePlayPause
 import com.zionhuang.music.models.toMediaMetadata
 import com.zionhuang.music.playback.queues.YouTubeQueue
+import com.zionhuang.music.ui.component.PetalAdsBanner
 import com.zionhuang.music.ui.component.LocalMenuState
 import com.zionhuang.music.ui.component.SearchBarIconOffsetX
 import com.zionhuang.music.ui.component.YouTubeListItem
@@ -96,6 +97,10 @@ fun OnlineSearchScreen(
             .only(WindowInsetsSides.Bottom)
             .asPaddingValues()
     ) {
+        item {
+            PetalAdsBanner(modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp))
+        }
+
         items(
             items = viewState.history,
             key = { it.query }
@@ -219,19 +224,19 @@ fun OnlineSearchScreen(
                             }
 
                             is AlbumItem -> {
-                                navController.navigate("album/${item.id}")
-                                onDismiss()
-                            }
+                                    navController.navigate("album/${item.id}")
+                                    onDismiss()
+                                }
 
                             is ArtistItem -> {
-                                navController.navigate("artist/${item.id}")
-                                onDismiss()
-                            }
+                                    navController.navigate("artist/${item.id}")
+                                    onDismiss()
+                                }
 
                             is PlaylistItem -> {
-                                navController.navigate("online_playlist/${item.id}")
-                                onDismiss()
-                            }
+                                    navController.navigate("online_playlist/${item.id}")
+                                    onDismiss()
+                                }
                         }
                     }
                     .animateItem()

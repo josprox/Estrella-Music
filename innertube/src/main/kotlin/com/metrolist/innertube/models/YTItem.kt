@@ -35,7 +35,7 @@ data class SongItem(
     val historyRemoveToken: String? = null
 ) : YTItem() {
     override val shareLink: String
-        get() = "https://music.youtube.com/watch?v=$id"
+        get() = "https://jossred.josprox.com/sound/$id"
 }
 
 data class AlbumItem(
@@ -49,7 +49,7 @@ data class AlbumItem(
     override val explicit: Boolean = false,
 ) : YTItem() {
     override val shareLink: String
-        get() = "https://music.youtube.com/playlist?list=$playlistId"
+        get() = "https://jossred.josprox.com/album/$id"
 }
 
 data class PlaylistItem(
@@ -66,7 +66,7 @@ data class PlaylistItem(
     override val explicit: Boolean
         get() = false
     override val shareLink: String
-        get() = "https://music.youtube.com/playlist?list=$id"
+        get() = "https://jossred.josprox.com/playlist/$id"
 }
 
 data class ArtistItem(
@@ -81,7 +81,7 @@ data class ArtistItem(
     override val explicit: Boolean
         get() = false
     override val shareLink: String
-        get() = "https://music.youtube.com/channel/$id"
+        get() = "https://jossred.josprox.com/artist/$id"
 }
 
 fun <T : YTItem> List<T>.filterExplicit(enabled: Boolean = true) =

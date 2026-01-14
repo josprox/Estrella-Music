@@ -73,6 +73,7 @@ import com.zionhuang.music.db.entities.ArtistEntity
 import com.zionhuang.music.extensions.togglePlayPause
 import com.zionhuang.music.playback.ExoDownloadService
 import com.zionhuang.music.playback.queues.LocalAlbumRadio
+import com.zionhuang.music.ui.component.PetalAdsBanner
 import com.zionhuang.music.ui.component.IconButton
 import com.zionhuang.music.ui.component.LocalMenuState
 import com.zionhuang.music.ui.component.NavigationTitle
@@ -235,6 +236,11 @@ fun AlbumScreen(
                                     }
                                 )
                             }
+                            item {
+                                PetalAdsBanner(
+                                    modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp)
+                                )
+                            }
                             itemsIndexed(items = albumData.songs, key = { _, song -> song.id }) { index, song ->
                                 val onCheckedChange: (Boolean) -> Unit = { if (it) selection.add(index) else selection.remove(index) }
                                 SongListItem(
@@ -338,6 +344,9 @@ fun AlbumScreen(
                                     }
                                 }
                             )
+                        }
+                        item(key = "ad_banner") {
+                            PetalAdsBanner(modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp))
                         }
                         itemsIndexed(items = albumData.songs, key = { _, song -> song.id }) { index, song ->
                             val onCheckedChange: (Boolean) -> Unit = { if (it) selection.add(index) else selection.remove(index) }

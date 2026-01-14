@@ -100,3 +100,4 @@ env.vault
 /app/src/main/res/main.exe
 /app/src/main/res/translation_log.xlsx
 /app/src/main/res/translation_history.json
+agconnect-services.json

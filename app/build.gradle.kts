@@ -26,9 +26,9 @@ android {
     defaultConfig {
         applicationId = "com.josprox.jossmusic"
         minSdk = 26
-        targetSdk = 36
-        versionCode = 57
-        versionName = "2.2.5"
+        targetSdk = 35
+        versionCode = 58
+        versionName = "2.2.6"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -46,7 +46,7 @@ android {
         }
 
         debug {
-            applicationIdSuffix = ".debug"
+            // applicationIdSuffix = ".debug" // Temporarily removed for Huawei Ads testing
             buildConfigField("String", "DOTENV_KEY", System.getenv("DOTENV_KEY") ?: "\"\"")
         }
     }
@@ -190,10 +190,10 @@ dependencies {
     implementation(libs.billing.ktx)
     implementation(libs.lifecycle.process)
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.7") // Trying 2.8.7 stable first as 2.9.4 might be unstable or not fully available
-    // But since user has 2.9.4 for process, let's try to match it if previous failed? 
+    // But since user has 2.9.4 for process, let's try to match it if previous failed?
     // Actually, let's stick to a known stable version for these specific libraries if implicit resolution failed.
-    // 2.8.7 IS stable. 
-    // Wait, the previous error was Unresolved Reference. 
+    // 2.8.7 IS stable.
+    // Wait, the previous error was Unresolved Reference.
     // Maybe I should add lifecycle-common-java8 or just lifecycle-common?
     implementation("androidx.lifecycle:lifecycle-common-java8:2.8.7")
     implementation("androidx.savedstate:savedstate-ktx:1.2.1")
@@ -202,6 +202,13 @@ dependencies {
 
     implementation("androidx.work:work-runtime-ktx:2.10.5") // Esta versión parece bien
     implementation("androidx.hilt:hilt-work:1.3.0") // Esta versión parece bien
+    // --- PETAL ADS (HUAWEI) ---
+    // Versión "Fat" para que funcione en todos los Android sin importar la marca
+    implementation("com.huawei.hms:ads-prime:3.4.82.300")
+    // Librería vital para el cifrado en dispositivos No-Huawei
+    implementation("org.bouncycastle:bcprov-jdk15on:1.70")
+    // Librería de consentimiento obligatoria para evitar el error 499
+    implementation("com.huawei.hms:ads-consent:3.4.72.300")
 
     // --- DEPENDENCIAS PARA LA VERSIÓN "full" ---
     "fullImplementation"(libs.firebase.analytics)

@@ -56,6 +56,7 @@ import com.zionhuang.music.constants.SongSortTypeKey
 import com.zionhuang.music.extensions.toMediaItem
 import com.zionhuang.music.extensions.togglePlayPause
 import com.zionhuang.music.playback.queues.ListQueue
+import com.zionhuang.music.ui.component.PetalAdsBanner
 import com.zionhuang.music.ui.component.ChipsRow
 import com.zionhuang.music.ui.component.EmptyPlaceholder
 import com.zionhuang.music.ui.component.HideOnScrollFAB
@@ -133,6 +134,10 @@ fun LibrarySongsScreen(
             state = lazyListState,
             contentPadding = LocalPlayerAwareWindowInsets.current.asPaddingValues()
         ) {
+            item {
+                    PetalAdsBanner(modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp))
+                }
+
             item(
                 key = "filter",
                 contentType = CONTENT_TYPE_HEADER

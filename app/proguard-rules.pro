@@ -109,3 +109,7 @@
 
 # This is generated automatically by the Android Gradle plugin.
 -dontwarn okhttp3.internal.Util
+
+# Huawei Petal Ads
+-keep class com.huawei.openalliance.ad.** { *; }
+-keep class com.huawei.hms.ads.** { *; }

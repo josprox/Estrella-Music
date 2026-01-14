@@ -136,6 +136,9 @@ class MainActivity : ComponentActivity() {
         } else {
             Timber.w("OneSignal App Id vacío; se omite inicialización.")
         }
+
+
+
         UpdateChecker(this).checkForUpdates()
 
         lifecycleScope.launch {

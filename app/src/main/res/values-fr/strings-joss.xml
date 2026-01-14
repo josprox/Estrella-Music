@@ -122,7 +122,7 @@
   <string name="error_no_session">Vous n\'êtes pas connecté.</string>
   <string name="hello">Bonjour</string>
   <string name="onboarding_brand_subtitle">Votre musique, vos règles.</string>
-    <string name="onboarding_brand_subtitle_2" tools:ignore="ExtraTranslation">Soutenez notre application !</string>
+  <string name="onboarding_brand_subtitle_2" tools:ignore="ExtraTranslation">Soutenez notre application !</string>
   <string name="next">Suivant</string>
   <string name="getStarted">Commencer</string>
   <string name="restore_success">La restauration de la base de données terminée</string>
@@ -183,4 +183,5 @@
   <string name="tUThisMusicaWUS">Merci pour ce voyage musical avec nous !</string>
   <string name="yourWrapped">Votre emballé</string>
   <string name="yearMusic">Votre année en musique</string>
+  <string name="albums_in_library">Albums en bibliothèque</string>
 </resources>

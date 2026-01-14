@@ -104,6 +104,7 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.TileMode
 import androidx.compose.foundation.layout.BoxWithConstraints
 import com.zionhuang.music.viewmodels.ArtistViewModel
+import com.zionhuang.music.ui.component.PetalAdsBanner
 
 
 @OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class)
@@ -124,6 +125,7 @@ fun ArtistScreen(
     val artistPage = viewModel.artistPage
     val libraryArtist by viewModel.libraryArtist.collectAsState()
     val librarySongs by viewModel.librarySongs.collectAsState()
+    val libraryAlbums by viewModel.libraryAlbums.collectAsState()
     val modernDesign by rememberPreference(ModernDesignKey, defaultValue = true)
 
     val lazyListState = rememberLazyListState()
@@ -149,7 +151,7 @@ fun ArtistScreen(
                 )
                 .asPaddingValues(),
         ) {
-            if (artistPage == null) {
+            if (artistPage == null && libraryArtist == null) {
                 item(key = "shimmer") {
                     ShimmerHost {
                         Box(
@@ -225,8 +227,8 @@ fun ArtistScreen(
                 }
             } else {
                 item(key = "header") {
-                    val thumbnail = artistPage.artist.thumbnail
-                    val artistName = artistPage.artist.title
+                    val thumbnail = artistPage?.artist?.thumbnail ?: libraryArtist?.artist?.thumbnailUrl
+                    val artistName = artistPage?.artist?.title ?: libraryArtist?.artist?.name.orEmpty()
 
                     if (modernDesign) {
                         // --- MODERN DESIGN HEADER ---
@@ -291,7 +293,7 @@ fun ArtistScreen(
                                                 if (artist != null) {
                                                     update(artist.toggleLike())
                                                 } else {
-                                                    artistPage.artist.let {
+                                                    artistPage?.artist?.let {
                                                         insert(
                                                             ArtistEntity(
                                                                 id = it.id,
@@ -316,7 +318,9 @@ fun ArtistScreen(
                                     Spacer(modifier = Modifier.weight(1f))
 
                                     // Radio Button
-                                    artistPage.artist.radioEndpoint?.let { radioEndpoint ->
+                                    (artistPage?.artist?.radioEndpoint ?: libraryArtist?.artist?.id?.let {
+                                        WatchEndpoint(videoId = null, playlistId = "RD$it") // Fallback radio endpoint construction if possible or omit
+                                    })?.let { radioEndpoint ->
                                         androidx.compose.material3.FilledTonalIconToggleButton(
                                             checked = false,
                                             onCheckedChange = { playerConnection.playQueue(YouTubeQueue(radioEndpoint)) },
@@ -327,7 +331,9 @@ fun ArtistScreen(
                                     }
 
                                     // Shuffle Button
-                                    artistPage.artist.shuffleEndpoint?.let { shuffleEndpoint ->
+                                    (artistPage?.artist?.shuffleEndpoint ?: libraryArtist?.artist?.id?.let {
+                                        WatchEndpoint(videoId = null, playlistId = "RD$it", params = "wAEB") // Fallback shuffle
+                                    })?.let { shuffleEndpoint ->
                                         androidx.compose.material3.FilledIconButton(
                                             onClick = { playerConnection.playQueue(YouTubeQueue(shuffleEndpoint)) },
                                             modifier = Modifier.size(48.dp),
@@ -380,6 +386,10 @@ fun ArtistScreen(
                                     modifier = Modifier.padding(bottom = 16.dp)
                                 )
 
+                                    PetalAdsBanner(
+                                        modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp)
+                                    )
+
                                 Row(
                                     modifier = Modifier.fillMaxWidth(),
                                     verticalAlignment = Alignment.CenterVertically
@@ -391,7 +401,7 @@ fun ArtistScreen(
                                                 if (artist != null) {
                                                     update(artist.toggleLike())
                                                 } else {
-                                                    artistPage.artist.let {
+                                                    artistPage?.artist?.let {
                                                         insert(
                                                             ArtistEntity(
                                                                 id = it.id,
@@ -426,7 +436,9 @@ fun ArtistScreen(
                                         horizontalArrangement = Arrangement.spacedBy(16.dp),
                                         verticalAlignment = Alignment.CenterVertically
                                     ) {
-                                        artistPage.artist.radioEndpoint?.let { radioEndpoint ->
+                                        (artistPage?.artist?.radioEndpoint ?: libraryArtist?.artist?.id?.let {
+                                            WatchEndpoint(videoId = null, playlistId = "RD$it")
+                                        })?.let { radioEndpoint ->
                                             OutlinedButton(
                                                 onClick = {
                                                     playerConnection.playQueue(YouTubeQueue(radioEndpoint))
@@ -447,7 +459,9 @@ fun ArtistScreen(
                                             }
                                         }
 
-                                        artistPage.artist.shuffleEndpoint?.let { shuffleEndpoint ->
+                                        (artistPage?.artist?.shuffleEndpoint ?: libraryArtist?.artist?.id?.let {
+                                            WatchEndpoint(videoId = null, playlistId = "RD$it", params = "wAEB") // Fallback
+                                        })?.let { shuffleEndpoint ->
                                             IconButton(
                                                 onClick = {
                                                     playerConnection.playQueue(YouTubeQueue(shuffleEndpoint))
@@ -473,6 +487,10 @@ fun ArtistScreen(
                             Spacer(modifier = Modifier.height(16.dp))
                         }
                     }
+                }
+
+                item(key = "ad_banner") {
+                    PetalAdsBanner(modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp))
                 }
 
                 if (librarySongs.isNotEmpty()) {
@@ -545,7 +563,48 @@ fun ArtistScreen(
                     }
                 }
 
-                artistPage.sections.fastForEach { section ->
+                if (libraryAlbums.isNotEmpty()) {
+                    item {
+                        NavigationTitle(
+                            title = stringResource(R.string.albums_in_library),
+                        )
+                    }
+                    item {
+                        LazyRow {
+                            items(
+                                items = libraryAlbums,
+                                key = { it.id }
+                            ) { album ->
+                                YouTubeGridItem(
+                                    item = com.zionhuang.innertube.models.AlbumItem(
+                                        browseId = album.id,
+                                        playlistId = "",
+                                        title = album.title,
+                                        thumbnail = album.thumbnailUrl.orEmpty(),
+                                        year = album.album.year,
+                                        artists = album.artists.map { com.zionhuang.innertube.models.Artist(name = it.name, id = it.id) }
+                                    ),
+                                    isActive = mediaMetadata?.album?.id == album.id,
+                                    isPlaying = isPlaying,
+                                    coroutineScope = coroutineScope,
+                                    modifier = Modifier
+                                        .combinedClickable(
+                                            onClick = {
+                                                navController.navigate("album/${album.id}")
+                                            },
+                                            onLongClick = {
+                                                haptic.performHapticFeedback(HapticFeedbackType.LongPress)
+                                                // Simplified menu for offline album or implementing one
+                                            }
+                                        )
+                                        .animateItem()
+                                )
+                            }
+                        }
+                    }
+                }
+
+                artistPage?.sections?.fastForEach { section ->
                     item {
                         NavigationTitle(
                             title = section.title,
@@ -674,7 +733,7 @@ fun ArtistScreen(
     }
 
     TopAppBar(
-        title = { if (!transparentAppBar) Text(artistPage?.artist?.title.orEmpty()) },
+        title = { if (!transparentAppBar) Text(artistPage?.artist?.title ?: libraryArtist?.artist?.name.orEmpty()) },
         navigationIcon = {
             IconButton(
                 onClick = navController::navigateUp,

@@ -127,6 +127,7 @@ import com.zionhuang.music.extensions.togglePlayPause
 import com.zionhuang.music.models.toMediaMetadata
 import com.zionhuang.music.playback.ExoDownloadService
 import com.zionhuang.music.playback.queues.ListQueue
+import com.zionhuang.music.ui.component.PetalAdsBanner
 import com.zionhuang.music.ui.component.DefaultDialog
 import com.zionhuang.music.ui.component.EmptyPlaceholder
 import com.zionhuang.music.ui.component.IconButton
@@ -373,6 +374,9 @@ fun LocalPlaylistScreen(
                                     snackbarHostState = snackbarHostState
                                 )
                             }
+                            item(key = "ad_banner") {
+                                PetalAdsBanner(modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp))
+                            }
                             if (playlist!!.songCount > 0 && !isSearching) {
                                 stickyHeader {
                                     SortAndLockControls(
@@ -471,6 +475,9 @@ fun LocalPlaylistScreen(
                                 onShowRemoveDownloadDialog = { showRemoveDownloadDialog = true },
                                 snackbarHostState = snackbarHostState
                             )
+                        }
+                        item(key = "ad_banner") {
+                            PetalAdsBanner(modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp))
                         }
                         if (playlist!!.songCount > 0 && !isSearching) {
                             stickyHeader {
