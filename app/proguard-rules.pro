@@ -111,5 +111,17 @@
 -dontwarn okhttp3.internal.Util
 
 # Huawei Petal Ads
+# Huawei Petal Ads
 -keep class com.huawei.openalliance.ad.** { *; }
 -keep class com.huawei.hms.ads.** { *; }
+-keep interface com.huawei.hms.ads.** { *; }
+-keep interface com.huawei.openalliance.ad.** { *; }
+-keep class com.huawei.hms.ads.dynamic.** { *; }
+-keep class com.huawei.hms.ads.uiengine.** { *; }
+-keep class com.huawei.hms.ads.identifier.** { *; }
+-keep class com.huawei.hms.ads.installreferrer.** { *; }
+-keep class com.huawei.hms.ads.nonpersonalized.** { *; }
+
+# Fix for Firebase Performance / org.json conflict
+-keep class org.json.** { *; }
+-dontwarn org.json.**

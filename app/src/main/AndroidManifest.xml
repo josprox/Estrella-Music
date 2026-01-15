@@ -20,8 +20,12 @@
         <intent>
             <action android:name="android.media.action.DISPLAY_AUDIO_EFFECT_CONTROL_PANEL" />
         </intent>
-        <!-- Queries para detectar Instagram y WhatsApp para compartir en stories --><package android:name="com.instagram.android" />
+        <!-- Queries para detectar Instagram y WhatsApp para compartir en stories -->
+        <package android:name="com.instagram.android" />
         <package android:name="com.whatsapp" />
+        <!-- Huawei HMS Core & Ads -->
+        <package android:name="com.huawei.hwid" />
+        <package android:name="com.huawei.appmarket" />
     </queries>
 
     <application

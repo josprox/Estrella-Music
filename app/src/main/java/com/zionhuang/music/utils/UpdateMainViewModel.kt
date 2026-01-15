@@ -48,7 +48,7 @@ class UpdateMainViewModel(private val application: Application) : ViewModel() {
             latestVersionResult.onSuccess { fetchedVersionName ->
                 _latestVersionName.value = fetchedVersionName
                 if (currentVersion != null) {
-                    if (currentVersion.isNotEmpty() && fetchedVersionName > currentVersion.toString()) {
+                    if (currentVersion.isNotEmpty() && Updater.isNewVersionAvailable(currentVersion.toString(), fetchedVersionName)) {
                         _showUpdateBadge.value = true
                     }
                 }

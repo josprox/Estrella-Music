@@ -65,7 +65,7 @@ class UpdateChecker(private val context: Context) {
                             return
                         }
 
-                        if (versionInfo.Version > currentVersion.toString()) {
+                        if (Updater.isNewVersionAvailable(currentVersion.toString(), versionInfo.Version)) {
                             showUpdateNotification(versionInfo)
                         }
                     }

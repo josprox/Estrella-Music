@@ -1,5 +1,8 @@
 @file:Suppress("UnstableApiUsage")
 
+import java.util.Properties
+import java.io.FileInputStream
+
 val isFullBuild: Boolean by rootProject.extra
 
 plugins {
@@ -27,9 +30,27 @@ android {
         applicationId = "com.josprox.jossmusic"
         minSdk = 26
         targetSdk = 35
-        versionCode = 58
-        versionName = "2.2.6"
+        versionCode = 59
+        versionName = "2.2.7"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        create("release") {
+            val keystorePropertiesFile = rootProject.file("keystore.properties")
+            if (keystorePropertiesFile.exists()) {
+                val keystoreProperties = Properties()
+                keystoreProperties.load(FileInputStream(keystorePropertiesFile))
+
+                storeFile = file(keystoreProperties.getProperty("storeFile"))
+                storePassword = keystoreProperties.getProperty("storePassword")
+                keyAlias = keystoreProperties.getProperty("keyAlias")
+                keyPassword = keystoreProperties.getProperty("keyPassword")
+            } else {
+                 // Fallback to env vars or debug for CI/CD if needed
+                 println("keystore.properties not found, skipping signing config setup.")
+            }
+        }
     }
 
     buildTypes {
@@ -42,12 +63,13 @@ android {
                 "proguard-rules.pro"
             )
             buildConfigField("String", "DOTENV_KEY", System.getenv("DOTENV_KEY") ?: "\"\"")
-            signingConfig = signingConfigs.getByName("debug")
+            signingConfig = signingConfigs.getByName("release")
         }
 
         debug {
             // applicationIdSuffix = ".debug" // Temporarily removed for Huawei Ads testing
             buildConfigField("String", "DOTENV_KEY", System.getenv("DOTENV_KEY") ?: "\"\"")
+            signingConfig = signingConfigs.getByName("release")
         }
     }
 
@@ -71,16 +93,7 @@ android {
         }
     }
 
-    signingConfigs {
-        getByName("debug") {
-            System.getenv("MUSIC_DEBUG_SIGNING_STORE_PASSWORD")?.let {
-                storeFile = file(System.getenv("MUSIC_DEBUG_KEYSTORE_FILE"))
-                storePassword = it
-                keyAlias = "debug"
-                keyPassword = System.getenv("MUSIC_DEBUG_SIGNING_KEY_PASSWORD")
-            }
-        }
-    }
+
 
     buildFeatures {
         buildConfig = true

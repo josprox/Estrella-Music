@@ -6,6 +6,7 @@ import io.ktor.client.request.get
 import io.ktor.client.statement.bodyAsText
 import org.dotenv.vault.dotenvVault
 import org.json.JSONObject
+
 object Updater {
     private val client = HttpClient()
     val dotenv = dotenvVault(BuildConfig.DOTENV_KEY) {
@@ -56,5 +57,25 @@ object Updater {
         val versionName = json.getString("Version")
         lastCheckTime = System.currentTimeMillis()
         versionName
+    }
+
+    fun isNewVersionAvailable(current: String, latest: String): Boolean {
+        return compareVersions(latest, current) > 0
+    }
+
+    fun compareVersions(v1: String, v2: String): Int {
+        val v1Parts = v1.removePrefix("v").removePrefix("V").split(".")
+        val v2Parts = v2.removePrefix("v").removePrefix("V").split(".")
+
+        val length = maxOf(v1Parts.size, v2Parts.size)
+
+        for (i in 0 until length) {
+            val part1 = if (i < v1Parts.size) v1Parts[i].toIntOrNull() ?: 0 else 0
+            val part2 = if (i < v2Parts.size) v2Parts[i].toIntOrNull() ?: 0 else 0
+
+            if (part1 > part2) return 1
+            if (part1 < part2) return -1
+        }
+        return 0
     }
 }
