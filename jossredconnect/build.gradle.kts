@@ -1,6 +1,6 @@
 plugins {
     id("com.android.library") // Declaramos el uso de esta librería como Android
-    id("org.jetbrains.kotlin.android")
+
 }
 
 android {

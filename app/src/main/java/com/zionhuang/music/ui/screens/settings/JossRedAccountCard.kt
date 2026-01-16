@@ -196,8 +196,15 @@ fun JossRedAccountCard(
                         }
                         Button(
                             onClick = {
-                                scope.launch {
+                                    scope.launch {
                                     loading = true
+                                    // Explicitly clear prefs
+                                    ctx.getSharedPreferences("jossred_prefs", android.content.Context.MODE_PRIVATE)
+                                        .edit()
+                                        .remove("jwt_token")
+                                        .remove("token_expiration")
+                                        .apply()
+
                                     withContext(Dispatchers.IO) { auth.logout() }
                                     user = null
                                     loading = false

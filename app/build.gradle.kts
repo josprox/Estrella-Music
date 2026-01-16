@@ -7,8 +7,8 @@ val isFullBuild: Boolean by rootProject.extra
 
 plugins {
     id("com.android.application")
-    kotlin("android")
-    kotlin("kapt")
+
+
     alias(libs.plugins.hilt)
     alias(libs.plugins.kotlin.ksp)
     alias(libs.plugins.compose.compiler)
@@ -29,7 +29,7 @@ android {
     defaultConfig {
         applicationId = "com.josprox.jossmusic"
         minSdk = 26
-        targetSdk = 35
+        targetSdk = 36
         versionCode = 59
         versionName = "2.2.7"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -84,12 +84,12 @@ android {
         create("arm64") {
             dimension = "abi"
             ndk { abiFilters.add("arm64-v8a") }
-            setProperty("archivesBaseName", "jossmusic-arm64")
+
         }
         create("universal") {
             dimension = "abi"
             ndk { abiFilters.addAll(listOf("armeabi-v7a", "arm64-v8a", "x86_64", "x86")) }
-            setProperty("archivesBaseName", "jossmusic-universal")
+
         }
     }
 
@@ -180,7 +180,7 @@ dependencies {
     implementation(libs.apache.lang3)
 
     implementation(libs.hilt)
-    kapt(libs.hilt.compiler)
+    ksp(libs.hilt.compiler)
 
     implementation(projects.innertube)
     implementation(projects.kugou)
@@ -202,28 +202,28 @@ dependencies {
     implementation(libs.androidx.palette.ktx)
     implementation(libs.billing.ktx)
     implementation(libs.lifecycle.process)
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.7") // Trying 2.8.7 stable first as 2.9.4 might be unstable or not fully available
+    implementation(libs.lifecycle.runtime.ktx)
     // But since user has 2.9.4 for process, let's try to match it if previous failed?
     // Actually, let's stick to a known stable version for these specific libraries if implicit resolution failed.
     // 2.8.7 IS stable.
     // Wait, the previous error was Unresolved Reference.
     // Maybe I should add lifecycle-common-java8 or just lifecycle-common?
-    implementation("androidx.lifecycle:lifecycle-common-java8:2.8.7")
-    implementation("androidx.savedstate:savedstate-ktx:1.2.1")
+    implementation(libs.lifecycle.common.java8)
+    implementation(libs.savedstate.ktx)
     implementation(libs.onesignal)
     implementation(libs.androidx.media3.exoplayer.v131)
-    implementation("androidx.media3:media3-exoplayer-hls:1.3.1")
-    implementation("androidx.media3:media3-exoplayer-dash:1.3.1")
+    implementation(libs.media3.exoplayer.hls)
+    implementation(libs.media3.exoplayer.dash)
 
-    implementation("androidx.work:work-runtime-ktx:2.10.5") // Esta versión parece bien
-    implementation("androidx.hilt:hilt-work:1.3.0") // Esta versión parece bien
+    implementation(libs.work.runtime.ktx)
+    implementation(libs.hilt.work)
     // --- PETAL ADS (HUAWEI) ---
     // Versión "Fat" para que funcione en todos los Android sin importar la marca
-    implementation("com.huawei.hms:ads-prime:3.4.82.300")
+    implementation(libs.ads.prime)
     // Librería vital para el cifrado en dispositivos No-Huawei
-    implementation("org.bouncycastle:bcprov-jdk15on:1.70")
+    implementation(libs.bouncycastle)
     // Librería de consentimiento obligatoria para evitar el error 499
-    implementation("com.huawei.hms:ads-consent:3.4.72.300")
+    implementation(libs.ads.consent)
 
     // --- DEPENDENCIAS PARA LA VERSIÓN "full" ---
     "fullImplementation"(libs.firebase.analytics)

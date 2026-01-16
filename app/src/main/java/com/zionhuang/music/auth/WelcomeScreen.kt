@@ -69,6 +69,9 @@ fun WelcomeRoute(
             url = dv.get("JOSSRED").orEmpty()       // debe incluir /api/
             token = dv.get("JOSSRED_API").orEmpty() // header X-JossRed-Auth
         } catch (_: Exception) { }
+
+
+
         url to token
     }
 
@@ -104,11 +107,17 @@ fun WelcomeRoute(
                     result.fold(onSuccess = { list ->
                         val candidates = list.files
                             .filter { it.app_name == "jossmusic_backup" }
-                            .sortedByDescending { it.updated_at ?: it.created_at ?: "" }
+                            .sortedByDescending { it.name } // Sort by name (contains timestamp)
                         val first = candidates.firstOrNull()
                         if (first != null) {
                             latestBackupName = first.name
-                            latestBackupDate = first.updated_at ?: first.created_at
+                            // Fallback: parse date from filename if server fields are null
+                            val rawDate = first.updated_at ?: first.created_at
+                            latestBackupDate = if (!rawDate.isNullOrBlank()) {
+                                rawDate
+                            } else {
+                                parseDateFromFilename(first.name)
+                            }
                             showRestoreDialog = true
                         } else {
                             onAuthSuccess()
@@ -797,6 +806,18 @@ private fun toTitleCaseWordsStreaming(
 }
 
 /* ---------- Helpers de error en vivo: DEVUELVEN Int? (IDs) ----------- */
+
+private fun parseDateFromFilename(filename: String): String? {
+    // Expected: jossmusic_yyyyMMdd_HHmmss.backup
+    val regex = Regex(".*_(\\d{8})_(\\d{6})\\.backup$")
+    val match = regex.find(filename) ?: return null
+    val (datePart, timePart) = match.destructured
+    if (datePart.length != 8 || timePart.length != 6) return null
+
+    // Format: YYYY-MM-DD HH:mm:ss
+    return "${datePart.substring(0, 4)}-${datePart.substring(4, 6)}-${datePart.substring(6, 8)} " +
+           "${timePart.substring(0, 2)}:${timePart.substring(2, 4)}:${timePart.substring(4, 6)}"
+}
 
 private fun errUsername(u: String): Int? =
     when {

@@ -103,12 +103,7 @@ fun JossRedSettings(
             e.printStackTrace()
         }
 
-        // Fallback/Correction to known correct domain
-        if (url.isBlank() || url.contains("jossred.josprox.com")) {
-            url = "https://jossredjs.josprox.com/"
-        }
-        // Ensure trailing slash
-        if (!url.endsWith("/")) url += "/"
+
         
         url to token
     }
@@ -290,10 +285,15 @@ fun BackupCloudCard(
             res.fold(onSuccess = { list ->
                 val candidates = list.files
                     .filter { it.app_name == "jossmusic_backup" }
-                    .sortedByDescending { it.updated_at ?: it.created_at ?: "" }
+                    .sortedByDescending { it.name } // Sort by name
                 val first = candidates.firstOrNull()
                 latestName = first?.name
-                latestDateText = first?.updated_at ?: first?.created_at
+                val rawDate = first?.updated_at ?: first?.created_at
+                latestDateText = if (!rawDate.isNullOrBlank()) {
+                    rawDate
+                } else {
+                    first?.name?.let { parseDateFromFilenameSDK(it) }
+                }
                 loading = false
                 hasLoaded = true
             }, onFailure = {
@@ -486,4 +486,16 @@ private fun Context.isTokenValidNow(): Boolean {
     val exp = prefs.getLong("token_expiration", -1L)
     val now = System.currentTimeMillis() / 1000L
     return !token.isNullOrBlank() && exp > now
+}
+
+private fun parseDateFromFilenameSDK(filename: String): String? {
+    // Expected: jossmusic_yyyyMMdd_HHmmss.backup
+    val regex = Regex(".*_(\\d{8})_(\\d{6})\\.backup$")
+    val match = regex.find(filename) ?: return null
+    val (datePart, timePart) = match.destructured
+    if (datePart.length != 8 || timePart.length != 6) return null
+
+    // Format: YYYY-MM-DD HH:mm:ss
+    return "${datePart.substring(0, 4)}-${datePart.substring(4, 6)}-${datePart.substring(6, 8)} " +
+           "${timePart.substring(0, 2)}:${timePart.substring(2, 4)}:${timePart.substring(4, 6)}"
 }
