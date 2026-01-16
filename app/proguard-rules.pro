@@ -115,6 +115,8 @@
 -keep class com.huawei.openalliance.ad.** { *; }
 -keep class com.huawei.hms.ads.** { *; }
 -keep interface com.huawei.hms.ads.** { *; }
+-keep class com.huawei.hms.ads.common.** { *; }
+-keep interface com.huawei.hms.ads.common.** { *; }
 -keep interface com.huawei.openalliance.ad.** { *; }
 -keep class com.huawei.hms.ads.dynamic.** { *; }
 -keep class com.huawei.hms.ads.uiengine.** { *; }

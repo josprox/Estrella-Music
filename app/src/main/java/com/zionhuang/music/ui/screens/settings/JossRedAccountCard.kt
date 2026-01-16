@@ -52,25 +52,19 @@ import timber.log.Timber
 @Composable
 fun JossRedAccountCard(
     modifier: Modifier = Modifier,
+    baseUrl: String,
+    apiToken: String,
     onLoginClick: (() -> Unit)? = null,
 ) {
     val ctx = LocalContext.current
     val scope = rememberCoroutineScope()
 
-    val (baseUrl, apiToken) = remember {
-        val dv = runCatching {
-            dotenvVault(BuildConfig.DOTENV_KEY) {
-                directory = "/assets"
-                filename = "env.vault"
-            }
-        }.getOrNull()
-        val url = runCatching { dv?.get("JOSSRED") }.getOrNull().orEmpty()
-        val token = runCatching { dv?.get("JOSSRED_API") }.getOrNull().orEmpty()
-        url to token
-    }
+    // Internal .env loading removed. Using passed parameters.
 
     val auth = remember(baseUrl, apiToken) {
-        AuthService(ctx.applicationContext, baseUrl, apiToken)
+        // Ensure baseUrl has trailing slash for AuthService if not present
+        val effectiveUrl = if (baseUrl.endsWith("/")) baseUrl else "$baseUrl/"
+        AuthService(ctx.applicationContext, effectiveUrl, apiToken)
     }
 
     var loading by remember { mutableStateOf(true) }

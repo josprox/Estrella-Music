@@ -102,6 +102,14 @@ fun JossRedSettings(
         } catch (e: Exception) {
             e.printStackTrace()
         }
+
+        // Fallback/Correction to known correct domain
+        if (url.isBlank() || url.contains("jossred.josprox.com")) {
+            url = "https://jossredjs.josprox.com/"
+        }
+        // Ensure trailing slash
+        if (!url.endsWith("/")) url += "/"
+        
         url to token
     }
 
@@ -148,6 +156,8 @@ fun JossRedSettings(
             item {
                 JossRedAccountCard(
                     modifier = Modifier.padding(16.dp),
+                    baseUrl = baseUrl,
+                    apiToken = apiToken,
                     onLoginClick = { navController.navigate("auth/welcome") }
                 )
             }

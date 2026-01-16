@@ -212,6 +212,8 @@ dependencies {
     implementation("androidx.savedstate:savedstate-ktx:1.2.1")
     implementation(libs.onesignal)
     implementation(libs.androidx.media3.exoplayer.v131)
+    implementation("androidx.media3:media3-exoplayer-hls:1.3.1")
+    implementation("androidx.media3:media3-exoplayer-dash:1.3.1")
 
     implementation("androidx.work:work-runtime-ktx:2.10.5") // Esta versión parece bien
     implementation("androidx.hilt:hilt-work:1.3.0") // Esta versión parece bien

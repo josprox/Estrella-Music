@@ -12,7 +12,9 @@ import okhttp3.RequestBody.Companion.toRequestBody
 import org.json.JSONObject
 import java.io.IOException
 import java.util.concurrent.TimeUnit
-import androidx.core.content.edit
+import android.util.Log
+
+
 
 /**
  * Traducción de AuthService Joss Red (Flutter/Dart) a Kotlin para Android (librería).
@@ -48,26 +50,27 @@ class AuthService(
             // guardamos expiración en segundos tipo UNIX (como en Dart)
             val expirationUnixSeconds =
                 (System.currentTimeMillis() / 1000L) + expiresInSeconds.toLong()
-            prefs.edit {
-                putString("jwt_token", token)
-                    .putString("refresh_token", refreshToken)
-                    .putLong("token_expiration", expirationUnixSeconds)
-            }
+            prefs.edit()
+                .putString("jwt_token", token)
+                .putString("refresh_token", refreshToken)
+                .putLong("token_expiration", expirationUnixSeconds)
+                .apply()
         }
 
     @SuppressLint("UseKtx")
     private suspend fun clearStorage() = withContext(Dispatchers.IO) {
-        prefs.edit {
-            remove("jwt_token")
-                .remove("refresh_token")
-                .remove("password")
-        }
+        prefs.edit()
+            .remove("jwt_token")
+            .remove("refresh_token")
+            .remove("remove") // Typo in original? No, "password" was unused?
+            .remove("password")
+            .apply()
     }
 
     private fun headers(): Map<String, String> = mapOf(
         "Content-Type" to "application/json",
         "Accept" to "application/json",
-        "X-JossRed-Auth" to apiToken
+        "Authorization" to "Bearer $apiToken"
     )
 
     private fun headersWithJWT(jwt: String?): Map<String, String> {
@@ -94,8 +97,12 @@ class AuthService(
             .url("${baseUrl}${urlPath}")
             .post(reqBody)
         headers.forEach { (k, v) -> reqBuilder.addHeader(k, v) }
+        val url = reqBuilder.build().url.toString()
+        Log.d("JOSS_DEBUG", "POST URL: $url")
         client.newCall(reqBuilder.build()).execute().use { resp ->
-            Pair(resp.code, resp.body?.string().orEmpty())
+            val body = resp.body?.string().orEmpty()
+            Log.d("JOSS_DEBUG", "Resp ($url): ${resp.code} / $body")
+            Pair(resp.code, body)
         }
     }
 
@@ -107,8 +114,12 @@ class AuthService(
             .url("${baseUrl}${urlPath}")
             .get()
         headers.forEach { (k, v) -> reqBuilder.addHeader(k, v) }
+        val url = reqBuilder.build().url.toString()
+        Log.d("JOSS_DEBUG", "GET URL: $url")
         client.newCall(reqBuilder.build()).execute().use { resp ->
-            Pair(resp.code, resp.body?.string().orEmpty())
+            val body = resp.body?.string().orEmpty()
+            Log.d("JOSS_DEBUG", "Resp ($url): ${resp.code} / $body")
+            Pair(resp.code, body)
         }
     }
 
@@ -117,10 +128,10 @@ class AuthService(
     suspend fun login(email: String, password: String): Map<String, Any?> {
         return try {
             val (code, bodyStr) = doPostJson(
-                urlPath = "jossred/v3/jossredauth",
+                urlPath = "api/login",
                 body = JSONObject().apply {
-                    put("correo", email.trim())
-                    put("contra", password.trim())
+                    put("email", email.trim())
+                    put("password", password.trim())
                 }
             )
 
@@ -142,11 +153,11 @@ class AuthService(
                         )
                     }
                 }
-                404 -> mapOf("success" to false, "message" to "EMAIL_NOT_FOUND")
+                404, 422 -> mapOf("success" to false, "message" to "EMAIL_NOT_FOUND") // Adjusting for typical 422 validation errs too? Keep simple
                 401 -> mapOf("success" to false, "message" to "INVALID_PASSWORD")
                 else -> mapOf("success" to false, "message" to "SERVER_ERROR ($code)")
-            }
-        } catch (e: Exception) {
+            }        } catch (e: Exception) {
+            Log.e("JOSS_DEBUG", "Login error", e)
             httpError(e)
         }
     }
@@ -165,10 +176,10 @@ class AuthService(
                 put("last_name", lastName.trim())
                 put("email", email.trim())
                 put("phone", "")
-                put("contra", password.trim())
+                put("password", password.trim())
             }
 
-            val (code, bodyStr) = doPostJson("jossred/v3/jossrednewuser", body)
+            val (code, bodyStr) = doPostJson("api/register", body)
             val data = bodyStr.safeJson()
 
             if (code == 201) {
@@ -195,8 +206,8 @@ class AuthService(
     suspend fun sendRecoveryEmail(email: String): Map<String, Any?> {
         return try {
             val (code, bodyStr) = doPostJson(
-                urlPath = "jossred/v3/recuperar-contra",
-                body = JSONObject().apply { put("correo", email.trim()) }
+                urlPath = "api/password/email",
+                body = JSONObject().apply { put("email", email.trim()) }
             )
             val data = bodyStr.safeJson()
             if (code == 200) {
@@ -219,14 +230,17 @@ class AuthService(
         }
         return try {
             val (code, bodyStr) = doGet(
-                urlPath = "jossred/v3/profile",
+                urlPath = "api/profile",
                 headers = headersWithJWT(token)
             )
 
             when (code) {
                 200 -> {
                     val data = bodyStr.safeJson()
-                    mapOf("success" to true, "user" to data.opt("user"))
+                    // La respuesta trae "user": { "Fields": { ... } }
+                    val userObj = data.optJSONObject("user")
+                    val fields = userObj?.optJSONObject("Fields") ?: userObj
+                    mapOf("success" to true, "user" to fields)
                 }
                 401 -> mapOf("success" to false, "message" to "Token inválido o expirado")
                 404 -> mapOf("success" to false, "message" to "Usuario no encontrado")
@@ -261,17 +275,19 @@ class AuthService(
         }
 
         return try {
-            val (code, bodyStr) = doPostJson(
-                urlPath = "jossred/v3/users/check",
-                body = JSONObject(), // POST vacío, igual que en Dart
+            val (code, bodyStr) = doGet(
+                urlPath = "api/profile",
                 headers = headersWithJWT(token)
             )
             val data = bodyStr.safeJson()
             if (code == 200) {
+                // La respuesta trae "user": { "Fields": { ... } }
+                val userObj = data.optJSONObject("user")
+                val fields = userObj?.optJSONObject("Fields") ?: userObj
                 mapOf(
                     "success" to true,
-                    "valid" to data.optBoolean("exists", false),
-                    "user" to data.opt("user")
+                    "valid" to true,
+                    "user" to fields
                 )
             } else {
                 mapOf(
@@ -292,7 +308,7 @@ class AuthService(
         return try {
             val (code, bodyStr) = withContext(Dispatchers.IO) {
                 val reqBuilder = Request.Builder()
-                    .url("${baseUrl}jossred/v3/refresh")
+                    .url("${baseUrl}api/refresh")
                     .post("{}".toRequestBody(jsonMedia))
 
                 val hdrs = headers().toMutableMap().apply {
@@ -333,7 +349,7 @@ class AuthService(
         return try {
             // No importa la respuesta, igual limpiamos storage
             val (code, _) = doPostJson(
-                urlPath = "jossred/v3/logout",
+                urlPath = "api/logout",
                 body = JSONObject(),
                 headers = headersWithJWT(token)
             )

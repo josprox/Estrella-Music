@@ -42,12 +42,17 @@ class BackupService(
 
     private fun baseHeaders(builder: Request.Builder, withJwt: Boolean = true) {
         builder.addHeader("Accept", "application/json")
-        builder.addHeader("X-JossRed-Auth", apiToken)
+        // builder.addHeader("X-JossRed-Auth", apiToken) // Removed to match Bruno
         if (withJwt) {
             val token = jwt()
             if (!token.isNullOrBlank()) builder.addHeader("Authorization", "Bearer $token")
         }
     }
+
+    private fun debugLog(msg: String) {
+        android.util.Log.d("JOSS_DEBUG", "[BackupService] $msg")
+    }
+
 
     private suspend fun parseJson(body: String): JSONObject = withContext(Dispatchers.Default) {
         try { if (body.isBlank()) JSONObject() else JSONObject(body) } catch (_: Exception) { JSONObject() }
@@ -82,8 +87,10 @@ class BackupService(
                 )
                 .build()
 
+            val uploadUrl = "${baseUrlNormalized}api/backup/$appName"
+            debugLog("uploadBackup -> $uploadUrl")
             val req = Request.Builder()
-                .url("${baseUrlNormalized}backup/$appName")
+                .url(uploadUrl)
                 .post(multipart)
                 .also { baseHeaders(it) }
                 .build()
@@ -118,7 +125,7 @@ class BackupService(
         try {
             val req = Request.Builder()
                 // ✅ Ruta correcta (sin "storage/")
-                .url("${baseUrlNormalized}listfiles")
+                .url("${baseUrlNormalized}api/listfiles")
                 .get()
                 .also { baseHeaders(it) }
                 .build()
@@ -139,8 +146,8 @@ class BackupService(
                                     file_name = o.optString("file_name"),
                                     file_id = o.optString("file_id"),
                                     name = o.optString("name"),
-                                    created_at = o.optString("created_at", null),
-                                    updated_at = o.optString("updated_at", null)
+                                    created_at = if (o.isNull("created_at")) null else o.optString("created_at"),
+                                    updated_at = if (o.isNull("updated_at")) null else o.optString("updated_at")
                                 )
                             )
                         }
@@ -169,7 +176,7 @@ class BackupService(
         try {
             val req = Request.Builder()
                 // ✅ Ruta correcta (sin "storage/")
-                .url("${baseUrlNormalized}backup/$appName/$fileName")
+                .url("${baseUrlNormalized}api/backup/$appName/$fileName")
                 .get()
                 .also { baseHeaders(it) }
                 .build()
