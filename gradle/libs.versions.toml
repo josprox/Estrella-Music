@@ -128,6 +128,7 @@ hilt-work = { group = "androidx.hilt", name = "hilt-work", version.ref = "hiltWo
 ads-prime = { group = "com.huawei.hms", name = "ads-prime", version.ref = "huaweiAdsPrime" }
 ads-consent = { group = "com.huawei.hms", name = "ads-consent", version.ref = "huaweiAdsConsent" }
 bouncycastle = { group = "org.bouncycastle", name = "bcprov-jdk15on", version.ref = "bouncycastle" }
+google-ads = { group = "com.google.android.gms", name = "play-services-ads", version = "23.6.0" }
 
 [plugins]
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }

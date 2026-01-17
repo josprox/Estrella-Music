@@ -123,7 +123,3 @@
 -keep class com.huawei.hms.ads.identifier.** { *; }
 -keep class com.huawei.hms.ads.installreferrer.** { *; }
 -keep class com.huawei.hms.ads.nonpersonalized.** { *; }
-
-# Fix for Firebase Performance / org.json conflict
--keep class org.json.** { *; }
--dontwarn org.json.**

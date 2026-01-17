@@ -225,6 +225,9 @@ dependencies {
     // Librería de consentimiento obligatoria para evitar el error 499
     implementation(libs.ads.consent)
 
+    // --- ADMOB (FALLBACK) ---
+    implementation(libs.google.ads)
+
     // --- DEPENDENCIAS PARA LA VERSIÓN "full" ---
     "fullImplementation"(libs.firebase.analytics)
     "fullImplementation"(libs.firebase.crashlytics)

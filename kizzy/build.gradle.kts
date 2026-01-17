@@ -14,7 +14,6 @@ dependencies {
     implementation(libs.ktor.client.content.negotiation)
     implementation(libs.ktor.serialization.json)
     implementation(libs.ktor.client.encoding)
-    implementation(libs.json)
 
     testImplementation(libs.junit)
 }

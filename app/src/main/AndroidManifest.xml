@@ -50,6 +50,9 @@
             tools:replace="android:resource" />
 
         <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-9451235108408321~9379363896" />
+        <meta-data
             android:name="com.huawei.hms.client.appid"
             android:value="appid=114184037" />
         <!-- Widget de música -->

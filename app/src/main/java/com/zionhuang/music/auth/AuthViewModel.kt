@@ -47,17 +47,10 @@ class AuthViewModel @Inject constructor(
         if (res.success) {
             _events.emit(AuthEvent.Success)
         } else {
-            val resId = when (res.message) {
-                "EMAIL_NOT_FOUND" -> R.string.error_email_not_found
-                "INVALID_PASSWORD" -> R.string.error_invalid_password
-                null, "" -> R.string.error_login
-                else -> null
-            }
-            if (resId != null) {
-                _events.emit(AuthEvent.ShowMessageRes(resId))
-            } else {
-                _events.emit(AuthEvent.ShowMessageText(res.message!!))
-            }
+            // New logic: pass the message directly coming from Service
+            val msg = res.message ?: "Login failed"
+            // Optional: map specific messages if needed, otherwise show directly
+            _events.emit(AuthEvent.ShowMessageText(msg))
         }
     }
 
