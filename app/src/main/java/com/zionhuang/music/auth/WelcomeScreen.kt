@@ -41,7 +41,7 @@ import kotlinx.coroutines.launch
 // === NUEVO: para backups en login ===
 import com.josprox.jossredconnect.services.BackupService
 import com.zionhuang.music.viewmodels.BackupRestoreViewModel
-import org.dotenv.vault.dotenvVault
+
 import com.zionhuang.music.BuildConfig
 import java.util.Locale
 
@@ -60,24 +60,9 @@ fun WelcomeRoute(
     // ViewModel de backup
     val backupVm: BackupRestoreViewModel = hiltViewModel()
 
-    // === Cargar credenciales desde env.vault (igual que en Settings) ===
-    val (baseUrl, apiToken) = remember {
-        var url = ""
-        var token = ""
-        try {
-            val (dirPath, fileName) = ensureVaultOnDisk(context, "env.vault")
-            val dv = dotenvVault(BuildConfig.DOTENV_KEY) {
-                directory = dirPath
-                filename = fileName
-            }
-            url = dv.get("JOSSRED").orEmpty()       // debe incluir /api/
-            token = dv.get("JOSSRED_API").orEmpty() // header X-JossRed-Auth
-        } catch (_: Exception) { }
-
-
-
-        url to token
-    }
+    // === Cargar credenciales desde SecureKeys (centralizado) ===
+    val baseUrl = com.zionhuang.music.utils.SecureKeys.jossRedBaseUrl
+    val apiToken = com.zionhuang.music.utils.SecureKeys.jossRedApiToken
 
     val backupService = remember(baseUrl, apiToken) {
         BackupService(
@@ -892,19 +877,7 @@ fun PasswordStrengthIndicator(
     }
 }
 
-/* === Util para leer env.vault desde assets al cache y que dotenvVault lo lea vía ruta absoluta === */
-private fun ensureVaultOnDisk(context: android.content.Context, assetFileName: String): Pair<String, String> {
-    val cacheDir = context.cacheDir
-    val outFile = java.io.File(cacheDir, assetFileName)
-    if (!outFile.exists()) {
-        context.assets.open(assetFileName).use { input ->
-            java.io.FileOutputStream(outFile).use { output ->
-                input.copyTo(output)
-            }
-        }
-    }
-    return cacheDir.absolutePath to assetFileName
-}
+
 
 /* ---------- Helpers de saneo/validación dura ----------- */
 

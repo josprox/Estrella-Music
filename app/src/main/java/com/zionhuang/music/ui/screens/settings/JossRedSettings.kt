@@ -64,7 +64,7 @@ import com.zionhuang.music.ui.utils.backToMain
 import com.zionhuang.music.utils.rememberPreference
 import com.zionhuang.music.viewmodels.BackupRestoreViewModel
 import kotlinx.coroutines.launch
-import org.dotenv.vault.dotenvVault
+
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -96,26 +96,9 @@ fun JossRedSettings(
     // ViewModel para backup/restore
     val backupVm: BackupRestoreViewModel = hiltViewModel()
 
-    // === Cargar credenciales desde env.vault ===
-    val (baseUrl, apiToken) = remember {
-        var url = ""
-        var token = ""
-        try {
-            val (dirPath, fileName) = ensureVaultOnDisk(context, "env.vault")
-            val dv = dotenvVault(BuildConfig.DOTENV_KEY) {
-                directory = dirPath
-                filename = fileName
-            }
-            url = dv.get("JOSSRED").orEmpty()
-            token = dv.get("JOSSRED_API").orEmpty()
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-
-
-        
-        url to token
-    }
+    // === Cargar credenciales desde SecureKeys (centralizado) ===
+    val baseUrl = com.zionhuang.music.utils.SecureKeys.jossRedBaseUrl
+    val apiToken = com.zionhuang.music.utils.SecureKeys.jossRedApiToken
 
     val backupService = remember(baseUrl, apiToken) {
         BackupService(
@@ -461,18 +444,7 @@ fun BackupCloudCard(
 
 /* ------------ Helpers ------------ */
 
-private fun ensureVaultOnDisk(context: Context, assetFileName: String): Pair<String, String> {
-    val cacheDir = context.cacheDir
-    val outFile = java.io.File(cacheDir, assetFileName)
-    if (!outFile.exists()) {
-        context.assets.open(assetFileName).use { input ->
-            java.io.FileOutputStream(outFile).use { output ->
-                input.copyTo(output)
-            }
-        }
-    }
-    return cacheDir.absolutePath to assetFileName
-}
+
 
 @Composable
 private fun rememberIsLoggedIn(): State<Boolean> {

@@ -55,7 +55,7 @@ import com.zionhuang.music.R
 import com.zionhuang.music.utils.UpdateMainViewModel
 import com.zionhuang.music.utils.Updater
 import kotlinx.coroutines.launch
-import org.dotenv.vault.dotenvVault
+
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -183,10 +183,7 @@ private fun AppHeader() {
 fun UpdateDetails(details: Updater.ReleaseDetails, showUpdate: Boolean) {
     val context = LocalContext.current
     val uriHandler = LocalUriHandler.current
-    val homePageWeb: String = dotenvVault(BuildConfig.DOTENV_KEY) {
-        directory = "/assets"
-        filename = "env.vault"
-    }["HOMEPAGE"]
+    val homePageWeb: String = com.zionhuang.music.utils.SecureKeys.homepageUrl
 
     Column(
         modifier = Modifier.padding(horizontal = 16.dp),

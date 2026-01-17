@@ -14,7 +14,7 @@ import com.zionhuang.music.utils.dataStore
 import com.zionhuang.music.utils.get
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import org.dotenv.vault.dotenvVault
+
 import java.io.ByteArrayOutputStream
 import java.io.FileInputStream
 import java.text.SimpleDateFormat
@@ -37,14 +37,10 @@ class CloudBackupWorker(
             // 2) ¿sesión válida?
             if (!applicationContext.isTokenValidNow()) return@withContext Result.success()
 
-            // 3) env.vault
-            val (dirPath, fileName) = ensureVaultOnDisk(applicationContext, "env.vault")
-            val dv = dotenvVault(BuildConfig.DOTENV_KEY) {
-                directory = dirPath
-                filename = fileName
-            }
-            val baseUrl = dv.get("JOSSRED").orEmpty()
-            val apiToken = dv.get("JOSSRED_API").orEmpty()
+            // 3) SecureKeys
+            val baseUrl = com.zionhuang.music.utils.SecureKeys.jossRedBaseUrl
+            val apiToken = com.zionhuang.music.utils.SecureKeys.jossRedApiToken
+
             if (baseUrl.isBlank() || apiToken.isBlank()) return@withContext Result.retry()
 
             // 4) armar zip
@@ -70,19 +66,6 @@ class CloudBackupWorker(
         } catch (_: Exception) {
             Result.retry()
         }
-    }
-
-    private fun ensureVaultOnDisk(context: Context, assetFileName: String): Pair<String, String> {
-        val cacheDir = context.cacheDir
-        val outFile = java.io.File(cacheDir, assetFileName)
-        if (!outFile.exists()) {
-            context.assets.open(assetFileName).use { input ->
-                java.io.FileOutputStream(outFile).use { output ->
-                    input.copyTo(output)
-                }
-            }
-        }
-        return cacheDir.absolutePath to assetFileName
     }
 
     private fun buildZipBytes(context: Context): ByteArray {

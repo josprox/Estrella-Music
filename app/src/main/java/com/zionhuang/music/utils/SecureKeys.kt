@@ -47,6 +47,8 @@ object SecureKeys {
         get() = get("JOSSRED_API")
 
     val homepageUrl: String get() = get("HOMEPAGE")
+    val updaterUrl: String get() = get("UPDATER_URL")
+
     // Opción A: función (para evitar colisiones nombre/propiedad)
     fun getJossRedKey(): String = get("STREAMING_HEAD_JOSSRED")
 

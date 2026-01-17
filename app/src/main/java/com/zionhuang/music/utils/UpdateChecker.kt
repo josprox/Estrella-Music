@@ -19,7 +19,7 @@ import okhttp3.Callback
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.Response
-import org.dotenv.vault.dotenvVault
+
 import org.json.JSONObject
 import java.io.IOException
 
@@ -30,11 +30,7 @@ class UpdateChecker(private val context: Context) {
     private val notificationId = 1
 
     // URL de tu API
-    val dotenv = dotenvVault(BuildConfig.DOTENV_KEY) {
-        directory = "/assets"
-        filename = "env.vault" // instead of '.env', use 'env'
-    }
-    private val versionUrl = dotenv["UPDATER_URL"]
+    private val versionUrl = com.zionhuang.music.utils.SecureKeys.updaterUrl
 
     init {
         createNotificationChannel()
