@@ -84,6 +84,15 @@ fun JossRedSettings(
     val context = LocalContext.current
     val isLoggedIn by rememberIsLoggedIn()
 
+    // Redirect to Welcome if not logged in
+    LaunchedEffect(isLoggedIn) {
+        if (!isLoggedIn) {
+            navController.navigate("auth/welcome") {
+                popUpTo(0) { inclusive = true }
+            }
+        }
+    }
+
     // ViewModel para backup/restore
     val backupVm: BackupRestoreViewModel = hiltViewModel()
 
@@ -275,7 +284,7 @@ fun BackupCloudCard(
             error = null
             latestName = null
             latestDateText = null
-            hasLoaded = true
+            hasLoaded = false // Don't mark as loaded if we haven't checked (waiting for login)
             return
         }
         loading = true
@@ -305,7 +314,10 @@ fun BackupCloudCard(
     }
 
     LaunchedEffect(isLoggedIn) {
-        if (!hasLoaded) loadLatest()
+        // If logged in and not loaded (or previously skipped), try loading
+        if (isLoggedIn && !hasLoaded) {
+            loadLatest()
+        }
     }
     LaunchedEffect(refreshSignal) {
         loadLatest()

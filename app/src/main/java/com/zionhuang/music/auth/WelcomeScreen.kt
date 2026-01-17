@@ -1,5 +1,6 @@
 package com.zionhuang.music.ui.auth
 
+import android.annotation.SuppressLint
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
@@ -21,12 +22,14 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalFocusManager
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.zionhuang.music.R
 import com.zionhuang.music.auth.AuthEvent
@@ -42,6 +45,7 @@ import org.dotenv.vault.dotenvVault
 import com.zionhuang.music.BuildConfig
 import java.util.Locale
 
+@SuppressLint("LocalContextGetResourceValueCall")
 @Composable
 fun WelcomeRoute(
     onAuthSuccess: () -> Unit,
@@ -251,45 +255,76 @@ fun WelcomeView(
 ) {
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
-        modifier = Modifier.fillMaxWidth()
+        verticalArrangement = Arrangement.Center,
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(24.dp)
     ) {
-        Spacer(Modifier.height(48.dp))
+        Spacer(Modifier.weight(1f))
+        
+        // Logo or Hero Text
         Text(
             text = stringResource(R.string.welcome_title),
             color = Color.White,
-            style = MaterialTheme.typography.headlineLarge.copy(fontWeight = FontWeight.Bold),
+            style = MaterialTheme.typography.displayMedium.copy(
+                fontWeight = FontWeight.ExtraBold,
+                letterSpacing = (-1).sp
+            ),
             textAlign = TextAlign.Center
         )
-        Spacer(Modifier.height(12.dp))
+        
+        Spacer(Modifier.height(16.dp))
+        
         Text(
             text = stringResource(R.string.welcome_subtitle),
-            color = Color.White.copy(alpha = 0.75f),
-            textAlign = TextAlign.Center
+            color = Color.White.copy(alpha = 0.8f),
+            style = MaterialTheme.typography.bodyLarge,
+            textAlign = TextAlign.Center,
+            modifier = Modifier.padding(horizontal = 16.dp)
         )
-        Spacer(Modifier.height(64.dp))
-
-        Row(modifier = Modifier.fillMaxWidth()) {
+        
+        Spacer(Modifier.weight(1f))
+        
+        Column(
+            verticalArrangement = Arrangement.spacedBy(16.dp),
+            modifier = Modifier.fillMaxWidth()
+        ) {
             Button(
                 onClick = onLogin,
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color.White, contentColor = Color(0xFF1A1A2E)
+                    containerColor = Color.White,
+                    contentColor = Color.Black
                 ),
-                modifier = Modifier.weight(1f)
-            ) { Text(stringResource(R.string.btn_login), fontWeight = FontWeight.Bold) }
-
-            Spacer(Modifier.width(16.dp))
+                shape = RoundedCornerShape(12.dp),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(56.dp)
+            ) {
+                Text(
+                    text = stringResource(R.string.btn_login),
+                    style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold)
+                )
+            }
 
             Button(
                 onClick = onRegister,
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color(0xFFE94560), contentColor = Color.White
+                    containerColor = Color(0xFFE94560),
+                    contentColor = Color.White
                 ),
-                modifier = Modifier.weight(1f)
-            ) { Text(stringResource(R.string.btn_register), fontWeight = FontWeight.Bold) }
+                shape = RoundedCornerShape(12.dp),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(56.dp)
+            ) {
+                Text(
+                    text = stringResource(R.string.btn_register),
+                    style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold)
+                )
+            }
         }
-
-        // Ya no hay botón de "Saltar"
-        Spacer(Modifier.height(60.dp))
+        
+        Spacer(Modifier.height(48.dp))
     }
 }
 
@@ -303,52 +338,92 @@ fun LoginForm(
     onLogin: (email: String, password: String) -> Unit
 ) {
     val focus = LocalFocusManager.current
-    val context = LocalContext.current
     var email by remember { mutableStateOf("") }
     var pass by remember { mutableStateOf("") }
     var emailErr by remember { mutableStateOf<Int?>(null) }
     var passErr by remember { mutableStateOf<Int?>(null) }
 
-    AuthCard {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState())
+            .padding(24.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            IconButton(onClick = onBack) {
+                Icon(
+                    painter = painterResource(R.drawable.arrow_back), // Ensure this resource exists or use Icons.AutoMirrored.Filled.ArrowBack
+                    contentDescription = stringResource(R.string.btn_back),
+                    tint = Color.White
+                )
+            }
+        }
+        
+        Spacer(Modifier.height(32.dp))
+        
         Text(
-            stringResource(R.string.login_greeting),
+            text = stringResource(R.string.login_greeting),
             color = Color.White,
-            style = MaterialTheme.typography.headlineSmall.copy(fontWeight = FontWeight.Bold)
+            style = MaterialTheme.typography.headlineMedium.copy(fontWeight = FontWeight.Bold),
+            textAlign = TextAlign.Center
         )
-        Spacer(Modifier.height(24.dp))
+        
+        Spacer(Modifier.height(48.dp))
+        
+        Column(verticalArrangement = Arrangement.spacedBy(20.dp)) {
+            OutlinedTextField(
+                value = email,
+                onValueChange = {
+                    email = it.replace(" ", "")
+                    emailErr = errEmail(email) ?: if (email.isBlank()) null else null
+                },
+                label = { Text(stringResource(R.string.label_email)) },
+                isError = emailErr != null,
+                supportingText = { emailErr?.let { Text(stringResource(it), color = MaterialTheme.colorScheme.error) } },
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
+                singleLine = true,
+                colors = authTextFieldColors(),
+                shape = RoundedCornerShape(12.dp),
+                modifier = Modifier.fillMaxWidth()
+            )
+            
+            Column {
+                OutlinedTextField(
+                    value = pass,
+                    onValueChange = {
+                        pass = noSpaces(it)
+                        passErr = if (pass.isBlank()) null else null
+                    },
+                    label = { Text(stringResource(R.string.label_password)) },
+                    isError = passErr != null,
+                    supportingText = { passErr?.let { Text(stringResource(it), color = MaterialTheme.colorScheme.error) } },
+                    singleLine = true,
+                    visualTransformation = PasswordVisualTransformation(),
+                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
+                    colors = authTextFieldColors(),
+                    shape = RoundedCornerShape(12.dp),
+                    modifier = Modifier.fillMaxWidth()
+                )
+                
+                TextButton(
+                    onClick = onForgotPassword,
+                    modifier = Modifier.align(Alignment.End)
+                ) {
+                    Text(
+                        text = stringResource(R.string.forgot_password),
+                        color = Color.White.copy(alpha = 0.7f),
+                        style = MaterialTheme.typography.bodyMedium
+                    )
+                }
+            }
+        }
 
-        OutlinedTextField(
-            value = email,
-            onValueChange = {
-                email = it.replace(" ", "")
-                emailErr = errEmail(email) ?: if (email.isBlank()) null else null
-            },
-            label = { Text(stringResource(R.string.label_email)) },
-            isError = emailErr != null,
-            supportingText = { emailErr?.let { Text(stringResource(it), color = MaterialTheme.colorScheme.error) } },
-            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
-            singleLine = true,
-            colors = authTextFieldColors(),
-            modifier = Modifier.fillMaxWidth()
-        )
-        Spacer(Modifier.height(16.dp))
-        OutlinedTextField(
-            value = pass,
-            onValueChange = {
-                pass = noSpaces(it)
-                passErr = if (pass.isBlank()) null else null
-            },
-            label = { Text(stringResource(R.string.label_password)) },
-            isError = passErr != null,
-            supportingText = { passErr?.let { Text(stringResource(it), color = MaterialTheme.colorScheme.error) } },
-            singleLine = true,
-            visualTransformation = PasswordVisualTransformation(),
-            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
-            colors = authTextFieldColors(),
-            modifier = Modifier.fillMaxWidth()
-        )
-
-        Spacer(Modifier.height(24.dp))
+        Spacer(Modifier.height(32.dp))
+        
         Button(
             onClick = {
                 val okEmail = email.isNotBlank() && "@" in email && !email.contains(" ")
@@ -362,15 +437,25 @@ fun LoginForm(
             },
             enabled = !isLoading,
             colors = ButtonDefaults.buttonColors(
-                containerColor = Color(0xFFE94560), contentColor = Color.White
+                containerColor = Color(0xFFE94560),
+                contentColor = Color.White
             ),
-            modifier = Modifier.fillMaxWidth()
-        ) { Text(if (isLoading) stringResource(R.string.btn_entering) else stringResource(R.string.btn_login)) }
-
-        Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-            TextButton(onClick = onBack) { Text(stringResource(R.string.btn_back), color = Color.White.copy(alpha = 0.7f)) }
-            TextButton(onClick = onForgotPassword) {
-                Text(stringResource(R.string.forgot_password), color = Color.White.copy(alpha = 0.7f))
+            shape = RoundedCornerShape(12.dp),
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(56.dp)
+        ) {
+            if (isLoading) {
+                CircularProgressIndicator(
+                    modifier = Modifier.size(24.dp),
+                    color = Color.White,
+                    strokeWidth = 2.dp
+                )
+            } else {
+                Text(
+                    text = stringResource(R.string.btn_login),
+                    style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold)
+                )
             }
         }
     }
@@ -385,7 +470,6 @@ fun RegisterForm(
 ) {
     val focus = LocalFocusManager.current
     val scroll = rememberScrollState()
-    val context = LocalContext.current
 
     var user by remember { mutableStateOf("") }
     var name by remember { mutableStateOf("") }
@@ -403,16 +487,39 @@ fun RegisterForm(
     var confirmErr by remember { mutableStateOf<Int?>(null) }
     var termsErr by remember { mutableStateOf<Int?>(null) }
 
-    AuthCard {
-        Column(Modifier.verticalScroll(scroll)) {
-            Text(
-                stringResource(R.string.register_title),
-                color = Color.White,
-                style = MaterialTheme.typography.headlineSmall.copy(fontWeight = FontWeight.Black)
-            )
-            Spacer(Modifier.height(24.dp))
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .verticalScroll(scroll)
+            .padding(24.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            IconButton(onClick = onBack) {
+                Icon(
+                    painter = painterResource(R.drawable.arrow_back),
+                    contentDescription = stringResource(R.string.btn_back),
+                    tint = Color.White
+                )
+            }
+        }
 
-            // Username (saneamos y validamos en vivo)
+        Spacer(Modifier.height(16.dp))
+
+        Text(
+            text = stringResource(R.string.register_title),
+            color = Color.White,
+            style = MaterialTheme.typography.headlineMedium.copy(fontWeight = FontWeight.Bold),
+            textAlign = TextAlign.Center
+        )
+
+        Spacer(Modifier.height(32.dp))
+
+        Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
+            // Username
             OutlinedTextField(
                 value = user,
                 onValueChange = {
@@ -426,9 +533,9 @@ fun RegisterForm(
                 singleLine = true,
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Ascii),
                 colors = authTextFieldColors(),
+                shape = RoundedCornerShape(12.dp),
                 modifier = Modifier.fillMaxWidth()
             )
-            Spacer(Modifier.height(16.dp))
 
             // Nombres
             OutlinedTextField(
@@ -443,9 +550,9 @@ fun RegisterForm(
                 supportingText = { nameErr?.let { Text(stringResource(it), color = MaterialTheme.colorScheme.error) } },
                 singleLine = true,
                 colors = authTextFieldColors(),
+                shape = RoundedCornerShape(12.dp),
                 modifier = Modifier.fillMaxWidth()
             )
-            Spacer(Modifier.height(16.dp))
 
             // Apellidos
             OutlinedTextField(
@@ -460,9 +567,9 @@ fun RegisterForm(
                 supportingText = { lastErr?.let { Text(stringResource(it), color = MaterialTheme.colorScheme.error) } },
                 singleLine = true,
                 colors = authTextFieldColors(),
+                shape = RoundedCornerShape(12.dp),
                 modifier = Modifier.fillMaxWidth()
             )
-            Spacer(Modifier.height(16.dp))
 
             // Email
             OutlinedTextField(
@@ -477,9 +584,9 @@ fun RegisterForm(
                 supportingText = { emailErr?.let { Text(stringResource(it), color = MaterialTheme.colorScheme.error) } },
                 singleLine = true,
                 colors = authTextFieldColors(),
+                shape = RoundedCornerShape(12.dp),
                 modifier = Modifier.fillMaxWidth()
             )
-            Spacer(Modifier.height(16.dp))
 
             // Password
             OutlinedTextField(
@@ -496,11 +603,11 @@ fun RegisterForm(
                 singleLine = true,
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
                 colors = authTextFieldColors(),
+                shape = RoundedCornerShape(12.dp),
                 modifier = Modifier.fillMaxWidth()
             )
-            Spacer(Modifier.height(8.dp))
+
             PasswordStrengthIndicator(password = pass)
-            Spacer(Modifier.height(16.dp))
 
             // Confirmación
             OutlinedTextField(
@@ -516,62 +623,90 @@ fun RegisterForm(
                 singleLine = true,
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
                 colors = authTextFieldColors(),
+                shape = RoundedCornerShape(12.dp),
                 modifier = Modifier.fillMaxWidth()
             )
-
-            Spacer(Modifier.height(16.dp))
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Checkbox(checked = agree, onCheckedChange = {
-                    agree = it
-                    termsErr = null
-                })
-                Column {
-                    Text(stringResource(R.string.accept_terms), color = Color.White)
+            
+            Row(
+                verticalAlignment = Alignment.CenterVertically, 
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Checkbox(
+                    checked = agree, 
+                    onCheckedChange = {
+                        agree = it
+                        termsErr = null
+                    },
+                    colors = CheckboxDefaults.colors(
+                        checkedColor = Color(0xFFE94560),
+                        uncheckedColor = Color.White.copy(alpha = 0.6f),
+                        checkmarkColor = Color.White
+                    )
+                )
+                Column(modifier = Modifier.weight(1f)) {
+                    Text(
+                        text = stringResource(R.string.accept_terms),
+                        color = Color.White,
+                        style = MaterialTheme.typography.bodyMedium
+                    )
                     termsErr?.let {
                         Text(
-                            stringResource(it),
+                            text = stringResource(it),
                             color = MaterialTheme.colorScheme.error,
-                            style = MaterialTheme.typography.bodySmall
+                            style = MaterialTheme.typography.labelSmall
                         )
                     }
                 }
             }
+        }
 
-            Spacer(Modifier.height(24.dp))
-            Button(
-                onClick = {
-                    // Validaciones finales
-                    val okUser = isValidUsername(user)
-                    val okName = isValidHumanName(name.trim())
-                    val okLast = isValidHumanName(last.trim())
-                    val okEmail = isValidEmailStrict(email)
-                    val okPass = isStrongPasswordNoSpaces(pass)
-                    val okConfirm = confirm == pass
-                    val okTerms = agree
+        Spacer(Modifier.height(32.dp))
 
-                    userErr    = if (!okUser)    R.string.error_invalid_username else null
-                    nameErr    = if (!okName)    R.string.error_empty_firstname else null
-                    lastErr    = if (!okLast)    R.string.error_empty_lastname else null
-                    emailErr   = if (!okEmail)   R.string.error_invalid_email_format else null
-                    passErr    = if (!okPass)    R.string.error_invalid_password_requirements else null
-                    confirmErr = if (!okConfirm) R.string.error_password_mismatch else null
-                    termsErr   = if (!okTerms)   R.string.error_accept_terms else null
+        Button(
+            onClick = {
+                // Validaciones finales
+                val okUser = isValidUsername(user)
+                val okName = isValidHumanName(name.trim())
+                val okLast = isValidHumanName(last.trim())
+                val okEmail = isValidEmailStrict(email)
+                val okPass = isStrongPasswordNoSpaces(pass)
+                val okConfirm = confirm == pass
+                val okTerms = agree
 
-                    if (okUser && okName && okLast && okEmail && okPass && okConfirm && okTerms) {
-                        focus.clearFocus()
-                        onSubmit(user, name.trim(), last.trim(), email, pass, confirm, agree)
-                    }
-                },
-                enabled = !isLoading,
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = MaterialTheme.colorScheme.primary,
-                    contentColor = Color.White
-                ),
-                modifier = Modifier.fillMaxWidth()
-            ) { Text(if (isLoading) stringResource(R.string.btn_creating) else stringResource(R.string.btn_register)) }
+                userErr    = if (!okUser)    R.string.error_invalid_username else null
+                nameErr    = if (!okName)    R.string.error_empty_firstname else null
+                lastErr    = if (!okLast)    R.string.error_empty_lastname else null
+                emailErr   = if (!okEmail)   R.string.error_invalid_email_format else null
+                passErr    = if (!okPass)    R.string.error_invalid_password_requirements else null
+                confirmErr = if (!okConfirm) R.string.error_password_mismatch else null
+                termsErr   = if (!okTerms)   R.string.error_accept_terms else null
 
-            TextButton(onClick = onBack) {
-                Text(stringResource(R.string.btn_back), color = MaterialTheme.colorScheme.primary)
+                if (okUser && okName && okLast && okEmail && okPass && okConfirm && okTerms) {
+                    focus.clearFocus()
+                    onSubmit(user, name.trim(), last.trim(), email, pass, confirm, agree)
+                }
+            },
+            enabled = !isLoading,
+            colors = ButtonDefaults.buttonColors(
+                containerColor = Color(0xFFE94560),
+                contentColor = Color.White
+            ),
+            shape = RoundedCornerShape(12.dp),
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(56.dp)
+        ) {
+            if (isLoading) {
+                CircularProgressIndicator(
+                    modifier = Modifier.size(24.dp),
+                    color = Color.White,
+                    strokeWidth = 2.dp
+                )
+            } else {
+                Text(
+                    text = stringResource(R.string.btn_register),
+                    style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold)
+                )
             }
         }
     }
@@ -586,17 +721,40 @@ fun ForgotPasswordForm(
     onSend: (email: String) -> Unit
 ) {
     val focus = LocalFocusManager.current
-    val context = LocalContext.current
     var email by remember { mutableStateOf("") }
     var emailErr by remember { mutableStateOf<Int?>(null) }
 
-    AuthCard {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState())
+            .padding(24.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            IconButton(onClick = onBack) {
+                Icon(
+                    painter = painterResource(R.drawable.arrow_back),
+                    contentDescription = stringResource(R.string.btn_back),
+                    tint = Color.White
+                )
+            }
+        }
+
+        Spacer(Modifier.height(32.dp))
+        
         Text(
             stringResource(R.string.forgot_title),
             color = Color.White,
-            style = MaterialTheme.typography.headlineSmall.copy(fontWeight = FontWeight.Bold)
+            style = MaterialTheme.typography.headlineMedium.copy(fontWeight = FontWeight.Bold),
+            textAlign = TextAlign.Center
         )
-        Spacer(Modifier.height(24.dp))
+        
+        Spacer(Modifier.height(48.dp))
+        
         OutlinedTextField(
             value = email,
             onValueChange = {
@@ -609,9 +767,12 @@ fun ForgotPasswordForm(
             supportingText = { emailErr?.let { Text(stringResource(it), color = MaterialTheme.colorScheme.error) } },
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
             colors = authTextFieldColors(),
+            shape = RoundedCornerShape(12.dp),
             modifier = Modifier.fillMaxWidth()
         )
-        Spacer(Modifier.height(24.dp))
+        
+        Spacer(Modifier.height(32.dp))
+        
         Button(
             onClick = {
                 val ok = email.isNotBlank() && "@" in email && !email.contains(" ")
@@ -620,13 +781,23 @@ fun ForgotPasswordForm(
             },
             enabled = !isLoading,
             colors = ButtonDefaults.buttonColors(
-                containerColor = Color(0xFFE94560), contentColor = Color.White
+                containerColor = Color(0xFFE94560),
+                contentColor = Color.White
             ),
-            modifier = Modifier.fillMaxWidth()
-        ) { Text(if (isLoading) stringResource(R.string.btn_sending) else stringResource(R.string.btn_send_recovery)) }
-
-        TextButton(onClick = onBack) {
-            Text(stringResource(R.string.btn_back), color = Color.White.copy(alpha = 0.7f))
+            shape = RoundedCornerShape(12.dp),
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(56.dp)
+        ) {
+            if (isLoading) {
+                 CircularProgressIndicator(
+                    modifier = Modifier.size(24.dp), 
+                    color = Color.White, 
+                    strokeWidth = 2.dp
+                )
+            } else {
+                Text(stringResource(R.string.btn_send_recovery), style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold))
+            }
         }
     }
 }
@@ -653,12 +824,13 @@ private fun authTextFieldColors(): TextFieldColors =
         focusedTextColor = Color.White,
         unfocusedTextColor = Color.White,
         disabledTextColor = Color.White.copy(alpha = 0.6f),
+        errorTextColor = MaterialTheme.colorScheme.error,
 
-        // 👉 Fondo consistente (también en error)
-        focusedContainerColor = Color.White.copy(alpha = 0.08f),
-        unfocusedContainerColor = Color.White.copy(alpha = 0.06f),
-        disabledContainerColor = Color.White.copy(alpha = 0.04f),
-        errorContainerColor = Color.White.copy(alpha = 0.06f),
+        // 👉 Fondo transparente como solicitado
+        focusedContainerColor = Color.Transparent,
+        unfocusedContainerColor = Color.Transparent,
+        disabledContainerColor = Color.Transparent,
+        errorContainerColor = Color.Transparent,
 
         cursorColor = Color.White,
         focusedIndicatorColor = Color.White.copy(alpha = 0.70f),
