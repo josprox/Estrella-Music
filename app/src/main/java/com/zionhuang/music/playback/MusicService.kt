@@ -67,8 +67,6 @@ import com.zionhuang.music.R
 import com.zionhuang.music.constants.AudioNormalizationKey
 import com.zionhuang.music.constants.AudioQuality
 import com.zionhuang.music.constants.AudioQualityKey
-import com.zionhuang.music.constants.DiscordButton1LabelKey
-import com.zionhuang.music.constants.DiscordButton2LabelKey
 import com.zionhuang.music.constants.DiscordTokenKey
 import com.zionhuang.music.constants.EnableDiscordRPCKey
 import com.zionhuang.music.constants.JossRedMultimedia
@@ -294,13 +292,7 @@ class MusicService : MediaLibraryService(),
 
         currentSong.debounce(1000).collect(scope) { song ->
             updateNotification()
-            if (song != null) {
-                val btn1 = dataStore.get(DiscordButton1LabelKey, "Listen")
-                val btn2 = dataStore.get(DiscordButton2LabelKey, "Visit Estrella Music")
-                discordRpc?.updateSong(song, btn1, btn2)
-            } else {
-                discordRpc?.closeRPC()
-            }
+            if (song != null) discordRpc?.updateSong(song) else discordRpc?.closeRPC()
         }
 
         // NUEVO: Colector para el Widget.
@@ -345,11 +337,7 @@ class MusicService : MediaLibraryService(),
                 discordRpc = null
                 if (key != null && enabled) {
                     discordRpc = DiscordRPC(this, key)
-                    currentSong.value?.let {
-                        val btn1 = dataStore.get(DiscordButton1LabelKey, "Listen")
-                        val btn2 = dataStore.get(DiscordButton2LabelKey, "Visit Estrella Music")
-                        discordRpc?.updateSong(it, btn1, btn2)
-                    }
+                    currentSong.value?.let { discordRpc?.updateSong(it) }
                 }
             }
 

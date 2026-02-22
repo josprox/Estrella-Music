@@ -10,11 +10,7 @@ class DiscordRPC(
     val context: Context,
     token: String,
 ) : KizzyRPC(token) {
-    suspend fun updateSong(
-        song: Song,
-        button1Label: String = "Listen",
-        button2Label: String = "Visit Estrella Music",
-    ) = runCatching {
+    suspend fun updateSong(song: Song) = runCatching {
         setActivity(
             name = context.getString(R.string.app_name).removeSuffix(" Debug"),
             details = song.song.title,
@@ -24,8 +20,8 @@ class DiscordRPC(
             largeText = song.album?.title,
             smallText = song.artists.firstOrNull()?.name,
             buttons = listOf(
-                button1Label to "https://jossred.josprox.com/sound/${song.song.id}",
-                button2Label to "https://play.google.com/store/apps/details?id=com.josprox.jossmusic"
+                "Listen" to "https://jossred.josprox.com/sound/${song.song.id}",
+                "Visit Estrella Music" to "https://play.google.com/store/apps/details?id=com.josprox.jossmusic"
             ),
             type = Type.LISTENING,
             since = System.currentTimeMillis(),

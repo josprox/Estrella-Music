@@ -63,8 +63,6 @@ val DiscordInfoDismissedKey = booleanPreferencesKey("discordInfoDismissed_v2")
 val DiscordUsernameKey = stringPreferencesKey("discordUsername")
 val DiscordNameKey = stringPreferencesKey("discordName")
 val EnableDiscordRPCKey = booleanPreferencesKey("discordRPCEnable")
-val DiscordButton1LabelKey = stringPreferencesKey("discordButton1Label")
-val DiscordButton2LabelKey = stringPreferencesKey("discordButton2Label")
 
 val SongSortTypeKey = stringPreferencesKey("songSortType")
 val SongSortDescendingKey = booleanPreferencesKey("songSortDescending")
