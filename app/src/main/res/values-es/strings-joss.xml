@@ -118,6 +118,8 @@
   <string name="artist">Artista</string>
   <string name="listening_to_joss">Escuchando desde Estrella Music</string>
   <string name="btn_visit_joss">Visita Estrella Music</string>
+  <string name="discord_button1_label">Etiqueta del botón 1</string>
+  <string name="discord_button2_label">Etiqueta del botón 2</string>
   <string name="account_joss_red">Cuenta de Joss Red</string>
   <string name="refresh">Refrescar</string>
   <string name="checking_session">Comprobando sesión…</string>

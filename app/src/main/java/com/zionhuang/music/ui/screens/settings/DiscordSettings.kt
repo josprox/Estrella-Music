@@ -30,12 +30,15 @@ import com.my.kizzy.rpc.KizzyRPC
 import com.zionhuang.music.LocalPlayerAwareWindowInsets
 import com.zionhuang.music.LocalPlayerConnection
 import com.zionhuang.music.R
+import com.zionhuang.music.constants.DiscordButton1LabelKey
+import com.zionhuang.music.constants.DiscordButton2LabelKey
 import com.zionhuang.music.constants.DiscordInfoDismissedKey
 import com.zionhuang.music.constants.DiscordNameKey
 import com.zionhuang.music.constants.DiscordTokenKey
 import com.zionhuang.music.constants.DiscordUsernameKey
 import com.zionhuang.music.constants.EnableDiscordRPCKey
 import com.zionhuang.music.db.entities.Song
+import com.zionhuang.music.ui.component.EditTextPreference
 import com.zionhuang.music.ui.component.IconButton
 import com.zionhuang.music.ui.component.PreferenceEntry
 import com.zionhuang.music.ui.component.PreferenceGroupTitle
@@ -62,6 +65,8 @@ fun DiscordSettings(
     var discordUsername by rememberPreference(DiscordUsernameKey, "")
     var discordName by rememberPreference(DiscordNameKey, "")
     var infoDismissed by rememberPreference(DiscordInfoDismissedKey, false)
+    var button1Label by rememberPreference(DiscordButton1LabelKey, "Listen")
+    var button2Label by rememberPreference(DiscordButton2LabelKey, "Visit Estrella Music")
 
     LaunchedEffect(discordToken) {
         val token = discordToken
@@ -139,8 +144,24 @@ fun DiscordSettings(
             isEnabled = isLoggedIn
         )
 
+        EditTextPreference(
+            title = { Text(stringResource(R.string.discord_button1_label)) },
+            value = button1Label,
+            onValueChange = { button1Label = it },
+            isEnabled = isLoggedIn,
+            isInputValid = { it.isNotBlank() }
+        )
+
+        EditTextPreference(
+            title = { Text(stringResource(R.string.discord_button2_label)) },
+            value = button2Label,
+            onValueChange = { button2Label = it },
+            isEnabled = isLoggedIn,
+            isInputValid = { it.isNotBlank() }
+        )
+
         PreferenceGroupTitle(title = stringResource(R.string.preview))
-        RichPresence(song = song, homepageUrl = envVm.homepageUrl)
+        RichPresence(song = song, homepageUrl = envVm.homepageUrl, button1Label = button1Label, button2Label = button2Label)
     }
 
     TopAppBar(
@@ -159,6 +180,8 @@ fun DiscordSettings(
 private fun RichPresence(
     song: Song?,
     homepageUrl: String,
+    button1Label: String,
+    button2Label: String,
 ) {
     val context = LocalContext.current
 
@@ -256,7 +279,7 @@ private fun RichPresence(
                     context.startActivity(intent)
                 },
                 modifier = Modifier.fillMaxWidth()
-            ) { Text(stringResource(R.string.listening_to_joss)) }
+            ) { Text(button1Label) }
 
             OutlinedButton(
                 onClick = {
@@ -264,7 +287,7 @@ private fun RichPresence(
                     context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
                 },
                 modifier = Modifier.fillMaxWidth()
-            ) { Text(stringResource(R.string.btn_visit_joss)) }
+            ) { Text(button2Label) }
         }
     }
 }

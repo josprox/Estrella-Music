@@ -117,6 +117,8 @@
   <string name="artist">Artist</string>
   <string name="listening_to_joss">Listening from Estrella Music</string>
   <string name="btn_visit_joss">Visit Estrella Music</string>
+  <string name="discord_button1_label">Button 1 label</string>
+  <string name="discord_button2_label">Button 2 label</string>
   <string name="account_joss_red">Joss Red Account</string>
   <string name="refresh">Refresh</string>
   <string name="checking_session">Checking session…</string>
