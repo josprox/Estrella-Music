@@ -1,7 +1,4 @@
 <div align="center">
-
-> 🚀 **[Lee el anuncio sobre el nuevo rumbo de Estrella Music →](./ANNOUNCEMENT.md)**
-
   <img src="./app/src/main/play_store_512.png" width="128" height="128" alt="App icon" />
   <h1>Estrella Music</h1>
   <p><em>Una aplicación Android para transmitir música desde YouTube Music, basada en ViMusic e InnerTune</em></p>
