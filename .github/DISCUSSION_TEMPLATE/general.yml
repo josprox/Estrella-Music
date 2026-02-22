@@ -1,0 +1,15 @@
+title: "[General] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ¡Gracias por iniciar una discusión! Este espacio es para conversaciones generales sobre Estrella Music.
+  - type: textarea
+    id: description
+    attributes:
+      label: Descripción
+      description: ¿De qué quieres hablar?
+      placeholder: Escribe aquí tu mensaje...
+    validations:
+      required: true

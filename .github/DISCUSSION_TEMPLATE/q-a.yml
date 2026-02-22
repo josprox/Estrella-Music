@@ -1,0 +1,23 @@
+title: "[Pregunta] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ¿Tienes alguna duda sobre Estrella Music? ¡Pregunta aquí y la comunidad te ayudará!
+  - type: textarea
+    id: question
+    attributes:
+      label: Pregunta
+      description: ¿Qué quieres saber?
+      placeholder: ¿Cómo puedo...?
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexto adicional
+      description: Cualquier información adicional que ayude a responder tu pregunta.
+      placeholder: Versión de la app, dispositivo, etc.
+    validations:
+      required: false
