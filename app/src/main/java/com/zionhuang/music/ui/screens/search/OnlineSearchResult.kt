@@ -173,7 +173,7 @@ fun OnlineSearchResult(
                                 playerConnection.playQueue(YouTubeQueue.radio(item.asSongItem().toMediaMetadata()))
                             }
                         }
-                        is PodcastItem -> navController.navigate("online_playlist/${item.id}")
+                        is PodcastItem -> navController.navigate("podcast/${item.id}")
                     }
                 }
                 .animateItem()
