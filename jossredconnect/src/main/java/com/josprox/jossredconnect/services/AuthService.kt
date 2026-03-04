@@ -136,27 +136,34 @@ class AuthService(
             )
 
             val data = bodyStr.safeJson()
+            val status = data.optString("status") // "success" or "error"
 
-            when (code) {
-                200 -> {
-                    if (data.has("token")) {
-                        saveTokenData(
-                            token = data.optString("token"),
-                            refreshToken = data.optString("refresh_token", ""),
-                            expiresInSeconds = data.optInt("expires_in", 7_776_000) // 90 días
-                        )
-                        mapOf("success" to true, "token" to data.optString("token"))
-                    } else {
-                        mapOf(
-                            "success" to false,
-                            "message" to data.optString("error", "Error desconocido en el login")
-                        )
+            if (code == 200 && status == "success") {
+                if (data.has("token")) {
+                    saveTokenData(
+                        token = data.optString("token"),
+                        refreshToken = data.optString("refresh_token", ""),
+                        expiresInSeconds = data.optInt("expires_in", 7_776_000) // 90 días
+                    )
+                    
+                    // Parse User object if present
+                    val userObj = data.optJSONObject("user")
+                    val fields = userObj?.optJSONObject("Fields") ?: userObj
+                    
+                    val resultMap = mutableMapOf<String, Any?>("success" to true, "token" to data.optString("token"))
+                    if (fields != null) {
+                        resultMap["user"] = fields
                     }
+                    resultMap
+                } else {
+                    mapOf("success" to false, "message" to "Token not found in response")
                 }
-                404, 422 -> mapOf("success" to false, "message" to "EMAIL_NOT_FOUND") // Adjusting for typical 422 validation errs too? Keep simple
-                401 -> mapOf("success" to false, "message" to "INVALID_PASSWORD")
-                else -> mapOf("success" to false, "message" to "SERVER_ERROR ($code)")
-            }        } catch (e: Exception) {
+            } else {
+                // Handle "status": "error" or HTTP error codes
+                val message = data.optString("message", "Login failed")
+                mapOf("success" to false, "message" to message) // Pass message through
+            }
+        } catch (e: Exception) {
             Log.e("JOSS_DEBUG", "Login error", e)
             httpError(e)
         }
@@ -181,8 +188,10 @@ class AuthService(
 
             val (code, bodyStr) = doPostJson("api/register", body)
             val data = bodyStr.safeJson()
+            val status = data.optString("status")
 
-            if (code == 201) {
+            if ((code == 200 || code == 201) && status == "success") {
+                // Check if token is returned for auto-login
                 if (data.has("token")) {
                     saveTokenData(
                         token = data.optString("token"),
@@ -192,10 +201,10 @@ class AuthService(
                 }
                 mapOf("success" to true, "message" to data.optString("message"))
             } else {
-                mapOf(
+                 mapOf(
                     "success" to false,
                     "errors" to (data.optJSONObject("errors")?.toMap() ?: emptyMap<String, Any?>()),
-                    "message" to data.optString("message", "Error en el registro")
+                    "message" to data.optString("message", "Registration failed")
                 )
             }
         } catch (e: Exception) {

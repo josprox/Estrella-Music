@@ -21,8 +21,7 @@ data class YouTubeClient(
     val loginRequired: Boolean = false,
     val useSignatureTimestamp: Boolean = false,
     val isEmbedded: Boolean = false,
-    // val origin: String? = null,
-    // val referer: String? = null,
+    val useWebPoTokens: Boolean = false,
 ) {
     fun toContext(locale: YouTubeLocale, visitorData: String?, dataSyncId: String?) = Context(
         client = Context.Client(
@@ -43,10 +42,7 @@ data class YouTubeClient(
     )
 
     companion object {
-        /**
-         * Should be the latest Firefox ESR version.
-         */
-        const val USER_AGENT_WEB = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Firefox/128.0"
+        const val USER_AGENT_WEB = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:140.0) Gecko/20100101 Firefox/140.0"
 
         const val ORIGIN_YOUTUBE_MUSIC = "https://music.youtube.com"
         const val REFERER_YOUTUBE_MUSIC = "$ORIGIN_YOUTUBE_MUSIC/"
@@ -54,23 +50,24 @@ data class YouTubeClient(
 
         val WEB = YouTubeClient(
             clientName = "WEB",
-            clientVersion = "2.20250312.04.00",
+            clientVersion = "2.20260213.00.00",
             clientId = "1",
             userAgent = USER_AGENT_WEB,
         )
 
         val WEB_REMIX = YouTubeClient(
             clientName = "WEB_REMIX",
-            clientVersion = "1.20250310.01.00",
+            clientVersion = "1.20260213.01.00",
             clientId = "67",
             userAgent = USER_AGENT_WEB,
             loginSupported = true,
             useSignatureTimestamp = true,
+            useWebPoTokens = true,
         )
 
         val WEB_CREATOR = YouTubeClient(
             clientName = "WEB_CREATOR",
-            clientVersion = "1.20250312.03.01",
+            clientVersion = "1.20260213.00.00",
             clientId = "62",
             userAgent = USER_AGENT_WEB,
             loginSupported = true,
@@ -80,40 +77,60 @@ data class YouTubeClient(
 
         val TVHTML5 = YouTubeClient(
             clientName = "TVHTML5",
-            clientVersion = "7.20250312.16.00",
+            clientVersion = "7.20260213.00.00",
             clientId = "7",
             userAgent = "Mozilla/5.0(SMART-TV; Linux; Tizen 4.0.0.2) AppleWebkit/605.1.15 (KHTML, like Gecko) SamsungBrowser/9.2 TV Safari/605.1.15",
             loginSupported = true,
             loginRequired = true,
-            useSignatureTimestamp = true
+            useSignatureTimestamp = true,
+            useWebPoTokens = true,
         )
 
+        /**
+         * Embedded player that can bypass age-restriction.
+         * Does not require login for age-restricted content.
+         */
         val TVHTML5_SIMPLY_EMBEDDED_PLAYER = YouTubeClient(
             clientName = "TVHTML5_SIMPLY_EMBEDDED_PLAYER",
             clientVersion = "2.0",
             clientId = "85",
             userAgent = "Mozilla/5.0 (PlayStation; PlayStation 4/12.02) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.4 Safari/605.1.15",
             loginSupported = true,
-            loginRequired = true,
+            loginRequired = false,
             useSignatureTimestamp = true,
             isEmbedded = true,
         )
 
         val IOS = YouTubeClient(
             clientName = "IOS",
-            clientVersion = "20.10.4",
+            clientVersion = "21.03.1",
             clientId = "5",
-            userAgent = "com.google.ios.youtube/20.10.4 (iPhone16,2; U; CPU iOS 18_3_2 like Mac OS X;)",
-            osVersion = "18.3.2.22D82",
+            userAgent = "com.google.ios.youtube/21.03.1 (iPhone16,2; U; CPU iOS 18_2 like Mac OS X;)",
+            osVersion = "18.2.22C152",
         )
 
         val MOBILE = YouTubeClient(
             clientName = "ANDROID",
-            clientVersion = "20.10.38",
+            clientVersion = "21.03.38",
             clientId = "3",
-            userAgent = "com.google.android.youtube/20.10.38 (Linux; U; Android 11) gzip",
+            userAgent = "com.google.android.youtube/21.03.38 (Linux; U; Android 14) gzip",
             loginSupported = true,
             useSignatureTimestamp = true
+        )
+
+        /**
+         * Video not playable: Paid / Movie / Private / Age-restricted.
+         * Note: The 'Authorization' key must be excluded from the header.
+         * For some reason, PoToken is not required.
+         */
+        val ANDROID_NO_SDK = YouTubeClient(
+            clientName = "ANDROID",
+            clientVersion = "21.03.38",
+            clientId = "3",
+            userAgent = "com.google.android.youtube/21.03.38 (Linux; U; Android 14) gzip",
+            friendlyName = "Android No SDK",
+            loginSupported = false,
+            useSignatureTimestamp = false
         )
 
         val ANDROID_VR_NO_AUTH = YouTubeClient(
@@ -129,7 +146,6 @@ data class YouTubeClient(
          * Video not playable: Kids / Paid / Movie / Private / Age-restricted.
          * This client can only be used when logged out.
          */
-        // https://dumps.tadiphone.dev/dumps/oculus/eureka
         val ANDROID_VR_1_61_48 = YouTubeClient(
             clientName = "ANDROID_VR",
             clientVersion = "1.61.48",
@@ -172,13 +188,12 @@ data class YouTubeClient(
 
         /**
          * Cannot play livestreams and lacks HDR, but can play videos with music and labeled "for children".
-         * <a href=\"https://dumps.tadiphone.dev/dumps/google/barbet\">Google Pixel 9 Pro Fold</a>
          */
         val ANDROID_CREATOR = YouTubeClient(
             clientName = "ANDROID_CREATOR",
-            clientVersion = "23.47.101",
+            clientVersion = "25.03.101",
             clientId = "14",
-            userAgent = "com.google.android.apps.youtube.creator/23.47.101 (Linux; U; Android 15; en_US; Pixel 9 Pro Fold; Build/AP3A.241005.015.A2; Cronet/132.0.6779.0)",
+            userAgent = "com.google.android.apps.youtube.creator/25.03.101 (Linux; U; Android 15; en_US; Pixel 9 Pro Fold; Build/AP3A.241005.015.A2; Cronet/132.0.6779.0)",
             osName = "Android",
             osVersion = "15",
             deviceMake = "Google",
@@ -212,21 +227,12 @@ data class YouTubeClient(
         /**
          * The device machine id for the iPad 6th Gen (iPad7,6).
          * AV1 hardware decoding is not supported.
-         * See [this GitHub Gist](https://gist.github.com/adamawolf/3048717) for more information.
-         *
-         * Based on Google's actions to date, PoToken may not be required on devices with very low specs.
-         * For example, suppose the User-Agent for a PlayStation 3 (with 256MB of RAM) is used.
-         * Accessing 'Web' (https://www.youtube.com) will redirect to 'TV' (https://www.youtube.com/tv).
-         * 'TV' target devices with very low specs, such as embedded devices, game consoles, and blu-ray players, so PoToken is not required.
-         *
-         * For this reason, the device machine id for the iPad 6th Gen (with 2GB of RAM),
-         * the lowest spec device capable of running iPadOS 17, was used.
          */
         val IPADOS = YouTubeClient(
             clientName = "IOS",
-            clientVersion = "19.22.3",
+            clientVersion = "21.03.3",
             clientId = "5",
-            userAgent = "com.google.ios.youtube/19.22.3 (iPad7,6; U; CPU iPadOS 17_7_10 like Mac OS X; en-US)",
+            userAgent = "com.google.ios.youtube/21.03.3 (iPad7,6; U; CPU iPadOS 17_7_10 like Mac OS X; en-US)",
             osName = "iPadOS",
             osVersion = "17.7.10.21H450",
             deviceMake = "Apple",

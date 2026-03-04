@@ -61,7 +61,9 @@ import coil.compose.AsyncImage
 import com.zionhuang.innertube.YouTube
 import com.zionhuang.innertube.models.AlbumItem
 import com.zionhuang.innertube.models.ArtistItem
+import com.zionhuang.innertube.models.EpisodeItem
 import com.zionhuang.innertube.models.PlaylistItem
+import com.zionhuang.innertube.models.PodcastItem
 import com.zionhuang.innertube.models.SongItem
 import com.zionhuang.innertube.models.YTItem
 import com.zionhuang.music.LocalDatabase
@@ -737,6 +739,8 @@ fun YouTubeListItem(
         is AlbumItem -> joinByBullet(item.artists?.joinToString { it.name }, item.year?.toString())
         is ArtistItem -> null
         is PlaylistItem -> joinByBullet(item.author?.name, item.songCountText)
+        is EpisodeItem -> joinByBullet(item.author?.name, makeTimeString(item.duration?.times(1000L)))
+        is PodcastItem -> joinByBullet(item.author?.name, item.episodeCountText)
     },
     badges = badges,
     thumbnailContent = {
@@ -801,6 +805,8 @@ fun YouTubeGridItem(
             is AlbumItem -> joinByBullet(item.artists?.joinToString { it.name }, item.year?.toString())
             is ArtistItem -> null
             is PlaylistItem -> joinByBullet(item.author?.name, item.songCountText)
+            is EpisodeItem -> joinByBullet(item.author?.name, makeTimeString(item.duration?.times(1000L)))
+            is PodcastItem -> joinByBullet(item.author?.name, item.episodeCountText)
         }
 
         if (subtitle != null) {

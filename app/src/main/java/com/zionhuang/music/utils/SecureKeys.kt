@@ -29,7 +29,7 @@ object SecureKeys {
 
     // ---- Getters públicos ----
     val adMobBannerId: String
-        get() = get("ADMOB_BANNER_ID")
+        get() = get("ADMOB_BANNER_ID", "ca-app-pub-9451235108408321/6209009725")
 
     val petalBannerId: String
         get() = if (BuildConfig.DEBUG) {

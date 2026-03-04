@@ -59,7 +59,9 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import coil.compose.AsyncImage
 import com.zionhuang.innertube.models.AlbumItem
 import com.zionhuang.innertube.models.ArtistItem
+import com.zionhuang.innertube.models.EpisodeItem
 import com.zionhuang.innertube.models.PlaylistItem
+import com.zionhuang.innertube.models.PodcastItem
 import com.zionhuang.innertube.models.SongItem
 import com.zionhuang.innertube.models.WatchEndpoint
 import com.zionhuang.innertube.models.YTItem
@@ -297,6 +299,14 @@ fun HomeScreen(
                             is AlbumItem -> navController.navigate("album/${item.id}")
                             is ArtistItem -> navController.navigate("artist/${item.id}")
                             is PlaylistItem -> navController.navigate("online_playlist/${item.id}")
+                            is EpisodeItem -> playerConnection.playQueue(
+                                YouTubeQueue(
+                                    item.endpoint ?: WatchEndpoint(
+                                        videoId = item.id
+                                    ), item.asSongItem().toMediaMetadata()
+                                )
+                            )
+                            is PodcastItem -> navController.navigate("podcast/${item.id}")
                         }
                     },
                     onLongClick = {
@@ -322,6 +332,16 @@ fun HomeScreen(
 
                                 is PlaylistItem -> YouTubePlaylistMenu(
                                     playlist = item,
+                                    coroutineScope = scope,
+                                    onDismiss = menuState::dismiss
+                                )
+                                is EpisodeItem -> YouTubeSongMenu(
+                                    song = item.asSongItem(),
+                                    navController = navController,
+                                    onDismiss = menuState::dismiss
+                                )
+                                is PodcastItem -> YouTubePlaylistMenu(
+                                    playlist = item.asPlaylistItem(),
                                     coroutineScope = scope,
                                     onDismiss = menuState::dismiss
                                 )
@@ -827,6 +847,8 @@ fun HomeScreen(
                         is PlaylistItem -> luckyItem.playEndpoint?.let {
                             playerConnection.playQueue(YouTubeQueue(it))
                         }
+                        is EpisodeItem -> playerConnection.playQueue(YouTubeQueue.radio(luckyItem.asSongItem().toMediaMetadata()))
+                        is PodcastItem -> navController.navigate("podcast/${luckyItem.id}")
                     }
                 }
             }

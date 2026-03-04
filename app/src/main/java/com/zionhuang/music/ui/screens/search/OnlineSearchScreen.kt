@@ -36,7 +36,9 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.zionhuang.innertube.models.AlbumItem
 import com.zionhuang.innertube.models.ArtistItem
+import com.zionhuang.innertube.models.EpisodeItem
 import com.zionhuang.innertube.models.PlaylistItem
+import com.zionhuang.innertube.models.PodcastItem
 import com.zionhuang.innertube.models.SongItem
 import com.zionhuang.music.LocalDatabase
 import com.zionhuang.music.LocalPlayerConnection
@@ -167,7 +169,8 @@ fun OnlineSearchScreen(
                 isActive = when (item) {
                     is SongItem -> mediaMetadata?.id == item.id
                     is AlbumItem -> mediaMetadata?.album?.id == item.id
-                    else -> false
+                    is EpisodeItem -> mediaMetadata?.id == item.id
+                    is ArtistItem, is PlaylistItem, is PodcastItem -> false
                 },
                 isPlaying = isPlaying,
                 trailingContent = {
@@ -201,6 +204,16 @@ fun OnlineSearchScreen(
                                             coroutineScope = scope,
                                             onDismiss = menuState::dismiss,
                                         )
+                                    is EpisodeItem -> YouTubeSongMenu(
+                                        song = item.asSongItem(),
+                                        navController = navController,
+                                        onDismiss = menuState::dismiss
+                                    )
+                                    is PodcastItem -> YouTubePlaylistMenu(
+                                        playlist = item.asPlaylistItem(),
+                                        coroutineScope = scope,
+                                        onDismiss = menuState::dismiss
+                                    )
                                 }
                             }
                         }
@@ -237,6 +250,18 @@ fun OnlineSearchScreen(
                                     navController.navigate("online_playlist/${item.id}")
                                     onDismiss()
                                 }
+                            is EpisodeItem -> {
+                                if (item.id == mediaMetadata?.id) {
+                                    playerConnection.player.togglePlayPause()
+                                } else {
+                                    playerConnection.playQueue(YouTubeQueue.radio(item.asSongItem().toMediaMetadata()))
+                                    onDismiss()
+                                }
+                            }
+                            is PodcastItem -> {
+                                navController.navigate("online_playlist/${item.id}")
+                                onDismiss()
+                            }
                         }
                     }
                     .animateItem()

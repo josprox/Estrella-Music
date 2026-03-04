@@ -30,8 +30,8 @@ android {
         applicationId = "com.josprox.jossmusic"
         minSdk = 26
         targetSdk = 36
-        versionCode = 59
-        versionName = "2.2.7"
+        versionCode = 60
+        versionName = "2.2.8"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -224,6 +224,9 @@ dependencies {
     implementation(libs.bouncycastle)
     // Librería de consentimiento obligatoria para evitar el error 499
     implementation(libs.ads.consent)
+
+    // --- ADMOB (FALLBACK) ---
+    implementation(libs.google.ads)
 
     // --- DEPENDENCIAS PARA LA VERSIÓN "full" ---
     "fullImplementation"(libs.firebase.analytics)

@@ -1,9 +1,8 @@
 package com.zionhuang.music.utils
 
 import android.net.ConnectivityManager
-import androidx.media3.common.PlaybackException
 import com.zionhuang.music.constants.AudioQuality
-import com.zionhuang.innertube.NewPipeUtils
+import com.zionhuang.innertube.NewPipeExtractor
 import com.zionhuang.innertube.YouTube
 import com.zionhuang.innertube.models.YouTubeClient
 import com.zionhuang.innertube.models.YouTubeClient.Companion.IOS
@@ -281,13 +280,13 @@ object YTPlayerUtils {
         return false
     }
     /**
-     * Envoltura alrededor de la función [NewPipeUtils.getSignatureTimestamp] que reporta excepciones
+     * Envoltura alrededor de la función [NewPipeExtractor.getSignatureTimestamp] que reporta excepciones
      */
     private fun getSignatureTimestampOrNull(
         videoId: String
     ): Int? {
         Timber.tag(logTag).d("Obteniendo marca de tiempo de firma para videoId: $videoId")
-        return NewPipeUtils.getSignatureTimestamp(videoId)
+        return NewPipeExtractor.getSignatureTimestamp(videoId)
             .onSuccess { Timber.tag(logTag).d("Marca de tiempo de firma obtenida: $it") }
             .onFailure {
                 Timber.tag(logTag).e(it, "Error al obtener marca de tiempo de firma")
@@ -296,19 +295,13 @@ object YTPlayerUtils {
             .getOrNull()
     }
     /**
-     * Envoltura alrededor de la función [NewPipeUtils.getStreamUrl] que reporta excepciones
+     * Envoltura alrededor de la función [NewPipeExtractor.getStreamUrl] que reporta excepciones
      */
     private fun findUrlOrNull(
         format: PlayerResponse.StreamingData.Format,
         videoId: String
     ): String? {
         Timber.tag(logTag).d("Buscando URL del stream para formato: ${format.mimeType}, videoId: $videoId")
-        return NewPipeUtils.getStreamUrl(format, videoId)
-            .onSuccess { Timber.tag(logTag).d("URL del stream obtenida exitosamente") }
-            .onFailure {
-                Timber.tag(logTag).e(it, "Error al obtener URL del stream")
-                reportException(it)
-            }
-            .getOrNull()
+        return NewPipeExtractor.getStreamUrl(format, videoId)
     }
 }

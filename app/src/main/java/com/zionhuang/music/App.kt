@@ -63,8 +63,26 @@ class App : Application(), ImageLoaderFactory {
     @OptIn(DelicateCoroutinesApi::class)
     override fun onCreate() {
         super.onCreate()
-        instance = this;
+        instance = this
+        
+        if (BuildConfig.DEBUG) {
+            Timber.plant(Timber.DebugTree())
+        }
+        
+        logAppSignatureSHA256()
         com.huawei.hms.ads.HwAds.init(this)
+        // Explicitly configuration for non-Huawei devices (fixes Error 700 / Invalid AppInfo)
+        try {
+            val requestOptions = com.huawei.hms.ads.HwAds.getRequestOptions()?.toBuilder()
+                ?: com.huawei.hms.ads.RequestOptions.Builder()
+            
+            requestOptions.setAppLang(Locale.getDefault().language)
+            requestOptions.setAppCountry(Locale.getDefault().country)
+            
+            com.huawei.hms.ads.HwAds.setRequestOptions(requestOptions.build())
+        } catch (e: Exception) {
+            Timber.e(e, "Failed to configure Huawei Ads options")
+        }
 
         val locale = Locale.getDefault()
         val languageTag = locale.toLanguageTag().replace("-Hant", "") // replace zh-Hant-* to zh-*
@@ -195,6 +213,40 @@ class App : Application(), ImageLoaderFactory {
                     settings.remove(AccountChannelHandleKey)
                 }
             }
+        }
+    }
+
+    private fun logAppSignatureSHA256() {
+        try {
+            android.util.Log.e("HMS_DEBUG", "Starting signature check...")
+            val packageInfo = if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.P) {
+                packageManager.getPackageInfo(packageName, android.content.pm.PackageManager.GET_SIGNING_CERTIFICATES)
+            } else {
+                packageManager.getPackageInfo(packageName, android.content.pm.PackageManager.GET_SIGNATURES)
+            }
+
+            val signatures = if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.P) {
+                packageInfo.signingInfo?.apkContentsSigners ?: packageInfo.signingInfo?.signingCertificateHistory
+            } else {
+                packageInfo.signatures
+            }
+
+            signatures?.forEach { signature ->
+                val md = java.security.MessageDigest.getInstance("SHA-256")
+                md.update(signature.toByteArray())
+                val digest = md.digest()
+                val sb = StringBuilder()
+                for (b in digest) {
+                    sb.append(String.format("%02X:", b))
+                }
+                if (sb.isNotEmpty()) {
+                    sb.setLength(sb.length - 1)
+                }
+                val signatureLog = "APP_SIGNATURE_SHA256: $sb"
+                android.util.Log.e("HMS_DEBUG", signatureLog)
+            }
+        } catch (e: Exception) {
+            android.util.Log.e("HMS_DEBUG", "Failed to get app signature", e)
         }
     }
 }

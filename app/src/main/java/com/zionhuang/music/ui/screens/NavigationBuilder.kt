@@ -115,6 +115,16 @@ fun NavGraphBuilder.navigationBuilder(
         AlbumScreen(navController)
     }
     composable(
+        route = "podcast/{podcastId}",
+        arguments = listOf(
+            navArgument("podcastId") {
+                type = NavType.StringType
+            },
+        )
+    ) {
+        PodcastScreen(navController)
+    }
+    composable(
         route = "artist/{artistId}",
         arguments = listOf(
             navArgument("artistId") {

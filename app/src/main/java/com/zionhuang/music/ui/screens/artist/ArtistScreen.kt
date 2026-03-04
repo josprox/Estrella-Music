@@ -68,7 +68,9 @@ import coil.compose.AsyncImage
 import com.valentinilk.shimmer.shimmer
 import com.zionhuang.innertube.models.AlbumItem
 import com.zionhuang.innertube.models.ArtistItem
+import com.zionhuang.innertube.models.EpisodeItem
 import com.zionhuang.innertube.models.PlaylistItem
+import com.zionhuang.innertube.models.PodcastItem
 import com.zionhuang.innertube.models.SongItem
 import com.zionhuang.innertube.models.WatchEndpoint
 import com.zionhuang.music.LocalDatabase
@@ -101,8 +103,6 @@ import com.zionhuang.music.ui.utils.resize
 import com.zionhuang.music.constants.ModernDesignKey
 import com.zionhuang.music.utils.rememberPreference
 import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.graphics.TileMode
-import androidx.compose.foundation.layout.BoxWithConstraints
 import com.zionhuang.music.viewmodels.ArtistViewModel
 import com.zionhuang.music.ui.component.PetalAdsBanner
 
@@ -666,7 +666,8 @@ fun ArtistScreen(
                                         isActive = when (item) {
                                             is SongItem -> mediaMetadata?.id == item.id
                                             is AlbumItem -> mediaMetadata?.album?.id == item.id
-                                            else -> false
+                                            is EpisodeItem -> mediaMetadata?.id == item.id
+                                            is ArtistItem, is PlaylistItem, is PodcastItem -> false
                                         },
                                         isPlaying = isPlaying,
                                         coroutineScope = coroutineScope,
@@ -678,6 +679,8 @@ fun ArtistScreen(
                                                         is AlbumItem -> navController.navigate("album/${item.id}")
                                                         is ArtistItem -> navController.navigate("artist/${item.id}")
                                                         is PlaylistItem -> navController.navigate("online_playlist/${item.id}")
+                                                        is EpisodeItem -> playerConnection.playQueue(YouTubeQueue.radio(item.asSongItem().toMediaMetadata()))
+                                                        is PodcastItem -> navController.navigate("online_playlist/${item.id}")
                                                     }
                                                 },
                                                 onLongClick = {
@@ -710,6 +713,16 @@ fun ArtistScreen(
                                                                     coroutineScope = coroutineScope,
                                                                     onDismiss = menuState::dismiss,
                                                                 )
+                                                            is EpisodeItem -> YouTubeSongMenu(
+                                                                song = item.asSongItem(),
+                                                                navController = navController,
+                                                                onDismiss = menuState::dismiss
+                                                            )
+                                                            is PodcastItem -> YouTubePlaylistMenu(
+                                                                playlist = item.asPlaylistItem(),
+                                                                coroutineScope = coroutineScope,
+                                                                onDismiss = menuState::dismiss
+                                                            )
                                                         }
                                                     }
                                                 },

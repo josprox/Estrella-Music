@@ -102,3 +102,4 @@ env.vault
 /app/src/main/res/translation_history.json
 /app/agconnect-services.json
 keystore.properties
+app/agconnect-services.json

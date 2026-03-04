@@ -23,7 +23,8 @@ import io.ktor.client.HttpClient
 import io.ktor.client.request.get
 import io.ktor.client.request.header
 import io.ktor.client.statement.bodyAsText
-import org.json.JSONObject
+import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.Json
 
 /**
  * Modified by Zion Huang
@@ -95,15 +96,24 @@ open class KizzyRPC(token: String) {
         COMPETING(5)
     }
 
+    @Serializable
+    private data class DiscordUserData(
+        val username: String? = null,
+        val global_name: String? = null
+    )
+
     companion object {
         suspend fun getUserInfo(token: String): Result<UserInfo> = runCatching {
             val client = HttpClient()
             val response = client.get("https://discord.com/api/v9/users/@me") {
                 header("Authorization", token)
             }.bodyAsText()
-            val json = JSONObject(response)
-            val username = json.getString("username")
-            val name = json.getString("global_name")
+            
+            val json = Json { ignoreUnknownKeys = true }
+            val userData = json.decodeFromString<DiscordUserData>(response)
+            
+            val username = userData.username ?: ""
+            val name = userData.global_name ?: ""
             client.close()
 
             UserInfo(username, name)

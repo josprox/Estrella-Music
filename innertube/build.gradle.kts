@@ -1,10 +1,23 @@
 plugins {
+    id("com.android.library")
     alias(libs.plugins.kotlin.serialization)
-    kotlin("jvm")
 }
 
-kotlin {
-    jvmToolchain(21)
+android {
+    namespace = "com.zionhuang.innertube"
+    compileSdk = 36
+
+    defaultConfig {
+        minSdk = 26
+    }
+
+    kotlin {
+        jvmToolchain(21)
+    }
+
+    buildFeatures {
+        buildConfig = true
+    }
 }
 
 dependencies {
@@ -15,5 +28,6 @@ dependencies {
     implementation(libs.ktor.client.encoding)
     implementation(libs.brotli)
     implementation(libs.newpipe.extractor)
+    implementation(libs.timber)
     testImplementation(libs.junit)
 }

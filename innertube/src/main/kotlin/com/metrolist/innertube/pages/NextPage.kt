@@ -23,6 +23,10 @@ data class NextResult(
 object NextPage {
     fun fromPlaylistPanelVideoRenderer(renderer: PlaylistPanelVideoRenderer): SongItem? {
         val longByLineRuns = renderer.longBylineText?.runs?.splitBySeparator() ?: return null
+
+        // Extract library tokens using the new method that properly handles multiple toggle items
+        val libraryTokens = PageHelper.extractLibraryTokensFromMenuItems(renderer.menu?.menuRenderer?.items)
+
         return SongItem(
             id = renderer.videoId ?: return null,
             title =
@@ -55,6 +59,7 @@ object NextPage {
                     ?.firstOrNull()
                     ?.text
                     ?.parseTime() ?: return null,
+            musicVideoType = renderer.navigationEndpoint.musicVideoType,
             thumbnail =
                 renderer.thumbnail.thumbnails
                     .lastOrNull()
@@ -63,12 +68,8 @@ object NextPage {
                 renderer.badges?.find {
                     it.musicInlineBadgeRenderer?.icon?.iconType == "MUSIC_EXPLICIT_BADGE"
                 } != null,
-            libraryAddToken = PageHelper.extractFeedbackToken(renderer.menu?.menuRenderer?.items?.find {
-                it.toggleMenuServiceItemRenderer?.defaultIcon?.iconType?.startsWith("LIBRARY_") == true
-            }?.toggleMenuServiceItemRenderer, "LIBRARY_ADD"),
-            libraryRemoveToken = PageHelper.extractFeedbackToken(renderer.menu?.menuRenderer?.items?.find {
-                it.toggleMenuServiceItemRenderer?.defaultIcon?.iconType?.startsWith("LIBRARY_") == true
-            }?.toggleMenuServiceItemRenderer, "LIBRARY_SAVED")
+            libraryAddToken = libraryTokens.addToken,
+            libraryRemoveToken = libraryTokens.removeToken
         )
     }
 }
