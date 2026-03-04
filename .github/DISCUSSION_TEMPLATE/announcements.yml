@@ -1,0 +1,23 @@
+title: "[Anuncio] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ¡Gracias por compartir este anuncio con la comunidad de Estrella Music!
+  - type: textarea
+    id: announcement
+    attributes:
+      label: Anuncio
+      description: Escribe aquí el texto de tu anuncio.
+      placeholder: Escribe aquí tu anuncio...
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Descripción
+      description: Proporciona más detalles o contexto sobre el anuncio.
+      placeholder: Más detalles...
+    validations:
+      required: false

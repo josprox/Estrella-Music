@@ -1,0 +1,23 @@
+title: "[Idea] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ¡Gracias por compartir tu idea! Cuéntanos qué nueva funcionalidad o mejora te gustaría ver en Estrella Music.
+  - type: textarea
+    id: idea
+    attributes:
+      label: Descripción de la idea
+      description: Describe la funcionalidad o mejora que propones.
+      placeholder: Me gustaría que la app pudiera...
+    validations:
+      required: true
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivación
+      description: ¿Por qué sería útil esta mejora?
+      placeholder: Esto sería útil porque...
+    validations:
+      required: false
