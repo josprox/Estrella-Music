@@ -52,6 +52,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import com.zionhuang.music.LocalPlayerConnection
+import com.zionhuang.music.LocalSetFullscreenVideo
 import com.zionhuang.music.constants.PlayerBackgroundStyle
 import com.zionhuang.music.constants.PlayerHorizontalPadding
 import com.zionhuang.music.constants.ShowLyricsKey
@@ -82,20 +83,7 @@ fun Thumbnail(
 
     var hasVideo by remember { mutableStateOf(false) }
     var isVideoReady by remember { mutableStateOf(false) }
-    var isFullscreen by remember { mutableStateOf(false) }
-
-    val activity = context as? Activity
-    
-    DisposableEffect(isFullscreen) {
-        if (isFullscreen) {
-            activity?.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE
-        } else {
-            activity?.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
-        }
-        onDispose {
-            activity?.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
-        }
-    }
+    val setFullscreen = LocalSetFullscreenVideo.current
 
     DisposableEffect(audioPlayer) {
         val listener = object : androidx.media3.common.Player.Listener {
@@ -188,7 +176,7 @@ fun Thumbnail(
                             if (hasVideo && isVideoReady) {
                                 Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.BottomEnd) {
                                     IconButton(
-                                        onClick = { isFullscreen = true },
+                                        onClick = { setFullscreen(true) },
                                         modifier = Modifier.padding(8.dp).background(Color.Black.copy(alpha=0.4f), RoundedCornerShape(12.dp))
                                     ) {
                                         Icon(Icons.Default.Fullscreen, contentDescription = "Pantalla Completa", tint = Color.White)
@@ -242,73 +230,4 @@ fun Thumbnail(
         }
     }
 
-    if (isFullscreen) {
-        Dialog(
-            onDismissRequest = { isFullscreen = false },
-            properties = DialogProperties(
-                usePlatformDefaultWidth = false,
-                dismissOnBackPress = true,
-                decorFitsSystemWindows = false
-            )
-        ) {
-            Box(modifier = Modifier.fillMaxSize().background(Color.Black)) {
-                AndroidView(
-                    factory = { ctx -> 
-                        PlayerView(ctx).apply { 
-                            player = audioPlayer
-                            useController = true
-                        }
-                    },
-                    modifier = Modifier.fillMaxSize()
-                )
-                
-                // Top controls overlay
-                androidx.compose.foundation.layout.Row(
-                    modifier = Modifier.fillMaxWidth().padding(16.dp).statusBarsPadding(),
-                    horizontalArrangement = androidx.compose.foundation.layout.Arrangement.SpaceBetween
-                ) {
-                    IconButton(
-                        onClick = { isFullscreen = false },
-                        modifier = Modifier.background(Color.Black.copy(alpha=0.4f), androidx.compose.foundation.shape.CircleShape)
-                    ) {
-                        Icon(Icons.Default.FullscreenExit, contentDescription = "Salir de pantalla completa", tint = Color.White)
-                    }
-                    
-                    var expandedQuality by remember { mutableStateOf(false) }
-                    val currentVideoQuality by rememberPreference(VideoQualityKey, "Auto")
-                    
-                    Box {
-                        IconButton(
-                            onClick = { expandedQuality = true },
-                            modifier = Modifier.background(Color.Black.copy(alpha=0.4f), androidx.compose.foundation.shape.CircleShape)
-                        ) {
-                            Icon(Icons.Default.HighQuality, contentDescription = "Calidad", tint = Color.White)
-                        }
-                        DropdownMenu(
-                            expanded = expandedQuality,
-                            onDismissRequest = { expandedQuality = false }
-                        ) {
-                            listOf("Auto", "1080p", "720p", "480p", "360p").forEach { q ->
-                                DropdownMenuItem(
-                                    text = { Text(q, fontWeight = if (q == currentVideoQuality) FontWeight.Bold else null) },
-                                    onClick = {
-                                        expandedQuality = false
-                                        CoroutineScope(Dispatchers.IO).launch {
-                                            context.dataStore.edit { it[VideoQualityKey] = q }
-                                        }
-                                        val pos = audioPlayer.currentPosition
-                                        val item = audioPlayer.currentMediaItem
-                                        if (item != null) {
-                                            audioPlayer.setMediaItem(item, pos)
-                                            audioPlayer.prepare()
-                                        }
-                                    }
-                                )
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
 }

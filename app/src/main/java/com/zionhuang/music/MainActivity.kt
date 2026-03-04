@@ -30,6 +30,23 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.viewinterop.AndroidView
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.FullscreenExit
+import androidx.compose.material.icons.filled.HighQuality
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.Text
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
 import androidx.media3.ui.PlayerView
 import androidx.compose.ui.res.stringResource
 import androidx.core.content.ContextCompat
@@ -81,6 +98,8 @@ import javax.inject.Inject
 import javax.inject.Named
 
 val LocalPiPMode = compositionLocalOf { false }
+val LocalFullscreenVideo = compositionLocalOf { false }
+val LocalSetFullscreenVideo = compositionLocalOf<(Boolean) -> Unit> { {} }
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
@@ -94,6 +113,7 @@ class MainActivity : ComponentActivity() {
 
     private var isInPipMode by mutableStateOf(false)
     private var isVideoModeEnabled by mutableStateOf(false)
+    private var isFullscreenVideo by mutableStateOf(false)
 
     private val serviceConnection = object : ServiceConnection {
         override fun onServiceConnected(name: ComponentName?, service: IBinder?) {
@@ -241,37 +261,76 @@ class MainActivity : ComponentActivity() {
 
     private fun initializeApp() {
         setContent {
-            if (isInPipMode && playerConnection?.player != null) {
-                // PiP: solo el video, sin más UI
-                Box(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .background(Color.Black)
-                ) {
-                    AndroidView(
-                        factory = { ctx ->
-                            PlayerView(ctx).apply {
-                                player = playerConnection!!.player
-                                useController = false
-                                resizeMode = androidx.media3.ui.AspectRatioFrameLayout.RESIZE_MODE_ZOOM
-                            }
-                        },
-                        modifier = Modifier.fillMaxSize()
-                    )
+            val setFullscreen: (Boolean) -> Unit = { value ->
+                isFullscreenVideo = value
+                requestedOrientation = if (value)
+                    android.content.pm.ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE
+                else
+                    android.content.pm.ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
+            }
+
+            when {
+                isInPipMode && playerConnection?.player != null -> {
+                    // PiP: solo el video, sin más UI
+                    Box(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .background(Color.Black)
+                    ) {
+                        AndroidView(
+                            factory = { ctx ->
+                                PlayerView(ctx).apply {
+                                    player = playerConnection!!.player
+                                    useController = false
+                                    resizeMode = androidx.media3.ui.AspectRatioFrameLayout.RESIZE_MODE_ZOOM
+                                }
+                            },
+                            modifier = Modifier.fillMaxSize()
+                        )
+                    }
                 }
-            } else {
-                CompositionLocalProvider(LocalPiPMode provides isInPipMode) {
-                    InnerTuneMainScreen(
-                        database = database,
-                        downloadUtil = downloadUtil,
-                        playerConnection = playerConnection,
-                        updateViewModel = updateViewModel,
-                        initialIntent = initialIntent,
-                        onConsumeInitialIntent = { initialIntent = null },
-                        addOnNewIntentListener = this@MainActivity::addOnNewIntentListener,
-                        removeOnNewIntentListener = this@MainActivity::removeOnNewIntentListener,
-                        setSystemBarAppearance = ::setSystemBarAppearance
-                    )
+                isFullscreenVideo && playerConnection?.player != null -> {
+                    // Fullscreen: PlayerView con controles, orientación landscape
+                    Box(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .background(Color.Black)
+                    ) {
+                        AndroidView(
+                            factory = { ctx ->
+                                PlayerView(ctx).apply {
+                                    player = playerConnection!!.player
+                                    useController = false
+                                    resizeMode = androidx.media3.ui.AspectRatioFrameLayout.RESIZE_MODE_FIT
+                                }
+                            },
+                            modifier = Modifier.fillMaxSize()
+                        )
+                        // Botones overlay: salir fullscreen + calidad
+                        FullscreenVideoControls(
+                            player = playerConnection!!.player,
+                            onExitFullscreen = { setFullscreen(false) }
+                        )
+                    }
+                }
+                else -> {
+                    CompositionLocalProvider(
+                        LocalPiPMode provides isInPipMode,
+                        LocalFullscreenVideo provides isFullscreenVideo,
+                        LocalSetFullscreenVideo provides setFullscreen,
+                    ) {
+                        InnerTuneMainScreen(
+                            database = database,
+                            downloadUtil = downloadUtil,
+                            playerConnection = playerConnection,
+                            updateViewModel = updateViewModel,
+                            initialIntent = initialIntent,
+                            onConsumeInitialIntent = { initialIntent = null },
+                            addOnNewIntentListener = this@MainActivity::addOnNewIntentListener,
+                            removeOnNewIntentListener = this@MainActivity::removeOnNewIntentListener,
+                            setSystemBarAppearance = ::setSystemBarAppearance
+                        )
+                    }
                 }
             }
         }
@@ -491,3 +550,88 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+@androidx.compose.runtime.Composable
+fun FullscreenVideoControls(
+    player: androidx.media3.common.Player,
+    onExitFullscreen: () -> Unit,
+) {
+    val context = androidx.compose.ui.platform.LocalContext.current
+    var expandedQuality by androidx.compose.runtime.remember { androidx.compose.runtime.mutableStateOf(false) }
+    val currentVideoQuality by com.zionhuang.music.utils.rememberPreference(com.zionhuang.music.constants.VideoQualityKey, "Auto")
+    val coroutineScope = androidx.compose.runtime.rememberCoroutineScope()
+
+    androidx.compose.foundation.layout.Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .statusBarsPadding()
+    ) {
+        androidx.compose.foundation.layout.Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 12.dp, vertical = 8.dp)
+                .align(Alignment.TopStart),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            IconButton(
+                onClick = onExitFullscreen,
+                modifier = Modifier.background(
+                    androidx.compose.ui.graphics.Color.Black.copy(alpha = 0.5f),
+                    androidx.compose.foundation.shape.CircleShape
+                )
+            ) {
+                Icon(
+                    imageVector = androidx.compose.material.icons.Icons.Default.FullscreenExit,
+                    contentDescription = "Salir fullscreen",
+                    tint = androidx.compose.ui.graphics.Color.White
+                )
+            }
+
+            androidx.compose.foundation.layout.Box {
+                IconButton(
+                    onClick = { expandedQuality = true },
+                    modifier = Modifier.background(
+                        androidx.compose.ui.graphics.Color.Black.copy(alpha = 0.5f),
+                        androidx.compose.foundation.shape.CircleShape
+                    )
+                ) {
+                    Icon(
+                        imageVector = androidx.compose.material.icons.Icons.Default.HighQuality,
+                        contentDescription = "Calidad",
+                        tint = androidx.compose.ui.graphics.Color.White
+                    )
+                }
+                androidx.compose.material3.DropdownMenu(
+                    expanded = expandedQuality,
+                    onDismissRequest = { expandedQuality = false }
+                ) {
+                    listOf("Auto", "1080p", "720p", "480p", "360p").forEach { q ->
+                        androidx.compose.material3.DropdownMenuItem(
+                            text = {
+                                androidx.compose.material3.Text(
+                                    q,
+                                    fontWeight = if (q == currentVideoQuality) androidx.compose.ui.text.font.FontWeight.Bold else null
+                                )
+                            },
+                            onClick = {
+                                expandedQuality = false
+                                coroutineScope.launch(Dispatchers.IO) {
+                                    context.dataStore.edit { it[com.zionhuang.music.constants.VideoQualityKey] = q }
+                                }
+                                // Forzar recarga del stream con la nueva calidad
+                                val pos = player.currentPosition
+                                val item = player.currentMediaItem
+                                if (item != null) {
+                                    player.stop()
+                                    player.setMediaItem(item, pos)
+                                    player.prepare()
+                                    player.playWhenReady = true
+                                }
+                            }
+                        )
+                    }
+                }
+            }
+        }
+    }
+}
