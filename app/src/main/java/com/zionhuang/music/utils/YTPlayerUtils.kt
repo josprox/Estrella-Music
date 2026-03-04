@@ -238,8 +238,20 @@ object YTPlayerUtils {
         audioQuality: AudioQuality,
         connectivityManager: ConnectivityManager,
     ): PlayerResponse.StreamingData.Format? {
-        Timber.tag(logTag).d("Buscando formato con calidad de audio: $audioQuality, red medida: ${connectivityManager.isActiveNetworkMetered}")
+        Timber.tag(logTag).d("Buscando formato de video/audio, red medida: ${connectivityManager.isActiveNetworkMetered}")
 
+        // 1. Prioritize muxed formats (Video + Audio) from "formats" list.
+        val muxedFormat = playerResponse.streamingData?.formats
+            ?.maxByOrNull { 
+                it.bitrate * if (connectivityManager.isActiveNetworkMetered) -1 else 1 
+            }
+
+        if (muxedFormat != null) {
+            Timber.tag(logTag).d("Formato Muxed (Video+Audio) seleccionado: ${muxedFormat.mimeType}, bitrate: ${muxedFormat.bitrate}")
+            return muxedFormat
+        }
+
+        // 2. Fallback to audio-only format from "adaptiveFormats"
         val format = playerResponse.streamingData?.adaptiveFormats
             ?.filter { it.isAudio }
             ?.maxByOrNull {
@@ -251,7 +263,7 @@ object YTPlayerUtils {
             }
 
         if (format != null) {
-            Timber.tag(logTag).d("Formato seleccionado: ${format.mimeType}, bitrate: ${format.bitrate}")
+            Timber.tag(logTag).d("Formato de solo audio (fallback) seleccionado: ${format.mimeType}, bitrate: ${format.bitrate}")
         } else {
             Timber.tag(logTag).d("No se encontró formato de audio adecuado")
         }

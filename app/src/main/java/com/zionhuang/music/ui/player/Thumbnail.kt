@@ -44,9 +44,7 @@ import com.zionhuang.music.utils.rememberPreference
 
 @Composable
 fun Thumbnail(
-    exoPlayer: ExoPlayer,
     showVideoPlayer: Boolean,
-    isVideoReady: Boolean,
     sliderPositionProvider: () -> Long?,
     backgroundStyle: PlayerBackgroundStyle,
     modifier: Modifier = Modifier,
@@ -54,12 +52,35 @@ fun Thumbnail(
     val playerConnection = LocalPlayerConnection.current ?: return
     val currentView = LocalView.current
     val context = LocalContext.current
+    val audioPlayer = playerConnection.player
 
     val mediaMetadata by playerConnection.mediaMetadata.collectAsState()
     val error by playerConnection.error.collectAsState()
 
     val showLyrics by rememberPreference(ShowLyricsKey, false)
     var dragAmount by remember { mutableStateOf(0f) }
+
+    var hasVideo by remember { mutableStateOf(false) }
+    var isVideoReady by remember { mutableStateOf(false) }
+
+    DisposableEffect(audioPlayer) {
+        val listener = object : androidx.media3.common.Player.Listener {
+            override fun onTracksChanged(tracks: androidx.media3.common.Tracks) {
+                hasVideo = tracks.groups.any { it.type == androidx.media3.common.C.TRACK_TYPE_VIDEO && it.length > 0 }
+            }
+            override fun onVideoSizeChanged(videoSize: androidx.media3.common.VideoSize) {
+                isVideoReady = videoSize.width > 0 && videoSize.height > 0
+            }
+        }
+        audioPlayer.addListener(listener)
+        // Initialize states
+        hasVideo = audioPlayer.currentTracks.groups.any { it.type == androidx.media3.common.C.TRACK_TYPE_VIDEO && it.length > 0 }
+        isVideoReady = audioPlayer.videoSize.width > 0 && audioPlayer.videoSize.height > 0
+
+        onDispose {
+            audioPlayer.removeListener(listener)
+        }
+    }
 
     // Después
     DisposableEffect(showLyrics, showVideoPlayer) {
@@ -99,17 +120,17 @@ fun Thumbnail(
                         ) {
                             // Video Player
                             AndroidView(
-                                factory = { PlayerView(context).apply { player = exoPlayer; useController = false } },
+                                factory = { PlayerView(context).apply { player = audioPlayer; useController = false } },
                                 modifier = Modifier
                                     .fillMaxSize()
-                                    .alpha(if (isVideoReady) 1f else 0f) // Aparece cuando está listo
+                                    .alpha(if (hasVideo && isVideoReady) 1f else 0f)
                             )
 
                             // Placeholder: Muestra la carátula o un indicador mientras el video carga
                             AnimatedVisibility(
-                                visible = !isVideoReady,
-                                enter = fadeIn(),
-                                exit = fadeOut(),
+                                visible = !hasVideo || !isVideoReady,
+                                enter = androidx.compose.animation.fadeIn(),
+                                exit = androidx.compose.animation.fadeOut(),
                                 modifier = Modifier.fillMaxSize()
                             ) {
                                 if (mediaMetadata?.thumbnailUrl != null) {
@@ -124,7 +145,9 @@ fun Thumbnail(
                                     modifier = Modifier.fillMaxSize().background(Color.Black.copy(alpha = 0.5f)),
                                     contentAlignment = Alignment.Center
                                 ) {
-                                    CircularProgressIndicator(color = Color.White)
+                                    if (hasVideo && !isVideoReady) {
+                                        CircularProgressIndicator(color = Color.White)
+                                    }
                                 }
                             }
                         }

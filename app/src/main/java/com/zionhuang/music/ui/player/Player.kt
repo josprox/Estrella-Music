@@ -77,15 +77,12 @@ import androidx.core.graphics.drawable.toBitmap
 import androidx.media3.common.C
 import androidx.media3.common.MediaItem
 import androidx.media3.common.Player
-import androidx.media3.exoplayer.ExoPlayer
 import androidx.navigation.NavController
 import androidx.palette.graphics.Palette
 import coil.compose.AsyncImage
 import coil.imageLoader
 import coil.request.ImageRequest
 import coil.size.Size
-import com.zionhuang.innertube.YouTube
-import com.zionhuang.innertube.models.YouTubeClient
 import com.zionhuang.music.LocalPlayerConnection
 import com.zionhuang.music.constants.DarkModeKey
 import com.zionhuang.music.constants.PlayerBackgroundStyle
@@ -219,26 +216,6 @@ fun BottomSheetPlayer(
     var sliderPosition by remember { mutableStateOf<Long?>(null) }
     //endregion
 
-    //region Video Player Logic
-    var videoUrl by remember { mutableStateOf<String?>(null) }
-    var isVideoReady by remember { mutableStateOf(false) }
-
-    val exoPlayer = remember {
-        ExoPlayer.Builder(context).build().apply {
-            trackSelectionParameters = trackSelectionParameters
-                .buildUpon()
-                .setTrackTypeDisabled(C.TRACK_TYPE_AUDIO, true)
-                .build()
-        }
-    }
-
-    DisposableEffect(Unit) {
-        onDispose {
-            exoPlayer.release()
-        }
-    }
-    //endregion
-
     //region Player Synchronization
     LaunchedEffect(isPlaying, playbackState) {
         while (isActive && isPlaying && playbackState == Player.STATE_READY) {
@@ -250,67 +227,8 @@ fun BottomSheetPlayer(
         duration = audioPlayer.duration
     }
 
-    LaunchedEffect(currentSong) {
-        val songId = currentSong?.song?.id
-        if (songId == null) {
-            videoUrl = null
-            return@LaunchedEffect
-        }
-
-        isVideoReady = false
-        exoPlayer.stop()
-        exoPlayer.clearMediaItems()
-
-        videoUrl = withContext(Dispatchers.IO) {
-            val playerResponse = YouTube.player(songId, client = YouTubeClient.MOBILE).getOrNull()
-            playerResponse?.streamingData?.adaptiveFormats
-                ?.firstOrNull { it.mimeType?.startsWith("video/mp4") == true && it.qualityLabel == "360p" }?.url
-                ?: playerResponse?.streamingData?.adaptiveFormats
-                    ?.firstOrNull { it.mimeType?.startsWith("video") == true }?.url
-        }
-
-        val url = videoUrl
-        if (!url.isNullOrEmpty()) {
-            exoPlayer.setMediaItem(MediaItem.fromUri(url))
-            exoPlayer.prepare()
-
-            val listener = object : Player.Listener {
-                override fun onPlaybackStateChanged(playbackState: Int) {
-                    if (playbackState == Player.STATE_READY) {
-                        Timber.tag("PlayerSync").d("Video player is now in STATE_READY.")
-                        isVideoReady = true
-                        exoPlayer.seekTo(audioPlayer.currentPosition)
-                        exoPlayer.removeListener(this)
-                    }
-                }
-            }
-            exoPlayer.addListener(listener)
-        }
-        Log.d("BottomSheetPlayer", "Video URL for $songId: $videoUrl")
-    }
-
-    LaunchedEffect(showVideoPlayer, isPlaying, isVideoReady) {
-        if (showVideoPlayer && isPlaying && isVideoReady) {
-            exoPlayer.playWhenReady = true
-            while (isActive) {
-                val audioPosition = audioPlayer.currentPosition
-                val videoPosition = exoPlayer.currentPosition
-                if (abs(audioPosition - videoPosition) > 500) {
-                    Log.d("PlayerSync", "Resyncing video from $videoPosition to $audioPosition")
-                    exoPlayer.seekTo(audioPosition)
-                }
-                delay(1000)
-            }
-        } else {
-            exoPlayer.playWhenReady = false
-        }
-    }
-
     val seekTo: (Long) -> Unit = { newPosition ->
         audioPlayer.seekTo(newPosition)
-        if (showVideoPlayer && isVideoReady) {
-            exoPlayer.seekTo(newPosition)
-        }
         position = newPosition
     }
     //endregion
@@ -327,8 +245,6 @@ fun BottomSheetPlayer(
         onDismiss = {
             audioPlayer.stop()
             audioPlayer.clearMediaItems()
-            exoPlayer.stop()
-            exoPlayer.clearMediaItems()
         },
         collapsedContent = {
             MiniPlayer(
@@ -436,9 +352,7 @@ fun BottomSheetPlayer(
                                 .padding(12.dp)
                         ) {
                             Thumbnail(
-                                exoPlayer = exoPlayer,
                                 showVideoPlayer = showVideoPlayer,
-                                isVideoReady = isVideoReady,
                                 sliderPositionProvider = { sliderPosition },
                                 backgroundStyle = backgroundStyle,
                                 modifier = Modifier
@@ -470,9 +384,7 @@ fun BottomSheetPlayer(
                             modifier = Modifier.weight(1f, fill = true)
                         ) {
                             Thumbnail(
-                                exoPlayer = exoPlayer,
                                 showVideoPlayer = showVideoPlayer,
-                                isVideoReady = isVideoReady,
                                 sliderPositionProvider = { sliderPosition },
                                 backgroundStyle = backgroundStyle,
                                 modifier = Modifier.nestedScroll(state.preUpPostDownNestedScrollConnection)
