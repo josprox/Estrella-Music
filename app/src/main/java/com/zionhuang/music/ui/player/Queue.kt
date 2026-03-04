@@ -256,7 +256,7 @@ fun Queue(
         val queueWindows by playerConnection.queueWindows.collectAsState()
         val mutableQueueWindows = remember { mutableStateListOf<Timeline.Window>() }
         val queueLength = remember(queueWindows) {
-            queueWindows.sumOf { it.mediaItem.metadata!!.duration }
+            queueWindows.sumOf { it.mediaItem.metadata?.duration ?: 0 }
         }
 
         val coroutineScope = rememberCoroutineScope()
@@ -340,6 +340,9 @@ fun Queue(
                     key = window.uid.hashCode()
                 ) {
                     val currentItem by rememberUpdatedState(window)
+                    // Skip items whose metadata hasn't loaded yet (can happen during PiP recomposition)
+                    val metadata = window.mediaItem.metadata ?: return@ReorderableItem
+
                     val dismissState = rememberSwipeToDismissBoxState(
                         positionalThreshold = { totalDistance -> totalDistance },
                         confirmValueChange = { dismissValue ->
@@ -360,7 +363,7 @@ fun Queue(
 
                     val content = @Composable {
                         MediaMetadataListItem(
-                            mediaMetadata = window.mediaItem.metadata!!,
+                            mediaMetadata = metadata,
                             isActive = index == currentWindowIndex,
                             isPlaying = isPlaying,
                             trailingContent = {
@@ -374,7 +377,7 @@ fun Queue(
                                         onClick = {
                                             menuState.show {
                                                 MediaMetadataMenu(
-                                                    mediaMetadata = window.mediaItem.metadata!!,
+                                                    mediaMetadata = metadata,
                                                     navController = navController,
                                                     bottomSheetState = state,
                                                     onDismiss = menuState::dismiss,

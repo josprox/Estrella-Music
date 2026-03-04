@@ -13,6 +13,7 @@ val PlayerTextAlignmentKey = stringPreferencesKey("playerTextAlignment")
 val SliderStyleKey = stringPreferencesKey("sliderStyle")
 val ShowVideoPlayerKey = booleanPreferencesKey("show_video_player_enabled")
 val ModernDesignKey = booleanPreferencesKey("modern_design_enabled")
+val VideoQualityKey = stringPreferencesKey("videoQuality")
 
 enum class SliderStyle {
     DEFAULT, SQUIGGLY

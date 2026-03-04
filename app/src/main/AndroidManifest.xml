@@ -93,7 +93,9 @@
             android:exported="true"
             android:launchMode="singleTask"
             android:theme="@style/splashScreen"
-            android:windowSoftInputMode="adjustResize">
+            android:windowSoftInputMode="adjustResize"
+            android:supportsPictureInPicture="true"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation">
 
             <!-- Intent Filter principal para abrir la app -->
             <intent-filter>

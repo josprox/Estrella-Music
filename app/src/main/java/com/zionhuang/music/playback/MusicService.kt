@@ -314,9 +314,10 @@ class MusicService : MediaLibraryService(),
                 }
             }
 
-        dataStore.data
-            .map { it[SkipSilenceKey] ?: false }
-            .distinctUntilChanged()
+        combine(
+            dataStore.data.map { it[SkipSilenceKey] ?: false }.distinctUntilChanged(),
+            dataStore.data.map { it[com.zionhuang.music.constants.ShowVideoPlayerKey] ?: false }.distinctUntilChanged()
+        ) { skipSilence, showVideo -> if (showVideo) false else skipSilence }
             .collectLatest(scope) { player.skipSilenceEnabled = it }
 
         combine(
@@ -568,66 +569,7 @@ class MusicService : MediaLibraryService(),
     }
 
     private fun createDataSourceFactory(): DataSource.Factory {
-        return ResolvingDataSource.Factory(createCacheDataSource()) { dataSpec ->
-            val mediaId = dataSpec.key ?: error("No media id")
-            Timber.d("Resolviendo DataSpec para mediaId: $mediaId")
-            if (downloadCache.isCached(mediaId, dataSpec.position, if (dataSpec.length >= 0) dataSpec.length else 1)) {
-                Timber.i("Media '$mediaId' encontrado en la caché de descargas. Usando el archivo local.")
-                scope.launch(Dispatchers.IO) { recoverSong(mediaId) }
-                return@Factory dataSpec
-            }
-            val useJossRedAsPrimary = runBlocking(Dispatchers.IO) { shouldUseJossRedFirst() }
-            if (useJossRedAsPrimary) {
-                Timber.i("Estrategia Principal: JOSS RED (Activado por el usuario).")
-                try {
-                    if (jossRedKey.isBlank()) {
-                        throw JossRedClient.JossRedException(-1, "La clave de Joss Red está vacía en la app.")
-                    }
-                    val modifiedDataSpec = JossRedClient.resolveDataSpec(this@MusicService, dataSpec, mediaId, jossRedKey)
-                    Timber.i("Joss Red resolvió la URL del CDN exitosamente para '$mediaId'.")
-                    scope.launch(Dispatchers.IO) { recoverSong(mediaId) }
-                    return@Factory modifiedDataSpec
-                } catch (e: Exception) {
-                    Timber.e(e, "La estrategia principal (Joss Red) falló. Esto es un error fatal para la reproducción.")
-                    handlePlaybackError(e)
-                }
-            }
-            Timber.i("Estrategia Principal: YOUTUBE/NEWPIPE (Joss Red desactivado o sin login).")
-            var lastError: Throwable? = null
-            repeat(4) { attempt ->
-                try {
-                    val playbackData = runBlocking(Dispatchers.IO) { YTPlayerUtils.playerResponseForPlayback(mediaId, null, audioQuality, connectivityManager).getOrThrow() }
-                    updateFormatInfo(mediaId, playbackData.format, playbackData.audioConfig?.loudnessDb)
-                    scope.launch(Dispatchers.IO) { recoverSong(mediaId, playbackData) }
-                    val streamUrl = playbackData.streamUrl
-                    Timber.i("YouTube/NewPipe exitoso (intento ${attempt + 1}): $streamUrl")
-                    return@Factory dataSpec.withUri(streamUrl.toUri())
-                } catch (e: Exception) {
-                    lastError = e
-                    if (e is YTPlayerUtils.PlaybackException && e.statusCode == 403) {
-                        Timber.w(e, "YouTube/NewPipe falló con 403 (intento ${attempt + 1}), reintentando...")
-                    } else {
-                        Timber.e(e, "YouTube/NewPipe falló con un error no recuperable.")
-                        return@repeat
-                    }
-                }
-            }
-            Timber.w("La estrategia principal (YouTube/NewPipe) falló. Verificando si es posible un fallback inteligente a Joss Red.")
-            if (hasJwt() && jossRedKey.isNotBlank()) {
-                Timber.i("Usuario logueado. Intentando fallback inteligente a Joss Red...")
-                try {
-                    val modifiedDataSpec = JossRedClient.resolveDataSpec(this@MusicService, dataSpec, mediaId, jossRedKey)
-                    Timber.i("¡Fallback inteligente a Joss Red exitoso para '$mediaId'!")
-                    scope.launch(Dispatchers.IO) { recoverSong(mediaId) }
-                    return@Factory modifiedDataSpec
-                } catch (fallbackError: Exception) {
-                    Timber.e(fallbackError, "El fallback inteligente a Joss Red también falló. Reportando el error original de YouTube/NewPipe.")
-                    handlePlaybackError(lastError ?: fallbackError)
-                }
-            }
-            Timber.e(lastError, "Todos los métodos de obtención de stream para '$mediaId' han fallado.")
-            handlePlaybackError(lastError ?: Exception("No se pudo obtener la URL del stream por ningún método."))
-        }
+        return createCacheDataSource()
     }
 
     private fun handlePlaybackError(throwable: Throwable): Nothing {
@@ -647,7 +589,126 @@ class MusicService : MediaLibraryService(),
         }
     }
 
-    private fun createMediaSourceFactory() = DefaultMediaSourceFactory(createDataSourceFactory()) { arrayOf(MatroskaExtractor(), FragmentedMp4Extractor(), Mp4Extractor()) }
+    private fun createMediaSourceFactory(): androidx.media3.exoplayer.source.MediaSource.Factory {
+        val dataSourceFactory = createDataSourceFactory()
+        val extractorsFactory = androidx.media3.extractor.ExtractorsFactory { 
+            arrayOf(androidx.media3.extractor.mkv.MatroskaExtractor(), androidx.media3.extractor.mp4.FragmentedMp4Extractor(), androidx.media3.extractor.mp4.Mp4Extractor()) 
+        }
+        
+        return object : androidx.media3.exoplayer.source.MediaSource.Factory {
+            private val defaultFactory = DefaultMediaSourceFactory(dataSourceFactory, extractorsFactory)
+            
+            override fun setDrmSessionManagerProvider(drmSessionManagerProvider: androidx.media3.exoplayer.drm.DrmSessionManagerProvider) = apply {
+                defaultFactory.setDrmSessionManagerProvider(drmSessionManagerProvider)
+            }
+
+            override fun setLoadErrorHandlingPolicy(loadErrorHandlingPolicy: androidx.media3.exoplayer.upstream.LoadErrorHandlingPolicy) = apply {
+                defaultFactory.setLoadErrorHandlingPolicy(loadErrorHandlingPolicy)
+            }
+
+            override fun getSupportedTypes() = defaultFactory.supportedTypes
+
+            @androidx.annotation.OptIn(androidx.media3.common.util.UnstableApi::class)
+            override fun createMediaSource(mediaItem: androidx.media3.common.MediaItem): androidx.media3.exoplayer.source.MediaSource {
+                return LazyResolvingMediaSource(mediaItem) {
+                    val mediaId = mediaItem.mediaId
+                    
+                    val cachedBytes = downloadCache.getCachedBytes(mediaId, 0, -1)
+                    val format = database.format(mediaId).first()
+                    val contentLength = format?.contentLength ?: -1L
+                    val isFullyCached = contentLength > 0 && cachedBytes >= contentLength
+                    
+                    if (isFullyCached) {
+                        Timber.i("Media '\$mediaId' completamente en caché. Reproducción local instántanea.")
+                        return@LazyResolvingMediaSource defaultFactory.createMediaSource(
+                            mediaItem.buildUpon().setUri("https://play.jossmusic.local/").setCustomCacheKey(mediaId).build()
+                        )
+                    }
+
+                    val isVideoData = this@MusicService.dataStore.data.map { it[com.zionhuang.music.constants.ShowVideoPlayerKey] ?: false }.first()
+                    val videoQuality = if (isVideoData) this@MusicService.dataStore.data.map { it[com.zionhuang.music.constants.VideoQualityKey] ?: "Auto" }.first() else "Audio"
+                    
+                    val useJossRedAsPrimary = shouldUseJossRedFirst()
+                    val playbackData = try {
+                        if (useJossRedAsPrimary) {
+                            try {
+                                if (jossRedKey.isBlank()) throw JossRedClient.JossRedException(-1, "La clave de Joss Red está vacía en la app.")
+                                
+                                val streamUrl = com.josprox.jossredconnect.JossRedClient.getStreamingUrl(this@MusicService, mediaId, jossRedKey)
+
+                                if (videoQuality != "Audio" && videoQuality != "Auto" && videoQuality != "480p" && videoQuality != "720p") {
+                                    throw Exception("High quality requested, falling back to YTPlayerUtils")
+                                }
+                                
+                                val dummyFormat = PlayerResponse.StreamingData.Format(
+                                    itag = 0, mimeType = "", bitrate = 0, contentLength = 0L, audioSampleRate = 0, audioChannels = 0, quality = "", url = null, width = null, height = null, fps = null, qualityLabel = null, audioQuality = null, averageBitrate = null, lastModified = null, approxDurationMs = null, signatureCipher = null, cipher = null, audioTrack = null, loudnessDb = null
+                                )
+                                
+                                YTPlayerUtils.PlaybackData(audioConfig = null, videoDetails = null, format = dummyFormat, streamUrl = streamUrl, videoStreamUrl = null, streamExpiresInSeconds = 0)
+                            } catch (e: Exception) {
+                                fetchWithRetry(mediaId, audioQuality, videoQuality, connectivityManager)
+                            }
+                        } else {
+                            fetchWithRetry(mediaId, audioQuality, videoQuality, connectivityManager)
+                        }
+                    } catch (e: Exception) {
+                        if (cachedBytes > 0) {
+                            Timber.w(e, "Fallback a caché parcial offline/fallo de red para '\$mediaId'. Cacheados: \$cachedBytes bytes.")
+                            return@LazyResolvingMediaSource defaultFactory.createMediaSource(
+                                mediaItem.buildUpon().setUri("https://play.jossmusic.local/").setCustomCacheKey(mediaId).build()
+                            )
+                        }
+                        try {
+                            if (hasJwt() && jossRedKey.isNotBlank()) {
+                                val streamUrl = JossRedClient.getStreamingUrl(this@MusicService, mediaId, jossRedKey)
+                                val dummyFormat = PlayerResponse.StreamingData.Format(itag = 0, mimeType = "", bitrate = 0, contentLength = 0L, audioSampleRate = 0, audioChannels = 0, quality = "", url = null, width = null, height = null, fps = null, qualityLabel = null, audioQuality = null, averageBitrate = null, lastModified = null, approxDurationMs = null, signatureCipher = null, cipher = null, audioTrack = null, loudnessDb = null)
+                                YTPlayerUtils.PlaybackData(audioConfig = null, videoDetails = null, format = dummyFormat, streamUrl = streamUrl, videoStreamUrl = null, streamExpiresInSeconds = 0)
+                            } else {
+                                throw e
+                            }
+                        } catch (e2: Exception) {
+                            handlePlaybackError(e)
+                            throw PlaybackException("Resolution error", e, PlaybackException.ERROR_CODE_REMOTE_ERROR)
+                        }
+                    }
+
+                    updateFormatInfo(mediaId, playbackData.format, playbackData.audioConfig?.loudnessDb)
+                    recoverSong(mediaId, playbackData)
+
+                    val audioSource = defaultFactory.createMediaSource(
+                        mediaItem.buildUpon().setUri(playbackData.streamUrl.toUri()).setCustomCacheKey(mediaId).setMediaMetadata(mediaItem.mediaMetadata).build()
+                    )
+
+                    if (playbackData.videoStreamUrl != null) {
+                        val videoItem = androidx.media3.common.MediaItem.Builder().setUri(playbackData.videoStreamUrl.toUri()).setMediaId(mediaId + "_video").build()
+                        val videoSource = defaultFactory.createMediaSource(videoItem)
+                        androidx.media3.exoplayer.source.MergingMediaSource(videoSource, audioSource)
+                    } else {
+                        audioSource
+                    }
+                }
+            }
+            
+            suspend fun fetchWithRetry(mediaId: String, audioQuality: AudioQuality, videoQuality: String, connectivityManager: ConnectivityManager): YTPlayerUtils.PlaybackData {
+                var playbackData: YTPlayerUtils.PlaybackData? = null
+                var lastError: Throwable? = null
+                repeat(4) { attempt ->
+                    try {
+                        playbackData = YTPlayerUtils.playerResponseForPlayback(mediaId, null, audioQuality, videoQuality, connectivityManager).getOrThrow()
+                        return@repeat
+                    } catch (e: Exception) {
+                        lastError = e
+                        if (e is YTPlayerUtils.PlaybackException && e.statusCode == 403) {
+                            Timber.w(e, "YouTube/NewPipe falló con 403, reintentando...")
+                        } else {
+                            return@repeat
+                        }
+                    }
+                }
+                return playbackData ?: throw lastError ?: Exception("Falló la resolución de youtube")
+            }
+        }
+    }
 
     private fun createRenderersFactory() =
         object : DefaultRenderersFactory(this) {

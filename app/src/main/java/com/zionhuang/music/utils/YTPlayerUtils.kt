@@ -57,6 +57,7 @@ object YTPlayerUtils {
         val videoDetails: PlayerResponse.VideoDetails?,
         val format: PlayerResponse.StreamingData.Format,
         val streamUrl: String,
+        val videoStreamUrl: String?,
         val streamExpiresInSeconds: Int,
     )
     /**
@@ -69,6 +70,7 @@ object YTPlayerUtils {
         videoId: String,
         playlistId: String? = null,
         audioQuality: AudioQuality,
+        videoQuality: String = "Auto",
         connectivityManager: ConnectivityManager,
     ): Result<PlaybackData> = runCatching {
         Timber.tag(logTag).d("Obteniendo respuesta del reproductor para videoId: $videoId, playlistId: $playlistId")
@@ -99,6 +101,7 @@ object YTPlayerUtils {
         val videoDetails = mainPlayerResponse.videoDetails
         var format: PlayerResponse.StreamingData.Format? = null
         var streamUrl: String? = null
+        var videoStreamUrl: String? = null
         var streamExpiresInSeconds: Int? = null
         var streamPlayerResponse: PlayerResponse? = null
 
@@ -106,6 +109,7 @@ object YTPlayerUtils {
             // reiniciar para cada cliente
             format = null
             streamUrl = null
+            videoStreamUrl = null
             streamExpiresInSeconds = null
 
             // decidir qué cliente usar para los streams y cargar su respuesta del reproductor
@@ -135,12 +139,13 @@ object YTPlayerUtils {
             if (streamPlayerResponse?.playabilityStatus?.status == "OK") {
                 Timber.tag(logTag).d("Estado de respuesta del reproductor OK para cliente: ${if (clientIndex == -1) MAIN_CLIENT.clientName else STREAM_FALLBACK_CLIENTS[clientIndex].clientName}")
 
-                format =
-                    findFormat(
+                val foundFormats = findFormat(
                         streamPlayerResponse,
                         audioQuality,
+                        videoQuality,
                         connectivityManager,
                     )
+                format = foundFormats.first
 
                 if (format == null) {
                     Timber.tag(logTag).d("No se encontró formato adecuado para cliente: ${if (clientIndex == -1) MAIN_CLIENT.clientName else STREAM_FALLBACK_CLIENTS[clientIndex].clientName}")
@@ -153,6 +158,11 @@ object YTPlayerUtils {
                 if (streamUrl == null) {
                     Timber.tag(logTag).d("No se encontró URL del stream para el formato")
                     continue
+                }
+
+                if (foundFormats.second != null) {
+                    videoStreamUrl = findUrlOrNull(foundFormats.second!!, videoId)
+                    Timber.tag(logTag).d("URL de video de alta calidad encontrado: $videoStreamUrl")
                 }
 
                 streamExpiresInSeconds = streamPlayerResponse.streamingData?.expiresInSeconds
@@ -216,6 +226,7 @@ object YTPlayerUtils {
             videoDetails,
             format,
             streamUrl,
+            videoStreamUrl,
             streamExpiresInSeconds,
         )
     }
@@ -236,39 +247,48 @@ object YTPlayerUtils {
     private fun findFormat(
         playerResponse: PlayerResponse,
         audioQuality: AudioQuality,
+        videoQuality: String,
         connectivityManager: ConnectivityManager,
-    ): PlayerResponse.StreamingData.Format? {
-        Timber.tag(logTag).d("Buscando formato de video/audio, red medida: ${connectivityManager.isActiveNetworkMetered}")
+    ): Pair<PlayerResponse.StreamingData.Format?, PlayerResponse.StreamingData.Format?> {
+        Timber.tag(logTag).d("Buscando formato de video/audio, calidad: $videoQuality, red medida: ${connectivityManager.isActiveNetworkMetered}")
 
-        // 1. Prioritize muxed formats (Video + Audio) from "formats" list.
-        val muxedFormat = playerResponse.streamingData?.formats
-            ?.maxByOrNull { 
-                it.bitrate * if (connectivityManager.isActiveNetworkMetered) -1 else 1 
-            }
-
-        if (muxedFormat != null) {
-            Timber.tag(logTag).d("Formato Muxed (Video+Audio) seleccionado: ${muxedFormat.mimeType}, bitrate: ${muxedFormat.bitrate}")
-            return muxedFormat
+        val targetHeight = when (videoQuality) {
+            "1080p" -> 1080
+            "720p" -> 720
+            "480p" -> 480
+            "360p" -> 360
+            else -> 720 // Default Auto preference
         }
 
-        // 2. Fallback to audio-only format from "adaptiveFormats"
-        val format = playerResponse.streamingData?.adaptiveFormats
+        val muxedFormats = playerResponse.streamingData?.formats?.filter { (it.height ?: 0) > 0 }?.sortedByDescending { it.height ?: 0 }
+        val muxedFormat = muxedFormats?.firstOrNull { (it.height ?: 0) <= targetHeight } ?: muxedFormats?.lastOrNull()
+
+        val adaptiveVideoFormats = playerResponse.streamingData?.adaptiveFormats?.filter { it.mimeType.startsWith("video/") && it.height != null }?.sortedByDescending { it.height }
+        val adaptiveVideoFormat = adaptiveVideoFormats?.firstOrNull { it.height!! <= targetHeight } ?: adaptiveVideoFormats?.lastOrNull()
+
+        val audioFormat = playerResponse.streamingData?.adaptiveFormats
             ?.filter { it.isAudio }
             ?.maxByOrNull {
                 it.bitrate * when (audioQuality) {
                     AudioQuality.AUTO -> if (connectivityManager.isActiveNetworkMetered) -1 else 1
                     AudioQuality.HIGH -> 1
                     AudioQuality.LOW -> -1
-                } + (if (it.mimeType.startsWith("audio/webm")) 10240 else 0) // preferir stream opus
+                } + (if (it.mimeType.startsWith("audio/webm")) 10240 else 0)
             }
 
-        if (format != null) {
-            Timber.tag(logTag).d("Formato de solo audio (fallback) seleccionado: ${format.mimeType}, bitrate: ${format.bitrate}")
-        } else {
-            Timber.tag(logTag).d("No se encontró formato de audio adecuado")
+        if ((targetHeight >= 1080 && adaptiveVideoFormat != null) || muxedFormat == null || videoQuality == "1080p") {
+            if (adaptiveVideoFormat != null && audioFormat != null) {
+                Timber.tag(logTag).d("Formato adaptativo seleccionado: ${adaptiveVideoFormat.mimeType}, height: ${adaptiveVideoFormat.height}")
+                return Pair(audioFormat, adaptiveVideoFormat)
+            }
         }
 
-        return format
+        if (muxedFormat != null) {
+            Timber.tag(logTag).d("Formato Muxed seleccionado: ${muxedFormat.mimeType}")
+            return Pair(muxedFormat, null)
+        }
+
+        return Pair(audioFormat, null)
     }
     /**
      * Verifica si la URL del stream devuelve un estado exitoso.

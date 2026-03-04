@@ -6,6 +6,7 @@ import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.content.ServiceConnection
+import android.content.res.Configuration
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
@@ -17,9 +18,19 @@ import androidx.activity.compose.setContent
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.compositionLocalOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.viewinterop.AndroidView
+import androidx.media3.ui.PlayerView
 import androidx.compose.ui.res.stringResource
 import androidx.core.content.ContextCompat
 import androidx.core.view.WindowCompat
@@ -38,7 +49,9 @@ import com.zionhuang.music.constants.AlwaysCloudBackupKey
 import com.zionhuang.music.constants.DisableScreenshotKey
 import com.zionhuang.music.constants.FirstUseAtKey
 import com.zionhuang.music.constants.OnboardingShownKey
+import com.zionhuang.music.constants.ShowVideoPlayerKey
 import com.zionhuang.music.constants.StopMusicOnTaskClearKey
+import com.zionhuang.music.constants.VideoQualityKey
 import com.zionhuang.music.db.MusicDatabase
 import com.zionhuang.music.playback.DownloadUtil
 import com.zionhuang.music.playback.MusicService
@@ -67,6 +80,8 @@ import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 import javax.inject.Named
 
+val LocalPiPMode = compositionLocalOf { false }
+
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     @Inject lateinit var database: MusicDatabase
@@ -76,6 +91,9 @@ class MainActivity : ComponentActivity() {
 
     private var isServiceBound = false
     private var playerConnection by mutableStateOf<PlayerConnection?>(null)
+
+    private var isInPipMode by mutableStateOf(false)
+    private var isVideoModeEnabled by mutableStateOf(false)
 
     private val serviceConnection = object : ServiceConnection {
         override fun onServiceConnected(name: ComponentName?, service: IBinder?) {
@@ -108,6 +126,33 @@ class MainActivity : ComponentActivity() {
             isServiceBound = false
         }
         super.onStop()
+    }
+
+    override fun onUserLeaveHint() {
+        super.onUserLeaveHint()
+        if (!isVideoModeEnabled) return
+        
+        val player = playerConnection?.player
+        if (player != null && player.isPlaying) {
+            val hasVideo = player.currentTracks.groups.any { it.type == androidx.media3.common.C.TRACK_TYPE_VIDEO && it.length > 0 }
+            if (hasVideo) {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    try {
+                        val params = android.app.PictureInPictureParams.Builder()
+                            .setAspectRatio(android.util.Rational(16, 9))
+                            .build()
+                        enterPictureInPictureMode(params)
+                    } catch (e: IllegalStateException) {
+                        android.util.Log.w("MainActivity", "PiP no soportado en este dispositivo/configuración: ${e.message}")
+                    }
+                }
+            }
+        }
+    }
+
+    override fun onPictureInPictureModeChanged(isInPictureInPictureMode: Boolean, newConfig: Configuration) {
+        super.onPictureInPictureModeChanged(isInPictureInPictureMode, newConfig)
+        isInPipMode = isInPictureInPictureMode
     }
 
     override fun onDestroy() {
@@ -157,6 +202,13 @@ class MainActivity : ComponentActivity() {
                 }
         }
 
+        lifecycleScope.launch {
+            dataStore.data
+                .map { it[ShowVideoPlayerKey] == true }
+                .distinctUntilChanged()
+                .collectLatest { isVideoModeEnabled = it }
+        }
+
         requestNotificationPermission()
     }
 
@@ -189,17 +241,39 @@ class MainActivity : ComponentActivity() {
 
     private fun initializeApp() {
         setContent {
-            InnerTuneMainScreen(
-                database = database,
-                downloadUtil = downloadUtil,
-                playerConnection = playerConnection,
-                updateViewModel = updateViewModel,
-                initialIntent = initialIntent,
-                onConsumeInitialIntent = { initialIntent = null },
-                addOnNewIntentListener = this::addOnNewIntentListener,
-                removeOnNewIntentListener = this::removeOnNewIntentListener,
-                setSystemBarAppearance = ::setSystemBarAppearance
-            )
+            if (isInPipMode && playerConnection?.player != null) {
+                // PiP: solo el video, sin más UI
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .background(Color.Black)
+                ) {
+                    AndroidView(
+                        factory = { ctx ->
+                            PlayerView(ctx).apply {
+                                player = playerConnection!!.player
+                                useController = false
+                                resizeMode = androidx.media3.ui.AspectRatioFrameLayout.RESIZE_MODE_ZOOM
+                            }
+                        },
+                        modifier = Modifier.fillMaxSize()
+                    )
+                }
+            } else {
+                CompositionLocalProvider(LocalPiPMode provides isInPipMode) {
+                    InnerTuneMainScreen(
+                        database = database,
+                        downloadUtil = downloadUtil,
+                        playerConnection = playerConnection,
+                        updateViewModel = updateViewModel,
+                        initialIntent = initialIntent,
+                        onConsumeInitialIntent = { initialIntent = null },
+                        addOnNewIntentListener = this@MainActivity::addOnNewIntentListener,
+                        removeOnNewIntentListener = this@MainActivity::removeOnNewIntentListener,
+                        setSystemBarAppearance = ::setSystemBarAppearance
+                    )
+                }
+            }
         }
         lifecycleScope.launch { tryScheduleDailyCloudBackup() }
     }
