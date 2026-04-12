@@ -92,6 +92,10 @@ Puedes contribuir mediante Pull Requests o ayudando directamente en la plataform
 [![Translation status](https://hosted.weblate.org/widget/innertune/multi-auto.svg)](https://hosted.weblate.org/engage/innertune/)
 
 ---
+## 💫 Crecimiento
+
+[![Star History Chart](https://api.star-history.com/chart?repos=josprox/Estrella-Music&type=date&legend=top-left)](https://www.star-history.com/?repos=josprox%2FEstrella-Music&type=date&legend=top-left)
+---
 
 #### Documentación disponible con DeepWiki
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/josprox/Joss-Music)
