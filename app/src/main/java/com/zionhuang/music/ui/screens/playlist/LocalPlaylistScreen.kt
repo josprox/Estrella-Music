@@ -210,7 +210,7 @@ fun LocalPlaylistScreen(
         lazyListState = lazyListState,
         scrollThresholdPadding = LocalPlayerAwareWindowInsets.current.asPaddingValues()
     ) { from, to ->
-        val headerItemCount = if (isSearching) 0 else 2 // Adaptación para el conteo de headers
+        val headerItemCount = if (isSearching) 2 else 3 // Adaptación para el conteo de headers
         if (to.index >= headerItemCount && from.index >= headerItemCount) {
             val currentDragInfo = dragInfo
             dragInfo = if (currentDragInfo == null) (from.index - headerItemCount) to (to.index - headerItemCount)
