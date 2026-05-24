@@ -3,7 +3,7 @@
 agcp = "1.9.4.300"
 compose-bom = "2026.01.00"
 
-androidGradlePlugin = "9.0.0"
+androidGradlePlugin = "9.1.1"
 annotation = "1.9.1"
 coilComposeVersion = "2.7.0"
 dotenvVaultKotlin = "0.0.3"

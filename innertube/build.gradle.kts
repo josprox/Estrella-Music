@@ -5,19 +5,21 @@ plugins {
 
 android {
     namespace = "com.zionhuang.innertube"
-    compileSdk = 36
+    compileSdk = 37
 
     defaultConfig {
         minSdk = 26
     }
 
-    kotlin {
-        jvmToolchain(21)
+    compileOptions {
+        isCoreLibraryDesugaringEnabled = true
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
     }
+}
 
-    buildFeatures {
-        buildConfig = true
-    }
+kotlin {
+    jvmToolchain(21)
 }
 
 dependencies {
@@ -27,7 +29,11 @@ dependencies {
     implementation(libs.ktor.serialization.json)
     implementation(libs.ktor.client.encoding)
     implementation(libs.brotli)
-    implementation(libs.newpipe.extractor)
+    implementation("com.github.MetrolistGroup:MetrolistExtractor:6305155") {
+        exclude(group = "com.google.protobuf")
+    }
     implementation(libs.timber)
     testImplementation(libs.junit)
+
+    coreLibraryDesugaring(libs.desugaring)
 }

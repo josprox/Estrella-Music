@@ -265,7 +265,10 @@ data class SearchSummaryPage(
                     val podcastIndex = if (isUnfilteredSearch) 2 else 1
 
                     EpisodeItem(
-                        id = renderer.playlistItemData?.videoId ?: return null,
+                        // In filtered search, playlistItemData may be absent; fall back to watchEndpoint.
+                        id = renderer.playlistItemData?.videoId
+                            ?: renderer.navigationEndpoint?.watchEndpoint?.videoId
+                            ?: return null,
                         title =
                             renderer.flexColumns
                                 .firstOrNull()
@@ -325,7 +328,10 @@ data class SearchSummaryPage(
                     val listRun = (secondaryLine + thirdLine).clean()
 
                     SongItem(
-                        id = renderer.playlistItemData?.videoId ?: return null,
+                        // playlistItemData may be absent in some search contexts; fall back to watchEndpoint.
+                        id = renderer.playlistItemData?.videoId
+                            ?: renderer.navigationEndpoint?.watchEndpoint?.videoId
+                            ?: return null,
                         title =
                             renderer.flexColumns
                                 .firstOrNull()

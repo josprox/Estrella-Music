@@ -92,9 +92,12 @@ class AuthService(
         body: JSONObject,
         headers: Map<String, String> = headers()
     ): Pair<Int, String> = withContext(Dispatchers.IO) {
+        val fullUrl = "${baseUrl}${urlPath}"
+        Log.d("JOSS_DEBUG", "Preparando POST a: $fullUrl")
+        
         val reqBody = body.toString().toRequestBody(jsonMedia)
         val reqBuilder = Request.Builder()
-            .url("${baseUrl}${urlPath}")
+            .url(fullUrl)
             .post(reqBody)
         headers.forEach { (k, v) -> reqBuilder.addHeader(k, v) }
         val url = reqBuilder.build().url.toString()
@@ -110,8 +113,14 @@ class AuthService(
         urlPath: String,
         headers: Map<String, String>
     ): Pair<Int, String> = withContext(Dispatchers.IO) {
+        val fullUrl = "${baseUrl}${urlPath}"
+        if (!fullUrl.startsWith("http")) {
+            Log.e("JOSS_DEBUG", "URL Inválida: $fullUrl. Verifica la configuración de JOSSRED en env.vault")
+            throw IOException("URL mal configurada: $fullUrl")
+        }
+
         val reqBuilder = Request.Builder()
-            .url("${baseUrl}${urlPath}")
+            .url(fullUrl)
             .get()
         headers.forEach { (k, v) -> reqBuilder.addHeader(k, v) }
         val url = reqBuilder.build().url.toString()
@@ -316,8 +325,14 @@ class AuthService(
         }
         return try {
             val (code, bodyStr) = withContext(Dispatchers.IO) {
+                val fullUrl = "${baseUrl}api/refresh"
+                if (!fullUrl.startsWith("http")) {
+                    Log.e("JOSS_DEBUG", "URL Inválida en Refresh: $fullUrl")
+                    throw IOException("URL mal configurada: $fullUrl")
+                }
+                
                 val reqBuilder = Request.Builder()
-                    .url("${baseUrl}api/refresh")
+                    .url(fullUrl)
                     .post("{}".toRequestBody(jsonMedia))
 
                 val hdrs = headers().toMutableMap().apply {

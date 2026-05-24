@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.jossred.client" // Nombre del paquete registrado en Joss Red
-    compileSdk = 36
+    compileSdk = 37
 
     defaultConfig {
         minSdk = 21

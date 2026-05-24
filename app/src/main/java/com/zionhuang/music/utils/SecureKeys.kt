@@ -41,7 +41,11 @@ object SecureKeys {
         get() = get("ONESIGNAL_APP_ID")
 
     val jossRedBaseUrl: String
-        get() = get("JOSSRED").let { if (it.endsWith("/")) it else "$it/" }
+        get() = get("JOSSRED").let { 
+            if (it.isBlank()) "https://placeholder.com/" // Evita el crash de OkHttp
+            else if (it.endsWith("/")) it 
+            else "$it/" 
+        }
 
     val jossRedApiToken: String
         get() = get("JOSSRED_API")

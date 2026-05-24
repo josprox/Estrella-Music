@@ -755,7 +755,7 @@ class InnerTube {
                     append("Authorization", "SAPISIDHASH ${currentTime}_${sapisidHash}")
                 }
             }
-            contentType(ContentType.Application.FormUrlEncoded)
+            contentType(ContentType.Application.OctetStream)
             setBody(data)
             onUpload { bytesSentTotal, contentLength ->
                 contentLength?.let {

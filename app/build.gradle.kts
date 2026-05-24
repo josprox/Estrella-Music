@@ -24,12 +24,12 @@ if (isFullBuild && System.getenv("PULL_REQUEST") == null) {
 
 android {
     namespace = "com.zionhuang.music"
-    compileSdk = 36
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "com.josprox.jossmusic"
         minSdk = 26
-        targetSdk = 36
+        targetSdk = 37
         versionCode = 60
         versionName = "2.2.8"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -63,13 +63,17 @@ android {
                 "proguard-rules.pro"
             )
             buildConfigField("String", "DOTENV_KEY", System.getenv("DOTENV_KEY") ?: "\"\"")
-            signingConfig = signingConfigs.getByName("release")
+            if (rootProject.file("keystore.properties").exists()) {
+                signingConfig = signingConfigs.getByName("release")
+            }
         }
 
         debug {
             // applicationIdSuffix = ".debug" // Temporarily removed for Huawei Ads testing
             buildConfigField("String", "DOTENV_KEY", System.getenv("DOTENV_KEY") ?: "\"\"")
-            signingConfig = signingConfigs.getByName("release")
+            if (rootProject.file("keystore.properties").exists()) {
+                signingConfig = signingConfigs.getByName("release")
+            }
         }
     }
 
@@ -98,6 +102,12 @@ android {
     buildFeatures {
         buildConfig = true
         compose = true
+    }
+
+    compileOptions {
+        isCoreLibraryDesugaringEnabled = true
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
     }
 
     kotlin {

@@ -1,20 +1,26 @@
 package com.zionhuang.music.playback
 
 
+import android.app.ForegroundServiceStartNotAllowedException
+import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
-import android.content.pm.PackageManager
+import android.content.pm.ServiceInfo
 import android.database.SQLException
 import android.media.audiofx.AudioEffect
 import android.net.ConnectivityManager
 import android.os.Binder
 import android.os.Build
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationManagerCompat
+import androidx.core.app.ServiceCompat
 import androidx.core.content.getSystemService
 import androidx.core.net.toUri
 import androidx.datastore.preferences.core.edit
@@ -53,9 +59,12 @@ import androidx.media3.extractor.mp4.Mp4Extractor
 import androidx.media3.session.CommandButton
 import androidx.media3.session.DefaultMediaNotificationProvider
 import androidx.media3.session.MediaController
+import androidx.media3.session.MediaNotification
 import androidx.media3.session.MediaLibraryService
 import androidx.media3.session.MediaSession
+import androidx.media3.session.MediaSessionService
 import androidx.media3.session.SessionToken
+import com.google.common.collect.ImmutableList
 import com.google.common.util.concurrent.MoreExecutors
 import com.josprox.jossredconnect.JossRedClient
 import com.zionhuang.innertube.YouTube
@@ -199,41 +208,70 @@ class MusicService : MediaLibraryService(),
     private lateinit var mediaSession: MediaLibrarySession
     private var isAudioEffectSessionOpened = false
     private var discordRpc: DiscordRPC? = null
+    @Volatile
+    private var latestMediaNotification: Notification? = null
 
     override fun onCreate() {
         super.onCreate()
+        isRunning = true
 
-        // Canal y notificación para servicio foreground
-        val channel = NotificationChannel(
-            "MUSIC_CHANNEL",
-            getString(R.string.music_player),
-            NotificationManager.IMPORTANCE_LOW
-        ).apply {
-            description = getString(R.string.musicDescNotification)
-        }
-        val notificationManager = getSystemService(NotificationManager::class.java)
-        notificationManager.createNotificationChannel(channel)
-
-        val notification = NotificationCompat.Builder(this, "MUSIC_CHANNEL")
-            .setContentTitle(getString(R.string.musicTitleNotification))
-            .setContentText(getString(R.string.musicDescNotification))
-            .setSmallIcon(R.drawable.joss_music_logo)
-            .setPriority(NotificationCompat.PRIORITY_LOW)
-            .build()
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
-            if (checkSelfPermission(android.Manifest.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK) == PackageManager.PERMISSION_GRANTED) {
-                startForeground(1, notification)
-            } else {
-                Timber.tag("MusicService").w("Falta permiso FOREGROUND_SERVICE_MEDIA_PLAYBACK")
+        // Promote immediately so startForegroundService never waits on media metadata.
+        setListener(
+            object : MediaSessionService.Listener {
+                override fun onForegroundServiceStartNotAllowedException() {
+                    handleForegroundServiceStartNotAllowed(null)
+                }
             }
-        } else {
-            startForeground(1, notification)
+        )
+
+        if (!ensureStartedAsForegroundOrStop()) {
+            return
         }
 
-        setMediaNotificationProvider(
+        val defaultMediaNotificationProvider =
             DefaultMediaNotificationProvider(this, { NOTIFICATION_ID }, CHANNEL_ID, R.string.music_player)
                 .apply { setSmallIcon(R.drawable.joss_music_logo) }
+
+        setMediaNotificationProvider(
+            object : MediaNotification.Provider {
+                override fun createNotification(
+                    mediaSession: MediaSession,
+                    mediaButtonPreferences: ImmutableList<CommandButton>,
+                    actionFactory: MediaNotification.ActionFactory,
+                    onNotificationChangedCallback: MediaNotification.Provider.Callback
+                ): MediaNotification {
+                    val trackingCallback =
+                        MediaNotification.Provider.Callback { notification ->
+                            latestMediaNotification = notification.notification
+                            Handler(Looper.getMainLooper()).post {
+                                runCatching {
+                                    NotificationManagerCompat
+                                        .from(this@MusicService)
+                                        .notify(notification.notificationId, notification.notification)
+                                }.onFailure { error ->
+                                    Timber.tag(TAG).w(error, "Failed to post async media notification update")
+                                }
+                            }
+                        }
+
+                    return defaultMediaNotificationProvider
+                        .createNotification(
+                            mediaSession,
+                            mediaButtonPreferences,
+                            actionFactory,
+                            trackingCallback
+                        ).also { mediaNotification ->
+                            latestMediaNotification = mediaNotification.notification
+                        }
+                }
+
+                override fun handleCustomCommand(
+                    session: MediaSession,
+                    action: String,
+                    extras: Bundle
+                ): Boolean =
+                    defaultMediaNotificationProvider.handleCustomCommand(session, action, extras)
+            }
         )
 
         player = ExoPlayer.Builder(this)
@@ -371,6 +409,16 @@ class MusicService : MediaLibraryService(),
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
+        if (!::player.isInitialized) {
+            return START_NOT_STICKY
+        }
+
+        val requiresForegroundPromotion =
+            Build.VERSION.SDK_INT >= Build.VERSION_CODES.S && intent?.action == null
+        if (requiresForegroundPromotion && !ensureForegroundWithLatestNotificationOrStop()) {
+            return START_NOT_STICKY
+        }
+
         when (intent?.action) {
             ModernMusicWidgetProvider.ACTION_PLAY_PAUSE -> if (player.isPlaying) player.pause() else player.play()
             ModernMusicWidgetProvider.ACTION_NEXT -> player.seekToNextMediaItem()
@@ -767,6 +815,14 @@ class MusicService : MediaLibraryService(),
     }
 
     override fun onDestroy() {
+        isRunning = false
+
+        if (!::player.isInitialized) {
+            scope.cancel()
+            super.onDestroy()
+            return
+        }
+
         // Capture state BEFORE releasing the player
         if (settingsState.value.persistentQueue) {
             val persistQueue = if (player.playbackState == STATE_IDLE || player.mediaItemCount == 0) {
@@ -799,11 +855,146 @@ class MusicService : MediaLibraryService(),
 
     override fun onTaskRemoved(rootIntent: Intent?) {
         if (!player.playWhenReady) {
+            ServiceCompat.stopForeground(this, ServiceCompat.STOP_FOREGROUND_DETACH)
             stopSelf()
         }
     }
 
     override fun onGetSession(controllerInfo: MediaSession.ControllerInfo) = mediaSession
+
+    override fun onUpdateNotification(
+        session: MediaSession,
+        startInForegroundRequired: Boolean
+    ) {
+        try {
+            super.onUpdateNotification(session, startInForegroundRequired)
+        } catch (e: ForegroundServiceStartNotAllowedException) {
+            handleForegroundServiceStartNotAllowed(e)
+        } catch (e: IllegalStateException) {
+            if (isForegroundServiceStartNotAllowedException(e)) {
+                handleForegroundServiceStartNotAllowed(e)
+            } else {
+                throw e
+            }
+        }
+    }
+
+    private fun ensureStartedAsForegroundOrStop(): Boolean =
+        startForegroundSafely(
+            notification = createFallbackForegroundNotification(),
+            deniedMessage = "Foreground service start not allowed; stopping service to avoid ANR",
+            failureMessage = "Failed to enter foreground; stopping service to avoid ANR"
+        )
+
+    private fun ensureForegroundWithLatestNotificationOrStop(): Boolean =
+        startForegroundSafely(
+            notification = latestMediaNotification ?: createFallbackForegroundNotification(),
+            deniedMessage = "Foreground promotion denied during notification update; stopping service",
+            failureMessage = "Failed to promote service during notification update; stopping service"
+        )
+
+    private fun tryEnsureForegroundWithLatestNotification(): Boolean =
+        startForegroundSafely(
+            notification = latestMediaNotification ?: createFallbackForegroundNotification(),
+            deniedMessage = "Foreground promotion denied during notification update",
+            failureMessage = "Failed to promote service during notification update",
+            stopOnFailure = false
+        )
+
+    private fun ensureForegroundChannelExists() {
+        val notificationManager = getSystemService(NotificationManager::class.java)
+        notificationManager?.createNotificationChannel(
+            NotificationChannel(
+                CHANNEL_ID,
+                getString(R.string.music_player),
+                NotificationManager.IMPORTANCE_LOW
+            ).apply {
+                description = getString(R.string.musicDescNotification)
+            }
+        )
+    }
+
+    private fun createFallbackForegroundNotification(): Notification {
+        ensureForegroundChannelExists()
+        val pending =
+            PendingIntent.getActivity(
+                this,
+                0,
+                Intent(this, MainActivity::class.java),
+                PendingIntent.FLAG_IMMUTABLE
+            )
+
+        return NotificationCompat
+            .Builder(this, CHANNEL_ID)
+            .setContentTitle(getString(R.string.musicTitleNotification))
+            .setContentText(getString(R.string.musicDescNotification))
+            .setSmallIcon(R.drawable.joss_music_logo)
+            .setContentIntent(pending)
+            .setPriority(NotificationCompat.PRIORITY_LOW)
+            .setOngoing(true)
+            .build()
+    }
+
+    private fun startForegroundSafely(
+        notification: Notification,
+        deniedMessage: String,
+        failureMessage: String,
+        stopOnFailure: Boolean = true
+    ): Boolean =
+        try {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                startForeground(
+                    NOTIFICATION_ID,
+                    notification,
+                    ServiceInfo.FOREGROUND_SERVICE_TYPE_MEDIA_PLAYBACK
+                )
+            } else {
+                startForeground(NOTIFICATION_ID, notification)
+            }
+            true
+        } catch (e: ForegroundServiceStartNotAllowedException) {
+            Timber.tag(TAG).w(e, deniedMessage)
+            if (stopOnFailure) stopSelf()
+            false
+        } catch (e: Exception) {
+            Timber.tag(TAG).e(e, failureMessage)
+            reportException(e)
+            if (stopOnFailure) stopSelf()
+            false
+        }
+
+    private fun handleForegroundServiceStartNotAllowed(error: Throwable?) {
+        if (error != null) {
+            Timber.tag(TAG).w(error, "Foreground service start denied during notification update")
+        } else {
+            Timber.tag(TAG).w("Foreground service start denied by MediaSessionService listener")
+        }
+
+        if (tryEnsureForegroundWithLatestNotification()) {
+            return
+        }
+
+        if (!::player.isInitialized) {
+            stopSelf()
+            return
+        }
+
+        if (player.isPlaying) {
+            Timber.tag(TAG).w("Keeping playback alive after denied foreground restart request")
+            return
+        }
+
+        runCatching {
+            pauseAllPlayersAndStopSelf()
+        }.onFailure {
+            Timber.tag(TAG).w(it, "Failed to stop service after foreground start denial")
+            stopSelf()
+        }
+    }
+
+    private fun isForegroundServiceStartNotAllowedException(error: IllegalStateException): Boolean =
+        Build.VERSION.SDK_INT >= Build.VERSION_CODES.S &&
+            error.javaClass.name == ForegroundServiceStartNotAllowedException::class.java.name
 
     inner class MusicBinder : Binder() {
         val service: MusicService get() = this@MusicService
@@ -820,6 +1011,11 @@ class MusicService : MediaLibraryService(),
         const val ERROR_CODE_NO_STREAM = 1000001
         const val CHUNK_LENGTH = 512 * 1024L
         const val PERSISTENT_QUEUE_FILE = "persistent_queue.data"
+        private const val TAG = "MusicService"
+
+        @Volatile
+        var isRunning = false
+            private set
     }
 
     private suspend fun notifyWidget() {

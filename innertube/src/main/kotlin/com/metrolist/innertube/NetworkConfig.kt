@@ -24,7 +24,7 @@ object NetworkConfig {
     private const val REQUEST_TIMEOUT_MILLIS = 60000L
     
     // Cache settings
-    private const val CACHE_SIZE_MB = 50L * 1024L * 1024L // 50 MB
+    private const val CACHE_SIZE_MB = 128L * 1024L * 1024L // 128 MB
     
     @OptIn(ExperimentalSerializationApi::class)
     fun createOptimizedHttpClient(

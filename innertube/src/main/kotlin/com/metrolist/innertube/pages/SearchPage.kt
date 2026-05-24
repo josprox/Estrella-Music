@@ -110,7 +110,10 @@ object SearchPage {
                 val libraryTokens = PageHelper.extractLibraryTokensFromMenuItems(renderer.menu?.menuRenderer?.items)
 
                 SongItem(
-                    id = renderer.playlistItemData?.videoId ?: return null,
+                    // playlistItemData may be absent in some search contexts; fall back to watchEndpoint.
+                    id = renderer.playlistItemData?.videoId
+                        ?: renderer.navigationEndpoint?.watchEndpoint?.videoId
+                        ?: return null,
                     title =
                         renderer.flexColumns
                             .firstOrNull()

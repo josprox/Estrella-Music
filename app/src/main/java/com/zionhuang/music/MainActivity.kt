@@ -129,6 +129,17 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+    private fun safeUnbindService(source: String) {
+        if (!isServiceBound) return
+        try {
+            unbindService(serviceConnection)
+        } catch (e: IllegalArgumentException) {
+            Timber.tag("MainActivity").w(e, "Service was not bound when attempting to unbind in $source")
+        } finally {
+            isServiceBound = false
+        }
+    }
+
     private var initialIntent: Intent? = null
 
     private val updateViewModel: UpdateMainViewModel by viewModels {
@@ -141,10 +152,6 @@ class MainActivity : ComponentActivity() {
     }
 
     override fun onStop() {
-        if (isServiceBound) {
-            unbindService(serviceConnection)
-            isServiceBound = false
-        }
         super.onStop()
     }
 
@@ -177,14 +184,17 @@ class MainActivity : ComponentActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
-        // En onDestroy, un bloqueo corto es menos problemático, pero es buena práctica evitarlo.
-        // Por simplicidad y bajo riesgo, lo dejamos así, ya que el ANR ocurre al inicio.
-        if (dataStore.get(StopMusicOnTaskClearKey, false) &&
-            playerConnection?.isPlaying?.value == true && isFinishing
-        ) {
+        val stopServiceOnClear =
+            dataStore.get(StopMusicOnTaskClearKey, false) &&
+                playerConnection?.isPlaying?.value == true &&
+                isFinishing
+
+        playerConnection?.dispose()
+        playerConnection = null
+        safeUnbindService("onDestroy()")
+
+        if (stopServiceOnClear) {
             stopService(Intent(this, MusicService::class.java))
-            unbindService(serviceConnection)
-            playerConnection = null
         }
     }
 
@@ -250,13 +260,17 @@ class MainActivity : ComponentActivity() {
     private fun bindMusicService() {
         val serviceIntent = Intent(this, MusicService::class.java)
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            ContextCompat.startForegroundService(this, serviceIntent)
-        } else {
-            startService(serviceIntent)
+        if (!MusicService.isRunning) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                ContextCompat.startForegroundService(this, serviceIntent)
+            } else {
+                startService(serviceIntent)
+            }
         }
 
-        bindService(serviceIntent, serviceConnection, BIND_AUTO_CREATE)
+        if (!isServiceBound) {
+            isServiceBound = bindService(serviceIntent, serviceConnection, BIND_AUTO_CREATE)
+        }
     }
 
     private fun initializeApp() {
