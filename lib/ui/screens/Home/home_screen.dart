@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '/ui/screens/Search/search_screen_controller.dart';
+import '../Search/search_screen.dart';
 import '/ui/widgets/animated_screen_transition.dart';
 
 import '../../widgets/side_nav_bar.dart';
@@ -49,11 +50,8 @@ class HomeScreen extends StatelessWidget {
                             Get.mediaQuery.padding.bottom
                         : playerController.playerPanelMinHeight.value,
                   ),
-                  child: _GlassFab(
-                    icon: homeScreenController.tabIndex.value == 1
-                        ? Icons.add_rounded
-                        : Icons.search_rounded,
-                    onTap: () {
+                  child: FloatingActionButton(
+                    onPressed: () {
                       if (homeScreenController.tabIndex.value == 1) {
                         showDialog(
                             context: context,
@@ -63,6 +61,11 @@ class HomeScreen extends StatelessWidget {
                             id: ScreenNavigationSetup.id);
                       }
                     },
+                    child: Icon(
+                      homeScreenController.tabIndex.value == 1
+                          ? Icons.add_rounded
+                          : Icons.search_rounded,
+                    ),
                   ),
                 ),
               )
@@ -94,40 +97,8 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-/// Floating action button with glass styling
-class _GlassFab extends StatelessWidget {
-  final IconData icon;
-  final VoidCallback onTap;
-  const _GlassFab({required this.icon, required this.onTap});
 
-  @override
-  Widget build(BuildContext context) {
-    final cs = Theme.of(context).colorScheme;
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        width: 56,
-        height: 56,
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          gradient: LinearGradient(
-            colors: [cs.primary, cs.tertiary],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          ),
-          boxShadow: [
-            BoxShadow(
-              color: cs.primary.withValues(alpha: 0.45),
-              blurRadius: 20,
-              offset: const Offset(0, 6),
-            ),
-          ],
-        ),
-        child: Icon(icon, color: Colors.white, size: 26),
-      ),
-    );
-  }
-}
+// _GlassFab removed — replaced by standard FloatingActionButton above
 
 class Body extends StatelessWidget {
   const Body({super.key});
@@ -261,19 +232,16 @@ class Body extends StatelessWidget {
                                         ),
                                   ),
                                   const Spacer(),
-                                  IconButton(
-                                      icon: const Icon(Icons.search_rounded,
-                                          size: 30),
-                                      onPressed: () => Get.toNamed(
-                                          ScreenNavigationSetup.searchScreen,
-                                          id: ScreenNavigationSetup.id)),
                                   const SizedBox.shrink(),
                                   IconButton(
                                     icon: const Icon(Icons.settings_outlined,
                                         size: 30),
                                     onPressed: () {
-                                      homeScreenController.tabIndex.value =
-                                          5; // Settings tab
+                                      Get.to(
+                                        () => const SettingsScreen(isBottomNavActive: false),
+                                        id: ScreenNavigationSetup.id,
+                                        transition: Transition.rightToLeft,
+                                      );
                                     },
                                   ),
                                 ],
@@ -303,21 +271,21 @@ class Body extends StatelessWidget {
           ? const SongsLibraryWidget(isBottomNavActive: true)
           : const SongsLibraryWidget();
     } else if (homeScreenController.tabIndex.value == 2) {
+      return const SearchScreen();
+    } else if (homeScreenController.tabIndex.value == 3) {
       return settingsScreenController.isBottomNavBarEnabled.isTrue
           ? const PlaylistNAlbumLibraryWidget(
               isAlbumContent: true, isBottomNavActive: true)
           : const PlaylistNAlbumLibraryWidget(isAlbumContent: false);
-    } else if (homeScreenController.tabIndex.value == 3) {
+    } else if (homeScreenController.tabIndex.value == 4) {
       return settingsScreenController.isBottomNavBarEnabled.isTrue
           ? const LibraryArtistWidget(isBottomNavActive: true)
           : const PlaylistNAlbumLibraryWidget();
-    } else if (homeScreenController.tabIndex.value == 4) {
+    } else if (homeScreenController.tabIndex.value == 5) {
       return settingsScreenController.isBottomNavBarEnabled.isTrue
           ? const PlaylistNAlbumLibraryWidget(
               isAlbumContent: false, isBottomNavActive: true)
           : const LibraryArtistWidget();
-    } else if (homeScreenController.tabIndex.value == 5) {
-      return const SettingsScreen();
     } else {
       return Center(child: Text('${homeScreenController.tabIndex.value}'));
     }
@@ -365,30 +333,10 @@ class _NetworkError extends StatelessWidget {
                   style: tt.titleMedium
                       ?.copyWith(color: cs.onSurface.withValues(alpha: 0.6))),
               const SizedBox(height: AppSpacing.xl),
-              GestureDetector(
-                onTap: onRetry,
-                child: Container(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: AppSpacing.xl, vertical: AppSpacing.md),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(AppSpacing.radiusPill),
-                    gradient: LinearGradient(
-                      colors: [cs.primary, cs.tertiary],
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                    ),
-                    boxShadow: [
-                      BoxShadow(
-                        color: cs.primary.withValues(alpha: 0.4),
-                        blurRadius: 16,
-                        offset: const Offset(0, 6),
-                      ),
-                    ],
-                  ),
-                  child: Text(S.current.retry,
-                      style: const TextStyle(
-                          color: Colors.white, fontWeight: FontWeight.w700)),
-                ),
+              FilledButton.icon(
+                onPressed: onRetry,
+                icon: const Icon(Icons.refresh_rounded, size: 18),
+                label: Text(S.current.retry),
               )
             ]),
           ),

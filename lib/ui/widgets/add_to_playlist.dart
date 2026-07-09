@@ -1,4 +1,4 @@
-import 'package:audio_service/audio_service.dart';
+﻿import 'package:audio_service/audio_service.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hive/hive.dart';
@@ -153,7 +153,7 @@ class AddToPlaylist extends StatelessWidget {
                         height: 15,
                         width: 15,
                         child: CircularProgressIndicator(
-                          backgroundColor: Colors.transparent,
+
                           strokeWidth: 2,
                         )),
                   )

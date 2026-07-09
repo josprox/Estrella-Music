@@ -1,61 +1,36 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 
-/// Centralized color tokens for the Liquid Glass design system.
+/// Centralized color tokens for the Material 3 Expressive design system.
 /// All UI files must reference these tokens — never hardcode colors.
 abstract class AppColors {
-  // ─── Brand ────────────────────────────────────────────────────────────────
-  static const Color seedDark = Color(0xFF6C63FF); // electric violet seed
-  static const Color seedLight = Color(0xFF5B53E4);
+  // ─── Brand seed ────────────────────────────────────────────────────────────
+  /// Default seed used when no dynamic color or song palette is active.
+  static const Color seed = Color(0xFF6750A4); // M3 baseline purple-violet
 
-  // ─── Glass Surfaces ───────────────────────────────────────────────────────
-  static const Color glassDarkSurface = Color(0x1AFFFFFF); // 10% white
-  static const Color glassDarkBorder = Color(0x33FFFFFF); // 20% white
-  static const Color glassDarkOverlay = Color(0x0DFFFFFF); // 5% white
-
-  static const Color glassLightSurface = Color(0x1A000000); // 10% black
-  static const Color glassLightBorder = Color(0x25000000); // 15% black
-  static const Color glassLightOverlay = Color(0x0A000000); // 4% black
-
-  // ─── Dark Scaffold ────────────────────────────────────────────────────────
-  static const Color darkScaffold = Color(0xFF0D0D14);
-  static const Color darkSurface = Color(0xFF13131F);
-  static const Color darkCard = Color(0xFF1A1A2E);
-  static const Color darkElevated = Color(0xFF22223A);
-
-  // ─── Light Scaffold ───────────────────────────────────────────────────────
-  static const Color lightScaffold = Color(0xFFF5F5FF);
-  static const Color lightSurface = Color(0xFFEEEEFB);
-  static const Color lightCard = Color(0xFFE8E8F5);
-
-  // ─── Text ─────────────────────────────────────────────────────────────────
-  static const Color textPrimaryDark = Color(0xFFF0F0FF);
-  static const Color textSecondaryDark = Color(0xFFB0B0D0);
-  static const Color textTertiaryDark = Color(0xFF6A6A9A);
-
-  static const Color textPrimaryLight = Color(0xFF0D0D1A);
-  static const Color textSecondaryLight = Color(0xFF3A3A5C);
-
-  // ─── Accent / Glow ────────────────────────────────────────────────────────
-  static const Color glowViolet = Color(0x556C63FF);
-  static const Color glowPink = Color(0x55C850C8);
-  static const Color accentGradientStart = Color(0xFF6C63FF);
-  static const Color accentGradientEnd = Color(0xFFC850C8);
-
-  // ─── Gradients ────────────────────────────────────────────────────────────
-  static const LinearGradient primaryGradientDark = LinearGradient(
-    colors: [Color(0xFF6C63FF), Color(0xFFC850C8)],
+  // ─── Gradients (accent use only — e.g. logo, onboarding) ─────────────────
+  static const LinearGradient primaryGradient = LinearGradient(
+    colors: [Color(0xFF6750A4), Color(0xFF9E56D4)],
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
   );
 
-  static const LinearGradient scaffoldGradientDark = LinearGradient(
-    colors: [Color(0xFF0D0D14), Color(0xFF13101F), Color(0xFF0A0A1A)],
-    begin: Alignment.topCenter,
-    end: Alignment.bottomCenter,
-  );
+  /// Alias kept for compatibility with files referencing primaryGradientDark.
+  static const LinearGradient primaryGradientDark = primaryGradient;
+
+  // ─── Legacy gradient start/end (kept for glass_morphism.dart compat) ──────
+  static const Color accentGradientStart = Color(0xFF6750A4);
+  static const Color accentGradientEnd = Color(0xFF9E56D4);
+
+  // ─── Legacy text tokens (kept for app_typography.dart compat) ─────────────
+  /// Use colorScheme.onSurface in new code instead.
+  static const Color textPrimaryDark = Color(0xFFF0F0FF);
+  static const Color textSecondaryDark = Color(0xFFB0B0D0);
+  static const Color textTertiaryDark = Color(0xFF6A6A9A);
+  static const Color textPrimaryLight = Color(0xFF1C1B1F); // M3 dark on surface
+  static const Color textSecondaryLight = Color(0xFF49454F); // M3 on surface variant
 
   // ─── Semantic ─────────────────────────────────────────────────────────────
-  static const Color success = Color(0xFF4CAF84);
-  static const Color warning = Color(0xFFFFB347);
-  static const Color error = Color(0xFFFF6B6B);
+  static const Color success = Color(0xFF386A20); // M3 green tone
+  static const Color warning = Color(0xFF7A5900); // M3 amber tone
+  static const Color error = Color(0xFFBA1A1A);   // M3 red tone
 }

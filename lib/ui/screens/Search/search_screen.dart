@@ -1,4 +1,4 @@
-import 'dart:ui';
+﻿import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/generated/l10n.dart';
@@ -24,7 +24,7 @@ class SearchScreen extends StatelessWidget {
       },
       child: Scaffold(
         resizeToAvoidBottomInset: false,
-        backgroundColor: Colors.transparent,
+
         body: Stack(
           children: [
             NebulaBackground(seedString: searchScreenController.searchText),
@@ -238,7 +238,7 @@ class _SearchBarDelegate extends SliverPersistentHeaderDelegate {
                               showModalBottomSheet(
                                 context: context,
                                 isScrollControlled: true,
-                                backgroundColor: Colors.transparent,
+
                                 builder: (context) =>
                                     const MusicRecognitionBottomSheet(),
                               );

@@ -49,9 +49,10 @@ class ContentListWidget extends StatelessWidget {
                     !isHomeContent && content.title.length > 14
                         ? '${content.title.substring(0, 14)}…'
                         : content.title,
-                    style: tt.titleLarge?.copyWith(
+                    style: tt.headlineSmall?.copyWith(
                       fontWeight: FontWeight.w800,
-                      letterSpacing: -0.3,
+                      letterSpacing: -0.5,
+                      color: cs.onSurface,
                     ),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,

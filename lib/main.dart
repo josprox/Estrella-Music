@@ -46,7 +46,7 @@ Future<void> main() async {
   await NotificationService.initOneSignal();
   await initHive();
   final appPrefs = await Hive.openBox('AppPrefs');
-  
+
   // Initialize Background Backup (Android/iOS only — workmanager has no desktop implementation)
   if (GetPlatform.isAndroid || GetPlatform.isIOS) {
     Workmanager().initialize(
@@ -63,7 +63,9 @@ Future<void> main() async {
     );
   }
 
-  final appLang = appPrefs.get('currentAppLanguageCode') ?? Get.deviceLocale?.languageCode ?? "en";
+  final appLang = appPrefs.get('currentAppLanguageCode') ??
+      Get.deviceLocale?.languageCode ??
+      "en";
   await S.load(Locale(appLang));
   _setAppInitPrefs();
   startApplicationServices();
@@ -102,26 +104,27 @@ class MyApp extends StatelessWidget {
           return DynamicColorBuilder(
             builder: (lightDynamic, darkDynamic) {
               final controller = Get.find<ThemeController>();
-              
+
               // Determine which dynamic scheme to use
-              final dynamicScheme = (MediaQuery.of(context).platformBrightness == Brightness.dark)
-                  ? darkDynamic
-                  : lightDynamic;
+              final dynamicScheme =
+                  (MediaQuery.of(context).platformBrightness == Brightness.dark)
+                      ? darkDynamic
+                      : lightDynamic;
 
               // Update the controller with dynamic colors if available
               // This ensures the initial theme is correct
               WidgetsBinding.instance.addPostFrameCallback((_) {
-                 if (dynamicScheme != null) {
-                   controller.changeThemeModeType(
-                     Hive.box("AppPrefs").get("themeModeType"), 
-                     dynamicColors: dynamicScheme
-                   );
-                 }
+                if (dynamicScheme != null) {
+                  controller.changeThemeModeType(
+                      Hive.box("AppPrefs").get("themeModeType"),
+                      dynamicColors: dynamicScheme);
+                }
               });
 
               final mQuery = MediaQuery.of(context);
-              final scale = mQuery.textScaler.clamp(minScaleFactor: 1.0, maxScaleFactor: 1.1);
-              
+              final scale = mQuery.textScaler
+                  .clamp(minScaleFactor: 1.0, maxScaleFactor: 1.1);
+
               return Stack(
                 children: [
                   GetX<ThemeController>(
@@ -194,6 +197,7 @@ initHive() async {
 
   // Open common library boxes at startup to prevent "Box not found" errors
   await Hive.openBox("LIBFAV");
+  await Hive.openBox("LIBRP");
   await Hive.openBox("LibraryArtists");
   await Hive.openBox("LibraryAlbums");
   await Hive.openBox("LibraryPlaylists");
@@ -215,7 +219,14 @@ void _setAppInitPrefs() {
       "restrorePlaybackSession": true,
       "autoLanguage": true,
       "app_first_run_timestamp": DateTime.now().toIso8601String(),
+      "emusicDataMode": "local",
+      "hasPendingSync": false,
     });
+  } else {
+    appPrefs.put("emusicDataMode",
+        appPrefs.get("emusicDataMode", defaultValue: "local"));
+    appPrefs.put(
+        "hasPendingSync", appPrefs.get("hasPendingSync", defaultValue: false));
   }
 }
 

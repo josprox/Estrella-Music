@@ -1,7 +1,7 @@
-// ignore_for_file: constant_identifier_names
+﻿// ignore_for_file: constant_identifier_names
 
 /*
-Copyright: © 2020, Akshath Jain. All rights reserved.
+Copyright: Â© 2020, Akshath Jain. All rights reserved.
 Licensing: More information can be found here: https://github.com/akshathjain/sliding_up_panel/blob/master/LICENSE
 */
 

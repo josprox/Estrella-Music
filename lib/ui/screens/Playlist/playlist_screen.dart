@@ -1,4 +1,4 @@
-import 'package:audio_service/audio_service.dart';
+﻿import 'package:audio_service/audio_service.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -766,10 +766,10 @@ class PlaylistScreen extends StatelessWidget {
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(10.0)),
       ),
-      backgroundColor: Colors.transparent,
+
       isScrollControlled: true,
       context: context,
-      barrierColor: Colors.transparent.withAlpha(100),
+
       builder: (context) => SongInfoBottomSheet(song),
     ).whenComplete(() => Get.delete<SongInfoController>());
   }

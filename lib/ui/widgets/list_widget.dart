@@ -195,6 +195,82 @@ class ListWidget extends StatelessWidget with RemoveSongFromPlaylistMixin {
   }
 
   Widget listViewArtists(List<dynamic> artists, {ScrollController? sc}) {
+    if (isCompleteList) {
+      return LayoutBuilder(builder: (context, constraints) {
+        final availableWidth = constraints.maxWidth;
+        const itemWidth = 110.0;
+        final isMobile = availableWidth < 600;
+        final int columns = isMobile ? 3 : (availableWidth / itemWidth).floor();
+
+        return GridView.builder(
+          padding: const EdgeInsets.only(
+            bottom: 200,
+            top: 5,
+          ),
+          controller: sc,
+          itemCount: artists.length,
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: columns,
+            childAspectRatio: 0.72,
+            crossAxisSpacing: 12,
+            mainAxisSpacing: 16,
+          ),
+          physics: const BouncingScrollPhysics(),
+          itemBuilder: (context, index) {
+            final artist = artists[index];
+            return InkWell(
+              borderRadius: BorderRadius.circular(16),
+              onTap: () {
+                Get.toNamed(ScreenNavigationSetup.artistScreen,
+                    id: ScreenNavigationSetup.id, arguments: [false, artist]);
+              },
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Expanded(
+                    child: Center(
+                      child: AspectRatio(
+                        aspectRatio: 1.0,
+                        child: ImageWidget(
+                          size: 90,
+                          artist: artist,
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    artist.name,
+                    maxLines: 1,
+                    textAlign: TextAlign.center,
+                    overflow: TextOverflow.ellipsis,
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 14,
+                        ),
+                  ),
+                  if (artist.subscribers != null && artist.subscribers.isNotEmpty)
+                    Padding(
+                      padding: const EdgeInsets.only(top: 2),
+                      child: Text(
+                        artist.subscribers,
+                        maxLines: 1,
+                        textAlign: TextAlign.center,
+                        overflow: TextOverflow.ellipsis,
+                        style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                              color: Theme.of(context).colorScheme.onSurfaceVariant,
+                            ),
+                      ),
+                    ),
+                ],
+              ),
+            );
+          },
+        );
+      });
+    }
+
     return ListView.builder(
       padding: const EdgeInsets.only(
         bottom: 200,
@@ -203,9 +279,7 @@ class ListWidget extends StatelessWidget with RemoveSongFromPlaylistMixin {
       controller: sc,
       itemCount: artists.length,
       itemExtent: 90,
-      physics: isCompleteList
-          ? const BouncingScrollPhysics()
-          : const NeverScrollableScrollPhysics(),
+      physics: const NeverScrollableScrollPhysics(),
       itemBuilder: (context, index) => ListTile(
         visualDensity: const VisualDensity(horizontal: -2, vertical: 2),
         onTap: () {

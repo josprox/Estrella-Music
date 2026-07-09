@@ -29,7 +29,11 @@ class QuickPicksWidget extends StatelessWidget {
               alignment: Alignment.centerLeft,
               child: Text(
                 content.title.t,
-                style: Theme.of(context).textTheme.titleLarge,
+                style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                  fontWeight: FontWeight.w800,
+                  letterSpacing: -0.5,
+                  color: Theme.of(context).colorScheme.onSurface,
+                ),
               )),
           const SizedBox(height: 10),
           Expanded(
@@ -58,11 +62,11 @@ class QuickPicksWidget extends StatelessWidget {
                               borderRadius: BorderRadius.vertical(
                                   top: Radius.circular(10.0)),
                             ),
-                            backgroundColor: Colors.transparent,
+
                             isScrollControlled: true,
                             context: playerController
                                 .homeScaffoldkey.currentState!.context,
-                            barrierColor: Colors.transparent.withAlpha(100),
+
                             builder: (context) => SongInfoBottomSheet(
                               content.songList[item],
                             ),
@@ -77,15 +81,15 @@ class QuickPicksWidget extends StatelessWidget {
                           duration: const Duration(milliseconds: 250),
                           curve: Curves.easeInOut,
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
+                            borderRadius: BorderRadius.circular(12),
                             color: isPlaying
-                                ? cs.primary.withValues(alpha: 0.10)
-                                : Colors.transparent,
+                                ? cs.primaryContainer
+                                : cs.surfaceContainerLow,
                           ),
                           child: ListTile(
                               contentPadding: const EdgeInsets.only(left: 5),
                               shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(8),
+                                borderRadius: BorderRadius.circular(12),
                               ),
                               leading: SongStatusBadges(
                                 songId: content.songList[item].id,
@@ -138,12 +142,12 @@ class QuickPicksWidget extends StatelessWidget {
                                 borderRadius: BorderRadius.vertical(
                                     top: Radius.circular(10.0)),
                               ),
-                              backgroundColor: Colors.transparent,
+
                               isScrollControlled: true,
                               context: playerController
                                   .homeScaffoldkey.currentState!.context,
                               //constraints: BoxConstraints(maxHeight:Get.height),
-                              barrierColor: Colors.transparent.withAlpha(100),
+
                               builder: (context) =>
                                   SongInfoBottomSheet(content.songList[item]),
                             ).whenComplete(
@@ -160,7 +164,7 @@ class QuickPicksWidget extends StatelessWidget {
                                         borderRadius: BorderRadius.vertical(
                                             top: Radius.circular(10.0)),
                                       ),
-                                      backgroundColor: Colors.transparent,
+
                                       isScrollControlled: true,
                                       context: playerController.homeScaffoldkey
                                           .currentState!.context,

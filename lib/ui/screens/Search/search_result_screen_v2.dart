@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/ui/widgets/loader.dart';
 import 'package:harmonymusic/ui/widgets/search_related_widgets.dart';
@@ -19,7 +19,7 @@ class SearchResultScreenBN extends StatelessWidget {
     final topPadding = context.isLandscape ? 50.0 : 80.0;
     
     return Scaffold(
-      backgroundColor: Colors.transparent,
+
       body: Stack(
         children: [
           NebulaBackground(seedString: searchResScrController.queryString),

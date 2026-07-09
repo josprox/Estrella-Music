@@ -40,6 +40,7 @@ class AuthService extends GetxService {
     }
     return dotenv.env['JOSSRED'];
   }
+
   String? get apiToken => dotenv.env['JOSSRED_API'];
   bool get isConfigured =>
       (baseUrl?.trim().isNotEmpty ?? false) &&
@@ -215,7 +216,9 @@ class AuthService extends GetxService {
         key: _cachedProfileKey,
         value: jsonEncode(profileData),
       );
-      final hasPending = Hive.box('AppPrefs').get('hasPendingSync', defaultValue: false) == true;
+      final hasPending =
+          Hive.box('AppPrefs').get('hasPendingSync', defaultValue: false) ==
+              true;
       if (hasPending) {
         Get.find<SyncService>().push().then((success) {
           if (success) {
@@ -250,7 +253,7 @@ class AuthService extends GetxService {
       isAuthenticated.value = true; // Still assume authenticated offline
     } catch (_) {
       // Ignore cache load errors
-      isAuthenticated.value = true; 
+      isAuthenticated.value = true;
     }
   }
 
@@ -360,7 +363,7 @@ class AuthService extends GetxService {
     try {
       final response = await _dio.postUri(
         _buildUri('password/email'),
-        data: {'correo': email.trim()},
+        data: {'email': email.trim()},
         options: Options(headers: _publicHeaders),
       );
 

@@ -251,8 +251,10 @@ class _SpotifyArtistScreen extends StatelessWidget {
                 child: Row(
                   children: [
                     // Play Button
-                    GestureDetector(
-                      onTap: () {
+                    FloatingActionButton(
+                      elevation: 4,
+                      shape: const CircleBorder(),
+                      onPressed: () {
                         final songs = ctrl.artistData['Songs'];
                         if (songs != null) {
                           final allItems = (songs['content'] as List?) ?? [];
@@ -262,34 +264,15 @@ class _SpotifyArtistScreen extends StatelessWidget {
                           }
                         }
                       },
-                      child: Container(
-                        width: 56,
-                        height: 56,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Theme.of(context).colorScheme.primary,
-                          boxShadow: [
-                            BoxShadow(
-                              color: Theme.of(context)
-                                  .colorScheme
-                                  .primary
-                                  .withAlpha(100),
-                              blurRadius: 12,
-                              offset: const Offset(0, 4),
-                            ),
-                          ],
-                        ),
-                        child: const Icon(Icons.play_arrow_rounded,
-                            size: 32, color: Colors.white),
-                      ),
+                      child: const Icon(Icons.play_arrow_rounded, size: 32),
                     ),
                     const SizedBox(width: 12),
                     // Shuffle Button (Metrolist parity)
                     Obx(() {
                       final sId = ctrl.shuffleId.value;
                       if (sId == null) return const SizedBox.shrink();
-                      return GestureDetector(
-                        onTap: () {
+                      return IconButton.filledTonal(
+                        onPressed: () {
                           final songs = ctrl.artistData['Songs'];
                           final allItems = songs != null
                               ? (songs['content'] as List?) ?? []
@@ -300,86 +283,37 @@ class _SpotifyArtistScreen extends StatelessWidget {
                                 List.from(shuffled), 0);
                           }
                         },
-                        child: Container(
-                          width: 48,
-                          height: 48,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Theme.of(context)
-                                .colorScheme
-                                .onSurface
-                                .withAlpha(20),
-                          ),
-                          child: Icon(
-                            Icons.shuffle_rounded,
-                            color: Theme.of(context).colorScheme.primary,
-                            size: 22,
-                          ),
-                        ),
+                        icon: const Icon(Icons.shuffle_rounded, size: 22),
                       );
                     }),
                     const SizedBox(width: 8),
                     // Follow Button
-                    Obx(() => GestureDetector(
-                          onTap: () => ctrl.addNremoveFromLibrary(
-                              add: !ctrl.isAddedToLibrary.value),
-                          child: AnimatedContainer(
-                            duration: const Duration(milliseconds: 300),
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 20, vertical: 10),
-                            decoration: BoxDecoration(
-                              color: Colors.transparent,
-                              borderRadius: BorderRadius.circular(30),
-                              border: Border.all(
-                                  color: Theme.of(context)
-                                      .colorScheme
-                                      .onSurface
-                                      .withAlpha(138),
-                                  width: 1.5),
-                            ),
-                            child: Text(
-                              ctrl.isAddedToLibrary.isTrue
-                                  ? S.current.following.toUpperCase()
-                                  : S.current.follow.toUpperCase(),
-                              style: TextStyle(
-                                color: ctrl.isAddedToLibrary.isTrue
-                                    ? Theme.of(context).colorScheme.onSurface
-                                    : Theme.of(context)
-                                        .colorScheme
-                                        .onSurface
-                                        .withAlpha(180),
-                                fontWeight: FontWeight.w700,
-                                fontSize: 13,
-                                letterSpacing: 0.5,
-                              ),
-                              maxLines: 1,
-                              overflow: TextOverflow.ellipsis,
-                            ),
+                    Obx(() {
+                      final isAdded = ctrl.isAddedToLibrary.isTrue;
+                      if (isAdded) {
+                        return FilledButton.tonal(
+                          onPressed: () => ctrl.addNremoveFromLibrary(add: false),
+                          child: Text(
+                            S.current.following.toUpperCase(),
+                            style: const TextStyle(fontWeight: FontWeight.w700, letterSpacing: 0.5),
                           ),
-                        )),
+                        );
+                      }
+                      return OutlinedButton(
+                        onPressed: () => ctrl.addNremoveFromLibrary(add: true),
+                        child: Text(
+                          S.current.follow.toUpperCase(),
+                          style: const TextStyle(fontWeight: FontWeight.w700, letterSpacing: 0.5),
+                        ),
+                      );
+                    }),
                     const Spacer(),
                     // Share
-                    GestureDetector(
-                      onTap: () => YoutubeShareManager.shareArtist(
+                    IconButton.filledTonal(
+                      onPressed: () => YoutubeShareManager.shareArtist(
                           ctrl.artist_.browseId,
                           artistName: ctrl.artist_.name),
-                      child: Container(
-                        width: 44,
-                        height: 44,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Theme.of(context)
-                              .colorScheme
-                              .onSurface
-                              .withAlpha(20),
-                        ),
-                        child: Icon(Icons.share_rounded,
-                            color: Theme.of(context)
-                                .colorScheme
-                                .onSurface
-                                .withAlpha(153),
-                            size: 20),
-                      ),
+                      icon: const Icon(Icons.share_rounded, size: 20),
                     ),
                   ],
                 ),
@@ -406,16 +340,8 @@ class _SpotifyArtistScreen extends StatelessWidget {
                       Container(
                         padding: const EdgeInsets.all(16),
                         decoration: BoxDecoration(
-                          color: Theme.of(context)
-                              .colorScheme
-                              .onSurface
-                              .withAlpha(12),
-                          borderRadius: BorderRadius.circular(16),
-                          border: Border.all(
-                              color: Theme.of(context)
-                                  .colorScheme
-                                  .onSurface
-                                  .withAlpha(18)),
+                          color: Theme.of(context).colorScheme.surfaceContainerHighest,
+                          borderRadius: BorderRadius.circular(24),
                         ),
                         child: Text(
                           description,
@@ -909,7 +835,7 @@ class _SpotifyArtistScreen extends StatelessWidget {
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
-      backgroundColor: Colors.transparent,
+
       builder: (context) => _ContentModal(
         title: title,
         initialItems: initialItems,
@@ -1719,7 +1645,7 @@ class _TrackRow extends StatelessWidget {
                   Get.bottomSheet(
                     SongInfoBottomSheet(song),
                     isScrollControlled: true,
-                    backgroundColor: Colors.transparent,
+
                   );
                 },
                 icon: Icon(
@@ -2107,7 +2033,7 @@ class _AlbumCard extends StatelessWidget {
             ),
             const SizedBox(height: 4),
             Text(
-              '$type${year.isNotEmpty ? ' · $year' : ''}',
+              '$type${year.isNotEmpty ? ' Â· $year' : ''}',
               style: TextStyle(
                 color: Theme.of(context).colorScheme.onSurface.withAlpha(138),
                 fontSize: 12,

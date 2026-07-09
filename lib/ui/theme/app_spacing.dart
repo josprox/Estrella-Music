@@ -1,4 +1,4 @@
-/// Spacing and radius constants for the Liquid Glass design system.
+﻿/// Spacing and radius constants for the Liquid Glass design system.
 abstract class AppSpacing {
   // ─── Spacing scale ────────────────────────────────────────────────────────
   static const double xs = 4.0;

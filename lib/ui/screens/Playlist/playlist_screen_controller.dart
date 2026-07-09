@@ -1,4 +1,4 @@
-import 'dart:convert';
+﻿import 'dart:convert';
 import 'dart:io';
 import 'package:audio_service/audio_service.dart' show MediaItem;
 import 'package:flutter/material.dart';
@@ -19,6 +19,7 @@ import '../../../models/playlist.dart';
 import '../../../services/catalog_recovery_service.dart';
 import '../../../services/music_service.dart';
 import '../../../services/piped_service.dart';
+import '../../../services/sync_service.dart';
 import '../Home/home_screen_controller.dart';
 import '../Library/library_controller.dart';
 import 'package:harmonymusic/generated/l10n.dart';
@@ -245,6 +246,7 @@ class PlaylistScreenController extends PlaylistAlbumScreenControllerBase
       }
       //Update frontend
       Get.find<LibraryPlaylistsController>().refreshLib();
+      Get.find<SyncService>().triggerPush();
       if (!content.isCloudPlaylist && !add) {
         final plstbox = await Hive.openBox(content.playlistId);
         plstbox.deleteFromDisk();
@@ -267,6 +269,7 @@ class PlaylistScreenController extends PlaylistAlbumScreenControllerBase
 
     // Update the playlist thumbnail based on the first song's thumbnail
     _updatePlaylistThumbSongBased();
+    Get.find<SyncService>().triggerPush();
   }
 
   @override
@@ -324,6 +327,7 @@ class PlaylistScreenController extends PlaylistAlbumScreenControllerBase
     final item = songList.removeAt(oldIndex);
     songList.insert(newIndex, item);
     updateSongsIntoDb();
+    Get.find<SyncService>().triggerPush();
   }
 
   @override

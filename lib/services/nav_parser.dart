@@ -1274,7 +1274,7 @@ List<List<dynamic>> splitBySeparator(List<dynamic>? runs) {
   List<dynamic> tmp = [];
   for (var run in runs) {
     final text = run['text']?.toString().trim();
-    if (text == "•" || text == "·" || text == "â€¢" || text == "Â·") {
+    if (text == "•" || text == "·" || text == "•" || text == "Â·") {
       if (tmp.isNotEmpty) res.add(tmp);
       tmp = [];
     } else {

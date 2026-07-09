@@ -35,8 +35,8 @@ class Home extends StatelessWidget {
         playerController.playerPanelMinHeight.value =
             105 + Get.mediaQuery.padding.bottom;
       } else {
-        playerController.playerPanelMinHeight.value =
-            165.0; // Fixed height with Nav bar
+        // 74px mini-player docked to the bottom navbar
+        playerController.playerPanelMinHeight.value = 74.0;
       }
     }
     return PopScope(
@@ -68,7 +68,6 @@ class Home extends StatelessWidget {
       },
       child: Obx(
         () => Scaffold(
-            extendBody: true, // Allow liquid glass to overlay content
             bottomNavigationBar: (isWideScreen)
                 ? null
                 : ScrollToHideWidget(
@@ -197,9 +196,11 @@ class Home extends StatelessWidget {
                     onSwipeUp: () {
                       playerController.queuePanelController.open();
                     },
-                    panel: Obx(() => playerController.panelPosition.value > 0
-                        ? const Player()
-                        : const SizedBox.shrink()),
+                    panelBuilder: (sc, onReorderStart, onReorderEnd) {
+                      return Obx(() => playerController.panelPosition.value > 0
+                          ? Player(mainScrollController: sc)
+                          : const SizedBox.shrink());
+                    },
                     body: const ScreenNavigation(),
                     header: !isWideScreen
                         ? InkWell(

@@ -1,10 +1,9 @@
-import 'dart:ui';
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/ui/screens/Home/home_screen_controller.dart';
-import '/ui/theme/app_colors.dart';
 import 'package:harmonymusic/generated/l10n.dart';
 
+/// Material 3 Expressive side navigation rail — no glass blur, solid surface.
 class SideNavBar extends StatefulWidget {
   const SideNavBar({super.key});
 
@@ -20,106 +19,118 @@ class _SideNavBarState extends State<SideNavBar> {
     final size = MediaQuery.of(context).size;
     final isMobileOrTabScreen = size.width < 600;
     final homeScreenController = Get.find<HomeScreenController>();
-    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final theme = Theme.of(context);
+    final colorScheme = theme.colorScheme;
 
-    // In portrait tablet/mobile, we don't expand on hover to avoid blocking content
     final bool isExpanded = _isHovered && !isMobileOrTabScreen;
 
     return MouseRegion(
       onEnter: (_) => setState(() => _isHovered = true),
       onExit: (_) => setState(() => _isHovered = false),
       child: AnimatedContainer(
-        duration: const Duration(milliseconds: 250),
-        curve: Curves.easeOutCubic,
-        width: isExpanded ? 240.0 : 76.0,
+        duration: const Duration(milliseconds: 280),
+        curve: Curves.easeInOutCubicEmphasized,
+        width: isExpanded ? 240.0 : 80.0,
         height: size.height,
-        child: ClipRect(
-          child: BackdropFilter(
-            filter: ImageFilter.blur(sigmaX: 25, sigmaY: 25),
-            child: Container(
-              decoration: BoxDecoration(
-                color: (isDark ? AppColors.darkSurface : AppColors.lightSurface)
-                    .withValues(alpha: 0.65),
-                border: Border(
-                  right: BorderSide(
-                    color: Colors.white.withValues(alpha: isDark ? 0.08 : 0.2),
-                    width: 0.8,
-                  ),
+        child: Material(
+          color: colorScheme.surface,
+          elevation: 0,
+          child: Container(
+            decoration: BoxDecoration(
+              border: Border(
+                right: BorderSide(
+                  color: colorScheme.outlineVariant.withValues(alpha: 0.4),
+                  width: 1,
                 ),
               ),
-              child: Column(
-                children: [
-                  // Logo / Header
-                  _buildHeader(isExpanded, isDark),
-                  const SizedBox(height: 16),
-                  // Nav Items
-                  Expanded(
-                    child: Obx(
-                      () => ListView(
-                        padding: const EdgeInsets.symmetric(horizontal: 10),
-                        physics: const NeverScrollableScrollPhysics(),
-                        children: [
-                          _SideBarNavItem(
-                            icon: Icons.home_outlined,
-                            activeIcon: Icons.home_rounded,
-                            label: S.current.home,
-                            isSelected: homeScreenController.tabIndex.value == 0,
-                            isExpanded: isExpanded,
-                            onTap: () => homeScreenController.onSideBarTabSelected(0),
-                          ),
-                          const SizedBox(height: 8),
-                          _SideBarNavItem(
-                            icon: Icons.audiotrack_outlined,
-                            activeIcon: Icons.audiotrack_rounded,
-                            label: S.current.songs,
-                            isSelected: homeScreenController.tabIndex.value == 1,
-                            isExpanded: isExpanded,
-                            onTap: () => homeScreenController.onSideBarTabSelected(1),
-                          ),
-                          const SizedBox(height: 8),
-                          _SideBarNavItem(
-                            icon: Icons.library_music_outlined,
-                            activeIcon: Icons.library_music_rounded,
-                            label: S.current.playlists,
-                            isSelected: homeScreenController.tabIndex.value == 2,
-                            isExpanded: isExpanded,
-                            onTap: () => homeScreenController.onSideBarTabSelected(2),
-                          ),
-                          const SizedBox(height: 8),
-                          _SideBarNavItem(
-                            icon: Icons.album_outlined,
-                            activeIcon: Icons.album_rounded,
-                            label: S.current.albums,
-                            isSelected: homeScreenController.tabIndex.value == 3,
-                            isExpanded: isExpanded,
-                            onTap: () => homeScreenController.onSideBarTabSelected(3),
-                          ),
-                          const SizedBox(height: 8),
-                          _SideBarNavItem(
-                            icon: Icons.people_outline,
-                            activeIcon: Icons.people_rounded,
-                            label: S.current.artists,
-                            isSelected: homeScreenController.tabIndex.value == 4,
-                            isExpanded: isExpanded,
-                            onTap: () => homeScreenController.onSideBarTabSelected(4),
-                          ),
-                          const SizedBox(height: 8),
-                          _SideBarNavItem(
-                            icon: Icons.settings_outlined,
-                            activeIcon: Icons.settings_rounded,
-                            label: S.current.settings,
-                            isSelected: homeScreenController.tabIndex.value == 5,
-                            isExpanded: isExpanded,
-                            onTap: () => homeScreenController.onSideBarTabSelected(5),
-                          ),
-                        ],
-                      ),
+            ),
+            child: Column(
+              children: [
+                // ── Header ──────────────────────────────────────────────────
+                _buildHeader(isExpanded, colorScheme),
+                const SizedBox(height: 8),
+
+                // ── Nav Items ───────────────────────────────────────────────
+                Expanded(
+                  child: Obx(
+                    () => ListView(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 8, vertical: 4),
+                      physics: const NeverScrollableScrollPhysics(),
+                      children: [
+                        _SideBarNavItem(
+                          icon: Icons.home_outlined,
+                          activeIcon: Icons.home_rounded,
+                          label: S.current.home,
+                          isSelected:
+                              homeScreenController.tabIndex.value == 0,
+                          isExpanded: isExpanded,
+                          onTap: () =>
+                              homeScreenController.onSideBarTabSelected(0),
+                        ),
+                        const SizedBox(height: 4),
+                        _SideBarNavItem(
+                          icon: Icons.audiotrack_outlined,
+                          activeIcon: Icons.audiotrack_rounded,
+                          label: S.current.songs,
+                          isSelected:
+                              homeScreenController.tabIndex.value == 1,
+                          isExpanded: isExpanded,
+                          onTap: () =>
+                              homeScreenController.onSideBarTabSelected(1),
+                        ),
+                        const SizedBox(height: 4),
+                        _SideBarNavItem(
+                          icon: Icons.library_music_outlined,
+                          activeIcon: Icons.library_music_rounded,
+                          label: S.current.playlists,
+                          isSelected:
+                              homeScreenController.tabIndex.value == 2,
+                          isExpanded: isExpanded,
+                          onTap: () =>
+                              homeScreenController.onSideBarTabSelected(2),
+                        ),
+                        const SizedBox(height: 4),
+                        _SideBarNavItem(
+                          icon: Icons.album_outlined,
+                          activeIcon: Icons.album_rounded,
+                          label: S.current.albums,
+                          isSelected:
+                              homeScreenController.tabIndex.value == 3,
+                          isExpanded: isExpanded,
+                          onTap: () =>
+                              homeScreenController.onSideBarTabSelected(3),
+                        ),
+                        const SizedBox(height: 4),
+                        _SideBarNavItem(
+                          icon: Icons.people_outline,
+                          activeIcon: Icons.people_rounded,
+                          label: S.current.artists,
+                          isSelected:
+                              homeScreenController.tabIndex.value == 4,
+                          isExpanded: isExpanded,
+                          onTap: () =>
+                              homeScreenController.onSideBarTabSelected(4),
+                        ),
+                        const SizedBox(height: 4),
+                        _SideBarNavItem(
+                          icon: Icons.settings_outlined,
+                          activeIcon: Icons.settings_rounded,
+                          label: S.current.settings,
+                          isSelected:
+                              homeScreenController.tabIndex.value == 5,
+                          isExpanded: isExpanded,
+                          onTap: () =>
+                              homeScreenController.onSideBarTabSelected(5),
+                        ),
+                      ],
                     ),
                   ),
-                  // Footer
-                  _buildFooter(isExpanded, isDark),
-                ],
-              ),
+                ),
+
+                // ── Footer ──────────────────────────────────────────────────
+                _buildFooter(isExpanded, colorScheme),
+              ],
             ),
           ),
         ),
@@ -127,39 +138,57 @@ class _SideNavBarState extends State<SideNavBar> {
     );
   }
 
-  Widget _buildHeader(bool isExpanded, bool isDark) {
+  Widget _buildHeader(bool isExpanded, ColorScheme colorScheme) {
     return Container(
-      height: 70,
-      padding: const EdgeInsets.symmetric(horizontal: 16),
+      height: 72,
+      padding: EdgeInsets.symmetric(
+        horizontal: isExpanded ? 20 : 16,
+      ),
       child: Row(
-        mainAxisAlignment: isExpanded ? MainAxisAlignment.start : MainAxisAlignment.center,
+        mainAxisAlignment:
+            isExpanded ? MainAxisAlignment.start : MainAxisAlignment.center,
         children: [
-          Image.asset(
-            'assets/icons/icon.png',
-            height: 36,
-            width: 36,
-            errorBuilder: (context, error, stackTrace) => Icon(
+          // Logo
+          Container(
+            width: 40,
+            height: 40,
+            decoration: BoxDecoration(
+              color: colorScheme.primaryContainer,
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Icon(
               Icons.music_note_rounded,
-              size: 32,
-              color: Theme.of(context).colorScheme.primary,
+              color: colorScheme.onPrimaryContainer,
+              size: 22,
             ),
           ),
           if (isExpanded) ...[
             const SizedBox(width: 12),
             Expanded(
-              child: Text(
-                'Estrella Music',
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w900,
-                  letterSpacing: -0.5,
-                  foreground: Paint()
-                    ..shader = AppColors.primaryGradientDark.createShader(
-                      const Rect.fromLTWH(0.0, 0.0, 200.0, 70.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Estrella Music',
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w800,
+                      letterSpacing: -0.3,
+                      color: colorScheme.onSurface,
                     ),
-                ),
+                  ),
+                  Text(
+                    'v2.3.3',
+                    style: TextStyle(
+                      fontSize: 11,
+                      fontWeight: FontWeight.w500,
+                      color: colorScheme.onSurfaceVariant,
+                    ),
+                  ),
+                ],
               ),
             ),
           ],
@@ -168,21 +197,36 @@ class _SideNavBarState extends State<SideNavBar> {
     );
   }
 
-  Widget _buildFooter(bool isExpanded, bool isDark) {
+  Widget _buildFooter(bool isExpanded, ColorScheme colorScheme) {
     return Container(
-      height: 50,
+      height: 56,
       alignment: Alignment.center,
-      padding: const EdgeInsets.symmetric(horizontal: 16),
-      child: isExpanded
-          ? Text(
-              'v2.3.2',
-              style: TextStyle(
-                color: (isDark ? Colors.white.withValues(alpha: 0.3) : Colors.black.withValues(alpha: 0.3)),
-                fontSize: 12,
-                fontWeight: FontWeight.w600,
-              ),
-            )
-          : const SizedBox.shrink(),
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+      child: AnimatedOpacity(
+        opacity: isExpanded ? 1.0 : 0.0,
+        duration: const Duration(milliseconds: 200),
+        child: isExpanded
+            ? Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.star_rounded,
+                    size: 14,
+                    color: colorScheme.primary,
+                  ),
+                  const SizedBox(width: 6),
+                  Text(
+                    'Estrella Music',
+                    style: TextStyle(
+                      color: colorScheme.onSurfaceVariant,
+                      fontSize: 11,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ],
+              )
+            : const SizedBox.shrink(),
+      ),
     );
   }
 }
@@ -216,23 +260,23 @@ class _SideBarNavItemState extends State<_SideBarNavItem> {
     final theme = Theme.of(context);
     final colorScheme = theme.colorScheme;
 
-    // Colors
-    final activeBgColor = colorScheme.primaryContainer.withValues(alpha: 0.85);
-    final activeTextColor = colorScheme.onPrimaryContainer;
-    final hoverBgColor = colorScheme.primary.withValues(alpha: 0.08);
-    final inactiveTextColor = colorScheme.onSurfaceVariant;
-
-    final textColor = widget.isSelected
-        ? activeTextColor
+    final bg = widget.isSelected
+        ? colorScheme.secondaryContainer
         : _isHovered
-            ? colorScheme.primary
-            : inactiveTextColor;
+            ? colorScheme.secondaryContainer.withValues(alpha: 0.4)
+            : Colors.transparent;
 
     final iconColor = widget.isSelected
-        ? activeTextColor
+        ? colorScheme.onSecondaryContainer
         : _isHovered
-            ? colorScheme.primary
-            : inactiveTextColor;
+            ? colorScheme.onSecondaryContainer.withValues(alpha: 0.8)
+            : colorScheme.onSurfaceVariant;
+
+    final textColor = widget.isSelected
+        ? colorScheme.onSecondaryContainer
+        : _isHovered
+            ? colorScheme.onSurface
+            : colorScheme.onSurfaceVariant;
 
     return MouseRegion(
       onEnter: (_) => setState(() => _isHovered = true),
@@ -241,46 +285,46 @@ class _SideBarNavItemState extends State<_SideBarNavItem> {
         onTap: widget.onTap,
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 200),
-          curve: Curves.easeInOutCubic,
-          height: 48,
+          curve: Curves.easeOutCubic,
+          height: 52,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(16),
-            color: widget.isSelected
-                ? activeBgColor
-                : _isHovered
-                    ? hoverBgColor
-                    : Colors.transparent,
+            color: bg,
           ),
-          padding: const EdgeInsets.symmetric(horizontal: 14),
+          padding: EdgeInsets.symmetric(
+            horizontal: widget.isExpanded ? 16 : 0,
+          ),
           child: Row(
-            mainAxisAlignment: widget.isExpanded ? MainAxisAlignment.start : MainAxisAlignment.center,
+            mainAxisAlignment: widget.isExpanded
+                ? MainAxisAlignment.start
+                : MainAxisAlignment.center,
             children: [
-              // Animated Icon
+              // Icon with animated scale
               AnimatedScale(
-                scale: widget.isSelected || _isHovered ? 1.1 : 1.0,
+                scale: widget.isSelected ? 1.1 : (_isHovered ? 1.05 : 1.0),
                 duration: const Duration(milliseconds: 200),
+                curve: Curves.easeOutCubic,
                 child: Icon(
                   widget.isSelected ? widget.activeIcon : widget.icon,
                   color: iconColor,
                   size: 24,
                 ),
               ),
-              // Label (only shown/faded when expanded)
               if (widget.isExpanded) ...[
-                const SizedBox(width: 12),
+                const SizedBox(width: 14),
                 Expanded(
-                  child: AnimatedOpacity(
-                    opacity: widget.isExpanded ? 1.0 : 0.0,
+                  child: AnimatedDefaultTextStyle(
                     duration: const Duration(milliseconds: 200),
+                    style: theme.textTheme.labelLarge!.copyWith(
+                      color: textColor,
+                      fontWeight: widget.isSelected
+                          ? FontWeight.w700
+                          : FontWeight.w500,
+                    ),
                     child: Text(
                       widget.label,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
-                      style: theme.textTheme.titleMedium?.copyWith(
-                        color: textColor,
-                        fontSize: 14,
-                        fontWeight: widget.isSelected ? FontWeight.bold : FontWeight.w500,
-                      ),
                     ),
                   ),
                 ),

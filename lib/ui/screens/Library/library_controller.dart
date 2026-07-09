@@ -1,4 +1,4 @@
-import 'dart:io';
+﻿import 'dart:io';
 import 'package:audio_service/audio_service.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -13,6 +13,7 @@ import '../../widgets/add_to_playlist.dart';
 import '/ui/widgets/sort_widget.dart';
 import '../Settings/settings_screen_controller.dart';
 import '/services/piped_service.dart';
+import '/services/sync_service.dart';
 import '../../../utils/helper.dart';
 import '/models/album.dart';
 import '/models/artist.dart';
@@ -391,6 +392,7 @@ class LibraryPlaylistsController extends GetxController
         final box = await Hive.openBox("LibraryPlaylists");
         box.put(newplst.playlistId, newplst.toJson());
         await box.close();
+        Get.find<SyncService>().triggerPush();
       }
 
       libraryPlaylists.add(newplst);
@@ -547,6 +549,7 @@ class LibraryPlaylistsController extends GetxController
 
       // Refresh library to show the new playlist
       refreshLib();
+      Get.find<SyncService>().triggerPush();
 
       // Show success message
       if (context.mounted) {

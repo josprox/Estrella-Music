@@ -1,5 +1,4 @@
-import 'dart:ui';
-import 'package:audio_service/audio_service.dart';
+﻿import 'package:audio_service/audio_service.dart';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -44,25 +43,15 @@ class SongInfoBottomSheet extends StatelessWidget {
         Get.put(SongInfoController(song, calledFromPlayer));
     final playerController = Get.find<PlayerController>();
     final colorScheme = Theme.of(context).colorScheme;
-    return ClipRRect(
-      borderRadius: const BorderRadius.vertical(top: Radius.circular(32)),
-      child: BackdropFilter(
-        filter: ImageFilter.blur(sigmaX: 25, sigmaY: 25),
-        child: Container(
-          decoration: BoxDecoration(
-            color: colorScheme.surfaceContainerHigh.withValues(alpha: 0.65),
-            borderRadius: const BorderRadius.vertical(top: Radius.circular(32)),
-            border: Border.all(
-              color: colorScheme.outlineVariant.withValues(alpha: 0.2),
-              width: 1,
-            ),
-          ),
-          child: Padding(
-            padding: EdgeInsets.only(bottom: Get.mediaQuery.padding.bottom),
-            child: SingleChildScrollView(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
+    return Material(
+      color: colorScheme.surfaceContainerLow,
+      borderRadius: const BorderRadius.vertical(top: Radius.circular(28)),
+      child: Padding(
+        padding: EdgeInsets.only(bottom: Get.mediaQuery.padding.bottom),
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
                   const SizedBox(height: 12),
                   Center(
                     child: Container(
@@ -321,7 +310,7 @@ class SongInfoBottomSheet extends StatelessWidget {
                     isScrollControlled: true,
                     context:
                         playerController.homeScaffoldkey.currentState!.context,
-                    barrierColor: Colors.transparent.withAlpha(100),
+
                     builder: (context) => const SleepTimerBottomSheet(),
                   );
                 },
@@ -332,15 +321,13 @@ class SongInfoBottomSheet extends StatelessWidget {
               leading: const Icon(Icons.share),
               title: Text(S.current.shareSong),
               onTap: () =>
-                  YoutubeShareManager.shareSong(song.id, title: song.title, artist: song.artist),
+                   YoutubeShareManager.shareSong(song.id, title: song.title, artist: song.artist),
             ),
                 ],
               ),
             ),
           ),
-        ),
-      ),
-    );
+        );
   }
 
   List<Widget> artistWidgetList(MediaItem song, BuildContext context) {

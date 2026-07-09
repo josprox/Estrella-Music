@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/models/album.dart';
 import 'package:harmonymusic/models/artist.dart';

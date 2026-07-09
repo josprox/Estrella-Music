@@ -609,17 +609,12 @@ class HomeScreenController extends GetxController {
       isHomeSreenOnTop.value = isHomeOnTop;
 
       if (!playerCon.initFlagForPlayer) {
-        if (isHomeOnTop) {
-          playerCon.playerPanelMinHeight.value = 165.0;
-        } else {
-          Future.delayed(
-              isResultScreenOnTop
-                  ? const Duration(milliseconds: 300)
-                  : Duration.zero, () {
-            playerCon.playerPanelMinHeight.value =
-                75.0 + Get.mediaQuery.viewPadding.bottom;
-          });
-        }
+        Future.delayed(
+            isResultScreenOnTop
+                ? const Duration(milliseconds: 300)
+                : Duration.zero, () {
+          playerCon.updateMinHeight();
+        });
       }
     }
   }

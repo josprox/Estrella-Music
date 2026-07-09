@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 import '/ui/player/components/lyrics_switch.dart';

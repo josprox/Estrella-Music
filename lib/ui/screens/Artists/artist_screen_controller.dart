@@ -1,4 +1,4 @@
-import 'package:audio_service/audio_service.dart';
+﻿import 'package:audio_service/audio_service.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -239,7 +239,7 @@ class ArtistScreenController extends GetxController
     // Map various possible names to standard keys
     artistData["Singles"] = artistData["Singles"] ?? artistData["Singles & EPs"] ?? artistData["Sencillos y EPs"];
     artistData["Songs"] = artistData["Songs"] ?? artistData["Top songs"] ?? artistData["Canciones populares"];
-    artistData["Albums"] = artistData["Albums"] ?? artistData["Álbumes"];
+    artistData["Albums"] = artistData["Albums"] ?? artistData["Ãlbumes"];
     artistData["Videos"] = artistData["Videos"] ?? artistData["Popular music videos"] ?? artistData["Vídeos"];
     artistData["Playlists"] = artistData["Playlists"] ?? artistData["Listas de reproducción"];
     artistData["Podcasts"] = artistData["Podcasts"] ?? artistData["Podcast shows"] ?? artistData["Podcasts"];

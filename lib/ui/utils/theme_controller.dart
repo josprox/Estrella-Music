@@ -1,4 +1,4 @@
-import 'package:flutter/foundation.dart';
+﻿import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -110,7 +110,7 @@ class ThemeController extends GetxController {
     } else if (type == ThemeType.dark) {
       brightness = Brightness.dark;
     } else {
-      // dynamic or system → follow the actual system brightness
+      // dynamic or system â†’ follow the actual system brightness
       brightness = systemBrightness;
     }
 
@@ -136,11 +136,11 @@ class ThemeController extends GetxController {
       colorScheme = ColorScheme.fromSeed(
         seedColor: seedColor,
         brightness: brightness,
-        dynamicSchemeVariant: DynamicSchemeVariant.vibrant,
+        dynamicSchemeVariant: DynamicSchemeVariant.expressive,
       );
     }
 
-    // Material 3 typography
+    // Material 3 typography (2021 spec)
     final textTheme = Typography.material2021(platform: defaultTargetPlatform)
         .black
         .apply(displayColor: colorScheme.onSurface, bodyColor: colorScheme.onSurface);
@@ -151,36 +151,63 @@ class ThemeController extends GetxController {
       textTheme: textTheme,
       scaffoldBackgroundColor: colorScheme.surface,
       canvasColor: colorScheme.surface,
-      cardColor: colorScheme.surfaceContainerHigh,
-      
-      // ── Bottom Sheet ──────────────────────────────────────────────────────
-      bottomSheetTheme: BottomSheetThemeData(
+      cardColor: colorScheme.surfaceContainerLow,
+
+      // ── AppBar ────────────────────────────────────────────────────────────
+      appBarTheme: AppBarTheme(
         backgroundColor: colorScheme.surface,
         surfaceTintColor: colorScheme.surfaceTint,
+        foregroundColor: colorScheme.onSurface,
+        elevation: 0,
+        scrolledUnderElevation: 3,
+        shadowColor: colorScheme.shadow.withValues(alpha: 0.15),
+        centerTitle: false,
+        titleTextStyle: TextStyle(
+          color: colorScheme.onSurface,
+          fontSize: 22,
+          fontWeight: FontWeight.w700,
+          letterSpacing: -0.3,
+        ),
+        iconTheme: IconThemeData(color: colorScheme.onSurfaceVariant, size: 24),
+        actionsIconTheme: IconThemeData(color: colorScheme.onSurfaceVariant, size: 24),
+      ),
+
+      // ── Bottom Sheet ──────────────────────────────────────────────────────
+      bottomSheetTheme: BottomSheetThemeData(
+        backgroundColor: colorScheme.surfaceContainerLow,
+        surfaceTintColor: colorScheme.surfaceTint,
+        elevation: 2,
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(top: Radius.circular(28)),
         ),
         modalBarrierColor: Colors.black.withValues(alpha: 0.45),
       ),
 
-      // ── Navigation Bar ────────────────────────────────────────────────────
+      // ── Navigation Bar (M3 — used as reference for GNav styling) ─────────
       navigationBarTheme: NavigationBarThemeData(
         backgroundColor: colorScheme.surface,
         surfaceTintColor: colorScheme.surfaceTint,
         elevation: 0,
+        height: 72,
         indicatorColor: colorScheme.secondaryContainer,
+        indicatorShape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16),
+        ),
+        labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
         labelTextStyle: WidgetStateProperty.resolveWith((states) {
           if (states.contains(WidgetState.selected)) {
             return TextStyle(
               color: colorScheme.onSurface,
               fontWeight: FontWeight.w700,
-              fontSize: 12,
+              fontSize: 11,
+              letterSpacing: 0.3,
             );
           }
           return TextStyle(
             color: colorScheme.onSurfaceVariant,
             fontWeight: FontWeight.w500,
-            fontSize: 12,
+            fontSize: 11,
+            letterSpacing: 0.3,
           );
         }),
         iconTheme: WidgetStateProperty.resolveWith((states) {
@@ -202,6 +229,9 @@ class ThemeController extends GetxController {
         backgroundColor: colorScheme.surface,
         elevation: 0,
         indicatorColor: colorScheme.secondaryContainer,
+        indicatorShape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16),
+        ),
         selectedIconTheme: IconThemeData(color: colorScheme.onSecondaryContainer, size: 24),
         unselectedIconTheme: IconThemeData(color: colorScheme.onSurfaceVariant, size: 22),
         selectedLabelTextStyle: TextStyle(
@@ -216,6 +246,144 @@ class ThemeController extends GetxController {
         ),
       ),
 
+      // ── Card ──────────────────────────────────────────────────────────────
+      cardTheme: CardThemeData(
+        color: colorScheme.surfaceContainerLow,
+        shadowColor: Colors.transparent,
+        elevation: 0,
+        margin: EdgeInsets.zero,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16),
+        ),
+        clipBehavior: Clip.antiAlias,
+      ),
+
+      // ── Chip ──────────────────────────────────────────────────────────────
+      chipTheme: ChipThemeData(
+        backgroundColor: colorScheme.surfaceContainerHighest,
+        selectedColor: colorScheme.secondaryContainer,
+        labelStyle: TextStyle(
+          color: colorScheme.onSurface,
+          fontWeight: FontWeight.w500,
+          fontSize: 13,
+        ),
+        side: BorderSide(color: colorScheme.outlineVariant, width: 1),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(8),
+        ),
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+        checkmarkColor: colorScheme.onSecondaryContainer,
+        elevation: 0,
+        pressElevation: 0,
+      ),
+
+      // ── List Tile ─────────────────────────────────────────────────────────
+      listTileTheme: ListTileThemeData(
+        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12),
+        ),
+        titleTextStyle: TextStyle(
+          color: colorScheme.onSurface,
+          fontWeight: FontWeight.w500,
+          fontSize: 15,
+        ),
+        subtitleTextStyle: TextStyle(
+          color: colorScheme.onSurfaceVariant,
+          fontWeight: FontWeight.w400,
+          fontSize: 13,
+        ),
+        leadingAndTrailingTextStyle: TextStyle(
+          color: colorScheme.onSurfaceVariant,
+          fontSize: 12,
+        ),
+        iconColor: colorScheme.onSurfaceVariant,
+        tileColor: Colors.transparent,
+        selectedTileColor: colorScheme.secondaryContainer.withValues(alpha: 0.5),
+        selectedColor: colorScheme.onSecondaryContainer,
+      ),
+
+      // ── Elevated Button ───────────────────────────────────────────────────
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: colorScheme.primaryContainer,
+          foregroundColor: colorScheme.onPrimaryContainer,
+          elevation: 0,
+          shadowColor: Colors.transparent,
+          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+          ),
+          textStyle: const TextStyle(
+            fontWeight: FontWeight.w600,
+            fontSize: 14,
+            letterSpacing: 0.1,
+          ),
+        ),
+      ),
+
+      // ── Filled Button ─────────────────────────────────────────────────────
+      filledButtonTheme: FilledButtonThemeData(
+        style: FilledButton.styleFrom(
+          backgroundColor: colorScheme.primary,
+          foregroundColor: colorScheme.onPrimary,
+          elevation: 0,
+          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+          ),
+          textStyle: const TextStyle(
+            fontWeight: FontWeight.w600,
+            fontSize: 14,
+            letterSpacing: 0.1,
+          ),
+        ),
+      ),
+
+      // ── Outlined Button ───────────────────────────────────────────────────
+      outlinedButtonTheme: OutlinedButtonThemeData(
+        style: OutlinedButton.styleFrom(
+          foregroundColor: colorScheme.primary,
+          side: BorderSide(color: colorScheme.outline, width: 1.5),
+          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+          ),
+          textStyle: const TextStyle(
+            fontWeight: FontWeight.w600,
+            fontSize: 14,
+            letterSpacing: 0.1,
+          ),
+        ),
+      ),
+
+      // ── Text Button ───────────────────────────────────────────────────────
+      textButtonTheme: TextButtonThemeData(
+        style: TextButton.styleFrom(
+          foregroundColor: colorScheme.primary,
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10),
+          ),
+          textStyle: const TextStyle(
+            fontWeight: FontWeight.w600,
+            fontSize: 14,
+            letterSpacing: 0.1,
+          ),
+        ),
+      ),
+
+      // ── Icon Button ───────────────────────────────────────────────────────
+      iconButtonTheme: IconButtonThemeData(
+        style: IconButton.styleFrom(
+          foregroundColor: colorScheme.onSurfaceVariant,
+          highlightColor: colorScheme.primary.withValues(alpha: 0.1),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+          ),
+        ),
+      ),
+
       // ── Slider ────────────────────────────────────────────────────────────
       sliderTheme: SliderThemeData(
         inactiveTrackColor: colorScheme.onSurface.withValues(alpha: 0.15),
@@ -225,13 +393,17 @@ class ThemeController extends GetxController {
         thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 8),
         overlayShape: const RoundSliderOverlayShape(overlayRadius: 18),
         valueIndicatorColor: colorScheme.primary,
+        valueIndicatorTextStyle: TextStyle(color: colorScheme.onPrimary),
         trackHeight: 4,
+        trackShape: const RoundedRectSliderTrackShape(),
       ),
 
       // ── Progress Indicator ────────────────────────────────────────────────
       progressIndicatorTheme: ProgressIndicatorThemeData(
         color: colorScheme.primary,
         linearTrackColor: colorScheme.onSurface.withValues(alpha: 0.12),
+        circularTrackColor: colorScheme.onSurface.withValues(alpha: 0.08),
+        linearMinHeight: 4,
       ),
 
       // ── Input / Text Field ────────────────────────────────────────────────
@@ -242,11 +414,23 @@ class ThemeController extends GetxController {
           borderRadius: BorderRadius.circular(16),
           borderSide: BorderSide.none,
         ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(16),
+          borderSide: BorderSide.none,
+        ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(16),
           borderSide: BorderSide(color: colorScheme.primary, width: 2),
         ),
-        hintStyle: TextStyle(color: colorScheme.onSurfaceVariant),
+        errorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(16),
+          borderSide: BorderSide(color: colorScheme.error, width: 1.5),
+        ),
+        hintStyle: TextStyle(color: colorScheme.onSurfaceVariant.withValues(alpha: 0.6)),
+        labelStyle: TextStyle(color: colorScheme.onSurfaceVariant),
+        prefixIconColor: colorScheme.onSurfaceVariant,
+        suffixIconColor: colorScheme.onSurfaceVariant,
+        contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
       ),
 
       textSelectionTheme: TextSelectionThemeData(
@@ -259,9 +443,92 @@ class ThemeController extends GetxController {
       dialogTheme: DialogThemeData(
         backgroundColor: colorScheme.surfaceContainerHigh,
         surfaceTintColor: colorScheme.surfaceTint,
+        elevation: 3,
+        shadowColor: Colors.transparent,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(28),
         ),
+        titleTextStyle: TextStyle(
+          color: colorScheme.onSurface,
+          fontSize: 20,
+          fontWeight: FontWeight.w700,
+          letterSpacing: 0,
+        ),
+        contentTextStyle: TextStyle(
+          color: colorScheme.onSurfaceVariant,
+          fontSize: 14,
+          fontWeight: FontWeight.w400,
+          height: 1.5,
+        ),
+      ),
+
+      // ── Snack Bar ─────────────────────────────────────────────────────────
+      snackBarTheme: SnackBarThemeData(
+        backgroundColor: colorScheme.inverseSurface,
+        contentTextStyle: TextStyle(color: colorScheme.onInverseSurface),
+        actionTextColor: colorScheme.inversePrimary,
+        behavior: SnackBarBehavior.floating,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12),
+        ),
+        elevation: 4,
+      ),
+
+      // ── Badge ─────────────────────────────────────────────────────────────
+      badgeTheme: BadgeThemeData(
+        backgroundColor: colorScheme.error,
+        textColor: colorScheme.onError,
+        textStyle: const TextStyle(fontSize: 10, fontWeight: FontWeight.w700),
+        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+        smallSize: 8,
+        largeSize: 18,
+      ),
+
+      // ── Switch ────────────────────────────────────────────────────────────
+      switchTheme: SwitchThemeData(
+        thumbColor: WidgetStateProperty.resolveWith((states) {
+          if (states.contains(WidgetState.selected)) return colorScheme.onPrimary;
+          return colorScheme.outline;
+        }),
+        trackColor: WidgetStateProperty.resolveWith((states) {
+          if (states.contains(WidgetState.selected)) return colorScheme.primary;
+          return colorScheme.surfaceContainerHighest;
+        }),
+        trackOutlineColor: WidgetStateProperty.resolveWith((states) {
+          if (states.contains(WidgetState.selected)) return Colors.transparent;
+          return colorScheme.outline;
+        }),
+      ),
+
+      // ── Checkbox ──────────────────────────────────────────────────────────
+      checkboxTheme: CheckboxThemeData(
+        fillColor: WidgetStateProperty.resolveWith((states) {
+          if (states.contains(WidgetState.selected)) return colorScheme.primary;
+          return Colors.transparent;
+        }),
+        checkColor: WidgetStateProperty.all(colorScheme.onPrimary),
+        side: BorderSide(color: colorScheme.outline, width: 2),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
+      ),
+
+      // ── Radio ─────────────────────────────────────────────────────────────
+      radioTheme: RadioThemeData(
+        fillColor: WidgetStateProperty.resolveWith((states) {
+          if (states.contains(WidgetState.selected)) return colorScheme.primary;
+          return colorScheme.onSurfaceVariant;
+        }),
+      ),
+
+      // ── Tab Bar ───────────────────────────────────────────────────────────
+      tabBarTheme: TabBarThemeData(
+        labelColor: colorScheme.primary,
+        unselectedLabelColor: colorScheme.onSurfaceVariant,
+        labelStyle: const TextStyle(fontWeight: FontWeight.w700, fontSize: 14),
+        unselectedLabelStyle: const TextStyle(fontWeight: FontWeight.w500, fontSize: 14),
+        indicatorColor: colorScheme.primary,
+        indicatorSize: TabBarIndicatorSize.label,
+        dividerColor: colorScheme.outlineVariant.withValues(alpha: 0.5),
+        splashFactory: InkRipple.splashFactory,
       ),
 
       // ── Icon ─────────────────────────────────────────────────────────────
@@ -271,7 +538,10 @@ class ThemeController extends GetxController {
       floatingActionButtonTheme: FloatingActionButtonThemeData(
         backgroundColor: colorScheme.primaryContainer,
         foregroundColor: colorScheme.onPrimaryContainer,
-        elevation: 0,
+        elevation: 2,
+        focusElevation: 4,
+        hoverElevation: 4,
+        highlightElevation: 6,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16),
         ),
@@ -279,10 +549,57 @@ class ThemeController extends GetxController {
 
       // ── Divider ───────────────────────────────────────────────────────────
       dividerTheme: DividerThemeData(
-        color: colorScheme.outlineVariant,
+        color: colorScheme.outlineVariant.withValues(alpha: 0.5),
         thickness: 1,
         space: 1,
       ),
+
+      // ── Popup Menu ────────────────────────────────────────────────────────
+      popupMenuTheme: PopupMenuThemeData(
+        color: colorScheme.surfaceContainer,
+        elevation: 3,
+        shadowColor: Colors.transparent,
+        surfaceTintColor: colorScheme.surfaceTint,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16),
+        ),
+        labelTextStyle: WidgetStateProperty.all(
+          TextStyle(
+            color: colorScheme.onSurface,
+            fontSize: 14,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+      ),
+
+      // ── Tooltip ───────────────────────────────────────────────────────────
+      tooltipTheme: TooltipThemeData(
+        decoration: BoxDecoration(
+          color: colorScheme.inverseSurface,
+          borderRadius: BorderRadius.circular(8),
+        ),
+        textStyle: TextStyle(
+          color: colorScheme.onInverseSurface,
+          fontSize: 12,
+          fontWeight: FontWeight.w500,
+        ),
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+      ),
+
+      // ── Scroll ────────────────────────────────────────────────────────────
+      scrollbarTheme: ScrollbarThemeData(
+        thumbColor: WidgetStateProperty.all(
+          colorScheme.onSurface.withValues(alpha: 0.2),
+        ),
+        trackColor: WidgetStateProperty.all(Colors.transparent),
+        radius: const Radius.circular(8),
+        thickness: WidgetStateProperty.all(4),
+      ),
+
+      // ── Splash / Ink ─────────────────────────────────────────────────────
+      splashFactory: InkSparkle.splashFactory,
+      splashColor: colorScheme.primary.withValues(alpha: 0.08),
+      highlightColor: colorScheme.primary.withValues(alpha: 0.06),
     );
   }
 

@@ -399,7 +399,7 @@ class SettingsScreen extends StatelessWidget {
       ],
     ));
 
-    return SafeArea(
+    final viewBody = SafeArea(
       bottom: false,
       child: CustomScrollView(
         physics: const BouncingScrollPhysics(),
@@ -412,6 +412,13 @@ class SettingsScreen extends StatelessWidget {
               padding: const EdgeInsets.fromLTRB(20, 0, 20, 8),
               child: Row(
                 children: [
+                  if (!isBottomNavActive) ...[
+                    IconButton(
+                      icon: const Icon(Icons.arrow_back_rounded),
+                      onPressed: () => Navigator.of(context).pop(),
+                    ),
+                    const SizedBox(width: 8),
+                  ],
                   Container(
                     width: 44, height: 44,
                     decoration: BoxDecoration(
@@ -501,6 +508,13 @@ class SettingsScreen extends StatelessWidget {
         ],
       ),
     );
+
+    return isBottomNavActive
+        ? viewBody
+        : Scaffold(
+            backgroundColor: cs.surface,
+            body: viewBody,
+          );
   }
 }
 

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 
 class CommonDialog extends StatelessWidget {
   const CommonDialog({super.key, this.child, this.maxWidth = 500});

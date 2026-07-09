@@ -103,6 +103,7 @@ class PlayerController extends GetxController
   final panelPosition = 0.0.obs;
   final isPlayerpanelTopVisible = true.obs;
   final isPanelGTHOpened = false.obs;
+  final isQueuePanelOpened = false.obs;
   final playerPanelMinHeight = 0.0.obs;
   bool initFlagForPlayer = true;
   final isQueueReorderingInProcess = false.obs;
@@ -241,9 +242,15 @@ class PlayerController extends GetxController
     }
 
     if (x > 0.6) {
-      isPanelGTHOpened.value = true;
+      if (!isPanelGTHOpened.value) {
+        isPanelGTHOpened.value = true;
+        updateMinHeight();
+      }
     } else {
-      isPanelGTHOpened.value = false;
+      if (isPanelGTHOpened.value) {
+        isPanelGTHOpened.value = false;
+        updateMinHeight();
+      }
     }
   }
 
@@ -699,17 +706,29 @@ class PlayerController extends GetxController
     }
 
     if (initFlagForPlayer) {
-      final miniPlayerHeight = isWideScreen ? 105.0 : 75.0;
-      if (Get.find<SettingsScreenController>().isBottomNavBarEnabled.isFalse ||
-          getCurrentRouteName() != '/homeScreen') {
-        playerPanelMinHeight.value =
-            miniPlayerHeight + Get.mediaQuery.viewPadding.bottom;
-      } else {
-        playerPanelMinHeight.value =
-            isWideScreen ? 105.0 : 165.0; // 75 + 90 navbar clearance
-      }
+      updateMinHeight();
       initFlagForPlayer = false;
     }
+  }
+
+  void updateMinHeight() {
+    final isWideScreen = Get.width > 800;
+    if (isWideScreen) {
+      playerPanelMinHeight.value = 105.0 + Get.mediaQuery.padding.bottom;
+      return;
+    }
+    
+    final isBottomNavBarEnabled = Get.find<SettingsScreenController>().isBottomNavBarEnabled.isTrue;
+    bool isHomeOnTop = false;
+    if (Get.isRegistered<HomeScreenController>()) {
+      isHomeOnTop = Get.find<HomeScreenController>().isHomeSreenOnTop.isTrue;
+    }
+    
+    final isBottomNavBarVisible = isBottomNavBarEnabled &&
+        isHomeOnTop &&
+        isPanelGTHOpened.isFalse;
+        
+    playerPanelMinHeight.value = 74.0 + (isBottomNavBarVisible ? 0.0 : Get.mediaQuery.padding.bottom);
   }
 
   void removeFromQueue(MediaItem song) {

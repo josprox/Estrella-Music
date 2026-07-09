@@ -1,4 +1,4 @@
-import 'dart:ui';
+﻿import 'dart:ui';
 
 import 'package:audio_video_progress_bar/audio_video_progress_bar.dart';
 
@@ -39,10 +39,10 @@ class GesturePlayer extends StatelessWidget {
               shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.vertical(top: Radius.circular(10.0)),
               ),
-              backgroundColor: Colors.transparent,
+
               isScrollControlled: true,
               context: playerController.homeScaffoldkey.currentState!.context,
-              barrierColor: Colors.transparent.withAlpha(100),
+
               builder: (context) => SongInfoBottomSheet(
                 playerController.currentSong.value!,
                 calledFromPlayer: true,

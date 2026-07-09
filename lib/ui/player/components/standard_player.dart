@@ -22,7 +22,8 @@ import 'package:harmonymusic/generated/l10n.dart';
 import 'package:harmonymusic/ui/screens/Settings/settings_screen_controller.dart';
 
 class StandardPlayer extends StatelessWidget {
-  const StandardPlayer({super.key});
+  final ScrollController? mainScrollController;
+  const StandardPlayer({super.key, this.mainScrollController});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +32,11 @@ class StandardPlayer extends StatelessWidget {
     return Obx(() {
       final song = ctrl.currentSong.value;
       if (song == null) return const SizedBox.shrink();
-      return _StandardPlayerContent(song: song, ctrl: ctrl);
+      return _StandardPlayerContent(
+        song: song,
+        ctrl: ctrl,
+        mainScrollController: mainScrollController,
+      );
     });
   }
 }
@@ -40,8 +45,13 @@ class StandardPlayer extends StatelessWidget {
 class _StandardPlayerContent extends StatelessWidget {
   final MediaItem song;
   final PlayerController ctrl;
+  final ScrollController? mainScrollController;
 
-  const _StandardPlayerContent({required this.song, required this.ctrl});
+  const _StandardPlayerContent({
+    required this.song,
+    required this.ctrl,
+    this.mainScrollController,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -103,6 +113,7 @@ class _StandardPlayerContent extends StatelessWidget {
   Widget _buildMobileLayout(
       BuildContext context, Size size, ColorScheme colorScheme, TextTheme textTheme, double botPad, double artSize) {
     return CustomScrollView(
+      controller: mainScrollController,
       physics: const BouncingScrollPhysics(),
       slivers: [
         SliverToBoxAdapter(
@@ -439,7 +450,7 @@ class _TopBar extends StatelessWidget {
     if (ctrl.currentSong.value == null) return;
     showModalBottomSheet(
       constraints: const BoxConstraints(maxWidth: 500),
-      backgroundColor: Colors.transparent,
+
       isScrollControlled: true,
       context: context,
       builder: (_) => SongInfoBottomSheet(ctrl.currentSong.value!, calledFromPlayer: true),
@@ -548,7 +559,7 @@ class _SongInfo extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // ── Song title → navigate to album ──────────────────────
+              // ── Song title â†’ navigate to album ──────────────────────
               GestureDetector(
                 behavior: HitTestBehavior.opaque,
                 onTap: albumId != null && albumId.isNotEmpty
@@ -580,7 +591,7 @@ class _SongInfo extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 4),
-              // ── Artist name → navigate to artist ───────────────────
+              // ── Artist name â†’ navigate to artist ───────────────────
               GestureDetector(
                 behavior: HitTestBehavior.opaque,
                 onTap: artistId != null && artistId.isNotEmpty
@@ -842,7 +853,7 @@ class _SecondaryActions extends StatelessWidget {
     
     showModalBottomSheet(
       context: context,
-      backgroundColor: Colors.transparent,
+
       isScrollControlled: true,
       builder: (context) {
         return ClipRRect(

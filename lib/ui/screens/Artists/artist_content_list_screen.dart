@@ -1,4 +1,4 @@
-import 'package:audio_service/audio_service.dart';
+﻿import 'package:audio_service/audio_service.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -108,7 +108,7 @@ class ArtistContentListScreen extends StatelessWidget {
             style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: Theme.of(context).colorScheme.onSurface)),
-        backgroundColor: Colors.transparent,
+
         elevation: 0,
         iconTheme:
             IconThemeData(color: Theme.of(context).colorScheme.onSurface),

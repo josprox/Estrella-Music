@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/generated/l10n.dart';
 import 'package:harmonymusic/ui/utils/theme_controller.dart';

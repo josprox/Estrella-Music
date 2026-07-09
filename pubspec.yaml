@@ -29,6 +29,8 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   animations: ^2.0.11
+  google_nav_bar: ^5.0.7
+  flutter_animate: ^4.5.0
   app_links: ^3.5.1
   archive: ^3.1.6
   audio_service: ^0.18.17
