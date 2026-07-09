@@ -106,6 +106,7 @@ class _UpNextQueueState extends State<UpNextQueue> {
             footer: SizedBox(height: Get.mediaQuery.padding.bottom),
             scrollController:
                 widget.isQueueInSlidePanel ? _playerController.scrollController : null,
+            // ignore: deprecated_member_use
             onReorder: (int oldIndex, int newIndex) {
               if (_playerController.isShuffleModeEnabled.isTrue) {
                 ScaffoldMessenger.of(Get.context!).showSnackBar(snackbar(

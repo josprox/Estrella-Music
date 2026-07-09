@@ -7,6 +7,9 @@ import 'app_backup_service.dart';
 import 'auth_service.dart';
 import 'cloud_backup_service.dart';
 import 'legacy_music_migration_service.dart';
+import 'sync_service.dart';
+import 'cloud_migration_service.dart';
+
 
 class UserDataBootstrapService extends GetxService {
   final isPreparing = false.obs;
@@ -45,6 +48,13 @@ class UserDataBootstrapService extends GetxService {
   bool get needsBootstrapForCurrentUser {
     final userKey = currentUserKey;
     if (!_authService.isAuthenticated.value || userKey == null) {
+      return false;
+    }
+    final prefs = Hive.box('AppPrefs');
+    final dataMode = prefs.get('emusicDataMode', defaultValue: 'local');
+    final cloudRequested =
+        prefs.get('emusicCloudRequested', defaultValue: false) == true;
+    if (dataMode == 'cloud' || cloudRequested) {
       return false;
     }
     if (isPreparing.value) {
@@ -109,8 +119,36 @@ class UserDataBootstrapService extends GetxService {
 
     try {
       statusMessage.value = 'Revisando tu biblioteca local...';
-      final hasLocalData = await _hasMeaningfulLocalData();
+      final hasLocalData = await hasMeaningfulLocalData();
       willReplaceLocalData.value = hasLocalData;
+
+      statusMessage.value = 'Buscando biblioteca en la nube...';
+      final migrationService = Get.find<CloudMigrationService>();
+      final remoteSummary = await migrationService.fetchRemoteSummary();
+      final hasCloudData = remoteSummary.isNotEmpty &&
+          ((remoteSummary['playlists'] as num? ?? 0) > 0 ||
+           (remoteSummary['favorites'] as num? ?? 0) > 0 ||
+           (remoteSummary['recent_plays'] as num? ?? 0) > 0 ||
+           (remoteSummary['albums'] as num? ?? 0) > 0 ||
+           (remoteSummary['artists'] as num? ?? 0) > 0);
+
+      if (hasCloudData) {
+        statusMessage.value = 'Configurando tu biblioteca de la nube...';
+        final prefs = Hive.box('AppPrefs');
+        await prefs.put('emusicDataMode', 'cloud');
+        await prefs.put('hasPendingSync', false);
+        await prefs.put('emusicCloudRequested', false);
+        await prefs.put('emusicModeChoiceCompleted', true);
+
+        // Clean local data before pulling
+        await _appBackupService.clearLocalMusicData();
+
+        statusMessage.value = 'Descargando tu música...';
+        await Get.find<SyncService>().pull();
+
+        await _confirmBootstrap(userKey);
+        return;
+      }
 
       statusMessage.value = 'Buscando backups de tu cuenta...';
       final estrellaBackups = await _cloudBackupService.listBackups(
@@ -160,6 +198,7 @@ class UserDataBootstrapService extends GetxService {
       }
     }
   }
+
 
   Future<void> restoreSelectedBackup(CloudBackupFile backup) async {
     final userKey = _currentProcessingUserKey;
@@ -227,7 +266,7 @@ class UserDataBootstrapService extends GetxService {
     isPreparing.value = false;
   }
 
-  Future<bool> _hasMeaningfulLocalData() async {
+  Future<bool> hasMeaningfulLocalData() async {
     final boxesToCheck = <String>[
       'LibraryPlaylists',
       'LibraryAlbums',
@@ -250,6 +289,7 @@ class UserDataBootstrapService extends GetxService {
     }
     return false;
   }
+
 
   bool _wasBackupAlreadyProcessed({
     required String userKey,

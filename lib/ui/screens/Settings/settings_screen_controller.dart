@@ -1,4 +1,4 @@
-﻿import 'dart:io';
+import 'dart:io';
 
 import 'package:audio_service/audio_service.dart';
 import 'package:file_picker/file_picker.dart';
@@ -76,6 +76,7 @@ class SettingsScreenController extends GetxController {
   get isCurrentPathsupportDownDir =>
       "$_supportDir/Music" == downloadLocationPath.toString();
   String get supportDirPath => _supportDir;
+  bool get supportsPlaybackPitch => !GetPlatform.isDesktop;
 
   _checkNewVersion() {
     newVersionCheck(currentVersion.value)
@@ -144,8 +145,10 @@ class SettingsScreenController extends GetxController {
     }
     autoDownloadFavoriteSongEnabled.value =
         setBox.get("autoDownloadFavoriteSongEnabled") ?? false;
-    playbackSpeed.value = ((setBox.get("playbackSpeed") ?? 1.0) as num).toDouble();
-    playbackPitch.value = ((setBox.get("playbackPitch") ?? 1.0) as num).toDouble();
+    playbackSpeed.value =
+        ((setBox.get("playbackSpeed") ?? 1.0) as num).toDouble();
+    playbackPitch.value =
+        ((setBox.get("playbackPitch") ?? 1.0) as num).toDouble();
   }
 
   void setAppLanguage(String? val) {
@@ -320,8 +323,9 @@ class SettingsScreenController extends GetxController {
     Get.find<LibraryPlaylistsController>().removePipedPlaylists();
     final box = await Hive.openBox('blacklistedPlaylist');
     box.clear();
-    ScaffoldMessenger.of(Get.context!).showSnackBar(
-        snackbar(Get.context!, S.current.unlinkAlert, size: SanckBarSize.MEDIUM));
+    ScaffoldMessenger.of(Get.context!).showSnackBar(snackbar(
+        Get.context!, S.current.unlinkAlert,
+        size: SanckBarSize.MEDIUM));
     box.close();
   }
 
@@ -343,6 +347,8 @@ class SettingsScreenController extends GetxController {
   }
 
   void setPlaybackPitch(double val) {
+    if (!supportsPlaybackPitch) return;
+
     playbackPitch.value = val;
     setBox.put('playbackPitch', val);
     try {

@@ -1,12 +1,15 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hive/hive.dart';
 
 import '../../services/auth_service.dart';
+import '../../services/update_service.dart';
 import '../../services/user_data_bootstrap_service.dart';
 import '../home.dart';
 import '../screens/Update/update_screen.dart';
-import '../../services/update_service.dart';
 import 'account_bootstrap_screen.dart';
+import 'cloud_migration_screen.dart';
+import 'cloud_mode_choice_screen.dart';
 import 'music_auth_screen.dart';
 
 class AuthGate extends StatefulWidget {
@@ -27,14 +30,42 @@ class _AuthGateState extends State<AuthGate> {
   }
 
   Future<void> _initializeApp() async {
-    // Check for updates first
     final hasUpdate = await UpdateService.checkForUpdate();
     updateRequired.value = hasUpdate;
     isUpdateChecked.value = true;
 
     if (!hasUpdate) {
       Get.find<AuthService>().restoreSession();
+      
+      final prefs = Hive.box('AppPrefs');
+      final modeChoiceCompleted =
+          prefs.get('emusicModeChoiceCompleted', defaultValue: false) == true;
+      if (!modeChoiceCompleted) {
+        final bootstrapService = Get.find<UserDataBootstrapService>();
+        final hasData = await bootstrapService.hasMeaningfulLocalData();
+        if (!hasData) {
+          await prefs.put('emusicModeChoiceCompleted', true);
+          await prefs.put('emusicDataMode', 'local');
+          await prefs.put('emusicCloudRequested', false);
+        }
+      }
     }
+  }
+
+  Future<void> _keepLocalMode() async {
+    final prefs = Hive.box('AppPrefs');
+    await prefs.put('emusicDataMode', 'local');
+    await prefs.put('emusicModeChoiceCompleted', true);
+    await prefs.put('emusicCloudRequested', false);
+    await prefs.put('hasPendingSync', false);
+    if (mounted) setState(() {});
+  }
+
+  Future<void> _chooseCloudMode() async {
+    final prefs = Hive.box('AppPrefs');
+    await prefs.put('emusicModeChoiceCompleted', true);
+    await prefs.put('emusicCloudRequested', true);
+    if (mounted) setState(() {});
   }
 
   @override
@@ -42,6 +73,14 @@ class _AuthGateState extends State<AuthGate> {
     final authService = Get.find<AuthService>();
     final bootstrapService = Get.find<UserDataBootstrapService>();
     return Obx(() {
+      final prefs = Hive.box('AppPrefs');
+      final modeChoiceCompleted =
+          prefs.get('emusicModeChoiceCompleted', defaultValue: false) == true;
+      final cloudRequested =
+          prefs.get('emusicCloudRequested', defaultValue: false) == true;
+      final dataMode =
+          prefs.get('emusicDataMode', defaultValue: 'local').toString();
+
       if (isUpdateChecked.isFalse) {
         return const AccountBootstrapScreen(
           title: 'Estrella Music',
@@ -53,16 +92,30 @@ class _AuthGateState extends State<AuthGate> {
         return const UpdateScreen();
       }
 
+      if (!modeChoiceCompleted) {
+        return CloudModeChoiceScreen(
+          onKeepLocal: _keepLocalMode,
+          onChooseCloud: _chooseCloudMode,
+        );
+      }
+
       if (authService.isLoadingSession.isTrue) {
         return const AccountBootstrapScreen(
-          title: 'Validando tu sesión',
+          title: 'Validando tu sesion',
           message: 'Un momento, estamos preparando Estrella Music.',
         );
       }
 
       if (authService.isAuthenticated.isFalse) {
+        if (!cloudRequested && dataMode == 'local') {
+          return const Home();
+        }
         bootstrapService.resetRuntimeState();
         return const MusicAuthScreen();
+      }
+
+      if (cloudRequested && dataMode != 'cloud') {
+        return const CloudMigrationScreen();
       }
 
       if (bootstrapService.needsBootstrapForCurrentUser) {

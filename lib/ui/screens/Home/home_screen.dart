@@ -276,16 +276,16 @@ class Body extends StatelessWidget {
       return settingsScreenController.isBottomNavBarEnabled.isTrue
           ? const PlaylistNAlbumLibraryWidget(
               isAlbumContent: true, isBottomNavActive: true)
-          : const PlaylistNAlbumLibraryWidget(isAlbumContent: false);
+          : const PlaylistNAlbumLibraryWidget(isAlbumContent: true);
     } else if (homeScreenController.tabIndex.value == 4) {
       return settingsScreenController.isBottomNavBarEnabled.isTrue
           ? const LibraryArtistWidget(isBottomNavActive: true)
-          : const PlaylistNAlbumLibraryWidget();
+          : const LibraryArtistWidget();
     } else if (homeScreenController.tabIndex.value == 5) {
       return settingsScreenController.isBottomNavBarEnabled.isTrue
           ? const PlaylistNAlbumLibraryWidget(
               isAlbumContent: false, isBottomNavActive: true)
-          : const LibraryArtistWidget();
+          : const PlaylistNAlbumLibraryWidget(isAlbumContent: false);
     } else {
       return Center(child: Text('${homeScreenController.tabIndex.value}'));
     }

@@ -5,6 +5,10 @@ import 'package:get/get.dart';
 import '/ui/navigator.dart';
 import '/ui/widgets/sort_widget.dart';
 
+String sanitizeBoxName(String name) {
+  return name.replaceAll(RegExp(r'[^a-zA-Z0-9_\-]'), '_');
+}
+
 void printERROR(dynamic text, {String tag = "Estrella Music"}) {
   if (kReleaseMode) return;
   debugPrint("\x1B[31m[$tag]: $text\x1B[0m");

@@ -1,6 +1,7 @@
 ﻿import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:harmonymusic/utils/helper.dart';
 import '../../models/playlist.dart';
 import 'image_widget.dart';
 
@@ -116,9 +117,10 @@ class PlaylistCoverWidget extends StatelessWidget {
 
   Future<List<String>> _getPlaylistThumbnails() async {
     try {
-      final box = Hive.isBoxOpen(playlist.playlistId)
-          ? Hive.box(playlist.playlistId)
-          : await Hive.openBox(playlist.playlistId);
+      final boxName = sanitizeBoxName(playlist.playlistId);
+      final box = Hive.isBoxOpen(boxName)
+          ? Hive.box(boxName)
+          : await Hive.openBox(boxName);
 
       final List<String> urls = [];
       for (var item in box.values) {

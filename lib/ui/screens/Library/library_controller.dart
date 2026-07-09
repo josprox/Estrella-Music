@@ -398,7 +398,7 @@ class LibraryPlaylistsController extends GetxController
       libraryPlaylists.add(newplst);
 
       if (createPlaylistNaddSong && playlistCreationMode.value == "local") {
-        final plastbox = await Hive.openBox(newplst.playlistId);
+        final plastbox = await Hive.openBox(sanitizeBoxName(newplst.playlistId));
         for (MediaItem item in songItems!) {
           plastbox.add(MediaItemBuilder.toJson(item));
         }
@@ -529,7 +529,7 @@ class LibraryPlaylistsController extends GetxController
       importProgress.value = 0.7;
 
       // Save songs to playlist
-      final songsBox = await Hive.openBox(newPlaylistId);
+      final songsBox = await Hive.openBox(sanitizeBoxName(newPlaylistId));
       final songsList = jsonData['songs'] as List;
 
       // Update progress as songs are added

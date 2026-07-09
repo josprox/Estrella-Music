@@ -252,6 +252,27 @@ class AppBackupService extends GetxService {
     if (!Hive.isBoxOpen('AppPrefs')) {
       await Hive.openBox('AppPrefs');
     }
+    if (!Hive.isBoxOpen('LIBFAV')) {
+      await Hive.openBox('LIBFAV');
+    }
+    if (!Hive.isBoxOpen('LIBRP')) {
+      await Hive.openBox('LIBRP');
+    }
+    if (!Hive.isBoxOpen('LibraryArtists')) {
+      await Hive.openBox('LibraryArtists');
+    }
+    if (!Hive.isBoxOpen('LibraryAlbums')) {
+      await Hive.openBox('LibraryAlbums');
+    }
+    if (!Hive.isBoxOpen('LibraryPlaylists')) {
+      await Hive.openBox('LibraryPlaylists');
+    }
+    if (!Hive.isBoxOpen('homeScreenData')) {
+      await Hive.openBox('homeScreenData');
+    }
+    if (!Hive.isBoxOpen('pendingSyncQueue')) {
+      await Hive.openBox('pendingSyncQueue');
+    }
   }
 
   String _targetDirectoryForRestoredFile(

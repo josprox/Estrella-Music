@@ -26,11 +26,13 @@ class Player extends StatelessWidget {
     return Scaffold(
       /// SlidingUpPanel is used to create a panel that can slide up and down
       /// It is used to show the current queue panel in mobile
-      body: Obx(() => SlidingUpPanel(
-        boxShadow: const [],
-        minHeight: 0,
-        maxHeight: size.height,
-        isDraggable: !GetPlatform.isDesktop && playerController.isQueuePanelOpened.value,
+      body: Obx(() {
+        final isQueuePanelOpened = playerController.isQueuePanelOpened.value;
+        return SlidingUpPanel(
+          boxShadow: const [],
+          minHeight: 0,
+          maxHeight: size.height,
+          isDraggable: !GetPlatform.isDesktop && isQueuePanelOpened,
         onPanelSlide: (position) {
           if (position > 0.05) {
             playerController.isQueuePanelOpened.value = true;
@@ -186,7 +188,8 @@ class Player extends StatelessWidget {
         /// show player ui based on selected player ui in settings
         /// Gesture player is only applicable for mobile
         body: StandardPlayer(mainScrollController: mainScrollController),
-      )),
+      );
+      }),
     );
   }
 }

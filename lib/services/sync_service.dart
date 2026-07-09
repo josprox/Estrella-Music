@@ -10,6 +10,10 @@ import '../models/playlist.dart';
 import '../ui/screens/Library/library_controller.dart';
 import '../utils/helper.dart';
 import 'auth_service.dart';
+import 'cloud_migration_service.dart';
+import 'pending_sync_queue_service.dart';
+import 'app_backup_service.dart';
+
 
 class SyncService extends GetxService {
   static const _modeKey = 'emusicDataMode';
@@ -29,8 +33,31 @@ class SyncService extends GetxService {
   final isOnline = true.obs;
   final lastStatusMessage = 'Modo local activo'.obs;
   Timer? _debounce;
+  Timer? _retryTimer;
 
   AuthService get _authService => Get.find<AuthService>();
+  PendingSyncQueueService get _queue => Get.find<PendingSyncQueueService>();
+
+  @override
+  void onInit() {
+    super.onInit();
+    _retryTimer = Timer.periodic(const Duration(minutes: 2), (_) async {
+      if (isCloudMode && Hive.box('AppPrefs').get(_pendingKey) == true) {
+        final online = await checkConnection();
+        if (online) {
+          final success = await push();
+          if (success) await pull();
+        }
+      }
+    });
+  }
+
+  @override
+  void onClose() {
+    _retryTimer?.cancel();
+    _debounce?.cancel();
+    super.onClose();
+  }
 
   bool get isCloudMode =>
       Hive.box('AppPrefs').get(_modeKey, defaultValue: 'local') == 'cloud';
@@ -48,21 +75,60 @@ class SyncService extends GetxService {
   }
 
   Future<void> enableCloudMode() async {
+    if (isCloudMode) {
+      await Hive.box('AppPrefs').put(_pendingKey, true);
+      lastStatusMessage.value = 'Modo cloud activo. Sincronizacion pendiente.';
+      triggerPush();
+      return;
+    }
+
+    final migrationResult =
+        await Get.find<CloudMigrationService>().migrateLocalLibraryToCloud();
+    if (!migrationResult.success) {
+      await Hive.box('AppPrefs').put(_modeKey, 'local');
+      await Hive.box('AppPrefs').put(_pendingKey, false);
+      lastStatusMessage.value = migrationResult.message;
+      return;
+    }
+
     await Hive.box('AppPrefs').put(_modeKey, 'cloud');
-    await Hive.box('AppPrefs').put(_pendingKey, true);
-    lastStatusMessage.value = 'Modo cloud activado. Sincronizacion pendiente.';
-    triggerPush();
+    await Hive.box('AppPrefs').put(_pendingKey, false);
+    await Hive.box('AppPrefs').put('emusicCloudRequested', false);
+    await Hive.box('AppPrefs').put('emusicModeChoiceCompleted', true);
+    lastStatusMessage.value = migrationResult.usedExistingCloud
+        ? 'Modo cloud activado. Descargando biblioteca existente.'
+        : 'Modo cloud activado. Biblioteca migrada.';
+    
+    if (migrationResult.usedExistingCloud) {
+      await Get.find<AppBackupService>().clearLocalMusicData();
+    }
+    
+    await pull();
+
   }
 
   Future<void> keepLocalMode() async {
     await Hive.box('AppPrefs').put(_modeKey, 'local');
     await Hive.box('AppPrefs').put(_pendingKey, false);
+    await Hive.box('AppPrefs').put('emusicCloudRequested', false);
+    await Hive.box('AppPrefs').put('emusicModeChoiceCompleted', true);
     lastStatusMessage.value =
         'Tus datos se mantienen solo en este dispositivo.';
   }
 
   String _normalizedBaseUrl() {
     var base = syncBaseUrl?.trim() ?? '';
+    if (base.endsWith('/')) {
+      base = base.substring(0, base.length - 1);
+    }
+    if (base.endsWith('/api')) {
+      base = base.substring(0, base.length - 4);
+    }
+    return '$base/';
+  }
+
+  String _normalizedJossRedBaseUrl() {
+    var base = _authService.baseUrl?.trim() ?? '';
     if (base.endsWith('/')) {
       base = base.substring(0, base.length - 1);
     }
@@ -87,6 +153,7 @@ class SyncService extends GetxService {
       return;
     }
     Hive.box('AppPrefs').put(_pendingKey, true);
+    _queue.enqueueSnapshotChange(reason: 'local_mutation');
     _debounce?.cancel();
     _debounce = Timer(const Duration(seconds: 3), () {
       push().then((success) {
@@ -174,6 +241,7 @@ class SyncService extends GetxService {
 
       if (response.statusCode == 200) {
         await Hive.box('AppPrefs').put(_pendingKey, false);
+        await _queue.markAllSynced();
         await Hive.box('AppPrefs')
             .put(_lastSyncKey, DateTime.now().toIso8601String());
         lastStatusMessage.value = 'Cambios subidos correctamente.';
@@ -181,6 +249,7 @@ class SyncService extends GetxService {
       }
 
       await Hive.box('AppPrefs').put(_pendingKey, true);
+      await _queue.markRetryScheduled();
       lastStatusMessage.value = 'No se pudo subir. Se reintentara despues.';
       printERROR(
           'SyncService push failed with status ${response.statusCode}: ${response.data}');
@@ -188,6 +257,7 @@ class SyncService extends GetxService {
     } catch (e) {
       isOnline.value = false;
       await Hive.box('AppPrefs').put(_pendingKey, true);
+      await _queue.markRetryScheduled();
       lastStatusMessage.value =
           'Sin conexion. Cambios guardados para reintento.';
       printERROR('SyncService push failed: $e');
@@ -220,9 +290,10 @@ class SyncService extends GetxService {
       if (playlistId == null || playlistId.isEmpty) continue;
       if (playlist['isPipedPlaylist'] == true) continue;
 
-      final wasOpen = Hive.isBoxOpen(playlistId);
+      final boxName = _sanitizeBoxName(playlistId);
+      final wasOpen = Hive.isBoxOpen(boxName);
       final tracksBox =
-          wasOpen ? Hive.box(playlistId) : await Hive.openBox(playlistId);
+          wasOpen ? Hive.box(boxName) : await Hive.openBox(boxName);
       result.add({
         ...playlist,
         'tracks': tracksBox.values.toList(),
@@ -256,6 +327,10 @@ class SyncService extends GetxService {
     };
   }
 
+  String _sanitizeBoxName(String name) {
+    return name.replaceAll(RegExp(r'[^a-zA-Z0-9_\-]'), '_');
+  }
+
   Future<void> _mergePlaylists(dynamic value) async {
     if (value is! List) return;
     final playlistsBox = Hive.box('LibraryPlaylists');
@@ -269,15 +344,20 @@ class SyncService extends GetxService {
       await playlistsBox.put(playlistId, playlist);
       final tracks = playlist['tracks'];
       if (tracks is List) {
-        final wasOpen = Hive.isBoxOpen(playlistId);
-        final tracksBox =
-            wasOpen ? Hive.box(playlistId) : await Hive.openBox(playlistId);
-        await tracksBox.clear();
-        for (var i = 0; i < tracks.length; i++) {
-          await tracksBox.put(i, tracks[i]);
-        }
-        if (!wasOpen) {
-          await tracksBox.close();
+        final boxName = _sanitizeBoxName(playlistId);
+        try {
+          final wasOpen = Hive.isBoxOpen(boxName);
+          final tracksBox =
+              wasOpen ? Hive.box(boxName) : await Hive.openBox(boxName);
+          await tracksBox.clear();
+          for (var i = 0; i < tracks.length; i++) {
+            await tracksBox.put(i, tracks[i]);
+          }
+          if (!wasOpen) {
+            await tracksBox.close();
+          }
+        } catch (e) {
+          printERROR('SyncService: no se pudo abrir box para playlist $playlistId: $e');
         }
       }
     }
@@ -345,7 +425,7 @@ class SyncService extends GetxService {
     printINFO('SyncService: Pushing collaborative playlist...');
 
     try {
-      final tracksBox = await Hive.openBox(playlist.playlistId);
+      final tracksBox = await Hive.openBox(_sanitizeBoxName(playlist.playlistId));
       final tracks = tracksBox.values.toList();
 
       final plMap = playlist.toJson();
@@ -375,7 +455,7 @@ class SyncService extends GetxService {
     if (!_authService.isAuthenticated.value) return [];
     try {
       final response = await _dio.get(
-        '${_normalizedBaseUrl()}api/users/search',
+        '${_normalizedJossRedBaseUrl()}api/friends/search',
         queryParameters: {'query': query},
         options: Options(headers: await _headers()),
       );
@@ -393,7 +473,7 @@ class SyncService extends GetxService {
     if (!_authService.isAuthenticated.value) return [];
     try {
       final response = await _dio.get(
-        '${_normalizedBaseUrl()}api/users/friends',
+        '${_normalizedJossRedBaseUrl()}api/friends',
         options: Options(headers: await _headers()),
       );
       if (response.statusCode == 200 && response.data != null) {

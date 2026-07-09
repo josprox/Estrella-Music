@@ -735,6 +735,7 @@ class PlaylistScreen extends StatelessWidget {
                                   padding: padding,
                                   itemCount: itemCount,
                                   buildDefaultDragHandles: false,
+                                  // ignore: deprecated_member_use
                                   onReorder: (oldIndex, newIndex) {
                                     if (oldIndex < 3 || newIndex < 3) return;
                                     playlistController.reorderList(oldIndex - 3, newIndex - 3);

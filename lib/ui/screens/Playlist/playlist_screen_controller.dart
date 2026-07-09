@@ -111,7 +111,7 @@ class PlaylistScreenController extends PlaylistAlbumScreenControllerBase
       // Check if the playlist is offline
       wasInLibrary = await checkIfAddedToLibrary(playlistId);
       if (wasInLibrary) {
-        final songsBox = await Hive.openBox(playlistId);
+        final songsBox = await Hive.openBox(sanitizeBoxName(playlistId));
         if (songsBox.values.isEmpty) {
           await _fetchSongOnline(
             playlistId,
@@ -239,7 +239,7 @@ class PlaylistScreenController extends PlaylistAlbumScreenControllerBase
           updateSongsIntoDb();
         } else {
           box.delete(id);
-          final songsBox = await Hive.openBox(id);
+          final songsBox = await Hive.openBox(sanitizeBoxName(id));
           songsBox.deleteFromDisk();
         }
         isAddedToLibrary.value = add;
@@ -248,7 +248,7 @@ class PlaylistScreenController extends PlaylistAlbumScreenControllerBase
       Get.find<LibraryPlaylistsController>().refreshLib();
       Get.find<SyncService>().triggerPush();
       if (!content.isCloudPlaylist && !add) {
-        final plstbox = await Hive.openBox(content.playlistId);
+        final plstbox = await Hive.openBox(sanitizeBoxName(content.playlistId));
         plstbox.deleteFromDisk();
       }
       return true;
@@ -259,7 +259,7 @@ class PlaylistScreenController extends PlaylistAlbumScreenControllerBase
 
   @override
   Future<void> updateSongsIntoDb() async {
-    final songsBox = await Hive.openBox(playlist.value.playlistId);
+    final songsBox = await Hive.openBox(sanitizeBoxName(playlist.value.playlistId));
     await songsBox.clear();
     final songListCopy = songList.toList();
     for (int i = 0; i < songListCopy.length; i++) {
@@ -277,7 +277,7 @@ class PlaylistScreenController extends PlaylistAlbumScreenControllerBase
     final id = playlist.value.playlistId;
     final isoffline = id == "SongsCache" || id == "SongDownloads";
 
-    final box_ = await Hive.openBox(id);
+    final box_ = await Hive.openBox(sanitizeBoxName(id));
     for (MediaItem element in songs) {
       final index = box_.values
           .toList()

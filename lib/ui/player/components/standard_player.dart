@@ -8,7 +8,6 @@ import 'package:audio_service/audio_service.dart';
 import '/utils/youtube_share_manager.dart';
 import '../../widgets/up_next_queue.dart';
 
-
 import '/ui/player/components/animated_play_button.dart';
 import '/ui/player/components/backgroud_image.dart';
 import '/ui/player/components/lyrics_widget.dart';
@@ -102,7 +101,8 @@ class _StandardPlayerContent extends StatelessWidget {
             SafeArea(
               child: isWide
                   ? _buildWideLayout(context, size, colorScheme, textTheme)
-                  : _buildMobileLayout(context, size, colorScheme, textTheme, botPad, artSize),
+                  : _buildMobileLayout(
+                      context, size, colorScheme, textTheme, botPad, artSize),
             ),
           ],
         ),
@@ -111,7 +111,12 @@ class _StandardPlayerContent extends StatelessWidget {
   }
 
   Widget _buildMobileLayout(
-      BuildContext context, Size size, ColorScheme colorScheme, TextTheme textTheme, double botPad, double artSize) {
+      BuildContext context,
+      Size size,
+      ColorScheme colorScheme,
+      TextTheme textTheme,
+      double botPad,
+      double artSize) {
     return CustomScrollView(
       controller: mainScrollController,
       physics: const BouncingScrollPhysics(),
@@ -123,7 +128,8 @@ class _StandardPlayerContent extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 // Top bar
-                _TopBar(ctrl: ctrl, textTheme: textTheme, colorScheme: colorScheme),
+                _TopBar(
+                    ctrl: ctrl, textTheme: textTheme, colorScheme: colorScheme),
                 const SizedBox(height: 24),
 
                 // Album art — centered
@@ -131,11 +137,16 @@ class _StandardPlayerContent extends StatelessWidget {
                 const SizedBox(height: 36),
 
                 // Song info + fav
-                _SongInfo(song: song, ctrl: ctrl, colorScheme: colorScheme, textTheme: textTheme),
+                _SongInfo(
+                    song: song,
+                    ctrl: ctrl,
+                    colorScheme: colorScheme,
+                    textTheme: textTheme),
                 const SizedBox(height: 28),
 
                 // Progress bar
-                _ProgressBar(ctrl: ctrl, colorScheme: colorScheme, textTheme: textTheme),
+                _ProgressBar(
+                    ctrl: ctrl, colorScheme: colorScheme, textTheme: textTheme),
                 const SizedBox(height: 20),
 
                 // Transport controls
@@ -147,7 +158,8 @@ class _StandardPlayerContent extends StatelessWidget {
                 const SizedBox(height: 32),
 
                 // Lyrics card
-                _LyricsCard(ctrl: ctrl, colorScheme: colorScheme, textTheme: textTheme),
+                _LyricsCard(
+                    ctrl: ctrl, colorScheme: colorScheme, textTheme: textTheme),
                 SizedBox(height: botPad + 64),
               ],
             ),
@@ -157,8 +169,8 @@ class _StandardPlayerContent extends StatelessWidget {
     );
   }
 
-  Widget _buildWideLayout(
-      BuildContext context, Size size, ColorScheme colorScheme, TextTheme textTheme) {
+  Widget _buildWideLayout(BuildContext context, Size size,
+      ColorScheme colorScheme, TextTheme textTheme) {
     final double artSize = (size.height * 0.45).clamp(240.0, 360.0);
     return DefaultTabController(
       length: 2,
@@ -175,7 +187,11 @@ class _StandardPlayerContent extends StatelessWidget {
                 children: [
                   Center(child: _AlbumArt(song: song, artSize: artSize)),
                   const SizedBox(height: 24),
-                  _SongInfo(song: song, ctrl: ctrl, colorScheme: colorScheme, textTheme: textTheme),
+                  _SongInfo(
+                      song: song,
+                      ctrl: ctrl,
+                      colorScheme: colorScheme,
+                      textTheme: textTheme),
                   const SizedBox(height: 24),
                   _SecondaryActions(ctrl: ctrl, colorScheme: colorScheme),
                 ],
@@ -208,7 +224,8 @@ class _StandardPlayerContent extends StatelessWidget {
                       // Collapse button
                       IconButton(
                         onPressed: ctrl.playerPanelController.close,
-                        icon: const Icon(Icons.keyboard_arrow_down_rounded, size: 30),
+                        icon: const Icon(Icons.keyboard_arrow_down_rounded,
+                            size: 30),
                         tooltip: S.current.back,
                       ),
                     ],
@@ -219,7 +236,8 @@ class _StandardPlayerContent extends StatelessWidget {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(24),
                       child: Container(
-                        color: colorScheme.surfaceContainerHigh.withValues(alpha: 0.4),
+                        color: colorScheme.surfaceContainerHigh
+                            .withValues(alpha: 0.4),
                         child: const TabBarView(
                           children: [
                             // Tab 1: Play Queue
@@ -228,7 +246,8 @@ class _StandardPlayerContent extends StatelessWidget {
                             ),
                             // Tab 2: Synced Lyrics
                             LyricsWidget(
-                              padding: EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 24, vertical: 16),
                               isFull: true,
                             ),
                           ],
@@ -238,7 +257,10 @@ class _StandardPlayerContent extends StatelessWidget {
                   ),
                   const SizedBox(height: 24),
                   // Progress Bar
-                  _ProgressBar(ctrl: ctrl, colorScheme: colorScheme, textTheme: textTheme),
+                  _ProgressBar(
+                      ctrl: ctrl,
+                      colorScheme: colorScheme,
+                      textTheme: textTheme),
                   const SizedBox(height: 16),
                   // Transport controls
                   _TransportControls(ctrl: ctrl, colorScheme: colorScheme),
@@ -250,8 +272,6 @@ class _StandardPlayerContent extends StatelessWidget {
       ),
     );
   }
-
-
 }
 
 // ── Sub-widgets ──────────────────────────────────────────────────────────────
@@ -260,7 +280,8 @@ class _TopBar extends StatelessWidget {
   final PlayerController ctrl;
   final TextTheme textTheme;
   final ColorScheme colorScheme;
-  const _TopBar({required this.ctrl, required this.textTheme, required this.colorScheme});
+  const _TopBar(
+      {required this.ctrl, required this.textTheme, required this.colorScheme});
 
   @override
   Widget build(BuildContext context) {
@@ -282,24 +303,25 @@ class _TopBar extends StatelessWidget {
             child: Column(
               children: [
                 Obx(() => Text(
-                  ctrl.playinfrom.value.typeString.toUpperCase(),
-                  style: textTheme.labelSmall?.copyWith(
-                    letterSpacing: 2,
-                    fontWeight: FontWeight.w900,
-                    color: colorScheme.onSurfaceVariant.withValues(alpha: 0.6),
-                  ),
-                )),
+                      ctrl.playinfrom.value.typeString.toUpperCase(),
+                      style: textTheme.labelSmall?.copyWith(
+                        letterSpacing: 2,
+                        fontWeight: FontWeight.w900,
+                        color:
+                            colorScheme.onSurfaceVariant.withValues(alpha: 0.6),
+                      ),
+                    )),
                 const SizedBox(height: 2),
                 Obx(() => Text(
-                  ctrl.playinfrom.value.nameString,
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  textAlign: TextAlign.center,
-                  style: textTheme.titleSmall?.copyWith(
-                    fontWeight: FontWeight.w700,
-                    color: colorScheme.onSurface,
-                  ),
-                )),
+                      ctrl.playinfrom.value.nameString,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      textAlign: TextAlign.center,
+                      style: textTheme.titleSmall?.copyWith(
+                        fontWeight: FontWeight.w700,
+                        color: colorScheme.onSurface,
+                      ),
+                    )),
               ],
             ),
           ),
@@ -333,116 +355,133 @@ class _TopBar extends StatelessWidget {
 
     Get.dialog(
       Obx(() => AlertDialog(
-        backgroundColor: Theme.of(context).cardColor,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-        title: const Row(
-          children: [
-            Icon(Icons.group_rounded),
-            SizedBox(width: 8),
-            Text("Escuchar en grupo"),
-          ],
-        ),
-        content: SizedBox(
-          width: 320,
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              if (colistening.currentRoomCode.isEmpty) ...[
-                const Text(
-                  "Comparte un código de sala para escuchar la misma canción al mismo tiempo con amigos.",
-                  style: TextStyle(fontSize: 13),
-                  textAlign: TextAlign.center,
-                ),
-                const SizedBox(height: 16),
-                ElevatedButton.icon(
-                  icon: const Icon(Icons.add_box_rounded),
-                  label: const Text("Crear Sala"),
-                  onPressed: () {
-                    colistening.createRoom();
-                  },
-                  style: ElevatedButton.styleFrom(
-                    minimumSize: const Size(double.infinity, 45),
-                    backgroundColor: Theme.of(context).colorScheme.primary,
-                    foregroundColor: Theme.of(context).colorScheme.onPrimary,
-                  ),
-                ),
-                const SizedBox(height: 16),
-                const Text("O UNIRSE A UNA EXISTENTE", style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold)),
-                const SizedBox(height: 8),
-                TextField(
-                  controller: roomController,
-                  decoration: const InputDecoration(
-                    hintText: "Código de 6 dígitos",
-                    border: OutlineInputBorder(),
-                    contentPadding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-                  ),
-                  keyboardType: TextInputType.number,
-                ),
-                const SizedBox(height: 8),
-                ElevatedButton.icon(
-                  icon: const Icon(Icons.login_rounded),
-                  label: const Text("Unirse"),
-                  onPressed: () {
-                    final code = roomController.text.trim();
-                    if (code.length == 6) {
-                      colistening.joinRoom(code);
-                    }
-                  },
-                  style: ElevatedButton.styleFrom(
-                    minimumSize: const Size(double.infinity, 45),
-                    backgroundColor: Theme.of(context).colorScheme.secondary,
-                    foregroundColor: Theme.of(context).colorScheme.onSecondary,
-                  ),
-                ),
-              ] else ...[
-                Text(
-                  colistening.isHost.isTrue ? "Eres el HOST de la sala" : "Te has unido a la sala",
-                  style: const TextStyle(fontWeight: FontWeight.bold),
-                ),
-                const SizedBox(height: 16),
-                Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-                  decoration: BoxDecoration(
-                    color: Theme.of(context).colorScheme.surfaceContainerHigh,
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  child: Text(
-                    colistening.currentRoomCode.value,
-                    style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold, letterSpacing: 4),
-                  ),
-                ),
-                const SizedBox(height: 16),
-                if (colistening.isHost.isTrue)
-                  Text(
-                    "Miembros conectados: ${colistening.guests.length}",
-                    style: const TextStyle(fontSize: 14),
-                  )
-                else
-                  const Text("Sincronizando música...", style: TextStyle(fontSize: 14)),
-                const SizedBox(height: 24),
-                ElevatedButton.icon(
-                  icon: const Icon(Icons.exit_to_app_rounded, color: Colors.red),
-                  label: const Text("Salir de la Sala", style: TextStyle(color: Colors.red)),
-                  onPressed: () {
-                    colistening.disconnect();
-                  },
-                  style: ElevatedButton.styleFrom(
-                    minimumSize: const Size(double.infinity, 45),
-                    backgroundColor: Colors.red.withOpacity(0.1),
-                    elevation: 0,
-                  ),
-                ),
+            backgroundColor: Theme.of(context).cardColor,
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+            title: const Row(
+              children: [
+                Icon(Icons.group_rounded),
+                SizedBox(width: 8),
+                Text("Escuchar en grupo"),
               ],
+            ),
+            content: SizedBox(
+              width: 320,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  if (colistening.currentRoomCode.isEmpty) ...[
+                    const Text(
+                      "Comparte un código de sala para escuchar la misma canción al mismo tiempo con amigos.",
+                      style: TextStyle(fontSize: 13),
+                      textAlign: TextAlign.center,
+                    ),
+                    const SizedBox(height: 16),
+                    ElevatedButton.icon(
+                      icon: const Icon(Icons.add_box_rounded),
+                      label: const Text("Crear Sala"),
+                      onPressed: () {
+                        colistening.createRoom();
+                      },
+                      style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(double.infinity, 45),
+                        backgroundColor: Theme.of(context).colorScheme.primary,
+                        foregroundColor:
+                            Theme.of(context).colorScheme.onPrimary,
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                    const Text("O UNIRSE A UNA EXISTENTE",
+                        style: TextStyle(
+                            fontSize: 11, fontWeight: FontWeight.bold)),
+                    const SizedBox(height: 8),
+                    TextField(
+                      controller: roomController,
+                      decoration: const InputDecoration(
+                        hintText: "Código de 6 dígitos",
+                        border: OutlineInputBorder(),
+                        contentPadding:
+                            EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                      ),
+                      keyboardType: TextInputType.number,
+                    ),
+                    const SizedBox(height: 8),
+                    ElevatedButton.icon(
+                      icon: const Icon(Icons.login_rounded),
+                      label: const Text("Unirse"),
+                      onPressed: () {
+                        final code = roomController.text.trim();
+                        if (code.length == 6) {
+                          colistening.joinRoom(code);
+                        }
+                      },
+                      style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(double.infinity, 45),
+                        backgroundColor:
+                            Theme.of(context).colorScheme.secondary,
+                        foregroundColor:
+                            Theme.of(context).colorScheme.onSecondary,
+                      ),
+                    ),
+                  ] else ...[
+                    Text(
+                      colistening.isHost.isTrue
+                          ? "Eres el HOST de la sala"
+                          : "Te has unido a la sala",
+                      style: const TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(height: 16),
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 16, vertical: 12),
+                      decoration: BoxDecoration(
+                        color:
+                            Theme.of(context).colorScheme.surfaceContainerHigh,
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      child: Text(
+                        colistening.currentRoomCode.value,
+                        style: const TextStyle(
+                            fontSize: 28,
+                            fontWeight: FontWeight.bold,
+                            letterSpacing: 4),
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                    if (colistening.isHost.isTrue)
+                      Text(
+                        "Miembros conectados: ${colistening.guests.length}",
+                        style: const TextStyle(fontSize: 14),
+                      )
+                    else
+                      const Text("Sincronizando música...",
+                          style: TextStyle(fontSize: 14)),
+                    const SizedBox(height: 24),
+                    ElevatedButton.icon(
+                      icon: const Icon(Icons.exit_to_app_rounded,
+                          color: Colors.red),
+                      label: const Text("Salir de la Sala",
+                          style: TextStyle(color: Colors.red)),
+                      onPressed: () {
+                        colistening.disconnect();
+                      },
+                      style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(double.infinity, 45),
+                        backgroundColor: Colors.red.withValues(alpha: 0.1),
+                        elevation: 0,
+                      ),
+                    ),
+                  ],
+                ],
+              ),
+            ),
+            actions: [
+              TextButton(
+                onPressed: () => Get.back(),
+                child: const Text("Cerrar"),
+              ),
             ],
-          ),
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Get.back(),
-            child: const Text("Cerrar"),
-          ),
-        ],
-      )),
+          )),
     );
   }
 
@@ -450,10 +489,10 @@ class _TopBar extends StatelessWidget {
     if (ctrl.currentSong.value == null) return;
     showModalBottomSheet(
       constraints: const BoxConstraints(maxWidth: 500),
-
       isScrollControlled: true,
       context: context,
-      builder: (_) => SongInfoBottomSheet(ctrl.currentSong.value!, calledFromPlayer: true),
+      builder: (_) =>
+          SongInfoBottomSheet(ctrl.currentSong.value!, calledFromPlayer: true),
     ).whenComplete(() => Get.delete<SongInfoController>());
   }
 }
@@ -620,9 +659,8 @@ class _SongInfo extends StatelessWidget {
                   style: textTheme.titleMedium?.copyWith(
                     color: colorScheme.primary,
                     fontWeight: FontWeight.w600,
-                    decoration: artistName.isNotEmpty
-                        ? TextDecoration.underline
-                        : null,
+                    decoration:
+                        artistName.isNotEmpty ? TextDecoration.underline : null,
                     decorationColor: colorScheme.primary.withValues(alpha: 0.4),
                     decorationThickness: 1.5,
                   ),
@@ -657,7 +695,8 @@ class _ProgressBar extends StatelessWidget {
   final PlayerController ctrl;
   final ColorScheme colorScheme;
   final TextTheme textTheme;
-  const _ProgressBar({required this.ctrl, required this.colorScheme, required this.textTheme});
+  const _ProgressBar(
+      {required this.ctrl, required this.colorScheme, required this.textTheme});
 
   @override
   Widget build(BuildContext context) {
@@ -713,15 +752,15 @@ class _TransportControls extends StatelessWidget {
         children: [
           // Shuffle
           Obx(() => IconButton(
-            onPressed: ctrl.toggleShuffleMode,
-            icon: Icon(
-              Ionicons.shuffle,
-              color: ctrl.isShuffleModeEnabled.isTrue
-                  ? colorScheme.primary
-                  : colorScheme.onSurfaceVariant,
-              size: 22,
-            ),
-          )),
+                onPressed: ctrl.toggleShuffleMode,
+                icon: Icon(
+                  Ionicons.shuffle,
+                  color: ctrl.isShuffleModeEnabled.isTrue
+                      ? colorScheme.primary
+                      : colorScheme.onSurfaceVariant,
+                  size: 22,
+                ),
+              )),
 
           // Prev
           IconButton(
@@ -748,15 +787,15 @@ class _TransportControls extends StatelessWidget {
 
           // Loop
           Obx(() => IconButton(
-            onPressed: ctrl.toggleLoopMode,
-            icon: Icon(
-              Icons.repeat_rounded,
-              color: ctrl.isLoopModeEnabled.isTrue
-                  ? colorScheme.primary
-                  : colorScheme.onSurfaceVariant,
-              size: 22,
-            ),
-          )),
+                onPressed: ctrl.toggleLoopMode,
+                icon: Icon(
+                  Icons.repeat_rounded,
+                  color: ctrl.isLoopModeEnabled.isTrue
+                      ? colorScheme.primary
+                      : colorScheme.onSurfaceVariant,
+                  size: 22,
+                ),
+              )),
         ],
       ),
     );
@@ -850,10 +889,9 @@ class _SecondaryActions extends StatelessWidget {
   void _openSpeedPitchDialog(BuildContext context, ColorScheme colorScheme) {
     final settingsCtrl = Get.find<SettingsScreenController>();
     final textTheme = Theme.of(context).textTheme;
-    
+
     showModalBottomSheet(
       context: context,
-
       isScrollControlled: true,
       builder: (context) {
         return ClipRRect(
@@ -864,7 +902,8 @@ class _SecondaryActions extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
               decoration: BoxDecoration(
                 color: colorScheme.surfaceContainerHigh.withValues(alpha: 0.85),
-                borderRadius: const BorderRadius.vertical(top: Radius.circular(32)),
+                borderRadius:
+                    const BorderRadius.vertical(top: Radius.circular(32)),
                 border: Border.all(
                   color: colorScheme.outlineVariant.withValues(alpha: 0.2),
                   width: 1,
@@ -880,19 +919,22 @@ class _SecondaryActions extends StatelessWidget {
                       width: 48,
                       height: 5,
                       decoration: BoxDecoration(
-                        color: colorScheme.onSurfaceVariant.withValues(alpha: 0.3),
+                        color:
+                            colorScheme.onSurfaceVariant.withValues(alpha: 0.3),
                         borderRadius: BorderRadius.circular(10),
                       ),
                     ),
                   ),
                   const SizedBox(height: 24),
-                  
+
                   // Header Row with Reset Button
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        S.current.speedAndPitch,
+                        settingsCtrl.supportsPlaybackPitch
+                            ? S.current.speedAndPitch
+                            : S.current.playbackSpeed,
                         style: textTheme.titleLarge?.copyWith(
                           fontWeight: FontWeight.w900,
                           color: colorScheme.onSurface,
@@ -901,9 +943,12 @@ class _SecondaryActions extends StatelessWidget {
                       TextButton.icon(
                         onPressed: () {
                           settingsCtrl.setPlaybackSpeed(1.0);
-                          settingsCtrl.setPlaybackPitch(1.0);
+                          if (settingsCtrl.supportsPlaybackPitch) {
+                            settingsCtrl.setPlaybackPitch(1.0);
+                          }
                         },
-                        icon: Icon(Icons.refresh_rounded, size: 18, color: colorScheme.primary),
+                        icon: Icon(Icons.refresh_rounded,
+                            size: 18, color: colorScheme.primary),
                         label: Text(
                           S.current.reset,
                           style: textTheme.labelLarge?.copyWith(
@@ -915,158 +960,184 @@ class _SecondaryActions extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 24),
-                  
+
                   // Playback Speed Slider
                   Obx(() => Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Icon(Icons.speed_rounded, color: colorScheme.primary, size: 22),
-                              const SizedBox(width: 12),
+                              Row(
+                                children: [
+                                  Icon(Icons.speed_rounded,
+                                      color: colorScheme.primary, size: 22),
+                                  const SizedBox(width: 12),
+                                  Text(
+                                    S.current.playbackSpeed,
+                                    style: textTheme.titleMedium?.copyWith(
+                                      fontWeight: FontWeight.bold,
+                                      color: colorScheme.onSurface,
+                                    ),
+                                  ),
+                                ],
+                              ),
                               Text(
-                                S.current.playbackSpeed,
-                                style: textTheme.titleMedium?.copyWith(
-                                  fontWeight: FontWeight.bold,
-                                  color: colorScheme.onSurface,
+                                '${settingsCtrl.playbackSpeed.value.toStringAsFixed(2)}x',
+                                style: textTheme.bodyLarge?.copyWith(
+                                  color: colorScheme.primary,
+                                  fontWeight: FontWeight.w900,
                                 ),
                               ),
                             ],
                           ),
-                          Text(
-                            '${settingsCtrl.playbackSpeed.value.toStringAsFixed(2)}x',
-                            style: textTheme.bodyLarge?.copyWith(
-                              color: colorScheme.primary,
-                              fontWeight: FontWeight.w900,
+                          const SizedBox(height: 12),
+                          SliderTheme(
+                            data: SliderThemeData(
+                              trackHeight: 6,
+                              activeTrackColor: colorScheme.primary,
+                              inactiveTrackColor:
+                                  colorScheme.primary.withValues(alpha: 0.15),
+                              thumbColor: colorScheme.primary,
+                              overlayColor:
+                                  colorScheme.primary.withValues(alpha: 0.12),
+                              thumbShape: const RoundSliderThumbShape(
+                                  enabledThumbRadius: 8),
+                            ),
+                            child: Slider(
+                              value: settingsCtrl.playbackSpeed.value,
+                              min: 0.5,
+                              max: 2.0,
+                              divisions: 30,
+                              onChanged: settingsCtrl.setPlaybackSpeed,
+                            ),
+                          ),
+
+                          // Quick speed presets
+                          SingleChildScrollView(
+                            scrollDirection: Axis.horizontal,
+                            physics: const BouncingScrollPhysics(),
+                            child: Row(
+                              children:
+                                  [0.75, 1.0, 1.25, 1.5, 2.0].map((speed) {
+                                final isSelected =
+                                    (settingsCtrl.playbackSpeed.value - speed)
+                                            .abs() <
+                                        0.01;
+                                return Padding(
+                                  padding: const EdgeInsets.only(right: 8),
+                                  child: ChoiceChip(
+                                    label: Text('${speed.toStringAsFixed(2)}x'),
+                                    selected: isSelected,
+                                    onSelected: (_) =>
+                                        settingsCtrl.setPlaybackSpeed(speed),
+                                    selectedColor: colorScheme.primary,
+                                    labelStyle: textTheme.labelMedium?.copyWith(
+                                      color: isSelected
+                                          ? colorScheme.onPrimary
+                                          : colorScheme.onSurface,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                );
+                              }).toList(),
                             ),
                           ),
                         ],
-                      ),
-                      const SizedBox(height: 12),
-                      SliderTheme(
-                        data: SliderThemeData(
-                          trackHeight: 6,
-                          activeTrackColor: colorScheme.primary,
-                          inactiveTrackColor: colorScheme.primary.withValues(alpha: 0.15),
-                          thumbColor: colorScheme.primary,
-                          overlayColor: colorScheme.primary.withValues(alpha: 0.12),
-                          thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 8),
-                        ),
-                        child: Slider(
-                          value: settingsCtrl.playbackSpeed.value,
-                          min: 0.5,
-                          max: 2.0,
-                          divisions: 30,
-                          onChanged: settingsCtrl.setPlaybackSpeed,
-                        ),
-                      ),
-                      
-                      // Quick speed presets
-                      SingleChildScrollView(
-                        scrollDirection: Axis.horizontal,
-                        physics: const BouncingScrollPhysics(),
-                        child: Row(
-                          children: [0.75, 1.0, 1.25, 1.5, 2.0].map((speed) {
-                            final isSelected = (settingsCtrl.playbackSpeed.value - speed).abs() < 0.01;
-                            return Padding(
-                              padding: const EdgeInsets.only(right: 8),
-                              child: ChoiceChip(
-                                label: Text('${speed.toStringAsFixed(2)}x'),
-                                selected: isSelected,
-                                onSelected: (_) => settingsCtrl.setPlaybackSpeed(speed),
-                                selectedColor: colorScheme.primary,
-                                labelStyle: textTheme.labelMedium?.copyWith(
-                                  color: isSelected ? colorScheme.onPrimary : colorScheme.onSurface,
-                                  fontWeight: FontWeight.bold,
+                      )),
+
+                  if (settingsCtrl.supportsPlaybackPitch) ...[
+                    const SizedBox(height: 28),
+                    const Divider(height: 1),
+                    const SizedBox(height: 28),
+
+                    // Song Pitch Slider
+                    Obx(() => Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Row(
+                                  children: [
+                                    Icon(Icons.music_note_rounded,
+                                        color: colorScheme.primary, size: 22),
+                                    const SizedBox(width: 12),
+                                    Text(
+                                      S.current.songPitch,
+                                      style: textTheme.titleMedium?.copyWith(
+                                        fontWeight: FontWeight.bold,
+                                        color: colorScheme.onSurface,
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                              ),
-                            );
-                          }).toList(),
-                        ),
-                      ),
-                    ],
-                  )),
-                  
-                  const SizedBox(height: 28),
-                  const Divider(height: 1),
-                  const SizedBox(height: 28),
-                  
-                  // Song Pitch Slider
-                  Obx(() => Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Row(
-                            children: [
-                              Icon(Icons.music_note_rounded, color: colorScheme.primary, size: 22),
-                              const SizedBox(width: 12),
-                              Text(
-                                S.current.songPitch,
-                                style: textTheme.titleMedium?.copyWith(
-                                  fontWeight: FontWeight.bold,
-                                  color: colorScheme.onSurface,
+                                Text(
+                                  settingsCtrl.playbackPitch.value
+                                      .toStringAsFixed(2),
+                                  style: textTheme.bodyLarge?.copyWith(
+                                    color: colorScheme.primary,
+                                    fontWeight: FontWeight.w900,
+                                  ),
                                 ),
-                              ),
-                            ],
-                          ),
-                          Text(
-                            settingsCtrl.playbackPitch.value.toStringAsFixed(2),
-                            style: textTheme.bodyLarge?.copyWith(
-                              color: colorScheme.primary,
-                              fontWeight: FontWeight.w900,
+                              ],
                             ),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 12),
-                      SliderTheme(
-                        data: SliderThemeData(
-                          trackHeight: 6,
-                          activeTrackColor: colorScheme.primary,
-                          inactiveTrackColor: colorScheme.primary.withValues(alpha: 0.15),
-                          thumbColor: colorScheme.primary,
-                          overlayColor: colorScheme.primary.withValues(alpha: 0.12),
-                          thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 8),
-                        ),
-                        child: Slider(
-                          value: settingsCtrl.playbackPitch.value,
-                          min: 0.5,
-                          max: 2.0,
-                          divisions: 30,
-                          onChanged: settingsCtrl.setPlaybackPitch,
-                        ),
-                      ),
-                      
-                      // Quick pitch presets
-                      SingleChildScrollView(
-                        scrollDirection: Axis.horizontal,
-                        physics: const BouncingScrollPhysics(),
-                        child: Row(
-                          children: [0.75, 1.0, 1.25, 1.5, 2.0].map((pitch) {
-                            final isSelected = (settingsCtrl.playbackPitch.value - pitch).abs() < 0.01;
-                            return Padding(
-                              padding: const EdgeInsets.only(right: 8),
-                              child: ChoiceChip(
-                                label: Text(pitch.toStringAsFixed(2)),
-                                selected: isSelected,
-                                onSelected: (_) => settingsCtrl.setPlaybackPitch(pitch),
-                                selectedColor: colorScheme.primary,
-                                labelStyle: textTheme.labelMedium?.copyWith(
-                                  color: isSelected ? colorScheme.onPrimary : colorScheme.onSurface,
-                                  fontWeight: FontWeight.bold,
-                                ),
+                            const SizedBox(height: 12),
+                            SliderTheme(
+                              data: SliderThemeData(
+                                trackHeight: 6,
+                                activeTrackColor: colorScheme.primary,
+                                inactiveTrackColor:
+                                    colorScheme.primary.withValues(alpha: 0.15),
+                                thumbColor: colorScheme.primary,
+                                overlayColor:
+                                    colorScheme.primary.withValues(alpha: 0.12),
+                                thumbShape: const RoundSliderThumbShape(
+                                    enabledThumbRadius: 8),
                               ),
-                            );
-                          }).toList(),
-                        ),
-                      ),
-                    ],
-                  )),
+                              child: Slider(
+                                value: settingsCtrl.playbackPitch.value,
+                                min: 0.5,
+                                max: 2.0,
+                                divisions: 30,
+                                onChanged: settingsCtrl.setPlaybackPitch,
+                              ),
+                            ),
+
+                            // Quick pitch presets
+                            SingleChildScrollView(
+                              scrollDirection: Axis.horizontal,
+                              physics: const BouncingScrollPhysics(),
+                              child: Row(
+                                children:
+                                    [0.75, 1.0, 1.25, 1.5, 2.0].map((pitch) {
+                                  final isSelected =
+                                      (settingsCtrl.playbackPitch.value - pitch)
+                                              .abs() <
+                                          0.01;
+                                  return Padding(
+                                    padding: const EdgeInsets.only(right: 8),
+                                    child: ChoiceChip(
+                                      label: Text(pitch.toStringAsFixed(2)),
+                                      selected: isSelected,
+                                      onSelected: (_) =>
+                                          settingsCtrl.setPlaybackPitch(pitch),
+                                      selectedColor: colorScheme.primary,
+                                      labelStyle:
+                                          textTheme.labelMedium?.copyWith(
+                                        color: isSelected
+                                            ? colorScheme.onPrimary
+                                            : colorScheme.onSurface,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  );
+                                }).toList(),
+                              ),
+                            ),
+                          ],
+                        )),
+                  ],
                   const SizedBox(height: 32),
                 ],
               ),
@@ -1117,13 +1188,14 @@ class _LyricsCard extends StatelessWidget {
   final PlayerController ctrl;
   final ColorScheme colorScheme;
   final TextTheme textTheme;
-  const _LyricsCard({required this.ctrl, required this.colorScheme, required this.textTheme});
+  const _LyricsCard(
+      {required this.ctrl, required this.colorScheme, required this.textTheme});
 
   @override
   Widget build(BuildContext context) {
     return Obx(() {
-      final hasLyrics =
-          ctrl.lyrics['plainLyrics'] != null && ctrl.lyrics['plainLyrics'] != 'NA';
+      final hasLyrics = ctrl.lyrics['plainLyrics'] != null &&
+          ctrl.lyrics['plainLyrics'] != 'NA';
       final hasSynced = ctrl.lyrics['synced'] != null;
 
       return Container(
@@ -1158,7 +1230,8 @@ class _LyricsCard extends StatelessWidget {
                       transition: Transition.downToUp,
                     ),
                     child: Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 12, vertical: 6),
                       decoration: BoxDecoration(
                         color: colorScheme.primary.withValues(alpha: 0.12),
                         borderRadius: BorderRadius.circular(20),
@@ -1198,7 +1271,8 @@ class _LyricsCard extends StatelessWidget {
                 child: Text(
                   S.current.lyricsNotAvailable,
                   style: textTheme.bodyMedium?.copyWith(
-                    color: colorScheme.onPrimaryContainer.withValues(alpha: 0.6),
+                    color:
+                        colorScheme.onPrimaryContainer.withValues(alpha: 0.6),
                     fontStyle: FontStyle.italic,
                   ),
                 ),

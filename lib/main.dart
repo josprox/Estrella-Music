@@ -15,8 +15,10 @@ import '/services/app_backup_service.dart';
 import '/services/auth_service.dart';
 import '/services/catalog_recovery_service.dart';
 import '/services/cloud_backup_service.dart';
+import '/services/cloud_migration_service.dart';
 import '/services/legacy_music_migration_service.dart';
 import '/services/notification_service.dart';
+import '/services/pending_sync_queue_service.dart';
 import '/services/sync_service.dart';
 import '/services/colistening_service.dart';
 import '/services/user_data_bootstrap_service.dart';
@@ -161,6 +163,8 @@ Future<void> startApplicationServices() async {
   Get.put(AppBackupService(), permanent: true);
   Get.put(CatalogRecoveryService(), permanent: true);
   Get.put(CloudBackupService(), permanent: true);
+  Get.put(CloudMigrationService(), permanent: true);
+  Get.put(PendingSyncQueueService(), permanent: true);
   Get.put(LegacyMusicMigrationService(), permanent: true);
   Get.put(UserDataBootstrapService(), permanent: true);
   Get.lazyPut(() => PipedServices(), fenix: true);
@@ -202,6 +206,7 @@ initHive() async {
   await Hive.openBox("LibraryAlbums");
   await Hive.openBox("LibraryPlaylists");
   await Hive.openBox("homeScreenData");
+  await Hive.openBox(PendingSyncQueueService.boxName);
 }
 
 void _setAppInitPrefs() {
@@ -221,12 +226,24 @@ void _setAppInitPrefs() {
       "app_first_run_timestamp": DateTime.now().toIso8601String(),
       "emusicDataMode": "local",
       "hasPendingSync": false,
+      "cloudMigrationStatus": "not_started",
+      "linkedDeviceId": "",
+      "emusicModeChoiceCompleted": false,
+      "emusicCloudRequested": false,
     });
   } else {
     appPrefs.put("emusicDataMode",
         appPrefs.get("emusicDataMode", defaultValue: "local"));
     appPrefs.put(
         "hasPendingSync", appPrefs.get("hasPendingSync", defaultValue: false));
+    appPrefs.put("cloudMigrationStatus",
+        appPrefs.get("cloudMigrationStatus", defaultValue: "not_started"));
+    appPrefs.put(
+        "linkedDeviceId", appPrefs.get("linkedDeviceId", defaultValue: ""));
+    appPrefs.put("emusicModeChoiceCompleted",
+        appPrefs.get("emusicModeChoiceCompleted", defaultValue: false));
+    appPrefs.put("emusicCloudRequested",
+        appPrefs.get("emusicCloudRequested", defaultValue: false));
   }
 }
 

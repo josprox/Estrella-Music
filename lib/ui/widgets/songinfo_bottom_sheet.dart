@@ -279,7 +279,7 @@ class SongInfoBottomSheet extends StatelessWidget {
                         launchUrl(Uri.parse(
                             YoutubeShareManager.getSongUrl(song.id)));
                       },
-                      icon: const Icon(Ionicons.logo_youtube),
+                      icon: const Icon(Ionicons.logoYoutube),
                     ),
                     IconButton(
                       splashRadius: 10,
@@ -287,7 +287,7 @@ class SongInfoBottomSheet extends StatelessWidget {
                         launchUrl(Uri.parse(
                             YoutubeShareManager.getMusicSongUrl(song.id)));
                       },
-                      icon: const Icon(Ionicons.play_circle),
+                      icon: const Icon(Ionicons.playCircle),
                     )
                   ],
                 ),
@@ -420,7 +420,7 @@ class SongInfoController extends GetxController
 
 mixin RemoveSongFromPlaylistMixin {
   Future<void> removeSongFromPlaylist(MediaItem item, Playlist playlist) async {
-    final box = await Hive.openBox(playlist.playlistId);
+    final box = await Hive.openBox(sanitizeBoxName(playlist.playlistId));
     //Library songs case
     if (playlist.playlistId == "SongsCache") {
       if (!box.containsKey(item.id)) {

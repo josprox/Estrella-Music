@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hive/hive.dart';
+import 'package:harmonymusic/utils/helper.dart';
 import 'custom_marquee.dart';
 
 import '../../services/piped_service.dart';
@@ -208,7 +209,7 @@ class AddToPlaylistController extends GetxController {
       List<MediaItem> songs, String playlistId, BuildContext context) async {
     additionInProgress.value = true;
     if (playlistType.value == "local") {
-      final plstBox = await Hive.openBox(playlistId);
+final plstBox = await Hive.openBox(sanitizeBoxName(playlistId));
       final playlistSongIds = plstBox.values.map((item) => item['videoId']);
       for (MediaItem element in songs) {
         if (!playlistSongIds.contains(element.id)) {

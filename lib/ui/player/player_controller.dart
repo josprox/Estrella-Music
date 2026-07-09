@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'dart:io';
 import 'package:flutter_lyric/lyrics_reader.dart';
-import 'package:flutter_lyric/lyric_ui/ui_netease.dart';
 import 'package:dio/dio.dart';
 import '../../services/translation_service.dart';
 import 'package:hive/hive.dart';
@@ -141,7 +140,8 @@ class PlayerController extends GetxController
   final lyricsAlignment = (LyricAlign.LEFT).obs;
   final isTranslationEnabled = false.obs;
   final isTranslationLoading = false.obs;
-  final translatedLyrics = <String, dynamic>{"synced": "", "plainLyrics": ""}.obs;
+  final translatedLyrics =
+      <String, dynamic>{"synced": "", "plainLyrics": ""}.obs;
   bool isDesktopLyricsDialogOpen = false;
   // 0 for play, 1 for pause, 2 for blank
   final gesturePlayerVisibleState = 2.obs;
@@ -366,7 +366,8 @@ class PlayerController extends GetxController
             .indexWhere((element) => element.id == currentSong.value!.id);
         await _checkFav();
         await _addToRP(currentSong.value!);
-        _updateDiscordRPC(mediaItem, buttonState.value == PlayButtonState.playing);
+        _updateDiscordRPC(
+            mediaItem, buttonState.value == PlayButtonState.playing);
         if (isRadioModeOn && (currentSong.value!.id == currentQueue.last.id)) {
           await _addRadioContinuation(radioInitiatorItem!);
         }
@@ -392,7 +393,8 @@ class PlayerController extends GetxController
         if (mediaItem.artUri != null) {
           final imageProvider = mediaItem.artUri!.isScheme('file')
               ? FileImage(File(mediaItem.artUri!.toFilePath()))
-              : CachedNetworkImageProvider(mediaItem.artUri.toString()) as ImageProvider;
+              : CachedNetworkImageProvider(mediaItem.artUri.toString())
+                  as ImageProvider;
           Get.find<ThemeController>().setTheme(imageProvider, mediaItem.id);
         }
 
@@ -648,7 +650,7 @@ class PlayerController extends GetxController
   }
 
   void _playViaAndroidAuto(String songId, String libraryId) {
-    Hive.openBox(libraryId).then((box) {
+    Hive.openBox(sanitizeBoxName(libraryId)).then((box) {
       List<MediaItem> songList = [];
       final songJson = box.values.toList();
       int songIndex = 0;
@@ -717,18 +719,19 @@ class PlayerController extends GetxController
       playerPanelMinHeight.value = 105.0 + Get.mediaQuery.padding.bottom;
       return;
     }
-    
-    final isBottomNavBarEnabled = Get.find<SettingsScreenController>().isBottomNavBarEnabled.isTrue;
+
+    final isBottomNavBarEnabled =
+        Get.find<SettingsScreenController>().isBottomNavBarEnabled.isTrue;
     bool isHomeOnTop = false;
     if (Get.isRegistered<HomeScreenController>()) {
       isHomeOnTop = Get.find<HomeScreenController>().isHomeSreenOnTop.isTrue;
     }
-    
-    final isBottomNavBarVisible = isBottomNavBarEnabled &&
-        isHomeOnTop &&
-        isPanelGTHOpened.isFalse;
-        
-    playerPanelMinHeight.value = 74.0 + (isBottomNavBarVisible ? 0.0 : Get.mediaQuery.padding.bottom);
+
+    final isBottomNavBarVisible =
+        isBottomNavBarEnabled && isHomeOnTop && isPanelGTHOpened.isFalse;
+
+    playerPanelMinHeight.value =
+        74.0 + (isBottomNavBarVisible ? 0.0 : Get.mediaQuery.padding.bottom);
   }
 
   void removeFromQueue(MediaItem song) {
@@ -805,7 +808,9 @@ class PlayerController extends GetxController
   void seek(Duration position) {
     _audioHandler.seek(position);
     if (currentSong.value != null) {
-      _updateDiscordRPC(currentSong.value!, buttonState.value == PlayButtonState.playing, position: position);
+      _updateDiscordRPC(
+          currentSong.value!, buttonState.value == PlayButtonState.playing,
+          position: position);
     }
     Future.delayed(const Duration(milliseconds: 100), () {
       _broadcastPlaybackState();
@@ -814,7 +819,8 @@ class PlayerController extends GetxController
 
   void _broadcastPlaybackState() {
     final colistening = Get.find<ColisteningService>();
-    if (colistening.isConnected.isTrue && colistening.currentRoomCode.isNotEmpty) {
+    if (colistening.isConnected.isTrue &&
+        colistening.currentRoomCode.isNotEmpty) {
       if (currentSong.value != null) {
         colistening.sendPlaybackSync({
           "videoId": currentSong.value!.id,
@@ -828,7 +834,8 @@ class PlayerController extends GetxController
     }
   }
 
-  void _updateDiscordRPC(MediaItem mediaItem, bool isPlaying, {Duration? position}) {
+  void _updateDiscordRPC(MediaItem mediaItem, bool isPlaying,
+      {Duration? position}) {
     DiscordRpcService().updatePresence(
       title: mediaItem.title,
       artist: mediaItem.artist ?? "",
@@ -1033,19 +1040,23 @@ class PlayerController extends GetxController
   Future<void> loadTranslation() async {
     final song = currentSong.value;
     if (song == null) return;
-    
-    if (translatedLyrics["synced"].isNotEmpty || translatedLyrics["plainLyrics"].isNotEmpty) {
+
+    if (translatedLyrics["synced"].isNotEmpty ||
+        translatedLyrics["plainLyrics"].isNotEmpty) {
       return;
     }
-    
+
     isTranslationLoading.value = true;
     try {
       final lyricsBox = await Hive.openBox("lyrics");
       final cached = lyricsBox.get(song.id);
       if (cached != null && cached is Map) {
-        final cachedTranslatedSynced = cached["translatedSynced"]?.toString() ?? "";
-        final cachedTranslatedPlain = cached["translatedPlain"]?.toString() ?? "";
-        if (cachedTranslatedSynced.isNotEmpty || cachedTranslatedPlain.isNotEmpty) {
+        final cachedTranslatedSynced =
+            cached["translatedSynced"]?.toString() ?? "";
+        final cachedTranslatedPlain =
+            cached["translatedPlain"]?.toString() ?? "";
+        if (cachedTranslatedSynced.isNotEmpty ||
+            cachedTranslatedPlain.isNotEmpty) {
           translatedLyrics.value = {
             "synced": cachedTranslatedSynced,
             "plainLyrics": cachedTranslatedPlain,
@@ -1056,21 +1067,22 @@ class PlayerController extends GetxController
         }
       }
       await lyricsBox.close();
-      
+
       if (lyrics["synced"].isEmpty && lyrics["plainLyrics"].isEmpty) {
         await loadLyrics();
       }
-      
+
       final originalSynced = lyrics["synced"].toString();
       final originalPlain = lyrics["plainLyrics"].toString();
-      
+
       if (originalSynced.isEmpty && originalPlain.isEmpty) {
         translatedLyrics.value = {"synced": "", "plainLyrics": ""};
         isTranslationLoading.value = false;
         return;
       }
-      
-      final neteaseRes = await TranslationService.fetchNetEaseTranslation(song.title, song.artist ?? "");
+
+      final neteaseRes = await TranslationService.fetchNetEaseTranslation(
+          song.title, song.artist ?? "");
       if (neteaseRes != null) {
         final tSynced = neteaseRes["synced"] ?? "";
         final tPlain = neteaseRes["plain"] ?? "";
@@ -1082,13 +1094,16 @@ class PlayerController extends GetxController
         isTranslationLoading.value = false;
         return;
       }
-      
-      String sourceText = originalSynced.isNotEmpty ? originalSynced : originalPlain;
+
+      String sourceText =
+          originalSynced.isNotEmpty ? originalSynced : originalPlain;
       final isSynced = originalSynced.isNotEmpty;
-      
+
       String translatedResult = "";
       if (isSynced) {
-        translatedResult = await TranslationService.translateLrcWithGoogle(sourceText, targetLang: "es");
+        translatedResult = await TranslationService.translateLrcWithGoogle(
+            sourceText,
+            targetLang: "es");
       } else {
         final res = await Dio().get(
           "https://translate.googleapis.com/translate_a/single",
@@ -1111,15 +1126,15 @@ class PlayerController extends GetxController
           translatedResult = sb.toString();
         }
       }
-      
+
       final tSynced = isSynced ? translatedResult : "";
       final tPlain = isSynced ? "" : translatedResult;
-      
+
       translatedLyrics.value = {
         "synced": tSynced,
         "plainLyrics": tPlain,
       };
-      
+
       await SyncedLyricsService.saveTranslation(song.id, tSynced, tPlain);
     } catch (e) {
       printERROR("Failed to load lyrics translation: $e");
@@ -1192,7 +1207,9 @@ class PlayerController extends GetxController
 
   @override
   void dispose() {
-    _audioHandler.customAction('dispose');
+    // AudioHandler is registered as a permanent app service. Disposing the
+    // native media_kit player from this UI controller can leave native Windows
+    // callbacks alive during hot restart and crash the Flutter runner.
     keyboardSubscription.cancel();
     _persistenceTimer?.cancel();
     scrollController.dispose();

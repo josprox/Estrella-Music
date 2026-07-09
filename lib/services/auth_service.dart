@@ -219,14 +219,17 @@ class AuthService extends GetxService {
       final hasPending =
           Hive.box('AppPrefs').get('hasPendingSync', defaultValue: false) ==
               true;
-      if (hasPending) {
-        Get.find<SyncService>().push().then((success) {
-          if (success) {
-            Get.find<SyncService>().pull();
-          }
-        });
-      } else {
-        Get.find<SyncService>().pull();
+      if (Get.isRegistered<SyncService>()) {
+        final syncService = Get.find<SyncService>();
+        if (hasPending) {
+          syncService.push().then((success) {
+            if (success) {
+              syncService.pull();
+            }
+          });
+        } else {
+          syncService.pull();
+        }
       }
     } else {
       if (profileResult['isNetworkError'] == true) {

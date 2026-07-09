@@ -78,7 +78,7 @@ class AlbumScreenController extends PlaylistAlbumScreenControllerBase
         _cacheAlbumThumbnail(albumId, album.value.thumbnailUrl);
       } else {
         // Album details already loaded via checkIfAddedToLibrary
-        final box = await Hive.openBox(albumId);
+        final box = await Hive.openBox(sanitizeBoxName(albumId));
         songList.value = box.values
             .map<MediaItem?>((item) => MediaItemBuilder.fromJson(item))
             .whereType<MediaItem>()
@@ -201,7 +201,7 @@ class AlbumScreenController extends PlaylistAlbumScreenControllerBase
         updateSongsIntoDb();
       } else {
         box.delete(id);
-        final songsBox = await Hive.openBox(id);
+        final songsBox = await Hive.openBox(sanitizeBoxName(id));
         songsBox.deleteFromDisk();
       }
       isAddedToLibrary.value = add;
@@ -218,7 +218,7 @@ class AlbumScreenController extends PlaylistAlbumScreenControllerBase
 
   @override
   Future<void> updateSongsIntoDb() async {
-    final songsBox = await Hive.openBox(album.value.browseId);
+    final songsBox = await Hive.openBox(sanitizeBoxName(album.value.browseId));
     await songsBox.clear();
     final songListCopy = songList.toList();
     for (int i = 0; i < songListCopy.length; i++) {

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:audio_service/audio_service.dart';
 import 'package:hive/hive.dart';
+import 'package:harmonymusic/utils/helper.dart';
 
 import '../navigator.dart';
 import 'image_widget.dart';
@@ -11,7 +12,6 @@ import '../../models/playling_from.dart';
 import '../../models/media_Item_builder.dart';
 import '../../services/music_service.dart';
 import '../../ui/player/player_controller.dart';
-import '../../utils/helper.dart';
 
 class ContentListItem extends StatelessWidget {
   final double? width;
@@ -99,7 +99,7 @@ class ContentListItem extends StatelessWidget {
                         );
 
                         if (id == 'LIBFAV' || id == 'SongDownloads') {
-                          final box = await Hive.openBox(id);
+                          final box = await Hive.openBox(sanitizeBoxName(id));
                           final tracks = box.values
                               .map<MediaItem?>((item) => MediaItemBuilder.fromJson(item))
                               .whereType<MediaItem>()

@@ -46,6 +46,7 @@ class ModificationList extends StatelessWidget {
                   ),
                 ),
             itemCount: items.length,
+            // ignore: deprecated_member_use
             onReorder: (old_, new_) {
               if (old_ < new_) {
                 new_--;

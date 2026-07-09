@@ -1,7 +1,10 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/ui/screens/Home/home_screen_controller.dart';
 import 'package:harmonymusic/generated/l10n.dart';
+import '../screens/Settings/settings_screen.dart';
+import '../navigator.dart';
+
 
 /// Material 3 Expressive side navigation rail — no glass blur, solid surface.
 class SideNavBar extends StatefulWidget {
@@ -81,9 +84,9 @@ class _SideNavBarState extends State<SideNavBar> {
                         ),
                         const SizedBox(height: 4),
                         _SideBarNavItem(
-                          icon: Icons.library_music_outlined,
-                          activeIcon: Icons.library_music_rounded,
-                          label: S.current.playlists,
+                          icon: Icons.search_outlined,
+                          activeIcon: Icons.search_rounded,
+                          label: S.current.search,
                           isSelected:
                               homeScreenController.tabIndex.value == 2,
                           isExpanded: isExpanded,
@@ -114,14 +117,29 @@ class _SideNavBarState extends State<SideNavBar> {
                         ),
                         const SizedBox(height: 4),
                         _SideBarNavItem(
-                          icon: Icons.settings_outlined,
-                          activeIcon: Icons.settings_rounded,
-                          label: S.current.settings,
+                          icon: Icons.library_music_outlined,
+                          activeIcon: Icons.library_music_rounded,
+                          label: S.current.playlists,
                           isSelected:
                               homeScreenController.tabIndex.value == 5,
                           isExpanded: isExpanded,
                           onTap: () =>
                               homeScreenController.onSideBarTabSelected(5),
+                        ),
+                        const SizedBox(height: 4),
+                        _SideBarNavItem(
+                          icon: Icons.settings_outlined,
+                          activeIcon: Icons.settings_rounded,
+                          label: S.current.settings,
+                          isSelected: false,
+                          isExpanded: isExpanded,
+                          onTap: () {
+                            Get.to(
+                              () => const SettingsScreen(isBottomNavActive: false),
+                              id: ScreenNavigationSetup.id,
+                              transition: Transition.rightToLeft,
+                            );
+                          },
                         ),
                       ],
                     ),
@@ -144,55 +162,62 @@ class _SideNavBarState extends State<SideNavBar> {
       padding: EdgeInsets.symmetric(
         horizontal: isExpanded ? 20 : 16,
       ),
-      child: Row(
-        mainAxisAlignment:
-            isExpanded ? MainAxisAlignment.start : MainAxisAlignment.center,
-        children: [
-          // Logo
-          Container(
-            width: 40,
-            height: 40,
-            decoration: BoxDecoration(
-              color: colorScheme.primaryContainer,
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: Icon(
-              Icons.music_note_rounded,
-              color: colorScheme.onPrimaryContainer,
-              size: 22,
-            ),
-          ),
-          if (isExpanded) ...[
-            const SizedBox(width: 12),
-            Expanded(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Estrella Music',
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w800,
-                      letterSpacing: -0.3,
-                      color: colorScheme.onSurface,
-                    ),
-                  ),
-                  Text(
-                    'v2.3.3',
-                    style: TextStyle(
-                      fontSize: 11,
-                      fontWeight: FontWeight.w500,
-                      color: colorScheme.onSurfaceVariant,
-                    ),
-                  ),
-                ],
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        physics: const NeverScrollableScrollPhysics(),
+        child: SizedBox(
+          width: isExpanded ? 200 : 48,
+          child: Row(
+            mainAxisAlignment:
+                isExpanded ? MainAxisAlignment.start : MainAxisAlignment.center,
+            children: [
+              // Logo
+              Container(
+                width: 40,
+                height: 40,
+                decoration: BoxDecoration(
+                  color: colorScheme.primaryContainer,
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Icon(
+                  Icons.music_note_rounded,
+                  color: colorScheme.onPrimaryContainer,
+                  size: 22,
+                ),
               ),
-            ),
-          ],
-        ],
+              if (isExpanded) ...[
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Estrella Music',
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w800,
+                          letterSpacing: -0.3,
+                          color: colorScheme.onSurface,
+                        ),
+                      ),
+                      Text(
+                        'v2.3.3',
+                        style: TextStyle(
+                          fontSize: 11,
+                          fontWeight: FontWeight.w500,
+                          color: colorScheme.onSurfaceVariant,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ],
+          ),
+        ),
       ),
     );
   }

@@ -8,6 +8,7 @@ import '../models/media_Item_builder.dart';
 import '../models/playlist.dart';
 import '../services/music_service.dart';
 import '../ui/widgets/sort_widget.dart';
+import '../utils/helper.dart';
 
 /// An abstract base class for managing playlist and album screens in the application.
 /// This class provides a set of methods and properties to handle various operations
@@ -61,7 +62,7 @@ abstract class PlaylistAlbumScreenControllerBase extends GetxController {
   ///
   /// [id] - The unique identifier of the album/playlist.
   void fetchSongsfromDatabase(String id) async {
-    final box = await Hive.openBox(id);
+    final box = await Hive.openBox(sanitizeBoxName(id));
     songList.value = box.values
         .map<MediaItem?>((item) => MediaItemBuilder.fromJson(item))
         .whereType<MediaItem>()

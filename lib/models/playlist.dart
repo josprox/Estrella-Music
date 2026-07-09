@@ -47,22 +47,61 @@ class Playlist {
   static const thumbPlaceholderUrl =
       "https://raw.githubusercontent.com/anandnet/Harmony-Music/refs/heads/main/playlist_placeholder.png";
 
-  factory Playlist.fromJson(Map<dynamic, dynamic> json) => Playlist(
-      title: json["title"],
-      playlistId: json["playlistId"] ?? json["browseId"],
-      thumbnailUrl: (json["thumbnails"] == null ||
-              json["thumbnails"].isEmpty ||
-              (json["thumbnails"][0]["url"] ?? "").isEmpty)
+  factory Playlist.fromJson(Map<dynamic, dynamic> json) {
+    final thumbnailUrl = _thumbnailUrlFromJson(json);
+    return Playlist(
+      title: json["title"]?.toString() ?? "Playlist",
+      playlistId: (json["playlistId"] ?? json["playlist_id"] ?? json["browseId"])
+          .toString(),
+      thumbnailUrl: thumbnailUrl.isEmpty
           ? Thumbnail(thumbPlaceholderUrl).extraHigh
-          : Thumbnail(json["thumbnails"][0]["url"]).extraHigh,
-      description: json["description"] ?? "Playlist",
-      songCount: json['itemCount'] ?? json['count'],
-      isPipedPlaylist: json["isPipedPlaylist"] ?? false,
-      isCloudPlaylist: json["isCloudPlaylist"] ?? true,
-      isPublic: json["isPublic"] ?? false,
-      isCollaborative: json["isCollaborative"] ?? false,
+          : Thumbnail(thumbnailUrl).extraHigh,
+      description: json["description"]?.toString() ?? "Playlist",
+      songCount: (json['itemCount'] ?? json['count'] ?? json['songCount'])
+          ?.toString(),
+      isPipedPlaylist: _boolFromJson(json["isPipedPlaylist"]),
+      isCloudPlaylist: json.containsKey("isCloudPlaylist")
+          ? _boolFromJson(json["isCloudPlaylist"])
+          : true,
+      isPublic: _boolFromJson(json["isPublic"] ?? json["is_public"]),
+      isCollaborative:
+          _boolFromJson(json["isCollaborative"] ?? json["is_collaborative"]),
       collaborators: json["collaborators"] as List? ?? [],
-      ownerId: json["ownerId"]);
+      ownerId: _intFromJson(json["ownerId"] ?? json["owner_id"]),
+    );
+  }
+
+  static String _thumbnailUrlFromJson(Map<dynamic, dynamic> json) {
+    final directUrl = json["thumbnailUrl"] ?? json["thumbnail_url"];
+    if (directUrl != null && directUrl.toString().isNotEmpty) {
+      return directUrl.toString();
+    }
+
+    final thumbnails = json["thumbnails"];
+    if (thumbnails is List && thumbnails.isNotEmpty) {
+      final first = thumbnails.first;
+      if (first is Map) {
+        return first["url"]?.toString() ?? "";
+      }
+    }
+    return "";
+  }
+
+  static bool _boolFromJson(dynamic value) {
+    if (value is bool) return value;
+    if (value is num) return value != 0;
+    if (value is String) {
+      final normalized = value.toLowerCase().trim();
+      return normalized == 'true' || normalized == '1';
+    }
+    return false;
+  }
+
+  static int? _intFromJson(dynamic value) {
+    if (value is int) return value;
+    if (value is num) return value.toInt();
+    return int.tryParse(value?.toString() ?? '');
+  }
 
   Map<String, dynamic> toJson() => {
         "title": title,

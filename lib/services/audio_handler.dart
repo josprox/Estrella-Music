@@ -62,6 +62,8 @@ class MyAudioHandler extends BaseAudioHandler with GetxServiceMixin {
   // var networkErrorPause = false;
   bool isSongLoading = true;
 
+  bool get _supportsPitchControl => !GetPlatform.isDesktop;
+
   // list of shuffled queue songs ids
   List<String> shuffledQueue = [];
 
@@ -76,16 +78,16 @@ class MyAudioHandler extends BaseAudioHandler with GetxServiceMixin {
     _mediaLibrary = MediaLibrary();
     _player = AudioPlayer(
         audioLoadConfiguration: const AudioLoadConfiguration(
-            androidLoadControl: AndroidLoadControl(
-              minBufferDuration: Duration(seconds: 60),
-              maxBufferDuration: Duration(seconds: 180),
-              bufferForPlaybackDuration: Duration(milliseconds: 100),
-              bufferForPlaybackAfterRebufferDuration: Duration(seconds: 3),
-            ),
-            darwinLoadControl: DarwinLoadControl(
-              preferredForwardBufferDuration: Duration(seconds: 60),
-            ),
-        ));
+      androidLoadControl: AndroidLoadControl(
+        minBufferDuration: Duration(seconds: 60),
+        maxBufferDuration: Duration(seconds: 180),
+        bufferForPlaybackDuration: Duration(milliseconds: 100),
+        bufferForPlaybackAfterRebufferDuration: Duration(seconds: 3),
+      ),
+      darwinLoadControl: DarwinLoadControl(
+        preferredForwardBufferDuration: Duration(seconds: 60),
+      ),
+    ));
     _createCacheDir();
     _addEmptyList();
     _notifyAudioHandlerAboutPlaybackEvents();
@@ -100,14 +102,12 @@ class MyAudioHandler extends BaseAudioHandler with GetxServiceMixin {
         Hive.box("AppPrefs").get("queueLoopModeEnabled") ?? false;
     loudnessNormalizationEnabled =
         appPrefsBox.get("loudnessNormalizationEnabled") ?? false;
-    final double initialSpeed = ((appPrefsBox.get("playbackSpeed") ?? 1.0) as num).toDouble();
-    final double initialPitch = ((appPrefsBox.get("playbackPitch") ?? 1.0) as num).toDouble();
+    final double initialSpeed =
+        ((appPrefsBox.get("playbackSpeed") ?? 1.0) as num).toDouble();
+    final double initialPitch =
+        ((appPrefsBox.get("playbackPitch") ?? 1.0) as num).toDouble();
     _player.setSpeed(initialSpeed);
-    try {
-      _player.setPitch(initialPitch);
-    } catch (e) {
-      printERROR("Failed to set initial pitch: $e");
-    }
+    _setPitchIfSupported(initialPitch, isInitialValue: true);
     _listenForDurationChanges();
     if (GetPlatform.isAndroid) {
       _listenSessionIdStream();
@@ -183,9 +183,11 @@ class MyAudioHandler extends BaseAudioHandler with GetxServiceMixin {
 
       // Check if we are still on the same song and attempt to recover
       if (savedIndex == currentIndex) {
-        printINFO("Attempting to recover playback for song index $currentIndex at position $curPos");
+        printINFO(
+            "Attempting to recover playback for song index $currentIndex at position $curPos");
         try {
-          await customAction("playByIndex", {'index': currentIndex, 'newUrl': true});
+          await customAction(
+              "playByIndex", {'index': currentIndex, 'newUrl': true});
           await _player.seek(curPos);
           await _player.play();
         } catch (recoveryErr) {
@@ -590,11 +592,7 @@ class MyAudioHandler extends BaseAudioHandler with GetxServiceMixin {
 
       case 'setPitch':
         final double pitch = (extras!['pitch'] as num).toDouble();
-        try {
-          await _player.setPitch(pitch);
-        } catch (e) {
-          printERROR("Failed to set pitch: $e");
-        }
+        await _setPitchIfSupported(pitch);
         break;
 
       case 'toggleLoudnessNormalization':
@@ -707,6 +705,24 @@ class MyAudioHandler extends BaseAudioHandler with GetxServiceMixin {
         break;
       default:
         break;
+    }
+  }
+
+  Future<void> _setPitchIfSupported(
+    double pitch, {
+    bool isInitialValue = false,
+  }) async {
+    if (!_supportsPitchControl) {
+      if (!isInitialValue) {
+        printERROR("Pitch control is not supported on desktop media_kit.");
+      }
+      return;
+    }
+
+    try {
+      await _player.setPitch(pitch);
+    } catch (e) {
+      printERROR("Failed to set pitch: $e");
     }
   }
 
@@ -1039,10 +1055,11 @@ class MediaLibrary {
 
   Future<List<MediaItem>> getLibSongs(String libId) async {
     Box<dynamic> box;
+    final boxName = sanitizeBoxName(libId);
     try {
-      box = await Hive.openBox(libId);
+      box = await Hive.openBox(boxName);
     } catch (e) {
-      box = await Hive.openBox(libId);
+      box = await Hive.openBox(boxName);
     }
     final songs = box.values.toList().map((e) {
       final song = MediaItemBuilder.fromJson(e);
