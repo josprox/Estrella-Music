@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:terminate_restart/terminate_restart.dart';
+import 'package:restart_app/restart_app.dart';
 import 'package:harmonymusic/generated/l10n.dart';
 
 import 'package:harmonymusic/services/backup/app_backup_service.dart';
@@ -265,13 +265,20 @@ class CloudBackupDialogController extends GetxController {
   }
 
   Future<void> restartApp() async {
-    if (GetPlatform.isAndroid) {
-      await TerminateRestart.instance.restartApp(
-        options: const TerminateRestartOptions(terminate: true),
-      );
-      return;
+    final result = await Restart.restartApp(
+      mode: GetPlatform.isAndroid
+          ? RestartMode.process
+          : RestartMode.platformDefault,
+      forceKill: GetPlatform.isAndroid,
+    );
+
+    if (!result.success) {
+      errorMessage.value =
+          result.message ?? result.code ?? 'No fue posible reiniciar la app.';
+      if (!GetPlatform.isAndroid) {
+        exit(0);
+      }
     }
-    exit(0);
   }
 
   String formatBackupDate(CloudBackupFile backup) {

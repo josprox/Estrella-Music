@@ -8,7 +8,6 @@ import 'package:get/get.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:harmonymusic/ui/widgets/liquid_bottom_navigation_bar.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:terminate_restart/terminate_restart.dart';
 import 'package:dynamic_color/dynamic_color.dart';
 
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -76,7 +75,6 @@ Future<void> main() async {
   Get.put<AudioHandler>(await initAudioService(), permanent: true);
   WidgetsBinding.instance.addObserver(LifecycleHandler());
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
-  TerminateRestart.instance.initialize();
   runApp(const MyApp());
 }
 

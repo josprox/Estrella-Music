@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hive/hive.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:terminate_restart/terminate_restart.dart';
+import 'package:restart_app/restart_app.dart';
 
 import '/ui/screens/Settings/settings_screen_controller.dart';
 import 'package:harmonymusic/utils/helpers/helper.dart';
@@ -73,16 +73,18 @@ class RestoreDialog extends StatelessWidget {
                         color: Theme.of(context).textTheme.titleLarge!.color,
                         borderRadius: BorderRadius.circular(10)),
                     child: InkWell(
-                      onTap: () {
+                      onTap: () async {
                         if (restoreDialogController.restoreProgress.toInt() ==
                             restoreDialogController.filesToRestore.toInt()) {
-                          GetPlatform.isAndroid
-                              ? TerminateRestart.instance.restartApp(
-                                  options: const TerminateRestartOptions(
-                                    terminate: true,
-                                  ),
-                                )
-                              : exit(0);
+                          final result = await Restart.restartApp(
+                            mode: GetPlatform.isAndroid
+                                ? RestartMode.process
+                                : RestartMode.platformDefault,
+                            forceKill: GetPlatform.isAndroid,
+                          );
+                          if (!result.success && !GetPlatform.isAndroid) {
+                            exit(0);
+                          }
                         } else {
                           restoreDialogController.restore();
                         }
