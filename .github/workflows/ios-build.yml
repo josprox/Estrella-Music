@@ -19,9 +19,6 @@ jobs:
         with:
           channel: 'stable'
 
-      - name: Desactivar Swift Package Manager
-        run: flutter config --no-enable-swift-package-manager
-
       - name: Borrar dependencias y limpiar caché
         run: |
           flutter clean
@@ -30,17 +27,22 @@ jobs:
           rm -rf ios/.symlinks
           flutter pub get
 
-      - name: Construir aplicación iOS (Simulador)
-        # Aquí está el truco: Compilamos para simulador de iOS. 
-        # Esto evade el bloqueo de "Development Team" de Xcode.
-        run: flutter build ios --simulator
+      - name: Construir base de Flutter (Dispositivo Físico)
+        # Preparamos los frameworks nativos. Si falla la firma al final, lo ignoramos con "|| true"
+        run: flutter build ios --release --no-codesign || true
+
+      - name: Forzar compilación global sin firmas (Xcode Hack)
+        # Obligamos a Xcode a ignorar el Development Team en TODOS los targets (incluido OneSignal)
+        run: |
+          cd ios
+          xcodebuild -workspace Runner.xcworkspace -scheme Runner -configuration Release -sdk iphoneos CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" EXPANDED_CODE_SIGN_IDENTITY="" build SYMROOT="${PWD}/../build/ios"
 
       - name: Empaquetar a formato .ipa
-        # Extraemos la App del simulador y la empaquetamos
+        # Buscamos dinámicamente la app resultante, la metemos en Payload y la zipeamos
         run: |
           mkdir -p Payload
-          # La ruta cambia al compilar para simulador
-          mv build/ios/iphonesimulator/Runner.app Payload
+          APP_PATH=$(find build/ios -name "Runner.app" -type d | head -n 1)
+          mv "$APP_PATH" Payload/
           zip -r app.ipa Payload
 
       - name: Subir artefacto para descargar
