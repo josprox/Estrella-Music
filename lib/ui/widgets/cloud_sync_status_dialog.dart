@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hive/hive.dart';
 
-import '../../services/auth_service.dart';
-import '../../services/cloud_migration_service.dart';
-import '../../services/pending_sync_queue_service.dart';
-import '../../services/sync_service.dart';
-import '../auth/auth_gate.dart';
+import 'package:harmonymusic/services/auth/auth_service.dart';
+import 'package:harmonymusic/services/sync/cloud_migration_service.dart';
+import 'package:harmonymusic/services/sync/pending_sync_queue_service.dart';
+import 'package:harmonymusic/services/sync/sync_service.dart';
+import 'package:harmonymusic/ui/auth/auth_gate.dart';
 
 class CloudSyncStatusDialog extends StatelessWidget {
   const CloudSyncStatusDialog({super.key});

@@ -4,16 +4,16 @@ import 'package:get/get.dart';
 import 'package:harmonymusic/base_class/playlist_album_screen_con_base.dart';
 import 'package:harmonymusic/models/album.dart';
 import 'package:harmonymusic/models/playlist.dart';
-import 'package:harmonymusic/services/catalog_recovery_service.dart';
-import 'package:harmonymusic/services/music_service.dart' show NetworkError;
-import 'package:harmonymusic/utils/helper.dart';
+import 'package:harmonymusic/services/auth/catalog_recovery_service.dart';
+import 'package:harmonymusic/services/music/music_service.dart' show NetworkError;
+import 'package:harmonymusic/utils/helpers/helper.dart';
 import 'package:hive/hive.dart';
 
-import '../../../mixins/additional_opeartion_mixin.dart';
-import '../../../models/media_Item_builder.dart';
-import '../Home/home_screen_controller.dart';
-import '../Library/library_controller.dart';
-import '../../../services/sync_service.dart';
+import 'package:harmonymusic/mixins/additional_opeartion_mixin.dart';
+import 'package:harmonymusic/models/media_Item_builder.dart';
+import 'package:harmonymusic/ui/screens/Home/home_screen_controller.dart';
+import 'package:harmonymusic/ui/screens/Library/library_controller.dart';
+import 'package:harmonymusic/services/sync/sync_service.dart';
 
 ///AlbumScreenController handles album screen
 ///

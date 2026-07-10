@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../screens/Search/search_result_screen_controller.dart';
-import '../../models/artist.dart';
-import '../navigator.dart';
+import 'package:harmonymusic/ui/screens/Search/search_result_screen_controller.dart';
+import 'package:harmonymusic/models/artist.dart';
+import 'package:harmonymusic/ui/navigator.dart';
 import '/ui/widgets/content_list_widget_item.dart';
 import 'image_widget.dart';
 import 'hover_card_wrapper.dart';

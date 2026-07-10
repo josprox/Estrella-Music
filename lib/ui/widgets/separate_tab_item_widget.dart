@@ -1,9 +1,9 @@
 ﻿import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/ui/widgets/modification_list.dart';
-import '../../utils/l10n_extensions.dart';
+import 'package:harmonymusic/utils/localization/l10n_extensions.dart';
 
-import '../screens/Artists/artist_screen_controller.dart';
+import 'package:harmonymusic/ui/screens/Artists/artist_screen_controller.dart';
 import 'list_widget.dart';
 import 'loader.dart';
 import 'sort_widget.dart';

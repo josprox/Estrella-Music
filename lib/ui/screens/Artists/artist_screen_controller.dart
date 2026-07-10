@@ -3,17 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
-import '../../widgets/add_to_playlist.dart';
+import 'package:harmonymusic/ui/widgets/add_to_playlist.dart';
 import '/ui/widgets/sort_widget.dart';
-import '../../../models/artist.dart';
-import '../../../services/catalog_recovery_service.dart';
-import '../../../utils/helper.dart';
-import '../Library/library_controller.dart';
-import '/services/music_service.dart';
+import 'package:harmonymusic/models/artist.dart';
+import 'package:harmonymusic/services/auth/catalog_recovery_service.dart';
+import 'package:harmonymusic/utils/helpers/helper.dart';
+import 'package:harmonymusic/ui/screens/Library/library_controller.dart';
+import 'package:harmonymusic/services/music/music_service.dart';
 import '/ui/screens/Home/home_screen_controller.dart';
 import '/ui/screens/Settings/settings_screen_controller.dart';
-import '../../../models/media_Item_builder.dart';
-import '../../../services/sync_service.dart';
+import 'package:harmonymusic/models/media_Item_builder.dart';
+import 'package:harmonymusic/services/sync/sync_service.dart';
 
 class ArtistScreenController extends GetxController
     with GetSingleTickerProviderStateMixin {

@@ -6,9 +6,9 @@ import 'package:get/get.dart';
 
 import '/ui/screens/Home/home_screen_controller.dart';
 import '/ui/screens/Settings/settings_screen_controller.dart';
-import '../utils/helper.dart';
-import '../ui/navigator.dart';
-import '../ui/player/player.dart';
+import 'package:harmonymusic/utils/helpers/helper.dart';
+import 'package:harmonymusic/ui/navigator.dart';
+import 'package:harmonymusic/ui/player/player.dart';
 import 'player/components/mini_player.dart';
 import 'player/player_controller.dart';
 import 'widgets/bottom_nav_bar.dart';

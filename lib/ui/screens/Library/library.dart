@@ -2,13 +2,13 @@
 import 'package:get/get.dart';
 
 import '/ui/widgets/modification_list.dart';
-import '../../../models/playlist.dart';
-import '../../widgets/piped_sync_widget.dart';
+import 'package:harmonymusic/models/playlist.dart';
+import 'package:harmonymusic/ui/widgets/piped_sync_widget.dart';
 import 'library_controller.dart';
-import '../../widgets/content_list_widget_item.dart';
-import '../../widgets/list_widget.dart';
-import '../../widgets/sort_widget.dart';
-import '../Settings/settings_screen_controller.dart';
+import 'package:harmonymusic/ui/widgets/content_list_widget_item.dart';
+import 'package:harmonymusic/ui/widgets/list_widget.dart';
+import 'package:harmonymusic/ui/widgets/sort_widget.dart';
+import 'package:harmonymusic/ui/screens/Settings/settings_screen_controller.dart';
 import 'package:harmonymusic/generated/l10n.dart';
 
 class SongsLibraryWidget extends StatelessWidget {

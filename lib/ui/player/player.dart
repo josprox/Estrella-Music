@@ -3,11 +3,11 @@ import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 
 import '/ui/player/components/standard_player.dart';
-import '../../utils/helper.dart';
-import '../widgets/snackbar.dart';
-import '../widgets/up_next_queue.dart';
-import '/ui/player/player_controller.dart';
-import '../widgets/sliding_up_panel.dart';
+import 'package:harmonymusic/utils/helpers/helper.dart';
+import 'package:harmonymusic/ui/widgets/snackbar.dart';
+import 'package:harmonymusic/ui/widgets/up_next_queue.dart';
+import 'package:harmonymusic/ui/player/player_controller.dart';
+import 'package:harmonymusic/ui/widgets/sliding_up_panel.dart';
 import 'package:harmonymusic/generated/l10n.dart';
 
 /// Player screen

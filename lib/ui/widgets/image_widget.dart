@@ -6,10 +6,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer/shimmer.dart';
 
-import '../screens/Settings/settings_screen_controller.dart';
+import 'package:harmonymusic/ui/screens/Settings/settings_screen_controller.dart';
 import '/models/artist.dart';
-import '../../models/album.dart';
-import '../../models/playlist.dart';
+import 'package:harmonymusic/models/album.dart';
+import 'package:harmonymusic/models/playlist.dart';
 
 class ImageWidget extends StatelessWidget {
   const ImageWidget({

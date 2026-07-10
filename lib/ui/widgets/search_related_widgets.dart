@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../screens/Search/search_result_screen_controller.dart';
+import 'package:harmonymusic/ui/screens/Search/search_result_screen_controller.dart';
 import '/models/album.dart';
 import '/models/artist.dart';
 import '/models/playlist.dart';
@@ -10,7 +10,7 @@ import '/ui/widgets/content_list_widget_item.dart';
 import '/ui/widgets/song_list_tile.dart';
 import '/ui/widgets/image_widget.dart';
 import 'package:harmonymusic/generated/l10n.dart';
-import '../player/player_controller.dart';
+import 'package:harmonymusic/ui/player/player_controller.dart';
 
 import '/ui/navigator.dart';
 

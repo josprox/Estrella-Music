@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/services/auth_service.dart';
+import 'package:harmonymusic/services/auth/auth_service.dart';
 
-import 'package:harmonymusic/utils/lang_mapping.dart';
+import 'package:harmonymusic/utils/localization/lang_mapping.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../../widgets/common_dialog_widget.dart';
-import '../../widgets/cust_switch.dart';
-import '../../widgets/export_file_dialog.dart';
-import '../../widgets/backup_dialog.dart';
-import '../../widgets/cloud_backup_dialog.dart';
-import '../../widgets/cloud_sync_status_dialog.dart';
-import '../../widgets/legacy_music_migration_dialog.dart';
-import '../../widgets/restore_dialog.dart';
-import '../Library/library_controller.dart';
-import '../../widgets/snackbar.dart';
+import 'package:harmonymusic/ui/widgets/common_dialog_widget.dart';
+import 'package:harmonymusic/ui/widgets/cust_switch.dart';
+import 'package:harmonymusic/ui/widgets/export_file_dialog.dart';
+import 'package:harmonymusic/ui/widgets/backup_dialog.dart';
+import 'package:harmonymusic/ui/widgets/cloud_backup_dialog.dart';
+import 'package:harmonymusic/ui/widgets/cloud_sync_status_dialog.dart';
+import 'package:harmonymusic/ui/widgets/legacy_music_migration_dialog.dart';
+import 'package:harmonymusic/ui/widgets/restore_dialog.dart';
+import 'package:harmonymusic/ui/screens/Library/library_controller.dart';
+import 'package:harmonymusic/ui/widgets/snackbar.dart';
 import '/ui/widgets/link_piped.dart';
-import '/services/music_service.dart';
+import 'package:harmonymusic/services/music/music_service.dart';
 
 import '/ui/utils/theme_controller.dart';
 import 'components/custom_expansion_tile.dart';

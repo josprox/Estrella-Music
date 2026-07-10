@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:audio_service/audio_service.dart';
 import 'package:harmonymusic/generated/l10n.dart';
 
-import '../player/player_controller.dart';
+import 'package:harmonymusic/ui/player/player_controller.dart';
 
 class MostListenedWidget extends StatelessWidget {
   final List<MediaItem> content;

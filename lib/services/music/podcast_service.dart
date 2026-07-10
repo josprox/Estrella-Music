@@ -1,8 +1,8 @@
 import 'package:audio_service/audio_service.dart';
-import '../nav_parser.dart';
-import '../utils.dart';
-import '../../utils/helper.dart';
-import '../music_service.dart';
+import 'package:harmonymusic/services/system/nav_parser.dart';
+import 'package:harmonymusic/services/system/utils.dart';
+import 'package:harmonymusic/utils/helpers/helper.dart';
+import 'package:harmonymusic/services/music/music_service.dart';
 
 class PodcastService {
   final MusicServices _musicServices;

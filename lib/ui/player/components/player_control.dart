@@ -1,13 +1,13 @@
 ﻿import 'package:audio_video_progress_bar/audio_video_progress_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../utils/ionicons.dart';
-import '../../widgets/custom_marquee.dart';
+import 'package:harmonymusic/utils/helpers/ionicons.dart';
+import 'package:harmonymusic/ui/widgets/custom_marquee.dart';
 
 import '/ui/theme/app_spacing.dart';
 import '/ui/widgets/glass_morphism.dart';
 import '/ui/player/components/animated_play_button.dart';
-import '../player_controller.dart';
+import 'package:harmonymusic/ui/player/player_controller.dart';
 
 class PlayerControlWidget extends StatelessWidget {
   const PlayerControlWidget({super.key});

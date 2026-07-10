@@ -4,16 +4,16 @@ import 'package:get/get.dart';
 import 'package:hive/hive.dart';
 
 import '/models/media_Item_builder.dart';
-import '/ui/player/player_controller.dart';
-import '../../../utils/update_check_flag_file.dart';
-import '../../../utils/helper.dart';
+import 'package:harmonymusic/ui/player/player_controller.dart';
+import 'package:harmonymusic/utils/helpers/update_check_flag_file.dart';
+import 'package:harmonymusic/utils/helpers/helper.dart';
 import '/models/album.dart';
 import '/models/playlist.dart';
 import '/models/artist.dart';
 import 'package:harmonymusic/generated/l10n.dart';
 import '/models/quick_picks.dart';
-import '/services/music_service.dart';
-import '../Settings/settings_screen_controller.dart';
+import 'package:harmonymusic/services/music/music_service.dart';
+import 'package:harmonymusic/ui/screens/Settings/settings_screen_controller.dart';
 import '/ui/widgets/new_version_dialog.dart';
 
 class HomeScreenController extends GetxController {

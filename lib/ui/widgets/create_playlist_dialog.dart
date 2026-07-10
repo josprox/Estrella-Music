@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'custom_marquee.dart';
 
-import '/services/piped_service.dart';
-import '../screens/Library/library_controller.dart';
+import 'package:harmonymusic/services/social/piped_service.dart';
+import 'package:harmonymusic/ui/screens/Library/library_controller.dart';
 import '/ui/widgets/snackbar.dart';
-import '../../models/playlist.dart';
+import 'package:harmonymusic/models/playlist.dart';
 import 'common_dialog_widget.dart';
 import 'modified_text_field.dart';
 import 'package:harmonymusic/generated/l10n.dart';

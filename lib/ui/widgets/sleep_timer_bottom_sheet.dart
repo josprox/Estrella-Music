@@ -1,7 +1,7 @@
 ﻿import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '/ui/player/player_controller.dart';
+import 'package:harmonymusic/ui/player/player_controller.dart';
 import 'snackbar.dart';
 import 'package:harmonymusic/generated/l10n.dart';
 

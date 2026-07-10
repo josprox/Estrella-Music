@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'search_item.dart';
 import '/ui/screens/Search/search_screen_controller.dart';
 
-import '../../../navigator.dart';
+import 'package:harmonymusic/ui/navigator.dart';
 import 'package:harmonymusic/generated/l10n.dart';
 
 class DesktopSearchBar extends StatelessWidget {

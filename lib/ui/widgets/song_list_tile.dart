@@ -5,9 +5,9 @@ import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:get/get.dart';
 import 'custom_marquee.dart';
 
-import '../../models/playlist.dart';
-import '../player/player_controller.dart';
-import '../screens/Settings/settings_screen_controller.dart';
+import 'package:harmonymusic/models/playlist.dart';
+import 'package:harmonymusic/ui/player/player_controller.dart';
+import 'package:harmonymusic/ui/screens/Settings/settings_screen_controller.dart';
 import '/ui/theme/app_spacing.dart';
 import 'add_to_playlist.dart';
 import 'image_widget.dart';

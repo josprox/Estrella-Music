@@ -4,24 +4,24 @@ import 'package:audio_service/audio_service.dart' show MediaItem;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/models/thumbnail.dart';
-import 'package:harmonymusic/services/permission_service.dart';
+import 'package:harmonymusic/services/system/permission_service.dart';
 import 'package:harmonymusic/ui/screens/Settings/settings_screen_controller.dart';
 import 'package:harmonymusic/ui/widgets/snackbar.dart';
-import 'package:harmonymusic/utils/helper.dart';
+import 'package:harmonymusic/utils/helpers/helper.dart';
 import 'package:hive/hive.dart';
 import 'package:path_provider/path_provider.dart' as path_provider;
 
-import '../../../base_class/playlist_album_screen_con_base.dart';
-import '../../../mixins/additional_opeartion_mixin.dart';
+import 'package:harmonymusic/base_class/playlist_album_screen_con_base.dart';
+import 'package:harmonymusic/mixins/additional_opeartion_mixin.dart';
 import '../../../models/album.dart' show Album;
-import '../../../models/media_Item_builder.dart';
-import '../../../models/playlist.dart';
-import '../../../services/catalog_recovery_service.dart';
-import '../../../services/music_service.dart';
-import '../../../services/piped_service.dart';
-import '../../../services/sync_service.dart';
-import '../Home/home_screen_controller.dart';
-import '../Library/library_controller.dart';
+import 'package:harmonymusic/models/media_Item_builder.dart';
+import 'package:harmonymusic/models/playlist.dart';
+import 'package:harmonymusic/services/auth/catalog_recovery_service.dart';
+import 'package:harmonymusic/services/music/music_service.dart';
+import 'package:harmonymusic/services/social/piped_service.dart';
+import 'package:harmonymusic/services/sync/sync_service.dart';
+import 'package:harmonymusic/ui/screens/Home/home_screen_controller.dart';
+import 'package:harmonymusic/ui/screens/Library/library_controller.dart';
 import 'package:harmonymusic/generated/l10n.dart';
 
 ///PlaylistScreenController handles playlist screen

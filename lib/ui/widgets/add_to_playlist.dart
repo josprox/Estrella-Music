@@ -2,13 +2,13 @@ import 'package:audio_service/audio_service.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hive/hive.dart';
-import 'package:harmonymusic/utils/helper.dart';
+import 'package:harmonymusic/utils/helpers/helper.dart';
 
-import '../../services/piped_service.dart';
-import '../../services/sync_service.dart';
+import 'package:harmonymusic/services/social/piped_service.dart';
+import 'package:harmonymusic/services/sync/sync_service.dart';
 import '/models/media_Item_builder.dart';
 import '/ui/widgets/create_playlist_dialog.dart';
-import '../../models/playlist.dart';
+import 'package:harmonymusic/models/playlist.dart';
 import 'common_dialog_widget.dart';
 import 'snackbar.dart';
 import 'package:harmonymusic/generated/l10n.dart';

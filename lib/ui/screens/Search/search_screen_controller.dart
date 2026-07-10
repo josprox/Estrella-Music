@@ -3,8 +3,8 @@ import 'package:get/get.dart';
 import 'package:hive/hive.dart';
 import 'package:harmonymusic/generated/l10n.dart';
 
-import '/utils/app_link_controller.dart' show ProcessLink;
-import '/services/music_service.dart';
+import 'package:harmonymusic/utils/desktop/app_link_controller.dart' show ProcessLink;
+import 'package:harmonymusic/services/music/music_service.dart';
 
 class SearchCategory {
   final String name;

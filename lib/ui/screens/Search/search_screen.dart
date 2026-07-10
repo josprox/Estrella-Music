@@ -5,7 +5,7 @@ import 'package:harmonymusic/generated/l10n.dart';
 
 import '/ui/navigator.dart';
 import '/ui/screens/Settings/settings_screen_controller.dart';
-import '../../widgets/nebula_background.dart';
+import 'package:harmonymusic/ui/widgets/nebula_background.dart';
 import 'components/search_item.dart';
 import 'components/music_recognition_bottom_sheet.dart';
 import 'search_screen_controller.dart';

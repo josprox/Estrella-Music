@@ -1,11 +1,11 @@
 import 'package:audio_service/audio_service.dart';
-import '../../models/album.dart';
-import '../../models/artist.dart';
-import '../../models/playlist.dart';
-import '../nav_parser.dart';
-import '../utils.dart';
-import '../continuations.dart';
-import '../music_service.dart';
+import 'package:harmonymusic/models/album.dart';
+import 'package:harmonymusic/models/artist.dart';
+import 'package:harmonymusic/models/playlist.dart';
+import 'package:harmonymusic/services/system/nav_parser.dart';
+import 'package:harmonymusic/services/system/utils.dart';
+import 'package:harmonymusic/services/system/continuations.dart';
+import 'package:harmonymusic/services/music/music_service.dart';
 
 extension ListExtension<T> on List<T> {
   List<T> distinctBy(dynamic Function(T) keySelector) {

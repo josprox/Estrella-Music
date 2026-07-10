@@ -2,8 +2,8 @@
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
-import '../../services/cloud_backup_service.dart';
-import '../../services/user_data_bootstrap_service.dart';
+import 'package:harmonymusic/services/backup/cloud_backup_service.dart';
+import 'package:harmonymusic/services/auth/user_data_bootstrap_service.dart';
 import 'widgets/animated_auth_background.dart';
 
 class AccountBootstrapScreen extends StatelessWidget {

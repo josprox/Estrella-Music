@@ -6,10 +6,10 @@ import 'package:hive_flutter/hive_flutter.dart';
 import '/models/album.dart';
 import '/models/media_Item_builder.dart';
 import '/models/playlist.dart';
-import '/services/music_service.dart';
-import '/services/sync_service.dart';
+import 'package:harmonymusic/services/music/music_service.dart';
+import 'package:harmonymusic/services/sync/sync_service.dart';
 import '/ui/widgets/loader.dart';
-import '/ui/player/player_controller.dart';
+import 'package:harmonymusic/ui/player/player_controller.dart';
 import '/ui/navigator.dart';
 
 class ArtistContentListController extends GetxController {

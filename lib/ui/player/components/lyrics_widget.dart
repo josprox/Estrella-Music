@@ -2,8 +2,8 @@
 import 'package:flutter_lyric/lyrics_reader.dart';
 import 'package:get/get.dart';
 
-import '../../widgets/loader.dart';
-import '../player_controller.dart';
+import 'package:harmonymusic/ui/widgets/loader.dart';
+import 'package:harmonymusic/ui/player/player_controller.dart';
 import 'package:harmonymusic/generated/l10n.dart';
 
 class LyricsWidget extends StatelessWidget {

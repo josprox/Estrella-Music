@@ -1,10 +1,10 @@
 ﻿import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../utils/helper.dart';
-import '/services/piped_service.dart';
-import '../screens/Settings/settings_screen_controller.dart';
-import '../screens/Library/library_controller.dart';
+import 'package:harmonymusic/utils/helpers/helper.dart';
+import 'package:harmonymusic/services/social/piped_service.dart';
+import 'package:harmonymusic/ui/screens/Settings/settings_screen_controller.dart';
+import 'package:harmonymusic/ui/screens/Library/library_controller.dart';
 import 'common_dialog_widget.dart';
 import 'modified_text_field.dart';
 import 'snackbar.dart';

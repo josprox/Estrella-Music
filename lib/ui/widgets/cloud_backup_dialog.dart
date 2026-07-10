@@ -3,11 +3,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:terminate_restart/terminate_restart.dart';
-import '../../generated/l10n.dart';
+import 'package:harmonymusic/generated/l10n.dart';
 
-import '../../services/app_backup_service.dart';
-import '../../services/auth_service.dart';
-import '../../services/cloud_backup_service.dart';
+import 'package:harmonymusic/services/backup/app_backup_service.dart';
+import 'package:harmonymusic/services/auth/auth_service.dart';
+import 'package:harmonymusic/services/backup/cloud_backup_service.dart';
 import 'common_dialog_widget.dart';
 import 'snackbar.dart';
 

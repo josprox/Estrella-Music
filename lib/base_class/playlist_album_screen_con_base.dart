@@ -3,12 +3,12 @@ import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:hive/hive.dart';
 
-import '../models/album.dart';
-import '../models/media_Item_builder.dart';
-import '../models/playlist.dart';
-import '../services/music_service.dart';
-import '../ui/widgets/sort_widget.dart';
-import '../utils/helper.dart';
+import 'package:harmonymusic/models/album.dart';
+import 'package:harmonymusic/models/media_Item_builder.dart';
+import 'package:harmonymusic/models/playlist.dart';
+import 'package:harmonymusic/services/music/music_service.dart';
+import 'package:harmonymusic/ui/widgets/sort_widget.dart';
+import 'package:harmonymusic/utils/helpers/helper.dart';
 
 /// An abstract base class for managing playlist and album screens in the application.
 /// This class provides a set of methods and properties to handle various operations

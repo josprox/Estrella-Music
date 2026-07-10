@@ -4,7 +4,7 @@ import 'package:harmonymusic/generated/l10n.dart';
 import 'package:harmonymusic/ui/utils/theme_controller.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 
-import '../player_controller.dart';
+import 'package:harmonymusic/ui/player/player_controller.dart';
 
 class LyricsSwitch extends StatelessWidget {
   const LyricsSwitch({super.key});

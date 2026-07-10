@@ -1,9 +1,9 @@
 ﻿import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/generated/l10n.dart';
-import '../../services/lyrics_providers.dart';
-import '../../services/synced_lyrics_service.dart';
-import '../player/player_controller.dart';
+import 'package:harmonymusic/services/music/lyrics_providers.dart';
+import 'package:harmonymusic/services/music/synced_lyrics_service.dart';
+import 'package:harmonymusic/ui/player/player_controller.dart';
 
 class LyricsSearchDialog extends StatefulWidget {
   const LyricsSearchDialog({super.key});

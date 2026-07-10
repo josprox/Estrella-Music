@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hive/hive.dart';
 
-import '../../services/auth_service.dart';
-import '../../services/update_service.dart';
-import '../../services/user_data_bootstrap_service.dart';
-import '../home.dart';
-import '../screens/Update/update_screen.dart';
+import 'package:harmonymusic/services/auth/auth_service.dart';
+import 'package:harmonymusic/services/system/update_service.dart';
+import 'package:harmonymusic/services/auth/user_data_bootstrap_service.dart';
+import 'package:harmonymusic/ui/home.dart';
+import 'package:harmonymusic/ui/screens/Update/update_screen.dart';
 import 'account_bootstrap_screen.dart';
 import 'cloud_migration_screen.dart';
 import 'cloud_mode_choice_screen.dart';

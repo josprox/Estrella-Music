@@ -1,6 +1,6 @@
-import '../nav_parser.dart';
-import '../continuations.dart';
-import '../music_service.dart';
+import 'package:harmonymusic/services/system/nav_parser.dart';
+import 'package:harmonymusic/services/system/continuations.dart';
+import 'package:harmonymusic/services/music/music_service.dart';
 
 class HomeService {
   final MusicServices _musicServices;

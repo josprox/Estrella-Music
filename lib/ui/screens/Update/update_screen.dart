@@ -3,7 +3,7 @@ import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
-import '../../../generated/l10n.dart';
+import 'package:harmonymusic/generated/l10n.dart';
 import 'update_controller.dart';
 
 class UpdateScreen extends StatelessWidget {

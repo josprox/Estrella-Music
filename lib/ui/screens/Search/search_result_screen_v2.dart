@@ -3,11 +3,11 @@ import 'package:get/get.dart';
 import 'package:harmonymusic/ui/widgets/loader.dart';
 import 'package:harmonymusic/ui/widgets/search_related_widgets.dart';
 
-import '../../navigator.dart';
+import 'package:harmonymusic/ui/navigator.dart';
 import 'search_result_screen_controller.dart';
-import '../../widgets/nebula_background.dart';
+import 'package:harmonymusic/ui/widgets/nebula_background.dart';
 import 'package:harmonymusic/generated/l10n.dart';
-import '../../../utils/l10n_extensions.dart';
+import 'package:harmonymusic/utils/localization/l10n_extensions.dart';
 
 class SearchResultScreenBN extends StatelessWidget {
   const SearchResultScreenBN({super.key});

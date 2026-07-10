@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../services/cloud_migration_service.dart';
-import '../../services/sync_service.dart';
-import '../home.dart';
+import 'package:harmonymusic/services/sync/cloud_migration_service.dart';
+import 'package:harmonymusic/services/sync/sync_service.dart';
+import 'package:harmonymusic/ui/home.dart';
 import 'widgets/animated_auth_background.dart';
 
 class CloudMigrationScreen extends StatefulWidget {

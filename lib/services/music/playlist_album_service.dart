@@ -1,9 +1,9 @@
 import 'package:dio/dio.dart';
-import '../nav_parser.dart';
-import '../utils.dart';
-import '../constant.dart';
-import '../continuations.dart';
-import '../music_service.dart';
+import 'package:harmonymusic/services/system/nav_parser.dart';
+import 'package:harmonymusic/services/system/utils.dart';
+import 'package:harmonymusic/services/system/constant.dart';
+import 'package:harmonymusic/services/system/continuations.dart';
+import 'package:harmonymusic/services/music/music_service.dart';
 
 class PlaylistAlbumService {
   final MusicServices _musicServices;

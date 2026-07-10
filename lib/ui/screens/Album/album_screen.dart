@@ -6,16 +6,16 @@ import 'package:harmonymusic/models/playling_from.dart';
 import 'package:harmonymusic/models/thumbnail.dart';
 import 'package:harmonymusic/ui/widgets/playlist_album_scroll_behaviour.dart';
 import 'package:hive/hive.dart';
-import '../../widgets/custom_marquee.dart';
-import '/utils/youtube_share_manager.dart';
+import 'package:harmonymusic/ui/widgets/custom_marquee.dart';
+import 'package:harmonymusic/utils/helpers/youtube_share_manager.dart';
 
-import '../../../services/downloader.dart';
-import '../../player/player_controller.dart';
-import '../../widgets/loader.dart';
-import '../../widgets/snackbar.dart';
-import '../../widgets/song_list_tile.dart';
-import '../../widgets/songinfo_bottom_sheet.dart';
-import '../../widgets/sort_widget.dart';
+import 'package:harmonymusic/services/download/downloader.dart';
+import 'package:harmonymusic/ui/player/player_controller.dart';
+import 'package:harmonymusic/ui/widgets/loader.dart';
+import 'package:harmonymusic/ui/widgets/snackbar.dart';
+import 'package:harmonymusic/ui/widgets/song_list_tile.dart';
+import 'package:harmonymusic/ui/widgets/songinfo_bottom_sheet.dart';
+import 'package:harmonymusic/ui/widgets/sort_widget.dart';
 import 'album_screen_controller.dart';
 import 'package:harmonymusic/generated/l10n.dart';
 

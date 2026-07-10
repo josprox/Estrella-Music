@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/ui/screens/Home/home_screen_controller.dart';
 import 'package:harmonymusic/generated/l10n.dart';
-import '../screens/Settings/settings_screen.dart';
-import '../navigator.dart';
+import 'package:harmonymusic/ui/screens/Settings/settings_screen.dart';
+import 'package:harmonymusic/ui/navigator.dart';
 
 
 /// Material 3 Expressive side navigation rail — no glass blur, solid surface.

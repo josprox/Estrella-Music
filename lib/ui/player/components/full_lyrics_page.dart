@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter_lyric/lyrics_reader.dart';
-import '../player_controller.dart';
+import 'package:harmonymusic/ui/player/player_controller.dart';
 import '/ui/utils/theme_controller.dart';
 import 'lyrics_widget.dart';
-import '../../widgets/lyrics_search_dialog.dart';
+import 'package:harmonymusic/ui/widgets/lyrics_search_dialog.dart';
 
 class AnimatedAlbumArt extends StatefulWidget {
   final ImageProvider? artImageProvider;

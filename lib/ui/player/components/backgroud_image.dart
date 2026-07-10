@@ -4,9 +4,9 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../screens/Settings/settings_screen_controller.dart';
-import '../../utils/theme_controller.dart';
-import '../player_controller.dart';
+import 'package:harmonymusic/ui/screens/Settings/settings_screen_controller.dart';
+import 'package:harmonymusic/ui/utils/theme_controller.dart';
+import 'package:harmonymusic/ui/player/player_controller.dart';
 
 class BackgroudImage extends StatelessWidget {
   const BackgroudImage({super.key, this.cacheHeight});

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'services/music_service.dart';
+import 'package:harmonymusic/services/music/music_service.dart';
 import 'package:get/get.dart';
 
 void main() async {

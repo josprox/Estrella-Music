@@ -5,19 +5,19 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:audio_service/audio_service.dart';
 import '/ui/screens/Artists/artist_screen_controller.dart';
 import '/ui/widgets/loader.dart';
-import '/ui/player/player_controller.dart';
+import 'package:harmonymusic/ui/player/player_controller.dart';
 import '/ui/navigator.dart';
 import '/models/media_Item_builder.dart';
-import '/ui/widgets/songinfo_bottom_sheet.dart';
+import 'package:harmonymusic/ui/widgets/songinfo_bottom_sheet.dart';
 import '/models/album.dart';
 import '/models/playlist.dart';
 import '/ui/widgets/image_widget.dart';
-import '/utils/youtube_share_manager.dart';
+import 'package:harmonymusic/utils/helpers/youtube_share_manager.dart';
 import 'package:harmonymusic/generated/l10n.dart';
 import '/ui/widgets/song_status_badges.dart';
 import '/ui/widgets/song_download_btn.dart';
-import '/services/downloader.dart';
-import '/services/sync_service.dart';
+import 'package:harmonymusic/services/download/downloader.dart';
+import 'package:harmonymusic/services/sync/sync_service.dart';
 
 class ArtistScreen extends StatelessWidget {
   const ArtistScreen({super.key});

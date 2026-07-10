@@ -2,9 +2,9 @@
 import 'package:get/get.dart';
 
 import '/ui/screens/Artists/artist_screen.dart' show AboutArtist;
-import '../../navigator.dart';
-import '../../widgets/loader.dart';
-import '../../widgets/separate_tab_item_widget.dart';
+import 'package:harmonymusic/ui/navigator.dart';
+import 'package:harmonymusic/ui/widgets/loader.dart';
+import 'package:harmonymusic/ui/widgets/separate_tab_item_widget.dart';
 import 'artist_screen_controller.dart';
 import 'package:harmonymusic/generated/l10n.dart';
 

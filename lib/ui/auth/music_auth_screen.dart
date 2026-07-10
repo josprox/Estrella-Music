@@ -2,7 +2,7 @@
 import 'package:get/get.dart';
 
 import 'package:harmonymusic/generated/l10n.dart';
-import '../../services/auth_service.dart';
+import 'package:harmonymusic/services/auth/auth_service.dart';
 import 'widgets/animated_auth_background.dart';
 
 enum _MusicAuthMode { welcome, login, register, forgotPassword }

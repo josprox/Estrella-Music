@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:hive/hive.dart';
 import 'package:palette_generator/palette_generator.dart';
-import '/utils/helper.dart';
+import 'package:harmonymusic/utils/helpers/helper.dart';
 
 class ThemeController extends GetxController {
   final primaryColor = const Color(0xFF6C63FF).obs;

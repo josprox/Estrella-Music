@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 
 import '/ui/screens/Settings/settings_screen_controller.dart';
 import '/ui/widgets/piped_sync_widget.dart';
-import '../../widgets/create_playlist_dialog.dart';
+import 'package:harmonymusic/ui/widgets/create_playlist_dialog.dart';
 import 'library.dart';
 import 'package:harmonymusic/generated/l10n.dart';
 

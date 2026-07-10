@@ -2,7 +2,7 @@
 import 'package:get/get.dart';
 import 'package:harmonymusic/ui/player/player_controller.dart';
 
-import '../../widgets/loader.dart';
+import 'package:harmonymusic/ui/widgets/loader.dart';
 
 /// Animates between play and pause icons.
 /// [iconColor] controls the icon color (default black for use on white button).

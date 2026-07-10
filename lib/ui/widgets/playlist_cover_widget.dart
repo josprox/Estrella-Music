@@ -1,8 +1,8 @@
 ﻿import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:harmonymusic/utils/helper.dart';
-import '../../models/playlist.dart';
+import 'package:harmonymusic/utils/helpers/helper.dart';
+import 'package:harmonymusic/models/playlist.dart';
 import 'image_widget.dart';
 
 class PlaylistCoverWidget extends StatelessWidget {

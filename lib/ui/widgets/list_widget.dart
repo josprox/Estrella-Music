@@ -1,15 +1,15 @@
 import 'package:audio_service/audio_service.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../generated/l10n.dart';
-import '../../utils/l10n_extensions.dart';
+import 'package:harmonymusic/generated/l10n.dart';
+import 'package:harmonymusic/utils/localization/l10n_extensions.dart';
 
 import '/models/album.dart';
-import '../../models/artist.dart';
-import '../../models/playling_from.dart';
-import '../../models/playlist.dart';
-import '../navigator.dart';
-import '../player/player_controller.dart';
+import 'package:harmonymusic/models/artist.dart';
+import 'package:harmonymusic/models/playling_from.dart';
+import 'package:harmonymusic/models/playlist.dart';
+import 'package:harmonymusic/ui/navigator.dart';
+import 'package:harmonymusic/ui/player/player_controller.dart';
 import 'image_widget.dart';
 import 'song_list_tile.dart';
 import 'songinfo_bottom_sheet.dart';

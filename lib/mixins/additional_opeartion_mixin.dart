@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/base_class/playlist_album_screen_con_base.dart';
 
-import '../ui/widgets/add_to_playlist.dart';
-import '../ui/widgets/sort_widget.dart';
-import '../utils/helper.dart';
+import 'package:harmonymusic/ui/widgets/add_to_playlist.dart';
+import 'package:harmonymusic/ui/widgets/sort_widget.dart';
+import 'package:harmonymusic/utils/helpers/helper.dart';
 
 mixin AdditionalOpeartionMixin on PlaylistAlbumScreenControllerBase {
   // This mixin is used to handle additional operations like sorting, searching, and performing actions on a list of songs.

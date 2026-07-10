@@ -2,9 +2,9 @@
 import 'package:get/get.dart';
 
 
-import '../../../utils/helper.dart';
-import '../Home/home_screen_controller.dart';
-import '/services/music_service.dart';
+import 'package:harmonymusic/utils/helpers/helper.dart';
+import 'package:harmonymusic/ui/screens/Home/home_screen_controller.dart';
+import 'package:harmonymusic/services/music/music_service.dart';
 import '/ui/widgets/sort_widget.dart';
 
 class SearchResultScreenController extends GetxController {
