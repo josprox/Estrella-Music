@@ -914,9 +914,12 @@ class PlayerController extends GetxController
   }
 
   Future<void> _checkFav() async {
+    if (currentSong.value == null) return;
     isCurrentSongFav.value =
         (await Hive.openBox("LIBFAV")).containsKey(currentSong.value!.id);
   }
+
+  Future<void> refreshFavoriteState() => _checkFav();
 
   Future<void> toggleFavourite() async {
     final currMediaItem = currentSong.value!;

@@ -1,4 +1,6 @@
 import 'package:audio_service/audio_service.dart';
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
@@ -252,6 +254,9 @@ class LifecycleHandler extends WidgetsBindingObserver {
   void didChangeAppLifecycleState(AppLifecycleState state) async {
     if (state == AppLifecycleState.resumed) {
       SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
+      if (Get.isRegistered<SyncService>()) {
+        unawaited(Get.find<SyncService>().pullRemoteChanges());
+      }
     } else if (state == AppLifecycleState.detached) {
       await Get.find<AudioHandler>().customAction("saveSession");
     }

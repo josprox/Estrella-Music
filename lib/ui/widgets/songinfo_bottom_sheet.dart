@@ -8,6 +8,7 @@ import '../../utils/ionicons.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../services/downloader.dart';
+import '../../services/sync_service.dart';
 import '../screens/Playlist/playlist_screen_controller.dart';
 import '../screens/Settings/settings_screen_controller.dart';
 import '/utils/helper.dart';
@@ -415,6 +416,7 @@ class SongInfoController extends GetxController
         isCurrentSongFav.isTrue) {
       Get.find<Downloader>().download(song);
     }
+    Get.find<SyncService>().triggerPush();
   }
 }
 

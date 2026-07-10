@@ -1,4 +1,4 @@
-﻿import 'package:audio_service/audio_service.dart';
+import 'package:audio_service/audio_service.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -7,6 +7,7 @@ import '/models/album.dart';
 import '/models/media_Item_builder.dart';
 import '/models/playlist.dart';
 import '/services/music_service.dart';
+import '/services/sync_service.dart';
 import '/ui/widgets/loader.dart';
 import '/ui/player/player_controller.dart';
 import '/ui/navigator.dart';
@@ -340,5 +341,6 @@ class ArtistContentListScreen extends StatelessWidget {
     } else {
       await box.put(song.id, MediaItemBuilder.toJson(song));
     }
+    Get.find<SyncService>().triggerPush();
   }
 }

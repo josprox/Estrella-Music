@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
@@ -9,6 +10,8 @@ import 'package:hive/hive.dart';
 
 import '../models/playlist.dart';
 import '../ui/screens/Library/library_controller.dart';
+import '../ui/screens/Playlist/playlist_screen_controller.dart';
+import '../ui/player/player_controller.dart';
 import '../utils/helper.dart';
 import 'app_backup_service.dart';
 import 'auth_service.dart';
@@ -34,6 +37,12 @@ class SyncService extends GetxService {
   final lastStatusMessage = 'Modo local activo'.obs;
   Timer? _debounce;
   Timer? _retryTimer;
+  bool _isApplyingRemoteChanges = false;
+
+  WebSocket? _socket;
+  StreamSubscription? _subscription;
+  bool _isSocketAuthenticated = false;
+  Timer? _reconnectTimer;
 
   AuthService get _authService => Get.find<AuthService>();
   PendingSyncQueueService get _queue => Get.find<PendingSyncQueueService>();
@@ -42,18 +51,81 @@ class SyncService extends GetxService {
   void onInit() {
     super.onInit();
     _retryTimer = Timer.periodic(const Duration(minutes: 2), (_) async {
-      if (isCloudMode && Hive.box('AppPrefs').get(_pendingKey) == true) {
-        final online = await checkConnection();
-        if (online) {
-          final success = await push();
-          if (success) await pull();
-        }
+      if (!isCloudMode || !_authService.isAuthenticated.value) return;
+      final online = await checkConnection();
+      if (!online) return;
+
+      final hasPending = Hive.box('AppPrefs').get(_pendingKey) == true;
+      if (hasPending) {
+        final success = await push();
+        if (success) await pull();
+      } else {
+        await pull();
+      }
+    });
+    _setupLocalMutationWatchers();
+
+    ever(_authService.isAuthenticated, (bool authenticated) {
+      if (authenticated && isCloudMode) {
+        connectSocket();
+      } else {
+        disconnectSocket();
+      }
+    });
+
+    if (_authService.isAuthenticated.value && isCloudMode) {
+      connectSocket();
+    }
+  }
+
+  void _setupLocalMutationWatchers() {
+    final watchBoxes = [
+      'LIBFAV',
+      'LIBRP',
+      'LibraryAlbums',
+      'LibraryArtists',
+      'LibraryPlaylists',
+    ];
+
+    for (final boxName in watchBoxes) {
+      Hive.box(boxName).watch().listen((_) {
+        if (_isApplyingRemoteChanges) return;
+        triggerPush();
+      });
+    }
+
+    Hive.box('AppPrefs').watch().listen((event) {
+      if (_isApplyingRemoteChanges) return;
+      const allowedKeys = [
+        'themeModeType',
+        'streamingQuality',
+        'discoverContentType',
+        'cacheHomeScreenData',
+        'autoLanguage',
+        'currentAppLanguageCode',
+        'lyricsMode',
+        'isLoopModeEnabled',
+        'isShuffleModeEnabled',
+        'queueLoopModeEnabled',
+      ];
+      if (allowedKeys.contains(event.key)) {
+        triggerPush();
       }
     });
   }
 
+  /// Descarga cambios remotos al volver a la app o cambiar de dispositivo.
+  Future<void> pullRemoteChanges() async {
+    if (!isCloudMode || !_authService.isAuthenticated.value) return;
+    if (isSyncing.value) return;
+    final online = await checkConnection();
+    if (!online) return;
+    await pull();
+  }
+
   @override
   void onClose() {
+    disconnectSocket();
     _retryTimer?.cancel();
     _debounce?.cancel();
     super.onClose();
@@ -154,7 +226,7 @@ class SyncService extends GetxService {
     Hive.box('AppPrefs').put(_pendingKey, true);
     _queue.enqueueSnapshotChange(reason: 'local_mutation');
     _debounce?.cancel();
-    _debounce = Timer(const Duration(seconds: 3), () {
+    _debounce = Timer(const Duration(seconds: 1), () {
       push().then((success) {
         if (success) {
           pull();
@@ -205,36 +277,41 @@ class SyncService extends GetxService {
         'library_playlists',
       ]);
       _logPullDiagnostics(response.data, data, rawPlaylists);
-      await _mergePlaylists(rawPlaylists);
-      await _replaceBoxValues(
-        'LIBFAV',
-        _firstNonNull(data, const ['favorites', 'user_favorites']),
-      );
-      await _replaceBoxValues(
-        'LIBRP',
-        _firstNonNull(data, const [
-          'recent_plays',
-          'recentPlays',
-          'user_recent_plays',
-        ]),
-      );
-      await _replaceBoxValues(
-        'LibraryAlbums',
-        _firstNonNull(data, const ['albums', 'user_albums']),
-        idKeys: ['browseId', 'albumId', 'id'],
-      );
-      await _replaceBoxValues(
-        'LibraryArtists',
-        _firstNonNull(data, const ['artists', 'user_artists']),
-        idKeys: ['browseId', 'channelId', 'artistId', 'id'],
-      );
-      await _mergeSettings(
-        _firstNonNull(data, const ['settings', 'user_settings']),
-      );
+      _isApplyingRemoteChanges = true;
+      try {
+        await _mergePlaylists(rawPlaylists);
+        await _replaceBoxValues(
+          'LIBFAV',
+          _firstNonNull(data, const ['favorites', 'user_favorites']),
+        );
+        await _replaceBoxValues(
+          'LIBRP',
+          _firstNonNull(data, const [
+            'recent_plays',
+            'recentPlays',
+            'user_recent_plays',
+          ]),
+        );
+        await _replaceBoxValues(
+          'LibraryAlbums',
+          _firstNonNull(data, const ['albums', 'user_albums']),
+          idKeys: ['browseId', 'albumId', 'id'],
+        );
+        await _replaceBoxValues(
+          'LibraryArtists',
+          _firstNonNull(data, const ['artists', 'user_artists']),
+          idKeys: ['browseId', 'channelId', 'artistId', 'id'],
+        );
+        await _mergeSettings(
+          _firstNonNull(data, const ['settings', 'user_settings']),
+        );
 
-      await Hive.box('AppPrefs')
-          .put(_lastSyncKey, DateTime.now().toIso8601String());
-      await Hive.box('AppPrefs').put(_pendingKey, false);
+        await Hive.box('AppPrefs')
+            .put(_lastSyncKey, DateTime.now().toIso8601String());
+        await Hive.box('AppPrefs').put(_pendingKey, false);
+      } finally {
+        _isApplyingRemoteChanges = false;
+      }
       _refreshLibraryControllers();
       lastStatusMessage.value = 'Biblioteca sincronizada.';
       return true;
@@ -319,6 +396,23 @@ class SyncService extends GetxService {
 
     try {
       final payload = await _buildPushPayload();
+      final deviceId = await _ensureDeviceId();
+      payload['device_id'] = deviceId;
+
+      if (_socket != null && _isSocketAuthenticated) {
+        _socket!.add(jsonEncode({
+          "type": "push",
+          "payload": payload,
+          "device_id": deviceId
+        }));
+        await Hive.box('AppPrefs').put(_pendingKey, false);
+        await _queue.markAllSynced();
+        await Hive.box('AppPrefs')
+            .put(_lastSyncKey, DateTime.now().toIso8601String());
+        lastStatusMessage.value = 'Cambios subidos correctamente (WS).';
+        return true;
+      }
+
       final response = await _dio.post(
         '${_normalizedBaseUrl()}api/sync/push',
         options: Options(headers: await _headers()),
@@ -384,9 +478,7 @@ class SyncService extends GetxService {
         ...playlist,
         'tracks': tracksBox.values.toList(),
       });
-      if (!wasOpen && playlistId != 'SongDownloads') {
-        await tracksBox.close();
-      }
+      // Keep the tracks box open to prevent async read/write exceptions on closed boxes
     }
 
     return result;
@@ -443,9 +535,7 @@ class SyncService extends GetxService {
           for (var i = 0; i < tracks.length; i++) {
             await tracksBox.put(i, tracks[i]);
           }
-          if (!wasOpen) {
-            await tracksBox.close();
-          }
+          // Keep the tracks box open to prevent async read/write exceptions on closed boxes
         } catch (e) {
           printERROR(
             'SyncService: no se pudo abrir box para playlist $playlistId: $e',
@@ -628,6 +718,19 @@ class SyncService extends GetxService {
     if (Get.isRegistered<LibraryArtistsController>()) {
       Get.find<LibraryArtistsController>().refreshLib();
     }
+    _refreshDefaultPlaylistScreen('LIBFAV');
+    _refreshDefaultPlaylistScreen('LIBRP');
+    if (Get.isRegistered<PlayerController>()) {
+      Get.find<PlayerController>().refreshFavoriteState();
+    }
+  }
+
+  void _refreshDefaultPlaylistScreen(String playlistId) {
+    final tag = Key(playlistId).hashCode.toString();
+    if (Get.isRegistered<PlaylistScreenController>(tag: tag)) {
+      Get.find<PlaylistScreenController>(tag: tag)
+          .fetchSongsfromDatabase(playlistId);
+    }
   }
 
   Future<bool> pushCollaborative(Playlist playlist) async {
@@ -712,5 +815,118 @@ class SyncService extends GetxService {
       printERROR('SyncService: Fetch public playlists failed: $e');
     }
     return [];
+  }
+
+  String get _wsUrl {
+    var base = syncBaseUrl ?? 'http://127.0.0.1:9000';
+    if (base.endsWith('/')) {
+      base = base.substring(0, base.length - 1);
+    }
+    base = base.replaceAll('https://', 'wss://').replaceAll('http://', 'ws://');
+    return '$base/api/sync-ws';
+  }
+
+  Future<void> connectSocket() async {
+    if (_socket != null || !isCloudMode || !_authService.isAuthenticated.value) return;
+    printINFO("SyncService: Connecting to WS: $_wsUrl");
+    try {
+      _reconnectTimer?.cancel();
+      _socket = await WebSocket.connect(_wsUrl).timeout(const Duration(seconds: 10));
+      _isSocketAuthenticated = false;
+      
+      final token = await _authService.getAccessToken();
+      final deviceId = await _ensureDeviceId();
+      
+      _socket!.add(jsonEncode({
+        "type": "auth",
+        "token": token ?? "",
+        "device_id": deviceId
+      }));
+
+      _subscription = _socket!.listen(
+        (message) {
+          _handleSocketMessage(message.toString());
+        },
+        onError: (err) {
+          printERROR("SyncService: WS Error: $err");
+          _scheduleSocketReconnect();
+        },
+        onDone: () {
+          printINFO("SyncService: WS Connection closed.");
+          _scheduleSocketReconnect();
+        },
+      );
+    } catch (e) {
+      printERROR("SyncService: Connection failed: $e");
+      _scheduleSocketReconnect();
+    }
+  }
+
+  void _scheduleSocketReconnect() {
+    _socket = null;
+    _subscription?.cancel();
+    _subscription = null;
+    _isSocketAuthenticated = false;
+
+    if (!isCloudMode || !_authService.isAuthenticated.value) return;
+    _reconnectTimer?.cancel();
+    _reconnectTimer = Timer(const Duration(seconds: 5), () {
+      connectSocket();
+    });
+  }
+
+  void disconnectSocket() {
+    _reconnectTimer?.cancel();
+    _subscription?.cancel();
+    _subscription = null;
+    _socket?.close();
+    _socket = null;
+    _isSocketAuthenticated = false;
+    printINFO("SyncService: WS Disconnected.");
+  }
+
+  void _handleSocketMessage(String raw) {
+    try {
+      final Map<String, dynamic> data = jsonDecode(raw);
+      final String? type = data['type'];
+      printINFO("SyncService: WS Received message type: $type");
+
+      switch (type) {
+        case 'welcome':
+          break;
+        case 'authenticated':
+          _isSocketAuthenticated = true;
+          printINFO("SyncService: WS Authenticated successfully.");
+          break;
+        case 'auth_failed':
+          _isSocketAuthenticated = false;
+          printERROR("SyncService: WS Auth failed: ${data['message']}");
+          disconnectSocket();
+          break;
+        case 'sync_update':
+          printINFO("SyncService: WS received sync_update, pulling remote changes...");
+          pull();
+          break;
+        case 'push_success':
+          printINFO("SyncService: WS push succeeded.");
+          break;
+        case 'error':
+          printERROR("SyncService: WS Error: ${data['message']}");
+          break;
+      }
+    } catch (e) {
+      printERROR("SyncService: WS Error parsing message: $e");
+    }
+  }
+
+  Future<String> _ensureDeviceId() async {
+    final prefs = Hive.box('AppPrefs');
+    final existing = prefs.get('linkedDeviceId')?.toString();
+    if (existing != null && existing.isNotEmpty) {
+      return existing;
+    }
+    final deviceId = 'device-${DateTime.now().millisecondsSinceEpoch}';
+    await prefs.put('linkedDeviceId', deviceId);
+    return deviceId;
   }
 }

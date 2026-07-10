@@ -17,6 +17,7 @@ import 'package:harmonymusic/generated/l10n.dart';
 import '/ui/widgets/song_status_badges.dart';
 import '/ui/widgets/song_download_btn.dart';
 import '/services/downloader.dart';
+import '/services/sync_service.dart';
 
 class ArtistScreen extends StatelessWidget {
   const ArtistScreen({super.key});
@@ -1503,6 +1504,7 @@ class _TrackRow extends StatelessWidget {
     } else {
       await box.put(song.id, MediaItemBuilder.toJson(song));
     }
+    Get.find<SyncService>().triggerPush();
   }
 
   @override

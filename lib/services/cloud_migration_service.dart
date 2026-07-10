@@ -314,9 +314,7 @@ class CloudMigrationService extends GetxService {
         ...playlist,
         'tracks': tracksBox.values.toList(),
       });
-      if (!wasOpen && playlistId != 'SongDownloads') {
-        await tracksBox.close();
-      }
+      // Keep the tracks box open to prevent async read/write exceptions on closed boxes
     }
 
     return result;
