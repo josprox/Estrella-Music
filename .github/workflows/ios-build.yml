@@ -1,0 +1,42 @@
+name: Build iOS IPA para BrowserStack
+
+on:
+  workflow_dispatch: # Te permite ejecutar el action manualmente desde GitHub
+
+jobs:
+  build-ios:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v4
+
+      - name: Crear archivo .env
+        # Inyecta el secreto directamente en la raíz del proyecto
+        run: echo "${{ secrets.ENV_FILE }}" > .env
+
+      - name: Configurar Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+
+      - name: Instalar dependencias de Flutter
+        run: flutter pub get
+
+      - name: Construir aplicación iOS (Sin certificados)
+        # Compila para dispositivos físicos sin requerir cuenta de Apple Developer
+        run: flutter build ios --release --no-codesign
+
+      - name: Empaquetar a formato .ipa
+        # Crea la estructura Payload que define a un archivo .ipa
+        run: |
+          mkdir -p Payload
+          mv build/ios/iphoneos/Runner.app Payload
+          zip -r app.ipa Payload
+
+      - name: Subir artefacto para descargar
+        uses: actions/upload-artifact@v4
+        with:
+          name: ios-app-release
+          path: app.ipa
+          retention-days: 5
