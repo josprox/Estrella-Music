@@ -31,8 +31,7 @@ jobs:
           flutter pub get
 
       - name: Inyectar parche anti-firmas en Podfile
-        # Escribe un script Ruby temporal que modifica el Podfile. 
-        # Esto desactiva el requerimiento de certificados de Apple en todos los módulos (incluido OneSignal).
+        # Corrige la ruta para que busque Runner.xcodeproj exactamente en la carpeta actual (ios/)
         run: |
           cat << 'EOF' > patch.rb
           lines = File.readlines('ios/Podfile')
@@ -49,7 +48,7 @@ jobs:
                 f.puts "      end"
                 f.puts "    end"
                 f.puts "    require 'xcodeproj'"
-                f.puts "    project_path = File.join(Dir.pwd, '..', 'Runner.xcodeproj')"
+                f.puts "    project_path = File.join(Dir.pwd, 'Runner.xcodeproj')"
                 f.puts "    project = Xcodeproj::Project.open(project_path)"
                 f.puts "    project.targets.each do |target|"
                 f.puts "      target.build_configurations.each do |config|"
@@ -68,7 +67,6 @@ jobs:
           rm patch.rb
 
       - name: Construir aplicación iOS (Físico)
-        # Flutter compilará correctamente porque el Podfile parchado ya silenció a Xcode
         run: flutter build ios --release --no-codesign
 
       - name: Empaquetar a formato .ipa
