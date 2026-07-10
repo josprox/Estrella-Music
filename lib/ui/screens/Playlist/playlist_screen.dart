@@ -1,4 +1,4 @@
-﻿import 'package:audio_service/audio_service.dart';
+import 'package:audio_service/audio_service.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -418,17 +418,7 @@ class PlaylistScreen extends StatelessWidget {
                                             );
                                           }),
                                       
-                                          if (playlistController
-                                              .isAddedToLibrary.isTrue)
-                                            IconButton(
-                                                tooltip:
-                                                    S.current.syncPlaylistSongs,
-                                                onPressed: () {
-                                                  playlistController
-                                                      .syncPlaylistSongs();
-                                                },
-                                                icon:
-                                                    const Icon(Icons.cloud_sync)),
+
                                           if (playlistController
                                               .playlist.value.isPipedPlaylist)
                                             IconButton(

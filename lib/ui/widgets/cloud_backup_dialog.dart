@@ -1,4 +1,4 @@
-﻿import 'dart:io';
+import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -52,28 +52,18 @@ class CloudBackupDialog extends StatelessWidget {
             const SizedBox(height: 6),
             Row(
               children: [
-                Expanded(
-                  child: Obx(
-                    () => ElevatedButton.icon(
-                      onPressed: controller.isBusy.isTrue
-                          ? null
-                          : controller.isRestored.isTrue
-                              ? controller.restartApp
-                              : () => controller.uploadBackup(context),
-                      icon: Icon(
-                        controller.isRestored.isTrue
-                            ? Icons.restart_alt
-                            : Icons.cloud_upload_outlined,
-                      ),
-                      label: Text(
-                        controller.isRestored.isTrue
-                            ? S.of(context).backup_btn_restart
-                            : S.of(context).backup_btn_upload,
-                      ),
-                    ),
-                  ),
+                Obx(
+                  () => controller.isRestored.isTrue
+                      ? Expanded(
+                          child: ElevatedButton.icon(
+                            onPressed: controller.restartApp,
+                            icon: const Icon(Icons.restart_alt),
+                            label: Text(S.of(context).backup_btn_restart),
+                          ),
+                        )
+                      : const SizedBox.shrink(),
                 ),
-                const SizedBox(width: 10),
+                const Spacer(),
                 IconButton(
                   onPressed: controller.refreshBackups,
                   icon: const Icon(Icons.refresh),

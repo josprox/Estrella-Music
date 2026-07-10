@@ -267,5 +267,23 @@
   "errorPlayingTrack": "播放时出错：",
   "@errorPlayingTrack": {
     "description": ""
-  }
+  },
+  "welcome_title": "你的音乐，你的方式",
+  "welcome_subtitle": "从现在开始选择您想要体验 Estrella Music 的方式。",
+  "welcome_intro": "我们对我们的平台进行了现代化改造。旧的手动上传备份系统已被禁用。您现在有两种清晰的方式来管理您的音乐库。",
+  "recommend_cloud": "我们建议激活云模式以获得类似 Spotify 的体验：所有设备之间的实时同步和自动备份，无需您执行任何操作。",
+  "swipe_prompt": "滑动以探索选项 ➔",
+  "local_title": "本地模式",
+  "local_subtitle": "您设备上的绝对隐私",
+  "local_b1": "它无需登录即可工作。",
+  "local_b2": "您的整个图书馆都严格保留在这台计算机上。",
+  "local_b3": "注意：没有手动云备份。如果您丢失设备或卸载应用程序，您的数据将无法恢复。",
+  "local_btn": "仅在此设备上使用",
+  "cloud_title": "云模式（推荐）",
+  "cloud_subtitle": "与Joss Red实时同步",
+  "cloud_b1": "使用您的 Joss Red 帐户安全登录。",
+  "cloud_b2": "立即从任何设备（Windows、Android 等）访问您的播放列表、收藏夹和历史记录。",
+  "cloud_b3": "智能同步：离线工作并在恢复互联网时自动上传更改。",
+  "cloud_btn": "激活云同步",
+  "slide_indicator": "步骤 {current}（共 3 步）"
 }

@@ -428,5 +428,23 @@
   "errorPlayingTrack": "Fel vid uppspelning:",
   "@errorPlayingTrack": {
     "description": ""
-  }
+  },
+  "welcome_title": "Din musik, på ditt sätt",
+  "welcome_subtitle": "Välj hur du vill uppleva Estrella Music från och med nu.",
+  "welcome_intro": "Vi har moderniserat vår plattform. Det gamla systemet för uppladdning av manuella säkerhetskopior har inaktiverats. Du har nu två tydliga sätt att hantera ditt musikbibliotek.",
+  "recommend_cloud": "Vi rekommenderar att du aktiverar molnläget för en Spotify-liknande upplevelse: realtidssynkronisering mellan alla dina enheter och automatisk säkerhetskopiering utan att du behöver göra något.",
+  "swipe_prompt": "Svep för att utforska alternativen ➔",
+  "local_title": "Lokalt läge",
+  "local_subtitle": "Absolut integritet på din enhet",
+  "local_b1": "Det fungerar utan att behöva logga in.",
+  "local_b2": "Hela ditt bibliotek förblir strikt på den här datorn.",
+  "local_b3": "Obs: Inga manuella molnsäkerhetskopieringar. Om du tappar bort din enhet eller avinstallerar appen kan din data inte återställas.",
+  "local_btn": "Använd endast på denna enhet",
+  "cloud_title": "Molnläge (rekommenderas)",
+  "cloud_subtitle": "Realtidssynkronisering med Joss Red",
+  "cloud_b1": "Logga in säkert med ditt Joss Red-konto.",
+  "cloud_b2": "Få åtkomst till dina spellistor, favoriter och historik från vilken enhet som helst (Windows, Android, etc.) direkt.",
+  "cloud_b3": "Smart Sync: Arbeta offline och ladda upp ändringar automatiskt när du återställer internet.",
+  "cloud_btn": "Aktivera molnsynkronisering",
+  "slide_indicator": "Steg {current} av 3"
 }

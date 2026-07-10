@@ -108,6 +108,7 @@ dependencies:
   record: ^6.2.0
   rename_app: ^1.6.6
   flutter_native_splash: ^2.4.4
+  shared_preferences: ^2.5.5
 dev_dependencies:
   intl_utils: ^2.8.12
   flutter_lints: ^4.0.0

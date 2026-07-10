@@ -537,5 +537,23 @@
   "errorPlayingTrack": "Chyba při přehrávání:",
   "@errorPlayingTrack": {
     "description": ""
-  }
+  },
+  "welcome_title": "Vaše hudba, vaše cesta",
+  "welcome_subtitle": "Vyberte si, jak chcete od této chvíle zažít Estrella Music.",
+  "welcome_intro": "Modernizovali jsme naši platformu. Starý systém nahrávání ručních záloh byl deaktivován. Nyní máte dva jasné způsoby, jak spravovat svou hudební knihovnu.",
+  "recommend_cloud": "Pro zážitek podobný Spotify doporučujeme aktivovat Cloud Mode: synchronizace mezi všemi vašimi zařízeními v reálném čase a automatické zálohování, aniž byste museli cokoli dělat.",
+  "swipe_prompt": "Přejetím prozkoumejte možnosti ➔",
+  "local_title": "Místní režim",
+  "local_subtitle": "Absolutní soukromí na vašem zařízení",
+  "local_b1": "Funguje bez nutnosti přihlášení.",
+  "local_b2": "Celá vaše knihovna zůstává výhradně na tomto počítači.",
+  "local_b3": "Poznámka: Žádné ruční cloudové zálohy. Pokud ztratíte zařízení nebo odinstalujete aplikaci, vaše data nebude možné obnovit.",
+  "local_btn": "Používejte pouze na tomto zařízení",
+  "cloud_title": "Cloudový režim (doporučeno)",
+  "cloud_subtitle": "Synchronizace v reálném čase s Joss Red",
+  "cloud_b1": "Přihlaste se bezpečně pomocí svého účtu Joss Red.",
+  "cloud_b2": "Okamžitý přístup ke svým seznamům skladeb, oblíbeným položkám a historii z jakéhokoli zařízení (Windows, Android atd.).",
+  "cloud_b3": "Smart Sync: Pracujte offline a automaticky nahrajte změny, když obnovíte internet.",
+  "cloud_btn": "Aktivujte synchronizaci cloudu",
+  "slide_indicator": "Krok {current} ze 3"
 }

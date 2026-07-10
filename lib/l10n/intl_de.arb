@@ -532,5 +532,23 @@
   "errorPlayingTrack": "Fehler beim Abspielen:",
   "@errorPlayingTrack": {
     "description": ""
-  }
+  },
+  "welcome_title": "Deine Musik, dein Weg",
+  "welcome_subtitle": "Wählen Sie, wie Sie Estrella Music von nun an erleben möchten.",
+  "welcome_intro": "Wir haben unsere Plattform modernisiert. Das alte System zum Hochladen manueller Backups wurde deaktiviert. Sie haben jetzt zwei klare Möglichkeiten, Ihre Musikbibliothek zu verwalten.",
+  "recommend_cloud": "Für ein Spotify-ähnliches Erlebnis empfehlen wir die Aktivierung des Cloud-Modus: Echtzeitsynchronisierung zwischen all Ihren Geräten und automatische Sicherung, ohne dass Sie etwas tun müssen.",
+  "swipe_prompt": "Wischen Sie, um die Optionen zu erkunden ➔",
+  "local_title": "Lokaler Modus",
+  "local_subtitle": "Absolute Privatsphäre auf Ihrem Gerät",
+  "local_b1": "Es funktioniert, ohne dass Sie sich anmelden müssen.",
+  "local_b2": "Ihre gesamte Bibliothek bleibt ausschließlich auf diesem Computer.",
+  "local_b3": "Hinweis: Keine manuellen Cloud-Backups. Wenn Sie Ihr Gerät verlieren oder die App deinstallieren, können Ihre Daten nicht wiederhergestellt werden.",
+  "local_btn": "Nur auf diesem Gerät verwenden",
+  "cloud_title": "Cloud-Modus (empfohlen)",
+  "cloud_subtitle": "Echtzeitsynchronisierung mit Joss Red",
+  "cloud_b1": "Melden Sie sich sicher mit Ihrem Joss Red-Konto an.",
+  "cloud_b2": "Greifen Sie von jedem Gerät (Windows, Android usw.) sofort auf Ihre Wiedergabelisten, Favoriten und Ihren Verlauf zu.",
+  "cloud_b3": "Smart Sync: Arbeiten Sie offline und laden Sie Änderungen automatisch hoch, wenn Sie die Internetverbindung wiederherstellen.",
+  "cloud_btn": "Aktivieren Sie die Cloud-Synchronisierung",
+  "slide_indicator": "Schritt {current} von 3"
 }

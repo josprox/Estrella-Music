@@ -537,5 +537,23 @@
   "errorPlayingTrack": "Oynarken hata:",
   "@errorPlayingTrack": {
     "description": ""
-  }
+  },
+  "welcome_title": "Sizin müziğiniz, sizin tarzınız",
+  "welcome_subtitle": "Artık Estrella Music'i nasıl deneyimlemek istediğinizi seçin.",
+  "welcome_intro": "Platformumuzu modernleştirdik. Manuel yedeklemelerin yüklenmesine ilişkin eski sistem devre dışı bırakıldı. Artık müzik kitaplığınızı yönetmenin iki net yolu var.",
+  "recommend_cloud": "Spotify benzeri bir deneyim için Bulut Modunu etkinleştirmenizi öneririz: tüm cihazlarınız arasında gerçek zamanlı senkronizasyon ve hiçbir şey yapmanıza gerek kalmadan otomatik yedekleme.",
+  "swipe_prompt": "Seçenekleri keşfetmek için kaydırın ➔",
+  "local_title": "Yerel Mod",
+  "local_subtitle": "Cihazınızda mutlak gizlilik",
+  "local_b1": "Giriş yapmanıza gerek kalmadan çalışır.",
+  "local_b2": "Kitaplığınızın tamamı kesinlikle bu bilgisayarda kalır.",
+  "local_b3": "Not: Manuel bulut yedeklemesi yoktur. Cihazınızı kaybederseniz veya uygulamayı kaldırırsanız verileriniz kurtarılamaz.",
+  "local_btn": "Yalnızca bu cihazda kullanın",
+  "cloud_title": "Bulut Modu (Önerilen)",
+  "cloud_subtitle": "Joss Red ile gerçek zamanlı senkronizasyon",
+  "cloud_b1": "Joss Red hesabınızı kullanarak güvenli bir şekilde oturum açın.",
+  "cloud_b2": "Çalma listelerinize, favorilerinize ve geçmişinize herhangi bir cihazdan (Windows, Android vb.) anında erişin.",
+  "cloud_b3": "Akıllı Senkronizasyon: Çevrimdışı çalışın ve interneti kurtardığınızda değişiklikleri otomatik olarak yükleyin.",
+  "cloud_btn": "Bulut senkronizasyonunu etkinleştir",
+  "slide_indicator": "Adım {current} / 3"
 }

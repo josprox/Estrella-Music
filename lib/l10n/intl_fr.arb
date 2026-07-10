@@ -539,5 +539,23 @@
   "errorPlayingTrack": "Erreur lors de la lecture :",
   "@errorPlayingTrack": {
     "description": ""
-  }
+  },
+  "welcome_title": "Votre musique, à votre façon",
+  "welcome_subtitle": "Choisissez désormais comment vous souhaitez découvrir Estrella Music.",
+  "welcome_intro": "Nous avons modernisé notre plateforme. L'ancien système de téléchargement de sauvegardes manuelles a été désactivé. Vous disposez désormais de deux manières claires de gérer votre bibliothèque musicale.",
+  "recommend_cloud": "Nous vous recommandons d'activer le Mode Cloud pour une expérience à la Spotify : synchronisation en temps réel entre tous vos appareils et sauvegarde automatique sans que vous ayez à faire quoi que ce soit.",
+  "swipe_prompt": "Faites glisser votre doigt pour explorer les options ➔",
+  "local_title": "Mode local",
+  "local_subtitle": "Confidentialité absolue sur votre appareil",
+  "local_b1": "Cela fonctionne sans avoir besoin de vous connecter.",
+  "local_b2": "L'intégralité de votre bibliothèque reste strictement sur cet ordinateur.",
+  "local_b3": "Remarque : Aucune sauvegarde manuelle dans le cloud. Si vous perdez votre appareil ou désinstallez l'application, vos données ne pourront pas être récupérées.",
+  "local_btn": "Utiliser uniquement sur cet appareil",
+  "cloud_title": "Mode Cloud (recommandé)",
+  "cloud_subtitle": "Synchronisation en temps réel avec Joss Red",
+  "cloud_b1": "Connectez-vous en toute sécurité en utilisant votre compte Joss Red.",
+  "cloud_b2": "Accédez instantanément à vos playlists, favoris et historique depuis n’importe quel appareil (Windows, Android, etc.).",
+  "cloud_b3": "Smart Sync : travaillez hors ligne et téléchargez automatiquement les modifications lorsque vous récupérez Internet.",
+  "cloud_btn": "Activer la synchronisation Cloud",
+  "slide_indicator": "Étape {current} sur 3"
 }

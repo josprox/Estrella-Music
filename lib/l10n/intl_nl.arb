@@ -448,5 +448,23 @@
   "errorPlayingTrack": "Fout bij het afspelen:",
   "@errorPlayingTrack": {
     "description": ""
-  }
+  },
+  "welcome_title": "Jouw muziek, jouw manier",
+  "welcome_subtitle": "Kies zelf hoe jij Estrella Music voortaan wilt beleven.",
+  "welcome_intro": "We hebben ons platform gemoderniseerd. Het oude systeem voor het uploaden van handmatige back-ups is uitgeschakeld. Je hebt nu twee duidelijke manieren om je muziekbibliotheek te beheren.",
+  "recommend_cloud": "Voor een Spotify-achtige ervaring raden wij aan om de Cloud Mode te activeren: real-time synchronisatie tussen al je apparaten en automatische back-up zonder dat je er iets voor hoeft te doen.",
+  "swipe_prompt": "Veeg om opties te verkennen ➔",
+  "local_title": "Lokale modus",
+  "local_subtitle": "Absolute privacy op uw apparaat",
+  "local_b1": "Het werkt zonder dat je hoeft in te loggen.",
+  "local_b2": "Uw hele bibliotheek blijft strikt op deze computer.",
+  "local_b3": "Let op: Geen handmatige cloudback-ups. Als u uw apparaat kwijtraakt of de app verwijdert, kunnen uw gegevens niet worden hersteld.",
+  "local_btn": "Alleen op dit apparaat gebruiken",
+  "cloud_title": "Cloudmodus (aanbevolen)",
+  "cloud_subtitle": "Realtime synchronisatie met Joss Red",
+  "cloud_b1": "Log veilig in met uw Joss Red-account.",
+  "cloud_b2": "Krijg direct toegang tot uw afspeellijsten, favorieten en geschiedenis vanaf elk apparaat (Windows, Android, enz.).",
+  "cloud_b3": "Slimme synchronisatie: werk offline en upload wijzigingen automatisch wanneer u weer internet hebt.",
+  "cloud_btn": "Activeer Cloud-synchronisatie",
+  "slide_indicator": "Stap {current} van 3"
 }

@@ -366,5 +366,23 @@
   "errorPlayingTrack": "Hiba lejátszás közben:",
   "@errorPlayingTrack": {
     "description": ""
-  }
+  },
+  "welcome_title": "A te zenéd, a te módszered",
+  "welcome_subtitle": "Válassza ki, hogyan szeretné ezentúl megélni az Estrella zenét.",
+  "welcome_intro": "Korszerűsítettük platformunkat. A manuális biztonsági mentések feltöltésének régi rendszere le van tiltva. Mostantól két egyértelmű módon kezelheti zenei könyvtárát.",
+  "recommend_cloud": "Javasoljuk, hogy aktiválja a Felhő módot a Spotify-szerű élmény érdekében: valós idejű szinkronizálás az összes eszköz között és automatikus biztonsági mentés anélkül, hogy bármit is tenne.",
+  "swipe_prompt": "Csúsztassa ujját a lehetőségek felfedezéséhez ➔",
+  "local_title": "Helyi mód",
+  "local_subtitle": "Abszolút adatvédelem az eszközön",
+  "local_b1": "Bejelentkezés nélkül működik.",
+  "local_b2": "A teljes könyvtára szigorúan ezen a számítógépen marad.",
+  "local_b3": "Megjegyzés: Nincs manuális felhőalapú biztonsági mentés. Ha elveszíti eszközét vagy eltávolítja az alkalmazást, az adatok nem állíthatók vissza.",
+  "local_btn": "Csak ezen a készüléken használja",
+  "cloud_title": "Felhő mód (ajánlott)",
+  "cloud_subtitle": "Valós idejű szinkronizálás Joss Red-el",
+  "cloud_b1": "Jelentkezzen be biztonságosan Joss Red fiókjával.",
+  "cloud_b2": "Bármilyen eszközről (Windows, Android stb.) azonnal elérheti lejátszási listáit, kedvenceit és előzményeit.",
+  "cloud_b3": "Intelligens szinkronizálás: Dolgozzon offline módban, és automatikusan töltse fel a módosításokat, amikor helyreáll az internet.",
+  "cloud_btn": "Aktiválja a felhőszinkronizálást",
+  "slide_indicator": "3. {current}. lépés"
 }

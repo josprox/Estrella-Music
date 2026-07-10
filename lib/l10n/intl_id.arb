@@ -527,5 +527,23 @@
   "errorPlayingTrack": "Kesalahan saat bermain:",
   "@errorPlayingTrack": {
     "description": ""
-  }
+  },
+  "welcome_title": "Musik Anda, cara Anda",
+  "welcome_subtitle": "Pilih bagaimana Anda ingin menikmati Estrella Music mulai sekarang.",
+  "welcome_intro": "Kami telah memodernisasi platform kami. Sistem lama yang mengunggah cadangan manual telah dinonaktifkan. Anda sekarang memiliki dua cara yang jelas untuk mengelola perpustakaan musik Anda.",
+  "recommend_cloud": "Kami merekomendasikan untuk mengaktifkan Mode Cloud untuk pengalaman seperti Spotify: sinkronisasi waktu nyata antara semua perangkat Anda dan pencadangan otomatis tanpa Anda harus melakukan apa pun.",
+  "swipe_prompt": "Geser untuk menjelajahi opsi ➔",
+  "local_title": "Modus Lokal",
+  "local_subtitle": "Privasi mutlak di perangkat Anda",
+  "local_b1": "Ini berfungsi tanpa perlu masuk.",
+  "local_b2": "Seluruh perpustakaan Anda tetap ada di komputer ini.",
+  "local_b3": "Catatan: Tidak ada pencadangan cloud manual. Jika Anda kehilangan perangkat atau mencopot pemasangan aplikasi, data Anda tidak dapat dipulihkan.",
+  "local_btn": "Gunakan hanya di perangkat ini",
+  "cloud_title": "Mode Cloud (Disarankan)",
+  "cloud_subtitle": "Sinkronisasi waktu nyata dengan Joss Red",
+  "cloud_b1": "Masuk dengan aman menggunakan akun Joss Red Anda.",
+  "cloud_b2": "Akses daftar putar, favorit, dan riwayat Anda dari perangkat apa pun (Windows, Android, dll.) secara instan.",
+  "cloud_b3": "Sinkronisasi Cerdas: Bekerja offline dan unggah perubahan secara otomatis saat Anda memulihkan internet.",
+  "cloud_btn": "Aktifkan sinkronisasi Cloud",
+  "slide_indicator": "Langkah _{current} dari 3"
 }

@@ -365,8 +365,12 @@ class LibraryPlaylistsController extends GetxController
     playlistCreationMode.value = val!;
   }
 
-  Future<bool> createNewPlaylist(
-      {bool createPlaylistNaddSong = false, List<MediaItem>? songItems}) async {
+  Future<bool> createNewPlaylist({
+    bool createPlaylistNaddSong = false,
+    List<MediaItem>? songItems,
+    bool isCollaborative = false,
+    List<dynamic> collaborators = const [],
+  }) async {
     String title = textInputController.text;
     if (title.trim().isNotEmpty) {
       dynamic newplst;
@@ -389,18 +393,25 @@ class LibraryPlaylistsController extends GetxController
           return false;
         }
       } else {
+        final isCloudMode = Hive.box('AppPrefs').get('emusicCloudRequested', defaultValue: false) == true;
         newplst = Playlist(
             title: title,
             playlistId: "LIB${DateTime.now().millisecondsSinceEpoch}",
             thumbnailUrl: songItems != null
                 ? songItems[0].artUri.toString()
                 : Playlist.thumbPlaceholderUrl,
-            description: "Library Playlist",
-            isCloudPlaylist: false);
+            description: isCollaborative ? "Collaborative Playlist" : "Library Playlist",
+            isCloudPlaylist: isCloudMode,
+            isCollaborative: isCollaborative,
+            collaborators: collaborators);
         final box = await Hive.openBox("LibraryPlaylists");
         box.put(newplst.playlistId, newplst.toJson());
         await box.close();
-        Get.find<SyncService>().triggerPush();
+        if (isCollaborative) {
+          await Get.find<SyncService>().pushCollaborative(newplst);
+        } else {
+          Get.find<SyncService>().triggerPush();
+        }
       }
 
       libraryPlaylists.add(newplst);

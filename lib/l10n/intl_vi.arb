@@ -536,5 +536,23 @@
   "errorPlayingTrack": "Lỗi khi chơi:",
   "@errorPlayingTrack": {
     "description": ""
-  }
+  },
+  "welcome_title": "Âm nhạc của bạn, theo cách của bạn",
+  "welcome_subtitle": "Chọn cách bạn muốn trải nghiệm Estrella Music kể từ bây giờ.",
+  "welcome_intro": "Chúng tôi đã hiện đại hóa nền tảng của mình. Hệ thống tải lên bản sao lưu thủ công cũ đã bị vô hiệu hóa. Bây giờ bạn có hai cách rõ ràng để quản lý thư viện nhạc của mình.",
+  "recommend_cloud": "Chúng tôi khuyên bạn nên kích hoạt Chế độ đám mây để có trải nghiệm giống như Spotify: đồng bộ hóa thời gian thực giữa tất cả các thiết bị của bạn và sao lưu tự động mà bạn không cần phải làm gì cả.",
+  "swipe_prompt": "Vuốt để khám phá các tùy chọn ➔",
+  "local_title": "Chế độ cục bộ",
+  "local_subtitle": "Quyền riêng tư tuyệt đối trên thiết bị của bạn",
+  "local_b1": "Nó hoạt động mà không cần phải đăng nhập.",
+  "local_b2": "Toàn bộ thư viện của bạn nằm hoàn toàn trên máy tính này.",
+  "local_b3": "Lưu ý: Không sao lưu đám mây thủ công. Nếu bạn mất thiết bị hoặc gỡ cài đặt ứng dụng, dữ liệu của bạn sẽ không thể khôi phục được.",
+  "local_btn": "Chỉ sử dụng trên thiết bị này",
+  "cloud_title": "Chế độ đám mây (Được khuyến nghị)",
+  "cloud_subtitle": "Đồng bộ hóa thời gian thực với Joss Red",
+  "cloud_b1": "Đăng nhập an toàn bằng tài khoản Joss Red của bạn.",
+  "cloud_b2": "Truy cập danh sách phát, mục yêu thích và lịch sử của bạn từ bất kỳ thiết bị nào (Windows, Android, v.v.) ngay lập tức.",
+  "cloud_b3": "Đồng bộ hóa thông minh: Làm việc ngoại tuyến và tự động tải lên các thay đổi khi bạn khôi phục Internet.",
+  "cloud_btn": "Kích hoạt đồng bộ hóa đám mây",
+  "slide_indicator": "Bước {current} trên 3"
 }

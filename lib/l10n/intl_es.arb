@@ -638,5 +638,23 @@
   "errorPlayingTrack": "Error al reproducir:",
   "@errorPlayingTrack": {
     "description": ""
-  }
+  },
+  "welcome_title": "Tu música, a tu manera",
+  "welcome_subtitle": "Elige cómo quieres experimentar Estrella Music de ahora en adelante.",
+  "welcome_intro": "Hemos modernizado nuestra plataforma. El antiguo sistema de subir respaldos manuales ha sido desactivado. Ahora cuentas con dos modos claros para gestionar tu biblioteca musical.",
+  "recommend_cloud": "Te recomendamos activar el Modo Cloud para una experiencia Spotify-like: sincronización en tiempo real entre todos tus dispositivos y respaldo automático sin que tengas que hacer nada.",
+  "swipe_prompt": "Desliza para explorar las opciones ➔",
+  "local_title": "Modo Local",
+  "local_subtitle": "Privacidad absoluta en tu dispositivo",
+  "local_b1": "Funciona sin necesidad de iniciar sesión.",
+  "local_b2": "Toda tu biblioteca se queda estrictamente en este equipo.",
+  "local_b3": "Nota: Sin respaldos manuales en la nube. Si pierdes tu dispositivo o desinstalas la app, tus datos no se podrán recuperar.",
+  "local_btn": "Usar solo en este dispositivo",
+  "cloud_title": "Modo Cloud (Recomendado)",
+  "cloud_subtitle": "Sincronización en tiempo real con Joss Red",
+  "cloud_b1": "Inicia sesión de forma segura usando tu cuenta de Joss Red.",
+  "cloud_b2": "Accede a tus playlists, favoritos e historial desde cualquier dispositivo (Windows, Android, etc.) al instante.",
+  "cloud_b3": "Sincronización inteligente: trabaja sin conexión y sube los cambios automáticamente al recuperar internet.",
+  "cloud_btn": "Activar sincronización Cloud",
+  "slide_indicator": "Paso {current} de 3"
 }

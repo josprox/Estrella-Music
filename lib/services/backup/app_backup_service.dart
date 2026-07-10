@@ -9,8 +9,6 @@ import 'package:path_provider/path_provider.dart';
 
 import 'package:harmonymusic/utils/helpers/helper.dart';
 import 'package:harmonymusic/services/music/music_service.dart';
-import 'package:harmonymusic/services/auth/auth_service.dart';
-import 'package:harmonymusic/services/backup/cloud_backup_service.dart';
 
 class AppBackupService extends GetxService {
   Future<String> get supportDirPath async {
@@ -18,50 +16,8 @@ class AppBackupService extends GetxService {
   }
 
   Future<void> runAutomaticBackupIfNeeded() async {
-    try {
-      final appPrefs = Hive.box('AppPrefs');
-      final lastBackupStr = appPrefs.get('last_cloud_backup_timestamp');
-      final firstRunStr = appPrefs.get('app_first_run_timestamp');
-      
-      bool shouldRun = false;
-      if (lastBackupStr != null) {
-        final lastBackup = DateTime.tryParse(lastBackupStr.toString());
-        if (lastBackup != null && 
-            DateTime.now().difference(lastBackup).inHours >= 4) {
-          shouldRun = true;
-        }
-      } else if (firstRunStr != null) {
-        final firstRun = DateTime.tryParse(firstRunStr.toString());
-        if (firstRun != null && 
-            DateTime.now().difference(firstRun).inHours >= 12) {
-          shouldRun = true;
-        }
-      } else {
-        await appPrefs.put('app_first_run_timestamp', DateTime.now().toIso8601String());
-      }
-
-      if (!shouldRun) return;
-
-      final authService = Get.find<AuthService>();
-      if (!authService.isAuthenticated.value) return;
-
-      final cloudBackupService = Get.find<CloudBackupService>();
-      final bytes = await createBackupBytes();
-      final timestamp = DateTime.now()
-          .toIso8601String()
-          .replaceAll(':', '')
-          .replaceAll('.', '_');
-      
-      await cloudBackupService.uploadBackupBytes(
-        bytes: bytes,
-        fileName: 'estrellamusic_auto_$timestamp.hmb',
-      );
-
-      await appPrefs.put('last_cloud_backup_timestamp', DateTime.now().toIso8601String());
-      printINFO("AppBackupService: Automatic background backup completed successfully.");
-    } catch (e) {
-      printERROR("AppBackupService: Automatic backup failed: $e");
-    }
+    // Disabled upload backups in cloud migration
+    return;
   }
 
   Future<String> get databaseDirPath async {

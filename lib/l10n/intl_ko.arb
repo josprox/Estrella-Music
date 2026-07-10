@@ -441,5 +441,23 @@
   "errorPlayingTrack": "플레이 중 오류:",
   "@errorPlayingTrack": {
     "description": ""
-  }
+  },
+  "welcome_title": "나만의 음악, 나만의 방식",
+  "welcome_subtitle": "지금부터 Estrella Music을 어떻게 경험하고 싶은지 선택하세요.",
+  "welcome_intro": "우리는 플랫폼을 현대화했습니다. 수동 백업을 업로드하는 이전 시스템이 비활성화되었습니다. 이제 음악 라이브러리를 관리하는 두 가지 명확한 방법이 있습니다.",
+  "recommend_cloud": "Spotify와 같은 경험을 위해서는 클라우드 모드를 활성화하는 것이 좋습니다. 아무 것도 하지 않고도 모든 장치 간의 실시간 동기화와 자동 백업이 가능합니다.",
+  "swipe_prompt": "스와이프하여 옵션 탐색 ➔",
+  "local_title": "로컬 모드",
+  "local_subtitle": "귀하의 장치에 대한 완벽한 개인 정보 보호",
+  "local_b1": "로그인할 필요 없이 작동됩니다.",
+  "local_b2": "전체 라이브러리는 이 컴퓨터에만 유지됩니다.",
+  "local_b3": "참고: 수동 클라우드 백업은 없습니다. 기기를 분실하거나 앱을 제거한 경우 데이터를 복구할 수 없습니다.",
+  "local_btn": "이 기기에서만 사용하세요",
+  "cloud_title": "클라우드 모드(권장)",
+  "cloud_subtitle": "Joss Red와 실시간 동기화",
+  "cloud_b1": "Joss Red 계정을 사용하여 안전하게 로그인하세요.",
+  "cloud_b2": "모든 장치(Windows, Android 등)에서 재생 목록, 즐겨찾기 및 기록에 즉시 액세스하세요.",
+  "cloud_b3": "스마트 동기화: 오프라인으로 작업하고 인터넷을 복구하면 자동으로 변경 사항을 업로드합니다.",
+  "cloud_btn": "클라우드 동기화 활성화",
+  "slide_indicator": "3단계 중 {current} 단계"
 }

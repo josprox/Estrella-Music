@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hive/hive.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:harmonymusic/services/auth/auth_service.dart';
 import 'package:harmonymusic/services/system/update_service.dart';
@@ -10,6 +11,7 @@ import 'package:harmonymusic/ui/screens/Update/update_screen.dart';
 import 'account_bootstrap_screen.dart';
 import 'cloud_migration_screen.dart';
 import 'cloud_mode_choice_screen.dart';
+import 'package:harmonymusic/services/backup/cloud_backup_service.dart';
 import 'music_auth_screen.dart';
 
 class AuthGate extends StatefulWidget {
@@ -22,6 +24,7 @@ class AuthGate extends StatefulWidget {
 class _AuthGateState extends State<AuthGate> {
   final isUpdateChecked = false.obs;
   final updateRequired = false.obs;
+  bool _modeChoiceCompleted = false;
 
   @override
   void initState() {
@@ -34,38 +37,62 @@ class _AuthGateState extends State<AuthGate> {
     updateRequired.value = hasUpdate;
     isUpdateChecked.value = true;
 
+    final sprefs = await SharedPreferences.getInstance();
+    _modeChoiceCompleted = sprefs.getBool('emusicModeChoiceCompleted') ?? false;
+
     if (!hasUpdate) {
       Get.find<AuthService>().restoreSession();
-      
-      final prefs = Hive.box('AppPrefs');
-      final modeChoiceCompleted =
-          prefs.get('emusicModeChoiceCompleted', defaultValue: false) == true;
-      if (!modeChoiceCompleted) {
-        final bootstrapService = Get.find<UserDataBootstrapService>();
-        final hasData = await bootstrapService.hasMeaningfulLocalData();
-        if (!hasData) {
-          await prefs.put('emusicModeChoiceCompleted', true);
-          await prefs.put('emusicDataMode', 'local');
-          await prefs.put('emusicCloudRequested', false);
-        }
-      }
     }
+    if (mounted) setState(() {});
   }
 
   Future<void> _keepLocalMode() async {
     final prefs = Hive.box('AppPrefs');
     await prefs.put('emusicDataMode', 'local');
-    await prefs.put('emusicModeChoiceCompleted', true);
     await prefs.put('emusicCloudRequested', false);
     await prefs.put('hasPendingSync', false);
-    if (mounted) setState(() {});
+    
+    final sprefs = await SharedPreferences.getInstance();
+    await sprefs.setBool('emusicModeChoiceCompleted', true);
+    
+    final authService = Get.find<AuthService>();
+    if (authService.isAuthenticated.value) {
+      _clearCloudBackups();
+    }
+    
+    setState(() {
+      _modeChoiceCompleted = true;
+    });
   }
 
   Future<void> _chooseCloudMode() async {
     final prefs = Hive.box('AppPrefs');
-    await prefs.put('emusicModeChoiceCompleted', true);
     await prefs.put('emusicCloudRequested', true);
-    if (mounted) setState(() {});
+    
+    final sprefs = await SharedPreferences.getInstance();
+    await sprefs.setBool('emusicModeChoiceCompleted', true);
+    
+    final authService = Get.find<AuthService>();
+    if (authService.isAuthenticated.value) {
+      _clearCloudBackups();
+    }
+    
+    setState(() {
+      _modeChoiceCompleted = true;
+    });
+  }
+
+  Future<void> _clearCloudBackups() async {
+    try {
+      final cloudBackupService = Get.find<CloudBackupService>();
+      final backups = await cloudBackupService.listBackups();
+      for (final backup in backups) {
+        await cloudBackupService.deleteBackup(backup);
+      }
+      debugPrint("Cleared all cloud backups on mode selection.");
+    } catch (e) {
+      debugPrint("Error clearing cloud backups: $e");
+    }
   }
 
   @override
@@ -74,8 +101,6 @@ class _AuthGateState extends State<AuthGate> {
     final bootstrapService = Get.find<UserDataBootstrapService>();
     return Obx(() {
       final prefs = Hive.box('AppPrefs');
-      final modeChoiceCompleted =
-          prefs.get('emusicModeChoiceCompleted', defaultValue: false) == true;
       final cloudRequested =
           prefs.get('emusicCloudRequested', defaultValue: false) == true;
       final dataMode =
@@ -92,7 +117,7 @@ class _AuthGateState extends State<AuthGate> {
         return const UpdateScreen();
       }
 
-      if (!modeChoiceCompleted) {
+      if (!_modeChoiceCompleted) {
         return CloudModeChoiceScreen(
           onKeepLocal: _keepLocalMode,
           onChooseCloud: _chooseCloudMode,

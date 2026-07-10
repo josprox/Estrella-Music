@@ -532,5 +532,23 @@
   "errorPlayingTrack": "Błąd podczas odtwarzania:",
   "@errorPlayingTrack": {
     "description": ""
-  }
+  },
+  "welcome_title": "Twoja muzyka, na Twój sposób",
+  "welcome_subtitle": "Wybierz, w jaki sposób chcesz odtąd korzystać z Estrella Music.",
+  "welcome_intro": "Zmodernizowaliśmy naszą platformę. Stary system ręcznego przesyłania kopii zapasowych został wyłączony. Masz teraz dwa jasne sposoby zarządzania swoją biblioteką muzyczną.",
+  "recommend_cloud": "Zalecamy aktywację trybu chmury, aby uzyskać wrażenia podobne do Spotify: synchronizację w czasie rzeczywistym między wszystkimi urządzeniami i automatyczne tworzenie kopii zapasowych bez konieczności wykonywania jakichkolwiek czynności.",
+  "swipe_prompt": "Przesuń, aby poznać opcje ➔",
+  "local_title": "Tryb lokalny",
+  "local_subtitle": "Całkowita prywatność na Twoim urządzeniu",
+  "local_b1": "Działa bez konieczności logowania.",
+  "local_b2": "Cała Twoja biblioteka pozostaje wyłącznie na tym komputerze.",
+  "local_b3": "Uwaga: brak ręcznych kopii zapasowych w chmurze. Jeśli zgubisz urządzenie lub odinstalujesz aplikację, odzyskanie danych będzie niemożliwe.",
+  "local_btn": "Używaj tylko na tym urządzeniu",
+  "cloud_title": "Tryb chmury (zalecany)",
+  "cloud_subtitle": "Synchronizacja w czasie rzeczywistym z Joss Red",
+  "cloud_b1": "Zaloguj się bezpiecznie, korzystając ze swojego konta Joss Red.",
+  "cloud_b2": "Uzyskaj natychmiastowy dostęp do swoich list odtwarzania, ulubionych i historii z dowolnego urządzenia (Windows, Android itp.).",
+  "cloud_b3": "Inteligentna synchronizacja: Pracuj w trybie offline i automatycznie przesyłaj zmiany po odzyskaniu Internetu.",
+  "cloud_btn": "Aktywuj synchronizację z chmurą",
+  "slide_indicator": "Krok _{current} z 3"
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hive/hive.dart';
 import 'package:harmonymusic/services/auth/auth_service.dart';
 
 import 'package:harmonymusic/utils/localization/lang_mapping.dart';
@@ -339,7 +340,7 @@ class SettingsScreen extends StatelessWidget {
               child: Text(S.current.reset,
                   style: const TextStyle(fontWeight: FontWeight.bold))),
         ),
-        if (GetPlatform.isAndroid)
+        if (GetPlatform.isAndroid && Hive.box('AppPrefs').get('emusicCloudRequested', defaultValue: false) != true)
           SettingsTile(
             title: S.current.exportDowloadedFiles,
             subtitle: S.current.exportDowloadedFilesDes,
@@ -349,7 +350,7 @@ class SettingsScreen extends StatelessWidget {
                     context: context, builder: (_) => const ExportFileDialog())
                 .whenComplete(() => Get.delete<ExportFileDialogController>()),
           ),
-        if (GetPlatform.isAndroid)
+        if (GetPlatform.isAndroid && Hive.box('AppPrefs').get('emusicCloudRequested', defaultValue: false) != true)
           SettingsTile(
             title: S.current.exportedFileLocation,
             leadingIcon: Icons.drive_folder_upload_rounded,

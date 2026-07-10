@@ -414,5 +414,23 @@
   "errorPlayingTrack": "Virhe pelatessa:",
   "@errorPlayingTrack": {
     "description": ""
-  }
+  },
+  "welcome_title": "Sinun musiikkisi, sinun tapasi",
+  "welcome_subtitle": "Valitse, miten haluat kokea Estrella Musicin tästä eteenpäin.",
+  "welcome_intro": "Olemme modernisoineet alustamme. Vanha manuaalisten varmuuskopioiden latausjärjestelmä on poistettu käytöstä. Sinulla on nyt kaksi selkeää tapaa hallita musiikkikirjastoasi.",
+  "recommend_cloud": "Suosittelemme Cloud Moden aktivointia Spotifyn kaltaisen kokemuksen saamiseksi: reaaliaikainen synkronointi kaikkien laitteidesi välillä ja automaattinen varmuuskopiointi ilman, että sinun tarvitsee tehdä mitään.",
+  "swipe_prompt": "Selaa vaihtoehtoja pyyhkäisemällä ➔",
+  "local_title": "Paikallinen tila",
+  "local_subtitle": "Täydellinen yksityisyys laitteellasi",
+  "local_b1": "Se toimii ilman tarvetta kirjautua sisään.",
+  "local_b2": "Koko kirjastosi pysyy tiukasti tällä tietokoneella.",
+  "local_b3": "Huomautus: Ei manuaalisia pilvivarmuuskopioita. Jos kadotat laitteesi tai poistat sovelluksen, tietojasi ei voida palauttaa.",
+  "local_btn": "Käytä vain tässä laitteessa",
+  "cloud_title": "Pilvitila (suositus)",
+  "cloud_subtitle": "Reaaliaikainen synkronointi Joss Redin kanssa",
+  "cloud_b1": "Kirjaudu sisään turvallisesti Joss Red -tililläsi.",
+  "cloud_b2": "Käytä soittolistojasi, suosikkejasi ja historiaasi välittömästi miltä tahansa laitteelta (Windows, Android jne.).",
+  "cloud_b3": "Smart Sync: Työskentele offline-tilassa ja lataa muutokset automaattisesti, kun internet palautuu.",
+  "cloud_btn": "Aktivoi pilvisynkronointi",
+  "slide_indicator": "Vaihe {current}/3"
 }
