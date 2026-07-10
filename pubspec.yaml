@@ -80,11 +80,7 @@ dependencies:
       branch: main
       ref: b53567a42b4ba3793a3cf00d478bdba0ecce33d7
   smtc_windows: ^0.1.2
-  terminate_restart:
-    git:
-      url: https://github.com/anandnet/terminate_restart.git
-      branch: main
-      ref: eb505e07e11d0fe1f5c03993e707c6678428c353
+  restart_app: ^1.2.1
   toggle_switch: ^2.1.0
   tray_manager: ^0.2.3
   url_launcher: ^6.2.1
@@ -98,7 +94,6 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   flutter_launcher_icons: ^0.14.4
-
   rxdart: any
   media_kit: any
   workmanager: ^0.9.0+3
@@ -109,6 +104,7 @@ dependencies:
   rename_app: ^1.6.6
   flutter_native_splash: ^2.4.4
   shared_preferences: ^2.5.5
+
 dev_dependencies:
   intl_utils: ^2.8.12
   flutter_lints: ^4.0.0

@@ -1198,6 +1198,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.6.6"
+  restart_app:
+    dependency: "direct main"
+    description:
+      name: restart_app
+      sha256: "400dd401b77b599e2defef55fd4c22af3ff80af48616a82f01c2a07070e3e368"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.8.3"
   rxdart:
     dependency: "direct main"
     description:
@@ -1492,15 +1500,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.2"
-  terminate_restart:
-    dependency: "direct main"
-    description:
-      path: "."
-      ref: eb505e07e11d0fe1f5c03993e707c6678428c353
-      resolved-ref: eb505e07e11d0fe1f5c03993e707c6678428c353
-      url: "https://github.com/anandnet/terminate_restart.git"
-    source: git
-    version: "1.0.7"
   test_api:
     dependency: transitive
     description:
