@@ -20,6 +20,8 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ml';
 
+  static String m0(current) => "ഘട്ടം ${current} / 3";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "CreateNewPlaylist": MessageLookupByLibrary.simpleMessage(
@@ -94,6 +96,24 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "cancel": MessageLookupByLibrary.simpleMessage("റദ്ദാക്കുക"),
     "close": MessageLookupByLibrary.simpleMessage("അടയ്ക്കുക"),
+    "cloud_b1": MessageLookupByLibrary.simpleMessage(
+      "നിങ്ങളുടെ ജോസ് റെഡ് അക്കൗണ്ട് ഉപയോഗിച്ച് സുരക്ഷിതമായി ലോഗിൻ ചെയ്യുക.",
+    ),
+    "cloud_b2": MessageLookupByLibrary.simpleMessage(
+      "ഏത് ഉപകരണത്തിൽ നിന്നും (Windows, Android, മുതലായവ) തൽക്ഷണം നിങ്ങളുടെ പ്ലേലിസ്റ്റുകളും പ്രിയങ്കരങ്ങളും ചരിത്രവും ആക്‌സസ് ചെയ്യുക.",
+    ),
+    "cloud_b3": MessageLookupByLibrary.simpleMessage(
+      "സ്മാർട്ട് സമന്വയം: നിങ്ങൾ ഇൻ്റർനെറ്റ് വീണ്ടെടുക്കുമ്പോൾ ഓഫ്‌ലൈനായി പ്രവർത്തിക്കുകയും മാറ്റങ്ങൾ സ്വയമേവ അപ്‌ലോഡ് ചെയ്യുകയും ചെയ്യുക.",
+    ),
+    "cloud_btn": MessageLookupByLibrary.simpleMessage(
+      "ക്ലൗഡ് സമന്വയം സജീവമാക്കുക",
+    ),
+    "cloud_subtitle": MessageLookupByLibrary.simpleMessage(
+      "ജോസ് റെഡ് ഉപയോഗിച്ച് തത്സമയ സമന്വയം",
+    ),
+    "cloud_title": MessageLookupByLibrary.simpleMessage(
+      "ക്ലൗഡ് മോഡ് (ശുപാർശ ചെയ്യുന്നത്)",
+    ),
     "communityplaylists": MessageLookupByLibrary.simpleMessage(
       "കമ്മ്യൂണിറ്റി പ്ലേലിസ്റ്റുകൾ",
     ),
@@ -156,6 +176,22 @@ class MessageLookup extends MessageLookupByLibrary {
     "listeningToEnvironment": MessageLookupByLibrary.simpleMessage(
       "പരിസ്ഥിതിയെ ശ്രദ്ധിക്കുന്നു...",
     ),
+    "local_b1": MessageLookupByLibrary.simpleMessage(
+      "ലോഗിൻ ചെയ്യേണ്ട ആവശ്യമില്ലാതെ ഇത് പ്രവർത്തിക്കുന്നു.",
+    ),
+    "local_b2": MessageLookupByLibrary.simpleMessage(
+      "നിങ്ങളുടെ മുഴുവൻ ലൈബ്രറിയും ഈ കമ്പ്യൂട്ടറിൽ കർശനമായി തുടരുന്നു.",
+    ),
+    "local_b3": MessageLookupByLibrary.simpleMessage(
+      "ശ്രദ്ധിക്കുക: മാനുവൽ ക്ലൗഡ് ബാക്കപ്പുകളൊന്നുമില്ല. നിങ്ങളുടെ ഉപകരണം നഷ്‌ടപ്പെടുകയോ ആപ്പ് അൺഇൻസ്റ്റാൾ ചെയ്യുകയോ ചെയ്‌താൽ, നിങ്ങളുടെ ഡാറ്റ വീണ്ടെടുക്കാൻ കഴിയില്ല.",
+    ),
+    "local_btn": MessageLookupByLibrary.simpleMessage(
+      "ഈ ഉപകരണത്തിൽ മാത്രം ഉപയോഗിക്കുക",
+    ),
+    "local_subtitle": MessageLookupByLibrary.simpleMessage(
+      "നിങ്ങളുടെ ഉപകരണത്തിൽ സമ്പൂർണ്ണ സ്വകാര്യത",
+    ),
+    "local_title": MessageLookupByLibrary.simpleMessage("പ്രാദേശിക മോഡ്"),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
       "നിങ്ങളുടെ മൈക്രോഫോണിന് സമീപം സംഗീതം വേണ്ടത്ര ഉച്ചത്തിൽ പ്ലേ ചെയ്യുന്നുണ്ടെന്ന് ഉറപ്പാക്കുക.",
     ),
@@ -170,6 +206,44 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "networkError1": MessageLookupByLibrary.simpleMessage(
       "അയ്യോ നെറ്റ്‌വർക്ക് പിശക്!",
+    ),
+    "news_btn_app": MessageLookupByLibrary.simpleMessage(
+      "ജോസ് റെഡ് ആപ്പ് (പ്ലേ സ്റ്റോർ)",
+    ),
+    "news_btn_dismiss": MessageLookupByLibrary.simpleMessage("മനസ്സിലായി"),
+    "news_btn_web": MessageLookupByLibrary.simpleMessage("ജോസ് റെഡ് വെബ്"),
+    "news_card_subtitle": MessageLookupByLibrary.simpleMessage(
+      "100% ജോസ് റെഡ് സിൻക്രൊണൈസേഷൻ, സുഹൃത്തുക്കളുമൊത്തുള്ള പ്ലേലിസ്റ്റുകൾ എന്നിവയും അതിലേറെയും. പുതിയതെന്താണെന്ന് കാണാൻ ടാപ്പ് ചെയ്യുക.",
+    ),
+    "news_card_title": MessageLookupByLibrary.simpleMessage(
+      "എസ്ട്രെല്ല സംഗീതം വികസിച്ചു!",
+    ),
+    "news_dialog_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "സുഹൃത്തുക്കളെ ചേർക്കുന്നതിനോ അഭ്യർത്ഥനകൾ സ്വീകരിക്കുന്നതിനോ നിങ്ങളുടെ സുരക്ഷാ പ്രൊഫൈൽ മാനേജ് ചെയ്യുന്നതിനോ അതിൻ്റെ ഔദ്യോഗിക പ്ലാറ്റ്‌ഫോമുകളിൽ Joss Red ഉപയോഗിക്കുക:",
+    ),
+    "news_dialog_section_friends": MessageLookupByLibrary.simpleMessage(
+      "സുഹൃത്തുക്കളും അക്കൗണ്ട് മാനേജ്മെൻ്റും:",
+    ),
+    "news_dialog_title": MessageLookupByLibrary.simpleMessage(
+      "എസ്ട്രെല്ല സംഗീത വാർത്ത",
+    ),
+    "news_item_collab_desc": MessageLookupByLibrary.simpleMessage(
+      "നിങ്ങളുടെ സുഹൃത്തുക്കളുമായി പ്ലേലിസ്റ്റുകൾ സൃഷ്ടിക്കുക! ഒരു പ്ലേലിസ്റ്റ് സൃഷ്‌ടിക്കുമ്പോൾ, സഹകരണ ചെക്ക്‌ബോക്‌സ് തിരഞ്ഞെടുത്ത് ഒരുമിച്ച് എഡിറ്റ് ചെയ്യാൻ നിങ്ങളുടെ സുഹൃത്തുക്കളെ തിരഞ്ഞെടുക്കുക.",
+    ),
+    "news_item_collab_title": MessageLookupByLibrary.simpleMessage(
+      "സഹകരണ പ്ലേലിസ്റ്റുകൾ",
+    ),
+    "news_item_sync_desc": MessageLookupByLibrary.simpleMessage(
+      "നിങ്ങളുടെ പ്ലേലിസ്റ്റുകളും പ്രിയങ്കരങ്ങളും ഇപ്പോൾ നിങ്ങളുടെ പ്രധാന ജോസ് റെഡ് അക്കൗണ്ട് ഉപയോഗിച്ച് സ്വയമേവ ക്ലൗഡിൽ സംരക്ഷിക്കുകയും സമന്വയിപ്പിക്കുകയും ചെയ്യുന്നു.",
+    ),
+    "news_item_sync_title": MessageLookupByLibrary.simpleMessage(
+      "ജോസ് റെഡ് ഫുൾ ഇൻ്റഗ്രേഷൻ",
+    ),
+    "news_item_trans_desc": MessageLookupByLibrary.simpleMessage(
+      "നിങ്ങൾ മേലിൽ മാനുവൽ സമന്വയ ബട്ടണുകൾ ക്ലിക്ക് ചെയ്യേണ്ടതില്ല; ഓട്ടോമാറ്റിക്കായി മുകളിലേക്കും താഴേക്കും മാറുന്നതിന് പുതിയ മോട്ടോർ ഉത്തരവാദിയാണ്.",
+    ),
+    "news_item_trans_title": MessageLookupByLibrary.simpleMessage(
+      "സുതാര്യമായ സമന്വയം",
     ),
     "noBookmarks": MessageLookupByLibrary.simpleMessage(
       "ബുക്ക്‌മാർക്കുകളൊന്നുമില്ല!",
@@ -231,6 +305,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "recentlyPlayed": MessageLookupByLibrary.simpleMessage(
       "അടുത്തിടെ കളിച്ചത്",
     ),
+    "recommend_cloud": MessageLookupByLibrary.simpleMessage(
+      "സ്‌പോട്ടിഫൈ പോലുള്ള അനുഭവത്തിനായി ക്ലൗഡ് മോഡ് സജീവമാക്കാൻ ഞങ്ങൾ ശുപാർശ ചെയ്യുന്നു: നിങ്ങളുടെ എല്ലാ ഉപകരണങ്ങൾക്കുമിടയിൽ തത്സമയ സമന്വയവും നിങ്ങൾ ഒന്നും ചെയ്യാതെ തന്നെ സ്വയമേവയുള്ള ബാക്കപ്പും.",
+    ),
     "removeFromPlaylist": MessageLookupByLibrary.simpleMessage(
       "പ്ലേലിസ്റ്റിൽ നിന്ന് നീക്കം ചെയ്യുക",
     ),
@@ -279,6 +356,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "പൊരുത്തങ്ങൾക്കായി Shazam ഡാറ്റാബേസിൽ തിരയുന്നു...",
     ),
     "singles": MessageLookupByLibrary.simpleMessage("സിംഗിൾസ്"),
+    "slide_indicator": m0,
     "songFound": MessageLookupByLibrary.simpleMessage("ഗാനം കണ്ടെത്തി!"),
     "songNotPlayable": MessageLookupByLibrary.simpleMessage(
       "സെർവർ നിയന്ത്രണം കാരണം ഗാനം പ്ലേ ചെയ്യാൻ കഴിയില്ല",
@@ -287,9 +365,21 @@ class MessageLookup extends MessageLookupByLibrary {
     "songs": MessageLookupByLibrary.simpleMessage("പാട്ടുകൾ"),
     "speedAndPitch": MessageLookupByLibrary.simpleMessage("വേഗതയും പിച്ചും"),
     "startRadio": MessageLookupByLibrary.simpleMessage("റേഡിയോ ആരംഭിക്കുക"),
+    "swipe_prompt": MessageLookupByLibrary.simpleMessage(
+      "ഓപ്ഷനുകൾ പര്യവേക്ഷണം ചെയ്യാൻ സ്വൈപ്പ് ➔",
+    ),
     "upNext": MessageLookupByLibrary.simpleMessage("അടുത്തത്"),
     "username": MessageLookupByLibrary.simpleMessage("ഉപയോക്തൃനാമം"),
     "video": MessageLookupByLibrary.simpleMessage("വീഡിയോ"),
     "viewArtist": MessageLookupByLibrary.simpleMessage("ആർട്ടിസ്റ്റ്"),
+    "welcome_intro": MessageLookupByLibrary.simpleMessage(
+      "ഞങ്ങൾ ഞങ്ങളുടെ പ്ലാറ്റ്ഫോം നവീകരിച്ചു. സ്വമേധയാലുള്ള ബാക്കപ്പുകൾ അപ്‌ലോഡ് ചെയ്യുന്നതിനുള്ള പഴയ സംവിധാനം പ്രവർത്തനരഹിതമാക്കി. നിങ്ങളുടെ സംഗീത ലൈബ്രറി മാനേജ് ചെയ്യാൻ നിങ്ങൾക്ക് ഇപ്പോൾ രണ്ട് വ്യക്തമായ വഴികളുണ്ട്.",
+    ),
+    "welcome_subtitle": MessageLookupByLibrary.simpleMessage(
+      "ഇനി മുതൽ എസ്ട്രെല്ല മ്യൂസിക് എങ്ങനെ ആസ്വദിക്കണമെന്ന് തിരഞ്ഞെടുക്കുക.",
+    ),
+    "welcome_title": MessageLookupByLibrary.simpleMessage(
+      "നിങ്ങളുടെ സംഗീതം, നിങ്ങളുടെ വഴി",
+    ),
   };
 }

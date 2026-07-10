@@ -554,5 +554,19 @@
   "cloud_b2": "Truy cập danh sách phát, mục yêu thích và lịch sử của bạn từ bất kỳ thiết bị nào (Windows, Android, v.v.) ngay lập tức.",
   "cloud_b3": "Đồng bộ hóa thông minh: Làm việc ngoại tuyến và tự động tải lên các thay đổi khi bạn khôi phục Internet.",
   "cloud_btn": "Kích hoạt đồng bộ hóa đám mây",
-  "slide_indicator": "Bước {current} trên 3"
+  "slide_indicator": "Bước {current} trên 3",
+  "news_card_title": "Âm nhạc Estrella đã phát triển!",
+  "news_card_subtitle": "Đồng bộ hóa 100% với Joss Red, danh sách phát với bạn bè và hơn thế nữa. Nhấn để xem có gì mới.",
+  "news_dialog_title": "Tin tức âm nhạc Estrella",
+  "news_item_sync_title": "Tích hợp đầy đủ với Joss Red",
+  "news_item_sync_desc": "Danh sách phát và mục yêu thích của bạn hiện được lưu và đồng bộ hóa tự động trên đám mây với tài khoản Joss Red chính của bạn.",
+  "news_item_collab_title": "Danh sách phát cộng tác",
+  "news_item_collab_desc": "Tạo danh sách phát với bạn bè của bạn! Khi tạo danh sách phát, hãy chọn hộp kiểm Cộng tác và chọn bạn bè của bạn để cùng chỉnh sửa.",
+  "news_item_trans_title": "Đồng bộ hóa minh bạch",
+  "news_item_trans_desc": "Bạn không cần phải nhấp vào nút đồng bộ hóa thủ công nữa; Động cơ mới có nhiệm vụ chuyển số lên xuống tự động.",
+  "news_dialog_section_friends": "Quản lý bạn bè và tài khoản:",
+  "news_dialog_friends_desc": "Để thêm bạn bè, chấp nhận yêu cầu hoặc quản lý hồ sơ bảo mật của bạn, vui lòng sử dụng Joss Red trên các nền tảng chính thức của nó:",
+  "news_btn_app": "Ứng dụng Joss Red (Cửa hàng Play)",
+  "news_btn_web": "Web đỏ Joss",
+  "news_btn_dismiss": "đã hiểu"
 }

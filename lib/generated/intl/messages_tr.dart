@@ -20,6 +20,8 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'tr';
 
+  static String m0(current) => "Adım ${current} / 3";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "CreateNewPlaylist": MessageLookupByLibrary.simpleMessage(
@@ -185,6 +187,24 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "close": MessageLookupByLibrary.simpleMessage("Kapalı"),
     "closeApp": MessageLookupByLibrary.simpleMessage("Uygulamayı Kapat"),
+    "cloud_b1": MessageLookupByLibrary.simpleMessage(
+      "Joss Red hesabınızı kullanarak güvenli bir şekilde oturum açın.",
+    ),
+    "cloud_b2": MessageLookupByLibrary.simpleMessage(
+      "Çalma listelerinize, favorilerinize ve geçmişinize herhangi bir cihazdan (Windows, Android vb.) anında erişin.",
+    ),
+    "cloud_b3": MessageLookupByLibrary.simpleMessage(
+      "Akıllı Senkronizasyon: Çevrimdışı çalışın ve interneti kurtardığınızda değişiklikleri otomatik olarak yükleyin.",
+    ),
+    "cloud_btn": MessageLookupByLibrary.simpleMessage(
+      "Bulut senkronizasyonunu etkinleştir",
+    ),
+    "cloud_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Joss Red ile gerçek zamanlı senkronizasyon",
+    ),
+    "cloud_title": MessageLookupByLibrary.simpleMessage(
+      "Bulut Modu (Önerilen)",
+    ),
     "communityplaylists": MessageLookupByLibrary.simpleMessage(
       "Topluluk Çalma Listeleri",
     ),
@@ -421,6 +441,22 @@ class MessageLookup extends MessageLookupByLibrary {
       "Çevreyi dinlemek...",
     ),
     "local": MessageLookupByLibrary.simpleMessage("Yerel"),
+    "local_b1": MessageLookupByLibrary.simpleMessage(
+      "Giriş yapmanıza gerek kalmadan çalışır.",
+    ),
+    "local_b2": MessageLookupByLibrary.simpleMessage(
+      "Kitaplığınızın tamamı kesinlikle bu bilgisayarda kalır.",
+    ),
+    "local_b3": MessageLookupByLibrary.simpleMessage(
+      "Not: Manuel bulut yedeklemesi yoktur. Cihazınızı kaybederseniz veya uygulamayı kaldırırsanız verileriniz kurtarılamaz.",
+    ),
+    "local_btn": MessageLookupByLibrary.simpleMessage(
+      "Yalnızca bu cihazda kullanın",
+    ),
+    "local_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Cihazınızda mutlak gizlilik",
+    ),
+    "local_title": MessageLookupByLibrary.simpleMessage("Yerel Mod"),
     "loudnessDb": MessageLookupByLibrary.simpleMessage("Ses Yüksekliği (Db)"),
     "loudnessNormalization": MessageLookupByLibrary.simpleMessage(
       "Ses yüksekliği normalizasyonu",
@@ -451,6 +487,44 @@ class MessageLookup extends MessageLookupByLibrary {
     "networkError1": MessageLookupByLibrary.simpleMessage("Oops ağ hatası!"),
     "newVersionAvailable": MessageLookupByLibrary.simpleMessage(
       "Yeni sürüm mevcut!",
+    ),
+    "news_btn_app": MessageLookupByLibrary.simpleMessage(
+      "Joss Red Uygulaması (Play Store)",
+    ),
+    "news_btn_dismiss": MessageLookupByLibrary.simpleMessage("Anlaşıldı"),
+    "news_btn_web": MessageLookupByLibrary.simpleMessage("Joss Kırmızı Ağı"),
+    "news_card_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Joss Red ile %100 senkronizasyon, arkadaşlarla çalma listeleri ve çok daha fazlası. Yenilikleri görmek için dokunun.",
+    ),
+    "news_card_title": MessageLookupByLibrary.simpleMessage(
+      "Estrella Müzik gelişti!",
+    ),
+    "news_dialog_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "Arkadaş eklemek, istekleri kabul etmek veya güvenlik profilinizi yönetmek için lütfen Joss Red\'i resmi platformlarında kullanın:",
+    ),
+    "news_dialog_section_friends": MessageLookupByLibrary.simpleMessage(
+      "Arkadaşlar ve Hesap Yönetimi:",
+    ),
+    "news_dialog_title": MessageLookupByLibrary.simpleMessage(
+      "Estrella Müzik Haberleri",
+    ),
+    "news_item_collab_desc": MessageLookupByLibrary.simpleMessage(
+      "Arkadaşlarınızla çalma listeleri oluşturun! Bir çalma listesi oluştururken İşbirliği onay kutusunu seçin ve birlikte düzenleyeceğiniz arkadaşlarınızı seçin.",
+    ),
+    "news_item_collab_title": MessageLookupByLibrary.simpleMessage(
+      "Ortak Çalma Listeleri",
+    ),
+    "news_item_sync_desc": MessageLookupByLibrary.simpleMessage(
+      "Çalma listeleriniz ve favorileriniz artık ana Joss Red hesabınızla otomatik olarak buluta kaydediliyor ve senkronize ediliyor.",
+    ),
+    "news_item_sync_title": MessageLookupByLibrary.simpleMessage(
+      "Joss Red ile Tam Entegrasyon",
+    ),
+    "news_item_trans_desc": MessageLookupByLibrary.simpleMessage(
+      "Artık manuel senkronizasyon düğmelerine tıklamanıza gerek yok; Yeni motor, viteslerin otomatik olarak yukarı ve aşağı kaydırılmasından sorumludur.",
+    ),
+    "news_item_trans_title": MessageLookupByLibrary.simpleMessage(
+      "Şeffaf Senkronizasyon",
     ),
     "noBookmarks": MessageLookupByLibrary.simpleMessage("Yer işaretleri yok!"),
     "noLibPlaylist": MessageLookupByLibrary.simpleMessage(
@@ -563,6 +637,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "readMore": MessageLookupByLibrary.simpleMessage("Devamını oku"),
     "recentSearches": MessageLookupByLibrary.simpleMessage("Son aramalar"),
     "recentlyPlayed": MessageLookupByLibrary.simpleMessage("Son Çalınan"),
+    "recommend_cloud": MessageLookupByLibrary.simpleMessage(
+      "Spotify benzeri bir deneyim için Bulut Modunu etkinleştirmenizi öneririz: tüm cihazlarınız arasında gerçek zamanlı senkronizasyon ve hiçbir şey yapmanıza gerek kalmadan otomatik yedekleme.",
+    ),
     "removeFromLib": MessageLookupByLibrary.simpleMessage(
       "Kitaplık şarkılarından kaldır",
     ),
@@ -670,6 +747,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Uyku zamanlayıcınız ayarlandı",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Uyku zamanlayıcısı"),
+    "slide_indicator": m0,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "Şarkı çalma listesine eklendi!",
     ),
@@ -713,6 +791,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Şarkı akışının kalitesi",
     ),
     "subscribers": MessageLookupByLibrary.simpleMessage("Aboneler"),
+    "swipe_prompt": MessageLookupByLibrary.simpleMessage(
+      "Seçenekleri keşfetmek için kaydırın ➔",
+    ),
     "synced": MessageLookupByLibrary.simpleMessage("Senkron"),
     "syncedLyricsNotAvailable": MessageLookupByLibrary.simpleMessage(
       "Senkronize şarkı sözleri kullanılamıyor!",
@@ -737,5 +818,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "videos": MessageLookupByLibrary.simpleMessage("Videolar"),
     "viewAll": MessageLookupByLibrary.simpleMessage("Hepsine bak"),
     "viewArtist": MessageLookupByLibrary.simpleMessage("Sanatçıya bak"),
+    "welcome_intro": MessageLookupByLibrary.simpleMessage(
+      "Platformumuzu modernleştirdik. Manuel yedeklemelerin yüklenmesine ilişkin eski sistem devre dışı bırakıldı. Artık müzik kitaplığınızı yönetmenin iki net yolu var.",
+    ),
+    "welcome_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Artık Estrella Music\'i nasıl deneyimlemek istediğinizi seçin.",
+    ),
+    "welcome_title": MessageLookupByLibrary.simpleMessage(
+      "Sizin müziğiniz, sizin tarzınız",
+    ),
   };
 }

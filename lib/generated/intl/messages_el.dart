@@ -20,6 +20,8 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'el';
 
+  static String m0(current) => "Βήμα ${current} από 3";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "about": MessageLookupByLibrary.simpleMessage("Για"),
@@ -74,6 +76,24 @@ class MessageLookup extends MessageLookupByLibrary {
       "Το αντίγραφο ασφαλείας ανέβηκε σωστά.",
     ),
     "close": MessageLookupByLibrary.simpleMessage("Κοντά"),
+    "cloud_b1": MessageLookupByLibrary.simpleMessage(
+      "Συνδεθείτε με ασφάλεια χρησιμοποιώντας τον λογαριασμό σας Joss Red.",
+    ),
+    "cloud_b2": MessageLookupByLibrary.simpleMessage(
+      "Πρόσβαση στις λίστες αναπαραγωγής, τα αγαπημένα και το ιστορικό σας από οποιαδήποτε συσκευή (Windows, Android κ.λπ.) άμεσα.",
+    ),
+    "cloud_b3": MessageLookupByLibrary.simpleMessage(
+      "Έξυπνος συγχρονισμός: Εργαστείτε εκτός σύνδεσης και ανεβάστε αυτόματα αλλαγές όταν ανακτήσετε το διαδίκτυο.",
+    ),
+    "cloud_btn": MessageLookupByLibrary.simpleMessage(
+      "Ενεργοποίηση συγχρονισμού Cloud",
+    ),
+    "cloud_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Συγχρονισμός σε πραγματικό χρόνο με τον Joss Red",
+    ),
+    "cloud_title": MessageLookupByLibrary.simpleMessage(
+      "Λειτουργία Cloud (Συνιστάται)",
+    ),
     "email": MessageLookupByLibrary.simpleMessage("E-mail"),
     "errorOccurred": MessageLookupByLibrary.simpleMessage(
       "Παρουσιάστηκε σφάλμα",
@@ -97,6 +117,22 @@ class MessageLookup extends MessageLookupByLibrary {
     "listeningToEnvironment": MessageLookupByLibrary.simpleMessage(
       "Ακούγοντας το περιβάλλον...",
     ),
+    "local_b1": MessageLookupByLibrary.simpleMessage(
+      "Λειτουργεί χωρίς να χρειάζεται να συνδεθείτε.",
+    ),
+    "local_b2": MessageLookupByLibrary.simpleMessage(
+      "Ολόκληρη η βιβλιοθήκη σας παραμένει αυστηρά σε αυτόν τον υπολογιστή.",
+    ),
+    "local_b3": MessageLookupByLibrary.simpleMessage(
+      "Σημείωση: Δεν υπάρχουν μη αυτόματα αντίγραφα ασφαλείας στο cloud. Εάν χάσετε τη συσκευή σας ή απεγκαταστήσετε την εφαρμογή, τα δεδομένα σας δεν μπορούν να ανακτηθούν.",
+    ),
+    "local_btn": MessageLookupByLibrary.simpleMessage(
+      "Χρησιμοποιήστε μόνο σε αυτήν τη συσκευή",
+    ),
+    "local_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Απόλυτο απόρρητο στη συσκευή σας",
+    ),
+    "local_title": MessageLookupByLibrary.simpleMessage("Τοπική λειτουργία"),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
       "Βεβαιωθείτε ότι η μουσική παίζει αρκετά δυνατά κοντά στο μικρόφωνό σας.",
     ),
@@ -108,6 +144,44 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "musicRecognition": MessageLookupByLibrary.simpleMessage(
       "Αναγνώριση μουσικής",
+    ),
+    "news_btn_app": MessageLookupByLibrary.simpleMessage(
+      "Joss Red App (Play Store)",
+    ),
+    "news_btn_dismiss": MessageLookupByLibrary.simpleMessage("Κατανοητό"),
+    "news_btn_web": MessageLookupByLibrary.simpleMessage("Joss Red Web"),
+    "news_card_subtitle": MessageLookupByLibrary.simpleMessage(
+      "100% συγχρονισμός με τον Joss Red, playlist με φίλους και πολλά άλλα. Πατήστε για να δείτε τι νέο υπάρχει.",
+    ),
+    "news_card_title": MessageLookupByLibrary.simpleMessage(
+      "Η Estrella Music έχει εξελιχθεί!",
+    ),
+    "news_dialog_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "Για να προσθέσετε φίλους, να αποδεχτείτε αιτήματα ή να διαχειριστείτε το προφίλ ασφαλείας σας, χρησιμοποιήστε το Joss Red στις επίσημες πλατφόρμες του:",
+    ),
+    "news_dialog_section_friends": MessageLookupByLibrary.simpleMessage(
+      "Διαχείριση φίλων και λογαριασμού:",
+    ),
+    "news_dialog_title": MessageLookupByLibrary.simpleMessage(
+      "Estrella Music News",
+    ),
+    "news_item_collab_desc": MessageLookupByLibrary.simpleMessage(
+      "Δημιουργήστε λίστες αναπαραγωγής με τους φίλους σας! Όταν δημιουργείτε μια λίστα αναπαραγωγής, επιλέξτε το πλαίσιο ελέγχου Συνεργασία και επιλέξτε τους φίλους σας για επεξεργασία μαζί.",
+    ),
+    "news_item_collab_title": MessageLookupByLibrary.simpleMessage(
+      "Συνεργατικές λίστες αναπαραγωγής",
+    ),
+    "news_item_sync_desc": MessageLookupByLibrary.simpleMessage(
+      "Οι λίστες αναπαραγωγής και τα αγαπημένα σας αποθηκεύονται και συγχρονίζονται αυτόματα στο cloud με τον κύριο λογαριασμό σας Joss Red.",
+    ),
+    "news_item_sync_title": MessageLookupByLibrary.simpleMessage(
+      "Πλήρης ενσωμάτωση με τον Joss Red",
+    ),
+    "news_item_trans_desc": MessageLookupByLibrary.simpleMessage(
+      "Δεν χρειάζεται πλέον να κάνετε κλικ στα κουμπιά μη αυτόματου συγχρονισμού. Ο νέος κινητήρας είναι υπεύθυνος για την αυτόματη αλλαγή ταχυτήτων πάνω-κάτω.",
+    ),
+    "news_item_trans_title": MessageLookupByLibrary.simpleMessage(
+      "Διαφανής συγχρονισμός",
     ),
     "noMatchInstruction": MessageLookupByLibrary.simpleMessage(
       "Δεν ήταν δυνατή η εύρεση τραγουδιών στον ηχογραφημένο ήχο",
@@ -126,6 +200,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "readMore": MessageLookupByLibrary.simpleMessage("Διαβάστε περισσότερα"),
     "recentSearches": MessageLookupByLibrary.simpleMessage(
       "Πρόσφατες αναζητήσεις",
+    ),
+    "recommend_cloud": MessageLookupByLibrary.simpleMessage(
+      "Συνιστούμε να ενεργοποιήσετε τη λειτουργία Cloud για μια εμπειρία παρόμοια με το Spotify: συγχρονισμός σε πραγματικό χρόνο μεταξύ όλων των συσκευών σας και αυτόματη δημιουργία αντιγράφων ασφαλείας χωρίς να χρειάζεται να κάνετε τίποτα.",
     ),
     "reproducedBy": MessageLookupByLibrary.simpleMessage("Αναπαράγεται από"),
     "searchInLibrary": MessageLookupByLibrary.simpleMessage(
@@ -151,10 +228,23 @@ class MessageLookup extends MessageLookupByLibrary {
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
       "Αναζήτηση στη βάση δεδομένων Shazam για αγώνες...",
     ),
+    "slide_indicator": m0,
     "songFound": MessageLookupByLibrary.simpleMessage("Το τραγούδι βρέθηκε!"),
     "songPitch": MessageLookupByLibrary.simpleMessage("τόνο τραγουδιού"),
     "speedAndPitch": MessageLookupByLibrary.simpleMessage("Ταχύτητα και Βήμα"),
+    "swipe_prompt": MessageLookupByLibrary.simpleMessage(
+      "Σύρετε για να εξερευνήσετε τις επιλογές ➔",
+    ),
     "username": MessageLookupByLibrary.simpleMessage("Όνομα χρήστη"),
     "video": MessageLookupByLibrary.simpleMessage("Βίντεο"),
+    "welcome_intro": MessageLookupByLibrary.simpleMessage(
+      "Έχουμε εκσυγχρονίσει την πλατφόρμα μας. Το παλιό σύστημα μη αυτόματης μεταφόρτωσης αντιγράφων ασφαλείας έχει απενεργοποιηθεί. Τώρα έχετε δύο ξεκάθαρους τρόπους διαχείρισης της μουσικής σας βιβλιοθήκης.",
+    ),
+    "welcome_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Επιλέξτε πώς θέλετε να ζήσετε την εμπειρία της Estrella Music από τώρα και στο εξής.",
+    ),
+    "welcome_title": MessageLookupByLibrary.simpleMessage(
+      "Η μουσική σου, ο τρόπος σου",
+    ),
   };
 }

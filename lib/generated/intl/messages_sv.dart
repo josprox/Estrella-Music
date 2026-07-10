@@ -20,6 +20,8 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'sv';
 
+  static String m0(current) => "Steg ${current} av 3";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "CreateNewPlaylist": MessageLookupByLibrary.simpleMessage(
@@ -129,6 +131,24 @@ class MessageLookup extends MessageLookupByLibrary {
       "Klicka här för att rensa cachade miniatyrer/bilder. (Rekommenderas inte om du inte vill uppdatera cachad bilddata)",
     ),
     "close": MessageLookupByLibrary.simpleMessage("Nära"),
+    "cloud_b1": MessageLookupByLibrary.simpleMessage(
+      "Logga in säkert med ditt Joss Red-konto.",
+    ),
+    "cloud_b2": MessageLookupByLibrary.simpleMessage(
+      "Få åtkomst till dina spellistor, favoriter och historik från vilken enhet som helst (Windows, Android, etc.) direkt.",
+    ),
+    "cloud_b3": MessageLookupByLibrary.simpleMessage(
+      "Smart Sync: Arbeta offline och ladda upp ändringar automatiskt när du återställer internet.",
+    ),
+    "cloud_btn": MessageLookupByLibrary.simpleMessage(
+      "Aktivera molnsynkronisering",
+    ),
+    "cloud_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Realtidssynkronisering med Joss Red",
+    ),
+    "cloud_title": MessageLookupByLibrary.simpleMessage(
+      "Molnläge (rekommenderas)",
+    ),
     "communityplaylists": MessageLookupByLibrary.simpleMessage(
       "Communityspellistor",
     ),
@@ -272,6 +292,22 @@ class MessageLookup extends MessageLookupByLibrary {
     "listeningToEnvironment": MessageLookupByLibrary.simpleMessage(
       "Att lyssna på miljön...",
     ),
+    "local_b1": MessageLookupByLibrary.simpleMessage(
+      "Det fungerar utan att behöva logga in.",
+    ),
+    "local_b2": MessageLookupByLibrary.simpleMessage(
+      "Hela ditt bibliotek förblir strikt på den här datorn.",
+    ),
+    "local_b3": MessageLookupByLibrary.simpleMessage(
+      "Obs: Inga manuella molnsäkerhetskopieringar. Om du tappar bort din enhet eller avinstallerar appen kan din data inte återställas.",
+    ),
+    "local_btn": MessageLookupByLibrary.simpleMessage(
+      "Använd endast på denna enhet",
+    ),
+    "local_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Absolut integritet på din enhet",
+    ),
+    "local_title": MessageLookupByLibrary.simpleMessage("Lokalt läge"),
     "low": MessageLookupByLibrary.simpleMessage("Låg"),
     "lyricsNotAvailable": MessageLookupByLibrary.simpleMessage(
       "Låttexten är inte tillgänglig!",
@@ -292,6 +328,44 @@ class MessageLookup extends MessageLookupByLibrary {
     "networkError1": MessageLookupByLibrary.simpleMessage("Nätverksfel!"),
     "newVersionAvailable": MessageLookupByLibrary.simpleMessage(
       "Ny version tillgänglig!",
+    ),
+    "news_btn_app": MessageLookupByLibrary.simpleMessage(
+      "Joss Red-appen (Play Store)",
+    ),
+    "news_btn_dismiss": MessageLookupByLibrary.simpleMessage("Förstått"),
+    "news_btn_web": MessageLookupByLibrary.simpleMessage("Joss Red Web"),
+    "news_card_subtitle": MessageLookupByLibrary.simpleMessage(
+      "100 % synkronisering med Joss Red, spellistor med vänner och mycket mer. Tryck för att se vad som är nytt.",
+    ),
+    "news_card_title": MessageLookupByLibrary.simpleMessage(
+      "Estrella Music har utvecklats!",
+    ),
+    "news_dialog_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "För att lägga till vänner, acceptera förfrågningar eller hantera din säkerhetsprofil, använd Joss Red på dess officiella plattformar:",
+    ),
+    "news_dialog_section_friends": MessageLookupByLibrary.simpleMessage(
+      "Vänner och kontohantering:",
+    ),
+    "news_dialog_title": MessageLookupByLibrary.simpleMessage(
+      "Estrella musiknyheter",
+    ),
+    "news_item_collab_desc": MessageLookupByLibrary.simpleMessage(
+      "Skapa spellistor med dina vänner! När du skapar en spellista markerar du kryssrutan Collaborative och väljer dina vänner att redigera tillsammans.",
+    ),
+    "news_item_collab_title": MessageLookupByLibrary.simpleMessage(
+      "Samarbetande spellistor",
+    ),
+    "news_item_sync_desc": MessageLookupByLibrary.simpleMessage(
+      "Dina spellistor och favoriter sparas nu och synkroniseras i molnet automatiskt med ditt Joss Red-huvudkonto.",
+    ),
+    "news_item_sync_title": MessageLookupByLibrary.simpleMessage(
+      "Full integration med Joss Red",
+    ),
+    "news_item_trans_desc": MessageLookupByLibrary.simpleMessage(
+      "Du behöver inte längre klicka på knapparna för manuell synkronisering; Den nya motorn är ansvarig för att växla upp och ner automatiskt.",
+    ),
+    "news_item_trans_title": MessageLookupByLibrary.simpleMessage(
+      "Transparent synkronisering",
     ),
     "noBookmarks": MessageLookupByLibrary.simpleMessage("Inga bokmärken!"),
     "noLibPlaylist": MessageLookupByLibrary.simpleMessage(
@@ -359,6 +433,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "readMore": MessageLookupByLibrary.simpleMessage("Läs mer"),
     "recentSearches": MessageLookupByLibrary.simpleMessage("Senaste sökningar"),
     "recentlyPlayed": MessageLookupByLibrary.simpleMessage("Senast Spelat"),
+    "recommend_cloud": MessageLookupByLibrary.simpleMessage(
+      "Vi rekommenderar att du aktiverar molnläget för en Spotify-liknande upplevelse: realtidssynkronisering mellan alla dina enheter och automatisk säkerhetskopiering utan att du behöver göra något.",
+    ),
     "removeFromLib": MessageLookupByLibrary.simpleMessage(
       "Ta bort låt från bibliotek",
     ),
@@ -436,6 +513,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Sovtimer inställd",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Sovtimer"),
+    "slide_indicator": m0,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "Låten har lagts till i spellistan!",
     ),
@@ -468,6 +546,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Kvalitet på streamad musik",
     ),
     "subscribers": MessageLookupByLibrary.simpleMessage("följare"),
+    "swipe_prompt": MessageLookupByLibrary.simpleMessage(
+      "Svep för att utforska alternativen ➔",
+    ),
     "synced": MessageLookupByLibrary.simpleMessage("Synkad"),
     "syncedLyricsNotAvailable": MessageLookupByLibrary.simpleMessage(
       "Synkroniserad låttext är inte tillgänglig!",
@@ -485,5 +566,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "videos": MessageLookupByLibrary.simpleMessage("Videoklipp"),
     "viewAll": MessageLookupByLibrary.simpleMessage("Visa allt"),
     "viewArtist": MessageLookupByLibrary.simpleMessage("Visa Artist"),
+    "welcome_intro": MessageLookupByLibrary.simpleMessage(
+      "Vi har moderniserat vår plattform. Det gamla systemet för uppladdning av manuella säkerhetskopior har inaktiverats. Du har nu två tydliga sätt att hantera ditt musikbibliotek.",
+    ),
+    "welcome_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Välj hur du vill uppleva Estrella Music från och med nu.",
+    ),
+    "welcome_title": MessageLookupByLibrary.simpleMessage(
+      "Din musik, på ditt sätt",
+    ),
   };
 }

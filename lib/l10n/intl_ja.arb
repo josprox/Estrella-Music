@@ -554,5 +554,19 @@
   "cloud_b2": "あらゆるデバイス (Windows、Android など) からプレイリスト、お気に入り、履歴に即座にアクセスできます。",
   "cloud_b3": "スマート シンク: オフラインで作業し、インターネットが回復したときに変更を自動的にアップロードします。",
   "cloud_btn": "クラウド同期を有効にする",
-  "slide_indicator": "ステップ {current}/3"
+  "slide_indicator": "ステップ {current}/3",
+  "news_card_title": "エストレヤミュージックが進化しました！",
+  "news_card_subtitle": "Joss Red との 100% 同期、友達とのプレイリストなど。タップすると新機能が表示されます。",
+  "news_dialog_title": "エストレージャ音楽ニュース",
+  "news_item_sync_title": "Joss Red との完全な統合",
+  "news_item_sync_desc": "プレイリストとお気に入りはクラウドに保存され、メインの Joss Red アカウントと自動的に同期されます。",
+  "news_item_collab_title": "共同プレイリスト",
+  "news_item_collab_desc": "友達と一緒にプレイリストを作成しましょう！プレイリストを作成するときは、「共同作業」チェックボックスを選択し、一緒に編集する友達を選択します。",
+  "news_item_trans_title": "透過的な同期",
+  "news_item_trans_desc": "手動同期ボタンをクリックする必要はなくなりました。新しいモーターは自動的にシフトアップとシフトダウンを担当します。",
+  "news_dialog_section_friends": "友達とアカウントの管理:",
+  "news_dialog_friends_desc": "友達を追加したり、リクエストを受け入れたり、セキュリティ プロファイルを管理したりするには、公式プラットフォームで Joss Red を使用してください。",
+  "news_btn_app": "Joss Red アプリ (Play ストア)",
+  "news_btn_web": "ジョス レッド ウェブ",
+  "news_btn_dismiss": "理解した"
 }

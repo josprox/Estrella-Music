@@ -466,5 +466,19 @@
   "cloud_b2": "Krijg direct toegang tot uw afspeellijsten, favorieten en geschiedenis vanaf elk apparaat (Windows, Android, enz.).",
   "cloud_b3": "Slimme synchronisatie: werk offline en upload wijzigingen automatisch wanneer u weer internet hebt.",
   "cloud_btn": "Activeer Cloud-synchronisatie",
-  "slide_indicator": "Stap {current} van 3"
+  "slide_indicator": "Stap {current} van 3",
+  "news_card_title": "Estrella Muziek is geëvolueerd!",
+  "news_card_subtitle": "100% synchronisatie met Joss Red, afspeellijsten met vrienden en nog veel meer. Tik om te zien wat er nieuw is.",
+  "news_dialog_title": "Estrella Muzieknieuws",
+  "news_item_sync_title": "Volledige integratie met Joss Red",
+  "news_item_sync_desc": "Uw afspeellijsten en favorieten worden nu automatisch in de cloud opgeslagen en gesynchroniseerd met uw hoofdaccount van Joss Red.",
+  "news_item_collab_title": "Gezamenlijke afspeellijsten",
+  "news_item_collab_desc": "Maak afspeellijsten met je vrienden! Wanneer u een afspeellijst maakt, selecteert u het selectievakje Samenwerken en kiest u uw vrienden om samen te bewerken.",
+  "news_item_trans_title": "Transparante synchronisatie",
+  "news_item_trans_desc": "U hoeft niet langer op handmatige synchronisatieknoppen te klikken; De nieuwe motor is verantwoordelijk voor het automatisch op- en terugschakelen.",
+  "news_dialog_section_friends": "Vrienden- en accountbeheer:",
+  "news_dialog_friends_desc": "Om vrienden toe te voegen, verzoeken te accepteren of uw beveiligingsprofiel te beheren, gebruikt u Joss Red op zijn officiële platforms:",
+  "news_btn_app": "Joss Red-app (Play Store)",
+  "news_btn_web": "Joss Rood Web",
+  "news_btn_dismiss": "Begrepen"
 }

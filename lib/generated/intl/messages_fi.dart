@@ -20,6 +20,8 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'fi';
 
+  static String m0(current) => "Vaihe ${current}/3";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "CreateNewPlaylist": MessageLookupByLibrary.simpleMessage(
@@ -123,6 +125,22 @@ class MessageLookup extends MessageLookupByLibrary {
       "Uniajastin peruutettu",
     ),
     "close": MessageLookupByLibrary.simpleMessage("Lähellä"),
+    "cloud_b1": MessageLookupByLibrary.simpleMessage(
+      "Kirjaudu sisään turvallisesti Joss Red -tililläsi.",
+    ),
+    "cloud_b2": MessageLookupByLibrary.simpleMessage(
+      "Käytä soittolistojasi, suosikkejasi ja historiaasi välittömästi miltä tahansa laitteelta (Windows, Android jne.).",
+    ),
+    "cloud_b3": MessageLookupByLibrary.simpleMessage(
+      "Smart Sync: Työskentele offline-tilassa ja lataa muutokset automaattisesti, kun internet palautuu.",
+    ),
+    "cloud_btn": MessageLookupByLibrary.simpleMessage(
+      "Aktivoi pilvisynkronointi",
+    ),
+    "cloud_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Reaaliaikainen synkronointi Joss Redin kanssa",
+    ),
+    "cloud_title": MessageLookupByLibrary.simpleMessage("Pilvitila (suositus)"),
     "communityplaylists": MessageLookupByLibrary.simpleMessage(
       "Yhteisön soittolistat",
     ),
@@ -246,6 +264,22 @@ class MessageLookup extends MessageLookupByLibrary {
       "Kuuntelee ympäristöä...",
     ),
     "local": MessageLookupByLibrary.simpleMessage("Paikallinen"),
+    "local_b1": MessageLookupByLibrary.simpleMessage(
+      "Se toimii ilman tarvetta kirjautua sisään.",
+    ),
+    "local_b2": MessageLookupByLibrary.simpleMessage(
+      "Koko kirjastosi pysyy tiukasti tällä tietokoneella.",
+    ),
+    "local_b3": MessageLookupByLibrary.simpleMessage(
+      "Huomautus: Ei manuaalisia pilvivarmuuskopioita. Jos kadotat laitteesi tai poistat sovelluksen, tietojasi ei voida palauttaa.",
+    ),
+    "local_btn": MessageLookupByLibrary.simpleMessage(
+      "Käytä vain tässä laitteessa",
+    ),
+    "local_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Täydellinen yksityisyys laitteellasi",
+    ),
+    "local_title": MessageLookupByLibrary.simpleMessage("Paikallinen tila"),
     "low": MessageLookupByLibrary.simpleMessage("Matala"),
     "lyricsNotAvailable": MessageLookupByLibrary.simpleMessage(
       "Sanoituksia ei ole saatavilla!",
@@ -266,6 +300,44 @@ class MessageLookup extends MessageLookupByLibrary {
     "networkError1": MessageLookupByLibrary.simpleMessage("Oho, verkkovirhe!"),
     "newVersionAvailable": MessageLookupByLibrary.simpleMessage(
       "Uusi versio saatavilla!",
+    ),
+    "news_btn_app": MessageLookupByLibrary.simpleMessage(
+      "Joss Red -sovellus (Play Kauppa)",
+    ),
+    "news_btn_dismiss": MessageLookupByLibrary.simpleMessage("Ymmärretty"),
+    "news_btn_web": MessageLookupByLibrary.simpleMessage("Joss Red Web"),
+    "news_card_subtitle": MessageLookupByLibrary.simpleMessage(
+      "100 % synkronointi Joss Redin kanssa, soittolistat ystävien kanssa ja paljon muuta. Napauta nähdäksesi mitä uutta.",
+    ),
+    "news_card_title": MessageLookupByLibrary.simpleMessage(
+      "Estrella Music on kehittynyt!",
+    ),
+    "news_dialog_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "Jos haluat lisätä ystäviä, hyväksyä pyyntöjä tai hallita suojausprofiiliasi, käytä Joss Rediä sen virallisilla alustoilla:",
+    ),
+    "news_dialog_section_friends": MessageLookupByLibrary.simpleMessage(
+      "Ystävät ja tilinhallinta:",
+    ),
+    "news_dialog_title": MessageLookupByLibrary.simpleMessage(
+      "Estrella musiikkiuutisia",
+    ),
+    "news_item_collab_desc": MessageLookupByLibrary.simpleMessage(
+      "Luo soittolistoja ystäviesi kanssa! Kun luot soittolistaa, valitse Yhteistyö-valintaruutu ja valitse ystäväsi muokattaviksi yhdessä.",
+    ),
+    "news_item_collab_title": MessageLookupByLibrary.simpleMessage(
+      "Yhteistyösoittolistat",
+    ),
+    "news_item_sync_desc": MessageLookupByLibrary.simpleMessage(
+      "Soittolistasi ja suosikkisi tallennetaan nyt ja synkronoidaan automaattisesti pilveen Joss Red -päätilisi kanssa.",
+    ),
+    "news_item_sync_title": MessageLookupByLibrary.simpleMessage(
+      "Täysi integrointi Joss Redin kanssa",
+    ),
+    "news_item_trans_desc": MessageLookupByLibrary.simpleMessage(
+      "Sinun ei enää tarvitse napsauttaa manuaalisia synkronointipainikkeita. Uusi moottori vastaa automaattisesti ylös ja alas vaihtamisesta.",
+    ),
+    "news_item_trans_title": MessageLookupByLibrary.simpleMessage(
+      "Läpinäkyvä synkronointi",
     ),
     "noBookmarks": MessageLookupByLibrary.simpleMessage("Ei kirjanmerkkejä!"),
     "noLibPlaylist": MessageLookupByLibrary.simpleMessage("Ei soittolistoja!"),
@@ -334,6 +406,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Viimeaikaiset haut",
     ),
     "recentlyPlayed": MessageLookupByLibrary.simpleMessage("Viimeksi soitetut"),
+    "recommend_cloud": MessageLookupByLibrary.simpleMessage(
+      "Suosittelemme Cloud Moden aktivointia Spotifyn kaltaisen kokemuksen saamiseksi: reaaliaikainen synkronointi kaikkien laitteidesi välillä ja automaattinen varmuuskopiointi ilman, että sinun tarvitsee tehdä mitään.",
+    ),
     "removeFromLib": MessageLookupByLibrary.simpleMessage("Poista kirjastosta"),
     "removeFromPlaylist": MessageLookupByLibrary.simpleMessage(
       "Poista soittolistalta",
@@ -402,6 +477,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Uniajastin on asetettu",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Uniajastin"),
+    "slide_indicator": m0,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "Kappale lisätty soittolistaan!",
     ),
@@ -444,6 +520,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Valitse suoratoistettavan musiikin laatu",
     ),
     "subscribers": MessageLookupByLibrary.simpleMessage("tilaajat"),
+    "swipe_prompt": MessageLookupByLibrary.simpleMessage(
+      "Selaa vaihtoehtoja pyyhkäisemällä ➔",
+    ),
     "synced": MessageLookupByLibrary.simpleMessage("Synkronoitu"),
     "syncedLyricsNotAvailable": MessageLookupByLibrary.simpleMessage(
       "Synkronoituja sanoituksia ei ole saatavilla!",
@@ -463,5 +542,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "videos": MessageLookupByLibrary.simpleMessage("Videot"),
     "viewAll": MessageLookupByLibrary.simpleMessage("Näytä kaikki"),
     "viewArtist": MessageLookupByLibrary.simpleMessage("Näytä artisti"),
+    "welcome_intro": MessageLookupByLibrary.simpleMessage(
+      "Olemme modernisoineet alustamme. Vanha manuaalisten varmuuskopioiden latausjärjestelmä on poistettu käytöstä. Sinulla on nyt kaksi selkeää tapaa hallita musiikkikirjastoasi.",
+    ),
+    "welcome_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Valitse, miten haluat kokea Estrella Musicin tästä eteenpäin.",
+    ),
+    "welcome_title": MessageLookupByLibrary.simpleMessage(
+      "Sinun musiikkisi, sinun tapasi",
+    ),
   };
 }

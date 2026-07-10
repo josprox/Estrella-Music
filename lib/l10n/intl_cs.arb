@@ -555,5 +555,19 @@
   "cloud_b2": "Okamžitý přístup ke svým seznamům skladeb, oblíbeným položkám a historii z jakéhokoli zařízení (Windows, Android atd.).",
   "cloud_b3": "Smart Sync: Pracujte offline a automaticky nahrajte změny, když obnovíte internet.",
   "cloud_btn": "Aktivujte synchronizaci cloudu",
-  "slide_indicator": "Krok {current} ze 3"
+  "slide_indicator": "Krok {current} ze 3",
+  "news_card_title": "Estrella Music se vyvinula!",
+  "news_card_subtitle": "100% synchronizace s Joss Red, seznamy skladeb s přáteli a mnoho dalšího. Klepnutím zobrazíte, co je nového.",
+  "news_dialog_title": "Estrella Music News",
+  "news_item_sync_title": "Plná integrace s Joss Red",
+  "news_item_sync_desc": "Vaše seznamy skladeb a oblíbené položky se nyní ukládají a automaticky synchronizují v cloudu s vaším hlavním účtem Joss Red.",
+  "news_item_collab_title": "Seznamy skladeb pro spolupráci",
+  "news_item_collab_desc": "Vytvářejte seznamy skladeb se svými přáteli! Při vytváření seznamu skladeb zaškrtněte políčko Spolupráce a vyberte přátele, které chcete společně upravovat.",
+  "news_item_trans_title": "Transparentní synchronizace",
+  "news_item_trans_desc": "Již nemusíte klikat na tlačítka ruční synchronizace; Nový motor je zodpovědný za automatické řazení nahoru a dolů.",
+  "news_dialog_section_friends": "Přátelé a správa účtu:",
+  "news_dialog_friends_desc": "Chcete-li přidat přátele, přijímat žádosti nebo spravovat svůj bezpečnostní profil, použijte Joss Red na jeho oficiálních platformách:",
+  "news_btn_app": "Aplikace Joss Red (Obchod Play)",
+  "news_btn_web": "Joss Red Web",
+  "news_btn_dismiss": "Rozuměl"
 }

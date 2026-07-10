@@ -20,6 +20,8 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'cs';
 
+  static String m0(current) => "Krok ${current} ze 3";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "CreateNewPlaylist": MessageLookupByLibrary.simpleMessage(
@@ -177,6 +179,24 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "close": MessageLookupByLibrary.simpleMessage("Blízko"),
     "closeApp": MessageLookupByLibrary.simpleMessage("Zavřít aplikaci"),
+    "cloud_b1": MessageLookupByLibrary.simpleMessage(
+      "Přihlaste se bezpečně pomocí svého účtu Joss Red.",
+    ),
+    "cloud_b2": MessageLookupByLibrary.simpleMessage(
+      "Okamžitý přístup ke svým seznamům skladeb, oblíbeným položkám a historii z jakéhokoli zařízení (Windows, Android atd.).",
+    ),
+    "cloud_b3": MessageLookupByLibrary.simpleMessage(
+      "Smart Sync: Pracujte offline a automaticky nahrajte změny, když obnovíte internet.",
+    ),
+    "cloud_btn": MessageLookupByLibrary.simpleMessage(
+      "Aktivujte synchronizaci cloudu",
+    ),
+    "cloud_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Synchronizace v reálném čase s Joss Red",
+    ),
+    "cloud_title": MessageLookupByLibrary.simpleMessage(
+      "Cloudový režim (doporučeno)",
+    ),
     "communityplaylists": MessageLookupByLibrary.simpleMessage(
       "Komunitní playlisty",
     ),
@@ -417,6 +437,22 @@ class MessageLookup extends MessageLookupByLibrary {
       "Naslouchat prostředí...",
     ),
     "local": MessageLookupByLibrary.simpleMessage("Místní"),
+    "local_b1": MessageLookupByLibrary.simpleMessage(
+      "Funguje bez nutnosti přihlášení.",
+    ),
+    "local_b2": MessageLookupByLibrary.simpleMessage(
+      "Celá vaše knihovna zůstává výhradně na tomto počítači.",
+    ),
+    "local_b3": MessageLookupByLibrary.simpleMessage(
+      "Poznámka: Žádné ruční cloudové zálohy. Pokud ztratíte zařízení nebo odinstalujete aplikaci, vaše data nebude možné obnovit.",
+    ),
+    "local_btn": MessageLookupByLibrary.simpleMessage(
+      "Používejte pouze na tomto zařízení",
+    ),
+    "local_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Absolutní soukromí na vašem zařízení",
+    ),
+    "local_title": MessageLookupByLibrary.simpleMessage("Místní režim"),
     "loudnessDb": MessageLookupByLibrary.simpleMessage("Hlasitost (Db)"),
     "loudnessNormalization": MessageLookupByLibrary.simpleMessage(
       "Normalizace hlasitosti",
@@ -451,6 +487,44 @@ class MessageLookup extends MessageLookupByLibrary {
     "networkError1": MessageLookupByLibrary.simpleMessage("Ups chyba sítě!"),
     "newVersionAvailable": MessageLookupByLibrary.simpleMessage(
       "K dispozici je nová verze!",
+    ),
+    "news_btn_app": MessageLookupByLibrary.simpleMessage(
+      "Aplikace Joss Red (Obchod Play)",
+    ),
+    "news_btn_dismiss": MessageLookupByLibrary.simpleMessage("Rozuměl"),
+    "news_btn_web": MessageLookupByLibrary.simpleMessage("Joss Red Web"),
+    "news_card_subtitle": MessageLookupByLibrary.simpleMessage(
+      "100% synchronizace s Joss Red, seznamy skladeb s přáteli a mnoho dalšího. Klepnutím zobrazíte, co je nového.",
+    ),
+    "news_card_title": MessageLookupByLibrary.simpleMessage(
+      "Estrella Music se vyvinula!",
+    ),
+    "news_dialog_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "Chcete-li přidat přátele, přijímat žádosti nebo spravovat svůj bezpečnostní profil, použijte Joss Red na jeho oficiálních platformách:",
+    ),
+    "news_dialog_section_friends": MessageLookupByLibrary.simpleMessage(
+      "Přátelé a správa účtu:",
+    ),
+    "news_dialog_title": MessageLookupByLibrary.simpleMessage(
+      "Estrella Music News",
+    ),
+    "news_item_collab_desc": MessageLookupByLibrary.simpleMessage(
+      "Vytvářejte seznamy skladeb se svými přáteli! Při vytváření seznamu skladeb zaškrtněte políčko Spolupráce a vyberte přátele, které chcete společně upravovat.",
+    ),
+    "news_item_collab_title": MessageLookupByLibrary.simpleMessage(
+      "Seznamy skladeb pro spolupráci",
+    ),
+    "news_item_sync_desc": MessageLookupByLibrary.simpleMessage(
+      "Vaše seznamy skladeb a oblíbené položky se nyní ukládají a automaticky synchronizují v cloudu s vaším hlavním účtem Joss Red.",
+    ),
+    "news_item_sync_title": MessageLookupByLibrary.simpleMessage(
+      "Plná integrace s Joss Red",
+    ),
+    "news_item_trans_desc": MessageLookupByLibrary.simpleMessage(
+      "Již nemusíte klikat na tlačítka ruční synchronizace; Nový motor je zodpovědný za automatické řazení nahoru a dolů.",
+    ),
+    "news_item_trans_title": MessageLookupByLibrary.simpleMessage(
+      "Transparentní synchronizace",
     ),
     "noBookmarks": MessageLookupByLibrary.simpleMessage("Žádné záložky!"),
     "noLibPlaylist": MessageLookupByLibrary.simpleMessage(
@@ -567,6 +641,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Nedávná vyhledávání",
     ),
     "recentlyPlayed": MessageLookupByLibrary.simpleMessage("Nedávno přehrané"),
+    "recommend_cloud": MessageLookupByLibrary.simpleMessage(
+      "Pro zážitek podobný Spotify doporučujeme aktivovat Cloud Mode: synchronizace mezi všemi vašimi zařízeními v reálném čase a automatické zálohování, aniž byste museli cokoli dělat.",
+    ),
     "removeFromLib": MessageLookupByLibrary.simpleMessage(
       "Odebrat z knihovny skladeb",
     ),
@@ -678,6 +755,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Váš časovač spánku byl spuštěn",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Časovač spánku"),
+    "slide_indicator": m0,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "Skladba přidána do playlistu!",
     ),
@@ -719,6 +797,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Kvalita hudebního streamu",
     ),
     "subscribers": MessageLookupByLibrary.simpleMessage("odběratelé"),
+    "swipe_prompt": MessageLookupByLibrary.simpleMessage(
+      "Přejetím prozkoumejte možnosti ➔",
+    ),
     "synced": MessageLookupByLibrary.simpleMessage("Synchronizovaný"),
     "syncedLyricsNotAvailable": MessageLookupByLibrary.simpleMessage(
       "Synchronizovaný text není k dispozici!",
@@ -741,5 +822,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "videos": MessageLookupByLibrary.simpleMessage("Videa"),
     "viewAll": MessageLookupByLibrary.simpleMessage("Zobrazit vše"),
     "viewArtist": MessageLookupByLibrary.simpleMessage("Zobrazit interpreta"),
+    "welcome_intro": MessageLookupByLibrary.simpleMessage(
+      "Modernizovali jsme naši platformu. Starý systém nahrávání ručních záloh byl deaktivován. Nyní máte dva jasné způsoby, jak spravovat svou hudební knihovnu.",
+    ),
+    "welcome_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Vyberte si, jak chcete od této chvíle zažít Estrella Music.",
+    ),
+    "welcome_title": MessageLookupByLibrary.simpleMessage(
+      "Vaše hudba, vaše cesta",
+    ),
   };
 }

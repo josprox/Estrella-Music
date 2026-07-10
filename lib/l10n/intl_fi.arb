@@ -432,5 +432,19 @@
   "cloud_b2": "Käytä soittolistojasi, suosikkejasi ja historiaasi välittömästi miltä tahansa laitteelta (Windows, Android jne.).",
   "cloud_b3": "Smart Sync: Työskentele offline-tilassa ja lataa muutokset automaattisesti, kun internet palautuu.",
   "cloud_btn": "Aktivoi pilvisynkronointi",
-  "slide_indicator": "Vaihe {current}/3"
+  "slide_indicator": "Vaihe {current}/3",
+  "news_card_title": "Estrella Music on kehittynyt!",
+  "news_card_subtitle": "100 % synkronointi Joss Redin kanssa, soittolistat ystävien kanssa ja paljon muuta. Napauta nähdäksesi mitä uutta.",
+  "news_dialog_title": "Estrella musiikkiuutisia",
+  "news_item_sync_title": "Täysi integrointi Joss Redin kanssa",
+  "news_item_sync_desc": "Soittolistasi ja suosikkisi tallennetaan nyt ja synkronoidaan automaattisesti pilveen Joss Red -päätilisi kanssa.",
+  "news_item_collab_title": "Yhteistyösoittolistat",
+  "news_item_collab_desc": "Luo soittolistoja ystäviesi kanssa! Kun luot soittolistaa, valitse Yhteistyö-valintaruutu ja valitse ystäväsi muokattaviksi yhdessä.",
+  "news_item_trans_title": "Läpinäkyvä synkronointi",
+  "news_item_trans_desc": "Sinun ei enää tarvitse napsauttaa manuaalisia synkronointipainikkeita. Uusi moottori vastaa automaattisesti ylös ja alas vaihtamisesta.",
+  "news_dialog_section_friends": "Ystävät ja tilinhallinta:",
+  "news_dialog_friends_desc": "Jos haluat lisätä ystäviä, hyväksyä pyyntöjä tai hallita suojausprofiiliasi, käytä Joss Rediä sen virallisilla alustoilla:",
+  "news_btn_app": "Joss Red -sovellus (Play Kauppa)",
+  "news_btn_web": "Joss Red Web",
+  "news_btn_dismiss": "Ymmärretty"
 }

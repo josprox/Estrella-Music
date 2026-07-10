@@ -555,5 +555,19 @@
   "cloud_b2": "Çalma listelerinize, favorilerinize ve geçmişinize herhangi bir cihazdan (Windows, Android vb.) anında erişin.",
   "cloud_b3": "Akıllı Senkronizasyon: Çevrimdışı çalışın ve interneti kurtardığınızda değişiklikleri otomatik olarak yükleyin.",
   "cloud_btn": "Bulut senkronizasyonunu etkinleştir",
-  "slide_indicator": "Adım {current} / 3"
+  "slide_indicator": "Adım {current} / 3",
+  "news_card_title": "Estrella Müzik gelişti!",
+  "news_card_subtitle": "Joss Red ile %100 senkronizasyon, arkadaşlarla çalma listeleri ve çok daha fazlası. Yenilikleri görmek için dokunun.",
+  "news_dialog_title": "Estrella Müzik Haberleri",
+  "news_item_sync_title": "Joss Red ile Tam Entegrasyon",
+  "news_item_sync_desc": "Çalma listeleriniz ve favorileriniz artık ana Joss Red hesabınızla otomatik olarak buluta kaydediliyor ve senkronize ediliyor.",
+  "news_item_collab_title": "Ortak Çalma Listeleri",
+  "news_item_collab_desc": "Arkadaşlarınızla çalma listeleri oluşturun! Bir çalma listesi oluştururken İşbirliği onay kutusunu seçin ve birlikte düzenleyeceğiniz arkadaşlarınızı seçin.",
+  "news_item_trans_title": "Şeffaf Senkronizasyon",
+  "news_item_trans_desc": "Artık manuel senkronizasyon düğmelerine tıklamanıza gerek yok; Yeni motor, viteslerin otomatik olarak yukarı ve aşağı kaydırılmasından sorumludur.",
+  "news_dialog_section_friends": "Arkadaşlar ve Hesap Yönetimi:",
+  "news_dialog_friends_desc": "Arkadaş eklemek, istekleri kabul etmek veya güvenlik profilinizi yönetmek için lütfen Joss Red'i resmi platformlarında kullanın:",
+  "news_btn_app": "Joss Red Uygulaması (Play Store)",
+  "news_btn_web": "Joss Kırmızı Ağı",
+  "news_btn_dismiss": "Anlaşıldı"
 }

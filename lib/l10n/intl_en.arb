@@ -656,5 +656,19 @@
   "cloud_b2": "Access your playlists, favorites and history from any device (Windows, Android, etc.) instantly.",
   "cloud_b3": "Smart Sync: Work offline and upload changes automatically when you recover internet.",
   "cloud_btn": "Activate Cloud sync",
-  "slide_indicator": "Step {current} of 3"
+  "slide_indicator": "Step {current} of 3",
+  "news_card_title": "Estrella Music has evolved!",
+  "news_card_subtitle": "100% synchronization with Joss Red, playlists with friends and much more. ",
+  "news_dialog_title": "Estrella Music News",
+  "news_item_sync_title": "Full Integration with Joss Red",
+  "news_item_sync_desc": "Your playlists and favorites are now saved and synced in the cloud automatically with your main Joss Red account.",
+  "news_item_collab_title": "Collaborative Playlists",
+  "news_item_collab_desc": "Create playlists with your friends! ",
+  "news_item_trans_title": "Transparent Synchronization",
+  "news_item_trans_desc": "You no longer need to click manual sync buttons; ",
+  "news_dialog_section_friends": "Friends and Account Management:",
+  "news_dialog_friends_desc": "To add friends, accept requests or manage your security profile, please use Joss Red on its official platforms:",
+  "news_btn_app": "Joss Red App (Play Store)",
+  "news_btn_web": "Joss Red Web",
+  "news_btn_dismiss": "Understood"
 }

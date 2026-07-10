@@ -545,5 +545,19 @@
   "cloud_b2": "Akses daftar putar, favorit, dan riwayat Anda dari perangkat apa pun (Windows, Android, dll.) secara instan.",
   "cloud_b3": "Sinkronisasi Cerdas: Bekerja offline dan unggah perubahan secara otomatis saat Anda memulihkan internet.",
   "cloud_btn": "Aktifkan sinkronisasi Cloud",
-  "slide_indicator": "Langkah _{current} dari 3"
+  "slide_indicator": "Langkah _{current} dari 3",
+  "news_card_title": "Musik Estrella telah berevolusi!",
+  "news_card_subtitle": "Sinkronisasi 100% dengan Joss Red, playlist dengan teman, dan banyak lagi. Ketuk untuk melihat apa yang baru.",
+  "news_dialog_title": "Berita Musik Estrella",
+  "news_item_sync_title": "Integrasi Penuh dengan Joss Red",
+  "news_item_sync_desc": "Daftar putar dan favorit Anda kini disimpan dan disinkronkan di cloud secara otomatis dengan akun utama Joss Red Anda.",
+  "news_item_collab_title": "Daftar Putar Kolaboratif",
+  "news_item_collab_desc": "Buat daftar putar dengan teman-teman Anda! Saat membuat daftar putar, pilih kotak centang Kolaboratif dan pilih teman Anda untuk diedit bersama.",
+  "news_item_trans_title": "Sinkronisasi Transparan",
+  "news_item_trans_desc": "Anda tidak perlu lagi mengklik tombol sinkronisasi manual; Motor baru bertanggung jawab untuk berpindah ke atas dan ke bawah secara otomatis.",
+  "news_dialog_section_friends": "Teman dan Manajemen Akun:",
+  "news_dialog_friends_desc": "Untuk menambah teman, menerima permintaan, atau mengelola profil keamanan Anda, silakan gunakan Joss Red di platform resminya:",
+  "news_btn_app": "Aplikasi Joss Red (Play Store)",
+  "news_btn_web": "Joss Web Merah",
+  "news_btn_dismiss": "Dipahami"
 }

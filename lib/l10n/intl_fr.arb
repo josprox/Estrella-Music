@@ -557,5 +557,19 @@
   "cloud_b2": "Accédez instantanément à vos playlists, favoris et historique depuis n’importe quel appareil (Windows, Android, etc.).",
   "cloud_b3": "Smart Sync : travaillez hors ligne et téléchargez automatiquement les modifications lorsque vous récupérez Internet.",
   "cloud_btn": "Activer la synchronisation Cloud",
-  "slide_indicator": "Étape {current} sur 3"
+  "slide_indicator": "Étape {current} sur 3",
+  "news_card_title": "¡Estrella Music ha evolucionado!",
+  "news_card_subtitle": "Synchronisation à 100% avec Joss Red, playlists avec amis et bien plus encore. Appuyez pour voir les nouveautés.",
+  "news_dialog_title": "Actualités musicales Estrella",
+  "news_item_sync_title": "Intégration complète avec Joss Red",
+  "news_item_sync_desc": "Vos playlists et favoris sont désormais enregistrés et synchronisés automatiquement dans le cloud avec votre compte Joss Red principal.",
+  "news_item_collab_title": "Listes de lecture collaboratives",
+  "news_item_collab_desc": "Créez des playlists avec vos amis ! Lors de la création d'une liste de lecture, cochez la case Collaborative et choisissez vos amis à modifier ensemble.",
+  "news_item_trans_title": "Synchronisation transparente",
+  "news_item_trans_desc": "Vous n'avez plus besoin de cliquer sur les boutons de synchronisation manuelle ; Le nouveau moteur est chargé de monter et descendre automatiquement les vitesses.",
+  "news_dialog_section_friends": "Amis et gestion des comptes :",
+  "news_dialog_friends_desc": "Pour ajouter des amis, accepter des demandes ou gérer votre profil de sécurité, veuillez utiliser Joss Red sur ses plateformes officielles :",
+  "news_btn_app": "Application Joss Red (Play Store)",
+  "news_btn_web": "Toile rouge Joss",
+  "news_btn_dismiss": "Compris"
 }

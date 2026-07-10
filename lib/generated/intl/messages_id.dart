@@ -20,6 +20,8 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'id';
 
+  static String m0(current) => "Langkah _${current} dari 3";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "CreateNewPlaylist": MessageLookupByLibrary.simpleMessage(
@@ -181,6 +183,24 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "close": MessageLookupByLibrary.simpleMessage("Menutup"),
     "closeApp": MessageLookupByLibrary.simpleMessage("Tutup Aplikasi"),
+    "cloud_b1": MessageLookupByLibrary.simpleMessage(
+      "Masuk dengan aman menggunakan akun Joss Red Anda.",
+    ),
+    "cloud_b2": MessageLookupByLibrary.simpleMessage(
+      "Akses daftar putar, favorit, dan riwayat Anda dari perangkat apa pun (Windows, Android, dll.) secara instan.",
+    ),
+    "cloud_b3": MessageLookupByLibrary.simpleMessage(
+      "Sinkronisasi Cerdas: Bekerja offline dan unggah perubahan secara otomatis saat Anda memulihkan internet.",
+    ),
+    "cloud_btn": MessageLookupByLibrary.simpleMessage(
+      "Aktifkan sinkronisasi Cloud",
+    ),
+    "cloud_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Sinkronisasi waktu nyata dengan Joss Red",
+    ),
+    "cloud_title": MessageLookupByLibrary.simpleMessage(
+      "Mode Cloud (Disarankan)",
+    ),
     "communityplaylists": MessageLookupByLibrary.simpleMessage(
       "Daftar Putar Komunitas",
     ),
@@ -404,6 +424,22 @@ class MessageLookup extends MessageLookupByLibrary {
       "Mendengarkan lingkungan...",
     ),
     "local": MessageLookupByLibrary.simpleMessage("Lokal"),
+    "local_b1": MessageLookupByLibrary.simpleMessage(
+      "Ini berfungsi tanpa perlu masuk.",
+    ),
+    "local_b2": MessageLookupByLibrary.simpleMessage(
+      "Seluruh perpustakaan Anda tetap ada di komputer ini.",
+    ),
+    "local_b3": MessageLookupByLibrary.simpleMessage(
+      "Catatan: Tidak ada pencadangan cloud manual. Jika Anda kehilangan perangkat atau mencopot pemasangan aplikasi, data Anda tidak dapat dipulihkan.",
+    ),
+    "local_btn": MessageLookupByLibrary.simpleMessage(
+      "Gunakan hanya di perangkat ini",
+    ),
+    "local_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Privasi mutlak di perangkat Anda",
+    ),
+    "local_title": MessageLookupByLibrary.simpleMessage("Modus Lokal"),
     "loudnessDb": MessageLookupByLibrary.simpleMessage("Kekerasan Suara dB"),
     "loudnessNormalization": MessageLookupByLibrary.simpleMessage(
       "Normalisasi kekerasan suara",
@@ -440,6 +476,44 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "newVersionAvailable": MessageLookupByLibrary.simpleMessage(
       "Versi baru tersedia!",
+    ),
+    "news_btn_app": MessageLookupByLibrary.simpleMessage(
+      "Aplikasi Joss Red (Play Store)",
+    ),
+    "news_btn_dismiss": MessageLookupByLibrary.simpleMessage("Dipahami"),
+    "news_btn_web": MessageLookupByLibrary.simpleMessage("Joss Web Merah"),
+    "news_card_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Sinkronisasi 100% dengan Joss Red, playlist dengan teman, dan banyak lagi. Ketuk untuk melihat apa yang baru.",
+    ),
+    "news_card_title": MessageLookupByLibrary.simpleMessage(
+      "Musik Estrella telah berevolusi!",
+    ),
+    "news_dialog_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "Untuk menambah teman, menerima permintaan, atau mengelola profil keamanan Anda, silakan gunakan Joss Red di platform resminya:",
+    ),
+    "news_dialog_section_friends": MessageLookupByLibrary.simpleMessage(
+      "Teman dan Manajemen Akun:",
+    ),
+    "news_dialog_title": MessageLookupByLibrary.simpleMessage(
+      "Berita Musik Estrella",
+    ),
+    "news_item_collab_desc": MessageLookupByLibrary.simpleMessage(
+      "Buat daftar putar dengan teman-teman Anda! Saat membuat daftar putar, pilih kotak centang Kolaboratif dan pilih teman Anda untuk diedit bersama.",
+    ),
+    "news_item_collab_title": MessageLookupByLibrary.simpleMessage(
+      "Daftar Putar Kolaboratif",
+    ),
+    "news_item_sync_desc": MessageLookupByLibrary.simpleMessage(
+      "Daftar putar dan favorit Anda kini disimpan dan disinkronkan di cloud secara otomatis dengan akun utama Joss Red Anda.",
+    ),
+    "news_item_sync_title": MessageLookupByLibrary.simpleMessage(
+      "Integrasi Penuh dengan Joss Red",
+    ),
+    "news_item_trans_desc": MessageLookupByLibrary.simpleMessage(
+      "Anda tidak perlu lagi mengklik tombol sinkronisasi manual; Motor baru bertanggung jawab untuk berpindah ke atas dan ke bawah secara otomatis.",
+    ),
+    "news_item_trans_title": MessageLookupByLibrary.simpleMessage(
+      "Sinkronisasi Transparan",
     ),
     "noBookmarks": MessageLookupByLibrary.simpleMessage("Tidak ada penanda!"),
     "noLibPlaylist": MessageLookupByLibrary.simpleMessage(
@@ -554,6 +628,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "readMore": MessageLookupByLibrary.simpleMessage("Baca selengkapnya"),
     "recentSearches": MessageLookupByLibrary.simpleMessage("Pencarian terkini"),
     "recentlyPlayed": MessageLookupByLibrary.simpleMessage("Baru Dimainkan"),
+    "recommend_cloud": MessageLookupByLibrary.simpleMessage(
+      "Kami merekomendasikan untuk mengaktifkan Mode Cloud untuk pengalaman seperti Spotify: sinkronisasi waktu nyata antara semua perangkat Anda dan pencadangan otomatis tanpa Anda harus melakukan apa pun.",
+    ),
     "removeFromLib": MessageLookupByLibrary.simpleMessage(
       "Hapus dari Pustaka Lagu",
     ),
@@ -661,6 +738,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Timer tidur Anda telah diatur",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Pengatur Waktu Tidur"),
+    "slide_indicator": m0,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "Lagu ditambahkan ke daftar putar!",
     ),
@@ -706,6 +784,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Kualitas streaming musik",
     ),
     "subscribers": MessageLookupByLibrary.simpleMessage("pelanggan"),
+    "swipe_prompt": MessageLookupByLibrary.simpleMessage(
+      "Geser untuk menjelajahi opsi ➔",
+    ),
     "synced": MessageLookupByLibrary.simpleMessage("Tersinkronkan"),
     "syncedLyricsNotAvailable": MessageLookupByLibrary.simpleMessage(
       "lirik yang tersinkron tidak ada!",
@@ -730,5 +811,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "videos": MessageLookupByLibrary.simpleMessage("Video"),
     "viewAll": MessageLookupByLibrary.simpleMessage("Lihat semua"),
     "viewArtist": MessageLookupByLibrary.simpleMessage("Lihat Artis"),
+    "welcome_intro": MessageLookupByLibrary.simpleMessage(
+      "Kami telah memodernisasi platform kami. Sistem lama yang mengunggah cadangan manual telah dinonaktifkan. Anda sekarang memiliki dua cara yang jelas untuk mengelola perpustakaan musik Anda.",
+    ),
+    "welcome_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Pilih bagaimana Anda ingin menikmati Estrella Music mulai sekarang.",
+    ),
+    "welcome_title": MessageLookupByLibrary.simpleMessage(
+      "Musik Anda, cara Anda",
+    ),
   };
 }

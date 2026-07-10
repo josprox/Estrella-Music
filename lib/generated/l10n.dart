@@ -3423,6 +3423,321 @@ class S {
       args: [],
     );
   }
+
+  /// `Your music, your way`
+  String get welcome_title {
+    return Intl.message(
+      'Your music, your way',
+      name: 'welcome_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Choose how you want to experience Estrella Music from now on.`
+  String get welcome_subtitle {
+    return Intl.message(
+      'Choose how you want to experience Estrella Music from now on.',
+      name: 'welcome_subtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We have modernized our platform. `
+  String get welcome_intro {
+    return Intl.message(
+      'We have modernized our platform. ',
+      name: 'welcome_intro',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We recommend activating Cloud Mode for a Spotify-like experience: real-time synchronization between all your devices and automatic backup without you having to do anything.`
+  String get recommend_cloud {
+    return Intl.message(
+      'We recommend activating Cloud Mode for a Spotify-like experience: real-time synchronization between all your devices and automatic backup without you having to do anything.',
+      name: 'recommend_cloud',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Swipe to explore options ➔`
+  String get swipe_prompt {
+    return Intl.message(
+      'Swipe to explore options ➔',
+      name: 'swipe_prompt',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Local Mode`
+  String get local_title {
+    return Intl.message('Local Mode', name: 'local_title', desc: '', args: []);
+  }
+
+  /// `Absolute privacy on your device`
+  String get local_subtitle {
+    return Intl.message(
+      'Absolute privacy on your device',
+      name: 'local_subtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `It works without the need to log in.`
+  String get local_b1 {
+    return Intl.message(
+      'It works without the need to log in.',
+      name: 'local_b1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your entire library stays strictly on this computer.`
+  String get local_b2 {
+    return Intl.message(
+      'Your entire library stays strictly on this computer.',
+      name: 'local_b2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Note: No manual cloud backups. `
+  String get local_b3 {
+    return Intl.message(
+      'Note: No manual cloud backups. ',
+      name: 'local_b3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Use only on this device`
+  String get local_btn {
+    return Intl.message(
+      'Use only on this device',
+      name: 'local_btn',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cloud Mode (Recommended)`
+  String get cloud_title {
+    return Intl.message(
+      'Cloud Mode (Recommended)',
+      name: 'cloud_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Real-time synchronization with Joss Red`
+  String get cloud_subtitle {
+    return Intl.message(
+      'Real-time synchronization with Joss Red',
+      name: 'cloud_subtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Log in securely using your Joss Red account.`
+  String get cloud_b1 {
+    return Intl.message(
+      'Log in securely using your Joss Red account.',
+      name: 'cloud_b1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Access your playlists, favorites and history from any device (Windows, Android, etc.) instantly.`
+  String get cloud_b2 {
+    return Intl.message(
+      'Access your playlists, favorites and history from any device (Windows, Android, etc.) instantly.',
+      name: 'cloud_b2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Smart Sync: Work offline and upload changes automatically when you recover internet.`
+  String get cloud_b3 {
+    return Intl.message(
+      'Smart Sync: Work offline and upload changes automatically when you recover internet.',
+      name: 'cloud_b3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Activate Cloud sync`
+  String get cloud_btn {
+    return Intl.message(
+      'Activate Cloud sync',
+      name: 'cloud_btn',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Step {current} of 3`
+  String slide_indicator(Object current) {
+    return Intl.message(
+      'Step $current of 3',
+      name: 'slide_indicator',
+      desc: '',
+      args: [current],
+    );
+  }
+
+  /// `Estrella Music has evolved!`
+  String get news_card_title {
+    return Intl.message(
+      'Estrella Music has evolved!',
+      name: 'news_card_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `100% synchronization with Joss Red, playlists with friends and much more. `
+  String get news_card_subtitle {
+    return Intl.message(
+      '100% synchronization with Joss Red, playlists with friends and much more. ',
+      name: 'news_card_subtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Estrella Music News`
+  String get news_dialog_title {
+    return Intl.message(
+      'Estrella Music News',
+      name: 'news_dialog_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Full Integration with Joss Red`
+  String get news_item_sync_title {
+    return Intl.message(
+      'Full Integration with Joss Red',
+      name: 'news_item_sync_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your playlists and favorites are now saved and synced in the cloud automatically with your main Joss Red account.`
+  String get news_item_sync_desc {
+    return Intl.message(
+      'Your playlists and favorites are now saved and synced in the cloud automatically with your main Joss Red account.',
+      name: 'news_item_sync_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Collaborative Playlists`
+  String get news_item_collab_title {
+    return Intl.message(
+      'Collaborative Playlists',
+      name: 'news_item_collab_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create playlists with your friends! `
+  String get news_item_collab_desc {
+    return Intl.message(
+      'Create playlists with your friends! ',
+      name: 'news_item_collab_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Transparent Synchronization`
+  String get news_item_trans_title {
+    return Intl.message(
+      'Transparent Synchronization',
+      name: 'news_item_trans_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You no longer need to click manual sync buttons; `
+  String get news_item_trans_desc {
+    return Intl.message(
+      'You no longer need to click manual sync buttons; ',
+      name: 'news_item_trans_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Friends and Account Management:`
+  String get news_dialog_section_friends {
+    return Intl.message(
+      'Friends and Account Management:',
+      name: 'news_dialog_section_friends',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `To add friends, accept requests or manage your security profile, please use Joss Red on its official platforms:`
+  String get news_dialog_friends_desc {
+    return Intl.message(
+      'To add friends, accept requests or manage your security profile, please use Joss Red on its official platforms:',
+      name: 'news_dialog_friends_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Joss Red App (Play Store)`
+  String get news_btn_app {
+    return Intl.message(
+      'Joss Red App (Play Store)',
+      name: 'news_btn_app',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Joss Red Web`
+  String get news_btn_web {
+    return Intl.message(
+      'Joss Red Web',
+      name: 'news_btn_web',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Understood`
+  String get news_btn_dismiss {
+    return Intl.message(
+      'Understood',
+      name: 'news_btn_dismiss',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -20,6 +20,8 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'or';
 
+  static String m0(current) => "3 ର ଷ୍ଟେପ୍ ${current} |";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "CreateNewPlaylist": MessageLookupByLibrary.simpleMessage(
@@ -115,6 +117,24 @@ class MessageLookup extends MessageLookupByLibrary {
     "cachedOrOffline": MessageLookupByLibrary.simpleMessage("କ୍ୟାଚ୍/ଅଫଲାଇନ"),
     "cancel": MessageLookupByLibrary.simpleMessage("ବାତିଲ କରନ୍ତୁ"),
     "close": MessageLookupByLibrary.simpleMessage("ବନ୍ଦ"),
+    "cloud_b1": MessageLookupByLibrary.simpleMessage(
+      "ଆପଣଙ୍କର ଜୋସ୍ ରେଡ୍ ଆକାଉଣ୍ଟ୍ ବ୍ୟବହାର କରି ସୁରକ୍ଷିତ ଭାବରେ ଲଗ୍ ଇନ୍ କରନ୍ତୁ |",
+    ),
+    "cloud_b2": MessageLookupByLibrary.simpleMessage(
+      "ଯେକ any ଣସି ଡିଭାଇସ୍ (ୱିଣ୍ଡୋଜ୍, ଆଣ୍ଡ୍ରଏଡ୍, ଇତ୍ୟାଦି) ରୁ ତୁରନ୍ତ ତୁମର ପ୍ଲେଲିଷ୍ଟ, ପ୍ରିୟ ଏବଂ ଇତିହାସକୁ ପ୍ରବେଶ କର |",
+    ),
+    "cloud_b3": MessageLookupByLibrary.simpleMessage(
+      "ସ୍ମାର୍ଟ ସିଙ୍କ୍: ଯେତେବେଳେ ଆପଣ ଇଣ୍ଟରନେଟ୍ ପୁନରୁଦ୍ଧାର କରନ୍ତି ଅଫଲାଇନରେ କାମ କରନ୍ତୁ ଏବଂ ସ୍ୱୟଂଚାଳିତ ଭାବରେ ପରିବର୍ତ୍ତନ ଅପଲୋଡ୍ କରନ୍ତୁ |",
+    ),
+    "cloud_btn": MessageLookupByLibrary.simpleMessage(
+      "କ୍ଲାଉଡ୍ ସିଙ୍କ୍କୁ ସକ୍ରିୟ କରନ୍ତୁ |",
+    ),
+    "cloud_subtitle": MessageLookupByLibrary.simpleMessage(
+      "ଜୋସ୍ ରେଡ୍ ସହିତ ରିଅଲ୍ ଟାଇମ୍ ସିଙ୍କ୍ରୋନାଇଜେସନ୍ |",
+    ),
+    "cloud_title": MessageLookupByLibrary.simpleMessage(
+      "କ୍ଲାଉଡ୍ ମୋଡ୍ (ପରାମର୍ଶିତ)",
+    ),
     "communityplaylists": MessageLookupByLibrary.simpleMessage(
       "କମ୍ୟୁନିଟି ପ୍ଲେ ଲିଷ୍ଟ",
     ),
@@ -232,6 +252,22 @@ class MessageLookup extends MessageLookupByLibrary {
       "ପରିବେଶ ଶୁଣିବା ...",
     ),
     "local": MessageLookupByLibrary.simpleMessage("ସ୍ଥାନୀୟ"),
+    "local_b1": MessageLookupByLibrary.simpleMessage(
+      "ଲଗ୍ ଇନ୍ କରିବାର ଆବଶ୍ୟକତା ବିନା ଏହା କାମ କରେ |",
+    ),
+    "local_b2": MessageLookupByLibrary.simpleMessage(
+      "ତୁମର ପୁରା ଲାଇବ୍ରେରୀ ଏହି କମ୍ପ୍ୟୁଟରରେ କଠୋର ଭାବରେ ରହିଥାଏ |",
+    ),
+    "local_b3": MessageLookupByLibrary.simpleMessage(
+      "ଟିପନ୍ତୁ: କ man ଣସି ମାନୁଆଲ୍ କ୍ଲାଉଡ୍ ବ୍ୟାକଅପ୍ ନାହିଁ | ଯଦି ଆପଣ ଆପଣଙ୍କର ଡିଭାଇସ୍ ହରାନ୍ତି କିମ୍ବା ଆପ୍ ସଂସ୍ଥାପନ କରନ୍ତି, ତେବେ ଆପଣଙ୍କର ତଥ୍ୟ ପୁନରୁଦ୍ଧାର ହୋଇପାରିବ ନାହିଁ |",
+    ),
+    "local_btn": MessageLookupByLibrary.simpleMessage(
+      "କେବଳ ଏହି ଉପକରଣରେ ବ୍ୟବହାର କରନ୍ତୁ |",
+    ),
+    "local_subtitle": MessageLookupByLibrary.simpleMessage(
+      "ଆପଣଙ୍କ ଡିଭାଇସରେ ସଂପୂର୍ଣ୍ଣ ଗୋପନୀୟତା |",
+    ),
+    "local_title": MessageLookupByLibrary.simpleMessage("ସ୍ଥାନୀୟ ମୋଡ୍ |"),
     "low": MessageLookupByLibrary.simpleMessage("ନିମ୍ନ"),
     "lyricsNotAvailable": MessageLookupByLibrary.simpleMessage(
       "ଗୀତ ଉପଲବ୍ଧ ନାହିଁ!",
@@ -252,6 +288,44 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "newVersionAvailable": MessageLookupByLibrary.simpleMessage(
       "ନୂତନ ସଂସ୍କରଣ ଉପଲବ୍ଧ!",
+    ),
+    "news_btn_app": MessageLookupByLibrary.simpleMessage(
+      "ଜୋସ୍ ରେଡ୍ ଆପ୍ (ପ୍ଲେ ଷ୍ଟୋର)",
+    ),
+    "news_btn_dismiss": MessageLookupByLibrary.simpleMessage("ବୁ .ିଗଲା"),
+    "news_btn_web": MessageLookupByLibrary.simpleMessage("ଜୋସ୍ ରେଡ୍ ୱେବ୍ |"),
+    "news_card_subtitle": MessageLookupByLibrary.simpleMessage(
+      "ଜୋସ୍ ରେଡ୍ ସହିତ 100% ସିଙ୍କ୍ରୋନାଇଜେସନ୍, ସାଙ୍ଗମାନଙ୍କ ସହିତ ପ୍ଲେଲିଷ୍ଟ ଏବଂ ଆହୁରି ଅନେକ | କ’ଣ ନୂଆ ଅଛି ତାହା ଦେଖିବାକୁ ଟ୍ୟାପ୍ କରନ୍ତୁ |",
+    ),
+    "news_card_title": MessageLookupByLibrary.simpleMessage(
+      "ଏଷ୍ଟ୍ରେଲା ମ୍ୟୁଜିକ୍ ବିକଶିତ ହୋଇଛି!",
+    ),
+    "news_dialog_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "ବନ୍ଧୁ ଯୋଡିବାକୁ, ଅନୁରୋଧ ଗ୍ରହଣ କରନ୍ତୁ କିମ୍ବା ଆପଣଙ୍କର ସୁରକ୍ଷା ପ୍ରୋଫାଇଲ୍ ପରିଚାଳନା କରନ୍ତୁ, ଦୟାକରି ଏହାର ଅଫିସିଆଲ୍ ପ୍ଲାଟଫର୍ମରେ ଜୋସ୍ ରେଡ୍ ବ୍ୟବହାର କରନ୍ତୁ:",
+    ),
+    "news_dialog_section_friends": MessageLookupByLibrary.simpleMessage(
+      "ବନ୍ଧୁ ଏବଂ ଖାତା ପରିଚାଳନା:",
+    ),
+    "news_dialog_title": MessageLookupByLibrary.simpleMessage(
+      "ଏଷ୍ଟ୍ରେଲା ମ୍ୟୁଜିକ୍ ନ୍ୟୁଜ୍ |",
+    ),
+    "news_item_collab_desc": MessageLookupByLibrary.simpleMessage(
+      "ଆପଣଙ୍କର ସାଙ୍ଗମାନଙ୍କ ସହିତ ପ୍ଲେଲିଷ୍ଟ ସୃଷ୍ଟି କରନ୍ତୁ! ଏକ ପ୍ଲେଲିଷ୍ଟ ସୃଷ୍ଟି କରିବାବେଳେ, ସହଯୋଗୀ ଚେକ୍ ବକ୍ସ ଚୟନ କରନ୍ତୁ ଏବଂ ଏକତ୍ର ସଂପାଦନ କରିବାକୁ ଆପଣଙ୍କର ସାଙ୍ଗମାନଙ୍କୁ ବାଛନ୍ତୁ |",
+    ),
+    "news_item_collab_title": MessageLookupByLibrary.simpleMessage(
+      "ସହଯୋଗୀ ପ୍ଲେଲିଷ୍ଟଗୁଡିକ |",
+    ),
+    "news_item_sync_desc": MessageLookupByLibrary.simpleMessage(
+      "ତୁମର ପ୍ଲେଲିଷ୍ଟ ଏବଂ ପସନ୍ଦଗୁଡିକ ବର୍ତ୍ତମାନ ତୁମର ମୁଖ୍ୟ ଜୋସ୍ ରେଡ୍ ଆକାଉଣ୍ଟ୍ ସହିତ ସ୍ୱୟଂଚାଳିତ ଭାବରେ କ୍ଲାଉଡ୍ ରେ ସଞ୍ଚୟ ହୋଇଛି |",
+    ),
+    "news_item_sync_title": MessageLookupByLibrary.simpleMessage(
+      "ଜୋସ୍ ରେଡ୍ ସହିତ ପୂର୍ଣ୍ଣ ଏକୀକରଣ |",
+    ),
+    "news_item_trans_desc": MessageLookupByLibrary.simpleMessage(
+      "ଆପଣ ଆଉ ମାନୁଆଲ୍ ସିଙ୍କ୍ ବଟନ୍ କ୍ଲିକ୍ କରିବା ଆବଶ୍ୟକ କରନ୍ତି ନାହିଁ | ନୂତନ ମୋଟର ସ୍ୱୟଂଚାଳିତ ଭାବରେ ଉପରକୁ ଏବଂ ତଳକୁ ଯିବା ପାଇଁ ଦାୟୀ |",
+    ),
+    "news_item_trans_title": MessageLookupByLibrary.simpleMessage(
+      "ସ୍ୱଚ୍ଛ ସିଙ୍କ୍ରୋନାଇଜେସନ୍ |",
     ),
     "noBookmarks": MessageLookupByLibrary.simpleMessage(
       "କୌଣସି ଚିହ୍ନିତ ସ୍ଥାନ ନାହିଁ!",
@@ -318,6 +392,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "recentlyPlayed": MessageLookupByLibrary.simpleMessage(
       "ନିକଟରେ ଖେଳାଯାଇଥିବା",
+    ),
+    "recommend_cloud": MessageLookupByLibrary.simpleMessage(
+      "ଏକ ସ୍ପୋଟିଫ୍ ପରି ଅଭିଜ୍ଞତା ପାଇଁ କ୍ଲାଉଡ୍ ମୋଡ୍ ସକ୍ରିୟ କରିବାକୁ ଆମେ ସୁପାରିଶ କରୁ: ଆପଣଙ୍କର ସମସ୍ତ ଡିଭାଇସ୍ ମଧ୍ୟରେ ରିଅଲ୍-ଟାଇମ୍ ସିଙ୍କ୍ରୋନାଇଜେସନ୍ ଏବଂ ସ୍ୱୟଂଚାଳିତ ବ୍ୟାକଅପ୍ ଆପଣଙ୍କୁ କିଛି ନକରି |",
     ),
     "removeFromLib": MessageLookupByLibrary.simpleMessage(
       "ଲାଇବ୍ରେରୀ ଗୀତରୁ ଅପସାରଣ କରନ୍ତୁ",
@@ -397,6 +474,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "ମ୍ୟୁଜିକ୍ ପ୍ଲେବ୍ୟାକ୍ରେ ନୀରବତାକୁ ଏଡ଼ାଇ ଦିଆଯିବ",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("ଶୟନ ସମୟ-ନିୟାମକ"),
+    "slide_indicator": m0,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "ଗୀତକୁ ପ୍ଲେଲିଷ୍ଟରେ ଯୋଡାଗଲା!",
     ),
@@ -435,6 +513,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "ସଙ୍ଗୀତ ସ୍ରୋତର ଗୁଣବତ୍ତା",
     ),
     "subscribers": MessageLookupByLibrary.simpleMessage("ସବସ୍କ୍ରାଇବର"),
+    "swipe_prompt": MessageLookupByLibrary.simpleMessage(
+      "ବିକଳ୍ପଗୁଡିକ ଅନୁସନ୍ଧାନ କରିବାକୁ ସ୍ୱାଇପ୍ ➔",
+    ),
     "systemDefault": MessageLookupByLibrary.simpleMessage(
       "ତନ୍ତ୍ର ପୂର୍ବନିର୍ଦ୍ଧାରିତ",
     ),
@@ -452,5 +533,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "videos": MessageLookupByLibrary.simpleMessage("ଭିଡ଼ିଓ"),
     "viewAll": MessageLookupByLibrary.simpleMessage("ସମସ୍ତ ଦେଖନ୍ତୁ"),
     "viewArtist": MessageLookupByLibrary.simpleMessage("ଚିତ୍ରଶିଳ୍ପୀ ଦେଖନ୍ତୁ"),
+    "welcome_intro": MessageLookupByLibrary.simpleMessage(
+      "ଆମେ ଆମର ପ୍ଲାଟଫର୍ମକୁ ଆଧୁନିକୀକରଣ କରିଛୁ | ମାନୁଆଲ୍ ବ୍ୟାକଅପ୍ ଅପଲୋଡ୍ କରିବାର ପୁରୁଣା ସିଷ୍ଟମ୍ ଅକ୍ଷମ ହୋଇଛି | ତୁମର ମ୍ୟୁଜିକ୍ ଲାଇବ୍ରେରୀ ପରିଚାଳନା ପାଇଁ ତୁମର ବର୍ତ୍ତମାନ ଦୁଇଟି ସ୍ପଷ୍ଟ ଉପାୟ ଅଛି |",
+    ),
+    "welcome_subtitle": MessageLookupByLibrary.simpleMessage(
+      "ବର୍ତ୍ତମାନଠାରୁ ଆପଣ କିପରି ଏଷ୍ଟ୍ରେଲା ମ୍ୟୁଜିକ୍ ଅନୁଭବ କରିବାକୁ ଚାହୁଁଛନ୍ତି ତାହା ବାଛନ୍ତୁ |",
+    ),
+    "welcome_title": MessageLookupByLibrary.simpleMessage(
+      "ତୁମର ସଙ୍ଗୀତ, ତୁମର ପଥ",
+    ),
   };
 }

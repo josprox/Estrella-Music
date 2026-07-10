@@ -20,6 +20,8 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ja';
 
+  static String m0(current) => "ステップ ${current}/3";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "CreateNewPlaylist": MessageLookupByLibrary.simpleMessage("再生リストを作成"),
@@ -145,6 +147,20 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "close": MessageLookupByLibrary.simpleMessage("近い"),
     "closeApp": MessageLookupByLibrary.simpleMessage("アプリを閉じる"),
+    "cloud_b1": MessageLookupByLibrary.simpleMessage(
+      "Joss Red アカウントを使用して安全にログインします。",
+    ),
+    "cloud_b2": MessageLookupByLibrary.simpleMessage(
+      "あらゆるデバイス (Windows、Android など) からプレイリスト、お気に入り、履歴に即座にアクセスできます。",
+    ),
+    "cloud_b3": MessageLookupByLibrary.simpleMessage(
+      "スマート シンク: オフラインで作業し、インターネットが回復したときに変更を自動的にアップロードします。",
+    ),
+    "cloud_btn": MessageLookupByLibrary.simpleMessage("クラウド同期を有効にする"),
+    "cloud_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Joss Red とのリアルタイム同期",
+    ),
+    "cloud_title": MessageLookupByLibrary.simpleMessage("クラウドモード (推奨)"),
     "communityplaylists": MessageLookupByLibrary.simpleMessage("コミュニティの再生リスト"),
     "content": MessageLookupByLibrary.simpleMessage("コンテンツ"),
     "create": MessageLookupByLibrary.simpleMessage("作成"),
@@ -329,6 +345,16 @@ class MessageLookup extends MessageLookupByLibrary {
       "環境の声を聞きながら…",
     ),
     "local": MessageLookupByLibrary.simpleMessage("端末内"),
+    "local_b1": MessageLookupByLibrary.simpleMessage("ログインする必要がなくても機能します。"),
+    "local_b2": MessageLookupByLibrary.simpleMessage(
+      "ライブラリ全体がこのコンピューター上に厳密に保存されます。",
+    ),
+    "local_b3": MessageLookupByLibrary.simpleMessage(
+      "注: 手動のクラウド バックアップはありません。デバイスを紛失したり、アプリをアンインストールした場合、データは復元できません。",
+    ),
+    "local_btn": MessageLookupByLibrary.simpleMessage("このデバイスでのみ使用します"),
+    "local_subtitle": MessageLookupByLibrary.simpleMessage("デバイス上の絶対的なプライバシー"),
+    "local_title": MessageLookupByLibrary.simpleMessage("ローカルモード"),
     "loudnessDb": MessageLookupByLibrary.simpleMessage("音の大きさ:デジベル"),
     "loudnessNormalization": MessageLookupByLibrary.simpleMessage("音の大きさの正規化"),
     "loudnessNormalizationDes": MessageLookupByLibrary.simpleMessage(
@@ -352,6 +378,38 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "networkError1": MessageLookupByLibrary.simpleMessage("ネットワークエラー！"),
     "newVersionAvailable": MessageLookupByLibrary.simpleMessage("最新版があります！"),
+    "news_btn_app": MessageLookupByLibrary.simpleMessage(
+      "Joss Red アプリ (Play ストア)",
+    ),
+    "news_btn_dismiss": MessageLookupByLibrary.simpleMessage("理解した"),
+    "news_btn_web": MessageLookupByLibrary.simpleMessage("ジョス レッド ウェブ"),
+    "news_card_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Joss Red との 100% 同期、友達とのプレイリストなど。タップすると新機能が表示されます。",
+    ),
+    "news_card_title": MessageLookupByLibrary.simpleMessage(
+      "エストレヤミュージックが進化しました！",
+    ),
+    "news_dialog_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "友達を追加したり、リクエストを受け入れたり、セキュリティ プロファイルを管理したりするには、公式プラットフォームで Joss Red を使用してください。",
+    ),
+    "news_dialog_section_friends": MessageLookupByLibrary.simpleMessage(
+      "友達とアカウントの管理:",
+    ),
+    "news_dialog_title": MessageLookupByLibrary.simpleMessage("エストレージャ音楽ニュース"),
+    "news_item_collab_desc": MessageLookupByLibrary.simpleMessage(
+      "友達と一緒にプレイリストを作成しましょう！プレイリストを作成するときは、「共同作業」チェックボックスを選択し、一緒に編集する友達を選択します。",
+    ),
+    "news_item_collab_title": MessageLookupByLibrary.simpleMessage("共同プレイリスト"),
+    "news_item_sync_desc": MessageLookupByLibrary.simpleMessage(
+      "プレイリストとお気に入りはクラウドに保存され、メインの Joss Red アカウントと自動的に同期されます。",
+    ),
+    "news_item_sync_title": MessageLookupByLibrary.simpleMessage(
+      "Joss Red との完全な統合",
+    ),
+    "news_item_trans_desc": MessageLookupByLibrary.simpleMessage(
+      "手動同期ボタンをクリックする必要はなくなりました。新しいモーターは自動的にシフトアップとシフトダウンを担当します。",
+    ),
+    "news_item_trans_title": MessageLookupByLibrary.simpleMessage("透過的な同期"),
     "noBookmarks": MessageLookupByLibrary.simpleMessage("ブックマークなし！"),
     "noLibPlaylist": MessageLookupByLibrary.simpleMessage("再生リストがありませんよ！"),
     "noMatchInstruction": MessageLookupByLibrary.simpleMessage(
@@ -435,6 +493,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "readMore": MessageLookupByLibrary.simpleMessage("続きを読む"),
     "recentSearches": MessageLookupByLibrary.simpleMessage("最近の検索"),
     "recentlyPlayed": MessageLookupByLibrary.simpleMessage("再生履歴"),
+    "recommend_cloud": MessageLookupByLibrary.simpleMessage(
+      "Spotify のようなエクスペリエンスを得るには、クラウド モードを有効にすることをお勧めします。つまり、何もしなくてもすべてのデバイス間のリアルタイム同期と自動バックアップが可能になります。",
+    ),
     "removeFromLib": MessageLookupByLibrary.simpleMessage("曲のライブラリから削除"),
     "removeFromPlaylist": MessageLookupByLibrary.simpleMessage("再生リストから削除"),
     "removeFromQueue": MessageLookupByLibrary.simpleMessage("キューから削除"),
@@ -512,6 +573,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "スリープタイマーをセットしました",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("スリープタイマー"),
+    "slide_indicator": m0,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "曲を再生リストに追加しました！",
     ),
@@ -547,6 +609,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "streamingQuality": MessageLookupByLibrary.simpleMessage("ストリーミング品質"),
     "streamingQualityDes": MessageLookupByLibrary.simpleMessage("音楽ストリームの音質"),
     "subscribers": MessageLookupByLibrary.simpleMessage("人の登録者"),
+    "swipe_prompt": MessageLookupByLibrary.simpleMessage("スワイプしてオプションを確認します ➔"),
     "synced": MessageLookupByLibrary.simpleMessage("同期"),
     "syncedLyricsNotAvailable": MessageLookupByLibrary.simpleMessage(
       "同期可能な歌詞はありません！",
@@ -567,5 +630,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "videos": MessageLookupByLibrary.simpleMessage("動画"),
     "viewAll": MessageLookupByLibrary.simpleMessage("すべて表示"),
     "viewArtist": MessageLookupByLibrary.simpleMessage("アーティストを開く"),
+    "welcome_intro": MessageLookupByLibrary.simpleMessage(
+      "私たちはプラットフォームを最新化しました。手動バックアップをアップロードする古いシステムは無効になりました。音楽ライブラリを管理するための 2 つの明確な方法が用意されました。",
+    ),
+    "welcome_subtitle": MessageLookupByLibrary.simpleMessage(
+      "これから Estrella Music を体験する方法を選択してください。",
+    ),
+    "welcome_title": MessageLookupByLibrary.simpleMessage("あなたの音楽をあなたの方法で"),
   };
 }

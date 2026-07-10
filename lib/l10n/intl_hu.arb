@@ -384,5 +384,19 @@
   "cloud_b2": "Bármilyen eszközről (Windows, Android stb.) azonnal elérheti lejátszási listáit, kedvenceit és előzményeit.",
   "cloud_b3": "Intelligens szinkronizálás: Dolgozzon offline módban, és automatikusan töltse fel a módosításokat, amikor helyreáll az internet.",
   "cloud_btn": "Aktiválja a felhőszinkronizálást",
-  "slide_indicator": "3. {current}. lépés"
+  "slide_indicator": "3. {current}. lépés",
+  "news_card_title": "Az Estrella Music fejlődött!",
+  "news_card_subtitle": "100%-os szinkronizálás Joss Reddel, lejátszási listák a barátokkal és még sok más. Koppintson az újdonságok megtekintéséhez.",
+  "news_dialog_title": "Estrella Music News",
+  "news_item_sync_title": "Teljes integráció Joss Red-el",
+  "news_item_sync_desc": "Lejátszási listáit és kedvenceit a rendszer most menti, és automatikusan szinkronizálja a felhőben a fő Joss Red-fiókjával.",
+  "news_item_collab_title": "Együttműködő lejátszási listák",
+  "news_item_collab_desc": "Hozz létre lejátszási listákat barátaiddal! Lejátszási lista létrehozásakor jelölje be az Együttműködés jelölőnégyzetet, és válassza ki barátait, akiket együtt szeretne szerkeszteni.",
+  "news_item_trans_title": "Átlátszó szinkronizálás",
+  "news_item_trans_desc": "Többé nem kell a kézi szinkronizálás gombjaira kattintania; Az új motor felelős az automatikus fel-le váltásért.",
+  "news_dialog_section_friends": "Barátok és fiókkezelés:",
+  "news_dialog_friends_desc": "Barátok hozzáadásához, kérések elfogadásához vagy biztonsági profiljának kezeléséhez használja a Joss Red szolgáltatást a hivatalos platformjain:",
+  "news_btn_app": "Joss Red App (Play Áruház)",
+  "news_btn_web": "Joss Red Web",
+  "news_btn_dismiss": "Megértve"
 }

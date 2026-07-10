@@ -459,5 +459,19 @@
   "cloud_b2": "모든 장치(Windows, Android 등)에서 재생 목록, 즐겨찾기 및 기록에 즉시 액세스하세요.",
   "cloud_b3": "스마트 동기화: 오프라인으로 작업하고 인터넷을 복구하면 자동으로 변경 사항을 업로드합니다.",
   "cloud_btn": "클라우드 동기화 활성화",
-  "slide_indicator": "3단계 중 {current} 단계"
+  "slide_indicator": "3단계 중 {current} 단계",
+  "news_card_title": "Estrella Music이 진화했습니다!",
+  "news_card_subtitle": "Joss Red와의 100% 동기화, 친구들과의 재생 목록 등. 새로운 소식을 보려면 탭하세요.",
+  "news_dialog_title": "Estrella 음악 뉴스",
+  "news_item_sync_title": "Joss Red와의 완전한 통합",
+  "news_item_sync_desc": "이제 재생 목록과 즐겨찾기가 기본 Joss Red 계정을 통해 자동으로 클라우드에 저장되고 동기화됩니다.",
+  "news_item_collab_title": "공동 재생 목록",
+  "news_item_collab_desc": "친구들과 함께 재생목록을 만들어보세요! 재생목록을 생성할 때 공동작업 확인란을 선택하고 함께 편집할 친구를 선택하세요.",
+  "news_item_trans_title": "투명한 동기화",
+  "news_item_trans_desc": "더 이상 수동 동기화 버튼을 클릭할 필요가 없습니다. 새 모터는 자동으로 위아래로 변속을 담당합니다.",
+  "news_dialog_section_friends": "친구 및 계정 관리:",
+  "news_dialog_friends_desc": "친구를 추가하고, 요청을 수락하고, 보안 프로필을 관리하려면 공식 플랫폼에서 Joss Red를 사용하세요.",
+  "news_btn_app": "조스 레드 앱(Play 스토어)",
+  "news_btn_web": "조스 레드 웹",
+  "news_btn_dismiss": "이해했다"
 }

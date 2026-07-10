@@ -20,6 +20,8 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'uk';
 
+  static String m0(current) => "Крок ${current} з 3";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "CreateNewPlaylist": MessageLookupByLibrary.simpleMessage(
@@ -185,6 +187,24 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "close": MessageLookupByLibrary.simpleMessage("Закрити"),
     "closeApp": MessageLookupByLibrary.simpleMessage("Закрити застосунок"),
+    "cloud_b1": MessageLookupByLibrary.simpleMessage(
+      "Увійдіть безпечно, використовуючи свій обліковий запис Joss Red.",
+    ),
+    "cloud_b2": MessageLookupByLibrary.simpleMessage(
+      "Миттєво отримуйте доступ до своїх списків відтворення, вибраного та історії з будь-якого пристрою (Windows, Android тощо).",
+    ),
+    "cloud_b3": MessageLookupByLibrary.simpleMessage(
+      "Розумна синхронізація: працюйте в автономному режимі та автоматично завантажуйте зміни, коли ви відновлюєте доступ до Інтернету.",
+    ),
+    "cloud_btn": MessageLookupByLibrary.simpleMessage(
+      "Активуйте хмарну синхронізацію",
+    ),
+    "cloud_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Синхронізація в реальному часі з Joss Red",
+    ),
+    "cloud_title": MessageLookupByLibrary.simpleMessage(
+      "Хмарний режим (рекомендовано)",
+    ),
     "communityplaylists": MessageLookupByLibrary.simpleMessage(
       "Списки відтворення спільноти",
     ),
@@ -427,6 +447,22 @@ class MessageLookup extends MessageLookupByLibrary {
       "Прислухаючись до оточення...",
     ),
     "local": MessageLookupByLibrary.simpleMessage("На пристрої"),
+    "local_b1": MessageLookupByLibrary.simpleMessage(
+      "Він працює без необхідності авторизуватися.",
+    ),
+    "local_b2": MessageLookupByLibrary.simpleMessage(
+      "Уся ваша бібліотека зберігається виключно на цьому комп’ютері.",
+    ),
+    "local_b3": MessageLookupByLibrary.simpleMessage(
+      "Примітка. Без ручного резервного копіювання в хмарі. Якщо ви втратите пристрій або видалите програму, ваші дані не можна буде відновити.",
+    ),
+    "local_btn": MessageLookupByLibrary.simpleMessage(
+      "Використовуйте лише на цьому пристрої",
+    ),
+    "local_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Абсолютна конфіденційність на вашому пристрої",
+    ),
+    "local_title": MessageLookupByLibrary.simpleMessage("Локальний режим"),
     "loudnessDb": MessageLookupByLibrary.simpleMessage("Гучність (Дб)"),
     "loudnessNormalization": MessageLookupByLibrary.simpleMessage(
       "Нормалізація гучності",
@@ -463,6 +499,44 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "newVersionAvailable": MessageLookupByLibrary.simpleMessage(
       "Доступна нова версія!",
+    ),
+    "news_btn_app": MessageLookupByLibrary.simpleMessage(
+      "Додаток Joss Red (Play Store)",
+    ),
+    "news_btn_dismiss": MessageLookupByLibrary.simpleMessage("Зрозумів"),
+    "news_btn_web": MessageLookupByLibrary.simpleMessage("Joss Red Web"),
+    "news_card_subtitle": MessageLookupByLibrary.simpleMessage(
+      "100% синхронізація з Joss Red, плейлисти з друзями та багато іншого. Торкніться, щоб побачити, що нового.",
+    ),
+    "news_card_title": MessageLookupByLibrary.simpleMessage(
+      "Estrella Music розвинулася!",
+    ),
+    "news_dialog_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "Щоб додати друзів, прийняти запити або керувати своїм профілем безпеки, використовуйте Joss Red на його офіційних платформах:",
+    ),
+    "news_dialog_section_friends": MessageLookupByLibrary.simpleMessage(
+      "Друзі та керування обліковим записом:",
+    ),
+    "news_dialog_title": MessageLookupByLibrary.simpleMessage(
+      "Музичні новини Estrella",
+    ),
+    "news_item_collab_desc": MessageLookupByLibrary.simpleMessage(
+      "Створюйте списки відтворення разом із друзями! Під час створення списку відтворення встановіть прапорець «Спільна робота» та виберіть друзів для спільного редагування.",
+    ),
+    "news_item_collab_title": MessageLookupByLibrary.simpleMessage(
+      "Спільні списки відтворення",
+    ),
+    "news_item_sync_desc": MessageLookupByLibrary.simpleMessage(
+      "Ваші списки відтворення та улюблене тепер зберігаються та синхронізуються в хмарі автоматично з вашим головним обліковим записом Joss Red.",
+    ),
+    "news_item_sync_title": MessageLookupByLibrary.simpleMessage(
+      "Повна інтеграція з Joss Red",
+    ),
+    "news_item_trans_desc": MessageLookupByLibrary.simpleMessage(
+      "Вам більше не потрібно натискати кнопки ручної синхронізації; Новий двигун відповідає за автоматичне перемикання вгору і вниз.",
+    ),
+    "news_item_trans_title": MessageLookupByLibrary.simpleMessage(
+      "Прозора синхронізація",
     ),
     "noBookmarks": MessageLookupByLibrary.simpleMessage("Немає закладок!"),
     "noLibPlaylist": MessageLookupByLibrary.simpleMessage(
@@ -572,6 +646,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "recentSearches": MessageLookupByLibrary.simpleMessage("Останні пошуки"),
     "recentlyPlayed": MessageLookupByLibrary.simpleMessage(
       "Нещодавно відтворено",
+    ),
+    "recommend_cloud": MessageLookupByLibrary.simpleMessage(
+      "Ми рекомендуємо активувати хмарний режим для роботи, подібної до Spotify: синхронізація в реальному часі між усіма вашими пристроями та автоматичне резервне копіювання без необхідності будь-яких дій.",
     ),
     "removeFromLib": MessageLookupByLibrary.simpleMessage(
       "Вилучити з бібліотеки пісні",
@@ -684,6 +761,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Ваш таймер сну встановлено",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Таймер сну"),
+    "slide_indicator": m0,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "Пісню додано до списку відтворення!",
     ),
@@ -721,6 +799,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Якість звучання музичного потоку",
     ),
     "subscribers": MessageLookupByLibrary.simpleMessage("підписників"),
+    "swipe_prompt": MessageLookupByLibrary.simpleMessage(
+      "Проведіть пальцем, щоб переглянути параметри ➔",
+    ),
     "synced": MessageLookupByLibrary.simpleMessage("Синхронізовано"),
     "syncedLyricsNotAvailable": MessageLookupByLibrary.simpleMessage(
       "Синхронізовані тексти не доступні!",
@@ -743,5 +824,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "videos": MessageLookupByLibrary.simpleMessage("Відео"),
     "viewAll": MessageLookupByLibrary.simpleMessage("Подивитись все"),
     "viewArtist": MessageLookupByLibrary.simpleMessage("Переглянути виконавця"),
+    "welcome_intro": MessageLookupByLibrary.simpleMessage(
+      "Ми модернізували нашу платформу. Стара система завантаження резервних копій вручну була вимкнена. Тепер у вас є два зрозумілих способи керування музичною бібліотекою.",
+    ),
+    "welcome_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Виберіть, як відтепер ви бажаєте слухати Estrella Music.",
+    ),
+    "welcome_title": MessageLookupByLibrary.simpleMessage(
+      "Ваша музика, ваш шлях",
+    ),
   };
 }

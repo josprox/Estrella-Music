@@ -446,5 +446,19 @@
   "cloud_b2": "Få åtkomst till dina spellistor, favoriter och historik från vilken enhet som helst (Windows, Android, etc.) direkt.",
   "cloud_b3": "Smart Sync: Arbeta offline och ladda upp ändringar automatiskt när du återställer internet.",
   "cloud_btn": "Aktivera molnsynkronisering",
-  "slide_indicator": "Steg {current} av 3"
+  "slide_indicator": "Steg {current} av 3",
+  "news_card_title": "Estrella Music har utvecklats!",
+  "news_card_subtitle": "100 % synkronisering med Joss Red, spellistor med vänner och mycket mer. Tryck för att se vad som är nytt.",
+  "news_dialog_title": "Estrella musiknyheter",
+  "news_item_sync_title": "Full integration med Joss Red",
+  "news_item_sync_desc": "Dina spellistor och favoriter sparas nu och synkroniseras i molnet automatiskt med ditt Joss Red-huvudkonto.",
+  "news_item_collab_title": "Samarbetande spellistor",
+  "news_item_collab_desc": "Skapa spellistor med dina vänner! När du skapar en spellista markerar du kryssrutan Collaborative och väljer dina vänner att redigera tillsammans.",
+  "news_item_trans_title": "Transparent synkronisering",
+  "news_item_trans_desc": "Du behöver inte längre klicka på knapparna för manuell synkronisering; Den nya motorn är ansvarig för att växla upp och ner automatiskt.",
+  "news_dialog_section_friends": "Vänner och kontohantering:",
+  "news_dialog_friends_desc": "För att lägga till vänner, acceptera förfrågningar eller hantera din säkerhetsprofil, använd Joss Red på dess officiella plattformar:",
+  "news_btn_app": "Joss Red-appen (Play Store)",
+  "news_btn_web": "Joss Red Web",
+  "news_btn_dismiss": "Förstått"
 }

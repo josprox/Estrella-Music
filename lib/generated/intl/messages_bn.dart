@@ -20,6 +20,8 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'bn';
 
+  static String m0(current) => "৩টির ​​মধ্যে ${current} ধাপ";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "CreateNewPlaylist": MessageLookupByLibrary.simpleMessage(
@@ -177,6 +179,24 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "close": MessageLookupByLibrary.simpleMessage("বন্ধ"),
     "closeApp": MessageLookupByLibrary.simpleMessage("অ্যাপ বন্ধ করুন"),
+    "cloud_b1": MessageLookupByLibrary.simpleMessage(
+      "আপনার জস রেড অ্যাকাউন্ট ব্যবহার করে নিরাপদে লগ ইন করুন।",
+    ),
+    "cloud_b2": MessageLookupByLibrary.simpleMessage(
+      "যেকোনো ডিভাইস (উইন্ডোজ, অ্যান্ড্রয়েড, ইত্যাদি) থেকে তাৎক্ষণিকভাবে আপনার প্লেলিস্ট, ফেভারিট এবং ইতিহাস অ্যাক্সেস করুন।",
+    ),
+    "cloud_b3": MessageLookupByLibrary.simpleMessage(
+      "স্মার্ট সিঙ্ক: অফলাইনে কাজ করুন এবং আপনি ইন্টারনেট পুনরুদ্ধার করলে স্বয়ংক্রিয়ভাবে পরিবর্তনগুলি আপলোড করুন।",
+    ),
+    "cloud_btn": MessageLookupByLibrary.simpleMessage(
+      "ক্লাউড সিঙ্ক সক্রিয় করুন",
+    ),
+    "cloud_subtitle": MessageLookupByLibrary.simpleMessage(
+      "জস রেডের সাথে রিয়েল-টাইম সিঙ্ক্রোনাইজেশন",
+    ),
+    "cloud_title": MessageLookupByLibrary.simpleMessage(
+      "ক্লাউড মোড (প্রস্তাবিত)",
+    ),
     "communityplaylists": MessageLookupByLibrary.simpleMessage(
       "সম্প্রদায়ের প্লেলিস্ট",
     ),
@@ -398,6 +418,22 @@ class MessageLookup extends MessageLookupByLibrary {
       "পরিবেশের কথা শুনছি...",
     ),
     "local": MessageLookupByLibrary.simpleMessage("স্থানীয়"),
+    "local_b1": MessageLookupByLibrary.simpleMessage(
+      "এটি লগ ইন করার প্রয়োজন ছাড়াই কাজ করে।",
+    ),
+    "local_b2": MessageLookupByLibrary.simpleMessage(
+      "আপনার সম্পূর্ণ লাইব্রেরি এই কম্পিউটারে কঠোরভাবে থাকে।",
+    ),
+    "local_b3": MessageLookupByLibrary.simpleMessage(
+      "দ্রষ্টব্য: কোনো ম্যানুয়াল ক্লাউড ব্যাকআপ নেই। আপনি যদি আপনার ডিভাইসটি হারিয়ে ফেলেন বা অ্যাপটি আনইনস্টল করেন তবে আপনার ডেটা পুনরুদ্ধার করা যাবে না।",
+    ),
+    "local_btn": MessageLookupByLibrary.simpleMessage(
+      "শুধুমাত্র এই ডিভাইসে ব্যবহার করুন",
+    ),
+    "local_subtitle": MessageLookupByLibrary.simpleMessage(
+      "আপনার ডিভাইসে সম্পূর্ণ গোপনীয়তা",
+    ),
+    "local_title": MessageLookupByLibrary.simpleMessage("স্থানীয় মোড"),
     "loudnessDb": MessageLookupByLibrary.simpleMessage("জোরে"),
     "loudnessNormalization": MessageLookupByLibrary.simpleMessage(
       "শব্দের স্বাভাবিকীকরণ",
@@ -432,6 +468,44 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "newVersionAvailable": MessageLookupByLibrary.simpleMessage(
       "নতুন সংস্করণ উপলব্ধ!",
+    ),
+    "news_btn_app": MessageLookupByLibrary.simpleMessage(
+      "জস রেড অ্যাপ (প্লে স্টোর)",
+    ),
+    "news_btn_dismiss": MessageLookupByLibrary.simpleMessage("বোঝা গেল"),
+    "news_btn_web": MessageLookupByLibrary.simpleMessage("জস রেড ওয়েব"),
+    "news_card_subtitle": MessageLookupByLibrary.simpleMessage(
+      "জস রেডের সাথে 100% সিঙ্ক্রোনাইজেশন, বন্ধুদের সাথে প্লেলিস্ট এবং আরও অনেক কিছু। নতুন কি তা দেখতে আলতো চাপুন৷",
+    ),
+    "news_card_title": MessageLookupByLibrary.simpleMessage(
+      "Estrella সঙ্গীত বিকশিত হয়েছে!",
+    ),
+    "news_dialog_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "বন্ধুদের যোগ করতে, অনুরোধ গ্রহণ করতে বা আপনার নিরাপত্তা প্রোফাইল পরিচালনা করতে, অনুগ্রহ করে এর অফিসিয়াল প্ল্যাটফর্মে জস রেড ব্যবহার করুন:",
+    ),
+    "news_dialog_section_friends": MessageLookupByLibrary.simpleMessage(
+      "বন্ধু এবং অ্যাকাউন্ট ব্যবস্থাপনা:",
+    ),
+    "news_dialog_title": MessageLookupByLibrary.simpleMessage(
+      "এস্ট্রেলা মিউজিক নিউজ",
+    ),
+    "news_item_collab_desc": MessageLookupByLibrary.simpleMessage(
+      "আপনার বন্ধুদের সাথে প্লেলিস্ট তৈরি করুন! একটি প্লেলিস্ট তৈরি করার সময়, সহযোগী চেকবক্স নির্বাচন করুন এবং একসাথে সম্পাদনা করতে আপনার বন্ধুদের চয়ন করুন৷",
+    ),
+    "news_item_collab_title": MessageLookupByLibrary.simpleMessage(
+      "সহযোগী প্লেলিস্ট",
+    ),
+    "news_item_sync_desc": MessageLookupByLibrary.simpleMessage(
+      "আপনার প্লেলিস্ট এবং পছন্দগুলি এখন আপনার প্রধান জস রেড অ্যাকাউন্টের সাথে স্বয়ংক্রিয়ভাবে ক্লাউডে সংরক্ষিত এবং সিঙ্ক করা হয়েছে।",
+    ),
+    "news_item_sync_title": MessageLookupByLibrary.simpleMessage(
+      "জস রেডের সাথে সম্পূর্ণ ইন্টিগ্রেশন",
+    ),
+    "news_item_trans_desc": MessageLookupByLibrary.simpleMessage(
+      "আপনাকে আর ম্যানুয়াল সিঙ্ক বোতামে ক্লিক করতে হবে না; নতুন মোটর স্বয়ংক্রিয়ভাবে উপরে এবং নিচে নামার জন্য দায়ী।",
+    ),
+    "news_item_trans_title": MessageLookupByLibrary.simpleMessage(
+      "স্বচ্ছ সিঙ্ক্রোনাইজেশন",
     ),
     "noBookmarks": MessageLookupByLibrary.simpleMessage("কোন বুকমার্ক নেই!"),
     "noLibPlaylist": MessageLookupByLibrary.simpleMessage(
@@ -546,6 +620,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "সাম্প্রতিক অনুসন্ধান",
     ),
     "recentlyPlayed": MessageLookupByLibrary.simpleMessage("সম্প্রতি চালানো"),
+    "recommend_cloud": MessageLookupByLibrary.simpleMessage(
+      "আমরা স্পটিফাই-এর মতো অভিজ্ঞতার জন্য ক্লাউড মোড সক্রিয় করার পরামর্শ দিই: আপনার সমস্ত ডিভাইসের মধ্যে রিয়েল-টাইম সিঙ্ক্রোনাইজেশন এবং আপনাকে কিছু না করেই স্বয়ংক্রিয় ব্যাকআপ।",
+    ),
     "removeFromLib": MessageLookupByLibrary.simpleMessage(
       "লাইব্রেরির গান থেকে সরান",
     ),
@@ -649,6 +726,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "তোমার ঘুমের টাইমার সেট করা আছে",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("ঘুমানোর টাইমার"),
+    "slide_indicator": m0,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "গানটি প্লেলিস্টে যোগ করা হয়েছে!",
     ),
@@ -690,6 +768,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "সঙ্গীতের চালানোর কোয়ালিটি",
     ),
     "subscribers": MessageLookupByLibrary.simpleMessage("গ্রাহকরা"),
+    "swipe_prompt": MessageLookupByLibrary.simpleMessage(
+      "বিকল্পগুলি অন্বেষণ করতে সোয়াইপ করুন ➔৷",
+    ),
     "synced": MessageLookupByLibrary.simpleMessage("সিঙ্ক করা হয়েছে"),
     "syncedLyricsNotAvailable": MessageLookupByLibrary.simpleMessage(
       "সিঙ্ক করা লিরিক্স পাওয়া যাচ্ছে না!",
@@ -712,5 +793,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "videos": MessageLookupByLibrary.simpleMessage("ভিডিও"),
     "viewAll": MessageLookupByLibrary.simpleMessage("সবগুলো দেখুন"),
     "viewArtist": MessageLookupByLibrary.simpleMessage("শিল্পী দেখুন"),
+    "welcome_intro": MessageLookupByLibrary.simpleMessage(
+      "আমরা আমাদের প্ল্যাটফর্মকে আধুনিক করেছি। ম্যানুয়াল ব্যাকআপ আপলোড করার পুরানো সিস্টেম নিষ্ক্রিয় করা হয়েছে৷ আপনার সঙ্গীত লাইব্রেরি পরিচালনা করার জন্য আপনার কাছে এখন দুটি পরিষ্কার উপায় রয়েছে৷",
+    ),
+    "welcome_subtitle": MessageLookupByLibrary.simpleMessage(
+      "এখন থেকে আপনি কীভাবে এস্ট্রেলা মিউজিক উপভোগ করতে চান তা বেছে নিন।",
+    ),
+    "welcome_title": MessageLookupByLibrary.simpleMessage(
+      "আপনার সঙ্গীত, আপনার উপায়",
+    ),
   };
 }

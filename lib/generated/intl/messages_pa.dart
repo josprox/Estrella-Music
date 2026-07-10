@@ -20,6 +20,8 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'pa';
 
+  static String m0(current) => "3 ਵਿੱਚੋਂ ${current} ਕਦਮ";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "CreateNewPlaylist": MessageLookupByLibrary.simpleMessage(
@@ -168,6 +170,24 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "close": MessageLookupByLibrary.simpleMessage("ਬੰਦ ਕਰੋ"),
     "closeApp": MessageLookupByLibrary.simpleMessage("ਐਪ ਬੰਦ ਕਰੋ"),
+    "cloud_b1": MessageLookupByLibrary.simpleMessage(
+      "ਆਪਣੇ Joss Red ਖਾਤੇ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਸੁਰੱਖਿਅਤ ਢੰਗ ਨਾਲ ਲੌਗ ਇਨ ਕਰੋ।",
+    ),
+    "cloud_b2": MessageLookupByLibrary.simpleMessage(
+      "ਕਿਸੇ ਵੀ ਡਿਵਾਈਸ (Windows, Android, ਆਦਿ) ਤੋਂ ਤੁਰੰਤ ਆਪਣੀਆਂ ਪਲੇਲਿਸਟਾਂ, ਮਨਪਸੰਦ ਅਤੇ ਇਤਿਹਾਸ ਤੱਕ ਪਹੁੰਚ ਕਰੋ।",
+    ),
+    "cloud_b3": MessageLookupByLibrary.simpleMessage(
+      "ਸਮਾਰਟ ਸਿੰਕ: ਔਫਲਾਈਨ ਕੰਮ ਕਰੋ ਅਤੇ ਜਦੋਂ ਤੁਸੀਂ ਇੰਟਰਨੈਟ ਰਿਕਵਰ ਕਰੋ ਤਾਂ ਆਪਣੇ ਆਪ ਬਦਲਾਅ ਅੱਪਲੋਡ ਕਰੋ।",
+    ),
+    "cloud_btn": MessageLookupByLibrary.simpleMessage(
+      "ਕਲਾਊਡ ਸਮਕਾਲੀਕਰਨ ਨੂੰ ਕਿਰਿਆਸ਼ੀਲ ਕਰੋ",
+    ),
+    "cloud_subtitle": MessageLookupByLibrary.simpleMessage(
+      "ਜੌਸ ਰੈੱਡ ਨਾਲ ਰੀਅਲ-ਟਾਈਮ ਸਿੰਕ੍ਰੋਨਾਈਜ਼ੇਸ਼ਨ",
+    ),
+    "cloud_title": MessageLookupByLibrary.simpleMessage(
+      "ਕਲਾਊਡ ਮੋਡ (ਸਿਫ਼ਾਰਸ਼ੀ)",
+    ),
     "communityplaylists": MessageLookupByLibrary.simpleMessage(
       "ਕਮਿਊਨਿਟੀ ਪਲੇਲਿਸਟਾਂ",
     ),
@@ -341,6 +361,22 @@ class MessageLookup extends MessageLookupByLibrary {
       "ਵਾਤਾਵਰਣ ਨੂੰ ਸੁਣਨਾ ...",
     ),
     "local": MessageLookupByLibrary.simpleMessage("ਸਥਾਨਕ"),
+    "local_b1": MessageLookupByLibrary.simpleMessage(
+      "ਇਹ ਲੌਗਇਨ ਕਰਨ ਦੀ ਲੋੜ ਤੋਂ ਬਿਨਾਂ ਕੰਮ ਕਰਦਾ ਹੈ।",
+    ),
+    "local_b2": MessageLookupByLibrary.simpleMessage(
+      "ਤੁਹਾਡੀ ਪੂਰੀ ਲਾਇਬ੍ਰੇਰੀ ਇਸ ਕੰਪਿਊਟਰ \'ਤੇ ਸਖਤੀ ਨਾਲ ਰਹਿੰਦੀ ਹੈ।",
+    ),
+    "local_b3": MessageLookupByLibrary.simpleMessage(
+      "ਨੋਟ: ਕੋਈ ਦਸਤੀ ਕਲਾਉਡ ਬੈਕਅੱਪ ਨਹੀਂ। ਜੇਕਰ ਤੁਸੀਂ ਆਪਣੀ ਡਿਵਾਈਸ ਗੁਆ ਦਿੰਦੇ ਹੋ ਜਾਂ ਐਪ ਨੂੰ ਅਣਇੰਸਟੌਲ ਕਰ ਲੈਂਦੇ ਹੋ, ਤਾਂ ਤੁਹਾਡਾ ਡਾਟਾ ਮੁੜ ਪ੍ਰਾਪਤ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ।",
+    ),
+    "local_btn": MessageLookupByLibrary.simpleMessage(
+      "ਸਿਰਫ਼ ਇਸ ਡੀਵਾਈਸ \'ਤੇ ਵਰਤੋਂ",
+    ),
+    "local_subtitle": MessageLookupByLibrary.simpleMessage(
+      "ਤੁਹਾਡੀ ਡਿਵਾਈਸ \'ਤੇ ਪੂਰਨ ਗੋਪਨੀਯਤਾ",
+    ),
+    "local_title": MessageLookupByLibrary.simpleMessage("ਸਥਾਨਕ ਮੋਡ"),
     "loudnessDb": MessageLookupByLibrary.simpleMessage("ਉੱਚੀ ਆਵਾਜ਼ ਡੀ.ਬੀ"),
     "loudnessNormalization": MessageLookupByLibrary.simpleMessage(
       "ਉੱਚੀ ਆਵਾਜ਼ ਦਾ ਸਧਾਰਣਕਰਨ",
@@ -372,6 +408,44 @@ class MessageLookup extends MessageLookupByLibrary {
     "networkError1": MessageLookupByLibrary.simpleMessage("ਓਹੋ ਨੈੱਟਵਰਕ ਗੜਬੜ!"),
     "newVersionAvailable": MessageLookupByLibrary.simpleMessage(
       "ਨਵਾਂ ਸੰਸਕਰਣ ਉਪਲੱਬਧ ਹੈ!",
+    ),
+    "news_btn_app": MessageLookupByLibrary.simpleMessage(
+      "ਜੌਸ ਰੈੱਡ ਐਪ (ਪਲੇ ਸਟੋਰ)",
+    ),
+    "news_btn_dismiss": MessageLookupByLibrary.simpleMessage("ਸਮਝਿਆ"),
+    "news_btn_web": MessageLookupByLibrary.simpleMessage("ਜੌਸ ਰੈੱਡ ਵੈੱਬ"),
+    "news_card_subtitle": MessageLookupByLibrary.simpleMessage(
+      "ਜੌਸ ਰੈੱਡ ਨਾਲ 100% ਸਮਕਾਲੀਕਰਨ, ਦੋਸਤਾਂ ਨਾਲ ਪਲੇਲਿਸਟਾਂ ਅਤੇ ਹੋਰ ਬਹੁਤ ਕੁਝ। ਨਵਾਂ ਕੀ ਹੈ ਇਹ ਦੇਖਣ ਲਈ ਟੈਪ ਕਰੋ।",
+    ),
+    "news_card_title": MessageLookupByLibrary.simpleMessage(
+      "Estrella ਸੰਗੀਤ ਵਿਕਸਿਤ ਹੋਇਆ ਹੈ!",
+    ),
+    "news_dialog_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "ਦੋਸਤਾਂ ਨੂੰ ਜੋੜਨ, ਬੇਨਤੀਆਂ ਸਵੀਕਾਰ ਕਰਨ ਜਾਂ ਆਪਣੀ ਸੁਰੱਖਿਆ ਪ੍ਰੋਫਾਈਲ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰਨ ਲਈ, ਕਿਰਪਾ ਕਰਕੇ ਇਸਦੇ ਅਧਿਕਾਰਤ ਪਲੇਟਫਾਰਮਾਂ \'ਤੇ ਜੌਸ ਰੈੱਡ ਦੀ ਵਰਤੋਂ ਕਰੋ:",
+    ),
+    "news_dialog_section_friends": MessageLookupByLibrary.simpleMessage(
+      "ਦੋਸਤ ਅਤੇ ਖਾਤਾ ਪ੍ਰਬੰਧਨ:",
+    ),
+    "news_dialog_title": MessageLookupByLibrary.simpleMessage(
+      "Estrella ਸੰਗੀਤ ਨਿਊਜ਼",
+    ),
+    "news_item_collab_desc": MessageLookupByLibrary.simpleMessage(
+      "ਆਪਣੇ ਦੋਸਤਾਂ ਨਾਲ ਪਲੇਲਿਸਟਸ ਬਣਾਓ! ਪਲੇਲਿਸਟ ਬਣਾਉਂਦੇ ਸਮੇਂ, ਸਹਿਯੋਗੀ ਚੈੱਕਬਾਕਸ ਚੁਣੋ ਅਤੇ ਇਕੱਠੇ ਸੰਪਾਦਿਤ ਕਰਨ ਲਈ ਆਪਣੇ ਦੋਸਤਾਂ ਨੂੰ ਚੁਣੋ।",
+    ),
+    "news_item_collab_title": MessageLookupByLibrary.simpleMessage(
+      "ਸਹਿਯੋਗੀ ਪਲੇਲਿਸਟਸ",
+    ),
+    "news_item_sync_desc": MessageLookupByLibrary.simpleMessage(
+      "ਤੁਹਾਡੀਆਂ ਪਲੇਲਿਸਟਾਂ ਅਤੇ ਮਨਪਸੰਦ ਹੁਣ ਤੁਹਾਡੇ ਮੁੱਖ ਜੌਸ ਰੈੱਡ ਖਾਤੇ ਨਾਲ ਕਲਾਉਡ ਵਿੱਚ ਸਵੈਚਲਿਤ ਤੌਰ \'ਤੇ ਸੁਰੱਖਿਅਤ ਅਤੇ ਸਮਕਾਲੀ ਹੋ ਜਾਂਦੇ ਹਨ।",
+    ),
+    "news_item_sync_title": MessageLookupByLibrary.simpleMessage(
+      "ਜੋਸ ਰੈੱਡ ਨਾਲ ਪੂਰਾ ਏਕੀਕਰਨ",
+    ),
+    "news_item_trans_desc": MessageLookupByLibrary.simpleMessage(
+      "ਤੁਹਾਨੂੰ ਹੁਣ ਮੈਨੂਅਲ ਸਿੰਕ ਬਟਨਾਂ \'ਤੇ ਕਲਿੱਕ ਕਰਨ ਦੀ ਲੋੜ ਨਹੀਂ ਹੈ; ਨਵੀਂ ਮੋਟਰ ਆਪਣੇ ਆਪ ਉੱਪਰ ਅਤੇ ਹੇਠਾਂ ਸ਼ਿਫਟ ਕਰਨ ਲਈ ਜ਼ਿੰਮੇਵਾਰ ਹੈ।",
+    ),
+    "news_item_trans_title": MessageLookupByLibrary.simpleMessage(
+      "ਪਾਰਦਰਸ਼ੀ ਸਮਕਾਲੀਕਰਨ",
     ),
     "noBookmarks": MessageLookupByLibrary.simpleMessage("ਕੋਈ ਬੁੱਕਮਾਰਕ ਨਹੀਂ!"),
     "noLibPlaylist": MessageLookupByLibrary.simpleMessage(
@@ -460,6 +534,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "recentSearches": MessageLookupByLibrary.simpleMessage("ਹਾਲੀਆ ਖੋਜਾਂ"),
     "recentlyPlayed": MessageLookupByLibrary.simpleMessage(
       "ਹਾਲ ਹੀ ਵਿੱਚ ਚਲਾਏ ਗਏ",
+    ),
+    "recommend_cloud": MessageLookupByLibrary.simpleMessage(
+      "ਅਸੀਂ ਇੱਕ Spotify-ਵਰਗੇ ਅਨੁਭਵ ਲਈ ਕਲਾਉਡ ਮੋਡ ਨੂੰ ਸਰਗਰਮ ਕਰਨ ਦੀ ਸਿਫ਼ਾਰਿਸ਼ ਕਰਦੇ ਹਾਂ: ਤੁਹਾਡੀਆਂ ਸਾਰੀਆਂ ਡਿਵਾਈਸਾਂ ਵਿਚਕਾਰ ਰੀਅਲ-ਟਾਈਮ ਸਿੰਕ੍ਰੋਨਾਈਜ਼ੇਸ਼ਨ ਅਤੇ ਤੁਹਾਨੂੰ ਕੁਝ ਕੀਤੇ ਬਿਨਾਂ ਆਟੋਮੈਟਿਕ ਬੈਕਅੱਪ।",
     ),
     "removeFromLib": MessageLookupByLibrary.simpleMessage(
       "ਲਾਇਬ੍ਰੇਰੀ ਗੀਤਾਂ ਤੋਂ ਹਟਾਓ",
@@ -556,6 +633,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "ਤੁਹਾਡਾ ਸਲੀਪ ਟਾਈਮਰ ਸੈੱਟ ਕੀਤਾ ਗਿਆ ਹੈ",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("ਸਲੀਪ ਟਾਈਮਰ"),
+    "slide_indicator": m0,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "ਗੀਤ ਪਲੇਲਿਸਟ ਵਿੱਚ ਜੋੜਿਆ ਗਿਆ!",
     ),
@@ -599,6 +677,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "ਸੰਗੀਤ ਸਟ੍ਰੀਮ ਦੀ ਕੁਆਲਿਟੀ",
     ),
     "subscribers": MessageLookupByLibrary.simpleMessage("ਸਬਸਕ੍ਰਾਈਬਰਜ਼"),
+    "swipe_prompt": MessageLookupByLibrary.simpleMessage(
+      "ਵਿਕਲਪਾਂ ਦੀ ਪੜਚੋਲ ਕਰਨ ਲਈ ਸਵਾਈਪ ਕਰੋ ➔",
+    ),
     "synced": MessageLookupByLibrary.simpleMessage("ਸਿੰਕ ਕੀਤਾ ਗਿਆ"),
     "syncedLyricsNotAvailable": MessageLookupByLibrary.simpleMessage(
       "ਸਿੰਕ ਕੀਤੇ ਬੋਲ ਉਪਲਬਧ ਨਹੀਂ ਹਨ!",
@@ -623,5 +704,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "videos": MessageLookupByLibrary.simpleMessage("ਵੀਡੀਓ"),
     "viewAll": MessageLookupByLibrary.simpleMessage("ਸਾਰੇ ਦੇਖੋ"),
     "viewArtist": MessageLookupByLibrary.simpleMessage("ਕਲਾਕਾਰ ਵੇਖੋ"),
+    "welcome_intro": MessageLookupByLibrary.simpleMessage(
+      "ਅਸੀਂ ਆਪਣੇ ਪਲੇਟਫਾਰਮ ਨੂੰ ਆਧੁਨਿਕ ਬਣਾਇਆ ਹੈ। ਮੈਨੁਅਲ ਬੈਕਅੱਪ ਅੱਪਲੋਡ ਕਰਨ ਦੀ ਪੁਰਾਣੀ ਪ੍ਰਣਾਲੀ ਨੂੰ ਅਸਮਰੱਥ ਕਰ ਦਿੱਤਾ ਗਿਆ ਹੈ। ਹੁਣ ਤੁਹਾਡੇ ਕੋਲ ਆਪਣੀ ਸੰਗੀਤ ਲਾਇਬ੍ਰੇਰੀ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰਨ ਦੇ ਦੋ ਸਪੱਸ਼ਟ ਤਰੀਕੇ ਹਨ।",
+    ),
+    "welcome_subtitle": MessageLookupByLibrary.simpleMessage(
+      "ਚੁਣੋ ਕਿ ਤੁਸੀਂ ਹੁਣ ਤੋਂ Estrella ਸੰਗੀਤ ਦਾ ਅਨੁਭਵ ਕਿਵੇਂ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ।",
+    ),
+    "welcome_title": MessageLookupByLibrary.simpleMessage(
+      "ਤੁਹਾਡਾ ਸੰਗੀਤ, ਤੁਹਾਡਾ ਤਰੀਕਾ",
+    ),
   };
 }

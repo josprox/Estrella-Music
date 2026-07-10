@@ -20,6 +20,8 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'bg';
 
+  static String m0(current) => "Стъпка ${current} от 3";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "CreateNewPlaylist": MessageLookupByLibrary.simpleMessage(
@@ -183,6 +185,24 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "close": MessageLookupByLibrary.simpleMessage("затвори"),
     "closeApp": MessageLookupByLibrary.simpleMessage("Затвори приложението"),
+    "cloud_b1": MessageLookupByLibrary.simpleMessage(
+      "Влезте сигурно с вашия акаунт в Joss Red.",
+    ),
+    "cloud_b2": MessageLookupByLibrary.simpleMessage(
+      "Достъп до вашите плейлисти, любими и история от всяко устройство (Windows, Android и т.н.) незабавно.",
+    ),
+    "cloud_b3": MessageLookupByLibrary.simpleMessage(
+      "Интелигентно синхронизиране: Работете офлайн и качвайте промени автоматично, когато възстановите интернет.",
+    ),
+    "cloud_btn": MessageLookupByLibrary.simpleMessage(
+      "Активирайте облачната синхронизация",
+    ),
+    "cloud_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Синхронизация в реално време с Joss Red",
+    ),
+    "cloud_title": MessageLookupByLibrary.simpleMessage(
+      "Облачен режим (препоръчително)",
+    ),
     "communityplaylists": MessageLookupByLibrary.simpleMessage(
       "Плейлисти на Общността",
     ),
@@ -427,6 +447,22 @@ class MessageLookup extends MessageLookupByLibrary {
       "Вслушване в околната среда...",
     ),
     "local": MessageLookupByLibrary.simpleMessage("Локално"),
+    "local_b1": MessageLookupByLibrary.simpleMessage(
+      "Работи без да е необходимо влизане.",
+    ),
+    "local_b2": MessageLookupByLibrary.simpleMessage(
+      "Цялата ви библиотека остава строго на този компютър.",
+    ),
+    "local_b3": MessageLookupByLibrary.simpleMessage(
+      "Забележка: Без ръчно архивиране в облак. Ако загубите устройството си или деинсталирате приложението, вашите данни не могат да бъдат възстановени.",
+    ),
+    "local_btn": MessageLookupByLibrary.simpleMessage(
+      "Използвайте само на това устройство",
+    ),
+    "local_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Абсолютна поверителност на вашето устройство",
+    ),
+    "local_title": MessageLookupByLibrary.simpleMessage("Локален режим"),
     "loudnessDb": MessageLookupByLibrary.simpleMessage("Сила на звука dB"),
     "loudnessNormalization": MessageLookupByLibrary.simpleMessage(
       "Нормализиране силата на звука",
@@ -463,6 +499,44 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "newVersionAvailable": MessageLookupByLibrary.simpleMessage(
       "Налична е нова версия!",
+    ),
+    "news_btn_app": MessageLookupByLibrary.simpleMessage(
+      "Приложение Joss Red (Play Store)",
+    ),
+    "news_btn_dismiss": MessageLookupByLibrary.simpleMessage("разбрах"),
+    "news_btn_web": MessageLookupByLibrary.simpleMessage("Joss Red Web"),
+    "news_card_subtitle": MessageLookupByLibrary.simpleMessage(
+      "100% синхронизация с Joss Red, плейлисти с приятели и много други. Докоснете, за да видите какво е новото.",
+    ),
+    "news_card_title": MessageLookupByLibrary.simpleMessage(
+      "Estrella Music се разви!",
+    ),
+    "news_dialog_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "За да добавяте приятели, да приемате заявки или да управлявате профила си за сигурност, моля, използвайте Joss Red на неговите официални платформи:",
+    ),
+    "news_dialog_section_friends": MessageLookupByLibrary.simpleMessage(
+      "Приятели и управление на акаунти:",
+    ),
+    "news_dialog_title": MessageLookupByLibrary.simpleMessage(
+      "Estrella Music News",
+    ),
+    "news_item_collab_desc": MessageLookupByLibrary.simpleMessage(
+      "Създавайте плейлисти с приятелите си! Когато създавате списък за изпълнение, поставете отметка в квадратчето Collaborative и изберете вашите приятели, които да редактирате заедно.",
+    ),
+    "news_item_collab_title": MessageLookupByLibrary.simpleMessage(
+      "Съвместни плейлисти",
+    ),
+    "news_item_sync_desc": MessageLookupByLibrary.simpleMessage(
+      "Вашите плейлисти и любими вече се запазват и синхронизират в облака автоматично с основния ви акаунт в Joss Red.",
+    ),
+    "news_item_sync_title": MessageLookupByLibrary.simpleMessage(
+      "Пълна интеграция с Joss Red",
+    ),
+    "news_item_trans_desc": MessageLookupByLibrary.simpleMessage(
+      "Вече не е необходимо да щракнете върху бутоните за ръчно синхронизиране; Новият мотор отговаря за автоматичното превключване нагоре и надолу.",
+    ),
+    "news_item_trans_title": MessageLookupByLibrary.simpleMessage(
+      "Прозрачна синхронизация",
     ),
     "noBookmarks": MessageLookupByLibrary.simpleMessage("Няма отметки!"),
     "noLibPlaylist": MessageLookupByLibrary.simpleMessage(
@@ -577,6 +651,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "recentlyPlayed": MessageLookupByLibrary.simpleMessage(
       "Последно изпълнявани",
     ),
+    "recommend_cloud": MessageLookupByLibrary.simpleMessage(
+      "Препоръчваме да активирате облачен режим за изживяване, подобно на Spotify: синхронизация в реално време между всичките ви устройства и автоматично архивиране, без да се налага да правите нищо.",
+    ),
     "removeFromLib": MessageLookupByLibrary.simpleMessage(
       "Премахни песни от библиотеката",
     ),
@@ -686,6 +763,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Вашият таймер за заспиване е зададен",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Таймер за заспиване"),
+    "slide_indicator": m0,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "Песента е добавена към плейлист!",
     ),
@@ -729,6 +807,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Качество на музикалния поток",
     ),
     "subscribers": MessageLookupByLibrary.simpleMessage("абонати"),
+    "swipe_prompt": MessageLookupByLibrary.simpleMessage(
+      "Плъзнете, за да разгледате опциите ➔",
+    ),
     "synced": MessageLookupByLibrary.simpleMessage("Синхронизирано"),
     "syncedLyricsNotAvailable": MessageLookupByLibrary.simpleMessage(
       "Синхронизираните текстове не са налични!",
@@ -755,5 +836,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "videos": MessageLookupByLibrary.simpleMessage("Видеоклипове"),
     "viewAll": MessageLookupByLibrary.simpleMessage("Виж всички"),
     "viewArtist": MessageLookupByLibrary.simpleMessage("Преглед на изпълнител"),
+    "welcome_intro": MessageLookupByLibrary.simpleMessage(
+      "Модернизирахме нашата платформа. Старата система за качване на ръчни архиви е деактивирана. Вече имате два ясни начина за управление на вашата музикална библиотека.",
+    ),
+    "welcome_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Изберете как искате да изживеете Estrella Music от сега нататък.",
+    ),
+    "welcome_title": MessageLookupByLibrary.simpleMessage(
+      "Вашата музика, вашият начин",
+    ),
   };
 }

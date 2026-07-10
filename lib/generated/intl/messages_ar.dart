@@ -20,6 +20,8 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ar';
 
+  static String m0(current) => "الخطوة __PH_0____ من 3";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "CreateNewPlaylist": MessageLookupByLibrary.simpleMessage(
@@ -175,6 +177,24 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "close": MessageLookupByLibrary.simpleMessage("يغلق"),
     "closeApp": MessageLookupByLibrary.simpleMessage("إغلاق التطبيق"),
+    "cloud_b1": MessageLookupByLibrary.simpleMessage(
+      "قم بتسجيل الدخول بشكل آمن باستخدام حساب Joss Red الخاص بك.",
+    ),
+    "cloud_b2": MessageLookupByLibrary.simpleMessage(
+      "يمكنك الوصول إلى قوائم التشغيل والمفضلات والسجل من أي جهاز (Windows وAndroid وما إلى ذلك) على الفور.",
+    ),
+    "cloud_b3": MessageLookupByLibrary.simpleMessage(
+      "المزامنة الذكية: العمل دون اتصال بالإنترنت وتحميل التغييرات تلقائيًا عند استعادة الإنترنت.",
+    ),
+    "cloud_btn": MessageLookupByLibrary.simpleMessage(
+      "تفعيل المزامنة السحابية",
+    ),
+    "cloud_subtitle": MessageLookupByLibrary.simpleMessage(
+      "المزامنة في الوقت الحقيقي مع جوس ريد",
+    ),
+    "cloud_title": MessageLookupByLibrary.simpleMessage(
+      "الوضع السحابي (مستحسن)",
+    ),
     "communityplaylists": MessageLookupByLibrary.simpleMessage(
       "قوائم تشغيل الاخرين",
     ),
@@ -336,6 +356,22 @@ class MessageLookup extends MessageLookupByLibrary {
       "الاستماع إلى البيئة...",
     ),
     "local": MessageLookupByLibrary.simpleMessage("محلي"),
+    "local_b1": MessageLookupByLibrary.simpleMessage(
+      "يعمل دون الحاجة لتسجيل الدخول.",
+    ),
+    "local_b2": MessageLookupByLibrary.simpleMessage(
+      "مكتبتك بأكملها تبقى بشكل صارم على هذا الكمبيوتر.",
+    ),
+    "local_b3": MessageLookupByLibrary.simpleMessage(
+      "ملحوظة: لا توجد نسخ احتياطية سحابية يدوية. إذا فقدت جهازك أو قمت بإلغاء تثبيت التطبيق، فلن تتمكن من استرداد بياناتك.",
+    ),
+    "local_btn": MessageLookupByLibrary.simpleMessage(
+      "استخدم فقط على هذا الجهاز",
+    ),
+    "local_subtitle": MessageLookupByLibrary.simpleMessage(
+      "الخصوصية المطلقة على جهازك",
+    ),
+    "local_title": MessageLookupByLibrary.simpleMessage("الوضع المحلي"),
     "loudnessDb": MessageLookupByLibrary.simpleMessage("شدة الصوت بالديسيبل"),
     "loudnessNormalization": MessageLookupByLibrary.simpleMessage(
       "معايرة شدة الصوت",
@@ -369,6 +405,44 @@ class MessageLookup extends MessageLookupByLibrary {
     "networkError1": MessageLookupByLibrary.simpleMessage("خطأ في الشبكة!"),
     "newVersionAvailable": MessageLookupByLibrary.simpleMessage(
       "إصدار جديد متاح!",
+    ),
+    "news_btn_app": MessageLookupByLibrary.simpleMessage(
+      "تطبيق جوس ريد (متجر Play)",
+    ),
+    "news_btn_dismiss": MessageLookupByLibrary.simpleMessage("مفهوم"),
+    "news_btn_web": MessageLookupByLibrary.simpleMessage("جوس ريد ويب"),
+    "news_card_subtitle": MessageLookupByLibrary.simpleMessage(
+      "مزامنة بنسبة 100% مع Joss Red وقوائم التشغيل مع الأصدقاء وغير ذلك الكثير. انقر لمعرفة ما هو الجديد.",
+    ),
+    "news_card_title": MessageLookupByLibrary.simpleMessage(
+      "لقد تطورت موسيقى استريلا!",
+    ),
+    "news_dialog_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "لإضافة أصدقاء أو قبول الطلبات أو إدارة ملف تعريف الأمان الخاص بك، يرجى استخدام Joss Red على منصاته الرسمية:",
+    ),
+    "news_dialog_section_friends": MessageLookupByLibrary.simpleMessage(
+      "الأصدقاء وإدارة الحسابات:",
+    ),
+    "news_dialog_title": MessageLookupByLibrary.simpleMessage(
+      "أخبار الموسيقى استريلا",
+    ),
+    "news_item_collab_desc": MessageLookupByLibrary.simpleMessage(
+      "إنشاء قوائم التشغيل مع أصدقائك! عند إنشاء قائمة تشغيل، حدد مربع الاختيار التعاوني واختر أصدقائك لتحريرها معًا.",
+    ),
+    "news_item_collab_title": MessageLookupByLibrary.simpleMessage(
+      "قوائم التشغيل التعاونية",
+    ),
+    "news_item_sync_desc": MessageLookupByLibrary.simpleMessage(
+      "يتم الآن حفظ قوائم التشغيل والمفضلات الخاصة بك ومزامنتها في السحابة تلقائيًا باستخدام حساب Joss Red الرئيسي الخاص بك.",
+    ),
+    "news_item_sync_title": MessageLookupByLibrary.simpleMessage(
+      "التكامل الكامل مع جوس ريد",
+    ),
+    "news_item_trans_desc": MessageLookupByLibrary.simpleMessage(
+      "لم تعد بحاجة إلى النقر فوق أزرار المزامنة اليدوية؛ المحرك الجديد مسؤول عن التحول لأعلى ولأسفل تلقائيًا.",
+    ),
+    "news_item_trans_title": MessageLookupByLibrary.simpleMessage(
+      "مزامنة شفافة",
     ),
     "noBookmarks": MessageLookupByLibrary.simpleMessage(
       "لا الإشارات المرجعية!",
@@ -468,6 +542,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "عمليات البحث الأخيرة",
     ),
     "recentlyPlayed": MessageLookupByLibrary.simpleMessage("استمعت مؤخرا"),
+    "recommend_cloud": MessageLookupByLibrary.simpleMessage(
+      "نوصي بتنشيط الوضع السحابي للاستمتاع بتجربة تشبه تجربة Spotify: المزامنة في الوقت الفعلي بين جميع أجهزتك والنسخ الاحتياطي التلقائي دون الحاجة إلى القيام بأي شيء.",
+    ),
     "removeFromLib": MessageLookupByLibrary.simpleMessage(
       "إزالة من مكتبة الأغاني",
     ),
@@ -563,6 +640,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "تم ضبط مؤقت نوم",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("مؤقت النوم"),
+    "slide_indicator": m0,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "تمت إضافة الأغنية إلى قائمة التشغيل!",
     ),
@@ -604,6 +682,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "جودة بث الموسيقى",
     ),
     "subscribers": MessageLookupByLibrary.simpleMessage("متابعون"),
+    "swipe_prompt": MessageLookupByLibrary.simpleMessage(
+      "اسحب لاستكشاف الخيارات ➔",
+    ),
     "synced": MessageLookupByLibrary.simpleMessage("مزامنة"),
     "syncedLyricsNotAvailable": MessageLookupByLibrary.simpleMessage(
       "كلمات متزامنة غير متوفرة!",
@@ -628,5 +709,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "videos": MessageLookupByLibrary.simpleMessage("فيديو"),
     "viewAll": MessageLookupByLibrary.simpleMessage("رؤية الكل"),
     "viewArtist": MessageLookupByLibrary.simpleMessage("عرض الفنان"),
+    "welcome_intro": MessageLookupByLibrary.simpleMessage(
+      "لقد قمنا بتحديث منصتنا. تم تعطيل النظام القديم لتحميل النسخ الاحتياطية اليدوية. لديك الآن طريقتان واضحتان لإدارة مكتبة الموسيقى الخاصة بك.",
+    ),
+    "welcome_subtitle": MessageLookupByLibrary.simpleMessage(
+      "اختر الطريقة التي تريد بها تجربة موسيقى Estrella من الآن فصاعدًا.",
+    ),
+    "welcome_title": MessageLookupByLibrary.simpleMessage(
+      "الموسيقى الخاصة بك، طريقك",
+    ),
   };
 }

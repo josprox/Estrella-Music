@@ -20,6 +20,8 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'vi';
 
+  static String m0(current) => "Bước ${current} trên 3";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "CreateNewPlaylist": MessageLookupByLibrary.simpleMessage(
@@ -179,6 +181,24 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "close": MessageLookupByLibrary.simpleMessage("Đóng"),
     "closeApp": MessageLookupByLibrary.simpleMessage("Đóng ứng dụng"),
+    "cloud_b1": MessageLookupByLibrary.simpleMessage(
+      "Đăng nhập an toàn bằng tài khoản Joss Red của bạn.",
+    ),
+    "cloud_b2": MessageLookupByLibrary.simpleMessage(
+      "Truy cập danh sách phát, mục yêu thích và lịch sử của bạn từ bất kỳ thiết bị nào (Windows, Android, v.v.) ngay lập tức.",
+    ),
+    "cloud_b3": MessageLookupByLibrary.simpleMessage(
+      "Đồng bộ hóa thông minh: Làm việc ngoại tuyến và tự động tải lên các thay đổi khi bạn khôi phục Internet.",
+    ),
+    "cloud_btn": MessageLookupByLibrary.simpleMessage(
+      "Kích hoạt đồng bộ hóa đám mây",
+    ),
+    "cloud_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Đồng bộ hóa thời gian thực với Joss Red",
+    ),
+    "cloud_title": MessageLookupByLibrary.simpleMessage(
+      "Chế độ đám mây (Được khuyến nghị)",
+    ),
     "communityplaylists": MessageLookupByLibrary.simpleMessage(
       "Danh sách phát cộng đồng",
     ),
@@ -423,6 +443,22 @@ class MessageLookup extends MessageLookupByLibrary {
       "Lắng nghe môi trường...",
     ),
     "local": MessageLookupByLibrary.simpleMessage("Địa phương"),
+    "local_b1": MessageLookupByLibrary.simpleMessage(
+      "Nó hoạt động mà không cần phải đăng nhập.",
+    ),
+    "local_b2": MessageLookupByLibrary.simpleMessage(
+      "Toàn bộ thư viện của bạn nằm hoàn toàn trên máy tính này.",
+    ),
+    "local_b3": MessageLookupByLibrary.simpleMessage(
+      "Lưu ý: Không sao lưu đám mây thủ công. Nếu bạn mất thiết bị hoặc gỡ cài đặt ứng dụng, dữ liệu của bạn sẽ không thể khôi phục được.",
+    ),
+    "local_btn": MessageLookupByLibrary.simpleMessage(
+      "Chỉ sử dụng trên thiết bị này",
+    ),
+    "local_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Quyền riêng tư tuyệt đối trên thiết bị của bạn",
+    ),
+    "local_title": MessageLookupByLibrary.simpleMessage("Chế độ cục bộ"),
     "loudnessDb": MessageLookupByLibrary.simpleMessage("Độ ồn Db"),
     "loudnessNormalization": MessageLookupByLibrary.simpleMessage(
       "Cân bằng âm lượng",
@@ -459,6 +495,44 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "newVersionAvailable": MessageLookupByLibrary.simpleMessage(
       "Đã có phiên bản mới!",
+    ),
+    "news_btn_app": MessageLookupByLibrary.simpleMessage(
+      "Ứng dụng Joss Red (Cửa hàng Play)",
+    ),
+    "news_btn_dismiss": MessageLookupByLibrary.simpleMessage("đã hiểu"),
+    "news_btn_web": MessageLookupByLibrary.simpleMessage("Web đỏ Joss"),
+    "news_card_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Đồng bộ hóa 100% với Joss Red, danh sách phát với bạn bè và hơn thế nữa. Nhấn để xem có gì mới.",
+    ),
+    "news_card_title": MessageLookupByLibrary.simpleMessage(
+      "Âm nhạc Estrella đã phát triển!",
+    ),
+    "news_dialog_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "Để thêm bạn bè, chấp nhận yêu cầu hoặc quản lý hồ sơ bảo mật của bạn, vui lòng sử dụng Joss Red trên các nền tảng chính thức của nó:",
+    ),
+    "news_dialog_section_friends": MessageLookupByLibrary.simpleMessage(
+      "Quản lý bạn bè và tài khoản:",
+    ),
+    "news_dialog_title": MessageLookupByLibrary.simpleMessage(
+      "Tin tức âm nhạc Estrella",
+    ),
+    "news_item_collab_desc": MessageLookupByLibrary.simpleMessage(
+      "Tạo danh sách phát với bạn bè của bạn! Khi tạo danh sách phát, hãy chọn hộp kiểm Cộng tác và chọn bạn bè của bạn để cùng chỉnh sửa.",
+    ),
+    "news_item_collab_title": MessageLookupByLibrary.simpleMessage(
+      "Danh sách phát cộng tác",
+    ),
+    "news_item_sync_desc": MessageLookupByLibrary.simpleMessage(
+      "Danh sách phát và mục yêu thích của bạn hiện được lưu và đồng bộ hóa tự động trên đám mây với tài khoản Joss Red chính của bạn.",
+    ),
+    "news_item_sync_title": MessageLookupByLibrary.simpleMessage(
+      "Tích hợp đầy đủ với Joss Red",
+    ),
+    "news_item_trans_desc": MessageLookupByLibrary.simpleMessage(
+      "Bạn không cần phải nhấp vào nút đồng bộ hóa thủ công nữa; Động cơ mới có nhiệm vụ chuyển số lên xuống tự động.",
+    ),
+    "news_item_trans_title": MessageLookupByLibrary.simpleMessage(
+      "Đồng bộ hóa minh bạch",
     ),
     "noBookmarks": MessageLookupByLibrary.simpleMessage("Không có đánh dấu!"),
     "noLibPlaylist": MessageLookupByLibrary.simpleMessage(
@@ -577,6 +651,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "readMore": MessageLookupByLibrary.simpleMessage("Đọc thêm"),
     "recentSearches": MessageLookupByLibrary.simpleMessage("Tìm kiếm gần đây"),
     "recentlyPlayed": MessageLookupByLibrary.simpleMessage("Đã phát gần đây"),
+    "recommend_cloud": MessageLookupByLibrary.simpleMessage(
+      "Chúng tôi khuyên bạn nên kích hoạt Chế độ đám mây để có trải nghiệm giống như Spotify: đồng bộ hóa thời gian thực giữa tất cả các thiết bị của bạn và sao lưu tự động mà bạn không cần phải làm gì cả.",
+    ),
     "removeFromLib": MessageLookupByLibrary.simpleMessage(
       "Xóa khỏi thư viện bài hát",
     ),
@@ -688,6 +765,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Bộ hẹn giờ tắt của bạn đã được đặt",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Hẹn giờ tắt"),
+    "slide_indicator": m0,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "Bài hát đã được thêm vào danh sách phát!",
     ),
@@ -731,6 +809,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Chất lượng truyền tải nhạc qua internet",
     ),
     "subscribers": MessageLookupByLibrary.simpleMessage("người đăng ký"),
+    "swipe_prompt": MessageLookupByLibrary.simpleMessage(
+      "Vuốt để khám phá các tùy chọn ➔",
+    ),
     "synced": MessageLookupByLibrary.simpleMessage("Đã đồng bộ hóa"),
     "syncedLyricsNotAvailable": MessageLookupByLibrary.simpleMessage(
       "Lời bài hát được đồng bộ hóa không có!",
@@ -755,5 +836,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "videos": MessageLookupByLibrary.simpleMessage("Phim ảnh"),
     "viewAll": MessageLookupByLibrary.simpleMessage("Xem tất cả"),
     "viewArtist": MessageLookupByLibrary.simpleMessage("Xem Nghệ sĩ"),
+    "welcome_intro": MessageLookupByLibrary.simpleMessage(
+      "Chúng tôi đã hiện đại hóa nền tảng của mình. Hệ thống tải lên bản sao lưu thủ công cũ đã bị vô hiệu hóa. Bây giờ bạn có hai cách rõ ràng để quản lý thư viện nhạc của mình.",
+    ),
+    "welcome_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Chọn cách bạn muốn trải nghiệm Estrella Music kể từ bây giờ.",
+    ),
+    "welcome_title": MessageLookupByLibrary.simpleMessage(
+      "Âm nhạc của bạn, theo cách của bạn",
+    ),
   };
 }

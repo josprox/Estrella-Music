@@ -20,6 +20,8 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'hu';
 
+  static String m0(current) => "3. ${current}. lépés";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "CreateNewPlaylist": MessageLookupByLibrary.simpleMessage(
@@ -112,6 +114,22 @@ class MessageLookup extends MessageLookupByLibrary {
     "cancelTimer": MessageLookupByLibrary.simpleMessage("Időzítés vége"),
     "close": MessageLookupByLibrary.simpleMessage("Közeli"),
     "closeApp": MessageLookupByLibrary.simpleMessage("Alkalmazás bezárása"),
+    "cloud_b1": MessageLookupByLibrary.simpleMessage(
+      "Jelentkezzen be biztonságosan Joss Red fiókjával.",
+    ),
+    "cloud_b2": MessageLookupByLibrary.simpleMessage(
+      "Bármilyen eszközről (Windows, Android stb.) azonnal elérheti lejátszási listáit, kedvenceit és előzményeit.",
+    ),
+    "cloud_b3": MessageLookupByLibrary.simpleMessage(
+      "Intelligens szinkronizálás: Dolgozzon offline módban, és automatikusan töltse fel a módosításokat, amikor helyreáll az internet.",
+    ),
+    "cloud_btn": MessageLookupByLibrary.simpleMessage(
+      "Aktiválja a felhőszinkronizálást",
+    ),
+    "cloud_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Valós idejű szinkronizálás Joss Red-el",
+    ),
+    "cloud_title": MessageLookupByLibrary.simpleMessage("Felhő mód (ajánlott)"),
     "communityplaylists": MessageLookupByLibrary.simpleMessage(
       "Közösségi lejátszólisták",
     ),
@@ -186,6 +204,22 @@ class MessageLookup extends MessageLookupByLibrary {
     "listeningToEnvironment": MessageLookupByLibrary.simpleMessage(
       "A környezetre figyelve...",
     ),
+    "local_b1": MessageLookupByLibrary.simpleMessage(
+      "Bejelentkezés nélkül működik.",
+    ),
+    "local_b2": MessageLookupByLibrary.simpleMessage(
+      "A teljes könyvtára szigorúan ezen a számítógépen marad.",
+    ),
+    "local_b3": MessageLookupByLibrary.simpleMessage(
+      "Megjegyzés: Nincs manuális felhőalapú biztonsági mentés. Ha elveszíti eszközét vagy eltávolítja az alkalmazást, az adatok nem állíthatók vissza.",
+    ),
+    "local_btn": MessageLookupByLibrary.simpleMessage(
+      "Csak ezen a készüléken használja",
+    ),
+    "local_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Abszolút adatvédelem az eszközön",
+    ),
+    "local_title": MessageLookupByLibrary.simpleMessage("Helyi mód"),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
       "Győződjön meg arról, hogy a zene elég hangosan szól a mikrofon közelében.",
     ),
@@ -205,6 +239,44 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "networkError1": MessageLookupByLibrary.simpleMessage(
       "Hoppá, hálózati hiba!",
+    ),
+    "news_btn_app": MessageLookupByLibrary.simpleMessage(
+      "Joss Red App (Play Áruház)",
+    ),
+    "news_btn_dismiss": MessageLookupByLibrary.simpleMessage("Megértve"),
+    "news_btn_web": MessageLookupByLibrary.simpleMessage("Joss Red Web"),
+    "news_card_subtitle": MessageLookupByLibrary.simpleMessage(
+      "100%-os szinkronizálás Joss Reddel, lejátszási listák a barátokkal és még sok más. Koppintson az újdonságok megtekintéséhez.",
+    ),
+    "news_card_title": MessageLookupByLibrary.simpleMessage(
+      "Az Estrella Music fejlődött!",
+    ),
+    "news_dialog_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "Barátok hozzáadásához, kérések elfogadásához vagy biztonsági profiljának kezeléséhez használja a Joss Red szolgáltatást a hivatalos platformjain:",
+    ),
+    "news_dialog_section_friends": MessageLookupByLibrary.simpleMessage(
+      "Barátok és fiókkezelés:",
+    ),
+    "news_dialog_title": MessageLookupByLibrary.simpleMessage(
+      "Estrella Music News",
+    ),
+    "news_item_collab_desc": MessageLookupByLibrary.simpleMessage(
+      "Hozz létre lejátszási listákat barátaiddal! Lejátszási lista létrehozásakor jelölje be az Együttműködés jelölőnégyzetet, és válassza ki barátait, akiket együtt szeretne szerkeszteni.",
+    ),
+    "news_item_collab_title": MessageLookupByLibrary.simpleMessage(
+      "Együttműködő lejátszási listák",
+    ),
+    "news_item_sync_desc": MessageLookupByLibrary.simpleMessage(
+      "Lejátszási listáit és kedvenceit a rendszer most menti, és automatikusan szinkronizálja a felhőben a fő Joss Red-fiókjával.",
+    ),
+    "news_item_sync_title": MessageLookupByLibrary.simpleMessage(
+      "Teljes integráció Joss Red-el",
+    ),
+    "news_item_trans_desc": MessageLookupByLibrary.simpleMessage(
+      "Többé nem kell a kézi szinkronizálás gombjaira kattintania; Az új motor felelős az automatikus fel-le váltásért.",
+    ),
+    "news_item_trans_title": MessageLookupByLibrary.simpleMessage(
+      "Átlátszó szinkronizálás",
     ),
     "noBookmarks": MessageLookupByLibrary.simpleMessage(
       "Nincsenek könyvjelzők!",
@@ -264,6 +336,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "recentlyPlayed": MessageLookupByLibrary.simpleMessage(
       "Mostanában játszott",
+    ),
+    "recommend_cloud": MessageLookupByLibrary.simpleMessage(
+      "Javasoljuk, hogy aktiválja a Felhő módot a Spotify-szerű élmény érdekében: valós idejű szinkronizálás az összes eszköz között és automatikus biztonsági mentés anélkül, hogy bármit is tenne.",
     ),
     "removeFromLib": MessageLookupByLibrary.simpleMessage(
       "Eltávolítás a gyűjteményből",
@@ -335,6 +410,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "shuffleQueue": MessageLookupByLibrary.simpleMessage("Várólista keverése"),
     "singles": MessageLookupByLibrary.simpleMessage("Kislemezek"),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Alvás időzítő"),
+    "slide_indicator": m0,
     "songFound": MessageLookupByLibrary.simpleMessage("Dal megtalálva!"),
     "songNotPlayable": MessageLookupByLibrary.simpleMessage(
       "A dal nem játszható le, a szerver korlátozása miatt!",
@@ -346,6 +422,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "standard": MessageLookupByLibrary.simpleMessage("Alapértelmezett"),
     "startRadio": MessageLookupByLibrary.simpleMessage("Rádió indítása"),
+    "swipe_prompt": MessageLookupByLibrary.simpleMessage(
+      "Csúsztassa ujját a lehetőségek felfedezéséhez ➔",
+    ),
     "systemDefault": MessageLookupByLibrary.simpleMessage("Alapértelmezett"),
     "topmusicvideos": MessageLookupByLibrary.simpleMessage(
       "Legjobb Zenei Videók",
@@ -355,5 +434,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "username": MessageLookupByLibrary.simpleMessage("Felhasználónév"),
     "video": MessageLookupByLibrary.simpleMessage("Videó"),
     "viewArtist": MessageLookupByLibrary.simpleMessage("Irány az előadó"),
+    "welcome_intro": MessageLookupByLibrary.simpleMessage(
+      "Korszerűsítettük platformunkat. A manuális biztonsági mentések feltöltésének régi rendszere le van tiltva. Mostantól két egyértelmű módon kezelheti zenei könyvtárát.",
+    ),
+    "welcome_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Válassza ki, hogyan szeretné ezentúl megélni az Estrella zenét.",
+    ),
+    "welcome_title": MessageLookupByLibrary.simpleMessage(
+      "A te zenéd, a te módszered",
+    ),
   };
 }

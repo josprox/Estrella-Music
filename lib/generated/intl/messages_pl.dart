@@ -20,6 +20,8 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'pl';
 
+  static String m0(current) => "Krok _${current} z 3";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "CreateNewPlaylist": MessageLookupByLibrary.simpleMessage(
@@ -183,6 +185,24 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "close": MessageLookupByLibrary.simpleMessage("Zamknąć"),
     "closeApp": MessageLookupByLibrary.simpleMessage("Zamknij aplikację"),
+    "cloud_b1": MessageLookupByLibrary.simpleMessage(
+      "Zaloguj się bezpiecznie, korzystając ze swojego konta Joss Red.",
+    ),
+    "cloud_b2": MessageLookupByLibrary.simpleMessage(
+      "Uzyskaj natychmiastowy dostęp do swoich list odtwarzania, ulubionych i historii z dowolnego urządzenia (Windows, Android itp.).",
+    ),
+    "cloud_b3": MessageLookupByLibrary.simpleMessage(
+      "Inteligentna synchronizacja: Pracuj w trybie offline i automatycznie przesyłaj zmiany po odzyskaniu Internetu.",
+    ),
+    "cloud_btn": MessageLookupByLibrary.simpleMessage(
+      "Aktywuj synchronizację z chmurą",
+    ),
+    "cloud_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Synchronizacja w czasie rzeczywistym z Joss Red",
+    ),
+    "cloud_title": MessageLookupByLibrary.simpleMessage(
+      "Tryb chmury (zalecany)",
+    ),
     "communityplaylists": MessageLookupByLibrary.simpleMessage(
       "Społecznościowe playlisty",
     ),
@@ -406,6 +426,22 @@ class MessageLookup extends MessageLookupByLibrary {
       "Słuchając otoczenia...",
     ),
     "local": MessageLookupByLibrary.simpleMessage("Lokalny"),
+    "local_b1": MessageLookupByLibrary.simpleMessage(
+      "Działa bez konieczności logowania.",
+    ),
+    "local_b2": MessageLookupByLibrary.simpleMessage(
+      "Cała Twoja biblioteka pozostaje wyłącznie na tym komputerze.",
+    ),
+    "local_b3": MessageLookupByLibrary.simpleMessage(
+      "Uwaga: brak ręcznych kopii zapasowych w chmurze. Jeśli zgubisz urządzenie lub odinstalujesz aplikację, odzyskanie danych będzie niemożliwe.",
+    ),
+    "local_btn": MessageLookupByLibrary.simpleMessage(
+      "Używaj tylko na tym urządzeniu",
+    ),
+    "local_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Całkowita prywatność na Twoim urządzeniu",
+    ),
+    "local_title": MessageLookupByLibrary.simpleMessage("Tryb lokalny"),
     "loudnessDb": MessageLookupByLibrary.simpleMessage("GłośnośćDb"),
     "loudnessNormalization": MessageLookupByLibrary.simpleMessage(
       "Normalizacja głośności",
@@ -440,6 +476,44 @@ class MessageLookup extends MessageLookupByLibrary {
     "networkError1": MessageLookupByLibrary.simpleMessage("Ups, błąd sieci!"),
     "newVersionAvailable": MessageLookupByLibrary.simpleMessage(
       "Nowa wersja już dostępna!",
+    ),
+    "news_btn_app": MessageLookupByLibrary.simpleMessage(
+      "Aplikacja Joss Red (Sklep Play)",
+    ),
+    "news_btn_dismiss": MessageLookupByLibrary.simpleMessage("Zrozumiany"),
+    "news_btn_web": MessageLookupByLibrary.simpleMessage("Joss Red Web"),
+    "news_card_subtitle": MessageLookupByLibrary.simpleMessage(
+      "100% synchronizacja z Joss Red, playlisty ze znajomymi i wiele więcej. Kliknij, aby zobaczyć, co nowego.",
+    ),
+    "news_card_title": MessageLookupByLibrary.simpleMessage(
+      "Estrella Music ewoluowała!",
+    ),
+    "news_dialog_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "Aby dodawać znajomych, akceptować prośby lub zarządzać swoim profilem bezpieczeństwa, skorzystaj z Joss Red na jego oficjalnych platformach:",
+    ),
+    "news_dialog_section_friends": MessageLookupByLibrary.simpleMessage(
+      "Przyjaciele i zarządzanie kontem:",
+    ),
+    "news_dialog_title": MessageLookupByLibrary.simpleMessage(
+      "Wiadomości muzyczne Estrelli",
+    ),
+    "news_item_collab_desc": MessageLookupByLibrary.simpleMessage(
+      "Twórz playlisty ze znajomymi! Tworząc playlistę, zaznacz pole wyboru Współpraca i wybierz znajomych, których chcesz wspólnie edytować.",
+    ),
+    "news_item_collab_title": MessageLookupByLibrary.simpleMessage(
+      "Wspólne playlisty",
+    ),
+    "news_item_sync_desc": MessageLookupByLibrary.simpleMessage(
+      "Twoje playlisty i ulubione są teraz automatycznie zapisywane i synchronizowane w chmurze z Twoim głównym kontem Joss Red.",
+    ),
+    "news_item_sync_title": MessageLookupByLibrary.simpleMessage(
+      "Pełna integracja z Joss Red",
+    ),
+    "news_item_trans_desc": MessageLookupByLibrary.simpleMessage(
+      "Nie musisz już klikać przycisków ręcznej synchronizacji; Nowy silnik odpowiada za automatyczną zmianę biegów w górę i w dół.",
+    ),
+    "news_item_trans_title": MessageLookupByLibrary.simpleMessage(
+      "Przejrzysta synchronizacja",
     ),
     "noBookmarks": MessageLookupByLibrary.simpleMessage("Brak zakładek!"),
     "noLibPlaylist": MessageLookupByLibrary.simpleMessage(
@@ -564,6 +638,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "recentlyPlayed": MessageLookupByLibrary.simpleMessage(
       "Ostatnio odtwarzane",
     ),
+    "recommend_cloud": MessageLookupByLibrary.simpleMessage(
+      "Zalecamy aktywację trybu chmury, aby uzyskać wrażenia podobne do Spotify: synchronizację w czasie rzeczywistym między wszystkimi urządzeniami i automatyczne tworzenie kopii zapasowych bez konieczności wykonywania jakichkolwiek czynności.",
+    ),
     "removeFromLib": MessageLookupByLibrary.simpleMessage(
       "Usuń z Biblioteki Utworów",
     ),
@@ -669,6 +746,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Wyłącznik czasowy jest ustawiony",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Wyłącznik czasowy"),
+    "slide_indicator": m0,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "Utwór dodano do playlisty!",
     ),
@@ -714,6 +792,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Jakość strumienia muzyki",
     ),
     "subscribers": MessageLookupByLibrary.simpleMessage("subskrybentów"),
+    "swipe_prompt": MessageLookupByLibrary.simpleMessage(
+      "Przesuń, aby poznać opcje ➔",
+    ),
     "synced": MessageLookupByLibrary.simpleMessage("Zsynchronizowano"),
     "syncedLyricsNotAvailable": MessageLookupByLibrary.simpleMessage(
       "Synchronizowanie tekstu nie jest dostępne!",
@@ -738,5 +819,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "videos": MessageLookupByLibrary.simpleMessage("Teledyski"),
     "viewAll": MessageLookupByLibrary.simpleMessage("Pokaż wszystko"),
     "viewArtist": MessageLookupByLibrary.simpleMessage("Zobacz wykonawcę"),
+    "welcome_intro": MessageLookupByLibrary.simpleMessage(
+      "Zmodernizowaliśmy naszą platformę. Stary system ręcznego przesyłania kopii zapasowych został wyłączony. Masz teraz dwa jasne sposoby zarządzania swoją biblioteką muzyczną.",
+    ),
+    "welcome_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Wybierz, w jaki sposób chcesz odtąd korzystać z Estrella Music.",
+    ),
+    "welcome_title": MessageLookupByLibrary.simpleMessage(
+      "Twoja muzyka, na Twój sposób",
+    ),
   };
 }

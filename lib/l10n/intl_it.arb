@@ -552,5 +552,19 @@
   "cloud_b2": "Accedi istantaneamente alle tue playlist, ai preferiti e alla cronologia da qualsiasi dispositivo (Windows, Android, ecc.).",
   "cloud_b3": "Smart Sync: lavora offline e carica automaticamente le modifiche quando ripristini Internet.",
   "cloud_btn": "Attiva la sincronizzazione sul cloud",
-  "slide_indicator": "Passaggio {current} di 3"
+  "slide_indicator": "Passaggio {current} di 3",
+  "news_card_title": "Estrella Music si è evoluta!",
+  "news_card_subtitle": "Sincronizzazione al 100% con Joss Red, playlist con gli amici e molto altro. Tocca per vedere le novità.",
+  "news_dialog_title": "Notizie sulla musica di Estrella",
+  "news_item_sync_title": "Integrazione completa con Joss Red",
+  "news_item_sync_desc": "Le tue playlist e i tuoi preferiti vengono ora salvati e sincronizzati automaticamente nel cloud con il tuo account Joss Red principale.",
+  "news_item_collab_title": "Playlist collaborative",
+  "news_item_collab_desc": "Crea playlist con i tuoi amici! Quando crei una playlist, seleziona la casella di controllo Collaborativa e scegli i tuoi amici da modificare insieme.",
+  "news_item_trans_title": "Sincronizzazione trasparente",
+  "news_item_trans_desc": "Non è più necessario fare clic sui pulsanti di sincronizzazione manuale; Il nuovo motore è responsabile del cambio marcia su e giù automaticamente.",
+  "news_dialog_section_friends": "Amici e gestione dell'account:",
+  "news_dialog_friends_desc": "Per aggiungere amici, accettare richieste o gestire il tuo profilo di sicurezza, utilizza Joss Red sulle sue piattaforme ufficiali:",
+  "news_btn_app": "Applicazione Joss Red (Play Store)",
+  "news_btn_web": "Joss Red Web",
+  "news_btn_dismiss": "Inteso"
 }

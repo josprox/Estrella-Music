@@ -20,6 +20,8 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ko';
 
+  static String m0(current) => "3단계 중 ${current} 단계";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "CreateNewPlaylist": MessageLookupByLibrary.simpleMessage("새 플레이리스트 만들기"),
@@ -117,6 +119,18 @@ class MessageLookup extends MessageLookupByLibrary {
       "클릭하면 캐시된 썸네일과 이미지를 비웁니다. (캐시된 이미지들을 갱신하고 싶은 경우가 아니라면 추천하지 않습니다)",
     ),
     "close": MessageLookupByLibrary.simpleMessage("닫다"),
+    "cloud_b1": MessageLookupByLibrary.simpleMessage(
+      "Joss Red 계정을 사용하여 안전하게 로그인하세요.",
+    ),
+    "cloud_b2": MessageLookupByLibrary.simpleMessage(
+      "모든 장치(Windows, Android 등)에서 재생 목록, 즐겨찾기 및 기록에 즉시 액세스하세요.",
+    ),
+    "cloud_b3": MessageLookupByLibrary.simpleMessage(
+      "스마트 동기화: 오프라인으로 작업하고 인터넷을 복구하면 자동으로 변경 사항을 업로드합니다.",
+    ),
+    "cloud_btn": MessageLookupByLibrary.simpleMessage("클라우드 동기화 활성화"),
+    "cloud_subtitle": MessageLookupByLibrary.simpleMessage("Joss Red와 실시간 동기화"),
+    "cloud_title": MessageLookupByLibrary.simpleMessage("클라우드 모드(권장)"),
     "communityplaylists": MessageLookupByLibrary.simpleMessage("커뮤니티 플레이리스트"),
     "create": MessageLookupByLibrary.simpleMessage("생성"),
     "createnAdd": MessageLookupByLibrary.simpleMessage("생성 및 추가"),
@@ -233,6 +247,18 @@ class MessageLookup extends MessageLookupByLibrary {
       "환경에 귀를 기울이다...",
     ),
     "local": MessageLookupByLibrary.simpleMessage("기기"),
+    "local_b1": MessageLookupByLibrary.simpleMessage("로그인할 필요 없이 작동됩니다."),
+    "local_b2": MessageLookupByLibrary.simpleMessage(
+      "전체 라이브러리는 이 컴퓨터에만 유지됩니다.",
+    ),
+    "local_b3": MessageLookupByLibrary.simpleMessage(
+      "참고: 수동 클라우드 백업은 없습니다. 기기를 분실하거나 앱을 제거한 경우 데이터를 복구할 수 없습니다.",
+    ),
+    "local_btn": MessageLookupByLibrary.simpleMessage("이 기기에서만 사용하세요"),
+    "local_subtitle": MessageLookupByLibrary.simpleMessage(
+      "귀하의 장치에 대한 완벽한 개인 정보 보호",
+    ),
+    "local_title": MessageLookupByLibrary.simpleMessage("로컬 모드"),
     "low": MessageLookupByLibrary.simpleMessage("낮음"),
     "lyricsNotAvailable": MessageLookupByLibrary.simpleMessage("가사를 찾지 못했습니다!"),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
@@ -248,6 +274,36 @@ class MessageLookup extends MessageLookupByLibrary {
     "newVersionAvailable": MessageLookupByLibrary.simpleMessage(
       "새 버전을 이용할 수 있음!",
     ),
+    "news_btn_app": MessageLookupByLibrary.simpleMessage("조스 레드 앱(Play 스토어)"),
+    "news_btn_dismiss": MessageLookupByLibrary.simpleMessage("이해했다"),
+    "news_btn_web": MessageLookupByLibrary.simpleMessage("조스 레드 웹"),
+    "news_card_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Joss Red와의 100% 동기화, 친구들과의 재생 목록 등. 새로운 소식을 보려면 탭하세요.",
+    ),
+    "news_card_title": MessageLookupByLibrary.simpleMessage(
+      "Estrella Music이 진화했습니다!",
+    ),
+    "news_dialog_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "친구를 추가하고, 요청을 수락하고, 보안 프로필을 관리하려면 공식 플랫폼에서 Joss Red를 사용하세요.",
+    ),
+    "news_dialog_section_friends": MessageLookupByLibrary.simpleMessage(
+      "친구 및 계정 관리:",
+    ),
+    "news_dialog_title": MessageLookupByLibrary.simpleMessage("Estrella 음악 뉴스"),
+    "news_item_collab_desc": MessageLookupByLibrary.simpleMessage(
+      "친구들과 함께 재생목록을 만들어보세요! 재생목록을 생성할 때 공동작업 확인란을 선택하고 함께 편집할 친구를 선택하세요.",
+    ),
+    "news_item_collab_title": MessageLookupByLibrary.simpleMessage("공동 재생 목록"),
+    "news_item_sync_desc": MessageLookupByLibrary.simpleMessage(
+      "이제 재생 목록과 즐겨찾기가 기본 Joss Red 계정을 통해 자동으로 클라우드에 저장되고 동기화됩니다.",
+    ),
+    "news_item_sync_title": MessageLookupByLibrary.simpleMessage(
+      "Joss Red와의 완전한 통합",
+    ),
+    "news_item_trans_desc": MessageLookupByLibrary.simpleMessage(
+      "더 이상 수동 동기화 버튼을 클릭할 필요가 없습니다. 새 모터는 자동으로 위아래로 변속을 담당합니다.",
+    ),
+    "news_item_trans_title": MessageLookupByLibrary.simpleMessage("투명한 동기화"),
     "noBookmarks": MessageLookupByLibrary.simpleMessage("북마크 없음!"),
     "noLibPlaylist": MessageLookupByLibrary.simpleMessage(
       "라이브러리 플레이리스트가 없습니다!",
@@ -298,6 +354,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "readMore": MessageLookupByLibrary.simpleMessage("더 읽어보세요"),
     "recentSearches": MessageLookupByLibrary.simpleMessage("최근 검색어"),
     "recentlyPlayed": MessageLookupByLibrary.simpleMessage("최근 재생됨"),
+    "recommend_cloud": MessageLookupByLibrary.simpleMessage(
+      "Spotify와 같은 경험을 위해서는 클라우드 모드를 활성화하는 것이 좋습니다. 아무 것도 하지 않고도 모든 장치 간의 실시간 동기화와 자동 백업이 가능합니다.",
+    ),
     "removeFromLib": MessageLookupByLibrary.simpleMessage("라이브러리 음악에서 제거"),
     "removeFromPlaylist": MessageLookupByLibrary.simpleMessage("플레이리스트에서 제거"),
     "removeFromQueue": MessageLookupByLibrary.simpleMessage("대기열에서 제거"),
@@ -356,6 +415,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "sleepTimeSetAlert": MessageLookupByLibrary.simpleMessage("취침 타이머가 설정됨"),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("취침 타이머"),
+    "slide_indicator": m0,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "플레이리스트에 음악 추가됨!",
     ),
@@ -384,6 +444,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "streamingQuality": MessageLookupByLibrary.simpleMessage("스트리밍 음질"),
     "streamingQualityDes": MessageLookupByLibrary.simpleMessage("음악 스트림의 음질"),
     "subscribers": MessageLookupByLibrary.simpleMessage("구독자"),
+    "swipe_prompt": MessageLookupByLibrary.simpleMessage("스와이프하여 옵션 탐색 ➔"),
     "synced": MessageLookupByLibrary.simpleMessage("동기화됨"),
     "syncedLyricsNotAvailable": MessageLookupByLibrary.simpleMessage(
       "동기화된 가사를 찾지 못했습니다!",
@@ -400,5 +461,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "videos": MessageLookupByLibrary.simpleMessage("동영상"),
     "viewAll": MessageLookupByLibrary.simpleMessage("모두 보기"),
     "viewArtist": MessageLookupByLibrary.simpleMessage("아티스트 정보"),
+    "welcome_intro": MessageLookupByLibrary.simpleMessage(
+      "우리는 플랫폼을 현대화했습니다. 수동 백업을 업로드하는 이전 시스템이 비활성화되었습니다. 이제 음악 라이브러리를 관리하는 두 가지 명확한 방법이 있습니다.",
+    ),
+    "welcome_subtitle": MessageLookupByLibrary.simpleMessage(
+      "지금부터 Estrella Music을 어떻게 경험하고 싶은지 선택하세요.",
+    ),
+    "welcome_title": MessageLookupByLibrary.simpleMessage("나만의 음악, 나만의 방식"),
   };
 }

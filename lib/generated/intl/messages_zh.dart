@@ -20,6 +20,8 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'zh';
 
+  static String m0(current) => "步骤 ${current}（共 3 步）";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "about": MessageLookupByLibrary.simpleMessage("关于"),
@@ -52,6 +54,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "backup_selection_prompt": MessageLookupByLibrary.simpleMessage("选择要备份的数据"),
     "backup_upload_success": MessageLookupByLibrary.simpleMessage("备份已正确上传。"),
     "close": MessageLookupByLibrary.simpleMessage("关闭"),
+    "cloud_b1": MessageLookupByLibrary.simpleMessage("使用您的 Joss Red 帐户安全登录。"),
+    "cloud_b2": MessageLookupByLibrary.simpleMessage(
+      "立即从任何设备（Windows、Android 等）访问您的播放列表、收藏夹和历史记录。",
+    ),
+    "cloud_b3": MessageLookupByLibrary.simpleMessage(
+      "智能同步：离线工作并在恢复互联网时自动上传更改。",
+    ),
+    "cloud_btn": MessageLookupByLibrary.simpleMessage("激活云同步"),
+    "cloud_subtitle": MessageLookupByLibrary.simpleMessage("与Joss Red实时同步"),
+    "cloud_title": MessageLookupByLibrary.simpleMessage("云模式（推荐）"),
     "email": MessageLookupByLibrary.simpleMessage("电子邮件"),
     "errorOccurred": MessageLookupByLibrary.simpleMessage("发生错误"),
     "errorPlayingTrack": MessageLookupByLibrary.simpleMessage("播放时出错："),
@@ -67,12 +79,48 @@ class MessageLookup extends MessageLookupByLibrary {
     "latestRelease": MessageLookupByLibrary.simpleMessage("最新发布"),
     "listenNow": MessageLookupByLibrary.simpleMessage("现在听"),
     "listeningToEnvironment": MessageLookupByLibrary.simpleMessage("聆听环境..."),
+    "local_b1": MessageLookupByLibrary.simpleMessage("它无需登录即可工作。"),
+    "local_b2": MessageLookupByLibrary.simpleMessage("您的整个图书馆都严格保留在这台计算机上。"),
+    "local_b3": MessageLookupByLibrary.simpleMessage(
+      "注意：没有手动云备份。如果您丢失设备或卸载应用程序，您的数据将无法恢复。",
+    ),
+    "local_btn": MessageLookupByLibrary.simpleMessage("仅在此设备上使用"),
+    "local_subtitle": MessageLookupByLibrary.simpleMessage("您设备上的绝对隐私"),
+    "local_title": MessageLookupByLibrary.simpleMessage("本地模式"),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
       "确保麦克风附近的音乐播放声音足够大。",
     ),
     "migration_btn_select": MessageLookupByLibrary.simpleMessage("选择文件并导入"),
     "mostListenedSong": MessageLookupByLibrary.simpleMessage("听次数最多的歌曲"),
     "musicRecognition": MessageLookupByLibrary.simpleMessage("音乐识别"),
+    "news_btn_app": MessageLookupByLibrary.simpleMessage("乔斯红应用程序（Play 商店）"),
+    "news_btn_dismiss": MessageLookupByLibrary.simpleMessage("明白了"),
+    "news_btn_web": MessageLookupByLibrary.simpleMessage("乔斯红网"),
+    "news_card_subtitle": MessageLookupByLibrary.simpleMessage(
+      "与 Joss Red 100% 同步、与朋友播放列表等等。点击即可查看新内容。",
+    ),
+    "news_card_title": MessageLookupByLibrary.simpleMessage(
+      "Estrella 音乐已经进化了！",
+    ),
+    "news_dialog_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "要添加好友、接受请求或管理您的安全配置文件，请在其官方平台上使用 Joss Red：",
+    ),
+    "news_dialog_section_friends": MessageLookupByLibrary.simpleMessage(
+      "好友和帐户管理：",
+    ),
+    "news_dialog_title": MessageLookupByLibrary.simpleMessage("埃斯特雷拉音乐新闻"),
+    "news_item_collab_desc": MessageLookupByLibrary.simpleMessage(
+      "与您的朋友一起创建播放列表！创建播放列表时，选中“协作”复选框并选择要一起编辑的朋友。",
+    ),
+    "news_item_collab_title": MessageLookupByLibrary.simpleMessage("协作播放列表"),
+    "news_item_sync_desc": MessageLookupByLibrary.simpleMessage(
+      "您的播放列表和收藏夹现在已自动保存在云中，并与您的 Joss Red 主帐户同步。",
+    ),
+    "news_item_sync_title": MessageLookupByLibrary.simpleMessage("与乔斯·红全面融合"),
+    "news_item_trans_desc": MessageLookupByLibrary.simpleMessage(
+      "您不再需要点击手动同步按钮；新电机负责自动升档和降档。",
+    ),
+    "news_item_trans_title": MessageLookupByLibrary.simpleMessage("透明同步"),
     "noMatchInstruction": MessageLookupByLibrary.simpleMessage(
       "在录制的音频中找不到任何歌曲",
     ),
@@ -85,6 +133,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "processingAudio": MessageLookupByLibrary.simpleMessage("处理音频..."),
     "readMore": MessageLookupByLibrary.simpleMessage("阅读更多"),
     "recentSearches": MessageLookupByLibrary.simpleMessage("最近的搜索"),
+    "recommend_cloud": MessageLookupByLibrary.simpleMessage(
+      "我们建议激活云模式以获得类似 Spotify 的体验：所有设备之间的实时同步和自动备份，无需您执行任何操作。",
+    ),
     "reproducedBy": MessageLookupByLibrary.simpleMessage("转载者"),
     "searchInLibrary": MessageLookupByLibrary.simpleMessage("在图书馆中搜索"),
     "search_recent_title": MessageLookupByLibrary.simpleMessage("最近的搜索"),
@@ -103,10 +154,19 @@ class MessageLookup extends MessageLookupByLibrary {
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
       "正在 Shazam 数据库中搜索匹配项...",
     ),
+    "slide_indicator": m0,
     "songFound": MessageLookupByLibrary.simpleMessage("歌曲找到了！"),
     "songPitch": MessageLookupByLibrary.simpleMessage("歌声"),
     "speedAndPitch": MessageLookupByLibrary.simpleMessage("速度和音调"),
+    "swipe_prompt": MessageLookupByLibrary.simpleMessage("滑动以探索选项 ➔"),
     "username": MessageLookupByLibrary.simpleMessage("用户名"),
     "video": MessageLookupByLibrary.simpleMessage("视频"),
+    "welcome_intro": MessageLookupByLibrary.simpleMessage(
+      "我们对我们的平台进行了现代化改造。旧的手动上传备份系统已被禁用。您现在有两种清晰的方式来管理您的音乐库。",
+    ),
+    "welcome_subtitle": MessageLookupByLibrary.simpleMessage(
+      "从现在开始选择您想要体验 Estrella Music 的方式。",
+    ),
+    "welcome_title": MessageLookupByLibrary.simpleMessage("你的音乐，你的方式"),
   };
 }

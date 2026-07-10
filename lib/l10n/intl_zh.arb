@@ -285,5 +285,19 @@
   "cloud_b2": "立即从任何设备（Windows、Android 等）访问您的播放列表、收藏夹和历史记录。",
   "cloud_b3": "智能同步：离线工作并在恢复互联网时自动上传更改。",
   "cloud_btn": "激活云同步",
-  "slide_indicator": "步骤 {current}（共 3 步）"
+  "slide_indicator": "步骤 {current}（共 3 步）",
+  "news_card_title": "Estrella 音乐已经进化了！",
+  "news_card_subtitle": "与 Joss Red 100% 同步、与朋友播放列表等等。点击即可查看新内容。",
+  "news_dialog_title": "埃斯特雷拉音乐新闻",
+  "news_item_sync_title": "与乔斯·红全面融合",
+  "news_item_sync_desc": "您的播放列表和收藏夹现在已自动保存在云中，并与您的 Joss Red 主帐户同步。",
+  "news_item_collab_title": "协作播放列表",
+  "news_item_collab_desc": "与您的朋友一起创建播放列表！创建播放列表时，选中“协作”复选框并选择要一起编辑的朋友。",
+  "news_item_trans_title": "透明同步",
+  "news_item_trans_desc": "您不再需要点击手动同步按钮；新电机负责自动升档和降档。",
+  "news_dialog_section_friends": "好友和帐户管理：",
+  "news_dialog_friends_desc": "要添加好友、接受请求或管理您的安全配置文件，请在其官方平台上使用 Joss Red：",
+  "news_btn_app": "乔斯红应用程序（Play 商店）",
+  "news_btn_web": "乔斯红网",
+  "news_btn_dismiss": "明白了"
 }

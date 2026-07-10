@@ -20,17 +20,19 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'es';
 
-  static String m0(count) => "Álbumes: ${count}";
+  static String m1(count) => "Álbumes: ${count}";
 
-  static String m1(count) => "Artistas: ${count}";
+  static String m2(count) => "Artistas: ${count}";
 
-  static String m2(count) => "Favoritos: ${count}";
+  static String m3(count) => "Favoritos: ${count}";
 
-  static String m3(count) => "Playlists: ${count}";
+  static String m4(count) => "Playlists: ${count}";
 
-  static String m4(count) => "Canciones: ${count}";
+  static String m5(count) => "Canciones: ${count}";
 
-  static String m5(source) => "Migración completada desde ${source}.";
+  static String m6(source) => "Migración completada desde ${source}.";
+
+  static String m0(current) => "Paso ${current} de 3";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -251,6 +253,24 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "close": MessageLookupByLibrary.simpleMessage("Cerrar"),
     "closeApp": MessageLookupByLibrary.simpleMessage("Cerrar aplicación"),
+    "cloud_b1": MessageLookupByLibrary.simpleMessage(
+      "Inicia sesión de forma segura usando tu cuenta de Joss Red.",
+    ),
+    "cloud_b2": MessageLookupByLibrary.simpleMessage(
+      "Accede a tus playlists, favoritos e historial desde cualquier dispositivo (Windows, Android, etc.) al instante.",
+    ),
+    "cloud_b3": MessageLookupByLibrary.simpleMessage(
+      "Sincronización inteligente: trabaja sin conexión y sube los cambios automáticamente al recuperar internet.",
+    ),
+    "cloud_btn": MessageLookupByLibrary.simpleMessage(
+      "Activar sincronización Cloud",
+    ),
+    "cloud_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Sincronización en tiempo real con Joss Red",
+    ),
+    "cloud_title": MessageLookupByLibrary.simpleMessage(
+      "Modo Cloud (Recomendado)",
+    ),
     "communityplaylists": MessageLookupByLibrary.simpleMessage(
       "Listas de reproducción de la comunidad",
     ),
@@ -543,6 +563,22 @@ class MessageLookup extends MessageLookupByLibrary {
       "No se pudo cargar la información de la actualización",
     ),
     "local": MessageLookupByLibrary.simpleMessage("Local"),
+    "local_b1": MessageLookupByLibrary.simpleMessage(
+      "Funciona sin necesidad de iniciar sesión.",
+    ),
+    "local_b2": MessageLookupByLibrary.simpleMessage(
+      "Toda tu biblioteca se queda estrictamente en este equipo.",
+    ),
+    "local_b3": MessageLookupByLibrary.simpleMessage(
+      "Nota: Sin respaldos manuales en la nube. Si pierdes tu dispositivo o desinstalas la app, tus datos no se podrán recuperar.",
+    ),
+    "local_btn": MessageLookupByLibrary.simpleMessage(
+      "Usar solo en este dispositivo",
+    ),
+    "local_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Privacidad absoluta en tu dispositivo",
+    ),
+    "local_title": MessageLookupByLibrary.simpleMessage("Modo Local"),
     "loudnessDb": MessageLookupByLibrary.simpleMessage("SonoridadDb"),
     "loudnessNormalization": MessageLookupByLibrary.simpleMessage(
       "Normalización de sonoridad",
@@ -567,12 +603,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "migration_success": MessageLookupByLibrary.simpleMessage(
       "Migración completada correctamente.",
     ),
-    "migration_summary_albums": m0,
-    "migration_summary_artists": m1,
-    "migration_summary_favorites": m2,
-    "migration_summary_playlists": m3,
-    "migration_summary_songs": m4,
-    "migration_summary_start": m5,
+    "migration_summary_albums": m1,
+    "migration_summary_artists": m2,
+    "migration_summary_favorites": m3,
+    "migration_summary_playlists": m4,
+    "migration_summary_songs": m5,
+    "migration_summary_start": m6,
     "minutes": MessageLookupByLibrary.simpleMessage("minutos"),
     "misc": MessageLookupByLibrary.simpleMessage("Varios"),
     "mostListenedSong": MessageLookupByLibrary.simpleMessage(
@@ -592,6 +628,44 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "newVersionAvailable": MessageLookupByLibrary.simpleMessage(
       "¡Nueva versión disponible!",
+    ),
+    "news_btn_app": MessageLookupByLibrary.simpleMessage(
+      "Joss Red App (Play Store)",
+    ),
+    "news_btn_dismiss": MessageLookupByLibrary.simpleMessage("Entendido"),
+    "news_btn_web": MessageLookupByLibrary.simpleMessage("Joss Red Web"),
+    "news_card_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Sincronización 100% con Joss Red, playlists con amigos y mucho más. Toca para ver lo nuevo.",
+    ),
+    "news_card_title": MessageLookupByLibrary.simpleMessage(
+      "¡Estrella Music ha evolucionado!",
+    ),
+    "news_dialog_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "Para añadir amigos, aceptar solicitudes o gestionar tu perfil de seguridad, por favor utiliza Joss Red en sus plataformas oficiales:",
+    ),
+    "news_dialog_section_friends": MessageLookupByLibrary.simpleMessage(
+      "Gestión de Amigos y Cuenta:",
+    ),
+    "news_dialog_title": MessageLookupByLibrary.simpleMessage(
+      "Novedades de Estrella Music",
+    ),
+    "news_item_collab_desc": MessageLookupByLibrary.simpleMessage(
+      "¡Crea listas de reproducción con tus amigos! Al crear una playlist, selecciona la casilla de Colaborativa y elige a tus amigos para que editen juntos.",
+    ),
+    "news_item_collab_title": MessageLookupByLibrary.simpleMessage(
+      "Playlists Colaborativas",
+    ),
+    "news_item_sync_desc": MessageLookupByLibrary.simpleMessage(
+      "Tus playlists y favoritos ahora se guardan y sincronizan en la nube automáticamente con tu cuenta principal de Joss Red.",
+    ),
+    "news_item_sync_title": MessageLookupByLibrary.simpleMessage(
+      "Integración Total con Joss Red",
+    ),
+    "news_item_trans_desc": MessageLookupByLibrary.simpleMessage(
+      "Ya no necesitas dar clics a botones de sincronización manual; el nuevo motor se encarga de subir y bajar cambios automáticamente.",
+    ),
+    "news_item_trans_title": MessageLookupByLibrary.simpleMessage(
+      "Sincronización Transparente",
     ),
     "no": MessageLookupByLibrary.simpleMessage("No"),
     "noBookmarks": MessageLookupByLibrary.simpleMessage("¡No hay marcadores!"),
@@ -726,6 +800,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "recentlyPlayed": MessageLookupByLibrary.simpleMessage(
       "Reproducido recientemente",
     ),
+    "recommend_cloud": MessageLookupByLibrary.simpleMessage(
+      "Te recomendamos activar el Modo Cloud para una experiencia Spotify-like: sincronización en tiempo real entre todos tus dispositivos y respaldo automático sin que tengas que hacer nada.",
+    ),
     "removeFromLib": MessageLookupByLibrary.simpleMessage(
       "Eliminar de las canciones de la biblioteca",
     ),
@@ -853,6 +930,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "sleepTimer": MessageLookupByLibrary.simpleMessage(
       "Temporizador de apagado",
     ),
+    "slide_indicator": m0,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "¡Canción añadida a la lista de reproducción!",
     ),
@@ -906,6 +984,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Calidad de la transmisión de música",
     ),
     "subscribers": MessageLookupByLibrary.simpleMessage("suscriptores"),
+    "swipe_prompt": MessageLookupByLibrary.simpleMessage(
+      "Desliza para explorar las opciones ➔",
+    ),
     "syncPlaylistSongs": MessageLookupByLibrary.simpleMessage(
       "Sincronizar canciones de la lista de reproducción",
     ),
@@ -936,5 +1017,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "videos": MessageLookupByLibrary.simpleMessage("Vídeos"),
     "viewAll": MessageLookupByLibrary.simpleMessage("Ver todo"),
     "viewArtist": MessageLookupByLibrary.simpleMessage("Ver Artista"),
+    "welcome_intro": MessageLookupByLibrary.simpleMessage(
+      "Hemos modernizado nuestra plataforma. El antiguo sistema de subir respaldos manuales ha sido desactivado. Ahora cuentas con dos modos claros para gestionar tu biblioteca musical.",
+    ),
+    "welcome_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Elige cómo quieres experimentar Estrella Music de ahora en adelante.",
+    ),
+    "welcome_title": MessageLookupByLibrary.simpleMessage(
+      "Tu música, a tu manera",
+    ),
   };
 }

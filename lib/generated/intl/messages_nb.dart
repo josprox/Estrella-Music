@@ -20,6 +20,8 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'nb';
 
+  static String m0(current) => "Trinn ${current} av 3";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "about": MessageLookupByLibrary.simpleMessage("Om"),
@@ -74,6 +76,22 @@ class MessageLookup extends MessageLookupByLibrary {
       "Sikkerhetskopien er lastet opp på riktig måte.",
     ),
     "close": MessageLookupByLibrary.simpleMessage("Lukke"),
+    "cloud_b1": MessageLookupByLibrary.simpleMessage(
+      "Logg på sikkert med din Joss Red-konto.",
+    ),
+    "cloud_b2": MessageLookupByLibrary.simpleMessage(
+      "Få tilgang til spillelister, favoritter og historikk fra alle enheter (Windows, Android, osv.) umiddelbart.",
+    ),
+    "cloud_b3": MessageLookupByLibrary.simpleMessage(
+      "Smart Sync: Arbeid offline og last opp endringer automatisk når du gjenoppretter internett.",
+    ),
+    "cloud_btn": MessageLookupByLibrary.simpleMessage(
+      "Aktiver skysynkronisering",
+    ),
+    "cloud_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Sanntidssynkronisering med Joss Red",
+    ),
+    "cloud_title": MessageLookupByLibrary.simpleMessage("Skymodus (anbefalt)"),
     "email": MessageLookupByLibrary.simpleMessage("E-post"),
     "errorOccurred": MessageLookupByLibrary.simpleMessage(
       "Det oppstod en feil",
@@ -97,6 +115,22 @@ class MessageLookup extends MessageLookupByLibrary {
     "listeningToEnvironment": MessageLookupByLibrary.simpleMessage(
       "Å lytte til miljøet...",
     ),
+    "local_b1": MessageLookupByLibrary.simpleMessage(
+      "Det fungerer uten at du trenger å logge inn.",
+    ),
+    "local_b2": MessageLookupByLibrary.simpleMessage(
+      "Hele biblioteket ditt forblir strengt tatt på denne datamaskinen.",
+    ),
+    "local_b3": MessageLookupByLibrary.simpleMessage(
+      "Merk: Ingen manuell sikkerhetskopiering av skyen. Hvis du mister enheten eller avinstallerer appen, kan ikke dataene dine gjenopprettes.",
+    ),
+    "local_btn": MessageLookupByLibrary.simpleMessage(
+      "Bruk kun på denne enheten",
+    ),
+    "local_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Absolutt personvern på enheten din",
+    ),
+    "local_title": MessageLookupByLibrary.simpleMessage("Lokal modus"),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
       "Sørg for at musikken spilles høyt nok i nærheten av mikrofonen.",
     ),
@@ -108,6 +142,44 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "musicRecognition": MessageLookupByLibrary.simpleMessage(
       "Musikkgjenkjenning",
+    ),
+    "news_btn_app": MessageLookupByLibrary.simpleMessage(
+      "Joss Red-appen (Play Store)",
+    ),
+    "news_btn_dismiss": MessageLookupByLibrary.simpleMessage("Forstått"),
+    "news_btn_web": MessageLookupByLibrary.simpleMessage("Joss Red Web"),
+    "news_card_subtitle": MessageLookupByLibrary.simpleMessage(
+      "100 % synkronisering med Joss Red, spillelister med venner og mye mer. Trykk for å se hva som er nytt.",
+    ),
+    "news_card_title": MessageLookupByLibrary.simpleMessage(
+      "Estrella Music har utviklet seg!",
+    ),
+    "news_dialog_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "For å legge til venner, godta forespørsler eller administrere sikkerhetsprofilen din, vennligst bruk Joss Red på dens offisielle plattformer:",
+    ),
+    "news_dialog_section_friends": MessageLookupByLibrary.simpleMessage(
+      "Venner og kontoadministrasjon:",
+    ),
+    "news_dialog_title": MessageLookupByLibrary.simpleMessage(
+      "Estrella Music News",
+    ),
+    "news_item_collab_desc": MessageLookupByLibrary.simpleMessage(
+      "Lag spillelister med vennene dine! Når du oppretter en spilleliste, merker du av for Collaborative og velger vennene dine å redigere sammen.",
+    ),
+    "news_item_collab_title": MessageLookupByLibrary.simpleMessage(
+      "Samarbeidende spillelister",
+    ),
+    "news_item_sync_desc": MessageLookupByLibrary.simpleMessage(
+      "Spillelistene og favorittene dine lagres og synkroniseres automatisk i skyen med Joss Red-hovedkontoen din.",
+    ),
+    "news_item_sync_title": MessageLookupByLibrary.simpleMessage(
+      "Full integrasjon med Joss Red",
+    ),
+    "news_item_trans_desc": MessageLookupByLibrary.simpleMessage(
+      "Du trenger ikke lenger å klikke på knapper for manuell synkronisering; Den nye motoren er ansvarlig for å skifte opp og ned automatisk.",
+    ),
+    "news_item_trans_title": MessageLookupByLibrary.simpleMessage(
+      "Transparent synkronisering",
     ),
     "noMatchInstruction": MessageLookupByLibrary.simpleMessage(
       "Kunne ikke finne noen sanger i den innspilte lyden",
@@ -125,6 +197,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "readMore": MessageLookupByLibrary.simpleMessage("Les mer"),
     "recentSearches": MessageLookupByLibrary.simpleMessage("Nylige søk"),
+    "recommend_cloud": MessageLookupByLibrary.simpleMessage(
+      "Vi anbefaler å aktivere skymodus for en Spotify-lignende opplevelse: sanntidssynkronisering mellom alle enhetene dine og automatisk sikkerhetskopiering uten at du trenger å gjøre noe.",
+    ),
     "reproducedBy": MessageLookupByLibrary.simpleMessage("Gjengitt av"),
     "searchInLibrary": MessageLookupByLibrary.simpleMessage(
       "Søk i biblioteket",
@@ -147,12 +222,25 @@ class MessageLookup extends MessageLookupByLibrary {
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
       "Søker i Shazam-databasen etter treff...",
     ),
+    "slide_indicator": m0,
     "songFound": MessageLookupByLibrary.simpleMessage("Sangen funnet!"),
     "songPitch": MessageLookupByLibrary.simpleMessage("sang tone"),
     "speedAndPitch": MessageLookupByLibrary.simpleMessage(
       "Hastighet og tonehøyde",
     ),
+    "swipe_prompt": MessageLookupByLibrary.simpleMessage(
+      "Sveip for å utforske alternativer ➔",
+    ),
     "username": MessageLookupByLibrary.simpleMessage("Brukernavn"),
     "video": MessageLookupByLibrary.simpleMessage("Video"),
+    "welcome_intro": MessageLookupByLibrary.simpleMessage(
+      "Vi har modernisert plattformen vår. Det gamle systemet for opplasting av manuelle sikkerhetskopier er deaktivert. Du har nå to klare måter å administrere musikkbiblioteket på.",
+    ),
+    "welcome_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Velg hvordan du vil oppleve Estrella Music fra nå av.",
+    ),
+    "welcome_title": MessageLookupByLibrary.simpleMessage(
+      "Musikken din, din måte",
+    ),
   };
 }

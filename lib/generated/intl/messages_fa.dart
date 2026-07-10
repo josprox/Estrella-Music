@@ -20,6 +20,8 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'fa';
 
+  static String m0(current) => "مرحله ${current} از 3";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "CreateNewPlaylist": MessageLookupByLibrary.simpleMessage(
@@ -120,6 +122,24 @@ class MessageLookup extends MessageLookupByLibrary {
     "cancel": MessageLookupByLibrary.simpleMessage("لغو"),
     "cancelTimer": MessageLookupByLibrary.simpleMessage("لغو زمان‌سنج"),
     "close": MessageLookupByLibrary.simpleMessage("بستن"),
+    "cloud_b1": MessageLookupByLibrary.simpleMessage(
+      "با استفاده از حساب Joss Red خود به صورت ایمن وارد شوید.",
+    ),
+    "cloud_b2": MessageLookupByLibrary.simpleMessage(
+      "فوراً از هر دستگاهی (ویندوز، اندروید و غیره) به لیست های پخش، موارد دلخواه و تاریخچه خود دسترسی داشته باشید.",
+    ),
+    "cloud_b3": MessageLookupByLibrary.simpleMessage(
+      "همگام سازی هوشمند: به صورت آفلاین کار کنید و با بازیابی اینترنت، تغییرات را به طور خودکار آپلود کنید.",
+    ),
+    "cloud_btn": MessageLookupByLibrary.simpleMessage(
+      "همگام سازی ابری را فعال کنید",
+    ),
+    "cloud_subtitle": MessageLookupByLibrary.simpleMessage(
+      "همگام سازی بلادرنگ با جاس رد",
+    ),
+    "cloud_title": MessageLookupByLibrary.simpleMessage(
+      "حالت ابری (توصیه می شود)",
+    ),
     "communityplaylists": MessageLookupByLibrary.simpleMessage(
       "لیست پخش های عمومی",
     ),
@@ -217,6 +237,22 @@ class MessageLookup extends MessageLookupByLibrary {
     "listeningToEnvironment": MessageLookupByLibrary.simpleMessage(
       "گوش دادن به محیط ...",
     ),
+    "local_b1": MessageLookupByLibrary.simpleMessage(
+      "بدون نیاز به ورود کار می کند.",
+    ),
+    "local_b2": MessageLookupByLibrary.simpleMessage(
+      "کل کتابخانه شما کاملاً روی این رایانه می ماند.",
+    ),
+    "local_b3": MessageLookupByLibrary.simpleMessage(
+      "توجه: بدون پشتیبان گیری دستی ابری. اگر دستگاه خود را گم کنید یا برنامه را حذف نصب کنید، اطلاعات شما قابل بازیابی نیست.",
+    ),
+    "local_btn": MessageLookupByLibrary.simpleMessage(
+      "فقط در این دستگاه استفاده کنید",
+    ),
+    "local_subtitle": MessageLookupByLibrary.simpleMessage(
+      "حریم خصوصی مطلق در دستگاه شما",
+    ),
+    "local_title": MessageLookupByLibrary.simpleMessage("حالت محلی"),
     "loudnessNormalization": MessageLookupByLibrary.simpleMessage(
       "عادی سازی بلندی صدا",
     ),
@@ -241,6 +277,44 @@ class MessageLookup extends MessageLookupByLibrary {
       "خطای شبکه! اتصال شبکه خود را بررسی کنید.",
     ),
     "networkError1": MessageLookupByLibrary.simpleMessage("خطای اینترنت!"),
+    "news_btn_app": MessageLookupByLibrary.simpleMessage(
+      "برنامه جاس رد (فروشگاه پلی)",
+    ),
+    "news_btn_dismiss": MessageLookupByLibrary.simpleMessage("فهمیده شد"),
+    "news_btn_web": MessageLookupByLibrary.simpleMessage("جاس رد وب"),
+    "news_card_subtitle": MessageLookupByLibrary.simpleMessage(
+      "همگام سازی 100٪ با Joss Red، لیست های پخش با دوستان و بسیاری موارد دیگر. برای دیدن موارد جدید ضربه بزنید.",
+    ),
+    "news_card_title": MessageLookupByLibrary.simpleMessage(
+      "موسیقی Estrella تکامل یافته است!",
+    ),
+    "news_dialog_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "برای افزودن دوستان، پذیرش درخواست ها یا مدیریت نمایه امنیتی خود، لطفاً از Joss Red در پلتفرم های رسمی آن استفاده کنید:",
+    ),
+    "news_dialog_section_friends": MessageLookupByLibrary.simpleMessage(
+      "دوستان و مدیریت حساب کاربری:",
+    ),
+    "news_dialog_title": MessageLookupByLibrary.simpleMessage(
+      "اخبار موسیقی استرلا",
+    ),
+    "news_item_collab_desc": MessageLookupByLibrary.simpleMessage(
+      "لیست پخش با دوستان خود ایجاد کنید! هنگام ایجاد یک لیست پخش، کادر اشتراکی را انتخاب کنید و دوستان خود را برای ویرایش با هم انتخاب کنید.",
+    ),
+    "news_item_collab_title": MessageLookupByLibrary.simpleMessage(
+      "لیست های پخش مشترک",
+    ),
+    "news_item_sync_desc": MessageLookupByLibrary.simpleMessage(
+      "لیست‌های پخش و موارد دلخواه شما اکنون به طور خودکار با حساب اصلی Joss Red در فضای ابری ذخیره و همگام‌سازی می‌شوند.",
+    ),
+    "news_item_sync_title": MessageLookupByLibrary.simpleMessage(
+      "ادغام کامل با جاس رد",
+    ),
+    "news_item_trans_desc": MessageLookupByLibrary.simpleMessage(
+      "دیگر نیازی به کلیک روی دکمه های همگام سازی دستی ندارید. موتور جدید وظیفه تعویض خودکار دنده ها را بر عهده دارد.",
+    ),
+    "news_item_trans_title": MessageLookupByLibrary.simpleMessage(
+      "همگام سازی شفاف",
+    ),
     "noBookmarks": MessageLookupByLibrary.simpleMessage("بدون نشانک"),
     "noLibPlaylist": MessageLookupByLibrary.simpleMessage(
       "شما هیچ لیست پخشی در کتابخانه ندارید!",
@@ -306,6 +380,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "readMore": MessageLookupByLibrary.simpleMessage("ادامه مطلب"),
     "recentSearches": MessageLookupByLibrary.simpleMessage("جستجوهای اخیر"),
     "recentlyPlayed": MessageLookupByLibrary.simpleMessage("اخیرا پخش شده"),
+    "recommend_cloud": MessageLookupByLibrary.simpleMessage(
+      "توصیه می‌کنیم برای تجربه‌ای شبیه به Spotify، حالت ابری را فعال کنید: همگام‌سازی بی‌درنگ بین همه دستگاه‌هایتان و پشتیبان‌گیری خودکار بدون نیاز به انجام کاری.",
+    ),
     "removeFromLib": MessageLookupByLibrary.simpleMessage(
       "حذف از موسیقی های کتابخانه",
     ),
@@ -368,6 +445,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "سکوت در زمان پخش موسیقی رد خواهد شد",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("زمان‌سنج خواب"),
+    "slide_indicator": m0,
     "songFound": MessageLookupByLibrary.simpleMessage("آهنگ پیدا شد"),
     "songNotPlayable": MessageLookupByLibrary.simpleMessage(
       "موسیقی به علت محدودیت سرور، قابل پخش نیست!",
@@ -381,6 +459,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "streamingQualityDes": MessageLookupByLibrary.simpleMessage(
       "کیفیت استریم (پخش) موسیقی",
     ),
+    "swipe_prompt": MessageLookupByLibrary.simpleMessage(
+      "برای کاوش گزینه ها تند بکشید ➔",
+    ),
     "systemDefault": MessageLookupByLibrary.simpleMessage("پیشفرض سیستم"),
     "themeMode": MessageLookupByLibrary.simpleMessage("حالت تم"),
     "topmusicvideos": MessageLookupByLibrary.simpleMessage("نماهنگ های برتر"),
@@ -389,5 +470,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "username": MessageLookupByLibrary.simpleMessage("نام کاربری"),
     "video": MessageLookupByLibrary.simpleMessage("ویدئو"),
     "viewArtist": MessageLookupByLibrary.simpleMessage("دیدن هنرمند"),
+    "welcome_intro": MessageLookupByLibrary.simpleMessage(
+      "ما پلتفرم خود را مدرن کرده ایم. سیستم قدیمی آپلود نسخه پشتیبان دستی غیرفعال شده است. اکنون دو راه روشن برای مدیریت کتابخانه موسیقی خود دارید.",
+    ),
+    "welcome_subtitle": MessageLookupByLibrary.simpleMessage(
+      "نحوه تجربه موسیقی Estrella را از این پس انتخاب کنید.",
+    ),
+    "welcome_title": MessageLookupByLibrary.simpleMessage(
+      "موسیقی شما، روش شما",
+    ),
   };
 }
