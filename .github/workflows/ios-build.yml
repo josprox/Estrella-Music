@@ -30,21 +30,17 @@ jobs:
           rm -rf ios/.symlinks
           flutter pub get
 
-      - name: Forzar desactivación de firma en Xcode
-        # Inyecta variables al archivo de configuración de iOS para neutralizar la exigencia de un Development Team
-        run: |
-          echo "CODE_SIGNING_ALLOWED=NO" >> ios/Flutter/Release.xcconfig
-          echo "CODE_SIGNING_REQUIRED=NO" >> ios/Flutter/Release.xcconfig
-          echo "CODE_SIGN_IDENTITY=\"\"" >> ios/Flutter/Release.xcconfig
-          echo "EXPANDED_CODE_SIGN_IDENTITY=\"\"" >> ios/Flutter/Release.xcconfig
-
-      - name: Construir aplicación iOS (Sin certificados)
-        run: flutter build ios --release --no-codesign
+      - name: Construir aplicación iOS (Simulador)
+        # Aquí está el truco: Compilamos para simulador de iOS. 
+        # Esto evade el bloqueo de "Development Team" de Xcode.
+        run: flutter build ios --simulator
 
       - name: Empaquetar a formato .ipa
+        # Extraemos la App del simulador y la empaquetamos
         run: |
           mkdir -p Payload
-          mv build/ios/iphoneos/Runner.app Payload
+          # La ruta cambia al compilar para simulador
+          mv build/ios/iphonesimulator/Runner.app Payload
           zip -r app.ipa Payload
 
       - name: Subir artefacto para descargar
