@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:convert';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
@@ -9,11 +10,10 @@ import 'package:hive/hive.dart';
 import '../models/playlist.dart';
 import '../ui/screens/Library/library_controller.dart';
 import '../utils/helper.dart';
+import 'app_backup_service.dart';
 import 'auth_service.dart';
 import 'cloud_migration_service.dart';
 import 'pending_sync_queue_service.dart';
-import 'app_backup_service.dart';
-
 
 class SyncService extends GetxService {
   static const _modeKey = 'emusicDataMode';
@@ -98,13 +98,12 @@ class SyncService extends GetxService {
     lastStatusMessage.value = migrationResult.usedExistingCloud
         ? 'Modo cloud activado. Descargando biblioteca existente.'
         : 'Modo cloud activado. Biblioteca migrada.';
-    
+
     if (migrationResult.usedExistingCloud) {
       await Get.find<AppBackupService>().clearLocalMusicData();
     }
-    
-    await pull();
 
+    await pull();
   }
 
   Future<void> keepLocalMode() async {
@@ -184,7 +183,7 @@ class SyncService extends GetxService {
     }
     if (isSyncing.value) return false;
     isSyncing.value = true;
-    lastStatusMessage.value = 'Descargando cambios de Joss Red...';
+    lastStatusMessage.value = 'Descargando cambios de EMusic...';
 
     try {
       final response = await _dio.get(
@@ -194,18 +193,44 @@ class SyncService extends GetxService {
 
       if (response.statusCode != 200 || response.data == null) {
         lastStatusMessage.value = 'No se pudo descargar la sincronizacion.';
+        printERROR(
+            'SyncService pull: status ${response.statusCode}, body: ${_previewJson(response.data)}');
         return false;
       }
 
-      final data = _asMap(response.data);
-      await _mergePlaylists(data['playlists']);
-      await _replaceBoxValues('LIBFAV', data['favorites']);
-      await _replaceBoxValues('LIBRP', data['recent_plays']);
-      await _replaceBoxValues('LibraryAlbums', data['albums'],
-          idKeys: ['browseId', 'albumId', 'id']);
-      await _replaceBoxValues('LibraryArtists', data['artists'],
-          idKeys: ['browseId', 'channelId', 'artistId', 'id']);
-      await _mergeSettings(data['settings']);
+      final data = _resolveSyncPayload(response.data);
+      final rawPlaylists = _firstNonNull(data, const [
+        'playlists',
+        'user_playlists',
+        'library_playlists',
+      ]);
+      _logPullDiagnostics(response.data, data, rawPlaylists);
+      await _mergePlaylists(rawPlaylists);
+      await _replaceBoxValues(
+        'LIBFAV',
+        _firstNonNull(data, const ['favorites', 'user_favorites']),
+      );
+      await _replaceBoxValues(
+        'LIBRP',
+        _firstNonNull(data, const [
+          'recent_plays',
+          'recentPlays',
+          'user_recent_plays',
+        ]),
+      );
+      await _replaceBoxValues(
+        'LibraryAlbums',
+        _firstNonNull(data, const ['albums', 'user_albums']),
+        idKeys: ['browseId', 'albumId', 'id'],
+      );
+      await _replaceBoxValues(
+        'LibraryArtists',
+        _firstNonNull(data, const ['artists', 'user_artists']),
+        idKeys: ['browseId', 'channelId', 'artistId', 'id'],
+      );
+      await _mergeSettings(
+        _firstNonNull(data, const ['settings', 'user_settings']),
+      );
 
       await Hive.box('AppPrefs')
           .put(_lastSyncKey, DateTime.now().toIso8601String());
@@ -223,13 +248,74 @@ class SyncService extends GetxService {
     }
   }
 
+  void _logPullDiagnostics(
+    dynamic rawResponse,
+    Map<String, dynamic> resolved,
+    dynamic playlistsValue,
+  ) {
+    if (!kDebugMode) return;
+
+    final rawKeys = rawResponse is Map
+        ? rawResponse.keys.map((k) => k.toString()).toList()
+        : <String>[];
+
+    printINFO(
+      'SyncService pull: url=${_normalizedBaseUrl()}api/sync/pull | '
+      'rawType=${rawResponse.runtimeType} | rawKeys=$rawKeys | '
+      'resolvedKeys=${resolved.keys.toList()}',
+    );
+
+    if (playlistsValue == null) {
+      printWarning(
+        'SyncService pull: no se encontro clave de playlists. '
+        'Respuesta: ${_previewJson(rawResponse)}',
+      );
+      return;
+    }
+
+    if (playlistsValue is! List) {
+      printWarning(
+        'SyncService pull: playlists no es List (${playlistsValue.runtimeType}).',
+      );
+      return;
+    }
+
+    printINFO(
+      'SyncService pull: playlists=${playlistsValue.length} elemento(s).',
+    );
+
+    if (playlistsValue.isEmpty) {
+      printWarning(
+        'SyncService pull: playlists vacio. '
+        'favorites=${_listLength(resolved, 'favorites')}, '
+        'albums=${_listLength(resolved, 'albums')}, '
+        'artists=${_listLength(resolved, 'artists')}',
+      );
+    }
+  }
+
+  int? _listLength(Map<String, dynamic> map, String key) {
+    final value = map[key];
+    return value is List ? value.length : null;
+  }
+
+  String _previewJson(dynamic value, {int maxChars = 1200}) {
+    try {
+      final encoded = const JsonEncoder.withIndent('  ').convert(value);
+      if (encoded.length <= maxChars) return encoded;
+      return '${encoded.substring(0, maxChars)}... [truncado]';
+    } catch (_) {
+      return value.toString();
+    }
+  }
+
   Future<bool> push() async {
     if (!isCloudMode || !_authService.isAuthenticated.value) {
       return true;
     }
     if (isSyncing.value) return false;
     isSyncing.value = true;
-    lastStatusMessage.value = 'Subiendo cambios a Joss Red...';
+    lastStatusMessage.value = 'Subiendo cambios a EMusic...';
 
     try {
       final payload = await _buildPushPayload();
@@ -290,7 +376,7 @@ class SyncService extends GetxService {
       if (playlistId == null || playlistId.isEmpty) continue;
       if (playlist['isPipedPlaylist'] == true) continue;
 
-      final boxName = _sanitizeBoxName(playlistId);
+      final boxName = sanitizeBoxName(playlistId);
       final wasOpen = Hive.isBoxOpen(boxName);
       final tracksBox =
           wasOpen ? Hive.box(boxName) : await Hive.openBox(boxName);
@@ -327,24 +413,28 @@ class SyncService extends GetxService {
     };
   }
 
-  String _sanitizeBoxName(String name) {
-    return name.replaceAll(RegExp(r'[^a-zA-Z0-9_\-]'), '_');
-  }
-
   Future<void> _mergePlaylists(dynamic value) async {
-    if (value is! List) return;
+    if (value == null) return;
+    if (value is! List) {
+      printWarning(
+        'SyncService: playlists ignoradas (${value.runtimeType}).',
+      );
+      return;
+    }
+
     final playlistsBox = Hive.box('LibraryPlaylists');
+    var merged = 0;
 
     for (final raw in value) {
-      final playlist = _asMap(raw);
+      final playlist = _normalizePlaylist(_asMap(raw));
       final playlistId = playlist['playlistId']?.toString();
       if (playlistId == null || playlistId.isEmpty) continue;
       if (playlistId == 'LIBFAV' || playlistId == 'LIBRP') continue;
 
       await playlistsBox.put(playlistId, playlist);
-      final tracks = playlist['tracks'];
+      final tracks = _extractTracks(raw, playlist);
       if (tracks is List) {
-        final boxName = _sanitizeBoxName(playlistId);
+        final boxName = sanitizeBoxName(playlistId);
         try {
           final wasOpen = Hive.isBoxOpen(boxName);
           final tracksBox =
@@ -357,9 +447,20 @@ class SyncService extends GetxService {
             await tracksBox.close();
           }
         } catch (e) {
-          printERROR('SyncService: no se pudo abrir box para playlist $playlistId: $e');
+          printERROR(
+            'SyncService: no se pudo abrir box para playlist $playlistId: $e',
+          );
         }
       }
+      merged++;
+    }
+
+    if (merged == 0 && value.isNotEmpty) {
+      printWarning(
+        'SyncService: ninguna playlist mapeada de ${value.length} recibidas.',
+      );
+    } else if (merged > 0) {
+      printINFO('SyncService: playlists mapeadas=$merged de ${value.length}.');
     }
   }
 
@@ -408,6 +509,115 @@ class SyncService extends GetxService {
     return <String, dynamic>{};
   }
 
+  Map<String, dynamic> _resolveSyncPayload(dynamic raw) {
+    final data = _asMap(raw);
+    if (data.isEmpty) return data;
+
+    const nestedCandidates = [
+      'data',
+      'snapshot',
+      'payload',
+      'result',
+      'sync',
+    ];
+    for (final key in nestedCandidates) {
+      final nested = _asMap(data[key]);
+      if (nested.isNotEmpty && _containsSyncCollections(nested)) {
+        return nested;
+      }
+    }
+    return data;
+  }
+
+  bool _containsSyncCollections(Map<String, dynamic> map) {
+    const collectionKeys = [
+      'playlists',
+      'user_playlists',
+      'library_playlists',
+      'favorites',
+      'user_favorites',
+      'recent_plays',
+      'recentPlays',
+      'user_recent_plays',
+      'albums',
+      'user_albums',
+      'artists',
+      'user_artists',
+      'settings',
+      'user_settings',
+      'downloads',
+    ];
+    return collectionKeys.any((key) => map.containsKey(key));
+  }
+
+  dynamic _firstNonNull(Map<String, dynamic> map, List<String> keys) {
+    for (final key in keys) {
+      if (map.containsKey(key) && map[key] != null) {
+        return map[key];
+      }
+    }
+    return null;
+  }
+
+  Map<String, dynamic> _normalizePlaylist(Map<String, dynamic> playlist) {
+    final playlistId = _firstPresentKey(
+      playlist,
+      const ['playlistId', 'playlist_id', 'id', 'browseId'],
+    )?.toString();
+    if (playlistId == null || playlistId.isEmpty) {
+      return <String, dynamic>{};
+    }
+
+    final title = _firstPresentKey(
+          playlist,
+          const ['title', 'name', 'playlist_name'],
+        )?.toString() ??
+        'Playlist';
+
+    final normalized = <String, dynamic>{
+      ...playlist,
+      'playlistId': playlistId,
+      'title': title,
+      'isCloudPlaylist': playlist['isCloudPlaylist'] ?? true,
+    };
+
+    if (normalized['description'] == null && playlist['summary'] != null) {
+      normalized['description'] = playlist['summary'];
+    }
+
+    if (normalized['itemCount'] == null) {
+      normalized['itemCount'] = _firstPresentKey(
+        playlist,
+        const ['count', 'song_count', 'songs_count', 'tracks_count'],
+      );
+    }
+
+    final thumbnails = normalized['thumbnails'];
+    if (thumbnails is! List || thumbnails.isEmpty) {
+      final thumbnailUrl = _firstPresentKey(
+        playlist,
+        const ['thumbnailUrl', 'thumbnail_url', 'thumbnail', 'image', 'cover'],
+      )?.toString();
+      if (thumbnailUrl != null && thumbnailUrl.isNotEmpty) {
+        normalized['thumbnails'] = [
+          {'url': thumbnailUrl}
+        ];
+      }
+    }
+
+    return normalized;
+  }
+
+  dynamic _extractTracks(dynamic rawPlaylist, Map<String, dynamic> normalized) {
+    final original = _asMap(rawPlaylist);
+    if (normalized['tracks'] is List) return normalized['tracks'];
+    if (original['tracks'] is List) return original['tracks'];
+    if (original['songs'] is List) return original['songs'];
+    if (original['items'] is List) return original['items'];
+    if (original['playlist_tracks'] is List) return original['playlist_tracks'];
+    return null;
+  }
+
   void _refreshLibraryControllers() {
     if (Get.isRegistered<LibraryPlaylistsController>()) {
       Get.find<LibraryPlaylistsController>().refreshLib();
@@ -425,7 +635,8 @@ class SyncService extends GetxService {
     printINFO('SyncService: Pushing collaborative playlist...');
 
     try {
-      final tracksBox = await Hive.openBox(_sanitizeBoxName(playlist.playlistId));
+      final tracksBox =
+          await Hive.openBox(sanitizeBoxName(playlist.playlistId));
       final tracks = tracksBox.values.toList();
 
       final plMap = playlist.toJson();

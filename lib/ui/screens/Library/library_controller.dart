@@ -1,4 +1,4 @@
-﻿import 'dart:io';
+import 'dart:io';
 import 'package:audio_service/audio_service.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -256,12 +256,20 @@ class LibraryPlaylistsController extends GetxController
 
   void refreshLib() async {
     final box = await Hive.openBox("LibraryPlaylists");
+    final List<Playlist> loaded = [];
+    for (var item in box.values) {
+      try {
+        if (item is Map) {
+          loaded.add(Playlist.fromJson(Map<dynamic, dynamic>.from(item)));
+        }
+      } catch (e, stack) {
+        debugPrint("Error parsing playlist in refreshLib: $e\n$stack");
+      }
+    }
+    
     libraryPlaylists.value = [
       ...initPlst,
-      ...(box.values
-          .map<Playlist?>((item) => Playlist.fromJson(item))
-          .whereType<Playlist>()
-          .toList())
+      ...loaded
     ];
 
     final appPrefsBox = Hive.box("AppPrefs");
@@ -641,10 +649,17 @@ class LibraryAlbumsController extends GetxController {
 
   void refreshLib() async {
     final box = await Hive.openBox("LibraryAlbums");
-    libraryAlbums.value = box.values
-        .map<Album?>((item) => Album.fromJson(item))
-        .whereType<Album>()
-        .toList();
+    final List<Album> loaded = [];
+    for (var item in box.values) {
+      try {
+        if (item is Map) {
+          loaded.add(Album.fromJson(Map<dynamic, dynamic>.from(item)));
+        }
+      } catch (e, stack) {
+        debugPrint("Error parsing album in refreshLib: $e\n$stack");
+      }
+    }
+    libraryAlbums.value = loaded;
 
     isContentFetched.value = true;
   }
@@ -686,10 +701,17 @@ class LibraryArtistsController extends GetxController {
 
   void refreshLib() async {
     final box = await Hive.openBox("LibraryArtists");
-    libraryArtists.value = box.values
-        .map<Artist?>((item) => Artist.fromJson(item))
-        .whereType<Artist>()
-        .toList();
+    final List<Artist> loaded = [];
+    for (var item in box.values) {
+      try {
+        if (item is Map) {
+          loaded.add(Artist.fromJson(Map<dynamic, dynamic>.from(item)));
+        }
+      } catch (e, stack) {
+        debugPrint("Error parsing artist in refreshLib: $e\n$stack");
+      }
+    }
+    libraryArtists.value = loaded;
     isContentFetched.value = true;
   }
 
