@@ -20,8 +20,18 @@ jobs:
         with:
           channel: 'stable'
 
-      - name: Instalar dependencias de Flutter
-        run: flutter pub get
+      - name: Desactivar Swift Package Manager
+        # Evita el error de compilación con SPM en iOS
+        run: flutter config --no-enable-swift-package-manager
+
+      - name: Borrar dependencias y limpiar caché
+        # Limpieza agresiva para evitar conflictos de compilaciones previas
+        run: |
+          flutter clean
+          rm -rf ios/Pods
+          rm -rf ios/Podfile.lock
+          rm -rf ios/.symlinks
+          flutter pub get
 
       - name: Construir aplicación iOS (Sin certificados)
         # Compila para dispositivos físicos sin requerir cuenta de Apple Developer
