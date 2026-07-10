@@ -1,7 +1,7 @@
 name: Build iOS IPA para BrowserStack
 
 on:
-  workflow_dispatch: # Te permite ejecutar el action manualmente desde GitHub
+  workflow_dispatch:
 
 jobs:
   build-ios:
@@ -12,7 +12,6 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Crear archivo .env
-        # Inyecta el secreto directamente en la raíz del proyecto
         run: echo "${{ secrets.ENV_FILE }}" > .env
 
       - name: Configurar Flutter
@@ -21,11 +20,9 @@ jobs:
           channel: 'stable'
 
       - name: Desactivar Swift Package Manager
-        # Evita el error de compilación con SPM en iOS
         run: flutter config --no-enable-swift-package-manager
 
       - name: Borrar dependencias y limpiar caché
-        # Limpieza agresiva para evitar conflictos de compilaciones previas
         run: |
           flutter clean
           rm -rf ios/Pods
@@ -33,12 +30,18 @@ jobs:
           rm -rf ios/.symlinks
           flutter pub get
 
+      - name: Forzar desactivación de firma en Xcode
+        # Inyecta variables al archivo de configuración de iOS para neutralizar la exigencia de un Development Team
+        run: |
+          echo "CODE_SIGNING_ALLOWED=NO" >> ios/Flutter/Release.xcconfig
+          echo "CODE_SIGNING_REQUIRED=NO" >> ios/Flutter/Release.xcconfig
+          echo "CODE_SIGN_IDENTITY=\"\"" >> ios/Flutter/Release.xcconfig
+          echo "EXPANDED_CODE_SIGN_IDENTITY=\"\"" >> ios/Flutter/Release.xcconfig
+
       - name: Construir aplicación iOS (Sin certificados)
-        # Compila para dispositivos físicos sin requerir cuenta de Apple Developer
         run: flutter build ios --release --no-codesign
 
       - name: Empaquetar a formato .ipa
-        # Crea la estructura Payload que define a un archivo .ipa
         run: |
           mkdir -p Payload
           mv build/ios/iphoneos/Runner.app Payload
