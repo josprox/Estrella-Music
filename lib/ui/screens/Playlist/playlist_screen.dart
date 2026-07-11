@@ -134,9 +134,7 @@ class PlaylistScreen extends StatelessWidget {
                             ),
                           ),
                         ),
-                        if (!playlistController
-                                .playlist.value.isCloudPlaylist &&
-                            playlistController.isDefaultPlaylist.isFalse)
+                        if (playlistController.isDefaultPlaylist.isFalse)
                           SizedBox(
                             width: 50,
                             child: IconButton(

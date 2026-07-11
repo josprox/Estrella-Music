@@ -2,17 +2,9 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Estrella Music"
-#define RetrieveVersion() \
-    Local[0] = AddBackslash(GetEnv("TEMP")) + "version.txt", \
-    Local[1] = "-ExecutionPolicy Bypass -Command \"(Select-String -Path '" + SourcePath + "..\pubspec.yaml' -Pattern 'version:\\s*(.*)').Matches.Groups[1].Value.Split('+')[0].Trim() | Out-File -FilePath '" + Local[0] + "' -Encoding ascii\"", \
-    Exec("powershell.exe", Local[1], SourcePath, , SW_HIDE), \
-    Local[2] = FileOpen(Local[0]), \
-    Local[3] = Trim(FileRead(Local[2])), \
-    FileClose(Local[2]), \
-    DeleteFileNow(Local[0]), \
-    Local[3]
-
-#define MyAppVersion RetrieveVersion()
+#ifndef MyAppVersion
+  #define MyAppVersion "2.0.0"
+#endif
 #define MyAppPublisher "JOSPROX MX"
 #define MyAppURL "https://github.com/josprox/Estrella-Music-v2"
 #define MyAppExeName "harmonymusic.exe"

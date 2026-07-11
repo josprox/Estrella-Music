@@ -42,7 +42,8 @@ jobs:
       - name: Compile Inno Setup Installer
         shell: pwsh
         run: |
-          & "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" "distribution/compilador.iss"
+          $Version = (Select-String -Path "pubspec.yaml" -Pattern "version:\s*(.*)").Matches.Groups[1].Value.Split("+")[0].Trim()
+          & "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" /DMyAppVersion="$Version" "distribution/compilador.iss"
 
       - name: Package Portable ZIP
         shell: pwsh
