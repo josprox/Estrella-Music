@@ -34,6 +34,10 @@ jobs:
           flutter clean
           flutter pub get
 
+      - name: Patch audiotags podspec typo
+        run: |
+          find ~/.pub-cache -name "audiotags.podspec" -exec perl -pi -e 's/if \[ ! -d ios.zip \]d/if [ ! -f ios.zip ]/g' {} +
+
       - name: Configure CocoaPods Environment
         run: |
           cd ios
