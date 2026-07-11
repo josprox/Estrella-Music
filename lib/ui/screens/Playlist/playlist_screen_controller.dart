@@ -1,5 +1,6 @@
-﻿import 'dart:convert';
+import 'dart:convert';
 import 'dart:io';
+import 'dart:async';
 import 'package:audio_service/audio_service.dart' show MediaItem;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -47,6 +48,9 @@ class PlaylistScreenController extends PlaylistAlbumScreenControllerBase
 
   String generatedYtmPlaylistUrl = '';
 
+  StreamSubscription? _playlistSub;
+  StreamSubscription? _songsSub;
+
   // Title animation
 
   late AnimationController _animationController;
@@ -89,6 +93,8 @@ class PlaylistScreenController extends PlaylistAlbumScreenControllerBase
         playlistId == "SongsCache" ||
         playlistId == "LIBRP" ||
         playlistId == "LIBFAV");
+
+    _watchPlaylistChanges(playlistId);
 
     if (!isIdOnly && !playlist_.isCloudPlaylist) {
       playlist.value = playlist_;
@@ -366,10 +372,39 @@ class PlaylistScreenController extends PlaylistAlbumScreenControllerBase
 
   @override
   void onClose() {
+    _playlistSub?.cancel();
+    _songsSub?.cancel();
     tempListContainer.clear();
     _animationController.dispose();
     Get.find<HomeScreenController>().whenHomeScreenOnTop();
     super.onClose();
+  }
+
+  void _watchPlaylistChanges(String playlistId) async {
+    _playlistSub?.cancel();
+    _songsSub?.cancel();
+
+    try {
+      final plBox = Hive.isBoxOpen("LibraryPlaylists")
+          ? Hive.box("LibraryPlaylists")
+          : await Hive.openBox("LibraryPlaylists");
+      _playlistSub = plBox.watch(key: playlistId).listen((event) {
+        final data = event.value;
+        if (data != null) {
+          playlist.value = Playlist.fromJson(Map<String, dynamic>.from(data));
+        }
+      });
+    } catch (_) {}
+
+    try {
+      final boxName = sanitizeBoxName(playlistId);
+      final songsBox = Hive.isBoxOpen(boxName)
+          ? Hive.box(boxName)
+          : await Hive.openBox(boxName);
+      _songsSub = songsBox.watch().listen((event) {
+        fetchSongsfromDatabase(playlistId);
+      });
+    } catch (_) {}
   }
 
   Future<void> exportPlaylistToJson(BuildContext context) async {

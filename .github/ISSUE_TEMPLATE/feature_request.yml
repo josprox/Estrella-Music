@@ -1,0 +1,49 @@
+name: "💡 Propuesta de Función / Feature Request / Sugestão de Recurso"
+description: "Sugiere una idea o mejora para la app / Suggest an idea or improvement / Sugira uma ideia ou melhoria"
+title: "[FEATURE]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### 🌐 Idiomas Soportados / Supported Languages / Idiomas Suportados
+        > [!NOTE]
+        > Recibimos y atendemos propuestas de funciones en **Español**, **English**, y **Português**.
+        > We accept feature requests in **Spanish**, **English**, and **Portuguese**.
+        > Aceitamos sugestões de recursos em **Espanhol**, **Inglês** e **Português**.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: "1. ¿Tu propuesta se relaciona con un problema existente? / Is your feature request related to a problem? / Sua sugestão está relacionada a um problema?"
+      description: "Describe brevemente la limitación actual / A clear description of the current limitation / Descreva brevemente a limitação atual"
+      placeholder: "Ej: Me resulta molesto tener que..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: "2. Descripción de la función propuesta / Describe the solution you'd like / Descreva a solução desejada"
+      description: "Explica cómo te gustaría que funcionara / Detail what you want to happen / Explique como gostaria que funcionasse"
+      placeholder: "Ej: Me gustaría que hubiera un botón para..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: "3. Alternativas consideradas / Alternatives considered / Alternativas consideradas"
+      description: "Cualquier otra solución alternativa que hayas pensado / Any alternative solutions or features you've considered / Outras soluções alternativas consideradas"
+      placeholder: "Ej: Podríamos usar la API de..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: "4. Contexto adicional / Additional Context / Contexto adicional"
+      description: "Bocetos, capturas de pantalla de referencia o ideas técnicas / Visual sketches, reference links, or extra notes / Esboços ou capturas de referência"
+      placeholder: "Ej: Adjunto capturas del diseño propuesto..."
+    validations:
+      required: false

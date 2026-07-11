@@ -1,0 +1,90 @@
+name: Build Android APK & App Bundle
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-android:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create .env file
+        run: |
+          if [ -z "${{ secrets.ENV_FILE }}" ]; then
+            echo "API_URL=https://emusic.josprox.com" > .env
+          else
+            echo "${{ secrets.ENV_FILE }}" > .env
+          fi
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu'
+          java-version: '17'
+          cache: 'gradle'
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          cache: true
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Setup Signing Keystore
+        run: |
+          if [ -n "${{ secrets.KEYSTORE_BASE64 }}" ]; then
+            echo "Decoding release keystore..."
+            echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 --decode > android/app/jossestrada.keystore
+            echo "storeFile=jossestrada.keystore" > android/key.properties
+            echo "storePassword=${{ secrets.KEYSTORE_PASSWORD }}" >> android/key.properties
+            echo "keyAlias=${{ secrets.KEY_ALIAS }}" >> android/key.properties
+            echo "keyPassword=${{ secrets.KEY_PASSWORD }}" >> android/key.properties
+          else
+            echo "No custom keystore secret found. Generating temporary dummy keystore for compilation..."
+            keytool -genkey -v -keystore android/app/jossestrada.keystore \
+              -alias jossestrada -keyalg RSA -keysize 2048 -validity 10000 \
+              -storepass testpassword -keypass testpassword \
+              -dname "CN=Joss, OU=Dev, O=JOSPROX, L=MX, S=MX, C=MX"
+            echo "storeFile=jossestrada.keystore" > android/key.properties
+            echo "storePassword=testpassword" >> android/key.properties
+            echo "keyAlias=jossestrada" >> android/key.properties
+            echo "keyPassword=testpassword" >> android/key.properties
+          fi
+
+      - name: Build Split APKs
+        run: flutter build apk --release --split-per-abi
+
+      - name: Build Universal APK
+        run: flutter build apk --release
+
+      - name: Build App Bundle (AAB)
+        run: flutter build appbundle --release
+
+      - name: Upload Split APKs
+        uses: actions/upload-artifact@v4
+        with:
+          name: android-split-apks
+          path: build/app/outputs/flutter-apk/*-release.apk
+
+      - name: Upload Universal APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: android-universal-apk
+          path: build/app/outputs/flutter-apk/app-release.apk
+
+      - name: Upload App Bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: android-app-bundle
+          path: build/app/outputs/bundle/release/app-release.aab

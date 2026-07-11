@@ -36,13 +36,13 @@ class Playlist {
   final String playlistId;
   String title;
   final bool isPipedPlaylist;
-  final String? description;
+  String? description;
   String thumbnailUrl;
   final String? songCount;
   final bool isCloudPlaylist;
   final bool isPublic;
-  final bool isCollaborative;
-  final List<dynamic> collaborators;
+  bool isCollaborative;
+  List<dynamic> collaborators;
   final int? ownerId;
   static const thumbPlaceholderUrl =
       "https://raw.githubusercontent.com/anandnet/Harmony-Music/refs/heads/main/playlist_placeholder.png";

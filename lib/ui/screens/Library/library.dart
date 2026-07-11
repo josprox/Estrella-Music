@@ -1,4 +1,4 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '/ui/widgets/modification_list.dart';
@@ -346,6 +346,7 @@ class LibraryArtistWidget extends StatelessWidget {
                 screenController: cntrller,
                 isAdditionalOperationRequired: false,
                 isSearchFeatureRequired: true,
+                itemIcon: Icons.people_outline,
                 itemCountTitle:
                     "${cntrller.libraryArtists.length} ${S.current.items}",
                 onSort: (type, ascending) {

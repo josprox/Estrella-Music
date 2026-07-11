@@ -39,8 +39,8 @@ Future<AudioHandler> initAudioService() async {
       androidNotificationIcon: 'mipmap/ic_launcher_monochrome',
       androidNotificationChannelId: 'com.mycompany.myapp.audio',
       androidNotificationChannelName: 'Estrella Music Notification',
-      androidNotificationOngoing: true,
-      androidStopForegroundOnPause: true,
+      androidNotificationOngoing: false,
+      androidStopForegroundOnPause: false,
     ),
   );
 }
@@ -189,6 +189,9 @@ class MyAudioHandler extends BaseAudioHandler with GetxServiceMixin {
           await customAction(
               "playByIndex", {'index': currentIndex, 'newUrl': true});
           await _player.seek(curPos);
+          playbackState.add(playbackState.value.copyWith(
+            updatePosition: curPos,
+          ));
           await _player.play();
         } catch (recoveryErr) {
           printERROR("Auto recovery failed: $recoveryErr");
@@ -334,17 +337,17 @@ class MyAudioHandler extends BaseAudioHandler with GetxServiceMixin {
       await customAction("playByIndex", {'index': currentIndex});
       return;
     }
-    // Workaround for network error pause in case of PlayingUsingLockCachingSource
-    // if (isPlayingUsingLockCachingSource && networkErrorPause) {
-    //   await _player.play();
-    //   Future.delayed(const Duration(seconds: 2)).then((value) {
-    //     if (_player.playing) {
-    //       networkErrorPause = false;
-    //     }
-    //   });
-    //   await _player.play();
-    //   return;
-    // }
+    if (_player.processingState == ProcessingState.idle) {
+      final curPos = _player.position;
+      await customAction("playByIndex", {'index': currentIndex});
+      if (curPos > Duration.zero) {
+        await _player.seek(curPos);
+        playbackState.add(playbackState.value.copyWith(
+          updatePosition: curPos,
+        ));
+      }
+      return;
+    }
     await _player.play();
   }
 
@@ -352,7 +355,12 @@ class MyAudioHandler extends BaseAudioHandler with GetxServiceMixin {
   Future<void> pause() => _player.pause();
 
   @override
-  Future<void> seek(Duration position) => _player.seek(position);
+  Future<void> seek(Duration position) async {
+    await _player.seek(position);
+    playbackState.add(playbackState.value.copyWith(
+      updatePosition: position,
+    ));
+  }
 
   @override
   Future<void> skipToQueueItem(int index) async {

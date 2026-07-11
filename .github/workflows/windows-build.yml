@@ -1,0 +1,61 @@
+name: Build Windows Application
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create .env file
+        shell: bash
+        run: |
+          if [ -z "${{ secrets.ENV_FILE }}" ]; then
+            echo "API_URL=https://emusic.josprox.com" > .env
+          else
+            echo "${{ secrets.ENV_FILE }}" > .env
+          fi
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          cache: true
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Build Windows Application
+        run: flutter build windows --release
+
+      - name: Compile Inno Setup Installer
+        shell: pwsh
+        run: |
+          & "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" "distribution/compilador.iss"
+
+      - name: Package Portable ZIP
+        shell: pwsh
+        run: |
+          Compress-Archive -Path "build/windows/x64/runner/Release/*" -DestinationPath "distribution/EstrellaMusic_Portable.zip" -Force
+
+      - name: Upload Installer EXE
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-installer
+          path: distribution/EstrellaMusicInstaller.exe
+
+      - name: Upload Portable ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-portable-zip
+          path: distribution/EstrellaMusic_Portable.zip

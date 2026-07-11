@@ -60,5 +60,7 @@
 		<true/>
 		<key>NSMicrophoneUsageDescription</key>
 		<string>Esta aplicación requiere acceso al micrófono para reconocer canciones mediante Shazam.</string>
+		<key>NSAppleMusicUsageDescription</key>
+		<string>Esta aplicación requiere acceso a tu biblioteca de música para reproducir archivos locales.</string>
 	</dict>
 </plist>

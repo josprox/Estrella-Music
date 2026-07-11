@@ -1,4 +1,4 @@
-﻿// ignore_for_file: constant_identifier_names
+// ignore_for_file: constant_identifier_names
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -168,7 +168,7 @@ class SortWidget extends StatelessWidget {
                           Text(itemCountTitle),
                           if (itemIcon != null)
                             Icon(
-                              Icons.music_note,
+                              itemIcon!,
                               size: 15,
                               color: Theme.of(context).colorScheme.secondary,
                             )

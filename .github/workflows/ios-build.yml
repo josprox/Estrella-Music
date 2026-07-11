@@ -1,6 +1,12 @@
-name: Build iOS IPA para BrowserStack
+name: Build iOS IPA (Sideload/Testing)
 
 on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
@@ -8,76 +14,58 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      - name: Checkout del código
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Crear archivo .env
-        run: echo "${{ secrets.ENV_FILE }}" > .env
+      - name: Create .env file
+        run: |
+          if [ -z "${{ secrets.ENV_FILE }}" ]; then
+            echo "API_URL=https://emusic.josprox.com" > .env
+          else
+            echo "${{ secrets.ENV_FILE }}" > .env
+          fi
 
-      - name: Configurar Flutter
+      - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
+          cache: true
 
-      - name: Desactivar Swift Package Manager
-        run: flutter config --no-enable-swift-package-manager
-
-      - name: Borrar dependencias y limpiar caché
+      - name: Clean and Install dependencies
         run: |
           flutter clean
-          rm -rf ios/Pods
-          rm -rf ios/Podfile.lock
-          rm -rf ios/.symlinks
           flutter pub get
 
-      - name: Inyectar parche anti-firmas en Podfile
-        # Corrige la ruta para que busque Runner.xcodeproj exactamente en la carpeta actual (ios/)
+      - name: Configure CocoaPods Environment
         run: |
-          cat << 'EOF' > patch.rb
-          lines = File.readlines('ios/Podfile')
-          File.open('ios/Podfile', 'w') do |f|
-            lines.each do |l|
-              f.puts l
-              if l.include?('post_install do |installer|')
-                f.puts "    installer.pods_project.targets.each do |target|"
-                f.puts "      target.build_configurations.each do |config|"
-                f.puts "        config.build_settings['CODE_SIGNING_ALLOWED'] = 'NO'"
-                f.puts "        config.build_settings['CODE_SIGNING_REQUIRED'] = 'NO'"
-                f.puts "        config.build_settings['CODE_SIGN_IDENTITY'] = ''"
-                f.puts "        config.build_settings['EXPANDED_CODE_SIGN_IDENTITY'] = ''"
-                f.puts "      end"
-                f.puts "    end"
-                f.puts "    require 'xcodeproj'"
-                f.puts "    project_path = File.join(Dir.pwd, 'Runner.xcodeproj')"
-                f.puts "    project = Xcodeproj::Project.open(project_path)"
-                f.puts "    project.targets.each do |target|"
-                f.puts "      target.build_configurations.each do |config|"
-                f.puts "        config.build_settings['CODE_SIGNING_ALLOWED'] = 'NO'"
-                f.puts "        config.build_settings['CODE_SIGNING_REQUIRED'] = 'NO'"
-                f.puts "        config.build_settings['CODE_SIGN_IDENTITY'] = ''"
-                f.puts "        config.build_settings['EXPANDED_CODE_SIGN_IDENTITY'] = ''"
-                f.puts "      end"
-                f.puts "    end"
-                f.puts "    project.save"
-              end
-            end
-          end
-          EOF
-          ruby patch.rb
-          rm patch.rb
+          cd ios
+          pod repo update
+          pod install
 
-      - name: Construir aplicación iOS (Físico)
+      - name: Disable iOS Code Signing
+        run: |
+          echo "CODE_SIGNING_ALLOWED=NO" >> ios/Flutter/Release.xcconfig
+          echo "CODE_SIGNING_REQUIRED=NO" >> ios/Flutter/Release.xcconfig
+          echo "CODE_SIGN_IDENTITY=" >> ios/Flutter/Release.xcconfig
+          echo "EXPANDED_CODE_SIGN_IDENTITY=" >> ios/Flutter/Release.xcconfig
+          
+          echo "CODE_SIGNING_ALLOWED=NO" >> ios/Flutter/Debug.xcconfig
+          echo "CODE_SIGNING_REQUIRED=NO" >> ios/Flutter/Debug.xcconfig
+          echo "CODE_SIGN_IDENTITY=" >> ios/Flutter/Debug.xcconfig
+          echo "EXPANDED_CODE_SIGN_IDENTITY=" >> ios/Flutter/Debug.xcconfig
+
+      - name: Build iOS Application (Runner.app)
         run: flutter build ios --release --no-codesign
 
-      - name: Empaquetar a formato .ipa
+      - name: Package into IPA format
         run: |
           mkdir -p Payload
-          mv build/ios/iphoneos/Runner.app Payload
-          zip -r app.ipa Payload
+          mv build/ios/iphoneos/Runner.app Payload/
+          zip -r EstrellaMusic.ipa Payload
 
-      - name: Subir artefacto para descargar
+      - name: Upload IPA Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ios-app-release
-          path: app.ipa
+          name: ios-sideload-ipa
+          path: EstrellaMusic.ipa
           retention-days: 5

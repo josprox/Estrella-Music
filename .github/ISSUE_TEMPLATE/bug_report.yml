@@ -1,0 +1,84 @@
+name: "🐛 Reporte de Error / Bug Report / Relatório de Erro"
+description: "Informa sobre algo que no funciona correctamente / Report a bug / Reporte um erro"
+title: "[BUG]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### 🌐 Idiomas Soportados / Supported Languages / Idiomas Suportados
+        > [!NOTE]
+        > Recibimos y atendemos incidencias escritas en **Español**, **English**, y **Português**.
+        > We accept issues in **Spanish**, **English**, and **Portuguese**.
+        > Aceitamos problemas em **Espanhol**, **Inglês** e **Português**.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "1. Descripción / Description / Descrição"
+      description: "Describe el error de forma clara y concisa / A clear and concise description of the bug / Descreva o erro de forma clara e concisa"
+      placeholder: "Ej: La música se detiene inesperadamente al salir de la aplicación..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: "2. Pasos para reproducir / Steps to Reproduce / Passos para reproduzir"
+      description: "Indica detalladamente los pasos para ver el problema / Detail the steps to reproduce the issue / Indique os passos detalhados para ver o problema"
+      placeholder: |
+        1. Abrir la aplicación y reproducir cualquier canción.
+        2. Minimizar la app y abrir el navegador.
+        3. La reproducción se interrumpe tras unos segundos.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: "3. Comportamiento esperado / Expected Behavior / Comportamento esperado"
+      description: "¿Qué debería haber ocurrido? / What should have happened? / O que deveria ter acontecido?"
+      placeholder: "Ej: El reproductor de música debería seguir sonando sin pausas en segundo plano."
+    validations:
+      required: true
+
+  - type: input
+    id: app_version
+    attributes:
+      label: "4. Versión de la App / App Version / Versão do App"
+      description: "Ej: v2.3.3"
+      placeholder: "v2.3.3"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: "5. Plataforma / Platform / Plataforma"
+      description: "Selecciona el sistema operativo / Select the operating system / Selecione o sistema operacional"
+      options:
+        - Android
+        - Windows
+        - iOS
+        - Linux
+        - macOS
+    validations:
+      required: true
+
+  - type: textarea
+    id: device_details
+    attributes:
+      label: "6. Detalles del Dispositivo / Device Details / Detalhes do Dispositivo"
+      description: "Modelo y versión del OS / Device model and OS version / Modelo do dispositivo e versão do OS"
+      placeholder: "Ej: Samsung Galaxy S21 - Android 14 / Windows 11 23H2"
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: "7. Contexto adicional / Additional Context / Contexto adicional"
+      description: "Capturas de pantalla, archivos de log o detalles técnicos extra / Screenshots, log files or extra technical details / Capturas de tela ou logs"
+      placeholder: "Arrastra imágenes o pega logs aquí..."
+    validations:
+      required: false
