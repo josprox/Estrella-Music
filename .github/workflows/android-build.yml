@@ -64,39 +64,48 @@ jobs:
           fi
 
       - name: Build Split APKs
-        run: flutter build apk --release --split-per-abi
+        run: |
+          flutter build apk --release --split-per-abi
+          mkdir -p build-artifacts
+          cp build/app/outputs/flutter-apk/*-release.apk build-artifacts/
 
       - name: Build Universal APK
-        run: flutter build apk --release
+        run: |
+          flutter clean
+          flutter build apk --release
+          cp build/app/outputs/flutter-apk/app-release.apk build-artifacts/
 
       - name: Build App Bundle (AAB)
-        run: flutter build appbundle --release
+        run: |
+          flutter clean
+          flutter build appbundle --release
+          cp build/app/outputs/bundle/release/app-release.aab build-artifacts/
 
       - name: Upload Split APKs
         uses: actions/upload-artifact@v4
         with:
           name: android-split-apks
-          path: build/app/outputs/flutter-apk/*-release.apk
+          path: build-artifacts/*-release.apk
 
       - name: Upload Universal APK
         uses: actions/upload-artifact@v4
         with:
           name: android-universal-apk
-          path: build/app/outputs/flutter-apk/app-release.apk
+          path: build-artifacts/app-release.apk
 
       - name: Upload App Bundle
         uses: actions/upload-artifact@v4
         with:
           name: android-app-bundle
-          path: build/app/outputs/bundle/release/app-release.aab
+          path: build-artifacts/app-release.aab
 
       - name: Upload binaries to GitHub Release
         if: startsWith(github.ref, 'refs/tags/') || github.event_name == 'release'
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            build/app/outputs/flutter-apk/*-release.apk
-            build/app/outputs/flutter-apk/app-release.apk
-            build/app/outputs/bundle/release/app-release.aab
+            build-artifacts/*-release.apk
+            build-artifacts/app-release.apk
+            build-artifacts/app-release.aab
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
