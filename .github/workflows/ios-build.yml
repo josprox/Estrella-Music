@@ -2,11 +2,8 @@ name: Build iOS IPA (Sideload/Testing)
 
 on:
   push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+    tags:
+      - 'v*'
   workflow_dispatch:
 
 jobs:
@@ -33,6 +30,7 @@ jobs:
 
       - name: Clean and Install dependencies
         run: |
+          flutter config --no-enable-swift-package-manager
           flutter clean
           flutter pub get
 
