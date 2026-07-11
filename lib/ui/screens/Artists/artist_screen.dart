@@ -7,7 +7,7 @@ import '/ui/screens/Artists/artist_screen_controller.dart';
 import '/ui/widgets/loader.dart';
 import 'package:harmonymusic/ui/player/player_controller.dart';
 import '/ui/navigator.dart';
-import '/models/media_Item_builder.dart';
+import '/models/media_item_builder.dart';
 import 'package:harmonymusic/ui/widgets/songinfo_bottom_sheet.dart';
 import '/models/album.dart';
 import '/models/playlist.dart';

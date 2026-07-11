@@ -10,7 +10,7 @@ import 'package:harmonymusic/utils/helpers/helper.dart';
 import 'package:hive/hive.dart';
 
 import 'package:harmonymusic/mixins/additional_opeartion_mixin.dart';
-import 'package:harmonymusic/models/media_Item_builder.dart';
+import 'package:harmonymusic/models/media_item_builder.dart';
 import 'package:harmonymusic/ui/screens/Home/home_screen_controller.dart';
 import 'package:harmonymusic/ui/screens/Library/library_controller.dart';
 import 'package:harmonymusic/services/sync/sync_service.dart';

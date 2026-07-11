@@ -17,7 +17,7 @@ import 'package:harmonymusic/services/sync/sync_service.dart';
 import 'package:harmonymusic/utils/helpers/helper.dart';
 import '/models/album.dart';
 import '/models/artist.dart';
-import '/models/media_Item_builder.dart';
+import '/models/media_item_builder.dart';
 import '/models/playlist.dart';
 import 'package:harmonymusic/generated/l10n.dart';
 

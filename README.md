@@ -63,6 +63,22 @@ By combining the best of both worlds, we've created an experience that is faster
    flutter run
    ```
 
+### 🍏 Instalación en iPhone / iOS (Re-firma Automática)
+
+Para instalar el archivo `Estrella Music.ipa` en tu iPhone y hacer que la firma no expire a los 7 días (evitando usar la computadora cada semana):
+
+1. **Instalar SideStore**: Realiza la instalación inicial de **SideStore** en tu iPhone siguiendo la guía de [sidestore.io](https://sidestore.io) (requiere ordenador para la carga inicial y configurar la VPN interna de WireGuard).
+2. **Configurar el servidor de firmas Anisette**:
+   - Abre la app de **SideStore** en tu iPhone.
+   - Ve a **Settings** (Ajustes).
+   - Busca el campo **Anisette Server URL** y reemplázalo por tu propio servidor unificado de EMusic:
+     `https://emusic.joss.red/api/anisette`
+   - Inicia sesión con tu Apple ID dentro de SideStore.
+3. **Instalar la App**:
+   - Descarga el archivo `Estrella Music.ipa` en tu iPhone y guárdalo en la aplicación **Archivos**.
+   - En **SideStore**, ve a **My Apps**, pulsa el botón **`+`** de arriba a la izquierda y selecciona el archivo `.ipa`.
+4. **Renovación automática**: Siempre que estés en Wi-Fi, abre SideStore una vez a la semana y las firmas se renovarán en segundo plano de forma transparente.
+
 ---
 
 ## 📜 License & Authorship

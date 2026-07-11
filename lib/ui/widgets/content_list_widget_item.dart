@@ -9,7 +9,7 @@ import 'image_widget.dart';
 import 'playlist_cover_widget.dart';
 import 'hover_card_wrapper.dart';
 import 'package:harmonymusic/models/playling_from.dart';
-import 'package:harmonymusic/models/media_Item_builder.dart';
+import 'package:harmonymusic/models/media_item_builder.dart';
 import 'package:harmonymusic/services/music/music_service.dart';
 import 'package:harmonymusic/ui/player/player_controller.dart';
 

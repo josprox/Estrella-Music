@@ -18,7 +18,7 @@ import 'package:harmonymusic/ui/player/player_controller.dart';
 import 'package:harmonymusic/ui/screens/Library/library_controller.dart';
 import '/ui/widgets/add_to_playlist.dart';
 import '/ui/widgets/snackbar.dart';
-import 'package:harmonymusic/models/media_Item_builder.dart';
+import 'package:harmonymusic/models/media_item_builder.dart';
 import 'package:harmonymusic/models/playlist.dart';
 import 'package:harmonymusic/ui/navigator.dart';
 import 'song_download_btn.dart';

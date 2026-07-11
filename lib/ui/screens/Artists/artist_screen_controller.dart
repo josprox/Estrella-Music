@@ -12,7 +12,7 @@ import 'package:harmonymusic/ui/screens/Library/library_controller.dart';
 import 'package:harmonymusic/services/music/music_service.dart';
 import '/ui/screens/Home/home_screen_controller.dart';
 import '/ui/screens/Settings/settings_screen_controller.dart';
-import 'package:harmonymusic/models/media_Item_builder.dart';
+import 'package:harmonymusic/models/media_item_builder.dart';
 import 'package:harmonymusic/services/sync/sync_service.dart';
 
 class ArtistScreenController extends GetxController

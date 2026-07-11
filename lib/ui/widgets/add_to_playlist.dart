@@ -6,7 +6,7 @@ import 'package:harmonymusic/utils/helpers/helper.dart';
 
 import 'package:harmonymusic/services/social/piped_service.dart';
 import 'package:harmonymusic/services/sync/sync_service.dart';
-import '/models/media_Item_builder.dart';
+import '/models/media_item_builder.dart';
 import '/ui/widgets/create_playlist_dialog.dart';
 import 'package:harmonymusic/models/playlist.dart';
 import 'common_dialog_widget.dart';

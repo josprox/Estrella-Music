@@ -1,6 +1,8 @@
 name: Build iOS IPA (Sideload/Testing)
 
 on:
+  release:
+    types: [published]
   push:
     tags:
       - 'v*'
@@ -9,6 +11,8 @@ on:
 jobs:
   build-ios:
     runs-on: macos-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout repository
@@ -75,3 +79,12 @@ jobs:
           name: ios-sideload-ipa
           path: EstrellaMusic.ipa
           retention-days: 5
+
+      - name: Upload binaries to GitHub Release
+        if: startsWith(github.ref, 'refs/tags/') || github.event_name == 'release'
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            EstrellaMusic.ipa
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

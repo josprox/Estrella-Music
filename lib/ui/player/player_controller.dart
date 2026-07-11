@@ -21,7 +21,7 @@ import 'package:wakelock_plus/wakelock_plus.dart';
 import 'package:harmonymusic/services/music/windows_audio_service.dart';
 import 'package:harmonymusic/utils/helpers/helper.dart';
 import 'package:harmonymusic/ui/utils/theme_controller.dart';
-import '/models/media_Item_builder.dart';
+import '/models/media_item_builder.dart';
 import 'package:harmonymusic/ui/screens/Home/home_screen_controller.dart';
 import 'package:harmonymusic/ui/widgets/sliding_up_panel.dart';
 import '/models/durationstate.dart';
