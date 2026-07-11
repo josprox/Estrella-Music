@@ -40,17 +40,21 @@ jobs:
           pod repo update
           pod install
 
-      - name: Disable iOS Code Signing
+      - name: Disable Code Signing in Xcode Project
         run: |
           echo "CODE_SIGNING_ALLOWED=NO" >> ios/Flutter/Release.xcconfig
           echo "CODE_SIGNING_REQUIRED=NO" >> ios/Flutter/Release.xcconfig
           echo "CODE_SIGN_IDENTITY=" >> ios/Flutter/Release.xcconfig
           echo "EXPANDED_CODE_SIGN_IDENTITY=" >> ios/Flutter/Release.xcconfig
+          echo "DEAD_CODE_STRIPPING=NO" >> ios/Flutter/Release.xcconfig
+          echo "STRIP_STYLE=non-global" >> ios/Flutter/Release.xcconfig
           
           echo "CODE_SIGNING_ALLOWED=NO" >> ios/Flutter/Debug.xcconfig
           echo "CODE_SIGNING_REQUIRED=NO" >> ios/Flutter/Debug.xcconfig
           echo "CODE_SIGN_IDENTITY=" >> ios/Flutter/Debug.xcconfig
           echo "EXPANDED_CODE_SIGN_IDENTITY=" >> ios/Flutter/Debug.xcconfig
+          echo "DEAD_CODE_STRIPPING=NO" >> ios/Flutter/Debug.xcconfig
+          echo "STRIP_STYLE=non-global" >> ios/Flutter/Debug.xcconfig
 
       - name: Build iOS Application (Runner.app)
         run: flutter build ios --release --no-codesign
