@@ -20,7 +20,9 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'uk';
 
-  static String m0(current) => "Крок ${current} з 3";
+  static String m0(error) => "Під час регенерації сталася помилка: ${error}";
+
+  static String m1(current) => "Крок ${current} з 3";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -731,14 +733,44 @@ class MessageLookup extends MessageLookupByLibrary {
       "Налаштувати показ контенту",
     ),
     "settings": MessageLookupByLibrary.simpleMessage("Налаштування"),
+    "settings_about_desc": MessageLookupByLibrary.simpleMessage(
+      "Про Estrella Music",
+    ),
+    "settings_about_sub": MessageLookupByLibrary.simpleMessage(
+      "Версія, проект з відкритим кодом і GitHub.",
+    ),
+    "settings_account_desc": MessageLookupByLibrary.simpleMessage(
+      "Обліковий запис і синхронізація",
+    ),
+    "settings_account_sub": MessageLookupByLibrary.simpleMessage(
+      "Хмарний режим, резервне копіювання, список друзів і міграції.",
+    ),
+    "settings_appearance_desc": MessageLookupByLibrary.simpleMessage(
+      "Тема, мова та анімація інтерфейсу.",
+    ),
     "settings_cloud_backup": MessageLookupByLibrary.simpleMessage(
       "Хмарне резервне копіювання",
     ),
     "settings_cloud_backup_desc": MessageLookupByLibrary.simpleMessage(
       "Завантажуйте, відновлюйте та керуйте...",
     ),
+    "settings_content_desc": MessageLookupByLibrary.simpleMessage(
+      "Відкрийте для себе фільтри, інтеграцію з Piped і кеші.",
+    ),
+    "settings_downloads_desc": MessageLookupByLibrary.simpleMessage(
+      "Завантаження та зберігання",
+    ),
+    "settings_downloads_sub": MessageLookupByLibrary.simpleMessage(
+      "Аудіоформати, папки та автоматичне завантаження.",
+    ),
     "settings_general_section": MessageLookupByLibrary.simpleMessage(
       "Загальний",
+    ),
+    "settings_local_cloud_desc": MessageLookupByLibrary.simpleMessage(
+      "Виберіть, перенесіть або перегляньте статус синхронізації з Joss Red.",
+    ),
+    "settings_local_cloud_title": MessageLookupByLibrary.simpleMessage(
+      "Локальний режим / EMusic Cloud",
     ),
     "settings_logout": MessageLookupByLibrary.simpleMessage("Вийти"),
     "settings_migration_desc": MessageLookupByLibrary.simpleMessage(
@@ -746,6 +778,30 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "settings_migration_title": MessageLookupByLibrary.simpleMessage(
       "Перехід із Joss Music Kotlin",
+    ),
+    "settings_my_friends": MessageLookupByLibrary.simpleMessage("мої друзі"),
+    "settings_my_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "Керуйте своїми друзями Joss Red безпосередньо.",
+    ),
+    "settings_playback_desc": MessageLookupByLibrary.simpleMessage(
+      "Якість потокового передавання, нормалізація, тиша та заряд батареї.",
+    ),
+    "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
+      "Повторно згенеруйте свій ідентифікатор YouTube Music, якщо вміст Discover не завантажується.",
+    ),
+    "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
+      "Оновити ідентифікатор (ідентифікатор відвідувача)",
+    ),
+    "settings_visitor_error": MessageLookupByLibrary.simpleMessage("помилка"),
+    "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
+      "Не вдалося створити новий ідентифікатор. Спробуйте пізніше.",
+    ),
+    "settings_visitor_exception": m0,
+    "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
+      "Оновлений ідентифікатор",
+    ),
+    "settings_visitor_updated_desc": MessageLookupByLibrary.simpleMessage(
+      "Новий ID відвідувача успішно створено.",
     ),
     "shareSong": MessageLookupByLibrary.simpleMessage("Поділитися цією піснею"),
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
@@ -761,7 +817,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Ваш таймер сну встановлено",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Таймер сну"),
-    "slide_indicator": m0,
+    "slide_indicator": m1,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "Пісню додано до списку відтворення!",
     ),

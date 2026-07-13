@@ -20,7 +20,9 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ar';
 
-  static String m0(current) => "الخطوة __PH_0____ من 3";
+  static String m0(error) => "حدث خطأ أثناء إعادة الإنشاء: __PH_0____";
+
+  static String m1(current) => "الخطوة __PH_0____ من 3";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -612,19 +614,73 @@ class MessageLookup extends MessageLookupByLibrary {
       "تعيين اكتشاف المحتوى",
     ),
     "settings": MessageLookupByLibrary.simpleMessage("إعدادات"),
+    "settings_about_desc": MessageLookupByLibrary.simpleMessage(
+      "حول موسيقى استريلا",
+    ),
+    "settings_about_sub": MessageLookupByLibrary.simpleMessage(
+      "الإصدار، مشروع مفتوح المصدر وGitHub.",
+    ),
+    "settings_account_desc": MessageLookupByLibrary.simpleMessage(
+      "الحساب والمزامنة",
+    ),
+    "settings_account_sub": MessageLookupByLibrary.simpleMessage(
+      "الوضع السحابي والنسخ الاحتياطية وقائمة الأصدقاء وعمليات الترحيل.",
+    ),
+    "settings_appearance_desc": MessageLookupByLibrary.simpleMessage(
+      "الرسوم المتحركة للموضوع واللغة والواجهة.",
+    ),
     "settings_cloud_backup": MessageLookupByLibrary.simpleMessage(
       "النسخ الاحتياطي السحابي",
     ),
     "settings_cloud_backup_desc": MessageLookupByLibrary.simpleMessage(
       "تحميل واستعادة وإدارة...",
     ),
+    "settings_content_desc": MessageLookupByLibrary.simpleMessage(
+      "اكتشف عوامل التصفية والتكامل مع الأنابيب وذاكرة التخزين المؤقت.",
+    ),
+    "settings_downloads_desc": MessageLookupByLibrary.simpleMessage(
+      "التنزيلات والتخزين",
+    ),
+    "settings_downloads_sub": MessageLookupByLibrary.simpleMessage(
+      "تنسيقات الصوت والمجلدات والتنزيلات التلقائية.",
+    ),
     "settings_general_section": MessageLookupByLibrary.simpleMessage("عام"),
+    "settings_local_cloud_desc": MessageLookupByLibrary.simpleMessage(
+      "اختر حالة المزامنة أو قم بترحيلها أو مراجعتها مع Joss Red.",
+    ),
+    "settings_local_cloud_title": MessageLookupByLibrary.simpleMessage(
+      "الوضع المحلي / EMusic Cloud",
+    ),
     "settings_logout": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
     "settings_migration_desc": MessageLookupByLibrary.simpleMessage(
       "استيراد قوائم التشغيل والأغاني...",
     ),
     "settings_migration_title": MessageLookupByLibrary.simpleMessage(
       "الهجرة من Joss Music Kotlin",
+    ),
+    "settings_my_friends": MessageLookupByLibrary.simpleMessage(".أصدقائي"),
+    "settings_my_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "إدارة أصدقائك Joss Red مباشرة.",
+    ),
+    "settings_playback_desc": MessageLookupByLibrary.simpleMessage(
+      "جودة البث والتطبيع والصمت والبطارية.",
+    ),
+    "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
+      "قم بإعادة إنشاء معرف YouTube Music الخاص بك إذا لم يتم تحميل محتوى Discover.",
+    ),
+    "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
+      "معرف التحديث (معرف الزائر)",
+    ),
+    "settings_visitor_error": MessageLookupByLibrary.simpleMessage("خطأ"),
+    "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
+      "لا يمكن إنشاء معرف جديد. يرجى المحاولة مرة أخرى في وقت لاحق.",
+    ),
+    "settings_visitor_exception": m0,
+    "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
+      "المعرف المحدث",
+    ),
+    "settings_visitor_updated_desc": MessageLookupByLibrary.simpleMessage(
+      "تم إنشاء معرف زائر جديد بنجاح.",
     ),
     "shareSong": MessageLookupByLibrary.simpleMessage("مشاركة هذه الأغنية"),
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
@@ -640,7 +696,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "تم ضبط مؤقت نوم",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("مؤقت النوم"),
-    "slide_indicator": m0,
+    "slide_indicator": m1,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "تمت إضافة الأغنية إلى قائمة التشغيل!",
     ),

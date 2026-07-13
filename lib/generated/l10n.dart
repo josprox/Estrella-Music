@@ -3738,6 +3738,206 @@ class S {
       args: [],
     );
   }
+
+  /// `Theme, language and interface animations.`
+  String get settings_appearance_desc {
+    return Intl.message(
+      'Theme, language and interface animations.',
+      name: 'settings_appearance_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Discover filters, integration with Piped and caches.`
+  String get settings_content_desc {
+    return Intl.message(
+      'Discover filters, integration with Piped and caches.',
+      name: 'settings_content_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Streaming quality, normalization, silences and battery.`
+  String get settings_playback_desc {
+    return Intl.message(
+      'Streaming quality, normalization, silences and battery.',
+      name: 'settings_playback_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Downloads and Storage`
+  String get settings_downloads_desc {
+    return Intl.message(
+      'Downloads and Storage',
+      name: 'settings_downloads_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Audio formats, folders and automatic downloads.`
+  String get settings_downloads_sub {
+    return Intl.message(
+      'Audio formats, folders and automatic downloads.',
+      name: 'settings_downloads_sub',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Account and Sync`
+  String get settings_account_desc {
+    return Intl.message(
+      'Account and Sync',
+      name: 'settings_account_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cloud mode, backups, friends list and migrations.`
+  String get settings_account_sub {
+    return Intl.message(
+      'Cloud mode, backups, friends list and migrations.',
+      name: 'settings_account_sub',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `About Estrella Music`
+  String get settings_about_desc {
+    return Intl.message(
+      'About Estrella Music',
+      name: 'settings_about_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Version, open source project and GitHub.`
+  String get settings_about_sub {
+    return Intl.message(
+      'Version, open source project and GitHub.',
+      name: 'settings_about_sub',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Local Mode / EMusic Cloud`
+  String get settings_local_cloud_title {
+    return Intl.message(
+      'Local Mode / EMusic Cloud',
+      name: 'settings_local_cloud_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Choose, migrate or review the synchronization status with Joss Red.`
+  String get settings_local_cloud_desc {
+    return Intl.message(
+      'Choose, migrate or review the synchronization status with Joss Red.',
+      name: 'settings_local_cloud_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `my friends`
+  String get settings_my_friends {
+    return Intl.message(
+      'my friends',
+      name: 'settings_my_friends',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Manage your Joss Red friends directly.`
+  String get settings_my_friends_desc {
+    return Intl.message(
+      'Manage your Joss Red friends directly.',
+      name: 'settings_my_friends_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Refresh ID (Visitor ID)`
+  String get settings_refresh_visitor_title {
+    return Intl.message(
+      'Refresh ID (Visitor ID)',
+      name: 'settings_refresh_visitor_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Regenerate your YouTube Music ID if Discover content doesn't load.`
+  String get settings_refresh_visitor_desc {
+    return Intl.message(
+      'Regenerate your YouTube Music ID if Discover content doesn\'t load.',
+      name: 'settings_refresh_visitor_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Updated identifier`
+  String get settings_visitor_updated {
+    return Intl.message(
+      'Updated identifier',
+      name: 'settings_visitor_updated',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A new Visitor ID was generated successfully.`
+  String get settings_visitor_updated_desc {
+    return Intl.message(
+      'A new Visitor ID was generated successfully.',
+      name: 'settings_visitor_updated_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mistake`
+  String get settings_visitor_error {
+    return Intl.message(
+      'Mistake',
+      name: 'settings_visitor_error',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A new identifier could not be generated. `
+  String get settings_visitor_error_desc {
+    return Intl.message(
+      'A new identifier could not be generated. ',
+      name: 'settings_visitor_error_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An error occurred while regenerating: {error}`
+  String settings_visitor_exception(Object error) {
+    return Intl.message(
+      'An error occurred while regenerating: $error',
+      name: 'settings_visitor_exception',
+      desc: '',
+      args: [error],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

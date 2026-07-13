@@ -20,7 +20,10 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'nl';
 
-  static String m0(current) => "Stap ${current} van 3";
+  static String m0(error) =>
+      "Er is een fout opgetreden tijdens het regenereren van: ${error}";
+
+  static String m1(current) => "Stap ${current} van 3";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -533,14 +536,44 @@ class MessageLookup extends MessageLookupByLibrary {
       "Zet ontdekkingsinhoud",
     ),
     "settings": MessageLookupByLibrary.simpleMessage("Instellingen"),
+    "settings_about_desc": MessageLookupByLibrary.simpleMessage(
+      "Over Estrella-muziek",
+    ),
+    "settings_about_sub": MessageLookupByLibrary.simpleMessage(
+      "Versie, open source project en GitHub.",
+    ),
+    "settings_account_desc": MessageLookupByLibrary.simpleMessage(
+      "Account en synchronisatie",
+    ),
+    "settings_account_sub": MessageLookupByLibrary.simpleMessage(
+      "Cloudmodus, back-ups, vriendenlijst en migraties.",
+    ),
+    "settings_appearance_desc": MessageLookupByLibrary.simpleMessage(
+      "Thema-, taal- en interface-animaties.",
+    ),
     "settings_cloud_backup": MessageLookupByLibrary.simpleMessage(
       "Cloud-back-up",
     ),
     "settings_cloud_backup_desc": MessageLookupByLibrary.simpleMessage(
       "Uploaden, herstellen en beheren...",
     ),
+    "settings_content_desc": MessageLookupByLibrary.simpleMessage(
+      "Ontdek filters, integratie met Piped en caches.",
+    ),
+    "settings_downloads_desc": MessageLookupByLibrary.simpleMessage(
+      "Downloads en opslag",
+    ),
+    "settings_downloads_sub": MessageLookupByLibrary.simpleMessage(
+      "Audioformaten, mappen en automatische downloads.",
+    ),
     "settings_general_section": MessageLookupByLibrary.simpleMessage(
       "Algemeen",
+    ),
+    "settings_local_cloud_desc": MessageLookupByLibrary.simpleMessage(
+      "Kies, migreer of bekijk de synchronisatiestatus met Joss Red.",
+    ),
+    "settings_local_cloud_title": MessageLookupByLibrary.simpleMessage(
+      "Lokale modus / EMusic Cloud",
     ),
     "settings_logout": MessageLookupByLibrary.simpleMessage("Uitloggen"),
     "settings_migration_desc": MessageLookupByLibrary.simpleMessage(
@@ -548,6 +581,32 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "settings_migration_title": MessageLookupByLibrary.simpleMessage(
       "Migreren van Joss Music Kotlin",
+    ),
+    "settings_my_friends": MessageLookupByLibrary.simpleMessage(
+      "mijn vrienden",
+    ),
+    "settings_my_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "Beheer uw Joss Red-vrienden rechtstreeks.",
+    ),
+    "settings_playback_desc": MessageLookupByLibrary.simpleMessage(
+      "Streamingkwaliteit, normalisatie, stiltes en batterij.",
+    ),
+    "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
+      "Genereer je YouTube Music-ID opnieuw als Discover-content niet wordt geladen.",
+    ),
+    "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
+      "Vernieuwings-ID (bezoekers-ID)",
+    ),
+    "settings_visitor_error": MessageLookupByLibrary.simpleMessage("Fout"),
+    "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
+      "Er kan geen nieuwe ID worden gegenereerd. Probeer het later opnieuw.",
+    ),
+    "settings_visitor_exception": m0,
+    "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
+      "Bijgewerkte identificatie",
+    ),
+    "settings_visitor_updated_desc": MessageLookupByLibrary.simpleMessage(
+      "Er is met succes een nieuwe bezoekers-ID gegenereerd.",
     ),
     "shareSong": MessageLookupByLibrary.simpleMessage("Deel dit liedje"),
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
@@ -562,7 +621,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Je slaap timer is ingezet",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Slaap timer"),
-    "slide_indicator": m0,
+    "slide_indicator": m1,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "Liedje toegevoegd aan afspeellijst!",
     ),

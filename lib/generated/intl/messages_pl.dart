@@ -20,7 +20,9 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'pl';
 
-  static String m0(current) => "Krok _${current} z 3";
+  static String m0(error) => "Wystąpił błąd podczas regeneracji: ${error}";
+
+  static String m1(current) => "Krok _${current} z 3";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -718,19 +720,75 @@ class MessageLookup extends MessageLookupByLibrary {
       "Wykryj zawartość",
     ),
     "settings": MessageLookupByLibrary.simpleMessage("Ustawienia"),
+    "settings_about_desc": MessageLookupByLibrary.simpleMessage(
+      "O muzyce Estrella",
+    ),
+    "settings_about_sub": MessageLookupByLibrary.simpleMessage(
+      "Wersja, projekt open source i GitHub.",
+    ),
+    "settings_account_desc": MessageLookupByLibrary.simpleMessage(
+      "Konto i synchronizacja",
+    ),
+    "settings_account_sub": MessageLookupByLibrary.simpleMessage(
+      "Tryb chmury, kopie zapasowe, lista znajomych i migracje.",
+    ),
+    "settings_appearance_desc": MessageLookupByLibrary.simpleMessage(
+      "Animacje tematyczne, językowe i interfejsowe.",
+    ),
     "settings_cloud_backup": MessageLookupByLibrary.simpleMessage(
       "Kopia zapasowa w chmurze",
     ),
     "settings_cloud_backup_desc": MessageLookupByLibrary.simpleMessage(
       "Przesyłaj, przywracaj i zarządzaj...",
     ),
+    "settings_content_desc": MessageLookupByLibrary.simpleMessage(
+      "Odkryj filtry, integrację z Piped i pamięciami podręcznymi.",
+    ),
+    "settings_downloads_desc": MessageLookupByLibrary.simpleMessage(
+      "Pobieranie i przechowywanie",
+    ),
+    "settings_downloads_sub": MessageLookupByLibrary.simpleMessage(
+      "Formaty audio, foldery i automatyczne pobieranie.",
+    ),
     "settings_general_section": MessageLookupByLibrary.simpleMessage("Ogólny"),
+    "settings_local_cloud_desc": MessageLookupByLibrary.simpleMessage(
+      "Wybierz, przeprowadź migrację lub przejrzyj status synchronizacji za pomocą Joss Red.",
+    ),
+    "settings_local_cloud_title": MessageLookupByLibrary.simpleMessage(
+      "Tryb lokalny / chmura EMusic",
+    ),
     "settings_logout": MessageLookupByLibrary.simpleMessage("Wyloguj się"),
     "settings_migration_desc": MessageLookupByLibrary.simpleMessage(
       "Importuj playlisty, utwory...",
     ),
     "settings_migration_title": MessageLookupByLibrary.simpleMessage(
       "Przeprowadź migrację z Joss Music Kotlin",
+    ),
+    "settings_my_friends": MessageLookupByLibrary.simpleMessage(
+      "moi przyjaciele",
+    ),
+    "settings_my_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "Zarządzaj bezpośrednio swoimi przyjaciółmi Joss Red.",
+    ),
+    "settings_playback_desc": MessageLookupByLibrary.simpleMessage(
+      "Jakość przesyłania strumieniowego, normalizacja, wyciszenie i bateria.",
+    ),
+    "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
+      "Wygeneruj ponownie swój identyfikator YouTube Music, jeśli treści Discover nie zostaną wczytane.",
+    ),
+    "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
+      "Odśwież identyfikator (identyfikator gościa)",
+    ),
+    "settings_visitor_error": MessageLookupByLibrary.simpleMessage("Błąd"),
+    "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
+      "Nie można wygenerować nowego identyfikatora. Spróbuj ponownie później.",
+    ),
+    "settings_visitor_exception": m0,
+    "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
+      "Zaktualizowany identyfikator",
+    ),
+    "settings_visitor_updated_desc": MessageLookupByLibrary.simpleMessage(
+      "Nowy identyfikator gościa został pomyślnie wygenerowany.",
     ),
     "shareSong": MessageLookupByLibrary.simpleMessage("Udostępnij ten utwór"),
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
@@ -746,7 +804,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Wyłącznik czasowy jest ustawiony",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Wyłącznik czasowy"),
-    "slide_indicator": m0,
+    "slide_indicator": m1,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "Utwór dodano do playlisty!",
     ),

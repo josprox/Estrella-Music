@@ -20,7 +20,9 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ru';
 
-  static String m0(current) => "Шаг ${current} из 3";
+  static String m0(error) => "Произошла ошибка при регенерации: ${error}.";
+
+  static String m1(current) => "Шаг ${current} из 3";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -727,19 +729,73 @@ class MessageLookup extends MessageLookupByLibrary {
       "Настроить контент на вкладке открытий",
     ),
     "settings": MessageLookupByLibrary.simpleMessage("Настройки"),
+    "settings_about_desc": MessageLookupByLibrary.simpleMessage(
+      "О музыке Эстрелла",
+    ),
+    "settings_about_sub": MessageLookupByLibrary.simpleMessage(
+      "Версия, проект с открытым исходным кодом и GitHub.",
+    ),
+    "settings_account_desc": MessageLookupByLibrary.simpleMessage(
+      "Аккаунт и синхронизация",
+    ),
+    "settings_account_sub": MessageLookupByLibrary.simpleMessage(
+      "Облачный режим, резервное копирование, список друзей и миграция.",
+    ),
+    "settings_appearance_desc": MessageLookupByLibrary.simpleMessage(
+      "Анимация темы, языка и интерфейса.",
+    ),
     "settings_cloud_backup": MessageLookupByLibrary.simpleMessage(
       "Облачное резервное копирование",
     ),
     "settings_cloud_backup_desc": MessageLookupByLibrary.simpleMessage(
       "Загружайте, восстанавливайте и управляйте...",
     ),
+    "settings_content_desc": MessageLookupByLibrary.simpleMessage(
+      "Откройте для себя фильтры, интеграцию с Piped и кэши.",
+    ),
+    "settings_downloads_desc": MessageLookupByLibrary.simpleMessage(
+      "Загрузки и хранение",
+    ),
+    "settings_downloads_sub": MessageLookupByLibrary.simpleMessage(
+      "Аудиоформаты, папки и автоматические загрузки.",
+    ),
     "settings_general_section": MessageLookupByLibrary.simpleMessage("Общий"),
+    "settings_local_cloud_desc": MessageLookupByLibrary.simpleMessage(
+      "Выберите, перенесите или проверьте статус синхронизации с Joss Red.",
+    ),
+    "settings_local_cloud_title": MessageLookupByLibrary.simpleMessage(
+      "Локальный режим / EMusic Cloud",
+    ),
     "settings_logout": MessageLookupByLibrary.simpleMessage("Выйти"),
     "settings_migration_desc": MessageLookupByLibrary.simpleMessage(
       "Импортируйте плейлисты, песни...",
     ),
     "settings_migration_title": MessageLookupByLibrary.simpleMessage(
       "Миграция с Joss Music Kotlin",
+    ),
+    "settings_my_friends": MessageLookupByLibrary.simpleMessage("мои друзья"),
+    "settings_my_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "Управляйте своими друзьями Джосс Ред напрямую.",
+    ),
+    "settings_playback_desc": MessageLookupByLibrary.simpleMessage(
+      "Качество потоковой передачи, нормализация, тишина и батарея.",
+    ),
+    "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
+      "Восстановите свой идентификатор YouTube Music ID, если контент Discover не загружается.",
+    ),
+    "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
+      "Обновить идентификатор (идентификатор посетителя)",
+    ),
+    "settings_visitor_error": MessageLookupByLibrary.simpleMessage("Ошибка"),
+    "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
+      "Не удалось создать новый идентификатор. Пожалуйста, повторите попытку позже.",
+    ),
+    "settings_visitor_exception": m0,
+    "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
+      "Обновленный идентификатор",
+    ),
+    "settings_visitor_updated_desc": MessageLookupByLibrary.simpleMessage(
+      "Новый идентификатор посетителя был успешно создан.",
     ),
     "shareSong": MessageLookupByLibrary.simpleMessage("Поделиться этой песней"),
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
@@ -755,7 +811,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Ваш таймер сна установлен",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Таймер сна"),
-    "slide_indicator": m0,
+    "slide_indicator": m1,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "Песня добавлена в плейлист!",
     ),

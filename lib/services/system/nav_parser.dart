@@ -374,7 +374,13 @@ MediaItem parseSongFlat(Map<String, dynamic> data) {
         nav(columns[0], text_run + navigation_browse_id,
             noneIfAbsent: true, funName: "parseSongFlat") ??
         nav(data, ['playlistItemData', 'videoId'],
-            noneIfAbsent: true, funName: "parseSongFlat"),
+            noneIfAbsent: true, funName: "parseSongFlat") ??
+        (nav(data, play_button) != null &&
+         nav(data, play_button)['playNavigationEndpoint'] != null &&
+         nav(data, play_button)['playNavigationEndpoint']['watchEndpoint'] != null
+            ? nav(data, play_button)['playNavigationEndpoint']['watchEndpoint']['videoId']
+            : null) ??
+        nav(data, ['onTap', 'watchEndpoint', 'videoId']),
     'artists': parseSongArtists(data, 1),
     'thumbnails': nav(data, thumbnails) ?? [{'url': ''}],
     //'isExplicit': nav(data, badge_label, noneIfAbsent: true) != null

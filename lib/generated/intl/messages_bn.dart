@@ -20,7 +20,9 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'bn';
 
-  static String m0(current) => "৩টির ​​মধ্যে ${current} ধাপ";
+  static String m0(error) => "Ocurrió un error al regenerar: ${error}";
+
+  static String m1(current) => "৩টির ​​মধ্যে ${current} ধাপ";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -698,19 +700,73 @@ class MessageLookup extends MessageLookupByLibrary {
       "আবিষ্কারের বিষয়বস্তু নির্ধারণ করুন",
     ),
     "settings": MessageLookupByLibrary.simpleMessage("সেটিংস"),
+    "settings_about_desc": MessageLookupByLibrary.simpleMessage(
+      "এস্ট্রেলা মিউজিক সম্পর্কে",
+    ),
+    "settings_about_sub": MessageLookupByLibrary.simpleMessage(
+      "সংস্করণ, ওপেন সোর্স প্রকল্প এবং গিটহাব।",
+    ),
+    "settings_account_desc": MessageLookupByLibrary.simpleMessage(
+      "অ্যাকাউন্ট এবং সিঙ্ক",
+    ),
+    "settings_account_sub": MessageLookupByLibrary.simpleMessage(
+      "ক্লাউড মোড, ব্যাকআপ, বন্ধুদের তালিকা এবং মাইগ্রেশন।",
+    ),
+    "settings_appearance_desc": MessageLookupByLibrary.simpleMessage(
+      "থিম, ভাষা এবং ইন্টারফেস অ্যানিমেশন।",
+    ),
     "settings_cloud_backup": MessageLookupByLibrary.simpleMessage(
       "ক্লাউড ব্যাকআপ",
     ),
     "settings_cloud_backup_desc": MessageLookupByLibrary.simpleMessage(
       "আপলোড, পুনরুদ্ধার এবং পরিচালনা...",
     ),
+    "settings_content_desc": MessageLookupByLibrary.simpleMessage(
+      "ফিল্টার, পাইপড এবং ক্যাশেগুলির সাথে একীকরণ আবিষ্কার করুন।",
+    ),
+    "settings_downloads_desc": MessageLookupByLibrary.simpleMessage(
+      "ডাউনলোড এবং স্টোরেজ",
+    ),
+    "settings_downloads_sub": MessageLookupByLibrary.simpleMessage(
+      "অডিও ফরম্যাট, ফোল্ডার এবং স্বয়ংক্রিয় ডাউনলোড।",
+    ),
     "settings_general_section": MessageLookupByLibrary.simpleMessage("সাধারণ"),
+    "settings_local_cloud_desc": MessageLookupByLibrary.simpleMessage(
+      "Joss Red এর সাথে সিঙ্ক্রোনাইজেশন স্থিতি চয়ন করুন, স্থানান্তর করুন বা পর্যালোচনা করুন৷",
+    ),
+    "settings_local_cloud_title": MessageLookupByLibrary.simpleMessage(
+      "স্থানীয় মোড / ইমিউজিক ক্লাউড",
+    ),
     "settings_logout": MessageLookupByLibrary.simpleMessage("লগ আউট করুন"),
     "settings_migration_desc": MessageLookupByLibrary.simpleMessage(
       "প্লেলিস্ট, গান আমদানি করুন...",
     ),
     "settings_migration_title": MessageLookupByLibrary.simpleMessage(
       "জস মিউজিক কোটলিন থেকে মাইগ্রেট করুন",
+    ),
+    "settings_my_friends": MessageLookupByLibrary.simpleMessage("আমার বন্ধুরা"),
+    "settings_my_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "আপনার জস রেড বন্ধুদের সরাসরি পরিচালনা করুন।",
+    ),
+    "settings_playback_desc": MessageLookupByLibrary.simpleMessage(
+      "স্ট্রিমিং গুণমান, স্বাভাবিককরণ, নীরবতা এবং ব্যাটারি।",
+    ),
+    "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
+      "ডিসকভার কন্টেন্ট লোড না হলে আপনার YouTube মিউজিক আইডি আবার জেনারেট করুন।",
+    ),
+    "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
+      "রিফ্রেশ আইডি (ভিজিটর আইডি)",
+    ),
+    "settings_visitor_error": MessageLookupByLibrary.simpleMessage("ভুল"),
+    "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
+      "একটি নতুন শনাক্তকারী তৈরি করা যায়নি৷ পরে আবার চেষ্টা করুন.",
+    ),
+    "settings_visitor_exception": m0,
+    "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
+      "আপডেট করা শনাক্তকারী",
+    ),
+    "settings_visitor_updated_desc": MessageLookupByLibrary.simpleMessage(
+      "একটি নতুন ভিজিটর আইডি সফলভাবে তৈরি হয়েছে৷",
     ),
     "shareSong": MessageLookupByLibrary.simpleMessage("এই গানটি শেয়ার করুন"),
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
@@ -726,7 +782,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "তোমার ঘুমের টাইমার সেট করা আছে",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("ঘুমানোর টাইমার"),
-    "slide_indicator": m0,
+    "slide_indicator": m1,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "গানটি প্লেলিস্টে যোগ করা হয়েছে!",
     ),

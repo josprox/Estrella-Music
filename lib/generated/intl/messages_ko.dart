@@ -20,7 +20,9 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ko';
 
-  static String m0(current) => "3단계 중 ${current} 단계";
+  static String m0(error) => "재생성하는 동안 오류가 발생했습니다: ${error}";
+
+  static String m1(current) => "3단계 중 ${current} 단계";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -392,17 +394,69 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "setDiscoverContent": MessageLookupByLibrary.simpleMessage("탐색할 컨텐츠를 설정"),
     "settings": MessageLookupByLibrary.simpleMessage("설정"),
+    "settings_about_desc": MessageLookupByLibrary.simpleMessage(
+      "Estrella Music 소개",
+    ),
+    "settings_about_sub": MessageLookupByLibrary.simpleMessage(
+      "버전, 오픈 소스 프로젝트 및 GitHub.",
+    ),
+    "settings_account_desc": MessageLookupByLibrary.simpleMessage("계정 및 동기화"),
+    "settings_account_sub": MessageLookupByLibrary.simpleMessage(
+      "클라우드 모드, 백업, 친구 목록 및 마이그레이션.",
+    ),
+    "settings_appearance_desc": MessageLookupByLibrary.simpleMessage(
+      "테마, 언어 및 인터페이스 애니메이션.",
+    ),
     "settings_cloud_backup": MessageLookupByLibrary.simpleMessage("클라우드 백업"),
     "settings_cloud_backup_desc": MessageLookupByLibrary.simpleMessage(
       "업로드, 복원 및 관리...",
     ),
+    "settings_content_desc": MessageLookupByLibrary.simpleMessage(
+      "필터, Piped 및 캐시와의 통합을 살펴보세요.",
+    ),
+    "settings_downloads_desc": MessageLookupByLibrary.simpleMessage(
+      "다운로드 및 저장",
+    ),
+    "settings_downloads_sub": MessageLookupByLibrary.simpleMessage(
+      "오디오 형식, 폴더 및 자동 다운로드.",
+    ),
     "settings_general_section": MessageLookupByLibrary.simpleMessage("일반적인"),
+    "settings_local_cloud_desc": MessageLookupByLibrary.simpleMessage(
+      "Joss Red와의 동기화 상태를 선택, 마이그레이션 또는 검토하세요.",
+    ),
+    "settings_local_cloud_title": MessageLookupByLibrary.simpleMessage(
+      "로컬 모드 / EMusic Cloud",
+    ),
     "settings_logout": MessageLookupByLibrary.simpleMessage("로그아웃"),
     "settings_migration_desc": MessageLookupByLibrary.simpleMessage(
       "재생목록, 노래 가져오기...",
     ),
     "settings_migration_title": MessageLookupByLibrary.simpleMessage(
       "Joss Music Kotlin에서 마이그레이션",
+    ),
+    "settings_my_friends": MessageLookupByLibrary.simpleMessage("내 친구들"),
+    "settings_my_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "Joss Red 친구를 직접 관리하세요.",
+    ),
+    "settings_playback_desc": MessageLookupByLibrary.simpleMessage(
+      "스트리밍 품질, 정규화, 무음 및 배터리.",
+    ),
+    "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
+      "Discover 콘텐츠가 로드되지 않으면 YouTube Music ID를 다시 생성하세요.",
+    ),
+    "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
+      "새로고침 ID(방문자 ID)",
+    ),
+    "settings_visitor_error": MessageLookupByLibrary.simpleMessage("실수"),
+    "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
+      "새 식별자를 생성할 수 없습니다. 나중에 다시 시도해 주세요.",
+    ),
+    "settings_visitor_exception": m0,
+    "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
+      "업데이트된 식별자",
+    ),
+    "settings_visitor_updated_desc": MessageLookupByLibrary.simpleMessage(
+      "새 방문자 ID가 성공적으로 생성되었습니다.",
     ),
     "shareSong": MessageLookupByLibrary.simpleMessage("이 곡을 공유"),
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
@@ -415,7 +469,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "sleepTimeSetAlert": MessageLookupByLibrary.simpleMessage("취침 타이머가 설정됨"),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("취침 타이머"),
-    "slide_indicator": m0,
+    "slide_indicator": m1,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "플레이리스트에 음악 추가됨!",
     ),

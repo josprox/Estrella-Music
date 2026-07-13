@@ -20,7 +20,10 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'tr';
 
-  static String m0(current) => "Adım ${current} / 3";
+  static String m0(error) =>
+      "Yeniden oluşturma sırasında bir hata oluştu: ${error}";
+
+  static String m1(current) => "Adım ${current} / 3";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -719,19 +722,73 @@ class MessageLookup extends MessageLookupByLibrary {
       "Keşfet içeriğini seç",
     ),
     "settings": MessageLookupByLibrary.simpleMessage("Ayarlar"),
+    "settings_about_desc": MessageLookupByLibrary.simpleMessage(
+      "Estrella Müzik Hakkında",
+    ),
+    "settings_about_sub": MessageLookupByLibrary.simpleMessage(
+      "Sürüm, açık kaynak proje ve GitHub.",
+    ),
+    "settings_account_desc": MessageLookupByLibrary.simpleMessage(
+      "Hesap ve Senkronizasyon",
+    ),
+    "settings_account_sub": MessageLookupByLibrary.simpleMessage(
+      "Bulut modu, yedeklemeler, arkadaş listesi ve geçişler.",
+    ),
+    "settings_appearance_desc": MessageLookupByLibrary.simpleMessage(
+      "Tema, dil ve arayüz animasyonları.",
+    ),
     "settings_cloud_backup": MessageLookupByLibrary.simpleMessage(
       "Bulut yedekleme",
     ),
     "settings_cloud_backup_desc": MessageLookupByLibrary.simpleMessage(
       "Yükleyin, geri yükleyin ve yönetin...",
     ),
+    "settings_content_desc": MessageLookupByLibrary.simpleMessage(
+      "Filtreleri, Piped ve önbelleklerle entegrasyonu keşfedin.",
+    ),
+    "settings_downloads_desc": MessageLookupByLibrary.simpleMessage(
+      "İndirmeler ve Depolama",
+    ),
+    "settings_downloads_sub": MessageLookupByLibrary.simpleMessage(
+      "Ses formatları, klasörler ve otomatik indirmeler.",
+    ),
     "settings_general_section": MessageLookupByLibrary.simpleMessage("Genel"),
+    "settings_local_cloud_desc": MessageLookupByLibrary.simpleMessage(
+      "Joss Red ile senkronizasyon durumunu seçin, taşıyın veya inceleyin.",
+    ),
+    "settings_local_cloud_title": MessageLookupByLibrary.simpleMessage(
+      "Yerel Mod / EMusic Cloud",
+    ),
     "settings_logout": MessageLookupByLibrary.simpleMessage("Oturumu kapat"),
     "settings_migration_desc": MessageLookupByLibrary.simpleMessage(
       "Çalma listelerini, şarkıları içe aktarın...",
     ),
     "settings_migration_title": MessageLookupByLibrary.simpleMessage(
       "Joss Music Kotlin\'den geçiş",
+    ),
+    "settings_my_friends": MessageLookupByLibrary.simpleMessage("arkadaşlarım"),
+    "settings_my_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "Joss Red arkadaşlarınızı doğrudan yönetin.",
+    ),
+    "settings_playback_desc": MessageLookupByLibrary.simpleMessage(
+      "Akış kalitesi, normalleştirme, sessizlikler ve pil.",
+    ),
+    "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
+      "Keşfet içeriği yüklenmezse YouTube Müzik Kimliğinizi yeniden oluşturun.",
+    ),
+    "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
+      "Kimliği Yenile (Ziyaretçi Kimliği)",
+    ),
+    "settings_visitor_error": MessageLookupByLibrary.simpleMessage("Hata"),
+    "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
+      "Yeni bir tanımlayıcı oluşturulamadı. Lütfen daha sonra tekrar deneyin.",
+    ),
+    "settings_visitor_exception": m0,
+    "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
+      "Güncellenmiş tanımlayıcı",
+    ),
+    "settings_visitor_updated_desc": MessageLookupByLibrary.simpleMessage(
+      "Yeni bir Ziyaretçi Kimliği başarıyla oluşturuldu.",
     ),
     "shareSong": MessageLookupByLibrary.simpleMessage("Paylaş"),
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
@@ -747,7 +804,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Uyku zamanlayıcınız ayarlandı",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Uyku zamanlayıcısı"),
-    "slide_indicator": m0,
+    "slide_indicator": m1,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "Şarkı çalma listesine eklendi!",
     ),

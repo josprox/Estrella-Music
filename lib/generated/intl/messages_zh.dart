@@ -20,7 +20,9 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'zh';
 
-  static String m0(current) => "步骤 ${current}（共 3 步）";
+  static String m0(error) => "重新生成时发生错误：${error}";
+
+  static String m1(current) => "步骤 ${current}（共 3 步）";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -139,11 +141,35 @@ class MessageLookup extends MessageLookupByLibrary {
     "reproducedBy": MessageLookupByLibrary.simpleMessage("转载者"),
     "searchInLibrary": MessageLookupByLibrary.simpleMessage("在图书馆中搜索"),
     "search_recent_title": MessageLookupByLibrary.simpleMessage("最近的搜索"),
+    "settings_about_desc": MessageLookupByLibrary.simpleMessage("关于埃斯特雷拉音乐"),
+    "settings_about_sub": MessageLookupByLibrary.simpleMessage(
+      "版本、开源项目和 GitHub。",
+    ),
+    "settings_account_desc": MessageLookupByLibrary.simpleMessage("帐户和同步"),
+    "settings_account_sub": MessageLookupByLibrary.simpleMessage(
+      "云模式、备份、好友列表和迁移。",
+    ),
+    "settings_appearance_desc": MessageLookupByLibrary.simpleMessage(
+      "主题、语言和界面动画。",
+    ),
     "settings_cloud_backup": MessageLookupByLibrary.simpleMessage("云备份"),
     "settings_cloud_backup_desc": MessageLookupByLibrary.simpleMessage(
       "上传、恢复和管理...",
     ),
+    "settings_content_desc": MessageLookupByLibrary.simpleMessage(
+      "发现过滤器、与管道和缓存的集成。",
+    ),
+    "settings_downloads_desc": MessageLookupByLibrary.simpleMessage("下载和存储"),
+    "settings_downloads_sub": MessageLookupByLibrary.simpleMessage(
+      "音频格式、文件夹和自动下载。",
+    ),
     "settings_general_section": MessageLookupByLibrary.simpleMessage("一般的"),
+    "settings_local_cloud_desc": MessageLookupByLibrary.simpleMessage(
+      "使用 Joss Red 选择、迁移或查看同步状态。",
+    ),
+    "settings_local_cloud_title": MessageLookupByLibrary.simpleMessage(
+      "本地模式/EMusic云",
+    ),
     "settings_logout": MessageLookupByLibrary.simpleMessage("退出"),
     "settings_migration_desc": MessageLookupByLibrary.simpleMessage(
       "导入播放列表、歌曲...",
@@ -151,10 +177,32 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_migration_title": MessageLookupByLibrary.simpleMessage(
       "从 Joss Music Kotlin 迁移",
     ),
+    "settings_my_friends": MessageLookupByLibrary.simpleMessage("我的朋友们"),
+    "settings_my_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "直接管理您的 Joss Red 好友。",
+    ),
+    "settings_playback_desc": MessageLookupByLibrary.simpleMessage(
+      "流媒体质量、标准化、静音和电池。",
+    ),
+    "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
+      "如果发现内容未加载，请重新生成您的 YouTube 音乐 ID。",
+    ),
+    "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
+      "刷新ID（访客ID）",
+    ),
+    "settings_visitor_error": MessageLookupByLibrary.simpleMessage("错误"),
+    "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
+      "无法生成新的标识符。请稍后重试。",
+    ),
+    "settings_visitor_exception": m0,
+    "settings_visitor_updated": MessageLookupByLibrary.simpleMessage("更新的标识符"),
+    "settings_visitor_updated_desc": MessageLookupByLibrary.simpleMessage(
+      "新的访客 ID 已成功生成。",
+    ),
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
       "正在 Shazam 数据库中搜索匹配项...",
     ),
-    "slide_indicator": m0,
+    "slide_indicator": m1,
     "songFound": MessageLookupByLibrary.simpleMessage("歌曲找到了！"),
     "songPitch": MessageLookupByLibrary.simpleMessage("歌声"),
     "speedAndPitch": MessageLookupByLibrary.simpleMessage("速度和音调"),

@@ -229,6 +229,10 @@ class SyncService extends GetxService {
     if (!isCloudMode || !_authService.isAuthenticated.value) {
       return true;
     }
+    if (Hive.box('AppPrefs').get(_pendingKey, defaultValue: false) == true) {
+      printINFO('SyncService: Pull skipped because there are pending local changes to push.');
+      return false;
+    }
     if (isSyncing.value) return false;
     isSyncing.value = true;
     lastStatusMessage.value = 'Descargando cambios de EMusic...';

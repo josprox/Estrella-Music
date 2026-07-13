@@ -20,7 +20,9 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'hu';
 
-  static String m0(current) => "3. ${current}. lépés";
+  static String m0(error) => "Hiba történt a regenerálás során: ${error}";
+
+  static String m1(current) => "3. ${current}. lépés";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -387,14 +389,44 @@ class MessageLookup extends MessageLookupByLibrary {
       "Állítsa be a felfedezés tartalmát",
     ),
     "settings": MessageLookupByLibrary.simpleMessage("Beállítások"),
+    "settings_about_desc": MessageLookupByLibrary.simpleMessage(
+      "Az Estrella Musicról",
+    ),
+    "settings_about_sub": MessageLookupByLibrary.simpleMessage(
+      "Verzió, nyílt forráskódú projekt és GitHub.",
+    ),
+    "settings_account_desc": MessageLookupByLibrary.simpleMessage(
+      "Fiók és szinkronizálás",
+    ),
+    "settings_account_sub": MessageLookupByLibrary.simpleMessage(
+      "Felhő mód, biztonsági mentések, barátlista és migráció.",
+    ),
+    "settings_appearance_desc": MessageLookupByLibrary.simpleMessage(
+      "Téma, nyelv és interfész animációk.",
+    ),
     "settings_cloud_backup": MessageLookupByLibrary.simpleMessage(
       "Biztonsági mentés a felhőből",
     ),
     "settings_cloud_backup_desc": MessageLookupByLibrary.simpleMessage(
       "Feltöltés, visszaállítás és kezelés...",
     ),
+    "settings_content_desc": MessageLookupByLibrary.simpleMessage(
+      "Fedezze fel a szűrőket, a Pipeddel való integrációt és a gyorsítótárakat.",
+    ),
+    "settings_downloads_desc": MessageLookupByLibrary.simpleMessage(
+      "Letöltések és tárolás",
+    ),
+    "settings_downloads_sub": MessageLookupByLibrary.simpleMessage(
+      "Hangformátumok, mappák és automatikus letöltések.",
+    ),
     "settings_general_section": MessageLookupByLibrary.simpleMessage(
       "Általános",
+    ),
+    "settings_local_cloud_desc": MessageLookupByLibrary.simpleMessage(
+      "Válassza ki, migrálja vagy tekintse át a szinkronizálás állapotát a Joss Red segítségével.",
+    ),
+    "settings_local_cloud_title": MessageLookupByLibrary.simpleMessage(
+      "Helyi mód / EMusic Cloud",
     ),
     "settings_logout": MessageLookupByLibrary.simpleMessage("Jelentkezzen ki"),
     "settings_migration_desc": MessageLookupByLibrary.simpleMessage(
@@ -403,6 +435,30 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_migration_title": MessageLookupByLibrary.simpleMessage(
       "Migráció a Joss Music Kotlin szolgáltatásból",
     ),
+    "settings_my_friends": MessageLookupByLibrary.simpleMessage("barátaim"),
+    "settings_my_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "Kezelje közvetlenül Joss Red barátait.",
+    ),
+    "settings_playback_desc": MessageLookupByLibrary.simpleMessage(
+      "Streaming minőség, normalizálás, némítás és akkumulátor.",
+    ),
+    "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
+      "Ha a Discover-tartalom nem töltődik be, állítsd újra a YouTube Music ID-t.",
+    ),
+    "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
+      "Frissítési azonosító (látogatóazonosító)",
+    ),
+    "settings_visitor_error": MessageLookupByLibrary.simpleMessage("Hiba"),
+    "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
+      "Nem sikerült új azonosítót létrehozni. Kérjük, próbálja újra később.",
+    ),
+    "settings_visitor_exception": m0,
+    "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
+      "Frissített azonosító",
+    ),
+    "settings_visitor_updated_desc": MessageLookupByLibrary.simpleMessage(
+      "Sikeresen létrehoztunk egy új látogatóazonosítót.",
+    ),
     "shareSong": MessageLookupByLibrary.simpleMessage("Dal megosztása"),
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
       "Egyezések keresése a Shazam adatbázisban...",
@@ -410,7 +466,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "shuffleQueue": MessageLookupByLibrary.simpleMessage("Várólista keverése"),
     "singles": MessageLookupByLibrary.simpleMessage("Kislemezek"),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Alvás időzítő"),
-    "slide_indicator": m0,
+    "slide_indicator": m1,
     "songFound": MessageLookupByLibrary.simpleMessage("Dal megtalálva!"),
     "songNotPlayable": MessageLookupByLibrary.simpleMessage(
       "A dal nem játszható le, a szerver korlátozása miatt!",

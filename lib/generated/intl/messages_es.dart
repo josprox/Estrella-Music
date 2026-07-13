@@ -20,19 +20,21 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'es';
 
-  static String m1(count) => "Álbumes: ${count}";
+  static String m2(count) => "Álbumes: ${count}";
 
-  static String m2(count) => "Artistas: ${count}";
+  static String m3(count) => "Artistas: ${count}";
 
-  static String m3(count) => "Favoritos: ${count}";
+  static String m4(count) => "Favoritos: ${count}";
 
-  static String m4(count) => "Playlists: ${count}";
+  static String m5(count) => "Playlists: ${count}";
 
-  static String m5(count) => "Canciones: ${count}";
+  static String m6(count) => "Canciones: ${count}";
 
-  static String m6(source) => "Migración completada desde ${source}.";
+  static String m7(source) => "Migración completada desde ${source}.";
 
-  static String m0(current) => "Paso ${current} de 3";
+  static String m0(error) => "Ocurrió un error al regenerar: ${error}";
+
+  static String m1(current) => "Paso ${current} de 3";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -603,12 +605,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "migration_success": MessageLookupByLibrary.simpleMessage(
       "Migración completada correctamente.",
     ),
-    "migration_summary_albums": m1,
-    "migration_summary_artists": m2,
-    "migration_summary_favorites": m3,
-    "migration_summary_playlists": m4,
-    "migration_summary_songs": m5,
-    "migration_summary_start": m6,
+    "migration_summary_albums": m2,
+    "migration_summary_artists": m3,
+    "migration_summary_favorites": m4,
+    "migration_summary_playlists": m5,
+    "migration_summary_songs": m6,
+    "migration_summary_start": m7,
     "minutes": MessageLookupByLibrary.simpleMessage("minutos"),
     "misc": MessageLookupByLibrary.simpleMessage("Varios"),
     "mostListenedSong": MessageLookupByLibrary.simpleMessage(
@@ -892,6 +894,21 @@ class MessageLookup extends MessageLookupByLibrary {
       "Establecer contenido de descubrimiento",
     ),
     "settings": MessageLookupByLibrary.simpleMessage("Ajustes"),
+    "settings_about_desc": MessageLookupByLibrary.simpleMessage(
+      "Acerca de Estrella Music",
+    ),
+    "settings_about_sub": MessageLookupByLibrary.simpleMessage(
+      "Versión, proyecto de código abierto y GitHub.",
+    ),
+    "settings_account_desc": MessageLookupByLibrary.simpleMessage(
+      "Cuenta y Sincronización",
+    ),
+    "settings_account_sub": MessageLookupByLibrary.simpleMessage(
+      "Modo cloud, backups, lista de amigos y migraciones.",
+    ),
+    "settings_appearance_desc": MessageLookupByLibrary.simpleMessage(
+      "Tema, idioma y animaciones de la interfaz.",
+    ),
     "settings_cloud_backup": MessageLookupByLibrary.simpleMessage(
       "Backup en la nube",
     ),
@@ -901,13 +918,52 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_cloud_backup_dialog_desc": MessageLookupByLibrary.simpleMessage(
       "Sube un respaldo .hmb de la app al servidor y, si lo necesitas, restaura cualquiera de los backups guardados.",
     ),
+    "settings_content_desc": MessageLookupByLibrary.simpleMessage(
+      "Filtros de descubrir, integración con Piped y cachés.",
+    ),
+    "settings_downloads_desc": MessageLookupByLibrary.simpleMessage(
+      "Descargas y Almacenamiento",
+    ),
+    "settings_downloads_sub": MessageLookupByLibrary.simpleMessage(
+      "Formatos de audio, carpetas y descargas automáticas.",
+    ),
     "settings_general_section": MessageLookupByLibrary.simpleMessage("General"),
+    "settings_local_cloud_desc": MessageLookupByLibrary.simpleMessage(
+      "Elige, migra o revisa el estado de sincronizacion con Joss Red.",
+    ),
+    "settings_local_cloud_title": MessageLookupByLibrary.simpleMessage(
+      "Modo local / EMusic Cloud",
+    ),
     "settings_logout": MessageLookupByLibrary.simpleMessage("Cerrar sesion"),
     "settings_migration_desc": MessageLookupByLibrary.simpleMessage(
       "Importa playlists, canciones...",
     ),
     "settings_migration_title": MessageLookupByLibrary.simpleMessage(
       "Migrar desde Joss Music Kotlin",
+    ),
+    "settings_my_friends": MessageLookupByLibrary.simpleMessage("Mis amigos"),
+    "settings_my_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "Gestiona tus amigos de Joss Red directamente.",
+    ),
+    "settings_playback_desc": MessageLookupByLibrary.simpleMessage(
+      "Calidad de streaming, normalización, silencios y batería.",
+    ),
+    "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
+      "Regenera el identificador de YouTube Music si el contenido de Descubrir no carga.",
+    ),
+    "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
+      "Refrescar identificador (Visitor ID)",
+    ),
+    "settings_visitor_error": MessageLookupByLibrary.simpleMessage("Error"),
+    "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
+      "No se pudo generar un nuevo identificador. Inténtalo más tarde.",
+    ),
+    "settings_visitor_exception": m0,
+    "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
+      "Identificador actualizado",
+    ),
+    "settings_visitor_updated_desc": MessageLookupByLibrary.simpleMessage(
+      "Se generó un nuevo Visitor ID con éxito.",
     ),
     "shareAlbum": MessageLookupByLibrary.simpleMessage("Compartir álbum"),
     "sharePlaylist": MessageLookupByLibrary.simpleMessage(
@@ -930,7 +986,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "sleepTimer": MessageLookupByLibrary.simpleMessage(
       "Temporizador de apagado",
     ),
-    "slide_indicator": m0,
+    "slide_indicator": m1,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "¡Canción añadida a la lista de reproducción!",
     ),

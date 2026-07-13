@@ -20,7 +20,9 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'or';
 
-  static String m0(current) => "3 ର ଷ୍ଟେପ୍ ${current} |";
+  static String m0(error) => "Ocurrió un error al regenerar: ${error}";
+
+  static String m1(current) => "3 ର ଷ୍ଟେପ୍ ${current} |";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -446,14 +448,44 @@ class MessageLookup extends MessageLookupByLibrary {
       "ଆବିଷ୍କାର ବିଷୟବସ୍ତୁ ସେଟ କରନ୍ତୁ",
     ),
     "settings": MessageLookupByLibrary.simpleMessage("ବିନ୍ୟାସଗୁଡ଼ିକ"),
+    "settings_about_desc": MessageLookupByLibrary.simpleMessage(
+      "ଏଷ୍ଟ୍ରେଲା ସଙ୍ଗୀତ ବିଷୟରେ |",
+    ),
+    "settings_about_sub": MessageLookupByLibrary.simpleMessage(
+      "ସଂସ୍କରଣ, ମୁକ୍ତ ଉତ୍ସ ପ୍ରକଳ୍ପ ଏବଂ GitHub |",
+    ),
+    "settings_account_desc": MessageLookupByLibrary.simpleMessage(
+      "ଆକାଉଣ୍ଟ୍ ଏବଂ ସିଙ୍କ୍ |",
+    ),
+    "settings_account_sub": MessageLookupByLibrary.simpleMessage(
+      "କ୍ଲାଉଡ୍ ମୋଡ୍, ବ୍ୟାକଅପ୍, ସାଙ୍ଗ ତାଲିକା ଏବଂ ସ୍ଥାନାନ୍ତରଣ |",
+    ),
+    "settings_appearance_desc": MessageLookupByLibrary.simpleMessage(
+      "ଥିମ୍, ଭାଷା ଏବଂ ଇଣ୍ଟରଫେସ୍ ଆନିମେସନ୍ |",
+    ),
     "settings_cloud_backup": MessageLookupByLibrary.simpleMessage(
       "କ୍ଲାଉଡ୍ ବ୍ୟାକଅପ୍ |",
     ),
     "settings_cloud_backup_desc": MessageLookupByLibrary.simpleMessage(
       "ଅପଲୋଡ୍, ପୁନରୁଦ୍ଧାର ଏବଂ ପରିଚାଳନା ...",
     ),
+    "settings_content_desc": MessageLookupByLibrary.simpleMessage(
+      "ଫିଲ୍ଟର୍, ପାଇପ୍ ଏବଂ କ୍ୟାଚ୍ ସହିତ ଏକୀକରଣ ଆବିଷ୍କାର କରନ୍ତୁ |",
+    ),
+    "settings_downloads_desc": MessageLookupByLibrary.simpleMessage(
+      "ଡାଉନଲୋଡ୍ ଏବଂ ଷ୍ଟୋରେଜ୍ |",
+    ),
+    "settings_downloads_sub": MessageLookupByLibrary.simpleMessage(
+      "ଅଡିଓ ଫର୍ମାଟ୍, ଫୋଲ୍ଡର୍ ଏବଂ ସ୍ୱୟଂଚାଳିତ ଡାଉନଲୋଡ୍ |",
+    ),
     "settings_general_section": MessageLookupByLibrary.simpleMessage(
       "ଜେନେରାଲ୍ |",
+    ),
+    "settings_local_cloud_desc": MessageLookupByLibrary.simpleMessage(
+      "ଜୋସ୍ ରେଡ୍ ସହିତ ସିଙ୍କ୍ରୋନାଇଜେସନ୍ ସ୍ଥିତିକୁ ବାଛ, ସ୍ଥାନାନ୍ତର କିମ୍ବା ସମୀକ୍ଷା କର |",
+    ),
+    "settings_local_cloud_title": MessageLookupByLibrary.simpleMessage(
+      "ଲୋକାଲ୍ ମୋଡ୍ / ଇମ୍ୟୁସିକ୍ କ୍ଲାଉଡ୍ |",
     ),
     "settings_logout": MessageLookupByLibrary.simpleMessage(
       "ଲଗ୍ ଆଉଟ୍ କରନ୍ତୁ |",
@@ -463,6 +495,30 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "settings_migration_title": MessageLookupByLibrary.simpleMessage(
       "ଜୋସ୍ ମ୍ୟୁଜିକ୍ କୋଟଲିନ୍ ରୁ ସ୍ଥାନାନ୍ତର |",
+    ),
+    "settings_my_friends": MessageLookupByLibrary.simpleMessage("ମୋର ବନ୍ଧୁଗଣ"),
+    "settings_my_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "ସିଧାସଳଖ ଆପଣଙ୍କର ଜୋସ୍ ରେଡ୍ ସାଙ୍ଗମାନଙ୍କୁ ପରିଚାଳନା କରନ୍ତୁ |",
+    ),
+    "settings_playback_desc": MessageLookupByLibrary.simpleMessage(
+      "ଷ୍ଟ୍ରିମିଂ ଗୁଣ, ସାଧାରଣକରଣ, ନୀରବତା ଏବଂ ବ୍ୟାଟେରୀ |",
+    ),
+    "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
+      "ଯଦି ବିଷୟବସ୍ତୁ ଲୋଡ୍ ନହୁଏ ତେବେ ଆପଣଙ୍କର ୟୁଟ୍ୟୁବ୍ ମ୍ୟୁଜିକ୍ ID ପୁନ ener ନିର୍ମାଣ କରନ୍ତୁ |",
+    ),
+    "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
+      "ସତେଜ ID (ପରିଦର୍ଶକ ID)",
+    ),
+    "settings_visitor_error": MessageLookupByLibrary.simpleMessage("ଭୁଲ"),
+    "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
+      "ଏକ ନୂତନ ପରିଚାୟକ ସୃଷ୍ଟି ହୋଇପାରିବ ନାହିଁ | ଦୟାକରି ପରେ ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ |",
+    ),
+    "settings_visitor_exception": m0,
+    "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
+      "ଅଦ୍ୟତନ ପରିଚାୟକ",
+    ),
+    "settings_visitor_updated_desc": MessageLookupByLibrary.simpleMessage(
+      "ଏକ ନୂତନ ପରିଦର୍ଶକ ID ସଫଳତାର ସହିତ ସୃଷ୍ଟି ହେଲା |",
     ),
     "shareSong": MessageLookupByLibrary.simpleMessage("ଏହି ଗୀତକୁ ସହଭାଗ କରନ୍ତୁ"),
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
@@ -474,7 +530,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "ମ୍ୟୁଜିକ୍ ପ୍ଲେବ୍ୟାକ୍ରେ ନୀରବତାକୁ ଏଡ଼ାଇ ଦିଆଯିବ",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("ଶୟନ ସମୟ-ନିୟାମକ"),
-    "slide_indicator": m0,
+    "slide_indicator": m1,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "ଗୀତକୁ ପ୍ଲେଲିଷ୍ଟରେ ଯୋଡାଗଲା!",
     ),

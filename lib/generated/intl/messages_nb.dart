@@ -20,7 +20,9 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'nb';
 
-  static String m0(current) => "Trinn ${current} av 3";
+  static String m0(error) => "Det oppstod en feil under regenerering: ${error}";
+
+  static String m1(current) => "Trinn ${current} av 3";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -205,13 +207,43 @@ class MessageLookup extends MessageLookupByLibrary {
       "Søk i biblioteket",
     ),
     "search_recent_title": MessageLookupByLibrary.simpleMessage("Nylige søk"),
+    "settings_about_desc": MessageLookupByLibrary.simpleMessage(
+      "Om Estrella Music",
+    ),
+    "settings_about_sub": MessageLookupByLibrary.simpleMessage(
+      "Versjon, åpen kildekode-prosjekt og GitHub.",
+    ),
+    "settings_account_desc": MessageLookupByLibrary.simpleMessage(
+      "Konto og synkronisering",
+    ),
+    "settings_account_sub": MessageLookupByLibrary.simpleMessage(
+      "Skymodus, sikkerhetskopier, venneliste og migreringer.",
+    ),
+    "settings_appearance_desc": MessageLookupByLibrary.simpleMessage(
+      "Tema-, språk- og grensesnittanimasjoner.",
+    ),
     "settings_cloud_backup": MessageLookupByLibrary.simpleMessage(
       "Cloud backup",
     ),
     "settings_cloud_backup_desc": MessageLookupByLibrary.simpleMessage(
       "Last opp, gjenopprett og administrer...",
     ),
+    "settings_content_desc": MessageLookupByLibrary.simpleMessage(
+      "Oppdag filtre, integrasjon med Piped og cacher.",
+    ),
+    "settings_downloads_desc": MessageLookupByLibrary.simpleMessage(
+      "Nedlastinger og lagring",
+    ),
+    "settings_downloads_sub": MessageLookupByLibrary.simpleMessage(
+      "Lydformater, mapper og automatiske nedlastinger.",
+    ),
     "settings_general_section": MessageLookupByLibrary.simpleMessage("General"),
+    "settings_local_cloud_desc": MessageLookupByLibrary.simpleMessage(
+      "Velg, migrér eller se gjennom synkroniseringsstatusen med Joss Red.",
+    ),
+    "settings_local_cloud_title": MessageLookupByLibrary.simpleMessage(
+      "Lokal modus / EMusic Cloud",
+    ),
     "settings_logout": MessageLookupByLibrary.simpleMessage("Logg ut"),
     "settings_migration_desc": MessageLookupByLibrary.simpleMessage(
       "Importer spillelister, sanger...",
@@ -219,10 +251,34 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_migration_title": MessageLookupByLibrary.simpleMessage(
       "Migrer fra Joss Music Kotlin",
     ),
+    "settings_my_friends": MessageLookupByLibrary.simpleMessage("vennene mine"),
+    "settings_my_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "Administrer Joss Red-vennene dine direkte.",
+    ),
+    "settings_playback_desc": MessageLookupByLibrary.simpleMessage(
+      "Strømmekvalitet, normalisering, stillhet og batteri.",
+    ),
+    "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
+      "Regenerer YouTube Music-ID-en din hvis Discover-innhold ikke lastes inn.",
+    ),
+    "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
+      "Oppdater ID (besøks-ID)",
+    ),
+    "settings_visitor_error": MessageLookupByLibrary.simpleMessage("Feil"),
+    "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
+      "En ny identifikator kunne ikke genereres. Prøv igjen senere.",
+    ),
+    "settings_visitor_exception": m0,
+    "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
+      "Oppdatert identifikator",
+    ),
+    "settings_visitor_updated_desc": MessageLookupByLibrary.simpleMessage(
+      "En ny besøks-ID ble generert.",
+    ),
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
       "Søker i Shazam-databasen etter treff...",
     ),
-    "slide_indicator": m0,
+    "slide_indicator": m1,
     "songFound": MessageLookupByLibrary.simpleMessage("Sangen funnet!"),
     "songPitch": MessageLookupByLibrary.simpleMessage("sang tone"),
     "speedAndPitch": MessageLookupByLibrary.simpleMessage(

@@ -20,7 +20,10 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'el';
 
-  static String m0(current) => "Βήμα ${current} από 3";
+  static String m0(error) =>
+      "Παρουσιάστηκε σφάλμα κατά την αναγέννηση: ${error}";
+
+  static String m1(current) => "Βήμα ${current} από 3";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -211,13 +214,43 @@ class MessageLookup extends MessageLookupByLibrary {
     "search_recent_title": MessageLookupByLibrary.simpleMessage(
       "Πρόσφατες αναζητήσεις",
     ),
+    "settings_about_desc": MessageLookupByLibrary.simpleMessage(
+      "Σχετικά με την Estrella Music",
+    ),
+    "settings_about_sub": MessageLookupByLibrary.simpleMessage(
+      "Έκδοση, έργο ανοιχτού κώδικα και GitHub.",
+    ),
+    "settings_account_desc": MessageLookupByLibrary.simpleMessage(
+      "Λογαριασμός και Συγχρονισμός",
+    ),
+    "settings_account_sub": MessageLookupByLibrary.simpleMessage(
+      "Λειτουργία cloud, αντίγραφα ασφαλείας, λίστα φίλων και μετεγκαταστάσεις.",
+    ),
+    "settings_appearance_desc": MessageLookupByLibrary.simpleMessage(
+      "Θέμα, γλώσσα και κινούμενα σχέδια διεπαφής.",
+    ),
     "settings_cloud_backup": MessageLookupByLibrary.simpleMessage(
       "Δημιουργία αντιγράφων ασφαλείας στο cloud",
     ),
     "settings_cloud_backup_desc": MessageLookupByLibrary.simpleMessage(
       "Μεταφόρτωση, επαναφορά και διαχείριση...",
     ),
+    "settings_content_desc": MessageLookupByLibrary.simpleMessage(
+      "Ανακαλύψτε φίλτρα, ενσωμάτωση με Piped και κρυφές μνήμες.",
+    ),
+    "settings_downloads_desc": MessageLookupByLibrary.simpleMessage(
+      "Λήψεις και αποθήκευση",
+    ),
+    "settings_downloads_sub": MessageLookupByLibrary.simpleMessage(
+      "Μορφές ήχου, φάκελοι και αυτόματες λήψεις.",
+    ),
     "settings_general_section": MessageLookupByLibrary.simpleMessage("Γενικός"),
+    "settings_local_cloud_desc": MessageLookupByLibrary.simpleMessage(
+      "Επιλέξτε, μετεγκαταστήστε ή ελέγξτε την κατάσταση συγχρονισμού με τον Joss Red.",
+    ),
+    "settings_local_cloud_title": MessageLookupByLibrary.simpleMessage(
+      "Τοπική λειτουργία / EMusic Cloud",
+    ),
     "settings_logout": MessageLookupByLibrary.simpleMessage("Αποσυνδεθείτε"),
     "settings_migration_desc": MessageLookupByLibrary.simpleMessage(
       "Εισαγωγή λιστών αναπαραγωγής, τραγουδιών...",
@@ -225,10 +258,34 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_migration_title": MessageLookupByLibrary.simpleMessage(
       "Μετανάστευση από την Joss Music Kotlin",
     ),
+    "settings_my_friends": MessageLookupByLibrary.simpleMessage("φίλοι μου"),
+    "settings_my_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "Διαχειριστείτε απευθείας τους φίλους σας Joss Red.",
+    ),
+    "settings_playback_desc": MessageLookupByLibrary.simpleMessage(
+      "Ποιότητα ροής, κανονικοποίηση, σιωπές και μπαταρία.",
+    ),
+    "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
+      "Ανανεώστε το YouTube Music ID σας εάν δεν φορτωθεί το περιεχόμενο του Discover.",
+    ),
+    "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
+      "Αναγνωριστικό ανανέωσης (αναγνωριστικό επισκέπτη)",
+    ),
+    "settings_visitor_error": MessageLookupByLibrary.simpleMessage("Λάθος"),
+    "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
+      "Δεν ήταν δυνατή η δημιουργία νέου αναγνωριστικού. Δοκιμάστε ξανά αργότερα.",
+    ),
+    "settings_visitor_exception": m0,
+    "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
+      "Ενημερώθηκε το αναγνωριστικό",
+    ),
+    "settings_visitor_updated_desc": MessageLookupByLibrary.simpleMessage(
+      "Ένα νέο αναγνωριστικό επισκέπτη δημιουργήθηκε με επιτυχία.",
+    ),
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
       "Αναζήτηση στη βάση δεδομένων Shazam για αγώνες...",
     ),
-    "slide_indicator": m0,
+    "slide_indicator": m1,
     "songFound": MessageLookupByLibrary.simpleMessage("Το τραγούδι βρέθηκε!"),
     "songPitch": MessageLookupByLibrary.simpleMessage("τόνο τραγουδιού"),
     "speedAndPitch": MessageLookupByLibrary.simpleMessage("Ταχύτητα και Βήμα"),

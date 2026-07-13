@@ -20,7 +20,9 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'fi';
 
-  static String m0(current) => "Vaihe ${current}/3";
+  static String m0(error) => "Uudelleen luomisessa tapahtui virhe: ${error}";
+
+  static String m1(current) => "Vaihe ${current}/3";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -448,14 +450,44 @@ class MessageLookup extends MessageLookupByLibrary {
       "Aseta löytöjen sisältö",
     ),
     "settings": MessageLookupByLibrary.simpleMessage("Asetukset"),
+    "settings_about_desc": MessageLookupByLibrary.simpleMessage(
+      "Tietoja Estrella Musicista",
+    ),
+    "settings_about_sub": MessageLookupByLibrary.simpleMessage(
+      "Versio, avoimen lähdekoodin projekti ja GitHub.",
+    ),
+    "settings_account_desc": MessageLookupByLibrary.simpleMessage(
+      "Tili ja synkronointi",
+    ),
+    "settings_account_sub": MessageLookupByLibrary.simpleMessage(
+      "Pilvitila, varmuuskopiot, ystäväluettelo ja siirrot.",
+    ),
+    "settings_appearance_desc": MessageLookupByLibrary.simpleMessage(
+      "Teema-, kieli- ja käyttöliittymäanimaatiot.",
+    ),
     "settings_cloud_backup": MessageLookupByLibrary.simpleMessage(
       "Pilvivarmuuskopio",
     ),
     "settings_cloud_backup_desc": MessageLookupByLibrary.simpleMessage(
       "Lataa, palauta ja hallinnoi...",
     ),
+    "settings_content_desc": MessageLookupByLibrary.simpleMessage(
+      "Tutustu suodattimiin, integraatioon Pipediin ja välimuistiin.",
+    ),
+    "settings_downloads_desc": MessageLookupByLibrary.simpleMessage(
+      "Lataukset ja tallennus",
+    ),
+    "settings_downloads_sub": MessageLookupByLibrary.simpleMessage(
+      "Ääniformaatit, kansiot ja automaattiset lataukset.",
+    ),
     "settings_general_section": MessageLookupByLibrary.simpleMessage(
       "Kenraali",
+    ),
+    "settings_local_cloud_desc": MessageLookupByLibrary.simpleMessage(
+      "Valitse, siirrä tai tarkista synkronoinnin tila Joss Redin kanssa.",
+    ),
+    "settings_local_cloud_title": MessageLookupByLibrary.simpleMessage(
+      "Paikallinen tila / EMusic Cloud",
     ),
     "settings_logout": MessageLookupByLibrary.simpleMessage("Kirjaudu ulos"),
     "settings_migration_desc": MessageLookupByLibrary.simpleMessage(
@@ -463,6 +495,30 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "settings_migration_title": MessageLookupByLibrary.simpleMessage(
       "Siirrä Joss Music Kotlinista",
+    ),
+    "settings_my_friends": MessageLookupByLibrary.simpleMessage("ystäväni"),
+    "settings_my_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "Hallitse Joss Redin ystäviäsi suoraan.",
+    ),
+    "settings_playback_desc": MessageLookupByLibrary.simpleMessage(
+      "Suoratoiston laatu, normalisointi, hiljaisuudet ja akku.",
+    ),
+    "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
+      "Luo YouTube Music -tunnuksesi uudelleen, jos Discover-sisältö ei lataudu.",
+    ),
+    "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
+      "Päivitä tunnus (vierailijatunnus)",
+    ),
+    "settings_visitor_error": MessageLookupByLibrary.simpleMessage("Virhe"),
+    "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
+      "Uutta tunnistetta ei voitu luoda. Yritä myöhemmin uudelleen.",
+    ),
+    "settings_visitor_exception": m0,
+    "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
+      "Tunniste päivitetty",
+    ),
+    "settings_visitor_updated_desc": MessageLookupByLibrary.simpleMessage(
+      "Uusi vierailijatunnus luotiin onnistuneesti.",
     ),
     "shareSong": MessageLookupByLibrary.simpleMessage("Jaa kappale"),
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
@@ -477,7 +533,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Uniajastin on asetettu",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Uniajastin"),
-    "slide_indicator": m0,
+    "slide_indicator": m1,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "Kappale lisätty soittolistaan!",
     ),

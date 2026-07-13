@@ -209,71 +209,77 @@ class Body extends StatelessWidget {
                               ]
                             : [const HomeShimmer()];
 
-                        return CustomScrollView(
-                          slivers: [
-                            SliverAppBar(
-                              floating: true,
-                              surfaceTintColor:
-                                  Theme.of(context).colorScheme.surface,
-                              backgroundColor:
-                                  Theme.of(context).colorScheme.surface,
-                              title: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    S.current
-                                        .home, // Can use exploreDiscover if available in localized strings
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .headlineMedium
-                                        ?.copyWith(
-                                          fontSize: 34,
-                                          fontWeight: FontWeight.bold,
-                                          color: Theme.of(context)
-                                              .colorScheme
-                                              .onSurface,
-                                        ),
-                                  ),
-                                   const Spacer(),
-                                   if (Hive.box('AppPrefs').get('emusicDataMode', defaultValue: 'local') == 'cloud') ...[
+                        return RefreshIndicator(
+                          onRefresh: () => homeScreenController.loadContent(),
+                          child: CustomScrollView(
+                            physics: const AlwaysScrollableScrollPhysics(
+                              parent: BouncingScrollPhysics(),
+                            ),
+                            slivers: [
+                              SliverAppBar(
+                                floating: true,
+                                surfaceTintColor:
+                                    Theme.of(context).colorScheme.surface,
+                                backgroundColor:
+                                    Theme.of(context).colorScheme.surface,
+                                title: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      S.current
+                                          .home, // Can use exploreDiscover if available in localized strings
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .headlineMedium
+                                          ?.copyWith(
+                                            fontSize: 34,
+                                            fontWeight: FontWeight.bold,
+                                            color: Theme.of(context)
+                                                .colorScheme
+                                                .onSurface,
+                                          ),
+                                    ),
+                                     const Spacer(),
+                                     if (Hive.box('AppPrefs').get('emusicDataMode', defaultValue: 'local') == 'cloud') ...[
+                                       IconButton(
+                                         icon: const Icon(Icons.people_outline_rounded,
+                                             size: 30),
+                                         onPressed: () {
+                                           Get.to(
+                                             () => const FriendsManagementScreen(),
+                                             id: ScreenNavigationSetup.id,
+                                             transition: Transition.rightToLeft,
+                                           );
+                                         },
+                                       ),
+                                     ],
                                      IconButton(
-                                       icon: const Icon(Icons.people_outline_rounded,
+                                       icon: const Icon(Icons.settings_outlined,
                                            size: 30),
                                        onPressed: () {
                                          Get.to(
-                                           () => const FriendsManagementScreen(),
+                                           () => const SettingsScreen(isBottomNavActive: false),
                                            id: ScreenNavigationSetup.id,
                                            transition: Transition.rightToLeft,
                                          );
                                        },
                                      ),
-                                   ],
-                                   IconButton(
-                                     icon: const Icon(Icons.settings_outlined,
-                                         size: 30),
-                                     onPressed: () {
-                                       Get.to(
-                                         () => const SettingsScreen(isBottomNavActive: false),
-                                         id: ScreenNavigationSetup.id,
-                                         transition: Transition.rightToLeft,
-                                       );
-                                     },
-                                   ),
-                                ],
-                              ),
-                            ),
-                            SliverPadding(
-                              padding:
-                                  const EdgeInsets.only(bottom: 200, top: 15),
-                              sliver: SliverList(
-                                delegate: SliverChildBuilderDelegate(
-                                  (_, i) => items[i],
-                                  childCount: items.length,
+                                  ],
                                 ),
                               ),
-                            ),
-                          ],
+                              SliverPadding(
+                                padding:
+                                    const EdgeInsets.only(bottom: 200, top: 15),
+                                sliver: SliverList(
+                                  delegate: SliverChildBuilderDelegate(
+                                    (_, i) => items[i],
+                                    childCount: items.length,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
                         );
                       }),
               ),

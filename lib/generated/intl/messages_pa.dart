@@ -20,7 +20,9 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'pa';
 
-  static String m0(current) => "3 ਵਿੱਚੋਂ ${current} ਕਦਮ";
+  static String m0(error) => "ਰੀਜਨਰੇਟ ਕਰਦੇ ਸਮੇਂ ਇੱਕ ਤਰੁੱਟੀ ਉਤਪੰਨ ਹੋਈ: ${error}";
+
+  static String m1(current) => "3 ਵਿੱਚੋਂ ${current} ਕਦਮ";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -605,19 +607,73 @@ class MessageLookup extends MessageLookupByLibrary {
       "ਖੋਜ ਸਮੱਗਰੀ ਸੈੱਟ ਕਰੋ",
     ),
     "settings": MessageLookupByLibrary.simpleMessage("ਸੈਟਿੰਗਾਂ"),
+    "settings_about_desc": MessageLookupByLibrary.simpleMessage(
+      "Estrella ਸੰਗੀਤ ਬਾਰੇ",
+    ),
+    "settings_about_sub": MessageLookupByLibrary.simpleMessage(
+      "ਸੰਸਕਰਣ, ਓਪਨ ਸੋਰਸ ਪ੍ਰੋਜੈਕਟ ਅਤੇ GitHub।",
+    ),
+    "settings_account_desc": MessageLookupByLibrary.simpleMessage(
+      "ਖਾਤਾ ਅਤੇ ਸਿੰਕ",
+    ),
+    "settings_account_sub": MessageLookupByLibrary.simpleMessage(
+      "ਕਲਾਊਡ ਮੋਡ, ਬੈਕਅੱਪ, ਦੋਸਤਾਂ ਦੀ ਸੂਚੀ ਅਤੇ ਮਾਈਗ੍ਰੇਸ਼ਨ।",
+    ),
+    "settings_appearance_desc": MessageLookupByLibrary.simpleMessage(
+      "ਥੀਮ, ਭਾਸ਼ਾ ਅਤੇ ਇੰਟਰਫੇਸ ਐਨੀਮੇਸ਼ਨ।",
+    ),
     "settings_cloud_backup": MessageLookupByLibrary.simpleMessage(
       "ਕਲਾਊਡ ਬੈਕਅੱਪ",
     ),
     "settings_cloud_backup_desc": MessageLookupByLibrary.simpleMessage(
       "ਅੱਪਲੋਡ ਕਰੋ, ਰੀਸਟੋਰ ਕਰੋ ਅਤੇ ਪ੍ਰਬੰਧਿਤ ਕਰੋ...",
     ),
+    "settings_content_desc": MessageLookupByLibrary.simpleMessage(
+      "ਫਿਲਟਰ ਖੋਜੋ, ਪਾਈਪ ਅਤੇ ਕੈਚ ਨਾਲ ਏਕੀਕਰਣ.",
+    ),
+    "settings_downloads_desc": MessageLookupByLibrary.simpleMessage(
+      "ਡਾਊਨਲੋਡ ਅਤੇ ਸਟੋਰੇਜ",
+    ),
+    "settings_downloads_sub": MessageLookupByLibrary.simpleMessage(
+      "ਆਡੀਓ ਫਾਰਮੈਟ, ਫੋਲਡਰ ਅਤੇ ਆਟੋਮੈਟਿਕ ਡਾਊਨਲੋਡ।",
+    ),
     "settings_general_section": MessageLookupByLibrary.simpleMessage("ਜਨਰਲ"),
+    "settings_local_cloud_desc": MessageLookupByLibrary.simpleMessage(
+      "Joss Red ਨਾਲ ਸਿੰਕ੍ਰੋਨਾਈਜ਼ੇਸ਼ਨ ਸਥਿਤੀ ਨੂੰ ਚੁਣੋ, ਮਾਈਗ੍ਰੇਟ ਕਰੋ ਜਾਂ ਸਮੀਖਿਆ ਕਰੋ।",
+    ),
+    "settings_local_cloud_title": MessageLookupByLibrary.simpleMessage(
+      "ਸਥਾਨਕ ਮੋਡ / EMusic ਕਲਾਉਡ",
+    ),
     "settings_logout": MessageLookupByLibrary.simpleMessage("ਲੌਗ ਆਊਟ ਕਰੋ"),
     "settings_migration_desc": MessageLookupByLibrary.simpleMessage(
       "ਪਲੇਲਿਸਟਸ, ਗੀਤ ਆਯਾਤ ਕਰੋ...",
     ),
     "settings_migration_title": MessageLookupByLibrary.simpleMessage(
       "Joss Music Kotlin ਤੋਂ ਮਾਈਗ੍ਰੇਟ ਕਰੋ",
+    ),
+    "settings_my_friends": MessageLookupByLibrary.simpleMessage("ਮੇਰੇ ਦੋਸਤ"),
+    "settings_my_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "ਆਪਣੇ ਜੌਸ ਰੈੱਡ ਦੋਸਤਾਂ ਨੂੰ ਸਿੱਧਾ ਪ੍ਰਬੰਧਿਤ ਕਰੋ।",
+    ),
+    "settings_playback_desc": MessageLookupByLibrary.simpleMessage(
+      "ਸਟ੍ਰੀਮਿੰਗ ਗੁਣਵੱਤਾ, ਸਧਾਰਣਕਰਨ, ਚੁੱਪ ਅਤੇ ਬੈਟਰੀ।",
+    ),
+    "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
+      "ਜੇਕਰ ਡਿਸਕਵਰ ਸਮੱਗਰੀ ਲੋਡ ਨਹੀਂ ਹੁੰਦੀ ਹੈ ਤਾਂ ਆਪਣੀ YouTube ਸੰਗੀਤ ਆਈ.ਡੀ. ਨੂੰ ਦੁਬਾਰਾ ਬਣਾਓ।",
+    ),
+    "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
+      "ਆਈਡੀ ਨੂੰ ਤਾਜ਼ਾ ਕਰੋ (ਵਿਜ਼ਿਟਰ ਆਈਡੀ)",
+    ),
+    "settings_visitor_error": MessageLookupByLibrary.simpleMessage("ਗਲਤੀ"),
+    "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
+      "ਇੱਕ ਨਵਾਂ ਪਛਾਣਕਰਤਾ ਤਿਆਰ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਬਾਅਦ ਵਿੱਚ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+    ),
+    "settings_visitor_exception": m0,
+    "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
+      "ਅੱਪਡੇਟ ਕੀਤਾ ਪਛਾਣਕਰਤਾ",
+    ),
+    "settings_visitor_updated_desc": MessageLookupByLibrary.simpleMessage(
+      "ਇੱਕ ਨਵੀਂ ਵਿਜ਼ਿਟਰ ਆਈਡੀ ਸਫਲਤਾਪੂਰਵਕ ਤਿਆਰ ਕੀਤੀ ਗਈ ਸੀ।",
     ),
     "shareSong": MessageLookupByLibrary.simpleMessage("ਇਸ ਗੀਤ ਨੂੰ ਸ਼ੇਅਰ ਕਰੋ"),
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
@@ -633,7 +689,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "ਤੁਹਾਡਾ ਸਲੀਪ ਟਾਈਮਰ ਸੈੱਟ ਕੀਤਾ ਗਿਆ ਹੈ",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("ਸਲੀਪ ਟਾਈਮਰ"),
-    "slide_indicator": m0,
+    "slide_indicator": m1,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "ਗੀਤ ਪਲੇਲਿਸਟ ਵਿੱਚ ਜੋੜਿਆ ਗਿਆ!",
     ),

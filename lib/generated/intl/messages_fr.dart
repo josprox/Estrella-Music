@@ -20,7 +20,10 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'fr';
 
-  static String m0(current) => "Étape ${current} sur 3";
+  static String m0(error) =>
+      "Une erreur s\'est produite lors de la régénération : ${error}";
+
+  static String m1(current) => "Étape ${current} sur 3";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -763,19 +766,73 @@ class MessageLookup extends MessageLookupByLibrary {
       "Définir le contenu",
     ),
     "settings": MessageLookupByLibrary.simpleMessage("Paramètres"),
+    "settings_about_desc": MessageLookupByLibrary.simpleMessage(
+      "À propos de Estrella Music",
+    ),
+    "settings_about_sub": MessageLookupByLibrary.simpleMessage(
+      "Version, projet open source et GitHub.",
+    ),
+    "settings_account_desc": MessageLookupByLibrary.simpleMessage(
+      "Compte et synchronisation",
+    ),
+    "settings_account_sub": MessageLookupByLibrary.simpleMessage(
+      "Mode cloud, sauvegardes, liste d\'amis et migrations.",
+    ),
+    "settings_appearance_desc": MessageLookupByLibrary.simpleMessage(
+      "Animations de thème, de langage et d\'interface.",
+    ),
     "settings_cloud_backup": MessageLookupByLibrary.simpleMessage(
       "Sauvegarde dans le cloud",
     ),
     "settings_cloud_backup_desc": MessageLookupByLibrary.simpleMessage(
       "Téléchargez, restaurez et gérez...",
     ),
+    "settings_content_desc": MessageLookupByLibrary.simpleMessage(
+      "Découvrez les filtres, l\'intégration avec Piped et les caches.",
+    ),
+    "settings_downloads_desc": MessageLookupByLibrary.simpleMessage(
+      "Téléchargements et stockage",
+    ),
+    "settings_downloads_sub": MessageLookupByLibrary.simpleMessage(
+      "Formats audio, dossiers et téléchargements automatiques.",
+    ),
     "settings_general_section": MessageLookupByLibrary.simpleMessage("Général"),
+    "settings_local_cloud_desc": MessageLookupByLibrary.simpleMessage(
+      "Choisissez, migrez ou révisez l\'état de synchronisation avec Joss Red.",
+    ),
+    "settings_local_cloud_title": MessageLookupByLibrary.simpleMessage(
+      "Mode Local / EMusic Cloud",
+    ),
     "settings_logout": MessageLookupByLibrary.simpleMessage("Se déconnecter"),
     "settings_migration_desc": MessageLookupByLibrary.simpleMessage(
       "Importez des playlists, des chansons...",
     ),
     "settings_migration_title": MessageLookupByLibrary.simpleMessage(
       "Migrer depuis Joss Music Kotlin",
+    ),
+    "settings_my_friends": MessageLookupByLibrary.simpleMessage("mes amis"),
+    "settings_my_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "Gérez directement vos amis Joss Red.",
+    ),
+    "settings_playback_desc": MessageLookupByLibrary.simpleMessage(
+      "Qualité du streaming, normalisation, silences et batterie.",
+    ),
+    "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
+      "Régénérez votre identifiant YouTube Music si le contenu Discover ne se charge pas.",
+    ),
+    "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
+      "Actualiser l\'ID (ID visiteur)",
+    ),
+    "settings_visitor_error": MessageLookupByLibrary.simpleMessage("Erreur"),
+    "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
+      "Un nouvel identifiant n\'a pas pu être généré. Veuillez réessayer plus tard.",
+    ),
+    "settings_visitor_exception": m0,
+    "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
+      "Identifiant mis à jour",
+    ),
+    "settings_visitor_updated_desc": MessageLookupByLibrary.simpleMessage(
+      "Un nouvel ID visiteur a été généré avec succès.",
     ),
     "shareSong": MessageLookupByLibrary.simpleMessage("Partager ce titre"),
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
@@ -793,7 +850,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Minuteur de veille activé",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Minuterie de veille"),
-    "slide_indicator": m0,
+    "slide_indicator": m1,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "Titre ajouté à la playlist !",
     ),

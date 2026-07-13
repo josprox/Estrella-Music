@@ -20,7 +20,9 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'fa';
 
-  static String m0(current) => "مرحله ${current} از 3";
+  static String m0(error) => "هنگام ایجاد مجدد خطایی روی داد: ${error}";
+
+  static String m1(current) => "مرحله ${current} از 3";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -416,13 +418,43 @@ class MessageLookup extends MessageLookupByLibrary {
       "تنظیم محتوای کشف",
     ),
     "settings": MessageLookupByLibrary.simpleMessage("تنظیمات"),
+    "settings_about_desc": MessageLookupByLibrary.simpleMessage(
+      "درباره موسیقی استرلا",
+    ),
+    "settings_about_sub": MessageLookupByLibrary.simpleMessage(
+      "نسخه، پروژه منبع باز و GitHub.",
+    ),
+    "settings_account_desc": MessageLookupByLibrary.simpleMessage(
+      "حساب و همگام سازی",
+    ),
+    "settings_account_sub": MessageLookupByLibrary.simpleMessage(
+      "حالت ابری، پشتیبان گیری، لیست دوستان و مهاجرت.",
+    ),
+    "settings_appearance_desc": MessageLookupByLibrary.simpleMessage(
+      "تم، زبان و انیمیشن های رابط.",
+    ),
     "settings_cloud_backup": MessageLookupByLibrary.simpleMessage(
       "پشتیبان گیری ابری",
     ),
     "settings_cloud_backup_desc": MessageLookupByLibrary.simpleMessage(
       "آپلود، بازیابی و مدیریت...",
     ),
+    "settings_content_desc": MessageLookupByLibrary.simpleMessage(
+      "کشف فیلترها، ادغام با Piped و حافظه پنهان.",
+    ),
+    "settings_downloads_desc": MessageLookupByLibrary.simpleMessage(
+      "دانلودها و ذخیره سازی",
+    ),
+    "settings_downloads_sub": MessageLookupByLibrary.simpleMessage(
+      "فرمت های صوتی، پوشه ها و دانلود خودکار.",
+    ),
     "settings_general_section": MessageLookupByLibrary.simpleMessage("ژنرال"),
+    "settings_local_cloud_desc": MessageLookupByLibrary.simpleMessage(
+      "وضعیت همگام سازی را با Joss Red انتخاب کنید، انتقال دهید یا مرور کنید.",
+    ),
+    "settings_local_cloud_title": MessageLookupByLibrary.simpleMessage(
+      "حالت محلی / EMusic Cloud",
+    ),
     "settings_logout": MessageLookupByLibrary.simpleMessage(
       "از سیستم خارج شوید",
     ),
@@ -431,6 +463,30 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "settings_migration_title": MessageLookupByLibrary.simpleMessage(
       "مهاجرت از Joss Music Kotlin",
+    ),
+    "settings_my_friends": MessageLookupByLibrary.simpleMessage("دوستان من"),
+    "settings_my_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "دوستان Joss Red خود را مستقیماً مدیریت کنید.",
+    ),
+    "settings_playback_desc": MessageLookupByLibrary.simpleMessage(
+      "کیفیت پخش، عادی سازی، سکوت و باتری.",
+    ),
+    "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
+      "اگر محتوای Discover بارگیری نشد، شناسه موسیقی YouTube خود را دوباره ایجاد کنید.",
+    ),
+    "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
+      "شناسه بازخوانی (شناسه بازدیدکننده)",
+    ),
+    "settings_visitor_error": MessageLookupByLibrary.simpleMessage("اشتباه"),
+    "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
+      "یک شناسه جدید ایجاد نشد. لطفاً بعداً دوباره امتحان کنید.",
+    ),
+    "settings_visitor_exception": m0,
+    "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
+      "شناسه به روز شد",
+    ),
+    "settings_visitor_updated_desc": MessageLookupByLibrary.simpleMessage(
+      "شناسه بازدیدکننده جدید با موفقیت ایجاد شد.",
     ),
     "shareSong": MessageLookupByLibrary.simpleMessage(
       "به اشتراک گذاری این موسیقی",
@@ -445,7 +501,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "سکوت در زمان پخش موسیقی رد خواهد شد",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("زمان‌سنج خواب"),
-    "slide_indicator": m0,
+    "slide_indicator": m1,
     "songFound": MessageLookupByLibrary.simpleMessage("آهنگ پیدا شد"),
     "songNotPlayable": MessageLookupByLibrary.simpleMessage(
       "موسیقی به علت محدودیت سرور، قابل پخش نیست!",

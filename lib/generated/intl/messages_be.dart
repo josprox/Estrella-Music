@@ -20,7 +20,9 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'be';
 
-  static String m0(current) => "Крок ${current} з 3";
+  static String m0(error) => "Адбылася памылка пры рэгенерацыі: ${error}";
+
+  static String m1(current) => "Крок ${current} з 3";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -211,13 +213,43 @@ class MessageLookup extends MessageLookupByLibrary {
     "search_recent_title": MessageLookupByLibrary.simpleMessage(
       "Апошнія пошукі",
     ),
+    "settings_about_desc": MessageLookupByLibrary.simpleMessage(
+      "Пра Estrella Music",
+    ),
+    "settings_about_sub": MessageLookupByLibrary.simpleMessage(
+      "Версія, праект з адкрытым зыходным кодам і GitHub.",
+    ),
+    "settings_account_desc": MessageLookupByLibrary.simpleMessage(
+      "Уліковы запіс і сінхранізацыя",
+    ),
+    "settings_account_sub": MessageLookupByLibrary.simpleMessage(
+      "Воблачны рэжым, рэзервовыя копіі, спіс сяброў і міграцыі.",
+    ),
+    "settings_appearance_desc": MessageLookupByLibrary.simpleMessage(
+      "Тэма, мова і анімацыя інтэрфейсу.",
+    ),
     "settings_cloud_backup": MessageLookupByLibrary.simpleMessage(
       "Воблачнае рэзервовае капіраванне",
     ),
     "settings_cloud_backup_desc": MessageLookupByLibrary.simpleMessage(
       "Загружаць, аднаўляць і кіраваць...",
     ),
+    "settings_content_desc": MessageLookupByLibrary.simpleMessage(
+      "Адкрыйце для сябе фільтры, інтэграцыю з Piped і кэшы.",
+    ),
+    "settings_downloads_desc": MessageLookupByLibrary.simpleMessage(
+      "Спампоўкі і захоўванне",
+    ),
+    "settings_downloads_sub": MessageLookupByLibrary.simpleMessage(
+      "Аўдыяфарматы, тэчкі і аўтаматычная загрузка.",
+    ),
     "settings_general_section": MessageLookupByLibrary.simpleMessage("Генерал"),
+    "settings_local_cloud_desc": MessageLookupByLibrary.simpleMessage(
+      "Выберыце, перанясіце або праглядзіце стан сінхранізацыі з Joss Red.",
+    ),
+    "settings_local_cloud_title": MessageLookupByLibrary.simpleMessage(
+      "Лакальны рэжым / EMusic Cloud",
+    ),
     "settings_logout": MessageLookupByLibrary.simpleMessage("Выйсці"),
     "settings_migration_desc": MessageLookupByLibrary.simpleMessage(
       "Імпартаваць плэйлісты, песні...",
@@ -225,10 +257,34 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_migration_title": MessageLookupByLibrary.simpleMessage(
       "Пераход з Joss Music Kotlin",
     ),
+    "settings_my_friends": MessageLookupByLibrary.simpleMessage("мае сябры"),
+    "settings_my_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "Кіруйце сваімі сябрамі Joss Red непасрэдна.",
+    ),
+    "settings_playback_desc": MessageLookupByLibrary.simpleMessage(
+      "Якасць трансляцыі, нармалізацыя, цішыня і акумулятар.",
+    ),
+    "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
+      "Аднавіце свой ідэнтыфікатар YouTube Music, калі змесціва Discover не загружаецца.",
+    ),
+    "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
+      "Абнавіць ID (ID наведвальніка)",
+    ),
+    "settings_visitor_error": MessageLookupByLibrary.simpleMessage("Памылка"),
+    "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
+      "Не ўдалося стварыць новы ідэнтыфікатар. Паўтарыце спробу пазней.",
+    ),
+    "settings_visitor_exception": m0,
+    "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
+      "Абноўлены ідэнтыфікатар",
+    ),
+    "settings_visitor_updated_desc": MessageLookupByLibrary.simpleMessage(
+      "Новы ID наведвальніка быў паспяхова створаны.",
+    ),
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
       "Пошук супадзенняў у базе дадзеных Shazam...",
     ),
-    "slide_indicator": m0,
+    "slide_indicator": m1,
     "songFound": MessageLookupByLibrary.simpleMessage("Песня знойдзена!"),
     "songPitch": MessageLookupByLibrary.simpleMessage("тон песні"),
     "speedAndPitch": MessageLookupByLibrary.simpleMessage("Хуткасць і крок"),

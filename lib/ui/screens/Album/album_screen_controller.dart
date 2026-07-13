@@ -1,4 +1,4 @@
-﻿import 'package:audio_service/audio_service.dart' show MediaItem;
+import 'package:audio_service/audio_service.dart' show MediaItem;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/base_class/playlist_album_screen_con_base.dart';
@@ -64,59 +64,38 @@ class AlbumScreenController extends PlaylistAlbumScreenControllerBase
         album.value = album_;
         animationController.forward();
       }
-      if (!wasInLibrary) {
-        final isPodcast =
-            album_?.isPodcast == true || albumId.startsWith('MPSP');
-        final content = isPodcast
-            ? await musicServices.podcast(albumId)
-            : await musicServices.getPlaylistOrAlbumSongs(albumId: albumId);
-        content['browseId'] = albumId;
-        album.value = Album.fromJson(content);
-        animationController.forward();
-        songList.value = List<MediaItem>.from(content['tracks'] ?? []);
-        // Cache the thumbnail URL for offline
-        _cacheAlbumThumbnail(albumId, album.value.thumbnailUrl);
-      } else {
-        // Album details already loaded via checkIfAddedToLibrary
+      if (wasInLibrary) {
+        // Load cached tracks immediately for instant visual load
         final box = await Hive.openBox(sanitizeBoxName(albumId));
-        songList.value = box.values
-            .map<MediaItem?>((item) => MediaItemBuilder.fromJson(item))
+        final sortedKeys = box.keys.toList()..sort((a, b) => int.parse(a.toString()).compareTo(int.parse(b.toString())));
+        songList.value = sortedKeys
+            .map((key) => MediaItemBuilder.fromJson(box.get(key)))
             .whereType<MediaItem>()
             .toList();
         _cacheAlbumThumbnail(albumId, album.value.thumbnailUrl);
       }
+
+      // Fetch the most updated tracklist from the network
+      final isPodcast =
+          album_?.isPodcast == true || albumId.startsWith('MPSP');
+      final content = isPodcast
+          ? await musicServices.podcast(albumId)
+          : await musicServices.getPlaylistOrAlbumSongs(albumId: albumId);
+      content['browseId'] = albumId;
+      album.value = Album.fromJson(content);
+      animationController.forward();
+      
+      // Update with the latest network songs
+      songList.value = List<MediaItem>.from(content['tracks'] ?? []);
+      _cacheAlbumThumbnail(albumId, album.value.thumbnailUrl);
+
+      if (wasInLibrary) {
+        updateSongsIntoDb();
+      }
       checkDownloadStatus();
     } on NetworkError catch (error) {
-      printERROR("Error fetching album details: $error");
-      if (wasInLibrary) {
-        // Library songs loaded — try catalog recovery
-        final recoveredAlbum = await catalogRecoveryService.findSimilarAlbum(
-          title: _albumTitleHint(),
-          artistName: _albumArtistHint(),
-        );
-        if (recoveredAlbum != null && recoveredAlbum.browseId != albumId) {
-          try {
-            final content = await musicServices.getPlaylistOrAlbumSongs(
-              albumId: recoveredAlbum.browseId,
-            );
-            content['browseId'] = recoveredAlbum.browseId;
-            album.value = Album.fromJson(content);
-            animationController.forward();
-            songList.value = List<MediaItem>.from(content['tracks']);
-            await catalogRecoveryService.persistRecoveredAlbum(
-              oldBrowseId: albumId,
-              album: album.value,
-              tracks: songList.toList(),
-            );
-            checkDownloadStatus();
-            return;
-          } catch (_) {}
-        }
-        // Fall through to offline mode using library songs
-        await _loadOfflineMode(albumId);
-      } else {
-        await _loadOfflineMode(albumId);
-      }
+      printERROR("Error fetching album details (offline): $error");
+      await _loadOfflineMode(albumId);
     } catch (e) {
       printERROR("Error fetching album details: $e");
     } finally {
@@ -128,10 +107,6 @@ class AlbumScreenController extends PlaylistAlbumScreenControllerBase
     return album.value.title.trim();
   }
 
-  String _albumArtistHint() {
-    final artistName = album.value.artists?.firstOrNull?['name']?.toString();
-    return artistName?.trim() ?? '';
-  }
 
   /// Saves album thumbnail URL to Hive for offline access
   Future<void> _cacheAlbumThumbnail(String albumId, String url) async {
@@ -142,7 +117,7 @@ class AlbumScreenController extends PlaylistAlbumScreenControllerBase
     } catch (_) {}
   }
 
-  /// Loads offline mode: fills songList from SongDownloads filtered by album
+  /// Loads offline mode: fills songList from cached library box or downloaded files
   Future<void> _loadOfflineMode(String albumId) async {
     isOffline.value = true;
 
@@ -160,7 +135,21 @@ class AlbumScreenController extends PlaylistAlbumScreenControllerBase
       }
     } catch (_) {}
 
-    // Load downloaded songs matching this album
+    // 1. Load from library cached songs box if available
+    try {
+      final box = await Hive.openBox(sanitizeBoxName(albumId));
+      if (box.isNotEmpty) {
+        final sortedKeys = box.keys.toList()..sort((a, b) => int.parse(a.toString()).compareTo(int.parse(b.toString())));
+        songList.value = sortedKeys
+            .map((key) => MediaItemBuilder.fromJson(box.get(key)))
+            .whereType<MediaItem>()
+            .toList();
+        checkDownloadStatus();
+        return;
+      }
+    } catch (_) {}
+
+    // 2. Fallback: Load downloaded songs matching this album title
     try {
       final dlBox = Hive.box('SongDownloads');
       final albumTitle = _albumTitleHint().toLowerCase();

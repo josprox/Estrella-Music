@@ -20,7 +20,10 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ml';
 
-  static String m0(current) => "ഘട്ടം ${current} / 3";
+  static String m0(error) =>
+      "പുനഃസൃഷ്ടിക്കുമ്പോൾ ഒരു പിശക് സംഭവിച്ചു: ${error}";
+
+  static String m1(current) => "ഘട്ടം ${current} / 3";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -337,13 +340,43 @@ class MessageLookup extends MessageLookupByLibrary {
       "പാട്ടുകൾ തിരഞ്ഞെടുക്കുക",
     ),
     "settings": MessageLookupByLibrary.simpleMessage("ക്രമീകരണങ്ങൾ"),
+    "settings_about_desc": MessageLookupByLibrary.simpleMessage(
+      "എസ്ട്രെല്ല സംഗീതത്തെക്കുറിച്ച്",
+    ),
+    "settings_about_sub": MessageLookupByLibrary.simpleMessage(
+      "പതിപ്പ്, ഓപ്പൺ സോഴ്സ് പ്രോജക്റ്റ്, GitHub.",
+    ),
+    "settings_account_desc": MessageLookupByLibrary.simpleMessage(
+      "അക്കൗണ്ടും സമന്വയവും",
+    ),
+    "settings_account_sub": MessageLookupByLibrary.simpleMessage(
+      "ക്ലൗഡ് മോഡ്, ബാക്കപ്പുകൾ, സുഹൃത്തുക്കളുടെ പട്ടിക, മൈഗ്രേഷനുകൾ.",
+    ),
+    "settings_appearance_desc": MessageLookupByLibrary.simpleMessage(
+      "തീം, ഭാഷ, ഇൻ്റർഫേസ് ആനിമേഷനുകൾ.",
+    ),
     "settings_cloud_backup": MessageLookupByLibrary.simpleMessage(
       "ക്ലൗഡ് ബാക്കപ്പ്",
     ),
     "settings_cloud_backup_desc": MessageLookupByLibrary.simpleMessage(
       "അപ്‌ലോഡ് ചെയ്യുക, പുനഃസ്ഥാപിക്കുക, നിയന്ത്രിക്കുക...",
     ),
+    "settings_content_desc": MessageLookupByLibrary.simpleMessage(
+      "ഫിൽട്ടറുകൾ കണ്ടെത്തുക, പൈപ്പ്, കാഷെകൾ എന്നിവയുമായുള്ള സംയോജനം.",
+    ),
+    "settings_downloads_desc": MessageLookupByLibrary.simpleMessage(
+      "ഡൗൺലോഡുകളും സംഭരണവും",
+    ),
+    "settings_downloads_sub": MessageLookupByLibrary.simpleMessage(
+      "ഓഡിയോ ഫോർമാറ്റുകൾ, ഫോൾഡറുകൾ, ഓട്ടോമാറ്റിക് ഡൗൺലോഡുകൾ.",
+    ),
     "settings_general_section": MessageLookupByLibrary.simpleMessage("ജനറൽ"),
+    "settings_local_cloud_desc": MessageLookupByLibrary.simpleMessage(
+      "ജോസ് റെഡ് ഉപയോഗിച്ച് സിൻക്രൊണൈസേഷൻ സ്റ്റാറ്റസ് തിരഞ്ഞെടുക്കുക, മൈഗ്രേറ്റ് ചെയ്യുക അല്ലെങ്കിൽ അവലോകനം ചെയ്യുക.",
+    ),
+    "settings_local_cloud_title": MessageLookupByLibrary.simpleMessage(
+      "ലോക്കൽ മോഡ് / ഇമ്യൂസിക് ക്ലൗഡ്",
+    ),
     "settings_logout": MessageLookupByLibrary.simpleMessage("പുറത്തുകടക്കുക"),
     "settings_migration_desc": MessageLookupByLibrary.simpleMessage(
       "പ്ലേലിസ്റ്റുകളും പാട്ടുകളും ഇറക്കുമതി ചെയ്യുക...",
@@ -351,12 +384,38 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_migration_title": MessageLookupByLibrary.simpleMessage(
       "ജോസ് മ്യൂസിക് കോട്ലിനിൽ നിന്ന് മൈഗ്രേറ്റ് ചെയ്യുക",
     ),
+    "settings_my_friends": MessageLookupByLibrary.simpleMessage(
+      "എന്റെ സുഹൃത്തുക്കൾ",
+    ),
+    "settings_my_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "നിങ്ങളുടെ ജോസ് റെഡ് സുഹൃത്തുക്കളെ നേരിട്ട് നിയന്ത്രിക്കുക.",
+    ),
+    "settings_playback_desc": MessageLookupByLibrary.simpleMessage(
+      "സ്ട്രീമിംഗ് നിലവാരം, നോർമലൈസേഷൻ, നിശബ്ദത, ബാറ്ററി.",
+    ),
+    "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
+      "Discover ഉള്ളടക്കം ലോഡ് ചെയ്യുന്നില്ലെങ്കിൽ നിങ്ങളുടെ YouTube Music ID പുനഃസൃഷ്ടിക്കുക.",
+    ),
+    "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
+      "ഐഡി പുതുക്കുക (സന്ദർശക ഐഡി)",
+    ),
+    "settings_visitor_error": MessageLookupByLibrary.simpleMessage("തെറ്റ്"),
+    "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
+      "ഒരു പുതിയ ഐഡൻ്റിഫയർ സൃഷ്ടിക്കാൻ കഴിഞ്ഞില്ല. ദയവായി പിന്നീട് വീണ്ടും ശ്രമിക്കുക.",
+    ),
+    "settings_visitor_exception": m0,
+    "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
+      "പുതുക്കിയ ഐഡൻ്റിഫയർ",
+    ),
+    "settings_visitor_updated_desc": MessageLookupByLibrary.simpleMessage(
+      "ഒരു പുതിയ സന്ദർശക ഐഡി വിജയകരമായി സൃഷ്ടിച്ചു.",
+    ),
     "shareSong": MessageLookupByLibrary.simpleMessage("ഈ ഗാനം ഷെയർ ചെയ്യുക"),
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
       "പൊരുത്തങ്ങൾക്കായി Shazam ഡാറ്റാബേസിൽ തിരയുന്നു...",
     ),
     "singles": MessageLookupByLibrary.simpleMessage("സിംഗിൾസ്"),
-    "slide_indicator": m0,
+    "slide_indicator": m1,
     "songFound": MessageLookupByLibrary.simpleMessage("ഗാനം കണ്ടെത്തി!"),
     "songNotPlayable": MessageLookupByLibrary.simpleMessage(
       "സെർവർ നിയന്ത്രണം കാരണം ഗാനം പ്ലേ ചെയ്യാൻ കഴിയില്ല",

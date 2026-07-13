@@ -10,6 +10,7 @@ class SyncWebSocketClient {
   StreamSubscription? _subscription;
   bool _isSocketAuthenticated = false;
   Timer? _reconnectTimer;
+  int _reconnectDelaySeconds = 5;
   final String deviceId;
 
   final _onSyncUpdateController = StreamController<void>.broadcast();
@@ -62,9 +63,13 @@ class SyncWebSocketClient {
     _isSocketAuthenticated = false;
 
     _reconnectTimer?.cancel();
-    _reconnectTimer = Timer(const Duration(seconds: 5), () {
+    final delay = _reconnectDelaySeconds;
+    printINFO("SyncWebSocketClient: Scheduling reconnect in $delay seconds...");
+    _reconnectTimer = Timer(Duration(seconds: delay), () {
       connect(wsUrl, token);
     });
+
+    _reconnectDelaySeconds = (_reconnectDelaySeconds * 2).clamp(5, 300);
   }
 
   void disconnect() {
@@ -110,6 +115,7 @@ class SyncWebSocketClient {
           break;
         case 'authenticated':
           _isSocketAuthenticated = true;
+          _reconnectDelaySeconds = 5;
           printINFO("SyncWebSocketClient: WS Authenticated successfully.");
           break;
         case 'auth_failed':

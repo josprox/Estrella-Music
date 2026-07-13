@@ -20,7 +20,9 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'sv';
 
-  static String m0(current) => "Steg ${current} av 3";
+  static String m0(error) => "Ett fel uppstod under återskapandet: ${error}";
+
+  static String m1(current) => "Steg ${current} av 3";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -486,19 +488,73 @@ class MessageLookup extends MessageLookupByLibrary {
       "Innehåll som ska visas på Hem",
     ),
     "settings": MessageLookupByLibrary.simpleMessage("Inställningar"),
+    "settings_about_desc": MessageLookupByLibrary.simpleMessage(
+      "Om Estrella Music",
+    ),
+    "settings_about_sub": MessageLookupByLibrary.simpleMessage(
+      "Version, öppen källkodsprojekt och GitHub.",
+    ),
+    "settings_account_desc": MessageLookupByLibrary.simpleMessage(
+      "Konto och synkronisering",
+    ),
+    "settings_account_sub": MessageLookupByLibrary.simpleMessage(
+      "Molnläge, säkerhetskopior, vänlista och migrering.",
+    ),
+    "settings_appearance_desc": MessageLookupByLibrary.simpleMessage(
+      "Tema-, språk- och gränssnittsanimationer.",
+    ),
     "settings_cloud_backup": MessageLookupByLibrary.simpleMessage(
       "Cloud backup",
     ),
     "settings_cloud_backup_desc": MessageLookupByLibrary.simpleMessage(
       "Ladda upp, återställ och hantera...",
     ),
+    "settings_content_desc": MessageLookupByLibrary.simpleMessage(
+      "Upptäck filter, integration med Piped och cacher.",
+    ),
+    "settings_downloads_desc": MessageLookupByLibrary.simpleMessage(
+      "Nedladdningar och lagring",
+    ),
+    "settings_downloads_sub": MessageLookupByLibrary.simpleMessage(
+      "Ljudformat, mappar och automatiska nedladdningar.",
+    ),
     "settings_general_section": MessageLookupByLibrary.simpleMessage("Allmän"),
+    "settings_local_cloud_desc": MessageLookupByLibrary.simpleMessage(
+      "Välj, migrera eller granska synkroniseringsstatusen med Joss Red.",
+    ),
+    "settings_local_cloud_title": MessageLookupByLibrary.simpleMessage(
+      "Lokalt läge / EMusic Cloud",
+    ),
     "settings_logout": MessageLookupByLibrary.simpleMessage("Logga ut"),
     "settings_migration_desc": MessageLookupByLibrary.simpleMessage(
       "Importera spellistor, låtar...",
     ),
     "settings_migration_title": MessageLookupByLibrary.simpleMessage(
       "Migrera från Joss Music Kotlin",
+    ),
+    "settings_my_friends": MessageLookupByLibrary.simpleMessage("mina vänner"),
+    "settings_my_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "Hantera dina Joss Red-vänner direkt.",
+    ),
+    "settings_playback_desc": MessageLookupByLibrary.simpleMessage(
+      "Streamingkvalitet, normalisering, tystnad och batteri.",
+    ),
+    "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
+      "Återskapa ditt YouTube Music-ID om Discover-innehåll inte läses in.",
+    ),
+    "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
+      "Uppdatera ID (besökar-ID)",
+    ),
+    "settings_visitor_error": MessageLookupByLibrary.simpleMessage("Misstag"),
+    "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
+      "En ny identifierare kunde inte genereras. Försök igen senare.",
+    ),
+    "settings_visitor_exception": m0,
+    "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
+      "Uppdaterad identifierare",
+    ),
+    "settings_visitor_updated_desc": MessageLookupByLibrary.simpleMessage(
+      "Ett nytt besöks-ID har genererats.",
     ),
     "shareSong": MessageLookupByLibrary.simpleMessage("Dela låt"),
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
@@ -513,7 +569,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Sovtimer inställd",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Sovtimer"),
-    "slide_indicator": m0,
+    "slide_indicator": m1,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "Låten har lagts till i spellistan!",
     ),

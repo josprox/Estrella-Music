@@ -20,7 +20,9 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'vi';
 
-  static String m0(current) => "Bước ${current} trên 3";
+  static String m0(error) => "Đã xảy ra lỗi khi tạo lại: ${error}";
+
+  static String m1(current) => "Bước ${current} trên 3";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -735,14 +737,44 @@ class MessageLookup extends MessageLookupByLibrary {
       "Cài đặt nội dung khám phá",
     ),
     "settings": MessageLookupByLibrary.simpleMessage("Cài đặt"),
+    "settings_about_desc": MessageLookupByLibrary.simpleMessage(
+      "Giới thiệu về Estrella Music",
+    ),
+    "settings_about_sub": MessageLookupByLibrary.simpleMessage(
+      "Phiên bản, dự án nguồn mở và GitHub.",
+    ),
+    "settings_account_desc": MessageLookupByLibrary.simpleMessage(
+      "Tài khoản và đồng bộ hóa",
+    ),
+    "settings_account_sub": MessageLookupByLibrary.simpleMessage(
+      "Chế độ đám mây, sao lưu, danh sách bạn bè và di chuyển.",
+    ),
+    "settings_appearance_desc": MessageLookupByLibrary.simpleMessage(
+      "Hình ảnh động chủ đề, ngôn ngữ và giao diện.",
+    ),
     "settings_cloud_backup": MessageLookupByLibrary.simpleMessage(
       "Sao lưu đám mây",
     ),
     "settings_cloud_backup_desc": MessageLookupByLibrary.simpleMessage(
       "Tải lên, khôi phục và quản lý...",
     ),
+    "settings_content_desc": MessageLookupByLibrary.simpleMessage(
+      "Khám phá các bộ lọc, tích hợp với Piped và bộ nhớ đệm.",
+    ),
+    "settings_downloads_desc": MessageLookupByLibrary.simpleMessage(
+      "Tải xuống và lưu trữ",
+    ),
+    "settings_downloads_sub": MessageLookupByLibrary.simpleMessage(
+      "Định dạng âm thanh, thư mục và tải xuống tự động.",
+    ),
     "settings_general_section": MessageLookupByLibrary.simpleMessage(
       "Tổng quan",
+    ),
+    "settings_local_cloud_desc": MessageLookupByLibrary.simpleMessage(
+      "Chọn, di chuyển hoặc xem lại trạng thái đồng bộ hóa với Joss Red.",
+    ),
+    "settings_local_cloud_title": MessageLookupByLibrary.simpleMessage(
+      "Chế độ cục bộ / Đám mây EMusic",
     ),
     "settings_logout": MessageLookupByLibrary.simpleMessage("Đăng xuất"),
     "settings_migration_desc": MessageLookupByLibrary.simpleMessage(
@@ -750,6 +782,32 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "settings_migration_title": MessageLookupByLibrary.simpleMessage(
       "Di chuyển từ Joss Music Kotlin",
+    ),
+    "settings_my_friends": MessageLookupByLibrary.simpleMessage(
+      "bạn bè của tôi",
+    ),
+    "settings_my_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "Quản lý trực tiếp bạn bè Joss Red của bạn.",
+    ),
+    "settings_playback_desc": MessageLookupByLibrary.simpleMessage(
+      "Chất lượng phát trực tuyến, chuẩn hóa, im lặng và pin.",
+    ),
+    "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
+      "Tạo lại ID nhạc YouTube của bạn nếu nội dung Khám phá không tải.",
+    ),
+    "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
+      "Làm mới ID (ID khách truy cập)",
+    ),
+    "settings_visitor_error": MessageLookupByLibrary.simpleMessage("Sai lầm"),
+    "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
+      "Không thể tạo mã định danh mới. Vui lòng thử lại sau.",
+    ),
+    "settings_visitor_exception": m0,
+    "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
+      "Mã định danh đã cập nhật",
+    ),
+    "settings_visitor_updated_desc": MessageLookupByLibrary.simpleMessage(
+      "ID khách truy cập mới đã được tạo thành công.",
     ),
     "shareSong": MessageLookupByLibrary.simpleMessage("Chia sẻ bài hát này"),
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
@@ -765,7 +823,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Bộ hẹn giờ tắt của bạn đã được đặt",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Hẹn giờ tắt"),
-    "slide_indicator": m0,
+    "slide_indicator": m1,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "Bài hát đã được thêm vào danh sách phát!",
     ),

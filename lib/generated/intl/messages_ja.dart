@@ -20,7 +20,9 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ja';
 
-  static String m0(current) => "ステップ ${current}/3";
+  static String m0(error) => "再生成中にエラーが発生しました: ${error}";
+
+  static String m1(current) => "ステップ ${current}/3";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -549,17 +551,69 @@ class MessageLookup extends MessageLookupByLibrary {
     "selectSongs": MessageLookupByLibrary.simpleMessage("曲を選択"),
     "setDiscoverContent": MessageLookupByLibrary.simpleMessage("探索するコンテンツを設定"),
     "settings": MessageLookupByLibrary.simpleMessage("設定"),
+    "settings_about_desc": MessageLookupByLibrary.simpleMessage(
+      "エストレージャミュージックについて",
+    ),
+    "settings_about_sub": MessageLookupByLibrary.simpleMessage(
+      "バージョン、オープンソース プロジェクト、GitHub。",
+    ),
+    "settings_account_desc": MessageLookupByLibrary.simpleMessage("アカウントと同期"),
+    "settings_account_sub": MessageLookupByLibrary.simpleMessage(
+      "クラウド モード、バックアップ、友達リスト、移行。",
+    ),
+    "settings_appearance_desc": MessageLookupByLibrary.simpleMessage(
+      "テーマ、言語、インターフェイスのアニメーション。",
+    ),
     "settings_cloud_backup": MessageLookupByLibrary.simpleMessage("クラウドバックアップ"),
     "settings_cloud_backup_desc": MessageLookupByLibrary.simpleMessage(
       "アップロード、復元、管理...",
     ),
+    "settings_content_desc": MessageLookupByLibrary.simpleMessage(
+      "フィルター、Piped およびキャッシュとの統合を発見します。",
+    ),
+    "settings_downloads_desc": MessageLookupByLibrary.simpleMessage(
+      "ダウンロードとストレージ",
+    ),
+    "settings_downloads_sub": MessageLookupByLibrary.simpleMessage(
+      "オーディオ形式、フォルダー、自動ダウンロード。",
+    ),
     "settings_general_section": MessageLookupByLibrary.simpleMessage("一般的な"),
+    "settings_local_cloud_desc": MessageLookupByLibrary.simpleMessage(
+      "Joss Red との同期ステータスを選択、移行、または確認します。",
+    ),
+    "settings_local_cloud_title": MessageLookupByLibrary.simpleMessage(
+      "ローカルモード / Eミュージッククラウド",
+    ),
     "settings_logout": MessageLookupByLibrary.simpleMessage("ログアウト"),
     "settings_migration_desc": MessageLookupByLibrary.simpleMessage(
       "Importa playlists, canciones...",
     ),
     "settings_migration_title": MessageLookupByLibrary.simpleMessage(
       "Joss Music Kotlin からの移行",
+    ),
+    "settings_my_friends": MessageLookupByLibrary.simpleMessage("私の友人"),
+    "settings_my_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "Joss Red の友達を直接管理します。",
+    ),
+    "settings_playback_desc": MessageLookupByLibrary.simpleMessage(
+      "ストリーミング品質、正規化、無音、バッテリー。",
+    ),
+    "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
+      "Discover コンテンツが読み込まれない場合は、YouTube Music ID を再生成します。",
+    ),
+    "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
+      "リフレッシュID（訪問者ID）",
+    ),
+    "settings_visitor_error": MessageLookupByLibrary.simpleMessage("間違い"),
+    "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
+      "新しい識別子を生成できませんでした。後でもう一度試してください。",
+    ),
+    "settings_visitor_exception": m0,
+    "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
+      "更新された識別子",
+    ),
+    "settings_visitor_updated_desc": MessageLookupByLibrary.simpleMessage(
+      "新しい訪問者 ID が正常に生成されました。",
     ),
     "shareSong": MessageLookupByLibrary.simpleMessage("この曲を共有"),
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
@@ -573,7 +627,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "スリープタイマーをセットしました",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("スリープタイマー"),
-    "slide_indicator": m0,
+    "slide_indicator": m1,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "曲を再生リストに追加しました！",
     ),

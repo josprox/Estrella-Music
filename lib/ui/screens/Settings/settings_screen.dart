@@ -178,7 +178,7 @@ class SettingsScreen extends StatelessWidget {
                     children: [
                       ListTile(
                         title: Text(S.current.personalisation),
-                        subtitle: const Text('Tema, idioma y animaciones de la interfaz.'),
+                        subtitle: Text(S.current.settings_appearance_desc),
                         leading: Icon(Icons.palette_rounded, color: cs.primary),
                         trailing: const Icon(Icons.chevron_right_rounded),
                         onTap: () => Get.to(() => const SettingsAppearanceScreen(), transition: Transition.rightToLeft),
@@ -186,7 +186,7 @@ class SettingsScreen extends StatelessWidget {
                       const Divider(height: 1, indent: 56),
                       ListTile(
                         title: Text(S.current.content),
-                        subtitle: const Text('Filtros de descubrir, integración con Piped y cachés.'),
+                        subtitle: Text(S.current.settings_content_desc),
                         leading: Icon(Icons.music_video_rounded, color: cs.primary),
                         trailing: const Icon(Icons.chevron_right_rounded),
                         onTap: () => Get.to(() => const SettingsContentScreen(), transition: Transition.rightToLeft),
@@ -194,31 +194,31 @@ class SettingsScreen extends StatelessWidget {
                       const Divider(height: 1, indent: 56),
                       ListTile(
                         title: Text(S.current.musicAndPlayback),
-                        subtitle: const Text('Calidad de streaming, normalización, silencios y batería.'),
+                        subtitle: Text(S.current.settings_playback_desc),
                         leading: Icon(Icons.music_note_rounded, color: cs.primary),
                         trailing: const Icon(Icons.chevron_right_rounded),
                         onTap: () => Get.to(() => const SettingsPlaybackScreen(), transition: Transition.rightToLeft),
                       ),
                       const Divider(height: 1, indent: 56),
                       ListTile(
-                        title: const Text('Descargas y Almacenamiento'),
-                        subtitle: const Text('Formatos de audio, carpetas y descargas automáticas.'),
+                        title: Text(S.current.settings_downloads_desc),
+                        subtitle: Text(S.current.settings_downloads_sub),
                         leading: Icon(Icons.download_rounded, color: cs.primary),
                         trailing: const Icon(Icons.chevron_right_rounded),
                         onTap: () => Get.to(() => const SettingsDownloadsScreen(), transition: Transition.rightToLeft),
                       ),
                       const Divider(height: 1, indent: 56),
                       ListTile(
-                        title: const Text('Cuenta y Sincronización'),
-                        subtitle: const Text('Modo cloud, backups, lista de amigos y migraciones.'),
+                        title: Text(S.current.settings_account_desc),
+                        subtitle: Text(S.current.settings_account_sub),
                         leading: Icon(Icons.cloud_sync_rounded, color: cs.primary),
                         trailing: const Icon(Icons.chevron_right_rounded),
                         onTap: () => Get.to(() => const SettingsAccountScreen(), transition: Transition.rightToLeft),
                       ),
                       const Divider(height: 1, indent: 56),
                       ListTile(
-                        title: const Text('Acerca de Estrella Music'),
-                        subtitle: const Text('Versión, proyecto de código abierto y GitHub.'),
+                        title: Text(S.current.settings_about_desc),
+                        subtitle: Text(S.current.settings_about_sub),
                         leading: Icon(Icons.info_rounded, color: cs.primary),
                         trailing: const Icon(Icons.chevron_right_rounded),
                         onTap: () => Get.to(() => const SettingsAboutScreen(), transition: Transition.rightToLeft),
@@ -839,7 +839,7 @@ class SettingsAccountScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: cs.surface,
       appBar: AppBar(
-        title: const Text('Cuenta y Sincronización'),
+        title: Text(S.current.settings_account_desc),
         backgroundColor: cs.surface,
         foregroundColor: cs.onSurface,
         elevation: 0,
@@ -881,9 +881,8 @@ class SettingsAccountScreen extends StatelessWidget {
             trailing: const Icon(Icons.chevron_right_rounded),
           ),
           SettingsTile(
-            title: 'Modo local / EMusic Cloud',
-            subtitle:
-                'Elige, migra o revisa el estado de sincronizacion con Joss Red.',
+            title: S.current.settings_local_cloud_title,
+            subtitle: S.current.settings_local_cloud_desc,
             leadingIcon: Icons.cloud_queue_rounded,
             onTap: () => showDialog(
                 context: context, builder: (_) => const CloudSyncStatusDialog()),
@@ -891,16 +890,15 @@ class SettingsAccountScreen extends StatelessWidget {
           ),
           if (Hive.box('AppPrefs').get('emusicDataMode', defaultValue: 'local') == 'cloud')
             SettingsTile(
-              title: 'Mis amigos',
-              subtitle: 'Gestiona tus amigos de Joss Red directamente.',
+              title: S.current.settings_my_friends,
+              subtitle: S.current.settings_my_friends_desc,
               leadingIcon: Icons.people_outline_rounded,
               onTap: () => Get.to(() => const FriendsManagementScreen()),
               trailing: const Icon(Icons.chevron_right_rounded),
             ),
           SettingsTile(
-            title: 'Refrescar identificador (Visitor ID)',
-            subtitle:
-                'Regenera el identificador de YouTube Music si el contenido de Descubrir no carga.',
+            title: S.current.settings_refresh_visitor_title,
+            subtitle: S.current.settings_refresh_visitor_desc,
             leadingIcon: Icons.refresh_rounded,
             onTap: () async {
               Get.dialog(
@@ -914,8 +912,8 @@ class SettingsAccountScreen extends StatelessWidget {
                 if (newId != null) {
                   musicServices.setVisitorId(newId);
                   Get.snackbar(
-                    'Identificador actualizado',
-                    'Se generó un nuevo Visitor ID con éxito.',
+                    S.current.settings_visitor_updated,
+                    S.current.settings_visitor_updated_desc,
                     snackPosition: SnackPosition.BOTTOM,
                     backgroundColor: Colors.black87,
                     colorText: Colors.white,
@@ -925,8 +923,8 @@ class SettingsAccountScreen extends StatelessWidget {
                   }
                 } else {
                   Get.snackbar(
-                    'Error',
-                    'No se pudo generar un nuevo identificador. Inténtalo más tarde.',
+                    S.current.settings_visitor_error,
+                    S.current.settings_visitor_error_desc,
                     snackPosition: SnackPosition.BOTTOM,
                     backgroundColor: Colors.black87,
                     colorText: Colors.white,
@@ -937,8 +935,8 @@ class SettingsAccountScreen extends StatelessWidget {
                   Get.back();
                 }
                 Get.snackbar(
-                  'Error',
-                  'Ocurrió un error al regenerar: $e',
+                  S.current.settings_visitor_error,
+                  S.current.settings_visitor_exception(e),
                   snackPosition: SnackPosition.BOTTOM,
                   backgroundColor: Colors.black87,
                   colorText: Colors.white,
@@ -1001,9 +999,8 @@ class SettingsAboutScreen extends StatelessWidget {
     final cs = Theme.of(context).colorScheme;
 
     return Scaffold(
-      backgroundColor: cs.surface,
       appBar: AppBar(
-        title: const Text('Acerca de Estrella Music'),
+        title: Text(S.current.settings_about_desc),
         backgroundColor: cs.surface,
         foregroundColor: cs.onSurface,
         elevation: 0,

@@ -20,7 +20,9 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'id';
 
-  static String m0(current) => "Langkah _${current} dari 3";
+  static String m0(error) => "Terjadi kesalahan saat membuat ulang: ${error}";
+
+  static String m1(current) => "Langkah _${current} dari 3";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -710,19 +712,75 @@ class MessageLookup extends MessageLookupByLibrary {
       "Tetapkan konten yang dapat ditemukan",
     ),
     "settings": MessageLookupByLibrary.simpleMessage("Pengaturan"),
+    "settings_about_desc": MessageLookupByLibrary.simpleMessage(
+      "Tentang Musik Estrella",
+    ),
+    "settings_about_sub": MessageLookupByLibrary.simpleMessage(
+      "Versi, proyek sumber terbuka, dan GitHub.",
+    ),
+    "settings_account_desc": MessageLookupByLibrary.simpleMessage(
+      "Akun dan Sinkronisasi",
+    ),
+    "settings_account_sub": MessageLookupByLibrary.simpleMessage(
+      "Mode cloud, pencadangan, daftar teman, dan migrasi.",
+    ),
+    "settings_appearance_desc": MessageLookupByLibrary.simpleMessage(
+      "Animasi tema, bahasa, dan antarmuka.",
+    ),
     "settings_cloud_backup": MessageLookupByLibrary.simpleMessage(
       "Cadangan awan",
     ),
     "settings_cloud_backup_desc": MessageLookupByLibrary.simpleMessage(
       "Unggah, pulihkan, dan kelola...",
     ),
+    "settings_content_desc": MessageLookupByLibrary.simpleMessage(
+      "Temukan filter, integrasi dengan Piped dan cache.",
+    ),
+    "settings_downloads_desc": MessageLookupByLibrary.simpleMessage(
+      "Unduhan dan Penyimpanan",
+    ),
+    "settings_downloads_sub": MessageLookupByLibrary.simpleMessage(
+      "Format audio, folder dan unduhan otomatis.",
+    ),
     "settings_general_section": MessageLookupByLibrary.simpleMessage("Umum"),
+    "settings_local_cloud_desc": MessageLookupByLibrary.simpleMessage(
+      "Pilih, migrasikan, atau tinjau status sinkronisasi dengan Joss Red.",
+    ),
+    "settings_local_cloud_title": MessageLookupByLibrary.simpleMessage(
+      "Mode Lokal / EMusic Cloud",
+    ),
     "settings_logout": MessageLookupByLibrary.simpleMessage("Keluar"),
     "settings_migration_desc": MessageLookupByLibrary.simpleMessage(
       "Impor daftar putar, lagu...",
     ),
     "settings_migration_title": MessageLookupByLibrary.simpleMessage(
       "Bermigrasi dari Joss Music Kotlin",
+    ),
+    "settings_my_friends": MessageLookupByLibrary.simpleMessage(
+      "teman-teman saya",
+    ),
+    "settings_my_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "Kelola teman Joss Red Anda secara langsung.",
+    ),
+    "settings_playback_desc": MessageLookupByLibrary.simpleMessage(
+      "Kualitas streaming, normalisasi, senyap, dan baterai.",
+    ),
+    "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
+      "Buat ulang ID YouTube Music Anda jika konten Discover tidak dapat dimuat.",
+    ),
+    "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
+      "Segarkan ID (ID Pengunjung)",
+    ),
+    "settings_visitor_error": MessageLookupByLibrary.simpleMessage("Kesalahan"),
+    "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
+      "Pengidentifikasi baru tidak dapat dibuat. Silakan coba lagi nanti.",
+    ),
+    "settings_visitor_exception": m0,
+    "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
+      "Pengidentifikasi yang diperbarui",
+    ),
+    "settings_visitor_updated_desc": MessageLookupByLibrary.simpleMessage(
+      "ID Pengunjung baru berhasil dibuat.",
     ),
     "shareSong": MessageLookupByLibrary.simpleMessage("Bagikan lagu ini"),
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
@@ -738,7 +796,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Timer tidur Anda telah diatur",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Pengatur Waktu Tidur"),
-    "slide_indicator": m0,
+    "slide_indicator": m1,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "Lagu ditambahkan ke daftar putar!",
     ),

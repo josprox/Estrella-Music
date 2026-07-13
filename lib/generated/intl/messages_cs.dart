@@ -20,7 +20,9 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'cs';
 
-  static String m0(current) => "Krok ${current} ze 3";
+  static String m0(error) => "Při regeneraci došlo k chybě: ${error}";
+
+  static String m1(current) => "Krok ${current} ze 3";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -727,19 +729,73 @@ class MessageLookup extends MessageLookupByLibrary {
       "Nastav si domovskou stránku",
     ),
     "settings": MessageLookupByLibrary.simpleMessage("Nastavení"),
+    "settings_about_desc": MessageLookupByLibrary.simpleMessage(
+      "O Estrella Music",
+    ),
+    "settings_about_sub": MessageLookupByLibrary.simpleMessage(
+      "Verze, open source projekt a GitHub.",
+    ),
+    "settings_account_desc": MessageLookupByLibrary.simpleMessage(
+      "Účet a synchronizace",
+    ),
+    "settings_account_sub": MessageLookupByLibrary.simpleMessage(
+      "Cloudový režim, zálohy, seznam přátel a migrace.",
+    ),
+    "settings_appearance_desc": MessageLookupByLibrary.simpleMessage(
+      "Téma, jazyk a animace rozhraní.",
+    ),
     "settings_cloud_backup": MessageLookupByLibrary.simpleMessage(
       "Cloudové zálohování",
     ),
     "settings_cloud_backup_desc": MessageLookupByLibrary.simpleMessage(
       "Nahrát, obnovit a spravovat...",
     ),
+    "settings_content_desc": MessageLookupByLibrary.simpleMessage(
+      "Objevte filtry, integraci s Piped a mezipaměti.",
+    ),
+    "settings_downloads_desc": MessageLookupByLibrary.simpleMessage(
+      "Stahování a ukládání",
+    ),
+    "settings_downloads_sub": MessageLookupByLibrary.simpleMessage(
+      "Zvukové formáty, složky a automatické stahování.",
+    ),
     "settings_general_section": MessageLookupByLibrary.simpleMessage("Generál"),
+    "settings_local_cloud_desc": MessageLookupByLibrary.simpleMessage(
+      "Vyberte, migrujte nebo zkontrolujte stav synchronizace pomocí Joss Red.",
+    ),
+    "settings_local_cloud_title": MessageLookupByLibrary.simpleMessage(
+      "Místní režim / EMusic Cloud",
+    ),
     "settings_logout": MessageLookupByLibrary.simpleMessage("Odhlaste se"),
     "settings_migration_desc": MessageLookupByLibrary.simpleMessage(
       "Importujte seznamy skladeb, skladby...",
     ),
     "settings_migration_title": MessageLookupByLibrary.simpleMessage(
       "Migrujte z Joss Music Kotlin",
+    ),
+    "settings_my_friends": MessageLookupByLibrary.simpleMessage("moji přátelé"),
+    "settings_my_friends_desc": MessageLookupByLibrary.simpleMessage(
+      "Spravujte své přátele Joss Red přímo.",
+    ),
+    "settings_playback_desc": MessageLookupByLibrary.simpleMessage(
+      "Kvalita streamování, normalizace, ztišení a baterie.",
+    ),
+    "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
+      "Pokud se obsah kanálu Objevit nenačte, znovu vygenerujte své ID YouTube Music.",
+    ),
+    "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
+      "Obnovit ID (ID návštěvníka)",
+    ),
+    "settings_visitor_error": MessageLookupByLibrary.simpleMessage("Chyba"),
+    "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
+      "Nepodařilo se vygenerovat nový identifikátor. Zkuste to znovu později.",
+    ),
+    "settings_visitor_exception": m0,
+    "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
+      "Aktualizovaný identifikátor",
+    ),
+    "settings_visitor_updated_desc": MessageLookupByLibrary.simpleMessage(
+      "Nové ID návštěvníka bylo úspěšně vygenerováno.",
     ),
     "shareSong": MessageLookupByLibrary.simpleMessage("Sdílet tuto skladbu"),
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
@@ -755,7 +811,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Váš časovač spánku byl spuštěn",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Časovač spánku"),
-    "slide_indicator": m0,
+    "slide_indicator": m1,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "Skladba přidána do playlistu!",
     ),
