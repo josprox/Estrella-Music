@@ -46,7 +46,7 @@ jobs:
           pod install
 
       - name: Build macOS Application
-        run: flutter build macos --release --no-codesign
+        run: flutter build macos --release
 
       - name: Package Portable ZIP
         run: |
