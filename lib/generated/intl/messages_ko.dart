@@ -22,7 +22,15 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(error) => "재생성하는 동안 오류가 발생했습니다: ${error}";
 
-  static String m1(current) => "3단계 중 ${current} 단계";
+  static String m1(title) => "_${title} 과 유사함";
+
+  static String m2(current) => "3단계 중 ${current} 단계";
+
+  static String m3(count) => "_${count} 변경사항이 커밋되었습니다.";
+
+  static String m4(count) => "_${count} 변경사항이 동기화되었습니다.";
+
+  static String m5(statusCode) => "사용자(${statusCode})를 검색할 수 없습니다.";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -121,6 +129,15 @@ class MessageLookup extends MessageLookupByLibrary {
       "클릭하면 캐시된 썸네일과 이미지를 비웁니다. (캐시된 이미지들을 갱신하고 싶은 경우가 아니라면 추천하지 않습니다)",
     ),
     "close": MessageLookupByLibrary.simpleMessage("닫다"),
+    "cloudLibraryFound": MessageLookupByLibrary.simpleMessage(
+      "클라우드 라이브러리를 찾았습니다.",
+    ),
+    "cloudLibraryFoundDeviceWillDownload": MessageLookupByLibrary.simpleMessage(
+      "클라우드 라이브러리가 발견되었습니다. 이 장치는 덮어쓰지 않고 다운로드합니다.",
+    ),
+    "cloudModeReadyOfflineCache": MessageLookupByLibrary.simpleMessage(
+      "클라우드 모드가 준비되었습니다. 이 장치는 오프라인 캐시로 작동합니다.",
+    ),
     "cloud_b1": MessageLookupByLibrary.simpleMessage(
       "Joss Red 계정을 사용하여 안전하게 로그인하세요.",
     ),
@@ -133,6 +150,15 @@ class MessageLookup extends MessageLookupByLibrary {
     "cloud_btn": MessageLookupByLibrary.simpleMessage("클라우드 동기화 활성화"),
     "cloud_subtitle": MessageLookupByLibrary.simpleMessage("Joss Red와 실시간 동기화"),
     "cloud_title": MessageLookupByLibrary.simpleMessage("클라우드 모드(권장)"),
+    "collaborativePlaylistDescription": MessageLookupByLibrary.simpleMessage(
+      "공동 재생 목록",
+    ),
+    "collaboratorsInstruction": MessageLookupByLibrary.simpleMessage(
+      "이 재생목록을 보고 편집할 수 있는 친구를 선택하세요.",
+    ),
+    "collaboratorsUpdated": MessageLookupByLibrary.simpleMessage(
+      "공동작업자가 올바르게 업데이트되었습니다.",
+    ),
     "communityplaylists": MessageLookupByLibrary.simpleMessage("커뮤니티 플레이리스트"),
     "create": MessageLookupByLibrary.simpleMessage("생성"),
     "createnAdd": MessageLookupByLibrary.simpleMessage("생성 및 추가"),
@@ -140,6 +166,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "customInsSelectMsg": MessageLookupByLibrary.simpleMessage(
       "커스텀 인스턴스를 선택해주세요",
     ),
+    "dailyDiscover": MessageLookupByLibrary.simpleMessage("매일의 발견"),
     "dark": MessageLookupByLibrary.simpleMessage("다크"),
     "deleteDownloadData": MessageLookupByLibrary.simpleMessage("다운로드에서 제거"),
     "deleteDownloadedDataAlert": MessageLookupByLibrary.simpleMessage(
@@ -154,6 +181,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "disabled": MessageLookupByLibrary.simpleMessage("비활성화됨"),
     "discover": MessageLookupByLibrary.simpleMessage("탐색"),
     "dismiss": MessageLookupByLibrary.simpleMessage("무시"),
+    "done": MessageLookupByLibrary.simpleMessage("준비가 된"),
     "dontShowInfoAgain": MessageLookupByLibrary.simpleMessage("다시 보지 않기"),
     "downFilesFound": MessageLookupByLibrary.simpleMessage("다운로드한 파일이 발견됨"),
     "downloadLocation": MessageLookupByLibrary.simpleMessage("다운로드 위치"),
@@ -198,6 +226,18 @@ class MessageLookup extends MessageLookupByLibrary {
     "following": MessageLookupByLibrary.simpleMessage("수행원"),
     "for1": MessageLookupByLibrary.simpleMessage("어구"),
     "forgottenFavorites": MessageLookupByLibrary.simpleMessage("잊혀진 즐겨찾기"),
+    "friendFallback": MessageLookupByLibrary.simpleMessage("친구"),
+    "friendRequestAccepted": MessageLookupByLibrary.simpleMessage(
+      "친구 요청이 수락되었습니다.",
+    ),
+    "friendRequestSent": MessageLookupByLibrary.simpleMessage("친구 요청이 전송되었습니다"),
+    "friends": MessageLookupByLibrary.simpleMessage("친구"),
+    "friendsLoginRequired": MessageLookupByLibrary.simpleMessage(
+      "친구를 찾으려면 로그인하세요.",
+    ),
+    "friendshipRemoved": MessageLookupByLibrary.simpleMessage("우정이 제거되었습니다."),
+    "genericAlbum": MessageLookupByLibrary.simpleMessage("앨범"),
+    "genericError": MessageLookupByLibrary.simpleMessage("실수"),
     "genre_electronic": MessageLookupByLibrary.simpleMessage("전자제품"),
     "genre_hiphop": MessageLookupByLibrary.simpleMessage("힙합"),
     "genre_jazz": MessageLookupByLibrary.simpleMessage("재즈"),
@@ -223,7 +263,17 @@ class MessageLookup extends MessageLookupByLibrary {
     "ignoreBatOptDes": MessageLookupByLibrary.simpleMessage(
       "만약 배터리 최적화 기능 때문에 푸시 알림이 오지 않거나 음악이 멈춘다면, 이 설정을 활성화해주세요",
     ),
+    "importedFromJossMusic": MessageLookupByLibrary.simpleMessage(
+      "Joss Music Kotlin에서 가져옴",
+    ),
+    "invalidServerResponse": MessageLookupByLibrary.simpleMessage(
+      "서버 응답이 잘못되었습니다.",
+    ),
+    "invalidSessionToken": MessageLookupByLibrary.simpleMessage(
+      "세션에 유효한 토큰이 포함되어 있지 않습니다.",
+    ),
     "items": MessageLookupByLibrary.simpleMessage("항목"),
+    "keepListening": MessageLookupByLibrary.simpleMessage("계속 들어봐"),
     "keepScreenOnWhilePlaying": MessageLookupByLibrary.simpleMessage(
       "재생 중 화면 켜짐 유지",
     ),
@@ -238,6 +288,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "libPlaylists": MessageLookupByLibrary.simpleMessage("라이브러리 플레이리스트"),
     "libSongs": MessageLookupByLibrary.simpleMessage("라이브러리 음악"),
     "library": MessageLookupByLibrary.simpleMessage("라이브러리"),
+    "libraryPlaylistDescription": MessageLookupByLibrary.simpleMessage(
+      "도서관 재생목록",
+    ),
     "light": MessageLookupByLibrary.simpleMessage("라이트"),
     "link": MessageLookupByLibrary.simpleMessage("로그인"),
     "linkAlert": MessageLookupByLibrary.simpleMessage("로그인 성공!"),
@@ -263,8 +316,51 @@ class MessageLookup extends MessageLookupByLibrary {
     "local_title": MessageLookupByLibrary.simpleMessage("로컬 모드"),
     "low": MessageLookupByLibrary.simpleMessage("낮음"),
     "lyricsNotAvailable": MessageLookupByLibrary.simpleMessage("가사를 찾지 못했습니다!"),
+    "manageCollaborators": MessageLookupByLibrary.simpleMessage("공동작업자(친구) 관리"),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
       "마이크 근처에서 음악이 충분히 크게 재생되는지 확인하세요.",
+    ),
+    "migratedAlbum": MessageLookupByLibrary.simpleMessage("이전된 앨범"),
+    "migratedLibrary": MessageLookupByLibrary.simpleMessage("마이그레이션된 라이브러리"),
+    "migratedPlaylist": MessageLookupByLibrary.simpleMessage("마이그레이션된 재생목록"),
+    "migrationAlreadyRunning": MessageLookupByLibrary.simpleMessage(
+      "이미 마이그레이션이 진행 중입니다.",
+    ),
+    "migrationAnalyzingLocal": MessageLookupByLibrary.simpleMessage(
+      "지역 도서관을 분석하는 중...",
+    ),
+    "migrationCheckingCloud": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud에 이미 라이브러리가 있는지 확인하는 중...",
+    ),
+    "migrationCompleted": MessageLookupByLibrary.simpleMessage(
+      "마이그레이션이 완료되었습니다.",
+    ),
+    "migrationCreatingBackup": MessageLookupByLibrary.simpleMessage(
+      "클라우드에 연결하기 전에 로컬 백업 생성 중...",
+    ),
+    "migrationFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
+      "마이그레이션이 실패했습니다. 로컬 데이터가 수정되지 않았습니다.",
+    ),
+    "migrationLoginRequired": MessageLookupByLibrary.simpleMessage(
+      "마이그레이션하기 전에 Joss Red에 로그인하세요.",
+    ),
+    "migrationPreparingCloud": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud에서 마이그레이션 준비 중...",
+    ),
+    "migrationStartFailed": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud가 마이그레이션을 시작할 수 없습니다.",
+    ),
+    "migrationUploadIncomplete": MessageLookupByLibrary.simpleMessage(
+      "모든 데이터를 업로드할 수는 없습니다. 우리는 귀하의 지역 지원을 유지합니다.",
+    ),
+    "migrationUploadingData": MessageLookupByLibrary.simpleMessage(
+      "재생목록, 즐겨찾기, 기록 업로드 중...",
+    ),
+    "migrationValidationFailed": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud가 마이그레이션을 검증할 수 없습니다.",
+    ),
+    "migrationVerifyingIntegrity": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud에서 무결성을 확인하는 중...",
     ),
     "migration_btn_select": MessageLookupByLibrary.simpleMessage(
       "파일을 선택하고 가져오기",
@@ -307,6 +403,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "news_item_trans_title": MessageLookupByLibrary.simpleMessage("투명한 동기화"),
     "noBookmarks": MessageLookupByLibrary.simpleMessage("북마크 없음!"),
+    "noJossRedFriends": MessageLookupByLibrary.simpleMessage(
+      "Joss Red에 추가된 친구가 없습니다.",
+    ),
     "noLibPlaylist": MessageLookupByLibrary.simpleMessage(
       "라이브러리 플레이리스트가 없습니다!",
     ),
@@ -315,13 +414,20 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "noMatchesFound": MessageLookupByLibrary.simpleMessage("일치하는 항목 없음"),
     "noOfflineSong": MessageLookupByLibrary.simpleMessage("오프라인 음악이 없습니다!"),
+    "noSongsInCollection": MessageLookupByLibrary.simpleMessage(
+      "이 컬렉션에는 노래가 없습니다",
+    ),
     "nomatch": MessageLookupByLibrary.simpleMessage("검색결과 없음"),
+    "notAuthenticated": MessageLookupByLibrary.simpleMessage("인증되지 않음"),
     "notaSongVideo": MessageLookupByLibrary.simpleMessage("음악/뮤직비디오가 아님!"),
     "notaValidLink": MessageLookupByLibrary.simpleMessage("유효한 링크가 아님!"),
     "openIn": MessageLookupByLibrary.simpleMessage("열기"),
     "operationFailed": MessageLookupByLibrary.simpleMessage("동작 실패"),
     "password": MessageLookupByLibrary.simpleMessage("비밀번호"),
     "password_text": MessageLookupByLibrary.simpleMessage("비밀번호"),
+    "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage(
+      "파이프 재생목록",
+    ),
     "pipedplstSyncAlert": MessageLookupByLibrary.simpleMessage(
       "Piped 플레이리스트 동기화됨!",
     ),
@@ -338,6 +444,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "playlistBookmarkRemoveAlert": MessageLookupByLibrary.simpleMessage(
       "플레이리스트 즐겨찾기 제거함!",
+    ),
+    "playlistCollaboratorsTitle": MessageLookupByLibrary.simpleMessage(
+      "재생목록 참여자",
     ),
     "playlistCreatedAlert": MessageLookupByLibrary.simpleMessage("플레이리스트 생성됨!"),
     "playlistCreatednsongAddedAlert": MessageLookupByLibrary.simpleMessage(
@@ -382,6 +491,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "results": MessageLookupByLibrary.simpleMessage("결과"),
     "retry": MessageLookupByLibrary.simpleMessage("재시도!"),
+    "save": MessageLookupByLibrary.simpleMessage("유지하다"),
     "scanning": MessageLookupByLibrary.simpleMessage("스캔하는 중..."),
     "search": MessageLookupByLibrary.simpleMessage("검색"),
     "searchDes": MessageLookupByLibrary.simpleMessage("음악,플레이리스트,앨범 혹은 아티스트"),
@@ -391,6 +501,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "selectAuthIns": MessageLookupByLibrary.simpleMessage("인증 인스턴스를 선택"),
     "selectAuthInsMsg": MessageLookupByLibrary.simpleMessage(
       "인증 인스턴스를 선택해주세요!",
+    ),
+    "selectedFileNotFound": MessageLookupByLibrary.simpleMessage(
+      "선택한 파일을 찾을 수 없습니다.",
+    ),
+    "sessionExpiredLoginAgain": MessageLookupByLibrary.simpleMessage(
+      "세션이 만료되었습니다. 다시 로그인하세요.",
     ),
     "setDiscoverContent": MessageLookupByLibrary.simpleMessage("탐색할 컨텐츠를 설정"),
     "settings": MessageLookupByLibrary.simpleMessage("설정"),
@@ -462,6 +578,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
       "Shazam 데이터베이스에서 일치하는 항목을 검색하는 중...",
     ),
+    "similarToTitle": m1,
     "singles": MessageLookupByLibrary.simpleMessage("싱글"),
     "skipSilence": MessageLookupByLibrary.simpleMessage("묵음 건너뛰기"),
     "skipSilenceDes": MessageLookupByLibrary.simpleMessage(
@@ -469,7 +586,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "sleepTimeSetAlert": MessageLookupByLibrary.simpleMessage("취침 타이머가 설정됨"),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("취침 타이머"),
-    "slide_indicator": m1,
+    "slide_indicator": m2,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "플레이리스트에 음악 추가됨!",
     ),
@@ -486,8 +603,15 @@ class MessageLookup extends MessageLookupByLibrary {
       "지금 재생중인 곡을 제거할 순 없습니다",
     ),
     "songs": MessageLookupByLibrary.simpleMessage("음악"),
+    "songsImportedFromJossMusic": MessageLookupByLibrary.simpleMessage(
+      "Joss Music Kotlin에서 가져온 노래",
+    ),
     "speedAndPitch": MessageLookupByLibrary.simpleMessage("속도와 피치"),
     "startRadio": MessageLookupByLibrary.simpleMessage("라디오 시작"),
+    "startupScreen": MessageLookupByLibrary.simpleMessage("시작 시 열기"),
+    "startupScreenDescription": MessageLookupByLibrary.simpleMessage(
+      "Estrella Music이 먼저 열리는 섹션을 선택하세요.",
+    ),
     "status": MessageLookupByLibrary.simpleMessage("상태"),
     "stopMusicOnTaskClear": MessageLookupByLibrary.simpleMessage(
       "작업 관리자에서 종료되면 음악을 끝냄",
@@ -499,6 +623,58 @@ class MessageLookup extends MessageLookupByLibrary {
     "streamingQualityDes": MessageLookupByLibrary.simpleMessage("음악 스트림의 음질"),
     "subscribers": MessageLookupByLibrary.simpleMessage("구독자"),
     "swipe_prompt": MessageLookupByLibrary.simpleMessage("스와이프하여 옵션 탐색 ➔"),
+    "syncChangesConfirmed": m3,
+    "syncChangesSynced": m4,
+    "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
+      "클라우드 모드가 활성화되었습니다. 기존 라이브러리를 다운로드합니다.",
+    ),
+    "syncCloudMigrationComplete": MessageLookupByLibrary.simpleMessage(
+      "클라우드 모드가 활성화되었습니다. 마이그레이션된 라이브러리.",
+    ),
+    "syncCloudPending": MessageLookupByLibrary.simpleMessage(
+      "클라우드 모드가 활성화되었습니다. 동기화 대기 중입니다.",
+    ),
+    "syncDownloadFailed": MessageLookupByLibrary.simpleMessage(
+      "동기화를 다운로드하지 못했습니다.",
+    ),
+    "syncDownloading": MessageLookupByLibrary.simpleMessage(
+      "EMusic 변경사항 다운로드 중...",
+    ),
+    "syncLibrarySynced": MessageLookupByLibrary.simpleMessage("동기화된 라이브러리."),
+    "syncLibraryUpToDate": MessageLookupByLibrary.simpleMessage(
+      "라이브러리가 최신 상태입니다.",
+    ),
+    "syncLocalChangesFirst": MessageLookupByLibrary.simpleMessage(
+      "새로운 로컬 변경 사항이 있습니다. 다운로드하기 전에 업로드됩니다.",
+    ),
+    "syncLocalDeviceOnly": MessageLookupByLibrary.simpleMessage(
+      "귀하의 데이터는 이 장치에만 보관됩니다.",
+    ),
+    "syncLocalModeActive": MessageLookupByLibrary.simpleMessage("로컬 모드 활성화"),
+    "syncOfflinePending": MessageLookupByLibrary.simpleMessage(
+      "오프라인. 변경사항이 보류 중입니다.",
+    ),
+    "syncOfflineRetry": MessageLookupByLibrary.simpleMessage(
+      "오프라인. 재시도를 위해 변경사항이 저장되었습니다.",
+    ),
+    "syncUnconfirmedRetry": MessageLookupByLibrary.simpleMessage(
+      "EMusic은 모든 변경 사항을 확인하지 않았습니다. 재시도될 것입니다.",
+    ),
+    "syncUploadRetry": MessageLookupByLibrary.simpleMessage(
+      "일어날 수 없었다. 나중에 다시 시도됩니다.",
+    ),
+    "syncUploadSuccess": MessageLookupByLibrary.simpleMessage(
+      "변경사항이 올바르게 업로드되었습니다.",
+    ),
+    "syncUploadSuccessWs": MessageLookupByLibrary.simpleMessage(
+      "변경사항이 성공적으로 업로드되었습니다(WS).",
+    ),
+    "syncUploadWsRetry": MessageLookupByLibrary.simpleMessage(
+      "WS를 사용하여 업로드할 수 없습니다. 나중에 다시 시도됩니다.",
+    ),
+    "syncUploading": MessageLookupByLibrary.simpleMessage(
+      "EMusic에 변경사항을 업로드하는 중...",
+    ),
     "synced": MessageLookupByLibrary.simpleMessage("동기화됨"),
     "syncedLyricsNotAvailable": MessageLookupByLibrary.simpleMessage(
       "동기화된 가사를 찾지 못했습니다!",
@@ -509,7 +685,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "trending": MessageLookupByLibrary.simpleMessage("인기 급상승"),
     "unLink": MessageLookupByLibrary.simpleMessage("로그아웃"),
     "unlinkAlert": MessageLookupByLibrary.simpleMessage("로그아웃 성공!"),
+    "untitledSong": MessageLookupByLibrary.simpleMessage("제목 없는 노래"),
     "upNext": MessageLookupByLibrary.simpleMessage("재생 예정"),
+    "userBlocked": MessageLookupByLibrary.simpleMessage("차단된 사용자"),
+    "userListMissing": MessageLookupByLibrary.simpleMessage(
+      "응답에는 사용자 목록이 포함되어 있지 않습니다.",
+    ),
+    "userSearchFailed": m5,
+    "userUnblocked": MessageLookupByLibrary.simpleMessage("잠금 해제된 사용자"),
     "username": MessageLookupByLibrary.simpleMessage("사용자 이름"),
     "video": MessageLookupByLibrary.simpleMessage("동영상"),
     "videos": MessageLookupByLibrary.simpleMessage("동영상"),

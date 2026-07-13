@@ -31,6 +31,7 @@ class SettingsScreenController extends GetxController {
   final skipSilenceEnabled = false.obs;
   final loudnessNormalizationEnabled = false.obs;
   final noOfHomeScreenContent = 3.obs;
+  final startupTabIndex = 0.obs;
   final streamingQuality = AudioQuality.High.obs;
   final slidableActionEnabled = true.obs;
   final isIgnoringBatteryOptimizations = false.obs;
@@ -104,6 +105,14 @@ class SettingsScreenController extends GetxController {
             : appLang;
     isBottomNavBarEnabled.value = isDesktop ? false : true;
     noOfHomeScreenContent.value = setBox.get("noOfHomeScreenContent") ?? 3;
+    final savedStartupTab = setBox.get('startupTabIndex');
+    final parsedStartupTab = savedStartupTab is int
+        ? savedStartupTab
+        : int.tryParse('$savedStartupTab');
+    startupTabIndex.value =
+        HomeScreenController.supportedStartupTabs.contains(parsedStartupTab)
+            ? parsedStartupTab!
+            : 0;
     isTransitionAnimationDisabled.value =
         setBox.get("isTransitionAnimationDisabled") ?? false;
     cacheSongs.value = setBox.get('cacheSongs') ?? false;
@@ -164,6 +173,15 @@ class SettingsScreenController extends GetxController {
   void setContentNumber(int? no) {
     noOfHomeScreenContent.value = no!;
     setBox.put("noOfHomeScreenContent", no);
+  }
+
+  void setStartupTab(int? index) {
+    if (index == null ||
+        !HomeScreenController.supportedStartupTabs.contains(index)) {
+      return;
+    }
+    startupTabIndex.value = index;
+    setBox.put('startupTabIndex', index);
   }
 
   void setStreamingQuality(dynamic val) {

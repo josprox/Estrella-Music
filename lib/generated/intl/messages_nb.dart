@@ -22,7 +22,16 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(error) => "Det oppstod en feil under regenerering: ${error}";
 
-  static String m1(current) => "Trinn ${current} av 3";
+  static String m1(title) => "Ligner på ${title}";
+
+  static String m2(current) => "Trinn ${current} av 3";
+
+  static String m3(count) => "${count} endringer begått.";
+
+  static String m4(count) => "${count} synkroniserte endringer.";
+
+  static String m5(statusCode) =>
+      "Kunne ikke søke etter brukere (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -78,6 +87,15 @@ class MessageLookup extends MessageLookupByLibrary {
       "Sikkerhetskopien er lastet opp på riktig måte.",
     ),
     "close": MessageLookupByLibrary.simpleMessage("Lukke"),
+    "cloudLibraryFound": MessageLookupByLibrary.simpleMessage(
+      "Fant nettskybibliotek.",
+    ),
+    "cloudLibraryFoundDeviceWillDownload": MessageLookupByLibrary.simpleMessage(
+      "Et skybibliotek ble funnet. Denne enheten vil laste den ned uten å overskrive den.",
+    ),
+    "cloudModeReadyOfflineCache": MessageLookupByLibrary.simpleMessage(
+      "Skymodus er klar. Denne enheten vil fungere som en frakoblet hurtigbuffer.",
+    ),
     "cloud_b1": MessageLookupByLibrary.simpleMessage(
       "Logg på sikkert med din Joss Red-konto.",
     ),
@@ -94,6 +112,17 @@ class MessageLookup extends MessageLookupByLibrary {
       "Sanntidssynkronisering med Joss Red",
     ),
     "cloud_title": MessageLookupByLibrary.simpleMessage("Skymodus (anbefalt)"),
+    "collaborativePlaylistDescription": MessageLookupByLibrary.simpleMessage(
+      "Samarbeidsspilleliste",
+    ),
+    "collaboratorsInstruction": MessageLookupByLibrary.simpleMessage(
+      "Velg vennene som skal kunne se og redigere denne spillelisten:",
+    ),
+    "collaboratorsUpdated": MessageLookupByLibrary.simpleMessage(
+      "Samarbeidspartnere har oppdatert riktig.",
+    ),
+    "dailyDiscover": MessageLookupByLibrary.simpleMessage("Daglig oppdagelse"),
+    "done": MessageLookupByLibrary.simpleMessage("Ferdig"),
     "email": MessageLookupByLibrary.simpleMessage("E-post"),
     "errorOccurred": MessageLookupByLibrary.simpleMessage(
       "Det oppstod en feil",
@@ -106,13 +135,42 @@ class MessageLookup extends MessageLookupByLibrary {
     "forgottenFavorites": MessageLookupByLibrary.simpleMessage(
       "glemte favoritter",
     ),
+    "friendFallback": MessageLookupByLibrary.simpleMessage("Venn"),
+    "friendRequestAccepted": MessageLookupByLibrary.simpleMessage(
+      "Venneforespørsel godtatt",
+    ),
+    "friendRequestSent": MessageLookupByLibrary.simpleMessage(
+      "Venneforespørsel sendt",
+    ),
+    "friends": MessageLookupByLibrary.simpleMessage("Venner"),
+    "friendsLoginRequired": MessageLookupByLibrary.simpleMessage(
+      "Logg på for å finne venner.",
+    ),
+    "friendshipRemoved": MessageLookupByLibrary.simpleMessage(
+      "Vennskap fjernet",
+    ),
+    "genericAlbum": MessageLookupByLibrary.simpleMessage("Album"),
+    "genericError": MessageLookupByLibrary.simpleMessage("Feil"),
     "genre_electronic": MessageLookupByLibrary.simpleMessage("Elektronikk"),
     "genre_hiphop": MessageLookupByLibrary.simpleMessage("hip hop"),
     "genre_jazz": MessageLookupByLibrary.simpleMessage("Jazz"),
     "genre_latin": MessageLookupByLibrary.simpleMessage("latin"),
     "genre_pop": MessageLookupByLibrary.simpleMessage("Pop"),
     "genre_rock": MessageLookupByLibrary.simpleMessage("Stein"),
+    "importedFromJossMusic": MessageLookupByLibrary.simpleMessage(
+      "Importert fra Joss Music Kotlin",
+    ),
+    "invalidServerResponse": MessageLookupByLibrary.simpleMessage(
+      "Ugyldig serversvar.",
+    ),
+    "invalidSessionToken": MessageLookupByLibrary.simpleMessage(
+      "Økten inneholder ikke et gyldig token.",
+    ),
+    "keepListening": MessageLookupByLibrary.simpleMessage("fortsett å lytte"),
     "latestRelease": MessageLookupByLibrary.simpleMessage("Siste utgivelse"),
+    "libraryPlaylistDescription": MessageLookupByLibrary.simpleMessage(
+      "Bibliotek spilleliste",
+    ),
     "listenNow": MessageLookupByLibrary.simpleMessage("Hør nå"),
     "listeningToEnvironment": MessageLookupByLibrary.simpleMessage(
       "Å lytte til miljøet...",
@@ -133,8 +191,57 @@ class MessageLookup extends MessageLookupByLibrary {
       "Absolutt personvern på enheten din",
     ),
     "local_title": MessageLookupByLibrary.simpleMessage("Lokal modus"),
+    "manageCollaborators": MessageLookupByLibrary.simpleMessage(
+      "Administrer samarbeidspartnere (venner)",
+    ),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
       "Sørg for at musikken spilles høyt nok i nærheten av mikrofonen.",
+    ),
+    "migratedAlbum": MessageLookupByLibrary.simpleMessage("Migrert album"),
+    "migratedLibrary": MessageLookupByLibrary.simpleMessage(
+      "Migrert bibliotek",
+    ),
+    "migratedPlaylist": MessageLookupByLibrary.simpleMessage(
+      "Migrert spilleliste",
+    ),
+    "migrationAlreadyRunning": MessageLookupByLibrary.simpleMessage(
+      "Det pågår allerede en migrering.",
+    ),
+    "migrationAnalyzingLocal": MessageLookupByLibrary.simpleMessage(
+      "Analyserer det lokale biblioteket...",
+    ),
+    "migrationCheckingCloud": MessageLookupByLibrary.simpleMessage(
+      "Sjekker om EMusic Cloud allerede har et bibliotek...",
+    ),
+    "migrationCompleted": MessageLookupByLibrary.simpleMessage(
+      "Migrering fullført.",
+    ),
+    "migrationCreatingBackup": MessageLookupByLibrary.simpleMessage(
+      "Oppretter en lokal sikkerhetskopi før du kobler til skyen...",
+    ),
+    "migrationFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
+      "Migreringen mislyktes. Dine lokale data ble ikke endret.",
+    ),
+    "migrationLoginRequired": MessageLookupByLibrary.simpleMessage(
+      "Logg på Joss Red før du migrerer.",
+    ),
+    "migrationPreparingCloud": MessageLookupByLibrary.simpleMessage(
+      "Forbereder migreringen i EMusic Cloud...",
+    ),
+    "migrationStartFailed": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud kunne ikke starte migreringen.",
+    ),
+    "migrationUploadIncomplete": MessageLookupByLibrary.simpleMessage(
+      "Ikke alle data kunne lastes opp. Vi beholder din lokale støtte.",
+    ),
+    "migrationUploadingData": MessageLookupByLibrary.simpleMessage(
+      "Laster opp spillelister, favoritter og historie...",
+    ),
+    "migrationValidationFailed": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud kunne ikke validere migreringen.",
+    ),
+    "migrationVerifyingIntegrity": MessageLookupByLibrary.simpleMessage(
+      "Verifiserer integritet i EMusic Cloud...",
     ),
     "migration_btn_select": MessageLookupByLibrary.simpleMessage(
       "Velg fil og importer",
@@ -183,16 +290,31 @@ class MessageLookup extends MessageLookupByLibrary {
     "news_item_trans_title": MessageLookupByLibrary.simpleMessage(
       "Transparent synkronisering",
     ),
+    "noJossRedFriends": MessageLookupByLibrary.simpleMessage(
+      "Du har ingen lagt til venner på Joss Red.",
+    ),
     "noMatchInstruction": MessageLookupByLibrary.simpleMessage(
       "Kunne ikke finne noen sanger i den innspilte lyden",
     ),
     "noMatchesFound": MessageLookupByLibrary.simpleMessage("Ingen treff"),
+    "noSongsInCollection": MessageLookupByLibrary.simpleMessage(
+      "Det er ingen sanger i denne samlingen",
+    ),
+    "notAuthenticated": MessageLookupByLibrary.simpleMessage(
+      "Ikke autentisert",
+    ),
     "password_text": MessageLookupByLibrary.simpleMessage("Passord"),
+    "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage(
+      "Pipet spilleliste",
+    ),
     "playNow": MessageLookupByLibrary.simpleMessage("Spill nå"),
     "playbackSpeed": MessageLookupByLibrary.simpleMessage(
       "Avspillingshastighet",
     ),
     "playingRecognizedTrack": MessageLookupByLibrary.simpleMessage("Spiller:"),
+    "playlistCollaboratorsTitle": MessageLookupByLibrary.simpleMessage(
+      "Spillelistebidragsytere",
+    ),
     "popularTracks": MessageLookupByLibrary.simpleMessage("Populære låter"),
     "processingAudio": MessageLookupByLibrary.simpleMessage(
       "Behandler lyden...",
@@ -203,10 +325,17 @@ class MessageLookup extends MessageLookupByLibrary {
       "Vi anbefaler å aktivere skymodus for en Spotify-lignende opplevelse: sanntidssynkronisering mellom alle enhetene dine og automatisk sikkerhetskopiering uten at du trenger å gjøre noe.",
     ),
     "reproducedBy": MessageLookupByLibrary.simpleMessage("Gjengitt av"),
+    "save": MessageLookupByLibrary.simpleMessage("Beholde"),
     "searchInLibrary": MessageLookupByLibrary.simpleMessage(
       "Søk i biblioteket",
     ),
     "search_recent_title": MessageLookupByLibrary.simpleMessage("Nylige søk"),
+    "selectedFileNotFound": MessageLookupByLibrary.simpleMessage(
+      "Den valgte filen ble ikke funnet.",
+    ),
+    "sessionExpiredLoginAgain": MessageLookupByLibrary.simpleMessage(
+      "Økten din er utløpt. Logg på igjen.",
+    ),
     "settings_about_desc": MessageLookupByLibrary.simpleMessage(
       "Om Estrella Music",
     ),
@@ -278,15 +407,86 @@ class MessageLookup extends MessageLookupByLibrary {
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
       "Søker i Shazam-databasen etter treff...",
     ),
-    "slide_indicator": m1,
+    "similarToTitle": m1,
+    "slide_indicator": m2,
     "songFound": MessageLookupByLibrary.simpleMessage("Sangen funnet!"),
     "songPitch": MessageLookupByLibrary.simpleMessage("sang tone"),
+    "songsImportedFromJossMusic": MessageLookupByLibrary.simpleMessage(
+      "Sanger importert fra Joss Music Kotlin",
+    ),
     "speedAndPitch": MessageLookupByLibrary.simpleMessage(
       "Hastighet og tonehøyde",
+    ),
+    "startupScreen": MessageLookupByLibrary.simpleMessage("Åpne ved oppstart"),
+    "startupScreenDescription": MessageLookupByLibrary.simpleMessage(
+      "Velg delen som Estrella Music åpner først",
     ),
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
       "Sveip for å utforske alternativer ➔",
     ),
+    "syncChangesConfirmed": m3,
+    "syncChangesSynced": m4,
+    "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
+      "Skymodus aktivert. Laster ned det eksisterende biblioteket.",
+    ),
+    "syncCloudMigrationComplete": MessageLookupByLibrary.simpleMessage(
+      "Skymodus aktivert. Migrert bibliotek.",
+    ),
+    "syncCloudPending": MessageLookupByLibrary.simpleMessage(
+      "Skymodus aktiv. Venter på synkronisering.",
+    ),
+    "syncDownloadFailed": MessageLookupByLibrary.simpleMessage(
+      "Kunne ikke laste ned synkronisering.",
+    ),
+    "syncDownloading": MessageLookupByLibrary.simpleMessage(
+      "Laster ned EMusic-endringer...",
+    ),
+    "syncLibrarySynced": MessageLookupByLibrary.simpleMessage(
+      "Synkronisert bibliotek.",
+    ),
+    "syncLibraryUpToDate": MessageLookupByLibrary.simpleMessage(
+      "Bibliotek oppdatert.",
+    ),
+    "syncLocalChangesFirst": MessageLookupByLibrary.simpleMessage(
+      "Det er nye lokale endringer. De vil bli lastet opp før nedlasting.",
+    ),
+    "syncLocalDeviceOnly": MessageLookupByLibrary.simpleMessage(
+      "Dataene dine lagres kun på denne enheten.",
+    ),
+    "syncLocalModeActive": MessageLookupByLibrary.simpleMessage(
+      "Lokal modus aktiv",
+    ),
+    "syncOfflinePending": MessageLookupByLibrary.simpleMessage(
+      "Frakoblet. Endringer venter.",
+    ),
+    "syncOfflineRetry": MessageLookupByLibrary.simpleMessage(
+      "Frakoblet. Endringer lagret for nytt forsøk.",
+    ),
+    "syncUnconfirmedRetry": MessageLookupByLibrary.simpleMessage(
+      "EMusic bekreftet ikke alle endringene. De vil bli forsøkt på nytt.",
+    ),
+    "syncUploadRetry": MessageLookupByLibrary.simpleMessage(
+      "Klarte ikke reise seg. Det vil bli forsøkt på nytt senere.",
+    ),
+    "syncUploadSuccess": MessageLookupByLibrary.simpleMessage(
+      "Endringer lastet opp riktig.",
+    ),
+    "syncUploadSuccessWs": MessageLookupByLibrary.simpleMessage(
+      "Endringer ble lastet opp (WS).",
+    ),
+    "syncUploadWsRetry": MessageLookupByLibrary.simpleMessage(
+      "Kunne ikke laste opp med WS. Det vil bli forsøkt på nytt senere.",
+    ),
+    "syncUploading": MessageLookupByLibrary.simpleMessage(
+      "Laster opp endringer til EMusic...",
+    ),
+    "untitledSong": MessageLookupByLibrary.simpleMessage("Unavngitt sang"),
+    "userBlocked": MessageLookupByLibrary.simpleMessage("Blokkert bruker"),
+    "userListMissing": MessageLookupByLibrary.simpleMessage(
+      "Svaret inneholder ikke en liste over brukere.",
+    ),
+    "userSearchFailed": m5,
+    "userUnblocked": MessageLookupByLibrary.simpleMessage("Ulåst bruker"),
     "username": MessageLookupByLibrary.simpleMessage("Brukernavn"),
     "video": MessageLookupByLibrary.simpleMessage("Video"),
     "welcome_intro": MessageLookupByLibrary.simpleMessage(

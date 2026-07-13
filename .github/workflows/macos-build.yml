@@ -1,0 +1,69 @@
+name: Build macOS Application
+
+on:
+  release:
+    types: [published]
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  build-macos:
+    runs-on: macos-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create .env file
+        run: |
+          if [ -z "${{ secrets.ENV_FILE }}" ]; then
+            echo "API_URL=https://emusic.josprox.com" > .env
+          else
+            echo "${{ secrets.ENV_FILE }}" > .env
+          fi
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          cache: true
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Patch audiotags podspec typo
+        run: |
+          find ~/.pub-cache -name "audiotags.podspec" -exec perl -pi -e 's/if \[ ! -d ios.zip \]d/if [ ! -f ios.zip ]/g' {} +
+
+      - name: Configure CocoaPods Environment
+        run: |
+          cd macos
+          pod repo update
+          pod install
+
+      - name: Build macOS Application
+        run: flutter build macos --release --no-codesign
+
+      - name: Package Portable ZIP
+        run: |
+          mkdir -p distribution
+          cd build/macos/Build/Products/Release
+          zip -r ../../../../../distribution/EstrellaMusic_macOS_Portable.zip harmonymusic.app
+
+      - name: Upload Portable ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: macos-portable-zip
+          path: distribution/EstrellaMusic_macOS_Portable.zip
+
+      - name: Upload binaries to GitHub Release
+        if: startsWith(github.ref, 'refs/tags/') || github.event_name == 'release'
+        uses: softprops/action-gh-release@v2
+        with:
+          files: distribution/EstrellaMusic_macOS_Portable.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

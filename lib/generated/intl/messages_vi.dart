@@ -22,7 +22,16 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(error) => "Đã xảy ra lỗi khi tạo lại: ${error}";
 
-  static String m1(current) => "Bước ${current} trên 3";
+  static String m1(title) => "Tương tự như ${title}";
+
+  static String m2(current) => "Bước ${current} trên 3";
+
+  static String m3(count) => "${count} thay đổi đã được cam kết.";
+
+  static String m4(count) => "${count} thay đổi được đồng bộ hóa.";
+
+  static String m5(statusCode) =>
+      "Không thể tìm kiếm người dùng (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -183,6 +192,15 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "close": MessageLookupByLibrary.simpleMessage("Đóng"),
     "closeApp": MessageLookupByLibrary.simpleMessage("Đóng ứng dụng"),
+    "cloudLibraryFound": MessageLookupByLibrary.simpleMessage(
+      "Đã tìm thấy thư viện đám mây.",
+    ),
+    "cloudLibraryFoundDeviceWillDownload": MessageLookupByLibrary.simpleMessage(
+      "Một thư viện đám mây đã được tìm thấy. Thiết bị này sẽ tải xuống mà không ghi đè lên.",
+    ),
+    "cloudModeReadyOfflineCache": MessageLookupByLibrary.simpleMessage(
+      "Chế độ đám mây đã sẵn sàng. Thiết bị này sẽ hoạt động như một bộ nhớ đệm ngoại tuyến.",
+    ),
     "cloud_b1": MessageLookupByLibrary.simpleMessage(
       "Đăng nhập an toàn bằng tài khoản Joss Red của bạn.",
     ),
@@ -201,6 +219,15 @@ class MessageLookup extends MessageLookupByLibrary {
     "cloud_title": MessageLookupByLibrary.simpleMessage(
       "Chế độ đám mây (Được khuyến nghị)",
     ),
+    "collaborativePlaylistDescription": MessageLookupByLibrary.simpleMessage(
+      "Danh sách phát cộng tác",
+    ),
+    "collaboratorsInstruction": MessageLookupByLibrary.simpleMessage(
+      "Chọn những người bạn có thể xem và chỉnh sửa danh sách phát này:",
+    ),
+    "collaboratorsUpdated": MessageLookupByLibrary.simpleMessage(
+      "Cộng tác viên được cập nhật chính xác.",
+    ),
     "communityplaylists": MessageLookupByLibrary.simpleMessage(
       "Danh sách phát cộng đồng",
     ),
@@ -211,6 +238,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "customInsSelectMsg": MessageLookupByLibrary.simpleMessage(
       "Vui lòng chọn Phiên bản tùy chỉnh",
     ),
+    "dailyDiscover": MessageLookupByLibrary.simpleMessage("Khám phá hàng ngày"),
     "dark": MessageLookupByLibrary.simpleMessage("Tối"),
     "deleteDownloadData": MessageLookupByLibrary.simpleMessage(
       "Xóa khỏi tải về",
@@ -227,6 +255,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "disabled": MessageLookupByLibrary.simpleMessage("Đã tắt"),
     "discover": MessageLookupByLibrary.simpleMessage("Khám phá"),
     "dismiss": MessageLookupByLibrary.simpleMessage("Hủy"),
+    "done": MessageLookupByLibrary.simpleMessage("Sẵn sàng"),
     "dontShowInfoAgain": MessageLookupByLibrary.simpleMessage(
       "Không hiển thị thông tin này lần nữa",
     ),
@@ -346,6 +375,22 @@ class MessageLookup extends MessageLookupByLibrary {
     "forgottenFavorites": MessageLookupByLibrary.simpleMessage(
       "lãng quên yêu thích",
     ),
+    "friendFallback": MessageLookupByLibrary.simpleMessage("Bạn bè"),
+    "friendRequestAccepted": MessageLookupByLibrary.simpleMessage(
+      "Yêu cầu kết bạn đã được chấp nhận",
+    ),
+    "friendRequestSent": MessageLookupByLibrary.simpleMessage(
+      "Đã gửi yêu cầu kết bạn",
+    ),
+    "friends": MessageLookupByLibrary.simpleMessage("Bạn"),
+    "friendsLoginRequired": MessageLookupByLibrary.simpleMessage(
+      "Đăng nhập để tìm bạn bè.",
+    ),
+    "friendshipRemoved": MessageLookupByLibrary.simpleMessage(
+      "Đã xóa tình bạn",
+    ),
+    "genericAlbum": MessageLookupByLibrary.simpleMessage("Album"),
+    "genericError": MessageLookupByLibrary.simpleMessage("Sai lầm"),
     "genre_electronic": MessageLookupByLibrary.simpleMessage("Điện tử"),
     "genre_hiphop": MessageLookupByLibrary.simpleMessage("hip hop"),
     "genre_jazz": MessageLookupByLibrary.simpleMessage("nhạc jazz"),
@@ -400,6 +445,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "importPlaylistDesc": MessageLookupByLibrary.simpleMessage(
       "Chọn một tệp JSON danh sách phát đã xuất để nhập",
     ),
+    "importedFromJossMusic": MessageLookupByLibrary.simpleMessage(
+      "Được nhập từ Joss Music Kotlin",
+    ),
     "importingPlaylist": MessageLookupByLibrary.simpleMessage(
       "Đang nhập danh sách phát...",
     ),
@@ -409,7 +457,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "invalidPlaylistFile": MessageLookupByLibrary.simpleMessage(
       "Cấu trúc tệp danh sách phát không hợp lệ",
     ),
+    "invalidServerResponse": MessageLookupByLibrary.simpleMessage(
+      "Phản hồi của máy chủ không hợp lệ.",
+    ),
+    "invalidSessionToken": MessageLookupByLibrary.simpleMessage(
+      "Phiên không chứa mã thông báo hợp lệ.",
+    ),
     "items": MessageLookupByLibrary.simpleMessage("danh mục"),
+    "keepListening": MessageLookupByLibrary.simpleMessage("tiếp tục lắng nghe"),
     "keepScreenOnWhilePlaying": MessageLookupByLibrary.simpleMessage(
       "Giữ màn hình sáng khi phát nhạc",
     ),
@@ -431,6 +486,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "libSongs": MessageLookupByLibrary.simpleMessage("Thư viện bài hát"),
     "library": MessageLookupByLibrary.simpleMessage("Thư viện"),
+    "libraryPlaylistDescription": MessageLookupByLibrary.simpleMessage(
+      "Danh sách phát thư viện",
+    ),
     "light": MessageLookupByLibrary.simpleMessage("Sáng"),
     "link": MessageLookupByLibrary.simpleMessage("Liên kết"),
     "linkAlert": MessageLookupByLibrary.simpleMessage("Liên kết thành công!"),
@@ -472,8 +530,57 @@ class MessageLookup extends MessageLookupByLibrary {
     "lyricsNotAvailable": MessageLookupByLibrary.simpleMessage(
       "Lời bài hát không có sẵn!",
     ),
+    "manageCollaborators": MessageLookupByLibrary.simpleMessage(
+      "Quản lý cộng tác viên (bạn bè)",
+    ),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
       "Đảm bảo nhạc đang phát đủ lớn ở gần micrô của bạn.",
+    ),
+    "migratedAlbum": MessageLookupByLibrary.simpleMessage("Album đã di chuyển"),
+    "migratedLibrary": MessageLookupByLibrary.simpleMessage(
+      "Thư viện đã di chuyển",
+    ),
+    "migratedPlaylist": MessageLookupByLibrary.simpleMessage(
+      "Danh sách phát đã di chuyển",
+    ),
+    "migrationAlreadyRunning": MessageLookupByLibrary.simpleMessage(
+      "Hiện đã có quá trình di chuyển đang diễn ra.",
+    ),
+    "migrationAnalyzingLocal": MessageLookupByLibrary.simpleMessage(
+      "Phân tích thư viện địa phương...",
+    ),
+    "migrationCheckingCloud": MessageLookupByLibrary.simpleMessage(
+      "Kiểm tra xem EMusic Cloud đã có thư viện chưa...",
+    ),
+    "migrationCompleted": MessageLookupByLibrary.simpleMessage(
+      "Quá trình di chuyển đã hoàn tất.",
+    ),
+    "migrationCreatingBackup": MessageLookupByLibrary.simpleMessage(
+      "Tạo bản sao lưu cục bộ trước khi kết nối đám mây...",
+    ),
+    "migrationFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
+      "Việc di chuyển không thành công. Dữ liệu cục bộ của bạn không được sửa đổi.",
+    ),
+    "migrationLoginRequired": MessageLookupByLibrary.simpleMessage(
+      "Đăng nhập vào Joss Red trước khi di chuyển.",
+    ),
+    "migrationPreparingCloud": MessageLookupByLibrary.simpleMessage(
+      "Đang chuẩn bị di chuyển trong EMusic Cloud...",
+    ),
+    "migrationStartFailed": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud không thể bắt đầu di chuyển.",
+    ),
+    "migrationUploadIncomplete": MessageLookupByLibrary.simpleMessage(
+      "Không phải tất cả dữ liệu có thể được tải lên. Chúng tôi giữ sự hỗ trợ địa phương của bạn.",
+    ),
+    "migrationUploadingData": MessageLookupByLibrary.simpleMessage(
+      "Đang tải lên danh sách phát, mục yêu thích và lịch sử...",
+    ),
+    "migrationValidationFailed": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud không thể xác thực quá trình di chuyển.",
+    ),
+    "migrationVerifyingIntegrity": MessageLookupByLibrary.simpleMessage(
+      "Đang xác minh tính toàn vẹn trong EMusic Cloud...",
     ),
     "migration_btn_select": MessageLookupByLibrary.simpleMessage(
       "Chọn tệp và nhập",
@@ -537,6 +644,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Đồng bộ hóa minh bạch",
     ),
     "noBookmarks": MessageLookupByLibrary.simpleMessage("Không có đánh dấu!"),
+    "noJossRedFriends": MessageLookupByLibrary.simpleMessage(
+      "Bạn chưa có thêm bạn bè nào trên Joss Red.",
+    ),
     "noLibPlaylist": MessageLookupByLibrary.simpleMessage(
       "Bạn không có danh sách phát nào!",
     ),
@@ -549,8 +659,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "noOfflineSong": MessageLookupByLibrary.simpleMessage(
       "Không có bài hát ngoại tuyến!",
     ),
+    "noSongsInCollection": MessageLookupByLibrary.simpleMessage(
+      "Không có bài hát nào trong bộ sưu tập này",
+    ),
     "nomatch": MessageLookupByLibrary.simpleMessage(
       "Không tìm thấy kết quả cho",
+    ),
+    "notAuthenticated": MessageLookupByLibrary.simpleMessage(
+      "Chưa được xác thực",
     ),
     "notaSongVideo": MessageLookupByLibrary.simpleMessage(
       "Không phải bài hát/Videos âm nhạc!",
@@ -563,6 +679,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "password": MessageLookupByLibrary.simpleMessage("Mật khẩu"),
     "password_text": MessageLookupByLibrary.simpleMessage("Mật khẩu"),
     "personalisation": MessageLookupByLibrary.simpleMessage("Cá nhân hoá"),
+    "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage(
+      "Danh sách phát theo đường ống",
+    ),
     "pipedplstSyncAlert": MessageLookupByLibrary.simpleMessage(
       "Danh sách phát đã được đồng bộ hóa!",
     ),
@@ -597,6 +716,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "playlistBookmarkRemoveAlert": MessageLookupByLibrary.simpleMessage(
       "Đã xóa đánh dấu trang danh sách phát!",
+    ),
+    "playlistCollaboratorsTitle": MessageLookupByLibrary.simpleMessage(
+      "Người đóng góp danh sách phát",
     ),
     "playlistCreatedAlert": MessageLookupByLibrary.simpleMessage(
       "Danh sách phát đã được tạo!",
@@ -712,6 +834,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "restoring": MessageLookupByLibrary.simpleMessage("Đang khôi phục..."),
     "results": MessageLookupByLibrary.simpleMessage("Kết quả"),
     "retry": MessageLookupByLibrary.simpleMessage("Thử lại!"),
+    "save": MessageLookupByLibrary.simpleMessage("Giữ"),
     "scanning": MessageLookupByLibrary.simpleMessage("Đang quét..."),
     "search": MessageLookupByLibrary.simpleMessage("Tìm kiếm"),
     "searchDes": MessageLookupByLibrary.simpleMessage(
@@ -733,6 +856,12 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "selectFile": MessageLookupByLibrary.simpleMessage("Chọn tệp"),
     "selectSongs": MessageLookupByLibrary.simpleMessage("Chọn bài hát"),
+    "selectedFileNotFound": MessageLookupByLibrary.simpleMessage(
+      "Không tìm thấy tập tin đã chọn.",
+    ),
+    "sessionExpiredLoginAgain": MessageLookupByLibrary.simpleMessage(
+      "Phiên của bạn đã hết hạn. Đăng nhập lại.",
+    ),
     "setDiscoverContent": MessageLookupByLibrary.simpleMessage(
       "Cài đặt nội dung khám phá",
     ),
@@ -814,6 +943,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Đang tìm kiếm cơ sở dữ liệu Shazam để tìm kết quả phù hợp...",
     ),
     "shuffleQueue": MessageLookupByLibrary.simpleMessage("Xáo trộn hàng đợi"),
+    "similarToTitle": m1,
     "singles": MessageLookupByLibrary.simpleMessage("Đĩa đơn"),
     "skipSilence": MessageLookupByLibrary.simpleMessage("Bỏ qua khoảng lặng"),
     "skipSilenceDes": MessageLookupByLibrary.simpleMessage(
@@ -823,7 +953,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Bộ hẹn giờ tắt của bạn đã được đặt",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Hẹn giờ tắt"),
-    "slide_indicator": m1,
+    "slide_indicator": m2,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "Bài hát đã được thêm vào danh sách phát!",
     ),
@@ -850,9 +980,16 @@ class MessageLookup extends MessageLookupByLibrary {
       "Bạn không thể xóa bài hát đang phát",
     ),
     "songs": MessageLookupByLibrary.simpleMessage("Bài hát"),
+    "songsImportedFromJossMusic": MessageLookupByLibrary.simpleMessage(
+      "Bài hát được nhập từ Joss Music Kotlin",
+    ),
     "speedAndPitch": MessageLookupByLibrary.simpleMessage("Tốc độ và cao độ"),
     "standard": MessageLookupByLibrary.simpleMessage("Tiêu Chuẩn"),
     "startRadio": MessageLookupByLibrary.simpleMessage("Bắt đầu đài phát"),
+    "startupScreen": MessageLookupByLibrary.simpleMessage("Mở khi khởi động"),
+    "startupScreenDescription": MessageLookupByLibrary.simpleMessage(
+      "Chọn phần Estrella Music mở đầu tiên",
+    ),
     "status": MessageLookupByLibrary.simpleMessage("Trạng thái"),
     "stopMusicOnTaskClear": MessageLookupByLibrary.simpleMessage(
       "Dừng nhạc khi xóa khỏi tác vụ gần đây",
@@ -870,6 +1007,62 @@ class MessageLookup extends MessageLookupByLibrary {
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
       "Vuốt để khám phá các tùy chọn ➔",
     ),
+    "syncChangesConfirmed": m3,
+    "syncChangesSynced": m4,
+    "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
+      "Đã kích hoạt chế độ đám mây. Đang tải xuống thư viện hiện có.",
+    ),
+    "syncCloudMigrationComplete": MessageLookupByLibrary.simpleMessage(
+      "Đã kích hoạt chế độ đám mây. Thư viện đã di chuyển.",
+    ),
+    "syncCloudPending": MessageLookupByLibrary.simpleMessage(
+      "Chế độ đám mây đang hoạt động. Đang chờ đồng bộ hóa.",
+    ),
+    "syncDownloadFailed": MessageLookupByLibrary.simpleMessage(
+      "Không thể tải xuống đồng bộ hóa.",
+    ),
+    "syncDownloading": MessageLookupByLibrary.simpleMessage(
+      "Đang tải xuống các thay đổi của EMusic...",
+    ),
+    "syncLibrarySynced": MessageLookupByLibrary.simpleMessage(
+      "Thư viện đồng bộ.",
+    ),
+    "syncLibraryUpToDate": MessageLookupByLibrary.simpleMessage(
+      "Thư viện cập nhật.",
+    ),
+    "syncLocalChangesFirst": MessageLookupByLibrary.simpleMessage(
+      "Có những thay đổi mới ở địa phương. Chúng sẽ được tải lên trước khi tải xuống.",
+    ),
+    "syncLocalDeviceOnly": MessageLookupByLibrary.simpleMessage(
+      "Dữ liệu của bạn chỉ được lưu giữ trên thiết bị này.",
+    ),
+    "syncLocalModeActive": MessageLookupByLibrary.simpleMessage(
+      "Chế độ cục bộ đang hoạt động",
+    ),
+    "syncOfflinePending": MessageLookupByLibrary.simpleMessage(
+      "Ngoại tuyến. Những thay đổi đang chờ xử lý.",
+    ),
+    "syncOfflineRetry": MessageLookupByLibrary.simpleMessage(
+      "Ngoại tuyến. Đã lưu các thay đổi để thử lại.",
+    ),
+    "syncUnconfirmedRetry": MessageLookupByLibrary.simpleMessage(
+      "EMusic không xác nhận tất cả những thay đổi. Họ sẽ được thử lại.",
+    ),
+    "syncUploadRetry": MessageLookupByLibrary.simpleMessage(
+      "Không thể đứng dậy được. Nó sẽ được thử lại sau.",
+    ),
+    "syncUploadSuccess": MessageLookupByLibrary.simpleMessage(
+      "Các thay đổi được tải lên chính xác.",
+    ),
+    "syncUploadSuccessWs": MessageLookupByLibrary.simpleMessage(
+      "Các thay đổi đã được tải lên thành công (WS).",
+    ),
+    "syncUploadWsRetry": MessageLookupByLibrary.simpleMessage(
+      "Không thể tải lên bằng WS. Nó sẽ được thử lại sau.",
+    ),
+    "syncUploading": MessageLookupByLibrary.simpleMessage(
+      "Đang tải các thay đổi lên EMusic...",
+    ),
     "synced": MessageLookupByLibrary.simpleMessage("Đã đồng bộ hóa"),
     "syncedLyricsNotAvailable": MessageLookupByLibrary.simpleMessage(
       "Lời bài hát được đồng bộ hóa không có!",
@@ -885,9 +1078,18 @@ class MessageLookup extends MessageLookupByLibrary {
     "unlinkAlert": MessageLookupByLibrary.simpleMessage(
       "Hủy liên kết thành công!",
     ),
+    "untitledSong": MessageLookupByLibrary.simpleMessage("Bài hát không tên"),
     "upNext": MessageLookupByLibrary.simpleMessage("Kế tiếp"),
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "Nhấn vào liên kết được phát hiện để mở nội dung",
+    ),
+    "userBlocked": MessageLookupByLibrary.simpleMessage("Người dùng bị chặn"),
+    "userListMissing": MessageLookupByLibrary.simpleMessage(
+      "Phản hồi không chứa danh sách người dùng.",
+    ),
+    "userSearchFailed": m5,
+    "userUnblocked": MessageLookupByLibrary.simpleMessage(
+      "Người dùng đã được mở khóa",
     ),
     "username": MessageLookupByLibrary.simpleMessage("Tên người dùng"),
     "video": MessageLookupByLibrary.simpleMessage("Băng hình"),

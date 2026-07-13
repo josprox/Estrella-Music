@@ -249,6 +249,7 @@ void _setAppInitPrefs() {
       'streamingQuality': 1,
       'themePrimaryColor': 4278199603,
       'discoverContentType': "QP",
+      'startupTabIndex': 0,
       'newVersionVisibility': updateCheckFlag,
       "cacheHomeScreenData": true,
       "restrorePlaybackSession": true,

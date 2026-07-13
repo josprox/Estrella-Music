@@ -11,6 +11,7 @@ import 'package:sqlite3/sqlite3.dart';
 import 'package:harmonymusic/models/album.dart';
 import 'package:harmonymusic/models/artist.dart';
 import 'package:harmonymusic/models/playlist.dart';
+import 'package:harmonymusic/generated/l10n.dart';
 import 'package:harmonymusic/ui/screens/Library/library_controller.dart';
 import 'package:harmonymusic/utils/helpers/helper.dart';
 import 'package:harmonymusic/services/music/music_service.dart';
@@ -61,7 +62,8 @@ class LegacyMusicMigrationService extends GetxService {
 
     try {
       if (resolved.settingsFile != null) {
-        final visitorId = _extractVisitorDataFromSettings(resolved.settingsFile!);
+        final visitorId =
+            _extractVisitorDataFromSettings(resolved.settingsFile!);
         if (visitorId != null && visitorId.isNotEmpty) {
           Get.find<MusicServices>().setVisitorId(visitorId);
         }
@@ -128,8 +130,7 @@ class LegacyMusicMigrationService extends GetxService {
       String selectedPath) async {
     final file = File(selectedPath);
     if (!await file.exists()) {
-      throw const FileSystemException(
-          'No se encontró el archivo seleccionado.');
+      throw FileSystemException(S.current.selectedFileNotFound);
     }
 
     final lowerPath = selectedPath.toLowerCase();
@@ -283,7 +284,7 @@ class LegacyMusicMigrationService extends GetxService {
       }
       songs[id] = _LegacySong(
         id: id,
-        title: row['title']?.toString() ?? 'Sin título',
+        title: row['title']?.toString() ?? S.current.untitledSong,
         durationSeconds: _asInt(row['duration']) ?? 0,
         thumbnailUrl: row['thumbnailUrl']?.toString(),
         albumId: row['albumId']?.toString(),
@@ -323,7 +324,7 @@ class LegacyMusicMigrationService extends GetxService {
           legacyId: playlistId,
           title: row['playlistName']?.toString().trim().isNotEmpty == true
               ? row['playlistName'].toString().trim()
-              : 'Playlist migrada',
+              : S.current.migratedPlaylist,
           songs: <_LegacySong>[],
         ),
       );
@@ -406,7 +407,7 @@ class LegacyMusicMigrationService extends GetxService {
         id: id,
         title: row['title']?.toString() ??
             relatedSongs.firstOrNull?.albumName ??
-            'Álbum migrado',
+            S.current.migratedAlbum,
         year: row['year']?.toString(),
         thumbnailUrl: row['thumbnailUrl']?.toString(),
         artists: albumArtists[id] ?? _fallbackAlbumArtists(relatedSongs),
@@ -420,7 +421,7 @@ class LegacyMusicMigrationService extends GetxService {
       }
       albums[entry.key] = _LegacyAlbum(
         id: entry.key,
-        title: entry.value.first.albumName ?? 'Álbum migrado',
+        title: entry.value.first.albumName ?? S.current.migratedAlbum,
         year: null,
         thumbnailUrl: entry.value.first.thumbnailUrl,
         artists: _fallbackAlbumArtists(entry.value),
@@ -545,7 +546,8 @@ class LegacyMusicMigrationService extends GetxService {
           .map((songId) => songs[songId])
           .whereType<_LegacySong>()
           .toList();
-      final legacyPlaylistBox = await SqliteStore.openBox(legacyLibraryPlaylistId);
+      final legacyPlaylistBox =
+          await SqliteStore.openBox(legacyLibraryPlaylistId);
       await legacyPlaylistBox.clear();
       for (var index = 0; index < legacySongs.length; index++) {
         await legacyPlaylistBox.put(index, legacySongs[index].toHarmonyJson());
@@ -558,10 +560,10 @@ class LegacyMusicMigrationService extends GetxService {
       await libraryPlaylistsBox.put(
         legacyLibraryPlaylistId,
         Playlist(
-          title: 'Biblioteca migrada',
+          title: S.current.migratedLibrary,
           playlistId: legacyLibraryPlaylistId,
           thumbnailUrl: thumbnail,
-          description: 'Canciones importadas desde Joss Music Kotlin',
+          description: S.current.songsImportedFromJossMusic,
           isCloudPlaylist: false,
         ).toJson(),
       );
@@ -590,7 +592,7 @@ class LegacyMusicMigrationService extends GetxService {
           title: playlist.title,
           playlistId: playlistId,
           thumbnailUrl: playlist.songs.first.thumbnailOrFallback,
-          description: 'Migrada desde Joss Music Kotlin',
+          description: S.current.importedFromJossMusic,
           isCloudPlaylist: false,
         ).toJson(),
       );
@@ -615,7 +617,7 @@ class LegacyMusicMigrationService extends GetxService {
           browseId: album.id,
           artists: album.artists,
           year: album.year,
-          description: 'Migrado desde Joss Music Kotlin',
+          description: S.current.importedFromJossMusic,
           thumbnailUrl: album.thumbnailOrFallback,
         ).toJson(),
       );
@@ -639,6 +641,9 @@ class LegacyMusicMigrationService extends GetxService {
   }
 
   void _refreshLibraryControllers() {
+    if (Get.isRegistered<LibrarySongsController>()) {
+      Get.find<LibrarySongsController>().refreshCollections();
+    }
     if (Get.isRegistered<LibraryPlaylistsController>()) {
       Get.find<LibraryPlaylistsController>().refreshLib();
     }
@@ -675,7 +680,8 @@ class LegacyMusicMigrationService extends GetxService {
   List<String> _loadSearchHistory(Database database) {
     final history = <String>[];
     try {
-      final rows = database.select('SELECT query FROM search_history ORDER BY id DESC');
+      final rows =
+          database.select('SELECT query FROM search_history ORDER BY id DESC');
       for (final row in rows) {
         final query = row['query']?.toString();
         if (query != null && query.isNotEmpty) {
@@ -796,7 +802,7 @@ class _LegacySong {
       'album': albumId != null && albumId!.isNotEmpty
           ? {
               'id': albumId,
-              'name': albumName ?? 'Álbum',
+              'name': albumName ?? S.current.genericAlbum,
             }
           : null,
       'artists': artists

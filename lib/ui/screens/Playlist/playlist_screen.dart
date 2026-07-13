@@ -178,7 +178,7 @@ class PlaylistScreen extends StatelessWidget {
                                             if (isCloud)
                                               ListTile(
                                                 leading: const Icon(Icons.people),
-                                                title: const Text("Gestionar colaboradores (amigos)"),
+                                                title: Text(S.current.manageCollaborators),
                                                 onTap: () {
                                                   Navigator.of(context).pop();
                                                   _showCollaboratorsDialog(context, playlistController.playlist.value);
@@ -594,7 +594,7 @@ class PlaylistScreen extends StatelessWidget {
                                             playlistController.isArranging.value = false;
                                           },
                                           icon: const Icon(Icons.check),
-                                          label: const Text("Listo"),
+                                          label: Text(S.current.done),
                                           style: ElevatedButton.styleFrom(
                                             backgroundColor: Theme.of(context).colorScheme.secondary,
                                             foregroundColor: Theme.of(context).colorScheme.onSecondary,
@@ -787,11 +787,12 @@ class PlaylistScreen extends StatelessWidget {
       context: context,
       builder: (context) => AlertDialog(
         backgroundColor: const Color(0xFF0F1B26),
-        title: const Row(
+        title: Row(
           children: [
-            Icon(Icons.people_alt_rounded, color: Color(0xFFFF9F1C)),
-            SizedBox(width: 10),
-            Text("Colaboradores de la Playlist", style: TextStyle(color: Colors.white, fontSize: 16)),
+            const Icon(Icons.people_alt_rounded, color: Color(0xFFFF9F1C)),
+            const SizedBox(width: 10),
+            Text(S.current.playlistCollaboratorsTitle,
+                style: const TextStyle(color: Colors.white, fontSize: 16)),
           ],
         ),
         content: StatefulBuilder(
@@ -800,9 +801,10 @@ class PlaylistScreen extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
-                  "Selecciona los amigos que podrán ver y editar esta lista de reproducción:",
-                  style: TextStyle(color: Colors.white70, fontSize: 12.5, height: 1.4),
+                Text(
+                  S.current.collaboratorsInstruction,
+                  style: const TextStyle(
+                      color: Colors.white70, fontSize: 12.5, height: 1.4),
                 ),
                 const SizedBox(height: 14),
                 FutureBuilder<List<Map<String, dynamic>>>(
@@ -817,11 +819,12 @@ class PlaylistScreen extends StatelessWidget {
                       );
                     }
                     if (snapshot.hasError || snapshot.data == null || snapshot.data!.isEmpty) {
-                      return const Padding(
-                        padding: EdgeInsets.symmetric(vertical: 12.0),
+                      return Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 12.0),
                         child: Text(
-                          "No tienes amigos agregados en Joss Red.",
-                          style: TextStyle(fontSize: 12.5, color: Colors.white54),
+                          S.current.noJossRedFriends,
+                          style: const TextStyle(
+                              fontSize: 12.5, color: Colors.white54),
                         ),
                       );
                     }
@@ -840,7 +843,7 @@ class PlaylistScreen extends StatelessWidget {
                             for (var friend in friends) ...[
                               (() {
                                 final friendId = friend['id'] ?? friend['username'];
-                                final friendName = friend['name'] ?? friend['username'] ?? 'Amigo';
+                                final friendName = friend['name'] ?? friend['username'] ?? S.current.friendFallback;
                                 final isChecked = selectedFriends.any((c) => (c is Map ? c['id'] : c) == friendId);
                                 return CheckboxListTile(
                                   dense: true,
@@ -877,13 +880,16 @@ class PlaylistScreen extends StatelessWidget {
         actions: [
           TextButton(
             onPressed: () => Navigator.of(context).pop(),
-            child: const Text("Cancelar", style: TextStyle(color: Colors.white54)),
+            child: Text(S.current.cancel,
+                style: const TextStyle(color: Colors.white54)),
           ),
           ElevatedButton(
             onPressed: () async {
               playlist.collaborators = selectedFriends;
               playlist.isCollaborative = selectedFriends.isNotEmpty;
-              playlist.description = playlist.isCollaborative ? "Collaborative Playlist" : "Library Playlist";
+              playlist.description = playlist.isCollaborative
+                  ? S.current.collaborativePlaylistDescription
+                  : S.current.libraryPlaylistDescription;
               
               final box = await SqliteStore.openBox("LibraryPlaylists");
               await box.put(playlist.playlistId, playlist.toJson());
@@ -894,7 +900,8 @@ class PlaylistScreen extends StatelessWidget {
               if (context.mounted) {
                 Navigator.of(context).pop();
                 ScaffoldMessenger.of(context).showSnackBar(
-                  snackbar(context, "Colaboradores actualizados correctamente.", size: SanckBarSize.MEDIUM),
+                  snackbar(context, S.current.collaboratorsUpdated,
+                      size: SanckBarSize.MEDIUM),
                 );
               }
             },
@@ -902,7 +909,8 @@ class PlaylistScreen extends StatelessWidget {
               backgroundColor: const Color(0xFFFF9F1C),
               foregroundColor: Colors.black,
             ),
-            child: const Text("Guardar", style: TextStyle(fontWeight: FontWeight.bold)),
+            child: Text(S.current.save,
+                style: const TextStyle(fontWeight: FontWeight.bold)),
           ),
         ],
       ),

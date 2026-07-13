@@ -1,5 +1,4 @@
-﻿import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:flutter/material.dart';
 
 class ScrollToHideWidget extends StatelessWidget {
   const ScrollToHideWidget(
@@ -9,11 +8,12 @@ class ScrollToHideWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedContainer(
-      duration: const Duration(milliseconds: 200),
-      height: isVisible ? 80.0 + Get.mediaQuery.viewPadding.bottom : 0.0,
-      child: SingleChildScrollView(
-        physics: const NeverScrollableScrollPhysics(),
+    return ClipRect(
+      child: AnimatedAlign(
+        alignment: Alignment.topCenter,
+        heightFactor: isVisible ? 1.0 : 0.0,
+        curve: Curves.easeInOutCubic,
+        duration: const Duration(milliseconds: 200),
         child: child,
       ),
     );

@@ -104,6 +104,726 @@ class S {
     return Intl.message('Library Songs', name: 'libSongs', desc: '', args: []);
   }
 
+  /// `Migrated library`
+  String get migratedLibrary {
+    return Intl.message(
+      'Migrated library',
+      name: 'migratedLibrary',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `There are no songs in this collection`
+  String get noSongsInCollection {
+    return Intl.message(
+      'There are no songs in this collection',
+      name: 'noSongsInCollection',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Open on startup`
+  String get startupScreen {
+    return Intl.message(
+      'Open on startup',
+      name: 'startupScreen',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Choose the section that Estrella Music opens first`
+  String get startupScreenDescription {
+    return Intl.message(
+      'Choose the section that Estrella Music opens first',
+      name: 'startupScreenDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Friends`
+  String get friends {
+    return Intl.message('Friends', name: 'friends', desc: '', args: []);
+  }
+
+  /// `Daily discovery`
+  String get dailyDiscover {
+    return Intl.message(
+      'Daily discovery',
+      name: 'dailyDiscover',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `keep listening`
+  String get keepListening {
+    return Intl.message(
+      'keep listening',
+      name: 'keepListening',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Similar to {title}`
+  String similarToTitle(String title) {
+    return Intl.message(
+      'Similar to $title',
+      name: 'similarToTitle',
+      desc: '',
+      args: [title],
+    );
+  }
+
+  /// `Piped Playlist`
+  String get pipedPlaylistDescription {
+    return Intl.message(
+      'Piped Playlist',
+      name: 'pipedPlaylistDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Collaborative Playlist`
+  String get collaborativePlaylistDescription {
+    return Intl.message(
+      'Collaborative Playlist',
+      name: 'collaborativePlaylistDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Library Playlist`
+  String get libraryPlaylistDescription {
+    return Intl.message(
+      'Library Playlist',
+      name: 'libraryPlaylistDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Untitled song`
+  String get untitledSong {
+    return Intl.message(
+      'Untitled song',
+      name: 'untitledSong',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Migrated Playlist`
+  String get migratedPlaylist {
+    return Intl.message(
+      'Migrated Playlist',
+      name: 'migratedPlaylist',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Migrated album`
+  String get migratedAlbum {
+    return Intl.message(
+      'Migrated album',
+      name: 'migratedAlbum',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Songs imported from Joss Music Kotlin`
+  String get songsImportedFromJossMusic {
+    return Intl.message(
+      'Songs imported from Joss Music Kotlin',
+      name: 'songsImportedFromJossMusic',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Imported from Joss Music Kotlin`
+  String get importedFromJossMusic {
+    return Intl.message(
+      'Imported from Joss Music Kotlin',
+      name: 'importedFromJossMusic',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Local mode active`
+  String get syncLocalModeActive {
+    return Intl.message(
+      'Local mode active',
+      name: 'syncLocalModeActive',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cloud mode active. `
+  String get syncCloudPending {
+    return Intl.message(
+      'Cloud mode active. ',
+      name: 'syncCloudPending',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cloud mode activated. `
+  String get syncCloudDownloadingExisting {
+    return Intl.message(
+      'Cloud mode activated. ',
+      name: 'syncCloudDownloadingExisting',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cloud mode activated. `
+  String get syncCloudMigrationComplete {
+    return Intl.message(
+      'Cloud mode activated. ',
+      name: 'syncCloudMigrationComplete',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your data is kept only on this device.`
+  String get syncLocalDeviceOnly {
+    return Intl.message(
+      'Your data is kept only on this device.',
+      name: 'syncLocalDeviceOnly',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Downloading EMusic changes...`
+  String get syncDownloading {
+    return Intl.message(
+      'Downloading EMusic changes...',
+      name: 'syncDownloading',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Failed to download sync.`
+  String get syncDownloadFailed {
+    return Intl.message(
+      'Failed to download sync.',
+      name: 'syncDownloadFailed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `There are new local changes. `
+  String get syncLocalChangesFirst {
+    return Intl.message(
+      'There are new local changes. ',
+      name: 'syncLocalChangesFirst',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Synchronized library.`
+  String get syncLibrarySynced {
+    return Intl.message(
+      'Synchronized library.',
+      name: 'syncLibrarySynced',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Offline. `
+  String get syncOfflinePending {
+    return Intl.message(
+      'Offline. ',
+      name: 'syncOfflinePending',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Library up to date.`
+  String get syncLibraryUpToDate {
+    return Intl.message(
+      'Library up to date.',
+      name: 'syncLibraryUpToDate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `{count} synchronized changes.`
+  String syncChangesSynced(int count) {
+    return Intl.message(
+      '$count synchronized changes.',
+      name: 'syncChangesSynced',
+      desc: '',
+      args: [count],
+    );
+  }
+
+  /// `Uploading changes to EMusic...`
+  String get syncUploading {
+    return Intl.message(
+      'Uploading changes to EMusic...',
+      name: 'syncUploading',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Changes uploaded successfully (WS).`
+  String get syncUploadSuccessWs {
+    return Intl.message(
+      'Changes uploaded successfully (WS).',
+      name: 'syncUploadSuccessWs',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Could not upload using WS. `
+  String get syncUploadWsRetry {
+    return Intl.message(
+      'Could not upload using WS. ',
+      name: 'syncUploadWsRetry',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Changes uploaded correctly.`
+  String get syncUploadSuccess {
+    return Intl.message(
+      'Changes uploaded correctly.',
+      name: 'syncUploadSuccess',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Could not get up. `
+  String get syncUploadRetry {
+    return Intl.message(
+      'Could not get up. ',
+      name: 'syncUploadRetry',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Offline. `
+  String get syncOfflineRetry {
+    return Intl.message(
+      'Offline. ',
+      name: 'syncOfflineRetry',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `EMusic did not confirm all the changes. `
+  String get syncUnconfirmedRetry {
+    return Intl.message(
+      'EMusic did not confirm all the changes. ',
+      name: 'syncUnconfirmedRetry',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `{count} changes committed.`
+  String syncChangesConfirmed(int count) {
+    return Intl.message(
+      '$count changes committed.',
+      name: 'syncChangesConfirmed',
+      desc: '',
+      args: [count],
+    );
+  }
+
+  /// `There is already a migration in progress.`
+  String get migrationAlreadyRunning {
+    return Intl.message(
+      'There is already a migration in progress.',
+      name: 'migrationAlreadyRunning',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Log in to Joss Red before migrating.`
+  String get migrationLoginRequired {
+    return Intl.message(
+      'Log in to Joss Red before migrating.',
+      name: 'migrationLoginRequired',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Checking if EMusic Cloud already has a library...`
+  String get migrationCheckingCloud {
+    return Intl.message(
+      'Checking if EMusic Cloud already has a library...',
+      name: 'migrationCheckingCloud',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A cloud library was found. `
+  String get cloudLibraryFoundDeviceWillDownload {
+    return Intl.message(
+      'A cloud library was found. ',
+      name: 'cloudLibraryFoundDeviceWillDownload',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cloud library found.`
+  String get cloudLibraryFound {
+    return Intl.message(
+      'Cloud library found.',
+      name: 'cloudLibraryFound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Creating a local backup before connecting cloud...`
+  String get migrationCreatingBackup {
+    return Intl.message(
+      'Creating a local backup before connecting cloud...',
+      name: 'migrationCreatingBackup',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Analyzing the local library...`
+  String get migrationAnalyzingLocal {
+    return Intl.message(
+      'Analyzing the local library...',
+      name: 'migrationAnalyzingLocal',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Preparing the migration in EMusic Cloud...`
+  String get migrationPreparingCloud {
+    return Intl.message(
+      'Preparing the migration in EMusic Cloud...',
+      name: 'migrationPreparingCloud',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `EMusic Cloud could not start the migration.`
+  String get migrationStartFailed {
+    return Intl.message(
+      'EMusic Cloud could not start the migration.',
+      name: 'migrationStartFailed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Uploading playlists, favorites and history...`
+  String get migrationUploadingData {
+    return Intl.message(
+      'Uploading playlists, favorites and history...',
+      name: 'migrationUploadingData',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Not all data could be uploaded. `
+  String get migrationUploadIncomplete {
+    return Intl.message(
+      'Not all data could be uploaded. ',
+      name: 'migrationUploadIncomplete',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Verifying integrity in EMusic Cloud...`
+  String get migrationVerifyingIntegrity {
+    return Intl.message(
+      'Verifying integrity in EMusic Cloud...',
+      name: 'migrationVerifyingIntegrity',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `EMusic Cloud could not validate the migration.`
+  String get migrationValidationFailed {
+    return Intl.message(
+      'EMusic Cloud could not validate the migration.',
+      name: 'migrationValidationFailed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cloud mode is ready. `
+  String get cloudModeReadyOfflineCache {
+    return Intl.message(
+      'Cloud mode is ready. ',
+      name: 'cloudModeReadyOfflineCache',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Migration completed.`
+  String get migrationCompleted {
+    return Intl.message(
+      'Migration completed.',
+      name: 'migrationCompleted',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The migration failed. `
+  String get migrationFailedLocalPreserved {
+    return Intl.message(
+      'The migration failed. ',
+      name: 'migrationFailedLocalPreserved',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your session has expired. `
+  String get sessionExpiredLoginAgain {
+    return Intl.message(
+      'Your session has expired. ',
+      name: 'sessionExpiredLoginAgain',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The selected file was not found.`
+  String get selectedFileNotFound {
+    return Intl.message(
+      'The selected file was not found.',
+      name: 'selectedFileNotFound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Album`
+  String get genericAlbum {
+    return Intl.message('Album', name: 'genericAlbum', desc: '', args: []);
+  }
+
+  /// `Sign in to find friends.`
+  String get friendsLoginRequired {
+    return Intl.message(
+      'Sign in to find friends.',
+      name: 'friendsLoginRequired',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The session does not contain a valid token.`
+  String get invalidSessionToken {
+    return Intl.message(
+      'The session does not contain a valid token.',
+      name: 'invalidSessionToken',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Could not search for users ({statusCode}).`
+  String userSearchFailed(int statusCode) {
+    return Intl.message(
+      'Could not search for users ($statusCode).',
+      name: 'userSearchFailed',
+      desc: '',
+      args: [statusCode],
+    );
+  }
+
+  /// `Invalid server response.`
+  String get invalidServerResponse {
+    return Intl.message(
+      'Invalid server response.',
+      name: 'invalidServerResponse',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The response does not contain a list of users.`
+  String get userListMissing {
+    return Intl.message(
+      'The response does not contain a list of users.',
+      name: 'userListMissing',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Playlist contributors`
+  String get playlistCollaboratorsTitle {
+    return Intl.message(
+      'Playlist contributors',
+      name: 'playlistCollaboratorsTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select the friends who will be able to see and edit this playlist:`
+  String get collaboratorsInstruction {
+    return Intl.message(
+      'Select the friends who will be able to see and edit this playlist:',
+      name: 'collaboratorsInstruction',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You have no added friends on Joss Red.`
+  String get noJossRedFriends {
+    return Intl.message(
+      'You have no added friends on Joss Red.',
+      name: 'noJossRedFriends',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Friend`
+  String get friendFallback {
+    return Intl.message('Friend', name: 'friendFallback', desc: '', args: []);
+  }
+
+  /// `Collaborators updated correctly.`
+  String get collaboratorsUpdated {
+    return Intl.message(
+      'Collaborators updated correctly.',
+      name: 'collaboratorsUpdated',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Keep`
+  String get save {
+    return Intl.message('Keep', name: 'save', desc: '', args: []);
+  }
+
+  /// `Manage collaborators (friends)`
+  String get manageCollaborators {
+    return Intl.message(
+      'Manage collaborators (friends)',
+      name: 'manageCollaborators',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ready`
+  String get done {
+    return Intl.message('Ready', name: 'done', desc: '', args: []);
+  }
+
+  /// `Not authenticated`
+  String get notAuthenticated {
+    return Intl.message(
+      'Not authenticated',
+      name: 'notAuthenticated',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mistake`
+  String get genericError {
+    return Intl.message('Mistake', name: 'genericError', desc: '', args: []);
+  }
+
+  /// `Friend request sent`
+  String get friendRequestSent {
+    return Intl.message(
+      'Friend request sent',
+      name: 'friendRequestSent',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Friend request accepted`
+  String get friendRequestAccepted {
+    return Intl.message(
+      'Friend request accepted',
+      name: 'friendRequestAccepted',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Friendship removed`
+  String get friendshipRemoved {
+    return Intl.message(
+      'Friendship removed',
+      name: 'friendshipRemoved',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Blocked user`
+  String get userBlocked {
+    return Intl.message(
+      'Blocked user',
+      name: 'userBlocked',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Unlocked user`
+  String get userUnblocked {
+    return Intl.message(
+      'Unlocked user',
+      name: 'userUnblocked',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Library Playlists`
   String get libPlaylists {
     return Intl.message(

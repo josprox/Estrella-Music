@@ -1,49 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:harmonymusic/generated/l10n.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class NewsCard extends StatelessWidget {
   const NewsCard({super.key});
-
-  static const Map<String, Map<String, String>> _translations = {
-    'es': {
-      'news_card_title': '¡Estrella Music ha evolucionado!',
-      'news_card_subtitle': 'Sincronización 100% con Joss Red, playlists con amigos y mucho más. Toca para ver lo nuevo.',
-      'news_dialog_title': 'Novedades de Estrella Music',
-      'news_item_sync_title': 'Integración Total con Joss Red',
-      'news_item_sync_desc': 'Tus playlists y favoritos ahora se guardan y sincronizan en la nube automáticamente con tu cuenta principal de Joss Red.',
-      'news_item_collab_title': 'Playlists Colaborativas',
-      'news_item_collab_desc': '¡Crea listas de reproducción con tus amigos! Al crear una playlist, selecciona la casilla de Colaborativa y elige a tus amigos para que editen juntos.',
-      'news_item_trans_title': 'Sincronización Transparente',
-      'news_item_trans_desc': 'Ya no necesitas dar clics a botones de sincronización manual; el nuevo motor se encarga de subir y bajar cambios automáticamente.',
-      'news_dialog_section_friends': 'Gestión de Amigos y Cuenta:',
-      'news_dialog_friends_desc': 'Para añadir amigos, aceptar solicitudes o gestionar tu perfil de seguridad, por favor utiliza Joss Red en sus plataformas oficiales:',
-      'news_btn_app': 'Joss Red App (Play Store)',
-      'news_btn_web': 'Joss Red Web',
-      'news_btn_dismiss': 'Entendido'
-    },
-    'en': {
-      'news_card_title': 'Estrella Music has evolved!',
-      'news_card_subtitle': '100% synchronized with Joss Red, playlists with friends and much more. Tap to see what is new.',
-      'news_dialog_title': 'What\'s New in Estrella Music',
-      'news_item_sync_title': 'Total Joss Red Integration',
-      'news_item_sync_desc': 'Your playlists and favorites are now automatically saved and synced to the cloud with your main Joss Red account.',
-      'news_item_collab_title': 'Collaborative Playlists',
-      'news_item_collab_desc': 'Create playlists with your friends! When creating a playlist, check the Collaborative box and select friends to edit together.',
-      'news_item_trans_title': 'Seamless Synchronization',
-      'news_item_trans_desc': 'No more manual sync button taps; the new engine handles uploading and downloading changes automatically.',
-      'news_dialog_section_friends': 'Friends & Account Management:',
-      'news_dialog_friends_desc': 'To add friends, accept requests, or manage your security profile, please use Joss Red on its official platforms:',
-      'news_btn_app': 'Joss Red App (Play Store)',
-      'news_btn_web': 'Joss Red Web',
-      'news_btn_dismiss': 'Got it'
-    }
-  };
-
-  String _getTxt(BuildContext context, String key) {
-    final locale = Localizations.localeOf(context).languageCode;
-    final langMap = _translations[locale] ?? _translations['es']!;
-    return langMap[key] ?? '';
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -91,7 +51,7 @@ class NewsCard extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        _getTxt(context, 'news_card_title'),
+                        S.of(context).news_card_title,
                         style: const TextStyle(
                           color: Colors.white,
                           fontSize: 15,
@@ -100,7 +60,7 @@ class NewsCard extends StatelessWidget {
                       ),
                       const SizedBox(height: 3),
                       Text(
-                        _getTxt(context, 'news_card_subtitle'),
+                        S.of(context).news_card_subtitle,
                         style: TextStyle(
                           color: Colors.white.withValues(alpha: 0.9),
                           fontSize: 12.5,
@@ -131,7 +91,8 @@ class NewsCard extends StatelessWidget {
           children: [
             const Icon(Icons.campaign_rounded, color: Color(0xFFFF9F1C)),
             const SizedBox(width: 10),
-            Text(_getTxt(context, 'news_dialog_title'), style: const TextStyle(color: Colors.white)),
+            Text(S.of(context).news_dialog_title,
+                style: const TextStyle(color: Colors.white)),
           ],
         ),
         content: SingleChildScrollView(
@@ -142,41 +103,45 @@ class NewsCard extends StatelessWidget {
               _buildNewsItem(
                 context,
                 Icons.cloud_done_rounded,
-                _getTxt(context, 'news_item_sync_title'),
-                _getTxt(context, 'news_item_sync_desc'),
+                S.of(context).news_item_sync_title,
+                S.of(context).news_item_sync_desc,
               ),
               const SizedBox(height: 12),
               _buildNewsItem(
                 context,
                 Icons.people_alt_rounded,
-                _getTxt(context, 'news_item_collab_title'),
-                _getTxt(context, 'news_item_collab_desc'),
+                S.of(context).news_item_collab_title,
+                S.of(context).news_item_collab_desc,
               ),
               const SizedBox(height: 12),
               _buildNewsItem(
                 context,
                 Icons.sync_rounded,
-                _getTxt(context, 'news_item_trans_title'),
-                _getTxt(context, 'news_item_trans_desc'),
+                S.of(context).news_item_trans_title,
+                S.of(context).news_item_trans_desc,
               ),
               const Divider(color: Colors.white24, height: 24),
               Text(
-                _getTxt(context, 'news_dialog_section_friends'),
-                style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 13),
+                S.of(context).news_dialog_section_friends,
+                style: const TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 13),
               ),
               const SizedBox(height: 8),
               Text(
-                _getTxt(context, 'news_dialog_friends_desc'),
-                style: const TextStyle(color: Colors.white70, fontSize: 12.5, height: 1.4),
+                S.of(context).news_dialog_friends_desc,
+                style: const TextStyle(
+                    color: Colors.white70, fontSize: 12.5, height: 1.4),
               ),
               const SizedBox(height: 14),
               _buildLinkButton(
-                _getTxt(context, 'news_btn_app'),
+                S.of(context).news_btn_app,
                 "https://play.google.com/store/apps/details?id=com.josprox.jossestrada",
               ),
               const SizedBox(height: 8),
               _buildLinkButton(
-                _getTxt(context, 'news_btn_web'),
+                S.of(context).news_btn_web,
                 "https://app.joss.red/",
               ),
             ],
@@ -185,14 +150,17 @@ class NewsCard extends StatelessWidget {
         actions: [
           TextButton(
             onPressed: () => Navigator.of(context).pop(),
-            child: Text(_getTxt(context, 'news_btn_dismiss'), style: const TextStyle(color: Color(0xFFFF9F1C), fontWeight: FontWeight.bold)),
+            child: Text(S.of(context).news_btn_dismiss,
+                style: const TextStyle(
+                    color: Color(0xFFFF9F1C), fontWeight: FontWeight.bold)),
           ),
         ],
       ),
     );
   }
 
-  Widget _buildNewsItem(BuildContext context, IconData icon, String title, String description) {
+  Widget _buildNewsItem(
+      BuildContext context, IconData icon, String title, String description) {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -204,12 +172,16 @@ class NewsCard extends StatelessWidget {
             children: [
               Text(
                 title,
-                style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 13.5),
+                style: const TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 13.5),
               ),
               const SizedBox(height: 2),
               Text(
                 description,
-                style: const TextStyle(color: Colors.white70, fontSize: 12.5, height: 1.3),
+                style: const TextStyle(
+                    color: Colors.white70, fontSize: 12.5, height: 1.3),
               ),
             ],
           ),
@@ -224,7 +196,8 @@ class NewsCard extends StatelessWidget {
       height: 40,
       child: ElevatedButton.icon(
         icon: const Icon(Icons.open_in_new_rounded, size: 16),
-        label: Text(label, style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+        label: Text(label,
+            style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
         onPressed: () async {
           final uri = Uri.parse(url);
           if (await canLaunchUrl(uri)) {

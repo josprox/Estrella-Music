@@ -18,7 +18,8 @@ class SongsLibraryWidget extends StatelessWidget {
   Widget _buildExpressiveTitle(BuildContext context, String title) {
     return Center(
       child: Padding(
-        padding: const EdgeInsets.only(top: 20.0, bottom: 8.0, left: 16, right: 16),
+        padding:
+            const EdgeInsets.only(top: 20.0, bottom: 8.0, left: 16, right: 16),
         child: Text(
           title,
           textAlign: TextAlign.center,
@@ -35,16 +36,80 @@ class SongsLibraryWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final topPadding = context.isLandscape ? 30.0 : 70.0;
+    final colorScheme = Theme.of(context).colorScheme;
     return Padding(
       padding: EdgeInsets.only(
         left: 16.0,
         right: 16.0,
-        top: isBottomNavActive ? 10.0 : topPadding,
+        top: isBottomNavActive ? 18.0 : topPadding,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           _buildExpressiveTitle(context, S.current.libSongs),
+          GetX<LibrarySongsController>(builder: (controller) {
+            final filters = <({
+              LibrarySongCollection collection,
+              IconData icon,
+              String label,
+            })>[
+              (
+                collection: LibrarySongCollection.favorites,
+                icon: Icons.favorite_rounded,
+                label: S.current.favorites,
+              ),
+              (
+                collection: LibrarySongCollection.downloads,
+                icon: Icons.download_done_rounded,
+                label: S.current.downloads,
+              ),
+              (
+                collection: LibrarySongCollection.recent,
+                icon: Icons.history_rounded,
+                label: S.current.recentlyPlayed,
+              ),
+              if (controller.hasMigratedLibrary.isTrue)
+                (
+                  collection: LibrarySongCollection.migrated,
+                  icon: Icons.move_to_inbox_rounded,
+                  label: S.current.migratedLibrary,
+                ),
+            ];
+
+            return SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              physics: const BouncingScrollPhysics(),
+              padding: const EdgeInsets.only(bottom: 8),
+              child: Row(
+                children: filters
+                    .map((filter) => Padding(
+                          padding: const EdgeInsets.only(right: 8),
+                          child: ChoiceChip(
+                            avatar: Icon(filter.icon, size: 18),
+                            label: Text(filter.label),
+                            selected: controller.selectedCollection.value ==
+                                filter.collection,
+                            showCheckmark: false,
+                            selectedColor: colorScheme.secondaryContainer,
+                            labelStyle: TextStyle(
+                              color: controller.selectedCollection.value ==
+                                      filter.collection
+                                  ? colorScheme.onSecondaryContainer
+                                  : colorScheme.onSurfaceVariant,
+                              fontWeight: FontWeight.w600,
+                            ),
+                            onSelected:
+                                controller.additionalOperationMode.value ==
+                                        OperationMode.none
+                                    ? (_) => controller
+                                        .selectCollection(filter.collection)
+                                    : null,
+                          ),
+                        ))
+                    .toList(),
+              ),
+            );
+          }),
           Obx(() {
             final libSongsController = Get.find<LibrarySongsController>();
             return Container(
@@ -67,7 +132,9 @@ class SongsLibraryWidget extends StatelessWidget {
                 titleLeftPadding: 9,
                 requiredSortTypes: buildSortTypeSet(true, true),
                 isSearchFeatureRequired: true,
-                isSongDeletetioFeatureRequired: true,
+                isSongDeletetioFeatureRequired:
+                    libSongsController.selectedCollection.value ==
+                        LibrarySongCollection.downloads,
                 onSort: (type, ascending) {
                   libSongsController.onSort(type, ascending);
                 },
@@ -94,8 +161,8 @@ class SongsLibraryWidget extends StatelessWidget {
                         true,
                         isPlaylistOrAlbum: true,
                         playlist: Playlist(
-                            title: "Library Songs",
-                            playlistId: "SongsDownloads",
+                            title: S.current.libSongs,
+                            playlistId: controller.selectedCollectionBoxId,
                             thumbnailUrl: "",
                             isCloudPlaylist: false),
                       )
@@ -106,7 +173,10 @@ class SongsLibraryWidget extends StatelessWidget {
                 : Expanded(
                     child: Center(
                         child: Text(
-                      S.current.noOfflineSong,
+                      controller.selectedCollection.value ==
+                              LibrarySongCollection.downloads
+                          ? S.current.noOfflineSong
+                          : S.current.noSongsInCollection,
                       style: Theme.of(context).textTheme.titleMedium,
                     )),
                   );
@@ -126,7 +196,8 @@ class PlaylistNAlbumLibraryWidget extends StatelessWidget {
   Widget _buildExpressiveTitle(BuildContext context, String title) {
     return Center(
       child: Padding(
-        padding: const EdgeInsets.only(top: 20.0, bottom: 8.0, left: 16, right: 16),
+        padding:
+            const EdgeInsets.only(top: 20.0, bottom: 8.0, left: 16, right: 16),
         child: Text(
           title,
           textAlign: TextAlign.center,
@@ -154,7 +225,7 @@ class PlaylistNAlbumLibraryWidget extends StatelessWidget {
       padding: EdgeInsets.only(
         left: 16.0,
         right: 16.0,
-        top: isBottomNavActive ? 10.0 : topPadding,
+        top: isBottomNavActive ? 18.0 : topPadding,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -300,7 +371,8 @@ class LibraryArtistWidget extends StatelessWidget {
   Widget _buildExpressiveTitle(BuildContext context, String title) {
     return Center(
       child: Padding(
-        padding: const EdgeInsets.only(top: 20.0, bottom: 8.0, left: 16, right: 16),
+        padding:
+            const EdgeInsets.only(top: 20.0, bottom: 8.0, left: 16, right: 16),
         child: Text(
           title,
           textAlign: TextAlign.center,
@@ -322,7 +394,7 @@ class LibraryArtistWidget extends StatelessWidget {
       padding: EdgeInsets.only(
         left: 16.0,
         right: 16.0,
-        top: isBottomNavActive ? 10.0 : topPadding,
+        top: isBottomNavActive ? 18.0 : topPadding,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,

@@ -22,7 +22,15 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(error) => "再生成中にエラーが発生しました: ${error}";
 
-  static String m1(current) => "ステップ ${current}/3";
+  static String m1(title) => "${title}に似ている";
+
+  static String m2(current) => "ステップ ${current}/3";
+
+  static String m3(count) => "${count} の変更がコミットされました。";
+
+  static String m4(count) => "${count} 個の変更が同期されました。";
+
+  static String m5(statusCode) => "ユーザーを検索できませんでした (${statusCode})。";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -149,6 +157,15 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "close": MessageLookupByLibrary.simpleMessage("近い"),
     "closeApp": MessageLookupByLibrary.simpleMessage("アプリを閉じる"),
+    "cloudLibraryFound": MessageLookupByLibrary.simpleMessage(
+      "クラウドライブラリが見つかりました。",
+    ),
+    "cloudLibraryFoundDeviceWillDownload": MessageLookupByLibrary.simpleMessage(
+      "クラウド ライブラリが見つかりました。本機では上書きせずにダウンロードします。",
+    ),
+    "cloudModeReadyOfflineCache": MessageLookupByLibrary.simpleMessage(
+      "クラウドモードの準備が完了しました。このデバイスはオフライン キャッシュとして機能します。",
+    ),
     "cloud_b1": MessageLookupByLibrary.simpleMessage(
       "Joss Red アカウントを使用して安全にログインします。",
     ),
@@ -163,6 +180,15 @@ class MessageLookup extends MessageLookupByLibrary {
       "Joss Red とのリアルタイム同期",
     ),
     "cloud_title": MessageLookupByLibrary.simpleMessage("クラウドモード (推奨)"),
+    "collaborativePlaylistDescription": MessageLookupByLibrary.simpleMessage(
+      "コラボプレイリスト",
+    ),
+    "collaboratorsInstruction": MessageLookupByLibrary.simpleMessage(
+      "このプレイリストを表示および編集できる友達を選択してください:",
+    ),
+    "collaboratorsUpdated": MessageLookupByLibrary.simpleMessage(
+      "コラボレーターは正しく更新されました。",
+    ),
     "communityplaylists": MessageLookupByLibrary.simpleMessage("コミュニティの再生リスト"),
     "content": MessageLookupByLibrary.simpleMessage("コンテンツ"),
     "create": MessageLookupByLibrary.simpleMessage("作成"),
@@ -171,6 +197,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "customInsSelectMsg": MessageLookupByLibrary.simpleMessage(
       "インスタンスを入力してください",
     ),
+    "dailyDiscover": MessageLookupByLibrary.simpleMessage("日々の発見"),
     "dark": MessageLookupByLibrary.simpleMessage("ダーク"),
     "deleteDownloadData": MessageLookupByLibrary.simpleMessage("ダウンロード一覧から除去"),
     "deleteDownloadedDataAlert": MessageLookupByLibrary.simpleMessage(
@@ -185,6 +212,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "disabled": MessageLookupByLibrary.simpleMessage("無効"),
     "discover": MessageLookupByLibrary.simpleMessage("検索"),
     "dismiss": MessageLookupByLibrary.simpleMessage("非表示"),
+    "done": MessageLookupByLibrary.simpleMessage("準備ができて"),
     "dontShowInfoAgain": MessageLookupByLibrary.simpleMessage("再び表示しない"),
     "downFilesFound": MessageLookupByLibrary.simpleMessage(
       "ダウンロード済みファイルが存在します",
@@ -268,6 +296,20 @@ class MessageLookup extends MessageLookupByLibrary {
     "following": MessageLookupByLibrary.simpleMessage("続く"),
     "for1": MessageLookupByLibrary.simpleMessage("語句"),
     "forgottenFavorites": MessageLookupByLibrary.simpleMessage("忘れられたお気に入り"),
+    "friendFallback": MessageLookupByLibrary.simpleMessage("友達"),
+    "friendRequestAccepted": MessageLookupByLibrary.simpleMessage(
+      "友達リクエスト受け付けました",
+    ),
+    "friendRequestSent": MessageLookupByLibrary.simpleMessage(
+      "フレンドリクエストを送信しました",
+    ),
+    "friends": MessageLookupByLibrary.simpleMessage("友達"),
+    "friendsLoginRequired": MessageLookupByLibrary.simpleMessage(
+      "友達を見つけるにはサインインしてください。",
+    ),
+    "friendshipRemoved": MessageLookupByLibrary.simpleMessage("友情が削除されました"),
+    "genericAlbum": MessageLookupByLibrary.simpleMessage("アルバム"),
+    "genericError": MessageLookupByLibrary.simpleMessage("間違い"),
     "genre_electronic": MessageLookupByLibrary.simpleMessage("エレクトロニクス"),
     "genre_hiphop": MessageLookupByLibrary.simpleMessage("ヒップホップ"),
     "genre_jazz": MessageLookupByLibrary.simpleMessage("ジャズ"),
@@ -312,6 +354,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "importPlaylistDesc": MessageLookupByLibrary.simpleMessage(
       "インポートしたい以前エクスポートしたJSONファイルを選択",
     ),
+    "importedFromJossMusic": MessageLookupByLibrary.simpleMessage(
+      "Joss Music Kotlin からインポート",
+    ),
     "importingPlaylist": MessageLookupByLibrary.simpleMessage(
       "再生リストのインポート中...",
     ),
@@ -321,7 +366,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "invalidPlaylistFile": MessageLookupByLibrary.simpleMessage(
       "再生リストのファイル構造が正しくありません",
     ),
+    "invalidServerResponse": MessageLookupByLibrary.simpleMessage(
+      "無効なサーバー応答です。",
+    ),
+    "invalidSessionToken": MessageLookupByLibrary.simpleMessage(
+      "セッションには有効なトークンが含まれていません。",
+    ),
     "items": MessageLookupByLibrary.simpleMessage("項目"),
+    "keepListening": MessageLookupByLibrary.simpleMessage("聞き続けてください"),
     "keepScreenOnWhilePlaying": MessageLookupByLibrary.simpleMessage(
       "再生中は画面を点灯したままにする",
     ),
@@ -337,6 +389,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "libPlaylists": MessageLookupByLibrary.simpleMessage("再生リストのライブラリ"),
     "libSongs": MessageLookupByLibrary.simpleMessage("曲のライブラリ"),
     "library": MessageLookupByLibrary.simpleMessage("ライブラリ"),
+    "libraryPlaylistDescription": MessageLookupByLibrary.simpleMessage(
+      "ライブラリプレイリスト",
+    ),
     "light": MessageLookupByLibrary.simpleMessage("ライト"),
     "link": MessageLookupByLibrary.simpleMessage("ログインする"),
     "linkAlert": MessageLookupByLibrary.simpleMessage("ログインしました！"),
@@ -364,8 +419,51 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "low": MessageLookupByLibrary.simpleMessage("低"),
     "lyricsNotAvailable": MessageLookupByLibrary.simpleMessage("歌詞が利用できません！"),
+    "manageCollaborators": MessageLookupByLibrary.simpleMessage(
+      "コラボレーター（友達）を管理する",
+    ),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
       "マイクの近くで音楽が十分な音量で再生されていることを確認してください。",
+    ),
+    "migratedAlbum": MessageLookupByLibrary.simpleMessage("移行されたアルバム"),
+    "migratedLibrary": MessageLookupByLibrary.simpleMessage("移行されたライブラリ"),
+    "migratedPlaylist": MessageLookupByLibrary.simpleMessage("移行されたプレイリスト"),
+    "migrationAlreadyRunning": MessageLookupByLibrary.simpleMessage(
+      "すでに移行が進行中です。",
+    ),
+    "migrationAnalyzingLocal": MessageLookupByLibrary.simpleMessage(
+      "ローカル ライブラリを分析しています...",
+    ),
+    "migrationCheckingCloud": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud にすでにライブラリがあるかどうかを確認しています...",
+    ),
+    "migrationCompleted": MessageLookupByLibrary.simpleMessage("移行が完了しました。"),
+    "migrationCreatingBackup": MessageLookupByLibrary.simpleMessage(
+      "クラウドに接続する前にローカル バックアップを作成しています...",
+    ),
+    "migrationFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
+      "移行は失敗しました。ローカル データは変更されていません。",
+    ),
+    "migrationLoginRequired": MessageLookupByLibrary.simpleMessage(
+      "移行する前に、Joss Red にログインします。",
+    ),
+    "migrationPreparingCloud": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud で移行を準備しています...",
+    ),
+    "migrationStartFailed": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud は移行を開始できませんでした。",
+    ),
+    "migrationUploadIncomplete": MessageLookupByLibrary.simpleMessage(
+      "すべてのデータをアップロードできませんでした。私たちはあなたの地元のサポートを続けます。",
+    ),
+    "migrationUploadingData": MessageLookupByLibrary.simpleMessage(
+      "プレイリスト、お気に入り、履歴をアップロードしています...",
+    ),
+    "migrationValidationFailed": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud は移行を検証できませんでした。",
+    ),
+    "migrationVerifyingIntegrity": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud の整合性を確認しています...",
     ),
     "migration_btn_select": MessageLookupByLibrary.simpleMessage(
       "ファイルを選択してインポートする",
@@ -413,13 +511,20 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "news_item_trans_title": MessageLookupByLibrary.simpleMessage("透過的な同期"),
     "noBookmarks": MessageLookupByLibrary.simpleMessage("ブックマークなし！"),
+    "noJossRedFriends": MessageLookupByLibrary.simpleMessage(
+      "Joss Red には友達が追加されていません。",
+    ),
     "noLibPlaylist": MessageLookupByLibrary.simpleMessage("再生リストがありませんよ！"),
     "noMatchInstruction": MessageLookupByLibrary.simpleMessage(
       "録音されたオーディオに曲が見つかりませんでした",
     ),
     "noMatchesFound": MessageLookupByLibrary.simpleMessage("一致しません"),
     "noOfflineSong": MessageLookupByLibrary.simpleMessage("オフラインの曲なし！"),
+    "noSongsInCollection": MessageLookupByLibrary.simpleMessage(
+      "このコレクションには曲がありません",
+    ),
     "nomatch": MessageLookupByLibrary.simpleMessage("検索結果なし"),
+    "notAuthenticated": MessageLookupByLibrary.simpleMessage("認証されていません"),
     "notaSongVideo": MessageLookupByLibrary.simpleMessage("曲/音楽の動画ではありません！"),
     "notaValidLink": MessageLookupByLibrary.simpleMessage("リンクが正しくありません！"),
     "openIn": MessageLookupByLibrary.simpleMessage("アプリで開く"),
@@ -427,6 +532,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "password": MessageLookupByLibrary.simpleMessage("パスワード"),
     "password_text": MessageLookupByLibrary.simpleMessage("パスワード"),
     "personalisation": MessageLookupByLibrary.simpleMessage("カスタマイズ"),
+    "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage(
+      "パイプされたプレイリスト",
+    ),
     "pipedplstSyncAlert": MessageLookupByLibrary.simpleMessage(
       "Pipedの再生リストを同期しました！",
     ),
@@ -449,6 +557,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "playlistBookmarkRemoveAlert": MessageLookupByLibrary.simpleMessage(
       "再生リストのブックマークを解除しました！",
+    ),
+    "playlistCollaboratorsTitle": MessageLookupByLibrary.simpleMessage(
+      "プレイリストの投稿者",
     ),
     "playlistCreatedAlert": MessageLookupByLibrary.simpleMessage(
       "再生リストを作成しました！",
@@ -536,6 +647,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "restoring": MessageLookupByLibrary.simpleMessage("復元中..."),
     "results": MessageLookupByLibrary.simpleMessage("結果"),
     "retry": MessageLookupByLibrary.simpleMessage("再試行！"),
+    "save": MessageLookupByLibrary.simpleMessage("保つ"),
     "scanning": MessageLookupByLibrary.simpleMessage("スキャン中..."),
     "search": MessageLookupByLibrary.simpleMessage("検索"),
     "searchDes": MessageLookupByLibrary.simpleMessage("曲、再生リスト、アルバム、アーティスト"),
@@ -549,6 +661,12 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "selectFile": MessageLookupByLibrary.simpleMessage("ファイルを選択"),
     "selectSongs": MessageLookupByLibrary.simpleMessage("曲を選択"),
+    "selectedFileNotFound": MessageLookupByLibrary.simpleMessage(
+      "選択したファイルが見つかりませんでした。",
+    ),
+    "sessionExpiredLoginAgain": MessageLookupByLibrary.simpleMessage(
+      "セッションの有効期限が切れました。再度サインインします。",
+    ),
     "setDiscoverContent": MessageLookupByLibrary.simpleMessage("探索するコンテンツを設定"),
     "settings": MessageLookupByLibrary.simpleMessage("設定"),
     "settings_about_desc": MessageLookupByLibrary.simpleMessage(
@@ -620,6 +738,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Shazam データベースで一致するものを検索しています...",
     ),
     "shuffleQueue": MessageLookupByLibrary.simpleMessage("キューをシャッフル"),
+    "similarToTitle": m1,
     "singles": MessageLookupByLibrary.simpleMessage("シングル"),
     "skipSilence": MessageLookupByLibrary.simpleMessage("無音部分を飛ばす"),
     "skipSilenceDes": MessageLookupByLibrary.simpleMessage("音楽再生中に無音部分を飛ばします"),
@@ -627,7 +746,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "スリープタイマーをセットしました",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("スリープタイマー"),
-    "slide_indicator": m1,
+    "slide_indicator": m2,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "曲を再生リストに追加しました！",
     ),
@@ -650,9 +769,16 @@ class MessageLookup extends MessageLookupByLibrary {
       "再生中の曲は削除できません",
     ),
     "songs": MessageLookupByLibrary.simpleMessage("曲"),
+    "songsImportedFromJossMusic": MessageLookupByLibrary.simpleMessage(
+      "Joss Music Kotlin からインポートされた曲",
+    ),
     "speedAndPitch": MessageLookupByLibrary.simpleMessage("スピードとピッチ"),
     "standard": MessageLookupByLibrary.simpleMessage("標準"),
     "startRadio": MessageLookupByLibrary.simpleMessage("ラジオで開始"),
+    "startupScreen": MessageLookupByLibrary.simpleMessage("起動時に開く"),
+    "startupScreenDescription": MessageLookupByLibrary.simpleMessage(
+      "Estrella Music が最初に開くセクションを選択してください",
+    ),
     "status": MessageLookupByLibrary.simpleMessage("状態"),
     "stopMusicOnTaskClear": MessageLookupByLibrary.simpleMessage(
       "タスクから削除したら音楽停止",
@@ -664,6 +790,58 @@ class MessageLookup extends MessageLookupByLibrary {
     "streamingQualityDes": MessageLookupByLibrary.simpleMessage("音楽ストリームの音質"),
     "subscribers": MessageLookupByLibrary.simpleMessage("人の登録者"),
     "swipe_prompt": MessageLookupByLibrary.simpleMessage("スワイプしてオプションを確認します ➔"),
+    "syncChangesConfirmed": m3,
+    "syncChangesSynced": m4,
+    "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
+      "クラウドモードが有効になりました。既存のライブラリをダウンロードします。",
+    ),
+    "syncCloudMigrationComplete": MessageLookupByLibrary.simpleMessage(
+      "クラウドモードが有効になりました。移行されたライブラリ。",
+    ),
+    "syncCloudPending": MessageLookupByLibrary.simpleMessage(
+      "クラウドモードがアクティブです。同期が保留中です。",
+    ),
+    "syncDownloadFailed": MessageLookupByLibrary.simpleMessage(
+      "同期のダウンロードに失敗しました。",
+    ),
+    "syncDownloading": MessageLookupByLibrary.simpleMessage(
+      "EMusic の変更をダウンロードしています...",
+    ),
+    "syncLibrarySynced": MessageLookupByLibrary.simpleMessage("同期されたライブラリ。"),
+    "syncLibraryUpToDate": MessageLookupByLibrary.simpleMessage("ライブラリは最新です。"),
+    "syncLocalChangesFirst": MessageLookupByLibrary.simpleMessage(
+      "ローカルで新たな変更が加えられています。ダウンロードの前にアップロードされます。",
+    ),
+    "syncLocalDeviceOnly": MessageLookupByLibrary.simpleMessage(
+      "あなたのデータはこのデバイスにのみ保存されます。",
+    ),
+    "syncLocalModeActive": MessageLookupByLibrary.simpleMessage(
+      "ローカルモードがアクティブです",
+    ),
+    "syncOfflinePending": MessageLookupByLibrary.simpleMessage(
+      "オフライン。変更は保留中です。",
+    ),
+    "syncOfflineRetry": MessageLookupByLibrary.simpleMessage(
+      "オフライン。変更は再試行のために保存されました。",
+    ),
+    "syncUnconfirmedRetry": MessageLookupByLibrary.simpleMessage(
+      "EMusic はすべての変更を確認していません。再試行されます。",
+    ),
+    "syncUploadRetry": MessageLookupByLibrary.simpleMessage(
+      "起き上がれなかった。後で再試行されます。",
+    ),
+    "syncUploadSuccess": MessageLookupByLibrary.simpleMessage(
+      "変更は正しくアップロードされました。",
+    ),
+    "syncUploadSuccessWs": MessageLookupByLibrary.simpleMessage(
+      "変更は正常にアップロードされました (WS)。",
+    ),
+    "syncUploadWsRetry": MessageLookupByLibrary.simpleMessage(
+      "WSを使用してアップロードできませんでした。後で再試行されます。",
+    ),
+    "syncUploading": MessageLookupByLibrary.simpleMessage(
+      "変更を EMusic にアップロードしています...",
+    ),
     "synced": MessageLookupByLibrary.simpleMessage("同期"),
     "syncedLyricsNotAvailable": MessageLookupByLibrary.simpleMessage(
       "同期可能な歌詞はありません！",
@@ -675,10 +853,17 @@ class MessageLookup extends MessageLookupByLibrary {
     "trending": MessageLookupByLibrary.simpleMessage("急上昇"),
     "unLink": MessageLookupByLibrary.simpleMessage("ログアウトする"),
     "unlinkAlert": MessageLookupByLibrary.simpleMessage("ログアウトしました！"),
+    "untitledSong": MessageLookupByLibrary.simpleMessage("タイトルのない曲"),
     "upNext": MessageLookupByLibrary.simpleMessage("次に再生"),
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "URLをクリックして、関連コンテンツを開く/再生",
     ),
+    "userBlocked": MessageLookupByLibrary.simpleMessage("ブロックされたユーザー"),
+    "userListMissing": MessageLookupByLibrary.simpleMessage(
+      "応答にはユーザーのリストは含まれません。",
+    ),
+    "userSearchFailed": m5,
+    "userUnblocked": MessageLookupByLibrary.simpleMessage("ロック解除されたユーザー"),
     "username": MessageLookupByLibrary.simpleMessage("ユーザー名"),
     "video": MessageLookupByLibrary.simpleMessage("ビデオ"),
     "videos": MessageLookupByLibrary.simpleMessage("動画"),

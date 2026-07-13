@@ -10,6 +10,109 @@
   "settings": "Ajustes",
   "library": "Biblioteca",
   "libSongs": "Canciones de la biblioteca",
+  "migratedLibrary": "Biblioteca migrada",
+  "noSongsInCollection": "No hay canciones en esta colección",
+  "startupScreen": "Abrir al iniciar",
+  "startupScreenDescription": "Elige la sección que Estrella Music abre primero",
+  "friends": "Amigos",
+  "dailyDiscover": "Descubrimiento diario",
+  "keepListening": "Sigue escuchando",
+  "similarToTitle": "Similar a {title}",
+  "@similarToTitle": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "pipedPlaylistDescription": "Playlist de Piped",
+  "collaborativePlaylistDescription": "Playlist colaborativa",
+  "libraryPlaylistDescription": "Playlist de la biblioteca",
+  "untitledSong": "Canción sin título",
+  "migratedPlaylist": "Playlist migrada",
+  "migratedAlbum": "Álbum migrado",
+  "songsImportedFromJossMusic": "Canciones importadas desde Joss Music Kotlin",
+  "importedFromJossMusic": "Importado desde Joss Music Kotlin",
+  "syncLocalModeActive": "Modo local activo",
+  "syncCloudPending": "Modo cloud activo. Sincronización pendiente.",
+  "syncCloudDownloadingExisting": "Modo cloud activado. Descargando la biblioteca existente.",
+  "syncCloudMigrationComplete": "Modo cloud activado. Biblioteca migrada.",
+  "syncLocalDeviceOnly": "Tus datos se mantienen solo en este dispositivo.",
+  "syncDownloading": "Descargando cambios de EMusic...",
+  "syncDownloadFailed": "No se pudo descargar la sincronización.",
+  "syncLocalChangesFirst": "Hay cambios locales nuevos. Se subirán antes de descargar.",
+  "syncLibrarySynced": "Biblioteca sincronizada.",
+  "syncOfflinePending": "Sin conexión. Los cambios quedan pendientes.",
+  "syncLibraryUpToDate": "Biblioteca al día.",
+  "syncChangesSynced": "{count} cambios sincronizados.",
+  "@syncChangesSynced": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "syncUploading": "Subiendo cambios a EMusic...",
+  "syncUploadSuccessWs": "Cambios subidos correctamente (WS).",
+  "syncUploadWsRetry": "No se pudo subir mediante WS. Se reintentará después.",
+  "syncUploadSuccess": "Cambios subidos correctamente.",
+  "syncUploadRetry": "No se pudo subir. Se reintentará después.",
+  "syncOfflineRetry": "Sin conexión. Cambios guardados para reintento.",
+  "syncUnconfirmedRetry": "EMusic no confirmó todos los cambios. Se reintentarán.",
+  "syncChangesConfirmed": "{count} cambios confirmados.",
+  "@syncChangesConfirmed": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "migrationAlreadyRunning": "Ya hay una migración en progreso.",
+  "migrationLoginRequired": "Inicia sesión en Joss Red antes de migrar.",
+  "migrationCheckingCloud": "Revisando si EMusic Cloud ya tiene una biblioteca...",
+  "cloudLibraryFoundDeviceWillDownload": "Se encontró una biblioteca cloud. Este dispositivo la descargará sin sobrescribirla.",
+  "cloudLibraryFound": "Biblioteca cloud encontrada.",
+  "migrationCreatingBackup": "Creando un respaldo local antes de conectar cloud...",
+  "migrationAnalyzingLocal": "Analizando la biblioteca local...",
+  "migrationPreparingCloud": "Preparando la migración en EMusic Cloud...",
+  "migrationStartFailed": "EMusic Cloud no pudo iniciar la migración.",
+  "migrationUploadingData": "Subiendo playlists, favoritos e historial...",
+  "migrationUploadIncomplete": "No se pudieron subir todos los datos. Conservamos tu respaldo local.",
+  "migrationVerifyingIntegrity": "Verificando la integridad en EMusic Cloud...",
+  "migrationValidationFailed": "EMusic Cloud no pudo validar la migración.",
+  "cloudModeReadyOfflineCache": "El modo cloud está listo. Este dispositivo funcionará como caché offline.",
+  "migrationCompleted": "Migración completada.",
+  "migrationFailedLocalPreserved": "La migración falló. Tus datos locales no fueron modificados.",
+  "sessionExpiredLoginAgain": "Tu sesión expiró. Vuelve a iniciar sesión.",
+  "selectedFileNotFound": "No se encontró el archivo seleccionado.",
+  "genericAlbum": "Álbum",
+  "friendsLoginRequired": "Inicia sesión para buscar amigos.",
+  "invalidSessionToken": "La sesión no contiene un token válido.",
+  "userSearchFailed": "No se pudo buscar usuarios ({statusCode}).",
+  "@userSearchFailed": {
+    "placeholders": {
+      "statusCode": {
+        "type": "int"
+      }
+    }
+  },
+  "invalidServerResponse": "Respuesta inválida del servidor.",
+  "userListMissing": "La respuesta no contiene una lista de usuarios.",
+  "playlistCollaboratorsTitle": "Colaboradores de la playlist",
+  "collaboratorsInstruction": "Selecciona los amigos que podrán ver y editar esta playlist:",
+  "noJossRedFriends": "No tienes amigos agregados en Joss Red.",
+  "friendFallback": "Amigo",
+  "collaboratorsUpdated": "Colaboradores actualizados correctamente.",
+  "save": "Guardar",
+  "manageCollaborators": "Gestionar colaboradores (amigos)",
+  "done": "Listo",
+  "notAuthenticated": "No autenticado",
+  "genericError": "Error",
+  "friendRequestSent": "Solicitud de amistad enviada",
+  "friendRequestAccepted": "Solicitud de amistad aceptada",
+  "friendshipRemoved": "Amistad eliminada",
+  "userBlocked": "Usuario bloqueado",
+  "userUnblocked": "Usuario desbloqueado",
   "libPlaylists": "Listas de reproducción de la biblioteca",
   "libAlbums": "Álbumes de la biblioteca",
   "libArtists": "Artistas de la biblioteca",

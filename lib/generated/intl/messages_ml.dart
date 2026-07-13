@@ -23,7 +23,16 @@ class MessageLookup extends MessageLookupByLibrary {
   static String m0(error) =>
       "പുനഃസൃഷ്ടിക്കുമ്പോൾ ഒരു പിശക് സംഭവിച്ചു: ${error}";
 
-  static String m1(current) => "ഘട്ടം ${current} / 3";
+  static String m1(title) => "${title} ന് സമാനമാണ്";
+
+  static String m2(current) => "ഘട്ടം ${current} / 3";
+
+  static String m3(count) => "${count} മാറ്റങ്ങൾ വരുത്തി.";
+
+  static String m4(count) => "${count} സമന്വയിപ്പിച്ച മാറ്റങ്ങൾ.";
+
+  static String m5(statusCode) =>
+      "ഉപയോക്താക്കൾക്കായി തിരയാൻ കഴിഞ്ഞില്ല (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -99,6 +108,15 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "cancel": MessageLookupByLibrary.simpleMessage("റദ്ദാക്കുക"),
     "close": MessageLookupByLibrary.simpleMessage("അടയ്ക്കുക"),
+    "cloudLibraryFound": MessageLookupByLibrary.simpleMessage(
+      "ക്ലൗഡ് ലൈബ്രറി കണ്ടെത്തി.",
+    ),
+    "cloudLibraryFoundDeviceWillDownload": MessageLookupByLibrary.simpleMessage(
+      "ഒരു ക്ലൗഡ് ലൈബ്രറി കണ്ടെത്തി. ഈ ഉപകരണം അത് തിരുത്തിയെഴുതാതെ തന്നെ ഡൗൺലോഡ് ചെയ്യും.",
+    ),
+    "cloudModeReadyOfflineCache": MessageLookupByLibrary.simpleMessage(
+      "ക്ലൗഡ് മോഡ് തയ്യാറാണ്. ഈ ഉപകരണം ഒരു ഓഫ്‌ലൈൻ കാഷെ ആയി പ്രവർത്തിക്കും.",
+    ),
     "cloud_b1": MessageLookupByLibrary.simpleMessage(
       "നിങ്ങളുടെ ജോസ് റെഡ് അക്കൗണ്ട് ഉപയോഗിച്ച് സുരക്ഷിതമായി ലോഗിൻ ചെയ്യുക.",
     ),
@@ -117,6 +135,15 @@ class MessageLookup extends MessageLookupByLibrary {
     "cloud_title": MessageLookupByLibrary.simpleMessage(
       "ക്ലൗഡ് മോഡ് (ശുപാർശ ചെയ്യുന്നത്)",
     ),
+    "collaborativePlaylistDescription": MessageLookupByLibrary.simpleMessage(
+      "സഹകരണ പ്ലേലിസ്റ്റ്",
+    ),
+    "collaboratorsInstruction": MessageLookupByLibrary.simpleMessage(
+      "ഈ പ്ലേലിസ്റ്റ് കാണാനും എഡിറ്റ് ചെയ്യാനുമുള്ള സുഹൃത്തുക്കളെ തിരഞ്ഞെടുക്കുക:",
+    ),
+    "collaboratorsUpdated": MessageLookupByLibrary.simpleMessage(
+      "സഹകാരികൾ ശരിയായി അപ്ഡേറ്റ് ചെയ്തു.",
+    ),
     "communityplaylists": MessageLookupByLibrary.simpleMessage(
       "കമ്മ്യൂണിറ്റി പ്ലേലിസ്റ്റുകൾ",
     ),
@@ -124,6 +151,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "createnAdd": MessageLookupByLibrary.simpleMessage(
       "സൃഷ്‌ടിക്കുകയും ചേർക്കുകയും ചെയ്യുക",
     ),
+    "dailyDiscover": MessageLookupByLibrary.simpleMessage("ദൈനംദിന കണ്ടെത്തൽ"),
+    "done": MessageLookupByLibrary.simpleMessage("തയ്യാറാണ്"),
     "downloads": MessageLookupByLibrary.simpleMessage("ഡൗൺലോഡുകൾ"),
     "email": MessageLookupByLibrary.simpleMessage("ഇ-മെയിൽ"),
     "emptyPlaylist": MessageLookupByLibrary.simpleMessage(
@@ -148,6 +177,22 @@ class MessageLookup extends MessageLookupByLibrary {
     "forgottenFavorites": MessageLookupByLibrary.simpleMessage(
       "മറന്നുപോയ പ്രിയപ്പെട്ടവ",
     ),
+    "friendFallback": MessageLookupByLibrary.simpleMessage("സുഹൃത്ത്"),
+    "friendRequestAccepted": MessageLookupByLibrary.simpleMessage(
+      "സുഹൃത്ത് അഭ്യർത്ഥന സ്വീകരിച്ചു",
+    ),
+    "friendRequestSent": MessageLookupByLibrary.simpleMessage(
+      "സൗഹൃദ അഭ്യർത്ഥന അയച്ചു",
+    ),
+    "friends": MessageLookupByLibrary.simpleMessage("സുഹൃത്തുക്കൾ"),
+    "friendsLoginRequired": MessageLookupByLibrary.simpleMessage(
+      "സുഹൃത്തുക്കളെ കണ്ടെത്താൻ സൈൻ ഇൻ ചെയ്യുക.",
+    ),
+    "friendshipRemoved": MessageLookupByLibrary.simpleMessage(
+      "സൗഹൃദം നീക്കം ചെയ്തു",
+    ),
+    "genericAlbum": MessageLookupByLibrary.simpleMessage("ആൽബം"),
+    "genericError": MessageLookupByLibrary.simpleMessage("തെറ്റ്"),
     "genre_electronic": MessageLookupByLibrary.simpleMessage("ഇലക്ട്രോണിക്സ്"),
     "genre_hiphop": MessageLookupByLibrary.simpleMessage("ഹിപ് ഹോപ്പ്"),
     "genre_jazz": MessageLookupByLibrary.simpleMessage("ജാസ്"),
@@ -156,7 +201,19 @@ class MessageLookup extends MessageLookupByLibrary {
     "genre_rock": MessageLookupByLibrary.simpleMessage("പാറ"),
     "goToAlbum": MessageLookupByLibrary.simpleMessage("ആൽബത്തിലേക്ക് പോകുക"),
     "home": MessageLookupByLibrary.simpleMessage("ഹോംപേജ്"),
+    "importedFromJossMusic": MessageLookupByLibrary.simpleMessage(
+      "ജോസ് മ്യൂസിക് കോട്ലിനിൽ നിന്ന് ഇറക്കുമതി ചെയ്തത്",
+    ),
+    "invalidServerResponse": MessageLookupByLibrary.simpleMessage(
+      "അസാധുവായ സെർവർ പ്രതികരണം.",
+    ),
+    "invalidSessionToken": MessageLookupByLibrary.simpleMessage(
+      "സെഷനിൽ സാധുവായ ഒരു ടോക്കൺ അടങ്ങിയിട്ടില്ല.",
+    ),
     "items": MessageLookupByLibrary.simpleMessage("ഇനങ്ങൾ"),
+    "keepListening": MessageLookupByLibrary.simpleMessage(
+      "കേട്ടുകൊണ്ടിരിക്കുക",
+    ),
     "keepScreenOnWhilePlaying": MessageLookupByLibrary.simpleMessage(
       "പ്ലേ ചെയ്യുമ്പോൾ സ്‌ക്രീൻ ഓണായിരിക്കട്ടെ",
     ),
@@ -175,6 +232,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "libSongs": MessageLookupByLibrary.simpleMessage("ലൈബ്രറി ഗാനങ്ങൾ"),
     "library": MessageLookupByLibrary.simpleMessage("ലൈബ്രറി"),
+    "libraryPlaylistDescription": MessageLookupByLibrary.simpleMessage(
+      "ലൈബ്രറി പ്ലേലിസ്റ്റ്",
+    ),
     "listenNow": MessageLookupByLibrary.simpleMessage("ഇപ്പോൾ കേൾക്കൂ"),
     "listeningToEnvironment": MessageLookupByLibrary.simpleMessage(
       "പരിസ്ഥിതിയെ ശ്രദ്ധിക്കുന്നു...",
@@ -195,8 +255,57 @@ class MessageLookup extends MessageLookupByLibrary {
       "നിങ്ങളുടെ ഉപകരണത്തിൽ സമ്പൂർണ്ണ സ്വകാര്യത",
     ),
     "local_title": MessageLookupByLibrary.simpleMessage("പ്രാദേശിക മോഡ്"),
+    "manageCollaborators": MessageLookupByLibrary.simpleMessage(
+      "സഹകാരികളെ നിയന്ത്രിക്കുക (സുഹൃത്തുക്കൾ)",
+    ),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
       "നിങ്ങളുടെ മൈക്രോഫോണിന് സമീപം സംഗീതം വേണ്ടത്ര ഉച്ചത്തിൽ പ്ലേ ചെയ്യുന്നുണ്ടെന്ന് ഉറപ്പാക്കുക.",
+    ),
+    "migratedAlbum": MessageLookupByLibrary.simpleMessage("മൈഗ്രേറ്റഡ് ആൽബം"),
+    "migratedLibrary": MessageLookupByLibrary.simpleMessage(
+      "മൈഗ്രേറ്റഡ് ലൈബ്രറി",
+    ),
+    "migratedPlaylist": MessageLookupByLibrary.simpleMessage(
+      "മൈഗ്രേറ്റഡ് പ്ലേലിസ്റ്റ്",
+    ),
+    "migrationAlreadyRunning": MessageLookupByLibrary.simpleMessage(
+      "ഇതിനകം ഒരു മൈഗ്രേഷൻ പുരോഗതിയിലാണ്.",
+    ),
+    "migrationAnalyzingLocal": MessageLookupByLibrary.simpleMessage(
+      "പ്രാദേശിക ലൈബ്രറി വിശകലനം ചെയ്യുന്നു...",
+    ),
+    "migrationCheckingCloud": MessageLookupByLibrary.simpleMessage(
+      "EMusic ക്ലൗഡിന് ഇതിനകം ഒരു ലൈബ്രറി ഉണ്ടോയെന്ന് പരിശോധിക്കുന്നു...",
+    ),
+    "migrationCompleted": MessageLookupByLibrary.simpleMessage(
+      "മൈഗ്രേഷൻ പൂർത്തിയായി.",
+    ),
+    "migrationCreatingBackup": MessageLookupByLibrary.simpleMessage(
+      "ക്ലൗഡ് ബന്ധിപ്പിക്കുന്നതിന് മുമ്പ് ഒരു പ്രാദേശിക ബാക്കപ്പ് സൃഷ്‌ടിക്കുന്നു...",
+    ),
+    "migrationFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
+      "മൈഗ്രേഷൻ പരാജയപ്പെട്ടു. നിങ്ങളുടെ പ്രാദേശിക ഡാറ്റ പരിഷ്കരിച്ചിട്ടില്ല.",
+    ),
+    "migrationLoginRequired": MessageLookupByLibrary.simpleMessage(
+      "മൈഗ്രേറ്റ് ചെയ്യുന്നതിന് മുമ്പ് Joss Red-ലേക്ക് ലോഗിൻ ചെയ്യുക.",
+    ),
+    "migrationPreparingCloud": MessageLookupByLibrary.simpleMessage(
+      "EMusic ക്ലൗഡിൽ മൈഗ്രേഷൻ തയ്യാറാക്കുന്നു...",
+    ),
+    "migrationStartFailed": MessageLookupByLibrary.simpleMessage(
+      "EMusic ക്ലൗഡിന് മൈഗ്രേഷൻ ആരംഭിക്കാനായില്ല.",
+    ),
+    "migrationUploadIncomplete": MessageLookupByLibrary.simpleMessage(
+      "എല്ലാ ഡാറ്റയും അപ്‌ലോഡ് ചെയ്യാൻ കഴിഞ്ഞില്ല. നിങ്ങളുടെ പ്രാദേശിക പിന്തുണ ഞങ്ങൾ നിലനിർത്തുന്നു.",
+    ),
+    "migrationUploadingData": MessageLookupByLibrary.simpleMessage(
+      "പ്ലേലിസ്റ്റുകളും പ്രിയങ്കരങ്ങളും ചരിത്രവും അപ്‌ലോഡ് ചെയ്യുന്നു...",
+    ),
+    "migrationValidationFailed": MessageLookupByLibrary.simpleMessage(
+      "EMusic ക്ലൗഡിന് മൈഗ്രേഷൻ സാധൂകരിക്കാനായില്ല.",
+    ),
+    "migrationVerifyingIntegrity": MessageLookupByLibrary.simpleMessage(
+      "EMusic ക്ലൗഡിൽ സമഗ്രത പരിശോധിക്കുന്നു...",
     ),
     "migration_btn_select": MessageLookupByLibrary.simpleMessage(
       "ഫയൽ തിരഞ്ഞെടുത്ത് ഇറക്കുമതി ചെയ്യുക",
@@ -251,6 +360,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "noBookmarks": MessageLookupByLibrary.simpleMessage(
       "ബുക്ക്‌മാർക്കുകളൊന്നുമില്ല!",
     ),
+    "noJossRedFriends": MessageLookupByLibrary.simpleMessage(
+      "Joss Red-ൽ നിങ്ങൾക്ക് സുഹൃത്തുക്കളൊന്നും ചേർത്തിട്ടില്ല.",
+    ),
     "noLibPlaylist": MessageLookupByLibrary.simpleMessage(
       "നിങ്ങളുടെ കയ്യിൽ ഒരു ലിബ് പ്ലേലിസ്റ്റും ഇല്ലേ!",
     ),
@@ -261,8 +373,15 @@ class MessageLookup extends MessageLookupByLibrary {
     "noOfflineSong": MessageLookupByLibrary.simpleMessage(
       "ഓഫ്‌ലൈൻ പാട്ടുകളൊന്നുമില്ല!",
     ),
+    "noSongsInCollection": MessageLookupByLibrary.simpleMessage(
+      "ഈ ശേഖരത്തിൽ പാട്ടുകളൊന്നുമില്ല",
+    ),
+    "notAuthenticated": MessageLookupByLibrary.simpleMessage("ആധികാരികതയില്ല"),
     "openIn": MessageLookupByLibrary.simpleMessage("തുറക്കുക"),
     "password_text": MessageLookupByLibrary.simpleMessage("രഹസ്യവാക്ക്"),
+    "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage(
+      "പൈപ്പ് പ്ലേലിസ്റ്റ്",
+    ),
     "playNext": MessageLookupByLibrary.simpleMessage("അടുത്ത പാട്ട് കേൾക്കൂ"),
     "playNow": MessageLookupByLibrary.simpleMessage("ഇപ്പോൾ കളിക്കുക"),
     "playbackSpeed": MessageLookupByLibrary.simpleMessage("പ്ലേബാക്ക് വേഗത"),
@@ -280,6 +399,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "playingfromSelection": MessageLookupByLibrary.simpleMessage(
       "സെലക്ഷനിൽ നിന്ന് പ്ലേ ചെയ്യുന്നു",
+    ),
+    "playlistCollaboratorsTitle": MessageLookupByLibrary.simpleMessage(
+      "പ്ലേലിസ്റ്റ് സംഭാവകർ",
     ),
     "playlists": MessageLookupByLibrary.simpleMessage("പ്ലേലിസ്റ്റുകൾ"),
     "playnextMsg": MessageLookupByLibrary.simpleMessage("വെരാൻ പോകുന്നത്"),
@@ -329,6 +451,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "reproducedBy": MessageLookupByLibrary.simpleMessage("പുനർനിർമ്മിച്ചത്"),
     "retry": MessageLookupByLibrary.simpleMessage("വീണ്ടും ശ്രമിക്കുക!"),
+    "save": MessageLookupByLibrary.simpleMessage("സൂക്ഷിക്കുക"),
     "searchInLibrary": MessageLookupByLibrary.simpleMessage(
       "ലൈബ്രറിയിൽ തിരയുക",
     ),
@@ -338,6 +461,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "selectAll": MessageLookupByLibrary.simpleMessage("എല്ലാം തിരഞ്ഞെടുക്കുക"),
     "selectSongs": MessageLookupByLibrary.simpleMessage(
       "പാട്ടുകൾ തിരഞ്ഞെടുക്കുക",
+    ),
+    "selectedFileNotFound": MessageLookupByLibrary.simpleMessage(
+      "തിരഞ്ഞെടുത്ത ഫയൽ കണ്ടെത്തിയില്ല.",
+    ),
+    "sessionExpiredLoginAgain": MessageLookupByLibrary.simpleMessage(
+      "നിങ്ങളുടെ സെഷൻ കാലഹരണപ്പെട്ടു. വീണ്ടും സൈൻ ഇൻ ചെയ്യുക.",
     ),
     "settings": MessageLookupByLibrary.simpleMessage("ക്രമീകരണങ്ങൾ"),
     "settings_about_desc": MessageLookupByLibrary.simpleMessage(
@@ -414,20 +543,95 @@ class MessageLookup extends MessageLookupByLibrary {
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
       "പൊരുത്തങ്ങൾക്കായി Shazam ഡാറ്റാബേസിൽ തിരയുന്നു...",
     ),
+    "similarToTitle": m1,
     "singles": MessageLookupByLibrary.simpleMessage("സിംഗിൾസ്"),
-    "slide_indicator": m1,
+    "slide_indicator": m2,
     "songFound": MessageLookupByLibrary.simpleMessage("ഗാനം കണ്ടെത്തി!"),
     "songNotPlayable": MessageLookupByLibrary.simpleMessage(
       "സെർവർ നിയന്ത്രണം കാരണം ഗാനം പ്ലേ ചെയ്യാൻ കഴിയില്ല",
     ),
     "songPitch": MessageLookupByLibrary.simpleMessage("പാട്ടിൻ്റെ സ്വരം"),
     "songs": MessageLookupByLibrary.simpleMessage("പാട്ടുകൾ"),
+    "songsImportedFromJossMusic": MessageLookupByLibrary.simpleMessage(
+      "ജോസ് മ്യൂസിക് കോട്ലിനിൽ നിന്ന് ഇറക്കുമതി ചെയ്ത ഗാനങ്ങൾ",
+    ),
     "speedAndPitch": MessageLookupByLibrary.simpleMessage("വേഗതയും പിച്ചും"),
     "startRadio": MessageLookupByLibrary.simpleMessage("റേഡിയോ ആരംഭിക്കുക"),
+    "startupScreen": MessageLookupByLibrary.simpleMessage(
+      "സ്റ്റാർട്ടപ്പിൽ തുറക്കുക",
+    ),
+    "startupScreenDescription": MessageLookupByLibrary.simpleMessage(
+      "എസ്ട്രെല്ല മ്യൂസിക് ആദ്യം തുറക്കുന്ന വിഭാഗം തിരഞ്ഞെടുക്കുക",
+    ),
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
       "ഓപ്ഷനുകൾ പര്യവേക്ഷണം ചെയ്യാൻ സ്വൈപ്പ് ➔",
     ),
+    "syncChangesConfirmed": m3,
+    "syncChangesSynced": m4,
+    "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
+      "ക്ലൗഡ് മോഡ് സജീവമാക്കി. നിലവിലുള്ള ലൈബ്രറി ഡൗൺലോഡ് ചെയ്യുന്നു.",
+    ),
+    "syncCloudMigrationComplete": MessageLookupByLibrary.simpleMessage(
+      "ക്ലൗഡ് മോഡ് സജീവമാക്കി. മൈഗ്രേറ്റഡ് ലൈബ്രറി.",
+    ),
+    "syncCloudPending": MessageLookupByLibrary.simpleMessage(
+      "ക്ലൗഡ് മോഡ് സജീവമാണ്. ശേഷിക്കുന്ന സമന്വയം.",
+    ),
+    "syncDownloadFailed": MessageLookupByLibrary.simpleMessage(
+      "സമന്വയം ഡൗൺലോഡ് ചെയ്യുന്നതിൽ പരാജയപ്പെട്ടു.",
+    ),
+    "syncDownloading": MessageLookupByLibrary.simpleMessage(
+      "EMusic മാറ്റങ്ങൾ ഡൗൺലോഡ് ചെയ്യുന്നു...",
+    ),
+    "syncLibrarySynced": MessageLookupByLibrary.simpleMessage(
+      "സമന്വയിപ്പിച്ച ലൈബ്രറി.",
+    ),
+    "syncLibraryUpToDate": MessageLookupByLibrary.simpleMessage(
+      "കാലികമായ ലൈബ്രറി.",
+    ),
+    "syncLocalChangesFirst": MessageLookupByLibrary.simpleMessage(
+      "പുതിയ പ്രാദേശിക മാറ്റങ്ങളുണ്ട്. ഡൗൺലോഡ് ചെയ്യുന്നതിന് മുമ്പ് അവ അപ്‌ലോഡ് ചെയ്യും.",
+    ),
+    "syncLocalDeviceOnly": MessageLookupByLibrary.simpleMessage(
+      "നിങ്ങളുടെ ഡാറ്റ ഈ ഉപകരണത്തിൽ മാത്രമേ സൂക്ഷിച്ചിട്ടുള്ളൂ.",
+    ),
+    "syncLocalModeActive": MessageLookupByLibrary.simpleMessage(
+      "ലോക്കൽ മോഡ് സജീവമാണ്",
+    ),
+    "syncOfflinePending": MessageLookupByLibrary.simpleMessage(
+      "ഓഫ്‌ലൈൻ. മാറ്റങ്ങൾ തീർച്ചപ്പെടുത്തിയിട്ടില്ല.",
+    ),
+    "syncOfflineRetry": MessageLookupByLibrary.simpleMessage(
+      "ഓഫ്‌ലൈൻ. മാറ്റങ്ങൾ വീണ്ടും ശ്രമിക്കുന്നതിനായി സംരക്ഷിച്ചു.",
+    ),
+    "syncUnconfirmedRetry": MessageLookupByLibrary.simpleMessage(
+      "എല്ലാ മാറ്റങ്ങളും EMusic സ്ഥിരീകരിച്ചിട്ടില്ല. അവരെ വീണ്ടും വിചാരണ ചെയ്യും.",
+    ),
+    "syncUploadRetry": MessageLookupByLibrary.simpleMessage(
+      "എഴുന്നേൽക്കാൻ കഴിഞ്ഞില്ല. പിന്നീട് വീണ്ടും ശ്രമിക്കും.",
+    ),
+    "syncUploadSuccess": MessageLookupByLibrary.simpleMessage(
+      "മാറ്റങ്ങൾ ശരിയായി അപ്‌ലോഡ് ചെയ്‌തു.",
+    ),
+    "syncUploadSuccessWs": MessageLookupByLibrary.simpleMessage(
+      "മാറ്റങ്ങൾ അപ്‌ലോഡ് ചെയ്‌തു (WS).",
+    ),
+    "syncUploadWsRetry": MessageLookupByLibrary.simpleMessage(
+      "WS ഉപയോഗിച്ച് അപ്‌ലോഡ് ചെയ്യാൻ കഴിഞ്ഞില്ല. പിന്നീട് വീണ്ടും ശ്രമിക്കും.",
+    ),
+    "syncUploading": MessageLookupByLibrary.simpleMessage(
+      "EMusic-ലേക്ക് മാറ്റങ്ങൾ അപ്‌ലോഡ് ചെയ്യുന്നു...",
+    ),
+    "untitledSong": MessageLookupByLibrary.simpleMessage("പേരിടാത്ത ഗാനം"),
     "upNext": MessageLookupByLibrary.simpleMessage("അടുത്തത്"),
+    "userBlocked": MessageLookupByLibrary.simpleMessage("തടഞ്ഞ ഉപയോക്താവ്"),
+    "userListMissing": MessageLookupByLibrary.simpleMessage(
+      "പ്രതികരണത്തിൽ ഉപയോക്താക്കളുടെ ഒരു ലിസ്റ്റ് അടങ്ങിയിട്ടില്ല.",
+    ),
+    "userSearchFailed": m5,
+    "userUnblocked": MessageLookupByLibrary.simpleMessage(
+      "അൺലോക്ക് ചെയ്ത ഉപയോക്താവ്",
+    ),
     "username": MessageLookupByLibrary.simpleMessage("ഉപയോക്തൃനാമം"),
     "video": MessageLookupByLibrary.simpleMessage("വീഡിയോ"),
     "viewArtist": MessageLookupByLibrary.simpleMessage("ആർട്ടിസ്റ്റ്"),

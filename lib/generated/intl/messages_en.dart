@@ -20,21 +20,29 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
-  static String m2(count) => "Albums: ${count}";
+  static String m6(count) => "Albums: ${count}";
 
-  static String m3(count) => "Artists: ${count}";
+  static String m7(count) => "Artists: ${count}";
 
-  static String m4(count) => "Favorites: ${count}";
+  static String m8(count) => "Favorites: ${count}";
 
-  static String m5(count) => "Playlists: ${count}";
+  static String m9(count) => "Playlists: ${count}";
 
-  static String m6(count) => "Songs: ${count}";
+  static String m10(count) => "Songs: ${count}";
 
-  static String m7(source) => "Migration completed from ${source}.";
+  static String m11(source) => "Migration completed from ${source}.";
 
   static String m0(error) => "An error occurred while regenerating: ${error}";
 
-  static String m1(current) => "Step ${current} of 3";
+  static String m1(title) => "Similar to ${title}";
+
+  static String m2(current) => "Step ${current} of 3";
+
+  static String m3(count) => "${count} changes committed.";
+
+  static String m4(count) => "${count} synchronized changes.";
+
+  static String m5(statusCode) => "Could not search for users (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -233,6 +241,15 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "close": MessageLookupByLibrary.simpleMessage("Close"),
     "closeApp": MessageLookupByLibrary.simpleMessage("Close App"),
+    "cloudLibraryFound": MessageLookupByLibrary.simpleMessage(
+      "Cloud library found.",
+    ),
+    "cloudLibraryFoundDeviceWillDownload": MessageLookupByLibrary.simpleMessage(
+      "A cloud library was found. ",
+    ),
+    "cloudModeReadyOfflineCache": MessageLookupByLibrary.simpleMessage(
+      "Cloud mode is ready. ",
+    ),
     "cloud_b1": MessageLookupByLibrary.simpleMessage(
       "Log in securely using your Joss Red account.",
     ),
@@ -249,6 +266,15 @@ class MessageLookup extends MessageLookupByLibrary {
     "cloud_title": MessageLookupByLibrary.simpleMessage(
       "Cloud Mode (Recommended)",
     ),
+    "collaborativePlaylistDescription": MessageLookupByLibrary.simpleMessage(
+      "Collaborative Playlist",
+    ),
+    "collaboratorsInstruction": MessageLookupByLibrary.simpleMessage(
+      "Select the friends who will be able to see and edit this playlist:",
+    ),
+    "collaboratorsUpdated": MessageLookupByLibrary.simpleMessage(
+      "Collaborators updated correctly.",
+    ),
     "communityplaylists": MessageLookupByLibrary.simpleMessage(
       "Community Playlists",
     ),
@@ -262,6 +288,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "customInsSelectMsg": MessageLookupByLibrary.simpleMessage(
       "Please select Custom Instance",
     ),
+    "dailyDiscover": MessageLookupByLibrary.simpleMessage("Daily discovery"),
     "dark": MessageLookupByLibrary.simpleMessage("Dark"),
     "delete": MessageLookupByLibrary.simpleMessage("Delete"),
     "deleteDownloadData": MessageLookupByLibrary.simpleMessage(
@@ -282,6 +309,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "disabled": MessageLookupByLibrary.simpleMessage("Disabled"),
     "discover": MessageLookupByLibrary.simpleMessage("Discover"),
     "dismiss": MessageLookupByLibrary.simpleMessage("Dismiss"),
+    "done": MessageLookupByLibrary.simpleMessage("Ready"),
     "dontShowInfoAgain": MessageLookupByLibrary.simpleMessage(
       "Don\'t show this info again",
     ),
@@ -406,6 +434,22 @@ class MessageLookup extends MessageLookupByLibrary {
     "forgottenFavorites": MessageLookupByLibrary.simpleMessage(
       "forgotten favorites",
     ),
+    "friendFallback": MessageLookupByLibrary.simpleMessage("Friend"),
+    "friendRequestAccepted": MessageLookupByLibrary.simpleMessage(
+      "Friend request accepted",
+    ),
+    "friendRequestSent": MessageLookupByLibrary.simpleMessage(
+      "Friend request sent",
+    ),
+    "friends": MessageLookupByLibrary.simpleMessage("Friends"),
+    "friendsLoginRequired": MessageLookupByLibrary.simpleMessage(
+      "Sign in to find friends.",
+    ),
+    "friendshipRemoved": MessageLookupByLibrary.simpleMessage(
+      "Friendship removed",
+    ),
+    "genericAlbum": MessageLookupByLibrary.simpleMessage("Album"),
+    "genericError": MessageLookupByLibrary.simpleMessage("Mistake"),
     "genre_electronic": MessageLookupByLibrary.simpleMessage("Electronics"),
     "genre_hiphop": MessageLookupByLibrary.simpleMessage("hip hop"),
     "genre_jazz": MessageLookupByLibrary.simpleMessage("Jazz"),
@@ -459,6 +503,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Select a previously exported playlist JSON file to import",
     ),
     "imported": MessageLookupByLibrary.simpleMessage("Imported"),
+    "importedFromJossMusic": MessageLookupByLibrary.simpleMessage(
+      "Imported from Joss Music Kotlin",
+    ),
     "importedPlaylist": MessageLookupByLibrary.simpleMessage(
       "Imported Playlist",
     ),
@@ -477,7 +524,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "invalidPlaylistFile": MessageLookupByLibrary.simpleMessage(
       "Invalid playlist file structure",
     ),
+    "invalidServerResponse": MessageLookupByLibrary.simpleMessage(
+      "Invalid server response.",
+    ),
+    "invalidSessionToken": MessageLookupByLibrary.simpleMessage(
+      "The session does not contain a valid token.",
+    ),
     "items": MessageLookupByLibrary.simpleMessage("items"),
+    "keepListening": MessageLookupByLibrary.simpleMessage("keep listening"),
     "keepScreenOnWhilePlaying": MessageLookupByLibrary.simpleMessage(
       "Keep screen on while playing",
     ),
@@ -496,6 +550,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "libPlaylists": MessageLookupByLibrary.simpleMessage("Library Playlists"),
     "libSongs": MessageLookupByLibrary.simpleMessage("Library Songs"),
     "library": MessageLookupByLibrary.simpleMessage("Library"),
+    "libraryPlaylistDescription": MessageLookupByLibrary.simpleMessage(
+      "Library Playlist",
+    ),
     "light": MessageLookupByLibrary.simpleMessage("Light"),
     "link": MessageLookupByLibrary.simpleMessage("Link"),
     "linkAlert": MessageLookupByLibrary.simpleMessage("Linked successfully!"),
@@ -541,8 +598,55 @@ class MessageLookup extends MessageLookupByLibrary {
     "lyricsNotAvailable": MessageLookupByLibrary.simpleMessage(
       "Lyrics not available!",
     ),
+    "manageCollaborators": MessageLookupByLibrary.simpleMessage(
+      "Manage collaborators (friends)",
+    ),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
       "Make sure the music is playing loud enough near your microphone.",
+    ),
+    "migratedAlbum": MessageLookupByLibrary.simpleMessage("Migrated album"),
+    "migratedLibrary": MessageLookupByLibrary.simpleMessage("Migrated library"),
+    "migratedPlaylist": MessageLookupByLibrary.simpleMessage(
+      "Migrated Playlist",
+    ),
+    "migrationAlreadyRunning": MessageLookupByLibrary.simpleMessage(
+      "There is already a migration in progress.",
+    ),
+    "migrationAnalyzingLocal": MessageLookupByLibrary.simpleMessage(
+      "Analyzing the local library...",
+    ),
+    "migrationCheckingCloud": MessageLookupByLibrary.simpleMessage(
+      "Checking if EMusic Cloud already has a library...",
+    ),
+    "migrationCompleted": MessageLookupByLibrary.simpleMessage(
+      "Migration completed.",
+    ),
+    "migrationCreatingBackup": MessageLookupByLibrary.simpleMessage(
+      "Creating a local backup before connecting cloud...",
+    ),
+    "migrationFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
+      "The migration failed. ",
+    ),
+    "migrationLoginRequired": MessageLookupByLibrary.simpleMessage(
+      "Log in to Joss Red before migrating.",
+    ),
+    "migrationPreparingCloud": MessageLookupByLibrary.simpleMessage(
+      "Preparing the migration in EMusic Cloud...",
+    ),
+    "migrationStartFailed": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud could not start the migration.",
+    ),
+    "migrationUploadIncomplete": MessageLookupByLibrary.simpleMessage(
+      "Not all data could be uploaded. ",
+    ),
+    "migrationUploadingData": MessageLookupByLibrary.simpleMessage(
+      "Uploading playlists, favorites and history...",
+    ),
+    "migrationValidationFailed": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud could not validate the migration.",
+    ),
+    "migrationVerifyingIntegrity": MessageLookupByLibrary.simpleMessage(
+      "Verifying integrity in EMusic Cloud...",
     ),
     "migration_btn_select": MessageLookupByLibrary.simpleMessage(
       "Select file and import",
@@ -553,12 +657,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "migration_success": MessageLookupByLibrary.simpleMessage(
       "Migration completed successfully.",
     ),
-    "migration_summary_albums": m2,
-    "migration_summary_artists": m3,
-    "migration_summary_favorites": m4,
-    "migration_summary_playlists": m5,
-    "migration_summary_songs": m6,
-    "migration_summary_start": m7,
+    "migration_summary_albums": m6,
+    "migration_summary_artists": m7,
+    "migration_summary_favorites": m8,
+    "migration_summary_playlists": m9,
+    "migration_summary_songs": m10,
+    "migration_summary_start": m11,
     "minutes": MessageLookupByLibrary.simpleMessage("minutes"),
     "misc": MessageLookupByLibrary.simpleMessage("Misc"),
     "mostListenedSong": MessageLookupByLibrary.simpleMessage(
@@ -619,6 +723,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "no": MessageLookupByLibrary.simpleMessage("No"),
     "noBookmarks": MessageLookupByLibrary.simpleMessage("No bookmarks!"),
+    "noJossRedFriends": MessageLookupByLibrary.simpleMessage(
+      "You have no added friends on Joss Red.",
+    ),
     "noLibPlaylist": MessageLookupByLibrary.simpleMessage(
       "You don\'t have any lib playlist!",
     ),
@@ -627,7 +734,13 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "noMatchesFound": MessageLookupByLibrary.simpleMessage("No Matches"),
     "noOfflineSong": MessageLookupByLibrary.simpleMessage("No offline songs!"),
+    "noSongsInCollection": MessageLookupByLibrary.simpleMessage(
+      "There are no songs in this collection",
+    ),
     "nomatch": MessageLookupByLibrary.simpleMessage("No Match found for"),
+    "notAuthenticated": MessageLookupByLibrary.simpleMessage(
+      "Not authenticated",
+    ),
     "notaSongVideo": MessageLookupByLibrary.simpleMessage(
       "Not a Song/Music-Video!",
     ),
@@ -640,6 +753,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Permission denied",
     ),
     "personalisation": MessageLookupByLibrary.simpleMessage("Personalisation"),
+    "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage(
+      "Piped Playlist",
+    ),
     "pipedplstSyncAlert": MessageLookupByLibrary.simpleMessage(
       "Piped playlist synced!",
     ),
@@ -674,6 +790,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "playlistBookmarkRemoveAlert": MessageLookupByLibrary.simpleMessage(
       "Playlist bookmark removed!",
+    ),
+    "playlistCollaboratorsTitle": MessageLookupByLibrary.simpleMessage(
+      "Playlist contributors",
     ),
     "playlistCreatedAlert": MessageLookupByLibrary.simpleMessage(
       "Playlist created!",
@@ -787,6 +906,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "restoring": MessageLookupByLibrary.simpleMessage("Restoring..."),
     "results": MessageLookupByLibrary.simpleMessage("Results"),
     "retry": MessageLookupByLibrary.simpleMessage("Retry!"),
+    "save": MessageLookupByLibrary.simpleMessage("Keep"),
     "scanning": MessageLookupByLibrary.simpleMessage("Scanning..."),
     "search": MessageLookupByLibrary.simpleMessage("Search"),
     "searchDes": MessageLookupByLibrary.simpleMessage(
@@ -808,6 +928,12 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "selectFile": MessageLookupByLibrary.simpleMessage("Select File"),
     "selectSongs": MessageLookupByLibrary.simpleMessage("Select songs"),
+    "selectedFileNotFound": MessageLookupByLibrary.simpleMessage(
+      "The selected file was not found.",
+    ),
+    "sessionExpiredLoginAgain": MessageLookupByLibrary.simpleMessage(
+      "Your session has expired. ",
+    ),
     "setDiscoverContent": MessageLookupByLibrary.simpleMessage(
       "Set discover content",
     ),
@@ -891,6 +1017,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "shuffle": MessageLookupByLibrary.simpleMessage("Shuffle"),
     "shuffleQueue": MessageLookupByLibrary.simpleMessage("Shuffle Queue"),
+    "similarToTitle": m1,
     "singles": MessageLookupByLibrary.simpleMessage("Singles"),
     "skipSilence": MessageLookupByLibrary.simpleMessage("Skip silence"),
     "skipSilenceDes": MessageLookupByLibrary.simpleMessage(
@@ -900,7 +1027,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Your sleep timer is set",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Sleep Timer"),
-    "slide_indicator": m1,
+    "slide_indicator": m2,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "Song added to playlist!",
     ),
@@ -925,6 +1052,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "You can\'t remove currently playing song",
     ),
     "songs": MessageLookupByLibrary.simpleMessage("Songs"),
+    "songsImportedFromJossMusic": MessageLookupByLibrary.simpleMessage(
+      "Songs imported from Joss Music Kotlin",
+    ),
     "sortAscendNDescend": MessageLookupByLibrary.simpleMessage(
       "Sort ascending/descending",
     ),
@@ -934,6 +1064,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "speedAndPitch": MessageLookupByLibrary.simpleMessage("Speed ​​and Pitch"),
     "standard": MessageLookupByLibrary.simpleMessage("Standard"),
     "startRadio": MessageLookupByLibrary.simpleMessage("Start radio"),
+    "startupScreen": MessageLookupByLibrary.simpleMessage("Open on startup"),
+    "startupScreenDescription": MessageLookupByLibrary.simpleMessage(
+      "Choose the section that Estrella Music opens first",
+    ),
     "status": MessageLookupByLibrary.simpleMessage("Status"),
     "stopMusicOnTaskClear": MessageLookupByLibrary.simpleMessage(
       "Stop music on task clear",
@@ -951,8 +1085,60 @@ class MessageLookup extends MessageLookupByLibrary {
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
       "Swipe to explore options",
     ),
+    "syncChangesConfirmed": m3,
+    "syncChangesSynced": m4,
+    "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
+      "Cloud mode activated. ",
+    ),
+    "syncCloudMigrationComplete": MessageLookupByLibrary.simpleMessage(
+      "Cloud mode activated. ",
+    ),
+    "syncCloudPending": MessageLookupByLibrary.simpleMessage(
+      "Cloud mode active. ",
+    ),
+    "syncDownloadFailed": MessageLookupByLibrary.simpleMessage(
+      "Failed to download sync.",
+    ),
+    "syncDownloading": MessageLookupByLibrary.simpleMessage(
+      "Downloading EMusic changes...",
+    ),
+    "syncLibrarySynced": MessageLookupByLibrary.simpleMessage(
+      "Synchronized library.",
+    ),
+    "syncLibraryUpToDate": MessageLookupByLibrary.simpleMessage(
+      "Library up to date.",
+    ),
+    "syncLocalChangesFirst": MessageLookupByLibrary.simpleMessage(
+      "There are new local changes. ",
+    ),
+    "syncLocalDeviceOnly": MessageLookupByLibrary.simpleMessage(
+      "Your data is kept only on this device.",
+    ),
+    "syncLocalModeActive": MessageLookupByLibrary.simpleMessage(
+      "Local mode active",
+    ),
+    "syncOfflinePending": MessageLookupByLibrary.simpleMessage("Offline. "),
+    "syncOfflineRetry": MessageLookupByLibrary.simpleMessage("Offline. "),
     "syncPlaylistSongs": MessageLookupByLibrary.simpleMessage(
       "Sync playlist songs",
+    ),
+    "syncUnconfirmedRetry": MessageLookupByLibrary.simpleMessage(
+      "EMusic did not confirm all the changes. ",
+    ),
+    "syncUploadRetry": MessageLookupByLibrary.simpleMessage(
+      "Could not get up. ",
+    ),
+    "syncUploadSuccess": MessageLookupByLibrary.simpleMessage(
+      "Changes uploaded correctly.",
+    ),
+    "syncUploadSuccessWs": MessageLookupByLibrary.simpleMessage(
+      "Changes uploaded successfully (WS).",
+    ),
+    "syncUploadWsRetry": MessageLookupByLibrary.simpleMessage(
+      "Could not upload using WS. ",
+    ),
+    "syncUploading": MessageLookupByLibrary.simpleMessage(
+      "Uploading changes to EMusic...",
     ),
     "synced": MessageLookupByLibrary.simpleMessage("Synced"),
     "syncedLyricsNotAvailable": MessageLookupByLibrary.simpleMessage(
@@ -967,11 +1153,18 @@ class MessageLookup extends MessageLookupByLibrary {
     "unlinkAlert": MessageLookupByLibrary.simpleMessage(
       "Unlinked successfully!",
     ),
+    "untitledSong": MessageLookupByLibrary.simpleMessage("Untitled song"),
     "upNext": MessageLookupByLibrary.simpleMessage("Up Next"),
     "updateApp": MessageLookupByLibrary.simpleMessage("Update Application"),
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "Url detected click on it to open/play associated content",
     ),
+    "userBlocked": MessageLookupByLibrary.simpleMessage("Blocked user"),
+    "userListMissing": MessageLookupByLibrary.simpleMessage(
+      "The response does not contain a list of users.",
+    ),
+    "userSearchFailed": m5,
+    "userUnblocked": MessageLookupByLibrary.simpleMessage("Unlocked user"),
     "username": MessageLookupByLibrary.simpleMessage("Username"),
     "video": MessageLookupByLibrary.simpleMessage("Video"),
     "videos": MessageLookupByLibrary.simpleMessage("Videos"),

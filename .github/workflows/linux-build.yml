@@ -1,0 +1,63 @@
+name: Build Linux Application
+
+on:
+  release:
+    types: [published]
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create .env file
+        run: |
+          if [ -z "${{ secrets.ENV_FILE }}" ]; then
+            echo "API_URL=https://emusic.josprox.com" > .env
+          else
+            echo "${{ secrets.ENV_FILE }}" > .env
+          fi
+
+      - name: Install build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y clang cmake ninja-build pkg-config libgtk-3-dev liblzma-dev libsecret-1-dev libjson-glib-dev libmpv-dev mpv
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          cache: true
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Build Linux Application
+        run: flutter build linux --release
+
+      - name: Package Portable Tarball
+        run: |
+          mkdir -p distribution
+          tar -czvf distribution/EstrellaMusic_Linux_Portable.tar.gz -C build/linux/x64/release/bundle .
+
+      - name: Upload Portable Tarball
+        uses: actions/upload-artifact@v4
+        with:
+          name: linux-portable-tar
+          path: distribution/EstrellaMusic_Linux_Portable.tar.gz
+
+      - name: Upload binaries to GitHub Release
+        if: startsWith(github.ref, 'refs/tags/') || github.event_name == 'release'
+        uses: softprops/action-gh-release@v2
+        with:
+          files: distribution/EstrellaMusic_Linux_Portable.tar.gz
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

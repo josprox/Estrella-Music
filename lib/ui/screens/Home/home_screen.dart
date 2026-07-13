@@ -100,7 +100,6 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-
 // _GlassFab removed — replaced by standard FloatingActionButton above
 
 class Body extends StatelessWidget {
@@ -240,32 +239,38 @@ class Body extends StatelessWidget {
                                                 .onSurface,
                                           ),
                                     ),
-                                     const Spacer(),
-                                     if (SqliteStore.box('AppPrefs').get('emusicDataMode', defaultValue: 'local') == 'cloud') ...[
-                                       IconButton(
-                                         icon: const Icon(Icons.group_add_rounded,
-                                             size: 30),
-                                         tooltip: 'Amigos',
-                                         onPressed: () {
-                                           Get.to(
-                                             () => const FriendsManagementScreen(),
-                                             id: ScreenNavigationSetup.id,
-                                             transition: Transition.rightToLeft,
-                                           );
-                                         },
-                                       ),
-                                     ],
-                                     IconButton(
-                                       icon: const Icon(Icons.settings_outlined,
-                                           size: 30),
-                                       onPressed: () {
-                                         Get.to(
-                                           () => const SettingsScreen(isBottomNavActive: false),
-                                           id: ScreenNavigationSetup.id,
-                                           transition: Transition.rightToLeft,
-                                         );
-                                       },
-                                     ),
+                                    const Spacer(),
+                                    if (SqliteStore.box('AppPrefs').get(
+                                            'emusicDataMode',
+                                            defaultValue: 'local') ==
+                                        'cloud') ...[
+                                      IconButton(
+                                        icon: const Icon(
+                                            Icons.group_add_rounded,
+                                            size: 30),
+                                        tooltip: S.current.friends,
+                                        onPressed: () {
+                                          Get.to(
+                                            () =>
+                                                const FriendsManagementScreen(),
+                                            id: ScreenNavigationSetup.id,
+                                            transition: Transition.rightToLeft,
+                                          );
+                                        },
+                                      ),
+                                    ],
+                                    IconButton(
+                                      icon: const Icon(Icons.settings_outlined,
+                                          size: 30),
+                                      onPressed: () {
+                                        Get.to(
+                                          () => const SettingsScreen(
+                                              isBottomNavActive: false),
+                                          id: ScreenNavigationSetup.id,
+                                          transition: Transition.rightToLeft,
+                                        );
+                                      },
+                                    ),
                                   ],
                                 ),
                               ),
@@ -285,7 +290,6 @@ class Body extends StatelessWidget {
                       }),
               ),
             ),
-
           ],
         ),
       );
@@ -328,8 +332,7 @@ class Body extends StatelessWidget {
         .whereType<Widget>()
         .toList();
   }
-
-  }
+}
 
 class _NetworkError extends StatelessWidget {
   final VoidCallback onRetry;

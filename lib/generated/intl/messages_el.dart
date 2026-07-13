@@ -23,7 +23,16 @@ class MessageLookup extends MessageLookupByLibrary {
   static String m0(error) =>
       "Παρουσιάστηκε σφάλμα κατά την αναγέννηση: ${error}";
 
-  static String m1(current) => "Βήμα ${current} από 3";
+  static String m1(title) => "Παρόμοιο με ${title}";
+
+  static String m2(current) => "Βήμα ${current} από 3";
+
+  static String m3(count) => "${count} πραγματοποιήθηκαν αλλαγές.";
+
+  static String m4(count) => "${count} συγχρονισμένες αλλαγές.";
+
+  static String m5(statusCode) =>
+      "Δεν ήταν δυνατή η αναζήτηση για χρήστες (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -79,6 +88,15 @@ class MessageLookup extends MessageLookupByLibrary {
       "Το αντίγραφο ασφαλείας ανέβηκε σωστά.",
     ),
     "close": MessageLookupByLibrary.simpleMessage("Κοντά"),
+    "cloudLibraryFound": MessageLookupByLibrary.simpleMessage(
+      "Βρέθηκε βιβλιοθήκη cloud.",
+    ),
+    "cloudLibraryFoundDeviceWillDownload": MessageLookupByLibrary.simpleMessage(
+      "Βρέθηκε μια βιβλιοθήκη cloud. Αυτή η συσκευή θα το κατεβάσει χωρίς να το αντικαταστήσει.",
+    ),
+    "cloudModeReadyOfflineCache": MessageLookupByLibrary.simpleMessage(
+      "Η λειτουργία cloud είναι έτοιμη. Αυτή η συσκευή θα λειτουργεί ως προσωρινή μνήμη εκτός σύνδεσης.",
+    ),
     "cloud_b1": MessageLookupByLibrary.simpleMessage(
       "Συνδεθείτε με ασφάλεια χρησιμοποιώντας τον λογαριασμό σας Joss Red.",
     ),
@@ -97,6 +115,19 @@ class MessageLookup extends MessageLookupByLibrary {
     "cloud_title": MessageLookupByLibrary.simpleMessage(
       "Λειτουργία Cloud (Συνιστάται)",
     ),
+    "collaborativePlaylistDescription": MessageLookupByLibrary.simpleMessage(
+      "Συνεργατική λίστα αναπαραγωγής",
+    ),
+    "collaboratorsInstruction": MessageLookupByLibrary.simpleMessage(
+      "Επιλέξτε τους φίλους που θα μπορούν να δουν και να επεξεργαστούν αυτήν τη λίστα αναπαραγωγής:",
+    ),
+    "collaboratorsUpdated": MessageLookupByLibrary.simpleMessage(
+      "Οι συνεργάτες ενημερώθηκαν σωστά.",
+    ),
+    "dailyDiscover": MessageLookupByLibrary.simpleMessage(
+      "Καθημερινή ανακάλυψη",
+    ),
+    "done": MessageLookupByLibrary.simpleMessage("Ετοιμος"),
     "email": MessageLookupByLibrary.simpleMessage("E-mail"),
     "errorOccurred": MessageLookupByLibrary.simpleMessage(
       "Παρουσιάστηκε σφάλμα",
@@ -109,13 +140,42 @@ class MessageLookup extends MessageLookupByLibrary {
     "forgottenFavorites": MessageLookupByLibrary.simpleMessage(
       "ξεχασμένα αγαπημένα",
     ),
+    "friendFallback": MessageLookupByLibrary.simpleMessage("Φίλε"),
+    "friendRequestAccepted": MessageLookupByLibrary.simpleMessage(
+      "Αίτημα φιλίας δεκτό",
+    ),
+    "friendRequestSent": MessageLookupByLibrary.simpleMessage(
+      "Το αίτημα φιλίας εστάλη",
+    ),
+    "friends": MessageLookupByLibrary.simpleMessage("Φίλοι"),
+    "friendsLoginRequired": MessageLookupByLibrary.simpleMessage(
+      "Συνδεθείτε για να βρείτε φίλους.",
+    ),
+    "friendshipRemoved": MessageLookupByLibrary.simpleMessage(
+      "Η φιλία καταργήθηκε",
+    ),
+    "genericAlbum": MessageLookupByLibrary.simpleMessage("Αλμπουμ"),
+    "genericError": MessageLookupByLibrary.simpleMessage("Λάθος"),
     "genre_electronic": MessageLookupByLibrary.simpleMessage("Ηλεκτρονική"),
     "genre_hiphop": MessageLookupByLibrary.simpleMessage("χιπ χοπ"),
     "genre_jazz": MessageLookupByLibrary.simpleMessage("Τζαζ"),
     "genre_latin": MessageLookupByLibrary.simpleMessage("λατινικά"),
     "genre_pop": MessageLookupByLibrary.simpleMessage("Κρότος"),
     "genre_rock": MessageLookupByLibrary.simpleMessage("Βράχος"),
+    "importedFromJossMusic": MessageLookupByLibrary.simpleMessage(
+      "Εισαγωγή από την Joss Music Kotlin",
+    ),
+    "invalidServerResponse": MessageLookupByLibrary.simpleMessage(
+      "Μη έγκυρη απάντηση διακομιστή.",
+    ),
+    "invalidSessionToken": MessageLookupByLibrary.simpleMessage(
+      "Η συνεδρία δεν περιέχει έγκυρο διακριτικό.",
+    ),
+    "keepListening": MessageLookupByLibrary.simpleMessage("συνέχισε να ακούς"),
     "latestRelease": MessageLookupByLibrary.simpleMessage("Τελευταία έκδοση"),
+    "libraryPlaylistDescription": MessageLookupByLibrary.simpleMessage(
+      "Λίστα αναπαραγωγής βιβλιοθήκης",
+    ),
     "listenNow": MessageLookupByLibrary.simpleMessage("Άκου τώρα"),
     "listeningToEnvironment": MessageLookupByLibrary.simpleMessage(
       "Ακούγοντας το περιβάλλον...",
@@ -136,8 +196,59 @@ class MessageLookup extends MessageLookupByLibrary {
       "Απόλυτο απόρρητο στη συσκευή σας",
     ),
     "local_title": MessageLookupByLibrary.simpleMessage("Τοπική λειτουργία"),
+    "manageCollaborators": MessageLookupByLibrary.simpleMessage(
+      "Διαχείριση συνεργατών (φίλων)",
+    ),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
       "Βεβαιωθείτε ότι η μουσική παίζει αρκετά δυνατά κοντά στο μικρόφωνό σας.",
+    ),
+    "migratedAlbum": MessageLookupByLibrary.simpleMessage(
+      "Λεύκωμα μετεγκατάστασης",
+    ),
+    "migratedLibrary": MessageLookupByLibrary.simpleMessage(
+      "Βιβλιοθήκη μετεγκατάστασης",
+    ),
+    "migratedPlaylist": MessageLookupByLibrary.simpleMessage(
+      "Μετεγκατάσταση λίστας αναπαραγωγής",
+    ),
+    "migrationAlreadyRunning": MessageLookupByLibrary.simpleMessage(
+      "Υπάρχει ήδη μια μετεγκατάσταση σε εξέλιξη.",
+    ),
+    "migrationAnalyzingLocal": MessageLookupByLibrary.simpleMessage(
+      "Αναλύοντας την τοπική βιβλιοθήκη...",
+    ),
+    "migrationCheckingCloud": MessageLookupByLibrary.simpleMessage(
+      "Έλεγχος εάν το EMusic Cloud διαθέτει ήδη βιβλιοθήκη...",
+    ),
+    "migrationCompleted": MessageLookupByLibrary.simpleMessage(
+      "Η μετανάστευση ολοκληρώθηκε.",
+    ),
+    "migrationCreatingBackup": MessageLookupByLibrary.simpleMessage(
+      "Δημιουργία τοπικού αντιγράφου ασφαλείας πριν από τη σύνδεση στο cloud...",
+    ),
+    "migrationFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
+      "Η μετεγκατάσταση απέτυχε. Τα τοπικά σας δεδομένα δεν τροποποιήθηκαν.",
+    ),
+    "migrationLoginRequired": MessageLookupByLibrary.simpleMessage(
+      "Συνδεθείτε στο Joss Red πριν από τη μετεγκατάσταση.",
+    ),
+    "migrationPreparingCloud": MessageLookupByLibrary.simpleMessage(
+      "Προετοιμασία της μετεγκατάστασης στο EMusic Cloud...",
+    ),
+    "migrationStartFailed": MessageLookupByLibrary.simpleMessage(
+      "Το EMusic Cloud δεν μπόρεσε να ξεκινήσει τη μετεγκατάσταση.",
+    ),
+    "migrationUploadIncomplete": MessageLookupByLibrary.simpleMessage(
+      "Δεν ήταν δυνατή η μεταφόρτωση όλων των δεδομένων. Διατηρούμε την τοπική σας υποστήριξη.",
+    ),
+    "migrationUploadingData": MessageLookupByLibrary.simpleMessage(
+      "Μεταφόρτωση λιστών αναπαραγωγής, αγαπημένων και ιστορικού...",
+    ),
+    "migrationValidationFailed": MessageLookupByLibrary.simpleMessage(
+      "Το EMusic Cloud δεν μπόρεσε να επικυρώσει τη μετεγκατάσταση.",
+    ),
+    "migrationVerifyingIntegrity": MessageLookupByLibrary.simpleMessage(
+      "Επαλήθευση ακεραιότητας στο EMusic Cloud...",
     ),
     "migration_btn_select": MessageLookupByLibrary.simpleMessage(
       "Επιλέξτε αρχείο και εισαγωγή",
@@ -186,16 +297,31 @@ class MessageLookup extends MessageLookupByLibrary {
     "news_item_trans_title": MessageLookupByLibrary.simpleMessage(
       "Διαφανής συγχρονισμός",
     ),
+    "noJossRedFriends": MessageLookupByLibrary.simpleMessage(
+      "Δεν έχετε προσθέσει φίλους στο Joss Red.",
+    ),
     "noMatchInstruction": MessageLookupByLibrary.simpleMessage(
       "Δεν ήταν δυνατή η εύρεση τραγουδιών στον ηχογραφημένο ήχο",
     ),
     "noMatchesFound": MessageLookupByLibrary.simpleMessage("Χωρίς αγώνες"),
+    "noSongsInCollection": MessageLookupByLibrary.simpleMessage(
+      "Δεν υπάρχουν τραγούδια σε αυτή τη συλλογή",
+    ),
+    "notAuthenticated": MessageLookupByLibrary.simpleMessage(
+      "Δεν έχει επικυρωθεί",
+    ),
     "password_text": MessageLookupByLibrary.simpleMessage("Σύνθημα"),
+    "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage(
+      "Λίστα αναπαραγωγής με σωλήνες",
+    ),
     "playNow": MessageLookupByLibrary.simpleMessage("Παίξτε Τώρα"),
     "playbackSpeed": MessageLookupByLibrary.simpleMessage(
       "Ταχύτητα αναπαραγωγής",
     ),
     "playingRecognizedTrack": MessageLookupByLibrary.simpleMessage("Παιχνίδι:"),
+    "playlistCollaboratorsTitle": MessageLookupByLibrary.simpleMessage(
+      "Συνεισφέροντες playlist",
+    ),
     "popularTracks": MessageLookupByLibrary.simpleMessage("Δημοφιλή κομμάτια"),
     "processingAudio": MessageLookupByLibrary.simpleMessage(
       "Επεξεργασία του ήχου...",
@@ -208,11 +334,18 @@ class MessageLookup extends MessageLookupByLibrary {
       "Συνιστούμε να ενεργοποιήσετε τη λειτουργία Cloud για μια εμπειρία παρόμοια με το Spotify: συγχρονισμός σε πραγματικό χρόνο μεταξύ όλων των συσκευών σας και αυτόματη δημιουργία αντιγράφων ασφαλείας χωρίς να χρειάζεται να κάνετε τίποτα.",
     ),
     "reproducedBy": MessageLookupByLibrary.simpleMessage("Αναπαράγεται από"),
+    "save": MessageLookupByLibrary.simpleMessage("Διατήρηση"),
     "searchInLibrary": MessageLookupByLibrary.simpleMessage(
       "Αναζήτηση στη Βιβλιοθήκη",
     ),
     "search_recent_title": MessageLookupByLibrary.simpleMessage(
       "Πρόσφατες αναζητήσεις",
+    ),
+    "selectedFileNotFound": MessageLookupByLibrary.simpleMessage(
+      "Το επιλεγμένο αρχείο δεν βρέθηκε.",
+    ),
+    "sessionExpiredLoginAgain": MessageLookupByLibrary.simpleMessage(
+      "Η συνεδρία σας έχει λήξει. Συνδεθείτε ξανά.",
     ),
     "settings_about_desc": MessageLookupByLibrary.simpleMessage(
       "Σχετικά με την Estrella Music",
@@ -285,12 +418,91 @@ class MessageLookup extends MessageLookupByLibrary {
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
       "Αναζήτηση στη βάση δεδομένων Shazam για αγώνες...",
     ),
-    "slide_indicator": m1,
+    "similarToTitle": m1,
+    "slide_indicator": m2,
     "songFound": MessageLookupByLibrary.simpleMessage("Το τραγούδι βρέθηκε!"),
     "songPitch": MessageLookupByLibrary.simpleMessage("τόνο τραγουδιού"),
+    "songsImportedFromJossMusic": MessageLookupByLibrary.simpleMessage(
+      "Τραγούδια που εισάγονται από την Joss Music Kotlin",
+    ),
     "speedAndPitch": MessageLookupByLibrary.simpleMessage("Ταχύτητα και Βήμα"),
+    "startupScreen": MessageLookupByLibrary.simpleMessage(
+      "Άνοιγμα κατά την εκκίνηση",
+    ),
+    "startupScreenDescription": MessageLookupByLibrary.simpleMessage(
+      "Επιλέξτε την ενότητα που ανοίγει πρώτα το Estrella Music",
+    ),
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
       "Σύρετε για να εξερευνήσετε τις επιλογές ➔",
+    ),
+    "syncChangesConfirmed": m3,
+    "syncChangesSynced": m4,
+    "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
+      "Η λειτουργία cloud ενεργοποιήθηκε. Λήψη της υπάρχουσας βιβλιοθήκης.",
+    ),
+    "syncCloudMigrationComplete": MessageLookupByLibrary.simpleMessage(
+      "Η λειτουργία cloud ενεργοποιήθηκε. Βιβλιοθήκη μετεγκατάστασης.",
+    ),
+    "syncCloudPending": MessageLookupByLibrary.simpleMessage(
+      "Η λειτουργία cloud είναι ενεργή. Εκκρεμεί συγχρονισμός.",
+    ),
+    "syncDownloadFailed": MessageLookupByLibrary.simpleMessage(
+      "Αποτυχία λήψης συγχρονισμού.",
+    ),
+    "syncDownloading": MessageLookupByLibrary.simpleMessage(
+      "Λήψη αλλαγών EMusic...",
+    ),
+    "syncLibrarySynced": MessageLookupByLibrary.simpleMessage(
+      "Συγχρονισμένη βιβλιοθήκη.",
+    ),
+    "syncLibraryUpToDate": MessageLookupByLibrary.simpleMessage(
+      "Βιβλιοθήκη ενημερωμένη.",
+    ),
+    "syncLocalChangesFirst": MessageLookupByLibrary.simpleMessage(
+      "Υπάρχουν νέες τοπικές αλλαγές. Θα μεταφορτωθούν πριν από τη λήψη.",
+    ),
+    "syncLocalDeviceOnly": MessageLookupByLibrary.simpleMessage(
+      "Τα δεδομένα σας διατηρούνται μόνο σε αυτήν τη συσκευή.",
+    ),
+    "syncLocalModeActive": MessageLookupByLibrary.simpleMessage(
+      "Η τοπική λειτουργία είναι ενεργή",
+    ),
+    "syncOfflinePending": MessageLookupByLibrary.simpleMessage(
+      "Εκτός σύνδεσης. Εκκρεμούν αλλαγές.",
+    ),
+    "syncOfflineRetry": MessageLookupByLibrary.simpleMessage(
+      "Εκτός σύνδεσης. Οι αλλαγές αποθηκεύτηκαν για επανάληψη.",
+    ),
+    "syncUnconfirmedRetry": MessageLookupByLibrary.simpleMessage(
+      "Το EMusic δεν επιβεβαίωσε όλες τις αλλαγές. Θα δοκιμαστούν ξανά.",
+    ),
+    "syncUploadRetry": MessageLookupByLibrary.simpleMessage(
+      "Δεν μπορούσα να σηκωθώ. Θα δοκιμαστεί ξανά αργότερα.",
+    ),
+    "syncUploadSuccess": MessageLookupByLibrary.simpleMessage(
+      "Οι αλλαγές ανέβηκαν σωστά.",
+    ),
+    "syncUploadSuccessWs": MessageLookupByLibrary.simpleMessage(
+      "Οι αλλαγές μεταφορτώθηκαν με επιτυχία (WS).",
+    ),
+    "syncUploadWsRetry": MessageLookupByLibrary.simpleMessage(
+      "Δεν ήταν δυνατή η μεταφόρτωση με χρήση WS. Θα δοκιμαστεί ξανά αργότερα.",
+    ),
+    "syncUploading": MessageLookupByLibrary.simpleMessage(
+      "Μεταφόρτωση αλλαγών στο EMusic...",
+    ),
+    "untitledSong": MessageLookupByLibrary.simpleMessage(
+      "Τραγούδι χωρίς τίτλο",
+    ),
+    "userBlocked": MessageLookupByLibrary.simpleMessage(
+      "Αποκλεισμένος χρήστης",
+    ),
+    "userListMissing": MessageLookupByLibrary.simpleMessage(
+      "Η απάντηση δεν περιέχει λίστα χρηστών.",
+    ),
+    "userSearchFailed": m5,
+    "userUnblocked": MessageLookupByLibrary.simpleMessage(
+      "Ξεκλείδωτος χρήστης",
     ),
     "username": MessageLookupByLibrary.simpleMessage("Όνομα χρήστη"),
     "video": MessageLookupByLibrary.simpleMessage("Βίντεο"),

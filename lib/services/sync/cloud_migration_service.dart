@@ -5,6 +5,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart' hide Response;
 import 'package:harmonymusic/services/storage/sqlite_store.dart';
+import 'package:harmonymusic/generated/l10n.dart';
 
 import 'package:harmonymusic/utils/helpers/helper.dart';
 import 'package:harmonymusic/services/backup/app_backup_service.dart';
@@ -51,15 +52,15 @@ class CloudMigrationService extends GetxService {
 
   Future<CloudMigrationResult> migrateLocalLibraryToCloud() async {
     if (isMigrating.value) {
-      return const CloudMigrationResult(
+      return CloudMigrationResult(
         success: false,
-        message: 'Ya hay una migracion en progreso.',
+        message: S.current.migrationAlreadyRunning,
       );
     }
     if (!_authService.isAuthenticated.value) {
-      return const CloudMigrationResult(
+      return CloudMigrationResult(
         success: false,
-        message: 'Necesitas iniciar sesion en Joss Red antes de migrar.',
+        message: S.current.migrationLoginRequired,
       );
     }
 
@@ -70,23 +71,22 @@ class CloudMigrationService extends GetxService {
     String? migrationId;
     try {
       final prefs = SqliteStore.box('AppPrefs');
-      statusMessage.value = 'Revisando si EMusic Cloud ya tiene biblioteca...';
+      statusMessage.value = S.current.migrationCheckingCloud;
       final remoteSummary = await fetchRemoteSummary();
       if (_hasRemoteLibraryData(remoteSummary)) {
         await prefs.put(_statusKey, 'using_existing_cloud');
         progress.value = 1;
-        statusMessage.value =
-            'Biblioteca cloud encontrada. Este dispositivo descargara la nube sin sobrescribirla.';
+        statusMessage.value = S.current.cloudLibraryFoundDeviceWillDownload;
         return CloudMigrationResult(
           success: true,
-          message: 'Biblioteca cloud encontrada.',
+          message: S.current.cloudLibraryFound,
           receivedCounts: remoteSummary,
           usedExistingCloud: true,
         );
       }
 
       await prefs.put(_statusKey, 'creating_backup');
-      statusMessage.value = 'Creando respaldo local antes de conectar cloud...';
+      statusMessage.value = S.current.migrationCreatingBackup;
 
       final backupBytes = await _appBackupService.createBackupBytes();
       final backupHash =
@@ -94,7 +94,7 @@ class CloudMigrationService extends GetxService {
       await prefs.put(_backupHashKey, backupHash);
       progress.value = 0.12;
 
-      statusMessage.value = 'Analizando biblioteca local...';
+      statusMessage.value = S.current.migrationAnalyzingLocal;
       final snapshot = await buildLocalSnapshot();
       final expectedCounts = _countSnapshot(snapshot);
       final deviceId = await _ensureDeviceId();
@@ -103,7 +103,7 @@ class CloudMigrationService extends GetxService {
       progress.value = 0.25;
 
       await prefs.put(_statusKey, 'starting');
-      statusMessage.value = 'Preparando migracion en EMusic Cloud...';
+      statusMessage.value = S.current.migrationPreparingCloud;
       final startResponse = await _dio.post(
         '${_normalizedBaseUrl()}api/music/migration/start',
         options: Options(headers: await _headers()),
@@ -117,14 +117,14 @@ class CloudMigrationService extends GetxService {
 
       if (startResponse.statusCode != 200) {
         return _fail(
-          'EMusic Cloud no pudo iniciar la migracion.',
+          S.current.migrationStartFailed,
           migrationId: migrationId,
           response: startResponse,
         );
       }
 
       await prefs.put(_statusKey, 'uploading');
-      statusMessage.value = 'Subiendo playlists, favoritos e historial...';
+      statusMessage.value = S.current.migrationUploadingData;
       final uploadOk = await _uploadSnapshot(
         migrationId: migrationId,
         deviceId: deviceId,
@@ -132,13 +132,13 @@ class CloudMigrationService extends GetxService {
       );
       if (!uploadOk) {
         return _fail(
-          'No se pudieron subir todos los datos. Conservamos tu respaldo local.',
+          S.current.migrationUploadIncomplete,
           migrationId: migrationId,
         );
       }
 
       await prefs.put(_statusKey, 'validating');
-      statusMessage.value = 'Verificando integridad en EMusic Cloud...';
+      statusMessage.value = S.current.migrationVerifyingIntegrity;
       final completeResponse = await _dio.post(
         '${_normalizedBaseUrl()}api/music/migration/complete',
         options: Options(headers: await _headers()),
@@ -147,7 +147,7 @@ class CloudMigrationService extends GetxService {
 
       if (completeResponse.statusCode != 200) {
         return _fail(
-          'EMusic Cloud no pudo validar la migracion.',
+          S.current.migrationValidationFailed,
           migrationId: migrationId,
           response: completeResponse,
         );
@@ -157,18 +157,17 @@ class CloudMigrationService extends GetxService {
       await prefs.put(_statusKey, 'completed');
       await prefs.put('lastSuccessfulSyncAt', DateTime.now().toIso8601String());
       progress.value = 1;
-      statusMessage.value =
-          'Modo cloud listo. Este dispositivo sera cache offline.';
+      statusMessage.value = S.current.cloudModeReadyOfflineCache;
 
       return CloudMigrationResult(
         success: true,
-        message: 'Migracion completada.',
+        message: S.current.migrationCompleted,
         migrationId: migrationId,
         receivedCounts: _asMap(data['received_counts']),
       );
     } catch (e) {
       return _fail(
-        'La migracion fallo. Tus datos locales no fueron modificados.',
+        S.current.migrationFailedLocalPreserved,
         migrationId: migrationId,
         error: e,
       );
@@ -208,7 +207,8 @@ class CloudMigrationService extends GetxService {
   }
 
   Future<bool> cancelLastMigration() async {
-    final migrationId = SqliteStore.box('AppPrefs').get(_migrationIdKey)?.toString();
+    final migrationId =
+        SqliteStore.box('AppPrefs').get(_migrationIdKey)?.toString();
     if (migrationId == null || migrationId.isEmpty) {
       return true;
     }
@@ -308,8 +308,9 @@ class CloudMigrationService extends GetxService {
 
       final boxName = _sanitizeBoxName(playlistId);
       final wasOpen = SqliteStore.isBoxOpen(boxName);
-      final tracksBox =
-          wasOpen ? SqliteStore.box(boxName) : await SqliteStore.openBox(boxName);
+      final tracksBox = wasOpen
+          ? SqliteStore.box(boxName)
+          : await SqliteStore.openBox(boxName);
       result.add({
         ...playlist,
         'tracks': tracksBox.values.toList(),
@@ -415,7 +416,7 @@ class CloudMigrationService extends GetxService {
   Future<Map<String, String>> _headers() async {
     final token = await _authService.getAccessToken();
     if (token == null || token.isEmpty) {
-      throw StateError('Tu sesion expiro. Vuelve a iniciar sesion.');
+      throw StateError(S.current.sessionExpiredLoginAgain);
     }
     return {
       'Authorization': 'Bearer $token',

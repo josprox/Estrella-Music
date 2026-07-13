@@ -22,7 +22,15 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(error) => "重新生成时发生错误：${error}";
 
-  static String m1(current) => "步骤 ${current}（共 3 步）";
+  static String m1(title) => "类似于 ${title}";
+
+  static String m2(current) => "步骤 ${current}（共 3 步）";
+
+  static String m3(count) => "${count} 已提交更改。";
+
+  static String m4(count) => "${count} 同步更改。";
+
+  static String m5(statusCode) => "无法搜索用户 (${statusCode})。";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -56,6 +64,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "backup_selection_prompt": MessageLookupByLibrary.simpleMessage("选择要备份的数据"),
     "backup_upload_success": MessageLookupByLibrary.simpleMessage("备份已正确上传。"),
     "close": MessageLookupByLibrary.simpleMessage("关闭"),
+    "cloudLibraryFound": MessageLookupByLibrary.simpleMessage("找到云图书馆。"),
+    "cloudLibraryFoundDeviceWillDownload": MessageLookupByLibrary.simpleMessage(
+      "找到了云图书馆。该设备将下载它而不覆盖它。",
+    ),
+    "cloudModeReadyOfflineCache": MessageLookupByLibrary.simpleMessage(
+      "云模式已准备就绪。该设备将用作离线缓存。",
+    ),
     "cloud_b1": MessageLookupByLibrary.simpleMessage("使用您的 Joss Red 帐户安全登录。"),
     "cloud_b2": MessageLookupByLibrary.simpleMessage(
       "立即从任何设备（Windows、Android 等）访问您的播放列表、收藏夹和历史记录。",
@@ -66,19 +81,45 @@ class MessageLookup extends MessageLookupByLibrary {
     "cloud_btn": MessageLookupByLibrary.simpleMessage("激活云同步"),
     "cloud_subtitle": MessageLookupByLibrary.simpleMessage("与Joss Red实时同步"),
     "cloud_title": MessageLookupByLibrary.simpleMessage("云模式（推荐）"),
+    "collaborativePlaylistDescription": MessageLookupByLibrary.simpleMessage(
+      "协作播放列表",
+    ),
+    "collaboratorsInstruction": MessageLookupByLibrary.simpleMessage(
+      "选择能够查看和编辑此播放列表的好友：",
+    ),
+    "collaboratorsUpdated": MessageLookupByLibrary.simpleMessage("协作者已正确更新。"),
+    "dailyDiscover": MessageLookupByLibrary.simpleMessage("每日发现"),
+    "done": MessageLookupByLibrary.simpleMessage("准备好"),
     "email": MessageLookupByLibrary.simpleMessage("电子邮件"),
     "errorOccurred": MessageLookupByLibrary.simpleMessage("发生错误"),
     "errorPlayingTrack": MessageLookupByLibrary.simpleMessage("播放时出错："),
     "follow": MessageLookupByLibrary.simpleMessage("继续"),
     "following": MessageLookupByLibrary.simpleMessage("下列的"),
     "forgottenFavorites": MessageLookupByLibrary.simpleMessage("忘记收藏夹"),
+    "friendFallback": MessageLookupByLibrary.simpleMessage("朋友"),
+    "friendRequestAccepted": MessageLookupByLibrary.simpleMessage("已接受好友请求"),
+    "friendRequestSent": MessageLookupByLibrary.simpleMessage("好友请求已发送"),
+    "friends": MessageLookupByLibrary.simpleMessage("朋友们"),
+    "friendsLoginRequired": MessageLookupByLibrary.simpleMessage("登录寻找朋友。"),
+    "friendshipRemoved": MessageLookupByLibrary.simpleMessage("友谊已移除"),
+    "genericAlbum": MessageLookupByLibrary.simpleMessage("专辑"),
+    "genericError": MessageLookupByLibrary.simpleMessage("错误"),
     "genre_electronic": MessageLookupByLibrary.simpleMessage("电子产品"),
     "genre_hiphop": MessageLookupByLibrary.simpleMessage("嘻哈"),
     "genre_jazz": MessageLookupByLibrary.simpleMessage("爵士乐"),
     "genre_latin": MessageLookupByLibrary.simpleMessage("拉丁"),
     "genre_pop": MessageLookupByLibrary.simpleMessage("流行音乐"),
     "genre_rock": MessageLookupByLibrary.simpleMessage("岩石"),
+    "importedFromJossMusic": MessageLookupByLibrary.simpleMessage(
+      "从 Joss Music Kotlin 导入",
+    ),
+    "invalidServerResponse": MessageLookupByLibrary.simpleMessage("服务器响应无效。"),
+    "invalidSessionToken": MessageLookupByLibrary.simpleMessage("会话不包含有效令牌。"),
+    "keepListening": MessageLookupByLibrary.simpleMessage("继续听"),
     "latestRelease": MessageLookupByLibrary.simpleMessage("最新发布"),
+    "libraryPlaylistDescription": MessageLookupByLibrary.simpleMessage(
+      "图书馆播放列表",
+    ),
     "listenNow": MessageLookupByLibrary.simpleMessage("现在听"),
     "listeningToEnvironment": MessageLookupByLibrary.simpleMessage("聆听环境..."),
     "local_b1": MessageLookupByLibrary.simpleMessage("它无需登录即可工作。"),
@@ -89,8 +130,49 @@ class MessageLookup extends MessageLookupByLibrary {
     "local_btn": MessageLookupByLibrary.simpleMessage("仅在此设备上使用"),
     "local_subtitle": MessageLookupByLibrary.simpleMessage("您设备上的绝对隐私"),
     "local_title": MessageLookupByLibrary.simpleMessage("本地模式"),
+    "manageCollaborators": MessageLookupByLibrary.simpleMessage("管理合作者（朋友）"),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
       "确保麦克风附近的音乐播放声音足够大。",
+    ),
+    "migratedAlbum": MessageLookupByLibrary.simpleMessage("迁移相册"),
+    "migratedLibrary": MessageLookupByLibrary.simpleMessage("迁移的库"),
+    "migratedPlaylist": MessageLookupByLibrary.simpleMessage("迁移的播放列表"),
+    "migrationAlreadyRunning": MessageLookupByLibrary.simpleMessage(
+      "迁移已经在进行中。",
+    ),
+    "migrationAnalyzingLocal": MessageLookupByLibrary.simpleMessage(
+      "分析当地图书馆...",
+    ),
+    "migrationCheckingCloud": MessageLookupByLibrary.simpleMessage(
+      "正在检查 EMusic Cloud 是否已有曲库...",
+    ),
+    "migrationCompleted": MessageLookupByLibrary.simpleMessage("迁移完成。"),
+    "migrationCreatingBackup": MessageLookupByLibrary.simpleMessage(
+      "连接云端之前创建本地备份...",
+    ),
+    "migrationFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
+      "迁移失败。您的本地数据未被修改。",
+    ),
+    "migrationLoginRequired": MessageLookupByLibrary.simpleMessage(
+      "迁移前登录 Joss Red。",
+    ),
+    "migrationPreparingCloud": MessageLookupByLibrary.simpleMessage(
+      "正在准备迁移到 EMusic Cloud...",
+    ),
+    "migrationStartFailed": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud 无法开始迁移。",
+    ),
+    "migrationUploadIncomplete": MessageLookupByLibrary.simpleMessage(
+      "并非所有数据都可以上传。我们保留您当地的支持。",
+    ),
+    "migrationUploadingData": MessageLookupByLibrary.simpleMessage(
+      "正在上传播放列表、收藏夹和历史记录...",
+    ),
+    "migrationValidationFailed": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud 无法验证迁移。",
+    ),
+    "migrationVerifyingIntegrity": MessageLookupByLibrary.simpleMessage(
+      "正在验证 EMusic Cloud 中的完整性...",
     ),
     "migration_btn_select": MessageLookupByLibrary.simpleMessage("选择文件并导入"),
     "mostListenedSong": MessageLookupByLibrary.simpleMessage("听次数最多的歌曲"),
@@ -123,14 +205,23 @@ class MessageLookup extends MessageLookupByLibrary {
       "您不再需要点击手动同步按钮；新电机负责自动升档和降档。",
     ),
     "news_item_trans_title": MessageLookupByLibrary.simpleMessage("透明同步"),
+    "noJossRedFriends": MessageLookupByLibrary.simpleMessage(
+      "您在 Joss Red 上还没有添加好友。",
+    ),
     "noMatchInstruction": MessageLookupByLibrary.simpleMessage(
       "在录制的音频中找不到任何歌曲",
     ),
     "noMatchesFound": MessageLookupByLibrary.simpleMessage("没有匹配项"),
+    "noSongsInCollection": MessageLookupByLibrary.simpleMessage("该专辑中没有歌曲"),
+    "notAuthenticated": MessageLookupByLibrary.simpleMessage("未经过身份验证"),
     "password_text": MessageLookupByLibrary.simpleMessage("密码"),
+    "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage("管道播放列表"),
     "playNow": MessageLookupByLibrary.simpleMessage("立即播放"),
     "playbackSpeed": MessageLookupByLibrary.simpleMessage("播放速度"),
     "playingRecognizedTrack": MessageLookupByLibrary.simpleMessage("播放："),
+    "playlistCollaboratorsTitle": MessageLookupByLibrary.simpleMessage(
+      "播放列表贡献者",
+    ),
     "popularTracks": MessageLookupByLibrary.simpleMessage("热门曲目"),
     "processingAudio": MessageLookupByLibrary.simpleMessage("处理音频..."),
     "readMore": MessageLookupByLibrary.simpleMessage("阅读更多"),
@@ -139,8 +230,13 @@ class MessageLookup extends MessageLookupByLibrary {
       "我们建议激活云模式以获得类似 Spotify 的体验：所有设备之间的实时同步和自动备份，无需您执行任何操作。",
     ),
     "reproducedBy": MessageLookupByLibrary.simpleMessage("转载者"),
+    "save": MessageLookupByLibrary.simpleMessage("保持"),
     "searchInLibrary": MessageLookupByLibrary.simpleMessage("在图书馆中搜索"),
     "search_recent_title": MessageLookupByLibrary.simpleMessage("最近的搜索"),
+    "selectedFileNotFound": MessageLookupByLibrary.simpleMessage("未找到所选文件。"),
+    "sessionExpiredLoginAgain": MessageLookupByLibrary.simpleMessage(
+      "您的会话已过期。再次登录。",
+    ),
     "settings_about_desc": MessageLookupByLibrary.simpleMessage("关于埃斯特雷拉音乐"),
     "settings_about_sub": MessageLookupByLibrary.simpleMessage(
       "版本、开源项目和 GitHub。",
@@ -202,11 +298,60 @@ class MessageLookup extends MessageLookupByLibrary {
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
       "正在 Shazam 数据库中搜索匹配项...",
     ),
-    "slide_indicator": m1,
+    "similarToTitle": m1,
+    "slide_indicator": m2,
     "songFound": MessageLookupByLibrary.simpleMessage("歌曲找到了！"),
     "songPitch": MessageLookupByLibrary.simpleMessage("歌声"),
+    "songsImportedFromJossMusic": MessageLookupByLibrary.simpleMessage(
+      "从 Joss Music Kotlin 导入的歌曲",
+    ),
     "speedAndPitch": MessageLookupByLibrary.simpleMessage("速度和音调"),
+    "startupScreen": MessageLookupByLibrary.simpleMessage("启动时打开"),
+    "startupScreenDescription": MessageLookupByLibrary.simpleMessage(
+      "选择 Estrella Music 首先打开的部分",
+    ),
     "swipe_prompt": MessageLookupByLibrary.simpleMessage("滑动以探索选项 ➔"),
+    "syncChangesConfirmed": m3,
+    "syncChangesSynced": m4,
+    "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
+      "云模式已启动。下载现有的库。",
+    ),
+    "syncCloudMigrationComplete": MessageLookupByLibrary.simpleMessage(
+      "云模式已启动。迁移的库。",
+    ),
+    "syncCloudPending": MessageLookupByLibrary.simpleMessage("云模式已激活。等待同步。"),
+    "syncDownloadFailed": MessageLookupByLibrary.simpleMessage("下载同步失败。"),
+    "syncDownloading": MessageLookupByLibrary.simpleMessage(
+      "正在下载 EMusic 更改...",
+    ),
+    "syncLibrarySynced": MessageLookupByLibrary.simpleMessage("同步库。"),
+    "syncLibraryUpToDate": MessageLookupByLibrary.simpleMessage("图书馆是最新的。"),
+    "syncLocalChangesFirst": MessageLookupByLibrary.simpleMessage(
+      "局部有新的变化。它们将在下载之前上传。",
+    ),
+    "syncLocalDeviceOnly": MessageLookupByLibrary.simpleMessage(
+      "您的数据仅保存在此设备上。",
+    ),
+    "syncLocalModeActive": MessageLookupByLibrary.simpleMessage("本地模式已激活"),
+    "syncOfflinePending": MessageLookupByLibrary.simpleMessage("离线。更改正在等待中。"),
+    "syncOfflineRetry": MessageLookupByLibrary.simpleMessage("离线。保存更改以供重试。"),
+    "syncUnconfirmedRetry": MessageLookupByLibrary.simpleMessage(
+      "EMusic 并未确认所有更改。他们将被重审。",
+    ),
+    "syncUploadRetry": MessageLookupByLibrary.simpleMessage("起不来。稍后将重试。"),
+    "syncUploadSuccess": MessageLookupByLibrary.simpleMessage("更改已正确上传。"),
+    "syncUploadSuccessWs": MessageLookupByLibrary.simpleMessage(
+      "更改已成功上传 (WS)。",
+    ),
+    "syncUploadWsRetry": MessageLookupByLibrary.simpleMessage(
+      "无法使用 WS 上传。稍后将重试。",
+    ),
+    "syncUploading": MessageLookupByLibrary.simpleMessage("正在将更改上传到 EMusic..."),
+    "untitledSong": MessageLookupByLibrary.simpleMessage("无题歌曲"),
+    "userBlocked": MessageLookupByLibrary.simpleMessage("被阻止的用户"),
+    "userListMissing": MessageLookupByLibrary.simpleMessage("响应不包含用户列表。"),
+    "userSearchFailed": m5,
+    "userUnblocked": MessageLookupByLibrary.simpleMessage("解锁用户"),
     "username": MessageLookupByLibrary.simpleMessage("用户名"),
     "video": MessageLookupByLibrary.simpleMessage("视频"),
     "welcome_intro": MessageLookupByLibrary.simpleMessage(

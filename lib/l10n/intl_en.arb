@@ -10,6 +10,109 @@
   "settings": "Settings",
   "library": "Library",
   "libSongs": "Library Songs",
+  "migratedLibrary": "Migrated library",
+  "noSongsInCollection": "There are no songs in this collection",
+  "startupScreen": "Open on startup",
+  "startupScreenDescription": "Choose the section that Estrella Music opens first",
+  "friends": "Friends",
+  "dailyDiscover": "Daily discovery",
+  "keepListening": "keep listening",
+  "similarToTitle": "Similar to {title}",
+  "@similarToTitle": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "pipedPlaylistDescription": "Piped Playlist",
+  "collaborativePlaylistDescription": "Collaborative Playlist",
+  "libraryPlaylistDescription": "Library Playlist",
+  "untitledSong": "Untitled song",
+  "migratedPlaylist": "Migrated Playlist",
+  "migratedAlbum": "Migrated album",
+  "songsImportedFromJossMusic": "Songs imported from Joss Music Kotlin",
+  "importedFromJossMusic": "Imported from Joss Music Kotlin",
+  "syncLocalModeActive": "Local mode active",
+  "syncCloudPending": "Cloud mode active. ",
+  "syncCloudDownloadingExisting": "Cloud mode activated. ",
+  "syncCloudMigrationComplete": "Cloud mode activated. ",
+  "syncLocalDeviceOnly": "Your data is kept only on this device.",
+  "syncDownloading": "Downloading EMusic changes...",
+  "syncDownloadFailed": "Failed to download sync.",
+  "syncLocalChangesFirst": "There are new local changes. ",
+  "syncLibrarySynced": "Synchronized library.",
+  "syncOfflinePending": "Offline. ",
+  "syncLibraryUpToDate": "Library up to date.",
+  "syncChangesSynced": "{count} synchronized changes.",
+  "@syncChangesSynced": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "syncUploading": "Uploading changes to EMusic...",
+  "syncUploadSuccessWs": "Changes uploaded successfully (WS).",
+  "syncUploadWsRetry": "Could not upload using WS. ",
+  "syncUploadSuccess": "Changes uploaded correctly.",
+  "syncUploadRetry": "Could not get up. ",
+  "syncOfflineRetry": "Offline. ",
+  "syncUnconfirmedRetry": "EMusic did not confirm all the changes. ",
+  "syncChangesConfirmed": "{count} changes committed.",
+  "@syncChangesConfirmed": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "migrationAlreadyRunning": "There is already a migration in progress.",
+  "migrationLoginRequired": "Log in to Joss Red before migrating.",
+  "migrationCheckingCloud": "Checking if EMusic Cloud already has a library...",
+  "cloudLibraryFoundDeviceWillDownload": "A cloud library was found. ",
+  "cloudLibraryFound": "Cloud library found.",
+  "migrationCreatingBackup": "Creating a local backup before connecting cloud...",
+  "migrationAnalyzingLocal": "Analyzing the local library...",
+  "migrationPreparingCloud": "Preparing the migration in EMusic Cloud...",
+  "migrationStartFailed": "EMusic Cloud could not start the migration.",
+  "migrationUploadingData": "Uploading playlists, favorites and history...",
+  "migrationUploadIncomplete": "Not all data could be uploaded. ",
+  "migrationVerifyingIntegrity": "Verifying integrity in EMusic Cloud...",
+  "migrationValidationFailed": "EMusic Cloud could not validate the migration.",
+  "cloudModeReadyOfflineCache": "Cloud mode is ready. ",
+  "migrationCompleted": "Migration completed.",
+  "migrationFailedLocalPreserved": "The migration failed. ",
+  "sessionExpiredLoginAgain": "Your session has expired. ",
+  "selectedFileNotFound": "The selected file was not found.",
+  "genericAlbum": "Album",
+  "friendsLoginRequired": "Sign in to find friends.",
+  "invalidSessionToken": "The session does not contain a valid token.",
+  "userSearchFailed": "Could not search for users ({statusCode}).",
+  "@userSearchFailed": {
+    "placeholders": {
+      "statusCode": {
+        "type": "int"
+      }
+    }
+  },
+  "invalidServerResponse": "Invalid server response.",
+  "userListMissing": "The response does not contain a list of users.",
+  "playlistCollaboratorsTitle": "Playlist contributors",
+  "collaboratorsInstruction": "Select the friends who will be able to see and edit this playlist:",
+  "noJossRedFriends": "You have no added friends on Joss Red.",
+  "friendFallback": "Friend",
+  "collaboratorsUpdated": "Collaborators updated correctly.",
+  "save": "Keep",
+  "manageCollaborators": "Manage collaborators (friends)",
+  "done": "Ready",
+  "notAuthenticated": "Not authenticated",
+  "genericError": "Mistake",
+  "friendRequestSent": "Friend request sent",
+  "friendRequestAccepted": "Friend request accepted",
+  "friendshipRemoved": "Friendship removed",
+  "userBlocked": "Blocked user",
+  "userUnblocked": "Unlocked user",
   "libPlaylists": "Library Playlists",
   "libAlbums": "Library Albums",
   "libArtists": "Library Artists",

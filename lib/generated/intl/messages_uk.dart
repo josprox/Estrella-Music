@@ -22,7 +22,16 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(error) => "Під час регенерації сталася помилка: ${error}";
 
-  static String m1(current) => "Крок ${current} з 3";
+  static String m1(title) => "Схожий на ${title}";
+
+  static String m2(current) => "Крок ${current} з 3";
+
+  static String m3(count) => "Внесено ${count} змін.";
+
+  static String m4(count) => "${count} синхронізованих змін.";
+
+  static String m5(statusCode) =>
+      "Не вдалося знайти користувачів (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -189,6 +198,15 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "close": MessageLookupByLibrary.simpleMessage("Закрити"),
     "closeApp": MessageLookupByLibrary.simpleMessage("Закрити застосунок"),
+    "cloudLibraryFound": MessageLookupByLibrary.simpleMessage(
+      "Знайдено хмарну бібліотеку.",
+    ),
+    "cloudLibraryFoundDeviceWillDownload": MessageLookupByLibrary.simpleMessage(
+      "Знайдено хмарну бібліотеку. Цей пристрій завантажить його без перезапису.",
+    ),
+    "cloudModeReadyOfflineCache": MessageLookupByLibrary.simpleMessage(
+      "Хмарний режим готовий. Цей пристрій працюватиме як офлайн-кеш.",
+    ),
     "cloud_b1": MessageLookupByLibrary.simpleMessage(
       "Увійдіть безпечно, використовуючи свій обліковий запис Joss Red.",
     ),
@@ -207,6 +225,15 @@ class MessageLookup extends MessageLookupByLibrary {
     "cloud_title": MessageLookupByLibrary.simpleMessage(
       "Хмарний режим (рекомендовано)",
     ),
+    "collaborativePlaylistDescription": MessageLookupByLibrary.simpleMessage(
+      "Спільний список відтворення",
+    ),
+    "collaboratorsInstruction": MessageLookupByLibrary.simpleMessage(
+      "Виберіть друзів, які зможуть переглядати та редагувати цей список відтворення:",
+    ),
+    "collaboratorsUpdated": MessageLookupByLibrary.simpleMessage(
+      "Співавтори оновлено правильно.",
+    ),
     "communityplaylists": MessageLookupByLibrary.simpleMessage(
       "Списки відтворення спільноти",
     ),
@@ -217,6 +244,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "customInsSelectMsg": MessageLookupByLibrary.simpleMessage(
       "Виберіть спеціальний екземпляр",
     ),
+    "dailyDiscover": MessageLookupByLibrary.simpleMessage("Щоденне відкриття"),
     "dark": MessageLookupByLibrary.simpleMessage("Темна"),
     "deleteDownloadData": MessageLookupByLibrary.simpleMessage(
       "Видалити із завантажень",
@@ -233,6 +261,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "disabled": MessageLookupByLibrary.simpleMessage("Вимкнено"),
     "discover": MessageLookupByLibrary.simpleMessage("Відкрийте для себе"),
     "dismiss": MessageLookupByLibrary.simpleMessage("Відхилити"),
+    "done": MessageLookupByLibrary.simpleMessage("Готовий"),
     "dontShowInfoAgain": MessageLookupByLibrary.simpleMessage(
       "Більше не показувати цю інформацію",
     ),
@@ -352,6 +381,22 @@ class MessageLookup extends MessageLookupByLibrary {
     "forgottenFavorites": MessageLookupByLibrary.simpleMessage(
       "забуті улюблені",
     ),
+    "friendFallback": MessageLookupByLibrary.simpleMessage("Друг"),
+    "friendRequestAccepted": MessageLookupByLibrary.simpleMessage(
+      "Запит на дружбу прийнято",
+    ),
+    "friendRequestSent": MessageLookupByLibrary.simpleMessage(
+      "Запит на дружбу надіслано",
+    ),
+    "friends": MessageLookupByLibrary.simpleMessage("друзі"),
+    "friendsLoginRequired": MessageLookupByLibrary.simpleMessage(
+      "Увійдіть, щоб знайти друзів.",
+    ),
+    "friendshipRemoved": MessageLookupByLibrary.simpleMessage(
+      "Дружба видалена",
+    ),
+    "genericAlbum": MessageLookupByLibrary.simpleMessage("Альбом"),
+    "genericError": MessageLookupByLibrary.simpleMessage("помилка"),
     "genre_electronic": MessageLookupByLibrary.simpleMessage("електроніка"),
     "genre_hiphop": MessageLookupByLibrary.simpleMessage("хіп-хоп"),
     "genre_jazz": MessageLookupByLibrary.simpleMessage("Джаз"),
@@ -406,6 +451,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "importPlaylistDesc": MessageLookupByLibrary.simpleMessage(
       "Виберіть раніше експортований файл JSON зі списком відтворення для імпортування",
     ),
+    "importedFromJossMusic": MessageLookupByLibrary.simpleMessage(
+      "Імпортовано з Joss Music Kotlin",
+    ),
     "importingPlaylist": MessageLookupByLibrary.simpleMessage(
       "Імпортування списку відтворення...",
     ),
@@ -415,7 +463,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "invalidPlaylistFile": MessageLookupByLibrary.simpleMessage(
       "Неправильна структура файлу списку відтворення",
     ),
+    "invalidServerResponse": MessageLookupByLibrary.simpleMessage(
+      "Недійсна відповідь сервера.",
+    ),
+    "invalidSessionToken": MessageLookupByLibrary.simpleMessage(
+      "Сеанс не містить дійсний маркер.",
+    ),
     "items": MessageLookupByLibrary.simpleMessage("елементи"),
+    "keepListening": MessageLookupByLibrary.simpleMessage(
+      "продовжуйте слухати",
+    ),
     "keepScreenOnWhilePlaying": MessageLookupByLibrary.simpleMessage(
       "Тримати екран увімкненим під час відтворення",
     ),
@@ -435,6 +492,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "libSongs": MessageLookupByLibrary.simpleMessage("Бібліотека пісень"),
     "library": MessageLookupByLibrary.simpleMessage("Бібліотека"),
+    "libraryPlaylistDescription": MessageLookupByLibrary.simpleMessage(
+      "Список відтворення бібліотеки",
+    ),
     "light": MessageLookupByLibrary.simpleMessage("Світла"),
     "link": MessageLookupByLibrary.simpleMessage("Посилання"),
     "linkAlert": MessageLookupByLibrary.simpleMessage("Успішно пов\'язано!"),
@@ -476,8 +536,57 @@ class MessageLookup extends MessageLookupByLibrary {
     "lyricsNotAvailable": MessageLookupByLibrary.simpleMessage(
       "Тексти пісень недоступні!",
     ),
+    "manageCollaborators": MessageLookupByLibrary.simpleMessage(
+      "Керувати співавторами (друзями)",
+    ),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
       "Переконайтеся, що біля мікрофона музика грає достатньо голосно.",
+    ),
+    "migratedAlbum": MessageLookupByLibrary.simpleMessage("Перенесений альбом"),
+    "migratedLibrary": MessageLookupByLibrary.simpleMessage(
+      "Перенесена бібліотека",
+    ),
+    "migratedPlaylist": MessageLookupByLibrary.simpleMessage(
+      "Перенесений список відтворення",
+    ),
+    "migrationAlreadyRunning": MessageLookupByLibrary.simpleMessage(
+      "Перенесення вже триває.",
+    ),
+    "migrationAnalyzingLocal": MessageLookupByLibrary.simpleMessage(
+      "Аналіз місцевої бібліотеки...",
+    ),
+    "migrationCheckingCloud": MessageLookupByLibrary.simpleMessage(
+      "Перевірка наявності бібліотеки в EMusic Cloud...",
+    ),
+    "migrationCompleted": MessageLookupByLibrary.simpleMessage(
+      "Переміщення завершено.",
+    ),
+    "migrationCreatingBackup": MessageLookupByLibrary.simpleMessage(
+      "Створення локальної резервної копії перед підключенням хмари...",
+    ),
+    "migrationFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
+      "Перенесення не вдалося. Ваші локальні дані не змінено.",
+    ),
+    "migrationLoginRequired": MessageLookupByLibrary.simpleMessage(
+      "Увійдіть у Joss Red перед міграцією.",
+    ),
+    "migrationPreparingCloud": MessageLookupByLibrary.simpleMessage(
+      "Підготовка міграції в EMusic Cloud...",
+    ),
+    "migrationStartFailed": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud не вдалося почати міграцію.",
+    ),
+    "migrationUploadIncomplete": MessageLookupByLibrary.simpleMessage(
+      "Не всі дані можна завантажити. Ми підтримуємо вашу місцеву підтримку.",
+    ),
+    "migrationUploadingData": MessageLookupByLibrary.simpleMessage(
+      "Завантаження списків відтворення, вибраного та історії...",
+    ),
+    "migrationValidationFailed": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud не зміг перевірити міграцію.",
+    ),
+    "migrationVerifyingIntegrity": MessageLookupByLibrary.simpleMessage(
+      "Перевірка цілісності в EMusic Cloud...",
     ),
     "migration_btn_select": MessageLookupByLibrary.simpleMessage(
       "Виберіть файл і імпортуйте",
@@ -541,6 +650,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Прозора синхронізація",
     ),
     "noBookmarks": MessageLookupByLibrary.simpleMessage("Немає закладок!"),
+    "noJossRedFriends": MessageLookupByLibrary.simpleMessage(
+      "У вас немає друзів на Joss Red.",
+    ),
     "noLibPlaylist": MessageLookupByLibrary.simpleMessage(
       "У вас немає жодного списку відтворення в бібліотеці!",
     ),
@@ -551,7 +663,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "noOfflineSong": MessageLookupByLibrary.simpleMessage(
       "Немає пісень поза мережею!",
     ),
+    "noSongsInCollection": MessageLookupByLibrary.simpleMessage(
+      "У цій збірці немає пісень",
+    ),
     "nomatch": MessageLookupByLibrary.simpleMessage("Збігів не знайдено"),
+    "notAuthenticated": MessageLookupByLibrary.simpleMessage(
+      "Не автентифіковано",
+    ),
     "notaSongVideo": MessageLookupByLibrary.simpleMessage(
       "Не пісня / музичне відео!",
     ),
@@ -565,6 +683,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "password": MessageLookupByLibrary.simpleMessage("Пароль"),
     "password_text": MessageLookupByLibrary.simpleMessage("Пароль"),
     "personalisation": MessageLookupByLibrary.simpleMessage("Персоналізація"),
+    "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage(
+      "Конвеєрний список відтворення",
+    ),
     "pipedplstSyncAlert": MessageLookupByLibrary.simpleMessage(
       "Список відтворення синхронізовано!",
     ),
@@ -597,6 +718,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "playlistBookmarkRemoveAlert": MessageLookupByLibrary.simpleMessage(
       "Закладку списку відтворення видалено!",
+    ),
+    "playlistCollaboratorsTitle": MessageLookupByLibrary.simpleMessage(
+      "Автори списку відтворення",
     ),
     "playlistCreatedAlert": MessageLookupByLibrary.simpleMessage(
       "Список відтворення створено!",
@@ -708,6 +832,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "restoring": MessageLookupByLibrary.simpleMessage("Відновлення..."),
     "results": MessageLookupByLibrary.simpleMessage("Результати"),
     "retry": MessageLookupByLibrary.simpleMessage("Повторити!"),
+    "save": MessageLookupByLibrary.simpleMessage("Тримайте"),
     "scanning": MessageLookupByLibrary.simpleMessage("Сканування..."),
     "search": MessageLookupByLibrary.simpleMessage("Пошук"),
     "searchDes": MessageLookupByLibrary.simpleMessage(
@@ -729,6 +854,12 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "selectFile": MessageLookupByLibrary.simpleMessage("Вибрати файл"),
     "selectSongs": MessageLookupByLibrary.simpleMessage("Вибрати пісні"),
+    "selectedFileNotFound": MessageLookupByLibrary.simpleMessage(
+      "Вибраний файл не знайдено.",
+    ),
+    "sessionExpiredLoginAgain": MessageLookupByLibrary.simpleMessage(
+      "Ваш сеанс закінчився. Увійдіть знову.",
+    ),
     "setDiscoverContent": MessageLookupByLibrary.simpleMessage(
       "Налаштувати показ контенту",
     ),
@@ -808,6 +939,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Пошук збігів у базі даних Shazam...",
     ),
     "shuffleQueue": MessageLookupByLibrary.simpleMessage("Перемішати чергу"),
+    "similarToTitle": m1,
     "singles": MessageLookupByLibrary.simpleMessage("Сингли"),
     "skipSilence": MessageLookupByLibrary.simpleMessage("Пропускати тишу"),
     "skipSilenceDes": MessageLookupByLibrary.simpleMessage(
@@ -817,7 +949,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Ваш таймер сну встановлено",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Таймер сну"),
-    "slide_indicator": m1,
+    "slide_indicator": m2,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "Пісню додано до списку відтворення!",
     ),
@@ -840,9 +972,18 @@ class MessageLookup extends MessageLookupByLibrary {
       "Ви не можете видалити пісню, яка зараз відтворюється",
     ),
     "songs": MessageLookupByLibrary.simpleMessage("Пісні"),
+    "songsImportedFromJossMusic": MessageLookupByLibrary.simpleMessage(
+      "Пісні, імпортовані з Joss Music Kotlin",
+    ),
     "speedAndPitch": MessageLookupByLibrary.simpleMessage("Швидкість і висота"),
     "standard": MessageLookupByLibrary.simpleMessage("Стандартний"),
     "startRadio": MessageLookupByLibrary.simpleMessage("Увімкнути радіо"),
+    "startupScreen": MessageLookupByLibrary.simpleMessage(
+      "Відкрити під час запуску",
+    ),
+    "startupScreenDescription": MessageLookupByLibrary.simpleMessage(
+      "Виберіть розділ, який Estrella Music відкривається першим",
+    ),
     "status": MessageLookupByLibrary.simpleMessage("Статус"),
     "stopMusicOnTaskClear": MessageLookupByLibrary.simpleMessage(
       "Зупинити музику після видалення із задач",
@@ -858,6 +999,62 @@ class MessageLookup extends MessageLookupByLibrary {
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
       "Проведіть пальцем, щоб переглянути параметри ➔",
     ),
+    "syncChangesConfirmed": m3,
+    "syncChangesSynced": m4,
+    "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
+      "Хмарний режим активований. Завантаження існуючої бібліотеки.",
+    ),
+    "syncCloudMigrationComplete": MessageLookupByLibrary.simpleMessage(
+      "Хмарний режим активований. Перенесена бібліотека.",
+    ),
+    "syncCloudPending": MessageLookupByLibrary.simpleMessage(
+      "Хмарний режим активний. Очікує на синхронізацію.",
+    ),
+    "syncDownloadFailed": MessageLookupByLibrary.simpleMessage(
+      "Не вдалося завантажити синхронізацію.",
+    ),
+    "syncDownloading": MessageLookupByLibrary.simpleMessage(
+      "Завантаження змін EMusic...",
+    ),
+    "syncLibrarySynced": MessageLookupByLibrary.simpleMessage(
+      "Синхронізована бібліотека.",
+    ),
+    "syncLibraryUpToDate": MessageLookupByLibrary.simpleMessage(
+      "Бібліотека в актуальному стані.",
+    ),
+    "syncLocalChangesFirst": MessageLookupByLibrary.simpleMessage(
+      "Є нові локальні зміни. Вони будуть завантажені перед завантаженням.",
+    ),
+    "syncLocalDeviceOnly": MessageLookupByLibrary.simpleMessage(
+      "Ваші дані зберігаються лише на цьому пристрої.",
+    ),
+    "syncLocalModeActive": MessageLookupByLibrary.simpleMessage(
+      "Активний локальний режим",
+    ),
+    "syncOfflinePending": MessageLookupByLibrary.simpleMessage(
+      "Офлайн. Зміни очікуються.",
+    ),
+    "syncOfflineRetry": MessageLookupByLibrary.simpleMessage(
+      "Офлайн. Зміни збережено для повторної спроби.",
+    ),
+    "syncUnconfirmedRetry": MessageLookupByLibrary.simpleMessage(
+      "EMusic не підтвердив усі зміни. Їх судитимуть повторно.",
+    ),
+    "syncUploadRetry": MessageLookupByLibrary.simpleMessage(
+      "Не міг встати. Повторна спроба буде пізніше.",
+    ),
+    "syncUploadSuccess": MessageLookupByLibrary.simpleMessage(
+      "Зміни завантажено правильно.",
+    ),
+    "syncUploadSuccessWs": MessageLookupByLibrary.simpleMessage(
+      "Зміни успішно завантажено (WS).",
+    ),
+    "syncUploadWsRetry": MessageLookupByLibrary.simpleMessage(
+      "Не вдалося завантажити за допомогою WS. Повторна спроба буде пізніше.",
+    ),
+    "syncUploading": MessageLookupByLibrary.simpleMessage(
+      "Завантаження змін до EMusic...",
+    ),
     "synced": MessageLookupByLibrary.simpleMessage("Синхронізовано"),
     "syncedLyricsNotAvailable": MessageLookupByLibrary.simpleMessage(
       "Синхронізовані тексти не доступні!",
@@ -871,9 +1068,20 @@ class MessageLookup extends MessageLookupByLibrary {
     "trending": MessageLookupByLibrary.simpleMessage("У трендах"),
     "unLink": MessageLookupByLibrary.simpleMessage("Від’єднати"),
     "unlinkAlert": MessageLookupByLibrary.simpleMessage("Успішно відв\'язано!"),
+    "untitledSong": MessageLookupByLibrary.simpleMessage("Пісня без назви"),
     "upNext": MessageLookupByLibrary.simpleMessage("Наступне"),
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "Виявлено URL-адресу, натисніть на неї, щоб відкрити/відтворити пов\'язаний вміст",
+    ),
+    "userBlocked": MessageLookupByLibrary.simpleMessage(
+      "Заблокований користувач",
+    ),
+    "userListMissing": MessageLookupByLibrary.simpleMessage(
+      "Відповідь не містить списку користувачів.",
+    ),
+    "userSearchFailed": m5,
+    "userUnblocked": MessageLookupByLibrary.simpleMessage(
+      "Розблокований користувач",
     ),
     "username": MessageLookupByLibrary.simpleMessage("Ім\'я користувача"),
     "video": MessageLookupByLibrary.simpleMessage("відео"),

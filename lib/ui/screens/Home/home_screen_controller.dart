@@ -19,9 +19,17 @@ import 'package:harmonymusic/ui/screens/Settings/settings_screen_controller.dart
 import '/ui/widgets/new_version_dialog.dart';
 
 class HomeScreenController extends GetxController {
+  static const supportedStartupTabs = {0, 1, 3, 4, 5};
+
+  static int _initialTabIndex() {
+    final saved = SqliteStore.box('AppPrefs').get('startupTabIndex');
+    final index = saved is int ? saved : int.tryParse('$saved');
+    return supportedStartupTabs.contains(index) ? index! : 0;
+  }
+
   final MusicServices _musicServices = Get.find<MusicServices>();
   final isContentFetched = false.obs;
-  final tabIndex = 0.obs;
+  final tabIndex = _initialTabIndex().obs;
   final networkError = false.obs;
   final quickPicks = QuickPicks([]).obs;
   final middleContent = [].obs;
@@ -125,7 +133,8 @@ class HomeScreenController extends GetxController {
         }
         var finalRecs = uniqueRecs.values.toList();
         finalRecs.shuffle();
-        dailyDiscover.value = QuickPicks(finalRecs, title: "Daily Discover");
+        dailyDiscover.value =
+            QuickPicks(finalRecs, title: S.current.dailyDiscover);
         printINFO("Daily Discover: Loaded ${finalRecs.length} recommendations");
       } else {
         printWarning(
@@ -184,7 +193,7 @@ class HomeScreenController extends GetxController {
         var finalRecs = uniqueRecs.values.toList();
         finalRecs.shuffle();
         communityPlaylists.value =
-            QuickPicks(finalRecs, title: "Community Playlists");
+            QuickPicks(finalRecs, title: S.current.communityplaylists);
       }
     } catch (e) {
       printERROR("Community Playlists failed: $e");
@@ -237,7 +246,8 @@ class HomeScreenController extends GetxController {
         }
         var finalRecs = uniqueRecs.values.toList();
         finalRecs.shuffle();
-        keepListening.value = QuickPicks(finalRecs, title: "Keep Listening");
+        keepListening.value =
+            QuickPicks(finalRecs, title: S.current.keepListening);
       }
     } catch (e) {
       printERROR("Keep Listening failed: $e");
@@ -288,7 +298,7 @@ class HomeScreenController extends GetxController {
         var finalRecs = uniqueRecs.values.toList();
         finalRecs.shuffle();
         similarRecommendations.value =
-            QuickPicks(finalRecs, title: "Similar to ${seed.title}");
+            QuickPicks(finalRecs, title: S.current.similarToTitle(seed.title));
         printINFO(
             "Similar Recommendations: Loaded ${finalRecs.length} recommendations for seed ${seed.title}");
       } else {
@@ -433,7 +443,7 @@ class HomeScreenController extends GetxController {
         if (index != -1) {
           networkQuickPicks = QuickPicks(
               List<MediaItem>.from(homeContentListMap[index]["contents"]),
-              title: "Trending");
+              title: S.current.trending);
         } else if (index == -1) {
           List charts = await _musicServices.getCharts(contentType);
           final index = charts.indexWhere((element) =>
@@ -476,7 +486,7 @@ class HomeScreenController extends GetxController {
               final List<MediaItem> items =
                   (con["contents"] as List).whereType<MediaItem>().toList();
               networkQuickPicks = QuickPicks(items,
-                  title: con["title"] ?? "Based on last interaction");
+                  title: con["title"] ?? S.current.basedOnLast);
               middleContentTemp.addAll(rel);
             }
           }

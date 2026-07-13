@@ -22,7 +22,16 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(error) => "هنگام ایجاد مجدد خطایی روی داد: ${error}";
 
-  static String m1(current) => "مرحله ${current} از 3";
+  static String m1(title) => "مشابه ${title}";
+
+  static String m2(current) => "مرحله ${current} از 3";
+
+  static String m3(count) => "${count} تغییرات انجام شده است.";
+
+  static String m4(count) => "${count} تغییرات همگام شده.";
+
+  static String m5(statusCode) =>
+      "جستجو برای کاربران امکان‌پذیر نیست (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -124,6 +133,15 @@ class MessageLookup extends MessageLookupByLibrary {
     "cancel": MessageLookupByLibrary.simpleMessage("لغو"),
     "cancelTimer": MessageLookupByLibrary.simpleMessage("لغو زمان‌سنج"),
     "close": MessageLookupByLibrary.simpleMessage("بستن"),
+    "cloudLibraryFound": MessageLookupByLibrary.simpleMessage(
+      "کتابخانه ابری پیدا شد.",
+    ),
+    "cloudLibraryFoundDeviceWillDownload": MessageLookupByLibrary.simpleMessage(
+      "یک کتابخانه ابری پیدا شد. این دستگاه بدون بازنویسی آن را دانلود می کند.",
+    ),
+    "cloudModeReadyOfflineCache": MessageLookupByLibrary.simpleMessage(
+      "حالت ابری آماده است. این دستگاه به عنوان یک کش آفلاین کار خواهد کرد.",
+    ),
     "cloud_b1": MessageLookupByLibrary.simpleMessage(
       "با استفاده از حساب Joss Red خود به صورت ایمن وارد شوید.",
     ),
@@ -142,12 +160,22 @@ class MessageLookup extends MessageLookupByLibrary {
     "cloud_title": MessageLookupByLibrary.simpleMessage(
       "حالت ابری (توصیه می شود)",
     ),
+    "collaborativePlaylistDescription": MessageLookupByLibrary.simpleMessage(
+      "لیست پخش مشترک",
+    ),
+    "collaboratorsInstruction": MessageLookupByLibrary.simpleMessage(
+      "دوستانی را انتخاب کنید که می توانند این لیست پخش را ببینند و ویرایش کنند:",
+    ),
+    "collaboratorsUpdated": MessageLookupByLibrary.simpleMessage(
+      "همکاران به درستی به روز شدند.",
+    ),
     "communityplaylists": MessageLookupByLibrary.simpleMessage(
       "لیست پخش های عمومی",
     ),
     "content": MessageLookupByLibrary.simpleMessage("محتوا"),
     "create": MessageLookupByLibrary.simpleMessage("ساختن"),
     "createnAdd": MessageLookupByLibrary.simpleMessage("ساختن و افزودن"),
+    "dailyDiscover": MessageLookupByLibrary.simpleMessage("کشف روزانه"),
     "dark": MessageLookupByLibrary.simpleMessage("تیره"),
     "deleteDownloadData": MessageLookupByLibrary.simpleMessage(
       "حذف از دانلود ها",
@@ -159,6 +187,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "برای غیرفعال کردن انیمیشن انتقال تب این گزینه را فعال کنید",
     ),
     "discover": MessageLookupByLibrary.simpleMessage("کشف"),
+    "done": MessageLookupByLibrary.simpleMessage("آماده است"),
     "download": MessageLookupByLibrary.simpleMessage("دانلود"),
     "downloadError2": MessageLookupByLibrary.simpleMessage(
       "موسیقی موردنظر به دلیل محدودیت سرور قابل دانلود نمی‌باشد. می‌توانید دوباره تلاش کنید",
@@ -201,6 +230,20 @@ class MessageLookup extends MessageLookupByLibrary {
     "forgottenFavorites": MessageLookupByLibrary.simpleMessage(
       "مورد علاقه های فراموش شده",
     ),
+    "friendFallback": MessageLookupByLibrary.simpleMessage("دوست"),
+    "friendRequestAccepted": MessageLookupByLibrary.simpleMessage(
+      "درخواست دوستی پذیرفته شد",
+    ),
+    "friendRequestSent": MessageLookupByLibrary.simpleMessage(
+      "درخواست دوستی ارسال شد",
+    ),
+    "friends": MessageLookupByLibrary.simpleMessage("دوستان"),
+    "friendsLoginRequired": MessageLookupByLibrary.simpleMessage(
+      "برای یافتن دوستان وارد شوید.",
+    ),
+    "friendshipRemoved": MessageLookupByLibrary.simpleMessage("دوستی حذف شد"),
+    "genericAlbum": MessageLookupByLibrary.simpleMessage("آلبوم"),
+    "genericError": MessageLookupByLibrary.simpleMessage("اشتباه"),
     "genre_electronic": MessageLookupByLibrary.simpleMessage("الکترونیک"),
     "genre_hiphop": MessageLookupByLibrary.simpleMessage("هیپ هاپ"),
     "genre_jazz": MessageLookupByLibrary.simpleMessage("جاز"),
@@ -217,7 +260,19 @@ class MessageLookup extends MessageLookupByLibrary {
     "homeContentCountDes": MessageLookupByLibrary.simpleMessage(
       "تعداد محتوای اولیه خانه را مشخص کنید (حدودی). عدد کمتر باعث بارگذاری سریعتر می‌شود",
     ),
+    "importedFromJossMusic": MessageLookupByLibrary.simpleMessage(
+      "وارد شده از Joss Music Kotlin",
+    ),
+    "invalidServerResponse": MessageLookupByLibrary.simpleMessage(
+      "پاسخ سرور نامعتبر است.",
+    ),
+    "invalidSessionToken": MessageLookupByLibrary.simpleMessage(
+      "جلسه حاوی یک رمز معتبر نیست.",
+    ),
     "items": MessageLookupByLibrary.simpleMessage("مورد ها"),
+    "keepListening": MessageLookupByLibrary.simpleMessage(
+      "به گوش دادن ادامه بده",
+    ),
     "keepScreenOnWhilePlaying": MessageLookupByLibrary.simpleMessage(
       "روشن نگه داشتن صفحه هنگام پخش",
     ),
@@ -234,6 +289,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "libSongs": MessageLookupByLibrary.simpleMessage("آهنگ های کتابخانه"),
     "library": MessageLookupByLibrary.simpleMessage("کتابخانه"),
+    "libraryPlaylistDescription": MessageLookupByLibrary.simpleMessage(
+      "لیست پخش کتابخانه",
+    ),
     "light": MessageLookupByLibrary.simpleMessage("روشن"),
     "listenNow": MessageLookupByLibrary.simpleMessage("حالا گوش کن"),
     "listeningToEnvironment": MessageLookupByLibrary.simpleMessage(
@@ -262,8 +320,57 @@ class MessageLookup extends MessageLookupByLibrary {
       "سطح صدای یکسانی را برای همه آهنگ ها تنظیم می کند (تجربی) (روی آهنگ های دانلود شده در نسخه های قبلی کار نمی کند (قبل از v1.10.0))",
     ),
     "low": MessageLookupByLibrary.simpleMessage("کم"),
+    "manageCollaborators": MessageLookupByLibrary.simpleMessage(
+      "مدیریت همکاران (دوستان)",
+    ),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
       "مطمئن شوید که موسیقی با صدای کافی در نزدیکی میکروفون شما پخش می شود.",
+    ),
+    "migratedAlbum": MessageLookupByLibrary.simpleMessage("آلبوم مهاجرت کرد"),
+    "migratedLibrary": MessageLookupByLibrary.simpleMessage(
+      "کتابخانه مهاجرت کرد",
+    ),
+    "migratedPlaylist": MessageLookupByLibrary.simpleMessage(
+      "لیست پخش منتقل شد",
+    ),
+    "migrationAlreadyRunning": MessageLookupByLibrary.simpleMessage(
+      "در حال حاضر یک مهاجرت در حال انجام است.",
+    ),
+    "migrationAnalyzingLocal": MessageLookupByLibrary.simpleMessage(
+      "تجزیه و تحلیل کتابخانه محلی ...",
+    ),
+    "migrationCheckingCloud": MessageLookupByLibrary.simpleMessage(
+      "بررسی اینکه آیا EMusic Cloud قبلاً کتابخانه دارد یا خیر...",
+    ),
+    "migrationCompleted": MessageLookupByLibrary.simpleMessage(
+      "مهاجرت به پایان رسید.",
+    ),
+    "migrationCreatingBackup": MessageLookupByLibrary.simpleMessage(
+      "ایجاد یک نسخه پشتیبان محلی قبل از اتصال ابر...",
+    ),
+    "migrationFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
+      "مهاجرت شکست خورد. داده های محلی شما اصلاح نشده است.",
+    ),
+    "migrationLoginRequired": MessageLookupByLibrary.simpleMessage(
+      "قبل از مهاجرت وارد Joss Red شوید.",
+    ),
+    "migrationPreparingCloud": MessageLookupByLibrary.simpleMessage(
+      "در حال آماده سازی مهاجرت در EMusic Cloud...",
+    ),
+    "migrationStartFailed": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud نمی تواند مهاجرت را شروع کند.",
+    ),
+    "migrationUploadIncomplete": MessageLookupByLibrary.simpleMessage(
+      "همه داده ها را نمی توان آپلود کرد. ما حمایت محلی شما را حفظ می کنیم.",
+    ),
+    "migrationUploadingData": MessageLookupByLibrary.simpleMessage(
+      "در حال آپلود لیست پخش، موارد دلخواه و سابقه...",
+    ),
+    "migrationValidationFailed": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud نتوانست این انتقال را تأیید کند.",
+    ),
+    "migrationVerifyingIntegrity": MessageLookupByLibrary.simpleMessage(
+      "تایید یکپارچگی در EMusic Cloud...",
     ),
     "migration_btn_select": MessageLookupByLibrary.simpleMessage(
       "فایل را انتخاب کرده و وارد کنید",
@@ -318,6 +425,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "همگام سازی شفاف",
     ),
     "noBookmarks": MessageLookupByLibrary.simpleMessage("بدون نشانک"),
+    "noJossRedFriends": MessageLookupByLibrary.simpleMessage(
+      "شما هیچ دوستی در Joss Red ندارید.",
+    ),
     "noLibPlaylist": MessageLookupByLibrary.simpleMessage(
       "شما هیچ لیست پخشی در کتابخانه ندارید!",
     ),
@@ -330,9 +440,18 @@ class MessageLookup extends MessageLookupByLibrary {
     "noOfflineSong": MessageLookupByLibrary.simpleMessage(
       "آهنگ آفلاینی وجود ندارد!",
     ),
+    "noSongsInCollection": MessageLookupByLibrary.simpleMessage(
+      "هیچ آهنگی در این مجموعه وجود ندارد",
+    ),
+    "notAuthenticated": MessageLookupByLibrary.simpleMessage(
+      "احراز هویت نشده است",
+    ),
     "openIn": MessageLookupByLibrary.simpleMessage("باز کردن در"),
     "password_text": MessageLookupByLibrary.simpleMessage("رمز عبور"),
     "personalisation": MessageLookupByLibrary.simpleMessage("شخصی سازی"),
+    "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage(
+      "لیست پخش لوله شده",
+    ),
     "playNext": MessageLookupByLibrary.simpleMessage("پخش بعدی"),
     "playNow": MessageLookupByLibrary.simpleMessage("بازی کن"),
     "playbackSpeed": MessageLookupByLibrary.simpleMessage("سرعت پخش"),
@@ -350,6 +469,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "playingfromSelection": MessageLookupByLibrary.simpleMessage(
       "پخش از انتخاب شده ها",
+    ),
+    "playlistCollaboratorsTitle": MessageLookupByLibrary.simpleMessage(
+      "مشارکت کنندگان لیست پخش",
     ),
     "playlists": MessageLookupByLibrary.simpleMessage("لیست پخش"),
     "playnextMsg": MessageLookupByLibrary.simpleMessage("پس از این"),
@@ -406,6 +528,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "به طور خودکار آخرین نشست پخش در آغاز برنامه بازیابی شود",
     ),
     "retry": MessageLookupByLibrary.simpleMessage("دوباره امتحان کنید!"),
+    "save": MessageLookupByLibrary.simpleMessage("نگه دارید"),
     "searchInLibrary": MessageLookupByLibrary.simpleMessage(
       "جستجو در کتابخانه",
     ),
@@ -414,6 +537,12 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "selectAll": MessageLookupByLibrary.simpleMessage("انتخاب همه"),
     "selectSongs": MessageLookupByLibrary.simpleMessage("انتخاب اهنگ ها"),
+    "selectedFileNotFound": MessageLookupByLibrary.simpleMessage(
+      "فایل انتخابی یافت نشد.",
+    ),
+    "sessionExpiredLoginAgain": MessageLookupByLibrary.simpleMessage(
+      "جلسه شما تمام شده است. دوباره وارد شوید.",
+    ),
     "setDiscoverContent": MessageLookupByLibrary.simpleMessage(
       "تنظیم محتوای کشف",
     ),
@@ -495,22 +624,32 @@ class MessageLookup extends MessageLookupByLibrary {
       "جستجو در پایگاه داده Shazam برای موارد مشابه...",
     ),
     "shuffleQueue": MessageLookupByLibrary.simpleMessage("بُر زدن صف"),
+    "similarToTitle": m1,
     "singles": MessageLookupByLibrary.simpleMessage("تکی"),
     "skipSilence": MessageLookupByLibrary.simpleMessage("رد کردن سکوت"),
     "skipSilenceDes": MessageLookupByLibrary.simpleMessage(
       "سکوت در زمان پخش موسیقی رد خواهد شد",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("زمان‌سنج خواب"),
-    "slide_indicator": m1,
+    "slide_indicator": m2,
     "songFound": MessageLookupByLibrary.simpleMessage("آهنگ پیدا شد"),
     "songNotPlayable": MessageLookupByLibrary.simpleMessage(
       "موسیقی به علت محدودیت سرور، قابل پخش نیست!",
     ),
     "songPitch": MessageLookupByLibrary.simpleMessage("لحن آهنگ"),
     "songs": MessageLookupByLibrary.simpleMessage("آهنگ"),
+    "songsImportedFromJossMusic": MessageLookupByLibrary.simpleMessage(
+      "آهنگ های وارد شده از Joss Music Kotlin",
+    ),
     "speedAndPitch": MessageLookupByLibrary.simpleMessage("سرعت و پیچ"),
     "standard": MessageLookupByLibrary.simpleMessage("استاندارد"),
     "startRadio": MessageLookupByLibrary.simpleMessage("آغاز رادیو"),
+    "startupScreen": MessageLookupByLibrary.simpleMessage(
+      "در هنگام راه اندازی باز کنید",
+    ),
+    "startupScreenDescription": MessageLookupByLibrary.simpleMessage(
+      "ابتدا قسمتی را که Estrella Music باز می کند انتخاب کنید",
+    ),
     "streamingQuality": MessageLookupByLibrary.simpleMessage("کیفیت استریم"),
     "streamingQualityDes": MessageLookupByLibrary.simpleMessage(
       "کیفیت استریم (پخش) موسیقی",
@@ -518,11 +657,74 @@ class MessageLookup extends MessageLookupByLibrary {
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
       "برای کاوش گزینه ها تند بکشید ➔",
     ),
+    "syncChangesConfirmed": m3,
+    "syncChangesSynced": m4,
+    "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
+      "حالت ابری فعال شد. در حال دانلود کتابخانه موجود",
+    ),
+    "syncCloudMigrationComplete": MessageLookupByLibrary.simpleMessage(
+      "حالت ابری فعال شد. کتابخانه مهاجرت کرد.",
+    ),
+    "syncCloudPending": MessageLookupByLibrary.simpleMessage(
+      "حالت ابری فعال است. در انتظار همگام سازی",
+    ),
+    "syncDownloadFailed": MessageLookupByLibrary.simpleMessage(
+      "همگام‌سازی دانلود نشد.",
+    ),
+    "syncDownloading": MessageLookupByLibrary.simpleMessage(
+      "در حال دانلود تغییرات EMusic...",
+    ),
+    "syncLibrarySynced": MessageLookupByLibrary.simpleMessage(
+      "کتابخانه همگام شده",
+    ),
+    "syncLibraryUpToDate": MessageLookupByLibrary.simpleMessage(
+      "کتابخانه به روز",
+    ),
+    "syncLocalChangesFirst": MessageLookupByLibrary.simpleMessage(
+      "تغییرات محلی جدیدی وجود دارد. آنها قبل از دانلود آپلود خواهند شد.",
+    ),
+    "syncLocalDeviceOnly": MessageLookupByLibrary.simpleMessage(
+      "اطلاعات شما فقط در این دستگاه نگهداری می شود.",
+    ),
+    "syncLocalModeActive": MessageLookupByLibrary.simpleMessage(
+      "حالت محلی فعال است",
+    ),
+    "syncOfflinePending": MessageLookupByLibrary.simpleMessage(
+      "آفلاین. تغییرات در انتظار است.",
+    ),
+    "syncOfflineRetry": MessageLookupByLibrary.simpleMessage(
+      "آفلاین. تغییرات برای تلاش مجدد ذخیره شد.",
+    ),
+    "syncUnconfirmedRetry": MessageLookupByLibrary.simpleMessage(
+      "EMusic همه تغییرات را تایید نکرد. آنها دوباره محاکمه خواهند شد.",
+    ),
+    "syncUploadRetry": MessageLookupByLibrary.simpleMessage(
+      "نتوانست بلند شود. بعداً دوباره امتحان خواهد شد.",
+    ),
+    "syncUploadSuccess": MessageLookupByLibrary.simpleMessage(
+      "تغییرات به درستی آپلود شد.",
+    ),
+    "syncUploadSuccessWs": MessageLookupByLibrary.simpleMessage(
+      "تغییرات با موفقیت آپلود شد (WS).",
+    ),
+    "syncUploadWsRetry": MessageLookupByLibrary.simpleMessage(
+      "با استفاده از WS آپلود نشد. بعداً دوباره امتحان خواهد شد.",
+    ),
+    "syncUploading": MessageLookupByLibrary.simpleMessage(
+      "در حال آپلود تغییرات در EMusic...",
+    ),
     "systemDefault": MessageLookupByLibrary.simpleMessage("پیشفرض سیستم"),
     "themeMode": MessageLookupByLibrary.simpleMessage("حالت تم"),
     "topmusicvideos": MessageLookupByLibrary.simpleMessage("نماهنگ های برتر"),
     "trending": MessageLookupByLibrary.simpleMessage("ترند"),
+    "untitledSong": MessageLookupByLibrary.simpleMessage("آهنگ بدون عنوان"),
     "upNext": MessageLookupByLibrary.simpleMessage("بعد از این"),
+    "userBlocked": MessageLookupByLibrary.simpleMessage("کاربر مسدود شده"),
+    "userListMissing": MessageLookupByLibrary.simpleMessage(
+      "پاسخ شامل لیستی از کاربران نیست.",
+    ),
+    "userSearchFailed": m5,
+    "userUnblocked": MessageLookupByLibrary.simpleMessage("کاربر آنلاک شده"),
     "username": MessageLookupByLibrary.simpleMessage("نام کاربری"),
     "video": MessageLookupByLibrary.simpleMessage("ویدئو"),
     "viewArtist": MessageLookupByLibrary.simpleMessage("دیدن هنرمند"),

@@ -22,7 +22,16 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(error) => "ਰੀਜਨਰੇਟ ਕਰਦੇ ਸਮੇਂ ਇੱਕ ਤਰੁੱਟੀ ਉਤਪੰਨ ਹੋਈ: ${error}";
 
-  static String m1(current) => "3 ਵਿੱਚੋਂ ${current} ਕਦਮ";
+  static String m1(title) => "${title} ਦੇ ਸਮਾਨ";
+
+  static String m2(current) => "3 ਵਿੱਚੋਂ ${current} ਕਦਮ";
+
+  static String m3(count) => "${count} ਤਬਦੀਲੀਆਂ ਪ੍ਰਤੀਬੱਧ ਹਨ।";
+
+  static String m4(count) => "${count} ਸਮਕਾਲੀ ਤਬਦੀਲੀਆਂ।";
+
+  static String m5(statusCode) =>
+      "ਉਪਭੋਗਤਾਵਾਂ ਲਈ ਖੋਜ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕੀ (${statusCode})।";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -172,6 +181,15 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "close": MessageLookupByLibrary.simpleMessage("ਬੰਦ ਕਰੋ"),
     "closeApp": MessageLookupByLibrary.simpleMessage("ਐਪ ਬੰਦ ਕਰੋ"),
+    "cloudLibraryFound": MessageLookupByLibrary.simpleMessage(
+      "ਕਲਾਊਡ ਲਾਇਬ੍ਰੇਰੀ ਲੱਭੀ।",
+    ),
+    "cloudLibraryFoundDeviceWillDownload": MessageLookupByLibrary.simpleMessage(
+      "ਇੱਕ ਕਲਾਉਡ ਲਾਇਬ੍ਰੇਰੀ ਮਿਲੀ। ਇਹ ਡਿਵਾਈਸ ਇਸਨੂੰ ਓਵਰਰਾਈਟ ਕੀਤੇ ਬਿਨਾਂ ਇਸਨੂੰ ਡਾਊਨਲੋਡ ਕਰੇਗੀ।",
+    ),
+    "cloudModeReadyOfflineCache": MessageLookupByLibrary.simpleMessage(
+      "ਕਲਾਊਡ ਮੋਡ ਤਿਆਰ ਹੈ। ਇਹ ਡਿਵਾਈਸ ਇੱਕ ਔਫਲਾਈਨ ਕੈਸ਼ ਵਜੋਂ ਕੰਮ ਕਰੇਗੀ।",
+    ),
     "cloud_b1": MessageLookupByLibrary.simpleMessage(
       "ਆਪਣੇ Joss Red ਖਾਤੇ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਸੁਰੱਖਿਅਤ ਢੰਗ ਨਾਲ ਲੌਗ ਇਨ ਕਰੋ।",
     ),
@@ -190,6 +208,15 @@ class MessageLookup extends MessageLookupByLibrary {
     "cloud_title": MessageLookupByLibrary.simpleMessage(
       "ਕਲਾਊਡ ਮੋਡ (ਸਿਫ਼ਾਰਸ਼ੀ)",
     ),
+    "collaborativePlaylistDescription": MessageLookupByLibrary.simpleMessage(
+      "ਸਹਿਯੋਗੀ ਪਲੇਲਿਸਟ",
+    ),
+    "collaboratorsInstruction": MessageLookupByLibrary.simpleMessage(
+      "ਉਹਨਾਂ ਦੋਸਤਾਂ ਨੂੰ ਚੁਣੋ ਜੋ ਇਸ ਪਲੇਲਿਸਟ ਨੂੰ ਦੇਖਣ ਅਤੇ ਸੰਪਾਦਿਤ ਕਰਨ ਦੇ ਯੋਗ ਹੋਣਗੇ:",
+    ),
+    "collaboratorsUpdated": MessageLookupByLibrary.simpleMessage(
+      "ਸਹਿਯੋਗੀ ਸਹੀ ਢੰਗ ਨਾਲ ਅੱਪਡੇਟ ਕੀਤੇ ਗਏ।",
+    ),
     "communityplaylists": MessageLookupByLibrary.simpleMessage(
       "ਕਮਿਊਨਿਟੀ ਪਲੇਲਿਸਟਾਂ",
     ),
@@ -200,6 +227,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "customInsSelectMsg": MessageLookupByLibrary.simpleMessage(
       "ਕਿਰਪਾ ਕਰਕੇ ਕਸਟਮ ਇੰਸਟੈਂਸ ਚੁਣੋ",
     ),
+    "dailyDiscover": MessageLookupByLibrary.simpleMessage("ਰੋਜ਼ਾਨਾ ਖੋਜ"),
     "dark": MessageLookupByLibrary.simpleMessage("ਗਹਿਰਾ"),
     "deleteDownloadData": MessageLookupByLibrary.simpleMessage(
       "ਡਾਊਨਲੋਡਸ ਤੋਂ ਹਟਾਓ",
@@ -216,6 +244,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "disabled": MessageLookupByLibrary.simpleMessage("ਡਿਸੇਬਲ ਕੀਤੇ"),
     "discover": MessageLookupByLibrary.simpleMessage("ਖੋਜੋ"),
     "dismiss": MessageLookupByLibrary.simpleMessage("ਖਾਰਿਜ ਕਰੋ"),
+    "done": MessageLookupByLibrary.simpleMessage("ਤਿਆਰ ਹੈ"),
     "dontShowInfoAgain": MessageLookupByLibrary.simpleMessage(
       "ਇਸ ਜਾਣਕਾਰੀ ਨੂੰ ਦੁਬਾਰਾ ਨਾ ਵਿਖਾਓ",
     ),
@@ -298,6 +327,20 @@ class MessageLookup extends MessageLookupByLibrary {
     "forgottenFavorites": MessageLookupByLibrary.simpleMessage(
       "ਭੁੱਲ ਗਏ ਮਨਪਸੰਦ",
     ),
+    "friendFallback": MessageLookupByLibrary.simpleMessage("ਦੋਸਤ"),
+    "friendRequestAccepted": MessageLookupByLibrary.simpleMessage(
+      "ਦੋਸਤ ਦੀ ਬੇਨਤੀ ਸਵੀਕਾਰ ਕੀਤੀ ਗਈ",
+    ),
+    "friendRequestSent": MessageLookupByLibrary.simpleMessage(
+      "ਦੋਸਤੀ ਲਈ ਬੇਨਤੀ ਭੇਜੀ ਗਈ",
+    ),
+    "friends": MessageLookupByLibrary.simpleMessage("ਦੋਸਤੋ"),
+    "friendsLoginRequired": MessageLookupByLibrary.simpleMessage(
+      "ਦੋਸਤਾਂ ਨੂੰ ਲੱਭਣ ਲਈ ਸਾਈਨ ਇਨ ਕਰੋ।",
+    ),
+    "friendshipRemoved": MessageLookupByLibrary.simpleMessage("ਦੋਸਤੀ ਦੂਰ ਕੀਤੀ"),
+    "genericAlbum": MessageLookupByLibrary.simpleMessage("ਐਲਬਮ"),
+    "genericError": MessageLookupByLibrary.simpleMessage("ਗਲਤੀ"),
     "genre_electronic": MessageLookupByLibrary.simpleMessage("ਇਲੈਕਟ੍ਰਾਨਿਕਸ"),
     "genre_hiphop": MessageLookupByLibrary.simpleMessage("ਹਿੱਪ ਹੌਪ"),
     "genre_jazz": MessageLookupByLibrary.simpleMessage("ਜੈਜ਼"),
@@ -331,10 +374,20 @@ class MessageLookup extends MessageLookupByLibrary {
     "ignoreBatOptDes": MessageLookupByLibrary.simpleMessage(
       "ਜੇਕਰ ਤੁਸੀਂ ਨੋਟੀਫਿਕੇਸ਼ਨ ਸਮੱਸਿਆਵਾਂ ਦਾ ਸਾਹਮਣਾ ਕਰ ਰਹੇ ਹੋ ਜਾਂ ਸਿਸਟਮ ਆਪਟੀਮਾਈਜੇਸ਼ਨ ਦੁਆਰਾ ਪਲੇਬੈਕ ਨੂੰ ਰੋਕ ਦਿੱਤਾ ਜਾਂਦਾ ਹੈ, ਤਾਂ ਕਿਰਪਾ ਕਰਕੇ ਇਸ ਵਿਕਲਪ ਨੂੰ ਚਾਲੂ ਕਰੋ",
     ),
+    "importedFromJossMusic": MessageLookupByLibrary.simpleMessage(
+      "Joss Music Kotlin ਤੋਂ ਆਯਾਤ ਕੀਤਾ ਗਿਆ",
+    ),
     "includeDownloadedFiles": MessageLookupByLibrary.simpleMessage(
       "ਡਾਉਨਲੋਡ ਕੀਤੇ ਗੀਤਾਂ ਦੀਆਂ ਫਾਈਲਾਂ ਸ਼ਾਮਿਲ ਕਰੋ",
     ),
+    "invalidServerResponse": MessageLookupByLibrary.simpleMessage(
+      "ਅਵੈਧ ਸਰਵਰ ਜਵਾਬ।",
+    ),
+    "invalidSessionToken": MessageLookupByLibrary.simpleMessage(
+      "ਸੈਸ਼ਨ ਵਿੱਚ ਇੱਕ ਵੈਧ ਟੋਕਨ ਸ਼ਾਮਲ ਨਹੀਂ ਹੈ।",
+    ),
     "items": MessageLookupByLibrary.simpleMessage("ਆਈਟਮਾਂ"),
+    "keepListening": MessageLookupByLibrary.simpleMessage("ਸੁਣਦੇ ਰਹੋ"),
     "keepScreenOnWhilePlaying": MessageLookupByLibrary.simpleMessage(
       "ਸੰਗੀਤ ਚਲਾਉਣ ਦੌਰਾਨ ਸਕਰੀਨ ਚਾਲੂ ਰੱਖੋ",
     ),
@@ -350,6 +403,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "libPlaylists": MessageLookupByLibrary.simpleMessage("ਲਾਇਬ੍ਰੇਰੀ ਪਲੇਲਿਸਟਾਂ"),
     "libSongs": MessageLookupByLibrary.simpleMessage("ਲਾਇਬ੍ਰੇਰੀ ਗੀਤ"),
     "library": MessageLookupByLibrary.simpleMessage("ਲਾਇਬ੍ਰੇਰੀ"),
+    "libraryPlaylistDescription": MessageLookupByLibrary.simpleMessage(
+      "ਲਾਇਬ੍ਰੇਰੀ ਪਲੇਲਿਸਟ",
+    ),
     "light": MessageLookupByLibrary.simpleMessage("ਸਫ਼ੈਦ"),
     "link": MessageLookupByLibrary.simpleMessage("ਜੋੜੋ"),
     "linkAlert": MessageLookupByLibrary.simpleMessage(
@@ -390,8 +446,57 @@ class MessageLookup extends MessageLookupByLibrary {
     "lyricsNotAvailable": MessageLookupByLibrary.simpleMessage(
       "ਬੋਲ ਉਪਲੱਬਧ ਨਹੀਂ ਹਨ!",
     ),
+    "manageCollaborators": MessageLookupByLibrary.simpleMessage(
+      "ਸਹਿਯੋਗੀਆਂ (ਦੋਸਤ) ਦਾ ਪ੍ਰਬੰਧਨ ਕਰੋ",
+    ),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
       "ਯਕੀਨੀ ਬਣਾਓ ਕਿ ਤੁਹਾਡੇ ਮਾਈਕ੍ਰੋਫ਼ੋਨ ਦੇ ਨੇੜੇ ਸੰਗੀਤ ਕਾਫ਼ੀ ਉੱਚੀ ਆਵਾਜ਼ ਵਿੱਚ ਚੱਲ ਰਿਹਾ ਹੈ।",
+    ),
+    "migratedAlbum": MessageLookupByLibrary.simpleMessage("ਮਾਈਗ੍ਰੇਟ ਕੀਤੀ ਐਲਬਮ"),
+    "migratedLibrary": MessageLookupByLibrary.simpleMessage(
+      "ਮਾਈਗਰੇਟ ਕੀਤੀ ਲਾਇਬ੍ਰੇਰੀ",
+    ),
+    "migratedPlaylist": MessageLookupByLibrary.simpleMessage(
+      "ਮਾਈਗਰੇਟ ਕੀਤੀ ਪਲੇਲਿਸਟ",
+    ),
+    "migrationAlreadyRunning": MessageLookupByLibrary.simpleMessage(
+      "ਪਹਿਲਾਂ ਹੀ ਇੱਕ ਮਾਈਗ੍ਰੇਸ਼ਨ ਜਾਰੀ ਹੈ।",
+    ),
+    "migrationAnalyzingLocal": MessageLookupByLibrary.simpleMessage(
+      "ਸਥਾਨਕ ਲਾਇਬ੍ਰੇਰੀ ਦਾ ਵਿਸ਼ਲੇਸ਼ਣ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ...",
+    ),
+    "migrationCheckingCloud": MessageLookupByLibrary.simpleMessage(
+      "ਜਾਂਚ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ ਕਿ ਕੀ EMusic Cloud ਵਿੱਚ ਪਹਿਲਾਂ ਤੋਂ ਹੀ ਇੱਕ ਲਾਇਬ੍ਰੇਰੀ ਹੈ...",
+    ),
+    "migrationCompleted": MessageLookupByLibrary.simpleMessage(
+      "ਮਾਈਗ੍ਰੇਸ਼ਨ ਪੂਰਾ ਹੋਇਆ।",
+    ),
+    "migrationCreatingBackup": MessageLookupByLibrary.simpleMessage(
+      "ਕਲਾਊਡ ਨੂੰ ਕਨੈਕਟ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਇੱਕ ਸਥਾਨਕ ਬੈਕਅੱਪ ਬਣਾਇਆ ਜਾ ਰਿਹਾ ਹੈ...",
+    ),
+    "migrationFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
+      "ਪਰਵਾਸ ਅਸਫਲ ਰਿਹਾ। ਤੁਹਾਡੇ ਸਥਾਨਕ ਡੇਟਾ ਨੂੰ ਸੋਧਿਆ ਨਹੀਂ ਗਿਆ ਸੀ।",
+    ),
+    "migrationLoginRequired": MessageLookupByLibrary.simpleMessage(
+      "ਮਾਈਗ੍ਰੇਟ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ Joss Red ਵਿੱਚ ਲੌਗ ਇਨ ਕਰੋ।",
+    ),
+    "migrationPreparingCloud": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud ਵਿੱਚ ਮਾਈਗ੍ਰੇਸ਼ਨ ਦੀ ਤਿਆਰੀ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ...",
+    ),
+    "migrationStartFailed": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud ਮਾਈਗ੍ਰੇਸ਼ਨ ਸ਼ੁਰੂ ਨਹੀਂ ਕਰ ਸਕਿਆ।",
+    ),
+    "migrationUploadIncomplete": MessageLookupByLibrary.simpleMessage(
+      "ਸਾਰਾ ਡਾਟਾ ਅੱਪਲੋਡ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ। ਅਸੀਂ ਤੁਹਾਡਾ ਸਥਾਨਕ ਸਮਰਥਨ ਜਾਰੀ ਰੱਖਦੇ ਹਾਂ।",
+    ),
+    "migrationUploadingData": MessageLookupByLibrary.simpleMessage(
+      "ਪਲੇਲਿਸਟਸ, ਮਨਪਸੰਦ ਅਤੇ ਇਤਿਹਾਸ ਅੱਪਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ...",
+    ),
+    "migrationValidationFailed": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud ਮਾਈਗ੍ਰੇਸ਼ਨ ਨੂੰ ਪ੍ਰਮਾਣਿਤ ਨਹੀਂ ਕਰ ਸਕਿਆ।",
+    ),
+    "migrationVerifyingIntegrity": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud ਵਿੱਚ ਇਕਸਾਰਤਾ ਦੀ ਪੁਸ਼ਟੀ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ...",
     ),
     "migration_btn_select": MessageLookupByLibrary.simpleMessage(
       "ਫਾਈਲ ਚੁਣੋ ਅਤੇ ਆਯਾਤ ਕਰੋ",
@@ -450,6 +555,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "ਪਾਰਦਰਸ਼ੀ ਸਮਕਾਲੀਕਰਨ",
     ),
     "noBookmarks": MessageLookupByLibrary.simpleMessage("ਕੋਈ ਬੁੱਕਮਾਰਕ ਨਹੀਂ!"),
+    "noJossRedFriends": MessageLookupByLibrary.simpleMessage(
+      "Joss Red \'ਤੇ ਤੁਹਾਡੇ ਕੋਲ ਕੋਈ ਵੀ ਦੋਸਤ ਸ਼ਾਮਲ ਨਹੀਂ ਹਨ।",
+    ),
     "noLibPlaylist": MessageLookupByLibrary.simpleMessage(
       "ਤੁਹਾਡੇ ਕੋਲ ਕੋਈ ਲਾਇਬ੍ਰੇਰੀ ਪਲੇਲਿਸਟ ਨਹੀਂ ਹੈ!",
     ),
@@ -460,7 +568,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "noOfflineSong": MessageLookupByLibrary.simpleMessage(
       "ਕੋਈ ਆਫਲਾਈਨ ਗੀਤ ਨਹੀਂ!",
     ),
+    "noSongsInCollection": MessageLookupByLibrary.simpleMessage(
+      "ਇਸ ਸੰਗ੍ਰਹਿ ਵਿੱਚ ਕੋਈ ਗੀਤ ਨਹੀਂ ਹਨ",
+    ),
     "nomatch": MessageLookupByLibrary.simpleMessage("ਲਈ ਕੋਈ ਮੇਲ ਨਹੀਂ ਮਿਲਿਆ"),
+    "notAuthenticated": MessageLookupByLibrary.simpleMessage(
+      "ਪ੍ਰਮਾਣਿਤ ਨਹੀਂ ਹੈ",
+    ),
     "notaSongVideo": MessageLookupByLibrary.simpleMessage(
       "ਕੋਈ ਗੀਤ/ਸੰਗੀਤ-ਵੀਡੀਓ ਨਹੀਂ!",
     ),
@@ -470,6 +584,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "password": MessageLookupByLibrary.simpleMessage("ਪਾਸਵਰਡ"),
     "password_text": MessageLookupByLibrary.simpleMessage("ਪਾਸਵਰਡ"),
     "personalisation": MessageLookupByLibrary.simpleMessage("ਵਿਅਕਤੀਗਤਕਰਨ"),
+    "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage(
+      "ਪਾਈਪ ਪਲੇਲਿਸਟ",
+    ),
     "pipedplstSyncAlert": MessageLookupByLibrary.simpleMessage(
       "ਪਾਈਪਡ ਪਲੇਲਿਸਟ ਸਿੰਕ ਕੀਤੀ ਗਈ!",
     ),
@@ -490,6 +607,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "playlistBookmarkRemoveAlert": MessageLookupByLibrary.simpleMessage(
       "ਪਲੇਲਿਸਟ ਬੁੱਕਮਾਰਕ ਹਟਾਇਆ ਗਿਆ!",
+    ),
+    "playlistCollaboratorsTitle": MessageLookupByLibrary.simpleMessage(
+      "ਪਲੇਲਿਸਟ ਯੋਗਦਾਨੀ",
     ),
     "playlistCreatedAlert": MessageLookupByLibrary.simpleMessage(
       "ਪਲੇਲਿਸਟ ਬਣਾਈ ਗਈ!",
@@ -587,6 +707,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "results": MessageLookupByLibrary.simpleMessage("ਨਤੀਜੇ"),
     "retry": MessageLookupByLibrary.simpleMessage("ਮੁੜ-ਕੋਸ਼ਿਸ਼ ਕਰੋ!"),
+    "save": MessageLookupByLibrary.simpleMessage("ਰੱਖੋ"),
     "scanning": MessageLookupByLibrary.simpleMessage("ਸਕੈਨ ਹੋ ਰਿਹਾ..."),
     "search": MessageLookupByLibrary.simpleMessage("ਖੋਜ ਕਰੋ"),
     "searchDes": MessageLookupByLibrary.simpleMessage(
@@ -602,6 +723,12 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "selectAuthInsMsg": MessageLookupByLibrary.simpleMessage(
       "ਕਿਰਪਾ ਕਰਕੇ ਪ੍ਰਮਾਣੀਕਰਨ ਇੰਸਟੈਂਸ ਚੁਣੋ!",
+    ),
+    "selectedFileNotFound": MessageLookupByLibrary.simpleMessage(
+      "ਚੁਣੀ ਗਈ ਫ਼ਾਈਲ ਨਹੀਂ ਲੱਭੀ।",
+    ),
+    "sessionExpiredLoginAgain": MessageLookupByLibrary.simpleMessage(
+      "ਤੁਹਾਡੇ ਸੈਸ਼ਨ ਦੀ ਮਿਆਦ ਪੁੱਗ ਗਈ ਹੈ। ਦੁਬਾਰਾ ਸਾਈਨ ਇਨ ਕਰੋ।",
     ),
     "setDiscoverContent": MessageLookupByLibrary.simpleMessage(
       "ਖੋਜ ਸਮੱਗਰੀ ਸੈੱਟ ਕਰੋ",
@@ -680,6 +807,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "ਮੈਚਾਂ ਲਈ ਸ਼ਾਜ਼ਮ ਡੇਟਾਬੇਸ ਦੀ ਖੋਜ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ...",
     ),
     "shuffleQueue": MessageLookupByLibrary.simpleMessage("ਸ਼ਫਲ ਕਤਾਰ"),
+    "similarToTitle": m1,
     "singles": MessageLookupByLibrary.simpleMessage("ਸਿੰਗਲਜ਼"),
     "skipSilence": MessageLookupByLibrary.simpleMessage("ਚੁੱਪ ਛੱਡੋ"),
     "skipSilenceDes": MessageLookupByLibrary.simpleMessage(
@@ -689,7 +817,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "ਤੁਹਾਡਾ ਸਲੀਪ ਟਾਈਮਰ ਸੈੱਟ ਕੀਤਾ ਗਿਆ ਹੈ",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("ਸਲੀਪ ਟਾਈਮਰ"),
-    "slide_indicator": m1,
+    "slide_indicator": m2,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "ਗੀਤ ਪਲੇਲਿਸਟ ਵਿੱਚ ਜੋੜਿਆ ਗਿਆ!",
     ),
@@ -716,9 +844,18 @@ class MessageLookup extends MessageLookupByLibrary {
       "ਤੁਸੀਂ ਇਸ ਸਮੇਂ ਚੱਲ ਰਹੇ ਗੀਤ ਨੂੰ ਨਹੀਂ ਹਟਾ ਸਕਦੇ",
     ),
     "songs": MessageLookupByLibrary.simpleMessage("ਗੀਤ"),
+    "songsImportedFromJossMusic": MessageLookupByLibrary.simpleMessage(
+      "ਜੌਸ ਸੰਗੀਤ ਕੋਟਲਿਨ ਤੋਂ ਆਯਾਤ ਕੀਤੇ ਗੀਤ",
+    ),
     "speedAndPitch": MessageLookupByLibrary.simpleMessage("ਸਪੀਡ ਅਤੇ ਪਿੱਚ"),
     "standard": MessageLookupByLibrary.simpleMessage("ਮਿਆਰੀ"),
     "startRadio": MessageLookupByLibrary.simpleMessage("ਰੇਡੀਓ ਸ਼ੁਰੂ ਕਰੋ"),
+    "startupScreen": MessageLookupByLibrary.simpleMessage(
+      "ਸਟਾਰਟਅੱਪ \'ਤੇ ਖੋਲ੍ਹੋ",
+    ),
+    "startupScreenDescription": MessageLookupByLibrary.simpleMessage(
+      "ਉਹ ਭਾਗ ਚੁਣੋ ਜੋ Estrella Music ਪਹਿਲਾਂ ਖੁੱਲ੍ਹਦਾ ਹੈ",
+    ),
     "status": MessageLookupByLibrary.simpleMessage("ਸਥਿਤੀ"),
     "stopMusicOnTaskClear": MessageLookupByLibrary.simpleMessage(
       "ਟਾਸਕ ਕਲੀਅਰ \'ਤੇ ਸੰਗੀਤ ਬੰਦ ਕਰੋ",
@@ -736,6 +873,62 @@ class MessageLookup extends MessageLookupByLibrary {
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
       "ਵਿਕਲਪਾਂ ਦੀ ਪੜਚੋਲ ਕਰਨ ਲਈ ਸਵਾਈਪ ਕਰੋ ➔",
     ),
+    "syncChangesConfirmed": m3,
+    "syncChangesSynced": m4,
+    "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
+      "ਕਲਾਊਡ ਮੋਡ ਕਿਰਿਆਸ਼ੀਲ ਕੀਤਾ ਗਿਆ। ਮੌਜੂਦਾ ਲਾਇਬ੍ਰੇਰੀ ਨੂੰ ਡਾਊਨਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ।",
+    ),
+    "syncCloudMigrationComplete": MessageLookupByLibrary.simpleMessage(
+      "ਕਲਾਊਡ ਮੋਡ ਕਿਰਿਆਸ਼ੀਲ ਕੀਤਾ ਗਿਆ। ਮਾਈਗਰੇਟ ਕੀਤੀ ਲਾਇਬ੍ਰੇਰੀ।",
+    ),
+    "syncCloudPending": MessageLookupByLibrary.simpleMessage(
+      "ਕਲਾਊਡ ਮੋਡ ਕਿਰਿਆਸ਼ੀਲ ਹੈ। ਲੰਬਿਤ ਸਮਕਾਲੀਕਰਨ।",
+    ),
+    "syncDownloadFailed": MessageLookupByLibrary.simpleMessage(
+      "ਸਿੰਕ ਨੂੰ ਡਾਊਨਲੋਡ ਕਰਨਾ ਅਸਫਲ ਰਿਹਾ।",
+    ),
+    "syncDownloading": MessageLookupByLibrary.simpleMessage(
+      "EMusic ਤਬਦੀਲੀਆਂ ਨੂੰ ਡਾਊਨਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ...",
+    ),
+    "syncLibrarySynced": MessageLookupByLibrary.simpleMessage(
+      "ਸਮਕਾਲੀ ਲਾਇਬ੍ਰੇਰੀ।",
+    ),
+    "syncLibraryUpToDate": MessageLookupByLibrary.simpleMessage(
+      "ਲਾਇਬ੍ਰੇਰੀ ਅੱਪ ਟੂ ਡੇਟ।",
+    ),
+    "syncLocalChangesFirst": MessageLookupByLibrary.simpleMessage(
+      "ਨਵੀਆਂ ਸਥਾਨਕ ਤਬਦੀਲੀਆਂ ਹਨ। ਉਹਨਾਂ ਨੂੰ ਡਾਊਨਲੋਡ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਅੱਪਲੋਡ ਕੀਤਾ ਜਾਵੇਗਾ।",
+    ),
+    "syncLocalDeviceOnly": MessageLookupByLibrary.simpleMessage(
+      "ਤੁਹਾਡਾ ਡੇਟਾ ਸਿਰਫ ਇਸ ਡਿਵਾਈਸ \'ਤੇ ਰੱਖਿਆ ਜਾਂਦਾ ਹੈ।",
+    ),
+    "syncLocalModeActive": MessageLookupByLibrary.simpleMessage(
+      "ਸਥਾਨਕ ਮੋਡ ਕਿਰਿਆਸ਼ੀਲ ਹੈ",
+    ),
+    "syncOfflinePending": MessageLookupByLibrary.simpleMessage(
+      "ਔਫਲਾਈਨ। ਤਬਦੀਲੀਆਂ ਲੰਬਿਤ ਹਨ।",
+    ),
+    "syncOfflineRetry": MessageLookupByLibrary.simpleMessage(
+      "ਔਫਲਾਈਨ। ਤਬਦੀਲੀਆਂ ਮੁੜ-ਕੋਸ਼ਿਸ਼ ਲਈ ਰੱਖਿਅਤ ਕੀਤੀਆਂ ਗਈਆਂ।",
+    ),
+    "syncUnconfirmedRetry": MessageLookupByLibrary.simpleMessage(
+      "EMusic ਨੇ ਸਾਰੀਆਂ ਤਬਦੀਲੀਆਂ ਦੀ ਪੁਸ਼ਟੀ ਨਹੀਂ ਕੀਤੀ। ਉਨ੍ਹਾਂ ਦੀ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕੀਤੀ ਜਾਵੇਗੀ।",
+    ),
+    "syncUploadRetry": MessageLookupByLibrary.simpleMessage(
+      "ਉੱਠ ਨਹੀਂ ਸਕਿਆ। ਇਸਦੀ ਬਾਅਦ ਵਿੱਚ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕੀਤੀ ਜਾਵੇਗੀ।",
+    ),
+    "syncUploadSuccess": MessageLookupByLibrary.simpleMessage(
+      "ਤਬਦੀਲੀਆਂ ਸਹੀ ਢੰਗ ਨਾਲ ਅੱਪਲੋਡ ਕੀਤੀਆਂ ਗਈਆਂ।",
+    ),
+    "syncUploadSuccessWs": MessageLookupByLibrary.simpleMessage(
+      "ਤਬਦੀਲੀਆਂ ਸਫਲਤਾਪੂਰਵਕ ਅੱਪਲੋਡ ਕੀਤੀਆਂ ਗਈਆਂ (WS)।",
+    ),
+    "syncUploadWsRetry": MessageLookupByLibrary.simpleMessage(
+      "WS ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਅੱਪਲੋਡ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ। ਇਸਦੀ ਬਾਅਦ ਵਿੱਚ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕੀਤੀ ਜਾਵੇਗੀ।",
+    ),
+    "syncUploading": MessageLookupByLibrary.simpleMessage(
+      "EMusic ਵਿੱਚ ਤਬਦੀਲੀਆਂ ਅੱਪਲੋਡ ਕੀਤੀਆਂ ਜਾ ਰਹੀਆਂ ਹਨ...",
+    ),
     "synced": MessageLookupByLibrary.simpleMessage("ਸਿੰਕ ਕੀਤਾ ਗਿਆ"),
     "syncedLyricsNotAvailable": MessageLookupByLibrary.simpleMessage(
       "ਸਿੰਕ ਕੀਤੇ ਬੋਲ ਉਪਲਬਧ ਨਹੀਂ ਹਨ!",
@@ -751,10 +944,19 @@ class MessageLookup extends MessageLookupByLibrary {
     "unlinkAlert": MessageLookupByLibrary.simpleMessage(
       "ਸਫਲਤਾਪੂਰਵਕ ਅਨਲਿੰਕ ਕੀਤਾ ਗਿਆ!",
     ),
+    "untitledSong": MessageLookupByLibrary.simpleMessage(
+      "ਬਿਨਾਂ ਸਿਰਲੇਖ ਵਾਲਾ ਗੀਤ",
+    ),
     "upNext": MessageLookupByLibrary.simpleMessage("ਅਗਲਾ ਗੀਤ"),
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "url ਖੋਜਿਆ ਗਿਆ ਸੰਬੰਧਿਤ ਸਮੱਗਰੀ ਨੂੰ ਖੋਲ੍ਹਣ/ਪਲੇ ਕਰਨ ਲਈ ਇਸ \'ਤੇ ਕਲਿੱਕ ਕਰੋ",
     ),
+    "userBlocked": MessageLookupByLibrary.simpleMessage("ਬਲੌਕ ਕੀਤਾ ਉਪਭੋਗਤਾ"),
+    "userListMissing": MessageLookupByLibrary.simpleMessage(
+      "ਜਵਾਬ ਵਿੱਚ ਉਪਭੋਗਤਾਵਾਂ ਦੀ ਸੂਚੀ ਨਹੀਂ ਹੈ।",
+    ),
+    "userSearchFailed": m5,
+    "userUnblocked": MessageLookupByLibrary.simpleMessage("ਅਣਲਾਕ ਕੀਤਾ ਉਪਭੋਗਤਾ"),
     "username": MessageLookupByLibrary.simpleMessage("ਯੂਜ਼ਰਨੇਮ"),
     "video": MessageLookupByLibrary.simpleMessage("ਵੀਡੀਓ"),
     "videos": MessageLookupByLibrary.simpleMessage("ਵੀਡੀਓ"),

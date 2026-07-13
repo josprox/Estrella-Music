@@ -56,7 +56,8 @@ class _M3ExpressiveNavBar extends StatelessWidget {
       ),
       GButton(
         icon: Icons.audiotrack_rounded,
-        leading: buildIcon(Icons.audiotrack_rounded, Icons.audiotrack_outlined, 1),
+        leading:
+            buildIcon(Icons.audiotrack_rounded, Icons.audiotrack_outlined, 1),
       ),
       GButton(
         icon: Icons.search_rounded,
@@ -68,8 +69,8 @@ class _M3ExpressiveNavBar extends StatelessWidget {
       ),
       GButton(
         icon: Icons.people_alt_rounded,
-        leading:
-            buildIcon(Icons.people_alt_rounded, Icons.people_outline_rounded, 4),
+        leading: buildIcon(
+            Icons.people_alt_rounded, Icons.people_outline_rounded, 4),
       ),
       GButton(
         icon: Icons.queue_music_rounded,
@@ -98,7 +99,7 @@ class _M3ExpressiveNavBar extends StatelessWidget {
       child: SafeArea(
         top: false,
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 8),
+          padding: const EdgeInsets.fromLTRB(8, 6, 8, 6),
           child: GNav(
             // ── Colors ──────────────────────────────────────────────────────
             color: colorScheme.onSurfaceVariant,
@@ -110,7 +111,7 @@ class _M3ExpressiveNavBar extends StatelessWidget {
             // ── Layout ──────────────────────────────────────────────────────
             gap: 4,
             iconSize: 24,
-            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
             mainAxisAlignment: MainAxisAlignment.spaceAround,
 
             // ── Animation ───────────────────────────────────────────────────

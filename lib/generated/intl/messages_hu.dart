@@ -22,7 +22,16 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(error) => "Hiba történt a regenerálás során: ${error}";
 
-  static String m1(current) => "3. ${current}. lépés";
+  static String m1(title) => "Hasonló ehhez: ${title}";
+
+  static String m2(current) => "3. ${current}. lépés";
+
+  static String m3(count) => "${count} változtatások végrehajtva.";
+
+  static String m4(count) => "${count} szinkronizált változtatások.";
+
+  static String m5(statusCode) =>
+      "Nem sikerült felhasználókat keresni (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -116,6 +125,15 @@ class MessageLookup extends MessageLookupByLibrary {
     "cancelTimer": MessageLookupByLibrary.simpleMessage("Időzítés vége"),
     "close": MessageLookupByLibrary.simpleMessage("Közeli"),
     "closeApp": MessageLookupByLibrary.simpleMessage("Alkalmazás bezárása"),
+    "cloudLibraryFound": MessageLookupByLibrary.simpleMessage(
+      "Felhőkönyvtár található.",
+    ),
+    "cloudLibraryFoundDeviceWillDownload": MessageLookupByLibrary.simpleMessage(
+      "Felhőkönyvtár található. Ez az eszköz felülírás nélkül tölti le.",
+    ),
+    "cloudModeReadyOfflineCache": MessageLookupByLibrary.simpleMessage(
+      "A felhő mód készen áll. Ez az eszköz offline gyorsítótárként fog működni.",
+    ),
     "cloud_b1": MessageLookupByLibrary.simpleMessage(
       "Jelentkezzen be biztonságosan Joss Red fiókjával.",
     ),
@@ -132,6 +150,15 @@ class MessageLookup extends MessageLookupByLibrary {
       "Valós idejű szinkronizálás Joss Red-el",
     ),
     "cloud_title": MessageLookupByLibrary.simpleMessage("Felhő mód (ajánlott)"),
+    "collaborativePlaylistDescription": MessageLookupByLibrary.simpleMessage(
+      "Együttműködési lejátszási lista",
+    ),
+    "collaboratorsInstruction": MessageLookupByLibrary.simpleMessage(
+      "Válassza ki azokat az ismerősöket, akik láthatják és szerkeszthetik ezt a lejátszási listát:",
+    ),
+    "collaboratorsUpdated": MessageLookupByLibrary.simpleMessage(
+      "Az együttműködők megfelelően frissítve.",
+    ),
     "communityplaylists": MessageLookupByLibrary.simpleMessage(
       "Közösségi lejátszólisták",
     ),
@@ -140,11 +167,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "createnAdd": MessageLookupByLibrary.simpleMessage(
       "Létrehozás és hozzáadás",
     ),
+    "dailyDiscover": MessageLookupByLibrary.simpleMessage("Napi felfedezés"),
     "dark": MessageLookupByLibrary.simpleMessage("Sötét"),
     "deleteDownloadData": MessageLookupByLibrary.simpleMessage(
       "Eltávolítás a letöltések közül",
     ),
     "discover": MessageLookupByLibrary.simpleMessage("Felfedezés"),
+    "done": MessageLookupByLibrary.simpleMessage("Kész"),
     "download": MessageLookupByLibrary.simpleMessage("Letöltés"),
     "downloadError2": MessageLookupByLibrary.simpleMessage(
       "A kért dal nem tölthető le a szerver korlátozása miatt. Megpróbálhatja újra",
@@ -173,6 +202,22 @@ class MessageLookup extends MessageLookupByLibrary {
     "forgottenFavorites": MessageLookupByLibrary.simpleMessage(
       "elfelejtett kedvencek",
     ),
+    "friendFallback": MessageLookupByLibrary.simpleMessage("Barát"),
+    "friendRequestAccepted": MessageLookupByLibrary.simpleMessage(
+      "Ismerős felkérés elfogadva",
+    ),
+    "friendRequestSent": MessageLookupByLibrary.simpleMessage(
+      "Ismerős felkérés elküldve",
+    ),
+    "friends": MessageLookupByLibrary.simpleMessage("Barátok"),
+    "friendsLoginRequired": MessageLookupByLibrary.simpleMessage(
+      "Jelentkezzen be, hogy barátokat találjon.",
+    ),
+    "friendshipRemoved": MessageLookupByLibrary.simpleMessage(
+      "A barátság eltávolítva",
+    ),
+    "genericAlbum": MessageLookupByLibrary.simpleMessage("Album"),
+    "genericError": MessageLookupByLibrary.simpleMessage("Hiba"),
     "genre_electronic": MessageLookupByLibrary.simpleMessage("Elektronika"),
     "genre_hiphop": MessageLookupByLibrary.simpleMessage("hip hop"),
     "genre_jazz": MessageLookupByLibrary.simpleMessage("Dzsessz"),
@@ -181,7 +226,17 @@ class MessageLookup extends MessageLookupByLibrary {
     "genre_rock": MessageLookupByLibrary.simpleMessage("Szikla"),
     "goToAlbum": MessageLookupByLibrary.simpleMessage("Irány az album"),
     "home": MessageLookupByLibrary.simpleMessage("Kezdőlap"),
+    "importedFromJossMusic": MessageLookupByLibrary.simpleMessage(
+      "Joss Music Kotlinból importálva",
+    ),
+    "invalidServerResponse": MessageLookupByLibrary.simpleMessage(
+      "Érvénytelen szerver válasz.",
+    ),
+    "invalidSessionToken": MessageLookupByLibrary.simpleMessage(
+      "A munkamenet nem tartalmaz érvényes tokent.",
+    ),
     "items": MessageLookupByLibrary.simpleMessage("Tárgyak"),
+    "keepListening": MessageLookupByLibrary.simpleMessage("hallgass tovább"),
     "keepScreenOnWhilePlaying": MessageLookupByLibrary.simpleMessage(
       "A képernyő bekapcsolva tartása lejátszás közben",
     ),
@@ -201,6 +256,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "libSongs": MessageLookupByLibrary.simpleMessage("Gyűjtemény dalai"),
     "library": MessageLookupByLibrary.simpleMessage("Gyüjtemény"),
+    "libraryPlaylistDescription": MessageLookupByLibrary.simpleMessage(
+      "Library Playlist",
+    ),
     "light": MessageLookupByLibrary.simpleMessage("Világos"),
     "listenNow": MessageLookupByLibrary.simpleMessage("Figyelj most"),
     "listeningToEnvironment": MessageLookupByLibrary.simpleMessage(
@@ -222,8 +280,57 @@ class MessageLookup extends MessageLookupByLibrary {
       "Abszolút adatvédelem az eszközön",
     ),
     "local_title": MessageLookupByLibrary.simpleMessage("Helyi mód"),
+    "manageCollaborators": MessageLookupByLibrary.simpleMessage(
+      "Együttműködők (barátok) kezelése",
+    ),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
       "Győződjön meg arról, hogy a zene elég hangosan szól a mikrofon közelében.",
+    ),
+    "migratedAlbum": MessageLookupByLibrary.simpleMessage("Áttelepített album"),
+    "migratedLibrary": MessageLookupByLibrary.simpleMessage(
+      "Áttelepített könyvtár",
+    ),
+    "migratedPlaylist": MessageLookupByLibrary.simpleMessage(
+      "Áttelepített lejátszási lista",
+    ),
+    "migrationAlreadyRunning": MessageLookupByLibrary.simpleMessage(
+      "Már folyamatban van a migráció.",
+    ),
+    "migrationAnalyzingLocal": MessageLookupByLibrary.simpleMessage(
+      "A helyi könyvtár elemzése...",
+    ),
+    "migrationCheckingCloud": MessageLookupByLibrary.simpleMessage(
+      "Annak ellenőrzése, hogy az EMusic Cloud rendelkezik-e már könyvtárral...",
+    ),
+    "migrationCompleted": MessageLookupByLibrary.simpleMessage(
+      "A migráció befejeződött.",
+    ),
+    "migrationCreatingBackup": MessageLookupByLibrary.simpleMessage(
+      "Helyi biztonsági mentés létrehozása a felhő csatlakoztatása előtt...",
+    ),
+    "migrationFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
+      "A migráció nem sikerült. A helyi adatait nem módosították.",
+    ),
+    "migrationLoginRequired": MessageLookupByLibrary.simpleMessage(
+      "A migráció előtt jelentkezzen be a Joss Red szolgáltatásba.",
+    ),
+    "migrationPreparingCloud": MessageLookupByLibrary.simpleMessage(
+      "A migráció előkészítése az EMusic Cloudban...",
+    ),
+    "migrationStartFailed": MessageLookupByLibrary.simpleMessage(
+      "Az EMusic Cloud nem tudta elindítani az áttelepítést.",
+    ),
+    "migrationUploadIncomplete": MessageLookupByLibrary.simpleMessage(
+      "Nem lehetett minden adatot feltölteni. Megtartjuk helyi támogatását.",
+    ),
+    "migrationUploadingData": MessageLookupByLibrary.simpleMessage(
+      "Lejátszási listák, kedvencek és előzmények feltöltése...",
+    ),
+    "migrationValidationFailed": MessageLookupByLibrary.simpleMessage(
+      "Az EMusic Cloud nem tudta ellenőrizni az áttelepítést.",
+    ),
+    "migrationVerifyingIntegrity": MessageLookupByLibrary.simpleMessage(
+      "Az integritás ellenőrzése az EMusic Cloudban...",
     ),
     "migration_btn_select": MessageLookupByLibrary.simpleMessage(
       "Válassza ki a fájlt és importálja",
@@ -283,6 +390,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "noBookmarks": MessageLookupByLibrary.simpleMessage(
       "Nincsenek könyvjelzők!",
     ),
+    "noJossRedFriends": MessageLookupByLibrary.simpleMessage(
+      "Nincsenek hozzáadott barátaid a Joss Red-en.",
+    ),
     "noLibPlaylist": MessageLookupByLibrary.simpleMessage(
       "Nincs lib lejátszási listád!",
     ),
@@ -293,9 +403,18 @@ class MessageLookup extends MessageLookupByLibrary {
     "noOfflineSong": MessageLookupByLibrary.simpleMessage(
       "Nincsenek offline dalok!",
     ),
+    "noSongsInCollection": MessageLookupByLibrary.simpleMessage(
+      "Ebben a gyűjteményben nincsenek dalok",
+    ),
+    "notAuthenticated": MessageLookupByLibrary.simpleMessage(
+      "Nincs hitelesítve",
+    ),
     "openIn": MessageLookupByLibrary.simpleMessage("Megnyitás itt:"),
     "password_text": MessageLookupByLibrary.simpleMessage("Jelszó"),
     "personalisation": MessageLookupByLibrary.simpleMessage("Személyreszabás"),
+    "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage(
+      "Piped Playlist",
+    ),
     "playNext": MessageLookupByLibrary.simpleMessage("Következő lejátszása"),
     "playNow": MessageLookupByLibrary.simpleMessage("Játssz most"),
     "playbackSpeed": MessageLookupByLibrary.simpleMessage(
@@ -304,6 +423,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "playerUi": MessageLookupByLibrary.simpleMessage("Lejátszó Ui"),
     "playingRecognizedTrack": MessageLookupByLibrary.simpleMessage(
       "Lejátszás:",
+    ),
+    "playlistCollaboratorsTitle": MessageLookupByLibrary.simpleMessage(
+      "Lejátszási listák közreműködői",
     ),
     "playlists": MessageLookupByLibrary.simpleMessage("Lejátszólisták"),
     "playnextMsg": MessageLookupByLibrary.simpleMessage("Következő"),
@@ -377,6 +499,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "restoring": MessageLookupByLibrary.simpleMessage("Visszaállítás..."),
     "retry": MessageLookupByLibrary.simpleMessage("Újrapróbálom!"),
+    "save": MessageLookupByLibrary.simpleMessage("Tartsa"),
     "searchInLibrary": MessageLookupByLibrary.simpleMessage(
       "Keresés a könyvtárban",
     ),
@@ -385,6 +508,12 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "selectAll": MessageLookupByLibrary.simpleMessage("Összes kiválasztása"),
     "selectSongs": MessageLookupByLibrary.simpleMessage("Számok kiválástása"),
+    "selectedFileNotFound": MessageLookupByLibrary.simpleMessage(
+      "A kiválasztott fájl nem található.",
+    ),
+    "sessionExpiredLoginAgain": MessageLookupByLibrary.simpleMessage(
+      "A munkamenet lejárt. Jelentkezzen be újra.",
+    ),
     "setDiscoverContent": MessageLookupByLibrary.simpleMessage(
       "Állítsa be a felfedezés tartalmát",
     ),
@@ -464,29 +593,106 @@ class MessageLookup extends MessageLookupByLibrary {
       "Egyezések keresése a Shazam adatbázisban...",
     ),
     "shuffleQueue": MessageLookupByLibrary.simpleMessage("Várólista keverése"),
+    "similarToTitle": m1,
     "singles": MessageLookupByLibrary.simpleMessage("Kislemezek"),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Alvás időzítő"),
-    "slide_indicator": m1,
+    "slide_indicator": m2,
     "songFound": MessageLookupByLibrary.simpleMessage("Dal megtalálva!"),
     "songNotPlayable": MessageLookupByLibrary.simpleMessage(
       "A dal nem játszható le, a szerver korlátozása miatt!",
     ),
     "songPitch": MessageLookupByLibrary.simpleMessage("dal hangja"),
     "songs": MessageLookupByLibrary.simpleMessage("Számok"),
+    "songsImportedFromJossMusic": MessageLookupByLibrary.simpleMessage(
+      "A Joss Music Kotlinból importált dalok",
+    ),
     "speedAndPitch": MessageLookupByLibrary.simpleMessage(
       "Sebesség és hangmagasság",
     ),
     "standard": MessageLookupByLibrary.simpleMessage("Alapértelmezett"),
     "startRadio": MessageLookupByLibrary.simpleMessage("Rádió indítása"),
+    "startupScreen": MessageLookupByLibrary.simpleMessage(
+      "Nyissa meg indításkor",
+    ),
+    "startupScreenDescription": MessageLookupByLibrary.simpleMessage(
+      "Válassza ki azt a részt, amelyet az Estrella Music először nyit meg",
+    ),
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
       "Csúsztassa ujját a lehetőségek felfedezéséhez ➔",
+    ),
+    "syncChangesConfirmed": m3,
+    "syncChangesSynced": m4,
+    "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
+      "Felhő mód aktiválva. A meglévő könyvtár letöltése.",
+    ),
+    "syncCloudMigrationComplete": MessageLookupByLibrary.simpleMessage(
+      "Felhő mód aktiválva. Áttelepített könyvtár.",
+    ),
+    "syncCloudPending": MessageLookupByLibrary.simpleMessage(
+      "Felhő mód aktív. Függőben lévő szinkronizálás.",
+    ),
+    "syncDownloadFailed": MessageLookupByLibrary.simpleMessage(
+      "Nem sikerült letölteni a szinkronizálást.",
+    ),
+    "syncDownloading": MessageLookupByLibrary.simpleMessage(
+      "Az EMusic módosításainak letöltése...",
+    ),
+    "syncLibrarySynced": MessageLookupByLibrary.simpleMessage(
+      "Szinkronizált könyvtár.",
+    ),
+    "syncLibraryUpToDate": MessageLookupByLibrary.simpleMessage(
+      "Naprakész könyvtár.",
+    ),
+    "syncLocalChangesFirst": MessageLookupByLibrary.simpleMessage(
+      "Új helyi változások vannak. A letöltés előtt feltöltésre kerülnek.",
+    ),
+    "syncLocalDeviceOnly": MessageLookupByLibrary.simpleMessage(
+      "Az Ön adatait csak ezen az eszközön tároljuk.",
+    ),
+    "syncLocalModeActive": MessageLookupByLibrary.simpleMessage(
+      "Helyi mód aktív",
+    ),
+    "syncOfflinePending": MessageLookupByLibrary.simpleMessage(
+      "Offline. A változtatások függőben vannak.",
+    ),
+    "syncOfflineRetry": MessageLookupByLibrary.simpleMessage(
+      "Offline. A változtatások mentve újrapróbálkozáshoz.",
+    ),
+    "syncUnconfirmedRetry": MessageLookupByLibrary.simpleMessage(
+      "Az EMusic nem erősítette meg az összes változtatást. Újra meg fogják próbálni.",
+    ),
+    "syncUploadRetry": MessageLookupByLibrary.simpleMessage(
+      "Nem sikerült felkelni. Később újra megpróbáljuk.",
+    ),
+    "syncUploadSuccess": MessageLookupByLibrary.simpleMessage(
+      "A módosítások megfelelően feltöltve.",
+    ),
+    "syncUploadSuccessWs": MessageLookupByLibrary.simpleMessage(
+      "A módosítások sikeresen feltöltve (WS).",
+    ),
+    "syncUploadWsRetry": MessageLookupByLibrary.simpleMessage(
+      "Nem sikerült feltölteni a WS használatával. Később újra megpróbáljuk.",
+    ),
+    "syncUploading": MessageLookupByLibrary.simpleMessage(
+      "Módosítások feltöltése az EMusicba...",
     ),
     "systemDefault": MessageLookupByLibrary.simpleMessage("Alapértelmezett"),
     "topmusicvideos": MessageLookupByLibrary.simpleMessage(
       "Legjobb Zenei Videók",
     ),
     "trending": MessageLookupByLibrary.simpleMessage("Felkapott"),
+    "untitledSong": MessageLookupByLibrary.simpleMessage("Névtelen dal"),
     "upNext": MessageLookupByLibrary.simpleMessage("Következő"),
+    "userBlocked": MessageLookupByLibrary.simpleMessage(
+      "Letiltott felhasználó",
+    ),
+    "userListMissing": MessageLookupByLibrary.simpleMessage(
+      "A válasz nem tartalmazza a felhasználók listáját.",
+    ),
+    "userSearchFailed": m5,
+    "userUnblocked": MessageLookupByLibrary.simpleMessage(
+      "Feloldott felhasználó",
+    ),
     "username": MessageLookupByLibrary.simpleMessage("Felhasználónév"),
     "video": MessageLookupByLibrary.simpleMessage("Videó"),
     "viewArtist": MessageLookupByLibrary.simpleMessage("Irány az előadó"),

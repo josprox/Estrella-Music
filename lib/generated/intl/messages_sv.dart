@@ -22,7 +22,16 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(error) => "Ett fel uppstod under återskapandet: ${error}";
 
-  static String m1(current) => "Steg ${current} av 3";
+  static String m1(title) => "Liknar ${title}";
+
+  static String m2(current) => "Steg ${current} av 3";
+
+  static String m3(count) => "${count} ändringar har begåtts.";
+
+  static String m4(count) => "${count} synkroniserade ändringar.";
+
+  static String m5(statusCode) =>
+      "Det gick inte att söka efter användare (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -133,6 +142,15 @@ class MessageLookup extends MessageLookupByLibrary {
       "Klicka här för att rensa cachade miniatyrer/bilder. (Rekommenderas inte om du inte vill uppdatera cachad bilddata)",
     ),
     "close": MessageLookupByLibrary.simpleMessage("Nära"),
+    "cloudLibraryFound": MessageLookupByLibrary.simpleMessage(
+      "Molnbibliotek hittades.",
+    ),
+    "cloudLibraryFoundDeviceWillDownload": MessageLookupByLibrary.simpleMessage(
+      "Ett molnbibliotek hittades. Den här enheten kommer att ladda ner den utan att skriva över den.",
+    ),
+    "cloudModeReadyOfflineCache": MessageLookupByLibrary.simpleMessage(
+      "Molnläget är klart. Den här enheten fungerar som en offlinecache.",
+    ),
     "cloud_b1": MessageLookupByLibrary.simpleMessage(
       "Logga in säkert med ditt Joss Red-konto.",
     ),
@@ -151,6 +169,15 @@ class MessageLookup extends MessageLookupByLibrary {
     "cloud_title": MessageLookupByLibrary.simpleMessage(
       "Molnläge (rekommenderas)",
     ),
+    "collaborativePlaylistDescription": MessageLookupByLibrary.simpleMessage(
+      "Samarbetande spellista",
+    ),
+    "collaboratorsInstruction": MessageLookupByLibrary.simpleMessage(
+      "Välj de vänner som kommer att kunna se och redigera den här spellistan:",
+    ),
+    "collaboratorsUpdated": MessageLookupByLibrary.simpleMessage(
+      "Samarbetspartners uppdaterade korrekt.",
+    ),
     "communityplaylists": MessageLookupByLibrary.simpleMessage(
       "Communityspellistor",
     ),
@@ -160,6 +187,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "customInsSelectMsg": MessageLookupByLibrary.simpleMessage(
       "Välj egen instans",
     ),
+    "dailyDiscover": MessageLookupByLibrary.simpleMessage("Daglig upptäckt"),
     "dark": MessageLookupByLibrary.simpleMessage("Mörkt"),
     "deleteDownloadData": MessageLookupByLibrary.simpleMessage(
       "Ta bort från nedladdningar",
@@ -176,6 +204,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "disabled": MessageLookupByLibrary.simpleMessage("Inaktiverad"),
     "discover": MessageLookupByLibrary.simpleMessage("Upptäck"),
     "dismiss": MessageLookupByLibrary.simpleMessage("Avfärda"),
+    "done": MessageLookupByLibrary.simpleMessage("Redo"),
     "dontShowInfoAgain": MessageLookupByLibrary.simpleMessage(
       "Visa inte denna information igen",
     ),
@@ -234,6 +263,22 @@ class MessageLookup extends MessageLookupByLibrary {
     "forgottenFavorites": MessageLookupByLibrary.simpleMessage(
       "glömda favoriter",
     ),
+    "friendFallback": MessageLookupByLibrary.simpleMessage("Vän"),
+    "friendRequestAccepted": MessageLookupByLibrary.simpleMessage(
+      "Vänförfrågan accepteras",
+    ),
+    "friendRequestSent": MessageLookupByLibrary.simpleMessage(
+      "Vänförfrågan har skickats",
+    ),
+    "friends": MessageLookupByLibrary.simpleMessage("Vänner"),
+    "friendsLoginRequired": MessageLookupByLibrary.simpleMessage(
+      "Logga in för att hitta vänner.",
+    ),
+    "friendshipRemoved": MessageLookupByLibrary.simpleMessage(
+      "Vänskap borttagen",
+    ),
+    "genericAlbum": MessageLookupByLibrary.simpleMessage("Album"),
+    "genericError": MessageLookupByLibrary.simpleMessage("Misstag"),
     "genre_electronic": MessageLookupByLibrary.simpleMessage("Elektronik"),
     "genre_hiphop": MessageLookupByLibrary.simpleMessage("hip hop"),
     "genre_jazz": MessageLookupByLibrary.simpleMessage("Jazz"),
@@ -265,7 +310,17 @@ class MessageLookup extends MessageLookupByLibrary {
     "ignoreBatOptDes": MessageLookupByLibrary.simpleMessage(
       "Om du stöter på aviseringsproblem eller att uppspelningen stoppas p.g.a systemoptimering, aktivera det här alternativet",
     ),
+    "importedFromJossMusic": MessageLookupByLibrary.simpleMessage(
+      "Importerad från Joss Music Kotlin",
+    ),
+    "invalidServerResponse": MessageLookupByLibrary.simpleMessage(
+      "Ogiltigt serversvar.",
+    ),
+    "invalidSessionToken": MessageLookupByLibrary.simpleMessage(
+      "Sessionen innehåller inte en giltig token.",
+    ),
     "items": MessageLookupByLibrary.simpleMessage("föremål"),
+    "keepListening": MessageLookupByLibrary.simpleMessage("fortsätt lyssna"),
     "keepScreenOnWhilePlaying": MessageLookupByLibrary.simpleMessage(
       "Håll skärmen på under uppspelning",
     ),
@@ -282,6 +337,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "libSongs": MessageLookupByLibrary.simpleMessage("Låtar i Bibliotek"),
     "library": MessageLookupByLibrary.simpleMessage("Bibliotek"),
+    "libraryPlaylistDescription": MessageLookupByLibrary.simpleMessage(
+      "Bibliotekets spellista",
+    ),
     "light": MessageLookupByLibrary.simpleMessage("Ljust"),
     "link": MessageLookupByLibrary.simpleMessage("Länka"),
     "linkAlert": MessageLookupByLibrary.simpleMessage(
@@ -314,8 +372,57 @@ class MessageLookup extends MessageLookupByLibrary {
     "lyricsNotAvailable": MessageLookupByLibrary.simpleMessage(
       "Låttexten är inte tillgänglig!",
     ),
+    "manageCollaborators": MessageLookupByLibrary.simpleMessage(
+      "Hantera medarbetare (vänner)",
+    ),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
       "Se till att musiken spelar tillräckligt högt nära din mikrofon.",
+    ),
+    "migratedAlbum": MessageLookupByLibrary.simpleMessage("Migrerat album"),
+    "migratedLibrary": MessageLookupByLibrary.simpleMessage(
+      "Migrerade bibliotek",
+    ),
+    "migratedPlaylist": MessageLookupByLibrary.simpleMessage(
+      "Migrerad spellista",
+    ),
+    "migrationAlreadyRunning": MessageLookupByLibrary.simpleMessage(
+      "Det pågår redan en migrering.",
+    ),
+    "migrationAnalyzingLocal": MessageLookupByLibrary.simpleMessage(
+      "Analyserar det lokala biblioteket...",
+    ),
+    "migrationCheckingCloud": MessageLookupByLibrary.simpleMessage(
+      "Kontrollerar om EMusic Cloud redan har ett bibliotek...",
+    ),
+    "migrationCompleted": MessageLookupByLibrary.simpleMessage(
+      "Migreringen slutförd.",
+    ),
+    "migrationCreatingBackup": MessageLookupByLibrary.simpleMessage(
+      "Skapar en lokal säkerhetskopia innan molnet ansluts...",
+    ),
+    "migrationFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
+      "Migreringen misslyckades. Din lokala data har inte ändrats.",
+    ),
+    "migrationLoginRequired": MessageLookupByLibrary.simpleMessage(
+      "Logga in på Joss Red innan du migrerar.",
+    ),
+    "migrationPreparingCloud": MessageLookupByLibrary.simpleMessage(
+      "Förbereder migreringen i EMusic Cloud...",
+    ),
+    "migrationStartFailed": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud kunde inte starta migreringen.",
+    ),
+    "migrationUploadIncomplete": MessageLookupByLibrary.simpleMessage(
+      "Det gick inte att ladda upp all data. Vi behåller ditt lokala stöd.",
+    ),
+    "migrationUploadingData": MessageLookupByLibrary.simpleMessage(
+      "Laddar upp spellistor, favoriter och historik...",
+    ),
+    "migrationValidationFailed": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud kunde inte validera migreringen.",
+    ),
+    "migrationVerifyingIntegrity": MessageLookupByLibrary.simpleMessage(
+      "Verifierar integriteten i EMusic Cloud...",
     ),
     "migration_btn_select": MessageLookupByLibrary.simpleMessage(
       "Välj fil och importera",
@@ -370,6 +477,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Transparent synkronisering",
     ),
     "noBookmarks": MessageLookupByLibrary.simpleMessage("Inga bokmärken!"),
+    "noJossRedFriends": MessageLookupByLibrary.simpleMessage(
+      "Du har inga tillagda vänner på Joss Red.",
+    ),
     "noLibPlaylist": MessageLookupByLibrary.simpleMessage(
       "Inga spellistor i biblioteket!",
     ),
@@ -378,9 +488,13 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "noMatchesFound": MessageLookupByLibrary.simpleMessage("Inga matchningar"),
     "noOfflineSong": MessageLookupByLibrary.simpleMessage("Inga offlinelåtar!"),
+    "noSongsInCollection": MessageLookupByLibrary.simpleMessage(
+      "Det finns inga låtar i den här samlingen",
+    ),
     "nomatch": MessageLookupByLibrary.simpleMessage(
       "Inget resultat hittades för",
     ),
+    "notAuthenticated": MessageLookupByLibrary.simpleMessage("Ej autentiserad"),
     "notaSongVideo": MessageLookupByLibrary.simpleMessage(
       "Inte en låt/musikvideo!",
     ),
@@ -390,6 +504,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "password": MessageLookupByLibrary.simpleMessage("Lösenord"),
     "password_text": MessageLookupByLibrary.simpleMessage("Lösenord"),
+    "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage(
+      "Piped spellista",
+    ),
     "pipedplstSyncAlert": MessageLookupByLibrary.simpleMessage(
       "Piped spellista synkroniserad!",
     ),
@@ -407,6 +524,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "playlistBookmarkRemoveAlert": MessageLookupByLibrary.simpleMessage(
       "Spellista borttagen från bibliotek!",
+    ),
+    "playlistCollaboratorsTitle": MessageLookupByLibrary.simpleMessage(
+      "Spellistor",
     ),
     "playlistCreatedAlert": MessageLookupByLibrary.simpleMessage(
       "Spellista skapad!",
@@ -469,6 +589,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "results": MessageLookupByLibrary.simpleMessage("Resultat"),
     "retry": MessageLookupByLibrary.simpleMessage("Försök igen!"),
+    "save": MessageLookupByLibrary.simpleMessage("Hålla"),
     "scanning": MessageLookupByLibrary.simpleMessage("Söker..."),
     "search": MessageLookupByLibrary.simpleMessage("Sök"),
     "searchDes": MessageLookupByLibrary.simpleMessage(
@@ -483,6 +604,12 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "selectAuthInsMsg": MessageLookupByLibrary.simpleMessage(
       "Vänligen välj autentiseringsinstans!",
+    ),
+    "selectedFileNotFound": MessageLookupByLibrary.simpleMessage(
+      "Den valda filen hittades inte.",
+    ),
+    "sessionExpiredLoginAgain": MessageLookupByLibrary.simpleMessage(
+      "Din session har löpt ut. Logga in igen.",
     ),
     "setDiscoverContent": MessageLookupByLibrary.simpleMessage(
       "Innehåll som ska visas på Hem",
@@ -560,6 +687,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
       "Söker i Shazam-databasen efter matchningar...",
     ),
+    "similarToTitle": m1,
     "singles": MessageLookupByLibrary.simpleMessage("Singlar"),
     "skipSilence": MessageLookupByLibrary.simpleMessage("Hoppa över tystnad"),
     "skipSilenceDes": MessageLookupByLibrary.simpleMessage(
@@ -569,7 +697,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Sovtimer inställd",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Sovtimer"),
-    "slide_indicator": m1,
+    "slide_indicator": m2,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "Låten har lagts till i spellistan!",
     ),
@@ -590,10 +718,17 @@ class MessageLookup extends MessageLookupByLibrary {
       "Du kan inte ta bort den låt som spelas för närvarande",
     ),
     "songs": MessageLookupByLibrary.simpleMessage("Låtar"),
+    "songsImportedFromJossMusic": MessageLookupByLibrary.simpleMessage(
+      "Låtar importerade från Joss Music Kotlin",
+    ),
     "speedAndPitch": MessageLookupByLibrary.simpleMessage(
       "Hastighet och Pitch",
     ),
     "startRadio": MessageLookupByLibrary.simpleMessage("Starta radio"),
+    "startupScreen": MessageLookupByLibrary.simpleMessage("Öppna vid start"),
+    "startupScreenDescription": MessageLookupByLibrary.simpleMessage(
+      "Välj avsnittet som Estrella Music öppnar först",
+    ),
     "status": MessageLookupByLibrary.simpleMessage("Status"),
     "streamingQuality": MessageLookupByLibrary.simpleMessage(
       "Streamingkvalitet",
@@ -604,6 +739,62 @@ class MessageLookup extends MessageLookupByLibrary {
     "subscribers": MessageLookupByLibrary.simpleMessage("följare"),
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
       "Svep för att utforska alternativen ➔",
+    ),
+    "syncChangesConfirmed": m3,
+    "syncChangesSynced": m4,
+    "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
+      "Molnläge aktiverat. Laddar ner det befintliga biblioteket.",
+    ),
+    "syncCloudMigrationComplete": MessageLookupByLibrary.simpleMessage(
+      "Molnläge aktiverat. Migrerade bibliotek.",
+    ),
+    "syncCloudPending": MessageLookupByLibrary.simpleMessage(
+      "Molnläge aktivt. Väntar på synkronisering.",
+    ),
+    "syncDownloadFailed": MessageLookupByLibrary.simpleMessage(
+      "Det gick inte att ladda ned synkronisering.",
+    ),
+    "syncDownloading": MessageLookupByLibrary.simpleMessage(
+      "Laddar ned EMusic-ändringar...",
+    ),
+    "syncLibrarySynced": MessageLookupByLibrary.simpleMessage(
+      "Synkroniserat bibliotek.",
+    ),
+    "syncLibraryUpToDate": MessageLookupByLibrary.simpleMessage(
+      "Biblioteket uppdaterat.",
+    ),
+    "syncLocalChangesFirst": MessageLookupByLibrary.simpleMessage(
+      "Det finns nya lokala förändringar. De kommer att laddas upp före nedladdning.",
+    ),
+    "syncLocalDeviceOnly": MessageLookupByLibrary.simpleMessage(
+      "Din data sparas endast på den här enheten.",
+    ),
+    "syncLocalModeActive": MessageLookupByLibrary.simpleMessage(
+      "Lokalt läge aktivt",
+    ),
+    "syncOfflinePending": MessageLookupByLibrary.simpleMessage(
+      "Off-line. Ändringar väntar.",
+    ),
+    "syncOfflineRetry": MessageLookupByLibrary.simpleMessage(
+      "Off-line. Ändringar sparade för ett nytt försök.",
+    ),
+    "syncUnconfirmedRetry": MessageLookupByLibrary.simpleMessage(
+      "EMusic bekräftade inte alla ändringar. De kommer att prövas igen.",
+    ),
+    "syncUploadRetry": MessageLookupByLibrary.simpleMessage(
+      "Kunde inte resa sig. Det kommer att prövas igen senare.",
+    ),
+    "syncUploadSuccess": MessageLookupByLibrary.simpleMessage(
+      "Ändringarna har laddats upp korrekt.",
+    ),
+    "syncUploadSuccessWs": MessageLookupByLibrary.simpleMessage(
+      "Ändringar har laddats upp (WS).",
+    ),
+    "syncUploadWsRetry": MessageLookupByLibrary.simpleMessage(
+      "Kunde inte ladda upp med WS. Det kommer att prövas igen senare.",
+    ),
+    "syncUploading": MessageLookupByLibrary.simpleMessage(
+      "Laddar upp ändringar till EMusic...",
     ),
     "synced": MessageLookupByLibrary.simpleMessage("Synkad"),
     "syncedLyricsNotAvailable": MessageLookupByLibrary.simpleMessage(
@@ -616,7 +807,14 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "trending": MessageLookupByLibrary.simpleMessage("Trendar nu"),
     "unLink": MessageLookupByLibrary.simpleMessage("Avlänka"),
+    "untitledSong": MessageLookupByLibrary.simpleMessage("Namnlös låt"),
     "upNext": MessageLookupByLibrary.simpleMessage("Nästa"),
+    "userBlocked": MessageLookupByLibrary.simpleMessage("Blockerad användare"),
+    "userListMissing": MessageLookupByLibrary.simpleMessage(
+      "Svaret innehåller ingen lista över användare.",
+    ),
+    "userSearchFailed": m5,
+    "userUnblocked": MessageLookupByLibrary.simpleMessage("Olåst användare"),
     "username": MessageLookupByLibrary.simpleMessage("Användarnamn"),
     "video": MessageLookupByLibrary.simpleMessage("Video"),
     "videos": MessageLookupByLibrary.simpleMessage("Videoklipp"),

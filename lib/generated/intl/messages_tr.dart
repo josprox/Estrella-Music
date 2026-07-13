@@ -23,7 +23,15 @@ class MessageLookup extends MessageLookupByLibrary {
   static String m0(error) =>
       "Yeniden oluşturma sırasında bir hata oluştu: ${error}";
 
-  static String m1(current) => "Adım ${current} / 3";
+  static String m1(title) => "${title} benzeri";
+
+  static String m2(current) => "Adım ${current} / 3";
+
+  static String m3(count) => "${count} değişiklik yapıldı.";
+
+  static String m4(count) => "${count} senkronize edilmiş değişiklikler.";
+
+  static String m5(statusCode) => "Kullanıcılar aranamadı (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -190,6 +198,15 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "close": MessageLookupByLibrary.simpleMessage("Kapalı"),
     "closeApp": MessageLookupByLibrary.simpleMessage("Uygulamayı Kapat"),
+    "cloudLibraryFound": MessageLookupByLibrary.simpleMessage(
+      "Bulut kitaplığı bulundu.",
+    ),
+    "cloudLibraryFoundDeviceWillDownload": MessageLookupByLibrary.simpleMessage(
+      "Bir bulut kitaplığı bulundu. Bu cihaz, üzerine yazmadan indirecektir.",
+    ),
+    "cloudModeReadyOfflineCache": MessageLookupByLibrary.simpleMessage(
+      "Bulut modu hazır. Bu cihaz çevrimdışı bir önbellek olarak çalışacak.",
+    ),
     "cloud_b1": MessageLookupByLibrary.simpleMessage(
       "Joss Red hesabınızı kullanarak güvenli bir şekilde oturum açın.",
     ),
@@ -208,6 +225,15 @@ class MessageLookup extends MessageLookupByLibrary {
     "cloud_title": MessageLookupByLibrary.simpleMessage(
       "Bulut Modu (Önerilen)",
     ),
+    "collaborativePlaylistDescription": MessageLookupByLibrary.simpleMessage(
+      "Ortak Çalma Listesi",
+    ),
+    "collaboratorsInstruction": MessageLookupByLibrary.simpleMessage(
+      "Bu oynatma listesini görebilecek ve düzenleyebilecek arkadaşlarınızı seçin:",
+    ),
+    "collaboratorsUpdated": MessageLookupByLibrary.simpleMessage(
+      "Ortak çalışanlar doğru şekilde güncellendi.",
+    ),
     "communityplaylists": MessageLookupByLibrary.simpleMessage(
       "Topluluk Çalma Listeleri",
     ),
@@ -218,6 +244,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "customInsSelectMsg": MessageLookupByLibrary.simpleMessage(
       "Lütfen özel Instance\'ı seçin",
     ),
+    "dailyDiscover": MessageLookupByLibrary.simpleMessage("Günlük keşif"),
     "dark": MessageLookupByLibrary.simpleMessage("Koyu"),
     "deleteDownloadData": MessageLookupByLibrary.simpleMessage(
       "İndirilenlerden kaldır",
@@ -234,6 +261,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "disabled": MessageLookupByLibrary.simpleMessage("Devre dışı"),
     "discover": MessageLookupByLibrary.simpleMessage("Keşfet"),
     "dismiss": MessageLookupByLibrary.simpleMessage("Vazgeç"),
+    "done": MessageLookupByLibrary.simpleMessage("Hazır"),
     "dontShowInfoAgain": MessageLookupByLibrary.simpleMessage(
       "Bunu artık gösterme",
     ),
@@ -349,6 +377,22 @@ class MessageLookup extends MessageLookupByLibrary {
     "forgottenFavorites": MessageLookupByLibrary.simpleMessage(
       "unutulmuş favoriler",
     ),
+    "friendFallback": MessageLookupByLibrary.simpleMessage("Arkadaş"),
+    "friendRequestAccepted": MessageLookupByLibrary.simpleMessage(
+      "Arkadaşlık isteği kabul edildi",
+    ),
+    "friendRequestSent": MessageLookupByLibrary.simpleMessage(
+      "Arkadaşlık isteği gönderildi",
+    ),
+    "friends": MessageLookupByLibrary.simpleMessage("Arkadaşlar"),
+    "friendsLoginRequired": MessageLookupByLibrary.simpleMessage(
+      "Arkadaş bulmak için oturum açın.",
+    ),
+    "friendshipRemoved": MessageLookupByLibrary.simpleMessage(
+      "Arkadaşlık kaldırıldı",
+    ),
+    "genericAlbum": MessageLookupByLibrary.simpleMessage("Albüm"),
+    "genericError": MessageLookupByLibrary.simpleMessage("Hata"),
     "genre_electronic": MessageLookupByLibrary.simpleMessage("Elektronik"),
     "genre_hiphop": MessageLookupByLibrary.simpleMessage("hip hop"),
     "genre_jazz": MessageLookupByLibrary.simpleMessage("Caz"),
@@ -403,6 +447,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "importPlaylistDesc": MessageLookupByLibrary.simpleMessage(
       "Daha önce dışa aktarılmış bir çalma listesi JSON dosyasını seçin",
     ),
+    "importedFromJossMusic": MessageLookupByLibrary.simpleMessage(
+      "Joss Music Kotlin\'den içe aktarıldı",
+    ),
     "importingPlaylist": MessageLookupByLibrary.simpleMessage(
       "Çalma listesi içeri aktarılıyor...",
     ),
@@ -412,7 +459,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "invalidPlaylistFile": MessageLookupByLibrary.simpleMessage(
       "Geçersiz çalma listesi dosya yapısı",
     ),
+    "invalidServerResponse": MessageLookupByLibrary.simpleMessage(
+      "Geçersiz sunucu yanıtı.",
+    ),
+    "invalidSessionToken": MessageLookupByLibrary.simpleMessage(
+      "Oturum geçerli bir belirteç içermiyor.",
+    ),
     "items": MessageLookupByLibrary.simpleMessage("Öğeler"),
+    "keepListening": MessageLookupByLibrary.simpleMessage("dinlemeye devam et"),
     "keepScreenOnWhilePlaying": MessageLookupByLibrary.simpleMessage(
       "Müzik çalarken ekranı açık tut",
     ),
@@ -430,6 +484,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "libSongs": MessageLookupByLibrary.simpleMessage("Kitaplık Şarkıları"),
     "library": MessageLookupByLibrary.simpleMessage("Kitaplık"),
+    "libraryPlaylistDescription": MessageLookupByLibrary.simpleMessage(
+      "Kütüphane Çalma Listesi",
+    ),
     "light": MessageLookupByLibrary.simpleMessage("Aydınlık"),
     "link": MessageLookupByLibrary.simpleMessage("Bağla"),
     "linkAlert": MessageLookupByLibrary.simpleMessage("Başarı ile bağlandı!"),
@@ -471,8 +528,55 @@ class MessageLookup extends MessageLookupByLibrary {
     "lyricsNotAvailable": MessageLookupByLibrary.simpleMessage(
       "Şarkı sözleri mevcut değil!",
     ),
+    "manageCollaborators": MessageLookupByLibrary.simpleMessage(
+      "Ortak çalışanları (arkadaşlar) yönetin",
+    ),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
       "Müziğin mikrofonunuzun yakınında yeterince yüksek sesle çalındığından emin olun.",
+    ),
+    "migratedAlbum": MessageLookupByLibrary.simpleMessage("Taşınan albüm"),
+    "migratedLibrary": MessageLookupByLibrary.simpleMessage("Taşınan kitaplık"),
+    "migratedPlaylist": MessageLookupByLibrary.simpleMessage(
+      "Taşınan Oynatma Listesi",
+    ),
+    "migrationAlreadyRunning": MessageLookupByLibrary.simpleMessage(
+      "Halihazırda devam eden bir taşıma işlemi var.",
+    ),
+    "migrationAnalyzingLocal": MessageLookupByLibrary.simpleMessage(
+      "Yerel kütüphane analiz ediliyor...",
+    ),
+    "migrationCheckingCloud": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud\'un zaten bir kitaplığı olup olmadığı kontrol ediliyor...",
+    ),
+    "migrationCompleted": MessageLookupByLibrary.simpleMessage(
+      "Taşıma tamamlandı.",
+    ),
+    "migrationCreatingBackup": MessageLookupByLibrary.simpleMessage(
+      "Buluta bağlanmadan önce yerel bir yedekleme oluşturuluyor...",
+    ),
+    "migrationFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
+      "Taşıma başarısız oldu. Yerel verileriniz değiştirilmedi.",
+    ),
+    "migrationLoginRequired": MessageLookupByLibrary.simpleMessage(
+      "Geçiş yapmadan önce Joss Red\'de oturum açın.",
+    ),
+    "migrationPreparingCloud": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud\'da geçiş hazırlanıyor...",
+    ),
+    "migrationStartFailed": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud geçişi başlatamadı.",
+    ),
+    "migrationUploadIncomplete": MessageLookupByLibrary.simpleMessage(
+      "Tüm veriler yüklenemedi. Yerel desteğinizi sürdürüyoruz.",
+    ),
+    "migrationUploadingData": MessageLookupByLibrary.simpleMessage(
+      "Çalma listeleri, favoriler ve geçmiş yükleniyor...",
+    ),
+    "migrationValidationFailed": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud geçişi doğrulayamadı.",
+    ),
+    "migrationVerifyingIntegrity": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud\'da bütünlük doğrulanıyor...",
     ),
     "migration_btn_select": MessageLookupByLibrary.simpleMessage(
       "Dosyayı seçin ve içe aktarın",
@@ -530,6 +634,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Şeffaf Senkronizasyon",
     ),
     "noBookmarks": MessageLookupByLibrary.simpleMessage("Yer işaretleri yok!"),
+    "noJossRedFriends": MessageLookupByLibrary.simpleMessage(
+      "Joss Red\'de eklenmiş arkadaşın yok.",
+    ),
     "noLibPlaylist": MessageLookupByLibrary.simpleMessage(
       "Kitaplıkta hiç çalma listesi yok!",
     ),
@@ -540,7 +647,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "noOfflineSong": MessageLookupByLibrary.simpleMessage(
       "Çevrimdışı şarkı yok!",
     ),
+    "noSongsInCollection": MessageLookupByLibrary.simpleMessage(
+      "Bu koleksiyonda şarkı yok",
+    ),
     "nomatch": MessageLookupByLibrary.simpleMessage("Şunun için eşleşme yok,"),
+    "notAuthenticated": MessageLookupByLibrary.simpleMessage(
+      "Kimliği doğrulanmadı",
+    ),
     "notaSongVideo": MessageLookupByLibrary.simpleMessage(
       "Bu bir Şarkı/Müzik videosu değil!",
     ),
@@ -552,6 +665,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "password": MessageLookupByLibrary.simpleMessage("Parola"),
     "password_text": MessageLookupByLibrary.simpleMessage("Şifre"),
     "personalisation": MessageLookupByLibrary.simpleMessage("Kişiselleştirme"),
+    "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage(
+      "Borulu Çalma Listesi",
+    ),
     "pipedplstSyncAlert": MessageLookupByLibrary.simpleMessage(
       "Piped oynatma listesi senkronize edildi!",
     ),
@@ -586,6 +702,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "playlistBookmarkRemoveAlert": MessageLookupByLibrary.simpleMessage(
       "Çalma listesi kitaplıktan kaldırıldı!",
+    ),
+    "playlistCollaboratorsTitle": MessageLookupByLibrary.simpleMessage(
+      "Oynatma listesine katkıda bulunanlar",
     ),
     "playlistCreatedAlert": MessageLookupByLibrary.simpleMessage(
       "Çalma listesi oluşturuldu!",
@@ -701,6 +820,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "restoring": MessageLookupByLibrary.simpleMessage("Geri yükleniyor..."),
     "results": MessageLookupByLibrary.simpleMessage("Sonuç"),
     "retry": MessageLookupByLibrary.simpleMessage("Yeniden dene!"),
+    "save": MessageLookupByLibrary.simpleMessage("Kale"),
     "scanning": MessageLookupByLibrary.simpleMessage("Taranıyor..."),
     "search": MessageLookupByLibrary.simpleMessage("Ara"),
     "searchDes": MessageLookupByLibrary.simpleMessage(
@@ -718,6 +838,12 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "selectFile": MessageLookupByLibrary.simpleMessage("Dosya Seç"),
     "selectSongs": MessageLookupByLibrary.simpleMessage("Şarkıları seçin"),
+    "selectedFileNotFound": MessageLookupByLibrary.simpleMessage(
+      "Seçilen dosya bulunamadı.",
+    ),
+    "sessionExpiredLoginAgain": MessageLookupByLibrary.simpleMessage(
+      "Oturumunuzun süresi doldu. Tekrar oturum açın.",
+    ),
     "setDiscoverContent": MessageLookupByLibrary.simpleMessage(
       "Keşfet içeriğini seç",
     ),
@@ -795,6 +921,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Eşleşmeler için Shazam veritabanında arama yapılıyor...",
     ),
     "shuffleQueue": MessageLookupByLibrary.simpleMessage("Karma Sırası"),
+    "similarToTitle": m1,
     "singles": MessageLookupByLibrary.simpleMessage("Single\'lar"),
     "skipSilence": MessageLookupByLibrary.simpleMessage("Sessizliği atla"),
     "skipSilenceDes": MessageLookupByLibrary.simpleMessage(
@@ -804,7 +931,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Uyku zamanlayıcınız ayarlandı",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Uyku zamanlayıcısı"),
-    "slide_indicator": m1,
+    "slide_indicator": m2,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "Şarkı çalma listesine eklendi!",
     ),
@@ -833,9 +960,16 @@ class MessageLookup extends MessageLookupByLibrary {
       "Çalmakta olanı kaldıramazsınız",
     ),
     "songs": MessageLookupByLibrary.simpleMessage("Şarkılar"),
+    "songsImportedFromJossMusic": MessageLookupByLibrary.simpleMessage(
+      "Joss Music Kotlin\'den içe aktarılan şarkılar",
+    ),
     "speedAndPitch": MessageLookupByLibrary.simpleMessage("Hız ve Pitch"),
     "standard": MessageLookupByLibrary.simpleMessage("Standart"),
     "startRadio": MessageLookupByLibrary.simpleMessage("Radyo başlat"),
+    "startupScreen": MessageLookupByLibrary.simpleMessage("Başlangıçta aç"),
+    "startupScreenDescription": MessageLookupByLibrary.simpleMessage(
+      "Estrella Music\'in ilk açacağı bölümü seçin",
+    ),
     "status": MessageLookupByLibrary.simpleMessage("Durum"),
     "stopMusicOnTaskClear": MessageLookupByLibrary.simpleMessage(
       "Uygulamayı kapatma halinde müziği durdur",
@@ -850,6 +984,62 @@ class MessageLookup extends MessageLookupByLibrary {
     "subscribers": MessageLookupByLibrary.simpleMessage("Aboneler"),
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
       "Seçenekleri keşfetmek için kaydırın ➔",
+    ),
+    "syncChangesConfirmed": m3,
+    "syncChangesSynced": m4,
+    "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
+      "Bulut modu etkinleştirildi. Mevcut kitaplığın indirilmesi.",
+    ),
+    "syncCloudMigrationComplete": MessageLookupByLibrary.simpleMessage(
+      "Bulut modu etkinleştirildi. Taşınan kütüphane.",
+    ),
+    "syncCloudPending": MessageLookupByLibrary.simpleMessage(
+      "Bulut modu etkin. Senkronizasyon bekleniyor.",
+    ),
+    "syncDownloadFailed": MessageLookupByLibrary.simpleMessage(
+      "Senkronizasyon indirilemedi.",
+    ),
+    "syncDownloading": MessageLookupByLibrary.simpleMessage(
+      "EMusic değişiklikleri indiriliyor...",
+    ),
+    "syncLibrarySynced": MessageLookupByLibrary.simpleMessage(
+      "Senkronize kütüphane.",
+    ),
+    "syncLibraryUpToDate": MessageLookupByLibrary.simpleMessage(
+      "Kütüphane güncel.",
+    ),
+    "syncLocalChangesFirst": MessageLookupByLibrary.simpleMessage(
+      "Yeni yerel değişiklikler var. İndirmeden önce yüklenecekler.",
+    ),
+    "syncLocalDeviceOnly": MessageLookupByLibrary.simpleMessage(
+      "Verileriniz yalnızca bu cihazda tutuluyor.",
+    ),
+    "syncLocalModeActive": MessageLookupByLibrary.simpleMessage(
+      "Yerel mod etkin",
+    ),
+    "syncOfflinePending": MessageLookupByLibrary.simpleMessage(
+      "Çevrimdışı. Değişiklikler beklemede.",
+    ),
+    "syncOfflineRetry": MessageLookupByLibrary.simpleMessage(
+      "Çevrimdışı. Değişiklikler yeniden denenmek üzere kaydedildi.",
+    ),
+    "syncUnconfirmedRetry": MessageLookupByLibrary.simpleMessage(
+      "EMusic tüm değişiklikleri onaylamadı. Yeniden yargılanacaklar.",
+    ),
+    "syncUploadRetry": MessageLookupByLibrary.simpleMessage(
+      "Kalkamadım. Daha sonra tekrar denenecektir.",
+    ),
+    "syncUploadSuccess": MessageLookupByLibrary.simpleMessage(
+      "Değişiklikler doğru şekilde yüklendi.",
+    ),
+    "syncUploadSuccessWs": MessageLookupByLibrary.simpleMessage(
+      "Değişiklikler başarıyla yüklendi (WS).",
+    ),
+    "syncUploadWsRetry": MessageLookupByLibrary.simpleMessage(
+      "WS kullanılarak yüklenemedi. Daha sonra tekrar denenecektir.",
+    ),
+    "syncUploading": MessageLookupByLibrary.simpleMessage(
+      "Değişiklikler EMusic\'e yükleniyor...",
     ),
     "synced": MessageLookupByLibrary.simpleMessage("Senkron"),
     "syncedLyricsNotAvailable": MessageLookupByLibrary.simpleMessage(
@@ -866,9 +1056,18 @@ class MessageLookup extends MessageLookupByLibrary {
     "unlinkAlert": MessageLookupByLibrary.simpleMessage(
       "Bağlantı başarı ile kesildi!",
     ),
+    "untitledSong": MessageLookupByLibrary.simpleMessage("İsimsiz şarkı"),
     "upNext": MessageLookupByLibrary.simpleMessage("Sıradaki"),
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "URL algılandı, ilgili içeriği açmak/oynatmak için üzerine tıklayın",
+    ),
+    "userBlocked": MessageLookupByLibrary.simpleMessage("Kullanıcı engellendi"),
+    "userListMissing": MessageLookupByLibrary.simpleMessage(
+      "Yanıt, kullanıcıların listesini içermiyor.",
+    ),
+    "userSearchFailed": m5,
+    "userUnblocked": MessageLookupByLibrary.simpleMessage(
+      "Kilidi açılmış kullanıcı",
     ),
     "username": MessageLookupByLibrary.simpleMessage("Kullanıcı adı"),
     "video": MessageLookupByLibrary.simpleMessage("Video"),

@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:io';
 import 'package:audio_service/audio_service.dart';
 import 'package:flutter/material.dart';
@@ -21,17 +22,23 @@ import '/models/media_item_builder.dart';
 import '/models/playlist.dart';
 import 'package:harmonymusic/generated/l10n.dart';
 
+enum LibrarySongCollection { favorites, downloads, recent, migrated }
+
 class LibrarySongsController extends GetxController {
   late RxList<MediaItem> librarySongsList = RxList();
   final isSongFetched = false.obs;
+  final selectedCollection = LibrarySongCollection.downloads.obs;
+  final hasMigratedLibrary = false.obs;
   List<MediaItem> tempListContainer = [];
   SortWidgetController? sortWidgetController;
   final additionalOperationMode = OperationMode.none.obs;
+  final List<StreamSubscription<dynamic>> _collectionSubscriptions = [];
+  int _collectionLoadRevision = 0;
 
   @override
   void onInit() {
-    init();
     super.onInit();
+    init();
   }
 
   Future<void> init() async {
@@ -64,21 +71,93 @@ class LibrarySongsController extends GetxController {
       }
     }
 
-    librarySongsList.value = box.values
-        .map<MediaItem?>((item) => MediaItemBuilder.fromJson(item))
-        .whereType<MediaItem>()
-        .toList();
-
-    librarySongsList.addAll(SqliteStore.box("SongDownloads")
-        .values
-        .map<MediaItem?>((item) => MediaItemBuilder.fromJson(item))
-        .whereType<MediaItem>()
-        .toList());
+    await SqliteStore.openBox('LEGACY_LIBRARY');
+    hasMigratedLibrary.value =
+        SqliteStore.box('LEGACY_LIBRARY').values.isNotEmpty;
+    await _loadSelectedCollection();
+    _watchCollections();
     isSongFetched.value = true;
 
     //Remove deleted songs and expired songUrl from database
     startHouseKeeping();
   }
+
+  void _watchCollections() {
+    if (_collectionSubscriptions.isNotEmpty) return;
+    for (final boxName in const [
+      'LIBFAV',
+      'SongsCache',
+      'SongDownloads',
+      'LIBRP',
+      'LEGACY_LIBRARY',
+    ]) {
+      _collectionSubscriptions.add(
+        SqliteStore.box(boxName).watch().listen((_) {
+          hasMigratedLibrary.value =
+              SqliteStore.box('LEGACY_LIBRARY').values.isNotEmpty;
+          _loadSelectedCollection();
+        }),
+      );
+    }
+  }
+
+  Future<void> selectCollection(LibrarySongCollection collection) async {
+    if (collection == LibrarySongCollection.migrated &&
+        !hasMigratedLibrary.value) {
+      return;
+    }
+    if (additionalOperationMode.value != OperationMode.none) return;
+    if (Get.isRegistered<SortWidgetController>(tag: 'LibSongSort')) {
+      final sortController = Get.find<SortWidgetController>(tag: 'LibSongSort');
+      sortController.isSearchingEnabled.value = false;
+      sortController.textEditingController.clear();
+    }
+    selectedCollection.value = collection;
+    tempListContainer.clear();
+    await _loadSelectedCollection();
+  }
+
+  Future<void> refreshCollections() async {
+    await SqliteStore.openBox('LEGACY_LIBRARY');
+    hasMigratedLibrary.value =
+        SqliteStore.box('LEGACY_LIBRARY').values.isNotEmpty;
+    await _loadSelectedCollection();
+  }
+
+  Future<void> _loadSelectedCollection() async {
+    final collection = selectedCollection.value;
+    final revision = ++_collectionLoadRevision;
+    final boxNames = switch (collection) {
+      LibrarySongCollection.favorites => const ['LIBFAV'],
+      LibrarySongCollection.downloads => const ['SongsCache', 'SongDownloads'],
+      LibrarySongCollection.recent => const ['LIBRP'],
+      LibrarySongCollection.migrated => const ['LEGACY_LIBRARY'],
+    };
+
+    final songsById = <String, MediaItem>{};
+    for (final boxName in boxNames) {
+      final box = await SqliteStore.openBox(boxName);
+      for (final value in box.values) {
+        try {
+          final song = MediaItemBuilder.fromJson(value);
+          if (song.id.isNotEmpty) songsById[song.id] = song;
+        } catch (error, stack) {
+          debugPrint('Error parsing $boxName song: $error\n$stack');
+        }
+      }
+    }
+    if (revision == _collectionLoadRevision &&
+        collection == selectedCollection.value) {
+      librarySongsList.value = songsById.values.toList();
+    }
+  }
+
+  String get selectedCollectionBoxId => switch (selectedCollection.value) {
+        LibrarySongCollection.favorites => 'LIBFAV',
+        LibrarySongCollection.downloads => 'SongDownloads',
+        LibrarySongCollection.recent => 'LIBRP',
+        LibrarySongCollection.migrated => 'LEGACY_LIBRARY',
+      };
 
   void onSort(SortType sortType, bool isAscending) {
     final songlist = librarySongsList.toList();
@@ -207,6 +286,14 @@ class LibrarySongsController extends GetxController {
     additionalOperationTempList.clear();
     additionalOperationTempMap.clear();
   }
+
+  @override
+  void onClose() {
+    for (final subscription in _collectionSubscriptions) {
+      subscription.cancel();
+    }
+    super.onClose();
+  }
 }
 
 class LibraryPlaylistsController extends GetxController
@@ -214,29 +301,14 @@ class LibraryPlaylistsController extends GetxController
   late AnimationController controller;
 
   final playlistCreationMode = "local".obs;
-  static final initPlst = [
-    Playlist(
-        title: S.current.recentlyPlayed,
-        playlistId: "LIBRP",
-        thumbnailUrl: Playlist.thumbPlaceholderUrl,
-        isCloudPlaylist: false),
-    Playlist(
-        title: S.current.favorites,
-        playlistId: "LIBFAV",
-        thumbnailUrl: Playlist.thumbPlaceholderUrl,
-        isCloudPlaylist: false),
-    Playlist(
-        title: S.current.cachedOrOffline,
-        playlistId: "SongsCache",
-        thumbnailUrl: Playlist.thumbPlaceholderUrl,
-        isCloudPlaylist: false),
-    Playlist(
-        title: S.current.downloads,
-        playlistId: "SongDownloads",
-        thumbnailUrl: Playlist.thumbPlaceholderUrl,
-        isCloudPlaylist: false)
-  ];
-  late RxList<Playlist> libraryPlaylists = RxList(initPlst);
+  static const reservedCollectionIds = {
+    'LIBRP',
+    'LIBFAV',
+    'SongsCache',
+    'SongDownloads',
+    'LEGACY_LIBRARY',
+  };
+  late RxList<Playlist> libraryPlaylists = RxList();
   final isContentFetched = false.obs;
   final creationInProgress = false.obs;
   final textInputController = TextEditingController();
@@ -260,14 +332,17 @@ class LibraryPlaylistsController extends GetxController
     for (var item in box.values) {
       try {
         if (item is Map) {
-          loaded.add(Playlist.fromJson(Map<dynamic, dynamic>.from(item)));
+          final playlist = Playlist.fromJson(Map<dynamic, dynamic>.from(item));
+          if (!reservedCollectionIds.contains(playlist.playlistId)) {
+            loaded.add(playlist);
+          }
         }
       } catch (e, stack) {
         debugPrint("Error parsing playlist in refreshLib: $e\n$stack");
       }
     }
 
-    libraryPlaylists.value = [...initPlst, ...loaded];
+    libraryPlaylists.value = loaded;
 
     final appPrefsBox = SqliteStore.box("AppPrefs");
     if (appPrefsBox.containsKey("piped")) {
@@ -319,7 +394,7 @@ class LibraryPlaylistsController extends GetxController
           final plst = Playlist(
             title: playlist['name'],
             playlistId: playlist['id'],
-            description: "Piped Playlist",
+            description: S.current.pipedPlaylistDescription,
             thumbnailUrl: playlist['thumbnail'],
             isPipedPlaylist: true,
           );
@@ -382,7 +457,7 @@ class LibraryPlaylistsController extends GetxController
               thumbnailUrl: songItems != null
                   ? songItems[0].artUri.toString()
                   : Playlist.thumbPlaceholderUrl,
-              description: "Piped Playlist",
+              description: S.current.pipedPlaylistDescription,
               isCloudPlaylist: true,
               isPipedPlaylist: true);
         } else {
@@ -397,8 +472,9 @@ class LibraryPlaylistsController extends GetxController
             thumbnailUrl: songItems != null
                 ? songItems[0].artUri.toString()
                 : Playlist.thumbPlaceholderUrl,
-            description:
-                isCollaborative ? "Collaborative Playlist" : "Library Playlist",
+            description: isCollaborative
+                ? S.current.collaborativePlaylistDescription
+                : S.current.libraryPlaylistDescription,
             isCloudPlaylist: isCloudMode,
             isCollaborative: isCollaborative,
             collaborators: collaborators);
@@ -449,9 +525,7 @@ class LibraryPlaylistsController extends GetxController
 
   void onSort(SortType sortType, bool isAscending) {
     final playlists = libraryPlaylists.toList();
-    playlists.removeRange(0, 4);
     sortPlayLists(playlists, sortType, isAscending);
-    playlists.insertAll(0, initPlst);
     libraryPlaylists.value = playlists;
   }
 
@@ -550,7 +624,8 @@ class LibraryPlaylistsController extends GetxController
       importProgress.value = 0.7;
 
       // Save songs to playlist
-      final songsBox = await SqliteStore.openBox(sanitizeBoxName(newPlaylistId));
+      final songsBox =
+          await SqliteStore.openBox(sanitizeBoxName(newPlaylistId));
       final songsList = jsonData['songs'] as List;
 
       // Update progress as songs are added

@@ -614,14 +614,15 @@ class MyAudioHandler extends BaseAudioHandler with GetxServiceMixin {
           try {
             final currentSongId = (queue.value[currentIndex]).id;
             if (SqliteStore.box("SongsUrlCache").containsKey(currentSongId)) {
-              final songJson = SqliteStore.box("SongsUrlCache").get(currentSongId);
+              final songJson =
+                  SqliteStore.box("SongsUrlCache").get(currentSongId);
               _normalizeVolume((songJson)["highQualityAudio"]["loudnessDb"]);
               return;
             }
 
             if (SqliteStore.box("SongDownloads").containsKey(currentSongId)) {
-              final streamInfo =
-                  (SqliteStore.box("SongDownloads").get(currentSongId))["streamInfo"];
+              final streamInfo = (SqliteStore.box("SongDownloads")
+                  .get(currentSongId))["streamInfo"];
 
               _normalizeVolume(
                   streamInfo == null ? 0 : streamInfo[1]["loudnessDb"]);
@@ -826,7 +827,8 @@ class MyAudioHandler extends BaseAudioHandler with GetxServiceMixin {
         (await SqliteStore.openBox("SongsCache")).containsKey(songId)) {
       printINFO("Got Song from cachedbox ($songId)");
       // if contains stream Info
-      final streamInfo = SqliteStore.box("SongsCache").get(songId)["streamInfo"];
+      final streamInfo =
+          SqliteStore.box("SongsCache").get(songId)["streamInfo"];
       Audio? cacheAudioPlaceholder;
       if (streamInfo != null && streamInfo.isNotEmpty) {
         streamInfo[1]['url'] = "file://$_cacheDir/cachedSongs/$songId.mp3";
@@ -885,7 +887,8 @@ class MyAudioHandler extends BaseAudioHandler with GetxServiceMixin {
     } else {
       //check if song stream url is cached and allocate url accordingly
       final songsUrlCacheBox = SqliteStore.box("SongsUrlCache");
-      final qualityIndex = SqliteStore.box('AppPrefs').get('streamingQuality') ?? 1;
+      final qualityIndex =
+          SqliteStore.box('AppPrefs').get('streamingQuality') ?? 1;
       HMStreamingData? streamInfo;
       if (songsUrlCacheBox.containsKey(songId) && !generateNewUrl) {
         final streamInfoJson = songsUrlCacheBox.get(songId);
@@ -1051,12 +1054,12 @@ class MediaLibrary {
 
   Future<List<MediaItem>> getPlaylists() async {
     final box = await SqliteStore.openBox("LibraryPlaylists");
-    final playlists = [
-      ...LibraryPlaylistsController.initPlst.map((e) => e.toMediaItem()),
-      ...(box.values
-          .map((item) => Playlist.fromJson(item).toMediaItem())
-          .toList())
-    ];
+    final playlists = box.values
+        .map((item) => Playlist.fromJson(item))
+        .where((playlist) => !LibraryPlaylistsController.reservedCollectionIds
+            .contains(playlist.playlistId))
+        .map((playlist) => playlist.toMediaItem())
+        .toList();
     await box.close();
     return playlists;
   }

@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:harmonymusic/generated/l10n.dart';
 import 'package:harmonymusic/utils/helpers/helper.dart';
 
 class SyncHttpClient {
@@ -144,17 +145,16 @@ class SyncHttpClient {
         requestOptions: response.requestOptions,
         response: response,
         message: serverMessage ??
-            'No se pudo buscar usuarios (${response.statusCode})',
+            S.current.userSearchFailed(response.statusCode ?? 0),
       );
     }
     final data = response.data;
     if (data is! Map) {
-      throw const FormatException('Respuesta inválida del servidor');
+      throw FormatException(S.current.invalidServerResponse);
     }
     final users = data['data'] ?? data['users'];
     if (users is! List) {
-      throw const FormatException(
-          'La respuesta no contiene una lista de usuarios');
+      throw FormatException(S.current.userListMissing);
     }
     return users
         .whereType<Map>()
@@ -260,13 +260,14 @@ class SyncHttpClient {
       if (response.statusCode == 200 || response.statusCode == 201) {
         return {
           'success': true,
-          'message': response.data?['message'] ?? 'Solicitud enviada'
+          'message': response.data?['message'] ?? S.current.friendRequestSent
         };
       }
       return {
         'success': false,
-        'message':
-            response.data?['error'] ?? response.data?['message'] ?? 'Error'
+        'message': response.data?['error'] ??
+            response.data?['message'] ??
+            S.current.genericError
       };
     } catch (e) {
       if (e is DioException && e.response != null) {
@@ -293,13 +294,15 @@ class SyncHttpClient {
       if (response.statusCode == 200) {
         return {
           'success': true,
-          'message': response.data?['message'] ?? 'Solicitud aceptada'
+          'message':
+              response.data?['message'] ?? S.current.friendRequestAccepted
         };
       }
       return {
         'success': false,
-        'message':
-            response.data?['error'] ?? response.data?['message'] ?? 'Error'
+        'message': response.data?['error'] ??
+            response.data?['message'] ??
+            S.current.genericError
       };
     } catch (e) {
       if (e is DioException && e.response != null) {
@@ -326,13 +329,14 @@ class SyncHttpClient {
       if (response.statusCode == 200) {
         return {
           'success': true,
-          'message': response.data?['message'] ?? 'Amistad eliminada'
+          'message': response.data?['message'] ?? S.current.friendshipRemoved
         };
       }
       return {
         'success': false,
-        'message':
-            response.data?['error'] ?? response.data?['message'] ?? 'Error'
+        'message': response.data?['error'] ??
+            response.data?['message'] ??
+            S.current.genericError
       };
     } catch (e) {
       if (e is DioException && e.response != null) {
@@ -359,13 +363,14 @@ class SyncHttpClient {
       if (response.statusCode == 200) {
         return {
           'success': true,
-          'message': response.data?['message'] ?? 'Usuario bloqueado'
+          'message': response.data?['message'] ?? S.current.userBlocked
         };
       }
       return {
         'success': false,
-        'message':
-            response.data?['error'] ?? response.data?['message'] ?? 'Error'
+        'message': response.data?['error'] ??
+            response.data?['message'] ??
+            S.current.genericError
       };
     } catch (e) {
       if (e is DioException && e.response != null) {
@@ -392,13 +397,14 @@ class SyncHttpClient {
       if (response.statusCode == 200) {
         return {
           'success': true,
-          'message': response.data?['message'] ?? 'Usuario desbloqueado'
+          'message': response.data?['message'] ?? S.current.userUnblocked
         };
       }
       return {
         'success': false,
-        'message':
-            response.data?['error'] ?? response.data?['message'] ?? 'Error'
+        'message': response.data?['error'] ??
+            response.data?['message'] ??
+            S.current.genericError
       };
     } catch (e) {
       if (e is DioException && e.response != null) {

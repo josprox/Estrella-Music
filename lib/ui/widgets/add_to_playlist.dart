@@ -306,7 +306,7 @@ class AddToPlaylistController extends GetxController {
             .map((item) => Playlist(
                   title: item['name'],
                   playlistId: item['id'],
-                  description: "Piped Playlist",
+                  description: S.current.pipedPlaylistDescription,
                   thumbnailUrl: item['thumbnail'],
                   isPipedPlaylist: true,
                 ))

@@ -173,7 +173,8 @@ class SettingsScreen extends StatelessWidget {
               delegate: SliverChildListDelegate([
                 Card(
                   color: cs.surfaceContainerLow,
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)),
                   child: Column(
                     children: [
                       ListTile(
@@ -181,39 +182,51 @@ class SettingsScreen extends StatelessWidget {
                         subtitle: Text(S.current.settings_appearance_desc),
                         leading: Icon(Icons.palette_rounded, color: cs.primary),
                         trailing: const Icon(Icons.chevron_right_rounded),
-                        onTap: () => Get.to(() => const SettingsAppearanceScreen(), transition: Transition.rightToLeft),
+                        onTap: () => Get.to(
+                            () => const SettingsAppearanceScreen(),
+                            transition: Transition.rightToLeft),
                       ),
                       const Divider(height: 1, indent: 56),
                       ListTile(
                         title: Text(S.current.content),
                         subtitle: Text(S.current.settings_content_desc),
-                        leading: Icon(Icons.music_video_rounded, color: cs.primary),
+                        leading:
+                            Icon(Icons.music_video_rounded, color: cs.primary),
                         trailing: const Icon(Icons.chevron_right_rounded),
-                        onTap: () => Get.to(() => const SettingsContentScreen(), transition: Transition.rightToLeft),
+                        onTap: () => Get.to(() => const SettingsContentScreen(),
+                            transition: Transition.rightToLeft),
                       ),
                       const Divider(height: 1, indent: 56),
                       ListTile(
                         title: Text(S.current.musicAndPlayback),
                         subtitle: Text(S.current.settings_playback_desc),
-                        leading: Icon(Icons.music_note_rounded, color: cs.primary),
+                        leading:
+                            Icon(Icons.music_note_rounded, color: cs.primary),
                         trailing: const Icon(Icons.chevron_right_rounded),
-                        onTap: () => Get.to(() => const SettingsPlaybackScreen(), transition: Transition.rightToLeft),
+                        onTap: () => Get.to(
+                            () => const SettingsPlaybackScreen(),
+                            transition: Transition.rightToLeft),
                       ),
                       const Divider(height: 1, indent: 56),
                       ListTile(
                         title: Text(S.current.settings_downloads_desc),
                         subtitle: Text(S.current.settings_downloads_sub),
-                        leading: Icon(Icons.download_rounded, color: cs.primary),
+                        leading:
+                            Icon(Icons.download_rounded, color: cs.primary),
                         trailing: const Icon(Icons.chevron_right_rounded),
-                        onTap: () => Get.to(() => const SettingsDownloadsScreen(), transition: Transition.rightToLeft),
+                        onTap: () => Get.to(
+                            () => const SettingsDownloadsScreen(),
+                            transition: Transition.rightToLeft),
                       ),
                       const Divider(height: 1, indent: 56),
                       ListTile(
                         title: Text(S.current.settings_account_desc),
                         subtitle: Text(S.current.settings_account_sub),
-                        leading: Icon(Icons.cloud_sync_rounded, color: cs.primary),
+                        leading:
+                            Icon(Icons.cloud_sync_rounded, color: cs.primary),
                         trailing: const Icon(Icons.chevron_right_rounded),
-                        onTap: () => Get.to(() => const SettingsAccountScreen(), transition: Transition.rightToLeft),
+                        onTap: () => Get.to(() => const SettingsAccountScreen(),
+                            transition: Transition.rightToLeft),
                       ),
                       const Divider(height: 1, indent: 56),
                       ListTile(
@@ -221,7 +234,8 @@ class SettingsScreen extends StatelessWidget {
                         subtitle: Text(S.current.settings_about_sub),
                         leading: Icon(Icons.info_rounded, color: cs.primary),
                         trailing: const Icon(Icons.chevron_right_rounded),
-                        onTap: () => Get.to(() => const SettingsAboutScreen(), transition: Transition.rightToLeft),
+                        onTap: () => Get.to(() => const SettingsAboutScreen(),
+                            transition: Transition.rightToLeft),
                       ),
                     ],
                   ),
@@ -526,6 +540,25 @@ class SettingsContentScreen extends StatelessWidget {
         physics: const BouncingScrollPhysics(),
         children: [
           SettingsTile(
+            title: S.current.startupScreen,
+            subtitle: S.current.startupScreenDescription,
+            leadingIcon: Icons.start_rounded,
+            trailing: Obx(() => DropdownButton<int>(
+                  dropdownColor: cs.surfaceContainerHigh,
+                  underline: const SizedBox.shrink(),
+                  value: ctrl.startupTabIndex.value,
+                  items: [
+                    DropdownMenuItem(value: 0, child: Text(S.current.home)),
+                    DropdownMenuItem(value: 1, child: Text(S.current.songs)),
+                    DropdownMenuItem(value: 3, child: Text(S.current.albums)),
+                    DropdownMenuItem(value: 4, child: Text(S.current.artists)),
+                    DropdownMenuItem(
+                        value: 5, child: Text(S.current.playlists)),
+                  ],
+                  onChanged: ctrl.setStartupTab,
+                )),
+          ),
+          SettingsTile(
             title: S.current.setDiscoverContent,
             leadingIcon: Icons.explore_rounded,
             subtitle: null,
@@ -540,8 +573,8 @@ class SettingsContentScreen extends StatelessWidget {
                           : ctrl.discoverContentType.value == "TR"
                               ? S.current.trending
                               : S.current.basedOnLast,
-                  style: tt.bodySmall
-                      ?.copyWith(color: cs.primary, fontWeight: FontWeight.bold),
+                  style: tt.bodySmall?.copyWith(
+                      color: cs.primary, fontWeight: FontWeight.bold),
                 )),
           ),
           SettingsTile(
@@ -573,7 +606,8 @@ class SettingsContentScreen extends StatelessWidget {
             trailing: TextButton(
               onPressed: () {
                 if (ctrl.isLinkedWithPiped.isFalse) {
-                  showDialog(context: context, builder: (_) => const LinkPiped())
+                  showDialog(
+                          context: context, builder: (_) => const LinkPiped())
                       .whenComplete(() => Get.delete<PipedLinkedController>());
                 } else {
                   ctrl.unlinkPiped();
@@ -740,7 +774,8 @@ class SettingsPlaybackScreen extends StatelessWidget {
                         ? (_) => ctrl.enableIgnoringBatteryOptimizations()
                         : null,
                   ),
-                  subtitle: "${S.current.status}: ${ctrl.isIgnoringBatteryOptimizations.isTrue ? S.current.enabled : S.current.disabled}\n${S.current.ignoreBatOptDes}",
+                  subtitle:
+                      "${S.current.status}: ${ctrl.isIgnoringBatteryOptimizations.isTrue ? S.current.enabled : S.current.disabled}\n${S.current.ignoreBatOptDes}",
                 )),
         ],
       ),
@@ -760,7 +795,7 @@ class SettingsDownloadsScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: cs.surface,
       appBar: AppBar(
-        title: const Text('Descargas y Almacenamiento'),
+        title: Text(S.current.settings_downloads_desc),
         backgroundColor: cs.surface,
         foregroundColor: cs.onSurface,
         elevation: 0,
@@ -801,17 +836,24 @@ class SettingsDownloadsScreen extends StatelessWidget {
                 child: Text(S.current.reset,
                     style: const TextStyle(fontWeight: FontWeight.bold))),
           ),
-          if (GetPlatform.isAndroid && SqliteStore.box('AppPrefs').get('emusicCloudRequested', defaultValue: false) != true)
+          if (GetPlatform.isAndroid &&
+              SqliteStore.box('AppPrefs')
+                      .get('emusicCloudRequested', defaultValue: false) !=
+                  true)
             SettingsTile(
               title: S.current.exportDowloadedFiles,
               subtitle: S.current.exportDowloadedFilesDes,
               leadingIcon: Icons.ios_share_rounded,
               isThreeLine: true,
               onTap: () => showDialog(
-                      context: context, builder: (_) => const ExportFileDialog())
+                      context: context,
+                      builder: (_) => const ExportFileDialog())
                   .whenComplete(() => Get.delete<ExportFileDialogController>()),
             ),
-          if (GetPlatform.isAndroid && SqliteStore.box('AppPrefs').get('emusicCloudRequested', defaultValue: false) != true)
+          if (GetPlatform.isAndroid &&
+              SqliteStore.box('AppPrefs')
+                      .get('emusicCloudRequested', defaultValue: false) !=
+                  true)
             SettingsTile(
               title: S.current.exportedFileLocation,
               leadingIcon: Icons.drive_folder_upload_rounded,
@@ -885,10 +927,13 @@ class SettingsAccountScreen extends StatelessWidget {
             subtitle: S.current.settings_local_cloud_desc,
             leadingIcon: Icons.cloud_queue_rounded,
             onTap: () => showDialog(
-                context: context, builder: (_) => const CloudSyncStatusDialog()),
+                context: context,
+                builder: (_) => const CloudSyncStatusDialog()),
             trailing: const Icon(Icons.chevron_right_rounded),
           ),
-          if (SqliteStore.box('AppPrefs').get('emusicDataMode', defaultValue: 'local') == 'cloud')
+          if (SqliteStore.box('AppPrefs')
+                  .get('emusicDataMode', defaultValue: 'local') ==
+              'cloud')
             SettingsTile(
               title: S.current.settings_my_friends,
               subtitle: S.current.settings_my_friends_desc,
@@ -961,9 +1006,9 @@ class SettingsAccountScreen extends StatelessWidget {
             subtitle: S.current.backupSettingsAndPlaylistsDes,
             leadingIcon: Icons.backup_rounded,
             isThreeLine: true,
-            onTap: () =>
-                showDialog(context: context, builder: (_) => const BackupDialog())
-                    .whenComplete(() => Get.delete<BackupDialogController>()),
+            onTap: () => showDialog(
+                    context: context, builder: (_) => const BackupDialog())
+                .whenComplete(() => Get.delete<BackupDialogController>()),
           ),
           SettingsTile(
             title: S.current.restoreAppData,

@@ -5,6 +5,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/services/storage/sqlite_store.dart';
+import 'package:harmonymusic/generated/l10n.dart';
 
 import 'package:harmonymusic/models/playlist.dart';
 import 'package:harmonymusic/ui/screens/Library/library_controller.dart';
@@ -32,7 +33,7 @@ class SyncService extends GetxService {
 
   final isSyncing = false.obs;
   final isOnline = true.obs;
-  final lastStatusMessage = 'Modo local activo'.obs;
+  final lastStatusMessage = S.current.syncLocalModeActive.obs;
   Timer? _debounce;
   Timer? _retryTimer;
   bool _isApplyingRemoteChanges = false;
@@ -193,7 +194,8 @@ class SyncService extends GetxService {
   }
 
   bool get isCloudMode =>
-      SqliteStore.box('AppPrefs').get(_modeKey, defaultValue: 'local') == 'cloud';
+      SqliteStore.box('AppPrefs').get(_modeKey, defaultValue: 'local') ==
+      'cloud';
 
   String? get syncBaseUrl {
     final isDebugEnv = dotenv.env['DEBUG']?.toLowerCase() == 'true';
@@ -210,7 +212,7 @@ class SyncService extends GetxService {
   Future<void> enableCloudMode() async {
     if (isCloudMode) {
       await SqliteStore.box('AppPrefs').put(_pendingKey, true);
-      lastStatusMessage.value = 'Modo cloud activo. Sincronizacion pendiente.';
+      lastStatusMessage.value = S.current.syncCloudPending;
       triggerPush();
       return;
     }
@@ -229,8 +231,8 @@ class SyncService extends GetxService {
     await SqliteStore.box('AppPrefs').put('emusicCloudRequested', false);
     await SqliteStore.box('AppPrefs').put('emusicModeChoiceCompleted', true);
     lastStatusMessage.value = migrationResult.usedExistingCloud
-        ? 'Modo cloud activado. Descargando biblioteca existente.'
-        : 'Modo cloud activado. Biblioteca migrada.';
+        ? S.current.syncCloudDownloadingExisting
+        : S.current.syncCloudMigrationComplete;
 
     if (migrationResult.usedExistingCloud) {
       await Get.find<AppBackupService>().clearLocalMusicData();
@@ -244,8 +246,7 @@ class SyncService extends GetxService {
     await SqliteStore.box('AppPrefs').put(_pendingKey, false);
     await SqliteStore.box('AppPrefs').put('emusicCloudRequested', false);
     await SqliteStore.box('AppPrefs').put('emusicModeChoiceCompleted', true);
-    lastStatusMessage.value =
-        'Tus datos se mantienen solo en este dispositivo.';
+    lastStatusMessage.value = S.current.syncLocalDeviceOnly;
   }
 
   String _normalizedBaseUrl() {
@@ -445,7 +446,7 @@ class SyncService extends GetxService {
     final pullCompletion = Completer<void>();
     _pullCompletion = pullCompletion;
     final revisionAtStart = _localMutationRevision;
-    lastStatusMessage.value = 'Descargando cambios de EMusic...';
+    lastStatusMessage.value = S.current.syncDownloading;
 
     try {
       final token = await _authService.getAccessToken();
@@ -456,7 +457,7 @@ class SyncService extends GetxService {
           await _httpClient.pull(_normalizedBaseUrl(), token ?? "");
 
       if (responseData == null) {
-        lastStatusMessage.value = 'No se pudo descargar la sincronizacion.';
+        lastStatusMessage.value = S.current.syncDownloadFailed;
         return false;
       }
 
@@ -465,8 +466,7 @@ class SyncService extends GetxService {
       // coordinator.
       if (_localMutationRevision != revisionAtStart ||
           _hasPendingLocalChanges) {
-        lastStatusMessage.value =
-            'Hay cambios locales nuevos. Se subiran antes de descargar.';
+        lastStatusMessage.value = S.current.syncLocalChangesFirst;
         return false;
       }
 
@@ -528,11 +528,11 @@ class SyncService extends GetxService {
         _isApplyingRemoteChanges = false;
       }
       _refreshLibraryControllers();
-      lastStatusMessage.value = 'Biblioteca sincronizada.';
+      lastStatusMessage.value = S.current.syncLibrarySynced;
       return true;
     } catch (e, stack) {
       isOnline.value = false;
-      lastStatusMessage.value = 'Sin conexion. Los cambios quedan pendientes.';
+      lastStatusMessage.value = S.current.syncOfflinePending;
       printERROR('SyncService pull failed: $e\n$stack');
       return false;
     } finally {
@@ -576,8 +576,8 @@ class SyncService extends GetxService {
     }
     _refreshLibraryControllers();
     lastStatusMessage.value = changes.isEmpty
-        ? 'Biblioteca al dia.'
-        : '${changes.length} cambios sincronizados.';
+        ? S.current.syncLibraryUpToDate
+        : S.current.syncChangesSynced(changes.length);
     return true;
   }
 
@@ -646,7 +646,9 @@ class SyncService extends GetxService {
     if (operation == 'delete') {
       await playlists.delete(entityId);
       final boxName = sanitizeBoxName(entityId);
-      if (SqliteStore.isBoxOpen(boxName)) await SqliteStore.box(boxName).clear();
+      if (SqliteStore.isBoxOpen(boxName)) {
+        await SqliteStore.box(boxName).clear();
+      }
       return;
     }
     final tracks = payload.remove('tracks');
@@ -730,7 +732,7 @@ class SyncService extends GetxService {
     }
     isSyncing.value = true;
     _pushRequestedWhileSyncing = false;
-    lastStatusMessage.value = 'Subiendo cambios a EMusic...';
+    lastStatusMessage.value = S.current.syncUploading;
 
     try {
       final incrementalChanges = _musicDatabase.pendingChanges(_accountKey);
@@ -751,13 +753,12 @@ class SyncService extends GetxService {
           await _acknowledgePush(capturedPendingIds, capturedRevision);
           await SqliteStore.box('AppPrefs')
               .put(_lastSyncKey, DateTime.now().toIso8601String());
-          lastStatusMessage.value = 'Cambios subidos correctamente (WS).';
+          lastStatusMessage.value = S.current.syncUploadSuccessWs;
           return true;
         } else {
           await SqliteStore.box('AppPrefs').put(_pendingKey, true);
           await _queue.markRetryScheduled();
-          lastStatusMessage.value =
-              'No se pudo subir via WS. Se reintentara despues.';
+          lastStatusMessage.value = S.current.syncUploadWsRetry;
           return false;
         }
       }
@@ -770,20 +771,19 @@ class SyncService extends GetxService {
         await _acknowledgePush(capturedPendingIds, capturedRevision);
         await SqliteStore.box('AppPrefs')
             .put(_lastSyncKey, DateTime.now().toIso8601String());
-        lastStatusMessage.value = 'Cambios subidos correctamente.';
+        lastStatusMessage.value = S.current.syncUploadSuccess;
         return true;
       }
 
       await SqliteStore.box('AppPrefs').put(_pendingKey, true);
       await _queue.markRetryScheduled();
-      lastStatusMessage.value = 'No se pudo subir. Se reintentara despues.';
+      lastStatusMessage.value = S.current.syncUploadRetry;
       return false;
     } catch (e, stack) {
       isOnline.value = false;
       await SqliteStore.box('AppPrefs').put(_pendingKey, true);
       await _queue.markRetryScheduled();
-      lastStatusMessage.value =
-          'Sin conexion. Cambios guardados para reintento.';
+      lastStatusMessage.value = S.current.syncOfflineRetry;
       printERROR('SyncService push failed: $e\n$stack');
       return false;
     } finally {
@@ -815,8 +815,7 @@ class SyncService extends GetxService {
           : <String>{};
       if (!changeIds.every(accepted.contains)) {
         await _musicDatabase.markChangesForRetry(accountKey, changeIds);
-        lastStatusMessage.value =
-            'EMusic no confirmo todos los cambios. Se reintentaran.';
+        lastStatusMessage.value = S.current.syncUnconfirmedRetry;
         return false;
       }
       final serverVersion = _asInt(response['server_version']);
@@ -828,7 +827,8 @@ class SyncService extends GetxService {
       await _updatePendingFlag();
       await SqliteStore.box('AppPrefs')
           .put(_lastSyncKey, DateTime.now().toIso8601String());
-      lastStatusMessage.value = '${changeIds.length} cambios confirmados.';
+      lastStatusMessage.value =
+          S.current.syncChangesConfirmed(changeIds.length);
       return true;
     } catch (_) {
       await _musicDatabase.markChangesForRetry(accountKey, changeIds);
@@ -837,7 +837,8 @@ class SyncService extends GetxService {
   }
 
   bool get _hasPendingLocalChanges =>
-      SqliteStore.box('AppPrefs').get(_pendingKey, defaultValue: false) == true ||
+      SqliteStore.box('AppPrefs').get(_pendingKey, defaultValue: false) ==
+          true ||
       _queue.hasPendingChanges ||
       (isCloudMode && _musicDatabase.hasPendingChanges(_accountKey));
 
@@ -886,11 +887,11 @@ class SyncService extends GetxService {
 
   Future<List<Map<String, dynamic>>> searchUsers(String query) async {
     if (!_authService.isAuthenticated.value) {
-      throw StateError('Debes iniciar sesión para buscar amigos');
+      throw StateError(S.current.friendsLoginRequired);
     }
     final token = await _authService.getAccessToken();
     if (token == null || token.isEmpty) {
-      throw StateError('La sesión no contiene un token válido');
+      throw StateError(S.current.invalidSessionToken);
     }
     return _httpClient.searchUsers(
         _normalizedJossRedBaseUrl(), token, query.trim());
@@ -916,7 +917,7 @@ class SyncService extends GetxService {
 
   Future<Map<String, dynamic>> sendFriendRequest(int friendId) async {
     if (!_authService.isAuthenticated.value) {
-      return {'success': false, 'message': 'No autenticado'};
+      return {'success': false, 'message': S.current.notAuthenticated};
     }
     final token = await _authService.getAccessToken();
     return _httpClient.sendFriendRequest(
@@ -925,7 +926,7 @@ class SyncService extends GetxService {
 
   Future<Map<String, dynamic>> acceptFriendRequest(int friendId) async {
     if (!_authService.isAuthenticated.value) {
-      return {'success': false, 'message': 'No autenticado'};
+      return {'success': false, 'message': S.current.notAuthenticated};
     }
     final token = await _authService.getAccessToken();
     return _httpClient.acceptFriendRequest(
@@ -934,7 +935,7 @@ class SyncService extends GetxService {
 
   Future<Map<String, dynamic>> removeFriendship(int friendId) async {
     if (!_authService.isAuthenticated.value) {
-      return {'success': false, 'message': 'No autenticado'};
+      return {'success': false, 'message': S.current.notAuthenticated};
     }
     final token = await _authService.getAccessToken();
     return _httpClient.removeFriendship(
@@ -943,7 +944,7 @@ class SyncService extends GetxService {
 
   Future<Map<String, dynamic>> blockUser(int friendId) async {
     if (!_authService.isAuthenticated.value) {
-      return {'success': false, 'message': 'No autenticado'};
+      return {'success': false, 'message': S.current.notAuthenticated};
     }
     final token = await _authService.getAccessToken();
     return _httpClient.blockUser(
@@ -952,7 +953,7 @@ class SyncService extends GetxService {
 
   Future<Map<String, dynamic>> unblockUser(int friendId) async {
     if (!_authService.isAuthenticated.value) {
-      return {'success': false, 'message': 'No autenticado'};
+      return {'success': false, 'message': S.current.notAuthenticated};
     }
     final token = await _authService.getAccessToken();
     return _httpClient.unblockUser(
