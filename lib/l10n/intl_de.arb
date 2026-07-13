@@ -662,5 +662,8 @@
   "userUnblocked": "Entsperrter Benutzer",
   "artistsByTaste": "Ganz nach Ihrem Geschmack",
   "followedArtists": "gefolgt",
-  "recommendedArtists": "Empfohlen"
+  "recommendedArtists": "Empfohlen",
+  "albumsByTaste": "Ganz nach Ihrem Geschmack",
+  "savedAlbums": "Gespeichert",
+  "recommendedAlbums": "Empfohlen"
 }

@@ -100,6 +100,8 @@ class CatalogRecoveryService extends GetxService {
     required String title,
     String? artistName,
     String? albumName,
+    Duration? duration,
+    Set<String> excludeIds = const {},
   }) async {
     final query = [title, artistName, albumName]
         .where((value) => value != null && value.trim().isNotEmpty)
@@ -115,17 +117,22 @@ class CatalogRecoveryService extends GetxService {
     );
 
     return _pickBestCandidate(
-      candidates,
+      candidates.where((song) => !excludeIds.contains(song.id)).toList(),
       (song) {
         final titleScore = _textScore(song.title, title);
         final artistScore = (artistName == null || artistName.trim().isEmpty)
-            ? 0.0
+            ? 1.0
             : _textScore(song.artist ?? '', artistName);
         final albumScore = (albumName == null || albumName.trim().isEmpty)
-            ? 0.0
+            ? 1.0
             : _textScore(song.album ?? '', albumName);
-        return titleScore * 0.65 + artistScore * 0.25 + albumScore * 0.1;
+        final durationScore = _durationScore(song.duration, duration);
+        return titleScore * 0.6 +
+            artistScore * 0.3 +
+            albumScore * 0.05 +
+            durationScore * 0.05;
       },
+      minimumScore: 0.72,
     );
   }
 
@@ -259,9 +266,8 @@ class CatalogRecoveryService extends GetxService {
   }
 
   T? _pickBestCandidate<T>(
-    List<T> candidates,
-    double Function(T candidate) scorer,
-  ) {
+      List<T> candidates, double Function(T candidate) scorer,
+      {double minimumScore = 0.42}) {
     T? bestCandidate;
     var bestScore = 0.0;
 
@@ -273,7 +279,16 @@ class CatalogRecoveryService extends GetxService {
       }
     }
 
-    return bestScore >= 0.42 ? bestCandidate : null;
+    return bestScore >= minimumScore ? bestCandidate : null;
+  }
+
+  double _durationScore(Duration? candidate, Duration? expected) {
+    if (candidate == null || expected == null) return 1.0;
+    final difference = (candidate.inSeconds - expected.inSeconds).abs();
+    if (difference <= 2) return 1.0;
+    if (difference <= 5) return 0.75;
+    if (difference <= 10) return 0.35;
+    return 0.0;
   }
 
   double _textScore(String left, String right) {
@@ -329,8 +344,9 @@ class CatalogRecoveryService extends GetxService {
 
   Future<Set<String>> _collectContentBoxNames(String libraryBoxName) async {
     final wasOpen = SqliteStore.isBoxOpen(libraryBoxName);
-    final box =
-        wasOpen ? SqliteStore.box(libraryBoxName) : await SqliteStore.openBox(libraryBoxName);
+    final box = wasOpen
+        ? SqliteStore.box(libraryBoxName)
+        : await SqliteStore.openBox(libraryBoxName);
 
     final boxNames = box.keys
         .map((key) => key?.toString() ?? '')
@@ -350,18 +366,22 @@ class CatalogRecoveryService extends GetxService {
     required MediaItem recoveredSong,
   }) async {
     final wasOpen = SqliteStore.isBoxOpen(boxName);
-    final box = wasOpen ? SqliteStore.box(boxName) : await SqliteStore.openBox(boxName);
+    final box =
+        wasOpen ? SqliteStore.box(boxName) : await SqliteStore.openBox(boxName);
 
     for (final key in box.keys.toList()) {
       final value = box.get(key);
       if (value is Map && value['videoId'] == oldSong.id) {
-        await box.put(
-          key,
-          _mergeRecoveredSongJson(
-            existingJson: value,
-            recoveredSong: recoveredSong,
-          ),
+        final recoveredJson = _mergeRecoveredSongJson(
+          existingJson: value,
+          recoveredSong: recoveredSong,
         );
+        if (boxName == 'LIBFAV' && key.toString() == oldSong.id) {
+          await box.delete(key);
+          await box.put(recoveredSong.id, recoveredJson);
+        } else {
+          await box.put(key, recoveredJson);
+        }
       }
     }
 
@@ -428,8 +448,9 @@ class CatalogRecoveryService extends GetxService {
 
   Future<void> _deleteCachedSong(String songId) async {
     final wasOpen = SqliteStore.isBoxOpen('SongsCache');
-    final box =
-        wasOpen ? SqliteStore.box('SongsCache') : await SqliteStore.openBox('SongsCache');
+    final box = wasOpen
+        ? SqliteStore.box('SongsCache')
+        : await SqliteStore.openBox('SongsCache');
     await box.delete(songId);
     if (!wasOpen && box.isOpen) {
       await box.close();

@@ -578,5 +578,8 @@
   "userUnblocked": "Ontgrendelde gebruiker",
   "artistsByTaste": "Volgens jouw smaak",
   "followedArtists": "gevolgd",
-  "recommendedArtists": "Aanbevolen"
+  "recommendedArtists": "Aanbevolen",
+  "albumsByTaste": "Volgens jouw smaak",
+  "savedAlbums": "Opgeslagen",
+  "recommendedAlbums": "Aanbevolen"
 }

@@ -69,6 +69,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "¡Marcador de álbum eliminado!",
     ),
     "albums": MessageLookupByLibrary.simpleMessage("Álbumes"),
+    "albumsByTaste": MessageLookupByLibrary.simpleMessage("Según tus gustos"),
     "allFieldsReqMsg": MessageLookupByLibrary.simpleMessage(
       "Todos los campos son obligatorios",
     ),
@@ -928,6 +929,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "recommend_cloud": MessageLookupByLibrary.simpleMessage(
       "Te recomendamos activar el Modo Cloud para una experiencia Spotify-like: sincronización en tiempo real entre todos tus dispositivos y respaldo automático sin que tengas que hacer nada.",
     ),
+    "recommendedAlbums": MessageLookupByLibrary.simpleMessage("Recomendados"),
     "recommendedArtists": MessageLookupByLibrary.simpleMessage("Recomendados"),
     "removeFromLib": MessageLookupByLibrary.simpleMessage(
       "Eliminar de las canciones de la biblioteca",
@@ -992,6 +994,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "results": MessageLookupByLibrary.simpleMessage("Resultados"),
     "retry": MessageLookupByLibrary.simpleMessage("¡Reintentar!"),
     "save": MessageLookupByLibrary.simpleMessage("Guardar"),
+    "savedAlbums": MessageLookupByLibrary.simpleMessage("Guardados"),
     "scanning": MessageLookupByLibrary.simpleMessage("Escaneando..."),
     "search": MessageLookupByLibrary.simpleMessage("Buscar"),
     "searchDes": MessageLookupByLibrary.simpleMessage(

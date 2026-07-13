@@ -666,5 +666,8 @@
   "userUnblocked": "ロック解除されたユーザー",
   "artistsByTaste": "あなたの好みに合わせて",
   "followedArtists": "フォローしました",
-  "recommendedArtists": "推奨"
+  "recommendedArtists": "推奨",
+  "albumsByTaste": "あなたの好みに合わせて",
+  "savedAlbums": "保存されました",
+  "recommendedAlbums": "推奨"
 }

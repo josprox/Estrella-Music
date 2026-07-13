@@ -48,6 +48,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "アルバムのブックマークを解除しました！",
     ),
     "albums": MessageLookupByLibrary.simpleMessage("アルバム"),
+    "albumsByTaste": MessageLookupByLibrary.simpleMessage("あなたの好みに合わせて"),
     "allFieldsReqMsg": MessageLookupByLibrary.simpleMessage("入力欄を埋めてください"),
     "androidBackupWarning": MessageLookupByLibrary.simpleMessage(
       "未検査: 60ファイル以上ダウンロードした後にチェックして選択すると、大量にメモリを使用し、スマホまたはアプリが落ちることがあります。自己責任で行ってください。",
@@ -63,6 +64,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "説明が利用できません！",
     ),
     "artists": MessageLookupByLibrary.simpleMessage("アーティスト"),
+    "artistsByTaste": MessageLookupByLibrary.simpleMessage("あなたの好みに合わせて"),
     "audioCodec": MessageLookupByLibrary.simpleMessage("音声コーデック"),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "アセプトのユーザーミスダトス...",
@@ -293,6 +295,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "featuredplaylists": MessageLookupByLibrary.simpleMessage("おすすめの再生リスト"),
     "fileNotFound": MessageLookupByLibrary.simpleMessage("ファイルが見つかりません"),
     "follow": MessageLookupByLibrary.simpleMessage("続く"),
+    "followedArtists": MessageLookupByLibrary.simpleMessage("フォローしました"),
     "following": MessageLookupByLibrary.simpleMessage("続く"),
     "for1": MessageLookupByLibrary.simpleMessage("語句"),
     "forgottenFavorites": MessageLookupByLibrary.simpleMessage("忘れられたお気に入り"),
@@ -609,6 +612,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "recommend_cloud": MessageLookupByLibrary.simpleMessage(
       "Spotify のようなエクスペリエンスを得るには、クラウド モードを有効にすることをお勧めします。つまり、何もしなくてもすべてのデバイス間のリアルタイム同期と自動バックアップが可能になります。",
     ),
+    "recommendedAlbums": MessageLookupByLibrary.simpleMessage("推奨"),
+    "recommendedArtists": MessageLookupByLibrary.simpleMessage("推奨"),
     "removeFromLib": MessageLookupByLibrary.simpleMessage("曲のライブラリから削除"),
     "removeFromPlaylist": MessageLookupByLibrary.simpleMessage("再生リストから削除"),
     "removeFromQueue": MessageLookupByLibrary.simpleMessage("キューから削除"),
@@ -648,6 +653,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "results": MessageLookupByLibrary.simpleMessage("結果"),
     "retry": MessageLookupByLibrary.simpleMessage("再試行！"),
     "save": MessageLookupByLibrary.simpleMessage("保つ"),
+    "savedAlbums": MessageLookupByLibrary.simpleMessage("保存されました"),
     "scanning": MessageLookupByLibrary.simpleMessage("スキャン中..."),
     "search": MessageLookupByLibrary.simpleMessage("検索"),
     "searchDes": MessageLookupByLibrary.simpleMessage("曲、再生リスト、アルバム、アーティスト"),

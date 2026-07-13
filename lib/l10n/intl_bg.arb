@@ -667,5 +667,8 @@
   "userUnblocked": "Отключен потребител",
   "artistsByTaste": "Според вашите вкусове",
   "followedArtists": "последван",
-  "recommendedArtists": "Препоръчва се"
+  "recommendedArtists": "Препоръчва се",
+  "albumsByTaste": "Според вашите вкусове",
+  "savedAlbums": "Запазено",
+  "recommendedAlbums": "Препоръчва се"
 }

@@ -558,5 +558,8 @@
   "userUnblocked": "Olåst användare",
   "artistsByTaste": "Enligt din smak",
   "followedArtists": "följde",
-  "recommendedArtists": "Rekommenderad"
+  "recommendedArtists": "Rekommenderad",
+  "albumsByTaste": "Enligt din smak",
+  "savedAlbums": "Sparad",
+  "recommendedAlbums": "Rekommenderad"
 }

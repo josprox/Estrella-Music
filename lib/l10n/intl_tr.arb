@@ -667,5 +667,8 @@
   "userUnblocked": "Kilidi açılmış kullanıcı",
   "artistsByTaste": "Zevklerinize göre",
   "followedArtists": "takip edildi",
-  "recommendedArtists": "Tavsiye edilen"
+  "recommendedArtists": "Tavsiye edilen",
+  "albumsByTaste": "Zevklerinize göre",
+  "savedAlbums": "Kaydedildi",
+  "recommendedAlbums": "Tavsiye edilen"
 }

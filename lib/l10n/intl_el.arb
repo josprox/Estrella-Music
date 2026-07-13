@@ -397,5 +397,8 @@
   "userUnblocked": "Ξεκλείδωτος χρήστης",
   "artistsByTaste": "Σύμφωνα με τα γούστα σας",
   "followedArtists": "ακολούθησε",
-  "recommendedArtists": "Συνιστάται"
+  "recommendedArtists": "Συνιστάται",
+  "albumsByTaste": "Σύμφωνα με τα γούστα σας",
+  "savedAlbums": "Αποθηκεύτηκε",
+  "recommendedAlbums": "Συνιστάται"
 }

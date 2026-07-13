@@ -55,6 +55,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Закладку альбому видалено!",
     ),
     "albums": MessageLookupByLibrary.simpleMessage("Альбоми"),
+    "albumsByTaste": MessageLookupByLibrary.simpleMessage(
+      "Відповідно до ваших смаків",
+    ),
     "allFieldsReqMsg": MessageLookupByLibrary.simpleMessage(
       "Усі поля обов’язкові",
     ),
@@ -74,6 +77,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Опис недоступний!",
     ),
     "artists": MessageLookupByLibrary.simpleMessage("Виконавці"),
+    "artistsByTaste": MessageLookupByLibrary.simpleMessage(
+      "Відповідно до ваших смаків",
+    ),
     "audioCodec": MessageLookupByLibrary.simpleMessage("Аудіокодек"),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Acepto usar mis datos...",
@@ -376,6 +382,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "fileNotFound": MessageLookupByLibrary.simpleMessage("Файл не знайдено"),
     "follow": MessageLookupByLibrary.simpleMessage("Продовжити"),
+    "followedArtists": MessageLookupByLibrary.simpleMessage("слідував"),
     "following": MessageLookupByLibrary.simpleMessage("Слідую"),
     "for1": MessageLookupByLibrary.simpleMessage("для"),
     "forgottenFavorites": MessageLookupByLibrary.simpleMessage(
@@ -776,6 +783,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "recommend_cloud": MessageLookupByLibrary.simpleMessage(
       "Ми рекомендуємо активувати хмарний режим для роботи, подібної до Spotify: синхронізація в реальному часі між усіма вашими пристроями та автоматичне резервне копіювання без необхідності будь-яких дій.",
     ),
+    "recommendedAlbums": MessageLookupByLibrary.simpleMessage("Рекомендовано"),
+    "recommendedArtists": MessageLookupByLibrary.simpleMessage("Рекомендовано"),
     "removeFromLib": MessageLookupByLibrary.simpleMessage(
       "Вилучити з бібліотеки пісні",
     ),
@@ -833,6 +842,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "results": MessageLookupByLibrary.simpleMessage("Результати"),
     "retry": MessageLookupByLibrary.simpleMessage("Повторити!"),
     "save": MessageLookupByLibrary.simpleMessage("Тримайте"),
+    "savedAlbums": MessageLookupByLibrary.simpleMessage("Збережено"),
     "scanning": MessageLookupByLibrary.simpleMessage("Сканування..."),
     "search": MessageLookupByLibrary.simpleMessage("Пошук"),
     "searchDes": MessageLookupByLibrary.simpleMessage(

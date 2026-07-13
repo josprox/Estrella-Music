@@ -55,6 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Penanda album dihapus!",
     ),
     "albums": MessageLookupByLibrary.simpleMessage("Album"),
+    "albumsByTaste": MessageLookupByLibrary.simpleMessage("Sesuai selera Anda"),
     "allFieldsReqMsg": MessageLookupByLibrary.simpleMessage(
       "Semua bidang wajib diisi",
     ),
@@ -72,6 +73,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Deskripsi tidak tersedia!",
     ),
     "artists": MessageLookupByLibrary.simpleMessage("Artis"),
+    "artistsByTaste": MessageLookupByLibrary.simpleMessage(
+      "Sesuai selera Anda",
+    ),
     "audioCodec": MessageLookupByLibrary.simpleMessage("Codec Audio"),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Terima penggunaan data yang salah...",
@@ -356,6 +360,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "File tidak ditemukan",
     ),
     "follow": MessageLookupByLibrary.simpleMessage("Melanjutkan"),
+    "followedArtists": MessageLookupByLibrary.simpleMessage("diikuti"),
     "following": MessageLookupByLibrary.simpleMessage("Mengikuti"),
     "for1": MessageLookupByLibrary.simpleMessage("Untuk"),
     "forgottenFavorites": MessageLookupByLibrary.simpleMessage(
@@ -757,6 +762,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "recommend_cloud": MessageLookupByLibrary.simpleMessage(
       "Kami merekomendasikan untuk mengaktifkan Mode Cloud untuk pengalaman seperti Spotify: sinkronisasi waktu nyata antara semua perangkat Anda dan pencadangan otomatis tanpa Anda harus melakukan apa pun.",
     ),
+    "recommendedAlbums": MessageLookupByLibrary.simpleMessage(
+      "Direkomendasikan",
+    ),
+    "recommendedArtists": MessageLookupByLibrary.simpleMessage(
+      "Direkomendasikan",
+    ),
     "removeFromLib": MessageLookupByLibrary.simpleMessage(
       "Hapus dari Pustaka Lagu",
     ),
@@ -814,6 +825,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "results": MessageLookupByLibrary.simpleMessage("Hasil"),
     "retry": MessageLookupByLibrary.simpleMessage("Coba Lagi!"),
     "save": MessageLookupByLibrary.simpleMessage("Menyimpan"),
+    "savedAlbums": MessageLookupByLibrary.simpleMessage("Disimpan"),
     "scanning": MessageLookupByLibrary.simpleMessage("Memindai..."),
     "search": MessageLookupByLibrary.simpleMessage("Cari"),
     "searchDes": MessageLookupByLibrary.simpleMessage(

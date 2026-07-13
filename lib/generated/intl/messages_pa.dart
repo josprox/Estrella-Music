@@ -54,6 +54,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "ਐਲਬਮ ਬੁੱਕਮਾਰਕ ਹਟਾਇਆ ਗਿਆ!",
     ),
     "albums": MessageLookupByLibrary.simpleMessage("ਐਲਬਮ"),
+    "albumsByTaste": MessageLookupByLibrary.simpleMessage("ਆਪਣੇ ਸੁਆਦ ਅਨੁਸਾਰ"),
     "allFieldsReqMsg": MessageLookupByLibrary.simpleMessage(
       "ਸਾਰੇ ਖੇਤਰ ਲੋੜੀਂਦੇ ਹਨ",
     ),
@@ -71,6 +72,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "ਵੇਰਵਾ ਉਪਲੱਬਧ ਨਹੀਂ ਹੈ!",
     ),
     "artists": MessageLookupByLibrary.simpleMessage("ਕਲਾਕਾਰ"),
+    "artistsByTaste": MessageLookupByLibrary.simpleMessage("ਆਪਣੇ ਸੁਆਦ ਅਨੁਸਾਰ"),
     "audioCodec": MessageLookupByLibrary.simpleMessage("ਆਡੀਓ ਕੋਡੇਕ"),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "ਗਲਤ ਡੇਟਾ ਨੂੰ ਸਵੀਕਾਰ ਕਰੋ...",
@@ -322,6 +324,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "ਫੀਚਰਡ ਪਲੇਲਿਸਟਾਂ",
     ),
     "follow": MessageLookupByLibrary.simpleMessage("ਜਾਰੀ ਰੱਖੋ"),
+    "followedArtists": MessageLookupByLibrary.simpleMessage("ਦਾ ਅਨੁਸਰਣ ਕੀਤਾ"),
     "following": MessageLookupByLibrary.simpleMessage("ਅਨੁਸਰਣ ਕਰ ਰਹੇ ਹਨ"),
     "for1": MessageLookupByLibrary.simpleMessage("ਦੇ ਲਈ"),
     "forgottenFavorites": MessageLookupByLibrary.simpleMessage(
@@ -660,6 +663,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "recommend_cloud": MessageLookupByLibrary.simpleMessage(
       "ਅਸੀਂ ਇੱਕ Spotify-ਵਰਗੇ ਅਨੁਭਵ ਲਈ ਕਲਾਉਡ ਮੋਡ ਨੂੰ ਸਰਗਰਮ ਕਰਨ ਦੀ ਸਿਫ਼ਾਰਿਸ਼ ਕਰਦੇ ਹਾਂ: ਤੁਹਾਡੀਆਂ ਸਾਰੀਆਂ ਡਿਵਾਈਸਾਂ ਵਿਚਕਾਰ ਰੀਅਲ-ਟਾਈਮ ਸਿੰਕ੍ਰੋਨਾਈਜ਼ੇਸ਼ਨ ਅਤੇ ਤੁਹਾਨੂੰ ਕੁਝ ਕੀਤੇ ਬਿਨਾਂ ਆਟੋਮੈਟਿਕ ਬੈਕਅੱਪ।",
     ),
+    "recommendedAlbums": MessageLookupByLibrary.simpleMessage("ਸਿਫ਼ਾਰਿਸ਼ ਕੀਤੀ"),
+    "recommendedArtists": MessageLookupByLibrary.simpleMessage(
+      "ਸਿਫ਼ਾਰਿਸ਼ ਕੀਤੀ",
+    ),
     "removeFromLib": MessageLookupByLibrary.simpleMessage(
       "ਲਾਇਬ੍ਰੇਰੀ ਗੀਤਾਂ ਤੋਂ ਹਟਾਓ",
     ),
@@ -708,6 +715,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "results": MessageLookupByLibrary.simpleMessage("ਨਤੀਜੇ"),
     "retry": MessageLookupByLibrary.simpleMessage("ਮੁੜ-ਕੋਸ਼ਿਸ਼ ਕਰੋ!"),
     "save": MessageLookupByLibrary.simpleMessage("ਰੱਖੋ"),
+    "savedAlbums": MessageLookupByLibrary.simpleMessage("ਸੰਭਾਲਿਆ"),
     "scanning": MessageLookupByLibrary.simpleMessage("ਸਕੈਨ ਹੋ ਰਿਹਾ..."),
     "search": MessageLookupByLibrary.simpleMessage("ਖੋਜ ਕਰੋ"),
     "searchDes": MessageLookupByLibrary.simpleMessage(

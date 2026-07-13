@@ -662,5 +662,8 @@
   "userUnblocked": "Odblokowany użytkownik",
   "artistsByTaste": "Według Twoich upodobań",
   "followedArtists": "podążał",
-  "recommendedArtists": "Zalecony"
+  "recommendedArtists": "Zalecony",
+  "albumsByTaste": "Według Twoich upodobań",
+  "savedAlbums": "Zapisano",
+  "recommendedAlbums": "Zalecony"
 }

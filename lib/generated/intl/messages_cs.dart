@@ -54,6 +54,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Album odstraněno ze záložek!",
     ),
     "albums": MessageLookupByLibrary.simpleMessage("Alba"),
+    "albumsByTaste": MessageLookupByLibrary.simpleMessage("Podle vašich chutí"),
     "allFieldsReqMsg": MessageLookupByLibrary.simpleMessage(
       "Všechna pole jsou povinná",
     ),
@@ -71,6 +72,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Popis není k dispozici!",
     ),
     "artists": MessageLookupByLibrary.simpleMessage("Interpreti"),
+    "artistsByTaste": MessageLookupByLibrary.simpleMessage(
+      "Podle vašich chutí",
+    ),
     "audioCodec": MessageLookupByLibrary.simpleMessage("Audio kodek"),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Přijímáme nesprávné údaje...",
@@ -367,6 +371,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Soubor nebyl nalezen",
     ),
     "follow": MessageLookupByLibrary.simpleMessage("Pokračovat"),
+    "followedArtists": MessageLookupByLibrary.simpleMessage("následoval"),
     "following": MessageLookupByLibrary.simpleMessage("Následující"),
     "for1": MessageLookupByLibrary.simpleMessage("pro"),
     "forgottenFavorites": MessageLookupByLibrary.simpleMessage(
@@ -765,6 +770,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "recommend_cloud": MessageLookupByLibrary.simpleMessage(
       "Pro zážitek podobný Spotify doporučujeme aktivovat Cloud Mode: synchronizace mezi všemi vašimi zařízeními v reálném čase a automatické zálohování, aniž byste museli cokoli dělat.",
     ),
+    "recommendedAlbums": MessageLookupByLibrary.simpleMessage("Doporučeno"),
+    "recommendedArtists": MessageLookupByLibrary.simpleMessage("Doporučeno"),
     "removeFromLib": MessageLookupByLibrary.simpleMessage(
       "Odebrat z knihovny skladeb",
     ),
@@ -824,6 +831,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "results": MessageLookupByLibrary.simpleMessage("Výsledky"),
     "retry": MessageLookupByLibrary.simpleMessage("Zkuste to znovu!"),
     "save": MessageLookupByLibrary.simpleMessage("Nechat"),
+    "savedAlbums": MessageLookupByLibrary.simpleMessage("Uloženo"),
     "scanning": MessageLookupByLibrary.simpleMessage("Skenování..."),
     "search": MessageLookupByLibrary.simpleMessage("Hledat"),
     "searchDes": MessageLookupByLibrary.simpleMessage(

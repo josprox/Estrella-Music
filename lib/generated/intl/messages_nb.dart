@@ -36,6 +36,8 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "about": MessageLookupByLibrary.simpleMessage("Om"),
+    "albumsByTaste": MessageLookupByLibrary.simpleMessage("Etter din smak"),
+    "artistsByTaste": MessageLookupByLibrary.simpleMessage("Etter din smak"),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Aksepterer bruker mis data...",
     ),
@@ -131,6 +133,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Feil under avspilling:",
     ),
     "follow": MessageLookupByLibrary.simpleMessage("Fortsette"),
+    "followedArtists": MessageLookupByLibrary.simpleMessage("fulgte"),
     "following": MessageLookupByLibrary.simpleMessage("Følgende"),
     "forgottenFavorites": MessageLookupByLibrary.simpleMessage(
       "glemte favoritter",
@@ -324,8 +327,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "recommend_cloud": MessageLookupByLibrary.simpleMessage(
       "Vi anbefaler å aktivere skymodus for en Spotify-lignende opplevelse: sanntidssynkronisering mellom alle enhetene dine og automatisk sikkerhetskopiering uten at du trenger å gjøre noe.",
     ),
+    "recommendedAlbums": MessageLookupByLibrary.simpleMessage("Anbefalt"),
+    "recommendedArtists": MessageLookupByLibrary.simpleMessage("Anbefalt"),
     "reproducedBy": MessageLookupByLibrary.simpleMessage("Gjengitt av"),
     "save": MessageLookupByLibrary.simpleMessage("Beholde"),
+    "savedAlbums": MessageLookupByLibrary.simpleMessage("Lagret"),
     "searchInLibrary": MessageLookupByLibrary.simpleMessage(
       "Søk i biblioteket",
     ),

@@ -456,5 +456,8 @@
   "userUnblocked": "അൺലോക്ക് ചെയ്ത ഉപയോക്താവ്",
   "artistsByTaste": "നിങ്ങളുടെ അഭിരുചിക്കനുസരിച്ച്",
   "followedArtists": "പിന്തുടർന്നു",
-  "recommendedArtists": "ശുപാർശ ചെയ്തത്"
+  "recommendedArtists": "ശുപാർശ ചെയ്തത്",
+  "albumsByTaste": "നിങ്ങളുടെ അഭിരുചിക്കനുസരിച്ച്",
+  "savedAlbums": "സംരക്ഷിച്ചു",
+  "recommendedAlbums": "ശുപാർശ ചെയ്തത്"
 }

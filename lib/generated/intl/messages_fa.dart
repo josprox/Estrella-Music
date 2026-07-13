@@ -46,8 +46,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "addToPlaylist": MessageLookupByLibrary.simpleMessage("افزودن به لیست پخش"),
     "album": MessageLookupByLibrary.simpleMessage("آلبوم"),
     "albums": MessageLookupByLibrary.simpleMessage("آلبوم ها"),
+    "albumsByTaste": MessageLookupByLibrary.simpleMessage(
+      "با توجه به سلیقه شما",
+    ),
     "appInfo": MessageLookupByLibrary.simpleMessage("داده های برنامه"),
     "artists": MessageLookupByLibrary.simpleMessage("خواننده ها"),
+    "artistsByTaste": MessageLookupByLibrary.simpleMessage(
+      "با توجه به سلیقه شما",
+    ),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Acepto usar mis datos...",
     ),
@@ -226,6 +232,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "لیست پخش های برگزیده",
     ),
     "follow": MessageLookupByLibrary.simpleMessage("ادامه دهید"),
+    "followedArtists": MessageLookupByLibrary.simpleMessage("دنبال کرد"),
     "following": MessageLookupByLibrary.simpleMessage("دنبال کردن"),
     "forgottenFavorites": MessageLookupByLibrary.simpleMessage(
       "مورد علاقه های فراموش شده",
@@ -507,6 +514,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "recommend_cloud": MessageLookupByLibrary.simpleMessage(
       "توصیه می‌کنیم برای تجربه‌ای شبیه به Spotify، حالت ابری را فعال کنید: همگام‌سازی بی‌درنگ بین همه دستگاه‌هایتان و پشتیبان‌گیری خودکار بدون نیاز به انجام کاری.",
     ),
+    "recommendedAlbums": MessageLookupByLibrary.simpleMessage("توصیه می شود"),
+    "recommendedArtists": MessageLookupByLibrary.simpleMessage("توصیه می شود"),
     "removeFromLib": MessageLookupByLibrary.simpleMessage(
       "حذف از موسیقی های کتابخانه",
     ),
@@ -529,6 +538,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "retry": MessageLookupByLibrary.simpleMessage("دوباره امتحان کنید!"),
     "save": MessageLookupByLibrary.simpleMessage("نگه دارید"),
+    "savedAlbums": MessageLookupByLibrary.simpleMessage("ذخیره شد"),
     "searchInLibrary": MessageLookupByLibrary.simpleMessage(
       "جستجو در کتابخانه",
     ),

@@ -51,6 +51,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "ଆଲବମ୍ ବୁକମାର୍କ ଅପସାରିତ ହୋଇଛି!",
     ),
     "albums": MessageLookupByLibrary.simpleMessage("ଆଲବମ୍"),
+    "albumsByTaste": MessageLookupByLibrary.simpleMessage(
+      "ତୁମର ସ୍ୱାଦ ଅନୁସାରେ |",
+    ),
     "allFieldsReqMsg": MessageLookupByLibrary.simpleMessage(
       "ସମସ୍ତ କ୍ଷେତ୍ର ଆବଶ୍ୟକ",
     ),
@@ -64,6 +67,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "ବର୍ଣ୍ଣନା ଉପଲବ୍ଧ ନାହିଁ!",
     ),
     "artists": MessageLookupByLibrary.simpleMessage("କଳାକାର"),
+    "artistsByTaste": MessageLookupByLibrary.simpleMessage(
+      "ତୁମର ସ୍ୱାଦ ଅନୁସାରେ |",
+    ),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Acepto usar mis datos ...",
     ),
@@ -223,6 +229,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "ପ୍ରଦର୍ଶିତ ପ୍ଲେଲିଷ୍ଟଗୁଡିକ",
     ),
     "follow": MessageLookupByLibrary.simpleMessage("ଜାରି ରଖ |"),
+    "followedArtists": MessageLookupByLibrary.simpleMessage("ଅନୁସରଣ କଲେ"),
     "following": MessageLookupByLibrary.simpleMessage("ନିମ୍ନଲିଖିତ"),
     "for1": MessageLookupByLibrary.simpleMessage("ପାଇଁ"),
     "forgottenFavorites": MessageLookupByLibrary.simpleMessage(
@@ -524,6 +531,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "recommend_cloud": MessageLookupByLibrary.simpleMessage(
       "ଏକ ସ୍ପୋଟିଫ୍ ପରି ଅଭିଜ୍ଞତା ପାଇଁ କ୍ଲାଉଡ୍ ମୋଡ୍ ସକ୍ରିୟ କରିବାକୁ ଆମେ ସୁପାରିଶ କରୁ: ଆପଣଙ୍କର ସମସ୍ତ ଡିଭାଇସ୍ ମଧ୍ୟରେ ରିଅଲ୍-ଟାଇମ୍ ସିଙ୍କ୍ରୋନାଇଜେସନ୍ ଏବଂ ସ୍ୱୟଂଚାଳିତ ବ୍ୟାକଅପ୍ ଆପଣଙ୍କୁ କିଛି ନକରି |",
     ),
+    "recommendedAlbums": MessageLookupByLibrary.simpleMessage("ପରାମର୍ଶିତ"),
+    "recommendedArtists": MessageLookupByLibrary.simpleMessage("ପରାମର୍ଶିତ"),
     "removeFromLib": MessageLookupByLibrary.simpleMessage(
       "ଲାଇବ୍ରେରୀ ଗୀତରୁ ଅପସାରଣ କରନ୍ତୁ",
     ),
@@ -554,6 +563,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "results": MessageLookupByLibrary.simpleMessage("ଫଳାଫଳ"),
     "retry": MessageLookupByLibrary.simpleMessage("ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ!"),
     "save": MessageLookupByLibrary.simpleMessage("ରଖନ୍ତୁ |"),
+    "savedAlbums": MessageLookupByLibrary.simpleMessage("ସଞ୍ଚୟ ହୋଇଛି |"),
     "search": MessageLookupByLibrary.simpleMessage("ସନ୍ଧାନ କରନ୍ତୁ"),
     "searchDes": MessageLookupByLibrary.simpleMessage(
       "ଗୀତ,ପ୍ଲେଲିଷ୍ଟ,ଆଲବମ କିମ୍ବା କଳାକାର",

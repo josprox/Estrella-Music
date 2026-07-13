@@ -37,6 +37,12 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "about": MessageLookupByLibrary.simpleMessage("Για"),
+    "albumsByTaste": MessageLookupByLibrary.simpleMessage(
+      "Σύμφωνα με τα γούστα σας",
+    ),
+    "artistsByTaste": MessageLookupByLibrary.simpleMessage(
+      "Σύμφωνα με τα γούστα σας",
+    ),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Acepto usar mis datas...",
     ),
@@ -136,6 +142,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Σφάλμα κατά την αναπαραγωγή:",
     ),
     "follow": MessageLookupByLibrary.simpleMessage("Συνεχίζω"),
+    "followedArtists": MessageLookupByLibrary.simpleMessage("ακολούθησε"),
     "following": MessageLookupByLibrary.simpleMessage("Εξής"),
     "forgottenFavorites": MessageLookupByLibrary.simpleMessage(
       "ξεχασμένα αγαπημένα",
@@ -333,8 +340,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "recommend_cloud": MessageLookupByLibrary.simpleMessage(
       "Συνιστούμε να ενεργοποιήσετε τη λειτουργία Cloud για μια εμπειρία παρόμοια με το Spotify: συγχρονισμός σε πραγματικό χρόνο μεταξύ όλων των συσκευών σας και αυτόματη δημιουργία αντιγράφων ασφαλείας χωρίς να χρειάζεται να κάνετε τίποτα.",
     ),
+    "recommendedAlbums": MessageLookupByLibrary.simpleMessage("Συνιστάται"),
+    "recommendedArtists": MessageLookupByLibrary.simpleMessage("Συνιστάται"),
     "reproducedBy": MessageLookupByLibrary.simpleMessage("Αναπαράγεται από"),
     "save": MessageLookupByLibrary.simpleMessage("Διατήρηση"),
+    "savedAlbums": MessageLookupByLibrary.simpleMessage("Αποθηκεύτηκε"),
     "searchInLibrary": MessageLookupByLibrary.simpleMessage(
       "Αναζήτηση στη Βιβλιοθήκη",
     ),

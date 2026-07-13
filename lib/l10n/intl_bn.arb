@@ -657,5 +657,8 @@
   "userUnblocked": "আনলক করা ব্যবহারকারী",
   "artistsByTaste": "আপনার রুচি অনুযায়ী",
   "followedArtists": "অনুসরণ",
-  "recommendedArtists": "প্রস্তাবিত"
+  "recommendedArtists": "প্রস্তাবিত",
+  "albumsByTaste": "আপনার রুচি অনুযায়ী",
+  "savedAlbums": "সংরক্ষিত",
+  "recommendedAlbums": "প্রস্তাবিত"
 }

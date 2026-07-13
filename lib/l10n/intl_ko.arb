@@ -571,5 +571,8 @@
   "userUnblocked": "잠금 해제된 사용자",
   "artistsByTaste": "당신의 취향에 따라",
   "followedArtists": "팔로우함",
-  "recommendedArtists": "추천"
+  "recommendedArtists": "추천",
+  "albumsByTaste": "당신의 취향에 따라",
+  "savedAlbums": "저장됨",
+  "recommendedAlbums": "추천"
 }

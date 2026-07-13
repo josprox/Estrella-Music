@@ -54,6 +54,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Album borttagen från bibliotek!",
     ),
     "albums": MessageLookupByLibrary.simpleMessage("Album"),
+    "albumsByTaste": MessageLookupByLibrary.simpleMessage("Enligt din smak"),
     "allFieldsReqMsg": MessageLookupByLibrary.simpleMessage("Alla fält krävs"),
     "artistBookmarkAddAlert": MessageLookupByLibrary.simpleMessage(
       "Artist tillagd i bibliotek!",
@@ -65,6 +66,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Beskrivning ej tillgänglig!",
     ),
     "artists": MessageLookupByLibrary.simpleMessage("Artister"),
+    "artistsByTaste": MessageLookupByLibrary.simpleMessage("Enligt din smak"),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Acceptera att använda miss data...",
     ),
@@ -258,6 +260,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Utvalda Spellistor",
     ),
     "follow": MessageLookupByLibrary.simpleMessage("Fortsätta"),
+    "followedArtists": MessageLookupByLibrary.simpleMessage("följde"),
     "following": MessageLookupByLibrary.simpleMessage("Följande"),
     "for1": MessageLookupByLibrary.simpleMessage("för"),
     "forgottenFavorites": MessageLookupByLibrary.simpleMessage(
@@ -558,6 +561,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "recommend_cloud": MessageLookupByLibrary.simpleMessage(
       "Vi rekommenderar att du aktiverar molnläget för en Spotify-liknande upplevelse: realtidssynkronisering mellan alla dina enheter och automatisk säkerhetskopiering utan att du behöver göra något.",
     ),
+    "recommendedAlbums": MessageLookupByLibrary.simpleMessage("Rekommenderad"),
+    "recommendedArtists": MessageLookupByLibrary.simpleMessage("Rekommenderad"),
     "removeFromLib": MessageLookupByLibrary.simpleMessage(
       "Ta bort låt från bibliotek",
     ),
@@ -590,6 +595,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "results": MessageLookupByLibrary.simpleMessage("Resultat"),
     "retry": MessageLookupByLibrary.simpleMessage("Försök igen!"),
     "save": MessageLookupByLibrary.simpleMessage("Hålla"),
+    "savedAlbums": MessageLookupByLibrary.simpleMessage("Sparad"),
     "scanning": MessageLookupByLibrary.simpleMessage("Söker..."),
     "search": MessageLookupByLibrary.simpleMessage("Sök"),
     "searchDes": MessageLookupByLibrary.simpleMessage(

@@ -397,5 +397,8 @@
   "userUnblocked": "解锁用户",
   "artistsByTaste": "根据你的口味",
   "followedArtists": "已关注",
-  "recommendedArtists": "受到推崇的"
+  "recommendedArtists": "受到推崇的",
+  "albumsByTaste": "根据你的口味",
+  "savedAlbums": "已保存",
+  "recommendedAlbums": "受到推崇的"
 }

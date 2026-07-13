@@ -631,5 +631,8 @@
   "userUnblocked": "مستخدم غير مقفل",
   "artistsByTaste": "حسب ذوقك",
   "followedArtists": "يتبع",
-  "recommendedArtists": "مُستَحسَن"
+  "recommendedArtists": "مُستَحسَن",
+  "albumsByTaste": "حسب ذوقك",
+  "savedAlbums": "أنقذ",
+  "recommendedAlbums": "مُستَحسَن"
 }

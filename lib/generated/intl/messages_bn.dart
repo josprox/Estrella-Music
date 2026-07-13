@@ -55,6 +55,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "অ্যালবাম বুকমার্ক সরানো হয়েছে!",
     ),
     "albums": MessageLookupByLibrary.simpleMessage("অ্যালবাম"),
+    "albumsByTaste": MessageLookupByLibrary.simpleMessage(
+      "আপনার রুচি অনুযায়ী",
+    ),
     "allFieldsReqMsg": MessageLookupByLibrary.simpleMessage(
       "সকল ক্ষেত্র প্রয়োজন",
     ),
@@ -72,6 +75,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "বর্ণনা পাওয়া যাচ্ছে না!",
     ),
     "artists": MessageLookupByLibrary.simpleMessage("শিল্পী"),
+    "artistsByTaste": MessageLookupByLibrary.simpleMessage(
+      "আপনার রুচি অনুযায়ী",
+    ),
     "audioCodec": MessageLookupByLibrary.simpleMessage("অডিও কোডেক"),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "আমাদের ভুল তথ্য গ্রহণ করুন...",
@@ -352,6 +358,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "ফাইলটি পাওয়া যায়নি",
     ),
     "follow": MessageLookupByLibrary.simpleMessage("চালিয়ে যান"),
+    "followedArtists": MessageLookupByLibrary.simpleMessage("অনুসরণ"),
     "following": MessageLookupByLibrary.simpleMessage("অনুসরণ করছে"),
     "for1": MessageLookupByLibrary.simpleMessage("জন্য"),
     "forgottenFavorites": MessageLookupByLibrary.simpleMessage(
@@ -749,6 +756,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "recommend_cloud": MessageLookupByLibrary.simpleMessage(
       "আমরা স্পটিফাই-এর মতো অভিজ্ঞতার জন্য ক্লাউড মোড সক্রিয় করার পরামর্শ দিই: আপনার সমস্ত ডিভাইসের মধ্যে রিয়েল-টাইম সিঙ্ক্রোনাইজেশন এবং আপনাকে কিছু না করেই স্বয়ংক্রিয় ব্যাকআপ।",
     ),
+    "recommendedAlbums": MessageLookupByLibrary.simpleMessage("প্রস্তাবিত"),
+    "recommendedArtists": MessageLookupByLibrary.simpleMessage("প্রস্তাবিত"),
     "removeFromLib": MessageLookupByLibrary.simpleMessage(
       "লাইব্রেরির গান থেকে সরান",
     ),
@@ -800,6 +809,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "results": MessageLookupByLibrary.simpleMessage("ফলাফল"),
     "retry": MessageLookupByLibrary.simpleMessage("আবার চেষ্টা করুন!"),
     "save": MessageLookupByLibrary.simpleMessage("রাখা"),
+    "savedAlbums": MessageLookupByLibrary.simpleMessage("সংরক্ষিত"),
     "scanning": MessageLookupByLibrary.simpleMessage("স্ক্যান করা হচ্ছে..।"),
     "search": MessageLookupByLibrary.simpleMessage("অনুসন্ধান"),
     "searchDes": MessageLookupByLibrary.simpleMessage(

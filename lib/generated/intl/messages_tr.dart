@@ -55,6 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Albüm kitaplıktan kaldırıldı!",
     ),
     "albums": MessageLookupByLibrary.simpleMessage("Albümler"),
+    "albumsByTaste": MessageLookupByLibrary.simpleMessage("Zevklerinize göre"),
     "allFieldsReqMsg": MessageLookupByLibrary.simpleMessage(
       "Alanların hepsi gerekli",
     ),
@@ -72,6 +73,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Açıklama mevcut değil!",
     ),
     "artists": MessageLookupByLibrary.simpleMessage("Sanatçılar"),
+    "artistsByTaste": MessageLookupByLibrary.simpleMessage("Zevklerinize göre"),
     "audioCodec": MessageLookupByLibrary.simpleMessage("Ses Kod Çözücü"),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Yanlış verileri kabul ediyoruz...",
@@ -372,6 +374,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "fileNotFound": MessageLookupByLibrary.simpleMessage("Dosya bulunamadı"),
     "follow": MessageLookupByLibrary.simpleMessage("Devam etmek"),
+    "followedArtists": MessageLookupByLibrary.simpleMessage("takip edildi"),
     "following": MessageLookupByLibrary.simpleMessage("Takip etme"),
     "for1": MessageLookupByLibrary.simpleMessage("şunun için"),
     "forgottenFavorites": MessageLookupByLibrary.simpleMessage(
@@ -762,6 +765,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "recommend_cloud": MessageLookupByLibrary.simpleMessage(
       "Spotify benzeri bir deneyim için Bulut Modunu etkinleştirmenizi öneririz: tüm cihazlarınız arasında gerçek zamanlı senkronizasyon ve hiçbir şey yapmanıza gerek kalmadan otomatik yedekleme.",
     ),
+    "recommendedAlbums": MessageLookupByLibrary.simpleMessage("Tavsiye edilen"),
+    "recommendedArtists": MessageLookupByLibrary.simpleMessage(
+      "Tavsiye edilen",
+    ),
     "removeFromLib": MessageLookupByLibrary.simpleMessage(
       "Kitaplık şarkılarından kaldır",
     ),
@@ -821,6 +828,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "results": MessageLookupByLibrary.simpleMessage("Sonuç"),
     "retry": MessageLookupByLibrary.simpleMessage("Yeniden dene!"),
     "save": MessageLookupByLibrary.simpleMessage("Kale"),
+    "savedAlbums": MessageLookupByLibrary.simpleMessage("Kaydedildi"),
     "scanning": MessageLookupByLibrary.simpleMessage("Taranıyor..."),
     "search": MessageLookupByLibrary.simpleMessage("Ara"),
     "searchDes": MessageLookupByLibrary.simpleMessage(

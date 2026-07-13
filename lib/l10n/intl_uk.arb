@@ -666,5 +666,8 @@
   "userUnblocked": "Розблокований користувач",
   "artistsByTaste": "Відповідно до ваших смаків",
   "followedArtists": "слідував",
-  "recommendedArtists": "Рекомендовано"
+  "recommendedArtists": "Рекомендовано",
+  "albumsByTaste": "Відповідно до ваших смаків",
+  "savedAlbums": "Збережено",
+  "recommendedAlbums": "Рекомендовано"
 }

@@ -47,6 +47,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "앨범 즐겨찾기를 제거함!",
     ),
     "albums": MessageLookupByLibrary.simpleMessage("앨범"),
+    "albumsByTaste": MessageLookupByLibrary.simpleMessage("당신의 취향에 따라"),
     "allFieldsReqMsg": MessageLookupByLibrary.simpleMessage("모든 항목을 기입해주세요"),
     "artistBookmarkAddAlert": MessageLookupByLibrary.simpleMessage(
       "아티스트를 즐겨찾기에 추가함!",
@@ -58,6 +59,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "설명을 찾지 못했습니다!",
     ),
     "artists": MessageLookupByLibrary.simpleMessage("아티스트"),
+    "artistsByTaste": MessageLookupByLibrary.simpleMessage("당신의 취향에 따라"),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Accepto usar mis datos...",
     ),
@@ -223,6 +225,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "favorites": MessageLookupByLibrary.simpleMessage("즐겨찾기"),
     "featuredplaylists": MessageLookupByLibrary.simpleMessage("인기 플레이리스트"),
     "follow": MessageLookupByLibrary.simpleMessage("계속하다"),
+    "followedArtists": MessageLookupByLibrary.simpleMessage("팔로우함"),
     "following": MessageLookupByLibrary.simpleMessage("수행원"),
     "for1": MessageLookupByLibrary.simpleMessage("어구"),
     "forgottenFavorites": MessageLookupByLibrary.simpleMessage("잊혀진 즐겨찾기"),
@@ -468,6 +471,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "recommend_cloud": MessageLookupByLibrary.simpleMessage(
       "Spotify와 같은 경험을 위해서는 클라우드 모드를 활성화하는 것이 좋습니다. 아무 것도 하지 않고도 모든 장치 간의 실시간 동기화와 자동 백업이 가능합니다.",
     ),
+    "recommendedAlbums": MessageLookupByLibrary.simpleMessage("추천"),
+    "recommendedArtists": MessageLookupByLibrary.simpleMessage("추천"),
     "removeFromLib": MessageLookupByLibrary.simpleMessage("라이브러리 음악에서 제거"),
     "removeFromPlaylist": MessageLookupByLibrary.simpleMessage("플레이리스트에서 제거"),
     "removeFromQueue": MessageLookupByLibrary.simpleMessage("대기열에서 제거"),
@@ -492,6 +497,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "results": MessageLookupByLibrary.simpleMessage("결과"),
     "retry": MessageLookupByLibrary.simpleMessage("재시도!"),
     "save": MessageLookupByLibrary.simpleMessage("유지하다"),
+    "savedAlbums": MessageLookupByLibrary.simpleMessage("저장됨"),
     "scanning": MessageLookupByLibrary.simpleMessage("스캔하는 중..."),
     "search": MessageLookupByLibrary.simpleMessage("검색"),
     "searchDes": MessageLookupByLibrary.simpleMessage("음악,플레이리스트,앨범 혹은 아티스트"),

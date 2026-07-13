@@ -667,5 +667,8 @@
   "userUnblocked": "Odemčený uživatel",
   "artistsByTaste": "Podle vašich chutí",
   "followedArtists": "následoval",
-  "recommendedArtists": "Doporučeno"
+  "recommendedArtists": "Doporučeno",
+  "albumsByTaste": "Podle vašich chutí",
+  "savedAlbums": "Uloženo",
+  "recommendedAlbums": "Doporučeno"
 }

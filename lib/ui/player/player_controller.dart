@@ -597,6 +597,8 @@ class PlayerController extends GetxController
       title: song.title,
       artistName: song.artist,
       albumName: song.album,
+      duration: song.duration,
+      excludeIds: {song.id},
     );
     if (recoveredSong == null || recoveredSong.id == song.id) {
       return null;
@@ -701,7 +703,8 @@ class PlayerController extends GetxController
   void _playerPanelCheck({bool restoreSession = false}) {
     isPlayerVisible.value = true;
     final isWideScreen = Get.size.width > 800;
-    final autoOpenPlayer = SqliteStore.box("AppPrefs").get("autoOpenPlayer") ?? true;
+    final autoOpenPlayer =
+        SqliteStore.box("AppPrefs").get("autoOpenPlayer") ?? true;
     if ((!isWideScreen && autoOpenPlayer && playerPanelController.isAttached) &&
         !restoreSession) {
       playerPanelController.open();
@@ -752,13 +755,14 @@ class PlayerController extends GetxController
         ? _audioHandler.setShuffleMode(AudioServiceShuffleMode.none)
         : _audioHandler.setShuffleMode(AudioServiceShuffleMode.all);
     isShuffleModeEnabled.value = !shuffleModeEnabled;
-    await SqliteStore.box("AppPrefs").put("isShuffleModeEnabled", !shuffleModeEnabled);
+    await SqliteStore.box("AppPrefs")
+        .put("isShuffleModeEnabled", !shuffleModeEnabled);
     // restrict queue loop mode when shuffle mode is enabled
     if (isShuffleModeEnabled.isTrue && isQueueLoopModeEnabled.isFalse) {
       isQueueLoopModeEnabled.value = true;
     } else if (isShuffleModeEnabled.isFalse) {
-      isQueueLoopModeEnabled.value =
-          SqliteStore.box("AppPrefs").get("queueLoopModeEnabled", defaultValue: false);
+      isQueueLoopModeEnabled.value = SqliteStore.box("AppPrefs")
+          .get("queueLoopModeEnabled", defaultValue: false);
     }
   }
 
@@ -915,8 +919,8 @@ class PlayerController extends GetxController
 
   Future<void> _checkFav() async {
     if (currentSong.value == null) return;
-    isCurrentSongFav.value =
-        (await SqliteStore.openBox("LIBFAV")).containsKey(currentSong.value!.id);
+    isCurrentSongFav.value = (await SqliteStore.openBox("LIBFAV"))
+        .containsKey(currentSong.value!.id);
   }
 
   Future<void> refreshFavoriteState() => _checkFav();

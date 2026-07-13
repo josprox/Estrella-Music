@@ -36,6 +36,8 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "about": MessageLookupByLibrary.simpleMessage("Аб"),
+    "albumsByTaste": MessageLookupByLibrary.simpleMessage("Па вашым густам"),
+    "artistsByTaste": MessageLookupByLibrary.simpleMessage("Па вашым густам"),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Acepto usar mis datos...",
     ),
@@ -135,6 +137,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Памылка пры прайграванні:",
     ),
     "follow": MessageLookupByLibrary.simpleMessage("Працягнуць"),
+    "followedArtists": MessageLookupByLibrary.simpleMessage("рушыў услед"),
     "following": MessageLookupByLibrary.simpleMessage("Пасля"),
     "forgottenFavorites": MessageLookupByLibrary.simpleMessage(
       "забытыя фаварыты",
@@ -332,8 +335,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "recommend_cloud": MessageLookupByLibrary.simpleMessage(
       "Мы рэкамендуем актываваць Воблачны рэжым для вопыту, падобнага на Spotify: сінхранізацыя ў рэальным часе паміж усімі вашымі прыладамі і аўтаматычнае рэзервовае капіраванне без неабходнасці рабіць што-небудзь.",
     ),
+    "recommendedAlbums": MessageLookupByLibrary.simpleMessage("Рэкамендуецца"),
+    "recommendedArtists": MessageLookupByLibrary.simpleMessage("Рэкамендуецца"),
     "reproducedBy": MessageLookupByLibrary.simpleMessage("Узноўлена"),
     "save": MessageLookupByLibrary.simpleMessage("Трымайце"),
+    "savedAlbums": MessageLookupByLibrary.simpleMessage("Захавана"),
     "searchInLibrary": MessageLookupByLibrary.simpleMessage(
       "Пошук у бібліятэцы",
     ),

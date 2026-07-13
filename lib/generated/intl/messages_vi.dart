@@ -55,6 +55,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Đã xóa đánh dấu tập nhạc!",
     ),
     "albums": MessageLookupByLibrary.simpleMessage("Tập nhạc"),
+    "albumsByTaste": MessageLookupByLibrary.simpleMessage(
+      "Theo sở thích của bạn",
+    ),
     "allFieldsReqMsg": MessageLookupByLibrary.simpleMessage(
       "Tất cả các trường bắt buộc",
     ),
@@ -72,6 +75,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Mô tả không có sẵn!",
     ),
     "artists": MessageLookupByLibrary.simpleMessage("Nghệ sỹ"),
+    "artistsByTaste": MessageLookupByLibrary.simpleMessage(
+      "Theo sở thích của bạn",
+    ),
     "audioCodec": MessageLookupByLibrary.simpleMessage("Mã hoá tiếng"),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Chấp nhận sử dụng dữ liệu sai...",
@@ -370,6 +376,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "fileNotFound": MessageLookupByLibrary.simpleMessage("Không tìm thấy tệp"),
     "follow": MessageLookupByLibrary.simpleMessage("Tiếp tục"),
+    "followedArtists": MessageLookupByLibrary.simpleMessage("đã theo dõi"),
     "following": MessageLookupByLibrary.simpleMessage("Tiếp theo"),
     "for1": MessageLookupByLibrary.simpleMessage("cho"),
     "forgottenFavorites": MessageLookupByLibrary.simpleMessage(
@@ -778,6 +785,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "recommend_cloud": MessageLookupByLibrary.simpleMessage(
       "Chúng tôi khuyên bạn nên kích hoạt Chế độ đám mây để có trải nghiệm giống như Spotify: đồng bộ hóa thời gian thực giữa tất cả các thiết bị của bạn và sao lưu tự động mà bạn không cần phải làm gì cả.",
     ),
+    "recommendedAlbums": MessageLookupByLibrary.simpleMessage("Khuyến khích"),
+    "recommendedArtists": MessageLookupByLibrary.simpleMessage("Khuyến khích"),
     "removeFromLib": MessageLookupByLibrary.simpleMessage(
       "Xóa khỏi thư viện bài hát",
     ),
@@ -835,6 +844,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "results": MessageLookupByLibrary.simpleMessage("Kết quả"),
     "retry": MessageLookupByLibrary.simpleMessage("Thử lại!"),
     "save": MessageLookupByLibrary.simpleMessage("Giữ"),
+    "savedAlbums": MessageLookupByLibrary.simpleMessage("Đã lưu"),
     "scanning": MessageLookupByLibrary.simpleMessage("Đang quét..."),
     "search": MessageLookupByLibrary.simpleMessage("Tìm kiếm"),
     "searchDes": MessageLookupByLibrary.simpleMessage(

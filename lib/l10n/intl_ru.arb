@@ -667,5 +667,8 @@
   "userUnblocked": "Разблокированный пользователь",
   "artistsByTaste": "По вашему вкусу",
   "followedArtists": "подписан",
-  "recommendedArtists": "Рекомендуется"
+  "recommendedArtists": "Рекомендуется",
+  "albumsByTaste": "По вашему вкусу",
+  "savedAlbums": "Сохранено",
+  "recommendedAlbums": "Рекомендуется"
 }

@@ -15,6 +15,7 @@ import 'package:rxdart/rxdart.dart';
 
 import '/models/album.dart';
 import 'package:harmonymusic/services/auth/catalog_recovery_service.dart';
+import 'package:harmonymusic/services/download/download_integrity_service.dart';
 import 'package:harmonymusic/models/playlist.dart';
 import 'package:harmonymusic/services/music/equalizer.dart';
 import 'package:harmonymusic/services/music/stream_service.dart';
@@ -61,6 +62,7 @@ class MyAudioHandler extends BaseAudioHandler with GetxServiceMixin {
   bool loudnessNormalizationEnabled = false;
   // var networkErrorPause = false;
   bool isSongLoading = true;
+  final Map<String, int> _playbackRecoveryAttempts = {};
 
   bool get _supportsPitchControl => !GetPlatform.isDesktop;
 
@@ -182,12 +184,31 @@ class MyAudioHandler extends BaseAudioHandler with GetxServiceMixin {
       await _player.stop();
 
       // Check if we are still on the same song and attempt to recover
-      if (savedIndex == currentIndex) {
+      if (savedIndex == currentIndex &&
+          savedIndex is int &&
+          savedIndex >= 0 &&
+          savedIndex < queue.value.length) {
+        final failedSong = queue.value[savedIndex];
+        final attempts = _playbackRecoveryAttempts[failedSong.id] ?? 0;
+        if (attempts >= 2) {
+          isSongLoading = false;
+          Get.find<PlayerController>()
+              .notifyPlayError(S.current.operationFailed);
+          playbackState.add(playbackState.value.copyWith(
+            processingState: AudioProcessingState.error,
+            errorMessage: e.toString(),
+          ));
+          return;
+        }
+        _playbackRecoveryAttempts[failedSong.id] = attempts + 1;
         printINFO(
             "Attempting to recover playback for song index $currentIndex at position $curPos");
         try {
-          await customAction(
-              "playByIndex", {'index': currentIndex, 'newUrl': true});
+          await customAction("playByIndex", {
+            'index': currentIndex,
+            'newUrl': true,
+            'forceCatalogRecovery': attempts > 0,
+          });
           await _player.seek(curPos);
           playbackState.add(playbackState.value.copyWith(
             updatePosition: curPos,
@@ -207,6 +228,12 @@ class MyAudioHandler extends BaseAudioHandler with GetxServiceMixin {
             ? 700
             : 0;
     _player.positionStream.listen((value) async {
+      if (value >= const Duration(seconds: 5) &&
+          currentIndex is int &&
+          currentIndex >= 0 &&
+          currentIndex < queue.value.length) {
+        _playbackRecoveryAttempts.remove(queue.value[currentIndex].id);
+      }
       if (_player.duration != null && _player.duration?.inSeconds != 0) {
         if (value.inMilliseconds >=
             (_player.duration!.inMilliseconds - playerDurationOffset)) {
@@ -299,8 +326,13 @@ class MyAudioHandler extends BaseAudioHandler with GetxServiceMixin {
 
     printINFO("Playing Using AudioSource.uri");
     isPlayingUsingLockCachingSource = false;
+    final uri = url.startsWith('http://') ||
+            url.startsWith('https://') ||
+            url.startsWith('file:')
+        ? Uri.parse(url)
+        : Uri.file(url);
     return AudioSource.uri(
-      Uri.tryParse(url)!,
+      uri,
       tag: mediaItem,
     );
   }
@@ -465,9 +497,13 @@ class MyAudioHandler extends BaseAudioHandler with GetxServiceMixin {
         final songIndex = extras!['index'];
         currentIndex = songIndex;
         final isNewUrlReq = extras['newUrl'] ?? false;
+        final forceCatalogRecovery = extras['forceCatalogRecovery'] ?? false;
         var currentSong = queue.value[currentIndex];
-        final futurePlayback =
-            _resolveSongPlayback(currentSong, generateNewUrl: isNewUrlReq);
+        final futurePlayback = _resolveSongPlayback(
+          currentSong,
+          generateNewUrl: isNewUrlReq,
+          forceCatalogRecovery: forceCatalogRecovery,
+        );
         final bool restoreSession = extras['restoreSession'] ?? false;
         isSongLoading = true;
         playbackState.add(playbackState.value
@@ -823,39 +859,61 @@ class MyAudioHandler extends BaseAudioHandler with GetxServiceMixin {
       {bool generateNewUrl = false, bool offlineReplacementUrl = false}) async {
     printINFO("Requested id : $songId");
     final songDownloadsBox = SqliteStore.box("SongDownloads");
-    if (!offlineReplacementUrl &&
-        (await SqliteStore.openBox("SongsCache")).containsKey(songId)) {
-      printINFO("Got Song from cachedbox ($songId)");
-      // if contains stream Info
-      final streamInfo =
-          SqliteStore.box("SongsCache").get(songId)["streamInfo"];
-      Audio? cacheAudioPlaceholder;
-      if (streamInfo != null && streamInfo.isNotEmpty) {
-        streamInfo[1]['url'] = "file://$_cacheDir/cachedSongs/$songId.mp3";
-        cacheAudioPlaceholder = Audio.fromJson(streamInfo[1]);
+    final songsCacheBox = await SqliteStore.openBox('SongsCache');
+    final cachedFile = File('$_cacheDir/cachedSongs/$songId.mp3');
+    if (!offlineReplacementUrl && songsCacheBox.containsKey(songId)) {
+      if (!await DownloadIntegrityService.isPlausibleAudioFile(cachedFile)) {
+        await songsCacheBox.delete(songId);
+        if (await cachedFile.exists()) await cachedFile.delete();
       } else {
-        cacheAudioPlaceholder = Audio(
-            audioCodec: Codec.mp4a,
-            bitrate: 0,
-            loudnessDb: 0,
-            duration: 0,
-            size: 0,
-            url: "file://$_cacheDir/cachedSongs/$songId.mp3",
-            itag: 0);
-      }
+        printINFO("Got Song from cachedbox ($songId)");
+        // if contains stream Info
+        final streamInfo = songsCacheBox.get(songId)["streamInfo"];
+        Audio? cacheAudioPlaceholder;
+        if (streamInfo != null && streamInfo.isNotEmpty) {
+          streamInfo[1]['url'] = cachedFile.uri.toString();
+          cacheAudioPlaceholder = Audio.fromJson(streamInfo[1]);
+        } else {
+          cacheAudioPlaceholder = Audio(
+              audioCodec: Codec.mp4a,
+              bitrate: 0,
+              loudnessDb: 0,
+              duration: 0,
+              size: 0,
+              url: cachedFile.uri.toString(),
+              itag: 0);
+        }
 
-      return HMStreamingData(
-          playable: true,
-          statusMSG: "OK",
-          lowQualityAudio: cacheAudioPlaceholder,
-          highQualityAudio: cacheAudioPlaceholder);
-    } else if (!offlineReplacementUrl && songDownloadsBox.containsKey(songId)) {
+        return HMStreamingData(
+            playable: true,
+            statusMSG: "OK",
+            lowQualityAudio: cacheAudioPlaceholder,
+            highQualityAudio: cacheAudioPlaceholder);
+      }
+    }
+    if (!offlineReplacementUrl && songDownloadsBox.containsKey(songId)) {
       final song = songDownloadsBox.get(songId);
+      final path = DownloadIntegrityService.pathFromRecord(song);
+      final isInternalPath = path?.contains(
+              "${Get.find<SettingsScreenController>().supportDirPath}/Music") ??
+          false;
+      final hasPermission =
+          isInternalPath || await PermissionService.getExtStoragePermission();
+      if (!hasPermission ||
+          !await DownloadIntegrityService.isValidRecord(song)) {
+        await songDownloadsBox.delete(songId);
+        if (path != null) {
+          final invalidFile = File(path);
+          if (await invalidFile.exists()) await invalidFile.delete();
+        }
+        return checkNGetUrl(songId, offlineReplacementUrl: true);
+      }
       final streamInfoJson = song["streamInfo"];
       Audio? audio;
-      final path = song['url'];
       if (streamInfoJson != null && streamInfoJson.isNotEmpty) {
-        audio = Audio.fromJson(streamInfoJson[1]);
+        final localStream = Map<dynamic, dynamic>.from(streamInfoJson[1]);
+        localStream['url'] = File(path!).uri.toString();
+        audio = Audio.fromJson(localStream);
       } else {
         audio = Audio(
             itag: 140,
@@ -863,7 +921,7 @@ class MyAudioHandler extends BaseAudioHandler with GetxServiceMixin {
             bitrate: 0,
             duration: 0,
             loudnessDb: 0,
-            url: path,
+            url: File(path!).uri.toString(),
             size: 0);
       }
 
@@ -873,61 +931,61 @@ class MyAudioHandler extends BaseAudioHandler with GetxServiceMixin {
           highQualityAudio: audio,
           lowQualityAudio: audio);
 
-      if (path.contains(
-          "${Get.find<SettingsScreenController>().supportDirPath}/Music")) {
-        return streamInfo;
-      }
-      //check file access and if file exist in storage
-      final status = await PermissionService.getExtStoragePermission();
-      if (status && await File(path).exists()) {
-        return streamInfo;
-      }
-      //in case file doesnot found in storage, song will be played online
-      return checkNGetUrl(songId, offlineReplacementUrl: true);
-    } else {
-      //check if song stream url is cached and allocate url accordingly
-      final songsUrlCacheBox = SqliteStore.box("SongsUrlCache");
-      final qualityIndex =
-          SqliteStore.box('AppPrefs').get('streamingQuality') ?? 1;
-      HMStreamingData? streamInfo;
-      if (songsUrlCacheBox.containsKey(songId) && !generateNewUrl) {
-        final streamInfoJson = songsUrlCacheBox.get(songId);
-        if (streamInfoJson.runtimeType.toString().contains("Map") &&
-            !isExpired(url: (streamInfoJson['lowQualityAudio']['url']))) {
-          printINFO("Got cached Url ($songId)");
-          streamInfo = HMStreamingData.fromJson(streamInfoJson);
-        }
-      }
-
-      if (streamInfo == null) {
-        final token = RootIsolateToken.instance;
-        final streamInfoJson =
-            await Isolate.run(() => getStreamInfo(songId, token));
-        streamInfo = HMStreamingData.fromJson(streamInfoJson);
-        if (streamInfo.playable) songsUrlCacheBox.put(songId, streamInfoJson);
-      }
-
-      streamInfo.setQualityIndex(qualityIndex as int);
       return streamInfo;
     }
+    //check if song stream url is cached and allocate url accordingly
+    final songsUrlCacheBox = SqliteStore.box("SongsUrlCache");
+    final qualityIndex =
+        SqliteStore.box('AppPrefs').get('streamingQuality') ?? 1;
+    HMStreamingData? streamInfo;
+    if (songsUrlCacheBox.containsKey(songId) && !generateNewUrl) {
+      final streamInfoJson = songsUrlCacheBox.get(songId);
+      if (streamInfoJson.runtimeType.toString().contains("Map") &&
+          !isExpired(url: (streamInfoJson['lowQualityAudio']['url']))) {
+        printINFO("Got cached Url ($songId)");
+        streamInfo = HMStreamingData.fromJson(streamInfoJson);
+      }
+    }
+
+    if (streamInfo == null) {
+      final token = RootIsolateToken.instance;
+      final streamInfoJson =
+          await Isolate.run(() => getStreamInfo(songId, token));
+      streamInfo = HMStreamingData.fromJson(streamInfoJson);
+      if (streamInfo.playable) songsUrlCacheBox.put(songId, streamInfoJson);
+    }
+
+    streamInfo.setQualityIndex(qualityIndex as int);
+    return streamInfo;
   }
 
   Future<_ResolvedSongPlayback> _resolveSongPlayback(
     MediaItem song, {
     bool generateNewUrl = false,
+    bool forceCatalogRecovery = false,
   }) async {
     try {
-      final streamInfo = await checkNGetUrl(
-        song.id,
-        generateNewUrl: generateNewUrl,
-      );
-      if (streamInfo.playable) {
-        return _ResolvedSongPlayback(song: song, streamInfo: streamInfo);
+      HMStreamingData? streamInfo;
+      if (!forceCatalogRecovery) {
+        streamInfo = await checkNGetUrl(
+          song.id,
+          generateNewUrl: generateNewUrl,
+        );
+        if (streamInfo.playable) {
+          return _ResolvedSongPlayback(song: song, streamInfo: streamInfo);
+        }
       }
 
       final recoveredSong = await _recoverSong(song);
-      if (recoveredSong == null || recoveredSong.id == song.id) {
-        return _ResolvedSongPlayback(song: song, streamInfo: streamInfo);
+      if (recoveredSong == null) {
+        return _ResolvedSongPlayback(
+          song: song,
+          streamInfo: streamInfo ??
+              HMStreamingData(
+                playable: false,
+                statusMSG: 'Song is unavailable',
+              ),
+        );
       }
 
       final recoveredStreamInfo = await checkNGetUrl(
@@ -935,7 +993,10 @@ class MyAudioHandler extends BaseAudioHandler with GetxServiceMixin {
         generateNewUrl: true,
       );
       if (!recoveredStreamInfo.playable) {
-        return _ResolvedSongPlayback(song: song, streamInfo: streamInfo);
+        return _ResolvedSongPlayback(
+          song: song,
+          streamInfo: streamInfo ?? recoveredStreamInfo,
+        );
       }
 
       await Get.find<CatalogRecoveryService>().persistRecoveredSong(
@@ -964,6 +1025,8 @@ class MyAudioHandler extends BaseAudioHandler with GetxServiceMixin {
       title: song.title,
       artistName: song.artist,
       albumName: song.album,
+      duration: song.duration,
+      excludeIds: {song.id},
     );
   }
 

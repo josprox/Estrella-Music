@@ -48,7 +48,13 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "album": MessageLookupByLibrary.simpleMessage("ആൽബം"),
     "albums": MessageLookupByLibrary.simpleMessage("ആൽബം"),
+    "albumsByTaste": MessageLookupByLibrary.simpleMessage(
+      "നിങ്ങളുടെ അഭിരുചിക്കനുസരിച്ച്",
+    ),
     "artists": MessageLookupByLibrary.simpleMessage("കലാകാരന്മാർ"),
+    "artistsByTaste": MessageLookupByLibrary.simpleMessage(
+      "നിങ്ങളുടെ അഭിരുചിക്കനുസരിച്ച്",
+    ),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "അസെപ്റ്റോ യൂസർ മിസ് ഡാറ്റസ്...",
     ),
@@ -173,6 +179,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "തിരഞ്ഞെടുത്ത പ്ലേലിസ്റ്റുകൾ",
     ),
     "follow": MessageLookupByLibrary.simpleMessage("തുടരുക"),
+    "followedArtists": MessageLookupByLibrary.simpleMessage("പിന്തുടർന്നു"),
     "following": MessageLookupByLibrary.simpleMessage("പിന്തുടരുന്നു"),
     "forgottenFavorites": MessageLookupByLibrary.simpleMessage(
       "മറന്നുപോയ പ്രിയപ്പെട്ടവ",
@@ -433,6 +440,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "recommend_cloud": MessageLookupByLibrary.simpleMessage(
       "സ്‌പോട്ടിഫൈ പോലുള്ള അനുഭവത്തിനായി ക്ലൗഡ് മോഡ് സജീവമാക്കാൻ ഞങ്ങൾ ശുപാർശ ചെയ്യുന്നു: നിങ്ങളുടെ എല്ലാ ഉപകരണങ്ങൾക്കുമിടയിൽ തത്സമയ സമന്വയവും നിങ്ങൾ ഒന്നും ചെയ്യാതെ തന്നെ സ്വയമേവയുള്ള ബാക്കപ്പും.",
     ),
+    "recommendedAlbums": MessageLookupByLibrary.simpleMessage("ശുപാർശ ചെയ്തത്"),
+    "recommendedArtists": MessageLookupByLibrary.simpleMessage(
+      "ശുപാർശ ചെയ്തത്",
+    ),
     "removeFromPlaylist": MessageLookupByLibrary.simpleMessage(
       "പ്ലേലിസ്റ്റിൽ നിന്ന് നീക്കം ചെയ്യുക",
     ),
@@ -452,6 +463,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "reproducedBy": MessageLookupByLibrary.simpleMessage("പുനർനിർമ്മിച്ചത്"),
     "retry": MessageLookupByLibrary.simpleMessage("വീണ്ടും ശ്രമിക്കുക!"),
     "save": MessageLookupByLibrary.simpleMessage("സൂക്ഷിക്കുക"),
+    "savedAlbums": MessageLookupByLibrary.simpleMessage("സംരക്ഷിച്ചു"),
     "searchInLibrary": MessageLookupByLibrary.simpleMessage(
       "ലൈബ്രറിയിൽ തിരയുക",
     ),

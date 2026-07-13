@@ -54,6 +54,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "تمت إزالة الإشارة المرجعية للألبوم!",
     ),
     "albums": MessageLookupByLibrary.simpleMessage("البومات"),
+    "albumsByTaste": MessageLookupByLibrary.simpleMessage("حسب ذوقك"),
     "allFieldsReqMsg": MessageLookupByLibrary.simpleMessage(
       "جميع الحقول مطلوبة",
     ),
@@ -71,6 +72,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "الوصف غير متوفر!",
     ),
     "artists": MessageLookupByLibrary.simpleMessage("فنانين"),
+    "artistsByTaste": MessageLookupByLibrary.simpleMessage("حسب ذوقك"),
     "audioCodec": MessageLookupByLibrary.simpleMessage("ترميز الصوت"),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "قبول استخدام بيانات خاطئة...",
@@ -320,6 +322,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "favorites": MessageLookupByLibrary.simpleMessage("المفضلة"),
     "featuredplaylists": MessageLookupByLibrary.simpleMessage("قوائم مقترحة"),
     "follow": MessageLookupByLibrary.simpleMessage("يكمل"),
+    "followedArtists": MessageLookupByLibrary.simpleMessage("يتبع"),
     "following": MessageLookupByLibrary.simpleMessage("التالي"),
     "for1": MessageLookupByLibrary.simpleMessage("لأجل"),
     "forgottenFavorites": MessageLookupByLibrary.simpleMessage(
@@ -666,6 +669,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "recommend_cloud": MessageLookupByLibrary.simpleMessage(
       "نوصي بتنشيط الوضع السحابي للاستمتاع بتجربة تشبه تجربة Spotify: المزامنة في الوقت الفعلي بين جميع أجهزتك والنسخ الاحتياطي التلقائي دون الحاجة إلى القيام بأي شيء.",
     ),
+    "recommendedAlbums": MessageLookupByLibrary.simpleMessage("مُستَحسَن"),
+    "recommendedArtists": MessageLookupByLibrary.simpleMessage("مُستَحسَن"),
     "removeFromLib": MessageLookupByLibrary.simpleMessage(
       "إزالة من مكتبة الأغاني",
     ),
@@ -714,6 +719,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "results": MessageLookupByLibrary.simpleMessage("النتائج"),
     "retry": MessageLookupByLibrary.simpleMessage("حاول مجددا!"),
     "save": MessageLookupByLibrary.simpleMessage("يحفظ"),
+    "savedAlbums": MessageLookupByLibrary.simpleMessage("أنقذ"),
     "scanning": MessageLookupByLibrary.simpleMessage("جارٍ المسح..."),
     "search": MessageLookupByLibrary.simpleMessage("بحث"),
     "searchDes": MessageLookupByLibrary.simpleMessage(

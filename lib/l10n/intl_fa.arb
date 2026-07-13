@@ -522,5 +522,8 @@
   "userUnblocked": "کاربر آنلاک شده",
   "artistsByTaste": "با توجه به سلیقه شما",
   "followedArtists": "دنبال کرد",
-  "recommendedArtists": "توصیه می شود"
+  "recommendedArtists": "توصیه می شود",
+  "albumsByTaste": "با توجه به سلیقه شما",
+  "savedAlbums": "ذخیره شد",
+  "recommendedAlbums": "توصیه می شود"
 }

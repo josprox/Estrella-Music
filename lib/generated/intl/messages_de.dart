@@ -56,6 +56,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Album-Lesezeichen entfernt!",
     ),
     "albums": MessageLookupByLibrary.simpleMessage("Alben"),
+    "albumsByTaste": MessageLookupByLibrary.simpleMessage(
+      "Ganz nach Ihrem Geschmack",
+    ),
     "allFieldsReqMsg": MessageLookupByLibrary.simpleMessage(
       "Alle Felder benötigt",
     ),
@@ -73,6 +76,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Beschreibung nicht verfügbar!",
     ),
     "artists": MessageLookupByLibrary.simpleMessage("Künstler"),
+    "artistsByTaste": MessageLookupByLibrary.simpleMessage(
+      "Ganz nach Ihrem Geschmack",
+    ),
     "audioCodec": MessageLookupByLibrary.simpleMessage("Audio Codec"),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Akzeptieren Sie die Verwendung meiner Daten...",
@@ -363,6 +369,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Datei nicht gefunden",
     ),
     "follow": MessageLookupByLibrary.simpleMessage("Weitermachen"),
+    "followedArtists": MessageLookupByLibrary.simpleMessage("gefolgt"),
     "following": MessageLookupByLibrary.simpleMessage("Nachfolgend"),
     "for1": MessageLookupByLibrary.simpleMessage("für"),
     "forgottenFavorites": MessageLookupByLibrary.simpleMessage(
@@ -778,6 +785,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "recommend_cloud": MessageLookupByLibrary.simpleMessage(
       "Für ein Spotify-ähnliches Erlebnis empfehlen wir die Aktivierung des Cloud-Modus: Echtzeitsynchronisierung zwischen all Ihren Geräten und automatische Sicherung, ohne dass Sie etwas tun müssen.",
     ),
+    "recommendedAlbums": MessageLookupByLibrary.simpleMessage("Empfohlen"),
+    "recommendedArtists": MessageLookupByLibrary.simpleMessage("Empfohlen"),
     "removeFromLib": MessageLookupByLibrary.simpleMessage(
       "Lied aus der Bibliothek entfernen",
     ),
@@ -835,6 +844,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "results": MessageLookupByLibrary.simpleMessage("Ergebnisse"),
     "retry": MessageLookupByLibrary.simpleMessage("Wiederholen!"),
     "save": MessageLookupByLibrary.simpleMessage("Halten"),
+    "savedAlbums": MessageLookupByLibrary.simpleMessage("Gespeichert"),
     "scanning": MessageLookupByLibrary.simpleMessage("Scanne..."),
     "search": MessageLookupByLibrary.simpleMessage("Suche"),
     "searchDes": MessageLookupByLibrary.simpleMessage(

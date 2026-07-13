@@ -824,20 +824,20 @@ class S {
     );
   }
 
-  /// `Based on your tastes`
+  /// `According to your tastes`
   String get artistsByTaste {
     return Intl.message(
-      'Based on your tastes',
+      'According to your tastes',
       name: 'artistsByTaste',
       desc: '',
       args: [],
     );
   }
 
-  /// `Followed`
+  /// `followed`
   String get followedArtists {
     return Intl.message(
-      'Followed',
+      'followed',
       name: 'followedArtists',
       desc: '',
       args: [],
@@ -849,6 +849,31 @@ class S {
     return Intl.message(
       'Recommended',
       name: 'recommendedArtists',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `According to your tastes`
+  String get albumsByTaste {
+    return Intl.message(
+      'According to your tastes',
+      name: 'albumsByTaste',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Saved`
+  String get savedAlbums {
+    return Intl.message('Saved', name: 'savedAlbums', desc: '', args: []);
+  }
+
+  /// `Recommended`
+  String get recommendedAlbums {
+    return Intl.message(
+      'Recommended',
+      name: 'recommendedAlbums',
       desc: '',
       args: [],
     );

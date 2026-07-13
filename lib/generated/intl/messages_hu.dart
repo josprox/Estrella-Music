@@ -48,8 +48,14 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "album": MessageLookupByLibrary.simpleMessage("Album"),
     "albums": MessageLookupByLibrary.simpleMessage("Albumok"),
+    "albumsByTaste": MessageLookupByLibrary.simpleMessage(
+      "Az Ön ízlése szerint",
+    ),
     "appInfo": MessageLookupByLibrary.simpleMessage("Alkalmazás információ"),
     "artists": MessageLookupByLibrary.simpleMessage("Előadók"),
+    "artistsByTaste": MessageLookupByLibrary.simpleMessage(
+      "Az Ön ízlése szerint",
+    ),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Acepto usar mis datos...",
     ),
@@ -198,6 +204,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Kiemelt lejátszólisták",
     ),
     "follow": MessageLookupByLibrary.simpleMessage("Folytatás"),
+    "followedArtists": MessageLookupByLibrary.simpleMessage("követte"),
     "following": MessageLookupByLibrary.simpleMessage("Következő"),
     "forgottenFavorites": MessageLookupByLibrary.simpleMessage(
       "elfelejtett kedvencek",
@@ -464,6 +471,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "recommend_cloud": MessageLookupByLibrary.simpleMessage(
       "Javasoljuk, hogy aktiválja a Felhő módot a Spotify-szerű élmény érdekében: valós idejű szinkronizálás az összes eszköz között és automatikus biztonsági mentés anélkül, hogy bármit is tenne.",
     ),
+    "recommendedAlbums": MessageLookupByLibrary.simpleMessage("Ajánlott"),
+    "recommendedArtists": MessageLookupByLibrary.simpleMessage("Ajánlott"),
     "removeFromLib": MessageLookupByLibrary.simpleMessage(
       "Eltávolítás a gyűjteményből",
     ),
@@ -500,6 +509,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "restoring": MessageLookupByLibrary.simpleMessage("Visszaállítás..."),
     "retry": MessageLookupByLibrary.simpleMessage("Újrapróbálom!"),
     "save": MessageLookupByLibrary.simpleMessage("Tartsa"),
+    "savedAlbums": MessageLookupByLibrary.simpleMessage("Mentve"),
     "searchInLibrary": MessageLookupByLibrary.simpleMessage(
       "Keresés a könyvtárban",
     ),

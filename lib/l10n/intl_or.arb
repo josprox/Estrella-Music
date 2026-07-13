@@ -536,5 +536,8 @@
   "userUnblocked": "ଅନଲକ୍ ହୋଇଥିବା ଉପଭୋକ୍ତା |",
   "artistsByTaste": "ତୁମର ସ୍ୱାଦ ଅନୁସାରେ |",
   "followedArtists": "ଅନୁସରଣ କଲେ",
-  "recommendedArtists": "ପରାମର୍ଶିତ"
+  "recommendedArtists": "ପରାମର୍ଶିତ",
+  "albumsByTaste": "ତୁମର ସ୍ୱାଦ ଅନୁସାରେ |",
+  "savedAlbums": "ସଞ୍ଚୟ ହୋଇଛି |",
+  "recommendedAlbums": "ପରାମର୍ଶିତ"
 }

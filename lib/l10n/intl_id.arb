@@ -657,5 +657,8 @@
   "userUnblocked": "Pengguna tidak terkunci",
   "artistsByTaste": "Sesuai selera Anda",
   "followedArtists": "diikuti",
-  "recommendedArtists": "Direkomendasikan"
+  "recommendedArtists": "Direkomendasikan",
+  "albumsByTaste": "Sesuai selera Anda",
+  "savedAlbums": "Disimpan",
+  "recommendedAlbums": "Direkomendasikan"
 }

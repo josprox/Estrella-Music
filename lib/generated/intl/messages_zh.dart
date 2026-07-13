@@ -35,6 +35,8 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "about": MessageLookupByLibrary.simpleMessage("关于"),
+    "albumsByTaste": MessageLookupByLibrary.simpleMessage("根据你的口味"),
+    "artistsByTaste": MessageLookupByLibrary.simpleMessage("根据你的口味"),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "可爱的小兔子矢量素材 素材中国 素材网...",
     ),
@@ -94,6 +96,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "errorOccurred": MessageLookupByLibrary.simpleMessage("发生错误"),
     "errorPlayingTrack": MessageLookupByLibrary.simpleMessage("播放时出错："),
     "follow": MessageLookupByLibrary.simpleMessage("继续"),
+    "followedArtists": MessageLookupByLibrary.simpleMessage("已关注"),
     "following": MessageLookupByLibrary.simpleMessage("下列的"),
     "forgottenFavorites": MessageLookupByLibrary.simpleMessage("忘记收藏夹"),
     "friendFallback": MessageLookupByLibrary.simpleMessage("朋友"),
@@ -229,8 +232,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "recommend_cloud": MessageLookupByLibrary.simpleMessage(
       "我们建议激活云模式以获得类似 Spotify 的体验：所有设备之间的实时同步和自动备份，无需您执行任何操作。",
     ),
+    "recommendedAlbums": MessageLookupByLibrary.simpleMessage("受到推崇的"),
+    "recommendedArtists": MessageLookupByLibrary.simpleMessage("受到推崇的"),
     "reproducedBy": MessageLookupByLibrary.simpleMessage("转载者"),
     "save": MessageLookupByLibrary.simpleMessage("保持"),
+    "savedAlbums": MessageLookupByLibrary.simpleMessage("已保存"),
     "searchInLibrary": MessageLookupByLibrary.simpleMessage("在图书馆中搜索"),
     "search_recent_title": MessageLookupByLibrary.simpleMessage("最近的搜索"),
     "selectedFileNotFound": MessageLookupByLibrary.simpleMessage("未找到所选文件。"),

@@ -397,5 +397,8 @@
   "userUnblocked": "Разблакіраваны карыстальнік",
   "artistsByTaste": "Па вашым густам",
   "followedArtists": "рушыў услед",
-  "recommendedArtists": "Рэкамендуецца"
+  "recommendedArtists": "Рэкамендуецца",
+  "albumsByTaste": "Па вашым густам",
+  "savedAlbums": "Захавана",
+  "recommendedAlbums": "Рэкамендуецца"
 }

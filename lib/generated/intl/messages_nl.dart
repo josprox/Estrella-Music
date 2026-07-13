@@ -56,6 +56,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Album bladwijzer verwijderd!",
     ),
     "albums": MessageLookupByLibrary.simpleMessage("Albums"),
+    "albumsByTaste": MessageLookupByLibrary.simpleMessage("Volgens jouw smaak"),
     "allFieldsReqMsg": MessageLookupByLibrary.simpleMessage(
       "Alle velden zijn vereist",
     ),
@@ -69,6 +70,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Beschrijving niet beschikbaar!",
     ),
     "artists": MessageLookupByLibrary.simpleMessage("Artiesten"),
+    "artistsByTaste": MessageLookupByLibrary.simpleMessage(
+      "Volgens jouw smaak",
+    ),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Gebruik verkeerde gegevens...",
     ),
@@ -289,6 +293,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Aanbevolen Afspeellijsten",
     ),
     "follow": MessageLookupByLibrary.simpleMessage("Doorgaan"),
+    "followedArtists": MessageLookupByLibrary.simpleMessage("gevolgd"),
     "following": MessageLookupByLibrary.simpleMessage("Volgende"),
     "for1": MessageLookupByLibrary.simpleMessage("voor"),
     "forgottenFavorites": MessageLookupByLibrary.simpleMessage(
@@ -598,6 +603,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "recommend_cloud": MessageLookupByLibrary.simpleMessage(
       "Voor een Spotify-achtige ervaring raden wij aan om de Cloud Mode te activeren: real-time synchronisatie tussen al je apparaten en automatische back-up zonder dat je er iets voor hoeft te doen.",
     ),
+    "recommendedAlbums": MessageLookupByLibrary.simpleMessage("Aanbevolen"),
+    "recommendedArtists": MessageLookupByLibrary.simpleMessage("Aanbevolen"),
     "removeFromLib": MessageLookupByLibrary.simpleMessage(
       "Verwijder van bibliotheek Liedjes",
     ),
@@ -637,6 +644,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "results": MessageLookupByLibrary.simpleMessage("Resultaten"),
     "retry": MessageLookupByLibrary.simpleMessage("Probeer opnieuw!"),
     "save": MessageLookupByLibrary.simpleMessage("Houden"),
+    "savedAlbums": MessageLookupByLibrary.simpleMessage("Opgeslagen"),
     "scanning": MessageLookupByLibrary.simpleMessage("Scannen..."),
     "search": MessageLookupByLibrary.simpleMessage("Zoek"),
     "searchDes": MessageLookupByLibrary.simpleMessage(

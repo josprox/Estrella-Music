@@ -50,6 +50,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Albumin kirjanmerkki poistettu!",
     ),
     "albums": MessageLookupByLibrary.simpleMessage("Albumit"),
+    "albumsByTaste": MessageLookupByLibrary.simpleMessage(
+      "Sinun makusi mukaan",
+    ),
     "allFieldsReqMsg": MessageLookupByLibrary.simpleMessage(
       "Kaikki tiedot vaaditaan",
     ),
@@ -63,6 +66,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Kuvausta ei ole saatavilla!",
     ),
     "artists": MessageLookupByLibrary.simpleMessage("Artistit"),
+    "artistsByTaste": MessageLookupByLibrary.simpleMessage(
+      "Sinun makusi mukaan",
+    ),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Acepto usar mis datos...",
     ),
@@ -228,6 +234,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Suositellut soittolistat",
     ),
     "follow": MessageLookupByLibrary.simpleMessage("Jatkaa"),
+    "followedArtists": MessageLookupByLibrary.simpleMessage("seurannut"),
     "following": MessageLookupByLibrary.simpleMessage("Jälkeen"),
     "for1": MessageLookupByLibrary.simpleMessage("haulla"),
     "forgottenFavorites": MessageLookupByLibrary.simpleMessage(
@@ -532,6 +539,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "recommend_cloud": MessageLookupByLibrary.simpleMessage(
       "Suosittelemme Cloud Moden aktivointia Spotifyn kaltaisen kokemuksen saamiseksi: reaaliaikainen synkronointi kaikkien laitteidesi välillä ja automaattinen varmuuskopiointi ilman, että sinun tarvitsee tehdä mitään.",
     ),
+    "recommendedAlbums": MessageLookupByLibrary.simpleMessage("Suositeltava"),
+    "recommendedArtists": MessageLookupByLibrary.simpleMessage("Suositeltava"),
     "removeFromLib": MessageLookupByLibrary.simpleMessage("Poista kirjastosta"),
     "removeFromPlaylist": MessageLookupByLibrary.simpleMessage(
       "Poista soittolistalta",
@@ -555,6 +564,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "results": MessageLookupByLibrary.simpleMessage("Tulokset"),
     "retry": MessageLookupByLibrary.simpleMessage("Yritä uudelleen!"),
     "save": MessageLookupByLibrary.simpleMessage("Pitää"),
+    "savedAlbums": MessageLookupByLibrary.simpleMessage("Tallennettu"),
     "search": MessageLookupByLibrary.simpleMessage("Etsi"),
     "searchDes": MessageLookupByLibrary.simpleMessage(
       "Kappale, soittolista, albumi tai artisti",

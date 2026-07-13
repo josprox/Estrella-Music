@@ -496,5 +496,8 @@
   "userUnblocked": "Feloldott felhasználó",
   "artistsByTaste": "Az Ön ízlése szerint",
   "followedArtists": "követte",
-  "recommendedArtists": "Ajánlott"
+  "recommendedArtists": "Ajánlott",
+  "albumsByTaste": "Az Ön ízlése szerint",
+  "savedAlbums": "Mentve",
+  "recommendedAlbums": "Ajánlott"
 }

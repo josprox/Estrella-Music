@@ -544,5 +544,8 @@
   "userUnblocked": "Avattu käyttäjä",
   "artistsByTaste": "Sinun makusi mukaan",
   "followedArtists": "seurannut",
-  "recommendedArtists": "Suositeltava"
+  "recommendedArtists": "Suositeltava",
+  "albumsByTaste": "Sinun makusi mukaan",
+  "savedAlbums": "Tallennettu",
+  "recommendedAlbums": "Suositeltava"
 }

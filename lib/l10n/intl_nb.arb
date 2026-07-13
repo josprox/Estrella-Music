@@ -397,5 +397,8 @@
   "userUnblocked": "Ulåst bruker",
   "artistsByTaste": "Etter din smak",
   "followedArtists": "fulgte",
-  "recommendedArtists": "Anbefalt"
+  "recommendedArtists": "Anbefalt",
+  "albumsByTaste": "Etter din smak",
+  "savedAlbums": "Lagret",
+  "recommendedAlbums": "Anbefalt"
 }

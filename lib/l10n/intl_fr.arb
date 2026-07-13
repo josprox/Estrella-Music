@@ -669,5 +669,8 @@
   "userUnblocked": "Utilisateur débloqué",
   "artistsByTaste": "Selon vos goûts",
   "followedArtists": "suivi",
-  "recommendedArtists": "Recommandé"
+  "recommendedArtists": "Recommandé",
+  "albumsByTaste": "Selon vos goûts",
+  "savedAlbums": "Enregistré",
+  "recommendedAlbums": "Recommandé"
 }

@@ -666,5 +666,8 @@
   "userUnblocked": "Người dùng đã được mở khóa",
   "artistsByTaste": "Theo sở thích của bạn",
   "followedArtists": "đã theo dõi",
-  "recommendedArtists": "Khuyến khích"
+  "recommendedArtists": "Khuyến khích",
+  "albumsByTaste": "Theo sở thích của bạn",
+  "savedAlbums": "Đã lưu",
+  "recommendedAlbums": "Khuyến khích"
 }
