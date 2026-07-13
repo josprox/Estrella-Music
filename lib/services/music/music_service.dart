@@ -3,7 +3,7 @@
 import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:get/get.dart' as getx;
-import 'package:hive/hive.dart';
+import 'package:harmonymusic/services/storage/sqlite_store.dart';
 
 import 'package:harmonymusic/services/system/utils.dart';
 import 'package:harmonymusic/utils/helpers/helper.dart';
@@ -85,7 +85,7 @@ class MusicServices extends getx.GetxService {
       'contentPlaybackContext': {'signatureTimestamp': signatureTimestamp},
     };
 
-    final appPrefsBox = Hive.box('AppPrefs');
+    final appPrefsBox = SqliteStore.box('AppPrefs');
     hlCode = appPrefsBox.get('contentLanguage') ?? "en";
     if (appPrefsBox.containsKey('visitorId')) {
       final visitorData = appPrefsBox.get("visitorId");
@@ -96,7 +96,7 @@ class MusicServices extends getx.GetxService {
           'id': visitorData['id'],
           'exp': DateTime.now().millisecondsSinceEpoch ~/ 1000 + 2590200
         });
-        printINFO("Got Visitor id (${visitorData['id']}) from Box");
+        printINFO("Got Visitor id (${visitorData['id']}) from SqliteBox");
         return;
       }
     }
@@ -121,7 +121,7 @@ class MusicServices extends getx.GetxService {
   void setVisitorId(String id) {
     _headers['X-Goog-Visitor-Id'] = id;
     _context['context']['client']['visitorData'] = id;
-    final appPrefsBox = Hive.box('AppPrefs');
+    final appPrefsBox = SqliteStore.box('AppPrefs');
     appPrefsBox.put("visitorId", {
       'id': id,
       'exp': DateTime.now().millisecondsSinceEpoch ~/ 1000 + 2592000

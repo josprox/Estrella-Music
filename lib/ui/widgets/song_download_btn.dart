@@ -1,9 +1,9 @@
-﻿import 'package:audio_service/audio_service.dart';
+import 'package:audio_service/audio_service.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/services/download/downloader.dart';
 import 'package:harmonymusic/ui/player/player_controller.dart';
-import 'package:hive/hive.dart';
+import 'package:harmonymusic/services/storage/sqlite_store.dart';
 
 import 'loader.dart';
 import 'snackbar.dart';
@@ -34,7 +34,7 @@ class SongDownloadButton extends StatelessWidget {
       }
 
       return (isDownloadingDone ||
-              Hive.box("SongDownloads").containsKey(song.id))
+              SqliteStore.box("SongDownloads").containsKey(song.id))
           ? Icon(
               Icons.download_done,
               color: Theme.of(context).textTheme.titleMedium!.color,
@@ -71,7 +71,7 @@ class SongDownloadButton extends StatelessWidget {
                         color: Theme.of(context).textTheme.titleMedium!.color,
                       ),
                       onPressed: () {
-                        (Hive.openBox("SongsCache").then((box) {
+                        (SqliteStore.openBox("SongsCache").then((box) {
                           if (box.containsKey(song.id)) {
                             if (!context.mounted) return;
                             Navigator.of(context).pop();

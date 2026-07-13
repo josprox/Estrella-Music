@@ -71,6 +71,51 @@ class SyncHttpClient {
     );
   }
 
+  Future<Map<String, dynamic>> pushChanges(
+    String baseUrl,
+    String token,
+    List<Map<String, dynamic>> changes,
+    String deviceId,
+  ) async {
+    final response = await _dio.post(
+      '${baseUrl}api/sync/changes',
+      options: Options(headers: _headers(token)),
+      data: {'changes': changes, 'device_id': deviceId},
+    );
+    if (response.statusCode == 200 && response.data is Map) {
+      final data = Map<String, dynamic>.from(response.data as Map);
+      if (data['status'] == 'success') return data;
+    }
+    throw DioException(
+      requestOptions: response.requestOptions,
+      response: response,
+      message:
+          'Incremental sync push failed with status ${response.statusCode}',
+    );
+  }
+
+  Future<Map<String, dynamic>> pullChanges(
+    String baseUrl,
+    String token,
+    int sinceVersion,
+  ) async {
+    final response = await _dio.get(
+      '${baseUrl}api/sync/changes',
+      queryParameters: {'since_version': sinceVersion},
+      options: Options(headers: _headers(token)),
+    );
+    if (response.statusCode == 200 && response.data is Map) {
+      final data = Map<String, dynamic>.from(response.data as Map);
+      if (data['status'] == 'success') return data;
+    }
+    throw DioException(
+      requestOptions: response.requestOptions,
+      response: response,
+      message:
+          'Incremental sync pull failed with status ${response.statusCode}',
+    );
+  }
+
   Future<bool> pushCollaborative(String baseUrl, String token,
       Map<String, dynamic> playlistPayload) async {
     final response = await _dio.post(

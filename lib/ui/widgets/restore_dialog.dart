@@ -1,15 +1,11 @@
-﻿import 'dart:io';
+import 'dart:io';
 
-import 'package:archive/archive_io.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hive/hive.dart';
-import 'package:path_provider/path_provider.dart';
+import 'package:harmonymusic/services/backup/app_backup_service.dart';
 import 'package:restart_app/restart_app.dart';
 
-import '/ui/screens/Settings/settings_screen_controller.dart';
-import 'package:harmonymusic/utils/helpers/helper.dart';
 import 'package:harmonymusic/services/system/permission_service.dart';
 import 'common_dialog_widget.dart';
 import 'package:harmonymusic/generated/l10n.dart';
@@ -156,68 +152,14 @@ class RestoreDialogController extends GetxController {
       return;
     }
     processingFiles.value = true;
-    await Future.delayed(const Duration(seconds: 4));
-    final restoreFilePath = pickedFile.toString();
-    final supportDirPath = Get.find<SettingsScreenController>().supportDirPath;
-    final dbDirPath = await Get.find<SettingsScreenController>().dbDir;
-    final Directory dbDir = Directory(dbDirPath);
-    printInfo(info: dbDir.path);
-    await Get.find<SettingsScreenController>().closeAllDatabases();
-
-    //delele all the files with extension .hive
-    for (final file in dbDir.listSync()) {
-      if (file is File && file.path.endsWith('.hive')) {
-        await file.delete();
-      }
-    }
-    final bytes = await File(restoreFilePath).readAsBytes();
-    final archive = ZipDecoder().decodeBytes(bytes);
-    filesToRestore.value = archive.length;
-    restoreProgress.value = 0;
-    processingFiles.value = false;
     restoreRunning.value = true;
-    for (final file in archive) {
-      final filename = file.name;
-      printINFO(filename);
-      if (file.isFile) {
-        final data = file.content as List<int>;
-        final targetFileDir =
-            filename.endsWith(".m4a") || filename.endsWith(".opus")
-                ? "$supportDirPath/Music"
-                : filename.endsWith(".png")
-                    ? "$supportDirPath/thumbnails"
-                    : dbDirPath;
-        final outputFile = File('$targetFileDir/$filename');
-        await outputFile.create(recursive: true);
-        await outputFile.writeAsBytes(data);
-        restoreProgress.value++;
-      }
+    try {
+      await Get.find<AppBackupService>().restoreBackupFile(pickedFile);
+      restoreProgress.value = 1;
+      filesToRestore.value = 1;
+    } finally {
+      processingFiles.value = false;
+      restoreRunning.value = false;
     }
-    // Clear file picker temp directory
-    final tempFilePickerDirPath =
-        "${(await getApplicationCacheDirectory()).path}/file_picker";
-    final tempFilePickerDir = Directory(tempFilePickerDirPath);
-    if (tempFilePickerDir.existsSync()) {
-      await tempFilePickerDir.delete(recursive: true);
-    }
-
-    // change file download path to support dir path in songs if system is windows or linux
-    if (GetPlatform.isWindows || GetPlatform.isLinux) {
-      // open the restored box
-      final newSongBox = await Hive.openBox("SongDownloads");
-      final downloadedSongs = newSongBox.values.toList();
-      for(final song in downloadedSongs) {
-        final songPath = song["url"];
-        if (songPath != null && songPath is String) {
-          final fileName = songPath.split("/").last;
-          final newFilePath = "$supportDirPath/Music/$fileName";
-          song["url"] = newFilePath;
-          song['streamInfo'][1]['url'] = newFilePath;
-          await newSongBox.put(song["videoId"], song);
-        }
-      }
-    }
-
-    restoreRunning.value = false;
   }
 }

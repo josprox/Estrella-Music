@@ -3,12 +3,13 @@ import 'dart:typed_data';
 
 import 'package:archive/archive_io.dart';
 import 'package:get/get.dart';
-import 'package:hive/hive.dart';
+import 'package:harmonymusic/services/storage/sqlite_store.dart';
 import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
 
 import 'package:harmonymusic/utils/helpers/helper.dart';
 import 'package:harmonymusic/services/music/music_service.dart';
+import 'package:harmonymusic/services/sync/music_sqlite_service.dart';
 
 class AppBackupService extends GetxService {
   Future<String> get supportDirPath async {
@@ -28,12 +29,22 @@ class AppBackupService extends GetxService {
   }
 
   Future<List<String>> collectFilesToBackup() async {
+    SqliteStore.checkpoint();
+    if (Get.isRegistered<MusicSqliteService>()) {
+      Get.find<MusicSqliteService>().checkpoint();
+    }
     final files = <String>[];
-    final dbDir = Directory(await databaseDirPath);
-    if (await dbDir.exists()) {
-      await for (final entity in dbDir.list(recursive: false)) {
-        if (entity is File && entity.path.endsWith('.hive')) {
-          files.add(entity.path);
+    final databaseDirectories = <String>{
+      await databaseDirPath,
+      '${await supportDirPath}/db',
+    };
+    for (final path in databaseDirectories) {
+      final dbDir = Directory(path);
+      if (await dbDir.exists()) {
+        await for (final entity in dbDir.list(recursive: false)) {
+          if (entity is File && entity.path.endsWith('.sqlite3')) {
+            files.add(entity.path);
+          }
         }
       }
     }
@@ -112,7 +123,11 @@ class AppBackupService extends GetxService {
     final dbDir = Directory(dbDirPath);
     final appSupportDir = await supportDirPath;
 
-    await Hive.close();
+    await SqliteStore.close();
+    final musicDatabase = Get.isRegistered<MusicSqliteService>()
+        ? Get.find<MusicSqliteService>()
+        : null;
+    await musicDatabase?.closeDatabase();
 
     if (clearExistingMediaAssets) {
       await _clearDirectoryContents(Directory('$appSupportDir/Music'));
@@ -120,10 +135,20 @@ class AppBackupService extends GetxService {
       await _clearCachedSongs();
     }
 
-    if (await dbDir.exists()) {
-      await for (final entity in dbDir.list(recursive: false)) {
-        if (entity is File && entity.path.endsWith('.hive')) {
-          await entity.delete();
+    final databaseDirectories = <Directory>{
+      dbDir,
+      Directory('$appSupportDir/db'),
+    };
+    for (final directory in databaseDirectories) {
+      if (await directory.exists()) {
+        await for (final entity in directory.list(recursive: false)) {
+          if (entity is File &&
+              (entity.path.endsWith('.sqlite3') ||
+                  entity.path.endsWith('.sqlite3-wal') ||
+                  entity.path.endsWith('.sqlite3-shm') ||
+                  entity.path.endsWith('.hive'))) {
+            await entity.delete();
+          }
         }
       }
     }
@@ -143,8 +168,11 @@ class AppBackupService extends GetxService {
       await outputFile.writeAsBytes(content, flush: true);
     }
 
+    await SqliteStore.initialize(dbDirPath);
+    await musicDatabase?.initialize();
+
     if (GetPlatform.isWindows || GetPlatform.isLinux) {
-      final songDownloadsBox = await Hive.openBox('SongDownloads');
+      final songDownloadsBox = await SqliteStore.openBox('SongDownloads');
       for (final key in songDownloadsBox.keys.toList()) {
         final song = songDownloadsBox.get(key);
         if (song is! Map) {
@@ -174,7 +202,7 @@ class AppBackupService extends GetxService {
       await ensureCoreBoxesOpen();
 
       // Refresh visitor data from restored prefs
-      final appPrefs = Hive.box('AppPrefs');
+      final appPrefs = SqliteStore.box('AppPrefs');
       final visitorData = appPrefs.get('visitorId');
       if (visitorData != null && visitorData['id'] != null) {
         Get.find<MusicServices>().setVisitorId(visitorData['id'].toString());
@@ -196,38 +224,38 @@ class AppBackupService extends GetxService {
   }
 
   Future<void> ensureCoreBoxesOpen() async {
-    if (!Hive.isBoxOpen('SongsCache')) {
-      await Hive.openBox('SongsCache');
+    if (!SqliteStore.isBoxOpen('SongsCache')) {
+      await SqliteStore.openBox('SongsCache');
     }
-    if (!Hive.isBoxOpen('SongDownloads')) {
-      await Hive.openBox('SongDownloads');
+    if (!SqliteStore.isBoxOpen('SongDownloads')) {
+      await SqliteStore.openBox('SongDownloads');
     }
-    if (!Hive.isBoxOpen('SongsUrlCache')) {
-      await Hive.openBox('SongsUrlCache');
+    if (!SqliteStore.isBoxOpen('SongsUrlCache')) {
+      await SqliteStore.openBox('SongsUrlCache');
     }
-    if (!Hive.isBoxOpen('AppPrefs')) {
-      await Hive.openBox('AppPrefs');
+    if (!SqliteStore.isBoxOpen('AppPrefs')) {
+      await SqliteStore.openBox('AppPrefs');
     }
-    if (!Hive.isBoxOpen('LIBFAV')) {
-      await Hive.openBox('LIBFAV');
+    if (!SqliteStore.isBoxOpen('LIBFAV')) {
+      await SqliteStore.openBox('LIBFAV');
     }
-    if (!Hive.isBoxOpen('LIBRP')) {
-      await Hive.openBox('LIBRP');
+    if (!SqliteStore.isBoxOpen('LIBRP')) {
+      await SqliteStore.openBox('LIBRP');
     }
-    if (!Hive.isBoxOpen('LibraryArtists')) {
-      await Hive.openBox('LibraryArtists');
+    if (!SqliteStore.isBoxOpen('LibraryArtists')) {
+      await SqliteStore.openBox('LibraryArtists');
     }
-    if (!Hive.isBoxOpen('LibraryAlbums')) {
-      await Hive.openBox('LibraryAlbums');
+    if (!SqliteStore.isBoxOpen('LibraryAlbums')) {
+      await SqliteStore.openBox('LibraryAlbums');
     }
-    if (!Hive.isBoxOpen('LibraryPlaylists')) {
-      await Hive.openBox('LibraryPlaylists');
+    if (!SqliteStore.isBoxOpen('LibraryPlaylists')) {
+      await SqliteStore.openBox('LibraryPlaylists');
     }
-    if (!Hive.isBoxOpen('homeScreenData')) {
-      await Hive.openBox('homeScreenData');
+    if (!SqliteStore.isBoxOpen('homeScreenData')) {
+      await SqliteStore.openBox('homeScreenData');
     }
-    if (!Hive.isBoxOpen('PendingSyncChanges')) {
-      await Hive.openBox('PendingSyncChanges');
+    if (!SqliteStore.isBoxOpen('PendingSyncChanges')) {
+      await SqliteStore.openBox('PendingSyncChanges');
     }
   }
 
@@ -243,6 +271,9 @@ class AppBackupService extends GetxService {
     }
     if (fileName.endsWith('.png')) {
       return '$supportDir/thumbnails';
+    }
+    if (fileName.startsWith(MusicSqliteService.databaseFileName)) {
+      return '$supportDir/db';
     }
     return dbDirPath;
   }
@@ -266,15 +297,12 @@ class AppBackupService extends GetxService {
   }
 
   Future<Set<String>> _readBoxKeys(String boxName) async {
-    final dbFile = File('${await databaseDirPath}/$boxName.hive');
-    if (!Hive.isBoxOpen(boxName) && !await dbFile.exists()) {
-      return <String>{};
-    }
-
-    Box<dynamic>? box;
-    final wasOpen = Hive.isBoxOpen(boxName);
+    SqliteBox<dynamic>? box;
+    final wasOpen = SqliteStore.isBoxOpen(boxName);
     try {
-      box = wasOpen ? Hive.box(boxName) : await Hive.openBox(boxName);
+      box = wasOpen
+          ? SqliteStore.box(boxName)
+          : await SqliteStore.openBox(boxName);
       return box.keys
           .map((key) => key.toString().trim())
           .where((key) => key.isNotEmpty)
@@ -287,21 +315,13 @@ class AppBackupService extends GetxService {
   }
 
   Future<void> _deleteBoxFromDisk(String boxName) async {
-    final dbFile = File('${await databaseDirPath}/$boxName.hive');
-    if (!Hive.isBoxOpen(boxName) && !await dbFile.exists()) {
-      return;
-    }
-
     try {
-      final box = Hive.isBoxOpen(boxName)
-          ? Hive.box(boxName)
-          : await Hive.openBox(boxName);
+      final box = SqliteStore.isBoxOpen(boxName)
+          ? SqliteStore.box(boxName)
+          : await SqliteStore.openBox(boxName);
       await box.deleteFromDisk();
     } catch (e) {
-      printERROR('No fue posible borrar la caja $boxName: $e');
-      if (await dbFile.exists()) {
-        await dbFile.delete();
-      }
+      printERROR('No fue posible borrar la coleccion $boxName: $e');
     }
   }
 

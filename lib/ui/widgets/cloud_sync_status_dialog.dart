@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hive/hive.dart';
+import 'package:harmonymusic/services/storage/sqlite_store.dart';
 
 import 'package:harmonymusic/services/auth/auth_service.dart';
 import 'package:harmonymusic/services/sync/cloud_migration_service.dart';
@@ -18,7 +18,7 @@ class CloudSyncStatusDialog extends StatelessWidget {
 
   Future<void> _startMigration(BuildContext context) async {
     if (!_auth.isAuthenticated.value) {
-      final prefs = Hive.box('AppPrefs');
+      final prefs = SqliteStore.box('AppPrefs');
       await prefs.put('emusicModeChoiceCompleted', true);
       await prefs.put('emusicCloudRequested', true);
       if (context.mounted) Navigator.of(context).pop();
@@ -40,7 +40,7 @@ class CloudSyncStatusDialog extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final cs = theme.colorScheme;
-    final prefs = Hive.box('AppPrefs');
+    final prefs = SqliteStore.box('AppPrefs');
     final mode = prefs.get('emusicDataMode', defaultValue: 'local').toString();
     final migrationStatus = prefs
         .get('cloudMigrationStatus', defaultValue: 'not_started')

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hive/hive.dart';
+import 'package:harmonymusic/services/storage/sqlite_store.dart';
 
 import '/ui/screens/Search/search_screen_controller.dart';
 import 'package:harmonymusic/ui/screens/Search/search_screen.dart';
@@ -241,7 +241,7 @@ class Body extends StatelessWidget {
                                           ),
                                     ),
                                      const Spacer(),
-                                     if (Hive.box('AppPrefs').get('emusicDataMode', defaultValue: 'local') == 'cloud') ...[
+                                     if (SqliteStore.box('AppPrefs').get('emusicDataMode', defaultValue: 'local') == 'cloud') ...[
                                        IconButton(
                                          icon: const Icon(Icons.group_add_rounded,
                                              size: 30),

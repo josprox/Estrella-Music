@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hive_flutter/hive_flutter.dart';
+import 'package:harmonymusic/services/storage/sqlite_store.dart';
 import 'package:audio_service/audio_service.dart';
 import '/ui/screens/Artists/artist_screen_controller.dart';
 import '/ui/widgets/loader.dart';
@@ -407,7 +407,7 @@ class _SpotifyArtistScreen extends StatelessWidget {
                                     final downloader = Get.find<Downloader>();
                                     int count = 0;
                                     for (var song in ctrl.likedSongsOfArtist) {
-                                      if (!Hive.box("SongDownloads").containsKey(song.id)) {
+                                      if (!SqliteStore.box("SongDownloads").containsKey(song.id)) {
                                         downloader.download(song);
                                         count++;
                                       }
@@ -1261,7 +1261,7 @@ class _SpotifyArtistScreen extends StatelessWidget {
                                           final downloader = Get.find<Downloader>();
                                           int count = 0;
                                           for (var song in ctrl.likedSongsOfArtist) {
-                                            if (!Hive.box("SongDownloads").containsKey(song.id)) {
+                                            if (!SqliteStore.box("SongDownloads").containsKey(song.id)) {
                                               downloader.download(song);
                                               count++;
                                             }
@@ -1500,13 +1500,19 @@ class _TrackRow extends StatelessWidget {
     final song = (item is MediaItem) ? item : MediaItemBuilder.fromJson(item);
     final syncService = Get.find<SyncService>();
     await syncService.performLocalMutation(() async {
-      final box = await Hive.openBox("LIBFAV");
-      if (box.containsKey(song.id)) {
+      final box = await SqliteStore.openBox("LIBFAV");
+      final wasFavorite = box.containsKey(song.id);
+      final track = MediaItemBuilder.toJson(song);
+      await syncService.recordFavoriteChange(
+        song.id,
+        deleted: wasFavorite,
+        track: track,
+      );
+      if (wasFavorite) {
         await box.delete(song.id);
       } else {
-        await box.put(song.id, MediaItemBuilder.toJson(song));
+        await box.put(song.id, track);
       }
-      syncService.triggerPush();
     });
   }
 
@@ -1619,8 +1625,8 @@ class _TrackRow extends StatelessWidget {
               ),
               // Like icon
               ValueListenableBuilder(
-                valueListenable: Hive.box("LIBFAV").listenable(),
-                builder: (context, Box box, _) {
+                valueListenable: SqliteStore.box("LIBFAV").listenable(),
+                builder: (context, SqliteBox box, _) {
                   final isLiked = box.containsKey(songId);
                   return IconButton(
                     onPressed: () => toggleLike(item),

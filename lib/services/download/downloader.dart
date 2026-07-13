@@ -7,7 +7,7 @@ import 'package:audiotags/audiotags.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:hive/hive.dart';
+import 'package:harmonymusic/services/storage/sqlite_store.dart';
 
 import 'package:harmonymusic/ui/screens/Album/album_screen_controller.dart';
 import 'package:harmonymusic/ui/screens/Playlist/playlist_screen_controller.dart';
@@ -140,7 +140,7 @@ class Downloader extends GetxService {
         break;
       }
 
-      if (Hive.box("SongDownloads").containsKey(song.id)) {
+      if (SqliteStore.box("SongDownloads").containsKey(song.id)) {
         songQueue.remove(song);
         continue;
       }
@@ -252,7 +252,7 @@ class Downloader extends GetxService {
         // [playbility status, info map]
         songJson["streamInfo"] = [true, streamInfoJson];
 
-        Hive.box("SongDownloads").put(song.id, songJson);
+        SqliteStore.box("SongDownloads").put(song.id, songJson);
         Get.find<LibrarySongsController>().librarySongsList.add(song);
         printINFO("Downloaded successfully");
 

@@ -3,7 +3,7 @@ import 'dart:typed_data';
 
 import 'package:archive/archive.dart';
 import 'package:get/get.dart';
-import 'package:hive/hive.dart';
+import 'package:harmonymusic/services/storage/sqlite_store.dart';
 import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
 import 'package:sqlite3/sqlite3.dart';
@@ -94,7 +94,7 @@ class LegacyMusicMigrationService extends GetxService {
       );
       final searchHistory = _loadSearchHistory(database);
 
-      await _writeMigrationToHive(
+      await _writeMigrationToLocalStore(
         songs: songs,
         playlists: playlists,
         albums: albums,
@@ -517,7 +517,7 @@ class LegacyMusicMigrationService extends GetxService {
     return artists.values.toList();
   }
 
-  Future<void> _writeMigrationToHive({
+  Future<void> _writeMigrationToLocalStore({
     required Map<String, _LegacySong> songs,
     required List<_LegacyPlaylist> playlists,
     required Map<String, _LegacyAlbum> albums,
@@ -525,11 +525,11 @@ class LegacyMusicMigrationService extends GetxService {
     required List<String> searchHistory,
     required Set<String> importedSongIds,
   }) async {
-    final libraryPlaylistsBox = await Hive.openBox('LibraryPlaylists');
-    final favoritesBox = await Hive.openBox('LIBFAV');
-    final albumsBox = await Hive.openBox('LibraryAlbums');
-    final artistsBox = await Hive.openBox('LibraryArtists');
-    final queryBox = await Hive.openBox("searchQuery");
+    final libraryPlaylistsBox = await SqliteStore.openBox('LibraryPlaylists');
+    final favoritesBox = await SqliteStore.openBox('LIBFAV');
+    final albumsBox = await SqliteStore.openBox('LibraryAlbums');
+    final artistsBox = await SqliteStore.openBox('LibraryArtists');
+    final queryBox = await SqliteStore.openBox("searchQuery");
 
     if (searchHistory.isNotEmpty) {
       for (var query in searchHistory) {
@@ -545,7 +545,7 @@ class LegacyMusicMigrationService extends GetxService {
           .map((songId) => songs[songId])
           .whereType<_LegacySong>()
           .toList();
-      final legacyPlaylistBox = await Hive.openBox(legacyLibraryPlaylistId);
+      final legacyPlaylistBox = await SqliteStore.openBox(legacyLibraryPlaylistId);
       await legacyPlaylistBox.clear();
       for (var index = 0; index < legacySongs.length; index++) {
         await legacyPlaylistBox.put(index, legacySongs[index].toHarmonyJson());
@@ -577,7 +577,7 @@ class LegacyMusicMigrationService extends GetxService {
       }
 
       final playlistId = _playlistIdForLegacy(playlist.legacyId);
-      final playlistBox = await Hive.openBox(playlistId);
+      final playlistBox = await SqliteStore.openBox(playlistId);
       await playlistBox.clear();
       for (var index = 0; index < playlist.songs.length; index++) {
         await playlistBox.put(index, playlist.songs[index].toHarmonyJson());
@@ -601,7 +601,7 @@ class LegacyMusicMigrationService extends GetxService {
         continue;
       }
 
-      final albumBox = await Hive.openBox(album.id);
+      final albumBox = await SqliteStore.openBox(album.id);
       await albumBox.clear();
       for (var index = 0; index < album.songs.length; index++) {
         await albumBox.put(index, album.songs[index].toHarmonyJson());

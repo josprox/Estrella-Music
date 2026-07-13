@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:audio_service/audio_service.dart';
 import 'package:get/get.dart';
-import 'package:hive/hive.dart';
+import 'package:harmonymusic/services/storage/sqlite_store.dart';
 import 'package:path_provider/path_provider.dart';
 
 import 'package:harmonymusic/models/album.dart';
@@ -133,10 +133,10 @@ class CatalogRecoveryService extends GetxService {
     required String oldBrowseId,
     required Artist artist,
   }) async {
-    final wasOpen = Hive.isBoxOpen('LibraryArtists');
+    final wasOpen = SqliteStore.isBoxOpen('LibraryArtists');
     final box = wasOpen
-        ? Hive.box('LibraryArtists')
-        : await Hive.openBox('LibraryArtists');
+        ? SqliteStore.box('LibraryArtists')
+        : await SqliteStore.openBox('LibraryArtists');
 
     if (oldBrowseId != artist.browseId) {
       await box.delete(oldBrowseId);
@@ -154,10 +154,10 @@ class CatalogRecoveryService extends GetxService {
     required Album album,
     required List<MediaItem> tracks,
   }) async {
-    final wasOpen = Hive.isBoxOpen('LibraryAlbums');
+    final wasOpen = SqliteStore.isBoxOpen('LibraryAlbums');
     final box = wasOpen
-        ? Hive.box('LibraryAlbums')
-        : await Hive.openBox('LibraryAlbums');
+        ? SqliteStore.box('LibraryAlbums')
+        : await SqliteStore.openBox('LibraryAlbums');
 
     if (oldBrowseId != album.browseId) {
       await box.delete(oldBrowseId);
@@ -181,10 +181,10 @@ class CatalogRecoveryService extends GetxService {
     required Playlist playlist,
     required List<MediaItem> tracks,
   }) async {
-    final wasOpen = Hive.isBoxOpen('LibraryPlaylists');
+    final wasOpen = SqliteStore.isBoxOpen('LibraryPlaylists');
     final box = wasOpen
-        ? Hive.box('LibraryPlaylists')
-        : await Hive.openBox('LibraryPlaylists');
+        ? SqliteStore.box('LibraryPlaylists')
+        : await SqliteStore.openBox('LibraryPlaylists');
 
     if (oldPlaylistId != playlist.playlistId) {
       await box.delete(oldPlaylistId);
@@ -328,9 +328,9 @@ class CatalogRecoveryService extends GetxService {
   }
 
   Future<Set<String>> _collectContentBoxNames(String libraryBoxName) async {
-    final wasOpen = Hive.isBoxOpen(libraryBoxName);
+    final wasOpen = SqliteStore.isBoxOpen(libraryBoxName);
     final box =
-        wasOpen ? Hive.box(libraryBoxName) : await Hive.openBox(libraryBoxName);
+        wasOpen ? SqliteStore.box(libraryBoxName) : await SqliteStore.openBox(libraryBoxName);
 
     final boxNames = box.keys
         .map((key) => key?.toString() ?? '')
@@ -349,8 +349,8 @@ class CatalogRecoveryService extends GetxService {
     required MediaItem oldSong,
     required MediaItem recoveredSong,
   }) async {
-    final wasOpen = Hive.isBoxOpen(boxName);
-    final box = wasOpen ? Hive.box(boxName) : await Hive.openBox(boxName);
+    final wasOpen = SqliteStore.isBoxOpen(boxName);
+    final box = wasOpen ? SqliteStore.box(boxName) : await SqliteStore.openBox(boxName);
 
     for (final key in box.keys.toList()) {
       final value = box.get(key);
@@ -374,10 +374,10 @@ class CatalogRecoveryService extends GetxService {
     required MediaItem oldSong,
     required MediaItem recoveredSong,
   }) async {
-    final wasOpen = Hive.isBoxOpen('SongDownloads');
+    final wasOpen = SqliteStore.isBoxOpen('SongDownloads');
     final box = wasOpen
-        ? Hive.box('SongDownloads')
-        : await Hive.openBox('SongDownloads');
+        ? SqliteStore.box('SongDownloads')
+        : await SqliteStore.openBox('SongDownloads');
 
     if (box.containsKey(oldSong.id)) {
       final value = box.get(oldSong.id);
@@ -427,9 +427,9 @@ class CatalogRecoveryService extends GetxService {
   }
 
   Future<void> _deleteCachedSong(String songId) async {
-    final wasOpen = Hive.isBoxOpen('SongsCache');
+    final wasOpen = SqliteStore.isBoxOpen('SongsCache');
     final box =
-        wasOpen ? Hive.box('SongsCache') : await Hive.openBox('SongsCache');
+        wasOpen ? SqliteStore.box('SongsCache') : await SqliteStore.openBox('SongsCache');
     await box.delete(songId);
     if (!wasOpen && box.isOpen) {
       await box.close();
@@ -447,10 +447,10 @@ class CatalogRecoveryService extends GetxService {
   }
 
   Future<void> _deleteSongUrlCache(String songId) async {
-    final wasOpen = Hive.isBoxOpen('SongsUrlCache');
+    final wasOpen = SqliteStore.isBoxOpen('SongsUrlCache');
     final box = wasOpen
-        ? Hive.box('SongsUrlCache')
-        : await Hive.openBox('SongsUrlCache');
+        ? SqliteStore.box('SongsUrlCache')
+        : await SqliteStore.openBox('SongsUrlCache');
     await box.delete(songId);
     if (!wasOpen && box.isOpen) {
       await box.close();
@@ -462,7 +462,7 @@ class CatalogRecoveryService extends GetxService {
     required String newBoxName,
     required List<MediaItem> tracks,
   }) async {
-    final newBox = await Hive.openBox(newBoxName);
+    final newBox = await SqliteStore.openBox(newBoxName);
     await newBox.clear();
     for (var index = 0; index < tracks.length; index++) {
       await newBox.put(index, MediaItemBuilder.toJson(tracks[index]));
@@ -478,9 +478,9 @@ class CatalogRecoveryService extends GetxService {
 
   Future<void> _deleteBox(String boxName) async {
     try {
-      final box = Hive.isBoxOpen(boxName)
-          ? Hive.box(boxName)
-          : await Hive.openBox(boxName);
+      final box = SqliteStore.isBoxOpen(boxName)
+          ? SqliteStore.box(boxName)
+          : await SqliteStore.openBox(boxName);
       await box.deleteFromDisk();
     } catch (e) {
       printERROR('No fue posible borrar la caja antigua $boxName: $e');

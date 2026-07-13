@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:flutter_lyric/lyrics_reader.dart';
 import 'package:dio/dio.dart';
 import 'package:harmonymusic/services/system/translation_service.dart';
-import 'package:hive/hive.dart';
+import 'package:harmonymusic/services/storage/sqlite_store.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:audio_service/audio_service.dart';
@@ -196,7 +196,7 @@ class PlayerController extends GetxController
     _listenForPlaylistChange();
     _listenForKeyboardActivity();
     _setInitLyricsMode();
-    final appPrefs = Hive.box("AppPrefs");
+    final appPrefs = SqliteStore.box("AppPrefs");
     isLoopModeEnabled.value = appPrefs.get("isLoopModeEnabled") ?? false;
     isShuffleModeEnabled.value = appPrefs.get("isShuffleModeEnabled") ?? false;
     isQueueLoopModeEnabled.value =
@@ -229,7 +229,7 @@ class PlayerController extends GetxController
   }
 
   void _setInitLyricsMode() {
-    lyricsMode.value = Hive.box("AppPrefs").get("lyricsMode") ?? 0;
+    lyricsMode.value = SqliteStore.box("AppPrefs").get("lyricsMode") ?? 0;
   }
 
   void panellistener(double x) {
@@ -413,9 +413,9 @@ class PlayerController extends GetxController
 
   Future<void> _restorePrevSession() async {
     final restrorePrevSessionEnabled =
-        Hive.box("AppPrefs").get("restrorePlaybackSession") ?? false;
+        SqliteStore.box("AppPrefs").get("restrorePlaybackSession") ?? false;
     if (restrorePrevSessionEnabled) {
-      final prevSessionData = await Hive.openBox("prevSessionData");
+      final prevSessionData = await SqliteStore.openBox("prevSessionData");
       if (prevSessionData.keys.isNotEmpty) {
         final songList = (prevSessionData.get("queue") as List)
             .map((e) => MediaItemBuilder.fromJson(e))
@@ -447,7 +447,7 @@ class PlayerController extends GetxController
   Future<void> _saveSession() async {
     if (currentQueue.isEmpty || currentSong.value == null) return;
     try {
-      final box = await Hive.openBox("prevSessionData");
+      final box = await SqliteStore.openBox("prevSessionData");
       await box.put("queue",
           currentQueue.map((e) => MediaItemBuilder.toJson(e)).toList());
       await box.put("index", currentSongIndex.value);
@@ -533,7 +533,7 @@ class PlayerController extends GetxController
         _playerPanelCheck();
         await _audioHandler.customAction("playByIndex", {"index": 0});
       } else {
-        if (Hive.box("AppPrefs").get("discoverContentType") == "BOLI") {
+        if (SqliteStore.box("AppPrefs").get("discoverContentType") == "BOLI") {
           Get.find<HomeScreenController>().changeDiscoverContent("BOLI",
               songId: queueSeedSong?.id ?? mediaItem!.id);
         }
@@ -569,7 +569,7 @@ class PlayerController extends GetxController
 
     //for changing home content based on last interation
     Future.delayed(const Duration(seconds: 3), () {
-      if (Hive.box("AppPrefs").get("discoverContentType") == "BOLI") {
+      if (SqliteStore.box("AppPrefs").get("discoverContentType") == "BOLI") {
         Get.find<HomeScreenController>()
             .changeDiscoverContent("BOLI", songId: mediaItems[index].id);
       }
@@ -650,7 +650,7 @@ class PlayerController extends GetxController
   }
 
   void _playViaAndroidAuto(String songId, String libraryId) {
-    Hive.openBox(sanitizeBoxName(libraryId)).then((box) {
+    SqliteStore.openBox(sanitizeBoxName(libraryId)).then((box) {
       List<MediaItem> songList = [];
       final songJson = box.values.toList();
       int songIndex = 0;
@@ -701,7 +701,7 @@ class PlayerController extends GetxController
   void _playerPanelCheck({bool restoreSession = false}) {
     isPlayerVisible.value = true;
     final isWideScreen = Get.size.width > 800;
-    final autoOpenPlayer = Hive.box("AppPrefs").get("autoOpenPlayer") ?? true;
+    final autoOpenPlayer = SqliteStore.box("AppPrefs").get("autoOpenPlayer") ?? true;
     if ((!isWideScreen && autoOpenPlayer && playerPanelController.isAttached) &&
         !restoreSession) {
       playerPanelController.open();
@@ -752,13 +752,13 @@ class PlayerController extends GetxController
         ? _audioHandler.setShuffleMode(AudioServiceShuffleMode.none)
         : _audioHandler.setShuffleMode(AudioServiceShuffleMode.all);
     isShuffleModeEnabled.value = !shuffleModeEnabled;
-    await Hive.box("AppPrefs").put("isShuffleModeEnabled", !shuffleModeEnabled);
+    await SqliteStore.box("AppPrefs").put("isShuffleModeEnabled", !shuffleModeEnabled);
     // restrict queue loop mode when shuffle mode is enabled
     if (isShuffleModeEnabled.isTrue && isQueueLoopModeEnabled.isFalse) {
       isQueueLoopModeEnabled.value = true;
     } else if (isShuffleModeEnabled.isFalse) {
       isQueueLoopModeEnabled.value =
-          Hive.box("AppPrefs").get("queueLoopModeEnabled", defaultValue: false);
+          SqliteStore.box("AppPrefs").get("queueLoopModeEnabled", defaultValue: false);
     }
   }
 
@@ -864,7 +864,7 @@ class PlayerController extends GetxController
         ? _audioHandler.setRepeatMode(AudioServiceRepeatMode.one)
         : _audioHandler.setRepeatMode(AudioServiceRepeatMode.none);
     isLoopModeEnabled.value = !isLoopModeEnabled.value;
-    await Hive.box("AppPrefs")
+    await SqliteStore.box("AppPrefs")
         .put("isLoopModeEnabled", isLoopModeEnabled.value);
   }
 
@@ -888,14 +888,14 @@ class PlayerController extends GetxController
     isQueueLoopModeEnabled.value = !isQueueLoopModeEnabled.value;
     await _audioHandler.customAction(
         "toggleQueueLoopMode", {"enable": isQueueLoopModeEnabled.value});
-    await Hive.box("AppPrefs")
+    await SqliteStore.box("AppPrefs")
         .put("queueLoopModeEnabled", isQueueLoopModeEnabled.value);
   }
 
   Future<void> setVolume(int value) async {
     _audioHandler.customAction("setVolume", {"value": value});
     volume.value = value;
-    await Hive.box("AppPrefs").put("volume", value);
+    await SqliteStore.box("AppPrefs").put("volume", value);
   }
 
   Future<void> mute() async {
@@ -903,10 +903,10 @@ class PlayerController extends GetxController
     if (volume.value != 0) {
       vol = 0;
     } else {
-      vol = await Hive.box("AppPrefs").get("volume", defaultValue: 10);
+      vol = await SqliteStore.box("AppPrefs").get("volume", defaultValue: 10);
       if (vol == 0) {
         vol = 10;
-        await Hive.box("AppPrefs").put("volume", vol);
+        await SqliteStore.box("AppPrefs").put("volume", vol);
       }
     }
     _audioHandler.customAction("setVolume", {"value": vol!});
@@ -916,7 +916,7 @@ class PlayerController extends GetxController
   Future<void> _checkFav() async {
     if (currentSong.value == null) return;
     isCurrentSongFav.value =
-        (await Hive.openBox("LIBFAV")).containsKey(currentSong.value!.id);
+        (await SqliteStore.openBox("LIBFAV")).containsKey(currentSong.value!.id);
   }
 
   Future<void> refreshFavoriteState() => _checkFav();
@@ -926,13 +926,18 @@ class PlayerController extends GetxController
     final wasFavorite = isCurrentSongFav.value;
     final syncService = Get.find<SyncService>();
     await syncService.performLocalMutation(() async {
-      final box = await Hive.openBox("LIBFAV");
+      final track = MediaItemBuilder.toJson(currMediaItem);
+      await syncService.recordFavoriteChange(
+        currMediaItem.id,
+        deleted: wasFavorite,
+        track: track,
+      );
+      final box = await SqliteStore.openBox("LIBFAV");
       if (wasFavorite) {
         await box.delete(currMediaItem.id);
       } else {
-        await box.put(currMediaItem.id, MediaItemBuilder.toJson(currMediaItem));
+        await box.put(currMediaItem.id, track);
       }
-      syncService.triggerPush();
     });
     try {
       final playlistController = Get.find<PlaylistScreenController>(
@@ -960,7 +965,7 @@ class PlayerController extends GetxController
   /// This function is used to add a mediaItem/Song to Recently played playlist
   Future<void> _addToRP(MediaItem mediaItem) async {
     if (recentItem != mediaItem) {
-      final box = await Hive.openBox("LIBRP");
+      final box = await SqliteStore.openBox("LIBRP");
       String? removedSongId;
       if (box.keys.length >= 30) {
         removedSongId = box.getAt(0)['videoId'];
@@ -983,7 +988,7 @@ class PlayerController extends GetxController
       box.add(songJson);
 
       // Save to SongsCache if it exists to keep play history available globally
-      final songsCacheBox = await Hive.openBox("SongsCache");
+      final songsCacheBox = await SqliteStore.openBox("SongsCache");
       if (songsCacheBox.containsKey(mediaItem.id)) {
         songsCacheBox.put(mediaItem.id, songJson);
       }
@@ -1057,7 +1062,7 @@ class PlayerController extends GetxController
 
     isTranslationLoading.value = true;
     try {
-      final lyricsBox = await Hive.openBox("lyrics");
+      final lyricsBox = await SqliteStore.openBox("lyrics");
       final cached = lyricsBox.get(song.id);
       if (cached != null && cached is Map) {
         final cachedTranslatedSynced =
@@ -1161,7 +1166,7 @@ class PlayerController extends GetxController
   }
 
   void changeLyricsMode(int? val) {
-    Hive.box("AppPrefs").put("lyricsMode", val);
+    SqliteStore.box("AppPrefs").put("lyricsMode", val);
     lyricsMode.value = val!;
   }
 

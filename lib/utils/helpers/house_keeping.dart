@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:get/get.dart';
 import '/models/media_item_builder.dart';
 import '/ui/screens/Library/library_controller.dart';
-import 'package:hive/hive.dart';
+import 'package:harmonymusic/services/storage/sqlite_store.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:harmonymusic/services/system/utils.dart';
 import 'package:harmonymusic/utils/helpers/helper.dart';
@@ -14,7 +14,7 @@ void startHouseKeeping() {
 
 Future<void> removeExpiredSongsUrlFromDb() async {
   try {
-    final songsUrlCacheBox = Hive.box("SongsUrlCache");
+    final songsUrlCacheBox = SqliteStore.box("SongsUrlCache");
     final songsUrlCacheKeysList =
         songsUrlCacheBox.keys.whereType<String>().toList();
     for (var i = 0; i < songsUrlCacheKeysList.length; i++) {
@@ -36,7 +36,7 @@ Future<void> removeExpiredSongsUrlFromDb() async {
 Future<void> removeDeletedOfflineSongsFromDb() async {
   final supportDir = (await getApplicationSupportDirectory()).path;
   try {
-    final songDownloadsBox = Hive.box("SongDownloads");
+    final songDownloadsBox = SqliteStore.box("SongDownloads");
     final downloadedSongs = songDownloadsBox.values.toList();
     final LibrarySongsController librarySongsController =
         Get.find<LibrarySongsController>();

@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/services/auth/auth_service.dart';
 import 'package:harmonymusic/services/system/permission_service.dart';
-import 'package:hive_flutter/hive_flutter.dart';
+import 'package:harmonymusic/services/storage/sqlite_store.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -26,7 +26,7 @@ import 'package:harmonymusic/generated/l10n.dart';
 class SettingsScreenController extends GetxController {
   String _supportDir = "";
   final cacheSongs = false.obs;
-  final setBox = Hive.box("AppPrefs");
+  final setBox = SqliteStore.box("AppPrefs");
   final themeModetype = ThemeType.dynamic.obs;
   final skipSilenceEnabled = false.obs;
   final loudnessNormalizationEnabled = false.obs;
@@ -268,12 +268,12 @@ class SettingsScreenController extends GetxController {
     setBox.put("cacheHomeScreenData", val);
     cacheHomeScreenData.value = val;
     if (!val) {
-      Hive.openBox("homeScreenData").then((box) async {
+      SqliteStore.openBox("homeScreenData").then((box) async {
         await box.clear();
         await box.close();
       });
     } else {
-      await Hive.openBox("homeScreenData");
+      await SqliteStore.openBox("homeScreenData");
       Get.find<HomeScreenController>().cachedHomeScreenData(updateAll: true);
     }
   }
@@ -321,7 +321,7 @@ class SettingsScreenController extends GetxController {
     Get.find<PipedServices>().logout();
     isLinkedWithPiped.value = false;
     Get.find<LibraryPlaylistsController>().removePipedPlaylists();
-    final box = await Hive.openBox('blacklistedPlaylist');
+    final box = await SqliteStore.openBox('blacklistedPlaylist');
     box.clear();
     ScaffoldMessenger.of(Get.context!).showSnackBar(snackbar(
         Get.context!, S.current.unlinkAlert,
@@ -357,7 +357,7 @@ class SettingsScreenController extends GetxController {
   }
 
   Future<void> closeAllDatabases() async {
-    await Hive.close();
+    await SqliteStore.close();
   }
 
   Future<String> get dbDir async {

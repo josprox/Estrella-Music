@@ -3,7 +3,7 @@ import 'package:audio_service/audio_service.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/ui/widgets/snackbar.dart';
-import 'package:hive/hive.dart';
+import 'package:harmonymusic/services/storage/sqlite_store.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:file_picker/file_picker.dart';
 import 'dart:convert';
@@ -57,7 +57,7 @@ class LibrarySongsController extends GetxController {
       //printINFO("all files: $downloadedFiles \n $songsList");
     }
 
-    final box = Hive.box("SongsCache");
+    final box = SqliteStore.box("SongsCache");
     for (var element in box.keys) {
       if (!songsList.contains(element)) {
         box.delete(element);
@@ -69,7 +69,7 @@ class LibrarySongsController extends GetxController {
         .whereType<MediaItem>()
         .toList();
 
-    librarySongsList.addAll(Hive.box("SongDownloads")
+    librarySongsList.addAll(SqliteStore.box("SongDownloads")
         .values
         .map<MediaItem?>((item) => MediaItemBuilder.fromJson(item))
         .whereType<MediaItem>()
@@ -176,8 +176,8 @@ class LibrarySongsController extends GetxController {
   }
 
   Future<void> deleteMultipleSongs(List<MediaItem> songs) async {
-    final downloadsBox = await Hive.openBox("SongDownloads");
-    final cacheBox = await Hive.openBox("SongsCache");
+    final downloadsBox = await SqliteStore.openBox("SongDownloads");
+    final cacheBox = await SqliteStore.openBox("SongsCache");
     for (MediaItem element in songs) {
       if (downloadsBox.containsKey(element.id)) {
         await downloadsBox.delete(element.id);
@@ -255,7 +255,7 @@ class LibraryPlaylistsController extends GetxController
   }
 
   void refreshLib() async {
-    final box = await Hive.openBox("LibraryPlaylists");
+    final box = await SqliteStore.openBox("LibraryPlaylists");
     final List<Playlist> loaded = [];
     for (var item in box.values) {
       try {
@@ -269,7 +269,7 @@ class LibraryPlaylistsController extends GetxController
 
     libraryPlaylists.value = [...initPlst, ...loaded];
 
-    final appPrefsBox = Hive.box("AppPrefs");
+    final appPrefsBox = SqliteStore.box("AppPrefs");
     if (appPrefsBox.containsKey("piped")) {
       if (appPrefsBox.get("piped")['isLoggedIn']) await syncPipedPlaylist();
     }
@@ -278,7 +278,7 @@ class LibraryPlaylistsController extends GetxController
   }
 
   void updatePlaylistIntoDb(Playlist playlist) async {
-    final box = await Hive.openBox("LibraryPlaylists");
+    final box = await SqliteStore.openBox("LibraryPlaylists");
     box.put(playlist.playlistId, playlist.toJson());
     refreshLib();
   }
@@ -293,7 +293,7 @@ class LibraryPlaylistsController extends GetxController
 
   Future<void> syncPipedPlaylist() async {
     final res = await Get.find<PipedServices>().getAllPlaylists();
-    final box = await Hive.openBox('blacklistedPlaylist');
+    final box = await SqliteStore.openBox('blacklistedPlaylist');
     final blacklistedPlaylist = box.values.whereType<String>().toList();
     final libPipedPlaylistsId = libraryPlaylists
             .toList()
@@ -347,7 +347,7 @@ class LibraryPlaylistsController extends GetxController
         if (res.code == 0) return false;
         playlist.newTitle = title;
       } else {
-        final box = await Hive.openBox("LibraryPlaylists");
+        final box = await SqliteStore.openBox("LibraryPlaylists");
         title = "${title[0].toUpperCase()}${title.substring(1).toLowerCase()}";
         playlist.newTitle = title;
         box.put(playlist.playlistId, playlist.toJson());
@@ -402,7 +402,7 @@ class LibraryPlaylistsController extends GetxController
             isCloudPlaylist: isCloudMode,
             isCollaborative: isCollaborative,
             collaborators: collaborators);
-        final box = await Hive.openBox("LibraryPlaylists");
+        final box = await SqliteStore.openBox("LibraryPlaylists");
         box.put(newplst.playlistId, newplst.toJson());
         await box.close();
       }
@@ -411,7 +411,7 @@ class LibraryPlaylistsController extends GetxController
 
       if (createPlaylistNaddSong && playlistCreationMode.value == "local") {
         final plastbox =
-            await Hive.openBox(sanitizeBoxName(newplst.playlistId));
+            await SqliteStore.openBox(sanitizeBoxName(newplst.playlistId));
         for (MediaItem item in songItems!) {
           plastbox.add(MediaItemBuilder.toJson(item));
         }
@@ -425,7 +425,8 @@ class LibraryPlaylistsController extends GetxController
         if (isCollaborative) {
           await Get.find<SyncService>().pushCollaborative(newplst);
         } else {
-          Get.find<SyncService>().triggerPush();
+          await Get.find<SyncService>()
+              .recordPlaylistChange(newplst.playlistId);
         }
       }
       creationInProgress.value = false;
@@ -435,13 +436,13 @@ class LibraryPlaylistsController extends GetxController
   }
 
   Future<void> blacklistPipedPlaylist(Playlist playlist) async {
-    final box = await Hive.openBox('blacklistedPlaylist');
+    final box = await SqliteStore.openBox('blacklistedPlaylist');
     box.add(playlist.playlistId);
     libraryPlaylists.remove(playlist);
   }
 
   Future<void> resetBlacklistedPlaylist() async {
-    final box = await Hive.openBox('blacklistedPlaylist');
+    final box = await SqliteStore.openBox('blacklistedPlaylist');
     box.clear();
     syncPipedPlaylist();
   }
@@ -544,12 +545,12 @@ class LibraryPlaylistsController extends GetxController
       importProgress.value = 0.6;
 
       // Save playlist to database
-      final box = await Hive.openBox("LibraryPlaylists");
+      final box = await SqliteStore.openBox("LibraryPlaylists");
       box.put(newPlaylistId, newPlaylist.toJson());
       importProgress.value = 0.7;
 
       // Save songs to playlist
-      final songsBox = await Hive.openBox(sanitizeBoxName(newPlaylistId));
+      final songsBox = await SqliteStore.openBox(sanitizeBoxName(newPlaylistId));
       final songsList = jsonData['songs'] as List;
 
       // Update progress as songs are added
@@ -569,7 +570,7 @@ class LibraryPlaylistsController extends GetxController
 
       // Refresh library to show the new playlist
       refreshLib();
-      Get.find<SyncService>().triggerPush();
+      await Get.find<SyncService>().recordPlaylistChange(newPlaylistId);
 
       // Show success message
       if (context.mounted) {
@@ -596,7 +597,7 @@ class LibraryPlaylistsController extends GetxController
         errorMsg = S.current.importErrorFormat;
       } else if (e.toString().contains("invalidPlaylistFile")) {
         errorMsg = S.current.invalidPlaylistFile;
-      } else if (e is HiveError) {
+      } else if (e is SqliteStoreException) {
         errorMsg = S.current.importErrorDatabase;
       }
 
@@ -660,7 +661,7 @@ class LibraryAlbumsController extends GetxController {
   }
 
   void refreshLib() async {
-    final box = await Hive.openBox("LibraryAlbums");
+    final box = await SqliteStore.openBox("LibraryAlbums");
     final List<Album> loaded = [];
     for (var item in box.values) {
       try {
@@ -712,7 +713,7 @@ class LibraryArtistsController extends GetxController {
   }
 
   void refreshLib() async {
-    final box = await Hive.openBox("LibraryArtists");
+    final box = await SqliteStore.openBox("LibraryArtists");
     final List<Artist> loaded = [];
     for (var item in box.values) {
       try {

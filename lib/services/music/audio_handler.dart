@@ -4,7 +4,7 @@ import 'dart:math';
 
 import 'package:flutter/services.dart';
 
-import 'package:hive/hive.dart';
+import 'package:harmonymusic/services/storage/sqlite_store.dart';
 import 'package:get/get.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:just_audio_media_kit/just_audio_media_kit.dart';
@@ -93,13 +93,13 @@ class MyAudioHandler extends BaseAudioHandler with GetxServiceMixin {
     _notifyAudioHandlerAboutPlaybackEvents();
     _listenToPlaybackForNextSong();
     _listenForSequenceStateChanges();
-    final appPrefsBox = Hive.box("AppPrefs");
+    final appPrefsBox = SqliteStore.box("AppPrefs");
     _player
         .setSkipSilenceEnabled(appPrefsBox.get("skipSilenceEnabled") ?? false);
     loopModeEnabled = appPrefsBox.get("isLoopModeEnabled") ?? false;
     shuffleModeEnabled = appPrefsBox.get("isShuffleModeEnabled") ?? false;
     queueLoopModeEnabled =
-        Hive.box("AppPrefs").get("queueLoopModeEnabled") ?? false;
+        SqliteStore.box("AppPrefs").get("queueLoopModeEnabled") ?? false;
     loudnessNormalizationEnabled =
         appPrefsBox.get("loudnessNormalizationEnabled") ?? false;
     final double initialSpeed =
@@ -527,12 +527,12 @@ class MyAudioHandler extends BaseAudioHandler with GetxServiceMixin {
       case 'checkWithCacheDb':
         if (isPlayingUsingLockCachingSource) {
           final song = extras!['mediaItem'] as MediaItem;
-          final songsCacheBox = Hive.box("SongsCache");
+          final songsCacheBox = SqliteStore.box("SongsCache");
           if (!songsCacheBox.containsKey(song.id) &&
               await File("$_cacheDir/cachedSongs/${song.id}.mp3").exists()) {
             song.extras!['url'] = currentSongUrl;
             song.extras!['date'] = DateTime.now().millisecondsSinceEpoch;
-            final dbStreamData = Hive.box("SongsUrlCache").get(song.id);
+            final dbStreamData = SqliteStore.box("SongsUrlCache").get(song.id);
             final jsonData = MediaItemBuilder.toJson(song);
             jsonData['duration'] = _player.duration!.inSeconds;
             // playbility status and info
@@ -540,7 +540,7 @@ class MyAudioHandler extends BaseAudioHandler with GetxServiceMixin {
                 ? [
                     true,
                     dbStreamData[
-                        Hive.box('AppPrefs').get('streamingQuality') == 0
+                        SqliteStore.box('AppPrefs').get('streamingQuality') == 0
                             ? 'lowQualityAudio'
                             : "highQualityAudio"]
                   ]
@@ -613,15 +613,15 @@ class MyAudioHandler extends BaseAudioHandler with GetxServiceMixin {
         if (loudnessNormalizationEnabled) {
           try {
             final currentSongId = (queue.value[currentIndex]).id;
-            if (Hive.box("SongsUrlCache").containsKey(currentSongId)) {
-              final songJson = Hive.box("SongsUrlCache").get(currentSongId);
+            if (SqliteStore.box("SongsUrlCache").containsKey(currentSongId)) {
+              final songJson = SqliteStore.box("SongsUrlCache").get(currentSongId);
               _normalizeVolume((songJson)["highQualityAudio"]["loudnessDb"]);
               return;
             }
 
-            if (Hive.box("SongDownloads").containsKey(currentSongId)) {
+            if (SqliteStore.box("SongDownloads").containsKey(currentSongId)) {
               final streamInfo =
-                  (Hive.box("SongDownloads").get(currentSongId))["streamInfo"];
+                  (SqliteStore.box("SongDownloads").get(currentSongId))["streamInfo"];
 
               _normalizeVolume(
                   streamInfo == null ? 0 : streamInfo[1]["loudnessDb"]);
@@ -765,7 +765,7 @@ class MyAudioHandler extends BaseAudioHandler with GetxServiceMixin {
           currQueue.map((e) => MediaItemBuilder.toJson(e)).toList();
       final currIndex = currentIndex ?? 0;
       final position = _player.position.inMilliseconds;
-      final prevSessionData = await Hive.openBox("prevSessionData");
+      final prevSessionData = await SqliteStore.openBox("prevSessionData");
       await prevSessionData.clear();
       await prevSessionData.putAll(
           {"queue": queueData, "position": position, "index": currIndex});
@@ -821,12 +821,12 @@ class MyAudioHandler extends BaseAudioHandler with GetxServiceMixin {
   Future<HMStreamingData> checkNGetUrl(String songId,
       {bool generateNewUrl = false, bool offlineReplacementUrl = false}) async {
     printINFO("Requested id : $songId");
-    final songDownloadsBox = Hive.box("SongDownloads");
+    final songDownloadsBox = SqliteStore.box("SongDownloads");
     if (!offlineReplacementUrl &&
-        (await Hive.openBox("SongsCache")).containsKey(songId)) {
+        (await SqliteStore.openBox("SongsCache")).containsKey(songId)) {
       printINFO("Got Song from cachedbox ($songId)");
       // if contains stream Info
-      final streamInfo = Hive.box("SongsCache").get(songId)["streamInfo"];
+      final streamInfo = SqliteStore.box("SongsCache").get(songId)["streamInfo"];
       Audio? cacheAudioPlaceholder;
       if (streamInfo != null && streamInfo.isNotEmpty) {
         streamInfo[1]['url'] = "file://$_cacheDir/cachedSongs/$songId.mp3";
@@ -884,8 +884,8 @@ class MyAudioHandler extends BaseAudioHandler with GetxServiceMixin {
       return checkNGetUrl(songId, offlineReplacementUrl: true);
     } else {
       //check if song stream url is cached and allocate url accordingly
-      final songsUrlCacheBox = Hive.box("SongsUrlCache");
-      final qualityIndex = Hive.box('AppPrefs').get('streamingQuality') ?? 1;
+      final songsUrlCacheBox = SqliteStore.box("SongsUrlCache");
+      final qualityIndex = SqliteStore.box('AppPrefs').get('streamingQuality') ?? 1;
       HMStreamingData? streamInfo;
       if (songsUrlCacheBox.containsKey(songId) && !generateNewUrl) {
         final streamInfoJson = songsUrlCacheBox.get(songId);
@@ -1042,7 +1042,7 @@ class MediaLibrary {
   }
 
   Future<List<MediaItem>> getAlbums() async {
-    final box = await Hive.openBox("LibraryAlbums");
+    final box = await SqliteStore.openBox("LibraryAlbums");
     final albums =
         box.values.map((item) => Album.fromJson(item).toMediaItem()).toList();
     await box.close();
@@ -1050,7 +1050,7 @@ class MediaLibrary {
   }
 
   Future<List<MediaItem>> getPlaylists() async {
-    final box = await Hive.openBox("LibraryPlaylists");
+    final box = await SqliteStore.openBox("LibraryPlaylists");
     final playlists = [
       ...LibraryPlaylistsController.initPlst.map((e) => e.toMediaItem()),
       ...(box.values
@@ -1062,12 +1062,12 @@ class MediaLibrary {
   }
 
   Future<List<MediaItem>> getLibSongs(String libId) async {
-    Box<dynamic> box;
+    SqliteBox<dynamic> box;
     final boxName = sanitizeBoxName(libId);
     try {
-      box = await Hive.openBox(boxName);
+      box = await SqliteStore.openBox(boxName);
     } catch (e) {
-      box = await Hive.openBox(boxName);
+      box = await SqliteStore.openBox(boxName);
     }
     final songs = box.values.toList().map((e) {
       final song = MediaItemBuilder.fromJson(e);

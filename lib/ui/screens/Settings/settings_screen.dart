@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hive/hive.dart';
+import 'package:harmonymusic/services/storage/sqlite_store.dart';
 import 'package:harmonymusic/services/auth/auth_service.dart';
 import 'package:harmonymusic/ui/screens/Friends/friends_management_screen.dart';
 import 'package:harmonymusic/ui/screens/Home/home_screen_controller.dart';
@@ -801,7 +801,7 @@ class SettingsDownloadsScreen extends StatelessWidget {
                 child: Text(S.current.reset,
                     style: const TextStyle(fontWeight: FontWeight.bold))),
           ),
-          if (GetPlatform.isAndroid && Hive.box('AppPrefs').get('emusicCloudRequested', defaultValue: false) != true)
+          if (GetPlatform.isAndroid && SqliteStore.box('AppPrefs').get('emusicCloudRequested', defaultValue: false) != true)
             SettingsTile(
               title: S.current.exportDowloadedFiles,
               subtitle: S.current.exportDowloadedFilesDes,
@@ -811,7 +811,7 @@ class SettingsDownloadsScreen extends StatelessWidget {
                       context: context, builder: (_) => const ExportFileDialog())
                   .whenComplete(() => Get.delete<ExportFileDialogController>()),
             ),
-          if (GetPlatform.isAndroid && Hive.box('AppPrefs').get('emusicCloudRequested', defaultValue: false) != true)
+          if (GetPlatform.isAndroid && SqliteStore.box('AppPrefs').get('emusicCloudRequested', defaultValue: false) != true)
             SettingsTile(
               title: S.current.exportedFileLocation,
               leadingIcon: Icons.drive_folder_upload_rounded,
@@ -888,7 +888,7 @@ class SettingsAccountScreen extends StatelessWidget {
                 context: context, builder: (_) => const CloudSyncStatusDialog()),
             trailing: const Icon(Icons.chevron_right_rounded),
           ),
-          if (Hive.box('AppPrefs').get('emusicDataMode', defaultValue: 'local') == 'cloud')
+          if (SqliteStore.box('AppPrefs').get('emusicDataMode', defaultValue: 'local') == 'cloud')
             SettingsTile(
               title: S.current.settings_my_friends,
               subtitle: S.current.settings_my_friends_desc,

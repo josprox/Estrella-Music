@@ -1,9 +1,9 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
-import 'package:hive_flutter/hive_flutter.dart';
+import 'package:harmonymusic/services/storage/sqlite_store.dart';
 
 /// Wraps a child widget and overlays small download/like badge icons
-/// that reactively update when the Hive boxes change.
+/// that reactively update when the SqliteStore boxes change.
 class SongStatusBadges extends StatelessWidget {
   final String songId;
   final Widget child;
@@ -16,9 +16,9 @@ class SongStatusBadges extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Hive boxes should already be open at this point
-    final favBox = Hive.box('LIBFAV');
-    final dlBox = Hive.box('SongDownloads');
+    // SqliteStore boxes should already be open at this point
+    final favBox = SqliteStore.box('LIBFAV');
+    final dlBox = SqliteStore.box('SongDownloads');
 
     return ValueListenableBuilder(
       valueListenable: favBox.listenable(),

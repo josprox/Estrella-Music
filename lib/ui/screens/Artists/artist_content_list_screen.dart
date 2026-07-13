@@ -2,7 +2,7 @@ import 'package:audio_service/audio_service.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:hive_flutter/hive_flutter.dart';
+import 'package:harmonymusic/services/storage/sqlite_store.dart';
 import '/models/album.dart';
 import '/models/media_item_builder.dart';
 import '/models/playlist.dart';
@@ -232,8 +232,8 @@ class ArtistContentListScreen extends StatelessWidget {
                 ),
                 // Like icon
                 ValueListenableBuilder(
-                  valueListenable: Hive.box("LIBFAV").listenable(),
-                  builder: (context, Box box, _) {
+                  valueListenable: SqliteStore.box("LIBFAV").listenable(),
+                  builder: (context, SqliteBox box, _) {
                     final isLiked = box.containsKey(videoId);
                     return IconButton(
                       onPressed: () => toggleLike(item),
@@ -247,8 +247,8 @@ class ArtistContentListScreen extends StatelessWidget {
                 ),
                 // Download icon
                 ValueListenableBuilder(
-                  valueListenable: Hive.box("SongDownloads").listenable(),
-                  builder: (context, Box box, _) {
+                  valueListenable: SqliteStore.box("SongDownloads").listenable(),
+                  builder: (context, SqliteBox box, _) {
                     final isDownloaded = box.containsKey(videoId);
                     if (!isDownloaded) return const SizedBox.shrink();
                     return Padding(
@@ -337,13 +337,19 @@ class ArtistContentListScreen extends StatelessWidget {
     final song = (item is MediaItem) ? item : MediaItemBuilder.fromJson(item);
     final syncService = Get.find<SyncService>();
     await syncService.performLocalMutation(() async {
-      final box = await Hive.openBox("LIBFAV");
-      if (box.containsKey(song.id)) {
+      final box = await SqliteStore.openBox("LIBFAV");
+      final wasFavorite = box.containsKey(song.id);
+      final track = MediaItemBuilder.toJson(song);
+      await syncService.recordFavoriteChange(
+        song.id,
+        deleted: wasFavorite,
+        track: track,
+      );
+      if (wasFavorite) {
         await box.delete(song.id);
       } else {
-        await box.put(song.id, MediaItemBuilder.toJson(song));
+        await box.put(song.id, track);
       }
-      syncService.triggerPush();
     });
   }
 }

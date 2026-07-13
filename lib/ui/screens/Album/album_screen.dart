@@ -1,11 +1,11 @@
-﻿import 'package:audio_service/audio_service.dart';
+import 'package:audio_service/audio_service.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/models/playling_from.dart';
 import 'package:harmonymusic/models/thumbnail.dart';
 import 'package:harmonymusic/ui/widgets/playlist_album_scroll_behaviour.dart';
-import 'package:hive/hive.dart';
+import 'package:harmonymusic/services/storage/sqlite_store.dart';
 import 'package:harmonymusic/ui/widgets/custom_marquee.dart';
 import 'package:harmonymusic/utils/helpers/youtube_share_manager.dart';
 
@@ -420,7 +420,7 @@ class AlbumScreen extends StatelessWidget {
                                     const EdgeInsets.only(left: 20.0, right: 5),
                                 child: Obx(() {
                                   final song = albumController.songList[index - 3];
-                                  final isDownloaded = Hive.box('SongDownloads').containsKey(song.id);
+                                  final isDownloaded = SqliteStore.box('SongDownloads').containsKey(song.id);
                                   final isOffline = albumController.isOffline.isTrue;
                                   final disabled = isOffline && !isDownloaded;
                                   return Opacity(

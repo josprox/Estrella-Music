@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hive/hive.dart';
+import 'package:harmonymusic/services/storage/sqlite_store.dart';
 
 import 'package:harmonymusic/utils/helpers/helper.dart';
 import 'package:harmonymusic/services/backup/app_backup_service.dart';
@@ -50,7 +50,7 @@ class UserDataBootstrapService extends GetxService {
     if (!_authService.isAuthenticated.value || userKey == null) {
       return false;
     }
-    final prefs = Hive.box('AppPrefs');
+    final prefs = SqliteStore.box('AppPrefs');
     final dataMode = prefs.get('emusicDataMode', defaultValue: 'local');
     final cloudRequested =
         prefs.get('emusicCloudRequested', defaultValue: false) == true;
@@ -68,13 +68,13 @@ class UserDataBootstrapService extends GetxService {
   }
 
   bool _isBootstrapConfirmedLocally(String userKey) {
-    return Hive.box('AppPrefs')
+    return SqliteStore.box('AppPrefs')
         .get('bootstrap_confirmed_$userKey', defaultValue: false);
   }
 
   Future<void> _confirmBootstrap(String userKey) async {
     _preparedUserKey = userKey;
-    await Hive.box('AppPrefs').put('bootstrap_confirmed_$userKey', true);
+    await SqliteStore.box('AppPrefs').put('bootstrap_confirmed_$userKey', true);
   }
 
   void resetRuntimeState() {
@@ -134,7 +134,7 @@ class UserDataBootstrapService extends GetxService {
 
       if (hasCloudData) {
         statusMessage.value = 'Configurando tu biblioteca de la nube...';
-        final prefs = Hive.box('AppPrefs');
+        final prefs = SqliteStore.box('AppPrefs');
         await prefs.put('emusicDataMode', 'cloud');
         await prefs.put('hasPendingSync', false);
         await prefs.put('emusicCloudRequested', false);
@@ -277,8 +277,8 @@ class UserDataBootstrapService extends GetxService {
     ];
 
     for (final boxName in boxesToCheck) {
-      final wasOpen = Hive.isBoxOpen(boxName);
-      final box = wasOpen ? Hive.box(boxName) : await Hive.openBox(boxName);
+      final wasOpen = SqliteStore.isBoxOpen(boxName);
+      final box = wasOpen ? SqliteStore.box(boxName) : await SqliteStore.openBox(boxName);
       final hasData = box.isNotEmpty;
       if (!wasOpen) {
         await box.close();
@@ -296,7 +296,7 @@ class UserDataBootstrapService extends GetxService {
     required String source,
     required String fileId,
   }) {
-    final raw = Hive.box('AppPrefs').get(_bootstrapStateKey(userKey));
+    final raw = SqliteStore.box('AppPrefs').get(_bootstrapStateKey(userKey));
     if (raw is! Map) {
       return false;
     }
@@ -311,7 +311,7 @@ class UserDataBootstrapService extends GetxService {
     required String fileId,
     required String fileName,
   }) async {
-    await Hive.box('AppPrefs').put(
+    await SqliteStore.box('AppPrefs').put(
       _bootstrapStateKey(userKey),
       {
         'source': source,
@@ -325,10 +325,10 @@ class UserDataBootstrapService extends GetxService {
   String _bootstrapStateKey(String userKey) => 'bootstrap_state_$userKey';
 
   void _applyLocaleFromAppPrefs() {
-    if (!Hive.isBoxOpen('AppPrefs')) {
+    if (!SqliteStore.isBoxOpen('AppPrefs')) {
       return;
     }
-    final appPrefs = Hive.box('AppPrefs');
+    final appPrefs = SqliteStore.box('AppPrefs');
     final autoLanguage = appPrefs.get('autoLanguage', defaultValue: true);
     final languageCode = appPrefs.get('currentAppLanguageCode');
     if (!autoLanguage &&

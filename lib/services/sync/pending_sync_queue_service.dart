@@ -1,12 +1,12 @@
 import 'package:get/get.dart';
-import 'package:hive/hive.dart';
+import 'package:harmonymusic/services/storage/sqlite_store.dart';
 
 class PendingSyncQueueService extends GetxService {
   static const boxName = 'PendingSyncChanges';
 
   final pendingCount = 0.obs;
 
-  Box get _box => Hive.box(boxName);
+  SqliteBox get _box => SqliteStore.box(boxName);
 
   @override
   void onInit() {

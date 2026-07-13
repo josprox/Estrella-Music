@@ -2,7 +2,7 @@ import 'package:audio_service/audio_service.dart';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hive/hive.dart';
+import 'package:harmonymusic/services/storage/sqlite_store.dart';
 import 'package:harmonymusic/utils/helpers/ionicons.dart';
 
 import 'package:url_launcher/url_launcher.dart';
@@ -241,7 +241,7 @@ class SongInfoBottomSheet extends StatelessWidget {
                         title: Text(S.current.deleteDownloadData),
                         onTap: () {
                           Navigator.of(context).pop();
-                          final box = Hive.box("SongDownloads");
+                          final box = SqliteStore.box("SongDownloads");
                           Get.find<LibrarySongsController>()
                               .removeSong(song, true,
                                   url: box.get(song.id)['url'])
@@ -377,9 +377,9 @@ class SongInfoController extends GetxController
     _setInitStatus(song);
   }
   _setInitStatus(MediaItem song) async {
-    isDownloaded.value = Hive.box("SongDownloads").containsKey(song.id);
+    isDownloaded.value = SqliteStore.box("SongDownloads").containsKey(song.id);
     isCurrentSongFav.value =
-        (await Hive.openBox("LIBFAV")).containsKey(song.id);
+        (await SqliteStore.openBox("LIBFAV")).containsKey(song.id);
     final artists = song.extras!['artists'];
     if (artists != null) {
       for (dynamic each in artists) {
@@ -407,13 +407,18 @@ class SongInfoController extends GetxController
     final wasFavorite = isCurrentSongFav.value;
     final syncService = Get.find<SyncService>();
     await syncService.performLocalMutation(() async {
-      final box = await Hive.openBox("LIBFAV");
+      final track = MediaItemBuilder.toJson(song);
+      await syncService.recordFavoriteChange(
+        song.id,
+        deleted: wasFavorite,
+        track: track,
+      );
+      final box = await SqliteStore.openBox("LIBFAV");
       if (wasFavorite) {
         await box.delete(song.id);
       } else {
-        await box.put(song.id, MediaItemBuilder.toJson(song));
+        await box.put(song.id, track);
       }
-      syncService.triggerPush();
     });
     isCurrentSongFav.value = !wasFavorite;
     if (Get.find<SettingsScreenController>()
@@ -429,11 +434,11 @@ mixin RemoveSongFromPlaylistMixin {
   Future<void> removeSongFromPlaylist(MediaItem item, Playlist playlist) async {
     final syncService = Get.find<SyncService>();
     await syncService.performLocalMutation(() async {
-      final box = await Hive.openBox(sanitizeBoxName(playlist.playlistId));
+      final box = await SqliteStore.openBox(sanitizeBoxName(playlist.playlistId));
       //Library songs case
       if (playlist.playlistId == "SongsCache") {
         if (!box.containsKey(item.id)) {
-          Hive.box("SongDownloads").delete(item.id);
+          SqliteStore.box("SongDownloads").delete(item.id);
           Get.find<LibrarySongsController>().removeSong(item, true);
         } else {
           Get.find<LibrarySongsController>().removeSong(item, false);
@@ -480,7 +485,12 @@ mixin RemoveSongFromPlaylistMixin {
           playlist.playlistId == "SongsCache") {
         return;
       }
-      syncService.triggerPush();
+      await syncService.recordPlaylistTrackChange(
+        playlist.playlistId,
+        item.id,
+        deleted: true,
+        track: MediaItemBuilder.toJson(item),
+      );
       box.close();
     });
   }

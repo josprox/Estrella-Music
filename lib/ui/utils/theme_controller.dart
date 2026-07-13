@@ -1,8 +1,8 @@
-﻿import 'package:flutter/foundation.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:hive/hive.dart';
+import 'package:harmonymusic/services/storage/sqlite_store.dart';
 import 'package:palette_generator/palette_generator.dart';
 import 'package:harmonymusic/utils/helpers/helper.dart';
 
@@ -24,13 +24,13 @@ class ThemeController extends GetxController {
         WidgetsBinding.instance.platformDispatcher.platformBrightness;
 
     // Read stored seed color (falls back to violet)
-    final storedColor = Hive.box('AppPrefs').get("themePrimaryColor");
+    final storedColor = SqliteStore.box('AppPrefs').get("themePrimaryColor");
     if (storedColor != null) {
       primaryColor.value = Color(storedColor as int);
     }
 
     changeThemeModeType(
-        ThemeType.values[Hive.box('AppPrefs').get("themeModeType") ?? 0]);
+        ThemeType.values[SqliteStore.box('AppPrefs').get("themeModeType") ?? 0]);
 
     _listenSystemBrightness();
     super.onInit();
@@ -41,7 +41,7 @@ class ThemeController extends GetxController {
     dispatcher.onPlatformBrightnessChanged = () {
       systemBrightness = dispatcher.platformBrightness;
       changeThemeModeType(
-          ThemeType.values[Hive.box('AppPrefs').get("themeModeType")],
+          ThemeType.values[SqliteStore.box('AppPrefs').get("themeModeType")],
           sysCall: true);
     };
   }
@@ -103,7 +103,7 @@ class ThemeController extends GetxController {
     // Adjust seed for visibility if necessary, but keep it mostly true to the art
     primaryColor.value = seed;
     
-    final type = ThemeType.values[Hive.box('AppPrefs').get("themeModeType") ?? 0];
+    final type = ThemeType.values[SqliteStore.box('AppPrefs').get("themeModeType") ?? 0];
     Brightness brightness;
     if (type == ThemeType.light) {
       brightness = Brightness.light;
@@ -117,7 +117,7 @@ class ThemeController extends GetxController {
     themedata.value = _buildThemeData(seed, brightness);
     currentSongId = songId;
 
-    Hive.box('AppPrefs').put("themePrimaryColor", primaryColor.value.toARGB32());
+    SqliteStore.box('AppPrefs').put("themePrimaryColor", primaryColor.value.toARGB32());
     setWindowsTitleBarColor(themedata.value!.scaffoldBackgroundColor);
   }
 

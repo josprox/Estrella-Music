@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
-import 'package:hive_flutter/hive_flutter.dart';
+import 'package:harmonymusic/services/storage/sqlite_store.dart';
 import 'package:harmonymusic/ui/widgets/liquid_bottom_navigation_bar.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:dynamic_color/dynamic_color.dart';
@@ -20,6 +20,7 @@ import 'package:harmonymusic/services/sync/cloud_migration_service.dart';
 import 'package:harmonymusic/services/sync/legacy_music_migration_service.dart';
 import 'package:harmonymusic/services/system/notification_service.dart';
 import 'package:harmonymusic/services/sync/pending_sync_queue_service.dart';
+import 'package:harmonymusic/services/sync/music_sqlite_service.dart';
 import 'package:harmonymusic/services/sync/sync_service.dart';
 import 'package:harmonymusic/services/social/colistening_service.dart';
 import 'package:harmonymusic/services/auth/user_data_bootstrap_service.dart';
@@ -47,8 +48,10 @@ Future<void> main() async {
     await dotenv.load(fileName: '.env');
   } catch (_) {}
   await NotificationService.initOneSignal();
-  await initHive();
-  final appPrefs = await Hive.openBox('AppPrefs');
+  await initLocalStorage();
+  final musicDatabase = MusicSqliteService();
+  await musicDatabase.initialize();
+  final appPrefs = await SqliteStore.openBox('AppPrefs');
 
   // Initialize Background Backup (Android/iOS only — workmanager has no desktop implementation)
   if (GetPlatform.isAndroid || GetPlatform.isIOS) {
@@ -71,7 +74,7 @@ Future<void> main() async {
       "en";
   await S.load(Locale(appLang));
   _setAppInitPrefs();
-  startApplicationServices();
+  startApplicationServices(musicDatabase);
   Get.put<AudioHandler>(await initAudioService(), permanent: true);
   WidgetsBinding.instance.addObserver(LifecycleHandler());
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
@@ -97,10 +100,12 @@ class MyApp extends StatelessWidget {
           GlobalCupertinoLocalizations.delegate,
         ],
         supportedLocales: S.delegate.supportedLocales,
-        locale: (Hive.box("AppPrefs").get('currentAppLanguageCode') == null ||
-                Hive.box("AppPrefs").get('autoLanguage', defaultValue: true))
+        locale: (SqliteStore.box("AppPrefs").get('currentAppLanguageCode') ==
+                    null ||
+                SqliteStore.box("AppPrefs")
+                    .get('autoLanguage', defaultValue: true))
             ? Get.deviceLocale
-            : Locale(Hive.box("AppPrefs").get('currentAppLanguageCode')),
+            : Locale(SqliteStore.box("AppPrefs").get('currentAppLanguageCode')),
         navigatorObservers: [LiquidRouteObserver.instance],
         builder: (context, child) {
           return DynamicColorBuilder(
@@ -118,7 +123,7 @@ class MyApp extends StatelessWidget {
               WidgetsBinding.instance.addPostFrameCallback((_) {
                 if (dynamicScheme != null) {
                   controller.changeThemeModeType(
-                      Hive.box("AppPrefs").get("themeModeType"),
+                      SqliteStore.box("AppPrefs").get("themeModeType"),
                       dynamicColors: dynamicScheme);
                 }
               });
@@ -156,8 +161,9 @@ class MyApp extends StatelessWidget {
   }
 }
 
-Future<void> startApplicationServices() async {
+void startApplicationServices(MusicSqliteService musicDatabase) {
   Get.put(AuthService(), permanent: true);
+  Get.put(musicDatabase, permanent: true);
   Get.put(PendingSyncQueueService(), permanent: true);
   Get.put(SyncService(), permanent: true);
   Get.put(ColisteningService(), permanent: true);
@@ -184,7 +190,7 @@ Future<void> startApplicationServices() async {
   }
 }
 
-initHive() async {
+Future<void> initLocalStorage() async {
   String applicationDataDirectoryPath;
   if (GetPlatform.isDesktop) {
     applicationDataDirectoryPath =
@@ -193,24 +199,24 @@ initHive() async {
     applicationDataDirectoryPath =
         (await getApplicationDocumentsDirectory()).path;
   }
-  await Hive.initFlutter(applicationDataDirectoryPath);
-  await Hive.openBox("SongsCache");
-  await Hive.openBox("SongDownloads");
-  await Hive.openBox('SongsUrlCache');
-  await Hive.openBox("AppPrefs");
+  await SqliteStore.initFlutter(applicationDataDirectoryPath);
+  await SqliteStore.openBox("SongsCache");
+  await SqliteStore.openBox("SongDownloads");
+  await SqliteStore.openBox('SongsUrlCache');
+  await SqliteStore.openBox("AppPrefs");
 
-  // Open common library boxes at startup to prevent "Box not found" errors
-  await Hive.openBox("LIBFAV");
-  await Hive.openBox("LIBRP");
-  await Hive.openBox("LibraryArtists");
-  await Hive.openBox("LibraryAlbums");
-  await Hive.openBox("LibraryPlaylists");
-  await Hive.openBox("homeScreenData");
-  await Hive.openBox(PendingSyncQueueService.boxName);
+  // Pre-create the logical stores most controllers use during startup.
+  await SqliteStore.openBox("LIBFAV");
+  await SqliteStore.openBox("LIBRP");
+  await SqliteStore.openBox("LibraryArtists");
+  await SqliteStore.openBox("LibraryAlbums");
+  await SqliteStore.openBox("LibraryPlaylists");
+  await SqliteStore.openBox("homeScreenData");
+  await SqliteStore.openBox(PendingSyncQueueService.boxName);
 }
 
 void _setAppInitPrefs() {
-  final appPrefs = Hive.box("AppPrefs");
+  final appPrefs = SqliteStore.box("AppPrefs");
   if (appPrefs.isEmpty) {
     appPrefs.putAll({
       'themeModeType': 0,

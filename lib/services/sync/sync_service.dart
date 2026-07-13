@@ -1,9 +1,10 @@
 import 'dart:async';
+import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
-import 'package:hive/hive.dart';
+import 'package:harmonymusic/services/storage/sqlite_store.dart';
 
 import 'package:harmonymusic/models/playlist.dart';
 import 'package:harmonymusic/ui/screens/Library/library_controller.dart';
@@ -14,6 +15,7 @@ import 'package:harmonymusic/services/backup/app_backup_service.dart';
 import 'package:harmonymusic/services/auth/auth_service.dart';
 import 'package:harmonymusic/services/sync/cloud_migration_service.dart';
 import 'package:harmonymusic/services/sync/pending_sync_queue_service.dart';
+import 'package:harmonymusic/services/sync/music_sqlite_service.dart';
 
 import 'package:harmonymusic/services/sync/client/sync_http_client.dart';
 import 'package:harmonymusic/services/sync/client/sync_websocket_client.dart';
@@ -41,6 +43,13 @@ class SyncService extends GetxService {
 
   AuthService get _authService => Get.find<AuthService>();
   PendingSyncQueueService get _queue => Get.find<PendingSyncQueueService>();
+  MusicSqliteService get _musicDatabase => Get.find<MusicSqliteService>();
+
+  String get _accountKey {
+    final user = _authService.userProfile.value;
+    return (user?['id'] ?? user?['user_id'] ?? user?['email'] ?? 'cloud-user')
+        .toString();
+  }
 
   @override
   void onInit() {
@@ -50,7 +59,7 @@ class SyncService extends GetxService {
       final online = await checkConnection();
       if (!online) return;
 
-      final hasPending = Hive.box('AppPrefs').get(_pendingKey) == true;
+      final hasPending = SqliteStore.box('AppPrefs').get(_pendingKey) == true;
       if (hasPending) {
         final success = await push();
         if (success) await pull();
@@ -74,22 +83,31 @@ class SyncService extends GetxService {
   }
 
   void _setupLocalMutationWatchers() {
-    final watchBoxes = [
-      'LIBFAV',
-      'LIBRP',
-      'LibraryAlbums',
-      'LibraryArtists',
-      'LibraryPlaylists',
-    ];
+    const entityBoxes = {
+      'LIBFAV': 'favorite',
+      'LIBRP': 'recent_play',
+      'LibraryAlbums': 'album',
+      'LibraryArtists': 'artist',
+      'LibraryPlaylists': 'playlist',
+      'SongDownloads': 'download',
+    };
 
-    for (final boxName in watchBoxes) {
-      Hive.box(boxName).watch().listen((_) {
+    for (final entry in entityBoxes.entries) {
+      SqliteStore.box(entry.key).watch().listen((event) {
         if (_isApplyingRemoteChanges) return;
-        triggerPush();
+        if (entry.key == 'LibraryPlaylists') {
+          final playlistId = event.key.toString();
+          unawaited(recordPlaylistChange(
+            playlistId,
+            deleted: event.deleted,
+          ));
+          return;
+        }
+        unawaited(_recordBoxMutation(entry.key, entry.value, event));
       });
     }
 
-    Hive.box('AppPrefs').watch().listen((event) {
+    SqliteStore.box('AppPrefs').watch().listen((event) {
       if (_isApplyingRemoteChanges) return;
       const allowedKeys = [
         'themeModeType',
@@ -104,9 +122,57 @@ class SyncService extends GetxService {
         'queueLoopModeEnabled',
       ];
       if (allowedKeys.contains(event.key)) {
-        triggerPush();
+        unawaited(_recordEntityChange(
+          entityType: 'setting',
+          entityId: event.key.toString(),
+          operation: event.deleted ? 'delete' : 'upsert',
+          payload: event.deleted
+              ? const {}
+              : {'key': event.key.toString(), 'value': event.value},
+        ));
       }
     });
+  }
+
+  Future<void> _recordBoxMutation(
+    String boxName,
+    String entityType,
+    SqliteBoxEvent event,
+  ) async {
+    final payload = event.value is Map
+        ? Map<String, dynamic>.from(
+            (event.value as Map)
+                .map((key, value) => MapEntry(key.toString(), value)),
+          )
+        : <String, dynamic>{};
+    final entityId = _entityIdForBox(boxName, event.key, payload);
+    if (entityId == null || entityId.isEmpty) return;
+    await _recordEntityChange(
+      entityType: entityType,
+      entityId: entityId,
+      operation: event.deleted ? 'delete' : 'upsert',
+      payload: payload,
+    );
+  }
+
+  String? _entityIdForBox(
+    String boxName,
+    dynamic key,
+    Map<String, dynamic> payload,
+  ) {
+    const idKeys = {
+      'LIBFAV': ['videoId', 'id'],
+      'LIBRP': ['videoId', 'id'],
+      'LibraryAlbums': ['browseId', 'albumId', 'id'],
+      'LibraryArtists': ['channelId', 'artistId', 'id'],
+      'LibraryPlaylists': ['playlistId', 'playlist_id', 'id'],
+      'SongDownloads': ['videoId', 'id'],
+    };
+    for (final idKey in idKeys[boxName] ?? const <String>[]) {
+      final value = payload[idKey]?.toString();
+      if (value != null && value.isNotEmpty && value != 'null') return value;
+    }
+    return key?.toString();
   }
 
   Future<void> pullRemoteChanges() async {
@@ -127,7 +193,7 @@ class SyncService extends GetxService {
   }
 
   bool get isCloudMode =>
-      Hive.box('AppPrefs').get(_modeKey, defaultValue: 'local') == 'cloud';
+      SqliteStore.box('AppPrefs').get(_modeKey, defaultValue: 'local') == 'cloud';
 
   String? get syncBaseUrl {
     final isDebugEnv = dotenv.env['DEBUG']?.toLowerCase() == 'true';
@@ -143,7 +209,7 @@ class SyncService extends GetxService {
 
   Future<void> enableCloudMode() async {
     if (isCloudMode) {
-      await Hive.box('AppPrefs').put(_pendingKey, true);
+      await SqliteStore.box('AppPrefs').put(_pendingKey, true);
       lastStatusMessage.value = 'Modo cloud activo. Sincronizacion pendiente.';
       triggerPush();
       return;
@@ -152,16 +218,16 @@ class SyncService extends GetxService {
     final migrationResult =
         await Get.find<CloudMigrationService>().migrateLocalLibraryToCloud();
     if (!migrationResult.success) {
-      await Hive.box('AppPrefs').put(_modeKey, 'local');
-      await Hive.box('AppPrefs').put(_pendingKey, false);
+      await SqliteStore.box('AppPrefs').put(_modeKey, 'local');
+      await SqliteStore.box('AppPrefs').put(_pendingKey, false);
       lastStatusMessage.value = migrationResult.message;
       return;
     }
 
-    await Hive.box('AppPrefs').put(_modeKey, 'cloud');
-    await Hive.box('AppPrefs').put(_pendingKey, false);
-    await Hive.box('AppPrefs').put('emusicCloudRequested', false);
-    await Hive.box('AppPrefs').put('emusicModeChoiceCompleted', true);
+    await SqliteStore.box('AppPrefs').put(_modeKey, 'cloud');
+    await SqliteStore.box('AppPrefs').put(_pendingKey, false);
+    await SqliteStore.box('AppPrefs').put('emusicCloudRequested', false);
+    await SqliteStore.box('AppPrefs').put('emusicModeChoiceCompleted', true);
     lastStatusMessage.value = migrationResult.usedExistingCloud
         ? 'Modo cloud activado. Descargando biblioteca existente.'
         : 'Modo cloud activado. Biblioteca migrada.';
@@ -174,10 +240,10 @@ class SyncService extends GetxService {
   }
 
   Future<void> keepLocalMode() async {
-    await Hive.box('AppPrefs').put(_modeKey, 'local');
-    await Hive.box('AppPrefs').put(_pendingKey, false);
-    await Hive.box('AppPrefs').put('emusicCloudRequested', false);
-    await Hive.box('AppPrefs').put('emusicModeChoiceCompleted', true);
+    await SqliteStore.box('AppPrefs').put(_modeKey, 'local');
+    await SqliteStore.box('AppPrefs').put(_pendingKey, false);
+    await SqliteStore.box('AppPrefs').put('emusicCloudRequested', false);
+    await SqliteStore.box('AppPrefs').put('emusicModeChoiceCompleted', true);
     lastStatusMessage.value =
         'Tus datos se mantienen solo en este dispositivo.';
   }
@@ -214,11 +280,11 @@ class SyncService extends GetxService {
     // while an older request is in flight but its durable queue write has not
     // completed yet.
     _localMutationRevision++;
-    unawaited(_recordPendingMutation());
+    unawaited(_markPendingAndSchedule());
   }
 
   /// Serializes user writes against the destructive compatibility pull.
-  /// The mutation must include both its Hive write and [triggerPush] call.
+  /// The mutation must include both its SqliteStore write and [triggerPush] call.
   Future<T> performLocalMutation<T>(Future<T> Function() mutation) async {
     while (true) {
       final activePull = _pullCompletion;
@@ -241,10 +307,103 @@ class SyncService extends GetxService {
     }
   }
 
-  Future<void> _recordPendingMutation() async {
-    await Hive.box('AppPrefs').put(_pendingKey, true);
-    await _queue.enqueueSnapshotChange(reason: 'local_mutation');
+  Future<void> _markPendingAndSchedule() async {
+    await SqliteStore.box('AppPrefs').put(_pendingKey, true);
     _schedulePush();
+  }
+
+  Future<void> _recordEntityChange({
+    required String entityType,
+    required String entityId,
+    required String operation,
+    Map<String, dynamic> payload = const {},
+    String? parentId,
+  }) async {
+    final accountKey = isCloudMode ? _accountKey : 'local';
+    if (isCloudMode) {
+      await _musicDatabase.recordLocalChange(
+        accountKey: accountKey,
+        entityType: entityType,
+        entityId: entityId,
+        operation: operation,
+        payload: payload,
+        parentId: parentId,
+      );
+      triggerPush();
+    } else {
+      await _musicDatabase.mirrorLocalEntity(
+        accountKey: accountKey,
+        entityType: entityType,
+        entityId: entityId,
+        operation: operation,
+        payload: payload,
+        parentId: parentId,
+      );
+    }
+  }
+
+  Future<void> recordPlaylistChange(
+    String playlistId, {
+    bool deleted = false,
+  }) async {
+    if (deleted) {
+      await _recordEntityChange(
+        entityType: 'playlist',
+        entityId: playlistId,
+        operation: 'delete',
+      );
+      return;
+    }
+    final metadata = SqliteStore.box('LibraryPlaylists').get(playlistId);
+    if (metadata is! Map) return;
+    final payload = Map<String, dynamic>.from(
+      metadata.map((key, value) => MapEntry(key.toString(), value)),
+    );
+    final boxName = sanitizeBoxName(playlistId);
+    final tracksBox = SqliteStore.isBoxOpen(boxName)
+        ? SqliteStore.box(boxName)
+        : await SqliteStore.openBox(boxName);
+    payload['tracks'] = tracksBox.values.toList();
+    await _recordEntityChange(
+      entityType: 'playlist',
+      entityId: playlistId,
+      operation: 'upsert',
+      payload: payload,
+    );
+  }
+
+  Future<void> recordPlaylistTrackChange(
+    String playlistId,
+    String trackId, {
+    required bool deleted,
+    Map<String, dynamic> track = const {},
+    int? position,
+  }) async {
+    await _recordEntityChange(
+      entityType: 'playlist_track',
+      entityId: '$playlistId:$trackId',
+      operation: deleted ? 'delete' : 'upsert',
+      parentId: playlistId,
+      payload: {
+        ...track,
+        'playlist_id': playlistId,
+        'videoId': trackId,
+        if (position != null) 'position': position,
+      },
+    );
+  }
+
+  Future<void> recordFavoriteChange(
+    String trackId, {
+    required bool deleted,
+    Map<String, dynamic> track = const {},
+  }) async {
+    await _recordEntityChange(
+      entityType: 'favorite',
+      entityId: trackId,
+      operation: deleted ? 'delete' : 'upsert',
+      payload: deleted ? const {} : track,
+    );
   }
 
   void _schedulePush({Duration delay = const Duration(seconds: 1)}) {
@@ -290,6 +449,9 @@ class SyncService extends GetxService {
 
     try {
       final token = await _authService.getAccessToken();
+      if (_musicDatabase.isBootstrapComplete(_accountKey)) {
+        return await _pullIncremental(token ?? '');
+      }
       final responseData =
           await _httpClient.pull(_normalizedBaseUrl(), token ?? "");
 
@@ -352,7 +514,14 @@ class SyncService extends GetxService {
           _repository.firstNonNull(data, const ['settings', 'user_settings']),
         );
 
-        await Hive.box('AppPrefs')
+        await _musicDatabase.importServerSnapshot(_accountKey, data);
+        final serverVersion = _asInt(responseData['server_version']);
+        await _musicDatabase.markBootstrapComplete(
+          _accountKey,
+          serverVersion,
+        );
+
+        await SqliteStore.box('AppPrefs')
             .put(_lastSyncKey, DateTime.now().toIso8601String());
         await _updatePendingFlag();
       } finally {
@@ -378,6 +547,179 @@ class SyncService extends GetxService {
     }
   }
 
+  Future<bool> _pullIncremental(String token) async {
+    final accountKey = _accountKey;
+    final sinceVersion = _musicDatabase.lastServerVersion(accountKey);
+    final response = await _httpClient.pullChanges(
+      _normalizedBaseUrl(),
+      token,
+      sinceVersion,
+    );
+    final rawChanges = response['changes'];
+    final changes = rawChanges is List
+        ? rawChanges
+            .whereType<Map>()
+            .map((change) => Map<String, dynamic>.from(change))
+            .toList()
+        : <Map<String, dynamic>>[];
+    final serverVersion = _asInt(response['server_version']);
+
+    _isApplyingRemoteChanges = true;
+    try {
+      await _musicDatabase.applyRemoteChanges(accountKey, changes);
+      await _applyIncrementalChangesToLocalStore(changes);
+      await _musicDatabase.markBootstrapComplete(accountKey, serverVersion);
+      await SqliteStore.box('AppPrefs')
+          .put(_lastSyncKey, DateTime.now().toIso8601String());
+    } finally {
+      _isApplyingRemoteChanges = false;
+    }
+    _refreshLibraryControllers();
+    lastStatusMessage.value = changes.isEmpty
+        ? 'Biblioteca al dia.'
+        : '${changes.length} cambios sincronizados.';
+    return true;
+  }
+
+  Future<void> _applyIncrementalChangesToLocalStore(
+    List<Map<String, dynamic>> changes,
+  ) async {
+    for (final change in changes) {
+      final entityType = change['entity_type']?.toString() ?? '';
+      final entityId = change['entity_id']?.toString() ?? '';
+      final operation = change['operation']?.toString() ?? 'upsert';
+      final payload = _changePayload(change);
+      switch (entityType) {
+        case 'favorite':
+          await _applyBoxChange('LIBFAV', entityId, operation, payload);
+          break;
+        case 'recent_play':
+          await _applyBoxChange('LIBRP', entityId, operation, payload);
+          break;
+        case 'album':
+          await _applyBoxChange('LibraryAlbums', entityId, operation, payload);
+          break;
+        case 'artist':
+          await _applyBoxChange('LibraryArtists', entityId, operation, payload);
+          break;
+        case 'download':
+          await _applyBoxChange('SongDownloads', entityId, operation, payload);
+          break;
+        case 'playlist':
+          await _applyPlaylistChange(entityId, operation, payload);
+          break;
+        case 'playlist_track':
+          await _applyPlaylistTrackChange(entityId, operation, payload);
+          break;
+        case 'setting':
+          final key = payload['key']?.toString() ?? entityId;
+          if (operation == 'delete') {
+            await SqliteStore.box('AppPrefs').delete(key);
+          } else {
+            await SqliteStore.box('AppPrefs').put(key, payload['value']);
+          }
+          break;
+      }
+    }
+  }
+
+  Future<void> _applyBoxChange(
+    String boxName,
+    String entityId,
+    String operation,
+    Map<String, dynamic> payload,
+  ) async {
+    final box = SqliteStore.box(boxName);
+    if (operation == 'delete') {
+      await box.delete(entityId);
+    } else {
+      await box.put(entityId, payload);
+    }
+  }
+
+  Future<void> _applyPlaylistChange(
+    String entityId,
+    String operation,
+    Map<String, dynamic> payload,
+  ) async {
+    final playlists = SqliteStore.box('LibraryPlaylists');
+    if (operation == 'delete') {
+      await playlists.delete(entityId);
+      final boxName = sanitizeBoxName(entityId);
+      if (SqliteStore.isBoxOpen(boxName)) await SqliteStore.box(boxName).clear();
+      return;
+    }
+    final tracks = payload.remove('tracks');
+    await playlists.put(entityId, payload);
+    if (tracks is List) {
+      final boxName = sanitizeBoxName(entityId);
+      final box = SqliteStore.isBoxOpen(boxName)
+          ? SqliteStore.box(boxName)
+          : await SqliteStore.openBox(boxName);
+      await box.clear();
+      for (var i = 0; i < tracks.length; i++) {
+        await box.put(i, tracks[i]);
+      }
+    }
+  }
+
+  Future<void> _applyPlaylistTrackChange(
+    String entityId,
+    String operation,
+    Map<String, dynamic> payload,
+  ) async {
+    final playlistId =
+        payload['playlist_id']?.toString() ?? entityId.split(':').first;
+    final trackId = payload['videoId']?.toString() ??
+        (entityId.contains(':')
+            ? entityId.substring(entityId.indexOf(':') + 1)
+            : entityId);
+    final boxName = sanitizeBoxName(playlistId);
+    final box = SqliteStore.isBoxOpen(boxName)
+        ? SqliteStore.box(boxName)
+        : await SqliteStore.openBox(boxName);
+    final existingKey = box.keys.cast<dynamic>().firstWhere(
+          (key) => (box.get(key) as Map?)?['videoId']?.toString() == trackId,
+          orElse: () => null,
+        );
+    if (existingKey != null) await box.delete(existingKey);
+    if (operation != 'delete') {
+      final requestedPosition = _asInt(payload['position']);
+      final key = requestedPosition >= 0 && !box.containsKey(requestedPosition)
+          ? requestedPosition
+          : null;
+      if (key == null) {
+        await box.add(payload);
+      } else {
+        await box.put(key, payload);
+      }
+    }
+  }
+
+  Map<String, dynamic> _changePayload(Map<String, dynamic> change) {
+    final raw = change['payload'] ?? change['payload_json'];
+    if (raw is Map) {
+      return Map<String, dynamic>.from(
+        raw.map((key, value) => MapEntry(key.toString(), value)),
+      );
+    }
+    if (raw is String && raw.isNotEmpty) {
+      final decoded = jsonDecode(raw);
+      if (decoded is Map) {
+        return Map<String, dynamic>.from(
+          decoded.map((key, value) => MapEntry(key.toString(), value)),
+        );
+      }
+    }
+    return <String, dynamic>{};
+  }
+
+  int _asInt(dynamic value) {
+    if (value is int) return value;
+    if (value is num) return value.toInt();
+    return int.tryParse(value?.toString() ?? '') ?? 0;
+  }
+
   Future<bool> push() async {
     if (!isCloudMode || !_authService.isAuthenticated.value) {
       return true;
@@ -391,6 +733,10 @@ class SyncService extends GetxService {
     lastStatusMessage.value = 'Subiendo cambios a EMusic...';
 
     try {
+      final incrementalChanges = _musicDatabase.pendingChanges(_accountKey);
+      if (incrementalChanges.isNotEmpty) {
+        return await _pushIncrementalChanges(incrementalChanges);
+      }
       // Only these queue entries and this mutation revision are represented by
       // this request. Newer entries must never be acknowledged by it.
       final capturedPendingIds = _queue.capturePendingIds();
@@ -403,12 +749,12 @@ class SyncService extends GetxService {
         final success = await _wsClient!.sendPushPayload(payload);
         if (success) {
           await _acknowledgePush(capturedPendingIds, capturedRevision);
-          await Hive.box('AppPrefs')
+          await SqliteStore.box('AppPrefs')
               .put(_lastSyncKey, DateTime.now().toIso8601String());
           lastStatusMessage.value = 'Cambios subidos correctamente (WS).';
           return true;
         } else {
-          await Hive.box('AppPrefs').put(_pendingKey, true);
+          await SqliteStore.box('AppPrefs').put(_pendingKey, true);
           await _queue.markRetryScheduled();
           lastStatusMessage.value =
               'No se pudo subir via WS. Se reintentara despues.';
@@ -422,19 +768,19 @@ class SyncService extends GetxService {
 
       if (success) {
         await _acknowledgePush(capturedPendingIds, capturedRevision);
-        await Hive.box('AppPrefs')
+        await SqliteStore.box('AppPrefs')
             .put(_lastSyncKey, DateTime.now().toIso8601String());
         lastStatusMessage.value = 'Cambios subidos correctamente.';
         return true;
       }
 
-      await Hive.box('AppPrefs').put(_pendingKey, true);
+      await SqliteStore.box('AppPrefs').put(_pendingKey, true);
       await _queue.markRetryScheduled();
       lastStatusMessage.value = 'No se pudo subir. Se reintentara despues.';
       return false;
     } catch (e, stack) {
       isOnline.value = false;
-      await Hive.box('AppPrefs').put(_pendingKey, true);
+      await SqliteStore.box('AppPrefs').put(_pendingKey, true);
       await _queue.markRetryScheduled();
       lastStatusMessage.value =
           'Sin conexion. Cambios guardados para reintento.';
@@ -449,9 +795,51 @@ class SyncService extends GetxService {
     }
   }
 
+  Future<bool> _pushIncrementalChanges(
+    List<PendingMusicChange> changes,
+  ) async {
+    final accountKey = _accountKey;
+    final changeIds = changes.map((change) => change.changeId).toList();
+    try {
+      final token = await _authService.getAccessToken();
+      final deviceId = await _ensureDeviceId();
+      final response = await _httpClient.pushChanges(
+        _normalizedBaseUrl(),
+        token ?? '',
+        changes.map((change) => change.toApiJson()).toList(),
+        deviceId,
+      );
+      final acceptedRaw = response['accepted_change_ids'];
+      final accepted = acceptedRaw is List
+          ? acceptedRaw.map((value) => value.toString()).toSet()
+          : <String>{};
+      if (!changeIds.every(accepted.contains)) {
+        await _musicDatabase.markChangesForRetry(accountKey, changeIds);
+        lastStatusMessage.value =
+            'EMusic no confirmo todos los cambios. Se reintentaran.';
+        return false;
+      }
+      final serverVersion = _asInt(response['server_version']);
+      await _musicDatabase.markChangesSynced(
+        accountKey,
+        changeIds,
+        serverVersion,
+      );
+      await _updatePendingFlag();
+      await SqliteStore.box('AppPrefs')
+          .put(_lastSyncKey, DateTime.now().toIso8601String());
+      lastStatusMessage.value = '${changeIds.length} cambios confirmados.';
+      return true;
+    } catch (_) {
+      await _musicDatabase.markChangesForRetry(accountKey, changeIds);
+      rethrow;
+    }
+  }
+
   bool get _hasPendingLocalChanges =>
-      Hive.box('AppPrefs').get(_pendingKey, defaultValue: false) == true ||
-      _queue.hasPendingChanges;
+      SqliteStore.box('AppPrefs').get(_pendingKey, defaultValue: false) == true ||
+      _queue.hasPendingChanges ||
+      (isCloudMode && _musicDatabase.hasPendingChanges(_accountKey));
 
   Future<void> _acknowledgePush(
     List<String> capturedPendingIds,
@@ -460,11 +848,13 @@ class SyncService extends GetxService {
     await _queue.markSynced(capturedPendingIds);
     final hasNewerMutation =
         _localMutationRevision != capturedRevision || _queue.hasPendingChanges;
-    await Hive.box('AppPrefs').put(_pendingKey, hasNewerMutation);
+    await SqliteStore.box('AppPrefs').put(_pendingKey, hasNewerMutation);
   }
 
   Future<void> _updatePendingFlag() async {
-    await Hive.box('AppPrefs').put(_pendingKey, _queue.hasPendingChanges);
+    final hasPending = _queue.hasPendingChanges ||
+        (isCloudMode && _musicDatabase.hasPendingChanges(_accountKey));
+    await SqliteStore.box('AppPrefs').put(_pendingKey, hasPending);
   }
 
   Future<bool> pushCollaborative(Playlist playlist) async {
@@ -473,7 +863,7 @@ class SyncService extends GetxService {
 
     try {
       final tracksBox =
-          await Hive.openBox(sanitizeBoxName(playlist.playlistId));
+          await SqliteStore.openBox(sanitizeBoxName(playlist.playlistId));
       final tracks = tracksBox.values.toList();
 
       final plMap = playlist.toJson();
@@ -611,7 +1001,7 @@ class SyncService extends GetxService {
   }
 
   Future<String> _ensureDeviceId() async {
-    final prefs = Hive.box('AppPrefs');
+    final prefs = SqliteStore.box('AppPrefs');
     final existing = prefs.get('linkedDeviceId')?.toString();
     if (existing != null && existing.isNotEmpty) {
       return existing;

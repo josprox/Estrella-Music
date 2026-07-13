@@ -1,7 +1,7 @@
 import 'package:audio_service/audio_service.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hive/hive.dart';
+import 'package:harmonymusic/services/storage/sqlite_store.dart';
 import 'package:harmonymusic/utils/helpers/helper.dart';
 
 import 'package:harmonymusic/services/social/piped_service.dart';
@@ -295,7 +295,7 @@ class AddToPlaylistController extends GetxController {
   }
 
   Future<void> _getAllPlaylist() async {
-    final plstsBox = await Hive.openBox("LibraryPlaylists");
+    final plstsBox = await SqliteStore.openBox("LibraryPlaylists");
     playlists.value =
         plstsBox.values.map((e) => Playlist.fromJson(e as Map)).toList();
     localPlaylists = playlists.toList();
@@ -327,16 +327,23 @@ class AddToPlaylistController extends GetxController {
     if (playlistType.value == "local") {
       final syncService = Get.find<SyncService>();
       await syncService.performLocalMutation(() async {
-        final plstBox = await Hive.openBox(sanitizeBoxName(playlistId));
+        final plstBox = await SqliteStore.openBox(sanitizeBoxName(playlistId));
         final playlistSongIds = plstBox.values.map((item) => item['videoId']);
         for (MediaItem element in songs) {
           if (!playlistSongIds.contains(element.id)) {
-            await plstBox.add(MediaItemBuilder.toJson(element));
+            final track = MediaItemBuilder.toJson(element);
+            final position = await plstBox.add(track);
+            await syncService.recordPlaylistTrackChange(
+              playlistId,
+              element.id,
+              deleted: false,
+              track: track,
+              position: position,
+            );
           }
         }
-        syncService.triggerPush();
       });
-      // Keep box open to prevent "Box has already been closed" errors
+      // Keep box open to prevent "SqliteBox has already been closed" errors
       additionInProgress.value = false;
       return true;
     } else {

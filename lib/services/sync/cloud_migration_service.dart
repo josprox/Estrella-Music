@@ -4,7 +4,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart' hide Response;
-import 'package:hive/hive.dart';
+import 'package:harmonymusic/services/storage/sqlite_store.dart';
 
 import 'package:harmonymusic/utils/helpers/helper.dart';
 import 'package:harmonymusic/services/backup/app_backup_service.dart';
@@ -69,7 +69,7 @@ class CloudMigrationService extends GetxService {
 
     String? migrationId;
     try {
-      final prefs = Hive.box('AppPrefs');
+      final prefs = SqliteStore.box('AppPrefs');
       statusMessage.value = 'Revisando si EMusic Cloud ya tiene biblioteca...';
       final remoteSummary = await fetchRemoteSummary();
       if (_hasRemoteLibraryData(remoteSummary)) {
@@ -178,14 +178,14 @@ class CloudMigrationService extends GetxService {
   }
 
   Future<Map<String, dynamic>> buildLocalSnapshot() async {
-    final appPrefs = Hive.box('AppPrefs');
+    final appPrefs = SqliteStore.box('AppPrefs');
     return {
       'playlists': await _collectPlaylists(),
-      'favorites': Hive.box('LIBFAV').values.toList(),
-      'recent_plays': Hive.box('LIBRP').values.toList(),
-      'albums': Hive.box('LibraryAlbums').values.toList(),
-      'artists': Hive.box('LibraryArtists').values.toList(),
-      'downloads': Hive.box('SongDownloads').values.toList(),
+      'favorites': SqliteStore.box('LIBFAV').values.toList(),
+      'recent_plays': SqliteStore.box('LIBRP').values.toList(),
+      'albums': SqliteStore.box('LibraryAlbums').values.toList(),
+      'artists': SqliteStore.box('LibraryArtists').values.toList(),
+      'downloads': SqliteStore.box('SongDownloads').values.toList(),
       'settings': _syncableSettings(appPrefs),
     };
   }
@@ -208,7 +208,7 @@ class CloudMigrationService extends GetxService {
   }
 
   Future<bool> cancelLastMigration() async {
-    final migrationId = Hive.box('AppPrefs').get(_migrationIdKey)?.toString();
+    final migrationId = SqliteStore.box('AppPrefs').get(_migrationIdKey)?.toString();
     if (migrationId == null || migrationId.isEmpty) {
       return true;
     }
@@ -297,7 +297,7 @@ class CloudMigrationService extends GetxService {
   }
 
   Future<List<Map<String, dynamic>>> _collectPlaylists() async {
-    final playlistsBox = Hive.box('LibraryPlaylists');
+    final playlistsBox = SqliteStore.box('LibraryPlaylists');
     final result = <Map<String, dynamic>>[];
 
     for (final value in playlistsBox.values) {
@@ -307,9 +307,9 @@ class CloudMigrationService extends GetxService {
       if (playlist['isPipedPlaylist'] == true) continue;
 
       final boxName = _sanitizeBoxName(playlistId);
-      final wasOpen = Hive.isBoxOpen(boxName);
+      final wasOpen = SqliteStore.isBoxOpen(boxName);
       final tracksBox =
-          wasOpen ? Hive.box(boxName) : await Hive.openBox(boxName);
+          wasOpen ? SqliteStore.box(boxName) : await SqliteStore.openBox(boxName);
       result.add({
         ...playlist,
         'tracks': tracksBox.values.toList(),
@@ -320,7 +320,7 @@ class CloudMigrationService extends GetxService {
     return result;
   }
 
-  Map<String, dynamic> _syncableSettings(Box appPrefs) {
+  Map<String, dynamic> _syncableSettings(SqliteBox appPrefs) {
     const allowedKeys = [
       'themeModeType',
       'streamingQuality',
@@ -375,7 +375,7 @@ class CloudMigrationService extends GetxService {
   }
 
   Future<String> _ensureDeviceId() async {
-    final prefs = Hive.box('AppPrefs');
+    final prefs = SqliteStore.box('AppPrefs');
     final existing = prefs.get(_deviceIdKey)?.toString();
     if (existing != null && existing.isNotEmpty) {
       return existing;
@@ -436,7 +436,7 @@ class CloudMigrationService extends GetxService {
     lastError.value = detail == null || detail.isEmpty ? message : detail;
     statusMessage.value = message;
     progress.value = 0;
-    Hive.box('AppPrefs').put(_statusKey, 'failed');
+    SqliteStore.box('AppPrefs').put(_statusKey, 'failed');
     printERROR('CloudMigrationService failed: $message ${detail ?? ''}');
     return CloudMigrationResult(
       success: false,

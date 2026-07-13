@@ -1,6 +1,6 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hive/hive.dart';
+import 'package:harmonymusic/services/storage/sqlite_store.dart';
 import 'package:harmonymusic/generated/l10n.dart';
 
 import 'package:harmonymusic/utils/desktop/app_link_controller.dart' show ProcessLink;
@@ -23,7 +23,7 @@ class SearchScreenController extends GetxController with ProcessLink {
   final musicServices = Get.find<MusicServices>();
   final suggestionList = [].obs;
   final historyQuerylist = [].obs;
-  late Box<dynamic> queryBox;
+  late SqliteBox<dynamic> queryBox;
   final urlPasted = false.obs;
   final searchText = ''.obs;
 
@@ -90,7 +90,7 @@ class SearchScreenController extends GetxController with ProcessLink {
         isSearchBarInFocus.value = focusNode.hasFocus;
       });
     }
-    queryBox = await Hive.openBox("searchQuery");
+    queryBox = await SqliteStore.openBox("searchQuery");
     historyQuerylist.value = queryBox.values.toList().reversed.toList();
   }
 

@@ -2,7 +2,7 @@ import 'package:audio_service/audio_service.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hive/hive.dart';
+import 'package:harmonymusic/services/storage/sqlite_store.dart';
 import 'package:harmonymusic/services/sync/sync_service.dart';
 import 'package:harmonymusic/ui/widgets/custom_marquee.dart';
 import 'package:harmonymusic/utils/helpers/youtube_share_manager.dart';
@@ -885,7 +885,7 @@ class PlaylistScreen extends StatelessWidget {
               playlist.isCollaborative = selectedFriends.isNotEmpty;
               playlist.description = playlist.isCollaborative ? "Collaborative Playlist" : "Library Playlist";
               
-              final box = await Hive.openBox("LibraryPlaylists");
+              final box = await SqliteStore.openBox("LibraryPlaylists");
               await box.put(playlist.playlistId, playlist.toJson());
               await box.close();
 

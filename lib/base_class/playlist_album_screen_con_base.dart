@@ -1,7 +1,7 @@
 import 'package:audio_service/audio_service.dart' show MediaItem;
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
-import 'package:hive/hive.dart';
+import 'package:harmonymusic/services/storage/sqlite_store.dart';
 
 import 'package:harmonymusic/models/album.dart';
 import 'package:harmonymusic/models/media_item_builder.dart';
@@ -62,7 +62,7 @@ abstract class PlaylistAlbumScreenControllerBase extends GetxController {
   ///
   /// [id] - The unique identifier of the album/playlist.
   void fetchSongsfromDatabase(String id) async {
-    final box = await Hive.openBox(sanitizeBoxName(id));
+    final box = await SqliteStore.openBox(sanitizeBoxName(id));
     songList.value = box.values
         .map<MediaItem?>((item) => MediaItemBuilder.fromJson(item))
         .whereType<MediaItem>()
@@ -77,7 +77,7 @@ abstract class PlaylistAlbumScreenControllerBase extends GetxController {
   void checkDownloadStatus() {
     bool downloaded = true;
     for (MediaItem item in songList) {
-      if (!Hive.box("SongDownloads").containsKey(item.id)) {
+      if (!SqliteStore.box("SongDownloads").containsKey(item.id)) {
         downloaded = false;
         break;
       }

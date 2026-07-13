@@ -1,4 +1,3 @@
-﻿
 import 'dart:convert';
 import 'dart:io';
 import 'dart:isolate';
@@ -9,12 +8,12 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '/ui/screens/Settings/settings_screen_controller.dart';
 import '/ui/widgets/loader.dart';
 import 'package:harmonymusic/utils/helpers/helper.dart';
 import 'package:harmonymusic/services/system/permission_service.dart';
 import 'common_dialog_widget.dart';
 import 'package:harmonymusic/generated/l10n.dart';
+import 'package:harmonymusic/services/backup/app_backup_service.dart';
 
 class BackupDialog extends StatelessWidget {
   const BackupDialog({super.key});
@@ -127,18 +126,9 @@ class BackupDialogController extends GetxController {
   final isbackupCompleted = false.obs;
   final backupRunning = false.obs;
   List<String> filesToExport = [];
-  final supportDirPath = Get.find<SettingsScreenController>().supportDirPath;
 
   Future<void> scanFilesToBackup() async {
-    final dbDir = await Get.find<SettingsScreenController>().dbDir;
-    filesToExport.addAll(await processDirectoryInIsolate(dbDir));
-    try {
-      filesToExport.addAll(await processDirectoryInIsolate(
-          "$supportDirPath/thumbnails",
-          extensionFilter: ".png"));
-    } catch (e) {
-      printERROR(e);
-    }
+    filesToExport = await Get.find<AppBackupService>().collectFilesToBackup();
   }
 
   Future<void> backup() async {
@@ -164,8 +154,10 @@ class BackupDialogController extends GetxController {
     backupRunning.value = true;
     final exportDirPath = pickedFolderPath.toString();
 
-    compressFilesInBackground(filesToExport,
-            '$exportDirPath/${DateTime.now().millisecondsSinceEpoch.toString()}.hmb')
+    Get.find<AppBackupService>()
+        .createBackupArchive(
+      outputPath: '$exportDirPath/${DateTime.now().millisecondsSinceEpoch}.hmb',
+    )
         .then((_) {
       backupRunning.value = false;
       isbackupCompleted.value = true;

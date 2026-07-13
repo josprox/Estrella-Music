@@ -6,7 +6,7 @@ import 'package:get/get.dart' hide FormData, MultipartFile;
 
 import 'package:harmonymusic/utils/helpers/helper.dart';
 import 'package:harmonymusic/services/auth/auth_service.dart';
-import 'package:hive/hive.dart';
+import 'package:harmonymusic/services/storage/sqlite_store.dart';
 
 class CloudBackupFile {
   CloudBackupFile({
@@ -191,7 +191,7 @@ class CloudBackupService extends GetxService {
 
     if (response.statusCode == 200) {
       // Actualizar el timestamp para el control de frecuencia (4h/12h)
-      final appPrefs = Hive.box('AppPrefs');
+      final appPrefs = SqliteStore.box('AppPrefs');
       await appPrefs.put('last_cloud_backup_timestamp', DateTime.now().toIso8601String());
     } else {
       throw StateError('No fue posible subir el backup a la nube.');

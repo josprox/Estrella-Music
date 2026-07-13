@@ -1,5 +1,5 @@
-﻿import 'package:flutter/material.dart';
-import 'package:hive/hive.dart';
+import 'package:flutter/material.dart';
+import 'package:harmonymusic/services/storage/sqlite_store.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:harmonymusic/utils/helpers/helper.dart';
 import 'package:harmonymusic/models/playlist.dart';
@@ -118,9 +118,9 @@ class PlaylistCoverWidget extends StatelessWidget {
   Future<List<String>> _getPlaylistThumbnails() async {
     try {
       final boxName = sanitizeBoxName(playlist.playlistId);
-      final box = Hive.isBoxOpen(boxName)
-          ? Hive.box(boxName)
-          : await Hive.openBox(boxName);
+      final box = SqliteStore.isBoxOpen(boxName)
+          ? SqliteStore.box(boxName)
+          : await SqliteStore.openBox(boxName);
 
       final List<String> urls = [];
       for (var item in box.values) {

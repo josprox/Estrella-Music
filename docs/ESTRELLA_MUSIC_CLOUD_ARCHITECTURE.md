@@ -8,7 +8,7 @@ Este documento define la arquitectura para iniciar la migracion de Estrella Musi
 
 Estrella Music debe operar con dos modos:
 
-- **Modo local**: Hive/local sigue siendo la fuente de verdad. No requiere cuenta.
+- **Modo local**: SQLite local es la fuente de verdad. No requiere cuenta.
 - **Modo cloud**: Joss Red autentica al usuario, EMusic guarda la biblioteca musical en servidor y Flutter funciona como cache inteligente/offline.
 
 La regla central es:
@@ -29,7 +29,8 @@ Ruta:
 C:\Users\joss\Documents\proyectos\Estrella-Music-v2
 ```
 
-Es la app principal por defecto. Actualmente usa Hive/local para biblioteca, favoritos, historial, playlists, downloads, settings y cache.
+Es la app principal por defecto. Usa SQLite para biblioteca, favoritos,
+historial, playlists, downloads, settings, cache y estado de sincronizacion.
 
 ### EMusic
 
@@ -76,7 +77,8 @@ Componentes actuales:
 
 ## 4. Estado actual de Flutter
 
-La app usa Hive como fuente local.
+La app usa SQLite como fuente local. Los nombres historicos de las colecciones
+se conservan como nombres logicos dentro de `local_store_entries`.
 
 Cajas/datos relevantes:
 
@@ -89,14 +91,15 @@ Cajas/datos relevantes:
 - `SongDownloads`, `SongsCache`, `SongsUrlCache`.
 - `homeScreenData`, `prevSessionData`.
 
-Riesgo actual: muchas mutaciones escriben directamente en Hive desde controllers/widgets. Para modo Spotify se necesita una capa de sync que observe o centralice esas mutaciones.
+Las mutaciones pasan por `SqliteStore` y la capa de sincronizacion observa sus
+eventos para crear cambios incrementales durables.
 
 ## 5. Modelo objetivo tipo Spotify
 
 ### Modo local
 
 - No requiere login.
-- Hive es fuente de verdad.
+- SQLite es fuente de verdad.
 - La app funciona como ahora.
 - No hay push/pull automatico.
 - El usuario puede cambiar a cloud despues.
@@ -277,7 +280,8 @@ No borrar registros inmediatamente. Usar tombstones (`deleted_at`) para que otro
 
 Capas a crear o reforzar:
 
-- `LocalLibraryStore`: lectura/escritura Hive.
+- `SqliteStore`: preferencias, cache y colecciones locales compatibles.
+- `MusicSqliteService`: entidades musicales normalizadas, versiones y outbox.
 - `CloudMusicApi`: cliente HTTP hacia EMusic.
 - `JossRedAuthApi`: cliente HTTP hacia Joss Red.
 - `SyncCoordinator`: decide push/pull/retry.
@@ -392,7 +396,7 @@ flutter run
 - Perdida de datos por snapshot completo: backup local y validacion previa.
 - Sobrescritura multi-dispositivo: versiones y tombstones.
 - Descargas no portables: guardar solo metadata/autorizacion cloud.
-- Mutaciones Hive dispersas: introducir stores/repos y cola.
+- Mutaciones fuera de repositorios: terminar de centralizarlas progresivamente.
 - Secretos en repos: rotar y sacar de versionado.
 - Migraciones pesadas en request: mover a jobs o proceso controlado.
 
@@ -416,11 +420,11 @@ Mientras termina la adopcion de `/api/sync/changes`, el endpoint de snapshot
 - Una mutacion creada durante un push conserva `hasPendingSync=true` y provoca
   otro push; una respuesta anterior nunca puede limpiar cambios posteriores.
 - Un pull no puede aplicarse mientras haya cambios pendientes ni mientras una
-  mutacion local este escribiendo en Hive.
-- Favoritos y canciones de playlists se escriben en Hive y se marcan pendientes
-  dentro de la misma seccion critica del coordinador.
-- Las colecciones vacias son datos validos. `favorites: []` y `playlists: []`
-  deben vaciar sus tablas remotas, no interpretarse como campos ausentes.
+  mutacion local este escribiendo en SQLite.
+- Favoritos y canciones de playlists se registran en SQLite/outbox dentro de la
+  misma seccion critica y notifican a la UI mediante listeners SQLite.
+- El endpoint snapshot heredado hace merge/upsert por identificador. Un arreglo
+  vacio nunca borra una coleccion remota; los deletes usan tombstones.
 - EMusic responde a HTTP y WebSocket con `summary`, incluyendo los conteos
   persistidos de `playlists`, `favorites`, `recent_plays`, `albums`, `artists` y
   `downloads`.
@@ -431,3 +435,47 @@ Mientras termina la adopcion de `/api/sync/changes`, el endpoint de snapshot
 Estas garantias evitan perdida de likes o canciones durante la etapa de
 compatibilidad. El objetivo definitivo sigue siendo el contrato incremental de
 las secciones 9 y 12, con cambios por entidad, versiones y tombstones.
+
+## 17. Implementacion incremental y SQLite
+
+Desde 2026-07-12 el flujo principal posterior al bootstrap usa:
+
+- `MusicSqliteService` con entidades normalizadas, versiones y outbox durable.
+- Migracion transaccional `legacy_hive_to_sqlite_v1`, con backup, conteo y
+  checksum antes de retirar los archivos Hive.
+- Compactacion de mutaciones repetidas por entidad.
+- `POST /api/sync/changes` con confirmacion explicita de `change_id`.
+- `GET /api/sync/changes?since_version=...` para pull incremental.
+- Aplicacion real de favoritos, playlists, canciones, historial, albums,
+  artistas, settings y descargas en EMusic.
+- Tombstones/versiones en `music_record_versions` y eventos en
+  `sync_change_log`.
+
+El snapshot completo se conserva para bootstrap, migracion, restauracion y
+clientes antiguos. Su push de compatibilidad es no destructivo y no debe
+utilizarse para cada like o cambio de playlist.
+
+Contrato y operacion: `docs/EMUSIC_INCREMENTAL_SYNC.md`.
+
+## 18. Corte definitivo del almacenamiento local
+
+Desde 2026-07-12 ningun controller, widget o servicio de ejecucion normal usa
+Hive. `SqliteStore` implementa las colecciones locales sobre
+`estrella_local.sqlite3`; `MusicSqliteService` mantiene el modelo musical
+normalizado y la outbox en `estrella_music.sqlite3`.
+
+En una instalacion actualizada:
+
+1. Si SQLite ya tiene `legacy_hive_to_sqlite_v1`, la app abre SQLite sin cargar
+   Hive.
+2. Si el marcador no existe y hay archivos `.hive`, se crea un ZIP local de
+   recuperacion.
+3. Se importan claves y valores dentro de `BEGIN IMMEDIATE`.
+4. Se comparan conteo y checksum leyendo nuevamente desde SQLite.
+5. Solo despues del `COMMIT` se eliminan los `.hive` y locks originales.
+6. El backup legacy permanece en `legacy_hive_backups`.
+
+La dependencia `hive` queda temporalmente solo para leer instalaciones antiguas.
+`hive_flutter` ya no forma parte de la app. Cuando la version de transicion haya
+cumplido su ventana de soporte, el importador y la dependencia restante pueden
+retirarse.

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:audio_service/audio_service.dart';
-import 'package:hive/hive.dart';
+import 'package:harmonymusic/services/storage/sqlite_store.dart';
 import 'package:harmonymusic/utils/helpers/helper.dart';
 
 import 'package:harmonymusic/ui/navigator.dart';
@@ -47,8 +47,8 @@ class ContentListItem extends StatelessWidget {
             : "";
         subtitle = artistName.isNotEmpty ? "Álbum • $artistName" : "Álbum";
       } else {
-        final count = Hive.isBoxOpen(content.playlistId)
-            ? Hive.box(content.playlistId).length
+        final count = SqliteStore.isBoxOpen(content.playlistId)
+            ? SqliteStore.box(content.playlistId).length
             : (content.songCount != null ? int.tryParse(content.songCount!.replaceAll(RegExp(r'\D'), '')) ?? 0 : 0);
         subtitle = count > 0 ? "Playlist • $count ${count == 1 ? 'canción' : 'canciones'}" : "Playlist";
       }
@@ -99,7 +99,7 @@ class ContentListItem extends StatelessWidget {
                         );
 
                         if (id == 'LIBFAV' || id == 'SongDownloads') {
-                          final box = await Hive.openBox(sanitizeBoxName(id));
+                          final box = await SqliteStore.openBox(sanitizeBoxName(id));
                           final tracks = box.values
                               .map<MediaItem?>((item) => MediaItemBuilder.fromJson(item))
                               .whereType<MediaItem>()

@@ -1,7 +1,7 @@
 import 'package:audio_service/audio_service.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hive/hive.dart';
+import 'package:harmonymusic/services/storage/sqlite_store.dart';
 
 import '/models/media_item_builder.dart';
 import 'package:harmonymusic/ui/player/player_controller.dart';
@@ -60,7 +60,7 @@ class HomeScreenController extends GetxController {
 
   Future<void> _loadDailyDiscover() async {
     try {
-      final favBox = await Hive.openBox('LIBFAV');
+      final favBox = await SqliteStore.openBox('LIBFAV');
       if (favBox.isEmpty) {
         printINFO("Daily Discover: No favorites found in LIBFAV");
         return;
@@ -115,7 +115,7 @@ class HomeScreenController extends GetxController {
 
   Future<void> _loadCommunityPlaylists() async {
     try {
-      final favBox = await Hive.openBox('LIBFAV');
+      final favBox = await SqliteStore.openBox('LIBFAV');
       if (favBox.isEmpty) return;
 
       final allFavs = favBox.values.map((e) => MediaItemBuilder.fromJson(e)).toList();
@@ -167,7 +167,7 @@ class HomeScreenController extends GetxController {
 
   Future<void> _loadKeepListening() async {
     try {
-      final favBox = await Hive.openBox('LIBFAV');
+      final favBox = await SqliteStore.openBox('LIBFAV');
       if (favBox.isEmpty) return;
 
       final allFavs = favBox.values.map((e) => MediaItemBuilder.fromJson(e)).toList();
@@ -216,7 +216,7 @@ class HomeScreenController extends GetxController {
 
   Future<void> _loadSimilarRecommendations() async {
     try {
-      final favBox = await Hive.openBox('LIBFAV');
+      final favBox = await SqliteStore.openBox('LIBFAV');
       if (favBox.isEmpty) {
         printINFO("Similar Recommendations: No favorites found in LIBFAV");
         return;
@@ -267,8 +267,8 @@ class HomeScreenController extends GetxController {
 
   Future<void> loadLocalCustomSections() async {
     try {
-      final songsCacheBox = await Hive.openBox('SongsCache');
-      final favBox = await Hive.openBox('LIBFAV');
+      final songsCacheBox = await SqliteStore.openBox('SongsCache');
+      final favBox = await SqliteStore.openBox('LIBFAV');
 
       final allCachedSongs = songsCacheBox.values
           .map((e) => MediaItemBuilder.fromJson(e))
@@ -310,7 +310,7 @@ class HomeScreenController extends GetxController {
   }
 
   Future<bool> loadContentFromDb() async {
-    final homeScreenData = await Hive.openBox("homeScreenData");
+    final homeScreenData = await SqliteStore.openBox("homeScreenData");
     if (homeScreenData.keys.isNotEmpty) {
       final String quickPicksType = homeScreenData.get("quickPicksType");
       final List quickPicksData = homeScreenData.get("quickPicks");
@@ -340,7 +340,7 @@ class HomeScreenController extends GetxController {
   }
 
   Future<void> loadContentFromNetwork({bool silent = false}) async {
-    final box = Hive.box("AppPrefs");
+    final box = SqliteStore.box("AppPrefs");
     String contentType = box.get("discoverContentType") ?? "QP";
 
     networkError.value = false;
@@ -452,7 +452,7 @@ class HomeScreenController extends GetxController {
       isContentFetched.value = true;
 
       cachedHomeScreenData(updateAll: true);
-      final appPrefs = await Hive.openBox("AppPrefs");
+      final appPrefs = await SqliteStore.openBox("AppPrefs");
       await appPrefs.put("homeScreenDataTime", DateTime.now().millisecondsSinceEpoch);
     } on NetworkError catch (r) {
       printERROR("Home Content not loaded due to ${r.message}");
@@ -520,7 +520,7 @@ class HomeScreenController extends GetxController {
             "Seems ${val == "TMV" ? "Top music videos" : "Trending songs"} currently not available!");
       }
     } else {
-      songId ??= Hive.box("AppPrefs").get("recentSongId");
+      songId ??= SqliteStore.box("AppPrefs").get("recentSongId");
       if (songId != null) {
         try {
           final value = await _musicServices.getContentRelatedToSong(
@@ -531,7 +531,7 @@ class HomeScreenController extends GetxController {
                 (value[0]['title'] ?? "").toString().toLowerCase().contains("similar")) {
               final List<MediaItem> items = (value[0]["contents"] as List).whereType<MediaItem>().toList();
               quickPicks_ = QuickPicks(items, title: value[0]["title"]);
-              Hive.box("AppPrefs").put("recentSongId", songId);
+              SqliteStore.box("AppPrefs").put("recentSongId", songId);
             }
           }
         } catch (e) {
@@ -544,7 +544,7 @@ class HomeScreenController extends GetxController {
     quickPicks.value = quickPicks_;
 
     cachedHomeScreenData(updateQuickPicksNMiddleContent: true);
-    await Hive.box("AppPrefs")
+    await SqliteStore.box("AppPrefs")
         .put("homeScreenDataTime", DateTime.now().millisecondsSinceEpoch);
   }
 
@@ -567,7 +567,7 @@ class HomeScreenController extends GetxController {
 
   void _checkNewVersion() {
     showVersionDialog.value =
-        Hive.box("AppPrefs").get("newVersionVisibility") ?? true;
+        SqliteStore.box("AppPrefs").get("newVersionVisibility") ?? true;
     if (showVersionDialog.isTrue) {
       newVersionCheck(Get.find<SettingsScreenController>().currentVersion.value)
           .then((value) {
@@ -581,7 +581,7 @@ class HomeScreenController extends GetxController {
   }
 
   void onChangeVersionVisibility(bool val) {
-    Hive.box("AppPrefs").put("newVersionVisibility", !val);
+    SqliteStore.box("AppPrefs").put("newVersionVisibility", !val);
     showVersionDialog.value = !val;
   }
 
@@ -614,7 +614,7 @@ class HomeScreenController extends GetxController {
       return;
     }
 
-    final homeScreenData = await Hive.openBox("homeScreenData");
+    final homeScreenData = await SqliteStore.openBox("homeScreenData");
 
     if (updateQuickPicksNMiddleContent) {
       await homeScreenData.putAll({

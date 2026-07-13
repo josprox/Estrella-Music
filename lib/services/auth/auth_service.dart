@@ -5,7 +5,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:get/get.dart';
-import 'package:hive/hive.dart';
+import 'package:harmonymusic/services/storage/sqlite_store.dart';
 import 'package:harmonymusic/services/sync/sync_service.dart';
 
 class AuthService extends GetxService {
@@ -217,7 +217,7 @@ class AuthService extends GetxService {
         value: jsonEncode(profileData),
       );
       final hasPending =
-          Hive.box('AppPrefs').get('hasPendingSync', defaultValue: false) ==
+          SqliteStore.box('AppPrefs').get('hasPendingSync', defaultValue: false) ==
               true;
       if (Get.isRegistered<SyncService>()) {
         final syncService = Get.find<SyncService>();

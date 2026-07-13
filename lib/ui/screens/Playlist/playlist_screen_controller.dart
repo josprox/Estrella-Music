@@ -9,7 +9,7 @@ import 'package:harmonymusic/services/system/permission_service.dart';
 import 'package:harmonymusic/ui/screens/Settings/settings_screen_controller.dart';
 import 'package:harmonymusic/ui/widgets/snackbar.dart';
 import 'package:harmonymusic/utils/helpers/helper.dart';
-import 'package:hive/hive.dart';
+import 'package:harmonymusic/services/storage/sqlite_store.dart';
 import 'package:path_provider/path_provider.dart' as path_provider;
 
 import 'package:harmonymusic/base_class/playlist_album_screen_con_base.dart';
@@ -117,7 +117,7 @@ class PlaylistScreenController extends PlaylistAlbumScreenControllerBase
       // Check if the playlist is offline
       wasInLibrary = await checkIfAddedToLibrary(playlistId);
       if (wasInLibrary) {
-        final songsBox = await Hive.openBox(sanitizeBoxName(playlistId));
+        final songsBox = await SqliteStore.openBox(sanitizeBoxName(playlistId));
         if (songsBox.values.isEmpty) {
           await _fetchSongOnline(
             playlistId,
@@ -221,7 +221,7 @@ class PlaylistScreenController extends PlaylistAlbumScreenControllerBase
 
   @override
   Future<bool> checkIfAddedToLibrary(String id) async {
-    final box = await Hive.openBox("LibraryPlaylists");
+    final box = await SqliteStore.openBox("LibraryPlaylists");
     isAddedToLibrary.value = box.containsKey(id);
     if (isAddedToLibrary.value) playlist.value = Playlist.fromJson(box.get(id));
     await box.close();
@@ -238,14 +238,14 @@ class PlaylistScreenController extends PlaylistAlbumScreenControllerBase
         Get.find<LibraryPlaylistsController>().syncPipedPlaylist();
         return (res.code == 1);
       } else {
-        final box = await Hive.openBox("LibraryPlaylists");
+        final box = await SqliteStore.openBox("LibraryPlaylists");
         final id = content.playlistId;
         if (add) {
           box.put(id, content.toJson());
           updateSongsIntoDb();
         } else {
           box.delete(id);
-          final songsBox = await Hive.openBox(sanitizeBoxName(id));
+          final songsBox = await SqliteStore.openBox(sanitizeBoxName(id));
           songsBox.deleteFromDisk();
         }
         isAddedToLibrary.value = add;
@@ -254,7 +254,7 @@ class PlaylistScreenController extends PlaylistAlbumScreenControllerBase
       Get.find<LibraryPlaylistsController>().refreshLib();
       Get.find<SyncService>().triggerPush();
       if (!content.isCloudPlaylist && !add) {
-        final plstbox = await Hive.openBox(sanitizeBoxName(content.playlistId));
+        final plstbox = await SqliteStore.openBox(sanitizeBoxName(content.playlistId));
         plstbox.deleteFromDisk();
       }
       return true;
@@ -266,7 +266,7 @@ class PlaylistScreenController extends PlaylistAlbumScreenControllerBase
   @override
   Future<void> updateSongsIntoDb() async {
     final songsBox =
-        await Hive.openBox(sanitizeBoxName(playlist.value.playlistId));
+        await SqliteStore.openBox(sanitizeBoxName(playlist.value.playlistId));
     await songsBox.clear();
     final songListCopy = songList.toList();
     for (int i = 0; i < songListCopy.length; i++) {
@@ -276,7 +276,8 @@ class PlaylistScreenController extends PlaylistAlbumScreenControllerBase
 
     // Update the playlist thumbnail based on the first song's thumbnail
     _updatePlaylistThumbSongBased();
-    Get.find<SyncService>().triggerPush();
+    await Get.find<SyncService>()
+        .recordPlaylistChange(playlist.value.playlistId);
   }
 
   @override
@@ -285,7 +286,7 @@ class PlaylistScreenController extends PlaylistAlbumScreenControllerBase
     final isoffline = id == "SongsCache" || id == "SongDownloads";
     final syncService = Get.find<SyncService>();
     await syncService.performLocalMutation(() async {
-      final box_ = await Hive.openBox(sanitizeBoxName(id));
+      final box_ = await SqliteStore.openBox(sanitizeBoxName(id));
       for (MediaItem element in songs) {
         final index = box_.values
             .toList()
@@ -298,10 +299,17 @@ class PlaylistScreenController extends PlaylistAlbumScreenControllerBase
         }
 
         songList.removeWhere((song) => song.id == element.id);
+        if (!isoffline) {
+          await syncService.recordPlaylistTrackChange(
+            id,
+            element.id,
+            deleted: true,
+            track: MediaItemBuilder.toJson(element),
+          );
+        }
       }
       if (!isoffline) {
         await box_.close();
-        syncService.triggerPush();
       }
     });
 
@@ -339,7 +347,9 @@ class PlaylistScreenController extends PlaylistAlbumScreenControllerBase
     final item = songList.removeAt(oldIndex);
     songList.insert(newIndex, item);
     updateSongsIntoDb();
-    Get.find<SyncService>().triggerPush();
+    unawaited(Get.find<SyncService>().recordPlaylistChange(
+      playlist.value.playlistId,
+    ));
   }
 
   @override
@@ -391,9 +401,9 @@ class PlaylistScreenController extends PlaylistAlbumScreenControllerBase
     _songsSub?.cancel();
 
     try {
-      final plBox = Hive.isBoxOpen("LibraryPlaylists")
-          ? Hive.box("LibraryPlaylists")
-          : await Hive.openBox("LibraryPlaylists");
+      final plBox = SqliteStore.isBoxOpen("LibraryPlaylists")
+          ? SqliteStore.box("LibraryPlaylists")
+          : await SqliteStore.openBox("LibraryPlaylists");
       _playlistSub = plBox.watch(key: playlistId).listen((event) {
         final data = event.value;
         if (data != null) {
@@ -404,9 +414,9 @@ class PlaylistScreenController extends PlaylistAlbumScreenControllerBase
 
     try {
       final boxName = sanitizeBoxName(playlistId);
-      final songsBox = Hive.isBoxOpen(boxName)
-          ? Hive.box(boxName)
-          : await Hive.openBox(boxName);
+      final songsBox = SqliteStore.isBoxOpen(boxName)
+          ? SqliteStore.box(boxName)
+          : await SqliteStore.openBox(boxName);
       _songsSub = songsBox.watch().listen((event) {
         fetchSongsfromDatabase(playlistId);
       });

@@ -7,7 +7,7 @@ import 'package:harmonymusic/models/playlist.dart';
 import 'package:harmonymusic/services/auth/catalog_recovery_service.dart';
 import 'package:harmonymusic/services/music/music_service.dart' show NetworkError;
 import 'package:harmonymusic/utils/helpers/helper.dart';
-import 'package:hive/hive.dart';
+import 'package:harmonymusic/services/storage/sqlite_store.dart';
 
 import 'package:harmonymusic/mixins/additional_opeartion_mixin.dart';
 import 'package:harmonymusic/models/media_item_builder.dart';
@@ -66,7 +66,7 @@ class AlbumScreenController extends PlaylistAlbumScreenControllerBase
       }
       if (wasInLibrary) {
         // Load cached tracks immediately for instant visual load
-        final box = await Hive.openBox(sanitizeBoxName(albumId));
+        final box = await SqliteStore.openBox(sanitizeBoxName(albumId));
         final sortedKeys = box.keys.toList()..sort((a, b) => int.parse(a.toString()).compareTo(int.parse(b.toString())));
         songList.value = sortedKeys
             .map((key) => MediaItemBuilder.fromJson(box.get(key)))
@@ -108,11 +108,11 @@ class AlbumScreenController extends PlaylistAlbumScreenControllerBase
   }
 
 
-  /// Saves album thumbnail URL to Hive for offline access
+  /// Saves album thumbnail URL to SqliteStore for offline access
   Future<void> _cacheAlbumThumbnail(String albumId, String url) async {
     if (url.isEmpty) return;
     try {
-      final box = await Hive.openBox('AlbumThumbnails');
+      final box = await SqliteStore.openBox('AlbumThumbnails');
       box.put(albumId, url);
     } catch (_) {}
   }
@@ -121,9 +121,9 @@ class AlbumScreenController extends PlaylistAlbumScreenControllerBase
   Future<void> _loadOfflineMode(String albumId) async {
     isOffline.value = true;
 
-    // Restore thumbnail from Hive cache
+    // Restore thumbnail from SqliteStore cache
     try {
-      final box = await Hive.openBox('AlbumThumbnails');
+      final box = await SqliteStore.openBox('AlbumThumbnails');
       final cachedUrl = box.get(albumId, defaultValue: '') as String;
       if (cachedUrl.isNotEmpty && album.value.thumbnailUrl.isEmpty) {
         album.value = Album(
@@ -137,7 +137,7 @@ class AlbumScreenController extends PlaylistAlbumScreenControllerBase
 
     // 1. Load from library cached songs box if available
     try {
-      final box = await Hive.openBox(sanitizeBoxName(albumId));
+      final box = await SqliteStore.openBox(sanitizeBoxName(albumId));
       if (box.isNotEmpty) {
         final sortedKeys = box.keys.toList()..sort((a, b) => int.parse(a.toString()).compareTo(int.parse(b.toString())));
         songList.value = sortedKeys
@@ -151,7 +151,7 @@ class AlbumScreenController extends PlaylistAlbumScreenControllerBase
 
     // 2. Fallback: Load downloaded songs matching this album title
     try {
-      final dlBox = Hive.box('SongDownloads');
+      final dlBox = SqliteStore.box('SongDownloads');
       final albumTitle = _albumTitleHint().toLowerCase();
       final List<MediaItem> downloaded = [];
       for (final value in dlBox.values) {
@@ -174,7 +174,7 @@ class AlbumScreenController extends PlaylistAlbumScreenControllerBase
 
   @override
   Future<bool> checkIfAddedToLibrary(String id) async {
-    final box = await Hive.openBox("LibraryAlbums");
+    final box = await SqliteStore.openBox("LibraryAlbums");
     isAddedToLibrary.value = box.containsKey(id);
     if (isAddedToLibrary.value) album.value = Album.fromJson(box.get(id));
     return isAddedToLibrary.value;
@@ -183,14 +183,14 @@ class AlbumScreenController extends PlaylistAlbumScreenControllerBase
   @override
   Future<bool> addNremoveFromLibrary(content, {bool add = true}) async {
     try {
-      final box = await Hive.openBox("LibraryAlbums");
+      final box = await SqliteStore.openBox("LibraryAlbums");
       final id = content.browseId;
       if (add) {
         box.put(id, content.toJson());
         updateSongsIntoDb();
       } else {
         box.delete(id);
-        final songsBox = await Hive.openBox(sanitizeBoxName(id));
+        final songsBox = await SqliteStore.openBox(sanitizeBoxName(id));
         songsBox.deleteFromDisk();
       }
       isAddedToLibrary.value = add;
@@ -207,7 +207,7 @@ class AlbumScreenController extends PlaylistAlbumScreenControllerBase
 
   @override
   Future<void> updateSongsIntoDb() async {
-    final songsBox = await Hive.openBox(sanitizeBoxName(album.value.browseId));
+    final songsBox = await SqliteStore.openBox(sanitizeBoxName(album.value.browseId));
     await songsBox.clear();
     final songListCopy = songList.toList();
     for (int i = 0; i < songListCopy.length; i++) {

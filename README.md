@@ -41,7 +41,7 @@ By combining the best of both worlds, we've created an experience that is faster
 - **State Management**: [GetX](https://pub.dev/packages/get)
 - **Audio Engine**: `just_audio` (Android), `media_kit` (Windows/Linux)
 - **Networking**: [Dio](https://pub.dev/packages/dio) & [YouTube Explode](https://pub.dev/packages/youtube_explode_dart)
-- **Database**: [Hive](https://pub.dev/packages/hive)
+- **Database**: SQLite (`sqlite3`) with transactional legacy-Hive migration
 - **Notifications**: [OneSignal](https://pub.dev/packages/onesignal_flutter)
 
 ---

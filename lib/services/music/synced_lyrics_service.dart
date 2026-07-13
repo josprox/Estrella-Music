@@ -1,7 +1,7 @@
 import 'package:audio_service/audio_service.dart';
 import 'package:dio/dio.dart';
 import 'package:harmonymusic/utils/helpers/helper.dart';
-import 'package:hive/hive.dart';
+import 'package:harmonymusic/services/storage/sqlite_store.dart';
 import 'package:harmonymusic/services/music/lyrics_providers.dart';
 
 class SyncedLyricsService {
@@ -14,7 +14,7 @@ class SyncedLyricsService {
 
   static Future<Map<String, dynamic>?> getSyncedLyrics(
       MediaItem song, int durInSec) async {
-    final lyricsBox = await Hive.openBox("lyrics");
+    final lyricsBox = await SqliteStore.openBox("lyrics");
     // check if lyrics available in local database
     if (lyricsBox.containsKey(song.id)) {
       final cached = await lyricsBox.get(song.id);
@@ -81,24 +81,24 @@ class SyncedLyricsService {
     return flatResults;
   }
 
-  /// Save manually selected lyrics to local Hive box
+  /// Save manually selected lyrics to local SqliteStore box
   static Future<Map<String, dynamic>> saveManualLyrics(
       String songId, String lyrics, bool isSynced) async {
-    final lyricsBox = await Hive.openBox("lyrics");
+    final lyricsBox = await SqliteStore.openBox("lyrics");
     final lyricsData = {
       "synced": isSynced ? lyrics : "",
       "plainLyrics": isSynced ? "" : lyrics
     };
     await lyricsBox.put(songId, lyricsData);
     await lyricsBox.close();
-    printINFO("Manually selected lyrics saved to Hive for song $songId (synced=$isSynced)");
+    printINFO("Manually selected lyrics saved to SqliteStore for song $songId (synced=$isSynced)");
     return lyricsData;
   }
 
-  /// Save manual/automatic translation to local Hive box for a song ID
+  /// Save manual/automatic translation to local SqliteStore box for a song ID
   static Future<void> saveTranslation(
       String songId, String translatedSynced, String translatedPlain) async {
-    final lyricsBox = await Hive.openBox("lyrics");
+    final lyricsBox = await SqliteStore.openBox("lyrics");
     final Map<String, dynamic> lyricsData = Map<String, dynamic>.from(
       lyricsBox.get(songId) ?? {"synced": "", "plainLyrics": ""}
     );
@@ -106,6 +106,6 @@ class SyncedLyricsService {
     lyricsData["translatedPlain"] = translatedPlain;
     await lyricsBox.put(songId, lyricsData);
     await lyricsBox.close();
-    printINFO("Saved lyrics translation to Hive for song $songId");
+    printINFO("Saved lyrics translation to SqliteStore for song $songId");
   }
 }

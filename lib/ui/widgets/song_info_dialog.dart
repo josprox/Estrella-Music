@@ -1,7 +1,7 @@
-﻿import 'package:audio_service/audio_service.dart';
+import 'package:audio_service/audio_service.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hive/hive.dart';
+import 'package:harmonymusic/services/storage/sqlite_store.dart';
 
 import '/ui/widgets/common_dialog_widget.dart';
 import 'package:harmonymusic/generated/l10n.dart';
@@ -76,16 +76,16 @@ class SongInfoDialog extends StatelessWidget {
       "loudnessDb": null,
       "approxDurationMs": null
     };
-    if (Hive.box("SongDownloads").containsKey(id)) {
-      final song = Hive.box("SongDownloads").get(id);
+    if (SqliteStore.box("SongDownloads").containsKey(id)) {
+      final song = SqliteStore.box("SongDownloads").get(id);
 
       tempstreamInfo =
           song["streamInfo"] == null ? nullVal : song["streamInfo"][1];
     } else {
-      final dbStreamData = Hive.box("SongsUrlCache").get(id);
+      final dbStreamData = SqliteStore.box("SongsUrlCache").get(id);
       tempstreamInfo = dbStreamData != null &&
               dbStreamData.runtimeType.toString().contains("Map")
-          ? dbStreamData[Hive.box('AppPrefs').get('streamingQuality') == 0
+          ? dbStreamData[SqliteStore.box('AppPrefs').get('streamingQuality') == 0
               ? 'lowQualityAudio'
               : "highQualityAudio"]
           : nullVal;

@@ -1,14 +1,14 @@
-import 'package:hive/hive.dart';
+import 'package:harmonymusic/services/storage/sqlite_store.dart';
 import 'package:harmonymusic/utils/helpers/helper.dart';
 
 class SyncLocalRepository {
   Future<Map<String, dynamic>> buildPushPayload() async {
-    final appPrefs = Hive.isBoxOpen('AppPrefs') ? Hive.box('AppPrefs') : await Hive.openBox('AppPrefs');
-    final libFav = Hive.isBoxOpen('LIBFAV') ? Hive.box('LIBFAV') : await Hive.openBox('LIBFAV');
-    final libRp = Hive.isBoxOpen('LIBRP') ? Hive.box('LIBRP') : await Hive.openBox('LIBRP');
-    final libAlbums = Hive.isBoxOpen('LibraryAlbums') ? Hive.box('LibraryAlbums') : await Hive.openBox('LibraryAlbums');
-    final libArtists = Hive.isBoxOpen('LibraryArtists') ? Hive.box('LibraryArtists') : await Hive.openBox('LibraryArtists');
-    final songDownloads = Hive.isBoxOpen('SongDownloads') ? Hive.box('SongDownloads') : await Hive.openBox('SongDownloads');
+    final appPrefs = SqliteStore.isBoxOpen('AppPrefs') ? SqliteStore.box('AppPrefs') : await SqliteStore.openBox('AppPrefs');
+    final libFav = SqliteStore.isBoxOpen('LIBFAV') ? SqliteStore.box('LIBFAV') : await SqliteStore.openBox('LIBFAV');
+    final libRp = SqliteStore.isBoxOpen('LIBRP') ? SqliteStore.box('LIBRP') : await SqliteStore.openBox('LIBRP');
+    final libAlbums = SqliteStore.isBoxOpen('LibraryAlbums') ? SqliteStore.box('LibraryAlbums') : await SqliteStore.openBox('LibraryAlbums');
+    final libArtists = SqliteStore.isBoxOpen('LibraryArtists') ? SqliteStore.box('LibraryArtists') : await SqliteStore.openBox('LibraryArtists');
+    final songDownloads = SqliteStore.isBoxOpen('SongDownloads') ? SqliteStore.box('SongDownloads') : await SqliteStore.openBox('SongDownloads');
     return {
       'playlists': await _collectPlaylists(),
       'favorites': libFav.values.toList(),
@@ -21,9 +21,9 @@ class SyncLocalRepository {
   }
 
   Future<List<Map<String, dynamic>>> _collectPlaylists() async {
-    final playlistsBox = Hive.isBoxOpen('LibraryPlaylists')
-        ? Hive.box('LibraryPlaylists')
-        : await Hive.openBox('LibraryPlaylists');
+    final playlistsBox = SqliteStore.isBoxOpen('LibraryPlaylists')
+        ? SqliteStore.box('LibraryPlaylists')
+        : await SqliteStore.openBox('LibraryPlaylists');
     final result = <Map<String, dynamic>>[];
 
     for (final value in playlistsBox.values) {
@@ -33,9 +33,9 @@ class SyncLocalRepository {
       if (playlist['isPipedPlaylist'] == true) continue;
 
       final boxName = sanitizeBoxName(playlistId);
-      final wasOpen = Hive.isBoxOpen(boxName);
+      final wasOpen = SqliteStore.isBoxOpen(boxName);
       final tracksBox =
-          wasOpen ? Hive.box(boxName) : await Hive.openBox(boxName);
+          wasOpen ? SqliteStore.box(boxName) : await SqliteStore.openBox(boxName);
       result.add({
         ...playlist,
         'tracks': tracksBox.values.toList(),
@@ -45,7 +45,7 @@ class SyncLocalRepository {
     return result;
   }
 
-  Map<String, dynamic> _syncableSettings(Box appPrefs) {
+  Map<String, dynamic> _syncableSettings(SqliteBox appPrefs) {
     const allowedKeys = [
       'themeModeType',
       'streamingQuality',
@@ -73,9 +73,9 @@ class SyncLocalRepository {
       return;
     }
 
-    final playlistsBox = Hive.isBoxOpen('LibraryPlaylists')
-        ? Hive.box('LibraryPlaylists')
-        : await Hive.openBox('LibraryPlaylists');
+    final playlistsBox = SqliteStore.isBoxOpen('LibraryPlaylists')
+        ? SqliteStore.box('LibraryPlaylists')
+        : await SqliteStore.openBox('LibraryPlaylists');
     var merged = 0;
 
     for (final raw in value) {
@@ -89,9 +89,9 @@ class SyncLocalRepository {
       if (tracks is List) {
         final boxName = sanitizeBoxName(playlistId);
         try {
-          final wasOpen = Hive.isBoxOpen(boxName);
+          final wasOpen = SqliteStore.isBoxOpen(boxName);
           final tracksBox =
-              wasOpen ? Hive.box(boxName) : await Hive.openBox(boxName);
+              wasOpen ? SqliteStore.box(boxName) : await SqliteStore.openBox(boxName);
           await tracksBox.clear();
           for (var i = 0; i < tracks.length; i++) {
             await tracksBox.put(i, tracks[i]);
@@ -116,9 +116,9 @@ class SyncLocalRepository {
     List<String> idKeys = const ['videoId', 'id'],
   }) async {
     if (value is! List) return;
-    final box = Hive.isBoxOpen(boxName)
-        ? Hive.box(boxName)
-        : await Hive.openBox(boxName);
+    final box = SqliteStore.isBoxOpen(boxName)
+        ? SqliteStore.box(boxName)
+        : await SqliteStore.openBox(boxName);
     await box.clear();
     for (var i = 0; i < value.length; i++) {
       final item = _asMap(value[i]);
@@ -130,9 +130,9 @@ class SyncLocalRepository {
   Future<void> mergeSettings(dynamic value) async {
     if (value is! Map) return;
     final settings = _asMap(value);
-    final appPrefs = Hive.isBoxOpen('AppPrefs')
-        ? Hive.box('AppPrefs')
-        : await Hive.openBox('AppPrefs');
+    final appPrefs = SqliteStore.isBoxOpen('AppPrefs')
+        ? SqliteStore.box('AppPrefs')
+        : await SqliteStore.openBox('AppPrefs');
     for (final entry in settings.entries) {
       if (entry.key == 'updatedAt') continue;
       await appPrefs.put(entry.key, entry.value);

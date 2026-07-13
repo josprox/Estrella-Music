@@ -1,7 +1,7 @@
-﻿import 'package:audio_service/audio_service.dart';
+import 'package:audio_service/audio_service.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hive_flutter/hive_flutter.dart';
+import 'package:harmonymusic/services/storage/sqlite_store.dart';
 
 import 'package:harmonymusic/ui/widgets/add_to_playlist.dart';
 import '/ui/widgets/sort_widget.dart';
@@ -79,7 +79,7 @@ class ArtistScreenController extends GetxController
     }
 
     // Listen to changes in LIBFAV for reactivity
-    Hive.box("LIBFAV").listenable().addListener(_loadLikedSongsOfArtist);
+    SqliteStore.box("LIBFAV").listenable().addListener(_loadLikedSongsOfArtist);
 
     super.onInit();
   }
@@ -101,7 +101,7 @@ class ArtistScreenController extends GetxController
   }
 
   Future<void> _checkIfAddedToLibrary(String id) async {
-    final box = await Hive.openBox("LibraryArtists");
+    final box = await SqliteStore.openBox("LibraryArtists");
     isAddedToLibrary.value = box.containsKey(id);
     if (isAddedToLibrary.value) {
       artist_ = Artist.fromJson(box.get(id));
@@ -151,13 +151,13 @@ class ArtistScreenController extends GetxController
     }
   }
 
-  /// Persists the artist thumbnail URL to Hive for offline access
+  /// Persists the artist thumbnail URL to SqliteStore for offline access
   Future<void> _cacheArtistThumbnail(String artistId) async {
     try {
       if (!hasArtistSeed) return;
       final thumbnailUrl = artist_.thumbnailUrl;
       if (thumbnailUrl.isEmpty) return;
-      final box = await Hive.openBox('ArtistThumbnails');
+      final box = await SqliteStore.openBox('ArtistThumbnails');
       box.put(artistId, thumbnailUrl);
     } catch (_) {}
   }
@@ -165,7 +165,7 @@ class ArtistScreenController extends GetxController
   /// Gets a cached thumbnail URL for offline display
   Future<String> _getCachedThumbnail(String artistId) async {
     try {
-      final box = await Hive.openBox('ArtistThumbnails');
+      final box = await SqliteStore.openBox('ArtistThumbnails');
       return box.get(artistId, defaultValue: '') as String;
     } catch (_) {
       return '';
@@ -177,7 +177,7 @@ class ArtistScreenController extends GetxController
     _ensureArtistPlaceholder(id);
     isOffline.value = true;
 
-    // Try to restore thumbnail URL from Hive cache
+    // Try to restore thumbnail URL from SqliteStore cache
     final cachedThumbnail = await _getCachedThumbnail(id);
     if (cachedThumbnail.isNotEmpty) {
       artist_ = Artist(
@@ -197,7 +197,7 @@ class ArtistScreenController extends GetxController
   /// Loads songs from SongDownloads that match this artist
   Future<void> _loadOfflineDownloadedSongs() async {
     try {
-      final dlBox = Hive.box('SongDownloads');
+      final dlBox = SqliteStore.box('SongDownloads');
       final artistName = _artistNameHint().toLowerCase();
       if (artistName.isEmpty) return;
 
@@ -313,7 +313,7 @@ class ArtistScreenController extends GetxController
 
   Future<void> _loadLikedSongsOfArtist() async {
     try {
-      final box = Hive.box("LIBFAV");
+      final box = SqliteStore.box("LIBFAV");
       final artistName = artist_.name.toLowerCase();
 
       // Optimize: filter and map in a single pass without constructing full MediaItem for every item
@@ -383,7 +383,7 @@ class ArtistScreenController extends GetxController
 
   Future<bool> addNremoveFromLibrary({bool add = true}) async {
     try {
-      final box = await Hive.openBox("LibraryArtists");
+      final box = await SqliteStore.openBox("LibraryArtists");
       add
           ? box.put(artist_.browseId, artist_.toJson())
           : box.delete(artist_.browseId);

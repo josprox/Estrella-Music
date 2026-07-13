@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hive/hive.dart';
+import 'package:harmonymusic/services/storage/sqlite_store.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:harmonymusic/services/auth/auth_service.dart';
@@ -47,7 +47,7 @@ class _AuthGateState extends State<AuthGate> {
   }
 
   Future<void> _keepLocalMode() async {
-    final prefs = Hive.box('AppPrefs');
+    final prefs = SqliteStore.box('AppPrefs');
     await prefs.put('emusicDataMode', 'local');
     await prefs.put('emusicCloudRequested', false);
     await prefs.put('hasPendingSync', false);
@@ -66,7 +66,7 @@ class _AuthGateState extends State<AuthGate> {
   }
 
   Future<void> _chooseCloudMode() async {
-    final prefs = Hive.box('AppPrefs');
+    final prefs = SqliteStore.box('AppPrefs');
     await prefs.put('emusicCloudRequested', true);
     
     final sprefs = await SharedPreferences.getInstance();
@@ -100,7 +100,7 @@ class _AuthGateState extends State<AuthGate> {
     final authService = Get.find<AuthService>();
     final bootstrapService = Get.find<UserDataBootstrapService>();
     return Obx(() {
-      final prefs = Hive.box('AppPrefs');
+      final prefs = SqliteStore.box('AppPrefs');
       final cloudRequested =
           prefs.get('emusicCloudRequested', defaultValue: false) == true;
       final dataMode =
