@@ -74,6 +74,7 @@ class NotificationService {
 
   static void handleNativeNotification(Map<String, dynamic> data) {
     if (data['app_id']?.toString() != appId) return;
+    if (_isExpiredTemporary(data)) return;
     final id = data['id']?.toString();
     if (id != null && id.isNotEmpty && !_seenMessageIds.add(id)) return;
 
@@ -83,6 +84,12 @@ class NotificationService {
       return;
     }
     _deliverToUi(data, callback);
+  }
+
+  static bool _isExpiredTemporary(Map<String, dynamic> data) {
+    if (data['delivery_mode']?.toString() != 'temporary') return false;
+    final expiresAt = DateTime.tryParse(data['expires_at']?.toString() ?? '');
+    return expiresAt == null || !expiresAt.isAfter(DateTime.now());
   }
 
   static void _deliverToUi(

@@ -1,3 +1,6 @@
+import 'dart:math';
+
+import 'package:audio_service/audio_service.dart';
 import 'package:harmonymusic/services/system/nav_parser.dart';
 import 'package:harmonymusic/services/system/continuations.dart';
 import 'package:harmonymusic/services/music/music_service.dart';
@@ -24,8 +27,17 @@ class HomeService {
       }
 
       parseFunc(contents) => parseMixedContent(contents);
+      final hasSongSection = home.any((section) {
+        final contents = section['contents'];
+        return contents is List && contents.any((item) => item is MediaItem);
+      });
+      // YouTube Music often returns albums/playlists first. Do not stop at the
+      // requested section count until at least one playable song section has
+      // been found, otherwise Quick Picks stays empty until a manual refresh.
+      final continuationLimit =
+          hasSongSection ? max(0, limit - home.length) : max(1, limit);
       final x = (await getContinuations(sectionList, 'sectionListContinuation',
-          limit - home.length, requestFunc, parseFunc));
+          continuationLimit, requestFunc, parseFunc));
       home.addAll([...x]);
     }
 

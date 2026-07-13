@@ -17,6 +17,12 @@ const _channelName = 'Notificaciones de Estrella Music';
 const _channelDescription = 'Mensajes enviados desde la plataforma Joss';
 const _storage = FlutterSecureStorage();
 
+bool _isExpiredTemporary(Map<String, dynamic> data) {
+  if (data['delivery_mode']?.toString() != 'temporary') return false;
+  final expiresAt = DateTime.tryParse(data['expires_at']?.toString() ?? '');
+  return expiresAt == null || !expiresAt.isAfter(DateTime.now());
+}
+
 @pragma('vm:entry-point')
 Future<void> estrellaFcmBackgroundHandler(RemoteMessage remoteMessage) async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -27,7 +33,9 @@ Future<void> estrellaFcmBackgroundHandler(RemoteMessage remoteMessage) async {
   } catch (_) {}
 
   final data = Map<String, dynamic>.from(remoteMessage.data);
-  if (data['app_id'] != NotificationService.appId || data['type'] != 'push') {
+  if (data['app_id'] != NotificationService.appId ||
+      data['type'] != 'push' ||
+      _isExpiredTemporary(data)) {
     return;
   }
 
@@ -132,7 +140,10 @@ class FcmNotificationService {
 
       FirebaseMessaging.onMessage.listen((remoteMessage) async {
         final data = Map<String, dynamic>.from(remoteMessage.data);
-        if (data['app_id'] != NotificationService.appId) return;
+        if (data['app_id'] != NotificationService.appId ||
+            _isExpiredTemporary(data)) {
+          return;
+        }
         if (data['type'] == 'push') {
           await _showLocalNotification(_localNotifications!, data);
         }
@@ -154,6 +165,11 @@ class FcmNotificationService {
       final jwt = await _storage.read(key: 'jwt_token');
       var base = dotenv.env['JOSSRED']?.trim();
       final deviceToken = await FirebaseMessaging.instance.getToken();
+      final permission =
+          await FirebaseMessaging.instance.getNotificationSettings();
+      final notificationsEnabled =
+          permission.authorizationStatus == AuthorizationStatus.authorized ||
+              permission.authorizationStatus == AuthorizationStatus.provisional;
       if (jwt == null ||
           jwt.isEmpty ||
           base == null ||
@@ -175,6 +191,7 @@ class FcmNotificationService {
         body: jsonEncode({
           'device_token': deviceToken,
           'app_id': NotificationService.appId,
+          'notifications_enabled': notificationsEnabled,
           'platform':
               defaultTargetPlatform == TargetPlatform.iOS ? 'ios' : 'android',
         }),

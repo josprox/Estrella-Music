@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:audio_service/audio_service.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -40,22 +42,39 @@ class HomeScreenController extends GetxController {
   bool reverseAnimationtransiton = false;
 
   final exploreNetworkError = false.obs;
+  final List<StreamSubscription<dynamic>> _localSectionSubscriptions = [];
+  Timer? _localSectionsRefreshDebounce;
+  Future<void>? _activeContentLoad;
 
   @override
   onInit() {
     super.onInit();
+    _watchLocalSections();
     _initAndLoad();
   }
 
   Future<void> _initAndLoad() async {
     await _musicServices.init();
-    loadContent();
-    loadLocalCustomSections();
+    await loadContent();
     if (updateCheckFlag) _checkNewVersion();
     _loadDailyDiscover();
     _loadCommunityPlaylists();
     _loadKeepListening();
     _loadSimilarRecommendations();
+  }
+
+  void _watchLocalSections() {
+    for (final boxName in const ['SongsCache', 'LIBFAV', 'LIBRP']) {
+      _localSectionSubscriptions.add(
+        SqliteStore.box(boxName).watch().listen((_) {
+          _localSectionsRefreshDebounce?.cancel();
+          _localSectionsRefreshDebounce = Timer(
+            const Duration(milliseconds: 250),
+            () => loadLocalCustomSections(),
+          );
+        }),
+      );
+    }
   }
 
   Future<void> _loadDailyDiscover() async {
@@ -66,7 +85,8 @@ class HomeScreenController extends GetxController {
         return;
       }
 
-      final allFavs = favBox.values.map((e) => MediaItemBuilder.fromJson(e)).toList();
+      final allFavs =
+          favBox.values.map((e) => MediaItemBuilder.fromJson(e)).toList();
       allFavs.shuffle();
       final seeds = allFavs.take(5).toList();
 
@@ -74,9 +94,11 @@ class HomeScreenController extends GetxController {
 
       for (final seed in seeds) {
         if (seed.id.isNotEmpty) {
-          final rel = await _musicServices.getContentRelatedToSong(seed.id, getContentHlCode());
+          final rel = await _musicServices.getContentRelatedToSong(
+              seed.id, getContentHlCode());
           if (rel.isNotEmpty) {
-            printINFO("Daily Discover: Fetched ${rel.length} sections for seed ${seed.title}");
+            printINFO(
+                "Daily Discover: Fetched ${rel.length} sections for seed ${seed.title}");
             // Find the first section that contains songs
             for (var section in rel) {
               if (section["contents"] != null && section["contents"] is List) {
@@ -84,7 +106,7 @@ class HomeScreenController extends GetxController {
                     .whereType<MediaItem>()
                     .where((item) => item.id != seed.id)
                     .toList();
-                
+
                 if (items.isNotEmpty) {
                   items.shuffle();
                   recommendations.add(items.first);
@@ -99,14 +121,15 @@ class HomeScreenController extends GetxController {
       if (recommendations.isNotEmpty) {
         final uniqueRecs = <String, MediaItem>{};
         for (var rec in recommendations) {
-           uniqueRecs[rec.id] = rec;
+          uniqueRecs[rec.id] = rec;
         }
         var finalRecs = uniqueRecs.values.toList();
         finalRecs.shuffle();
         dailyDiscover.value = QuickPicks(finalRecs, title: "Daily Discover");
         printINFO("Daily Discover: Loaded ${finalRecs.length} recommendations");
       } else {
-        printWarning("Daily Discover: No recommendations could be generated from seeds");
+        printWarning(
+            "Daily Discover: No recommendations could be generated from seeds");
       }
     } catch (e) {
       printERROR("Daily Discover failed: $e");
@@ -118,19 +141,21 @@ class HomeScreenController extends GetxController {
       final favBox = await SqliteStore.openBox('LIBFAV');
       if (favBox.isEmpty) return;
 
-      final allFavs = favBox.values.map((e) => MediaItemBuilder.fromJson(e)).toList();
+      final allFavs =
+          favBox.values.map((e) => MediaItemBuilder.fromJson(e)).toList();
       allFavs.shuffle();
       final seeds = allFavs.take(3).toList();
 
       List<MediaItem> recommendations = [];
 
       for (final seed in seeds) {
-        final res = await _musicServices.search(seed.title, filter: "community_playlists");
+        final res = await _musicServices.search(seed.title,
+            filter: "community_playlists");
         if (res.containsKey("Community playlists")) {
           // 'Community playlists' are Playlists, but recommendations expects MediaItems.
           // In `loadCommunityPlaylists`, we probably shouldn't mix Playlists into a list of MediaItems.
           // But wait, the original code tried to cast them to MediaItem.
-          // QuickPicks requires a list of MediaItem. 
+          // QuickPicks requires a list of MediaItem.
           // So if we get a Playlist, maybe we should convert it to a MediaItem using MediaItemBuilder?
           // Let's just create a MediaItem from the Playlist properties, or skip if it's meant to be a QuickPick (which usually holds songs/videos).
           // Wait, QuickPicks can hold playlists if their ID is used to navigate.
@@ -154,11 +179,12 @@ class HomeScreenController extends GetxController {
       if (recommendations.isNotEmpty) {
         final uniqueRecs = <String, MediaItem>{};
         for (var rec in recommendations) {
-           uniqueRecs[rec.id] = rec;
+          uniqueRecs[rec.id] = rec;
         }
         var finalRecs = uniqueRecs.values.toList();
         finalRecs.shuffle();
-        communityPlaylists.value = QuickPicks(finalRecs, title: "Community Playlists");
+        communityPlaylists.value =
+            QuickPicks(finalRecs, title: "Community Playlists");
       }
     } catch (e) {
       printERROR("Community Playlists failed: $e");
@@ -170,7 +196,8 @@ class HomeScreenController extends GetxController {
       final favBox = await SqliteStore.openBox('LIBFAV');
       if (favBox.isEmpty) return;
 
-      final allFavs = favBox.values.map((e) => MediaItemBuilder.fromJson(e)).toList();
+      final allFavs =
+          favBox.values.map((e) => MediaItemBuilder.fromJson(e)).toList();
       // Sort by lastPlayed descending to get most recently played
       final keepList = List<MediaItem>.from(allFavs)
         ..sort((a, b) {
@@ -185,16 +212,19 @@ class HomeScreenController extends GetxController {
 
       for (final seed in seeds) {
         if (seed.id.isNotEmpty) {
-          final rel = await _musicServices.getContentRelatedToSong(seed.id, getContentHlCode());
+          final rel = await _musicServices.getContentRelatedToSong(
+              seed.id, getContentHlCode());
           if (rel.isNotEmpty) {
             final con = rel.first;
             if (con["contents"] != null && con["contents"] is List) {
-               final items = (con["contents"] as List).whereType<MediaItem>().toList();
-               items.shuffle();
-               final recList = items.where((item) => item.id != seed.id).toList();
-               if (recList.isNotEmpty) {
-                 recommendations.add(recList.first);
-               }
+              final items =
+                  (con["contents"] as List).whereType<MediaItem>().toList();
+              items.shuffle();
+              final recList =
+                  items.where((item) => item.id != seed.id).toList();
+              if (recList.isNotEmpty) {
+                recommendations.add(recList.first);
+              }
             }
           }
         }
@@ -203,7 +233,7 @@ class HomeScreenController extends GetxController {
       if (recommendations.isNotEmpty) {
         final uniqueRecs = <String, MediaItem>{};
         for (var rec in recommendations) {
-           uniqueRecs[rec.id] = rec;
+          uniqueRecs[rec.id] = rec;
         }
         var finalRecs = uniqueRecs.values.toList();
         finalRecs.shuffle();
@@ -222,14 +252,16 @@ class HomeScreenController extends GetxController {
         return;
       }
 
-      final allFavs = favBox.values.map((e) => MediaItemBuilder.fromJson(e)).toList();
+      final allFavs =
+          favBox.values.map((e) => MediaItemBuilder.fromJson(e)).toList();
       allFavs.shuffle();
       final seed = allFavs.first;
 
       List<MediaItem> recommendations = [];
 
       if (seed.id.isNotEmpty) {
-        final rel = await _musicServices.getContentRelatedToSong(seed.id, getContentHlCode());
+        final rel = await _musicServices.getContentRelatedToSong(
+            seed.id, getContentHlCode());
         if (rel.isNotEmpty) {
           // Find the first section that contains songs
           for (var section in rel) {
@@ -238,7 +270,7 @@ class HomeScreenController extends GetxController {
                   .whereType<MediaItem>()
                   .where((item) => item.id != seed.id)
                   .toList();
-              
+
               if (items.isNotEmpty) {
                 recommendations.addAll(items.take(15));
                 break;
@@ -251,14 +283,17 @@ class HomeScreenController extends GetxController {
       if (recommendations.isNotEmpty) {
         final uniqueRecs = <String, MediaItem>{};
         for (var rec in recommendations) {
-           uniqueRecs[rec.id] = rec;
+          uniqueRecs[rec.id] = rec;
         }
         var finalRecs = uniqueRecs.values.toList();
         finalRecs.shuffle();
-        similarRecommendations.value = QuickPicks(finalRecs, title: "Similar to ${seed.title}");
-        printINFO("Similar Recommendations: Loaded ${finalRecs.length} recommendations for seed ${seed.title}");
+        similarRecommendations.value =
+            QuickPicks(finalRecs, title: "Similar to ${seed.title}");
+        printINFO(
+            "Similar Recommendations: Loaded ${finalRecs.length} recommendations for seed ${seed.title}");
       } else {
-        printWarning("Similar Recommendations: No recommendations could be generated from seed ${seed.title}");
+        printWarning(
+            "Similar Recommendations: No recommendations could be generated from seed ${seed.title}");
       }
     } catch (e) {
       printERROR("Similar Recommendations failed: $e");
@@ -274,10 +309,30 @@ class HomeScreenController extends GetxController {
           .map((e) => MediaItemBuilder.fromJson(e))
           .toList();
 
+      if (quickPicks.value.songList.isEmpty) {
+        final localQuickPicks = <String, MediaItem>{};
+        for (final song in allCachedSongs) {
+          if (song.id.isNotEmpty) localQuickPicks[song.id] = song;
+        }
+        for (final value in favBox.values) {
+          final song = MediaItemBuilder.fromJson(value);
+          if (song.id.isNotEmpty) localQuickPicks[song.id] = song;
+        }
+        if (localQuickPicks.isNotEmpty) {
+          final songs = localQuickPicks.values.toList()..shuffle();
+          quickPicks.value = QuickPicks(
+            songs.take(15).toList(),
+            title: S.current.quickpicks,
+          );
+          isContentFetched.value = true;
+        }
+      }
+
       // Random Music (limit 15)
       if (allCachedSongs.isNotEmpty) {
         final randomList = List<MediaItem>.from(allCachedSongs)..shuffle();
-        randomMusic.value = QuickPicks(randomList.take(15).toList(), title: S.current.randomSelection);
+        randomMusic.value = QuickPicks(randomList.take(15).toList(),
+            title: S.current.randomSelection);
       }
 
       // Most Listened (sort by totalPlayTime descending)
@@ -287,33 +342,55 @@ class HomeScreenController extends GetxController {
           final playB = b.extras?['totalPlayTime'] as int? ?? 0;
           return playB.compareTo(playA); // descending
         });
-      mostListened.value = mostListenedList.where((e) => (e.extras?['totalPlayTime'] ?? 0) > 0).take(15).toList();
+      mostListened.value = mostListenedList
+          .where((e) => (e.extras?['totalPlayTime'] ?? 0) > 0)
+          .take(15)
+          .toList();
 
       // Forgotten Favorites
       if (favBox.isNotEmpty) {
-        final allFavs = favBox.values.map((e) => MediaItemBuilder.fromJson(e)).toList();
+        final allFavs =
+            favBox.values.map((e) => MediaItemBuilder.fromJson(e)).toList();
         final forgottenList = List<MediaItem>.from(allFavs)
           ..sort((a, b) {
             final lastA = a.extras?['lastPlayed'] as int? ?? 0;
             final lastB = b.extras?['lastPlayed'] as int? ?? 0;
             return lastA.compareTo(lastB); // ascending (oldest first)
           });
-        forgottenFavorites.value = QuickPicks(forgottenList.take(15).toList(), title: S.current.forgottenFavorites);
+        forgottenFavorites.value = QuickPicks(forgottenList.take(15).toList(),
+            title: S.current.forgottenFavorites);
       }
     } catch (e) {
       printERROR("Fallo al cargar secciones locales en Home: $e");
     }
   }
 
-  Future<void> loadContent() async {
-    loadContentFromNetwork();
+  Future<void> loadContent() {
+    final activeLoad = _activeContentLoad;
+    if (activeLoad != null) return activeLoad;
+
+    final operation = _loadContent();
+    _activeContentLoad = operation;
+    return operation.whenComplete(() {
+      if (identical(_activeContentLoad, operation)) {
+        _activeContentLoad = null;
+      }
+    });
+  }
+
+  Future<void> _loadContent() async {
+    final loadedFromCache = await loadContentFromDb();
+    await loadLocalCustomSections();
+    await loadContentFromNetwork(silent: loadedFromCache);
   }
 
   Future<bool> loadContentFromDb() async {
     final homeScreenData = await SqliteStore.openBox("homeScreenData");
     if (homeScreenData.keys.isNotEmpty) {
-      final String quickPicksType = homeScreenData.get("quickPicksType");
-      final List quickPicksData = homeScreenData.get("quickPicks");
+      final String quickPicksType =
+          homeScreenData.get("quickPicksType")?.toString() ??
+              S.current.quickpicks;
+      final List quickPicksData = homeScreenData.get("quickPicks") ?? [];
       final List middleContentData = homeScreenData.get("middleContent") ?? [];
       final List fixedContentData = homeScreenData.get("fixedContent") ?? [];
       quickPicks.value = QuickPicks(
@@ -346,14 +423,15 @@ class HomeScreenController extends GetxController {
     networkError.value = false;
     try {
       List middleContentTemp = [];
+      QuickPicks? networkQuickPicks;
       final homeContentListMap = await _musicServices.getHome(
           limit:
               Get.find<SettingsScreenController>().noOfHomeScreenContent.value);
       if (contentType == "TR") {
         final index = homeContentListMap
             .indexWhere((element) => element['title'] == "Trending");
-        if (index != -1 && index != 0) {
-          quickPicks.value = QuickPicks(
+        if (index != -1) {
+          networkQuickPicks = QuickPicks(
               List<MediaItem>.from(homeContentListMap[index]["contents"]),
               title: "Trending");
         } else if (index == -1) {
@@ -362,7 +440,7 @@ class HomeScreenController extends GetxController {
               element['title'] ==
               (contentType == "TMV" ? "Top Music Videos" : "Trending"));
           if (index != -1) {
-            quickPicks.value = QuickPicks(
+            networkQuickPicks = QuickPicks(
                 List<MediaItem>.from(charts[index]["contents"]),
                 title: charts[index]['title']);
             middleContentTemp.addAll(charts);
@@ -371,9 +449,9 @@ class HomeScreenController extends GetxController {
       } else if (contentType == "TMV") {
         final index = homeContentListMap
             .indexWhere((element) => element['title'] == "Top music videos");
-        if (index != -1 && index != 0) {
+        if (index != -1) {
           final con = homeContentListMap.removeAt(index);
-          quickPicks.value = QuickPicks(List<MediaItem>.from(con["contents"]),
+          networkQuickPicks = QuickPicks(List<MediaItem>.from(con["contents"]),
               title: con["title"]);
         } else if (index == -1) {
           List charts = await _musicServices.getCharts(contentType);
@@ -381,7 +459,7 @@ class HomeScreenController extends GetxController {
               element['title'] ==
               (contentType == "TMV" ? "Top Music Videos" : "Trending"));
           if (index != -1) {
-            quickPicks.value = QuickPicks(
+            networkQuickPicks = QuickPicks(
                 List<MediaItem>.from(charts[index]["contents"]),
                 title: charts[index]["title"]);
             middleContentTemp.addAll(charts);
@@ -395,8 +473,10 @@ class HomeScreenController extends GetxController {
                 songId, getContentHlCode());
             if (rel.isNotEmpty) {
               final con = rel.removeAt(0);
-              final List<MediaItem> items = (con["contents"] as List).whereType<MediaItem>().toList();
-              quickPicks.value = QuickPicks(items, title: con["title"] ?? "Based on last interaction");
+              final List<MediaItem> items =
+                  (con["contents"] as List).whereType<MediaItem>().toList();
+              networkQuickPicks = QuickPicks(items,
+                  title: con["title"] ?? "Based on last interaction");
               middleContentTemp.addAll(rel);
             }
           }
@@ -406,32 +486,17 @@ class HomeScreenController extends GetxController {
         }
       }
 
-      if (quickPicks.value.songList.isEmpty && homeContentListMap.isNotEmpty) {
-        final index = homeContentListMap
-            .indexWhere((element) => element['title'] == "Quick picks");
-        if (index != -1) {
-          final con = homeContentListMap.removeAt(index);
-          quickPicks.value = QuickPicks(List<MediaItem>.from(con["contents"]),
-              title: "Quick picks");
-        } else {
-          bool fallbackFound = false;
-          for (int i = 0; i < homeContentListMap.length; i++) {
-            final candidate = homeContentListMap[i];
-            final contents = candidate["contents"];
-            if (contents == null || (contents as List).isEmpty) continue;
-            final first = contents.first;
-            if (first is MediaItem) {
-              final con = homeContentListMap.removeAt(i);
-              quickPicks.value = QuickPicks(
-                  List<MediaItem>.from(con["contents"]),
-                  title: con["title"] ?? "Quick picks");
-              fallbackFound = true;
-              break;
-            }
-          }
-          if (!fallbackFound) {
-            printERROR("No song-type content found for QuickPicks fallback.");
-          }
+      networkQuickPicks ??= _takeQuickPicksSection(homeContentListMap);
+      if (networkQuickPicks != null && networkQuickPicks.songList.isNotEmpty) {
+        quickPicks.value = networkQuickPicks;
+      } else if (quickPicks.value.songList.isEmpty) {
+        // Keep Home useful when the personalized YouTube response temporarily
+        // contains only albums/playlists. The local section will be refreshed
+        // again automatically after an EMusic pull changes SQLite.
+        await loadLocalCustomSections();
+        if (quickPicks.value.songList.isEmpty) {
+          printWarning(
+              "No song-type content found for QuickPicks; waiting for local or synced songs.");
         }
       }
 
@@ -439,7 +504,7 @@ class HomeScreenController extends GetxController {
       try {
         final exploreData = await _musicServices.explore();
         homeContentListMap.addAll(exploreData);
-        
+
         final podcastData = await _musicServices.podcastDiscover();
         homeContentListMap.addAll(podcastData);
       } catch (e) {
@@ -453,12 +518,38 @@ class HomeScreenController extends GetxController {
 
       cachedHomeScreenData(updateAll: true);
       final appPrefs = await SqliteStore.openBox("AppPrefs");
-      await appPrefs.put("homeScreenDataTime", DateTime.now().millisecondsSinceEpoch);
+      await appPrefs.put(
+          "homeScreenDataTime", DateTime.now().millisecondsSinceEpoch);
     } on NetworkError catch (r) {
       printERROR("Home Content not loaded due to ${r.message}");
       await Future.delayed(const Duration(seconds: 1));
       networkError.value = !silent;
     }
+  }
+
+  QuickPicks? _takeQuickPicksSection(List<dynamic> sections) {
+    if (sections.isEmpty) return null;
+
+    final preferredIndex = sections.indexWhere((section) {
+      final title = section['title']?.toString().toLowerCase() ?? '';
+      final items = (section['contents'] as List?)?.whereType<MediaItem>();
+      return title.contains('quick') && items != null && items.isNotEmpty;
+    });
+    final fallbackIndex = preferredIndex != -1
+        ? preferredIndex
+        : sections.indexWhere((section) {
+            final items =
+                (section['contents'] as List?)?.whereType<MediaItem>();
+            return items != null && items.isNotEmpty;
+          });
+    if (fallbackIndex == -1) return null;
+
+    final section = sections.removeAt(fallbackIndex);
+    final songs = (section['contents'] as List).whereType<MediaItem>().toList();
+    return QuickPicks(
+      songs,
+      title: section['title']?.toString() ?? S.current.quickpicks,
+    );
   }
 
   List _setContentList(List<dynamic> contents) {
@@ -477,8 +568,8 @@ class HomeScreenController extends GetxController {
       } else if (firstItem is Album) {
         final albumList = items.whereType<Album>().toList();
         if (albumList.isNotEmpty) {
-          contentTemp.add(AlbumContent(
-              albumList: albumList, title: content["title"]));
+          contentTemp
+              .add(AlbumContent(albumList: albumList, title: content["title"]));
         }
       } else if (firstItem is MediaItem) {
         final songList = items.whereType<MediaItem>().toList();
@@ -527,9 +618,17 @@ class HomeScreenController extends GetxController {
               songId, getContentHlCode());
           if (value.isNotEmpty) {
             middleContent.value = _setContentList(value);
-            if ((value[0]['title'] ?? "").toString().toLowerCase().contains("like") || 
-                (value[0]['title'] ?? "").toString().toLowerCase().contains("similar")) {
-              final List<MediaItem> items = (value[0]["contents"] as List).whereType<MediaItem>().toList();
+            if ((value[0]['title'] ?? "")
+                    .toString()
+                    .toLowerCase()
+                    .contains("like") ||
+                (value[0]['title'] ?? "")
+                    .toString()
+                    .toLowerCase()
+                    .contains("similar")) {
+              final List<MediaItem> items = (value[0]["contents"] as List)
+                  .whereType<MediaItem>()
+                  .toList();
               quickPicks_ = QuickPicks(items, title: value[0]["title"]);
               SqliteStore.box("AppPrefs").put("recentSongId", songId);
             }
@@ -667,6 +766,10 @@ class HomeScreenController extends GetxController {
 
   @override
   void dispose() {
+    _localSectionsRefreshDebounce?.cancel();
+    for (final subscription in _localSectionSubscriptions) {
+      subscription.cancel();
+    }
     disposeDetachedScrollControllers(disposeAll: true);
     super.dispose();
   }
