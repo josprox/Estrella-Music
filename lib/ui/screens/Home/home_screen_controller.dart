@@ -44,6 +44,11 @@ class HomeScreenController extends GetxController {
   @override
   onInit() {
     super.onInit();
+    _initAndLoad();
+  }
+
+  Future<void> _initAndLoad() async {
+    await _musicServices.init();
     loadContent();
     loadLocalCustomSections();
     if (updateCheckFlag) _checkNewVersion();

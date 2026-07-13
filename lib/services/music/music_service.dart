@@ -68,7 +68,14 @@ class MusicServices extends getx.GetxService {
   Map<String, dynamic> get context => _context;
   Map<String, String> get headers => _headers;
 
-  Future<void> init() async {
+  Future<void>? _initFuture;
+
+  Future<void> init() {
+    _initFuture ??= _initImpl();
+    return _initFuture!;
+  }
+
+  Future<void> _initImpl() async {
     //check visitor id in data base, if not generate one , set lang code
     final date = DateTime.now();
     _context['context']['client']['clientVersion'] =
