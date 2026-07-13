@@ -34,6 +34,10 @@ class SyncService extends GetxService {
   Timer? _debounce;
   Timer? _retryTimer;
   bool _isApplyingRemoteChanges = false;
+  int _localMutationRevision = 0;
+  bool _pushRequestedWhileSyncing = false;
+  int _activeLocalMutations = 0;
+  Completer<void>? _pullCompletion;
 
   AuthService get _authService => Get.find<AuthService>();
   PendingSyncQueueService get _queue => Get.find<PendingSyncQueueService>();
@@ -205,18 +209,56 @@ class SyncService extends GetxService {
       printINFO('SyncService: cambio local registrado; cloud no esta activo.');
       return;
     }
-    Hive.box('AppPrefs').put(_pendingKey, true);
-    _queue.enqueueSnapshotChange(reason: 'local_mutation');
+
+    // Increment synchronously. This closes the race where a mutation happens
+    // while an older request is in flight but its durable queue write has not
+    // completed yet.
+    _localMutationRevision++;
+    unawaited(_recordPendingMutation());
+  }
+
+  /// Serializes user writes against the destructive compatibility pull.
+  /// The mutation must include both its Hive write and [triggerPush] call.
+  Future<T> performLocalMutation<T>(Future<T> Function() mutation) async {
+    while (true) {
+      final activePull = _pullCompletion;
+      if (activePull != null && !activePull.isCompleted) {
+        await activePull.future;
+        continue;
+      }
+
+      _activeLocalMutations++;
+      // No await occurs between observing the pull and reserving the local
+      // mutation slot, so pull() cannot enter concurrently on this isolate.
+      if (_pullCompletion == null) break;
+      _activeLocalMutations--;
+    }
+
+    try {
+      return await mutation();
+    } finally {
+      _activeLocalMutations--;
+    }
+  }
+
+  Future<void> _recordPendingMutation() async {
+    await Hive.box('AppPrefs').put(_pendingKey, true);
+    await _queue.enqueueSnapshotChange(reason: 'local_mutation');
+    _schedulePush();
+  }
+
+  void _schedulePush({Duration delay = const Duration(seconds: 1)}) {
     _debounce?.cancel();
-    _debounce = Timer(const Duration(seconds: 1), () {
-      push();
+    _debounce = Timer(delay, () {
+      unawaited(push());
     });
   }
 
   Future<bool> checkConnection() async {
     try {
       final token = await _authService.getAccessToken();
-      final online = await _httpClient.checkConnection(_normalizedBaseUrl(), token ?? "");
+      final online =
+          await _httpClient.checkConnection(_normalizedBaseUrl(), token ?? "");
       isOnline.value = online;
       return online;
     } catch (_) {
@@ -229,20 +271,40 @@ class SyncService extends GetxService {
     if (!isCloudMode || !_authService.isAuthenticated.value) {
       return true;
     }
-    if (Hive.box('AppPrefs').get(_pendingKey, defaultValue: false) == true) {
-      printINFO('SyncService: Pull skipped because there are pending local changes to push.');
+    if (_hasPendingLocalChanges) {
+      printINFO(
+          'SyncService: Pull skipped because there are pending local changes to push.');
+      return false;
+    }
+    if (_activeLocalMutations > 0) {
+      printINFO(
+          'SyncService: Pull skipped because a local mutation is in progress.');
       return false;
     }
     if (isSyncing.value) return false;
     isSyncing.value = true;
+    final pullCompletion = Completer<void>();
+    _pullCompletion = pullCompletion;
+    final revisionAtStart = _localMutationRevision;
     lastStatusMessage.value = 'Descargando cambios de EMusic...';
 
     try {
       final token = await _authService.getAccessToken();
-      final responseData = await _httpClient.pull(_normalizedBaseUrl(), token ?? "");
+      final responseData =
+          await _httpClient.pull(_normalizedBaseUrl(), token ?? "");
 
       if (responseData == null) {
         lastStatusMessage.value = 'No se pudo descargar la sincronizacion.';
+        return false;
+      }
+
+      // Never apply a remote snapshot over a mutation made while the request
+      // was in flight. The pending push will run after this pull releases the
+      // coordinator.
+      if (_localMutationRevision != revisionAtStart ||
+          _hasPendingLocalChanges) {
+        lastStatusMessage.value =
+            'Hay cambios locales nuevos. Se subiran antes de descargar.';
         return false;
       }
 
@@ -290,8 +352,9 @@ class SyncService extends GetxService {
           _repository.firstNonNull(data, const ['settings', 'user_settings']),
         );
 
-        await Hive.box('AppPrefs').put(_lastSyncKey, DateTime.now().toIso8601String());
-        await Hive.box('AppPrefs').put(_pendingKey, false);
+        await Hive.box('AppPrefs')
+            .put(_lastSyncKey, DateTime.now().toIso8601String());
+        await _updatePendingFlag();
       } finally {
         _isApplyingRemoteChanges = false;
       }
@@ -304,7 +367,14 @@ class SyncService extends GetxService {
       printERROR('SyncService pull failed: $e\n$stack');
       return false;
     } finally {
+      if (_pullCompletion == pullCompletion) {
+        _pullCompletion = null;
+        if (!pullCompletion.isCompleted) pullCompletion.complete();
+      }
       isSyncing.value = false;
+      if (_hasPendingLocalChanges) {
+        _schedulePush(delay: Duration.zero);
+      }
     }
   }
 
@@ -312,11 +382,19 @@ class SyncService extends GetxService {
     if (!isCloudMode || !_authService.isAuthenticated.value) {
       return true;
     }
-    if (isSyncing.value) return false;
+    if (isSyncing.value) {
+      _pushRequestedWhileSyncing = true;
+      return false;
+    }
     isSyncing.value = true;
+    _pushRequestedWhileSyncing = false;
     lastStatusMessage.value = 'Subiendo cambios a EMusic...';
 
     try {
+      // Only these queue entries and this mutation revision are represented by
+      // this request. Newer entries must never be acknowledged by it.
+      final capturedPendingIds = _queue.capturePendingIds();
+      final capturedRevision = _localMutationRevision;
       final payload = await _repository.buildPushPayload();
       final deviceId = await _ensureDeviceId();
       payload['device_id'] = deviceId;
@@ -324,26 +402,28 @@ class SyncService extends GetxService {
       if (_wsClient != null && _wsClient!.isAuthenticated) {
         final success = await _wsClient!.sendPushPayload(payload);
         if (success) {
-          await Hive.box('AppPrefs').put(_pendingKey, false);
-          await _queue.markAllSynced();
-          await Hive.box('AppPrefs').put(_lastSyncKey, DateTime.now().toIso8601String());
+          await _acknowledgePush(capturedPendingIds, capturedRevision);
+          await Hive.box('AppPrefs')
+              .put(_lastSyncKey, DateTime.now().toIso8601String());
           lastStatusMessage.value = 'Cambios subidos correctamente (WS).';
           return true;
         } else {
           await Hive.box('AppPrefs').put(_pendingKey, true);
           await _queue.markRetryScheduled();
-          lastStatusMessage.value = 'No se pudo subir via WS. Se reintentara despues.';
+          lastStatusMessage.value =
+              'No se pudo subir via WS. Se reintentara despues.';
           return false;
         }
       }
 
       final token = await _authService.getAccessToken();
-      final success = await _httpClient.push(_normalizedBaseUrl(), token ?? "", payload);
+      final success =
+          await _httpClient.push(_normalizedBaseUrl(), token ?? "", payload);
 
       if (success) {
-        await Hive.box('AppPrefs').put(_pendingKey, false);
-        await _queue.markAllSynced();
-        await Hive.box('AppPrefs').put(_lastSyncKey, DateTime.now().toIso8601String());
+        await _acknowledgePush(capturedPendingIds, capturedRevision);
+        await Hive.box('AppPrefs')
+            .put(_lastSyncKey, DateTime.now().toIso8601String());
         lastStatusMessage.value = 'Cambios subidos correctamente.';
         return true;
       }
@@ -356,12 +436,35 @@ class SyncService extends GetxService {
       isOnline.value = false;
       await Hive.box('AppPrefs').put(_pendingKey, true);
       await _queue.markRetryScheduled();
-      lastStatusMessage.value = 'Sin conexion. Cambios guardados para reintento.';
+      lastStatusMessage.value =
+          'Sin conexion. Cambios guardados para reintento.';
       printERROR('SyncService push failed: $e\n$stack');
       return false;
     } finally {
       isSyncing.value = false;
+      if (_pushRequestedWhileSyncing || _hasPendingLocalChanges) {
+        _pushRequestedWhileSyncing = false;
+        _schedulePush(delay: Duration.zero);
+      }
     }
+  }
+
+  bool get _hasPendingLocalChanges =>
+      Hive.box('AppPrefs').get(_pendingKey, defaultValue: false) == true ||
+      _queue.hasPendingChanges;
+
+  Future<void> _acknowledgePush(
+    List<String> capturedPendingIds,
+    int capturedRevision,
+  ) async {
+    await _queue.markSynced(capturedPendingIds);
+    final hasNewerMutation =
+        _localMutationRevision != capturedRevision || _queue.hasPendingChanges;
+    await Hive.box('AppPrefs').put(_pendingKey, hasNewerMutation);
+  }
+
+  Future<void> _updatePendingFlag() async {
+    await Hive.box('AppPrefs').put(_pendingKey, _queue.hasPendingChanges);
   }
 
   Future<bool> pushCollaborative(Playlist playlist) async {
@@ -377,7 +480,8 @@ class SyncService extends GetxService {
       plMap['tracks'] = tracks;
 
       final token = await _authService.getAccessToken();
-      final success = await _httpClient.pushCollaborative(_normalizedBaseUrl(), token ?? "", plMap);
+      final success = await _httpClient.pushCollaborative(
+          _normalizedBaseUrl(), token ?? "", plMap);
 
       if (success) {
         printINFO('SyncService: Collaborative push completed successfully.');
@@ -391,9 +495,15 @@ class SyncService extends GetxService {
   }
 
   Future<List<Map<String, dynamic>>> searchUsers(String query) async {
-    if (!_authService.isAuthenticated.value) return [];
+    if (!_authService.isAuthenticated.value) {
+      throw StateError('Debes iniciar sesión para buscar amigos');
+    }
     final token = await _authService.getAccessToken();
-    return _httpClient.searchUsers(_normalizedJossRedBaseUrl(), token ?? "", query);
+    if (token == null || token.isEmpty) {
+      throw StateError('La sesión no contiene un token válido');
+    }
+    return _httpClient.searchUsers(
+        _normalizedJossRedBaseUrl(), token, query.trim());
   }
 
   Future<List<Map<String, dynamic>>> fetchFriends() async {
@@ -415,39 +525,55 @@ class SyncService extends GetxService {
   }
 
   Future<Map<String, dynamic>> sendFriendRequest(int friendId) async {
-    if (!_authService.isAuthenticated.value) return {'success': false, 'message': 'No autenticado'};
+    if (!_authService.isAuthenticated.value) {
+      return {'success': false, 'message': 'No autenticado'};
+    }
     final token = await _authService.getAccessToken();
-    return _httpClient.sendFriendRequest(_normalizedJossRedBaseUrl(), token ?? "", friendId);
+    return _httpClient.sendFriendRequest(
+        _normalizedJossRedBaseUrl(), token ?? "", friendId);
   }
 
   Future<Map<String, dynamic>> acceptFriendRequest(int friendId) async {
-    if (!_authService.isAuthenticated.value) return {'success': false, 'message': 'No autenticado'};
+    if (!_authService.isAuthenticated.value) {
+      return {'success': false, 'message': 'No autenticado'};
+    }
     final token = await _authService.getAccessToken();
-    return _httpClient.acceptFriendRequest(_normalizedJossRedBaseUrl(), token ?? "", friendId);
+    return _httpClient.acceptFriendRequest(
+        _normalizedJossRedBaseUrl(), token ?? "", friendId);
   }
 
   Future<Map<String, dynamic>> removeFriendship(int friendId) async {
-    if (!_authService.isAuthenticated.value) return {'success': false, 'message': 'No autenticado'};
+    if (!_authService.isAuthenticated.value) {
+      return {'success': false, 'message': 'No autenticado'};
+    }
     final token = await _authService.getAccessToken();
-    return _httpClient.removeFriendship(_normalizedJossRedBaseUrl(), token ?? "", friendId);
+    return _httpClient.removeFriendship(
+        _normalizedJossRedBaseUrl(), token ?? "", friendId);
   }
 
   Future<Map<String, dynamic>> blockUser(int friendId) async {
-    if (!_authService.isAuthenticated.value) return {'success': false, 'message': 'No autenticado'};
+    if (!_authService.isAuthenticated.value) {
+      return {'success': false, 'message': 'No autenticado'};
+    }
     final token = await _authService.getAccessToken();
-    return _httpClient.blockUser(_normalizedJossRedBaseUrl(), token ?? "", friendId);
+    return _httpClient.blockUser(
+        _normalizedJossRedBaseUrl(), token ?? "", friendId);
   }
 
   Future<Map<String, dynamic>> unblockUser(int friendId) async {
-    if (!_authService.isAuthenticated.value) return {'success': false, 'message': 'No autenticado'};
+    if (!_authService.isAuthenticated.value) {
+      return {'success': false, 'message': 'No autenticado'};
+    }
     final token = await _authService.getAccessToken();
-    return _httpClient.unblockUser(_normalizedJossRedBaseUrl(), token ?? "", friendId);
+    return _httpClient.unblockUser(
+        _normalizedJossRedBaseUrl(), token ?? "", friendId);
   }
 
   Future<List<Playlist>> fetchPublicPlaylists() async {
     if (!_authService.isAuthenticated.value) return [];
     final token = await _authService.getAccessToken();
-    final rawPlaylists = await _httpClient.fetchPublicPlaylists(_normalizedBaseUrl(), token ?? "");
+    final rawPlaylists = await _httpClient.fetchPublicPlaylists(
+        _normalizedBaseUrl(), token ?? "");
     return rawPlaylists.map((p) => Playlist.fromJson(p)).toList();
   }
 
@@ -467,7 +593,8 @@ class SyncService extends GetxService {
       final deviceId = await _ensureDeviceId();
       _wsClient = SyncWebSocketClient(deviceId: deviceId);
       _wsClient!.onSyncUpdate.listen((_) {
-        printINFO("SyncService: WS received sync_update, pulling remote changes...");
+        printINFO(
+            "SyncService: WS received sync_update, pulling remote changes...");
         pull();
       });
     }

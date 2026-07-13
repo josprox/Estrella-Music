@@ -51,15 +51,18 @@ class SyncHttpClient {
     return null;
   }
 
-  Future<bool> push(String baseUrl, String token, Map<String, dynamic> payload) async {
+  Future<bool> push(
+      String baseUrl, String token, Map<String, dynamic> payload) async {
     final response = await _dio.post(
       '${baseUrl}api/sync/push',
       options: Options(headers: _headers(token)),
       data: payload,
     );
 
-    if (response.statusCode == 200) {
-      return true;
+    if (response.statusCode == 200 && response.data is Map) {
+      final data = Map<String, dynamic>.from(response.data as Map);
+      return data['status'] == 'success' &&
+          _summaryMatchesPayload(data['summary'], payload);
     }
     throw DioException(
       requestOptions: response.requestOptions,
@@ -68,7 +71,8 @@ class SyncHttpClient {
     );
   }
 
-  Future<bool> pushCollaborative(String baseUrl, String token, Map<String, dynamic> playlistPayload) async {
+  Future<bool> pushCollaborative(String baseUrl, String token,
+      Map<String, dynamic> playlistPayload) async {
     final response = await _dio.post(
       '${baseUrl}api/sync/push-collaborative',
       options: Options(headers: _headers(token)),
@@ -77,35 +81,75 @@ class SyncHttpClient {
     return response.statusCode == 200;
   }
 
-  Future<List<Map<String, dynamic>>> searchUsers(String baseUrl, String token, String query) async {
-    try {
-      printINFO("[SyncHttpClient] searchUsers: baseUrl=$baseUrl, tokenLength=${token.length}, query=$query");
-      final response = await _dio.get(
-        '${baseUrl}api/friends/search',
-        queryParameters: {'query': query},
-        options: Options(headers: _headers(token)),
+  Future<List<Map<String, dynamic>>> searchUsers(
+      String baseUrl, String token, String query) async {
+    final normalizedQuery = query.trim();
+    if (normalizedQuery.isEmpty) return [];
+    final response = await _dio.get(
+      '${baseUrl}api/friends/search',
+      queryParameters: {'query': normalizedQuery},
+      options: Options(headers: _headers(token)),
+    );
+    if (response.statusCode != 200) {
+      final data = response.data;
+      final serverMessage = data is Map
+          ? data['error']?.toString() ?? data['message']?.toString()
+          : null;
+      throw DioException(
+        requestOptions: response.requestOptions,
+        response: response,
+        message: serverMessage ??
+            'No se pudo buscar usuarios (${response.statusCode})',
       );
-      printINFO("[SyncHttpClient] searchUsers: status=${response.statusCode}, data=${response.data}");
-      if (response.statusCode == 200 && response.data != null) {
-        final List users = response.data['users'] as List? ?? response.data['data'] as List? ?? [];
-        return users.map((u) => Map<String, dynamic>.from(u)).toList();
-      }
-    } catch (e) {
-      printERROR("[SyncHttpClient] searchUsers failed: $e");
     }
-    return [];
+    final data = response.data;
+    if (data is! Map) {
+      throw const FormatException('Respuesta inválida del servidor');
+    }
+    final users = data['data'] ?? data['users'];
+    if (users is! List) {
+      throw const FormatException(
+          'La respuesta no contiene una lista de usuarios');
+    }
+    return users
+        .whereType<Map>()
+        .map((user) => Map<String, dynamic>.from(user))
+        .toList();
   }
 
-  Future<List<Map<String, dynamic>>> fetchFriends(String baseUrl, String token) async {
+  bool _summaryMatchesPayload(
+      dynamic rawSummary, Map<String, dynamic> payload) {
+    if (rawSummary is! Map) return false;
+    const collections = [
+      'playlists',
+      'favorites',
+      'recent_plays',
+      'albums',
+      'artists',
+      'downloads',
+    ];
+    for (final key in collections) {
+      final sent = payload[key];
+      if (sent is List && rawSummary[key] != sent.length) return false;
+    }
+    return true;
+  }
+
+  Future<List<Map<String, dynamic>>> fetchFriends(
+      String baseUrl, String token) async {
     try {
-      printINFO("[SyncHttpClient] fetchFriends: baseUrl=$baseUrl, tokenLength=${token.length}");
+      printINFO(
+          "[SyncHttpClient] fetchFriends: baseUrl=$baseUrl, tokenLength=${token.length}");
       final response = await _dio.get(
         '${baseUrl}api/friends',
         options: Options(headers: _headers(token)),
       );
-      printINFO("[SyncHttpClient] fetchFriends: status=${response.statusCode}, data=${response.data}");
+      printINFO(
+          "[SyncHttpClient] fetchFriends: status=${response.statusCode}, data=${response.data}");
       if (response.statusCode == 200 && response.data != null) {
-        final List friends = response.data['friends'] as List? ?? response.data['data'] as List? ?? [];
+        final List friends = response.data['friends'] as List? ??
+            response.data['data'] as List? ??
+            [];
         return friends.map((u) => Map<String, dynamic>.from(u)).toList();
       }
     } catch (e) {
@@ -114,16 +158,21 @@ class SyncHttpClient {
     return [];
   }
 
-  Future<List<Map<String, dynamic>>> fetchRequests(String baseUrl, String token) async {
+  Future<List<Map<String, dynamic>>> fetchRequests(
+      String baseUrl, String token) async {
     try {
-      printINFO("[SyncHttpClient] fetchRequests: baseUrl=$baseUrl, tokenLength=${token.length}");
+      printINFO(
+          "[SyncHttpClient] fetchRequests: baseUrl=$baseUrl, tokenLength=${token.length}");
       final response = await _dio.get(
         '${baseUrl}api/friends/requests',
         options: Options(headers: _headers(token)),
       );
-      printINFO("[SyncHttpClient] fetchRequests: status=${response.statusCode}, data=${response.data}");
+      printINFO(
+          "[SyncHttpClient] fetchRequests: status=${response.statusCode}, data=${response.data}");
       if (response.statusCode == 200 && response.data != null) {
-        final List requests = response.data['requests'] as List? ?? response.data['data'] as List? ?? [];
+        final List requests = response.data['requests'] as List? ??
+            response.data['data'] as List? ??
+            [];
         return requests.map((u) => Map<String, dynamic>.from(u)).toList();
       }
     } catch (e) {
@@ -132,16 +181,21 @@ class SyncHttpClient {
     return [];
   }
 
-  Future<List<Map<String, dynamic>>> fetchBlocked(String baseUrl, String token) async {
+  Future<List<Map<String, dynamic>>> fetchBlocked(
+      String baseUrl, String token) async {
     try {
-      printINFO("[SyncHttpClient] fetchBlocked: baseUrl=$baseUrl, tokenLength=${token.length}");
+      printINFO(
+          "[SyncHttpClient] fetchBlocked: baseUrl=$baseUrl, tokenLength=${token.length}");
       final response = await _dio.get(
         '${baseUrl}api/friends/blocked',
         options: Options(headers: _headers(token)),
       );
-      printINFO("[SyncHttpClient] fetchBlocked: status=${response.statusCode}, data=${response.data}");
+      printINFO(
+          "[SyncHttpClient] fetchBlocked: status=${response.statusCode}, data=${response.data}");
       if (response.statusCode == 200 && response.data != null) {
-        final List blocked = response.data['blocked'] as List? ?? response.data['data'] as List? ?? [];
+        final List blocked = response.data['blocked'] as List? ??
+            response.data['data'] as List? ??
+            [];
         return blocked.map((u) => Map<String, dynamic>.from(u)).toList();
       }
     } catch (e) {
@@ -150,7 +204,8 @@ class SyncHttpClient {
     return [];
   }
 
-  Future<Map<String, dynamic>> sendFriendRequest(String baseUrl, String token, int friendId) async {
+  Future<Map<String, dynamic>> sendFriendRequest(
+      String baseUrl, String token, int friendId) async {
     try {
       final response = await _dio.post(
         '${baseUrl}api/friends/request',
@@ -158,21 +213,32 @@ class SyncHttpClient {
         data: {'friend_id': friendId},
       );
       if (response.statusCode == 200 || response.statusCode == 201) {
-        return {'success': true, 'message': response.data?['message'] ?? 'Solicitud enviada'};
+        return {
+          'success': true,
+          'message': response.data?['message'] ?? 'Solicitud enviada'
+        };
       }
-      return {'success': false, 'message': response.data?['error'] ?? response.data?['message'] ?? 'Error'};
+      return {
+        'success': false,
+        'message':
+            response.data?['error'] ?? response.data?['message'] ?? 'Error'
+      };
     } catch (e) {
       if (e is DioException && e.response != null) {
         return {
           'success': false,
-          'message': e.response?.data?['error'] ?? e.response?.data?['message'] ?? e.message ?? e.toString()
+          'message': e.response?.data?['error'] ??
+              e.response?.data?['message'] ??
+              e.message ??
+              e.toString()
         };
       }
       return {'success': false, 'message': e.toString()};
     }
   }
 
-  Future<Map<String, dynamic>> acceptFriendRequest(String baseUrl, String token, int friendId) async {
+  Future<Map<String, dynamic>> acceptFriendRequest(
+      String baseUrl, String token, int friendId) async {
     try {
       final response = await _dio.post(
         '${baseUrl}api/friends/accept',
@@ -180,21 +246,32 @@ class SyncHttpClient {
         data: {'friend_id': friendId},
       );
       if (response.statusCode == 200) {
-        return {'success': true, 'message': response.data?['message'] ?? 'Solicitud aceptada'};
+        return {
+          'success': true,
+          'message': response.data?['message'] ?? 'Solicitud aceptada'
+        };
       }
-      return {'success': false, 'message': response.data?['error'] ?? response.data?['message'] ?? 'Error'};
+      return {
+        'success': false,
+        'message':
+            response.data?['error'] ?? response.data?['message'] ?? 'Error'
+      };
     } catch (e) {
       if (e is DioException && e.response != null) {
         return {
           'success': false,
-          'message': e.response?.data?['error'] ?? e.response?.data?['message'] ?? e.message ?? e.toString()
+          'message': e.response?.data?['error'] ??
+              e.response?.data?['message'] ??
+              e.message ??
+              e.toString()
         };
       }
       return {'success': false, 'message': e.toString()};
     }
   }
 
-  Future<Map<String, dynamic>> removeFriendship(String baseUrl, String token, int friendId) async {
+  Future<Map<String, dynamic>> removeFriendship(
+      String baseUrl, String token, int friendId) async {
     try {
       final response = await _dio.post(
         '${baseUrl}api/friends/remove',
@@ -202,21 +279,32 @@ class SyncHttpClient {
         data: {'friend_id': friendId},
       );
       if (response.statusCode == 200) {
-        return {'success': true, 'message': response.data?['message'] ?? 'Amistad eliminada'};
+        return {
+          'success': true,
+          'message': response.data?['message'] ?? 'Amistad eliminada'
+        };
       }
-      return {'success': false, 'message': response.data?['error'] ?? response.data?['message'] ?? 'Error'};
+      return {
+        'success': false,
+        'message':
+            response.data?['error'] ?? response.data?['message'] ?? 'Error'
+      };
     } catch (e) {
       if (e is DioException && e.response != null) {
         return {
           'success': false,
-          'message': e.response?.data?['error'] ?? e.response?.data?['message'] ?? e.message ?? e.toString()
+          'message': e.response?.data?['error'] ??
+              e.response?.data?['message'] ??
+              e.message ??
+              e.toString()
         };
       }
       return {'success': false, 'message': e.toString()};
     }
   }
 
-  Future<Map<String, dynamic>> blockUser(String baseUrl, String token, int friendId) async {
+  Future<Map<String, dynamic>> blockUser(
+      String baseUrl, String token, int friendId) async {
     try {
       final response = await _dio.post(
         '${baseUrl}api/friends/block',
@@ -224,21 +312,32 @@ class SyncHttpClient {
         data: {'friend_id': friendId},
       );
       if (response.statusCode == 200) {
-        return {'success': true, 'message': response.data?['message'] ?? 'Usuario bloqueado'};
+        return {
+          'success': true,
+          'message': response.data?['message'] ?? 'Usuario bloqueado'
+        };
       }
-      return {'success': false, 'message': response.data?['error'] ?? response.data?['message'] ?? 'Error'};
+      return {
+        'success': false,
+        'message':
+            response.data?['error'] ?? response.data?['message'] ?? 'Error'
+      };
     } catch (e) {
       if (e is DioException && e.response != null) {
         return {
           'success': false,
-          'message': e.response?.data?['error'] ?? e.response?.data?['message'] ?? e.message ?? e.toString()
+          'message': e.response?.data?['error'] ??
+              e.response?.data?['message'] ??
+              e.message ??
+              e.toString()
         };
       }
       return {'success': false, 'message': e.toString()};
     }
   }
 
-  Future<Map<String, dynamic>> unblockUser(String baseUrl, String token, int friendId) async {
+  Future<Map<String, dynamic>> unblockUser(
+      String baseUrl, String token, int friendId) async {
     try {
       final response = await _dio.post(
         '${baseUrl}api/friends/unblock',
@@ -246,21 +345,32 @@ class SyncHttpClient {
         data: {'friend_id': friendId},
       );
       if (response.statusCode == 200) {
-        return {'success': true, 'message': response.data?['message'] ?? 'Usuario desbloqueado'};
+        return {
+          'success': true,
+          'message': response.data?['message'] ?? 'Usuario desbloqueado'
+        };
       }
-      return {'success': false, 'message': response.data?['error'] ?? response.data?['message'] ?? 'Error'};
+      return {
+        'success': false,
+        'message':
+            response.data?['error'] ?? response.data?['message'] ?? 'Error'
+      };
     } catch (e) {
       if (e is DioException && e.response != null) {
         return {
           'success': false,
-          'message': e.response?.data?['error'] ?? e.response?.data?['message'] ?? e.message ?? e.toString()
+          'message': e.response?.data?['error'] ??
+              e.response?.data?['message'] ??
+              e.message ??
+              e.toString()
         };
       }
       return {'success': false, 'message': e.toString()};
     }
   }
 
-  Future<List<Map<String, dynamic>>> fetchPublicPlaylists(String baseUrl, String token) async {
+  Future<List<Map<String, dynamic>>> fetchPublicPlaylists(
+      String baseUrl, String token) async {
     try {
       final response = await _dio.get(
         '${baseUrl}api/playlists/public',

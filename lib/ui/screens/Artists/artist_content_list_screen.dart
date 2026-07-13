@@ -335,12 +335,15 @@ class ArtistContentListScreen extends StatelessWidget {
 
   void toggleLike(dynamic item) async {
     final song = (item is MediaItem) ? item : MediaItemBuilder.fromJson(item);
-    final box = await Hive.openBox("LIBFAV");
-    if (box.containsKey(song.id)) {
-      await box.delete(song.id);
-    } else {
-      await box.put(song.id, MediaItemBuilder.toJson(song));
-    }
-    Get.find<SyncService>().triggerPush();
+    final syncService = Get.find<SyncService>();
+    await syncService.performLocalMutation(() async {
+      final box = await Hive.openBox("LIBFAV");
+      if (box.containsKey(song.id)) {
+        await box.delete(song.id);
+      } else {
+        await box.put(song.id, MediaItemBuilder.toJson(song));
+      }
+      syncService.triggerPush();
+    });
   }
 }

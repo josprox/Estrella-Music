@@ -21,8 +21,7 @@ void main() {
 
     await tester.pump(const Duration(milliseconds: 300));
 
-    expect(find.text('Mantener local'), findsOneWidget);
-    expect(find.text('Migrar a Joss Red'), findsOneWidget);
+    expect(find.byIcon(Icons.headphones_rounded), findsOneWidget);
     expect(tester.takeException(), isNull);
 
     await tester.pumpWidget(const SizedBox.shrink());

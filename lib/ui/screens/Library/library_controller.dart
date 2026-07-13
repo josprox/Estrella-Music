@@ -266,11 +266,8 @@ class LibraryPlaylistsController extends GetxController
         debugPrint("Error parsing playlist in refreshLib: $e\n$stack");
       }
     }
-    
-    libraryPlaylists.value = [
-      ...initPlst,
-      ...loaded
-    ];
+
+    libraryPlaylists.value = [...initPlst, ...loaded];
 
     final appPrefsBox = Hive.box("AppPrefs");
     if (appPrefsBox.containsKey("piped")) {
@@ -400,24 +397,21 @@ class LibraryPlaylistsController extends GetxController
             thumbnailUrl: songItems != null
                 ? songItems[0].artUri.toString()
                 : Playlist.thumbPlaceholderUrl,
-            description: isCollaborative ? "Collaborative Playlist" : "Library Playlist",
+            description:
+                isCollaborative ? "Collaborative Playlist" : "Library Playlist",
             isCloudPlaylist: isCloudMode,
             isCollaborative: isCollaborative,
             collaborators: collaborators);
         final box = await Hive.openBox("LibraryPlaylists");
         box.put(newplst.playlistId, newplst.toJson());
         await box.close();
-        if (isCollaborative) {
-          await Get.find<SyncService>().pushCollaborative(newplst);
-        } else {
-          Get.find<SyncService>().triggerPush();
-        }
       }
 
       libraryPlaylists.add(newplst);
 
       if (createPlaylistNaddSong && playlistCreationMode.value == "local") {
-        final plastbox = await Hive.openBox(sanitizeBoxName(newplst.playlistId));
+        final plastbox =
+            await Hive.openBox(sanitizeBoxName(newplst.playlistId));
         for (MediaItem item in songItems!) {
           plastbox.add(MediaItemBuilder.toJson(item));
         }
@@ -426,6 +420,13 @@ class LibraryPlaylistsController extends GetxController
         final songIds = songItems!.map((e) => e.id).toList();
         await Get.find<PipedServices>()
             .addToPlaylist(newplst.playlistId, songIds);
+      }
+      if (playlistCreationMode.value == "local") {
+        if (isCollaborative) {
+          await Get.find<SyncService>().pushCollaborative(newplst);
+        } else {
+          Get.find<SyncService>().triggerPush();
+        }
       }
       creationInProgress.value = false;
       return true;

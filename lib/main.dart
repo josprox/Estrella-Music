@@ -158,13 +158,13 @@ class MyApp extends StatelessWidget {
 
 Future<void> startApplicationServices() async {
   Get.put(AuthService(), permanent: true);
+  Get.put(PendingSyncQueueService(), permanent: true);
   Get.put(SyncService(), permanent: true);
   Get.put(ColisteningService(), permanent: true);
   Get.put(AppBackupService(), permanent: true);
   Get.put(CatalogRecoveryService(), permanent: true);
   Get.put(CloudBackupService(), permanent: true);
   Get.put(CloudMigrationService(), permanent: true);
-  Get.put(PendingSyncQueueService(), permanent: true);
   Get.put(LegacyMusicMigrationService(), permanent: true);
   Get.put(UserDataBootstrapService(), permanent: true);
   Get.lazyPut(() => PipedServices(), fenix: true);

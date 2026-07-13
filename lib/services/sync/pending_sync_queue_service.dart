@@ -30,8 +30,15 @@ class PendingSyncQueueService extends GetxService {
     refreshCount();
   }
 
-  Future<void> markAllSynced() async {
-    await _box.clear();
+  /// Returns the durable queue entries that may be acknowledged by one push.
+  /// Entries created after this snapshot must survive that push.
+  List<String> capturePendingIds() =>
+      _box.keys.map((key) => key.toString()).toList(growable: false);
+
+  bool get hasPendingChanges => _box.isNotEmpty;
+
+  Future<void> markSynced(Iterable<String> ids) async {
+    await _box.deleteAll(ids);
     refreshCount();
   }
 

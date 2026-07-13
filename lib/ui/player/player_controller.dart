@@ -923,14 +923,21 @@ class PlayerController extends GetxController
 
   Future<void> toggleFavourite() async {
     final currMediaItem = currentSong.value!;
-    final box = await Hive.openBox("LIBFAV");
-    isCurrentSongFav.isFalse
-        ? box.put(currMediaItem.id, MediaItemBuilder.toJson(currMediaItem))
-        : box.delete(currMediaItem.id);
+    final wasFavorite = isCurrentSongFav.value;
+    final syncService = Get.find<SyncService>();
+    await syncService.performLocalMutation(() async {
+      final box = await Hive.openBox("LIBFAV");
+      if (wasFavorite) {
+        await box.delete(currMediaItem.id);
+      } else {
+        await box.put(currMediaItem.id, MediaItemBuilder.toJson(currMediaItem));
+      }
+      syncService.triggerPush();
+    });
     try {
       final playlistController = Get.find<PlaylistScreenController>(
           tag: const Key("LIBFAV").hashCode.toString());
-      isCurrentSongFav.isFalse
+      !wasFavorite
           ? playlistController.addNRemoveItemsinList(currMediaItem,
               action: 'add', index: 0)
           : playlistController.addNRemoveItemsinList(currMediaItem,
@@ -938,14 +945,13 @@ class PlayerController extends GetxController
 
       // ignore: empty_catches
     } catch (e) {}
-    isCurrentSongFav.value = !isCurrentSongFav.value;
+    isCurrentSongFav.value = !wasFavorite;
     if (Get.find<SettingsScreenController>()
             .autoDownloadFavoriteSongEnabled
             .isTrue &&
         isCurrentSongFav.isTrue) {
       Get.find<Downloader>().download(currMediaItem);
     }
-    Get.find<SyncService>().triggerPush();
   }
 
   // ignore: prefer_typing_uninitialized_variables

@@ -243,8 +243,9 @@ class Body extends StatelessWidget {
                                      const Spacer(),
                                      if (Hive.box('AppPrefs').get('emusicDataMode', defaultValue: 'local') == 'cloud') ...[
                                        IconButton(
-                                         icon: const Icon(Icons.people_outline_rounded,
+                                         icon: const Icon(Icons.group_add_rounded,
                                              size: 30),
+                                         tooltip: 'Amigos',
                                          onPressed: () {
                                            Get.to(
                                              () => const FriendsManagementScreen(),

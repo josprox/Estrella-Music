@@ -39,9 +39,9 @@ class AddToPlaylist extends StatelessWidget {
                   child: Text(
                     S.current.addToPlaylist,
                     style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                    ),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                        ),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   ),
@@ -60,7 +60,10 @@ class AddToPlaylist extends StatelessWidget {
                   tooltip: S.current.CreateNewPlaylist,
                   style: IconButton.styleFrom(
                     foregroundColor: Theme.of(context).colorScheme.primary,
-                    backgroundColor: Theme.of(context).colorScheme.primary.withValues(alpha: 0.08),
+                    backgroundColor: Theme.of(context)
+                        .colorScheme
+                        .primary
+                        .withValues(alpha: 0.08),
                     padding: const EdgeInsets.all(10),
                   ),
                 ),
@@ -73,22 +76,34 @@ class AddToPlaylist extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     FilterChip(
-                      selected: addToPlaylistController.playlistType.value == "local",
+                      selected:
+                          addToPlaylistController.playlistType.value == "local",
                       label: Text(S.current.local),
                       onSelected: (val) {
-                        if (val) addToPlaylistController.changePlaylistType("local");
+                        if (val) {
+                          addToPlaylistController.changePlaylistType("local");
+                        }
                       },
-                      selectedColor: Theme.of(context).colorScheme.primary.withValues(alpha: 0.15),
+                      selectedColor: Theme.of(context)
+                          .colorScheme
+                          .primary
+                          .withValues(alpha: 0.15),
                       checkmarkColor: Theme.of(context).colorScheme.primary,
                     ),
                     const SizedBox(width: 8),
                     FilterChip(
-                      selected: addToPlaylistController.playlistType.value == "piped",
+                      selected:
+                          addToPlaylistController.playlistType.value == "piped",
                       label: Text(S.current.Piped),
                       onSelected: (val) {
-                        if (val) addToPlaylistController.changePlaylistType("piped");
+                        if (val) {
+                          addToPlaylistController.changePlaylistType("piped");
+                        }
                       },
-                      selectedColor: Theme.of(context).colorScheme.primary.withValues(alpha: 0.15),
+                      selectedColor: Theme.of(context)
+                          .colorScheme
+                          .primary
+                          .withValues(alpha: 0.15),
                       checkmarkColor: Theme.of(context).colorScheme.primary,
                     ),
                   ],
@@ -106,7 +121,9 @@ class AddToPlaylist extends StatelessWidget {
                         Icon(
                           Icons.playlist_play_rounded,
                           size: 48,
-                          color: Theme.of(context).disabledColor.withValues(alpha: 0.4),
+                          color: Theme.of(context)
+                              .disabledColor
+                              .withValues(alpha: 0.4),
                         ),
                         const SizedBox(height: 8),
                         Text(
@@ -123,7 +140,8 @@ class AddToPlaylist extends StatelessWidget {
                 return ListView.separated(
                   itemCount: addToPlaylistController.playlists.length,
                   physics: const BouncingScrollPhysics(),
-                  separatorBuilder: (context, index) => const SizedBox(height: 8),
+                  separatorBuilder: (context, index) =>
+                      const SizedBox(height: 8),
                   itemBuilder: (context, index) {
                     final playlist = addToPlaylistController.playlists[index];
                     final isPiped = playlist.isPipedPlaylist;
@@ -133,33 +151,35 @@ class AddToPlaylist extends StatelessWidget {
                       onTap: () {
                         addToPlaylistController
                             .addSongsToPlaylist(
-                                songItems,
-                                playlist.playlistId,
-                                context)
+                                songItems, playlist.playlistId, context)
                             .then((value) {
                           if (!context.mounted) return;
                           if (value) {
-                            ScaffoldMessenger.of(context).showSnackBar(
-                                snackbar(context,
-                                    S.current.songAddedToPlaylistAlert,
-                                    size: SanckBarSize.MEDIUM));
+                            ScaffoldMessenger.of(context).showSnackBar(snackbar(
+                                context, S.current.songAddedToPlaylistAlert,
+                                size: SanckBarSize.MEDIUM));
                             Navigator.of(context).pop();
                           } else {
-                            ScaffoldMessenger.of(context).showSnackBar(
-                                snackbar(context, S.current.songAlreadyExists,
-                                    size: SanckBarSize.MEDIUM));
+                            ScaffoldMessenger.of(context).showSnackBar(snackbar(
+                                context, S.current.songAlreadyExists,
+                                size: SanckBarSize.MEDIUM));
                             Navigator.of(context).pop();
                           }
                         });
                       },
                       borderRadius: BorderRadius.circular(12),
                       child: Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 12, vertical: 10),
                         decoration: BoxDecoration(
-                          color: Theme.of(context).cardColor.withValues(alpha: 0.35),
+                          color: Theme.of(context)
+                              .cardColor
+                              .withValues(alpha: 0.35),
                           borderRadius: BorderRadius.circular(12),
                           border: Border.all(
-                            color: Theme.of(context).dividerColor.withValues(alpha: 0.03),
+                            color: Theme.of(context)
+                                .dividerColor
+                                .withValues(alpha: 0.03),
                           ),
                         ),
                         child: Row(
@@ -171,10 +191,19 @@ class AddToPlaylist extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(8),
                                 gradient: LinearGradient(
                                   colors: isCloud
-                                      ? [Colors.blue.shade600, Colors.indigo.shade400]
+                                      ? [
+                                          Colors.blue.shade600,
+                                          Colors.indigo.shade400
+                                        ]
                                       : isPiped
-                                          ? [Colors.red.shade600, Colors.orange.shade400]
-                                          : [Colors.purple.shade600, Colors.pink.shade400],
+                                          ? [
+                                              Colors.red.shade600,
+                                              Colors.orange.shade400
+                                            ]
+                                          : [
+                                              Colors.purple.shade600,
+                                              Colors.pink.shade400
+                                            ],
                                   begin: Alignment.topLeft,
                                   end: Alignment.bottomRight,
                                 ),
@@ -224,7 +253,8 @@ class AddToPlaylist extends StatelessWidget {
                                                 : "Local",
                                         style: TextStyle(
                                           fontSize: 11,
-                                          color: Theme.of(context).disabledColor,
+                                          color:
+                                              Theme.of(context).disabledColor,
                                           fontWeight: FontWeight.w500,
                                         ),
                                       ),
@@ -235,7 +265,9 @@ class AddToPlaylist extends StatelessWidget {
                             ),
                             Icon(
                               Icons.chevron_right_rounded,
-                              color: Theme.of(context).disabledColor.withValues(alpha: 0.4),
+                              color: Theme.of(context)
+                                  .disabledColor
+                                  .withValues(alpha: 0.4),
                             ),
                           ],
                         ),
@@ -264,9 +296,8 @@ class AddToPlaylistController extends GetxController {
 
   Future<void> _getAllPlaylist() async {
     final plstsBox = await Hive.openBox("LibraryPlaylists");
-    playlists.value = plstsBox.values
-        .map((e) => Playlist.fromJson(e as Map))
-        .toList();
+    playlists.value =
+        plstsBox.values.map((e) => Playlist.fromJson(e as Map)).toList();
     localPlaylists = playlists.toList();
     if (Get.find<PipedServices>().isLoggedIn) {
       final res = await Get.find<PipedServices>().getAllPlaylists();
@@ -294,16 +325,19 @@ class AddToPlaylistController extends GetxController {
       List<MediaItem> songs, String playlistId, BuildContext context) async {
     additionInProgress.value = true;
     if (playlistType.value == "local") {
-      final plstBox = await Hive.openBox(sanitizeBoxName(playlistId));
-      final playlistSongIds = plstBox.values.map((item) => item['videoId']);
-      for (MediaItem element in songs) {
-        if (!playlistSongIds.contains(element.id)) {
-          await plstBox.add(MediaItemBuilder.toJson(element));
+      final syncService = Get.find<SyncService>();
+      await syncService.performLocalMutation(() async {
+        final plstBox = await Hive.openBox(sanitizeBoxName(playlistId));
+        final playlistSongIds = plstBox.values.map((item) => item['videoId']);
+        for (MediaItem element in songs) {
+          if (!playlistSongIds.contains(element.id)) {
+            await plstBox.add(MediaItemBuilder.toJson(element));
+          }
         }
-      }
+        syncService.triggerPush();
+      });
       // Keep box open to prevent "Box has already been closed" errors
       additionInProgress.value = false;
-      Get.find<SyncService>().triggerPush();
       return true;
     } else {
       final videosId = songs.map((e) => e.id).toList();

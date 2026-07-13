@@ -406,3 +406,28 @@ La primera implementacion debe enfocarse en:
 4. Sincronizar playlists, favoritos, historial y settings.
 5. Dejar descargas como offline local con autorizacion cloud.
 
+## 16. Garantias de consistencia del snapshot de compatibilidad
+
+Mientras termina la adopcion de `/api/sync/changes`, el endpoint de snapshot
+`POST /api/sync/push` debe cumplir estas reglas obligatorias:
+
+- Cada push captura los IDs de cola pendientes al iniciar. Solo esos IDs pueden
+  confirmarse cuando responde el servidor.
+- Una mutacion creada durante un push conserva `hasPendingSync=true` y provoca
+  otro push; una respuesta anterior nunca puede limpiar cambios posteriores.
+- Un pull no puede aplicarse mientras haya cambios pendientes ni mientras una
+  mutacion local este escribiendo en Hive.
+- Favoritos y canciones de playlists se escriben en Hive y se marcan pendientes
+  dentro de la misma seccion critica del coordinador.
+- Las colecciones vacias son datos validos. `favorites: []` y `playlists: []`
+  deben vaciar sus tablas remotas, no interpretarse como campos ausentes.
+- EMusic responde a HTTP y WebSocket con `summary`, incluyendo los conteos
+  persistidos de `playlists`, `favorites`, `recent_plays`, `albums`, `artists` y
+  `downloads`.
+- Flutter solo confirma el lote si cada conteo de `summary` coincide con el
+  snapshot enviado. Una respuesta sin resumen o con conteos distintos queda
+  pendiente para reintento.
+
+Estas garantias evitan perdida de likes o canciones durante la etapa de
+compatibilidad. El objetivo definitivo sigue siendo el contrato incremental de
+las secciones 9 y 12, con cambios por entidad, versiones y tombstones.

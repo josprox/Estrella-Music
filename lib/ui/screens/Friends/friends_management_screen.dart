@@ -24,6 +24,7 @@ class _FriendsManagementScreenState extends State<FriendsManagementScreen> with 
   bool _isLoadingRequests = false;
   bool _isLoadingBlocked = false;
   bool _isSearching = false;
+  String? _searchError;
 
   final TextEditingController _searchController = TextEditingController();
 
@@ -93,15 +94,27 @@ class _FriendsManagementScreenState extends State<FriendsManagementScreen> with 
   }
 
   Future<void> _performSearch(String query) async {
-    if (query.trim().isEmpty) return;
-    setState(() => _isSearching = true);
+    final normalizedQuery = query.trim();
+    if (normalizedQuery.isEmpty) return;
+    setState(() {
+      _isSearching = true;
+      _searchError = null;
+    });
     try {
-      final data = await _syncService.searchUsers(query);
+      final data = await _syncService.searchUsers(normalizedQuery);
+      if (!mounted) return;
       setState(() {
         _searchResults = data;
       });
-    } catch (_) {}
-    setState(() => _isSearching = false);
+    } catch (error) {
+      if (!mounted) return;
+      setState(() {
+        _searchResults = [];
+        _searchError = error.toString().replaceFirst(RegExp(r'^[^:]+:\s*'), '');
+      });
+    } finally {
+      if (mounted) setState(() => _isSearching = false);
+    }
   }
 
   Future<void> _sendRequest(int friendId) async {
@@ -469,7 +482,10 @@ class _FriendsManagementScreenState extends State<FriendsManagementScreen> with 
                   icon: const Icon(Icons.clear_rounded, color: Colors.white70),
                   onPressed: () {
                     _searchController.clear();
-                    setState(() => _searchResults = []);
+                    setState(() {
+                      _searchResults = [];
+                      _searchError = null;
+                    });
                   },
                 ),
             ],
@@ -481,12 +497,20 @@ class _FriendsManagementScreenState extends State<FriendsManagementScreen> with 
           const SizedBox(height: 16),
           if (_isSearching)
             const Expanded(child: Center(child: CircularProgressIndicator()))
+          else if (_searchError != null)
+            Expanded(
+              child: _buildEmptyState(
+                icon: Icons.error_outline_rounded,
+                title: "No se pudo buscar",
+                subtitle: _searchError!,
+              ),
+            )
           else if (_searchResults.isEmpty && _searchController.text.isNotEmpty)
             Expanded(
               child: _buildEmptyState(
                 icon: Icons.search_off_rounded,
                 title: "No se encontraron usuarios",
-                subtitle: "Prueba con un username diferente.",
+                subtitle: "Prueba con otro username o correo electrónico.",
               ),
             )
           else if (_searchResults.isEmpty)
@@ -494,7 +518,7 @@ class _FriendsManagementScreenState extends State<FriendsManagementScreen> with 
               child: _buildEmptyState(
                 icon: Icons.explore_outlined,
                 title: "Encuentra nuevos amigos",
-                subtitle: "Busca su nombre de usuario de Joss Red arriba.",
+                subtitle: "Busca su username o correo de Joss Red arriba.",
               ),
             )
           else

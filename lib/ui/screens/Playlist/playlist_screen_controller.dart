@@ -265,7 +265,8 @@ class PlaylistScreenController extends PlaylistAlbumScreenControllerBase
 
   @override
   Future<void> updateSongsIntoDb() async {
-    final songsBox = await Hive.openBox(sanitizeBoxName(playlist.value.playlistId));
+    final songsBox =
+        await Hive.openBox(sanitizeBoxName(playlist.value.playlistId));
     await songsBox.clear();
     final songListCopy = songList.toList();
     for (int i = 0; i < songListCopy.length; i++) {
@@ -282,22 +283,27 @@ class PlaylistScreenController extends PlaylistAlbumScreenControllerBase
   Future<void> deleteMultipleSongs(List<MediaItem> songs) async {
     final id = playlist.value.playlistId;
     final isoffline = id == "SongsCache" || id == "SongDownloads";
+    final syncService = Get.find<SyncService>();
+    await syncService.performLocalMutation(() async {
+      final box_ = await Hive.openBox(sanitizeBoxName(id));
+      for (MediaItem element in songs) {
+        final index = box_.values
+            .toList()
+            .indexWhere((ele) => ele['videoId'] == element.id);
+        await box_.deleteAt(index);
 
-    final box_ = await Hive.openBox(sanitizeBoxName(id));
-    for (MediaItem element in songs) {
-      final index = box_.values
-          .toList()
-          .indexWhere((ele) => ele['videoId'] == element.id);
-      await box_.deleteAt(index);
+        if (isoffline) {
+          await Get.find<LibrarySongsController>()
+              .removeSong(element, id == "SongDownloads");
+        }
 
-      if (isoffline) {
-        await Get.find<LibrarySongsController>()
-            .removeSong(element, id == "SongDownloads");
+        songList.removeWhere((song) => song.id == element.id);
       }
-
-      songList.removeWhere((song) => song.id == element.id);
-    }
-    if (!isoffline) await box_.close();
+      if (!isoffline) {
+        await box_.close();
+        syncService.triggerPush();
+      }
+    });
 
     // Update the playlist thumbnail based on the first song's thumbnail
     _updatePlaylistThumbSongBased();
