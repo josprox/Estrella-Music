@@ -45,6 +45,8 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.8
   flutter_dotenv: ^5.2.1
+  firebase_core: ^4.6.0
+  firebase_messaging: ^16.4.1
   flutter_keyboard_visibility: ^6.0.0
   flutter_lyric: ^2.0.4+6
   flutter_slidable: ^3.1.2
@@ -53,6 +55,7 @@ dependencies:
   google_fonts: ^6.1.0
   hive: ^2.2.3
   html: ^0.15.6
+  http: ^1.3.0
   ionicons: ^0.2.2
   jni: ^0.14.0
   just_audio: ^0.9.46
@@ -61,7 +64,6 @@ dependencies:
       url: https://github.com/anandnet/just_audio_media_kit.git
       ref: 6672eb82657d9e671abbf42122031c88aa9e6d80
   palette_generator: ^0.3.3+4
-  onesignal_flutter: ^5.3.4
   dart_discord_presence: any
   xml: any
   path: ^1.8.3

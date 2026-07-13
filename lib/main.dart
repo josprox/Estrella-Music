@@ -19,6 +19,7 @@ import 'package:harmonymusic/services/backup/cloud_backup_service.dart';
 import 'package:harmonymusic/services/sync/cloud_migration_service.dart';
 import 'package:harmonymusic/services/sync/legacy_music_migration_service.dart';
 import 'package:harmonymusic/services/system/notification_service.dart';
+import 'package:harmonymusic/services/system/fcm_notification_service.dart';
 import 'package:harmonymusic/services/sync/pending_sync_queue_service.dart';
 import 'package:harmonymusic/services/sync/music_sqlite_service.dart';
 import 'package:harmonymusic/services/sync/sync_service.dart';
@@ -47,7 +48,9 @@ Future<void> main() async {
   try {
     await dotenv.load(fileName: '.env');
   } catch (_) {}
-  await NotificationService.initOneSignal();
+  if (GetPlatform.isAndroid || GetPlatform.isIOS) {
+    await FcmNotificationService.initialize();
+  }
   await initLocalStorage();
   final musicDatabase = MusicSqliteService();
   await musicDatabase.initialize();
@@ -79,6 +82,9 @@ Future<void> main() async {
   WidgetsBinding.instance.addObserver(LifecycleHandler());
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
   runApp(const MyApp());
+  unawaited(NotificationService.initInboxSync(
+    mobile: GetPlatform.isAndroid || GetPlatform.isIOS,
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -87,6 +93,24 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      NotificationService.onNotificationReceived = (title, message, type) {
+        if (type != 'in_app') return;
+        Get.dialog<void>(
+          AlertDialog(
+            title: Text(title),
+            content: Text(message),
+            actions: [
+              TextButton(
+                onPressed: Get.back,
+                child: const Text('Entendido'),
+              ),
+            ],
+          ),
+          barrierDismissible: false,
+        );
+      };
+    });
     if (!GetPlatform.isDesktop) Get.put(AppLinksController());
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
     return GetMaterialApp(
@@ -258,6 +282,10 @@ class LifecycleHandler extends WidgetsBindingObserver {
   void didChangeAppLifecycleState(AppLifecycleState state) async {
     if (state == AppLifecycleState.resumed) {
       SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
+      unawaited(NotificationService.syncMessages());
+      if (GetPlatform.isAndroid || GetPlatform.isIOS) {
+        unawaited(FcmNotificationService.registerCurrentToken());
+      }
       if (Get.isRegistered<SyncService>()) {
         unawaited(Get.find<SyncService>().pullRemoteChanges());
       }

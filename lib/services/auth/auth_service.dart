@@ -7,6 +7,8 @@ import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/services/storage/sqlite_store.dart';
 import 'package:harmonymusic/services/sync/sync_service.dart';
+import 'package:harmonymusic/services/system/fcm_notification_service.dart';
+import 'package:harmonymusic/services/system/notification_service.dart';
 
 class AuthService extends GetxService {
   static const _jwtTokenKey = 'jwt_token';
@@ -216,9 +218,9 @@ class AuthService extends GetxService {
         key: _cachedProfileKey,
         value: jsonEncode(profileData),
       );
-      final hasPending =
-          SqliteStore.box('AppPrefs').get('hasPendingSync', defaultValue: false) ==
-              true;
+      final hasPending = SqliteStore.box('AppPrefs')
+              .get('hasPendingSync', defaultValue: false) ==
+          true;
       if (Get.isRegistered<SyncService>()) {
         final syncService = Get.find<SyncService>();
         if (hasPending) {
@@ -231,6 +233,8 @@ class AuthService extends GetxService {
           syncService.pull();
         }
       }
+      FcmNotificationService.registerCurrentToken();
+      NotificationService.syncMessages();
     } else {
       if (profileResult['isNetworkError'] == true) {
         // Fallback to offline cached profile
@@ -471,6 +475,7 @@ class AuthService extends GetxService {
     final token = await _storage.read(key: _jwtTokenKey);
     try {
       if (token != null && token.isNotEmpty) {
+        await FcmNotificationService.unregisterCurrentToken();
         await _dio.postUri(
           _buildUri('logout'),
           options: Options(headers: _jwtHeaders(token)),
@@ -479,6 +484,7 @@ class AuthService extends GetxService {
     } catch (_) {
       // Local logout continues even if the network request fails.
     } finally {
+      await NotificationService.disconnect();
       await _clearTokenData();
       userProfile.value = null;
       isAuthenticated.value = false;

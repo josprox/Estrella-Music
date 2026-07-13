@@ -76,3 +76,4 @@ android/app/.cxx/Debug/*
 /EMusic/
 lib/l10n/translation_log.xlsx
 lib/l10n/translation_history.json
+android/app/google-services.json
