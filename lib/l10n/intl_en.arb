@@ -643,7 +643,7 @@
   "welcome_subtitle": "Choose how you want to experience Estrella Music from now on.",
   "welcome_intro": "We have modernized our platform. ",
   "recommend_cloud": "We recommend activating Cloud Mode for a Spotify-like experience: real-time synchronization between all your devices and automatic backup without you having to do anything.",
-  "swipe_prompt": "Swipe to explore options ➔",
+  "swipe_prompt": "Swipe to explore options",
   "local_title": "Local Mode",
   "local_subtitle": "Absolute privacy on your device",
   "local_b1": "It works without the need to log in.",

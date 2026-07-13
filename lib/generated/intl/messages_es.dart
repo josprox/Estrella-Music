@@ -1041,7 +1041,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "subscribers": MessageLookupByLibrary.simpleMessage("suscriptores"),
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
-      "Desliza para explorar las opciones ➔",
+      "Desliza para explorar las opciones",
     ),
     "syncPlaylistSongs": MessageLookupByLibrary.simpleMessage(
       "Sincronizar canciones de la lista de reproducción",

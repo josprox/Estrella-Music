@@ -643,7 +643,7 @@
   "welcome_subtitle": "Elige cómo quieres experimentar Estrella Music de ahora en adelante.",
   "welcome_intro": "Hemos modernizado nuestra plataforma. El antiguo sistema de subir respaldos manuales ha sido desactivado. Ahora cuentas con dos modos claros para gestionar tu biblioteca musical.",
   "recommend_cloud": "Te recomendamos activar el Modo Cloud para una experiencia Spotify-like: sincronización en tiempo real entre todos tus dispositivos y respaldo automático sin que tengas que hacer nada.",
-  "swipe_prompt": "Desliza para explorar las opciones ➔",
+  "swipe_prompt": "Desliza para explorar las opciones",
   "local_title": "Modo Local",
   "local_subtitle": "Privacidad absoluta en tu dispositivo",
   "local_b1": "Funciona sin necesidad de iniciar sesión.",

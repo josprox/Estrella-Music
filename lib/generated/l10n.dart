@@ -3464,10 +3464,10 @@ class S {
     );
   }
 
-  /// `Swipe to explore options ➔`
+  /// `Swipe to explore options`
   String get swipe_prompt {
     return Intl.message(
-      'Swipe to explore options ➔',
+      'Swipe to explore options',
       name: 'swipe_prompt',
       desc: '',
       args: [],

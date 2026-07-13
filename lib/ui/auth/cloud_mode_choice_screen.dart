@@ -1,3 +1,4 @@
+import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'widgets/animated_auth_background.dart';
 
@@ -25,7 +26,7 @@ class _CloudModeChoiceScreenState extends State<CloudModeChoiceScreen> {
       'welcome_subtitle': 'Elige cómo quieres experimentar Estrella Music de ahora en adelante.',
       'welcome_intro': 'Hemos modernizado nuestra plataforma. El antiguo sistema de subir respaldos manuales ha sido desactivado. Ahora cuentas con dos modos claros para gestionar tu biblioteca musical.',
       'recommend_cloud': 'Te recomendamos activar el Modo Cloud para una experiencia Spotify-like: sincronización en tiempo real entre todos tus dispositivos y respaldo automático sin que tengas que hacer nada.',
-      'swipe_prompt': 'Desliza para explorar las opciones ➔',
+      'swipe_prompt': 'Desliza para explorar las opciones',
       
       'local_title': 'Modo Local',
       'local_subtitle': 'Privacidad absoluta en tu dispositivo',
@@ -48,7 +49,7 @@ class _CloudModeChoiceScreenState extends State<CloudModeChoiceScreen> {
       'welcome_subtitle': 'Choose how you want to experience Estrella Music from now on.',
       'welcome_intro': 'We have modernized our platform. The old manual backup upload system has been disabled. Now you have two clear ways to manage your music library.',
       'recommend_cloud': 'We highly recommend activating Cloud Mode for a seamless Spotify-like experience: real-time synchronization across all your devices and automatic backups without any manual action.',
-      'swipe_prompt': 'Swipe to explore options ➔',
+      'swipe_prompt': 'Swipe to explore options',
       
       'local_title': 'Local Mode',
       'local_subtitle': 'Absolute privacy on your device',
@@ -116,18 +117,27 @@ class _CloudModeChoiceScreenState extends State<CloudModeChoiceScreen> {
                   ),
                 ),
                 Expanded(
-                  child: PageView(
-                    controller: _pageController,
-                    onPageChanged: (index) {
-                      setState(() {
-                        _currentPage = index;
-                      });
-                    },
-                    children: [
-                      _buildWelcomeSlide(theme),
-                      _buildLocalSlide(theme),
-                      _buildCloudSlide(theme),
-                    ],
+                  child: ScrollConfiguration(
+                    behavior: const ScrollBehavior().copyWith(
+                      dragDevices: {
+                        PointerDeviceKind.touch,
+                        PointerDeviceKind.mouse,
+                        PointerDeviceKind.trackpad,
+                      },
+                    ),
+                    child: PageView(
+                      controller: _pageController,
+                      onPageChanged: (index) {
+                        setState(() {
+                          _currentPage = index;
+                        });
+                      },
+                      children: [
+                        _buildWelcomeSlide(theme),
+                        _buildCloudSlide(theme),
+                        _buildLocalSlide(theme),
+                      ],
+                    ),
                   ),
                 ),
                 Padding(
@@ -161,14 +171,26 @@ class _CloudModeChoiceScreenState extends State<CloudModeChoiceScreen> {
 
   Widget _buildDot(int index) {
     final isActive = _currentPage == index;
-    return AnimatedContainer(
-      duration: const Duration(milliseconds: 300),
-      margin: const EdgeInsets.symmetric(horizontal: 4),
-      height: 8,
-      width: isActive ? 24 : 8,
-      decoration: BoxDecoration(
-        color: isActive ? Colors.white : Colors.white30,
-        borderRadius: BorderRadius.circular(4),
+    return GestureDetector(
+      onTap: () {
+        _pageController.animateToPage(
+          index,
+          duration: const Duration(milliseconds: 300),
+          curve: Curves.easeInOut,
+        );
+      },
+      child: MouseRegion(
+        cursor: SystemMouseCursors.click,
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 300),
+          margin: const EdgeInsets.symmetric(horizontal: 4),
+          height: 8,
+          width: isActive ? 24 : 8,
+          decoration: BoxDecoration(
+            color: isActive ? Colors.white : Colors.white30,
+            borderRadius: BorderRadius.circular(4),
+          ),
+        ),
       ),
     );
   }

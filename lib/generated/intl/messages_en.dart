@@ -949,7 +949,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "subscribers": MessageLookupByLibrary.simpleMessage("subscribers"),
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
-      "Swipe to explore options ➔",
+      "Swipe to explore options",
     ),
     "syncPlaylistSongs": MessageLookupByLibrary.simpleMessage(
       "Sync playlist songs",
