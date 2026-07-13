@@ -666,5 +666,8 @@
   "friendRequestAccepted": "Demande d'ami acceptée",
   "friendshipRemoved": "Amitié supprimée",
   "userBlocked": "Utilisateur bloqué",
-  "userUnblocked": "Utilisateur débloqué"
+  "userUnblocked": "Utilisateur débloqué",
+  "artistsByTaste": "Selon vos goûts",
+  "followedArtists": "suivi",
+  "recommendedArtists": "Recommandé"
 }

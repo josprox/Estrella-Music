@@ -824,6 +824,36 @@ class S {
     );
   }
 
+  /// `Based on your tastes`
+  String get artistsByTaste {
+    return Intl.message(
+      'Based on your tastes',
+      name: 'artistsByTaste',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Followed`
+  String get followedArtists {
+    return Intl.message(
+      'Followed',
+      name: 'followedArtists',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Recommended`
+  String get recommendedArtists {
+    return Intl.message(
+      'Recommended',
+      name: 'recommendedArtists',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Library Playlists`
   String get libPlaylists {
     return Intl.message(

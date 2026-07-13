@@ -664,5 +664,8 @@
   "friendRequestAccepted": "Молбата за приятелство е приета",
   "friendshipRemoved": "Приятелството премахнато",
   "userBlocked": "Блокиран потребител",
-  "userUnblocked": "Отключен потребител"
+  "userUnblocked": "Отключен потребител",
+  "artistsByTaste": "Според вашите вкусове",
+  "followedArtists": "последван",
+  "recommendedArtists": "Препоръчва се"
 }

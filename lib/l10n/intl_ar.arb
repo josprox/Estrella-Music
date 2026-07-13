@@ -628,5 +628,8 @@
   "friendRequestAccepted": "تم قبول طلب الصداقة",
   "friendshipRemoved": "تمت إزالة الصداقة",
   "userBlocked": "مستخدم محظور",
-  "userUnblocked": "مستخدم غير مقفل"
+  "userUnblocked": "مستخدم غير مقفل",
+  "artistsByTaste": "حسب ذوقك",
+  "followedArtists": "يتبع",
+  "recommendedArtists": "مُستَحسَن"
 }

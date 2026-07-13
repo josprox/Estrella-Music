@@ -663,5 +663,8 @@
   "friendRequestAccepted": "Yêu cầu kết bạn đã được chấp nhận",
   "friendshipRemoved": "Đã xóa tình bạn",
   "userBlocked": "Người dùng bị chặn",
-  "userUnblocked": "Người dùng đã được mở khóa"
+  "userUnblocked": "Người dùng đã được mở khóa",
+  "artistsByTaste": "Theo sở thích của bạn",
+  "followedArtists": "đã theo dõi",
+  "recommendedArtists": "Khuyến khích"
 }

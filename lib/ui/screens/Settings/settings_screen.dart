@@ -452,7 +452,6 @@ class SettingsAppearanceScreen extends StatelessWidget {
     final ctrl = Get.find<SettingsScreenController>();
     final cs = Theme.of(context).colorScheme;
     final tt = Theme.of(context).textTheme;
-
     return Scaffold(
       backgroundColor: cs.surface,
       appBar: AppBar(
@@ -527,6 +526,13 @@ class SettingsContentScreen extends StatelessWidget {
     final ctrl = Get.find<SettingsScreenController>();
     final cs = Theme.of(context).colorScheme;
     final tt = Theme.of(context).textTheme;
+    final startupOptions = <int, String>{
+      0: S.current.home,
+      1: S.current.songs,
+      3: S.current.albums,
+      4: S.current.artists,
+      5: S.current.playlists,
+    };
 
     return Scaffold(
       backgroundColor: cs.surface,
@@ -543,19 +549,39 @@ class SettingsContentScreen extends StatelessWidget {
             title: S.current.startupScreen,
             subtitle: S.current.startupScreenDescription,
             leadingIcon: Icons.start_rounded,
-            trailing: Obx(() => DropdownButton<int>(
-                  dropdownColor: cs.surfaceContainerHigh,
-                  underline: const SizedBox.shrink(),
-                  value: ctrl.startupTabIndex.value,
-                  items: [
-                    DropdownMenuItem(value: 0, child: Text(S.current.home)),
-                    DropdownMenuItem(value: 1, child: Text(S.current.songs)),
-                    DropdownMenuItem(value: 3, child: Text(S.current.albums)),
-                    DropdownMenuItem(value: 4, child: Text(S.current.artists)),
-                    DropdownMenuItem(
-                        value: 5, child: Text(S.current.playlists)),
-                  ],
-                  onChanged: ctrl.setStartupTab,
+            trailing: Obx(() => SizedBox(
+                  width: 132,
+                  child: DropdownButton<int>(
+                    isExpanded: true,
+                    dropdownColor: cs.surfaceContainerHigh,
+                    underline: const SizedBox.shrink(),
+                    value: ctrl.startupTabIndex.value,
+                    selectedItemBuilder: (context) => startupOptions.values
+                        .map((label) => Align(
+                              alignment: Alignment.centerRight,
+                              child: Text(
+                                label,
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                                style: tt.bodyMedium?.copyWith(
+                                  color: cs.primary,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ))
+                        .toList(),
+                    items: startupOptions.entries
+                        .map((option) => DropdownMenuItem<int>(
+                              value: option.key,
+                              child: Text(
+                                option.value,
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ))
+                        .toList(),
+                    onChanged: ctrl.setStartupTab,
+                  ),
                 )),
           ),
           SettingsTile(

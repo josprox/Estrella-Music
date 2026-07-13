@@ -659,5 +659,8 @@
   "friendRequestAccepted": "Freundschaftsanfrage angenommen",
   "friendshipRemoved": "Freundschaft entfernt",
   "userBlocked": "Gesperrter Benutzer",
-  "userUnblocked": "Entsperrter Benutzer"
+  "userUnblocked": "Entsperrter Benutzer",
+  "artistsByTaste": "Ganz nach Ihrem Geschmack",
+  "followedArtists": "gefolgt",
+  "recommendedArtists": "Empfohlen"
 }

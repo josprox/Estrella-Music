@@ -173,6 +173,12 @@ Notas confirmadas:
 7. Documentar cambios de API y migraciones.
 8. Validar con `joss server start` cuando se toque Joss/SCSS.
 
+## Entrega de traducciones
+
+- Cada vez que se agregue, modifique o elimine una traduccion, se debe entregar tambien un archivo JSON con las claves afectadas y sus valores en espanol, para que el programador pueda realizar la traduccion masiva al resto de idiomas.
+- El JSON debe contener solo los cambios de traduccion de la entrega actual, conservar exactamente las mismas claves usadas por la aplicacion y ser un JSON valido en UTF-8.
+- Guardar el archivo dentro de `docs/translations/` con un nombre descriptivo terminado en `_es.json`.
+
 ## Herramientas de desarrollo
 - Utilizar siempre que sea posible el servidor `dart-mcp-server` (e.g. `analyze_files`, `pub`, `lsp`, `dtd`) para consultas, análisis estático y ayuda con el código Dart/Flutter.
 

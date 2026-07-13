@@ -654,5 +654,8 @@
   "friendRequestAccepted": "বন্ধুর অনুরোধ গৃহীত হয়েছে",
   "friendshipRemoved": "বন্ধুত্ব মুছে গেছে",
   "userBlocked": "অবরুদ্ধ ব্যবহারকারী",
-  "userUnblocked": "আনলক করা ব্যবহারকারী"
+  "userUnblocked": "আনলক করা ব্যবহারকারী",
+  "artistsByTaste": "আপনার রুচি অনুযায়ী",
+  "followedArtists": "অনুসরণ",
+  "recommendedArtists": "প্রস্তাবিত"
 }

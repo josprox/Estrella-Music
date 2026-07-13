@@ -654,5 +654,8 @@
   "friendRequestAccepted": "Permintaan pertemanan diterima",
   "friendshipRemoved": "Persahabatan dihapus",
   "userBlocked": "Pengguna yang diblokir",
-  "userUnblocked": "Pengguna tidak terkunci"
+  "userUnblocked": "Pengguna tidak terkunci",
+  "artistsByTaste": "Sesuai selera Anda",
+  "followedArtists": "diikuti",
+  "recommendedArtists": "Direkomendasikan"
 }

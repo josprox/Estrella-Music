@@ -394,5 +394,8 @@
   "friendRequestAccepted": "Αίτημα φιλίας δεκτό",
   "friendshipRemoved": "Η φιλία καταργήθηκε",
   "userBlocked": "Αποκλεισμένος χρήστης",
-  "userUnblocked": "Ξεκλείδωτος χρήστης"
+  "userUnblocked": "Ξεκλείδωτος χρήστης",
+  "artistsByTaste": "Σύμφωνα με τα γούστα σας",
+  "followedArtists": "ακολούθησε",
+  "recommendedArtists": "Συνιστάται"
 }

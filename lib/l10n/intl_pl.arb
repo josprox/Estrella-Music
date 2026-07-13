@@ -659,5 +659,8 @@
   "friendRequestAccepted": "Zaproszenie do grona znajomych zaakceptowane",
   "friendshipRemoved": "Przyjaźń usunięta",
   "userBlocked": "Zablokowany użytkownik",
-  "userUnblocked": "Odblokowany użytkownik"
+  "userUnblocked": "Odblokowany użytkownik",
+  "artistsByTaste": "Według Twoich upodobań",
+  "followedArtists": "podążał",
+  "recommendedArtists": "Zalecony"
 }

@@ -622,5 +622,8 @@
   "friendRequestAccepted": "ਦੋਸਤ ਦੀ ਬੇਨਤੀ ਸਵੀਕਾਰ ਕੀਤੀ ਗਈ",
   "friendshipRemoved": "ਦੋਸਤੀ ਦੂਰ ਕੀਤੀ",
   "userBlocked": "ਬਲੌਕ ਕੀਤਾ ਉਪਭੋਗਤਾ",
-  "userUnblocked": "ਅਣਲਾਕ ਕੀਤਾ ਉਪਭੋਗਤਾ"
+  "userUnblocked": "ਅਣਲਾਕ ਕੀਤਾ ਉਪਭੋਗਤਾ",
+  "artistsByTaste": "ਆਪਣੇ ਸੁਆਦ ਅਨੁਸਾਰ",
+  "followedArtists": "ਦਾ ਅਨੁਸਰਣ ਕੀਤਾ",
+  "recommendedArtists": "ਸਿਫ਼ਾਰਿਸ਼ ਕੀਤੀ"
 }

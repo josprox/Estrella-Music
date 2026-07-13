@@ -390,6 +390,7 @@ class LibraryArtistWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final cntrller = Get.find<LibraryArtistsController>();
     final topPadding = context.isLandscape ? 30.0 : 70.0;
+    final colorScheme = Theme.of(context).colorScheme;
     return Padding(
       padding: EdgeInsets.only(
         left: 16.0,
@@ -400,6 +401,54 @@ class LibraryArtistWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           _buildExpressiveTitle(context, S.current.libArtists),
+          Obx(() {
+            final filters = [
+              (
+                collection: LibraryArtistCollection.tastes,
+                icon: Icons.auto_awesome_rounded,
+                label: S.current.artistsByTaste,
+              ),
+              (
+                collection: LibraryArtistCollection.followed,
+                icon: Icons.favorite_rounded,
+                label: S.current.followedArtists,
+              ),
+              (
+                collection: LibraryArtistCollection.recommended,
+                icon: Icons.recommend_rounded,
+                label: S.current.recommendedArtists,
+              ),
+            ];
+            return SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              physics: const BouncingScrollPhysics(),
+              padding: const EdgeInsets.only(bottom: 8),
+              child: Row(
+                children: filters
+                    .map((filter) => Padding(
+                          padding: const EdgeInsets.only(right: 8),
+                          child: ChoiceChip(
+                            avatar: Icon(filter.icon, size: 18),
+                            label: Text(filter.label),
+                            selected: cntrller.selectedCollection.value ==
+                                filter.collection,
+                            showCheckmark: false,
+                            selectedColor: colorScheme.secondaryContainer,
+                            labelStyle: TextStyle(
+                              color: cntrller.selectedCollection.value ==
+                                      filter.collection
+                                  ? colorScheme.onSecondaryContainer
+                                  : colorScheme.onSurfaceVariant,
+                              fontWeight: FontWeight.w600,
+                            ),
+                            onSelected: (_) =>
+                                cntrller.selectCollection(filter.collection),
+                          ),
+                        ))
+                    .toList(),
+              ),
+            );
+          }),
           Obx(
             () => Container(
               margin: const EdgeInsets.only(bottom: 12.0, top: 4.0),
@@ -430,14 +479,25 @@ class LibraryArtistWidget extends StatelessWidget {
               ),
             ),
           ),
-          Obx(() => cntrller.libraryArtists.isNotEmpty
-              ? ListWidget(cntrller.libraryArtists, "Library Artists", true)
-              : Expanded(
-                  child: Center(
+          Obx(() {
+            if (cntrller.isLoadingRecommended.isTrue &&
+                cntrller.selectedCollection.value ==
+                    LibraryArtistCollection.recommended) {
+              return const Expanded(
+                child: Center(child: CircularProgressIndicator()),
+              );
+            }
+            return cntrller.libraryArtists.isNotEmpty
+                ? ListWidget(cntrller.libraryArtists, "Library Artists", true)
+                : Expanded(
+                    child: Center(
                       child: Text(
-                  S.current.noBookmarks,
-                  style: Theme.of(context).textTheme.titleMedium,
-                ))))
+                        S.current.noBookmarks,
+                        style: Theme.of(context).textTheme.titleMedium,
+                      ),
+                    ),
+                  );
+          })
         ],
       ),
     );

@@ -664,5 +664,8 @@
   "friendRequestAccepted": "Žádost o přátelství přijata",
   "friendshipRemoved": "Přátelství odstraněno",
   "userBlocked": "Blokovaný uživatel",
-  "userUnblocked": "Odemčený uživatel"
+  "userUnblocked": "Odemčený uživatel",
+  "artistsByTaste": "Podle vašich chutí",
+  "followedArtists": "následoval",
+  "recommendedArtists": "Doporučeno"
 }

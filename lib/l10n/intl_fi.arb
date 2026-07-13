@@ -541,5 +541,8 @@
   "friendRequestAccepted": "Ystäväpyyntö hyväksytty",
   "friendshipRemoved": "Ystävyys poistettu",
   "userBlocked": "Estetty käyttäjä",
-  "userUnblocked": "Avattu käyttäjä"
+  "userUnblocked": "Avattu käyttäjä",
+  "artistsByTaste": "Sinun makusi mukaan",
+  "followedArtists": "seurannut",
+  "recommendedArtists": "Suositeltava"
 }

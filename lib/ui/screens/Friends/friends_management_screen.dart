@@ -8,10 +8,12 @@ class FriendsManagementScreen extends StatefulWidget {
   const FriendsManagementScreen({super.key});
 
   @override
-  State<FriendsManagementScreen> createState() => _FriendsManagementScreenState();
+  State<FriendsManagementScreen> createState() =>
+      _FriendsManagementScreenState();
 }
 
-class _FriendsManagementScreenState extends State<FriendsManagementScreen> with SingleTickerProviderStateMixin {
+class _FriendsManagementScreenState extends State<FriendsManagementScreen>
+    with SingleTickerProviderStateMixin {
   late TabController _tabController;
   final SyncService _syncService = Get.find<SyncService>();
 
@@ -119,7 +121,8 @@ class _FriendsManagementScreenState extends State<FriendsManagementScreen> with 
 
   Future<void> _sendRequest(int friendId) async {
     final result = await _syncService.sendFriendRequest(friendId);
-    _showToast(result['message'] ?? (result['success'] == true ? "Solicitud enviada" : "Error"));
+    _showToast(result['message'] ??
+        (result['success'] == true ? "Solicitud enviada" : "Error"));
     if (result['success'] == true && _searchController.text.isNotEmpty) {
       _performSearch(_searchController.text);
     }
@@ -127,7 +130,8 @@ class _FriendsManagementScreenState extends State<FriendsManagementScreen> with 
 
   Future<void> _acceptRequest(int friendId) async {
     final result = await _syncService.acceptFriendRequest(friendId);
-    _showToast(result['message'] ?? (result['success'] == true ? "Solicitud aceptada" : "Error"));
+    _showToast(result['message'] ??
+        (result['success'] == true ? "Solicitud aceptada" : "Error"));
     if (result['success'] == true) {
       _loadRequests();
       _loadFriends();
@@ -138,13 +142,19 @@ class _FriendsManagementScreenState extends State<FriendsManagementScreen> with 
     final confirm = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
-        backgroundColor: const Color(0xFF0F1B26),
-        title: const Text("Eliminar amigo", style: TextStyle(color: Colors.white)),
-        content: const Text("¿Estás seguro de que quieres eliminar a este usuario de tus amigos?", style: TextStyle(color: Colors.white70)),
+        backgroundColor: Theme.of(context).colorScheme.surface,
+        title: Text("Eliminar amigo",
+            style: TextStyle(color: Theme.of(context).colorScheme.onSurface)),
+        content: Text(
+            "¿Estás seguro de que quieres eliminar a este usuario de tus amigos?",
+            style: TextStyle(
+                color: Theme.of(context).colorScheme.onSurfaceVariant)),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context, false),
-            child: const Text("Cancelar", style: TextStyle(color: Colors.white54)),
+            child: Text("Cancelar",
+                style: TextStyle(
+                    color: Theme.of(context).colorScheme.onSurfaceVariant)),
           ),
           FilledButton(
             onPressed: () => Navigator.pop(context, true),
@@ -158,7 +168,8 @@ class _FriendsManagementScreenState extends State<FriendsManagementScreen> with 
     if (confirm != true) return;
 
     final result = await _syncService.removeFriendship(friendId);
-    _showToast(result['message'] ?? (result['success'] == true ? "Amigo eliminado" : "Error"));
+    _showToast(result['message'] ??
+        (result['success'] == true ? "Amigo eliminado" : "Error"));
     if (result['success'] == true) {
       _loadFriends();
       _loadRequests();
@@ -172,17 +183,23 @@ class _FriendsManagementScreenState extends State<FriendsManagementScreen> with 
     final confirm = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
-        backgroundColor: const Color(0xFF0F1B26),
-        title: const Text("Bloquear usuario", style: TextStyle(color: Colors.white)),
-        content: const Text("¿Estás seguro de que deseas bloquear a este usuario?", style: TextStyle(color: Colors.white70)),
+        backgroundColor: Theme.of(context).colorScheme.surface,
+        title: Text("Bloquear usuario",
+            style: TextStyle(color: Theme.of(context).colorScheme.onSurface)),
+        content: Text("¿Estás seguro de que deseas bloquear a este usuario?",
+            style: TextStyle(
+                color: Theme.of(context).colorScheme.onSurfaceVariant)),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context, false),
-            child: const Text("Cancelar", style: TextStyle(color: Colors.white54)),
+            child: Text("Cancelar",
+                style: TextStyle(
+                    color: Theme.of(context).colorScheme.onSurfaceVariant)),
           ),
           FilledButton(
             onPressed: () => Navigator.pop(context, true),
-            style: FilledButton.styleFrom(backgroundColor: Theme.of(context).colorScheme.error),
+            style: FilledButton.styleFrom(
+                backgroundColor: Theme.of(context).colorScheme.error),
             child: const Text("Bloquear"),
           ),
         ],
@@ -192,7 +209,8 @@ class _FriendsManagementScreenState extends State<FriendsManagementScreen> with 
     if (confirm != true) return;
 
     final result = await _syncService.blockUser(friendId);
-    _showToast(result['message'] ?? (result['success'] == true ? "Usuario bloqueado" : "Error"));
+    _showToast(result['message'] ??
+        (result['success'] == true ? "Usuario bloqueado" : "Error"));
     if (result['success'] == true) {
       _loadFriends();
       _loadRequests();
@@ -205,7 +223,8 @@ class _FriendsManagementScreenState extends State<FriendsManagementScreen> with 
 
   Future<void> _unblockUser(int friendId) async {
     final result = await _syncService.unblockUser(friendId);
-    _showToast(result['message'] ?? (result['success'] == true ? "Usuario desbloqueado" : "Error"));
+    _showToast(result['message'] ??
+        (result['success'] == true ? "Usuario desbloqueado" : "Error"));
     if (result['success'] == true) {
       _loadBlocked();
       if (_searchController.text.isNotEmpty) {
@@ -217,7 +236,8 @@ class _FriendsManagementScreenState extends State<FriendsManagementScreen> with 
   void _showToast(String message) {
     if (!mounted) return;
     ScaffoldMessenger.of(context).showSnackBar(
-      snackbar(context, message, size: SanckBarSize.MEDIUM, duration: const Duration(seconds: 2)),
+      snackbar(context, message,
+          size: SanckBarSize.MEDIUM, duration: const Duration(seconds: 2)),
     );
   }
 
@@ -240,7 +260,8 @@ class _FriendsManagementScreenState extends State<FriendsManagementScreen> with 
         elevation: 0,
         title: Text(
           "Mis Amigos",
-          style: theme.textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold),
+          style: theme.textTheme.headlineSmall
+              ?.copyWith(fontWeight: FontWeight.bold),
         ),
         bottom: TabBar(
           controller: _tabController,
@@ -327,7 +348,8 @@ class _FriendsManagementScreenState extends State<FriendsManagementScreen> with 
       return _buildEmptyState(
         icon: Icons.people_outline_rounded,
         title: "No tienes amigos agregados aún",
-        subtitle: "Ve a la pestaña 'Buscar' para encontrar amigos y enviar solicitudes.",
+        subtitle:
+            "Ve a la pestaña 'Buscar' para encontrar amigos y enviar solicitudes.",
       );
     }
 
@@ -341,15 +363,18 @@ class _FriendsManagementScreenState extends State<FriendsManagementScreen> with 
           final String firstName = friend['first_name'] ?? '';
           final String lastName = friend['last_name'] ?? '';
           final String username = friend['username'] ?? '';
-          final String initial = (firstName.isNotEmpty) ? firstName[0].toUpperCase() : '?';
+          final String initial =
+              (firstName.isNotEmpty) ? firstName[0].toUpperCase() : '?';
 
           return Card(
             margin: const EdgeInsets.only(bottom: 12),
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
             elevation: 0,
             color: Theme.of(context).colorScheme.surfaceContainerLow,
             child: ListTile(
-              contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              contentPadding:
+                  const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               leading: CircleAvatar(
                 radius: 24,
                 backgroundColor: Theme.of(context).colorScheme.primaryContainer,
@@ -363,19 +388,25 @@ class _FriendsManagementScreenState extends State<FriendsManagementScreen> with 
               ),
               title: Text(
                 "$firstName $lastName".trim(),
-                style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Theme.of(context).colorScheme.onSurface),
               ),
-              subtitle: Text("@$username", style: const TextStyle(color: Colors.white70)),
+              subtitle: Text("@$username",
+                  style: TextStyle(
+                      color: Theme.of(context).colorScheme.onSurfaceVariant)),
               trailing: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   IconButton(
-                    icon: Icon(Icons.block_rounded, color: Theme.of(context).colorScheme.error),
+                    icon: Icon(Icons.block_rounded,
+                        color: Theme.of(context).colorScheme.error),
                     tooltip: "Bloquear",
                     onPressed: () => _blockUser(friend['id']),
                   ),
                   IconButton(
-                    icon: const Icon(Icons.delete_outline_rounded, color: Colors.white70),
+                    icon: Icon(Icons.delete_outline_rounded,
+                        color: Theme.of(context).colorScheme.onSurfaceVariant),
                     tooltip: "Eliminar Amigo",
                     onPressed: () => _removeFriend(friend['id']),
                   ),
@@ -396,7 +427,8 @@ class _FriendsManagementScreenState extends State<FriendsManagementScreen> with 
       return _buildEmptyState(
         icon: Icons.mail_outline_rounded,
         title: "No tienes solicitudes de amistad",
-        subtitle: "Aquí aparecerán las solicitudes entrantes que te envíen otros usuarios.",
+        subtitle:
+            "Aquí aparecerán las solicitudes entrantes que te envíen otros usuarios.",
       );
     }
 
@@ -410,11 +442,13 @@ class _FriendsManagementScreenState extends State<FriendsManagementScreen> with 
           final String firstName = req['first_name'] ?? '';
           final String lastName = req['last_name'] ?? '';
           final String username = req['username'] ?? '';
-          final String initial = (firstName.isNotEmpty) ? firstName[0].toUpperCase() : '?';
+          final String initial =
+              (firstName.isNotEmpty) ? firstName[0].toUpperCase() : '?';
 
           return Card(
             margin: const EdgeInsets.only(bottom: 12),
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
             elevation: 0,
             color: Theme.of(context).colorScheme.surfaceContainerLow,
             child: Padding(
@@ -423,12 +457,14 @@ class _FriendsManagementScreenState extends State<FriendsManagementScreen> with 
                 children: [
                   CircleAvatar(
                     radius: 24,
-                    backgroundColor: Theme.of(context).colorScheme.secondaryContainer,
+                    backgroundColor:
+                        Theme.of(context).colorScheme.secondaryContainer,
                     child: Text(
                       initial,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Theme.of(context).colorScheme.onSecondaryContainer,
+                        color:
+                            Theme.of(context).colorScheme.onSecondaryContainer,
                       ),
                     ),
                   ),
@@ -439,9 +475,16 @@ class _FriendsManagementScreenState extends State<FriendsManagementScreen> with 
                       children: [
                         Text(
                           "$firstName $lastName".trim(),
-                          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.white),
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16,
+                              color: Theme.of(context).colorScheme.onSurface),
                         ),
-                        Text("@$username", style: const TextStyle(color: Colors.white70)),
+                        Text("@$username",
+                            style: TextStyle(
+                                color: Theme.of(context)
+                                    .colorScheme
+                                    .onSurfaceVariant)),
                       ],
                     ),
                   ),
@@ -452,7 +495,8 @@ class _FriendsManagementScreenState extends State<FriendsManagementScreen> with 
                   ),
                   const SizedBox(width: 8),
                   IconButton.outlined(
-                    icon: const Icon(Icons.close_rounded, color: Colors.white70),
+                    icon: Icon(Icons.close_rounded,
+                        color: Theme.of(context).colorScheme.onSurfaceVariant),
                     tooltip: "Rechazar",
                     onPressed: () => _removeFriend(req['user_id']),
                   ),
@@ -473,13 +517,17 @@ class _FriendsManagementScreenState extends State<FriendsManagementScreen> with 
           SearchBar(
             controller: _searchController,
             hintText: "Buscar usuarios por username...",
-            hintStyle: WidgetStateProperty.all(const TextStyle(color: Colors.white54)),
-            textStyle: WidgetStateProperty.all(const TextStyle(color: Colors.white)),
-            leading: const Icon(Icons.search_rounded, color: Colors.white70),
+            hintStyle: WidgetStateProperty.all(TextStyle(
+                color: Theme.of(context).colorScheme.onSurfaceVariant)),
+            textStyle: WidgetStateProperty.all(
+                TextStyle(color: Theme.of(context).colorScheme.onSurface)),
+            leading: Icon(Icons.search_rounded,
+                color: Theme.of(context).colorScheme.onSurfaceVariant),
             trailing: [
               if (_searchController.text.isNotEmpty)
                 IconButton(
-                  icon: const Icon(Icons.clear_rounded, color: Colors.white70),
+                  icon: Icon(Icons.clear_rounded,
+                      color: Theme.of(context).colorScheme.onSurfaceVariant),
                   onPressed: () {
                     _searchController.clear();
                     setState(() {
@@ -531,31 +579,43 @@ class _FriendsManagementScreenState extends State<FriendsManagementScreen> with 
                   final String lastName = user['last_name'] ?? '';
                   final String username = user['username'] ?? '';
                   final String status = user['status'] ?? 'none';
-                  final String initial = (firstName.isNotEmpty) ? firstName[0].toUpperCase() : '?';
+                  final String initial =
+                      (firstName.isNotEmpty) ? firstName[0].toUpperCase() : '?';
 
                   return Card(
                     margin: const EdgeInsets.only(bottom: 12),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16)),
                     elevation: 0,
                     color: Theme.of(context).colorScheme.surfaceContainerLow,
                     child: ListTile(
-                      contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                      contentPadding: const EdgeInsets.symmetric(
+                          horizontal: 16, vertical: 8),
                       leading: CircleAvatar(
                         radius: 24,
-                        backgroundColor: Theme.of(context).colorScheme.tertiaryContainer,
+                        backgroundColor:
+                            Theme.of(context).colorScheme.tertiaryContainer,
                         child: Text(
                           initial,
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
-                            color: Theme.of(context).colorScheme.onTertiaryContainer,
+                            color: Theme.of(context)
+                                .colorScheme
+                                .onTertiaryContainer,
                           ),
                         ),
                       ),
                       title: Text(
                         "$firstName $lastName".trim(),
-                        style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Theme.of(context).colorScheme.onSurface),
                       ),
-                      subtitle: Text("@$username", style: const TextStyle(color: Colors.white70)),
+                      subtitle: Text("@$username",
+                          style: TextStyle(
+                              color: Theme.of(context)
+                                  .colorScheme
+                                  .onSurfaceVariant)),
                       trailing: _buildSearchAction(user['id'], status),
                     ),
                   ).animate().fade(delay: (index * 50).ms).slideY(begin: 0.05);
@@ -591,7 +651,8 @@ class _FriendsManagementScreenState extends State<FriendsManagementScreen> with 
             ),
             const SizedBox(width: 4),
             IconButton.outlined(
-              icon: const Icon(Icons.close_rounded, color: Colors.white70),
+              icon: Icon(Icons.close_rounded,
+                  color: Theme.of(context).colorScheme.onSurfaceVariant),
               onPressed: () => _removeFriend(friendId),
             ),
           ],
@@ -602,9 +663,11 @@ class _FriendsManagementScreenState extends State<FriendsManagementScreen> with 
           child: const Text("Desbloquear"),
         );
       case 'blocked_by_them':
-        return const Text(
+        return Text(
           "No disponible",
-          style: TextStyle(color: Colors.grey, fontStyle: FontStyle.italic),
+          style: TextStyle(
+              color: Theme.of(context).colorScheme.onSurfaceVariant,
+              fontStyle: FontStyle.italic),
         );
       default:
         return FilledButton.icon(
@@ -623,7 +686,8 @@ class _FriendsManagementScreenState extends State<FriendsManagementScreen> with 
       return _buildEmptyState(
         icon: Icons.block_rounded,
         title: "No tienes usuarios bloqueados",
-        subtitle: "Los usuarios que bloquees aparecerán listados en esta pestaña.",
+        subtitle:
+            "Los usuarios que bloquees aparecerán listados en esta pestaña.",
       );
     }
 
@@ -637,18 +701,22 @@ class _FriendsManagementScreenState extends State<FriendsManagementScreen> with 
           final String firstName = block['first_name'] ?? '';
           final String lastName = block['last_name'] ?? '';
           final String username = block['username'] ?? '';
-          final String initial = (firstName.isNotEmpty) ? firstName[0].toUpperCase() : '?';
+          final String initial =
+              (firstName.isNotEmpty) ? firstName[0].toUpperCase() : '?';
 
           return Card(
             margin: const EdgeInsets.only(bottom: 12),
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
             elevation: 0,
             color: Theme.of(context).colorScheme.surfaceContainerLow,
             child: ListTile(
-              contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              contentPadding:
+                  const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               leading: CircleAvatar(
                 radius: 24,
-                backgroundColor: Theme.of(context).colorScheme.surfaceContainerHighest,
+                backgroundColor:
+                    Theme.of(context).colorScheme.surfaceContainerHighest,
                 child: Text(
                   initial,
                   style: TextStyle(
@@ -659,9 +727,13 @@ class _FriendsManagementScreenState extends State<FriendsManagementScreen> with 
               ),
               title: Text(
                 "$firstName $lastName".trim(),
-                style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Theme.of(context).colorScheme.onSurface),
               ),
-              subtitle: Text("@$username", style: const TextStyle(color: Colors.white70)),
+              subtitle: Text("@$username",
+                  style: TextStyle(
+                      color: Theme.of(context).colorScheme.onSurfaceVariant)),
               trailing: FilledButton.tonal(
                 onPressed: () => _unblockUser(block['id']),
                 child: const Text("Desbloquear"),
@@ -698,7 +770,7 @@ class _FriendsManagementScreenState extends State<FriendsManagementScreen> with 
               textAlign: TextAlign.center,
               style: theme.textTheme.titleMedium?.copyWith(
                 fontWeight: FontWeight.bold,
-                color: Colors.white,
+                color: colorScheme.onSurface,
               ),
             ),
             const SizedBox(height: 8),
@@ -706,7 +778,7 @@ class _FriendsManagementScreenState extends State<FriendsManagementScreen> with 
               subtitle,
               textAlign: TextAlign.center,
               style: theme.textTheme.bodyMedium?.copyWith(
-                color: Colors.white70,
+                color: colorScheme.onSurfaceVariant,
               ),
             ),
           ],

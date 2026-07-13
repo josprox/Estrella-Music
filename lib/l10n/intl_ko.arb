@@ -568,5 +568,8 @@
   "friendRequestAccepted": "친구 요청이 수락되었습니다.",
   "friendshipRemoved": "우정이 제거되었습니다.",
   "userBlocked": "차단된 사용자",
-  "userUnblocked": "잠금 해제된 사용자"
+  "userUnblocked": "잠금 해제된 사용자",
+  "artistsByTaste": "당신의 취향에 따라",
+  "followedArtists": "팔로우함",
+  "recommendedArtists": "추천"
 }

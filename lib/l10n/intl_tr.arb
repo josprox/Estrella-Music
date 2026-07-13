@@ -664,5 +664,8 @@
   "friendRequestAccepted": "Arkadaşlık isteği kabul edildi",
   "friendshipRemoved": "Arkadaşlık kaldırıldı",
   "userBlocked": "Kullanıcı engellendi",
-  "userUnblocked": "Kilidi açılmış kullanıcı"
+  "userUnblocked": "Kilidi açılmış kullanıcı",
+  "artistsByTaste": "Zevklerinize göre",
+  "followedArtists": "takip edildi",
+  "recommendedArtists": "Tavsiye edilen"
 }

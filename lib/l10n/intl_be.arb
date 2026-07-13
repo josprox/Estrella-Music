@@ -394,5 +394,8 @@
   "friendRequestAccepted": "Запыт сябра прыняты",
   "friendshipRemoved": "Дружба выдалена",
   "userBlocked": "Заблакіраваны карыстальнік",
-  "userUnblocked": "Разблакіраваны карыстальнік"
+  "userUnblocked": "Разблакіраваны карыстальнік",
+  "artistsByTaste": "Па вашым густам",
+  "followedArtists": "рушыў услед",
+  "recommendedArtists": "Рэкамендуецца"
 }

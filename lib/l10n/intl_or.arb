@@ -533,5 +533,8 @@
   "friendRequestAccepted": "ବନ୍ଧୁ ଅନୁରୋଧ ଗ୍ରହଣ କରାଯାଇଛି |",
   "friendshipRemoved": "ବନ୍ଧୁତା ଅପସାରିତ ହୋଇଛି |",
   "userBlocked": "ଅବରୋଧିତ ଉପଭୋକ୍ତା |",
-  "userUnblocked": "ଅନଲକ୍ ହୋଇଥିବା ଉପଭୋକ୍ତା |"
+  "userUnblocked": "ଅନଲକ୍ ହୋଇଥିବା ଉପଭୋକ୍ତା |",
+  "artistsByTaste": "ତୁମର ସ୍ୱାଦ ଅନୁସାରେ |",
+  "followedArtists": "ଅନୁସରଣ କଲେ",
+  "recommendedArtists": "ପରାମର୍ଶିତ"
 }

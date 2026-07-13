@@ -49,13 +49,19 @@ class Home extends StatelessWidget {
         } else if (panelController.isAttached && panelController.isPanelOpen) {
           panelController.close();
         } else {
-          if (Get.nestedKey(ScreenNavigationSetup.id)!.currentState!.canPop()) {
-            Get.nestedKey(ScreenNavigationSetup.id)!.currentState!.pop();
+          final nestedNavigator =
+              Get.nestedKey(ScreenNavigationSetup.id)?.currentState;
+          if (nestedNavigator?.canPop() ?? false) {
+            nestedNavigator!.pop();
           } else {
-            if (homeScreenController.tabIndex.value != 0) {
+            final startupTab = HomeScreenController.supportedStartupTabs
+                    .contains(settingsScreenController.startupTabIndex.value)
+                ? settingsScreenController.startupTabIndex.value
+                : 0;
+            if (homeScreenController.tabIndex.value != startupTab) {
               settingsScreenController.isBottomNavBarEnabled.isTrue
-                  ? homeScreenController.onBottonBarTabSelected(0)
-                  : homeScreenController.onSideBarTabSelected(0);
+                  ? homeScreenController.onBottonBarTabSelected(startupTab)
+                  : homeScreenController.onSideBarTabSelected(startupTab);
             } else if (playerController.buttonState.value ==
                 PlayButtonState.playing) {
               SystemNavigator.pop();
@@ -79,8 +85,8 @@ class Home extends StatelessWidget {
                 ? Container(
                     constraints: const BoxConstraints(maxWidth: 600),
                     decoration: BoxDecoration(
-                      borderRadius: const BorderRadius.only(
-                          topLeft: Radius.circular(10)),
+                      borderRadius:
+                          const BorderRadius.only(topLeft: Radius.circular(10)),
                       border: Border(
                         left: BorderSide(
                             color: Theme.of(context).colorScheme.secondary),
@@ -133,14 +139,14 @@ class Home extends StatelessWidget {
                                                         .isQueueLoopModeEnabled
                                                         .isFalse
                                                     ? Colors.white24
-                                                    : Colors.white.withValues(
-                                                        alpha: 0.8),
+                                                    : Colors.white
+                                                        .withValues(alpha: 0.8),
                                                 borderRadius:
                                                     BorderRadius.circular(20),
                                               ),
                                               child: Center(
-                                                  child:
-                                                      Text(S.current.queueLoop)),
+                                                  child: Text(
+                                                      S.current.queueLoop)),
                                             ),
                                           ),
                                         ),
@@ -152,9 +158,10 @@ class Home extends StatelessWidget {
                                                 ScaffoldMessenger.of(context)
                                                     .showSnackBar(snackbar(
                                                         context,
-                                                        S.current.queueShufflingDeniedMsg,
-                                                        size: SanckBarSize
-                                                            .BIG));
+                                                        S.current
+                                                            .queueShufflingDeniedMsg,
+                                                        size:
+                                                            SanckBarSize.BIG));
                                                 return;
                                               }
                                               playerController.shuffleQueue();
@@ -206,7 +213,7 @@ class Home extends StatelessWidget {
                         ? InkWell(
                             onTap: () {
                               if (panelController.isAttached) {
-                                  panelController.open();
+                                panelController.open();
                               }
                             },
                             child: const MiniPlayer(),

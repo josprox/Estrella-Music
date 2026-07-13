@@ -453,5 +453,8 @@
   "friendRequestAccepted": "സുഹൃത്ത് അഭ്യർത്ഥന സ്വീകരിച്ചു",
   "friendshipRemoved": "സൗഹൃദം നീക്കം ചെയ്തു",
   "userBlocked": "തടഞ്ഞ ഉപയോക്താവ്",
-  "userUnblocked": "അൺലോക്ക് ചെയ്ത ഉപയോക്താവ്"
+  "userUnblocked": "അൺലോക്ക് ചെയ്ത ഉപയോക്താവ്",
+  "artistsByTaste": "നിങ്ങളുടെ അഭിരുചിക്കനുസരിച്ച്",
+  "followedArtists": "പിന്തുടർന്നു",
+  "recommendedArtists": "ശുപാർശ ചെയ്തത്"
 }

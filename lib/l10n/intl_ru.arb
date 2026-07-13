@@ -664,5 +664,8 @@
   "friendRequestAccepted": "Запрос на добавление в друзья принят",
   "friendshipRemoved": "Дружба удалена",
   "userBlocked": "Заблокированный пользователь",
-  "userUnblocked": "Разблокированный пользователь"
+  "userUnblocked": "Разблокированный пользователь",
+  "artistsByTaste": "По вашему вкусу",
+  "followedArtists": "подписан",
+  "recommendedArtists": "Рекомендуется"
 }

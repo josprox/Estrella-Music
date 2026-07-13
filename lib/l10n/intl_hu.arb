@@ -493,5 +493,8 @@
   "friendRequestAccepted": "Ismerős felkérés elfogadva",
   "friendshipRemoved": "A barátság eltávolítva",
   "userBlocked": "Letiltott felhasználó",
-  "userUnblocked": "Feloldott felhasználó"
+  "userUnblocked": "Feloldott felhasználó",
+  "artistsByTaste": "Az Ön ízlése szerint",
+  "followedArtists": "követte",
+  "recommendedArtists": "Ajánlott"
 }

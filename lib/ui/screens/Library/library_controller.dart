@@ -14,6 +14,7 @@ import 'package:harmonymusic/ui/widgets/add_to_playlist.dart';
 import '/ui/widgets/sort_widget.dart';
 import 'package:harmonymusic/ui/screens/Settings/settings_screen_controller.dart';
 import 'package:harmonymusic/services/social/piped_service.dart';
+import 'package:harmonymusic/services/music/music_service.dart';
 import 'package:harmonymusic/services/sync/sync_service.dart';
 import 'package:harmonymusic/utils/helpers/helper.dart';
 import '/models/album.dart';
@@ -23,6 +24,8 @@ import '/models/playlist.dart';
 import 'package:harmonymusic/generated/l10n.dart';
 
 enum LibrarySongCollection { favorites, downloads, recent, migrated }
+
+enum LibraryArtistCollection { tastes, followed, recommended }
 
 class LibrarySongsController extends GetxController {
   late RxList<MediaItem> librarySongsList = RxList();
@@ -777,30 +780,228 @@ class LibraryAlbumsController extends GetxController {
 }
 
 class LibraryArtistsController extends GetxController {
-  RxList<Artist> libraryArtists = RxList();
+  final MusicServices _musicServices = Get.find<MusicServices>();
+  final libraryArtists = <Artist>[].obs;
+  final selectedCollection = LibraryArtistCollection.tastes.obs;
   final isContentFetched = false.obs;
+  final isLoadingRecommended = false.obs;
+  final List<Artist> _tasteArtists = [];
+  final List<Artist> _followedArtists = [];
+  final List<Artist> _recommendedArtists = [];
+  final List<StreamSubscription<dynamic>> _subscriptions = [];
   List<Artist> tempListContainer = [];
+  Timer? _recommendationRefreshDebounce;
+  int _recommendationRevision = 0;
 
   @override
   void onInit() {
-    refreshLib();
     super.onInit();
+    refreshLib();
+    _watchSources();
   }
 
-  void refreshLib() async {
-    final box = await SqliteStore.openBox("LibraryArtists");
-    final List<Artist> loaded = [];
-    for (var item in box.values) {
+  Future<void> refreshLib() async {
+    await Future.wait([
+      _loadFollowedArtists(),
+      _loadTasteArtists(),
+    ]);
+    _applySelectedCollection();
+    isContentFetched.value = true;
+  }
+
+  void _watchSources() {
+    _subscriptions.add(
+      SqliteStore.box('LibraryArtists').watch().listen((_) {
+        _loadFollowedArtists().then((_) => _applySelectedCollection());
+      }),
+    );
+    _subscriptions.add(
+      SqliteStore.box('LIBFAV').watch().listen((_) {
+        _loadTasteArtists().then((_) {
+          _recommendedArtists.clear();
+          _applySelectedCollection();
+          if (selectedCollection.value == LibraryArtistCollection.recommended) {
+            _recommendationRefreshDebounce?.cancel();
+            _recommendationRefreshDebounce = Timer(
+              const Duration(milliseconds: 500),
+              () => _loadRecommendedArtists(force: true),
+            );
+          }
+        });
+      }),
+    );
+  }
+
+  Future<void> _loadFollowedArtists() async {
+    final box = await SqliteStore.openBox('LibraryArtists');
+    final loaded = <Artist>[];
+    for (final item in box.values) {
       try {
         if (item is Map) {
           loaded.add(Artist.fromJson(Map<dynamic, dynamic>.from(item)));
         }
-      } catch (e, stack) {
-        debugPrint("Error parsing artist in refreshLib: $e\n$stack");
+      } catch (error, stack) {
+        debugPrint('Error parsing followed artist: $error\n$stack');
       }
     }
-    libraryArtists.value = loaded;
-    isContentFetched.value = true;
+    _followedArtists
+      ..clear()
+      ..addAll(loaded);
+  }
+
+  Future<void> _loadTasteArtists() async {
+    final box = await SqliteStore.openBox('LIBFAV');
+    final artistsByKey = <String, Artist>{};
+    for (final value in box.values) {
+      if (value is! Map) continue;
+      final song = Map<dynamic, dynamic>.from(value);
+      final rawArtists = song['artists'] ??
+          (song['extras'] is Map ? song['extras']['artists'] : null);
+      if (rawArtists is! List) continue;
+      final thumbnail = _songThumbnail(song);
+      for (final rawArtist in rawArtists) {
+        if (rawArtist is! Map) continue;
+        final artistMap = Map<dynamic, dynamic>.from(rawArtist);
+        final name =
+            (artistMap['name'] ?? artistMap['artist'])?.toString().trim() ?? '';
+        if (name.isEmpty) continue;
+        final sourceId =
+            (artistMap['id'] ?? artistMap['browseId'] ?? artistMap['channelId'])
+                ?.toString()
+                .trim();
+        final browseId = sourceId == null || sourceId.isEmpty
+            ? 'LOCAL_ARTIST_${sanitizeBoxName(name.toLowerCase())}'
+            : sourceId;
+        final key = sourceId == null || sourceId.isEmpty
+            ? name.toLowerCase()
+            : sourceId;
+        artistsByKey.putIfAbsent(
+          key,
+          () => Artist(
+            name: name,
+            browseId: browseId,
+            thumbnailUrl: thumbnail,
+          ),
+        );
+      }
+    }
+    _tasteArtists
+      ..clear()
+      ..addAll(artistsByKey.values);
+  }
+
+  String _songThumbnail(Map<dynamic, dynamic> song) {
+    final thumbnails = song['thumbnails'];
+    if (thumbnails is List && thumbnails.isNotEmpty) {
+      final first = thumbnails.first;
+      if (first is Map) return first['url']?.toString() ?? '';
+    }
+    return song['thumbnailUrl']?.toString() ?? song['artUri']?.toString() ?? '';
+  }
+
+  Future<void> selectCollection(LibraryArtistCollection collection) async {
+    if (Get.isRegistered<SortWidgetController>(tag: 'LibArtistSort')) {
+      final sortController =
+          Get.find<SortWidgetController>(tag: 'LibArtistSort');
+      sortController.isSearchingEnabled.value = false;
+      sortController.textEditingController.clear();
+    }
+    selectedCollection.value = collection;
+    tempListContainer.clear();
+    if (collection == LibraryArtistCollection.recommended &&
+        _recommendedArtists.isEmpty) {
+      await _loadRecommendedArtists();
+      return;
+    }
+    _applySelectedCollection();
+  }
+
+  Future<void> _loadRecommendedArtists({bool force = false}) async {
+    if (isLoadingRecommended.isTrue) return;
+    if (!force && _recommendedArtists.isNotEmpty) {
+      _applySelectedCollection();
+      return;
+    }
+
+    final revision = ++_recommendationRevision;
+    isLoadingRecommended.value = true;
+    if (selectedCollection.value == LibraryArtistCollection.recommended) {
+      libraryArtists.clear();
+    }
+    try {
+      final favorites = SqliteStore.box('LIBFAV').values.whereType<Map>();
+      final recommendations = <String, Artist>{};
+      final excludedIds = {
+        ..._tasteArtists.map((artist) => artist.browseId),
+        ..._followedArtists.map((artist) => artist.browseId),
+      };
+      final excludedNames = {
+        ..._tasteArtists.map((artist) => artist.name.toLowerCase()),
+        ..._followedArtists.map((artist) => artist.name.toLowerCase()),
+      };
+      final lang =
+          Get.find<SettingsScreenController>().currentAppLanguageCode.value;
+
+      for (final rawSong in favorites.take(4)) {
+        final song = Map<dynamic, dynamic>.from(rawSong);
+        final songId = (song['videoId'] ?? song['id'])?.toString();
+        if (songId == null || songId.isEmpty) continue;
+        final sections =
+            await _musicServices.getContentRelatedToSong(songId, lang);
+        for (final section in sections) {
+          final contents = section['contents'];
+          if (contents is! List) continue;
+          for (final artist in contents.whereType<Artist>()) {
+            if (artist.browseId.isEmpty ||
+                excludedIds.contains(artist.browseId) ||
+                excludedNames.contains(artist.name.toLowerCase())) {
+              continue;
+            }
+            recommendations[artist.browseId] = artist;
+          }
+        }
+      }
+
+      if (recommendations.isEmpty) {
+        for (final seed in _tasteArtists.take(3)) {
+          final results =
+              await _musicServices.search(seed.name, filter: 'artists');
+          for (final value in results.values) {
+            if (value is! List) continue;
+            for (final artist in value.whereType<Artist>()) {
+              if (artist.browseId.isEmpty ||
+                  excludedIds.contains(artist.browseId) ||
+                  excludedNames.contains(artist.name.toLowerCase())) {
+                continue;
+              }
+              recommendations[artist.browseId] = artist;
+            }
+          }
+        }
+      }
+
+      if (revision == _recommendationRevision) {
+        _recommendedArtists
+          ..clear()
+          ..addAll(recommendations.values.take(30));
+      }
+    } catch (error, stack) {
+      debugPrint('Error loading recommended artists: $error\n$stack');
+    } finally {
+      if (revision == _recommendationRevision) {
+        isLoadingRecommended.value = false;
+        _applySelectedCollection();
+      }
+    }
+  }
+
+  void _applySelectedCollection() {
+    if (tempListContainer.isNotEmpty) return;
+    libraryArtists.assignAll(switch (selectedCollection.value) {
+      LibraryArtistCollection.tastes => _tasteArtists,
+      LibraryArtistCollection.followed => _followedArtists,
+      LibraryArtistCollection.recommended => _recommendedArtists,
+    });
   }
 
   void onSort(SortType sortType, bool isAscending) {
@@ -814,15 +1015,23 @@ class LibraryArtistsController extends GetxController {
   }
 
   void onSearch(String value, String? tag) {
-    final songlist = tempListContainer
-        .where((element) =>
-            element.name.toLowerCase().contains(value.toLowerCase()))
+    libraryArtists.value = tempListContainer
+        .where(
+            (artist) => artist.name.toLowerCase().contains(value.toLowerCase()))
         .toList();
-    libraryArtists.value = songlist;
   }
 
   void onSearchClose(String? tag) {
     libraryArtists.value = tempListContainer.toList();
     tempListContainer.clear();
+  }
+
+  @override
+  void onClose() {
+    _recommendationRefreshDebounce?.cancel();
+    for (final subscription in _subscriptions) {
+      subscription.cancel();
+    }
+    super.onClose();
   }
 }

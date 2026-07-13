@@ -394,5 +394,8 @@
   "friendRequestAccepted": "已接受好友请求",
   "friendshipRemoved": "友谊已移除",
   "userBlocked": "被阻止的用户",
-  "userUnblocked": "解锁用户"
+  "userUnblocked": "解锁用户",
+  "artistsByTaste": "根据你的口味",
+  "followedArtists": "已关注",
+  "recommendedArtists": "受到推崇的"
 }

@@ -394,5 +394,8 @@
   "friendRequestAccepted": "Venneforespørsel godtatt",
   "friendshipRemoved": "Vennskap fjernet",
   "userBlocked": "Blokkert bruker",
-  "userUnblocked": "Ulåst bruker"
+  "userUnblocked": "Ulåst bruker",
+  "artistsByTaste": "Etter din smak",
+  "followedArtists": "fulgte",
+  "recommendedArtists": "Anbefalt"
 }

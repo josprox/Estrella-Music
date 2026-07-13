@@ -663,5 +663,8 @@
   "friendRequestAccepted": "Запит на дружбу прийнято",
   "friendshipRemoved": "Дружба видалена",
   "userBlocked": "Заблокований користувач",
-  "userUnblocked": "Розблокований користувач"
+  "userUnblocked": "Розблокований користувач",
+  "artistsByTaste": "Відповідно до ваших смаків",
+  "followedArtists": "слідував",
+  "recommendedArtists": "Рекомендовано"
 }

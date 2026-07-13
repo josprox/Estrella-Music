@@ -82,6 +82,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Description not available!",
     ),
     "artists": MessageLookupByLibrary.simpleMessage("Artists"),
+    "artistsByTaste": MessageLookupByLibrary.simpleMessage(
+      "Based on your tastes",
+    ),
     "audioCodec": MessageLookupByLibrary.simpleMessage("Audio Codec"),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Acepto usar mis datos...",
@@ -429,6 +432,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "fileNotFound": MessageLookupByLibrary.simpleMessage("File not found"),
     "follow": MessageLookupByLibrary.simpleMessage("Continue"),
+    "followedArtists": MessageLookupByLibrary.simpleMessage("Followed"),
     "following": MessageLookupByLibrary.simpleMessage("Following"),
     "for1": MessageLookupByLibrary.simpleMessage("for"),
     "forgottenFavorites": MessageLookupByLibrary.simpleMessage(
@@ -850,6 +854,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "recommend_cloud": MessageLookupByLibrary.simpleMessage(
       "We recommend activating Cloud Mode for a Spotify-like experience: real-time synchronization between all your devices and automatic backup without you having to do anything.",
     ),
+    "recommendedArtists": MessageLookupByLibrary.simpleMessage("Recommended"),
     "removeFromLib": MessageLookupByLibrary.simpleMessage(
       "Remove from Library Songs",
     ),

@@ -555,5 +555,8 @@
   "friendRequestAccepted": "Vänförfrågan accepteras",
   "friendshipRemoved": "Vänskap borttagen",
   "userBlocked": "Blockerad användare",
-  "userUnblocked": "Olåst användare"
+  "userUnblocked": "Olåst användare",
+  "artistsByTaste": "Enligt din smak",
+  "followedArtists": "följde",
+  "recommendedArtists": "Rekommenderad"
 }

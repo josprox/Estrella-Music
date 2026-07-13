@@ -575,5 +575,8 @@
   "friendRequestAccepted": "Vriendschapsverzoek geaccepteerd",
   "friendshipRemoved": "Vriendschap verwijderd",
   "userBlocked": "Geblokkeerde gebruiker",
-  "userUnblocked": "Ontgrendelde gebruiker"
+  "userUnblocked": "Ontgrendelde gebruiker",
+  "artistsByTaste": "Volgens jouw smaak",
+  "followedArtists": "gevolgd",
+  "recommendedArtists": "Aanbevolen"
 }

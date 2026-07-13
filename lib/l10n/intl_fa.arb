@@ -519,5 +519,8 @@
   "friendRequestAccepted": "درخواست دوستی پذیرفته شد",
   "friendshipRemoved": "دوستی حذف شد",
   "userBlocked": "کاربر مسدود شده",
-  "userUnblocked": "کاربر آنلاک شده"
+  "userUnblocked": "کاربر آنلاک شده",
+  "artistsByTaste": "با توجه به سلیقه شما",
+  "followedArtists": "دنبال کرد",
+  "recommendedArtists": "توصیه می شود"
 }

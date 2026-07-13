@@ -663,5 +663,8 @@
   "friendRequestAccepted": "友達リクエスト受け付けました",
   "friendshipRemoved": "友情が削除されました",
   "userBlocked": "ブロックされたユーザー",
-  "userUnblocked": "ロック解除されたユーザー"
+  "userUnblocked": "ロック解除されたユーザー",
+  "artistsByTaste": "あなたの好みに合わせて",
+  "followedArtists": "フォローしました",
+  "recommendedArtists": "推奨"
 }
