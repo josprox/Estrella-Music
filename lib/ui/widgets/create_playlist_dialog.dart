@@ -1,7 +1,6 @@
 import 'package:audio_service/audio_service.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hive/hive.dart';
 import 'custom_marquee.dart';
 
 import 'package:harmonymusic/services/social/piped_service.dart';
@@ -49,7 +48,7 @@ class _CreateNRenamePlaylistPopupState extends State<CreateNRenamePlaylistPopup>
     librPlstCntrller.changeCreationMode("local");
     librPlstCntrller.textInputController.text = "";
     final isPipedLinked = Get.find<PipedServices>().isLoggedIn;
-    final isCloudMode = Hive.box('AppPrefs').get('emusicCloudRequested', defaultValue: false) == true;
+    final isCloudMode = Get.find<SyncService>().isCloudMode;
 
     return CommonDialog(
       child: Container(
@@ -163,35 +162,45 @@ class _CreateNRenamePlaylistPopupState extends State<CreateNRenamePlaylistPopup>
                         );
                       }
                       final friends = snapshot.data!;
+                      final double containerHeight = (friends.length * 50.0).clamp(50.0, 120.0);
                       return Container(
-                        constraints: const BoxConstraints(maxHeight: 120),
+                        height: containerHeight,
                         decoration: BoxDecoration(
                           border: Border.all(color: Colors.white12),
                           borderRadius: BorderRadius.circular(8),
                         ),
-                        child: ListView.builder(
-                          shrinkWrap: true,
-                          itemCount: friends.length,
-                          itemBuilder: (context, index) {
-                            final friend = friends[index];
-                            final friendId = friend['id'] ?? friend['username'];
-                            final friendName = friend['name'] ?? friend['username'] ?? 'Amigo';
-                            final isChecked = _selectedFriends.contains(friendId);
-                            return CheckboxListTile(
-                              dense: true,
-                              title: Text(friendName.toString()),
-                              value: isChecked,
-                              onChanged: (selected) {
-                                setState(() {
-                                  if (selected == true) {
-                                    _selectedFriends.add(friendId);
-                                  } else {
-                                    _selectedFriends.remove(friendId);
-                                  }
-                                });
-                              },
-                            );
-                          },
+                        child: SingleChildScrollView(
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              for (var friend in friends) ...[
+                                (() {
+                                  final friendId = friend['id'] ?? friend['username'];
+                                  final friendName = friend['name'] ?? friend['username'] ?? 'Amigo';
+                                  final isChecked = _selectedFriends.any((c) => (c is Map ? c['id'] : c) == friendId);
+                                  return CheckboxListTile(
+                                    dense: true,
+                                    title: Text(friendName.toString()),
+                                    value: isChecked,
+                                    onChanged: (selected) {
+                                      setState(() {
+                                        if (selected == true) {
+                                          _selectedFriends.add({
+                                            'id': friend['id'],
+                                            'username': friend['username'],
+                                            'first_name': friend['first_name'] ?? '',
+                                            'last_name': friend['last_name'] ?? '',
+                                          });
+                                        } else {
+                                          _selectedFriends.removeWhere((c) => (c is Map ? c['id'] : c) == friendId);
+                                        }
+                                      });
+                                    },
+                                  );
+                                }()),
+                              ]
+                            ],
+                          ),
                         ),
                       );
                     },

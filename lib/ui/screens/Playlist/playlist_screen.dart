@@ -826,36 +826,46 @@ class PlaylistScreen extends StatelessWidget {
                       );
                     }
                     final friends = snapshot.data!;
+                    final double containerHeight = (friends.length * 50.0).clamp(50.0, 180.0);
                     return Container(
-                      constraints: const BoxConstraints(maxHeight: 180),
+                      height: containerHeight,
                       decoration: BoxDecoration(
                         border: Border.all(color: Colors.white12),
                         borderRadius: BorderRadius.circular(8),
                       ),
-                      child: ListView.builder(
-                        shrinkWrap: true,
-                        itemCount: friends.length,
-                        itemBuilder: (context, index) {
-                          final friend = friends[index];
-                          final friendId = friend['id'] ?? friend['username'];
-                          final friendName = friend['name'] ?? friend['username'] ?? 'Amigo';
-                          final isChecked = selectedFriends.contains(friendId);
-                          return CheckboxListTile(
-                            dense: true,
-                            title: Text(friendName.toString(), style: const TextStyle(color: Colors.white)),
-                            value: isChecked,
-                            activeColor: Theme.of(context).primaryColor,
-                            onChanged: (selected) {
-                              setState(() {
-                                if (selected == true) {
-                                  selectedFriends.add(friendId);
-                                } else {
-                                  selectedFriends.remove(friendId);
-                                }
-                              });
-                            },
-                          );
-                        },
+                      child: SingleChildScrollView(
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            for (var friend in friends) ...[
+                              (() {
+                                final friendId = friend['id'] ?? friend['username'];
+                                final friendName = friend['name'] ?? friend['username'] ?? 'Amigo';
+                                final isChecked = selectedFriends.any((c) => (c is Map ? c['id'] : c) == friendId);
+                                return CheckboxListTile(
+                                  dense: true,
+                                  title: Text(friendName.toString(), style: const TextStyle(color: Colors.white)),
+                                  value: isChecked,
+                                  activeColor: Theme.of(context).primaryColor,
+                                  onChanged: (selected) {
+                                    setState(() {
+                                      if (selected == true) {
+                                        selectedFriends.add({
+                                          'id': friend['id'],
+                                          'username': friend['username'],
+                                          'first_name': friend['first_name'] ?? '',
+                                          'last_name': friend['last_name'] ?? '',
+                                        });
+                                      } else {
+                                        selectedFriends.removeWhere((c) => (c is Map ? c['id'] : c) == friendId);
+                                      }
+                                    });
+                                  },
+                                );
+                              }()),
+                            ]
+                          ],
+                        ),
                       ),
                     );
                   },

@@ -3,20 +3,27 @@ import 'package:harmonymusic/utils/helpers/helper.dart';
 
 class SyncLocalRepository {
   Future<Map<String, dynamic>> buildPushPayload() async {
-    final appPrefs = Hive.box('AppPrefs');
+    final appPrefs = Hive.isBoxOpen('AppPrefs') ? Hive.box('AppPrefs') : await Hive.openBox('AppPrefs');
+    final libFav = Hive.isBoxOpen('LIBFAV') ? Hive.box('LIBFAV') : await Hive.openBox('LIBFAV');
+    final libRp = Hive.isBoxOpen('LIBRP') ? Hive.box('LIBRP') : await Hive.openBox('LIBRP');
+    final libAlbums = Hive.isBoxOpen('LibraryAlbums') ? Hive.box('LibraryAlbums') : await Hive.openBox('LibraryAlbums');
+    final libArtists = Hive.isBoxOpen('LibraryArtists') ? Hive.box('LibraryArtists') : await Hive.openBox('LibraryArtists');
+    final songDownloads = Hive.isBoxOpen('SongDownloads') ? Hive.box('SongDownloads') : await Hive.openBox('SongDownloads');
     return {
       'playlists': await _collectPlaylists(),
-      'favorites': Hive.box('LIBFAV').values.toList(),
-      'recent_plays': Hive.box('LIBRP').values.toList(),
-      'albums': Hive.box('LibraryAlbums').values.toList(),
-      'artists': Hive.box('LibraryArtists').values.toList(),
-      'downloads': Hive.box('SongDownloads').values.toList(),
+      'favorites': libFav.values.toList(),
+      'recent_plays': libRp.values.toList(),
+      'albums': libAlbums.values.toList(),
+      'artists': libArtists.values.toList(),
+      'downloads': songDownloads.values.toList(),
       'settings': _syncableSettings(appPrefs),
     };
   }
 
   Future<List<Map<String, dynamic>>> _collectPlaylists() async {
-    final playlistsBox = Hive.box('LibraryPlaylists');
+    final playlistsBox = Hive.isBoxOpen('LibraryPlaylists')
+        ? Hive.box('LibraryPlaylists')
+        : await Hive.openBox('LibraryPlaylists');
     final result = <Map<String, dynamic>>[];
 
     for (final value in playlistsBox.values) {
@@ -66,7 +73,9 @@ class SyncLocalRepository {
       return;
     }
 
-    final playlistsBox = Hive.box('LibraryPlaylists');
+    final playlistsBox = Hive.isBoxOpen('LibraryPlaylists')
+        ? Hive.box('LibraryPlaylists')
+        : await Hive.openBox('LibraryPlaylists');
     var merged = 0;
 
     for (final raw in value) {
@@ -121,7 +130,9 @@ class SyncLocalRepository {
   Future<void> mergeSettings(dynamic value) async {
     if (value is! Map) return;
     final settings = _asMap(value);
-    final appPrefs = Hive.box('AppPrefs');
+    final appPrefs = Hive.isBoxOpen('AppPrefs')
+        ? Hive.box('AppPrefs')
+        : await Hive.openBox('AppPrefs');
     for (final entry in settings.entries) {
       if (entry.key == 'updatedAt') continue;
       await appPrefs.put(entry.key, entry.value);

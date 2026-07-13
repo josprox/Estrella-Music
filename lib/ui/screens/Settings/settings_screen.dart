@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hive/hive.dart';
 import 'package:harmonymusic/services/auth/auth_service.dart';
+import 'package:harmonymusic/ui/screens/Friends/friends_management_screen.dart';
+import 'package:harmonymusic/ui/screens/Home/home_screen_controller.dart';
 
 import 'package:harmonymusic/utils/localization/lang_mapping.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -31,10 +33,8 @@ class SettingsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final ctrl = Get.find<SettingsScreenController>();
-    final auth = Get.find<AuthService>();
     final cs = Theme.of(context).colorScheme;
     final tt = Theme.of(context).textTheme;
-    final isDesktop = GetPlatform.isDesktop;
     final statusBarHeight = MediaQuery.of(context).padding.top;
     final topPad = isBottomNavActive
         ? statusBarHeight
@@ -43,426 +43,7 @@ class SettingsScreen extends StatelessWidget {
     final width = MediaQuery.of(context).size.width;
     final isWide = width > 900;
 
-    // Card 1: Personalización
-    final personalizationCard = CustomExpansionTile(
-      title: S.current.personalisation,
-      icon: Icons.palette_rounded,
-      children: [
-        SettingsTile(
-          title: S.current.language,
-          subtitle: S.current.languageDes,
-          leadingIcon: Icons.translate_rounded,
-          trailing: Obx(() => DropdownButton(
-                menuMaxHeight: Get.height - 250,
-                dropdownColor: cs.surfaceContainerHigh,
-                underline: const SizedBox.shrink(),
-                style: tt.titleSmall,
-                value: ctrl.currentAppLanguageCode.value,
-                items: langMap.entries
-                    .map((l) =>
-                        DropdownMenuItem(value: l.key, child: Text(l.value)))
-                    .whereType<DropdownMenuItem<String>>()
-                    .toList(),
-                selectedItemBuilder: (ctx) => langMap.entries
-                    .map<Widget>((e) => Container(
-                          alignment: Alignment.centerRight,
-                          constraints: const BoxConstraints(minWidth: 50),
-                          child: Text(e.value),
-                        ))
-                    .toList(),
-                onChanged: ctrl.setAppLanguage,
-              )),
-        ),
-        SettingsTile(
-          title: S.current.themeMode,
-          subtitle: S.current.setDiscoverContent,
-          leadingIcon: Icons.dark_mode_rounded,
-          onTap: () => showDialog(
-              context: context, builder: (_) => const ThemeSelectorDialog()),
-          trailing: const Icon(Icons.chevron_right_rounded),
-        ),
-        SettingsTile(
-          title: S.current.disableTransitionAnimation,
-          subtitle: S.current.disableTransitionAnimationDes,
-          leadingIcon: Icons.animation_rounded,
-          trailing: Obx(() => CustSwitch(
-              value: ctrl.isTransitionAnimationDisabled.isTrue,
-              onChanged: ctrl.disableTransitionAnimation)),
-        ),
-        SettingsTile(
-          title: S.current.enableSlidableAction,
-          subtitle: S.current.enableSlidableActionDes,
-          leadingIcon: Icons.swipe_rounded,
-          trailing: Obx(() => CustSwitch(
-              value: ctrl.slidableActionEnabled.isTrue,
-              onChanged: ctrl.toggleSlidableAction)),
-        ),
-      ],
-    );
-
-    // Card 2: Contenido
-    final contentCard = CustomExpansionTile(
-      title: S.current.content,
-      icon: Icons.music_video_rounded,
-      children: [
-        SettingsTile(
-          title: S.current.setDiscoverContent,
-          leadingIcon: Icons.explore_rounded,
-          subtitle: null,
-          onTap: () => showDialog(
-              context: context,
-              builder: (_) => const DiscoverContentSelectorDialog()),
-          trailing: Obx(() => Text(
-                ctrl.discoverContentType.value == "QP"
-                    ? S.current.quickpicks
-                    : ctrl.discoverContentType.value == "TMV"
-                        ? S.current.topmusicvideos
-                        : ctrl.discoverContentType.value == "TR"
-                            ? S.current.trending
-                            : S.current.basedOnLast,
-                style: tt.bodySmall
-                    ?.copyWith(color: cs.primary, fontWeight: FontWeight.bold),
-              )),
-        ),
-        SettingsTile(
-          title: S.current.homeContentCount,
-          subtitle: S.current.homeContentCountDes,
-          leadingIcon: Icons.grid_view_rounded,
-          trailing: Obx(() => DropdownButton(
-                dropdownColor: cs.surfaceContainerHigh,
-                underline: const SizedBox.shrink(),
-                value: ctrl.noOfHomeScreenContent.value,
-                items: [3, 5, 7, 9, 11]
-                    .map((e) => DropdownMenuItem(value: e, child: Text("$e")))
-                    .toList(),
-                onChanged: ctrl.setContentNumber,
-              )),
-        ),
-        SettingsTile(
-          title: S.current.cacheHomeScreenData,
-          subtitle: S.current.cacheHomeScreenDataDes,
-          leadingIcon: Icons.cached_rounded,
-          trailing: Obx(() => CustSwitch(
-              value: ctrl.cacheHomeScreenData.value,
-              onChanged: ctrl.toggleCacheHomeScreenData)),
-        ),
-        SettingsTile(
-          title: S.current.Piped,
-          subtitle: S.current.linkPipedDes,
-          leadingIcon: Icons.sync_alt_rounded,
-          trailing: TextButton(
-            onPressed: () {
-              if (ctrl.isLinkedWithPiped.isFalse) {
-                showDialog(context: context, builder: (_) => const LinkPiped())
-                    .whenComplete(() => Get.delete<PipedLinkedController>());
-              } else {
-                ctrl.unlinkPiped();
-              }
-            },
-            child: Obx(() => Text(
-                ctrl.isLinkedWithPiped.value
-                    ? S.current.unLink
-                    : S.current.link,
-                style: const TextStyle(fontWeight: FontWeight.bold))),
-          ),
-        ),
-        Obx(() => ctrl.isLinkedWithPiped.isTrue
-            ? SettingsTile(
-                title: S.current.resetblacklistedplaylist,
-                subtitle: S.current.resetblacklistedplaylistDes,
-                leadingIcon: Icons.block_rounded,
-                trailing: TextButton(
-                  onPressed: () async {
-                    await Get.find<LibraryPlaylistsController>()
-                        .resetBlacklistedPlaylist();
-                    ScaffoldMessenger.of(Get.context!).showSnackBar(snackbar(
-                        Get.context!, S.current.blacklistPlstResetAlert,
-                        size: SanckBarSize.MEDIUM));
-                  },
-                  child: Text(S.current.reset,
-                      style: const TextStyle(fontWeight: FontWeight.bold)),
-                ),
-              )
-            : const SizedBox.shrink()),
-        SettingsTile(
-          title: S.current.clearImgCache,
-          subtitle: S.current.clearImgCacheDes,
-          leadingIcon: Icons.image_not_supported_rounded,
-          isThreeLine: true,
-          onTap: () => ctrl.clearImagesCache().then((_) =>
-              ScaffoldMessenger.of(Get.context!).showSnackBar(snackbar(
-                  Get.context!, S.current.clearImgCacheAlert,
-                  size: SanckBarSize.BIG))),
-        ),
-      ],
-    );
-
-    // Card 3: Música y reproducción
-    final musicCard = CustomExpansionTile(
-      title: S.current.musicAndPlayback,
-      icon: Icons.music_note_rounded,
-      children: [
-        SettingsTile(
-          title: S.current.streamingQuality,
-          subtitle: S.current.streamingQualityDes,
-          leadingIcon: Icons.high_quality_rounded,
-          trailing: Obx(() => DropdownButton(
-                dropdownColor: cs.surfaceContainerHigh,
-                underline: const SizedBox.shrink(),
-                value: ctrl.streamingQuality.value,
-                items: [
-                  DropdownMenuItem(
-                      value: AudioQuality.Low, child: Text(S.current.low)),
-                  DropdownMenuItem(
-                      value: AudioQuality.High, child: Text(S.current.high)),
-                ],
-                onChanged: ctrl.setStreamingQuality,
-              )),
-        ),
-        if (GetPlatform.isAndroid)
-          SettingsTile(
-            title: S.current.loudnessNormalization,
-            subtitle: S.current.loudnessNormalizationDes,
-            leadingIcon: Icons.equalizer_rounded,
-            trailing: Obx(() => CustSwitch(
-                value: ctrl.loudnessNormalizationEnabled.value,
-                onChanged: ctrl.toggleLoudnessNormalization)),
-          ),
-        if (!isDesktop)
-          SettingsTile(
-            title: S.current.cacheSongs,
-            subtitle: S.current.cacheSongsDes,
-            leadingIcon: Icons.save_alt_rounded,
-            trailing: Obx(() => CustSwitch(
-                value: ctrl.cacheSongs.value,
-                onChanged: ctrl.toggleCachingSongsValue)),
-          ),
-        if (!isDesktop)
-          SettingsTile(
-            title: S.current.skipSilence,
-            subtitle: S.current.skipSilenceDes,
-            leadingIcon: Icons.fast_forward_rounded,
-            trailing: Obx(() => CustSwitch(
-                value: ctrl.skipSilenceEnabled.value,
-                onChanged: ctrl.toggleSkipSilence)),
-          ),
-        if (isDesktop)
-          SettingsTile(
-            title: S.current.backgroundPlay,
-            subtitle: S.current.backgroundPlayDes,
-            leadingIcon: Icons.play_circle_outline_rounded,
-            trailing: Obx(() => CustSwitch(
-                value: ctrl.backgroundPlayEnabled.value,
-                onChanged: ctrl.toggleBackgroundPlay)),
-          ),
-        SettingsTile(
-          title: S.current.keepScreenOnWhilePlaying,
-          subtitle: S.current.keepScreenOnWhilePlayingDes,
-          leadingIcon: Icons.screen_lock_rotation_rounded,
-          trailing: Obx(() => CustSwitch(
-              value: ctrl.keepScreenAwake.value,
-              onChanged: ctrl.toggleKeepScreenAwake)),
-        ),
-        SettingsTile(
-          title: S.current.restoreLastPlaybackSession,
-          subtitle: S.current.restoreLastPlaybackSessionDes,
-          leadingIcon: Icons.restore_rounded,
-          trailing: Obx(() => CustSwitch(
-              value: ctrl.restorePlaybackSession.value,
-              onChanged: ctrl.toggleRestorePlaybackSession)),
-        ),
-        SettingsTile(
-          title: S.current.autoOpenPlayer,
-          subtitle: S.current.autoOpenPlayerDes,
-          leadingIcon: Icons.open_in_full_rounded,
-          trailing: Obx(() => CustSwitch(
-              value: ctrl.autoOpenPlayer.value,
-              onChanged: ctrl.toggleAutoOpenPlayer)),
-        ),
-        if (!isDesktop)
-          SettingsTile(
-            title: S.current.stopMusicOnTaskClear,
-            subtitle: S.current.stopMusicOnTaskClearDes,
-            leadingIcon: Icons.stop_circle_outlined,
-            trailing: Obx(() => CustSwitch(
-                value: ctrl.stopPlyabackOnSwipeAway.value,
-                onChanged: ctrl.toggleStopPlyabackOnSwipeAway)),
-          ),
-        if (GetPlatform.isAndroid)
-          Obx(() => SettingsTile(
-                title: S.current.ignoreBatOpt,
-                leadingIcon: Icons.battery_saver_rounded,
-                isThreeLine: true,
-                onTap: ctrl.isIgnoringBatteryOptimizations.isFalse
-                    ? ctrl.enableIgnoringBatteryOptimizations
-                    : null,
-                subtitle:
-                    "${S.current.status}: ${ctrl.isIgnoringBatteryOptimizations.isTrue ? S.current.enabled : S.current.disabled}\n${S.current.ignoreBatOptDes}",
-              )),
-      ],
-    );
-
-    // Card 4: Descargas
-    final downloadCard = CustomExpansionTile(
-      title: S.current.download,
-      icon: Icons.download_rounded,
-      children: [
-        SettingsTile(
-          title: S.current.autoDownFavSong,
-          subtitle: S.current.autoDownFavSongDes,
-          leadingIcon: Icons.favorite_rounded,
-          trailing: Obx(() => CustSwitch(
-              value: ctrl.autoDownloadFavoriteSongEnabled.value,
-              onChanged: ctrl.toggleAutoDownloadFavoriteSong)),
-        ),
-        SettingsTile(
-          title: S.current.downloadingFormat,
-          subtitle: S.current.downloadingFormatDes,
-          leadingIcon: Icons.audio_file_rounded,
-          trailing: Obx(() => DropdownButton(
-                dropdownColor: cs.surfaceContainerHigh,
-                underline: const SizedBox.shrink(),
-                value: ctrl.downloadingFormat.value,
-                items: const [
-                  DropdownMenuItem(value: "opus", child: Text("Opus/Ogg")),
-                  DropdownMenuItem(value: "m4a", child: Text("M4a")),
-                ],
-                onChanged: ctrl.changeDownloadingFormat,
-              )),
-        ),
-        SettingsTile(
-          title: S.current.downloadLocation,
-          leadingIcon: Icons.folder_rounded,
-          subtitle: null,
-          onTap: ctrl.setDownloadLocation,
-          trailing: TextButton(
-              onPressed: ctrl.resetDownloadLocation,
-              child: Text(S.current.reset,
-                  style: const TextStyle(fontWeight: FontWeight.bold))),
-        ),
-        if (GetPlatform.isAndroid && Hive.box('AppPrefs').get('emusicCloudRequested', defaultValue: false) != true)
-          SettingsTile(
-            title: S.current.exportDowloadedFiles,
-            subtitle: S.current.exportDowloadedFilesDes,
-            leadingIcon: Icons.ios_share_rounded,
-            isThreeLine: true,
-            onTap: () => showDialog(
-                    context: context, builder: (_) => const ExportFileDialog())
-                .whenComplete(() => Get.delete<ExportFileDialogController>()),
-          ),
-        if (GetPlatform.isAndroid && Hive.box('AppPrefs').get('emusicCloudRequested', defaultValue: false) != true)
-          SettingsTile(
-            title: S.current.exportedFileLocation,
-            leadingIcon: Icons.drive_folder_upload_rounded,
-            subtitle: null,
-            onTap: ctrl.setExportedLocation,
-            trailing: Obx(() => Text(ctrl.exportLocationPath.value,
-                style: tt.bodySmall?.copyWith(color: cs.onSurfaceVariant))),
-          ),
-      ],
-    );
-
-    // Card 5: General / Cuenta
-    final generalCard = CustomExpansionTile(
-      title: S.current.settings_general_section,
-      icon: Icons.manage_accounts_rounded,
-      children: [
-        Obx(() => ListTile(
-              contentPadding:
-                  const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-              leading: CircleAvatar(
-                backgroundColor: cs.primaryContainer,
-                child: Text(
-                    auth.displayName.isNotEmpty
-                        ? auth.displayName[0].toUpperCase()
-                        : '?',
-                    style: TextStyle(
-                        color: cs.onPrimaryContainer,
-                        fontWeight: FontWeight.bold)),
-              ),
-              title: Text(auth.displayName,
-                  style: tt.bodyLarge?.copyWith(fontWeight: FontWeight.w600)),
-              subtitle: Text(auth.emailLabel,
-                  style: tt.bodySmall?.copyWith(color: cs.onSurfaceVariant)),
-              trailing: FilledButton.tonal(
-                onPressed: ctrl.logoutUser,
-                child: Text(S.current.settings_logout,
-                    style: const TextStyle(fontWeight: FontWeight.bold)),
-              ),
-            )),
-        const Divider(height: 1, indent: 16, endIndent: 16),
-        SettingsTile(
-          title: S.current.settings_cloud_backup,
-          subtitle: S.current.settings_cloud_backup_desc,
-          leadingIcon: Icons.cloud_sync_rounded,
-          onTap: () => showDialog(
-                  context: context, builder: (_) => const CloudBackupDialog())
-              .whenComplete(() => Get.delete<CloudBackupDialogController>()),
-          trailing: const Icon(Icons.chevron_right_rounded),
-        ),
-        SettingsTile(
-          title: 'Modo local / EMusic Cloud',
-          subtitle:
-              'Elige, migra o revisa el estado de sincronizacion con Joss Red.',
-          leadingIcon: Icons.cloud_queue_rounded,
-          onTap: () => showDialog(
-              context: context, builder: (_) => const CloudSyncStatusDialog()),
-          trailing: const Icon(Icons.chevron_right_rounded),
-        ),
-        SettingsTile(
-          title: S.current.settings_migration_title,
-          subtitle: S.current.settings_migration_desc,
-          leadingIcon: Icons.move_to_inbox_rounded,
-          onTap: () => showDialog(
-                  context: context,
-                  builder: (_) => const LegacyMusicMigrationDialog())
-              .whenComplete(
-                  () => Get.delete<LegacyMusicMigrationDialogController>()),
-          trailing: const Icon(Icons.chevron_right_rounded),
-        ),
-        const Divider(height: 1, indent: 16, endIndent: 16),
-        SettingsTile(
-          title: S.current.backupAppData,
-          subtitle: S.current.backupSettingsAndPlaylistsDes,
-          leadingIcon: Icons.backup_rounded,
-          isThreeLine: true,
-          onTap: () =>
-              showDialog(context: context, builder: (_) => const BackupDialog())
-                  .whenComplete(() => Get.delete<BackupDialogController>()),
-        ),
-        SettingsTile(
-          title: S.current.restoreAppData,
-          subtitle: S.current.restoreSettingsAndPlaylistsDes,
-          leadingIcon: Icons.settings_backup_restore_rounded,
-          isThreeLine: true,
-          onTap: () => showDialog(
-                  context: context, builder: (_) => const RestoreDialog())
-              .whenComplete(() => Get.delete<RestoreDialogController>()),
-        ),
-        const Divider(height: 1, indent: 16, endIndent: 16),
-        SettingsTile(
-          title: S.current.resetToDefault,
-          subtitle: S.current.resetToDefaultDes,
-          leadingIcon: Icons.restart_alt_rounded,
-          onTap: () => ctrl.resetAppSettingsToDefault().then((_) =>
-              ScaffoldMessenger.of(Get.context!).showSnackBar(snackbar(
-                  Get.context!, S.current.resetToDefaultMsg,
-                  size: SanckBarSize.BIG,
-                  duration: const Duration(seconds: 2)))),
-        ),
-        const Divider(height: 1, indent: 16, endIndent: 16),
-        SettingsTile(
-          title: S.current.github,
-          subtitle: S.current.githubDes,
-          leadingIcon: Icons.code_rounded,
-          isThreeLine: true,
-          onTap: () => launchUrl(
-              Uri.parse('https://github.com/josprox/Estrella-Music'),
-              mode: LaunchMode.externalApplication),
-          trailing: const Icon(Icons.open_in_new_rounded),
-        ),
-      ],
-    );
+    // New settings cards are now separated into sub-screens to improve aesthetics and structure.
 
     // Footer
     final footer = Obx(() => Column(
@@ -585,49 +166,69 @@ class SettingsScreen extends StatelessWidget {
                 : const SizedBox.shrink()),
           ),
 
-          // ── Sections (Responsive Two Column or Single List) ──────────────
-          if (isWide)
-            SliverToBoxAdapter(
-              child: Padding(
-                padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Expanded(
-                      child: Column(
-                        children: [
-                          personalizationCard,
-                          contentCard,
-                        ],
+          // Sections
+          SliverPadding(
+            padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
+            sliver: SliverList(
+              delegate: SliverChildListDelegate([
+                Card(
+                  color: cs.surfaceContainerLow,
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                  child: Column(
+                    children: [
+                      ListTile(
+                        title: Text(S.current.personalisation),
+                        subtitle: const Text('Tema, idioma y animaciones de la interfaz.'),
+                        leading: Icon(Icons.palette_rounded, color: cs.primary),
+                        trailing: const Icon(Icons.chevron_right_rounded),
+                        onTap: () => Get.to(() => const SettingsAppearanceScreen(), transition: Transition.rightToLeft),
                       ),
-                    ),
-                    const SizedBox(width: 16),
-                    Expanded(
-                      child: Column(
-                        children: [
-                          musicCard,
-                          downloadCard,
-                          generalCard,
-                        ],
+                      const Divider(height: 1, indent: 56),
+                      ListTile(
+                        title: Text(S.current.content),
+                        subtitle: const Text('Filtros de descubrir, integración con Piped y cachés.'),
+                        leading: Icon(Icons.music_video_rounded, color: cs.primary),
+                        trailing: const Icon(Icons.chevron_right_rounded),
+                        onTap: () => Get.to(() => const SettingsContentScreen(), transition: Transition.rightToLeft),
                       ),
-                    ),
-                  ],
+                      const Divider(height: 1, indent: 56),
+                      ListTile(
+                        title: Text(S.current.musicAndPlayback),
+                        subtitle: const Text('Calidad de streaming, normalización, silencios y batería.'),
+                        leading: Icon(Icons.music_note_rounded, color: cs.primary),
+                        trailing: const Icon(Icons.chevron_right_rounded),
+                        onTap: () => Get.to(() => const SettingsPlaybackScreen(), transition: Transition.rightToLeft),
+                      ),
+                      const Divider(height: 1, indent: 56),
+                      ListTile(
+                        title: const Text('Descargas y Almacenamiento'),
+                        subtitle: const Text('Formatos de audio, carpetas y descargas automáticas.'),
+                        leading: Icon(Icons.download_rounded, color: cs.primary),
+                        trailing: const Icon(Icons.chevron_right_rounded),
+                        onTap: () => Get.to(() => const SettingsDownloadsScreen(), transition: Transition.rightToLeft),
+                      ),
+                      const Divider(height: 1, indent: 56),
+                      ListTile(
+                        title: const Text('Cuenta y Sincronización'),
+                        subtitle: const Text('Modo cloud, backups, lista de amigos y migraciones.'),
+                        leading: Icon(Icons.cloud_sync_rounded, color: cs.primary),
+                        trailing: const Icon(Icons.chevron_right_rounded),
+                        onTap: () => Get.to(() => const SettingsAccountScreen(), transition: Transition.rightToLeft),
+                      ),
+                      const Divider(height: 1, indent: 56),
+                      ListTile(
+                        title: const Text('Acerca de Estrella Music'),
+                        subtitle: const Text('Versión, proyecto de código abierto y GitHub.'),
+                        leading: Icon(Icons.info_rounded, color: cs.primary),
+                        trailing: const Icon(Icons.chevron_right_rounded),
+                        onTap: () => Get.to(() => const SettingsAboutScreen(), transition: Transition.rightToLeft),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-            )
-          else
-            SliverPadding(
-              padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
-              sliver: SliverList(
-                delegate: SliverChildListDelegate([
-                  personalizationCard,
-                  contentCard,
-                  musicCard,
-                  downloadCard,
-                  generalCard,
-                ]),
-              ),
+              ]),
             ),
+          ),
 
           // ── Footer ───────────────────────────────────────────────────────
           SliverToBoxAdapter(
@@ -823,4 +424,605 @@ Widget radioWidget(
       ),
     );
   });
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Sub-secciones de Configuración
+// ─────────────────────────────────────────────────────────────────────────────
+
+class SettingsAppearanceScreen extends StatelessWidget {
+  const SettingsAppearanceScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final ctrl = Get.find<SettingsScreenController>();
+    final cs = Theme.of(context).colorScheme;
+    final tt = Theme.of(context).textTheme;
+
+    return Scaffold(
+      backgroundColor: cs.surface,
+      appBar: AppBar(
+        title: Text(S.current.personalisation),
+        backgroundColor: cs.surface,
+        foregroundColor: cs.onSurface,
+        elevation: 0,
+      ),
+      body: ListView(
+        physics: const BouncingScrollPhysics(),
+        children: [
+          SettingsTile(
+            title: S.current.language,
+            subtitle: S.current.languageDes,
+            leadingIcon: Icons.translate_rounded,
+            trailing: Obx(() => DropdownButton(
+                  menuMaxHeight: Get.height - 250,
+                  dropdownColor: cs.surfaceContainerHigh,
+                  underline: const SizedBox.shrink(),
+                  style: tt.titleSmall,
+                  value: ctrl.currentAppLanguageCode.value,
+                  items: langMap.entries
+                      .map((l) =>
+                          DropdownMenuItem(value: l.key, child: Text(l.value)))
+                      .whereType<DropdownMenuItem<String>>()
+                      .toList(),
+                  selectedItemBuilder: (ctx) => langMap.entries
+                      .map<Widget>((e) => Container(
+                            alignment: Alignment.centerRight,
+                            constraints: const BoxConstraints(minWidth: 50),
+                            child: Text(e.value),
+                          ))
+                      .toList(),
+                  onChanged: ctrl.setAppLanguage,
+                )),
+          ),
+          SettingsTile(
+            title: S.current.themeMode,
+            subtitle: S.current.setDiscoverContent,
+            leadingIcon: Icons.dark_mode_rounded,
+            onTap: () => showDialog(
+                context: context, builder: (_) => const ThemeSelectorDialog()),
+            trailing: const Icon(Icons.chevron_right_rounded),
+          ),
+          SettingsTile(
+            title: S.current.disableTransitionAnimation,
+            subtitle: S.current.disableTransitionAnimationDes,
+            leadingIcon: Icons.animation_rounded,
+            trailing: Obx(() => CustSwitch(
+                value: ctrl.isTransitionAnimationDisabled.isTrue,
+                onChanged: ctrl.disableTransitionAnimation)),
+          ),
+          SettingsTile(
+            title: S.current.enableSlidableAction,
+            subtitle: S.current.enableSlidableActionDes,
+            leadingIcon: Icons.swipe_rounded,
+            trailing: Obx(() => CustSwitch(
+                value: ctrl.slidableActionEnabled.isTrue,
+                onChanged: ctrl.toggleSlidableAction)),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class SettingsContentScreen extends StatelessWidget {
+  const SettingsContentScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final ctrl = Get.find<SettingsScreenController>();
+    final cs = Theme.of(context).colorScheme;
+    final tt = Theme.of(context).textTheme;
+
+    return Scaffold(
+      backgroundColor: cs.surface,
+      appBar: AppBar(
+        title: Text(S.current.content),
+        backgroundColor: cs.surface,
+        foregroundColor: cs.onSurface,
+        elevation: 0,
+      ),
+      body: ListView(
+        physics: const BouncingScrollPhysics(),
+        children: [
+          SettingsTile(
+            title: S.current.setDiscoverContent,
+            leadingIcon: Icons.explore_rounded,
+            subtitle: null,
+            onTap: () => showDialog(
+                context: context,
+                builder: (_) => const DiscoverContentSelectorDialog()),
+            trailing: Obx(() => Text(
+                  ctrl.discoverContentType.value == "QP"
+                      ? S.current.quickpicks
+                      : ctrl.discoverContentType.value == "TMV"
+                          ? S.current.topmusicvideos
+                          : ctrl.discoverContentType.value == "TR"
+                              ? S.current.trending
+                              : S.current.basedOnLast,
+                  style: tt.bodySmall
+                      ?.copyWith(color: cs.primary, fontWeight: FontWeight.bold),
+                )),
+          ),
+          SettingsTile(
+            title: S.current.homeContentCount,
+            subtitle: S.current.homeContentCountDes,
+            leadingIcon: Icons.grid_view_rounded,
+            trailing: Obx(() => DropdownButton(
+                  dropdownColor: cs.surfaceContainerHigh,
+                  underline: const SizedBox.shrink(),
+                  value: ctrl.noOfHomeScreenContent.value,
+                  items: [3, 5, 7, 9, 11]
+                      .map((e) => DropdownMenuItem(value: e, child: Text("$e")))
+                      .toList(),
+                  onChanged: ctrl.setContentNumber,
+                )),
+          ),
+          SettingsTile(
+            title: S.current.cacheHomeScreenData,
+            subtitle: S.current.cacheHomeScreenDataDes,
+            leadingIcon: Icons.cached_rounded,
+            trailing: Obx(() => CustSwitch(
+                value: ctrl.cacheHomeScreenData.value,
+                onChanged: ctrl.toggleCacheHomeScreenData)),
+          ),
+          SettingsTile(
+            title: S.current.Piped,
+            subtitle: S.current.linkPipedDes,
+            leadingIcon: Icons.sync_alt_rounded,
+            trailing: TextButton(
+              onPressed: () {
+                if (ctrl.isLinkedWithPiped.isFalse) {
+                  showDialog(context: context, builder: (_) => const LinkPiped())
+                      .whenComplete(() => Get.delete<PipedLinkedController>());
+                } else {
+                  ctrl.unlinkPiped();
+                }
+              },
+              child: Obx(() => Text(
+                  ctrl.isLinkedWithPiped.value
+                      ? S.current.unLink
+                      : S.current.link,
+                  style: const TextStyle(fontWeight: FontWeight.bold))),
+            ),
+          ),
+          Obx(() => ctrl.isLinkedWithPiped.isTrue
+              ? SettingsTile(
+                  title: S.current.resetblacklistedplaylist,
+                  subtitle: S.current.resetblacklistedplaylistDes,
+                  leadingIcon: Icons.block_rounded,
+                  trailing: TextButton(
+                    onPressed: () async {
+                      await Get.find<LibraryPlaylistsController>()
+                          .resetBlacklistedPlaylist();
+                      ScaffoldMessenger.of(Get.context!).showSnackBar(snackbar(
+                          Get.context!, S.current.blacklistPlstResetAlert,
+                          size: SanckBarSize.MEDIUM));
+                    },
+                    child: Text(S.current.reset,
+                        style: const TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                )
+              : const SizedBox.shrink()),
+          SettingsTile(
+            title: S.current.clearImgCache,
+            subtitle: S.current.clearImgCacheDes,
+            leadingIcon: Icons.image_not_supported_rounded,
+            isThreeLine: true,
+            onTap: () => ctrl.clearImagesCache().then((_) =>
+                ScaffoldMessenger.of(Get.context!).showSnackBar(snackbar(
+                    Get.context!, S.current.clearImgCacheAlert,
+                    size: SanckBarSize.BIG))),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class SettingsPlaybackScreen extends StatelessWidget {
+  const SettingsPlaybackScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final ctrl = Get.find<SettingsScreenController>();
+    final cs = Theme.of(context).colorScheme;
+    final isDesktop = GetPlatform.isDesktop;
+
+    return Scaffold(
+      backgroundColor: cs.surface,
+      appBar: AppBar(
+        title: Text(S.current.musicAndPlayback),
+        backgroundColor: cs.surface,
+        foregroundColor: cs.onSurface,
+        elevation: 0,
+      ),
+      body: ListView(
+        physics: const BouncingScrollPhysics(),
+        children: [
+          SettingsTile(
+            title: S.current.streamingQuality,
+            subtitle: S.current.streamingQualityDes,
+            leadingIcon: Icons.high_quality_rounded,
+            trailing: Obx(() => DropdownButton(
+                  dropdownColor: cs.surfaceContainerHigh,
+                  underline: const SizedBox.shrink(),
+                  value: ctrl.streamingQuality.value,
+                  items: [
+                    DropdownMenuItem(
+                        value: AudioQuality.Low, child: Text(S.current.low)),
+                    DropdownMenuItem(
+                        value: AudioQuality.High, child: Text(S.current.high)),
+                  ],
+                  onChanged: ctrl.setStreamingQuality,
+                )),
+          ),
+          if (GetPlatform.isAndroid)
+            SettingsTile(
+              title: S.current.loudnessNormalization,
+              subtitle: S.current.loudnessNormalizationDes,
+              leadingIcon: Icons.equalizer_rounded,
+              trailing: Obx(() => CustSwitch(
+                  value: ctrl.loudnessNormalizationEnabled.value,
+                  onChanged: ctrl.toggleLoudnessNormalization)),
+            ),
+          if (!isDesktop)
+            SettingsTile(
+              title: S.current.cacheSongs,
+              subtitle: S.current.cacheSongsDes,
+              leadingIcon: Icons.save_alt_rounded,
+              trailing: Obx(() => CustSwitch(
+                  value: ctrl.cacheSongs.value,
+                  onChanged: ctrl.toggleCachingSongsValue)),
+            ),
+          if (!isDesktop)
+            SettingsTile(
+              title: S.current.skipSilence,
+              subtitle: S.current.skipSilenceDes,
+              leadingIcon: Icons.fast_forward_rounded,
+              trailing: Obx(() => CustSwitch(
+                  value: ctrl.skipSilenceEnabled.value,
+                  onChanged: ctrl.toggleSkipSilence)),
+            ),
+          if (isDesktop)
+            SettingsTile(
+              title: S.current.backgroundPlay,
+              subtitle: S.current.backgroundPlayDes,
+              leadingIcon: Icons.play_circle_outline_rounded,
+              trailing: Obx(() => CustSwitch(
+                  value: ctrl.backgroundPlayEnabled.value,
+                  onChanged: ctrl.toggleBackgroundPlay)),
+            ),
+          SettingsTile(
+            title: S.current.keepScreenOnWhilePlaying,
+            subtitle: S.current.keepScreenOnWhilePlayingDes,
+            leadingIcon: Icons.screen_lock_rotation_rounded,
+            trailing: Obx(() => CustSwitch(
+                value: ctrl.keepScreenAwake.value,
+                onChanged: ctrl.toggleKeepScreenAwake)),
+          ),
+          SettingsTile(
+            title: S.current.restoreLastPlaybackSession,
+            subtitle: S.current.restoreLastPlaybackSessionDes,
+            leadingIcon: Icons.restore_rounded,
+            trailing: Obx(() => CustSwitch(
+                value: ctrl.restorePlaybackSession.value,
+                onChanged: ctrl.toggleRestorePlaybackSession)),
+          ),
+          SettingsTile(
+            title: S.current.autoOpenPlayer,
+            subtitle: S.current.autoOpenPlayerDes,
+            leadingIcon: Icons.open_in_full_rounded,
+            trailing: Obx(() => CustSwitch(
+                value: ctrl.autoOpenPlayer.value,
+                onChanged: ctrl.toggleAutoOpenPlayer)),
+          ),
+          if (!isDesktop)
+            SettingsTile(
+              title: S.current.stopMusicOnTaskClear,
+              subtitle: S.current.stopMusicOnTaskClearDes,
+              leadingIcon: Icons.stop_circle_outlined,
+              trailing: Obx(() => CustSwitch(
+                  value: ctrl.stopPlyabackOnSwipeAway.value,
+                  onChanged: ctrl.toggleStopPlyabackOnSwipeAway)),
+            ),
+          if (GetPlatform.isAndroid)
+            Obx(() => SettingsTile(
+                  title: S.current.ignoreBatOpt,
+                  leadingIcon: Icons.battery_saver_rounded,
+                  isThreeLine: true,
+                  onTap: ctrl.isIgnoringBatteryOptimizations.isFalse
+                      ? ctrl.enableIgnoringBatteryOptimizations
+                      : null,
+                  trailing: CustSwitch(
+                    value: ctrl.isIgnoringBatteryOptimizations.value,
+                    onChanged: ctrl.isIgnoringBatteryOptimizations.isFalse
+                        ? (_) => ctrl.enableIgnoringBatteryOptimizations()
+                        : null,
+                  ),
+                  subtitle: "${S.current.status}: ${ctrl.isIgnoringBatteryOptimizations.isTrue ? S.current.enabled : S.current.disabled}\n${S.current.ignoreBatOptDes}",
+                )),
+        ],
+      ),
+    );
+  }
+}
+
+class SettingsDownloadsScreen extends StatelessWidget {
+  const SettingsDownloadsScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final ctrl = Get.find<SettingsScreenController>();
+    final cs = Theme.of(context).colorScheme;
+    final tt = Theme.of(context).textTheme;
+
+    return Scaffold(
+      backgroundColor: cs.surface,
+      appBar: AppBar(
+        title: const Text('Descargas y Almacenamiento'),
+        backgroundColor: cs.surface,
+        foregroundColor: cs.onSurface,
+        elevation: 0,
+      ),
+      body: ListView(
+        physics: const BouncingScrollPhysics(),
+        children: [
+          SettingsTile(
+            title: S.current.autoDownFavSong,
+            subtitle: S.current.autoDownFavSongDes,
+            leadingIcon: Icons.favorite_rounded,
+            trailing: Obx(() => CustSwitch(
+                value: ctrl.autoDownloadFavoriteSongEnabled.value,
+                onChanged: ctrl.toggleAutoDownloadFavoriteSong)),
+          ),
+          SettingsTile(
+            title: S.current.downloadingFormat,
+            subtitle: S.current.downloadingFormatDes,
+            leadingIcon: Icons.audio_file_rounded,
+            trailing: Obx(() => DropdownButton(
+                  dropdownColor: cs.surfaceContainerHigh,
+                  underline: const SizedBox.shrink(),
+                  value: ctrl.downloadingFormat.value,
+                  items: const [
+                    DropdownMenuItem(value: "opus", child: Text("Opus/Ogg")),
+                    DropdownMenuItem(value: "m4a", child: Text("M4a")),
+                  ],
+                  onChanged: ctrl.changeDownloadingFormat,
+                )),
+          ),
+          SettingsTile(
+            title: S.current.downloadLocation,
+            leadingIcon: Icons.folder_rounded,
+            subtitle: null,
+            onTap: ctrl.setDownloadLocation,
+            trailing: TextButton(
+                onPressed: ctrl.resetDownloadLocation,
+                child: Text(S.current.reset,
+                    style: const TextStyle(fontWeight: FontWeight.bold))),
+          ),
+          if (GetPlatform.isAndroid && Hive.box('AppPrefs').get('emusicCloudRequested', defaultValue: false) != true)
+            SettingsTile(
+              title: S.current.exportDowloadedFiles,
+              subtitle: S.current.exportDowloadedFilesDes,
+              leadingIcon: Icons.ios_share_rounded,
+              isThreeLine: true,
+              onTap: () => showDialog(
+                      context: context, builder: (_) => const ExportFileDialog())
+                  .whenComplete(() => Get.delete<ExportFileDialogController>()),
+            ),
+          if (GetPlatform.isAndroid && Hive.box('AppPrefs').get('emusicCloudRequested', defaultValue: false) != true)
+            SettingsTile(
+              title: S.current.exportedFileLocation,
+              leadingIcon: Icons.drive_folder_upload_rounded,
+              subtitle: null,
+              onTap: ctrl.setExportedLocation,
+              trailing: Obx(() => Text(ctrl.exportLocationPath.value,
+                  style: tt.bodySmall?.copyWith(color: cs.onSurfaceVariant))),
+            ),
+        ],
+      ),
+    );
+  }
+}
+
+class SettingsAccountScreen extends StatelessWidget {
+  const SettingsAccountScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final ctrl = Get.find<SettingsScreenController>();
+    final auth = Get.find<AuthService>();
+    final cs = Theme.of(context).colorScheme;
+    final tt = Theme.of(context).textTheme;
+
+    return Scaffold(
+      backgroundColor: cs.surface,
+      appBar: AppBar(
+        title: const Text('Cuenta y Sincronización'),
+        backgroundColor: cs.surface,
+        foregroundColor: cs.onSurface,
+        elevation: 0,
+      ),
+      body: ListView(
+        physics: const BouncingScrollPhysics(),
+        children: [
+          Obx(() => ListTile(
+                contentPadding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+                leading: CircleAvatar(
+                  backgroundColor: cs.primaryContainer,
+                  child: Text(
+                      auth.displayName.isNotEmpty
+                          ? auth.displayName[0].toUpperCase()
+                          : '?',
+                      style: TextStyle(
+                          color: cs.onPrimaryContainer,
+                          fontWeight: FontWeight.bold)),
+                ),
+                title: Text(auth.displayName,
+                    style: tt.bodyLarge?.copyWith(fontWeight: FontWeight.w600)),
+                subtitle: Text(auth.emailLabel,
+                    style: tt.bodySmall?.copyWith(color: cs.onSurfaceVariant)),
+                trailing: FilledButton.tonal(
+                  onPressed: ctrl.logoutUser,
+                  child: Text(S.current.settings_logout,
+                      style: const TextStyle(fontWeight: FontWeight.bold)),
+                ),
+              )),
+          const Divider(height: 1, indent: 16, endIndent: 16),
+          SettingsTile(
+            title: S.current.settings_cloud_backup,
+            subtitle: S.current.settings_cloud_backup_desc,
+            leadingIcon: Icons.cloud_sync_rounded,
+            onTap: () => showDialog(
+                    context: context, builder: (_) => const CloudBackupDialog())
+                .whenComplete(() => Get.delete<CloudBackupDialogController>()),
+            trailing: const Icon(Icons.chevron_right_rounded),
+          ),
+          SettingsTile(
+            title: 'Modo local / EMusic Cloud',
+            subtitle:
+                'Elige, migra o revisa el estado de sincronizacion con Joss Red.',
+            leadingIcon: Icons.cloud_queue_rounded,
+            onTap: () => showDialog(
+                context: context, builder: (_) => const CloudSyncStatusDialog()),
+            trailing: const Icon(Icons.chevron_right_rounded),
+          ),
+          if (Hive.box('AppPrefs').get('emusicDataMode', defaultValue: 'local') == 'cloud')
+            SettingsTile(
+              title: 'Mis amigos',
+              subtitle: 'Gestiona tus amigos de Joss Red directamente.',
+              leadingIcon: Icons.people_outline_rounded,
+              onTap: () => Get.to(() => const FriendsManagementScreen()),
+              trailing: const Icon(Icons.chevron_right_rounded),
+            ),
+          SettingsTile(
+            title: 'Refrescar identificador (Visitor ID)',
+            subtitle:
+                'Regenera el identificador de YouTube Music si el contenido de Descubrir no carga.',
+            leadingIcon: Icons.refresh_rounded,
+            onTap: () async {
+              Get.dialog(
+                const Center(child: CircularProgressIndicator()),
+                barrierDismissible: false,
+              );
+              try {
+                final musicServices = Get.find<MusicServices>();
+                final newId = await musicServices.genrateVisitorId();
+                Get.back(); // close loading dialog
+                if (newId != null) {
+                  musicServices.setVisitorId(newId);
+                  Get.snackbar(
+                    'Identificador actualizado',
+                    'Se generó un nuevo Visitor ID con éxito.',
+                    snackPosition: SnackPosition.BOTTOM,
+                    backgroundColor: Colors.black87,
+                    colorText: Colors.white,
+                  );
+                  if (Get.isRegistered<HomeScreenController>()) {
+                    Get.find<HomeScreenController>().loadContent();
+                  }
+                } else {
+                  Get.snackbar(
+                    'Error',
+                    'No se pudo generar un nuevo identificador. Inténtalo más tarde.',
+                    snackPosition: SnackPosition.BOTTOM,
+                    backgroundColor: Colors.black87,
+                    colorText: Colors.white,
+                  );
+                }
+              } catch (e) {
+                if (Get.isOverlaysOpen) {
+                  Get.back();
+                }
+                Get.snackbar(
+                  'Error',
+                  'Ocurrió un error al regenerar: $e',
+                  snackPosition: SnackPosition.BOTTOM,
+                  backgroundColor: Colors.black87,
+                  colorText: Colors.white,
+                );
+              }
+            },
+          ),
+          SettingsTile(
+            title: S.current.settings_migration_title,
+            subtitle: S.current.settings_migration_desc,
+            leadingIcon: Icons.move_to_inbox_rounded,
+            onTap: () => showDialog(
+                    context: context,
+                    builder: (_) => const LegacyMusicMigrationDialog())
+                .whenComplete(
+                    () => Get.delete<LegacyMusicMigrationDialogController>()),
+            trailing: const Icon(Icons.chevron_right_rounded),
+          ),
+          const Divider(height: 1, indent: 16, endIndent: 16),
+          SettingsTile(
+            title: S.current.backupAppData,
+            subtitle: S.current.backupSettingsAndPlaylistsDes,
+            leadingIcon: Icons.backup_rounded,
+            isThreeLine: true,
+            onTap: () =>
+                showDialog(context: context, builder: (_) => const BackupDialog())
+                    .whenComplete(() => Get.delete<BackupDialogController>()),
+          ),
+          SettingsTile(
+            title: S.current.restoreAppData,
+            subtitle: S.current.restoreSettingsAndPlaylistsDes,
+            leadingIcon: Icons.settings_backup_restore_rounded,
+            isThreeLine: true,
+            onTap: () => showDialog(
+                    context: context, builder: (_) => const RestoreDialog())
+                .whenComplete(() => Get.delete<RestoreDialogController>()),
+          ),
+          const Divider(height: 1, indent: 16, endIndent: 16),
+          SettingsTile(
+            title: S.current.resetToDefault,
+            subtitle: S.current.resetToDefaultDes,
+            leadingIcon: Icons.restart_alt_rounded,
+            onTap: () => ctrl.resetAppSettingsToDefault().then((_) =>
+                ScaffoldMessenger.of(Get.context!).showSnackBar(snackbar(
+                    Get.context!, S.current.resetToDefaultMsg,
+                    size: SanckBarSize.BIG,
+                    duration: const Duration(seconds: 2)))),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class SettingsAboutScreen extends StatelessWidget {
+  const SettingsAboutScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+
+    return Scaffold(
+      backgroundColor: cs.surface,
+      appBar: AppBar(
+        title: const Text('Acerca de Estrella Music'),
+        backgroundColor: cs.surface,
+        foregroundColor: cs.onSurface,
+        elevation: 0,
+      ),
+      body: ListView(
+        physics: const BouncingScrollPhysics(),
+        children: [
+          SettingsTile(
+            title: S.current.github,
+            subtitle: S.current.githubDes,
+            leadingIcon: Icons.code_rounded,
+            isThreeLine: true,
+            onTap: () => launchUrl(
+                Uri.parse('https://github.com/josprox/Estrella-Music'),
+                mode: LaunchMode.externalApplication),
+            trailing: const Icon(Icons.open_in_new_rounded),
+          ),
+        ],
+      ),
+    );
+  }
 }

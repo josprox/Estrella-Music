@@ -393,7 +393,7 @@ class LibraryPlaylistsController extends GetxController
           return false;
         }
       } else {
-        final isCloudMode = Hive.box('AppPrefs').get('emusicCloudRequested', defaultValue: false) == true;
+        final isCloudMode = Get.find<SyncService>().isCloudMode;
         newplst = Playlist(
             title: title,
             playlistId: "LIB${DateTime.now().millisecondsSinceEpoch}",

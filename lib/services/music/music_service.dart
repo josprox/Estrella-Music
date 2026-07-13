@@ -127,16 +127,24 @@ class MusicServices extends getx.GetxService {
   }
 
   Future<String?> genrateVisitorId() async {
-    // Try to get from sw.js_data first (Kotlin-like logic)
+    // Try to get from sw.js_data first (Kotlin-like logic) with clean headers
     try {
       final swResponse = await dio.get(
         "https://music.youtube.com/sw.js_data",
-        options: Options(headers: _headers),
+        options: Options(
+          headers: {
+            'user-agent': userAgent,
+            'accept': '*/*',
+            'accept-encoding': 'gzip, deflate',
+          },
+          responseType: ResponseType.plain,
+        ),
       );
       final rawData = swResponse.data.toString();
-      final jsonStr = rawData.startsWith(")]}'")
-          ? rawData.substring(rawData.indexOf('\n') + 1)
-          : rawData;
+      String jsonStr = rawData;
+      if (jsonStr.startsWith(")]}'")) {
+        jsonStr = jsonStr.substring(jsonStr.indexOf('\n') + 1);
+      }
       final decoded = json.decode(jsonStr);
       if (decoded is List && decoded.isNotEmpty) {
         final level1 = decoded[0];
@@ -157,10 +165,18 @@ class MusicServices extends getx.GetxService {
       printERROR("Failed to get visitor data from sw.js_data: $e");
     }
 
-    // Fallback to original ytcfg extraction
+    // Fallback to original ytcfg extraction with clean headers
     try {
-      final response =
-          await dio.get(domain, options: Options(headers: _headers));
+      final response = await dio.get(
+        domain,
+        options: Options(
+          headers: {
+            'user-agent': userAgent,
+            'accept': '*/*',
+          },
+          responseType: ResponseType.plain,
+        ),
+      );
       final reg = RegExp(r'ytcfg\.set\s*\(\s*({.+?})\s*\)\s*;');
       final matches = reg.firstMatch(response.data.toString());
       String? visitorId;
@@ -170,6 +186,7 @@ class MusicServices extends getx.GetxService {
       }
       return visitorId;
     } catch (e) {
+      printERROR("Failed to get visitor data from domain ytcfg: $e");
       return null;
     }
   }

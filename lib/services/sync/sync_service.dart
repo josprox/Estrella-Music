@@ -209,11 +209,7 @@ class SyncService extends GetxService {
     _queue.enqueueSnapshotChange(reason: 'local_mutation');
     _debounce?.cancel();
     _debounce = Timer(const Duration(seconds: 1), () {
-      push().then((success) {
-        if (success) {
-          pull();
-        }
-      });
+      push();
     });
   }
 
@@ -298,10 +294,10 @@ class SyncService extends GetxService {
       _refreshLibraryControllers();
       lastStatusMessage.value = 'Biblioteca sincronizada.';
       return true;
-    } catch (e) {
+    } catch (e, stack) {
       isOnline.value = false;
       lastStatusMessage.value = 'Sin conexion. Los cambios quedan pendientes.';
-      printERROR('SyncService pull failed: $e');
+      printERROR('SyncService pull failed: $e\n$stack');
       return false;
     } finally {
       isSyncing.value = false;
@@ -322,12 +318,19 @@ class SyncService extends GetxService {
       payload['device_id'] = deviceId;
 
       if (_wsClient != null && _wsClient!.isAuthenticated) {
-        _wsClient!.sendPushPayload(payload);
-        await Hive.box('AppPrefs').put(_pendingKey, false);
-        await _queue.markAllSynced();
-        await Hive.box('AppPrefs').put(_lastSyncKey, DateTime.now().toIso8601String());
-        lastStatusMessage.value = 'Cambios subidos correctamente (WS).';
-        return true;
+        final success = await _wsClient!.sendPushPayload(payload);
+        if (success) {
+          await Hive.box('AppPrefs').put(_pendingKey, false);
+          await _queue.markAllSynced();
+          await Hive.box('AppPrefs').put(_lastSyncKey, DateTime.now().toIso8601String());
+          lastStatusMessage.value = 'Cambios subidos correctamente (WS).';
+          return true;
+        } else {
+          await Hive.box('AppPrefs').put(_pendingKey, true);
+          await _queue.markRetryScheduled();
+          lastStatusMessage.value = 'No se pudo subir via WS. Se reintentara despues.';
+          return false;
+        }
       }
 
       final token = await _authService.getAccessToken();
@@ -345,12 +348,12 @@ class SyncService extends GetxService {
       await _queue.markRetryScheduled();
       lastStatusMessage.value = 'No se pudo subir. Se reintentara despues.';
       return false;
-    } catch (e) {
+    } catch (e, stack) {
       isOnline.value = false;
       await Hive.box('AppPrefs').put(_pendingKey, true);
       await _queue.markRetryScheduled();
       lastStatusMessage.value = 'Sin conexion. Cambios guardados para reintento.';
-      printERROR('SyncService push failed: $e');
+      printERROR('SyncService push failed: $e\n$stack');
       return false;
     } finally {
       isSyncing.value = false;
@@ -393,6 +396,48 @@ class SyncService extends GetxService {
     if (!_authService.isAuthenticated.value) return [];
     final token = await _authService.getAccessToken();
     return _httpClient.fetchFriends(_normalizedJossRedBaseUrl(), token ?? "");
+  }
+
+  Future<List<Map<String, dynamic>>> fetchRequests() async {
+    if (!_authService.isAuthenticated.value) return [];
+    final token = await _authService.getAccessToken();
+    return _httpClient.fetchRequests(_normalizedJossRedBaseUrl(), token ?? "");
+  }
+
+  Future<List<Map<String, dynamic>>> fetchBlocked() async {
+    if (!_authService.isAuthenticated.value) return [];
+    final token = await _authService.getAccessToken();
+    return _httpClient.fetchBlocked(_normalizedJossRedBaseUrl(), token ?? "");
+  }
+
+  Future<Map<String, dynamic>> sendFriendRequest(int friendId) async {
+    if (!_authService.isAuthenticated.value) return {'success': false, 'message': 'No autenticado'};
+    final token = await _authService.getAccessToken();
+    return _httpClient.sendFriendRequest(_normalizedJossRedBaseUrl(), token ?? "", friendId);
+  }
+
+  Future<Map<String, dynamic>> acceptFriendRequest(int friendId) async {
+    if (!_authService.isAuthenticated.value) return {'success': false, 'message': 'No autenticado'};
+    final token = await _authService.getAccessToken();
+    return _httpClient.acceptFriendRequest(_normalizedJossRedBaseUrl(), token ?? "", friendId);
+  }
+
+  Future<Map<String, dynamic>> removeFriendship(int friendId) async {
+    if (!_authService.isAuthenticated.value) return {'success': false, 'message': 'No autenticado'};
+    final token = await _authService.getAccessToken();
+    return _httpClient.removeFriendship(_normalizedJossRedBaseUrl(), token ?? "", friendId);
+  }
+
+  Future<Map<String, dynamic>> blockUser(int friendId) async {
+    if (!_authService.isAuthenticated.value) return {'success': false, 'message': 'No autenticado'};
+    final token = await _authService.getAccessToken();
+    return _httpClient.blockUser(_normalizedJossRedBaseUrl(), token ?? "", friendId);
+  }
+
+  Future<Map<String, dynamic>> unblockUser(int friendId) async {
+    if (!_authService.isAuthenticated.value) return {'success': false, 'message': 'No autenticado'};
+    final token = await _authService.getAccessToken();
+    return _httpClient.unblockUser(_normalizedJossRedBaseUrl(), token ?? "", friendId);
   }
 
   Future<List<Playlist>> fetchPublicPlaylists() async {

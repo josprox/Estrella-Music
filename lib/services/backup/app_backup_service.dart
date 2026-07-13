@@ -226,8 +226,8 @@ class AppBackupService extends GetxService {
     if (!Hive.isBoxOpen('homeScreenData')) {
       await Hive.openBox('homeScreenData');
     }
-    if (!Hive.isBoxOpen('pendingSyncQueue')) {
-      await Hive.openBox('pendingSyncQueue');
+    if (!Hive.isBoxOpen('PendingSyncChanges')) {
+      await Hive.openBox('PendingSyncChanges');
     }
   }
 

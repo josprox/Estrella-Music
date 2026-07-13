@@ -131,13 +131,13 @@ class HomeScreenController extends GetxController {
           // Wait, QuickPicks can hold playlists if their ID is used to navigate.
           final items = (res["Community playlists"] as List).map((e) {
             if (e is Playlist) {
-              return MediaItemBuilder.fromJson({
-                'id': e.playlistId,
-                'title': e.title,
-                'artist': e.description ?? "YouTube Music",
-                'artUri': e.thumbnailUrl,
-                'extras': {'resultType': 'playlist'}
-              });
+              return MediaItem(
+                id: e.playlistId,
+                title: e.title,
+                artist: e.description ?? "YouTube Music",
+                artUri: Uri.tryParse(e.thumbnailUrl),
+                extras: {'resultType': 'playlist'},
+              );
             }
             return e as MediaItem;
           }).toList();
@@ -301,25 +301,7 @@ class HomeScreenController extends GetxController {
   }
 
   Future<void> loadContent() async {
-    final box = await Hive.openBox("AppPrefs");
-    final isCachedHomeScreenDataEnabled =
-        box.get("cacheHomeScreenData") ?? true;
-    if (isCachedHomeScreenDataEnabled) {
-      final loaded = await loadContentFromDb();
-
-      if (loaded) {
-        final currTimeSecsDiff = DateTime.now().millisecondsSinceEpoch -
-            (box.get("homeScreenDataTime") ??
-                DateTime.now().millisecondsSinceEpoch);
-        if (currTimeSecsDiff / 1000 > 3600 * 8) {
-          loadContentFromNetwork(silent: true);
-        }
-      } else {
-        loadContentFromNetwork();
-      }
-    } else {
-      loadContentFromNetwork();
-    }
+    loadContentFromNetwork();
   }
 
   Future<bool> loadContentFromDb() async {
@@ -433,8 +415,7 @@ class HomeScreenController extends GetxController {
             final contents = candidate["contents"];
             if (contents == null || (contents as List).isEmpty) continue;
             final first = contents.first;
-            if (first is Map &&
-                (first.containsKey('videoId') || first.containsKey('id'))) {
+            if (first is MediaItem) {
               final con = homeContentListMap.removeAt(i);
               quickPicks.value = QuickPicks(
                   List<MediaItem>.from(con["contents"]),

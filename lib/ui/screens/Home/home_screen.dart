@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hive/hive.dart';
 
 import '/ui/screens/Search/search_screen_controller.dart';
 import 'package:harmonymusic/ui/screens/Search/search_screen.dart';
@@ -18,6 +19,7 @@ import 'package:harmonymusic/ui/widgets/quickpickswidget.dart';
 import 'package:harmonymusic/ui/widgets/shimmer_widgets/home_shimmer.dart';
 import 'home_screen_controller.dart';
 import 'package:harmonymusic/ui/screens/Settings/settings_screen.dart';
+import 'package:harmonymusic/ui/screens/Friends/friends_management_screen.dart';
 import '/models/quick_picks.dart';
 
 import '/ui/theme/app_spacing.dart';
@@ -233,19 +235,31 @@ class Body extends StatelessWidget {
                                               .onSurface,
                                         ),
                                   ),
-                                  const Spacer(),
-                                  const SizedBox.shrink(),
-                                  IconButton(
-                                    icon: const Icon(Icons.settings_outlined,
-                                        size: 30),
-                                    onPressed: () {
-                                      Get.to(
-                                        () => const SettingsScreen(isBottomNavActive: false),
-                                        id: ScreenNavigationSetup.id,
-                                        transition: Transition.rightToLeft,
-                                      );
-                                    },
-                                  ),
+                                   const Spacer(),
+                                   if (Hive.box('AppPrefs').get('emusicDataMode', defaultValue: 'local') == 'cloud') ...[
+                                     IconButton(
+                                       icon: const Icon(Icons.people_outline_rounded,
+                                           size: 30),
+                                       onPressed: () {
+                                         Get.to(
+                                           () => const FriendsManagementScreen(),
+                                           id: ScreenNavigationSetup.id,
+                                           transition: Transition.rightToLeft,
+                                         );
+                                       },
+                                     ),
+                                   ],
+                                   IconButton(
+                                     icon: const Icon(Icons.settings_outlined,
+                                         size: 30),
+                                     onPressed: () {
+                                       Get.to(
+                                         () => const SettingsScreen(isBottomNavActive: false),
+                                         id: ScreenNavigationSetup.id,
+                                         transition: Transition.rightToLeft,
+                                       );
+                                     },
+                                   ),
                                 ],
                               ),
                             ),

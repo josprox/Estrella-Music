@@ -1,4 +1,4 @@
-﻿# AGENTS.md
+# AGENTS.md
 
 Guia operativa para agentes y desarrolladores que trabajen en Estrella Music / EMusic.
 
@@ -172,4 +172,8 @@ Notas confirmadas:
 6. No duplicar responsabilidades de Joss Red.
 7. Documentar cambios de API y migraciones.
 8. Validar con `joss server start` cuando se toque Joss/SCSS.
+
+## Herramientas de desarrollo
+- Utilizar siempre que sea posible el servidor `dart-mcp-server` (e.g. `analyze_files`, `pub`, `lsp`, `dtd`) para consultas, análisis estático y ayuda con el código Dart/Flutter.
+
 

@@ -5,6 +5,7 @@ import 'dart:io';
 import 'package:harmonymusic/utils/helpers/helper.dart';
 
 class SyncWebSocketClient {
+  Completer<bool>? _pushCompleter;
   WebSocket? _socket;
   StreamSubscription? _subscription;
   bool _isSocketAuthenticated = false;
@@ -53,6 +54,8 @@ class SyncWebSocketClient {
   }
 
   void _scheduleSocketReconnect(String wsUrl, String token) {
+    _pushCompleter?.complete(false);
+    _pushCompleter = null;
     _socket = null;
     _subscription?.cancel();
     _subscription = null;
@@ -65,6 +68,8 @@ class SyncWebSocketClient {
   }
 
   void disconnect() {
+    _pushCompleter?.complete(false);
+    _pushCompleter = null;
     _reconnectTimer?.cancel();
     _subscription?.cancel();
     _subscription = null;
@@ -74,15 +79,24 @@ class SyncWebSocketClient {
     printINFO("SyncWebSocketClient: WS Disconnected.");
   }
 
-  void sendPushPayload(Map<String, dynamic> payload) {
+  Future<bool> sendPushPayload(Map<String, dynamic> payload) {
     if (_socket == null || !_isSocketAuthenticated) {
-      throw Exception("WebSocket is not connected or authenticated.");
+      return Future.value(false);
     }
-    _socket!.add(jsonEncode({
-      "type": "push",
-      "payload": payload,
-      "device_id": deviceId
-    }));
+    _pushCompleter?.complete(false); // cancel any previous pending push
+    _pushCompleter = Completer<bool>();
+    try {
+      _socket!.add(jsonEncode({
+        "type": "push",
+        "payload": payload,
+        "device_id": deviceId
+      }));
+      return _pushCompleter!.future;
+    } catch (e) {
+      printERROR("SyncWebSocketClient: Failed to send push: $e");
+      _pushCompleter = null;
+      return Future.value(false);
+    }
   }
 
   void _handleSocketMessage(String raw, String wsUrl, String token) {
@@ -109,9 +123,13 @@ class SyncWebSocketClient {
           break;
         case 'push_success':
           printINFO("SyncWebSocketClient: WS push succeeded.");
+          _pushCompleter?.complete(true);
+          _pushCompleter = null;
           break;
         case 'error':
           printERROR("SyncWebSocketClient: WS Error: ${data['message']}");
+          _pushCompleter?.complete(false);
+          _pushCompleter = null;
           break;
       }
     } catch (e) {
