@@ -525,6 +525,16 @@ class MyAudioHandler extends BaseAudioHandler with GetxServiceMixin {
               processingState: AudioProcessingState.error,
               errorCode: 404,
               errorMessage: streamInfo.statusMSG));
+          // Auto-skip to the next song so the user isn't stuck on an
+          // unavailable track.
+          final nextIndex = _getNextSongIndex();
+          if (nextIndex != songIndex && queue.value.length > 1) {
+            printINFO(
+              'Auto-skipping unavailable song ${currentSong.id} to next',
+            );
+            await Future.delayed(const Duration(milliseconds: 500));
+            await customAction('playByIndex', {'index': nextIndex});
+          }
           return;
         }
         mediaItem.add(currentSong);
@@ -974,10 +984,18 @@ class MyAudioHandler extends BaseAudioHandler with GetxServiceMixin {
         if (streamInfo.playable) {
           return _ResolvedSongPlayback(song: song, streamInfo: streamInfo);
         }
+        printINFO(
+          'Song ${song.id} is not playable (${streamInfo.statusMSG}); '
+          'searching for a replacement with a new ID',
+        );
       }
 
       final recoveredSong = await _recoverSong(song);
       if (recoveredSong == null) {
+        printINFO(
+          'No replacement found for ${song.id} ("${song.title}"); '
+          'giving up recovery',
+        );
         return _ResolvedSongPlayback(
           song: song,
           streamInfo: streamInfo ??
@@ -988,11 +1006,21 @@ class MyAudioHandler extends BaseAudioHandler with GetxServiceMixin {
         );
       }
 
+      printINFO(
+        'Found potential replacement for ${song.id}: '
+        '${recoveredSong.id} ("${recoveredSong.title}"); '
+        'verifying playability',
+      );
+
       final recoveredStreamInfo = await checkNGetUrl(
         recoveredSong.id,
         generateNewUrl: true,
       );
       if (!recoveredStreamInfo.playable) {
+        printINFO(
+          'Replacement ${recoveredSong.id} is also not playable '
+          '(${recoveredStreamInfo.statusMSG}); giving up',
+        );
         return _ResolvedSongPlayback(
           song: song,
           streamInfo: streamInfo ?? recoveredStreamInfo,
@@ -1004,6 +1032,10 @@ class MyAudioHandler extends BaseAudioHandler with GetxServiceMixin {
         recoveredSong: recoveredSong,
       );
       await _replaceSongInQueue(song.id, recoveredSong);
+      printINFO(
+        'Successfully recovered song: ${song.id} -> ${recoveredSong.id} '
+        '("${recoveredSong.title}")',
+      );
       return _ResolvedSongPlayback(
         song: recoveredSong,
         streamInfo: recoveredStreamInfo,

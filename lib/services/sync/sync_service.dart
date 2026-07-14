@@ -81,6 +81,24 @@ class SyncService extends GetxService {
     if (_authService.isAuthenticated.value && isCloudMode) {
       connectSocket();
     }
+    unawaited(_syncOnStartup());
+  }
+
+  Future<void> _syncOnStartup() async {
+    // Wait a brief moment to let other services initialize (e.g. HttpClient, AuthService)
+    await Future.delayed(const Duration(milliseconds: 500));
+    if (!isCloudMode || !_authService.isAuthenticated.value) return;
+
+    final online = await checkConnection();
+    if (!online) return;
+
+    final hasPending = SqliteStore.box('AppPrefs').get(_pendingKey) == true;
+    if (hasPending) {
+      final success = await push();
+      if (success) await pull();
+    } else {
+      await pull();
+    }
   }
 
   void _setupLocalMutationWatchers() {

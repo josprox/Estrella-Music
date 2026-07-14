@@ -12,6 +12,7 @@ import 'package:harmonymusic/models/playlist.dart';
 import 'package:harmonymusic/ui/screens/Library/library_controller.dart';
 import 'package:harmonymusic/utils/helpers/helper.dart';
 import 'package:harmonymusic/services/music/music_service.dart';
+import 'package:harmonymusic/services/sync/sync_service.dart';
 
 class CatalogRecoveryService extends GetxService {
   MusicServices get _musicServices => Get.find<MusicServices>();
@@ -103,22 +104,41 @@ class CatalogRecoveryService extends GetxService {
     Duration? duration,
     Set<String> excludeIds = const {},
   }) async {
-    final query = [title, artistName, albumName]
+    // Build multiple search queries from most specific to least specific.
+    final queries = <String>{};
+
+    final fullQuery = [title, artistName, albumName]
         .where((value) => value != null && value.trim().isNotEmpty)
         .join(' ')
         .trim();
-    if (query.isEmpty) {
-      return null;
-    }
+    if (fullQuery.isNotEmpty) queries.add(fullQuery);
 
-    final candidates = await _searchCandidates<MediaItem>(
-      query: query,
-      filter: 'songs',
-    );
+    // Fallback: title + artist only (without album noise).
+    final titleArtistQuery = [title, artistName]
+        .where((value) => value != null && value.trim().isNotEmpty)
+        .join(' ')
+        .trim();
+    if (titleArtistQuery.isNotEmpty) queries.add(titleArtistQuery);
 
-    return _pickBestCandidate(
-      candidates.where((song) => !excludeIds.contains(song.id)).toList(),
-      (song) {
+    // Fallback: title only.
+    final titleOnly = title.trim();
+    if (titleOnly.isNotEmpty) queries.add(titleOnly);
+
+    if (queries.isEmpty) return null;
+
+    MediaItem? bestOverall;
+    var bestOverallScore = 0.0;
+
+    for (final query in queries) {
+      final candidates = await _searchCandidates<MediaItem>(
+        query: query,
+        filter: 'songs',
+      );
+
+      final filtered =
+          candidates.where((song) => !excludeIds.contains(song.id)).toList();
+
+      for (final song in filtered) {
         final titleScore = _textScore(song.title, title);
         final artistScore = (artistName == null || artistName.trim().isEmpty)
             ? 1.0
@@ -127,13 +147,41 @@ class CatalogRecoveryService extends GetxService {
             ? 1.0
             : _textScore(song.album ?? '', albumName);
         final durationScore = _durationScore(song.duration, duration);
-        return titleScore * 0.6 +
+        final score = titleScore * 0.6 +
             artistScore * 0.3 +
             albumScore * 0.05 +
             durationScore * 0.05;
-      },
-      minimumScore: 0.72,
-    );
+
+        printINFO(
+          'Recovery candidate: "${song.title}" by ${song.artist} '
+          '(${song.id}) score=$score '
+          '[title=$titleScore, artist=$artistScore, '
+          'album=$albumScore, duration=$durationScore]',
+        );
+
+        if (score > bestOverallScore) {
+          bestOverallScore = score;
+          bestOverall = song;
+        }
+      }
+
+      // If we found a good enough candidate, return early.
+      if (bestOverallScore >= 0.55) {
+        return bestOverall;
+      }
+    }
+
+    // Fallback: If we couldn't find any candidate matching >= 0.55, but we
+    // found at least one candidate (score > 0), return the best one.
+    if (bestOverall != null && bestOverallScore > 0.0) {
+      printINFO(
+        'No candidate met the 0.55 threshold. Falling back to best match: '
+        '"${bestOverall.title}" by ${bestOverall.artist} (${bestOverall.id}) with score=$bestOverallScore',
+      );
+      return bestOverall;
+    }
+
+    return null;
   }
 
   Future<void> persistRecoveredArtist({
@@ -258,7 +306,7 @@ class CatalogRecoveryService extends GetxService {
       final results = await _musicServices.search(
         query,
         filter: filter,
-        limit: 8,
+        limit: 20,
         ignoreSpelling: true,
       );
 
@@ -391,6 +439,34 @@ class CatalogRecoveryService extends GetxService {
           await box.put(recoveredSong.id, recoveredJson);
         } else {
           await box.put(key, recoveredJson);
+        }
+
+        // If this box is a playlist, sync the change (delete old, insert new) to the cloud
+        if (SqliteStore.box('LibraryPlaylists').containsKey(boxName)) {
+          if (Get.isRegistered<SyncService>()) {
+            final syncService = Get.find<SyncService>();
+            final position = key is int ? key : int.tryParse(key.toString());
+            printINFO(
+              'Syncing recovered track ${recoveredSong.id} to playlist $boxName '
+              'at position $position (key=$key, key type: ${key.runtimeType})',
+            );
+            
+            // Delete old song ID from cloud playlist
+            await syncService.recordPlaylistTrackChange(
+              boxName,
+              oldSongId,
+              deleted: true,
+            );
+            
+            // Add new song ID to cloud playlist
+            await syncService.recordPlaylistTrackChange(
+              boxName,
+              recoveredSong.id,
+              deleted: false,
+              track: recoveredJson,
+              position: position,
+            );
+          }
         }
       }
     }

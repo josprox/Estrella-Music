@@ -25,7 +25,10 @@ import 'package:harmonymusic/generated/l10n.dart';
 import 'package:harmonymusic/utils/localization/l10n_extensions.dart';
 
 class Downloader extends GetxService {
-  final _dio = Dio();
+  final _dio = Dio(BaseOptions(
+    connectTimeout: const Duration(seconds: 15),
+    receiveTimeout: const Duration(minutes: 5),
+  ));
   MediaItem? currentSong;
   RxMap<String, List<MediaItem>> playlistQueue =
       <String, List<MediaItem>>{}.obs;
@@ -142,16 +145,21 @@ class Downloader extends GetxService {
       }
 
       if (SqliteStore.box("SongDownloads").containsKey(song.id)) {
-        songQueue.remove(song);
+        songQueue.removeWhere((s) => s.id == song.id);
+        continue;
+      }
+
+      // Skip if this song is already being downloaded
+      if (songProgressMap.containsKey(song.id)) {
         continue;
       }
 
       // Wait if we reached the limit of concurrent downloads
       while (activeDownloads.length >= maxConcurrentDownloads) {
-        await Future.delayed(const Duration(milliseconds: 100));
+        await Future.any(activeDownloads);
         activeDownloads.removeWhere((f) =>
             f.hashCode ==
-            -1); // Dummy to trigger cleanup if I used a wrapper, but I'll use then() instead
+            -1); // cleaned up via .then() below
       }
 
       final downloadTask = _downloadSongTask(song, isPlaylist, jobSongList);
@@ -170,12 +178,13 @@ class Downloader extends GetxService {
 
   Future<void> _downloadSongTask(
       MediaItem song, bool isPlaylist, List<MediaItem> jobSongList) async {
+    final songId = song.id;
     currentSong =
         song; // This might still flicker if multiple songs are downloading, but we'll use individual progress in UI
-    songProgressMap[song.id] = 0;
+    songProgressMap[songId] = 0;
     await writeFileStream(song);
-    songQueue.remove(song);
-    songProgressMap.remove(song.id);
+    songQueue.removeWhere((s) => s.id == songId);
+    songProgressMap.remove(songId);
   }
 
   Future<void> writeFileStream(MediaItem song) async {
@@ -306,17 +315,18 @@ class Downloader extends GetxService {
       final response = await StreamProvider.fetch(song.id);
       if (response.videoUnavailable) {
         printINFO(
-          'Video ${song.id} is unavailable; recovering only this song',
+          'Video ${song.id} is unavailable; attempting to find replacement',
         );
         throw _UnavailableVideoException(response.statusMSG);
       }
       if (!response.playable) {
         printINFO(
-          'Song ${song.id} failed without an unavailable-video signal: '
-          '${response.statusMSG}',
+          'Song ${song.id} is not playable (${response.statusMSG}); '
+          'attempting recovery as it may have a new ID',
         );
-        _showDownloadError(response.statusMSG);
-        return null;
+        // Treat all non-playable songs the same as unavailable — the video
+        // ID may have changed and a search can find the replacement.
+        throw _UnavailableVideoException(response.statusMSG);
       }
       final audio = _selectAudio(response, downloadingFormat);
       if (audio == null) {
