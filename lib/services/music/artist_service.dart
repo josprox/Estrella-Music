@@ -151,7 +151,7 @@ class ArtistService {
           }
           return null;
         })
-        .whereType<dynamic>()
+        .where((e) => e != null)
         .toList();
   }
 }

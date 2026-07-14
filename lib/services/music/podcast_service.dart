@@ -175,12 +175,12 @@ class PodcastService {
       if (contents?['gridRenderer'] != null) {
         items = contents?['gridRenderer']['items']
             ?.map((item) => parseTwoRowItem(item['musicTwoRowItemRenderer']))
-            ?.whereType<dynamic>()
+            ?.where((e) => e != null)
             ?.toList() ?? [];
       } else if (contents?['musicShelfRenderer'] != null) {
         items = contents?['musicShelfRenderer']['contents']
             ?.map((item) => parseSongFlat(item['musicResponsiveListItemRenderer']))
-            ?.whereType<dynamic>()
+            ?.where((e) => e != null)
             ?.toList() ?? [];
       }
       return items.where((element) => element.isPodcast == true).toList();

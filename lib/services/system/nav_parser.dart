@@ -987,7 +987,7 @@ List<dynamic> parseSearchResults(List<dynamic> results,
         return parseSearchResult(Map<String, dynamic>.from(result),
             searchResultTypes, resultType, category);
       })
-      .whereType<dynamic>()
+      .where((e) => e != null)
       .toList();
 }
 
@@ -1307,7 +1307,7 @@ List<dynamic> _parseShelfContents(List<dynamic> contentList,
         }
         return null;
       })
-      .whereType<dynamic>()
+      .where((e) => e != null)
       .toList();
 }
 
