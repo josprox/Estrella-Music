@@ -221,7 +221,9 @@ class _SpotifyArtistScreen extends StatelessWidget {
                         // Monthly listeners (Metrolist parity)
                         Obx(() {
                           final ml = ctrl.monthlyListeners.value;
-                          if (ml == null || ml.isEmpty) return const SizedBox.shrink();
+                          if (ml == null || ml.isEmpty) {
+                            return const SizedBox.shrink();
+                          }
                           return Padding(
                             padding: const EdgeInsets.only(top: 4),
                             child: Text(
@@ -293,10 +295,13 @@ class _SpotifyArtistScreen extends StatelessWidget {
                       final isAdded = ctrl.isAddedToLibrary.isTrue;
                       if (isAdded) {
                         return FilledButton.tonal(
-                          onPressed: () => ctrl.addNremoveFromLibrary(add: false),
+                          onPressed: () =>
+                              ctrl.addNremoveFromLibrary(add: false),
                           child: Text(
                             S.current.following.toUpperCase(),
-                            style: const TextStyle(fontWeight: FontWeight.w700, letterSpacing: 0.5),
+                            style: const TextStyle(
+                                fontWeight: FontWeight.w700,
+                                letterSpacing: 0.5),
                           ),
                         );
                       }
@@ -304,7 +309,8 @@ class _SpotifyArtistScreen extends StatelessWidget {
                         onPressed: () => ctrl.addNremoveFromLibrary(add: true),
                         child: Text(
                           S.current.follow.toUpperCase(),
-                          style: const TextStyle(fontWeight: FontWeight.w700, letterSpacing: 0.5),
+                          style: const TextStyle(
+                              fontWeight: FontWeight.w700, letterSpacing: 0.5),
                         ),
                       );
                     }),
@@ -341,7 +347,9 @@ class _SpotifyArtistScreen extends StatelessWidget {
                       Container(
                         padding: const EdgeInsets.all(16),
                         decoration: BoxDecoration(
-                          color: Theme.of(context).colorScheme.surfaceContainerHighest,
+                          color: Theme.of(context)
+                              .colorScheme
+                              .surfaceContainerHighest,
                           borderRadius: BorderRadius.circular(24),
                         ),
                         child: Text(
@@ -405,20 +413,29 @@ class _SpotifyArtistScreen extends StatelessWidget {
                                   tooltip: "Descargar todas las favoritas",
                                   onPressed: () {
                                     final downloader = Get.find<Downloader>();
-                                    int count = 0;
-                                    for (var song in ctrl.likedSongsOfArtist) {
-                                      if (!SqliteStore.box("SongDownloads").containsKey(song.id)) {
-                                        downloader.download(song);
-                                        count++;
-                                      }
+                                    final songs = ctrl.likedSongsOfArtist
+                                        .where((song) =>
+                                            !SqliteStore.box("SongDownloads")
+                                                .containsKey(song.id))
+                                        .toList();
+                                    final count = songs.length;
+                                    if (songs.isNotEmpty) {
+                                      downloader.download(null,
+                                          songList: songs);
                                     }
                                     if (count > 0) {
-                                      ScaffoldMessenger.of(context).showSnackBar(
-                                        SnackBar(content: Text("Descargando $count canciones favoritas")),
+                                      ScaffoldMessenger.of(context)
+                                          .showSnackBar(
+                                        SnackBar(
+                                            content: Text(
+                                                "Descargando $count canciones favoritas")),
                                       );
                                     } else {
-                                      ScaffoldMessenger.of(context).showSnackBar(
-                                        const SnackBar(content: Text("Todas las favoritas ya están descargadas")),
+                                      ScaffoldMessenger.of(context)
+                                          .showSnackBar(
+                                        const SnackBar(
+                                            content: Text(
+                                                "Todas las favoritas ya están descargadas")),
                                       );
                                     }
                                   },
@@ -596,9 +613,10 @@ class _SpotifyArtistScreen extends StatelessWidget {
             Obx(() {
               final episodes = ctrl.artistData['Episodes'];
               if (episodes == null) return const SliverToBoxAdapter();
-              final items = (episodes['content'] as List?)?.take(5).toList() ?? [];
+              final items =
+                  (episodes['content'] as List?)?.take(5).toList() ?? [];
               if (items.isEmpty) return const SliverToBoxAdapter();
-              
+
               return SliverToBoxAdapter(
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(20, 32, 20, 12),
@@ -623,7 +641,10 @@ class _SpotifyArtistScreen extends StatelessWidget {
                             child: Text(
                               S.current.viewAll,
                               style: TextStyle(
-                                color: Theme.of(context).colorScheme.onSurface.withAlpha(138),
+                                color: Theme.of(context)
+                                    .colorScheme
+                                    .onSurface
+                                    .withAlpha(138),
                                 fontSize: 13,
                                 fontWeight: FontWeight.w600,
                               ),
@@ -836,7 +857,6 @@ class _SpotifyArtistScreen extends StatelessWidget {
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
-
       builder: (context) => _ContentModal(
         title: title,
         initialItems: initialItems,
@@ -892,7 +912,10 @@ class _SpotifyArtistScreen extends StatelessWidget {
                       height: 40,
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        color: Theme.of(context).colorScheme.surface.withAlpha(150),
+                        color: Theme.of(context)
+                            .colorScheme
+                            .surface
+                            .withAlpha(150),
                       ),
                       child: Icon(Icons.arrow_back_ios_new_rounded,
                           color: Theme.of(context).colorScheme.onSurface,
@@ -928,17 +951,29 @@ class _SpotifyArtistScreen extends StatelessWidget {
                                   imageUrl: heroUrl,
                                   fit: BoxFit.cover,
                                   placeholder: (_, __) => Container(
-                                    color: Theme.of(context).colorScheme.onSurface.withAlpha(26),
-                                    child: const Center(child: LoadingIndicator()),
+                                    color: Theme.of(context)
+                                        .colorScheme
+                                        .onSurface
+                                        .withAlpha(26),
+                                    child:
+                                        const Center(child: LoadingIndicator()),
                                   ),
                                   errorWidget: (_, __, ___) => Container(
-                                    color: Theme.of(context).colorScheme.onSurface.withAlpha(26),
-                                    child: const Icon(Icons.person_rounded, size: 60),
+                                    color: Theme.of(context)
+                                        .colorScheme
+                                        .onSurface
+                                        .withAlpha(26),
+                                    child: const Icon(Icons.person_rounded,
+                                        size: 60),
                                   ),
                                 )
                               : Container(
-                                  color: Theme.of(context).colorScheme.onSurface.withAlpha(26),
-                                  child: const Icon(Icons.person_rounded, size: 60),
+                                  color: Theme.of(context)
+                                      .colorScheme
+                                      .onSurface
+                                      .withAlpha(26),
+                                  child: const Icon(Icons.person_rounded,
+                                      size: 60),
                                 ),
                         ),
                       ),
@@ -951,12 +986,16 @@ class _SpotifyArtistScreen extends StatelessWidget {
                           children: [
                             Row(
                               children: [
-                                const Icon(Icons.verified_rounded, color: Colors.blue, size: 20),
+                                const Icon(Icons.verified_rounded,
+                                    color: Colors.blue, size: 20),
                                 const SizedBox(width: 6),
                                 Text(
                                   "ARTISTA VERIFICADO",
                                   style: TextStyle(
-                                    color: Theme.of(context).colorScheme.onSurface.withAlpha(180),
+                                    color: Theme.of(context)
+                                        .colorScheme
+                                        .onSurface
+                                        .withAlpha(180),
                                     fontSize: 12,
                                     fontWeight: FontWeight.bold,
                                     letterSpacing: 1.5,
@@ -991,18 +1030,26 @@ class _SpotifyArtistScreen extends StatelessWidget {
                                     height: 4,
                                     decoration: BoxDecoration(
                                       shape: BoxShape.circle,
-                                      color: Theme.of(context).colorScheme.onSurface.withAlpha(120),
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .onSurface
+                                          .withAlpha(120),
                                     ),
                                   ),
                                   const SizedBox(width: 16),
                                 ],
                                 Obx(() {
                                   final ml = ctrl.monthlyListeners.value;
-                                  if (ml == null || ml.isEmpty) return const SizedBox.shrink();
+                                  if (ml == null || ml.isEmpty) {
+                                    return const SizedBox.shrink();
+                                  }
                                   return Text(
                                     ml,
                                     style: TextStyle(
-                                      color: Theme.of(context).colorScheme.onSurface.withAlpha(180),
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .onSurface
+                                          .withAlpha(180),
                                       fontSize: 14,
                                       fontWeight: FontWeight.w600,
                                     ),
@@ -1019,7 +1066,8 @@ class _SpotifyArtistScreen extends StatelessWidget {
                                   onTap: () {
                                     final songs = ctrl.artistData['Songs'];
                                     if (songs != null) {
-                                      final allItems = (songs['content'] as List?) ?? [];
+                                      final allItems =
+                                          (songs['content'] as List?) ?? [];
                                       if (allItems.isNotEmpty) {
                                         playerController.playPlayListSong(
                                             List.from(allItems), 0);
@@ -1028,15 +1076,18 @@ class _SpotifyArtistScreen extends StatelessWidget {
                                   },
                                   child: Container(
                                     height: 48,
-                                    padding: const EdgeInsets.symmetric(horizontal: 28),
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 28),
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(24),
-                                      color: Theme.of(context).colorScheme.primary,
+                                      color:
+                                          Theme.of(context).colorScheme.primary,
                                     ),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.min,
                                       children: [
-                                        const Icon(Icons.play_arrow_rounded, size: 24, color: Colors.white),
+                                        const Icon(Icons.play_arrow_rounded,
+                                            size: 24, color: Colors.white),
                                         const SizedBox(width: 8),
                                         Text(
                                           S.current.play,
@@ -1054,7 +1105,9 @@ class _SpotifyArtistScreen extends StatelessWidget {
                                 // Shuffle Button
                                 Obx(() {
                                   final sId = ctrl.shuffleId.value;
-                                  if (sId == null) return const SizedBox.shrink();
+                                  if (sId == null) {
+                                    return const SizedBox.shrink();
+                                  }
                                   return GestureDetector(
                                     onTap: () {
                                       final songs = ctrl.artistData['Songs'];
@@ -1062,7 +1115,8 @@ class _SpotifyArtistScreen extends StatelessWidget {
                                           ? (songs['content'] as List?) ?? []
                                           : <dynamic>[];
                                       if (allItems.isNotEmpty) {
-                                        final shuffled = List.from(allItems)..shuffle();
+                                        final shuffled = List.from(allItems)
+                                          ..shuffle();
                                         playerController.playPlayListSong(
                                             List.from(shuffled), 0);
                                       }
@@ -1072,11 +1126,16 @@ class _SpotifyArtistScreen extends StatelessWidget {
                                       width: 48,
                                       decoration: BoxDecoration(
                                         shape: BoxShape.circle,
-                                        color: Theme.of(context).colorScheme.onSurface.withAlpha(20),
+                                        color: Theme.of(context)
+                                            .colorScheme
+                                            .onSurface
+                                            .withAlpha(20),
                                       ),
                                       child: Icon(
                                         Icons.shuffle_rounded,
-                                        color: Theme.of(context).colorScheme.primary,
+                                        color: Theme.of(context)
+                                            .colorScheme
+                                            .primary,
                                         size: 20,
                                       ),
                                     ),
@@ -1087,31 +1146,46 @@ class _SpotifyArtistScreen extends StatelessWidget {
                                 Obx(() {
                                   final isAdded = ctrl.isAddedToLibrary.value;
                                   return GestureDetector(
-                                    onTap: () => ctrl.addNremoveFromLibrary(add: !isAdded),
+                                    onTap: () => ctrl.addNremoveFromLibrary(
+                                        add: !isAdded),
                                     child: Container(
                                       height: 48,
-                                      padding: const EdgeInsets.symmetric(horizontal: 24),
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 24),
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(24),
                                         border: Border.all(
-                                          color: Theme.of(context).colorScheme.onSurface.withAlpha(60),
+                                          color: Theme.of(context)
+                                              .colorScheme
+                                              .onSurface
+                                              .withAlpha(60),
                                           width: 1.5,
                                         ),
                                         color: isAdded
-                                            ? Theme.of(context).colorScheme.onSurface.withAlpha(12)
+                                            ? Theme.of(context)
+                                                .colorScheme
+                                                .onSurface
+                                                .withAlpha(12)
                                             : Colors.transparent,
                                       ),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.min,
                                         children: [
                                           Icon(
-                                            isAdded ? Icons.library_add_check_rounded : Icons.library_add_rounded,
-                                            color: Theme.of(context).colorScheme.onSurface,
+                                            isAdded
+                                                ? Icons
+                                                    .library_add_check_rounded
+                                                : Icons.library_add_rounded,
+                                            color: Theme.of(context)
+                                                .colorScheme
+                                                .onSurface,
                                             size: 18,
                                           ),
                                           const SizedBox(width: 8),
                                           Text(
-                                            isAdded ? S.current.following : S.current.follow,
+                                            isAdded
+                                                ? S.current.following
+                                                : S.current.follow,
                                             style: const TextStyle(
                                               fontSize: 14,
                                               fontWeight: FontWeight.bold,
@@ -1136,10 +1210,16 @@ class _SpotifyArtistScreen extends StatelessWidget {
                                     width: 48,
                                     decoration: BoxDecoration(
                                       shape: BoxShape.circle,
-                                      color: Theme.of(context).colorScheme.onSurface.withAlpha(20),
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .onSurface
+                                          .withAlpha(20),
                                     ),
                                     child: Icon(Icons.share_rounded,
-                                        color: Theme.of(context).colorScheme.onSurface.withAlpha(153),
+                                        color: Theme.of(context)
+                                            .colorScheme
+                                            .onSurface
+                                            .withAlpha(153),
                                         size: 20),
                                   ),
                                 ),
@@ -1185,7 +1265,10 @@ class _SpotifyArtistScreen extends StatelessWidget {
                             child: Text(
                               S.current.viewAll,
                               style: TextStyle(
-                                color: Theme.of(context).colorScheme.onSurface.withAlpha(138),
+                                color: Theme.of(context)
+                                    .colorScheme
+                                    .onSurface
+                                    .withAlpha(138),
                                 fontSize: 14,
                                 fontWeight: FontWeight.w600,
                               ),
@@ -1198,7 +1281,9 @@ class _SpotifyArtistScreen extends StatelessWidget {
                       Obx(() {
                         final songs = ctrl.artistData['Songs'];
                         if (songs == null) return const SizedBox.shrink();
-                        final items = (songs['content'] as List?)?.take(8).toList() ?? []; // Show 8 on PC
+                        final items =
+                            (songs['content'] as List?)?.take(8).toList() ??
+                                []; // Show 8 on PC
                         return Column(
                           children: List.generate(items.length, (index) {
                             return _TrackRow(
@@ -1232,17 +1317,24 @@ class _SpotifyArtistScreen extends StatelessWidget {
                         return Container(
                           padding: const EdgeInsets.all(24),
                           decoration: BoxDecoration(
-                            color: Theme.of(context).colorScheme.onSurface.withAlpha(8),
+                            color: Theme.of(context)
+                                .colorScheme
+                                .onSurface
+                                .withAlpha(8),
                             borderRadius: BorderRadius.circular(20),
                             border: Border.all(
-                              color: Theme.of(context).colorScheme.onSurface.withAlpha(12),
+                              color: Theme.of(context)
+                                  .colorScheme
+                                  .onSurface
+                                  .withAlpha(12),
                             ),
                           ),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
                                     S.current.favorites,
@@ -1255,35 +1347,50 @@ class _SpotifyArtistScreen extends StatelessWidget {
                                     children: [
                                       // Download All Favorites Button
                                       IconButton(
-                                        icon: const Icon(Icons.download_rounded),
+                                        icon:
+                                            const Icon(Icons.download_rounded),
                                         tooltip: "Descargar favoritas",
                                         onPressed: () {
-                                          final downloader = Get.find<Downloader>();
-                                          int count = 0;
-                                          for (var song in ctrl.likedSongsOfArtist) {
-                                            if (!SqliteStore.box("SongDownloads").containsKey(song.id)) {
-                                              downloader.download(song);
-                                              count++;
-                                            }
+                                          final downloader =
+                                              Get.find<Downloader>();
+                                          final songs = ctrl.likedSongsOfArtist
+                                              .where((song) => !SqliteStore.box(
+                                                      "SongDownloads")
+                                                  .containsKey(song.id))
+                                              .toList();
+                                          final count = songs.length;
+                                          if (songs.isNotEmpty) {
+                                            downloader.download(null,
+                                                songList: songs);
                                           }
                                           if (count > 0) {
-                                            ScaffoldMessenger.of(context).showSnackBar(
-                                              SnackBar(content: Text("Descargando $count canciones favoritas")),
+                                            ScaffoldMessenger.of(context)
+                                                .showSnackBar(
+                                              SnackBar(
+                                                  content: Text(
+                                                      "Descargando $count canciones favoritas")),
                                             );
                                           } else {
-                                            ScaffoldMessenger.of(context).showSnackBar(
-                                              const SnackBar(content: Text("Todas las favoritas ya están descargadas")),
+                                            ScaffoldMessenger.of(context)
+                                                .showSnackBar(
+                                              const SnackBar(
+                                                  content: Text(
+                                                      "Todas las favoritas ya están descargadas")),
                                             );
                                           }
                                         },
                                       ),
                                       const SizedBox(width: 4),
                                       GestureDetector(
-                                        onTap: () => _showAllLikedSongs(context),
+                                        onTap: () =>
+                                            _showAllLikedSongs(context),
                                         child: Text(
                                           S.current.viewAll,
                                           style: TextStyle(
-                                            color: Theme.of(context).colorScheme.onSurface.withAlpha(138),
+                                            color: Theme.of(context)
+                                                .colorScheme
+                                                .onSurface
+                                                .withAlpha(138),
                                             fontSize: 13,
                                             fontWeight: FontWeight.w600,
                                           ),
@@ -1316,10 +1423,16 @@ class _SpotifyArtistScreen extends StatelessWidget {
                         Container(
                           padding: const EdgeInsets.all(24),
                           decoration: BoxDecoration(
-                            color: Theme.of(context).colorScheme.onSurface.withAlpha(8),
+                            color: Theme.of(context)
+                                .colorScheme
+                                .onSurface
+                                .withAlpha(8),
                             borderRadius: BorderRadius.circular(20),
                             border: Border.all(
-                              color: Theme.of(context).colorScheme.onSurface.withAlpha(12),
+                              color: Theme.of(context)
+                                  .colorScheme
+                                  .onSurface
+                                  .withAlpha(12),
                             ),
                           ),
                           child: Column(
@@ -1336,7 +1449,10 @@ class _SpotifyArtistScreen extends StatelessWidget {
                               Text(
                                 description,
                                 style: TextStyle(
-                                  color: Theme.of(context).colorScheme.onSurface.withAlpha(180),
+                                  color: Theme.of(context)
+                                      .colorScheme
+                                      .onSurface
+                                      .withAlpha(180),
                                   fontSize: 14,
                                   height: 1.5,
                                 ),
@@ -1364,33 +1480,43 @@ class _SpotifyArtistScreen extends StatelessWidget {
               Obx(() {
                 final albums = ctrl.artistData['Albums'];
                 if (albums == null) return const SizedBox.shrink();
-                final items = (albums['content'] as List?)?.take(12).toList() ?? [];
+                final items =
+                    (albums['content'] as List?)?.take(12).toList() ?? [];
                 if (items.isEmpty) return const SizedBox.shrink();
-                return _buildDesktopHorizontalSection(context, ctrl, S.current.albums, items, 'Albums');
+                return _buildDesktopHorizontalSection(
+                    context, ctrl, S.current.albums, items, 'Albums');
               }),
               // Singles
               Obx(() {
                 final singles = ctrl.artistData['Singles'];
                 if (singles == null) return const SizedBox.shrink();
-                final items = (singles['content'] as List?)?.take(12).toList() ?? [];
+                final items =
+                    (singles['content'] as List?)?.take(12).toList() ?? [];
                 if (items.isEmpty) return const SizedBox.shrink();
-                return _buildDesktopHorizontalSection(context, ctrl, S.current.singles, items, 'Singles');
+                return _buildDesktopHorizontalSection(
+                    context, ctrl, S.current.singles, items, 'Singles');
               }),
               // Videos
               Obx(() {
                 final videos = ctrl.artistData['Videos'];
                 if (videos == null) return const SizedBox.shrink();
-                final items = (videos['content'] as List?)?.take(12).toList() ?? [];
+                final items =
+                    (videos['content'] as List?)?.take(12).toList() ?? [];
                 if (items.isEmpty) return const SizedBox.shrink();
-                return _buildDesktopHorizontalSection(context, ctrl, S.current.videos, items, 'Videos', isVideo: true);
+                return _buildDesktopHorizontalSection(
+                    context, ctrl, S.current.videos, items, 'Videos',
+                    isVideo: true);
               }),
               // Playlists
               Obx(() {
                 final playlists = ctrl.artistData['Playlists'];
                 if (playlists == null) return const SizedBox.shrink();
-                final items = (playlists['content'] as List?)?.take(12).toList() ?? [];
+                final items =
+                    (playlists['content'] as List?)?.take(12).toList() ?? [];
                 if (items.isEmpty) return const SizedBox.shrink();
-                return _buildDesktopHorizontalSection(context, ctrl, S.current.playlists, items, 'Playlists', isPlaylist: true);
+                return _buildDesktopHorizontalSection(
+                    context, ctrl, S.current.playlists, items, 'Playlists',
+                    isPlaylist: true);
               }),
               const SizedBox(height: 120),
             ]),
@@ -1400,14 +1526,9 @@ class _SpotifyArtistScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildDesktopHorizontalSection(
-      BuildContext context,
-      ArtistScreenController ctrl,
-      String title,
-      List items,
-      String sectionKey,
-      {bool isVideo = false,
-      bool isPlaylist = false}) {
+  Widget _buildDesktopHorizontalSection(BuildContext context,
+      ArtistScreenController ctrl, String title, List items, String sectionKey,
+      {bool isVideo = false, bool isPlaylist = false}) {
     return Padding(
       padding: const EdgeInsets.only(top: 48),
       child: Column(
@@ -1434,7 +1555,8 @@ class _SpotifyArtistScreen extends StatelessWidget {
                       ScreenNavigationSetup.artistContentListScreen,
                       id: ScreenNavigationSetup.id,
                       arguments: {
-                        'browseEndpoint': Map<String, dynamic>.from(ctrl.artistData[sectionKey] as Map),
+                        'browseEndpoint': Map<String, dynamic>.from(
+                            ctrl.artistData[sectionKey] as Map),
                         'title': title,
                       },
                     );
@@ -1443,7 +1565,8 @@ class _SpotifyArtistScreen extends StatelessWidget {
                 child: Text(
                   S.current.viewAll,
                   style: TextStyle(
-                    color: Theme.of(context).colorScheme.onSurface.withAlpha(138),
+                    color:
+                        Theme.of(context).colorScheme.onSurface.withAlpha(138),
                     fontSize: 14,
                     fontWeight: FontWeight.w600,
                   ),
@@ -1656,7 +1779,6 @@ class _TrackRow extends StatelessWidget {
                   Get.bottomSheet(
                     SongInfoBottomSheet(song),
                     isScrollControlled: true,
-
                   );
                 },
                 icon: Icon(
@@ -2185,10 +2307,7 @@ class _OfflineArtistView extends StatelessWidget {
                     colors: [
                       Colors.transparent,
                       Colors.transparent,
-                      Theme.of(context)
-                          .colorScheme
-                          .surface
-                          .withAlpha(150),
+                      Theme.of(context).colorScheme.surface.withAlpha(150),
                       Theme.of(context).colorScheme.surface,
                     ],
                   ),
@@ -2197,19 +2316,16 @@ class _OfflineArtistView extends StatelessWidget {
               // Back button
               SafeArea(
                 child: IconButton(
-                  onPressed: () =>
-                      Get.nestedKey(ScreenNavigationSetup.id)!
-                          .currentState!
-                          .pop(),
+                  onPressed: () => Get.nestedKey(ScreenNavigationSetup.id)!
+                      .currentState!
+                      .pop(),
                   icon: Container(
                     width: 38,
                     height: 38,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      color: Theme.of(context)
-                          .colorScheme
-                          .surface
-                          .withAlpha(120),
+                      color:
+                          Theme.of(context).colorScheme.surface.withAlpha(120),
                     ),
                     child: Icon(Icons.arrow_back_ios_new_rounded,
                         color: Theme.of(context).colorScheme.onSurface,

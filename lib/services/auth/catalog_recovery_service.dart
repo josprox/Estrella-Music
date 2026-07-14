@@ -214,9 +214,21 @@ class CatalogRecoveryService extends GetxService {
     required MediaItem oldSong,
     required MediaItem recoveredSong,
   }) async {
-    if (oldSong.id == recoveredSong.id) {
-      return;
+    await persistRecoveredSongs([
+      (oldSong: oldSong, recoveredSong: recoveredSong),
+    ]);
+  }
+
+  Future<void> persistRecoveredSongs(
+    List<({MediaItem oldSong, MediaItem recoveredSong})> recoveries,
+  ) async {
+    final replacements = <String, MediaItem>{};
+    for (final recovery in recoveries) {
+      if (recovery.oldSong.id != recovery.recoveredSong.id) {
+        replacements[recovery.oldSong.id] = recovery.recoveredSong;
+      }
     }
+    if (replacements.isEmpty) return;
 
     final contentBoxNames = <String>{
       'LIBFAV',
@@ -226,19 +238,15 @@ class CatalogRecoveryService extends GetxService {
     };
 
     for (final boxName in contentBoxNames) {
-      await _replaceSongInIndexedBox(
+      await _replaceSongsInIndexedBox(
         boxName: boxName,
-        oldSong: oldSong,
-        recoveredSong: recoveredSong,
+        replacements: replacements,
       );
     }
 
-    await _migrateDownloadedSong(
-      oldSong: oldSong,
-      recoveredSong: recoveredSong,
-    );
-    await _deleteCachedSong(oldSong.id);
-    await _deleteSongUrlCache(oldSong.id);
+    await _migrateDownloadedSongs(replacements);
+    await _deleteCachedSongs(replacements.keys);
+    await _deleteSongUrlCaches(replacements.keys);
     await _refreshSongsLibrary();
   }
 
@@ -360,10 +368,9 @@ class CatalogRecoveryService extends GetxService {
     return boxNames;
   }
 
-  Future<void> _replaceSongInIndexedBox({
+  Future<void> _replaceSongsInIndexedBox({
     required String boxName,
-    required MediaItem oldSong,
-    required MediaItem recoveredSong,
+    required Map<String, MediaItem> replacements,
   }) async {
     final wasOpen = SqliteStore.isBoxOpen(boxName);
     final box =
@@ -371,12 +378,15 @@ class CatalogRecoveryService extends GetxService {
 
     for (final key in box.keys.toList()) {
       final value = box.get(key);
-      if (value is Map && value['videoId'] == oldSong.id) {
+      if (value is Map) {
+        final oldSongId = value['videoId']?.toString();
+        final recoveredSong = replacements[oldSongId];
+        if (oldSongId == null || recoveredSong == null) continue;
         final recoveredJson = _mergeRecoveredSongJson(
           existingJson: value,
           recoveredSong: recoveredSong,
         );
-        if (boxName == 'LIBFAV' && key.toString() == oldSong.id) {
+        if (boxName == 'LIBFAV' && key.toString() == oldSongId) {
           await box.delete(key);
           await box.put(recoveredSong.id, recoveredJson);
         } else {
@@ -390,24 +400,24 @@ class CatalogRecoveryService extends GetxService {
     }
   }
 
-  Future<void> _migrateDownloadedSong({
-    required MediaItem oldSong,
-    required MediaItem recoveredSong,
-  }) async {
+  Future<void> _migrateDownloadedSongs(
+    Map<String, MediaItem> replacements,
+  ) async {
     final wasOpen = SqliteStore.isBoxOpen('SongDownloads');
     final box = wasOpen
         ? SqliteStore.box('SongDownloads')
         : await SqliteStore.openBox('SongDownloads');
 
-    if (box.containsKey(oldSong.id)) {
-      final value = box.get(oldSong.id);
+    for (final replacement in replacements.entries) {
+      if (!box.containsKey(replacement.key)) continue;
+      final value = box.get(replacement.key);
       if (value is Map) {
-        await box.delete(oldSong.id);
+        await box.delete(replacement.key);
         await box.put(
-          recoveredSong.id,
+          replacement.value.id,
           _mergeRecoveredSongJson(
             existingJson: value,
-            recoveredSong: recoveredSong,
+            recoveredSong: replacement.value,
             preserveStreamInfo: true,
           ),
         );
@@ -446,33 +456,39 @@ class CatalogRecoveryService extends GetxService {
     return merged;
   }
 
-  Future<void> _deleteCachedSong(String songId) async {
+  Future<void> _deleteCachedSongs(Iterable<String> songIds) async {
     final wasOpen = SqliteStore.isBoxOpen('SongsCache');
     final box = wasOpen
         ? SqliteStore.box('SongsCache')
         : await SqliteStore.openBox('SongsCache');
-    await box.delete(songId);
+    for (final songId in songIds) {
+      await box.delete(songId);
+    }
     if (!wasOpen && box.isOpen) {
       await box.close();
     }
 
-    try {
-      final tempDir = await getTemporaryDirectory();
-      final cachedFile = File('${tempDir.path}/cachedSongs/$songId.mp3');
-      if (await cachedFile.exists()) {
-        await cachedFile.delete();
+    final tempDir = await getTemporaryDirectory();
+    for (final songId in songIds) {
+      try {
+        final cachedFile = File('${tempDir.path}/cachedSongs/$songId.mp3');
+        if (await cachedFile.exists()) {
+          await cachedFile.delete();
+        }
+      } catch (e) {
+        printERROR('No fue posible limpiar cache de $songId: $e');
       }
-    } catch (e) {
-      printERROR('No fue posible limpiar cache de $songId: $e');
     }
   }
 
-  Future<void> _deleteSongUrlCache(String songId) async {
+  Future<void> _deleteSongUrlCaches(Iterable<String> songIds) async {
     final wasOpen = SqliteStore.isBoxOpen('SongsUrlCache');
     final box = wasOpen
         ? SqliteStore.box('SongsUrlCache')
         : await SqliteStore.openBox('SongsUrlCache');
-    await box.delete(songId);
+    for (final songId in songIds) {
+      await box.delete(songId);
+    }
     if (!wasOpen && box.isOpen) {
       await box.close();
     }

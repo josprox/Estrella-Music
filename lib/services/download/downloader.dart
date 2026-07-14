@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:audio_service/audio_service.dart';
+import 'package:background_downloader/background_downloader.dart';
 import 'package:dio/dio.dart';
 import 'package:audiotags/audiotags.dart';
 import 'package:flutter/material.dart';
@@ -9,6 +10,7 @@ import 'package:get/get.dart';
 import 'package:harmonymusic/services/storage/sqlite_store.dart';
 import 'package:harmonymusic/services/auth/catalog_recovery_service.dart';
 import 'package:harmonymusic/services/download/download_integrity_service.dart';
+import 'package:harmonymusic/services/background/background_execution_service.dart';
 
 import 'package:harmonymusic/ui/screens/Album/album_screen_controller.dart';
 import 'package:harmonymusic/ui/screens/Playlist/playlist_screen_controller.dart';
@@ -22,6 +24,7 @@ import 'package:harmonymusic/ui/screens/Library/library_controller.dart';
 import 'package:harmonymusic/services/music/music_service.dart';
 import 'package:harmonymusic/generated/l10n.dart';
 import 'package:harmonymusic/utils/localization/l10n_extensions.dart';
+import 'package:path/path.dart' as p;
 
 class Downloader extends GetxService {
   final _dio = Dio();
@@ -33,6 +36,7 @@ class Downloader extends GetxService {
   final playlistDownloadingProgress = 0.obs;
   final isJobRunning = false.obs;
   final int maxConcurrentDownloads = 3;
+  final int maxConcurrentResolutions = 8;
 
   RxList<MediaItem> songQueue = <MediaItem>[].obs;
 
@@ -85,63 +89,59 @@ class Downloader extends GetxService {
   }
 
   Future<void> triggerDownloadingJob() async {
-    //check if playlist download in queue => download playlistsongs else download from general songs queue
-    if (playlistQueue.isNotEmpty) {
-      isJobRunning.value = true;
-      for (String playlistId in playlistQueue.keys.toList()) {
-        //checked in case download cancel request
-        if (playlistQueue.containsKey(playlistId)) {
+    if (isJobRunning.isTrue) return;
+    isJobRunning.value = true;
+    await BackgroundExecutionService.startDownloads();
+    try {
+      while (playlistQueue.isNotEmpty || songQueue.isNotEmpty) {
+        if (playlistQueue.isNotEmpty) {
+          final playlistId = playlistQueue.keys.first;
+          final songs = playlistQueue[playlistId]?.toList();
+          if (songs == null) {
+            playlistQueue.remove(playlistId);
+            continue;
+          }
           currentPlaylistId.value = playlistId;
-          await downloadSongList((playlistQueue[playlistId]!).toList(),
-              isPlaylist: true);
-          if (Get.isRegistered<PlaylistScreenController>(
-                  tag: Key(playlistId).hashCode.toString()) &&
-              playlistQueue.containsKey(playlistId)) {
-            Get.find<PlaylistScreenController>(
-                    tag: Key(playlistId).hashCode.toString())
-                .isDownloaded
-                .value = true;
+          await downloadSongList(songs, isPlaylist: true);
+          if (playlistQueue.containsKey(playlistId)) {
+            _markCollectionDownloaded(playlistId);
+            playlistQueue.remove(playlistId);
           }
-          // in case of album
-          else if (Get.isRegistered<AlbumScreenController>(
-                  tag: Key(playlistId).hashCode.toString()) &&
-              playlistQueue.containsKey(playlistId)) {
-            Get.find<AlbumScreenController>(
-                    tag: Key(playlistId).hashCode.toString())
-                .isDownloaded
-                .value = true;
-          }
-          playlistQueue.remove(playlistId);
+          currentPlaylistId.value = '';
+          playlistDownloadingProgress.value = 0;
+        } else {
+          await downloadSongList(songQueue.toList());
         }
-        currentPlaylistId.value = "";
-        playlistDownloadingProgress.value = 0;
       }
-    } else {
-      isJobRunning.value = true;
-      await downloadSongList(songQueue.toList());
-    }
-
-    if (songQueue.isNotEmpty) {
-      triggerDownloadingJob();
-    } else {
+    } finally {
       isJobRunning.value = false;
       currentSong = null;
+      await BackgroundExecutionService.stopDownloads();
+      if (playlistQueue.isNotEmpty || songQueue.isNotEmpty) {
+        await triggerDownloadingJob();
+      }
+    }
+  }
+
+  void _markCollectionDownloaded(String playlistId) {
+    final tag = Key(playlistId).hashCode.toString();
+    if (Get.isRegistered<PlaylistScreenController>(tag: tag)) {
+      Get.find<PlaylistScreenController>(tag: tag).isDownloaded.value = true;
+    } else if (Get.isRegistered<AlbumScreenController>(tag: tag)) {
+      Get.find<AlbumScreenController>(tag: tag).isDownloaded.value = true;
     }
   }
 
   Future<void> downloadSongList(List<MediaItem> jobSongList,
       {bool isPlaylist = false}) async {
-    final List<Future<void>> activeDownloads = [];
-    int completedCount = 0;
-
-    for (MediaItem song in jobSongList) {
+    final pendingSongs = <MediaItem>[];
+    final downloadsBox = SqliteStore.box('SongDownloads');
+    for (final song in jobSongList) {
       if (isPlaylist && !playlistQueue.containsKey(currentPlaylistId.value)) {
-        currentPlaylistId.value = "";
+        currentPlaylistId.value = '';
         playlistDownloadingProgress.value = 0;
-        break;
+        return;
       }
-
-      final downloadsBox = SqliteStore.box('SongDownloads');
       if (downloadsBox.containsKey(song.id)) {
         final record = downloadsBox.get(song.id);
         if (await DownloadIntegrityService.isValidRecord(record)) {
@@ -155,48 +155,99 @@ class Downloader extends GetxService {
           if (await invalidFile.exists()) await invalidFile.delete();
         }
       }
+      pendingSongs.add(song);
+    }
 
-      // Wait if we reached the limit of concurrent downloads
-      while (activeDownloads.length >= maxConcurrentDownloads) {
-        await Future.delayed(const Duration(milliseconds: 100));
-        activeDownloads.removeWhere((f) =>
-            f.hashCode ==
-            -1); // Dummy to trigger cleanup if I used a wrapper, but I'll use then() instead
-      }
+    final format =
+        Get.find<SettingsScreenController>().downloadingFormat.string;
+    final preparedDownloads = await _prepareDownloadBatch(pendingSongs, format);
+    await Get.find<CatalogRecoveryService>().persistRecoveredSongs([
+      for (final prepared in preparedDownloads)
+        if (prepared.originalSong.id != prepared.song.id)
+          (
+            oldSong: prepared.originalSong,
+            recoveredSong: prepared.song,
+          ),
+    ]);
 
-      final downloadTask = _downloadSongTask(song, isPlaylist, jobSongList);
-      activeDownloads.add(downloadTask);
-      downloadTask.then((_) {
-        activeDownloads.remove(downloadTask);
+    var nextDownload = 0;
+    var completedCount = 0;
+    Future<void> worker() async {
+      while (true) {
+        if (isPlaylist && !playlistQueue.containsKey(currentPlaylistId.value)) {
+          return;
+        }
+        final index = nextDownload++;
+        if (index >= preparedDownloads.length) return;
+        await _downloadSongTask(preparedDownloads[index]);
         completedCount++;
         if (isPlaylist) {
           playlistDownloadingProgress.value = completedCount;
         }
-      });
+      }
     }
 
-    await Future.wait(activeDownloads);
+    final workerCount = preparedDownloads.length < maxConcurrentDownloads
+        ? preparedDownloads.length
+        : maxConcurrentDownloads;
+    await Future.wait(List.generate(workerCount, (_) => worker()));
   }
 
-  Future<void> _downloadSongTask(
-      MediaItem song, bool isPlaylist, List<MediaItem> jobSongList) async {
-    currentSong =
-        song; // This might still flicker if multiple songs are downloading, but we'll use individual progress in UI
-    songProgressMap[song.id] = 0;
-    await writeFileStream(song);
-    songQueue.remove(song);
-    songProgressMap.remove(song.id);
+  Future<List<_ResolvedDownload>> _prepareDownloadBatch(
+    List<MediaItem> songs,
+    String format,
+  ) async {
+    if (songs.isEmpty) return [];
+    final results = List<_ResolvedDownload?>.filled(songs.length, null);
+    var nextIndex = 0;
+
+    Future<void> worker() async {
+      while (true) {
+        final index = nextIndex++;
+        if (index >= songs.length) return;
+        results[index] = await _resolveDownload(
+          songs[index],
+          format,
+          persistRecovery: false,
+        );
+      }
+    }
+
+    final workerCount = songs.length < maxConcurrentResolutions
+        ? songs.length
+        : maxConcurrentResolutions;
+    await Future.wait(List.generate(workerCount, (_) => worker()));
+
+    for (var index = 0; index < results.length; index++) {
+      if (results[index] == null) songQueue.remove(songs[index]);
+    }
+    return results.whereType<_ResolvedDownload>().toList();
   }
 
-  Future<void> writeFileStream(
+  Future<void> _downloadSongTask(_ResolvedDownload prepared) async {
+    currentSong = prepared.song;
+    songProgressMap[prepared.originalSong.id] = 0;
+    await _writeFileStream(
+      prepared.song,
+      prepared: prepared,
+      progressId: prepared.originalSong.id,
+    );
+    songQueue.removeWhere((song) =>
+        song.id == prepared.originalSong.id || song.id == prepared.song.id);
+    songProgressMap.remove(prepared.originalSong.id);
+  }
+
+  Future<void> _writeFileStream(
     MediaItem song, {
     int retryCount = 0,
     String? progressId,
+    _ResolvedDownload? prepared,
   }) async {
     final progressKey = progressId ?? song.id;
     final settingsScreenController = Get.find<SettingsScreenController>();
     final downloadingFormat = settingsScreenController.downloadingFormat.string;
-    final resolution = await _resolveDownload(song, downloadingFormat);
+    final resolution =
+        prepared ?? await _resolveDownload(song, downloadingFormat);
     if (resolution == null) return;
     final resolvedSong = resolution.song;
     final requiredAudioStream = resolution.audio;
@@ -216,29 +267,28 @@ class Downloader extends GetxService {
     final finalFile = File(filePath);
     try {
       if (await partialFile.exists()) await partialFile.delete();
-      final response = await _dio.download(
-        requiredAudioStream.url,
-        partialPath,
-        deleteOnError: true,
-        options: Options(
-          receiveTimeout: const Duration(minutes: 5),
-          followRedirects: true,
-          validateStatus: (status) =>
-              status != null && status >= 200 && status < 300,
+      final downloadTask = UriDownloadTask(
+        url: requiredAudioStream.url,
+        directoryUri: Uri.directory(
+          dirPath,
+          windows: Platform.isWindows,
         ),
-        onReceiveProgress: (count, total) {
-          final expected = total > 0 ? total : requiredAudioStream.size;
-          if (expected <= 0) return;
-          songProgressMap[progressKey] =
-              ((count / expected) * 100).clamp(0, 100).toInt();
+        filename: p.basename(partialPath),
+        group: 'music-downloads',
+        updates: Updates.statusAndProgress,
+        retries: 1,
+        allowPause: true,
+      );
+      final result = await FileDownloader().download(
+        downloadTask,
+        onProgress: (progress) {
+          if (progress < 0) return;
+          songProgressMap[progressKey] = (progress * 100).clamp(0, 100).toInt();
         },
       );
-      final status = response.statusCode ?? 0;
-      if (status < 200 || status >= 300) {
-        throw DioException(
-          requestOptions: response.requestOptions,
-          response: response,
-          message: 'Unexpected download status $status',
+      if (result.status != TaskStatus.complete) {
+        throw StateError(
+          'Background download ended with status ${result.status}',
         );
       }
       if (!await DownloadIntegrityService.isPlausibleAudioFile(
@@ -295,7 +345,7 @@ class Downloader extends GetxService {
       printERROR('Download failed validation: $error\n$stackTrace');
       if (retryCount == 0) {
         printINFO('Refreshing the stream URL and retrying the download once');
-        await writeFileStream(
+        await _writeFileStream(
           resolvedSong,
           retryCount: 1,
           progressId: progressKey,
@@ -308,8 +358,9 @@ class Downloader extends GetxService {
 
   Future<_ResolvedDownload?> _resolveDownload(
     MediaItem song,
-    String downloadingFormat,
-  ) async {
+    String downloadingFormat, {
+    bool persistRecovery = true,
+  }) async {
     var resolvedSong = song;
     var response = await StreamProvider.fetch(song.id);
     var audio = _selectAudio(response, downloadingFormat);
@@ -336,15 +387,21 @@ class Downloader extends GetxService {
         _showDownloadError(recoveredResponse.statusMSG);
         return null;
       }
-      await Get.find<CatalogRecoveryService>().persistRecoveredSong(
-        oldSong: song,
-        recoveredSong: recovered,
-      );
+      if (persistRecovery) {
+        await Get.find<CatalogRecoveryService>().persistRecoveredSong(
+          oldSong: song,
+          recoveredSong: recovered,
+        );
+      }
       resolvedSong = recovered;
       response = recoveredResponse;
       audio = recoveredAudio;
     }
-    return _ResolvedDownload(song: resolvedSong, audio: audio);
+    return _ResolvedDownload(
+      originalSong: song,
+      song: resolvedSong,
+      audio: audio,
+    );
   }
 
   Audio? _selectAudio(StreamProvider response, String format) {
@@ -404,8 +461,13 @@ class Downloader extends GetxService {
 }
 
 class _ResolvedDownload {
-  const _ResolvedDownload({required this.song, required this.audio});
+  const _ResolvedDownload({
+    required this.originalSong,
+    required this.song,
+    required this.audio,
+  });
 
+  final MediaItem originalSong;
   final MediaItem song;
   final Audio audio;
 }

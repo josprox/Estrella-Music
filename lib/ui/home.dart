@@ -28,6 +28,7 @@ class Home extends StatelessWidget {
     final panelController = playerController.playerPanelController;
     final settingsScreenController = Get.find<SettingsScreenController>();
     final homeScreenController = Get.find<HomeScreenController>();
+    var isHandlingBack = false;
     final size = MediaQuery.of(context).size;
     final isWideScreen = size.width > 800;
     if (!playerController.initFlagForPlayer) {
@@ -42,34 +43,69 @@ class Home extends StatelessWidget {
     return PopScope(
       canPop: false,
       onPopInvokedWithResult: (didPop, result) async {
-        if (didPop) return;
-        if (playerController.queuePanelController.isAttached &&
-            playerController.queuePanelController.isPanelOpen) {
-          playerController.queuePanelController.close();
-        } else if (panelController.isAttached && panelController.isPanelOpen) {
-          panelController.close();
-        } else {
+        if (didPop || isHandlingBack) return;
+        isHandlingBack = true;
+        try {
+          if (playerController.queuePanelController.isAttached &&
+              playerController.queuePanelController.isPanelOpen) {
+            playerController.queuePanelController.close();
+            return;
+          }
+          if (panelController.isAttached && panelController.isPanelOpen) {
+            panelController.close();
+            return;
+          }
+
+          final startupTab = HomeScreenController.supportedStartupTabs
+                  .contains(settingsScreenController.startupTabIndex.value)
+              ? settingsScreenController.startupTabIndex.value
+              : 0;
           final nestedNavigator =
               Get.nestedKey(ScreenNavigationSetup.id)?.currentState;
-          if (nestedNavigator?.canPop() ?? false) {
-            nestedNavigator!.pop();
-          } else {
-            final startupTab = HomeScreenController.supportedStartupTabs
-                    .contains(settingsScreenController.startupTabIndex.value)
-                ? settingsScreenController.startupTabIndex.value
-                : 0;
-            if (homeScreenController.tabIndex.value != startupTab) {
-              settingsScreenController.isBottomNavBarEnabled.isTrue
-                  ? homeScreenController.onBottonBarTabSelected(startupTab)
-                  : homeScreenController.onSideBarTabSelected(startupTab);
-            } else if (playerController.buttonState.value ==
-                PlayButtonState.playing) {
-              SystemNavigator.pop();
-            } else {
-              await Get.find<AudioHandler>().customAction("saveSession");
-              exit(0);
+          final currentRoute = getCurrentRouteName();
+          if (nestedNavigator != null &&
+              currentRoute != ScreenNavigationSetup.homeScreen) {
+            var foundHome = false;
+            nestedNavigator.popUntil((route) {
+              if (route.settings.name == ScreenNavigationSetup.homeScreen) {
+                foundHome = true;
+                return true;
+              }
+              return route.isFirst;
+            });
+            if (!foundHome) {
+              nestedNavigator.pushNamedAndRemoveUntil(
+                ScreenNavigationSetup.homeScreen,
+                (_) => false,
+              );
             }
+            _selectStartupTab(
+              homeScreenController,
+              settingsScreenController,
+              startupTab,
+            );
+            return;
           }
+
+          if (homeScreenController.tabIndex.value != startupTab) {
+            _selectStartupTab(
+              homeScreenController,
+              settingsScreenController,
+              startupTab,
+            );
+            return;
+          }
+
+          await Get.find<AudioHandler>().customAction("saveSession");
+          if (GetPlatform.isDesktop) {
+            exit(0);
+          } else {
+            await SystemNavigator.pop();
+          }
+        } finally {
+          Future.delayed(const Duration(milliseconds: 350), () {
+            isHandlingBack = false;
+          });
         }
       },
       child: Obx(
@@ -223,5 +259,15 @@ class Home extends StatelessWidget {
                 : const ScreenNavigation())),
       ),
     );
+  }
+
+  void _selectStartupTab(
+    HomeScreenController homeScreenController,
+    SettingsScreenController settingsScreenController,
+    int startupTab,
+  ) {
+    settingsScreenController.isBottomNavBarEnabled.isTrue
+        ? homeScreenController.onBottonBarTabSelected(startupTab)
+        : homeScreenController.onSideBarTabSelected(startupTab);
   }
 }
