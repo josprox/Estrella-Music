@@ -400,5 +400,10 @@
   "recommendedArtists": "Anbefalt",
   "albumsByTaste": "Etter din smak",
   "savedAlbums": "Lagret",
-  "recommendedAlbums": "Anbefalt"
+  "recommendedAlbums": "Anbefalt",
+  "downloadNotificationChannelName": "nedlasting av musikk",
+  "downloadNotificationChannelDescription": "Holder musikknedlastingene dine aktive i bakgrunnen.",
+  "downloadNotificationTitle": "Laster ned musikk",
+  "downloadNotificationPreparing": "Forbereder nedlastingene dine …",
+  "downloadNotificationSong": "Laster ned: {songTitle}"
 }

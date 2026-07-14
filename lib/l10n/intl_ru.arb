@@ -670,5 +670,10 @@
   "recommendedArtists": "Рекомендуется",
   "albumsByTaste": "По вашему вкусу",
   "savedAlbums": "Сохранено",
-  "recommendedAlbums": "Рекомендуется"
+  "recommendedAlbums": "Рекомендуется",
+  "downloadNotificationChannelName": "загрузка музыки",
+  "downloadNotificationChannelDescription": "Сохраняет загрузку музыки активной в фоновом режиме.",
+  "downloadNotificationTitle": "Загрузка музыки",
+  "downloadNotificationPreparing": "Подготовка загрузок…",
+  "downloadNotificationSong": "Загрузка: {songTitle}"
 }

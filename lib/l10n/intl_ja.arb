@@ -669,5 +669,10 @@
   "recommendedArtists": "推奨",
   "albumsByTaste": "あなたの好みに合わせて",
   "savedAlbums": "保存されました",
-  "recommendedAlbums": "推奨"
+  "recommendedAlbums": "推奨",
+  "downloadNotificationChannelName": "音楽のダウンロード",
+  "downloadNotificationChannelDescription": "音楽のダウンロードをバックグラウンドでアクティブに保ちます。",
+  "downloadNotificationTitle": "音楽をダウンロードする",
+  "downloadNotificationPreparing": "ダウンロードを準備しています…",
+  "downloadNotificationSong": "ダウンロード中: {songTitle}"
 }

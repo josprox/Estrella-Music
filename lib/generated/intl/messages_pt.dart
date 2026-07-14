@@ -20,17 +20,19 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'pt';
 
-  static String m0(error) => "Ocorreu um erro durante a regeneração: ${error}";
+  static String m0(songTitle) => "Baixando: ${songTitle}";
 
-  static String m1(title) => "Semelhante a ${title}";
+  static String m1(error) => "Ocorreu um erro durante a regeneração: ${error}";
 
-  static String m2(current) => "Etapa ${current} de 3";
+  static String m2(title) => "Semelhante a ${title}";
 
-  static String m3(count) => "${count} alterações confirmadas.";
+  static String m3(current) => "Etapa ${current} de 3";
 
-  static String m4(count) => "${count} alterações sincronizadas.";
+  static String m4(count) => "${count} alterações confirmadas.";
 
-  static String m5(statusCode) =>
+  static String m5(count) => "${count} alterações sincronizadas.";
+
+  static String m6(statusCode) =>
       "Não foi possível pesquisar usuários (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -285,6 +287,20 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "downloadLocation": MessageLookupByLibrary.simpleMessage(
       "Local do download",
+    ),
+    "downloadNotificationChannelDescription":
+        MessageLookupByLibrary.simpleMessage(
+          "Mantém seus downloads de música ativos em segundo plano.",
+        ),
+    "downloadNotificationChannelName": MessageLookupByLibrary.simpleMessage(
+      "downloads de música",
+    ),
+    "downloadNotificationPreparing": MessageLookupByLibrary.simpleMessage(
+      "Preparando seus downloads…",
+    ),
+    "downloadNotificationSong": m0,
+    "downloadNotificationTitle": MessageLookupByLibrary.simpleMessage(
+      "Baixando música",
     ),
     "downloadingFormat": MessageLookupByLibrary.simpleMessage(
       "Formato do arquivo baixado",
@@ -912,7 +928,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
       "Não foi possível gerar um novo identificador. Por favor, tente novamente mais tarde.",
     ),
-    "settings_visitor_exception": m0,
+    "settings_visitor_exception": m1,
     "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
       "Identificador atualizado",
     ),
@@ -928,7 +944,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "shuffleQueue": MessageLookupByLibrary.simpleMessage(
       "Misturar Enfileirados",
     ),
-    "similarToTitle": m1,
+    "similarToTitle": m2,
     "singles": MessageLookupByLibrary.simpleMessage("Singles"),
     "skipSilence": MessageLookupByLibrary.simpleMessage("Pular silêncio"),
     "skipSilenceDes": MessageLookupByLibrary.simpleMessage(
@@ -938,7 +954,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Seu temporizador de sono está ativado",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Temporizador de Sono"),
-    "slide_indicator": m2,
+    "slide_indicator": m3,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "Música adicionada à playlist!",
     ),
@@ -994,8 +1010,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
       "Deslize para explorar as opções ➔",
     ),
-    "syncChangesConfirmed": m3,
-    "syncChangesSynced": m4,
+    "syncChangesConfirmed": m4,
+    "syncChangesSynced": m5,
     "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
       "Modo nuvem ativado. Baixando a biblioteca existente.",
     ),
@@ -1072,7 +1088,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "A resposta não contém uma lista de usuários.",
     ),
-    "userSearchFailed": m5,
+    "userSearchFailed": m6,
     "userUnblocked": MessageLookupByLibrary.simpleMessage(
       "Usuário desbloqueado",
     ),

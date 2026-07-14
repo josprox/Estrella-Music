@@ -660,5 +660,10 @@
   "recommendedArtists": "Direkomendasikan",
   "albumsByTaste": "Sesuai selera Anda",
   "savedAlbums": "Disimpan",
-  "recommendedAlbums": "Direkomendasikan"
+  "recommendedAlbums": "Direkomendasikan",
+  "downloadNotificationChannelName": "unduhan musik",
+  "downloadNotificationChannelDescription": "Menjaga unduhan musik Anda tetap aktif di latar belakang.",
+  "downloadNotificationTitle": "Mengunduh musik",
+  "downloadNotificationPreparing": "Mempersiapkan unduhan Anda…",
+  "downloadNotificationSong": "Mengunduh: _{songTitle}"
 }

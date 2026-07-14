@@ -20,6 +20,8 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'zh_TW';
 
+  static String m0(songTitle) => "正在下載：${songTitle}";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "CreateNewPlaylist": MessageLookupByLibrary.simpleMessage("建立新的播放清單"),
@@ -119,6 +121,16 @@ class MessageLookup extends MessageLookupByLibrary {
       "由於網路/串流錯誤，下載失敗！請再試一次",
     ),
     "downloadLocation": MessageLookupByLibrary.simpleMessage("下載位置"),
+    "downloadNotificationChannelDescription":
+        MessageLookupByLibrary.simpleMessage("讓音樂下載在背景持續執行。"),
+    "downloadNotificationChannelName": MessageLookupByLibrary.simpleMessage(
+      "音樂下載",
+    ),
+    "downloadNotificationPreparing": MessageLookupByLibrary.simpleMessage(
+      "正在準備下載…",
+    ),
+    "downloadNotificationSong": m0,
+    "downloadNotificationTitle": MessageLookupByLibrary.simpleMessage("正在下載音樂"),
     "downloadingFormat": MessageLookupByLibrary.simpleMessage("下載檔案格式"),
     "downloadingFormatDes": MessageLookupByLibrary.simpleMessage(
       "選擇下載的檔案格式。「Opus」將提供最佳品質",

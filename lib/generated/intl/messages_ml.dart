@@ -20,18 +20,20 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ml';
 
-  static String m0(error) =>
+  static String m0(songTitle) => "ഡൗൺലോഡ് ചെയ്യുന്നു: ${songTitle}";
+
+  static String m1(error) =>
       "പുനഃസൃഷ്ടിക്കുമ്പോൾ ഒരു പിശക് സംഭവിച്ചു: ${error}";
 
-  static String m1(title) => "${title} ന് സമാനമാണ്";
+  static String m2(title) => "${title} ന് സമാനമാണ്";
 
-  static String m2(current) => "ഘട്ടം ${current} / 3";
+  static String m3(current) => "ഘട്ടം ${current} / 3";
 
-  static String m3(count) => "${count} മാറ്റങ്ങൾ വരുത്തി.";
+  static String m4(count) => "${count} മാറ്റങ്ങൾ വരുത്തി.";
 
-  static String m4(count) => "${count} സമന്വയിപ്പിച്ച മാറ്റങ്ങൾ.";
+  static String m5(count) => "${count} സമന്വയിപ്പിച്ച മാറ്റങ്ങൾ.";
 
-  static String m5(statusCode) =>
+  static String m6(statusCode) =>
       "ഉപയോക്താക്കൾക്കായി തിരയാൻ കഴിഞ്ഞില്ല (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -159,6 +161,20 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "dailyDiscover": MessageLookupByLibrary.simpleMessage("ദൈനംദിന കണ്ടെത്തൽ"),
     "done": MessageLookupByLibrary.simpleMessage("തയ്യാറാണ്"),
+    "downloadNotificationChannelDescription":
+        MessageLookupByLibrary.simpleMessage(
+          "പശ്ചാത്തലത്തിൽ നിങ്ങളുടെ സംഗീത ഡൗൺലോഡുകൾ സജീവമായി നിലനിർത്തുന്നു.",
+        ),
+    "downloadNotificationChannelName": MessageLookupByLibrary.simpleMessage(
+      "സംഗീത ഡൗൺലോഡുകൾ",
+    ),
+    "downloadNotificationPreparing": MessageLookupByLibrary.simpleMessage(
+      "നിങ്ങളുടെ ഡൗൺലോഡുകൾ തയ്യാറാക്കുന്നു...",
+    ),
+    "downloadNotificationSong": m0,
+    "downloadNotificationTitle": MessageLookupByLibrary.simpleMessage(
+      "സംഗീതം ഡൗൺലോഡ് ചെയ്യുന്നു",
+    ),
     "downloads": MessageLookupByLibrary.simpleMessage("ഡൗൺലോഡുകൾ"),
     "email": MessageLookupByLibrary.simpleMessage("ഇ-മെയിൽ"),
     "emptyPlaylist": MessageLookupByLibrary.simpleMessage(
@@ -544,7 +560,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
       "ഒരു പുതിയ ഐഡൻ്റിഫയർ സൃഷ്ടിക്കാൻ കഴിഞ്ഞില്ല. ദയവായി പിന്നീട് വീണ്ടും ശ്രമിക്കുക.",
     ),
-    "settings_visitor_exception": m0,
+    "settings_visitor_exception": m1,
     "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
       "പുതുക്കിയ ഐഡൻ്റിഫയർ",
     ),
@@ -555,9 +571,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
       "പൊരുത്തങ്ങൾക്കായി Shazam ഡാറ്റാബേസിൽ തിരയുന്നു...",
     ),
-    "similarToTitle": m1,
+    "similarToTitle": m2,
     "singles": MessageLookupByLibrary.simpleMessage("സിംഗിൾസ്"),
-    "slide_indicator": m2,
+    "slide_indicator": m3,
     "songFound": MessageLookupByLibrary.simpleMessage("ഗാനം കണ്ടെത്തി!"),
     "songNotPlayable": MessageLookupByLibrary.simpleMessage(
       "സെർവർ നിയന്ത്രണം കാരണം ഗാനം പ്ലേ ചെയ്യാൻ കഴിയില്ല",
@@ -578,8 +594,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
       "ഓപ്ഷനുകൾ പര്യവേക്ഷണം ചെയ്യാൻ സ്വൈപ്പ് ➔",
     ),
-    "syncChangesConfirmed": m3,
-    "syncChangesSynced": m4,
+    "syncChangesConfirmed": m4,
+    "syncChangesSynced": m5,
     "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
       "ക്ലൗഡ് മോഡ് സജീവമാക്കി. നിലവിലുള്ള ലൈബ്രറി ഡൗൺലോഡ് ചെയ്യുന്നു.",
     ),
@@ -640,7 +656,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "പ്രതികരണത്തിൽ ഉപയോക്താക്കളുടെ ഒരു ലിസ്റ്റ് അടങ്ങിയിട്ടില്ല.",
     ),
-    "userSearchFailed": m5,
+    "userSearchFailed": m6,
     "userUnblocked": MessageLookupByLibrary.simpleMessage(
       "അൺലോക്ക് ചെയ്ത ഉപയോക്താവ്",
     ),

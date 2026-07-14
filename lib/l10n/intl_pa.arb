@@ -628,5 +628,10 @@
   "recommendedArtists": "ਸਿਫ਼ਾਰਿਸ਼ ਕੀਤੀ",
   "albumsByTaste": "ਆਪਣੇ ਸੁਆਦ ਅਨੁਸਾਰ",
   "savedAlbums": "ਸੰਭਾਲਿਆ",
-  "recommendedAlbums": "ਸਿਫ਼ਾਰਿਸ਼ ਕੀਤੀ"
+  "recommendedAlbums": "ਸਿਫ਼ਾਰਿਸ਼ ਕੀਤੀ",
+  "downloadNotificationChannelName": "ਸੰਗੀਤ ਡਾਊਨਲੋਡ",
+  "downloadNotificationChannelDescription": "ਤੁਹਾਡੇ ਸੰਗੀਤ ਡਾਊਨਲੋਡਾਂ ਨੂੰ ਬੈਕਗ੍ਰਾਊਂਡ ਵਿੱਚ ਕਿਰਿਆਸ਼ੀਲ ਰੱਖਦਾ ਹੈ।",
+  "downloadNotificationTitle": "ਸੰਗੀਤ ਡਾਊਨਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ",
+  "downloadNotificationPreparing": "ਤੁਹਾਡੇ ਡਾਊਨਲੋਡ ਤਿਆਰ ਕੀਤੇ ਜਾ ਰਹੇ ਹਨ...",
+  "downloadNotificationSong": "ਡਾਊਨਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ: {songTitle}"
 }

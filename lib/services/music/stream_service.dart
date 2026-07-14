@@ -3,14 +3,18 @@ import 'package:youtube_explode_dart/youtube_explode_dart.dart';
 
 class StreamProvider {
   final bool playable;
+  final bool videoUnavailable;
   final List<Audio>? audioFormats;
   final String statusMSG;
   StreamProvider(
-      {required this.playable, this.audioFormats, this.statusMSG = ""});
+      {required this.playable,
+      this.videoUnavailable = false,
+      this.audioFormats,
+      this.statusMSG = ""});
 
   static Future<StreamProvider> fetch(String videoId) async {
     final yt = YoutubeExplode();
-    
+
     try {
       final res = await yt.videos.streamsClient.getManifest(videoId);
       final audio = res.audioOnly;
@@ -34,24 +38,28 @@ class StreamProvider {
           playable: false,
           statusMSG: "networkError",
         );
-      } else if (e is VideoUnplayableException) {
+      } else if (e is VideoUnavailableException) {
         return StreamProvider(
           playable: false,
-          statusMSG: e.reason ?? "Song is unplayable",
+          videoUnavailable: true,
+          statusMSG: "Song is unavailable",
         );
       } else if (e is VideoRequiresPurchaseException) {
         return StreamProvider(
           playable: false,
           statusMSG: "Song requires purchase",
         );
-      } else if (e is VideoUnavailableException) {
+      } else if (e is VideoUnplayableException) {
+        final unavailable = _looksUnavailable('${e.reason ?? ''} ${e.message}');
         return StreamProvider(
           playable: false,
-          statusMSG: "Song is unavailable",
+          videoUnavailable: unavailable,
+          statusMSG: e.reason ?? "Song is unplayable",
         );
       } else if (e is YoutubeExplodeException) {
         return StreamProvider(
           playable: false,
+          videoUnavailable: _looksUnavailable(e.message),
           statusMSG: e.message,
         );
       } else {
@@ -61,6 +69,20 @@ class StreamProvider {
         );
       }
     }
+  }
+
+  static bool _looksUnavailable(String message) {
+    final errorText = message.toLowerCase();
+    return errorText.contains('unavailable') ||
+        errorText.contains('not available') ||
+        errorText.contains("isn't available") ||
+        errorText.contains("doesn't exist") ||
+        errorText.contains('does not exist') ||
+        errorText.contains('deleted') ||
+        errorText.contains('private') ||
+        errorText.contains('taken down') ||
+        errorText.contains('no available streams') ||
+        errorText.contains('does not contain any playable streams');
   }
 
   Audio? get highestQualityAudio =>

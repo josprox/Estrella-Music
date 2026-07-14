@@ -20,18 +20,20 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'it';
 
-  static String m0(error) =>
+  static String m0(songTitle) => "Download in corso: ${songTitle}";
+
+  static String m1(error) =>
       "Si è verificato un errore durante la rigenerazione: ${error}";
 
-  static String m1(title) => "Simile a ${title}";
+  static String m2(title) => "Simile a ${title}";
 
-  static String m2(current) => "Passaggio ${current} di 3";
+  static String m3(current) => "Passaggio ${current} di 3";
 
-  static String m3(count) => "${count} modifiche apportate.";
+  static String m4(count) => "${count} modifiche apportate.";
 
-  static String m4(count) => "${count} modifiche sincronizzate.";
+  static String m5(count) => "${count} modifiche sincronizzate.";
 
-  static String m5(statusCode) =>
+  static String m6(statusCode) =>
       "Impossibile cercare gli utenti (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -282,6 +284,20 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "downloadLocation": MessageLookupByLibrary.simpleMessage(
       "Locazione download",
+    ),
+    "downloadNotificationChannelDescription":
+        MessageLookupByLibrary.simpleMessage(
+          "Mantiene attivi i download di musica in background.",
+        ),
+    "downloadNotificationChannelName": MessageLookupByLibrary.simpleMessage(
+      "download di musica",
+    ),
+    "downloadNotificationPreparing": MessageLookupByLibrary.simpleMessage(
+      "Preparazione dei download...",
+    ),
+    "downloadNotificationSong": m0,
+    "downloadNotificationTitle": MessageLookupByLibrary.simpleMessage(
+      "Download di musica",
     ),
     "downloadingFormat": MessageLookupByLibrary.simpleMessage(
       "Formato di Download File",
@@ -938,7 +954,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
       "Non è stato possibile generare un nuovo identificatore. Per favore riprova più tardi.",
     ),
-    "settings_visitor_exception": m0,
+    "settings_visitor_exception": m1,
     "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
       "Identificatore aggiornato",
     ),
@@ -952,7 +968,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "shuffleQueue": MessageLookupByLibrary.simpleMessage(
       "Coda di riproduzione casuale",
     ),
-    "similarToTitle": m1,
+    "similarToTitle": m2,
     "singles": MessageLookupByLibrary.simpleMessage("Singoli"),
     "skipSilence": MessageLookupByLibrary.simpleMessage("Salta Silenzio"),
     "skipSilenceDes": MessageLookupByLibrary.simpleMessage(
@@ -962,7 +978,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Il timer del riposo è impostato",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Timer spegnimento"),
-    "slide_indicator": m2,
+    "slide_indicator": m3,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "Canzone aggiunta alla playlist!",
     ),
@@ -1016,8 +1032,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
       "Scorri per esplorare le opzioni ➔",
     ),
-    "syncChangesConfirmed": m3,
-    "syncChangesSynced": m4,
+    "syncChangesConfirmed": m4,
+    "syncChangesSynced": m5,
     "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
       "Modalità cloud attivata. Download della libreria esistente.",
     ),
@@ -1098,7 +1114,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "La risposta non contiene un elenco di utenti.",
     ),
-    "userSearchFailed": m5,
+    "userSearchFailed": m6,
     "userUnblocked": MessageLookupByLibrary.simpleMessage("Utente sbloccato"),
     "username": MessageLookupByLibrary.simpleMessage("Nome utente"),
     "video": MessageLookupByLibrary.simpleMessage("Video"),

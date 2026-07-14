@@ -669,5 +669,10 @@
   "recommendedArtists": "Khuyến khích",
   "albumsByTaste": "Theo sở thích của bạn",
   "savedAlbums": "Đã lưu",
-  "recommendedAlbums": "Khuyến khích"
+  "recommendedAlbums": "Khuyến khích",
+  "downloadNotificationChannelName": "tải nhạc",
+  "downloadNotificationChannelDescription": "Giữ tải nhạc của bạn hoạt động trong nền.",
+  "downloadNotificationTitle": "Đang tải nhạc",
+  "downloadNotificationPreparing": "Đang chuẩn bị nội dung tải xuống của bạn…",
+  "downloadNotificationSong": "Đang tải xuống: {songTitle}"
 }

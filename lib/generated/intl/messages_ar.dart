@@ -20,17 +20,19 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ar';
 
-  static String m0(error) => "حدث خطأ أثناء إعادة الإنشاء: __PH_0____";
+  static String m0(songTitle) => "التنزيل: __PH_0____";
 
-  static String m1(title) => "مشابهة لـ __PH_0____";
+  static String m1(error) => "حدث خطأ أثناء إعادة الإنشاء: __PH_0____";
 
-  static String m2(current) => "الخطوة __PH_0____ من 3";
+  static String m2(title) => "مشابهة لـ __PH_0____";
 
-  static String m3(count) => "__PH_0____ التغييرات التي تم تنفيذها.";
+  static String m3(current) => "الخطوة __PH_0____ من 3";
 
-  static String m4(count) => "__PH_0____ التغييرات المتزامنة.";
+  static String m4(count) => "__PH_0____ التغييرات التي تم تنفيذها.";
 
-  static String m5(statusCode) => "تعذر البحث عن المستخدمين (_${statusCode}_).";
+  static String m5(count) => "__PH_0____ التغييرات المتزامنة.";
+
+  static String m6(statusCode) => "تعذر البحث عن المستخدمين (_${statusCode}_).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -267,6 +269,20 @@ class MessageLookup extends MessageLookupByLibrary {
       "فشل التحميل بسبب خطأ في الشبكة! يرجى المحاولة مرة أخرى",
     ),
     "downloadLocation": MessageLookupByLibrary.simpleMessage("موقع التحميل"),
+    "downloadNotificationChannelDescription":
+        MessageLookupByLibrary.simpleMessage(
+          "يبقي تنزيلات الموسيقى الخاصة بك نشطة في الخلفية.",
+        ),
+    "downloadNotificationChannelName": MessageLookupByLibrary.simpleMessage(
+      "تنزيلات الموسيقى",
+    ),
+    "downloadNotificationPreparing": MessageLookupByLibrary.simpleMessage(
+      "جارٍ تحضير التنزيلات…",
+    ),
+    "downloadNotificationSong": m0,
+    "downloadNotificationTitle": MessageLookupByLibrary.simpleMessage(
+      "تنزيل الموسيقى",
+    ),
     "downloadingFormat": MessageLookupByLibrary.simpleMessage(
       "صيغة تحميل الملفات",
     ),
@@ -807,7 +823,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
       "لا يمكن إنشاء معرف جديد. يرجى المحاولة مرة أخرى في وقت لاحق.",
     ),
-    "settings_visitor_exception": m0,
+    "settings_visitor_exception": m1,
     "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
       "المعرف المحدث",
     ),
@@ -819,7 +835,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "جارٍ البحث في قاعدة بيانات Shazam عن التطابقات...",
     ),
     "shuffleQueue": MessageLookupByLibrary.simpleMessage("خلط قائمة الانتظار"),
-    "similarToTitle": m1,
+    "similarToTitle": m2,
     "singles": MessageLookupByLibrary.simpleMessage("منفردة"),
     "skipSilence": MessageLookupByLibrary.simpleMessage("تخطي الصمت"),
     "skipSilenceDes": MessageLookupByLibrary.simpleMessage(
@@ -829,7 +845,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "تم ضبط مؤقت نوم",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("مؤقت النوم"),
-    "slide_indicator": m2,
+    "slide_indicator": m3,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "تمت إضافة الأغنية إلى قائمة التشغيل!",
     ),
@@ -883,8 +899,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
       "اسحب لاستكشاف الخيارات ➔",
     ),
-    "syncChangesConfirmed": m3,
-    "syncChangesSynced": m4,
+    "syncChangesConfirmed": m4,
+    "syncChangesSynced": m5,
     "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
       "تم تفعيل الوضع السحابي. تنزيل المكتبة الموجودة.",
     ),
@@ -961,7 +977,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "لا يحتوي الرد على قائمة المستخدمين.",
     ),
-    "userSearchFailed": m5,
+    "userSearchFailed": m6,
     "userUnblocked": MessageLookupByLibrary.simpleMessage("مستخدم غير مقفل"),
     "username": MessageLookupByLibrary.simpleMessage("اسم المستخدم"),
     "video": MessageLookupByLibrary.simpleMessage("فيديو"),

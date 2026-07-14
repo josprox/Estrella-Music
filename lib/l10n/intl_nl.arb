@@ -581,5 +581,10 @@
   "recommendedArtists": "Aanbevolen",
   "albumsByTaste": "Volgens jouw smaak",
   "savedAlbums": "Opgeslagen",
-  "recommendedAlbums": "Aanbevolen"
+  "recommendedAlbums": "Aanbevolen",
+  "downloadNotificationChannelName": "muziek downloaden",
+  "downloadNotificationChannelDescription": "Houdt uw muziekdownloads actief op de achtergrond.",
+  "downloadNotificationTitle": "Muziek downloaden",
+  "downloadNotificationPreparing": "Uw downloads voorbereiden…",
+  "downloadNotificationSong": "Downloaden: {songTitle}"
 }

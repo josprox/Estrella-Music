@@ -672,5 +672,10 @@
   "recommendedArtists": "Recommandé",
   "albumsByTaste": "Selon vos goûts",
   "savedAlbums": "Enregistré",
-  "recommendedAlbums": "Recommandé"
+  "recommendedAlbums": "Recommandé",
+  "downloadNotificationChannelName": "téléchargements de musique",
+  "downloadNotificationChannelDescription": "Maintient vos téléchargements de musique actifs en arrière-plan.",
+  "downloadNotificationTitle": "Télécharger de la musique",
+  "downloadNotificationPreparing": "Préparation de vos téléchargements…",
+  "downloadNotificationSong": "Téléchargement : {songTitle}"
 }

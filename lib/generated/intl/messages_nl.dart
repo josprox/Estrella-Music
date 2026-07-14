@@ -20,18 +20,20 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'nl';
 
-  static String m0(error) =>
+  static String m0(songTitle) => "Downloaden: ${songTitle}";
+
+  static String m1(error) =>
       "Er is een fout opgetreden tijdens het regenereren van: ${error}";
 
-  static String m1(title) => "gelijk aan ${title}";
+  static String m2(title) => "gelijk aan ${title}";
 
-  static String m2(current) => "Stap ${current} van 3";
+  static String m3(current) => "Stap ${current} van 3";
 
-  static String m3(count) => "${count} wijzigingen vastgelegd.";
+  static String m4(count) => "${count} wijzigingen vastgelegd.";
 
-  static String m4(count) => "${count} gesynchroniseerde wijzigingen.";
+  static String m5(count) => "${count} gesynchroniseerde wijzigingen.";
 
-  static String m5(statusCode) =>
+  static String m6(statusCode) =>
       "Kan niet zoeken naar gebruikers (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -237,6 +239,20 @@ class MessageLookup extends MessageLookupByLibrary {
       "gedownloade bestanden gevonden",
     ),
     "downloadLocation": MessageLookupByLibrary.simpleMessage("Downloadlocatie"),
+    "downloadNotificationChannelDescription":
+        MessageLookupByLibrary.simpleMessage(
+          "Houdt uw muziekdownloads actief op de achtergrond.",
+        ),
+    "downloadNotificationChannelName": MessageLookupByLibrary.simpleMessage(
+      "muziek downloaden",
+    ),
+    "downloadNotificationPreparing": MessageLookupByLibrary.simpleMessage(
+      "Uw downloads voorbereiden…",
+    ),
+    "downloadNotificationSong": m0,
+    "downloadNotificationTitle": MessageLookupByLibrary.simpleMessage(
+      "Muziek downloaden",
+    ),
     "downloadingFormat": MessageLookupByLibrary.simpleMessage(
       "Bestandsformaat aan het downloaden",
     ),
@@ -740,7 +756,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
       "Er kan geen nieuwe ID worden gegenereerd. Probeer het later opnieuw.",
     ),
-    "settings_visitor_exception": m0,
+    "settings_visitor_exception": m1,
     "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
       "Bijgewerkte identificatie",
     ),
@@ -751,7 +767,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
       "Zoeken in de Shazam-database naar overeenkomsten...",
     ),
-    "similarToTitle": m1,
+    "similarToTitle": m2,
     "singles": MessageLookupByLibrary.simpleMessage("Singles"),
     "skipSilence": MessageLookupByLibrary.simpleMessage("Stilte overslaan"),
     "skipSilenceDes": MessageLookupByLibrary.simpleMessage(
@@ -761,7 +777,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Je slaap timer is ingezet",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Slaap timer"),
-    "slide_indicator": m2,
+    "slide_indicator": m3,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "Liedje toegevoegd aan afspeellijst!",
     ),
@@ -814,8 +830,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
       "Veeg om opties te verkennen ➔",
     ),
-    "syncChangesConfirmed": m3,
-    "syncChangesSynced": m4,
+    "syncChangesConfirmed": m4,
+    "syncChangesSynced": m5,
     "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
       "Cloudmodus geactiveerd. De bestaande bibliotheek downloaden.",
     ),
@@ -888,7 +904,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "Het antwoord bevat geen lijst met gebruikers.",
     ),
-    "userSearchFailed": m5,
+    "userSearchFailed": m6,
     "userUnblocked": MessageLookupByLibrary.simpleMessage(
       "Ontgrendelde gebruiker",
     ),

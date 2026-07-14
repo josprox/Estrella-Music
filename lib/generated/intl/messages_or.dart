@@ -20,17 +20,19 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'or';
 
-  static String m0(error) => "Ocurrió un error al regenerar: ${error}";
+  static String m0(songTitle) => "ଡାଉନଲୋଡ୍: ${songTitle}";
 
-  static String m1(title) => "${title} ସହିତ ସମାନ |";
+  static String m1(error) => "Ocurrió un error al regenerar: ${error}";
 
-  static String m2(current) => "3 ର ଷ୍ଟେପ୍ ${current} |";
+  static String m2(title) => "${title} ସହିତ ସମାନ |";
 
-  static String m3(count) => "${count} ପରିବର୍ତ୍ତନଗୁଡ଼ିକ ପ୍ରତିବଦ୍ଧ |";
+  static String m3(current) => "3 ର ଷ୍ଟେପ୍ ${current} |";
 
-  static String m4(count) => "${count} ସିଙ୍କ୍ରୋନାଇଜଡ୍ ପରିବର୍ତ୍ତନଗୁଡିକ |";
+  static String m4(count) => "${count} ପରିବର୍ତ୍ତନଗୁଡ଼ିକ ପ୍ରତିବଦ୍ଧ |";
 
-  static String m5(statusCode) =>
+  static String m5(count) => "${count} ସିଙ୍କ୍ରୋନାଇଜଡ୍ ପରିବର୍ତ୍ତନଗୁଡିକ |";
+
+  static String m6(statusCode) =>
       "ଉପଭୋକ୍ତାମାନଙ୍କ ପାଇଁ ସନ୍ଧାନ କରିପାରିଲା ନାହିଁ (${statusCode}) |";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -194,6 +196,20 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "downloadLocation": MessageLookupByLibrary.simpleMessage(
       "ଅବସ୍ଥାନ ଡାଉନଲୋଡ୍ କରନ୍ତୁ",
+    ),
+    "downloadNotificationChannelDescription":
+        MessageLookupByLibrary.simpleMessage(
+          "ଆପଣଙ୍କର ମ୍ୟୁଜିକ୍ ଡାଉନଲୋଡ୍ ଗୁଡିକ ପୃଷ୍ଠଭୂମିରେ ସକ୍ରିୟ ରଖେ |",
+        ),
+    "downloadNotificationChannelName": MessageLookupByLibrary.simpleMessage(
+      "ମ୍ୟୁଜିକ୍ ଡାଉନଲୋଡ୍ |",
+    ),
+    "downloadNotificationPreparing": MessageLookupByLibrary.simpleMessage(
+      "ତୁମର ଡାଉନଲୋଡ୍ ପ୍ରସ୍ତୁତ କରୁଛି…",
+    ),
+    "downloadNotificationSong": m0,
+    "downloadNotificationTitle": MessageLookupByLibrary.simpleMessage(
+      "ସଙ୍ଗୀତ ଡାଉନଲୋଡ୍ କରୁଛି |",
     ),
     "downloadingFormat": MessageLookupByLibrary.simpleMessage(
       "ଫାଇଲ୍ ଫର୍ମାଟ୍ ଡାଉନଲୋଡ୍ କରୁଛି",
@@ -656,7 +672,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
       "ଏକ ନୂତନ ପରିଚାୟକ ସୃଷ୍ଟି ହୋଇପାରିବ ନାହିଁ | ଦୟାକରି ପରେ ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ |",
     ),
-    "settings_visitor_exception": m0,
+    "settings_visitor_exception": m1,
     "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
       "ଅଦ୍ୟତନ ପରିଚାୟକ",
     ),
@@ -667,14 +683,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
       "ମ୍ୟାଚ୍ ପାଇଁ ଶାଜାମ ଡାଟାବେସ୍ ଖୋଜୁଛି ...",
     ),
-    "similarToTitle": m1,
+    "similarToTitle": m2,
     "singles": MessageLookupByLibrary.simpleMessage("ଏକାକୀ"),
     "skipSilence": MessageLookupByLibrary.simpleMessage("ନୀରବତା ଛାଡିଦିଅ"),
     "skipSilenceDes": MessageLookupByLibrary.simpleMessage(
       "ମ୍ୟୁଜିକ୍ ପ୍ଲେବ୍ୟାକ୍ରେ ନୀରବତାକୁ ଏଡ଼ାଇ ଦିଆଯିବ",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("ଶୟନ ସମୟ-ନିୟାମକ"),
-    "slide_indicator": m2,
+    "slide_indicator": m3,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "ଗୀତକୁ ପ୍ଲେଲିଷ୍ଟରେ ଯୋଡାଗଲା!",
     ),
@@ -725,8 +741,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
       "ବିକଳ୍ପଗୁଡିକ ଅନୁସନ୍ଧାନ କରିବାକୁ ସ୍ୱାଇପ୍ ➔",
     ),
-    "syncChangesConfirmed": m3,
-    "syncChangesSynced": m4,
+    "syncChangesConfirmed": m4,
+    "syncChangesSynced": m5,
     "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
       "କ୍ଲାଉଡ୍ ମୋଡ୍ ସକ୍ରିୟ ହୋଇଛି | ବିଦ୍ୟମାନ ଲାଇବ୍ରେରୀ ଡାଉନଲୋଡ୍ କରିବା |",
     ),
@@ -798,7 +814,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "ପ୍ରତିକ୍ରିୟାରେ ଉପଭୋକ୍ତାମାନଙ୍କର ଏକ ତାଲିକା ନାହିଁ |",
     ),
-    "userSearchFailed": m5,
+    "userSearchFailed": m6,
     "userUnblocked": MessageLookupByLibrary.simpleMessage(
       "ଅନଲକ୍ ହୋଇଥିବା ଉପଭୋକ୍ତା |",
     ),

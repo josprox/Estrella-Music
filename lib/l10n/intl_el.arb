@@ -400,5 +400,10 @@
   "recommendedArtists": "Συνιστάται",
   "albumsByTaste": "Σύμφωνα με τα γούστα σας",
   "savedAlbums": "Αποθηκεύτηκε",
-  "recommendedAlbums": "Συνιστάται"
+  "recommendedAlbums": "Συνιστάται",
+  "downloadNotificationChannelName": "λήψεις μουσικής",
+  "downloadNotificationChannelDescription": "Διατηρεί ενεργές τις λήψεις μουσικής σας στο παρασκήνιο.",
+  "downloadNotificationTitle": "Λήψη μουσικής",
+  "downloadNotificationPreparing": "Προετοιμασία των λήψεών σας…",
+  "downloadNotificationSong": "Λήψη: {songTitle}"
 }

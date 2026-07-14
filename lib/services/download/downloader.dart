@@ -7,6 +7,8 @@ import 'package:audiotags/audiotags.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:harmonymusic/services/auth/catalog_recovery_service.dart';
+import 'package:harmonymusic/services/background/background_execution_service.dart';
 import 'package:harmonymusic/services/storage/sqlite_store.dart';
 
 import 'package:harmonymusic/ui/screens/Album/album_screen_controller.dart';
@@ -84,47 +86,46 @@ class Downloader extends GetxService {
   }
 
   Future<void> triggerDownloadingJob() async {
-    //check if playlist download in queue => download playlistsongs else download from general songs queue
-    if (playlistQueue.isNotEmpty) {
-      isJobRunning.value = true;
-      for (String playlistId in playlistQueue.keys.toList()) {
-        //checked in case download cancel request
-        if (playlistQueue.containsKey(playlistId)) {
+    if (isJobRunning.isTrue) return;
+    isJobRunning.value = true;
+    await BackgroundExecutionService.startDownloads();
+    try {
+      while (playlistQueue.isNotEmpty || songQueue.isNotEmpty) {
+        if (playlistQueue.isNotEmpty) {
+          final playlistId = playlistQueue.keys.first;
+          final songs = playlistQueue[playlistId]?.toList();
+          if (songs == null) {
+            playlistQueue.remove(playlistId);
+            continue;
+          }
           currentPlaylistId.value = playlistId;
-          await downloadSongList((playlistQueue[playlistId]!).toList(),
-              isPlaylist: true);
-          if (Get.isRegistered<PlaylistScreenController>(
-                  tag: Key(playlistId).hashCode.toString()) &&
-              playlistQueue.containsKey(playlistId)) {
-            Get.find<PlaylistScreenController>(
-                    tag: Key(playlistId).hashCode.toString())
-                .isDownloaded
-                .value = true;
+          await downloadSongList(songs, isPlaylist: true);
+          if (playlistQueue.containsKey(playlistId)) {
+            _markCollectionDownloaded(playlistId);
+            playlistQueue.remove(playlistId);
           }
-          // in case of album
-          else if (Get.isRegistered<AlbumScreenController>(
-                  tag: Key(playlistId).hashCode.toString()) &&
-              playlistQueue.containsKey(playlistId)) {
-            Get.find<AlbumScreenController>(
-                    tag: Key(playlistId).hashCode.toString())
-                .isDownloaded
-                .value = true;
-          }
-          playlistQueue.remove(playlistId);
+          currentPlaylistId.value = '';
+          playlistDownloadingProgress.value = 0;
+        } else {
+          await downloadSongList(songQueue.toList());
         }
-        currentPlaylistId.value = "";
-        playlistDownloadingProgress.value = 0;
       }
-    } else {
-      isJobRunning.value = true;
-      await downloadSongList(songQueue.toList());
-    }
-
-    if (songQueue.isNotEmpty) {
-      triggerDownloadingJob();
-    } else {
+    } finally {
       isJobRunning.value = false;
       currentSong = null;
+      await BackgroundExecutionService.stopDownloads();
+      if (playlistQueue.isNotEmpty || songQueue.isNotEmpty) {
+        await triggerDownloadingJob();
+      }
+    }
+  }
+
+  void _markCollectionDownloaded(String playlistId) {
+    final tag = Key(playlistId).hashCode.toString();
+    if (Get.isRegistered<PlaylistScreenController>(tag: tag)) {
+      Get.find<PlaylistScreenController>(tag: tag).isDownloaded.value = true;
+    } else if (Get.isRegistered<AlbumScreenController>(tag: tag)) {
+      Get.find<AlbumScreenController>(tag: tag).isDownloaded.value = true;
     }
   }
 
@@ -148,7 +149,9 @@ class Downloader extends GetxService {
       // Wait if we reached the limit of concurrent downloads
       while (activeDownloads.length >= maxConcurrentDownloads) {
         await Future.delayed(const Duration(milliseconds: 100));
-        activeDownloads.removeWhere((f) => f.hashCode == -1); // Dummy to trigger cleanup if I used a wrapper, but I'll use then() instead
+        activeDownloads.removeWhere((f) =>
+            f.hashCode ==
+            -1); // Dummy to trigger cleanup if I used a wrapper, but I'll use then() instead
       }
 
       final downloadTask = _downloadSongTask(song, isPlaylist, jobSongList);
@@ -167,7 +170,8 @@ class Downloader extends GetxService {
 
   Future<void> _downloadSongTask(
       MediaItem song, bool isPlaylist, List<MediaItem> jobSongList) async {
-    currentSong = song; // This might still flicker if multiple songs are downloading, but we'll use individual progress in UI
+    currentSong =
+        song; // This might still flicker if multiple songs are downloading, but we'll use individual progress in UI
     songProgressMap[song.id] = 0;
     await writeFileStream(song);
     songQueue.remove(song);
@@ -180,25 +184,15 @@ class Downloader extends GetxService {
     final settingsScreenController = Get.find<SettingsScreenController>();
     final downloadingFormat = settingsScreenController.downloadingFormat.string;
 
-    final playerResponse = await StreamProvider.fetch(song.id);
-
-    if (!playerResponse.playable) {
-      ScaffoldMessenger.of(Get.context!).showSnackBar(snackbar(
-          Get.context!,
-          playerResponse.statusMSG == "networkError"
-              ? playerResponse.statusMSG.t
-              : playerResponse.statusMSG,
-          size: SanckBarSize.BIG,
-          duration: const Duration(seconds: 2),
-          top: !GetPlatform.isDesktop));
-      printINFO("Requested song is not downloadable. You may try again");
+    final source = await _resolveDownloadSource(song, downloadingFormat);
+    if (source == null) {
       complete.complete();
       return complete.future;
     }
-
-    Audio requiredAudioStream = downloadingFormat == "opus"
-        ? playerResponse.highestBitrateOpusAudio!
-        : playerResponse.highestBitrateMp4aAudio!;
+    final progressId = song.id;
+    song = source.song;
+    final requiredAudioStream = source.audio;
+    unawaited(BackgroundExecutionService.updateCurrentSong(song.title));
 
     final dirPath = settingsScreenController.downloadLocationPath.string;
     final actualDownformat =
@@ -216,7 +210,7 @@ class Downloader extends GetxService {
         options: Options(headers: {"Range": 'bytes=0-$totalBytes'}),
         filePath, onReceiveProgress: (count, total) {
       if (total <= 0) return;
-      songProgressMap[song.id] = ((count / total) * 100).toInt();
+      songProgressMap[progressId] = ((count / total) * 100).toInt();
     }).then(
       (value) async {
         printINFO(value.data);
@@ -303,4 +297,124 @@ class Downloader extends GetxService {
 
     return complete.future;
   }
+
+  Future<_DownloadSource?> _resolveDownloadSource(
+    MediaItem song,
+    String downloadingFormat,
+  ) async {
+    try {
+      final response = await StreamProvider.fetch(song.id);
+      if (response.videoUnavailable) {
+        printINFO(
+          'Video ${song.id} is unavailable; recovering only this song',
+        );
+        throw _UnavailableVideoException(response.statusMSG);
+      }
+      if (!response.playable) {
+        printINFO(
+          'Song ${song.id} failed without an unavailable-video signal: '
+          '${response.statusMSG}',
+        );
+        _showDownloadError(response.statusMSG);
+        return null;
+      }
+      final audio = _selectAudio(response, downloadingFormat);
+      if (audio == null) {
+        _showDownloadError(response.statusMSG);
+        return null;
+      }
+      return _DownloadSource(song: song, audio: audio);
+    } on _UnavailableVideoException catch (error) {
+      return _recoverUnavailableSong(song, downloadingFormat, error.message);
+    } catch (error) {
+      printERROR('No fue posible obtener la URL de ${song.id}: $error');
+      _showDownloadError(S.current.downloadError3);
+      return null;
+    }
+  }
+
+  Future<_DownloadSource?> _recoverUnavailableSong(
+    MediaItem song,
+    String downloadingFormat,
+    String originalError,
+  ) async {
+    try {
+      final recovered =
+          await Get.find<CatalogRecoveryService>().findSimilarSong(
+        title: song.title,
+        artistName: song.artist,
+        albumName: song.album,
+        duration: song.duration,
+        excludeIds: {song.id},
+      );
+      if (recovered == null) {
+        printINFO('No replacement was found for unavailable song ${song.id}');
+        _showDownloadError(originalError);
+        return null;
+      }
+
+      final response = await StreamProvider.fetch(recovered.id);
+      final audio = _selectAudio(response, downloadingFormat);
+      if (!response.playable || audio == null) {
+        printINFO(
+          'Replacement ${recovered.id} is not downloadable: '
+          '${response.statusMSG}',
+        );
+        _showDownloadError(response.statusMSG);
+        return null;
+      }
+
+      try {
+        await Get.find<CatalogRecoveryService>().persistRecoveredSong(
+          oldSong: song,
+          recoveredSong: recovered,
+        );
+        printINFO('Updated unavailable song ${song.id} to ${recovered.id}');
+      } catch (error, stackTrace) {
+        printERROR(
+          'Could not persist replacement ${song.id} -> ${recovered.id}; '
+          'the recovered song will still be downloaded: '
+          '$error\n$stackTrace',
+        );
+      }
+      return _DownloadSource(song: recovered, audio: audio);
+    } catch (error, stackTrace) {
+      printERROR('No fue posible recuperar ${song.id}: $error\n$stackTrace');
+      _showDownloadError(originalError);
+      return null;
+    }
+  }
+
+  Audio? _selectAudio(StreamProvider response, String format) {
+    if (!response.playable) return null;
+    return format == 'opus'
+        ? response.highestBitrateOpusAudio
+        : response.highestBitrateMp4aAudio;
+  }
+
+  void _showDownloadError(String message) {
+    final context = Get.context;
+    if (context == null) return;
+    final translatedMessage = message == 'networkError' ? message.t : message;
+    ScaffoldMessenger.of(context).showSnackBar(snackbar(
+      context,
+      translatedMessage,
+      size: SanckBarSize.BIG,
+      duration: const Duration(seconds: 2),
+      top: !GetPlatform.isDesktop,
+    ));
+  }
+}
+
+class _DownloadSource {
+  const _DownloadSource({required this.song, required this.audio});
+
+  final MediaItem song;
+  final Audio audio;
+}
+
+class _UnavailableVideoException implements Exception {
+  const _UnavailableVideoException(this.message);
+
+  final String message;
 }

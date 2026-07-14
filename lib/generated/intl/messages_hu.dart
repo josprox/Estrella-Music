@@ -20,17 +20,19 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'hu';
 
-  static String m0(error) => "Hiba történt a regenerálás során: ${error}";
+  static String m0(songTitle) => "Letöltés: ${songTitle}";
 
-  static String m1(title) => "Hasonló ehhez: ${title}";
+  static String m1(error) => "Hiba történt a regenerálás során: ${error}";
 
-  static String m2(current) => "3. ${current}. lépés";
+  static String m2(title) => "Hasonló ehhez: ${title}";
 
-  static String m3(count) => "${count} változtatások végrehajtva.";
+  static String m3(current) => "3. ${current}. lépés";
 
-  static String m4(count) => "${count} szinkronizált változtatások.";
+  static String m4(count) => "${count} változtatások végrehajtva.";
 
-  static String m5(statusCode) =>
+  static String m5(count) => "${count} szinkronizált változtatások.";
+
+  static String m6(statusCode) =>
       "Nem sikerült felhasználókat keresni (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -186,6 +188,20 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "downloadError3": MessageLookupByLibrary.simpleMessage(
       "A letöltés hálózati/lejátszási hiba miatt megszakadt! Próbáld újra",
+    ),
+    "downloadNotificationChannelDescription":
+        MessageLookupByLibrary.simpleMessage(
+          "Aktívan tartja a zeneletöltéseket a háttérben.",
+        ),
+    "downloadNotificationChannelName": MessageLookupByLibrary.simpleMessage(
+      "zeneletöltések",
+    ),
+    "downloadNotificationPreparing": MessageLookupByLibrary.simpleMessage(
+      "Letöltések előkészítése…",
+    ),
+    "downloadNotificationSong": m0,
+    "downloadNotificationTitle": MessageLookupByLibrary.simpleMessage(
+      "Zene letöltése",
     ),
     "downloads": MessageLookupByLibrary.simpleMessage("Letöltések"),
     "dynamic": MessageLookupByLibrary.simpleMessage("Dinamikus"),
@@ -591,7 +607,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
       "Nem sikerült új azonosítót létrehozni. Kérjük, próbálja újra később.",
     ),
-    "settings_visitor_exception": m0,
+    "settings_visitor_exception": m1,
     "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
       "Frissített azonosító",
     ),
@@ -603,10 +619,10 @@ class MessageLookup extends MessageLookupByLibrary {
       "Egyezések keresése a Shazam adatbázisban...",
     ),
     "shuffleQueue": MessageLookupByLibrary.simpleMessage("Várólista keverése"),
-    "similarToTitle": m1,
+    "similarToTitle": m2,
     "singles": MessageLookupByLibrary.simpleMessage("Kislemezek"),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Alvás időzítő"),
-    "slide_indicator": m2,
+    "slide_indicator": m3,
     "songFound": MessageLookupByLibrary.simpleMessage("Dal megtalálva!"),
     "songNotPlayable": MessageLookupByLibrary.simpleMessage(
       "A dal nem játszható le, a szerver korlátozása miatt!",
@@ -630,8 +646,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
       "Csúsztassa ujját a lehetőségek felfedezéséhez ➔",
     ),
-    "syncChangesConfirmed": m3,
-    "syncChangesSynced": m4,
+    "syncChangesConfirmed": m4,
+    "syncChangesSynced": m5,
     "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
       "Felhő mód aktiválva. A meglévő könyvtár letöltése.",
     ),
@@ -699,7 +715,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "A válasz nem tartalmazza a felhasználók listáját.",
     ),
-    "userSearchFailed": m5,
+    "userSearchFailed": m6,
     "userUnblocked": MessageLookupByLibrary.simpleMessage(
       "Feloldott felhasználó",
     ),

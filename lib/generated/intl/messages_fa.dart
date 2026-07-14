@@ -20,17 +20,19 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'fa';
 
-  static String m0(error) => "هنگام ایجاد مجدد خطایی روی داد: ${error}";
+  static String m0(songTitle) => "در حال دانلود: ${songTitle}";
 
-  static String m1(title) => "مشابه ${title}";
+  static String m1(error) => "هنگام ایجاد مجدد خطایی روی داد: ${error}";
 
-  static String m2(current) => "مرحله ${current} از 3";
+  static String m2(title) => "مشابه ${title}";
 
-  static String m3(count) => "${count} تغییرات انجام شده است.";
+  static String m3(current) => "مرحله ${current} از 3";
 
-  static String m4(count) => "${count} تغییرات همگام شده.";
+  static String m4(count) => "${count} تغییرات انجام شده است.";
 
-  static String m5(statusCode) =>
+  static String m5(count) => "${count} تغییرات همگام شده.";
+
+  static String m6(statusCode) =>
       "جستجو برای کاربران امکان‌پذیر نیست (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -202,6 +204,20 @@ class MessageLookup extends MessageLookupByLibrary {
       "دانلود به علت خطای شبکه/سترین شکست خورد! لطفا دوباره تلاش کنید",
     ),
     "downloadLocation": MessageLookupByLibrary.simpleMessage("دانلود محل فایل"),
+    "downloadNotificationChannelDescription":
+        MessageLookupByLibrary.simpleMessage(
+          "دانلودهای موسیقی شما را در پس زمینه فعال نگه می دارد.",
+        ),
+    "downloadNotificationChannelName": MessageLookupByLibrary.simpleMessage(
+      "دانلود های موسیقی",
+    ),
+    "downloadNotificationPreparing": MessageLookupByLibrary.simpleMessage(
+      "در حال آماده سازی دانلودهای شما…",
+    ),
+    "downloadNotificationSong": m0,
+    "downloadNotificationTitle": MessageLookupByLibrary.simpleMessage(
+      "دانلود موسیقی",
+    ),
     "downloads": MessageLookupByLibrary.simpleMessage("دانلود ها"),
     "dynamic": MessageLookupByLibrary.simpleMessage("پویا"),
     "email": MessageLookupByLibrary.simpleMessage("ایمیل"),
@@ -620,7 +636,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
       "یک شناسه جدید ایجاد نشد. لطفاً بعداً دوباره امتحان کنید.",
     ),
-    "settings_visitor_exception": m0,
+    "settings_visitor_exception": m1,
     "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
       "شناسه به روز شد",
     ),
@@ -634,14 +650,14 @@ class MessageLookup extends MessageLookupByLibrary {
       "جستجو در پایگاه داده Shazam برای موارد مشابه...",
     ),
     "shuffleQueue": MessageLookupByLibrary.simpleMessage("بُر زدن صف"),
-    "similarToTitle": m1,
+    "similarToTitle": m2,
     "singles": MessageLookupByLibrary.simpleMessage("تکی"),
     "skipSilence": MessageLookupByLibrary.simpleMessage("رد کردن سکوت"),
     "skipSilenceDes": MessageLookupByLibrary.simpleMessage(
       "سکوت در زمان پخش موسیقی رد خواهد شد",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("زمان‌سنج خواب"),
-    "slide_indicator": m2,
+    "slide_indicator": m3,
     "songFound": MessageLookupByLibrary.simpleMessage("آهنگ پیدا شد"),
     "songNotPlayable": MessageLookupByLibrary.simpleMessage(
       "موسیقی به علت محدودیت سرور، قابل پخش نیست!",
@@ -667,8 +683,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
       "برای کاوش گزینه ها تند بکشید ➔",
     ),
-    "syncChangesConfirmed": m3,
-    "syncChangesSynced": m4,
+    "syncChangesConfirmed": m4,
+    "syncChangesSynced": m5,
     "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
       "حالت ابری فعال شد. در حال دانلود کتابخانه موجود",
     ),
@@ -733,7 +749,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "پاسخ شامل لیستی از کاربران نیست.",
     ),
-    "userSearchFailed": m5,
+    "userSearchFailed": m6,
     "userUnblocked": MessageLookupByLibrary.simpleMessage("کاربر آنلاک شده"),
     "username": MessageLookupByLibrary.simpleMessage("نام کاربری"),
     "video": MessageLookupByLibrary.simpleMessage("ویدئو"),

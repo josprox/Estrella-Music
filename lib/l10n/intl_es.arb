@@ -799,5 +799,10 @@
   "settings_visitor_updated_desc": "Se generó un nuevo Visitor ID con éxito.",
   "settings_visitor_error": "Error",
   "settings_visitor_error_desc": "No se pudo generar un nuevo identificador. Inténtalo más tarde.",
-  "settings_visitor_exception": "Ocurrió un error al regenerar: {error}"
+  "settings_visitor_exception": "Ocurrió un error al regenerar: {error}",
+  "downloadNotificationChannelName": "Descargas de música",
+  "downloadNotificationChannelDescription": "Mantiene activas tus descargas de música en segundo plano.",
+  "downloadNotificationTitle": "Descargando música",
+  "downloadNotificationPreparing": "Preparando tus descargas…",
+  "downloadNotificationSong": "Descargando: {songTitle}"
 }

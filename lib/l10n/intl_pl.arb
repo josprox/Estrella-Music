@@ -665,5 +665,10 @@
   "recommendedArtists": "Zalecony",
   "albumsByTaste": "Według Twoich upodobań",
   "savedAlbums": "Zapisano",
-  "recommendedAlbums": "Zalecony"
+  "recommendedAlbums": "Zalecony",
+  "downloadNotificationChannelName": "pobieranie muzyki",
+  "downloadNotificationChannelDescription": "Utrzymuje pobieranie muzyki aktywne w tle.",
+  "downloadNotificationTitle": "Pobieranie muzyki",
+  "downloadNotificationPreparing": "Przygotowuję pliki do pobrania…",
+  "downloadNotificationSong": "Pobieranie: {songTitle}"
 }

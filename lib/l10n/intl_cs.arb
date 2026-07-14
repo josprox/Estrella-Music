@@ -670,5 +670,10 @@
   "recommendedArtists": "Doporučeno",
   "albumsByTaste": "Podle vašich chutí",
   "savedAlbums": "Uloženo",
-  "recommendedAlbums": "Doporučeno"
+  "recommendedAlbums": "Doporučeno",
+  "downloadNotificationChannelName": "stahování hudby",
+  "downloadNotificationChannelDescription": "Udržuje stahování hudby aktivní na pozadí.",
+  "downloadNotificationTitle": "Stahování hudby",
+  "downloadNotificationPreparing": "Příprava stahování…",
+  "downloadNotificationSong": "Stahování: {songTitle}"
 }

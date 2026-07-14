@@ -400,5 +400,10 @@
   "recommendedArtists": "受到推崇的",
   "albumsByTaste": "根据你的口味",
   "savedAlbums": "已保存",
-  "recommendedAlbums": "受到推崇的"
+  "recommendedAlbums": "受到推崇的",
+  "downloadNotificationChannelName": "音乐下载",
+  "downloadNotificationChannelDescription": "让您的音乐下载在后台保持活跃。",
+  "downloadNotificationTitle": "下载音乐",
+  "downloadNotificationPreparing": "正在准备您的下载...",
+  "downloadNotificationSong": "下载：{songTitle}"
 }

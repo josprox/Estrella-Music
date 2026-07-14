@@ -20,17 +20,19 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'vi';
 
-  static String m0(error) => "Đã xảy ra lỗi khi tạo lại: ${error}";
+  static String m0(songTitle) => "Đang tải xuống: ${songTitle}";
 
-  static String m1(title) => "Tương tự như ${title}";
+  static String m1(error) => "Đã xảy ra lỗi khi tạo lại: ${error}";
 
-  static String m2(current) => "Bước ${current} trên 3";
+  static String m2(title) => "Tương tự như ${title}";
 
-  static String m3(count) => "${count} thay đổi đã được cam kết.";
+  static String m3(current) => "Bước ${current} trên 3";
 
-  static String m4(count) => "${count} thay đổi được đồng bộ hóa.";
+  static String m4(count) => "${count} thay đổi đã được cam kết.";
 
-  static String m5(statusCode) =>
+  static String m5(count) => "${count} thay đổi được đồng bộ hóa.";
+
+  static String m6(statusCode) =>
       "Không thể tìm kiếm người dùng (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -277,6 +279,20 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "downloadLocation": MessageLookupByLibrary.simpleMessage(
       "Vị trí tải xuống",
+    ),
+    "downloadNotificationChannelDescription":
+        MessageLookupByLibrary.simpleMessage(
+          "Giữ tải nhạc của bạn hoạt động trong nền.",
+        ),
+    "downloadNotificationChannelName": MessageLookupByLibrary.simpleMessage(
+      "tải nhạc",
+    ),
+    "downloadNotificationPreparing": MessageLookupByLibrary.simpleMessage(
+      "Đang chuẩn bị nội dung tải xuống của bạn…",
+    ),
+    "downloadNotificationSong": m0,
+    "downloadNotificationTitle": MessageLookupByLibrary.simpleMessage(
+      "Đang tải nhạc",
     ),
     "downloadingFormat": MessageLookupByLibrary.simpleMessage(
       "Định dạng tệp tải về",
@@ -941,7 +957,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
       "Không thể tạo mã định danh mới. Vui lòng thử lại sau.",
     ),
-    "settings_visitor_exception": m0,
+    "settings_visitor_exception": m1,
     "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
       "Mã định danh đã cập nhật",
     ),
@@ -953,7 +969,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Đang tìm kiếm cơ sở dữ liệu Shazam để tìm kết quả phù hợp...",
     ),
     "shuffleQueue": MessageLookupByLibrary.simpleMessage("Xáo trộn hàng đợi"),
-    "similarToTitle": m1,
+    "similarToTitle": m2,
     "singles": MessageLookupByLibrary.simpleMessage("Đĩa đơn"),
     "skipSilence": MessageLookupByLibrary.simpleMessage("Bỏ qua khoảng lặng"),
     "skipSilenceDes": MessageLookupByLibrary.simpleMessage(
@@ -963,7 +979,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Bộ hẹn giờ tắt của bạn đã được đặt",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Hẹn giờ tắt"),
-    "slide_indicator": m2,
+    "slide_indicator": m3,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "Bài hát đã được thêm vào danh sách phát!",
     ),
@@ -1017,8 +1033,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
       "Vuốt để khám phá các tùy chọn ➔",
     ),
-    "syncChangesConfirmed": m3,
-    "syncChangesSynced": m4,
+    "syncChangesConfirmed": m4,
+    "syncChangesSynced": m5,
     "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
       "Đã kích hoạt chế độ đám mây. Đang tải xuống thư viện hiện có.",
     ),
@@ -1097,7 +1113,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "Phản hồi không chứa danh sách người dùng.",
     ),
-    "userSearchFailed": m5,
+    "userSearchFailed": m6,
     "userUnblocked": MessageLookupByLibrary.simpleMessage(
       "Người dùng đã được mở khóa",
     ),

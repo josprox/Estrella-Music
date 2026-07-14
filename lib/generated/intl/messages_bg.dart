@@ -20,17 +20,19 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'bg';
 
-  static String m0(error) => "Възникна грешка при регенерирането: ${error}";
+  static String m0(songTitle) => "Изтегляне: ${songTitle}";
 
-  static String m1(title) => "Подобно на ${title}";
+  static String m1(error) => "Възникна грешка при регенерирането: ${error}";
 
-  static String m2(current) => "Стъпка ${current} от 3";
+  static String m2(title) => "Подобно на ${title}";
 
-  static String m3(count) => "${count} извършени промени.";
+  static String m3(current) => "Стъпка ${current} от 3";
 
-  static String m4(count) => "${count} синхронизирани промени.";
+  static String m4(count) => "${count} извършени промени.";
 
-  static String m5(statusCode) =>
+  static String m5(count) => "${count} синхронизирани промени.";
+
+  static String m6(statusCode) =>
       "Не може да се търсят потребители (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -283,6 +285,20 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "downloadLocation": MessageLookupByLibrary.simpleMessage(
       "Местоположение за изтегляне",
+    ),
+    "downloadNotificationChannelDescription":
+        MessageLookupByLibrary.simpleMessage(
+          "Поддържа вашите изтегляния на музика активни във фонов режим.",
+        ),
+    "downloadNotificationChannelName": MessageLookupByLibrary.simpleMessage(
+      "изтегляне на музика",
+    ),
+    "downloadNotificationPreparing": MessageLookupByLibrary.simpleMessage(
+      "Изтеглянията ви се подготвят...",
+    ),
+    "downloadNotificationSong": m0,
+    "downloadNotificationTitle": MessageLookupByLibrary.simpleMessage(
+      "Изтегляне на музика",
     ),
     "downloadingFormat": MessageLookupByLibrary.simpleMessage(
       "Файлов формат при изтегляне",
@@ -941,7 +957,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
       "Нов идентификатор не можа да бъде генериран. Моля, опитайте отново по-късно.",
     ),
-    "settings_visitor_exception": m0,
+    "settings_visitor_exception": m1,
     "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
       "Актуализиран идентификатор",
     ),
@@ -953,7 +969,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Търсене в базата данни на Shazam за съвпадения...",
     ),
     "shuffleQueue": MessageLookupByLibrary.simpleMessage("Разбъркай опашката"),
-    "similarToTitle": m1,
+    "similarToTitle": m2,
     "singles": MessageLookupByLibrary.simpleMessage("Сингли"),
     "skipSilence": MessageLookupByLibrary.simpleMessage("Пропусни тишината"),
     "skipSilenceDes": MessageLookupByLibrary.simpleMessage(
@@ -963,7 +979,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Вашият таймер за заспиване е зададен",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Таймер за заспиване"),
-    "slide_indicator": m2,
+    "slide_indicator": m3,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "Песента е добавена към плейлист!",
     ),
@@ -1019,8 +1035,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
       "Плъзнете, за да разгледате опциите ➔",
     ),
-    "syncChangesConfirmed": m3,
-    "syncChangesSynced": m4,
+    "syncChangesConfirmed": m4,
+    "syncChangesSynced": m5,
     "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
       "Облачен режим е активиран. Изтегляне на съществуващата библиотека.",
     ),
@@ -1101,7 +1117,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "Отговорът не съдържа списък с потребители.",
     ),
-    "userSearchFailed": m5,
+    "userSearchFailed": m6,
     "userUnblocked": MessageLookupByLibrary.simpleMessage(
       "Отключен потребител",
     ),

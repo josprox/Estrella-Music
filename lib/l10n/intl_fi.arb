@@ -547,5 +547,10 @@
   "recommendedArtists": "Suositeltava",
   "albumsByTaste": "Sinun makusi mukaan",
   "savedAlbums": "Tallennettu",
-  "recommendedAlbums": "Suositeltava"
+  "recommendedAlbums": "Suositeltava",
+  "downloadNotificationChannelName": "musiikin lataukset",
+  "downloadNotificationChannelDescription": "Pitää musiikkilataukset aktiivisina taustalla.",
+  "downloadNotificationTitle": "Musiikin lataaminen",
+  "downloadNotificationPreparing": "Valmistellaan latauksiasi…",
+  "downloadNotificationSong": "Ladataan: {songTitle}"
 }

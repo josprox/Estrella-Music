@@ -20,29 +20,31 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
-  static String m6(count) => "Albums: ${count}";
+  static String m0(songTitle) => "Downloading: ${songTitle}";
 
-  static String m7(count) => "Artists: ${count}";
+  static String m7(count) => "Albums: ${count}";
 
-  static String m8(count) => "Favorites: ${count}";
+  static String m8(count) => "Artists: ${count}";
 
-  static String m9(count) => "Playlists: ${count}";
+  static String m9(count) => "Favorites: ${count}";
 
-  static String m10(count) => "Songs: ${count}";
+  static String m10(count) => "Playlists: ${count}";
 
-  static String m11(source) => "Migration completed from ${source}.";
+  static String m11(count) => "Songs: ${count}";
 
-  static String m0(error) => "An error occurred while regenerating: ${error}";
+  static String m12(source) => "Migration completed from ${source}.";
 
-  static String m1(title) => "Similar to ${title}";
+  static String m1(error) => "An error occurred while regenerating: ${error}";
 
-  static String m2(current) => "Step ${current} of 3";
+  static String m2(title) => "Similar to ${title}";
 
-  static String m3(count) => "${count} changes committed.";
+  static String m3(current) => "Step ${current} of 3";
 
-  static String m4(count) => "${count} synchronized changes.";
+  static String m4(count) => "${count} changes committed.";
 
-  static String m5(statusCode) => "Could not search for users (${statusCode}).";
+  static String m5(count) => "${count} synchronized changes.";
+
+  static String m6(statusCode) => "Could not search for users (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -334,6 +336,20 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "downloadLocation": MessageLookupByLibrary.simpleMessage(
       "Download Location",
+    ),
+    "downloadNotificationChannelDescription":
+        MessageLookupByLibrary.simpleMessage(
+          "Keeps your music downloads active in the background.",
+        ),
+    "downloadNotificationChannelName": MessageLookupByLibrary.simpleMessage(
+      "music downloads",
+    ),
+    "downloadNotificationPreparing": MessageLookupByLibrary.simpleMessage(
+      "Preparing your downloads…",
+    ),
+    "downloadNotificationSong": m0,
+    "downloadNotificationTitle": MessageLookupByLibrary.simpleMessage(
+      "Downloading music",
     ),
     "downloadPlaylist": MessageLookupByLibrary.simpleMessage(
       "Download playlist",
@@ -664,12 +680,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "migration_success": MessageLookupByLibrary.simpleMessage(
       "Migration completed successfully.",
     ),
-    "migration_summary_albums": m6,
-    "migration_summary_artists": m7,
-    "migration_summary_favorites": m8,
-    "migration_summary_playlists": m9,
-    "migration_summary_songs": m10,
-    "migration_summary_start": m11,
+    "migration_summary_albums": m7,
+    "migration_summary_artists": m8,
+    "migration_summary_favorites": m9,
+    "migration_summary_playlists": m10,
+    "migration_summary_songs": m11,
+    "migration_summary_start": m12,
     "minutes": MessageLookupByLibrary.simpleMessage("minutes"),
     "misc": MessageLookupByLibrary.simpleMessage("Misc"),
     "mostListenedSong": MessageLookupByLibrary.simpleMessage(
@@ -1012,7 +1028,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
       "A new identifier could not be generated. ",
     ),
-    "settings_visitor_exception": m0,
+    "settings_visitor_exception": m1,
     "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
       "Updated identifier",
     ),
@@ -1027,7 +1043,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "shuffle": MessageLookupByLibrary.simpleMessage("Shuffle"),
     "shuffleQueue": MessageLookupByLibrary.simpleMessage("Shuffle Queue"),
-    "similarToTitle": m1,
+    "similarToTitle": m2,
     "singles": MessageLookupByLibrary.simpleMessage("Singles"),
     "skipSilence": MessageLookupByLibrary.simpleMessage("Skip silence"),
     "skipSilenceDes": MessageLookupByLibrary.simpleMessage(
@@ -1037,7 +1053,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Your sleep timer is set",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Sleep Timer"),
-    "slide_indicator": m2,
+    "slide_indicator": m3,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "Song added to playlist!",
     ),
@@ -1095,8 +1111,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
       "Swipe to explore options",
     ),
-    "syncChangesConfirmed": m3,
-    "syncChangesSynced": m4,
+    "syncChangesConfirmed": m4,
+    "syncChangesSynced": m5,
     "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
       "Cloud mode activated. ",
     ),
@@ -1173,7 +1189,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "The response does not contain a list of users.",
     ),
-    "userSearchFailed": m5,
+    "userSearchFailed": m6,
     "userUnblocked": MessageLookupByLibrary.simpleMessage("Unlocked user"),
     "username": MessageLookupByLibrary.simpleMessage("Username"),
     "video": MessageLookupByLibrary.simpleMessage("Video"),

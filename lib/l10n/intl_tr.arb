@@ -670,5 +670,10 @@
   "recommendedArtists": "Tavsiye edilen",
   "albumsByTaste": "Zevklerinize göre",
   "savedAlbums": "Kaydedildi",
-  "recommendedAlbums": "Tavsiye edilen"
+  "recommendedAlbums": "Tavsiye edilen",
+  "downloadNotificationChannelName": "müzik indirmeleri",
+  "downloadNotificationChannelDescription": "Müzik indirmelerinizi arka planda aktif tutar.",
+  "downloadNotificationTitle": "Müzik indiriliyor",
+  "downloadNotificationPreparing": "İndirmeleriniz hazırlanıyor…",
+  "downloadNotificationSong": "İndiriliyor: {songTitle}"
 }

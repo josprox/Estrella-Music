@@ -634,5 +634,10 @@
   "recommendedArtists": "مُستَحسَن",
   "albumsByTaste": "حسب ذوقك",
   "savedAlbums": "أنقذ",
-  "recommendedAlbums": "مُستَحسَن"
+  "recommendedAlbums": "مُستَحسَن",
+  "downloadNotificationChannelName": "تنزيلات الموسيقى",
+  "downloadNotificationChannelDescription": "يبقي تنزيلات الموسيقى الخاصة بك نشطة في الخلفية.",
+  "downloadNotificationTitle": "تنزيل الموسيقى",
+  "downloadNotificationPreparing": "جارٍ تحضير التنزيلات…",
+  "downloadNotificationSong": "التنزيل: __PH_0____"
 }

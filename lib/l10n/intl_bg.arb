@@ -670,5 +670,10 @@
   "recommendedArtists": "Препоръчва се",
   "albumsByTaste": "Според вашите вкусове",
   "savedAlbums": "Запазено",
-  "recommendedAlbums": "Препоръчва се"
+  "recommendedAlbums": "Препоръчва се",
+  "downloadNotificationChannelName": "изтегляне на музика",
+  "downloadNotificationChannelDescription": "Поддържа вашите изтегляния на музика активни във фонов режим.",
+  "downloadNotificationTitle": "Изтегляне на музика",
+  "downloadNotificationPreparing": "Изтеглянията ви се подготвят...",
+  "downloadNotificationSong": "Изтегляне: {songTitle}"
 }

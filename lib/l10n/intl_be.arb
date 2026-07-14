@@ -400,5 +400,10 @@
   "recommendedArtists": "Рэкамендуецца",
   "albumsByTaste": "Па вашым густам",
   "savedAlbums": "Захавана",
-  "recommendedAlbums": "Рэкамендуецца"
+  "recommendedAlbums": "Рэкамендуецца",
+  "downloadNotificationChannelName": "загрузкі музыкі",
+  "downloadNotificationChannelDescription": "Захоўвае загрузку музыкі ў фонавым рэжыме.",
+  "downloadNotificationTitle": "Спампаваць музыку",
+  "downloadNotificationPreparing": "Падрыхтоўка спамповак…",
+  "downloadNotificationSong": "Спампоўка: {songTitle}"
 }

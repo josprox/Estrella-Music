@@ -20,6 +20,8 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'hi';
 
+  static String m0(songTitle) => "डाउनलोड हो रहा है: ${songTitle}";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "CreateNewPlaylist": MessageLookupByLibrary.simpleMessage(
@@ -157,6 +159,20 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "downloadLocation": MessageLookupByLibrary.simpleMessage(
       "डाउनलोड का स्थान",
+    ),
+    "downloadNotificationChannelDescription":
+        MessageLookupByLibrary.simpleMessage(
+          "आपके संगीत डाउनलोड को बैकग्राउंड में सक्रिय रखता है।",
+        ),
+    "downloadNotificationChannelName": MessageLookupByLibrary.simpleMessage(
+      "संगीत डाउनलोड",
+    ),
+    "downloadNotificationPreparing": MessageLookupByLibrary.simpleMessage(
+      "आपके डाउनलोड तैयार किए जा रहे हैं…",
+    ),
+    "downloadNotificationSong": m0,
+    "downloadNotificationTitle": MessageLookupByLibrary.simpleMessage(
+      "संगीत डाउनलोड हो रहा है",
     ),
     "downloadingFormat": MessageLookupByLibrary.simpleMessage(
       "डाउनलोडिंग फ़ाइल फ़ारमैट",

@@ -20,17 +20,19 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'id';
 
-  static String m0(error) => "Terjadi kesalahan saat membuat ulang: ${error}";
+  static String m0(songTitle) => "Mengunduh: _${songTitle}";
 
-  static String m1(title) => "Mirip dengan _${title}";
+  static String m1(error) => "Terjadi kesalahan saat membuat ulang: ${error}";
 
-  static String m2(current) => "Langkah _${current} dari 3";
+  static String m2(title) => "Mirip dengan _${title}";
 
-  static String m3(count) => "_${count} perubahan dilakukan.";
+  static String m3(current) => "Langkah _${current} dari 3";
 
-  static String m4(count) => "_${count} perubahan yang disinkronkan.";
+  static String m4(count) => "_${count} perubahan dilakukan.";
 
-  static String m5(statusCode) =>
+  static String m5(count) => "_${count} perubahan yang disinkronkan.";
+
+  static String m6(statusCode) =>
       "Tidak dapat mencari pengguna (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -276,6 +278,20 @@ class MessageLookup extends MessageLookupByLibrary {
       "Unduhan gagal karena jaringan/stream sedang gangguan! Silakan coba periksa kembali.",
     ),
     "downloadLocation": MessageLookupByLibrary.simpleMessage("Lokasi download"),
+    "downloadNotificationChannelDescription":
+        MessageLookupByLibrary.simpleMessage(
+          "Menjaga unduhan musik Anda tetap aktif di latar belakang.",
+        ),
+    "downloadNotificationChannelName": MessageLookupByLibrary.simpleMessage(
+      "unduhan musik",
+    ),
+    "downloadNotificationPreparing": MessageLookupByLibrary.simpleMessage(
+      "Mempersiapkan unduhan Anda…",
+    ),
+    "downloadNotificationSong": m0,
+    "downloadNotificationTitle": MessageLookupByLibrary.simpleMessage(
+      "Mengunduh musik",
+    ),
     "downloadingFormat": MessageLookupByLibrary.simpleMessage(
       "Mengunduh Format File",
     ),
@@ -918,7 +934,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
       "Pengidentifikasi baru tidak dapat dibuat. Silakan coba lagi nanti.",
     ),
-    "settings_visitor_exception": m0,
+    "settings_visitor_exception": m1,
     "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
       "Pengidentifikasi yang diperbarui",
     ),
@@ -930,7 +946,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Mencari kecocokan di database Shazam...",
     ),
     "shuffleQueue": MessageLookupByLibrary.simpleMessage("Acak Antrean"),
-    "similarToTitle": m1,
+    "similarToTitle": m2,
     "singles": MessageLookupByLibrary.simpleMessage("Single"),
     "skipSilence": MessageLookupByLibrary.simpleMessage("Lewati keheningan"),
     "skipSilenceDes": MessageLookupByLibrary.simpleMessage(
@@ -940,7 +956,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Timer tidur Anda telah diatur",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Pengatur Waktu Tidur"),
-    "slide_indicator": m2,
+    "slide_indicator": m3,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "Lagu ditambahkan ke daftar putar!",
     ),
@@ -996,8 +1012,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
       "Geser untuk menjelajahi opsi ➔",
     ),
-    "syncChangesConfirmed": m3,
-    "syncChangesSynced": m4,
+    "syncChangesConfirmed": m4,
+    "syncChangesSynced": m5,
     "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
       "Mode awan diaktifkan. Mengunduh perpustakaan yang ada.",
     ),
@@ -1078,7 +1094,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "Responsnya tidak berisi daftar pengguna.",
     ),
-    "userSearchFailed": m5,
+    "userSearchFailed": m6,
     "userUnblocked": MessageLookupByLibrary.simpleMessage(
       "Pengguna tidak terkunci",
     ),

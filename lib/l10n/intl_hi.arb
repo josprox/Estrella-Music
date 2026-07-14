@@ -236,5 +236,10 @@
   "autoDownFavSongDes": "पसंदीदा में जोड़े जाने पर पसंदीदा गाने स्वचालित रूप से डाउनलोड करें",
   "songInfo": "गाने की जानकारी",
   "keepScreenOnWhilePlaying": "प्ले के दौरान स्क्रीन जला रखें",
-  "keepScreenOnWhilePlayingDes": "यदि सक्षम है, तो संगीत चलाते समय डिवाइस की स्क्रीन जगी रहेगी"
+  "keepScreenOnWhilePlayingDes": "यदि सक्षम है, तो संगीत चलाते समय डिवाइस की स्क्रीन जगी रहेगी",
+  "downloadNotificationChannelName": "संगीत डाउनलोड",
+  "downloadNotificationChannelDescription": "आपके संगीत डाउनलोड को बैकग्राउंड में सक्रिय रखता है।",
+  "downloadNotificationTitle": "संगीत डाउनलोड हो रहा है",
+  "downloadNotificationPreparing": "आपके डाउनलोड तैयार किए जा रहे हैं…",
+  "downloadNotificationSong": "डाउनलोड हो रहा है: {songTitle}"
 }

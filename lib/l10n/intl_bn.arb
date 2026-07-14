@@ -660,5 +660,10 @@
   "recommendedArtists": "প্রস্তাবিত",
   "albumsByTaste": "আপনার রুচি অনুযায়ী",
   "savedAlbums": "সংরক্ষিত",
-  "recommendedAlbums": "প্রস্তাবিত"
+  "recommendedAlbums": "প্রস্তাবিত",
+  "downloadNotificationChannelName": "সঙ্গীত ডাউনলোড",
+  "downloadNotificationChannelDescription": "পটভূমিতে আপনার সঙ্গীত ডাউনলোড সক্রিয় রাখে।",
+  "downloadNotificationTitle": "সঙ্গীত ডাউনলোড করা হচ্ছে",
+  "downloadNotificationPreparing": "আপনার ডাউনলোডগুলি প্রস্তুত করা হচ্ছে...",
+  "downloadNotificationSong": "ডাউনলোড হচ্ছে: {songTitle}"
 }

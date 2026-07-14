@@ -4713,6 +4713,56 @@ class S {
       args: [error],
     );
   }
+
+  /// `music downloads`
+  String get downloadNotificationChannelName {
+    return Intl.message(
+      'music downloads',
+      name: 'downloadNotificationChannelName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Keeps your music downloads active in the background.`
+  String get downloadNotificationChannelDescription {
+    return Intl.message(
+      'Keeps your music downloads active in the background.',
+      name: 'downloadNotificationChannelDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Downloading music`
+  String get downloadNotificationTitle {
+    return Intl.message(
+      'Downloading music',
+      name: 'downloadNotificationTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Preparing your downloads…`
+  String get downloadNotificationPreparing {
+    return Intl.message(
+      'Preparing your downloads…',
+      name: 'downloadNotificationPreparing',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Downloading: {songTitle}`
+  String downloadNotificationSong(Object songTitle) {
+    return Intl.message(
+      'Downloading: $songTitle',
+      name: 'downloadNotificationSong',
+      desc: '',
+      args: [songTitle],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

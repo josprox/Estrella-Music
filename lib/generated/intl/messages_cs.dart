@@ -20,17 +20,19 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'cs';
 
-  static String m0(error) => "Při regeneraci došlo k chybě: ${error}";
+  static String m0(songTitle) => "Stahování: ${songTitle}";
 
-  static String m1(title) => "Podobné jako ${title}";
+  static String m1(error) => "Při regeneraci došlo k chybě: ${error}";
 
-  static String m2(current) => "Krok ${current} ze 3";
+  static String m2(title) => "Podobné jako ${title}";
 
-  static String m3(count) => "${count} změny potvrzeny.";
+  static String m3(current) => "Krok ${current} ze 3";
 
-  static String m4(count) => "${count} synchronizovaných změn.";
+  static String m4(count) => "${count} změny potvrzeny.";
 
-  static String m5(statusCode) => "Nelze vyhledat uživatele (${statusCode}).";
+  static String m5(count) => "${count} synchronizovaných změn.";
+
+  static String m6(statusCode) => "Nelze vyhledat uživatele (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -272,6 +274,20 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "downloadLocation": MessageLookupByLibrary.simpleMessage(
       "Umístění stažených písniček",
+    ),
+    "downloadNotificationChannelDescription":
+        MessageLookupByLibrary.simpleMessage(
+          "Udržuje stahování hudby aktivní na pozadí.",
+        ),
+    "downloadNotificationChannelName": MessageLookupByLibrary.simpleMessage(
+      "stahování hudby",
+    ),
+    "downloadNotificationPreparing": MessageLookupByLibrary.simpleMessage(
+      "Příprava stahování…",
+    ),
+    "downloadNotificationSong": m0,
+    "downloadNotificationTitle": MessageLookupByLibrary.simpleMessage(
+      "Stahování hudby",
     ),
     "downloadingFormat": MessageLookupByLibrary.simpleMessage(
       "Formát stahovaného souboru",
@@ -924,7 +940,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
       "Nepodařilo se vygenerovat nový identifikátor. Zkuste to znovu později.",
     ),
-    "settings_visitor_exception": m0,
+    "settings_visitor_exception": m1,
     "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
       "Aktualizovaný identifikátor",
     ),
@@ -936,7 +952,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Hledání shod v databázi Shazam...",
     ),
     "shuffleQueue": MessageLookupByLibrary.simpleMessage("Promíchat"),
-    "similarToTitle": m1,
+    "similarToTitle": m2,
     "singles": MessageLookupByLibrary.simpleMessage("Singly"),
     "skipSilence": MessageLookupByLibrary.simpleMessage("Přeskočit ticho"),
     "skipSilenceDes": MessageLookupByLibrary.simpleMessage(
@@ -946,7 +962,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Váš časovač spánku byl spuštěn",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Časovač spánku"),
-    "slide_indicator": m2,
+    "slide_indicator": m3,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "Skladba přidána do playlistu!",
     ),
@@ -1000,8 +1016,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
       "Přejetím prozkoumejte možnosti ➔",
     ),
-    "syncChangesConfirmed": m3,
-    "syncChangesSynced": m4,
+    "syncChangesConfirmed": m4,
+    "syncChangesSynced": m5,
     "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
       "Aktivován cloudový režim. Stahování stávající knihovny.",
     ),
@@ -1078,7 +1094,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "Odpověď neobsahuje seznam uživatelů.",
     ),
-    "userSearchFailed": m5,
+    "userSearchFailed": m6,
     "userUnblocked": MessageLookupByLibrary.simpleMessage("Odemčený uživatel"),
     "username": MessageLookupByLibrary.simpleMessage("Uživatelské jméno"),
     "video": MessageLookupByLibrary.simpleMessage("Video"),

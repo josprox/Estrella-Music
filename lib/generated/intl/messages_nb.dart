@@ -20,17 +20,19 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'nb';
 
-  static String m0(error) => "Det oppstod en feil under regenerering: ${error}";
+  static String m0(songTitle) => "Laster ned: ${songTitle}";
 
-  static String m1(title) => "Ligner på ${title}";
+  static String m1(error) => "Det oppstod en feil under regenerering: ${error}";
 
-  static String m2(current) => "Trinn ${current} av 3";
+  static String m2(title) => "Ligner på ${title}";
 
-  static String m3(count) => "${count} endringer begått.";
+  static String m3(current) => "Trinn ${current} av 3";
 
-  static String m4(count) => "${count} synkroniserte endringer.";
+  static String m4(count) => "${count} endringer begått.";
 
-  static String m5(statusCode) =>
+  static String m5(count) => "${count} synkroniserte endringer.";
+
+  static String m6(statusCode) =>
       "Kunne ikke søke etter brukere (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -125,6 +127,20 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "dailyDiscover": MessageLookupByLibrary.simpleMessage("Daglig oppdagelse"),
     "done": MessageLookupByLibrary.simpleMessage("Ferdig"),
+    "downloadNotificationChannelDescription":
+        MessageLookupByLibrary.simpleMessage(
+          "Holder musikknedlastingene dine aktive i bakgrunnen.",
+        ),
+    "downloadNotificationChannelName": MessageLookupByLibrary.simpleMessage(
+      "nedlasting av musikk",
+    ),
+    "downloadNotificationPreparing": MessageLookupByLibrary.simpleMessage(
+      "Forbereder nedlastingene dine …",
+    ),
+    "downloadNotificationSong": m0,
+    "downloadNotificationTitle": MessageLookupByLibrary.simpleMessage(
+      "Laster ned musikk",
+    ),
     "email": MessageLookupByLibrary.simpleMessage("E-post"),
     "errorOccurred": MessageLookupByLibrary.simpleMessage(
       "Det oppstod en feil",
@@ -403,7 +419,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
       "En ny identifikator kunne ikke genereres. Prøv igjen senere.",
     ),
-    "settings_visitor_exception": m0,
+    "settings_visitor_exception": m1,
     "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
       "Oppdatert identifikator",
     ),
@@ -413,8 +429,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
       "Søker i Shazam-databasen etter treff...",
     ),
-    "similarToTitle": m1,
-    "slide_indicator": m2,
+    "similarToTitle": m2,
+    "slide_indicator": m3,
     "songFound": MessageLookupByLibrary.simpleMessage("Sangen funnet!"),
     "songPitch": MessageLookupByLibrary.simpleMessage("sang tone"),
     "songsImportedFromJossMusic": MessageLookupByLibrary.simpleMessage(
@@ -430,8 +446,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
       "Sveip for å utforske alternativer ➔",
     ),
-    "syncChangesConfirmed": m3,
-    "syncChangesSynced": m4,
+    "syncChangesConfirmed": m4,
+    "syncChangesSynced": m5,
     "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
       "Skymodus aktivert. Laster ned det eksisterende biblioteket.",
     ),
@@ -491,7 +507,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "Svaret inneholder ikke en liste over brukere.",
     ),
-    "userSearchFailed": m5,
+    "userSearchFailed": m6,
     "userUnblocked": MessageLookupByLibrary.simpleMessage("Ulåst bruker"),
     "username": MessageLookupByLibrary.simpleMessage("Brukernavn"),
     "video": MessageLookupByLibrary.simpleMessage("Video"),

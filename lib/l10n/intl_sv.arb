@@ -561,5 +561,10 @@
   "recommendedArtists": "Rekommenderad",
   "albumsByTaste": "Enligt din smak",
   "savedAlbums": "Sparad",
-  "recommendedAlbums": "Rekommenderad"
+  "recommendedAlbums": "Rekommenderad",
+  "downloadNotificationChannelName": "musiknedladdningar",
+  "downloadNotificationChannelDescription": "Håller din musiknedladdning aktiv i bakgrunden.",
+  "downloadNotificationTitle": "Ladda ner musik",
+  "downloadNotificationPreparing": "Förbereder dina nedladdningar...",
+  "downloadNotificationSong": "Laddar ner: {songTitle}"
 }

@@ -20,17 +20,19 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ko';
 
-  static String m0(error) => "재생성하는 동안 오류가 발생했습니다: ${error}";
+  static String m0(songTitle) => "다운로드 중: ${songTitle}";
 
-  static String m1(title) => "_${title} 과 유사함";
+  static String m1(error) => "재생성하는 동안 오류가 발생했습니다: ${error}";
 
-  static String m2(current) => "3단계 중 ${current} 단계";
+  static String m2(title) => "_${title} 과 유사함";
 
-  static String m3(count) => "_${count} 변경사항이 커밋되었습니다.";
+  static String m3(current) => "3단계 중 ${current} 단계";
 
-  static String m4(count) => "_${count} 변경사항이 동기화되었습니다.";
+  static String m4(count) => "_${count} 변경사항이 커밋되었습니다.";
 
-  static String m5(statusCode) => "사용자(${statusCode})를 검색할 수 없습니다.";
+  static String m5(count) => "_${count} 변경사항이 동기화되었습니다.";
+
+  static String m6(statusCode) => "사용자(${statusCode})를 검색할 수 없습니다.";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -187,6 +189,18 @@ class MessageLookup extends MessageLookupByLibrary {
     "dontShowInfoAgain": MessageLookupByLibrary.simpleMessage("다시 보지 않기"),
     "downFilesFound": MessageLookupByLibrary.simpleMessage("다운로드한 파일이 발견됨"),
     "downloadLocation": MessageLookupByLibrary.simpleMessage("다운로드 위치"),
+    "downloadNotificationChannelDescription":
+        MessageLookupByLibrary.simpleMessage("백그라운드에서 음악 다운로드를 활성 상태로 유지합니다."),
+    "downloadNotificationChannelName": MessageLookupByLibrary.simpleMessage(
+      "음악 다운로드",
+    ),
+    "downloadNotificationPreparing": MessageLookupByLibrary.simpleMessage(
+      "다운로드 준비 중…",
+    ),
+    "downloadNotificationSong": m0,
+    "downloadNotificationTitle": MessageLookupByLibrary.simpleMessage(
+      "음악 다운로드 중",
+    ),
     "downloadingFormat": MessageLookupByLibrary.simpleMessage("다운로드 파일의 형식"),
     "downloadingFormatDes": MessageLookupByLibrary.simpleMessage(
       "다운로드 파일의 형식을 정해주세요. \"Opus\" 형식이 최고 음질입니다",
@@ -573,7 +587,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
       "새 식별자를 생성할 수 없습니다. 나중에 다시 시도해 주세요.",
     ),
-    "settings_visitor_exception": m0,
+    "settings_visitor_exception": m1,
     "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
       "업데이트된 식별자",
     ),
@@ -584,7 +598,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
       "Shazam 데이터베이스에서 일치하는 항목을 검색하는 중...",
     ),
-    "similarToTitle": m1,
+    "similarToTitle": m2,
     "singles": MessageLookupByLibrary.simpleMessage("싱글"),
     "skipSilence": MessageLookupByLibrary.simpleMessage("묵음 건너뛰기"),
     "skipSilenceDes": MessageLookupByLibrary.simpleMessage(
@@ -592,7 +606,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "sleepTimeSetAlert": MessageLookupByLibrary.simpleMessage("취침 타이머가 설정됨"),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("취침 타이머"),
-    "slide_indicator": m2,
+    "slide_indicator": m3,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "플레이리스트에 음악 추가됨!",
     ),
@@ -629,8 +643,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "streamingQualityDes": MessageLookupByLibrary.simpleMessage("음악 스트림의 음질"),
     "subscribers": MessageLookupByLibrary.simpleMessage("구독자"),
     "swipe_prompt": MessageLookupByLibrary.simpleMessage("스와이프하여 옵션 탐색 ➔"),
-    "syncChangesConfirmed": m3,
-    "syncChangesSynced": m4,
+    "syncChangesConfirmed": m4,
+    "syncChangesSynced": m5,
     "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
       "클라우드 모드가 활성화되었습니다. 기존 라이브러리를 다운로드합니다.",
     ),
@@ -697,7 +711,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "응답에는 사용자 목록이 포함되어 있지 않습니다.",
     ),
-    "userSearchFailed": m5,
+    "userSearchFailed": m6,
     "userUnblocked": MessageLookupByLibrary.simpleMessage("잠금 해제된 사용자"),
     "username": MessageLookupByLibrary.simpleMessage("사용자 이름"),
     "video": MessageLookupByLibrary.simpleMessage("동영상"),

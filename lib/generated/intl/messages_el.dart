@@ -20,18 +20,20 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'el';
 
-  static String m0(error) =>
+  static String m0(songTitle) => "Λήψη: ${songTitle}";
+
+  static String m1(error) =>
       "Παρουσιάστηκε σφάλμα κατά την αναγέννηση: ${error}";
 
-  static String m1(title) => "Παρόμοιο με ${title}";
+  static String m2(title) => "Παρόμοιο με ${title}";
 
-  static String m2(current) => "Βήμα ${current} από 3";
+  static String m3(current) => "Βήμα ${current} από 3";
 
-  static String m3(count) => "${count} πραγματοποιήθηκαν αλλαγές.";
+  static String m4(count) => "${count} πραγματοποιήθηκαν αλλαγές.";
 
-  static String m4(count) => "${count} συγχρονισμένες αλλαγές.";
+  static String m5(count) => "${count} συγχρονισμένες αλλαγές.";
 
-  static String m5(statusCode) =>
+  static String m6(statusCode) =>
       "Δεν ήταν δυνατή η αναζήτηση για χρήστες (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -134,6 +136,20 @@ class MessageLookup extends MessageLookupByLibrary {
       "Καθημερινή ανακάλυψη",
     ),
     "done": MessageLookupByLibrary.simpleMessage("Ετοιμος"),
+    "downloadNotificationChannelDescription":
+        MessageLookupByLibrary.simpleMessage(
+          "Διατηρεί ενεργές τις λήψεις μουσικής σας στο παρασκήνιο.",
+        ),
+    "downloadNotificationChannelName": MessageLookupByLibrary.simpleMessage(
+      "λήψεις μουσικής",
+    ),
+    "downloadNotificationPreparing": MessageLookupByLibrary.simpleMessage(
+      "Προετοιμασία των λήψεών σας…",
+    ),
+    "downloadNotificationSong": m0,
+    "downloadNotificationTitle": MessageLookupByLibrary.simpleMessage(
+      "Λήψη μουσικής",
+    ),
     "email": MessageLookupByLibrary.simpleMessage("E-mail"),
     "errorOccurred": MessageLookupByLibrary.simpleMessage(
       "Παρουσιάστηκε σφάλμα",
@@ -418,7 +434,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
       "Δεν ήταν δυνατή η δημιουργία νέου αναγνωριστικού. Δοκιμάστε ξανά αργότερα.",
     ),
-    "settings_visitor_exception": m0,
+    "settings_visitor_exception": m1,
     "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
       "Ενημερώθηκε το αναγνωριστικό",
     ),
@@ -428,8 +444,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
       "Αναζήτηση στη βάση δεδομένων Shazam για αγώνες...",
     ),
-    "similarToTitle": m1,
-    "slide_indicator": m2,
+    "similarToTitle": m2,
+    "slide_indicator": m3,
     "songFound": MessageLookupByLibrary.simpleMessage("Το τραγούδι βρέθηκε!"),
     "songPitch": MessageLookupByLibrary.simpleMessage("τόνο τραγουδιού"),
     "songsImportedFromJossMusic": MessageLookupByLibrary.simpleMessage(
@@ -445,8 +461,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
       "Σύρετε για να εξερευνήσετε τις επιλογές ➔",
     ),
-    "syncChangesConfirmed": m3,
-    "syncChangesSynced": m4,
+    "syncChangesConfirmed": m4,
+    "syncChangesSynced": m5,
     "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
       "Η λειτουργία cloud ενεργοποιήθηκε. Λήψη της υπάρχουσας βιβλιοθήκης.",
     ),
@@ -510,7 +526,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "Η απάντηση δεν περιέχει λίστα χρηστών.",
     ),
-    "userSearchFailed": m5,
+    "userSearchFailed": m6,
     "userUnblocked": MessageLookupByLibrary.simpleMessage(
       "Ξεκλείδωτος χρήστης",
     ),

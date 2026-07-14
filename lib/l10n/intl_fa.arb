@@ -525,5 +525,10 @@
   "recommendedArtists": "توصیه می شود",
   "albumsByTaste": "با توجه به سلیقه شما",
   "savedAlbums": "ذخیره شد",
-  "recommendedAlbums": "توصیه می شود"
+  "recommendedAlbums": "توصیه می شود",
+  "downloadNotificationChannelName": "دانلود های موسیقی",
+  "downloadNotificationChannelDescription": "دانلودهای موسیقی شما را در پس زمینه فعال نگه می دارد.",
+  "downloadNotificationTitle": "دانلود موسیقی",
+  "downloadNotificationPreparing": "در حال آماده سازی دانلودهای شما…",
+  "downloadNotificationSong": "در حال دانلود: {songTitle}"
 }

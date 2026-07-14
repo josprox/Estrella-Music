@@ -499,5 +499,10 @@
   "recommendedArtists": "Ajánlott",
   "albumsByTaste": "Az Ön ízlése szerint",
   "savedAlbums": "Mentve",
-  "recommendedAlbums": "Ajánlott"
+  "recommendedAlbums": "Ajánlott",
+  "downloadNotificationChannelName": "zeneletöltések",
+  "downloadNotificationChannelDescription": "Aktívan tartja a zeneletöltéseket a háttérben.",
+  "downloadNotificationTitle": "Zene letöltése",
+  "downloadNotificationPreparing": "Letöltések előkészítése…",
+  "downloadNotificationSong": "Letöltés: {songTitle}"
 }

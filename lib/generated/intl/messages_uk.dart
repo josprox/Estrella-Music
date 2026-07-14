@@ -20,17 +20,19 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'uk';
 
-  static String m0(error) => "Під час регенерації сталася помилка: ${error}";
+  static String m0(songTitle) => "Завантаження: ${songTitle}";
 
-  static String m1(title) => "Схожий на ${title}";
+  static String m1(error) => "Під час регенерації сталася помилка: ${error}";
 
-  static String m2(current) => "Крок ${current} з 3";
+  static String m2(title) => "Схожий на ${title}";
 
-  static String m3(count) => "Внесено ${count} змін.";
+  static String m3(current) => "Крок ${current} з 3";
 
-  static String m4(count) => "${count} синхронізованих змін.";
+  static String m4(count) => "Внесено ${count} змін.";
 
-  static String m5(statusCode) =>
+  static String m5(count) => "${count} синхронізованих змін.";
+
+  static String m6(statusCode) =>
       "Не вдалося знайти користувачів (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -283,6 +285,20 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "downloadLocation": MessageLookupByLibrary.simpleMessage(
       "Тека для завантаження",
+    ),
+    "downloadNotificationChannelDescription":
+        MessageLookupByLibrary.simpleMessage(
+          "Завантажує вашу музику у фоновому режимі.",
+        ),
+    "downloadNotificationChannelName": MessageLookupByLibrary.simpleMessage(
+      "завантаження музики",
+    ),
+    "downloadNotificationPreparing": MessageLookupByLibrary.simpleMessage(
+      "Підготовка завантажень…",
+    ),
+    "downloadNotificationSong": m0,
+    "downloadNotificationTitle": MessageLookupByLibrary.simpleMessage(
+      "Завантаження музики",
     ),
     "downloadingFormat": MessageLookupByLibrary.simpleMessage(
       "Формат завантаженого файлу",
@@ -937,7 +953,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
       "Не вдалося створити новий ідентифікатор. Спробуйте пізніше.",
     ),
-    "settings_visitor_exception": m0,
+    "settings_visitor_exception": m1,
     "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
       "Оновлений ідентифікатор",
     ),
@@ -949,7 +965,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Пошук збігів у базі даних Shazam...",
     ),
     "shuffleQueue": MessageLookupByLibrary.simpleMessage("Перемішати чергу"),
-    "similarToTitle": m1,
+    "similarToTitle": m2,
     "singles": MessageLookupByLibrary.simpleMessage("Сингли"),
     "skipSilence": MessageLookupByLibrary.simpleMessage("Пропускати тишу"),
     "skipSilenceDes": MessageLookupByLibrary.simpleMessage(
@@ -959,7 +975,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Ваш таймер сну встановлено",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Таймер сну"),
-    "slide_indicator": m2,
+    "slide_indicator": m3,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "Пісню додано до списку відтворення!",
     ),
@@ -1009,8 +1025,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
       "Проведіть пальцем, щоб переглянути параметри ➔",
     ),
-    "syncChangesConfirmed": m3,
-    "syncChangesSynced": m4,
+    "syncChangesConfirmed": m4,
+    "syncChangesSynced": m5,
     "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
       "Хмарний режим активований. Завантаження існуючої бібліотеки.",
     ),
@@ -1089,7 +1105,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "Відповідь не містить списку користувачів.",
     ),
-    "userSearchFailed": m5,
+    "userSearchFailed": m6,
     "userUnblocked": MessageLookupByLibrary.simpleMessage(
       "Розблокований користувач",
     ),

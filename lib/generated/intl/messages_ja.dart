@@ -20,17 +20,19 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ja';
 
-  static String m0(error) => "再生成中にエラーが発生しました: ${error}";
+  static String m0(songTitle) => "ダウンロード中: ${songTitle}";
 
-  static String m1(title) => "${title}に似ている";
+  static String m1(error) => "再生成中にエラーが発生しました: ${error}";
 
-  static String m2(current) => "ステップ ${current}/3";
+  static String m2(title) => "${title}に似ている";
 
-  static String m3(count) => "${count} の変更がコミットされました。";
+  static String m3(current) => "ステップ ${current}/3";
 
-  static String m4(count) => "${count} 個の変更が同期されました。";
+  static String m4(count) => "${count} の変更がコミットされました。";
 
-  static String m5(statusCode) => "ユーザーを検索できませんでした (${statusCode})。";
+  static String m5(count) => "${count} 個の変更が同期されました。";
+
+  static String m6(statusCode) => "ユーザーを検索できませんでした (${statusCode})。";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -227,6 +229,18 @@ class MessageLookup extends MessageLookupByLibrary {
       "ネットワークやストリームのエラーでダウンロード失敗！再度お試しください",
     ),
     "downloadLocation": MessageLookupByLibrary.simpleMessage("ダウンロード先"),
+    "downloadNotificationChannelDescription":
+        MessageLookupByLibrary.simpleMessage("音楽のダウンロードをバックグラウンドでアクティブに保ちます。"),
+    "downloadNotificationChannelName": MessageLookupByLibrary.simpleMessage(
+      "音楽のダウンロード",
+    ),
+    "downloadNotificationPreparing": MessageLookupByLibrary.simpleMessage(
+      "ダウンロードを準備しています…",
+    ),
+    "downloadNotificationSong": m0,
+    "downloadNotificationTitle": MessageLookupByLibrary.simpleMessage(
+      "音楽をダウンロードする",
+    ),
     "downloadingFormat": MessageLookupByLibrary.simpleMessage("ダウンロードするファイル形式"),
     "downloadingFormatDes": MessageLookupByLibrary.simpleMessage(
       "ダウンロードしたいファイル形式。Opus が最高の品質でしょう",
@@ -732,7 +746,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
       "新しい識別子を生成できませんでした。後でもう一度試してください。",
     ),
-    "settings_visitor_exception": m0,
+    "settings_visitor_exception": m1,
     "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
       "更新された識別子",
     ),
@@ -744,7 +758,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Shazam データベースで一致するものを検索しています...",
     ),
     "shuffleQueue": MessageLookupByLibrary.simpleMessage("キューをシャッフル"),
-    "similarToTitle": m1,
+    "similarToTitle": m2,
     "singles": MessageLookupByLibrary.simpleMessage("シングル"),
     "skipSilence": MessageLookupByLibrary.simpleMessage("無音部分を飛ばす"),
     "skipSilenceDes": MessageLookupByLibrary.simpleMessage("音楽再生中に無音部分を飛ばします"),
@@ -752,7 +766,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "スリープタイマーをセットしました",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("スリープタイマー"),
-    "slide_indicator": m2,
+    "slide_indicator": m3,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "曲を再生リストに追加しました！",
     ),
@@ -796,8 +810,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "streamingQualityDes": MessageLookupByLibrary.simpleMessage("音楽ストリームの音質"),
     "subscribers": MessageLookupByLibrary.simpleMessage("人の登録者"),
     "swipe_prompt": MessageLookupByLibrary.simpleMessage("スワイプしてオプションを確認します ➔"),
-    "syncChangesConfirmed": m3,
-    "syncChangesSynced": m4,
+    "syncChangesConfirmed": m4,
+    "syncChangesSynced": m5,
     "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
       "クラウドモードが有効になりました。既存のライブラリをダウンロードします。",
     ),
@@ -868,7 +882,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "応答にはユーザーのリストは含まれません。",
     ),
-    "userSearchFailed": m5,
+    "userSearchFailed": m6,
     "userUnblocked": MessageLookupByLibrary.simpleMessage("ロック解除されたユーザー"),
     "username": MessageLookupByLibrary.simpleMessage("ユーザー名"),
     "video": MessageLookupByLibrary.simpleMessage("ビデオ"),

@@ -20,17 +20,19 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'bn';
 
-  static String m0(error) => "Ocurrió un error al regenerar: ${error}";
+  static String m0(songTitle) => "ডাউনলোড হচ্ছে: ${songTitle}";
 
-  static String m1(title) => "${title} এর মত";
+  static String m1(error) => "Ocurrió un error al regenerar: ${error}";
 
-  static String m2(current) => "৩টির ​​মধ্যে ${current} ধাপ";
+  static String m2(title) => "${title} এর মত";
 
-  static String m3(count) => "${count} পরিবর্তনগুলি প্রতিশ্রুতিবদ্ধ৷";
+  static String m3(current) => "৩টির ​​মধ্যে ${current} ধাপ";
 
-  static String m4(count) => "${count} সিঙ্ক্রোনাইজ করা পরিবর্তন।";
+  static String m4(count) => "${count} পরিবর্তনগুলি প্রতিশ্রুতিবদ্ধ৷";
 
-  static String m5(statusCode) =>
+  static String m5(count) => "${count} সিঙ্ক্রোনাইজ করা পরিবর্তন।";
+
+  static String m6(statusCode) =>
       "ব্যবহারকারীদের জন্য অনুসন্ধান করা যায়নি (${statusCode})।";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -277,6 +279,20 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "downloadLocation": MessageLookupByLibrary.simpleMessage(
       "ডাউনলোডের অবস্থান",
+    ),
+    "downloadNotificationChannelDescription":
+        MessageLookupByLibrary.simpleMessage(
+          "পটভূমিতে আপনার সঙ্গীত ডাউনলোড সক্রিয় রাখে।",
+        ),
+    "downloadNotificationChannelName": MessageLookupByLibrary.simpleMessage(
+      "সঙ্গীত ডাউনলোড",
+    ),
+    "downloadNotificationPreparing": MessageLookupByLibrary.simpleMessage(
+      "আপনার ডাউনলোডগুলি প্রস্তুত করা হচ্ছে...",
+    ),
+    "downloadNotificationSong": m0,
+    "downloadNotificationTitle": MessageLookupByLibrary.simpleMessage(
+      "সঙ্গীত ডাউনলোড করা হচ্ছে",
     ),
     "downloadingFormat": MessageLookupByLibrary.simpleMessage(
       "ফাইল ফর্ম্যাট ডাউনলোড করা হচ্ছে",
@@ -902,7 +918,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
       "একটি নতুন শনাক্তকারী তৈরি করা যায়নি৷ পরে আবার চেষ্টা করুন.",
     ),
-    "settings_visitor_exception": m0,
+    "settings_visitor_exception": m1,
     "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
       "আপডেট করা শনাক্তকারী",
     ),
@@ -914,7 +930,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "ম্যাচের জন্য Shazam ডাটাবেস অনুসন্ধান করা হচ্ছে...",
     ),
     "shuffleQueue": MessageLookupByLibrary.simpleMessage("সারি মেশান"),
-    "similarToTitle": m1,
+    "similarToTitle": m2,
     "singles": MessageLookupByLibrary.simpleMessage("সিঙ্গেল সমূহ"),
     "skipSilence": MessageLookupByLibrary.simpleMessage("নীরবতা এড়িয়ে যান"),
     "skipSilenceDes": MessageLookupByLibrary.simpleMessage(
@@ -924,7 +940,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "তোমার ঘুমের টাইমার সেট করা আছে",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("ঘুমানোর টাইমার"),
-    "slide_indicator": m2,
+    "slide_indicator": m3,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "গানটি প্লেলিস্টে যোগ করা হয়েছে!",
     ),
@@ -976,8 +992,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
       "বিকল্পগুলি অন্বেষণ করতে সোয়াইপ করুন ➔৷",
     ),
-    "syncChangesConfirmed": m3,
-    "syncChangesSynced": m4,
+    "syncChangesConfirmed": m4,
+    "syncChangesSynced": m5,
     "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
       "ক্লাউড মোড সক্রিয় করা হয়েছে। বিদ্যমান লাইব্রেরি ডাউনলোড করা হচ্ছে।",
     ),
@@ -1054,7 +1070,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "প্রতিক্রিয়া ব্যবহারকারীদের একটি তালিকা ধারণ করে না.",
     ),
-    "userSearchFailed": m5,
+    "userSearchFailed": m6,
     "userUnblocked": MessageLookupByLibrary.simpleMessage(
       "আনলক করা ব্যবহারকারী",
     ),

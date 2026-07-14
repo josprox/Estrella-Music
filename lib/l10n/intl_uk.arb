@@ -669,5 +669,10 @@
   "recommendedArtists": "Рекомендовано",
   "albumsByTaste": "Відповідно до ваших смаків",
   "savedAlbums": "Збережено",
-  "recommendedAlbums": "Рекомендовано"
+  "recommendedAlbums": "Рекомендовано",
+  "downloadNotificationChannelName": "завантаження музики",
+  "downloadNotificationChannelDescription": "Завантажує вашу музику у фоновому режимі.",
+  "downloadNotificationTitle": "Завантаження музики",
+  "downloadNotificationPreparing": "Підготовка завантажень…",
+  "downloadNotificationSong": "Завантаження: {songTitle}"
 }

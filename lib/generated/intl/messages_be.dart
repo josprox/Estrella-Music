@@ -20,17 +20,19 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'be';
 
-  static String m0(error) => "Адбылася памылка пры рэгенерацыі: ${error}";
+  static String m0(songTitle) => "Спампоўка: ${songTitle}";
 
-  static String m1(title) => "Падобна да ${title}";
+  static String m1(error) => "Адбылася памылка пры рэгенерацыі: ${error}";
 
-  static String m2(current) => "Крок ${current} з 3";
+  static String m2(title) => "Падобна да ${title}";
 
-  static String m3(count) => "Унесена ${count} змяненняў.";
+  static String m3(current) => "Крок ${current} з 3";
 
-  static String m4(count) => "${count} сінхранізаваных змяненняў.";
+  static String m4(count) => "Унесена ${count} змяненняў.";
 
-  static String m5(statusCode) =>
+  static String m5(count) => "${count} сінхранізаваных змяненняў.";
+
+  static String m6(statusCode) =>
       "Немагчыма знайсці карыстальнікаў (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -131,6 +133,20 @@ class MessageLookup extends MessageLookupByLibrary {
       "Штодзённае адкрыццё",
     ),
     "done": MessageLookupByLibrary.simpleMessage("Гатовы"),
+    "downloadNotificationChannelDescription":
+        MessageLookupByLibrary.simpleMessage(
+          "Захоўвае загрузку музыкі ў фонавым рэжыме.",
+        ),
+    "downloadNotificationChannelName": MessageLookupByLibrary.simpleMessage(
+      "загрузкі музыкі",
+    ),
+    "downloadNotificationPreparing": MessageLookupByLibrary.simpleMessage(
+      "Падрыхтоўка спамповак…",
+    ),
+    "downloadNotificationSong": m0,
+    "downloadNotificationTitle": MessageLookupByLibrary.simpleMessage(
+      "Спампаваць музыку",
+    ),
     "email": MessageLookupByLibrary.simpleMessage("Электронная пошта"),
     "errorOccurred": MessageLookupByLibrary.simpleMessage("Адбылася памылка"),
     "errorPlayingTrack": MessageLookupByLibrary.simpleMessage(
@@ -413,7 +429,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
       "Не ўдалося стварыць новы ідэнтыфікатар. Паўтарыце спробу пазней.",
     ),
-    "settings_visitor_exception": m0,
+    "settings_visitor_exception": m1,
     "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
       "Абноўлены ідэнтыфікатар",
     ),
@@ -423,8 +439,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
       "Пошук супадзенняў у базе дадзеных Shazam...",
     ),
-    "similarToTitle": m1,
-    "slide_indicator": m2,
+    "similarToTitle": m2,
+    "slide_indicator": m3,
     "songFound": MessageLookupByLibrary.simpleMessage("Песня знойдзена!"),
     "songPitch": MessageLookupByLibrary.simpleMessage("тон песні"),
     "songsImportedFromJossMusic": MessageLookupByLibrary.simpleMessage(
@@ -440,8 +456,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
       "Правядзіце пальцам, каб вывучыць параметры ➔",
     ),
-    "syncChangesConfirmed": m3,
-    "syncChangesSynced": m4,
+    "syncChangesConfirmed": m4,
+    "syncChangesSynced": m5,
     "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
       "Воблачны рэжым актываваны. Загрузка існуючай бібліятэкі.",
     ),
@@ -503,7 +519,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "Адказ не змяшчае спісу карыстальнікаў.",
     ),
-    "userSearchFailed": m5,
+    "userSearchFailed": m6,
     "userUnblocked": MessageLookupByLibrary.simpleMessage(
       "Разблакіраваны карыстальнік",
     ),

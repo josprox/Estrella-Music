@@ -20,18 +20,20 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'de';
 
-  static String m0(error) =>
+  static String m0(songTitle) => "Herunterladen: ${songTitle}";
+
+  static String m1(error) =>
       "Beim Neugenerieren ist ein Fehler aufgetreten: ${error}";
 
-  static String m1(title) => "Ähnlich wie ${title}";
+  static String m2(title) => "Ähnlich wie ${title}";
 
-  static String m2(current) => "Schritt ${current} von 3";
+  static String m3(current) => "Schritt ${current} von 3";
 
-  static String m3(count) => "${count} Änderungen übernommen.";
+  static String m4(count) => "${count} Änderungen übernommen.";
 
-  static String m4(count) => "${count} synchronisierte Änderungen.";
+  static String m5(count) => "${count} synchronisierte Änderungen.";
 
-  static String m5(statusCode) =>
+  static String m6(statusCode) =>
       "Es konnte nicht nach Benutzern gesucht werden (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -285,6 +287,20 @@ class MessageLookup extends MessageLookupByLibrary {
       "Herunterladen fehlgeschlagen aufgrund eines Netzwerk-/Streamfehlers! Versuche es erneut",
     ),
     "downloadLocation": MessageLookupByLibrary.simpleMessage("Downloadpfad"),
+    "downloadNotificationChannelDescription":
+        MessageLookupByLibrary.simpleMessage(
+          "Hält Ihre Musik-Downloads im Hintergrund aktiv.",
+        ),
+    "downloadNotificationChannelName": MessageLookupByLibrary.simpleMessage(
+      "Musik-Downloads",
+    ),
+    "downloadNotificationPreparing": MessageLookupByLibrary.simpleMessage(
+      "Bereiten Sie Ihre Downloads vor…",
+    ),
+    "downloadNotificationSong": m0,
+    "downloadNotificationTitle": MessageLookupByLibrary.simpleMessage(
+      "Musik herunterladen",
+    ),
     "downloadingFormat": MessageLookupByLibrary.simpleMessage(
       "Download-Format",
     ),
@@ -941,7 +957,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
       "Es konnte kein neuer Bezeichner generiert werden. Bitte versuchen Sie es später noch einmal.",
     ),
-    "settings_visitor_exception": m0,
+    "settings_visitor_exception": m1,
     "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
       "Aktualisierte Kennung",
     ),
@@ -953,7 +969,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Suche in der Shazam-Datenbank nach Übereinstimmungen...",
     ),
     "shuffleQueue": MessageLookupByLibrary.simpleMessage("Mischen"),
-    "similarToTitle": m1,
+    "similarToTitle": m2,
     "singles": MessageLookupByLibrary.simpleMessage("Singles"),
     "skipSilence": MessageLookupByLibrary.simpleMessage("Stille überspringen"),
     "skipSilenceDes": MessageLookupByLibrary.simpleMessage(
@@ -963,7 +979,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Dein Sleep-Timer ist gesetzt",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Sleep-Timer"),
-    "slide_indicator": m2,
+    "slide_indicator": m3,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "Lied zur Wiedergabeliste hinzugefügt!",
     ),
@@ -1019,8 +1035,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
       "Wischen Sie, um die Optionen zu erkunden ➔",
     ),
-    "syncChangesConfirmed": m3,
-    "syncChangesSynced": m4,
+    "syncChangesConfirmed": m4,
+    "syncChangesSynced": m5,
     "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
       "Cloud-Modus aktiviert. Herunterladen der vorhandenen Bibliothek.",
     ),
@@ -1097,7 +1113,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "Die Antwort enthält keine Benutzerliste.",
     ),
-    "userSearchFailed": m5,
+    "userSearchFailed": m6,
     "userUnblocked": MessageLookupByLibrary.simpleMessage(
       "Entsperrter Benutzer",
     ),

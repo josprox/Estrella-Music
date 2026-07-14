@@ -20,29 +20,31 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'es';
 
-  static String m6(count) => "Álbumes: ${count}";
+  static String m0(songTitle) => "Descargando: ${songTitle}";
 
-  static String m7(count) => "Artistas: ${count}";
+  static String m7(count) => "Álbumes: ${count}";
 
-  static String m8(count) => "Favoritos: ${count}";
+  static String m8(count) => "Artistas: ${count}";
 
-  static String m9(count) => "Playlists: ${count}";
+  static String m9(count) => "Favoritos: ${count}";
 
-  static String m10(count) => "Canciones: ${count}";
+  static String m10(count) => "Playlists: ${count}";
 
-  static String m11(source) => "Migración completada desde ${source}.";
+  static String m11(count) => "Canciones: ${count}";
 
-  static String m0(error) => "Ocurrió un error al regenerar: ${error}";
+  static String m12(source) => "Migración completada desde ${source}.";
 
-  static String m1(title) => "Similar a ${title}";
+  static String m1(error) => "Ocurrió un error al regenerar: ${error}";
 
-  static String m2(current) => "Paso ${current} de 3";
+  static String m2(title) => "Similar a ${title}";
 
-  static String m3(count) => "${count} cambios confirmados.";
+  static String m3(current) => "Paso ${current} de 3";
 
-  static String m4(count) => "${count} cambios sincronizados.";
+  static String m4(count) => "${count} cambios confirmados.";
 
-  static String m5(statusCode) => "No se pudo buscar usuarios (${statusCode}).";
+  static String m5(count) => "${count} cambios sincronizados.";
+
+  static String m6(statusCode) => "No se pudo buscar usuarios (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -358,6 +360,20 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "downloadLocation": MessageLookupByLibrary.simpleMessage(
       "Ubicación de descarga",
+    ),
+    "downloadNotificationChannelDescription":
+        MessageLookupByLibrary.simpleMessage(
+          "Mantiene activas tus descargas de música en segundo plano.",
+        ),
+    "downloadNotificationChannelName": MessageLookupByLibrary.simpleMessage(
+      "Descargas de música",
+    ),
+    "downloadNotificationPreparing": MessageLookupByLibrary.simpleMessage(
+      "Preparando tus descargas…",
+    ),
+    "downloadNotificationSong": m0,
+    "downloadNotificationTitle": MessageLookupByLibrary.simpleMessage(
+      "Descargando música",
     ),
     "downloadPlaylist": MessageLookupByLibrary.simpleMessage(
       "Descargar lista de reproducción",
@@ -716,12 +732,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "migration_success": MessageLookupByLibrary.simpleMessage(
       "Migración completada correctamente.",
     ),
-    "migration_summary_albums": m6,
-    "migration_summary_artists": m7,
-    "migration_summary_favorites": m8,
-    "migration_summary_playlists": m9,
-    "migration_summary_songs": m10,
-    "migration_summary_start": m11,
+    "migration_summary_albums": m7,
+    "migration_summary_artists": m8,
+    "migration_summary_favorites": m9,
+    "migration_summary_playlists": m10,
+    "migration_summary_songs": m11,
+    "migration_summary_start": m12,
     "minutes": MessageLookupByLibrary.simpleMessage("minutos"),
     "misc": MessageLookupByLibrary.simpleMessage("Varios"),
     "mostListenedSong": MessageLookupByLibrary.simpleMessage(
@@ -1092,7 +1108,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
       "No se pudo generar un nuevo identificador. Inténtalo más tarde.",
     ),
-    "settings_visitor_exception": m0,
+    "settings_visitor_exception": m1,
     "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
       "Identificador actualizado",
     ),
@@ -1109,7 +1125,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "shuffle": MessageLookupByLibrary.simpleMessage("Aleatorio"),
     "shuffleQueue": MessageLookupByLibrary.simpleMessage("Mezclar cola"),
-    "similarToTitle": m1,
+    "similarToTitle": m2,
     "singles": MessageLookupByLibrary.simpleMessage("Sencillos"),
     "skipSilence": MessageLookupByLibrary.simpleMessage("Saltar silencio"),
     "skipSilenceDes": MessageLookupByLibrary.simpleMessage(
@@ -1121,7 +1137,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "sleepTimer": MessageLookupByLibrary.simpleMessage(
       "Temporizador de apagado",
     ),
-    "slide_indicator": m2,
+    "slide_indicator": m3,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "¡Canción añadida a la lista de reproducción!",
     ),
@@ -1185,8 +1201,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
       "Desliza para explorar las opciones",
     ),
-    "syncChangesConfirmed": m3,
-    "syncChangesSynced": m4,
+    "syncChangesConfirmed": m4,
+    "syncChangesSynced": m5,
     "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
       "Modo cloud activado. Descargando la biblioteca existente.",
     ),
@@ -1271,7 +1287,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "La respuesta no contiene una lista de usuarios.",
     ),
-    "userSearchFailed": m5,
+    "userSearchFailed": m6,
     "userUnblocked": MessageLookupByLibrary.simpleMessage(
       "Usuario desbloqueado",
     ),

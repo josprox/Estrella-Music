@@ -20,17 +20,19 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'sv';
 
-  static String m0(error) => "Ett fel uppstod under återskapandet: ${error}";
+  static String m0(songTitle) => "Laddar ner: ${songTitle}";
 
-  static String m1(title) => "Liknar ${title}";
+  static String m1(error) => "Ett fel uppstod under återskapandet: ${error}";
 
-  static String m2(current) => "Steg ${current} av 3";
+  static String m2(title) => "Liknar ${title}";
 
-  static String m3(count) => "${count} ändringar har begåtts.";
+  static String m3(current) => "Steg ${current} av 3";
 
-  static String m4(count) => "${count} synkroniserade ändringar.";
+  static String m4(count) => "${count} ändringar har begåtts.";
 
-  static String m5(statusCode) =>
+  static String m5(count) => "${count} synkroniserade ändringar.";
+
+  static String m6(statusCode) =>
       "Det gick inte att söka efter användare (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -212,6 +214,20 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "downFilesFound": MessageLookupByLibrary.simpleMessage(
       "nedladdade filer hittades",
+    ),
+    "downloadNotificationChannelDescription":
+        MessageLookupByLibrary.simpleMessage(
+          "Håller din musiknedladdning aktiv i bakgrunden.",
+        ),
+    "downloadNotificationChannelName": MessageLookupByLibrary.simpleMessage(
+      "musiknedladdningar",
+    ),
+    "downloadNotificationPreparing": MessageLookupByLibrary.simpleMessage(
+      "Förbereder dina nedladdningar...",
+    ),
+    "downloadNotificationSong": m0,
+    "downloadNotificationTitle": MessageLookupByLibrary.simpleMessage(
+      "Ladda ner musik",
     ),
     "downloadingFormat": MessageLookupByLibrary.simpleMessage(
       "Nedladdningsformat",
@@ -682,7 +698,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
       "En ny identifierare kunde inte genereras. Försök igen senare.",
     ),
-    "settings_visitor_exception": m0,
+    "settings_visitor_exception": m1,
     "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
       "Uppdaterad identifierare",
     ),
@@ -693,7 +709,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
       "Söker i Shazam-databasen efter matchningar...",
     ),
-    "similarToTitle": m1,
+    "similarToTitle": m2,
     "singles": MessageLookupByLibrary.simpleMessage("Singlar"),
     "skipSilence": MessageLookupByLibrary.simpleMessage("Hoppa över tystnad"),
     "skipSilenceDes": MessageLookupByLibrary.simpleMessage(
@@ -703,7 +719,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Sovtimer inställd",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Sovtimer"),
-    "slide_indicator": m2,
+    "slide_indicator": m3,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "Låten har lagts till i spellistan!",
     ),
@@ -746,8 +762,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
       "Svep för att utforska alternativen ➔",
     ),
-    "syncChangesConfirmed": m3,
-    "syncChangesSynced": m4,
+    "syncChangesConfirmed": m4,
+    "syncChangesSynced": m5,
     "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
       "Molnläge aktiverat. Laddar ner det befintliga biblioteket.",
     ),
@@ -819,7 +835,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "Svaret innehåller ingen lista över användare.",
     ),
-    "userSearchFailed": m5,
+    "userSearchFailed": m6,
     "userUnblocked": MessageLookupByLibrary.simpleMessage("Olåst användare"),
     "username": MessageLookupByLibrary.simpleMessage("Användarnamn"),
     "video": MessageLookupByLibrary.simpleMessage("Video"),

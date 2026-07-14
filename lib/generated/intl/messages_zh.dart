@@ -20,17 +20,19 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'zh';
 
-  static String m0(error) => "重新生成时发生错误：${error}";
+  static String m0(songTitle) => "下载：${songTitle}";
 
-  static String m1(title) => "类似于 ${title}";
+  static String m1(error) => "重新生成时发生错误：${error}";
 
-  static String m2(current) => "步骤 ${current}（共 3 步）";
+  static String m2(title) => "类似于 ${title}";
 
-  static String m3(count) => "${count} 已提交更改。";
+  static String m3(current) => "步骤 ${current}（共 3 步）";
 
-  static String m4(count) => "${count} 同步更改。";
+  static String m4(count) => "${count} 已提交更改。";
 
-  static String m5(statusCode) => "无法搜索用户 (${statusCode})。";
+  static String m5(count) => "${count} 同步更改。";
+
+  static String m6(statusCode) => "无法搜索用户 (${statusCode})。";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -92,6 +94,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "collaboratorsUpdated": MessageLookupByLibrary.simpleMessage("协作者已正确更新。"),
     "dailyDiscover": MessageLookupByLibrary.simpleMessage("每日发现"),
     "done": MessageLookupByLibrary.simpleMessage("准备好"),
+    "downloadNotificationChannelDescription":
+        MessageLookupByLibrary.simpleMessage("让您的音乐下载在后台保持活跃。"),
+    "downloadNotificationChannelName": MessageLookupByLibrary.simpleMessage(
+      "音乐下载",
+    ),
+    "downloadNotificationPreparing": MessageLookupByLibrary.simpleMessage(
+      "正在准备您的下载...",
+    ),
+    "downloadNotificationSong": m0,
+    "downloadNotificationTitle": MessageLookupByLibrary.simpleMessage("下载音乐"),
     "email": MessageLookupByLibrary.simpleMessage("电子邮件"),
     "errorOccurred": MessageLookupByLibrary.simpleMessage("发生错误"),
     "errorPlayingTrack": MessageLookupByLibrary.simpleMessage("播放时出错："),
@@ -296,7 +308,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
       "无法生成新的标识符。请稍后重试。",
     ),
-    "settings_visitor_exception": m0,
+    "settings_visitor_exception": m1,
     "settings_visitor_updated": MessageLookupByLibrary.simpleMessage("更新的标识符"),
     "settings_visitor_updated_desc": MessageLookupByLibrary.simpleMessage(
       "新的访客 ID 已成功生成。",
@@ -304,8 +316,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
       "正在 Shazam 数据库中搜索匹配项...",
     ),
-    "similarToTitle": m1,
-    "slide_indicator": m2,
+    "similarToTitle": m2,
+    "slide_indicator": m3,
     "songFound": MessageLookupByLibrary.simpleMessage("歌曲找到了！"),
     "songPitch": MessageLookupByLibrary.simpleMessage("歌声"),
     "songsImportedFromJossMusic": MessageLookupByLibrary.simpleMessage(
@@ -317,8 +329,8 @@ class MessageLookup extends MessageLookupByLibrary {
       "选择 Estrella Music 首先打开的部分",
     ),
     "swipe_prompt": MessageLookupByLibrary.simpleMessage("滑动以探索选项 ➔"),
-    "syncChangesConfirmed": m3,
-    "syncChangesSynced": m4,
+    "syncChangesConfirmed": m4,
+    "syncChangesSynced": m5,
     "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
       "云模式已启动。下载现有的库。",
     ),
@@ -356,7 +368,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "untitledSong": MessageLookupByLibrary.simpleMessage("无题歌曲"),
     "userBlocked": MessageLookupByLibrary.simpleMessage("被阻止的用户"),
     "userListMissing": MessageLookupByLibrary.simpleMessage("响应不包含用户列表。"),
-    "userSearchFailed": m5,
+    "userSearchFailed": m6,
     "userUnblocked": MessageLookupByLibrary.simpleMessage("解锁用户"),
     "username": MessageLookupByLibrary.simpleMessage("用户名"),
     "video": MessageLookupByLibrary.simpleMessage("视频"),

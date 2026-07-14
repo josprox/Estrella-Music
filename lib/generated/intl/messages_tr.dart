@@ -20,18 +20,20 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'tr';
 
-  static String m0(error) =>
+  static String m0(songTitle) => "İndiriliyor: ${songTitle}";
+
+  static String m1(error) =>
       "Yeniden oluşturma sırasında bir hata oluştu: ${error}";
 
-  static String m1(title) => "${title} benzeri";
+  static String m2(title) => "${title} benzeri";
 
-  static String m2(current) => "Adım ${current} / 3";
+  static String m3(current) => "Adım ${current} / 3";
 
-  static String m3(count) => "${count} değişiklik yapıldı.";
+  static String m4(count) => "${count} değişiklik yapıldı.";
 
-  static String m4(count) => "${count} senkronize edilmiş değişiklikler.";
+  static String m5(count) => "${count} senkronize edilmiş değişiklikler.";
 
-  static String m5(statusCode) => "Kullanıcılar aranamadı (${statusCode}).";
+  static String m6(statusCode) => "Kullanıcılar aranamadı (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -278,6 +280,20 @@ class MessageLookup extends MessageLookupByLibrary {
       "Ağ/akış hatası nedeniyle indirme başarısız oldu! Lütfen tekrar deneyin",
     ),
     "downloadLocation": MessageLookupByLibrary.simpleMessage("İndirme Konumu"),
+    "downloadNotificationChannelDescription":
+        MessageLookupByLibrary.simpleMessage(
+          "Müzik indirmelerinizi arka planda aktif tutar.",
+        ),
+    "downloadNotificationChannelName": MessageLookupByLibrary.simpleMessage(
+      "müzik indirmeleri",
+    ),
+    "downloadNotificationPreparing": MessageLookupByLibrary.simpleMessage(
+      "İndirmeleriniz hazırlanıyor…",
+    ),
+    "downloadNotificationSong": m0,
+    "downloadNotificationTitle": MessageLookupByLibrary.simpleMessage(
+      "Müzik indiriliyor",
+    ),
     "downloadingFormat": MessageLookupByLibrary.simpleMessage(
       "İndirilen dosyanın formatı",
     ),
@@ -917,7 +933,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
       "Yeni bir tanımlayıcı oluşturulamadı. Lütfen daha sonra tekrar deneyin.",
     ),
-    "settings_visitor_exception": m0,
+    "settings_visitor_exception": m1,
     "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
       "Güncellenmiş tanımlayıcı",
     ),
@@ -929,7 +945,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Eşleşmeler için Shazam veritabanında arama yapılıyor...",
     ),
     "shuffleQueue": MessageLookupByLibrary.simpleMessage("Karma Sırası"),
-    "similarToTitle": m1,
+    "similarToTitle": m2,
     "singles": MessageLookupByLibrary.simpleMessage("Single\'lar"),
     "skipSilence": MessageLookupByLibrary.simpleMessage("Sessizliği atla"),
     "skipSilenceDes": MessageLookupByLibrary.simpleMessage(
@@ -939,7 +955,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Uyku zamanlayıcınız ayarlandı",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Uyku zamanlayıcısı"),
-    "slide_indicator": m2,
+    "slide_indicator": m3,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "Şarkı çalma listesine eklendi!",
     ),
@@ -993,8 +1009,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
       "Seçenekleri keşfetmek için kaydırın ➔",
     ),
-    "syncChangesConfirmed": m3,
-    "syncChangesSynced": m4,
+    "syncChangesConfirmed": m4,
+    "syncChangesSynced": m5,
     "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
       "Bulut modu etkinleştirildi. Mevcut kitaplığın indirilmesi.",
     ),
@@ -1073,7 +1089,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "Yanıt, kullanıcıların listesini içermiyor.",
     ),
-    "userSearchFailed": m5,
+    "userSearchFailed": m6,
     "userUnblocked": MessageLookupByLibrary.simpleMessage(
       "Kilidi açılmış kullanıcı",
     ),

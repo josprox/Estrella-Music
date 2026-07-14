@@ -20,17 +20,19 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'pa';
 
-  static String m0(error) => "ਰੀਜਨਰੇਟ ਕਰਦੇ ਸਮੇਂ ਇੱਕ ਤਰੁੱਟੀ ਉਤਪੰਨ ਹੋਈ: ${error}";
+  static String m0(songTitle) => "ਡਾਊਨਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ: ${songTitle}";
 
-  static String m1(title) => "${title} ਦੇ ਸਮਾਨ";
+  static String m1(error) => "ਰੀਜਨਰੇਟ ਕਰਦੇ ਸਮੇਂ ਇੱਕ ਤਰੁੱਟੀ ਉਤਪੰਨ ਹੋਈ: ${error}";
 
-  static String m2(current) => "3 ਵਿੱਚੋਂ ${current} ਕਦਮ";
+  static String m2(title) => "${title} ਦੇ ਸਮਾਨ";
 
-  static String m3(count) => "${count} ਤਬਦੀਲੀਆਂ ਪ੍ਰਤੀਬੱਧ ਹਨ।";
+  static String m3(current) => "3 ਵਿੱਚੋਂ ${current} ਕਦਮ";
 
-  static String m4(count) => "${count} ਸਮਕਾਲੀ ਤਬਦੀਲੀਆਂ।";
+  static String m4(count) => "${count} ਤਬਦੀਲੀਆਂ ਪ੍ਰਤੀਬੱਧ ਹਨ।";
 
-  static String m5(statusCode) =>
+  static String m5(count) => "${count} ਸਮਕਾਲੀ ਤਬਦੀਲੀਆਂ।";
+
+  static String m6(statusCode) =>
       "ਉਪਭੋਗਤਾਵਾਂ ਲਈ ਖੋਜ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕੀ (${statusCode})।";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -262,6 +264,20 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "downloadLocation": MessageLookupByLibrary.simpleMessage(
       "ਟਿਕਾਣਾ ਡਾਊਨਲੋਡ ਕਰੋ",
+    ),
+    "downloadNotificationChannelDescription":
+        MessageLookupByLibrary.simpleMessage(
+          "ਤੁਹਾਡੇ ਸੰਗੀਤ ਡਾਊਨਲੋਡਾਂ ਨੂੰ ਬੈਕਗ੍ਰਾਊਂਡ ਵਿੱਚ ਕਿਰਿਆਸ਼ੀਲ ਰੱਖਦਾ ਹੈ।",
+        ),
+    "downloadNotificationChannelName": MessageLookupByLibrary.simpleMessage(
+      "ਸੰਗੀਤ ਡਾਊਨਲੋਡ",
+    ),
+    "downloadNotificationPreparing": MessageLookupByLibrary.simpleMessage(
+      "ਤੁਹਾਡੇ ਡਾਊਨਲੋਡ ਤਿਆਰ ਕੀਤੇ ਜਾ ਰਹੇ ਹਨ...",
+    ),
+    "downloadNotificationSong": m0,
+    "downloadNotificationTitle": MessageLookupByLibrary.simpleMessage(
+      "ਸੰਗੀਤ ਡਾਊਨਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ",
     ),
     "downloadingFormat": MessageLookupByLibrary.simpleMessage(
       "ਡਾਊਨਲੋਡ ਕਰੋ ਫਾਈਲ ਫਾਰਮੈਟ",
@@ -803,7 +819,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
       "ਇੱਕ ਨਵਾਂ ਪਛਾਣਕਰਤਾ ਤਿਆਰ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਬਾਅਦ ਵਿੱਚ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
     ),
-    "settings_visitor_exception": m0,
+    "settings_visitor_exception": m1,
     "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
       "ਅੱਪਡੇਟ ਕੀਤਾ ਪਛਾਣਕਰਤਾ",
     ),
@@ -815,7 +831,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "ਮੈਚਾਂ ਲਈ ਸ਼ਾਜ਼ਮ ਡੇਟਾਬੇਸ ਦੀ ਖੋਜ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ...",
     ),
     "shuffleQueue": MessageLookupByLibrary.simpleMessage("ਸ਼ਫਲ ਕਤਾਰ"),
-    "similarToTitle": m1,
+    "similarToTitle": m2,
     "singles": MessageLookupByLibrary.simpleMessage("ਸਿੰਗਲਜ਼"),
     "skipSilence": MessageLookupByLibrary.simpleMessage("ਚੁੱਪ ਛੱਡੋ"),
     "skipSilenceDes": MessageLookupByLibrary.simpleMessage(
@@ -825,7 +841,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "ਤੁਹਾਡਾ ਸਲੀਪ ਟਾਈਮਰ ਸੈੱਟ ਕੀਤਾ ਗਿਆ ਹੈ",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("ਸਲੀਪ ਟਾਈਮਰ"),
-    "slide_indicator": m2,
+    "slide_indicator": m3,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "ਗੀਤ ਪਲੇਲਿਸਟ ਵਿੱਚ ਜੋੜਿਆ ਗਿਆ!",
     ),
@@ -881,8 +897,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
       "ਵਿਕਲਪਾਂ ਦੀ ਪੜਚੋਲ ਕਰਨ ਲਈ ਸਵਾਈਪ ਕਰੋ ➔",
     ),
-    "syncChangesConfirmed": m3,
-    "syncChangesSynced": m4,
+    "syncChangesConfirmed": m4,
+    "syncChangesSynced": m5,
     "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
       "ਕਲਾਊਡ ਮੋਡ ਕਿਰਿਆਸ਼ੀਲ ਕੀਤਾ ਗਿਆ। ਮੌਜੂਦਾ ਲਾਇਬ੍ਰੇਰੀ ਨੂੰ ਡਾਊਨਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ।",
     ),
@@ -963,7 +979,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "ਜਵਾਬ ਵਿੱਚ ਉਪਭੋਗਤਾਵਾਂ ਦੀ ਸੂਚੀ ਨਹੀਂ ਹੈ।",
     ),
-    "userSearchFailed": m5,
+    "userSearchFailed": m6,
     "userUnblocked": MessageLookupByLibrary.simpleMessage("ਅਣਲਾਕ ਕੀਤਾ ਉਪਭੋਗਤਾ"),
     "username": MessageLookupByLibrary.simpleMessage("ਯੂਜ਼ਰਨੇਮ"),
     "video": MessageLookupByLibrary.simpleMessage("ਵੀਡੀਓ"),
