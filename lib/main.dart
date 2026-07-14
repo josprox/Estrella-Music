@@ -27,7 +27,6 @@ import 'package:harmonymusic/services/social/colistening_service.dart';
 import 'package:harmonymusic/services/auth/user_data_bootstrap_service.dart';
 import '/ui/screens/Search/search_screen_controller.dart';
 import 'package:harmonymusic/services/download/downloader.dart';
-import 'package:harmonymusic/services/background/background_execution_service.dart';
 import 'package:harmonymusic/services/social/piped_service.dart';
 import 'package:harmonymusic/utils/desktop/app_link_controller.dart';
 import 'package:harmonymusic/services/music/audio_handler.dart';
@@ -77,7 +76,6 @@ Future<void> main() async {
       Get.deviceLocale?.languageCode ??
       "en";
   await S.load(Locale(appLang));
-  BackgroundExecutionService.initialize();
   _setAppInitPrefs();
   startApplicationServices(musicDatabase);
   Get.put<AudioHandler>(await initAudioService(), permanent: true);
