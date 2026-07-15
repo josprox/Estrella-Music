@@ -1,9 +1,8 @@
 name: Build all platforms
 
 on:
-  push:
-    paths:
-      - pubspec.yaml
+  release:
+    types: [created]
   workflow_dispatch:
 
 permissions:
@@ -18,21 +17,17 @@ jobs:
     name: Detect version change
     runs-on: ubuntu-latest
     outputs:
-      should_build: ${{ steps.version.outputs.should_build }}
+      should_build: 'true'
       version: ${{ steps.version.outputs.version }}
       build_number: ${{ steps.version.outputs.build_number }}
       release_tag: ${{ steps.version.outputs.release_tag }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 2
 
-      - name: Compare pubspec versions
+      - name: Read version from pubspec
         id: version
         shell: bash
-        env:
-          EVENT_NAME: ${{ github.event_name }}
         run: |
           set -euo pipefail
           current_full="$(sed -nE 's/^version:[[:space:]]*([^[:space:]]+).*/\1/p' pubspec.yaml | head -n 1)"
@@ -41,33 +36,28 @@ jobs:
             exit 1
           fi
 
-          previous_full=""
-          if git rev-parse HEAD^ >/dev/null 2>&1 && git cat-file -e HEAD^:pubspec.yaml 2>/dev/null; then
-            previous_full="$(git show HEAD^:pubspec.yaml | sed -nE 's/^version:[[:space:]]*([^[:space:]]+).*/\1/p' | head -n 1)"
-          fi
-
-          should_build=false
-          if [[ "$EVENT_NAME" == "workflow_dispatch" || "$current_full" != "$previous_full" ]]; then
-            should_build=true
-          fi
-
           version="${current_full%%+*}"
           build_number="${current_full##*+}"
+          
+          # Si fue disparado por release, usar el tag del release
+          if [[ "${{ github.event_name }}" == "release" ]]; then
+            tag_name="${{ github.event.release.tag_name }}"
+          else
+            tag_name="v$version"
+          fi
+
           {
-            echo "should_build=$should_build"
             echo "version=$version"
             echo "build_number=$build_number"
-            echo "release_tag=v$version"
+            echo "release_tag=$tag_name"
           } >> "$GITHUB_OUTPUT"
 
           echo "Current version: $current_full"
-          echo "Previous version: ${previous_full:-not available}"
-          echo "Build requested: $should_build"
+          echo "Release tag: $tag_name"
 
   validate:
     name: Analyze project
     needs: detect-version
-    if: needs.detect-version.outputs.should_build == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -83,7 +73,7 @@ jobs:
           if [[ -n "$ENV_FILE_CONTENT" ]]; then
             printf '%s' "$ENV_FILE_CONTENT" > .env
           else
-            printf '%s\n' 'API_URL=https://emusic.josprox.com' > .env
+            printf '%s\n' 'API_URL=https://emusic.joss.red' > .env
           fi
       - run: flutter pub get
       - run: dart analyze lib
@@ -91,7 +81,6 @@ jobs:
   android:
     name: Android
     needs: [detect-version, validate]
-    if: needs.detect-version.outputs.should_build == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -109,7 +98,7 @@ jobs:
         env:
           ENV_FILE_CONTENT: ${{ secrets.ENV_FILE }}
         run: |
-          if [[ -n "$ENV_FILE_CONTENT" ]]; then printf '%s' "$ENV_FILE_CONTENT" > .env; else printf '%s\n' 'API_URL=https://emusic.josprox.com' > .env; fi
+          if [[ -n "$ENV_FILE_CONTENT" ]]; then printf '%s' "$ENV_FILE_CONTENT" > .env; else printf '%s\n' 'API_URL=https://emusic.joss.red' > .env; fi
       - name: Configure Firebase
         shell: bash
         env:
@@ -164,7 +153,6 @@ jobs:
   linux:
     name: Linux
     needs: [detect-version, validate]
-    if: needs.detect-version.outputs.should_build == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -181,11 +169,14 @@ jobs:
         env:
           ENV_FILE_CONTENT: ${{ secrets.ENV_FILE }}
         run: |
-          if [[ -n "$ENV_FILE_CONTENT" ]]; then printf '%s' "$ENV_FILE_CONTENT" > .env; else printf '%s\n' 'API_URL=https://emusic.josprox.com' > .env; fi
+          if [[ -n "$ENV_FILE_CONTENT" ]]; then printf '%s' "$ENV_FILE_CONTENT" > .env; else printf '%s\n' 'API_URL=https://emusic.joss.red' > .env; fi
       - run: flutter pub get
-      - run: flutter build linux --release
+      - name: Build Linux application
+        run: flutter build linux --release
       - name: Package Linux application
+        shell: bash
         run: |
+          set -euo pipefail
           mkdir -p distribution/linux
           tar -czf distribution/linux/EstrellaMusic-linux-x64.tar.gz -C build/linux/x64/release/bundle .
       - uses: actions/upload-artifact@v4
@@ -197,8 +188,7 @@ jobs:
   windows:
     name: Windows
     needs: [detect-version, validate]
-    if: needs.detect-version.outputs.should_build == 'true'
-    runs-on: windows-2022
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
       - uses: subosito/flutter-action@v2
@@ -206,20 +196,20 @@ jobs:
           channel: stable
           cache: true
       - name: Create environment file
-        shell: pwsh
+        shell: bash
         env:
           ENV_FILE_CONTENT: ${{ secrets.ENV_FILE }}
         run: |
-          if ($env:ENV_FILE_CONTENT) { [IO.File]::WriteAllText((Join-Path $PWD '.env'), $env:ENV_FILE_CONTENT) } else { [IO.File]::WriteAllText((Join-Path $PWD '.env'), "API_URL=https://emusic.josprox.com`n") }
+          if [[ -n "$ENV_FILE_CONTENT" ]]; then printf '%s' "$ENV_FILE_CONTENT" > .env; else printf '%s\n' 'API_URL=https://emusic.joss.red' > .env; fi
       - run: flutter pub get
-      - run: flutter build windows --release
+      - name: Build Windows application
+        run: flutter build windows --release
       - name: Package Windows application
         shell: pwsh
         run: |
+          $ErrorActionPreference = "Stop"
           New-Item -ItemType Directory -Force -Path distribution/windows | Out-Null
-          Compress-Archive -Path 'build/windows/x64/runner/Release/*' -DestinationPath 'distribution/windows/EstrellaMusic-windows-portable.zip' -Force
-          & 'C:\Program Files (x86)\Inno Setup 6\ISCC.exe' /DMyAppVersion='${{ needs.detect-version.outputs.version }}' 'distribution/compilador.iss'
-          Move-Item -Force 'distribution/EstrellaMusicInstaller.exe' 'distribution/windows/EstrellaMusic-windows-installer.exe'
+          iscc /DAppVersion="${{ needs.detect-version.outputs.version }}" windows/installer.iss
       - uses: actions/upload-artifact@v4
         with:
           name: estrella-music-windows-${{ needs.detect-version.outputs.version }}-${{ needs.detect-version.outputs.build_number }}
@@ -227,10 +217,9 @@ jobs:
           if-no-files-found: error
 
   apple:
-    name: iOS and macOS
+    name: iOS & macOS
     needs: [detect-version, validate]
-    if: needs.detect-version.outputs.should_build == 'true'
-    runs-on: macos-latest
+    runs-on: macos-14
     steps:
       - uses: actions/checkout@v4
       - uses: subosito/flutter-action@v2
@@ -244,7 +233,7 @@ jobs:
         env:
           ENV_FILE_CONTENT: ${{ secrets.ENV_FILE }}
         run: |
-          if [[ -n "$ENV_FILE_CONTENT" ]]; then printf '%s' "$ENV_FILE_CONTENT" > .env; else printf '%s\n' 'API_URL=https://emusic.josprox.com' > .env; fi
+          if [[ -n "$ENV_FILE_CONTENT" ]]; then printf '%s' "$ENV_FILE_CONTENT" > .env; else printf '%s\n' 'API_URL=https://emusic.joss.red' > .env; fi
       - run: flutter pub get
       - name: Patch audiotags podspec
         shell: bash
@@ -277,16 +266,9 @@ jobs:
           path: distribution/apple/*
           if-no-files-found: error
 
-  release:
-    name: Create draft release
+  upload-assets:
+    name: Upload assets to release
     needs: [detect-version, android, linux, windows, apple]
-    if: >-
-      always() &&
-      needs.detect-version.outputs.should_build == 'true' &&
-      needs.android.result == 'success' &&
-      needs.linux.result == 'success' &&
-      needs.windows.result == 'success' &&
-      needs.apple.result == 'success'
     runs-on: ubuntu-latest
     steps:
       - name: Download all artifacts
@@ -294,14 +276,12 @@ jobs:
         with:
           path: release-assets
           merge-multiple: true
-      - name: Create draft release
+      
+      - name: Upload binaries to Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ needs.detect-version.outputs.release_tag }}
-          name: Estrella Music ${{ needs.detect-version.outputs.version }}
           draft: true
-          prerelease: false
-          generate_release_notes: false
-          fail_on_unmatched_files: true
           files: release-assets/*
-
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
