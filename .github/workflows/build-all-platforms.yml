@@ -5,12 +5,6 @@ on:
     paths:
       - pubspec.yaml
   workflow_dispatch:
-    inputs:
-      publish_release:
-        description: Create or update the GitHub release with all artifacts
-        required: true
-        default: false
-        type: boolean
 
 permissions:
   contents: write
@@ -284,7 +278,7 @@ jobs:
           if-no-files-found: error
 
   release:
-    name: Publish GitHub release
+    name: Create draft release
     needs: [detect-version, android, linux, windows, apple]
     if: >-
       always() &&
@@ -292,8 +286,7 @@ jobs:
       needs.android.result == 'success' &&
       needs.linux.result == 'success' &&
       needs.windows.result == 'success' &&
-      needs.apple.result == 'success' &&
-      (github.event_name == 'push' || inputs.publish_release == true)
+      needs.apple.result == 'success'
     runs-on: ubuntu-latest
     steps:
       - name: Download all artifacts
@@ -301,11 +294,14 @@ jobs:
         with:
           path: release-assets
           merge-multiple: true
-      - name: Create or update release
+      - name: Create draft release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ needs.detect-version.outputs.release_tag }}
           name: Estrella Music ${{ needs.detect-version.outputs.version }}
-          generate_release_notes: true
+          draft: true
+          prerelease: false
+          generate_release_notes: false
           fail_on_unmatched_files: true
           files: release-assets/*
+

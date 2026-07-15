@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- Directorio de almacenamiento externo de la app (getExternalStorageDirectory) -->
+    <external-files-path name="external_files" path="." />
+    <!-- Directorio de caché externo -->
+    <external-cache-path name="external_cache" path="." />
+    <!-- Directorio de documentos interno -->
+    <files-path name="internal_files" path="." />
+    <!-- Directorio de caché interno -->
+    <cache-path name="internal_cache" path="." />
+</paths>
