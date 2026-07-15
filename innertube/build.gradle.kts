@@ -31,6 +31,7 @@ dependencies {
     implementation(libs.brotli)
     implementation("com.github.MetrolistGroup:MetrolistExtractor:6305155") {
         exclude(group = "com.google.protobuf")
+        exclude(group = "org.json", module = "json")
     }
     implementation(libs.timber)
     testImplementation(libs.junit)
