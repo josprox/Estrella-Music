@@ -191,6 +191,12 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Enable Windows symlink support
+        shell: pwsh
+        run: |
+          git config --global core.symlinks true
+          # Habilitar el Developer Mode en Windows para permitir creación de enlaces simbólicos sin elevación
+          reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock" /v "AllowDevelopmentWithoutDevLicense" /t REG_DWORD /d 1 /f
       - uses: subosito/flutter-action@v2
         with:
           channel: stable
