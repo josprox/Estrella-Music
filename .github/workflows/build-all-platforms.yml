@@ -188,15 +188,9 @@ jobs:
   windows:
     name: Windows
     needs: [detect-version, validate]
-    runs-on: windows-latest
+    runs-on: windows-2022
     steps:
       - uses: actions/checkout@v4
-      - name: Enable Windows symlink support
-        shell: pwsh
-        run: |
-          git config --global core.symlinks true
-          # Habilitar el Developer Mode en Windows para permitir creación de enlaces simbólicos sin elevación
-          reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock" /v "AllowDevelopmentWithoutDevLicense" /t REG_DWORD /d 1 /f
       - uses: subosito/flutter-action@v2
         with:
           channel: stable
@@ -215,7 +209,8 @@ jobs:
         run: |
           $ErrorActionPreference = "Stop"
           New-Item -ItemType Directory -Force -Path distribution/windows | Out-Null
-          iscc /DAppVersion="${{ needs.detect-version.outputs.version }}" windows/installer.iss
+          & 'C:\Program Files (x86)\Inno Setup 6\ISCC.exe' /DMyAppVersion="${{ needs.detect-version.outputs.version }}" 'distribution/compilador.iss'
+          Move-Item -Force 'distribution/EstrellaMusicInstaller.exe' 'distribution/windows/EstrellaMusic-windows-installer.exe'
       - uses: actions/upload-artifact@v4
         with:
           name: estrella-music-windows-${{ needs.detect-version.outputs.version }}-${{ needs.detect-version.outputs.build_number }}
@@ -225,7 +220,7 @@ jobs:
   apple:
     name: iOS & macOS
     needs: [detect-version, validate]
-    runs-on: macos-14
+    runs-on: macos-26
     steps:
       - uses: actions/checkout@v4
       - uses: subosito/flutter-action@v2
