@@ -39,6 +39,7 @@ class _MiniPlayerContent extends StatelessWidget {
     final colorScheme = Theme.of(context).colorScheme;
     final textTheme = Theme.of(context).textTheme;
     final screenWidth = MediaQuery.of(context).size.width;
+    final isWideScreen = screenWidth > 800;
 
     return Obx(() {
       final isBottomNavBarEnabled = Get.find<SettingsScreenController>().isBottomNavBarEnabled.isTrue;
@@ -51,7 +52,219 @@ class _MiniPlayerContent extends StatelessWidget {
           ctrl.isPanelGTHOpened.isFalse;
 
       final bottomPadding = isBottomNavBarVisible ? 0.0 : MediaQuery.of(context).padding.bottom;
-      const playerHeight = 74.0; // Slightly taller for richer spacing
+
+      if (isWideScreen) {
+        // Floating premium capsule bar for desktop widescreen
+        return Container(
+          width: screenWidth,
+          height: 105.0,
+          padding: const EdgeInsets.only(left: 24, right: 24, bottom: 16, top: 8),
+          color: Colors.transparent, // outer space transparent to float
+          child: GestureDetector(
+            behavior: HitTestBehavior.opaque,
+            onTap: ctrl.playerPanelController.open,
+            child: Container(
+              decoration: BoxDecoration(
+                color: colorScheme.surfaceContainer,
+                borderRadius: BorderRadius.circular(24),
+                border: Border.all(
+                  color: colorScheme.outlineVariant.withValues(alpha: 0.35),
+                  width: 1,
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withValues(alpha: 0.15),
+                    offset: const Offset(0, 8),
+                    blurRadius: 24,
+                  ),
+                ],
+              ),
+              child: Stack(
+                fit: StackFit.expand,
+                children: [
+                  // Progress bar (Top edge of floating card, rounded)
+                  Positioned(
+                    top: 0,
+                    left: 24,
+                    right: 24,
+                    height: 3,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(1.5),
+                      child: GetX<PlayerController>(
+                        builder: (c) {
+                          final total =
+                              c.progressBarStatus.value.total.inMilliseconds;
+                          final current =
+                              c.progressBarStatus.value.current.inMilliseconds;
+                          final pct = total > 0
+                              ? (current / total).clamp(0.0, 1.0)
+                              : 0.0;
+                          return Stack(
+                            fit: StackFit.expand,
+                            children: [
+                              ColoredBox(
+                                color: colorScheme.outlineVariant
+                                    .withValues(alpha: 0.2),
+                              ),
+                              FractionallySizedBox(
+                                alignment: Alignment.centerLeft,
+                                widthFactor: pct,
+                                child: DecoratedBox(
+                                  decoration: BoxDecoration(
+                                    color: colorScheme.primary,
+                                    borderRadius: BorderRadius.circular(1.5),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          );
+                        },
+                      ),
+                    ),
+                  ),
+                  // Content
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 10),
+                    child: Row(
+                      children: [
+                        // Album Art
+                        Hero(
+                          tag: 'mini_art_${song.id}',
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(12),
+                              border: Border.all(
+                                color: colorScheme.outlineVariant.withValues(alpha: 0.35),
+                                width: 1,
+                              ),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black.withValues(alpha: 0.25),
+                                  blurRadius: 8,
+                                  offset: const Offset(0, 4),
+                                ),
+                              ],
+                            ),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(11),
+                              child: ImageWidget(size: 52, song: song),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 16),
+
+                        // Title + Artist info
+                        Expanded(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Marquee(
+                                id: song.id.toString(),
+                                child: Text(
+                                  song.title,
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: textTheme.titleMedium?.copyWith(
+                                    fontWeight: FontWeight.w900,
+                                    color: colorScheme.onSurface,
+                                    fontSize: 16,
+                                    letterSpacing: -0.1,
+                                  ),
+                                ),
+                              ),
+                              const SizedBox(height: 4),
+                              Text(
+                                song.artist ?? '',
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                                style: textTheme.bodyMedium?.copyWith(
+                                  color: colorScheme.onSurfaceVariant.withValues(alpha: 0.8),
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 12.5,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        const SizedBox(width: 16),
+
+                        // Actions
+                        Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            // Previous button
+                            IconButton(
+                              onPressed: ctrl.prev,
+                              icon: Icon(
+                                Icons.skip_previous_rounded,
+                                color: colorScheme.onSurface,
+                                size: 28,
+                              ),
+                            ),
+                            const SizedBox(width: 4),
+                            // Play button
+                            Container(
+                              width: 48,
+                              height: 48,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: colorScheme.primaryContainer,
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: colorScheme.primary.withValues(alpha: 0.2),
+                                    blurRadius: 6,
+                                    offset: const Offset(0, 3),
+                                  ),
+                                ],
+                              ),
+                              child: Center(
+                                child: AnimatedPlayButton(
+                                  iconSize: 30,
+                                  iconColor: colorScheme.onPrimaryContainer,
+                                ),
+                              ),
+                            ),
+                            const SizedBox(width: 4),
+                            // Next button
+                            IconButton(
+                              onPressed: ctrl.next,
+                              icon: Icon(
+                                Icons.skip_next_rounded,
+                                color: colorScheme.onSurface,
+                                size: 28,
+                              ),
+                            ),
+                            const SizedBox(width: 12),
+                            // Favorite
+                            Obx(
+                              () => IconButton(
+                                onPressed: ctrl.toggleFavourite,
+                                icon: Icon(
+                                  ctrl.isCurrentSongFav.isTrue
+                                      ? Icons.favorite_rounded
+                                      : Icons.favorite_border_rounded,
+                                  color: ctrl.isCurrentSongFav.isTrue
+                                      ? colorScheme.error
+                                      : colorScheme.onSurfaceVariant,
+                                  size: 26,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        );
+      }
+
+      // Default Mobile Layout
+      const playerHeight = 74.0;
       final totalHeight = playerHeight + bottomPadding;
 
       return GestureDetector(
@@ -80,7 +293,7 @@ class _MiniPlayerContent extends StatelessWidget {
             child: Stack(
               fit: StackFit.expand,
               children: [
-                // ── Drag Handle (Top center indicator) ────────────────────────
+                // Drag Handle (Top center indicator)
                 Positioned(
                   top: 5,
                   left: (screenWidth - 36) / 2,
@@ -94,7 +307,7 @@ class _MiniPlayerContent extends StatelessWidget {
                   ),
                 ),
 
-                // ── Progress bar (Top edge of card) ──────────────────────────
+                // Progress bar (Top edge of card)
                 Positioned(
                   top: 0,
                   left: 16,
@@ -135,7 +348,7 @@ class _MiniPlayerContent extends StatelessWidget {
                   ),
                 ),
 
-                // ── Main Content ─────────────────────────────────────────────
+                // Main Content
                 Padding(
                   padding: const EdgeInsets.fromLTRB(16, 12, 16, 4),
                   child: Row(
@@ -211,8 +424,8 @@ class _MiniPlayerContent extends StatelessWidget {
                               onPressed: ctrl.toggleFavourite,
                               icon: Icon(
                                 ctrl.isCurrentSongFav.isTrue
-                                    ? Icons.favorite_rounded
-                                    : Icons.favorite_border_rounded,
+                                      ? Icons.favorite_rounded
+                                      : Icons.favorite_border_rounded,
                                 color: ctrl.isCurrentSongFav.isTrue
                                     ? colorScheme.error
                                     : colorScheme.onSurfaceVariant,
