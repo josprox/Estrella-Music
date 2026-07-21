@@ -554,14 +554,25 @@ class LibraryPlaylistsController extends GetxController
   Future<void> deletePlaylist(Playlist playlist) async {
     if (reservedCollectionIds.contains(playlist.playlistId)) return;
 
+    if (playlist.isPipedPlaylist) {
+      await Get.find<PipedServices>().deletePlaylist(playlist.playlistId);
+      await syncPipedPlaylist();
+      return;
+    }
+
     final box = await SqliteStore.openBox("LibraryPlaylists");
     await box.delete(playlist.playlistId);
 
-    if (!playlist.isPipedPlaylist) {
-      await SqliteStore.deleteBoxFromDisk(sanitizeBoxName(playlist.playlistId));
-    }
+    final songsBox = await SqliteStore.openBox(sanitizeBoxName(playlist.playlistId));
+    await songsBox.deleteFromDisk();
 
     refreshLib();
+    Get.find<SyncService>().triggerPush();
+
+    if (!playlist.isCloudPlaylist) {
+      final plstbox = await SqliteStore.openBox(sanitizeBoxName(playlist.playlistId));
+      await plstbox.deleteFromDisk();
+    }
   }
 
   @override
