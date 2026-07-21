@@ -551,6 +551,19 @@ class LibraryPlaylistsController extends GetxController
     tempListContainer.clear();
   }
 
+  Future<void> deletePlaylist(Playlist playlist) async {
+    if (reservedCollectionIds.contains(playlist.playlistId)) return;
+
+    final box = await SqliteStore.openBox("LibraryPlaylists");
+    await box.delete(playlist.playlistId);
+
+    if (!playlist.isPipedPlaylist) {
+      await SqliteStore.deleteBoxFromDisk(sanitizeBoxName(playlist.playlistId));
+    }
+
+    refreshLib();
+  }
+
   @override
   void dispose() {
     textInputController.dispose();

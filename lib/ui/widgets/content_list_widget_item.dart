@@ -12,6 +12,13 @@ import 'package:harmonymusic/models/playling_from.dart';
 import 'package:harmonymusic/models/media_item_builder.dart';
 import 'package:harmonymusic/services/music/music_service.dart';
 import 'package:harmonymusic/ui/player/player_controller.dart';
+import 'package:harmonymusic/ui/screens/Library/library_controller.dart';
+import 'package:harmonymusic/generated/l10n.dart';
+import 'package:harmonymusic/models/playlist.dart';
+
+import 'package:harmonymusic/ui/theme/app_spacing.dart';
+import 'common_dialog_widget.dart';
+import 'custom_button.dart';
 
 class ContentListItem extends StatelessWidget {
   final double? width;
@@ -74,6 +81,51 @@ class ContentListItem extends StatelessWidget {
             id: ScreenNavigationSetup.id,
             arguments: [content, content.playlistId]);
       },
+      onLongPress: (isLibraryItem &&
+              content is Playlist &&
+              !LibraryPlaylistsController.reservedCollectionIds
+                  .contains(content.playlistId))
+          ? () {
+              Get.dialog(
+                CommonDialog(
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                        vertical: AppSpacing.lg, horizontal: AppSpacing.xl),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(
+                          S.current.removePlaylist,
+                          style: Theme.of(context).textTheme.titleLarge,
+                        ),
+                        const SizedBox(height: AppSpacing.md),
+                        Text(
+                          "${S.current.delete} ${content.title}?",
+                          textAlign: TextAlign.center,
+                          style: Theme.of(context).textTheme.bodyMedium,
+                        ),
+                        const SizedBox(height: AppSpacing.xl),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            const CancelButton(),
+                            ProceedButton(
+                              buttonText: S.current.delete,
+                              onPressed: () {
+                                Get.find<LibraryPlaylistsController>()
+                                    .deletePlaylist(content);
+                                Get.back();
+                              },
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              );
+            }
+          : null,
       child: Container(
         width: finalWidth,
         height: finalHeight,
