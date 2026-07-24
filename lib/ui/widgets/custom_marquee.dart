@@ -57,8 +57,10 @@ class _MarqueeState extends State<Marquee> {
       return;
     }
 
-    final speed = maxExtent / widget.duration.inMilliseconds; // pixels per ms
-    final durationMs = (distance / speed).clamp(100.0, 60000.0).toInt();
+    // Keep long titles moving at a constant, readable velocity.
+    final configuredSpeed = 180 / widget.duration.inMilliseconds;
+    final speed = configuredSpeed.clamp(0.025, 0.08);
+    final durationMs = (distance / speed).clamp(250.0, 30000.0).toInt();
 
     _scrollController.animateTo(
       target,
@@ -69,6 +71,8 @@ class _MarqueeState extends State<Marquee> {
         _scrollingForward = !_scrollingForward;
         _startAnimation();
       }
+    }).catchError((_) {
+      // The player may be dismissed while the animation is in flight.
     });
   }
 
@@ -93,11 +97,13 @@ class _MarqueeState extends State<Marquee> {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      controller: _scrollController,
-      scrollDirection: Axis.horizontal,
-      physics: const NeverScrollableScrollPhysics(),
-      child: widget.child,
+    return ClipRect(
+      child: SingleChildScrollView(
+        controller: _scrollController,
+        scrollDirection: Axis.horizontal,
+        physics: const NeverScrollableScrollPhysics(),
+        child: widget.child,
+      ),
     );
   }
 }

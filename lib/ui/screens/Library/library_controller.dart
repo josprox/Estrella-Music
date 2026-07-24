@@ -984,6 +984,7 @@ class LibraryAlbumsController extends GetxController {
 }
 
 class LibraryArtistsController extends GetxController {
+  static final Map<String, Future<Artist?>> _profileRequests = {};
   final MusicServices _musicServices = Get.find<MusicServices>();
   final libraryArtists = <Artist>[].obs;
   final selectedCollection = LibraryArtistCollection.tastes.obs;
@@ -1128,6 +1129,24 @@ class LibraryArtistsController extends GetxController {
   }
 
   Future<Artist?> _fetchArtistProfile(Artist artist) async {
+    final requestKey = artist.browseId.isEmpty
+        ? artist.name.trim().toLowerCase()
+        : artist.browseId;
+    final existingRequest = _profileRequests[requestKey];
+    if (existingRequest != null) return existingRequest;
+
+    final request = _resolveArtistProfile(artist);
+    _profileRequests[requestKey] = request;
+    try {
+      return await request;
+    } finally {
+      if (identical(_profileRequests[requestKey], request)) {
+        _profileRequests.remove(requestKey);
+      }
+    }
+  }
+
+  Future<Artist?> _resolveArtistProfile(Artist artist) async {
     if (!artist.browseId.startsWith('LOCAL_ARTIST_')) {
       try {
         final data = await _musicServices.getArtist(artist.browseId);

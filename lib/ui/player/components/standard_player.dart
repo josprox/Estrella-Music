@@ -68,30 +68,35 @@ class _StandardPlayerContent extends StatelessWidget {
           children: [
             // ── Background: blurred album art ──────────────────────────────
             Positioned.fill(
-              child: AnimatedSwitcher(
-                duration: const Duration(milliseconds: 800),
-                child: BackgroudImage(
-                  key: ValueKey('${song.id}_bg'),
-                  cacheHeight: 600,
+              child: RepaintBoundary(
+                child: ImageFiltered(
+                  imageFilter: ImageFilter.blur(sigmaX: 36, sigmaY: 36),
+                  child: Transform.scale(
+                    scale: 1.12,
+                    child: AnimatedSwitcher(
+                      duration: const Duration(milliseconds: 500),
+                      child: BackgroudImage(
+                        key: ValueKey('${song.id}_bg'),
+                        cacheHeight: 600,
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ),
             // ── Gradient overlay ───────────────────────────────────────────
             Positioned.fill(
-              child: BackdropFilter(
-                filter: ImageFilter.blur(sigmaX: 60, sigmaY: 60),
-                child: DecoratedBox(
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                      stops: const [0.0, 0.4, 1.0],
-                      colors: [
-                        colorScheme.surface.withValues(alpha: 0.25),
-                        colorScheme.surface.withValues(alpha: 0.70),
-                        colorScheme.surface.withValues(alpha: 0.97),
-                      ],
-                    ),
+              child: DecoratedBox(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    stops: const [0.0, 0.4, 1.0],
+                    colors: [
+                      colorScheme.surface.withValues(alpha: 0.25),
+                      colorScheme.surface.withValues(alpha: 0.70),
+                      colorScheme.surface.withValues(alpha: 0.97),
+                    ],
                   ),
                 ),
               ),
@@ -846,7 +851,7 @@ class _SecondaryActions extends StatelessWidget {
           icon: Icons.playlist_add_rounded,
           label: S.current.upNext,
           colorScheme: colorScheme,
-          onTap: () => ctrl.queuePanelController.open(),
+          onTap: () => ctrl.openQueueModal(context),
         ),
         // Cast / Share
         _SecondaryButton(

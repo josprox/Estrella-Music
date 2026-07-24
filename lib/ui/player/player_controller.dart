@@ -31,10 +31,17 @@ import 'package:harmonymusic/utils/localization/l10n_extensions.dart';
 import 'package:harmonymusic/services/sync/sync_service.dart';
 import 'package:harmonymusic/services/social/colistening_service.dart';
 import 'package:harmonymusic/services/system/discord_rpc_service.dart';
-
+import 'package:harmonymusic/ui/widgets/up_next_queue.dart';
 enum PlayButtonState { paused, playing, loading }
 
 class CustomLyricUI extends UINetease {
+  Color get foregroundColor {
+    final context = Get.context;
+    return context == null
+        ? Colors.white
+        : Theme.of(context).colorScheme.onSurface;
+  }
+
   double get lyricsTextScale {
     try {
       return Get.find<PlayerController>().lyricsTextScale.value;
@@ -66,16 +73,30 @@ class CustomLyricUI extends UINetease {
 
   @override
   TextStyle getPlayingMainTextStyle() => TextStyle(
-        color: Colors.white,
+        color: foregroundColor,
         fontSize: defaultSize * lyricsTextScale,
         fontWeight: FontWeight.w900,
       );
 
   @override
   TextStyle getOtherMainTextStyle() => TextStyle(
-        color: Colors.white.withValues(alpha: 0.35),
+        color: foregroundColor.withValues(alpha: 0.42),
         fontSize: otherMainSize * lyricsTextScale,
         fontWeight: FontWeight.w600,
+      );
+
+  @override
+  TextStyle getPlayingExtTextStyle() => TextStyle(
+        color: foregroundColor.withValues(alpha: 0.75),
+        fontSize: (defaultExtSize == 0 ? 14 : defaultExtSize) * lyricsTextScale,
+        fontWeight: FontWeight.w700,
+      );
+
+  @override
+  TextStyle getOtherExtTextStyle() => TextStyle(
+        color: foregroundColor.withValues(alpha: 0.35),
+        fontSize: (defaultExtSize == 0 ? 14 : defaultExtSize) * lyricsTextScale,
+        fontWeight: FontWeight.w500,
       );
 
   @override
@@ -85,7 +106,7 @@ class CustomLyricUI extends UINetease {
   double getPlayingLineBias() => bias;
 
   @override
-  Color getLyricHightlightColor() => Colors.white;
+  Color getLyricHightlightColor() => foregroundColor;
 
   @override
   LyricAlign get lyricAlign => lyricAlignConfig;
@@ -97,7 +118,12 @@ class PlayerController extends GetxController
   final _catalogRecoveryService = Get.find<CatalogRecoveryService>();
   final _musicServices = Get.find<MusicServices>();
   final currentQueue = <MediaItem>[].obs;
-
+  final queueSearchQuery = ''.obs;
+  final currentSongIndex = (0).obs;
+  final isFirstSong = true;
+  final isLastSong = true;
+  final isQueueLoopModeEnabled = false.obs;
+  final isLoopModeEnabled = false.obs;
   final playerPaneOpacity = (1.0).obs;
   final panelPosition = 0.0.obs;
   final isPlayerpanelTopVisible = true.obs;
@@ -119,16 +145,18 @@ class PlayerController extends GetxController
   final isSleepTimerActive = false.obs;
   final isSleepEndOfSongActive = false.obs;
   final volume = 100.obs;
-
   final progressBarStatus = ProgressBarState(
           buffered: Duration.zero, current: Duration.zero, total: Duration.zero)
       .obs;
 
-  final currentSongIndex = (0).obs;
-  final isFirstSong = true;
-  final isLastSong = true;
-  final isQueueLoopModeEnabled = false.obs;
-  final isLoopModeEnabled = false.obs;
+  void openQueueModal(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: Colors.transparent,
+      builder: (context) => const UpNextQueueModal(),
+    );
+  }
   final isShuffleModeEnabled = false.obs;
   final currentSong = Rxn<MediaItem>();
   final isCurrentSongFav = false.obs;

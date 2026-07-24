@@ -1,4 +1,4 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_lyric/lyrics_reader.dart';
 import 'package:get/get.dart';
 
@@ -25,14 +25,13 @@ class LyricsWidget extends StatelessWidget {
       final hasPlain = plain.isNotEmpty && plain != 'NA' && plain != 'null';
       final mode = playerController.lyricsMode.toInt();
 
-      // Accessing reactive variables to ensure Obx rebuilds when they change
       final currentScale = playerController.lyricsTextScale.value;
       final currentAlign = playerController.lyricsAlignment.value;
+      final colorScheme = Theme.of(context).colorScheme;
       final showTranslation = playerController.isTranslationEnabled.value;
       final tSynced = playerController.translatedLyrics["synced"].toString();
       final tPlain = playerController.translatedLyrics["plainLyrics"].toString();
 
-      // Determine what to show based on availability and preferred mode
       bool showSynced = false;
       if (mode == 0) {
         showSynced = hasSynced;
@@ -47,7 +46,7 @@ class LyricsWidget extends StatelessWidget {
         if (showTranslation && tSynced.isNotEmpty) {
           model = model.bindLyricToExt(tSynced);
         }
-        
+
         content = IgnorePointer(
           ignoring: !isFull,
           child: LyricsReader(
@@ -60,19 +59,90 @@ class LyricsWidget extends StatelessWidget {
           ),
         );
       } else if (hasPlain || (mode == 1 && !hasSynced)) {
-        String displayedText = hasPlain ? plain : S.current.lyricsNotAvailable;
-        if (showTranslation && tPlain.isNotEmpty && tPlain != "null" && tPlain != "NA") {
+        Widget childWidget;
+        if (showTranslation &&
+            tPlain.isNotEmpty &&
+            tPlain != "null" &&
+            tPlain != "NA") {
           final originalLines = plain.split('\n');
           final translatedLines = tPlain.split('\n');
-          final List<String> combined = [];
+          final List<InlineSpan> spans = [];
+
           for (int i = 0; i < originalLines.length; i++) {
-            combined.add(originalLines[i].trim());
-            if (i < translatedLines.length && translatedLines[i].trim().isNotEmpty) {
-              combined.add("(${translatedLines[i].trim()})");
+            final orig = originalLines[i].trim();
+            if (orig.isNotEmpty) {
+              spans.add(TextSpan(
+                text: "$orig\n",
+                style: playerController.isDesktopLyricsDialogOpen
+                    ? Theme.of(context).textTheme.titleMedium!.copyWith(
+                          fontSize:
+                              (Theme.of(context).textTheme.titleMedium!.fontSize ??
+                                      16) *
+                                  currentScale,
+                          fontWeight: FontWeight.w700,
+                        )
+                    : TextStyle(
+                        color: colorScheme.onSurface,
+                        fontSize: 18 * currentScale,
+                        fontWeight: FontWeight.w700,
+                        height: 1.6,
+                      ),
+              ));
             }
-            combined.add(""); // Empty line for stanza spacing
+            if (i < translatedLines.length &&
+                translatedLines[i].trim().isNotEmpty) {
+              spans.add(TextSpan(
+                text: "(${translatedLines[i].trim()})\n",
+                style: playerController.isDesktopLyricsDialogOpen
+                    ? Theme.of(context).textTheme.bodyMedium!.copyWith(
+                          color: colorScheme.onSurface.withValues(alpha: 0.65),
+                          fontSize:
+                              (Theme.of(context).textTheme.bodyMedium!.fontSize ??
+                                      14) *
+                                  currentScale,
+                          fontWeight: FontWeight.w500,
+                        )
+                    : TextStyle(
+                        color: colorScheme.onSurface.withValues(alpha: 0.65),
+                        fontSize: 15 * currentScale,
+                        fontWeight: FontWeight.w500,
+                        height: 1.5,
+                      ),
+              ));
+            }
+            spans.add(const TextSpan(text: "\n"));
           }
-          displayedText = combined.join('\n');
+
+          childWidget = SelectableText.rich(
+            TextSpan(children: spans),
+            textAlign: currentAlign == LyricAlign.LEFT
+                ? TextAlign.left
+                : TextAlign.center,
+          );
+        } else {
+          String displayedText =
+              hasPlain ? plain : S.current.lyricsNotAvailable;
+          childWidget = SelectableText(
+            displayedText,
+            textAlign: currentAlign == LyricAlign.LEFT
+                ? TextAlign.left
+                : TextAlign.center,
+            style: playerController.isDesktopLyricsDialogOpen
+                ? Theme.of(context).textTheme.titleMedium!.copyWith(
+                      fontSize: (Theme.of(context)
+                                  .textTheme
+                                  .titleMedium!
+                                  .fontSize ??
+                              16) *
+                          currentScale,
+                    )
+                : TextStyle(
+                    color: colorScheme.onSurface,
+                    fontSize: 18 * currentScale,
+                    fontWeight: FontWeight.w700,
+                    height: 1.6,
+                  ),
+          );
         }
 
         content = Center(
@@ -81,20 +151,7 @@ class LyricsWidget extends StatelessWidget {
             padding: padding,
             child: TextSelectionTheme(
               data: Theme.of(context).textSelectionTheme,
-              child: SelectableText(
-                displayedText,
-                textAlign: currentAlign == LyricAlign.LEFT ? TextAlign.left : TextAlign.center,
-                style: playerController.isDesktopLyricsDialogOpen
-                    ? Theme.of(context).textTheme.titleMedium!.copyWith(
-                          fontSize: (Theme.of(context).textTheme.titleMedium!.fontSize ?? 16) * currentScale,
-                        )
-                    : TextStyle(
-                        color: Colors.white,
-                        fontSize: 18 * currentScale,
-                        fontWeight: FontWeight.w700,
-                        height: 1.6,
-                      ),
-              ),
+              child: childWidget,
             ),
           ),
         );
@@ -102,7 +159,6 @@ class LyricsWidget extends StatelessWidget {
         content = _buildNoLyrics(context, playerController);
       }
 
-      // Elegant top/bottom fade edge blending
       return ShaderMask(
         shaderCallback: (rect) {
           return const LinearGradient(
@@ -134,7 +190,7 @@ class LyricsWidget extends StatelessWidget {
                   fontSize: (Theme.of(context).textTheme.titleMedium!.fontSize ?? 16) * currentScale,
                 )
             : TextStyle(
-                color: Colors.white70,
+                color: Theme.of(context).colorScheme.onSurfaceVariant,
                 fontSize: 18 * currentScale,
                 fontWeight: FontWeight.w600,
               ),

@@ -93,7 +93,9 @@ class _AnimatedAlbumArtState extends State<AnimatedAlbumArt> with SingleTickerPr
                   ? Image(image: widget.artImageProvider!, fit: BoxFit.cover)
                   : Container(
                       color: Colors.grey[900],
-                      child: const Icon(Icons.music_note_rounded, size: 100, color: Colors.white54),
+                    child: Icon(Icons.music_note_rounded,
+                        size: 100,
+                        color: theme.colorScheme.onSurfaceVariant),
                     ),
             ),
           ),
@@ -129,30 +131,28 @@ class FullLyricsPage extends StatelessWidget {
       }
 
       final primaryThemeColor = themeCtrl.primaryColor.value;
+      final colorScheme = Theme.of(context).colorScheme;
 
       return Scaffold(
         body: Stack(
           children: [
-            // 1. Dynamic Organic Blurred Background
+            // Same background treatment used by the main player.
             Positioned.fill(
-              child: Container(
-                color: Colors.black,
-              ),
+              child: ColoredBox(color: colorScheme.surface),
             ),
             if (artImageProvider != null)
               Positioned.fill(
-                child: Container(
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
+                child: RepaintBoundary(
+                  child: ImageFiltered(
+                    imageFilter:
+                        ui.ImageFilter.blur(sigmaX: 36, sigmaY: 36),
+                    child: Transform.scale(
+                      scale: 1.12,
+                      child: Image(
                       image: artImageProvider,
                       fit: BoxFit.cover,
                     ),
                   ),
-                  child: BackdropFilter(
-                    filter: ui.ImageFilter.blur(sigmaX: 70, sigmaY: 70),
-                    child: Container(
-                      color: Colors.black.withValues(alpha: 0.60),
-                    ),
                   ),
                 ),
               )
@@ -165,25 +165,26 @@ class FullLyricsPage extends StatelessWidget {
                       end: Alignment.bottomRight,
                       colors: [
                         primaryThemeColor.withValues(alpha: 0.3),
-                        Colors.black87,
-                        Colors.black,
+                        colorScheme.surfaceContainerHigh,
+                        colorScheme.surface,
                       ],
                     ),
                   ),
                 ),
               ),
 
-            // Subtle color overlay matching current primary color for extra depth
+            // Keep "View all" visually continuous with the small lyrics card.
             Positioned.fill(
               child: Container(
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
+                    stops: const [0.0, 0.42, 1.0],
                     colors: [
-                      primaryThemeColor.withValues(alpha: 0.15),
-                      Colors.transparent,
-                      Colors.black.withValues(alpha: 0.4),
+                      colorScheme.surface.withValues(alpha: 0.42),
+                      colorScheme.surface.withValues(alpha: 0.78),
+                      colorScheme.surface.withValues(alpha: 0.97),
                     ],
                   ),
                 ),
@@ -204,7 +205,8 @@ class FullLyricsPage extends StatelessWidget {
                         filter: ui.ImageFilter.blur(sigmaX: 15, sigmaY: 15),
                         child: Container(
                           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-                          color: Colors.white.withValues(alpha: 0.04),
+                          color: colorScheme.surfaceContainerHigh
+                              .withValues(alpha: 0.72),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -216,9 +218,11 @@ class FullLyricsPage extends StatelessWidget {
                                   );
                                 },
                                 style: IconButton.styleFrom(
-                                  backgroundColor: Colors.white.withValues(alpha: 0.08),
-                                  foregroundColor: Colors.white,
-                                  hoverColor: Colors.white24,
+                                  backgroundColor:
+                                      colorScheme.surfaceContainerHighest,
+                                  foregroundColor: colorScheme.onSurface,
+                                  hoverColor: colorScheme.onSurface
+                                      .withValues(alpha: 0.08),
                                 ),
                                 icon: const Icon(Icons.search_rounded, size: 22),
                               ),
@@ -233,8 +237,8 @@ class FullLyricsPage extends StatelessWidget {
                                           textAlign: TextAlign.center,
                                           maxLines: 1,
                                           overflow: TextOverflow.ellipsis,
-                                          style: const TextStyle(
-                                            color: Colors.white,
+                                          style: TextStyle(
+                                            color: colorScheme.onSurface,
                                             fontSize: 15,
                                             fontWeight: FontWeight.bold,
                                           ),
@@ -245,8 +249,9 @@ class FullLyricsPage extends StatelessWidget {
                                           textAlign: TextAlign.center,
                                           maxLines: 1,
                                           overflow: TextOverflow.ellipsis,
-                                          style: const TextStyle(
-                                            color: Colors.white60,
+                                          style: TextStyle(
+                                            color:
+                                                colorScheme.onSurfaceVariant,
                                             fontSize: 12,
                                           ),
                                         ),
@@ -259,9 +264,11 @@ class FullLyricsPage extends StatelessWidget {
                               IconButton(
                                 onPressed: () => Get.back(),
                                 style: IconButton.styleFrom(
-                                  backgroundColor: Colors.white.withValues(alpha: 0.08),
-                                  foregroundColor: Colors.white,
-                                  hoverColor: Colors.white24,
+                                  backgroundColor:
+                                      colorScheme.surfaceContainerHighest,
+                                  foregroundColor: colorScheme.onSurface,
+                                  hoverColor: colorScheme.onSurface
+                                      .withValues(alpha: 0.08),
                                 ),
                                 icon: const Icon(Icons.keyboard_arrow_down_rounded, size: 26),
                               ),
@@ -300,6 +307,7 @@ class FullLyricsPage extends StatelessWidget {
     double progress,
     Color accentColor,
   ) {
+    final colorScheme = Theme.of(context).colorScheme;
     return Row(
       children: [
         // Left column - Player details
@@ -319,8 +327,8 @@ class FullLyricsPage extends StatelessWidget {
                 textAlign: TextAlign.center,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
-                style: const TextStyle(
-                  color: Colors.white,
+                style: TextStyle(
+                  color: colorScheme.onSurface,
                   fontSize: 26,
                   fontWeight: FontWeight.w900,
                   letterSpacing: 0.5,
@@ -333,7 +341,7 @@ class FullLyricsPage extends StatelessWidget {
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 style: TextStyle(
-                  color: Colors.white.withValues(alpha: 0.7),
+                  color: colorScheme.onSurfaceVariant,
                   fontSize: 16,
                   fontWeight: FontWeight.w500,
                 ),
@@ -348,17 +356,20 @@ class FullLyricsPage extends StatelessWidget {
                   child: Container(
                     padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
                     decoration: BoxDecoration(
-                      color: Colors.white.withValues(alpha: 0.04),
+                      color: colorScheme.surfaceContainerHigh
+                          .withValues(alpha: 0.72),
                       borderRadius: BorderRadius.circular(24),
-                      border: Border.all(color: Colors.white.withValues(alpha: 0.06)),
+                      border: Border.all(
+                          color: colorScheme.outlineVariant),
                     ),
                     child: Column(
                       children: [
                         SliderTheme(
                           data: SliderTheme.of(context).copyWith(
                             activeTrackColor: accentColor,
-                            inactiveTrackColor: Colors.white.withValues(alpha: 0.15),
-                            thumbColor: Colors.white,
+                            inactiveTrackColor:
+                                colorScheme.surfaceContainerHighest,
+                            thumbColor: colorScheme.onSurface,
                             trackHeight: 4,
                             thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 6),
                             overlayShape: const RoundSliderOverlayShape(overlayRadius: 12),
@@ -378,11 +389,15 @@ class FullLyricsPage extends StatelessWidget {
                             children: [
                               Text(
                                 _formatDuration(ctrl.progressBarStatus.value.current),
-                                style: const TextStyle(color: Colors.white60, fontSize: 12),
+                                style: TextStyle(
+                                    color: colorScheme.onSurfaceVariant,
+                                    fontSize: 12),
                               ),
                               Text(
                                 _formatDuration(ctrl.progressBarStatus.value.total),
-                                style: const TextStyle(color: Colors.white60, fontSize: 12),
+                                style: TextStyle(
+                                    color: colorScheme.onSurfaceVariant,
+                                    fontSize: 12),
                               ),
                             ],
                           ),
@@ -394,7 +409,7 @@ class FullLyricsPage extends StatelessWidget {
                             IconButton(
                               onPressed: () => ctrl.prev(),
                               style: IconButton.styleFrom(
-                                foregroundColor: Colors.white,
+                                foregroundColor: colorScheme.onSurface,
                               ),
                               icon: const Icon(Icons.skip_previous_rounded, size: 36),
                             ),
@@ -402,8 +417,8 @@ class FullLyricsPage extends StatelessWidget {
                             IconButton(
                               onPressed: () => ctrl.playPause(),
                               style: IconButton.styleFrom(
-                                backgroundColor: Colors.white,
-                                foregroundColor: Colors.black,
+                                backgroundColor: colorScheme.primary,
+                                foregroundColor: colorScheme.onPrimary,
                                 padding: const EdgeInsets.all(16),
                                 shadowColor: Colors.black26,
                                 elevation: 8,
@@ -414,7 +429,7 @@ class FullLyricsPage extends StatelessWidget {
                             IconButton(
                               onPressed: () => ctrl.next(),
                               style: IconButton.styleFrom(
-                                foregroundColor: Colors.white,
+                                foregroundColor: colorScheme.onSurface,
                               ),
                               icon: const Icon(Icons.skip_next_rounded, size: 36),
                             ),
@@ -436,9 +451,11 @@ class FullLyricsPage extends StatelessWidget {
           flex: 6,
           child: Container(
             decoration: BoxDecoration(
-              color: Colors.black.withValues(alpha: 0.15),
+              color:
+                  colorScheme.primaryContainer.withValues(alpha: 0.48),
               borderRadius: BorderRadius.circular(32),
-              border: Border.all(color: Colors.white.withValues(alpha: 0.05)),
+              border: Border.all(
+                  color: colorScheme.primary.withValues(alpha: 0.12)),
             ),
             clipBehavior: Clip.antiAlias,
             child: Stack(
@@ -450,7 +467,7 @@ class FullLyricsPage extends StatelessWidget {
                 Positioned(
                   top: 16,
                   right: 16,
-                  child: _buildLyricsPreferenceBar(ctrl),
+                  child: _buildLyricsPreferenceBar(context, ctrl),
                 ),
               ],
             ),
@@ -469,19 +486,19 @@ class FullLyricsPage extends StatelessWidget {
     bool isPlaying,
     double progress,
   ) {
+    final colorScheme = Theme.of(context).colorScheme;
+    final textTheme = Theme.of(context).textTheme;
     return Column(
       children: [
-        // Mini player glass panel
-        ClipRRect(
-          borderRadius: BorderRadius.circular(24),
-          child: BackdropFilter(
-            filter: ui.ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-            child: Container(
+        // Song context matches the compact lyrics card.
+        Container(
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
-                color: Colors.white.withValues(alpha: 0.04),
+                color: colorScheme.primaryContainer.withValues(alpha: 0.72),
                 borderRadius: BorderRadius.circular(24),
-                border: Border.all(color: Colors.white.withValues(alpha: 0.06)),
+                border: Border.all(
+                  color: colorScheme.primary.withValues(alpha: 0.12),
+                ),
               ),
               child: Row(
                 children: [
@@ -494,7 +511,8 @@ class FullLyricsPage extends StatelessWidget {
                           ? Image(image: artImageProvider, fit: BoxFit.cover)
                           : Container(
                               color: Colors.grey[900],
-                              child: const Icon(Icons.music_note_rounded, color: Colors.white54),
+                              child: Icon(Icons.music_note_rounded,
+                                  color: colorScheme.onSurfaceVariant),
                             ),
                     ),
                   ),
@@ -507,10 +525,9 @@ class FullLyricsPage extends StatelessWidget {
                           currentSong?.title ?? '',
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold,
+                          style: textTheme.titleSmall?.copyWith(
+                            color: colorScheme.onPrimaryContainer,
+                            fontWeight: FontWeight.w800,
                           ),
                         ),
                         const SizedBox(height: 3),
@@ -518,9 +535,9 @@ class FullLyricsPage extends StatelessWidget {
                           currentSong?.artist ?? '',
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
-                          style: const TextStyle(
-                            color: Colors.white70,
-                            fontSize: 12,
+                          style: textTheme.bodySmall?.copyWith(
+                            color: colorScheme.onPrimaryContainer
+                                .withValues(alpha: 0.7),
                           ),
                         ),
                       ],
@@ -529,15 +546,13 @@ class FullLyricsPage extends StatelessWidget {
                   IconButton(
                     onPressed: () => ctrl.playPause(),
                     style: IconButton.styleFrom(
-                      backgroundColor: Colors.white,
-                      foregroundColor: Colors.black,
+                      backgroundColor: colorScheme.primary,
+                      foregroundColor: colorScheme.onPrimary,
                     ),
                     icon: Icon(isPlaying ? Icons.pause_rounded : Icons.play_arrow_rounded, size: 22),
                   ),
                 ],
               ),
-            ),
-          ),
         ),
         const SizedBox(height: 16),
 
@@ -545,8 +560,11 @@ class FullLyricsPage extends StatelessWidget {
         Expanded(
           child: Container(
             decoration: BoxDecoration(
-              color: Colors.black.withValues(alpha: 0.1),
-              borderRadius: BorderRadius.circular(24),
+              color: colorScheme.primaryContainer.withValues(alpha: 0.48),
+              borderRadius: BorderRadius.circular(28),
+              border: Border.all(
+                color: colorScheme.primary.withValues(alpha: 0.12),
+              ),
             ),
             clipBehavior: Clip.antiAlias,
             child: Stack(
@@ -558,7 +576,7 @@ class FullLyricsPage extends StatelessWidget {
                 Positioned(
                   bottom: 12,
                   right: 12,
-                  child: _buildLyricsPreferenceBar(ctrl),
+                  child: _buildLyricsPreferenceBar(context, ctrl),
                 ),
               ],
             ),
@@ -569,7 +587,9 @@ class FullLyricsPage extends StatelessWidget {
   }
 
   // Preferences configuration bar (Zoom, Alignment)
-  Widget _buildLyricsPreferenceBar(PlayerController ctrl) {
+  Widget _buildLyricsPreferenceBar(
+      BuildContext context, PlayerController ctrl) {
+    final colorScheme = Theme.of(context).colorScheme;
     return ClipRRect(
       borderRadius: BorderRadius.circular(20),
       child: BackdropFilter(
@@ -577,9 +597,11 @@ class FullLyricsPage extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
           decoration: BoxDecoration(
-            color: Colors.black.withValues(alpha: 0.4),
+            color: colorScheme.surfaceContainerHigh.withValues(alpha: 0.92),
             borderRadius: BorderRadius.circular(20),
-            border: Border.all(color: Colors.white.withValues(alpha: 0.08)),
+            border: Border.all(
+              color: colorScheme.outlineVariant.withValues(alpha: 0.5),
+            ),
           ),
           child: Row(
             mainAxisSize: MainAxisSize.min,
@@ -591,7 +613,8 @@ class FullLyricsPage extends StatelessWidget {
                   }
                 },
                 tooltip: "Reducir tamaño",
-                icon: const Icon(Icons.text_fields_rounded, size: 14, color: Colors.white70),
+                icon: Icon(Icons.text_fields_rounded,
+                    size: 14, color: colorScheme.onSurfaceVariant),
                 style: IconButton.styleFrom(
                   padding: EdgeInsets.zero,
                   minimumSize: const Size(28, 28),
@@ -599,7 +622,10 @@ class FullLyricsPage extends StatelessWidget {
               ),
               Obx(() => Text(
                     "${(ctrl.lyricsTextScale.value * 100).toInt()}%",
-                    style: const TextStyle(color: Colors.white70, fontSize: 11, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                        color: colorScheme.onSurfaceVariant,
+                        fontSize: 11,
+                        fontWeight: FontWeight.bold),
                   )),
               IconButton(
                 onPressed: () {
@@ -608,16 +634,17 @@ class FullLyricsPage extends StatelessWidget {
                   }
                 },
                 tooltip: "Aumentar tamaño",
-                icon: const Icon(Icons.text_fields_rounded, size: 20, color: Colors.white70),
+                icon: Icon(Icons.text_fields_rounded,
+                    size: 20, color: colorScheme.onSurfaceVariant),
                 style: IconButton.styleFrom(
                   padding: EdgeInsets.zero,
                   minimumSize: const Size(28, 28),
                 ),
               ),
-              const SizedBox(
+              SizedBox(
                 height: 16,
                 child: VerticalDivider(
-                  color: Colors.white24,
+                  color: colorScheme.outlineVariant,
                   width: 12,
                   thickness: 1,
                 ),
@@ -632,7 +659,7 @@ class FullLyricsPage extends StatelessWidget {
                   icon: Icon(
                     isLeft ? Icons.format_align_left_rounded : Icons.format_align_center_rounded,
                     size: 16,
-                    color: Colors.white,
+                    color: colorScheme.onSurface,
                   ),
                   style: IconButton.styleFrom(
                     padding: EdgeInsets.zero,
@@ -640,10 +667,10 @@ class FullLyricsPage extends StatelessWidget {
                   ),
                 );
               }),
-              const SizedBox(
+              SizedBox(
                 height: 16,
                 child: VerticalDivider(
-                  color: Colors.white24,
+                  color: colorScheme.outlineVariant,
                   width: 12,
                   thickness: 1,
                 ),
@@ -656,18 +683,20 @@ class FullLyricsPage extends StatelessWidget {
                   onPressed: isTranslationLoading ? null : () => ctrl.toggleTranslation(),
                   tooltip: "Traducir",
                   icon: isTranslationLoading
-                      ? const SizedBox(
+                      ? SizedBox(
                           width: 14,
                           height: 14,
                           child: CircularProgressIndicator(
                             strokeWidth: 2,
-                            color: Colors.white,
+                            color: colorScheme.primary,
                           ),
                         )
                       : Icon(
                           Icons.translate_rounded,
                           size: 16,
-                          color: isTranslationEnabled ? themeCtrl.primaryColor.value : Colors.white70,
+                          color: isTranslationEnabled
+                              ? themeCtrl.primaryColor.value
+                              : colorScheme.onSurfaceVariant,
                         ),
                   style: IconButton.styleFrom(
                     padding: EdgeInsets.zero,
