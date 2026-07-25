@@ -92,6 +92,10 @@ Source: "{#BuildPath}\*.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#BuildPath}\data\*"; DestDir: "{app}\data"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Registry]
+Root: HKA; Subkey: "Software\Classes\estrellamusic"; ValueType: string; ValueName: ""; ValueData: "URL:Estrella Music"; Flags: uninsdeletekey
+Root: HKA; Subkey: "Software\Classes\estrellamusic"; ValueType: string; ValueName: "URL Protocol"; ValueData: ""
+Root: HKA; Subkey: "Software\Classes\estrellamusic\DefaultIcon"; ValueType: string; ValueName: ""; ValueData: "{app}\{#MyAppExeName},0"
+Root: HKA; Subkey: "Software\Classes\estrellamusic\shell\open\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""%1"""
 Root: HKA; Subkey: "Software\Classes\.myp\OpenWithProgids"; ValueType: string; ValueName: "EstrellaMusicFile"; ValueData: ""; Flags: uninsdeletevalue
 Root: HKA; Subkey: "Software\Classes\EstrellaMusicFile"; ValueType: string; ValueName: ""; ValueData: "Estrella Music File"; Flags: uninsdeletekey
 Root: HKA; Subkey: "Software\Classes\EstrellaMusicFile\DefaultIcon"; ValueType: string; ValueName: ""; ValueData: "{app}\{#MyAppExeName},0"

@@ -3,6 +3,7 @@
 #include <dwmapi.h>
 #include <flutter_windows.h>
 
+#include "app_links/app_links_plugin_c_api.h"
 #include "resource.h"
 
 namespace {
@@ -123,6 +124,10 @@ Win32Window::~Win32Window() {
 bool Win32Window::Create(const std::wstring& title,
                          const Point& origin,
                          const Size& size) {
+  if (SendAppLinkToInstance(title)) {
+    return false;
+  }
+
   Destroy();
 
   const wchar_t* window_class =
@@ -147,6 +152,25 @@ bool Win32Window::Create(const std::wstring& title,
   UpdateTheme(window);
 
   return OnCreate();
+}
+
+bool Win32Window::SendAppLinkToInstance(const std::wstring& title) {
+  HWND hwnd = ::FindWindow(kWindowClassName, title.c_str());
+  if (!hwnd) {
+    return false;
+  }
+
+  SendAppLink(hwnd);
+
+  WINDOWPLACEMENT placement = {sizeof(WINDOWPLACEMENT)};
+  GetWindowPlacement(hwnd, &placement);
+  ShowWindow(hwnd,
+             placement.showCmd == SW_SHOWMAXIMIZED ? SW_SHOWMAXIMIZED
+                                                   : SW_RESTORE);
+  SetWindowPos(hwnd, HWND_TOP, 0, 0, 0, 0,
+               SWP_SHOWWINDOW | SWP_NOSIZE | SWP_NOMOVE);
+  SetForegroundWindow(hwnd);
+  return true;
 }
 
 bool Win32Window::Show() {

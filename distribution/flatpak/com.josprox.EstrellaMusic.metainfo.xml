@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>com.josprox.EstrellaMusic</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-only</project_license>
+  <name>Estrella Music</name>
+  <summary>Cross-platform music streaming and cloud sync player</summary>
+  <description>
+    <p>
+      Estrella Music is a feature-rich, cross-platform music streaming application supporting local playback, cloud synchronization via Joss Red, co-listening, and lyrics.
+    </p>
+  </description>
+  <launchable type="desktop-id">com.josprox.EstrellaMusic.desktop</launchable>
+  <url type="homepage">https://github.com/josprox/Estrella-Music</url>
+  <provides>
+    <binary>harmonymusic</binary>
+  </provides>
+  <content_rating type="oars-1.1"/>
+</component>

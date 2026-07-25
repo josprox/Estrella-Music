@@ -159,7 +159,7 @@ jobs:
       - name: Install Linux build dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y clang cmake ninja-build pkg-config libgtk-3-dev liblzma-dev libsecret-1-dev libjson-glib-dev libayatana-appindicator3-dev libmpv-dev mpv
+          sudo apt-get install -y clang cmake ninja-build pkg-config libgtk-3-dev liblzma-dev libsecret-1-dev libjson-glib-dev libayatana-appindicator3-dev libmpv-dev mpv flatpak flatpak-builder
       - uses: subosito/flutter-action@v2
         with:
           channel: stable
@@ -173,12 +173,19 @@ jobs:
       - run: flutter pub get
       - name: Build Linux application
         run: flutter build linux --release
-      - name: Package Linux application
+      - name: Package Linux application (Tarball & Flatpak)
         shell: bash
         run: |
           set -euo pipefail
           mkdir -p distribution/linux
           tar -czf distribution/linux/EstrellaMusic-linux-x64.tar.gz -C build/linux/x64/release/bundle .
+          sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+          sudo flatpak install -y flathub org.gnome.Platform//46 org.gnome.Sdk//46
+          cd distribution/flatpak
+          flatpak-builder --force-clean build-dir com.josprox.EstrellaMusic.yml
+          flatpak build-bundle repo EstrellaMusic-linux-x64.flatpak com.josprox.EstrellaMusic
+          mv EstrellaMusic-linux-x64.flatpak ../linux/
+
       - uses: actions/upload-artifact@v4
         with:
           name: estrella-music-linux-${{ needs.detect-version.outputs.version }}-${{ needs.detect-version.outputs.build_number }}

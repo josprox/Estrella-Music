@@ -2,6 +2,7 @@ import 'package:audio_service/audio_service.dart';
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
@@ -114,7 +115,13 @@ class MyApp extends StatelessWidget {
         );
       };
     });
-    if (!GetPlatform.isDesktop) Get.put(AppLinksController());
+    if (!kIsWeb && !Get.isRegistered<AppLinksController>()) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (!Get.isRegistered<AppLinksController>()) {
+          Get.put(AppLinksController(), permanent: true);
+        }
+      });
+    }
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
     return GetMaterialApp(
         title: 'Estrella Music',

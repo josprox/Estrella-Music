@@ -1,0 +1,43 @@
+app-id: com.josprox.EstrellaMusic
+runtime: org.gnome.Platform
+runtime-version: '46'
+sdk: org.gnome.Sdk
+command: harmonymusic
+finish-args:
+  - --socket=x11
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --socket=pulseaudio
+  - --share=ipc
+  - --share=network
+  - --device=dri
+  - --filesystem=host
+  - --talk-name=org.freedesktop.secrets
+  - --talk-name=org.mpris.MediaPlayer2.harmonymusic
+modules:
+  - name: mpv
+    buildsystem: simple
+    build-commands:
+      - echo "Using runtime mpv libraries if available"
+  - name: estrella-music
+    buildsystem: simple
+    build-commands:
+      - install -dm755 /app/bin
+      - install -dm755 /app/lib
+      - install -dm755 /app/share/applications
+      - install -dm755 /app/share/metainfo
+      - install -dm755 /app/share/icons/hicolor/512x512/apps
+      - cp -r * /app/lib/
+      - ln -s /app/lib/harmonymusic /app/bin/harmonymusic
+      - install -Dm644 com.josprox.EstrellaMusic.desktop /app/share/applications/com.josprox.EstrellaMusic.desktop
+      - install -Dm644 com.josprox.EstrellaMusic.metainfo.xml /app/share/metainfo/com.josprox.EstrellaMusic.metainfo.xml
+      - install -Dm644 icon.png /app/share/icons/hicolor/512x512/apps/com.josprox.EstrellaMusic.png
+    sources:
+      - type: dir
+        path: ../../build/linux/x64/release/bundle
+      - type: file
+        path: com.josprox.EstrellaMusic.desktop
+      - type: file
+        path: com.josprox.EstrellaMusic.metainfo.xml
+      - type: file
+        path: ../../icon.png

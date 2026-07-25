@@ -90,6 +90,9 @@ class Win32Window {
   // Update the window frame's theme to match the system theme.
   static void UpdateTheme(HWND const window);
 
+  // Forwards an incoming app link to the already running window.
+  bool SendAppLinkToInstance(const std::wstring& title);
+
   bool quit_on_close_ = false;
 
   // window handle for top level window.
