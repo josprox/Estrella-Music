@@ -405,5 +405,6 @@
   "downloadNotificationChannelDescription": "Holder musikknedlastingene dine aktive i bakgrunnen.",
   "downloadNotificationTitle": "Laster ned musikk",
   "downloadNotificationPreparing": "Forbereder nedlastingene dine …",
-  "downloadNotificationSong": "Laster ned: {songTitle}"
+  "downloadNotificationSong": "Laster ned: {songTitle}",
+  "syncCloudModeActive": "Skymodus aktiv"
 }

@@ -675,5 +675,6 @@
   "downloadNotificationChannelDescription": "Поддържа вашите изтегляния на музика активни във фонов режим.",
   "downloadNotificationTitle": "Изтегляне на музика",
   "downloadNotificationPreparing": "Изтеглянията ви се подготвят...",
-  "downloadNotificationSong": "Изтегляне: {songTitle}"
+  "downloadNotificationSong": "Изтегляне: {songTitle}",
+  "syncCloudModeActive": "Облачен режим е активен"
 }

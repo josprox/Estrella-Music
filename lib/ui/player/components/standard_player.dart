@@ -11,6 +11,8 @@ import 'package:harmonymusic/ui/widgets/up_next_queue.dart';
 import '/ui/player/components/animated_play_button.dart';
 import '/ui/player/components/backgroud_image.dart';
 import '/ui/player/components/lyrics_widget.dart';
+import '/ui/player/components/lyrics_switch.dart';
+import 'package:harmonymusic/ui/widgets/lyrics_search_dialog.dart';
 import 'package:harmonymusic/ui/player/player_controller.dart';
 import 'package:harmonymusic/services/social/colistening_service.dart';
 import 'full_lyrics_page.dart';
@@ -250,11 +252,7 @@ class _StandardPlayerContent extends StatelessWidget {
                               isQueueInSlidePanel: false,
                             ),
                             // Tab 2: Synced Lyrics
-                            LyricsWidget(
-                              padding: EdgeInsets.symmetric(
-                                  horizontal: 24, vertical: 16),
-                              isFull: true,
-                            ),
+                            _DesktopLyricsTab(),
                           ],
                         ),
                       ),
@@ -843,16 +841,18 @@ class _SecondaryActions extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDesktop = DefaultTabController.maybeOf(context) != null;
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        // Add to playlist
-        _SecondaryButton(
-          icon: Icons.playlist_add_rounded,
-          label: S.current.upNext,
-          colorScheme: colorScheme,
-          onTap: () => ctrl.openQueueModal(context),
-        ),
+        // Add to playlist (Only shown on Mobile)
+        if (!isDesktop)
+          _SecondaryButton(
+            icon: Icons.playlist_add_rounded,
+            label: S.current.upNext,
+            colorScheme: colorScheme,
+            onTap: () => ctrl.openQueueModal(context),
+          ),
         // Cast / Share
         _SecondaryButton(
           icon: Icons.share_rounded,
@@ -1291,5 +1291,77 @@ class _LyricsCard extends StatelessWidget {
         ),
       );
     });
+  }
+}
+
+
+class _DesktopLyricsTab extends StatelessWidget {
+  const _DesktopLyricsTab();
+
+  @override
+  Widget build(BuildContext context) {
+    final ctrl = Get.find<PlayerController>();
+    final colorScheme = Theme.of(context).colorScheme;
+
+    return Column(
+      children: [
+        // Controls Header
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+          child: Row(
+            children: [
+              const Expanded(child: LyricsSwitch()),
+              const SizedBox(width: 8),
+              Obx(() {
+                final isTranslating = ctrl.isTranslationLoading.value;
+                final isEnabled = ctrl.isTranslationEnabled.value;
+                return IconButton(
+                  tooltip: 'Traducir',
+                  icon: isTranslating
+                      ? const SizedBox(
+                          width: 16,
+                          height: 16,
+                          child: CircularProgressIndicator(strokeWidth: 2),
+                        )
+                      : Icon(
+                          Icons.translate_rounded,
+                          color: isEnabled
+                              ? colorScheme.primary
+                              : colorScheme.onSurfaceVariant,
+                        ),
+                  onPressed: () => ctrl.toggleTranslation(),
+                );
+              }),
+              IconButton(
+                tooltip: 'Buscar letras',
+                icon: Icon(Icons.search_rounded,
+                    color: colorScheme.onSurfaceVariant),
+                onPressed: () => showDialog(
+                  context: context,
+                  builder: (context) => const LyricsSearchDialog(),
+                ),
+              ),
+              IconButton(
+                tooltip: 'Pantalla completa',
+                icon: Icon(Icons.open_in_full_rounded,
+                    color: colorScheme.onSurfaceVariant),
+                onPressed: () => Get.to(
+                  () => const FullLyricsPage(),
+                  transition: Transition.downToUp,
+                ),
+              ),
+            ],
+          ),
+        ),
+        const Divider(height: 1, indent: 16, endIndent: 16),
+        // Lyrics view
+        const Expanded(
+          child: LyricsWidget(
+            padding: EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+            isFull: true,
+          ),
+        ),
+      ],
+    );
   }
 }

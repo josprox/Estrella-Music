@@ -566,5 +566,6 @@
   "downloadNotificationChannelDescription": "Håller din musiknedladdning aktiv i bakgrunden.",
   "downloadNotificationTitle": "Ladda ner musik",
   "downloadNotificationPreparing": "Förbereder dina nedladdningar...",
-  "downloadNotificationSong": "Laddar ner: {songTitle}"
+  "downloadNotificationSong": "Laddar ner: {songTitle}",
+  "syncCloudModeActive": "Molnläge aktivt"
 }

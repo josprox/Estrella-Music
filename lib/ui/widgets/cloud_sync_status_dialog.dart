@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:harmonymusic/services/storage/sqlite_store.dart';
 
 import 'package:harmonymusic/services/auth/auth_service.dart';
+import 'package:harmonymusic/services/sync/cloud_sync_manager.dart';
 import 'package:harmonymusic/services/sync/cloud_migration_service.dart';
 import 'package:harmonymusic/services/sync/pending_sync_queue_service.dart';
 import 'package:harmonymusic/services/sync/sync_service.dart';
@@ -15,6 +16,7 @@ class CloudSyncStatusDialog extends StatelessWidget {
   SyncService get _sync => Get.find<SyncService>();
   CloudMigrationService get _migration => Get.find<CloudMigrationService>();
   PendingSyncQueueService get _queue => Get.find<PendingSyncQueueService>();
+  CloudSyncManager get _cloudSyncManager => Get.find<CloudSyncManager>();
 
   Future<void> _startMigration(BuildContext context) async {
     if (!_auth.isAuthenticated.value) {
@@ -26,14 +28,11 @@ class CloudSyncStatusDialog extends StatelessWidget {
       return;
     }
 
-    await _sync.enableCloudMode();
+    await _cloudSyncManager.switchMode(DataMode.cloud);
   }
 
   Future<void> _retrySync() async {
-    final pushed = await _sync.push();
-    if (pushed) {
-      await _sync.pull();
-    }
+    await _cloudSyncManager.syncNow(force: true);
   }
 
   @override

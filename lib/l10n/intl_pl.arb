@@ -670,5 +670,6 @@
   "downloadNotificationChannelDescription": "Utrzymuje pobieranie muzyki aktywne w tle.",
   "downloadNotificationTitle": "Pobieranie muzyki",
   "downloadNotificationPreparing": "Przygotowuję pliki do pobrania…",
-  "downloadNotificationSong": "Pobieranie: {songTitle}"
+  "downloadNotificationSong": "Pobieranie: {songTitle}",
+  "syncCloudModeActive": "Tryb chmury aktywny"
 }

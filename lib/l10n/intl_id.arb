@@ -665,5 +665,6 @@
   "downloadNotificationChannelDescription": "Menjaga unduhan musik Anda tetap aktif di latar belakang.",
   "downloadNotificationTitle": "Mengunduh musik",
   "downloadNotificationPreparing": "Mempersiapkan unduhan Anda…",
-  "downloadNotificationSong": "Mengunduh: _{songTitle}"
+  "downloadNotificationSong": "Mengunduh: _{songTitle}",
+  "syncCloudModeActive": "Mode awan aktif"
 }

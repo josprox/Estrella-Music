@@ -544,5 +544,6 @@
   "downloadNotificationChannelDescription": "ଆପଣଙ୍କର ମ୍ୟୁଜିକ୍ ଡାଉନଲୋଡ୍ ଗୁଡିକ ପୃଷ୍ଠଭୂମିରେ ସକ୍ରିୟ ରଖେ |",
   "downloadNotificationTitle": "ସଙ୍ଗୀତ ଡାଉନଲୋଡ୍ କରୁଛି |",
   "downloadNotificationPreparing": "ତୁମର ଡାଉନଲୋଡ୍ ପ୍ରସ୍ତୁତ କରୁଛି…",
-  "downloadNotificationSong": "ଡାଉନଲୋଡ୍: {songTitle}"
+  "downloadNotificationSong": "ଡାଉନଲୋଡ୍: {songTitle}",
+  "syncCloudModeActive": "କ୍ଲାଉଡ୍ ମୋଡ୍ ସକ୍ରିୟ |"
 }

@@ -579,5 +579,6 @@
   "downloadNotificationChannelDescription": "백그라운드에서 음악 다운로드를 활성 상태로 유지합니다.",
   "downloadNotificationTitle": "음악 다운로드 중",
   "downloadNotificationPreparing": "다운로드 준비 중…",
-  "downloadNotificationSong": "다운로드 중: {songTitle}"
+  "downloadNotificationSong": "다운로드 중: {songTitle}",
+  "syncCloudModeActive": "클라우드 모드 활성화"
 }

@@ -1,3 +1,4 @@
+import 'package:dio/dio.dart';
 import 'dart:async';
 import 'dart:convert';
 
@@ -796,6 +797,13 @@ class SyncService extends GetxService {
       await SqliteStore.box('AppPrefs').put(_pendingKey, true);
       await _queue.markRetryScheduled();
       lastStatusMessage.value = S.current.syncUploadRetry;
+      return false;
+    } on DioException catch (e) {
+      isOnline.value = false;
+      await SqliteStore.box('AppPrefs').put(_pendingKey, true);
+      await _queue.markRetryScheduled();
+      lastStatusMessage.value = S.current.syncOfflineRetry;
+      debugPrint('[SyncService] Sync push postponed (${e.type}): ${e.message}');
       return false;
     } catch (e, stack) {
       isOnline.value = false;

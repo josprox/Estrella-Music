@@ -670,5 +670,6 @@
   "downloadNotificationChannelDescription": "Hält Ihre Musik-Downloads im Hintergrund aktiv.",
   "downloadNotificationTitle": "Musik herunterladen",
   "downloadNotificationPreparing": "Bereiten Sie Ihre Downloads vor…",
-  "downloadNotificationSong": "Herunterladen: {songTitle}"
+  "downloadNotificationSong": "Herunterladen: {songTitle}",
+  "syncCloudModeActive": "Cloud-Modus aktiv"
 }

@@ -2,15 +2,48 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Estrella Music"
-#ifndef MyAppVersion
-  #define MyAppVersion "2.0.0"
-#endif
 #define MyAppPublisher "JOSPROX MX"
 #define MyAppURL "https://github.com/josprox/Estrella-Music-v2"
 #define MyAppExeName "harmonymusic.exe"
 
 ; Dynamic build path configuration
 #define BuildPath "..\build\windows\x64\runner\Release"
+
+; Extract version dynamically from pubspec.yaml if not passed via command line
+#ifndef MyAppVersion
+  #define PubspecFile AddBackslash(SourcePath) + "..\pubspec.yaml"
+  #define FileHandle FileOpen(PubspecFile)
+  #define PubspecLine ""
+  #define MyAppVersion ""
+
+  #if FileHandle
+    #sub ProcessPubspec
+      #define PubspecLine FileRead(FileHandle)
+      #if Pos("version: ", PubspecLine) == 1
+        #define RawVersion Trim(Copy(PubspecLine, 10, 100))
+        #define PosPlus Pos("+", RawVersion)
+        #if PosPlus > 0
+          #define MyAppVersion Copy(RawVersion, 1, PosPlus - 1)
+        #else
+          #define MyAppVersion RawVersion
+        #endif
+      #endif
+    #endsub
+    #define i 0
+    #for {i = 0; !FileEof(FileHandle) && (MyAppVersion == ""); i = i + 1} ProcessPubspec
+    #expr FileClose(FileHandle)
+  #endif
+
+  ; If pubspec.yaml parsing is empty, try getting version from compiled executable
+  #if MyAppVersion == ""
+    #define MyAppVersion GetVersionNumbersString(BuildPath + "\" + MyAppExeName)
+  #endif
+
+  ; Fallback default
+  #if MyAppVersion == ""
+    #define MyAppVersion "1.0.0"
+  #endif
+#endif
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application.
@@ -35,7 +68,8 @@ InfoAfterFile=readme_after_install.txt
 
 PrivilegesRequired=lowest
 OutputDir=.
-OutputBaseFilename=EstrellaMusicInstaller
+OutputBaseFilename=EstrellaMusic_v{#MyAppVersion}_Setup
+VersionInfoVersion={#MyAppVersion}
 SetupIconFile=..\assets\icons\icon.ico
 SolidCompression=yes
 WizardStyle=modern dynamic polar

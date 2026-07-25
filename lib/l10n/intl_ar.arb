@@ -639,5 +639,6 @@
   "downloadNotificationChannelDescription": "يبقي تنزيلات الموسيقى الخاصة بك نشطة في الخلفية.",
   "downloadNotificationTitle": "تنزيل الموسيقى",
   "downloadNotificationPreparing": "جارٍ تحضير التنزيلات…",
-  "downloadNotificationSong": "التنزيل: __PH_0____"
+  "downloadNotificationSong": "التنزيل: __PH_0____",
+  "syncCloudModeActive": "الوضع السحابي نشط"
 }

@@ -313,9 +313,11 @@ class FullLyricsPage extends StatelessWidget {
         // Left column - Player details
         Expanded(
           flex: 4,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+          child: SingleChildScrollView(
+            physics: const BouncingScrollPhysics(),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
               AnimatedAlbumArt(
                 artImageProvider: artImageProvider,
                 isPlaying: isPlaying,
@@ -442,6 +444,7 @@ class FullLyricsPage extends StatelessWidget {
               ),
             ],
           ),
+        ),
         ),
         
         const SizedBox(width: 40),

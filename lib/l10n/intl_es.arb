@@ -34,6 +34,7 @@
   "songsImportedFromJossMusic": "Canciones importadas desde Joss Music Kotlin",
   "importedFromJossMusic": "Importado desde Joss Music Kotlin",
   "syncLocalModeActive": "Modo local activo",
+  "syncCloudModeActive": "Modo cloud activo",
   "syncCloudPending": "Modo cloud activo. Sincronización pendiente.",
   "syncCloudDownloadingExisting": "Modo cloud activado. Descargando la biblioteca existente.",
   "syncCloudMigrationComplete": "Modo cloud activado. Biblioteca migrada.",

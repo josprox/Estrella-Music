@@ -675,5 +675,6 @@
   "downloadNotificationChannelDescription": "Müzik indirmelerinizi arka planda aktif tutar.",
   "downloadNotificationTitle": "Müzik indiriliyor",
   "downloadNotificationPreparing": "İndirmeleriniz hazırlanıyor…",
-  "downloadNotificationSong": "İndiriliyor: {songTitle}"
+  "downloadNotificationSong": "İndiriliyor: {songTitle}",
+  "syncCloudModeActive": "Bulut modu etkin"
 }

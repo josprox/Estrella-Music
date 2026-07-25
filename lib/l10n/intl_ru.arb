@@ -675,5 +675,6 @@
   "downloadNotificationChannelDescription": "Сохраняет загрузку музыки активной в фоновом режиме.",
   "downloadNotificationTitle": "Загрузка музыки",
   "downloadNotificationPreparing": "Подготовка загрузок…",
-  "downloadNotificationSong": "Загрузка: {songTitle}"
+  "downloadNotificationSong": "Загрузка: {songTitle}",
+  "syncCloudModeActive": "Облачный режим активен"
 }

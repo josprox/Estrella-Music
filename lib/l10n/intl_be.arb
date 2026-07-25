@@ -405,5 +405,6 @@
   "downloadNotificationChannelDescription": "Захоўвае загрузку музыкі ў фонавым рэжыме.",
   "downloadNotificationTitle": "Спампаваць музыку",
   "downloadNotificationPreparing": "Падрыхтоўка спамповак…",
-  "downloadNotificationSong": "Спампоўка: {songTitle}"
+  "downloadNotificationSong": "Спампоўка: {songTitle}",
+  "syncCloudModeActive": "Воблачны рэжым актыўны"
 }

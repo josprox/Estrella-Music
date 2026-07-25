@@ -7,7 +7,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:harmonymusic/services/storage/safe_secure_storage.dart';
 import 'package:http/http.dart' as http;
 
 import 'notification_service.dart';
@@ -15,7 +15,6 @@ import 'notification_service.dart';
 const _channelId = 'estrella_music_notifications';
 const _channelName = 'Notificaciones de Estrella Music';
 const _channelDescription = 'Mensajes enviados desde la plataforma Joss';
-const _storage = FlutterSecureStorage();
 
 bool _isExpiredTemporary(Map<String, dynamic> data) {
   if (data['delivery_mode']?.toString() != 'temporary') return false;
@@ -92,7 +91,7 @@ Future<void> _showLocalNotification(
 
 Future<void> _acknowledgeFromBackground(dynamic id) async {
   if (id == null) return;
-  final token = await _storage.read(key: 'jwt_token');
+  final token = await SafeSecureStorage.read('jwt_token');
   var base = dotenv.env['JOSSRED']?.trim();
   if (token == null || token.isEmpty || base == null || base.isEmpty) return;
   if (base.endsWith('/')) base = base.substring(0, base.length - 1);
@@ -162,7 +161,7 @@ class FcmNotificationService {
 
   static Future<bool> registerCurrentToken() async {
     try {
-      final jwt = await _storage.read(key: 'jwt_token');
+      final jwt = await SafeSecureStorage.read('jwt_token');
       var base = dotenv.env['JOSSRED']?.trim();
       final deviceToken = await FirebaseMessaging.instance.getToken();
       final permission =
@@ -205,7 +204,7 @@ class FcmNotificationService {
 
   static Future<void> unregisterCurrentToken() async {
     try {
-      final jwt = await _storage.read(key: 'jwt_token');
+      final jwt = await SafeSecureStorage.read('jwt_token');
       var base = dotenv.env['JOSSRED']?.trim();
       final deviceToken = await FirebaseMessaging.instance.getToken();
       if (jwt == null ||

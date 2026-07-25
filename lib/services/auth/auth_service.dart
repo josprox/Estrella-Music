@@ -3,10 +3,9 @@ import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/services/storage/sqlite_store.dart';
-import 'package:harmonymusic/services/sync/sync_service.dart';
+import 'package:harmonymusic/services/storage/safe_secure_storage.dart';
+import 'package:harmonymusic/services/sync/cloud_sync_manager.dart';
 import 'package:harmonymusic/services/system/fcm_notification_service.dart';
 import 'package:harmonymusic/services/system/notification_service.dart';
 
@@ -24,8 +23,6 @@ class AuthService extends GetxService {
       validateStatus: (_) => true,
     ),
   );
-
-  final FlutterSecureStorage _storage = const FlutterSecureStorage();
 
   final isAuthenticated = false.obs;
   final isLoadingSession = true.obs;
@@ -126,23 +123,20 @@ class AuthService extends GetxService {
             .millisecondsSinceEpoch ~/
         1000;
 
-    await _storage.write(key: _jwtTokenKey, value: token);
-    await _storage.write(key: _refreshTokenKey, value: refreshToken);
-    await _storage.write(
-      key: _tokenExpirationKey,
-      value: expirationEpoch.toString(),
-    );
+    await SafeSecureStorage.write(_jwtTokenKey, token);
+    await SafeSecureStorage.write(_refreshTokenKey, refreshToken);
+    await SafeSecureStorage.write(_tokenExpirationKey, expirationEpoch.toString());
   }
 
   Future<void> _clearTokenData() async {
-    await _storage.delete(key: _jwtTokenKey);
-    await _storage.delete(key: _refreshTokenKey);
-    await _storage.delete(key: _tokenExpirationKey);
-    await _storage.delete(key: _cachedProfileKey);
+    await SafeSecureStorage.delete(_jwtTokenKey);
+    await SafeSecureStorage.delete(_refreshTokenKey);
+    await SafeSecureStorage.delete(_tokenExpirationKey);
+    await SafeSecureStorage.delete(_cachedProfileKey);
   }
 
   Future<bool> _isTokenExpiringSoon({int daysThreshold = 15}) async {
-    final expirationRaw = await _storage.read(key: _tokenExpirationKey);
+    final expirationRaw = await SafeSecureStorage.read(_tokenExpirationKey);
     if (expirationRaw == null || expirationRaw.isEmpty) {
       return true;
     }
@@ -158,7 +152,7 @@ class AuthService extends GetxService {
   }
 
   Future<String?> getAccessToken() async {
-    final token = await _storage.read(key: _jwtTokenKey);
+    final token = await SafeSecureStorage.read(_jwtTokenKey);
     if (token == null || token.isEmpty) return null;
 
     if (await _isTokenExpiringSoon()) {
@@ -168,7 +162,7 @@ class AuthService extends GetxService {
       }
     }
 
-    return _storage.read(key: _jwtTokenKey);
+    return SafeSecureStorage.read(_jwtTokenKey);
   }
 
   Future<void> restoreSession() async {
@@ -181,7 +175,7 @@ class AuthService extends GetxService {
       return;
     }
 
-    final token = await _storage.read(key: _jwtTokenKey);
+    final token = await SafeSecureStorage.read(_jwtTokenKey);
     if (token == null || token.isEmpty) {
       isAuthenticated.value = false;
       userProfile.value = null;
@@ -214,24 +208,12 @@ class AuthService extends GetxService {
         profileResult['user'] as Map<String, dynamic>? ?? <String, dynamic>{},
       );
       userProfile.value = profileData;
-      await _storage.write(
-        key: _cachedProfileKey,
-        value: jsonEncode(profileData),
+      await SafeSecureStorage.write(
+        _cachedProfileKey,
+        jsonEncode(profileData),
       );
-      final hasPending = SqliteStore.box('AppPrefs')
-              .get('hasPendingSync', defaultValue: false) ==
-          true;
-      if (Get.isRegistered<SyncService>()) {
-        final syncService = Get.find<SyncService>();
-        if (hasPending) {
-          syncService.push().then((success) {
-            if (success) {
-              syncService.pull();
-            }
-          });
-        } else {
-          syncService.pull();
-        }
+      if (Get.isRegistered<CloudSyncManager>()) {
+        Get.find<CloudSyncManager>().syncNow();
       }
       FcmNotificationService.registerCurrentToken();
       NotificationService.syncMessages();
@@ -251,7 +233,7 @@ class AuthService extends GetxService {
 
   Future<void> _loadCachedProfile() async {
     try {
-      final cachedProfileData = await _storage.read(key: _cachedProfileKey);
+      final cachedProfileData = await SafeSecureStorage.read(_cachedProfileKey);
       if (cachedProfileData != null && cachedProfileData.isNotEmpty) {
         userProfile.value = Map<String, dynamic>.from(
           jsonDecode(cachedProfileData),
@@ -390,7 +372,7 @@ class AuthService extends GetxService {
   }
 
   Future<Map<String, dynamic>> fetchUserProfile() async {
-    final token = await _storage.read(key: _jwtTokenKey);
+    final token = await SafeSecureStorage.read(_jwtTokenKey);
     if (token == null || token.isEmpty) {
       return {'success': false, 'message': 'No hay token activo.'};
     }
@@ -426,7 +408,7 @@ class AuthService extends GetxService {
   }
 
   Future<Map<String, dynamic>> refreshToken() async {
-    final refreshToken = await _storage.read(key: _refreshTokenKey);
+    final refreshToken = await SafeSecureStorage.read(_refreshTokenKey);
     if (refreshToken == null || refreshToken.isEmpty) {
       return {
         'success': false,
@@ -472,7 +454,7 @@ class AuthService extends GetxService {
   }
 
   Future<Map<String, dynamic>> logout() async {
-    final token = await _storage.read(key: _jwtTokenKey);
+    final token = await SafeSecureStorage.read(_jwtTokenKey);
     try {
       if (token != null && token.isNotEmpty) {
         await FcmNotificationService.unregisterCurrentToken();

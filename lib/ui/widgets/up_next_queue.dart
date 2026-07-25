@@ -385,6 +385,7 @@ class UpNextQueue extends StatefulWidget {
 
 class _UpNextQueueState extends State<UpNextQueue> {
   late PlayerController _playerController;
+  final ScrollController _localScrollController = ScrollController();
   StreamSubscription? _indexSubscription;
   bool _userIsScrolling = false;
 
@@ -405,14 +406,16 @@ class _UpNextQueueState extends State<UpNextQueue> {
   @override
   void dispose() {
     _indexSubscription?.cancel();
+    _localScrollController.dispose();
     super.dispose();
   }
 
   void _scrollToActiveIndex(int index) {
-    if (!widget.isQueueInSlidePanel) return;
     if (_userIsScrolling) return;
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      final controller = _playerController.scrollController;
+      final controller = widget.isQueueInSlidePanel
+          ? _playerController.scrollController
+          : _localScrollController;
       if (controller.hasClients) {
         final double targetOffset = index * 64.0;
         final double maxScroll = controller.position.maxScrollExtent;
@@ -424,10 +427,10 @@ class _UpNextQueueState extends State<UpNextQueue> {
         );
       } else {
         Future.delayed(const Duration(milliseconds: 100), () {
-          if (mounted &&
-              _playerController.scrollController.hasClients &&
-              !_userIsScrolling) {
-            final ctrl = _playerController.scrollController;
+          final ctrl = widget.isQueueInSlidePanel
+              ? _playerController.scrollController
+              : _localScrollController;
+          if (mounted && ctrl.hasClients && !_userIsScrolling) {
             final double targetOffset = index * 64.0;
             final double maxScroll = ctrl.position.maxScrollExtent;
             final double offset = targetOffset.clamp(0.0, maxScroll);
@@ -487,7 +490,7 @@ class _UpNextQueueState extends State<UpNextQueue> {
             footer: SizedBox(height: Get.mediaQuery.padding.bottom),
             scrollController: widget.isQueueInSlidePanel
                 ? _playerController.scrollController
-                : null,
+                : _localScrollController,
             // ignore: deprecated_member_use
             onReorder: (int oldIndex, int newIndex) {
               if (_playerController.isShuffleModeEnabled.isTrue) {

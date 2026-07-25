@@ -3,12 +3,11 @@ import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:harmonymusic/services/storage/safe_secure_storage.dart';
 import 'package:http/http.dart' as http;
 
 class NotificationService {
   static const appId = 'estrella_music';
-  static const _storage = FlutterSecureStorage();
   static Timer? _desktopSyncTimer;
   static bool _syncing = false;
 
@@ -44,7 +43,7 @@ class NotificationService {
     if (_syncing) return;
     _syncing = true;
     try {
-      final token = await _storage.read(key: 'jwt_token');
+      final token = await SafeSecureStorage.read('jwt_token');
       final base = _normalizedBaseUrl();
       if (token == null || token.isEmpty || base == null) return;
 
@@ -109,7 +108,7 @@ class NotificationService {
   static Future<bool> acknowledgeMessage(dynamic id) async {
     final idText = id.toString();
     try {
-      final token = await _storage.read(key: 'jwt_token');
+      final token = await SafeSecureStorage.read('jwt_token');
       final base = _normalizedBaseUrl();
       if (token == null || token.isEmpty || base == null) {
         _seenMessageIds.remove(idText);

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'package:harmonymusic/services/sync/cloud_migration_service.dart';
+import 'package:harmonymusic/services/sync/cloud_sync_manager.dart';
 import 'package:harmonymusic/services/sync/sync_service.dart';
 import 'package:harmonymusic/ui/home.dart';
 import 'widgets/animated_auth_background.dart';
@@ -18,13 +19,14 @@ class _CloudMigrationScreenState extends State<CloudMigrationScreen> {
 
   CloudMigrationService get migration => Get.find<CloudMigrationService>();
   SyncService get sync => Get.find<SyncService>();
+  CloudSyncManager get cloudSyncManager => Get.find<CloudSyncManager>();
 
   Future<void> _start() async {
     if (_started) return;
     setState(() => _started = true);
-    await sync.enableCloudMode();
+    final result = await cloudSyncManager.switchMode(DataMode.cloud);
     if (!mounted) return;
-    if (sync.isCloudMode) {
+    if (result.isSuccess) {
       Get.offAll(() => const Home());
     } else {
       setState(() => _started = false);
@@ -33,7 +35,7 @@ class _CloudMigrationScreenState extends State<CloudMigrationScreen> {
 
   Future<void> _cancel() async {
     await migration.cancelLastMigration();
-    await sync.keepLocalMode();
+    await cloudSyncManager.switchMode(DataMode.local);
     if (!mounted) return;
     Get.offAll(() => const Home());
   }

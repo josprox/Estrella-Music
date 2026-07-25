@@ -530,5 +530,6 @@
   "downloadNotificationChannelDescription": "دانلودهای موسیقی شما را در پس زمینه فعال نگه می دارد.",
   "downloadNotificationTitle": "دانلود موسیقی",
   "downloadNotificationPreparing": "در حال آماده سازی دانلودهای شما…",
-  "downloadNotificationSong": "در حال دانلود: {songTitle}"
+  "downloadNotificationSong": "در حال دانلود: {songTitle}",
+  "syncCloudModeActive": "حالت ابری فعال است"
 }

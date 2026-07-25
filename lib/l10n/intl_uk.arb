@@ -674,5 +674,6 @@
   "downloadNotificationChannelDescription": "Завантажує вашу музику у фоновому режимі.",
   "downloadNotificationTitle": "Завантаження музики",
   "downloadNotificationPreparing": "Підготовка завантажень…",
-  "downloadNotificationSong": "Завантаження: {songTitle}"
+  "downloadNotificationSong": "Завантаження: {songTitle}",
+  "syncCloudModeActive": "Хмарний режим активний"
 }

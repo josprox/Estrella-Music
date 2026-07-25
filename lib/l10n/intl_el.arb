@@ -405,5 +405,6 @@
   "downloadNotificationChannelDescription": "Διατηρεί ενεργές τις λήψεις μουσικής σας στο παρασκήνιο.",
   "downloadNotificationTitle": "Λήψη μουσικής",
   "downloadNotificationPreparing": "Προετοιμασία των λήψεών σας…",
-  "downloadNotificationSong": "Λήψη: {songTitle}"
+  "downloadNotificationSong": "Λήψη: {songTitle}",
+  "syncCloudModeActive": "Η λειτουργία cloud είναι ενεργή"
 }

@@ -504,5 +504,6 @@
   "downloadNotificationChannelDescription": "Aktívan tartja a zeneletöltéseket a háttérben.",
   "downloadNotificationTitle": "Zene letöltése",
   "downloadNotificationPreparing": "Letöltések előkészítése…",
-  "downloadNotificationSong": "Letöltés: {songTitle}"
+  "downloadNotificationSong": "Letöltés: {songTitle}",
+  "syncCloudModeActive": "Felhő mód aktív"
 }

@@ -23,6 +23,7 @@ import 'package:harmonymusic/services/system/fcm_notification_service.dart';
 import 'package:harmonymusic/services/sync/pending_sync_queue_service.dart';
 import 'package:harmonymusic/services/sync/music_sqlite_service.dart';
 import 'package:harmonymusic/services/sync/sync_service.dart';
+import 'package:harmonymusic/services/sync/cloud_sync_manager.dart';
 import 'package:harmonymusic/services/social/colistening_service.dart';
 import 'package:harmonymusic/services/auth/user_data_bootstrap_service.dart';
 import '/ui/screens/Search/search_screen_controller.dart';
@@ -192,6 +193,7 @@ void startApplicationServices(MusicSqliteService musicDatabase) {
   Get.put(musicDatabase, permanent: true);
   Get.put(PendingSyncQueueService(), permanent: true);
   Get.put(SyncService(), permanent: true);
+  Get.put(CloudSyncManager(), permanent: true);
   Get.put(ColisteningService(), permanent: true);
   Get.put(AppBackupService(), permanent: true);
   Get.put(CatalogRecoveryService(), permanent: true);

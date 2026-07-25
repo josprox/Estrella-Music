@@ -665,5 +665,6 @@
   "downloadNotificationChannelDescription": "পটভূমিতে আপনার সঙ্গীত ডাউনলোড সক্রিয় রাখে।",
   "downloadNotificationTitle": "সঙ্গীত ডাউনলোড করা হচ্ছে",
   "downloadNotificationPreparing": "আপনার ডাউনলোডগুলি প্রস্তুত করা হচ্ছে...",
-  "downloadNotificationSong": "ডাউনলোড হচ্ছে: {songTitle}"
+  "downloadNotificationSong": "ডাউনলোড হচ্ছে: {songTitle}",
+  "syncCloudModeActive": "ক্লাউড মোড সক্রিয়"
 }

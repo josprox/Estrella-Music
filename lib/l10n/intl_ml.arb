@@ -464,5 +464,6 @@
   "downloadNotificationChannelDescription": "പശ്ചാത്തലത്തിൽ നിങ്ങളുടെ സംഗീത ഡൗൺലോഡുകൾ സജീവമായി നിലനിർത്തുന്നു.",
   "downloadNotificationTitle": "സംഗീതം ഡൗൺലോഡ് ചെയ്യുന്നു",
   "downloadNotificationPreparing": "നിങ്ങളുടെ ഡൗൺലോഡുകൾ തയ്യാറാക്കുന്നു...",
-  "downloadNotificationSong": "ഡൗൺലോഡ് ചെയ്യുന്നു: {songTitle}"
+  "downloadNotificationSong": "ഡൗൺലോഡ് ചെയ്യുന്നു: {songTitle}",
+  "syncCloudModeActive": "ക്ലൗഡ് മോഡ് സജീവമാണ്"
 }

@@ -269,6 +269,16 @@ class S {
     );
   }
 
+  /// `Cloud mode active`
+  String get syncCloudModeActive {
+    return Intl.message(
+      'Cloud mode active',
+      name: 'syncCloudModeActive',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Cloud mode active. `
   String get syncCloudPending {
     return Intl.message(

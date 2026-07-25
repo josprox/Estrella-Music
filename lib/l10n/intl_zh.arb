@@ -405,5 +405,6 @@
   "downloadNotificationChannelDescription": "让您的音乐下载在后台保持活跃。",
   "downloadNotificationTitle": "下载音乐",
   "downloadNotificationPreparing": "正在准备您的下载...",
-  "downloadNotificationSong": "下载：{songTitle}"
+  "downloadNotificationSong": "下载：{songTitle}",
+  "syncCloudModeActive": "云模式已激活"
 }

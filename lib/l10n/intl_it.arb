@@ -672,5 +672,6 @@
   "downloadNotificationChannelDescription": "Mantiene attivi i download di musica in background.",
   "downloadNotificationTitle": "Download di musica",
   "downloadNotificationPreparing": "Preparazione dei download...",
-  "downloadNotificationSong": "Download in corso: {songTitle}"
+  "downloadNotificationSong": "Download in corso: {songTitle}",
+  "syncCloudModeActive": "Modalità cloud attiva"
 }

@@ -674,5 +674,6 @@
   "downloadNotificationChannelDescription": "Giữ tải nhạc của bạn hoạt động trong nền.",
   "downloadNotificationTitle": "Đang tải nhạc",
   "downloadNotificationPreparing": "Đang chuẩn bị nội dung tải xuống của bạn…",
-  "downloadNotificationSong": "Đang tải xuống: {songTitle}"
+  "downloadNotificationSong": "Đang tải xuống: {songTitle}",
+  "syncCloudModeActive": "Chế độ đám mây đang hoạt động"
 }

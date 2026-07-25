@@ -552,5 +552,6 @@
   "downloadNotificationChannelDescription": "Pitää musiikkilataukset aktiivisina taustalla.",
   "downloadNotificationTitle": "Musiikin lataaminen",
   "downloadNotificationPreparing": "Valmistellaan latauksiasi…",
-  "downloadNotificationSong": "Ladataan: {songTitle}"
+  "downloadNotificationSong": "Ladataan: {songTitle}",
+  "syncCloudModeActive": "Pilvitila aktiivinen"
 }
