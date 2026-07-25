@@ -464,6 +464,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncCloudMigrationComplete": MessageLookupByLibrary.simpleMessage(
       "Воблачны рэжым актываваны. Перанесеная бібліятэка.",
     ),
+    "syncCloudModeActive": MessageLookupByLibrary.simpleMessage(
+      "Воблачны рэжым актыўны",
+    ),
     "syncCloudPending": MessageLookupByLibrary.simpleMessage(
       "Воблачны рэжым актыўны. Чакаецца сінхранізацыя.",
     ),

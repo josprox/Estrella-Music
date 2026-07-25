@@ -818,6 +818,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncCloudMigrationComplete": MessageLookupByLibrary.simpleMessage(
       "クラウドモードが有効になりました。移行されたライブラリ。",
     ),
+    "syncCloudModeActive": MessageLookupByLibrary.simpleMessage("クラウドモード有効"),
     "syncCloudPending": MessageLookupByLibrary.simpleMessage(
       "クラウドモードがアクティブです。同期が保留中です。",
     ),

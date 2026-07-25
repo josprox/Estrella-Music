@@ -1017,6 +1017,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncCloudMigrationComplete": MessageLookupByLibrary.simpleMessage(
       "Bulut modu etkinleştirildi. Taşınan kütüphane.",
     ),
+    "syncCloudModeActive": MessageLookupByLibrary.simpleMessage(
+      "Bulut modu etkin",
+    ),
     "syncCloudPending": MessageLookupByLibrary.simpleMessage(
       "Bulut modu etkin. Senkronizasyon bekleniyor.",
     ),

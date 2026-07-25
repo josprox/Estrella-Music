@@ -770,6 +770,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncCloudMigrationComplete": MessageLookupByLibrary.simpleMessage(
       "Molnläge aktiverat. Migrerade bibliotek.",
     ),
+    "syncCloudModeActive": MessageLookupByLibrary.simpleMessage(
+      "Molnläge aktivt",
+    ),
     "syncCloudPending": MessageLookupByLibrary.simpleMessage(
       "Molnläge aktivt. Väntar på synkronisering.",
     ),

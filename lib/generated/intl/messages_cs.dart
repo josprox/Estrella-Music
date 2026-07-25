@@ -1024,6 +1024,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncCloudMigrationComplete": MessageLookupByLibrary.simpleMessage(
       "Aktivován cloudový režim. Migrovaná knihovna.",
     ),
+    "syncCloudModeActive": MessageLookupByLibrary.simpleMessage(
+      "Cloudový režim je aktivní",
+    ),
     "syncCloudPending": MessageLookupByLibrary.simpleMessage(
       "Cloudový režim je aktivní. Čeká na synchronizaci.",
     ),

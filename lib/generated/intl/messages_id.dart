@@ -1020,6 +1020,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncCloudMigrationComplete": MessageLookupByLibrary.simpleMessage(
       "Mode awan diaktifkan. Perpustakaan yang dimigrasi.",
     ),
+    "syncCloudModeActive": MessageLookupByLibrary.simpleMessage(
+      "Mode awan aktif",
+    ),
     "syncCloudPending": MessageLookupByLibrary.simpleMessage(
       "Mode awan aktif. Sinkronisasi tertunda.",
     ),

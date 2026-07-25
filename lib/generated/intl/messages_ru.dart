@@ -1029,6 +1029,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncCloudMigrationComplete": MessageLookupByLibrary.simpleMessage(
       "Облачный режим активирован. Перенесенная библиотека.",
     ),
+    "syncCloudModeActive": MessageLookupByLibrary.simpleMessage(
+      "Облачный режим активен",
+    ),
     "syncCloudPending": MessageLookupByLibrary.simpleMessage(
       "Облачный режим активен. Ожидается синхронизация.",
     ),

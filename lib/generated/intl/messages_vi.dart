@@ -1041,6 +1041,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncCloudMigrationComplete": MessageLookupByLibrary.simpleMessage(
       "Đã kích hoạt chế độ đám mây. Thư viện đã di chuyển.",
     ),
+    "syncCloudModeActive": MessageLookupByLibrary.simpleMessage(
+      "Chế độ đám mây đang hoạt động",
+    ),
     "syncCloudPending": MessageLookupByLibrary.simpleMessage(
       "Chế độ đám mây đang hoạt động. Đang chờ đồng bộ hóa.",
     ),

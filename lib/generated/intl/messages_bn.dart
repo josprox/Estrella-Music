@@ -1000,6 +1000,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncCloudMigrationComplete": MessageLookupByLibrary.simpleMessage(
       "ক্লাউড মোড সক্রিয় করা হয়েছে। স্থানান্তরিত লাইব্রেরি।",
     ),
+    "syncCloudModeActive": MessageLookupByLibrary.simpleMessage(
+      "ক্লাউড মোড সক্রিয়",
+    ),
     "syncCloudPending": MessageLookupByLibrary.simpleMessage(
       "ক্লাউড মোড সক্রিয়। মুলতুবি সিঙ্ক।",
     ),

@@ -905,6 +905,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncCloudMigrationComplete": MessageLookupByLibrary.simpleMessage(
       "ਕਲਾਊਡ ਮੋਡ ਕਿਰਿਆਸ਼ੀਲ ਕੀਤਾ ਗਿਆ। ਮਾਈਗਰੇਟ ਕੀਤੀ ਲਾਇਬ੍ਰੇਰੀ।",
     ),
+    "syncCloudModeActive": MessageLookupByLibrary.simpleMessage(
+      "ਕਲਾਊਡ ਮੋਡ ਕਿਰਿਆਸ਼ੀਲ ਹੈ",
+    ),
     "syncCloudPending": MessageLookupByLibrary.simpleMessage(
       "ਕਲਾਊਡ ਮੋਡ ਕਿਰਿਆਸ਼ੀਲ ਹੈ। ਲੰਬਿਤ ਸਮਕਾਲੀਕਰਨ।",
     ),

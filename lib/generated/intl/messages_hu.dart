@@ -654,6 +654,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncCloudMigrationComplete": MessageLookupByLibrary.simpleMessage(
       "Felhő mód aktiválva. Áttelepített könyvtár.",
     ),
+    "syncCloudModeActive": MessageLookupByLibrary.simpleMessage(
+      "Felhő mód aktív",
+    ),
     "syncCloudPending": MessageLookupByLibrary.simpleMessage(
       "Felhő mód aktív. Függőben lévő szinkronizálás.",
     ),

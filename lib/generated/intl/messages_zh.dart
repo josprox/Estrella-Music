@@ -337,6 +337,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncCloudMigrationComplete": MessageLookupByLibrary.simpleMessage(
       "云模式已启动。迁移的库。",
     ),
+    "syncCloudModeActive": MessageLookupByLibrary.simpleMessage("云模式已激活"),
     "syncCloudPending": MessageLookupByLibrary.simpleMessage("云模式已激活。等待同步。"),
     "syncDownloadFailed": MessageLookupByLibrary.simpleMessage("下载同步失败。"),
     "syncDownloading": MessageLookupByLibrary.simpleMessage(

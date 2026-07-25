@@ -602,6 +602,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncCloudMigrationComplete": MessageLookupByLibrary.simpleMessage(
       "ക്ലൗഡ് മോഡ് സജീവമാക്കി. മൈഗ്രേറ്റഡ് ലൈബ്രറി.",
     ),
+    "syncCloudModeActive": MessageLookupByLibrary.simpleMessage(
+      "ക്ലൗഡ് മോഡ് സജീവമാണ്",
+    ),
     "syncCloudPending": MessageLookupByLibrary.simpleMessage(
       "ക്ലൗഡ് മോഡ് സജീവമാണ്. ശേഷിക്കുന്ന സമന്വയം.",
     ),

@@ -838,6 +838,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncCloudMigrationComplete": MessageLookupByLibrary.simpleMessage(
       "Cloudmodus geactiveerd. Gemigreerde bibliotheek.",
     ),
+    "syncCloudModeActive": MessageLookupByLibrary.simpleMessage(
+      "Cloudmodus actief",
+    ),
     "syncCloudPending": MessageLookupByLibrary.simpleMessage(
       "Cloudmodus actief. Synchronisatie in behandeling.",
     ),

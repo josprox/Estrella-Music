@@ -749,6 +749,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncCloudMigrationComplete": MessageLookupByLibrary.simpleMessage(
       "କ୍ଲାଉଡ୍ ମୋଡ୍ ସକ୍ରିୟ ହୋଇଛି | ସ୍ଥାନାନ୍ତରିତ ଲାଇବ୍ରେରୀ |",
     ),
+    "syncCloudModeActive": MessageLookupByLibrary.simpleMessage(
+      "କ୍ଲାଉଡ୍ ମୋଡ୍ ସକ୍ରିୟ |",
+    ),
     "syncCloudPending": MessageLookupByLibrary.simpleMessage(
       "କ୍ଲାଉଡ୍ ମୋଡ୍ ସକ୍ରିୟ | ସିଙ୍କ୍ ବିଚାରାଧୀନ ଅଛି |",
     ),

@@ -469,6 +469,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncCloudMigrationComplete": MessageLookupByLibrary.simpleMessage(
       "Η λειτουργία cloud ενεργοποιήθηκε. Βιβλιοθήκη μετεγκατάστασης.",
     ),
+    "syncCloudModeActive": MessageLookupByLibrary.simpleMessage(
+      "Η λειτουργία cloud είναι ενεργή",
+    ),
     "syncCloudPending": MessageLookupByLibrary.simpleMessage(
       "Η λειτουργία cloud είναι ενεργή. Εκκρεμεί συγχρονισμός.",
     ),

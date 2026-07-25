@@ -1043,6 +1043,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncCloudMigrationComplete": MessageLookupByLibrary.simpleMessage(
       "Облачен режим е активиран. Мигрирана библиотека.",
     ),
+    "syncCloudModeActive": MessageLookupByLibrary.simpleMessage(
+      "Облачен режим е активен",
+    ),
     "syncCloudPending": MessageLookupByLibrary.simpleMessage(
       "Облачен режим е активен. Чакащо синхронизиране.",
     ),

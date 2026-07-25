@@ -691,6 +691,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncCloudMigrationComplete": MessageLookupByLibrary.simpleMessage(
       "حالت ابری فعال شد. کتابخانه مهاجرت کرد.",
     ),
+    "syncCloudModeActive": MessageLookupByLibrary.simpleMessage(
+      "حالت ابری فعال است",
+    ),
     "syncCloudPending": MessageLookupByLibrary.simpleMessage(
       "حالت ابری فعال است. در انتظار همگام سازی",
     ),

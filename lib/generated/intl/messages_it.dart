@@ -1040,6 +1040,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncCloudMigrationComplete": MessageLookupByLibrary.simpleMessage(
       "Modalità cloud attivata. Libreria migrata.",
     ),
+    "syncCloudModeActive": MessageLookupByLibrary.simpleMessage(
+      "Modalità cloud attiva",
+    ),
     "syncCloudPending": MessageLookupByLibrary.simpleMessage(
       "Modalità cloud attiva. Sincronizzazione in sospeso.",
     ),

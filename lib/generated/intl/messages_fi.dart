@@ -751,6 +751,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncCloudMigrationComplete": MessageLookupByLibrary.simpleMessage(
       "Pilvitila aktivoitu. Siirretty kirjasto.",
     ),
+    "syncCloudModeActive": MessageLookupByLibrary.simpleMessage(
+      "Pilvitila aktiivinen",
+    ),
     "syncCloudPending": MessageLookupByLibrary.simpleMessage(
       "Pilvitila aktiivinen. Odottaa synkronointia.",
     ),

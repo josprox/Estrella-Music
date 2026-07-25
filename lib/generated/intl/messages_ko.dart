@@ -651,6 +651,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncCloudMigrationComplete": MessageLookupByLibrary.simpleMessage(
       "클라우드 모드가 활성화되었습니다. 마이그레이션된 라이브러리.",
     ),
+    "syncCloudModeActive": MessageLookupByLibrary.simpleMessage("클라우드 모드 활성화"),
     "syncCloudPending": MessageLookupByLibrary.simpleMessage(
       "클라우드 모드가 활성화되었습니다. 동기화 대기 중입니다.",
     ),

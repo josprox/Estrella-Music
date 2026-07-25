@@ -907,6 +907,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncCloudMigrationComplete": MessageLookupByLibrary.simpleMessage(
       "تم تفعيل الوضع السحابي. المكتبة المهاجرة.",
     ),
+    "syncCloudModeActive": MessageLookupByLibrary.simpleMessage(
+      "الوضع السحابي نشط",
+    ),
     "syncCloudPending": MessageLookupByLibrary.simpleMessage(
       "الوضع السحابي نشط. في انتظار المزامنة.",
     ),
