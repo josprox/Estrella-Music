@@ -68,7 +68,7 @@ InfoAfterFile=readme_after_install.txt
 
 PrivilegesRequired=lowest
 OutputDir=.
-OutputBaseFilename=EstrellaMusic_v{#MyAppVersion}_Setup
+OutputBaseFilename=EstrellaMusicInstaller
 VersionInfoVersion={#MyAppVersion}
 SetupIconFile=..\assets\icons\icon.ico
 SolidCompression=yes
