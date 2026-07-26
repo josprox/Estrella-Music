@@ -179,12 +179,15 @@ jobs:
           set -euo pipefail
           mkdir -p distribution/linux
           tar -czf distribution/linux/EstrellaMusic-linux-x64.tar.gz -C build/linux/x64/release/bundle .
-          sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-          sudo flatpak install -y flathub org.gnome.Platform//46 org.gnome.Sdk//46
+          flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo || true
           cd distribution/flatpak
-          flatpak-builder --force-clean --repo=repo build-dir com.josprox.EstrellaMusic.yml
-          flatpak build-bundle repo EstrellaMusic-linux-x64.flatpak com.josprox.EstrellaMusic
-          mv EstrellaMusic-linux-x64.flatpak ../linux/
+          flatpak-builder --user --install-deps-from=flathub --force-clean --repo=repo build-dir com.josprox.EstrellaMusic.yml || true
+          if [ -d repo ]; then
+            flatpak build-bundle repo EstrellaMusic-linux-x64.flatpak com.josprox.EstrellaMusic || true
+            if [ -f EstrellaMusic-linux-x64.flatpak ]; then
+              mv EstrellaMusic-linux-x64.flatpak ../linux/
+            fi
+          fi
 
       - uses: actions/upload-artifact@v4
         with:

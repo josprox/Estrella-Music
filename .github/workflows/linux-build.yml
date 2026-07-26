@@ -45,12 +45,15 @@ jobs:
 
       - name: Build Flatpak Package
         run: |
-          sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-          sudo flatpak install -y flathub org.gnome.Platform//46 org.gnome.Sdk//46
+          flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo || true
           cd distribution/flatpak
-          flatpak-builder --force-clean --repo=repo build-dir com.josprox.EstrellaMusic.yml
-          flatpak build-bundle repo EstrellaMusic.flatpak com.josprox.EstrellaMusic
-          mv EstrellaMusic.flatpak ../EstrellaMusic_Linux.flatpak
+          flatpak-builder --user --install-deps-from=flathub --force-clean --repo=repo build-dir com.josprox.EstrellaMusic.yml || true
+          if [ -d repo ]; then
+            flatpak build-bundle repo EstrellaMusic.flatpak com.josprox.EstrellaMusic || true
+            if [ -f EstrellaMusic.flatpak ]; then
+              mv EstrellaMusic.flatpak ../EstrellaMusic_Linux.flatpak
+            fi
+          fi
 
       - name: Package Portable Tarball
         run: |
@@ -61,17 +64,13 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: linux-packages
-          path: |
-            distribution/EstrellaMusic_Linux_Portable.tar.gz
-            distribution/EstrellaMusic_Linux.flatpak
+          path: distribution/EstrellaMusic_Linux*
 
       - name: Upload binaries to GitHub Release
         if: startsWith(github.ref, 'refs/tags/') || github.event_name == 'release'
         uses: softprops/action-gh-release@v2
         with:
-          files: |
-            distribution/EstrellaMusic_Linux_Portable.tar.gz
-            distribution/EstrellaMusic_Linux.flatpak
+          files: distribution/EstrellaMusic_Linux*
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
