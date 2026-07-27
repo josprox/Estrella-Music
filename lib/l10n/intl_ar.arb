@@ -640,5 +640,17 @@
   "downloadNotificationTitle": "تنزيل الموسيقى",
   "downloadNotificationPreparing": "جارٍ تحضير التنزيلات…",
   "downloadNotificationSong": "التنزيل: __PH_0____",
-  "syncCloudModeActive": "الوضع السحابي نشط"
+  "syncCloudModeActive": "الوضع السحابي نشط",
+  "permissionsConsentTitle": "أذونات للبدء",
+  "permissionsConsentDescription": "تحتاج Estrella Music إلى هذه الأذونات لإدارة الموسيقى الخاصة بك وتقديم جميع ميزات التشغيل.",
+  "permissionsStorageTitle": "الموسيقى والتخزين",
+  "permissionsStorageDescription": "يسمح لك بتشغيل الموسيقى وحفظ التنزيلات وتصدير قوائم التشغيل وإعداد التحديثات.",
+  "permissionsNotificationsTitle": "إشعارات",
+  "permissionsNotificationsDescription": "يعرض عناصر التحكم في التشغيل وتقدم التنزيل وإشعارات التطبيق المهمة.",
+  "permissionsMicrophoneTitle": "ميكروفون",
+  "permissionsMicrophoneDescription": "يتم استخدامه فقط عندما تختار التعرف على الأغنية التي يتم تشغيلها من حولك.",
+  "permissionsContinueButton": "منح الأذونات المطلوبة",
+  "permissionsRequiredNotice": "جميع التصاريح الثلاثة مطلوبة للمتابعة. ويمكنك تغييرها لاحقًا في إعدادات النظام.",
+  "permissionsAllow": "يسمح",
+  "permissionsOpenSettings": "إعدادات"
 }

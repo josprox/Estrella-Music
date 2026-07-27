@@ -805,5 +805,17 @@
   "downloadNotificationChannelDescription": "Keeps your music downloads active in the background.",
   "downloadNotificationTitle": "Downloading music",
   "downloadNotificationPreparing": "Preparing your downloads…",
-  "downloadNotificationSong": "Downloading: {songTitle}"
+  "downloadNotificationSong": "Downloading: {songTitle}",
+  "permissionsConsentTitle": "Permissions to get started",
+  "permissionsConsentDescription": "Estrella Music needs these permissions to manage your music and offer all playback features.",
+  "permissionsStorageTitle": "Music and storage",
+  "permissionsStorageDescription": "It allows you to play music, save downloads, export playlists and prepare updates.",
+  "permissionsNotificationsTitle": "Notifications",
+  "permissionsNotificationsDescription": "Shows playback controls, download progress, and important app notices.",
+  "permissionsMicrophoneTitle": "Microphone",
+  "permissionsMicrophoneDescription": "It is used only when you choose to identify a song that is playing around you.",
+  "permissionsContinueButton": "Grant required permissions",
+  "permissionsRequiredNotice": "All three permits are required to continue. ",
+  "permissionsAllow": "Allow",
+  "permissionsOpenSettings": "Settings"
 }

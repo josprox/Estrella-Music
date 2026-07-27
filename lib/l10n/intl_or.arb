@@ -545,5 +545,17 @@
   "downloadNotificationTitle": "ସଙ୍ଗୀତ ଡାଉନଲୋଡ୍ କରୁଛି |",
   "downloadNotificationPreparing": "ତୁମର ଡାଉନଲୋଡ୍ ପ୍ରସ୍ତୁତ କରୁଛି…",
   "downloadNotificationSong": "ଡାଉନଲୋଡ୍: {songTitle}",
-  "syncCloudModeActive": "କ୍ଲାଉଡ୍ ମୋଡ୍ ସକ୍ରିୟ |"
+  "syncCloudModeActive": "କ୍ଲାଉଡ୍ ମୋଡ୍ ସକ୍ରିୟ |",
+  "permissionsConsentTitle": "ଆରମ୍ଭ କରିବାକୁ ଅନୁମତି |",
+  "permissionsConsentDescription": "ତୁମର ସଙ୍ଗୀତ ପରିଚାଳନା ଏବଂ ସମସ୍ତ ପ୍ଲେ-ବ features ଶିଷ୍ଟ୍ୟ ପ୍ରଦାନ କରିବାକୁ ଏଷ୍ଟ୍ରେଲା ମ୍ୟୁଜିକ୍ ଏହି ଅନୁମତିଗୁଡିକ ଆବଶ୍ୟକ କରେ |",
+  "permissionsStorageTitle": "ସଙ୍ଗୀତ ଏବଂ ସଂରକ୍ଷଣ",
+  "permissionsStorageDescription": "ଏହା ଆପଣଙ୍କୁ ସଙ୍ଗୀତ ବଜାଇବା, ଡାଉନଲୋଡ୍ ସଞ୍ଚୟ କରିବା, ପ୍ଲେଲିଷ୍ଟ ରପ୍ତାନି କରିବା ଏବଂ ଅଦ୍ୟତନ ପ୍ରସ୍ତୁତ କରିବାକୁ ଅନୁମତି ଦିଏ |",
+  "permissionsNotificationsTitle": "ବିଜ୍ଞପ୍ତିଗୁଡିକ",
+  "permissionsNotificationsDescription": "ପ୍ଲେବ୍ୟାକ୍ ନିୟନ୍ତ୍ରଣ, ପ୍ରଗତି ଡାଉନଲୋଡ୍ ଏବଂ ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ଆପ୍ ନୋଟିସ୍ ଦେଖାଏ |",
+  "permissionsMicrophoneTitle": "ମାଇକ୍ରୋଫୋନ୍ |",
+  "permissionsMicrophoneDescription": "ଯେତେବେଳେ ତୁମେ ତୁମର ଚାରିପାଖରେ ଖେଳୁଥିବା ଏକ ଗୀତକୁ ଚିହ୍ନିବା ପାଇଁ ବାଛିବ ସେତେବେଳେ ଏହା ବ୍ୟବହୃତ ହୁଏ |",
+  "permissionsContinueButton": "ଆବଶ୍ୟକ ଅନୁମତି ପ୍ରଦାନ କରନ୍ତୁ |",
+  "permissionsRequiredNotice": "ଜାରି ରଖିବାକୁ ସମସ୍ତ ତିନୋଟି ଅନୁମତି ଆବଶ୍ୟକ | ସିଷ୍ଟମ୍ ସେଟିଙ୍ଗରେ ଆପଣ ସେଗୁଡ଼ିକୁ ପରେ ପରିବର୍ତ୍ତନ କରିପାରିବେ |",
+  "permissionsAllow": "ଅନୁମତି ଦିଅନ୍ତୁ |",
+  "permissionsOpenSettings": "ସେଟିଂସମୂହ"
 }

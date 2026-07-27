@@ -553,5 +553,17 @@
   "downloadNotificationTitle": "Musiikin lataaminen",
   "downloadNotificationPreparing": "Valmistellaan latauksiasi…",
   "downloadNotificationSong": "Ladataan: {songTitle}",
-  "syncCloudModeActive": "Pilvitila aktiivinen"
+  "syncCloudModeActive": "Pilvitila aktiivinen",
+  "permissionsConsentTitle": "Luvat aloittaaksesi",
+  "permissionsConsentDescription": "Estrella Music tarvitsee nämä luvat hallitakseen musiikkiasi ja tarjotakseen kaikkia toistoominaisuuksia.",
+  "permissionsStorageTitle": "Musiikkia ja tallennustilaa",
+  "permissionsStorageDescription": "Sen avulla voit toistaa musiikkia, tallentaa latauksia, viedä soittolistoja ja valmistella päivityksiä.",
+  "permissionsNotificationsTitle": "Ilmoitukset",
+  "permissionsNotificationsDescription": "Näyttää toistosäätimet, latauksen edistymisen ja tärkeät sovellusilmoitukset.",
+  "permissionsMicrophoneTitle": "Mikrofoni",
+  "permissionsMicrophoneDescription": "Sitä käytetään vain, kun päätät tunnistaa ympärilläsi soivan kappaleen.",
+  "permissionsContinueButton": "Myönnä tarvittavat käyttöoikeudet",
+  "permissionsRequiredNotice": "Jatkamiseen vaaditaan kaikki kolme lupaa. Voit muuttaa niitä myöhemmin järjestelmäasetuksissa.",
+  "permissionsAllow": "Salli",
+  "permissionsOpenSettings": "Asetukset"
 }

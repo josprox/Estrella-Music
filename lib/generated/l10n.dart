@@ -4773,6 +4773,121 @@ class S {
       args: [songTitle],
     );
   }
+
+  /// `Permissions to get started`
+  String get permissionsConsentTitle {
+    return Intl.message(
+      'Permissions to get started',
+      name: 'permissionsConsentTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Estrella Music needs these permissions to manage your music and provide all playback features.`
+  String get permissionsConsentDescription {
+    return Intl.message(
+      'Estrella Music needs these permissions to manage your music and provide all playback features.',
+      name: 'permissionsConsentDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Music and storage`
+  String get permissionsStorageTitle {
+    return Intl.message(
+      'Music and storage',
+      name: 'permissionsStorageTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Allows the app to read music, save downloads, export playlists, and prepare updates.`
+  String get permissionsStorageDescription {
+    return Intl.message(
+      'Allows the app to read music, save downloads, export playlists, and prepare updates.',
+      name: 'permissionsStorageDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Notifications`
+  String get permissionsNotificationsTitle {
+    return Intl.message(
+      'Notifications',
+      name: 'permissionsNotificationsTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Shows playback controls, download progress, and important app notices.`
+  String get permissionsNotificationsDescription {
+    return Intl.message(
+      'Shows playback controls, download progress, and important app notices.',
+      name: 'permissionsNotificationsDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Microphone`
+  String get permissionsMicrophoneTitle {
+    return Intl.message(
+      'Microphone',
+      name: 'permissionsMicrophoneTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Used only when you choose to identify a song that is playing around you.`
+  String get permissionsMicrophoneDescription {
+    return Intl.message(
+      'Used only when you choose to identify a song that is playing around you.',
+      name: 'permissionsMicrophoneDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Allow required permissions`
+  String get permissionsContinueButton {
+    return Intl.message(
+      'Allow required permissions',
+      name: 'permissionsContinueButton',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All three permissions are required to continue. You can change them later in system settings.`
+  String get permissionsRequiredNotice {
+    return Intl.message(
+      'All three permissions are required to continue. You can change them later in system settings.',
+      name: 'permissionsRequiredNotice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Allow`
+  String get permissionsAllow {
+    return Intl.message('Allow', name: 'permissionsAllow', desc: '', args: []);
+  }
+
+  /// `Settings`
+  String get permissionsOpenSettings {
+    return Intl.message(
+      'Settings',
+      name: 'permissionsOpenSettings',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

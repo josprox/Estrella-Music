@@ -531,5 +531,17 @@
   "downloadNotificationTitle": "دانلود موسیقی",
   "downloadNotificationPreparing": "در حال آماده سازی دانلودهای شما…",
   "downloadNotificationSong": "در حال دانلود: {songTitle}",
-  "syncCloudModeActive": "حالت ابری فعال است"
+  "syncCloudModeActive": "حالت ابری فعال است",
+  "permissionsConsentTitle": "مجوز برای شروع",
+  "permissionsConsentDescription": "Estrella Music برای مدیریت موسیقی شما و ارائه تمام ویژگی های پخش به این مجوزها نیاز دارد.",
+  "permissionsStorageTitle": "موسیقی و ذخیره سازی",
+  "permissionsStorageDescription": "این به شما امکان می دهد موسیقی پخش کنید، بارگیری ها را ذخیره کنید، لیست های پخش را صادر کنید و به روز رسانی ها را آماده کنید.",
+  "permissionsNotificationsTitle": "اطلاعیه ها",
+  "permissionsNotificationsDescription": "کنترل‌های بازپخش، پیشرفت بارگیری و اطلاعیه‌های مهم برنامه را نشان می‌دهد.",
+  "permissionsMicrophoneTitle": "میکروفون",
+  "permissionsMicrophoneDescription": "فقط زمانی استفاده می شود که بخواهید آهنگی را که در اطراف شما پخش می شود شناسایی کنید.",
+  "permissionsContinueButton": "مجوزهای لازم را اعطا کنید",
+  "permissionsRequiredNotice": "برای ادامه هر سه مجوز لازم است. بعداً می توانید آنها را در تنظیمات سیستم تغییر دهید.",
+  "permissionsAllow": "اجازه دهید",
+  "permissionsOpenSettings": "تنظیمات"
 }

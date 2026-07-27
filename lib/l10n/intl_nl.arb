@@ -587,5 +587,17 @@
   "downloadNotificationTitle": "Muziek downloaden",
   "downloadNotificationPreparing": "Uw downloads voorbereiden…",
   "downloadNotificationSong": "Downloaden: {songTitle}",
-  "syncCloudModeActive": "Cloudmodus actief"
+  "syncCloudModeActive": "Cloudmodus actief",
+  "permissionsConsentTitle": "Machtigingen om aan de slag te gaan",
+  "permissionsConsentDescription": "Estrella Music heeft deze machtigingen nodig om je muziek te beheren en alle afspeelfuncties aan te bieden.",
+  "permissionsStorageTitle": "Muziek en opslag",
+  "permissionsStorageDescription": "Hiermee kunt u muziek afspelen, downloads opslaan, afspeellijsten exporteren en updates voorbereiden.",
+  "permissionsNotificationsTitle": "Meldingen",
+  "permissionsNotificationsDescription": "Toont afspeelknoppen, downloadvoortgang en belangrijke app-meldingen.",
+  "permissionsMicrophoneTitle": "Microfoon",
+  "permissionsMicrophoneDescription": "Het wordt alleen gebruikt als u ervoor kiest een nummer te identificeren dat om u heen wordt afgespeeld.",
+  "permissionsContinueButton": "Verleen de vereiste machtigingen",
+  "permissionsRequiredNotice": "Alle drie de vergunningen zijn vereist om door te kunnen gaan. U kunt ze later wijzigen in de systeeminstellingen.",
+  "permissionsAllow": "Toestaan",
+  "permissionsOpenSettings": "Instellingen"
 }

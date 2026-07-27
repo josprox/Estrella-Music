@@ -805,5 +805,17 @@
   "downloadNotificationChannelDescription": "Mantiene activas tus descargas de música en segundo plano.",
   "downloadNotificationTitle": "Descargando música",
   "downloadNotificationPreparing": "Preparando tus descargas…",
-  "downloadNotificationSong": "Descargando: {songTitle}"
+  "downloadNotificationSong": "Descargando: {songTitle}",
+  "permissionsConsentTitle": "Permisos para comenzar",
+  "permissionsConsentDescription": "Estrella Music necesita estos permisos para administrar tu música y ofrecer todas las funciones de reproducción.",
+  "permissionsStorageTitle": "Música y almacenamiento",
+  "permissionsStorageDescription": "Permite leer música, guardar descargas, exportar playlists y preparar actualizaciones.",
+  "permissionsNotificationsTitle": "Notificaciones",
+  "permissionsNotificationsDescription": "Muestra controles de reproducción, progreso de descargas y avisos importantes de la app.",
+  "permissionsMicrophoneTitle": "Micrófono",
+  "permissionsMicrophoneDescription": "Se usa solo cuando eliges identificar una canción que está sonando a tu alrededor.",
+  "permissionsContinueButton": "Conceder permisos requeridos",
+  "permissionsRequiredNotice": "Los tres permisos son necesarios para continuar. Puedes cambiarlos después en los ajustes del sistema.",
+  "permissionsAllow": "Permitir",
+  "permissionsOpenSettings": "Ajustes"
 }

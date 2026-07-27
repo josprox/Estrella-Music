@@ -406,5 +406,17 @@
   "downloadNotificationTitle": "Λήψη μουσικής",
   "downloadNotificationPreparing": "Προετοιμασία των λήψεών σας…",
   "downloadNotificationSong": "Λήψη: {songTitle}",
-  "syncCloudModeActive": "Η λειτουργία cloud είναι ενεργή"
+  "syncCloudModeActive": "Η λειτουργία cloud είναι ενεργή",
+  "permissionsConsentTitle": "Άδειες για να ξεκινήσετε",
+  "permissionsConsentDescription": "Η Estrella Music χρειάζεται αυτές τις άδειες για να διαχειριστεί τη μουσική σας και να προσφέρει όλες τις δυνατότητες αναπαραγωγής.",
+  "permissionsStorageTitle": "Μουσική και αποθήκευση",
+  "permissionsStorageDescription": "Σας επιτρέπει να αναπαράγετε μουσική, να αποθηκεύετε λήψεις, να εξάγετε λίστες αναπαραγωγής και να προετοιμάζετε ενημερώσεις.",
+  "permissionsNotificationsTitle": "Ειδοποιήσεις",
+  "permissionsNotificationsDescription": "Εμφανίζει στοιχεία ελέγχου αναπαραγωγής, πρόοδο λήψης και σημαντικές ειδοποιήσεις εφαρμογών.",
+  "permissionsMicrophoneTitle": "Μικρόφωνο",
+  "permissionsMicrophoneDescription": "Χρησιμοποιείται μόνο όταν επιλέγετε να προσδιορίσετε ένα τραγούδι που παίζει γύρω σας.",
+  "permissionsContinueButton": "Εκχώρηση απαιτούμενων αδειών",
+  "permissionsRequiredNotice": "Απαιτούνται και οι τρεις άδειες για να συνεχιστεί. Μπορείτε να τα αλλάξετε αργότερα στις ρυθμίσεις συστήματος.",
+  "permissionsAllow": "Επιτρέπω",
+  "permissionsOpenSettings": "Ρυθμίσεις"
 }

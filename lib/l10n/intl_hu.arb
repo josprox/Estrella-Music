@@ -505,5 +505,17 @@
   "downloadNotificationTitle": "Zene letöltése",
   "downloadNotificationPreparing": "Letöltések előkészítése…",
   "downloadNotificationSong": "Letöltés: {songTitle}",
-  "syncCloudModeActive": "Felhő mód aktív"
+  "syncCloudModeActive": "Felhő mód aktív",
+  "permissionsConsentTitle": "Engedélyek az induláshoz",
+  "permissionsConsentDescription": "Az Estrella Musicnak szüksége van ezekre az engedélyekre a zene kezeléséhez és az összes lejátszási funkció biztosításához.",
+  "permissionsStorageTitle": "Zene és tárolás",
+  "permissionsStorageDescription": "Lehetővé teszi zenék lejátszását, letöltések mentését, lejátszási listák exportálását és frissítések előkészítését.",
+  "permissionsNotificationsTitle": "Értesítések",
+  "permissionsNotificationsDescription": "Megjeleníti a lejátszási vezérlőket, a letöltési folyamatot és az alkalmazásokkal kapcsolatos fontos megjegyzéseket.",
+  "permissionsMicrophoneTitle": "Mikrofon",
+  "permissionsMicrophoneDescription": "Csak akkor használatos, ha úgy dönt, hogy azonosít egy dalt, amely körülötted szól.",
+  "permissionsContinueButton": "Adja meg a szükséges engedélyeket",
+  "permissionsRequiredNotice": "A folytatáshoz mindhárom engedély szükséges. Ezeket később módosíthatja a rendszerbeállításokban.",
+  "permissionsAllow": "Engedélyezze",
+  "permissionsOpenSettings": "Beállítások elemre"
 }

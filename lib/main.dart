@@ -37,6 +37,7 @@ import 'package:harmonymusic/services/music/music_service.dart';
 import 'package:harmonymusic/ui/player/player_controller.dart';
 import 'ui/screens/Settings/settings_screen_controller.dart';
 import 'ui/auth/auth_gate.dart';
+import 'ui/permissions/permission_consent_gate.dart';
 import '/ui/utils/theme_controller.dart';
 import 'ui/screens/Home/home_screen_controller.dart';
 import 'ui/screens/Library/library_controller.dart';
@@ -51,9 +52,6 @@ Future<void> main() async {
   try {
     await dotenv.load(fileName: '.env');
   } catch (_) {}
-  if (GetPlatform.isAndroid || GetPlatform.isIOS) {
-    await FcmNotificationService.initialize();
-  }
   await initLocalStorage();
   final musicDatabase = MusicSqliteService();
   await musicDatabase.initialize();
@@ -125,7 +123,7 @@ class MyApp extends StatelessWidget {
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
     return GetMaterialApp(
         title: 'Estrella Music',
-        home: const AuthGate(),
+        home: const PermissionConsentGate(child: AuthGate()),
         debugShowCheckedModeBanner: false,
         localizationsDelegates: const [
           S.delegate,

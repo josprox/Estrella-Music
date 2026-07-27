@@ -406,5 +406,17 @@
   "downloadNotificationTitle": "Laster ned musikk",
   "downloadNotificationPreparing": "Forbereder nedlastingene dine …",
   "downloadNotificationSong": "Laster ned: {songTitle}",
-  "syncCloudModeActive": "Skymodus aktiv"
+  "syncCloudModeActive": "Skymodus aktiv",
+  "permissionsConsentTitle": "Tillatelser til å komme i gang",
+  "permissionsConsentDescription": "Estrella Music trenger disse tillatelsene for å administrere musikken din og tilby alle avspillingsfunksjoner.",
+  "permissionsStorageTitle": "Musikk og lagring",
+  "permissionsStorageDescription": "Den lar deg spille musikk, lagre nedlastinger, eksportere spillelister og forberede oppdateringer.",
+  "permissionsNotificationsTitle": "Varsler",
+  "permissionsNotificationsDescription": "Viser avspillingskontroller, nedlastingsfremgang og viktige appmeldinger.",
+  "permissionsMicrophoneTitle": "Mikrofon",
+  "permissionsMicrophoneDescription": "Den brukes bare når du velger å identifisere en sang som spilles rundt deg.",
+  "permissionsContinueButton": "Gi nødvendige tillatelser",
+  "permissionsRequiredNotice": "Alle tre tillatelsene kreves for å fortsette. Du kan endre dem senere i systeminnstillingene.",
+  "permissionsAllow": "Tillate",
+  "permissionsOpenSettings": "Innstillinger"
 }

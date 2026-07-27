@@ -580,5 +580,17 @@
   "downloadNotificationTitle": "음악 다운로드 중",
   "downloadNotificationPreparing": "다운로드 준비 중…",
   "downloadNotificationSong": "다운로드 중: {songTitle}",
-  "syncCloudModeActive": "클라우드 모드 활성화"
+  "syncCloudModeActive": "클라우드 모드 활성화",
+  "permissionsConsentTitle": "시작하기 위한 권한",
+  "permissionsConsentDescription": "Estrella Music은 음악을 관리하고 모든 재생 기능을 제공하려면 이러한 권한이 필요합니다.",
+  "permissionsStorageTitle": "음악 및 저장공간",
+  "permissionsStorageDescription": "음악을 재생하고, 다운로드를 저장하고, 재생 목록을 내보내고, 업데이트를 준비할 수 있습니다.",
+  "permissionsNotificationsTitle": "알림",
+  "permissionsNotificationsDescription": "재생 제어, 다운로드 진행 상황, 중요한 앱 알림을 표시합니다.",
+  "permissionsMicrophoneTitle": "마이크로폰",
+  "permissionsMicrophoneDescription": "주변에서 재생되는 노래를 식별하기로 선택한 경우에만 사용됩니다.",
+  "permissionsContinueButton": "필수 권한 부여",
+  "permissionsRequiredNotice": "계속하려면 세 가지 허가가 모두 필요합니다. 나중에 시스템 설정에서 변경할 수 있습니다.",
+  "permissionsAllow": "허용하다",
+  "permissionsOpenSettings": "설정"
 }

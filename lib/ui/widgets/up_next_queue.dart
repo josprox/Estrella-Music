@@ -13,6 +13,15 @@ import 'image_widget.dart';
 import 'snackbar.dart';
 import 'songinfo_bottom_sheet.dart';
 
+Key _queueItemKey(List<MediaItem> queue, int index) {
+  final songId = queue[index].id;
+  var occurrence = 0;
+  for (var i = 0; i < index; i++) {
+    if (queue[i].id == songId) occurrence++;
+  }
+  return ValueKey('queue_${songId}_$occurrence');
+}
+
 class UpNextQueueModal extends StatefulWidget {
   const UpNextQueueModal({super.key});
 
@@ -189,175 +198,191 @@ class _UpNextQueueModalState extends State<UpNextQueueModal> {
                 );
               }
 
-              return ListView.builder(
-                controller: _scrollController,
+              return ReorderableListView.builder(
+                scrollController: _scrollController,
                 padding: const EdgeInsets.only(bottom: 24),
                 itemCount: indexedItems.length,
+                buildDefaultDragHandles: false,
+                // ignore: deprecated_member_use
+                onReorder: (oldIndex, newIndex) {
+                  if (_searchQuery.isNotEmpty) return;
+                  if (playerController.isShuffleModeEnabled.isTrue) {
+                    ScaffoldMessenger.of(context).showSnackBar(snackbar(
+                      context,
+                      S.current.queuerearrangingDeniedMsg,
+                      size: SanckBarSize.BIG,
+                    ));
+                    return;
+                  }
+                  playerController.onReorder(oldIndex, newIndex);
+                },
                 itemBuilder: (context, idx) {
                   final entry = indexedItems[idx];
                   final realIndex = entry.key;
                   final song = entry.value;
 
-                  return Obx(() {
-                    final isPlaying =
-                        playerController.currentSongIndex.value == realIndex;
+                  return KeyedSubtree(
+                    key: _queueItemKey(allQueue, realIndex),
+                    child: Obx(() {
+                      final isPlaying =
+                          playerController.currentSongIndex.value == realIndex;
 
-                    return InkWell(
-                      onTap: () {
-                        playerController.seekByIndex(realIndex);
-                      },
-                      onLongPress: () {
-                        showModalBottomSheet(
-                          constraints: const BoxConstraints(maxWidth: 500),
-                          shape: const RoundedRectangleBorder(
-                            borderRadius: BorderRadius.vertical(
-                                top: Radius.circular(10.0)),
+                      return InkWell(
+                        onTap: () {
+                          playerController.seekByIndex(realIndex);
+                        },
+                        onLongPress: () {
+                          showModalBottomSheet(
+                            constraints: const BoxConstraints(maxWidth: 500),
+                            shape: const RoundedRectangleBorder(
+                              borderRadius: BorderRadius.vertical(
+                                  top: Radius.circular(10.0)),
+                            ),
+                            isScrollControlled: true,
+                            context: context,
+                            builder: (ctx) => SongInfoBottomSheet(
+                              song,
+                              calledFromQueue: true,
+                            ),
+                          ).whenComplete(
+                              () => Get.delete<SongInfoController>());
+                        },
+                        borderRadius: BorderRadius.circular(8),
+                        child: AnimatedContainer(
+                          duration: const Duration(milliseconds: 300),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 20, vertical: 8),
+                          decoration: BoxDecoration(
+                            color: isPlaying
+                                ? Theme.of(context)
+                                    .colorScheme
+                                    .primary
+                                    .withAlpha(25)
+                                : Colors.transparent,
                           ),
-                          isScrollControlled: true,
-                          context: context,
-                          builder: (ctx) => SongInfoBottomSheet(
-                            song,
-                            calledFromQueue: true,
-                          ),
-                        ).whenComplete(
-                            () => Get.delete<SongInfoController>());
-                      },
-                      borderRadius: BorderRadius.circular(8),
-                      child: AnimatedContainer(
-                        duration: const Duration(milliseconds: 300),
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 20, vertical: 8),
-                        decoration: BoxDecoration(
-                          color: isPlaying
-                              ? Theme.of(context)
-                                  .colorScheme
-                                  .primary
-                                  .withAlpha(25)
-                              : Colors.transparent,
-                        ),
-                        child: Row(
-                          children: [
-                            SizedBox(
-                              width: 24,
-                              child: isPlaying
-                                  ? Icon(
-                                      Icons.equalizer_rounded,
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .primary,
-                                      size: 18,
-                                    )
-                                  : Text(
-                                      '${realIndex + 1}',
+                          child: Row(
+                            children: [
+                              ReorderableDragStartListener(
+                                index: idx,
+                                enabled: _searchQuery.isEmpty,
+                                child: SizedBox(
+                                  width: 32,
+                                  child: isPlaying
+                                      ? Icon(
+                                          Icons.equalizer_rounded,
+                                          color: Theme.of(context)
+                                              .colorScheme
+                                              .primary,
+                                          size: 18,
+                                        )
+                                      : Icon(
+                                          Icons.drag_indicator_rounded,
+                                          color: Theme.of(context)
+                                              .colorScheme
+                                              .onSurface
+                                              .withAlpha(97),
+                                        ),
+                                ),
+                              ),
+                              const SizedBox(width: 12),
+                              SongStatusBadges(
+                                songId: song.id,
+                                child: ImageWidget(
+                                  size: 48,
+                                  song: song,
+                                ),
+                              ),
+                              const SizedBox(width: 12),
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      song.title,
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
+                                      style: TextStyle(
+                                        color: Theme.of(context)
+                                            .colorScheme
+                                            .onSurface,
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.w600,
+                                      ),
+                                    ),
+                                    Text(
+                                      song.artist ?? '',
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
                                       style: TextStyle(
                                         color: Theme.of(context)
                                             .colorScheme
                                             .onSurface
-                                            .withAlpha(97),
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w600,
+                                            .withAlpha(138),
+                                        fontSize: 12,
                                       ),
-                                      textAlign: TextAlign.center,
                                     ),
-                            ),
-                            const SizedBox(width: 12),
-                            SongStatusBadges(
-                              songId: song.id,
-                              child: ImageWidget(
-                                size: 48,
-                                song: song,
+                                  ],
+                                ),
                               ),
-                            ),
-                            const SizedBox(width: 12),
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    song.title,
-                                    maxLines: 1,
-                                    overflow: TextOverflow.ellipsis,
-                                    style: TextStyle(
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .onSurface,
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.w600,
+                              // Heart Like Icon
+                              ValueListenableBuilder(
+                                valueListenable:
+                                    SqliteStore.box("LIBFAV").listenable(),
+                                builder: (context, SqliteBox box, _) {
+                                  final isLiked = box.containsKey(song.id);
+                                  return IconButton(
+                                    onPressed: () => _toggleLike(song),
+                                    icon: Icon(
+                                      isLiked
+                                          ? Icons.favorite_rounded
+                                          : Icons.favorite_border_rounded,
+                                      color: isLiked
+                                          ? Colors.red
+                                          : Theme.of(context)
+                                              .colorScheme
+                                              .onSurface
+                                              .withAlpha(97),
+                                      size: 20,
                                     ),
-                                  ),
-                                  Text(
-                                    song.artist ?? '',
-                                    maxLines: 1,
-                                    overflow: TextOverflow.ellipsis,
-                                    style: TextStyle(
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .onSurface
-                                          .withAlpha(138),
-                                      fontSize: 12,
+                                  );
+                                },
+                              ),
+                              // Download Icon
+                              SongDownloadButton(song_: song),
+                              // Options Icon (three dots ⋮ matching Image 1)
+                              IconButton(
+                                onPressed: () {
+                                  showModalBottomSheet(
+                                    constraints:
+                                        const BoxConstraints(maxWidth: 500),
+                                    shape: const RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.vertical(
+                                          top: Radius.circular(10.0)),
                                     ),
-                                  ),
-                                ],
+                                    isScrollControlled: true,
+                                    context: context,
+                                    builder: (ctx) => SongInfoBottomSheet(
+                                      song,
+                                      calledFromQueue: true,
+                                    ),
+                                  ).whenComplete(
+                                      () => Get.delete<SongInfoController>());
+                                },
+                                icon: Icon(
+                                  Icons.more_vert_rounded,
+                                  color: Theme.of(context)
+                                      .colorScheme
+                                      .onSurface
+                                      .withAlpha(97),
+                                  size: 20,
+                                ),
                               ),
-                            ),
-                            // Heart Like Icon
-                            ValueListenableBuilder(
-                              valueListenable:
-                                  SqliteStore.box("LIBFAV").listenable(),
-                              builder: (context, SqliteBox box, _) {
-                                final isLiked = box.containsKey(song.id);
-                                return IconButton(
-                                  onPressed: () => _toggleLike(song),
-                                  icon: Icon(
-                                    isLiked
-                                        ? Icons.favorite_rounded
-                                        : Icons.favorite_border_rounded,
-                                    color: isLiked
-                                        ? Colors.red
-                                        : Theme.of(context)
-                                            .colorScheme
-                                            .onSurface
-                                            .withAlpha(97),
-                                    size: 20,
-                                  ),
-                                );
-                              },
-                            ),
-                            // Download Icon
-                            SongDownloadButton(song_: song),
-                            // Options Icon (three dots ⋮ matching Image 1)
-                            IconButton(
-                              onPressed: () {
-                                showModalBottomSheet(
-                                  constraints:
-                                      const BoxConstraints(maxWidth: 500),
-                                  shape: const RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.vertical(
-                                        top: Radius.circular(10.0)),
-                                  ),
-                                  isScrollControlled: true,
-                                  context: context,
-                                  builder: (ctx) => SongInfoBottomSheet(
-                                    song,
-                                    calledFromQueue: true,
-                                  ),
-                                ).whenComplete(
-                                    () => Get.delete<SongInfoController>());
-                              },
-                              icon: Icon(
-                                Icons.more_vert_rounded,
-                                color: Theme.of(context)
-                                    .colorScheme
-                                    .onSurface
-                                    .withAlpha(97),
-                                size: 20,
-                              ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
-                      ),
-                    );
-                  });
+                      );
+                    }),
+                  );
                 },
               );
             }),
@@ -491,6 +516,7 @@ class _UpNextQueueState extends State<UpNextQueue> {
             scrollController: widget.isQueueInSlidePanel
                 ? _playerController.scrollController
                 : _localScrollController,
+            buildDefaultDragHandles: false,
             // ignore: deprecated_member_use
             onReorder: (int oldIndex, int newIndex) {
               if (_playerController.isShuffleModeEnabled.isTrue) {
@@ -514,7 +540,7 @@ class _UpNextQueueState extends State<UpNextQueue> {
             itemBuilder: (context, index) {
               final song = queueList[index];
               return Material(
-                key: Key('${song.id}_$index'),
+                key: _queueItemKey(queueList, index),
                 color: Colors.transparent,
                 child: _buildQueueItemTile(context, index, song),
               );
@@ -528,8 +554,7 @@ class _UpNextQueueState extends State<UpNextQueue> {
   Widget _buildQueueItemTile(
       BuildContext context, int realIndex, MediaItem song) {
     return Obx(() {
-      final isPlaying =
-          _playerController.currentSongIndex.value == realIndex;
+      final isPlaying = _playerController.currentSongIndex.value == realIndex;
 
       return Dismissible(
         key: Key("queue_dismiss_${song.id}_$realIndex"),
@@ -547,12 +572,10 @@ class _UpNextQueueState extends State<UpNextQueue> {
             showModalBottomSheet(
               constraints: const BoxConstraints(maxWidth: 500),
               shape: const RoundedRectangleBorder(
-                borderRadius:
-                    BorderRadius.vertical(top: Radius.circular(10.0)),
+                borderRadius: BorderRadius.vertical(top: Radius.circular(10.0)),
               ),
               isScrollControlled: true,
-              context: _playerController
-                  .homeScaffoldkey.currentState!.context,
+              context: _playerController.homeScaffoldkey.currentState!.context,
               builder: (context) => SongInfoBottomSheet(
                 song,
                 calledFromQueue: true,
@@ -570,26 +593,24 @@ class _UpNextQueueState extends State<UpNextQueue> {
             ),
             child: Row(
               children: [
-                SizedBox(
-                  width: 24,
-                  child: isPlaying
-                      ? Icon(
-                          Icons.equalizer_rounded,
-                          color: Theme.of(context).colorScheme.primary,
-                          size: 18,
-                        )
-                      : Text(
-                          '${realIndex + 1}',
-                          style: TextStyle(
+                ReorderableDragStartListener(
+                  index: realIndex,
+                  child: SizedBox(
+                    width: 32,
+                    child: isPlaying
+                        ? Icon(
+                            Icons.equalizer_rounded,
+                            color: Theme.of(context).colorScheme.primary,
+                            size: 18,
+                          )
+                        : Icon(
+                            Icons.drag_indicator_rounded,
                             color: Theme.of(context)
                                 .colorScheme
                                 .onSurface
                                 .withAlpha(97),
-                            fontSize: 15,
-                            fontWeight: FontWeight.w600,
                           ),
-                          textAlign: TextAlign.center,
-                        ),
+                  ),
                 ),
                 const SizedBox(width: 12),
                 SongStatusBadges(
@@ -670,10 +691,8 @@ class _UpNextQueueState extends State<UpNextQueue> {
                   },
                   icon: Icon(
                     Icons.more_vert_rounded,
-                    color: Theme.of(context)
-                        .colorScheme
-                        .onSurface
-                        .withAlpha(97),
+                    color:
+                        Theme.of(context).colorScheme.onSurface.withAlpha(97),
                     size: 20,
                   ),
                 ),

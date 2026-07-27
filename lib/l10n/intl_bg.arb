@@ -676,5 +676,17 @@
   "downloadNotificationTitle": "Изтегляне на музика",
   "downloadNotificationPreparing": "Изтеглянията ви се подготвят...",
   "downloadNotificationSong": "Изтегляне: {songTitle}",
-  "syncCloudModeActive": "Облачен режим е активен"
+  "syncCloudModeActive": "Облачен режим е активен",
+  "permissionsConsentTitle": "Разрешения, за да започнете",
+  "permissionsConsentDescription": "Estrella Music се нуждае от тези разрешения, за да управлява вашата музика и да предлага всички функции за възпроизвеждане.",
+  "permissionsStorageTitle": "Музика и съхранение",
+  "permissionsStorageDescription": "Тя ви позволява да възпроизвеждате музика, да запазвате изтегляния, да експортирате плейлисти и да подготвяте актуализации.",
+  "permissionsNotificationsTitle": "Известия",
+  "permissionsNotificationsDescription": "Показва контроли за възпроизвеждане, прогрес на изтегляне и важни бележки за приложения.",
+  "permissionsMicrophoneTitle": "Микрофон",
+  "permissionsMicrophoneDescription": "Използва се само когато изберете да идентифицирате песен, която се изпълнява около вас.",
+  "permissionsContinueButton": "Дайте необходимите разрешения",
+  "permissionsRequiredNotice": "И трите разрешителни са необходими, за да продължите. Можете да ги промените по-късно в системните настройки.",
+  "permissionsAllow": "Разрешете",
+  "permissionsOpenSettings": "Настройки"
 }

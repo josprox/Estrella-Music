@@ -675,5 +675,17 @@
   "downloadNotificationTitle": "Đang tải nhạc",
   "downloadNotificationPreparing": "Đang chuẩn bị nội dung tải xuống của bạn…",
   "downloadNotificationSong": "Đang tải xuống: {songTitle}",
-  "syncCloudModeActive": "Chế độ đám mây đang hoạt động"
+  "syncCloudModeActive": "Chế độ đám mây đang hoạt động",
+  "permissionsConsentTitle": "Quyền để bắt đầu",
+  "permissionsConsentDescription": "Estrella Music cần những quyền này để quản lý nhạc của bạn và cung cấp tất cả các tính năng phát lại.",
+  "permissionsStorageTitle": "Âm nhạc và lưu trữ",
+  "permissionsStorageDescription": "Nó cho phép bạn phát nhạc, lưu tải xuống, xuất danh sách phát và chuẩn bị cập nhật.",
+  "permissionsNotificationsTitle": "Thông báo",
+  "permissionsNotificationsDescription": "Hiển thị các điều khiển phát lại, tiến trình tải xuống và các thông báo ứng dụng quan trọng.",
+  "permissionsMicrophoneTitle": "Micrô",
+  "permissionsMicrophoneDescription": "Nó chỉ được sử dụng khi bạn chọn xác định một bài hát đang phát xung quanh bạn.",
+  "permissionsContinueButton": "Cấp quyền cần thiết",
+  "permissionsRequiredNotice": "Tất cả ba giấy phép được yêu cầu để tiếp tục. Bạn có thể thay đổi chúng sau trong cài đặt hệ thống.",
+  "permissionsAllow": "Cho phép",
+  "permissionsOpenSettings": "Cài đặt"
 }

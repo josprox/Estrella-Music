@@ -676,5 +676,17 @@
   "downloadNotificationTitle": "Загрузка музыки",
   "downloadNotificationPreparing": "Подготовка загрузок…",
   "downloadNotificationSong": "Загрузка: {songTitle}",
-  "syncCloudModeActive": "Облачный режим активен"
+  "syncCloudModeActive": "Облачный режим активен",
+  "permissionsConsentTitle": "Разрешения, чтобы начать работу",
+  "permissionsConsentDescription": "Estrella Music необходимы эти разрешения для управления вашей музыкой и предоставления всех функций воспроизведения.",
+  "permissionsStorageTitle": "Музыка и память",
+  "permissionsStorageDescription": "Он позволяет воспроизводить музыку, сохранять загрузки, экспортировать плейлисты и готовить обновления.",
+  "permissionsNotificationsTitle": "Уведомления",
+  "permissionsNotificationsDescription": "Показывает элементы управления воспроизведением, ход загрузки и важные уведомления приложений.",
+  "permissionsMicrophoneTitle": "Микрофон",
+  "permissionsMicrophoneDescription": "Он используется только тогда, когда вы решаете идентифицировать песню, которая играет вокруг вас.",
+  "permissionsContinueButton": "Предоставьте необходимые разрешения",
+  "permissionsRequiredNotice": "Для продолжения работы необходимы все три разрешения. Вы можете изменить их позже в настройках системы.",
+  "permissionsAllow": "Позволять",
+  "permissionsOpenSettings": "Настройки"
 }

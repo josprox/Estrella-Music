@@ -465,5 +465,17 @@
   "downloadNotificationTitle": "സംഗീതം ഡൗൺലോഡ് ചെയ്യുന്നു",
   "downloadNotificationPreparing": "നിങ്ങളുടെ ഡൗൺലോഡുകൾ തയ്യാറാക്കുന്നു...",
   "downloadNotificationSong": "ഡൗൺലോഡ് ചെയ്യുന്നു: {songTitle}",
-  "syncCloudModeActive": "ക്ലൗഡ് മോഡ് സജീവമാണ്"
+  "syncCloudModeActive": "ക്ലൗഡ് മോഡ് സജീവമാണ്",
+  "permissionsConsentTitle": "ആരംഭിക്കുന്നതിനുള്ള അനുമതികൾ",
+  "permissionsConsentDescription": "നിങ്ങളുടെ സംഗീതം നിയന്ത്രിക്കാനും എല്ലാ പ്ലേബാക്ക് ഫീച്ചറുകളും ഓഫർ ചെയ്യാനും Estrella Music-ന് ഈ അനുമതികൾ ആവശ്യമാണ്.",
+  "permissionsStorageTitle": "സംഗീതവും സംഭരണവും",
+  "permissionsStorageDescription": "സംഗീതം പ്ലേ ചെയ്യാനും ഡൗൺലോഡുകൾ സംരക്ഷിക്കാനും പ്ലേലിസ്റ്റുകൾ കയറ്റുമതി ചെയ്യാനും അപ്‌ഡേറ്റുകൾ തയ്യാറാക്കാനും ഇത് നിങ്ങളെ അനുവദിക്കുന്നു.",
+  "permissionsNotificationsTitle": "അറിയിപ്പുകൾ",
+  "permissionsNotificationsDescription": "പ്ലേബാക്ക് നിയന്ത്രണങ്ങൾ, ഡൗൺലോഡ് പുരോഗതി, പ്രധാനപ്പെട്ട ആപ്പ് അറിയിപ്പുകൾ എന്നിവ കാണിക്കുന്നു.",
+  "permissionsMicrophoneTitle": "മൈക്രോഫോൺ",
+  "permissionsMicrophoneDescription": "നിങ്ങൾക്ക് ചുറ്റും പ്ലേ ചെയ്യുന്ന ഒരു ഗാനം തിരിച്ചറിയാൻ നിങ്ങൾ തിരഞ്ഞെടുക്കുമ്പോൾ മാത്രമേ ഇത് ഉപയോഗിക്കൂ.",
+  "permissionsContinueButton": "ആവശ്യമായ അനുമതികൾ നൽകുക",
+  "permissionsRequiredNotice": "തുടരുന്നതിന് മൂന്ന് പെർമിറ്റുകളും ആവശ്യമാണ്. സിസ്റ്റം ക്രമീകരണങ്ങളിൽ നിങ്ങൾക്ക് അവ പിന്നീട് മാറ്റാവുന്നതാണ്.",
+  "permissionsAllow": "അനുവദിക്കുക",
+  "permissionsOpenSettings": "ക്രമീകരണങ്ങൾ"
 }

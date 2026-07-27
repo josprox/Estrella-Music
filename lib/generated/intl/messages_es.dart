@@ -833,6 +833,38 @@ class MessageLookup extends MessageLookupByLibrary {
     "permissionDenied": MessageLookupByLibrary.simpleMessage(
       "Permiso denegado",
     ),
+    "permissionsAllow": MessageLookupByLibrary.simpleMessage("Permitir"),
+    "permissionsConsentDescription": MessageLookupByLibrary.simpleMessage(
+      "Estrella Music necesita estos permisos para administrar tu música y ofrecer todas las funciones de reproducción.",
+    ),
+    "permissionsConsentTitle": MessageLookupByLibrary.simpleMessage(
+      "Permisos para comenzar",
+    ),
+    "permissionsContinueButton": MessageLookupByLibrary.simpleMessage(
+      "Conceder permisos requeridos",
+    ),
+    "permissionsMicrophoneDescription": MessageLookupByLibrary.simpleMessage(
+      "Se usa solo cuando eliges identificar una canción que está sonando a tu alrededor.",
+    ),
+    "permissionsMicrophoneTitle": MessageLookupByLibrary.simpleMessage(
+      "Micrófono",
+    ),
+    "permissionsNotificationsDescription": MessageLookupByLibrary.simpleMessage(
+      "Muestra controles de reproducción, progreso de descargas y avisos importantes de la app.",
+    ),
+    "permissionsNotificationsTitle": MessageLookupByLibrary.simpleMessage(
+      "Notificaciones",
+    ),
+    "permissionsOpenSettings": MessageLookupByLibrary.simpleMessage("Ajustes"),
+    "permissionsRequiredNotice": MessageLookupByLibrary.simpleMessage(
+      "Los tres permisos son necesarios para continuar. Puedes cambiarlos después en los ajustes del sistema.",
+    ),
+    "permissionsStorageDescription": MessageLookupByLibrary.simpleMessage(
+      "Permite leer música, guardar descargas, exportar playlists y preparar actualizaciones.",
+    ),
+    "permissionsStorageTitle": MessageLookupByLibrary.simpleMessage(
+      "Música y almacenamiento",
+    ),
     "personalisation": MessageLookupByLibrary.simpleMessage("Personalización"),
     "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage(
       "Playlist de Piped",

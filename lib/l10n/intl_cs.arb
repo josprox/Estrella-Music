@@ -676,5 +676,17 @@
   "downloadNotificationTitle": "Stahování hudby",
   "downloadNotificationPreparing": "Příprava stahování…",
   "downloadNotificationSong": "Stahování: {songTitle}",
-  "syncCloudModeActive": "Cloudový režim je aktivní"
+  "syncCloudModeActive": "Cloudový režim je aktivní",
+  "permissionsConsentTitle": "Oprávnění začít",
+  "permissionsConsentDescription": "Estrella Music potřebuje tato oprávnění, aby mohla spravovat vaši hudbu a nabízet všechny funkce přehrávání.",
+  "permissionsStorageTitle": "Hudba a úložiště",
+  "permissionsStorageDescription": "Umožňuje přehrávat hudbu, ukládat stažené soubory, exportovat seznamy skladeb a připravovat aktualizace.",
+  "permissionsNotificationsTitle": "Oznámení",
+  "permissionsNotificationsDescription": "Zobrazuje ovládací prvky přehrávání, průběh stahování a důležitá upozornění aplikací.",
+  "permissionsMicrophoneTitle": "Mikrofon",
+  "permissionsMicrophoneDescription": "Používá se pouze v případě, že se rozhodnete identifikovat skladbu, která hraje kolem vás.",
+  "permissionsContinueButton": "Udělte požadovaná oprávnění",
+  "permissionsRequiredNotice": "K pokračování jsou potřeba všechna tři povolení. Později je můžete změnit v nastavení systému.",
+  "permissionsAllow": "Povolit",
+  "permissionsOpenSettings": "Nastavení"
 }

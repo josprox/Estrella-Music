@@ -406,5 +406,17 @@
   "downloadNotificationTitle": "Спампаваць музыку",
   "downloadNotificationPreparing": "Падрыхтоўка спамповак…",
   "downloadNotificationSong": "Спампоўка: {songTitle}",
-  "syncCloudModeActive": "Воблачны рэжым актыўны"
+  "syncCloudModeActive": "Воблачны рэжым актыўны",
+  "permissionsConsentTitle": "Дазволы для пачатку",
+  "permissionsConsentDescription": "Estrella Music патрэбны гэтыя дазволы, каб кіраваць вашай музыкай і прапаноўваць усе функцыі прайгравання.",
+  "permissionsStorageTitle": "Музыка і захоўванне",
+  "permissionsStorageDescription": "Гэта дазваляе прайграваць музыку, захоўваць спампоўкі, экспартаваць спісы прайгравання і рыхтаваць абнаўленні.",
+  "permissionsNotificationsTitle": "Апавяшчэнні",
+  "permissionsNotificationsDescription": "Паказвае элементы кіравання прайграваннем, ход загрузкі і важныя апавяшчэнні аб праграмах.",
+  "permissionsMicrophoneTitle": "Мікрафон",
+  "permissionsMicrophoneDescription": "Ён выкарыстоўваецца толькі тады, калі вы вырашылі вызначыць песню, якая гучыць вакол вас.",
+  "permissionsContinueButton": "Дайце неабходныя дазволы",
+  "permissionsRequiredNotice": "Усе тры дазволы неабходныя для працягу. Вы можаце змяніць іх пазней у наладах сістэмы.",
+  "permissionsAllow": "Дазволіць",
+  "permissionsOpenSettings": "Налады"
 }

@@ -673,5 +673,17 @@
   "downloadNotificationTitle": "Download di musica",
   "downloadNotificationPreparing": "Preparazione dei download...",
   "downloadNotificationSong": "Download in corso: {songTitle}",
-  "syncCloudModeActive": "Modalità cloud attiva"
+  "syncCloudModeActive": "Modalità cloud attiva",
+  "permissionsConsentTitle": "Autorizzazioni per iniziare",
+  "permissionsConsentDescription": "Estrella Music ha bisogno di queste autorizzazioni per gestire la tua musica e offrire tutte le funzionalità di riproduzione.",
+  "permissionsStorageTitle": "Musica e archiviazione",
+  "permissionsStorageDescription": "Ti consente di riprodurre musica, salvare download, esportare playlist e preparare aggiornamenti.",
+  "permissionsNotificationsTitle": "Notifiche",
+  "permissionsNotificationsDescription": "Mostra i controlli di riproduzione, l'avanzamento del download e avvisi importanti sull'app.",
+  "permissionsMicrophoneTitle": "Microfono",
+  "permissionsMicrophoneDescription": "Viene utilizzato solo quando scegli di identificare una canzone che sta suonando intorno a te.",
+  "permissionsContinueButton": "Concedi le autorizzazioni necessarie",
+  "permissionsRequiredNotice": "Per continuare sono necessari tutti e tre i permessi. Potrai modificarli successivamente nelle impostazioni di sistema.",
+  "permissionsAllow": "Permettere",
+  "permissionsOpenSettings": "Impostazioni"
 }

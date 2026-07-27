@@ -671,5 +671,17 @@
   "downloadNotificationTitle": "Pobieranie muzyki",
   "downloadNotificationPreparing": "Przygotowuję pliki do pobrania…",
   "downloadNotificationSong": "Pobieranie: {songTitle}",
-  "syncCloudModeActive": "Tryb chmury aktywny"
+  "syncCloudModeActive": "Tryb chmury aktywny",
+  "permissionsConsentTitle": "Uprawnienia do rozpoczęcia",
+  "permissionsConsentDescription": "Estrella Music potrzebuje tych uprawnień, aby zarządzać Twoją muzyką i oferować wszystkie funkcje odtwarzania.",
+  "permissionsStorageTitle": "Muzyka i przechowywanie",
+  "permissionsStorageDescription": "Umożliwia odtwarzanie muzyki, zapisywanie pobranych plików, eksportowanie list odtwarzania i przygotowywanie aktualizacji.",
+  "permissionsNotificationsTitle": "Powiadomienia",
+  "permissionsNotificationsDescription": "Pokazuje elementy sterujące odtwarzaniem, postęp pobierania i ważne powiadomienia o aplikacjach.",
+  "permissionsMicrophoneTitle": "Mikrofon",
+  "permissionsMicrophoneDescription": "Jest używany tylko wtedy, gdy zdecydujesz się zidentyfikować piosenkę odtwarzaną wokół ciebie.",
+  "permissionsContinueButton": "Przyznaj wymagane uprawnienia",
+  "permissionsRequiredNotice": "Aby kontynuować, wymagane są wszystkie trzy zezwolenia. Możesz je później zmienić w ustawieniach systemu.",
+  "permissionsAllow": "Umożliwić",
+  "permissionsOpenSettings": "Ustawienia"
 }

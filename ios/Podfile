@@ -48,7 +48,9 @@ post_install do |installer|
         ## dart: PermissionGroup.mediaLibrary
         'PERMISSION_MEDIA_LIBRARY=1',
         ## dart: PermissionGroup.microphone
-        'PERMISSION_MICROPHONE=1'
+        'PERMISSION_MICROPHONE=1',
+        ## dart: PermissionGroup.notification
+        'PERMISSION_NOTIFICATIONS=1'
       ]
       config.build_settings['CODE_SIGNING_ALLOWED'] = 'NO'
       config.build_settings['CODE_SIGNING_REQUIRED'] = 'NO'

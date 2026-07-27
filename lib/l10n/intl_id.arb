@@ -666,5 +666,17 @@
   "downloadNotificationTitle": "Mengunduh musik",
   "downloadNotificationPreparing": "Mempersiapkan unduhan Anda…",
   "downloadNotificationSong": "Mengunduh: _{songTitle}",
-  "syncCloudModeActive": "Mode awan aktif"
+  "syncCloudModeActive": "Mode awan aktif",
+  "permissionsConsentTitle": "Izin untuk memulai",
+  "permissionsConsentDescription": "Estrella Music memerlukan izin ini untuk mengelola musik Anda dan menawarkan semua fitur pemutaran.",
+  "permissionsStorageTitle": "Musik dan penyimpanan",
+  "permissionsStorageDescription": "Ini memungkinkan Anda memutar musik, menyimpan unduhan, mengekspor daftar putar, dan menyiapkan pembaruan.",
+  "permissionsNotificationsTitle": "Pemberitahuan",
+  "permissionsNotificationsDescription": "Menampilkan kontrol pemutaran, kemajuan pengunduhan, dan pemberitahuan aplikasi penting.",
+  "permissionsMicrophoneTitle": "Mikropon",
+  "permissionsMicrophoneDescription": "Ini hanya digunakan ketika Anda memilih untuk mengidentifikasi lagu yang diputar di sekitar Anda.",
+  "permissionsContinueButton": "Berikan izin yang diperlukan",
+  "permissionsRequiredNotice": "Ketiga izin tersebut diperlukan untuk melanjutkan. Anda dapat mengubahnya nanti di pengaturan sistem.",
+  "permissionsAllow": "Mengizinkan",
+  "permissionsOpenSettings": "Pengaturan"
 }

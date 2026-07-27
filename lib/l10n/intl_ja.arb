@@ -675,5 +675,17 @@
   "downloadNotificationTitle": "音楽をダウンロードする",
   "downloadNotificationPreparing": "ダウンロードを準備しています…",
   "downloadNotificationSong": "ダウンロード中: {songTitle}",
-  "syncCloudModeActive": "クラウドモード有効"
+  "syncCloudModeActive": "クラウドモード有効",
+  "permissionsConsentTitle": "開始するための権限",
+  "permissionsConsentDescription": "Estrella Music では、音楽を管理し、すべての再生機能を提供するためにこれらの権限が必要です。",
+  "permissionsStorageTitle": "音楽とストレージ",
+  "permissionsStorageDescription": "音楽の再生、ダウンロードの保存、プレイリストのエクスポート、アップデートの準備が可能です。",
+  "permissionsNotificationsTitle": "通知",
+  "permissionsNotificationsDescription": "再生コントロール、ダウンロードの進行状況、アプリの重要な通知を表示します。",
+  "permissionsMicrophoneTitle": "マイクロフォン",
+  "permissionsMicrophoneDescription": "これは、周囲で流れている曲を特定する場合にのみ使用されます。",
+  "permissionsContinueButton": "必要な権限を付与する",
+  "permissionsRequiredNotice": "継続するには 3 つの許可すべてが必要です。後でシステム設定で変更できます。",
+  "permissionsAllow": "許可する",
+  "permissionsOpenSettings": "設定"
 }

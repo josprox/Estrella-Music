@@ -666,5 +666,17 @@
   "downloadNotificationTitle": "সঙ্গীত ডাউনলোড করা হচ্ছে",
   "downloadNotificationPreparing": "আপনার ডাউনলোডগুলি প্রস্তুত করা হচ্ছে...",
   "downloadNotificationSong": "ডাউনলোড হচ্ছে: {songTitle}",
-  "syncCloudModeActive": "ক্লাউড মোড সক্রিয়"
+  "syncCloudModeActive": "ক্লাউড মোড সক্রিয়",
+  "permissionsConsentTitle": "শুরু করার অনুমতি",
+  "permissionsConsentDescription": "আপনার সঙ্গীত পরিচালনা করতে এবং সমস্ত প্লেব্যাক বৈশিষ্ট্য অফার করতে Estrella Music-এর এই অনুমতিগুলির প্রয়োজন৷",
+  "permissionsStorageTitle": "সঙ্গীত এবং স্টোরেজ",
+  "permissionsStorageDescription": "এটি আপনাকে সঙ্গীত বাজাতে, ডাউনলোডগুলি সংরক্ষণ করতে, প্লেলিস্ট রপ্তানি করতে এবং আপডেটগুলি প্রস্তুত করতে দেয়৷",
+  "permissionsNotificationsTitle": "বিজ্ঞপ্তি",
+  "permissionsNotificationsDescription": "প্লেব্যাক নিয়ন্ত্রণ, ডাউনলোডের অগ্রগতি এবং গুরুত্বপূর্ণ অ্যাপ বিজ্ঞপ্তি দেখায়।",
+  "permissionsMicrophoneTitle": "মাইক্রোফোন",
+  "permissionsMicrophoneDescription": "এটি শুধুমাত্র তখনই ব্যবহৃত হয় যখন আপনি আপনার চারপাশে বাজছে এমন একটি গান সনাক্ত করতে চান৷",
+  "permissionsContinueButton": "প্রয়োজনীয় অনুমতি প্রদান করুন",
+  "permissionsRequiredNotice": "সব তিনটি পারমিট চালিয়ে যেতে হবে. আপনি সিস্টেম সেটিংসে পরে সেগুলি পরিবর্তন করতে পারেন৷",
+  "permissionsAllow": "অনুমতি দিন",
+  "permissionsOpenSettings": "সেটিংস"
 }

@@ -24,6 +24,7 @@ import 'package:harmonymusic/ui/player/player_controller.dart';
 import 'package:harmonymusic/ui/screens/Home/home_screen_controller.dart';
 import 'package:harmonymusic/services/system/background_task.dart';
 import 'package:harmonymusic/services/system/permission_service.dart';
+import 'package:harmonymusic/utils/helpers/queue_reorder.dart';
 import 'package:harmonymusic/utils/helpers/helper.dart';
 import '/models/media_item_builder.dart';
 import 'package:harmonymusic/services/system/utils.dart';
@@ -691,22 +692,15 @@ class MyAudioHandler extends BaseAudioHandler with GetxServiceMixin {
         break;
 
       case 'reorderQueue':
-        final oldIndex = extras!['oldIndex'];
-        int newIndex = extras['newIndex'];
-
-        if (oldIndex < newIndex) {
-          newIndex--;
-        }
-
-        final currentQueue = queue.value;
-        final currentItem = currentQueue[currentIndex];
-        final item = currentQueue.removeAt(
-          oldIndex,
+        final result = reorderQueue<MediaItem>(
+          items: queue.value,
+          oldIndex: extras!['oldIndex'] as int,
+          newIndex: extras['newIndex'] as int,
+          currentIndex: currentIndex,
         );
-        currentQueue.insert(newIndex, item);
-        currentIndex = currentQueue.indexOf(currentItem);
-        queue.add(currentQueue);
-        mediaItem.add(currentItem);
+        currentIndex = result.currentIndex;
+        queue.add(result.items);
+        mediaItem.add(result.items[currentIndex]);
         break;
 
       case 'addPlayNextItem':

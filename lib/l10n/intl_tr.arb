@@ -676,5 +676,17 @@
   "downloadNotificationTitle": "Müzik indiriliyor",
   "downloadNotificationPreparing": "İndirmeleriniz hazırlanıyor…",
   "downloadNotificationSong": "İndiriliyor: {songTitle}",
-  "syncCloudModeActive": "Bulut modu etkin"
+  "syncCloudModeActive": "Bulut modu etkin",
+  "permissionsConsentTitle": "Başlamak için izinler",
+  "permissionsConsentDescription": "Estrella Music, müziğinizi yönetmek ve tüm oynatma özelliklerini sunmak için bu izinlere ihtiyaç duyar.",
+  "permissionsStorageTitle": "Müzik ve depolama",
+  "permissionsStorageDescription": "Müzik çalmanıza, indirilenleri kaydetmenize, çalma listelerini dışa aktarmanıza ve güncellemeler hazırlamanıza olanak tanır.",
+  "permissionsNotificationsTitle": "Bildirimler",
+  "permissionsNotificationsDescription": "Oynatma kontrollerini, indirme ilerlemesini ve önemli uygulama bildirimlerini gösterir.",
+  "permissionsMicrophoneTitle": "Mikrofon",
+  "permissionsMicrophoneDescription": "Yalnızca etrafınızda çalan bir şarkıyı tanımlamayı seçtiğinizde kullanılır.",
+  "permissionsContinueButton": "Gerekli izinleri verin",
+  "permissionsRequiredNotice": "Devam etmek için üç iznin de alınması gerekiyor. Bunları daha sonra sistem ayarlarından değiştirebilirsiniz.",
+  "permissionsAllow": "İzin vermek",
+  "permissionsOpenSettings": "Ayarlar"
 }

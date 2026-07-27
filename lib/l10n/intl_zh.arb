@@ -406,5 +406,17 @@
   "downloadNotificationTitle": "下载音乐",
   "downloadNotificationPreparing": "正在准备您的下载...",
   "downloadNotificationSong": "下载：{songTitle}",
-  "syncCloudModeActive": "云模式已激活"
+  "syncCloudModeActive": "云模式已激活",
+  "permissionsConsentTitle": "开始的权限",
+  "permissionsConsentDescription": "Estrella Music 需要这些权限来管理您的音乐并提供所有播放功能。",
+  "permissionsStorageTitle": "音乐和存储",
+  "permissionsStorageDescription": "它允许您播放音乐、保存下载、导出播放列表和准备更新。",
+  "permissionsNotificationsTitle": "通知",
+  "permissionsNotificationsDescription": "显示播放控件、下载进度和重要的应用程序通知。",
+  "permissionsMicrophoneTitle": "麦克风",
+  "permissionsMicrophoneDescription": "仅当您选择识别您周围正在播放的歌曲时才使用它。",
+  "permissionsContinueButton": "授予所需的权限",
+  "permissionsRequiredNotice": "需要所有三项许可证才能继续。您可以稍后在系统设置中更改它们。",
+  "permissionsAllow": "允许",
+  "permissionsOpenSettings": "设置"
 }

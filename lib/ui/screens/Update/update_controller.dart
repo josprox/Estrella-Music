@@ -90,8 +90,12 @@ class UpdateController extends GetxController {
     final baseUrl = _extractDownloadBase(data['Descarga'] as String?);
     if (baseUrl == null) return null;
 
-    if (GetPlatform.isAndroid) return '${baseUrl}EstrellaMusic-android-universal.apk';
-    if (GetPlatform.isWindows) return '${baseUrl}EstrellaMusic-windows-installer.exe';
+    if (GetPlatform.isAndroid) {
+      return '${baseUrl}EstrellaMusic-android-universal.apk';
+    }
+    if (GetPlatform.isWindows) {
+      return '${baseUrl}EstrellaMusic-windows-installer.exe';
+    }
     if (GetPlatform.isLinux) return '${baseUrl}EstrellaMusic-linux-x64.tar.gz';
     if (GetPlatform.isMacOS) return '${baseUrl}EstrellaMusic-macos.zip';
 
@@ -111,7 +115,9 @@ class UpdateController extends GetxController {
   /// Etiqueta legible del botón de acción principal según plataforma.
   String get platformActionLabel {
     if (GetPlatform.isIOS) return 'Guía de instalación iOS';
-    if (GetPlatform.isLinux || GetPlatform.isMacOS) return 'Descargar desde GitHub';
+    if (GetPlatform.isLinux || GetPlatform.isMacOS) {
+      return 'Descargar desde GitHub';
+    }
     return 'Actualizar';
   }
 
@@ -139,7 +145,8 @@ class UpdateController extends GetxController {
     // iOS → abre guía de instalación en el navegador
     if (GetPlatform.isIOS) {
       final data = updateInfo.value;
-      final url = data?['Descarga'] as String? ?? 'https://emusic.josprox.com/ios-setup';
+      final url = data?['Descarga'] as String? ??
+          'https://emusic.josprox.com/ios-setup';
       await _openBrowser(url);
       return;
     }
@@ -166,7 +173,8 @@ class UpdateController extends GetxController {
         // Android 8+ requiere permiso explícito para instalar APKs de fuentes desconocidas
         final installPerm = await Permission.requestInstallPackages.request();
         if (!installPerm.isGranted) {
-          downloadError('Se necesita permiso para instalar apps. Actívalo en Ajustes → Instalar apps desconocidas.');
+          downloadError(
+              'Se necesita permiso para instalar apps. Actívalo en Ajustes → Instalar apps desconocidas.');
           downloadState.value = DownloadState.error;
           return;
         }
@@ -209,19 +217,6 @@ class UpdateController extends GetxController {
   // ──────────────────────────────────────────────
 
   Future<void> _downloadInApp() async {
-    // En Android pedimos permiso de almacenamiento si es necesario
-    if (GetPlatform.isAndroid) {
-      final storageStatus = await Permission.storage.status;
-      if (storageStatus.isDenied) {
-        final result = await Permission.storage.request();
-        if (!result.isGranted) {
-          downloadError('Se necesita permiso de almacenamiento para descargar la actualización.');
-          downloadState.value = DownloadState.error;
-          return;
-        }
-      }
-    }
-
     final url = platformDownloadUrl;
     if (url == null) {
       downloadError('URL de descarga no disponible.');
@@ -237,8 +232,10 @@ class UpdateController extends GetxController {
       // Elegir directorio de guardado
       final Directory saveDir;
       if (GetPlatform.isAndroid) {
-        // getExternalStorageDirectory devuelve el directorio externo de la app
-        saveDir = await getExternalStorageDirectory() ?? await getApplicationDocumentsDirectory();
+        // Android permite escribir aquí sin pedir almacenamiento: es el
+        // directorio externo privado de la app.
+        saveDir = await getExternalStorageDirectory() ??
+            await getApplicationDocumentsDirectory();
       } else {
         saveDir = await getApplicationDocumentsDirectory();
       }
@@ -280,7 +277,8 @@ class UpdateController extends GetxController {
     const androidDetails = AndroidNotificationDetails(
       'em_update_channel',
       'Actualizaciones de Estrella Music',
-      channelDescription: 'Notifica cuando hay una actualización lista para instalar',
+      channelDescription:
+          'Notifica cuando hay una actualización lista para instalar',
       importance: Importance.high,
       priority: Priority.high,
       icon: '@mipmap/ic_launcher',
