@@ -418,5 +418,10 @@
   "permissionsContinueButton": "Gi nødvendige tillatelser",
   "permissionsRequiredNotice": "Alle tre tillatelsene kreves for å fortsette. Du kan endre dem senere i systeminnstillingene.",
   "permissionsAllow": "Tillate",
-  "permissionsOpenSettings": "Innstillinger"
+  "permissionsOpenSettings": "Innstillinger",
+  "auth_2fa_title": "To-faktor autentisering",
+  "auth_2fa_subtitle": "Skriv inn den 6-sifrede koden fra autentiseringsappen din. Denne tilgangen utløper om 5 minutter.",
+  "auth_2fa_code": "Autentiseringskode",
+  "auth_2fa_verify": "Sjekk og fortsett",
+  "auth_2fa_invalid": "Skriv inn en gyldig 6-sifret kode eller logg på igjen."
 }

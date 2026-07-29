@@ -678,5 +678,10 @@
   "permissionsContinueButton": "Berikan izin yang diperlukan",
   "permissionsRequiredNotice": "Ketiga izin tersebut diperlukan untuk melanjutkan. Anda dapat mengubahnya nanti di pengaturan sistem.",
   "permissionsAllow": "Mengizinkan",
-  "permissionsOpenSettings": "Pengaturan"
+  "permissionsOpenSettings": "Pengaturan",
+  "auth_2fa_title": "Otentikasi dua faktor",
+  "auth_2fa_subtitle": "Masukkan kode 6 digit dari aplikasi autentikator Anda. Akses ini berakhir dalam 5 menit.",
+  "auth_2fa_code": "Kode otentikasi",
+  "auth_2fa_verify": "Periksa dan lanjutkan",
+  "auth_2fa_invalid": "Masukkan kode 6 digit yang valid atau masuk lagi."
 }

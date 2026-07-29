@@ -687,5 +687,10 @@
   "permissionsContinueButton": "必要な権限を付与する",
   "permissionsRequiredNotice": "継続するには 3 つの許可すべてが必要です。後でシステム設定で変更できます。",
   "permissionsAllow": "許可する",
-  "permissionsOpenSettings": "設定"
+  "permissionsOpenSettings": "設定",
+  "auth_2fa_title": "二要素認証",
+  "auth_2fa_subtitle": "認証アプリから 6 桁のコードを入力します。このアクセスは 5 分で期限切れになります。",
+  "auth_2fa_code": "認証コード",
+  "auth_2fa_verify": "確認して続行",
+  "auth_2fa_invalid": "有効な 6 桁のコードを入力するか、再度サインインしてください。"
 }

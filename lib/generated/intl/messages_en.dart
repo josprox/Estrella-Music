@@ -91,6 +91,21 @@ class MessageLookup extends MessageLookupByLibrary {
       "According to your tastes",
     ),
     "audioCodec": MessageLookupByLibrary.simpleMessage("Audio Codec"),
+    "auth_2fa_code": MessageLookupByLibrary.simpleMessage(
+      "Authentication code",
+    ),
+    "auth_2fa_invalid": MessageLookupByLibrary.simpleMessage(
+      "Enter a valid 6-digit code or sign in again.",
+    ),
+    "auth_2fa_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Enter the 6-digit code from your authenticator app. ",
+    ),
+    "auth_2fa_title": MessageLookupByLibrary.simpleMessage(
+      "Two-factor authentication",
+    ),
+    "auth_2fa_verify": MessageLookupByLibrary.simpleMessage(
+      "Check and continue",
+    ),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Acepto usar mis datos...",
     ),
@@ -777,16 +792,16 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "permissionsAllow": MessageLookupByLibrary.simpleMessage("Allow"),
     "permissionsConsentDescription": MessageLookupByLibrary.simpleMessage(
-      "Estrella Music needs these permissions to manage your music and provide all playback features.",
+      "Estrella Music needs these permissions to manage your music and offer all playback features.",
     ),
     "permissionsConsentTitle": MessageLookupByLibrary.simpleMessage(
       "Permissions to get started",
     ),
     "permissionsContinueButton": MessageLookupByLibrary.simpleMessage(
-      "Allow required permissions",
+      "Grant required permissions",
     ),
     "permissionsMicrophoneDescription": MessageLookupByLibrary.simpleMessage(
-      "Used only when you choose to identify a song that is playing around you.",
+      "It is used only when you choose to identify a song that is playing around you.",
     ),
     "permissionsMicrophoneTitle": MessageLookupByLibrary.simpleMessage(
       "Microphone",
@@ -799,10 +814,10 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "permissionsOpenSettings": MessageLookupByLibrary.simpleMessage("Settings"),
     "permissionsRequiredNotice": MessageLookupByLibrary.simpleMessage(
-      "All three permissions are required to continue. You can change them later in system settings.",
+      "All three permits are required to continue. ",
     ),
     "permissionsStorageDescription": MessageLookupByLibrary.simpleMessage(
-      "Allows the app to read music, save downloads, export playlists, and prepare updates.",
+      "It allows you to play music, save downloads, export playlists and prepare updates.",
     ),
     "permissionsStorageTitle": MessageLookupByLibrary.simpleMessage(
       "Music and storage",

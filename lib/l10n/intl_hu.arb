@@ -517,5 +517,10 @@
   "permissionsContinueButton": "Adja meg a szükséges engedélyeket",
   "permissionsRequiredNotice": "A folytatáshoz mindhárom engedély szükséges. Ezeket később módosíthatja a rendszerbeállításokban.",
   "permissionsAllow": "Engedélyezze",
-  "permissionsOpenSettings": "Beállítások elemre"
+  "permissionsOpenSettings": "Beállítások elemre",
+  "auth_2fa_title": "Kéttényezős hitelesítés",
+  "auth_2fa_subtitle": "Írja be a hatjegyű kódot a hitelesítő alkalmazásból. Ez a hozzáférés 5 perc múlva lejár.",
+  "auth_2fa_code": "Hitelesítési kód",
+  "auth_2fa_verify": "Ellenőrizze és folytassa",
+  "auth_2fa_invalid": "Adjon meg egy érvényes 6 számjegyű kódot, vagy jelentkezzen be újra."
 }

@@ -1,11 +1,11 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'package:harmonymusic/generated/l10n.dart';
 import 'package:harmonymusic/services/auth/auth_service.dart';
 import 'widgets/animated_auth_background.dart';
 
-enum _MusicAuthMode { welcome, login, register, forgotPassword }
+enum _MusicAuthMode { welcome, login, twoFactor, register, forgotPassword }
 
 class MusicAuthScreen extends StatefulWidget {
   const MusicAuthScreen({super.key});
@@ -18,6 +18,7 @@ class _MusicAuthScreenState extends State<MusicAuthScreen> {
   final _loginFormKey = GlobalKey<FormState>();
   final _registerFormKey = GlobalKey<FormState>();
   final _forgotFormKey = GlobalKey<FormState>();
+  final _twoFactorFormKey = GlobalKey<FormState>();
 
   final _loginEmailController = TextEditingController();
   final _loginPasswordController = TextEditingController();
@@ -28,8 +29,10 @@ class _MusicAuthScreenState extends State<MusicAuthScreen> {
   final _registerPasswordController = TextEditingController();
   final _registerConfirmController = TextEditingController();
   final _recoveryEmailController = TextEditingController();
+  final _twoFactorCodeController = TextEditingController();
 
   _MusicAuthMode _mode = _MusicAuthMode.welcome;
+  String? _twoFactorChallengeToken;
   bool _isSubmitting = false;
   bool _agreePersonalData = true;
 
@@ -46,6 +49,7 @@ class _MusicAuthScreenState extends State<MusicAuthScreen> {
     _registerPasswordController.dispose();
     _registerConfirmController.dispose();
     _recoveryEmailController.dispose();
+    _twoFactorCodeController.dispose();
     super.dispose();
   }
 
@@ -69,8 +73,45 @@ class _MusicAuthScreenState extends State<MusicAuthScreen> {
       return;
     }
 
+    if (result['requires2FA'] == true) {
+      setState(() {
+        _twoFactorChallengeToken = result['challengeToken']?.toString();
+        _twoFactorCodeController.clear();
+        _mode = _MusicAuthMode.twoFactor;
+      });
+      return;
+    }
+
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(content: Text(_humanizeError(result['message']?.toString()))),
+    );
+  }
+
+  Future<void> _handleTwoFactor() async {
+    if (_isSubmitting ||
+        !(_twoFactorFormKey.currentState?.validate() ?? false) ||
+        _twoFactorChallengeToken == null) {
+      return;
+    }
+
+    setState(() => _isSubmitting = true);
+    final result = await _authService.verifyTwoFactor(
+      challengeToken: _twoFactorChallengeToken!,
+      code: _twoFactorCodeController.text,
+    );
+    if (!mounted) return;
+    setState(() => _isSubmitting = false);
+
+    if (result['success'] == true) {
+      _twoFactorChallengeToken = null;
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(S.of(context).auth_login_success)),
+      );
+      return;
+    }
+
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text(S.of(context).auth_2fa_invalid)),
     );
   }
 
@@ -250,6 +291,17 @@ class _MusicAuthScreenState extends State<MusicAuthScreen> {
           onForgotPassword: () =>
               setState(() => _mode = _MusicAuthMode.forgotPassword),
           onBack: () => setState(() => _mode = _MusicAuthMode.welcome),
+          isSubmitting: _isSubmitting,
+        ),
+      _MusicAuthMode.twoFactor => _TwoFactorCard(
+          key: const ValueKey('two-factor'),
+          formKey: _twoFactorFormKey,
+          codeController: _twoFactorCodeController,
+          onSubmit: _handleTwoFactor,
+          onBack: () => setState(() {
+            _twoFactorChallengeToken = null;
+            _mode = _MusicAuthMode.login;
+          }),
           isSubmitting: _isSubmitting,
         ),
       _MusicAuthMode.register => _RegisterCard(
@@ -572,6 +624,76 @@ class _LoginCard extends StatelessWidget {
                 child: Text(S.of(context).auth_forgot_password),
               ),
             ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _TwoFactorCard extends StatelessWidget {
+  const _TwoFactorCard({
+    super.key,
+    required this.formKey,
+    required this.codeController,
+    required this.onSubmit,
+    required this.onBack,
+    required this.isSubmitting,
+  });
+
+  final GlobalKey<FormState> formKey;
+  final TextEditingController codeController;
+  final VoidCallback onSubmit;
+  final VoidCallback onBack;
+  final bool isSubmitting;
+
+  @override
+  Widget build(BuildContext context) {
+    return Form(
+      key: formKey,
+      child: Column(
+        key: key,
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            S.of(context).auth_2fa_title,
+            style: const TextStyle(
+              fontSize: 30,
+              fontWeight: FontWeight.w800,
+              color: Colors.white,
+            ),
+          ),
+          const SizedBox(height: 8),
+          Text(
+            S.of(context).auth_2fa_subtitle,
+            style: const TextStyle(color: Colors.white70, height: 1.4),
+          ),
+          const SizedBox(height: 24),
+          _AuthTextField(
+            controller: codeController,
+            label: S.of(context).auth_2fa_code,
+            hint: '123456',
+            icon: Icons.security_rounded,
+            keyboardType: TextInputType.number,
+            validator: (value) {
+              final code = value?.trim() ?? '';
+              if (!RegExp(r'^\d{6}$').hasMatch(code)) {
+                return S.of(context).auth_2fa_invalid;
+              }
+              return null;
+            },
+          ),
+          const SizedBox(height: 22),
+          _PrimaryButton(
+            label: S.of(context).auth_2fa_verify,
+            loading: isSubmitting,
+            onPressed: onSubmit,
+          ),
+          const SizedBox(height: 8),
+          TextButton(
+            onPressed: isSubmitting ? null : onBack,
+            child: Text(S.of(context).back),
           ),
         ],
       ),

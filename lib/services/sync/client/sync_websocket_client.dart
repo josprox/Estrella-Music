@@ -5,148 +5,288 @@ import 'dart:io';
 import 'package:harmonymusic/utils/helpers/helper.dart';
 
 class SyncWebSocketClient {
+  static const _authenticationTimeout = Duration(seconds: 15);
+  static const _pushTimeout = Duration(seconds: 30);
+  static const _pingInterval = Duration(seconds: 30);
+
   Completer<bool>? _pushCompleter;
   Map<String, int>? _expectedPushCounts;
   WebSocket? _socket;
   StreamSubscription? _subscription;
-  bool _isSocketAuthenticated = false;
+  Timer? _authenticationTimer;
+  Timer? _pushTimer;
   Timer? _reconnectTimer;
+
+  bool _isSocketAuthenticated = false;
+  bool _shouldReconnect = false;
+  bool _disposed = false;
+  bool _connecting = false;
+  int _connectionGeneration = 0;
   int _reconnectDelaySeconds = 5;
+  String? _activeUrl;
+  String? _activeToken;
+  String? _desiredUrl;
+  String? _desiredToken;
+
   final String deviceId;
-
   final _onSyncUpdateController = StreamController<void>.broadcast();
-  Stream<void> get onSyncUpdate => _onSyncUpdateController.stream;
 
-  bool get isConnected => _socket != null;
-  bool get isAuthenticated => _isSocketAuthenticated;
+  Stream<void> get onSyncUpdate => _onSyncUpdateController.stream;
+  bool get isConnected => _socket?.readyState == WebSocket.open;
+  bool get isAuthenticated => isConnected && _isSocketAuthenticated;
 
   SyncWebSocketClient({required this.deviceId});
 
   Future<void> connect(String wsUrl, String token) async {
-    if (_socket != null) return;
-    printINFO("SyncWebSocketClient: Connecting to WS: $wsUrl");
+    if (_disposed || token.isEmpty) return;
+
+    _desiredUrl = wsUrl;
+    _desiredToken = token;
+    _shouldReconnect = true;
+
+    final connectionIsCurrent = (_socket != null || _connecting) &&
+        _activeUrl == wsUrl &&
+        _activeToken == token;
+    if (connectionIsCurrent) return;
+
+    _closeCurrentConnection();
+    _connecting = true;
+    _activeUrl = wsUrl;
+    _activeToken = token;
+    final generation = ++_connectionGeneration;
+
+    printINFO('SyncWebSocketClient: Connecting to WS: $wsUrl');
     try {
       _reconnectTimer?.cancel();
-      _socket =
-          await WebSocket.connect(wsUrl).timeout(const Duration(seconds: 10));
+      final socket = await WebSocket.connect(
+        wsUrl,
+      ).timeout(const Duration(seconds: 10));
+
+      if (_disposed ||
+          !_shouldReconnect ||
+          generation != _connectionGeneration) {
+        await socket.close();
+        return;
+      }
+
+      socket.pingInterval = _pingInterval;
+      _socket = socket;
       _isSocketAuthenticated = false;
 
-      _socket!.add(
-          jsonEncode({"type": "auth", "token": token, "device_id": deviceId}));
-
-      _subscription = _socket!.listen(
-        (message) {
-          _handleSocketMessage(message.toString(), wsUrl, token);
-        },
-        onError: (err) {
-          printERROR("SyncWebSocketClient: WS Error: $err");
-          _scheduleSocketReconnect(wsUrl, token);
+      _subscription = socket.listen(
+        (message) => _handleSocketMessage(
+          message.toString(),
+          generation,
+          socket,
+        ),
+        onError: (Object error) {
+          printERROR('SyncWebSocketClient: WS Error: $error');
+          _handleConnectionEnded(generation, socket);
         },
         onDone: () {
-          printINFO("SyncWebSocketClient: WS Connection closed.");
-          _scheduleSocketReconnect(wsUrl, token);
+          printINFO('SyncWebSocketClient: WS Connection closed.');
+          _handleConnectionEnded(generation, socket);
         },
+        cancelOnError: true,
       );
-    } catch (e) {
-      printERROR("SyncWebSocketClient: Connection failed: $e");
-      _scheduleSocketReconnect(wsUrl, token);
+
+      socket.add(
+        jsonEncode({'type': 'auth', 'token': token, 'device_id': deviceId}),
+      );
+      _authenticationTimer?.cancel();
+      _authenticationTimer = Timer(_authenticationTimeout, () {
+        if (generation == _connectionGeneration && !_isSocketAuthenticated) {
+          printERROR('SyncWebSocketClient: Authentication timed out.');
+          _handleConnectionEnded(generation, socket);
+          unawaited(socket.close());
+        }
+      });
+    } catch (error) {
+      printERROR('SyncWebSocketClient: Connection failed: $error');
+      if (generation == _connectionGeneration) {
+        _scheduleReconnect();
+      }
+    } finally {
+      if (generation == _connectionGeneration) {
+        _connecting = false;
+      }
     }
   }
 
-  void _scheduleSocketReconnect(String wsUrl, String token) {
-    _pushCompleter?.complete(false);
-    _pushCompleter = null;
-    _expectedPushCounts = null;
-    _socket = null;
+  void _handleConnectionEnded(int generation, WebSocket socket) {
+    if (generation != _connectionGeneration || !identical(_socket, socket)) {
+      return;
+    }
+
+    _authenticationTimer?.cancel();
+    _authenticationTimer = null;
     _subscription?.cancel();
     _subscription = null;
+    _socket = null;
     _isSocketAuthenticated = false;
+    _completePendingPush(false);
+    _scheduleReconnect();
+  }
+
+  void _scheduleReconnect() {
+    if (_disposed || !_shouldReconnect) return;
+    final wsUrl = _desiredUrl;
+    final token = _desiredToken;
+    if (wsUrl == null || token == null || token.isEmpty) return;
 
     _reconnectTimer?.cancel();
     final delay = _reconnectDelaySeconds;
-    printINFO("SyncWebSocketClient: Scheduling reconnect in $delay seconds...");
+    printINFO(
+      'SyncWebSocketClient: Scheduling reconnect in $delay seconds...',
+    );
     _reconnectTimer = Timer(Duration(seconds: delay), () {
-      connect(wsUrl, token);
+      if (_shouldReconnect && !_disposed) {
+        unawaited(connect(wsUrl, token));
+      }
     });
-
     _reconnectDelaySeconds = (_reconnectDelaySeconds * 2).clamp(5, 300);
   }
 
   void disconnect() {
-    _pushCompleter?.complete(false);
-    _pushCompleter = null;
-    _expectedPushCounts = null;
+    _shouldReconnect = false;
+    _desiredUrl = null;
+    _desiredToken = null;
     _reconnectTimer?.cancel();
+    _reconnectTimer = null;
+    _connectionGeneration++;
+    _closeCurrentConnection();
+    printINFO('SyncWebSocketClient: WS Disconnected.');
+  }
+
+  void _closeCurrentConnection() {
+    _authenticationTimer?.cancel();
+    _authenticationTimer = null;
+    _pushTimer?.cancel();
+    _pushTimer = null;
     _subscription?.cancel();
     _subscription = null;
-    _socket?.close();
+    final socket = _socket;
     _socket = null;
     _isSocketAuthenticated = false;
-    printINFO("SyncWebSocketClient: WS Disconnected.");
+    _connecting = false;
+    _activeUrl = null;
+    _activeToken = null;
+    _completePendingPush(false);
+    if (socket != null) {
+      unawaited(socket.close());
+    }
   }
 
   Future<bool> sendPushPayload(Map<String, dynamic> payload) {
-    if (_socket == null || !_isSocketAuthenticated) {
+    final socket = _socket;
+    if (socket == null || !isAuthenticated) {
       return Future.value(false);
     }
-    _pushCompleter?.complete(false); // cancel any previous pending push
+
+    _completePendingPush(false);
     _pushCompleter = Completer<bool>();
     _expectedPushCounts = _collectionCounts(payload);
+    _pushTimer = Timer(_pushTimeout, () {
+      printERROR('SyncWebSocketClient: Push acknowledgement timed out.');
+      _completePendingPush(false);
+    });
+
     try {
-      _socket!.add(jsonEncode(
-          {"type": "push", "payload": payload, "device_id": deviceId}));
+      socket.add(
+        jsonEncode({
+          'type': 'push',
+          'payload': payload,
+          'device_id': deviceId,
+        }),
+      );
       return _pushCompleter!.future;
-    } catch (e) {
-      printERROR("SyncWebSocketClient: Failed to send push: $e");
-      _pushCompleter = null;
+    } catch (error) {
+      printERROR('SyncWebSocketClient: Failed to send push: $error');
+      _completePendingPush(false);
       return Future.value(false);
     }
   }
 
-  void _handleSocketMessage(String raw, String wsUrl, String token) {
+  void _handleSocketMessage(
+    String raw,
+    int generation,
+    WebSocket socket,
+  ) {
+    if (generation != _connectionGeneration || !identical(_socket, socket)) {
+      return;
+    }
+
     try {
-      final Map<String, dynamic> data = jsonDecode(raw);
-      final String? type = data['type'];
-      printINFO("SyncWebSocketClient: WS Received message type: $type");
+      final decoded = jsonDecode(raw);
+      if (decoded is! Map) {
+        throw const FormatException('WebSocket payload is not an object');
+      }
+      final data = Map<String, dynamic>.from(decoded);
+      final type = data['type']?.toString();
+      printINFO('SyncWebSocketClient: WS Received message type: $type');
 
       switch (type) {
         case 'welcome':
+        case 'pong':
           break;
         case 'authenticated':
+          _authenticationTimer?.cancel();
+          _authenticationTimer = null;
           _isSocketAuthenticated = true;
           _reconnectDelaySeconds = 5;
-          printINFO("SyncWebSocketClient: WS Authenticated successfully.");
+          printINFO('SyncWebSocketClient: WS Authenticated successfully.');
           break;
         case 'auth_failed':
           _isSocketAuthenticated = false;
-          printERROR("SyncWebSocketClient: WS Auth failed: ${data['message']}");
+          printERROR(
+            'SyncWebSocketClient: WS Auth failed: ${data['message']}',
+          );
           disconnect();
           break;
         case 'sync_update':
+          if (data['origin_device_id']?.toString() == deviceId) {
+            break;
+          }
           printINFO(
-              "SyncWebSocketClient: WS received sync_update, notifying orchestrator...");
+            'SyncWebSocketClient: WS received sync_update, notifying orchestrator...',
+          );
           _onSyncUpdateController.add(null);
           break;
         case 'push_success':
           final valid = _summaryMatchesExpected(data['summary']);
           valid
               ? printINFO(
-                  "SyncWebSocketClient: WS push succeeded and was verified.")
+                  'SyncWebSocketClient: WS push succeeded and was verified.',
+                )
               : printERROR(
-                  "SyncWebSocketClient: WS push acknowledgement did not match the sent snapshot.");
-          _pushCompleter?.complete(valid);
-          _pushCompleter = null;
-          _expectedPushCounts = null;
+                  'SyncWebSocketClient: WS push acknowledgement did not match the sent snapshot.',
+                );
+          _completePendingPush(valid);
           break;
         case 'error':
-          printERROR("SyncWebSocketClient: WS Error: ${data['message']}");
-          _pushCompleter?.complete(false);
-          _pushCompleter = null;
-          _expectedPushCounts = null;
+          printERROR(
+            'SyncWebSocketClient: WS Error: ${data['message']}',
+          );
+          _completePendingPush(false);
           break;
+        default:
+          printERROR(
+            'SyncWebSocketClient: Unknown message type: $type',
+          );
       }
-    } catch (e) {
-      printERROR("SyncWebSocketClient: WS Error parsing message: $e");
+    } catch (error) {
+      printERROR('SyncWebSocketClient: WS Error parsing message: $error');
+    }
+  }
+
+  void _completePendingPush(bool result) {
+    _pushTimer?.cancel();
+    _pushTimer = null;
+    final completer = _pushCompleter;
+    _pushCompleter = null;
+    _expectedPushCounts = null;
+    if (completer != null && !completer.isCompleted) {
+      completer.complete(result);
     }
   }
 
@@ -174,6 +314,8 @@ class SyncWebSocketClient {
   }
 
   void dispose() {
+    if (_disposed) return;
+    _disposed = true;
     disconnect();
     _onSyncUpdateController.close();
   }

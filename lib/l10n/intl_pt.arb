@@ -680,5 +680,10 @@
   "permissionsContinueButton": "Conceda as permissões necessárias",
   "permissionsRequiredNotice": "Todas as três licenças são necessárias para continuar. Você pode alterá-los posteriormente nas configurações do sistema.",
   "permissionsAllow": "Permitir",
-  "permissionsOpenSettings": "Configurações"
+  "permissionsOpenSettings": "Configurações",
+  "auth_2fa_title": "Autenticação de dois fatores",
+  "auth_2fa_subtitle": "Insira o código de 6 dígitos do seu aplicativo autenticador. Este acesso expira em 5 minutos.",
+  "auth_2fa_code": "Código de autenticação",
+  "auth_2fa_verify": "Verifique e continue",
+  "auth_2fa_invalid": "Insira um código válido de 6 dígitos ou faça login novamente."
 }

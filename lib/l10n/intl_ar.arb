@@ -652,5 +652,10 @@
   "permissionsContinueButton": "منح الأذونات المطلوبة",
   "permissionsRequiredNotice": "جميع التصاريح الثلاثة مطلوبة للمتابعة. ويمكنك تغييرها لاحقًا في إعدادات النظام.",
   "permissionsAllow": "يسمح",
-  "permissionsOpenSettings": "إعدادات"
+  "permissionsOpenSettings": "إعدادات",
+  "auth_2fa_title": "المصادقة الثنائية",
+  "auth_2fa_subtitle": "أدخل الرمز المكون من 6 أرقام من تطبيق المصادقة الخاص بك. تنتهي صلاحية هذا الوصول خلال 5 دقائق.",
+  "auth_2fa_code": "رمز المصادقة",
+  "auth_2fa_verify": "تحقق واستمر",
+  "auth_2fa_invalid": "أدخل رمزًا صالحًا مكونًا من 6 أرقام أو قم بتسجيل الدخول مرة أخرى."
 }

@@ -79,6 +79,21 @@ class MessageLookup extends MessageLookupByLibrary {
       "Według Twoich upodobań",
     ),
     "audioCodec": MessageLookupByLibrary.simpleMessage("Kodek dźwięku"),
+    "auth_2fa_code": MessageLookupByLibrary.simpleMessage(
+      "Kod uwierzytelniający",
+    ),
+    "auth_2fa_invalid": MessageLookupByLibrary.simpleMessage(
+      "Wprowadź ważny 6-cyfrowy kod lub zaloguj się ponownie.",
+    ),
+    "auth_2fa_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Wprowadź 6-cyfrowy kod z aplikacji uwierzytelniającej. Dostęp ten wygasa za 5 minut.",
+    ),
+    "auth_2fa_title": MessageLookupByLibrary.simpleMessage(
+      "Uwierzytelnianie dwuskładnikowe",
+    ),
+    "auth_2fa_verify": MessageLookupByLibrary.simpleMessage(
+      "Sprawdź i kontynuuj",
+    ),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Akceptuj moje dane...",
     ),
@@ -682,6 +697,40 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "password": MessageLookupByLibrary.simpleMessage("Hasło"),
     "password_text": MessageLookupByLibrary.simpleMessage("Hasło"),
+    "permissionsAllow": MessageLookupByLibrary.simpleMessage("Umożliwić"),
+    "permissionsConsentDescription": MessageLookupByLibrary.simpleMessage(
+      "Estrella Music potrzebuje tych uprawnień, aby zarządzać Twoją muzyką i oferować wszystkie funkcje odtwarzania.",
+    ),
+    "permissionsConsentTitle": MessageLookupByLibrary.simpleMessage(
+      "Uprawnienia do rozpoczęcia",
+    ),
+    "permissionsContinueButton": MessageLookupByLibrary.simpleMessage(
+      "Przyznaj wymagane uprawnienia",
+    ),
+    "permissionsMicrophoneDescription": MessageLookupByLibrary.simpleMessage(
+      "Jest używany tylko wtedy, gdy zdecydujesz się zidentyfikować piosenkę odtwarzaną wokół ciebie.",
+    ),
+    "permissionsMicrophoneTitle": MessageLookupByLibrary.simpleMessage(
+      "Mikrofon",
+    ),
+    "permissionsNotificationsDescription": MessageLookupByLibrary.simpleMessage(
+      "Pokazuje elementy sterujące odtwarzaniem, postęp pobierania i ważne powiadomienia o aplikacjach.",
+    ),
+    "permissionsNotificationsTitle": MessageLookupByLibrary.simpleMessage(
+      "Powiadomienia",
+    ),
+    "permissionsOpenSettings": MessageLookupByLibrary.simpleMessage(
+      "Ustawienia",
+    ),
+    "permissionsRequiredNotice": MessageLookupByLibrary.simpleMessage(
+      "Aby kontynuować, wymagane są wszystkie trzy zezwolenia. Możesz je później zmienić w ustawieniach systemu.",
+    ),
+    "permissionsStorageDescription": MessageLookupByLibrary.simpleMessage(
+      "Umożliwia odtwarzanie muzyki, zapisywanie pobranych plików, eksportowanie list odtwarzania i przygotowywanie aktualizacji.",
+    ),
+    "permissionsStorageTitle": MessageLookupByLibrary.simpleMessage(
+      "Muzyka i przechowywanie",
+    ),
     "personalisation": MessageLookupByLibrary.simpleMessage("Personalizacja"),
     "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage(
       "Przesłana playlista",

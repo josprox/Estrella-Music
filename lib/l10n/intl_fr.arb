@@ -690,5 +690,10 @@
   "permissionsContinueButton": "Accorder les autorisations requises",
   "permissionsRequiredNotice": "Les trois permis sont nécessaires pour continuer. Vous pourrez les modifier ultérieurement dans les paramètres système.",
   "permissionsAllow": "Permettre",
-  "permissionsOpenSettings": "Paramètres"
+  "permissionsOpenSettings": "Paramètres",
+  "auth_2fa_title": "Authentification à deux facteurs",
+  "auth_2fa_subtitle": "Saisissez le code à 6 chiffres de votre application d'authentification. Cet accès expire dans 5 minutes.",
+  "auth_2fa_code": "Code d'authentification",
+  "auth_2fa_verify": "Vérifiez et continuez",
+  "auth_2fa_invalid": "Entrez un code valide à 6 chiffres ou connectez-vous à nouveau."
 }

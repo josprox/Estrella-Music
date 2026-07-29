@@ -83,6 +83,21 @@ class MessageLookup extends MessageLookupByLibrary {
       "De acordo com seus gostos",
     ),
     "audioCodec": MessageLookupByLibrary.simpleMessage("Codec"),
+    "auth_2fa_code": MessageLookupByLibrary.simpleMessage(
+      "Código de autenticação",
+    ),
+    "auth_2fa_invalid": MessageLookupByLibrary.simpleMessage(
+      "Insira um código válido de 6 dígitos ou faça login novamente.",
+    ),
+    "auth_2fa_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Insira o código de 6 dígitos do seu aplicativo autenticador. Este acesso expira em 5 minutos.",
+    ),
+    "auth_2fa_title": MessageLookupByLibrary.simpleMessage(
+      "Autenticação de dois fatores",
+    ),
+    "auth_2fa_verify": MessageLookupByLibrary.simpleMessage(
+      "Verifique e continue",
+    ),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Aceito usar meus dados...",
     ),
@@ -676,6 +691,40 @@ class MessageLookup extends MessageLookupByLibrary {
     "operationFailed": MessageLookupByLibrary.simpleMessage("Operação falhou"),
     "password": MessageLookupByLibrary.simpleMessage("Senha"),
     "password_text": MessageLookupByLibrary.simpleMessage("Senha"),
+    "permissionsAllow": MessageLookupByLibrary.simpleMessage("Permitir"),
+    "permissionsConsentDescription": MessageLookupByLibrary.simpleMessage(
+      "Estrella Music precisa dessas permissões para gerenciar suas músicas e oferecer todos os recursos de reprodução.",
+    ),
+    "permissionsConsentTitle": MessageLookupByLibrary.simpleMessage(
+      "Permissões para começar",
+    ),
+    "permissionsContinueButton": MessageLookupByLibrary.simpleMessage(
+      "Conceda as permissões necessárias",
+    ),
+    "permissionsMicrophoneDescription": MessageLookupByLibrary.simpleMessage(
+      "É usado apenas quando você escolhe identificar uma música que está tocando ao seu redor.",
+    ),
+    "permissionsMicrophoneTitle": MessageLookupByLibrary.simpleMessage(
+      "Microfone",
+    ),
+    "permissionsNotificationsDescription": MessageLookupByLibrary.simpleMessage(
+      "Mostra controles de reprodução, progresso de download e avisos importantes de aplicativos.",
+    ),
+    "permissionsNotificationsTitle": MessageLookupByLibrary.simpleMessage(
+      "Notificações",
+    ),
+    "permissionsOpenSettings": MessageLookupByLibrary.simpleMessage(
+      "Configurações",
+    ),
+    "permissionsRequiredNotice": MessageLookupByLibrary.simpleMessage(
+      "Todas as três licenças são necessárias para continuar. Você pode alterá-los posteriormente nas configurações do sistema.",
+    ),
+    "permissionsStorageDescription": MessageLookupByLibrary.simpleMessage(
+      "Ele permite reproduzir músicas, salvar downloads, exportar playlists e preparar atualizações.",
+    ),
+    "permissionsStorageTitle": MessageLookupByLibrary.simpleMessage(
+      "Música e armazenamento",
+    ),
     "personalisation": MessageLookupByLibrary.simpleMessage("Personalização"),
     "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage(
       "Lista de reprodução canalizada",

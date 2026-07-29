@@ -4784,10 +4784,10 @@ class S {
     );
   }
 
-  /// `Estrella Music needs these permissions to manage your music and provide all playback features.`
+  /// `Estrella Music needs these permissions to manage your music and offer all playback features.`
   String get permissionsConsentDescription {
     return Intl.message(
-      'Estrella Music needs these permissions to manage your music and provide all playback features.',
+      'Estrella Music needs these permissions to manage your music and offer all playback features.',
       name: 'permissionsConsentDescription',
       desc: '',
       args: [],
@@ -4804,10 +4804,10 @@ class S {
     );
   }
 
-  /// `Allows the app to read music, save downloads, export playlists, and prepare updates.`
+  /// `It allows you to play music, save downloads, export playlists and prepare updates.`
   String get permissionsStorageDescription {
     return Intl.message(
-      'Allows the app to read music, save downloads, export playlists, and prepare updates.',
+      'It allows you to play music, save downloads, export playlists and prepare updates.',
       name: 'permissionsStorageDescription',
       desc: '',
       args: [],
@@ -4844,30 +4844,30 @@ class S {
     );
   }
 
-  /// `Used only when you choose to identify a song that is playing around you.`
+  /// `It is used only when you choose to identify a song that is playing around you.`
   String get permissionsMicrophoneDescription {
     return Intl.message(
-      'Used only when you choose to identify a song that is playing around you.',
+      'It is used only when you choose to identify a song that is playing around you.',
       name: 'permissionsMicrophoneDescription',
       desc: '',
       args: [],
     );
   }
 
-  /// `Allow required permissions`
+  /// `Grant required permissions`
   String get permissionsContinueButton {
     return Intl.message(
-      'Allow required permissions',
+      'Grant required permissions',
       name: 'permissionsContinueButton',
       desc: '',
       args: [],
     );
   }
 
-  /// `All three permissions are required to continue. You can change them later in system settings.`
+  /// `All three permits are required to continue. `
   String get permissionsRequiredNotice {
     return Intl.message(
-      'All three permissions are required to continue. You can change them later in system settings.',
+      'All three permits are required to continue. ',
       name: 'permissionsRequiredNotice',
       desc: '',
       args: [],
@@ -4884,6 +4884,56 @@ class S {
     return Intl.message(
       'Settings',
       name: 'permissionsOpenSettings',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Two-factor authentication`
+  String get auth_2fa_title {
+    return Intl.message(
+      'Two-factor authentication',
+      name: 'auth_2fa_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter the 6-digit code from your authenticator app. `
+  String get auth_2fa_subtitle {
+    return Intl.message(
+      'Enter the 6-digit code from your authenticator app. ',
+      name: 'auth_2fa_subtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Authentication code`
+  String get auth_2fa_code {
+    return Intl.message(
+      'Authentication code',
+      name: 'auth_2fa_code',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Check and continue`
+  String get auth_2fa_verify {
+    return Intl.message(
+      'Check and continue',
+      name: 'auth_2fa_verify',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter a valid 6-digit code or sign in again.`
+  String get auth_2fa_invalid {
+    return Intl.message(
+      'Enter a valid 6-digit code or sign in again.',
+      name: 'auth_2fa_invalid',
       desc: '',
       args: [],
     );

@@ -58,6 +58,19 @@ class MessageLookup extends MessageLookupByLibrary {
     "artistsByTaste": MessageLookupByLibrary.simpleMessage(
       "Az Ön ízlése szerint",
     ),
+    "auth_2fa_code": MessageLookupByLibrary.simpleMessage("Hitelesítési kód"),
+    "auth_2fa_invalid": MessageLookupByLibrary.simpleMessage(
+      "Adjon meg egy érvényes 6 számjegyű kódot, vagy jelentkezzen be újra.",
+    ),
+    "auth_2fa_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Írja be a hatjegyű kódot a hitelesítő alkalmazásból. Ez a hozzáférés 5 perc múlva lejár.",
+    ),
+    "auth_2fa_title": MessageLookupByLibrary.simpleMessage(
+      "Kéttényezős hitelesítés",
+    ),
+    "auth_2fa_verify": MessageLookupByLibrary.simpleMessage(
+      "Ellenőrizze és folytassa",
+    ),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Acepto usar mis datos...",
     ),
@@ -434,6 +447,40 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "openIn": MessageLookupByLibrary.simpleMessage("Megnyitás itt:"),
     "password_text": MessageLookupByLibrary.simpleMessage("Jelszó"),
+    "permissionsAllow": MessageLookupByLibrary.simpleMessage("Engedélyezze"),
+    "permissionsConsentDescription": MessageLookupByLibrary.simpleMessage(
+      "Az Estrella Musicnak szüksége van ezekre az engedélyekre a zene kezeléséhez és az összes lejátszási funkció biztosításához.",
+    ),
+    "permissionsConsentTitle": MessageLookupByLibrary.simpleMessage(
+      "Engedélyek az induláshoz",
+    ),
+    "permissionsContinueButton": MessageLookupByLibrary.simpleMessage(
+      "Adja meg a szükséges engedélyeket",
+    ),
+    "permissionsMicrophoneDescription": MessageLookupByLibrary.simpleMessage(
+      "Csak akkor használatos, ha úgy dönt, hogy azonosít egy dalt, amely körülötted szól.",
+    ),
+    "permissionsMicrophoneTitle": MessageLookupByLibrary.simpleMessage(
+      "Mikrofon",
+    ),
+    "permissionsNotificationsDescription": MessageLookupByLibrary.simpleMessage(
+      "Megjeleníti a lejátszási vezérlőket, a letöltési folyamatot és az alkalmazásokkal kapcsolatos fontos megjegyzéseket.",
+    ),
+    "permissionsNotificationsTitle": MessageLookupByLibrary.simpleMessage(
+      "Értesítések",
+    ),
+    "permissionsOpenSettings": MessageLookupByLibrary.simpleMessage(
+      "Beállítások elemre",
+    ),
+    "permissionsRequiredNotice": MessageLookupByLibrary.simpleMessage(
+      "A folytatáshoz mindhárom engedély szükséges. Ezeket később módosíthatja a rendszerbeállításokban.",
+    ),
+    "permissionsStorageDescription": MessageLookupByLibrary.simpleMessage(
+      "Lehetővé teszi zenék lejátszását, letöltések mentését, lejátszási listák exportálását és frissítések előkészítését.",
+    ),
+    "permissionsStorageTitle": MessageLookupByLibrary.simpleMessage(
+      "Zene és tárolás",
+    ),
     "personalisation": MessageLookupByLibrary.simpleMessage("Személyreszabás"),
     "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage(
       "Piped Playlist",

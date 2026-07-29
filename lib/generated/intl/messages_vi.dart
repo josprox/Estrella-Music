@@ -81,6 +81,19 @@ class MessageLookup extends MessageLookupByLibrary {
       "Theo sở thích của bạn",
     ),
     "audioCodec": MessageLookupByLibrary.simpleMessage("Mã hoá tiếng"),
+    "auth_2fa_code": MessageLookupByLibrary.simpleMessage("Mã xác thực"),
+    "auth_2fa_invalid": MessageLookupByLibrary.simpleMessage(
+      "Nhập mã gồm 6 chữ số hợp lệ hoặc đăng nhập lại.",
+    ),
+    "auth_2fa_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Nhập mã gồm 6 chữ số từ ứng dụng xác thực của bạn. Quyền truy cập này sẽ hết hạn sau 5 phút.",
+    ),
+    "auth_2fa_title": MessageLookupByLibrary.simpleMessage(
+      "Xác thực hai yếu tố",
+    ),
+    "auth_2fa_verify": MessageLookupByLibrary.simpleMessage(
+      "Kiểm tra và tiếp tục",
+    ),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Chấp nhận sử dụng dữ liệu sai...",
     ),
@@ -701,6 +714,36 @@ class MessageLookup extends MessageLookupByLibrary {
     "operationFailed": MessageLookupByLibrary.simpleMessage("Lỗi hệ thống"),
     "password": MessageLookupByLibrary.simpleMessage("Mật khẩu"),
     "password_text": MessageLookupByLibrary.simpleMessage("Mật khẩu"),
+    "permissionsAllow": MessageLookupByLibrary.simpleMessage("Cho phép"),
+    "permissionsConsentDescription": MessageLookupByLibrary.simpleMessage(
+      "Estrella Music cần những quyền này để quản lý nhạc của bạn và cung cấp tất cả các tính năng phát lại.",
+    ),
+    "permissionsConsentTitle": MessageLookupByLibrary.simpleMessage(
+      "Quyền để bắt đầu",
+    ),
+    "permissionsContinueButton": MessageLookupByLibrary.simpleMessage(
+      "Cấp quyền cần thiết",
+    ),
+    "permissionsMicrophoneDescription": MessageLookupByLibrary.simpleMessage(
+      "Nó chỉ được sử dụng khi bạn chọn xác định một bài hát đang phát xung quanh bạn.",
+    ),
+    "permissionsMicrophoneTitle": MessageLookupByLibrary.simpleMessage("Micrô"),
+    "permissionsNotificationsDescription": MessageLookupByLibrary.simpleMessage(
+      "Hiển thị các điều khiển phát lại, tiến trình tải xuống và các thông báo ứng dụng quan trọng.",
+    ),
+    "permissionsNotificationsTitle": MessageLookupByLibrary.simpleMessage(
+      "Thông báo",
+    ),
+    "permissionsOpenSettings": MessageLookupByLibrary.simpleMessage("Cài đặt"),
+    "permissionsRequiredNotice": MessageLookupByLibrary.simpleMessage(
+      "Tất cả ba giấy phép được yêu cầu để tiếp tục. Bạn có thể thay đổi chúng sau trong cài đặt hệ thống.",
+    ),
+    "permissionsStorageDescription": MessageLookupByLibrary.simpleMessage(
+      "Nó cho phép bạn phát nhạc, lưu tải xuống, xuất danh sách phát và chuẩn bị cập nhật.",
+    ),
+    "permissionsStorageTitle": MessageLookupByLibrary.simpleMessage(
+      "Âm nhạc và lưu trữ",
+    ),
     "personalisation": MessageLookupByLibrary.simpleMessage("Cá nhân hoá"),
     "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage(
       "Danh sách phát theo đường ống",

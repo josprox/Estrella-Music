@@ -68,6 +68,15 @@ class MessageLookup extends MessageLookupByLibrary {
     "artists": MessageLookupByLibrary.simpleMessage("アーティスト"),
     "artistsByTaste": MessageLookupByLibrary.simpleMessage("あなたの好みに合わせて"),
     "audioCodec": MessageLookupByLibrary.simpleMessage("音声コーデック"),
+    "auth_2fa_code": MessageLookupByLibrary.simpleMessage("認証コード"),
+    "auth_2fa_invalid": MessageLookupByLibrary.simpleMessage(
+      "有効な 6 桁のコードを入力するか、再度サインインしてください。",
+    ),
+    "auth_2fa_subtitle": MessageLookupByLibrary.simpleMessage(
+      "認証アプリから 6 桁のコードを入力します。このアクセスは 5 分で期限切れになります。",
+    ),
+    "auth_2fa_title": MessageLookupByLibrary.simpleMessage("二要素認証"),
+    "auth_2fa_verify": MessageLookupByLibrary.simpleMessage("確認して続行"),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "アセプトのユーザーミスダトス...",
     ),
@@ -548,6 +557,34 @@ class MessageLookup extends MessageLookupByLibrary {
     "operationFailed": MessageLookupByLibrary.simpleMessage("操作に失敗"),
     "password": MessageLookupByLibrary.simpleMessage("パスワード"),
     "password_text": MessageLookupByLibrary.simpleMessage("パスワード"),
+    "permissionsAllow": MessageLookupByLibrary.simpleMessage("許可する"),
+    "permissionsConsentDescription": MessageLookupByLibrary.simpleMessage(
+      "Estrella Music では、音楽を管理し、すべての再生機能を提供するためにこれらの権限が必要です。",
+    ),
+    "permissionsConsentTitle": MessageLookupByLibrary.simpleMessage(
+      "開始するための権限",
+    ),
+    "permissionsContinueButton": MessageLookupByLibrary.simpleMessage(
+      "必要な権限を付与する",
+    ),
+    "permissionsMicrophoneDescription": MessageLookupByLibrary.simpleMessage(
+      "これは、周囲で流れている曲を特定する場合にのみ使用されます。",
+    ),
+    "permissionsMicrophoneTitle": MessageLookupByLibrary.simpleMessage(
+      "マイクロフォン",
+    ),
+    "permissionsNotificationsDescription": MessageLookupByLibrary.simpleMessage(
+      "再生コントロール、ダウンロードの進行状況、アプリの重要な通知を表示します。",
+    ),
+    "permissionsNotificationsTitle": MessageLookupByLibrary.simpleMessage("通知"),
+    "permissionsOpenSettings": MessageLookupByLibrary.simpleMessage("設定"),
+    "permissionsRequiredNotice": MessageLookupByLibrary.simpleMessage(
+      "継続するには 3 つの許可すべてが必要です。後でシステム設定で変更できます。",
+    ),
+    "permissionsStorageDescription": MessageLookupByLibrary.simpleMessage(
+      "音楽の再生、ダウンロードの保存、プレイリストのエクスポート、アップデートの準備が可能です。",
+    ),
+    "permissionsStorageTitle": MessageLookupByLibrary.simpleMessage("音楽とストレージ"),
     "personalisation": MessageLookupByLibrary.simpleMessage("カスタマイズ"),
     "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage(
       "パイプされたプレイリスト",

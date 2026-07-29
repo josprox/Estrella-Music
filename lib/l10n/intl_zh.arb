@@ -418,5 +418,10 @@
   "permissionsContinueButton": "授予所需的权限",
   "permissionsRequiredNotice": "需要所有三项许可证才能继续。您可以稍后在系统设置中更改它们。",
   "permissionsAllow": "允许",
-  "permissionsOpenSettings": "设置"
+  "permissionsOpenSettings": "设置",
+  "auth_2fa_title": "双因素身份验证",
+  "auth_2fa_subtitle": "输入验证器应用程序中的 6 位数代码。此访问权限将在 5 分钟后过期。",
+  "auth_2fa_code": "验证码",
+  "auth_2fa_verify": "检查并继续",
+  "auth_2fa_invalid": "输入有效的 6 位数代码或重新登录。"
 }

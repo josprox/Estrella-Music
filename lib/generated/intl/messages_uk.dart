@@ -83,6 +83,19 @@ class MessageLookup extends MessageLookupByLibrary {
       "Відповідно до ваших смаків",
     ),
     "audioCodec": MessageLookupByLibrary.simpleMessage("Аудіокодек"),
+    "auth_2fa_code": MessageLookupByLibrary.simpleMessage("Код автентифікації"),
+    "auth_2fa_invalid": MessageLookupByLibrary.simpleMessage(
+      "Введіть дійсний 6-значний код або увійдіть знову.",
+    ),
+    "auth_2fa_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Введіть 6-значний код із програми автентифікації. Цей доступ закінчується через 5 хвилин.",
+    ),
+    "auth_2fa_title": MessageLookupByLibrary.simpleMessage(
+      "Двофакторна аутентифікація",
+    ),
+    "auth_2fa_verify": MessageLookupByLibrary.simpleMessage(
+      "Перевірте та продовжуйте",
+    ),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Acepto usar mis datos...",
     ),
@@ -705,6 +718,40 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "password": MessageLookupByLibrary.simpleMessage("Пароль"),
     "password_text": MessageLookupByLibrary.simpleMessage("Пароль"),
+    "permissionsAllow": MessageLookupByLibrary.simpleMessage("Дозволити"),
+    "permissionsConsentDescription": MessageLookupByLibrary.simpleMessage(
+      "Estrella Music потрібні ці дозволи, щоб керувати вашою музикою та запропонувати всі функції відтворення.",
+    ),
+    "permissionsConsentTitle": MessageLookupByLibrary.simpleMessage(
+      "Дозволи для початку",
+    ),
+    "permissionsContinueButton": MessageLookupByLibrary.simpleMessage(
+      "Надайте необхідні дозволи",
+    ),
+    "permissionsMicrophoneDescription": MessageLookupByLibrary.simpleMessage(
+      "Він використовується лише тоді, коли ви вирішуєте визначити пісню, яка звучить навколо вас.",
+    ),
+    "permissionsMicrophoneTitle": MessageLookupByLibrary.simpleMessage(
+      "мікрофон",
+    ),
+    "permissionsNotificationsDescription": MessageLookupByLibrary.simpleMessage(
+      "Показує елементи керування відтворенням, хід завантаження та важливі сповіщення про програми.",
+    ),
+    "permissionsNotificationsTitle": MessageLookupByLibrary.simpleMessage(
+      "Сповіщення",
+    ),
+    "permissionsOpenSettings": MessageLookupByLibrary.simpleMessage(
+      "Налаштування",
+    ),
+    "permissionsRequiredNotice": MessageLookupByLibrary.simpleMessage(
+      "Для продовження потрібні всі три дозволи. Ви можете змінити їх пізніше в налаштуваннях системи.",
+    ),
+    "permissionsStorageDescription": MessageLookupByLibrary.simpleMessage(
+      "Це дозволяє відтворювати музику, зберігати завантаження, експортувати списки відтворення та готувати оновлення.",
+    ),
+    "permissionsStorageTitle": MessageLookupByLibrary.simpleMessage(
+      "Музика та зберігання",
+    ),
     "personalisation": MessageLookupByLibrary.simpleMessage("Персоналізація"),
     "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage(
       "Конвеєрний список відтворення",

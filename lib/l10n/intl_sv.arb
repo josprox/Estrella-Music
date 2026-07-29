@@ -579,5 +579,10 @@
   "permissionsContinueButton": "Bevilja nödvändiga behörigheter",
   "permissionsRequiredNotice": "Alla tre tillstånd krävs för att fortsätta. Du kan ändra dem senare i systeminställningarna.",
   "permissionsAllow": "Tillåta",
-  "permissionsOpenSettings": "Inställningar"
+  "permissionsOpenSettings": "Inställningar",
+  "auth_2fa_title": "Tvåfaktorsautentisering",
+  "auth_2fa_subtitle": "Ange den sexsiffriga koden från din autentiseringsapp. Denna åtkomst löper ut om 5 minuter.",
+  "auth_2fa_code": "Autentiseringskod",
+  "auth_2fa_verify": "Kontrollera och fortsätt",
+  "auth_2fa_invalid": "Ange en giltig 6-siffrig kod eller logga in igen."
 }

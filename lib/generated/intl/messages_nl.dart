@@ -75,6 +75,19 @@ class MessageLookup extends MessageLookupByLibrary {
     "artistsByTaste": MessageLookupByLibrary.simpleMessage(
       "Volgens jouw smaak",
     ),
+    "auth_2fa_code": MessageLookupByLibrary.simpleMessage("Authenticatiecode"),
+    "auth_2fa_invalid": MessageLookupByLibrary.simpleMessage(
+      "Voer een geldige 6-cijferige code in of log opnieuw in.",
+    ),
+    "auth_2fa_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Voer de 6-cijferige code van uw authenticator-app in. Deze toegang vervalt over 5 minuten.",
+    ),
+    "auth_2fa_title": MessageLookupByLibrary.simpleMessage(
+      "Tweefactorauthenticatie",
+    ),
+    "auth_2fa_verify": MessageLookupByLibrary.simpleMessage(
+      "Controleer en ga verder",
+    ),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Gebruik verkeerde gegevens...",
     ),
@@ -564,6 +577,40 @@ class MessageLookup extends MessageLookupByLibrary {
     "operationFailed": MessageLookupByLibrary.simpleMessage("Operatie gefaald"),
     "password": MessageLookupByLibrary.simpleMessage("Wachtwoord"),
     "password_text": MessageLookupByLibrary.simpleMessage("Wachtwoord"),
+    "permissionsAllow": MessageLookupByLibrary.simpleMessage("Toestaan"),
+    "permissionsConsentDescription": MessageLookupByLibrary.simpleMessage(
+      "Estrella Music heeft deze machtigingen nodig om je muziek te beheren en alle afspeelfuncties aan te bieden.",
+    ),
+    "permissionsConsentTitle": MessageLookupByLibrary.simpleMessage(
+      "Machtigingen om aan de slag te gaan",
+    ),
+    "permissionsContinueButton": MessageLookupByLibrary.simpleMessage(
+      "Verleen de vereiste machtigingen",
+    ),
+    "permissionsMicrophoneDescription": MessageLookupByLibrary.simpleMessage(
+      "Het wordt alleen gebruikt als u ervoor kiest een nummer te identificeren dat om u heen wordt afgespeeld.",
+    ),
+    "permissionsMicrophoneTitle": MessageLookupByLibrary.simpleMessage(
+      "Microfoon",
+    ),
+    "permissionsNotificationsDescription": MessageLookupByLibrary.simpleMessage(
+      "Toont afspeelknoppen, downloadvoortgang en belangrijke app-meldingen.",
+    ),
+    "permissionsNotificationsTitle": MessageLookupByLibrary.simpleMessage(
+      "Meldingen",
+    ),
+    "permissionsOpenSettings": MessageLookupByLibrary.simpleMessage(
+      "Instellingen",
+    ),
+    "permissionsRequiredNotice": MessageLookupByLibrary.simpleMessage(
+      "Alle drie de vergunningen zijn vereist om door te kunnen gaan. U kunt ze later wijzigen in de systeeminstellingen.",
+    ),
+    "permissionsStorageDescription": MessageLookupByLibrary.simpleMessage(
+      "Hiermee kunt u muziek afspelen, downloads opslaan, afspeellijsten exporteren en updates voorbereiden.",
+    ),
+    "permissionsStorageTitle": MessageLookupByLibrary.simpleMessage(
+      "Muziek en opslag",
+    ),
     "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage(
       "Doorgesluisde afspeellijst",
     ),

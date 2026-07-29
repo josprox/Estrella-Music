@@ -79,6 +79,19 @@ class MessageLookup extends MessageLookupByLibrary {
       "Sesuai selera Anda",
     ),
     "audioCodec": MessageLookupByLibrary.simpleMessage("Codec Audio"),
+    "auth_2fa_code": MessageLookupByLibrary.simpleMessage("Kode otentikasi"),
+    "auth_2fa_invalid": MessageLookupByLibrary.simpleMessage(
+      "Masukkan kode 6 digit yang valid atau masuk lagi.",
+    ),
+    "auth_2fa_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Masukkan kode 6 digit dari aplikasi autentikator Anda. Akses ini berakhir dalam 5 menit.",
+    ),
+    "auth_2fa_title": MessageLookupByLibrary.simpleMessage(
+      "Otentikasi dua faktor",
+    ),
+    "auth_2fa_verify": MessageLookupByLibrary.simpleMessage(
+      "Periksa dan lanjutkan",
+    ),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Terima penggunaan data yang salah...",
     ),
@@ -682,6 +695,40 @@ class MessageLookup extends MessageLookupByLibrary {
     "operationFailed": MessageLookupByLibrary.simpleMessage("Operasi gagal"),
     "password": MessageLookupByLibrary.simpleMessage("Sandi"),
     "password_text": MessageLookupByLibrary.simpleMessage("Kata sandi"),
+    "permissionsAllow": MessageLookupByLibrary.simpleMessage("Mengizinkan"),
+    "permissionsConsentDescription": MessageLookupByLibrary.simpleMessage(
+      "Estrella Music memerlukan izin ini untuk mengelola musik Anda dan menawarkan semua fitur pemutaran.",
+    ),
+    "permissionsConsentTitle": MessageLookupByLibrary.simpleMessage(
+      "Izin untuk memulai",
+    ),
+    "permissionsContinueButton": MessageLookupByLibrary.simpleMessage(
+      "Berikan izin yang diperlukan",
+    ),
+    "permissionsMicrophoneDescription": MessageLookupByLibrary.simpleMessage(
+      "Ini hanya digunakan ketika Anda memilih untuk mengidentifikasi lagu yang diputar di sekitar Anda.",
+    ),
+    "permissionsMicrophoneTitle": MessageLookupByLibrary.simpleMessage(
+      "Mikropon",
+    ),
+    "permissionsNotificationsDescription": MessageLookupByLibrary.simpleMessage(
+      "Menampilkan kontrol pemutaran, kemajuan pengunduhan, dan pemberitahuan aplikasi penting.",
+    ),
+    "permissionsNotificationsTitle": MessageLookupByLibrary.simpleMessage(
+      "Pemberitahuan",
+    ),
+    "permissionsOpenSettings": MessageLookupByLibrary.simpleMessage(
+      "Pengaturan",
+    ),
+    "permissionsRequiredNotice": MessageLookupByLibrary.simpleMessage(
+      "Ketiga izin tersebut diperlukan untuk melanjutkan. Anda dapat mengubahnya nanti di pengaturan sistem.",
+    ),
+    "permissionsStorageDescription": MessageLookupByLibrary.simpleMessage(
+      "Ini memungkinkan Anda memutar musik, menyimpan unduhan, mengekspor daftar putar, dan menyiapkan pembaruan.",
+    ),
+    "permissionsStorageTitle": MessageLookupByLibrary.simpleMessage(
+      "Musik dan penyimpanan",
+    ),
     "personalisation": MessageLookupByLibrary.simpleMessage("Personalisasi"),
     "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage(
       "Daftar Putar yang Disalurkan",

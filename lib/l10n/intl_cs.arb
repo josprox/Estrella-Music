@@ -688,5 +688,10 @@
   "permissionsContinueButton": "Udělte požadovaná oprávnění",
   "permissionsRequiredNotice": "K pokračování jsou potřeba všechna tři povolení. Později je můžete změnit v nastavení systému.",
   "permissionsAllow": "Povolit",
-  "permissionsOpenSettings": "Nastavení"
+  "permissionsOpenSettings": "Nastavení",
+  "auth_2fa_title": "Dvoufaktorová autentizace",
+  "auth_2fa_subtitle": "Zadejte 6místný kód z aplikace pro ověřování. Tento přístup vyprší za 5 minut.",
+  "auth_2fa_code": "Autentizační kód",
+  "auth_2fa_verify": "Zkontrolujte a pokračujte",
+  "auth_2fa_invalid": "Zadejte platný 6místný kód nebo se znovu přihlaste."
 }

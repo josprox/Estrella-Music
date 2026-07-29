@@ -56,6 +56,19 @@ class MessageLookup extends MessageLookupByLibrary {
     "artistsByTaste": MessageLookupByLibrary.simpleMessage(
       "با توجه به سلیقه شما",
     ),
+    "auth_2fa_code": MessageLookupByLibrary.simpleMessage("کد احراز هویت"),
+    "auth_2fa_invalid": MessageLookupByLibrary.simpleMessage(
+      "یک کد 6 رقمی معتبر وارد کنید یا دوباره وارد شوید.",
+    ),
+    "auth_2fa_subtitle": MessageLookupByLibrary.simpleMessage(
+      "کد 6 رقمی را از برنامه احراز هویت خود وارد کنید. این دسترسی 5 دقیقه دیگر منقضی می شود.",
+    ),
+    "auth_2fa_title": MessageLookupByLibrary.simpleMessage(
+      "احراز هویت دو مرحله ای",
+    ),
+    "auth_2fa_verify": MessageLookupByLibrary.simpleMessage(
+      "بررسی کنید و ادامه دهید",
+    ),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Acepto usar mis datos...",
     ),
@@ -471,6 +484,38 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "openIn": MessageLookupByLibrary.simpleMessage("باز کردن در"),
     "password_text": MessageLookupByLibrary.simpleMessage("رمز عبور"),
+    "permissionsAllow": MessageLookupByLibrary.simpleMessage("اجازه دهید"),
+    "permissionsConsentDescription": MessageLookupByLibrary.simpleMessage(
+      "Estrella Music برای مدیریت موسیقی شما و ارائه تمام ویژگی های پخش به این مجوزها نیاز دارد.",
+    ),
+    "permissionsConsentTitle": MessageLookupByLibrary.simpleMessage(
+      "مجوز برای شروع",
+    ),
+    "permissionsContinueButton": MessageLookupByLibrary.simpleMessage(
+      "مجوزهای لازم را اعطا کنید",
+    ),
+    "permissionsMicrophoneDescription": MessageLookupByLibrary.simpleMessage(
+      "فقط زمانی استفاده می شود که بخواهید آهنگی را که در اطراف شما پخش می شود شناسایی کنید.",
+    ),
+    "permissionsMicrophoneTitle": MessageLookupByLibrary.simpleMessage(
+      "میکروفون",
+    ),
+    "permissionsNotificationsDescription": MessageLookupByLibrary.simpleMessage(
+      "کنترل‌های بازپخش، پیشرفت بارگیری و اطلاعیه‌های مهم برنامه را نشان می‌دهد.",
+    ),
+    "permissionsNotificationsTitle": MessageLookupByLibrary.simpleMessage(
+      "اطلاعیه ها",
+    ),
+    "permissionsOpenSettings": MessageLookupByLibrary.simpleMessage("تنظیمات"),
+    "permissionsRequiredNotice": MessageLookupByLibrary.simpleMessage(
+      "برای ادامه هر سه مجوز لازم است. بعداً می توانید آنها را در تنظیمات سیستم تغییر دهید.",
+    ),
+    "permissionsStorageDescription": MessageLookupByLibrary.simpleMessage(
+      "این به شما امکان می دهد موسیقی پخش کنید، بارگیری ها را ذخیره کنید، لیست های پخش را صادر کنید و به روز رسانی ها را آماده کنید.",
+    ),
+    "permissionsStorageTitle": MessageLookupByLibrary.simpleMessage(
+      "موسیقی و ذخیره سازی",
+    ),
     "personalisation": MessageLookupByLibrary.simpleMessage("شخصی سازی"),
     "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage(
       "لیست پخش لوله شده",

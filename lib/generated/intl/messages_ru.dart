@@ -77,6 +77,19 @@ class MessageLookup extends MessageLookupByLibrary {
     "artists": MessageLookupByLibrary.simpleMessage("Исполнители"),
     "artistsByTaste": MessageLookupByLibrary.simpleMessage("По вашему вкусу"),
     "audioCodec": MessageLookupByLibrary.simpleMessage("Кодек"),
+    "auth_2fa_code": MessageLookupByLibrary.simpleMessage("Код аутентификации"),
+    "auth_2fa_invalid": MessageLookupByLibrary.simpleMessage(
+      "Введите действительный 6-значный код или войдите в систему еще раз.",
+    ),
+    "auth_2fa_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Введите 6-значный код из приложения для аутентификации. Срок действия этого доступа истекает через 5 минут.",
+    ),
+    "auth_2fa_title": MessageLookupByLibrary.simpleMessage(
+      "Двухфакторная аутентификация",
+    ),
+    "auth_2fa_verify": MessageLookupByLibrary.simpleMessage(
+      "Проверьте и продолжайте",
+    ),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Примите использовать неправильные данные...",
     ),
@@ -695,6 +708,40 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "password": MessageLookupByLibrary.simpleMessage("Пароль"),
     "password_text": MessageLookupByLibrary.simpleMessage("Пароль"),
+    "permissionsAllow": MessageLookupByLibrary.simpleMessage("Позволять"),
+    "permissionsConsentDescription": MessageLookupByLibrary.simpleMessage(
+      "Estrella Music необходимы эти разрешения для управления вашей музыкой и предоставления всех функций воспроизведения.",
+    ),
+    "permissionsConsentTitle": MessageLookupByLibrary.simpleMessage(
+      "Разрешения, чтобы начать работу",
+    ),
+    "permissionsContinueButton": MessageLookupByLibrary.simpleMessage(
+      "Предоставьте необходимые разрешения",
+    ),
+    "permissionsMicrophoneDescription": MessageLookupByLibrary.simpleMessage(
+      "Он используется только тогда, когда вы решаете идентифицировать песню, которая играет вокруг вас.",
+    ),
+    "permissionsMicrophoneTitle": MessageLookupByLibrary.simpleMessage(
+      "Микрофон",
+    ),
+    "permissionsNotificationsDescription": MessageLookupByLibrary.simpleMessage(
+      "Показывает элементы управления воспроизведением, ход загрузки и важные уведомления приложений.",
+    ),
+    "permissionsNotificationsTitle": MessageLookupByLibrary.simpleMessage(
+      "Уведомления",
+    ),
+    "permissionsOpenSettings": MessageLookupByLibrary.simpleMessage(
+      "Настройки",
+    ),
+    "permissionsRequiredNotice": MessageLookupByLibrary.simpleMessage(
+      "Для продолжения работы необходимы все три разрешения. Вы можете изменить их позже в настройках системы.",
+    ),
+    "permissionsStorageDescription": MessageLookupByLibrary.simpleMessage(
+      "Он позволяет воспроизводить музыку, сохранять загрузки, экспортировать плейлисты и готовить обновления.",
+    ),
+    "permissionsStorageTitle": MessageLookupByLibrary.simpleMessage(
+      "Музыка и память",
+    ),
     "personalisation": MessageLookupByLibrary.simpleMessage("Персонализация"),
     "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage(
       "Трубчатый плейлист",

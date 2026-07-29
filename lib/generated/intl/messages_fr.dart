@@ -80,6 +80,21 @@ class MessageLookup extends MessageLookupByLibrary {
     "artists": MessageLookupByLibrary.simpleMessage("Artistes"),
     "artistsByTaste": MessageLookupByLibrary.simpleMessage("Selon vos goûts"),
     "audioCodec": MessageLookupByLibrary.simpleMessage("Codec Audio"),
+    "auth_2fa_code": MessageLookupByLibrary.simpleMessage(
+      "Code d\'authentification",
+    ),
+    "auth_2fa_invalid": MessageLookupByLibrary.simpleMessage(
+      "Entrez un code valide à 6 chiffres ou connectez-vous à nouveau.",
+    ),
+    "auth_2fa_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Saisissez le code à 6 chiffres de votre application d\'authentification. Cet accès expire dans 5 minutes.",
+    ),
+    "auth_2fa_title": MessageLookupByLibrary.simpleMessage(
+      "Authentification à deux facteurs",
+    ),
+    "auth_2fa_verify": MessageLookupByLibrary.simpleMessage(
+      "Vérifiez et continuez",
+    ),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Accepter d\'utiliser mes données...",
     ),
@@ -712,6 +727,40 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "password": MessageLookupByLibrary.simpleMessage("Mot de passe"),
     "password_text": MessageLookupByLibrary.simpleMessage("Mot de passe"),
+    "permissionsAllow": MessageLookupByLibrary.simpleMessage("Permettre"),
+    "permissionsConsentDescription": MessageLookupByLibrary.simpleMessage(
+      "Estrella Music a besoin de ces autorisations pour gérer votre musique et offrir toutes les fonctionnalités de lecture.",
+    ),
+    "permissionsConsentTitle": MessageLookupByLibrary.simpleMessage(
+      "Autorisations pour commencer",
+    ),
+    "permissionsContinueButton": MessageLookupByLibrary.simpleMessage(
+      "Accorder les autorisations requises",
+    ),
+    "permissionsMicrophoneDescription": MessageLookupByLibrary.simpleMessage(
+      "Il n\'est utilisé que lorsque vous choisissez d\'identifier une chanson qui joue autour de vous.",
+    ),
+    "permissionsMicrophoneTitle": MessageLookupByLibrary.simpleMessage(
+      "Microphone",
+    ),
+    "permissionsNotificationsDescription": MessageLookupByLibrary.simpleMessage(
+      "Affiche les commandes de lecture, la progression du téléchargement et les notifications importantes sur les applications.",
+    ),
+    "permissionsNotificationsTitle": MessageLookupByLibrary.simpleMessage(
+      "Notifications",
+    ),
+    "permissionsOpenSettings": MessageLookupByLibrary.simpleMessage(
+      "Paramètres",
+    ),
+    "permissionsRequiredNotice": MessageLookupByLibrary.simpleMessage(
+      "Les trois permis sont nécessaires pour continuer. Vous pourrez les modifier ultérieurement dans les paramètres système.",
+    ),
+    "permissionsStorageDescription": MessageLookupByLibrary.simpleMessage(
+      "Il vous permet d\'écouter de la musique, d\'enregistrer des téléchargements, d\'exporter des listes de lecture et de préparer des mises à jour.",
+    ),
+    "permissionsStorageTitle": MessageLookupByLibrary.simpleMessage(
+      "Musique et stockage",
+    ),
     "personalisation": MessageLookupByLibrary.simpleMessage("Personnalisation"),
     "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage(
       "Liste de lecture diffusée",

@@ -45,6 +45,21 @@ class MessageLookup extends MessageLookupByLibrary {
     "artistsByTaste": MessageLookupByLibrary.simpleMessage(
       "Σύμφωνα με τα γούστα σας",
     ),
+    "auth_2fa_code": MessageLookupByLibrary.simpleMessage(
+      "Κωδικός ελέγχου ταυτότητας",
+    ),
+    "auth_2fa_invalid": MessageLookupByLibrary.simpleMessage(
+      "Εισαγάγετε έναν έγκυρο 6ψήφιο κωδικό ή συνδεθείτε ξανά.",
+    ),
+    "auth_2fa_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Εισαγάγετε τον 6ψήφιο κωδικό από την εφαρμογή ελέγχου ταυτότητας. Αυτή η πρόσβαση λήγει σε 5 λεπτά.",
+    ),
+    "auth_2fa_title": MessageLookupByLibrary.simpleMessage(
+      "Έλεγχος ταυτότητας δύο παραγόντων",
+    ),
+    "auth_2fa_verify": MessageLookupByLibrary.simpleMessage(
+      "Ελέγξτε και συνεχίστε",
+    ),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Acepto usar mis datas...",
     ),
@@ -334,6 +349,40 @@ class MessageLookup extends MessageLookupByLibrary {
       "Δεν έχει επικυρωθεί",
     ),
     "password_text": MessageLookupByLibrary.simpleMessage("Σύνθημα"),
+    "permissionsAllow": MessageLookupByLibrary.simpleMessage("Επιτρέπω"),
+    "permissionsConsentDescription": MessageLookupByLibrary.simpleMessage(
+      "Η Estrella Music χρειάζεται αυτές τις άδειες για να διαχειριστεί τη μουσική σας και να προσφέρει όλες τις δυνατότητες αναπαραγωγής.",
+    ),
+    "permissionsConsentTitle": MessageLookupByLibrary.simpleMessage(
+      "Άδειες για να ξεκινήσετε",
+    ),
+    "permissionsContinueButton": MessageLookupByLibrary.simpleMessage(
+      "Εκχώρηση απαιτούμενων αδειών",
+    ),
+    "permissionsMicrophoneDescription": MessageLookupByLibrary.simpleMessage(
+      "Χρησιμοποιείται μόνο όταν επιλέγετε να προσδιορίσετε ένα τραγούδι που παίζει γύρω σας.",
+    ),
+    "permissionsMicrophoneTitle": MessageLookupByLibrary.simpleMessage(
+      "Μικρόφωνο",
+    ),
+    "permissionsNotificationsDescription": MessageLookupByLibrary.simpleMessage(
+      "Εμφανίζει στοιχεία ελέγχου αναπαραγωγής, πρόοδο λήψης και σημαντικές ειδοποιήσεις εφαρμογών.",
+    ),
+    "permissionsNotificationsTitle": MessageLookupByLibrary.simpleMessage(
+      "Ειδοποιήσεις",
+    ),
+    "permissionsOpenSettings": MessageLookupByLibrary.simpleMessage(
+      "Ρυθμίσεις",
+    ),
+    "permissionsRequiredNotice": MessageLookupByLibrary.simpleMessage(
+      "Απαιτούνται και οι τρεις άδειες για να συνεχιστεί. Μπορείτε να τα αλλάξετε αργότερα στις ρυθμίσεις συστήματος.",
+    ),
+    "permissionsStorageDescription": MessageLookupByLibrary.simpleMessage(
+      "Σας επιτρέπει να αναπαράγετε μουσική, να αποθηκεύετε λήψεις, να εξάγετε λίστες αναπαραγωγής και να προετοιμάζετε ενημερώσεις.",
+    ),
+    "permissionsStorageTitle": MessageLookupByLibrary.simpleMessage(
+      "Μουσική και αποθήκευση",
+    ),
     "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage(
       "Λίστα αναπαραγωγής με σωλήνες",
     ),

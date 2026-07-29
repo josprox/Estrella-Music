@@ -26,31 +26,25 @@ class BackgroudImage extends StatelessWidget {
                 ? Builder(builder: (context) {
                     final imgFile = File(
                         "${Get.find<SettingsScreenController>().supportDirPath}/thumbnails/${playerController.currentSong.value!.id}.png");
-                    return FutureBuilder(
-                      future: imgFile.exists(),
-                      builder: (context, snapshot) {
-                        if (snapshot.connectionState == ConnectionState.done &&
-                            snapshot.hasData &&
-                            snapshot.data == true) {
+                    if (!imgFile.existsSync()) {
+                      return const SizedBox.shrink();
+                    }
 
-                          /// if theme mode is dynamic then set the theme with image
-                          if (Get.find<SettingsScreenController>()
-                                  .themeModetype
-                                  .value ==
-                              ThemeType.dynamic) {
-                            Get.find<ThemeController>().setTheme(
-                                FileImage(imgFile),
-                                playerController.currentSong.value!.id);
-                          }
+                    /// if theme mode is dynamic then set the theme with image
+                    if (Get.find<SettingsScreenController>()
+                            .themeModetype
+                            .value ==
+                        ThemeType.dynamic) {
+                      Get.find<ThemeController>().setTheme(
+                          FileImage(imgFile),
+                          playerController.currentSong.value!.id);
+                    }
 
-                          return Image.file(
-                            imgFile,
-                            cacheHeight: cacheHeight,
-                            fit: BoxFit.cover,
-                          );
-                        }
-                        return const SizedBox.shrink();
-                      },
+                    return Image.file(
+                      imgFile,
+                      cacheHeight: cacheHeight,
+                      fit: BoxFit.cover,
+                      gaplessPlayback: true,
                     );
                   })
 

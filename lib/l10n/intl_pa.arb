@@ -646,5 +646,10 @@
   "permissionsContinueButton": "ਲੋੜੀਂਦੀਆਂ ਇਜਾਜ਼ਤਾਂ ਦਿਓ",
   "permissionsRequiredNotice": "ਜਾਰੀ ਰੱਖਣ ਲਈ ਸਾਰੇ ਤਿੰਨ ਪਰਮਿਟ ਦੀ ਲੋੜ ਹੈ। ਤੁਸੀਂ ਉਹਨਾਂ ਨੂੰ ਬਾਅਦ ਵਿੱਚ ਸਿਸਟਮ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਬਦਲ ਸਕਦੇ ਹੋ।",
   "permissionsAllow": "ਇਜਾਜ਼ਤ ਦਿਓ",
-  "permissionsOpenSettings": "ਸੈਟਿੰਗਾਂ"
+  "permissionsOpenSettings": "ਸੈਟਿੰਗਾਂ",
+  "auth_2fa_title": "ਦੋ-ਕਾਰਕ ਪ੍ਰਮਾਣਿਕਤਾ",
+  "auth_2fa_subtitle": "ਆਪਣੇ ਪ੍ਰਮਾਣਕ ਐਪ ਤੋਂ 6-ਅੰਕ ਦਾ ਕੋਡ ਦਾਖਲ ਕਰੋ। ਇਸ ਪਹੁੰਚ ਦੀ ਮਿਆਦ 5 ਮਿੰਟਾਂ ਵਿੱਚ ਸਮਾਪਤ ਹੋ ਜਾਂਦੀ ਹੈ।",
+  "auth_2fa_code": "ਪ੍ਰਮਾਣੀਕਰਨ ਕੋਡ",
+  "auth_2fa_verify": "ਜਾਂਚ ਕਰੋ ਅਤੇ ਜਾਰੀ ਰੱਖੋ",
+  "auth_2fa_invalid": "ਇੱਕ ਵੈਧ 6-ਅੰਕਾਂ ਵਾਲਾ ਕੋਡ ਦਾਖਲ ਕਰੋ ਜਾਂ ਦੁਬਾਰਾ ਸਾਈਨ ਇਨ ਕਰੋ।"
 }

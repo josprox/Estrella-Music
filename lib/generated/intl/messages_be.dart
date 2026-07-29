@@ -40,6 +40,19 @@ class MessageLookup extends MessageLookupByLibrary {
     "about": MessageLookupByLibrary.simpleMessage("Аб"),
     "albumsByTaste": MessageLookupByLibrary.simpleMessage("Па вашым густам"),
     "artistsByTaste": MessageLookupByLibrary.simpleMessage("Па вашым густам"),
+    "auth_2fa_code": MessageLookupByLibrary.simpleMessage("Код аўтэнтыфікацыі"),
+    "auth_2fa_invalid": MessageLookupByLibrary.simpleMessage(
+      "Увядзіце сапраўдны 6-значны код або ўвайдзіце яшчэ раз.",
+    ),
+    "auth_2fa_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Увядзіце 6-значны код з праграмы аўтэнтыфікацыі. Гэты доступ заканчваецца праз 5 хвілін.",
+    ),
+    "auth_2fa_title": MessageLookupByLibrary.simpleMessage(
+      "Двухфакторную аўтэнтыфікацыя",
+    ),
+    "auth_2fa_verify": MessageLookupByLibrary.simpleMessage(
+      "Праверце і працягвайце",
+    ),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Acepto usar mis datos...",
     ),
@@ -329,6 +342,38 @@ class MessageLookup extends MessageLookupByLibrary {
       "Не аўтэнтыфікаваны",
     ),
     "password_text": MessageLookupByLibrary.simpleMessage("Пароль"),
+    "permissionsAllow": MessageLookupByLibrary.simpleMessage("Дазволіць"),
+    "permissionsConsentDescription": MessageLookupByLibrary.simpleMessage(
+      "Estrella Music патрэбны гэтыя дазволы, каб кіраваць вашай музыкай і прапаноўваць усе функцыі прайгравання.",
+    ),
+    "permissionsConsentTitle": MessageLookupByLibrary.simpleMessage(
+      "Дазволы для пачатку",
+    ),
+    "permissionsContinueButton": MessageLookupByLibrary.simpleMessage(
+      "Дайце неабходныя дазволы",
+    ),
+    "permissionsMicrophoneDescription": MessageLookupByLibrary.simpleMessage(
+      "Ён выкарыстоўваецца толькі тады, калі вы вырашылі вызначыць песню, якая гучыць вакол вас.",
+    ),
+    "permissionsMicrophoneTitle": MessageLookupByLibrary.simpleMessage(
+      "Мікрафон",
+    ),
+    "permissionsNotificationsDescription": MessageLookupByLibrary.simpleMessage(
+      "Паказвае элементы кіравання прайграваннем, ход загрузкі і важныя апавяшчэнні аб праграмах.",
+    ),
+    "permissionsNotificationsTitle": MessageLookupByLibrary.simpleMessage(
+      "Апавяшчэнні",
+    ),
+    "permissionsOpenSettings": MessageLookupByLibrary.simpleMessage("Налады"),
+    "permissionsRequiredNotice": MessageLookupByLibrary.simpleMessage(
+      "Усе тры дазволы неабходныя для працягу. Вы можаце змяніць іх пазней у наладах сістэмы.",
+    ),
+    "permissionsStorageDescription": MessageLookupByLibrary.simpleMessage(
+      "Гэта дазваляе прайграваць музыку, захоўваць спампоўкі, экспартаваць спісы прайгравання і рыхтаваць абнаўленні.",
+    ),
+    "permissionsStorageTitle": MessageLookupByLibrary.simpleMessage(
+      "Музыка і захоўванне",
+    ),
     "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage(
       "Канвеерны спіс прайгравання",
     ),

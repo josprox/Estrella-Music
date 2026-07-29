@@ -688,5 +688,10 @@
   "permissionsContinueButton": "Gerekli izinleri verin",
   "permissionsRequiredNotice": "Devam etmek için üç iznin de alınması gerekiyor. Bunları daha sonra sistem ayarlarından değiştirebilirsiniz.",
   "permissionsAllow": "İzin vermek",
-  "permissionsOpenSettings": "Ayarlar"
+  "permissionsOpenSettings": "Ayarlar",
+  "auth_2fa_title": "İki faktörlü kimlik doğrulama",
+  "auth_2fa_subtitle": "Kimlik doğrulayıcı uygulamanızdan 6 haneli kodu girin. Bu erişimin süresi 5 dakika içinde dolacaktır.",
+  "auth_2fa_code": "Kimlik doğrulama kodu",
+  "auth_2fa_verify": "Kontrol edip devam edin",
+  "auth_2fa_invalid": "6 haneli geçerli bir kod girin veya tekrar oturum açın."
 }

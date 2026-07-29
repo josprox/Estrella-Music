@@ -76,6 +76,15 @@ class MessageLookup extends MessageLookupByLibrary {
     "artists": MessageLookupByLibrary.simpleMessage("فنانين"),
     "artistsByTaste": MessageLookupByLibrary.simpleMessage("حسب ذوقك"),
     "audioCodec": MessageLookupByLibrary.simpleMessage("ترميز الصوت"),
+    "auth_2fa_code": MessageLookupByLibrary.simpleMessage("رمز المصادقة"),
+    "auth_2fa_invalid": MessageLookupByLibrary.simpleMessage(
+      "أدخل رمزًا صالحًا مكونًا من 6 أرقام أو قم بتسجيل الدخول مرة أخرى.",
+    ),
+    "auth_2fa_subtitle": MessageLookupByLibrary.simpleMessage(
+      "أدخل الرمز المكون من 6 أرقام من تطبيق المصادقة الخاص بك. تنتهي صلاحية هذا الوصول خلال 5 دقائق.",
+    ),
+    "auth_2fa_title": MessageLookupByLibrary.simpleMessage("المصادقة الثنائية"),
+    "auth_2fa_verify": MessageLookupByLibrary.simpleMessage("تحقق واستمر"),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "قبول استخدام بيانات خاطئة...",
     ),
@@ -600,6 +609,38 @@ class MessageLookup extends MessageLookupByLibrary {
     "operationFailed": MessageLookupByLibrary.simpleMessage("فشلت العملية"),
     "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
     "password_text": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+    "permissionsAllow": MessageLookupByLibrary.simpleMessage("يسمح"),
+    "permissionsConsentDescription": MessageLookupByLibrary.simpleMessage(
+      "تحتاج Estrella Music إلى هذه الأذونات لإدارة الموسيقى الخاصة بك وتقديم جميع ميزات التشغيل.",
+    ),
+    "permissionsConsentTitle": MessageLookupByLibrary.simpleMessage(
+      "أذونات للبدء",
+    ),
+    "permissionsContinueButton": MessageLookupByLibrary.simpleMessage(
+      "منح الأذونات المطلوبة",
+    ),
+    "permissionsMicrophoneDescription": MessageLookupByLibrary.simpleMessage(
+      "يتم استخدامه فقط عندما تختار التعرف على الأغنية التي يتم تشغيلها من حولك.",
+    ),
+    "permissionsMicrophoneTitle": MessageLookupByLibrary.simpleMessage(
+      "ميكروفون",
+    ),
+    "permissionsNotificationsDescription": MessageLookupByLibrary.simpleMessage(
+      "يعرض عناصر التحكم في التشغيل وتقدم التنزيل وإشعارات التطبيق المهمة.",
+    ),
+    "permissionsNotificationsTitle": MessageLookupByLibrary.simpleMessage(
+      "إشعارات",
+    ),
+    "permissionsOpenSettings": MessageLookupByLibrary.simpleMessage("إعدادات"),
+    "permissionsRequiredNotice": MessageLookupByLibrary.simpleMessage(
+      "جميع التصاريح الثلاثة مطلوبة للمتابعة. ويمكنك تغييرها لاحقًا في إعدادات النظام.",
+    ),
+    "permissionsStorageDescription": MessageLookupByLibrary.simpleMessage(
+      "يسمح لك بتشغيل الموسيقى وحفظ التنزيلات وتصدير قوائم التشغيل وإعداد التحديثات.",
+    ),
+    "permissionsStorageTitle": MessageLookupByLibrary.simpleMessage(
+      "الموسيقى والتخزين",
+    ),
     "personalisation": MessageLookupByLibrary.simpleMessage("تخصيص"),
     "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage(
       "قائمة التشغيل عبر الأنابيب",

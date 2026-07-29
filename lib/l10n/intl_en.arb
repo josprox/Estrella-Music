@@ -817,5 +817,10 @@
   "permissionsContinueButton": "Grant required permissions",
   "permissionsRequiredNotice": "All three permits are required to continue. ",
   "permissionsAllow": "Allow",
-  "permissionsOpenSettings": "Settings"
+  "permissionsOpenSettings": "Settings",
+  "auth_2fa_title": "Two-factor authentication",
+  "auth_2fa_subtitle": "Enter the 6-digit code from your authenticator app. ",
+  "auth_2fa_code": "Authentication code",
+  "auth_2fa_verify": "Check and continue",
+  "auth_2fa_invalid": "Enter a valid 6-digit code or sign in again."
 }

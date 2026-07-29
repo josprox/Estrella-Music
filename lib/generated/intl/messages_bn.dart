@@ -81,6 +81,19 @@ class MessageLookup extends MessageLookupByLibrary {
       "আপনার রুচি অনুযায়ী",
     ),
     "audioCodec": MessageLookupByLibrary.simpleMessage("অডিও কোডেক"),
+    "auth_2fa_code": MessageLookupByLibrary.simpleMessage("প্রমাণীকরণ কোড"),
+    "auth_2fa_invalid": MessageLookupByLibrary.simpleMessage(
+      "একটি বৈধ 6-সংখ্যার কোড লিখুন বা আবার সাইন ইন করুন৷",
+    ),
+    "auth_2fa_subtitle": MessageLookupByLibrary.simpleMessage(
+      "আপনার প্রমাণীকরণকারী অ্যাপ থেকে 6-সংখ্যার কোড লিখুন। এই অ্যাক্সেসের মেয়াদ 5 মিনিটের মধ্যে শেষ হবে।",
+    ),
+    "auth_2fa_title": MessageLookupByLibrary.simpleMessage(
+      "দ্বি-ফ্যাক্টর প্রমাণীকরণ",
+    ),
+    "auth_2fa_verify": MessageLookupByLibrary.simpleMessage(
+      "চেক করুন এবং চালিয়ে যান",
+    ),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "আমাদের ভুল তথ্য গ্রহণ করুন...",
     ),
@@ -672,6 +685,38 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "password": MessageLookupByLibrary.simpleMessage("পাসওয়ার্ড"),
     "password_text": MessageLookupByLibrary.simpleMessage("পাসওয়ার্ড"),
+    "permissionsAllow": MessageLookupByLibrary.simpleMessage("অনুমতি দিন"),
+    "permissionsConsentDescription": MessageLookupByLibrary.simpleMessage(
+      "আপনার সঙ্গীত পরিচালনা করতে এবং সমস্ত প্লেব্যাক বৈশিষ্ট্য অফার করতে Estrella Music-এর এই অনুমতিগুলির প্রয়োজন৷",
+    ),
+    "permissionsConsentTitle": MessageLookupByLibrary.simpleMessage(
+      "শুরু করার অনুমতি",
+    ),
+    "permissionsContinueButton": MessageLookupByLibrary.simpleMessage(
+      "প্রয়োজনীয় অনুমতি প্রদান করুন",
+    ),
+    "permissionsMicrophoneDescription": MessageLookupByLibrary.simpleMessage(
+      "এটি শুধুমাত্র তখনই ব্যবহৃত হয় যখন আপনি আপনার চারপাশে বাজছে এমন একটি গান সনাক্ত করতে চান৷",
+    ),
+    "permissionsMicrophoneTitle": MessageLookupByLibrary.simpleMessage(
+      "মাইক্রোফোন",
+    ),
+    "permissionsNotificationsDescription": MessageLookupByLibrary.simpleMessage(
+      "প্লেব্যাক নিয়ন্ত্রণ, ডাউনলোডের অগ্রগতি এবং গুরুত্বপূর্ণ অ্যাপ বিজ্ঞপ্তি দেখায়।",
+    ),
+    "permissionsNotificationsTitle": MessageLookupByLibrary.simpleMessage(
+      "বিজ্ঞপ্তি",
+    ),
+    "permissionsOpenSettings": MessageLookupByLibrary.simpleMessage("সেটিংস"),
+    "permissionsRequiredNotice": MessageLookupByLibrary.simpleMessage(
+      "সব তিনটি পারমিট চালিয়ে যেতে হবে. আপনি সিস্টেম সেটিংসে পরে সেগুলি পরিবর্তন করতে পারেন৷",
+    ),
+    "permissionsStorageDescription": MessageLookupByLibrary.simpleMessage(
+      "এটি আপনাকে সঙ্গীত বাজাতে, ডাউনলোডগুলি সংরক্ষণ করতে, প্লেলিস্ট রপ্তানি করতে এবং আপডেটগুলি প্রস্তুত করতে দেয়৷",
+    ),
+    "permissionsStorageTitle": MessageLookupByLibrary.simpleMessage(
+      "সঙ্গীত এবং স্টোরেজ",
+    ),
     "personalisation": MessageLookupByLibrary.simpleMessage("ব্যক্তিগতকরণ"),
     "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage(
       "পাইপ প্লেলিস্ট",

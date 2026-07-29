@@ -69,6 +69,19 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "artists": MessageLookupByLibrary.simpleMessage("Artister"),
     "artistsByTaste": MessageLookupByLibrary.simpleMessage("Enligt din smak"),
+    "auth_2fa_code": MessageLookupByLibrary.simpleMessage("Autentiseringskod"),
+    "auth_2fa_invalid": MessageLookupByLibrary.simpleMessage(
+      "Ange en giltig 6-siffrig kod eller logga in igen.",
+    ),
+    "auth_2fa_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Ange den sexsiffriga koden från din autentiseringsapp. Denna åtkomst löper ut om 5 minuter.",
+    ),
+    "auth_2fa_title": MessageLookupByLibrary.simpleMessage(
+      "Tvåfaktorsautentisering",
+    ),
+    "auth_2fa_verify": MessageLookupByLibrary.simpleMessage(
+      "Kontrollera och fortsätt",
+    ),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Acceptera att använda miss data...",
     ),
@@ -523,6 +536,40 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "password": MessageLookupByLibrary.simpleMessage("Lösenord"),
     "password_text": MessageLookupByLibrary.simpleMessage("Lösenord"),
+    "permissionsAllow": MessageLookupByLibrary.simpleMessage("Tillåta"),
+    "permissionsConsentDescription": MessageLookupByLibrary.simpleMessage(
+      "Estrella Music behöver dessa behörigheter för att hantera din musik och erbjuda alla uppspelningsfunktioner.",
+    ),
+    "permissionsConsentTitle": MessageLookupByLibrary.simpleMessage(
+      "Behörigheter att komma igång",
+    ),
+    "permissionsContinueButton": MessageLookupByLibrary.simpleMessage(
+      "Bevilja nödvändiga behörigheter",
+    ),
+    "permissionsMicrophoneDescription": MessageLookupByLibrary.simpleMessage(
+      "Den används bara när du väljer att identifiera en låt som spelas omkring dig.",
+    ),
+    "permissionsMicrophoneTitle": MessageLookupByLibrary.simpleMessage(
+      "Mikrofon",
+    ),
+    "permissionsNotificationsDescription": MessageLookupByLibrary.simpleMessage(
+      "Visar uppspelningskontroller, nedladdningsförlopp och viktiga appmeddelanden.",
+    ),
+    "permissionsNotificationsTitle": MessageLookupByLibrary.simpleMessage(
+      "Aviseringar",
+    ),
+    "permissionsOpenSettings": MessageLookupByLibrary.simpleMessage(
+      "Inställningar",
+    ),
+    "permissionsRequiredNotice": MessageLookupByLibrary.simpleMessage(
+      "Alla tre tillstånd krävs för att fortsätta. Du kan ändra dem senare i systeminställningarna.",
+    ),
+    "permissionsStorageDescription": MessageLookupByLibrary.simpleMessage(
+      "Det låter dig spela musik, spara nedladdningar, exportera spellistor och förbereda uppdateringar.",
+    ),
+    "permissionsStorageTitle": MessageLookupByLibrary.simpleMessage(
+      "Musik och förvaring",
+    ),
     "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage(
       "Piped spellista",
     ),

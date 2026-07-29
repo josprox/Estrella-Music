@@ -93,6 +93,21 @@ class MessageLookup extends MessageLookupByLibrary {
     "artists": MessageLookupByLibrary.simpleMessage("Artistas"),
     "artistsByTaste": MessageLookupByLibrary.simpleMessage("Según tus gustos"),
     "audioCodec": MessageLookupByLibrary.simpleMessage("Códec de audio"),
+    "auth_2fa_code": MessageLookupByLibrary.simpleMessage(
+      "Código de autenticación",
+    ),
+    "auth_2fa_invalid": MessageLookupByLibrary.simpleMessage(
+      "Ingresa un código válido de 6 dígitos o inicia sesión nuevamente.",
+    ),
+    "auth_2fa_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Ingresa el código de 6 dígitos de tu aplicación de autenticación. Este acceso vence en 5 minutos.",
+    ),
+    "auth_2fa_title": MessageLookupByLibrary.simpleMessage(
+      "Autenticación de dos factores",
+    ),
+    "auth_2fa_verify": MessageLookupByLibrary.simpleMessage(
+      "Verificar y continuar",
+    ),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Acepto usar mis datos...",
     ),

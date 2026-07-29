@@ -83,6 +83,21 @@ class MessageLookup extends MessageLookupByLibrary {
       "Според вашите вкусове",
     ),
     "audioCodec": MessageLookupByLibrary.simpleMessage("Аудио кодек"),
+    "auth_2fa_code": MessageLookupByLibrary.simpleMessage(
+      "Код за удостоверяване",
+    ),
+    "auth_2fa_invalid": MessageLookupByLibrary.simpleMessage(
+      "Въведете валиден 6-цифрен код или влезте отново.",
+    ),
+    "auth_2fa_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Въведете 6-цифрения код от вашето приложение за удостоверяване. Този достъп изтича след 5 минути.",
+    ),
+    "auth_2fa_title": MessageLookupByLibrary.simpleMessage(
+      "Двуфакторна автентификация",
+    ),
+    "auth_2fa_verify": MessageLookupByLibrary.simpleMessage(
+      "Проверете и продължете",
+    ),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Acepto usar mis datos...",
     ),
@@ -703,6 +718,40 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "password": MessageLookupByLibrary.simpleMessage("Парола"),
     "password_text": MessageLookupByLibrary.simpleMessage("Парола"),
+    "permissionsAllow": MessageLookupByLibrary.simpleMessage("Разрешете"),
+    "permissionsConsentDescription": MessageLookupByLibrary.simpleMessage(
+      "Estrella Music се нуждае от тези разрешения, за да управлява вашата музика и да предлага всички функции за възпроизвеждане.",
+    ),
+    "permissionsConsentTitle": MessageLookupByLibrary.simpleMessage(
+      "Разрешения, за да започнете",
+    ),
+    "permissionsContinueButton": MessageLookupByLibrary.simpleMessage(
+      "Дайте необходимите разрешения",
+    ),
+    "permissionsMicrophoneDescription": MessageLookupByLibrary.simpleMessage(
+      "Използва се само когато изберете да идентифицирате песен, която се изпълнява около вас.",
+    ),
+    "permissionsMicrophoneTitle": MessageLookupByLibrary.simpleMessage(
+      "Микрофон",
+    ),
+    "permissionsNotificationsDescription": MessageLookupByLibrary.simpleMessage(
+      "Показва контроли за възпроизвеждане, прогрес на изтегляне и важни бележки за приложения.",
+    ),
+    "permissionsNotificationsTitle": MessageLookupByLibrary.simpleMessage(
+      "Известия",
+    ),
+    "permissionsOpenSettings": MessageLookupByLibrary.simpleMessage(
+      "Настройки",
+    ),
+    "permissionsRequiredNotice": MessageLookupByLibrary.simpleMessage(
+      "И трите разрешителни са необходими, за да продължите. Можете да ги промените по-късно в системните настройки.",
+    ),
+    "permissionsStorageDescription": MessageLookupByLibrary.simpleMessage(
+      "Тя ви позволява да възпроизвеждате музика, да запазвате изтегляния, да експортирате плейлисти и да подготвяте актуализации.",
+    ),
+    "permissionsStorageTitle": MessageLookupByLibrary.simpleMessage(
+      "Музика и съхранение",
+    ),
     "personalisation": MessageLookupByLibrary.simpleMessage("Персонализиране"),
     "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage(
       "Списък за възпроизвеждане",

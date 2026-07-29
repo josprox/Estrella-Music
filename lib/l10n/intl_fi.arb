@@ -565,5 +565,10 @@
   "permissionsContinueButton": "Myönnä tarvittavat käyttöoikeudet",
   "permissionsRequiredNotice": "Jatkamiseen vaaditaan kaikki kolme lupaa. Voit muuttaa niitä myöhemmin järjestelmäasetuksissa.",
   "permissionsAllow": "Salli",
-  "permissionsOpenSettings": "Asetukset"
+  "permissionsOpenSettings": "Asetukset",
+  "auth_2fa_title": "Kaksivaiheinen todennus",
+  "auth_2fa_subtitle": "Syötä 6-numeroinen koodi todennussovelluksesta. Tämä käyttöoikeus vanhenee 5 minuutin kuluttua.",
+  "auth_2fa_code": "Todennuskoodi",
+  "auth_2fa_verify": "Tarkista ja jatka",
+  "auth_2fa_invalid": "Anna kelvollinen 6-numeroinen koodi tai kirjaudu sisään uudelleen."
 }

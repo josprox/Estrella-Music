@@ -479,3 +479,42 @@ La dependencia `hive` queda temporalmente solo para leer instalaciones antiguas.
 `hive_flutter` ya no forma parte de la app. Cuando la version de transicion haya
 cumplido su ventana de soporte, el importador y la dependencia restante pueden
 retirarse.
+
+## 19. WebSocket y tiempo real
+
+Desde Joss 3.6.3, EMusic usa callbacks con contexto lexico, `onClose` y canales
+nativos con limpieza automatica.
+
+### Sincronizacion
+
+1. Flutter abre `/api/sync-ws`.
+2. Envia `auth` con JWT de Joss Red y `device_id`.
+3. EMusic suscribe la conexion al canal privado del usuario.
+4. Los cambios HTTP o WebSocket publican `sync_update` con
+   `origin_device_id`.
+5. El dispositivo de origen ignora su propio aviso; los demas ejecutan pull.
+
+El push snapshot por WebSocket conserva el contrato no destructivo: hace
+merge/upsert y nunca borra una coleccion porque el arreglo recibido este vacio.
+
+### Co-listening
+
+- Cada conexion tiene un canal directo y cada sala un canal compartido.
+- `onClose` elimina al invitado o cierra la sala si se desconecta el host.
+- Los clientes reciben `guest_left`, `room_closed`, `left_room` y `sync_ack`
+  ademas de los eventos historicos.
+- `CO_LISTENING_REQUIRE_AUTH=true` exige JWT de Joss Red. Si no se define, el
+  servidor conserva temporalmente el modo anonimo para clientes antiguos.
+
+### Operacion
+
+```env
+WS_MAX_MESSAGE_BYTES="8388608"
+WS_IDLE_TIMEOUT_SECONDS="120"
+WS_PING_INTERVAL_SECONDS="30"
+CO_LISTENING_REQUIRE_AUTH="true"
+```
+
+El runtime envia ping, renueva el deadline con pong, limita mensajes y aisla
+panicos de callbacks. Los canales son locales al proceso: usar una sola replica
+para co-listening, o sticky sessions junto con un backplane pub/sub externo.

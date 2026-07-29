@@ -543,5 +543,10 @@
   "permissionsContinueButton": "مجوزهای لازم را اعطا کنید",
   "permissionsRequiredNotice": "برای ادامه هر سه مجوز لازم است. بعداً می توانید آنها را در تنظیمات سیستم تغییر دهید.",
   "permissionsAllow": "اجازه دهید",
-  "permissionsOpenSettings": "تنظیمات"
+  "permissionsOpenSettings": "تنظیمات",
+  "auth_2fa_title": "احراز هویت دو مرحله ای",
+  "auth_2fa_subtitle": "کد 6 رقمی را از برنامه احراز هویت خود وارد کنید. این دسترسی 5 دقیقه دیگر منقضی می شود.",
+  "auth_2fa_code": "کد احراز هویت",
+  "auth_2fa_verify": "بررسی کنید و ادامه دهید",
+  "auth_2fa_invalid": "یک کد 6 رقمی معتبر وارد کنید یا دوباره وارد شوید."
 }

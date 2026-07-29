@@ -383,9 +383,9 @@ class _TopBar extends StatelessWidget {
                     ElevatedButton.icon(
                       icon: const Icon(Icons.add_box_rounded),
                       label: const Text("Crear Sala"),
-                      onPressed: () {
-                        colistening.createRoom();
-                      },
+                      onPressed: colistening.isConnected.isTrue
+                          ? colistening.createRoom
+                          : null,
                       style: ElevatedButton.styleFrom(
                         minimumSize: const Size(double.infinity, 45),
                         backgroundColor: Theme.of(context).colorScheme.primary,
@@ -412,12 +412,14 @@ class _TopBar extends StatelessWidget {
                     ElevatedButton.icon(
                       icon: const Icon(Icons.login_rounded),
                       label: const Text("Unirse"),
-                      onPressed: () {
-                        final code = roomController.text.trim();
-                        if (code.length == 6) {
-                          colistening.joinRoom(code);
-                        }
-                      },
+                      onPressed: colistening.isConnected.isTrue
+                          ? () {
+                              final code = roomController.text.trim();
+                              if (code.length == 6) {
+                                colistening.joinRoom(code);
+                              }
+                            }
+                          : null,
                       style: ElevatedButton.styleFrom(
                         minimumSize: const Size(double.infinity, 45),
                         backgroundColor:
@@ -466,7 +468,7 @@ class _TopBar extends StatelessWidget {
                       label: const Text("Salir de la Sala",
                           style: TextStyle(color: Colors.red)),
                       onPressed: () {
-                        colistening.disconnect();
+                        colistening.leaveRoom();
                       },
                       style: ElevatedButton.styleFrom(
                         minimumSize: const Size(double.infinity, 45),
@@ -1293,7 +1295,6 @@ class _LyricsCard extends StatelessWidget {
     });
   }
 }
-
 
 class _DesktopLyricsTab extends StatelessWidget {
   const _DesktopLyricsTab();

@@ -77,6 +77,21 @@ class MessageLookup extends MessageLookupByLibrary {
     "artists": MessageLookupByLibrary.simpleMessage("Sanatçılar"),
     "artistsByTaste": MessageLookupByLibrary.simpleMessage("Zevklerinize göre"),
     "audioCodec": MessageLookupByLibrary.simpleMessage("Ses Kod Çözücü"),
+    "auth_2fa_code": MessageLookupByLibrary.simpleMessage(
+      "Kimlik doğrulama kodu",
+    ),
+    "auth_2fa_invalid": MessageLookupByLibrary.simpleMessage(
+      "6 haneli geçerli bir kod girin veya tekrar oturum açın.",
+    ),
+    "auth_2fa_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Kimlik doğrulayıcı uygulamanızdan 6 haneli kodu girin. Bu erişimin süresi 5 dakika içinde dolacaktır.",
+    ),
+    "auth_2fa_title": MessageLookupByLibrary.simpleMessage(
+      "İki faktörlü kimlik doğrulama",
+    ),
+    "auth_2fa_verify": MessageLookupByLibrary.simpleMessage(
+      "Kontrol edip devam edin",
+    ),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Yanlış verileri kabul ediyoruz...",
     ),
@@ -683,6 +698,38 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "password": MessageLookupByLibrary.simpleMessage("Parola"),
     "password_text": MessageLookupByLibrary.simpleMessage("Şifre"),
+    "permissionsAllow": MessageLookupByLibrary.simpleMessage("İzin vermek"),
+    "permissionsConsentDescription": MessageLookupByLibrary.simpleMessage(
+      "Estrella Music, müziğinizi yönetmek ve tüm oynatma özelliklerini sunmak için bu izinlere ihtiyaç duyar.",
+    ),
+    "permissionsConsentTitle": MessageLookupByLibrary.simpleMessage(
+      "Başlamak için izinler",
+    ),
+    "permissionsContinueButton": MessageLookupByLibrary.simpleMessage(
+      "Gerekli izinleri verin",
+    ),
+    "permissionsMicrophoneDescription": MessageLookupByLibrary.simpleMessage(
+      "Yalnızca etrafınızda çalan bir şarkıyı tanımlamayı seçtiğinizde kullanılır.",
+    ),
+    "permissionsMicrophoneTitle": MessageLookupByLibrary.simpleMessage(
+      "Mikrofon",
+    ),
+    "permissionsNotificationsDescription": MessageLookupByLibrary.simpleMessage(
+      "Oynatma kontrollerini, indirme ilerlemesini ve önemli uygulama bildirimlerini gösterir.",
+    ),
+    "permissionsNotificationsTitle": MessageLookupByLibrary.simpleMessage(
+      "Bildirimler",
+    ),
+    "permissionsOpenSettings": MessageLookupByLibrary.simpleMessage("Ayarlar"),
+    "permissionsRequiredNotice": MessageLookupByLibrary.simpleMessage(
+      "Devam etmek için üç iznin de alınması gerekiyor. Bunları daha sonra sistem ayarlarından değiştirebilirsiniz.",
+    ),
+    "permissionsStorageDescription": MessageLookupByLibrary.simpleMessage(
+      "Müzik çalmanıza, indirilenleri kaydetmenize, çalma listelerini dışa aktarmanıza ve güncellemeler hazırlamanıza olanak tanır.",
+    ),
+    "permissionsStorageTitle": MessageLookupByLibrary.simpleMessage(
+      "Müzik ve depolama",
+    ),
     "personalisation": MessageLookupByLibrary.simpleMessage("Kişiselleştirme"),
     "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage(
       "Borulu Çalma Listesi",

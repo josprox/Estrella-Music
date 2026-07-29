@@ -40,6 +40,19 @@ class MessageLookup extends MessageLookupByLibrary {
     "about": MessageLookupByLibrary.simpleMessage("Om"),
     "albumsByTaste": MessageLookupByLibrary.simpleMessage("Etter din smak"),
     "artistsByTaste": MessageLookupByLibrary.simpleMessage("Etter din smak"),
+    "auth_2fa_code": MessageLookupByLibrary.simpleMessage("Autentiseringskode"),
+    "auth_2fa_invalid": MessageLookupByLibrary.simpleMessage(
+      "Skriv inn en gyldig 6-sifret kode eller logg på igjen.",
+    ),
+    "auth_2fa_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Skriv inn den 6-sifrede koden fra autentiseringsappen din. Denne tilgangen utløper om 5 minutter.",
+    ),
+    "auth_2fa_title": MessageLookupByLibrary.simpleMessage(
+      "To-faktor autentisering",
+    ),
+    "auth_2fa_verify": MessageLookupByLibrary.simpleMessage(
+      "Sjekk og fortsett",
+    ),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Aksepterer bruker mis data...",
     ),
@@ -323,6 +336,40 @@ class MessageLookup extends MessageLookupByLibrary {
       "Ikke autentisert",
     ),
     "password_text": MessageLookupByLibrary.simpleMessage("Passord"),
+    "permissionsAllow": MessageLookupByLibrary.simpleMessage("Tillate"),
+    "permissionsConsentDescription": MessageLookupByLibrary.simpleMessage(
+      "Estrella Music trenger disse tillatelsene for å administrere musikken din og tilby alle avspillingsfunksjoner.",
+    ),
+    "permissionsConsentTitle": MessageLookupByLibrary.simpleMessage(
+      "Tillatelser til å komme i gang",
+    ),
+    "permissionsContinueButton": MessageLookupByLibrary.simpleMessage(
+      "Gi nødvendige tillatelser",
+    ),
+    "permissionsMicrophoneDescription": MessageLookupByLibrary.simpleMessage(
+      "Den brukes bare når du velger å identifisere en sang som spilles rundt deg.",
+    ),
+    "permissionsMicrophoneTitle": MessageLookupByLibrary.simpleMessage(
+      "Mikrofon",
+    ),
+    "permissionsNotificationsDescription": MessageLookupByLibrary.simpleMessage(
+      "Viser avspillingskontroller, nedlastingsfremgang og viktige appmeldinger.",
+    ),
+    "permissionsNotificationsTitle": MessageLookupByLibrary.simpleMessage(
+      "Varsler",
+    ),
+    "permissionsOpenSettings": MessageLookupByLibrary.simpleMessage(
+      "Innstillinger",
+    ),
+    "permissionsRequiredNotice": MessageLookupByLibrary.simpleMessage(
+      "Alle tre tillatelsene kreves for å fortsette. Du kan endre dem senere i systeminnstillingene.",
+    ),
+    "permissionsStorageDescription": MessageLookupByLibrary.simpleMessage(
+      "Den lar deg spille musikk, lagre nedlastinger, eksportere spillelister og forberede oppdateringer.",
+    ),
+    "permissionsStorageTitle": MessageLookupByLibrary.simpleMessage(
+      "Musikk og lagring",
+    ),
     "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage(
       "Pipet spilleliste",
     ),

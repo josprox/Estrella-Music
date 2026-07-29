@@ -599,5 +599,10 @@
   "permissionsContinueButton": "Verleen de vereiste machtigingen",
   "permissionsRequiredNotice": "Alle drie de vergunningen zijn vereist om door te kunnen gaan. U kunt ze later wijzigen in de systeeminstellingen.",
   "permissionsAllow": "Toestaan",
-  "permissionsOpenSettings": "Instellingen"
+  "permissionsOpenSettings": "Instellingen",
+  "auth_2fa_title": "Tweefactorauthenticatie",
+  "auth_2fa_subtitle": "Voer de 6-cijferige code van uw authenticator-app in. Deze toegang vervalt over 5 minuten.",
+  "auth_2fa_code": "Authenticatiecode",
+  "auth_2fa_verify": "Controleer en ga verder",
+  "auth_2fa_invalid": "Voer een geldige 6-cijferige code in of log opnieuw in."
 }

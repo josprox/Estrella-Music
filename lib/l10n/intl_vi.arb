@@ -687,5 +687,10 @@
   "permissionsContinueButton": "Cấp quyền cần thiết",
   "permissionsRequiredNotice": "Tất cả ba giấy phép được yêu cầu để tiếp tục. Bạn có thể thay đổi chúng sau trong cài đặt hệ thống.",
   "permissionsAllow": "Cho phép",
-  "permissionsOpenSettings": "Cài đặt"
+  "permissionsOpenSettings": "Cài đặt",
+  "auth_2fa_title": "Xác thực hai yếu tố",
+  "auth_2fa_subtitle": "Nhập mã gồm 6 chữ số từ ứng dụng xác thực của bạn. Quyền truy cập này sẽ hết hạn sau 5 phút.",
+  "auth_2fa_code": "Mã xác thực",
+  "auth_2fa_verify": "Kiểm tra và tiếp tục",
+  "auth_2fa_invalid": "Nhập mã gồm 6 chữ số hợp lệ hoặc đăng nhập lại."
 }

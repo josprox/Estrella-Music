@@ -683,5 +683,10 @@
   "permissionsContinueButton": "Przyznaj wymagane uprawnienia",
   "permissionsRequiredNotice": "Aby kontynuować, wymagane są wszystkie trzy zezwolenia. Możesz je później zmienić w ustawieniach systemu.",
   "permissionsAllow": "Umożliwić",
-  "permissionsOpenSettings": "Ustawienia"
+  "permissionsOpenSettings": "Ustawienia",
+  "auth_2fa_title": "Uwierzytelnianie dwuskładnikowe",
+  "auth_2fa_subtitle": "Wprowadź 6-cyfrowy kod z aplikacji uwierzytelniającej. Dostęp ten wygasa za 5 minut.",
+  "auth_2fa_code": "Kod uwierzytelniający",
+  "auth_2fa_verify": "Sprawdź i kontynuuj",
+  "auth_2fa_invalid": "Wprowadź ważny 6-cyfrowy kod lub zaloguj się ponownie."
 }

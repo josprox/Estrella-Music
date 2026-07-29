@@ -78,6 +78,19 @@ class MessageLookup extends MessageLookupByLibrary {
       "Podle vašich chutí",
     ),
     "audioCodec": MessageLookupByLibrary.simpleMessage("Audio kodek"),
+    "auth_2fa_code": MessageLookupByLibrary.simpleMessage("Autentizační kód"),
+    "auth_2fa_invalid": MessageLookupByLibrary.simpleMessage(
+      "Zadejte platný 6místný kód nebo se znovu přihlaste.",
+    ),
+    "auth_2fa_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Zadejte 6místný kód z aplikace pro ověřování. Tento přístup vyprší za 5 minut.",
+    ),
+    "auth_2fa_title": MessageLookupByLibrary.simpleMessage(
+      "Dvoufaktorová autentizace",
+    ),
+    "auth_2fa_verify": MessageLookupByLibrary.simpleMessage(
+      "Zkontrolujte a pokračujte",
+    ),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Přijímáme nesprávné údaje...",
     ),
@@ -684,6 +697,40 @@ class MessageLookup extends MessageLookupByLibrary {
     "operationFailed": MessageLookupByLibrary.simpleMessage("Operace selhala"),
     "password": MessageLookupByLibrary.simpleMessage("Heslo"),
     "password_text": MessageLookupByLibrary.simpleMessage("Heslo"),
+    "permissionsAllow": MessageLookupByLibrary.simpleMessage("Povolit"),
+    "permissionsConsentDescription": MessageLookupByLibrary.simpleMessage(
+      "Estrella Music potřebuje tato oprávnění, aby mohla spravovat vaši hudbu a nabízet všechny funkce přehrávání.",
+    ),
+    "permissionsConsentTitle": MessageLookupByLibrary.simpleMessage(
+      "Oprávnění začít",
+    ),
+    "permissionsContinueButton": MessageLookupByLibrary.simpleMessage(
+      "Udělte požadovaná oprávnění",
+    ),
+    "permissionsMicrophoneDescription": MessageLookupByLibrary.simpleMessage(
+      "Používá se pouze v případě, že se rozhodnete identifikovat skladbu, která hraje kolem vás.",
+    ),
+    "permissionsMicrophoneTitle": MessageLookupByLibrary.simpleMessage(
+      "Mikrofon",
+    ),
+    "permissionsNotificationsDescription": MessageLookupByLibrary.simpleMessage(
+      "Zobrazuje ovládací prvky přehrávání, průběh stahování a důležitá upozornění aplikací.",
+    ),
+    "permissionsNotificationsTitle": MessageLookupByLibrary.simpleMessage(
+      "Oznámení",
+    ),
+    "permissionsOpenSettings": MessageLookupByLibrary.simpleMessage(
+      "Nastavení",
+    ),
+    "permissionsRequiredNotice": MessageLookupByLibrary.simpleMessage(
+      "K pokračování jsou potřeba všechna tři povolení. Později je můžete změnit v nastavení systému.",
+    ),
+    "permissionsStorageDescription": MessageLookupByLibrary.simpleMessage(
+      "Umožňuje přehrávat hudbu, ukládat stažené soubory, exportovat seznamy skladeb a připravovat aktualizace.",
+    ),
+    "permissionsStorageTitle": MessageLookupByLibrary.simpleMessage(
+      "Hudba a úložiště",
+    ),
     "personalisation": MessageLookupByLibrary.simpleMessage("Přizpůsobení"),
     "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage(
       "Piped Playlist",

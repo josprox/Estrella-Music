@@ -592,5 +592,10 @@
   "permissionsContinueButton": "필수 권한 부여",
   "permissionsRequiredNotice": "계속하려면 세 가지 허가가 모두 필요합니다. 나중에 시스템 설정에서 변경할 수 있습니다.",
   "permissionsAllow": "허용하다",
-  "permissionsOpenSettings": "설정"
+  "permissionsOpenSettings": "설정",
+  "auth_2fa_title": "이중 인증",
+  "auth_2fa_subtitle": "인증 앱의 6자리 코드를 입력하세요. 이 액세스 권한은 5분 후에 만료됩니다.",
+  "auth_2fa_code": "인증코드",
+  "auth_2fa_verify": "확인하고 계속하세요",
+  "auth_2fa_invalid": "유효한 6자리 코드를 입력하거나 다시 로그인하세요."
 }

@@ -71,6 +71,19 @@ class MessageLookup extends MessageLookupByLibrary {
     "artistsByTaste": MessageLookupByLibrary.simpleMessage(
       "Sinun makusi mukaan",
     ),
+    "auth_2fa_code": MessageLookupByLibrary.simpleMessage("Todennuskoodi"),
+    "auth_2fa_invalid": MessageLookupByLibrary.simpleMessage(
+      "Anna kelvollinen 6-numeroinen koodi tai kirjaudu sisään uudelleen.",
+    ),
+    "auth_2fa_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Syötä 6-numeroinen koodi todennussovelluksesta. Tämä käyttöoikeus vanhenee 5 minuutin kuluttua.",
+    ),
+    "auth_2fa_title": MessageLookupByLibrary.simpleMessage(
+      "Kaksivaiheinen todennus",
+    ),
+    "auth_2fa_verify": MessageLookupByLibrary.simpleMessage(
+      "Tarkista ja jatka",
+    ),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Acepto usar mis datos...",
     ),
@@ -500,6 +513,40 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "password": MessageLookupByLibrary.simpleMessage("Salasana"),
     "password_text": MessageLookupByLibrary.simpleMessage("Salasana"),
+    "permissionsAllow": MessageLookupByLibrary.simpleMessage("Salli"),
+    "permissionsConsentDescription": MessageLookupByLibrary.simpleMessage(
+      "Estrella Music tarvitsee nämä luvat hallitakseen musiikkiasi ja tarjotakseen kaikkia toistoominaisuuksia.",
+    ),
+    "permissionsConsentTitle": MessageLookupByLibrary.simpleMessage(
+      "Luvat aloittaaksesi",
+    ),
+    "permissionsContinueButton": MessageLookupByLibrary.simpleMessage(
+      "Myönnä tarvittavat käyttöoikeudet",
+    ),
+    "permissionsMicrophoneDescription": MessageLookupByLibrary.simpleMessage(
+      "Sitä käytetään vain, kun päätät tunnistaa ympärilläsi soivan kappaleen.",
+    ),
+    "permissionsMicrophoneTitle": MessageLookupByLibrary.simpleMessage(
+      "Mikrofoni",
+    ),
+    "permissionsNotificationsDescription": MessageLookupByLibrary.simpleMessage(
+      "Näyttää toistosäätimet, latauksen edistymisen ja tärkeät sovellusilmoitukset.",
+    ),
+    "permissionsNotificationsTitle": MessageLookupByLibrary.simpleMessage(
+      "Ilmoitukset",
+    ),
+    "permissionsOpenSettings": MessageLookupByLibrary.simpleMessage(
+      "Asetukset",
+    ),
+    "permissionsRequiredNotice": MessageLookupByLibrary.simpleMessage(
+      "Jatkamiseen vaaditaan kaikki kolme lupaa. Voit muuttaa niitä myöhemmin järjestelmäasetuksissa.",
+    ),
+    "permissionsStorageDescription": MessageLookupByLibrary.simpleMessage(
+      "Sen avulla voit toistaa musiikkia, tallentaa latauksia, viedä soittolistoja ja valmistella päivityksiä.",
+    ),
+    "permissionsStorageTitle": MessageLookupByLibrary.simpleMessage(
+      "Musiikkia ja tallennustilaa",
+    ),
     "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage(
       "Piped-soittolista",
     ),

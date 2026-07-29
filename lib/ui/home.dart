@@ -240,9 +240,11 @@ class Home extends StatelessWidget {
                       playerController.queuePanelController.open();
                     },
                     panelBuilder: (sc, onReorderStart, onReorderEnd) {
-                      return Obx(() => playerController.panelPosition.value > 0
-                          ? Player(mainScrollController: sc)
-                          : const SizedBox.shrink());
+                      // Keep the full player mounted while the panel is
+                      // collapsed. Replacing it with an empty widget disposed
+                      // the album background and made it load again every time
+                      // the user reopened the player.
+                      return Player(mainScrollController: sc);
                     },
                     body: const ScreenNavigation(),
                     header: !isWideScreen

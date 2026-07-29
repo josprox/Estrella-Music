@@ -39,6 +39,15 @@ class MessageLookup extends MessageLookupByLibrary {
     "about": MessageLookupByLibrary.simpleMessage("关于"),
     "albumsByTaste": MessageLookupByLibrary.simpleMessage("根据你的口味"),
     "artistsByTaste": MessageLookupByLibrary.simpleMessage("根据你的口味"),
+    "auth_2fa_code": MessageLookupByLibrary.simpleMessage("验证码"),
+    "auth_2fa_invalid": MessageLookupByLibrary.simpleMessage(
+      "输入有效的 6 位数代码或重新登录。",
+    ),
+    "auth_2fa_subtitle": MessageLookupByLibrary.simpleMessage(
+      "输入验证器应用程序中的 6 位数代码。此访问权限将在 5 分钟后过期。",
+    ),
+    "auth_2fa_title": MessageLookupByLibrary.simpleMessage("双因素身份验证"),
+    "auth_2fa_verify": MessageLookupByLibrary.simpleMessage("检查并继续"),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "可爱的小兔子矢量素材 素材中国 素材网...",
     ),
@@ -230,6 +239,30 @@ class MessageLookup extends MessageLookupByLibrary {
     "noSongsInCollection": MessageLookupByLibrary.simpleMessage("该专辑中没有歌曲"),
     "notAuthenticated": MessageLookupByLibrary.simpleMessage("未经过身份验证"),
     "password_text": MessageLookupByLibrary.simpleMessage("密码"),
+    "permissionsAllow": MessageLookupByLibrary.simpleMessage("允许"),
+    "permissionsConsentDescription": MessageLookupByLibrary.simpleMessage(
+      "Estrella Music 需要这些权限来管理您的音乐并提供所有播放功能。",
+    ),
+    "permissionsConsentTitle": MessageLookupByLibrary.simpleMessage("开始的权限"),
+    "permissionsContinueButton": MessageLookupByLibrary.simpleMessage(
+      "授予所需的权限",
+    ),
+    "permissionsMicrophoneDescription": MessageLookupByLibrary.simpleMessage(
+      "仅当您选择识别您周围正在播放的歌曲时才使用它。",
+    ),
+    "permissionsMicrophoneTitle": MessageLookupByLibrary.simpleMessage("麦克风"),
+    "permissionsNotificationsDescription": MessageLookupByLibrary.simpleMessage(
+      "显示播放控件、下载进度和重要的应用程序通知。",
+    ),
+    "permissionsNotificationsTitle": MessageLookupByLibrary.simpleMessage("通知"),
+    "permissionsOpenSettings": MessageLookupByLibrary.simpleMessage("设置"),
+    "permissionsRequiredNotice": MessageLookupByLibrary.simpleMessage(
+      "需要所有三项许可证才能继续。您可以稍后在系统设置中更改它们。",
+    ),
+    "permissionsStorageDescription": MessageLookupByLibrary.simpleMessage(
+      "它允许您播放音乐、保存下载、导出播放列表和准备更新。",
+    ),
+    "permissionsStorageTitle": MessageLookupByLibrary.simpleMessage("音乐和存储"),
     "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage("管道播放列表"),
     "playNow": MessageLookupByLibrary.simpleMessage("立即播放"),
     "playbackSpeed": MessageLookupByLibrary.simpleMessage("播放速度"),

@@ -57,6 +57,19 @@ class MessageLookup extends MessageLookupByLibrary {
     "artistsByTaste": MessageLookupByLibrary.simpleMessage(
       "നിങ്ങളുടെ അഭിരുചിക്കനുസരിച്ച്",
     ),
+    "auth_2fa_code": MessageLookupByLibrary.simpleMessage("പ്രാമാണീകരണ കോഡ്"),
+    "auth_2fa_invalid": MessageLookupByLibrary.simpleMessage(
+      "സാധുതയുള്ള 6 അക്ക കോഡ് നൽകുക അല്ലെങ്കിൽ വീണ്ടും സൈൻ ഇൻ ചെയ്യുക.",
+    ),
+    "auth_2fa_subtitle": MessageLookupByLibrary.simpleMessage(
+      "നിങ്ങളുടെ ഓതൻ്റിക്കേറ്റർ ആപ്പിൽ നിന്നുള്ള 6 അക്ക കോഡ് നൽകുക. ഈ ആക്‌സസ് 5 മിനിറ്റിനുള്ളിൽ കാലഹരണപ്പെടും.",
+    ),
+    "auth_2fa_title": MessageLookupByLibrary.simpleMessage(
+      "രണ്ട്-ഘടക പ്രാമാണീകരണം",
+    ),
+    "auth_2fa_verify": MessageLookupByLibrary.simpleMessage(
+      "പരിശോധിച്ച് തുടരുക",
+    ),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "അസെപ്റ്റോ യൂസർ മിസ് ഡാറ്റസ്...",
     ),
@@ -402,6 +415,40 @@ class MessageLookup extends MessageLookupByLibrary {
     "notAuthenticated": MessageLookupByLibrary.simpleMessage("ആധികാരികതയില്ല"),
     "openIn": MessageLookupByLibrary.simpleMessage("തുറക്കുക"),
     "password_text": MessageLookupByLibrary.simpleMessage("രഹസ്യവാക്ക്"),
+    "permissionsAllow": MessageLookupByLibrary.simpleMessage("അനുവദിക്കുക"),
+    "permissionsConsentDescription": MessageLookupByLibrary.simpleMessage(
+      "നിങ്ങളുടെ സംഗീതം നിയന്ത്രിക്കാനും എല്ലാ പ്ലേബാക്ക് ഫീച്ചറുകളും ഓഫർ ചെയ്യാനും Estrella Music-ന് ഈ അനുമതികൾ ആവശ്യമാണ്.",
+    ),
+    "permissionsConsentTitle": MessageLookupByLibrary.simpleMessage(
+      "ആരംഭിക്കുന്നതിനുള്ള അനുമതികൾ",
+    ),
+    "permissionsContinueButton": MessageLookupByLibrary.simpleMessage(
+      "ആവശ്യമായ അനുമതികൾ നൽകുക",
+    ),
+    "permissionsMicrophoneDescription": MessageLookupByLibrary.simpleMessage(
+      "നിങ്ങൾക്ക് ചുറ്റും പ്ലേ ചെയ്യുന്ന ഒരു ഗാനം തിരിച്ചറിയാൻ നിങ്ങൾ തിരഞ്ഞെടുക്കുമ്പോൾ മാത്രമേ ഇത് ഉപയോഗിക്കൂ.",
+    ),
+    "permissionsMicrophoneTitle": MessageLookupByLibrary.simpleMessage(
+      "മൈക്രോഫോൺ",
+    ),
+    "permissionsNotificationsDescription": MessageLookupByLibrary.simpleMessage(
+      "പ്ലേബാക്ക് നിയന്ത്രണങ്ങൾ, ഡൗൺലോഡ് പുരോഗതി, പ്രധാനപ്പെട്ട ആപ്പ് അറിയിപ്പുകൾ എന്നിവ കാണിക്കുന്നു.",
+    ),
+    "permissionsNotificationsTitle": MessageLookupByLibrary.simpleMessage(
+      "അറിയിപ്പുകൾ",
+    ),
+    "permissionsOpenSettings": MessageLookupByLibrary.simpleMessage(
+      "ക്രമീകരണങ്ങൾ",
+    ),
+    "permissionsRequiredNotice": MessageLookupByLibrary.simpleMessage(
+      "തുടരുന്നതിന് മൂന്ന് പെർമിറ്റുകളും ആവശ്യമാണ്. സിസ്റ്റം ക്രമീകരണങ്ങളിൽ നിങ്ങൾക്ക് അവ പിന്നീട് മാറ്റാവുന്നതാണ്.",
+    ),
+    "permissionsStorageDescription": MessageLookupByLibrary.simpleMessage(
+      "സംഗീതം പ്ലേ ചെയ്യാനും ഡൗൺലോഡുകൾ സംരക്ഷിക്കാനും പ്ലേലിസ്റ്റുകൾ കയറ്റുമതി ചെയ്യാനും അപ്‌ഡേറ്റുകൾ തയ്യാറാക്കാനും ഇത് നിങ്ങളെ അനുവദിക്കുന്നു.",
+    ),
+    "permissionsStorageTitle": MessageLookupByLibrary.simpleMessage(
+      "സംഗീതവും സംഭരണവും",
+    ),
     "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage(
       "പൈപ്പ് പ്ലേലിസ്റ്റ്",
     ),

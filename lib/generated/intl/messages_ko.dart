@@ -62,6 +62,15 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "artists": MessageLookupByLibrary.simpleMessage("아티스트"),
     "artistsByTaste": MessageLookupByLibrary.simpleMessage("당신의 취향에 따라"),
+    "auth_2fa_code": MessageLookupByLibrary.simpleMessage("인증코드"),
+    "auth_2fa_invalid": MessageLookupByLibrary.simpleMessage(
+      "유효한 6자리 코드를 입력하거나 다시 로그인하세요.",
+    ),
+    "auth_2fa_subtitle": MessageLookupByLibrary.simpleMessage(
+      "인증 앱의 6자리 코드를 입력하세요. 이 액세스 권한은 5분 후에 만료됩니다.",
+    ),
+    "auth_2fa_title": MessageLookupByLibrary.simpleMessage("이중 인증"),
+    "auth_2fa_verify": MessageLookupByLibrary.simpleMessage("확인하고 계속하세요"),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Accepto usar mis datos...",
     ),
@@ -442,6 +451,34 @@ class MessageLookup extends MessageLookupByLibrary {
     "operationFailed": MessageLookupByLibrary.simpleMessage("동작 실패"),
     "password": MessageLookupByLibrary.simpleMessage("비밀번호"),
     "password_text": MessageLookupByLibrary.simpleMessage("비밀번호"),
+    "permissionsAllow": MessageLookupByLibrary.simpleMessage("허용하다"),
+    "permissionsConsentDescription": MessageLookupByLibrary.simpleMessage(
+      "Estrella Music은 음악을 관리하고 모든 재생 기능을 제공하려면 이러한 권한이 필요합니다.",
+    ),
+    "permissionsConsentTitle": MessageLookupByLibrary.simpleMessage(
+      "시작하기 위한 권한",
+    ),
+    "permissionsContinueButton": MessageLookupByLibrary.simpleMessage(
+      "필수 권한 부여",
+    ),
+    "permissionsMicrophoneDescription": MessageLookupByLibrary.simpleMessage(
+      "주변에서 재생되는 노래를 식별하기로 선택한 경우에만 사용됩니다.",
+    ),
+    "permissionsMicrophoneTitle": MessageLookupByLibrary.simpleMessage("마이크로폰"),
+    "permissionsNotificationsDescription": MessageLookupByLibrary.simpleMessage(
+      "재생 제어, 다운로드 진행 상황, 중요한 앱 알림을 표시합니다.",
+    ),
+    "permissionsNotificationsTitle": MessageLookupByLibrary.simpleMessage("알림"),
+    "permissionsOpenSettings": MessageLookupByLibrary.simpleMessage("설정"),
+    "permissionsRequiredNotice": MessageLookupByLibrary.simpleMessage(
+      "계속하려면 세 가지 허가가 모두 필요합니다. 나중에 시스템 설정에서 변경할 수 있습니다.",
+    ),
+    "permissionsStorageDescription": MessageLookupByLibrary.simpleMessage(
+      "음악을 재생하고, 다운로드를 저장하고, 재생 목록을 내보내고, 업데이트를 준비할 수 있습니다.",
+    ),
+    "permissionsStorageTitle": MessageLookupByLibrary.simpleMessage(
+      "음악 및 저장공간",
+    ),
     "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage(
       "파이프 재생목록",
     ),

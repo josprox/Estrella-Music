@@ -683,5 +683,10 @@
   "permissionsContinueButton": "Erteilen Sie die erforderlichen Berechtigungen",
   "permissionsRequiredNotice": "Zur Fortsetzung sind alle drei Genehmigungen erforderlich. Sie können diese später in den Systemeinstellungen ändern.",
   "permissionsAllow": "Erlauben",
-  "permissionsOpenSettings": "Einstellungen"
+  "permissionsOpenSettings": "Einstellungen",
+  "auth_2fa_title": "Zwei-Faktor-Authentifizierung",
+  "auth_2fa_subtitle": "Geben Sie den 6-stelligen Code aus Ihrer Authentifizierungs-App ein. Dieser Zugriff läuft in 5 Minuten ab.",
+  "auth_2fa_code": "Authentifizierungscode",
+  "auth_2fa_verify": "Überprüfen und fortfahren",
+  "auth_2fa_invalid": "Geben Sie einen gültigen 6-stelligen Code ein oder melden Sie sich erneut an."
 }

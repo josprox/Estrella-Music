@@ -72,6 +72,21 @@ class MessageLookup extends MessageLookupByLibrary {
     "artistsByTaste": MessageLookupByLibrary.simpleMessage(
       "ତୁମର ସ୍ୱାଦ ଅନୁସାରେ |",
     ),
+    "auth_2fa_code": MessageLookupByLibrary.simpleMessage(
+      "ପ୍ରାମାଣିକିକରଣ କୋଡ୍ |",
+    ),
+    "auth_2fa_invalid": MessageLookupByLibrary.simpleMessage(
+      "ଏକ ବ valid ଧ 6 ଅଙ୍କ ବିଶିଷ୍ଟ କୋଡ୍ ପ୍ରବେଶ କରନ୍ତୁ କିମ୍ବା ପୁନର୍ବାର ସାଇନ୍ ଇନ୍ କରନ୍ତୁ |",
+    ),
+    "auth_2fa_subtitle": MessageLookupByLibrary.simpleMessage(
+      "ଆପଣଙ୍କର ପ୍ରାମାଣିକିକରଣ ଆପରୁ 6-ଅଙ୍କ କୋଡ୍ ପ୍ରବେଶ କରନ୍ତୁ | ଏହି ପ୍ରବେଶ 5 ମିନିଟରେ ସମାପ୍ତ ହେବ |",
+    ),
+    "auth_2fa_title": MessageLookupByLibrary.simpleMessage(
+      "ଦୁଇ-ଫ୍ୟାକ୍ଟର୍ ପ୍ରାମାଣିକିକରଣ |",
+    ),
+    "auth_2fa_verify": MessageLookupByLibrary.simpleMessage(
+      "ଯାଞ୍ଚ କରନ୍ତୁ ଏବଂ ଜାରି ରଖନ୍ତୁ |",
+    ),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Acepto usar mis datos ...",
     ),
@@ -497,6 +512,42 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "password": MessageLookupByLibrary.simpleMessage("ପାସୱାର୍ଡ"),
     "password_text": MessageLookupByLibrary.simpleMessage("ପାସୱାର୍ଡ"),
+    "permissionsAllow": MessageLookupByLibrary.simpleMessage(
+      "ଅନୁମତି ଦିଅନ୍ତୁ |",
+    ),
+    "permissionsConsentDescription": MessageLookupByLibrary.simpleMessage(
+      "ତୁମର ସଙ୍ଗୀତ ପରିଚାଳନା ଏବଂ ସମସ୍ତ ପ୍ଲେ-ବ features ଶିଷ୍ଟ୍ୟ ପ୍ରଦାନ କରିବାକୁ ଏଷ୍ଟ୍ରେଲା ମ୍ୟୁଜିକ୍ ଏହି ଅନୁମତିଗୁଡିକ ଆବଶ୍ୟକ କରେ |",
+    ),
+    "permissionsConsentTitle": MessageLookupByLibrary.simpleMessage(
+      "ଆରମ୍ଭ କରିବାକୁ ଅନୁମତି |",
+    ),
+    "permissionsContinueButton": MessageLookupByLibrary.simpleMessage(
+      "ଆବଶ୍ୟକ ଅନୁମତି ପ୍ରଦାନ କରନ୍ତୁ |",
+    ),
+    "permissionsMicrophoneDescription": MessageLookupByLibrary.simpleMessage(
+      "ଯେତେବେଳେ ତୁମେ ତୁମର ଚାରିପାଖରେ ଖେଳୁଥିବା ଏକ ଗୀତକୁ ଚିହ୍ନିବା ପାଇଁ ବାଛିବ ସେତେବେଳେ ଏହା ବ୍ୟବହୃତ ହୁଏ |",
+    ),
+    "permissionsMicrophoneTitle": MessageLookupByLibrary.simpleMessage(
+      "ମାଇକ୍ରୋଫୋନ୍ |",
+    ),
+    "permissionsNotificationsDescription": MessageLookupByLibrary.simpleMessage(
+      "ପ୍ଲେବ୍ୟାକ୍ ନିୟନ୍ତ୍ରଣ, ପ୍ରଗତି ଡାଉନଲୋଡ୍ ଏବଂ ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ଆପ୍ ନୋଟିସ୍ ଦେଖାଏ |",
+    ),
+    "permissionsNotificationsTitle": MessageLookupByLibrary.simpleMessage(
+      "ବିଜ୍ଞପ୍ତିଗୁଡିକ",
+    ),
+    "permissionsOpenSettings": MessageLookupByLibrary.simpleMessage(
+      "ସେଟିଂସମୂହ",
+    ),
+    "permissionsRequiredNotice": MessageLookupByLibrary.simpleMessage(
+      "ଜାରି ରଖିବାକୁ ସମସ୍ତ ତିନୋଟି ଅନୁମତି ଆବଶ୍ୟକ | ସିଷ୍ଟମ୍ ସେଟିଙ୍ଗରେ ଆପଣ ସେଗୁଡ଼ିକୁ ପରେ ପରିବର୍ତ୍ତନ କରିପାରିବେ |",
+    ),
+    "permissionsStorageDescription": MessageLookupByLibrary.simpleMessage(
+      "ଏହା ଆପଣଙ୍କୁ ସଙ୍ଗୀତ ବଜାଇବା, ଡାଉନଲୋଡ୍ ସଞ୍ଚୟ କରିବା, ପ୍ଲେଲିଷ୍ଟ ରପ୍ତାନି କରିବା ଏବଂ ଅଦ୍ୟତନ ପ୍ରସ୍ତୁତ କରିବାକୁ ଅନୁମତି ଦିଏ |",
+    ),
+    "permissionsStorageTitle": MessageLookupByLibrary.simpleMessage(
+      "ସଙ୍ଗୀତ ଏବଂ ସଂରକ୍ଷଣ",
+    ),
     "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage(
       "ପାଇପ୍ ପ୍ଲେଲିଷ୍ଟ୍ |",
     ),

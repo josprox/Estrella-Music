@@ -76,6 +76,19 @@ class MessageLookup extends MessageLookupByLibrary {
     "artists": MessageLookupByLibrary.simpleMessage("ਕਲਾਕਾਰ"),
     "artistsByTaste": MessageLookupByLibrary.simpleMessage("ਆਪਣੇ ਸੁਆਦ ਅਨੁਸਾਰ"),
     "audioCodec": MessageLookupByLibrary.simpleMessage("ਆਡੀਓ ਕੋਡੇਕ"),
+    "auth_2fa_code": MessageLookupByLibrary.simpleMessage("ਪ੍ਰਮਾਣੀਕਰਨ ਕੋਡ"),
+    "auth_2fa_invalid": MessageLookupByLibrary.simpleMessage(
+      "ਇੱਕ ਵੈਧ 6-ਅੰਕਾਂ ਵਾਲਾ ਕੋਡ ਦਾਖਲ ਕਰੋ ਜਾਂ ਦੁਬਾਰਾ ਸਾਈਨ ਇਨ ਕਰੋ।",
+    ),
+    "auth_2fa_subtitle": MessageLookupByLibrary.simpleMessage(
+      "ਆਪਣੇ ਪ੍ਰਮਾਣਕ ਐਪ ਤੋਂ 6-ਅੰਕ ਦਾ ਕੋਡ ਦਾਖਲ ਕਰੋ। ਇਸ ਪਹੁੰਚ ਦੀ ਮਿਆਦ 5 ਮਿੰਟਾਂ ਵਿੱਚ ਸਮਾਪਤ ਹੋ ਜਾਂਦੀ ਹੈ।",
+    ),
+    "auth_2fa_title": MessageLookupByLibrary.simpleMessage(
+      "ਦੋ-ਕਾਰਕ ਪ੍ਰਮਾਣਿਕਤਾ",
+    ),
+    "auth_2fa_verify": MessageLookupByLibrary.simpleMessage(
+      "ਜਾਂਚ ਕਰੋ ਅਤੇ ਜਾਰੀ ਰੱਖੋ",
+    ),
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "ਗਲਤ ਡੇਟਾ ਨੂੰ ਸਵੀਕਾਰ ਕਰੋ...",
     ),
@@ -602,6 +615,38 @@ class MessageLookup extends MessageLookupByLibrary {
     "operationFailed": MessageLookupByLibrary.simpleMessage("ਕਾਰਵਾਈ ਅਸਫਲ ਰਹੀ"),
     "password": MessageLookupByLibrary.simpleMessage("ਪਾਸਵਰਡ"),
     "password_text": MessageLookupByLibrary.simpleMessage("ਪਾਸਵਰਡ"),
+    "permissionsAllow": MessageLookupByLibrary.simpleMessage("ਇਜਾਜ਼ਤ ਦਿਓ"),
+    "permissionsConsentDescription": MessageLookupByLibrary.simpleMessage(
+      "Estrella ਸੰਗੀਤ ਨੂੰ ਤੁਹਾਡੇ ਸੰਗੀਤ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰਨ ਅਤੇ ਸਾਰੀਆਂ ਪਲੇਬੈਕ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਦੀ ਪੇਸ਼ਕਸ਼ ਕਰਨ ਲਈ ਇਹਨਾਂ ਅਨੁਮਤੀਆਂ ਦੀ ਲੋੜ ਹੈ।",
+    ),
+    "permissionsConsentTitle": MessageLookupByLibrary.simpleMessage(
+      "ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਇਜਾਜ਼ਤਾਂ",
+    ),
+    "permissionsContinueButton": MessageLookupByLibrary.simpleMessage(
+      "ਲੋੜੀਂਦੀਆਂ ਇਜਾਜ਼ਤਾਂ ਦਿਓ",
+    ),
+    "permissionsMicrophoneDescription": MessageLookupByLibrary.simpleMessage(
+      "ਇਹ ਉਦੋਂ ਹੀ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ ਜਦੋਂ ਤੁਸੀਂ ਆਪਣੇ ਆਲੇ-ਦੁਆਲੇ ਚੱਲ ਰਹੇ ਗੀਤ ਦੀ ਪਛਾਣ ਕਰਨ ਦੀ ਚੋਣ ਕਰਦੇ ਹੋ।",
+    ),
+    "permissionsMicrophoneTitle": MessageLookupByLibrary.simpleMessage(
+      "ਮਾਈਕ੍ਰੋਫ਼ੋਨ",
+    ),
+    "permissionsNotificationsDescription": MessageLookupByLibrary.simpleMessage(
+      "ਪਲੇਬੈਕ ਨਿਯੰਤਰਣ, ਡਾਊਨਲੋਡ ਪ੍ਰਗਤੀ, ਅਤੇ ਮਹੱਤਵਪੂਰਨ ਐਪ ਨੋਟਿਸ ਦਿਖਾਉਂਦਾ ਹੈ।",
+    ),
+    "permissionsNotificationsTitle": MessageLookupByLibrary.simpleMessage(
+      "ਸੂਚਨਾਵਾਂ",
+    ),
+    "permissionsOpenSettings": MessageLookupByLibrary.simpleMessage("ਸੈਟਿੰਗਾਂ"),
+    "permissionsRequiredNotice": MessageLookupByLibrary.simpleMessage(
+      "ਜਾਰੀ ਰੱਖਣ ਲਈ ਸਾਰੇ ਤਿੰਨ ਪਰਮਿਟ ਦੀ ਲੋੜ ਹੈ। ਤੁਸੀਂ ਉਹਨਾਂ ਨੂੰ ਬਾਅਦ ਵਿੱਚ ਸਿਸਟਮ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਬਦਲ ਸਕਦੇ ਹੋ।",
+    ),
+    "permissionsStorageDescription": MessageLookupByLibrary.simpleMessage(
+      "ਇਹ ਤੁਹਾਨੂੰ ਸੰਗੀਤ ਚਲਾਉਣ, ਡਾਊਨਲੋਡਾਂ ਨੂੰ ਸੁਰੱਖਿਅਤ ਕਰਨ, ਪਲੇਲਿਸਟਾਂ ਨੂੰ ਨਿਰਯਾਤ ਕਰਨ ਅਤੇ ਅੱਪਡੇਟ ਤਿਆਰ ਕਰਨ ਦੀ ਇਜਾਜ਼ਤ ਦਿੰਦਾ ਹੈ।",
+    ),
+    "permissionsStorageTitle": MessageLookupByLibrary.simpleMessage(
+      "ਸੰਗੀਤ ਅਤੇ ਸਟੋਰੇਜ",
+    ),
     "personalisation": MessageLookupByLibrary.simpleMessage("ਵਿਅਕਤੀਗਤਕਰਨ"),
     "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage(
       "ਪਾਈਪ ਪਲੇਲਿਸਟ",

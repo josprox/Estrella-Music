@@ -113,6 +113,37 @@ class AuthService extends GetxService {
     return data;
   }
 
+  String? _twoFactorChallengeToken(Map<String, dynamic> data) {
+    final status = data['status']?.toString().trim().toLowerCase();
+    final rawToken = data['challenge_token'] ??
+        data['challengeToken'] ??
+        data['temp_token'] ??
+        data['tempToken'] ??
+        (status == '2fa_required' ? data['token'] : null);
+    final token = rawToken?.toString().trim();
+    return token == null || token.isEmpty ? null : token;
+  }
+
+  bool _requiresTwoFactor(
+    Map<String, dynamic> data,
+    String? challengeToken,
+  ) {
+    if (challengeToken == null) return false;
+
+    final status = data['status']?.toString().trim().toLowerCase();
+    final message = data['message']?.toString().trim().toLowerCase() ?? '';
+    final explicitFlag =
+        data['requires_2fa'] == true || data['requires2FA'] == true;
+
+    return explicitFlag ||
+        status == '2fa_required' ||
+        status == 'two_factor_required' ||
+        status == 'mfa_required' ||
+        message.contains('two-factor') ||
+        message.contains('two factor') ||
+        message.contains('2fa');
+  }
+
   Future<void> _saveTokenData(
     String token,
     String refreshToken,
@@ -125,7 +156,8 @@ class AuthService extends GetxService {
 
     await SafeSecureStorage.write(_jwtTokenKey, token);
     await SafeSecureStorage.write(_refreshTokenKey, refreshToken);
-    await SafeSecureStorage.write(_tokenExpirationKey, expirationEpoch.toString());
+    await SafeSecureStorage.write(
+        _tokenExpirationKey, expirationEpoch.toString());
   }
 
   Future<void> _clearTokenData() async {
@@ -265,6 +297,15 @@ class AuthService extends GetxService {
       );
 
       final data = _asMap(response.data);
+      final challengeToken = _twoFactorChallengeToken(data);
+      if (_requiresTwoFactor(data, challengeToken)) {
+        return {
+          'success': false,
+          'requires2FA': true,
+          'challengeToken': challengeToken,
+          'expiresIn': _asInt(data['expires_in']) ?? 300,
+        };
+      }
       if (response.statusCode == 200 &&
           data['status']?.toString() == 'success' &&
           data['token'] != null) {
@@ -282,13 +323,58 @@ class AuthService extends GetxService {
       }
 
       final message = data['message']?.toString() ?? 'Error desconocido';
-      if (message == 'Invalid credentials') {
+      if (message == 'Invalid credentials' ||
+          message == 'Invalid email or password.') {
         return {'success': false, 'message': 'INVALID_CREDENTIALS'};
       }
       if (message.contains('Account not verified')) {
         return {'success': false, 'message': 'ACCOUNT_NOT_VERIFIED'};
       }
       return {'success': false, 'message': message};
+    } on DioException catch (e) {
+      return _handleError(e);
+    } catch (e) {
+      return {'success': false, 'message': e.toString()};
+    }
+  }
+
+  Future<Map<String, dynamic>> verifyTwoFactor({
+    required String challengeToken,
+    required String code,
+  }) async {
+    if (!isConfigured) {
+      return {'success': false, 'message': 'AUTH_NOT_CONFIGURED'};
+    }
+
+    try {
+      final response = await _dio.postUri(
+        _buildUri('login/2fa'),
+        data: {
+          'challenge_token': challengeToken,
+          'code': code.trim(),
+        },
+        options: Options(headers: _publicHeaders),
+      );
+      final data = _asMap(response.data);
+      if (response.statusCode == 200 &&
+          data['status']?.toString() == 'success' &&
+          data['token'] != null) {
+        await _saveTokenData(
+          data['token'].toString(),
+          data['refresh_token']?.toString() ?? '',
+          _asInt(data['expires_in']) ?? 7776000,
+        );
+        await restoreSession();
+        return {
+          'success': true,
+          'user': userProfile.value,
+        };
+      }
+
+      return {
+        'success': false,
+        'message': data['message']?.toString() ?? 'INVALID_2FA_CODE',
+      };
     } on DioException catch (e) {
       return _handleError(e);
     } catch (e) {
