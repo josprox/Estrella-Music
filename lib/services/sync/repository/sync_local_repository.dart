@@ -8,14 +8,12 @@ class SyncLocalRepository {
     final libRp = SqliteStore.isBoxOpen('LIBRP') ? SqliteStore.box('LIBRP') : await SqliteStore.openBox('LIBRP');
     final libAlbums = SqliteStore.isBoxOpen('LibraryAlbums') ? SqliteStore.box('LibraryAlbums') : await SqliteStore.openBox('LibraryAlbums');
     final libArtists = SqliteStore.isBoxOpen('LibraryArtists') ? SqliteStore.box('LibraryArtists') : await SqliteStore.openBox('LibraryArtists');
-    final songDownloads = SqliteStore.isBoxOpen('SongDownloads') ? SqliteStore.box('SongDownloads') : await SqliteStore.openBox('SongDownloads');
     return {
       'playlists': await _collectPlaylists(),
       'favorites': libFav.values.toList(),
       'recent_plays': libRp.values.toList(),
       'albums': libAlbums.values.toList(),
       'artists': libArtists.values.toList(),
-      'downloads': songDownloads.values.toList(),
       'settings': _syncableSettings(appPrefs),
     };
   }
@@ -175,7 +173,6 @@ class SyncLocalRepository {
       'user_artists',
       'settings',
       'user_settings',
-      'downloads',
     ];
     return collectionKeys.any((key) => map.containsKey(key));
   }

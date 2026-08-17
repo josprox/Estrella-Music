@@ -47,7 +47,6 @@ Responsabilidades correctas de EMusic:
 - Historial de reproduccion.
 - Albums y artistas guardados.
 - Settings musicales.
-- Descargas autorizadas y metadata de offline.
 - Estado de sincronizacion.
 - Cola/cambios pendientes sincronizables.
 - Playlists publicas del dominio musical.
@@ -100,7 +99,8 @@ Reglas de migracion:
 - Subir por lotes.
 - Validar conteos y checksums/versions.
 - Activar cloud solo despues de confirmar integridad.
-- Mantener descargas offline como archivos locales; el servidor guarda autorizacion/metadata, no rutas locales absolutas.
+- Mantener descargas offline y toda su metadata exclusivamente en SQLite/local.
+- No enviar a EMusic rutas, estados ni cambios de `SongDownloads`.
 
 ## Endpoints que NO deben duplicarse en EMusic
 
@@ -144,9 +144,6 @@ Endpoints a agregar para iniciar migracion Spotify:
 - `POST /api/sync/resolve-conflict`
 - `POST /api/devices/link`
 - `GET /api/devices`
-- `POST /api/downloads/authorize`
-- `GET /api/downloads`
-
 Si se necesita una ruta social o de cuenta, primero revisar si ya existe en Joss Red.
 
 ## Joss actual

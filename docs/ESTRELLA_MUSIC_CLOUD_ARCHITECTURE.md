@@ -72,7 +72,7 @@ Componentes actuales:
 - `SocialController.joss`: playlists publicas musicales.
 - `SyncDataService.joss`: persistencia/formateo de snapshots.
 - `LegacyMigrationService.joss`: migracion de backups musicales antiguos.
-- Modelos cloud: `UserPlaylist`, `UserSetting`, `UserDownload`, `SyncChangeLog`, `LinkedDevice`.
+- Modelos cloud: `UserPlaylist`, `UserSetting`, `SyncChangeLog`, `LinkedDevice`.
 - ORM actual: `GranDB`.
 
 ## 4. Estado actual de Flutter
@@ -110,7 +110,7 @@ eventos para crear cambios incrementales durables.
 - Flutter envia el JWT a EMusic.
 - EMusic es fuente principal de biblioteca musical.
 - Flutter conserva cache local para performance/offline.
-- Descargas son locales; EMusic guarda autorizacion, estado y metadata.
+- Descargas, estado offline y rutas permanecen exclusivamente en SQLite/local.
 - Cambios offline se guardan en una cola durable.
 - Al volver internet, Flutter hace push de cambios pendientes y pull incremental.
 
@@ -131,7 +131,6 @@ eventos para crear cambios incrementales durables.
    - albums
    - artistas
    - settings
-   - descargas
 6. Crear sesion de migracion en EMusic.
 7. Subir datos por chunks.
 8. Validar conteos/checksums/versiones.
@@ -189,9 +188,6 @@ GET  /api/sync/logs
 POST   /api/devices/link
 GET    /api/devices
 DELETE /api/devices/{id}
-POST   /api/downloads/authorize
-GET    /api/downloads
-POST   /api/downloads/revoke
 ```
 
 ## 8. Tablas necesarias en EMusic
@@ -204,7 +200,6 @@ Mantener o crear:
 - `user_albums`
 - `user_artists`
 - `user_settings`
-- `user_downloads`
 - `linked_devices`
 - `sync_change_log`
 - `user_legacy_migrations`
@@ -262,7 +257,6 @@ Tipos iniciales:
 - `album`
 - `artist`
 - `setting`
-- `download_authorization`
 
 ## 10. Conflictos
 
@@ -272,7 +266,7 @@ Reglas iniciales:
 - Favoritos: merge por `track_id`; delete gana si es mas reciente.
 - Historial: append/merge por `track_id` + timestamp.
 - Playlists: version por playlist; si hay cambios simultaneos, crear conflicto resoluble.
-- Descargas: servidor autoriza; dispositivo decide archivo/ruta local.
+- Descargas: no participan en resolucion de conflictos porque son locales.
 
 No borrar registros inmediatamente. Usar tombstones (`deleted_at`) para que otros dispositivos puedan sincronizar eliminaciones.
 
@@ -287,7 +281,6 @@ Capas a crear o reforzar:
 - `SyncCoordinator`: decide push/pull/retry.
 - `PendingChangeQueue`: cola durable de cambios offline.
 - `MigrationCoordinator`: backup, analisis, chunks, validacion.
-- `DownloadEntitlementService`: autorizaciones de descarga.
 
 Flags/local prefs:
 
@@ -346,12 +339,11 @@ UI necesaria:
 - Tombstones.
 - Resolver conflictos de playlists.
 
-### Etapa 6: Dispositivos y descargas
+### Etapa 6: Dispositivos y offline local
 
 - Vincular dispositivo.
-- Autorizar descargas.
 - Mostrar dispositivos vinculados.
-- Revocar autorizaciones.
+- Mantener descargas fuera de snapshots, outbox y pulls.
 
 ### Etapa 7: Produccion
 
@@ -395,7 +387,7 @@ flutter run
 - Duplicar auth en EMusic: evitar; Joss Red es autoridad.
 - Perdida de datos por snapshot completo: backup local y validacion previa.
 - Sobrescritura multi-dispositivo: versiones y tombstones.
-- Descargas no portables: guardar solo metadata/autorizacion cloud.
+- Descargas no portables: no enviarlas a EMusic.
 - Mutaciones fuera de repositorios: terminar de centralizarlas progresivamente.
 - Secretos en repos: rotar y sacar de versionado.
 - Migraciones pesadas en request: mover a jobs o proceso controlado.
@@ -408,7 +400,7 @@ La primera implementacion debe enfocarse en:
 2. Usar login/token de Joss Red.
 3. Crear migracion inicial segura hacia EMusic.
 4. Sincronizar playlists, favoritos, historial y settings.
-5. Dejar descargas como offline local con autorizacion cloud.
+5. Dejar descargas y metadata offline exclusivamente en SQLite/local.
 
 ## 16. Garantias de consistencia del snapshot de compatibilidad
 
@@ -426,17 +418,28 @@ Mientras termina la adopcion de `/api/sync/changes`, el endpoint de snapshot
 - El endpoint snapshot heredado hace merge/upsert por identificador. Un arreglo
   vacio nunca borra una coleccion remota; los deletes usan tombstones.
 - EMusic responde a HTTP y WebSocket con `summary`, incluyendo los conteos
-  persistidos de `playlists`, `favorites`, `recent_plays`, `albums`, `artists` y
-  `downloads`.
+  persistidos de `playlists`, `favorites`, `recent_plays`, `albums` y `artists`.
 - Flutter solo confirma el lote si cada conteo de `summary` coincide con el
   snapshot enviado. Una respuesta sin resumen o con conteos distintos queda
   pendiente para reintento.
+
+## 17. Descargas locales por dispositivo
+
+- `SongDownloads` permanece exclusivamente en SQLite/local.
+- Las rutas de audio, miniaturas descargadas y estados offline nunca se envian
+  a EMusic.
+- Descargar o eliminar una cancion no crea eventos en `sync_change_log`.
+- Los clientes antiguos pueden enviar cambios `download`; EMusic los confirma
+  como no-op para vaciar su outbox, sin persistir el payload.
+- La migracion `20260728000000_drop_user_downloads` elimina
+  `user_downloads`, limpia payloads legacy y conserva watermarks sin datos para
+  no reutilizar versiones incrementales.
 
 Estas garantias evitan perdida de likes o canciones durante la etapa de
 compatibilidad. El objetivo definitivo sigue siendo el contrato incremental de
 las secciones 9 y 12, con cambios por entidad, versiones y tombstones.
 
-## 17. Implementacion incremental y SQLite
+## 18. Implementacion incremental y SQLite
 
 Desde 2026-07-12 el flujo principal posterior al bootstrap usa:
 
@@ -447,7 +450,7 @@ Desde 2026-07-12 el flujo principal posterior al bootstrap usa:
 - `POST /api/sync/changes` con confirmacion explicita de `change_id`.
 - `GET /api/sync/changes?since_version=...` para pull incremental.
 - Aplicacion real de favoritos, playlists, canciones, historial, albums,
-  artistas, settings y descargas en EMusic.
+  artistas y settings en EMusic.
 - Tombstones/versiones en `music_record_versions` y eventos en
   `sync_change_log`.
 
@@ -457,7 +460,7 @@ utilizarse para cada like o cambio de playlist.
 
 Contrato y operacion: `docs/EMUSIC_INCREMENTAL_SYNC.md`.
 
-## 18. Corte definitivo del almacenamiento local
+## 19. Corte definitivo del almacenamiento local
 
 Desde 2026-07-12 ningun controller, widget o servicio de ejecucion normal usa
 Hive. `SqliteStore` implementa las colecciones locales sobre
@@ -480,7 +483,7 @@ La dependencia `hive` queda temporalmente solo para leer instalaciones antiguas.
 cumplido su ventana de soporte, el importador y la dependencia restante pueden
 retirarse.
 
-## 19. WebSocket y tiempo real
+## 20. WebSocket y tiempo real
 
 Desde Joss 3.6.3, EMusic usa callbacks con contexto lexico, `onClose` y canales
 nativos con limpieza automatica.

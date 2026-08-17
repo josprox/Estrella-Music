@@ -184,7 +184,6 @@ class CloudMigrationService extends GetxService {
       'recent_plays': SqliteStore.box('LIBRP').values.toList(),
       'albums': SqliteStore.box('LibraryAlbums').values.toList(),
       'artists': SqliteStore.box('LibraryArtists').values.toList(),
-      'downloads': SqliteStore.box('SongDownloads').values.toList(),
       'settings': _syncableSettings(appPrefs),
     };
   }
@@ -237,7 +236,6 @@ class CloudMigrationService extends GetxService {
       'recent_plays',
       'albums',
       'artists',
-      'downloads',
       'settings',
     ];
 
@@ -353,7 +351,6 @@ class CloudMigrationService extends GetxService {
       'recent_plays': countList('recent_plays'),
       'albums': countList('albums'),
       'artists': countList('artists'),
-      'downloads': countList('downloads'),
       'settings': settings is Map ? settings.length : 0,
     };
   }
@@ -365,7 +362,6 @@ class CloudMigrationService extends GetxService {
       'recent_plays',
       'albums',
       'artists',
-      'downloads',
     ];
     for (final key in keys) {
       final value = summary[key];

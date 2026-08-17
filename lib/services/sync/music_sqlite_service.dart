@@ -40,7 +40,7 @@ class PendingMusicChange {
 ///
 /// Normalized music entities, server versions and transactional sync outbox.
 class MusicSqliteService extends GetxService {
-  static const schemaVersion = 1;
+  static const schemaVersion = 2;
   static const databaseFileName = 'estrella_music.sqlite3';
 
   Database? _database;
@@ -130,6 +130,14 @@ class MusicSqliteService extends GetxService {
         completed_at TEXT NOT NULL
       )
     ''');
+    final currentVersion =
+        db.select('PRAGMA user_version').first['user_version'] as int;
+    if (currentVersion < 2) {
+      // Download files and their metadata belong exclusively to this device.
+      // Remove only sync mirrors/outbox entries; SongDownloads remains intact.
+      db.execute("DELETE FROM sync_outbox WHERE entity_type = 'download'");
+      db.execute("DELETE FROM music_entities WHERE entity_type = 'download'");
+    }
     db.execute('PRAGMA user_version = $schemaVersion');
   }
 
@@ -167,12 +175,6 @@ class MusicSqliteService extends GetxService {
         'artist',
         snapshot['artists'],
         const ['channelId', 'artistId', 'id'],
-      );
-      summary['downloads'] = _importCollection(
-        'local',
-        'download',
-        snapshot['downloads'],
-        const ['videoId', 'id'],
       );
       summary['playlists'] = _importPlaylists('local', snapshot['playlists']);
       db.execute(
@@ -450,8 +452,6 @@ class MusicSqliteService extends GetxService {
           const ['browseId', 'albumId', 'id']);
       _importCollection(accountKey, 'artist', snapshot['artists'],
           const ['channelId', 'artistId', 'id']);
-      _importCollection(accountKey, 'download', snapshot['downloads'],
-          const ['videoId', 'id']);
       _importPlaylists(accountKey, snapshot['playlists']);
     });
   }
@@ -464,6 +464,7 @@ class MusicSqliteService extends GetxService {
       for (final change in changes) {
         final entityType =
             (change['entity_type'] ?? change['entityType']).toString();
+        if (entityType == 'download') continue;
         final entityId = (change['entity_id'] ?? change['entityId']).toString();
         final operation = change['operation']?.toString() ?? 'upsert';
         final version =

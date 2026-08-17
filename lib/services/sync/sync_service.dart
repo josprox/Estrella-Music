@@ -109,7 +109,6 @@ class SyncService extends GetxService {
       'LibraryAlbums': 'album',
       'LibraryArtists': 'artist',
       'LibraryPlaylists': 'playlist',
-      'SongDownloads': 'download',
     };
 
     for (final entry in entityBoxes.entries) {
@@ -186,7 +185,6 @@ class SyncService extends GetxService {
       'LibraryAlbums': ['browseId', 'albumId', 'id'],
       'LibraryArtists': ['channelId', 'artistId', 'id'],
       'LibraryPlaylists': ['playlistId', 'playlist_id', 'id'],
-      'SongDownloads': ['videoId', 'id'],
     };
     for (final idKey in idKeys[boxName] ?? const <String>[]) {
       final value = payload[idKey]?.toString();
@@ -620,9 +618,6 @@ class SyncService extends GetxService {
           break;
         case 'artist':
           await _applyBoxChange('LibraryArtists', entityId, operation, payload);
-          break;
-        case 'download':
-          await _applyBoxChange('SongDownloads', entityId, operation, payload);
           break;
         case 'playlist':
           await _applyPlaylistChange(entityId, operation, payload);

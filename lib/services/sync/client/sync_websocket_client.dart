@@ -297,7 +297,6 @@ class SyncWebSocketClient {
       'recent_plays',
       'albums',
       'artists',
-      'downloads',
     ];
     return {
       for (final key in keys)

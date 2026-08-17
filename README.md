@@ -73,7 +73,7 @@
 
 ### ☁️ Cloud & Sync *(EMusic)*
 - Cloud library sync via **EMusic** server
-- Offline downloads with authorized metadata
+- Device-local offline downloads
 - Conflict-free incremental sync with queue
 - Multi-device support with Joss Red identity
 

@@ -72,10 +72,13 @@ Tipos aplicados actualmente:
 - `playlist`
 - `playlist_track`
 - `setting`
-- `download`
 
 Los cambios rapidos sobre la misma entidad se compactan en SQLite. Por ejemplo,
 like -> unlike antes de sincronizar produce un solo `delete`.
+
+Las descargas no son entidades sincronizables. `SongDownloads`, las rutas de
+audio, las miniaturas descargadas y su estado pertenecen exclusivamente al
+dispositivo que contiene esos archivos.
 
 ## Pull
 

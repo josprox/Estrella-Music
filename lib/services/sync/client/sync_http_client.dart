@@ -171,7 +171,6 @@ class SyncHttpClient {
       'recent_plays',
       'albums',
       'artists',
-      'downloads',
     ];
     for (final key in collections) {
       final sent = payload[key];
