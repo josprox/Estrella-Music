@@ -1,15 +1,51 @@
 {
   "@@locale": "ur",
   "songs": "گانے",
+  "@songs": {
+    "description": "songs"
+  },
   "playlists": "پلے لسٹ",
+  "@playlists": {
+    "description": "playlists"
+  },
   "albums": "البم",
+  "@albums": {
+    "description": "albums"
+  },
   "home": "هوم",
+  "@home": {
+    "description": "home"
+  },
   "album": "البم",
+  "@album": {
+    "description": "album"
+  },
   "singles": "سنگلز",
+  "@singles": {
+    "description": "singles"
+  },
   "artists": "فنکار",
+  "@artists": {
+    "description": "artists"
+  },
   "settings": "ترتیبات",
+  "@settings": {
+    "description": "settings"
+  },
   "library": "لائبریری",
+  "@library": {
+    "description": "library"
+  },
   "libSongs": "لائبریری کے گانے",
+  "@libSongs": {
+    "description": "libSongs"
+  },
   "keepScreenOnWhilePlaying": "پلے ہوتے وقت اسکرین کو روشن رکھیں",
-  "keepScreenOnWhilePlayingDes": "اگر فعال ہو تو، جب موسیقی چل رہی ہوگی تو ڈیوائس کی اسکرین روشن رہے گی"
+  "@keepScreenOnWhilePlaying": {
+    "description": "keepScreenOnWhilePlaying"
+  },
+  "keepScreenOnWhilePlayingDes": "اگر فعال ہو تو، جب موسیقی چل رہی ہوگی تو ڈیوائس کی اسکرین روشن رہے گی",
+  "@keepScreenOnWhilePlayingDes": {
+    "description": "keepScreenOnWhilePlayingDes"
+  }
 }

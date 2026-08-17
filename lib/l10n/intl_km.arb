@@ -1,14 +1,47 @@
 {
   "@@locale": "km",
   "home": "ដើម",
+  "@home": {
+    "description": "home"
+  },
   "singles": "ទោល",
+  "@singles": {
+    "description": "singles"
+  },
   "songs": "ចម្រៀង",
+  "@songs": {
+    "description": "songs"
+  },
   "playlists": "បញ្ជីចាក់",
+  "@playlists": {
+    "description": "playlists"
+  },
   "albums": "អាល់ប៊ុម",
+  "@albums": {
+    "description": "albums"
+  },
   "album": "អាល់ប៊ុម",
+  "@album": {
+    "description": "album"
+  },
   "artists": "សិល្បករ",
+  "@artists": {
+    "description": "artists"
+  },
   "settings": "ការកំណត់",
+  "@settings": {
+    "description": "settings"
+  },
   "library": "បណ្ណាល័យ",
+  "@library": {
+    "description": "library"
+  },
   "keepScreenOnWhilePlaying": "រក្សាអេក្រង់ឲ្យភ្លឺនៅពេលកំពុងចាក់",
-  "keepScreenOnWhilePlayingDes": "ប្រសិនបើបានបើក អេក្រង់ឧបករណ៍នឹងនៅភ្លឺខណៈពេលចាក់តន្ត្រី"
+  "@keepScreenOnWhilePlaying": {
+    "description": "keepScreenOnWhilePlaying"
+  },
+  "keepScreenOnWhilePlayingDes": "ប្រសិនបើបានបើក អេក្រង់ឧបករណ៍នឹងនៅភ្លឺខណៈពេលចាក់តន្ត្រី",
+  "@keepScreenOnWhilePlayingDes": {
+    "description": "keepScreenOnWhilePlayingDes"
+  }
 }

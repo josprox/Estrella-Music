@@ -1,177 +1,564 @@
 {
   "@@locale": "fa",
   "home": "خانه",
+  "@home": {
+    "description": "home"
+  },
   "songs": "آهنگ",
+  "@songs": {
+    "description": "songs"
+  },
   "playlists": "لیست پخش",
+  "@playlists": {
+    "description": "playlists"
+  },
   "singles": "تکی",
+  "@singles": {
+    "description": "singles"
+  },
   "artists": "خواننده ها",
+  "@artists": {
+    "description": "artists"
+  },
   "settings": "تنظیمات",
+  "@settings": {
+    "description": "settings"
+  },
   "library": "کتابخانه",
+  "@library": {
+    "description": "library"
+  },
   "libSongs": "آهنگ های کتابخانه",
+  "@libSongs": {
+    "description": "libSongs"
+  },
   "libAlbums": "آلبوم های کتابخانه",
+  "@libAlbums": {
+    "description": "libAlbums"
+  },
   "libArtists": "هنرمندان کتابخانه",
+  "@libArtists": {
+    "description": "libArtists"
+  },
   "communityplaylists": "لیست پخش های عمومی",
+  "@communityplaylists": {
+    "description": "communityplaylists"
+  },
   "featuredplaylists": "لیست پخش های برگزیده",
+  "@featuredplaylists": {
+    "description": "featuredplaylists"
+  },
   "items": "مورد ها",
+  "@items": {
+    "description": "items"
+  },
   "retry": "دوباره امتحان کنید!",
+  "@retry": {
+    "description": "retry"
+  },
   "networkError1": "خطای اینترنت!",
+  "@networkError1": {
+    "description": "networkError1"
+  },
   "noOfflineSong": "آهنگ آفلاینی وجود ندارد!",
+  "@noOfflineSong": {
+    "description": "noOfflineSong"
+  },
   "recentlyPlayed": "اخیرا پخش شده",
+  "@recentlyPlayed": {
+    "description": "recentlyPlayed"
+  },
   "favorites": "مورد علاقه ها",
+  "@favorites": {
+    "description": "favorites"
+  },
   "cachedOrOffline": "ذخیره پنهان شده / آفلاین",
+  "@cachedOrOffline": {
+    "description": "cachedOrOffline"
+  },
   "downloads": "دانلود ها",
+  "@downloads": {
+    "description": "downloads"
+  },
   "emptyPlaylist": "لیست پخش خالی !",
+  "@emptyPlaylist": {
+    "description": "emptyPlaylist"
+  },
   "albums": "آلبوم ها",
+  "@albums": {
+    "description": "albums"
+  },
   "libPlaylists": "لیست پخش های کتابخانه",
+  "@libPlaylists": {
+    "description": "libPlaylists"
+  },
   "enqueueAll": "افزودن کردن همه به صف",
+  "@enqueueAll": {
+    "description": "enqueueAll"
+  },
   "renamePlaylist": "تغییر نام لیست پخش",
+  "@renamePlaylist": {
+    "description": "renamePlaylist"
+  },
   "removePlaylist": "حذف لیست پخش",
+  "@removePlaylist": {
+    "description": "removePlaylist"
+  },
   "CreateNewPlaylist": "ساختن لیست پخش جدید",
+  "@CreateNewPlaylist": {
+    "description": "CreateNewPlaylist"
+  },
   "reArrangePlaylist": "بازمرتب سازی لیست پخش",
+  "@reArrangePlaylist": {
+    "description": "reArrangePlaylist"
+  },
   "removeMultiple": "حذف چند موسیقی",
+  "@removeMultiple": {
+    "description": "removeMultiple"
+  },
   "addMultipleSongs": "افزودن موسیقی ها به لیست پخش",
+  "@addMultipleSongs": {
+    "description": "addMultipleSongs"
+  },
   "cancel": "لغو",
+  "@cancel": {
+    "description": "cancel"
+  },
   "create": "ساختن",
+  "@create": {
+    "description": "create"
+  },
   "rename": "تغییر نام",
+  "@rename": {
+    "description": "rename"
+  },
   "createnAdd": "ساختن و افزودن",
+  "@createnAdd": {
+    "description": "createnAdd"
+  },
   "playNext": "پخش بعدی",
+  "@playNext": {
+    "description": "playNext"
+  },
   "addToPlaylist": "افزودن به لیست پخش",
+  "@addToPlaylist": {
+    "description": "addToPlaylist"
+  },
   "noLibPlaylist": "شما هیچ لیست پخشی در کتابخانه ندارید!",
+  "@noLibPlaylist": {
+    "description": "noLibPlaylist"
+  },
   "enqueueSong": "افزودن این موسیقی به صف",
+  "@enqueueSong": {
+    "description": "enqueueSong"
+  },
   "goToAlbum": "رفتن به آلبوم",
+  "@goToAlbum": {
+    "description": "goToAlbum"
+  },
   "viewArtist": "دیدن هنرمند",
+  "@viewArtist": {
+    "description": "viewArtist"
+  },
   "openIn": "باز کردن در",
+  "@openIn": {
+    "description": "openIn"
+  },
   "shareSong": "به اشتراک گذاری این موسیقی",
+  "@shareSong": {
+    "description": "shareSong"
+  },
   "removeFromPlaylist": "حذف از لیست پخش",
+  "@removeFromPlaylist": {
+    "description": "removeFromPlaylist"
+  },
   "removeFromQueue": "حذف از صف",
+  "@removeFromQueue": {
+    "description": "removeFromQueue"
+  },
   "startRadio": "آغاز رادیو",
+  "@startRadio": {
+    "description": "startRadio"
+  },
   "queueShufflingDeniedMsg": "صف نمیتواند زمانی که بُر زدن فعال است، به هم زده شود",
+  "@queueShufflingDeniedMsg": {
+    "description": "queueShufflingDeniedMsg"
+  },
   "queuerearrangingDeniedMsg": "صف نمیتواند زمانی که بُر زدن فعال است، بازمرتب سازی شود",
+  "@queuerearrangingDeniedMsg": {
+    "description": "queuerearrangingDeniedMsg"
+  },
   "songNotPlayable": "موسیقی به علت محدودیت سرور، قابل پخش نیست!",
+  "@songNotPlayable": {
+    "description": "songNotPlayable"
+  },
   "upNext": "بعد از این",
+  "@upNext": {
+    "description": "upNext"
+  },
   "shuffleQueue": "بُر زدن صف",
+  "@shuffleQueue": {
+    "description": "shuffleQueue"
+  },
   "playnextMsg": "پس از این",
+  "@playnextMsg": {
+    "description": "playnextMsg"
+  },
   "queueLoopNotDisMsg1": "حالت حلقه زنی صف نمی‌تواند زمانی که حالت بُر زدن فعال است غیرفعال شود.",
+  "@queueLoopNotDisMsg1": {
+    "description": "queueLoopNotDisMsg1"
+  },
   "queueLoop": "حلقه زنی صف",
+  "@queueLoop": {
+    "description": "queueLoop"
+  },
   "queueLoopNotDisMsg2": "حالت حلقه زنی صف نمی‌تواند در حالت رادیو فعال شود.",
+  "@queueLoopNotDisMsg2": {
+    "description": "queueLoopNotDisMsg2"
+  },
   "removeFromLib": "حذف از موسیقی های کتابخانه",
+  "@removeFromLib": {
+    "description": "removeFromLib"
+  },
   "sleepTimer": "زمان‌سنج خواب",
+  "@sleepTimer": {
+    "description": "sleepTimer"
+  },
   "add5Minutes": "افزودن 5 دقیقه",
+  "@add5Minutes": {
+    "description": "add5Minutes"
+  },
   "cancelTimer": "لغو زمان‌سنج",
+  "@cancelTimer": {
+    "description": "cancelTimer"
+  },
   "deleteDownloadData": "حذف از دانلود ها",
+  "@deleteDownloadData": {
+    "description": "deleteDownloadData"
+  },
   "minutes": "دقیقه",
+  "@minutes": {
+    "description": "minutes"
+  },
   "endOfThisSong": "پایان این موسیقی",
+  "@endOfThisSong": {
+    "description": "endOfThisSong"
+  },
   "appInfo": "داده های برنامه",
+  "@appInfo": {
+    "description": "appInfo"
+  },
   "download": "دانلود",
+  "@download": {
+    "description": "download"
+  },
   "autoDownFavSong": "دانلود خودکار موسیقی های مورد علاقه",
+  "@autoDownFavSong": {
+    "description": "autoDownFavSong"
+  },
   "autoDownFavSongDes": "دانلود خودکار موسیقی های مورد علاقه وقتی به مورد علاقه ها افزوده می‌شوند",
+  "@autoDownFavSongDes": {
+    "description": "autoDownFavSongDes"
+  },
   "networkError": "خطای شبکه! اتصال شبکه خود را بررسی کنید.",
+  "@networkError": {
+    "description": "networkError"
+  },
   "musicAndPlayback": "موسیقی و پخش",
+  "@musicAndPlayback": {
+    "description": "musicAndPlayback"
+  },
   "themeMode": "حالت تم",
+  "@themeMode": {
+    "description": "themeMode"
+  },
   "systemDefault": "پیشفرض سیستم",
+  "@systemDefault": {
+    "description": "systemDefault"
+  },
   "dark": "تیره",
+  "@dark": {
+    "description": "dark"
+  },
   "light": "روشن",
+  "@light": {
+    "description": "light"
+  },
   "dynamic": "پویا",
+  "@dynamic": {
+    "description": "dynamic"
+  },
   "language": "زبان",
+  "@language": {
+    "description": "language"
+  },
   "playerUi": "رابط کاربری پخش کننده",
+  "@playerUi": {
+    "description": "playerUi"
+  },
   "playerUiDes": "رابط کاربری پخش کننده را انتخاب کنید",
+  "@playerUiDes": {
+    "description": "playerUiDes"
+  },
   "standard": "استاندارد",
+  "@standard": {
+    "description": "standard"
+  },
   "languageDes": "تنظیم زبان نرم افزار",
+  "@languageDes": {
+    "description": "languageDes"
+  },
   "setDiscoverContent": "تنظیم محتوای کشف",
+  "@setDiscoverContent": {
+    "description": "setDiscoverContent"
+  },
   "quickpicks": "انتخاب های سریع",
+  "@quickpicks": {
+    "description": "quickpicks"
+  },
   "discover": "کشف",
+  "@discover": {
+    "description": "discover"
+  },
   "topmusicvideos": "نماهنگ های برتر",
+  "@topmusicvideos": {
+    "description": "topmusicvideos"
+  },
   "basedOnLast": "بر اساس آخرین تعامل",
+  "@basedOnLast": {
+    "description": "basedOnLast"
+  },
   "restoreLastPlaybackSession": "بازگرداندن آخرین نشست پخش",
+  "@restoreLastPlaybackSession": {
+    "description": "restoreLastPlaybackSession"
+  },
   "restoreLastPlaybackSessionDes": "به طور خودکار آخرین نشست پخش در آغاز برنامه بازیابی شود",
+  "@restoreLastPlaybackSessionDes": {
+    "description": "restoreLastPlaybackSessionDes"
+  },
   "homeContentCount": "تعداد محتوای خانه",
+  "@homeContentCount": {
+    "description": "homeContentCount"
+  },
   "homeContentCountDes": "تعداد محتوای اولیه خانه را مشخص کنید (حدودی). عدد کمتر باعث بارگذاری سریعتر می‌شود",
+  "@homeContentCountDes": {
+    "description": "homeContentCountDes"
+  },
   "enableBottomNav": "نوار ناوبری پایین",
+  "@enableBottomNav": {
+    "description": "enableBottomNav"
+  },
   "enableBottomNavDes": "تغییر به نوار ناوبری پایین",
+  "@enableBottomNavDes": {
+    "description": "enableBottomNavDes"
+  },
   "cacheSongs": "ذخیره پنهان موسیقی ها",
+  "@cacheSongs": {
+    "description": "cacheSongs"
+  },
   "cacheSongsDes": "ذخیره کردن پنهان موسیقی ها در زمان پخش برای بازپخش آفلاین یا در آینده. فضای اضافی روی دستگاه شما اشغال خواهد کرد",
+  "@cacheSongsDes": {
+    "description": "cacheSongsDes"
+  },
   "skipSilence": "رد کردن سکوت",
+  "@skipSilence": {
+    "description": "skipSilence"
+  },
   "skipSilenceDes": "سکوت در زمان پخش موسیقی رد خواهد شد",
+  "@skipSilenceDes": {
+    "description": "skipSilenceDes"
+  },
   "loudnessNormalization": "عادی سازی بلندی صدا",
+  "@loudnessNormalization": {
+    "description": "loudnessNormalization"
+  },
   "loudnessNormalizationDes": "سطح صدای یکسانی را برای همه آهنگ ها تنظیم می کند (تجربی) (روی آهنگ های دانلود شده در نسخه های قبلی کار نمی کند (قبل از v1.10.0))",
+  "@loudnessNormalizationDes": {
+    "description": "loudnessNormalizationDes"
+  },
   "streamingQuality": "کیفیت استریم",
+  "@streamingQuality": {
+    "description": "streamingQuality"
+  },
   "streamingQualityDes": "کیفیت استریم (پخش) موسیقی",
+  "@streamingQualityDes": {
+    "description": "streamingQualityDes"
+  },
   "disableTransitionAnimation": "غیرفعال کردن انیمیشن انتقال",
+  "@disableTransitionAnimation": {
+    "description": "disableTransitionAnimation"
+  },
   "downloadError3": "دانلود به علت خطای شبکه/سترین شکست خورد! لطفا دوباره تلاش کنید",
+  "@downloadError3": {
+    "description": "downloadError3"
+  },
   "content": "محتوا",
+  "@content": {
+    "description": "content"
+  },
   "downloadError2": "موسیقی موردنظر به دلیل محدودیت سرور قابل دانلود نمی‌باشد. می‌توانید دوباره تلاش کنید",
+  "@downloadError2": {
+    "description": "downloadError2"
+  },
   "personalisation": "شخصی سازی",
+  "@personalisation": {
+    "description": "personalisation"
+  },
   "trending": "ترند",
+  "@trending": {
+    "description": "trending"
+  },
   "noBookmarks": "بدون نشانک",
+  "@noBookmarks": {
+    "description": "noBookmarks"
+  },
   "randomRadio": "رادیو تصادفی",
+  "@randomRadio": {
+    "description": "randomRadio"
+  },
   "album": "آلبوم",
+  "@album": {
+    "description": "album"
+  },
   "playingfromAlbum": "پخش از آلبوم",
+  "@playingfromAlbum": {
+    "description": "playingfromAlbum"
+  },
   "playingfromPlaylist": "پخش از لیست پخش",
+  "@playingfromPlaylist": {
+    "description": "playingfromPlaylist"
+  },
   "playingfromSelection": "پخش از انتخاب شده ها",
+  "@playingfromSelection": {
+    "description": "playingfromSelection"
+  },
   "playingfromArtist": "پخش از ارتیست",
+  "@playingfromArtist": {
+    "description": "playingfromArtist"
+  },
   "randomSelection": "انتخاب تصادفی",
+  "@randomSelection": {
+    "description": "randomSelection"
+  },
   "reArrangeSongs": "تنظیم مجدد آهنگ‌ ها",
+  "@reArrangeSongs": {
+    "description": "reArrangeSongs"
+  },
   "selectSongs": "انتخاب اهنگ ها",
+  "@selectSongs": {
+    "description": "selectSongs"
+  },
   "selectAll": "انتخاب همه",
+  "@selectAll": {
+    "description": "selectAll"
+  },
   "misc": "قیره",
+  "@misc": {
+    "description": "misc"
+  },
   "gesture": "علامت",
+  "@gesture": {
+    "description": "gesture"
+  },
   "autoOpenPlayer": "باز کردن خودکار صفحه پخش",
+  "@autoOpenPlayer": {
+    "description": "autoOpenPlayer"
+  },
   "autoOpenPlayerDes": "فعال/غیرفعال کردن باز شدن خودکار به صورت تمام صفحه با انتخاب آهنگ برای پخش",
+  "@autoOpenPlayerDes": {
+    "description": "autoOpenPlayerDes"
+  },
   "disableTransitionAnimationDes": "برای غیرفعال کردن انیمیشن انتقال تب این گزینه را فعال کنید",
+  "@disableTransitionAnimationDes": {
+    "description": "disableTransitionAnimationDes"
+  },
   "enableSlidableAction": "فعال کردن اکشن‌های کشویی",
+  "@enableSlidableAction": {
+    "description": "enableSlidableAction"
+  },
   "enableSlidableActionDes": "فعال کردن اکشن‌های کشویی در عنوان آهنگ",
+  "@enableSlidableActionDes": {
+    "description": "enableSlidableActionDes"
+  },
   "high": "بالا",
+  "@high": {
+    "description": "high"
+  },
   "low": "کم",
+  "@low": {
+    "description": "low"
+  },
   "backgroundPlay": "موزیک پخش شده در پس زمینه",
+  "@backgroundPlay": {
+    "description": "backgroundPlay"
+  },
   "backgroundPlayDes": "فعال/غیرفعال کردن پخش موسیقی در پس‌زمینه (هنگامی که برنامه در پس‌زمینه اجرا می‌شود، می‌توان به برنامه از طریق سینی سیستم دسترسی داشت)",
+  "@backgroundPlayDes": {
+    "description": "backgroundPlayDes"
+  },
   "downloadLocation": "دانلود محل فایل",
+  "@downloadLocation": {
+    "description": "downloadLocation"
+  },
   "cacheHomeScreenData": "داده‌های محتوای صفحه اصلی را ذخیره کنید",
+  "@cacheHomeScreenData": {
+    "description": "cacheHomeScreenData"
+  },
   "cacheHomeScreenDataDes": "ذخیره سازی داده‌های محتوای صفحه اصلی را فعال کنید، اگر این گزینه فعال باشد، صفحه اصلی فوراً بارگیری می‌شود",
+  "@cacheHomeScreenDataDes": {
+    "description": "cacheHomeScreenDataDes"
+  },
   "keepScreenOnWhilePlaying": "روشن نگه داشتن صفحه هنگام پخش",
+  "@keepScreenOnWhilePlaying": {
+    "description": "keepScreenOnWhilePlaying"
+  },
   "keepScreenOnWhilePlayingDes": "در صورت فعال بودن، صفحه دستگاه هنگام پخش موسیقی روشن خواهد ماند",
+  "@keepScreenOnWhilePlayingDes": {
+    "description": "keepScreenOnWhilePlayingDes"
+  },
   "auth_login_success": "با موفقیت وارد سیستم شد",
   "@auth_login_success": {
-    "description": ""
+    "description": "auth_login_success"
   },
   "settings_cloud_backup": "پشتیبان گیری ابری",
   "@settings_cloud_backup": {
-    "description": ""
+    "description": "settings_cloud_backup"
   },
   "settings_migration_title": "مهاجرت از Joss Music Kotlin",
   "@settings_migration_title": {
-    "description": ""
+    "description": "settings_migration_title"
   },
   "backup_confirm_question": "آیا می خواهید یک نسخه پشتیبان تهیه کنید؟",
   "@backup_confirm_question": {
-    "description": ""
+    "description": "backup_confirm_question"
   },
   "backup_selection_prompt": "انتخاب کنید از کدام داده ها نسخه پشتیبان تهیه شود",
   "@backup_selection_prompt": {
-    "description": ""
+    "description": "backup_selection_prompt"
   },
   "search_recent_title": "جستجوهای اخیر",
   "@search_recent_title": {
-    "description": ""
+    "description": "search_recent_title"
   },
   "back": "بازگشت",
   "@back": {
-    "description": ""
+    "description": "back"
   },
   "auth_forgot_password": "رمز عبورم را فراموش کردم",
   "@auth_forgot_password": {
-    "description": ""
+    "description": "auth_forgot_password"
   },
   "auth_btn_login": "وارد شوید",
   "@auth_btn_login": {
-    "description": ""
+    "description": "auth_btn_login"
   },
   "auth_btn_register": "ثبت نام کنید",
   "@auth_btn_register": {
-    "description": ""
+    "description": "auth_btn_register"
   },
   "email": "ایمیل",
   "@email": {
-    "description": ""
+    "description": "email"
   },
   "password_text": "رمز عبور",
   "@password_text": {
@@ -179,374 +566,877 @@
   },
   "auth_confirm_password": "رمز عبور را تایید کنید",
   "@auth_confirm_password": {
-    "description": ""
+    "description": "auth_confirm_password"
   },
   "auth_welcome_title": "به Estrella Music خوش آمدید",
   "@auth_welcome_title": {
-    "description": ""
+    "description": "auth_welcome_title"
   },
   "auth_welcome_subtitle": "به Estrella Music خوش آمدید",
   "@auth_welcome_subtitle": {
-    "description": ""
+    "description": "auth_welcome_subtitle"
   },
   "username": "نام کاربری",
   "@username": {
-    "description": ""
+    "description": "username"
   },
   "auth_first_name": "نام کوچک",
   "@auth_first_name": {
-    "description": ""
+    "description": "auth_first_name"
   },
   "auth_last_name": "نام خانوادگی",
   "@auth_last_name": {
-    "description": ""
+    "description": "auth_last_name"
   },
   "auth_agree_personal_data": "Acepto usar mis datos...",
   "@auth_agree_personal_data": {
-    "description": ""
+    "description": "auth_agree_personal_data"
   },
   "settings_general_section": "ژنرال",
   "@settings_general_section": {
-    "description": ""
+    "description": "settings_general_section"
   },
   "settings_logout": "از سیستم خارج شوید",
   "@settings_logout": {
-    "description": ""
+    "description": "settings_logout"
   },
   "settings_cloud_backup_desc": "آپلود، بازیابی و مدیریت...",
   "@settings_cloud_backup_desc": {
-    "description": ""
+    "description": "settings_cloud_backup_desc"
   },
   "settings_migration_desc": "وارد کردن لیست های پخش، آهنگ ها...",
   "@settings_migration_desc": {
-    "description": ""
+    "description": "settings_migration_desc"
   },
   "backup_btn_restart": "برنامه را مجددا راه اندازی کنید",
   "@backup_btn_restart": {
-    "description": ""
+    "description": "backup_btn_restart"
   },
   "backup_btn_upload": "اکنون نسخه پشتیبان را آپلود کنید",
   "@backup_btn_upload": {
-    "description": ""
+    "description": "backup_btn_upload"
   },
   "backup_no_backups": "هنوز هیچ نسخه پشتیبان وجود ندارد ...",
   "@backup_no_backups": {
-    "description": ""
+    "description": "backup_no_backups"
   },
   "backup_auth_required": "شما نیاز به یک جلسه فعال دارید...",
   "@backup_auth_required": {
-    "description": ""
+    "description": "backup_auth_required"
   },
   "backup_upload_success": "بک آپ به درستی آپلود شد.",
   "@backup_upload_success": {
-    "description": ""
+    "description": "backup_upload_success"
   },
   "backup_restore_success": "نسخه پشتیبان بازیابی شد. برنامه را مجددا راه اندازی کنید.",
   "@backup_restore_success": {
-    "description": ""
+    "description": "backup_restore_success"
   },
   "backup_delete_success": "بکاپ حذف شد",
   "@backup_delete_success": {
-    "description": ""
+    "description": "backup_delete_success"
   },
   "genre_pop": "پاپ",
   "@genre_pop": {
-    "description": ""
+    "description": "genre_pop"
   },
   "genre_rock": "سنگ",
   "@genre_rock": {
-    "description": ""
+    "description": "genre_rock"
   },
   "genre_hiphop": "هیپ هاپ",
   "@genre_hiphop": {
-    "description": ""
+    "description": "genre_hiphop"
   },
   "genre_electronic": "الکترونیک",
   "@genre_electronic": {
-    "description": ""
+    "description": "genre_electronic"
   },
   "genre_jazz": "جاز",
   "@genre_jazz": {
-    "description": ""
+    "description": "genre_jazz"
   },
   "genre_latin": "لاتین",
   "@genre_latin": {
-    "description": ""
+    "description": "genre_latin"
   },
   "migration_btn_select": "فایل را انتخاب کرده و وارد کنید",
   "@migration_btn_select": {
-    "description": ""
+    "description": "migration_btn_select"
   },
   "close": "بستن",
   "@close": {
-    "description": ""
+    "description": "close"
   },
   "forgottenFavorites": "مورد علاقه های فراموش شده",
   "@forgottenFavorites": {
-    "description": ""
+    "description": "forgottenFavorites"
   },
   "mostListenedSong": "پر شنیده ترین آهنگ",
   "@mostListenedSong": {
-    "description": ""
+    "description": "mostListenedSong"
   },
   "reproducedBy": "تکثیر شده توسط",
   "@reproducedBy": {
-    "description": ""
+    "description": "reproducedBy"
   },
   "recentSearches": "جستجوهای اخیر",
   "@recentSearches": {
-    "description": ""
+    "description": "recentSearches"
   },
   "popularTracks": "آهنگ های محبوب",
   "@popularTracks": {
-    "description": ""
+    "description": "popularTracks"
   },
   "latestRelease": "آخرین نسخه",
   "@latestRelease": {
-    "description": ""
+    "description": "latestRelease"
   },
   "follow": "ادامه دهید",
   "@follow": {
-    "description": ""
+    "description": "follow"
   },
   "following": "دنبال کردن",
   "@following": {
-    "description": ""
+    "description": "following"
   },
   "listenNow": "حالا گوش کن",
   "@listenNow": {
-    "description": ""
+    "description": "listenNow"
   },
   "video": "ویدئو",
   "@video": {
-    "description": ""
+    "description": "video"
   },
   "about": "درباره",
   "@about": {
-    "description": ""
+    "description": "about"
   },
   "readMore": "ادامه مطلب",
   "@readMore": {
-    "description": ""
+    "description": "readMore"
   },
   "speedAndPitch": "سرعت و پیچ",
   "@speedAndPitch": {
-    "description": ""
+    "description": "speedAndPitch"
   },
   "playbackSpeed": "سرعت پخش",
   "@playbackSpeed": {
-    "description": ""
+    "description": "playbackSpeed"
   },
   "songPitch": "لحن آهنگ",
   "@songPitch": {
-    "description": ""
+    "description": "songPitch"
   },
   "musicRecognition": "تشخیص موسیقی",
   "@musicRecognition": {
-    "description": ""
+    "description": "musicRecognition"
   },
   "listeningToEnvironment": "گوش دادن به محیط ...",
   "@listeningToEnvironment": {
-    "description": ""
+    "description": "listeningToEnvironment"
   },
   "micInstruction": "مطمئن شوید که موسیقی با صدای کافی در نزدیکی میکروفون شما پخش می شود.",
   "@micInstruction": {
-    "description": ""
+    "description": "micInstruction"
   },
   "processingAudio": "در حال پردازش صدا...",
   "@processingAudio": {
-    "description": ""
+    "description": "processingAudio"
   },
   "shazamSearching": "جستجو در پایگاه داده Shazam برای موارد مشابه...",
   "@shazamSearching": {
-    "description": ""
+    "description": "shazamSearching"
   },
   "songFound": "آهنگ پیدا شد",
   "@songFound": {
-    "description": ""
+    "description": "songFound"
   },
   "playNow": "بازی کن",
   "@playNow": {
-    "description": ""
+    "description": "playNow"
   },
   "searchInLibrary": "جستجو در کتابخانه",
   "@searchInLibrary": {
-    "description": ""
+    "description": "searchInLibrary"
   },
   "noMatchesFound": "هیچ مسابقه ای وجود ندارد",
   "@noMatchesFound": {
-    "description": ""
+    "description": "noMatchesFound"
   },
   "noMatchInstruction": "هیچ آهنگی در صدای ضبط شده یافت نشد",
   "@noMatchInstruction": {
-    "description": ""
+    "description": "noMatchInstruction"
   },
   "errorOccurred": "خطایی رخ داد",
   "@errorOccurred": {
-    "description": ""
+    "description": "errorOccurred"
   },
   "playingRecognizedTrack": "در حال پخش:",
   "@playingRecognizedTrack": {
-    "description": ""
+    "description": "playingRecognizedTrack"
   },
   "errorPlayingTrack": "خطا هنگام بازی:",
   "@errorPlayingTrack": {
-    "description": ""
+    "description": "errorPlayingTrack"
   },
   "welcome_title": "موسیقی شما، روش شما",
+  "@welcome_title": {
+    "description": "welcome_title"
+  },
   "welcome_subtitle": "نحوه تجربه موسیقی Estrella را از این پس انتخاب کنید.",
+  "@welcome_subtitle": {
+    "description": "welcome_subtitle"
+  },
   "welcome_intro": "ما پلتفرم خود را مدرن کرده ایم. سیستم قدیمی آپلود نسخه پشتیبان دستی غیرفعال شده است. اکنون دو راه روشن برای مدیریت کتابخانه موسیقی خود دارید.",
+  "@welcome_intro": {
+    "description": "welcome_intro"
+  },
   "recommend_cloud": "توصیه می‌کنیم برای تجربه‌ای شبیه به Spotify، حالت ابری را فعال کنید: همگام‌سازی بی‌درنگ بین همه دستگاه‌هایتان و پشتیبان‌گیری خودکار بدون نیاز به انجام کاری.",
+  "@recommend_cloud": {
+    "description": "recommend_cloud"
+  },
   "swipe_prompt": "برای کاوش گزینه ها تند بکشید ➔",
+  "@swipe_prompt": {
+    "description": "swipe_prompt"
+  },
   "local_title": "حالت محلی",
+  "@local_title": {
+    "description": "local_title"
+  },
   "local_subtitle": "حریم خصوصی مطلق در دستگاه شما",
+  "@local_subtitle": {
+    "description": "local_subtitle"
+  },
   "local_b1": "بدون نیاز به ورود کار می کند.",
+  "@local_b1": {
+    "description": "local_b1"
+  },
   "local_b2": "کل کتابخانه شما کاملاً روی این رایانه می ماند.",
+  "@local_b2": {
+    "description": "local_b2"
+  },
   "local_b3": "توجه: بدون پشتیبان گیری دستی ابری. اگر دستگاه خود را گم کنید یا برنامه را حذف نصب کنید، اطلاعات شما قابل بازیابی نیست.",
+  "@local_b3": {
+    "description": "local_b3"
+  },
   "local_btn": "فقط در این دستگاه استفاده کنید",
+  "@local_btn": {
+    "description": "local_btn"
+  },
   "cloud_title": "حالت ابری (توصیه می شود)",
+  "@cloud_title": {
+    "description": "cloud_title"
+  },
   "cloud_subtitle": "همگام سازی بلادرنگ با جاس رد",
+  "@cloud_subtitle": {
+    "description": "cloud_subtitle"
+  },
   "cloud_b1": "با استفاده از حساب Joss Red خود به صورت ایمن وارد شوید.",
+  "@cloud_b1": {
+    "description": "cloud_b1"
+  },
   "cloud_b2": "فوراً از هر دستگاهی (ویندوز، اندروید و غیره) به لیست های پخش، موارد دلخواه و تاریخچه خود دسترسی داشته باشید.",
+  "@cloud_b2": {
+    "description": "cloud_b2"
+  },
   "cloud_b3": "همگام سازی هوشمند: به صورت آفلاین کار کنید و با بازیابی اینترنت، تغییرات را به طور خودکار آپلود کنید.",
+  "@cloud_b3": {
+    "description": "cloud_b3"
+  },
   "cloud_btn": "همگام سازی ابری را فعال کنید",
+  "@cloud_btn": {
+    "description": "cloud_btn"
+  },
   "slide_indicator": "مرحله {current} از 3",
+  "@slide_indicator": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      }
+    },
+    "description": "slide_indicator"
+  },
   "news_card_title": "موسیقی Estrella تکامل یافته است!",
+  "@news_card_title": {
+    "description": "news_card_title"
+  },
   "news_card_subtitle": "همگام سازی 100٪ با Joss Red، لیست های پخش با دوستان و بسیاری موارد دیگر. برای دیدن موارد جدید ضربه بزنید.",
+  "@news_card_subtitle": {
+    "description": "news_card_subtitle"
+  },
   "news_dialog_title": "اخبار موسیقی استرلا",
+  "@news_dialog_title": {
+    "description": "news_dialog_title"
+  },
   "news_item_sync_title": "ادغام کامل با جاس رد",
+  "@news_item_sync_title": {
+    "description": "news_item_sync_title"
+  },
   "news_item_sync_desc": "لیست‌های پخش و موارد دلخواه شما اکنون به طور خودکار با حساب اصلی Joss Red در فضای ابری ذخیره و همگام‌سازی می‌شوند.",
+  "@news_item_sync_desc": {
+    "description": "news_item_sync_desc"
+  },
   "news_item_collab_title": "لیست های پخش مشترک",
+  "@news_item_collab_title": {
+    "description": "news_item_collab_title"
+  },
   "news_item_collab_desc": "لیست پخش با دوستان خود ایجاد کنید! هنگام ایجاد یک لیست پخش، کادر اشتراکی را انتخاب کنید و دوستان خود را برای ویرایش با هم انتخاب کنید.",
+  "@news_item_collab_desc": {
+    "description": "news_item_collab_desc"
+  },
   "news_item_trans_title": "همگام سازی شفاف",
+  "@news_item_trans_title": {
+    "description": "news_item_trans_title"
+  },
   "news_item_trans_desc": "دیگر نیازی به کلیک روی دکمه های همگام سازی دستی ندارید. موتور جدید وظیفه تعویض خودکار دنده ها را بر عهده دارد.",
+  "@news_item_trans_desc": {
+    "description": "news_item_trans_desc"
+  },
   "news_dialog_section_friends": "دوستان و مدیریت حساب کاربری:",
+  "@news_dialog_section_friends": {
+    "description": "news_dialog_section_friends"
+  },
   "news_dialog_friends_desc": "برای افزودن دوستان، پذیرش درخواست ها یا مدیریت نمایه امنیتی خود، لطفاً از Joss Red در پلتفرم های رسمی آن استفاده کنید:",
+  "@news_dialog_friends_desc": {
+    "description": "news_dialog_friends_desc"
+  },
   "news_btn_app": "برنامه جاس رد (فروشگاه پلی)",
+  "@news_btn_app": {
+    "description": "news_btn_app"
+  },
   "news_btn_web": "جاس رد وب",
+  "@news_btn_web": {
+    "description": "news_btn_web"
+  },
   "news_btn_dismiss": "فهمیده شد",
+  "@news_btn_dismiss": {
+    "description": "news_btn_dismiss"
+  },
   "settings_appearance_desc": "تم، زبان و انیمیشن های رابط.",
+  "@settings_appearance_desc": {
+    "description": "settings_appearance_desc"
+  },
   "settings_content_desc": "کشف فیلترها، ادغام با Piped و حافظه پنهان.",
+  "@settings_content_desc": {
+    "description": "settings_content_desc"
+  },
   "settings_playback_desc": "کیفیت پخش، عادی سازی، سکوت و باتری.",
+  "@settings_playback_desc": {
+    "description": "settings_playback_desc"
+  },
   "settings_downloads_desc": "دانلودها و ذخیره سازی",
+  "@settings_downloads_desc": {
+    "description": "settings_downloads_desc"
+  },
   "settings_downloads_sub": "فرمت های صوتی، پوشه ها و دانلود خودکار.",
+  "@settings_downloads_sub": {
+    "description": "settings_downloads_sub"
+  },
   "settings_account_desc": "حساب و همگام سازی",
+  "@settings_account_desc": {
+    "description": "settings_account_desc"
+  },
   "settings_account_sub": "حالت ابری، پشتیبان گیری، لیست دوستان و مهاجرت.",
+  "@settings_account_sub": {
+    "description": "settings_account_sub"
+  },
   "settings_about_desc": "درباره موسیقی استرلا",
+  "@settings_about_desc": {
+    "description": "settings_about_desc"
+  },
   "settings_about_sub": "نسخه، پروژه منبع باز و GitHub.",
+  "@settings_about_sub": {
+    "description": "settings_about_sub"
+  },
   "settings_local_cloud_title": "حالت محلی / EMusic Cloud",
+  "@settings_local_cloud_title": {
+    "description": "settings_local_cloud_title"
+  },
   "settings_local_cloud_desc": "وضعیت همگام سازی را با Joss Red انتخاب کنید، انتقال دهید یا مرور کنید.",
+  "@settings_local_cloud_desc": {
+    "description": "settings_local_cloud_desc"
+  },
   "settings_my_friends": "دوستان من",
+  "@settings_my_friends": {
+    "description": "settings_my_friends"
+  },
   "settings_my_friends_desc": "دوستان Joss Red خود را مستقیماً مدیریت کنید.",
+  "@settings_my_friends_desc": {
+    "description": "settings_my_friends_desc"
+  },
   "settings_refresh_visitor_title": "شناسه بازخوانی (شناسه بازدیدکننده)",
+  "@settings_refresh_visitor_title": {
+    "description": "settings_refresh_visitor_title"
+  },
   "settings_refresh_visitor_desc": "اگر محتوای Discover بارگیری نشد، شناسه موسیقی YouTube خود را دوباره ایجاد کنید.",
+  "@settings_refresh_visitor_desc": {
+    "description": "settings_refresh_visitor_desc"
+  },
   "settings_visitor_updated": "شناسه به روز شد",
+  "@settings_visitor_updated": {
+    "description": "settings_visitor_updated"
+  },
   "settings_visitor_updated_desc": "شناسه بازدیدکننده جدید با موفقیت ایجاد شد.",
+  "@settings_visitor_updated_desc": {
+    "description": "settings_visitor_updated_desc"
+  },
   "settings_visitor_error": "اشتباه",
+  "@settings_visitor_error": {
+    "description": "settings_visitor_error"
+  },
   "settings_visitor_error_desc": "یک شناسه جدید ایجاد نشد. لطفاً بعداً دوباره امتحان کنید.",
+  "@settings_visitor_error_desc": {
+    "description": "settings_visitor_error_desc"
+  },
   "settings_visitor_exception": "هنگام ایجاد مجدد خطایی روی داد: {error}",
+  "@settings_visitor_exception": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    },
+    "description": "settings_visitor_exception"
+  },
   "migratedLibrary": "کتابخانه مهاجرت کرد",
+  "@migratedLibrary": {
+    "description": "migratedLibrary"
+  },
   "noSongsInCollection": "هیچ آهنگی در این مجموعه وجود ندارد",
+  "@noSongsInCollection": {
+    "description": "noSongsInCollection"
+  },
   "startupScreen": "در هنگام راه اندازی باز کنید",
+  "@startupScreen": {
+    "description": "startupScreen"
+  },
   "startupScreenDescription": "ابتدا قسمتی را که Estrella Music باز می کند انتخاب کنید",
+  "@startupScreenDescription": {
+    "description": "startupScreenDescription"
+  },
   "friends": "دوستان",
+  "@friends": {
+    "description": "friends"
+  },
   "dailyDiscover": "کشف روزانه",
+  "@dailyDiscover": {
+    "description": "dailyDiscover"
+  },
   "keepListening": "به گوش دادن ادامه بده",
+  "@keepListening": {
+    "description": "keepListening"
+  },
   "similarToTitle": "مشابه {title}",
+  "@similarToTitle": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    },
+    "description": "similarToTitle"
+  },
   "pipedPlaylistDescription": "لیست پخش لوله شده",
+  "@pipedPlaylistDescription": {
+    "description": "pipedPlaylistDescription"
+  },
   "collaborativePlaylistDescription": "لیست پخش مشترک",
+  "@collaborativePlaylistDescription": {
+    "description": "collaborativePlaylistDescription"
+  },
   "libraryPlaylistDescription": "لیست پخش کتابخانه",
+  "@libraryPlaylistDescription": {
+    "description": "libraryPlaylistDescription"
+  },
   "untitledSong": "آهنگ بدون عنوان",
+  "@untitledSong": {
+    "description": "untitledSong"
+  },
   "migratedPlaylist": "لیست پخش منتقل شد",
+  "@migratedPlaylist": {
+    "description": "migratedPlaylist"
+  },
   "migratedAlbum": "آلبوم مهاجرت کرد",
+  "@migratedAlbum": {
+    "description": "migratedAlbum"
+  },
   "songsImportedFromJossMusic": "آهنگ های وارد شده از Joss Music Kotlin",
+  "@songsImportedFromJossMusic": {
+    "description": "songsImportedFromJossMusic"
+  },
   "importedFromJossMusic": "وارد شده از Joss Music Kotlin",
+  "@importedFromJossMusic": {
+    "description": "importedFromJossMusic"
+  },
   "syncLocalModeActive": "حالت محلی فعال است",
+  "@syncLocalModeActive": {
+    "description": "syncLocalModeActive"
+  },
   "syncCloudPending": "حالت ابری فعال است. در انتظار همگام سازی",
+  "@syncCloudPending": {
+    "description": "syncCloudPending"
+  },
   "syncCloudDownloadingExisting": "حالت ابری فعال شد. در حال دانلود کتابخانه موجود",
+  "@syncCloudDownloadingExisting": {
+    "description": "syncCloudDownloadingExisting"
+  },
   "syncCloudMigrationComplete": "حالت ابری فعال شد. کتابخانه مهاجرت کرد.",
+  "@syncCloudMigrationComplete": {
+    "description": "syncCloudMigrationComplete"
+  },
   "syncLocalDeviceOnly": "اطلاعات شما فقط در این دستگاه نگهداری می شود.",
+  "@syncLocalDeviceOnly": {
+    "description": "syncLocalDeviceOnly"
+  },
   "syncDownloading": "در حال دانلود تغییرات EMusic...",
+  "@syncDownloading": {
+    "description": "syncDownloading"
+  },
   "syncDownloadFailed": "همگام‌سازی دانلود نشد.",
+  "@syncDownloadFailed": {
+    "description": "syncDownloadFailed"
+  },
   "syncLocalChangesFirst": "تغییرات محلی جدیدی وجود دارد. آنها قبل از دانلود آپلود خواهند شد.",
+  "@syncLocalChangesFirst": {
+    "description": "syncLocalChangesFirst"
+  },
   "syncLibrarySynced": "کتابخانه همگام شده",
+  "@syncLibrarySynced": {
+    "description": "syncLibrarySynced"
+  },
   "syncOfflinePending": "آفلاین. تغییرات در انتظار است.",
+  "@syncOfflinePending": {
+    "description": "syncOfflinePending"
+  },
   "syncLibraryUpToDate": "کتابخانه به روز",
+  "@syncLibraryUpToDate": {
+    "description": "syncLibraryUpToDate"
+  },
   "syncChangesSynced": "{count} تغییرات همگام شده.",
+  "@syncChangesSynced": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    },
+    "description": "syncChangesSynced"
+  },
   "syncUploading": "در حال آپلود تغییرات در EMusic...",
+  "@syncUploading": {
+    "description": "syncUploading"
+  },
   "syncUploadSuccessWs": "تغییرات با موفقیت آپلود شد (WS).",
+  "@syncUploadSuccessWs": {
+    "description": "syncUploadSuccessWs"
+  },
   "syncUploadWsRetry": "با استفاده از WS آپلود نشد. بعداً دوباره امتحان خواهد شد.",
+  "@syncUploadWsRetry": {
+    "description": "syncUploadWsRetry"
+  },
   "syncUploadSuccess": "تغییرات به درستی آپلود شد.",
+  "@syncUploadSuccess": {
+    "description": "syncUploadSuccess"
+  },
   "syncUploadRetry": "نتوانست بلند شود. بعداً دوباره امتحان خواهد شد.",
+  "@syncUploadRetry": {
+    "description": "syncUploadRetry"
+  },
   "syncOfflineRetry": "آفلاین. تغییرات برای تلاش مجدد ذخیره شد.",
+  "@syncOfflineRetry": {
+    "description": "syncOfflineRetry"
+  },
   "syncUnconfirmedRetry": "EMusic همه تغییرات را تایید نکرد. آنها دوباره محاکمه خواهند شد.",
+  "@syncUnconfirmedRetry": {
+    "description": "syncUnconfirmedRetry"
+  },
   "syncChangesConfirmed": "{count} تغییرات انجام شده است.",
+  "@syncChangesConfirmed": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    },
+    "description": "syncChangesConfirmed"
+  },
   "migrationAlreadyRunning": "در حال حاضر یک مهاجرت در حال انجام است.",
+  "@migrationAlreadyRunning": {
+    "description": "migrationAlreadyRunning"
+  },
   "migrationLoginRequired": "قبل از مهاجرت وارد Joss Red شوید.",
+  "@migrationLoginRequired": {
+    "description": "migrationLoginRequired"
+  },
   "migrationCheckingCloud": "بررسی اینکه آیا EMusic Cloud قبلاً کتابخانه دارد یا خیر...",
+  "@migrationCheckingCloud": {
+    "description": "migrationCheckingCloud"
+  },
   "cloudLibraryFoundDeviceWillDownload": "یک کتابخانه ابری پیدا شد. این دستگاه بدون بازنویسی آن را دانلود می کند.",
+  "@cloudLibraryFoundDeviceWillDownload": {
+    "description": "cloudLibraryFoundDeviceWillDownload"
+  },
   "cloudLibraryFound": "کتابخانه ابری پیدا شد.",
+  "@cloudLibraryFound": {
+    "description": "cloudLibraryFound"
+  },
   "migrationCreatingBackup": "ایجاد یک نسخه پشتیبان محلی قبل از اتصال ابر...",
+  "@migrationCreatingBackup": {
+    "description": "migrationCreatingBackup"
+  },
   "migrationAnalyzingLocal": "تجزیه و تحلیل کتابخانه محلی ...",
+  "@migrationAnalyzingLocal": {
+    "description": "migrationAnalyzingLocal"
+  },
   "migrationPreparingCloud": "در حال آماده سازی مهاجرت در EMusic Cloud...",
+  "@migrationPreparingCloud": {
+    "description": "migrationPreparingCloud"
+  },
   "migrationStartFailed": "EMusic Cloud نمی تواند مهاجرت را شروع کند.",
+  "@migrationStartFailed": {
+    "description": "migrationStartFailed"
+  },
   "migrationUploadingData": "در حال آپلود لیست پخش، موارد دلخواه و سابقه...",
+  "@migrationUploadingData": {
+    "description": "migrationUploadingData"
+  },
   "migrationUploadIncomplete": "همه داده ها را نمی توان آپلود کرد. ما حمایت محلی شما را حفظ می کنیم.",
+  "@migrationUploadIncomplete": {
+    "description": "migrationUploadIncomplete"
+  },
   "migrationVerifyingIntegrity": "تایید یکپارچگی در EMusic Cloud...",
+  "@migrationVerifyingIntegrity": {
+    "description": "migrationVerifyingIntegrity"
+  },
   "migrationValidationFailed": "EMusic Cloud نتوانست این انتقال را تأیید کند.",
+  "@migrationValidationFailed": {
+    "description": "migrationValidationFailed"
+  },
   "cloudModeReadyOfflineCache": "حالت ابری آماده است. این دستگاه به عنوان یک کش آفلاین کار خواهد کرد.",
+  "@cloudModeReadyOfflineCache": {
+    "description": "cloudModeReadyOfflineCache"
+  },
   "migrationCompleted": "مهاجرت به پایان رسید.",
+  "@migrationCompleted": {
+    "description": "migrationCompleted"
+  },
   "migrationFailedLocalPreserved": "مهاجرت شکست خورد. داده های محلی شما اصلاح نشده است.",
+  "@migrationFailedLocalPreserved": {
+    "description": "migrationFailedLocalPreserved"
+  },
   "sessionExpiredLoginAgain": "جلسه شما تمام شده است. دوباره وارد شوید.",
+  "@sessionExpiredLoginAgain": {
+    "description": "sessionExpiredLoginAgain"
+  },
   "selectedFileNotFound": "فایل انتخابی یافت نشد.",
+  "@selectedFileNotFound": {
+    "description": "selectedFileNotFound"
+  },
   "genericAlbum": "آلبوم",
+  "@genericAlbum": {
+    "description": "genericAlbum"
+  },
   "friendsLoginRequired": "برای یافتن دوستان وارد شوید.",
+  "@friendsLoginRequired": {
+    "description": "friendsLoginRequired"
+  },
   "invalidSessionToken": "جلسه حاوی یک رمز معتبر نیست.",
+  "@invalidSessionToken": {
+    "description": "invalidSessionToken"
+  },
   "userSearchFailed": "جستجو برای کاربران امکان‌پذیر نیست ({statusCode}).",
+  "@userSearchFailed": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    },
+    "description": "userSearchFailed"
+  },
   "invalidServerResponse": "پاسخ سرور نامعتبر است.",
+  "@invalidServerResponse": {
+    "description": "invalidServerResponse"
+  },
   "userListMissing": "پاسخ شامل لیستی از کاربران نیست.",
+  "@userListMissing": {
+    "description": "userListMissing"
+  },
   "playlistCollaboratorsTitle": "مشارکت کنندگان لیست پخش",
+  "@playlistCollaboratorsTitle": {
+    "description": "playlistCollaboratorsTitle"
+  },
   "collaboratorsInstruction": "دوستانی را انتخاب کنید که می توانند این لیست پخش را ببینند و ویرایش کنند:",
+  "@collaboratorsInstruction": {
+    "description": "collaboratorsInstruction"
+  },
   "noJossRedFriends": "شما هیچ دوستی در Joss Red ندارید.",
+  "@noJossRedFriends": {
+    "description": "noJossRedFriends"
+  },
   "friendFallback": "دوست",
+  "@friendFallback": {
+    "description": "friendFallback"
+  },
   "collaboratorsUpdated": "همکاران به درستی به روز شدند.",
+  "@collaboratorsUpdated": {
+    "description": "collaboratorsUpdated"
+  },
   "save": "نگه دارید",
+  "@save": {
+    "description": "save"
+  },
   "manageCollaborators": "مدیریت همکاران (دوستان)",
+  "@manageCollaborators": {
+    "description": "manageCollaborators"
+  },
   "done": "آماده است",
+  "@done": {
+    "description": "done"
+  },
   "notAuthenticated": "احراز هویت نشده است",
+  "@notAuthenticated": {
+    "description": "notAuthenticated"
+  },
   "genericError": "اشتباه",
+  "@genericError": {
+    "description": "genericError"
+  },
   "friendRequestSent": "درخواست دوستی ارسال شد",
+  "@friendRequestSent": {
+    "description": "friendRequestSent"
+  },
   "friendRequestAccepted": "درخواست دوستی پذیرفته شد",
+  "@friendRequestAccepted": {
+    "description": "friendRequestAccepted"
+  },
   "friendshipRemoved": "دوستی حذف شد",
+  "@friendshipRemoved": {
+    "description": "friendshipRemoved"
+  },
   "userBlocked": "کاربر مسدود شده",
+  "@userBlocked": {
+    "description": "userBlocked"
+  },
   "userUnblocked": "کاربر آنلاک شده",
+  "@userUnblocked": {
+    "description": "userUnblocked"
+  },
   "artistsByTaste": "با توجه به سلیقه شما",
+  "@artistsByTaste": {
+    "description": "artistsByTaste"
+  },
   "followedArtists": "دنبال کرد",
+  "@followedArtists": {
+    "description": "followedArtists"
+  },
   "recommendedArtists": "توصیه می شود",
+  "@recommendedArtists": {
+    "description": "recommendedArtists"
+  },
   "albumsByTaste": "با توجه به سلیقه شما",
+  "@albumsByTaste": {
+    "description": "albumsByTaste"
+  },
   "savedAlbums": "ذخیره شد",
+  "@savedAlbums": {
+    "description": "savedAlbums"
+  },
   "recommendedAlbums": "توصیه می شود",
+  "@recommendedAlbums": {
+    "description": "recommendedAlbums"
+  },
   "downloadNotificationChannelName": "دانلود های موسیقی",
+  "@downloadNotificationChannelName": {
+    "description": "downloadNotificationChannelName"
+  },
   "downloadNotificationChannelDescription": "دانلودهای موسیقی شما را در پس زمینه فعال نگه می دارد.",
+  "@downloadNotificationChannelDescription": {
+    "description": "downloadNotificationChannelDescription"
+  },
   "downloadNotificationTitle": "دانلود موسیقی",
+  "@downloadNotificationTitle": {
+    "description": "downloadNotificationTitle"
+  },
   "downloadNotificationPreparing": "در حال آماده سازی دانلودهای شما…",
+  "@downloadNotificationPreparing": {
+    "description": "downloadNotificationPreparing"
+  },
   "downloadNotificationSong": "در حال دانلود: {songTitle}",
+  "@downloadNotificationSong": {
+    "placeholders": {
+      "songTitle": {
+        "type": "String"
+      }
+    },
+    "description": "downloadNotificationSong"
+  },
   "syncCloudModeActive": "حالت ابری فعال است",
+  "@syncCloudModeActive": {
+    "description": "syncCloudModeActive"
+  },
   "permissionsConsentTitle": "مجوز برای شروع",
+  "@permissionsConsentTitle": {
+    "description": "permissionsConsentTitle"
+  },
   "permissionsConsentDescription": "Estrella Music برای مدیریت موسیقی شما و ارائه تمام ویژگی های پخش به این مجوزها نیاز دارد.",
+  "@permissionsConsentDescription": {
+    "description": "permissionsConsentDescription"
+  },
   "permissionsStorageTitle": "موسیقی و ذخیره سازی",
+  "@permissionsStorageTitle": {
+    "description": "permissionsStorageTitle"
+  },
   "permissionsStorageDescription": "این به شما امکان می دهد موسیقی پخش کنید، بارگیری ها را ذخیره کنید، لیست های پخش را صادر کنید و به روز رسانی ها را آماده کنید.",
+  "@permissionsStorageDescription": {
+    "description": "permissionsStorageDescription"
+  },
   "permissionsNotificationsTitle": "اطلاعیه ها",
+  "@permissionsNotificationsTitle": {
+    "description": "permissionsNotificationsTitle"
+  },
   "permissionsNotificationsDescription": "کنترل‌های بازپخش، پیشرفت بارگیری و اطلاعیه‌های مهم برنامه را نشان می‌دهد.",
+  "@permissionsNotificationsDescription": {
+    "description": "permissionsNotificationsDescription"
+  },
   "permissionsMicrophoneTitle": "میکروفون",
+  "@permissionsMicrophoneTitle": {
+    "description": "permissionsMicrophoneTitle"
+  },
   "permissionsMicrophoneDescription": "فقط زمانی استفاده می شود که بخواهید آهنگی را که در اطراف شما پخش می شود شناسایی کنید.",
+  "@permissionsMicrophoneDescription": {
+    "description": "permissionsMicrophoneDescription"
+  },
   "permissionsContinueButton": "مجوزهای لازم را اعطا کنید",
+  "@permissionsContinueButton": {
+    "description": "permissionsContinueButton"
+  },
   "permissionsRequiredNotice": "برای ادامه هر سه مجوز لازم است. بعداً می توانید آنها را در تنظیمات سیستم تغییر دهید.",
+  "@permissionsRequiredNotice": {
+    "description": "permissionsRequiredNotice"
+  },
   "permissionsAllow": "اجازه دهید",
+  "@permissionsAllow": {
+    "description": "permissionsAllow"
+  },
   "permissionsOpenSettings": "تنظیمات",
+  "@permissionsOpenSettings": {
+    "description": "permissionsOpenSettings"
+  },
   "auth_2fa_title": "احراز هویت دو مرحله ای",
+  "@auth_2fa_title": {
+    "description": "auth_2fa_title"
+  },
   "auth_2fa_subtitle": "کد 6 رقمی را از برنامه احراز هویت خود وارد کنید. این دسترسی 5 دقیقه دیگر منقضی می شود.",
+  "@auth_2fa_subtitle": {
+    "description": "auth_2fa_subtitle"
+  },
   "auth_2fa_code": "کد احراز هویت",
+  "@auth_2fa_code": {
+    "description": "auth_2fa_code"
+  },
   "auth_2fa_verify": "بررسی کنید و ادامه دهید",
-  "auth_2fa_invalid": "یک کد 6 رقمی معتبر وارد کنید یا دوباره وارد شوید."
+  "@auth_2fa_verify": {
+    "description": "auth_2fa_verify"
+  },
+  "auth_2fa_invalid": "یک کد 6 رقمی معتبر وارد کنید یا دوباره وارد شوید.",
+  "@auth_2fa_invalid": {
+    "description": "auth_2fa_invalid"
+  }
 }

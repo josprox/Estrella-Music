@@ -56,52 +56,67 @@ class S {
 
   /// `Home`
   String get home {
-    return Intl.message('Home', name: 'home', desc: '', args: []);
+    return Intl.message('Home', name: 'home', desc: 'home', args: []);
   }
 
   /// `Songs`
   String get songs {
-    return Intl.message('Songs', name: 'songs', desc: '', args: []);
+    return Intl.message('Songs', name: 'songs', desc: 'songs', args: []);
   }
 
   /// `Playlists`
   String get playlists {
-    return Intl.message('Playlists', name: 'playlists', desc: '', args: []);
+    return Intl.message(
+      'Playlists',
+      name: 'playlists',
+      desc: 'playlists',
+      args: [],
+    );
   }
 
   /// `Albums`
   String get albums {
-    return Intl.message('Albums', name: 'albums', desc: '', args: []);
+    return Intl.message('Albums', name: 'albums', desc: 'albums', args: []);
   }
 
   /// `Album`
   String get album {
-    return Intl.message('Album', name: 'album', desc: '', args: []);
+    return Intl.message('Album', name: 'album', desc: 'album', args: []);
   }
 
   /// `Singles`
   String get singles {
-    return Intl.message('Singles', name: 'singles', desc: '', args: []);
+    return Intl.message('Singles', name: 'singles', desc: 'singles', args: []);
   }
 
   /// `Artists`
   String get artists {
-    return Intl.message('Artists', name: 'artists', desc: '', args: []);
+    return Intl.message('Artists', name: 'artists', desc: 'artists', args: []);
   }
 
   /// `Settings`
   String get settings {
-    return Intl.message('Settings', name: 'settings', desc: '', args: []);
+    return Intl.message(
+      'Settings',
+      name: 'settings',
+      desc: 'settings',
+      args: [],
+    );
   }
 
   /// `Library`
   String get library {
-    return Intl.message('Library', name: 'library', desc: '', args: []);
+    return Intl.message('Library', name: 'library', desc: 'library', args: []);
   }
 
   /// `Library Songs`
   String get libSongs {
-    return Intl.message('Library Songs', name: 'libSongs', desc: '', args: []);
+    return Intl.message(
+      'Library Songs',
+      name: 'libSongs',
+      desc: 'libSongs',
+      args: [],
+    );
   }
 
   /// `Migrated library`
@@ -109,7 +124,7 @@ class S {
     return Intl.message(
       'Migrated library',
       name: 'migratedLibrary',
-      desc: '',
+      desc: 'migratedLibrary',
       args: [],
     );
   }
@@ -119,7 +134,7 @@ class S {
     return Intl.message(
       'There are no songs in this collection',
       name: 'noSongsInCollection',
-      desc: '',
+      desc: 'noSongsInCollection',
       args: [],
     );
   }
@@ -129,7 +144,7 @@ class S {
     return Intl.message(
       'Open on startup',
       name: 'startupScreen',
-      desc: '',
+      desc: 'startupScreen',
       args: [],
     );
   }
@@ -139,14 +154,14 @@ class S {
     return Intl.message(
       'Choose the section that Estrella Music opens first',
       name: 'startupScreenDescription',
-      desc: '',
+      desc: 'startupScreenDescription',
       args: [],
     );
   }
 
   /// `Friends`
   String get friends {
-    return Intl.message('Friends', name: 'friends', desc: '', args: []);
+    return Intl.message('Friends', name: 'friends', desc: 'friends', args: []);
   }
 
   /// `Daily discovery`
@@ -154,7 +169,7 @@ class S {
     return Intl.message(
       'Daily discovery',
       name: 'dailyDiscover',
-      desc: '',
+      desc: 'dailyDiscover',
       args: [],
     );
   }
@@ -164,7 +179,7 @@ class S {
     return Intl.message(
       'keep listening',
       name: 'keepListening',
-      desc: '',
+      desc: 'keepListening',
       args: [],
     );
   }
@@ -174,7 +189,7 @@ class S {
     return Intl.message(
       'Similar to $title',
       name: 'similarToTitle',
-      desc: '',
+      desc: 'similarToTitle',
       args: [title],
     );
   }
@@ -184,7 +199,7 @@ class S {
     return Intl.message(
       'Piped Playlist',
       name: 'pipedPlaylistDescription',
-      desc: '',
+      desc: 'pipedPlaylistDescription',
       args: [],
     );
   }
@@ -194,7 +209,7 @@ class S {
     return Intl.message(
       'Collaborative Playlist',
       name: 'collaborativePlaylistDescription',
-      desc: '',
+      desc: 'collaborativePlaylistDescription',
       args: [],
     );
   }
@@ -204,7 +219,7 @@ class S {
     return Intl.message(
       'Library Playlist',
       name: 'libraryPlaylistDescription',
-      desc: '',
+      desc: 'libraryPlaylistDescription',
       args: [],
     );
   }
@@ -214,7 +229,7 @@ class S {
     return Intl.message(
       'Untitled song',
       name: 'untitledSong',
-      desc: '',
+      desc: 'untitledSong',
       args: [],
     );
   }
@@ -224,7 +239,7 @@ class S {
     return Intl.message(
       'Migrated Playlist',
       name: 'migratedPlaylist',
-      desc: '',
+      desc: 'migratedPlaylist',
       args: [],
     );
   }
@@ -234,7 +249,7 @@ class S {
     return Intl.message(
       'Migrated album',
       name: 'migratedAlbum',
-      desc: '',
+      desc: 'migratedAlbum',
       args: [],
     );
   }
@@ -244,7 +259,7 @@ class S {
     return Intl.message(
       'Songs imported from Joss Music Kotlin',
       name: 'songsImportedFromJossMusic',
-      desc: '',
+      desc: 'songsImportedFromJossMusic',
       args: [],
     );
   }
@@ -254,7 +269,7 @@ class S {
     return Intl.message(
       'Imported from Joss Music Kotlin',
       name: 'importedFromJossMusic',
-      desc: '',
+      desc: 'importedFromJossMusic',
       args: [],
     );
   }
@@ -264,7 +279,7 @@ class S {
     return Intl.message(
       'Local mode active',
       name: 'syncLocalModeActive',
-      desc: '',
+      desc: 'syncLocalModeActive',
       args: [],
     );
   }
@@ -274,7 +289,7 @@ class S {
     return Intl.message(
       'Cloud mode active',
       name: 'syncCloudModeActive',
-      desc: '',
+      desc: 'syncCloudModeActive',
       args: [],
     );
   }
@@ -284,7 +299,7 @@ class S {
     return Intl.message(
       'Cloud mode active. ',
       name: 'syncCloudPending',
-      desc: '',
+      desc: 'syncCloudPending',
       args: [],
     );
   }
@@ -294,7 +309,7 @@ class S {
     return Intl.message(
       'Cloud mode activated. ',
       name: 'syncCloudDownloadingExisting',
-      desc: '',
+      desc: 'syncCloudDownloadingExisting',
       args: [],
     );
   }
@@ -304,7 +319,7 @@ class S {
     return Intl.message(
       'Cloud mode activated. ',
       name: 'syncCloudMigrationComplete',
-      desc: '',
+      desc: 'syncCloudMigrationComplete',
       args: [],
     );
   }
@@ -314,7 +329,7 @@ class S {
     return Intl.message(
       'Your data is kept only on this device.',
       name: 'syncLocalDeviceOnly',
-      desc: '',
+      desc: 'syncLocalDeviceOnly',
       args: [],
     );
   }
@@ -324,7 +339,7 @@ class S {
     return Intl.message(
       'Downloading EMusic changes...',
       name: 'syncDownloading',
-      desc: '',
+      desc: 'syncDownloading',
       args: [],
     );
   }
@@ -334,7 +349,7 @@ class S {
     return Intl.message(
       'Failed to download sync.',
       name: 'syncDownloadFailed',
-      desc: '',
+      desc: 'syncDownloadFailed',
       args: [],
     );
   }
@@ -344,7 +359,7 @@ class S {
     return Intl.message(
       'There are new local changes. ',
       name: 'syncLocalChangesFirst',
-      desc: '',
+      desc: 'syncLocalChangesFirst',
       args: [],
     );
   }
@@ -354,7 +369,7 @@ class S {
     return Intl.message(
       'Synchronized library.',
       name: 'syncLibrarySynced',
-      desc: '',
+      desc: 'syncLibrarySynced',
       args: [],
     );
   }
@@ -364,7 +379,7 @@ class S {
     return Intl.message(
       'Offline. ',
       name: 'syncOfflinePending',
-      desc: '',
+      desc: 'syncOfflinePending',
       args: [],
     );
   }
@@ -374,7 +389,7 @@ class S {
     return Intl.message(
       'Library up to date.',
       name: 'syncLibraryUpToDate',
-      desc: '',
+      desc: 'syncLibraryUpToDate',
       args: [],
     );
   }
@@ -384,7 +399,7 @@ class S {
     return Intl.message(
       '$count synchronized changes.',
       name: 'syncChangesSynced',
-      desc: '',
+      desc: 'syncChangesSynced',
       args: [count],
     );
   }
@@ -394,7 +409,7 @@ class S {
     return Intl.message(
       'Uploading changes to EMusic...',
       name: 'syncUploading',
-      desc: '',
+      desc: 'syncUploading',
       args: [],
     );
   }
@@ -404,7 +419,7 @@ class S {
     return Intl.message(
       'Changes uploaded successfully (WS).',
       name: 'syncUploadSuccessWs',
-      desc: '',
+      desc: 'syncUploadSuccessWs',
       args: [],
     );
   }
@@ -414,7 +429,7 @@ class S {
     return Intl.message(
       'Could not upload using WS. ',
       name: 'syncUploadWsRetry',
-      desc: '',
+      desc: 'syncUploadWsRetry',
       args: [],
     );
   }
@@ -424,7 +439,7 @@ class S {
     return Intl.message(
       'Changes uploaded correctly.',
       name: 'syncUploadSuccess',
-      desc: '',
+      desc: 'syncUploadSuccess',
       args: [],
     );
   }
@@ -434,7 +449,7 @@ class S {
     return Intl.message(
       'Could not get up. ',
       name: 'syncUploadRetry',
-      desc: '',
+      desc: 'syncUploadRetry',
       args: [],
     );
   }
@@ -444,7 +459,7 @@ class S {
     return Intl.message(
       'Offline. ',
       name: 'syncOfflineRetry',
-      desc: '',
+      desc: 'syncOfflineRetry',
       args: [],
     );
   }
@@ -454,7 +469,7 @@ class S {
     return Intl.message(
       'EMusic did not confirm all the changes. ',
       name: 'syncUnconfirmedRetry',
-      desc: '',
+      desc: 'syncUnconfirmedRetry',
       args: [],
     );
   }
@@ -464,7 +479,7 @@ class S {
     return Intl.message(
       '$count changes committed.',
       name: 'syncChangesConfirmed',
-      desc: '',
+      desc: 'syncChangesConfirmed',
       args: [count],
     );
   }
@@ -474,7 +489,7 @@ class S {
     return Intl.message(
       'There is already a migration in progress.',
       name: 'migrationAlreadyRunning',
-      desc: '',
+      desc: 'migrationAlreadyRunning',
       args: [],
     );
   }
@@ -484,7 +499,7 @@ class S {
     return Intl.message(
       'Log in to Joss Red before migrating.',
       name: 'migrationLoginRequired',
-      desc: '',
+      desc: 'migrationLoginRequired',
       args: [],
     );
   }
@@ -494,7 +509,7 @@ class S {
     return Intl.message(
       'Checking if EMusic Cloud already has a library...',
       name: 'migrationCheckingCloud',
-      desc: '',
+      desc: 'migrationCheckingCloud',
       args: [],
     );
   }
@@ -504,7 +519,7 @@ class S {
     return Intl.message(
       'A cloud library was found. ',
       name: 'cloudLibraryFoundDeviceWillDownload',
-      desc: '',
+      desc: 'cloudLibraryFoundDeviceWillDownload',
       args: [],
     );
   }
@@ -514,7 +529,7 @@ class S {
     return Intl.message(
       'Cloud library found.',
       name: 'cloudLibraryFound',
-      desc: '',
+      desc: 'cloudLibraryFound',
       args: [],
     );
   }
@@ -524,7 +539,7 @@ class S {
     return Intl.message(
       'Creating a local backup before connecting cloud...',
       name: 'migrationCreatingBackup',
-      desc: '',
+      desc: 'migrationCreatingBackup',
       args: [],
     );
   }
@@ -534,7 +549,7 @@ class S {
     return Intl.message(
       'Analyzing the local library...',
       name: 'migrationAnalyzingLocal',
-      desc: '',
+      desc: 'migrationAnalyzingLocal',
       args: [],
     );
   }
@@ -544,7 +559,7 @@ class S {
     return Intl.message(
       'Preparing the migration in EMusic Cloud...',
       name: 'migrationPreparingCloud',
-      desc: '',
+      desc: 'migrationPreparingCloud',
       args: [],
     );
   }
@@ -554,7 +569,7 @@ class S {
     return Intl.message(
       'EMusic Cloud could not start the migration.',
       name: 'migrationStartFailed',
-      desc: '',
+      desc: 'migrationStartFailed',
       args: [],
     );
   }
@@ -564,7 +579,7 @@ class S {
     return Intl.message(
       'Uploading playlists, favorites and history...',
       name: 'migrationUploadingData',
-      desc: '',
+      desc: 'migrationUploadingData',
       args: [],
     );
   }
@@ -574,7 +589,7 @@ class S {
     return Intl.message(
       'Not all data could be uploaded. ',
       name: 'migrationUploadIncomplete',
-      desc: '',
+      desc: 'migrationUploadIncomplete',
       args: [],
     );
   }
@@ -584,7 +599,7 @@ class S {
     return Intl.message(
       'Verifying integrity in EMusic Cloud...',
       name: 'migrationVerifyingIntegrity',
-      desc: '',
+      desc: 'migrationVerifyingIntegrity',
       args: [],
     );
   }
@@ -594,7 +609,7 @@ class S {
     return Intl.message(
       'EMusic Cloud could not validate the migration.',
       name: 'migrationValidationFailed',
-      desc: '',
+      desc: 'migrationValidationFailed',
       args: [],
     );
   }
@@ -604,7 +619,7 @@ class S {
     return Intl.message(
       'Cloud mode is ready. ',
       name: 'cloudModeReadyOfflineCache',
-      desc: '',
+      desc: 'cloudModeReadyOfflineCache',
       args: [],
     );
   }
@@ -614,7 +629,7 @@ class S {
     return Intl.message(
       'Migration completed.',
       name: 'migrationCompleted',
-      desc: '',
+      desc: 'migrationCompleted',
       args: [],
     );
   }
@@ -624,7 +639,7 @@ class S {
     return Intl.message(
       'The migration failed. ',
       name: 'migrationFailedLocalPreserved',
-      desc: '',
+      desc: 'migrationFailedLocalPreserved',
       args: [],
     );
   }
@@ -634,7 +649,7 @@ class S {
     return Intl.message(
       'Your session has expired. ',
       name: 'sessionExpiredLoginAgain',
-      desc: '',
+      desc: 'sessionExpiredLoginAgain',
       args: [],
     );
   }
@@ -644,14 +659,19 @@ class S {
     return Intl.message(
       'The selected file was not found.',
       name: 'selectedFileNotFound',
-      desc: '',
+      desc: 'selectedFileNotFound',
       args: [],
     );
   }
 
   /// `Album`
   String get genericAlbum {
-    return Intl.message('Album', name: 'genericAlbum', desc: '', args: []);
+    return Intl.message(
+      'Album',
+      name: 'genericAlbum',
+      desc: 'genericAlbum',
+      args: [],
+    );
   }
 
   /// `Sign in to find friends.`
@@ -659,7 +679,7 @@ class S {
     return Intl.message(
       'Sign in to find friends.',
       name: 'friendsLoginRequired',
-      desc: '',
+      desc: 'friendsLoginRequired',
       args: [],
     );
   }
@@ -669,7 +689,7 @@ class S {
     return Intl.message(
       'The session does not contain a valid token.',
       name: 'invalidSessionToken',
-      desc: '',
+      desc: 'invalidSessionToken',
       args: [],
     );
   }
@@ -679,7 +699,7 @@ class S {
     return Intl.message(
       'Could not search for users ($statusCode).',
       name: 'userSearchFailed',
-      desc: '',
+      desc: 'userSearchFailed',
       args: [statusCode],
     );
   }
@@ -689,7 +709,7 @@ class S {
     return Intl.message(
       'Invalid server response.',
       name: 'invalidServerResponse',
-      desc: '',
+      desc: 'invalidServerResponse',
       args: [],
     );
   }
@@ -699,7 +719,7 @@ class S {
     return Intl.message(
       'The response does not contain a list of users.',
       name: 'userListMissing',
-      desc: '',
+      desc: 'userListMissing',
       args: [],
     );
   }
@@ -709,7 +729,7 @@ class S {
     return Intl.message(
       'Playlist contributors',
       name: 'playlistCollaboratorsTitle',
-      desc: '',
+      desc: 'playlistCollaboratorsTitle',
       args: [],
     );
   }
@@ -719,7 +739,7 @@ class S {
     return Intl.message(
       'Select the friends who will be able to see and edit this playlist:',
       name: 'collaboratorsInstruction',
-      desc: '',
+      desc: 'collaboratorsInstruction',
       args: [],
     );
   }
@@ -729,14 +749,19 @@ class S {
     return Intl.message(
       'You have no added friends on Joss Red.',
       name: 'noJossRedFriends',
-      desc: '',
+      desc: 'noJossRedFriends',
       args: [],
     );
   }
 
   /// `Friend`
   String get friendFallback {
-    return Intl.message('Friend', name: 'friendFallback', desc: '', args: []);
+    return Intl.message(
+      'Friend',
+      name: 'friendFallback',
+      desc: 'friendFallback',
+      args: [],
+    );
   }
 
   /// `Collaborators updated correctly.`
@@ -744,14 +769,14 @@ class S {
     return Intl.message(
       'Collaborators updated correctly.',
       name: 'collaboratorsUpdated',
-      desc: '',
+      desc: 'collaboratorsUpdated',
       args: [],
     );
   }
 
   /// `Keep`
   String get save {
-    return Intl.message('Keep', name: 'save', desc: '', args: []);
+    return Intl.message('Keep', name: 'save', desc: 'save', args: []);
   }
 
   /// `Manage collaborators (friends)`
@@ -759,14 +784,14 @@ class S {
     return Intl.message(
       'Manage collaborators (friends)',
       name: 'manageCollaborators',
-      desc: '',
+      desc: 'manageCollaborators',
       args: [],
     );
   }
 
   /// `Ready`
   String get done {
-    return Intl.message('Ready', name: 'done', desc: '', args: []);
+    return Intl.message('Ready', name: 'done', desc: 'done', args: []);
   }
 
   /// `Not authenticated`
@@ -774,14 +799,19 @@ class S {
     return Intl.message(
       'Not authenticated',
       name: 'notAuthenticated',
-      desc: '',
+      desc: 'notAuthenticated',
       args: [],
     );
   }
 
   /// `Mistake`
   String get genericError {
-    return Intl.message('Mistake', name: 'genericError', desc: '', args: []);
+    return Intl.message(
+      'Mistake',
+      name: 'genericError',
+      desc: 'genericError',
+      args: [],
+    );
   }
 
   /// `Friend request sent`
@@ -789,7 +819,7 @@ class S {
     return Intl.message(
       'Friend request sent',
       name: 'friendRequestSent',
-      desc: '',
+      desc: 'friendRequestSent',
       args: [],
     );
   }
@@ -799,7 +829,7 @@ class S {
     return Intl.message(
       'Friend request accepted',
       name: 'friendRequestAccepted',
-      desc: '',
+      desc: 'friendRequestAccepted',
       args: [],
     );
   }
@@ -809,7 +839,7 @@ class S {
     return Intl.message(
       'Friendship removed',
       name: 'friendshipRemoved',
-      desc: '',
+      desc: 'friendshipRemoved',
       args: [],
     );
   }
@@ -819,7 +849,7 @@ class S {
     return Intl.message(
       'Blocked user',
       name: 'userBlocked',
-      desc: '',
+      desc: 'userBlocked',
       args: [],
     );
   }
@@ -829,7 +859,7 @@ class S {
     return Intl.message(
       'Unlocked user',
       name: 'userUnblocked',
-      desc: '',
+      desc: 'userUnblocked',
       args: [],
     );
   }
@@ -839,7 +869,7 @@ class S {
     return Intl.message(
       'According to your tastes',
       name: 'artistsByTaste',
-      desc: '',
+      desc: 'artistsByTaste',
       args: [],
     );
   }
@@ -849,7 +879,7 @@ class S {
     return Intl.message(
       'followed',
       name: 'followedArtists',
-      desc: '',
+      desc: 'followedArtists',
       args: [],
     );
   }
@@ -859,7 +889,7 @@ class S {
     return Intl.message(
       'Recommended',
       name: 'recommendedArtists',
-      desc: '',
+      desc: 'recommendedArtists',
       args: [],
     );
   }
@@ -869,14 +899,19 @@ class S {
     return Intl.message(
       'According to your tastes',
       name: 'albumsByTaste',
-      desc: '',
+      desc: 'albumsByTaste',
       args: [],
     );
   }
 
   /// `Saved`
   String get savedAlbums {
-    return Intl.message('Saved', name: 'savedAlbums', desc: '', args: []);
+    return Intl.message(
+      'Saved',
+      name: 'savedAlbums',
+      desc: 'savedAlbums',
+      args: [],
+    );
   }
 
   /// `Recommended`
@@ -884,7 +919,7 @@ class S {
     return Intl.message(
       'Recommended',
       name: 'recommendedAlbums',
-      desc: '',
+      desc: 'recommendedAlbums',
       args: [],
     );
   }
@@ -894,7 +929,7 @@ class S {
     return Intl.message(
       'Library Playlists',
       name: 'libPlaylists',
-      desc: '',
+      desc: 'libPlaylists',
       args: [],
     );
   }
@@ -904,7 +939,7 @@ class S {
     return Intl.message(
       'Library Albums',
       name: 'libAlbums',
-      desc: '',
+      desc: 'libAlbums',
       args: [],
     );
   }
@@ -914,7 +949,7 @@ class S {
     return Intl.message(
       'Library Artists',
       name: 'libArtists',
-      desc: '',
+      desc: 'libArtists',
       args: [],
     );
   }
@@ -924,7 +959,7 @@ class S {
     return Intl.message(
       'Community Playlists',
       name: 'communityplaylists',
-      desc: '',
+      desc: 'communityplaylists',
       args: [],
     );
   }
@@ -934,14 +969,14 @@ class S {
     return Intl.message(
       'Featured Playlists',
       name: 'featuredplaylists',
-      desc: '',
+      desc: 'featuredplaylists',
       args: [],
     );
   }
 
   /// `items`
   String get items {
-    return Intl.message('items', name: 'items', desc: '', args: []);
+    return Intl.message('items', name: 'items', desc: 'items', args: []);
   }
 
   /// `Oops network error!`
@@ -949,14 +984,14 @@ class S {
     return Intl.message(
       'Oops network error!',
       name: 'networkError1',
-      desc: '',
+      desc: 'networkError1',
       args: [],
     );
   }
 
   /// `Retry!`
   String get retry {
-    return Intl.message('Retry!', name: 'retry', desc: '', args: []);
+    return Intl.message('Retry!', name: 'retry', desc: 'retry', args: []);
   }
 
   /// `No offline songs!`
@@ -964,7 +999,7 @@ class S {
     return Intl.message(
       'No offline songs!',
       name: 'noOfflineSong',
-      desc: '',
+      desc: 'noOfflineSong',
       args: [],
     );
   }
@@ -974,14 +1009,19 @@ class S {
     return Intl.message(
       'Recently Played',
       name: 'recentlyPlayed',
-      desc: '',
+      desc: 'recentlyPlayed',
       args: [],
     );
   }
 
   /// `Favorites`
   String get favorites {
-    return Intl.message('Favorites', name: 'favorites', desc: '', args: []);
+    return Intl.message(
+      'Favorites',
+      name: 'favorites',
+      desc: 'favorites',
+      args: [],
+    );
   }
 
   /// `Cached/Offline`
@@ -989,14 +1029,19 @@ class S {
     return Intl.message(
       'Cached/Offline',
       name: 'cachedOrOffline',
-      desc: '',
+      desc: 'cachedOrOffline',
       args: [],
     );
   }
 
   /// `Downloads`
   String get downloads {
-    return Intl.message('Downloads', name: 'downloads', desc: '', args: []);
+    return Intl.message(
+      'Downloads',
+      name: 'downloads',
+      desc: 'downloads',
+      args: [],
+    );
   }
 
   /// `Empty playlist!`
@@ -1004,14 +1049,19 @@ class S {
     return Intl.message(
       'Empty playlist!',
       name: 'emptyPlaylist',
-      desc: '',
+      desc: 'emptyPlaylist',
       args: [],
     );
   }
 
   /// `Enqueue all`
   String get enqueueAll {
-    return Intl.message('Enqueue all', name: 'enqueueAll', desc: '', args: []);
+    return Intl.message(
+      'Enqueue all',
+      name: 'enqueueAll',
+      desc: 'enqueueAll',
+      args: [],
+    );
   }
 
   /// `Rename Playlist`
@@ -1019,7 +1069,7 @@ class S {
     return Intl.message(
       'Rename Playlist',
       name: 'renamePlaylist',
-      desc: '',
+      desc: 'renamePlaylist',
       args: [],
     );
   }
@@ -1029,7 +1079,7 @@ class S {
     return Intl.message(
       'Remove playlist',
       name: 'removePlaylist',
-      desc: '',
+      desc: 'removePlaylist',
       args: [],
     );
   }
@@ -1039,7 +1089,7 @@ class S {
     return Intl.message(
       'Create new playlist',
       name: 'CreateNewPlaylist',
-      desc: '',
+      desc: 'CreateNewPlaylist',
       args: [],
     );
   }
@@ -1049,7 +1099,7 @@ class S {
     return Intl.message(
       'Rearrange playlist',
       name: 'reArrangePlaylist',
-      desc: '',
+      desc: 'reArrangePlaylist',
       args: [],
     );
   }
@@ -1059,7 +1109,7 @@ class S {
     return Intl.message(
       'Rearrange songs',
       name: 'reArrangeSongs',
-      desc: '',
+      desc: 'reArrangeSongs',
       args: [],
     );
   }
@@ -1069,14 +1119,19 @@ class S {
     return Intl.message(
       'Select songs',
       name: 'selectSongs',
-      desc: '',
+      desc: 'selectSongs',
       args: [],
     );
   }
 
   /// `Select All`
   String get selectAll {
-    return Intl.message('Select All', name: 'selectAll', desc: '', args: []);
+    return Intl.message(
+      'Select All',
+      name: 'selectAll',
+      desc: 'selectAll',
+      args: [],
+    );
   }
 
   /// `Remove multiple songs`
@@ -1084,7 +1139,7 @@ class S {
     return Intl.message(
       'Remove multiple songs',
       name: 'removeMultiple',
-      desc: '',
+      desc: 'removeMultiple',
       args: [],
     );
   }
@@ -1094,29 +1149,34 @@ class S {
     return Intl.message(
       'Add songs to playlist',
       name: 'addMultipleSongs',
-      desc: '',
+      desc: 'addMultipleSongs',
       args: [],
     );
   }
 
   /// `Cancel`
   String get cancel {
-    return Intl.message('Cancel', name: 'cancel', desc: '', args: []);
+    return Intl.message('Cancel', name: 'cancel', desc: 'cancel', args: []);
   }
 
   /// `Create`
   String get create {
-    return Intl.message('Create', name: 'create', desc: '', args: []);
+    return Intl.message('Create', name: 'create', desc: 'create', args: []);
   }
 
   /// `Rename`
   String get rename {
-    return Intl.message('Rename', name: 'rename', desc: '', args: []);
+    return Intl.message('Rename', name: 'rename', desc: 'rename', args: []);
   }
 
   /// `Create & add`
   String get createnAdd {
-    return Intl.message('Create & add', name: 'createnAdd', desc: '', args: []);
+    return Intl.message(
+      'Create & add',
+      name: 'createnAdd',
+      desc: 'createnAdd',
+      args: [],
+    );
   }
 
   /// `No bookmarks!`
@@ -1124,19 +1184,29 @@ class S {
     return Intl.message(
       'No bookmarks!',
       name: 'noBookmarks',
-      desc: '',
+      desc: 'noBookmarks',
       args: [],
     );
   }
 
   /// `Start radio`
   String get startRadio {
-    return Intl.message('Start radio', name: 'startRadio', desc: '', args: []);
+    return Intl.message(
+      'Start radio',
+      name: 'startRadio',
+      desc: 'startRadio',
+      args: [],
+    );
   }
 
   /// `Play next`
   String get playNext {
-    return Intl.message('Play next', name: 'playNext', desc: '', args: []);
+    return Intl.message(
+      'Play next',
+      name: 'playNext',
+      desc: 'playNext',
+      args: [],
+    );
   }
 
   /// `Add to playlist`
@@ -1144,7 +1214,7 @@ class S {
     return Intl.message(
       'Add to playlist',
       name: 'addToPlaylist',
-      desc: '',
+      desc: 'addToPlaylist',
       args: [],
     );
   }
@@ -1154,7 +1224,7 @@ class S {
     return Intl.message(
       'You don\'t have any lib playlist!',
       name: 'noLibPlaylist',
-      desc: '',
+      desc: 'noLibPlaylist',
       args: [],
     );
   }
@@ -1164,24 +1234,34 @@ class S {
     return Intl.message(
       'Enqueue this song',
       name: 'enqueueSong',
-      desc: '',
+      desc: 'enqueueSong',
       args: [],
     );
   }
 
   /// `Go to album`
   String get goToAlbum {
-    return Intl.message('Go to album', name: 'goToAlbum', desc: '', args: []);
+    return Intl.message(
+      'Go to album',
+      name: 'goToAlbum',
+      desc: 'goToAlbum',
+      args: [],
+    );
   }
 
   /// `View Artist`
   String get viewArtist {
-    return Intl.message('View Artist', name: 'viewArtist', desc: '', args: []);
+    return Intl.message(
+      'View Artist',
+      name: 'viewArtist',
+      desc: 'viewArtist',
+      args: [],
+    );
   }
 
   /// `Open in`
   String get openIn {
-    return Intl.message('Open in', name: 'openIn', desc: '', args: []);
+    return Intl.message('Open in', name: 'openIn', desc: 'openIn', args: []);
   }
 
   /// `Share this song`
@@ -1189,7 +1269,7 @@ class S {
     return Intl.message(
       'Share this song',
       name: 'shareSong',
-      desc: '',
+      desc: 'shareSong',
       args: [],
     );
   }
@@ -1199,7 +1279,7 @@ class S {
     return Intl.message(
       'Remove from playlist',
       name: 'removeFromPlaylist',
-      desc: '',
+      desc: 'removeFromPlaylist',
       args: [],
     );
   }
@@ -1209,7 +1289,7 @@ class S {
     return Intl.message(
       'Remove from queue',
       name: 'removeFromQueue',
-      desc: '',
+      desc: 'removeFromQueue',
       args: [],
     );
   }
@@ -1219,7 +1299,7 @@ class S {
     return Intl.message(
       'Queue can\'t be shuffled when shuffle mode is enabled',
       name: 'queueShufflingDeniedMsg',
-      desc: '',
+      desc: 'queueShufflingDeniedMsg',
       args: [],
     );
   }
@@ -1229,7 +1309,7 @@ class S {
     return Intl.message(
       'Queue can\'t be rearranged when shuffle mode is enabled',
       name: 'queuerearrangingDeniedMsg',
-      desc: '',
+      desc: 'queuerearrangingDeniedMsg',
       args: [],
     );
   }
@@ -1239,14 +1319,14 @@ class S {
     return Intl.message(
       'Song is not playable due to server restriction!',
       name: 'songNotPlayable',
-      desc: '',
+      desc: 'songNotPlayable',
       args: [],
     );
   }
 
   /// `Up Next`
   String get upNext {
-    return Intl.message('Up Next', name: 'upNext', desc: '', args: []);
+    return Intl.message('Up Next', name: 'upNext', desc: 'upNext', args: []);
   }
 
   /// `PLAYING FROM ÁLBUM`
@@ -1254,7 +1334,7 @@ class S {
     return Intl.message(
       'PLAYING FROM ÁLBUM',
       name: 'playingfromAlbum',
-      desc: '',
+      desc: 'playingfromAlbum',
       args: [],
     );
   }
@@ -1264,7 +1344,7 @@ class S {
     return Intl.message(
       'PLAYING FROM PLAYLIST',
       name: 'playingfromPlaylist',
-      desc: '',
+      desc: 'playingfromPlaylist',
       args: [],
     );
   }
@@ -1274,7 +1354,7 @@ class S {
     return Intl.message(
       'PLAYING FROM SELECTION',
       name: 'playingfromSelection',
-      desc: '',
+      desc: 'playingfromSelection',
       args: [],
     );
   }
@@ -1284,7 +1364,7 @@ class S {
     return Intl.message(
       'PLAYING FROM ARTIST',
       name: 'playingfromArtist',
-      desc: '',
+      desc: 'playingfromArtist',
       args: [],
     );
   }
@@ -1294,7 +1374,7 @@ class S {
     return Intl.message(
       'Random Selection',
       name: 'randomSelection',
-      desc: '',
+      desc: 'randomSelection',
       args: [],
     );
   }
@@ -1304,14 +1384,19 @@ class S {
     return Intl.message(
       'Random Radio',
       name: 'randomRadio',
-      desc: '',
+      desc: 'randomRadio',
       args: [],
     );
   }
 
   /// `Upcoming`
   String get playnextMsg {
-    return Intl.message('Upcoming', name: 'playnextMsg', desc: '', args: []);
+    return Intl.message(
+      'Upcoming',
+      name: 'playnextMsg',
+      desc: 'playnextMsg',
+      args: [],
+    );
   }
 
   /// `Shuffle Queue`
@@ -1319,14 +1404,19 @@ class S {
     return Intl.message(
       'Shuffle Queue',
       name: 'shuffleQueue',
-      desc: '',
+      desc: 'shuffleQueue',
       args: [],
     );
   }
 
   /// `Queue loop`
   String get queueLoop {
-    return Intl.message('Queue loop', name: 'queueLoop', desc: '', args: []);
+    return Intl.message(
+      'Queue loop',
+      name: 'queueLoop',
+      desc: 'queueLoop',
+      args: [],
+    );
   }
 
   /// `Queue loop mode cannot be disabled when shuffle mode is enabled.`
@@ -1334,7 +1424,7 @@ class S {
     return Intl.message(
       'Queue loop mode cannot be disabled when shuffle mode is enabled.',
       name: 'queueLoopNotDisMsg1',
-      desc: '',
+      desc: 'queueLoopNotDisMsg1',
       args: [],
     );
   }
@@ -1344,7 +1434,7 @@ class S {
     return Intl.message(
       'Queue loop mode cannot be enabled in radio mode.',
       name: 'queueLoopNotDisMsg2',
-      desc: '',
+      desc: 'queueLoopNotDisMsg2',
       args: [],
     );
   }
@@ -1354,14 +1444,19 @@ class S {
     return Intl.message(
       'Remove from Library Songs',
       name: 'removeFromLib',
-      desc: '',
+      desc: 'removeFromLib',
       args: [],
     );
   }
 
   /// `Sleep Timer`
   String get sleepTimer {
-    return Intl.message('Sleep Timer', name: 'sleepTimer', desc: '', args: []);
+    return Intl.message(
+      'Sleep Timer',
+      name: 'sleepTimer',
+      desc: 'sleepTimer',
+      args: [],
+    );
   }
 
   /// `Add 5 minutes`
@@ -1369,7 +1464,7 @@ class S {
     return Intl.message(
       'Add 5 minutes',
       name: 'add5Minutes',
-      desc: '',
+      desc: 'add5Minutes',
       args: [],
     );
   }
@@ -1379,7 +1474,7 @@ class S {
     return Intl.message(
       'Cancel timer',
       name: 'cancelTimer',
-      desc: '',
+      desc: 'cancelTimer',
       args: [],
     );
   }
@@ -1389,14 +1484,14 @@ class S {
     return Intl.message(
       'Remove from downloads',
       name: 'deleteDownloadData',
-      desc: '',
+      desc: 'deleteDownloadData',
       args: [],
     );
   }
 
   /// `minutes`
   String get minutes {
-    return Intl.message('minutes', name: 'minutes', desc: '', args: []);
+    return Intl.message('minutes', name: 'minutes', desc: 'minutes', args: []);
   }
 
   /// `End of this song`
@@ -1404,24 +1499,29 @@ class S {
     return Intl.message(
       'End of this song',
       name: 'endOfThisSong',
-      desc: '',
+      desc: 'endOfThisSong',
       args: [],
     );
   }
 
   /// `App Info`
   String get appInfo {
-    return Intl.message('App Info', name: 'appInfo', desc: '', args: []);
+    return Intl.message('App Info', name: 'appInfo', desc: 'appInfo', args: []);
   }
 
   /// `Download`
   String get download {
-    return Intl.message('Download', name: 'download', desc: '', args: []);
+    return Intl.message(
+      'Download',
+      name: 'download',
+      desc: 'download',
+      args: [],
+    );
   }
 
   /// `Misc`
   String get misc {
-    return Intl.message('Misc', name: 'misc', desc: '', args: []);
+    return Intl.message('Misc', name: 'misc', desc: 'misc', args: []);
   }
 
   /// `Auto download favorite songs`
@@ -1429,7 +1529,7 @@ class S {
     return Intl.message(
       'Auto download favorite songs',
       name: 'autoDownFavSong',
-      desc: '',
+      desc: 'autoDownFavSong',
       args: [],
     );
   }
@@ -1439,7 +1539,7 @@ class S {
     return Intl.message(
       'Automatically download favorite songs when added to favorites',
       name: 'autoDownFavSongDes',
-      desc: '',
+      desc: 'autoDownFavSongDes',
       args: [],
     );
   }
@@ -1449,7 +1549,7 @@ class S {
     return Intl.message(
       'Network error! Check your network connection.',
       name: 'networkError',
-      desc: '',
+      desc: 'networkError',
       args: [],
     );
   }
@@ -1459,7 +1559,7 @@ class S {
     return Intl.message(
       'Requested song is not downloadable due to server restriction. You may try again',
       name: 'downloadError2',
-      desc: '',
+      desc: 'downloadError2',
       args: [],
     );
   }
@@ -1469,7 +1569,7 @@ class S {
     return Intl.message(
       'Downloading failed due to network/stream error! Please try again',
       name: 'downloadError3',
-      desc: '',
+      desc: 'downloadError3',
       args: [],
     );
   }
@@ -1479,14 +1579,14 @@ class S {
     return Intl.message(
       'Music & Playback',
       name: 'musicAndPlayback',
-      desc: '',
+      desc: 'musicAndPlayback',
       args: [],
     );
   }
 
   /// `Content`
   String get content {
-    return Intl.message('Content', name: 'content', desc: '', args: []);
+    return Intl.message('Content', name: 'content', desc: 'content', args: []);
   }
 
   /// `Personalisation`
@@ -1494,19 +1594,24 @@ class S {
     return Intl.message(
       'Personalisation',
       name: 'personalisation',
-      desc: '',
+      desc: 'personalisation',
       args: [],
     );
   }
 
   /// `Theme Mode`
   String get themeMode {
-    return Intl.message('Theme Mode', name: 'themeMode', desc: '', args: []);
+    return Intl.message(
+      'Theme Mode',
+      name: 'themeMode',
+      desc: 'themeMode',
+      args: [],
+    );
   }
 
   /// `Dynamic`
   String get dynamic {
-    return Intl.message('Dynamic', name: 'dynamic', desc: '', args: []);
+    return Intl.message('Dynamic', name: 'dynamic', desc: 'dynamic', args: []);
   }
 
   /// `System default`
@@ -1514,29 +1619,39 @@ class S {
     return Intl.message(
       'System default',
       name: 'systemDefault',
-      desc: '',
+      desc: 'systemDefault',
       args: [],
     );
   }
 
   /// `Dark`
   String get dark {
-    return Intl.message('Dark', name: 'dark', desc: '', args: []);
+    return Intl.message('Dark', name: 'dark', desc: 'dark', args: []);
   }
 
   /// `Light`
   String get light {
-    return Intl.message('Light', name: 'light', desc: '', args: []);
+    return Intl.message('Light', name: 'light', desc: 'light', args: []);
   }
 
   /// `Language`
   String get language {
-    return Intl.message('Language', name: 'language', desc: '', args: []);
+    return Intl.message(
+      'Language',
+      name: 'language',
+      desc: 'language',
+      args: [],
+    );
   }
 
   /// `Player Ui`
   String get playerUi {
-    return Intl.message('Player Ui', name: 'playerUi', desc: '', args: []);
+    return Intl.message(
+      'Player Ui',
+      name: 'playerUi',
+      desc: 'playerUi',
+      args: [],
+    );
   }
 
   /// `Select player user interface`
@@ -1544,19 +1659,24 @@ class S {
     return Intl.message(
       'Select player user interface',
       name: 'playerUiDes',
-      desc: '',
+      desc: 'playerUiDes',
       args: [],
     );
   }
 
   /// `Standard`
   String get standard {
-    return Intl.message('Standard', name: 'standard', desc: '', args: []);
+    return Intl.message(
+      'Standard',
+      name: 'standard',
+      desc: 'standard',
+      args: [],
+    );
   }
 
   /// `Gesture`
   String get gesture {
-    return Intl.message('Gesture', name: 'gesture', desc: '', args: []);
+    return Intl.message('Gesture', name: 'gesture', desc: 'gesture', args: []);
   }
 
   /// `Set App language`
@@ -1564,7 +1684,7 @@ class S {
     return Intl.message(
       'Set App language',
       name: 'languageDes',
-      desc: '',
+      desc: 'languageDes',
       args: [],
     );
   }
@@ -1574,24 +1694,39 @@ class S {
     return Intl.message(
       'Set discover content',
       name: 'setDiscoverContent',
-      desc: '',
+      desc: 'setDiscoverContent',
       args: [],
     );
   }
 
   /// `Quick Picks`
   String get quickpicks {
-    return Intl.message('Quick Picks', name: 'quickpicks', desc: '', args: []);
+    return Intl.message(
+      'Quick Picks',
+      name: 'quickpicks',
+      desc: 'quickpicks',
+      args: [],
+    );
   }
 
   /// `Discover`
   String get discover {
-    return Intl.message('Discover', name: 'discover', desc: '', args: []);
+    return Intl.message(
+      'Discover',
+      name: 'discover',
+      desc: 'discover',
+      args: [],
+    );
   }
 
   /// `Trending`
   String get trending {
-    return Intl.message('Trending', name: 'trending', desc: '', args: []);
+    return Intl.message(
+      'Trending',
+      name: 'trending',
+      desc: 'trending',
+      args: [],
+    );
   }
 
   /// `Top Music Videos`
@@ -1599,7 +1734,7 @@ class S {
     return Intl.message(
       'Top Music Videos',
       name: 'topmusicvideos',
-      desc: '',
+      desc: 'topmusicvideos',
       args: [],
     );
   }
@@ -1609,7 +1744,7 @@ class S {
     return Intl.message(
       'Based on last interaction',
       name: 'basedOnLast',
-      desc: '',
+      desc: 'basedOnLast',
       args: [],
     );
   }
@@ -1619,7 +1754,7 @@ class S {
     return Intl.message(
       'Restore last playback session',
       name: 'restoreLastPlaybackSession',
-      desc: '',
+      desc: 'restoreLastPlaybackSession',
       args: [],
     );
   }
@@ -1629,7 +1764,7 @@ class S {
     return Intl.message(
       'Automatically restore the last playback session on app start',
       name: 'restoreLastPlaybackSessionDes',
-      desc: '',
+      desc: 'restoreLastPlaybackSessionDes',
       args: [],
     );
   }
@@ -1639,7 +1774,7 @@ class S {
     return Intl.message(
       'Auto open player screen',
       name: 'autoOpenPlayer',
-      desc: '',
+      desc: 'autoOpenPlayer',
       args: [],
     );
   }
@@ -1649,7 +1784,7 @@ class S {
     return Intl.message(
       'Enable/disable auto opening of player full screen on selection of song for play',
       name: 'autoOpenPlayerDes',
-      desc: '',
+      desc: 'autoOpenPlayerDes',
       args: [],
     );
   }
@@ -1659,7 +1794,7 @@ class S {
     return Intl.message(
       'Home content count',
       name: 'homeContentCount',
-      desc: '',
+      desc: 'homeContentCount',
       args: [],
     );
   }
@@ -1669,7 +1804,7 @@ class S {
     return Intl.message(
       'Select the number of initial homescreen-content(approx). Lesser results faster loading',
       name: 'homeContentCountDes',
-      desc: '',
+      desc: 'homeContentCountDes',
       args: [],
     );
   }
@@ -1679,7 +1814,7 @@ class S {
     return Intl.message(
       'Bottom navigation bar',
       name: 'enableBottomNav',
-      desc: '',
+      desc: 'enableBottomNav',
       args: [],
     );
   }
@@ -1689,14 +1824,19 @@ class S {
     return Intl.message(
       'Switch to bottom navigation bar',
       name: 'enableBottomNavDes',
-      desc: '',
+      desc: 'enableBottomNavDes',
       args: [],
     );
   }
 
   /// `Cache Songs`
   String get cacheSongs {
-    return Intl.message('Cache Songs', name: 'cacheSongs', desc: '', args: []);
+    return Intl.message(
+      'Cache Songs',
+      name: 'cacheSongs',
+      desc: 'cacheSongs',
+      args: [],
+    );
   }
 
   /// `Caching songs while playing for future/offline playback, it will take additional space on your device`
@@ -1704,7 +1844,7 @@ class S {
     return Intl.message(
       'Caching songs while playing for future/offline playback, it will take additional space on your device',
       name: 'cacheSongsDes',
-      desc: '',
+      desc: 'cacheSongsDes',
       args: [],
     );
   }
@@ -1714,7 +1854,7 @@ class S {
     return Intl.message(
       'Skip silence',
       name: 'skipSilence',
-      desc: '',
+      desc: 'skipSilence',
       args: [],
     );
   }
@@ -1724,7 +1864,7 @@ class S {
     return Intl.message(
       'Silence will be skipped in music playback',
       name: 'skipSilenceDes',
-      desc: '',
+      desc: 'skipSilenceDes',
       args: [],
     );
   }
@@ -1734,7 +1874,7 @@ class S {
     return Intl.message(
       'Loudness normalization',
       name: 'loudnessNormalization',
-      desc: '',
+      desc: 'loudnessNormalization',
       args: [],
     );
   }
@@ -1744,7 +1884,7 @@ class S {
     return Intl.message(
       'Sets same lavel of loudness for all songs (Experimental) (Will not work on songs downloaded on previous version(< v1.10.0))',
       name: 'loudnessNormalizationDes',
-      desc: '',
+      desc: 'loudnessNormalizationDes',
       args: [],
     );
   }
@@ -1754,7 +1894,7 @@ class S {
     return Intl.message(
       'Streaming quality',
       name: 'streamingQuality',
-      desc: '',
+      desc: 'streamingQuality',
       args: [],
     );
   }
@@ -1764,7 +1904,7 @@ class S {
     return Intl.message(
       'Quality of music stream',
       name: 'streamingQualityDes',
-      desc: '',
+      desc: 'streamingQualityDes',
       args: [],
     );
   }
@@ -1774,7 +1914,7 @@ class S {
     return Intl.message(
       'Disable transition animation',
       name: 'disableTransitionAnimation',
-      desc: '',
+      desc: 'disableTransitionAnimation',
       args: [],
     );
   }
@@ -1784,7 +1924,7 @@ class S {
     return Intl.message(
       'Enable this option to disable tab transition animation',
       name: 'disableTransitionAnimationDes',
-      desc: '',
+      desc: 'disableTransitionAnimationDes',
       args: [],
     );
   }
@@ -1794,7 +1934,7 @@ class S {
     return Intl.message(
       'Enable slidable actions',
       name: 'enableSlidableAction',
-      desc: '',
+      desc: 'enableSlidableAction',
       args: [],
     );
   }
@@ -1804,19 +1944,19 @@ class S {
     return Intl.message(
       'Enable slidable actions on song tile',
       name: 'enableSlidableActionDes',
-      desc: '',
+      desc: 'enableSlidableActionDes',
       args: [],
     );
   }
 
   /// `High`
   String get high {
-    return Intl.message('High', name: 'high', desc: '', args: []);
+    return Intl.message('High', name: 'high', desc: 'high', args: []);
   }
 
   /// `Low`
   String get low {
-    return Intl.message('Low', name: 'low', desc: '', args: []);
+    return Intl.message('Low', name: 'low', desc: 'low', args: []);
   }
 
   /// `Background music play`
@@ -1824,7 +1964,7 @@ class S {
     return Intl.message(
       'Background music play',
       name: 'backgroundPlay',
-      desc: '',
+      desc: 'backgroundPlay',
       args: [],
     );
   }
@@ -1834,7 +1974,7 @@ class S {
     return Intl.message(
       'Enable/Disable music playing in background (App can be accessed from system tray when app is running in background)',
       name: 'backgroundPlayDes',
-      desc: '',
+      desc: 'backgroundPlayDes',
       args: [],
     );
   }
@@ -1844,7 +1984,7 @@ class S {
     return Intl.message(
       'Download Location',
       name: 'downloadLocation',
-      desc: '',
+      desc: 'downloadLocation',
       args: [],
     );
   }
@@ -1854,7 +1994,7 @@ class S {
     return Intl.message(
       'Cache home screen content data',
       name: 'cacheHomeScreenData',
-      desc: '',
+      desc: 'cacheHomeScreenData',
       args: [],
     );
   }
@@ -1864,7 +2004,7 @@ class S {
     return Intl.message(
       'Enable Caching home screen content data, Home screen will load instantly if this option is enabled',
       name: 'cacheHomeScreenDataDes',
-      desc: '',
+      desc: 'cacheHomeScreenDataDes',
       args: [],
     );
   }
@@ -1874,7 +2014,7 @@ class S {
     return Intl.message(
       'Downloading File Format',
       name: 'downloadingFormat',
-      desc: '',
+      desc: 'downloadingFormat',
       args: [],
     );
   }
@@ -1884,7 +2024,7 @@ class S {
     return Intl.message(
       'Select downloading file format. "Opus" will provide best quality',
       name: 'downloadingFormatDes',
-      desc: '',
+      desc: 'downloadingFormatDes',
       args: [],
     );
   }
@@ -1894,7 +2034,7 @@ class S {
     return Intl.message(
       'Export downloaded files',
       name: 'exportDowloadedFiles',
-      desc: '',
+      desc: 'exportDowloadedFiles',
       args: [],
     );
   }
@@ -1904,7 +2044,7 @@ class S {
     return Intl.message(
       'Click here to export downloaded file from inApp dir to external dir',
       name: 'exportDowloadedFilesDes',
-      desc: '',
+      desc: 'exportDowloadedFilesDes',
       args: [],
     );
   }
@@ -1914,24 +2054,34 @@ class S {
     return Intl.message(
       'Downloaded file export location',
       name: 'exportedFileLocation',
-      desc: '',
+      desc: 'exportedFileLocation',
       args: [],
     );
   }
 
   /// `Export`
   String get export {
-    return Intl.message('Export', name: 'export', desc: '', args: []);
+    return Intl.message('Export', name: 'export', desc: 'export', args: []);
   }
 
   /// `Exporting...`
   String get exporting {
-    return Intl.message('Exporting...', name: 'exporting', desc: '', args: []);
+    return Intl.message(
+      'Exporting...',
+      name: 'exporting',
+      desc: 'exporting',
+      args: [],
+    );
   }
 
   /// `Scanning...`
   String get scanning {
-    return Intl.message('Scanning...', name: 'scanning', desc: '', args: []);
+    return Intl.message(
+      'Scanning...',
+      name: 'scanning',
+      desc: 'scanning',
+      args: [],
+    );
   }
 
   /// `downloaded files found`
@@ -1939,14 +2089,14 @@ class S {
     return Intl.message(
       'downloaded files found',
       name: 'downFilesFound',
-      desc: '',
+      desc: 'downFilesFound',
       args: [],
     );
   }
 
   /// `Close`
   String get close {
-    return Intl.message('Close', name: 'close', desc: '', args: []);
+    return Intl.message('Close', name: 'close', desc: 'close', args: []);
   }
 
   /// `Files successfully exported`
@@ -1954,14 +2104,19 @@ class S {
     return Intl.message(
       'Files successfully exported',
       name: 'exportMsg',
-      desc: '',
+      desc: 'exportMsg',
       args: [],
     );
   }
 
   /// `Equalizer`
   String get equalizer {
-    return Intl.message('Equalizer', name: 'equalizer', desc: '', args: []);
+    return Intl.message(
+      'Equalizer',
+      name: 'equalizer',
+      desc: 'equalizer',
+      args: [],
+    );
   }
 
   /// `Open system equalizer`
@@ -1969,7 +2124,7 @@ class S {
     return Intl.message(
       'Open system equalizer',
       name: 'equalizerDes',
-      desc: '',
+      desc: 'equalizerDes',
       args: [],
     );
   }
@@ -1979,7 +2134,7 @@ class S {
     return Intl.message(
       'Clear images cache',
       name: 'clearImgCache',
-      desc: '',
+      desc: 'clearImgCache',
       args: [],
     );
   }
@@ -1989,7 +2144,7 @@ class S {
     return Intl.message(
       'Images cache cleared successfully',
       name: 'clearImgCacheAlert',
-      desc: '',
+      desc: 'clearImgCacheAlert',
       args: [],
     );
   }
@@ -1999,7 +2154,7 @@ class S {
     return Intl.message(
       'Click here to clear cached thumbnails/images. (Not recommended unless want to refresh cached images data)',
       name: 'clearImgCacheDes',
-      desc: '',
+      desc: 'clearImgCacheDes',
       args: [],
     );
   }
@@ -2009,7 +2164,7 @@ class S {
     return Intl.message(
       'Ignore battery optimization',
       name: 'ignoreBatOpt',
-      desc: '',
+      desc: 'ignoreBatOpt',
       args: [],
     );
   }
@@ -2019,24 +2174,29 @@ class S {
     return Intl.message(
       'If you are facing notification issues or playback stopped by system optimization, please enable this option',
       name: 'ignoreBatOptDes',
-      desc: '',
+      desc: 'ignoreBatOptDes',
       args: [],
     );
   }
 
   /// `Status`
   String get status {
-    return Intl.message('Status', name: 'status', desc: '', args: []);
+    return Intl.message('Status', name: 'status', desc: 'status', args: []);
   }
 
   /// `Enabled`
   String get enabled {
-    return Intl.message('Enabled', name: 'enabled', desc: '', args: []);
+    return Intl.message('Enabled', name: 'enabled', desc: 'enabled', args: []);
   }
 
   /// `Disabled`
   String get disabled {
-    return Intl.message('Disabled', name: 'disabled', desc: '', args: []);
+    return Intl.message(
+      'Disabled',
+      name: 'disabled',
+      desc: 'disabled',
+      args: [],
+    );
   }
 
   /// `Restore default settings`
@@ -2044,7 +2204,7 @@ class S {
     return Intl.message(
       'Restore default settings',
       name: 'resetToDefault',
-      desc: '',
+      desc: 'resetToDefault',
       args: [],
     );
   }
@@ -2054,7 +2214,7 @@ class S {
     return Intl.message(
       'Reset app settings to default (Restart required)',
       name: 'resetToDefaultDes',
-      desc: '',
+      desc: 'resetToDefaultDes',
       args: [],
     );
   }
@@ -2064,14 +2224,14 @@ class S {
     return Intl.message(
       'Settings reset to default completed, Please restart app',
       name: 'resetToDefaultMsg',
-      desc: '',
+      desc: 'resetToDefaultMsg',
       args: [],
     );
   }
 
   /// `GitHub`
   String get github {
-    return Intl.message('GitHub', name: 'github', desc: '', args: []);
+    return Intl.message('GitHub', name: 'github', desc: 'github', args: []);
   }
 
   /// `View GitHub source code \nif you like this project, don't forget to give a ⭐`
@@ -2079,14 +2239,14 @@ class S {
     return Intl.message(
       'View GitHub source code \nif you like this project, don\'t forget to give a ⭐',
       name: 'githubDes',
-      desc: '',
+      desc: 'githubDes',
       args: [],
     );
   }
 
   /// `by`
   String get by {
-    return Intl.message('by', name: 'by', desc: '', args: []);
+    return Intl.message('by', name: 'by', desc: 'by', args: []);
   }
 
   /// `Url detected click on it to open/play associated content`
@@ -2094,14 +2254,14 @@ class S {
     return Intl.message(
       'Url detected click on it to open/play associated content',
       name: 'urlSearchDes',
-      desc: '',
+      desc: 'urlSearchDes',
       args: [],
     );
   }
 
   /// `Search`
   String get search {
-    return Intl.message('Search', name: 'search', desc: '', args: []);
+    return Intl.message('Search', name: 'search', desc: 'search', args: []);
   }
 
   /// `Songs, Playlist, Album or Artist`
@@ -2109,7 +2269,7 @@ class S {
     return Intl.message(
       'Songs, Playlist, Album or Artist',
       name: 'searchDes',
-      desc: '',
+      desc: 'searchDes',
       args: [],
     );
   }
@@ -2119,29 +2279,29 @@ class S {
     return Intl.message(
       'Search results',
       name: 'searchRes',
-      desc: '',
+      desc: 'searchRes',
       args: [],
     );
   }
 
   /// `for`
   String get for1 {
-    return Intl.message('for', name: 'for1', desc: '', args: []);
+    return Intl.message('for', name: 'for1', desc: 'for1', args: []);
   }
 
   /// `Videos`
   String get videos {
-    return Intl.message('Videos', name: 'videos', desc: '', args: []);
+    return Intl.message('Videos', name: 'videos', desc: 'videos', args: []);
   }
 
   /// `View all`
   String get viewAll {
-    return Intl.message('View all', name: 'viewAll', desc: '', args: []);
+    return Intl.message('View all', name: 'viewAll', desc: 'viewAll', args: []);
   }
 
   /// `Results`
   String get results {
-    return Intl.message('Results', name: 'results', desc: '', args: []);
+    return Intl.message('Results', name: 'results', desc: 'results', args: []);
   }
 
   /// `No Match found for`
@@ -2149,59 +2309,84 @@ class S {
     return Intl.message(
       'No Match found for',
       name: 'nomatch',
-      desc: '',
+      desc: 'nomatch',
       args: [],
     );
   }
 
   /// `subscribers`
   String get subscribers {
-    return Intl.message('subscribers', name: 'subscribers', desc: '', args: []);
+    return Intl.message(
+      'subscribers',
+      name: 'subscribers',
+      desc: 'subscribers',
+      args: [],
+    );
   }
 
   /// `Synced`
   String get synced {
-    return Intl.message('Synced', name: 'synced', desc: '', args: []);
+    return Intl.message('Synced', name: 'synced', desc: 'synced', args: []);
   }
 
   /// `Plain`
   String get plain {
-    return Intl.message('Plain', name: 'plain', desc: '', args: []);
+    return Intl.message('Plain', name: 'plain', desc: 'plain', args: []);
   }
 
   /// `Song Info`
   String get songInfo {
-    return Intl.message('Song Info', name: 'songInfo', desc: '', args: []);
+    return Intl.message(
+      'Song Info',
+      name: 'songInfo',
+      desc: 'songInfo',
+      args: [],
+    );
   }
 
   /// `Id`
   String get id {
-    return Intl.message('Id', name: 'id', desc: '', args: []);
+    return Intl.message('Id', name: 'id', desc: 'id', args: []);
   }
 
   /// `Title`
   String get title {
-    return Intl.message('Title', name: 'title', desc: '', args: []);
+    return Intl.message('Title', name: 'title', desc: 'title', args: []);
   }
 
   /// `Duration`
   String get duration {
-    return Intl.message('Duration', name: 'duration', desc: '', args: []);
+    return Intl.message(
+      'Duration',
+      name: 'duration',
+      desc: 'duration',
+      args: [],
+    );
   }
 
   /// `Audio Codec`
   String get audioCodec {
-    return Intl.message('Audio Codec', name: 'audioCodec', desc: '', args: []);
+    return Intl.message(
+      'Audio Codec',
+      name: 'audioCodec',
+      desc: 'audioCodec',
+      args: [],
+    );
   }
 
   /// `Bitrate`
   String get bitrate {
-    return Intl.message('Bitrate', name: 'bitrate', desc: '', args: []);
+    return Intl.message('Bitrate', name: 'bitrate', desc: 'bitrate', args: []);
   }
 
   /// `LoudnessDb`
   String get loudnessDb {
-    return Intl.message('LoudnessDb', name: 'loudnessDb', desc: '', args: []);
+    return Intl.message(
+      'LoudnessDb',
+      name: 'loudnessDb',
+      desc: 'loudnessDb',
+      args: [],
+    );
   }
 
   /// `Successfully removed from downloads!`
@@ -2209,7 +2394,7 @@ class S {
     return Intl.message(
       'Successfully removed from downloads!',
       name: 'deleteDownloadedDataAlert',
-      desc: '',
+      desc: 'deleteDownloadedDataAlert',
       args: [],
     );
   }
@@ -2219,7 +2404,7 @@ class S {
     return Intl.message(
       'Sleep timer cancelled',
       name: 'cancelTimerAlert',
-      desc: '',
+      desc: 'cancelTimerAlert',
       args: [],
     );
   }
@@ -2229,7 +2414,7 @@ class S {
     return Intl.message(
       'Your sleep timer is set',
       name: 'sleepTimeSetAlert',
-      desc: '',
+      desc: 'sleepTimeSetAlert',
       args: [],
     );
   }
@@ -2239,7 +2424,7 @@ class S {
     return Intl.message(
       'Radio not available for this artist!',
       name: 'radioNotAvailable',
-      desc: '',
+      desc: 'radioNotAvailable',
       args: [],
     );
   }
@@ -2249,7 +2434,7 @@ class S {
     return Intl.message(
       'Removed from queue!',
       name: 'songRemovedfromQueue',
-      desc: '',
+      desc: 'songRemovedfromQueue',
       args: [],
     );
   }
@@ -2259,7 +2444,7 @@ class S {
     return Intl.message(
       'You can\'t remove currently playing song',
       name: 'songRemovedfromQueueCurrSong',
-      desc: '',
+      desc: 'songRemovedfromQueueCurrSong',
       args: [],
     );
   }
@@ -2269,7 +2454,7 @@ class S {
     return Intl.message(
       'Song added to playlist!',
       name: 'songAddedToPlaylistAlert',
-      desc: '',
+      desc: 'songAddedToPlaylistAlert',
       args: [],
     );
   }
@@ -2279,7 +2464,7 @@ class S {
     return Intl.message(
       'Song already exists!',
       name: 'songAlreadyExists',
-      desc: '',
+      desc: 'songAlreadyExists',
       args: [],
     );
   }
@@ -2289,7 +2474,7 @@ class S {
     return Intl.message(
       'Song already offline in cache',
       name: 'songAlreadyOfflineAlert',
-      desc: '',
+      desc: 'songAlreadyOfflineAlert',
       args: [],
     );
   }
@@ -2299,7 +2484,7 @@ class S {
     return Intl.message(
       'Song enqueued!',
       name: 'songEnqueueAlert',
-      desc: '',
+      desc: 'songEnqueueAlert',
       args: [],
     );
   }
@@ -2309,7 +2494,7 @@ class S {
     return Intl.message(
       'Removed from',
       name: 'songRemovedAlert',
-      desc: '',
+      desc: 'songRemovedAlert',
       args: [],
     );
   }
@@ -2319,7 +2504,7 @@ class S {
     return Intl.message(
       'Some error occured!',
       name: 'errorOccuredAlert',
-      desc: '',
+      desc: 'errorOccuredAlert',
       args: [],
     );
   }
@@ -2329,7 +2514,7 @@ class S {
     return Intl.message(
       'Piped playlist synced!',
       name: 'pipedplstSyncAlert',
-      desc: '',
+      desc: 'pipedplstSyncAlert',
       args: [],
     );
   }
@@ -2339,7 +2524,7 @@ class S {
     return Intl.message(
       'Playlist created!',
       name: 'playlistCreatedAlert',
-      desc: '',
+      desc: 'playlistCreatedAlert',
       args: [],
     );
   }
@@ -2349,7 +2534,7 @@ class S {
     return Intl.message(
       'Playlist created & song added!',
       name: 'playlistCreatednsongAddedAlert',
-      desc: '',
+      desc: 'playlistCreatednsongAddedAlert',
       args: [],
     );
   }
@@ -2359,7 +2544,7 @@ class S {
     return Intl.message(
       'Renamed successfully!',
       name: 'playlistRenameAlert',
-      desc: '',
+      desc: 'playlistRenameAlert',
       args: [],
     );
   }
@@ -2369,7 +2554,7 @@ class S {
     return Intl.message(
       'Playlist removed!',
       name: 'playlistRemovedAlert',
-      desc: '',
+      desc: 'playlistRemovedAlert',
       args: [],
     );
   }
@@ -2379,7 +2564,7 @@ class S {
     return Intl.message(
       'Playlist bookmarked!',
       name: 'playlistBookmarkAddAlert',
-      desc: '',
+      desc: 'playlistBookmarkAddAlert',
       args: [],
     );
   }
@@ -2389,7 +2574,7 @@ class S {
     return Intl.message(
       'Playlist bookmark removed!',
       name: 'playlistBookmarkRemoveAlert',
-      desc: '',
+      desc: 'playlistBookmarkRemoveAlert',
       args: [],
     );
   }
@@ -2399,7 +2584,7 @@ class S {
     return Intl.message(
       'Album bookmarked!',
       name: 'albumBookmarkAddAlert',
-      desc: '',
+      desc: 'albumBookmarkAddAlert',
       args: [],
     );
   }
@@ -2409,7 +2594,7 @@ class S {
     return Intl.message(
       'Album bookmark removed!',
       name: 'albumBookmarkRemoveAlert',
-      desc: '',
+      desc: 'albumBookmarkRemoveAlert',
       args: [],
     );
   }
@@ -2419,7 +2604,7 @@ class S {
     return Intl.message(
       'Artist bookmarked!',
       name: 'artistBookmarkAddAlert',
-      desc: '',
+      desc: 'artistBookmarkAddAlert',
       args: [],
     );
   }
@@ -2429,7 +2614,7 @@ class S {
     return Intl.message(
       'Artist bookmark removed!',
       name: 'artistBookmarkRemoveAlert',
-      desc: '',
+      desc: 'artistBookmarkRemoveAlert',
       args: [],
     );
   }
@@ -2439,7 +2624,7 @@ class S {
     return Intl.message(
       'Lyrics not available!',
       name: 'lyricsNotAvailable',
-      desc: '',
+      desc: 'lyricsNotAvailable',
       args: [],
     );
   }
@@ -2449,7 +2634,7 @@ class S {
     return Intl.message(
       'Synced lyrics not available!',
       name: 'syncedLyricsNotAvailable',
-      desc: '',
+      desc: 'syncedLyricsNotAvailable',
       args: [],
     );
   }
@@ -2459,7 +2644,7 @@ class S {
     return Intl.message(
       'Description not available!',
       name: 'artistDesNotAvailable',
-      desc: '',
+      desc: 'artistDesNotAvailable',
       args: [],
     );
   }
@@ -2469,7 +2654,7 @@ class S {
     return Intl.message(
       'New version available!',
       name: 'newVersionAvailable',
-      desc: '',
+      desc: 'newVersionAvailable',
       args: [],
     );
   }
@@ -2479,14 +2664,14 @@ class S {
     return Intl.message(
       'Don\'t show this info again',
       name: 'dontShowInfoAgain',
-      desc: '',
+      desc: 'dontShowInfoAgain',
       args: [],
     );
   }
 
   /// `Dismiss`
   String get dismiss {
-    return Intl.message('Dismiss', name: 'dismiss', desc: '', args: []);
+    return Intl.message('Dismiss', name: 'dismiss', desc: 'dismiss', args: []);
   }
 
   /// `Not a Song/Music-Video!`
@@ -2494,7 +2679,7 @@ class S {
     return Intl.message(
       'Not a Song/Music-Video!',
       name: 'notaSongVideo',
-      desc: '',
+      desc: 'notaSongVideo',
       args: [],
     );
   }
@@ -2504,7 +2689,7 @@ class S {
     return Intl.message(
       'Not a valid link!',
       name: 'notaValidLink',
-      desc: '',
+      desc: 'notaValidLink',
       args: [],
     );
   }
@@ -2514,7 +2699,7 @@ class S {
     return Intl.message(
       'Operation failed',
       name: 'operationFailed',
-      desc: '',
+      desc: 'operationFailed',
       args: [],
     );
   }
@@ -2524,29 +2709,29 @@ class S {
     return Intl.message(
       'Click here to go to download page',
       name: 'goToDownloadPage',
-      desc: '',
+      desc: 'goToDownloadPage',
       args: [],
     );
   }
 
   /// `Local`
   String get local {
-    return Intl.message('Local', name: 'local', desc: '', args: []);
+    return Intl.message('Local', name: 'local', desc: 'local', args: []);
   }
 
   /// `Piped`
   String get Piped {
-    return Intl.message('Piped', name: 'Piped', desc: '', args: []);
+    return Intl.message('Piped', name: 'Piped', desc: 'Piped', args: []);
   }
 
   /// `Link`
   String get link {
-    return Intl.message('Link', name: 'link', desc: '', args: []);
+    return Intl.message('Link', name: 'link', desc: 'link', args: []);
   }
 
   /// `Unlink`
   String get unLink {
-    return Intl.message('Unlink', name: 'unLink', desc: '', args: []);
+    return Intl.message('Unlink', name: 'unLink', desc: 'unLink', args: []);
   }
 
   /// `API URL to Piped instance`
@@ -2554,7 +2739,7 @@ class S {
     return Intl.message(
       'API URL to Piped instance',
       name: 'hintApiUrl',
-      desc: '',
+      desc: 'hintApiUrl',
       args: [],
     );
   }
@@ -2564,7 +2749,7 @@ class S {
     return Intl.message(
       'Custom Instance',
       name: 'customIns',
-      desc: '',
+      desc: 'customIns',
       args: [],
     );
   }
@@ -2574,7 +2759,7 @@ class S {
     return Intl.message(
       'Please select Custom Instance',
       name: 'customInsSelectMsg',
-      desc: '',
+      desc: 'customInsSelectMsg',
       args: [],
     );
   }
@@ -2584,7 +2769,7 @@ class S {
     return Intl.message(
       'Please select Authentication instance!',
       name: 'selectAuthInsMsg',
-      desc: '',
+      desc: 'selectAuthInsMsg',
       args: [],
     );
   }
@@ -2594,7 +2779,7 @@ class S {
     return Intl.message(
       'All fields required',
       name: 'allFieldsReqMsg',
-      desc: '',
+      desc: 'allFieldsReqMsg',
       args: [],
     );
   }
@@ -2604,7 +2789,7 @@ class S {
     return Intl.message(
       'Link with piped for playlists',
       name: 'linkPipedDes',
-      desc: '',
+      desc: 'linkPipedDes',
       args: [],
     );
   }
@@ -2614,19 +2799,29 @@ class S {
     return Intl.message(
       'Select Auth Instance',
       name: 'selectAuthIns',
-      desc: '',
+      desc: 'selectAuthIns',
       args: [],
     );
   }
 
   /// `Username`
   String get username {
-    return Intl.message('Username', name: 'username', desc: '', args: []);
+    return Intl.message(
+      'Username',
+      name: 'username',
+      desc: 'username',
+      args: [],
+    );
   }
 
   /// `Password`
   String get password {
-    return Intl.message('Password', name: 'password', desc: '', args: []);
+    return Intl.message(
+      'Password',
+      name: 'password',
+      desc: 'password',
+      args: [],
+    );
   }
 
   /// `Linked successfully!`
@@ -2634,7 +2829,7 @@ class S {
     return Intl.message(
       'Linked successfully!',
       name: 'linkAlert',
-      desc: '',
+      desc: 'linkAlert',
       args: [],
     );
   }
@@ -2644,7 +2839,7 @@ class S {
     return Intl.message(
       'Unlinked successfully!',
       name: 'unlinkAlert',
-      desc: '',
+      desc: 'unlinkAlert',
       args: [],
     );
   }
@@ -2654,14 +2849,14 @@ class S {
     return Intl.message(
       'Playlist blacklisted!',
       name: 'playlistBlacklistAlert',
-      desc: '',
+      desc: 'playlistBlacklistAlert',
       args: [],
     );
   }
 
   /// `Reset`
   String get reset {
-    return Intl.message('Reset', name: 'reset', desc: '', args: []);
+    return Intl.message('Reset', name: 'reset', desc: 'reset', args: []);
   }
 
   /// `Reset successfully!`
@@ -2669,7 +2864,7 @@ class S {
     return Intl.message(
       'Reset successfully!',
       name: 'blacklistPlstResetAlert',
-      desc: '',
+      desc: 'blacklistPlstResetAlert',
       args: [],
     );
   }
@@ -2679,7 +2874,7 @@ class S {
     return Intl.message(
       'Reset blacklisted playlists',
       name: 'resetblacklistedplaylist',
-      desc: '',
+      desc: 'resetblacklistedplaylist',
       args: [],
     );
   }
@@ -2689,7 +2884,7 @@ class S {
     return Intl.message(
       'Reset all the piped blacklisted playlists',
       name: 'resetblacklistedplaylistDes',
-      desc: '',
+      desc: 'resetblacklistedplaylistDes',
       args: [],
     );
   }
@@ -2699,7 +2894,7 @@ class S {
     return Intl.message(
       'Stop music on task clear',
       name: 'stopMusicOnTaskClear',
-      desc: '',
+      desc: 'stopMusicOnTaskClear',
       args: [],
     );
   }
@@ -2709,7 +2904,7 @@ class S {
     return Intl.message(
       'Music playback will stop when App being swiped away from the task manager',
       name: 'stopMusicOnTaskClearDes',
-      desc: '',
+      desc: 'stopMusicOnTaskClearDes',
       args: [],
     );
   }
@@ -2719,7 +2914,7 @@ class S {
     return Intl.message(
       'Backup App data',
       name: 'backupAppData',
-      desc: '',
+      desc: 'backupAppData',
       args: [],
     );
   }
@@ -2729,7 +2924,7 @@ class S {
     return Intl.message(
       'Not tested: Selecting the checkbox after downloading more than 60 files, process may consume a large amount of memory and could cause the phone or app to crash. Proceed at your own risk.',
       name: 'androidBackupWarning',
-      desc: '',
+      desc: 'androidBackupWarning',
       args: [],
     );
   }
@@ -2739,14 +2934,14 @@ class S {
     return Intl.message(
       'Saves all settings, playlists and login data in a backup file',
       name: 'backupSettingsAndPlaylistsDes',
-      desc: '',
+      desc: 'backupSettingsAndPlaylistsDes',
       args: [],
     );
   }
 
   /// `Backup`
   String get backup {
-    return Intl.message('Backup', name: 'backup', desc: '', args: []);
+    return Intl.message('Backup', name: 'backup', desc: 'backup', args: []);
   }
 
   /// `Let's start..`
@@ -2754,7 +2949,7 @@ class S {
     return Intl.message(
       'Let\'s start..',
       name: 'letsStrart',
-      desc: '',
+      desc: 'letsStrart',
       args: [],
     );
   }
@@ -2764,7 +2959,7 @@ class S {
     return Intl.message(
       'Processing files...',
       name: 'processFiles',
-      desc: '',
+      desc: 'processFiles',
       args: [],
     );
   }
@@ -2774,7 +2969,7 @@ class S {
     return Intl.message(
       'Include downloded songs files',
       name: 'includeDownloadedFiles',
-      desc: '',
+      desc: 'includeDownloadedFiles',
       args: [],
     );
   }
@@ -2784,7 +2979,7 @@ class S {
     return Intl.message(
       'Backup in progress...',
       name: 'backupInProgress',
-      desc: '',
+      desc: 'backupInProgress',
       args: [],
     );
   }
@@ -2794,7 +2989,7 @@ class S {
     return Intl.message(
       'Restore App data',
       name: 'restoreAppData',
-      desc: '',
+      desc: 'restoreAppData',
       args: [],
     );
   }
@@ -2804,7 +2999,7 @@ class S {
     return Intl.message(
       'Restores all settings, login data and playlists from a backup file. Overwrites all current data',
       name: 'restoreSettingsAndPlaylistsDes',
-      desc: '',
+      desc: 'restoreSettingsAndPlaylistsDes',
       args: [],
     );
   }
@@ -2814,7 +3009,7 @@ class S {
     return Intl.message(
       'Backup successfully saved!',
       name: 'backupMsg',
-      desc: '',
+      desc: 'backupMsg',
       args: [],
     );
   }
@@ -2824,7 +3019,7 @@ class S {
     return Intl.message(
       'databases found',
       name: 'backFilesFound',
-      desc: '',
+      desc: 'backFilesFound',
       args: [],
     );
   }
@@ -2834,34 +3029,49 @@ class S {
     return Intl.message(
       'Successfully restored!\nChanges are applied on restart',
       name: 'restoreMsg',
-      desc: '',
+      desc: 'restoreMsg',
       args: [],
     );
   }
 
   /// `Restoring...`
   String get restoring {
-    return Intl.message('Restoring...', name: 'restoring', desc: '', args: []);
+    return Intl.message(
+      'Restoring...',
+      name: 'restoring',
+      desc: 'restoring',
+      args: [],
+    );
   }
 
   /// `Restore`
   String get restore {
-    return Intl.message('Restore', name: 'restore', desc: '', args: []);
+    return Intl.message('Restore', name: 'restore', desc: 'restore', args: []);
   }
 
   /// `Close App`
   String get closeApp {
-    return Intl.message('Close App', name: 'closeApp', desc: '', args: []);
+    return Intl.message(
+      'Close App',
+      name: 'closeApp',
+      desc: 'closeApp',
+      args: [],
+    );
   }
 
   /// `Restart App`
   String get restartApp {
-    return Intl.message('Restart App', name: 'restartApp', desc: '', args: []);
+    return Intl.message(
+      'Restart App',
+      name: 'restartApp',
+      desc: 'restartApp',
+      args: [],
+    );
   }
 
   /// `Lyrics`
   String get lyrics {
-    return Intl.message('Lyrics', name: 'lyrics', desc: '', args: []);
+    return Intl.message('Lyrics', name: 'lyrics', desc: 'lyrics', args: []);
   }
 
   /// `Export Playlist`
@@ -2869,7 +3079,7 @@ class S {
     return Intl.message(
       'Export Playlist',
       name: 'exportPlaylist',
-      desc: '',
+      desc: 'exportPlaylist',
       args: [],
     );
   }
@@ -2879,7 +3089,7 @@ class S {
     return Intl.message(
       'Export Playlist as CSV',
       name: 'exportPlaylistCsv',
-      desc: '',
+      desc: 'exportPlaylistCsv',
       args: [],
     );
   }
@@ -2889,7 +3099,7 @@ class S {
     return Intl.message(
       'Exporting playlist...',
       name: 'exportingPlaylist',
-      desc: '',
+      desc: 'exportingPlaylist',
       args: [],
     );
   }
@@ -2899,7 +3109,7 @@ class S {
     return Intl.message(
       'Playlist exported successfully to',
       name: 'playlistExportedMsg',
-      desc: '',
+      desc: 'playlistExportedMsg',
       args: [],
     );
   }
@@ -2909,7 +3119,7 @@ class S {
     return Intl.message(
       'Error exporting playlist',
       name: 'exportError',
-      desc: '',
+      desc: 'exportError',
       args: [],
     );
   }
@@ -2919,7 +3129,7 @@ class S {
     return Intl.message(
       'Permission denied while exporting',
       name: 'exportErrorPermission',
-      desc: '',
+      desc: 'exportErrorPermission',
       args: [],
     );
   }
@@ -2929,7 +3139,7 @@ class S {
     return Intl.message(
       'Not enough storage space',
       name: 'exportErrorStorage',
-      desc: '',
+      desc: 'exportErrorStorage',
       args: [],
     );
   }
@@ -2939,7 +3149,7 @@ class S {
     return Intl.message(
       'Error formatting playlist data',
       name: 'exportErrorFormat',
-      desc: '',
+      desc: 'exportErrorFormat',
       args: [],
     );
   }
@@ -2949,7 +3159,7 @@ class S {
     return Intl.message(
       'Import Playlist',
       name: 'importPlaylist',
-      desc: '',
+      desc: 'importPlaylist',
       args: [],
     );
   }
@@ -2959,7 +3169,7 @@ class S {
     return Intl.message(
       'Importing playlist...',
       name: 'importingPlaylist',
-      desc: '',
+      desc: 'importingPlaylist',
       args: [],
     );
   }
@@ -2969,14 +3179,19 @@ class S {
     return Intl.message(
       'Select a previously exported playlist JSON file to import',
       name: 'importPlaylistDesc',
-      desc: '',
+      desc: 'importPlaylistDesc',
       args: [],
     );
   }
 
   /// `Select File`
   String get selectFile {
-    return Intl.message('Select File', name: 'selectFile', desc: '', args: []);
+    return Intl.message(
+      'Select File',
+      name: 'selectFile',
+      desc: 'selectFile',
+      args: [],
+    );
   }
 
   /// `Playlist imported successfully`
@@ -2984,7 +3199,7 @@ class S {
     return Intl.message(
       'Playlist imported successfully',
       name: 'playlistImportedMsg',
-      desc: '',
+      desc: 'playlistImportedMsg',
       args: [],
     );
   }
@@ -2994,7 +3209,7 @@ class S {
     return Intl.message(
       'Error importing playlist',
       name: 'importError',
-      desc: '',
+      desc: 'importError',
       args: [],
     );
   }
@@ -3004,7 +3219,7 @@ class S {
     return Intl.message(
       'Could not access the selected file',
       name: 'importErrorFileAccess',
-      desc: '',
+      desc: 'importErrorFileAccess',
       args: [],
     );
   }
@@ -3014,7 +3229,7 @@ class S {
     return Intl.message(
       'Invalid file format',
       name: 'importErrorFormat',
-      desc: '',
+      desc: 'importErrorFormat',
       args: [],
     );
   }
@@ -3024,7 +3239,7 @@ class S {
     return Intl.message(
       'Invalid playlist file structure',
       name: 'invalidPlaylistFile',
-      desc: '',
+      desc: 'invalidPlaylistFile',
       args: [],
     );
   }
@@ -3034,7 +3249,7 @@ class S {
     return Intl.message(
       'Error saving to database',
       name: 'importErrorDatabase',
-      desc: '',
+      desc: 'importErrorDatabase',
       args: [],
     );
   }
@@ -3044,7 +3259,7 @@ class S {
     return Intl.message(
       'File not found',
       name: 'fileNotFound',
-      desc: '',
+      desc: 'fileNotFound',
       args: [],
     );
   }
@@ -3054,7 +3269,7 @@ class S {
     return Intl.message(
       'Note: Large playlists may take longer to import',
       name: 'importLargeFileNote',
-      desc: '',
+      desc: 'importLargeFileNote',
       args: [],
     );
   }
@@ -3064,7 +3279,7 @@ class S {
     return Intl.message(
       'Export playlist to JSON',
       name: 'exportPlaylistJson',
-      desc: '',
+      desc: 'exportPlaylistJson',
       args: [],
     );
   }
@@ -3074,7 +3289,7 @@ class S {
     return Intl.message(
       'This format can be imported',
       name: 'exportPlaylistJsonSubtitle',
-      desc: '',
+      desc: 'exportPlaylistJsonSubtitle',
       args: [],
     );
   }
@@ -3084,7 +3299,7 @@ class S {
     return Intl.message(
       'Can\'t be imported here',
       name: 'exportPlaylistCsvSubtitle',
-      desc: '',
+      desc: 'exportPlaylistCsvSubtitle',
       args: [],
     );
   }
@@ -3094,7 +3309,7 @@ class S {
     return Intl.message(
       'Export to Youtube music',
       name: 'exportToYouTubeMusic',
-      desc: '',
+      desc: 'exportToYouTubeMusic',
       args: [],
     );
   }
@@ -3104,7 +3319,7 @@ class S {
     return Intl.message(
       'It will push your playlist (songs < 50) to current queue, don\'t forget to add to playlist/save after opening in YtMusic',
       name: 'exportToYouTubeMusicSubtitle',
-      desc: '',
+      desc: 'exportToYouTubeMusicSubtitle',
       args: [],
     );
   }
@@ -3114,7 +3329,7 @@ class S {
     return Intl.message(
       'Link copied to clipboard',
       name: 'linkCopied',
-      desc: '',
+      desc: 'linkCopied',
       args: [],
     );
   }
@@ -3124,7 +3339,7 @@ class S {
     return Intl.message(
       'Keep screen on while playing',
       name: 'keepScreenOnWhilePlaying',
-      desc: '',
+      desc: 'keepScreenOnWhilePlaying',
       args: [],
     );
   }
@@ -3134,34 +3349,49 @@ class S {
     return Intl.message(
       'If enabled, the device screen will stay awake while music is playing',
       name: 'keepScreenOnWhilePlayingDes',
-      desc: '',
+      desc: 'keepScreenOnWhilePlayingDes',
       args: [],
     );
   }
 
   /// `No`
   String get no {
-    return Intl.message('No', name: 'no', desc: '', args: []);
+    return Intl.message('No', name: 'no', desc: 'no', args: []);
   }
 
   /// `Podcasts`
   String get podcasts {
-    return Intl.message('Podcasts', name: 'podcasts', desc: '', args: []);
+    return Intl.message(
+      'Podcasts',
+      name: 'podcasts',
+      desc: 'podcasts',
+      args: [],
+    );
   }
 
   /// `Episodes`
   String get episodes {
-    return Intl.message('Episodes', name: 'episodes', desc: '', args: []);
+    return Intl.message(
+      'Episodes',
+      name: 'episodes',
+      desc: 'episodes',
+      args: [],
+    );
   }
 
   /// `Profiles`
   String get profiles {
-    return Intl.message('Profiles', name: 'profiles', desc: '', args: []);
+    return Intl.message(
+      'Profiles',
+      name: 'profiles',
+      desc: 'profiles',
+      args: [],
+    );
   }
 
   /// `Return`
   String get back {
-    return Intl.message('Return', name: 'back', desc: '', args: []);
+    return Intl.message('Return', name: 'back', desc: 'back', args: []);
   }
 
   /// `Add to Library`
@@ -3169,7 +3399,7 @@ class S {
     return Intl.message(
       'Add to Library',
       name: 'addToLibrary',
-      desc: '',
+      desc: 'addToLibrary',
       args: [],
     );
   }
@@ -3179,14 +3409,14 @@ class S {
     return Intl.message(
       'Remove from Library',
       name: 'removeFromLibrary',
-      desc: '',
+      desc: 'removeFromLibrary',
       args: [],
     );
   }
 
   /// `Play`
   String get play {
-    return Intl.message('Play', name: 'play', desc: '', args: []);
+    return Intl.message('Play', name: 'play', desc: 'play', args: []);
   }
 
   /// `Enqueue album songs`
@@ -3194,7 +3424,7 @@ class S {
     return Intl.message(
       'Enqueue album songs',
       name: 'enqueueAlbumSongs',
-      desc: '',
+      desc: 'enqueueAlbumSongs',
       args: [],
     );
   }
@@ -3204,19 +3434,29 @@ class S {
     return Intl.message(
       'Download album songs',
       name: 'downloadAlbumSongs',
-      desc: '',
+      desc: 'downloadAlbumSongs',
       args: [],
     );
   }
 
   /// `Share album`
   String get shareAlbum {
-    return Intl.message('Share album', name: 'shareAlbum', desc: '', args: []);
+    return Intl.message(
+      'Share album',
+      name: 'shareAlbum',
+      desc: 'shareAlbum',
+      args: [],
+    );
   }
 
   /// `Imported`
   String get imported {
-    return Intl.message('Imported', name: 'imported', desc: '', args: []);
+    return Intl.message(
+      'Imported',
+      name: 'imported',
+      desc: 'imported',
+      args: [],
+    );
   }
 
   /// `Imported Playlist`
@@ -3224,7 +3464,7 @@ class S {
     return Intl.message(
       'Imported Playlist',
       name: 'importedPlaylist',
-      desc: '',
+      desc: 'importedPlaylist',
       args: [],
     );
   }
@@ -3234,7 +3474,7 @@ class S {
     return Intl.message(
       'Permission denied',
       name: 'permissionDenied',
-      desc: '',
+      desc: 'permissionDenied',
       args: [],
     );
   }
@@ -3244,14 +3484,14 @@ class S {
     return Intl.message(
       'Enqueue songs',
       name: 'enqueueSongs',
-      desc: '',
+      desc: 'enqueueSongs',
       args: [],
     );
   }
 
   /// `Shuffle`
   String get shuffle {
-    return Intl.message('Shuffle', name: 'shuffle', desc: '', args: []);
+    return Intl.message('Shuffle', name: 'shuffle', desc: 'shuffle', args: []);
   }
 
   /// `Download playlist`
@@ -3259,7 +3499,7 @@ class S {
     return Intl.message(
       'Download playlist',
       name: 'downloadPlaylist',
-      desc: '',
+      desc: 'downloadPlaylist',
       args: [],
     );
   }
@@ -3269,7 +3509,7 @@ class S {
     return Intl.message(
       'Sync playlist songs',
       name: 'syncPlaylistSongs',
-      desc: '',
+      desc: 'syncPlaylistSongs',
       args: [],
     );
   }
@@ -3279,7 +3519,7 @@ class S {
     return Intl.message(
       'Blacklist playlist',
       name: 'blacklistPipedPlaylist',
-      desc: '',
+      desc: 'blacklistPipedPlaylist',
       args: [],
     );
   }
@@ -3289,24 +3529,39 @@ class S {
     return Intl.message(
       'Share playlist',
       name: 'sharePlaylist',
-      desc: '',
+      desc: 'sharePlaylist',
       args: [],
     );
   }
 
   /// `Playlist`
   String get playlist {
-    return Intl.message('Playlist', name: 'playlist', desc: '', args: []);
+    return Intl.message(
+      'Playlist',
+      name: 'playlist',
+      desc: 'playlist',
+      args: [],
+    );
   }
 
   /// `Sort by Name`
   String get sortByName {
-    return Intl.message('Sort by Name', name: 'sortByName', desc: '', args: []);
+    return Intl.message(
+      'Sort by Name',
+      name: 'sortByName',
+      desc: 'sortByName',
+      args: [],
+    );
   }
 
   /// `Sort by Date`
   String get sortByDate {
-    return Intl.message('Sort by Date', name: 'sortByDate', desc: '', args: []);
+    return Intl.message(
+      'Sort by Date',
+      name: 'sortByDate',
+      desc: 'sortByDate',
+      args: [],
+    );
   }
 
   /// `Sort by Duration`
@@ -3314,7 +3569,7 @@ class S {
     return Intl.message(
       'Sort by Duration',
       name: 'sortByDuration',
-      desc: '',
+      desc: 'sortByDuration',
       args: [],
     );
   }
@@ -3324,7 +3579,7 @@ class S {
     return Intl.message(
       'Sort ascending/descending',
       name: 'sortAscendNDescend',
-      desc: '',
+      desc: 'sortAscendNDescend',
       args: [],
     );
   }
@@ -3334,7 +3589,7 @@ class S {
     return Intl.message(
       'Successfully logged in',
       name: 'auth_login_success',
-      desc: '',
+      desc: 'auth_login_success',
       args: [],
     );
   }
@@ -3344,7 +3599,7 @@ class S {
     return Intl.message(
       'Cloud backup',
       name: 'settings_cloud_backup',
-      desc: '',
+      desc: 'settings_cloud_backup',
       args: [],
     );
   }
@@ -3354,7 +3609,7 @@ class S {
     return Intl.message(
       'Migrate from Joss Music Kotlin',
       name: 'settings_migration_title',
-      desc: '',
+      desc: 'settings_migration_title',
       args: [],
     );
   }
@@ -3364,7 +3619,7 @@ class S {
     return Intl.message(
       'Do you want to perform a backup?',
       name: 'backup_confirm_question',
-      desc: '',
+      desc: 'backup_confirm_question',
       args: [],
     );
   }
@@ -3374,7 +3629,7 @@ class S {
     return Intl.message(
       'Choose which data to backup',
       name: 'backup_selection_prompt',
-      desc: '',
+      desc: 'backup_selection_prompt',
       args: [],
     );
   }
@@ -3384,7 +3639,7 @@ class S {
     return Intl.message(
       'Recent searches',
       name: 'search_recent_title',
-      desc: '',
+      desc: 'search_recent_title',
       args: [],
     );
   }
@@ -3394,14 +3649,19 @@ class S {
     return Intl.message(
       'I forgot my password',
       name: 'auth_forgot_password',
-      desc: '',
+      desc: 'auth_forgot_password',
       args: [],
     );
   }
 
   /// `Login`
   String get auth_btn_login {
-    return Intl.message('Login', name: 'auth_btn_login', desc: '', args: []);
+    return Intl.message(
+      'Login',
+      name: 'auth_btn_login',
+      desc: 'auth_btn_login',
+      args: [],
+    );
   }
 
   /// `Register`
@@ -3409,14 +3669,14 @@ class S {
     return Intl.message(
       'Register',
       name: 'auth_btn_register',
-      desc: '',
+      desc: 'auth_btn_register',
       args: [],
     );
   }
 
   /// `E-mail`
   String get email {
-    return Intl.message('E-mail', name: 'email', desc: '', args: []);
+    return Intl.message('E-mail', name: 'email', desc: 'email', args: []);
   }
 
   /// `Password`
@@ -3434,7 +3694,7 @@ class S {
     return Intl.message(
       'Confirm Password',
       name: 'auth_confirm_password',
-      desc: '',
+      desc: 'auth_confirm_password',
       args: [],
     );
   }
@@ -3444,7 +3704,7 @@ class S {
     return Intl.message(
       'Welcome to Estrella Music',
       name: 'auth_welcome_title',
-      desc: '',
+      desc: 'auth_welcome_title',
       args: [],
     );
   }
@@ -3454,7 +3714,7 @@ class S {
     return Intl.message(
       'Welcome to Estrella Music',
       name: 'auth_welcome_subtitle',
-      desc: '',
+      desc: 'auth_welcome_subtitle',
       args: [],
     );
   }
@@ -3464,7 +3724,7 @@ class S {
     return Intl.message(
       'First name',
       name: 'auth_first_name',
-      desc: '',
+      desc: 'auth_first_name',
       args: [],
     );
   }
@@ -3474,7 +3734,7 @@ class S {
     return Intl.message(
       'Last name',
       name: 'auth_last_name',
-      desc: '',
+      desc: 'auth_last_name',
       args: [],
     );
   }
@@ -3484,7 +3744,7 @@ class S {
     return Intl.message(
       'Acepto usar mis datos...',
       name: 'auth_agree_personal_data',
-      desc: '',
+      desc: 'auth_agree_personal_data',
       args: [],
     );
   }
@@ -3494,14 +3754,19 @@ class S {
     return Intl.message(
       'General',
       name: 'settings_general_section',
-      desc: '',
+      desc: 'settings_general_section',
       args: [],
     );
   }
 
   /// `Log out`
   String get settings_logout {
-    return Intl.message('Log out', name: 'settings_logout', desc: '', args: []);
+    return Intl.message(
+      'Log out',
+      name: 'settings_logout',
+      desc: 'settings_logout',
+      args: [],
+    );
   }
 
   /// `Upload, restore and manage...`
@@ -3509,7 +3774,7 @@ class S {
     return Intl.message(
       'Upload, restore and manage...',
       name: 'settings_cloud_backup_desc',
-      desc: '',
+      desc: 'settings_cloud_backup_desc',
       args: [],
     );
   }
@@ -3519,7 +3784,7 @@ class S {
     return Intl.message(
       'Import playlists, songs...',
       name: 'settings_migration_desc',
-      desc: '',
+      desc: 'settings_migration_desc',
       args: [],
     );
   }
@@ -3529,7 +3794,7 @@ class S {
     return Intl.message(
       'Migration completed from $source.',
       name: 'migration_summary_start',
-      desc: '',
+      desc: 'migration_summary_start',
       args: [source],
     );
   }
@@ -3539,7 +3804,7 @@ class S {
     return Intl.message(
       'Playlists: $count',
       name: 'migration_summary_playlists',
-      desc: '',
+      desc: 'migration_summary_playlists',
       args: [count],
     );
   }
@@ -3549,7 +3814,7 @@ class S {
     return Intl.message(
       'Songs: $count',
       name: 'migration_summary_songs',
-      desc: '',
+      desc: 'migration_summary_songs',
       args: [count],
     );
   }
@@ -3559,7 +3824,7 @@ class S {
     return Intl.message(
       'Favorites: $count',
       name: 'migration_summary_favorites',
-      desc: '',
+      desc: 'migration_summary_favorites',
       args: [count],
     );
   }
@@ -3569,7 +3834,7 @@ class S {
     return Intl.message(
       'Albums: $count',
       name: 'migration_summary_albums',
-      desc: '',
+      desc: 'migration_summary_albums',
       args: [count],
     );
   }
@@ -3579,7 +3844,7 @@ class S {
     return Intl.message(
       'Artists: $count',
       name: 'migration_summary_artists',
-      desc: '',
+      desc: 'migration_summary_artists',
       args: [count],
     );
   }
@@ -3589,7 +3854,7 @@ class S {
     return Intl.message(
       'Select song.db or a .backup file',
       name: 'migration_select_file_dialog',
-      desc: '',
+      desc: 'migration_select_file_dialog',
       args: [],
     );
   }
@@ -3599,7 +3864,7 @@ class S {
     return Intl.message(
       'Migration completed successfully.',
       name: 'migration_success',
-      desc: '',
+      desc: 'migration_success',
       args: [],
     );
   }
@@ -3609,7 +3874,7 @@ class S {
     return Intl.message(
       'Select backup file folder',
       name: 'backup_select_folder_dialog',
-      desc: '',
+      desc: 'backup_select_folder_dialog',
       args: [],
     );
   }
@@ -3619,7 +3884,7 @@ class S {
     return Intl.message(
       'Select backup file',
       name: 'restore_select_file_dialog',
-      desc: '',
+      desc: 'restore_select_file_dialog',
       args: [],
     );
   }
@@ -3629,7 +3894,7 @@ class S {
     return Intl.message(
       'name@email.com',
       name: 'auth_hint_email',
-      desc: '',
+      desc: 'auth_hint_email',
       args: [],
     );
   }
@@ -3639,7 +3904,7 @@ class S {
     return Intl.message(
       'Enter a valid email.',
       name: 'auth_error_invalid_email',
-      desc: '',
+      desc: 'auth_error_invalid_email',
       args: [],
     );
   }
@@ -3649,14 +3914,14 @@ class S {
     return Intl.message(
       'Upload a .hmb backup to the server and restore any saved backups if needed.',
       name: 'settings_cloud_backup_dialog_desc',
-      desc: '',
+      desc: 'settings_cloud_backup_dialog_desc',
       args: [],
     );
   }
 
   /// `Delete`
   String get delete {
-    return Intl.message('Delete', name: 'delete', desc: '', args: []);
+    return Intl.message('Delete', name: 'delete', desc: 'delete', args: []);
   }
 
   /// `In App storage directory`
@@ -3664,7 +3929,7 @@ class S {
     return Intl.message(
       'In App storage directory',
       name: 'in_app_storage',
-      desc: '',
+      desc: 'in_app_storage',
       args: [],
     );
   }
@@ -3674,7 +3939,7 @@ class S {
     return Intl.message(
       'We brought the login, registration, and password recovery from the previous project, adapted for this music app.',
       name: 'auth_brand_description_1',
-      desc: '',
+      desc: 'auth_brand_description_1',
       args: [],
     );
   }
@@ -3684,7 +3949,7 @@ class S {
     return Intl.message(
       'Your session lives in secure storage and is validated with the same backend you already used.',
       name: 'auth_brand_description_2',
-      desc: '',
+      desc: 'auth_brand_description_2',
       args: [],
     );
   }
@@ -3694,7 +3959,7 @@ class S {
     return Intl.message(
       'The .env file needs to be configured to connect the authentication backend.',
       name: 'auth_brand_not_configured',
-      desc: '',
+      desc: 'auth_brand_not_configured',
       args: [],
     );
   }
@@ -3704,7 +3969,7 @@ class S {
     return Intl.message(
       'Restart app',
       name: 'backup_btn_restart',
-      desc: '',
+      desc: 'backup_btn_restart',
       args: [],
     );
   }
@@ -3714,7 +3979,7 @@ class S {
     return Intl.message(
       'Upload backup now',
       name: 'backup_btn_upload',
-      desc: '',
+      desc: 'backup_btn_upload',
       args: [],
     );
   }
@@ -3724,7 +3989,7 @@ class S {
     return Intl.message(
       'There are no backups yet...',
       name: 'backup_no_backups',
-      desc: '',
+      desc: 'backup_no_backups',
       args: [],
     );
   }
@@ -3734,7 +3999,7 @@ class S {
     return Intl.message(
       'You need an active session...',
       name: 'backup_auth_required',
-      desc: '',
+      desc: 'backup_auth_required',
       args: [],
     );
   }
@@ -3744,7 +4009,7 @@ class S {
     return Intl.message(
       'Backup uploaded correctly.',
       name: 'backup_upload_success',
-      desc: '',
+      desc: 'backup_upload_success',
       args: [],
     );
   }
@@ -3754,7 +4019,7 @@ class S {
     return Intl.message(
       'Backup restored. ',
       name: 'backup_restore_success',
-      desc: '',
+      desc: 'backup_restore_success',
       args: [],
     );
   }
@@ -3764,24 +4029,34 @@ class S {
     return Intl.message(
       'Backup deleted.',
       name: 'backup_delete_success',
-      desc: '',
+      desc: 'backup_delete_success',
       args: [],
     );
   }
 
   /// `Pop`
   String get genre_pop {
-    return Intl.message('Pop', name: 'genre_pop', desc: '', args: []);
+    return Intl.message('Pop', name: 'genre_pop', desc: 'genre_pop', args: []);
   }
 
   /// `Rock`
   String get genre_rock {
-    return Intl.message('Rock', name: 'genre_rock', desc: '', args: []);
+    return Intl.message(
+      'Rock',
+      name: 'genre_rock',
+      desc: 'genre_rock',
+      args: [],
+    );
   }
 
   /// `hip hop`
   String get genre_hiphop {
-    return Intl.message('hip hop', name: 'genre_hiphop', desc: '', args: []);
+    return Intl.message(
+      'hip hop',
+      name: 'genre_hiphop',
+      desc: 'genre_hiphop',
+      args: [],
+    );
   }
 
   /// `Electronics`
@@ -3789,19 +4064,29 @@ class S {
     return Intl.message(
       'Electronics',
       name: 'genre_electronic',
-      desc: '',
+      desc: 'genre_electronic',
       args: [],
     );
   }
 
   /// `Jazz`
   String get genre_jazz {
-    return Intl.message('Jazz', name: 'genre_jazz', desc: '', args: []);
+    return Intl.message(
+      'Jazz',
+      name: 'genre_jazz',
+      desc: 'genre_jazz',
+      args: [],
+    );
   }
 
   /// `Latin`
   String get genre_latin {
-    return Intl.message('Latin', name: 'genre_latin', desc: '', args: []);
+    return Intl.message(
+      'Latin',
+      name: 'genre_latin',
+      desc: 'genre_latin',
+      args: [],
+    );
   }
 
   /// `Select file and import`
@@ -3809,7 +4094,7 @@ class S {
     return Intl.message(
       'Select file and import',
       name: 'migration_btn_select',
-      desc: '',
+      desc: 'migration_btn_select',
       args: [],
     );
   }
@@ -3819,7 +4104,7 @@ class S {
     return Intl.message(
       'We will send instructions to your account email.',
       name: 'auth_forgot_password_subtitle',
-      desc: '',
+      desc: 'auth_forgot_password_subtitle',
       args: [],
     );
   }
@@ -3829,7 +4114,7 @@ class S {
     return Intl.message(
       'Send email',
       name: 'auth_btn_send_email',
-      desc: '',
+      desc: 'auth_btn_send_email',
       args: [],
     );
   }
@@ -3839,7 +4124,7 @@ class S {
     return Intl.message(
       'Backend authentication is not configured in the .env file.',
       name: 'auth_error_not_configured',
-      desc: '',
+      desc: 'auth_error_not_configured',
       args: [],
     );
   }
@@ -3849,7 +4134,7 @@ class S {
     return Intl.message(
       'Incorrect email or password.',
       name: 'auth_error_invalid_credentials',
-      desc: '',
+      desc: 'auth_error_invalid_credentials',
       args: [],
     );
   }
@@ -3859,7 +4144,7 @@ class S {
     return Intl.message(
       'Your account is not yet verified.',
       name: 'auth_error_not_verified',
-      desc: '',
+      desc: 'auth_error_not_verified',
       args: [],
     );
   }
@@ -3869,7 +4154,7 @@ class S {
     return Intl.message(
       'Could not complete the operation.',
       name: 'auth_error_unknown',
-      desc: '',
+      desc: 'auth_error_unknown',
       args: [],
     );
   }
@@ -3879,7 +4164,7 @@ class S {
     return Intl.message(
       'Account created successfully.',
       name: 'auth_register_success',
-      desc: '',
+      desc: 'auth_register_success',
       args: [],
     );
   }
@@ -3889,7 +4174,7 @@ class S {
     return Intl.message(
       'Could not create account.',
       name: 'auth_register_error',
-      desc: '',
+      desc: 'auth_register_error',
       args: [],
     );
   }
@@ -3899,7 +4184,7 @@ class S {
     return Intl.message(
       'Email sent.',
       name: 'auth_recovery_email_sent',
-      desc: '',
+      desc: 'auth_recovery_email_sent',
       args: [],
     );
   }
@@ -3909,7 +4194,7 @@ class S {
     return Intl.message(
       'Could not send email.',
       name: 'auth_recovery_email_error',
-      desc: '',
+      desc: 'auth_recovery_email_error',
       args: [],
     );
   }
@@ -3919,7 +4204,7 @@ class S {
     return Intl.message(
       'Latest Version Available',
       name: 'latestVersion',
-      desc: '',
+      desc: 'latestVersion',
       args: [],
     );
   }
@@ -3929,7 +4214,7 @@ class S {
     return Intl.message(
       'Update Application',
       name: 'updateApp',
-      desc: '',
+      desc: 'updateApp',
       args: [],
     );
   }
@@ -3939,7 +4224,7 @@ class S {
     return Intl.message(
       'Could not load update information',
       name: 'loadInfoUpdate',
-      desc: '',
+      desc: 'loadInfoUpdate',
       args: [],
     );
   }
@@ -3949,7 +4234,7 @@ class S {
     return Intl.message(
       'Information not available',
       name: 'infoNotAvailable',
-      desc: '',
+      desc: 'infoNotAvailable',
       args: [],
     );
   }
@@ -3959,7 +4244,7 @@ class S {
     return Intl.message(
       'Developed and Maintained by Joss Estrada (JOSPROX)',
       name: 'developedBy',
-      desc: '',
+      desc: 'developedBy',
       args: [],
     );
   }
@@ -3969,7 +4254,7 @@ class S {
     return Intl.message(
       '© 2026 JOSPROX. License GPL v3.0',
       name: 'copyrightNotice',
-      desc: '',
+      desc: 'copyrightNotice',
       args: [],
     );
   }
@@ -3979,7 +4264,7 @@ class S {
     return Intl.message(
       'forgotten favorites',
       name: 'forgottenFavorites',
-      desc: '',
+      desc: 'forgottenFavorites',
       args: [],
     );
   }
@@ -3989,7 +4274,7 @@ class S {
     return Intl.message(
       'The most listened to song',
       name: 'mostListenedSong',
-      desc: '',
+      desc: 'mostListenedSong',
       args: [],
     );
   }
@@ -3999,7 +4284,7 @@ class S {
     return Intl.message(
       'Reproduced by',
       name: 'reproducedBy',
-      desc: '',
+      desc: 'reproducedBy',
       args: [],
     );
   }
@@ -4009,7 +4294,7 @@ class S {
     return Intl.message(
       'Recent searches',
       name: 'recentSearches',
-      desc: '',
+      desc: 'recentSearches',
       args: [],
     );
   }
@@ -4019,7 +4304,7 @@ class S {
     return Intl.message(
       'Popular tracks',
       name: 'popularTracks',
-      desc: '',
+      desc: 'popularTracks',
       args: [],
     );
   }
@@ -4029,39 +4314,54 @@ class S {
     return Intl.message(
       'Latest release',
       name: 'latestRelease',
-      desc: '',
+      desc: 'latestRelease',
       args: [],
     );
   }
 
   /// `Continue`
   String get follow {
-    return Intl.message('Continue', name: 'follow', desc: '', args: []);
+    return Intl.message('Continue', name: 'follow', desc: 'follow', args: []);
   }
 
   /// `Following`
   String get following {
-    return Intl.message('Following', name: 'following', desc: '', args: []);
+    return Intl.message(
+      'Following',
+      name: 'following',
+      desc: 'following',
+      args: [],
+    );
   }
 
   /// `Listen now`
   String get listenNow {
-    return Intl.message('Listen now', name: 'listenNow', desc: '', args: []);
+    return Intl.message(
+      'Listen now',
+      name: 'listenNow',
+      desc: 'listenNow',
+      args: [],
+    );
   }
 
   /// `Video`
   String get video {
-    return Intl.message('Video', name: 'video', desc: '', args: []);
+    return Intl.message('Video', name: 'video', desc: 'video', args: []);
   }
 
   /// `About`
   String get about {
-    return Intl.message('About', name: 'about', desc: '', args: []);
+    return Intl.message('About', name: 'about', desc: 'about', args: []);
   }
 
   /// `Read more`
   String get readMore {
-    return Intl.message('Read more', name: 'readMore', desc: '', args: []);
+    return Intl.message(
+      'Read more',
+      name: 'readMore',
+      desc: 'readMore',
+      args: [],
+    );
   }
 
   /// `Speed ​​and Pitch`
@@ -4069,7 +4369,7 @@ class S {
     return Intl.message(
       'Speed ​​and Pitch',
       name: 'speedAndPitch',
-      desc: '',
+      desc: 'speedAndPitch',
       args: [],
     );
   }
@@ -4079,14 +4379,19 @@ class S {
     return Intl.message(
       'Playback speed',
       name: 'playbackSpeed',
-      desc: '',
+      desc: 'playbackSpeed',
       args: [],
     );
   }
 
   /// `song tone`
   String get songPitch {
-    return Intl.message('song tone', name: 'songPitch', desc: '', args: []);
+    return Intl.message(
+      'song tone',
+      name: 'songPitch',
+      desc: 'songPitch',
+      args: [],
+    );
   }
 
   /// `Music Recognition`
@@ -4094,7 +4399,7 @@ class S {
     return Intl.message(
       'Music Recognition',
       name: 'musicRecognition',
-      desc: '',
+      desc: 'musicRecognition',
       args: [],
     );
   }
@@ -4104,7 +4409,7 @@ class S {
     return Intl.message(
       'Listening to the environment...',
       name: 'listeningToEnvironment',
-      desc: '',
+      desc: 'listeningToEnvironment',
       args: [],
     );
   }
@@ -4114,7 +4419,7 @@ class S {
     return Intl.message(
       'Make sure the music is playing loud enough near your microphone.',
       name: 'micInstruction',
-      desc: '',
+      desc: 'micInstruction',
       args: [],
     );
   }
@@ -4124,7 +4429,7 @@ class S {
     return Intl.message(
       'Processing the audio...',
       name: 'processingAudio',
-      desc: '',
+      desc: 'processingAudio',
       args: [],
     );
   }
@@ -4134,19 +4439,24 @@ class S {
     return Intl.message(
       'Searching the Shazam database for matches...',
       name: 'shazamSearching',
-      desc: '',
+      desc: 'shazamSearching',
       args: [],
     );
   }
 
   /// `Song Found!`
   String get songFound {
-    return Intl.message('Song Found!', name: 'songFound', desc: '', args: []);
+    return Intl.message(
+      'Song Found!',
+      name: 'songFound',
+      desc: 'songFound',
+      args: [],
+    );
   }
 
   /// `Play Now`
   String get playNow {
-    return Intl.message('Play Now', name: 'playNow', desc: '', args: []);
+    return Intl.message('Play Now', name: 'playNow', desc: 'playNow', args: []);
   }
 
   /// `Search in Library`
@@ -4154,7 +4464,7 @@ class S {
     return Intl.message(
       'Search in Library',
       name: 'searchInLibrary',
-      desc: '',
+      desc: 'searchInLibrary',
       args: [],
     );
   }
@@ -4164,7 +4474,7 @@ class S {
     return Intl.message(
       'No Matches',
       name: 'noMatchesFound',
-      desc: '',
+      desc: 'noMatchesFound',
       args: [],
     );
   }
@@ -4174,7 +4484,7 @@ class S {
     return Intl.message(
       'Could not find any songs in the recorded audio',
       name: 'noMatchInstruction',
-      desc: '',
+      desc: 'noMatchInstruction',
       args: [],
     );
   }
@@ -4184,7 +4494,7 @@ class S {
     return Intl.message(
       'An error occurred',
       name: 'errorOccurred',
-      desc: '',
+      desc: 'errorOccurred',
       args: [],
     );
   }
@@ -4194,7 +4504,7 @@ class S {
     return Intl.message(
       'Playing:',
       name: 'playingRecognizedTrack',
-      desc: '',
+      desc: 'playingRecognizedTrack',
       args: [],
     );
   }
@@ -4204,7 +4514,7 @@ class S {
     return Intl.message(
       'Error when playing:',
       name: 'errorPlayingTrack',
-      desc: '',
+      desc: 'errorPlayingTrack',
       args: [],
     );
   }
@@ -4214,7 +4524,7 @@ class S {
     return Intl.message(
       'Your music, your way',
       name: 'welcome_title',
-      desc: '',
+      desc: 'welcome_title',
       args: [],
     );
   }
@@ -4224,7 +4534,7 @@ class S {
     return Intl.message(
       'Choose how you want to experience Estrella Music from now on.',
       name: 'welcome_subtitle',
-      desc: '',
+      desc: 'welcome_subtitle',
       args: [],
     );
   }
@@ -4234,7 +4544,7 @@ class S {
     return Intl.message(
       'We have modernized our platform. ',
       name: 'welcome_intro',
-      desc: '',
+      desc: 'welcome_intro',
       args: [],
     );
   }
@@ -4244,7 +4554,7 @@ class S {
     return Intl.message(
       'We recommend activating Cloud Mode for a Spotify-like experience: real-time synchronization between all your devices and automatic backup without you having to do anything.',
       name: 'recommend_cloud',
-      desc: '',
+      desc: 'recommend_cloud',
       args: [],
     );
   }
@@ -4254,14 +4564,19 @@ class S {
     return Intl.message(
       'Swipe to explore options',
       name: 'swipe_prompt',
-      desc: '',
+      desc: 'swipe_prompt',
       args: [],
     );
   }
 
   /// `Local Mode`
   String get local_title {
-    return Intl.message('Local Mode', name: 'local_title', desc: '', args: []);
+    return Intl.message(
+      'Local Mode',
+      name: 'local_title',
+      desc: 'local_title',
+      args: [],
+    );
   }
 
   /// `Absolute privacy on your device`
@@ -4269,7 +4584,7 @@ class S {
     return Intl.message(
       'Absolute privacy on your device',
       name: 'local_subtitle',
-      desc: '',
+      desc: 'local_subtitle',
       args: [],
     );
   }
@@ -4279,7 +4594,7 @@ class S {
     return Intl.message(
       'It works without the need to log in.',
       name: 'local_b1',
-      desc: '',
+      desc: 'local_b1',
       args: [],
     );
   }
@@ -4289,7 +4604,7 @@ class S {
     return Intl.message(
       'Your entire library stays strictly on this computer.',
       name: 'local_b2',
-      desc: '',
+      desc: 'local_b2',
       args: [],
     );
   }
@@ -4299,7 +4614,7 @@ class S {
     return Intl.message(
       'Note: No manual cloud backups. ',
       name: 'local_b3',
-      desc: '',
+      desc: 'local_b3',
       args: [],
     );
   }
@@ -4309,7 +4624,7 @@ class S {
     return Intl.message(
       'Use only on this device',
       name: 'local_btn',
-      desc: '',
+      desc: 'local_btn',
       args: [],
     );
   }
@@ -4319,7 +4634,7 @@ class S {
     return Intl.message(
       'Cloud Mode (Recommended)',
       name: 'cloud_title',
-      desc: '',
+      desc: 'cloud_title',
       args: [],
     );
   }
@@ -4329,7 +4644,7 @@ class S {
     return Intl.message(
       'Real-time synchronization with Joss Red',
       name: 'cloud_subtitle',
-      desc: '',
+      desc: 'cloud_subtitle',
       args: [],
     );
   }
@@ -4339,7 +4654,7 @@ class S {
     return Intl.message(
       'Log in securely using your Joss Red account.',
       name: 'cloud_b1',
-      desc: '',
+      desc: 'cloud_b1',
       args: [],
     );
   }
@@ -4349,7 +4664,7 @@ class S {
     return Intl.message(
       'Access your playlists, favorites and history from any device (Windows, Android, etc.) instantly.',
       name: 'cloud_b2',
-      desc: '',
+      desc: 'cloud_b2',
       args: [],
     );
   }
@@ -4359,7 +4674,7 @@ class S {
     return Intl.message(
       'Smart Sync: Work offline and upload changes automatically when you recover internet.',
       name: 'cloud_b3',
-      desc: '',
+      desc: 'cloud_b3',
       args: [],
     );
   }
@@ -4369,17 +4684,17 @@ class S {
     return Intl.message(
       'Activate Cloud sync',
       name: 'cloud_btn',
-      desc: '',
+      desc: 'cloud_btn',
       args: [],
     );
   }
 
   /// `Step {current} of 3`
-  String slide_indicator(Object current) {
+  String slide_indicator(String current) {
     return Intl.message(
       'Step $current of 3',
       name: 'slide_indicator',
-      desc: '',
+      desc: 'slide_indicator',
       args: [current],
     );
   }
@@ -4389,7 +4704,7 @@ class S {
     return Intl.message(
       'Estrella Music has evolved!',
       name: 'news_card_title',
-      desc: '',
+      desc: 'news_card_title',
       args: [],
     );
   }
@@ -4399,7 +4714,7 @@ class S {
     return Intl.message(
       '100% synchronization with Joss Red, playlists with friends and much more. ',
       name: 'news_card_subtitle',
-      desc: '',
+      desc: 'news_card_subtitle',
       args: [],
     );
   }
@@ -4409,7 +4724,7 @@ class S {
     return Intl.message(
       'Estrella Music News',
       name: 'news_dialog_title',
-      desc: '',
+      desc: 'news_dialog_title',
       args: [],
     );
   }
@@ -4419,7 +4734,7 @@ class S {
     return Intl.message(
       'Full Integration with Joss Red',
       name: 'news_item_sync_title',
-      desc: '',
+      desc: 'news_item_sync_title',
       args: [],
     );
   }
@@ -4429,7 +4744,7 @@ class S {
     return Intl.message(
       'Your playlists and favorites are now saved and synced in the cloud automatically with your main Joss Red account.',
       name: 'news_item_sync_desc',
-      desc: '',
+      desc: 'news_item_sync_desc',
       args: [],
     );
   }
@@ -4439,7 +4754,7 @@ class S {
     return Intl.message(
       'Collaborative Playlists',
       name: 'news_item_collab_title',
-      desc: '',
+      desc: 'news_item_collab_title',
       args: [],
     );
   }
@@ -4449,7 +4764,7 @@ class S {
     return Intl.message(
       'Create playlists with your friends! ',
       name: 'news_item_collab_desc',
-      desc: '',
+      desc: 'news_item_collab_desc',
       args: [],
     );
   }
@@ -4459,7 +4774,7 @@ class S {
     return Intl.message(
       'Transparent Synchronization',
       name: 'news_item_trans_title',
-      desc: '',
+      desc: 'news_item_trans_title',
       args: [],
     );
   }
@@ -4469,7 +4784,7 @@ class S {
     return Intl.message(
       'You no longer need to click manual sync buttons; ',
       name: 'news_item_trans_desc',
-      desc: '',
+      desc: 'news_item_trans_desc',
       args: [],
     );
   }
@@ -4479,7 +4794,7 @@ class S {
     return Intl.message(
       'Friends and Account Management:',
       name: 'news_dialog_section_friends',
-      desc: '',
+      desc: 'news_dialog_section_friends',
       args: [],
     );
   }
@@ -4489,7 +4804,7 @@ class S {
     return Intl.message(
       'To add friends, accept requests or manage your security profile, please use Joss Red on its official platforms:',
       name: 'news_dialog_friends_desc',
-      desc: '',
+      desc: 'news_dialog_friends_desc',
       args: [],
     );
   }
@@ -4499,7 +4814,7 @@ class S {
     return Intl.message(
       'Joss Red App (Play Store)',
       name: 'news_btn_app',
-      desc: '',
+      desc: 'news_btn_app',
       args: [],
     );
   }
@@ -4509,7 +4824,7 @@ class S {
     return Intl.message(
       'Joss Red Web',
       name: 'news_btn_web',
-      desc: '',
+      desc: 'news_btn_web',
       args: [],
     );
   }
@@ -4519,7 +4834,7 @@ class S {
     return Intl.message(
       'Understood',
       name: 'news_btn_dismiss',
-      desc: '',
+      desc: 'news_btn_dismiss',
       args: [],
     );
   }
@@ -4529,7 +4844,7 @@ class S {
     return Intl.message(
       'Theme, language and interface animations.',
       name: 'settings_appearance_desc',
-      desc: '',
+      desc: 'settings_appearance_desc',
       args: [],
     );
   }
@@ -4539,7 +4854,7 @@ class S {
     return Intl.message(
       'Discover filters, integration with Piped and caches.',
       name: 'settings_content_desc',
-      desc: '',
+      desc: 'settings_content_desc',
       args: [],
     );
   }
@@ -4549,7 +4864,7 @@ class S {
     return Intl.message(
       'Streaming quality, normalization, silences and battery.',
       name: 'settings_playback_desc',
-      desc: '',
+      desc: 'settings_playback_desc',
       args: [],
     );
   }
@@ -4559,7 +4874,7 @@ class S {
     return Intl.message(
       'Downloads and Storage',
       name: 'settings_downloads_desc',
-      desc: '',
+      desc: 'settings_downloads_desc',
       args: [],
     );
   }
@@ -4569,7 +4884,7 @@ class S {
     return Intl.message(
       'Audio formats, folders and automatic downloads.',
       name: 'settings_downloads_sub',
-      desc: '',
+      desc: 'settings_downloads_sub',
       args: [],
     );
   }
@@ -4579,7 +4894,7 @@ class S {
     return Intl.message(
       'Account and Sync',
       name: 'settings_account_desc',
-      desc: '',
+      desc: 'settings_account_desc',
       args: [],
     );
   }
@@ -4589,7 +4904,7 @@ class S {
     return Intl.message(
       'Cloud mode, backups, friends list and migrations.',
       name: 'settings_account_sub',
-      desc: '',
+      desc: 'settings_account_sub',
       args: [],
     );
   }
@@ -4599,7 +4914,7 @@ class S {
     return Intl.message(
       'About Estrella Music',
       name: 'settings_about_desc',
-      desc: '',
+      desc: 'settings_about_desc',
       args: [],
     );
   }
@@ -4609,7 +4924,7 @@ class S {
     return Intl.message(
       'Version, open source project and GitHub.',
       name: 'settings_about_sub',
-      desc: '',
+      desc: 'settings_about_sub',
       args: [],
     );
   }
@@ -4619,7 +4934,7 @@ class S {
     return Intl.message(
       'Local Mode / EMusic Cloud',
       name: 'settings_local_cloud_title',
-      desc: '',
+      desc: 'settings_local_cloud_title',
       args: [],
     );
   }
@@ -4629,7 +4944,7 @@ class S {
     return Intl.message(
       'Choose, migrate or review the synchronization status with Joss Red.',
       name: 'settings_local_cloud_desc',
-      desc: '',
+      desc: 'settings_local_cloud_desc',
       args: [],
     );
   }
@@ -4639,7 +4954,7 @@ class S {
     return Intl.message(
       'my friends',
       name: 'settings_my_friends',
-      desc: '',
+      desc: 'settings_my_friends',
       args: [],
     );
   }
@@ -4649,7 +4964,7 @@ class S {
     return Intl.message(
       'Manage your Joss Red friends directly.',
       name: 'settings_my_friends_desc',
-      desc: '',
+      desc: 'settings_my_friends_desc',
       args: [],
     );
   }
@@ -4659,7 +4974,7 @@ class S {
     return Intl.message(
       'Refresh ID (Visitor ID)',
       name: 'settings_refresh_visitor_title',
-      desc: '',
+      desc: 'settings_refresh_visitor_title',
       args: [],
     );
   }
@@ -4669,7 +4984,7 @@ class S {
     return Intl.message(
       'Regenerate your YouTube Music ID if Discover content doesn\'t load.',
       name: 'settings_refresh_visitor_desc',
-      desc: '',
+      desc: 'settings_refresh_visitor_desc',
       args: [],
     );
   }
@@ -4679,7 +4994,7 @@ class S {
     return Intl.message(
       'Updated identifier',
       name: 'settings_visitor_updated',
-      desc: '',
+      desc: 'settings_visitor_updated',
       args: [],
     );
   }
@@ -4689,7 +5004,7 @@ class S {
     return Intl.message(
       'A new Visitor ID was generated successfully.',
       name: 'settings_visitor_updated_desc',
-      desc: '',
+      desc: 'settings_visitor_updated_desc',
       args: [],
     );
   }
@@ -4699,7 +5014,7 @@ class S {
     return Intl.message(
       'Mistake',
       name: 'settings_visitor_error',
-      desc: '',
+      desc: 'settings_visitor_error',
       args: [],
     );
   }
@@ -4709,17 +5024,17 @@ class S {
     return Intl.message(
       'A new identifier could not be generated. ',
       name: 'settings_visitor_error_desc',
-      desc: '',
+      desc: 'settings_visitor_error_desc',
       args: [],
     );
   }
 
   /// `An error occurred while regenerating: {error}`
-  String settings_visitor_exception(Object error) {
+  String settings_visitor_exception(String error) {
     return Intl.message(
       'An error occurred while regenerating: $error',
       name: 'settings_visitor_exception',
-      desc: '',
+      desc: 'settings_visitor_exception',
       args: [error],
     );
   }
@@ -4729,7 +5044,7 @@ class S {
     return Intl.message(
       'music downloads',
       name: 'downloadNotificationChannelName',
-      desc: '',
+      desc: 'downloadNotificationChannelName',
       args: [],
     );
   }
@@ -4739,7 +5054,7 @@ class S {
     return Intl.message(
       'Keeps your music downloads active in the background.',
       name: 'downloadNotificationChannelDescription',
-      desc: '',
+      desc: 'downloadNotificationChannelDescription',
       args: [],
     );
   }
@@ -4749,7 +5064,7 @@ class S {
     return Intl.message(
       'Downloading music',
       name: 'downloadNotificationTitle',
-      desc: '',
+      desc: 'downloadNotificationTitle',
       args: [],
     );
   }
@@ -4759,17 +5074,17 @@ class S {
     return Intl.message(
       'Preparing your downloads…',
       name: 'downloadNotificationPreparing',
-      desc: '',
+      desc: 'downloadNotificationPreparing',
       args: [],
     );
   }
 
   /// `Downloading: {songTitle}`
-  String downloadNotificationSong(Object songTitle) {
+  String downloadNotificationSong(String songTitle) {
     return Intl.message(
       'Downloading: $songTitle',
       name: 'downloadNotificationSong',
-      desc: '',
+      desc: 'downloadNotificationSong',
       args: [songTitle],
     );
   }
@@ -4779,7 +5094,7 @@ class S {
     return Intl.message(
       'Permissions to get started',
       name: 'permissionsConsentTitle',
-      desc: '',
+      desc: 'permissionsConsentTitle',
       args: [],
     );
   }
@@ -4789,7 +5104,7 @@ class S {
     return Intl.message(
       'Estrella Music needs these permissions to manage your music and offer all playback features.',
       name: 'permissionsConsentDescription',
-      desc: '',
+      desc: 'permissionsConsentDescription',
       args: [],
     );
   }
@@ -4799,7 +5114,7 @@ class S {
     return Intl.message(
       'Music and storage',
       name: 'permissionsStorageTitle',
-      desc: '',
+      desc: 'permissionsStorageTitle',
       args: [],
     );
   }
@@ -4809,7 +5124,7 @@ class S {
     return Intl.message(
       'It allows you to play music, save downloads, export playlists and prepare updates.',
       name: 'permissionsStorageDescription',
-      desc: '',
+      desc: 'permissionsStorageDescription',
       args: [],
     );
   }
@@ -4819,7 +5134,7 @@ class S {
     return Intl.message(
       'Notifications',
       name: 'permissionsNotificationsTitle',
-      desc: '',
+      desc: 'permissionsNotificationsTitle',
       args: [],
     );
   }
@@ -4829,7 +5144,7 @@ class S {
     return Intl.message(
       'Shows playback controls, download progress, and important app notices.',
       name: 'permissionsNotificationsDescription',
-      desc: '',
+      desc: 'permissionsNotificationsDescription',
       args: [],
     );
   }
@@ -4839,7 +5154,7 @@ class S {
     return Intl.message(
       'Microphone',
       name: 'permissionsMicrophoneTitle',
-      desc: '',
+      desc: 'permissionsMicrophoneTitle',
       args: [],
     );
   }
@@ -4849,7 +5164,7 @@ class S {
     return Intl.message(
       'It is used only when you choose to identify a song that is playing around you.',
       name: 'permissionsMicrophoneDescription',
-      desc: '',
+      desc: 'permissionsMicrophoneDescription',
       args: [],
     );
   }
@@ -4859,7 +5174,7 @@ class S {
     return Intl.message(
       'Grant required permissions',
       name: 'permissionsContinueButton',
-      desc: '',
+      desc: 'permissionsContinueButton',
       args: [],
     );
   }
@@ -4869,14 +5184,19 @@ class S {
     return Intl.message(
       'All three permits are required to continue. ',
       name: 'permissionsRequiredNotice',
-      desc: '',
+      desc: 'permissionsRequiredNotice',
       args: [],
     );
   }
 
   /// `Allow`
   String get permissionsAllow {
-    return Intl.message('Allow', name: 'permissionsAllow', desc: '', args: []);
+    return Intl.message(
+      'Allow',
+      name: 'permissionsAllow',
+      desc: 'permissionsAllow',
+      args: [],
+    );
   }
 
   /// `Settings`
@@ -4884,7 +5204,7 @@ class S {
     return Intl.message(
       'Settings',
       name: 'permissionsOpenSettings',
-      desc: '',
+      desc: 'permissionsOpenSettings',
       args: [],
     );
   }
@@ -4894,7 +5214,7 @@ class S {
     return Intl.message(
       'Two-factor authentication',
       name: 'auth_2fa_title',
-      desc: '',
+      desc: 'auth_2fa_title',
       args: [],
     );
   }
@@ -4904,7 +5224,7 @@ class S {
     return Intl.message(
       'Enter the 6-digit code from your authenticator app. ',
       name: 'auth_2fa_subtitle',
-      desc: '',
+      desc: 'auth_2fa_subtitle',
       args: [],
     );
   }
@@ -4914,7 +5234,7 @@ class S {
     return Intl.message(
       'Authentication code',
       name: 'auth_2fa_code',
-      desc: '',
+      desc: 'auth_2fa_code',
       args: [],
     );
   }
@@ -4924,7 +5244,7 @@ class S {
     return Intl.message(
       'Check and continue',
       name: 'auth_2fa_verify',
-      desc: '',
+      desc: 'auth_2fa_verify',
       args: [],
     );
   }
@@ -4934,7 +5254,7 @@ class S {
     return Intl.message(
       'Enter a valid 6-digit code or sign in again.',
       name: 'auth_2fa_invalid',
-      desc: '',
+      desc: 'auth_2fa_invalid',
       args: [],
     );
   }

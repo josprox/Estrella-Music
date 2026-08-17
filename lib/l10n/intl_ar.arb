@@ -1,288 +1,1008 @@
 {
   "@@locale": "ar",
   "library": "المكتبة",
+  "@library": {
+    "description": "library"
+  },
   "libPlaylists": "مكتبة قوائم التشغيل",
+  "@libPlaylists": {
+    "description": "libPlaylists"
+  },
   "libAlbums": "البومات المكتبة",
+  "@libAlbums": {
+    "description": "libAlbums"
+  },
   "libArtists": "فنانين المكتبة",
+  "@libArtists": {
+    "description": "libArtists"
+  },
   "items": "عناصر",
+  "@items": {
+    "description": "items"
+  },
   "networkError1": "خطأ في الشبكة!",
+  "@networkError1": {
+    "description": "networkError1"
+  },
   "retry": "حاول مجددا!",
+  "@retry": {
+    "description": "retry"
+  },
   "home": "الرئيسية",
+  "@home": {
+    "description": "home"
+  },
   "playlists": "قوائم التشغيل",
+  "@playlists": {
+    "description": "playlists"
+  },
   "albums": "البومات",
+  "@albums": {
+    "description": "albums"
+  },
   "artists": "فنانين",
+  "@artists": {
+    "description": "artists"
+  },
   "settings": "إعدادات",
+  "@settings": {
+    "description": "settings"
+  },
   "libSongs": "مكتبة الأغاني",
+  "@libSongs": {
+    "description": "libSongs"
+  },
   "communityplaylists": "قوائم تشغيل الاخرين",
+  "@communityplaylists": {
+    "description": "communityplaylists"
+  },
   "singles": "منفردة",
+  "@singles": {
+    "description": "singles"
+  },
   "recentlyPlayed": "استمعت مؤخرا",
+  "@recentlyPlayed": {
+    "description": "recentlyPlayed"
+  },
   "songs": "أغاني",
+  "@songs": {
+    "description": "songs"
+  },
   "favorites": "المفضلة",
+  "@favorites": {
+    "description": "favorites"
+  },
   "cachedOrOffline": "متاح بدون انترنت",
+  "@cachedOrOffline": {
+    "description": "cachedOrOffline"
+  },
   "downloads": "التنزيلات",
+  "@downloads": {
+    "description": "downloads"
+  },
   "emptyPlaylist": "قائمة فارغة!",
+  "@emptyPlaylist": {
+    "description": "emptyPlaylist"
+  },
   "featuredplaylists": "قوائم مقترحة",
+  "@featuredplaylists": {
+    "description": "featuredplaylists"
+  },
   "noOfflineSong": "لا يوجد أغاني بدون إنترنت!",
+  "@noOfflineSong": {
+    "description": "noOfflineSong"
+  },
   "enableBottomNavDes": "التبديل إلى أزرار شريط التنقل",
+  "@enableBottomNavDes": {
+    "description": "enableBottomNavDes"
+  },
   "homeContentCount": "عدد محتوى القائمة الرئيسية",
+  "@homeContentCount": {
+    "description": "homeContentCount"
+  },
   "playlistCreatednsongAddedAlert": "تم إنشاء قائمة التشغيل وإضافة الأغنية!",
+  "@playlistCreatednsongAddedAlert": {
+    "description": "playlistCreatednsongAddedAlert"
+  },
   "songAlreadyOfflineAlert": "الأغنية غير متصلة بالإنترنت بالفعل في ذاكرة التخزين المؤقت",
+  "@songAlreadyOfflineAlert": {
+    "description": "songAlreadyOfflineAlert"
+  },
   "sleepTimer": "مؤقت النوم",
+  "@sleepTimer": {
+    "description": "sleepTimer"
+  },
   "upNext": "التالي",
+  "@upNext": {
+    "description": "upNext"
+  },
   "plain": "عادي",
+  "@plain": {
+    "description": "plain"
+  },
   "addMultipleSongs": "إضافة الأغاني إلى قائمة التشغيل",
+  "@addMultipleSongs": {
+    "description": "addMultipleSongs"
+  },
   "renamePlaylist": "إعادة تسمية قائمة التشغيل",
+  "@renamePlaylist": {
+    "description": "renamePlaylist"
+  },
   "videos": "فيديو",
+  "@videos": {
+    "description": "videos"
+  },
   "enqueueAll": "إدراج الكل",
+  "@enqueueAll": {
+    "description": "enqueueAll"
+  },
   "removePlaylist": "إزالة قائمة التشغيل",
+  "@removePlaylist": {
+    "description": "removePlaylist"
+  },
   "CreateNewPlaylist": "إنشاء قائمة تشغيل جديدة",
+  "@CreateNewPlaylist": {
+    "description": "CreateNewPlaylist"
+  },
   "createnAdd": "إنشاء وإضافة",
+  "@createnAdd": {
+    "description": "createnAdd"
+  },
   "noBookmarks": "لا الإشارات المرجعية!",
+  "@noBookmarks": {
+    "description": "noBookmarks"
+  },
   "startRadio": "تشغيل الراديو",
+  "@startRadio": {
+    "description": "startRadio"
+  },
   "playNext": "تشغيل التالي",
+  "@playNext": {
+    "description": "playNext"
+  },
   "noLibPlaylist": "ليس لديك أي قائمة تشغيل!",
+  "@noLibPlaylist": {
+    "description": "noLibPlaylist"
+  },
   "enqueueSong": "قم بإدراج هذه الأغنية",
+  "@enqueueSong": {
+    "description": "enqueueSong"
+  },
   "themeMode": "وضع السمة",
+  "@themeMode": {
+    "description": "themeMode"
+  },
   "systemDefault": "الافتراضي للنظام",
+  "@systemDefault": {
+    "description": "systemDefault"
+  },
   "setDiscoverContent": "تعيين اكتشاف المحتوى",
+  "@setDiscoverContent": {
+    "description": "setDiscoverContent"
+  },
   "discover": "اكتشف",
+  "@discover": {
+    "description": "discover"
+  },
   "equalizerDes": "فتح المعادل الخاص بالنظام",
+  "@equalizerDes": {
+    "description": "equalizerDes"
+  },
   "basedOnLast": "بناء على تفاعلاتك الأخيرة",
+  "@basedOnLast": {
+    "description": "basedOnLast"
+  },
   "notaSongVideo": "ليست أغنية /فيديو موسيقي!",
+  "@notaSongVideo": {
+    "description": "notaSongVideo"
+  },
   "linkPipedDes": "رابط مع Piped للقوائم التشغيل",
+  "@linkPipedDes": {
+    "description": "linkPipedDes"
+  },
   "selectAuthIns": "اختر نسخة المصادقة",
+  "@selectAuthIns": {
+    "description": "selectAuthIns"
+  },
   "password": "كلمة المرور",
+  "@password": {
+    "description": "password"
+  },
   "rename": "إعادة تسمية",
+  "@rename": {
+    "description": "rename"
+  },
   "removeMultiple": "إزالة أغاني متعددة",
+  "@removeMultiple": {
+    "description": "removeMultiple"
+  },
   "restoreLastPlaybackSession": "استعادة جلسة التشغيل الأخيرة",
+  "@restoreLastPlaybackSession": {
+    "description": "restoreLastPlaybackSession"
+  },
   "clearImgCacheAlert": "تم مسح ذاكرة التخزين المؤقت للصور بنجاح",
+  "@clearImgCacheAlert": {
+    "description": "clearImgCacheAlert"
+  },
   "dynamic": "ديناميكي",
+  "@dynamic": {
+    "description": "dynamic"
+  },
   "results": "النتائج",
+  "@results": {
+    "description": "results"
+  },
   "albumBookmarkRemoveAlert": "تمت إزالة الإشارة المرجعية للألبوم!",
+  "@albumBookmarkRemoveAlert": {
+    "description": "albumBookmarkRemoveAlert"
+  },
   "reArrangePlaylist": "إعادة ترتيب قوائم التشغيل",
+  "@reArrangePlaylist": {
+    "description": "reArrangePlaylist"
+  },
   "cancel": "إلغاء",
+  "@cancel": {
+    "description": "cancel"
+  },
   "create": "إنشاء",
+  "@create": {
+    "description": "create"
+  },
   "close": "يغلق",
+  "@close": {
+    "description": "close"
+  },
   "disableTransitionAnimationDes": "قم بتمكين هذا الخيار لتعطيل الرسوم المتحركة الانتقالية بين الصفحات",
+  "@disableTransitionAnimationDes": {
+    "description": "disableTransitionAnimationDes"
+  },
   "openIn": "فتح في",
+  "@openIn": {
+    "description": "openIn"
+  },
   "removeFromLib": "إزالة من مكتبة الأغاني",
+  "@removeFromLib": {
+    "description": "removeFromLib"
+  },
   "add5Minutes": "إضافة 5 دقائق",
+  "@add5Minutes": {
+    "description": "add5Minutes"
+  },
   "cancelTimer": "إلغاء الموقت",
+  "@cancelTimer": {
+    "description": "cancelTimer"
+  },
   "deleteDownloadData": "إزالة من التنزيلات",
+  "@deleteDownloadData": {
+    "description": "deleteDownloadData"
+  },
   "minutes": "دقائق",
+  "@minutes": {
+    "description": "minutes"
+  },
   "endOfThisSong": "نهاية هذه الأغنية",
+  "@endOfThisSong": {
+    "description": "endOfThisSong"
+  },
   "dark": "مظلم",
+  "@dark": {
+    "description": "dark"
+  },
   "light": "مضيء",
+  "@light": {
+    "description": "light"
+  },
   "language": "اللغة",
+  "@language": {
+    "description": "language"
+  },
   "languageDes": "ضبط لغة التطبيق",
+  "@languageDes": {
+    "description": "languageDes"
+  },
   "quickpicks": "اختيارات سريعة",
+  "@quickpicks": {
+    "description": "quickpicks"
+  },
   "homeContentCountDes": "حدد عدد محتوى الشاشة الرئيسية الأولي (تقريبًا). عدد أقل تحميل أسرع",
+  "@homeContentCountDes": {
+    "description": "homeContentCountDes"
+  },
   "cacheSongsDes": "سيؤدي تخزين الأغاني مؤقتًا أثناء التشغيل للتشغيل في المستقبل/دون الاتصال بالإنترنت إلى استهلاك مساحة إضافية على جهازك",
+  "@cacheSongsDes": {
+    "description": "cacheSongsDes"
+  },
   "skipSilence": "تخطي الصمت",
+  "@skipSilence": {
+    "description": "skipSilence"
+  },
   "skipSilenceDes": "سيتم تخطي الصمت أثناء تشغيل الموسيقى",
+  "@skipSilenceDes": {
+    "description": "skipSilenceDes"
+  },
   "streamingQuality": "جودة البث",
+  "@streamingQuality": {
+    "description": "streamingQuality"
+  },
   "high": "عالي",
+  "@high": {
+    "description": "high"
+  },
   "backgroundPlay": "تشغيل الموسيقى الخلفية",
+  "@backgroundPlay": {
+    "description": "backgroundPlay"
+  },
   "cacheHomeScreenData": "تخزين بيانات محتوى الشاشة الرئيسية مؤقتًا",
+  "@cacheHomeScreenData": {
+    "description": "cacheHomeScreenData"
+  },
   "cacheHomeScreenDataDes": "تمكين التخزين المؤقت لبيانات محتوى الشاشة الرئيسية، سيتم تحميل الشاشة الرئيسية على الفور إذا تم تمكين هذا الخيار",
+  "@cacheHomeScreenDataDes": {
+    "description": "cacheHomeScreenDataDes"
+  },
   "downloadingFormatDes": "حدد تنزيل تنسيق الملف. سوف توفر \"Opus\" أعلى جودة",
+  "@downloadingFormatDes": {
+    "description": "downloadingFormatDes"
+  },
   "exportDowloadedFiles": "تصدير الملفات التي تم تنزيلها",
+  "@exportDowloadedFiles": {
+    "description": "exportDowloadedFiles"
+  },
   "exportedFileLocation": "موقع تصدير الملف الذي تم تنزيله",
+  "@exportedFileLocation": {
+    "description": "exportedFileLocation"
+  },
   "exporting": "جار التصدير...",
+  "@exporting": {
+    "description": "exporting"
+  },
   "scanning": "جارٍ المسح...",
+  "@scanning": {
+    "description": "scanning"
+  },
   "downFilesFound": "تم العثور على الملفات التي تم تنزيلها",
+  "@downFilesFound": {
+    "description": "downFilesFound"
+  },
   "exportMsg": "تم تصدير الملفات بنجاح",
+  "@exportMsg": {
+    "description": "exportMsg"
+  },
   "equalizer": "المعادل",
+  "@equalizer": {
+    "description": "equalizer"
+  },
   "clearImgCache": "مسح ذاكرة التخزين المؤقت للصور",
+  "@clearImgCache": {
+    "description": "clearImgCache"
+  },
   "clearImgCacheDes": "انقر هنا لمسح الصور المصغرة/الصور المخزنة مؤقتًا. (غير مستحسن إلا إذا كنت ترغب في تحديث بيانات الصور المخزنة مؤقتًا)",
+  "@clearImgCacheDes": {
+    "description": "clearImgCacheDes"
+  },
   "disabled": "معطل",
+  "@disabled": {
+    "description": "disabled"
+  },
   "ignoreBatOpt": "تجاهل تحسين البطارية",
+  "@ignoreBatOpt": {
+    "description": "ignoreBatOpt"
+  },
   "enabled": "ممكّن",
+  "@enabled": {
+    "description": "enabled"
+  },
   "github": "GitHub",
+  "@github": {
+    "description": "github"
+  },
   "githubDes": "عرض كود مصدر على GitHub\nإذا أعجبك هذا المشروع، فلا تنسى أن تعطي ⭐",
+  "@githubDes": {
+    "description": "githubDes"
+  },
   "by": "من قبل",
+  "@by": {
+    "description": "by"
+  },
   "searchDes": "الأغاني، قائمة التشغيل، الألبوم، أو الفنان",
+  "@searchDes": {
+    "description": "searchDes"
+  },
   "searchRes": "نتائج البحث",
+  "@searchRes": {
+    "description": "searchRes"
+  },
   "for1": "لأجل",
+  "@for1": {
+    "description": "for1"
+  },
   "viewAll": "رؤية الكل",
+  "@viewAll": {
+    "description": "viewAll"
+  },
   "nomatch": "لايوجد مطابق",
+  "@nomatch": {
+    "description": "nomatch"
+  },
   "subscribers": "متابعون",
+  "@subscribers": {
+    "description": "subscribers"
+  },
   "synced": "مزامنة",
+  "@synced": {
+    "description": "synced"
+  },
   "deleteDownloadedDataAlert": "تمت الإزالة من التنزيلات بنجاح!",
+  "@deleteDownloadedDataAlert": {
+    "description": "deleteDownloadedDataAlert"
+  },
   "cancelTimerAlert": "تم إلغاء مؤقت النوم",
+  "@cancelTimerAlert": {
+    "description": "cancelTimerAlert"
+  },
   "sleepTimeSetAlert": "تم ضبط مؤقت نوم",
+  "@sleepTimeSetAlert": {
+    "description": "sleepTimeSetAlert"
+  },
   "songRemovedfromQueueCurrSong": "لا يمكنك إزالة الأغنية التي يتم تشغيلها حاليًا",
+  "@songRemovedfromQueueCurrSong": {
+    "description": "songRemovedfromQueueCurrSong"
+  },
   "songRemovedAlert": "تمت الإزالة من",
+  "@songRemovedAlert": {
+    "description": "songRemovedAlert"
+  },
   "pipedplstSyncAlert": "تمت مزامنة قائمة التشغيل المنقولة!",
+  "@pipedplstSyncAlert": {
+    "description": "pipedplstSyncAlert"
+  },
   "playlistRenameAlert": "تمت إعادة التسمية بنجاح!",
+  "@playlistRenameAlert": {
+    "description": "playlistRenameAlert"
+  },
   "playlistRemovedAlert": "تمت إزالة قائمة التشغيل!",
+  "@playlistRemovedAlert": {
+    "description": "playlistRemovedAlert"
+  },
   "playlistBookmarkAddAlert": "تم وضع إشارة مرجعية لقائمة التشغيل!",
+  "@playlistBookmarkAddAlert": {
+    "description": "playlistBookmarkAddAlert"
+  },
   "playlistBookmarkRemoveAlert": "تمت إزالة الإشارة المرجعية لقائمة التشغيل!",
+  "@playlistBookmarkRemoveAlert": {
+    "description": "playlistBookmarkRemoveAlert"
+  },
   "albumBookmarkAddAlert": "تم وضع إشارة مرجعية للألبوم!",
+  "@albumBookmarkAddAlert": {
+    "description": "albumBookmarkAddAlert"
+  },
   "lyricsNotAvailable": "كلمات غير متوفرة!",
+  "@lyricsNotAvailable": {
+    "description": "lyricsNotAvailable"
+  },
   "newVersionAvailable": "إصدار جديد متاح!",
+  "@newVersionAvailable": {
+    "description": "newVersionAvailable"
+  },
   "dontShowInfoAgain": "لا تظهر هذه المعلومات مرة أخرى",
+  "@dontShowInfoAgain": {
+    "description": "dontShowInfoAgain"
+  },
   "notaValidLink": "الرابط ليس صالحا!",
+  "@notaValidLink": {
+    "description": "notaValidLink"
+  },
   "operationFailed": "فشلت العملية",
+  "@operationFailed": {
+    "description": "operationFailed"
+  },
   "Piped": "منقولة",
+  "@Piped": {
+    "description": "Piped"
+  },
   "link": "ربط",
+  "@link": {
+    "description": "link"
+  },
   "unLink": "الغاء الربط",
+  "@unLink": {
+    "description": "unLink"
+  },
   "hintApiUrl": "عنوان URL لطلب النقل",
+  "@hintApiUrl": {
+    "description": "hintApiUrl"
+  },
   "customIns": "نسخة مخصصة",
+  "@customIns": {
+    "description": "customIns"
+  },
   "linkAlert": "تم ربطه بنجاح!",
+  "@linkAlert": {
+    "description": "linkAlert"
+  },
   "unlinkAlert": "تم إلغاء الربط بنجاح!",
+  "@unlinkAlert": {
+    "description": "unlinkAlert"
+  },
   "stopMusicOnTaskClear": "ايقاف الموسيقى عند مسح تطبيقات التي تعمل بالخلفية",
+  "@stopMusicOnTaskClear": {
+    "description": "stopMusicOnTaskClear"
+  },
   "goToAlbum": "انتقل إلى الألبوم",
+  "@goToAlbum": {
+    "description": "goToAlbum"
+  },
   "downloadLocation": "موقع التحميل",
+  "@downloadLocation": {
+    "description": "downloadLocation"
+  },
   "low": "منخفض",
+  "@low": {
+    "description": "low"
+  },
   "downloadingFormat": "صيغة تحميل الملفات",
+  "@downloadingFormat": {
+    "description": "downloadingFormat"
+  },
   "ignoreBatOptDes": "إذا كنت تواجه مشكلات في الإشعارات أو توقف التشغيل عن طريق تحسين النظام، فيرجى تمكين هذا الخيار",
+  "@ignoreBatOptDes": {
+    "description": "ignoreBatOptDes"
+  },
   "status": "الحالة",
+  "@status": {
+    "description": "status"
+  },
   "radioNotAvailable": "الراديو غير متوفر لهذا الفنان!",
+  "@radioNotAvailable": {
+    "description": "radioNotAvailable"
+  },
   "songRemovedfromQueue": "تمت إزالتها من قائمة الانتظار!",
+  "@songRemovedfromQueue": {
+    "description": "songRemovedfromQueue"
+  },
   "artistBookmarkRemoveAlert": "تمت إزالة الإشارة المرجعية للفنان!",
+  "@artistBookmarkRemoveAlert": {
+    "description": "artistBookmarkRemoveAlert"
+  },
   "dismiss": "اهمال",
+  "@dismiss": {
+    "description": "dismiss"
+  },
   "goToDownloadPage": "انقر هنا للذهاب إلى صفحة التحميل",
+  "@goToDownloadPage": {
+    "description": "goToDownloadPage"
+  },
   "local": "محلي",
+  "@local": {
+    "description": "local"
+  },
   "addToPlaylist": "إضافة إلى قائمة التشغيل",
+  "@addToPlaylist": {
+    "description": "addToPlaylist"
+  },
   "cacheSongs": "أغاني ذاكرة التخزين المؤقت",
+  "@cacheSongs": {
+    "description": "cacheSongs"
+  },
   "disableTransitionAnimation": "إيقاف الرسوم المتحركة الانتقالية",
+  "@disableTransitionAnimation": {
+    "description": "disableTransitionAnimation"
+  },
   "exportDowloadedFilesDes": "انقر هنا لتصدير الملف الذي تم تنزيله من دليل التطبيق إلى مكان خارجي",
+  "@exportDowloadedFilesDes": {
+    "description": "exportDowloadedFilesDes"
+  },
   "export": "تصدير",
+  "@export": {
+    "description": "export"
+  },
   "backgroundPlayDes": "تمكين/تعطيل تشغيل الموسيقى في الخلفية (يمكن الوصول إلى التطبيق من واجهة النظام عندما يكون التطبيق قيد التشغيل في الخلفية)",
+  "@backgroundPlayDes": {
+    "description": "backgroundPlayDes"
+  },
   "search": "بحث",
+  "@search": {
+    "description": "search"
+  },
   "songAddedToPlaylistAlert": "تمت إضافة الأغنية إلى قائمة التشغيل!",
+  "@songAddedToPlaylistAlert": {
+    "description": "songAddedToPlaylistAlert"
+  },
   "songAlreadyExists": "الأغنية موجودة بالفعل!",
+  "@songAlreadyExists": {
+    "description": "songAlreadyExists"
+  },
   "topmusicvideos": "اشهر مقاطع الفيديو الموسيقية",
+  "@topmusicvideos": {
+    "description": "topmusicvideos"
+  },
   "restoreLastPlaybackSessionDes": "استعادة جلسة التشغيل الأخيرة تلقائيًا عند بدء التطبيق",
+  "@restoreLastPlaybackSessionDes": {
+    "description": "restoreLastPlaybackSessionDes"
+  },
   "enableBottomNav": "شريط التنقل السفلي",
+  "@enableBottomNav": {
+    "description": "enableBottomNav"
+  },
   "songEnqueueAlert": "أغنية في قائمة الانتظار!",
+  "@songEnqueueAlert": {
+    "description": "songEnqueueAlert"
+  },
   "artistBookmarkAddAlert": "تم وضع إشارة مرجعية للفنان!",
+  "@artistBookmarkAddAlert": {
+    "description": "artistBookmarkAddAlert"
+  },
   "syncedLyricsNotAvailable": "كلمات متزامنة غير متوفرة!",
+  "@syncedLyricsNotAvailable": {
+    "description": "syncedLyricsNotAvailable"
+  },
   "artistDesNotAvailable": "الوصف غير متوفر!",
+  "@artistDesNotAvailable": {
+    "description": "artistDesNotAvailable"
+  },
   "selectAuthInsMsg": "الرجاء تحديد نسخة المصادقة!",
+  "@selectAuthInsMsg": {
+    "description": "selectAuthInsMsg"
+  },
   "allFieldsReqMsg": "جميع الحقول مطلوبة",
+  "@allFieldsReqMsg": {
+    "description": "allFieldsReqMsg"
+  },
   "username": "اسم المستخدم",
+  "@username": {
+    "description": "username"
+  },
   "playlistBlacklistAlert": "قائمة التشغيل في القائمة السوداء!",
+  "@playlistBlacklistAlert": {
+    "description": "playlistBlacklistAlert"
+  },
   "blacklistPlstResetAlert": "تمت إعادة الضبط بنجاح!",
+  "@blacklistPlstResetAlert": {
+    "description": "blacklistPlstResetAlert"
+  },
   "resetblacklistedplaylist": "إعادة تعيين قوائم التشغيل المدرجة في القائمة السوداء",
+  "@resetblacklistedplaylist": {
+    "description": "resetblacklistedplaylist"
+  },
   "resetblacklistedplaylistDes": "إعادة تعيين كافة قوائم التشغيل المدرجة في القائمة السوداء",
+  "@resetblacklistedplaylistDes": {
+    "description": "resetblacklistedplaylistDes"
+  },
   "backupSettingsAndPlaylists": "إعدادات النسخ الاحتياطي وقوائم التشغيل",
+  "@backupSettingsAndPlaylists": {
+    "description": "backupSettingsAndPlaylists"
+  },
   "restoreSettingsAndPlaylists": "استعادة الإعدادات وقوائم التشغيل",
+  "@restoreSettingsAndPlaylists": {
+    "description": "restoreSettingsAndPlaylists"
+  },
   "restoreSettingsAndPlaylistsDes": "استعادة كافة الإعدادات، وبيانات تسجيل الدخول وقوائم التشغيل من ملف النسخ الاحتياطي. سيتم استبدال جميع البيانات الحالية",
+  "@restoreSettingsAndPlaylistsDes": {
+    "description": "restoreSettingsAndPlaylistsDes"
+  },
   "errorOccuredAlert": "لقد حدث خطأ ما!",
+  "@errorOccuredAlert": {
+    "description": "errorOccuredAlert"
+  },
   "playlistCreatedAlert": "تم إنشاء قائمة التشغيل!",
+  "@playlistCreatedAlert": {
+    "description": "playlistCreatedAlert"
+  },
   "shareSong": "مشاركة هذه الأغنية",
+  "@shareSong": {
+    "description": "shareSong"
+  },
   "trending": "الأكثر رواجا",
+  "@trending": {
+    "description": "trending"
+  },
   "reset": "إعادة ضبط",
+  "@reset": {
+    "description": "reset"
+  },
   "viewArtist": "عرض الفنان",
+  "@viewArtist": {
+    "description": "viewArtist"
+  },
   "removeFromPlaylist": "إزالة من قائمة التشغيل",
+  "@removeFromPlaylist": {
+    "description": "removeFromPlaylist"
+  },
   "removeFromQueue": "إزالة من قائمة الانتظار",
+  "@removeFromQueue": {
+    "description": "removeFromQueue"
+  },
   "streamingQualityDes": "جودة بث الموسيقى",
+  "@streamingQualityDes": {
+    "description": "streamingQualityDes"
+  },
   "customInsSelectMsg": "الرجاء تحديد نسخة مخصصة",
+  "@customInsSelectMsg": {
+    "description": "customInsSelectMsg"
+  },
   "stopMusicOnTaskClearDes": "سيتوقف تشغيل الموسيقى عندما يتم اغلاق التطبيق عن طريق مدير المهام",
+  "@stopMusicOnTaskClearDes": {
+    "description": "stopMusicOnTaskClearDes"
+  },
   "backupSettingsAndPlaylistsDes": "حفظ جميع الإعدادات، وقوائم التشغيل، وبيانات تسجيل الدخول في ملف نسخة احتياطية",
+  "@backupSettingsAndPlaylistsDes": {
+    "description": "backupSettingsAndPlaylistsDes"
+  },
   "backupMsg": "تم حفظ النسخة الاحتياطية بنجاح!",
+  "@backupMsg": {
+    "description": "backupMsg"
+  },
   "backFilesFound": "تم العثور على قواعد البيانات",
+  "@backFilesFound": {
+    "description": "backFilesFound"
+  },
   "restoreMsg": "تمت الاستعادة بنجاح!\n سيتم تطبيق التغييرات عند إعادة التشغيل",
+  "@restoreMsg": {
+    "description": "restoreMsg"
+  },
   "restoring": "جار استعادة...",
+  "@restoring": {
+    "description": "restoring"
+  },
   "restore": "استعادة",
+  "@restore": {
+    "description": "restore"
+  },
   "closeApp": "إغلاق التطبيق",
+  "@closeApp": {
+    "description": "closeApp"
+  },
   "standard": "الافتراضي",
+  "@standard": {
+    "description": "standard"
+  },
   "gesture": "إيماءة",
+  "@gesture": {
+    "description": "gesture"
+  },
   "audioCodec": "ترميز الصوت",
+  "@audioCodec": {
+    "description": "audioCodec"
+  },
   "autoDownFavSongDes": "تحميل الأغاني المفضلة تلقائيًا عند إضافتها إلى قائمة الاغاني المفضلة",
+  "@autoDownFavSongDes": {
+    "description": "autoDownFavSongDes"
+  },
   "loudnessNormalization": "معايرة شدة الصوت",
+  "@loudnessNormalization": {
+    "description": "loudnessNormalization"
+  },
   "playerUi": "واجهة مشغل الاغاني",
+  "@playerUi": {
+    "description": "playerUi"
+  },
   "songNotPlayable": "الأغنية غير قابلة للتشغيل بسبب قيود النظام!",
+  "@songNotPlayable": {
+    "description": "songNotPlayable"
+  },
   "loudnessDb": "شدة الصوت بالديسيبل",
+  "@loudnessDb": {
+    "description": "loudnessDb"
+  },
   "restoreAppData": "استعادة بيانات التطبيق",
+  "@restoreAppData": {
+    "description": "restoreAppData"
+  },
   "queueShufflingDeniedMsg": "لا يمكن خلط قائمة الانتظار عند تفعيل وضع التبديل",
+  "@queueShufflingDeniedMsg": {
+    "description": "queueShufflingDeniedMsg"
+  },
   "includeDownloadedFiles": "تضمين ملفات الأغاني المحملة",
+  "@includeDownloadedFiles": {
+    "description": "includeDownloadedFiles"
+  },
   "backupInProgress": "جاري إنشاء النسخة الاحتياطية...",
+  "@backupInProgress": {
+    "description": "backupInProgress"
+  },
   "queuerearrangingDeniedMsg": "لا يمكن إعادة ترتيب قائمة الانتظار عند تفعيل وضع التبديل",
+  "@queuerearrangingDeniedMsg": {
+    "description": "queuerearrangingDeniedMsg"
+  },
   "content": "المحتوى",
+  "@content": {
+    "description": "content"
+  },
   "downloadError3": "فشل التحميل بسبب خطأ في الشبكة! يرجى المحاولة مرة أخرى",
+  "@downloadError3": {
+    "description": "downloadError3"
+  },
   "personalisation": "تخصيص",
+  "@personalisation": {
+    "description": "personalisation"
+  },
   "playerUiDes": "اختر واجهة للمشغل",
+  "@playerUiDes": {
+    "description": "playerUiDes"
+  },
   "musicAndPlayback": "الموسيقى والتشغيل",
+  "@musicAndPlayback": {
+    "description": "musicAndPlayback"
+  },
   "appInfo": "معلومات التطبيق",
+  "@appInfo": {
+    "description": "appInfo"
+  },
   "networkError": "خطأ في الشبكة! يرجى التأكد من الاتصال بالإنترنت.",
+  "@networkError": {
+    "description": "networkError"
+  },
   "download": "تحميل",
+  "@download": {
+    "description": "download"
+  },
   "downloadError2": "الأغنية المطلوبة غير قابلة للتحميل بسبب قيود النظام. يمكنك المحاولة مرة أخرى",
+  "@downloadError2": {
+    "description": "downloadError2"
+  },
   "letsStrart": "لنبدأ..",
+  "@letsStrart": {
+    "description": "letsStrart"
+  },
   "processFiles": "جاري معالجة الملفات...",
+  "@processFiles": {
+    "description": "processFiles"
+  },
   "backupAppData": "نسخ احتياطي لبيانات التطبيق",
+  "@backupAppData": {
+    "description": "backupAppData"
+  },
   "backup": "نسخة احتياطية",
+  "@backup": {
+    "description": "backup"
+  },
   "playnextMsg": "ألتالي",
+  "@playnextMsg": {
+    "description": "playnextMsg"
+  },
   "shuffleQueue": "خلط قائمة الانتظار",
+  "@shuffleQueue": {
+    "description": "shuffleQueue"
+  },
   "queueLoop": "تكرار قائمة الانتظار",
+  "@queueLoop": {
+    "description": "queueLoop"
+  },
   "queueLoopNotDisMsg1": "لا يمكن ايقاف وضع تكرار قائمة الانتظار عند تفعيل وضع التبديل.",
+  "@queueLoopNotDisMsg1": {
+    "description": "queueLoopNotDisMsg1"
+  },
   "queueLoopNotDisMsg2": "لا يمكن تفعيل وضع تكرار قائمة الانتظار في وضع الراديو.",
+  "@queueLoopNotDisMsg2": {
+    "description": "queueLoopNotDisMsg2"
+  },
   "loudnessNormalizationDes": "تعيين نفس مستوى شدة الصوت لجميع الأغاني (تجريبي) (لن يعمل على الأغاني التي تم تحميلها في النسخ السابقة (< v1.10.0))",
+  "@loudnessNormalizationDes": {
+    "description": "loudnessNormalizationDes"
+  },
   "enableSlidableAction": "تمكين الإجراءات القابلة للسحب",
+  "@enableSlidableAction": {
+    "description": "enableSlidableAction"
+  },
   "enableSlidableActionDes": "تمكين الإجراءات القابلة للسحب على لوحة الأغنية",
+  "@enableSlidableActionDes": {
+    "description": "enableSlidableActionDes"
+  },
   "bitrate": "معدّل البتات",
+  "@bitrate": {
+    "description": "bitrate"
+  },
   "androidBackupWarning": "غير مجرب: عند تحديد خانة الاختيار بعد تنزيل أكثر من 60 ملفًا، قد تستهلك العملية كمية كبيرة من الذاكرة وقد تؤدي إلى تعطل الهاتف أو التطبيق. المتابعة على مسؤوليتك الخاصة.",
+  "@androidBackupWarning": {
+    "description": "androidBackupWarning"
+  },
   "songInfo": "معلومات الأغنية",
+  "@songInfo": {
+    "description": "songInfo"
+  },
   "id": "رقم",
+  "@id": {
+    "description": "id"
+  },
   "title": "عنوان",
+  "@title": {
+    "description": "title"
+  },
   "restartApp": "إعادة تشغيل التطبيق",
+  "@restartApp": {
+    "description": "restartApp"
+  },
   "autoDownFavSong": "تنزيل الأغاني المفضلة تلقائيًا",
+  "@autoDownFavSong": {
+    "description": "autoDownFavSong"
+  },
   "duration": "مدة",
+  "@duration": {
+    "description": "duration"
+  },
   "urlSearchDes": "تم العثور على رابط، انقر عليه لفتح/تشغيل المحتوى المرتبط",
+  "@urlSearchDes": {
+    "description": "urlSearchDes"
+  },
   "album": "البوم",
+  "@album": {
+    "description": "album"
+  },
   "reArrangeSongs": "إعادة ترتيب الأغاني",
+  "@reArrangeSongs": {
+    "description": "reArrangeSongs"
+  },
   "selectSongs": "اختر الأغاني",
+  "@selectSongs": {
+    "description": "selectSongs"
+  },
   "selectAll": "حدد الكل",
+  "@selectAll": {
+    "description": "selectAll"
+  },
   "playingfromAlbum": "اللعب من الألبوم",
+  "@playingfromAlbum": {
+    "description": "playingfromAlbum"
+  },
   "playingfromPlaylist": "التشغيل من قائمة التشغيل",
+  "@playingfromPlaylist": {
+    "description": "playingfromPlaylist"
+  },
   "playingfromSelection": "اللعب من المختارة",
+  "@playingfromSelection": {
+    "description": "playingfromSelection"
+  },
   "keepScreenOnWhilePlaying": "ابقِ الشاشة مضاءة أثناء التشغيل",
+  "@keepScreenOnWhilePlaying": {
+    "description": "keepScreenOnWhilePlaying"
+  },
   "keepScreenOnWhilePlayingDes": "إذا تم التفعيل، ستبقى شاشة الجهاز مضاءة أثناء تشغيل الموسيقى",
+  "@keepScreenOnWhilePlayingDes": {
+    "description": "keepScreenOnWhilePlayingDes"
+  },
   "auth_login_success": "تم تسجيل الدخول بنجاح",
   "@auth_login_success": {
-    "description": ""
+    "description": "auth_login_success"
   },
   "settings_cloud_backup": "النسخ الاحتياطي السحابي",
   "@settings_cloud_backup": {
-    "description": ""
+    "description": "settings_cloud_backup"
   },
   "settings_migration_title": "الهجرة من Joss Music Kotlin",
   "@settings_migration_title": {
-    "description": ""
+    "description": "settings_migration_title"
   },
   "backup_confirm_question": "هل تريد إجراء نسخة احتياطية؟",
   "@backup_confirm_question": {
-    "description": ""
+    "description": "backup_confirm_question"
   },
   "backup_selection_prompt": "اختر البيانات التي تريد نسخها احتياطيًا",
   "@backup_selection_prompt": {
-    "description": ""
+    "description": "backup_selection_prompt"
   },
   "search_recent_title": "عمليات البحث الأخيرة",
   "@search_recent_title": {
-    "description": ""
+    "description": "search_recent_title"
   },
   "back": "يعود",
   "@back": {
-    "description": ""
+    "description": "back"
   },
   "auth_forgot_password": "لقد نسيت كلمة المرور الخاصة بي",
   "@auth_forgot_password": {
-    "description": ""
+    "description": "auth_forgot_password"
   },
   "auth_btn_login": "تسجيل الدخول",
   "@auth_btn_login": {
-    "description": ""
+    "description": "auth_btn_login"
   },
   "auth_btn_register": "يسجل",
   "@auth_btn_register": {
-    "description": ""
+    "description": "auth_btn_register"
   },
   "email": "بريد إلكتروني",
   "@email": {
-    "description": ""
+    "description": "email"
   },
   "password_text": "كلمة المرور",
   "@password_text": {
@@ -290,372 +1010,839 @@
   },
   "auth_confirm_password": "تأكيد كلمة المرور",
   "@auth_confirm_password": {
-    "description": ""
+    "description": "auth_confirm_password"
   },
   "auth_welcome_title": "مرحبا بكم في استريلا الموسيقى",
   "@auth_welcome_title": {
-    "description": ""
+    "description": "auth_welcome_title"
   },
   "auth_welcome_subtitle": "مرحبا بكم في استريلا الموسيقى",
   "@auth_welcome_subtitle": {
-    "description": ""
-  },
-  "@username": {
-    "description": ""
+    "description": "auth_welcome_subtitle"
   },
   "auth_first_name": "الاسم الأول",
   "@auth_first_name": {
-    "description": ""
+    "description": "auth_first_name"
   },
   "auth_last_name": "اسم العائلة",
   "@auth_last_name": {
-    "description": ""
+    "description": "auth_last_name"
   },
   "auth_agree_personal_data": "قبول استخدام بيانات خاطئة...",
   "@auth_agree_personal_data": {
-    "description": ""
+    "description": "auth_agree_personal_data"
   },
   "settings_general_section": "عام",
   "@settings_general_section": {
-    "description": ""
+    "description": "settings_general_section"
   },
   "settings_logout": "تسجيل الخروج",
   "@settings_logout": {
-    "description": ""
+    "description": "settings_logout"
   },
   "settings_cloud_backup_desc": "تحميل واستعادة وإدارة...",
   "@settings_cloud_backup_desc": {
-    "description": ""
+    "description": "settings_cloud_backup_desc"
   },
   "settings_migration_desc": "استيراد قوائم التشغيل والأغاني...",
   "@settings_migration_desc": {
-    "description": ""
+    "description": "settings_migration_desc"
   },
   "backup_btn_restart": "أعد تشغيل التطبيق",
   "@backup_btn_restart": {
-    "description": ""
+    "description": "backup_btn_restart"
   },
   "backup_btn_upload": "تحميل النسخة الاحتياطية الآن",
   "@backup_btn_upload": {
-    "description": ""
+    "description": "backup_btn_upload"
   },
   "backup_no_backups": "لا توجد نسخ احتياطية حتى الآن ...",
   "@backup_no_backups": {
-    "description": ""
+    "description": "backup_no_backups"
   },
   "backup_auth_required": "تحتاج إلى جلسة نشطة..",
   "@backup_auth_required": {
-    "description": ""
+    "description": "backup_auth_required"
   },
   "backup_upload_success": "تم تحميل النسخة الاحتياطية بشكل صحيح.",
   "@backup_upload_success": {
-    "description": ""
+    "description": "backup_upload_success"
   },
   "backup_restore_success": "تمت استعادة النسخة الاحتياطية. أعد تشغيل التطبيق.",
   "@backup_restore_success": {
-    "description": ""
+    "description": "backup_restore_success"
   },
   "backup_delete_success": "تم حذف النسخة الاحتياطية.",
   "@backup_delete_success": {
-    "description": ""
+    "description": "backup_delete_success"
   },
   "genre_pop": "البوب",
   "@genre_pop": {
-    "description": ""
+    "description": "genre_pop"
   },
   "genre_rock": "صخر",
   "@genre_rock": {
-    "description": ""
+    "description": "genre_rock"
   },
   "genre_hiphop": "الهيب هوب",
   "@genre_hiphop": {
-    "description": ""
+    "description": "genre_hiphop"
   },
   "genre_electronic": "إلكترونيات",
   "@genre_electronic": {
-    "description": ""
+    "description": "genre_electronic"
   },
   "genre_jazz": "موسيقى الجاز",
   "@genre_jazz": {
-    "description": ""
+    "description": "genre_jazz"
   },
   "genre_latin": "اللاتينية",
   "@genre_latin": {
-    "description": ""
+    "description": "genre_latin"
   },
   "migration_btn_select": "حدد الملف والاستيراد",
   "@migration_btn_select": {
-    "description": ""
-  },
-  "@close": {
-    "description": ""
+    "description": "migration_btn_select"
   },
   "forgottenFavorites": "المفضلة المنسية",
   "@forgottenFavorites": {
-    "description": ""
+    "description": "forgottenFavorites"
   },
   "mostListenedSong": "الأكثر استماعا للأغنية",
   "@mostListenedSong": {
-    "description": ""
+    "description": "mostListenedSong"
   },
   "reproducedBy": "مستنسخة بواسطة",
   "@reproducedBy": {
-    "description": ""
+    "description": "reproducedBy"
   },
   "recentSearches": "عمليات البحث الأخيرة",
   "@recentSearches": {
-    "description": ""
+    "description": "recentSearches"
   },
   "popularTracks": "المسارات الشعبية",
   "@popularTracks": {
-    "description": ""
+    "description": "popularTracks"
   },
   "latestRelease": "أحدث إصدار",
   "@latestRelease": {
-    "description": ""
+    "description": "latestRelease"
   },
   "follow": "يكمل",
   "@follow": {
-    "description": ""
+    "description": "follow"
   },
   "following": "التالي",
   "@following": {
-    "description": ""
+    "description": "following"
   },
   "listenNow": "استمع الآن",
   "@listenNow": {
-    "description": ""
+    "description": "listenNow"
   },
   "video": "فيديو",
   "@video": {
-    "description": ""
+    "description": "video"
   },
   "about": "عن",
   "@about": {
-    "description": ""
+    "description": "about"
   },
   "readMore": "اقرأ المزيد",
   "@readMore": {
-    "description": ""
+    "description": "readMore"
   },
   "speedAndPitch": "السرعة والملعب",
   "@speedAndPitch": {
-    "description": ""
+    "description": "speedAndPitch"
   },
   "playbackSpeed": "سرعة التشغيل",
   "@playbackSpeed": {
-    "description": ""
+    "description": "playbackSpeed"
   },
   "songPitch": "نغمة الأغنية",
   "@songPitch": {
-    "description": ""
+    "description": "songPitch"
   },
   "musicRecognition": "التعرف على الموسيقى",
   "@musicRecognition": {
-    "description": ""
+    "description": "musicRecognition"
   },
   "listeningToEnvironment": "الاستماع إلى البيئة...",
   "@listeningToEnvironment": {
-    "description": ""
+    "description": "listeningToEnvironment"
   },
   "micInstruction": "تأكد من تشغيل الموسيقى بصوت عالٍ بدرجة كافية بالقرب من الميكروفون.",
   "@micInstruction": {
-    "description": ""
+    "description": "micInstruction"
   },
   "processingAudio": "معالجة الصوت...",
   "@processingAudio": {
-    "description": ""
+    "description": "processingAudio"
   },
   "shazamSearching": "جارٍ البحث في قاعدة بيانات Shazam عن التطابقات...",
   "@shazamSearching": {
-    "description": ""
+    "description": "shazamSearching"
   },
   "songFound": "تم العثور على الأغنية!",
   "@songFound": {
-    "description": ""
+    "description": "songFound"
   },
   "playNow": "العب الآن",
   "@playNow": {
-    "description": ""
+    "description": "playNow"
   },
   "searchInLibrary": "ابحث في المكتبة",
   "@searchInLibrary": {
-    "description": ""
+    "description": "searchInLibrary"
   },
   "noMatchesFound": "لا يوجد مباريات",
   "@noMatchesFound": {
-    "description": ""
+    "description": "noMatchesFound"
   },
   "noMatchInstruction": "تعذر العثور على أي أغاني في الصوت المسجل",
   "@noMatchInstruction": {
-    "description": ""
+    "description": "noMatchInstruction"
   },
   "errorOccurred": "حدث خطأ",
   "@errorOccurred": {
-    "description": ""
+    "description": "errorOccurred"
   },
   "playingRecognizedTrack": "اللعب:",
   "@playingRecognizedTrack": {
-    "description": ""
+    "description": "playingRecognizedTrack"
   },
   "errorPlayingTrack": "خطأ أثناء اللعب:",
   "@errorPlayingTrack": {
-    "description": ""
+    "description": "errorPlayingTrack"
   },
   "welcome_title": "الموسيقى الخاصة بك، طريقك",
+  "@welcome_title": {
+    "description": "welcome_title"
+  },
   "welcome_subtitle": "اختر الطريقة التي تريد بها تجربة موسيقى Estrella من الآن فصاعدًا.",
+  "@welcome_subtitle": {
+    "description": "welcome_subtitle"
+  },
   "welcome_intro": "لقد قمنا بتحديث منصتنا. تم تعطيل النظام القديم لتحميل النسخ الاحتياطية اليدوية. لديك الآن طريقتان واضحتان لإدارة مكتبة الموسيقى الخاصة بك.",
+  "@welcome_intro": {
+    "description": "welcome_intro"
+  },
   "recommend_cloud": "نوصي بتنشيط الوضع السحابي للاستمتاع بتجربة تشبه تجربة Spotify: المزامنة في الوقت الفعلي بين جميع أجهزتك والنسخ الاحتياطي التلقائي دون الحاجة إلى القيام بأي شيء.",
+  "@recommend_cloud": {
+    "description": "recommend_cloud"
+  },
   "swipe_prompt": "اسحب لاستكشاف الخيارات ➔",
+  "@swipe_prompt": {
+    "description": "swipe_prompt"
+  },
   "local_title": "الوضع المحلي",
+  "@local_title": {
+    "description": "local_title"
+  },
   "local_subtitle": "الخصوصية المطلقة على جهازك",
+  "@local_subtitle": {
+    "description": "local_subtitle"
+  },
   "local_b1": "يعمل دون الحاجة لتسجيل الدخول.",
+  "@local_b1": {
+    "description": "local_b1"
+  },
   "local_b2": "مكتبتك بأكملها تبقى بشكل صارم على هذا الكمبيوتر.",
+  "@local_b2": {
+    "description": "local_b2"
+  },
   "local_b3": "ملحوظة: لا توجد نسخ احتياطية سحابية يدوية. إذا فقدت جهازك أو قمت بإلغاء تثبيت التطبيق، فلن تتمكن من استرداد بياناتك.",
+  "@local_b3": {
+    "description": "local_b3"
+  },
   "local_btn": "استخدم فقط على هذا الجهاز",
+  "@local_btn": {
+    "description": "local_btn"
+  },
   "cloud_title": "الوضع السحابي (مستحسن)",
+  "@cloud_title": {
+    "description": "cloud_title"
+  },
   "cloud_subtitle": "المزامنة في الوقت الحقيقي مع جوس ريد",
+  "@cloud_subtitle": {
+    "description": "cloud_subtitle"
+  },
   "cloud_b1": "قم بتسجيل الدخول بشكل آمن باستخدام حساب Joss Red الخاص بك.",
+  "@cloud_b1": {
+    "description": "cloud_b1"
+  },
   "cloud_b2": "يمكنك الوصول إلى قوائم التشغيل والمفضلات والسجل من أي جهاز (Windows وAndroid وما إلى ذلك) على الفور.",
+  "@cloud_b2": {
+    "description": "cloud_b2"
+  },
   "cloud_b3": "المزامنة الذكية: العمل دون اتصال بالإنترنت وتحميل التغييرات تلقائيًا عند استعادة الإنترنت.",
+  "@cloud_b3": {
+    "description": "cloud_b3"
+  },
   "cloud_btn": "تفعيل المزامنة السحابية",
+  "@cloud_btn": {
+    "description": "cloud_btn"
+  },
   "slide_indicator": "الخطوة __PH_0____ من 3",
+  "@slide_indicator": {
+    "description": "slide_indicator"
+  },
   "news_card_title": "لقد تطورت موسيقى استريلا!",
+  "@news_card_title": {
+    "description": "news_card_title"
+  },
   "news_card_subtitle": "مزامنة بنسبة 100% مع Joss Red وقوائم التشغيل مع الأصدقاء وغير ذلك الكثير. انقر لمعرفة ما هو الجديد.",
+  "@news_card_subtitle": {
+    "description": "news_card_subtitle"
+  },
   "news_dialog_title": "أخبار الموسيقى استريلا",
+  "@news_dialog_title": {
+    "description": "news_dialog_title"
+  },
   "news_item_sync_title": "التكامل الكامل مع جوس ريد",
+  "@news_item_sync_title": {
+    "description": "news_item_sync_title"
+  },
   "news_item_sync_desc": "يتم الآن حفظ قوائم التشغيل والمفضلات الخاصة بك ومزامنتها في السحابة تلقائيًا باستخدام حساب Joss Red الرئيسي الخاص بك.",
+  "@news_item_sync_desc": {
+    "description": "news_item_sync_desc"
+  },
   "news_item_collab_title": "قوائم التشغيل التعاونية",
+  "@news_item_collab_title": {
+    "description": "news_item_collab_title"
+  },
   "news_item_collab_desc": "إنشاء قوائم التشغيل مع أصدقائك! عند إنشاء قائمة تشغيل، حدد مربع الاختيار التعاوني واختر أصدقائك لتحريرها معًا.",
+  "@news_item_collab_desc": {
+    "description": "news_item_collab_desc"
+  },
   "news_item_trans_title": "مزامنة شفافة",
+  "@news_item_trans_title": {
+    "description": "news_item_trans_title"
+  },
   "news_item_trans_desc": "لم تعد بحاجة إلى النقر فوق أزرار المزامنة اليدوية؛ المحرك الجديد مسؤول عن التحول لأعلى ولأسفل تلقائيًا.",
+  "@news_item_trans_desc": {
+    "description": "news_item_trans_desc"
+  },
   "news_dialog_section_friends": "الأصدقاء وإدارة الحسابات:",
+  "@news_dialog_section_friends": {
+    "description": "news_dialog_section_friends"
+  },
   "news_dialog_friends_desc": "لإضافة أصدقاء أو قبول الطلبات أو إدارة ملف تعريف الأمان الخاص بك، يرجى استخدام Joss Red على منصاته الرسمية:",
+  "@news_dialog_friends_desc": {
+    "description": "news_dialog_friends_desc"
+  },
   "news_btn_app": "تطبيق جوس ريد (متجر Play)",
+  "@news_btn_app": {
+    "description": "news_btn_app"
+  },
   "news_btn_web": "جوس ريد ويب",
+  "@news_btn_web": {
+    "description": "news_btn_web"
+  },
   "news_btn_dismiss": "مفهوم",
+  "@news_btn_dismiss": {
+    "description": "news_btn_dismiss"
+  },
   "settings_appearance_desc": "الرسوم المتحركة للموضوع واللغة والواجهة.",
+  "@settings_appearance_desc": {
+    "description": "settings_appearance_desc"
+  },
   "settings_content_desc": "اكتشف عوامل التصفية والتكامل مع الأنابيب وذاكرة التخزين المؤقت.",
+  "@settings_content_desc": {
+    "description": "settings_content_desc"
+  },
   "settings_playback_desc": "جودة البث والتطبيع والصمت والبطارية.",
+  "@settings_playback_desc": {
+    "description": "settings_playback_desc"
+  },
   "settings_downloads_desc": "التنزيلات والتخزين",
+  "@settings_downloads_desc": {
+    "description": "settings_downloads_desc"
+  },
   "settings_downloads_sub": "تنسيقات الصوت والمجلدات والتنزيلات التلقائية.",
+  "@settings_downloads_sub": {
+    "description": "settings_downloads_sub"
+  },
   "settings_account_desc": "الحساب والمزامنة",
+  "@settings_account_desc": {
+    "description": "settings_account_desc"
+  },
   "settings_account_sub": "الوضع السحابي والنسخ الاحتياطية وقائمة الأصدقاء وعمليات الترحيل.",
+  "@settings_account_sub": {
+    "description": "settings_account_sub"
+  },
   "settings_about_desc": "حول موسيقى استريلا",
+  "@settings_about_desc": {
+    "description": "settings_about_desc"
+  },
   "settings_about_sub": "الإصدار، مشروع مفتوح المصدر وGitHub.",
+  "@settings_about_sub": {
+    "description": "settings_about_sub"
+  },
   "settings_local_cloud_title": "الوضع المحلي / EMusic Cloud",
+  "@settings_local_cloud_title": {
+    "description": "settings_local_cloud_title"
+  },
   "settings_local_cloud_desc": "اختر حالة المزامنة أو قم بترحيلها أو مراجعتها مع Joss Red.",
+  "@settings_local_cloud_desc": {
+    "description": "settings_local_cloud_desc"
+  },
   "settings_my_friends": ".أصدقائي",
+  "@settings_my_friends": {
+    "description": "settings_my_friends"
+  },
   "settings_my_friends_desc": "إدارة أصدقائك Joss Red مباشرة.",
+  "@settings_my_friends_desc": {
+    "description": "settings_my_friends_desc"
+  },
   "settings_refresh_visitor_title": "معرف التحديث (معرف الزائر)",
+  "@settings_refresh_visitor_title": {
+    "description": "settings_refresh_visitor_title"
+  },
   "settings_refresh_visitor_desc": "قم بإعادة إنشاء معرف YouTube Music الخاص بك إذا لم يتم تحميل محتوى Discover.",
+  "@settings_refresh_visitor_desc": {
+    "description": "settings_refresh_visitor_desc"
+  },
   "settings_visitor_updated": "المعرف المحدث",
+  "@settings_visitor_updated": {
+    "description": "settings_visitor_updated"
+  },
   "settings_visitor_updated_desc": "تم إنشاء معرف زائر جديد بنجاح.",
+  "@settings_visitor_updated_desc": {
+    "description": "settings_visitor_updated_desc"
+  },
   "settings_visitor_error": "خطأ",
+  "@settings_visitor_error": {
+    "description": "settings_visitor_error"
+  },
   "settings_visitor_error_desc": "لا يمكن إنشاء معرف جديد. يرجى المحاولة مرة أخرى في وقت لاحق.",
+  "@settings_visitor_error_desc": {
+    "description": "settings_visitor_error_desc"
+  },
   "settings_visitor_exception": "حدث خطأ أثناء إعادة الإنشاء: __PH_0____",
+  "@settings_visitor_exception": {
+    "description": "settings_visitor_exception"
+  },
   "migratedLibrary": "المكتبة المهاجرة",
+  "@migratedLibrary": {
+    "description": "migratedLibrary"
+  },
   "noSongsInCollection": "لا توجد أغاني في هذه المجموعة",
+  "@noSongsInCollection": {
+    "description": "noSongsInCollection"
+  },
   "startupScreen": "فتح عند بدء التشغيل",
+  "@startupScreen": {
+    "description": "startupScreen"
+  },
   "startupScreenDescription": "اختر القسم الذي تفتحه Estrella Music أولاً",
+  "@startupScreenDescription": {
+    "description": "startupScreenDescription"
+  },
   "friends": "أصدقاء",
+  "@friends": {
+    "description": "friends"
+  },
   "dailyDiscover": "الاكتشاف اليومي",
+  "@dailyDiscover": {
+    "description": "dailyDiscover"
+  },
   "keepListening": "استمر في الاستماع",
+  "@keepListening": {
+    "description": "keepListening"
+  },
   "similarToTitle": "مشابهة لـ __PH_0____",
+  "@similarToTitle": {
+    "description": "similarToTitle"
+  },
   "pipedPlaylistDescription": "قائمة التشغيل عبر الأنابيب",
+  "@pipedPlaylistDescription": {
+    "description": "pipedPlaylistDescription"
+  },
   "collaborativePlaylistDescription": "قائمة التشغيل التعاونية",
+  "@collaborativePlaylistDescription": {
+    "description": "collaborativePlaylistDescription"
+  },
   "libraryPlaylistDescription": "قائمة تشغيل المكتبة",
+  "@libraryPlaylistDescription": {
+    "description": "libraryPlaylistDescription"
+  },
   "untitledSong": "أغنية بلا عنوان",
+  "@untitledSong": {
+    "description": "untitledSong"
+  },
   "migratedPlaylist": "قائمة التشغيل المنقولة",
+  "@migratedPlaylist": {
+    "description": "migratedPlaylist"
+  },
   "migratedAlbum": "الألبوم المنقول",
+  "@migratedAlbum": {
+    "description": "migratedAlbum"
+  },
   "songsImportedFromJossMusic": "الأغاني المستوردة من Joss Music Kotlin",
+  "@songsImportedFromJossMusic": {
+    "description": "songsImportedFromJossMusic"
+  },
   "importedFromJossMusic": "مستورد من جوس ميوزيك كوتلين",
+  "@importedFromJossMusic": {
+    "description": "importedFromJossMusic"
+  },
   "syncLocalModeActive": "الوضع المحلي نشط",
+  "@syncLocalModeActive": {
+    "description": "syncLocalModeActive"
+  },
   "syncCloudPending": "الوضع السحابي نشط. في انتظار المزامنة.",
+  "@syncCloudPending": {
+    "description": "syncCloudPending"
+  },
   "syncCloudDownloadingExisting": "تم تفعيل الوضع السحابي. تنزيل المكتبة الموجودة.",
+  "@syncCloudDownloadingExisting": {
+    "description": "syncCloudDownloadingExisting"
+  },
   "syncCloudMigrationComplete": "تم تفعيل الوضع السحابي. المكتبة المهاجرة.",
+  "@syncCloudMigrationComplete": {
+    "description": "syncCloudMigrationComplete"
+  },
   "syncLocalDeviceOnly": "يتم الاحتفاظ ببياناتك على هذا الجهاز فقط.",
+  "@syncLocalDeviceOnly": {
+    "description": "syncLocalDeviceOnly"
+  },
   "syncDownloading": "جارٍ تنزيل تغييرات EMusic...",
+  "@syncDownloading": {
+    "description": "syncDownloading"
+  },
   "syncDownloadFailed": "فشل تنزيل المزامنة.",
+  "@syncDownloadFailed": {
+    "description": "syncDownloadFailed"
+  },
   "syncLocalChangesFirst": "هناك تغييرات محلية جديدة. سيتم تحميلها قبل التنزيل.",
+  "@syncLocalChangesFirst": {
+    "description": "syncLocalChangesFirst"
+  },
   "syncLibrarySynced": "مكتبة متزامنة",
+  "@syncLibrarySynced": {
+    "description": "syncLibrarySynced"
+  },
   "syncOfflinePending": "غير متصل. التغييرات معلقة.",
+  "@syncOfflinePending": {
+    "description": "syncOfflinePending"
+  },
   "syncLibraryUpToDate": "المكتبة محدثة.",
+  "@syncLibraryUpToDate": {
+    "description": "syncLibraryUpToDate"
+  },
   "syncChangesSynced": "__PH_0____ التغييرات المتزامنة.",
+  "@syncChangesSynced": {
+    "description": "syncChangesSynced"
+  },
   "syncUploading": "جارٍ تحميل التغييرات إلى EMusic...",
+  "@syncUploading": {
+    "description": "syncUploading"
+  },
   "syncUploadSuccessWs": "تم تحميل التغييرات بنجاح (WS).",
+  "@syncUploadSuccessWs": {
+    "description": "syncUploadSuccessWs"
+  },
   "syncUploadWsRetry": "تعذر التحميل باستخدام WS. سيتم إعادة المحاولة لاحقا.",
+  "@syncUploadWsRetry": {
+    "description": "syncUploadWsRetry"
+  },
   "syncUploadSuccess": "تم تحميل التغييرات بشكل صحيح.",
+  "@syncUploadSuccess": {
+    "description": "syncUploadSuccess"
+  },
   "syncUploadRetry": "لم أستطع النهوض. سيتم إعادة المحاولة لاحقا.",
+  "@syncUploadRetry": {
+    "description": "syncUploadRetry"
+  },
   "syncOfflineRetry": "غير متصل. تم حفظ التغييرات لإعادة المحاولة.",
+  "@syncOfflineRetry": {
+    "description": "syncOfflineRetry"
+  },
   "syncUnconfirmedRetry": "لم يؤكد EMusic كافة التغييرات. ستتم إعادة محاكمتهم.",
+  "@syncUnconfirmedRetry": {
+    "description": "syncUnconfirmedRetry"
+  },
   "syncChangesConfirmed": "__PH_0____ التغييرات التي تم تنفيذها.",
+  "@syncChangesConfirmed": {
+    "description": "syncChangesConfirmed"
+  },
   "migrationAlreadyRunning": "هناك بالفعل عملية ترحيل قيد التقدم.",
+  "@migrationAlreadyRunning": {
+    "description": "migrationAlreadyRunning"
+  },
   "migrationLoginRequired": "قم بتسجيل الدخول إلى Joss Red قبل الترحيل.",
+  "@migrationLoginRequired": {
+    "description": "migrationLoginRequired"
+  },
   "migrationCheckingCloud": "التحقق مما إذا كان EMusic Cloud يحتوي بالفعل على مكتبة...",
+  "@migrationCheckingCloud": {
+    "description": "migrationCheckingCloud"
+  },
   "cloudLibraryFoundDeviceWillDownload": "تم العثور على مكتبة سحابية. سيقوم هذا الجهاز بتنزيله دون الكتابة فوقه.",
+  "@cloudLibraryFoundDeviceWillDownload": {
+    "description": "cloudLibraryFoundDeviceWillDownload"
+  },
   "cloudLibraryFound": "تم العثور على مكتبة سحابية.",
+  "@cloudLibraryFound": {
+    "description": "cloudLibraryFound"
+  },
   "migrationCreatingBackup": "إنشاء نسخة احتياطية محلية قبل الاتصال بالسحابة...",
+  "@migrationCreatingBackup": {
+    "description": "migrationCreatingBackup"
+  },
   "migrationAnalyzingLocal": "تحليل المكتبة المحلية...",
+  "@migrationAnalyzingLocal": {
+    "description": "migrationAnalyzingLocal"
+  },
   "migrationPreparingCloud": "تحضير الترحيل في EMusic Cloud...",
+  "@migrationPreparingCloud": {
+    "description": "migrationPreparingCloud"
+  },
   "migrationStartFailed": "تعذر على EMusic Cloud بدء الترحيل.",
+  "@migrationStartFailed": {
+    "description": "migrationStartFailed"
+  },
   "migrationUploadingData": "جارٍ تحميل قوائم التشغيل والمفضلات والتاريخ...",
+  "@migrationUploadingData": {
+    "description": "migrationUploadingData"
+  },
   "migrationUploadIncomplete": "لا يمكن تحميل كافة البيانات. نحن نحافظ على دعمكم المحلي.",
+  "@migrationUploadIncomplete": {
+    "description": "migrationUploadIncomplete"
+  },
   "migrationVerifyingIntegrity": "جارٍ التحقق من التكامل في EMusic Cloud...",
+  "@migrationVerifyingIntegrity": {
+    "description": "migrationVerifyingIntegrity"
+  },
   "migrationValidationFailed": "تعذر على EMusic Cloud التحقق من صحة الترحيل.",
+  "@migrationValidationFailed": {
+    "description": "migrationValidationFailed"
+  },
   "cloudModeReadyOfflineCache": "الوضع السحابي جاهز. سيعمل هذا الجهاز كذاكرة تخزين مؤقت غير متصلة بالإنترنت.",
+  "@cloudModeReadyOfflineCache": {
+    "description": "cloudModeReadyOfflineCache"
+  },
   "migrationCompleted": "اكتملت الهجرة.",
+  "@migrationCompleted": {
+    "description": "migrationCompleted"
+  },
   "migrationFailedLocalPreserved": "فشلت عملية الترحيل. لم يتم تعديل بياناتك المحلية.",
+  "@migrationFailedLocalPreserved": {
+    "description": "migrationFailedLocalPreserved"
+  },
   "sessionExpiredLoginAgain": "لقد انتهت صلاحية جلستك. قم بتسجيل الدخول مرة أخرى.",
+  "@sessionExpiredLoginAgain": {
+    "description": "sessionExpiredLoginAgain"
+  },
   "selectedFileNotFound": "لم يتم العثور على الملف المحدد.",
+  "@selectedFileNotFound": {
+    "description": "selectedFileNotFound"
+  },
   "genericAlbum": "الألبوم",
+  "@genericAlbum": {
+    "description": "genericAlbum"
+  },
   "friendsLoginRequired": "قم بتسجيل الدخول للعثور على الأصدقاء.",
+  "@friendsLoginRequired": {
+    "description": "friendsLoginRequired"
+  },
   "invalidSessionToken": "لا تحتوي الجلسة على رمز مميز صالح.",
+  "@invalidSessionToken": {
+    "description": "invalidSessionToken"
+  },
   "userSearchFailed": "تعذر البحث عن المستخدمين (_{statusCode}_).",
+  "@userSearchFailed": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    },
+    "description": "userSearchFailed"
+  },
   "invalidServerResponse": "استجابة الخادم غير صالحة.",
+  "@invalidServerResponse": {
+    "description": "invalidServerResponse"
+  },
   "userListMissing": "لا يحتوي الرد على قائمة المستخدمين.",
+  "@userListMissing": {
+    "description": "userListMissing"
+  },
   "playlistCollaboratorsTitle": "المساهمين في قائمة التشغيل",
+  "@playlistCollaboratorsTitle": {
+    "description": "playlistCollaboratorsTitle"
+  },
   "collaboratorsInstruction": "حدد الأصدقاء الذين سيتمكنون من رؤية قائمة التشغيل هذه وتعديلها:",
+  "@collaboratorsInstruction": {
+    "description": "collaboratorsInstruction"
+  },
   "noJossRedFriends": "ليس لديك أصدقاء مضافين في Joss Red.",
+  "@noJossRedFriends": {
+    "description": "noJossRedFriends"
+  },
   "friendFallback": "صديق",
+  "@friendFallback": {
+    "description": "friendFallback"
+  },
   "collaboratorsUpdated": "تم تحديث المتعاونين بشكل صحيح.",
+  "@collaboratorsUpdated": {
+    "description": "collaboratorsUpdated"
+  },
   "save": "يحفظ",
+  "@save": {
+    "description": "save"
+  },
   "manageCollaborators": "إدارة المتعاونين (الأصدقاء)",
+  "@manageCollaborators": {
+    "description": "manageCollaborators"
+  },
   "done": "مستعد",
+  "@done": {
+    "description": "done"
+  },
   "notAuthenticated": "لم تتم المصادقة عليها",
+  "@notAuthenticated": {
+    "description": "notAuthenticated"
+  },
   "genericError": "خطأ",
+  "@genericError": {
+    "description": "genericError"
+  },
   "friendRequestSent": "تم إرسال طلب الصداقة",
+  "@friendRequestSent": {
+    "description": "friendRequestSent"
+  },
   "friendRequestAccepted": "تم قبول طلب الصداقة",
+  "@friendRequestAccepted": {
+    "description": "friendRequestAccepted"
+  },
   "friendshipRemoved": "تمت إزالة الصداقة",
+  "@friendshipRemoved": {
+    "description": "friendshipRemoved"
+  },
   "userBlocked": "مستخدم محظور",
+  "@userBlocked": {
+    "description": "userBlocked"
+  },
   "userUnblocked": "مستخدم غير مقفل",
+  "@userUnblocked": {
+    "description": "userUnblocked"
+  },
   "artistsByTaste": "حسب ذوقك",
+  "@artistsByTaste": {
+    "description": "artistsByTaste"
+  },
   "followedArtists": "يتبع",
+  "@followedArtists": {
+    "description": "followedArtists"
+  },
   "recommendedArtists": "مُستَحسَن",
+  "@recommendedArtists": {
+    "description": "recommendedArtists"
+  },
   "albumsByTaste": "حسب ذوقك",
+  "@albumsByTaste": {
+    "description": "albumsByTaste"
+  },
   "savedAlbums": "أنقذ",
+  "@savedAlbums": {
+    "description": "savedAlbums"
+  },
   "recommendedAlbums": "مُستَحسَن",
+  "@recommendedAlbums": {
+    "description": "recommendedAlbums"
+  },
   "downloadNotificationChannelName": "تنزيلات الموسيقى",
+  "@downloadNotificationChannelName": {
+    "description": "downloadNotificationChannelName"
+  },
   "downloadNotificationChannelDescription": "يبقي تنزيلات الموسيقى الخاصة بك نشطة في الخلفية.",
+  "@downloadNotificationChannelDescription": {
+    "description": "downloadNotificationChannelDescription"
+  },
   "downloadNotificationTitle": "تنزيل الموسيقى",
+  "@downloadNotificationTitle": {
+    "description": "downloadNotificationTitle"
+  },
   "downloadNotificationPreparing": "جارٍ تحضير التنزيلات…",
+  "@downloadNotificationPreparing": {
+    "description": "downloadNotificationPreparing"
+  },
   "downloadNotificationSong": "التنزيل: __PH_0____",
+  "@downloadNotificationSong": {
+    "description": "downloadNotificationSong"
+  },
   "syncCloudModeActive": "الوضع السحابي نشط",
+  "@syncCloudModeActive": {
+    "description": "syncCloudModeActive"
+  },
   "permissionsConsentTitle": "أذونات للبدء",
+  "@permissionsConsentTitle": {
+    "description": "permissionsConsentTitle"
+  },
   "permissionsConsentDescription": "تحتاج Estrella Music إلى هذه الأذونات لإدارة الموسيقى الخاصة بك وتقديم جميع ميزات التشغيل.",
+  "@permissionsConsentDescription": {
+    "description": "permissionsConsentDescription"
+  },
   "permissionsStorageTitle": "الموسيقى والتخزين",
+  "@permissionsStorageTitle": {
+    "description": "permissionsStorageTitle"
+  },
   "permissionsStorageDescription": "يسمح لك بتشغيل الموسيقى وحفظ التنزيلات وتصدير قوائم التشغيل وإعداد التحديثات.",
+  "@permissionsStorageDescription": {
+    "description": "permissionsStorageDescription"
+  },
   "permissionsNotificationsTitle": "إشعارات",
+  "@permissionsNotificationsTitle": {
+    "description": "permissionsNotificationsTitle"
+  },
   "permissionsNotificationsDescription": "يعرض عناصر التحكم في التشغيل وتقدم التنزيل وإشعارات التطبيق المهمة.",
+  "@permissionsNotificationsDescription": {
+    "description": "permissionsNotificationsDescription"
+  },
   "permissionsMicrophoneTitle": "ميكروفون",
+  "@permissionsMicrophoneTitle": {
+    "description": "permissionsMicrophoneTitle"
+  },
   "permissionsMicrophoneDescription": "يتم استخدامه فقط عندما تختار التعرف على الأغنية التي يتم تشغيلها من حولك.",
+  "@permissionsMicrophoneDescription": {
+    "description": "permissionsMicrophoneDescription"
+  },
   "permissionsContinueButton": "منح الأذونات المطلوبة",
+  "@permissionsContinueButton": {
+    "description": "permissionsContinueButton"
+  },
   "permissionsRequiredNotice": "جميع التصاريح الثلاثة مطلوبة للمتابعة. ويمكنك تغييرها لاحقًا في إعدادات النظام.",
+  "@permissionsRequiredNotice": {
+    "description": "permissionsRequiredNotice"
+  },
   "permissionsAllow": "يسمح",
+  "@permissionsAllow": {
+    "description": "permissionsAllow"
+  },
   "permissionsOpenSettings": "إعدادات",
+  "@permissionsOpenSettings": {
+    "description": "permissionsOpenSettings"
+  },
   "auth_2fa_title": "المصادقة الثنائية",
+  "@auth_2fa_title": {
+    "description": "auth_2fa_title"
+  },
   "auth_2fa_subtitle": "أدخل الرمز المكون من 6 أرقام من تطبيق المصادقة الخاص بك. تنتهي صلاحية هذا الوصول خلال 5 دقائق.",
+  "@auth_2fa_subtitle": {
+    "description": "auth_2fa_subtitle"
+  },
   "auth_2fa_code": "رمز المصادقة",
+  "@auth_2fa_code": {
+    "description": "auth_2fa_code"
+  },
   "auth_2fa_verify": "تحقق واستمر",
-  "auth_2fa_invalid": "أدخل رمزًا صالحًا مكونًا من 6 أرقام أو قم بتسجيل الدخول مرة أخرى."
+  "@auth_2fa_verify": {
+    "description": "auth_2fa_verify"
+  },
+  "auth_2fa_invalid": "أدخل رمزًا صالحًا مكونًا من 6 أرقام أو قم بتسجيل الدخول مرة أخرى.",
+  "@auth_2fa_invalid": {
+    "description": "auth_2fa_invalid"
+  }
 }

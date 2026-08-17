@@ -1,5 +1,11 @@
 {
   "@@locale": "ku",
   "keepScreenOnWhilePlaying": "Li demê lîstinê ekranê li ser bimîne",
-  "keepScreenOnWhilePlayingDes": "Heke çalak be, ekranê amûrê di dema lîstinê de dikare bimîne"
+  "@keepScreenOnWhilePlaying": {
+    "description": "keepScreenOnWhilePlaying"
+  },
+  "keepScreenOnWhilePlayingDes": "Heke çalak be, ekranê amûrê di dema lîstinê de dikare bimîne",
+  "@keepScreenOnWhilePlayingDes": {
+    "description": "keepScreenOnWhilePlayingDes"
+  }
 }

@@ -1,139 +1,547 @@
 {
   "@@locale": "te",
   "selectSongs": "పాటలను ఎంచుకోండి",
+  "@selectSongs": {
+    "description": "selectSongs"
+  },
   "openIn": "తెరవండి",
+  "@openIn": {
+    "description": "openIn"
+  },
   "randomRadio": "యాదృచ్ఛిక రేడియో",
+  "@randomRadio": {
+    "description": "randomRadio"
+  },
   "playnextMsg": "రాబోయేది",
+  "@playnextMsg": {
+    "description": "playnextMsg"
+  },
   "home": "హోమ్",
+  "@home": {
+    "description": "home"
+  },
   "retry": "రిట్రీ!",
+  "@retry": {
+    "description": "retry"
+  },
   "removeMultiple": "బహుళ పాటలను తీసివేయండి",
+  "@removeMultiple": {
+    "description": "removeMultiple"
+  },
   "reArrangeSongs": "పాటల క్రమాన్ని మార్చండి",
+  "@reArrangeSongs": {
+    "description": "reArrangeSongs"
+  },
   "selectAll": "అన్నీ ఎంచుకోండి",
+  "@selectAll": {
+    "description": "selectAll"
+  },
   "communityplaylists": "సంఘం ప్లైలిస్ట్స్",
+  "@communityplaylists": {
+    "description": "communityplaylists"
+  },
   "randomSelection": "యాదృచ్ఛిక ఎంపిక",
+  "@randomSelection": {
+    "description": "randomSelection"
+  },
   "shuffleQueue": "షఫుల్ క్యూ",
+  "@shuffleQueue": {
+    "description": "shuffleQueue"
+  },
   "renamePlaylist": "ప్లేజాబితా పేరు మార్చండి",
+  "@renamePlaylist": {
+    "description": "renamePlaylist"
+  },
   "libAlbums": "లైబ్రరీ ఆల్బమ్స్",
+  "@libAlbums": {
+    "description": "libAlbums"
+  },
   "viewArtist": "కళాకారుడిని వీక్షించండి",
+  "@viewArtist": {
+    "description": "viewArtist"
+  },
   "reArrangePlaylist": "ప్లేజాబితాను క్రమాన్ని మార్చండి",
+  "@reArrangePlaylist": {
+    "description": "reArrangePlaylist"
+  },
   "playNext": "తదుపరి ఆడండి",
+  "@playNext": {
+    "description": "playNext"
+  },
   "library": "లైబ్రరీ",
+  "@library": {
+    "description": "library"
+  },
   "playlists": "ప్లేలిస్ట్స్",
+  "@playlists": {
+    "description": "playlists"
+  },
   "albums": "ఆల్బమ్స్",
+  "@albums": {
+    "description": "albums"
+  },
   "artists": "ఆర్టిస్ట్స్",
+  "@artists": {
+    "description": "artists"
+  },
   "libSongs": "లైబ్రరీ సాంగ్స్",
+  "@libSongs": {
+    "description": "libSongs"
+  },
   "settings": "సెట్టింగ్స్",
+  "@settings": {
+    "description": "settings"
+  },
   "libPlaylists": "లైబ్రరీ ప్లెలిస్ట్స్",
+  "@libPlaylists": {
+    "description": "libPlaylists"
+  },
   "libArtists": "లైబ్రరీ ఆర్టిస్ట్స్",
+  "@libArtists": {
+    "description": "libArtists"
+  },
   "items": "ఐటమ్స్",
+  "@items": {
+    "description": "items"
+  },
   "networkError1": "ఊపస్ నెట్వర్క్ ఎర్రర్!",
+  "@networkError1": {
+    "description": "networkError1"
+  },
   "recentlyPlayed": "రీసెంట్లీ ప్లేయడ్",
+  "@recentlyPlayed": {
+    "description": "recentlyPlayed"
+  },
   "enqueueAll": "అన్నింటినీ ఎన్‌క్యూ చేయండి",
+  "@enqueueAll": {
+    "description": "enqueueAll"
+  },
   "removePlaylist": "ప్లేజాబితాను తీసివేయండి",
+  "@removePlaylist": {
+    "description": "removePlaylist"
+  },
   "CreateNewPlaylist": "కొత్త ప్లేజాబితాని సృష్టించండి",
+  "@CreateNewPlaylist": {
+    "description": "CreateNewPlaylist"
+  },
   "create": "సృష్టించు",
+  "@create": {
+    "description": "create"
+  },
   "cachedOrOffline": "కాచెడ్/ఆఫ్లైన్",
+  "@cachedOrOffline": {
+    "description": "cachedOrOffline"
+  },
   "createnAdd": "సృష్టించు & జోడించు",
+  "@createnAdd": {
+    "description": "createnAdd"
+  },
   "noBookmarks": "బుక్‌మార్క్‌లు లేవు!",
+  "@noBookmarks": {
+    "description": "noBookmarks"
+  },
   "addToPlaylist": "ప్లేజాబితాకు జోడించండి",
+  "@addToPlaylist": {
+    "description": "addToPlaylist"
+  },
   "noLibPlaylist": "మీకు లిబ్ ప్లేజాబితా ఏదీ లేదు!",
+  "@noLibPlaylist": {
+    "description": "noLibPlaylist"
+  },
   "startRadio": "రేడియో ప్రారంభించండి",
+  "@startRadio": {
+    "description": "startRadio"
+  },
   "removeFromQueue": "జాబితా నుండి తొలగించు",
+  "@removeFromQueue": {
+    "description": "removeFromQueue"
+  },
   "shareSong": "ఈ పాటను షేర్ చేయండి",
+  "@shareSong": {
+    "description": "shareSong"
+  },
   "featuredplaylists": "ఫీచర్స్ ప్లేలిస్ట్",
+  "@featuredplaylists": {
+    "description": "featuredplaylists"
+  },
   "downloads": "దౌన్లోడ్స్",
+  "@downloads": {
+    "description": "downloads"
+  },
   "singles": "సింగిల్స్",
+  "@singles": {
+    "description": "singles"
+  },
   "addMultipleSongs": "ప్లేజాబితాకు పాటలను జోడించండి",
+  "@addMultipleSongs": {
+    "description": "addMultipleSongs"
+  },
   "queueShufflingDeniedMsg": "షఫుల్ మోడ్ ప్రారంభించబడినప్పుడు క్యూ షఫుల్ చేయబడదు",
+  "@queueShufflingDeniedMsg": {
+    "description": "queueShufflingDeniedMsg"
+  },
   "queuerearrangingDeniedMsg": "షఫుల్ మోడ్ ప్రారంభించబడినప్పుడు క్యూను తిరిగి అమర్చలేరు",
+  "@queuerearrangingDeniedMsg": {
+    "description": "queuerearrangingDeniedMsg"
+  },
   "songNotPlayable": "సర్వర్ పరిమితి కారణంగా పాట ప్లే చేయబడదు!",
+  "@songNotPlayable": {
+    "description": "songNotPlayable"
+  },
   "emptyPlaylist": "ప్లేజాబితా ఖాళీ!",
+  "@emptyPlaylist": {
+    "description": "emptyPlaylist"
+  },
   "cancel": "రద్దు చేయి",
+  "@cancel": {
+    "description": "cancel"
+  },
   "removeFromPlaylist": "ప్లేజాబితా నుండి తీసివేయండి",
+  "@removeFromPlaylist": {
+    "description": "removeFromPlaylist"
+  },
   "rename": "పేరు మార్చండి",
+  "@rename": {
+    "description": "rename"
+  },
   "songs": "సాంగ్స్",
+  "@songs": {
+    "description": "songs"
+  },
   "upNext": "తదుపరి",
+  "@upNext": {
+    "description": "upNext"
+  },
   "album": "ఆల్బమ్",
+  "@album": {
+    "description": "album"
+  },
   "noOfflineSong": "నో ఆఫ్లైన్ సాంగ్స్!",
+  "@noOfflineSong": {
+    "description": "noOfflineSong"
+  },
   "favorites": "ఫేవరెట్",
+  "@favorites": {
+    "description": "favorites"
+  },
   "enqueueSong": "ఈ పాటను క్రమబద్ధీకరించండి",
+  "@enqueueSong": {
+    "description": "enqueueSong"
+  },
   "goToAlbum": "ఆల్బమ్‌కి వెళ్లండి",
+  "@goToAlbum": {
+    "description": "goToAlbum"
+  },
   "playingfromAlbum": "ఆల్బమ్ నుండి ప్లే అవుతోంది",
+  "@playingfromAlbum": {
+    "description": "playingfromAlbum"
+  },
   "playingfromPlaylist": "ప్లేజాబితా నుండి ప్లే అవుతోంది",
+  "@playingfromPlaylist": {
+    "description": "playingfromPlaylist"
+  },
   "playingfromSelection": "ఎంపిక నుండి ప్లే",
+  "@playingfromSelection": {
+    "description": "playingfromSelection"
+  },
   "playingfromArtist": "ఆర్టిస్ట్ నుండి ప్లే",
+  "@playingfromArtist": {
+    "description": "playingfromArtist"
+  },
   "queueLoop": "క్యూ లూప్",
+  "@queueLoop": {
+    "description": "queueLoop"
+  },
   "queueLoopNotDisMsg1": "షఫుల్ మోడ్ ప్రారంభించబడినప్పుడు క్యూ లూప్ మోడ్ నిలిపివేయబడదు.",
+  "@queueLoopNotDisMsg1": {
+    "description": "queueLoopNotDisMsg1"
+  },
   "queueLoopNotDisMsg2": "రేడియో మోడ్‌లో క్యూ లూప్ మోడ్ ప్రారంభించబడదు.",
+  "@queueLoopNotDisMsg2": {
+    "description": "queueLoopNotDisMsg2"
+  },
   "removeFromLib": "లైబ్రరీ పాటల నుండి తీసివేయండి",
+  "@removeFromLib": {
+    "description": "removeFromLib"
+  },
   "sleepTimer": "స్లీప్ టైమర్",
+  "@sleepTimer": {
+    "description": "sleepTimer"
+  },
   "add5Minutes": "5 నిమిషాలు జోడించండి",
+  "@add5Minutes": {
+    "description": "add5Minutes"
+  },
   "cancelTimer": "టైమర్‌ని రద్దు చేయండి",
+  "@cancelTimer": {
+    "description": "cancelTimer"
+  },
   "deleteDownloadData": "డౌన్‌లోడ్‌ల నుండి తీసివేయండి",
+  "@deleteDownloadData": {
+    "description": "deleteDownloadData"
+  },
   "minutes": "నిమిషాలు",
+  "@minutes": {
+    "description": "minutes"
+  },
   "endOfThisSong": "ఈ పాట ముగింపు",
+  "@endOfThisSong": {
+    "description": "endOfThisSong"
+  },
   "appInfo": "యాప్ సమాచారం",
+  "@appInfo": {
+    "description": "appInfo"
+  },
   "download": "డౌన్‌లోడ్ చేయండి",
+  "@download": {
+    "description": "download"
+  },
   "misc": "ఇతర",
+  "@misc": {
+    "description": "misc"
+  },
   "autoDownFavSong": "ఇష్టమైన పాటలను ఆటో డౌన్‌లోడ్ చేసుకోండి",
+  "@autoDownFavSong": {
+    "description": "autoDownFavSong"
+  },
   "autoDownFavSongDes": "ఇష్టమైన వాటికి జోడించినప్పుడు ఇష్టమైన పాటలను స్వయంచాలకంగా డౌన్‌లోడ్ చేయండి",
+  "@autoDownFavSongDes": {
+    "description": "autoDownFavSongDes"
+  },
   "networkError": "నెట్‌వర్క్ లోపం! మీ నెట్‌వర్క్ కనెక్షన్‌ని తనిఖీ చేయండి.",
+  "@networkError": {
+    "description": "networkError"
+  },
   "downloadError2": "సర్వర్ పరిమితి కారణంగా అభ్యర్థించిన పాట డౌన్‌లోడ్ చేయడం సాధ్యం కాదు. మీరు మళ్లీ ప్రయత్నించవచ్చు",
+  "@downloadError2": {
+    "description": "downloadError2"
+  },
   "downloadError3": "నెట్‌వర్క్/స్ట్రీమ్ లోపం కారణంగా డౌన్‌లోడ్ చేయడం విఫలమైంది! దయచేసి మళ్లీ ప్రయత్నించండి",
+  "@downloadError3": {
+    "description": "downloadError3"
+  },
   "musicAndPlayback": "సంగీతం & ప్లేబ్యాక్",
+  "@musicAndPlayback": {
+    "description": "musicAndPlayback"
+  },
   "content": "కంటెంట్",
+  "@content": {
+    "description": "content"
+  },
   "personalisation": "వ్యక్తిగతీకరణ",
+  "@personalisation": {
+    "description": "personalisation"
+  },
   "themeMode": "థీమ్ మోడ్",
+  "@themeMode": {
+    "description": "themeMode"
+  },
   "dynamic": "డైనమిక్",
+  "@dynamic": {
+    "description": "dynamic"
+  },
   "systemDefault": "సిస్టమ్ డిఫాల్ట్",
+  "@systemDefault": {
+    "description": "systemDefault"
+  },
   "dark": "చీకటి",
+  "@dark": {
+    "description": "dark"
+  },
   "light": "కాంతి",
+  "@light": {
+    "description": "light"
+  },
   "language": "భాష",
+  "@language": {
+    "description": "language"
+  },
   "playerUi": "ప్లేయర్ Ui",
+  "@playerUi": {
+    "description": "playerUi"
+  },
   "playerUiDes": "ప్లేయర్ యూజర్ ఇంటర్‌ఫేస్‌ని ఎంచుకోండి",
+  "@playerUiDes": {
+    "description": "playerUiDes"
+  },
   "standard": "ప్రామాణికం",
+  "@standard": {
+    "description": "standard"
+  },
   "gesture": "సంజ్ఞ",
+  "@gesture": {
+    "description": "gesture"
+  },
   "languageDes": "యాప్ భాషను సెట్ చేయండి",
+  "@languageDes": {
+    "description": "languageDes"
+  },
   "setDiscoverContent": "డిస్కవర్ కంటెంట్‌ని సెట్ చేయండి",
+  "@setDiscoverContent": {
+    "description": "setDiscoverContent"
+  },
   "quickpicks": "త్వరిత ఎంపికలు",
+  "@quickpicks": {
+    "description": "quickpicks"
+  },
   "discover": "కనుగొనండి",
+  "@discover": {
+    "description": "discover"
+  },
   "trending": "ట్రెండింగ్‌లో ఉంది",
+  "@trending": {
+    "description": "trending"
+  },
   "topmusicvideos": "అగ్ర సంగీత వీడియోలు",
+  "@topmusicvideos": {
+    "description": "topmusicvideos"
+  },
   "basedOnLast": "చివరి పరస్పర చర్య ఆధారంగా",
+  "@basedOnLast": {
+    "description": "basedOnLast"
+  },
   "restoreLastPlaybackSession": "చివరి ప్లేబ్యాక్ సెషన్‌ని పునరుద్ధరించండి",
+  "@restoreLastPlaybackSession": {
+    "description": "restoreLastPlaybackSession"
+  },
   "restoreLastPlaybackSessionDes": "యాప్ ప్రారంభంలో చివరి ప్లేబ్యాక్ సెషన్‌ను స్వయంచాలకంగా పునరుద్ధరించండి",
+  "@restoreLastPlaybackSessionDes": {
+    "description": "restoreLastPlaybackSessionDes"
+  },
   "autoOpenPlayer": "ఆటో ఓపెన్ ప్లేయర్ స్క్రీన్",
+  "@autoOpenPlayer": {
+    "description": "autoOpenPlayer"
+  },
   "autoOpenPlayerDes": "ప్లే కోసం పాట ఎంపికపై ప్లేయర్ పూర్తి స్క్రీన్‌ను ఆటో తెరవడాన్ని ప్రారంభించండి/నిలిపివేయండి",
+  "@autoOpenPlayerDes": {
+    "description": "autoOpenPlayerDes"
+  },
   "homeContentCount": "హోమ్ కంటెంట్ కౌంట్",
+  "@homeContentCount": {
+    "description": "homeContentCount"
+  },
   "homeContentCountDes": "ప్రారంభ హోమ్‌స్క్రీన్-కంటెంట్ (సుమారు) సంఖ్యను ఎంచుకోండి. తక్కువ ఫలితాలు వేగంగా లోడ్ అవుతాయి",
+  "@homeContentCountDes": {
+    "description": "homeContentCountDes"
+  },
   "enableBottomNav": "దిగువ నావిగేషన్ బార్",
+  "@enableBottomNav": {
+    "description": "enableBottomNav"
+  },
   "enableBottomNavDes": "దిగువ నావిగేషన్ బార్‌కి మారండి",
+  "@enableBottomNavDes": {
+    "description": "enableBottomNavDes"
+  },
   "cacheSongs": "కాష్ పాటలు",
+  "@cacheSongs": {
+    "description": "cacheSongs"
+  },
   "cacheSongsDes": "భవిష్యత్తు/ఆఫ్‌లైన్ ప్లేబ్యాక్ కోసం ప్లే చేస్తున్నప్పుడు పాటలను కాషింగ్ చేయడం వల్ల మీ పరికరంలో అదనపు స్థలాన్ని తీసుకుంటుంది",
+  "@cacheSongsDes": {
+    "description": "cacheSongsDes"
+  },
   "skipSilence": "నిశ్శబ్దాన్ని దాటవేయి",
+  "@skipSilence": {
+    "description": "skipSilence"
+  },
   "skipSilenceDes": "మ్యూజిక్ ప్లేబ్యాక్‌లో నిశ్శబ్దం దాటవేయబడుతుంది",
+  "@skipSilenceDes": {
+    "description": "skipSilenceDes"
+  },
   "loudnessNormalization": "శబ్దం సాధారణీకరణ",
+  "@loudnessNormalization": {
+    "description": "loudnessNormalization"
+  },
   "loudnessNormalizationDes": "అన్ని పాటలకు (ప్రయోగాత్మకం) ఒకే రకమైన శబ్దాన్ని సెట్ చేస్తుంది (మునుపటి వెర్షన్‌లో డౌన్‌లోడ్ చేసిన పాటలపై పని చేయదు(< v1.10.0))",
+  "@loudnessNormalizationDes": {
+    "description": "loudnessNormalizationDes"
+  },
   "streamingQuality": "స్ట్రీమింగ్ నాణ్యత",
+  "@streamingQuality": {
+    "description": "streamingQuality"
+  },
   "streamingQualityDes": "సంగీత ప్రసారం యొక్క నాణ్యత",
+  "@streamingQualityDes": {
+    "description": "streamingQualityDes"
+  },
   "disableTransitionAnimation": "పరివర్తన యానిమేషన్‌ను నిలిపివేయండి",
+  "@disableTransitionAnimation": {
+    "description": "disableTransitionAnimation"
+  },
   "disableTransitionAnimationDes": "ట్యాబ్ పరివర్తన యానిమేషన్‌ను నిలిపివేయడానికి ఈ ఎంపికను ప్రారంభించండి",
+  "@disableTransitionAnimationDes": {
+    "description": "disableTransitionAnimationDes"
+  },
   "high": "అధిక",
+  "@high": {
+    "description": "high"
+  },
   "low": "తక్కువ",
+  "@low": {
+    "description": "low"
+  },
   "backgroundPlay": "బ్యాక్‌గ్రౌండ్ మ్యూజిక్ ప్లే",
+  "@backgroundPlay": {
+    "description": "backgroundPlay"
+  },
   "downloadLocation": "స్థానాన్ని డౌన్‌లోడ్ చేయండి",
+  "@downloadLocation": {
+    "description": "downloadLocation"
+  },
   "enableSlidableAction": "స్లయిడ్ చేయగల చర్యలను ప్రారంభించండి",
+  "@enableSlidableAction": {
+    "description": "enableSlidableAction"
+  },
   "enableSlidableActionDes": "పాట టైల్లో స్లయిడ్ చేయగల చర్యలను ప్రారంభించండి",
+  "@enableSlidableActionDes": {
+    "description": "enableSlidableActionDes"
+  },
   "backgroundPlayDes": "నేపథ్యంలో మ్యూజిక్ ప్లే చేయడాన్ని ప్రారంభించండి/నిలిపివేయండి (యాప్ నేపథ్యంలో నడుస్తున్నప్పుడు సిస్టమ్ ట్రే నుండి యాప్‌ను యాక్సెస్ చేయవచ్చు)",
+  "@backgroundPlayDes": {
+    "description": "backgroundPlayDes"
+  },
   "cacheHomeScreenData": "హోమ్ స్క్రీన్ కంటెంట్ డేటాను కాష్ చేయండి",
+  "@cacheHomeScreenData": {
+    "description": "cacheHomeScreenData"
+  },
   "cacheHomeScreenDataDes": "హోమ్ స్క్రీన్ కంటెంట్ డేటాను కాషింగ్ చేయడాన్ని ప్రారంభించండి, ఈ ఎంపికను ప్రారంభిస్తే హోమ్ స్క్రీన్ తక్షణమే లోడ్ అవుతుంది",
+  "@cacheHomeScreenDataDes": {
+    "description": "cacheHomeScreenDataDes"
+  },
   "downloadingFormat": "ఫైల్ ఫార్మాట్‌ని డౌన్‌లోడ్ చేస్తోంది",
+  "@downloadingFormat": {
+    "description": "downloadingFormat"
+  },
   "downloadingFormatDes": "డౌన్‌లోడ్ ఫైల్ ఫార్మాట్‌ను ఎంచుకోండి. \"ఓపస్\" ఉత్తమ నాణ్యతను అందిస్తుంది",
+  "@downloadingFormatDes": {
+    "description": "downloadingFormatDes"
+  },
   "exportDowloadedFiles": "డౌన్‌లోడ్ చేసిన ఫైల్‌లను ఎగుమతి చేయండి",
+  "@exportDowloadedFiles": {
+    "description": "exportDowloadedFiles"
+  },
   "exportDowloadedFilesDes": "డౌన్‌లోడ్ చేసిన ఫైల్‌ను inApp dir నుండి బాహ్య dir కి ఎగుమతి చేయడానికి ఇక్కడ క్లిక్ చేయండి",
+  "@exportDowloadedFilesDes": {
+    "description": "exportDowloadedFilesDes"
+  },
   "exportedFileLocation": "డౌన్‌లోడ్ చేయబడిన ఫైల్ ఎగుమతి స్థానం",
+  "@exportedFileLocation": {
+    "description": "exportedFileLocation"
+  },
   "export": "ఎగుమతి",
+  "@export": {
+    "description": "export"
+  },
   "exporting": "ఎగుమతి చేస్తున్నది...",
+  "@exporting": {
+    "description": "exporting"
+  },
   "keepScreenOnWhilePlaying": "సంగీతం ప్లే చేస్తున్నప్పుడు స్క్రీన్ ఆన్ ఉంచండి",
-  "keepScreenOnWhilePlayingDes": "సక్రియపెడితే, సంగీతం ప్లే చేస్తున్నప్పుడు పరికరం యొక్క స్క్రీన్ ఆన్ గా ఉంటుంది"
+  "@keepScreenOnWhilePlaying": {
+    "description": "keepScreenOnWhilePlaying"
+  },
+  "keepScreenOnWhilePlayingDes": "సక్రియపెడితే, సంగీతం ప్లే చేస్తున్నప్పుడు పరికరం యొక్క స్క్రీన్ ఆన్ గా ఉంటుంది",
+  "@keepScreenOnWhilePlayingDes": {
+    "description": "keepScreenOnWhilePlayingDes"
+  }
 }

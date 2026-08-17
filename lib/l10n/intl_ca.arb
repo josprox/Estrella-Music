@@ -1,272 +1,1079 @@
 {
   "@@locale": "ca",
   "libPlaylists": "Col · lecció de llistes de reproducció",
+  "@libPlaylists": {
+    "description": "libPlaylists"
+  },
   "libArtists": "Biblioteca d'Artistes",
+  "@libArtists": {
+    "description": "libArtists"
+  },
   "communityplaylists": "Llistes de reproducció de la comunitat",
+  "@communityplaylists": {
+    "description": "communityplaylists"
+  },
   "featuredplaylists": "Llistes de Reproducció Destacades",
+  "@featuredplaylists": {
+    "description": "featuredplaylists"
+  },
   "recentlyPlayed": "Reproduït Fa Poc",
+  "@recentlyPlayed": {
+    "description": "recentlyPlayed"
+  },
   "favorites": "Preferits",
+  "@favorites": {
+    "description": "favorites"
+  },
   "downloads": "Baixades",
+  "@downloads": {
+    "description": "downloads"
+  },
   "removeMultiple": "Esborrar diverses cançons",
+  "@removeMultiple": {
+    "description": "removeMultiple"
+  },
   "cancel": "Cancel·lar",
+  "@cancel": {
+    "description": "cancel"
+  },
   "create": "Crear",
+  "@create": {
+    "description": "create"
+  },
   "playNext": "Següent",
+  "@playNext": {
+    "description": "playNext"
+  },
   "addToPlaylist": "Afegir a la llista de reproducció",
+  "@addToPlaylist": {
+    "description": "addToPlaylist"
+  },
   "removeFromPlaylist": "Esborrar de la llista de reproducció",
+  "@removeFromPlaylist": {
+    "description": "removeFromPlaylist"
+  },
   "removeFromLib": "Esborrar del catàleg de cançons",
+  "@removeFromLib": {
+    "description": "removeFromLib"
+  },
   "deleteDownloadData": "Esborrar de les baixades",
+  "@deleteDownloadData": {
+    "description": "deleteDownloadData"
+  },
   "deleteDownloadedDataAlert": "Esborrada de les baixades!",
+  "@deleteDownloadedDataAlert": {
+    "description": "deleteDownloadedDataAlert"
+  },
   "downloadingFormatDes": "Tria el format de les baixades. \"Opus\" té la millor qualitat",
+  "@downloadingFormatDes": {
+    "description": "downloadingFormatDes"
+  },
   "exportDowloadedFilesDes": "Prem aqui per exportar els arxius baixats de la carpeta de l'aplicació a una carpeta externa",
+  "@exportDowloadedFilesDes": {
+    "description": "exportDowloadedFilesDes"
+  },
   "downloadLocation": "Ubicació de les baixades",
+  "@downloadLocation": {
+    "description": "downloadLocation"
+  },
   "exportDowloadedFiles": "Exporta arxius baixats",
+  "@exportDowloadedFiles": {
+    "description": "exportDowloadedFiles"
+  },
   "downloadingFormat": "Format de les baixades",
+  "@downloadingFormat": {
+    "description": "downloadingFormat"
+  },
   "home": "Inici",
+  "@home": {
+    "description": "home"
+  },
   "songs": "Cançons",
+  "@songs": {
+    "description": "songs"
+  },
   "playlists": "Llistes de reproducció",
+  "@playlists": {
+    "description": "playlists"
+  },
   "albums": "Àlbums",
+  "@albums": {
+    "description": "albums"
+  },
   "artists": "Artistes",
+  "@artists": {
+    "description": "artists"
+  },
   "settings": "Configuració",
+  "@settings": {
+    "description": "settings"
+  },
   "libAlbums": "Biblioteca d'Àlbums",
+  "@libAlbums": {
+    "description": "libAlbums"
+  },
   "singles": "Senzills",
+  "@singles": {
+    "description": "singles"
+  },
   "library": "Col·lecció",
+  "@library": {
+    "description": "library"
+  },
   "libSongs": "Col·lecció de cançons",
+  "@libSongs": {
+    "description": "libSongs"
+  },
   "items": "elements",
+  "@items": {
+    "description": "items"
+  },
   "retry": "Reintenta!",
+  "@retry": {
+    "description": "retry"
+  },
   "noOfflineSong": "No hi ha cançons sense connexió!",
+  "@noOfflineSong": {
+    "description": "noOfflineSong"
+  },
   "networkError1": "Ui, error de xarxa!",
+  "@networkError1": {
+    "description": "networkError1"
+  },
   "cachedOrOffline": "A la memòria cau/Fora de línia",
+  "@cachedOrOffline": {
+    "description": "cachedOrOffline"
+  },
   "emptyPlaylist": "Llista de reproducció buida!",
+  "@emptyPlaylist": {
+    "description": "emptyPlaylist"
+  },
   "enqueueAll": "Posar tots en cua",
+  "@enqueueAll": {
+    "description": "enqueueAll"
+  },
   "renamePlaylist": "Reanomenar la llista de reproducció",
+  "@renamePlaylist": {
+    "description": "renamePlaylist"
+  },
   "removePlaylist": "Esborrar la llista de reproducció",
+  "@removePlaylist": {
+    "description": "removePlaylist"
+  },
   "CreateNewPlaylist": "Crear una nova llista de reproducció",
+  "@CreateNewPlaylist": {
+    "description": "CreateNewPlaylist"
+  },
   "reArrangePlaylist": "Reorganizar la llista de reproducció",
+  "@reArrangePlaylist": {
+    "description": "reArrangePlaylist"
+  },
   "addMultipleSongs": "Afegir cançons a la llista de reproducció",
+  "@addMultipleSongs": {
+    "description": "addMultipleSongs"
+  },
   "rename": "Reanomenar",
+  "@rename": {
+    "description": "rename"
+  },
   "createnAdd": "Crear i afegir",
+  "@createnAdd": {
+    "description": "createnAdd"
+  },
   "noBookmarks": "Cap preferit!",
+  "@noBookmarks": {
+    "description": "noBookmarks"
+  },
   "startRadio": "Engegar la ràdio",
+  "@startRadio": {
+    "description": "startRadio"
+  },
   "noLibPlaylist": "No tens cap col·lecció de llistes de reproducció!",
+  "@noLibPlaylist": {
+    "description": "noLibPlaylist"
+  },
   "enqueueSong": "Afegir a la cua",
+  "@enqueueSong": {
+    "description": "enqueueSong"
+  },
   "goToAlbum": "Ves a l'àlbum",
+  "@goToAlbum": {
+    "description": "goToAlbum"
+  },
   "viewArtist": "Veure l'artista",
+  "@viewArtist": {
+    "description": "viewArtist"
+  },
   "openIn": "Obrir a",
+  "@openIn": {
+    "description": "openIn"
+  },
   "shareSong": "Compartir aquesta cançó",
+  "@shareSong": {
+    "description": "shareSong"
+  },
   "removeFromQueue": "Esborrar de la cua",
+  "@removeFromQueue": {
+    "description": "removeFromQueue"
+  },
   "upNext": "Tot seguit",
+  "@upNext": {
+    "description": "upNext"
+  },
   "sleepTimer": "Temporitzador",
+  "@sleepTimer": {
+    "description": "sleepTimer"
+  },
   "add5Minutes": "Afegir 5 minuts",
+  "@add5Minutes": {
+    "description": "add5Minutes"
+  },
   "cancelTimer": "Cancel·lar temporitzador",
+  "@cancelTimer": {
+    "description": "cancelTimer"
+  },
   "exportedFileLocation": "Ubicació dels arxius baixats",
+  "@exportedFileLocation": {
+    "description": "exportedFileLocation"
+  },
   "downFilesFound": "s'han trobat arxius baixats",
+  "@downFilesFound": {
+    "description": "downFilesFound"
+  },
   "minutes": "minuts",
+  "@minutes": {
+    "description": "minutes"
+  },
   "endOfThisSong": "Fi d'aquesta cançó",
+  "@endOfThisSong": {
+    "description": "endOfThisSong"
+  },
   "themeMode": "Mode Tema",
+  "@themeMode": {
+    "description": "themeMode"
+  },
   "dynamic": "Dinàmic",
+  "@dynamic": {
+    "description": "dynamic"
+  },
   "systemDefault": "Predeterminat del sistema",
+  "@systemDefault": {
+    "description": "systemDefault"
+  },
   "dark": "Fosc",
+  "@dark": {
+    "description": "dark"
+  },
   "light": "Clar",
+  "@light": {
+    "description": "light"
+  },
   "language": "Idioma",
+  "@language": {
+    "description": "language"
+  },
   "languageDes": "Configurar l'idioma de l'aplicació",
+  "@languageDes": {
+    "description": "languageDes"
+  },
   "setDiscoverContent": "Descobrir contingut",
+  "@setDiscoverContent": {
+    "description": "setDiscoverContent"
+  },
   "quickpicks": "Tria ràpida",
+  "@quickpicks": {
+    "description": "quickpicks"
+  },
   "trending": "Tendència",
+  "@trending": {
+    "description": "trending"
+  },
   "topmusicvideos": "Millors Vídeos Musicals",
+  "@topmusicvideos": {
+    "description": "topmusicvideos"
+  },
   "enableBottomNav": "Barra de navegació a baix",
+  "@enableBottomNav": {
+    "description": "enableBottomNav"
+  },
   "enableBottomNavDes": "Canviar la barra de navegació a baix",
+  "@enableBottomNavDes": {
+    "description": "enableBottomNavDes"
+  },
   "cacheSongs": "Cançons a la memòria cau",
+  "@cacheSongs": {
+    "description": "cacheSongs"
+  },
   "cacheSongsDes": "Desa les cançons a la memòria cau per reproduïr més endavant/fora de línia, farà servir espai addicional al dispositiu",
+  "@cacheSongsDes": {
+    "description": "cacheSongsDes"
+  },
   "skipSilence": "Saltar silenci",
+  "@skipSilence": {
+    "description": "skipSilence"
+  },
   "skipSilenceDes": "Saltarà el silenci a la reproducció de música",
+  "@skipSilenceDes": {
+    "description": "skipSilenceDes"
+  },
   "streamingQuality": "Qualitat de la transmissió",
+  "@streamingQuality": {
+    "description": "streamingQuality"
+  },
   "disableTransitionAnimation": "Deshabilita l'animació de transició",
+  "@disableTransitionAnimation": {
+    "description": "disableTransitionAnimation"
+  },
   "high": "Alt",
+  "@high": {
+    "description": "high"
+  },
   "low": "Baix",
+  "@low": {
+    "description": "low"
+  },
   "backgroundPlay": "Reproduïr música en segon pla",
+  "@backgroundPlay": {
+    "description": "backgroundPlay"
+  },
   "backgroundPlayDes": "Activa/Desactiva la reproducció de música en segon pla (Es pot obrir l'aplicació des de la safata del sistema quan està executant-se en segon pla)",
+  "@backgroundPlayDes": {
+    "description": "backgroundPlayDes"
+  },
   "cacheHomeScreenData": "Desa el contingut de la pantalla inicial a la memòria cau",
+  "@cacheHomeScreenData": {
+    "description": "cacheHomeScreenData"
+  },
   "export": "Exportar",
+  "@export": {
+    "description": "export"
+  },
   "exporting": "Exportant...",
+  "@exporting": {
+    "description": "exporting"
+  },
   "scanning": "Escanejant...",
+  "@scanning": {
+    "description": "scanning"
+  },
   "close": "Tancar",
+  "@close": {
+    "description": "close"
+  },
   "equalizerDes": "Obrir l'equalitzador del sistema",
+  "@equalizerDes": {
+    "description": "equalizerDes"
+  },
   "clearImgCache": "Esborrar les imatges de la memòria cau",
+  "@clearImgCache": {
+    "description": "clearImgCache"
+  },
   "clearImgCacheAlert": "Memòria cau d'imatges esborrada correctament",
+  "@clearImgCacheAlert": {
+    "description": "clearImgCacheAlert"
+  },
   "ignoreBatOpt": "Ignorar optimització de bateria",
+  "@ignoreBatOpt": {
+    "description": "ignoreBatOpt"
+  },
   "status": "Estat",
+  "@status": {
+    "description": "status"
+  },
   "enabled": "Activat",
+  "@enabled": {
+    "description": "enabled"
+  },
   "githubDes": "Veure codi font a GitHub\nsi t'agrada el projecte, no oblidis donar-li una ⭐",
+  "@githubDes": {
+    "description": "githubDes"
+  },
   "by": "per",
+  "@by": {
+    "description": "by"
+  },
   "searchDes": "Cançons,Llista de reproducció,Àlbum o Artista",
+  "@searchDes": {
+    "description": "searchDes"
+  },
   "searchRes": "Resultats de la cerca",
+  "@searchRes": {
+    "description": "searchRes"
+  },
   "videos": "Vídeos",
+  "@videos": {
+    "description": "videos"
+  },
   "viewAll": "Veure tot",
+  "@viewAll": {
+    "description": "viewAll"
+  },
   "nomatch": "No hi han coincidències per",
+  "@nomatch": {
+    "description": "nomatch"
+  },
   "subscribers": "subscriptors",
+  "@subscribers": {
+    "description": "subscribers"
+  },
   "for1": "per a",
+  "@for1": {
+    "description": "for1"
+  },
   "synced": "Sincronitzat",
+  "@synced": {
+    "description": "synced"
+  },
   "newVersionAvailable": "Nova versió disponible!",
+  "@newVersionAvailable": {
+    "description": "newVersionAvailable"
+  },
   "dontShowInfoAgain": "No mostrar més aquesta informació",
+  "@dontShowInfoAgain": {
+    "description": "dontShowInfoAgain"
+  },
   "dismiss": "Descartar",
+  "@dismiss": {
+    "description": "dismiss"
+  },
   "notaSongVideo": "No és cap cançó/vídeo musical!",
+  "@notaSongVideo": {
+    "description": "notaSongVideo"
+  },
   "notaValidLink": "Enllaç invàlid!",
+  "@notaValidLink": {
+    "description": "notaValidLink"
+  },
   "local": "Local",
+  "@local": {
+    "description": "local"
+  },
   "unLink": "Desenllaçar",
+  "@unLink": {
+    "description": "unLink"
+  },
   "link": "Enllaçar",
+  "@link": {
+    "description": "link"
+  },
   "hintApiUrl": "API URL a la instància Piped",
+  "@hintApiUrl": {
+    "description": "hintApiUrl"
+  },
   "stopMusicOnTaskClear": "Aturar la música quan s'elimina de la llista de tasques",
+  "@stopMusicOnTaskClear": {
+    "description": "stopMusicOnTaskClear"
+  },
   "stopMusicOnTaskClearDes": "La reproducció s'aturarà quan s'elimini la App de la llista de tasques",
+  "@stopMusicOnTaskClearDes": {
+    "description": "stopMusicOnTaskClearDes"
+  },
   "discover": "Descobrir",
+  "@discover": {
+    "description": "discover"
+  },
   "homeContentCount": "Recompte de contingut a l'inici",
+  "@homeContentCount": {
+    "description": "homeContentCount"
+  },
   "streamingQualityDes": "Qualitat de la transmissió de la música",
+  "@streamingQualityDes": {
+    "description": "streamingQualityDes"
+  },
   "restoreLastPlaybackSessionDes": "Restaurar automàticament la darrera sessió de reproducció en iniciar la App",
+  "@restoreLastPlaybackSessionDes": {
+    "description": "restoreLastPlaybackSessionDes"
+  },
   "homeContentCountDes": "Selecciona el nombre de continguts a la pàgina d'inici (aprox.). Menys resultats carrega més ràpid",
+  "@homeContentCountDes": {
+    "description": "homeContentCountDes"
+  },
   "basedOnLast": "Basat en la darrera interacció",
+  "@basedOnLast": {
+    "description": "basedOnLast"
+  },
   "restoreLastPlaybackSession": "Restaura la darrera sessió de reproducció",
+  "@restoreLastPlaybackSession": {
+    "description": "restoreLastPlaybackSession"
+  },
   "disableTransitionAnimationDes": "Activa aquesta opció per deshabilitar l'animació de canvi de pestanya",
+  "@disableTransitionAnimationDes": {
+    "description": "disableTransitionAnimationDes"
+  },
   "cacheHomeScreenDataDes": "Activa desar a la memòria cau el contingut de la pantalla inicial, carregarà instantàniament en activar aquesta opció",
+  "@cacheHomeScreenDataDes": {
+    "description": "cacheHomeScreenDataDes"
+  },
   "exportMsg": "Arxius exportats correctament",
+  "@exportMsg": {
+    "description": "exportMsg"
+  },
   "clearImgCacheDes": "Prem aquí per esborrar les miniatures/imatges de la memòria cau. (No recomanat a no ser que vulguis refrescar les imatges de la memòria cau)",
+  "@clearImgCacheDes": {
+    "description": "clearImgCacheDes"
+  },
   "equalizer": "Equalitzador",
+  "@equalizer": {
+    "description": "equalizer"
+  },
   "ignoreBatOptDes": "Si trobes problemes o s'atura la reproducció per optimització del sistema, si us plau habilita aquesta opció",
+  "@ignoreBatOptDes": {
+    "description": "ignoreBatOptDes"
+  },
   "disabled": "Desactivat",
+  "@disabled": {
+    "description": "disabled"
+  },
   "github": "GitHub",
+  "@github": {
+    "description": "github"
+  },
   "search": "Cercar",
+  "@search": {
+    "description": "search"
+  },
   "results": "Resultats",
+  "@results": {
+    "description": "results"
+  },
   "playlistRemovedAlert": "Llista de reproducció esborrada!",
+  "@playlistRemovedAlert": {
+    "description": "playlistRemovedAlert"
+  },
   "errorOccuredAlert": "Hi ha hagut un error!",
+  "@errorOccuredAlert": {
+    "description": "errorOccuredAlert"
+  },
   "pipedplstSyncAlert": "Llista de reproducció de Piped sincronitzada!",
+  "@pipedplstSyncAlert": {
+    "description": "pipedplstSyncAlert"
+  },
   "lyricsNotAvailable": "Lletres no disponibles!",
+  "@lyricsNotAvailable": {
+    "description": "lyricsNotAvailable"
+  },
   "plain": "Pla",
+  "@plain": {
+    "description": "plain"
+  },
   "about": "Quant a",
+  "@about": {
+    "description": "about"
+  },
   "cancelTimerAlert": "S'ha cancel·lat el temporitzador per dormir",
+  "@cancelTimerAlert": {
+    "description": "cancelTimerAlert"
+  },
   "radioNotAvailable": "Ràdio no disponible per aquest artista!",
+  "@radioNotAvailable": {
+    "description": "radioNotAvailable"
+  },
   "sleepTimeSetAlert": "S'ha activat el temporitzador per dormir",
+  "@sleepTimeSetAlert": {
+    "description": "sleepTimeSetAlert"
+  },
   "songRemovedfromQueue": "Esborrada de la cua!",
+  "@songRemovedfromQueue": {
+    "description": "songRemovedfromQueue"
+  },
   "songRemovedfromQueueCurrSong": "No pots esborrar la cançó que s'està reproduïnt",
+  "@songRemovedfromQueueCurrSong": {
+    "description": "songRemovedfromQueueCurrSong"
+  },
   "songAddedToPlaylistAlert": "Cançó afegida a la llista de reproducció!",
+  "@songAddedToPlaylistAlert": {
+    "description": "songAddedToPlaylistAlert"
+  },
   "songAlreadyExists": "Aquesta cançó ja existeix!",
+  "@songAlreadyExists": {
+    "description": "songAlreadyExists"
+  },
   "songAlreadyOfflineAlert": "Aquesta canço ja és a la memòria cau fora de línia",
+  "@songAlreadyOfflineAlert": {
+    "description": "songAlreadyOfflineAlert"
+  },
   "songEnqueueAlert": "Cançó afegida a la cua!",
+  "@songEnqueueAlert": {
+    "description": "songEnqueueAlert"
+  },
   "songRemovedAlert": "Esborrada de",
+  "@songRemovedAlert": {
+    "description": "songRemovedAlert"
+  },
   "playlistBookmarkRemoveAlert": "Llista de reproducció preferida desmarcada!",
+  "@playlistBookmarkRemoveAlert": {
+    "description": "playlistBookmarkRemoveAlert"
+  },
   "playlistCreatedAlert": "Llista de reproducció creada!",
+  "@playlistCreatedAlert": {
+    "description": "playlistCreatedAlert"
+  },
   "playlistCreatednsongAddedAlert": "Llista de reproducció creada i canço afegida!",
+  "@playlistCreatednsongAddedAlert": {
+    "description": "playlistCreatednsongAddedAlert"
+  },
   "playlistBookmarkAddAlert": "Llista de reproducció marcada com preferida!",
+  "@playlistBookmarkAddAlert": {
+    "description": "playlistBookmarkAddAlert"
+  },
   "playlistRenameAlert": "Reanomenat correctament!",
+  "@playlistRenameAlert": {
+    "description": "playlistRenameAlert"
+  },
   "artistBookmarkRemoveAlert": "Artista favorit desmarcat!",
+  "@artistBookmarkRemoveAlert": {
+    "description": "artistBookmarkRemoveAlert"
+  },
   "artistBookmarkAddAlert": "Artista marcat preferit!",
+  "@artistBookmarkAddAlert": {
+    "description": "artistBookmarkAddAlert"
+  },
   "syncedLyricsNotAvailable": "Lletres sincronitzades no disponibles!",
+  "@syncedLyricsNotAvailable": {
+    "description": "syncedLyricsNotAvailable"
+  },
   "artistDesNotAvailable": "Descripció no disponible!",
+  "@artistDesNotAvailable": {
+    "description": "artistDesNotAvailable"
+  },
   "Piped": "Piped",
+  "@Piped": {
+    "description": "Piped"
+  },
   "operationFailed": "Ha fallat l'operació",
+  "@operationFailed": {
+    "description": "operationFailed"
+  },
   "goToDownloadPage": "Prem aquí per anar a la pàgina de baixada",
+  "@goToDownloadPage": {
+    "description": "goToDownloadPage"
+  },
   "selectAuthInsMsg": "Si us plau tria la instància d'autenticació!",
+  "@selectAuthInsMsg": {
+    "description": "selectAuthInsMsg"
+  },
   "customIns": "Instància personalitzada",
+  "@customIns": {
+    "description": "customIns"
+  },
   "allFieldsReqMsg": "Tots els camps són obligatoris",
+  "@allFieldsReqMsg": {
+    "description": "allFieldsReqMsg"
+  },
   "linkPipedDes": "Enllaç de llistes de reproducció de Piped",
+  "@linkPipedDes": {
+    "description": "linkPipedDes"
+  },
   "selectAuthIns": "Tria instància Auth",
+  "@selectAuthIns": {
+    "description": "selectAuthIns"
+  },
   "password": "Contrasenya",
+  "@password": {
+    "description": "password"
+  },
   "reset": "Restablir",
+  "@reset": {
+    "description": "reset"
+  },
   "username": "Usuari",
+  "@username": {
+    "description": "username"
+  },
   "linkAlert": "Enllaçat correctament!",
+  "@linkAlert": {
+    "description": "linkAlert"
+  },
   "blacklistPlstResetAlert": "Restablert correctament!",
+  "@blacklistPlstResetAlert": {
+    "description": "blacklistPlstResetAlert"
+  },
   "unlinkAlert": "Desenllaçat correctament!",
+  "@unlinkAlert": {
+    "description": "unlinkAlert"
+  },
   "playlistBlacklistAlert": "Llista de reproducció afegida a la llista negra!",
+  "@playlistBlacklistAlert": {
+    "description": "playlistBlacklistAlert"
+  },
   "customInsSelectMsg": "Si us plau tria una instància personalitzada",
+  "@customInsSelectMsg": {
+    "description": "customInsSelectMsg"
+  },
   "resetblacklistedplaylist": "Restablir les llistes de reproducció de la llista negra",
+  "@resetblacklistedplaylist": {
+    "description": "resetblacklistedplaylist"
+  },
   "resetblacklistedplaylistDes": "Restablir totes les llistes de reproducció a la llista negra de Piped",
+  "@resetblacklistedplaylistDes": {
+    "description": "resetblacklistedplaylistDes"
+  },
   "albumBookmarkRemoveAlert": "Àlbum preferit desmarcat!",
+  "@albumBookmarkRemoveAlert": {
+    "description": "albumBookmarkRemoveAlert"
+  },
   "albumBookmarkAddAlert": "Àlbum preferit marcat!",
+  "@albumBookmarkAddAlert": {
+    "description": "albumBookmarkAddAlert"
+  },
   "backupSettingsAndPlaylists": "Configurar còpia de seguretat i llistes de reproducció",
+  "@backupSettingsAndPlaylists": {
+    "description": "backupSettingsAndPlaylists"
+  },
   "backupSettingsAndPlaylistsDes": "Desa tota la configuració, llistes de reproducció i credencials de sessió en un arxiu de còpia de seguretat",
+  "@backupSettingsAndPlaylistsDes": {
+    "description": "backupSettingsAndPlaylistsDes"
+  },
   "restoreSettingsAndPlaylists": "Restaura configuració i llistes de reproducció",
+  "@restoreSettingsAndPlaylists": {
+    "description": "restoreSettingsAndPlaylists"
+  },
   "restoreSettingsAndPlaylistsDes": "Restaura tota la configuració, credencials de sessió i llistes de reproducció des d'un arxiu de còpia de seguretat. Sobre-escriu les dades actuals",
+  "@restoreSettingsAndPlaylistsDes": {
+    "description": "restoreSettingsAndPlaylistsDes"
+  },
   "backFilesFound": "bases de dades trobades",
+  "@backFilesFound": {
+    "description": "backFilesFound"
+  },
   "restoreMsg": "Restaurada correctament!\nEls canvis s'aplicaran en reiniciar",
+  "@restoreMsg": {
+    "description": "restoreMsg"
+  },
   "restoring": "S'està restaurant...",
+  "@restoring": {
+    "description": "restoring"
+  },
   "backupMsg": "Còpia de seguretat desada correctament!",
+  "@backupMsg": {
+    "description": "backupMsg"
+  },
   "restore": "Restaurar",
+  "@restore": {
+    "description": "restore"
+  },
   "closeApp": "Tancar l'aplicació",
+  "@closeApp": {
+    "description": "closeApp"
+  },
   "musicAndPlayback": "Música i reproducció",
+  "@musicAndPlayback": {
+    "description": "musicAndPlayback"
+  },
   "id": "Identificador",
+  "@id": {
+    "description": "id"
+  },
   "bitrate": "Taxa de bits",
+  "@bitrate": {
+    "description": "bitrate"
+  },
   "letsStrart": "Comencem...",
+  "@letsStrart": {
+    "description": "letsStrart"
+  },
   "includeDownloadedFiles": "Inclou els fitxers de cançons descarregades",
+  "@includeDownloadedFiles": {
+    "description": "includeDownloadedFiles"
+  },
   "backupInProgress": "Còpia de seguretat en curs...",
+  "@backupInProgress": {
+    "description": "backupInProgress"
+  },
   "songInfo": "Informació de la cançó",
+  "@songInfo": {
+    "description": "songInfo"
+  },
   "title": "Títol",
+  "@title": {
+    "description": "title"
+  },
   "appInfo": "Informació de l'aplicació",
+  "@appInfo": {
+    "description": "appInfo"
+  },
   "loudnessNormalization": "Normalització de la sonoritat",
+  "@loudnessNormalization": {
+    "description": "loudnessNormalization"
+  },
   "audioCodec": "Còdec d'àudio",
+  "@audioCodec": {
+    "description": "audioCodec"
+  },
   "backup": "Còpia de seguretat",
+  "@backup": {
+    "description": "backup"
+  },
   "backupAppData": "Còpia de seguretat de les dades de l'aplicació",
+  "@backupAppData": {
+    "description": "backupAppData"
+  },
   "queueLoopNotDisMsg2": "El mode reproducció en bucle no es pot activar en mode ràdio.",
+  "@queueLoopNotDisMsg2": {
+    "description": "queueLoopNotDisMsg2"
+  },
   "autoDownFavSong": "Descarregar automàticament les cançons favorites",
+  "@autoDownFavSong": {
+    "description": "autoDownFavSong"
+  },
   "autoDownFavSongDes": "Descarrega automàticament les cançons preferides quan s'afegeixin als preferits",
+  "@autoDownFavSongDes": {
+    "description": "autoDownFavSongDes"
+  },
   "downloadError3": "Ha fallat la descàrrega a causa d'un error de xarxa/transmissió! Torneu-ho a provar",
+  "@downloadError3": {
+    "description": "downloadError3"
+  },
   "restartApp": "Reinicia l'aplicació",
+  "@restartApp": {
+    "description": "restartApp"
+  },
   "processFiles": "Processant fitxers...",
+  "@processFiles": {
+    "description": "processFiles"
+  },
   "restoreAppData": "Restaura les dades de l'aplicació",
+  "@restoreAppData": {
+    "description": "restoreAppData"
+  },
   "queueShufflingDeniedMsg": "La cua no es pot barrejar quan el mode aleatori està activat",
+  "@queueShufflingDeniedMsg": {
+    "description": "queueShufflingDeniedMsg"
+  },
   "queuerearrangingDeniedMsg": "La cua no es pot reordenar quan el mode aleatori està activat",
+  "@queuerearrangingDeniedMsg": {
+    "description": "queuerearrangingDeniedMsg"
+  },
   "networkError": "Error de xarxa! Comproveu la vostra connexió de xarxa.",
+  "@networkError": {
+    "description": "networkError"
+  },
   "downloadError2": "La cançó sol·licitada no es pot descarregar a causa de la restricció del servidor. Podeu tornar-ho a intentar",
+  "@downloadError2": {
+    "description": "downloadError2"
+  },
   "songNotPlayable": "La cançó no es pot reproduir a causa de la restricció del servidor!",
+  "@songNotPlayable": {
+    "description": "songNotPlayable"
+  },
   "download": "Descarregar",
+  "@download": {
+    "description": "download"
+  },
   "content": "Contingut",
+  "@content": {
+    "description": "content"
+  },
   "personalisation": "Personalització",
+  "@personalisation": {
+    "description": "personalisation"
+  },
   "playerUi": "Interfície d'usuari del reproductor",
+  "@playerUi": {
+    "description": "playerUi"
+  },
   "playerUiDes": "Selecciona la interfície d'usuari del reproductor",
+  "@playerUiDes": {
+    "description": "playerUiDes"
+  },
   "standard": "Estàndard",
+  "@standard": {
+    "description": "standard"
+  },
   "gesture": "Gest",
+  "@gesture": {
+    "description": "gesture"
+  },
   "androidBackupWarning": "No provat: Seleccionant la casella de selecció després de descarregar més de 60 fitxers, el procés pot consumir una gran quantitat de memòria i pot causar que el telèfon o l'aplicació es bloquegin. Procedeix sota el teu propi risc.",
+  "@androidBackupWarning": {
+    "description": "androidBackupWarning"
+  },
   "duration": "Durada",
+  "@duration": {
+    "description": "duration"
+  },
   "playnextMsg": "A continuació",
+  "@playnextMsg": {
+    "description": "playnextMsg"
+  },
   "shuffleQueue": "Barreja la cua de reproducció",
+  "@shuffleQueue": {
+    "description": "shuffleQueue"
+  },
   "queueLoop": "llista de reproducció en bucle",
+  "@queueLoop": {
+    "description": "queueLoop"
+  },
   "queueLoopNotDisMsg1": "El mode llista de reproducció en bucle no es pot desactivar quan el mode aleatori està activat.",
+  "@queueLoopNotDisMsg1": {
+    "description": "queueLoopNotDisMsg1"
+  },
   "enableSlidableAction": "Habilita les accions lliscables",
+  "@enableSlidableAction": {
+    "description": "enableSlidableAction"
+  },
   "enableSlidableActionDes": "Habilita les accions lliscants a la fitxa de la cançó",
+  "@enableSlidableActionDes": {
+    "description": "enableSlidableActionDes"
+  },
   "loudnessDb": "SonoritatDb",
+  "@loudnessDb": {
+    "description": "loudnessDb"
+  },
   "urlSearchDes": "URL detectada. Fes clic sobre ella per a obrir/reproduir el contingut associat",
+  "@urlSearchDes": {
+    "description": "urlSearchDes"
+  },
   "loudnessNormalizationDes": "Estableix la mateixa longitud de soroll per a totes les cançons (Experimental) (no funcionarà en les cançons descarregades en la versió anterior(< v1.10.0))",
+  "@loudnessNormalizationDes": {
+    "description": "loudnessNormalizationDes"
+  },
   "misc": "Miscel·lània",
+  "@misc": {
+    "description": "misc"
+  },
   "resetToDefault": "Restablir la configuració inicial",
+  "@resetToDefault": {
+    "description": "resetToDefault"
+  },
   "resetToDefaultDes": "Restablir la configuració inicial de l'aplicació (requereix reiniciar)",
+  "@resetToDefaultDes": {
+    "description": "resetToDefaultDes"
+  },
   "resetToDefaultMsg": "S'ha restablert la configuració per defecte, Si us plau reinicieu l'aplicació",
+  "@resetToDefaultMsg": {
+    "description": "resetToDefaultMsg"
+  },
   "album": "Àlbum",
+  "@album": {
+    "description": "album"
+  },
   "playingfromPlaylist": "REPRODUÏNT LA LLISTA DE REPRODUCCIÓ",
+  "@playingfromPlaylist": {
+    "description": "playingfromPlaylist"
+  },
   "playingfromAlbum": "REPRODUINT L'ALBUM",
+  "@playingfromAlbum": {
+    "description": "playingfromAlbum"
+  },
   "playingfromSelection": "REPRODUINT LA SELECCIÓ",
+  "@playingfromSelection": {
+    "description": "playingfromSelection"
+  },
   "playingfromArtist": "REPRODUINT L'ARTISTA",
+  "@playingfromArtist": {
+    "description": "playingfromArtist"
+  },
   "randomSelection": "Selecció aleatòria",
+  "@randomSelection": {
+    "description": "randomSelection"
+  },
   "randomRadio": "Ràdio Aleatòria",
+  "@randomRadio": {
+    "description": "randomRadio"
+  },
   "autoOpenPlayer": "Obre automàticament la pantalla del reproductor",
+  "@autoOpenPlayer": {
+    "description": "autoOpenPlayer"
+  },
   "autoOpenPlayerDes": "Activa/desactiva l'obertura automàtica a pantalla completa del reproductor en seleccionar la cançó a reproduir",
+  "@autoOpenPlayerDes": {
+    "description": "autoOpenPlayerDes"
+  },
   "selectSongs": "Selecciona les cançons",
+  "@selectSongs": {
+    "description": "selectSongs"
+  },
   "selectAll": "Selecciona-ho tot",
+  "@selectAll": {
+    "description": "selectAll"
+  },
   "reArrangeSongs": "Reorganitzar les cançons",
+  "@reArrangeSongs": {
+    "description": "reArrangeSongs"
+  },
   "importError": "Error en importar la llista de reproducció",
+  "@importError": {
+    "description": "importError"
+  },
   "invalidPlaylistFile": "L'estructura del fitxer de la llista de reproducció no és vàlida",
+  "@invalidPlaylistFile": {
+    "description": "invalidPlaylistFile"
+  },
   "exportPlaylist": "Exporta la llista de reproducció",
+  "@exportPlaylist": {
+    "description": "exportPlaylist"
+  },
   "exportingPlaylist": "Exportant la llista de reproducció...",
+  "@exportingPlaylist": {
+    "description": "exportingPlaylist"
+  },
   "playlistExportedMsg": "S'ha exportat amb èxit la llista de reproducció a",
+  "@playlistExportedMsg": {
+    "description": "playlistExportedMsg"
+  },
   "exportError": "Error en exportar la llista de reproducció",
+  "@exportError": {
+    "description": "exportError"
+  },
   "exportErrorPermission": "S'ha denegat el permís durant l'exportació",
+  "@exportErrorPermission": {
+    "description": "exportErrorPermission"
+  },
   "exportErrorStorage": "No hi ha prou espai d'emmagatzematge",
+  "@exportErrorStorage": {
+    "description": "exportErrorStorage"
+  },
   "exportErrorFormat": "Error en la formatació de dades de la llista de reproducció",
+  "@exportErrorFormat": {
+    "description": "exportErrorFormat"
+  },
   "importPlaylist": "Importa una llista de reproducció",
+  "@importPlaylist": {
+    "description": "importPlaylist"
+  },
   "importingPlaylist": "Important la llista...",
+  "@importingPlaylist": {
+    "description": "importingPlaylist"
+  },
   "importPlaylistDesc": "Importa una llista exportada en un fitxer JSON",
+  "@importPlaylistDesc": {
+    "description": "importPlaylistDesc"
+  },
   "selectFile": "Escull el fitxer",
+  "@selectFile": {
+    "description": "selectFile"
+  },
   "playlistImportedMsg": "Llista de reproducció importada amb èxit",
+  "@playlistImportedMsg": {
+    "description": "playlistImportedMsg"
+  },
   "importErrorFileAccess": "No s'ha pogut accedir al fitxer escollit",
+  "@importErrorFileAccess": {
+    "description": "importErrorFileAccess"
+  },
   "importErrorFormat": "El format del fitxer no és vàlid",
+  "@importErrorFormat": {
+    "description": "importErrorFormat"
+  },
   "importErrorDatabase": "Error en desar a la base de dades",
+  "@importErrorDatabase": {
+    "description": "importErrorDatabase"
+  },
   "fileNotFound": "No s'ha trobat el fitxer",
+  "@fileNotFound": {
+    "description": "fileNotFound"
+  },
   "importLargeFileNote": "Nota: La importació de llistes de reproducció grosses pot trigar més estona",
+  "@importLargeFileNote": {
+    "description": "importLargeFileNote"
+  },
   "keepScreenOnWhilePlaying": "Mantenir la pantalla encesa mentre es reprodueix",
-  "keepScreenOnWhilePlayingDes": "Si està activat, la pantalla del dispositiu romandrà encesa mentre es reprodueix música"
+  "@keepScreenOnWhilePlaying": {
+    "description": "keepScreenOnWhilePlaying"
+  },
+  "keepScreenOnWhilePlayingDes": "Si està activat, la pantalla del dispositiu romandrà encesa mentre es reprodueix música",
+  "@keepScreenOnWhilePlayingDes": {
+    "description": "keepScreenOnWhilePlayingDes"
+  }
 }

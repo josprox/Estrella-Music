@@ -1,29 +1,107 @@
 {
   "@@locale": "hr",
   "home": "Početna",
+  "@home": {
+    "description": "home"
+  },
   "songs": "Pjesme",
+  "@songs": {
+    "description": "songs"
+  },
   "playlists": "Playlista",
+  "@playlists": {
+    "description": "playlists"
+  },
   "albums": "Albumi",
+  "@albums": {
+    "description": "albums"
+  },
   "album": "Album",
+  "@album": {
+    "description": "album"
+  },
   "singles": "Singlovi",
+  "@singles": {
+    "description": "singles"
+  },
   "artists": "Izvođač",
+  "@artists": {
+    "description": "artists"
+  },
   "settings": "Postavke",
+  "@settings": {
+    "description": "settings"
+  },
   "library": "Biblioteka",
+  "@library": {
+    "description": "library"
+  },
   "libSongs": "Biblioteka pjesama",
+  "@libSongs": {
+    "description": "libSongs"
+  },
   "libPlaylists": "Prijevod",
+  "@libPlaylists": {
+    "description": "libPlaylists"
+  },
   "libAlbums": "Albumi biblioteke",
+  "@libAlbums": {
+    "description": "libAlbums"
+  },
   "libArtists": "Biblioteka izvođača",
+  "@libArtists": {
+    "description": "libArtists"
+  },
   "networkError1": "Greška mreže!",
+  "@networkError1": {
+    "description": "networkError1"
+  },
   "retry": "Pokušaj ponovno!",
+  "@retry": {
+    "description": "retry"
+  },
   "noOfflineSong": "Nema offline pjesama!",
+  "@noOfflineSong": {
+    "description": "noOfflineSong"
+  },
   "recentlyPlayed": "Nedavno pušteno",
+  "@recentlyPlayed": {
+    "description": "recentlyPlayed"
+  },
   "favorites": "Favoriti",
+  "@favorites": {
+    "description": "favorites"
+  },
   "downloads": "Preuzimanja",
+  "@downloads": {
+    "description": "downloads"
+  },
   "emptyPlaylist": "Playlista je prazna!",
+  "@emptyPlaylist": {
+    "description": "emptyPlaylist"
+  },
   "removePlaylist": "Ukloni playlistu",
+  "@removePlaylist": {
+    "description": "removePlaylist"
+  },
   "CreateNewPlaylist": "Napravi novu playlistu",
+  "@CreateNewPlaylist": {
+    "description": "CreateNewPlaylist"
+  },
   "selectSongs": "Odaberi pjesme",
+  "@selectSongs": {
+    "description": "selectSongs"
+  },
   "selectAll": "Odaberi sve",
+  "@selectAll": {
+    "description": "selectAll"
+  },
   "keepScreenOnWhilePlaying": "Ostavi zaslon uključen tijekom reprodukcije",
-  "keepScreenOnWhilePlayingDes": "Ako je omogućeno, zaslon uređaja ostat će uključen tijekom reprodukcije glazbe"
+  "@keepScreenOnWhilePlaying": {
+    "description": "keepScreenOnWhilePlaying"
+  },
+  "keepScreenOnWhilePlayingDes": "Ako je omogućeno, zaslon uređaja ostat će uključen tijekom reprodukcije glazbe",
+  "@keepScreenOnWhilePlayingDes": {
+    "description": "keepScreenOnWhilePlayingDes"
+  }
 }

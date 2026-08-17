@@ -1,245 +1,976 @@
 {
   "@@locale": "hi",
   "themeMode": "थीम मोड",
+  "@themeMode": {
+    "description": "themeMode"
+  },
   "playlists": "प्लेलिस्ट",
+  "@playlists": {
+    "description": "playlists"
+  },
   "albums": "एल्बम",
+  "@albums": {
+    "description": "albums"
+  },
   "libSongs": "लाइब्रेरी गाने",
+  "@libSongs": {
+    "description": "libSongs"
+  },
   "libAlbums": "लाइब्रेरी एल्बम",
+  "@libAlbums": {
+    "description": "libAlbums"
+  },
   "items": "आइटम",
+  "@items": {
+    "description": "items"
+  },
   "cachedOrOffline": "ऑफलाइन",
+  "@cachedOrOffline": {
+    "description": "cachedOrOffline"
+  },
   "renamePlaylist": "प्लेलिस्ट का नाम बदलें",
+  "@renamePlaylist": {
+    "description": "renamePlaylist"
+  },
   "create": "बनाएं",
+  "@create": {
+    "description": "create"
+  },
   "createnAdd": "बनाएँ और जोड़ें",
+  "@createnAdd": {
+    "description": "createnAdd"
+  },
   "dynamic": "डाइनैमिक",
+  "@dynamic": {
+    "description": "dynamic"
+  },
   "systemDefault": "सिस्टम डिफ़ॉल्ट",
+  "@systemDefault": {
+    "description": "systemDefault"
+  },
   "dark": "डार्क",
+  "@dark": {
+    "description": "dark"
+  },
   "home": "होम",
+  "@home": {
+    "description": "home"
+  },
   "songs": "गाने",
+  "@songs": {
+    "description": "songs"
+  },
   "artists": "कलाकार",
+  "@artists": {
+    "description": "artists"
+  },
   "settings": "सेटिंग्स",
+  "@settings": {
+    "description": "settings"
+  },
   "light": "लाइट",
+  "@light": {
+    "description": "light"
+  },
   "retry": "पुन: प्रयास करें!",
+  "@retry": {
+    "description": "retry"
+  },
   "libArtists": "लाइब्रेरी कलाकार",
+  "@libArtists": {
+    "description": "libArtists"
+  },
   "noOfflineSong": "कोई ऑफ़लाइन गीत नहीं!",
+  "@noOfflineSong": {
+    "description": "noOfflineSong"
+  },
   "networkError1": "उफ़ नेटवर्क त्रुटि!",
+  "@networkError1": {
+    "description": "networkError1"
+  },
   "favorites": "पसंदीदा",
+  "@favorites": {
+    "description": "favorites"
+  },
   "recentlyPlayed": "हाल ही में बजाया",
+  "@recentlyPlayed": {
+    "description": "recentlyPlayed"
+  },
   "emptyPlaylist": "खाली प्लेलिस्ट!",
+  "@emptyPlaylist": {
+    "description": "emptyPlaylist"
+  },
   "enqueueAll": "सभी कतारबद्ध करें",
+  "@enqueueAll": {
+    "description": "enqueueAll"
+  },
   "removePlaylist": "प्लेलिस्ट हटाएँ",
+  "@removePlaylist": {
+    "description": "removePlaylist"
+  },
   "noBookmarks": "कोई बुकमार्क नहीं!",
+  "@noBookmarks": {
+    "description": "noBookmarks"
+  },
   "CreateNewPlaylist": "नई प्लेलिस्ट बनाएँ",
+  "@CreateNewPlaylist": {
+    "description": "CreateNewPlaylist"
+  },
   "cancel": "रद्द करें",
+  "@cancel": {
+    "description": "cancel"
+  },
   "playNext": "अगला चलाएँ",
+  "@playNext": {
+    "description": "playNext"
+  },
   "startRadio": "स्टार्ट रेडियो",
+  "@startRadio": {
+    "description": "startRadio"
+  },
   "noLibPlaylist": "आपके पास कोई लाइब्रेरी प्लेलिस्ट नहीं है!",
+  "@noLibPlaylist": {
+    "description": "noLibPlaylist"
+  },
   "enqueueSong": "कतार में शामिल करें",
+  "@enqueueSong": {
+    "description": "enqueueSong"
+  },
   "goToAlbum": "एल्बम पर जाएं",
+  "@goToAlbum": {
+    "description": "goToAlbum"
+  },
   "shareSong": "इस गाने को साझा करें",
+  "@shareSong": {
+    "description": "shareSong"
+  },
   "viewArtist": "कलाकार देखें",
+  "@viewArtist": {
+    "description": "viewArtist"
+  },
   "removeFromQueue": "कतार से निकालें",
+  "@removeFromQueue": {
+    "description": "removeFromQueue"
+  },
   "removeFromCache": "कैश से निकालें",
+  "@removeFromCache": {
+    "description": "removeFromCache"
+  },
   "addToPlaylist": "प्लेलिस्ट में जोड़ें",
+  "@addToPlaylist": {
+    "description": "addToPlaylist"
+  },
   "libPlaylists": "लाइब्रेरी प्लेलिस्ट",
+  "@libPlaylists": {
+    "description": "libPlaylists"
+  },
   "cacheSongsDes": "भविष्य / ऑफ़लाइन प्लेबैक के लिए बजाते समय गाने को कैश करें, यह आपके डिवाइस पर अतिरिक्त स्थान लेगा",
+  "@cacheSongsDes": {
+    "description": "cacheSongsDes"
+  },
   "skipSilence": "स्किप साइलेंस",
+  "@skipSilence": {
+    "description": "skipSilence"
+  },
   "skipSilenceDes": "साइलेंस को संगीत प्लेबैक से हटा दिया जाएगा",
+  "@skipSilenceDes": {
+    "description": "skipSilenceDes"
+  },
   "streamingQuality": "स्ट्रीमिंग गुणवत्ता",
+  "@streamingQuality": {
+    "description": "streamingQuality"
+  },
   "streamingQualityDes": "संगीत स्ट्रीम की गुणवत्ता",
+  "@streamingQualityDes": {
+    "description": "streamingQualityDes"
+  },
   "high": "उच्च",
+  "@high": {
+    "description": "high"
+  },
   "equalizer": "इक्वलाइज़र",
+  "@equalizer": {
+    "description": "equalizer"
+  },
   "low": "कम",
+  "@low": {
+    "description": "low"
+  },
   "equalizerDes": "सिस्टम इक्वलाइज़र खोलें",
+  "@equalizerDes": {
+    "description": "equalizerDes"
+  },
   "githubDes": "GitHub स्रोत कोड देखें\nयदि आप इस प्रोजेक्ट को पसंद करते हैं, तो एक ⭐देने के लिए मत भूलना",
+  "@githubDes": {
+    "description": "githubDes"
+  },
   "by": "द्वारा",
+  "@by": {
+    "description": "by"
+  },
   "viewAll": "सभी देखें",
+  "@viewAll": {
+    "description": "viewAll"
+  },
   "enabled": "सक्रिय",
+  "@enabled": {
+    "description": "enabled"
+  },
   "status": "स्थिति",
+  "@status": {
+    "description": "status"
+  },
   "ignoreBatOptDes": "यदि आप नोटिफिकेशन संगीत कण्ट्रोल से सम्बंधित कोई दिक्क्तों का सामना कर रहे है या आपका संगीत प्लेबैक को सिस्टम ऑप्टिमाइजेशन के द्वारा रोक दिया जा रहा तो आप इस ऑप्शन को चालू करे",
+  "@ignoreBatOptDes": {
+    "description": "ignoreBatOptDes"
+  },
   "ignoreBatOpt": "बैटरी ऑप्टिमाइजेशन को इग्नोर करे",
+  "@ignoreBatOpt": {
+    "description": "ignoreBatOpt"
+  },
   "disabled": "निष्क्रिय",
+  "@disabled": {
+    "description": "disabled"
+  },
   "github": "GitHub",
+  "@github": {
+    "description": "github"
+  },
   "searchRes": "खोज परिणाम",
+  "@searchRes": {
+    "description": "searchRes"
+  },
   "for1": "के लिए",
+  "@for1": {
+    "description": "for1"
+  },
   "topMusicVid": "शीर्ष संगीत वीडियो",
+  "@topMusicVid": {
+    "description": "topMusicVid"
+  },
   "cacheSongs": "कैश गाने",
+  "@cacheSongs": {
+    "description": "cacheSongs"
+  },
   "operationFailed": "ऑपरेशन विफल",
+  "@operationFailed": {
+    "description": "operationFailed"
+  },
   "searchDes": "गाने, प्लेलिस्ट, एल्बम और कलाकार",
+  "@searchDes": {
+    "description": "searchDes"
+  },
   "results": "परिणाम",
+  "@results": {
+    "description": "results"
+  },
   "search": "खोजें",
+  "@search": {
+    "description": "search"
+  },
   "videos": "वीडियोस",
+  "@videos": {
+    "description": "videos"
+  },
   "about": "बारे में",
+  "@about": {
+    "description": "about"
+  },
   "radioNotAvailable": "रेडियो इस कलाकार के लिए उपलब्ध नहीं है!",
+  "@radioNotAvailable": {
+    "description": "radioNotAvailable"
+  },
   "playlistRemovedAlert": "प्लेलिस्ट हट गया!",
+  "@playlistRemovedAlert": {
+    "description": "playlistRemovedAlert"
+  },
   "playlistCreatedAlert": "प्लेलिस्ट बनाया!",
+  "@playlistCreatedAlert": {
+    "description": "playlistCreatedAlert"
+  },
   "playlistBookmarkAddAlert": "प्लेलिस्ट बुकमार्क हो गया!",
+  "@playlistBookmarkAddAlert": {
+    "description": "playlistBookmarkAddAlert"
+  },
   "artistBookmarkAddAlert": "कलाकार बुकमार्क हो गया!",
+  "@artistBookmarkAddAlert": {
+    "description": "artistBookmarkAddAlert"
+  },
   "setDiscoverContent": "डिस्कवर कंटेंट सेट करें",
+  "@setDiscoverContent": {
+    "description": "setDiscoverContent"
+  },
   "quickPics": "गानों का सुझाव",
+  "@quickPics": {
+    "description": "quickPics"
+  },
   "discover": "डिस्कवर",
+  "@discover": {
+    "description": "discover"
+  },
   "trending": "रुझान में चल रहे गाने",
+  "@trending": {
+    "description": "trending"
+  },
   "basedOnLast": "अंतिम गतिविधि के आधार पर",
+  "@basedOnLast": {
+    "description": "basedOnLast"
+  },
   "subscribers": "सब्सक्राइबर्स",
+  "@subscribers": {
+    "description": "subscribers"
+  },
   "songRemovedfromQueue": "कतार से हटा दिया!",
+  "@songRemovedfromQueue": {
+    "description": "songRemovedfromQueue"
+  },
   "songRemovedfromQueueCurrSong": "आप वर्तमान में चल रहे गाने को नहीं हटा सकते",
+  "@songRemovedfromQueueCurrSong": {
+    "description": "songRemovedfromQueueCurrSong"
+  },
   "songAddedToPlaylistAlert": "गीत प्लेलिस्ट में जुड़ गया!",
+  "@songAddedToPlaylistAlert": {
+    "description": "songAddedToPlaylistAlert"
+  },
   "songAlreadyExists": "गीत पहले से ही मौजूद है!",
+  "@songAlreadyExists": {
+    "description": "songAlreadyExists"
+  },
   "songEnqueueAlert": "गाना कतार में जुड़ा !",
+  "@songEnqueueAlert": {
+    "description": "songEnqueueAlert"
+  },
   "songRemovedAlert": "से हटाया",
+  "@songRemovedAlert": {
+    "description": "songRemovedAlert"
+  },
   "errorOccuredAlert": "कुछ त्रुटि हुई!",
+  "@errorOccuredAlert": {
+    "description": "errorOccuredAlert"
+  },
   "playlistCreatednsongAddedAlert": "प्लेलिस्ट बनाया और गीत जोड़ा!",
+  "@playlistCreatednsongAddedAlert": {
+    "description": "playlistCreatednsongAddedAlert"
+  },
   "playlistRenameAlert": "सफलतापूर्वक बदला गया!",
+  "@playlistRenameAlert": {
+    "description": "playlistRenameAlert"
+  },
   "playlistBookmarkRemoveAlert": "प्लेलिस्ट बुकमार्क हट गया!",
+  "@playlistBookmarkRemoveAlert": {
+    "description": "playlistBookmarkRemoveAlert"
+  },
   "albumBookmarkAddAlert": "एल्बम बुकमार्क हो गया!",
+  "@albumBookmarkAddAlert": {
+    "description": "albumBookmarkAddAlert"
+  },
   "albumBookmarkRemoveAlert": "एल्बम बुकमार्क हट गया!",
+  "@albumBookmarkRemoveAlert": {
+    "description": "albumBookmarkRemoveAlert"
+  },
   "artistBookmarkRemoveAlert": "कलाकार बुकमार्क हट गया!",
+  "@artistBookmarkRemoveAlert": {
+    "description": "artistBookmarkRemoveAlert"
+  },
   "lyricsNotAvailable": "Lyrics उपलब्ध नहीं!",
+  "@lyricsNotAvailable": {
+    "description": "lyricsNotAvailable"
+  },
   "artistDesNotAvailable": "विवरण उपलब्ध नहीं!",
+  "@artistDesNotAvailable": {
+    "description": "artistDesNotAvailable"
+  },
   "newVersionAvailable": "नया संस्करण उपलब्ध!",
+  "@newVersionAvailable": {
+    "description": "newVersionAvailable"
+  },
   "dontShowInfoAgain": "इस जानकारी को फिर से न दिखाएं",
+  "@dontShowInfoAgain": {
+    "description": "dontShowInfoAgain"
+  },
   "dismiss": "बंद करें",
+  "@dismiss": {
+    "description": "dismiss"
+  },
   "notaValidLink": "एक वैध लिंक नहीं!",
+  "@notaValidLink": {
+    "description": "notaValidLink"
+  },
   "notaSongVideo": "एक गीत / संगीत वीडियो नहीं!",
+  "@notaSongVideo": {
+    "description": "notaSongVideo"
+  },
   "nomatch": "कोई मैच नहीं मिला",
+  "@nomatch": {
+    "description": "nomatch"
+  },
   "reset": "रिसेट",
+  "@reset": {
+    "description": "reset"
+  },
   "blacklistPlstResetAlert": "सफलतापूर्वक रिसेट हुआ!",
+  "@blacklistPlstResetAlert": {
+    "description": "blacklistPlstResetAlert"
+  },
   "goToDownloadPage": "डाउनलोड पेज पर जाने के लिए यहाँ दबाएं",
+  "@goToDownloadPage": {
+    "description": "goToDownloadPage"
+  },
   "local": "लोकल",
+  "@local": {
+    "description": "local"
+  },
   "link": "जोड़ें",
+  "@link": {
+    "description": "link"
+  },
   "unLink": "हटाएँ",
+  "@unLink": {
+    "description": "unLink"
+  },
   "linkPipedDes": "पाइप्ड के साथ प्लेलिस्ट्स के लिए जोड़ें",
+  "@linkPipedDes": {
+    "description": "linkPipedDes"
+  },
   "username": "यूज़रनेम",
+  "@username": {
+    "description": "username"
+  },
   "password": "पासवर्ड",
+  "@password": {
+    "description": "password"
+  },
   "selectAuthIns": "Auth इंस्टैंस चुने",
+  "@selectAuthIns": {
+    "description": "selectAuthIns"
+  },
   "linkAlert": "सफलतापूर्वक जुड़ गया!",
+  "@linkAlert": {
+    "description": "linkAlert"
+  },
   "unlinkAlert": "सफलतापूर्वक हट गया!",
+  "@unlinkAlert": {
+    "description": "unlinkAlert"
+  },
   "playlistBlacklistAlert": "प्लेलिस्ट ब्लैकलिस्ट हो गया!",
+  "@playlistBlacklistAlert": {
+    "description": "playlistBlacklistAlert"
+  },
   "resetblacklistedplaylist": "ब्लैकलिस्टेड प्लेलिस्ट रिसेट",
+  "@resetblacklistedplaylist": {
+    "description": "resetblacklistedplaylist"
+  },
   "resetblacklistedplaylistDes": "सभी पाइप्ड ब्लैकलिस्टेड प्लेलिस्ट्स को रिसेट करें",
+  "@resetblacklistedplaylistDes": {
+    "description": "resetblacklistedplaylistDes"
+  },
   "stopMusicOnTaskClear": "म्यूजिक बंद करें",
+  "@stopMusicOnTaskClear": {
+    "description": "stopMusicOnTaskClear"
+  },
   "stopMusicOnTaskClearDes": "इस ऐप को टास्क मैनेजर से स्वाइप करने पर म्यूजिक बंद हो जायेगा",
+  "@stopMusicOnTaskClearDes": {
+    "description": "stopMusicOnTaskClearDes"
+  },
   "communityplaylists": "कम्यूनिटी प्लेलिस्ट",
+  "@communityplaylists": {
+    "description": "communityplaylists"
+  },
   "languageDes": "अनुप्रयोग भाषा सेट करें",
+  "@languageDes": {
+    "description": "languageDes"
+  },
   "customInsSelectMsg": "कृपया कस्टम इंस्टेंस का चयन करें",
+  "@customInsSelectMsg": {
+    "description": "customInsSelectMsg"
+  },
   "allFieldsReqMsg": "सभी फील्ड भरें",
+  "@allFieldsReqMsg": {
+    "description": "allFieldsReqMsg"
+  },
   "rename": "नाम बदलें",
+  "@rename": {
+    "description": "rename"
+  },
   "selectAuthInsMsg": "कृपया ऑथेंटिकेशन इंस्टैंस चुने !",
+  "@selectAuthInsMsg": {
+    "description": "selectAuthInsMsg"
+  },
   "customIns": "कस्टम इंस्टेंस",
+  "@customIns": {
+    "description": "customIns"
+  },
   "Piped": "पाइप्ड",
+  "@Piped": {
+    "description": "Piped"
+  },
   "topmusicvideos": "शीर्ष संगीत वीडियो",
+  "@topmusicvideos": {
+    "description": "topmusicvideos"
+  },
   "singles": "सिंगल्स",
+  "@singles": {
+    "description": "singles"
+  },
   "language": "भाषा",
+  "@language": {
+    "description": "language"
+  },
   "hintApiUrl": "पाइप्ड इंस्टैंस एपीआई यूआरएल",
+  "@hintApiUrl": {
+    "description": "hintApiUrl"
+  },
   "removeFromPlaylist": "प्लेलिस्ट से निकालें",
+  "@removeFromPlaylist": {
+    "description": "removeFromPlaylist"
+  },
   "featuredplaylists": "फीचर्ड प्लेलिस्ट",
+  "@featuredplaylists": {
+    "description": "featuredplaylists"
+  },
   "quickpicks": "गानों का सुझाव",
+  "@quickpicks": {
+    "description": "quickpicks"
+  },
   "downloads": "डाउनलोड्स",
+  "@downloads": {
+    "description": "downloads"
+  },
   "removeFromLib": "लाइब्रेरी गाने से हटाएँ",
+  "@removeFromLib": {
+    "description": "removeFromLib"
+  },
   "downloadingFormat": "डाउनलोडिंग फ़ाइल फ़ारमैट",
+  "@downloadingFormat": {
+    "description": "downloadingFormat"
+  },
   "songAlreadyOfflineAlert": "गाना पहले से ही कैश में ऑफ़लाइन है",
+  "@songAlreadyOfflineAlert": {
+    "description": "songAlreadyOfflineAlert"
+  },
   "downloadLocation": "डाउनलोड का स्थान",
+  "@downloadLocation": {
+    "description": "downloadLocation"
+  },
   "downloadingFormatDes": "डाउनलोडिंग फाइल फॉर्मेट चुने, \"Opus\" सर्वोत्तम गुणवत्ता प्रदान करेगा",
+  "@downloadingFormatDes": {
+    "description": "downloadingFormatDes"
+  },
   "library": "लाइब्रेरी",
+  "@library": {
+    "description": "library"
+  },
   "add5Minutes": "5 मिनट जोड़ें",
+  "@add5Minutes": {
+    "description": "add5Minutes"
+  },
   "minutes": "मिनट्स",
+  "@minutes": {
+    "description": "minutes"
+  },
   "endOfThisSong": "इस गाने के अंत में",
+  "@endOfThisSong": {
+    "description": "endOfThisSong"
+  },
   "enableBottomNav": "बॉटम नेविगेशन बार",
+  "@enableBottomNav": {
+    "description": "enableBottomNav"
+  },
   "enableBottomNavDes": "बॉटम नेविगेशन बार पर स्विच करें",
+  "@enableBottomNavDes": {
+    "description": "enableBottomNavDes"
+  },
   "plain": "प्लेन",
+  "@plain": {
+    "description": "plain"
+  },
   "syncedLyricsNotAvailable": "समन्वयित गीत उपलब्ध नहीं!",
+  "@syncedLyricsNotAvailable": {
+    "description": "syncedLyricsNotAvailable"
+  },
   "cancelTimer": "टाइमर रद्द करें",
+  "@cancelTimer": {
+    "description": "cancelTimer"
+  },
   "sleepTimer": "स्लीप टाइमर",
+  "@sleepTimer": {
+    "description": "sleepTimer"
+  },
   "homeContentCount": "होम कंटेंट की संख्या",
+  "@homeContentCount": {
+    "description": "homeContentCount"
+  },
   "homeContentCountDes": "आरंभिक होमस्क्रीन-कंटेंट की संख्या (लगभग) चुनें। कम परिणाम तेजी से लोड होगा",
+  "@homeContentCountDes": {
+    "description": "homeContentCountDes"
+  },
   "synced": "सिंकड",
+  "@synced": {
+    "description": "synced"
+  },
   "cancelTimerAlert": "स्लीप टाइमर रद्द कर दिया गया",
+  "@cancelTimerAlert": {
+    "description": "cancelTimerAlert"
+  },
   "sleepTimeSetAlert": "आपका स्लीप टाइमर सेट हो गया है",
+  "@sleepTimeSetAlert": {
+    "description": "sleepTimeSetAlert"
+  },
   "clearImgCache": "इमेज कैश हटाएँ",
+  "@clearImgCache": {
+    "description": "clearImgCache"
+  },
   "clearImgCacheDes": "कैश की गई इमेजेज को हटाने के लिए यहाँ दबाएँ। (ये अनुशंसित नहीं है जबतक आप कैश की गई इमेजेज को नवीकृत नहीं करना चाहें)",
+  "@clearImgCacheDes": {
+    "description": "clearImgCacheDes"
+  },
   "pipedplstSyncAlert": "पाइप्ड प्लेलिस्ट समन्वयित हुआ!",
+  "@pipedplstSyncAlert": {
+    "description": "pipedplstSyncAlert"
+  },
   "upNext": "अगला",
+  "@upNext": {
+    "description": "upNext"
+  },
   "backgroundPlay": "बैकग्राउंड म्यूजिक प्ले",
+  "@backgroundPlay": {
+    "description": "backgroundPlay"
+  },
   "backgroundPlayDes": "बैकग्राउंड में संगीत चलाने को सक्षम/अक्षम करें (जब ऐप बैकग्राउंड में चल रहा हो तो ऐप को सिस्टम ट्रे से एक्सेस किया जा सकता है)",
+  "@backgroundPlayDes": {
+    "description": "backgroundPlayDes"
+  },
   "deleteDownloadedDataAlert": "डाउनलोड से सफलतापूर्वक हटाया गया!",
+  "@deleteDownloadedDataAlert": {
+    "description": "deleteDownloadedDataAlert"
+  },
   "reArrangePlaylist": "प्लेलिस्ट पुनर्व्यवस्थित करें",
+  "@reArrangePlaylist": {
+    "description": "reArrangePlaylist"
+  },
   "removeMultiple": "अनेक गाने हटाएँ",
+  "@removeMultiple": {
+    "description": "removeMultiple"
+  },
   "addMultipleSongs": "प्लेलिस्ट में गाने जोड़ें",
+  "@addMultipleSongs": {
+    "description": "addMultipleSongs"
+  },
   "deleteDownloadData": "डाउनलोड से हटाएँ",
+  "@deleteDownloadData": {
+    "description": "deleteDownloadData"
+  },
   "restoreLastPlaybackSession": "पिछला प्लेबैक सत्र रिस्टोर करें",
+  "@restoreLastPlaybackSession": {
+    "description": "restoreLastPlaybackSession"
+  },
   "restoreLastPlaybackSessionDes": "ऐप प्रारंभ होने पर अंतिम प्लेबैक सत्र को स्वचालित रूप से रिस्टोर करें",
+  "@restoreLastPlaybackSessionDes": {
+    "description": "restoreLastPlaybackSessionDes"
+  },
   "cacheHomeScreenData": "होम स्क्रीन सामग्री डेटा कैश करें",
+  "@cacheHomeScreenData": {
+    "description": "cacheHomeScreenData"
+  },
   "cacheHomeScreenDataDes": "होम स्क्रीन कंटेंट डेटा कैश करें, यदि यह विकल्प सक्षम है तो होम स्क्रीन तुरंत लोड हो जाएगी",
+  "@cacheHomeScreenDataDes": {
+    "description": "cacheHomeScreenDataDes"
+  },
   "exportDowloadedFilesDes": "डाउनलोड की गई फ़ाइल को अंदरुनी डायरेक्टरी से बाहरी डायरेक्टरी में निर्यात करने के लिए यहां क्लिक करें",
+  "@exportDowloadedFilesDes": {
+    "description": "exportDowloadedFilesDes"
+  },
   "downFilesFound": "डाउनलोड की गई फाइलें मिली",
+  "@downFilesFound": {
+    "description": "downFilesFound"
+  },
   "disableTransitionAnimationDes": "टैब ट्रांजिशन एनीमेशन को अक्षम करने के लिए इस विकल्प को सक्षम करें",
+  "@disableTransitionAnimationDes": {
+    "description": "disableTransitionAnimationDes"
+  },
   "disableTransitionAnimation": "ट्रांजिशन एनीमेशन को अक्षम करें",
+  "@disableTransitionAnimation": {
+    "description": "disableTransitionAnimation"
+  },
   "exportDowloadedFiles": "डाउनलोड की गई फाइलें निर्यात करें",
+  "@exportDowloadedFiles": {
+    "description": "exportDowloadedFiles"
+  },
   "exportedFileLocation": "डाउनलोड हूई फ़ाइल का निर्यात स्थान",
+  "@exportedFileLocation": {
+    "description": "exportedFileLocation"
+  },
   "export": "निर्यात करें",
+  "@export": {
+    "description": "export"
+  },
   "exporting": "निर्यात की जा रही है..।",
+  "@exporting": {
+    "description": "exporting"
+  },
   "scanning": "स्कैन की जा रही..।",
+  "@scanning": {
+    "description": "scanning"
+  },
   "close": "बंद करें",
+  "@close": {
+    "description": "close"
+  },
   "exportMsg": "फाइलें सफलतापूर्वक निर्यात की गईं",
+  "@exportMsg": {
+    "description": "exportMsg"
+  },
   "clearImgCacheAlert": "छवियां सफलतापूर्वक साफ हो गईं",
+  "@clearImgCacheAlert": {
+    "description": "clearImgCacheAlert"
+  },
   "openIn": "खोलें",
+  "@openIn": {
+    "description": "openIn"
+  },
   "backupSettingsAndPlaylists": "बैकअप सेटिंग्स और प्लेलिस्ट",
+  "@backupSettingsAndPlaylists": {
+    "description": "backupSettingsAndPlaylists"
+  },
   "restoreSettingsAndPlaylists": "सेटिंग्स और प्लेलिस्ट पुनर्स्थापित करें",
+  "@restoreSettingsAndPlaylists": {
+    "description": "restoreSettingsAndPlaylists"
+  },
   "backupSettingsAndPlaylistsDes": "सभी सेटिंग्स, प्लेलिस्ट और लॉगिन डेटा को एक बैकअप फ़ाइल में सहेजता है",
+  "@backupSettingsAndPlaylistsDes": {
+    "description": "backupSettingsAndPlaylistsDes"
+  },
   "restoreSettingsAndPlaylistsDes": "बैकअप फ़ाइल से सभी सेटिंग्स, लॉगिन डेटा और प्लेलिस्ट्स को रिस्टोर करता है। सभी मौजूदा डेटा को ओवरराइट कर देता है",
+  "@restoreSettingsAndPlaylistsDes": {
+    "description": "restoreSettingsAndPlaylistsDes"
+  },
   "backupMsg": "बैकअप सफलतापूर्वक सहेजा गया!",
+  "@backupMsg": {
+    "description": "backupMsg"
+  },
   "backFilesFound": "डेटाबेस मिले",
+  "@backFilesFound": {
+    "description": "backFilesFound"
+  },
   "restoreMsg": "सफलतापूर्वक रिस्टोर हुआ! परिवर्तन रीस्टार्ट करने पर लागू होते हैं",
+  "@restoreMsg": {
+    "description": "restoreMsg"
+  },
   "restoring": "रिस्टोर किया जा रहा है..।",
+  "@restoring": {
+    "description": "restoring"
+  },
   "restore": "रिस्टोर करें",
+  "@restore": {
+    "description": "restore"
+  },
   "closeApp": "ऐप बंद करें",
+  "@closeApp": {
+    "description": "closeApp"
+  },
   "backup": "बैकअप",
+  "@backup": {
+    "description": "backup"
+  },
   "letsStrart": "चलो शुरू करो.।",
+  "@letsStrart": {
+    "description": "letsStrart"
+  },
   "processFiles": "फ़ाइलें प्रोसेस की जा रही हैं..।",
+  "@processFiles": {
+    "description": "processFiles"
+  },
   "restoreAppData": "एप डेटा रिस्टोर करें",
+  "@restoreAppData": {
+    "description": "restoreAppData"
+  },
   "restartApp": "एप को रीस्टार्ट करें",
+  "@restartApp": {
+    "description": "restartApp"
+  },
   "backupAppData": "ऐप डेटा का बैकअप लें",
+  "@backupAppData": {
+    "description": "backupAppData"
+  },
   "includeDownloadedFiles": "डाउनलोड की गई गाने फ़ाइलें शामिल करें",
+  "@includeDownloadedFiles": {
+    "description": "includeDownloadedFiles"
+  },
   "backupInProgress": "बैकअप प्रगति पर है..।",
+  "@backupInProgress": {
+    "description": "backupInProgress"
+  },
   "download": "डाउनलोड",
+  "@download": {
+    "description": "download"
+  },
   "networkError": "नेटवर्क त्रुटि! अपना नेटवर्क कनेक्शन जांचें।",
+  "@networkError": {
+    "description": "networkError"
+  },
   "downloadError2": "सर्वर प्रतिबंध के कारण अनुरोधित गाना डाउनलोड करने योग्य नहीं है। आप पुनः प्रयास कर सकते हैं",
+  "@downloadError2": {
+    "description": "downloadError2"
+  },
   "downloadError3": "नेटवर्क त्रुटि के कारण डाउनलोडिंग विफल! कृपया पुनः प्रयास करें",
+  "@downloadError3": {
+    "description": "downloadError3"
+  },
   "personalisation": "निजीकरण",
+  "@personalisation": {
+    "description": "personalisation"
+  },
   "loudnessNormalization": "प्रबलता सामान्यीकरण",
+  "@loudnessNormalization": {
+    "description": "loudnessNormalization"
+  },
   "bitrate": "बिटरेट",
+  "@bitrate": {
+    "description": "bitrate"
+  },
   "androidBackupWarning": "परीक्षण नहीं किया गया: 60 से ज़्यादा फ़ाइलें डाउनलोड करने के बाद चेकबॉक्स चुनने से प्रक्रिया में बहुत ज़्यादा मेमोरी खर्च हो सकती है और फ़ोन या ऐप क्रैश हो सकता है। अपने जोखिम पर आगे बढ़ें।",
+  "@androidBackupWarning": {
+    "description": "androidBackupWarning"
+  },
   "audioCodec": "ऑडियो कोडेक",
+  "@audioCodec": {
+    "description": "audioCodec"
+  },
   "id": "आईडी",
+  "@id": {
+    "description": "id"
+  },
   "queueShufflingDeniedMsg": "शफ़ल मोड सक्षम होने पर कतार को शफ़ल नहीं किया जा सकता",
+  "@queueShufflingDeniedMsg": {
+    "description": "queueShufflingDeniedMsg"
+  },
   "playerUiDes": "प्लेयर उपयोगकर्ता इंटरफ़ेस का चयन करें",
+  "@playerUiDes": {
+    "description": "playerUiDes"
+  },
   "appInfo": "ऐप की जानकारी",
+  "@appInfo": {
+    "description": "appInfo"
+  },
   "content": "सामग्री",
+  "@content": {
+    "description": "content"
+  },
   "gesture": "इशारा",
+  "@gesture": {
+    "description": "gesture"
+  },
   "musicAndPlayback": "संगीत और प्लेबैक",
+  "@musicAndPlayback": {
+    "description": "musicAndPlayback"
+  },
   "standard": "मानक",
+  "@standard": {
+    "description": "standard"
+  },
   "urlSearchDes": "यूआरएल का पता चला है, संबंधित सामग्री को खोलने/चलाने के लिए उस पर क्लिक करें",
+  "@urlSearchDes": {
+    "description": "urlSearchDes"
+  },
   "playnextMsg": "आगामी",
+  "@playnextMsg": {
+    "description": "playnextMsg"
+  },
   "shuffleQueue": "कतार फेरबदल",
+  "@shuffleQueue": {
+    "description": "shuffleQueue"
+  },
   "queueLoop": "कतार लूप",
+  "@queueLoop": {
+    "description": "queueLoop"
+  },
   "enableSlidableAction": "स्लाइड करने योग्य क्रियाएँ सक्षम करें",
+  "@enableSlidableAction": {
+    "description": "enableSlidableAction"
+  },
   "enableSlidableActionDes": "गाने की टाइल पर स्लाइड करने योग्य क्रियाएँ सक्षम करें",
+  "@enableSlidableActionDes": {
+    "description": "enableSlidableActionDes"
+  },
   "queueLoopNotDisMsg1": "शफ़ल मोड सक्षम होने पर कतार लूप मोड को अक्षम नहीं किया जा सकता",
+  "@queueLoopNotDisMsg1": {
+    "description": "queueLoopNotDisMsg1"
+  },
   "queueLoopNotDisMsg2": "कतार लूप मोड को रेडियो मोड में सक्षम नहीं किया जा सकता",
+  "@queueLoopNotDisMsg2": {
+    "description": "queueLoopNotDisMsg2"
+  },
   "songNotPlayable": "सर्वर प्रतिबंध के कारण गाना बजाने योग्य नहीं है!",
+  "@songNotPlayable": {
+    "description": "songNotPlayable"
+  },
   "autoDownFavSong": "पसंदीदा गाने खुद ब खुद डाउनलोड करें",
+  "@autoDownFavSong": {
+    "description": "autoDownFavSong"
+  },
   "title": "शीर्षक",
+  "@title": {
+    "description": "title"
+  },
   "duration": "अवधि",
+  "@duration": {
+    "description": "duration"
+  },
   "loudnessDb": "प्रबलता डीबी",
+  "@loudnessDb": {
+    "description": "loudnessDb"
+  },
   "playerUi": "प्लेयर यूआई",
+  "@playerUi": {
+    "description": "playerUi"
+  },
   "queuerearrangingDeniedMsg": "शफ़ल मोड सक्षम होने पर कतार को पुनः व्यवस्थित नहीं किया जा सकता",
+  "@queuerearrangingDeniedMsg": {
+    "description": "queuerearrangingDeniedMsg"
+  },
   "loudnessNormalizationDes": "सभी गानों के लिए समान स्तर की ध्वनि निर्धारित करता है (प्रायोगिक) (पिछले संस्करण (< v1.10.0) पर डाउनलोड किए गए गानों पर काम नहीं करेगा)",
+  "@loudnessNormalizationDes": {
+    "description": "loudnessNormalizationDes"
+  },
   "autoDownFavSongDes": "पसंदीदा में जोड़े जाने पर पसंदीदा गाने स्वचालित रूप से डाउनलोड करें",
+  "@autoDownFavSongDes": {
+    "description": "autoDownFavSongDes"
+  },
   "songInfo": "गाने की जानकारी",
+  "@songInfo": {
+    "description": "songInfo"
+  },
   "keepScreenOnWhilePlaying": "प्ले के दौरान स्क्रीन जला रखें",
+  "@keepScreenOnWhilePlaying": {
+    "description": "keepScreenOnWhilePlaying"
+  },
   "keepScreenOnWhilePlayingDes": "यदि सक्षम है, तो संगीत चलाते समय डिवाइस की स्क्रीन जगी रहेगी",
+  "@keepScreenOnWhilePlayingDes": {
+    "description": "keepScreenOnWhilePlayingDes"
+  },
   "downloadNotificationChannelName": "संगीत डाउनलोड",
+  "@downloadNotificationChannelName": {
+    "description": "downloadNotificationChannelName"
+  },
   "downloadNotificationChannelDescription": "आपके संगीत डाउनलोड को बैकग्राउंड में सक्रिय रखता है।",
+  "@downloadNotificationChannelDescription": {
+    "description": "downloadNotificationChannelDescription"
+  },
   "downloadNotificationTitle": "संगीत डाउनलोड हो रहा है",
+  "@downloadNotificationTitle": {
+    "description": "downloadNotificationTitle"
+  },
   "downloadNotificationPreparing": "आपके डाउनलोड तैयार किए जा रहे हैं…",
-  "downloadNotificationSong": "डाउनलोड हो रहा है: {songTitle}"
+  "@downloadNotificationPreparing": {
+    "description": "downloadNotificationPreparing"
+  },
+  "downloadNotificationSong": "डाउनलोड हो रहा है: {songTitle}",
+  "@downloadNotificationSong": {
+    "placeholders": {
+      "songTitle": {
+        "type": "String"
+      }
+    },
+    "description": "downloadNotificationSong"
+  }
 }

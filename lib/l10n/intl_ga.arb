@@ -1,5 +1,11 @@
 {
   "@@locale": "ga",
   "keepScreenOnWhilePlaying": "Coinnigh an scáileán ar siúl agus tú ag seinm",
-  "keepScreenOnWhilePlayingDes": "Má tá sé faoi ghníomh, coinníodhfaidh scáileán an ghléis ar siúl agus tú ag seinm ceoil"
+  "@keepScreenOnWhilePlaying": {
+    "description": "keepScreenOnWhilePlaying"
+  },
+  "keepScreenOnWhilePlayingDes": "Má tá sé faoi ghníomh, coinníodhfaidh scáileán an ghléis ar siúl agus tú ag seinm ceoil",
+  "@keepScreenOnWhilePlayingDes": {
+    "description": "keepScreenOnWhilePlayingDes"
+  }
 }

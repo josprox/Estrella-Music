@@ -1,162 +1,639 @@
 {
   "@@locale": "eo",
   "renamePlaylist": "Alinomi Ludliston",
+  "@renamePlaylist": {
+    "description": "renamePlaylist"
+  },
   "trending": "Populara",
+  "@trending": {
+    "description": "trending"
+  },
   "cacheSongsDes": "Kaŝmemorigante kantojn dum ludado por estonta/elreta ludado, ĝi prenos plian spacon en via aparato",
+  "@cacheSongsDes": {
+    "description": "cacheSongsDes"
+  },
   "noLibPlaylist": "Vi ne havas iajn bibliotekajn ludlistojn!",
+  "@noLibPlaylist": {
+    "description": "noLibPlaylist"
+  },
   "setDiscoverContent": "Agordi malkovran enhavon",
+  "@setDiscoverContent": {
+    "description": "setDiscoverContent"
+  },
   "networkError1": "Ups, reteraro!",
+  "@networkError1": {
+    "description": "networkError1"
+  },
   "libSongs": "Bibliotekaj Kantoj",
+  "@libSongs": {
+    "description": "libSongs"
+  },
   "communityplaylists": "Komunumaj Ludlistoj",
+  "@communityplaylists": {
+    "description": "communityplaylists"
+  },
   "libAlbums": "Bibliotekaj Albumoj",
+  "@libAlbums": {
+    "description": "libAlbums"
+  },
   "low": "Malalta",
+  "@low": {
+    "description": "low"
+  },
   "languageDes": "Agordi la lingvon de la Aplikaĵo",
+  "@languageDes": {
+    "description": "languageDes"
+  },
   "enqueueAll": "Envicigi ĉiujn",
+  "@enqueueAll": {
+    "description": "enqueueAll"
+  },
   "skipSilence": "Preterpasi silenton",
+  "@skipSilence": {
+    "description": "skipSilence"
+  },
   "create": "Krei",
+  "@create": {
+    "description": "create"
+  },
   "enqueueSong": "Envicigi ĉi tiun kanton",
+  "@enqueueSong": {
+    "description": "enqueueSong"
+  },
   "noBookmarks": "Neniuj legosignoj!",
+  "@noBookmarks": {
+    "description": "noBookmarks"
+  },
   "playlists": "Ludlistoj",
+  "@playlists": {
+    "description": "playlists"
+  },
   "rename": "Alinomi",
+  "@rename": {
+    "description": "rename"
+  },
   "items": "eroj",
+  "@items": {
+    "description": "items"
+  },
   "startRadio": "Komenci radion",
+  "@startRadio": {
+    "description": "startRadio"
+  },
   "discover": "Malkovri",
+  "@discover": {
+    "description": "discover"
+  },
   "cacheSongs": "Kaŝmemorigitaj Kantoj",
+  "@cacheSongs": {
+    "description": "cacheSongs"
+  },
   "downloads": "Elŝutaĵoj",
+  "@downloads": {
+    "description": "downloads"
+  },
   "removeFromLib": "Forigi el la Bibliotekaj Kantoj",
+  "@removeFromLib": {
+    "description": "removeFromLib"
+  },
   "libArtists": "Bibliotekaj Artistoj",
+  "@libArtists": {
+    "description": "libArtists"
+  },
   "downloadingFormat": "Formato de la Elsutaĵo-Dosiero",
+  "@downloadingFormat": {
+    "description": "downloadingFormat"
+  },
   "light": "Hela",
+  "@light": {
+    "description": "light"
+  },
   "dynamic": "Dinamika",
+  "@dynamic": {
+    "description": "dynamic"
+  },
   "removePlaylist": "Forigi ludliston",
+  "@removePlaylist": {
+    "description": "removePlaylist"
+  },
   "addToPlaylist": "Aldoni al ludlisto",
+  "@addToPlaylist": {
+    "description": "addToPlaylist"
+  },
   "cachedOrOffline": "Kaŝmemorigitaĵoj / Elretaĵoj",
+  "@cachedOrOffline": {
+    "description": "cachedOrOffline"
+  },
   "retry": "Reprovu!",
+  "@retry": {
+    "description": "retry"
+  },
   "artists": "Artistoj",
+  "@artists": {
+    "description": "artists"
+  },
   "albums": "Albumoj",
+  "@albums": {
+    "description": "albums"
+  },
   "recentlyPlayed": "Lastatempa Luditaĵoj",
+  "@recentlyPlayed": {
+    "description": "recentlyPlayed"
+  },
   "viewArtist": "Vidi Artiston",
+  "@viewArtist": {
+    "description": "viewArtist"
+  },
   "createnAdd": "Krei ⳤ aldoni",
+  "@createnAdd": {
+    "description": "createnAdd"
+  },
   "topmusicvideos": "Plej popularaj Muzikvideoj",
+  "@topmusicvideos": {
+    "description": "topmusicvideos"
+  },
   "systemDefault": "Sistema defaŭlta",
+  "@systemDefault": {
+    "description": "systemDefault"
+  },
   "ignoreBatOpt": "Ignori baterian optimumigon",
+  "@ignoreBatOpt": {
+    "description": "ignoreBatOpt"
+  },
   "singles": "Unuopaĵoj",
+  "@singles": {
+    "description": "singles"
+  },
   "themeMode": "Haŭta Reĝimo",
+  "@themeMode": {
+    "description": "themeMode"
+  },
   "streamingQualityDes": "Kvalito de la muzika fluo",
+  "@streamingQualityDes": {
+    "description": "streamingQualityDes"
+  },
   "emptyPlaylist": "Malplena ludlisto!",
+  "@emptyPlaylist": {
+    "description": "emptyPlaylist"
+  },
   "favorites": "Favoratoj",
+  "@favorites": {
+    "description": "favorites"
+  },
   "dark": "Malhela",
+  "@dark": {
+    "description": "dark"
+  },
   "home": "Hejmo",
+  "@home": {
+    "description": "home"
+  },
   "cancel": "Nuligi",
+  "@cancel": {
+    "description": "cancel"
+  },
   "streamingQuality": "Flua kvalito",
+  "@streamingQuality": {
+    "description": "streamingQuality"
+  },
   "libPlaylists": "Bibliotekaj Ludlistoj",
+  "@libPlaylists": {
+    "description": "libPlaylists"
+  },
   "CreateNewPlaylist": "Krei novan ludliston",
+  "@CreateNewPlaylist": {
+    "description": "CreateNewPlaylist"
+  },
   "language": "Lingvo",
+  "@language": {
+    "description": "language"
+  },
   "skipSilenceDes": "Silento estos preterpasita en muzika ludado",
+  "@skipSilenceDes": {
+    "description": "skipSilenceDes"
+  },
   "playNext": "Ludi sekvaĵon",
+  "@playNext": {
+    "description": "playNext"
+  },
   "songs": "Kantoj",
+  "@songs": {
+    "description": "songs"
+  },
   "high": "Alta",
+  "@high": {
+    "description": "high"
+  },
   "downloadLocation": "Loko de Elŝutaĵo",
+  "@downloadLocation": {
+    "description": "downloadLocation"
+  },
   "settings": "Agordoj",
+  "@settings": {
+    "description": "settings"
+  },
   "basedOnLast": "Surbaze de lasta interago",
+  "@basedOnLast": {
+    "description": "basedOnLast"
+  },
   "downloadingFormatDes": "Elekti la formaton de la elŝutaĵo-dosiero. \"Opus\" provizos plej bonan kvaliton",
+  "@downloadingFormatDes": {
+    "description": "downloadingFormatDes"
+  },
   "removeFromPlaylist": "Forigi el ludlisto",
+  "@removeFromPlaylist": {
+    "description": "removeFromPlaylist"
+  },
   "noOfflineSong": "Neniuj elretaj kantoj!",
+  "@noOfflineSong": {
+    "description": "noOfflineSong"
+  },
   "featuredplaylists": "Elstarigitaj Ludlistoj",
+  "@featuredplaylists": {
+    "description": "featuredplaylists"
+  },
   "quickpicks": "Rapidelektoj",
+  "@quickpicks": {
+    "description": "quickpicks"
+  },
   "goToAlbum": "Iri al la albumo",
+  "@goToAlbum": {
+    "description": "goToAlbum"
+  },
   "removeFromQueue": "Forigi el la vico",
+  "@removeFromQueue": {
+    "description": "removeFromQueue"
+  },
   "shareSong": "Kunhavigi ĉi tiun kanton",
+  "@shareSong": {
+    "description": "shareSong"
+  },
   "library": "Biblioteko",
+  "@library": {
+    "description": "library"
+  },
   "sleepTimer": "Dormtempumilo",
+  "@sleepTimer": {
+    "description": "sleepTimer"
+  },
   "add5Minutes": "Aldoni 5 minutojn",
+  "@add5Minutes": {
+    "description": "add5Minutes"
+  },
   "cancelTimer": "Nuligi tempumilon",
+  "@cancelTimer": {
+    "description": "cancelTimer"
+  },
   "minutes": "minutoj",
+  "@minutes": {
+    "description": "minutes"
+  },
   "endOfThisSong": "Fino de ĉi tiu kanto",
+  "@endOfThisSong": {
+    "description": "endOfThisSong"
+  },
   "homeContentCount": "Hejma kontenta nombro",
+  "@homeContentCount": {
+    "description": "homeContentCount"
+  },
   "homeContentCountDes": "Elekti la nombron de komenca hejmekrano-kontenta(proksimume). Malpliaj rezultas en pli rapida ŝarĝado",
+  "@homeContentCountDes": {
+    "description": "homeContentCountDes"
+  },
   "enableBottomNavDes": "Salti al malsupra navigada breto",
+  "@enableBottomNavDes": {
+    "description": "enableBottomNavDes"
+  },
   "equalizerDes": "malfermi sisteman egaligilon",
+  "@equalizerDes": {
+    "description": "equalizerDes"
+  },
   "equalizer": "Egaligilo",
+  "@equalizer": {
+    "description": "equalizer"
+  },
   "enableBottomNav": "Malsupra naviga breto",
+  "@enableBottomNav": {
+    "description": "enableBottomNav"
+  },
   "status": "Statuso",
+  "@status": {
+    "description": "status"
+  },
   "synced": "Sinkronigite",
+  "@synced": {
+    "description": "synced"
+  },
   "results": "Rezultoj",
+  "@results": {
+    "description": "results"
+  },
   "nomatch": "Neniuj kongruoj trovitaj por",
+  "@nomatch": {
+    "description": "nomatch"
+  },
   "subscribers": "abonantoj",
+  "@subscribers": {
+    "description": "subscribers"
+  },
   "about": "Pri",
+  "@about": {
+    "description": "about"
+  },
   "sleepTimeSetAlert": "Via dormtempumilo estas agordite",
+  "@sleepTimeSetAlert": {
+    "description": "sleepTimeSetAlert"
+  },
   "songRemovedfromQueue": "Foriĝis el la vico!",
+  "@songRemovedfromQueue": {
+    "description": "songRemovedfromQueue"
+  },
   "radioNotAvailable": "Radio maldisponeblas por ĉi tiu artiso!",
+  "@radioNotAvailable": {
+    "description": "radioNotAvailable"
+  },
   "songEnqueueAlert": "Kanto enviciĝis!",
+  "@songEnqueueAlert": {
+    "description": "songEnqueueAlert"
+  },
   "songRemovedAlert": "Foriĝis de",
+  "@songRemovedAlert": {
+    "description": "songRemovedAlert"
+  },
   "playlistCreatednsongAddedAlert": "Ludlisto kreiĝis ⳤ kanto aldoniĝis!",
+  "@playlistCreatednsongAddedAlert": {
+    "description": "playlistCreatednsongAddedAlert"
+  },
   "playlistRenameAlert": "Sukcese alinomiĝis!",
+  "@playlistRenameAlert": {
+    "description": "playlistRenameAlert"
+  },
   "playlistRemovedAlert": "Ludlisto foriĝis!",
+  "@playlistRemovedAlert": {
+    "description": "playlistRemovedAlert"
+  },
   "playlistBookmarkAddAlert": "Ludlisto legosigniĝis!",
+  "@playlistBookmarkAddAlert": {
+    "description": "playlistBookmarkAddAlert"
+  },
   "playlistBookmarkRemoveAlert": "Ludlista legosigno foriĝis!",
+  "@playlistBookmarkRemoveAlert": {
+    "description": "playlistBookmarkRemoveAlert"
+  },
   "albumBookmarkAddAlert": "Albumo legosigniĝis!",
+  "@albumBookmarkAddAlert": {
+    "description": "albumBookmarkAddAlert"
+  },
   "albumBookmarkRemoveAlert": "Albuma legosigno foriĝis!",
+  "@albumBookmarkRemoveAlert": {
+    "description": "albumBookmarkRemoveAlert"
+  },
   "dontShowInfoAgain": "Ne montri ĉi tiun informon denove",
+  "@dontShowInfoAgain": {
+    "description": "dontShowInfoAgain"
+  },
   "dismiss": "Forsendi",
+  "@dismiss": {
+    "description": "dismiss"
+  },
   "local": "Loka",
+  "@local": {
+    "description": "local"
+  },
   "hintApiUrl": "API URL de Piped instanco",
+  "@hintApiUrl": {
+    "description": "hintApiUrl"
+  },
   "customIns": "Propra Instanco",
+  "@customIns": {
+    "description": "customIns"
+  },
   "customInsSelectMsg": "Bonvolu elekti Propran Instancon",
+  "@customInsSelectMsg": {
+    "description": "customInsSelectMsg"
+  },
   "selectAuthIns": "Elekti Aŭtentigadan Instancon",
+  "@selectAuthIns": {
+    "description": "selectAuthIns"
+  },
   "linkPipedDes": "Ligi kun Piped por ludlistoj",
+  "@linkPipedDes": {
+    "description": "linkPipedDes"
+  },
   "playlistBlacklistAlert": "Ludlisto nigralistiĝis!",
+  "@playlistBlacklistAlert": {
+    "description": "playlistBlacklistAlert"
+  },
   "reset": "Rekomenciĝi",
+  "@reset": {
+    "description": "reset"
+  },
   "unlinkAlert": "Malligiĝis sukcese!",
+  "@unlinkAlert": {
+    "description": "unlinkAlert"
+  },
   "blacklistPlstResetAlert": "Rekomenciĝis sukcese!",
+  "@blacklistPlstResetAlert": {
+    "description": "blacklistPlstResetAlert"
+  },
   "stopMusicOnTaskClear": "Ĉesigi la muzikon kiam la taskoj estas forigitaj",
+  "@stopMusicOnTaskClear": {
+    "description": "stopMusicOnTaskClear"
+  },
   "stopMusicOnTaskClearDes": "Muzikludado ĉesos kiam la Aplikaĵo estas forŝovumita de la taskadministrilo",
+  "@stopMusicOnTaskClearDes": {
+    "description": "stopMusicOnTaskClearDes"
+  },
   "resetblacklistedplaylistDes": "Rekomencigi ĉiujn piped nigralistigitajn ludlistojn",
+  "@resetblacklistedplaylistDes": {
+    "description": "resetblacklistedplaylistDes"
+  },
   "ignoreBatOptDes": "Se vi trafas sciigajn problemojn aŭ la ludadon estas ĉesigita far sistema optimumigo, bonvolu ebligu ĉi tiun opcion",
+  "@ignoreBatOptDes": {
+    "description": "ignoreBatOptDes"
+  },
   "by": "je",
+  "@by": {
+    "description": "by"
+  },
   "search": "Serĉi",
+  "@search": {
+    "description": "search"
+  },
   "searchDes": "Kantoj, Ludlisto, Albumo aŭ Artisto",
+  "@searchDes": {
+    "description": "searchDes"
+  },
   "cancelTimerAlert": "Dormtempumilo nuligite",
+  "@cancelTimerAlert": {
+    "description": "cancelTimerAlert"
+  },
   "videos": "Videoj",
+  "@videos": {
+    "description": "videos"
+  },
   "viewAll": "Vidi ĉiuj",
+  "@viewAll": {
+    "description": "viewAll"
+  },
   "plain": "Ebena",
+  "@plain": {
+    "description": "plain"
+  },
   "upNext": "Sekva",
+  "@upNext": {
+    "description": "upNext"
+  },
   "enabled": "Ebligita",
+  "@enabled": {
+    "description": "enabled"
+  },
   "pipedplstSyncAlert": "Piped ludlisto sinkroniĝis!",
+  "@pipedplstSyncAlert": {
+    "description": "pipedplstSyncAlert"
+  },
   "Piped": "Piped",
+  "@Piped": {
+    "description": "Piped"
+  },
   "operationFailed": "Operacio malsukcesis",
+  "@operationFailed": {
+    "description": "operationFailed"
+  },
   "goToDownloadPage": "Alklaku ĉi tie por iri al elŝuta paĝo",
+  "@goToDownloadPage": {
+    "description": "goToDownloadPage"
+  },
   "link": "Ligi",
+  "@link": {
+    "description": "link"
+  },
   "unLink": "Malligi",
+  "@unLink": {
+    "description": "unLink"
+  },
   "username": "Uzantnomo",
+  "@username": {
+    "description": "username"
+  },
   "password": "Pasvorto",
+  "@password": {
+    "description": "password"
+  },
   "linkAlert": "Ligiĝis sukcese!",
+  "@linkAlert": {
+    "description": "linkAlert"
+  },
   "clearImgCache": "Viŝi bildan kaŝmemoron",
+  "@clearImgCache": {
+    "description": "clearImgCache"
+  },
   "clearImgCacheDes": "Alklaku ĉi tie por viŝi kaŝmemorigitajn bildetojn/bildojn. (Ne rekomendita krom se vi volas refreŝigi kaŝmemorigitajn bildajn datumojn)",
+  "@clearImgCacheDes": {
+    "description": "clearImgCacheDes"
+  },
   "disabled": "Malebligita",
+  "@disabled": {
+    "description": "disabled"
+  },
   "github": "GitHub",
+  "@github": {
+    "description": "github"
+  },
   "for1": "por",
+  "@for1": {
+    "description": "for1"
+  },
   "songRemovedfromQueueCurrSong": "Vi ne povas forigi nuntempe ludantan kanton",
+  "@songRemovedfromQueueCurrSong": {
+    "description": "songRemovedfromQueueCurrSong"
+  },
   "songAlreadyExists": "Kanto jam ekzistas!",
+  "@songAlreadyExists": {
+    "description": "songAlreadyExists"
+  },
   "backgroundPlay": "Fona muzikludado",
+  "@backgroundPlay": {
+    "description": "backgroundPlay"
+  },
   "searchRes": "Serĉrezultoj",
+  "@searchRes": {
+    "description": "searchRes"
+  },
   "songAddedToPlaylistAlert": "Kanto aldoniĝis al ludlisto!",
+  "@songAddedToPlaylistAlert": {
+    "description": "songAddedToPlaylistAlert"
+  },
   "songAlreadyOfflineAlert": "Kanto jam estas elrete en la kaŝmemoro",
+  "@songAlreadyOfflineAlert": {
+    "description": "songAlreadyOfflineAlert"
+  },
   "playlistCreatedAlert": "Ludlisto kreiĝis!",
+  "@playlistCreatedAlert": {
+    "description": "playlistCreatedAlert"
+  },
   "artistBookmarkAddAlert": "Artisto legosigniĝis!",
+  "@artistBookmarkAddAlert": {
+    "description": "artistBookmarkAddAlert"
+  },
   "artistBookmarkRemoveAlert": "Artista legosigno foriĝis!",
+  "@artistBookmarkRemoveAlert": {
+    "description": "artistBookmarkRemoveAlert"
+  },
   "lyricsNotAvailable": "Kantotekstoj maldisponeblas!",
+  "@lyricsNotAvailable": {
+    "description": "lyricsNotAvailable"
+  },
   "syncedLyricsNotAvailable": "Sinkronigitaj kantotekstoj maldisponeblas!",
+  "@syncedLyricsNotAvailable": {
+    "description": "syncedLyricsNotAvailable"
+  },
   "artistDesNotAvailable": "Priskribo maldisponeblas!",
+  "@artistDesNotAvailable": {
+    "description": "artistDesNotAvailable"
+  },
   "newVersionAvailable": "Nova versio disponeblas!",
+  "@newVersionAvailable": {
+    "description": "newVersionAvailable"
+  },
   "notaSongVideo": "Ne Kanto/Muzikvideo!",
+  "@notaSongVideo": {
+    "description": "notaSongVideo"
+  },
   "notaValidLink": "Ne valida ligilo!",
+  "@notaValidLink": {
+    "description": "notaValidLink"
+  },
   "selectAuthInsMsg": "Bonvolu elekti Aŭtentigadan Instancon!",
+  "@selectAuthInsMsg": {
+    "description": "selectAuthInsMsg"
+  },
   "allFieldsReqMsg": "Ĉiuj kampoj estas bezonataj",
+  "@allFieldsReqMsg": {
+    "description": "allFieldsReqMsg"
+  },
   "backgroundPlayDes": "Ebligi/Malebligi muzikon ludante en la fono (Aplikaĵo estas alirebla de taskopleto kiam aplikaĵo funkcias fone)",
+  "@backgroundPlayDes": {
+    "description": "backgroundPlayDes"
+  },
   "githubDes": "Vidi GitHub fontkodon\nse vi ŝatas ĉi tiun projekton, ne forgesu doni ⭐",
+  "@githubDes": {
+    "description": "githubDes"
+  },
   "errorOccuredAlert": "Iu eraro okazis!",
+  "@errorOccuredAlert": {
+    "description": "errorOccuredAlert"
+  },
   "resetblacklistedplaylist": "Rekomencigi nigralistigitajn ludlistojn",
+  "@resetblacklistedplaylist": {
+    "description": "resetblacklistedplaylist"
+  },
   "keepScreenOnWhilePlaying": "Konservi ekrano ŝaltita dum ludado",
-  "keepScreenOnWhilePlayingDes": "Se ebligita, la ekrano de la aparato restos ŝaltita dum muziko ludas"
+  "@keepScreenOnWhilePlaying": {
+    "description": "keepScreenOnWhilePlaying"
+  },
+  "keepScreenOnWhilePlayingDes": "Se ebligita, la ekrano de la aparato restos ŝaltita dum muziko ludas",
+  "@keepScreenOnWhilePlayingDes": {
+    "description": "keepScreenOnWhilePlayingDes"
+  }
 }

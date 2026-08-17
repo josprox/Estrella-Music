@@ -1,272 +1,1079 @@
 {
   "@@locale": "gl",
   "singles": "Sinxelos",
+  "@singles": {
+    "description": "singles"
+  },
   "artists": "Artistas",
+  "@artists": {
+    "description": "artists"
+  },
   "settings": "Axustes",
+  "@settings": {
+    "description": "settings"
+  },
   "library": "Biblioteca",
+  "@library": {
+    "description": "library"
+  },
   "libSongs": "Cancións na biblioteca",
+  "@libSongs": {
+    "description": "libSongs"
+  },
   "libPlaylists": "Listaxes na biblioteca",
+  "@libPlaylists": {
+    "description": "libPlaylists"
+  },
   "libAlbums": "Álbums na biblioteca",
+  "@libAlbums": {
+    "description": "libAlbums"
+  },
   "communityplaylists": "Listaxes da comunidade",
+  "@communityplaylists": {
+    "description": "communityplaylists"
+  },
   "featuredplaylists": "Listaxes destacadas",
+  "@featuredplaylists": {
+    "description": "featuredplaylists"
+  },
   "items": "elementos",
+  "@items": {
+    "description": "items"
+  },
   "networkError1": "Vaites, erro de conexión!",
+  "@networkError1": {
+    "description": "networkError1"
+  },
   "retry": "Téntao de novo!",
+  "@retry": {
+    "description": "retry"
+  },
   "noOfflineSong": "Non hai cancións sen conexión!",
+  "@noOfflineSong": {
+    "description": "noOfflineSong"
+  },
   "recentlyPlayed": "Reproducidas recentemente",
+  "@recentlyPlayed": {
+    "description": "recentlyPlayed"
+  },
   "favorites": "Favoritas",
+  "@favorites": {
+    "description": "favorites"
+  },
   "cachedOrOffline": "En caché/Sen conexión",
+  "@cachedOrOffline": {
+    "description": "cachedOrOffline"
+  },
   "downloads": "Descargas",
+  "@downloads": {
+    "description": "downloads"
+  },
   "emptyPlaylist": "Listaxe baleira!",
+  "@emptyPlaylist": {
+    "description": "emptyPlaylist"
+  },
   "enqueueAll": "Engadir todo á cola",
+  "@enqueueAll": {
+    "description": "enqueueAll"
+  },
   "renamePlaylist": "Renomear listaxe",
+  "@renamePlaylist": {
+    "description": "renamePlaylist"
+  },
   "removePlaylist": "Eliminar listaxe",
+  "@removePlaylist": {
+    "description": "removePlaylist"
+  },
   "CreateNewPlaylist": "Crear unha nova listaxe",
+  "@CreateNewPlaylist": {
+    "description": "CreateNewPlaylist"
+  },
   "reArrangePlaylist": "Reordenar listaxe",
+  "@reArrangePlaylist": {
+    "description": "reArrangePlaylist"
+  },
   "removeMultiple": "Eliminar múltiples cancións",
+  "@removeMultiple": {
+    "description": "removeMultiple"
+  },
   "addMultipleSongs": "Engadir cancións á listaxe",
+  "@addMultipleSongs": {
+    "description": "addMultipleSongs"
+  },
   "create": "Crear",
+  "@create": {
+    "description": "create"
+  },
   "createnAdd": "Crear e engadir",
+  "@createnAdd": {
+    "description": "createnAdd"
+  },
   "noBookmarks": "Sen favoritas!",
+  "@noBookmarks": {
+    "description": "noBookmarks"
+  },
   "playNext": "Reproducir deseguido",
+  "@playNext": {
+    "description": "playNext"
+  },
   "addToPlaylist": "Engadir á listaxe",
+  "@addToPlaylist": {
+    "description": "addToPlaylist"
+  },
   "noLibPlaylist": "Non tes ningunha listaxe de reprodución na biblioteca!",
+  "@noLibPlaylist": {
+    "description": "noLibPlaylist"
+  },
   "enqueueSong": "Engadir esta canción á cola",
+  "@enqueueSong": {
+    "description": "enqueueSong"
+  },
   "goToAlbum": "Ir ó álbum",
+  "@goToAlbum": {
+    "description": "goToAlbum"
+  },
   "viewArtist": "Ver artista",
+  "@viewArtist": {
+    "description": "viewArtist"
+  },
   "openIn": "Abrir en",
+  "@openIn": {
+    "description": "openIn"
+  },
   "shareSong": "Compartir esta canción",
+  "@shareSong": {
+    "description": "shareSong"
+  },
   "removeFromPlaylist": "Eliminar da listaxe",
+  "@removeFromPlaylist": {
+    "description": "removeFromPlaylist"
+  },
   "upNext": "Deseguido",
+  "@upNext": {
+    "description": "upNext"
+  },
   "sleepTimer": "Temporizador",
+  "@sleepTimer": {
+    "description": "sleepTimer"
+  },
   "add5Minutes": "Engadir 5 minutos",
+  "@add5Minutes": {
+    "description": "add5Minutes"
+  },
   "minutes": "minutos",
+  "@minutes": {
+    "description": "minutes"
+  },
   "endOfThisSong": "Fin da canción",
+  "@endOfThisSong": {
+    "description": "endOfThisSong"
+  },
   "themeMode": "Tema",
+  "@themeMode": {
+    "description": "themeMode"
+  },
   "dynamic": "Dinámico",
+  "@dynamic": {
+    "description": "dynamic"
+  },
   "setDiscoverContent": "Configurar o contido recomendado",
+  "@setDiscoverContent": {
+    "description": "setDiscoverContent"
+  },
   "discover": "Descubrir",
+  "@discover": {
+    "description": "discover"
+  },
   "trending": "Tendencias",
+  "@trending": {
+    "description": "trending"
+  },
   "topmusicvideos": "Vídeos musicais populares",
+  "@topmusicvideos": {
+    "description": "topmusicvideos"
+  },
   "basedOnLast": "Baseado na última interacción",
+  "@basedOnLast": {
+    "description": "basedOnLast"
+  },
   "restoreLastPlaybackSession": "Restaurar a última sesión de reprodución",
+  "@restoreLastPlaybackSession": {
+    "description": "restoreLastPlaybackSession"
+  },
   "cacheSongs": "Cancións en caché",
+  "@cacheSongs": {
+    "description": "cacheSongs"
+  },
   "skipSilence": "Omitir silencio",
+  "@skipSilence": {
+    "description": "skipSilence"
+  },
   "streamingQualityDes": "Calidade de transmisión de música",
+  "@streamingQualityDes": {
+    "description": "streamingQualityDes"
+  },
   "disableTransitionAnimation": "Deshabilitar as animacións das transicións",
+  "@disableTransitionAnimation": {
+    "description": "disableTransitionAnimation"
+  },
   "disableTransitionAnimationDes": "Activa esta opción para desactivar as animacións de transición das pestanas",
+  "@disableTransitionAnimationDes": {
+    "description": "disableTransitionAnimationDes"
+  },
   "high": "Alto",
+  "@high": {
+    "description": "high"
+  },
   "cacheHomeScreenDataDes": "Se esta opción está activada, a pantalla de inicio cargará inmediatamente",
+  "@cacheHomeScreenDataDes": {
+    "description": "cacheHomeScreenDataDes"
+  },
   "downloadingFormat": "Descargar o formato do arquivo",
+  "@downloadingFormat": {
+    "description": "downloadingFormat"
+  },
   "exportDowloadedFiles": "Exportar arquivos descargados",
+  "@exportDowloadedFiles": {
+    "description": "exportDowloadedFiles"
+  },
   "exportedFileLocation": "Ubicación do arquivo exportado",
+  "@exportedFileLocation": {
+    "description": "exportedFileLocation"
+  },
   "exporting": "Exportando...",
+  "@exporting": {
+    "description": "exporting"
+  },
   "close": "Pechar",
+  "@close": {
+    "description": "close"
+  },
   "equalizer": "Ecualizador",
+  "@equalizer": {
+    "description": "equalizer"
+  },
   "enabled": "Habilitado",
+  "@enabled": {
+    "description": "enabled"
+  },
   "disabled": "Deshabilitado",
+  "@disabled": {
+    "description": "disabled"
+  },
   "githubDes": "Ver código fonte en GitHub.\nSe che gusta este proxecto, non esquezas darlle unha ⭐",
+  "@githubDes": {
+    "description": "githubDes"
+  },
   "by": "por",
+  "@by": {
+    "description": "by"
+  },
   "search": "Procurar",
+  "@search": {
+    "description": "search"
+  },
   "searchDes": "Cancións, Listaxe, Álbum ou Artista",
+  "@searchDes": {
+    "description": "searchDes"
+  },
   "searchRes": "Resultados da busca",
+  "@searchRes": {
+    "description": "searchRes"
+  },
   "nomatch": "Non se atoparon coincidencias para",
+  "@nomatch": {
+    "description": "nomatch"
+  },
   "subscribers": "subscritores",
+  "@subscribers": {
+    "description": "subscribers"
+  },
   "radioNotAvailable": "Radio non dispoñible para este artista!",
+  "@radioNotAvailable": {
+    "description": "radioNotAvailable"
+  },
   "songRemovedfromQueue": "Eliminado da cola!",
+  "@songRemovedfromQueue": {
+    "description": "songRemovedfromQueue"
+  },
   "songRemovedfromQueueCurrSong": "Non podes eliminar a canción en reprodución",
+  "@songRemovedfromQueueCurrSong": {
+    "description": "songRemovedfromQueueCurrSong"
+  },
   "albumBookmarkRemoveAlert": "Álbum eliminado de favoritos!",
+  "@albumBookmarkRemoveAlert": {
+    "description": "albumBookmarkRemoveAlert"
+  },
   "artistBookmarkAddAlert": "Artista engadido en favoritos!",
+  "@artistBookmarkAddAlert": {
+    "description": "artistBookmarkAddAlert"
+  },
   "notaSongVideo": "Non é unha canción/vídeo musical!",
+  "@notaSongVideo": {
+    "description": "notaSongVideo"
+  },
   "notaValidLink": "Non é unha ligazón válida!",
+  "@notaValidLink": {
+    "description": "notaValidLink"
+  },
   "operationFailed": "Erro na operación",
+  "@operationFailed": {
+    "description": "operationFailed"
+  },
   "goToDownloadPage": "Clica aquí para ir á páxina de descarga",
+  "@goToDownloadPage": {
+    "description": "goToDownloadPage"
+  },
   "local": "Local",
+  "@local": {
+    "description": "local"
+  },
   "unLink": "Desvincular",
+  "@unLink": {
+    "description": "unLink"
+  },
   "hintApiUrl": "Dirección URL a instancia canalizada",
+  "@hintApiUrl": {
+    "description": "hintApiUrl"
+  },
   "customIns": "Instancia personalizada",
+  "@customIns": {
+    "description": "customIns"
+  },
   "customInsSelectMsg": "Por favor selecciona Instancia personalizada",
+  "@customInsSelectMsg": {
+    "description": "customInsSelectMsg"
+  },
   "selectAuthInsMsg": "Por favor selecciona Instancia de autenticación!",
+  "@selectAuthInsMsg": {
+    "description": "selectAuthInsMsg"
+  },
   "allFieldsReqMsg": "Todos os campos son obrigatorios",
+  "@allFieldsReqMsg": {
+    "description": "allFieldsReqMsg"
+  },
   "linkPipedDes": "Ligazón con canalización para as listaxes",
+  "@linkPipedDes": {
+    "description": "linkPipedDes"
+  },
   "selectAuthIns": "Selecciona Instancia de autenticación",
+  "@selectAuthIns": {
+    "description": "selectAuthIns"
+  },
   "username": "Usuario",
+  "@username": {
+    "description": "username"
+  },
   "password": "Contrasinal",
+  "@password": {
+    "description": "password"
+  },
   "linkAlert": "Vinculado correctamente!",
+  "@linkAlert": {
+    "description": "linkAlert"
+  },
   "unlinkAlert": "Desvinculado correctamente!",
+  "@unlinkAlert": {
+    "description": "unlinkAlert"
+  },
   "playlistBlacklistAlert": "Listaxe en lista negra!",
+  "@playlistBlacklistAlert": {
+    "description": "playlistBlacklistAlert"
+  },
   "reset": "Restablecer",
+  "@reset": {
+    "description": "reset"
+  },
   "blacklistPlstResetAlert": "Restablecemento correcto!",
+  "@blacklistPlstResetAlert": {
+    "description": "blacklistPlstResetAlert"
+  },
   "resetblacklistedplaylist": "Restablecemento das listas negras",
+  "@resetblacklistedplaylist": {
+    "description": "resetblacklistedplaylist"
+  },
   "stopMusicOnTaskClear": "Deter a música cando se elimina a pestana",
+  "@stopMusicOnTaskClear": {
+    "description": "stopMusicOnTaskClear"
+  },
   "stopMusicOnTaskClearDes": "A reprodución da música deterase cando se elimine a aplicación da barra de tarefas",
+  "@stopMusicOnTaskClearDes": {
+    "description": "stopMusicOnTaskClearDes"
+  },
   "backupSettingsAndPlaylists": "Copia de seguridade das Preferencias e Listas",
+  "@backupSettingsAndPlaylists": {
+    "description": "backupSettingsAndPlaylists"
+  },
   "backupSettingsAndPlaylistsDes": "Garda todas as preferencias, listaxes e datos de identificación nunha copia de seguridade",
+  "@backupSettingsAndPlaylistsDes": {
+    "description": "backupSettingsAndPlaylistsDes"
+  },
   "restoreSettingsAndPlaylists": "Restaurar Preferencias e Listas",
+  "@restoreSettingsAndPlaylists": {
+    "description": "restoreSettingsAndPlaylists"
+  },
   "backupMsg": "Copia de seguridade gardada correctamente!",
+  "@backupMsg": {
+    "description": "backupMsg"
+  },
   "backFilesFound": "bases de datos atopadas",
+  "@backFilesFound": {
+    "description": "backFilesFound"
+  },
   "restoreMsg": "Restaurado correctamente!\nOs cambios aplicaranse ó reiniciar",
+  "@restoreMsg": {
+    "description": "restoreMsg"
+  },
   "restoring": "Restaurando...",
+  "@restoring": {
+    "description": "restoring"
+  },
   "home": "Inicio",
+  "@home": {
+    "description": "home"
+  },
   "songs": "Cancións",
+  "@songs": {
+    "description": "songs"
+  },
   "albums": "Álbums",
+  "@albums": {
+    "description": "albums"
+  },
   "playlists": "Listaxes",
+  "@playlists": {
+    "description": "playlists"
+  },
   "libArtists": "Artistas na biblioteca",
+  "@libArtists": {
+    "description": "libArtists"
+  },
   "cancel": "Cancelar",
+  "@cancel": {
+    "description": "cancel"
+  },
   "startRadio": "Acender a radio",
+  "@startRadio": {
+    "description": "startRadio"
+  },
   "rename": "Renomear",
+  "@rename": {
+    "description": "rename"
+  },
   "removeFromQueue": "Eliminar da cola",
+  "@removeFromQueue": {
+    "description": "removeFromQueue"
+  },
   "removeFromLib": "Eliminar da biblioteca",
+  "@removeFromLib": {
+    "description": "removeFromLib"
+  },
   "cancelTimer": "Cancelar temporizador",
+  "@cancelTimer": {
+    "description": "cancelTimer"
+  },
   "deleteDownloadData": "Eliminar de descargas",
+  "@deleteDownloadData": {
+    "description": "deleteDownloadData"
+  },
   "systemDefault": "Predeterminado",
+  "@systemDefault": {
+    "description": "systemDefault"
+  },
   "dark": "Escuro",
+  "@dark": {
+    "description": "dark"
+  },
   "light": "Claro",
+  "@light": {
+    "description": "light"
+  },
   "language": "Idioma",
+  "@language": {
+    "description": "language"
+  },
   "languageDes": "Seleccionar idioma da aplicación",
+  "@languageDes": {
+    "description": "languageDes"
+  },
   "quickpicks": "Selección rápida",
+  "@quickpicks": {
+    "description": "quickpicks"
+  },
   "restoreLastPlaybackSessionDes": "Restaurar automáticamente a última sesión de reprodución ó iniciar a aplicación",
+  "@restoreLastPlaybackSessionDes": {
+    "description": "restoreLastPlaybackSessionDes"
+  },
   "homeContentCount": "Reconto de contidos",
+  "@homeContentCount": {
+    "description": "homeContentCount"
+  },
   "homeContentCountDes": "Selecciona o número de contido na pantalla de inicio. Menos resultados resultan nunha carga máis rápida",
+  "@homeContentCountDes": {
+    "description": "homeContentCountDes"
+  },
   "enableBottomNav": "Barra de navegación inferior",
+  "@enableBottomNav": {
+    "description": "enableBottomNav"
+  },
   "enableBottomNavDes": "Cambiar á barra de navegación inferior",
+  "@enableBottomNavDes": {
+    "description": "enableBottomNavDes"
+  },
   "cacheSongsDes": "Gardar cancións en caché durante a reprodución para ocasións futuras ou sen conexión. Esta acción consumirá espacio adicional no teu dispositivo",
+  "@cacheSongsDes": {
+    "description": "cacheSongsDes"
+  },
   "skipSilenceDes": "Os silencios serán omitidos durante a reprodución",
+  "@skipSilenceDes": {
+    "description": "skipSilenceDes"
+  },
   "streamingQuality": "Calidade de transmisión",
+  "@streamingQuality": {
+    "description": "streamingQuality"
+  },
   "low": "Baixo",
+  "@low": {
+    "description": "low"
+  },
   "backgroundPlay": "Reproducir música de fondo",
+  "@backgroundPlay": {
+    "description": "backgroundPlay"
+  },
   "backgroundPlayDes": "Activar/desactivar a reprodución de música en segundo plano (pódese acceder á aplicación desde a bandexa do sistema cando se executa en segundo plano)",
+  "@backgroundPlayDes": {
+    "description": "backgroundPlayDes"
+  },
   "downloadLocation": "Ubicación das descargas",
+  "@downloadLocation": {
+    "description": "downloadLocation"
+  },
   "cacheHomeScreenData": "Caché do contido da pantalla de inicio",
+  "@cacheHomeScreenData": {
+    "description": "cacheHomeScreenData"
+  },
   "songAlreadyOfflineAlert": "Canción sen conexión xa na caché",
+  "@songAlreadyOfflineAlert": {
+    "description": "songAlreadyOfflineAlert"
+  },
   "downloadingFormatDes": "Escolle o formato do arquivo de descarga. \"Opus\" proporcionará a mellor calidade",
+  "@downloadingFormatDes": {
+    "description": "downloadingFormatDes"
+  },
   "exportDowloadedFilesDes": "Clica aquí para exportar o arquivo descargado do diretorio da aplicación a un diretorio externo",
+  "@exportDowloadedFilesDes": {
+    "description": "exportDowloadedFilesDes"
+  },
   "export": "Exportar",
+  "@export": {
+    "description": "export"
+  },
   "exportMsg": "Arquivos descargados correctamente",
+  "@exportMsg": {
+    "description": "exportMsg"
+  },
   "scanning": "Escaneando...",
+  "@scanning": {
+    "description": "scanning"
+  },
   "downFilesFound": "atopáronse arquivos descargados",
+  "@downFilesFound": {
+    "description": "downFilesFound"
+  },
   "equalizerDes": "Abrir o ecualizador do sistema",
+  "@equalizerDes": {
+    "description": "equalizerDes"
+  },
   "clearImgCache": "Limpar caché de imaxes",
+  "@clearImgCache": {
+    "description": "clearImgCache"
+  },
   "clearImgCacheAlert": "Caché de imaxes limpado correctamente",
+  "@clearImgCacheAlert": {
+    "description": "clearImgCacheAlert"
+  },
   "clearImgCacheDes": "Pincha aquí para limpar miniaturas/imaxes cacheadas. (No recomendado salvo que queiras refrescar as imaxes cacheadas)",
+  "@clearImgCacheDes": {
+    "description": "clearImgCacheDes"
+  },
   "ignoreBatOpt": "Ignorar a optimización da batería",
+  "@ignoreBatOpt": {
+    "description": "ignoreBatOpt"
+  },
   "ignoreBatOptDes": "Se tes problemas coas notificacións ou a reprodución detense pola optimización do sistema, por favor activa esta opción",
+  "@ignoreBatOptDes": {
+    "description": "ignoreBatOptDes"
+  },
   "status": "Estado",
+  "@status": {
+    "description": "status"
+  },
   "github": "GitHub",
+  "@github": {
+    "description": "github"
+  },
   "for1": "para",
+  "@for1": {
+    "description": "for1"
+  },
   "videos": "Vídeos",
+  "@videos": {
+    "description": "videos"
+  },
   "viewAll": "Ver todo",
+  "@viewAll": {
+    "description": "viewAll"
+  },
   "results": "Resultados",
+  "@results": {
+    "description": "results"
+  },
   "about": "Respecto de",
+  "@about": {
+    "description": "about"
+  },
   "songAddedToPlaylistAlert": "Canción engadida á listaxe!",
+  "@songAddedToPlaylistAlert": {
+    "description": "songAddedToPlaylistAlert"
+  },
   "synced": "Sincronizado",
+  "@synced": {
+    "description": "synced"
+  },
   "plain": "Plano",
+  "@plain": {
+    "description": "plain"
+  },
   "deleteDownloadedDataAlert": "Eliminado correctamente das descargas!",
+  "@deleteDownloadedDataAlert": {
+    "description": "deleteDownloadedDataAlert"
+  },
   "cancelTimerAlert": "Temporizador cancelado",
+  "@cancelTimerAlert": {
+    "description": "cancelTimerAlert"
+  },
   "sleepTimeSetAlert": "O temporizador activouse con éxito",
+  "@sleepTimeSetAlert": {
+    "description": "sleepTimeSetAlert"
+  },
   "songAlreadyExists": "A canción xa existe!",
+  "@songAlreadyExists": {
+    "description": "songAlreadyExists"
+  },
   "songEnqueueAlert": "Canción engadida á cola!",
+  "@songEnqueueAlert": {
+    "description": "songEnqueueAlert"
+  },
   "songRemovedAlert": "Eliminada de",
+  "@songRemovedAlert": {
+    "description": "songRemovedAlert"
+  },
   "errorOccuredAlert": "Produciuse un erro!",
+  "@errorOccuredAlert": {
+    "description": "errorOccuredAlert"
+  },
   "pipedplstSyncAlert": "Listaxe canalizada sincronizada!",
+  "@pipedplstSyncAlert": {
+    "description": "pipedplstSyncAlert"
+  },
   "playlistCreatedAlert": "Listaxe creada!",
+  "@playlistCreatedAlert": {
+    "description": "playlistCreatedAlert"
+  },
   "playlistCreatednsongAddedAlert": "Listaxe creada e canción engadida!",
+  "@playlistCreatednsongAddedAlert": {
+    "description": "playlistCreatednsongAddedAlert"
+  },
   "playlistRenameAlert": "Renomeado con éxito!",
+  "@playlistRenameAlert": {
+    "description": "playlistRenameAlert"
+  },
   "playlistRemovedAlert": "Listaxe eliminada!",
+  "@playlistRemovedAlert": {
+    "description": "playlistRemovedAlert"
+  },
   "playlistBookmarkAddAlert": "Listaxe en favoritos!",
+  "@playlistBookmarkAddAlert": {
+    "description": "playlistBookmarkAddAlert"
+  },
   "albumBookmarkAddAlert": "Álbum engadido en favoritos!",
+  "@albumBookmarkAddAlert": {
+    "description": "albumBookmarkAddAlert"
+  },
   "playlistBookmarkRemoveAlert": "Listaxe eliminada de favoritos!",
+  "@playlistBookmarkRemoveAlert": {
+    "description": "playlistBookmarkRemoveAlert"
+  },
   "artistBookmarkRemoveAlert": "Artista eliminado de favoritos!",
+  "@artistBookmarkRemoveAlert": {
+    "description": "artistBookmarkRemoveAlert"
+  },
   "lyricsNotAvailable": "Letra non dispoñible!",
+  "@lyricsNotAvailable": {
+    "description": "lyricsNotAvailable"
+  },
   "syncedLyricsNotAvailable": "A sincronización da letra non está dispoñible!",
+  "@syncedLyricsNotAvailable": {
+    "description": "syncedLyricsNotAvailable"
+  },
   "artistDesNotAvailable": "Descripción non dispoñible!",
+  "@artistDesNotAvailable": {
+    "description": "artistDesNotAvailable"
+  },
   "newVersionAvailable": "Nova versión dispoñible!",
+  "@newVersionAvailable": {
+    "description": "newVersionAvailable"
+  },
   "dismiss": "Descartar",
+  "@dismiss": {
+    "description": "dismiss"
+  },
   "dontShowInfoAgain": "Non amosar esta información de novo",
+  "@dontShowInfoAgain": {
+    "description": "dontShowInfoAgain"
+  },
   "Piped": "Canalizada",
+  "@Piped": {
+    "description": "Piped"
+  },
   "link": "Vincular",
+  "@link": {
+    "description": "link"
+  },
   "resetblacklistedplaylistDes": "Restablecer todas as listaxes na lista negra",
+  "@resetblacklistedplaylistDes": {
+    "description": "resetblacklistedplaylistDes"
+  },
   "restoreSettingsAndPlaylistsDes": "Restaura todas as preferencias, datos de identificación e listaxes desde unha de copia de seguridade. Sobreescribe todas as configuracións actuais",
+  "@restoreSettingsAndPlaylistsDes": {
+    "description": "restoreSettingsAndPlaylistsDes"
+  },
   "restore": "Restaurar",
+  "@restore": {
+    "description": "restore"
+  },
   "closeApp": "Pechar aplicación",
+  "@closeApp": {
+    "description": "closeApp"
+  },
   "randomRadio": "Radio aleatoria",
+  "@randomRadio": {
+    "description": "randomRadio"
+  },
   "autoDownFavSong": "Descargar cancións favoritas automáticamente",
+  "@autoDownFavSong": {
+    "description": "autoDownFavSong"
+  },
   "autoDownFavSongDes": "Descargar cancións automáticamente cando se engaden a favoritos",
+  "@autoDownFavSongDes": {
+    "description": "autoDownFavSongDes"
+  },
   "personalisation": "Personalización",
+  "@personalisation": {
+    "description": "personalisation"
+  },
   "autoOpenPlayerDes": "Habilitar/deshabilitar a apertura automática de pantalla completa do reprodutor ó escoller unha canción",
+  "@autoOpenPlayerDes": {
+    "description": "autoOpenPlayerDes"
+  },
   "backupAppData": "Facer copia de seguridade dos datos da aplicación",
+  "@backupAppData": {
+    "description": "backupAppData"
+  },
   "queuerearrangingDeniedMsg": "A cola non se pode reordenar cando o modo aleatorio está activado",
+  "@queuerearrangingDeniedMsg": {
+    "description": "queuerearrangingDeniedMsg"
+  },
   "queueShufflingDeniedMsg": "A cola non se pode mesturar cando o modo aleatorio está activado",
+  "@queueShufflingDeniedMsg": {
+    "description": "queueShufflingDeniedMsg"
+  },
   "songNotPlayable": "A canción non se pode reproducir debido a unha restrición do servidor!",
+  "@songNotPlayable": {
+    "description": "songNotPlayable"
+  },
   "songInfo": "Información respecto da canción",
+  "@songInfo": {
+    "description": "songInfo"
+  },
   "appInfo": "Respecto da aplicación",
+  "@appInfo": {
+    "description": "appInfo"
+  },
   "download": "Descargar",
+  "@download": {
+    "description": "download"
+  },
   "musicAndPlayback": "Música e reprodución",
+  "@musicAndPlayback": {
+    "description": "musicAndPlayback"
+  },
   "content": "Contido",
+  "@content": {
+    "description": "content"
+  },
   "loudnessNormalizationDes": "Establece o mesmo nivel de volume para todas as cancións (Experimental) (Non funcionará coas cancións descargadas na versión anterior (< v1.10.0))",
+  "@loudnessNormalizationDes": {
+    "description": "loudnessNormalizationDes"
+  },
   "urlSearchDes": "URL detectada. Fai clic para reproducir o contido asociado",
+  "@urlSearchDes": {
+    "description": "urlSearchDes"
+  },
   "shuffleQueue": "Mesturar cola",
+  "@shuffleQueue": {
+    "description": "shuffleQueue"
+  },
   "queueLoop": "Repetir cola",
+  "@queueLoop": {
+    "description": "queueLoop"
+  },
   "queueLoopNotDisMsg1": "O modo de repetición da cola non se pode desactivar cando o modo aleatorio está activado.",
+  "@queueLoopNotDisMsg1": {
+    "description": "queueLoopNotDisMsg1"
+  },
   "queueLoopNotDisMsg2": "O modo de repetición da cola non se pode activar no modo radio.",
+  "@queueLoopNotDisMsg2": {
+    "description": "queueLoopNotDisMsg2"
+  },
   "loudnessNormalization": "Normalización do volume",
+  "@loudnessNormalization": {
+    "description": "loudnessNormalization"
+  },
   "duration": "Duración",
+  "@duration": {
+    "description": "duration"
+  },
   "downloadError2": "A canción escollida non se pode descargar debido a unha restrición do servidor. Por favor, téntao de novo",
+  "@downloadError2": {
+    "description": "downloadError2"
+  },
   "restoreAppData": "Restablecer datos da aplicación",
+  "@restoreAppData": {
+    "description": "restoreAppData"
+  },
   "misc": "Varios",
+  "@misc": {
+    "description": "misc"
+  },
   "gesture": "Xestos",
+  "@gesture": {
+    "description": "gesture"
+  },
   "enableSlidableActionDes": "Habilitar accións deslizables co título das cancións",
+  "@enableSlidableActionDes": {
+    "description": "enableSlidableActionDes"
+  },
   "resetToDefault": "Restablecer configuración predeterminada",
+  "@resetToDefault": {
+    "description": "resetToDefault"
+  },
   "resetToDefaultDes": "Restablecer datos de fábrica da aplicación (Reinicio necesario)",
+  "@resetToDefaultDes": {
+    "description": "resetToDefaultDes"
+  },
   "resetToDefaultMsg": "A configuración foi restablecida ós valores predeterminados. Por favor, reinicia a aplicación",
+  "@resetToDefaultMsg": {
+    "description": "resetToDefaultMsg"
+  },
   "letsStrart": "Comecemos...",
+  "@letsStrart": {
+    "description": "letsStrart"
+  },
   "backup": "Facer copia de seguridade",
+  "@backup": {
+    "description": "backup"
+  },
   "processFiles": "Procesando arquivos...",
+  "@processFiles": {
+    "description": "processFiles"
+  },
   "androidBackupWarning": "Non probado: Seleccionar a cuadrícula despois de descargar máis de 60 arquivos pode consumir unha gran cantidade de memoria e provocar que o teléfono ou a aplicación se pechen. Procede baixo o teu propio risco.",
+  "@androidBackupWarning": {
+    "description": "androidBackupWarning"
+  },
   "album": "Álbum",
+  "@album": {
+    "description": "album"
+  },
   "playingfromAlbum": "REPRODUCINDO DESDE O ÁLBUM",
+  "@playingfromAlbum": {
+    "description": "playingfromAlbum"
+  },
   "playingfromPlaylist": "REPRODUCINDO DESDE A LISTAXE",
+  "@playingfromPlaylist": {
+    "description": "playingfromPlaylist"
+  },
   "playingfromSelection": "REPRODUCINDO DESDE A SELECCIÓN",
+  "@playingfromSelection": {
+    "description": "playingfromSelection"
+  },
   "playingfromArtist": "REPRODUCINDO DESDE O ARTISTA",
+  "@playingfromArtist": {
+    "description": "playingfromArtist"
+  },
   "randomSelection": "Selección aleatoria",
+  "@randomSelection": {
+    "description": "randomSelection"
+  },
   "playnextMsg": "Vindeiro",
+  "@playnextMsg": {
+    "description": "playnextMsg"
+  },
   "networkError": "Erro na rede! Comproba a túa conexión.",
+  "@networkError": {
+    "description": "networkError"
+  },
   "downloadError3": "A descarga fracasou debido a un erro de rede ou de transmisión. Por favor, téntao de novo",
+  "@downloadError3": {
+    "description": "downloadError3"
+  },
   "playerUi": "Interface de usuario",
+  "@playerUi": {
+    "description": "playerUi"
+  },
   "playerUiDes": "Selecciona a interface de usuario",
+  "@playerUiDes": {
+    "description": "playerUiDes"
+  },
   "standard": "Estándar",
+  "@standard": {
+    "description": "standard"
+  },
   "autoOpenPlayer": "Abrir reprodutor automáticamente",
+  "@autoOpenPlayer": {
+    "description": "autoOpenPlayer"
+  },
   "id": "Identificador",
+  "@id": {
+    "description": "id"
+  },
   "title": "Título",
+  "@title": {
+    "description": "title"
+  },
   "audioCodec": "Códec de audio",
+  "@audioCodec": {
+    "description": "audioCodec"
+  },
   "bitrate": "Taxa de bits",
+  "@bitrate": {
+    "description": "bitrate"
+  },
   "loudnessDb": "Volume (dB)",
+  "@loudnessDb": {
+    "description": "loudnessDb"
+  },
   "includeDownloadedFiles": "Incluír cancións descargadas",
+  "@includeDownloadedFiles": {
+    "description": "includeDownloadedFiles"
+  },
   "backupInProgress": "Copia de seguridade en proceso...",
+  "@backupInProgress": {
+    "description": "backupInProgress"
+  },
   "restartApp": "Reiniciar aplicación",
+  "@restartApp": {
+    "description": "restartApp"
+  },
   "enableSlidableAction": "Habilitar accións deslizables",
+  "@enableSlidableAction": {
+    "description": "enableSlidableAction"
+  },
   "reArrangeSongs": "Reordenar cancións",
+  "@reArrangeSongs": {
+    "description": "reArrangeSongs"
+  },
   "selectSongs": "Elixe cancións",
+  "@selectSongs": {
+    "description": "selectSongs"
+  },
   "selectAll": "Elixe todo",
+  "@selectAll": {
+    "description": "selectAll"
+  },
   "exportPlaylist": "Exportar listaxe",
+  "@exportPlaylist": {
+    "description": "exportPlaylist"
+  },
   "exportingPlaylist": "Exportando listaxe…",
+  "@exportingPlaylist": {
+    "description": "exportingPlaylist"
+  },
   "playlistExportedMsg": "Listaxe exportado con éxito a",
+  "@playlistExportedMsg": {
+    "description": "playlistExportedMsg"
+  },
   "exportError": "Erro exportando listaxe",
+  "@exportError": {
+    "description": "exportError"
+  },
   "exportErrorPermission": "Permiso denegado ao exportar",
+  "@exportErrorPermission": {
+    "description": "exportErrorPermission"
+  },
   "exportErrorStorage": "Espazo de almacenamento insuficiente",
+  "@exportErrorStorage": {
+    "description": "exportErrorStorage"
+  },
   "exportErrorFormat": "Erro no formato dos datos do listaxe",
+  "@exportErrorFormat": {
+    "description": "exportErrorFormat"
+  },
   "importPlaylist": "Importar listaxe",
+  "@importPlaylist": {
+    "description": "importPlaylist"
+  },
   "importingPlaylist": "Importando listaxe…",
+  "@importingPlaylist": {
+    "description": "importingPlaylist"
+  },
   "importPlaylistDesc": "Escolle un arquivo JSON dunha listaxe exportada previamente para importar",
+  "@importPlaylistDesc": {
+    "description": "importPlaylistDesc"
+  },
   "selectFile": "Escolle arquivo",
+  "@selectFile": {
+    "description": "selectFile"
+  },
   "playlistImportedMsg": "Listaxe importada con éxito",
+  "@playlistImportedMsg": {
+    "description": "playlistImportedMsg"
+  },
   "importError": "Erro importando listaxe",
+  "@importError": {
+    "description": "importError"
+  },
   "importErrorFileAccess": "Non se puido acceder ao arquivo seleccionado",
+  "@importErrorFileAccess": {
+    "description": "importErrorFileAccess"
+  },
   "importErrorFormat": "Formato de arquivo non válido",
+  "@importErrorFormat": {
+    "description": "importErrorFormat"
+  },
   "invalidPlaylistFile": "Estrutura de arquivo de lista de reprodución non válida",
+  "@invalidPlaylistFile": {
+    "description": "invalidPlaylistFile"
+  },
   "importErrorDatabase": "Erro gardando na base de datos",
+  "@importErrorDatabase": {
+    "description": "importErrorDatabase"
+  },
   "fileNotFound": "Arquivo non atopado",
+  "@fileNotFound": {
+    "description": "fileNotFound"
+  },
   "importLargeFileNote": "Nota: As listaxes grandes poden tardar máis en importarse",
+  "@importLargeFileNote": {
+    "description": "importLargeFileNote"
+  },
   "keepScreenOnWhilePlaying": "Manter a pantalla acesa mentres se reproduce",
-  "keepScreenOnWhilePlayingDes": "Se está activado, a pantalla do dispositivo manterase acesa mentres se reproduce música"
+  "@keepScreenOnWhilePlaying": {
+    "description": "keepScreenOnWhilePlaying"
+  },
+  "keepScreenOnWhilePlayingDes": "Se está activado, a pantalla do dispositivo manterase acesa mentres se reproduce música",
+  "@keepScreenOnWhilePlayingDes": {
+    "description": "keepScreenOnWhilePlayingDes"
+  }
 }

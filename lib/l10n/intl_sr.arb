@@ -1,273 +1,1083 @@
 {
   "@@locale": "sr",
   "playlistCreatednsongAddedAlert": "Плејлиста је направљена и песма је додата!",
+  "@playlistCreatednsongAddedAlert": {
+    "description": "playlistCreatednsongAddedAlert"
+  },
   "dismiss": "Одбаци",
+  "@dismiss": {
+    "description": "dismiss"
+  },
   "goToDownloadPage": "Кликните овде да бисте отишли на страницу за преузимање",
+  "@goToDownloadPage": {
+    "description": "goToDownloadPage"
+  },
   "songEnqueueAlert": "Песма у редоследу!",
+  "@songEnqueueAlert": {
+    "description": "songEnqueueAlert"
+  },
   "renamePlaylist": "Преименуј плејлисту",
+  "@renamePlaylist": {
+    "description": "renamePlaylist"
+  },
   "songAddedToPlaylistAlert": "Песма је додата на плејлисту!",
+  "@songAddedToPlaylistAlert": {
+    "description": "songAddedToPlaylistAlert"
+  },
   "unlinkAlert": "Веза је успешно прекинута!",
+  "@unlinkAlert": {
+    "description": "unlinkAlert"
+  },
   "playlistCreatedAlert": "Плејлиста је направљена!",
+  "@playlistCreatedAlert": {
+    "description": "playlistCreatedAlert"
+  },
   "reset": "Ресетуј",
+  "@reset": {
+    "description": "reset"
+  },
   "unLink": "Прекид везе",
+  "@unLink": {
+    "description": "unLink"
+  },
   "trending": "У тренду",
+  "@trending": {
+    "description": "trending"
+  },
   "searchRes": "Резултати претраге",
+  "@searchRes": {
+    "description": "searchRes"
+  },
   "cacheSongsDes": "Кеширање песама током пуштања за будућу/офлајн репродукцију ће заузети додатни меморијски простор на вашем уређају",
+  "@cacheSongsDes": {
+    "description": "cacheSongsDes"
+  },
   "password": "Лозинка",
+  "@password": {
+    "description": "password"
+  },
   "noLibPlaylist": "Немате ниједну збирку плејлиста!",
+  "@noLibPlaylist": {
+    "description": "noLibPlaylist"
+  },
   "setDiscoverContent": "Подешавања садржаја за откривање",
+  "@setDiscoverContent": {
+    "description": "setDiscoverContent"
+  },
   "networkError1": "Упс, мрежна грешка!",
+  "@networkError1": {
+    "description": "networkError1"
+  },
   "songRemovedfromQueue": "Уклоњено из редоследа!",
+  "@songRemovedfromQueue": {
+    "description": "songRemovedfromQueue"
+  },
   "libSongs": "Збирка песама",
+  "@libSongs": {
+    "description": "libSongs"
+  },
   "githubDes": "Погледајте изворни кôд на GitHub-у, \nако вам се свиђа овај пројекат, не заборавите да дате ⭐",
+  "@githubDes": {
+    "description": "githubDes"
+  },
   "communityplaylists": "Плејлисте заједнице",
+  "@communityplaylists": {
+    "description": "communityplaylists"
+  },
   "playlistRemovedAlert": "Плејлиста је уклоњена!",
+  "@playlistRemovedAlert": {
+    "description": "playlistRemovedAlert"
+  },
   "libAlbums": "Збирка албума",
+  "@libAlbums": {
+    "description": "libAlbums"
+  },
   "albumBookmarkRemoveAlert": "Обележивач албума је уклоњен!",
+  "@albumBookmarkRemoveAlert": {
+    "description": "albumBookmarkRemoveAlert"
+  },
   "notaSongVideo": "Није песма/музички спот!",
+  "@notaSongVideo": {
+    "description": "notaSongVideo"
+  },
   "ignoreBatOptDes": "Ако се суочавате са проблемима са обавештењима или је репродукција заустављена због оптимизације система, омогућите ову опцију",
+  "@ignoreBatOptDes": {
+    "description": "ignoreBatOptDes"
+  },
   "for1": "за",
+  "@for1": {
+    "description": "for1"
+  },
   "low": "Ниско",
+  "@low": {
+    "description": "low"
+  },
   "link": "Веза",
+  "@link": {
+    "description": "link"
+  },
   "selectAuthIns": "Избор инстанце аутентификације",
+  "@selectAuthIns": {
+    "description": "selectAuthIns"
+  },
   "languageDes": "Подесите језик апликације",
+  "@languageDes": {
+    "description": "languageDes"
+  },
   "stopMusicOnTaskClear": "Заустави музику при чишћењу задатака",
+  "@stopMusicOnTaskClear": {
+    "description": "stopMusicOnTaskClear"
+  },
   "enqueueAll": "Стави све у редослед",
+  "@enqueueAll": {
+    "description": "enqueueAll"
+  },
   "customInsSelectMsg": "Изаберите „Прилагођена инстанца“",
+  "@customInsSelectMsg": {
+    "description": "customInsSelectMsg"
+  },
   "skipSilence": "Прескочи тишину",
+  "@skipSilence": {
+    "description": "skipSilence"
+  },
   "create": "Направи",
+  "@create": {
+    "description": "create"
+  },
   "equalizer": "Еквилајзер",
+  "@equalizer": {
+    "description": "equalizer"
+  },
   "enqueueSong": "Стави ову песму у редослед",
+  "@enqueueSong": {
+    "description": "enqueueSong"
+  },
   "noBookmarks": "Нема обележивача!",
+  "@noBookmarks": {
+    "description": "noBookmarks"
+  },
   "playlists": "Плејлисте",
+  "@playlists": {
+    "description": "playlists"
+  },
   "videos": "Видео снимци",
+  "@videos": {
+    "description": "videos"
+  },
   "enabled": "Омогућено",
+  "@enabled": {
+    "description": "enabled"
+  },
   "allFieldsReqMsg": "Неопходна су сва поља",
+  "@allFieldsReqMsg": {
+    "description": "allFieldsReqMsg"
+  },
   "artistBookmarkAddAlert": "Извођач је обележен!",
+  "@artistBookmarkAddAlert": {
+    "description": "artistBookmarkAddAlert"
+  },
   "removeFromCache": "Уклони из кеша",
+  "@removeFromCache": {
+    "description": "removeFromCache"
+  },
   "rename": "Преименуј",
+  "@rename": {
+    "description": "rename"
+  },
   "viewAll": "Погледај све",
+  "@viewAll": {
+    "description": "viewAll"
+  },
   "github": "GitHub",
+  "@github": {
+    "description": "github"
+  },
   "newVersionAvailable": "Нова верзија доступна!",
+  "@newVersionAvailable": {
+    "description": "newVersionAvailable"
+  },
   "items": "предмета",
+  "@items": {
+    "description": "items"
+  },
   "subscribers": "праћења",
+  "@subscribers": {
+    "description": "subscribers"
+  },
   "startRadio": "Покрени радио",
+  "@startRadio": {
+    "description": "startRadio"
+  },
   "discover": "Откриј",
+  "@discover": {
+    "description": "discover"
+  },
   "cacheSongs": "Кеширај песме",
+  "@cacheSongs": {
+    "description": "cacheSongs"
+  },
   "songAlreadyExists": "Песма већ постоји!",
+  "@songAlreadyExists": {
+    "description": "songAlreadyExists"
+  },
   "libArtists": "Збирка извођача",
+  "@libArtists": {
+    "description": "libArtists"
+  },
   "username": "Корисничко име",
+  "@username": {
+    "description": "username"
+  },
   "light": "Светла",
+  "@light": {
+    "description": "light"
+  },
   "resetblacklistedplaylist": "Ресетуј плејлисте на црној листи",
+  "@resetblacklistedplaylist": {
+    "description": "resetblacklistedplaylist"
+  },
   "dynamic": "Динамичка",
+  "@dynamic": {
+    "description": "dynamic"
+  },
   "selectAuthInsMsg": "Изаберите инстанцу аутентификације!",
+  "@selectAuthInsMsg": {
+    "description": "selectAuthInsMsg"
+  },
   "equalizerDes": "Отворите системски еквилајзер",
+  "@equalizerDes": {
+    "description": "equalizerDes"
+  },
   "removePlaylist": "Уклони плејлисту",
+  "@removePlaylist": {
+    "description": "removePlaylist"
+  },
   "customIns": "Прилагођена инстанца",
+  "@customIns": {
+    "description": "customIns"
+  },
   "Piped": "Piped",
+  "@Piped": {
+    "description": "Piped"
+  },
   "addToPlaylist": "Додај на плејлисту",
+  "@addToPlaylist": {
+    "description": "addToPlaylist"
+  },
   "stopMusicOnTaskClearDes": "Репродукција музике ће се зауставити када се апликација уклони из менаџера задатака",
+  "@stopMusicOnTaskClearDes": {
+    "description": "stopMusicOnTaskClearDes"
+  },
   "cachedOrOffline": "Кеширано/Офлајн",
+  "@cachedOrOffline": {
+    "description": "cachedOrOffline"
+  },
   "retry": "Покушајте поново!",
+  "@retry": {
+    "description": "retry"
+  },
   "artists": "Извођачи",
+  "@artists": {
+    "description": "artists"
+  },
   "playlistBookmarkAddAlert": "Плејлиста је обележена!",
+  "@playlistBookmarkAddAlert": {
+    "description": "playlistBookmarkAddAlert"
+  },
   "albums": "Албуми",
+  "@albums": {
+    "description": "albums"
+  },
   "radioNotAvailable": "Радио није доступан за овог извођача!",
+  "@radioNotAvailable": {
+    "description": "radioNotAvailable"
+  },
   "recentlyPlayed": "Недавно пуштано",
+  "@recentlyPlayed": {
+    "description": "recentlyPlayed"
+  },
   "viewArtist": "Погледај извођача",
+  "@viewArtist": {
+    "description": "viewArtist"
+  },
   "createnAdd": "Направи и додај",
+  "@createnAdd": {
+    "description": "createnAdd"
+  },
   "topmusicvideos": "Топ музички спотови",
+  "@topmusicvideos": {
+    "description": "topmusicvideos"
+  },
   "about": "О нама",
+  "@about": {
+    "description": "about"
+  },
   "playlistBookmarkRemoveAlert": "Обележивач плејлисте је уклоњен!",
+  "@playlistBookmarkRemoveAlert": {
+    "description": "playlistBookmarkRemoveAlert"
+  },
   "systemDefault": "Системски подразумевано",
+  "@systemDefault": {
+    "description": "systemDefault"
+  },
   "local": "Локално",
+  "@local": {
+    "description": "local"
+  },
   "ignoreBatOpt": "Занемари оптимизацију батерије",
+  "@ignoreBatOpt": {
+    "description": "ignoreBatOpt"
+  },
   "singles": "Синглови",
+  "@singles": {
+    "description": "singles"
+  },
   "linkAlert": "Успешно повезано!",
+  "@linkAlert": {
+    "description": "linkAlert"
+  },
   "status": "Статус",
+  "@status": {
+    "description": "status"
+  },
   "themeMode": "Тема",
+  "@themeMode": {
+    "description": "themeMode"
+  },
   "streamingQualityDes": "Квалитет музичког стрима",
+  "@streamingQualityDes": {
+    "description": "streamingQualityDes"
+  },
   "nomatch": "Није пронађено подударање за",
+  "@nomatch": {
+    "description": "nomatch"
+  },
   "notaValidLink": "Није важећи линк!",
+  "@notaValidLink": {
+    "description": "notaValidLink"
+  },
   "emptyPlaylist": "Празна плејлиста!",
+  "@emptyPlaylist": {
+    "description": "emptyPlaylist"
+  },
   "favorites": "Омиљено",
+  "@favorites": {
+    "description": "favorites"
+  },
   "dark": "Тамна",
+  "@dark": {
+    "description": "dark"
+  },
   "home": "Почетна",
+  "@home": {
+    "description": "home"
+  },
   "cancel": "Откажи",
+  "@cancel": {
+    "description": "cancel"
+  },
   "by": "од",
+  "@by": {
+    "description": "by"
+  },
   "streamingQuality": "Квалитет стримовања",
+  "@streamingQuality": {
+    "description": "streamingQuality"
+  },
   "linkPipedDes": "Веза са Piped-ом за плејлисте",
+  "@linkPipedDes": {
+    "description": "linkPipedDes"
+  },
   "libPlaylists": "Збирка плејлиста",
+  "@libPlaylists": {
+    "description": "libPlaylists"
+  },
   "disabled": "Онемогућено",
+  "@disabled": {
+    "description": "disabled"
+  },
   "CreateNewPlaylist": "Направи нову плејлисту",
+  "@CreateNewPlaylist": {
+    "description": "CreateNewPlaylist"
+  },
   "blacklistPlstResetAlert": "Успешно ресетовано!",
+  "@blacklistPlstResetAlert": {
+    "description": "blacklistPlstResetAlert"
+  },
   "language": "Језик",
+  "@language": {
+    "description": "language"
+  },
   "search": "Претрага",
+  "@search": {
+    "description": "search"
+  },
   "skipSilenceDes": "Тишина ће бити прескочена током пуштања музике",
+  "@skipSilenceDes": {
+    "description": "skipSilenceDes"
+  },
   "playNext": "Пусти следеће",
+  "@playNext": {
+    "description": "playNext"
+  },
   "errorOccuredAlert": "Дошло је до грешке!",
+  "@errorOccuredAlert": {
+    "description": "errorOccuredAlert"
+  },
   "songs": "Песме",
+  "@songs": {
+    "description": "songs"
+  },
   "high": "Високо",
+  "@high": {
+    "description": "high"
+  },
   "searchDes": "Песме, плејлиста, албум или извођач",
+  "@searchDes": {
+    "description": "searchDes"
+  },
   "results": "Резултати",
+  "@results": {
+    "description": "results"
+  },
   "playlistBlacklistAlert": "Плејлиста на црној листи!",
+  "@playlistBlacklistAlert": {
+    "description": "playlistBlacklistAlert"
+  },
   "artistDesNotAvailable": "Опис није доступан!",
+  "@artistDesNotAvailable": {
+    "description": "artistDesNotAvailable"
+  },
   "resetblacklistedplaylistDes": "Ресетујте све плејлисте на црној листи",
+  "@resetblacklistedplaylistDes": {
+    "description": "resetblacklistedplaylistDes"
+  },
   "songRemovedfromQueueCurrSong": "Не можете уклонити песму која је тренутно пуштена",
+  "@songRemovedfromQueueCurrSong": {
+    "description": "songRemovedfromQueueCurrSong"
+  },
   "settings": "Подешавања",
+  "@settings": {
+    "description": "settings"
+  },
   "basedOnLast": "Засновано на последњој интеракцији",
+  "@basedOnLast": {
+    "description": "basedOnLast"
+  },
   "hintApiUrl": "URL API-ја до Piped инстанце",
+  "@hintApiUrl": {
+    "description": "hintApiUrl"
+  },
   "playlistRenameAlert": "Преименовано је успешно!",
+  "@playlistRenameAlert": {
+    "description": "playlistRenameAlert"
+  },
   "albumBookmarkAddAlert": "Албум је обележен!",
+  "@albumBookmarkAddAlert": {
+    "description": "albumBookmarkAddAlert"
+  },
   "removeFromPlaylist": "Уклони са плејлисте",
+  "@removeFromPlaylist": {
+    "description": "removeFromPlaylist"
+  },
   "lyricsNotAvailable": "Текст није доступан!",
+  "@lyricsNotAvailable": {
+    "description": "lyricsNotAvailable"
+  },
   "dontShowInfoAgain": "Не приказуј поново ове информације",
+  "@dontShowInfoAgain": {
+    "description": "dontShowInfoAgain"
+  },
   "noOfflineSong": "Нема офлајн песама!",
+  "@noOfflineSong": {
+    "description": "noOfflineSong"
+  },
   "featuredplaylists": "Истакнуте плејлисте",
+  "@featuredplaylists": {
+    "description": "featuredplaylists"
+  },
   "quickpicks": "Брзи избори",
+  "@quickpicks": {
+    "description": "quickpicks"
+  },
   "artistBookmarkRemoveAlert": "Обележивач извођача је уклоњен!",
+  "@artistBookmarkRemoveAlert": {
+    "description": "artistBookmarkRemoveAlert"
+  },
   "operationFailed": "Операција неуспела",
+  "@operationFailed": {
+    "description": "operationFailed"
+  },
   "goToAlbum": "Иди на албум",
+  "@goToAlbum": {
+    "description": "goToAlbum"
+  },
   "removeFromQueue": "Уклони из редоследа",
+  "@removeFromQueue": {
+    "description": "removeFromQueue"
+  },
   "shareSong": "Дели ову песму",
+  "@shareSong": {
+    "description": "shareSong"
+  },
   "songRemovedAlert": "Уклоњено из",
+  "@songRemovedAlert": {
+    "description": "songRemovedAlert"
+  },
   "downloads": "Преузимања",
+  "@downloads": {
+    "description": "downloads"
+  },
   "removeFromLib": "Уклони из збирке песама",
+  "@removeFromLib": {
+    "description": "removeFromLib"
+  },
   "downloadingFormat": "Формат фајла за преузимање",
+  "@downloadingFormat": {
+    "description": "downloadingFormat"
+  },
   "songAlreadyOfflineAlert": "Песма је већ офлајн у кешу",
+  "@songAlreadyOfflineAlert": {
+    "description": "songAlreadyOfflineAlert"
+  },
   "downloadLocation": "Локација преузимања",
+  "@downloadLocation": {
+    "description": "downloadLocation"
+  },
   "downloadingFormatDes": "Изаберите формат фајла за преузимање. „Opus“ ће обезбедити најбољи квалитет",
+  "@downloadingFormatDes": {
+    "description": "downloadingFormatDes"
+  },
   "add5Minutes": "Додај 5 минута",
+  "@add5Minutes": {
+    "description": "add5Minutes"
+  },
   "enableBottomNavDes": "Пребаците се на доњу траку за навигацију",
+  "@enableBottomNavDes": {
+    "description": "enableBottomNavDes"
+  },
   "syncedLyricsNotAvailable": "Синхронизовани текстови нису доступни!",
+  "@syncedLyricsNotAvailable": {
+    "description": "syncedLyricsNotAvailable"
+  },
   "synced": "Синхронизовано",
+  "@synced": {
+    "description": "synced"
+  },
   "plain": "Обично",
+  "@plain": {
+    "description": "plain"
+  },
   "endOfThisSong": "Крај ове песме",
+  "@endOfThisSong": {
+    "description": "endOfThisSong"
+  },
   "library": "Збирка",
+  "@library": {
+    "description": "library"
+  },
   "cancelTimer": "Откажи тајмер",
+  "@cancelTimer": {
+    "description": "cancelTimer"
+  },
   "minutes": "минута",
+  "@minutes": {
+    "description": "minutes"
+  },
   "enableBottomNav": "Доња трака за навигацију",
+  "@enableBottomNav": {
+    "description": "enableBottomNav"
+  },
   "homeContentCount": "Број почетног садржаја",
+  "@homeContentCount": {
+    "description": "homeContentCount"
+  },
   "sleepTimeSetAlert": "Ваш тајмер за спавање је постављен",
+  "@sleepTimeSetAlert": {
+    "description": "sleepTimeSetAlert"
+  },
   "homeContentCountDes": "Изаберите број иницијалног садржаја почетног екрана (приближно). Мање резултата - брже учитавање",
+  "@homeContentCountDes": {
+    "description": "homeContentCountDes"
+  },
   "cancelTimerAlert": "Тајмер за спавање је отказан",
+  "@cancelTimerAlert": {
+    "description": "cancelTimerAlert"
+  },
   "sleepTimer": "Тајмер за спавање",
+  "@sleepTimer": {
+    "description": "sleepTimer"
+  },
   "pipedplstSyncAlert": "Piped плејлиста је синхронизована!",
+  "@pipedplstSyncAlert": {
+    "description": "pipedplstSyncAlert"
+  },
   "clearImgCache": "Очисти кеш слика",
+  "@clearImgCache": {
+    "description": "clearImgCache"
+  },
   "clearImgCacheDes": "Кликните овде да бисте обрисали кеширане сличице/слике. (Не препоручује се осим ако не желите да освежите кеширане податке о сликама)",
+  "@clearImgCacheDes": {
+    "description": "clearImgCacheDes"
+  },
   "upNext": "Следеће",
+  "@upNext": {
+    "description": "upNext"
+  },
   "backgroundPlay": "Пуштање музике у позадини",
+  "@backgroundPlay": {
+    "description": "backgroundPlay"
+  },
   "backgroundPlayDes": "Омогућите/онемогућите пуштање музике у позадини (апликацији се може приступити из системске траке када апликација ради у позадини)",
+  "@backgroundPlayDes": {
+    "description": "backgroundPlayDes"
+  },
   "deleteDownloadData": "Уклони из преузимања",
+  "@deleteDownloadData": {
+    "description": "deleteDownloadData"
+  },
   "deleteDownloadedDataAlert": "Успешно уклоњено из преузимања!",
+  "@deleteDownloadedDataAlert": {
+    "description": "deleteDownloadedDataAlert"
+  },
   "addMultipleSongs": "Додај песме на плејлисту",
+  "@addMultipleSongs": {
+    "description": "addMultipleSongs"
+  },
   "restoreLastPlaybackSession": "Врати последњу сесију репродукције",
+  "@restoreLastPlaybackSession": {
+    "description": "restoreLastPlaybackSession"
+  },
   "restoreLastPlaybackSessionDes": "Аутоматско враћање последње сесије репродукције при покретању апликације",
+  "@restoreLastPlaybackSessionDes": {
+    "description": "restoreLastPlaybackSessionDes"
+  },
   "reArrangePlaylist": "Преуреди плејлисту",
+  "@reArrangePlaylist": {
+    "description": "reArrangePlaylist"
+  },
   "removeMultiple": "Уклони више песама",
+  "@removeMultiple": {
+    "description": "removeMultiple"
+  },
   "cacheHomeScreenData": "Кеширај податке о садржају почетног екрана",
+  "@cacheHomeScreenData": {
+    "description": "cacheHomeScreenData"
+  },
   "exportedFileLocation": "Локација за извоз преузетог фајла",
+  "@exportedFileLocation": {
+    "description": "exportedFileLocation"
+  },
   "export": "Извези",
+  "@export": {
+    "description": "export"
+  },
   "exporting": "Извоз…",
+  "@exporting": {
+    "description": "exporting"
+  },
   "scanning": "Скенирање…",
+  "@scanning": {
+    "description": "scanning"
+  },
   "downFilesFound": "пронађени преузети фајлови",
+  "@downFilesFound": {
+    "description": "downFilesFound"
+  },
   "close": "Затвори",
+  "@close": {
+    "description": "close"
+  },
   "clearImgCacheAlert": "Кеш слика је успешно очишћен",
+  "@clearImgCacheAlert": {
+    "description": "clearImgCacheAlert"
+  },
   "cacheHomeScreenDataDes": "Омогућите кеширање података садржаја почетног екрана. Почетни екран ће се одмах учитати ако је ова опција омогућена",
+  "@cacheHomeScreenDataDes": {
+    "description": "cacheHomeScreenDataDes"
+  },
   "exportDowloadedFiles": "Извези преузете фајлове",
+  "@exportDowloadedFiles": {
+    "description": "exportDowloadedFiles"
+  },
   "exportDowloadedFilesDes": "Кликните овде да бисте извезли преузети фајл из „inApp“ фолдера у спољни фолдер",
+  "@exportDowloadedFilesDes": {
+    "description": "exportDowloadedFilesDes"
+  },
   "exportMsg": "Фајлови су успешно извезени",
+  "@exportMsg": {
+    "description": "exportMsg"
+  },
   "disableTransitionAnimation": "Онемогући прелазну анимацију",
+  "@disableTransitionAnimation": {
+    "description": "disableTransitionAnimation"
+  },
   "disableTransitionAnimationDes": "Омогућите ову опцију да бисте онемогућили анимацију прелаза картице",
+  "@disableTransitionAnimationDes": {
+    "description": "disableTransitionAnimationDes"
+  },
   "openIn": "Отвори у",
+  "@openIn": {
+    "description": "openIn"
+  },
   "backupMsg": "Резервна копија је успешно сачувана!",
+  "@backupMsg": {
+    "description": "backupMsg"
+  },
   "backFilesFound": "база података пронађено",
+  "@backFilesFound": {
+    "description": "backFilesFound"
+  },
   "restoreMsg": "Успешно враћено!\nПромене се примењују при рестарту",
+  "@restoreMsg": {
+    "description": "restoreMsg"
+  },
   "restore": "Врати",
+  "@restore": {
+    "description": "restore"
+  },
   "backupSettingsAndPlaylistsDes": "Чува сва подешавања, плејлисте и податке за пријаву у фајл резервне копије",
+  "@backupSettingsAndPlaylistsDes": {
+    "description": "backupSettingsAndPlaylistsDes"
+  },
   "backupSettingsAndPlaylists": "Направи резервну копију подешавања и плејлисти",
+  "@backupSettingsAndPlaylists": {
+    "description": "backupSettingsAndPlaylists"
+  },
   "restoreSettingsAndPlaylistsDes": "Враћа сва подешавања, податке за пријаву и плејлисте из фајла резервне копије. Преписује све тренутне податке",
+  "@restoreSettingsAndPlaylistsDes": {
+    "description": "restoreSettingsAndPlaylistsDes"
+  },
   "restoreSettingsAndPlaylists": "Врати резервну копију подешавања и плејлисти",
+  "@restoreSettingsAndPlaylists": {
+    "description": "restoreSettingsAndPlaylists"
+  },
   "restoring": "Враћање…",
+  "@restoring": {
+    "description": "restoring"
+  },
   "closeApp": "Затвори апликацију",
+  "@closeApp": {
+    "description": "closeApp"
+  },
   "backupAppData": "Резервна копија података апликације",
+  "@backupAppData": {
+    "description": "backupAppData"
+  },
   "backup": "Резервна копија",
+  "@backup": {
+    "description": "backup"
+  },
   "processFiles": "Обрада фајлова…",
+  "@processFiles": {
+    "description": "processFiles"
+  },
   "restoreAppData": "Врати податке апликације",
+  "@restoreAppData": {
+    "description": "restoreAppData"
+  },
   "letsStrart": "Хајде да почнемо…",
+  "@letsStrart": {
+    "description": "letsStrart"
+  },
   "includeDownloadedFiles": "Обухвати преузете фајлове песама",
+  "@includeDownloadedFiles": {
+    "description": "includeDownloadedFiles"
+  },
   "backupInProgress": "Прављење резервне копије је у току…",
+  "@backupInProgress": {
+    "description": "backupInProgress"
+  },
   "restartApp": "Рестартуј апликацију",
+  "@restartApp": {
+    "description": "restartApp"
+  },
   "songInfo": "Информације о песми",
+  "@songInfo": {
+    "description": "songInfo"
+  },
   "title": "Наслов",
+  "@title": {
+    "description": "title"
+  },
   "id": "ID",
+  "@id": {
+    "description": "id"
+  },
   "duration": "Трајање",
+  "@duration": {
+    "description": "duration"
+  },
   "audioCodec": "Аудио кодек",
+  "@audioCodec": {
+    "description": "audioCodec"
+  },
   "loudnessDb": "ГласноћаDb",
+  "@loudnessDb": {
+    "description": "loudnessDb"
+  },
   "bitrate": "Брзина преноса",
+  "@bitrate": {
+    "description": "bitrate"
+  },
   "songNotPlayable": "Песма се не може пустити због ограничења сервера!",
+  "@songNotPlayable": {
+    "description": "songNotPlayable"
+  },
   "appInfo": "Информације о апликацији",
+  "@appInfo": {
+    "description": "appInfo"
+  },
   "download": "Преузми",
+  "@download": {
+    "description": "download"
+  },
   "downloadError2": "Затражена песма се не може преузети због ограничења сервера. Можете покушати поново",
+  "@downloadError2": {
+    "description": "downloadError2"
+  },
   "musicAndPlayback": "Музика и репродукција",
+  "@musicAndPlayback": {
+    "description": "musicAndPlayback"
+  },
   "content": "Садржај",
+  "@content": {
+    "description": "content"
+  },
   "personalisation": "Персонализација",
+  "@personalisation": {
+    "description": "personalisation"
+  },
   "queueShufflingDeniedMsg": "Редослед се не може насумично мењати када је омогућен режим насумичне репродукције",
+  "@queueShufflingDeniedMsg": {
+    "description": "queueShufflingDeniedMsg"
+  },
   "networkError": "Мрежна грешка! Проверите своју интернет везу.",
+  "@networkError": {
+    "description": "networkError"
+  },
   "queuerearrangingDeniedMsg": "Редослед се не може преуредити када је омогућен режим насумичне репродукције",
+  "@queuerearrangingDeniedMsg": {
+    "description": "queuerearrangingDeniedMsg"
+  },
   "downloadError3": "Преузимање није успело због грешке на мрежи/стриму! Покушајте поново",
+  "@downloadError3": {
+    "description": "downloadError3"
+  },
   "loudnessNormalization": "Нормализација гласноће",
+  "@loudnessNormalization": {
+    "description": "loudnessNormalization"
+  },
   "loudnessNormalizationDes": "Поставља исти ниво гласноће за све песме (експериментално) (Неће радити на песмама преузетим у претходној верзији (< v1.10.0))",
+  "@loudnessNormalizationDes": {
+    "description": "loudnessNormalizationDes"
+  },
   "urlSearchDes": "Откривена URL адреса, додирните на њу да бисте отворили/пустили повезани садржај",
+  "@urlSearchDes": {
+    "description": "urlSearchDes"
+  },
   "androidBackupWarning": "Није тестирано: Означавањем поља за потврду након преузимања више од 60 фајлова, процес може заузети велику количину меморије и може довести до отказивања телефона или апликације. Наставите на сопствену одговорност.",
+  "@androidBackupWarning": {
+    "description": "androidBackupWarning"
+  },
   "playerUi": "Кориснички интерфејс плејера",
+  "@playerUi": {
+    "description": "playerUi"
+  },
   "playerUiDes": "Изаберите кориснички интерфејс плејера",
+  "@playerUiDes": {
+    "description": "playerUiDes"
+  },
   "standard": "Стандардан",
+  "@standard": {
+    "description": "standard"
+  },
   "gesture": "Покрет",
+  "@gesture": {
+    "description": "gesture"
+  },
   "playnextMsg": "Следи",
+  "@playnextMsg": {
+    "description": "playnextMsg"
+  },
   "queueLoop": "Понављање у редоследу",
+  "@queueLoop": {
+    "description": "queueLoop"
+  },
   "queueLoopNotDisMsg2": "Режим понављања у редоследу не може се омогућити у режиму радија.",
+  "@queueLoopNotDisMsg2": {
+    "description": "queueLoopNotDisMsg2"
+  },
   "shuffleQueue": "Мешање у редоследу",
+  "@shuffleQueue": {
+    "description": "shuffleQueue"
+  },
   "enableSlidableAction": "Омогући клизне радње",
+  "@enableSlidableAction": {
+    "description": "enableSlidableAction"
+  },
   "enableSlidableActionDes": "Омогућите клизне радње на плочици песме",
+  "@enableSlidableActionDes": {
+    "description": "enableSlidableActionDes"
+  },
   "queueLoopNotDisMsg1": "Режим понављања у редоследу се не може онемогућити када је омогућен режим мешања.",
+  "@queueLoopNotDisMsg1": {
+    "description": "queueLoopNotDisMsg1"
+  },
   "autoDownFavSong": "Аутоматско преузимање омиљених песама",
+  "@autoDownFavSong": {
+    "description": "autoDownFavSong"
+  },
   "autoDownFavSongDes": "Аутоматско преузимање омиљених песама када се додају у омиљене",
+  "@autoDownFavSongDes": {
+    "description": "autoDownFavSongDes"
+  },
   "misc": "Разно",
+  "@misc": {
+    "description": "misc"
+  },
   "resetToDefault": "Врати подразумевана подешавања",
+  "@resetToDefault": {
+    "description": "resetToDefault"
+  },
   "resetToDefaultDes": "Ресетујте подешавања апликације на подразумевана (неопходно је рестартовање)",
+  "@resetToDefaultDes": {
+    "description": "resetToDefaultDes"
+  },
   "resetToDefaultMsg": "Ресетовање подешавања на подразумевано је завршено, рестартујте апликацију",
+  "@resetToDefaultMsg": {
+    "description": "resetToDefaultMsg"
+  },
   "randomSelection": "Насумичан избор",
+  "@randomSelection": {
+    "description": "randomSelection"
+  },
   "autoOpenPlayer": "Аутоматски отвори екран плејера",
+  "@autoOpenPlayer": {
+    "description": "autoOpenPlayer"
+  },
   "autoOpenPlayerDes": "Омогућите/онемогућите аутоматско отварање плејера преко целог екрана при избору песме за пуштање",
+  "@autoOpenPlayerDes": {
+    "description": "autoOpenPlayerDes"
+  },
   "album": "Албум",
+  "@album": {
+    "description": "album"
+  },
   "playingfromAlbum": "ПУШТАЊЕ ИЗ АЛБУМА",
+  "@playingfromAlbum": {
+    "description": "playingfromAlbum"
+  },
   "playingfromPlaylist": "ПУШТАЊЕ С ПЛЕЈЛИСТЕ",
+  "@playingfromPlaylist": {
+    "description": "playingfromPlaylist"
+  },
   "playingfromSelection": "ПУШТАЊЕ ИЗ ИЗБОРА",
+  "@playingfromSelection": {
+    "description": "playingfromSelection"
+  },
   "playingfromArtist": "ПУШТАЊЕ ОД ИЗВОЂАЧА",
+  "@playingfromArtist": {
+    "description": "playingfromArtist"
+  },
   "randomRadio": "Насумичан радио",
+  "@randomRadio": {
+    "description": "randomRadio"
+  },
   "reArrangeSongs": "Преуреди песме",
+  "@reArrangeSongs": {
+    "description": "reArrangeSongs"
+  },
   "selectSongs": "Изабери песме",
+  "@selectSongs": {
+    "description": "selectSongs"
+  },
   "selectAll": "Изабери све",
+  "@selectAll": {
+    "description": "selectAll"
+  },
   "exportPlaylist": "Извот плејлисте",
+  "@exportPlaylist": {
+    "description": "exportPlaylist"
+  },
   "exportingPlaylist": "Извоз плејлисте...",
+  "@exportingPlaylist": {
+    "description": "exportingPlaylist"
+  },
   "playlistExportedMsg": "Плејлиста је успешно извезена у",
+  "@playlistExportedMsg": {
+    "description": "playlistExportedMsg"
+  },
   "exportError": "Грешка при извозу плејлисте",
+  "@exportError": {
+    "description": "exportError"
+  },
   "exportErrorPermission": "Дозвола одбијена приликом извоза",
+  "@exportErrorPermission": {
+    "description": "exportErrorPermission"
+  },
   "exportErrorStorage": "Нема довољно меморијског простора",
+  "@exportErrorStorage": {
+    "description": "exportErrorStorage"
+  },
   "exportErrorFormat": "Грешка у форматирању података плејлисте",
+  "@exportErrorFormat": {
+    "description": "exportErrorFormat"
+  },
   "importingPlaylist": "Увоз плејлисте...",
+  "@importingPlaylist": {
+    "description": "importingPlaylist"
+  },
   "selectFile": "Избор фајла",
+  "@selectFile": {
+    "description": "selectFile"
+  },
   "playlistImportedMsg": "Плејлиста је успешно увезена",
+  "@playlistImportedMsg": {
+    "description": "playlistImportedMsg"
+  },
   "importError": "Грешка при увозу плејлисте",
+  "@importError": {
+    "description": "importError"
+  },
   "invalidPlaylistFile": "Неважећа структура фајла плејлисте",
+  "@invalidPlaylistFile": {
+    "description": "invalidPlaylistFile"
+  },
   "importErrorDatabase": "Грешка при чувању у базу података",
+  "@importErrorDatabase": {
+    "description": "importErrorDatabase"
+  },
   "fileNotFound": "Фајл није пронађен",
+  "@fileNotFound": {
+    "description": "fileNotFound"
+  },
   "importLargeFileNote": "Напомена: Увоз великих плејлиста може трајати дуже",
+  "@importLargeFileNote": {
+    "description": "importLargeFileNote"
+  },
   "importPlaylist": "Увоз плејлисте",
+  "@importPlaylist": {
+    "description": "importPlaylist"
+  },
   "importErrorFileAccess": "Није могуће приступити изабраном фајлу",
+  "@importErrorFileAccess": {
+    "description": "importErrorFileAccess"
+  },
   "importPlaylistDesc": "Изаберите претходно извезен JSON фајл плејлисте за увоз",
+  "@importPlaylistDesc": {
+    "description": "importPlaylistDesc"
+  },
   "importErrorFormat": "Неважећи формат фајла",
+  "@importErrorFormat": {
+    "description": "importErrorFormat"
+  },
   "keepScreenOnWhilePlaying": "Одржавај екран укљученим током репродукције",
-  "keepScreenOnWhilePlayingDes": "Ако је омогућено, екран уређаја ће остати укључен док се репродукује музика"
+  "@keepScreenOnWhilePlaying": {
+    "description": "keepScreenOnWhilePlaying"
+  },
+  "keepScreenOnWhilePlayingDes": "Ако је омогућено, екран уређаја ће остати укључен док се репродукује музика",
+  "@keepScreenOnWhilePlayingDes": {
+    "description": "keepScreenOnWhilePlayingDes"
+  }
 }

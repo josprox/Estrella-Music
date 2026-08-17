@@ -1,200 +1,656 @@
 {
   "@@locale": "fi",
   "libAlbums": "Kirjaston albumit",
+  "@libAlbums": {
+    "description": "libAlbums"
+  },
   "libArtists": "Kirjaston artistit",
+  "@libArtists": {
+    "description": "libArtists"
+  },
   "homeContentCountDes": "Valitse lähtökohtainen aloitusnäkymän sisällön määrä. Pienempi määrä latautuu nopeammin",
+  "@homeContentCountDes": {
+    "description": "homeContentCountDes"
+  },
   "skipSilenceDes": "Hiljaiset kohdat ohitetaan toistossa",
+  "@skipSilenceDes": {
+    "description": "skipSilenceDes"
+  },
   "streamingQualityDes": "Valitse suoratoistettavan musiikin laatu",
+  "@streamingQualityDes": {
+    "description": "streamingQualityDes"
+  },
   "sleepTimeSetAlert": "Uniajastin on asetettu",
+  "@sleepTimeSetAlert": {
+    "description": "sleepTimeSetAlert"
+  },
   "equalizerDes": "avaa järjestelmän taajuuskorjain",
+  "@equalizerDes": {
+    "description": "equalizerDes"
+  },
   "songAlreadyExists": "Kappale on jo olemassa!",
+  "@songAlreadyExists": {
+    "description": "songAlreadyExists"
+  },
   "pipedplstSyncAlert": "Synkronoitu Piped-soittolista!",
+  "@pipedplstSyncAlert": {
+    "description": "pipedplstSyncAlert"
+  },
   "search": "Etsi",
+  "@search": {
+    "description": "search"
+  },
   "playlistBookmarkRemoveAlert": "Soittolistan kirjanmerkki poistettu!",
+  "@playlistBookmarkRemoveAlert": {
+    "description": "playlistBookmarkRemoveAlert"
+  },
   "lyricsNotAvailable": "Sanoituksia ei ole saatavilla!",
+  "@lyricsNotAvailable": {
+    "description": "lyricsNotAvailable"
+  },
   "artistDesNotAvailable": "Kuvausta ei ole saatavilla!",
+  "@artistDesNotAvailable": {
+    "description": "artistDesNotAvailable"
+  },
   "home": "Koti",
+  "@home": {
+    "description": "home"
+  },
   "songs": "Kappaleet",
+  "@songs": {
+    "description": "songs"
+  },
   "settings": "Asetukset",
+  "@settings": {
+    "description": "settings"
+  },
   "library": "Kirjasto",
+  "@library": {
+    "description": "library"
+  },
   "communityplaylists": "Yhteisön soittolistat",
+  "@communityplaylists": {
+    "description": "communityplaylists"
+  },
   "items": "kohteet",
+  "@items": {
+    "description": "items"
+  },
   "networkError1": "Oho, verkkovirhe!",
+  "@networkError1": {
+    "description": "networkError1"
+  },
   "retry": "Yritä uudelleen!",
+  "@retry": {
+    "description": "retry"
+  },
   "noOfflineSong": "Ei ladattuja kappaleita!",
+  "@noOfflineSong": {
+    "description": "noOfflineSong"
+  },
   "recentlyPlayed": "Viimeksi soitetut",
+  "@recentlyPlayed": {
+    "description": "recentlyPlayed"
+  },
   "favorites": "Suosikit",
+  "@favorites": {
+    "description": "favorites"
+  },
   "cachedOrOffline": "Välimuistissa/ladatut",
+  "@cachedOrOffline": {
+    "description": "cachedOrOffline"
+  },
   "downloads": "Lataukset",
+  "@downloads": {
+    "description": "downloads"
+  },
   "emptyPlaylist": "Tyhjä soittolista!",
+  "@emptyPlaylist": {
+    "description": "emptyPlaylist"
+  },
   "enqueueAll": "Lisää kaikki jonoon",
+  "@enqueueAll": {
+    "description": "enqueueAll"
+  },
   "renamePlaylist": "Uudelleennimeä soittolista",
+  "@renamePlaylist": {
+    "description": "renamePlaylist"
+  },
   "removePlaylist": "Poista soittolista",
+  "@removePlaylist": {
+    "description": "removePlaylist"
+  },
   "CreateNewPlaylist": "Luo soittolista",
+  "@CreateNewPlaylist": {
+    "description": "CreateNewPlaylist"
+  },
   "cancel": "Peruuta",
+  "@cancel": {
+    "description": "cancel"
+  },
   "rename": "Nimeä uudelleen",
+  "@rename": {
+    "description": "rename"
+  },
   "createnAdd": "Luo & lisää",
+  "@createnAdd": {
+    "description": "createnAdd"
+  },
   "noBookmarks": "Ei kirjanmerkkejä!",
+  "@noBookmarks": {
+    "description": "noBookmarks"
+  },
   "startRadio": "Käynnistä radio",
+  "@startRadio": {
+    "description": "startRadio"
+  },
   "playNext": "Toista seuraavaksi",
+  "@playNext": {
+    "description": "playNext"
+  },
   "addToPlaylist": "Lisää soittolistaan",
+  "@addToPlaylist": {
+    "description": "addToPlaylist"
+  },
   "noLibPlaylist": "Ei soittolistoja!",
+  "@noLibPlaylist": {
+    "description": "noLibPlaylist"
+  },
   "enqueueSong": "Lisää jonoon",
+  "@enqueueSong": {
+    "description": "enqueueSong"
+  },
   "goToAlbum": "Näytä albumi",
+  "@goToAlbum": {
+    "description": "goToAlbum"
+  },
   "viewArtist": "Näytä artisti",
+  "@viewArtist": {
+    "description": "viewArtist"
+  },
   "shareSong": "Jaa kappale",
+  "@shareSong": {
+    "description": "shareSong"
+  },
   "libSongs": "Kirjaston kappaleet",
+  "@libSongs": {
+    "description": "libSongs"
+  },
   "libPlaylists": "Kirjaston soittolistat",
+  "@libPlaylists": {
+    "description": "libPlaylists"
+  },
   "featuredplaylists": "Suositellut soittolistat",
+  "@featuredplaylists": {
+    "description": "featuredplaylists"
+  },
   "add5Minutes": "Lisää 5 minuuttia",
+  "@add5Minutes": {
+    "description": "add5Minutes"
+  },
   "cancelTimer": "Peruuta ajastin",
+  "@cancelTimer": {
+    "description": "cancelTimer"
+  },
   "minutes": "minuuttia",
+  "@minutes": {
+    "description": "minutes"
+  },
   "endOfThisSong": "Soita kappale loppuun",
+  "@endOfThisSong": {
+    "description": "endOfThisSong"
+  },
   "themeMode": "Teeman tila",
+  "@themeMode": {
+    "description": "themeMode"
+  },
   "dynamic": "Dynaaminen",
+  "@dynamic": {
+    "description": "dynamic"
+  },
   "light": "Vaalea",
+  "@light": {
+    "description": "light"
+  },
   "language": "Kieli",
+  "@language": {
+    "description": "language"
+  },
   "languageDes": "Valitse sovelluksen kieli",
+  "@languageDes": {
+    "description": "languageDes"
+  },
   "quickpicks": "Pikavalinnat",
+  "@quickpicks": {
+    "description": "quickpicks"
+  },
   "setDiscoverContent": "Aseta löytöjen sisältö",
+  "@setDiscoverContent": {
+    "description": "setDiscoverContent"
+  },
   "discover": "Löydöt",
+  "@discover": {
+    "description": "discover"
+  },
   "trending": "Trendaavat",
+  "@trending": {
+    "description": "trending"
+  },
   "topmusicvideos": "Parhaat musiikkivideot",
+  "@topmusicvideos": {
+    "description": "topmusicvideos"
+  },
   "basedOnLast": "Viimeisimpään toimintaan perustuvat",
+  "@basedOnLast": {
+    "description": "basedOnLast"
+  },
   "downloadLocation": "Latausten sijainti",
+  "@downloadLocation": {
+    "description": "downloadLocation"
+  },
   "downloadingFormat": "Latausten tiedostomuoto",
+  "@downloadingFormat": {
+    "description": "downloadingFormat"
+  },
   "ignoreBatOpt": "Poista akun optimointi käytöstä",
+  "@ignoreBatOpt": {
+    "description": "ignoreBatOpt"
+  },
   "homeContentCount": "Aloitusnäkymän sisällön määrä",
+  "@homeContentCount": {
+    "description": "homeContentCount"
+  },
   "enableBottomNav": "Navigointipalkin sijainti",
+  "@enableBottomNav": {
+    "description": "enableBottomNav"
+  },
   "enableBottomNavDes": "Siirrä navigointipalkki ruudun alaosaan",
+  "@enableBottomNavDes": {
+    "description": "enableBottomNavDes"
+  },
   "cacheSongs": "Kappaleet välimuistiin",
+  "@cacheSongs": {
+    "description": "cacheSongs"
+  },
   "cacheSongsDes": "Pidä kappaleet välimuistissa myöhempää- tai offline-toistoa varten. Käyttää tilaa laitteelta",
+  "@cacheSongsDes": {
+    "description": "cacheSongsDes"
+  },
   "skipSilence": "Ohita hiljaisuus",
+  "@skipSilence": {
+    "description": "skipSilence"
+  },
   "streamingQuality": "Suoratoiston laatu",
+  "@streamingQuality": {
+    "description": "streamingQuality"
+  },
   "high": "Korkea",
+  "@high": {
+    "description": "high"
+  },
   "low": "Matala",
+  "@low": {
+    "description": "low"
+  },
   "downloadingFormatDes": "Valitse ladattavan tiedoston muoto. \"Opus\" tarjoaa parhaan laadun",
+  "@downloadingFormatDes": {
+    "description": "downloadingFormatDes"
+  },
   "equalizer": "Taajuuskorjain",
+  "@equalizer": {
+    "description": "equalizer"
+  },
   "ignoreBatOptDes": "Jos kohtaat ongelmia ilmoitusten tai toiston kanssa, ota tämä käyttöön.",
+  "@ignoreBatOptDes": {
+    "description": "ignoreBatOptDes"
+  },
   "status": "Tila",
+  "@status": {
+    "description": "status"
+  },
   "enabled": "Käytössä",
+  "@enabled": {
+    "description": "enabled"
+  },
   "disabled": "Poissa käytöstä",
+  "@disabled": {
+    "description": "disabled"
+  },
   "github": "GitHub",
+  "@github": {
+    "description": "github"
+  },
   "subscribers": "tilaajat",
+  "@subscribers": {
+    "description": "subscribers"
+  },
   "nomatch": "Ei hakutuloksia kohteelle",
+  "@nomatch": {
+    "description": "nomatch"
+  },
   "cancelTimerAlert": "Uniajastin peruutettu",
+  "@cancelTimerAlert": {
+    "description": "cancelTimerAlert"
+  },
   "radioNotAvailable": "Tälle artistille ei ole saatavilla radiota!",
+  "@radioNotAvailable": {
+    "description": "radioNotAvailable"
+  },
   "songRemovedfromQueue": "Poistettu jonosta!",
+  "@songRemovedfromQueue": {
+    "description": "songRemovedfromQueue"
+  },
   "songRemovedfromQueueCurrSong": "Et voi poistaa parhaillaan soivaa kappaletta",
+  "@songRemovedfromQueueCurrSong": {
+    "description": "songRemovedfromQueueCurrSong"
+  },
   "songAddedToPlaylistAlert": "Kappale lisätty soittolistaan!",
+  "@songAddedToPlaylistAlert": {
+    "description": "songAddedToPlaylistAlert"
+  },
   "songAlreadyOfflineAlert": "Kappale on jo välimuistissa",
+  "@songAlreadyOfflineAlert": {
+    "description": "songAlreadyOfflineAlert"
+  },
   "songEnqueueAlert": "Kappale lisätty jonoon!",
+  "@songEnqueueAlert": {
+    "description": "songEnqueueAlert"
+  },
   "songRemovedAlert": "Poistettu kohteesta",
+  "@songRemovedAlert": {
+    "description": "songRemovedAlert"
+  },
   "errorOccuredAlert": "Tapahtui virhe!",
+  "@errorOccuredAlert": {
+    "description": "errorOccuredAlert"
+  },
   "playlistCreatedAlert": "Soittolista luotu!",
+  "@playlistCreatedAlert": {
+    "description": "playlistCreatedAlert"
+  },
   "synced": "Synkronoitu",
+  "@synced": {
+    "description": "synced"
+  },
   "playlistCreatednsongAddedAlert": "Soittolista luotu & kappale lisätty!",
+  "@playlistCreatednsongAddedAlert": {
+    "description": "playlistCreatednsongAddedAlert"
+  },
   "playlistRenameAlert": "Nimi muutettu!",
+  "@playlistRenameAlert": {
+    "description": "playlistRenameAlert"
+  },
   "playlistRemovedAlert": "Soittolista poistettu!",
+  "@playlistRemovedAlert": {
+    "description": "playlistRemovedAlert"
+  },
   "playlistBookmarkAddAlert": "Soittolista lisätty kirjanmerkkeihin!",
+  "@playlistBookmarkAddAlert": {
+    "description": "playlistBookmarkAddAlert"
+  },
   "albumBookmarkAddAlert": "Albumi lisätty kirjanmerkkeihin!",
+  "@albumBookmarkAddAlert": {
+    "description": "albumBookmarkAddAlert"
+  },
   "albumBookmarkRemoveAlert": "Albumin kirjanmerkki poistettu!",
+  "@albumBookmarkRemoveAlert": {
+    "description": "albumBookmarkRemoveAlert"
+  },
   "artistBookmarkAddAlert": "Artisti lisätty kirjanmerkkeihin!",
+  "@artistBookmarkAddAlert": {
+    "description": "artistBookmarkAddAlert"
+  },
   "artistBookmarkRemoveAlert": "Artistin kirjanmerkki poistettu!",
+  "@artistBookmarkRemoveAlert": {
+    "description": "artistBookmarkRemoveAlert"
+  },
   "syncedLyricsNotAvailable": "Synkronoituja sanoituksia ei ole saatavilla!",
+  "@syncedLyricsNotAvailable": {
+    "description": "syncedLyricsNotAvailable"
+  },
   "newVersionAvailable": "Uusi versio saatavilla!",
+  "@newVersionAvailable": {
+    "description": "newVersionAvailable"
+  },
   "dontShowInfoAgain": "Älä näytä tätä uudelleen",
+  "@dontShowInfoAgain": {
+    "description": "dontShowInfoAgain"
+  },
   "dismiss": "Ohita",
+  "@dismiss": {
+    "description": "dismiss"
+  },
   "notaSongVideo": "Ei kappale/musiikkivideo!",
+  "@notaSongVideo": {
+    "description": "notaSongVideo"
+  },
   "notaValidLink": "Epäkelpo linkki!",
+  "@notaValidLink": {
+    "description": "notaValidLink"
+  },
   "operationFailed": "Toiminto epäonnistui",
+  "@operationFailed": {
+    "description": "operationFailed"
+  },
   "githubDes": "Näytä lähdekoodi GitHubissa\njos pidät tästä projektista, muista antaa ⭐",
+  "@githubDes": {
+    "description": "githubDes"
+  },
   "by": "by",
+  "@by": {
+    "description": "by"
+  },
   "searchDes": "Kappale, soittolista, albumi tai artisti",
+  "@searchDes": {
+    "description": "searchDes"
+  },
   "searchRes": "Hakutulokset",
+  "@searchRes": {
+    "description": "searchRes"
+  },
   "for1": "haulla",
+  "@for1": {
+    "description": "for1"
+  },
   "videos": "Videot",
+  "@videos": {
+    "description": "videos"
+  },
   "viewAll": "Näytä kaikki",
+  "@viewAll": {
+    "description": "viewAll"
+  },
   "results": "Tulokset",
+  "@results": {
+    "description": "results"
+  },
   "goToDownloadPage": "Avaa tästä lataussivu",
+  "@goToDownloadPage": {
+    "description": "goToDownloadPage"
+  },
   "local": "Paikallinen",
+  "@local": {
+    "description": "local"
+  },
   "Piped": "Piped",
+  "@Piped": {
+    "description": "Piped"
+  },
   "link": "Yhdistä",
+  "@link": {
+    "description": "link"
+  },
   "unLink": "Poista yhteys",
+  "@unLink": {
+    "description": "unLink"
+  },
   "hintApiUrl": "Piped-instanssin API:n URL",
+  "@hintApiUrl": {
+    "description": "hintApiUrl"
+  },
   "customIns": "Muu instanssi",
+  "@customIns": {
+    "description": "customIns"
+  },
   "customInsSelectMsg": "Valitse 'Muu instanssi'",
+  "@customInsSelectMsg": {
+    "description": "customInsSelectMsg"
+  },
   "allFieldsReqMsg": "Kaikki tiedot vaaditaan",
+  "@allFieldsReqMsg": {
+    "description": "allFieldsReqMsg"
+  },
   "linkPipedDes": "Yhdistä Piped soittolistojen synkronointiin",
+  "@linkPipedDes": {
+    "description": "linkPipedDes"
+  },
   "username": "Käyttäjätunnus",
+  "@username": {
+    "description": "username"
+  },
   "selectAuthIns": "Valitse instanssi",
+  "@selectAuthIns": {
+    "description": "selectAuthIns"
+  },
   "selectAuthInsMsg": "Valitse instanssi!",
+  "@selectAuthInsMsg": {
+    "description": "selectAuthInsMsg"
+  },
   "password": "Salasana",
+  "@password": {
+    "description": "password"
+  },
   "linkAlert": "Yhdistetty!",
+  "@linkAlert": {
+    "description": "linkAlert"
+  },
   "unlinkAlert": "Yhteys poistettu!",
+  "@unlinkAlert": {
+    "description": "unlinkAlert"
+  },
   "playlistBlacklistAlert": "Soittolista siirretty mustalle listalla!",
+  "@playlistBlacklistAlert": {
+    "description": "playlistBlacklistAlert"
+  },
   "reset": "Nollaa",
+  "@reset": {
+    "description": "reset"
+  },
   "blacklistPlstResetAlert": "Nollattu!",
+  "@blacklistPlstResetAlert": {
+    "description": "blacklistPlstResetAlert"
+  },
   "resetblacklistedplaylist": "Nollaa soittolistojen musta lista",
+  "@resetblacklistedplaylist": {
+    "description": "resetblacklistedplaylist"
+  },
   "resetblacklistedplaylistDes": "Nollaa kaikki Pipedin soittolistojen mustat listat",
+  "@resetblacklistedplaylistDes": {
+    "description": "resetblacklistedplaylistDes"
+  },
   "stopMusicOnTaskClearDes": "Musiikki pysäytetään, kun sovellus pyyhkäistään pois viimeisimpien sovellusten luettelosta",
+  "@stopMusicOnTaskClearDes": {
+    "description": "stopMusicOnTaskClearDes"
+  },
   "stopMusicOnTaskClear": "Musiikin pysäytys",
+  "@stopMusicOnTaskClear": {
+    "description": "stopMusicOnTaskClear"
+  },
   "playlists": "Soittolistat",
+  "@playlists": {
+    "description": "playlists"
+  },
   "albums": "Albumit",
+  "@albums": {
+    "description": "albums"
+  },
   "artists": "Artistit",
+  "@artists": {
+    "description": "artists"
+  },
   "singles": "Singlet",
+  "@singles": {
+    "description": "singles"
+  },
   "create": "Luo",
+  "@create": {
+    "description": "create"
+  },
   "removeFromLib": "Poista kirjastosta",
+  "@removeFromLib": {
+    "description": "removeFromLib"
+  },
   "removeFromPlaylist": "Poista soittolistalta",
+  "@removeFromPlaylist": {
+    "description": "removeFromPlaylist"
+  },
   "removeFromQueue": "Poista jonosta",
+  "@removeFromQueue": {
+    "description": "removeFromQueue"
+  },
   "sleepTimer": "Uniajastin",
+  "@sleepTimer": {
+    "description": "sleepTimer"
+  },
   "dark": "Tumma",
+  "@dark": {
+    "description": "dark"
+  },
   "systemDefault": "Järjestelmän oletus",
+  "@systemDefault": {
+    "description": "systemDefault"
+  },
   "keepScreenOnWhilePlaying": "Pidä näyttö päällä toiston aikana",
+  "@keepScreenOnWhilePlaying": {
+    "description": "keepScreenOnWhilePlaying"
+  },
   "keepScreenOnWhilePlayingDes": "Jos käytössä, laitteen näyttö pysyy päällä musiikin toiston aikana",
+  "@keepScreenOnWhilePlayingDes": {
+    "description": "keepScreenOnWhilePlayingDes"
+  },
   "auth_login_success": "Sisäänkirjautuminen onnistui",
   "@auth_login_success": {
-    "description": ""
+    "description": "auth_login_success"
   },
   "settings_cloud_backup": "Pilvivarmuuskopio",
   "@settings_cloud_backup": {
-    "description": ""
+    "description": "settings_cloud_backup"
   },
   "settings_migration_title": "Siirrä Joss Music Kotlinista",
   "@settings_migration_title": {
-    "description": ""
+    "description": "settings_migration_title"
   },
   "backup_confirm_question": "Haluatko tehdä varmuuskopion?",
   "@backup_confirm_question": {
-    "description": ""
+    "description": "backup_confirm_question"
   },
   "backup_selection_prompt": "Valitse varmuuskopioitavat tiedot",
   "@backup_selection_prompt": {
-    "description": ""
+    "description": "backup_selection_prompt"
   },
   "search_recent_title": "Viimeaikaiset haut",
   "@search_recent_title": {
-    "description": ""
+    "description": "search_recent_title"
   },
   "back": "Palata",
   "@back": {
-    "description": ""
+    "description": "back"
   },
   "auth_forgot_password": "Unohdin salasanani",
   "@auth_forgot_password": {
-    "description": ""
+    "description": "auth_forgot_password"
   },
   "auth_btn_login": "Kirjaudu sisään",
   "@auth_btn_login": {
-    "description": ""
+    "description": "auth_btn_login"
   },
   "auth_btn_register": "Rekisteröidy",
   "@auth_btn_register": {
-    "description": ""
+    "description": "auth_btn_register"
   },
   "email": "Sähköposti",
   "@email": {
-    "description": ""
+    "description": "email"
   },
   "password_text": "Salasana",
   "@password_text": {
@@ -202,373 +658,873 @@
   },
   "auth_confirm_password": "Vahvista salasana",
   "@auth_confirm_password": {
-    "description": ""
+    "description": "auth_confirm_password"
   },
   "auth_welcome_title": "Tervetuloa Estrella Musiciin",
   "@auth_welcome_title": {
-    "description": ""
+    "description": "auth_welcome_title"
   },
   "auth_welcome_subtitle": "Tervetuloa Estrella Musiciin",
   "@auth_welcome_subtitle": {
-    "description": ""
-  },
-  "@username": {
-    "description": ""
+    "description": "auth_welcome_subtitle"
   },
   "auth_first_name": "Etunimi",
   "@auth_first_name": {
-    "description": ""
+    "description": "auth_first_name"
   },
   "auth_last_name": "Sukunimi",
   "@auth_last_name": {
-    "description": ""
+    "description": "auth_last_name"
   },
   "auth_agree_personal_data": "Acepto usar mis datos...",
   "@auth_agree_personal_data": {
-    "description": ""
+    "description": "auth_agree_personal_data"
   },
   "settings_general_section": "Kenraali",
   "@settings_general_section": {
-    "description": ""
+    "description": "settings_general_section"
   },
   "settings_logout": "Kirjaudu ulos",
   "@settings_logout": {
-    "description": ""
+    "description": "settings_logout"
   },
   "settings_cloud_backup_desc": "Lataa, palauta ja hallinnoi...",
   "@settings_cloud_backup_desc": {
-    "description": ""
+    "description": "settings_cloud_backup_desc"
   },
   "settings_migration_desc": "Tuo soittolistoja, kappaleita...",
   "@settings_migration_desc": {
-    "description": ""
+    "description": "settings_migration_desc"
   },
   "backup_btn_restart": "Käynnistä sovellus uudelleen",
   "@backup_btn_restart": {
-    "description": ""
+    "description": "backup_btn_restart"
   },
   "backup_btn_upload": "Lataa varmuuskopio nyt",
   "@backup_btn_upload": {
-    "description": ""
+    "description": "backup_btn_upload"
   },
   "backup_no_backups": "Varmuuskopioita ei ole vielä...",
   "@backup_no_backups": {
-    "description": ""
+    "description": "backup_no_backups"
   },
   "backup_auth_required": "Tarvitset aktiivisen istunnon...",
   "@backup_auth_required": {
-    "description": ""
+    "description": "backup_auth_required"
   },
   "backup_upload_success": "Varmuuskopio ladattu oikein.",
   "@backup_upload_success": {
-    "description": ""
+    "description": "backup_upload_success"
   },
   "backup_restore_success": "Varmuuskopio palautettu. Käynnistä sovellus uudelleen.",
   "@backup_restore_success": {
-    "description": ""
+    "description": "backup_restore_success"
   },
   "backup_delete_success": "Varmuuskopio poistettu.",
   "@backup_delete_success": {
-    "description": ""
+    "description": "backup_delete_success"
   },
   "genre_pop": "Pop",
   "@genre_pop": {
-    "description": ""
+    "description": "genre_pop"
   },
   "genre_rock": "Rock",
   "@genre_rock": {
-    "description": ""
+    "description": "genre_rock"
   },
   "genre_hiphop": "hip hop",
   "@genre_hiphop": {
-    "description": ""
+    "description": "genre_hiphop"
   },
   "genre_electronic": "Elektroniikka",
   "@genre_electronic": {
-    "description": ""
+    "description": "genre_electronic"
   },
   "genre_jazz": "Jazz",
   "@genre_jazz": {
-    "description": ""
+    "description": "genre_jazz"
   },
   "genre_latin": "latina",
   "@genre_latin": {
-    "description": ""
+    "description": "genre_latin"
   },
   "migration_btn_select": "Valitse tiedosto ja tuo",
   "@migration_btn_select": {
-    "description": ""
+    "description": "migration_btn_select"
   },
   "close": "Lähellä",
   "@close": {
-    "description": ""
+    "description": "close"
   },
   "forgottenFavorites": "unohdetut suosikit",
   "@forgottenFavorites": {
-    "description": ""
+    "description": "forgottenFavorites"
   },
   "mostListenedSong": "Eniten kuunneltu kappale",
   "@mostListenedSong": {
-    "description": ""
+    "description": "mostListenedSong"
   },
   "reproducedBy": "Toistettu",
   "@reproducedBy": {
-    "description": ""
+    "description": "reproducedBy"
   },
   "recentSearches": "Viimeaikaiset haut",
   "@recentSearches": {
-    "description": ""
+    "description": "recentSearches"
   },
   "popularTracks": "Suosittuja kappaleita",
   "@popularTracks": {
-    "description": ""
+    "description": "popularTracks"
   },
   "latestRelease": "Viimeisin julkaisu",
   "@latestRelease": {
-    "description": ""
+    "description": "latestRelease"
   },
   "follow": "Jatkaa",
   "@follow": {
-    "description": ""
+    "description": "follow"
   },
   "following": "Jälkeen",
   "@following": {
-    "description": ""
+    "description": "following"
   },
   "listenNow": "Kuuntele nyt",
   "@listenNow": {
-    "description": ""
+    "description": "listenNow"
   },
   "video": "Video",
   "@video": {
-    "description": ""
+    "description": "video"
   },
   "about": "Noin",
   "@about": {
-    "description": ""
+    "description": "about"
   },
   "readMore": "Lue lisää",
   "@readMore": {
-    "description": ""
+    "description": "readMore"
   },
   "speedAndPitch": "Nopeus ja sävelkorkeus",
   "@speedAndPitch": {
-    "description": ""
+    "description": "speedAndPitch"
   },
   "playbackSpeed": "Toistonopeus",
   "@playbackSpeed": {
-    "description": ""
+    "description": "playbackSpeed"
   },
   "songPitch": "laulun sävy",
   "@songPitch": {
-    "description": ""
+    "description": "songPitch"
   },
   "musicRecognition": "Musiikin tunnistus",
   "@musicRecognition": {
-    "description": ""
+    "description": "musicRecognition"
   },
   "listeningToEnvironment": "Kuuntelee ympäristöä...",
   "@listeningToEnvironment": {
-    "description": ""
+    "description": "listeningToEnvironment"
   },
   "micInstruction": "Varmista, että musiikki soi tarpeeksi kovaa mikrofonin lähellä.",
   "@micInstruction": {
-    "description": ""
+    "description": "micInstruction"
   },
   "processingAudio": "Käsitellään ääntä...",
   "@processingAudio": {
-    "description": ""
+    "description": "processingAudio"
   },
   "shazamSearching": "Haetaan osumia Shazam-tietokannasta...",
   "@shazamSearching": {
-    "description": ""
+    "description": "shazamSearching"
   },
   "songFound": "Kappale löytynyt!",
   "@songFound": {
-    "description": ""
+    "description": "songFound"
   },
   "playNow": "Pelaa nyt",
   "@playNow": {
-    "description": ""
+    "description": "playNow"
   },
   "searchInLibrary": "Hae kirjastosta",
   "@searchInLibrary": {
-    "description": ""
+    "description": "searchInLibrary"
   },
   "noMatchesFound": "Ei otteluita",
   "@noMatchesFound": {
-    "description": ""
+    "description": "noMatchesFound"
   },
   "noMatchInstruction": "Tallennetusta äänestä ei löytynyt yhtään kappaletta",
   "@noMatchInstruction": {
-    "description": ""
+    "description": "noMatchInstruction"
   },
   "errorOccurred": "Tapahtui virhe",
   "@errorOccurred": {
-    "description": ""
+    "description": "errorOccurred"
   },
   "playingRecognizedTrack": "Toistetaan:",
   "@playingRecognizedTrack": {
-    "description": ""
+    "description": "playingRecognizedTrack"
   },
   "errorPlayingTrack": "Virhe pelatessa:",
   "@errorPlayingTrack": {
-    "description": ""
+    "description": "errorPlayingTrack"
   },
   "welcome_title": "Sinun musiikkisi, sinun tapasi",
+  "@welcome_title": {
+    "description": "welcome_title"
+  },
   "welcome_subtitle": "Valitse, miten haluat kokea Estrella Musicin tästä eteenpäin.",
+  "@welcome_subtitle": {
+    "description": "welcome_subtitle"
+  },
   "welcome_intro": "Olemme modernisoineet alustamme. Vanha manuaalisten varmuuskopioiden latausjärjestelmä on poistettu käytöstä. Sinulla on nyt kaksi selkeää tapaa hallita musiikkikirjastoasi.",
+  "@welcome_intro": {
+    "description": "welcome_intro"
+  },
   "recommend_cloud": "Suosittelemme Cloud Moden aktivointia Spotifyn kaltaisen kokemuksen saamiseksi: reaaliaikainen synkronointi kaikkien laitteidesi välillä ja automaattinen varmuuskopiointi ilman, että sinun tarvitsee tehdä mitään.",
+  "@recommend_cloud": {
+    "description": "recommend_cloud"
+  },
   "swipe_prompt": "Selaa vaihtoehtoja pyyhkäisemällä ➔",
+  "@swipe_prompt": {
+    "description": "swipe_prompt"
+  },
   "local_title": "Paikallinen tila",
+  "@local_title": {
+    "description": "local_title"
+  },
   "local_subtitle": "Täydellinen yksityisyys laitteellasi",
+  "@local_subtitle": {
+    "description": "local_subtitle"
+  },
   "local_b1": "Se toimii ilman tarvetta kirjautua sisään.",
+  "@local_b1": {
+    "description": "local_b1"
+  },
   "local_b2": "Koko kirjastosi pysyy tiukasti tällä tietokoneella.",
+  "@local_b2": {
+    "description": "local_b2"
+  },
   "local_b3": "Huomautus: Ei manuaalisia pilvivarmuuskopioita. Jos kadotat laitteesi tai poistat sovelluksen, tietojasi ei voida palauttaa.",
+  "@local_b3": {
+    "description": "local_b3"
+  },
   "local_btn": "Käytä vain tässä laitteessa",
+  "@local_btn": {
+    "description": "local_btn"
+  },
   "cloud_title": "Pilvitila (suositus)",
+  "@cloud_title": {
+    "description": "cloud_title"
+  },
   "cloud_subtitle": "Reaaliaikainen synkronointi Joss Redin kanssa",
+  "@cloud_subtitle": {
+    "description": "cloud_subtitle"
+  },
   "cloud_b1": "Kirjaudu sisään turvallisesti Joss Red -tililläsi.",
+  "@cloud_b1": {
+    "description": "cloud_b1"
+  },
   "cloud_b2": "Käytä soittolistojasi, suosikkejasi ja historiaasi välittömästi miltä tahansa laitteelta (Windows, Android jne.).",
+  "@cloud_b2": {
+    "description": "cloud_b2"
+  },
   "cloud_b3": "Smart Sync: Työskentele offline-tilassa ja lataa muutokset automaattisesti, kun internet palautuu.",
+  "@cloud_b3": {
+    "description": "cloud_b3"
+  },
   "cloud_btn": "Aktivoi pilvisynkronointi",
+  "@cloud_btn": {
+    "description": "cloud_btn"
+  },
   "slide_indicator": "Vaihe {current}/3",
+  "@slide_indicator": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      }
+    },
+    "description": "slide_indicator"
+  },
   "news_card_title": "Estrella Music on kehittynyt!",
+  "@news_card_title": {
+    "description": "news_card_title"
+  },
   "news_card_subtitle": "100 % synkronointi Joss Redin kanssa, soittolistat ystävien kanssa ja paljon muuta. Napauta nähdäksesi mitä uutta.",
+  "@news_card_subtitle": {
+    "description": "news_card_subtitle"
+  },
   "news_dialog_title": "Estrella musiikkiuutisia",
+  "@news_dialog_title": {
+    "description": "news_dialog_title"
+  },
   "news_item_sync_title": "Täysi integrointi Joss Redin kanssa",
+  "@news_item_sync_title": {
+    "description": "news_item_sync_title"
+  },
   "news_item_sync_desc": "Soittolistasi ja suosikkisi tallennetaan nyt ja synkronoidaan automaattisesti pilveen Joss Red -päätilisi kanssa.",
+  "@news_item_sync_desc": {
+    "description": "news_item_sync_desc"
+  },
   "news_item_collab_title": "Yhteistyösoittolistat",
+  "@news_item_collab_title": {
+    "description": "news_item_collab_title"
+  },
   "news_item_collab_desc": "Luo soittolistoja ystäviesi kanssa! Kun luot soittolistaa, valitse Yhteistyö-valintaruutu ja valitse ystäväsi muokattaviksi yhdessä.",
+  "@news_item_collab_desc": {
+    "description": "news_item_collab_desc"
+  },
   "news_item_trans_title": "Läpinäkyvä synkronointi",
+  "@news_item_trans_title": {
+    "description": "news_item_trans_title"
+  },
   "news_item_trans_desc": "Sinun ei enää tarvitse napsauttaa manuaalisia synkronointipainikkeita. Uusi moottori vastaa automaattisesti ylös ja alas vaihtamisesta.",
+  "@news_item_trans_desc": {
+    "description": "news_item_trans_desc"
+  },
   "news_dialog_section_friends": "Ystävät ja tilinhallinta:",
+  "@news_dialog_section_friends": {
+    "description": "news_dialog_section_friends"
+  },
   "news_dialog_friends_desc": "Jos haluat lisätä ystäviä, hyväksyä pyyntöjä tai hallita suojausprofiiliasi, käytä Joss Rediä sen virallisilla alustoilla:",
+  "@news_dialog_friends_desc": {
+    "description": "news_dialog_friends_desc"
+  },
   "news_btn_app": "Joss Red -sovellus (Play Kauppa)",
+  "@news_btn_app": {
+    "description": "news_btn_app"
+  },
   "news_btn_web": "Joss Red Web",
+  "@news_btn_web": {
+    "description": "news_btn_web"
+  },
   "news_btn_dismiss": "Ymmärretty",
+  "@news_btn_dismiss": {
+    "description": "news_btn_dismiss"
+  },
   "settings_appearance_desc": "Teema-, kieli- ja käyttöliittymäanimaatiot.",
+  "@settings_appearance_desc": {
+    "description": "settings_appearance_desc"
+  },
   "settings_content_desc": "Tutustu suodattimiin, integraatioon Pipediin ja välimuistiin.",
+  "@settings_content_desc": {
+    "description": "settings_content_desc"
+  },
   "settings_playback_desc": "Suoratoiston laatu, normalisointi, hiljaisuudet ja akku.",
+  "@settings_playback_desc": {
+    "description": "settings_playback_desc"
+  },
   "settings_downloads_desc": "Lataukset ja tallennus",
+  "@settings_downloads_desc": {
+    "description": "settings_downloads_desc"
+  },
   "settings_downloads_sub": "Ääniformaatit, kansiot ja automaattiset lataukset.",
+  "@settings_downloads_sub": {
+    "description": "settings_downloads_sub"
+  },
   "settings_account_desc": "Tili ja synkronointi",
+  "@settings_account_desc": {
+    "description": "settings_account_desc"
+  },
   "settings_account_sub": "Pilvitila, varmuuskopiot, ystäväluettelo ja siirrot.",
+  "@settings_account_sub": {
+    "description": "settings_account_sub"
+  },
   "settings_about_desc": "Tietoja Estrella Musicista",
+  "@settings_about_desc": {
+    "description": "settings_about_desc"
+  },
   "settings_about_sub": "Versio, avoimen lähdekoodin projekti ja GitHub.",
+  "@settings_about_sub": {
+    "description": "settings_about_sub"
+  },
   "settings_local_cloud_title": "Paikallinen tila / EMusic Cloud",
+  "@settings_local_cloud_title": {
+    "description": "settings_local_cloud_title"
+  },
   "settings_local_cloud_desc": "Valitse, siirrä tai tarkista synkronoinnin tila Joss Redin kanssa.",
+  "@settings_local_cloud_desc": {
+    "description": "settings_local_cloud_desc"
+  },
   "settings_my_friends": "ystäväni",
+  "@settings_my_friends": {
+    "description": "settings_my_friends"
+  },
   "settings_my_friends_desc": "Hallitse Joss Redin ystäviäsi suoraan.",
+  "@settings_my_friends_desc": {
+    "description": "settings_my_friends_desc"
+  },
   "settings_refresh_visitor_title": "Päivitä tunnus (vierailijatunnus)",
+  "@settings_refresh_visitor_title": {
+    "description": "settings_refresh_visitor_title"
+  },
   "settings_refresh_visitor_desc": "Luo YouTube Music -tunnuksesi uudelleen, jos Discover-sisältö ei lataudu.",
+  "@settings_refresh_visitor_desc": {
+    "description": "settings_refresh_visitor_desc"
+  },
   "settings_visitor_updated": "Tunniste päivitetty",
+  "@settings_visitor_updated": {
+    "description": "settings_visitor_updated"
+  },
   "settings_visitor_updated_desc": "Uusi vierailijatunnus luotiin onnistuneesti.",
+  "@settings_visitor_updated_desc": {
+    "description": "settings_visitor_updated_desc"
+  },
   "settings_visitor_error": "Virhe",
+  "@settings_visitor_error": {
+    "description": "settings_visitor_error"
+  },
   "settings_visitor_error_desc": "Uutta tunnistetta ei voitu luoda. Yritä myöhemmin uudelleen.",
+  "@settings_visitor_error_desc": {
+    "description": "settings_visitor_error_desc"
+  },
   "settings_visitor_exception": "Uudelleen luomisessa tapahtui virhe: {error}",
+  "@settings_visitor_exception": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    },
+    "description": "settings_visitor_exception"
+  },
   "migratedLibrary": "Siirretty kirjasto",
+  "@migratedLibrary": {
+    "description": "migratedLibrary"
+  },
   "noSongsInCollection": "Tässä kokoelmassa ei ole kappaleita",
+  "@noSongsInCollection": {
+    "description": "noSongsInCollection"
+  },
   "startupScreen": "Avaa käynnistyksen yhteydessä",
+  "@startupScreen": {
+    "description": "startupScreen"
+  },
   "startupScreenDescription": "Valitse osio, jonka Estrella Music avaa ensin",
+  "@startupScreenDescription": {
+    "description": "startupScreenDescription"
+  },
   "friends": "Ystävät",
+  "@friends": {
+    "description": "friends"
+  },
   "dailyDiscover": "Päivittäinen löytö",
+  "@dailyDiscover": {
+    "description": "dailyDiscover"
+  },
   "keepListening": "jatka kuuntelemista",
+  "@keepListening": {
+    "description": "keepListening"
+  },
   "similarToTitle": "Samanlainen kuin {title}",
+  "@similarToTitle": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    },
+    "description": "similarToTitle"
+  },
   "pipedPlaylistDescription": "Piped-soittolista",
+  "@pipedPlaylistDescription": {
+    "description": "pipedPlaylistDescription"
+  },
   "collaborativePlaylistDescription": "Yhteistyösoittolista",
+  "@collaborativePlaylistDescription": {
+    "description": "collaborativePlaylistDescription"
+  },
   "libraryPlaylistDescription": "Kirjaston soittolista",
+  "@libraryPlaylistDescription": {
+    "description": "libraryPlaylistDescription"
+  },
   "untitledSong": "Nimetön kappale",
+  "@untitledSong": {
+    "description": "untitledSong"
+  },
   "migratedPlaylist": "Siirretty soittolista",
+  "@migratedPlaylist": {
+    "description": "migratedPlaylist"
+  },
   "migratedAlbum": "Siirretty albumi",
+  "@migratedAlbum": {
+    "description": "migratedAlbum"
+  },
   "songsImportedFromJossMusic": "Joss Music Kotlinista tuotuja kappaleita",
+  "@songsImportedFromJossMusic": {
+    "description": "songsImportedFromJossMusic"
+  },
   "importedFromJossMusic": "Tuotu Joss Music Kotlinista",
+  "@importedFromJossMusic": {
+    "description": "importedFromJossMusic"
+  },
   "syncLocalModeActive": "Paikallinen tila aktiivinen",
+  "@syncLocalModeActive": {
+    "description": "syncLocalModeActive"
+  },
   "syncCloudPending": "Pilvitila aktiivinen. Odottaa synkronointia.",
+  "@syncCloudPending": {
+    "description": "syncCloudPending"
+  },
   "syncCloudDownloadingExisting": "Pilvitila aktivoitu. Ladataan olemassa olevaa kirjastoa.",
+  "@syncCloudDownloadingExisting": {
+    "description": "syncCloudDownloadingExisting"
+  },
   "syncCloudMigrationComplete": "Pilvitila aktivoitu. Siirretty kirjasto.",
+  "@syncCloudMigrationComplete": {
+    "description": "syncCloudMigrationComplete"
+  },
   "syncLocalDeviceOnly": "Tietosi säilytetään vain tällä laitteella.",
+  "@syncLocalDeviceOnly": {
+    "description": "syncLocalDeviceOnly"
+  },
   "syncDownloading": "Ladataan EMusic-muutoksia...",
+  "@syncDownloading": {
+    "description": "syncDownloading"
+  },
   "syncDownloadFailed": "Synkronoinnin lataaminen epäonnistui.",
+  "@syncDownloadFailed": {
+    "description": "syncDownloadFailed"
+  },
   "syncLocalChangesFirst": "Uusia paikallisia muutoksia on tulossa. Ne ladataan ennen lataamista.",
+  "@syncLocalChangesFirst": {
+    "description": "syncLocalChangesFirst"
+  },
   "syncLibrarySynced": "Synkronoitu kirjasto.",
+  "@syncLibrarySynced": {
+    "description": "syncLibrarySynced"
+  },
   "syncOfflinePending": "Offline-tilassa. Muutokset odottavat.",
+  "@syncOfflinePending": {
+    "description": "syncOfflinePending"
+  },
   "syncLibraryUpToDate": "Kirjasto ajan tasalla.",
+  "@syncLibraryUpToDate": {
+    "description": "syncLibraryUpToDate"
+  },
   "syncChangesSynced": "{count} synkronoidut muutokset.",
+  "@syncChangesSynced": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    },
+    "description": "syncChangesSynced"
+  },
   "syncUploading": "Lähetetään muutoksia EMusiciin...",
+  "@syncUploading": {
+    "description": "syncUploading"
+  },
   "syncUploadSuccessWs": "Muutokset lähetetty onnistuneesti (WS).",
+  "@syncUploadSuccessWs": {
+    "description": "syncUploadSuccessWs"
+  },
   "syncUploadWsRetry": "Ei voitu ladata WS:n avulla. Sitä yritetään myöhemmin uudelleen.",
+  "@syncUploadWsRetry": {
+    "description": "syncUploadWsRetry"
+  },
   "syncUploadSuccess": "Muutokset ladattu oikein.",
+  "@syncUploadSuccess": {
+    "description": "syncUploadSuccess"
+  },
   "syncUploadRetry": "Ei päässyt ylös. Sitä yritetään myöhemmin uudelleen.",
+  "@syncUploadRetry": {
+    "description": "syncUploadRetry"
+  },
   "syncOfflineRetry": "Offline-tilassa. Muutokset tallennettu uudelleen yrittämistä varten.",
+  "@syncOfflineRetry": {
+    "description": "syncOfflineRetry"
+  },
   "syncUnconfirmedRetry": "EMusic ei vahvistanut kaikkia muutoksia. Niitä yritetään uudelleen.",
+  "@syncUnconfirmedRetry": {
+    "description": "syncUnconfirmedRetry"
+  },
   "syncChangesConfirmed": "{count} muutoksia tehty.",
+  "@syncChangesConfirmed": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    },
+    "description": "syncChangesConfirmed"
+  },
   "migrationAlreadyRunning": "Siirto on jo käynnissä.",
+  "@migrationAlreadyRunning": {
+    "description": "migrationAlreadyRunning"
+  },
   "migrationLoginRequired": "Kirjaudu Joss Rediin ennen siirtoa.",
+  "@migrationLoginRequired": {
+    "description": "migrationLoginRequired"
+  },
   "migrationCheckingCloud": "Tarkistetaan, onko EMusic Cloudissa jo kirjasto...",
+  "@migrationCheckingCloud": {
+    "description": "migrationCheckingCloud"
+  },
   "cloudLibraryFoundDeviceWillDownload": "Pilvikirjasto löytyi. Tämä laite lataa sen korvaamatta sitä.",
+  "@cloudLibraryFoundDeviceWillDownload": {
+    "description": "cloudLibraryFoundDeviceWillDownload"
+  },
   "cloudLibraryFound": "Pilvikirjasto löytyi.",
+  "@cloudLibraryFound": {
+    "description": "cloudLibraryFound"
+  },
   "migrationCreatingBackup": "Luodaan paikallista varmuuskopiota ennen pilveen yhdistämistä...",
+  "@migrationCreatingBackup": {
+    "description": "migrationCreatingBackup"
+  },
   "migrationAnalyzingLocal": "Analysoidaan paikallista kirjastoa...",
+  "@migrationAnalyzingLocal": {
+    "description": "migrationAnalyzingLocal"
+  },
   "migrationPreparingCloud": "Valmistellaan siirtoa EMusic Cloudissa...",
+  "@migrationPreparingCloud": {
+    "description": "migrationPreparingCloud"
+  },
   "migrationStartFailed": "EMusic Cloud ei voinut aloittaa siirtoa.",
+  "@migrationStartFailed": {
+    "description": "migrationStartFailed"
+  },
   "migrationUploadingData": "Ladataan soittolistoja, suosikkeja ja historiaa...",
+  "@migrationUploadingData": {
+    "description": "migrationUploadingData"
+  },
   "migrationUploadIncomplete": "Kaikkia tietoja ei voitu ladata. Säilytämme paikallisen tuen.",
+  "@migrationUploadIncomplete": {
+    "description": "migrationUploadIncomplete"
+  },
   "migrationVerifyingIntegrity": "Vahvistetaan eheyttä EMusic Cloudissa...",
+  "@migrationVerifyingIntegrity": {
+    "description": "migrationVerifyingIntegrity"
+  },
   "migrationValidationFailed": "EMusic Cloud ei voinut vahvistaa siirtoa.",
+  "@migrationValidationFailed": {
+    "description": "migrationValidationFailed"
+  },
   "cloudModeReadyOfflineCache": "Pilvitila on valmis. Tämä laite toimii offline-välimuistina.",
+  "@cloudModeReadyOfflineCache": {
+    "description": "cloudModeReadyOfflineCache"
+  },
   "migrationCompleted": "Siirto suoritettu.",
+  "@migrationCompleted": {
+    "description": "migrationCompleted"
+  },
   "migrationFailedLocalPreserved": "Siirto epäonnistui. Paikallisia tietojasi ei muutettu.",
+  "@migrationFailedLocalPreserved": {
+    "description": "migrationFailedLocalPreserved"
+  },
   "sessionExpiredLoginAgain": "Istuntosi on vanhentunut. Kirjaudu uudelleen sisään.",
+  "@sessionExpiredLoginAgain": {
+    "description": "sessionExpiredLoginAgain"
+  },
   "selectedFileNotFound": "Valittua tiedostoa ei löytynyt.",
+  "@selectedFileNotFound": {
+    "description": "selectedFileNotFound"
+  },
   "genericAlbum": "Albumi",
+  "@genericAlbum": {
+    "description": "genericAlbum"
+  },
   "friendsLoginRequired": "Kirjaudu sisään löytääksesi ystäviä.",
+  "@friendsLoginRequired": {
+    "description": "friendsLoginRequired"
+  },
   "invalidSessionToken": "Istunto ei sisällä kelvollista tunnusta.",
+  "@invalidSessionToken": {
+    "description": "invalidSessionToken"
+  },
   "userSearchFailed": "Käyttäjiä ei voitu etsiä ({statusCode}).",
+  "@userSearchFailed": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    },
+    "description": "userSearchFailed"
+  },
   "invalidServerResponse": "Virheellinen palvelimen vastaus.",
+  "@invalidServerResponse": {
+    "description": "invalidServerResponse"
+  },
   "userListMissing": "Vastaus ei sisällä luetteloa käyttäjistä.",
+  "@userListMissing": {
+    "description": "userListMissing"
+  },
   "playlistCollaboratorsTitle": "Soittolistan avustajat",
+  "@playlistCollaboratorsTitle": {
+    "description": "playlistCollaboratorsTitle"
+  },
   "collaboratorsInstruction": "Valitse ystävät, jotka voivat nähdä ja muokata tätä soittolistaa:",
+  "@collaboratorsInstruction": {
+    "description": "collaboratorsInstruction"
+  },
   "noJossRedFriends": "Sinulla ei ole lisättyjä ystäviä Joss Redissä.",
+  "@noJossRedFriends": {
+    "description": "noJossRedFriends"
+  },
   "friendFallback": "ystävä",
+  "@friendFallback": {
+    "description": "friendFallback"
+  },
   "collaboratorsUpdated": "Yhteistyökumppanit päivitetty oikein.",
+  "@collaboratorsUpdated": {
+    "description": "collaboratorsUpdated"
+  },
   "save": "Pitää",
+  "@save": {
+    "description": "save"
+  },
   "manageCollaborators": "Hallinnoi yhteistyökumppaneita (ystäviä)",
+  "@manageCollaborators": {
+    "description": "manageCollaborators"
+  },
   "done": "Valmis",
+  "@done": {
+    "description": "done"
+  },
   "notAuthenticated": "Ei todennettu",
+  "@notAuthenticated": {
+    "description": "notAuthenticated"
+  },
   "genericError": "Virhe",
+  "@genericError": {
+    "description": "genericError"
+  },
   "friendRequestSent": "Ystäväpyyntö lähetetty",
+  "@friendRequestSent": {
+    "description": "friendRequestSent"
+  },
   "friendRequestAccepted": "Ystäväpyyntö hyväksytty",
+  "@friendRequestAccepted": {
+    "description": "friendRequestAccepted"
+  },
   "friendshipRemoved": "Ystävyys poistettu",
+  "@friendshipRemoved": {
+    "description": "friendshipRemoved"
+  },
   "userBlocked": "Estetty käyttäjä",
+  "@userBlocked": {
+    "description": "userBlocked"
+  },
   "userUnblocked": "Avattu käyttäjä",
+  "@userUnblocked": {
+    "description": "userUnblocked"
+  },
   "artistsByTaste": "Sinun makusi mukaan",
+  "@artistsByTaste": {
+    "description": "artistsByTaste"
+  },
   "followedArtists": "seurannut",
+  "@followedArtists": {
+    "description": "followedArtists"
+  },
   "recommendedArtists": "Suositeltava",
+  "@recommendedArtists": {
+    "description": "recommendedArtists"
+  },
   "albumsByTaste": "Sinun makusi mukaan",
+  "@albumsByTaste": {
+    "description": "albumsByTaste"
+  },
   "savedAlbums": "Tallennettu",
+  "@savedAlbums": {
+    "description": "savedAlbums"
+  },
   "recommendedAlbums": "Suositeltava",
+  "@recommendedAlbums": {
+    "description": "recommendedAlbums"
+  },
   "downloadNotificationChannelName": "musiikin lataukset",
+  "@downloadNotificationChannelName": {
+    "description": "downloadNotificationChannelName"
+  },
   "downloadNotificationChannelDescription": "Pitää musiikkilataukset aktiivisina taustalla.",
+  "@downloadNotificationChannelDescription": {
+    "description": "downloadNotificationChannelDescription"
+  },
   "downloadNotificationTitle": "Musiikin lataaminen",
+  "@downloadNotificationTitle": {
+    "description": "downloadNotificationTitle"
+  },
   "downloadNotificationPreparing": "Valmistellaan latauksiasi…",
+  "@downloadNotificationPreparing": {
+    "description": "downloadNotificationPreparing"
+  },
   "downloadNotificationSong": "Ladataan: {songTitle}",
+  "@downloadNotificationSong": {
+    "placeholders": {
+      "songTitle": {
+        "type": "String"
+      }
+    },
+    "description": "downloadNotificationSong"
+  },
   "syncCloudModeActive": "Pilvitila aktiivinen",
+  "@syncCloudModeActive": {
+    "description": "syncCloudModeActive"
+  },
   "permissionsConsentTitle": "Luvat aloittaaksesi",
+  "@permissionsConsentTitle": {
+    "description": "permissionsConsentTitle"
+  },
   "permissionsConsentDescription": "Estrella Music tarvitsee nämä luvat hallitakseen musiikkiasi ja tarjotakseen kaikkia toistoominaisuuksia.",
+  "@permissionsConsentDescription": {
+    "description": "permissionsConsentDescription"
+  },
   "permissionsStorageTitle": "Musiikkia ja tallennustilaa",
+  "@permissionsStorageTitle": {
+    "description": "permissionsStorageTitle"
+  },
   "permissionsStorageDescription": "Sen avulla voit toistaa musiikkia, tallentaa latauksia, viedä soittolistoja ja valmistella päivityksiä.",
+  "@permissionsStorageDescription": {
+    "description": "permissionsStorageDescription"
+  },
   "permissionsNotificationsTitle": "Ilmoitukset",
+  "@permissionsNotificationsTitle": {
+    "description": "permissionsNotificationsTitle"
+  },
   "permissionsNotificationsDescription": "Näyttää toistosäätimet, latauksen edistymisen ja tärkeät sovellusilmoitukset.",
+  "@permissionsNotificationsDescription": {
+    "description": "permissionsNotificationsDescription"
+  },
   "permissionsMicrophoneTitle": "Mikrofoni",
+  "@permissionsMicrophoneTitle": {
+    "description": "permissionsMicrophoneTitle"
+  },
   "permissionsMicrophoneDescription": "Sitä käytetään vain, kun päätät tunnistaa ympärilläsi soivan kappaleen.",
+  "@permissionsMicrophoneDescription": {
+    "description": "permissionsMicrophoneDescription"
+  },
   "permissionsContinueButton": "Myönnä tarvittavat käyttöoikeudet",
+  "@permissionsContinueButton": {
+    "description": "permissionsContinueButton"
+  },
   "permissionsRequiredNotice": "Jatkamiseen vaaditaan kaikki kolme lupaa. Voit muuttaa niitä myöhemmin järjestelmäasetuksissa.",
+  "@permissionsRequiredNotice": {
+    "description": "permissionsRequiredNotice"
+  },
   "permissionsAllow": "Salli",
+  "@permissionsAllow": {
+    "description": "permissionsAllow"
+  },
   "permissionsOpenSettings": "Asetukset",
+  "@permissionsOpenSettings": {
+    "description": "permissionsOpenSettings"
+  },
   "auth_2fa_title": "Kaksivaiheinen todennus",
+  "@auth_2fa_title": {
+    "description": "auth_2fa_title"
+  },
   "auth_2fa_subtitle": "Syötä 6-numeroinen koodi todennussovelluksesta. Tämä käyttöoikeus vanhenee 5 minuutin kuluttua.",
+  "@auth_2fa_subtitle": {
+    "description": "auth_2fa_subtitle"
+  },
   "auth_2fa_code": "Todennuskoodi",
+  "@auth_2fa_code": {
+    "description": "auth_2fa_code"
+  },
   "auth_2fa_verify": "Tarkista ja jatka",
-  "auth_2fa_invalid": "Anna kelvollinen 6-numeroinen koodi tai kirjaudu sisään uudelleen."
+  "@auth_2fa_verify": {
+    "description": "auth_2fa_verify"
+  },
+  "auth_2fa_invalid": "Anna kelvollinen 6-numeroinen koodi tai kirjaudu sisään uudelleen.",
+  "@auth_2fa_invalid": {
+    "description": "auth_2fa_invalid"
+  }
 }

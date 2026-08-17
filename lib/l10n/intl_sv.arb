@@ -1,215 +1,716 @@
 {
   "@@locale": "sv",
   "settings": "Inställningar",
+  "@settings": {
+    "description": "settings"
+  },
   "library": "Bibliotek",
+  "@library": {
+    "description": "library"
+  },
   "libSongs": "Låtar i Bibliotek",
+  "@libSongs": {
+    "description": "libSongs"
+  },
   "libAlbums": "Album i Bibliotek",
+  "@libAlbums": {
+    "description": "libAlbums"
+  },
   "libArtists": "Artister i Bibliotek",
+  "@libArtists": {
+    "description": "libArtists"
+  },
   "featuredplaylists": "Utvalda Spellistor",
+  "@featuredplaylists": {
+    "description": "featuredplaylists"
+  },
   "items": "föremål",
+  "@items": {
+    "description": "items"
+  },
   "retry": "Försök igen!",
+  "@retry": {
+    "description": "retry"
+  },
   "emptyPlaylist": "Tom Spellista!",
+  "@emptyPlaylist": {
+    "description": "emptyPlaylist"
+  },
   "noBookmarks": "Inga bokmärken!",
+  "@noBookmarks": {
+    "description": "noBookmarks"
+  },
   "startRadio": "Starta radio",
+  "@startRadio": {
+    "description": "startRadio"
+  },
   "addToPlaylist": "Lägg till i spellista",
+  "@addToPlaylist": {
+    "description": "addToPlaylist"
+  },
   "enqueueSong": "Lägg till i kön",
+  "@enqueueSong": {
+    "description": "enqueueSong"
+  },
   "goToAlbum": "Gå till album",
+  "@goToAlbum": {
+    "description": "goToAlbum"
+  },
   "viewArtist": "Visa Artist",
+  "@viewArtist": {
+    "description": "viewArtist"
+  },
   "shareSong": "Dela låt",
+  "@shareSong": {
+    "description": "shareSong"
+  },
   "removeFromPlaylist": "Ta bort från spellista",
+  "@removeFromPlaylist": {
+    "description": "removeFromPlaylist"
+  },
   "upNext": "Nästa",
+  "@upNext": {
+    "description": "upNext"
+  },
   "sleepTimer": "Sovtimer",
+  "@sleepTimer": {
+    "description": "sleepTimer"
+  },
   "add5Minutes": "Lägg till 5 minuter",
+  "@add5Minutes": {
+    "description": "add5Minutes"
+  },
   "cancelTimer": "Avbryt timer",
+  "@cancelTimer": {
+    "description": "cancelTimer"
+  },
   "dynamic": "Dynamiskt",
+  "@dynamic": {
+    "description": "dynamic"
+  },
   "systemDefault": "Systemstandard",
+  "@systemDefault": {
+    "description": "systemDefault"
+  },
   "languageDes": "Byt språk",
+  "@languageDes": {
+    "description": "languageDes"
+  },
   "quickpicks": "Snabbval",
+  "@quickpicks": {
+    "description": "quickpicks"
+  },
   "discover": "Upptäck",
+  "@discover": {
+    "description": "discover"
+  },
   "trending": "Trendar nu",
+  "@trending": {
+    "description": "trending"
+  },
   "restoreLastPlaybackSession": "Återställ den senaste sessionen",
+  "@restoreLastPlaybackSession": {
+    "description": "restoreLastPlaybackSession"
+  },
   "skipSilenceDes": "Tystnad hoppas över vid musikuppspelning",
+  "@skipSilenceDes": {
+    "description": "skipSilenceDes"
+  },
   "high": "Hög",
+  "@high": {
+    "description": "high"
+  },
   "low": "Låg",
+  "@low": {
+    "description": "low"
+  },
   "backgroundPlay": "Uppspelning i bakgrunden",
+  "@backgroundPlay": {
+    "description": "backgroundPlay"
+  },
   "exportDowloadedFiles": "Exportera nedladdade filer",
+  "@exportDowloadedFiles": {
+    "description": "exportDowloadedFiles"
+  },
   "export": "Exportera",
+  "@export": {
+    "description": "export"
+  },
   "scanning": "Söker...",
+  "@scanning": {
+    "description": "scanning"
+  },
   "close": "Nära",
+  "@close": {
+    "description": "close"
+  },
   "exportMsg": "Filer har exporterats",
+  "@exportMsg": {
+    "description": "exportMsg"
+  },
   "equalizer": "Equalizer",
+  "@equalizer": {
+    "description": "equalizer"
+  },
   "equalizerDes": "Öppna systemequalizer",
+  "@equalizerDes": {
+    "description": "equalizerDes"
+  },
   "clearImgCacheAlert": "Bild-cachen rensades",
+  "@clearImgCacheAlert": {
+    "description": "clearImgCacheAlert"
+  },
   "ignoreBatOpt": "Ignorera batterioptimering",
+  "@ignoreBatOpt": {
+    "description": "ignoreBatOpt"
+  },
   "github": "GitHub",
+  "@github": {
+    "description": "github"
+  },
   "by": "av",
+  "@by": {
+    "description": "by"
+  },
   "search": "Sök",
+  "@search": {
+    "description": "search"
+  },
   "for1": "för",
+  "@for1": {
+    "description": "for1"
+  },
   "videos": "Videoklipp",
+  "@videos": {
+    "description": "videos"
+  },
   "synced": "Synkad",
+  "@synced": {
+    "description": "synced"
+  },
   "deleteDownloadedDataAlert": "Borttagen från nedladdningar!",
+  "@deleteDownloadedDataAlert": {
+    "description": "deleteDownloadedDataAlert"
+  },
   "cancelTimerAlert": "Sovtimer avbruten",
+  "@cancelTimerAlert": {
+    "description": "cancelTimerAlert"
+  },
   "sleepTimeSetAlert": "Sovtimer inställd",
+  "@sleepTimeSetAlert": {
+    "description": "sleepTimeSetAlert"
+  },
   "radioNotAvailable": "Radio inte tillgänglig för denna artist!",
+  "@radioNotAvailable": {
+    "description": "radioNotAvailable"
+  },
   "songRemovedfromQueue": "Borttagen från kö!",
+  "@songRemovedfromQueue": {
+    "description": "songRemovedfromQueue"
+  },
   "songRemovedfromQueueCurrSong": "Du kan inte ta bort den låt som spelas för närvarande",
+  "@songRemovedfromQueueCurrSong": {
+    "description": "songRemovedfromQueueCurrSong"
+  },
   "songAddedToPlaylistAlert": "Låten har lagts till i spellistan!",
+  "@songAddedToPlaylistAlert": {
+    "description": "songAddedToPlaylistAlert"
+  },
   "songAlreadyExists": "Låten finns redan!",
+  "@songAlreadyExists": {
+    "description": "songAlreadyExists"
+  },
   "songEnqueueAlert": "Låt köad!",
+  "@songEnqueueAlert": {
+    "description": "songEnqueueAlert"
+  },
   "songRemovedAlert": "Borttagen från",
+  "@songRemovedAlert": {
+    "description": "songRemovedAlert"
+  },
   "errorOccuredAlert": "Ett fel uppstod!",
+  "@errorOccuredAlert": {
+    "description": "errorOccuredAlert"
+  },
   "pipedplstSyncAlert": "Piped spellista synkroniserad!",
+  "@pipedplstSyncAlert": {
+    "description": "pipedplstSyncAlert"
+  },
   "playlistCreatedAlert": "Spellista skapad!",
+  "@playlistCreatedAlert": {
+    "description": "playlistCreatedAlert"
+  },
   "playlistCreatednsongAddedAlert": "Spellista skapad & låt tillagd!",
+  "@playlistCreatednsongAddedAlert": {
+    "description": "playlistCreatednsongAddedAlert"
+  },
   "playlistRenameAlert": "Namnbyte lyckades!",
+  "@playlistRenameAlert": {
+    "description": "playlistRenameAlert"
+  },
   "artistBookmarkRemoveAlert": "Artist borttagen från bibliotek!",
+  "@artistBookmarkRemoveAlert": {
+    "description": "artistBookmarkRemoveAlert"
+  },
   "artistBookmarkAddAlert": "Artist tillagd i bibliotek!",
+  "@artistBookmarkAddAlert": {
+    "description": "artistBookmarkAddAlert"
+  },
   "albumBookmarkRemoveAlert": "Album borttagen från bibliotek!",
+  "@albumBookmarkRemoveAlert": {
+    "description": "albumBookmarkRemoveAlert"
+  },
   "albumBookmarkAddAlert": "Album tillaggd i bibliotek!",
+  "@albumBookmarkAddAlert": {
+    "description": "albumBookmarkAddAlert"
+  },
   "playlistBookmarkRemoveAlert": "Spellista borttagen från bibliotek!",
+  "@playlistBookmarkRemoveAlert": {
+    "description": "playlistBookmarkRemoveAlert"
+  },
   "lyricsNotAvailable": "Låttexten är inte tillgänglig!",
+  "@lyricsNotAvailable": {
+    "description": "lyricsNotAvailable"
+  },
   "syncedLyricsNotAvailable": "Synkroniserad låttext är inte tillgänglig!",
+  "@syncedLyricsNotAvailable": {
+    "description": "syncedLyricsNotAvailable"
+  },
   "newVersionAvailable": "Ny version tillgänglig!",
+  "@newVersionAvailable": {
+    "description": "newVersionAvailable"
+  },
   "dontShowInfoAgain": "Visa inte denna information igen",
+  "@dontShowInfoAgain": {
+    "description": "dontShowInfoAgain"
+  },
   "dismiss": "Avfärda",
+  "@dismiss": {
+    "description": "dismiss"
+  },
   "notaSongVideo": "Inte en låt/musikvideo!",
+  "@notaSongVideo": {
+    "description": "notaSongVideo"
+  },
   "notaValidLink": "Ogiltig länk!",
+  "@notaValidLink": {
+    "description": "notaValidLink"
+  },
   "operationFailed": "Operationen misslyckades",
+  "@operationFailed": {
+    "description": "operationFailed"
+  },
   "Piped": "Piped",
+  "@Piped": {
+    "description": "Piped"
+  },
   "link": "Länka",
+  "@link": {
+    "description": "link"
+  },
   "unLink": "Avlänka",
+  "@unLink": {
+    "description": "unLink"
+  },
   "hintApiUrl": "API-URL till Piped-instans",
+  "@hintApiUrl": {
+    "description": "hintApiUrl"
+  },
   "customIns": "Egen instans",
+  "@customIns": {
+    "description": "customIns"
+  },
   "customInsSelectMsg": "Välj egen instans",
+  "@customInsSelectMsg": {
+    "description": "customInsSelectMsg"
+  },
   "selectAuthInsMsg": "Vänligen välj autentiseringsinstans!",
+  "@selectAuthInsMsg": {
+    "description": "selectAuthInsMsg"
+  },
   "allFieldsReqMsg": "Alla fält krävs",
+  "@allFieldsReqMsg": {
+    "description": "allFieldsReqMsg"
+  },
   "linkPipedDes": "Länka med piped för spellistor",
+  "@linkPipedDes": {
+    "description": "linkPipedDes"
+  },
   "linkAlert": "Länkades framgångsrikt!",
+  "@linkAlert": {
+    "description": "linkAlert"
+  },
   "resetblacklistedplaylist": "Återställ svartlistade spellistor",
+  "@resetblacklistedplaylist": {
+    "description": "resetblacklistedplaylist"
+  },
   "resetblacklistedplaylistDes": "Återställ alla svartlistade piped-spellistor",
+  "@resetblacklistedplaylistDes": {
+    "description": "resetblacklistedplaylistDes"
+  },
   "home": "Hem",
+  "@home": {
+    "description": "home"
+  },
   "songs": "Låtar",
+  "@songs": {
+    "description": "songs"
+  },
   "playlists": "Spellistor",
+  "@playlists": {
+    "description": "playlists"
+  },
   "albums": "Album",
+  "@albums": {
+    "description": "albums"
+  },
   "singles": "Singlar",
+  "@singles": {
+    "description": "singles"
+  },
   "artists": "Artister",
+  "@artists": {
+    "description": "artists"
+  },
   "libPlaylists": "Spellistor i Bibliotek",
+  "@libPlaylists": {
+    "description": "libPlaylists"
+  },
   "communityplaylists": "Communityspellistor",
+  "@communityplaylists": {
+    "description": "communityplaylists"
+  },
   "networkError1": "Nätverksfel!",
+  "@networkError1": {
+    "description": "networkError1"
+  },
   "noOfflineSong": "Inga offlinelåtar!",
+  "@noOfflineSong": {
+    "description": "noOfflineSong"
+  },
   "recentlyPlayed": "Senast Spelat",
+  "@recentlyPlayed": {
+    "description": "recentlyPlayed"
+  },
   "favorites": "Favoriter",
+  "@favorites": {
+    "description": "favorites"
+  },
   "cachedOrOffline": "Cached/Offline",
+  "@cachedOrOffline": {
+    "description": "cachedOrOffline"
+  },
   "downloads": "Nedladdat",
+  "@downloads": {
+    "description": "downloads"
+  },
   "enqueueAll": "Köa alla",
+  "@enqueueAll": {
+    "description": "enqueueAll"
+  },
   "renamePlaylist": "Byt namn på Spellista",
+  "@renamePlaylist": {
+    "description": "renamePlaylist"
+  },
   "removePlaylist": "Ta bort Spellista",
+  "@removePlaylist": {
+    "description": "removePlaylist"
+  },
   "CreateNewPlaylist": "Skapa Spellista",
+  "@CreateNewPlaylist": {
+    "description": "CreateNewPlaylist"
+  },
   "reArrangePlaylist": "Ordna om i Spellistan",
+  "@reArrangePlaylist": {
+    "description": "reArrangePlaylist"
+  },
   "removeMultiple": "Ta bort flera låtar",
+  "@removeMultiple": {
+    "description": "removeMultiple"
+  },
   "addMultipleSongs": "Lägg till låtar i Spellista",
+  "@addMultipleSongs": {
+    "description": "addMultipleSongs"
+  },
   "cancel": "Avbryt",
+  "@cancel": {
+    "description": "cancel"
+  },
   "createnAdd": "Skapa & lägg till",
+  "@createnAdd": {
+    "description": "createnAdd"
+  },
   "create": "Skapa",
+  "@create": {
+    "description": "create"
+  },
   "minutes": "minuter",
+  "@minutes": {
+    "description": "minutes"
+  },
   "themeMode": "Tema",
+  "@themeMode": {
+    "description": "themeMode"
+  },
   "language": "Språk",
+  "@language": {
+    "description": "language"
+  },
   "rename": "Döp om",
+  "@rename": {
+    "description": "rename"
+  },
   "removeFromQueue": "Ta bort från kö",
+  "@removeFromQueue": {
+    "description": "removeFromQueue"
+  },
   "deleteDownloadData": "Ta bort från nedladdningar",
+  "@deleteDownloadData": {
+    "description": "deleteDownloadData"
+  },
   "dark": "Mörkt",
+  "@dark": {
+    "description": "dark"
+  },
   "playNext": "Spela nästa",
+  "@playNext": {
+    "description": "playNext"
+  },
   "removeFromLib": "Ta bort låt från bibliotek",
+  "@removeFromLib": {
+    "description": "removeFromLib"
+  },
   "light": "Ljust",
+  "@light": {
+    "description": "light"
+  },
   "noLibPlaylist": "Inga spellistor i biblioteket!",
+  "@noLibPlaylist": {
+    "description": "noLibPlaylist"
+  },
   "setDiscoverContent": "Innehåll som ska visas på Hem",
+  "@setDiscoverContent": {
+    "description": "setDiscoverContent"
+  },
   "basedOnLast": "Baserat på senaste sessionen",
+  "@basedOnLast": {
+    "description": "basedOnLast"
+  },
   "homeContentCountDes": "Välj mängden innehåll som ska visas på startsidan (Ungefärligt). Mindre innehåll resulterar i snabbare laddning",
+  "@homeContentCountDes": {
+    "description": "homeContentCountDes"
+  },
   "skipSilence": "Hoppa över tystnad",
+  "@skipSilence": {
+    "description": "skipSilence"
+  },
   "streamingQuality": "Streamingkvalitet",
+  "@streamingQuality": {
+    "description": "streamingQuality"
+  },
   "topmusicvideos": "Populära musikvideor",
+  "@topmusicvideos": {
+    "description": "topmusicvideos"
+  },
   "enableBottomNav": "Flytta navigeringsfältet till botten",
+  "@enableBottomNav": {
+    "description": "enableBottomNav"
+  },
   "restoreLastPlaybackSessionDes": "Återställ den senaste uppspelningssessionen automatiskt vid appstart",
+  "@restoreLastPlaybackSessionDes": {
+    "description": "restoreLastPlaybackSessionDes"
+  },
   "streamingQualityDes": "Kvalitet på streamad musik",
+  "@streamingQualityDes": {
+    "description": "streamingQualityDes"
+  },
   "disableTransitionAnimation": "Inaktivera övergångsanimeringar",
+  "@disableTransitionAnimation": {
+    "description": "disableTransitionAnimation"
+  },
   "disableTransitionAnimationDes": "Inaktivera övergångsanimeringar vid flikbyte",
+  "@disableTransitionAnimationDes": {
+    "description": "disableTransitionAnimationDes"
+  },
   "homeContentCount": "Mängd innehåll på startsidan",
+  "@homeContentCount": {
+    "description": "homeContentCount"
+  },
   "backgroundPlayDes": "Aktivera/inaktivera bakgrundsuppspelning (Appen kan nås från statusfältet när appen körs i bakgrunden)",
+  "@backgroundPlayDes": {
+    "description": "backgroundPlayDes"
+  },
   "enableBottomNavDes": "Flytta navigeringsfältet till botten av skärmen",
+  "@enableBottomNavDes": {
+    "description": "enableBottomNavDes"
+  },
   "downloadingFormat": "Nedladdningsformat",
+  "@downloadingFormat": {
+    "description": "downloadingFormat"
+  },
   "downloadingFormatDes": "Välj filformat på nedladdad musik. \"Opus\" ger bäst kvalitet",
+  "@downloadingFormatDes": {
+    "description": "downloadingFormatDes"
+  },
   "clearImgCacheDes": "Klicka här för att rensa cachade miniatyrer/bilder. (Rekommenderas inte om du inte vill uppdatera cachad bilddata)",
+  "@clearImgCacheDes": {
+    "description": "clearImgCacheDes"
+  },
   "ignoreBatOptDes": "Om du stöter på aviseringsproblem eller att uppspelningen stoppas p.g.a systemoptimering, aktivera det här alternativet",
+  "@ignoreBatOptDes": {
+    "description": "ignoreBatOptDes"
+  },
   "status": "Status",
+  "@status": {
+    "description": "status"
+  },
   "enabled": "Aktiverad",
+  "@enabled": {
+    "description": "enabled"
+  },
   "exportDowloadedFilesDes": "Klicka här för att exportera nedladdade filer från app-biblioteket till extern mapp",
+  "@exportDowloadedFilesDes": {
+    "description": "exportDowloadedFilesDes"
+  },
   "disabled": "Inaktiverad",
+  "@disabled": {
+    "description": "disabled"
+  },
   "exportedFileLocation": "Välj plats för nedladdade filer",
+  "@exportedFileLocation": {
+    "description": "exportedFileLocation"
+  },
   "exporting": "Exporterar...",
+  "@exporting": {
+    "description": "exporting"
+  },
   "downFilesFound": "nedladdade filer hittades",
+  "@downFilesFound": {
+    "description": "downFilesFound"
+  },
   "clearImgCache": "Rensa bild-cache",
+  "@clearImgCache": {
+    "description": "clearImgCache"
+  },
   "githubDes": "Visa GitHub källkod\nom du gillar det här projektet, glöm inte att ge en ⭐",
+  "@githubDes": {
+    "description": "githubDes"
+  },
   "searchDes": "Låtar, Spellista, Album eller Artist",
+  "@searchDes": {
+    "description": "searchDes"
+  },
   "searchRes": "Sökresultat",
+  "@searchRes": {
+    "description": "searchRes"
+  },
   "viewAll": "Visa allt",
+  "@viewAll": {
+    "description": "viewAll"
+  },
   "results": "Resultat",
+  "@results": {
+    "description": "results"
+  },
   "nomatch": "Inget resultat hittades för",
+  "@nomatch": {
+    "description": "nomatch"
+  },
   "subscribers": "följare",
+  "@subscribers": {
+    "description": "subscribers"
+  },
   "songAlreadyOfflineAlert": "Låten är redan offline i cachen",
+  "@songAlreadyOfflineAlert": {
+    "description": "songAlreadyOfflineAlert"
+  },
   "playlistRemovedAlert": "Spellista borttagen!",
+  "@playlistRemovedAlert": {
+    "description": "playlistRemovedAlert"
+  },
   "playlistBookmarkAddAlert": "Spellista tillaggd i bibliotek!",
+  "@playlistBookmarkAddAlert": {
+    "description": "playlistBookmarkAddAlert"
+  },
   "artistDesNotAvailable": "Beskrivning ej tillgänglig!",
+  "@artistDesNotAvailable": {
+    "description": "artistDesNotAvailable"
+  },
   "username": "Användarnamn",
+  "@username": {
+    "description": "username"
+  },
   "password": "Lösenord",
+  "@password": {
+    "description": "password"
+  },
   "playlistBlacklistAlert": "Spellistan svartlistad!",
+  "@playlistBlacklistAlert": {
+    "description": "playlistBlacklistAlert"
+  },
   "reset": "Återställ",
+  "@reset": {
+    "description": "reset"
+  },
   "blacklistPlstResetAlert": "Återställning lyckades!",
+  "@blacklistPlstResetAlert": {
+    "description": "blacklistPlstResetAlert"
+  },
   "goToDownloadPage": "Klicka här för att gå till nedladdningssidan",
+  "@goToDownloadPage": {
+    "description": "goToDownloadPage"
+  },
   "keepScreenOnWhilePlaying": "Håll skärmen på under uppspelning",
+  "@keepScreenOnWhilePlaying": {
+    "description": "keepScreenOnWhilePlaying"
+  },
   "keepScreenOnWhilePlayingDes": "Om aktiverat förblir enhetens skärm på medan musik spelas",
+  "@keepScreenOnWhilePlayingDes": {
+    "description": "keepScreenOnWhilePlayingDes"
+  },
   "auth_login_success": "Inloggad framgångsrikt",
   "@auth_login_success": {
-    "description": ""
+    "description": "auth_login_success"
   },
   "settings_cloud_backup": "Cloud backup",
   "@settings_cloud_backup": {
-    "description": ""
+    "description": "settings_cloud_backup"
   },
   "settings_migration_title": "Migrera från Joss Music Kotlin",
   "@settings_migration_title": {
-    "description": ""
+    "description": "settings_migration_title"
   },
   "backup_confirm_question": "Vill du göra en säkerhetskopiering?",
   "@backup_confirm_question": {
-    "description": ""
+    "description": "backup_confirm_question"
   },
   "backup_selection_prompt": "Välj vilken data som ska säkerhetskopieras",
   "@backup_selection_prompt": {
-    "description": ""
+    "description": "backup_selection_prompt"
   },
   "search_recent_title": "Senaste sökningar",
   "@search_recent_title": {
-    "description": ""
+    "description": "search_recent_title"
   },
   "back": "Återvända",
   "@back": {
-    "description": ""
+    "description": "back"
   },
   "auth_forgot_password": "Jag har glömt mitt lösenord",
   "@auth_forgot_password": {
-    "description": ""
+    "description": "auth_forgot_password"
   },
   "auth_btn_login": "Inloggning",
   "@auth_btn_login": {
-    "description": ""
+    "description": "auth_btn_login"
   },
   "auth_btn_register": "Register",
   "@auth_btn_register": {
-    "description": ""
+    "description": "auth_btn_register"
   },
   "email": "E-post",
   "@email": {
-    "description": ""
+    "description": "email"
   },
   "password_text": "Lösenord",
   "@password_text": {
@@ -217,372 +718,869 @@
   },
   "auth_confirm_password": "Bekräfta lösenord",
   "@auth_confirm_password": {
-    "description": ""
+    "description": "auth_confirm_password"
   },
   "auth_welcome_title": "Välkommen till Estrella Music",
   "@auth_welcome_title": {
-    "description": ""
+    "description": "auth_welcome_title"
   },
   "auth_welcome_subtitle": "Välkommen till Estrella Music",
   "@auth_welcome_subtitle": {
-    "description": ""
-  },
-  "@username": {
-    "description": ""
+    "description": "auth_welcome_subtitle"
   },
   "auth_first_name": "Förnamn",
   "@auth_first_name": {
-    "description": ""
+    "description": "auth_first_name"
   },
   "auth_last_name": "Efternamn",
   "@auth_last_name": {
-    "description": ""
+    "description": "auth_last_name"
   },
   "auth_agree_personal_data": "Acceptera att använda miss data...",
   "@auth_agree_personal_data": {
-    "description": ""
+    "description": "auth_agree_personal_data"
   },
   "settings_general_section": "Allmän",
   "@settings_general_section": {
-    "description": ""
+    "description": "settings_general_section"
   },
   "settings_logout": "Logga ut",
   "@settings_logout": {
-    "description": ""
+    "description": "settings_logout"
   },
   "settings_cloud_backup_desc": "Ladda upp, återställ och hantera...",
   "@settings_cloud_backup_desc": {
-    "description": ""
+    "description": "settings_cloud_backup_desc"
   },
   "settings_migration_desc": "Importera spellistor, låtar...",
   "@settings_migration_desc": {
-    "description": ""
+    "description": "settings_migration_desc"
   },
   "backup_btn_restart": "Starta om appen",
   "@backup_btn_restart": {
-    "description": ""
+    "description": "backup_btn_restart"
   },
   "backup_btn_upload": "Ladda upp säkerhetskopia nu",
   "@backup_btn_upload": {
-    "description": ""
+    "description": "backup_btn_upload"
   },
   "backup_no_backups": "Det finns inga säkerhetskopior ännu...",
   "@backup_no_backups": {
-    "description": ""
+    "description": "backup_no_backups"
   },
   "backup_auth_required": "Du behöver en aktiv session...",
   "@backup_auth_required": {
-    "description": ""
+    "description": "backup_auth_required"
   },
   "backup_upload_success": "Säkerhetskopieringen har laddats upp korrekt.",
   "@backup_upload_success": {
-    "description": ""
+    "description": "backup_upload_success"
   },
   "backup_restore_success": "Säkerhetskopieringen återställd. Starta om appen.",
   "@backup_restore_success": {
-    "description": ""
+    "description": "backup_restore_success"
   },
   "backup_delete_success": "Säkerhetskopiering raderad.",
   "@backup_delete_success": {
-    "description": ""
+    "description": "backup_delete_success"
   },
   "genre_pop": "Pop",
   "@genre_pop": {
-    "description": ""
+    "description": "genre_pop"
   },
   "genre_rock": "Sten",
   "@genre_rock": {
-    "description": ""
+    "description": "genre_rock"
   },
   "genre_hiphop": "hip hop",
   "@genre_hiphop": {
-    "description": ""
+    "description": "genre_hiphop"
   },
   "genre_electronic": "Elektronik",
   "@genre_electronic": {
-    "description": ""
+    "description": "genre_electronic"
   },
   "genre_jazz": "Jazz",
   "@genre_jazz": {
-    "description": ""
+    "description": "genre_jazz"
   },
   "genre_latin": "latin",
   "@genre_latin": {
-    "description": ""
+    "description": "genre_latin"
   },
   "migration_btn_select": "Välj fil och importera",
   "@migration_btn_select": {
-    "description": ""
-  },
-  "@close": {
-    "description": ""
+    "description": "migration_btn_select"
   },
   "forgottenFavorites": "glömda favoriter",
   "@forgottenFavorites": {
-    "description": ""
+    "description": "forgottenFavorites"
   },
   "mostListenedSong": "Den mest lyssnade låten",
   "@mostListenedSong": {
-    "description": ""
+    "description": "mostListenedSong"
   },
   "reproducedBy": "Återges av",
   "@reproducedBy": {
-    "description": ""
+    "description": "reproducedBy"
   },
   "recentSearches": "Senaste sökningar",
   "@recentSearches": {
-    "description": ""
+    "description": "recentSearches"
   },
   "popularTracks": "Populära låtar",
   "@popularTracks": {
-    "description": ""
+    "description": "popularTracks"
   },
   "latestRelease": "Senaste utgåvan",
   "@latestRelease": {
-    "description": ""
+    "description": "latestRelease"
   },
   "follow": "Fortsätta",
   "@follow": {
-    "description": ""
+    "description": "follow"
   },
   "following": "Följande",
   "@following": {
-    "description": ""
+    "description": "following"
   },
   "listenNow": "Lyssna nu",
   "@listenNow": {
-    "description": ""
+    "description": "listenNow"
   },
   "video": "Video",
   "@video": {
-    "description": ""
+    "description": "video"
   },
   "about": "Om",
   "@about": {
-    "description": ""
+    "description": "about"
   },
   "readMore": "Läs mer",
   "@readMore": {
-    "description": ""
+    "description": "readMore"
   },
   "speedAndPitch": "Hastighet och Pitch",
   "@speedAndPitch": {
-    "description": ""
+    "description": "speedAndPitch"
   },
   "playbackSpeed": "Uppspelningshastighet",
   "@playbackSpeed": {
-    "description": ""
+    "description": "playbackSpeed"
   },
   "songPitch": "låtens ton",
   "@songPitch": {
-    "description": ""
+    "description": "songPitch"
   },
   "musicRecognition": "Musikigenkänning",
   "@musicRecognition": {
-    "description": ""
+    "description": "musicRecognition"
   },
   "listeningToEnvironment": "Att lyssna på miljön...",
   "@listeningToEnvironment": {
-    "description": ""
+    "description": "listeningToEnvironment"
   },
   "micInstruction": "Se till att musiken spelar tillräckligt högt nära din mikrofon.",
   "@micInstruction": {
-    "description": ""
+    "description": "micInstruction"
   },
   "processingAudio": "Bearbetar ljudet...",
   "@processingAudio": {
-    "description": ""
+    "description": "processingAudio"
   },
   "shazamSearching": "Söker i Shazam-databasen efter matchningar...",
   "@shazamSearching": {
-    "description": ""
+    "description": "shazamSearching"
   },
   "songFound": "Låten hittad!",
   "@songFound": {
-    "description": ""
+    "description": "songFound"
   },
   "playNow": "Spela nu",
   "@playNow": {
-    "description": ""
+    "description": "playNow"
   },
   "searchInLibrary": "Sök i biblioteket",
   "@searchInLibrary": {
-    "description": ""
+    "description": "searchInLibrary"
   },
   "noMatchesFound": "Inga matchningar",
   "@noMatchesFound": {
-    "description": ""
+    "description": "noMatchesFound"
   },
   "noMatchInstruction": "Det gick inte att hitta några låtar i det inspelade ljudet",
   "@noMatchInstruction": {
-    "description": ""
+    "description": "noMatchInstruction"
   },
   "errorOccurred": "Ett fel uppstod",
   "@errorOccurred": {
-    "description": ""
+    "description": "errorOccurred"
   },
   "playingRecognizedTrack": "Spelar:",
   "@playingRecognizedTrack": {
-    "description": ""
+    "description": "playingRecognizedTrack"
   },
   "errorPlayingTrack": "Fel vid uppspelning:",
   "@errorPlayingTrack": {
-    "description": ""
+    "description": "errorPlayingTrack"
   },
   "welcome_title": "Din musik, på ditt sätt",
+  "@welcome_title": {
+    "description": "welcome_title"
+  },
   "welcome_subtitle": "Välj hur du vill uppleva Estrella Music från och med nu.",
+  "@welcome_subtitle": {
+    "description": "welcome_subtitle"
+  },
   "welcome_intro": "Vi har moderniserat vår plattform. Det gamla systemet för uppladdning av manuella säkerhetskopior har inaktiverats. Du har nu två tydliga sätt att hantera ditt musikbibliotek.",
+  "@welcome_intro": {
+    "description": "welcome_intro"
+  },
   "recommend_cloud": "Vi rekommenderar att du aktiverar molnläget för en Spotify-liknande upplevelse: realtidssynkronisering mellan alla dina enheter och automatisk säkerhetskopiering utan att du behöver göra något.",
+  "@recommend_cloud": {
+    "description": "recommend_cloud"
+  },
   "swipe_prompt": "Svep för att utforska alternativen ➔",
+  "@swipe_prompt": {
+    "description": "swipe_prompt"
+  },
   "local_title": "Lokalt läge",
+  "@local_title": {
+    "description": "local_title"
+  },
   "local_subtitle": "Absolut integritet på din enhet",
+  "@local_subtitle": {
+    "description": "local_subtitle"
+  },
   "local_b1": "Det fungerar utan att behöva logga in.",
+  "@local_b1": {
+    "description": "local_b1"
+  },
   "local_b2": "Hela ditt bibliotek förblir strikt på den här datorn.",
+  "@local_b2": {
+    "description": "local_b2"
+  },
   "local_b3": "Obs: Inga manuella molnsäkerhetskopieringar. Om du tappar bort din enhet eller avinstallerar appen kan din data inte återställas.",
+  "@local_b3": {
+    "description": "local_b3"
+  },
   "local_btn": "Använd endast på denna enhet",
+  "@local_btn": {
+    "description": "local_btn"
+  },
   "cloud_title": "Molnläge (rekommenderas)",
+  "@cloud_title": {
+    "description": "cloud_title"
+  },
   "cloud_subtitle": "Realtidssynkronisering med Joss Red",
+  "@cloud_subtitle": {
+    "description": "cloud_subtitle"
+  },
   "cloud_b1": "Logga in säkert med ditt Joss Red-konto.",
+  "@cloud_b1": {
+    "description": "cloud_b1"
+  },
   "cloud_b2": "Få åtkomst till dina spellistor, favoriter och historik från vilken enhet som helst (Windows, Android, etc.) direkt.",
+  "@cloud_b2": {
+    "description": "cloud_b2"
+  },
   "cloud_b3": "Smart Sync: Arbeta offline och ladda upp ändringar automatiskt när du återställer internet.",
+  "@cloud_b3": {
+    "description": "cloud_b3"
+  },
   "cloud_btn": "Aktivera molnsynkronisering",
+  "@cloud_btn": {
+    "description": "cloud_btn"
+  },
   "slide_indicator": "Steg {current} av 3",
+  "@slide_indicator": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      }
+    },
+    "description": "slide_indicator"
+  },
   "news_card_title": "Estrella Music har utvecklats!",
+  "@news_card_title": {
+    "description": "news_card_title"
+  },
   "news_card_subtitle": "100 % synkronisering med Joss Red, spellistor med vänner och mycket mer. Tryck för att se vad som är nytt.",
+  "@news_card_subtitle": {
+    "description": "news_card_subtitle"
+  },
   "news_dialog_title": "Estrella musiknyheter",
+  "@news_dialog_title": {
+    "description": "news_dialog_title"
+  },
   "news_item_sync_title": "Full integration med Joss Red",
+  "@news_item_sync_title": {
+    "description": "news_item_sync_title"
+  },
   "news_item_sync_desc": "Dina spellistor och favoriter sparas nu och synkroniseras i molnet automatiskt med ditt Joss Red-huvudkonto.",
+  "@news_item_sync_desc": {
+    "description": "news_item_sync_desc"
+  },
   "news_item_collab_title": "Samarbetande spellistor",
+  "@news_item_collab_title": {
+    "description": "news_item_collab_title"
+  },
   "news_item_collab_desc": "Skapa spellistor med dina vänner! När du skapar en spellista markerar du kryssrutan Collaborative och väljer dina vänner att redigera tillsammans.",
+  "@news_item_collab_desc": {
+    "description": "news_item_collab_desc"
+  },
   "news_item_trans_title": "Transparent synkronisering",
+  "@news_item_trans_title": {
+    "description": "news_item_trans_title"
+  },
   "news_item_trans_desc": "Du behöver inte längre klicka på knapparna för manuell synkronisering; Den nya motorn är ansvarig för att växla upp och ner automatiskt.",
+  "@news_item_trans_desc": {
+    "description": "news_item_trans_desc"
+  },
   "news_dialog_section_friends": "Vänner och kontohantering:",
+  "@news_dialog_section_friends": {
+    "description": "news_dialog_section_friends"
+  },
   "news_dialog_friends_desc": "För att lägga till vänner, acceptera förfrågningar eller hantera din säkerhetsprofil, använd Joss Red på dess officiella plattformar:",
+  "@news_dialog_friends_desc": {
+    "description": "news_dialog_friends_desc"
+  },
   "news_btn_app": "Joss Red-appen (Play Store)",
+  "@news_btn_app": {
+    "description": "news_btn_app"
+  },
   "news_btn_web": "Joss Red Web",
+  "@news_btn_web": {
+    "description": "news_btn_web"
+  },
   "news_btn_dismiss": "Förstått",
+  "@news_btn_dismiss": {
+    "description": "news_btn_dismiss"
+  },
   "settings_appearance_desc": "Tema-, språk- och gränssnittsanimationer.",
+  "@settings_appearance_desc": {
+    "description": "settings_appearance_desc"
+  },
   "settings_content_desc": "Upptäck filter, integration med Piped och cacher.",
+  "@settings_content_desc": {
+    "description": "settings_content_desc"
+  },
   "settings_playback_desc": "Streamingkvalitet, normalisering, tystnad och batteri.",
+  "@settings_playback_desc": {
+    "description": "settings_playback_desc"
+  },
   "settings_downloads_desc": "Nedladdningar och lagring",
+  "@settings_downloads_desc": {
+    "description": "settings_downloads_desc"
+  },
   "settings_downloads_sub": "Ljudformat, mappar och automatiska nedladdningar.",
+  "@settings_downloads_sub": {
+    "description": "settings_downloads_sub"
+  },
   "settings_account_desc": "Konto och synkronisering",
+  "@settings_account_desc": {
+    "description": "settings_account_desc"
+  },
   "settings_account_sub": "Molnläge, säkerhetskopior, vänlista och migrering.",
+  "@settings_account_sub": {
+    "description": "settings_account_sub"
+  },
   "settings_about_desc": "Om Estrella Music",
+  "@settings_about_desc": {
+    "description": "settings_about_desc"
+  },
   "settings_about_sub": "Version, öppen källkodsprojekt och GitHub.",
+  "@settings_about_sub": {
+    "description": "settings_about_sub"
+  },
   "settings_local_cloud_title": "Lokalt läge / EMusic Cloud",
+  "@settings_local_cloud_title": {
+    "description": "settings_local_cloud_title"
+  },
   "settings_local_cloud_desc": "Välj, migrera eller granska synkroniseringsstatusen med Joss Red.",
+  "@settings_local_cloud_desc": {
+    "description": "settings_local_cloud_desc"
+  },
   "settings_my_friends": "mina vänner",
+  "@settings_my_friends": {
+    "description": "settings_my_friends"
+  },
   "settings_my_friends_desc": "Hantera dina Joss Red-vänner direkt.",
+  "@settings_my_friends_desc": {
+    "description": "settings_my_friends_desc"
+  },
   "settings_refresh_visitor_title": "Uppdatera ID (besökar-ID)",
+  "@settings_refresh_visitor_title": {
+    "description": "settings_refresh_visitor_title"
+  },
   "settings_refresh_visitor_desc": "Återskapa ditt YouTube Music-ID om Discover-innehåll inte läses in.",
+  "@settings_refresh_visitor_desc": {
+    "description": "settings_refresh_visitor_desc"
+  },
   "settings_visitor_updated": "Uppdaterad identifierare",
+  "@settings_visitor_updated": {
+    "description": "settings_visitor_updated"
+  },
   "settings_visitor_updated_desc": "Ett nytt besöks-ID har genererats.",
+  "@settings_visitor_updated_desc": {
+    "description": "settings_visitor_updated_desc"
+  },
   "settings_visitor_error": "Misstag",
+  "@settings_visitor_error": {
+    "description": "settings_visitor_error"
+  },
   "settings_visitor_error_desc": "En ny identifierare kunde inte genereras. Försök igen senare.",
+  "@settings_visitor_error_desc": {
+    "description": "settings_visitor_error_desc"
+  },
   "settings_visitor_exception": "Ett fel uppstod under återskapandet: {error}",
+  "@settings_visitor_exception": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    },
+    "description": "settings_visitor_exception"
+  },
   "migratedLibrary": "Migrerade bibliotek",
+  "@migratedLibrary": {
+    "description": "migratedLibrary"
+  },
   "noSongsInCollection": "Det finns inga låtar i den här samlingen",
+  "@noSongsInCollection": {
+    "description": "noSongsInCollection"
+  },
   "startupScreen": "Öppna vid start",
+  "@startupScreen": {
+    "description": "startupScreen"
+  },
   "startupScreenDescription": "Välj avsnittet som Estrella Music öppnar först",
+  "@startupScreenDescription": {
+    "description": "startupScreenDescription"
+  },
   "friends": "Vänner",
+  "@friends": {
+    "description": "friends"
+  },
   "dailyDiscover": "Daglig upptäckt",
+  "@dailyDiscover": {
+    "description": "dailyDiscover"
+  },
   "keepListening": "fortsätt lyssna",
+  "@keepListening": {
+    "description": "keepListening"
+  },
   "similarToTitle": "Liknar {title}",
+  "@similarToTitle": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    },
+    "description": "similarToTitle"
+  },
   "pipedPlaylistDescription": "Piped spellista",
+  "@pipedPlaylistDescription": {
+    "description": "pipedPlaylistDescription"
+  },
   "collaborativePlaylistDescription": "Samarbetande spellista",
+  "@collaborativePlaylistDescription": {
+    "description": "collaborativePlaylistDescription"
+  },
   "libraryPlaylistDescription": "Bibliotekets spellista",
+  "@libraryPlaylistDescription": {
+    "description": "libraryPlaylistDescription"
+  },
   "untitledSong": "Namnlös låt",
+  "@untitledSong": {
+    "description": "untitledSong"
+  },
   "migratedPlaylist": "Migrerad spellista",
+  "@migratedPlaylist": {
+    "description": "migratedPlaylist"
+  },
   "migratedAlbum": "Migrerat album",
+  "@migratedAlbum": {
+    "description": "migratedAlbum"
+  },
   "songsImportedFromJossMusic": "Låtar importerade från Joss Music Kotlin",
+  "@songsImportedFromJossMusic": {
+    "description": "songsImportedFromJossMusic"
+  },
   "importedFromJossMusic": "Importerad från Joss Music Kotlin",
+  "@importedFromJossMusic": {
+    "description": "importedFromJossMusic"
+  },
   "syncLocalModeActive": "Lokalt läge aktivt",
+  "@syncLocalModeActive": {
+    "description": "syncLocalModeActive"
+  },
   "syncCloudPending": "Molnläge aktivt. Väntar på synkronisering.",
+  "@syncCloudPending": {
+    "description": "syncCloudPending"
+  },
   "syncCloudDownloadingExisting": "Molnläge aktiverat. Laddar ner det befintliga biblioteket.",
+  "@syncCloudDownloadingExisting": {
+    "description": "syncCloudDownloadingExisting"
+  },
   "syncCloudMigrationComplete": "Molnläge aktiverat. Migrerade bibliotek.",
+  "@syncCloudMigrationComplete": {
+    "description": "syncCloudMigrationComplete"
+  },
   "syncLocalDeviceOnly": "Din data sparas endast på den här enheten.",
+  "@syncLocalDeviceOnly": {
+    "description": "syncLocalDeviceOnly"
+  },
   "syncDownloading": "Laddar ned EMusic-ändringar...",
+  "@syncDownloading": {
+    "description": "syncDownloading"
+  },
   "syncDownloadFailed": "Det gick inte att ladda ned synkronisering.",
+  "@syncDownloadFailed": {
+    "description": "syncDownloadFailed"
+  },
   "syncLocalChangesFirst": "Det finns nya lokala förändringar. De kommer att laddas upp före nedladdning.",
+  "@syncLocalChangesFirst": {
+    "description": "syncLocalChangesFirst"
+  },
   "syncLibrarySynced": "Synkroniserat bibliotek.",
+  "@syncLibrarySynced": {
+    "description": "syncLibrarySynced"
+  },
   "syncOfflinePending": "Off-line. Ändringar väntar.",
+  "@syncOfflinePending": {
+    "description": "syncOfflinePending"
+  },
   "syncLibraryUpToDate": "Biblioteket uppdaterat.",
+  "@syncLibraryUpToDate": {
+    "description": "syncLibraryUpToDate"
+  },
   "syncChangesSynced": "{count} synkroniserade ändringar.",
+  "@syncChangesSynced": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    },
+    "description": "syncChangesSynced"
+  },
   "syncUploading": "Laddar upp ändringar till EMusic...",
+  "@syncUploading": {
+    "description": "syncUploading"
+  },
   "syncUploadSuccessWs": "Ändringar har laddats upp (WS).",
+  "@syncUploadSuccessWs": {
+    "description": "syncUploadSuccessWs"
+  },
   "syncUploadWsRetry": "Kunde inte ladda upp med WS. Det kommer att prövas igen senare.",
+  "@syncUploadWsRetry": {
+    "description": "syncUploadWsRetry"
+  },
   "syncUploadSuccess": "Ändringarna har laddats upp korrekt.",
+  "@syncUploadSuccess": {
+    "description": "syncUploadSuccess"
+  },
   "syncUploadRetry": "Kunde inte resa sig. Det kommer att prövas igen senare.",
+  "@syncUploadRetry": {
+    "description": "syncUploadRetry"
+  },
   "syncOfflineRetry": "Off-line. Ändringar sparade för ett nytt försök.",
+  "@syncOfflineRetry": {
+    "description": "syncOfflineRetry"
+  },
   "syncUnconfirmedRetry": "EMusic bekräftade inte alla ändringar. De kommer att prövas igen.",
+  "@syncUnconfirmedRetry": {
+    "description": "syncUnconfirmedRetry"
+  },
   "syncChangesConfirmed": "{count} ändringar har begåtts.",
+  "@syncChangesConfirmed": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    },
+    "description": "syncChangesConfirmed"
+  },
   "migrationAlreadyRunning": "Det pågår redan en migrering.",
+  "@migrationAlreadyRunning": {
+    "description": "migrationAlreadyRunning"
+  },
   "migrationLoginRequired": "Logga in på Joss Red innan du migrerar.",
+  "@migrationLoginRequired": {
+    "description": "migrationLoginRequired"
+  },
   "migrationCheckingCloud": "Kontrollerar om EMusic Cloud redan har ett bibliotek...",
+  "@migrationCheckingCloud": {
+    "description": "migrationCheckingCloud"
+  },
   "cloudLibraryFoundDeviceWillDownload": "Ett molnbibliotek hittades. Den här enheten kommer att ladda ner den utan att skriva över den.",
+  "@cloudLibraryFoundDeviceWillDownload": {
+    "description": "cloudLibraryFoundDeviceWillDownload"
+  },
   "cloudLibraryFound": "Molnbibliotek hittades.",
+  "@cloudLibraryFound": {
+    "description": "cloudLibraryFound"
+  },
   "migrationCreatingBackup": "Skapar en lokal säkerhetskopia innan molnet ansluts...",
+  "@migrationCreatingBackup": {
+    "description": "migrationCreatingBackup"
+  },
   "migrationAnalyzingLocal": "Analyserar det lokala biblioteket...",
+  "@migrationAnalyzingLocal": {
+    "description": "migrationAnalyzingLocal"
+  },
   "migrationPreparingCloud": "Förbereder migreringen i EMusic Cloud...",
+  "@migrationPreparingCloud": {
+    "description": "migrationPreparingCloud"
+  },
   "migrationStartFailed": "EMusic Cloud kunde inte starta migreringen.",
+  "@migrationStartFailed": {
+    "description": "migrationStartFailed"
+  },
   "migrationUploadingData": "Laddar upp spellistor, favoriter och historik...",
+  "@migrationUploadingData": {
+    "description": "migrationUploadingData"
+  },
   "migrationUploadIncomplete": "Det gick inte att ladda upp all data. Vi behåller ditt lokala stöd.",
+  "@migrationUploadIncomplete": {
+    "description": "migrationUploadIncomplete"
+  },
   "migrationVerifyingIntegrity": "Verifierar integriteten i EMusic Cloud...",
+  "@migrationVerifyingIntegrity": {
+    "description": "migrationVerifyingIntegrity"
+  },
   "migrationValidationFailed": "EMusic Cloud kunde inte validera migreringen.",
+  "@migrationValidationFailed": {
+    "description": "migrationValidationFailed"
+  },
   "cloudModeReadyOfflineCache": "Molnläget är klart. Den här enheten fungerar som en offlinecache.",
+  "@cloudModeReadyOfflineCache": {
+    "description": "cloudModeReadyOfflineCache"
+  },
   "migrationCompleted": "Migreringen slutförd.",
+  "@migrationCompleted": {
+    "description": "migrationCompleted"
+  },
   "migrationFailedLocalPreserved": "Migreringen misslyckades. Din lokala data har inte ändrats.",
+  "@migrationFailedLocalPreserved": {
+    "description": "migrationFailedLocalPreserved"
+  },
   "sessionExpiredLoginAgain": "Din session har löpt ut. Logga in igen.",
+  "@sessionExpiredLoginAgain": {
+    "description": "sessionExpiredLoginAgain"
+  },
   "selectedFileNotFound": "Den valda filen hittades inte.",
+  "@selectedFileNotFound": {
+    "description": "selectedFileNotFound"
+  },
   "genericAlbum": "Album",
+  "@genericAlbum": {
+    "description": "genericAlbum"
+  },
   "friendsLoginRequired": "Logga in för att hitta vänner.",
+  "@friendsLoginRequired": {
+    "description": "friendsLoginRequired"
+  },
   "invalidSessionToken": "Sessionen innehåller inte en giltig token.",
+  "@invalidSessionToken": {
+    "description": "invalidSessionToken"
+  },
   "userSearchFailed": "Det gick inte att söka efter användare ({statusCode}).",
+  "@userSearchFailed": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    },
+    "description": "userSearchFailed"
+  },
   "invalidServerResponse": "Ogiltigt serversvar.",
+  "@invalidServerResponse": {
+    "description": "invalidServerResponse"
+  },
   "userListMissing": "Svaret innehåller ingen lista över användare.",
+  "@userListMissing": {
+    "description": "userListMissing"
+  },
   "playlistCollaboratorsTitle": "Spellistor",
+  "@playlistCollaboratorsTitle": {
+    "description": "playlistCollaboratorsTitle"
+  },
   "collaboratorsInstruction": "Välj de vänner som kommer att kunna se och redigera den här spellistan:",
+  "@collaboratorsInstruction": {
+    "description": "collaboratorsInstruction"
+  },
   "noJossRedFriends": "Du har inga tillagda vänner på Joss Red.",
+  "@noJossRedFriends": {
+    "description": "noJossRedFriends"
+  },
   "friendFallback": "Vän",
+  "@friendFallback": {
+    "description": "friendFallback"
+  },
   "collaboratorsUpdated": "Samarbetspartners uppdaterade korrekt.",
+  "@collaboratorsUpdated": {
+    "description": "collaboratorsUpdated"
+  },
   "save": "Hålla",
+  "@save": {
+    "description": "save"
+  },
   "manageCollaborators": "Hantera medarbetare (vänner)",
+  "@manageCollaborators": {
+    "description": "manageCollaborators"
+  },
   "done": "Redo",
+  "@done": {
+    "description": "done"
+  },
   "notAuthenticated": "Ej autentiserad",
+  "@notAuthenticated": {
+    "description": "notAuthenticated"
+  },
   "genericError": "Misstag",
+  "@genericError": {
+    "description": "genericError"
+  },
   "friendRequestSent": "Vänförfrågan har skickats",
+  "@friendRequestSent": {
+    "description": "friendRequestSent"
+  },
   "friendRequestAccepted": "Vänförfrågan accepteras",
+  "@friendRequestAccepted": {
+    "description": "friendRequestAccepted"
+  },
   "friendshipRemoved": "Vänskap borttagen",
+  "@friendshipRemoved": {
+    "description": "friendshipRemoved"
+  },
   "userBlocked": "Blockerad användare",
+  "@userBlocked": {
+    "description": "userBlocked"
+  },
   "userUnblocked": "Olåst användare",
+  "@userUnblocked": {
+    "description": "userUnblocked"
+  },
   "artistsByTaste": "Enligt din smak",
+  "@artistsByTaste": {
+    "description": "artistsByTaste"
+  },
   "followedArtists": "följde",
+  "@followedArtists": {
+    "description": "followedArtists"
+  },
   "recommendedArtists": "Rekommenderad",
+  "@recommendedArtists": {
+    "description": "recommendedArtists"
+  },
   "albumsByTaste": "Enligt din smak",
+  "@albumsByTaste": {
+    "description": "albumsByTaste"
+  },
   "savedAlbums": "Sparad",
+  "@savedAlbums": {
+    "description": "savedAlbums"
+  },
   "recommendedAlbums": "Rekommenderad",
+  "@recommendedAlbums": {
+    "description": "recommendedAlbums"
+  },
   "downloadNotificationChannelName": "musiknedladdningar",
+  "@downloadNotificationChannelName": {
+    "description": "downloadNotificationChannelName"
+  },
   "downloadNotificationChannelDescription": "Håller din musiknedladdning aktiv i bakgrunden.",
+  "@downloadNotificationChannelDescription": {
+    "description": "downloadNotificationChannelDescription"
+  },
   "downloadNotificationTitle": "Ladda ner musik",
+  "@downloadNotificationTitle": {
+    "description": "downloadNotificationTitle"
+  },
   "downloadNotificationPreparing": "Förbereder dina nedladdningar...",
+  "@downloadNotificationPreparing": {
+    "description": "downloadNotificationPreparing"
+  },
   "downloadNotificationSong": "Laddar ner: {songTitle}",
+  "@downloadNotificationSong": {
+    "placeholders": {
+      "songTitle": {
+        "type": "String"
+      }
+    },
+    "description": "downloadNotificationSong"
+  },
   "syncCloudModeActive": "Molnläge aktivt",
+  "@syncCloudModeActive": {
+    "description": "syncCloudModeActive"
+  },
   "permissionsConsentTitle": "Behörigheter att komma igång",
+  "@permissionsConsentTitle": {
+    "description": "permissionsConsentTitle"
+  },
   "permissionsConsentDescription": "Estrella Music behöver dessa behörigheter för att hantera din musik och erbjuda alla uppspelningsfunktioner.",
+  "@permissionsConsentDescription": {
+    "description": "permissionsConsentDescription"
+  },
   "permissionsStorageTitle": "Musik och förvaring",
+  "@permissionsStorageTitle": {
+    "description": "permissionsStorageTitle"
+  },
   "permissionsStorageDescription": "Det låter dig spela musik, spara nedladdningar, exportera spellistor och förbereda uppdateringar.",
+  "@permissionsStorageDescription": {
+    "description": "permissionsStorageDescription"
+  },
   "permissionsNotificationsTitle": "Aviseringar",
+  "@permissionsNotificationsTitle": {
+    "description": "permissionsNotificationsTitle"
+  },
   "permissionsNotificationsDescription": "Visar uppspelningskontroller, nedladdningsförlopp och viktiga appmeddelanden.",
+  "@permissionsNotificationsDescription": {
+    "description": "permissionsNotificationsDescription"
+  },
   "permissionsMicrophoneTitle": "Mikrofon",
+  "@permissionsMicrophoneTitle": {
+    "description": "permissionsMicrophoneTitle"
+  },
   "permissionsMicrophoneDescription": "Den används bara när du väljer att identifiera en låt som spelas omkring dig.",
+  "@permissionsMicrophoneDescription": {
+    "description": "permissionsMicrophoneDescription"
+  },
   "permissionsContinueButton": "Bevilja nödvändiga behörigheter",
+  "@permissionsContinueButton": {
+    "description": "permissionsContinueButton"
+  },
   "permissionsRequiredNotice": "Alla tre tillstånd krävs för att fortsätta. Du kan ändra dem senare i systeminställningarna.",
+  "@permissionsRequiredNotice": {
+    "description": "permissionsRequiredNotice"
+  },
   "permissionsAllow": "Tillåta",
+  "@permissionsAllow": {
+    "description": "permissionsAllow"
+  },
   "permissionsOpenSettings": "Inställningar",
+  "@permissionsOpenSettings": {
+    "description": "permissionsOpenSettings"
+  },
   "auth_2fa_title": "Tvåfaktorsautentisering",
+  "@auth_2fa_title": {
+    "description": "auth_2fa_title"
+  },
   "auth_2fa_subtitle": "Ange den sexsiffriga koden från din autentiseringsapp. Denna åtkomst löper ut om 5 minuter.",
+  "@auth_2fa_subtitle": {
+    "description": "auth_2fa_subtitle"
+  },
   "auth_2fa_code": "Autentiseringskod",
+  "@auth_2fa_code": {
+    "description": "auth_2fa_code"
+  },
   "auth_2fa_verify": "Kontrollera och fortsätt",
-  "auth_2fa_invalid": "Ange en giltig 6-siffrig kod eller logga in igen."
+  "@auth_2fa_verify": {
+    "description": "auth_2fa_verify"
+  },
+  "auth_2fa_invalid": "Ange en giltig 6-siffrig kod eller logga in igen.",
+  "@auth_2fa_invalid": {
+    "description": "auth_2fa_invalid"
+  }
 }

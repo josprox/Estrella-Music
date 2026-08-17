@@ -1,323 +1,1148 @@
 {
   "@@locale": "ja",
   "playlistCreatednsongAddedAlert": "再生リストを作成し曲を追加しました！",
+  "@playlistCreatednsongAddedAlert": {
+    "description": "playlistCreatednsongAddedAlert"
+  },
   "dismiss": "非表示",
+  "@dismiss": {
+    "description": "dismiss"
+  },
   "goToDownloadPage": "ここをクリックし配布ページを開く",
+  "@goToDownloadPage": {
+    "description": "goToDownloadPage"
+  },
   "songEnqueueAlert": "曲をキューに追加しました！",
+  "@songEnqueueAlert": {
+    "description": "songEnqueueAlert"
+  },
   "renamePlaylist": "再生リスト名を変更",
+  "@renamePlaylist": {
+    "description": "renamePlaylist"
+  },
   "songAddedToPlaylistAlert": "曲を再生リストに追加しました！",
+  "@songAddedToPlaylistAlert": {
+    "description": "songAddedToPlaylistAlert"
+  },
   "unlinkAlert": "ログアウトしました！",
+  "@unlinkAlert": {
+    "description": "unlinkAlert"
+  },
   "playlistCreatedAlert": "再生リストを作成しました！",
+  "@playlistCreatedAlert": {
+    "description": "playlistCreatedAlert"
+  },
   "reset": "初期化",
+  "@reset": {
+    "description": "reset"
+  },
   "unLink": "ログアウトする",
+  "@unLink": {
+    "description": "unLink"
+  },
   "trending": "急上昇",
+  "@trending": {
+    "description": "trending"
+  },
   "searchRes": "検索結果",
+  "@searchRes": {
+    "description": "searchRes"
+  },
   "cacheSongsDes": "再生中の楽曲を、事前読み込み/オフライン再生用にキャッシュすると、端末の空き領域が減ります",
+  "@cacheSongsDes": {
+    "description": "cacheSongsDes"
+  },
   "password": "パスワード",
+  "@password": {
+    "description": "password"
+  },
   "noLibPlaylist": "再生リストがありませんよ！",
+  "@noLibPlaylist": {
+    "description": "noLibPlaylist"
+  },
   "setDiscoverContent": "探索するコンテンツを設定",
+  "@setDiscoverContent": {
+    "description": "setDiscoverContent"
+  },
   "networkError1": "ネットワークエラー！",
+  "@networkError1": {
+    "description": "networkError1"
+  },
   "songRemovedfromQueue": "キューから削除しました！",
+  "@songRemovedfromQueue": {
+    "description": "songRemovedfromQueue"
+  },
   "libSongs": "曲のライブラリ",
+  "@libSongs": {
+    "description": "libSongs"
+  },
   "githubDes": "GitHub でソースコードを閲覧\nこのアプリが好きなら⭐をください！",
+  "@githubDes": {
+    "description": "githubDes"
+  },
   "communityplaylists": "コミュニティの再生リスト",
+  "@communityplaylists": {
+    "description": "communityplaylists"
+  },
   "playlistRemovedAlert": "再生リストを削除しました！",
+  "@playlistRemovedAlert": {
+    "description": "playlistRemovedAlert"
+  },
   "libAlbums": "アルバムのライブラリ",
+  "@libAlbums": {
+    "description": "libAlbums"
+  },
   "albumBookmarkRemoveAlert": "アルバムのブックマークを解除しました！",
+  "@albumBookmarkRemoveAlert": {
+    "description": "albumBookmarkRemoveAlert"
+  },
   "notaSongVideo": "曲/音楽の動画ではありません！",
+  "@notaSongVideo": {
+    "description": "notaSongVideo"
+  },
   "ignoreBatOptDes": "通知やシステムの最適化により再生が止まる場合に有効化します",
+  "@ignoreBatOptDes": {
+    "description": "ignoreBatOptDes"
+  },
   "for1": "語句",
+  "@for1": {
+    "description": "for1"
+  },
   "low": "低",
+  "@low": {
+    "description": "low"
+  },
   "link": "ログインする",
+  "@link": {
+    "description": "link"
+  },
   "selectAuthIns": "認証用インスタンスを選択",
+  "@selectAuthIns": {
+    "description": "selectAuthIns"
+  },
   "languageDes": "アプリの言語を設定",
+  "@languageDes": {
+    "description": "languageDes"
+  },
   "stopMusicOnTaskClear": "タスクから削除したら音楽停止",
+  "@stopMusicOnTaskClear": {
+    "description": "stopMusicOnTaskClear"
+  },
   "enqueueAll": "すべてキューに登録",
+  "@enqueueAll": {
+    "description": "enqueueAll"
+  },
   "customInsSelectMsg": "インスタンスを入力してください",
+  "@customInsSelectMsg": {
+    "description": "customInsSelectMsg"
+  },
   "skipSilence": "無音部分を飛ばす",
+  "@skipSilence": {
+    "description": "skipSilence"
+  },
   "create": "作成",
+  "@create": {
+    "description": "create"
+  },
   "equalizer": "イコライザー",
+  "@equalizer": {
+    "description": "equalizer"
+  },
   "enqueueSong": "この曲をキューに追加",
+  "@enqueueSong": {
+    "description": "enqueueSong"
+  },
   "noBookmarks": "ブックマークなし！",
+  "@noBookmarks": {
+    "description": "noBookmarks"
+  },
   "playlists": "再生リスト",
+  "@playlists": {
+    "description": "playlists"
+  },
   "videos": "動画",
+  "@videos": {
+    "description": "videos"
+  },
   "enabled": "有効",
+  "@enabled": {
+    "description": "enabled"
+  },
   "allFieldsReqMsg": "入力欄を埋めてください",
+  "@allFieldsReqMsg": {
+    "description": "allFieldsReqMsg"
+  },
   "artistBookmarkAddAlert": "アーティストをブックマークしました！",
+  "@artistBookmarkAddAlert": {
+    "description": "artistBookmarkAddAlert"
+  },
   "rename": "改名",
+  "@rename": {
+    "description": "rename"
+  },
   "viewAll": "すべて表示",
+  "@viewAll": {
+    "description": "viewAll"
+  },
   "github": "GitHub",
+  "@github": {
+    "description": "github"
+  },
   "newVersionAvailable": "最新版があります！",
+  "@newVersionAvailable": {
+    "description": "newVersionAvailable"
+  },
   "items": "項目",
+  "@items": {
+    "description": "items"
+  },
   "subscribers": "人の登録者",
+  "@subscribers": {
+    "description": "subscribers"
+  },
   "startRadio": "ラジオで開始",
+  "@startRadio": {
+    "description": "startRadio"
+  },
   "discover": "検索",
+  "@discover": {
+    "description": "discover"
+  },
   "cacheSongs": "曲をキャッシュ",
+  "@cacheSongs": {
+    "description": "cacheSongs"
+  },
   "downloads": "ダウンロード",
+  "@downloads": {
+    "description": "downloads"
+  },
   "removeFromLib": "曲のライブラリから削除",
+  "@removeFromLib": {
+    "description": "removeFromLib"
+  },
   "songAlreadyExists": "この曲は既に存在します！",
+  "@songAlreadyExists": {
+    "description": "songAlreadyExists"
+  },
   "libArtists": "アーティストのライブラリ",
+  "@libArtists": {
+    "description": "libArtists"
+  },
   "downloadingFormat": "ダウンロードするファイル形式",
+  "@downloadingFormat": {
+    "description": "downloadingFormat"
+  },
   "username": "ユーザー名",
+  "@username": {
+    "description": "username"
+  },
   "light": "ライト",
+  "@light": {
+    "description": "light"
+  },
   "resetblacklistedplaylist": "ブラックリストの再生リストを初期化",
+  "@resetblacklistedplaylist": {
+    "description": "resetblacklistedplaylist"
+  },
   "dynamic": "動的",
+  "@dynamic": {
+    "description": "dynamic"
+  },
   "selectAuthInsMsg": "認証用インスタンスを選択してください！",
+  "@selectAuthInsMsg": {
+    "description": "selectAuthInsMsg"
+  },
   "equalizerDes": "システムのイコライザーを開く",
+  "@equalizerDes": {
+    "description": "equalizerDes"
+  },
   "removePlaylist": "再生リストを削除",
+  "@removePlaylist": {
+    "description": "removePlaylist"
+  },
   "customIns": "インスタンスを指定",
+  "@customIns": {
+    "description": "customIns"
+  },
   "Piped": "Piped",
+  "@Piped": {
+    "description": "Piped"
+  },
   "addToPlaylist": "再生リストに追加",
+  "@addToPlaylist": {
+    "description": "addToPlaylist"
+  },
   "stopMusicOnTaskClearDes": "タスクマネージャーからスワイプでアプリを削除すると音楽再生を停止",
+  "@stopMusicOnTaskClearDes": {
+    "description": "stopMusicOnTaskClearDes"
+  },
   "cachedOrOffline": "キャッシュ済み/オフライン",
+  "@cachedOrOffline": {
+    "description": "cachedOrOffline"
+  },
   "retry": "再試行！",
+  "@retry": {
+    "description": "retry"
+  },
   "artists": "アーティスト",
+  "@artists": {
+    "description": "artists"
+  },
   "playlistBookmarkAddAlert": "再生リストをブックマークしました！",
+  "@playlistBookmarkAddAlert": {
+    "description": "playlistBookmarkAddAlert"
+  },
   "albums": "アルバム",
+  "@albums": {
+    "description": "albums"
+  },
   "radioNotAvailable": "このアーティストにラジオはありません！",
+  "@radioNotAvailable": {
+    "description": "radioNotAvailable"
+  },
   "recentlyPlayed": "再生履歴",
+  "@recentlyPlayed": {
+    "description": "recentlyPlayed"
+  },
   "viewArtist": "アーティストを開く",
+  "@viewArtist": {
+    "description": "viewArtist"
+  },
   "createnAdd": "作成し追加",
+  "@createnAdd": {
+    "description": "createnAdd"
+  },
   "topmusicvideos": "人気のミュージックビデオ",
+  "@topmusicvideos": {
+    "description": "topmusicvideos"
+  },
   "playlistBookmarkRemoveAlert": "再生リストのブックマークを解除しました！",
+  "@playlistBookmarkRemoveAlert": {
+    "description": "playlistBookmarkRemoveAlert"
+  },
   "systemDefault": "システムに従う",
+  "@systemDefault": {
+    "description": "systemDefault"
+  },
   "local": "端末内",
+  "@local": {
+    "description": "local"
+  },
   "ignoreBatOpt": "充電の最適化を無視",
+  "@ignoreBatOpt": {
+    "description": "ignoreBatOpt"
+  },
   "singles": "シングル",
+  "@singles": {
+    "description": "singles"
+  },
   "linkAlert": "ログインしました！",
+  "@linkAlert": {
+    "description": "linkAlert"
+  },
   "status": "状態",
+  "@status": {
+    "description": "status"
+  },
   "themeMode": "テーマのモード",
+  "@themeMode": {
+    "description": "themeMode"
+  },
   "streamingQualityDes": "音楽ストリームの音質",
+  "@streamingQualityDes": {
+    "description": "streamingQualityDes"
+  },
   "nomatch": "検索結果なし",
+  "@nomatch": {
+    "description": "nomatch"
+  },
   "notaValidLink": "リンクが正しくありません！",
+  "@notaValidLink": {
+    "description": "notaValidLink"
+  },
   "emptyPlaylist": "再生リストが空です！",
+  "@emptyPlaylist": {
+    "description": "emptyPlaylist"
+  },
   "favorites": "お気に入り",
+  "@favorites": {
+    "description": "favorites"
+  },
   "dark": "ダーク",
+  "@dark": {
+    "description": "dark"
+  },
   "home": "ホーム",
+  "@home": {
+    "description": "home"
+  },
   "cancel": "キャンセル",
+  "@cancel": {
+    "description": "cancel"
+  },
   "by": "開発者",
+  "@by": {
+    "description": "by"
+  },
   "streamingQuality": "ストリーミング品質",
+  "@streamingQuality": {
+    "description": "streamingQuality"
+  },
   "linkPipedDes": "再生リストをPipedで同期",
+  "@linkPipedDes": {
+    "description": "linkPipedDes"
+  },
   "libPlaylists": "再生リストのライブラリ",
+  "@libPlaylists": {
+    "description": "libPlaylists"
+  },
   "disabled": "無効",
+  "@disabled": {
+    "description": "disabled"
+  },
   "CreateNewPlaylist": "再生リストを作成",
+  "@CreateNewPlaylist": {
+    "description": "CreateNewPlaylist"
+  },
   "blacklistPlstResetAlert": "初期化しました！",
+  "@blacklistPlstResetAlert": {
+    "description": "blacklistPlstResetAlert"
+  },
   "language": "言語",
+  "@language": {
+    "description": "language"
+  },
   "search": "検索",
+  "@search": {
+    "description": "search"
+  },
   "songAlreadyOfflineAlert": "この曲は既にキャッシュ済みです",
+  "@songAlreadyOfflineAlert": {
+    "description": "songAlreadyOfflineAlert"
+  },
   "skipSilenceDes": "音楽再生中に無音部分を飛ばします",
+  "@skipSilenceDes": {
+    "description": "skipSilenceDes"
+  },
   "playNext": "次に再生",
+  "@playNext": {
+    "description": "playNext"
+  },
   "errorOccuredAlert": "何かエラーが発生しました！",
+  "@errorOccuredAlert": {
+    "description": "errorOccuredAlert"
+  },
   "songs": "曲",
+  "@songs": {
+    "description": "songs"
+  },
   "high": "高",
+  "@high": {
+    "description": "high"
+  },
   "searchDes": "曲、再生リスト、アルバム、アーティスト",
+  "@searchDes": {
+    "description": "searchDes"
+  },
   "results": "結果",
+  "@results": {
+    "description": "results"
+  },
   "playlistBlacklistAlert": "再生リストをブラックリストに登録しました！",
+  "@playlistBlacklistAlert": {
+    "description": "playlistBlacklistAlert"
+  },
   "artistDesNotAvailable": "説明が利用できません！",
+  "@artistDesNotAvailable": {
+    "description": "artistDesNotAvailable"
+  },
   "resetblacklistedplaylistDes": "ブラックリストにしたPipedの再生リストをすべて初期化",
+  "@resetblacklistedplaylistDes": {
+    "description": "resetblacklistedplaylistDes"
+  },
   "downloadLocation": "ダウンロード先",
+  "@downloadLocation": {
+    "description": "downloadLocation"
+  },
   "songRemovedfromQueueCurrSong": "再生中の曲は削除できません",
+  "@songRemovedfromQueueCurrSong": {
+    "description": "songRemovedfromQueueCurrSong"
+  },
   "settings": "設定",
+  "@settings": {
+    "description": "settings"
+  },
   "basedOnLast": "最後の操作から決定",
+  "@basedOnLast": {
+    "description": "basedOnLast"
+  },
   "hintApiUrl": "PipedインスタンスのAPIのURL",
+  "@hintApiUrl": {
+    "description": "hintApiUrl"
+  },
   "playlistRenameAlert": "改名しました！",
+  "@playlistRenameAlert": {
+    "description": "playlistRenameAlert"
+  },
   "downloadingFormatDes": "ダウンロードしたいファイル形式。Opus が最高の品質でしょう",
+  "@downloadingFormatDes": {
+    "description": "downloadingFormatDes"
+  },
   "albumBookmarkAddAlert": "アルバムをブックマークしました！",
+  "@albumBookmarkAddAlert": {
+    "description": "albumBookmarkAddAlert"
+  },
   "removeFromPlaylist": "再生リストから削除",
+  "@removeFromPlaylist": {
+    "description": "removeFromPlaylist"
+  },
   "lyricsNotAvailable": "歌詞が利用できません！",
+  "@lyricsNotAvailable": {
+    "description": "lyricsNotAvailable"
+  },
   "dontShowInfoAgain": "再び表示しない",
+  "@dontShowInfoAgain": {
+    "description": "dontShowInfoAgain"
+  },
   "noOfflineSong": "オフラインの曲なし！",
+  "@noOfflineSong": {
+    "description": "noOfflineSong"
+  },
   "featuredplaylists": "おすすめの再生リスト",
+  "@featuredplaylists": {
+    "description": "featuredplaylists"
+  },
   "quickpicks": "おすすめ",
+  "@quickpicks": {
+    "description": "quickpicks"
+  },
   "artistBookmarkRemoveAlert": "アーティストのブックマークを解除しました！",
+  "@artistBookmarkRemoveAlert": {
+    "description": "artistBookmarkRemoveAlert"
+  },
   "operationFailed": "操作に失敗",
+  "@operationFailed": {
+    "description": "operationFailed"
+  },
   "goToAlbum": "アルバムを開く",
+  "@goToAlbum": {
+    "description": "goToAlbum"
+  },
   "removeFromQueue": "キューから削除",
+  "@removeFromQueue": {
+    "description": "removeFromQueue"
+  },
   "shareSong": "この曲を共有",
+  "@shareSong": {
+    "description": "shareSong"
+  },
   "songRemovedAlert": "以下から削除しました",
+  "@songRemovedAlert": {
+    "description": "songRemovedAlert"
+  },
   "add5Minutes": "5分追加",
+  "@add5Minutes": {
+    "description": "add5Minutes"
+  },
   "enableBottomNavDes": "ナビゲーションバーを下部に切り替える",
+  "@enableBottomNavDes": {
+    "description": "enableBottomNavDes"
+  },
   "syncedLyricsNotAvailable": "同期可能な歌詞はありません！",
+  "@syncedLyricsNotAvailable": {
+    "description": "syncedLyricsNotAvailable"
+  },
   "synced": "同期",
+  "@synced": {
+    "description": "synced"
+  },
   "plain": "通常",
+  "@plain": {
+    "description": "plain"
+  },
   "endOfThisSong": "この曲の終わり",
+  "@endOfThisSong": {
+    "description": "endOfThisSong"
+  },
   "library": "ライブラリ",
+  "@library": {
+    "description": "library"
+  },
   "cancelTimer": "タイマーをキャンセル",
+  "@cancelTimer": {
+    "description": "cancelTimer"
+  },
   "minutes": "分",
+  "@minutes": {
+    "description": "minutes"
+  },
   "enableBottomNav": "下部のナビバー",
+  "@enableBottomNav": {
+    "description": "enableBottomNav"
+  },
   "homeContentCount": "ホームのコンテンツ数",
+  "@homeContentCount": {
+    "description": "homeContentCount"
+  },
   "sleepTimeSetAlert": "スリープタイマーをセットしました",
+  "@sleepTimeSetAlert": {
+    "description": "sleepTimeSetAlert"
+  },
   "homeContentCountDes": "最初のホーム画面のコンテンツ数 (およそ) を選択します。少ないほど読み込みが速いです",
+  "@homeContentCountDes": {
+    "description": "homeContentCountDes"
+  },
   "cancelTimerAlert": "スリープタイマーをキャンセルしました",
+  "@cancelTimerAlert": {
+    "description": "cancelTimerAlert"
+  },
   "sleepTimer": "スリープタイマー",
+  "@sleepTimer": {
+    "description": "sleepTimer"
+  },
   "pipedplstSyncAlert": "Pipedの再生リストを同期しました！",
+  "@pipedplstSyncAlert": {
+    "description": "pipedplstSyncAlert"
+  },
   "clearImgCache": "画像キャッシュを消去",
+  "@clearImgCache": {
+    "description": "clearImgCache"
+  },
   "clearImgCacheDes": "クリックすると、キャッシュしたサムネイルや画像を消去します。(キャッシュした画像を更新したい場合に)",
+  "@clearImgCacheDes": {
+    "description": "clearImgCacheDes"
+  },
   "upNext": "次に再生",
+  "@upNext": {
+    "description": "upNext"
+  },
   "backgroundPlay": "バックグラウンドで音楽再生",
+  "@backgroundPlay": {
+    "description": "backgroundPlay"
+  },
   "backgroundPlayDes": "バックグラウンドでの音楽再生を有効/無効に (バックグラウンドでアプリ実行中ならシステムトレイからアクセスします)",
+  "@backgroundPlayDes": {
+    "description": "backgroundPlayDes"
+  },
   "deleteDownloadData": "ダウンロード一覧から除去",
+  "@deleteDownloadData": {
+    "description": "deleteDownloadData"
+  },
   "deleteDownloadedDataAlert": "ダウンロード一覧から除去しました！",
+  "@deleteDownloadedDataAlert": {
+    "description": "deleteDownloadedDataAlert"
+  },
   "addMultipleSongs": "再生リストに曲を追加",
+  "@addMultipleSongs": {
+    "description": "addMultipleSongs"
+  },
   "reArrangePlaylist": "再生リスト内の並べ替え",
+  "@reArrangePlaylist": {
+    "description": "reArrangePlaylist"
+  },
   "restoreLastPlaybackSessionDes": "アプリ起動時に最後の再生セッションを自動で復元",
+  "@restoreLastPlaybackSessionDes": {
+    "description": "restoreLastPlaybackSessionDes"
+  },
   "restoreLastPlaybackSession": "最後の再生セッションを復元",
+  "@restoreLastPlaybackSession": {
+    "description": "restoreLastPlaybackSession"
+  },
   "export": "エクスポート",
+  "@export": {
+    "description": "export"
+  },
   "exporting": "エクスポート中...",
+  "@exporting": {
+    "description": "exporting"
+  },
   "disableTransitionAnimationDes": "タブ切り替え時のアニメーションを無効化",
+  "@disableTransitionAnimationDes": {
+    "description": "disableTransitionAnimationDes"
+  },
   "disableTransitionAnimation": "移動アニメーションを無効化",
+  "@disableTransitionAnimation": {
+    "description": "disableTransitionAnimation"
+  },
   "cacheHomeScreenDataDes": "ホーム画面のコンテンツデータをキャッシュし素早く読み込む",
+  "@cacheHomeScreenDataDes": {
+    "description": "cacheHomeScreenDataDes"
+  },
   "cacheHomeScreenData": "ホームのコンテンツデータをキャッシュ",
+  "@cacheHomeScreenData": {
+    "description": "cacheHomeScreenData"
+  },
   "exportDowloadedFiles": "ダウンロード済みファイルをエクスポート",
+  "@exportDowloadedFiles": {
+    "description": "exportDowloadedFiles"
+  },
   "exportedFileLocation": "ダウンロード済みファイルのエクスポート先",
+  "@exportedFileLocation": {
+    "description": "exportedFileLocation"
+  },
   "close": "近い",
+  "@close": {
+    "description": "close"
+  },
   "scanning": "スキャン中...",
+  "@scanning": {
+    "description": "scanning"
+  },
   "downFilesFound": "ダウンロード済みファイルが存在します",
+  "@downFilesFound": {
+    "description": "downFilesFound"
+  },
   "exportMsg": "ファイルのエクスポートに成功しました",
+  "@exportMsg": {
+    "description": "exportMsg"
+  },
   "clearImgCacheAlert": "画像キャッシュを消去しました",
+  "@clearImgCacheAlert": {
+    "description": "clearImgCacheAlert"
+  },
   "exportDowloadedFilesDes": "クリックすると、アプリのディレクトリから別の場所へダウンロード済みファイルをエクスポート",
+  "@exportDowloadedFilesDes": {
+    "description": "exportDowloadedFilesDes"
+  },
   "removeMultiple": "複数の曲を削除",
+  "@removeMultiple": {
+    "description": "removeMultiple"
+  },
   "openIn": "アプリで開く",
+  "@openIn": {
+    "description": "openIn"
+  },
   "restoreSettingsAndPlaylists": "設定と再生リストを復元",
+  "@restoreSettingsAndPlaylists": {
+    "description": "restoreSettingsAndPlaylists"
+  },
   "restoreSettingsAndPlaylistsDes": "すべての設定と再生リスト、ログイン情報をバックアップファイルから復元。現在のデータを上書きします",
+  "@restoreSettingsAndPlaylistsDes": {
+    "description": "restoreSettingsAndPlaylistsDes"
+  },
   "restoreMsg": "復元しました！\n再起動で変更を適用",
+  "@restoreMsg": {
+    "description": "restoreMsg"
+  },
   "restoring": "復元中...",
+  "@restoring": {
+    "description": "restoring"
+  },
   "restore": "復元",
+  "@restore": {
+    "description": "restore"
+  },
   "closeApp": "アプリを閉じる",
+  "@closeApp": {
+    "description": "closeApp"
+  },
   "backupMsg": "バックアップしました！",
+  "@backupMsg": {
+    "description": "backupMsg"
+  },
   "backupSettingsAndPlaylists": "設定と再生リストをバックアップ",
+  "@backupSettingsAndPlaylists": {
+    "description": "backupSettingsAndPlaylists"
+  },
   "backupSettingsAndPlaylistsDes": "すべての設定と再生リスト、ログイン情報をバックアップファイルに保存",
+  "@backupSettingsAndPlaylistsDes": {
+    "description": "backupSettingsAndPlaylistsDes"
+  },
   "backFilesFound": "データベースを発見",
+  "@backFilesFound": {
+    "description": "backFilesFound"
+  },
   "backupAppData": "アプリのデータをバックアップ",
+  "@backupAppData": {
+    "description": "backupAppData"
+  },
   "letsStrart": "始めよう..",
+  "@letsStrart": {
+    "description": "letsStrart"
+  },
   "backup": "バックアップ",
+  "@backup": {
+    "description": "backup"
+  },
   "processFiles": "ファイルを処理中...",
+  "@processFiles": {
+    "description": "processFiles"
+  },
   "backupInProgress": "バックアップ中...",
+  "@backupInProgress": {
+    "description": "backupInProgress"
+  },
   "restoreAppData": "アプリのデータを復元",
+  "@restoreAppData": {
+    "description": "restoreAppData"
+  },
   "restartApp": "アプリを再起動",
+  "@restartApp": {
+    "description": "restartApp"
+  },
   "includeDownloadedFiles": "ダウンロー済みの曲のファイルを含める",
+  "@includeDownloadedFiles": {
+    "description": "includeDownloadedFiles"
+  },
   "songInfo": "曲の情報",
+  "@songInfo": {
+    "description": "songInfo"
+  },
   "title": "題名",
+  "@title": {
+    "description": "title"
+  },
   "bitrate": "ビットレート",
+  "@bitrate": {
+    "description": "bitrate"
+  },
   "loudnessDb": "音の大きさ:デジベル",
+  "@loudnessDb": {
+    "description": "loudnessDb"
+  },
   "id": "ID",
+  "@id": {
+    "description": "id"
+  },
   "duration": "長さ",
+  "@duration": {
+    "description": "duration"
+  },
   "audioCodec": "音声コーデック",
+  "@audioCodec": {
+    "description": "audioCodec"
+  },
   "appInfo": "アプリの情報",
+  "@appInfo": {
+    "description": "appInfo"
+  },
   "musicAndPlayback": "音楽と再生",
+  "@musicAndPlayback": {
+    "description": "musicAndPlayback"
+  },
   "loudnessNormalization": "音の大きさの正規化",
+  "@loudnessNormalization": {
+    "description": "loudnessNormalization"
+  },
   "download": "ダウンロード",
+  "@download": {
+    "description": "download"
+  },
   "personalisation": "カスタマイズ",
+  "@personalisation": {
+    "description": "personalisation"
+  },
   "networkError": "ネットワークエラー！ネットワーク接続をご確認ください。",
+  "@networkError": {
+    "description": "networkError"
+  },
   "downloadError3": "ネットワークやストリームのエラーでダウンロード失敗！再度お試しください",
+  "@downloadError3": {
+    "description": "downloadError3"
+  },
   "downloadError2": "曲がサーバーの制限によりダウンロード不可能です。再試行でうまくいかもしれません",
+  "@downloadError2": {
+    "description": "downloadError2"
+  },
   "content": "コンテンツ",
+  "@content": {
+    "description": "content"
+  },
   "queueShufflingDeniedMsg": "シャッフルモードが有効なのでシャッフルできません",
+  "@queueShufflingDeniedMsg": {
+    "description": "queueShufflingDeniedMsg"
+  },
   "queuerearrangingDeniedMsg": "シャッフルモードが有効なので並べ替えできません",
+  "@queuerearrangingDeniedMsg": {
+    "description": "queuerearrangingDeniedMsg"
+  },
   "loudnessNormalizationDes": "すべての曲の音の大きさを同程度にする(実験的な設定) (バージョン1.10.0未満でダウンロードした曲では動作しません)",
+  "@loudnessNormalizationDes": {
+    "description": "loudnessNormalizationDes"
+  },
   "songNotPlayable": "曲はサーバーの制限により再生できません！",
+  "@songNotPlayable": {
+    "description": "songNotPlayable"
+  },
   "urlSearchDes": "URLをクリックして、関連コンテンツを開く/再生",
+  "@urlSearchDes": {
+    "description": "urlSearchDes"
+  },
   "androidBackupWarning": "未検査: 60ファイル以上ダウンロードした後にチェックして選択すると、大量にメモリを使用し、スマホまたはアプリが落ちることがあります。自己責任で行ってください。",
+  "@androidBackupWarning": {
+    "description": "androidBackupWarning"
+  },
   "standard": "標準",
+  "@standard": {
+    "description": "standard"
+  },
   "gesture": "ジェスチャー",
+  "@gesture": {
+    "description": "gesture"
+  },
   "playerUi": "プレイヤーUI",
+  "@playerUi": {
+    "description": "playerUi"
+  },
   "playerUiDes": "プレイヤーの外観を選択",
+  "@playerUiDes": {
+    "description": "playerUiDes"
+  },
   "shuffleQueue": "キューをシャッフル",
+  "@shuffleQueue": {
+    "description": "shuffleQueue"
+  },
   "queueLoop": "キューをループ",
+  "@queueLoop": {
+    "description": "queueLoop"
+  },
   "playnextMsg": "公開予定 {Song Name}",
+  "@playnextMsg": {
+    "description": "playnextMsg"
+  },
   "queueLoopNotDisMsg1": "シャッフル有効時は、ループを無効にできません。",
+  "@queueLoopNotDisMsg1": {
+    "description": "queueLoopNotDisMsg1"
+  },
   "queueLoopNotDisMsg2": "ラジオモードでは、ループはできません。",
+  "@queueLoopNotDisMsg2": {
+    "description": "queueLoopNotDisMsg2"
+  },
   "enableSlidableActionDes": "曲のタイルをスライドする操作を使う",
+  "@enableSlidableActionDes": {
+    "description": "enableSlidableActionDes"
+  },
   "enableSlidableAction": "スライドによる操作",
+  "@enableSlidableAction": {
+    "description": "enableSlidableAction"
+  },
   "autoDownFavSongDes": "お気に入りに追加した曲を自動でダウンロード",
+  "@autoDownFavSongDes": {
+    "description": "autoDownFavSongDes"
+  },
   "autoDownFavSong": "お気に入りの曲を自動ダウンロード",
+  "@autoDownFavSong": {
+    "description": "autoDownFavSong"
+  },
   "resetToDefault": "初期設定に戻す",
+  "@resetToDefault": {
+    "description": "resetToDefault"
+  },
   "resetToDefaultDes": "アプリの設定を初期値に戻す (要再起動)",
+  "@resetToDefaultDes": {
+    "description": "resetToDefaultDes"
+  },
   "resetToDefaultMsg": "設定の初期化が完了、アプリを再起動してください",
+  "@resetToDefaultMsg": {
+    "description": "resetToDefaultMsg"
+  },
   "misc": "ほか",
+  "@misc": {
+    "description": "misc"
+  },
   "randomSelection": "選曲からランダム再生",
+  "@randomSelection": {
+    "description": "randomSelection"
+  },
   "randomRadio": "ランダムにラジオ再生",
+  "@randomRadio": {
+    "description": "randomRadio"
+  },
   "playingfromSelection": "選曲から再生中",
+  "@playingfromSelection": {
+    "description": "playingfromSelection"
+  },
   "playingfromArtist": "アーティストから再生中",
+  "@playingfromArtist": {
+    "description": "playingfromArtist"
+  },
   "autoOpenPlayerDes": "再生する曲の選択時に、プレーヤーを自動的に全画面で開くかどうか",
+  "@autoOpenPlayerDes": {
+    "description": "autoOpenPlayerDes"
+  },
   "autoOpenPlayer": "プレーヤー画面を自動で開く",
+  "@autoOpenPlayer": {
+    "description": "autoOpenPlayer"
+  },
   "album": "アルバム",
+  "@album": {
+    "description": "album"
+  },
   "playingfromAlbum": "アルバムを再生中",
+  "@playingfromAlbum": {
+    "description": "playingfromAlbum"
+  },
   "playingfromPlaylist": "再生リストを再生中",
+  "@playingfromPlaylist": {
+    "description": "playingfromPlaylist"
+  },
   "selectAll": "すべて選択",
+  "@selectAll": {
+    "description": "selectAll"
+  },
   "reArrangeSongs": "曲を並べ替え",
+  "@reArrangeSongs": {
+    "description": "reArrangeSongs"
+  },
   "selectSongs": "曲を選択",
+  "@selectSongs": {
+    "description": "selectSongs"
+  },
   "exportError": "再生リストのエクスポートのエラー",
+  "@exportError": {
+    "description": "exportError"
+  },
   "importingPlaylist": "再生リストのインポート中...",
+  "@importingPlaylist": {
+    "description": "importingPlaylist"
+  },
   "importErrorFileAccess": "選択したファイルにアクセスできません",
+  "@importErrorFileAccess": {
+    "description": "importErrorFileAccess"
+  },
   "exportingPlaylist": "再生リストをエクスポート中...",
+  "@exportingPlaylist": {
+    "description": "exportingPlaylist"
+  },
   "importErrorFormat": "ファイルの形式が正しくありません",
+  "@importErrorFormat": {
+    "description": "importErrorFormat"
+  },
   "exportPlaylist": "再生リストをエクスポート",
+  "@exportPlaylist": {
+    "description": "exportPlaylist"
+  },
   "exportErrorPermission": "エクスポート中に権限が拒否されました",
+  "@exportErrorPermission": {
+    "description": "exportErrorPermission"
+  },
   "exportErrorStorage": "空き容量が足りません",
+  "@exportErrorStorage": {
+    "description": "exportErrorStorage"
+  },
   "importPlaylist": "再生リストをインポート",
+  "@importPlaylist": {
+    "description": "importPlaylist"
+  },
   "selectFile": "ファイルを選択",
+  "@selectFile": {
+    "description": "selectFile"
+  },
   "playlistImportedMsg": "再生リストのインポートに成功",
+  "@playlistImportedMsg": {
+    "description": "playlistImportedMsg"
+  },
   "importError": "再生リストのインポートのエラー",
+  "@importError": {
+    "description": "importError"
+  },
   "exportErrorFormat": "再生リストのデータ形式のエラー",
+  "@exportErrorFormat": {
+    "description": "exportErrorFormat"
+  },
   "invalidPlaylistFile": "再生リストのファイル構造が正しくありません",
+  "@invalidPlaylistFile": {
+    "description": "invalidPlaylistFile"
+  },
   "playlistExportedMsg": "以下に再生リストのエクスポート成功",
+  "@playlistExportedMsg": {
+    "description": "playlistExportedMsg"
+  },
   "importPlaylistDesc": "インポートしたい以前エクスポートしたJSONファイルを選択",
+  "@importPlaylistDesc": {
+    "description": "importPlaylistDesc"
+  },
   "fileNotFound": "ファイルが見つかりません",
+  "@fileNotFound": {
+    "description": "fileNotFound"
+  },
   "importLargeFileNote": "注・大きい再生リストのインポートは時間がかかります",
+  "@importLargeFileNote": {
+    "description": "importLargeFileNote"
+  },
   "importErrorDatabase": "データベースへの保存時のエラー",
+  "@importErrorDatabase": {
+    "description": "importErrorDatabase"
+  },
   "exportPlaylistCsv": "再生リストをCSVで出力",
+  "@exportPlaylistCsv": {
+    "description": "exportPlaylistCsv"
+  },
   "exportPlaylistJson": "再生リストをJSONで出力",
+  "@exportPlaylistJson": {
+    "description": "exportPlaylistJson"
+  },
   "exportPlaylistJsonSubtitle": "この形式は取り入れできません",
+  "@exportPlaylistJsonSubtitle": {
+    "description": "exportPlaylistJsonSubtitle"
+  },
   "exportPlaylistCsvSubtitle": "ここに書き出せません",
+  "@exportPlaylistCsvSubtitle": {
+    "description": "exportPlaylistCsvSubtitle"
+  },
   "exportToYouTubeMusic": "Youtube musicへエクスポート",
+  "@exportToYouTubeMusic": {
+    "description": "exportToYouTubeMusic"
+  },
   "exportToYouTubeMusicSubtitle": "再生リスト (曲数50未満) を現在のキューに追加する。YtMusicで開いたら、再生リストへの追加/保存を忘れないよう",
+  "@exportToYouTubeMusicSubtitle": {
+    "description": "exportToYouTubeMusicSubtitle"
+  },
   "linkCopied": "リンクをクリップボードにコピー",
+  "@linkCopied": {
+    "description": "linkCopied"
+  },
   "keepScreenOnWhilePlaying": "再生中は画面を点灯したままにする",
+  "@keepScreenOnWhilePlaying": {
+    "description": "keepScreenOnWhilePlaying"
+  },
   "keepScreenOnWhilePlayingDes": "有効にすると、音楽再生中はデバイスの画面が点灯したままになります",
+  "@keepScreenOnWhilePlayingDes": {
+    "description": "keepScreenOnWhilePlayingDes"
+  },
   "auth_login_success": "正常にログインしました",
   "@auth_login_success": {
-    "description": ""
+    "description": "auth_login_success"
   },
   "settings_cloud_backup": "クラウドバックアップ",
   "@settings_cloud_backup": {
-    "description": ""
+    "description": "settings_cloud_backup"
   },
   "settings_migration_title": "Joss Music Kotlin からの移行",
   "@settings_migration_title": {
-    "description": ""
+    "description": "settings_migration_title"
   },
   "backup_confirm_question": "バックアップを実行しますか?",
   "@backup_confirm_question": {
-    "description": ""
+    "description": "backup_confirm_question"
   },
   "backup_selection_prompt": "バックアップするデータを選択する",
   "@backup_selection_prompt": {
-    "description": ""
+    "description": "backup_selection_prompt"
   },
   "search_recent_title": "最近の検索",
   "@search_recent_title": {
-    "description": ""
+    "description": "search_recent_title"
   },
   "back": "戻る",
   "@back": {
-    "description": ""
+    "description": "back"
   },
   "auth_forgot_password": "パスワードを忘れてしまいました",
   "@auth_forgot_password": {
-    "description": ""
+    "description": "auth_forgot_password"
   },
   "auth_btn_login": "ログイン",
   "@auth_btn_login": {
-    "description": ""
+    "description": "auth_btn_login"
   },
   "auth_btn_register": "登録する",
   "@auth_btn_register": {
-    "description": ""
+    "description": "auth_btn_register"
   },
   "email": "電子メール",
   "@email": {
-    "description": ""
+    "description": "email"
   },
   "password_text": "パスワード",
   "@password_text": {
@@ -325,372 +1150,869 @@
   },
   "auth_confirm_password": "パスワードを認証する",
   "@auth_confirm_password": {
-    "description": ""
+    "description": "auth_confirm_password"
   },
   "auth_welcome_title": "エストレージャミュージックへようこそ",
   "@auth_welcome_title": {
-    "description": ""
+    "description": "auth_welcome_title"
   },
   "auth_welcome_subtitle": "エストレージャミュージックへようこそ",
   "@auth_welcome_subtitle": {
-    "description": ""
-  },
-  "@username": {
-    "description": ""
+    "description": "auth_welcome_subtitle"
   },
   "auth_first_name": "ファーストネーム",
   "@auth_first_name": {
-    "description": ""
+    "description": "auth_first_name"
   },
   "auth_last_name": "苗字",
   "@auth_last_name": {
-    "description": ""
+    "description": "auth_last_name"
   },
   "auth_agree_personal_data": "アセプトのユーザーミスダトス...",
   "@auth_agree_personal_data": {
-    "description": ""
+    "description": "auth_agree_personal_data"
   },
   "settings_general_section": "一般的な",
   "@settings_general_section": {
-    "description": ""
+    "description": "settings_general_section"
   },
   "settings_logout": "ログアウト",
   "@settings_logout": {
-    "description": ""
+    "description": "settings_logout"
   },
   "settings_cloud_backup_desc": "アップロード、復元、管理...",
   "@settings_cloud_backup_desc": {
-    "description": ""
+    "description": "settings_cloud_backup_desc"
   },
   "settings_migration_desc": "Importa playlists, canciones...",
   "@settings_migration_desc": {
-    "description": ""
+    "description": "settings_migration_desc"
   },
   "backup_btn_restart": "アプリを再起動する",
   "@backup_btn_restart": {
-    "description": ""
+    "description": "backup_btn_restart"
   },
   "backup_btn_upload": "今すぐバックアップをアップロード",
   "@backup_btn_upload": {
-    "description": ""
+    "description": "backup_btn_upload"
   },
   "backup_no_backups": "まだバックアップがありません...",
   "@backup_no_backups": {
-    "description": ""
+    "description": "backup_no_backups"
   },
   "backup_auth_required": "アクティブなセッションが必要です...",
   "@backup_auth_required": {
-    "description": ""
+    "description": "backup_auth_required"
   },
   "backup_upload_success": "バックアップが正しくアップロードされました。",
   "@backup_upload_success": {
-    "description": ""
+    "description": "backup_upload_success"
   },
   "backup_restore_success": "バックアップが復元されました。アプリを再起動します。",
   "@backup_restore_success": {
-    "description": ""
+    "description": "backup_restore_success"
   },
   "backup_delete_success": "バックアップが削除されました。",
   "@backup_delete_success": {
-    "description": ""
+    "description": "backup_delete_success"
   },
   "genre_pop": "ポップ",
   "@genre_pop": {
-    "description": ""
+    "description": "genre_pop"
   },
   "genre_rock": "ロック",
   "@genre_rock": {
-    "description": ""
+    "description": "genre_rock"
   },
   "genre_hiphop": "ヒップホップ",
   "@genre_hiphop": {
-    "description": ""
+    "description": "genre_hiphop"
   },
   "genre_electronic": "エレクトロニクス",
   "@genre_electronic": {
-    "description": ""
+    "description": "genre_electronic"
   },
   "genre_jazz": "ジャズ",
   "@genre_jazz": {
-    "description": ""
+    "description": "genre_jazz"
   },
   "genre_latin": "ラテン",
   "@genre_latin": {
-    "description": ""
+    "description": "genre_latin"
   },
   "migration_btn_select": "ファイルを選択してインポートする",
   "@migration_btn_select": {
-    "description": ""
-  },
-  "@close": {
-    "description": ""
+    "description": "migration_btn_select"
   },
   "forgottenFavorites": "忘れられたお気に入り",
   "@forgottenFavorites": {
-    "description": ""
+    "description": "forgottenFavorites"
   },
   "mostListenedSong": "最もよく聞かれた曲",
   "@mostListenedSong": {
-    "description": ""
+    "description": "mostListenedSong"
   },
   "reproducedBy": "複製者",
   "@reproducedBy": {
-    "description": ""
+    "description": "reproducedBy"
   },
   "recentSearches": "最近の検索",
   "@recentSearches": {
-    "description": ""
+    "description": "recentSearches"
   },
   "popularTracks": "人気の曲",
   "@popularTracks": {
-    "description": ""
+    "description": "popularTracks"
   },
   "latestRelease": "最新リリース",
   "@latestRelease": {
-    "description": ""
+    "description": "latestRelease"
   },
   "follow": "続く",
   "@follow": {
-    "description": ""
+    "description": "follow"
   },
   "following": "続く",
   "@following": {
-    "description": ""
+    "description": "following"
   },
   "listenNow": "今すぐ聞いてください",
   "@listenNow": {
-    "description": ""
+    "description": "listenNow"
   },
   "video": "ビデオ",
   "@video": {
-    "description": ""
+    "description": "video"
   },
   "about": "について",
   "@about": {
-    "description": ""
+    "description": "about"
   },
   "readMore": "続きを読む",
   "@readMore": {
-    "description": ""
+    "description": "readMore"
   },
   "speedAndPitch": "スピードとピッチ",
   "@speedAndPitch": {
-    "description": ""
+    "description": "speedAndPitch"
   },
   "playbackSpeed": "再生速度",
   "@playbackSpeed": {
-    "description": ""
+    "description": "playbackSpeed"
   },
   "songPitch": "歌の調子",
   "@songPitch": {
-    "description": ""
+    "description": "songPitch"
   },
   "musicRecognition": "音楽認識",
   "@musicRecognition": {
-    "description": ""
+    "description": "musicRecognition"
   },
   "listeningToEnvironment": "環境の声を聞きながら…",
   "@listeningToEnvironment": {
-    "description": ""
+    "description": "listeningToEnvironment"
   },
   "micInstruction": "マイクの近くで音楽が十分な音量で再生されていることを確認してください。",
   "@micInstruction": {
-    "description": ""
+    "description": "micInstruction"
   },
   "processingAudio": "音声を処理しています...",
   "@processingAudio": {
-    "description": ""
+    "description": "processingAudio"
   },
   "shazamSearching": "Shazam データベースで一致するものを検索しています...",
   "@shazamSearching": {
-    "description": ""
+    "description": "shazamSearching"
   },
   "songFound": "曲が見つかりました！",
   "@songFound": {
-    "description": ""
+    "description": "songFound"
   },
   "playNow": "今すぐプレイ",
   "@playNow": {
-    "description": ""
+    "description": "playNow"
   },
   "searchInLibrary": "ライブラリ内検索",
   "@searchInLibrary": {
-    "description": ""
+    "description": "searchInLibrary"
   },
   "noMatchesFound": "一致しません",
   "@noMatchesFound": {
-    "description": ""
+    "description": "noMatchesFound"
   },
   "noMatchInstruction": "録音されたオーディオに曲が見つかりませんでした",
   "@noMatchInstruction": {
-    "description": ""
+    "description": "noMatchInstruction"
   },
   "errorOccurred": "エラーが発生しました",
   "@errorOccurred": {
-    "description": ""
+    "description": "errorOccurred"
   },
   "playingRecognizedTrack": "演奏:",
   "@playingRecognizedTrack": {
-    "description": ""
+    "description": "playingRecognizedTrack"
   },
   "errorPlayingTrack": "再生時のエラー:",
   "@errorPlayingTrack": {
-    "description": ""
+    "description": "errorPlayingTrack"
   },
   "welcome_title": "あなたの音楽をあなたの方法で",
+  "@welcome_title": {
+    "description": "welcome_title"
+  },
   "welcome_subtitle": "これから Estrella Music を体験する方法を選択してください。",
+  "@welcome_subtitle": {
+    "description": "welcome_subtitle"
+  },
   "welcome_intro": "私たちはプラットフォームを最新化しました。手動バックアップをアップロードする古いシステムは無効になりました。音楽ライブラリを管理するための 2 つの明確な方法が用意されました。",
+  "@welcome_intro": {
+    "description": "welcome_intro"
+  },
   "recommend_cloud": "Spotify のようなエクスペリエンスを得るには、クラウド モードを有効にすることをお勧めします。つまり、何もしなくてもすべてのデバイス間のリアルタイム同期と自動バックアップが可能になります。",
+  "@recommend_cloud": {
+    "description": "recommend_cloud"
+  },
   "swipe_prompt": "スワイプしてオプションを確認します ➔",
+  "@swipe_prompt": {
+    "description": "swipe_prompt"
+  },
   "local_title": "ローカルモード",
+  "@local_title": {
+    "description": "local_title"
+  },
   "local_subtitle": "デバイス上の絶対的なプライバシー",
+  "@local_subtitle": {
+    "description": "local_subtitle"
+  },
   "local_b1": "ログインする必要がなくても機能します。",
+  "@local_b1": {
+    "description": "local_b1"
+  },
   "local_b2": "ライブラリ全体がこのコンピューター上に厳密に保存されます。",
+  "@local_b2": {
+    "description": "local_b2"
+  },
   "local_b3": "注: 手動のクラウド バックアップはありません。デバイスを紛失したり、アプリをアンインストールした場合、データは復元できません。",
+  "@local_b3": {
+    "description": "local_b3"
+  },
   "local_btn": "このデバイスでのみ使用します",
+  "@local_btn": {
+    "description": "local_btn"
+  },
   "cloud_title": "クラウドモード (推奨)",
+  "@cloud_title": {
+    "description": "cloud_title"
+  },
   "cloud_subtitle": "Joss Red とのリアルタイム同期",
+  "@cloud_subtitle": {
+    "description": "cloud_subtitle"
+  },
   "cloud_b1": "Joss Red アカウントを使用して安全にログインします。",
+  "@cloud_b1": {
+    "description": "cloud_b1"
+  },
   "cloud_b2": "あらゆるデバイス (Windows、Android など) からプレイリスト、お気に入り、履歴に即座にアクセスできます。",
+  "@cloud_b2": {
+    "description": "cloud_b2"
+  },
   "cloud_b3": "スマート シンク: オフラインで作業し、インターネットが回復したときに変更を自動的にアップロードします。",
+  "@cloud_b3": {
+    "description": "cloud_b3"
+  },
   "cloud_btn": "クラウド同期を有効にする",
+  "@cloud_btn": {
+    "description": "cloud_btn"
+  },
   "slide_indicator": "ステップ {current}/3",
+  "@slide_indicator": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      }
+    },
+    "description": "slide_indicator"
+  },
   "news_card_title": "エストレヤミュージックが進化しました！",
+  "@news_card_title": {
+    "description": "news_card_title"
+  },
   "news_card_subtitle": "Joss Red との 100% 同期、友達とのプレイリストなど。タップすると新機能が表示されます。",
+  "@news_card_subtitle": {
+    "description": "news_card_subtitle"
+  },
   "news_dialog_title": "エストレージャ音楽ニュース",
+  "@news_dialog_title": {
+    "description": "news_dialog_title"
+  },
   "news_item_sync_title": "Joss Red との完全な統合",
+  "@news_item_sync_title": {
+    "description": "news_item_sync_title"
+  },
   "news_item_sync_desc": "プレイリストとお気に入りはクラウドに保存され、メインの Joss Red アカウントと自動的に同期されます。",
+  "@news_item_sync_desc": {
+    "description": "news_item_sync_desc"
+  },
   "news_item_collab_title": "共同プレイリスト",
+  "@news_item_collab_title": {
+    "description": "news_item_collab_title"
+  },
   "news_item_collab_desc": "友達と一緒にプレイリストを作成しましょう！プレイリストを作成するときは、「共同作業」チェックボックスを選択し、一緒に編集する友達を選択します。",
+  "@news_item_collab_desc": {
+    "description": "news_item_collab_desc"
+  },
   "news_item_trans_title": "透過的な同期",
+  "@news_item_trans_title": {
+    "description": "news_item_trans_title"
+  },
   "news_item_trans_desc": "手動同期ボタンをクリックする必要はなくなりました。新しいモーターは自動的にシフトアップとシフトダウンを担当します。",
+  "@news_item_trans_desc": {
+    "description": "news_item_trans_desc"
+  },
   "news_dialog_section_friends": "友達とアカウントの管理:",
+  "@news_dialog_section_friends": {
+    "description": "news_dialog_section_friends"
+  },
   "news_dialog_friends_desc": "友達を追加したり、リクエストを受け入れたり、セキュリティ プロファイルを管理したりするには、公式プラットフォームで Joss Red を使用してください。",
+  "@news_dialog_friends_desc": {
+    "description": "news_dialog_friends_desc"
+  },
   "news_btn_app": "Joss Red アプリ (Play ストア)",
+  "@news_btn_app": {
+    "description": "news_btn_app"
+  },
   "news_btn_web": "ジョス レッド ウェブ",
+  "@news_btn_web": {
+    "description": "news_btn_web"
+  },
   "news_btn_dismiss": "理解した",
+  "@news_btn_dismiss": {
+    "description": "news_btn_dismiss"
+  },
   "settings_appearance_desc": "テーマ、言語、インターフェイスのアニメーション。",
+  "@settings_appearance_desc": {
+    "description": "settings_appearance_desc"
+  },
   "settings_content_desc": "フィルター、Piped およびキャッシュとの統合を発見します。",
+  "@settings_content_desc": {
+    "description": "settings_content_desc"
+  },
   "settings_playback_desc": "ストリーミング品質、正規化、無音、バッテリー。",
+  "@settings_playback_desc": {
+    "description": "settings_playback_desc"
+  },
   "settings_downloads_desc": "ダウンロードとストレージ",
+  "@settings_downloads_desc": {
+    "description": "settings_downloads_desc"
+  },
   "settings_downloads_sub": "オーディオ形式、フォルダー、自動ダウンロード。",
+  "@settings_downloads_sub": {
+    "description": "settings_downloads_sub"
+  },
   "settings_account_desc": "アカウントと同期",
+  "@settings_account_desc": {
+    "description": "settings_account_desc"
+  },
   "settings_account_sub": "クラウド モード、バックアップ、友達リスト、移行。",
+  "@settings_account_sub": {
+    "description": "settings_account_sub"
+  },
   "settings_about_desc": "エストレージャミュージックについて",
+  "@settings_about_desc": {
+    "description": "settings_about_desc"
+  },
   "settings_about_sub": "バージョン、オープンソース プロジェクト、GitHub。",
+  "@settings_about_sub": {
+    "description": "settings_about_sub"
+  },
   "settings_local_cloud_title": "ローカルモード / Eミュージッククラウド",
+  "@settings_local_cloud_title": {
+    "description": "settings_local_cloud_title"
+  },
   "settings_local_cloud_desc": "Joss Red との同期ステータスを選択、移行、または確認します。",
+  "@settings_local_cloud_desc": {
+    "description": "settings_local_cloud_desc"
+  },
   "settings_my_friends": "私の友人",
+  "@settings_my_friends": {
+    "description": "settings_my_friends"
+  },
   "settings_my_friends_desc": "Joss Red の友達を直接管理します。",
+  "@settings_my_friends_desc": {
+    "description": "settings_my_friends_desc"
+  },
   "settings_refresh_visitor_title": "リフレッシュID（訪問者ID）",
+  "@settings_refresh_visitor_title": {
+    "description": "settings_refresh_visitor_title"
+  },
   "settings_refresh_visitor_desc": "Discover コンテンツが読み込まれない場合は、YouTube Music ID を再生成します。",
+  "@settings_refresh_visitor_desc": {
+    "description": "settings_refresh_visitor_desc"
+  },
   "settings_visitor_updated": "更新された識別子",
+  "@settings_visitor_updated": {
+    "description": "settings_visitor_updated"
+  },
   "settings_visitor_updated_desc": "新しい訪問者 ID が正常に生成されました。",
+  "@settings_visitor_updated_desc": {
+    "description": "settings_visitor_updated_desc"
+  },
   "settings_visitor_error": "間違い",
+  "@settings_visitor_error": {
+    "description": "settings_visitor_error"
+  },
   "settings_visitor_error_desc": "新しい識別子を生成できませんでした。後でもう一度試してください。",
+  "@settings_visitor_error_desc": {
+    "description": "settings_visitor_error_desc"
+  },
   "settings_visitor_exception": "再生成中にエラーが発生しました: {error}",
+  "@settings_visitor_exception": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    },
+    "description": "settings_visitor_exception"
+  },
   "migratedLibrary": "移行されたライブラリ",
+  "@migratedLibrary": {
+    "description": "migratedLibrary"
+  },
   "noSongsInCollection": "このコレクションには曲がありません",
+  "@noSongsInCollection": {
+    "description": "noSongsInCollection"
+  },
   "startupScreen": "起動時に開く",
+  "@startupScreen": {
+    "description": "startupScreen"
+  },
   "startupScreenDescription": "Estrella Music が最初に開くセクションを選択してください",
+  "@startupScreenDescription": {
+    "description": "startupScreenDescription"
+  },
   "friends": "友達",
+  "@friends": {
+    "description": "friends"
+  },
   "dailyDiscover": "日々の発見",
+  "@dailyDiscover": {
+    "description": "dailyDiscover"
+  },
   "keepListening": "聞き続けてください",
+  "@keepListening": {
+    "description": "keepListening"
+  },
   "similarToTitle": "{title}に似ている",
+  "@similarToTitle": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    },
+    "description": "similarToTitle"
+  },
   "pipedPlaylistDescription": "パイプされたプレイリスト",
+  "@pipedPlaylistDescription": {
+    "description": "pipedPlaylistDescription"
+  },
   "collaborativePlaylistDescription": "コラボプレイリスト",
+  "@collaborativePlaylistDescription": {
+    "description": "collaborativePlaylistDescription"
+  },
   "libraryPlaylistDescription": "ライブラリプレイリスト",
+  "@libraryPlaylistDescription": {
+    "description": "libraryPlaylistDescription"
+  },
   "untitledSong": "タイトルのない曲",
+  "@untitledSong": {
+    "description": "untitledSong"
+  },
   "migratedPlaylist": "移行されたプレイリスト",
+  "@migratedPlaylist": {
+    "description": "migratedPlaylist"
+  },
   "migratedAlbum": "移行されたアルバム",
+  "@migratedAlbum": {
+    "description": "migratedAlbum"
+  },
   "songsImportedFromJossMusic": "Joss Music Kotlin からインポートされた曲",
+  "@songsImportedFromJossMusic": {
+    "description": "songsImportedFromJossMusic"
+  },
   "importedFromJossMusic": "Joss Music Kotlin からインポート",
+  "@importedFromJossMusic": {
+    "description": "importedFromJossMusic"
+  },
   "syncLocalModeActive": "ローカルモードがアクティブです",
+  "@syncLocalModeActive": {
+    "description": "syncLocalModeActive"
+  },
   "syncCloudPending": "クラウドモードがアクティブです。同期が保留中です。",
+  "@syncCloudPending": {
+    "description": "syncCloudPending"
+  },
   "syncCloudDownloadingExisting": "クラウドモードが有効になりました。既存のライブラリをダウンロードします。",
+  "@syncCloudDownloadingExisting": {
+    "description": "syncCloudDownloadingExisting"
+  },
   "syncCloudMigrationComplete": "クラウドモードが有効になりました。移行されたライブラリ。",
+  "@syncCloudMigrationComplete": {
+    "description": "syncCloudMigrationComplete"
+  },
   "syncLocalDeviceOnly": "あなたのデータはこのデバイスにのみ保存されます。",
+  "@syncLocalDeviceOnly": {
+    "description": "syncLocalDeviceOnly"
+  },
   "syncDownloading": "EMusic の変更をダウンロードしています...",
+  "@syncDownloading": {
+    "description": "syncDownloading"
+  },
   "syncDownloadFailed": "同期のダウンロードに失敗しました。",
+  "@syncDownloadFailed": {
+    "description": "syncDownloadFailed"
+  },
   "syncLocalChangesFirst": "ローカルで新たな変更が加えられています。ダウンロードの前にアップロードされます。",
+  "@syncLocalChangesFirst": {
+    "description": "syncLocalChangesFirst"
+  },
   "syncLibrarySynced": "同期されたライブラリ。",
+  "@syncLibrarySynced": {
+    "description": "syncLibrarySynced"
+  },
   "syncOfflinePending": "オフライン。変更は保留中です。",
+  "@syncOfflinePending": {
+    "description": "syncOfflinePending"
+  },
   "syncLibraryUpToDate": "ライブラリは最新です。",
+  "@syncLibraryUpToDate": {
+    "description": "syncLibraryUpToDate"
+  },
   "syncChangesSynced": "{count} 個の変更が同期されました。",
+  "@syncChangesSynced": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    },
+    "description": "syncChangesSynced"
+  },
   "syncUploading": "変更を EMusic にアップロードしています...",
+  "@syncUploading": {
+    "description": "syncUploading"
+  },
   "syncUploadSuccessWs": "変更は正常にアップロードされました (WS)。",
+  "@syncUploadSuccessWs": {
+    "description": "syncUploadSuccessWs"
+  },
   "syncUploadWsRetry": "WSを使用してアップロードできませんでした。後で再試行されます。",
+  "@syncUploadWsRetry": {
+    "description": "syncUploadWsRetry"
+  },
   "syncUploadSuccess": "変更は正しくアップロードされました。",
+  "@syncUploadSuccess": {
+    "description": "syncUploadSuccess"
+  },
   "syncUploadRetry": "起き上がれなかった。後で再試行されます。",
+  "@syncUploadRetry": {
+    "description": "syncUploadRetry"
+  },
   "syncOfflineRetry": "オフライン。変更は再試行のために保存されました。",
+  "@syncOfflineRetry": {
+    "description": "syncOfflineRetry"
+  },
   "syncUnconfirmedRetry": "EMusic はすべての変更を確認していません。再試行されます。",
+  "@syncUnconfirmedRetry": {
+    "description": "syncUnconfirmedRetry"
+  },
   "syncChangesConfirmed": "{count} の変更がコミットされました。",
+  "@syncChangesConfirmed": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    },
+    "description": "syncChangesConfirmed"
+  },
   "migrationAlreadyRunning": "すでに移行が進行中です。",
+  "@migrationAlreadyRunning": {
+    "description": "migrationAlreadyRunning"
+  },
   "migrationLoginRequired": "移行する前に、Joss Red にログインします。",
+  "@migrationLoginRequired": {
+    "description": "migrationLoginRequired"
+  },
   "migrationCheckingCloud": "EMusic Cloud にすでにライブラリがあるかどうかを確認しています...",
+  "@migrationCheckingCloud": {
+    "description": "migrationCheckingCloud"
+  },
   "cloudLibraryFoundDeviceWillDownload": "クラウド ライブラリが見つかりました。本機では上書きせずにダウンロードします。",
+  "@cloudLibraryFoundDeviceWillDownload": {
+    "description": "cloudLibraryFoundDeviceWillDownload"
+  },
   "cloudLibraryFound": "クラウドライブラリが見つかりました。",
+  "@cloudLibraryFound": {
+    "description": "cloudLibraryFound"
+  },
   "migrationCreatingBackup": "クラウドに接続する前にローカル バックアップを作成しています...",
+  "@migrationCreatingBackup": {
+    "description": "migrationCreatingBackup"
+  },
   "migrationAnalyzingLocal": "ローカル ライブラリを分析しています...",
+  "@migrationAnalyzingLocal": {
+    "description": "migrationAnalyzingLocal"
+  },
   "migrationPreparingCloud": "EMusic Cloud で移行を準備しています...",
+  "@migrationPreparingCloud": {
+    "description": "migrationPreparingCloud"
+  },
   "migrationStartFailed": "EMusic Cloud は移行を開始できませんでした。",
+  "@migrationStartFailed": {
+    "description": "migrationStartFailed"
+  },
   "migrationUploadingData": "プレイリスト、お気に入り、履歴をアップロードしています...",
+  "@migrationUploadingData": {
+    "description": "migrationUploadingData"
+  },
   "migrationUploadIncomplete": "すべてのデータをアップロードできませんでした。私たちはあなたの地元のサポートを続けます。",
+  "@migrationUploadIncomplete": {
+    "description": "migrationUploadIncomplete"
+  },
   "migrationVerifyingIntegrity": "EMusic Cloud の整合性を確認しています...",
+  "@migrationVerifyingIntegrity": {
+    "description": "migrationVerifyingIntegrity"
+  },
   "migrationValidationFailed": "EMusic Cloud は移行を検証できませんでした。",
+  "@migrationValidationFailed": {
+    "description": "migrationValidationFailed"
+  },
   "cloudModeReadyOfflineCache": "クラウドモードの準備が完了しました。このデバイスはオフライン キャッシュとして機能します。",
+  "@cloudModeReadyOfflineCache": {
+    "description": "cloudModeReadyOfflineCache"
+  },
   "migrationCompleted": "移行が完了しました。",
+  "@migrationCompleted": {
+    "description": "migrationCompleted"
+  },
   "migrationFailedLocalPreserved": "移行は失敗しました。ローカル データは変更されていません。",
+  "@migrationFailedLocalPreserved": {
+    "description": "migrationFailedLocalPreserved"
+  },
   "sessionExpiredLoginAgain": "セッションの有効期限が切れました。再度サインインします。",
+  "@sessionExpiredLoginAgain": {
+    "description": "sessionExpiredLoginAgain"
+  },
   "selectedFileNotFound": "選択したファイルが見つかりませんでした。",
+  "@selectedFileNotFound": {
+    "description": "selectedFileNotFound"
+  },
   "genericAlbum": "アルバム",
+  "@genericAlbum": {
+    "description": "genericAlbum"
+  },
   "friendsLoginRequired": "友達を見つけるにはサインインしてください。",
+  "@friendsLoginRequired": {
+    "description": "friendsLoginRequired"
+  },
   "invalidSessionToken": "セッションには有効なトークンが含まれていません。",
+  "@invalidSessionToken": {
+    "description": "invalidSessionToken"
+  },
   "userSearchFailed": "ユーザーを検索できませんでした ({statusCode})。",
+  "@userSearchFailed": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    },
+    "description": "userSearchFailed"
+  },
   "invalidServerResponse": "無効なサーバー応答です。",
+  "@invalidServerResponse": {
+    "description": "invalidServerResponse"
+  },
   "userListMissing": "応答にはユーザーのリストは含まれません。",
+  "@userListMissing": {
+    "description": "userListMissing"
+  },
   "playlistCollaboratorsTitle": "プレイリストの投稿者",
+  "@playlistCollaboratorsTitle": {
+    "description": "playlistCollaboratorsTitle"
+  },
   "collaboratorsInstruction": "このプレイリストを表示および編集できる友達を選択してください:",
+  "@collaboratorsInstruction": {
+    "description": "collaboratorsInstruction"
+  },
   "noJossRedFriends": "Joss Red には友達が追加されていません。",
+  "@noJossRedFriends": {
+    "description": "noJossRedFriends"
+  },
   "friendFallback": "友達",
+  "@friendFallback": {
+    "description": "friendFallback"
+  },
   "collaboratorsUpdated": "コラボレーターは正しく更新されました。",
+  "@collaboratorsUpdated": {
+    "description": "collaboratorsUpdated"
+  },
   "save": "保つ",
+  "@save": {
+    "description": "save"
+  },
   "manageCollaborators": "コラボレーター（友達）を管理する",
+  "@manageCollaborators": {
+    "description": "manageCollaborators"
+  },
   "done": "準備ができて",
+  "@done": {
+    "description": "done"
+  },
   "notAuthenticated": "認証されていません",
+  "@notAuthenticated": {
+    "description": "notAuthenticated"
+  },
   "genericError": "間違い",
+  "@genericError": {
+    "description": "genericError"
+  },
   "friendRequestSent": "フレンドリクエストを送信しました",
+  "@friendRequestSent": {
+    "description": "friendRequestSent"
+  },
   "friendRequestAccepted": "友達リクエスト受け付けました",
+  "@friendRequestAccepted": {
+    "description": "friendRequestAccepted"
+  },
   "friendshipRemoved": "友情が削除されました",
+  "@friendshipRemoved": {
+    "description": "friendshipRemoved"
+  },
   "userBlocked": "ブロックされたユーザー",
+  "@userBlocked": {
+    "description": "userBlocked"
+  },
   "userUnblocked": "ロック解除されたユーザー",
+  "@userUnblocked": {
+    "description": "userUnblocked"
+  },
   "artistsByTaste": "あなたの好みに合わせて",
+  "@artistsByTaste": {
+    "description": "artistsByTaste"
+  },
   "followedArtists": "フォローしました",
+  "@followedArtists": {
+    "description": "followedArtists"
+  },
   "recommendedArtists": "推奨",
+  "@recommendedArtists": {
+    "description": "recommendedArtists"
+  },
   "albumsByTaste": "あなたの好みに合わせて",
+  "@albumsByTaste": {
+    "description": "albumsByTaste"
+  },
   "savedAlbums": "保存されました",
+  "@savedAlbums": {
+    "description": "savedAlbums"
+  },
   "recommendedAlbums": "推奨",
+  "@recommendedAlbums": {
+    "description": "recommendedAlbums"
+  },
   "downloadNotificationChannelName": "音楽のダウンロード",
+  "@downloadNotificationChannelName": {
+    "description": "downloadNotificationChannelName"
+  },
   "downloadNotificationChannelDescription": "音楽のダウンロードをバックグラウンドでアクティブに保ちます。",
+  "@downloadNotificationChannelDescription": {
+    "description": "downloadNotificationChannelDescription"
+  },
   "downloadNotificationTitle": "音楽をダウンロードする",
+  "@downloadNotificationTitle": {
+    "description": "downloadNotificationTitle"
+  },
   "downloadNotificationPreparing": "ダウンロードを準備しています…",
+  "@downloadNotificationPreparing": {
+    "description": "downloadNotificationPreparing"
+  },
   "downloadNotificationSong": "ダウンロード中: {songTitle}",
+  "@downloadNotificationSong": {
+    "placeholders": {
+      "songTitle": {
+        "type": "String"
+      }
+    },
+    "description": "downloadNotificationSong"
+  },
   "syncCloudModeActive": "クラウドモード有効",
+  "@syncCloudModeActive": {
+    "description": "syncCloudModeActive"
+  },
   "permissionsConsentTitle": "開始するための権限",
+  "@permissionsConsentTitle": {
+    "description": "permissionsConsentTitle"
+  },
   "permissionsConsentDescription": "Estrella Music では、音楽を管理し、すべての再生機能を提供するためにこれらの権限が必要です。",
+  "@permissionsConsentDescription": {
+    "description": "permissionsConsentDescription"
+  },
   "permissionsStorageTitle": "音楽とストレージ",
+  "@permissionsStorageTitle": {
+    "description": "permissionsStorageTitle"
+  },
   "permissionsStorageDescription": "音楽の再生、ダウンロードの保存、プレイリストのエクスポート、アップデートの準備が可能です。",
+  "@permissionsStorageDescription": {
+    "description": "permissionsStorageDescription"
+  },
   "permissionsNotificationsTitle": "通知",
+  "@permissionsNotificationsTitle": {
+    "description": "permissionsNotificationsTitle"
+  },
   "permissionsNotificationsDescription": "再生コントロール、ダウンロードの進行状況、アプリの重要な通知を表示します。",
+  "@permissionsNotificationsDescription": {
+    "description": "permissionsNotificationsDescription"
+  },
   "permissionsMicrophoneTitle": "マイクロフォン",
+  "@permissionsMicrophoneTitle": {
+    "description": "permissionsMicrophoneTitle"
+  },
   "permissionsMicrophoneDescription": "これは、周囲で流れている曲を特定する場合にのみ使用されます。",
+  "@permissionsMicrophoneDescription": {
+    "description": "permissionsMicrophoneDescription"
+  },
   "permissionsContinueButton": "必要な権限を付与する",
+  "@permissionsContinueButton": {
+    "description": "permissionsContinueButton"
+  },
   "permissionsRequiredNotice": "継続するには 3 つの許可すべてが必要です。後でシステム設定で変更できます。",
+  "@permissionsRequiredNotice": {
+    "description": "permissionsRequiredNotice"
+  },
   "permissionsAllow": "許可する",
+  "@permissionsAllow": {
+    "description": "permissionsAllow"
+  },
   "permissionsOpenSettings": "設定",
+  "@permissionsOpenSettings": {
+    "description": "permissionsOpenSettings"
+  },
   "auth_2fa_title": "二要素認証",
+  "@auth_2fa_title": {
+    "description": "auth_2fa_title"
+  },
   "auth_2fa_subtitle": "認証アプリから 6 桁のコードを入力します。このアクセスは 5 分で期限切れになります。",
+  "@auth_2fa_subtitle": {
+    "description": "auth_2fa_subtitle"
+  },
   "auth_2fa_code": "認証コード",
+  "@auth_2fa_code": {
+    "description": "auth_2fa_code"
+  },
   "auth_2fa_verify": "確認して続行",
-  "auth_2fa_invalid": "有効な 6 桁のコードを入力するか、再度サインインしてください。"
+  "@auth_2fa_verify": {
+    "description": "auth_2fa_verify"
+  },
+  "auth_2fa_invalid": "有効な 6 桁のコードを入力するか、再度サインインしてください。",
+  "@auth_2fa_invalid": {
+    "description": "auth_2fa_invalid"
+  }
 }

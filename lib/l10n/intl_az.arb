@@ -1,149 +1,587 @@
 {
   "@@locale": "az",
   "playlistCreatednsongAddedAlert": "Pleylist yaradıldı və mahnı əlavə edildi!",
+  "@playlistCreatednsongAddedAlert": {
+    "description": "playlistCreatednsongAddedAlert"
+  },
   "dismiss": "Ləğv et",
+  "@dismiss": {
+    "description": "dismiss"
+  },
   "goToDownloadPage": "Yükləmə səhifəsinə keçmək üçün bura kliklə",
+  "@goToDownloadPage": {
+    "description": "goToDownloadPage"
+  },
   "songEnqueueAlert": "Mahnı növbəyə qoyuldu!",
+  "@songEnqueueAlert": {
+    "description": "songEnqueueAlert"
+  },
   "renamePlaylist": "Səsləndirmə Siyahısın Təkrar Adlandır",
+  "@renamePlaylist": {
+    "description": "renamePlaylist"
+  },
   "songAddedToPlaylistAlert": "Mahnı pleylistə əlavə edildi!",
+  "@songAddedToPlaylistAlert": {
+    "description": "songAddedToPlaylistAlert"
+  },
   "unlinkAlert": "Bağlantı uğurla kəsildi!",
+  "@unlinkAlert": {
+    "description": "unlinkAlert"
+  },
   "playlistCreatedAlert": "Pleylist yaradıldı!",
+  "@playlistCreatedAlert": {
+    "description": "playlistCreatedAlert"
+  },
   "reset": "Sıfırla",
+  "@reset": {
+    "description": "reset"
+  },
   "unLink": "Bağlantını kəs",
+  "@unLink": {
+    "description": "unLink"
+  },
   "trending": "Trenddə Olan",
+  "@trending": {
+    "description": "trending"
+  },
   "searchRes": "Axtarış nəticələri",
+  "@searchRes": {
+    "description": "searchRes"
+  },
   "cacheSongsDes": "Gələcək/oflayn səsləndirmə üçün səslənərkən mahnıları toplamaq cihazınızda əlavə yer tutacaq",
+  "@cacheSongsDes": {
+    "description": "cacheSongsDes"
+  },
   "password": "Parol",
+  "@password": {
+    "description": "password"
+  },
   "noLibPlaylist": "Sizin heç bir kitabxana pleylistiniz yoxdur!",
+  "@noLibPlaylist": {
+    "description": "noLibPlaylist"
+  },
   "setDiscoverContent": "Kəşf edilən məzmunu təyin et",
+  "@setDiscoverContent": {
+    "description": "setDiscoverContent"
+  },
   "networkError1": "Vay şəbəkə xətası!",
+  "@networkError1": {
+    "description": "networkError1"
+  },
   "songRemovedfromQueue": "Növbədən silindi!",
+  "@songRemovedfromQueue": {
+    "description": "songRemovedfromQueue"
+  },
   "libSongs": "Kitabxana Mahnıları",
+  "@libSongs": {
+    "description": "libSongs"
+  },
   "githubDes": "Bu layihəni bəyənirsinizsə, GitHub mənbə koduna baxın, ⭐ verməyi unutmayın",
+  "@githubDes": {
+    "description": "githubDes"
+  },
   "communityplaylists": "Cəmiyyət Səsləndirmə Siyahıları",
+  "@communityplaylists": {
+    "description": "communityplaylists"
+  },
   "playlistRemovedAlert": "Pleylist silindi!",
+  "@playlistRemovedAlert": {
+    "description": "playlistRemovedAlert"
+  },
   "libAlbums": "Kitabxana Albomları",
+  "@libAlbums": {
+    "description": "libAlbums"
+  },
   "albumBookmarkRemoveAlert": "Albom əlfəcini silindi!",
+  "@albumBookmarkRemoveAlert": {
+    "description": "albumBookmarkRemoveAlert"
+  },
   "notaSongVideo": "Mahnı/Musiqi-Videosu Deyil!",
+  "@notaSongVideo": {
+    "description": "notaSongVideo"
+  },
   "ignoreBatOptDes": "Bildiriş problemləri görürsünüzsə və ya sistem optimallaşdırılmasına görə səsləndirmə dayandırılıbsa, xahiş olunur ,bu seçimi aktivləşdirin",
+  "@ignoreBatOptDes": {
+    "description": "ignoreBatOptDes"
+  },
   "for1": "Bunun üçün:",
+  "@for1": {
+    "description": "for1"
+  },
   "low": "Aşağı",
+  "@low": {
+    "description": "low"
+  },
   "link": "Bağlantı yarat",
+  "@link": {
+    "description": "link"
+  },
   "selectAuthIns": "Təsdiqləyici Server Seç",
+  "@selectAuthIns": {
+    "description": "selectAuthIns"
+  },
   "languageDes": "Tətbiq dili təyin et",
+  "@languageDes": {
+    "description": "languageDes"
+  },
   "stopMusicOnTaskClear": "Tapşırıq silinəndə musiqini dayandır",
+  "@stopMusicOnTaskClear": {
+    "description": "stopMusicOnTaskClear"
+  },
   "enqueueAll": "Hamısın növbələşdir",
+  "@enqueueAll": {
+    "description": "enqueueAll"
+  },
   "customInsSelectMsg": "Zəhmət olmasa, Fərdi Server Seç",
+  "@customInsSelectMsg": {
+    "description": "customInsSelectMsg"
+  },
   "skipSilence": "Səssizliyi Keç",
+  "@skipSilence": {
+    "description": "skipSilence"
+  },
   "create": "Yarat",
+  "@create": {
+    "description": "create"
+  },
   "equalizer": "Tarazlayıcı",
+  "@equalizer": {
+    "description": "equalizer"
+  },
   "enqueueSong": "Bu mahnını növbəyə qoy",
+  "@enqueueSong": {
+    "description": "enqueueSong"
+  },
   "noBookmarks": "Əlfəcinlər yoxdur!",
+  "@noBookmarks": {
+    "description": "noBookmarks"
+  },
   "playlists": "Səsləndirmə Siyahıları",
+  "@playlists": {
+    "description": "playlists"
+  },
   "videos": "Videolar",
+  "@videos": {
+    "description": "videos"
+  },
   "enabled": "Aktivləşib",
+  "@enabled": {
+    "description": "enabled"
+  },
   "allFieldsReqMsg": "Bütün tələb olunan sahələr",
+  "@allFieldsReqMsg": {
+    "description": "allFieldsReqMsg"
+  },
   "artistBookmarkAddAlert": "Sənətkar əlfəcinləndi!",
+  "@artistBookmarkAddAlert": {
+    "description": "artistBookmarkAddAlert"
+  },
   "rename": "Təkrar adlandır",
+  "@rename": {
+    "description": "rename"
+  },
   "viewAll": "Hamısına bax",
+  "@viewAll": {
+    "description": "viewAll"
+  },
   "github": "GitHub",
+  "@github": {
+    "description": "github"
+  },
   "newVersionAvailable": "Yeni versiya əlçatandır!",
+  "@newVersionAvailable": {
+    "description": "newVersionAvailable"
+  },
   "items": "elementlər",
+  "@items": {
+    "description": "items"
+  },
   "subscribers": "abunəçilər",
+  "@subscribers": {
+    "description": "subscribers"
+  },
   "startRadio": "📻 Radionu işə sal",
+  "@startRadio": {
+    "description": "startRadio"
+  },
   "discover": "Kəşf et",
+  "@discover": {
+    "description": "discover"
+  },
   "cacheSongs": "Mahnıları Topla",
+  "@cacheSongs": {
+    "description": "cacheSongs"
+  },
   "downloads": "Yükləmələr",
+  "@downloads": {
+    "description": "downloads"
+  },
   "removeFromLib": "Kitabxana Mahnılarından Sil",
+  "@removeFromLib": {
+    "description": "removeFromLib"
+  },
   "songAlreadyExists": "Mahnı artıq var!",
+  "@songAlreadyExists": {
+    "description": "songAlreadyExists"
+  },
   "libArtists": "Kitabxana Sənətkarları",
+  "@libArtists": {
+    "description": "libArtists"
+  },
   "downloadingFormat": "Yükləmə Fayl Formatı",
+  "@downloadingFormat": {
+    "description": "downloadingFormat"
+  },
   "username": "İstifadəçi adı",
+  "@username": {
+    "description": "username"
+  },
   "light": "İşıqlı",
+  "@light": {
+    "description": "light"
+  },
   "resetblacklistedplaylist": "Qara siyahıya salınan pleylistləri sıfırla",
+  "@resetblacklistedplaylist": {
+    "description": "resetblacklistedplaylist"
+  },
   "dynamic": "Dinamik",
+  "@dynamic": {
+    "description": "dynamic"
+  },
   "selectAuthInsMsg": "Zəhmət olmasa, Təsdiqləyici Serveri Seçin!",
+  "@selectAuthInsMsg": {
+    "description": "selectAuthInsMsg"
+  },
   "equalizerDes": "sistem tarazlayıcısın aç",
+  "@equalizerDes": {
+    "description": "equalizerDes"
+  },
   "removePlaylist": "Səsləndirmə siyahısın sil",
+  "@removePlaylist": {
+    "description": "removePlaylist"
+  },
   "customIns": "Fərdi Server",
+  "@customIns": {
+    "description": "customIns"
+  },
   "Piped": "Piped",
+  "@Piped": {
+    "description": "Piped"
+  },
   "addToPlaylist": "Səsləndirmə siyahısına əlavə et",
+  "@addToPlaylist": {
+    "description": "addToPlaylist"
+  },
   "stopMusicOnTaskClearDes": "Tətbiq tapşırıq idarəedicidən sürüşdürüldükdə musiqi səslənməsi dayandırılacaq",
+  "@stopMusicOnTaskClearDes": {
+    "description": "stopMusicOnTaskClearDes"
+  },
   "cachedOrOffline": "Toplanan/Oflayn",
+  "@cachedOrOffline": {
+    "description": "cachedOrOffline"
+  },
   "retry": "Təkrar cəhd et!",
+  "@retry": {
+    "description": "retry"
+  },
   "artists": "Sənətkarlar",
+  "@artists": {
+    "description": "artists"
+  },
   "playlistBookmarkAddAlert": "Pleylist əlfəcinləndi!",
+  "@playlistBookmarkAddAlert": {
+    "description": "playlistBookmarkAddAlert"
+  },
   "albums": "Albomlar",
+  "@albums": {
+    "description": "albums"
+  },
   "radioNotAvailable": "Radio bu sənətkar üçün əlçatan deyil!",
+  "@radioNotAvailable": {
+    "description": "radioNotAvailable"
+  },
   "recentlyPlayed": "Yenicə Oynadılıb",
+  "@recentlyPlayed": {
+    "description": "recentlyPlayed"
+  },
   "viewArtist": "Sənətkara Bax",
+  "@viewArtist": {
+    "description": "viewArtist"
+  },
   "createnAdd": "Yarat və əlavə et",
+  "@createnAdd": {
+    "description": "createnAdd"
+  },
   "topmusicvideos": "Qabaqcıl Musiqi Videoları",
+  "@topmusicvideos": {
+    "description": "topmusicvideos"
+  },
   "about": "Haqqında",
+  "@about": {
+    "description": "about"
+  },
   "playlistBookmarkRemoveAlert": "Pleylist əlfəcini silindi!",
+  "@playlistBookmarkRemoveAlert": {
+    "description": "playlistBookmarkRemoveAlert"
+  },
   "systemDefault": "Sistem standartı",
+  "@systemDefault": {
+    "description": "systemDefault"
+  },
   "local": "Yerli",
+  "@local": {
+    "description": "local"
+  },
   "ignoreBatOpt": "Batareya optimallaşdırılmasına məhəl qoyma",
+  "@ignoreBatOpt": {
+    "description": "ignoreBatOpt"
+  },
   "singles": "Yeganələr",
+  "@singles": {
+    "description": "singles"
+  },
   "linkAlert": "Uğurla əlaqə quruldu!",
+  "@linkAlert": {
+    "description": "linkAlert"
+  },
   "status": "Vəziyyət",
+  "@status": {
+    "description": "status"
+  },
   "themeMode": "Mövzu Rejimi",
+  "@themeMode": {
+    "description": "themeMode"
+  },
   "streamingQualityDes": "Musiqi axın keyfiyyəti",
+  "@streamingQualityDes": {
+    "description": "streamingQualityDes"
+  },
   "nomatch": "Sorğu üçün uyğunluq tapılmadı",
+  "@nomatch": {
+    "description": "nomatch"
+  },
   "notaValidLink": "İşlək bağlantı deyil!",
+  "@notaValidLink": {
+    "description": "notaValidLink"
+  },
   "emptyPlaylist": "Boş səsləndirmə siyahısı!",
+  "@emptyPlaylist": {
+    "description": "emptyPlaylist"
+  },
   "favorites": "Sevimlilər",
+  "@favorites": {
+    "description": "favorites"
+  },
   "dark": "Qaranlıq",
+  "@dark": {
+    "description": "dark"
+  },
   "home": "Ev",
+  "@home": {
+    "description": "home"
+  },
   "cancel": "Ləğv et",
+  "@cancel": {
+    "description": "cancel"
+  },
   "by": "Proqramçı:",
+  "@by": {
+    "description": "by"
+  },
   "streamingQuality": "Yayımlanma keyfiyyəti",
+  "@streamingQuality": {
+    "description": "streamingQuality"
+  },
   "linkPipedDes": "Pleylistlər Üçün Pipedlə Əlaqə",
+  "@linkPipedDes": {
+    "description": "linkPipedDes"
+  },
   "libPlaylists": "Kitabxana Səsləndirmə Siyahıları",
+  "@libPlaylists": {
+    "description": "libPlaylists"
+  },
   "disabled": "Qeyri-aktivdir",
+  "@disabled": {
+    "description": "disabled"
+  },
   "CreateNewPlaylist": "Yeni səsləndirmə siyahısı yarat",
+  "@CreateNewPlaylist": {
+    "description": "CreateNewPlaylist"
+  },
   "blacklistPlstResetAlert": "Uğurla sıfırlandı!",
+  "@blacklistPlstResetAlert": {
+    "description": "blacklistPlstResetAlert"
+  },
   "language": "Dil",
+  "@language": {
+    "description": "language"
+  },
   "search": "Axtarış",
+  "@search": {
+    "description": "search"
+  },
   "songAlreadyOfflineAlert": "Mahnı artıq yaddaşda oflayndır",
+  "@songAlreadyOfflineAlert": {
+    "description": "songAlreadyOfflineAlert"
+  },
   "skipSilenceDes": "Musiqi səslənərkən səssizlik keçiləcək",
+  "@skipSilenceDes": {
+    "description": "skipSilenceDes"
+  },
   "playNext": "Növbətini səsləndir",
+  "@playNext": {
+    "description": "playNext"
+  },
   "errorOccuredAlert": "Xəta baş verdi!",
+  "@errorOccuredAlert": {
+    "description": "errorOccuredAlert"
+  },
   "songs": "Mahnılar",
+  "@songs": {
+    "description": "songs"
+  },
   "high": "Yüksək",
+  "@high": {
+    "description": "high"
+  },
   "searchDes": "Mahnılar, Pleylist, Albom və ya Sənətkar",
+  "@searchDes": {
+    "description": "searchDes"
+  },
   "results": "Nəticələr",
+  "@results": {
+    "description": "results"
+  },
   "playlistBlacklistAlert": "Pleylist qara siyahıya salındı!",
+  "@playlistBlacklistAlert": {
+    "description": "playlistBlacklistAlert"
+  },
   "artistDesNotAvailable": "Təsvir mövcud deyil!",
+  "@artistDesNotAvailable": {
+    "description": "artistDesNotAvailable"
+  },
   "resetblacklistedplaylistDes": "Pipedin qara siyahıya salınan pleylistlərinin hamısın sıfırla",
+  "@resetblacklistedplaylistDes": {
+    "description": "resetblacklistedplaylistDes"
+  },
   "downloadLocation": "Yükləmə Məkanı",
+  "@downloadLocation": {
+    "description": "downloadLocation"
+  },
   "songRemovedfromQueueCurrSong": "Hazırda səslənən mahnını silə bilməzsiniz",
+  "@songRemovedfromQueueCurrSong": {
+    "description": "songRemovedfromQueueCurrSong"
+  },
   "settings": "Tənzimləmələr",
+  "@settings": {
+    "description": "settings"
+  },
   "basedOnLast": "Son qarşılıqlı əlaqə əsasında",
+  "@basedOnLast": {
+    "description": "basedOnLast"
+  },
   "hintApiUrl": "Piped Serveri Üçün API URL",
+  "@hintApiUrl": {
+    "description": "hintApiUrl"
+  },
   "playlistRenameAlert": "Ad uğurla dəyişdirildi!",
+  "@playlistRenameAlert": {
+    "description": "playlistRenameAlert"
+  },
   "downloadingFormatDes": "Yükləmə fayl formatın seç. \"Opus\" ən yaxşı keyfiyyəti təmin edəcək",
+  "@downloadingFormatDes": {
+    "description": "downloadingFormatDes"
+  },
   "albumBookmarkAddAlert": "Albom əlfəcinləndi!",
+  "@albumBookmarkAddAlert": {
+    "description": "albumBookmarkAddAlert"
+  },
   "removeFromPlaylist": "Səsləndirmə siyahısından sil",
+  "@removeFromPlaylist": {
+    "description": "removeFromPlaylist"
+  },
   "lyricsNotAvailable": "Lirika mövcud deyil!",
+  "@lyricsNotAvailable": {
+    "description": "lyricsNotAvailable"
+  },
   "dontShowInfoAgain": "Bu məlumatı təkrar göstərmə",
+  "@dontShowInfoAgain": {
+    "description": "dontShowInfoAgain"
+  },
   "noOfflineSong": "Oflayn mahnılar yoxdur!",
+  "@noOfflineSong": {
+    "description": "noOfflineSong"
+  },
   "featuredplaylists": "Göstərilən Səsləndirmə Siyahıları",
+  "@featuredplaylists": {
+    "description": "featuredplaylists"
+  },
   "quickpicks": "Sürətli Seçimlər",
+  "@quickpicks": {
+    "description": "quickpicks"
+  },
   "artistBookmarkRemoveAlert": "Sənətkar əlfəcini silindi!",
+  "@artistBookmarkRemoveAlert": {
+    "description": "artistBookmarkRemoveAlert"
+  },
   "operationFailed": "Əməliyyat uğursuz oldu",
+  "@operationFailed": {
+    "description": "operationFailed"
+  },
   "goToAlbum": "Alboma keç",
+  "@goToAlbum": {
+    "description": "goToAlbum"
+  },
   "removeFromQueue": "Növbədən sil",
+  "@removeFromQueue": {
+    "description": "removeFromQueue"
+  },
   "shareSong": "Bu mahnını paylaş",
+  "@shareSong": {
+    "description": "shareSong"
+  },
   "songRemovedAlert": "-dən² silindi",
+  "@songRemovedAlert": {
+    "description": "songRemovedAlert"
+  },
   "add5Minutes": "5 dəqiqə əlavə edin",
+  "@add5Minutes": {
+    "description": "add5Minutes"
+  },
   "cancelTimer": "Taymeri ləğv edin",
+  "@cancelTimer": {
+    "description": "cancelTimer"
+  },
   "endOfThisSong": "Bu mahnının sonunda",
+  "@endOfThisSong": {
+    "description": "endOfThisSong"
+  },
   "sleepTimeSetAlert": "Yuxu taymeriniz qurulub",
+  "@sleepTimeSetAlert": {
+    "description": "sleepTimeSetAlert"
+  },
   "library": "Kitabxana",
+  "@library": {
+    "description": "library"
+  },
   "minutes": "dəqiqə",
+  "@minutes": {
+    "description": "minutes"
+  },
   "sleepTimer": "Yuxu taymeri",
+  "@sleepTimer": {
+    "description": "sleepTimer"
+  },
   "cancelTimerAlert": "Yuxu taymeri ləğv edildi",
+  "@cancelTimerAlert": {
+    "description": "cancelTimerAlert"
+  },
   "keepScreenOnWhilePlaying": "Musiqi çalarkən ekranı açıq saxla",
-  "keepScreenOnWhilePlayingDes": "Aktivdirsə, cihazın ekranı musiqi çalarkən açıq qalacaq"
+  "@keepScreenOnWhilePlaying": {
+    "description": "keepScreenOnWhilePlaying"
+  },
+  "keepScreenOnWhilePlayingDes": "Aktivdirsə, cihazın ekranı musiqi çalarkən açıq qalacaq",
+  "@keepScreenOnWhilePlayingDes": {
+    "description": "keepScreenOnWhilePlayingDes"
+  }
 }

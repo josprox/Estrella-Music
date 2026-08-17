@@ -1,323 +1,1148 @@
 {
   "@@locale": "uk",
   "library": "Бібліотека",
+  "@library": {
+    "description": "library"
+  },
   "libPlaylists": "Бібліотека списків відтворення",
+  "@libPlaylists": {
+    "description": "libPlaylists"
+  },
   "libAlbums": "Бібліотека альбомів",
+  "@libAlbums": {
+    "description": "libAlbums"
+  },
   "libArtists": "Бібліотека виконавців",
+  "@libArtists": {
+    "description": "libArtists"
+  },
   "items": "елементи",
+  "@items": {
+    "description": "items"
+  },
   "noOfflineSong": "Немає пісень поза мережею!",
+  "@noOfflineSong": {
+    "description": "noOfflineSong"
+  },
   "recentlyPlayed": "Нещодавно відтворено",
+  "@recentlyPlayed": {
+    "description": "recentlyPlayed"
+  },
   "favorites": "Вибрані",
+  "@favorites": {
+    "description": "favorites"
+  },
   "cachedOrOffline": "Кешовані / Поза мережею",
+  "@cachedOrOffline": {
+    "description": "cachedOrOffline"
+  },
   "downloads": "Завантаження",
+  "@downloads": {
+    "description": "downloads"
+  },
   "emptyPlaylist": "Пустий список відтворення!",
+  "@emptyPlaylist": {
+    "description": "emptyPlaylist"
+  },
   "enqueueAll": "Додати все в чергу",
+  "@enqueueAll": {
+    "description": "enqueueAll"
+  },
   "renamePlaylist": "Перейменувати список відтворення",
+  "@renamePlaylist": {
+    "description": "renamePlaylist"
+  },
   "removePlaylist": "Видалити список відтворення",
+  "@removePlaylist": {
+    "description": "removePlaylist"
+  },
   "networkError1": "Упс, помилка мережі!",
+  "@networkError1": {
+    "description": "networkError1"
+  },
   "retry": "Повторити!",
+  "@retry": {
+    "description": "retry"
+  },
   "home": "Головна",
+  "@home": {
+    "description": "home"
+  },
   "songs": "Пісні",
+  "@songs": {
+    "description": "songs"
+  },
   "playlists": "Списки відтворення",
+  "@playlists": {
+    "description": "playlists"
+  },
   "albums": "Альбоми",
+  "@albums": {
+    "description": "albums"
+  },
   "artists": "Виконавці",
+  "@artists": {
+    "description": "artists"
+  },
   "settings": "Налаштування",
+  "@settings": {
+    "description": "settings"
+  },
   "libSongs": "Бібліотека пісень",
+  "@libSongs": {
+    "description": "libSongs"
+  },
   "singles": "Сингли",
+  "@singles": {
+    "description": "singles"
+  },
   "communityplaylists": "Списки відтворення спільноти",
+  "@communityplaylists": {
+    "description": "communityplaylists"
+  },
   "featuredplaylists": "Обрані списки відтворення",
+  "@featuredplaylists": {
+    "description": "featuredplaylists"
+  },
   "deleteDownloadData": "Видалити із завантажень",
+  "@deleteDownloadData": {
+    "description": "deleteDownloadData"
+  },
   "CreateNewPlaylist": "Створити новий список відтворення",
+  "@CreateNewPlaylist": {
+    "description": "CreateNewPlaylist"
+  },
   "cancel": "Скасувати",
+  "@cancel": {
+    "description": "cancel"
+  },
   "shareSong": "Поділитися цією піснею",
+  "@shareSong": {
+    "description": "shareSong"
+  },
   "removeFromPlaylist": "Видалити зі списку відтворення",
+  "@removeFromPlaylist": {
+    "description": "removeFromPlaylist"
+  },
   "removeFromQueue": "Видалити з черги",
+  "@removeFromQueue": {
+    "description": "removeFromQueue"
+  },
   "sleepTimer": "Таймер сну",
+  "@sleepTimer": {
+    "description": "sleepTimer"
+  },
   "add5Minutes": "Додати 5 хвилин",
+  "@add5Minutes": {
+    "description": "add5Minutes"
+  },
   "dark": "Темна",
+  "@dark": {
+    "description": "dark"
+  },
   "quickpicks": "Швидкий вибір",
+  "@quickpicks": {
+    "description": "quickpicks"
+  },
   "basedOnLast": "На основі останньої взаємодії",
+  "@basedOnLast": {
+    "description": "basedOnLast"
+  },
   "homeContentCount": "Кількість вмісту на головній сторінці",
+  "@homeContentCount": {
+    "description": "homeContentCount"
+  },
   "homeContentCountDes": "Виберіть кількість перших елементів головному екрана. Чим менше, тим швидше завантажується",
+  "@homeContentCountDes": {
+    "description": "homeContentCountDes"
+  },
   "cacheSongsDes": "Кешування пісень під час відтворення для майбутнього/офлайн-відтворення займе додатковий простір на вашому пристрої",
+  "@cacheSongsDes": {
+    "description": "cacheSongsDes"
+  },
   "low": "Низьке",
+  "@low": {
+    "description": "low"
+  },
   "downloadingFormatDes": "Виберіть формат файлу для завантаження. «Opus» забезпечить найкращу якість",
+  "@downloadingFormatDes": {
+    "description": "downloadingFormatDes"
+  },
   "downloadLocation": "Тека для завантаження",
+  "@downloadLocation": {
+    "description": "downloadLocation"
+  },
   "removeFromLib": "Вилучити з бібліотеки пісні",
+  "@removeFromLib": {
+    "description": "removeFromLib"
+  },
   "themeMode": "Режим теми",
+  "@themeMode": {
+    "description": "themeMode"
+  },
   "dynamic": "Динамічна",
+  "@dynamic": {
+    "description": "dynamic"
+  },
   "language": "Мова",
+  "@language": {
+    "description": "language"
+  },
   "languageDes": "Встановити мову застосунку",
+  "@languageDes": {
+    "description": "languageDes"
+  },
   "discover": "Відкрийте для себе",
+  "@discover": {
+    "description": "discover"
+  },
   "downloadingFormat": "Формат завантаженого файлу",
+  "@downloadingFormat": {
+    "description": "downloadingFormat"
+  },
   "enqueueSong": "Додати цю пісню в чергу",
+  "@enqueueSong": {
+    "description": "enqueueSong"
+  },
   "playNext": "Наступна",
+  "@playNext": {
+    "description": "playNext"
+  },
   "startRadio": "Увімкнути радіо",
+  "@startRadio": {
+    "description": "startRadio"
+  },
   "addToPlaylist": "Додати до списку відтворення",
+  "@addToPlaylist": {
+    "description": "addToPlaylist"
+  },
   "noLibPlaylist": "У вас немає жодного списку відтворення в бібліотеці!",
+  "@noLibPlaylist": {
+    "description": "noLibPlaylist"
+  },
   "viewArtist": "Переглянути виконавця",
+  "@viewArtist": {
+    "description": "viewArtist"
+  },
   "upNext": "Наступне",
+  "@upNext": {
+    "description": "upNext"
+  },
   "systemDefault": "Як в системі",
+  "@systemDefault": {
+    "description": "systemDefault"
+  },
   "setDiscoverContent": "Налаштувати показ контенту",
+  "@setDiscoverContent": {
+    "description": "setDiscoverContent"
+  },
   "trending": "У трендах",
+  "@trending": {
+    "description": "trending"
+  },
   "topmusicvideos": "Найкращі музичні відео",
+  "@topmusicvideos": {
+    "description": "topmusicvideos"
+  },
   "enableBottomNav": "Нижня панель навігації",
+  "@enableBottomNav": {
+    "description": "enableBottomNav"
+  },
   "enableBottomNavDes": "Перейти до нижньої панелі навігації",
+  "@enableBottomNavDes": {
+    "description": "enableBottomNavDes"
+  },
   "cacheSongs": "Кешовані пісні",
+  "@cacheSongs": {
+    "description": "cacheSongs"
+  },
   "skipSilence": "Пропускати тишу",
+  "@skipSilence": {
+    "description": "skipSilence"
+  },
   "skipSilenceDes": "Під час відтворення музики тишу буде пропущено",
+  "@skipSilenceDes": {
+    "description": "skipSilenceDes"
+  },
   "streamingQuality": "Якість потоку",
+  "@streamingQuality": {
+    "description": "streamingQuality"
+  },
   "streamingQualityDes": "Якість звучання музичного потоку",
+  "@streamingQualityDes": {
+    "description": "streamingQualityDes"
+  },
   "high": "Високе",
+  "@high": {
+    "description": "high"
+  },
   "cacheHomeScreenDataDes": "Увімкнути кешування даних вмісту головного екрану, Головна буде завантажуватися миттєво, якщо цю опцію буде увімкнено",
+  "@cacheHomeScreenDataDes": {
+    "description": "cacheHomeScreenDataDes"
+  },
   "backgroundPlay": "Грати музику у фоні",
+  "@backgroundPlay": {
+    "description": "backgroundPlay"
+  },
   "backgroundPlayDes": "Увімкнути/вимкнути прослуховування музики у фоновому режимі (коли застосунок працює у фоновому режимі, доступ до нього можна отримати з системного лотка)",
+  "@backgroundPlayDes": {
+    "description": "backgroundPlayDes"
+  },
   "createnAdd": "Створити та додати",
+  "@createnAdd": {
+    "description": "createnAdd"
+  },
   "noBookmarks": "Немає закладок!",
+  "@noBookmarks": {
+    "description": "noBookmarks"
+  },
   "reArrangePlaylist": "Перегрупувати список відтворення",
+  "@reArrangePlaylist": {
+    "description": "reArrangePlaylist"
+  },
   "removeMultiple": "Видалити кілька пісень",
+  "@removeMultiple": {
+    "description": "removeMultiple"
+  },
   "addMultipleSongs": "Додати пісні до списку відтворення",
+  "@addMultipleSongs": {
+    "description": "addMultipleSongs"
+  },
   "create": "Створити",
+  "@create": {
+    "description": "create"
+  },
   "rename": "Перейменувати",
+  "@rename": {
+    "description": "rename"
+  },
   "goToAlbum": "Перейти до альбому",
+  "@goToAlbum": {
+    "description": "goToAlbum"
+  },
   "cancelTimer": "Скасувати таймер",
+  "@cancelTimer": {
+    "description": "cancelTimer"
+  },
   "minutes": "хв.",
+  "@minutes": {
+    "description": "minutes"
+  },
   "endOfThisSong": "Кінець пісні",
+  "@endOfThisSong": {
+    "description": "endOfThisSong"
+  },
   "light": "Світла",
+  "@light": {
+    "description": "light"
+  },
   "restoreLastPlaybackSession": "Відновити останню сесію прослуховування",
+  "@restoreLastPlaybackSession": {
+    "description": "restoreLastPlaybackSession"
+  },
   "restoreLastPlaybackSessionDes": "Автоматичне відновлення останнього сеансу прослуховування під час запуску застосунку",
+  "@restoreLastPlaybackSessionDes": {
+    "description": "restoreLastPlaybackSessionDes"
+  },
   "cacheHomeScreenData": "Кешування даних вмісту головного екрана",
+  "@cacheHomeScreenData": {
+    "description": "cacheHomeScreenData"
+  },
   "disableTransitionAnimation": "Вимкнути анімацію переходу",
+  "@disableTransitionAnimation": {
+    "description": "disableTransitionAnimation"
+  },
   "disableTransitionAnimationDes": "Увімкніть цю опцію, щоб вимкнути анімацію переходу між вкладками",
+  "@disableTransitionAnimationDes": {
+    "description": "disableTransitionAnimationDes"
+  },
   "status": "Статус",
+  "@status": {
+    "description": "status"
+  },
   "disabled": "Вимкнено",
+  "@disabled": {
+    "description": "disabled"
+  },
   "by": "від",
+  "@by": {
+    "description": "by"
+  },
   "synced": "Синхронізовано",
+  "@synced": {
+    "description": "synced"
+  },
   "cancelTimerAlert": "Таймер сну скасовано",
+  "@cancelTimerAlert": {
+    "description": "cancelTimerAlert"
+  },
   "artistBookmarkRemoveAlert": "Вилучено закладку виконавця!",
+  "@artistBookmarkRemoveAlert": {
+    "description": "artistBookmarkRemoveAlert"
+  },
   "artistBookmarkAddAlert": "Виконавець додано в закладки!",
+  "@artistBookmarkAddAlert": {
+    "description": "artistBookmarkAddAlert"
+  },
   "syncedLyricsNotAvailable": "Синхронізовані тексти не доступні!",
+  "@syncedLyricsNotAvailable": {
+    "description": "syncedLyricsNotAvailable"
+  },
   "link": "Посилання",
+  "@link": {
+    "description": "link"
+  },
   "unLink": "Від’єднати",
+  "@unLink": {
+    "description": "unLink"
+  },
   "reset": "Скинути",
+  "@reset": {
+    "description": "reset"
+  },
   "songRemovedAlert": "Видалено з",
+  "@songRemovedAlert": {
+    "description": "songRemovedAlert"
+  },
   "openIn": "Відкрити в",
+  "@openIn": {
+    "description": "openIn"
+  },
   "exportDowloadedFiles": "Експорт завантажених файлів",
+  "@exportDowloadedFiles": {
+    "description": "exportDowloadedFiles"
+  },
   "exportDowloadedFilesDes": "Клацніть тут, щоб експортувати завантажений файл із каталогу програми до зовнішнього каталогу",
+  "@exportDowloadedFilesDes": {
+    "description": "exportDowloadedFilesDes"
+  },
   "export": "Експорт",
+  "@export": {
+    "description": "export"
+  },
   "exporting": "Експорт...",
+  "@exporting": {
+    "description": "exporting"
+  },
   "scanning": "Сканування...",
+  "@scanning": {
+    "description": "scanning"
+  },
   "downFilesFound": "знайдено завантажених файлів",
+  "@downFilesFound": {
+    "description": "downFilesFound"
+  },
   "close": "Закрити",
+  "@close": {
+    "description": "close"
+  },
   "exportMsg": "Файли успішно експортовано",
+  "@exportMsg": {
+    "description": "exportMsg"
+  },
   "equalizer": "Еквалайзер",
+  "@equalizer": {
+    "description": "equalizer"
+  },
   "equalizerDes": "Відкрити системний еквалайзер",
+  "@equalizerDes": {
+    "description": "equalizerDes"
+  },
   "clearImgCache": "Очистити кеш зображень",
+  "@clearImgCache": {
+    "description": "clearImgCache"
+  },
   "clearImgCacheAlert": "Кеш зображень успішно очищено",
+  "@clearImgCacheAlert": {
+    "description": "clearImgCacheAlert"
+  },
   "clearImgCacheDes": "Натисніть тут, щоб очистити кешовані мініатюри/зображення. (Не рекомендується, якщо не потрібно оновити кешовані дані зображень)",
+  "@clearImgCacheDes": {
+    "description": "clearImgCacheDes"
+  },
   "enabled": "Увімкнено",
+  "@enabled": {
+    "description": "enabled"
+  },
   "github": "GitHub",
+  "@github": {
+    "description": "github"
+  },
   "githubDes": "Переглянути вихідний код GitHub\n якщо вам подобається цей проєкт, не забудьте поставити ⭐",
+  "@githubDes": {
+    "description": "githubDes"
+  },
   "searchDes": "Пісні, плейлиси, альбом або виконавець",
+  "@searchDes": {
+    "description": "searchDes"
+  },
   "searchRes": "Результати пошуку",
+  "@searchRes": {
+    "description": "searchRes"
+  },
   "for1": "для",
+  "@for1": {
+    "description": "for1"
+  },
   "videos": "Відео",
+  "@videos": {
+    "description": "videos"
+  },
   "viewAll": "Подивитись все",
+  "@viewAll": {
+    "description": "viewAll"
+  },
   "deleteDownloadedDataAlert": "Успішно видалено із завантажень!",
+  "@deleteDownloadedDataAlert": {
+    "description": "deleteDownloadedDataAlert"
+  },
   "songRemovedfromQueueCurrSong": "Ви не можете видалити пісню, яка зараз відтворюється",
+  "@songRemovedfromQueueCurrSong": {
+    "description": "songRemovedfromQueueCurrSong"
+  },
   "songEnqueueAlert": "Пісня в черзі!",
+  "@songEnqueueAlert": {
+    "description": "songEnqueueAlert"
+  },
   "playlistRenameAlert": "Успішно перейменовано!",
+  "@playlistRenameAlert": {
+    "description": "playlistRenameAlert"
+  },
   "playlistRemovedAlert": "Список відтворення видалено!",
+  "@playlistRemovedAlert": {
+    "description": "playlistRemovedAlert"
+  },
   "lyricsNotAvailable": "Тексти пісень недоступні!",
+  "@lyricsNotAvailable": {
+    "description": "lyricsNotAvailable"
+  },
   "notaValidLink": "Недійсне посилання!",
+  "@notaValidLink": {
+    "description": "notaValidLink"
+  },
   "allFieldsReqMsg": "Усі поля обов’язкові",
+  "@allFieldsReqMsg": {
+    "description": "allFieldsReqMsg"
+  },
   "password": "Пароль",
+  "@password": {
+    "description": "password"
+  },
   "playlistBlacklistAlert": "Список відтворення в чорному списку!",
+  "@playlistBlacklistAlert": {
+    "description": "playlistBlacklistAlert"
+  },
   "blacklistPlstResetAlert": "Скинуто успішно!",
+  "@blacklistPlstResetAlert": {
+    "description": "blacklistPlstResetAlert"
+  },
   "resetblacklistedplaylist": "Скидання списків відтворення з чорного списку",
+  "@resetblacklistedplaylist": {
+    "description": "resetblacklistedplaylist"
+  },
   "stopMusicOnTaskClearDes": "Відтворення музики припиниться, коли застосунок буде видалено з диспетчера завдань",
+  "@stopMusicOnTaskClearDes": {
+    "description": "stopMusicOnTaskClearDes"
+  },
   "search": "Пошук",
+  "@search": {
+    "description": "search"
+  },
   "nomatch": "Збігів не знайдено",
+  "@nomatch": {
+    "description": "nomatch"
+  },
   "results": "Результати",
+  "@results": {
+    "description": "results"
+  },
   "subscribers": "підписників",
+  "@subscribers": {
+    "description": "subscribers"
+  },
   "songRemovedfromQueue": "Знято з черги!",
+  "@songRemovedfromQueue": {
+    "description": "songRemovedfromQueue"
+  },
   "radioNotAvailable": "Радіо недоступне для цього виконавця!",
+  "@radioNotAvailable": {
+    "description": "radioNotAvailable"
+  },
   "songAlreadyExists": "Пісня вже є!",
+  "@songAlreadyExists": {
+    "description": "songAlreadyExists"
+  },
   "songAlreadyOfflineAlert": "Пісня вже офлайн у кеші",
+  "@songAlreadyOfflineAlert": {
+    "description": "songAlreadyOfflineAlert"
+  },
   "playlistCreatedAlert": "Список відтворення створено!",
+  "@playlistCreatedAlert": {
+    "description": "playlistCreatedAlert"
+  },
   "playlistCreatednsongAddedAlert": "Створено список відтворення та додано пісню!",
+  "@playlistCreatednsongAddedAlert": {
+    "description": "playlistCreatednsongAddedAlert"
+  },
   "artistDesNotAvailable": "Опис недоступний!",
+  "@artistDesNotAvailable": {
+    "description": "artistDesNotAvailable"
+  },
   "newVersionAvailable": "Доступна нова версія!",
+  "@newVersionAvailable": {
+    "description": "newVersionAvailable"
+  },
   "dontShowInfoAgain": "Більше не показувати цю інформацію",
+  "@dontShowInfoAgain": {
+    "description": "dontShowInfoAgain"
+  },
   "dismiss": "Відхилити",
+  "@dismiss": {
+    "description": "dismiss"
+  },
   "operationFailed": "Операція не вдалася",
+  "@operationFailed": {
+    "description": "operationFailed"
+  },
   "notaSongVideo": "Не пісня / музичне відео!",
+  "@notaSongVideo": {
+    "description": "notaSongVideo"
+  },
   "goToDownloadPage": "Натисніть тут, щоб перейти на сторінку завантаження",
+  "@goToDownloadPage": {
+    "description": "goToDownloadPage"
+  },
   "local": "На пристрої",
+  "@local": {
+    "description": "local"
+  },
   "selectAuthIns": "Виберіть екземпляр авторизації",
+  "@selectAuthIns": {
+    "description": "selectAuthIns"
+  },
   "username": "Ім'я користувача",
+  "@username": {
+    "description": "username"
+  },
   "playlistBookmarkAddAlert": "Список відтворення додано в закладки!",
+  "@playlistBookmarkAddAlert": {
+    "description": "playlistBookmarkAddAlert"
+  },
   "playlistBookmarkRemoveAlert": "Закладку списку відтворення видалено!",
+  "@playlistBookmarkRemoveAlert": {
+    "description": "playlistBookmarkRemoveAlert"
+  },
   "linkAlert": "Успішно пов'язано!",
+  "@linkAlert": {
+    "description": "linkAlert"
+  },
   "exportedFileLocation": "Розташування експорту завантаженого файлу",
+  "@exportedFileLocation": {
+    "description": "exportedFileLocation"
+  },
   "ignoreBatOpt": "Ігнорувати оптимізацію акумулятора",
+  "@ignoreBatOpt": {
+    "description": "ignoreBatOpt"
+  },
   "ignoreBatOptDes": "Якщо у вас виникли проблеми зі сповіщеннями або відтворення призупинено оптимізацією системи, увімкніть цей параметр",
+  "@ignoreBatOptDes": {
+    "description": "ignoreBatOptDes"
+  },
   "errorOccuredAlert": "Сталася помилка!",
+  "@errorOccuredAlert": {
+    "description": "errorOccuredAlert"
+  },
   "songAddedToPlaylistAlert": "Пісню додано до списку відтворення!",
+  "@songAddedToPlaylistAlert": {
+    "description": "songAddedToPlaylistAlert"
+  },
   "pipedplstSyncAlert": "Список відтворення синхронізовано!",
+  "@pipedplstSyncAlert": {
+    "description": "pipedplstSyncAlert"
+  },
   "unlinkAlert": "Успішно відв'язано!",
+  "@unlinkAlert": {
+    "description": "unlinkAlert"
+  },
   "sleepTimeSetAlert": "Ваш таймер сну встановлено",
+  "@sleepTimeSetAlert": {
+    "description": "sleepTimeSetAlert"
+  },
   "albumBookmarkAddAlert": "Альбом додано в закладки!",
+  "@albumBookmarkAddAlert": {
+    "description": "albumBookmarkAddAlert"
+  },
   "albumBookmarkRemoveAlert": "Закладку альбому видалено!",
+  "@albumBookmarkRemoveAlert": {
+    "description": "albumBookmarkRemoveAlert"
+  },
   "resetblacklistedplaylistDes": "Скинути всі списки відтворення з чорного списку",
+  "@resetblacklistedplaylistDes": {
+    "description": "resetblacklistedplaylistDes"
+  },
   "plain": "Звичайний",
+  "@plain": {
+    "description": "plain"
+  },
   "customIns": "Спеціальний екземпляр",
+  "@customIns": {
+    "description": "customIns"
+  },
   "customInsSelectMsg": "Виберіть спеціальний екземпляр",
+  "@customInsSelectMsg": {
+    "description": "customInsSelectMsg"
+  },
   "selectAuthInsMsg": "Виберіть екземпляр автентифікації!",
+  "@selectAuthInsMsg": {
+    "description": "selectAuthInsMsg"
+  },
   "backupMsg": "Резервну копію успішно збережено!",
+  "@backupMsg": {
+    "description": "backupMsg"
+  },
   "backFilesFound": "Базу даних знайдено",
+  "@backFilesFound": {
+    "description": "backFilesFound"
+  },
   "restoring": "Відновлення...",
+  "@restoring": {
+    "description": "restoring"
+  },
   "restore": "відновлення",
+  "@restore": {
+    "description": "restore"
+  },
   "closeApp": "Закрити застосунок",
+  "@closeApp": {
+    "description": "closeApp"
+  },
   "restoreSettingsAndPlaylists": "Відновити налаштування та списки відтворення",
+  "@restoreSettingsAndPlaylists": {
+    "description": "restoreSettingsAndPlaylists"
+  },
   "restoreSettingsAndPlaylistsDes": "Відновлює всі налаштування, дані для входу та списки відтворення з файлу резервної копії. Переписує всі поточні дані",
+  "@restoreSettingsAndPlaylistsDes": {
+    "description": "restoreSettingsAndPlaylistsDes"
+  },
   "restoreMsg": "Успішно відновлено!\nЗміни застосовуються після перезавантаження",
+  "@restoreMsg": {
+    "description": "restoreMsg"
+  },
   "Piped": "Piped",
+  "@Piped": {
+    "description": "Piped"
+  },
   "hintApiUrl": "URL-адреса API до екземпляра Piped",
+  "@hintApiUrl": {
+    "description": "hintApiUrl"
+  },
   "linkPipedDes": "Посилання з piped для списків відтворення",
+  "@linkPipedDes": {
+    "description": "linkPipedDes"
+  },
   "backupSettingsAndPlaylists": "Резервне копіювання налаштувань та списків відтворення",
+  "@backupSettingsAndPlaylists": {
+    "description": "backupSettingsAndPlaylists"
+  },
   "stopMusicOnTaskClear": "Зупинити музику після видалення із задач",
+  "@stopMusicOnTaskClear": {
+    "description": "stopMusicOnTaskClear"
+  },
   "backupSettingsAndPlaylistsDes": "Зберігає всі налаштування, списки відтворення та дані для входу у файл резервної копії",
+  "@backupSettingsAndPlaylistsDes": {
+    "description": "backupSettingsAndPlaylistsDes"
+  },
   "androidBackupWarning": "Не перевірено: Якщо встановити прапорець після завантаження понад 60 файлів, процес може поглинути велику кількість пам'яті, що може призвести до збою в роботі телефону або програми. Дійте на свій страх і ризик.",
+  "@androidBackupWarning": {
+    "description": "androidBackupWarning"
+  },
   "restoreAppData": "Відновлення даних програми",
+  "@restoreAppData": {
+    "description": "restoreAppData"
+  },
   "gesture": "Жест",
+  "@gesture": {
+    "description": "gesture"
+  },
   "backupAppData": "Резервне копіювання даних програми",
+  "@backupAppData": {
+    "description": "backupAppData"
+  },
   "restartApp": "Перезапустити застосунок",
+  "@restartApp": {
+    "description": "restartApp"
+  },
   "musicAndPlayback": "Музика та відтворення",
+  "@musicAndPlayback": {
+    "description": "musicAndPlayback"
+  },
   "loudnessNormalization": "Нормалізація гучності",
+  "@loudnessNormalization": {
+    "description": "loudnessNormalization"
+  },
   "bitrate": "Бітрейт",
+  "@bitrate": {
+    "description": "bitrate"
+  },
   "audioCodec": "Аудіокодек",
+  "@audioCodec": {
+    "description": "audioCodec"
+  },
   "letsStrart": "Почнемо...",
+  "@letsStrart": {
+    "description": "letsStrart"
+  },
   "backup": "Резервне копіювання",
+  "@backup": {
+    "description": "backup"
+  },
   "songInfo": "Інформація про пісню",
+  "@songInfo": {
+    "description": "songInfo"
+  },
   "id": "Ідентифікатор",
+  "@id": {
+    "description": "id"
+  },
   "queueShufflingDeniedMsg": "Черга не може бути перемішана поки увімкнено режим перемішування",
+  "@queueShufflingDeniedMsg": {
+    "description": "queueShufflingDeniedMsg"
+  },
   "queuerearrangingDeniedMsg": "Позиція черги не може бути переміщена поки увімкнено режим перемішування",
+  "@queuerearrangingDeniedMsg": {
+    "description": "queuerearrangingDeniedMsg"
+  },
   "songNotPlayable": "Пісня не відтворюється через обмеження сервера!",
+  "@songNotPlayable": {
+    "description": "songNotPlayable"
+  },
   "downloadError2": "Запитану пісню не можна завантажити через обмеження сервера. Ви можете спробувати ще раз",
+  "@downloadError2": {
+    "description": "downloadError2"
+  },
   "downloadError3": "Не вдалося завантажити через помилку мережі / потоку! Спробуйте ще раз",
+  "@downloadError3": {
+    "description": "downloadError3"
+  },
   "content": "Зміст",
+  "@content": {
+    "description": "content"
+  },
   "personalisation": "Персоналізація",
+  "@personalisation": {
+    "description": "personalisation"
+  },
   "playerUi": "Інтерфейс програвача",
+  "@playerUi": {
+    "description": "playerUi"
+  },
   "playerUiDes": "Виберіть інтерфейс програвача",
+  "@playerUiDes": {
+    "description": "playerUiDes"
+  },
   "standard": "Стандартний",
+  "@standard": {
+    "description": "standard"
+  },
   "loudnessNormalizationDes": "Встановлює однаковий рівень гучності для всіх пісень (експериментальний) (не працюватиме для пісень, завантажених у попередній версії (< v1.10.0))",
+  "@loudnessNormalizationDes": {
+    "description": "loudnessNormalizationDes"
+  },
   "urlSearchDes": "Виявлено URL-адресу, натисніть на неї, щоб відкрити/відтворити пов'язаний вміст",
+  "@urlSearchDes": {
+    "description": "urlSearchDes"
+  },
   "enableSlidableAction": "Увімкнути ковзаючі дії",
+  "@enableSlidableAction": {
+    "description": "enableSlidableAction"
+  },
   "enableSlidableActionDes": "Увімкнути розсувні дії на плитці пісні",
+  "@enableSlidableActionDes": {
+    "description": "enableSlidableActionDes"
+  },
   "title": "Назва",
+  "@title": {
+    "description": "title"
+  },
   "duration": "Тривалість",
+  "@duration": {
+    "description": "duration"
+  },
   "loudnessDb": "Гучність (Дб)",
+  "@loudnessDb": {
+    "description": "loudnessDb"
+  },
   "processFiles": "Обробка файлів...",
+  "@processFiles": {
+    "description": "processFiles"
+  },
   "includeDownloadedFiles": "Додайте завантажені файли пісень",
+  "@includeDownloadedFiles": {
+    "description": "includeDownloadedFiles"
+  },
   "backupInProgress": "Виконується резервне копіювання...",
+  "@backupInProgress": {
+    "description": "backupInProgress"
+  },
   "playnextMsg": "Найближчим часом",
+  "@playnextMsg": {
+    "description": "playnextMsg"
+  },
   "queueLoop": "Повторювати чергу",
+  "@queueLoop": {
+    "description": "queueLoop"
+  },
   "queueLoopNotDisMsg1": "Режим повторення не можна вимкнути, коли активовано режим перемішування.",
+  "@queueLoopNotDisMsg1": {
+    "description": "queueLoopNotDisMsg1"
+  },
   "queueLoopNotDisMsg2": "Режим повторення не може бути ввімкнено в радіо-режимі.",
+  "@queueLoopNotDisMsg2": {
+    "description": "queueLoopNotDisMsg2"
+  },
   "appInfo": "Інформація про застосунок",
+  "@appInfo": {
+    "description": "appInfo"
+  },
   "download": "Завантажити",
+  "@download": {
+    "description": "download"
+  },
   "networkError": "Помилка мережі! Перевірте з'єднння з мережею.",
+  "@networkError": {
+    "description": "networkError"
+  },
   "shuffleQueue": "Перемішати чергу",
+  "@shuffleQueue": {
+    "description": "shuffleQueue"
+  },
   "autoDownFavSong": "Автоматичне завантаження улюблених пісень",
+  "@autoDownFavSong": {
+    "description": "autoDownFavSong"
+  },
   "autoDownFavSongDes": "Автоматичне завантаження улюблених пісень при додаванні до вибраного",
+  "@autoDownFavSongDes": {
+    "description": "autoDownFavSongDes"
+  },
   "misc": "Інше",
+  "@misc": {
+    "description": "misc"
+  },
   "resetToDefault": "Відновити типові налаштування",
+  "@resetToDefault": {
+    "description": "resetToDefault"
+  },
   "resetToDefaultMsg": "Скидання налаштувань до типових завершено. Перезапустіть застосунок",
+  "@resetToDefaultMsg": {
+    "description": "resetToDefaultMsg"
+  },
   "autoOpenPlayerDes": "Увімкнути / вимкнути автовідкриття плеєра на весь екран при виборі пісні для відтворення",
+  "@autoOpenPlayerDes": {
+    "description": "autoOpenPlayerDes"
+  },
   "playingfromPlaylist": "ГРАЄ ЗІ СПИСКУ ВІДТВОРЕННЯ",
+  "@playingfromPlaylist": {
+    "description": "playingfromPlaylist"
+  },
   "playingfromArtist": "ГРАЄ З ВИКОНАВЦІВ",
+  "@playingfromArtist": {
+    "description": "playingfromArtist"
+  },
   "album": "Альбом",
+  "@album": {
+    "description": "album"
+  },
   "autoOpenPlayer": "Автовідкриття екрана програвача",
+  "@autoOpenPlayer": {
+    "description": "autoOpenPlayer"
+  },
   "resetToDefaultDes": "Скидання налаштувань застосунку до типових значень (потрібен перезапуск)",
+  "@resetToDefaultDes": {
+    "description": "resetToDefaultDes"
+  },
   "playingfromAlbum": "ГРАЄ З АЛЬБОМУ",
+  "@playingfromAlbum": {
+    "description": "playingfromAlbum"
+  },
   "playingfromSelection": "ГРАЄ З ВИБОРУ",
+  "@playingfromSelection": {
+    "description": "playingfromSelection"
+  },
   "randomSelection": "Випадковий вибір",
+  "@randomSelection": {
+    "description": "randomSelection"
+  },
   "randomRadio": "Випадкове радіо",
+  "@randomRadio": {
+    "description": "randomRadio"
+  },
   "selectSongs": "Вибрати пісні",
+  "@selectSongs": {
+    "description": "selectSongs"
+  },
   "selectAll": "Вибрати все",
+  "@selectAll": {
+    "description": "selectAll"
+  },
   "reArrangeSongs": "Переставити пісні",
+  "@reArrangeSongs": {
+    "description": "reArrangeSongs"
+  },
   "exportPlaylist": "Експортувати список відтворення",
+  "@exportPlaylist": {
+    "description": "exportPlaylist"
+  },
   "exportErrorStorage": "Недостатньо місця для зберігання",
+  "@exportErrorStorage": {
+    "description": "exportErrorStorage"
+  },
   "exportErrorFormat": "Помилка форматування даних списку відтворення",
+  "@exportErrorFormat": {
+    "description": "exportErrorFormat"
+  },
   "importErrorFileAccess": "Не вдалося отримати доступ до вибраного файлу",
+  "@importErrorFileAccess": {
+    "description": "importErrorFileAccess"
+  },
   "fileNotFound": "Файл не знайдено",
+  "@fileNotFound": {
+    "description": "fileNotFound"
+  },
   "importErrorDatabase": "Помилка збереження до бази даних",
+  "@importErrorDatabase": {
+    "description": "importErrorDatabase"
+  },
   "playlistExportedMsg": "Список відтворення успішно експортовано до",
+  "@playlistExportedMsg": {
+    "description": "playlistExportedMsg"
+  },
   "importPlaylistDesc": "Виберіть раніше експортований файл JSON зі списком відтворення для імпортування",
+  "@importPlaylistDesc": {
+    "description": "importPlaylistDesc"
+  },
   "invalidPlaylistFile": "Неправильна структура файлу списку відтворення",
+  "@invalidPlaylistFile": {
+    "description": "invalidPlaylistFile"
+  },
   "importLargeFileNote": "Примітка: Імпорт великих списків відтворення може зайняти більше часу",
+  "@importLargeFileNote": {
+    "description": "importLargeFileNote"
+  },
   "exportErrorPermission": "Відмовлено в дозволі під час експортування",
+  "@exportErrorPermission": {
+    "description": "exportErrorPermission"
+  },
   "selectFile": "Вибрати файл",
+  "@selectFile": {
+    "description": "selectFile"
+  },
   "importErrorFormat": "Невірний формат файлу",
+  "@importErrorFormat": {
+    "description": "importErrorFormat"
+  },
   "exportingPlaylist": "Експортування списку відтворення...",
+  "@exportingPlaylist": {
+    "description": "exportingPlaylist"
+  },
   "exportError": "Помилка експортування списку відтворення",
+  "@exportError": {
+    "description": "exportError"
+  },
   "importPlaylist": "Імпортувати список відтворення",
+  "@importPlaylist": {
+    "description": "importPlaylist"
+  },
   "importingPlaylist": "Імпортування списку відтворення...",
+  "@importingPlaylist": {
+    "description": "importingPlaylist"
+  },
   "playlistImportedMsg": "Список відтворення успішно імпортовано",
+  "@playlistImportedMsg": {
+    "description": "playlistImportedMsg"
+  },
   "importError": "Помилка імпортування списку відтворення",
+  "@importError": {
+    "description": "importError"
+  },
   "exportPlaylistCsv": "Експортувати список відтворення у форматі CSV",
+  "@exportPlaylistCsv": {
+    "description": "exportPlaylistCsv"
+  },
   "exportPlaylistJson": "Експортувати список відтворення в JSON",
+  "@exportPlaylistJson": {
+    "description": "exportPlaylistJson"
+  },
   "exportPlaylistJsonSubtitle": "Цей формат можна імпортувати",
+  "@exportPlaylistJsonSubtitle": {
+    "description": "exportPlaylistJsonSubtitle"
+  },
   "exportPlaylistCsvSubtitle": "Не можна імпортувати сюди",
+  "@exportPlaylistCsvSubtitle": {
+    "description": "exportPlaylistCsvSubtitle"
+  },
   "exportToYouTubeMusic": "Експортувати до Youtube Music",
+  "@exportToYouTubeMusic": {
+    "description": "exportToYouTubeMusic"
+  },
   "exportToYouTubeMusicSubtitle": "Це додасть ваш список відтворення (пісень < 50) до поточної черги, не забудьте додати до плейлиста / зберегти після відкриття в YtMusic",
+  "@exportToYouTubeMusicSubtitle": {
+    "description": "exportToYouTubeMusicSubtitle"
+  },
   "linkCopied": "Посилання скопійовано в буфер обміну",
+  "@linkCopied": {
+    "description": "linkCopied"
+  },
   "keepScreenOnWhilePlaying": "Тримати екран увімкненим під час відтворення",
+  "@keepScreenOnWhilePlaying": {
+    "description": "keepScreenOnWhilePlaying"
+  },
   "keepScreenOnWhilePlayingDes": "Якщо увімкнено, екран пристрою залишатиметься увімкненим під час відтворення музики",
+  "@keepScreenOnWhilePlayingDes": {
+    "description": "keepScreenOnWhilePlayingDes"
+  },
   "auth_login_success": "Успішно ввійшли",
   "@auth_login_success": {
-    "description": ""
+    "description": "auth_login_success"
   },
   "settings_cloud_backup": "Хмарне резервне копіювання",
   "@settings_cloud_backup": {
-    "description": ""
+    "description": "settings_cloud_backup"
   },
   "settings_migration_title": "Перехід із Joss Music Kotlin",
   "@settings_migration_title": {
-    "description": ""
+    "description": "settings_migration_title"
   },
   "backup_confirm_question": "Ви хочете зробити резервну копію?",
   "@backup_confirm_question": {
-    "description": ""
+    "description": "backup_confirm_question"
   },
   "backup_selection_prompt": "Виберіть дані для резервного копіювання",
   "@backup_selection_prompt": {
-    "description": ""
+    "description": "backup_selection_prompt"
   },
   "search_recent_title": "Останні пошуки",
   "@search_recent_title": {
-    "description": ""
+    "description": "search_recent_title"
   },
   "back": "Повернення",
   "@back": {
-    "description": ""
+    "description": "back"
   },
   "auth_forgot_password": "Я забув свій пароль",
   "@auth_forgot_password": {
-    "description": ""
+    "description": "auth_forgot_password"
   },
   "auth_btn_login": "Логін",
   "@auth_btn_login": {
-    "description": ""
+    "description": "auth_btn_login"
   },
   "auth_btn_register": "зареєструватися",
   "@auth_btn_register": {
-    "description": ""
+    "description": "auth_btn_register"
   },
   "email": "Електронна пошта",
   "@email": {
-    "description": ""
+    "description": "email"
   },
   "password_text": "Пароль",
   "@password_text": {
@@ -325,372 +1150,869 @@
   },
   "auth_confirm_password": "Підтвердьте пароль",
   "@auth_confirm_password": {
-    "description": ""
+    "description": "auth_confirm_password"
   },
   "auth_welcome_title": "Ласкаво просимо до Estrella Music",
   "@auth_welcome_title": {
-    "description": ""
+    "description": "auth_welcome_title"
   },
   "auth_welcome_subtitle": "Ласкаво просимо до Estrella Music",
   "@auth_welcome_subtitle": {
-    "description": ""
-  },
-  "@username": {
-    "description": ""
+    "description": "auth_welcome_subtitle"
   },
   "auth_first_name": "ім'я",
   "@auth_first_name": {
-    "description": ""
+    "description": "auth_first_name"
   },
   "auth_last_name": "Прізвище",
   "@auth_last_name": {
-    "description": ""
+    "description": "auth_last_name"
   },
   "auth_agree_personal_data": "Acepto usar mis datos...",
   "@auth_agree_personal_data": {
-    "description": ""
+    "description": "auth_agree_personal_data"
   },
   "settings_general_section": "Загальний",
   "@settings_general_section": {
-    "description": ""
+    "description": "settings_general_section"
   },
   "settings_logout": "Вийти",
   "@settings_logout": {
-    "description": ""
+    "description": "settings_logout"
   },
   "settings_cloud_backup_desc": "Завантажуйте, відновлюйте та керуйте...",
   "@settings_cloud_backup_desc": {
-    "description": ""
+    "description": "settings_cloud_backup_desc"
   },
   "settings_migration_desc": "Імпортувати списки відтворення, пісні...",
   "@settings_migration_desc": {
-    "description": ""
+    "description": "settings_migration_desc"
   },
   "backup_btn_restart": "Перезапустіть програму",
   "@backup_btn_restart": {
-    "description": ""
+    "description": "backup_btn_restart"
   },
   "backup_btn_upload": "Завантажте резервну копію зараз",
   "@backup_btn_upload": {
-    "description": ""
+    "description": "backup_btn_upload"
   },
   "backup_no_backups": "Резервних копій ще немає...",
   "@backup_no_backups": {
-    "description": ""
+    "description": "backup_no_backups"
   },
   "backup_auth_required": "Вам потрібна активна сесія...",
   "@backup_auth_required": {
-    "description": ""
+    "description": "backup_auth_required"
   },
   "backup_upload_success": "Резервну копію завантажено правильно.",
   "@backup_upload_success": {
-    "description": ""
+    "description": "backup_upload_success"
   },
   "backup_restore_success": "Резервну копію відновлено. Перезапустіть програму.",
   "@backup_restore_success": {
-    "description": ""
+    "description": "backup_restore_success"
   },
   "backup_delete_success": "Резервну копію видалено.",
   "@backup_delete_success": {
-    "description": ""
+    "description": "backup_delete_success"
   },
   "genre_pop": "Поп",
   "@genre_pop": {
-    "description": ""
+    "description": "genre_pop"
   },
   "genre_rock": "Рок",
   "@genre_rock": {
-    "description": ""
+    "description": "genre_rock"
   },
   "genre_hiphop": "хіп-хоп",
   "@genre_hiphop": {
-    "description": ""
+    "description": "genre_hiphop"
   },
   "genre_electronic": "електроніка",
   "@genre_electronic": {
-    "description": ""
+    "description": "genre_electronic"
   },
   "genre_jazz": "Джаз",
   "@genre_jazz": {
-    "description": ""
+    "description": "genre_jazz"
   },
   "genre_latin": "латинь",
   "@genre_latin": {
-    "description": ""
+    "description": "genre_latin"
   },
   "migration_btn_select": "Виберіть файл і імпортуйте",
   "@migration_btn_select": {
-    "description": ""
-  },
-  "@close": {
-    "description": ""
+    "description": "migration_btn_select"
   },
   "forgottenFavorites": "забуті улюблені",
   "@forgottenFavorites": {
-    "description": ""
+    "description": "forgottenFavorites"
   },
   "mostListenedSong": "Пісня, яку найбільше слухають",
   "@mostListenedSong": {
-    "description": ""
+    "description": "mostListenedSong"
   },
   "reproducedBy": "Відтворено",
   "@reproducedBy": {
-    "description": ""
+    "description": "reproducedBy"
   },
   "recentSearches": "Останні пошуки",
   "@recentSearches": {
-    "description": ""
+    "description": "recentSearches"
   },
   "popularTracks": "Популярні треки",
   "@popularTracks": {
-    "description": ""
+    "description": "popularTracks"
   },
   "latestRelease": "Останній випуск",
   "@latestRelease": {
-    "description": ""
+    "description": "latestRelease"
   },
   "follow": "Продовжити",
   "@follow": {
-    "description": ""
+    "description": "follow"
   },
   "following": "Слідую",
   "@following": {
-    "description": ""
+    "description": "following"
   },
   "listenNow": "Слухай зараз",
   "@listenNow": {
-    "description": ""
+    "description": "listenNow"
   },
   "video": "відео",
   "@video": {
-    "description": ""
+    "description": "video"
   },
   "about": "про",
   "@about": {
-    "description": ""
+    "description": "about"
   },
   "readMore": "Читати далі",
   "@readMore": {
-    "description": ""
+    "description": "readMore"
   },
   "speedAndPitch": "Швидкість і висота",
   "@speedAndPitch": {
-    "description": ""
+    "description": "speedAndPitch"
   },
   "playbackSpeed": "Швидкість відтворення",
   "@playbackSpeed": {
-    "description": ""
+    "description": "playbackSpeed"
   },
   "songPitch": "тон пісні",
   "@songPitch": {
-    "description": ""
+    "description": "songPitch"
   },
   "musicRecognition": "Розпізнавання музики",
   "@musicRecognition": {
-    "description": ""
+    "description": "musicRecognition"
   },
   "listeningToEnvironment": "Прислухаючись до оточення...",
   "@listeningToEnvironment": {
-    "description": ""
+    "description": "listeningToEnvironment"
   },
   "micInstruction": "Переконайтеся, що біля мікрофона музика грає достатньо голосно.",
   "@micInstruction": {
-    "description": ""
+    "description": "micInstruction"
   },
   "processingAudio": "Обробка аудіо...",
   "@processingAudio": {
-    "description": ""
+    "description": "processingAudio"
   },
   "shazamSearching": "Пошук збігів у базі даних Shazam...",
   "@shazamSearching": {
-    "description": ""
+    "description": "shazamSearching"
   },
   "songFound": "Пісню знайдено!",
   "@songFound": {
-    "description": ""
+    "description": "songFound"
   },
   "playNow": "Грати зараз",
   "@playNow": {
-    "description": ""
+    "description": "playNow"
   },
   "searchInLibrary": "Пошук у бібліотеці",
   "@searchInLibrary": {
-    "description": ""
+    "description": "searchInLibrary"
   },
   "noMatchesFound": "Немає збігів",
   "@noMatchesFound": {
-    "description": ""
+    "description": "noMatchesFound"
   },
   "noMatchInstruction": "Не вдалося знайти жодної пісні в записаному аудіо",
   "@noMatchInstruction": {
-    "description": ""
+    "description": "noMatchInstruction"
   },
   "errorOccurred": "Сталася помилка",
   "@errorOccurred": {
-    "description": ""
+    "description": "errorOccurred"
   },
   "playingRecognizedTrack": "грає:",
   "@playingRecognizedTrack": {
-    "description": ""
+    "description": "playingRecognizedTrack"
   },
   "errorPlayingTrack": "Помилка під час відтворення:",
   "@errorPlayingTrack": {
-    "description": ""
+    "description": "errorPlayingTrack"
   },
   "welcome_title": "Ваша музика, ваш шлях",
+  "@welcome_title": {
+    "description": "welcome_title"
+  },
   "welcome_subtitle": "Виберіть, як відтепер ви бажаєте слухати Estrella Music.",
+  "@welcome_subtitle": {
+    "description": "welcome_subtitle"
+  },
   "welcome_intro": "Ми модернізували нашу платформу. Стара система завантаження резервних копій вручну була вимкнена. Тепер у вас є два зрозумілих способи керування музичною бібліотекою.",
+  "@welcome_intro": {
+    "description": "welcome_intro"
+  },
   "recommend_cloud": "Ми рекомендуємо активувати хмарний режим для роботи, подібної до Spotify: синхронізація в реальному часі між усіма вашими пристроями та автоматичне резервне копіювання без необхідності будь-яких дій.",
+  "@recommend_cloud": {
+    "description": "recommend_cloud"
+  },
   "swipe_prompt": "Проведіть пальцем, щоб переглянути параметри ➔",
+  "@swipe_prompt": {
+    "description": "swipe_prompt"
+  },
   "local_title": "Локальний режим",
+  "@local_title": {
+    "description": "local_title"
+  },
   "local_subtitle": "Абсолютна конфіденційність на вашому пристрої",
+  "@local_subtitle": {
+    "description": "local_subtitle"
+  },
   "local_b1": "Він працює без необхідності авторизуватися.",
+  "@local_b1": {
+    "description": "local_b1"
+  },
   "local_b2": "Уся ваша бібліотека зберігається виключно на цьому комп’ютері.",
+  "@local_b2": {
+    "description": "local_b2"
+  },
   "local_b3": "Примітка. Без ручного резервного копіювання в хмарі. Якщо ви втратите пристрій або видалите програму, ваші дані не можна буде відновити.",
+  "@local_b3": {
+    "description": "local_b3"
+  },
   "local_btn": "Використовуйте лише на цьому пристрої",
+  "@local_btn": {
+    "description": "local_btn"
+  },
   "cloud_title": "Хмарний режим (рекомендовано)",
+  "@cloud_title": {
+    "description": "cloud_title"
+  },
   "cloud_subtitle": "Синхронізація в реальному часі з Joss Red",
+  "@cloud_subtitle": {
+    "description": "cloud_subtitle"
+  },
   "cloud_b1": "Увійдіть безпечно, використовуючи свій обліковий запис Joss Red.",
+  "@cloud_b1": {
+    "description": "cloud_b1"
+  },
   "cloud_b2": "Миттєво отримуйте доступ до своїх списків відтворення, вибраного та історії з будь-якого пристрою (Windows, Android тощо).",
+  "@cloud_b2": {
+    "description": "cloud_b2"
+  },
   "cloud_b3": "Розумна синхронізація: працюйте в автономному режимі та автоматично завантажуйте зміни, коли ви відновлюєте доступ до Інтернету.",
+  "@cloud_b3": {
+    "description": "cloud_b3"
+  },
   "cloud_btn": "Активуйте хмарну синхронізацію",
+  "@cloud_btn": {
+    "description": "cloud_btn"
+  },
   "slide_indicator": "Крок {current} з 3",
+  "@slide_indicator": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      }
+    },
+    "description": "slide_indicator"
+  },
   "news_card_title": "Estrella Music розвинулася!",
+  "@news_card_title": {
+    "description": "news_card_title"
+  },
   "news_card_subtitle": "100% синхронізація з Joss Red, плейлисти з друзями та багато іншого. Торкніться, щоб побачити, що нового.",
+  "@news_card_subtitle": {
+    "description": "news_card_subtitle"
+  },
   "news_dialog_title": "Музичні новини Estrella",
+  "@news_dialog_title": {
+    "description": "news_dialog_title"
+  },
   "news_item_sync_title": "Повна інтеграція з Joss Red",
+  "@news_item_sync_title": {
+    "description": "news_item_sync_title"
+  },
   "news_item_sync_desc": "Ваші списки відтворення та улюблене тепер зберігаються та синхронізуються в хмарі автоматично з вашим головним обліковим записом Joss Red.",
+  "@news_item_sync_desc": {
+    "description": "news_item_sync_desc"
+  },
   "news_item_collab_title": "Спільні списки відтворення",
+  "@news_item_collab_title": {
+    "description": "news_item_collab_title"
+  },
   "news_item_collab_desc": "Створюйте списки відтворення разом із друзями! Під час створення списку відтворення встановіть прапорець «Спільна робота» та виберіть друзів для спільного редагування.",
+  "@news_item_collab_desc": {
+    "description": "news_item_collab_desc"
+  },
   "news_item_trans_title": "Прозора синхронізація",
+  "@news_item_trans_title": {
+    "description": "news_item_trans_title"
+  },
   "news_item_trans_desc": "Вам більше не потрібно натискати кнопки ручної синхронізації; Новий двигун відповідає за автоматичне перемикання вгору і вниз.",
+  "@news_item_trans_desc": {
+    "description": "news_item_trans_desc"
+  },
   "news_dialog_section_friends": "Друзі та керування обліковим записом:",
+  "@news_dialog_section_friends": {
+    "description": "news_dialog_section_friends"
+  },
   "news_dialog_friends_desc": "Щоб додати друзів, прийняти запити або керувати своїм профілем безпеки, використовуйте Joss Red на його офіційних платформах:",
+  "@news_dialog_friends_desc": {
+    "description": "news_dialog_friends_desc"
+  },
   "news_btn_app": "Додаток Joss Red (Play Store)",
+  "@news_btn_app": {
+    "description": "news_btn_app"
+  },
   "news_btn_web": "Joss Red Web",
+  "@news_btn_web": {
+    "description": "news_btn_web"
+  },
   "news_btn_dismiss": "Зрозумів",
+  "@news_btn_dismiss": {
+    "description": "news_btn_dismiss"
+  },
   "settings_appearance_desc": "Тема, мова та анімація інтерфейсу.",
+  "@settings_appearance_desc": {
+    "description": "settings_appearance_desc"
+  },
   "settings_content_desc": "Відкрийте для себе фільтри, інтеграцію з Piped і кеші.",
+  "@settings_content_desc": {
+    "description": "settings_content_desc"
+  },
   "settings_playback_desc": "Якість потокового передавання, нормалізація, тиша та заряд батареї.",
+  "@settings_playback_desc": {
+    "description": "settings_playback_desc"
+  },
   "settings_downloads_desc": "Завантаження та зберігання",
+  "@settings_downloads_desc": {
+    "description": "settings_downloads_desc"
+  },
   "settings_downloads_sub": "Аудіоформати, папки та автоматичне завантаження.",
+  "@settings_downloads_sub": {
+    "description": "settings_downloads_sub"
+  },
   "settings_account_desc": "Обліковий запис і синхронізація",
+  "@settings_account_desc": {
+    "description": "settings_account_desc"
+  },
   "settings_account_sub": "Хмарний режим, резервне копіювання, список друзів і міграції.",
+  "@settings_account_sub": {
+    "description": "settings_account_sub"
+  },
   "settings_about_desc": "Про Estrella Music",
+  "@settings_about_desc": {
+    "description": "settings_about_desc"
+  },
   "settings_about_sub": "Версія, проект з відкритим кодом і GitHub.",
+  "@settings_about_sub": {
+    "description": "settings_about_sub"
+  },
   "settings_local_cloud_title": "Локальний режим / EMusic Cloud",
+  "@settings_local_cloud_title": {
+    "description": "settings_local_cloud_title"
+  },
   "settings_local_cloud_desc": "Виберіть, перенесіть або перегляньте статус синхронізації з Joss Red.",
+  "@settings_local_cloud_desc": {
+    "description": "settings_local_cloud_desc"
+  },
   "settings_my_friends": "мої друзі",
+  "@settings_my_friends": {
+    "description": "settings_my_friends"
+  },
   "settings_my_friends_desc": "Керуйте своїми друзями Joss Red безпосередньо.",
+  "@settings_my_friends_desc": {
+    "description": "settings_my_friends_desc"
+  },
   "settings_refresh_visitor_title": "Оновити ідентифікатор (ідентифікатор відвідувача)",
+  "@settings_refresh_visitor_title": {
+    "description": "settings_refresh_visitor_title"
+  },
   "settings_refresh_visitor_desc": "Повторно згенеруйте свій ідентифікатор YouTube Music, якщо вміст Discover не завантажується.",
+  "@settings_refresh_visitor_desc": {
+    "description": "settings_refresh_visitor_desc"
+  },
   "settings_visitor_updated": "Оновлений ідентифікатор",
+  "@settings_visitor_updated": {
+    "description": "settings_visitor_updated"
+  },
   "settings_visitor_updated_desc": "Новий ID відвідувача успішно створено.",
+  "@settings_visitor_updated_desc": {
+    "description": "settings_visitor_updated_desc"
+  },
   "settings_visitor_error": "помилка",
+  "@settings_visitor_error": {
+    "description": "settings_visitor_error"
+  },
   "settings_visitor_error_desc": "Не вдалося створити новий ідентифікатор. Спробуйте пізніше.",
+  "@settings_visitor_error_desc": {
+    "description": "settings_visitor_error_desc"
+  },
   "settings_visitor_exception": "Під час регенерації сталася помилка: {error}",
+  "@settings_visitor_exception": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    },
+    "description": "settings_visitor_exception"
+  },
   "migratedLibrary": "Перенесена бібліотека",
+  "@migratedLibrary": {
+    "description": "migratedLibrary"
+  },
   "noSongsInCollection": "У цій збірці немає пісень",
+  "@noSongsInCollection": {
+    "description": "noSongsInCollection"
+  },
   "startupScreen": "Відкрити під час запуску",
+  "@startupScreen": {
+    "description": "startupScreen"
+  },
   "startupScreenDescription": "Виберіть розділ, який Estrella Music відкривається першим",
+  "@startupScreenDescription": {
+    "description": "startupScreenDescription"
+  },
   "friends": "друзі",
+  "@friends": {
+    "description": "friends"
+  },
   "dailyDiscover": "Щоденне відкриття",
+  "@dailyDiscover": {
+    "description": "dailyDiscover"
+  },
   "keepListening": "продовжуйте слухати",
+  "@keepListening": {
+    "description": "keepListening"
+  },
   "similarToTitle": "Схожий на {title}",
+  "@similarToTitle": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    },
+    "description": "similarToTitle"
+  },
   "pipedPlaylistDescription": "Конвеєрний список відтворення",
+  "@pipedPlaylistDescription": {
+    "description": "pipedPlaylistDescription"
+  },
   "collaborativePlaylistDescription": "Спільний список відтворення",
+  "@collaborativePlaylistDescription": {
+    "description": "collaborativePlaylistDescription"
+  },
   "libraryPlaylistDescription": "Список відтворення бібліотеки",
+  "@libraryPlaylistDescription": {
+    "description": "libraryPlaylistDescription"
+  },
   "untitledSong": "Пісня без назви",
+  "@untitledSong": {
+    "description": "untitledSong"
+  },
   "migratedPlaylist": "Перенесений список відтворення",
+  "@migratedPlaylist": {
+    "description": "migratedPlaylist"
+  },
   "migratedAlbum": "Перенесений альбом",
+  "@migratedAlbum": {
+    "description": "migratedAlbum"
+  },
   "songsImportedFromJossMusic": "Пісні, імпортовані з Joss Music Kotlin",
+  "@songsImportedFromJossMusic": {
+    "description": "songsImportedFromJossMusic"
+  },
   "importedFromJossMusic": "Імпортовано з Joss Music Kotlin",
+  "@importedFromJossMusic": {
+    "description": "importedFromJossMusic"
+  },
   "syncLocalModeActive": "Активний локальний режим",
+  "@syncLocalModeActive": {
+    "description": "syncLocalModeActive"
+  },
   "syncCloudPending": "Хмарний режим активний. Очікує на синхронізацію.",
+  "@syncCloudPending": {
+    "description": "syncCloudPending"
+  },
   "syncCloudDownloadingExisting": "Хмарний режим активований. Завантаження існуючої бібліотеки.",
+  "@syncCloudDownloadingExisting": {
+    "description": "syncCloudDownloadingExisting"
+  },
   "syncCloudMigrationComplete": "Хмарний режим активований. Перенесена бібліотека.",
+  "@syncCloudMigrationComplete": {
+    "description": "syncCloudMigrationComplete"
+  },
   "syncLocalDeviceOnly": "Ваші дані зберігаються лише на цьому пристрої.",
+  "@syncLocalDeviceOnly": {
+    "description": "syncLocalDeviceOnly"
+  },
   "syncDownloading": "Завантаження змін EMusic...",
+  "@syncDownloading": {
+    "description": "syncDownloading"
+  },
   "syncDownloadFailed": "Не вдалося завантажити синхронізацію.",
+  "@syncDownloadFailed": {
+    "description": "syncDownloadFailed"
+  },
   "syncLocalChangesFirst": "Є нові локальні зміни. Вони будуть завантажені перед завантаженням.",
+  "@syncLocalChangesFirst": {
+    "description": "syncLocalChangesFirst"
+  },
   "syncLibrarySynced": "Синхронізована бібліотека.",
+  "@syncLibrarySynced": {
+    "description": "syncLibrarySynced"
+  },
   "syncOfflinePending": "Офлайн. Зміни очікуються.",
+  "@syncOfflinePending": {
+    "description": "syncOfflinePending"
+  },
   "syncLibraryUpToDate": "Бібліотека в актуальному стані.",
+  "@syncLibraryUpToDate": {
+    "description": "syncLibraryUpToDate"
+  },
   "syncChangesSynced": "{count} синхронізованих змін.",
+  "@syncChangesSynced": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    },
+    "description": "syncChangesSynced"
+  },
   "syncUploading": "Завантаження змін до EMusic...",
+  "@syncUploading": {
+    "description": "syncUploading"
+  },
   "syncUploadSuccessWs": "Зміни успішно завантажено (WS).",
+  "@syncUploadSuccessWs": {
+    "description": "syncUploadSuccessWs"
+  },
   "syncUploadWsRetry": "Не вдалося завантажити за допомогою WS. Повторна спроба буде пізніше.",
+  "@syncUploadWsRetry": {
+    "description": "syncUploadWsRetry"
+  },
   "syncUploadSuccess": "Зміни завантажено правильно.",
+  "@syncUploadSuccess": {
+    "description": "syncUploadSuccess"
+  },
   "syncUploadRetry": "Не міг встати. Повторна спроба буде пізніше.",
+  "@syncUploadRetry": {
+    "description": "syncUploadRetry"
+  },
   "syncOfflineRetry": "Офлайн. Зміни збережено для повторної спроби.",
+  "@syncOfflineRetry": {
+    "description": "syncOfflineRetry"
+  },
   "syncUnconfirmedRetry": "EMusic не підтвердив усі зміни. Їх судитимуть повторно.",
+  "@syncUnconfirmedRetry": {
+    "description": "syncUnconfirmedRetry"
+  },
   "syncChangesConfirmed": "Внесено {count} змін.",
+  "@syncChangesConfirmed": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    },
+    "description": "syncChangesConfirmed"
+  },
   "migrationAlreadyRunning": "Перенесення вже триває.",
+  "@migrationAlreadyRunning": {
+    "description": "migrationAlreadyRunning"
+  },
   "migrationLoginRequired": "Увійдіть у Joss Red перед міграцією.",
+  "@migrationLoginRequired": {
+    "description": "migrationLoginRequired"
+  },
   "migrationCheckingCloud": "Перевірка наявності бібліотеки в EMusic Cloud...",
+  "@migrationCheckingCloud": {
+    "description": "migrationCheckingCloud"
+  },
   "cloudLibraryFoundDeviceWillDownload": "Знайдено хмарну бібліотеку. Цей пристрій завантажить його без перезапису.",
+  "@cloudLibraryFoundDeviceWillDownload": {
+    "description": "cloudLibraryFoundDeviceWillDownload"
+  },
   "cloudLibraryFound": "Знайдено хмарну бібліотеку.",
+  "@cloudLibraryFound": {
+    "description": "cloudLibraryFound"
+  },
   "migrationCreatingBackup": "Створення локальної резервної копії перед підключенням хмари...",
+  "@migrationCreatingBackup": {
+    "description": "migrationCreatingBackup"
+  },
   "migrationAnalyzingLocal": "Аналіз місцевої бібліотеки...",
+  "@migrationAnalyzingLocal": {
+    "description": "migrationAnalyzingLocal"
+  },
   "migrationPreparingCloud": "Підготовка міграції в EMusic Cloud...",
+  "@migrationPreparingCloud": {
+    "description": "migrationPreparingCloud"
+  },
   "migrationStartFailed": "EMusic Cloud не вдалося почати міграцію.",
+  "@migrationStartFailed": {
+    "description": "migrationStartFailed"
+  },
   "migrationUploadingData": "Завантаження списків відтворення, вибраного та історії...",
+  "@migrationUploadingData": {
+    "description": "migrationUploadingData"
+  },
   "migrationUploadIncomplete": "Не всі дані можна завантажити. Ми підтримуємо вашу місцеву підтримку.",
+  "@migrationUploadIncomplete": {
+    "description": "migrationUploadIncomplete"
+  },
   "migrationVerifyingIntegrity": "Перевірка цілісності в EMusic Cloud...",
+  "@migrationVerifyingIntegrity": {
+    "description": "migrationVerifyingIntegrity"
+  },
   "migrationValidationFailed": "EMusic Cloud не зміг перевірити міграцію.",
+  "@migrationValidationFailed": {
+    "description": "migrationValidationFailed"
+  },
   "cloudModeReadyOfflineCache": "Хмарний режим готовий. Цей пристрій працюватиме як офлайн-кеш.",
+  "@cloudModeReadyOfflineCache": {
+    "description": "cloudModeReadyOfflineCache"
+  },
   "migrationCompleted": "Переміщення завершено.",
+  "@migrationCompleted": {
+    "description": "migrationCompleted"
+  },
   "migrationFailedLocalPreserved": "Перенесення не вдалося. Ваші локальні дані не змінено.",
+  "@migrationFailedLocalPreserved": {
+    "description": "migrationFailedLocalPreserved"
+  },
   "sessionExpiredLoginAgain": "Ваш сеанс закінчився. Увійдіть знову.",
+  "@sessionExpiredLoginAgain": {
+    "description": "sessionExpiredLoginAgain"
+  },
   "selectedFileNotFound": "Вибраний файл не знайдено.",
+  "@selectedFileNotFound": {
+    "description": "selectedFileNotFound"
+  },
   "genericAlbum": "Альбом",
+  "@genericAlbum": {
+    "description": "genericAlbum"
+  },
   "friendsLoginRequired": "Увійдіть, щоб знайти друзів.",
+  "@friendsLoginRequired": {
+    "description": "friendsLoginRequired"
+  },
   "invalidSessionToken": "Сеанс не містить дійсний маркер.",
+  "@invalidSessionToken": {
+    "description": "invalidSessionToken"
+  },
   "userSearchFailed": "Не вдалося знайти користувачів ({statusCode}).",
+  "@userSearchFailed": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    },
+    "description": "userSearchFailed"
+  },
   "invalidServerResponse": "Недійсна відповідь сервера.",
+  "@invalidServerResponse": {
+    "description": "invalidServerResponse"
+  },
   "userListMissing": "Відповідь не містить списку користувачів.",
+  "@userListMissing": {
+    "description": "userListMissing"
+  },
   "playlistCollaboratorsTitle": "Автори списку відтворення",
+  "@playlistCollaboratorsTitle": {
+    "description": "playlistCollaboratorsTitle"
+  },
   "collaboratorsInstruction": "Виберіть друзів, які зможуть переглядати та редагувати цей список відтворення:",
+  "@collaboratorsInstruction": {
+    "description": "collaboratorsInstruction"
+  },
   "noJossRedFriends": "У вас немає друзів на Joss Red.",
+  "@noJossRedFriends": {
+    "description": "noJossRedFriends"
+  },
   "friendFallback": "Друг",
+  "@friendFallback": {
+    "description": "friendFallback"
+  },
   "collaboratorsUpdated": "Співавтори оновлено правильно.",
+  "@collaboratorsUpdated": {
+    "description": "collaboratorsUpdated"
+  },
   "save": "Тримайте",
+  "@save": {
+    "description": "save"
+  },
   "manageCollaborators": "Керувати співавторами (друзями)",
+  "@manageCollaborators": {
+    "description": "manageCollaborators"
+  },
   "done": "Готовий",
+  "@done": {
+    "description": "done"
+  },
   "notAuthenticated": "Не автентифіковано",
+  "@notAuthenticated": {
+    "description": "notAuthenticated"
+  },
   "genericError": "помилка",
+  "@genericError": {
+    "description": "genericError"
+  },
   "friendRequestSent": "Запит на дружбу надіслано",
+  "@friendRequestSent": {
+    "description": "friendRequestSent"
+  },
   "friendRequestAccepted": "Запит на дружбу прийнято",
+  "@friendRequestAccepted": {
+    "description": "friendRequestAccepted"
+  },
   "friendshipRemoved": "Дружба видалена",
+  "@friendshipRemoved": {
+    "description": "friendshipRemoved"
+  },
   "userBlocked": "Заблокований користувач",
+  "@userBlocked": {
+    "description": "userBlocked"
+  },
   "userUnblocked": "Розблокований користувач",
+  "@userUnblocked": {
+    "description": "userUnblocked"
+  },
   "artistsByTaste": "Відповідно до ваших смаків",
+  "@artistsByTaste": {
+    "description": "artistsByTaste"
+  },
   "followedArtists": "слідував",
+  "@followedArtists": {
+    "description": "followedArtists"
+  },
   "recommendedArtists": "Рекомендовано",
+  "@recommendedArtists": {
+    "description": "recommendedArtists"
+  },
   "albumsByTaste": "Відповідно до ваших смаків",
+  "@albumsByTaste": {
+    "description": "albumsByTaste"
+  },
   "savedAlbums": "Збережено",
+  "@savedAlbums": {
+    "description": "savedAlbums"
+  },
   "recommendedAlbums": "Рекомендовано",
+  "@recommendedAlbums": {
+    "description": "recommendedAlbums"
+  },
   "downloadNotificationChannelName": "завантаження музики",
+  "@downloadNotificationChannelName": {
+    "description": "downloadNotificationChannelName"
+  },
   "downloadNotificationChannelDescription": "Завантажує вашу музику у фоновому режимі.",
+  "@downloadNotificationChannelDescription": {
+    "description": "downloadNotificationChannelDescription"
+  },
   "downloadNotificationTitle": "Завантаження музики",
+  "@downloadNotificationTitle": {
+    "description": "downloadNotificationTitle"
+  },
   "downloadNotificationPreparing": "Підготовка завантажень…",
+  "@downloadNotificationPreparing": {
+    "description": "downloadNotificationPreparing"
+  },
   "downloadNotificationSong": "Завантаження: {songTitle}",
+  "@downloadNotificationSong": {
+    "placeholders": {
+      "songTitle": {
+        "type": "String"
+      }
+    },
+    "description": "downloadNotificationSong"
+  },
   "syncCloudModeActive": "Хмарний режим активний",
+  "@syncCloudModeActive": {
+    "description": "syncCloudModeActive"
+  },
   "permissionsConsentTitle": "Дозволи для початку",
+  "@permissionsConsentTitle": {
+    "description": "permissionsConsentTitle"
+  },
   "permissionsConsentDescription": "Estrella Music потрібні ці дозволи, щоб керувати вашою музикою та запропонувати всі функції відтворення.",
+  "@permissionsConsentDescription": {
+    "description": "permissionsConsentDescription"
+  },
   "permissionsStorageTitle": "Музика та зберігання",
+  "@permissionsStorageTitle": {
+    "description": "permissionsStorageTitle"
+  },
   "permissionsStorageDescription": "Це дозволяє відтворювати музику, зберігати завантаження, експортувати списки відтворення та готувати оновлення.",
+  "@permissionsStorageDescription": {
+    "description": "permissionsStorageDescription"
+  },
   "permissionsNotificationsTitle": "Сповіщення",
+  "@permissionsNotificationsTitle": {
+    "description": "permissionsNotificationsTitle"
+  },
   "permissionsNotificationsDescription": "Показує елементи керування відтворенням, хід завантаження та важливі сповіщення про програми.",
+  "@permissionsNotificationsDescription": {
+    "description": "permissionsNotificationsDescription"
+  },
   "permissionsMicrophoneTitle": "мікрофон",
+  "@permissionsMicrophoneTitle": {
+    "description": "permissionsMicrophoneTitle"
+  },
   "permissionsMicrophoneDescription": "Він використовується лише тоді, коли ви вирішуєте визначити пісню, яка звучить навколо вас.",
+  "@permissionsMicrophoneDescription": {
+    "description": "permissionsMicrophoneDescription"
+  },
   "permissionsContinueButton": "Надайте необхідні дозволи",
+  "@permissionsContinueButton": {
+    "description": "permissionsContinueButton"
+  },
   "permissionsRequiredNotice": "Для продовження потрібні всі три дозволи. Ви можете змінити їх пізніше в налаштуваннях системи.",
+  "@permissionsRequiredNotice": {
+    "description": "permissionsRequiredNotice"
+  },
   "permissionsAllow": "Дозволити",
+  "@permissionsAllow": {
+    "description": "permissionsAllow"
+  },
   "permissionsOpenSettings": "Налаштування",
+  "@permissionsOpenSettings": {
+    "description": "permissionsOpenSettings"
+  },
   "auth_2fa_title": "Двофакторна аутентифікація",
+  "@auth_2fa_title": {
+    "description": "auth_2fa_title"
+  },
   "auth_2fa_subtitle": "Введіть 6-значний код із програми автентифікації. Цей доступ закінчується через 5 хвилин.",
+  "@auth_2fa_subtitle": {
+    "description": "auth_2fa_subtitle"
+  },
   "auth_2fa_code": "Код автентифікації",
+  "@auth_2fa_code": {
+    "description": "auth_2fa_code"
+  },
   "auth_2fa_verify": "Перевірте та продовжуйте",
-  "auth_2fa_invalid": "Введіть дійсний 6-значний код або увійдіть знову."
+  "@auth_2fa_verify": {
+    "description": "auth_2fa_verify"
+  },
+  "auth_2fa_invalid": "Введіть дійсний 6-значний код або увійдіть знову.",
+  "@auth_2fa_invalid": {
+    "description": "auth_2fa_invalid"
+  }
 }

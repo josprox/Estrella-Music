@@ -1,270 +1,1071 @@
 {
   "@@locale": "ta",
   "CreateNewPlaylist": "புதிய பட்டியலை உருவாக்கு",
+  "@CreateNewPlaylist": {
+    "description": "CreateNewPlaylist"
+  },
   "home": "முகப்பு",
+  "@home": {
+    "description": "home"
+  },
   "playlists": "இசைப்பட்டியல்",
+  "@playlists": {
+    "description": "playlists"
+  },
   "libAlbums": "இசை தொகுப்பு செருகேடுகள்",
+  "@libAlbums": {
+    "description": "libAlbums"
+  },
   "communityplaylists": "சமூக இசைப்பட்டியல்கள்",
+  "@communityplaylists": {
+    "description": "communityplaylists"
+  },
   "featuredplaylists": "முதன்மை பட்டியல்",
+  "@featuredplaylists": {
+    "description": "featuredplaylists"
+  },
   "rename": "மறுபெயரிடு",
+  "@rename": {
+    "description": "rename"
+  },
   "singles": "ஒற்றைபாடல்கள்",
+  "@singles": {
+    "description": "singles"
+  },
   "downloads": "பதிவிறக்கங்கள்",
+  "@downloads": {
+    "description": "downloads"
+  },
   "library": "இசைத் தொகுப்பு",
+  "@library": {
+    "description": "library"
+  },
   "reArrangePlaylist": "பட்டியலை மறுசீரமைக்கவும்",
+  "@reArrangePlaylist": {
+    "description": "reArrangePlaylist"
+  },
   "removeMultiple": "பல பாடல்களை நீக்கு",
+  "@removeMultiple": {
+    "description": "removeMultiple"
+  },
   "addMultipleSongs": "பட்டியலுக்கு பாடல்களைச் சேர்க்கவும்",
+  "@addMultipleSongs": {
+    "description": "addMultipleSongs"
+  },
   "artists": "கலைஞர்கள்",
+  "@artists": {
+    "description": "artists"
+  },
   "emptyPlaylist": "வெறுமையான பட்டியல்!",
+  "@emptyPlaylist": {
+    "description": "emptyPlaylist"
+  },
   "cancel": "ரத்து செய்",
+  "@cancel": {
+    "description": "cancel"
+  },
   "enqueueAll": "எல்லாவற்றையும் வரிசைப்படுத்து",
+  "@enqueueAll": {
+    "description": "enqueueAll"
+  },
   "networkError1": "இணைய இணைப்பு பிழை!",
+  "@networkError1": {
+    "description": "networkError1"
+  },
   "songs": "பாடல்கள்",
+  "@songs": {
+    "description": "songs"
+  },
   "albums": "செருகேடு",
+  "@albums": {
+    "description": "albums"
+  },
   "settings": "அமைப்புகள்",
+  "@settings": {
+    "description": "settings"
+  },
   "libSongs": "இசை தொகுப்பு பாடல்கள்",
+  "@libSongs": {
+    "description": "libSongs"
+  },
   "retry": "மறுபடியும் முயற்சி செய்!",
+  "@retry": {
+    "description": "retry"
+  },
   "noOfflineSong": "ஆஃப்லைன் பாடல்கள் இல்லை!",
+  "@noOfflineSong": {
+    "description": "noOfflineSong"
+  },
   "recentlyPlayed": "சமீபத்தில் இசைத்தது",
+  "@recentlyPlayed": {
+    "description": "recentlyPlayed"
+  },
   "favorites": "விருப்பமானவை",
+  "@favorites": {
+    "description": "favorites"
+  },
   "cachedOrOffline": "தற்காலிக சேமிப்பு/ஆஃப்லைன்",
+  "@cachedOrOffline": {
+    "description": "cachedOrOffline"
+  },
   "renamePlaylist": "பட்டியலை மறுபெயரிடு",
+  "@renamePlaylist": {
+    "description": "renamePlaylist"
+  },
   "removePlaylist": "பட்டியலை நீக்கு",
+  "@removePlaylist": {
+    "description": "removePlaylist"
+  },
   "create": "உருவாக்கு",
+  "@create": {
+    "description": "create"
+  },
   "createnAdd": "உருவாக்கி சேர்க்க",
+  "@createnAdd": {
+    "description": "createnAdd"
+  },
   "noBookmarks": "எந்த குறிப்புகளும் இல்லை!",
+  "@noBookmarks": {
+    "description": "noBookmarks"
+  },
   "startRadio": "ரேடியோ தொடங்கு",
+  "@startRadio": {
+    "description": "startRadio"
+  },
   "playNext": "அடுத்து இசைக்க",
+  "@playNext": {
+    "description": "playNext"
+  },
   "libPlaylists": "இசை தொகுப்பு பட்டியல்கள்",
+  "@libPlaylists": {
+    "description": "libPlaylists"
+  },
   "libArtists": "இசை தொகுப்பு கலைஞர்கள்",
+  "@libArtists": {
+    "description": "libArtists"
+  },
   "skipSilence": "ம .னத்தைத் தவிர்க்கவும்",
+  "@skipSilence": {
+    "description": "skipSilence"
+  },
   "exporting": "ஏற்றுமதி ...",
+  "@exporting": {
+    "description": "exporting"
+  },
   "github": "கிரப்",
+  "@github": {
+    "description": "github"
+  },
   "items": "உருப்படிகள்",
+  "@items": {
+    "description": "items"
+  },
   "cancelTimer": "டைமரை ரத்துசெய்",
+  "@cancelTimer": {
+    "description": "cancelTimer"
+  },
   "errorOccuredAlert": "சில பிழை ஏற்பட்டது!",
+  "@errorOccuredAlert": {
+    "description": "errorOccuredAlert"
+  },
   "synced": "ஒத்திசைக்கப்பட்டது",
+  "@synced": {
+    "description": "synced"
+  },
   "cancelTimerAlert": "ச்லீப் நேரங்குறிகருவி ரத்து செய்யப்பட்டது",
+  "@cancelTimerAlert": {
+    "description": "cancelTimerAlert"
+  },
   "newVersionAvailable": "புதிய பதிப்பு கிடைக்கிறது!",
+  "@newVersionAvailable": {
+    "description": "newVersionAvailable"
+  },
   "export": "ஏற்றுமதி",
+  "@export": {
+    "description": "export"
+  },
   "songEnqueueAlert": "பாடல் enqueud!",
+  "@songEnqueueAlert": {
+    "description": "songEnqueueAlert"
+  },
   "hintApiUrl": "குழாய் உதாரத்திற்கு பநிஇ முகவரி",
+  "@hintApiUrl": {
+    "description": "hintApiUrl"
+  },
   "sleepTimer": "தூக்க நேரங்குறிகருவி",
+  "@sleepTimer": {
+    "description": "sleepTimer"
+  },
   "add5Minutes": "5 நிமிடங்கள் சேர்க்கவும்",
+  "@add5Minutes": {
+    "description": "add5Minutes"
+  },
   "setDiscoverContent": "டிச்கவர் உள்ளடக்கத்தை அமைக்கவும்",
+  "@setDiscoverContent": {
+    "description": "setDiscoverContent"
+  },
   "trending": "டிரெண்டிங்",
+  "@trending": {
+    "description": "trending"
+  },
   "cacheSongsDes": "எதிர்கால/ஆஃப்லைன் பின்னணியில் விளையாடும்போது பாடல்களை தேக்கப்படுத்துதல், இது உங்கள் சாதனத்தில் கூடுதல் இடத்தை எடுக்கும்",
+  "@cacheSongsDes": {
+    "description": "cacheSongsDes"
+  },
   "backgroundPlayDes": "பின்னணியில் இசையை இயக்கவும்/முடக்கவும் (பயன்பாடு பின்னணியில் இயங்கும்போது கணினி தட்டில் இருந்து பயன்பாட்டை அணுகலாம்)",
+  "@backgroundPlayDes": {
+    "description": "backgroundPlayDes"
+  },
   "radioNotAvailable": "இந்த கலைஞருக்கு வானொலி கிடைக்கவில்லை!",
+  "@radioNotAvailable": {
+    "description": "radioNotAvailable"
+  },
   "username": "பயனர்பெயர்",
+  "@username": {
+    "description": "username"
+  },
   "playerUi": "பிளேயர் இடைமுகம்",
+  "@playerUi": {
+    "description": "playerUi"
+  },
   "standard": "தரநிலை",
+  "@standard": {
+    "description": "standard"
+  },
   "low": "குறைந்த",
+  "@low": {
+    "description": "low"
+  },
   "githubDes": "அறிவிலிமையம் மூலக் குறியீட்டைக் காண்க\n இந்த திட்டத்தை நீங்கள் விரும்பினால், கொடுக்க மறக்காதீர்கள்",
+  "@githubDes": {
+    "description": "githubDes"
+  },
   "viewArtist": "கலைஞரைக் காண்க",
+  "@viewArtist": {
+    "description": "viewArtist"
+  },
   "removeFromQueue": "வரிசையிலிருந்து அகற்று",
+  "@removeFromQueue": {
+    "description": "removeFromQueue"
+  },
   "subscribers": "சந்தாதாரர்கள்",
+  "@subscribers": {
+    "description": "subscribers"
+  },
   "about": "பற்றி",
+  "@about": {
+    "description": "about"
+  },
   "artistDesNotAvailable": "விளக்கம் கிடைக்கவில்லை!",
+  "@artistDesNotAvailable": {
+    "description": "artistDesNotAvailable"
+  },
   "exportDowloadedFiles": "பதிவிறக்கம் செய்யப்பட்ட கோப்புகளை ஏற்றுமதி செய்யுங்கள்",
+  "@exportDowloadedFiles": {
+    "description": "exportDowloadedFiles"
+  },
   "Piped": "குழாய்",
+  "@Piped": {
+    "description": "Piped"
+  },
   "minutes": "நிமிடங்கள்",
+  "@minutes": {
+    "description": "minutes"
+  },
   "selectAuthInsMsg": "அங்கீகார நிகழ்வைத் தேர்ந்தெடுக்கவும்!",
+  "@selectAuthInsMsg": {
+    "description": "selectAuthInsMsg"
+  },
   "dismiss": "தள்ளுபடி",
+  "@dismiss": {
+    "description": "dismiss"
+  },
   "high": "உயர்ந்த",
+  "@high": {
+    "description": "high"
+  },
   "download": "பதிவிறக்கம்",
+  "@download": {
+    "description": "download"
+  },
   "languageDes": "பயன்பாட்டு மொழியை அமைக்கவும்",
+  "@languageDes": {
+    "description": "languageDes"
+  },
   "streamingQuality": "ச்ட்ரீமிங் தகுதி",
+  "@streamingQuality": {
+    "description": "streamingQuality"
+  },
   "downloadingFormat": "கோப்பு வடிவமைப்பைப் பதிவிறக்குகிறது",
+  "@downloadingFormat": {
+    "description": "downloadingFormat"
+  },
   "cacheHomeScreenData": "முகப்பு திரை உள்ளடக்க தரவு கேச்",
+  "@cacheHomeScreenData": {
+    "description": "cacheHomeScreenData"
+  },
   "exportedFileLocation": "பதிவிறக்கம் செய்யப்பட்ட கோப்பு ஏற்றுமதி இடம்",
+  "@exportedFileLocation": {
+    "description": "exportedFileLocation"
+  },
   "downFilesFound": "பதிவிறக்கம் செய்யப்பட்ட கோப்புகள் கிடைத்தன",
+  "@downFilesFound": {
+    "description": "downFilesFound"
+  },
   "audioCodec": "ஆடியோ கோடெக்",
+  "@audioCodec": {
+    "description": "audioCodec"
+  },
   "bitrate": "பிட்ரேட்",
+  "@bitrate": {
+    "description": "bitrate"
+  },
   "exportMsg": "கோப்புகள் வெற்றிகரமாக ஏற்றுமதி செய்யப்பட்டன",
+  "@exportMsg": {
+    "description": "exportMsg"
+  },
   "language": "மொழி",
+  "@language": {
+    "description": "language"
+  },
   "close": "மூடு",
+  "@close": {
+    "description": "close"
+  },
   "id": "ஐடி",
+  "@id": {
+    "description": "id"
+  },
   "restoring": "மீட்டமைத்தல் ...",
+  "@restoring": {
+    "description": "restoring"
+  },
   "backup": "காப்புப்பிரதி",
+  "@backup": {
+    "description": "backup"
+  },
   "themeMode": "கருப்பொருள் பயன்முறை",
+  "@themeMode": {
+    "description": "themeMode"
+  },
   "dynamic": "மாறும்",
+  "@dynamic": {
+    "description": "dynamic"
+  },
   "search": "தேடல்",
+  "@search": {
+    "description": "search"
+  },
   "searchRes": "தேடல் முடிவுகள்",
+  "@searchRes": {
+    "description": "searchRes"
+  },
   "for1": "க்கு",
+  "@for1": {
+    "description": "for1"
+  },
   "songAlreadyExists": "பாடல் ஏற்கனவே உள்ளது!",
+  "@songAlreadyExists": {
+    "description": "songAlreadyExists"
+  },
   "songRemovedfromQueueCurrSong": "தற்போது வாசிக்கும் பாடலை நீங்கள் அகற்ற முடியாது",
+  "@songRemovedfromQueueCurrSong": {
+    "description": "songRemovedfromQueueCurrSong"
+  },
   "playlistCreatednsongAddedAlert": "பிளேலிச்ட் உருவாக்கப்பட்டது மற்றும் பாடல் சேர்க்கப்பட்டது!",
+  "@playlistCreatednsongAddedAlert": {
+    "description": "playlistCreatednsongAddedAlert"
+  },
   "removeFromPlaylist": "பிளேலிச்ட்டிலிருந்து அகற்று",
+  "@removeFromPlaylist": {
+    "description": "removeFromPlaylist"
+  },
   "endOfThisSong": "இந்த பாடலின் முடிவு",
+  "@endOfThisSong": {
+    "description": "endOfThisSong"
+  },
   "deleteDownloadData": "பதிவிறக்கங்களிலிருந்து அகற்று",
+  "@deleteDownloadData": {
+    "description": "deleteDownloadData"
+  },
   "restoreLastPlaybackSession": "கடைசி பின்னணி அமர்வை மீட்டமைக்கவும்",
+  "@restoreLastPlaybackSession": {
+    "description": "restoreLastPlaybackSession"
+  },
   "upNext": "அடுத்து",
+  "@upNext": {
+    "description": "upNext"
+  },
   "openIn": "திறந்த",
+  "@openIn": {
+    "description": "openIn"
+  },
   "queueShufflingDeniedMsg": "கலக்கு பயன்முறை இயக்கப்பட்டால் வரிசையை மாற்ற முடியாது",
+  "@queueShufflingDeniedMsg": {
+    "description": "queueShufflingDeniedMsg"
+  },
   "queuerearrangingDeniedMsg": "கலக்கு பயன்முறை இயக்கப்பட்டால் வரிசையை மறுசீரமைக்க முடியாது",
+  "@queuerearrangingDeniedMsg": {
+    "description": "queuerearrangingDeniedMsg"
+  },
   "systemDefault": "கணினி இயல்புநிலை",
+  "@systemDefault": {
+    "description": "systemDefault"
+  },
   "notaSongVideo": "ஒரு பாடல்/இசை-வீடியோ அல்ல!",
+  "@notaSongVideo": {
+    "description": "notaSongVideo"
+  },
   "quickpicks": "விரைவான தேர்வுகள்",
+  "@quickpicks": {
+    "description": "quickpicks"
+  },
   "topmusicvideos": "சிறந்த இசை வீடியோக்கள்",
+  "@topmusicvideos": {
+    "description": "topmusicvideos"
+  },
   "clearImgCacheAlert": "படங்கள் கேச் வெற்றிகரமாக அழிக்கப்பட்டது",
+  "@clearImgCacheAlert": {
+    "description": "clearImgCacheAlert"
+  },
   "addToPlaylist": "பிளேலிச்ட்டில் சேர்க்கவும்",
+  "@addToPlaylist": {
+    "description": "addToPlaylist"
+  },
   "noLibPlaylist": "உங்களிடம் லிப் பிளேலிச்ட் இல்லை!",
+  "@noLibPlaylist": {
+    "description": "noLibPlaylist"
+  },
   "goToAlbum": "ஆல்பத்திற்குச் செல்லுங்கள்",
+  "@goToAlbum": {
+    "description": "goToAlbum"
+  },
   "shareSong": "இந்த பாடலைப் பகிரவும்",
+  "@shareSong": {
+    "description": "shareSong"
+  },
   "removeFromLib": "நூலக பாடல்களிலிருந்து அகற்று",
+  "@removeFromLib": {
+    "description": "removeFromLib"
+  },
   "downloadError2": "சேவையக கட்டுப்பாடு காரணமாக கோரப்பட்ட பாடல் பதிவிறக்கம் செய்யப்படாது. நீங்கள் மீண்டும் முயற்சி செய்யலாம்",
+  "@downloadError2": {
+    "description": "downloadError2"
+  },
   "downloadError3": "பிணையம் பிழை காரணமாக பதிவிறக்கம் தோல்வியுற்றது! மீண்டும் முயற்சிக்கவும்",
+  "@downloadError3": {
+    "description": "downloadError3"
+  },
   "musicAndPlayback": "இசை & பின்னணி",
+  "@musicAndPlayback": {
+    "description": "musicAndPlayback"
+  },
   "appInfo": "பயன்பாட்டு செய்தி",
+  "@appInfo": {
+    "description": "appInfo"
+  },
   "networkError": "பிணைய பிழை! உங்கள் பிணைய இணைப்பை சரிபார்க்கவும்.",
+  "@networkError": {
+    "description": "networkError"
+  },
   "link": "இணைப்பு",
+  "@link": {
+    "description": "link"
+  },
   "skipSilenceDes": "மியூசிக் பிளேபேக்கில் ம silence னம் தவிர்க்கப்படும்",
+  "@skipSilenceDes": {
+    "description": "skipSilenceDes"
+  },
   "enqueueSong": "இந்த பாடலை enqueue",
+  "@enqueueSong": {
+    "description": "enqueueSong"
+  },
   "results": "முடிவுகள்",
+  "@results": {
+    "description": "results"
+  },
   "backupInProgress": "காப்புப்பிரதி முன்னேற்றம் ...",
+  "@backupInProgress": {
+    "description": "backupInProgress"
+  },
   "notaValidLink": "சரியான இணைப்பு அல்ல!",
+  "@notaValidLink": {
+    "description": "notaValidLink"
+  },
   "resetblacklistedplaylistDes": "குழாய் பட்டியலிடப்பட்ட பிளேலிச்ட்கள் அனைத்தையும் மீட்டமைக்கவும்",
+  "@resetblacklistedplaylistDes": {
+    "description": "resetblacklistedplaylistDes"
+  },
   "backgroundPlay": "பின்னணி இசை நாடகம்",
+  "@backgroundPlay": {
+    "description": "backgroundPlay"
+  },
   "clearImgCache": "அழி படங்கள் தற்காலிக சேமிப்பு",
+  "@clearImgCache": {
+    "description": "clearImgCache"
+  },
   "ignoreBatOpt": "பேட்டரி தேர்வுமுறை புறக்கணிக்கவும்",
+  "@ignoreBatOpt": {
+    "description": "ignoreBatOpt"
+  },
   "albumBookmarkRemoveAlert": "ஆல்பம் புக்மார்க்கு அகற்றப்பட்டது!",
+  "@albumBookmarkRemoveAlert": {
+    "description": "albumBookmarkRemoveAlert"
+  },
   "lyricsNotAvailable": "வரிகள் கிடைக்கவில்லை!",
+  "@lyricsNotAvailable": {
+    "description": "lyricsNotAvailable"
+  },
   "syncedLyricsNotAvailable": "ஒத்திசைக்கப்பட்ட பாடல் கிடைக்கவில்லை!",
+  "@syncedLyricsNotAvailable": {
+    "description": "syncedLyricsNotAvailable"
+  },
   "closeApp": "பயன்பாட்டை மூடு",
+  "@closeApp": {
+    "description": "closeApp"
+  },
   "restartApp": "பயன்பாட்டை மறுதொடக்கம் செய்யுங்கள்",
+  "@restartApp": {
+    "description": "restartApp"
+  },
   "backFilesFound": "தரவுத்தளங்கள் காணப்பட்டன",
+  "@backFilesFound": {
+    "description": "backFilesFound"
+  },
   "backupSettingsAndPlaylistsDes": "காப்புப்பிரதி கோப்பில் அனைத்து அமைப்புகள், பிளேலிச்ட்கள் மற்றும் உள்நுழைவு தரவை சேமிக்கிறது",
+  "@backupSettingsAndPlaylistsDes": {
+    "description": "backupSettingsAndPlaylistsDes"
+  },
   "restoreSettingsAndPlaylistsDes": "காப்புப்பிரதி கோப்பிலிருந்து அனைத்து அமைப்புகளையும், உள்நுழைவு தரவு மற்றும் பிளேலிச்ட்களை மீட்டமைக்கிறது. தற்போதைய எல்லா தரவையும் மேலெழுதும்",
+  "@restoreSettingsAndPlaylistsDes": {
+    "description": "restoreSettingsAndPlaylistsDes"
+  },
   "backupMsg": "காப்புப்பிரதி வெற்றிகரமாக சேமிக்கப்பட்டது!",
+  "@backupMsg": {
+    "description": "backupMsg"
+  },
   "playlistBlacklistAlert": "பிளேலிச்ட் தடுப்புப்பட்டியல்!",
+  "@playlistBlacklistAlert": {
+    "description": "playlistBlacklistAlert"
+  },
   "songNotPlayable": "சேவையக கட்டுப்பாடு காரணமாக பாடல் இயக்கப்படவில்லை!",
+  "@songNotPlayable": {
+    "description": "songNotPlayable"
+  },
   "autoDownFavSong": "தானாக பதிவிறக்கம் பிடித்த பாடல்கள்",
+  "@autoDownFavSong": {
+    "description": "autoDownFavSong"
+  },
   "autoDownFavSongDes": "பிடித்தவைகளில் சேர்க்கும்போது தானாகவே பிடித்த பாடல்களை பதிவிறக்கவும்",
+  "@autoDownFavSongDes": {
+    "description": "autoDownFavSongDes"
+  },
   "content": "உள்ளடக்கம்",
+  "@content": {
+    "description": "content"
+  },
   "personalisation": "தனிப்பயனாக்கம்",
+  "@personalisation": {
+    "description": "personalisation"
+  },
   "dark": "இருண்ட",
+  "@dark": {
+    "description": "dark"
+  },
   "light": "ஒளி",
+  "@light": {
+    "description": "light"
+  },
   "playerUiDes": "பிளேயர் பயனர் இடைமுகத்தைத் தேர்ந்தெடுக்கவும்",
+  "@playerUiDes": {
+    "description": "playerUiDes"
+  },
   "gesture": "சைகை",
+  "@gesture": {
+    "description": "gesture"
+  },
   "discover": "கண்டுபிடி",
+  "@discover": {
+    "description": "discover"
+  },
   "basedOnLast": "கடைசி தொடர்புகளின் அடிப்படையில்",
+  "@basedOnLast": {
+    "description": "basedOnLast"
+  },
   "restoreLastPlaybackSessionDes": "பயன்பாட்டு தொடக்கத்தில் கடைசி பிளேபேக் அமர்வை தானாக மீட்டெடுக",
+  "@restoreLastPlaybackSessionDes": {
+    "description": "restoreLastPlaybackSessionDes"
+  },
   "homeContentCount": "வீட்டு உள்ளடக்க எண்ணிக்கை",
+  "@homeContentCount": {
+    "description": "homeContentCount"
+  },
   "homeContentCountDes": "ஆரம்ப ஓம்ச்கிரீன்-உள்ளடக்கத்தின் எண்ணிக்கையைத் தேர்ந்தெடுக்கவும் (தோராயமாக). குறைந்த முடிவுகள் வேகமாக ஏற்றுதல்",
+  "@homeContentCountDes": {
+    "description": "homeContentCountDes"
+  },
   "cacheSongs": "கேச் பாடல்கள்",
+  "@cacheSongs": {
+    "description": "cacheSongs"
+  },
   "enableBottomNav": "கீழே உள்ள வழிசெலுத்தல் பட்டி",
+  "@enableBottomNav": {
+    "description": "enableBottomNav"
+  },
   "enableBottomNavDes": "கீழ் வழிசெலுத்தல் பட்டியில் மாறவும்",
+  "@enableBottomNavDes": {
+    "description": "enableBottomNavDes"
+  },
   "streamingQualityDes": "இசை ச்ட்ரீமின் தகுதி",
+  "@streamingQualityDes": {
+    "description": "streamingQualityDes"
+  },
   "disableTransitionAnimation": "மாற்றம் அனிமேசனை முடக்கு",
+  "@disableTransitionAnimation": {
+    "description": "disableTransitionAnimation"
+  },
   "disableTransitionAnimationDes": "தாவல் மாற்றம் அனிமேசனை முடக்க இந்த விருப்பத்தை இயக்கவும்",
+  "@disableTransitionAnimationDes": {
+    "description": "disableTransitionAnimationDes"
+  },
   "downloadLocation": "இருப்பிடத்தைப் பதிவிறக்கவும்",
+  "@downloadLocation": {
+    "description": "downloadLocation"
+  },
   "downloadingFormatDes": "கோப்பு வடிவமைப்பைப் பதிவிறக்குவதைத் தேர்ந்தெடுக்கவும். \"ஓபச்\" சிறந்த தரத்தை வழங்கும்",
+  "@downloadingFormatDes": {
+    "description": "downloadingFormatDes"
+  },
   "exportDowloadedFilesDes": "பதிவிறக்கம் செய்யப்பட்ட கோப்பை inapp அடைவு இலிருந்து வெளிப்புற அடைவு க்கு ஏற்றுமதி செய்ய இங்கே சொடுக்கு செய்க",
+  "@exportDowloadedFilesDes": {
+    "description": "exportDowloadedFilesDes"
+  },
   "scanning": "ச்கேனிங் ...",
+  "@scanning": {
+    "description": "scanning"
+  },
   "equalizer": "சமநிலைப்படுத்தி",
+  "@equalizer": {
+    "description": "equalizer"
+  },
   "equalizerDes": "திறந்த கணினி சமநிலைப்படுத்தி",
+  "@equalizerDes": {
+    "description": "equalizerDes"
+  },
   "ignoreBatOptDes": "கணினி உகப்பாக்கம் மூலம் நீங்கள் அறிவிப்பு சிக்கல்கள் அல்லது பிளேபேக் நிறுத்தப்பட்டால், தயவுசெய்து இந்த விருப்பத்தை இயக்கவும்",
+  "@ignoreBatOptDes": {
+    "description": "ignoreBatOptDes"
+  },
   "status": "நிலை",
+  "@status": {
+    "description": "status"
+  },
   "clearImgCacheDes": "தற்காலிக சேமிப்பு சிறு உருவங்கள்/படங்களை அழிக்க இங்கே சொடுக்கு செய்க. (தற்காலிக சேமிப்பு படங்களை புதுப்பிக்க விரும்பினால் தவிர பரிந்துரைக்கப்படவில்லை)",
+  "@clearImgCacheDes": {
+    "description": "clearImgCacheDes"
+  },
   "enabled": "இயக்கப்பட்டது",
+  "@enabled": {
+    "description": "enabled"
+  },
   "disabled": "முடக்கப்பட்டது",
+  "@disabled": {
+    "description": "disabled"
+  },
   "by": "மூலம்",
+  "@by": {
+    "description": "by"
+  },
   "urlSearchDes": "தொடர்புடைய உள்ளடக்கத்தைத் திறக்க/விளையாட முகவரி கண்டறியப்பட்டதைக் சொடுக்கு செய்க",
+  "@urlSearchDes": {
+    "description": "urlSearchDes"
+  },
   "searchDes": "பாடல்கள், பிளேலிச்ட், ஆல்பம் அல்லது கலைஞர்",
+  "@searchDes": {
+    "description": "searchDes"
+  },
   "videos": "வீடியோக்கள்",
+  "@videos": {
+    "description": "videos"
+  },
   "plain": "வெற்று",
+  "@plain": {
+    "description": "plain"
+  },
   "songRemovedfromQueue": "வரிசையிலிருந்து அகற்றப்பட்டது!",
+  "@songRemovedfromQueue": {
+    "description": "songRemovedfromQueue"
+  },
   "playlistRenameAlert": "வெற்றிகரமாக மறுபெயரிடப்பட்டது!",
+  "@playlistRenameAlert": {
+    "description": "playlistRenameAlert"
+  },
   "artistBookmarkAddAlert": "கலைஞர் புக்மார்க்கு!",
+  "@artistBookmarkAddAlert": {
+    "description": "artistBookmarkAddAlert"
+  },
   "artistBookmarkRemoveAlert": "கலைஞர் புக்மார்க்கு நீக்கப்பட்டது!",
+  "@artistBookmarkRemoveAlert": {
+    "description": "artistBookmarkRemoveAlert"
+  },
   "dontShowInfoAgain": "இந்த தகவலை மீண்டும் காட்ட வேண்டாம்",
+  "@dontShowInfoAgain": {
+    "description": "dontShowInfoAgain"
+  },
   "linkPipedDes": "பிளேலிச்ட்களுக்கான குழாய் மூலம் இணைப்பு",
+  "@linkPipedDes": {
+    "description": "linkPipedDes"
+  },
   "password": "கடவுச்சொல்",
+  "@password": {
+    "description": "password"
+  },
   "linkAlert": "வெற்றிகரமாக இணைக்கப்பட்டுள்ளது!",
+  "@linkAlert": {
+    "description": "linkAlert"
+  },
   "unlinkAlert": "வெற்றிகரமாக இணைக்கப்படவில்லை!",
+  "@unlinkAlert": {
+    "description": "unlinkAlert"
+  },
   "reset": "மீட்டமை",
+  "@reset": {
+    "description": "reset"
+  },
   "blacklistPlstResetAlert": "வெற்றிகரமாக மீட்டமைக்கவும்!",
+  "@blacklistPlstResetAlert": {
+    "description": "blacklistPlstResetAlert"
+  },
   "resetblacklistedplaylist": "தடுப்புப்பட்டியல் பிளேலிச்ட்களை மீட்டமைக்கவும்",
+  "@resetblacklistedplaylist": {
+    "description": "resetblacklistedplaylist"
+  },
   "stopMusicOnTaskClear": "பணியில் இசையை நிறுத்துங்கள்",
+  "@stopMusicOnTaskClear": {
+    "description": "stopMusicOnTaskClear"
+  },
   "stopMusicOnTaskClearDes": "பணி மேலாளரிடமிருந்து பயன்பாடு ச்வைப் செய்யப்படும்போது மியூசிக் பிளேபேக் நின்றுவிடும்",
+  "@stopMusicOnTaskClearDes": {
+    "description": "stopMusicOnTaskClearDes"
+  },
   "backupAppData": "காப்புப்பிரதி பயன்பாட்டு தரவு",
+  "@backupAppData": {
+    "description": "backupAppData"
+  },
   "letsStrart": "ஆரம்பிக்கலாம் ..",
+  "@letsStrart": {
+    "description": "letsStrart"
+  },
   "restore": "மீட்டெடு",
+  "@restore": {
+    "description": "restore"
+  },
   "playnextMsg": "வரவிருக்கும்",
+  "@playnextMsg": {
+    "description": "playnextMsg"
+  },
   "shuffleQueue": "கலக்கு வரிசை",
+  "@shuffleQueue": {
+    "description": "shuffleQueue"
+  },
   "queueLoop": "வரிசை வளையம்",
+  "@queueLoop": {
+    "description": "queueLoop"
+  },
   "queueLoopNotDisMsg1": "கலக்கு பயன்முறை இயக்கப்பட்டால் வரிசை லூப் பயன்முறையை முடக்க முடியாது.",
+  "@queueLoopNotDisMsg1": {
+    "description": "queueLoopNotDisMsg1"
+  },
   "queueLoopNotDisMsg2": "ரேடியோ பயன்முறையில் வரிசை லூப் பயன்முறையை இயக்க முடியாது.",
+  "@queueLoopNotDisMsg2": {
+    "description": "queueLoopNotDisMsg2"
+  },
   "loudnessNormalization": "உரத்த இயல்பாக்கம்",
+  "@loudnessNormalization": {
+    "description": "loudnessNormalization"
+  },
   "loudnessNormalizationDes": "எல்லா பாடல்களுக்கும் ஒரே அளவிலான சத்தத்தை அமைக்கிறது (சோதனை) (முந்தைய பதிப்பில் பதிவிறக்கம் செய்யப்பட்ட பாடல்களில் (<v1.10.0) வேலை செய்யாது)",
+  "@loudnessNormalizationDes": {
+    "description": "loudnessNormalizationDes"
+  },
   "enableSlidableAction": "மந்தமான செயல்களை இயக்கவும்",
+  "@enableSlidableAction": {
+    "description": "enableSlidableAction"
+  },
   "enableSlidableActionDes": "பாடல் ஓடு மீது மந்தமான செயல்களை இயக்கவும்",
+  "@enableSlidableActionDes": {
+    "description": "enableSlidableActionDes"
+  },
   "cacheHomeScreenDataDes": "முகப்புத் திரை உள்ளடக்கத் தரவை கேச்சிங் செய்யுங்கள், இந்த விருப்பம் இயக்கப்பட்டிருந்தால் முகப்புத் திரை உடனடியாக ஏற்றப்படும்",
+  "@cacheHomeScreenDataDes": {
+    "description": "cacheHomeScreenDataDes"
+  },
   "viewAll": "அனைத்தையும் காண்க",
+  "@viewAll": {
+    "description": "viewAll"
+  },
   "nomatch": "எந்த போட்டியும் கிடைக்கவில்லை",
+  "@nomatch": {
+    "description": "nomatch"
+  },
   "songInfo": "பாடல் செய்தி",
+  "@songInfo": {
+    "description": "songInfo"
+  },
   "title": "தலைப்பு",
+  "@title": {
+    "description": "title"
+  },
   "duration": "காலம்",
+  "@duration": {
+    "description": "duration"
+  },
   "loudnessDb": "Olownessdb",
+  "@loudnessDb": {
+    "description": "loudnessDb"
+  },
   "deleteDownloadedDataAlert": "பதிவிறக்கங்களிலிருந்து வெற்றிகரமாக அகற்றப்பட்டது!",
+  "@deleteDownloadedDataAlert": {
+    "description": "deleteDownloadedDataAlert"
+  },
   "sleepTimeSetAlert": "உங்கள் தூக்க நேரங்குறிகருவி அமைக்கப்பட்டுள்ளது",
+  "@sleepTimeSetAlert": {
+    "description": "sleepTimeSetAlert"
+  },
   "songAddedToPlaylistAlert": "பிளேலிச்ட்டில் பாடல் சேர்க்கப்பட்டது!",
+  "@songAddedToPlaylistAlert": {
+    "description": "songAddedToPlaylistAlert"
+  },
   "songAlreadyOfflineAlert": "கேச்சில் ஏற்கனவே ஆஃப்லைனில் பாடல்",
+  "@songAlreadyOfflineAlert": {
+    "description": "songAlreadyOfflineAlert"
+  },
   "songRemovedAlert": "இருந்து அகற்றப்பட்டது",
+  "@songRemovedAlert": {
+    "description": "songRemovedAlert"
+  },
   "pipedplstSyncAlert": "குழாய் பிளேலிச்ட் ஒத்திசைக்கப்பட்டது!",
+  "@pipedplstSyncAlert": {
+    "description": "pipedplstSyncAlert"
+  },
   "playlistCreatedAlert": "பிளேலிச்ட் உருவாக்கப்பட்டது!",
+  "@playlistCreatedAlert": {
+    "description": "playlistCreatedAlert"
+  },
   "playlistRemovedAlert": "பிளேலிச்ட் அகற்றப்பட்டது!",
+  "@playlistRemovedAlert": {
+    "description": "playlistRemovedAlert"
+  },
   "playlistBookmarkAddAlert": "பிளேலிச்ட் புக்மார்க்கு செய்யப்பட்டது!",
+  "@playlistBookmarkAddAlert": {
+    "description": "playlistBookmarkAddAlert"
+  },
   "playlistBookmarkRemoveAlert": "பிளேலிச்ட் புக்மார்க்கு அகற்றப்பட்டது!",
+  "@playlistBookmarkRemoveAlert": {
+    "description": "playlistBookmarkRemoveAlert"
+  },
   "albumBookmarkAddAlert": "ஆல்பம் புக்மார்க்கு செய்யப்பட்டது!",
+  "@albumBookmarkAddAlert": {
+    "description": "albumBookmarkAddAlert"
+  },
   "operationFailed": "செயல்பாடு தோல்வியடைந்தது",
+  "@operationFailed": {
+    "description": "operationFailed"
+  },
   "goToDownloadPage": "பதிவிறக்க பக்கத்திற்குச் செல்ல இங்கே சொடுக்கு செய்க",
+  "@goToDownloadPage": {
+    "description": "goToDownloadPage"
+  },
   "local": "உள்ளக",
+  "@local": {
+    "description": "local"
+  },
   "unLink": "இணைக்கவும்",
+  "@unLink": {
+    "description": "unLink"
+  },
   "androidBackupWarning": "சோதிக்கப்படவில்லை: தேர்வுப்பெட்டியைத் தேர்ந்தெடுப்பது 60 க்கும் மேற்பட்ட கோப்புகளைப் பதிவிறக்கிய பிறகு, செயல்முறை அதிக அளவு நினைவகத்தை உட்கொள்ளக்கூடும், மேலும் தொலைபேசி அல்லது பயன்பாடு செயலிழக்கக்கூடும். உங்கள் சொந்த ஆபத்தில் தொடரவும்.",
+  "@androidBackupWarning": {
+    "description": "androidBackupWarning"
+  },
   "processFiles": "செயலாக்க கோப்புகளை ...",
+  "@processFiles": {
+    "description": "processFiles"
+  },
   "includeDownloadedFiles": "பதிவிறக்கம் செய்யப்பட்ட பாடல்கள் கோப்புகளைச் சேர்க்கவும்",
+  "@includeDownloadedFiles": {
+    "description": "includeDownloadedFiles"
+  },
   "restoreAppData": "பயன்பாட்டு தரவை மீட்டமைக்கவும்",
+  "@restoreAppData": {
+    "description": "restoreAppData"
+  },
   "restoreMsg": "வெற்றிகரமாக மீட்டெடுக்கப்பட்டது!\n மறுதொடக்கத்தில் மாற்றங்கள் பயன்படுத்தப்படுகின்றன",
+  "@restoreMsg": {
+    "description": "restoreMsg"
+  },
   "customIns": "தனிப்பயன் நிகழ்வு",
+  "@customIns": {
+    "description": "customIns"
+  },
   "customInsSelectMsg": "தனிப்பயன் நிகழ்வைத் தேர்ந்தெடுக்கவும்",
+  "@customInsSelectMsg": {
+    "description": "customInsSelectMsg"
+  },
   "allFieldsReqMsg": "தேவையான அனைத்து புலங்களும்",
+  "@allFieldsReqMsg": {
+    "description": "allFieldsReqMsg"
+  },
   "selectAuthIns": "அங்கீகார நிகழ்வைத் தேர்ந்தெடுக்கவும்",
+  "@selectAuthIns": {
+    "description": "selectAuthIns"
+  },
   "album": "தொகுப்பு",
+  "@album": {
+    "description": "album"
+  },
   "misc": "மற்றவை",
+  "@misc": {
+    "description": "misc"
+  },
   "resetToDefault": "இயல்புநிலை அமைப்புகளை மீட்டமைக்கவும்",
+  "@resetToDefault": {
+    "description": "resetToDefault"
+  },
   "playingfromAlbum": "ஆல்பத்தில் இருந்து ஒலிக்கிறது",
+  "@playingfromAlbum": {
+    "description": "playingfromAlbum"
+  },
   "playingfromSelection": "தேர்விலிருந்து விளையாடும்",
+  "@playingfromSelection": {
+    "description": "playingfromSelection"
+  },
   "playingfromArtist": "கலைஞரிடமிருந்து இசைக்கிறது",
+  "@playingfromArtist": {
+    "description": "playingfromArtist"
+  },
   "randomSelection": "சீரற்ற தேர்வு",
+  "@randomSelection": {
+    "description": "randomSelection"
+  },
   "autoOpenPlayer": "தானாக திறந்த பிளேயர் திரை",
+  "@autoOpenPlayer": {
+    "description": "autoOpenPlayer"
+  },
   "playingfromPlaylist": "பிளேலிஸ்ட்டில் இருந்து விளையாடுகிறது",
+  "@playingfromPlaylist": {
+    "description": "playingfromPlaylist"
+  },
   "randomRadio": "சீரற்ற வானொலி",
+  "@randomRadio": {
+    "description": "randomRadio"
+  },
   "resetToDefaultMsg": "செயலியை மீட்டமைக்கும் வினை முடிந்தது, தயவு செய்து செயலியை மீண்டும் மறுதொடக்கம் செய்யவும்",
+  "@resetToDefaultMsg": {
+    "description": "resetToDefaultMsg"
+  },
   "resetToDefaultDes": "செயலியை மீட்டமைக்க (ஒருமுறை செயலியை மறுதொடக்கம் செய்ய வேண்டும்)",
+  "@resetToDefaultDes": {
+    "description": "resetToDefaultDes"
+  },
   "autoOpenPlayerDes": "பாடல் தேர்ந்தெடுக்கும் போது பாடல் இயலி தானாக முழு திரையில் திறக்க அ மூடிக்கொள்ளும் செயல்திறன்",
+  "@autoOpenPlayerDes": {
+    "description": "autoOpenPlayerDes"
+  },
   "reArrangeSongs": "பாடல்களை அடுக்கு",
+  "@reArrangeSongs": {
+    "description": "reArrangeSongs"
+  },
   "selectSongs": "தேர்ந்தெடு",
+  "@selectSongs": {
+    "description": "selectSongs"
+  },
   "selectAll": "எல்லாம் தேர்ந்தெடு",
+  "@selectAll": {
+    "description": "selectAll"
+  },
   "exportErrorStorage": "சேமிக்க இடம் இல்லை",
+  "@exportErrorStorage": {
+    "description": "exportErrorStorage"
+  },
   "exportPlaylist": "பிளேலிஸ்ட்டை ஏற்றுமதி செய்",
+  "@exportPlaylist": {
+    "description": "exportPlaylist"
+  },
   "exportingPlaylist": "பிளேலிஸ்ட்டை ஏற்றுமதி செய்கிறது...",
+  "@exportingPlaylist": {
+    "description": "exportingPlaylist"
+  },
   "playlistExportedMsg": "பிளேலிஸ்ட் வெற்றிகரமாக ஏற்றுமதி செய்யப்பட்டது",
+  "@playlistExportedMsg": {
+    "description": "playlistExportedMsg"
+  },
   "exportError": "பிளேலிஸ்ட்டை ஏற்றுமதி செய்வதில் பிழை",
+  "@exportError": {
+    "description": "exportError"
+  },
   "exportErrorPermission": "ஏற்றுமதி செய்யும்போது அனுமதி மறுக்கப்பட்டது",
+  "@exportErrorPermission": {
+    "description": "exportErrorPermission"
+  },
   "exportErrorFormat": "பிளேலிஸ்ட் தரவை வடிவமைப்பதில் பிழை",
+  "@exportErrorFormat": {
+    "description": "exportErrorFormat"
+  },
   "importPlaylist": "பிளேலிஸ்ட்டை இறக்குமதி செய்",
+  "@importPlaylist": {
+    "description": "importPlaylist"
+  },
   "importingPlaylist": "பிளேலிஸ்ட்டை இறக்குமதி செய்கிறது...",
+  "@importingPlaylist": {
+    "description": "importingPlaylist"
+  },
   "importPlaylistDesc": "இறக்குமதி செய்ய, முன்பு ஏற்றுமதி செய்யப்பட்ட பிளேலிஸ்ட் JSON கோப்பைத் தேர்ந்தெடுக்கவும்",
+  "@importPlaylistDesc": {
+    "description": "importPlaylistDesc"
+  },
   "selectFile": "கோப்பைத் தேர்ந்தெடுக்கவும்",
+  "@selectFile": {
+    "description": "selectFile"
+  },
   "playlistImportedMsg": "பிளேலிஸ்ட் வெற்றிகரமாக இறக்குமதி செய்யப்பட்டது",
+  "@playlistImportedMsg": {
+    "description": "playlistImportedMsg"
+  },
   "importError": "பிளேலிஸ்ட் இறக்குமதி செய்வதில் பிழை",
+  "@importError": {
+    "description": "importError"
+  },
   "importErrorFileAccess": "தேர்ந்தெடுக்கப்பட்ட கோப்பை அணுக முடியவில்லை",
+  "@importErrorFileAccess": {
+    "description": "importErrorFileAccess"
+  },
   "importErrorFormat": "தவறான கோப்பு வடிவம்",
+  "@importErrorFormat": {
+    "description": "importErrorFormat"
+  },
   "invalidPlaylistFile": "தவறான பிளேலிஸ்ட் கோப்பு அமைப்பு",
+  "@invalidPlaylistFile": {
+    "description": "invalidPlaylistFile"
+  },
   "importErrorDatabase": "தரவுத்தளத்தில் சேமிப்பதில் பிழை",
+  "@importErrorDatabase": {
+    "description": "importErrorDatabase"
+  },
   "fileNotFound": "கோப்பு கிடைக்கவில்லை",
+  "@fileNotFound": {
+    "description": "fileNotFound"
+  },
   "importLargeFileNote": "குறிப்பு: பெரிய பிளேலிஸ்ட்களை இறக்குமதி செய்ய அதிக நேரம் ஆகலாம்",
+  "@importLargeFileNote": {
+    "description": "importLargeFileNote"
+  },
   "keepScreenOnWhilePlaying": "ப்ளே செய்யும்போது திரையை இயக்க 상태வை வைத்திரு",
-  "keepScreenOnWhilePlayingDes": "செயல்படுத்தப்பட்டால், இசை ஓடும்போது சாதனத்தின் திரை பயங்கரவாக இருக்கும்"
+  "@keepScreenOnWhilePlaying": {
+    "description": "keepScreenOnWhilePlaying"
+  },
+  "keepScreenOnWhilePlayingDes": "செயல்படுத்தப்பட்டால், இசை ஓடும்போது சாதனத்தின் திரை பயங்கரவாக இருக்கும்",
+  "@keepScreenOnWhilePlayingDes": {
+    "description": "keepScreenOnWhilePlayingDes"
+  }
 }

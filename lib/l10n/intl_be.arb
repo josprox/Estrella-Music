@@ -6,47 +6,47 @@
   },
   "auth_login_success": "Паспяхова ўвайшлі ў сістэму",
   "@auth_login_success": {
-    "description": ""
+    "description": "auth_login_success"
   },
   "settings_cloud_backup": "Воблачнае рэзервовае капіраванне",
   "@settings_cloud_backup": {
-    "description": ""
+    "description": "settings_cloud_backup"
   },
   "settings_migration_title": "Пераход з Joss Music Kotlin",
   "@settings_migration_title": {
-    "description": ""
+    "description": "settings_migration_title"
   },
   "backup_confirm_question": "Вы хочаце зрабіць рэзервовую копію?",
   "@backup_confirm_question": {
-    "description": ""
+    "description": "backup_confirm_question"
   },
   "backup_selection_prompt": "Выберыце даныя для рэзервовага капіравання",
   "@backup_selection_prompt": {
-    "description": ""
+    "description": "backup_selection_prompt"
   },
   "search_recent_title": "Апошнія пошукі",
   "@search_recent_title": {
-    "description": ""
+    "description": "search_recent_title"
   },
   "back": "Вяртанне",
   "@back": {
-    "description": ""
+    "description": "back"
   },
   "auth_forgot_password": "Я забыў свой пароль",
   "@auth_forgot_password": {
-    "description": ""
+    "description": "auth_forgot_password"
   },
   "auth_btn_login": "Увайсці",
   "@auth_btn_login": {
-    "description": ""
+    "description": "auth_btn_login"
   },
   "auth_btn_register": "Зарэгіструйцеся",
   "@auth_btn_register": {
-    "description": ""
+    "description": "auth_btn_register"
   },
   "email": "Электронная пошта",
   "@email": {
-    "description": ""
+    "description": "email"
   },
   "password_text": "Пароль",
   "@password_text": {
@@ -54,374 +54,877 @@
   },
   "auth_confirm_password": "Пацвердзіце пароль",
   "@auth_confirm_password": {
-    "description": ""
+    "description": "auth_confirm_password"
   },
   "auth_welcome_title": "Сардэчна запрашаем у Estrella Music",
   "@auth_welcome_title": {
-    "description": ""
+    "description": "auth_welcome_title"
   },
   "auth_welcome_subtitle": "Сардэчна запрашаем у Estrella Music",
   "@auth_welcome_subtitle": {
-    "description": ""
+    "description": "auth_welcome_subtitle"
   },
   "username": "Імя карыстальніка",
   "@username": {
-    "description": ""
+    "description": "username"
   },
   "auth_first_name": "імя",
   "@auth_first_name": {
-    "description": ""
+    "description": "auth_first_name"
   },
   "auth_last_name": "Прозвішча",
   "@auth_last_name": {
-    "description": ""
+    "description": "auth_last_name"
   },
   "auth_agree_personal_data": "Acepto usar mis datos...",
   "@auth_agree_personal_data": {
-    "description": ""
+    "description": "auth_agree_personal_data"
   },
   "settings_general_section": "Генерал",
   "@settings_general_section": {
-    "description": ""
+    "description": "settings_general_section"
   },
   "settings_logout": "Выйсці",
   "@settings_logout": {
-    "description": ""
+    "description": "settings_logout"
   },
   "settings_cloud_backup_desc": "Загружаць, аднаўляць і кіраваць...",
   "@settings_cloud_backup_desc": {
-    "description": ""
+    "description": "settings_cloud_backup_desc"
   },
   "settings_migration_desc": "Імпартаваць плэйлісты, песні...",
   "@settings_migration_desc": {
-    "description": ""
+    "description": "settings_migration_desc"
   },
   "backup_btn_restart": "Перазапусціць праграму",
   "@backup_btn_restart": {
-    "description": ""
+    "description": "backup_btn_restart"
   },
   "backup_btn_upload": "Загрузіць рэзервовую копію зараз",
   "@backup_btn_upload": {
-    "description": ""
+    "description": "backup_btn_upload"
   },
   "backup_no_backups": "Рэзервовых копій пакуль няма...",
   "@backup_no_backups": {
-    "description": ""
+    "description": "backup_no_backups"
   },
   "backup_auth_required": "Вам патрэбны актыўны сеанс...",
   "@backup_auth_required": {
-    "description": ""
+    "description": "backup_auth_required"
   },
   "backup_upload_success": "Рэзервовая копія запампавана правільна.",
   "@backup_upload_success": {
-    "description": ""
+    "description": "backup_upload_success"
   },
   "backup_restore_success": "Рэзервовая копія адноўлена. Перазапусціце праграму.",
   "@backup_restore_success": {
-    "description": ""
+    "description": "backup_restore_success"
   },
   "backup_delete_success": "Рэзервовая копія выдалена.",
   "@backup_delete_success": {
-    "description": ""
+    "description": "backup_delete_success"
   },
   "genre_pop": "Поп",
   "@genre_pop": {
-    "description": ""
+    "description": "genre_pop"
   },
   "genre_rock": "Рок",
   "@genre_rock": {
-    "description": ""
+    "description": "genre_rock"
   },
   "genre_hiphop": "хіп-хоп",
   "@genre_hiphop": {
-    "description": ""
+    "description": "genre_hiphop"
   },
   "genre_electronic": "Электроніка",
   "@genre_electronic": {
-    "description": ""
+    "description": "genre_electronic"
   },
   "genre_jazz": "Джаз",
   "@genre_jazz": {
-    "description": ""
+    "description": "genre_jazz"
   },
   "genre_latin": "лацінка",
   "@genre_latin": {
-    "description": ""
+    "description": "genre_latin"
   },
   "migration_btn_select": "Выберыце файл і імпартуйце",
   "@migration_btn_select": {
-    "description": ""
+    "description": "migration_btn_select"
   },
   "close": "Блізка",
   "@close": {
-    "description": ""
+    "description": "close"
   },
   "forgottenFavorites": "забытыя фаварыты",
   "@forgottenFavorites": {
-    "description": ""
+    "description": "forgottenFavorites"
   },
   "mostListenedSong": "Самая слухаемая песня",
   "@mostListenedSong": {
-    "description": ""
+    "description": "mostListenedSong"
   },
   "reproducedBy": "Узноўлена",
   "@reproducedBy": {
-    "description": ""
+    "description": "reproducedBy"
   },
   "recentSearches": "Апошнія пошукі",
   "@recentSearches": {
-    "description": ""
+    "description": "recentSearches"
   },
   "popularTracks": "Папулярныя трэкі",
   "@popularTracks": {
-    "description": ""
+    "description": "popularTracks"
   },
   "latestRelease": "Апошні выпуск",
   "@latestRelease": {
-    "description": ""
+    "description": "latestRelease"
   },
   "follow": "Працягнуць",
   "@follow": {
-    "description": ""
+    "description": "follow"
   },
   "following": "Пасля",
   "@following": {
-    "description": ""
+    "description": "following"
   },
   "listenNow": "Слухай цяпер",
   "@listenNow": {
-    "description": ""
+    "description": "listenNow"
   },
   "video": "Відэа",
   "@video": {
-    "description": ""
+    "description": "video"
   },
   "about": "Аб",
   "@about": {
-    "description": ""
+    "description": "about"
   },
   "readMore": "Больш падрабязна",
   "@readMore": {
-    "description": ""
+    "description": "readMore"
   },
   "speedAndPitch": "Хуткасць і крок",
   "@speedAndPitch": {
-    "description": ""
+    "description": "speedAndPitch"
   },
   "playbackSpeed": "Хуткасць прайгравання",
   "@playbackSpeed": {
-    "description": ""
+    "description": "playbackSpeed"
   },
   "songPitch": "тон песні",
   "@songPitch": {
-    "description": ""
+    "description": "songPitch"
   },
   "musicRecognition": "Распазнаванне музыкі",
   "@musicRecognition": {
-    "description": ""
+    "description": "musicRecognition"
   },
   "listeningToEnvironment": "Слухаючы навакольнае асяроддзе...",
   "@listeningToEnvironment": {
-    "description": ""
+    "description": "listeningToEnvironment"
   },
   "micInstruction": "Пераканайцеся, што музыка гучыць дастаткова гучна каля мікрафона.",
   "@micInstruction": {
-    "description": ""
+    "description": "micInstruction"
   },
   "processingAudio": "Апрацоўка аўдыя...",
   "@processingAudio": {
-    "description": ""
+    "description": "processingAudio"
   },
   "shazamSearching": "Пошук супадзенняў у базе дадзеных Shazam...",
   "@shazamSearching": {
-    "description": ""
+    "description": "shazamSearching"
   },
   "songFound": "Песня знойдзена!",
   "@songFound": {
-    "description": ""
+    "description": "songFound"
   },
   "playNow": "Гуляць зараз",
   "@playNow": {
-    "description": ""
+    "description": "playNow"
   },
   "searchInLibrary": "Пошук у бібліятэцы",
   "@searchInLibrary": {
-    "description": ""
+    "description": "searchInLibrary"
   },
   "noMatchesFound": "Супадзенняў няма",
   "@noMatchesFound": {
-    "description": ""
+    "description": "noMatchesFound"
   },
   "noMatchInstruction": "Не ўдалося знайсці ніводнай песні ў запісаным аўдыя",
   "@noMatchInstruction": {
-    "description": ""
+    "description": "noMatchInstruction"
   },
   "errorOccurred": "Адбылася памылка",
   "@errorOccurred": {
-    "description": ""
+    "description": "errorOccurred"
   },
   "playingRecognizedTrack": "Прайграванне:",
   "@playingRecognizedTrack": {
-    "description": ""
+    "description": "playingRecognizedTrack"
   },
   "errorPlayingTrack": "Памылка пры прайграванні:",
   "@errorPlayingTrack": {
-    "description": ""
+    "description": "errorPlayingTrack"
   },
   "welcome_title": "Ваша музыка, ваш шлях",
+  "@welcome_title": {
+    "description": "welcome_title"
+  },
   "welcome_subtitle": "Выберыце, як вы хочаце адчуваць Estrella Music з гэтага часу.",
+  "@welcome_subtitle": {
+    "description": "welcome_subtitle"
+  },
   "welcome_intro": "Мы мадэрнізавалі нашу платформу. Старая сістэма загрузкі ручных рэзервовых копій была адключана. Цяпер у вас ёсць два зразумелых спосабу кіравання музычнай бібліятэкай.",
+  "@welcome_intro": {
+    "description": "welcome_intro"
+  },
   "recommend_cloud": "Мы рэкамендуем актываваць Воблачны рэжым для вопыту, падобнага на Spotify: сінхранізацыя ў рэальным часе паміж усімі вашымі прыладамі і аўтаматычнае рэзервовае капіраванне без неабходнасці рабіць што-небудзь.",
+  "@recommend_cloud": {
+    "description": "recommend_cloud"
+  },
   "swipe_prompt": "Правядзіце пальцам, каб вывучыць параметры ➔",
+  "@swipe_prompt": {
+    "description": "swipe_prompt"
+  },
   "local_title": "Мясцовы рэжым",
+  "@local_title": {
+    "description": "local_title"
+  },
   "local_subtitle": "Абсалютная прыватнасць на вашым прыладзе",
+  "@local_subtitle": {
+    "description": "local_subtitle"
+  },
   "local_b1": "Гэта працуе без неабходнасці ўваходу ў сістэму.",
+  "@local_b1": {
+    "description": "local_b1"
+  },
   "local_b2": "Уся ваша бібліятэка захоўваецца выключна на гэтым камп'ютары.",
+  "@local_b2": {
+    "description": "local_b2"
+  },
   "local_b3": "Заўвага: рэзервовае капіраванне ў воблаку ўручную не ствараецца. Калі вы страціце прыладу або выдаліце ​​праграму, вашы дадзеныя не могуць быць адноўлены.",
+  "@local_b3": {
+    "description": "local_b3"
+  },
   "local_btn": "Выкарыстоўвайце толькі на гэтай прыладзе",
+  "@local_btn": {
+    "description": "local_btn"
+  },
   "cloud_title": "Воблачны рэжым (рэкамендуецца)",
+  "@cloud_title": {
+    "description": "cloud_title"
+  },
   "cloud_subtitle": "Сінхранізацыя ў рэжыме рэальнага часу з Joss Red",
+  "@cloud_subtitle": {
+    "description": "cloud_subtitle"
+  },
   "cloud_b1": "Бяспечна ўвайдзіце ў свой уліковы запіс Joss Red.",
+  "@cloud_b1": {
+    "description": "cloud_b1"
+  },
   "cloud_b2": "Імгненны доступ да вашых спісаў прайгравання, абранага і гісторыі з любой прылады (Windows, Android і г.д.).",
+  "@cloud_b2": {
+    "description": "cloud_b2"
+  },
   "cloud_b3": "Разумная сінхранізацыя: праца ў аўтаномным рэжыме і аўтаматычнае змяненне загрузкі пры аднаўленні інтэрнэту.",
+  "@cloud_b3": {
+    "description": "cloud_b3"
+  },
   "cloud_btn": "Актывуйце воблачную сінхранізацыю",
+  "@cloud_btn": {
+    "description": "cloud_btn"
+  },
   "slide_indicator": "Крок {current} з 3",
+  "@slide_indicator": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      }
+    },
+    "description": "slide_indicator"
+  },
   "news_card_title": "Estrella Music развілася!",
+  "@news_card_title": {
+    "description": "news_card_title"
+  },
   "news_card_subtitle": "100% сінхранізацыя з Joss Red, плэйлісты з сябрамі і многае іншае. Націсніце, каб убачыць, што новага.",
+  "@news_card_subtitle": {
+    "description": "news_card_subtitle"
+  },
   "news_dialog_title": "Музычныя навіны Estrella",
+  "@news_dialog_title": {
+    "description": "news_dialog_title"
+  },
   "news_item_sync_title": "Поўная інтэграцыя з Joss Red",
+  "@news_item_sync_title": {
+    "description": "news_item_sync_title"
+  },
   "news_item_sync_desc": "Вашы спісы прайгравання і абранае зараз захоўваюцца і аўтаматычна сінхранізуюцца ў воблаку з вашым галоўным уліковым запісам Joss Red.",
+  "@news_item_sync_desc": {
+    "description": "news_item_sync_desc"
+  },
   "news_item_collab_title": "Сумесныя плэйлісты",
+  "@news_item_collab_title": {
+    "description": "news_item_collab_title"
+  },
   "news_item_collab_desc": "Стварайце спісы прайгравання з сябрамі! Пры стварэнні спісу прайгравання ўсталюйце сцяжок Collaborative і выберыце сяброў для сумеснага рэдагавання.",
+  "@news_item_collab_desc": {
+    "description": "news_item_collab_desc"
+  },
   "news_item_trans_title": "Празрыстая сінхранізацыя",
+  "@news_item_trans_title": {
+    "description": "news_item_trans_title"
+  },
   "news_item_trans_desc": "Вам больш не трэба націскаць кнопкі ручной сінхранізацыі; Новы рухавік адказвае за аўтаматычнае пераключэнне перадач уверх і ўніз.",
+  "@news_item_trans_desc": {
+    "description": "news_item_trans_desc"
+  },
   "news_dialog_section_friends": "Кіраванне сябрамі і акаўнтам:",
+  "@news_dialog_section_friends": {
+    "description": "news_dialog_section_friends"
+  },
   "news_dialog_friends_desc": "Каб дадаваць сяброў, прымаць запыты або кіраваць сваім профілем бяспекі, выкарыстоўвайце Joss Red на яго афіцыйных платформах:",
+  "@news_dialog_friends_desc": {
+    "description": "news_dialog_friends_desc"
+  },
   "news_btn_app": "Дадатак Joss Red (Play Store)",
+  "@news_btn_app": {
+    "description": "news_btn_app"
+  },
   "news_btn_web": "Joss Red Web",
+  "@news_btn_web": {
+    "description": "news_btn_web"
+  },
   "news_btn_dismiss": "Зразумеў",
+  "@news_btn_dismiss": {
+    "description": "news_btn_dismiss"
+  },
   "settings_appearance_desc": "Тэма, мова і анімацыя інтэрфейсу.",
+  "@settings_appearance_desc": {
+    "description": "settings_appearance_desc"
+  },
   "settings_content_desc": "Адкрыйце для сябе фільтры, інтэграцыю з Piped і кэшы.",
+  "@settings_content_desc": {
+    "description": "settings_content_desc"
+  },
   "settings_playback_desc": "Якасць трансляцыі, нармалізацыя, цішыня і акумулятар.",
+  "@settings_playback_desc": {
+    "description": "settings_playback_desc"
+  },
   "settings_downloads_desc": "Спампоўкі і захоўванне",
+  "@settings_downloads_desc": {
+    "description": "settings_downloads_desc"
+  },
   "settings_downloads_sub": "Аўдыяфарматы, тэчкі і аўтаматычная загрузка.",
+  "@settings_downloads_sub": {
+    "description": "settings_downloads_sub"
+  },
   "settings_account_desc": "Уліковы запіс і сінхранізацыя",
+  "@settings_account_desc": {
+    "description": "settings_account_desc"
+  },
   "settings_account_sub": "Воблачны рэжым, рэзервовыя копіі, спіс сяброў і міграцыі.",
+  "@settings_account_sub": {
+    "description": "settings_account_sub"
+  },
   "settings_about_desc": "Пра Estrella Music",
+  "@settings_about_desc": {
+    "description": "settings_about_desc"
+  },
   "settings_about_sub": "Версія, праект з адкрытым зыходным кодам і GitHub.",
+  "@settings_about_sub": {
+    "description": "settings_about_sub"
+  },
   "settings_local_cloud_title": "Лакальны рэжым / EMusic Cloud",
+  "@settings_local_cloud_title": {
+    "description": "settings_local_cloud_title"
+  },
   "settings_local_cloud_desc": "Выберыце, перанясіце або праглядзіце стан сінхранізацыі з Joss Red.",
+  "@settings_local_cloud_desc": {
+    "description": "settings_local_cloud_desc"
+  },
   "settings_my_friends": "мае сябры",
+  "@settings_my_friends": {
+    "description": "settings_my_friends"
+  },
   "settings_my_friends_desc": "Кіруйце сваімі сябрамі Joss Red непасрэдна.",
+  "@settings_my_friends_desc": {
+    "description": "settings_my_friends_desc"
+  },
   "settings_refresh_visitor_title": "Абнавіць ID (ID наведвальніка)",
+  "@settings_refresh_visitor_title": {
+    "description": "settings_refresh_visitor_title"
+  },
   "settings_refresh_visitor_desc": "Аднавіце свой ідэнтыфікатар YouTube Music, калі змесціва Discover не загружаецца.",
+  "@settings_refresh_visitor_desc": {
+    "description": "settings_refresh_visitor_desc"
+  },
   "settings_visitor_updated": "Абноўлены ідэнтыфікатар",
+  "@settings_visitor_updated": {
+    "description": "settings_visitor_updated"
+  },
   "settings_visitor_updated_desc": "Новы ID наведвальніка быў паспяхова створаны.",
+  "@settings_visitor_updated_desc": {
+    "description": "settings_visitor_updated_desc"
+  },
   "settings_visitor_error": "Памылка",
+  "@settings_visitor_error": {
+    "description": "settings_visitor_error"
+  },
   "settings_visitor_error_desc": "Не ўдалося стварыць новы ідэнтыфікатар. Паўтарыце спробу пазней.",
+  "@settings_visitor_error_desc": {
+    "description": "settings_visitor_error_desc"
+  },
   "settings_visitor_exception": "Адбылася памылка пры рэгенерацыі: {error}",
+  "@settings_visitor_exception": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    },
+    "description": "settings_visitor_exception"
+  },
   "migratedLibrary": "Перанесеная бібліятэка",
+  "@migratedLibrary": {
+    "description": "migratedLibrary"
+  },
   "noSongsInCollection": "У гэтым зборніку няма песень",
+  "@noSongsInCollection": {
+    "description": "noSongsInCollection"
+  },
   "startupScreen": "Адкрыць пры запуску",
+  "@startupScreen": {
+    "description": "startupScreen"
+  },
   "startupScreenDescription": "Выберыце раздзел, які Estrella Music адкрываецца першым",
+  "@startupScreenDescription": {
+    "description": "startupScreenDescription"
+  },
   "friends": "Сябры",
+  "@friends": {
+    "description": "friends"
+  },
   "dailyDiscover": "Штодзённае адкрыццё",
+  "@dailyDiscover": {
+    "description": "dailyDiscover"
+  },
   "keepListening": "працягвайце слухаць",
+  "@keepListening": {
+    "description": "keepListening"
+  },
   "similarToTitle": "Падобна да {title}",
+  "@similarToTitle": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    },
+    "description": "similarToTitle"
+  },
   "pipedPlaylistDescription": "Канвеерны спіс прайгравання",
+  "@pipedPlaylistDescription": {
+    "description": "pipedPlaylistDescription"
+  },
   "collaborativePlaylistDescription": "Сумесны спіс прайгравання",
+  "@collaborativePlaylistDescription": {
+    "description": "collaborativePlaylistDescription"
+  },
   "libraryPlaylistDescription": "Плэйліст бібліятэкі",
+  "@libraryPlaylistDescription": {
+    "description": "libraryPlaylistDescription"
+  },
   "untitledSong": "Песня без назвы",
+  "@untitledSong": {
+    "description": "untitledSong"
+  },
   "migratedPlaylist": "Перанесены спіс прайгравання",
+  "@migratedPlaylist": {
+    "description": "migratedPlaylist"
+  },
   "migratedAlbum": "Перанесены альбом",
+  "@migratedAlbum": {
+    "description": "migratedAlbum"
+  },
   "songsImportedFromJossMusic": "Песні, імпартаваныя з Joss Music Kotlin",
+  "@songsImportedFromJossMusic": {
+    "description": "songsImportedFromJossMusic"
+  },
   "importedFromJossMusic": "Імпартавана з Joss Music Kotlin",
+  "@importedFromJossMusic": {
+    "description": "importedFromJossMusic"
+  },
   "syncLocalModeActive": "Мясцовы рэжым уключаны",
+  "@syncLocalModeActive": {
+    "description": "syncLocalModeActive"
+  },
   "syncCloudPending": "Воблачны рэжым актыўны. Чакаецца сінхранізацыя.",
+  "@syncCloudPending": {
+    "description": "syncCloudPending"
+  },
   "syncCloudDownloadingExisting": "Воблачны рэжым актываваны. Загрузка існуючай бібліятэкі.",
+  "@syncCloudDownloadingExisting": {
+    "description": "syncCloudDownloadingExisting"
+  },
   "syncCloudMigrationComplete": "Воблачны рэжым актываваны. Перанесеная бібліятэка.",
+  "@syncCloudMigrationComplete": {
+    "description": "syncCloudMigrationComplete"
+  },
   "syncLocalDeviceOnly": "Вашы даныя захоўваюцца толькі на гэтай прыладзе.",
+  "@syncLocalDeviceOnly": {
+    "description": "syncLocalDeviceOnly"
+  },
   "syncDownloading": "Спампоўка змен EMusic...",
+  "@syncDownloading": {
+    "description": "syncDownloading"
+  },
   "syncDownloadFailed": "Не ўдалося спампаваць сінхранізацыю.",
+  "@syncDownloadFailed": {
+    "description": "syncDownloadFailed"
+  },
   "syncLocalChangesFirst": "Ёсць новыя лакальныя змены. Яны будуць загружаны перад загрузкай.",
+  "@syncLocalChangesFirst": {
+    "description": "syncLocalChangesFirst"
+  },
   "syncLibrarySynced": "Сінхранізаваная бібліятэка.",
+  "@syncLibrarySynced": {
+    "description": "syncLibrarySynced"
+  },
   "syncOfflinePending": "У аўтаномным рэжыме. Змены чакаюцца.",
+  "@syncOfflinePending": {
+    "description": "syncOfflinePending"
+  },
   "syncLibraryUpToDate": "Бібліятэка ў актуальным стане.",
+  "@syncLibraryUpToDate": {
+    "description": "syncLibraryUpToDate"
+  },
   "syncChangesSynced": "{count} сінхранізаваных змяненняў.",
+  "@syncChangesSynced": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    },
+    "description": "syncChangesSynced"
+  },
   "syncUploading": "Загрузка змяненняў у EMusic...",
+  "@syncUploading": {
+    "description": "syncUploading"
+  },
   "syncUploadSuccessWs": "Змены паспяхова запампаваны (WS).",
+  "@syncUploadSuccessWs": {
+    "description": "syncUploadSuccessWs"
+  },
   "syncUploadWsRetry": "Немагчыма загрузіць з дапамогай WS. Яно будзе паўторана пазней.",
+  "@syncUploadWsRetry": {
+    "description": "syncUploadWsRetry"
+  },
   "syncUploadSuccess": "Змены запампаваны правільна.",
+  "@syncUploadSuccess": {
+    "description": "syncUploadSuccess"
+  },
   "syncUploadRetry": "Не мог падняцца. Яно будзе паўторана пазней.",
+  "@syncUploadRetry": {
+    "description": "syncUploadRetry"
+  },
   "syncOfflineRetry": "У аўтаномным рэжыме. Змены захаваны для паўторнай спробы.",
+  "@syncOfflineRetry": {
+    "description": "syncOfflineRetry"
+  },
   "syncUnconfirmedRetry": "EMusic не пацвердзіў усе змены. Іх будуць судзіць паўторна.",
+  "@syncUnconfirmedRetry": {
+    "description": "syncUnconfirmedRetry"
+  },
   "syncChangesConfirmed": "Унесена {count} змяненняў.",
+  "@syncChangesConfirmed": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    },
+    "description": "syncChangesConfirmed"
+  },
   "migrationAlreadyRunning": "Ужо ідзе міграцыя.",
+  "@migrationAlreadyRunning": {
+    "description": "migrationAlreadyRunning"
+  },
   "migrationLoginRequired": "Увайдзіце ў Joss Red перад міграцыяй.",
+  "@migrationLoginRequired": {
+    "description": "migrationLoginRequired"
+  },
   "migrationCheckingCloud": "Праверка, ці ёсць у EMusic Cloud ужо бібліятэка...",
+  "@migrationCheckingCloud": {
+    "description": "migrationCheckingCloud"
+  },
   "cloudLibraryFoundDeviceWillDownload": "Была знойдзена воблачная бібліятэка. Гэта прылада спампуе яго без перазапісу.",
+  "@cloudLibraryFoundDeviceWillDownload": {
+    "description": "cloudLibraryFoundDeviceWillDownload"
+  },
   "cloudLibraryFound": "Воблачная бібліятэка знойдзена.",
+  "@cloudLibraryFound": {
+    "description": "cloudLibraryFound"
+  },
   "migrationCreatingBackup": "Стварэнне лакальнай рэзервовай копіі перад падключэннем да воблака...",
+  "@migrationCreatingBackup": {
+    "description": "migrationCreatingBackup"
+  },
   "migrationAnalyzingLocal": "Аналіз раённай бібліятэкі...",
+  "@migrationAnalyzingLocal": {
+    "description": "migrationAnalyzingLocal"
+  },
   "migrationPreparingCloud": "Падрыхтоўка пераносу ў EMusic Cloud...",
+  "@migrationPreparingCloud": {
+    "description": "migrationPreparingCloud"
+  },
   "migrationStartFailed": "EMusic Cloud не можа пачаць перанос.",
+  "@migrationStartFailed": {
+    "description": "migrationStartFailed"
+  },
   "migrationUploadingData": "Запампоўка плэйлістоў, абраных і гісторыі...",
+  "@migrationUploadingData": {
+    "description": "migrationUploadingData"
+  },
   "migrationUploadIncomplete": "Не ўсе дадзеныя могуць быць запампаваныя. Мы падтрымліваем вашу мясцовую падтрымку.",
+  "@migrationUploadIncomplete": {
+    "description": "migrationUploadIncomplete"
+  },
   "migrationVerifyingIntegrity": "Праверка цэласнасці ў EMusic Cloud...",
+  "@migrationVerifyingIntegrity": {
+    "description": "migrationVerifyingIntegrity"
+  },
   "migrationValidationFailed": "EMusic Cloud не можа праверыць міграцыю.",
+  "@migrationValidationFailed": {
+    "description": "migrationValidationFailed"
+  },
   "cloudModeReadyOfflineCache": "Воблачны рэжым гатовы. Гэта прылада будзе працаваць як пазасеткавы кэш.",
+  "@cloudModeReadyOfflineCache": {
+    "description": "cloudModeReadyOfflineCache"
+  },
   "migrationCompleted": "Перанос завершаны.",
+  "@migrationCompleted": {
+    "description": "migrationCompleted"
+  },
   "migrationFailedLocalPreserved": "Перанос не ўдаўся. Вашы лакальныя даныя не былі зменены.",
+  "@migrationFailedLocalPreserved": {
+    "description": "migrationFailedLocalPreserved"
+  },
   "sessionExpiredLoginAgain": "Ваш сеанс скончыўся. Увайдзіце яшчэ раз.",
+  "@sessionExpiredLoginAgain": {
+    "description": "sessionExpiredLoginAgain"
+  },
   "selectedFileNotFound": "Выбраны файл не знойдзены.",
+  "@selectedFileNotFound": {
+    "description": "selectedFileNotFound"
+  },
   "genericAlbum": "Альбом",
+  "@genericAlbum": {
+    "description": "genericAlbum"
+  },
   "friendsLoginRequired": "Увайдзіце, каб знайсці сяброў.",
+  "@friendsLoginRequired": {
+    "description": "friendsLoginRequired"
+  },
   "invalidSessionToken": "Сеанс не ўтрымлівае сапраўдны токен.",
+  "@invalidSessionToken": {
+    "description": "invalidSessionToken"
+  },
   "userSearchFailed": "Немагчыма знайсці карыстальнікаў ({statusCode}).",
+  "@userSearchFailed": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    },
+    "description": "userSearchFailed"
+  },
   "invalidServerResponse": "Няправільны адказ сервера.",
+  "@invalidServerResponse": {
+    "description": "invalidServerResponse"
+  },
   "userListMissing": "Адказ не змяшчае спісу карыстальнікаў.",
+  "@userListMissing": {
+    "description": "userListMissing"
+  },
   "playlistCollaboratorsTitle": "Удзельнікі плэйліста",
+  "@playlistCollaboratorsTitle": {
+    "description": "playlistCollaboratorsTitle"
+  },
   "collaboratorsInstruction": "Выберыце сяброў, якія змогуць бачыць і рэдагаваць гэты спіс прайгравання:",
+  "@collaboratorsInstruction": {
+    "description": "collaboratorsInstruction"
+  },
   "noJossRedFriends": "У вас няма сяброў на Joss Red.",
+  "@noJossRedFriends": {
+    "description": "noJossRedFriends"
+  },
   "friendFallback": "Сябар",
+  "@friendFallback": {
+    "description": "friendFallback"
+  },
   "collaboratorsUpdated": "Суаўтары абноўлены правільна.",
+  "@collaboratorsUpdated": {
+    "description": "collaboratorsUpdated"
+  },
   "save": "Трымайце",
+  "@save": {
+    "description": "save"
+  },
   "manageCollaborators": "Кіраванне суаўтарамі (сябрамі)",
+  "@manageCollaborators": {
+    "description": "manageCollaborators"
+  },
   "done": "Гатовы",
+  "@done": {
+    "description": "done"
+  },
   "notAuthenticated": "Не аўтэнтыфікаваны",
+  "@notAuthenticated": {
+    "description": "notAuthenticated"
+  },
   "genericError": "Памылка",
+  "@genericError": {
+    "description": "genericError"
+  },
   "friendRequestSent": "Запыт у сябры адпраўлены",
+  "@friendRequestSent": {
+    "description": "friendRequestSent"
+  },
   "friendRequestAccepted": "Запыт сябра прыняты",
+  "@friendRequestAccepted": {
+    "description": "friendRequestAccepted"
+  },
   "friendshipRemoved": "Дружба выдалена",
+  "@friendshipRemoved": {
+    "description": "friendshipRemoved"
+  },
   "userBlocked": "Заблакіраваны карыстальнік",
+  "@userBlocked": {
+    "description": "userBlocked"
+  },
   "userUnblocked": "Разблакіраваны карыстальнік",
+  "@userUnblocked": {
+    "description": "userUnblocked"
+  },
   "artistsByTaste": "Па вашым густам",
+  "@artistsByTaste": {
+    "description": "artistsByTaste"
+  },
   "followedArtists": "рушыў услед",
+  "@followedArtists": {
+    "description": "followedArtists"
+  },
   "recommendedArtists": "Рэкамендуецца",
+  "@recommendedArtists": {
+    "description": "recommendedArtists"
+  },
   "albumsByTaste": "Па вашым густам",
+  "@albumsByTaste": {
+    "description": "albumsByTaste"
+  },
   "savedAlbums": "Захавана",
+  "@savedAlbums": {
+    "description": "savedAlbums"
+  },
   "recommendedAlbums": "Рэкамендуецца",
+  "@recommendedAlbums": {
+    "description": "recommendedAlbums"
+  },
   "downloadNotificationChannelName": "загрузкі музыкі",
+  "@downloadNotificationChannelName": {
+    "description": "downloadNotificationChannelName"
+  },
   "downloadNotificationChannelDescription": "Захоўвае загрузку музыкі ў фонавым рэжыме.",
+  "@downloadNotificationChannelDescription": {
+    "description": "downloadNotificationChannelDescription"
+  },
   "downloadNotificationTitle": "Спампаваць музыку",
+  "@downloadNotificationTitle": {
+    "description": "downloadNotificationTitle"
+  },
   "downloadNotificationPreparing": "Падрыхтоўка спамповак…",
+  "@downloadNotificationPreparing": {
+    "description": "downloadNotificationPreparing"
+  },
   "downloadNotificationSong": "Спампоўка: {songTitle}",
+  "@downloadNotificationSong": {
+    "placeholders": {
+      "songTitle": {
+        "type": "String"
+      }
+    },
+    "description": "downloadNotificationSong"
+  },
   "syncCloudModeActive": "Воблачны рэжым актыўны",
+  "@syncCloudModeActive": {
+    "description": "syncCloudModeActive"
+  },
   "permissionsConsentTitle": "Дазволы для пачатку",
+  "@permissionsConsentTitle": {
+    "description": "permissionsConsentTitle"
+  },
   "permissionsConsentDescription": "Estrella Music патрэбны гэтыя дазволы, каб кіраваць вашай музыкай і прапаноўваць усе функцыі прайгравання.",
+  "@permissionsConsentDescription": {
+    "description": "permissionsConsentDescription"
+  },
   "permissionsStorageTitle": "Музыка і захоўванне",
+  "@permissionsStorageTitle": {
+    "description": "permissionsStorageTitle"
+  },
   "permissionsStorageDescription": "Гэта дазваляе прайграваць музыку, захоўваць спампоўкі, экспартаваць спісы прайгравання і рыхтаваць абнаўленні.",
+  "@permissionsStorageDescription": {
+    "description": "permissionsStorageDescription"
+  },
   "permissionsNotificationsTitle": "Апавяшчэнні",
+  "@permissionsNotificationsTitle": {
+    "description": "permissionsNotificationsTitle"
+  },
   "permissionsNotificationsDescription": "Паказвае элементы кіравання прайграваннем, ход загрузкі і важныя апавяшчэнні аб праграмах.",
+  "@permissionsNotificationsDescription": {
+    "description": "permissionsNotificationsDescription"
+  },
   "permissionsMicrophoneTitle": "Мікрафон",
+  "@permissionsMicrophoneTitle": {
+    "description": "permissionsMicrophoneTitle"
+  },
   "permissionsMicrophoneDescription": "Ён выкарыстоўваецца толькі тады, калі вы вырашылі вызначыць песню, якая гучыць вакол вас.",
+  "@permissionsMicrophoneDescription": {
+    "description": "permissionsMicrophoneDescription"
+  },
   "permissionsContinueButton": "Дайце неабходныя дазволы",
+  "@permissionsContinueButton": {
+    "description": "permissionsContinueButton"
+  },
   "permissionsRequiredNotice": "Усе тры дазволы неабходныя для працягу. Вы можаце змяніць іх пазней у наладах сістэмы.",
+  "@permissionsRequiredNotice": {
+    "description": "permissionsRequiredNotice"
+  },
   "permissionsAllow": "Дазволіць",
+  "@permissionsAllow": {
+    "description": "permissionsAllow"
+  },
   "permissionsOpenSettings": "Налады",
+  "@permissionsOpenSettings": {
+    "description": "permissionsOpenSettings"
+  },
   "auth_2fa_title": "Двухфакторную аўтэнтыфікацыя",
+  "@auth_2fa_title": {
+    "description": "auth_2fa_title"
+  },
   "auth_2fa_subtitle": "Увядзіце 6-значны код з праграмы аўтэнтыфікацыі. Гэты доступ заканчваецца праз 5 хвілін.",
+  "@auth_2fa_subtitle": {
+    "description": "auth_2fa_subtitle"
+  },
   "auth_2fa_code": "Код аўтэнтыфікацыі",
+  "@auth_2fa_code": {
+    "description": "auth_2fa_code"
+  },
   "auth_2fa_verify": "Праверце і працягвайце",
-  "auth_2fa_invalid": "Увядзіце сапраўдны 6-значны код або ўвайдзіце яшчэ раз."
+  "@auth_2fa_verify": {
+    "description": "auth_2fa_verify"
+  },
+  "auth_2fa_invalid": "Увядзіце сапраўдны 6-значны код або ўвайдзіце яшчэ раз.",
+  "@auth_2fa_invalid": {
+    "description": "auth_2fa_invalid"
+  }
 }

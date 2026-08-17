@@ -1,277 +1,1099 @@
 {
   "@@locale": "et",
   "home": "Avaleht",
+  "@home": {
+    "description": "home"
+  },
   "songs": "Lood",
+  "@songs": {
+    "description": "songs"
+  },
   "playlists": "Esitusloendid",
+  "@playlists": {
+    "description": "playlists"
+  },
   "albums": "Albumid",
+  "@albums": {
+    "description": "albums"
+  },
   "settings": "Seadistused",
+  "@settings": {
+    "description": "settings"
+  },
   "library": "Muusikakogu",
+  "@library": {
+    "description": "library"
+  },
   "libSongs": "Lood muusikakogus",
+  "@libSongs": {
+    "description": "libSongs"
+  },
   "libPlaylists": "Esitusloendid muusikakogus",
+  "@libPlaylists": {
+    "description": "libPlaylists"
+  },
   "libAlbums": "Albumid muusikakogus",
+  "@libAlbums": {
+    "description": "libAlbums"
+  },
   "libArtists": "Esitajad muusikakogus",
+  "@libArtists": {
+    "description": "libArtists"
+  },
   "communityplaylists": "Kogukonna esitusloendid",
+  "@communityplaylists": {
+    "description": "communityplaylists"
+  },
   "featuredplaylists": "Esiletõstetud esitusloendid",
+  "@featuredplaylists": {
+    "description": "featuredplaylists"
+  },
   "items": "kirjed",
+  "@items": {
+    "description": "items"
+  },
   "noOfflineSong": "Allalaaditud lugusid ei leidu!",
+  "@noOfflineSong": {
+    "description": "noOfflineSong"
+  },
   "renamePlaylist": "Muuda esitusloendi nime",
+  "@renamePlaylist": {
+    "description": "renamePlaylist"
+  },
   "removePlaylist": "Kustuta esitusloend",
+  "@removePlaylist": {
+    "description": "removePlaylist"
+  },
   "reArrangePlaylist": "Korralda esitusloend ümber",
+  "@reArrangePlaylist": {
+    "description": "reArrangePlaylist"
+  },
   "removeMultiple": "Eemalda mitu lugu",
+  "@removeMultiple": {
+    "description": "removeMultiple"
+  },
   "startRadio": "Pane raadio tööle",
+  "@startRadio": {
+    "description": "startRadio"
+  },
   "playNext": "Esita järgmisena",
+  "@playNext": {
+    "description": "playNext"
+  },
   "addToPlaylist": "Lisa esitusloendisse",
+  "@addToPlaylist": {
+    "description": "addToPlaylist"
+  },
   "noLibPlaylist": "Sul pole meediakogus ühtegi esitusloendit!",
+  "@noLibPlaylist": {
+    "description": "noLibPlaylist"
+  },
   "enqueueSong": "Lisa see lugu esitusjärjekorda",
+  "@enqueueSong": {
+    "description": "enqueueSong"
+  },
   "shareSong": "Jaga seda lugu",
+  "@shareSong": {
+    "description": "shareSong"
+  },
   "removeFromQueue": "Eemalda esitusjärjekorrast",
+  "@removeFromQueue": {
+    "description": "removeFromQueue"
+  },
   "playnextMsg": "Järgmisena esitamisel",
+  "@playnextMsg": {
+    "description": "playnextMsg"
+  },
   "queueLoopNotDisMsg1": "Esitusjärjekorra kordamine ei ole võimalik, kui segamisrežiim on juba kasutusel.",
+  "@queueLoopNotDisMsg1": {
+    "description": "queueLoopNotDisMsg1"
+  },
   "removeFromLib": "Eemalda meediakogust",
+  "@removeFromLib": {
+    "description": "removeFromLib"
+  },
   "sleepTimer": "Unetaimer",
+  "@sleepTimer": {
+    "description": "sleepTimer"
+  },
   "cancelTimer": "Katkesta taimer",
+  "@cancelTimer": {
+    "description": "cancelTimer"
+  },
   "endOfThisSong": "Selle loo lõpuni",
+  "@endOfThisSong": {
+    "description": "endOfThisSong"
+  },
   "appInfo": "Rakenduse teave",
+  "@appInfo": {
+    "description": "appInfo"
+  },
   "downloadError3": "Allalaadimine ei õnnestunud võrguühenduse või meediavoo vea tõttu! Palun proovi uuesti",
+  "@downloadError3": {
+    "description": "downloadError3"
+  },
   "musicAndPlayback": "Muusika ja taasesitus",
+  "@musicAndPlayback": {
+    "description": "musicAndPlayback"
+  },
   "content": "Sisu",
+  "@content": {
+    "description": "content"
+  },
   "personalisation": "Muuda rakendus isikupäraseks",
+  "@personalisation": {
+    "description": "personalisation"
+  },
   "themeMode": "Kujunduse valik",
+  "@themeMode": {
+    "description": "themeMode"
+  },
   "dynamic": "Dünaamiline",
+  "@dynamic": {
+    "description": "dynamic"
+  },
   "dark": "Tume kujundus",
+  "@dark": {
+    "description": "dark"
+  },
   "language": "Keel",
+  "@language": {
+    "description": "language"
+  },
   "playerUiDes": "Vali meediamängija kasutajaliides",
+  "@playerUiDes": {
+    "description": "playerUiDes"
+  },
   "standard": "Standardne",
+  "@standard": {
+    "description": "standard"
+  },
   "gesture": "Žestide-põhine",
+  "@gesture": {
+    "description": "gesture"
+  },
   "languageDes": "Vali rakenduse keel",
+  "@languageDes": {
+    "description": "languageDes"
+  },
   "setDiscoverContent": "Vali uue sisu avastamise viis",
+  "@setDiscoverContent": {
+    "description": "setDiscoverContent"
+  },
   "quickpicks": "Kiirvalikud",
+  "@quickpicks": {
+    "description": "quickpicks"
+  },
   "discover": "Avastamised",
+  "@discover": {
+    "description": "discover"
+  },
   "trending": "Populaarsust koguvad lood",
+  "@trending": {
+    "description": "trending"
+  },
   "topmusicvideos": "Populaarsed muusikavideod",
+  "@topmusicvideos": {
+    "description": "topmusicvideos"
+  },
   "basedOnLast": "Sinu viimaste tegevuste alusel",
+  "@basedOnLast": {
+    "description": "basedOnLast"
+  },
   "restoreLastPlaybackSession": "Taasta viimane muusikasessioon",
+  "@restoreLastPlaybackSession": {
+    "description": "restoreLastPlaybackSession"
+  },
   "homeContentCountDes": "Vali avalehe algse sisu maht (umbkaudselt). Väiksem number võimaldab kiiremat laadimist",
+  "@homeContentCountDes": {
+    "description": "homeContentCountDes"
+  },
   "enableBottomNavDes": "Kasuta alumist ikooniriba",
+  "@enableBottomNavDes": {
+    "description": "enableBottomNavDes"
+  },
   "skipSilence": "Jäta vaikus vahele",
+  "@skipSilence": {
+    "description": "skipSilence"
+  },
   "skipSilenceDes": "Muusika esitamisel jäävad vaiksed lõigud vahele",
+  "@skipSilenceDes": {
+    "description": "skipSilenceDes"
+  },
   "streamingQualityDes": "Esitatava meediavoo kvaliteet bititiheduse näol",
+  "@streamingQualityDes": {
+    "description": "streamingQualityDes"
+  },
   "enableSlidableAction": "Kasuta liuglevaid toimingud",
+  "@enableSlidableAction": {
+    "description": "enableSlidableAction"
+  },
   "enableSlidableActionDes": "Kasuta lugude ribal liuglevaid toiminguid",
+  "@enableSlidableActionDes": {
+    "description": "enableSlidableActionDes"
+  },
   "downloadLocation": "Allalaadimiste asukoht",
+  "@downloadLocation": {
+    "description": "downloadLocation"
+  },
   "cacheHomeScreenDataDes": "Kasuta avalehe vaate sisu puhverdamist - see tagab, et avavaade avaneb koheselt",
+  "@cacheHomeScreenDataDes": {
+    "description": "cacheHomeScreenDataDes"
+  },
   "downloadingFormat": "Failivorming allalaadimiseks",
+  "@downloadingFormat": {
+    "description": "downloadingFormat"
+  },
   "downloadingFormatDes": "Vali eelistatav failivorming allalaadimisel. Opus tagab parima kvaliteedi",
+  "@downloadingFormatDes": {
+    "description": "downloadingFormatDes"
+  },
   "exportDowloadedFilesDes": "Klõpsi siin, et eksportida allalaaditud failid rakenduse töökaustast mõnda välisesse kausta",
+  "@exportDowloadedFilesDes": {
+    "description": "exportDowloadedFilesDes"
+  },
   "exportedFileLocation": "Allalaaditud failide ekspordikaust",
+  "@exportedFileLocation": {
+    "description": "exportedFileLocation"
+  },
   "export": "Ekspordi",
+  "@export": {
+    "description": "export"
+  },
   "exporting": "Ekspordime...",
+  "@exporting": {
+    "description": "exporting"
+  },
   "close": "Sulge",
+  "@close": {
+    "description": "close"
+  },
   "equalizerDes": "Ava süsteemi ekvalaiser",
+  "@equalizerDes": {
+    "description": "equalizerDes"
+  },
   "clearImgCache": "Eemalda puhverdatud pildid",
+  "@clearImgCache": {
+    "description": "clearImgCache"
+  },
   "clearImgCacheAlert": "Puhverdatud piltide eemaldamine õnnestus",
+  "@clearImgCacheAlert": {
+    "description": "clearImgCacheAlert"
+  },
   "ignoreBatOpt": "Eira akukasutuse optimeerimist",
+  "@ignoreBatOpt": {
+    "description": "ignoreBatOpt"
+  },
   "ignoreBatOptDes": "Kui sinu nutiseadmes tekib probleeme teavitustega või süsteem paneb taustal toimiva taasesituse kinni, siis palun võta see eelistus kasutusele",
+  "@ignoreBatOptDes": {
+    "description": "ignoreBatOptDes"
+  },
   "status": "Olek",
+  "@status": {
+    "description": "status"
+  },
   "githubDes": "Vaata rakenduse lähtekoodi GitHubis \nning kui sulle meie projekt meeldib, siis ära unusta ⭐ lisamist",
+  "@githubDes": {
+    "description": "githubDes"
+  },
   "by": "autorilt",
+  "@by": {
+    "description": "by"
+  },
   "urlSearchDes": "Eesmärgiga avada/esitada seotud sisu tuvastasime klõpsu võrguaadressil",
+  "@urlSearchDes": {
+    "description": "urlSearchDes"
+  },
   "search": "Otsi",
+  "@search": {
+    "description": "search"
+  },
   "searchRes": "Otsingutulemused",
+  "@searchRes": {
+    "description": "searchRes"
+  },
   "for1": "otsingule",
+  "@for1": {
+    "description": "for1"
+  },
   "videos": "Videod",
+  "@videos": {
+    "description": "videos"
+  },
   "viewAll": "Näita kõiki",
+  "@viewAll": {
+    "description": "viewAll"
+  },
   "results": "Tulemused",
+  "@results": {
+    "description": "results"
+  },
   "nomatch": "Ei leidunud tulemusi otsingusõnale",
+  "@nomatch": {
+    "description": "nomatch"
+  },
   "subscribers": "tellijat",
+  "@subscribers": {
+    "description": "subscribers"
+  },
   "about": "Teave",
+  "@about": {
+    "description": "about"
+  },
   "synced": "Sünkroniseeritud",
+  "@synced": {
+    "description": "synced"
+  },
   "plain": "Lihtne",
+  "@plain": {
+    "description": "plain"
+  },
   "title": "Nimi",
+  "@title": {
+    "description": "title"
+  },
   "deleteDownloadedDataAlert": "Allalaadimistest eemaldamine õnnestus!",
+  "@deleteDownloadedDataAlert": {
+    "description": "deleteDownloadedDataAlert"
+  },
   "cancelTimerAlert": "Unetaimeri töö on lõpetatud",
+  "@cancelTimerAlert": {
+    "description": "cancelTimerAlert"
+  },
   "sleepTimeSetAlert": "Oled unetaimeri seadistanud",
+  "@sleepTimeSetAlert": {
+    "description": "sleepTimeSetAlert"
+  },
   "radioNotAvailable": "Sellele esitajale ei leidu raadiovaadet!",
+  "@radioNotAvailable": {
+    "description": "radioNotAvailable"
+  },
   "songAddedToPlaylistAlert": "Lugu on lisatud esitusloendisse!",
+  "@songAddedToPlaylistAlert": {
+    "description": "songAddedToPlaylistAlert"
+  },
   "songAlreadyExists": "Lugu on juba olemas!",
+  "@songAlreadyExists": {
+    "description": "songAlreadyExists"
+  },
   "songEnqueueAlert": "Lugu on lisatud esitusjärjekorda!",
+  "@songEnqueueAlert": {
+    "description": "songEnqueueAlert"
+  },
   "songRemovedAlert": "Eemaldatud asukohast",
+  "@songRemovedAlert": {
+    "description": "songRemovedAlert"
+  },
   "playlistCreatedAlert": "Esitusloend on loodud!",
+  "@playlistCreatedAlert": {
+    "description": "playlistCreatedAlert"
+  },
   "playlistCreatednsongAddedAlert": "Esitusloend on loodud ja lugu on lisatud!",
+  "@playlistCreatednsongAddedAlert": {
+    "description": "playlistCreatednsongAddedAlert"
+  },
   "playlistBookmarkAddAlert": "Esitusloend on lisatud järjehoidjana!",
+  "@playlistBookmarkAddAlert": {
+    "description": "playlistBookmarkAddAlert"
+  },
   "playlistBookmarkRemoveAlert": "Esitusloendi järjehoidja on eemaldatud!",
+  "@playlistBookmarkRemoveAlert": {
+    "description": "playlistBookmarkRemoveAlert"
+  },
   "albumBookmarkRemoveAlert": "Albumi järjehoidja on eemaldatud!",
+  "@albumBookmarkRemoveAlert": {
+    "description": "albumBookmarkRemoveAlert"
+  },
   "newVersionAvailable": "Uus versioon on saadaval!",
+  "@newVersionAvailable": {
+    "description": "newVersionAvailable"
+  },
   "dismiss": "Katkesta",
+  "@dismiss": {
+    "description": "dismiss"
+  },
   "notaSongVideo": "Pole muusika ega muusikavideo!",
+  "@notaSongVideo": {
+    "description": "notaSongVideo"
+  },
   "notaValidLink": "Link pole korrektne!",
+  "@notaValidLink": {
+    "description": "notaValidLink"
+  },
   "local": "Kohalik",
+  "@local": {
+    "description": "local"
+  },
   "Piped": "Piped",
+  "@Piped": {
+    "description": "Piped"
+  },
   "unLink": "Eemalda ühendus",
+  "@unLink": {
+    "description": "unLink"
+  },
   "customInsSelectMsg": "Palun vali oma server",
+  "@customInsSelectMsg": {
+    "description": "customInsSelectMsg"
+  },
   "selectAuthIns": "Vali autentimisserver",
+  "@selectAuthIns": {
+    "description": "selectAuthIns"
+  },
   "password": "Salasõna",
+  "@password": {
+    "description": "password"
+  },
   "linkAlert": "Ühendamine õnnestus!",
+  "@linkAlert": {
+    "description": "linkAlert"
+  },
   "playlistBlacklistAlert": "Esitusloend on nüüd keelatud!",
+  "@playlistBlacklistAlert": {
+    "description": "playlistBlacklistAlert"
+  },
   "reset": "Lähtesta",
+  "@reset": {
+    "description": "reset"
+  },
   "blacklistPlstResetAlert": "Lähtestamine õnnestus!",
+  "@blacklistPlstResetAlert": {
+    "description": "blacklistPlstResetAlert"
+  },
   "resetblacklistedplaylist": "Lähtesta keelatud esitusloendid",
+  "@resetblacklistedplaylist": {
+    "description": "resetblacklistedplaylist"
+  },
   "stopMusicOnTaskClear": "Tegumist eemaldamisel peata muusika esitamine",
+  "@stopMusicOnTaskClear": {
+    "description": "stopMusicOnTaskClear"
+  },
   "backupSettingsAndPlaylistsDes": "Sellega salvestad kõik seadistused, esitusloendid ja sisselogimisandmed varukoopia faili",
+  "@backupSettingsAndPlaylistsDes": {
+    "description": "backupSettingsAndPlaylistsDes"
+  },
   "letsStrart": "Alustame..",
+  "@letsStrart": {
+    "description": "letsStrart"
+  },
   "processFiles": "Töötleme faile..",
+  "@processFiles": {
+    "description": "processFiles"
+  },
   "includeDownloadedFiles": "Kaasa allalaaditud lugude failid",
+  "@includeDownloadedFiles": {
+    "description": "includeDownloadedFiles"
+  },
   "backupInProgress": "Varukoopia on tegemisel...",
+  "@backupInProgress": {
+    "description": "backupInProgress"
+  },
   "backupMsg": "Varukoopia salvestamine õnnestus!",
+  "@backupMsg": {
+    "description": "backupMsg"
+  },
   "restoreMsg": "Andmete taastamine õnnestus!\nMuudatused jõustuvad rakenduse järgmisel käivitusel",
+  "@restoreMsg": {
+    "description": "restoreMsg"
+  },
   "restoring": "Taastame...",
+  "@restoring": {
+    "description": "restoring"
+  },
   "restore": "Taasta",
+  "@restore": {
+    "description": "restore"
+  },
   "closeApp": "Sulge rakendus",
+  "@closeApp": {
+    "description": "closeApp"
+  },
   "restartApp": "Käivita rakendus uuesti",
+  "@restartApp": {
+    "description": "restartApp"
+  },
   "singles": "Singlid",
+  "@singles": {
+    "description": "singles"
+  },
   "artists": "Esitajad",
+  "@artists": {
+    "description": "artists"
+  },
   "queueLoopNotDisMsg2": "Esitusjärjekorra kordamine ei ole võimalik, kui raadiorežiim on juba kasutusel.",
+  "@queueLoopNotDisMsg2": {
+    "description": "queueLoopNotDisMsg2"
+  },
   "deleteDownloadData": "Eemalda allalaadimiste kaustast",
+  "@deleteDownloadData": {
+    "description": "deleteDownloadData"
+  },
   "add5Minutes": "Lisa 5 minutit",
+  "@add5Minutes": {
+    "description": "add5Minutes"
+  },
   "download": "Laadi alla",
+  "@download": {
+    "description": "download"
+  },
   "minutes": "minutit",
+  "@minutes": {
+    "description": "minutes"
+  },
   "networkError": "Võrguühenduse viga! Palun kontrolli oma nutiseadme veebiühenduse toimimist.",
+  "@networkError": {
+    "description": "networkError"
+  },
   "downloadError2": "Soovitud lugu pole serveripoolsete piiranguet tõttu allalaaditav. Siiski võid veel proovida",
+  "@downloadError2": {
+    "description": "downloadError2"
+  },
   "networkError1": "Ohooo, võrguviga!",
+  "@networkError1": {
+    "description": "networkError1"
+  },
   "recentlyPlayed": "Hiljuti esitatud",
+  "@recentlyPlayed": {
+    "description": "recentlyPlayed"
+  },
   "cachedOrOffline": "Puhverdatud/allalaaditud",
+  "@cachedOrOffline": {
+    "description": "cachedOrOffline"
+  },
   "downloads": "Allalaadimised",
+  "@downloads": {
+    "description": "downloads"
+  },
   "retry": "Proovi uuesti!",
+  "@retry": {
+    "description": "retry"
+  },
   "favorites": "Lemmikud",
+  "@favorites": {
+    "description": "favorites"
+  },
   "CreateNewPlaylist": "Loo uus esitusloend",
+  "@CreateNewPlaylist": {
+    "description": "CreateNewPlaylist"
+  },
   "emptyPlaylist": "Tühi esitusloend!",
+  "@emptyPlaylist": {
+    "description": "emptyPlaylist"
+  },
   "enqueueAll": "Lisa kõik esitusjärjekorda",
+  "@enqueueAll": {
+    "description": "enqueueAll"
+  },
   "addMultipleSongs": "Lisa esitusloendisse lugusid",
+  "@addMultipleSongs": {
+    "description": "addMultipleSongs"
+  },
   "cancel": "Katkesta",
+  "@cancel": {
+    "description": "cancel"
+  },
   "create": "Loo",
+  "@create": {
+    "description": "create"
+  },
   "rename": "Muuda nime",
+  "@rename": {
+    "description": "rename"
+  },
   "noBookmarks": "Järjehoidjaid pole!",
+  "@noBookmarks": {
+    "description": "noBookmarks"
+  },
   "createnAdd": "Loo ja lisa",
+  "@createnAdd": {
+    "description": "createnAdd"
+  },
   "goToAlbum": "Vaata albumit",
+  "@goToAlbum": {
+    "description": "goToAlbum"
+  },
   "viewArtist": "Vaata esitajat",
+  "@viewArtist": {
+    "description": "viewArtist"
+  },
   "openIn": "Ava rakendusega",
+  "@openIn": {
+    "description": "openIn"
+  },
   "removeFromPlaylist": "Eemalda esitusloendist",
+  "@removeFromPlaylist": {
+    "description": "removeFromPlaylist"
+  },
   "queueShufflingDeniedMsg": "Esitusjärjekorda ei saa segada, kui segamisrežiim on juba kasutusel",
+  "@queueShufflingDeniedMsg": {
+    "description": "queueShufflingDeniedMsg"
+  },
   "playerUi": "Meediamängija kasutajaliides",
+  "@playerUi": {
+    "description": "playerUi"
+  },
   "systemDefault": "Süsteemi kujundus",
+  "@systemDefault": {
+    "description": "systemDefault"
+  },
   "light": "Hele kujundus",
+  "@light": {
+    "description": "light"
+  },
   "queuerearrangingDeniedMsg": "Esitusjärjekorda ei saa ümber korraldada, kui segamisrežiim on juba kasutusel",
+  "@queuerearrangingDeniedMsg": {
+    "description": "queuerearrangingDeniedMsg"
+  },
   "upNext": "Järgmisena",
+  "@upNext": {
+    "description": "upNext"
+  },
   "shuffleQueue": "Sega esitusjärjekord",
+  "@shuffleQueue": {
+    "description": "shuffleQueue"
+  },
   "songNotPlayable": "Lugu ei saa esitada serveri seatud piirangu tõttu!",
+  "@songNotPlayable": {
+    "description": "songNotPlayable"
+  },
   "queueLoop": "Korda esitusjärjekorda",
+  "@queueLoop": {
+    "description": "queueLoop"
+  },
   "restoreLastPlaybackSessionDes": "Rakenduse käivitamisel taasta viimane sessioon ja jätka sealt, kus pooleli jäi",
+  "@restoreLastPlaybackSessionDes": {
+    "description": "restoreLastPlaybackSessionDes"
+  },
   "homeContentCount": "Avalehe loendi pikkus",
+  "@homeContentCount": {
+    "description": "homeContentCount"
+  },
   "enableBottomNav": "Alumine ikooniriba",
+  "@enableBottomNav": {
+    "description": "enableBottomNav"
+  },
   "cacheSongs": "Puhverda lood",
+  "@cacheSongs": {
+    "description": "cacheSongs"
+  },
   "loudnessNormalization": "Helivaljuse normaliseerimine",
+  "@loudnessNormalization": {
+    "description": "loudnessNormalization"
+  },
   "cacheSongsDes": "Puhverda esitamisel lood tulevase taasesituse jaoks, sealhulgas vallasrežiimis. See eelistus suurendab sinu arvutis või nutiseadmes kasutatava andmeruumi mahtu",
+  "@cacheSongsDes": {
+    "description": "cacheSongsDes"
+  },
   "loudnessNormalizationDes": "Seadista kõikidele esitatavatele lugudele sama helivaljus (katseline funktsionaalsus). (See ei toimi rakenduse varasema versiooniga allalaaditud lugude puhul (< v1.10.0))",
+  "@loudnessNormalizationDes": {
+    "description": "loudnessNormalizationDes"
+  },
   "streamingQuality": "Voogesituse kvaliteet",
+  "@streamingQuality": {
+    "description": "streamingQuality"
+  },
   "disableTransitionAnimation": "Keela animatsioonid üleminekutel",
+  "@disableTransitionAnimation": {
+    "description": "disableTransitionAnimation"
+  },
   "disableTransitionAnimationDes": "Selle eelistusega keelad kasutajaliideses kuvatavad animeeritud üleminekud toimingute lõpus",
+  "@disableTransitionAnimationDes": {
+    "description": "disableTransitionAnimationDes"
+  },
   "high": "Kõrge",
+  "@high": {
+    "description": "high"
+  },
   "low": "Madal",
+  "@low": {
+    "description": "low"
+  },
   "backgroundPlay": "Muusika esitamine taustal",
+  "@backgroundPlay": {
+    "description": "backgroundPlay"
+  },
   "cacheHomeScreenData": "Puhverda avalehe sisu",
+  "@cacheHomeScreenData": {
+    "description": "cacheHomeScreenData"
+  },
   "backgroundPlayDes": "Lülita muusika taustal esitamine sisse või välja (kui rakendus töötab taustal, siis saad talle ligi ikoonist süsteemisalves)",
+  "@backgroundPlayDes": {
+    "description": "backgroundPlayDes"
+  },
   "disabled": "Pole kasutusel",
+  "@disabled": {
+    "description": "disabled"
+  },
   "exportDowloadedFiles": "Ekspordi allalaaditud failid",
+  "@exportDowloadedFiles": {
+    "description": "exportDowloadedFiles"
+  },
   "downFilesFound": "allalaaditud faili leitud",
+  "@downFilesFound": {
+    "description": "downFilesFound"
+  },
   "scanning": "Otsime faile...",
+  "@scanning": {
+    "description": "scanning"
+  },
   "equalizer": "Ekvalaiser",
+  "@equalizer": {
+    "description": "equalizer"
+  },
   "exportMsg": "Failide eksportimine õnnestus",
+  "@exportMsg": {
+    "description": "exportMsg"
+  },
   "clearImgCacheDes": "Klõpsi siin kõikide puhverdatud pildite ja pisipiltide eemaldamiseks. (Mõtet teha vaid siis, kui tahad tagada, et kõik pildid saavad uuendatud)",
+  "@clearImgCacheDes": {
+    "description": "clearImgCacheDes"
+  },
   "enabled": "Kasutusel",
+  "@enabled": {
+    "description": "enabled"
+  },
   "github": "GitHub",
+  "@github": {
+    "description": "github"
+  },
   "searchDes": "Lugu, esitusloend, album või esitaja",
+  "@searchDes": {
+    "description": "searchDes"
+  },
   "songInfo": "Loo teave",
+  "@songInfo": {
+    "description": "songInfo"
+  },
   "id": "Tunnus",
+  "@id": {
+    "description": "id"
+  },
   "bitrate": "Bitikiirus",
+  "@bitrate": {
+    "description": "bitrate"
+  },
   "duration": "Kestus",
+  "@duration": {
+    "description": "duration"
+  },
   "audioCodec": "Audiokoodek",
+  "@audioCodec": {
+    "description": "audioCodec"
+  },
   "loudnessDb": "Helivaljus",
+  "@loudnessDb": {
+    "description": "loudnessDb"
+  },
   "songRemovedfromQueue": "Esitusjärjekorrast eemaldatud!",
+  "@songRemovedfromQueue": {
+    "description": "songRemovedfromQueue"
+  },
   "songRemovedfromQueueCurrSong": "Hetkel esitamisel olevat lugu ei saa eemaldada",
+  "@songRemovedfromQueueCurrSong": {
+    "description": "songRemovedfromQueueCurrSong"
+  },
   "songAlreadyOfflineAlert": "Lugu on juba puhverdatud",
+  "@songAlreadyOfflineAlert": {
+    "description": "songAlreadyOfflineAlert"
+  },
   "errorOccuredAlert": "Tekkis mingit sorti viga!",
+  "@errorOccuredAlert": {
+    "description": "errorOccuredAlert"
+  },
   "pipedplstSyncAlert": "Teenuses Piped koostatud esitusloend on sünkroniseeritud!",
+  "@pipedplstSyncAlert": {
+    "description": "pipedplstSyncAlert"
+  },
   "albumBookmarkAddAlert": "Album on lisatud järjehoidjana!",
+  "@albumBookmarkAddAlert": {
+    "description": "albumBookmarkAddAlert"
+  },
   "artistBookmarkAddAlert": "Esitaja on lisatud järjehoidjana!",
+  "@artistBookmarkAddAlert": {
+    "description": "artistBookmarkAddAlert"
+  },
   "playlistRenameAlert": "Nime muutmine õnnestus!",
+  "@playlistRenameAlert": {
+    "description": "playlistRenameAlert"
+  },
   "playlistRemovedAlert": "Esitusloend on eemaldatud!",
+  "@playlistRemovedAlert": {
+    "description": "playlistRemovedAlert"
+  },
   "artistBookmarkRemoveAlert": "Esitaja järjehoidja on eemaldatud!",
+  "@artistBookmarkRemoveAlert": {
+    "description": "artistBookmarkRemoveAlert"
+  },
   "artistDesNotAvailable": "Kirjeldus pole saadaval!",
+  "@artistDesNotAvailable": {
+    "description": "artistDesNotAvailable"
+  },
   "lyricsNotAvailable": "Laulusõnad pole saadaval!",
+  "@lyricsNotAvailable": {
+    "description": "lyricsNotAvailable"
+  },
   "syncedLyricsNotAvailable": "Sünkroniseeritud laulusõnad pole saadaval!",
+  "@syncedLyricsNotAvailable": {
+    "description": "syncedLyricsNotAvailable"
+  },
   "dontShowInfoAgain": "Ära näita seda teavet enam uuesti",
+  "@dontShowInfoAgain": {
+    "description": "dontShowInfoAgain"
+  },
   "operationFailed": "Toiming ei õnnestunud",
+  "@operationFailed": {
+    "description": "operationFailed"
+  },
   "goToDownloadPage": "Allalaadimislehe vaatamiseks klõpsi siin",
+  "@goToDownloadPage": {
+    "description": "goToDownloadPage"
+  },
   "link": "Ühenda",
+  "@link": {
+    "description": "link"
+  },
   "linkPipedDes": "Seo Piped'i teenuses leiduvate esitusloenditega",
+  "@linkPipedDes": {
+    "description": "linkPipedDes"
+  },
   "allFieldsReqMsg": "Kõikide väljade täitmine on nõutav",
+  "@allFieldsReqMsg": {
+    "description": "allFieldsReqMsg"
+  },
   "hintApiUrl": "Piped'i serveri API võrguaadress",
+  "@hintApiUrl": {
+    "description": "hintApiUrl"
+  },
   "customIns": "Sinu valitud server",
+  "@customIns": {
+    "description": "customIns"
+  },
   "selectAuthInsMsg": "Palun vali autentimisserver!",
+  "@selectAuthInsMsg": {
+    "description": "selectAuthInsMsg"
+  },
   "username": "Kasutajanimi",
+  "@username": {
+    "description": "username"
+  },
   "restoreSettingsAndPlaylistsDes": "Sellega taastad kõik seadistused, esitusloendid ja sisselogimisandmed varukoopia failist. Senised andmed kirjutatakse üle",
+  "@restoreSettingsAndPlaylistsDes": {
+    "description": "restoreSettingsAndPlaylistsDes"
+  },
   "backFilesFound": "leidsime andmebaasid",
+  "@backFilesFound": {
+    "description": "backFilesFound"
+  },
   "unlinkAlert": "Ühenduse eemaldamine õnnestus!",
+  "@unlinkAlert": {
+    "description": "unlinkAlert"
+  },
   "resetblacklistedplaylistDes": "Lähtesta kõik teenuses Piped keelatud esitusloendid",
+  "@resetblacklistedplaylistDes": {
+    "description": "resetblacklistedplaylistDes"
+  },
   "stopMusicOnTaskClearDes": "Muusika taasesitus lõppeb, kui eemaldad rakenduse tegumihaldurist",
+  "@stopMusicOnTaskClearDes": {
+    "description": "stopMusicOnTaskClearDes"
+  },
   "backupAppData": "Tee rakenduse andmestest varukoopia",
+  "@backupAppData": {
+    "description": "backupAppData"
+  },
   "androidBackupWarning": "Pole testitud: Märkeruudu valimine peale enam kui 60 faili allalaadimist tekitab olukorra, kus rakenduse protsess haarab suure hulga mälu, mis võib põhjustada nii rakenduse kui ka nutiseadme kokkujooksmist. Jätka omal vastutusel.",
+  "@androidBackupWarning": {
+    "description": "androidBackupWarning"
+  },
   "backup": "Varunda",
+  "@backup": {
+    "description": "backup"
+  },
   "restoreAppData": "Taasta rakenduse andmed varukoopiast",
+  "@restoreAppData": {
+    "description": "restoreAppData"
+  },
   "autoDownFavSongDes": "Kui lugu on lisatud lemmikuks, siis laadi ta automaatselt alla",
+  "@autoDownFavSongDes": {
+    "description": "autoDownFavSongDes"
+  },
   "autoDownFavSong": "Laadi lemmiklood automaatselt alla",
+  "@autoDownFavSong": {
+    "description": "autoDownFavSong"
+  },
   "resetToDefaultMsg": "Vaikimisi seadistuste taastamine lõppes, palun käivita rakendus uuesti",
+  "@resetToDefaultMsg": {
+    "description": "resetToDefaultMsg"
+  },
   "misc": "Varia",
+  "@misc": {
+    "description": "misc"
+  },
   "resetToDefaultDes": "Taasta rakenduse vaikimisi seadistused (eeldab rakenduse uuesti käivitamist)",
+  "@resetToDefaultDes": {
+    "description": "resetToDefaultDes"
+  },
   "resetToDefault": "Taasta vaikimisi seadistused",
+  "@resetToDefault": {
+    "description": "resetToDefault"
+  },
   "autoOpenPlayer": "Ava esitusvaade automaatselt",
+  "@autoOpenPlayer": {
+    "description": "autoOpenPlayer"
+  },
   "autoOpenPlayerDes": "Kas esitatava loo valimisel avaneb esitusvaade automaatselt",
+  "@autoOpenPlayerDes": {
+    "description": "autoOpenPlayerDes"
+  },
   "album": "Album",
+  "@album": {
+    "description": "album"
+  },
   "playingfromAlbum": "ESITAMISEL ALBUMIST",
+  "@playingfromAlbum": {
+    "description": "playingfromAlbum"
+  },
   "playingfromPlaylist": "ESITAMISEL ESITUSLOENDIST",
+  "@playingfromPlaylist": {
+    "description": "playingfromPlaylist"
+  },
   "playingfromSelection": "ESITAMISEL VALIKUST",
+  "@playingfromSelection": {
+    "description": "playingfromSelection"
+  },
   "randomSelection": "Juhuslik valik",
+  "@randomSelection": {
+    "description": "randomSelection"
+  },
   "playingfromArtist": "ESITAMISEL ESITAJAST",
+  "@playingfromArtist": {
+    "description": "playingfromArtist"
+  },
   "randomRadio": "Juhuslik radio",
+  "@randomRadio": {
+    "description": "randomRadio"
+  },
   "selectAll": "Vali kõik",
+  "@selectAll": {
+    "description": "selectAll"
+  },
   "reArrangeSongs": "Muuda lugude järjekorda",
+  "@reArrangeSongs": {
+    "description": "reArrangeSongs"
+  },
   "selectSongs": "Vali lood",
+  "@selectSongs": {
+    "description": "selectSongs"
+  },
   "importErrorFormat": "Vigane failivorming",
+  "@importErrorFormat": {
+    "description": "importErrorFormat"
+  },
   "importError": "Viga esitusloendi importimisel",
+  "@importError": {
+    "description": "importError"
+  },
   "selectFile": "Vali fail",
+  "@selectFile": {
+    "description": "selectFile"
+  },
   "exportPlaylist": "Ekspordi esitusloend",
+  "@exportPlaylist": {
+    "description": "exportPlaylist"
+  },
   "exportingPlaylist": "Ekspordin esitusloendit...",
+  "@exportingPlaylist": {
+    "description": "exportingPlaylist"
+  },
   "invalidPlaylistFile": "Vigane esitusloendi struktuur",
+  "@invalidPlaylistFile": {
+    "description": "invalidPlaylistFile"
+  },
   "exportErrorPermission": "Eksportimisel polnud piisavalt õigusi",
+  "@exportErrorPermission": {
+    "description": "exportErrorPermission"
+  },
   "exportErrorStorage": "Ei jagunud piisavalt andmeruumi",
+  "@exportErrorStorage": {
+    "description": "exportErrorStorage"
+  },
   "importLargeFileNote": "Märkus: suurte esitusloendite importimiseks võib kuluda aega",
+  "@importLargeFileNote": {
+    "description": "importLargeFileNote"
+  },
   "playlistExportedMsg": "Esitusloend on eksporditud siia:",
+  "@playlistExportedMsg": {
+    "description": "playlistExportedMsg"
+  },
   "exportError": "Viga esitusloendi eksportimisel",
+  "@exportError": {
+    "description": "exportError"
+  },
   "exportErrorFormat": "Viga esitusloendi andmete vormindamisel",
+  "@exportErrorFormat": {
+    "description": "exportErrorFormat"
+  },
   "importPlaylist": "Impordi esitusloend",
+  "@importPlaylist": {
+    "description": "importPlaylist"
+  },
   "importingPlaylist": "Impordin esitusloendit...",
+  "@importingPlaylist": {
+    "description": "importingPlaylist"
+  },
   "importPlaylistDesc": "Vali importimiseks mõni varemeksporditud esitusloendi json-fail",
+  "@importPlaylistDesc": {
+    "description": "importPlaylistDesc"
+  },
   "playlistImportedMsg": "Esitusloendi importimine õnnestus",
+  "@playlistImportedMsg": {
+    "description": "playlistImportedMsg"
+  },
   "importErrorFileAccess": "Valitud failile puudus ligipääs",
+  "@importErrorFileAccess": {
+    "description": "importErrorFileAccess"
+  },
   "importErrorDatabase": "Viga salvestamisel andmebaasi",
+  "@importErrorDatabase": {
+    "description": "importErrorDatabase"
+  },
   "fileNotFound": "Faili ei leidu",
+  "@fileNotFound": {
+    "description": "fileNotFound"
+  },
   "exportPlaylistCsv": "Ekspordi esitusloend CSV-failina",
+  "@exportPlaylistCsv": {
+    "description": "exportPlaylistCsv"
+  },
   "exportPlaylistJson": "Ekspordi esitusloend JSON-faili",
+  "@exportPlaylistJson": {
+    "description": "exportPlaylistJson"
+  },
   "exportPlaylistJsonSubtitle": "Seda vormingut saad importida",
+  "@exportPlaylistJsonSubtitle": {
+    "description": "exportPlaylistJsonSubtitle"
+  },
   "exportPlaylistCsvSubtitle": "Seda ei saa siia importida",
+  "@exportPlaylistCsvSubtitle": {
+    "description": "exportPlaylistCsvSubtitle"
+  },
   "exportToYouTubeMusic": "Ekspordi Youtube Musicusse",
+  "@exportToYouTubeMusic": {
+    "description": "exportToYouTubeMusic"
+  },
   "exportToYouTubeMusicSubtitle": "Järgnevaga lisatakse sinu esitusloend (<50 loo) praegusesse esitusjärjekorda. Peale Youtube Musicus avamist ära unusta seda lisamast esitusloendisse ja salvestamast",
+  "@exportToYouTubeMusicSubtitle": {
+    "description": "exportToYouTubeMusicSubtitle"
+  },
   "linkCopied": "Link on kopeeritud lõikelauale",
+  "@linkCopied": {
+    "description": "linkCopied"
+  },
   "keepScreenOnWhilePlaying": "Hoia ekraan mängimise ajal sees",
-  "keepScreenOnWhilePlayingDes": "Kui see on lubatud, jääb seadme ekraan muusika esituse ajal ärkvel"
+  "@keepScreenOnWhilePlaying": {
+    "description": "keepScreenOnWhilePlaying"
+  },
+  "keepScreenOnWhilePlayingDes": "Kui see on lubatud, jääb seadme ekraan muusika esituse ajal ärkvel",
+  "@keepScreenOnWhilePlayingDes": {
+    "description": "keepScreenOnWhilePlayingDes"
+  }
 }

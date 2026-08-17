@@ -1,314 +1,1112 @@
 {
   "@@locale": "bn",
   "songs": "গানগুলো",
+  "@songs": {
+    "description": "songs"
+  },
   "home": "হোম",
+  "@home": {
+    "description": "home"
+  },
   "playlists": "প্লেলিস্ট",
+  "@playlists": {
+    "description": "playlists"
+  },
   "albums": "অ্যালবাম",
+  "@albums": {
+    "description": "albums"
+  },
   "singles": "সিঙ্গেল সমূহ",
+  "@singles": {
+    "description": "singles"
+  },
   "library": "লাইব্রেরি",
+  "@library": {
+    "description": "library"
+  },
   "artists": "শিল্পী",
+  "@artists": {
+    "description": "artists"
+  },
   "settings": "সেটিংস",
+  "@settings": {
+    "description": "settings"
+  },
   "downloads": "ডাউনলোড সমূহ",
+  "@downloads": {
+    "description": "downloads"
+  },
   "album": "অ্যালবাম",
+  "@album": {
+    "description": "album"
+  },
   "favorites": "পছন্দ সমূহ",
+  "@favorites": {
+    "description": "favorites"
+  },
   "add5Minutes": "৫ মিনিট যোগ করুন",
+  "@add5Minutes": {
+    "description": "add5Minutes"
+  },
   "upNext": "পরবর্তী",
+  "@upNext": {
+    "description": "upNext"
+  },
   "items": "জিনিসগুলো",
+  "@items": {
+    "description": "items"
+  },
   "shareSong": "এই গানটি শেয়ার করুন",
+  "@shareSong": {
+    "description": "shareSong"
+  },
   "cancel": "বাতিল",
+  "@cancel": {
+    "description": "cancel"
+  },
   "noOfflineSong": "কোনো অফলাইন গান নেই!",
+  "@noOfflineSong": {
+    "description": "noOfflineSong"
+  },
   "playingfromAlbum": "অ্যালবাম হতে বাজানো হচ্ছে",
+  "@playingfromAlbum": {
+    "description": "playingfromAlbum"
+  },
   "playingfromPlaylist": "প্লেলিস্ট হতে বাজানো হচ্ছে",
+  "@playingfromPlaylist": {
+    "description": "playingfromPlaylist"
+  },
   "reArrangeSongs": "গানগুলি পুনরায় সাজান",
+  "@reArrangeSongs": {
+    "description": "reArrangeSongs"
+  },
   "selectSongs": "গান নির্বাচন করুন",
+  "@selectSongs": {
+    "description": "selectSongs"
+  },
   "selectAll": "সব নির্বাচন করুন",
+  "@selectAll": {
+    "description": "selectAll"
+  },
   "playNext": "পরবর্তী চালান",
+  "@playNext": {
+    "description": "playNext"
+  },
   "addToPlaylist": "প্লেলিস্টে যোগ করুন",
+  "@addToPlaylist": {
+    "description": "addToPlaylist"
+  },
   "noLibPlaylist": "তোমার কোন লিব প্লেলিস্ট নেই!",
+  "@noLibPlaylist": {
+    "description": "noLibPlaylist"
+  },
   "playingfromSelection": "নির্বাচন থেকে চালানো হচ্ছে",
+  "@playingfromSelection": {
+    "description": "playingfromSelection"
+  },
   "playingfromArtist": "শিল্পীর থেকে চালানো হচ্ছে",
+  "@playingfromArtist": {
+    "description": "playingfromArtist"
+  },
   "randomSelection": "যে কোনো নির্বাচন",
+  "@randomSelection": {
+    "description": "randomSelection"
+  },
   "randomRadio": "যে কোনো রেডিও",
+  "@randomRadio": {
+    "description": "randomRadio"
+  },
   "sleepTimer": "ঘুমানোর টাইমার",
+  "@sleepTimer": {
+    "description": "sleepTimer"
+  },
   "cancelTimer": "টাইমার বাতিল করো",
+  "@cancelTimer": {
+    "description": "cancelTimer"
+  },
   "misc": "বিবিধ",
+  "@misc": {
+    "description": "misc"
+  },
   "autoDownFavSongDes": "পছন্দের তালিকায় যোগ করা হলে অটোমেটিক্যালি প্রিয় গান ডাউনলোড করুন",
+  "@autoDownFavSongDes": {
+    "description": "autoDownFavSongDes"
+  },
   "content": "কন্টেন্ট",
+  "@content": {
+    "description": "content"
+  },
   "personalisation": "ব্যক্তিগতকরণ",
+  "@personalisation": {
+    "description": "personalisation"
+  },
   "light": "আলো",
+  "@light": {
+    "description": "light"
+  },
   "language": "ভাষা",
+  "@language": {
+    "description": "language"
+  },
   "gesture": "জেসচার",
+  "@gesture": {
+    "description": "gesture"
+  },
   "languageDes": "অ্যাপের ভাষা নির্ধারণ করুন",
+  "@languageDes": {
+    "description": "languageDes"
+  },
   "setDiscoverContent": "আবিষ্কারের বিষয়বস্তু নির্ধারণ করুন",
+  "@setDiscoverContent": {
+    "description": "setDiscoverContent"
+  },
   "quickpicks": "দ্রুত পছন্দ",
+  "@quickpicks": {
+    "description": "quickpicks"
+  },
   "discover": "আবিষ্কার",
+  "@discover": {
+    "description": "discover"
+  },
   "basedOnLast": "শেষ ইন্টারঅ্যাকশনের উপর",
+  "@basedOnLast": {
+    "description": "basedOnLast"
+  },
   "autoOpenPlayer": "অটো প্লেয়ার স্ক্রিন খুলুন",
+  "@autoOpenPlayer": {
+    "description": "autoOpenPlayer"
+  },
   "enableBottomNav": "নিচের নেভিগেশন বার",
+  "@enableBottomNav": {
+    "description": "enableBottomNav"
+  },
   "skipSilenceDes": "মিউজিক প্লেব্যাকে নীরবতা বাদ দেওয়া হবে",
+  "@skipSilenceDes": {
+    "description": "skipSilenceDes"
+  },
   "loudnessNormalizationDes": "সকল গানের জন্য একই মাত্রার জোর সেট করে (পরীক্ষামূলক) (পূর্ববর্তী সংস্করণে ডাউনলোড করা গানগুলিতে কাজ করবে না (< v১.১০.০))",
+  "@loudnessNormalizationDes": {
+    "description": "loudnessNormalizationDes"
+  },
   "disableTransitionAnimationDes": "ট্যাব ট্রানজিশন অ্যানিমেশন অক্ষম করতে এই বিকল্পটি সক্ষম করুন",
+  "@disableTransitionAnimationDes": {
+    "description": "disableTransitionAnimationDes"
+  },
   "low": "কম",
+  "@low": {
+    "description": "low"
+  },
   "downloadingFormatDes": "ডাউনলোডিং ফাইল ফরম্যাট নির্বাচন করুন। \"Opus\" সেরা মানের প্রদান করবে",
+  "@downloadingFormatDes": {
+    "description": "downloadingFormatDes"
+  },
   "exportDowloadedFiles": "ডাউনলোড করা ফাইল রপ্তানি করুন",
+  "@exportDowloadedFiles": {
+    "description": "exportDowloadedFiles"
+  },
   "ignoreBatOpt": "ব্যাটারি অপ্টিমাইজেশন উপেক্ষা করুন",
+  "@ignoreBatOpt": {
+    "description": "ignoreBatOpt"
+  },
   "status": "অবস্থা",
+  "@status": {
+    "description": "status"
+  },
   "urlSearchDes": "ইউআরএল সনাক্ত করেছে যে সংশ্লিষ্ট কন্টেন্ট খুলতে/চালাতে এটিতে ক্লিক করুন",
+  "@urlSearchDes": {
+    "description": "urlSearchDes"
+  },
   "viewAll": "সবগুলো দেখুন",
+  "@viewAll": {
+    "description": "viewAll"
+  },
   "nomatch": "কোনো মিল পাওয়া যায়নি -",
+  "@nomatch": {
+    "description": "nomatch"
+  },
   "synced": "সিঙ্ক করা হয়েছে",
+  "@synced": {
+    "description": "synced"
+  },
   "plain": "সরল",
+  "@plain": {
+    "description": "plain"
+  },
   "cancelTimerAlert": "ঘুমানোর টাইমার বাতিল করা হয়েছে",
+  "@cancelTimerAlert": {
+    "description": "cancelTimerAlert"
+  },
   "sleepTimeSetAlert": "তোমার ঘুমের টাইমার সেট করা আছে",
+  "@sleepTimeSetAlert": {
+    "description": "sleepTimeSetAlert"
+  },
   "radioNotAvailable": "এই শিল্পীর জন্য রেডিও পাওয়া যাচ্ছে না!",
+  "@radioNotAvailable": {
+    "description": "radioNotAvailable"
+  },
   "songEnqueueAlert": "গানটি সারিবদ্ধ!",
+  "@songEnqueueAlert": {
+    "description": "songEnqueueAlert"
+  },
   "pipedplstSyncAlert": "পাইপড প্লেলিস্ট সিঙ্ক হয়েছে!",
+  "@pipedplstSyncAlert": {
+    "description": "pipedplstSyncAlert"
+  },
   "notaValidLink": "বৈধ লিঙ্ক নয়!",
+  "@notaValidLink": {
+    "description": "notaValidLink"
+  },
   "goToDownloadPage": "ডাউনলোড পৃষ্ঠায় যেতে এখানে ক্লিক করুন",
+  "@goToDownloadPage": {
+    "description": "goToDownloadPage"
+  },
   "link": "লিংক",
+  "@link": {
+    "description": "link"
+  },
   "selectAuthIns": "প্রমাণীকরণের দৃষ্টান্ত নির্বাচন করুন",
+  "@selectAuthIns": {
+    "description": "selectAuthIns"
+  },
   "username": "ব্যবহারকারীর নাম",
+  "@username": {
+    "description": "username"
+  },
   "linkAlert": "সফলভাবে লিঙ্ক করা হয়েছে!",
+  "@linkAlert": {
+    "description": "linkAlert"
+  },
   "reset": "রিসেট",
+  "@reset": {
+    "description": "reset"
+  },
   "resetblacklistedplaylist": "কালো তালিকাভুক্ত প্লেলিস্টগুলি পুনরায় সেট",
+  "@resetblacklistedplaylist": {
+    "description": "resetblacklistedplaylist"
+  },
   "resetblacklistedplaylistDes": "সমস্ত পাইপড কালো তালিকাভুক্ত প্লেলিস্ট রিসেট করুন",
+  "@resetblacklistedplaylistDes": {
+    "description": "resetblacklistedplaylistDes"
+  },
   "blacklistPlstResetAlert": "সফলভাবে রিসেট করা হয়েছে!",
+  "@blacklistPlstResetAlert": {
+    "description": "blacklistPlstResetAlert"
+  },
   "stopMusicOnTaskClear": "টাস্ক ক্লিয়ারে সঙ্গীত বন্ধ করুন",
+  "@stopMusicOnTaskClear": {
+    "description": "stopMusicOnTaskClear"
+  },
   "backupInProgress": "ব্যাকআপ নেওয়া হচ্ছে..।",
+  "@backupInProgress": {
+    "description": "backupInProgress"
+  },
   "restoreAppData": "অ্যাপ ডেটা রিস্টোর করুন",
+  "@restoreAppData": {
+    "description": "restoreAppData"
+  },
   "backupMsg": "ব্যাকআপ সফলভাবে সংরক্ষিত হয়েছে!",
+  "@backupMsg": {
+    "description": "backupMsg"
+  },
   "backFilesFound": "ডাটাবেস পাওয়া গেছে",
+  "@backFilesFound": {
+    "description": "backFilesFound"
+  },
   "restoring": "রিস্টোর করা হচ্ছে..।",
+  "@restoring": {
+    "description": "restoring"
+  },
   "closeApp": "অ্যাপ বন্ধ করুন",
+  "@closeApp": {
+    "description": "closeApp"
+  },
   "restartApp": "অ্যাপ রিস্টার্ট করুন",
+  "@restartApp": {
+    "description": "restartApp"
+  },
   "skipSilence": "নীরবতা এড়িয়ে যান",
+  "@skipSilence": {
+    "description": "skipSilence"
+  },
   "libPlaylists": "লাইব্রেরি প্লেলিস্ট",
+  "@libPlaylists": {
+    "description": "libPlaylists"
+  },
   "backgroundPlay": "ব্যাকগ্রাউন্ড সংগীত বাজা",
+  "@backgroundPlay": {
+    "description": "backgroundPlay"
+  },
   "reArrangePlaylist": "প্লেলিস্ট পুনরায় সাজান",
+  "@reArrangePlaylist": {
+    "description": "reArrangePlaylist"
+  },
   "restoreLastPlaybackSession": "শেষ প্লেব্যাক সেশন পুনরুদ্ধার করুন",
+  "@restoreLastPlaybackSession": {
+    "description": "restoreLastPlaybackSession"
+  },
   "topmusicvideos": "সেরা সঙ্গীত ভিডিও",
+  "@topmusicvideos": {
+    "description": "topmusicvideos"
+  },
   "openIn": "খুলুন",
+  "@openIn": {
+    "description": "openIn"
+  },
   "themeMode": "থিম মোড",
+  "@themeMode": {
+    "description": "themeMode"
+  },
   "homeContentCount": "হোম কন্টেন্টের সংখ্যা",
+  "@homeContentCount": {
+    "description": "homeContentCount"
+  },
   "cacheSongsDes": "ভবিষ্যতের/অফলাইন প্লেব্যাকের জন্য বাজানোর সময় গান ক্যাশ করলে, এটি আপনার ডিভাইসে অতিরিক্ত জায়গা নেবে",
+  "@cacheSongsDes": {
+    "description": "cacheSongsDes"
+  },
   "streamingQualityDes": "সঙ্গীতের চালানোর কোয়ালিটি",
+  "@streamingQualityDes": {
+    "description": "streamingQualityDes"
+  },
   "streamingQuality": "স্ট্রিমিং কোয়ালিটি",
+  "@streamingQuality": {
+    "description": "streamingQuality"
+  },
   "disableTransitionAnimation": "ট্রানজিশন অ্যানিমেশন অক্ষম করুন",
+  "@disableTransitionAnimation": {
+    "description": "disableTransitionAnimation"
+  },
   "ignoreBatOptDes": "যদি আপনি বিজ্ঞপ্তি সংক্রান্ত সমস্যার সম্মুখীন হন অথবা সিস্টেম অপ্টিমাইজেশনের কারণে প্লেব্যাক বন্ধ হয়ে যায়, তাহলে অনুগ্রহ করে এই বিকল্পটি সক্ষম করুন",
+  "@ignoreBatOptDes": {
+    "description": "ignoreBatOptDes"
+  },
   "searchDes": "গান, প্লেলিস্ট, অ্যালবাম অথবা শিল্পী",
+  "@searchDes": {
+    "description": "searchDes"
+  },
   "for1": "জন্য",
+  "@for1": {
+    "description": "for1"
+  },
   "searchRes": "অনুসন্ধানের ফলাফল",
+  "@searchRes": {
+    "description": "searchRes"
+  },
   "videos": "ভিডিও",
+  "@videos": {
+    "description": "videos"
+  },
   "songRemovedAlert": "সরানো হয়েছে",
+  "@songRemovedAlert": {
+    "description": "songRemovedAlert"
+  },
   "by": "দ্বারা",
+  "@by": {
+    "description": "by"
+  },
   "restoreMsg": "সফলভাবে রিস্টোর করা হয়েছে!\nরিস্টার্ট করার সময় পরিবর্তনগুলি প্রয়োগ করা হয়",
+  "@restoreMsg": {
+    "description": "restoreMsg"
+  },
   "songAlreadyOfflineAlert": "গানটি ইতিমধ্যেই ক্যাশে অফলাইনে আছে",
+  "@songAlreadyOfflineAlert": {
+    "description": "songAlreadyOfflineAlert"
+  },
   "loudnessNormalization": "শব্দের স্বাভাবিকীকরণ",
+  "@loudnessNormalization": {
+    "description": "loudnessNormalization"
+  },
   "playlistRemovedAlert": "প্লেলিস্ট সরানো হয়েছে!",
+  "@playlistRemovedAlert": {
+    "description": "playlistRemovedAlert"
+  },
   "trending": "চলতি জনপ্রিয়",
+  "@trending": {
+    "description": "trending"
+  },
   "subscribers": "গ্রাহকরা",
+  "@subscribers": {
+    "description": "subscribers"
+  },
   "songRemovedfromQueueCurrSong": "বর্তমানে চলমান গানটি আপনি সরাতে পারবেন না",
+  "@songRemovedfromQueueCurrSong": {
+    "description": "songRemovedfromQueueCurrSong"
+  },
   "playlistCreatednsongAddedAlert": "প্লেলিস্ট তৈরি এবং গান যোগ করা হয়েছে!",
+  "@playlistCreatednsongAddedAlert": {
+    "description": "playlistCreatednsongAddedAlert"
+  },
   "errorOccuredAlert": "কিছু ত্রুটি ঘটেছে!",
+  "@errorOccuredAlert": {
+    "description": "errorOccuredAlert"
+  },
   "communityplaylists": "সম্প্রদায়ের প্লেলিস্ট",
+  "@communityplaylists": {
+    "description": "communityplaylists"
+  },
   "playlistBookmarkRemoveAlert": "প্লেলিস্ট বুকমার্ক সরানো হয়েছে!",
+  "@playlistBookmarkRemoveAlert": {
+    "description": "playlistBookmarkRemoveAlert"
+  },
   "removeFromPlaylist": "প্লেলিস্ট থেকে সরান",
+  "@removeFromPlaylist": {
+    "description": "removeFromPlaylist"
+  },
   "addMultipleSongs": "প্লেলিস্টে গান যোগ করুন",
+  "@addMultipleSongs": {
+    "description": "addMultipleSongs"
+  },
   "homeContentCountDes": "প্রাথমিক হোমস্ক্রিন-কন্টেন্টের সংখ্যা (প্রায়) নির্বাচন করুন। কম ফলাফল দ্রুত লোড হচ্ছে",
+  "@homeContentCountDes": {
+    "description": "homeContentCountDes"
+  },
   "backupSettingsAndPlaylistsDes": "একটি ব্যাকআপ ফাইলে সমস্ত সেটিংস, প্লেলিস্ট এবং লগইন ডেটা সংরক্ষণ করে",
+  "@backupSettingsAndPlaylistsDes": {
+    "description": "backupSettingsAndPlaylistsDes"
+  },
   "export": "রপ্তানি",
+  "@export": {
+    "description": "export"
+  },
   "exporting": "রপ্তানি করা হচ্ছে..।",
+  "@exporting": {
+    "description": "exporting"
+  },
   "songInfo": "গানের তথ্য",
+  "@songInfo": {
+    "description": "songInfo"
+  },
   "backup": "ব্যাকআপ",
+  "@backup": {
+    "description": "backup"
+  },
   "letsStrart": "শুরু করা যাক.।",
+  "@letsStrart": {
+    "description": "letsStrart"
+  },
   "queuerearrangingDeniedMsg": "শাফেল মোড চালু থাকলে সারি পুনর্বিন্যাস করা যাবে না",
+  "@queuerearrangingDeniedMsg": {
+    "description": "queuerearrangingDeniedMsg"
+  },
   "songNotPlayable": "সার্ভারের সীমাবদ্ধতার কারণে গানটি চালানো যাচ্ছে না!",
+  "@songNotPlayable": {
+    "description": "songNotPlayable"
+  },
   "download": "ডাউনলোড",
+  "@download": {
+    "description": "download"
+  },
   "networkError": "নেটওয়ার্ক ত্রুটি! আপনার নেটওয়ার্ক সংযোগ পরীক্ষা করুন।",
+  "@networkError": {
+    "description": "networkError"
+  },
   "appInfo": "অ্যাপ তথ্য",
+  "@appInfo": {
+    "description": "appInfo"
+  },
   "musicAndPlayback": "সঙ্গীত ও প্লেব্যাক",
+  "@musicAndPlayback": {
+    "description": "musicAndPlayback"
+  },
   "playerUiDes": "প্লেয়ার ইউজার ইন্টারফেস নির্বাচন করুন",
+  "@playerUiDes": {
+    "description": "playerUiDes"
+  },
   "standard": "মানক",
+  "@standard": {
+    "description": "standard"
+  },
   "playerUi": "প্লেয়ার ইউআই",
+  "@playerUi": {
+    "description": "playerUi"
+  },
   "autoDownFavSong": "পছন্দের গান অটো ডাউনলোড করুন",
+  "@autoDownFavSong": {
+    "description": "autoDownFavSong"
+  },
   "exportPlaylist": "প্লেলিস্ট রপ্তানি করুন",
+  "@exportPlaylist": {
+    "description": "exportPlaylist"
+  },
   "exportingPlaylist": "প্লেলিস্ট রপ্তানি করা হচ্ছে..।",
+  "@exportingPlaylist": {
+    "description": "exportingPlaylist"
+  },
   "exportError": "প্লেলিস্ট রপ্তানি করার সময় ত্রুটি",
+  "@exportError": {
+    "description": "exportError"
+  },
   "exportErrorPermission": "রপ্তানি করার সময় অনুমতি অস্বীকার করা হয়েছে",
+  "@exportErrorPermission": {
+    "description": "exportErrorPermission"
+  },
   "exportErrorStorage": "পর্যাপ্ত স্টোরেজ স্পেস নেই",
+  "@exportErrorStorage": {
+    "description": "exportErrorStorage"
+  },
   "exportErrorFormat": "প্লেলিস্ট ডেটা ফর্ম্যাট করার সময় ত্রুটি",
+  "@exportErrorFormat": {
+    "description": "exportErrorFormat"
+  },
   "importPlaylist": "প্লেলিস্ট আমদানি করুন",
+  "@importPlaylist": {
+    "description": "importPlaylist"
+  },
   "importingPlaylist": "প্লেলিস্ট আমদানি করা হচ্ছে..।",
+  "@importingPlaylist": {
+    "description": "importingPlaylist"
+  },
   "selectFile": "ফাইল নির্বাচন করুন",
+  "@selectFile": {
+    "description": "selectFile"
+  },
   "playlistImportedMsg": "প্লেলিস্ট সফলভাবে আমদানি করা হয়েছে",
+  "@playlistImportedMsg": {
+    "description": "playlistImportedMsg"
+  },
   "importError": "প্লেলিস্ট আমদানিতে ত্রুটি",
+  "@importError": {
+    "description": "importError"
+  },
   "importErrorFileAccess": "নির্বাচিত ফাইলটি অ্যাক্সেস করা যায়নি",
+  "@importErrorFileAccess": {
+    "description": "importErrorFileAccess"
+  },
   "invalidPlaylistFile": "অবৈধ প্লেলিস্ট ফাইল গঠন",
+  "@invalidPlaylistFile": {
+    "description": "invalidPlaylistFile"
+  },
   "importErrorDatabase": "ডাটাবেসে সংরক্ষণে ত্রুটি",
+  "@importErrorDatabase": {
+    "description": "importErrorDatabase"
+  },
   "fileNotFound": "ফাইলটি পাওয়া যায়নি",
+  "@fileNotFound": {
+    "description": "fileNotFound"
+  },
   "dark": "অন্ধকার",
+  "@dark": {
+    "description": "dark"
+  },
   "downloadLocation": "ডাউনলোডের অবস্থান",
+  "@downloadLocation": {
+    "description": "downloadLocation"
+  },
   "high": "উচ্চ",
+  "@high": {
+    "description": "high"
+  },
   "removeFromLib": "লাইব্রেরির গান থেকে সরান",
+  "@removeFromLib": {
+    "description": "removeFromLib"
+  },
   "deleteDownloadData": "ডাউনলোড থেকে সরান",
+  "@deleteDownloadData": {
+    "description": "deleteDownloadData"
+  },
   "minutes": "মিনিট",
+  "@minutes": {
+    "description": "minutes"
+  },
   "enabled": "সক্ষম করা হয়েছে",
+  "@enabled": {
+    "description": "enabled"
+  },
   "songRemovedfromQueue": "সারি থেকে সরানো হয়েছে!",
+  "@songRemovedfromQueue": {
+    "description": "songRemovedfromQueue"
+  },
   "songAlreadyExists": "গানটি ইতিমধ্যেই আছে!",
+  "@songAlreadyExists": {
+    "description": "songAlreadyExists"
+  },
   "bitrate": "বিটরেট",
+  "@bitrate": {
+    "description": "bitrate"
+  },
   "systemDefault": "সিস্টেম ডিফল্ট",
+  "@systemDefault": {
+    "description": "systemDefault"
+  },
   "enqueueAll": "সবগুলো সারিবদ্ধ",
+  "@enqueueAll": {
+    "description": "enqueueAll"
+  },
   "recentlyPlayed": "সম্প্রতি চালানো",
+  "@recentlyPlayed": {
+    "description": "recentlyPlayed"
+  },
   "close": "বন্ধ",
+  "@close": {
+    "description": "close"
+  },
   "duration": "সময়কাল",
+  "@duration": {
+    "description": "duration"
+  },
   "unlinkAlert": "সফলভাবে লিঙ্কমুক্ত করা হয়েছে!",
+  "@unlinkAlert": {
+    "description": "unlinkAlert"
+  },
   "create": "তৈরি করুন",
+  "@create": {
+    "description": "create"
+  },
   "removePlaylist": "প্লেলিস্ট সরান",
+  "@removePlaylist": {
+    "description": "removePlaylist"
+  },
   "networkError1": "ওহো নেটওয়ার্ক ত্রুটি!",
+  "@networkError1": {
+    "description": "networkError1"
+  },
   "title": "শিরোনাম",
+  "@title": {
+    "description": "title"
+  },
   "enableBottomNavDes": "নিচের নেভিগেশন বারে স্যুইচ করুন",
+  "@enableBottomNavDes": {
+    "description": "enableBottomNavDes"
+  },
   "playlistRenameAlert": "সফলভাবে নাম পরিবর্তন করা হয়েছে!",
+  "@playlistRenameAlert": {
+    "description": "playlistRenameAlert"
+  },
   "playlistBookmarkAddAlert": "প্লেলিস্ট বুকমার্ক করা হয়েছে!",
+  "@playlistBookmarkAddAlert": {
+    "description": "playlistBookmarkAddAlert"
+  },
   "renamePlaylist": "প্লেলিস্টের নাম পরিবর্তন",
+  "@renamePlaylist": {
+    "description": "renamePlaylist"
+  },
   "noBookmarks": "কোন বুকমার্ক নেই!",
+  "@noBookmarks": {
+    "description": "noBookmarks"
+  },
   "lyricsNotAvailable": "লিরিক্স পাওয়া যাচ্ছে না!",
+  "@lyricsNotAvailable": {
+    "description": "lyricsNotAvailable"
+  },
   "restore": "রিস্টোর",
+  "@restore": {
+    "description": "restore"
+  },
   "audioCodec": "অডিও কোডেক",
+  "@audioCodec": {
+    "description": "audioCodec"
+  },
   "github": "গিটহাব",
+  "@github": {
+    "description": "github"
+  },
   "backupAppData": "অ্যাপ ডেটা ব্যাকআপ করুন",
+  "@backupAppData": {
+    "description": "backupAppData"
+  },
   "rename": "পুনঃনামকরণ",
+  "@rename": {
+    "description": "rename"
+  },
   "queueShufflingDeniedMsg": "শাফেল মোড চালু থাকলে সারি বদলানো যাবে না",
+  "@queueShufflingDeniedMsg": {
+    "description": "queueShufflingDeniedMsg"
+  },
   "dynamic": "পরিবর্তনশীল",
+  "@dynamic": {
+    "description": "dynamic"
+  },
   "exportMsg": "ফাইলগুলি সফলভাবে রপ্তানি করা হয়েছে",
+  "@exportMsg": {
+    "description": "exportMsg"
+  },
   "clearImgCacheAlert": "ছবির ক্যাশে সফলভাবে সাফ করা হয়েছে",
+  "@clearImgCacheAlert": {
+    "description": "clearImgCacheAlert"
+  },
   "scanning": "স্ক্যান করা হচ্ছে..।",
+  "@scanning": {
+    "description": "scanning"
+  },
   "githubDes": "গিটহাব সোর্স কোড দেখুন \nযদি আপনি এই প্রকল্পটি পছন্দ করেন, তাহলে ⭐ দিতে ভুলবেন না",
+  "@githubDes": {
+    "description": "githubDes"
+  },
   "resetToDefaultDes": "অ্যাপ সেটিংস ডিফল্টে রিসেট করুন (পুনরায় চালু করতে হবে)",
+  "@resetToDefaultDes": {
+    "description": "resetToDefaultDes"
+  },
   "id": "আইডি",
+  "@id": {
+    "description": "id"
+  },
   "resetToDefaultMsg": "সেটিংস ডিফল্টে রিসেট করা সম্পন্ন হয়েছে, অনুগ্রহ করে অ্যাপটি পুনরায় চালু করুন",
+  "@resetToDefaultMsg": {
+    "description": "resetToDefaultMsg"
+  },
   "loudnessDb": "জোরে",
+  "@loudnessDb": {
+    "description": "loudnessDb"
+  },
   "songAddedToPlaylistAlert": "গানটি প্লেলিস্টে যোগ করা হয়েছে!",
+  "@songAddedToPlaylistAlert": {
+    "description": "songAddedToPlaylistAlert"
+  },
   "newVersionAvailable": "নতুন সংস্করণ উপলব্ধ!",
+  "@newVersionAvailable": {
+    "description": "newVersionAvailable"
+  },
   "operationFailed": "অপারেশন ব্যর্থ হয়েছে",
+  "@operationFailed": {
+    "description": "operationFailed"
+  },
   "unLink": "লিঙ্কমুক্ত",
+  "@unLink": {
+    "description": "unLink"
+  },
   "hintApiUrl": "পাইপড ইনস্ট্যান্সের API URL",
+  "@hintApiUrl": {
+    "description": "hintApiUrl"
+  },
   "Piped": "পাইপড",
+  "@Piped": {
+    "description": "Piped"
+  },
   "albumBookmarkAddAlert": "অ্যালবাম বুকমার্ক করা হয়েছে!",
+  "@albumBookmarkAddAlert": {
+    "description": "albumBookmarkAddAlert"
+  },
   "linkPipedDes": "প্লেলিস্টের জন্য পাইপডের সাথে লিঙ্ক করুন",
+  "@linkPipedDes": {
+    "description": "linkPipedDes"
+  },
   "password": "পাসওয়ার্ড",
+  "@password": {
+    "description": "password"
+  },
   "clearImgCache": "ছবির ক্যাশে সাফ করুন",
+  "@clearImgCache": {
+    "description": "clearImgCache"
+  },
   "playlistCreatedAlert": "প্লেলিস্ট তৈরি হয়েছে!",
+  "@playlistCreatedAlert": {
+    "description": "playlistCreatedAlert"
+  },
   "cachedOrOffline": "ক্যাশে/অফলাইন",
+  "@cachedOrOffline": {
+    "description": "cachedOrOffline"
+  },
   "emptyPlaylist": "খালি প্লেলিস্ট!",
+  "@emptyPlaylist": {
+    "description": "emptyPlaylist"
+  },
   "search": "অনুসন্ধান",
+  "@search": {
+    "description": "search"
+  },
   "playlistBlacklistAlert": "প্লেলিস্ট কালো তালিকাভুক্ত!",
+  "@playlistBlacklistAlert": {
+    "description": "playlistBlacklistAlert"
+  },
   "downFilesFound": "ডাউনলোড করা ফাইল পাওয়া গেছে",
+  "@downFilesFound": {
+    "description": "downFilesFound"
+  },
   "featuredplaylists": "বৈশিষ্ট্যযুক্ত প্লেলিস্ট",
+  "@featuredplaylists": {
+    "description": "featuredplaylists"
+  },
   "endOfThisSong": "এই গানের শেষ",
+  "@endOfThisSong": {
+    "description": "endOfThisSong"
+  },
   "equalizerDes": "সিস্টেম ইকুয়ালাইজার খুলুন",
+  "@equalizerDes": {
+    "description": "equalizerDes"
+  },
   "equalizer": "ইকুয়ালাইজার",
+  "@equalizer": {
+    "description": "equalizer"
+  },
   "restoreSettingsAndPlaylistsDes": "ব্যাকআপ ফাইল থেকে সমস্ত সেটিংস, লগইন ডেটা এবং প্লেলিস্ট রিস্টোর করে। সমস্ত বর্তমান ডেটা ওভাররাইট করে",
+  "@restoreSettingsAndPlaylistsDes": {
+    "description": "restoreSettingsAndPlaylistsDes"
+  },
   "libAlbums": "লাইব্রেরি অ্যালবাম",
+  "@libAlbums": {
+    "description": "libAlbums"
+  },
   "libArtists": "লাইব্রেরি শিল্পী",
+  "@libArtists": {
+    "description": "libArtists"
+  },
   "retry": "আবার চেষ্টা করুন!",
+  "@retry": {
+    "description": "retry"
+  },
   "CreateNewPlaylist": "নতুন প্লেলিস্ট তৈরি করুন",
+  "@CreateNewPlaylist": {
+    "description": "CreateNewPlaylist"
+  },
   "libSongs": "লাইব্রেরির গানগুলো",
+  "@libSongs": {
+    "description": "libSongs"
+  },
   "removeMultiple": "একাধিক গান সরান",
+  "@removeMultiple": {
+    "description": "removeMultiple"
+  },
   "enqueueSong": "এই গানটি সারিবদ্ধ করুন",
+  "@enqueueSong": {
+    "description": "enqueueSong"
+  },
   "goToAlbum": "অ্যালবামে যান",
+  "@goToAlbum": {
+    "description": "goToAlbum"
+  },
   "viewArtist": "শিল্পী দেখুন",
+  "@viewArtist": {
+    "description": "viewArtist"
+  },
   "createnAdd": "তৈরি এবং যোগ করুন",
+  "@createnAdd": {
+    "description": "createnAdd"
+  },
   "startRadio": "রেডিও শুরু করুন",
+  "@startRadio": {
+    "description": "startRadio"
+  },
   "removeFromQueue": "সারি থেকে সরান",
+  "@removeFromQueue": {
+    "description": "removeFromQueue"
+  },
   "resetToDefault": "ডিফল্ট সেটিংস পুনরুদ্ধার করুন",
+  "@resetToDefault": {
+    "description": "resetToDefault"
+  },
   "results": "ফলাফল",
+  "@results": {
+    "description": "results"
+  },
   "cacheSongs": "ক্যাশে গান",
+  "@cacheSongs": {
+    "description": "cacheSongs"
+  },
   "exportedFileLocation": "ডাউনলোড করা ফাইল এক্সপোর্টের অবস্থান",
+  "@exportedFileLocation": {
+    "description": "exportedFileLocation"
+  },
   "clearImgCacheDes": "ক্যাশেড থাম্বনেইল/ছবি মুছে ফেলার জন্য এখানে ক্লিক করুন। (ক্যাশেড ছবির ডেটা রিফ্রেশ না করা পর্যন্ত সুপারিশ করা হয় না)",
+  "@clearImgCacheDes": {
+    "description": "clearImgCacheDes"
+  },
   "disabled": "অক্ষম করা হয়েছে",
+  "@disabled": {
+    "description": "disabled"
+  },
   "shuffleQueue": "সারি মেশান",
+  "@shuffleQueue": {
+    "description": "shuffleQueue"
+  },
   "queueLoop": "সারিবদ্ধ লুপ",
+  "@queueLoop": {
+    "description": "queueLoop"
+  },
   "queueLoopNotDisMsg1": "শাফেল মোড সক্রিয় থাকলে কিউ লুপ মোড অক্ষম করা যাবে না।",
+  "@queueLoopNotDisMsg1": {
+    "description": "queueLoopNotDisMsg1"
+  },
   "playnextMsg": "আসছে",
+  "@playnextMsg": {
+    "description": "playnextMsg"
+  },
   "queueLoopNotDisMsg2": "রেডিও মোডে কিউ লুপ মোড চালু করা যাবে না।",
+  "@queueLoopNotDisMsg2": {
+    "description": "queueLoopNotDisMsg2"
+  },
   "enableSlidableAction": "স্লাইডযোগ্য ক্রিয়াগুলি সক্ষম করুন",
+  "@enableSlidableAction": {
+    "description": "enableSlidableAction"
+  },
   "downloadingFormat": "ফাইল ফর্ম্যাট ডাউনলোড করা হচ্ছে",
+  "@downloadingFormat": {
+    "description": "downloadingFormat"
+  },
   "deleteDownloadedDataAlert": "ডাউনলোড থেকে সফলভাবে সরানো হয়েছে!",
+  "@deleteDownloadedDataAlert": {
+    "description": "deleteDownloadedDataAlert"
+  },
   "artistBookmarkAddAlert": "শিল্পী বুকমার্ক করা হয়েছে!",
+  "@artistBookmarkAddAlert": {
+    "description": "artistBookmarkAddAlert"
+  },
   "albumBookmarkRemoveAlert": "অ্যালবাম বুকমার্ক সরানো হয়েছে!",
+  "@albumBookmarkRemoveAlert": {
+    "description": "albumBookmarkRemoveAlert"
+  },
   "syncedLyricsNotAvailable": "সিঙ্ক করা লিরিক্স পাওয়া যাচ্ছে না!",
+  "@syncedLyricsNotAvailable": {
+    "description": "syncedLyricsNotAvailable"
+  },
   "artistBookmarkRemoveAlert": "শিল্পীর বুকমার্ক সরানো হয়েছে!",
+  "@artistBookmarkRemoveAlert": {
+    "description": "artistBookmarkRemoveAlert"
+  },
   "artistDesNotAvailable": "বর্ণনা পাওয়া যাচ্ছে না!",
+  "@artistDesNotAvailable": {
+    "description": "artistDesNotAvailable"
+  },
   "notaSongVideo": "গান/সঙ্গীত-ভিডিও নয়!",
+  "@notaSongVideo": {
+    "description": "notaSongVideo"
+  },
   "customIns": "কাস্টম ইনস্ট্যান্স",
+  "@customIns": {
+    "description": "customIns"
+  },
   "selectAuthInsMsg": "অনুগ্রহ করে প্রমাণীকরণের উদাহরণ নির্বাচন করুন!",
+  "@selectAuthInsMsg": {
+    "description": "selectAuthInsMsg"
+  },
   "customInsSelectMsg": "কাস্টম ইনস্ট্যান্স নির্বাচন করুন",
+  "@customInsSelectMsg": {
+    "description": "customInsSelectMsg"
+  },
   "allFieldsReqMsg": "সকল ক্ষেত্র প্রয়োজন",
+  "@allFieldsReqMsg": {
+    "description": "allFieldsReqMsg"
+  },
   "processFiles": "ফাইলগুলি প্রক্রিয়া করা হচ্ছে..।",
+  "@processFiles": {
+    "description": "processFiles"
+  },
   "exportDowloadedFilesDes": "inApp dir থেকে বাহ্যিক dir-এ ডাউনলোড করা ফাইল রপ্তানি করতে এখানে ক্লিক করুন",
+  "@exportDowloadedFilesDes": {
+    "description": "exportDowloadedFilesDes"
+  },
   "enableSlidableActionDes": "গানের টাইলে স্লাইডযোগ্য অ্যাকশন সক্ষম করুন",
+  "@enableSlidableActionDes": {
+    "description": "enableSlidableActionDes"
+  },
   "downloadError2": "সার্ভারের সীমাবদ্ধতার কারণে অনুরোধ করা গানটি ডাউনলোড করা যাচ্ছে না। আপনি আবার চেষ্টা করতে পারেন",
+  "@downloadError2": {
+    "description": "downloadError2"
+  },
   "restoreLastPlaybackSessionDes": "অ্যাপ শুরু হওয়ার সাথে সাথে শেষ প্লেব্যাক সেশনটি অটোমেটিক্যালি পুনরুদ্ধার করুন",
+  "@restoreLastPlaybackSessionDes": {
+    "description": "restoreLastPlaybackSessionDes"
+  },
   "cacheHomeScreenData": "হোম স্ক্রিনের কন্টেন্ট ডেটা ক্যাশে করুন",
+  "@cacheHomeScreenData": {
+    "description": "cacheHomeScreenData"
+  },
   "backgroundPlayDes": "ব্যাকগ্রাউন্ডে সঙ্গীত বাজানো সক্ষম/অক্ষম করুন (অ্যাপটি ব্যাকগ্রাউন্ডে চলাকালীন সিস্টেম ট্রে থেকে অ্যাক্সেস করা যেতে পারে)",
+  "@backgroundPlayDes": {
+    "description": "backgroundPlayDes"
+  },
   "downloadError3": "নেটওয়ার্ক/স্ট্রিম ত্রুটির কারণে ডাউনলোড করা যায়নি! অনুগ্রহ করে আবার চেষ্টা করুন",
+  "@downloadError3": {
+    "description": "downloadError3"
+  },
   "autoOpenPlayerDes": "বাজানোর জন্য গান নির্বাচনের সময় প্লেয়ারের পূর্ণ স্ক্রিন স্বয়ংক্রিয়ভাবে খোলা সক্ষম/অক্ষম করুন",
+  "@autoOpenPlayerDes": {
+    "description": "autoOpenPlayerDes"
+  },
   "cacheHomeScreenDataDes": "হোম স্ক্রিন কন্টেন্ট ডেটা ক্যাশিং সক্ষম করুন, এই বিকল্পটি সক্ষম থাকলে হোম স্ক্রিন তাৎক্ষণিকভাবে লোড হবে",
+  "@cacheHomeScreenDataDes": {
+    "description": "cacheHomeScreenDataDes"
+  },
   "dismiss": "খারিজ করুন",
+  "@dismiss": {
+    "description": "dismiss"
+  },
   "local": "স্থানীয়",
+  "@local": {
+    "description": "local"
+  },
   "dontShowInfoAgain": "এই তথ্য আর দেখাবেন না",
+  "@dontShowInfoAgain": {
+    "description": "dontShowInfoAgain"
+  },
   "androidBackupWarning": "পরীক্ষিত নয়: ৬০টির বেশি ফাইল ডাউনলোড করার পরে চেকবক্সটি নির্বাচন করলে, প্রক্রিয়াটি প্রচুর পরিমাণে মেমরি খরচ করতে পারে এবং ফোন বা অ্যাপটি ক্র্যাশ করতে পারে। আপনার নিজের ঝুঁকিতে এগিয়ে যান।",
+  "@androidBackupWarning": {
+    "description": "androidBackupWarning"
+  },
   "stopMusicOnTaskClearDes": "টাস্ক ম্যানেজার থেকে অ্যাপটি সোয়াইপ করলে মিউজিক প্লেব্যাক বন্ধ হয়ে যাবে",
+  "@stopMusicOnTaskClearDes": {
+    "description": "stopMusicOnTaskClearDes"
+  },
   "includeDownloadedFiles": "ডাউনলোড করা গানের ফাইল অন্তর্ভুক্ত করুন",
+  "@includeDownloadedFiles": {
+    "description": "includeDownloadedFiles"
+  },
   "importLargeFileNote": "দ্রষ্টব্য: বড় প্লেলিস্টগুলি আমদানি করতে বেশি সময় লাগতে পারে",
+  "@importLargeFileNote": {
+    "description": "importLargeFileNote"
+  },
   "importErrorFormat": "অবৈধ ফাইল ফর্ম্যাট",
+  "@importErrorFormat": {
+    "description": "importErrorFormat"
+  },
   "playlistExportedMsg": "প্লেলিস্ট সফলভাবে রপ্তানি করা হয়েছে",
+  "@playlistExportedMsg": {
+    "description": "playlistExportedMsg"
+  },
   "importPlaylistDesc": "আমদানি করার জন্য পূর্বে রপ্তানি করা একটি প্লেলিস্ট JSON ফাইল নির্বাচন করুন",
+  "@importPlaylistDesc": {
+    "description": "importPlaylistDesc"
+  },
   "keepScreenOnWhilePlaying": "প্লে থাকাকালীন স্ক্রীন জ্বলন্ত রাখুন",
+  "@keepScreenOnWhilePlaying": {
+    "description": "keepScreenOnWhilePlaying"
+  },
   "keepScreenOnWhilePlayingDes": "সক্রিয় করলে, গান চলাকালীন ডিভাইসের স্ক্রীন জ্বলে থাকবে",
+  "@keepScreenOnWhilePlayingDes": {
+    "description": "keepScreenOnWhilePlayingDes"
+  },
   "auth_login_success": "সফলভাবে লগ ইন",
   "@auth_login_success": {
-    "description": ""
+    "description": "auth_login_success"
   },
   "settings_cloud_backup": "ক্লাউড ব্যাকআপ",
   "@settings_cloud_backup": {
-    "description": ""
+    "description": "settings_cloud_backup"
   },
   "settings_migration_title": "জস মিউজিক কোটলিন থেকে মাইগ্রেট করুন",
   "@settings_migration_title": {
-    "description": ""
+    "description": "settings_migration_title"
   },
   "backup_confirm_question": "আপনি একটি ব্যাকআপ সঞ্চালন করতে চান?",
   "@backup_confirm_question": {
-    "description": ""
+    "description": "backup_confirm_question"
   },
   "backup_selection_prompt": "ব্যাকআপ কোন ডেটা চয়ন করুন",
   "@backup_selection_prompt": {
-    "description": ""
+    "description": "backup_selection_prompt"
   },
   "search_recent_title": "সাম্প্রতিক অনুসন্ধান",
   "@search_recent_title": {
-    "description": ""
+    "description": "search_recent_title"
   },
   "back": "প্রত্যাবর্তন",
   "@back": {
-    "description": ""
+    "description": "back"
   },
   "auth_forgot_password": "আমি আমার পাসওয়ার্ড ভুলে গেছি",
   "@auth_forgot_password": {
-    "description": ""
+    "description": "auth_forgot_password"
   },
   "auth_btn_login": "লগইন করুন",
   "@auth_btn_login": {
-    "description": ""
+    "description": "auth_btn_login"
   },
   "auth_btn_register": "নিবন্ধন করুন",
   "@auth_btn_register": {
-    "description": ""
+    "description": "auth_btn_register"
   },
   "email": "ই-মেইল",
   "@email": {
-    "description": ""
+    "description": "email"
   },
   "password_text": "পাসওয়ার্ড",
   "@password_text": {
@@ -316,372 +1114,869 @@
   },
   "auth_confirm_password": "পাসওয়ার্ড নিশ্চিত করুন",
   "@auth_confirm_password": {
-    "description": ""
+    "description": "auth_confirm_password"
   },
   "auth_welcome_title": "এস্ট্রেলা সঙ্গীতে স্বাগতম",
   "@auth_welcome_title": {
-    "description": ""
+    "description": "auth_welcome_title"
   },
   "auth_welcome_subtitle": "এস্ট্রেলা সঙ্গীতে স্বাগতম",
   "@auth_welcome_subtitle": {
-    "description": ""
-  },
-  "@username": {
-    "description": ""
+    "description": "auth_welcome_subtitle"
   },
   "auth_first_name": "প্রথম নাম",
   "@auth_first_name": {
-    "description": ""
+    "description": "auth_first_name"
   },
   "auth_last_name": "পদবি",
   "@auth_last_name": {
-    "description": ""
+    "description": "auth_last_name"
   },
   "auth_agree_personal_data": "আমাদের ভুল তথ্য গ্রহণ করুন...",
   "@auth_agree_personal_data": {
-    "description": ""
+    "description": "auth_agree_personal_data"
   },
   "settings_general_section": "সাধারণ",
   "@settings_general_section": {
-    "description": ""
+    "description": "settings_general_section"
   },
   "settings_logout": "লগ আউট করুন",
   "@settings_logout": {
-    "description": ""
+    "description": "settings_logout"
   },
   "settings_cloud_backup_desc": "আপলোড, পুনরুদ্ধার এবং পরিচালনা...",
   "@settings_cloud_backup_desc": {
-    "description": ""
+    "description": "settings_cloud_backup_desc"
   },
   "settings_migration_desc": "প্লেলিস্ট, গান আমদানি করুন...",
   "@settings_migration_desc": {
-    "description": ""
+    "description": "settings_migration_desc"
   },
   "backup_btn_restart": "অ্যাপ রিস্টার্ট করুন",
   "@backup_btn_restart": {
-    "description": ""
+    "description": "backup_btn_restart"
   },
   "backup_btn_upload": "এখন ব্যাকআপ আপলোড করুন",
   "@backup_btn_upload": {
-    "description": ""
+    "description": "backup_btn_upload"
   },
   "backup_no_backups": "এখনও কোন ব্যাকআপ নেই...",
   "@backup_no_backups": {
-    "description": ""
+    "description": "backup_no_backups"
   },
   "backup_auth_required": "আপনার একটি সক্রিয় অধিবেশন প্রয়োজন...",
   "@backup_auth_required": {
-    "description": ""
+    "description": "backup_auth_required"
   },
   "backup_upload_success": "সঠিকভাবে ব্যাকআপ আপলোড করা হয়েছে।",
   "@backup_upload_success": {
-    "description": ""
+    "description": "backup_upload_success"
   },
   "backup_restore_success": "ব্যাকআপ পুনরুদ্ধার করা হয়েছে। অ্যাপটি রিস্টার্ট করুন।",
   "@backup_restore_success": {
-    "description": ""
+    "description": "backup_restore_success"
   },
   "backup_delete_success": "ব্যাকআপ মুছে ফেলা হয়েছে।",
   "@backup_delete_success": {
-    "description": ""
+    "description": "backup_delete_success"
   },
   "genre_pop": "পপ",
   "@genre_pop": {
-    "description": ""
+    "description": "genre_pop"
   },
   "genre_rock": "শিলা",
   "@genre_rock": {
-    "description": ""
+    "description": "genre_rock"
   },
   "genre_hiphop": "হিপ হপ",
   "@genre_hiphop": {
-    "description": ""
+    "description": "genre_hiphop"
   },
   "genre_electronic": "ইলেকট্রনিক্স",
   "@genre_electronic": {
-    "description": ""
+    "description": "genre_electronic"
   },
   "genre_jazz": "জ্যাজ",
   "@genre_jazz": {
-    "description": ""
+    "description": "genre_jazz"
   },
   "genre_latin": "ল্যাটিন",
   "@genre_latin": {
-    "description": ""
+    "description": "genre_latin"
   },
   "migration_btn_select": "ফাইল নির্বাচন করুন এবং আমদানি করুন",
   "@migration_btn_select": {
-    "description": ""
-  },
-  "@close": {
-    "description": ""
+    "description": "migration_btn_select"
   },
   "forgottenFavorites": "ভুলে যাওয়া প্রিয়",
   "@forgottenFavorites": {
-    "description": ""
+    "description": "forgottenFavorites"
   },
   "mostListenedSong": "সবচেয়ে বেশি শোনা গান",
   "@mostListenedSong": {
-    "description": ""
+    "description": "mostListenedSong"
   },
   "reproducedBy": "দ্বারা পুনরুত্পাদিত",
   "@reproducedBy": {
-    "description": ""
+    "description": "reproducedBy"
   },
   "recentSearches": "সাম্প্রতিক অনুসন্ধান",
   "@recentSearches": {
-    "description": ""
+    "description": "recentSearches"
   },
   "popularTracks": "জনপ্রিয় ট্র্যাক",
   "@popularTracks": {
-    "description": ""
+    "description": "popularTracks"
   },
   "latestRelease": "সর্বশেষ প্রকাশ",
   "@latestRelease": {
-    "description": ""
+    "description": "latestRelease"
   },
   "follow": "চালিয়ে যান",
   "@follow": {
-    "description": ""
+    "description": "follow"
   },
   "following": "অনুসরণ করছে",
   "@following": {
-    "description": ""
+    "description": "following"
   },
   "listenNow": "এখন শুনুন",
   "@listenNow": {
-    "description": ""
+    "description": "listenNow"
   },
   "video": "ভিডিও",
   "@video": {
-    "description": ""
+    "description": "video"
   },
   "about": "সম্পর্কে",
   "@about": {
-    "description": ""
+    "description": "about"
   },
   "readMore": "আরও পড়ুন",
   "@readMore": {
-    "description": ""
+    "description": "readMore"
   },
   "speedAndPitch": "গতি এবং পিচ",
   "@speedAndPitch": {
-    "description": ""
+    "description": "speedAndPitch"
   },
   "playbackSpeed": "প্লেব্যাক গতি",
   "@playbackSpeed": {
-    "description": ""
+    "description": "playbackSpeed"
   },
   "songPitch": "গানের সুর",
   "@songPitch": {
-    "description": ""
+    "description": "songPitch"
   },
   "musicRecognition": "সঙ্গীত স্বীকৃতি",
   "@musicRecognition": {
-    "description": ""
+    "description": "musicRecognition"
   },
   "listeningToEnvironment": "পরিবেশের কথা শুনছি...",
   "@listeningToEnvironment": {
-    "description": ""
+    "description": "listeningToEnvironment"
   },
   "micInstruction": "আপনার মাইক্রোফোনের কাছে সঙ্গীত যথেষ্ট জোরে বাজছে তা নিশ্চিত করুন।",
   "@micInstruction": {
-    "description": ""
+    "description": "micInstruction"
   },
   "processingAudio": "অডিও প্রক্রিয়া করা হচ্ছে...",
   "@processingAudio": {
-    "description": ""
+    "description": "processingAudio"
   },
   "shazamSearching": "ম্যাচের জন্য Shazam ডাটাবেস অনুসন্ধান করা হচ্ছে...",
   "@shazamSearching": {
-    "description": ""
+    "description": "shazamSearching"
   },
   "songFound": "গান পাওয়া গেছে!",
   "@songFound": {
-    "description": ""
+    "description": "songFound"
   },
   "playNow": "এখন খেলুন",
   "@playNow": {
-    "description": ""
+    "description": "playNow"
   },
   "searchInLibrary": "লাইব্রেরিতে অনুসন্ধান করুন",
   "@searchInLibrary": {
-    "description": ""
+    "description": "searchInLibrary"
   },
   "noMatchesFound": "কোনো মিল নেই",
   "@noMatchesFound": {
-    "description": ""
+    "description": "noMatchesFound"
   },
   "noMatchInstruction": "রেকর্ড করা অডিওতে কোনো গান পাওয়া যায়নি",
   "@noMatchInstruction": {
-    "description": ""
+    "description": "noMatchInstruction"
   },
   "errorOccurred": "একটি ত্রুটি ঘটেছে",
   "@errorOccurred": {
-    "description": ""
+    "description": "errorOccurred"
   },
   "playingRecognizedTrack": "বাজানো:",
   "@playingRecognizedTrack": {
-    "description": ""
+    "description": "playingRecognizedTrack"
   },
   "errorPlayingTrack": "খেলার সময় ত্রুটি:",
   "@errorPlayingTrack": {
-    "description": ""
+    "description": "errorPlayingTrack"
   },
   "welcome_title": "আপনার সঙ্গীত, আপনার উপায়",
+  "@welcome_title": {
+    "description": "welcome_title"
+  },
   "welcome_subtitle": "এখন থেকে আপনি কীভাবে এস্ট্রেলা মিউজিক উপভোগ করতে চান তা বেছে নিন।",
+  "@welcome_subtitle": {
+    "description": "welcome_subtitle"
+  },
   "welcome_intro": "আমরা আমাদের প্ল্যাটফর্মকে আধুনিক করেছি। ম্যানুয়াল ব্যাকআপ আপলোড করার পুরানো সিস্টেম নিষ্ক্রিয় করা হয়েছে৷ আপনার সঙ্গীত লাইব্রেরি পরিচালনা করার জন্য আপনার কাছে এখন দুটি পরিষ্কার উপায় রয়েছে৷",
+  "@welcome_intro": {
+    "description": "welcome_intro"
+  },
   "recommend_cloud": "আমরা স্পটিফাই-এর মতো অভিজ্ঞতার জন্য ক্লাউড মোড সক্রিয় করার পরামর্শ দিই: আপনার সমস্ত ডিভাইসের মধ্যে রিয়েল-টাইম সিঙ্ক্রোনাইজেশন এবং আপনাকে কিছু না করেই স্বয়ংক্রিয় ব্যাকআপ।",
+  "@recommend_cloud": {
+    "description": "recommend_cloud"
+  },
   "swipe_prompt": "বিকল্পগুলি অন্বেষণ করতে সোয়াইপ করুন ➔৷",
+  "@swipe_prompt": {
+    "description": "swipe_prompt"
+  },
   "local_title": "স্থানীয় মোড",
+  "@local_title": {
+    "description": "local_title"
+  },
   "local_subtitle": "আপনার ডিভাইসে সম্পূর্ণ গোপনীয়তা",
+  "@local_subtitle": {
+    "description": "local_subtitle"
+  },
   "local_b1": "এটি লগ ইন করার প্রয়োজন ছাড়াই কাজ করে।",
+  "@local_b1": {
+    "description": "local_b1"
+  },
   "local_b2": "আপনার সম্পূর্ণ লাইব্রেরি এই কম্পিউটারে কঠোরভাবে থাকে।",
+  "@local_b2": {
+    "description": "local_b2"
+  },
   "local_b3": "দ্রষ্টব্য: কোনো ম্যানুয়াল ক্লাউড ব্যাকআপ নেই। আপনি যদি আপনার ডিভাইসটি হারিয়ে ফেলেন বা অ্যাপটি আনইনস্টল করেন তবে আপনার ডেটা পুনরুদ্ধার করা যাবে না।",
+  "@local_b3": {
+    "description": "local_b3"
+  },
   "local_btn": "শুধুমাত্র এই ডিভাইসে ব্যবহার করুন",
+  "@local_btn": {
+    "description": "local_btn"
+  },
   "cloud_title": "ক্লাউড মোড (প্রস্তাবিত)",
+  "@cloud_title": {
+    "description": "cloud_title"
+  },
   "cloud_subtitle": "জস রেডের সাথে রিয়েল-টাইম সিঙ্ক্রোনাইজেশন",
+  "@cloud_subtitle": {
+    "description": "cloud_subtitle"
+  },
   "cloud_b1": "আপনার জস রেড অ্যাকাউন্ট ব্যবহার করে নিরাপদে লগ ইন করুন।",
+  "@cloud_b1": {
+    "description": "cloud_b1"
+  },
   "cloud_b2": "যেকোনো ডিভাইস (উইন্ডোজ, অ্যান্ড্রয়েড, ইত্যাদি) থেকে তাৎক্ষণিকভাবে আপনার প্লেলিস্ট, ফেভারিট এবং ইতিহাস অ্যাক্সেস করুন।",
+  "@cloud_b2": {
+    "description": "cloud_b2"
+  },
   "cloud_b3": "স্মার্ট সিঙ্ক: অফলাইনে কাজ করুন এবং আপনি ইন্টারনেট পুনরুদ্ধার করলে স্বয়ংক্রিয়ভাবে পরিবর্তনগুলি আপলোড করুন।",
+  "@cloud_b3": {
+    "description": "cloud_b3"
+  },
   "cloud_btn": "ক্লাউড সিঙ্ক সক্রিয় করুন",
+  "@cloud_btn": {
+    "description": "cloud_btn"
+  },
   "slide_indicator": "৩টির ​​মধ্যে {current} ধাপ",
+  "@slide_indicator": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      }
+    },
+    "description": "slide_indicator"
+  },
   "news_card_title": "Estrella সঙ্গীত বিকশিত হয়েছে!",
+  "@news_card_title": {
+    "description": "news_card_title"
+  },
   "news_card_subtitle": "জস রেডের সাথে 100% সিঙ্ক্রোনাইজেশন, বন্ধুদের সাথে প্লেলিস্ট এবং আরও অনেক কিছু। নতুন কি তা দেখতে আলতো চাপুন৷",
+  "@news_card_subtitle": {
+    "description": "news_card_subtitle"
+  },
   "news_dialog_title": "এস্ট্রেলা মিউজিক নিউজ",
+  "@news_dialog_title": {
+    "description": "news_dialog_title"
+  },
   "news_item_sync_title": "জস রেডের সাথে সম্পূর্ণ ইন্টিগ্রেশন",
+  "@news_item_sync_title": {
+    "description": "news_item_sync_title"
+  },
   "news_item_sync_desc": "আপনার প্লেলিস্ট এবং পছন্দগুলি এখন আপনার প্রধান জস রেড অ্যাকাউন্টের সাথে স্বয়ংক্রিয়ভাবে ক্লাউডে সংরক্ষিত এবং সিঙ্ক করা হয়েছে।",
+  "@news_item_sync_desc": {
+    "description": "news_item_sync_desc"
+  },
   "news_item_collab_title": "সহযোগী প্লেলিস্ট",
+  "@news_item_collab_title": {
+    "description": "news_item_collab_title"
+  },
   "news_item_collab_desc": "আপনার বন্ধুদের সাথে প্লেলিস্ট তৈরি করুন! একটি প্লেলিস্ট তৈরি করার সময়, সহযোগী চেকবক্স নির্বাচন করুন এবং একসাথে সম্পাদনা করতে আপনার বন্ধুদের চয়ন করুন৷",
+  "@news_item_collab_desc": {
+    "description": "news_item_collab_desc"
+  },
   "news_item_trans_title": "স্বচ্ছ সিঙ্ক্রোনাইজেশন",
+  "@news_item_trans_title": {
+    "description": "news_item_trans_title"
+  },
   "news_item_trans_desc": "আপনাকে আর ম্যানুয়াল সিঙ্ক বোতামে ক্লিক করতে হবে না; নতুন মোটর স্বয়ংক্রিয়ভাবে উপরে এবং নিচে নামার জন্য দায়ী।",
+  "@news_item_trans_desc": {
+    "description": "news_item_trans_desc"
+  },
   "news_dialog_section_friends": "বন্ধু এবং অ্যাকাউন্ট ব্যবস্থাপনা:",
+  "@news_dialog_section_friends": {
+    "description": "news_dialog_section_friends"
+  },
   "news_dialog_friends_desc": "বন্ধুদের যোগ করতে, অনুরোধ গ্রহণ করতে বা আপনার নিরাপত্তা প্রোফাইল পরিচালনা করতে, অনুগ্রহ করে এর অফিসিয়াল প্ল্যাটফর্মে জস রেড ব্যবহার করুন:",
+  "@news_dialog_friends_desc": {
+    "description": "news_dialog_friends_desc"
+  },
   "news_btn_app": "জস রেড অ্যাপ (প্লে স্টোর)",
+  "@news_btn_app": {
+    "description": "news_btn_app"
+  },
   "news_btn_web": "জস রেড ওয়েব",
+  "@news_btn_web": {
+    "description": "news_btn_web"
+  },
   "news_btn_dismiss": "বোঝা গেল",
+  "@news_btn_dismiss": {
+    "description": "news_btn_dismiss"
+  },
   "settings_appearance_desc": "থিম, ভাষা এবং ইন্টারফেস অ্যানিমেশন।",
+  "@settings_appearance_desc": {
+    "description": "settings_appearance_desc"
+  },
   "settings_content_desc": "ফিল্টার, পাইপড এবং ক্যাশেগুলির সাথে একীকরণ আবিষ্কার করুন।",
+  "@settings_content_desc": {
+    "description": "settings_content_desc"
+  },
   "settings_playback_desc": "স্ট্রিমিং গুণমান, স্বাভাবিককরণ, নীরবতা এবং ব্যাটারি।",
+  "@settings_playback_desc": {
+    "description": "settings_playback_desc"
+  },
   "settings_downloads_desc": "ডাউনলোড এবং স্টোরেজ",
+  "@settings_downloads_desc": {
+    "description": "settings_downloads_desc"
+  },
   "settings_downloads_sub": "অডিও ফরম্যাট, ফোল্ডার এবং স্বয়ংক্রিয় ডাউনলোড।",
+  "@settings_downloads_sub": {
+    "description": "settings_downloads_sub"
+  },
   "settings_account_desc": "অ্যাকাউন্ট এবং সিঙ্ক",
+  "@settings_account_desc": {
+    "description": "settings_account_desc"
+  },
   "settings_account_sub": "ক্লাউড মোড, ব্যাকআপ, বন্ধুদের তালিকা এবং মাইগ্রেশন।",
+  "@settings_account_sub": {
+    "description": "settings_account_sub"
+  },
   "settings_about_desc": "এস্ট্রেলা মিউজিক সম্পর্কে",
+  "@settings_about_desc": {
+    "description": "settings_about_desc"
+  },
   "settings_about_sub": "সংস্করণ, ওপেন সোর্স প্রকল্প এবং গিটহাব।",
+  "@settings_about_sub": {
+    "description": "settings_about_sub"
+  },
   "settings_local_cloud_title": "স্থানীয় মোড / ইমিউজিক ক্লাউড",
+  "@settings_local_cloud_title": {
+    "description": "settings_local_cloud_title"
+  },
   "settings_local_cloud_desc": "Joss Red এর সাথে সিঙ্ক্রোনাইজেশন স্থিতি চয়ন করুন, স্থানান্তর করুন বা পর্যালোচনা করুন৷",
+  "@settings_local_cloud_desc": {
+    "description": "settings_local_cloud_desc"
+  },
   "settings_my_friends": "আমার বন্ধুরা",
+  "@settings_my_friends": {
+    "description": "settings_my_friends"
+  },
   "settings_my_friends_desc": "আপনার জস রেড বন্ধুদের সরাসরি পরিচালনা করুন।",
+  "@settings_my_friends_desc": {
+    "description": "settings_my_friends_desc"
+  },
   "settings_refresh_visitor_title": "রিফ্রেশ আইডি (ভিজিটর আইডি)",
+  "@settings_refresh_visitor_title": {
+    "description": "settings_refresh_visitor_title"
+  },
   "settings_refresh_visitor_desc": "ডিসকভার কন্টেন্ট লোড না হলে আপনার YouTube মিউজিক আইডি আবার জেনারেট করুন।",
+  "@settings_refresh_visitor_desc": {
+    "description": "settings_refresh_visitor_desc"
+  },
   "settings_visitor_updated": "আপডেট করা শনাক্তকারী",
+  "@settings_visitor_updated": {
+    "description": "settings_visitor_updated"
+  },
   "settings_visitor_updated_desc": "একটি নতুন ভিজিটর আইডি সফলভাবে তৈরি হয়েছে৷",
+  "@settings_visitor_updated_desc": {
+    "description": "settings_visitor_updated_desc"
+  },
   "settings_visitor_error": "ভুল",
+  "@settings_visitor_error": {
+    "description": "settings_visitor_error"
+  },
   "settings_visitor_error_desc": "একটি নতুন শনাক্তকারী তৈরি করা যায়নি৷ পরে আবার চেষ্টা করুন.",
+  "@settings_visitor_error_desc": {
+    "description": "settings_visitor_error_desc"
+  },
   "settings_visitor_exception": "Ocurrió un error al regenerar: {error}",
+  "@settings_visitor_exception": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    },
+    "description": "settings_visitor_exception"
+  },
   "migratedLibrary": "স্থানান্তরিত লাইব্রেরি",
+  "@migratedLibrary": {
+    "description": "migratedLibrary"
+  },
   "noSongsInCollection": "এই সংগ্রহে কোন গান নেই",
+  "@noSongsInCollection": {
+    "description": "noSongsInCollection"
+  },
   "startupScreen": "স্টার্টআপে খুলুন",
+  "@startupScreen": {
+    "description": "startupScreen"
+  },
   "startupScreenDescription": "Estrella Music যে বিভাগটি প্রথমে খোলে সেটি বেছে নিন",
+  "@startupScreenDescription": {
+    "description": "startupScreenDescription"
+  },
   "friends": "বন্ধুরা",
+  "@friends": {
+    "description": "friends"
+  },
   "dailyDiscover": "প্রতিদিনের আবিষ্কার",
+  "@dailyDiscover": {
+    "description": "dailyDiscover"
+  },
   "keepListening": "শুনতে থাকুন",
+  "@keepListening": {
+    "description": "keepListening"
+  },
   "similarToTitle": "{title} এর মত",
+  "@similarToTitle": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    },
+    "description": "similarToTitle"
+  },
   "pipedPlaylistDescription": "পাইপ প্লেলিস্ট",
+  "@pipedPlaylistDescription": {
+    "description": "pipedPlaylistDescription"
+  },
   "collaborativePlaylistDescription": "সহযোগী প্লেলিস্ট",
+  "@collaborativePlaylistDescription": {
+    "description": "collaborativePlaylistDescription"
+  },
   "libraryPlaylistDescription": "লাইব্রেরি প্লেলিস্ট",
+  "@libraryPlaylistDescription": {
+    "description": "libraryPlaylistDescription"
+  },
   "untitledSong": "শিরোনামহীন গান",
+  "@untitledSong": {
+    "description": "untitledSong"
+  },
   "migratedPlaylist": "স্থানান্তরিত প্লেলিস্ট",
+  "@migratedPlaylist": {
+    "description": "migratedPlaylist"
+  },
   "migratedAlbum": "স্থানান্তরিত অ্যালবাম",
+  "@migratedAlbum": {
+    "description": "migratedAlbum"
+  },
   "songsImportedFromJossMusic": "জস মিউজিক কোটলিন থেকে আমদানি করা গান",
+  "@songsImportedFromJossMusic": {
+    "description": "songsImportedFromJossMusic"
+  },
   "importedFromJossMusic": "জস মিউজিক কোটলিন থেকে আমদানি করা",
+  "@importedFromJossMusic": {
+    "description": "importedFromJossMusic"
+  },
   "syncLocalModeActive": "স্থানীয় মোড সক্রিয়",
+  "@syncLocalModeActive": {
+    "description": "syncLocalModeActive"
+  },
   "syncCloudPending": "ক্লাউড মোড সক্রিয়। মুলতুবি সিঙ্ক।",
+  "@syncCloudPending": {
+    "description": "syncCloudPending"
+  },
   "syncCloudDownloadingExisting": "ক্লাউড মোড সক্রিয় করা হয়েছে। বিদ্যমান লাইব্রেরি ডাউনলোড করা হচ্ছে।",
+  "@syncCloudDownloadingExisting": {
+    "description": "syncCloudDownloadingExisting"
+  },
   "syncCloudMigrationComplete": "ক্লাউড মোড সক্রিয় করা হয়েছে। স্থানান্তরিত লাইব্রেরি।",
+  "@syncCloudMigrationComplete": {
+    "description": "syncCloudMigrationComplete"
+  },
   "syncLocalDeviceOnly": "আপনার ডেটা শুধুমাত্র এই ডিভাইসে রাখা হয়।",
+  "@syncLocalDeviceOnly": {
+    "description": "syncLocalDeviceOnly"
+  },
   "syncDownloading": "ইমিউজিক পরিবর্তনগুলি ডাউনলোড করা হচ্ছে...",
+  "@syncDownloading": {
+    "description": "syncDownloading"
+  },
   "syncDownloadFailed": "সিঙ্ক ডাউনলোড করতে ব্যর্থ হয়েছে৷",
+  "@syncDownloadFailed": {
+    "description": "syncDownloadFailed"
+  },
   "syncLocalChangesFirst": "নতুন স্থানীয় পরিবর্তন আছে. ডাউনলোড করার আগে সেগুলো আপলোড করা হবে।",
+  "@syncLocalChangesFirst": {
+    "description": "syncLocalChangesFirst"
+  },
   "syncLibrarySynced": "সিঙ্ক্রোনাইজড লাইব্রেরি।",
+  "@syncLibrarySynced": {
+    "description": "syncLibrarySynced"
+  },
   "syncOfflinePending": "অফলাইন। পরিবর্তন মুলতুবি আছে.",
+  "@syncOfflinePending": {
+    "description": "syncOfflinePending"
+  },
   "syncLibraryUpToDate": "লাইব্রেরি আপ টু ডেট।",
+  "@syncLibraryUpToDate": {
+    "description": "syncLibraryUpToDate"
+  },
   "syncChangesSynced": "{count} সিঙ্ক্রোনাইজ করা পরিবর্তন।",
+  "@syncChangesSynced": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    },
+    "description": "syncChangesSynced"
+  },
   "syncUploading": "ইমিউজিক-এ পরিবর্তন আপলোড করা হচ্ছে...",
+  "@syncUploading": {
+    "description": "syncUploading"
+  },
   "syncUploadSuccessWs": "পরিবর্তনগুলি সফলভাবে আপলোড হয়েছে (WS)।",
+  "@syncUploadSuccessWs": {
+    "description": "syncUploadSuccessWs"
+  },
   "syncUploadWsRetry": "WS ব্যবহার করে আপলোড করা যায়নি। এটা পরে আবার চেষ্টা করা হবে.",
+  "@syncUploadWsRetry": {
+    "description": "syncUploadWsRetry"
+  },
   "syncUploadSuccess": "পরিবর্তন সঠিকভাবে আপলোড করা হয়েছে.",
+  "@syncUploadSuccess": {
+    "description": "syncUploadSuccess"
+  },
   "syncUploadRetry": "উঠতে পারলেন না। এটা পরে আবার চেষ্টা করা হবে.",
+  "@syncUploadRetry": {
+    "description": "syncUploadRetry"
+  },
   "syncOfflineRetry": "অফলাইন। পরিবর্তনগুলি পুনরায় চেষ্টা করার জন্য সংরক্ষণ করা হয়েছে৷",
+  "@syncOfflineRetry": {
+    "description": "syncOfflineRetry"
+  },
   "syncUnconfirmedRetry": "ইমিউজিক সব পরিবর্তন নিশ্চিত করেনি। তাদের আবার চেষ্টা করা হবে।",
+  "@syncUnconfirmedRetry": {
+    "description": "syncUnconfirmedRetry"
+  },
   "syncChangesConfirmed": "{count} পরিবর্তনগুলি প্রতিশ্রুতিবদ্ধ৷",
+  "@syncChangesConfirmed": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    },
+    "description": "syncChangesConfirmed"
+  },
   "migrationAlreadyRunning": "ইতিমধ্যেই একটি স্থানান্তর প্রক্রিয়া চলছে৷",
+  "@migrationAlreadyRunning": {
+    "description": "migrationAlreadyRunning"
+  },
   "migrationLoginRequired": "মাইগ্রেট করার আগে Joss Red এ লগ ইন করুন।",
+  "@migrationLoginRequired": {
+    "description": "migrationLoginRequired"
+  },
   "migrationCheckingCloud": "ইমিউজিক ক্লাউডের ইতিমধ্যে একটি লাইব্রেরি আছে কিনা তা পরীক্ষা করা হচ্ছে...",
+  "@migrationCheckingCloud": {
+    "description": "migrationCheckingCloud"
+  },
   "cloudLibraryFoundDeviceWillDownload": "একটি ক্লাউড লাইব্রেরি পাওয়া গেছে। এই ডিভাইসটি ওভাররাইট না করেই এটি ডাউনলোড করবে।",
+  "@cloudLibraryFoundDeviceWillDownload": {
+    "description": "cloudLibraryFoundDeviceWillDownload"
+  },
   "cloudLibraryFound": "ক্লাউড লাইব্রেরি পাওয়া গেছে।",
+  "@cloudLibraryFound": {
+    "description": "cloudLibraryFound"
+  },
   "migrationCreatingBackup": "ক্লাউড সংযোগ করার আগে একটি স্থানীয় ব্যাকআপ তৈরি করা হচ্ছে...",
+  "@migrationCreatingBackup": {
+    "description": "migrationCreatingBackup"
+  },
   "migrationAnalyzingLocal": "স্থানীয় লাইব্রেরি বিশ্লেষণ করা হচ্ছে...",
+  "@migrationAnalyzingLocal": {
+    "description": "migrationAnalyzingLocal"
+  },
   "migrationPreparingCloud": "ইমিউজিক ক্লাউডে মাইগ্রেশনের প্রস্তুতি চলছে...",
+  "@migrationPreparingCloud": {
+    "description": "migrationPreparingCloud"
+  },
   "migrationStartFailed": "EMusic ক্লাউড মাইগ্রেশন শুরু করতে পারেনি৷",
+  "@migrationStartFailed": {
+    "description": "migrationStartFailed"
+  },
   "migrationUploadingData": "প্লেলিস্ট, পছন্দ এবং ইতিহাস আপলোড করা হচ্ছে...",
+  "@migrationUploadingData": {
+    "description": "migrationUploadingData"
+  },
   "migrationUploadIncomplete": "সব তথ্য আপলোড করা যাবে না. আমরা আপনার স্থানীয় সমর্থন রাখি।",
+  "@migrationUploadIncomplete": {
+    "description": "migrationUploadIncomplete"
+  },
   "migrationVerifyingIntegrity": "ইমিউজিক ক্লাউডে অখণ্ডতা যাচাই করা হচ্ছে...",
+  "@migrationVerifyingIntegrity": {
+    "description": "migrationVerifyingIntegrity"
+  },
   "migrationValidationFailed": "EMusic ক্লাউড মাইগ্রেশন যাচাই করতে পারেনি৷",
+  "@migrationValidationFailed": {
+    "description": "migrationValidationFailed"
+  },
   "cloudModeReadyOfflineCache": "ক্লাউড মোড প্রস্তুত। এই ডিভাইসটি অফলাইন ক্যাশে হিসেবে কাজ করবে।",
+  "@cloudModeReadyOfflineCache": {
+    "description": "cloudModeReadyOfflineCache"
+  },
   "migrationCompleted": "মাইগ্রেশন সম্পন্ন হয়েছে।",
+  "@migrationCompleted": {
+    "description": "migrationCompleted"
+  },
   "migrationFailedLocalPreserved": "মাইগ্রেশন ব্যর্থ হয়েছে। আপনার স্থানীয় তথ্য পরিবর্তন করা হয়নি.",
+  "@migrationFailedLocalPreserved": {
+    "description": "migrationFailedLocalPreserved"
+  },
   "sessionExpiredLoginAgain": "আপনার সেশনের মেয়াদ শেষ হয়ে গেছে। আবার সাইন ইন করুন.",
+  "@sessionExpiredLoginAgain": {
+    "description": "sessionExpiredLoginAgain"
+  },
   "selectedFileNotFound": "নির্বাচিত ফাইল পাওয়া যায়নি.",
+  "@selectedFileNotFound": {
+    "description": "selectedFileNotFound"
+  },
   "genericAlbum": "অ্যালবাম",
+  "@genericAlbum": {
+    "description": "genericAlbum"
+  },
   "friendsLoginRequired": "বন্ধুদের খুঁজে পেতে সাইন ইন করুন.",
+  "@friendsLoginRequired": {
+    "description": "friendsLoginRequired"
+  },
   "invalidSessionToken": "সেশনে একটি বৈধ টোকেন নেই।",
+  "@invalidSessionToken": {
+    "description": "invalidSessionToken"
+  },
   "userSearchFailed": "ব্যবহারকারীদের জন্য অনুসন্ধান করা যায়নি ({statusCode})।",
+  "@userSearchFailed": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    },
+    "description": "userSearchFailed"
+  },
   "invalidServerResponse": "অবৈধ সার্ভার প্রতিক্রিয়া.",
+  "@invalidServerResponse": {
+    "description": "invalidServerResponse"
+  },
   "userListMissing": "প্রতিক্রিয়া ব্যবহারকারীদের একটি তালিকা ধারণ করে না.",
+  "@userListMissing": {
+    "description": "userListMissing"
+  },
   "playlistCollaboratorsTitle": "প্লেলিস্ট অবদানকারীরা",
+  "@playlistCollaboratorsTitle": {
+    "description": "playlistCollaboratorsTitle"
+  },
   "collaboratorsInstruction": "এই প্লেলিস্টটি দেখতে এবং সম্পাদনা করতে সক্ষম এমন বন্ধুদের নির্বাচন করুন:",
+  "@collaboratorsInstruction": {
+    "description": "collaboratorsInstruction"
+  },
   "noJossRedFriends": "Joss Red এ আপনার কোন বন্ধু নেই।",
+  "@noJossRedFriends": {
+    "description": "noJossRedFriends"
+  },
   "friendFallback": "বন্ধু",
+  "@friendFallback": {
+    "description": "friendFallback"
+  },
   "collaboratorsUpdated": "সহযোগীদের সঠিকভাবে আপডেট করা হয়েছে.",
+  "@collaboratorsUpdated": {
+    "description": "collaboratorsUpdated"
+  },
   "save": "রাখা",
+  "@save": {
+    "description": "save"
+  },
   "manageCollaborators": "সহযোগীদের পরিচালনা করুন (বন্ধু)",
+  "@manageCollaborators": {
+    "description": "manageCollaborators"
+  },
   "done": "প্রস্তুত",
+  "@done": {
+    "description": "done"
+  },
   "notAuthenticated": "প্রমাণিত নয়",
+  "@notAuthenticated": {
+    "description": "notAuthenticated"
+  },
   "genericError": "ভুল",
+  "@genericError": {
+    "description": "genericError"
+  },
   "friendRequestSent": "বন্ধুর অনুরোধ পাঠানো হয়েছে",
+  "@friendRequestSent": {
+    "description": "friendRequestSent"
+  },
   "friendRequestAccepted": "বন্ধুর অনুরোধ গৃহীত হয়েছে",
+  "@friendRequestAccepted": {
+    "description": "friendRequestAccepted"
+  },
   "friendshipRemoved": "বন্ধুত্ব মুছে গেছে",
+  "@friendshipRemoved": {
+    "description": "friendshipRemoved"
+  },
   "userBlocked": "অবরুদ্ধ ব্যবহারকারী",
+  "@userBlocked": {
+    "description": "userBlocked"
+  },
   "userUnblocked": "আনলক করা ব্যবহারকারী",
+  "@userUnblocked": {
+    "description": "userUnblocked"
+  },
   "artistsByTaste": "আপনার রুচি অনুযায়ী",
+  "@artistsByTaste": {
+    "description": "artistsByTaste"
+  },
   "followedArtists": "অনুসরণ",
+  "@followedArtists": {
+    "description": "followedArtists"
+  },
   "recommendedArtists": "প্রস্তাবিত",
+  "@recommendedArtists": {
+    "description": "recommendedArtists"
+  },
   "albumsByTaste": "আপনার রুচি অনুযায়ী",
+  "@albumsByTaste": {
+    "description": "albumsByTaste"
+  },
   "savedAlbums": "সংরক্ষিত",
+  "@savedAlbums": {
+    "description": "savedAlbums"
+  },
   "recommendedAlbums": "প্রস্তাবিত",
+  "@recommendedAlbums": {
+    "description": "recommendedAlbums"
+  },
   "downloadNotificationChannelName": "সঙ্গীত ডাউনলোড",
+  "@downloadNotificationChannelName": {
+    "description": "downloadNotificationChannelName"
+  },
   "downloadNotificationChannelDescription": "পটভূমিতে আপনার সঙ্গীত ডাউনলোড সক্রিয় রাখে।",
+  "@downloadNotificationChannelDescription": {
+    "description": "downloadNotificationChannelDescription"
+  },
   "downloadNotificationTitle": "সঙ্গীত ডাউনলোড করা হচ্ছে",
+  "@downloadNotificationTitle": {
+    "description": "downloadNotificationTitle"
+  },
   "downloadNotificationPreparing": "আপনার ডাউনলোডগুলি প্রস্তুত করা হচ্ছে...",
+  "@downloadNotificationPreparing": {
+    "description": "downloadNotificationPreparing"
+  },
   "downloadNotificationSong": "ডাউনলোড হচ্ছে: {songTitle}",
+  "@downloadNotificationSong": {
+    "placeholders": {
+      "songTitle": {
+        "type": "String"
+      }
+    },
+    "description": "downloadNotificationSong"
+  },
   "syncCloudModeActive": "ক্লাউড মোড সক্রিয়",
+  "@syncCloudModeActive": {
+    "description": "syncCloudModeActive"
+  },
   "permissionsConsentTitle": "শুরু করার অনুমতি",
+  "@permissionsConsentTitle": {
+    "description": "permissionsConsentTitle"
+  },
   "permissionsConsentDescription": "আপনার সঙ্গীত পরিচালনা করতে এবং সমস্ত প্লেব্যাক বৈশিষ্ট্য অফার করতে Estrella Music-এর এই অনুমতিগুলির প্রয়োজন৷",
+  "@permissionsConsentDescription": {
+    "description": "permissionsConsentDescription"
+  },
   "permissionsStorageTitle": "সঙ্গীত এবং স্টোরেজ",
+  "@permissionsStorageTitle": {
+    "description": "permissionsStorageTitle"
+  },
   "permissionsStorageDescription": "এটি আপনাকে সঙ্গীত বাজাতে, ডাউনলোডগুলি সংরক্ষণ করতে, প্লেলিস্ট রপ্তানি করতে এবং আপডেটগুলি প্রস্তুত করতে দেয়৷",
+  "@permissionsStorageDescription": {
+    "description": "permissionsStorageDescription"
+  },
   "permissionsNotificationsTitle": "বিজ্ঞপ্তি",
+  "@permissionsNotificationsTitle": {
+    "description": "permissionsNotificationsTitle"
+  },
   "permissionsNotificationsDescription": "প্লেব্যাক নিয়ন্ত্রণ, ডাউনলোডের অগ্রগতি এবং গুরুত্বপূর্ণ অ্যাপ বিজ্ঞপ্তি দেখায়।",
+  "@permissionsNotificationsDescription": {
+    "description": "permissionsNotificationsDescription"
+  },
   "permissionsMicrophoneTitle": "মাইক্রোফোন",
+  "@permissionsMicrophoneTitle": {
+    "description": "permissionsMicrophoneTitle"
+  },
   "permissionsMicrophoneDescription": "এটি শুধুমাত্র তখনই ব্যবহৃত হয় যখন আপনি আপনার চারপাশে বাজছে এমন একটি গান সনাক্ত করতে চান৷",
+  "@permissionsMicrophoneDescription": {
+    "description": "permissionsMicrophoneDescription"
+  },
   "permissionsContinueButton": "প্রয়োজনীয় অনুমতি প্রদান করুন",
+  "@permissionsContinueButton": {
+    "description": "permissionsContinueButton"
+  },
   "permissionsRequiredNotice": "সব তিনটি পারমিট চালিয়ে যেতে হবে. আপনি সিস্টেম সেটিংসে পরে সেগুলি পরিবর্তন করতে পারেন৷",
+  "@permissionsRequiredNotice": {
+    "description": "permissionsRequiredNotice"
+  },
   "permissionsAllow": "অনুমতি দিন",
+  "@permissionsAllow": {
+    "description": "permissionsAllow"
+  },
   "permissionsOpenSettings": "সেটিংস",
+  "@permissionsOpenSettings": {
+    "description": "permissionsOpenSettings"
+  },
   "auth_2fa_title": "দ্বি-ফ্যাক্টর প্রমাণীকরণ",
+  "@auth_2fa_title": {
+    "description": "auth_2fa_title"
+  },
   "auth_2fa_subtitle": "আপনার প্রমাণীকরণকারী অ্যাপ থেকে 6-সংখ্যার কোড লিখুন। এই অ্যাক্সেসের মেয়াদ 5 মিনিটের মধ্যে শেষ হবে।",
+  "@auth_2fa_subtitle": {
+    "description": "auth_2fa_subtitle"
+  },
   "auth_2fa_code": "প্রমাণীকরণ কোড",
+  "@auth_2fa_code": {
+    "description": "auth_2fa_code"
+  },
   "auth_2fa_verify": "চেক করুন এবং চালিয়ে যান",
-  "auth_2fa_invalid": "একটি বৈধ 6-সংখ্যার কোড লিখুন বা আবার সাইন ইন করুন৷"
+  "@auth_2fa_verify": {
+    "description": "auth_2fa_verify"
+  },
+  "auth_2fa_invalid": "একটি বৈধ 6-সংখ্যার কোড লিখুন বা আবার সাইন ইন করুন৷",
+  "@auth_2fa_invalid": {
+    "description": "auth_2fa_invalid"
+  }
 }

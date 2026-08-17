@@ -1,277 +1,1099 @@
 {
   "@@locale": "eu",
   "songs": "Abestiak",
+  "@songs": {
+    "description": "songs"
+  },
   "playlists": "Erreprodukzio-zerrendak",
+  "@playlists": {
+    "description": "playlists"
+  },
   "albums": "Albumak",
+  "@albums": {
+    "description": "albums"
+  },
   "settings": "Ezarpenak",
+  "@settings": {
+    "description": "settings"
+  },
   "library": "Musikategia",
+  "@library": {
+    "description": "library"
+  },
   "libSongs": "Musikategiko abestiak",
+  "@libSongs": {
+    "description": "libSongs"
+  },
   "libPlaylists": "Musikategiko erreprodukzio-zerrendak",
+  "@libPlaylists": {
+    "description": "libPlaylists"
+  },
   "libArtists": "Musikategiko artistak",
+  "@libArtists": {
+    "description": "libArtists"
+  },
   "communityplaylists": "Erreprodukzio-zerrenda komunitarioa",
+  "@communityplaylists": {
+    "description": "communityplaylists"
+  },
   "featuredplaylists": "Nabarmendutako erreprodukzio-zerrendak",
+  "@featuredplaylists": {
+    "description": "featuredplaylists"
+  },
   "items": "gaiak",
+  "@items": {
+    "description": "items"
+  },
   "recentlyPlayed": "Berriki entzundakoak",
+  "@recentlyPlayed": {
+    "description": "recentlyPlayed"
+  },
   "favorites": "Gustukoenak",
+  "@favorites": {
+    "description": "favorites"
+  },
   "downloads": "Deskargak",
+  "@downloads": {
+    "description": "downloads"
+  },
   "emptyPlaylist": "Erreprodukzio-zerrenda hutsik da!",
+  "@emptyPlaylist": {
+    "description": "emptyPlaylist"
+  },
   "enqueueAll": "Guztiak ilarara gehitu",
+  "@enqueueAll": {
+    "description": "enqueueAll"
+  },
   "renamePlaylist": "Erreprodukzio-zerrenda berrizendatu",
+  "@renamePlaylist": {
+    "description": "renamePlaylist"
+  },
   "removePlaylist": "Erreprodukzio-zerrenda ezabatu",
+  "@removePlaylist": {
+    "description": "removePlaylist"
+  },
   "CreateNewPlaylist": "Erreprodukzio-zerrenda berria sortu",
+  "@CreateNewPlaylist": {
+    "description": "CreateNewPlaylist"
+  },
   "reArrangePlaylist": "Erreprodukzio-zerrenda berrantolatu",
+  "@reArrangePlaylist": {
+    "description": "reArrangePlaylist"
+  },
   "removeMultiple": "Hainbat abesti ezabatu",
+  "@removeMultiple": {
+    "description": "removeMultiple"
+  },
   "addMultipleSongs": "Abestiak erreprodukzio-zerrendara gehitu",
+  "@addMultipleSongs": {
+    "description": "addMultipleSongs"
+  },
   "create": "Sortu",
+  "@create": {
+    "description": "create"
+  },
   "rename": "Berrizendatu",
+  "@rename": {
+    "description": "rename"
+  },
   "createnAdd": "Sortu eta gehitu",
+  "@createnAdd": {
+    "description": "createnAdd"
+  },
   "noBookmarks": "Markagailurik ez!",
+  "@noBookmarks": {
+    "description": "noBookmarks"
+  },
   "startRadio": "Irratia abiatu",
+  "@startRadio": {
+    "description": "startRadio"
+  },
   "addToPlaylist": "Erreprodukzio-zerrendara gehitu",
+  "@addToPlaylist": {
+    "description": "addToPlaylist"
+  },
   "noLibPlaylist": "Ez duzu erreprodukzio-zerrendarik!",
+  "@noLibPlaylist": {
+    "description": "noLibPlaylist"
+  },
   "goToAlbum": "Albumera joan",
+  "@goToAlbum": {
+    "description": "goToAlbum"
+  },
   "viewArtist": "Artista ikusi",
+  "@viewArtist": {
+    "description": "viewArtist"
+  },
   "removeFromPlaylist": "Erreprodukzio-zerrendatik kendu",
+  "@removeFromPlaylist": {
+    "description": "removeFromPlaylist"
+  },
   "queuerearrangingDeniedMsg": "Ilara ezin da berrantolatu, ausazko modua aktibatuta dagoenean",
+  "@queuerearrangingDeniedMsg": {
+    "description": "queuerearrangingDeniedMsg"
+  },
   "songNotPlayable": "Abestia ezin da erreproduzitu, zerbitzariak dituen mugengatik!",
+  "@songNotPlayable": {
+    "description": "songNotPlayable"
+  },
   "upNext": "Jarraian",
+  "@upNext": {
+    "description": "upNext"
+  },
   "shuffleQueue": "Ilara nahastu",
+  "@shuffleQueue": {
+    "description": "shuffleQueue"
+  },
   "queueLoop": "Ilara buklean entzun",
+  "@queueLoop": {
+    "description": "queueLoop"
+  },
   "removeFromLib": "Abestien bildumatik kendu",
+  "@removeFromLib": {
+    "description": "removeFromLib"
+  },
   "sleepTimer": "Tenporizadorea",
+  "@sleepTimer": {
+    "description": "sleepTimer"
+  },
   "add5Minutes": "5 minutu gehitu",
+  "@add5Minutes": {
+    "description": "add5Minutes"
+  },
   "cancelTimer": "Tenporizadorea ezeztatu",
+  "@cancelTimer": {
+    "description": "cancelTimer"
+  },
   "minutes": "minutu",
+  "@minutes": {
+    "description": "minutes"
+  },
   "endOfThisSong": "Abestiaren bukaera",
+  "@endOfThisSong": {
+    "description": "endOfThisSong"
+  },
   "appInfo": "Aplikazioari buruzko informazioa",
+  "@appInfo": {
+    "description": "appInfo"
+  },
   "downloadError2": "Eskatutako abestia ezin da deskargatu zerbitzariaren murrizketa dela eta. Berriro saiatu",
+  "@downloadError2": {
+    "description": "downloadError2"
+  },
   "downloadError3": "Sareko akats baten ondorioz, deskargak huts egin du! Mesedez, saia zaitez berriro",
+  "@downloadError3": {
+    "description": "downloadError3"
+  },
   "musicAndPlayback": "Musika eta erreprodukzioa",
+  "@musicAndPlayback": {
+    "description": "musicAndPlayback"
+  },
   "personalisation": "Pertsonalizazioa",
+  "@personalisation": {
+    "description": "personalisation"
+  },
   "themeMode": "Gaiak",
+  "@themeMode": {
+    "description": "themeMode"
+  },
   "dynamic": "Dinamikoa",
+  "@dynamic": {
+    "description": "dynamic"
+  },
   "systemDefault": "Sistemak lehenetsitakoa",
+  "@systemDefault": {
+    "description": "systemDefault"
+  },
   "dark": "Iluna",
+  "@dark": {
+    "description": "dark"
+  },
   "light": "Argia",
+  "@light": {
+    "description": "light"
+  },
   "language": "Hizkuntza",
+  "@language": {
+    "description": "language"
+  },
   "standard": "Estandarra",
+  "@standard": {
+    "description": "standard"
+  },
   "gesture": "Keinuen bitartekoa",
+  "@gesture": {
+    "description": "gesture"
+  },
   "languageDes": "Aplikazioaren hizkuntza hautatu",
+  "@languageDes": {
+    "description": "languageDes"
+  },
   "setDiscoverContent": "Detekzio-edukia ezarri",
+  "@setDiscoverContent": {
+    "description": "setDiscoverContent"
+  },
   "quickpicks": "Hautaketa azkarrak",
+  "@quickpicks": {
+    "description": "quickpicks"
+  },
   "discover": "Deskubritu",
+  "@discover": {
+    "description": "discover"
+  },
   "trending": "Joerak",
+  "@trending": {
+    "description": "trending"
+  },
   "topmusicvideos": "Bideo musikal onenak",
+  "@topmusicvideos": {
+    "description": "topmusicvideos"
+  },
   "basedOnLast": "Azken interakzioan oinarritua",
+  "@basedOnLast": {
+    "description": "basedOnLast"
+  },
   "restoreLastPlaybackSession": "Azken erreprodukzio-saioa berrezarri",
+  "@restoreLastPlaybackSession": {
+    "description": "restoreLastPlaybackSession"
+  },
   "restoreLastPlaybackSessionDes": "Aplikazioaren hasieran, azken erreprodukzio-saioa automatikoki berrezarri",
+  "@restoreLastPlaybackSessionDes": {
+    "description": "restoreLastPlaybackSessionDes"
+  },
   "homeContentCount": "Orrialde nagusiaren edukiaren kontaketa",
+  "@homeContentCount": {
+    "description": "homeContentCount"
+  },
   "homeContentCountDes": "Hasierako pantailaren hasierako edukiaren zenbakia hautatu (gutxi gora-behera). Zenbat eta emaitza gutxiago, hainbat eta karga azkarragoa",
+  "@homeContentCountDes": {
+    "description": "homeContentCountDes"
+  },
   "enableBottomNav": "Barra nabigatzailearen botoia",
+  "@enableBottomNav": {
+    "description": "enableBottomNav"
+  },
   "enableBottomNavDes": "Barra nabigatzailearen botoira aldatu",
+  "@enableBottomNavDes": {
+    "description": "enableBottomNavDes"
+  },
   "cacheSongs": "Katxeatutako abestiak",
+  "@cacheSongs": {
+    "description": "cacheSongs"
+  },
   "cacheSongsDes": "Abestiak katxean biltegiratzearekin batera konexiorik gabe erreproduzitzeak, espazio gehigarria hartuko du zure gailuan",
+  "@cacheSongsDes": {
+    "description": "cacheSongsDes"
+  },
   "skipSilence": "Isiltasuna hautsi",
+  "@skipSilence": {
+    "description": "skipSilence"
+  },
   "skipSilenceDes": "Isiltasuna ez da musika erreproduzitzean izango",
+  "@skipSilenceDes": {
+    "description": "skipSilenceDes"
+  },
   "loudnessNormalization": "Sonoritatearen normalizazioa",
+  "@loudnessNormalization": {
+    "description": "loudnessNormalization"
+  },
   "streamingQuality": "Zuzenekoaren kalitatea",
+  "@streamingQuality": {
+    "description": "streamingQuality"
+  },
   "streamingQualityDes": "Zuzeneko musikaren kalitatea",
+  "@streamingQualityDes": {
+    "description": "streamingQualityDes"
+  },
   "disableTransitionAnimation": "Animazioak trantsizioetan kendu",
+  "@disableTransitionAnimation": {
+    "description": "disableTransitionAnimation"
+  },
   "enableSlidableActionDes": "Gaitu ekintza irristagarriak abestien fitxan",
+  "@enableSlidableActionDes": {
+    "description": "enableSlidableActionDes"
+  },
   "high": "Altua",
+  "@high": {
+    "description": "high"
+  },
   "low": "Baxua",
+  "@low": {
+    "description": "low"
+  },
   "backgroundPlay": "Atzealdeko musika erreproduzitu",
+  "@backgroundPlay": {
+    "description": "backgroundPlay"
+  },
   "cacheHomeScreenDataDes": "Gaitu hasierako pantailako edukiaren datuak cachean gordetzea. Hasierako pantaila berehala kargatuko da aukera hau gaituta badago",
+  "@cacheHomeScreenDataDes": {
+    "description": "cacheHomeScreenDataDes"
+  },
   "downloadingFormat": "Deskargatutako fitxategiaren formatua",
+  "@downloadingFormat": {
+    "description": "downloadingFormat"
+  },
   "downloadingFormatDes": "Hautatu deskargatzeko fitxategi-formatua. \"Opus\"-ek kalitate onena emango du",
+  "@downloadingFormatDes": {
+    "description": "downloadingFormatDes"
+  },
   "exportedFileLocation": "Deskargatutako fitxategiaren esportazioaren kokapena",
+  "@exportedFileLocation": {
+    "description": "exportedFileLocation"
+  },
   "export": "Esportatu",
+  "@export": {
+    "description": "export"
+  },
   "exporting": "Esportazioa gauzatzen...",
+  "@exporting": {
+    "description": "exporting"
+  },
   "scanning": "Eskaneatzea burutzen...",
+  "@scanning": {
+    "description": "scanning"
+  },
   "close": "Itxi",
+  "@close": {
+    "description": "close"
+  },
   "exportMsg": "Fitxategiak ongi esportatu dira",
+  "@exportMsg": {
+    "description": "exportMsg"
+  },
   "equalizer": "Ekualizadorea",
+  "@equalizer": {
+    "description": "equalizer"
+  },
   "equalizerDes": "Sistemaren ekualizadorea ireki",
+  "@equalizerDes": {
+    "description": "equalizerDes"
+  },
   "clearImgCache": "Irudien katxea garbitu",
+  "@clearImgCache": {
+    "description": "clearImgCache"
+  },
   "clearImgCacheDes": "Egin klik hemen katxean gordetako irudi txikiak/irudiak garbitzeko. (Ez da gomendagarria, katxeko irudien datuak freskatu nahi ez badira behintzat)",
+  "@clearImgCacheDes": {
+    "description": "clearImgCacheDes"
+  },
   "githubDes": "Kode iturria ikusi Github-en.\nProiektua gustukoa baduzu, ez ahaztu ⭐ ematea",
+  "@githubDes": {
+    "description": "githubDes"
+  },
   "by": "-(ren) eskutik",
+  "@by": {
+    "description": "by"
+  },
   "urlSearchDes": "Url-a detektatu da. Bertan klik egin, lotutako edukia ireki/erreproduzitzeko",
+  "@urlSearchDes": {
+    "description": "urlSearchDes"
+  },
   "search": "Bilatu",
+  "@search": {
+    "description": "search"
+  },
   "searchDes": "Abestiak, erreprodukzio-zerrenda, albuma edo artista",
+  "@searchDes": {
+    "description": "searchDes"
+  },
   "searchRes": "Bilaketaren emaitzak",
+  "@searchRes": {
+    "description": "searchRes"
+  },
   "for1": "-(r)entzat",
+  "@for1": {
+    "description": "for1"
+  },
   "videos": "Bideoak",
+  "@videos": {
+    "description": "videos"
+  },
   "songInfo": "Abestiari buruzko informazioa",
+  "@songInfo": {
+    "description": "songInfo"
+  },
   "audioCodec": "Audioaren kodekak",
+  "@audioCodec": {
+    "description": "audioCodec"
+  },
   "bitrate": "Bit jarioa",
+  "@bitrate": {
+    "description": "bitrate"
+  },
   "sleepTimeSetAlert": "Lo egiteko tenporizadorea ezarrita dago",
+  "@sleepTimeSetAlert": {
+    "description": "sleepTimeSetAlert"
+  },
   "radioNotAvailable": "Irratia ez dago eskuragarri artista honentzat!",
+  "@radioNotAvailable": {
+    "description": "radioNotAvailable"
+  },
   "songAlreadyExists": "Abestia existitzen da jada!",
+  "@songAlreadyExists": {
+    "description": "songAlreadyExists"
+  },
   "songAlreadyOfflineAlert": "Abestia dagoeneko konexiorik gabe katxean",
+  "@songAlreadyOfflineAlert": {
+    "description": "songAlreadyOfflineAlert"
+  },
   "songEnqueueAlert": "Abestia ilaran jarrita!",
+  "@songEnqueueAlert": {
+    "description": "songEnqueueAlert"
+  },
   "pipedplstSyncAlert": "Kanalizatutako erreprodukzio-zerrenda sinkronizatuta!",
+  "@pipedplstSyncAlert": {
+    "description": "pipedplstSyncAlert"
+  },
   "playlistCreatedAlert": "Erreprodukzio-zerrenda sortua!",
+  "@playlistCreatedAlert": {
+    "description": "playlistCreatedAlert"
+  },
   "playlistBookmarkRemoveAlert": "Erreprodukzio-zerrendaren markagailua kendua!",
+  "@playlistBookmarkRemoveAlert": {
+    "description": "playlistBookmarkRemoveAlert"
+  },
   "newVersionAvailable": "Bertsio berria eskuragarri dago!",
+  "@newVersionAvailable": {
+    "description": "newVersionAvailable"
+  },
   "dontShowInfoAgain": "Ez ezazu informazio hau berriro erakutsi",
+  "@dontShowInfoAgain": {
+    "description": "dontShowInfoAgain"
+  },
   "notaSongVideo": "Ez dago abesti/musika-bideorik!",
+  "@notaSongVideo": {
+    "description": "notaSongVideo"
+  },
   "hintApiUrl": "API URL kanalizatutako instantziara",
+  "@hintApiUrl": {
+    "description": "hintApiUrl"
+  },
   "customIns": "Instantzia lehenetsia",
+  "@customIns": {
+    "description": "customIns"
+  },
   "customInsSelectMsg": "Instantzia lehenetsia hautatu, mesedez",
+  "@customInsSelectMsg": {
+    "description": "customInsSelectMsg"
+  },
   "selectAuthInsMsg": "Mesedez, hautatu autentifikazio instantzia!",
+  "@selectAuthInsMsg": {
+    "description": "selectAuthInsMsg"
+  },
   "selectAuthIns": "Hautatu autentifikaziorako instantzia",
+  "@selectAuthIns": {
+    "description": "selectAuthIns"
+  },
   "resetblacklistedplaylistDes": "Berrezarri kanalizatutako zerrenda beltzeko zerrenda guztiak",
+  "@resetblacklistedplaylistDes": {
+    "description": "resetblacklistedplaylistDes"
+  },
   "stopMusicOnTaskClear": "Gelditu musika zereginen garbiketa burutzerakoan",
+  "@stopMusicOnTaskClear": {
+    "description": "stopMusicOnTaskClear"
+  },
   "stopMusicOnTaskClearDes": "Musika-erreprodukzioa geldituko da aplikazioa zeregin-kudeatzailetik urruntzen denean",
+  "@stopMusicOnTaskClearDes": {
+    "description": "stopMusicOnTaskClearDes"
+  },
   "backupAppData": "Aplikazioaren datuen babeskopia egin",
+  "@backupAppData": {
+    "description": "backupAppData"
+  },
   "androidBackupWarning": "Ez da probatu: 60 fitxategi baino gehiago deskargatu ondoren kontrol-laukia hautatzen baduzu, prozesuak memoria kopuru handia kontsumi dezake eta telefonoa edo aplikazioa huts egin dezake. Jarrai ezazu zure ardurapean.",
+  "@androidBackupWarning": {
+    "description": "androidBackupWarning"
+  },
   "letsStrart": "Has gaitezen...",
+  "@letsStrart": {
+    "description": "letsStrart"
+  },
   "restoreSettingsAndPlaylistsDes": "Babeskopia fitxategi batetik ezarpen guztiak, saioa hasteko datuak eta erreprodukzio-zerrendak leheneratzen ditu. Uneko datu guztiak gainidazten ditu",
+  "@restoreSettingsAndPlaylistsDes": {
+    "description": "restoreSettingsAndPlaylistsDes"
+  },
   "restoreMsg": "Ongi berrezarri da!\nAldaketak aplikatuko dira berrabiarazi ondoren",
+  "@restoreMsg": {
+    "description": "restoreMsg"
+  },
   "restore": "Berreskuratu",
+  "@restore": {
+    "description": "restore"
+  },
   "closeApp": "Aplikazioa itxi",
+  "@closeApp": {
+    "description": "closeApp"
+  },
   "home": "Menu Nagusia",
+  "@home": {
+    "description": "home"
+  },
   "singles": "Single-ak",
+  "@singles": {
+    "description": "singles"
+  },
   "artists": "Artistak",
+  "@artists": {
+    "description": "artists"
+  },
   "networkError1": "Sareak arazoren bat du!",
+  "@networkError1": {
+    "description": "networkError1"
+  },
   "libAlbums": "Musikategiko albumak",
+  "@libAlbums": {
+    "description": "libAlbums"
+  },
   "retry": "Saiatu berriro!",
+  "@retry": {
+    "description": "retry"
+  },
   "noOfflineSong": "Ez dago lineaz kanpoko abestirik!",
+  "@noOfflineSong": {
+    "description": "noOfflineSong"
+  },
   "cachedOrOffline": "Konexiorik gabe",
+  "@cachedOrOffline": {
+    "description": "cachedOrOffline"
+  },
   "openIn": "Ireki hemen",
+  "@openIn": {
+    "description": "openIn"
+  },
   "cancel": "Ezeztatu",
+  "@cancel": {
+    "description": "cancel"
+  },
   "enqueueSong": "Abesti hau ilaran ezarri",
+  "@enqueueSong": {
+    "description": "enqueueSong"
+  },
   "playNext": "Hurrengoa jo",
+  "@playNext": {
+    "description": "playNext"
+  },
   "shareSong": "Abestia partekatu",
+  "@shareSong": {
+    "description": "shareSong"
+  },
   "removeFromQueue": "Ilaratik kendu",
+  "@removeFromQueue": {
+    "description": "removeFromQueue"
+  },
   "queueShufflingDeniedMsg": "Ilara ezin da nahastu, ausazko modua aktibatuta dagoenean",
+  "@queueShufflingDeniedMsg": {
+    "description": "queueShufflingDeniedMsg"
+  },
   "playnextMsg": "Jarraian entzungai",
+  "@playnextMsg": {
+    "description": "playnextMsg"
+  },
   "queueLoopNotDisMsg1": "Ilara buklean entzuteko modua ezin da desaktibatu, ausazko modua aktibatuta dagoenean.",
+  "@queueLoopNotDisMsg1": {
+    "description": "queueLoopNotDisMsg1"
+  },
   "queueLoopNotDisMsg2": "Ilara buklean entzuteko modua ezin da aktibatu, irrati modua aktibatuta dagoenean.",
+  "@queueLoopNotDisMsg2": {
+    "description": "queueLoopNotDisMsg2"
+  },
   "deleteDownloadData": "Deskargetatik kendu",
+  "@deleteDownloadData": {
+    "description": "deleteDownloadData"
+  },
   "autoDownFavSong": "Abesti gustukoenak automatikoki deskargatu",
+  "@autoDownFavSong": {
+    "description": "autoDownFavSong"
+  },
   "download": "Deskargatu",
+  "@download": {
+    "description": "download"
+  },
   "content": "Edukia",
+  "@content": {
+    "description": "content"
+  },
   "playerUi": "Erreproduzitzailearen erabiltzaile-interfazea",
+  "@playerUi": {
+    "description": "playerUi"
+  },
   "playerUiDes": "Erreproduzitzailearen erabiltzaile-interfazea hautatu",
+  "@playerUiDes": {
+    "description": "playerUiDes"
+  },
   "exportDowloadedFilesDes": "Egin klik hemen deskargatutako fitxategia aplikazioaren barne direktoriotik kanpoko direktoriora esportatzeko",
+  "@exportDowloadedFilesDes": {
+    "description": "exportDowloadedFilesDes"
+  },
   "downFilesFound": "Deskargatutako fitxategiak aurkitu dira",
+  "@downFilesFound": {
+    "description": "downFilesFound"
+  },
   "ignoreBatOpt": "Bateriaren optimizazioa alde batera utzi",
+  "@ignoreBatOpt": {
+    "description": "ignoreBatOpt"
+  },
   "loudnessNormalizationDes": "Abesti guztietarako distira bera ezartzen du (Esperimentala) (Ez du aurreko bertsioan deskargatutako abestietan lan egingo (< 1.10.0 bertsioa))",
+  "@loudnessNormalizationDes": {
+    "description": "loudnessNormalizationDes"
+  },
   "disableTransitionAnimationDes": "Gaitu aukera hau fitxaren trantsizio-animazioa desaktibatzeko",
+  "@disableTransitionAnimationDes": {
+    "description": "disableTransitionAnimationDes"
+  },
   "enableSlidableAction": "Gaitu ekintza irristagarriak",
+  "@enableSlidableAction": {
+    "description": "enableSlidableAction"
+  },
   "clearImgCacheAlert": "Irudien katxea ongi garbitu da",
+  "@clearImgCacheAlert": {
+    "description": "clearImgCacheAlert"
+  },
   "ignoreBatOptDes": "Sistemaren optimizazioa dela-eta, jakinarazpen- edo erreprodukzio-arazoak badituzu, mesedez, gaitu aukera hau",
+  "@ignoreBatOptDes": {
+    "description": "ignoreBatOptDes"
+  },
   "status": "Egoera",
+  "@status": {
+    "description": "status"
+  },
   "backgroundPlayDes": "Gaitu/Desgaitu musika atzeko planoan erreproduzitzea (aplikazioa sistemaren erretilutik atzi daiteke, atzeko planoan exekutatzen ari denean)",
+  "@backgroundPlayDes": {
+    "description": "backgroundPlayDes"
+  },
   "downloadLocation": "Deskargen kokapena",
+  "@downloadLocation": {
+    "description": "downloadLocation"
+  },
   "enabled": "Aktibatuta",
+  "@enabled": {
+    "description": "enabled"
+  },
   "disabled": "Desaktibatuta",
+  "@disabled": {
+    "description": "disabled"
+  },
   "github": "GitHub",
+  "@github": {
+    "description": "github"
+  },
   "duration": "Iraupena",
+  "@duration": {
+    "description": "duration"
+  },
   "title": "Titulua",
+  "@title": {
+    "description": "title"
+  },
   "deleteDownloadedDataAlert": "Deskargetatik ongi kendu da!",
+  "@deleteDownloadedDataAlert": {
+    "description": "deleteDownloadedDataAlert"
+  },
   "cancelTimerAlert": "Lo egiteko tenporizadorea bertan behera utzi da",
+  "@cancelTimerAlert": {
+    "description": "cancelTimerAlert"
+  },
   "loudnessDb": "OzentasunaDb",
+  "@loudnessDb": {
+    "description": "loudnessDb"
+  },
   "songRemovedfromQueue": "Ilaratik kendu da!",
+  "@songRemovedfromQueue": {
+    "description": "songRemovedfromQueue"
+  },
   "songRemovedfromQueueCurrSong": "Ezin duzu kendu erreproduzitzen ari den abestia",
+  "@songRemovedfromQueueCurrSong": {
+    "description": "songRemovedfromQueueCurrSong"
+  },
   "songAddedToPlaylistAlert": "Abestia erreprodukzio-zerrendara gehitu da!",
+  "@songAddedToPlaylistAlert": {
+    "description": "songAddedToPlaylistAlert"
+  },
   "songRemovedAlert": "Hemendik kenduta",
+  "@songRemovedAlert": {
+    "description": "songRemovedAlert"
+  },
   "playlistCreatednsongAddedAlert": "Erreprodukzio-zerrenda sortua eta abestia gehituta!",
+  "@playlistCreatednsongAddedAlert": {
+    "description": "playlistCreatednsongAddedAlert"
+  },
   "errorOccuredAlert": "Akats bat gertatu da!",
+  "@errorOccuredAlert": {
+    "description": "errorOccuredAlert"
+  },
   "playlistRemovedAlert": "Erreprodukzio-zerrenda kendua!",
+  "@playlistRemovedAlert": {
+    "description": "playlistRemovedAlert"
+  },
   "albumBookmarkRemoveAlert": "Albumaren markagailua kendua!",
+  "@albumBookmarkRemoveAlert": {
+    "description": "albumBookmarkRemoveAlert"
+  },
   "playlistBookmarkAddAlert": "Erreprodukzio-zerrenda markatuta!",
+  "@playlistBookmarkAddAlert": {
+    "description": "playlistBookmarkAddAlert"
+  },
   "playlistRenameAlert": "Berrizendaketa ongi gauzatu da!",
+  "@playlistRenameAlert": {
+    "description": "playlistRenameAlert"
+  },
   "artistDesNotAvailable": "Deskribapena ez dago eskuragarri!",
+  "@artistDesNotAvailable": {
+    "description": "artistDesNotAvailable"
+  },
   "artistBookmarkAddAlert": "Artista markatuta!",
+  "@artistBookmarkAddAlert": {
+    "description": "artistBookmarkAddAlert"
+  },
   "albumBookmarkAddAlert": "Albuma markatua!",
+  "@albumBookmarkAddAlert": {
+    "description": "albumBookmarkAddAlert"
+  },
   "artistBookmarkRemoveAlert": "Artistaren markagailua kendua!",
+  "@artistBookmarkRemoveAlert": {
+    "description": "artistBookmarkRemoveAlert"
+  },
   "lyricsNotAvailable": "Letrak ez dira eskuragarri!",
+  "@lyricsNotAvailable": {
+    "description": "lyricsNotAvailable"
+  },
   "syncedLyricsNotAvailable": "Sinkronizatutako letrak ez dira eskuragarri!",
+  "@syncedLyricsNotAvailable": {
+    "description": "syncedLyricsNotAvailable"
+  },
   "dismiss": "Baztertu",
+  "@dismiss": {
+    "description": "dismiss"
+  },
   "notaValidLink": "Esteka ez da baliozkoa!",
+  "@notaValidLink": {
+    "description": "notaValidLink"
+  },
   "goToDownloadPage": "Egin klik hemen deskarga orrira joateko",
+  "@goToDownloadPage": {
+    "description": "goToDownloadPage"
+  },
   "operationFailed": "Eragiketak huts egin du",
+  "@operationFailed": {
+    "description": "operationFailed"
+  },
   "linkPipedDes": "Erreprodukzio-zerrendarentzat esteka kanalizazioarekin",
+  "@linkPipedDes": {
+    "description": "linkPipedDes"
+  },
   "Piped": "Kanalizatua",
+  "@Piped": {
+    "description": "Piped"
+  },
   "unLink": "Esteka ezabatu",
+  "@unLink": {
+    "description": "unLink"
+  },
   "allFieldsReqMsg": "Eremu guztiak bete behar dira",
+  "@allFieldsReqMsg": {
+    "description": "allFieldsReqMsg"
+  },
   "username": "Erabiltzailea",
+  "@username": {
+    "description": "username"
+  },
   "password": "Pasahitza",
+  "@password": {
+    "description": "password"
+  },
   "linkAlert": "Estekatzea burutu da!",
+  "@linkAlert": {
+    "description": "linkAlert"
+  },
   "unlinkAlert": "Estekagabetzea ongi burutu da!",
+  "@unlinkAlert": {
+    "description": "unlinkAlert"
+  },
   "reset": "Berrezarri",
+  "@reset": {
+    "description": "reset"
+  },
   "playlistBlacklistAlert": "Erreprodukzio-zerrenda zerrenda beltzera pasa da!",
+  "@playlistBlacklistAlert": {
+    "description": "playlistBlacklistAlert"
+  },
   "blacklistPlstResetAlert": "Ongi berrezarri da!",
+  "@blacklistPlstResetAlert": {
+    "description": "blacklistPlstResetAlert"
+  },
   "resetblacklistedplaylist": "Zerrenda beltzean dauden erreprodukzio-zerrendak berrezarri dira",
+  "@resetblacklistedplaylist": {
+    "description": "resetblacklistedplaylist"
+  },
   "includeDownloadedFiles": "Barne hartu deskargatutako abestien fitxategiak",
+  "@includeDownloadedFiles": {
+    "description": "includeDownloadedFiles"
+  },
   "backup": "Babeskopia egin",
+  "@backup": {
+    "description": "backup"
+  },
   "backupSettingsAndPlaylistsDes": "Ezarpen guztiak, erreprodukzio-zerrendak eta saioa hasteko datuak babeskopia-fitxategi batean gordetzen ditu",
+  "@backupSettingsAndPlaylistsDes": {
+    "description": "backupSettingsAndPlaylistsDes"
+  },
   "processFiles": "Fitxategiak prozesatzen...",
+  "@processFiles": {
+    "description": "processFiles"
+  },
   "restoreAppData": "Berrezarri aplikazioaren datuak",
+  "@restoreAppData": {
+    "description": "restoreAppData"
+  },
   "backupMsg": "Babeskopia ongi gorde da!",
+  "@backupMsg": {
+    "description": "backupMsg"
+  },
   "backupInProgress": "Babeskopia burutzen ari da...",
+  "@backupInProgress": {
+    "description": "backupInProgress"
+  },
   "backFilesFound": "Datu baseak aurkitu dira",
+  "@backFilesFound": {
+    "description": "backFilesFound"
+  },
   "restoring": "Berrezartzen...",
+  "@restoring": {
+    "description": "restoring"
+  },
   "restartApp": "Aplikazioa berrabiarazi",
+  "@restartApp": {
+    "description": "restartApp"
+  },
   "viewAll": "Denak ikusi",
+  "@viewAll": {
+    "description": "viewAll"
+  },
   "results": "Emaitzak",
+  "@results": {
+    "description": "results"
+  },
   "nomatch": "Ez da emaitzarik aurkitu honentzat",
+  "@nomatch": {
+    "description": "nomatch"
+  },
   "about": "Honi buruz",
+  "@about": {
+    "description": "about"
+  },
   "plain": "Soila",
+  "@plain": {
+    "description": "plain"
+  },
   "synced": "Sinkronizatuta",
+  "@synced": {
+    "description": "synced"
+  },
   "subscribers": "harpidedun",
+  "@subscribers": {
+    "description": "subscribers"
+  },
   "id": "Identifikatzailea",
+  "@id": {
+    "description": "id"
+  },
   "networkError": "Errorea sarean! Konproba ezazu zure konexioa.",
+  "@networkError": {
+    "description": "networkError"
+  },
   "autoDownFavSongDes": "Abesti gustukoenak automatikoki deskargatu, zure gustukoenei gehitzen zaizkienean",
+  "@autoDownFavSongDes": {
+    "description": "autoDownFavSongDes"
+  },
   "cacheHomeScreenData": "Hasierako pantailaren edukiaren datuak katxeatu",
+  "@cacheHomeScreenData": {
+    "description": "cacheHomeScreenData"
+  },
   "exportDowloadedFiles": "Deskargatutako fitxategiak deskargatu",
+  "@exportDowloadedFiles": {
+    "description": "exportDowloadedFiles"
+  },
   "local": "Lokala",
+  "@local": {
+    "description": "local"
+  },
   "link": "Esteka",
+  "@link": {
+    "description": "link"
+  },
   "misc": "Miszelanea",
+  "@misc": {
+    "description": "misc"
+  },
   "resetToDefault": "Berrezarri lehenetsitako ezarpenak",
+  "@resetToDefault": {
+    "description": "resetToDefault"
+  },
   "resetToDefaultDes": "Berrezarri aplikazioaren ezarpenak lehenespenetara (Berrabiarazi behar da)",
+  "@resetToDefaultDes": {
+    "description": "resetToDefaultDes"
+  },
   "resetToDefaultMsg": "Ezarpenak lehenetsitakoetara itzultzea gauzatu da, Berrabiarazi aplikazioa, mesedez",
+  "@resetToDefaultMsg": {
+    "description": "resetToDefaultMsg"
+  },
   "album": "Albuma",
+  "@album": {
+    "description": "album"
+  },
   "playingfromAlbum": "ALBUMETIK ERREPRODUZITZEN",
+  "@playingfromAlbum": {
+    "description": "playingfromAlbum"
+  },
   "playingfromPlaylist": "ERREPRODUKZIO-ZERRENDATIK ERREPRODUZITZEN",
+  "@playingfromPlaylist": {
+    "description": "playingfromPlaylist"
+  },
   "playingfromSelection": "HAUTAKETATIK ERREPRODUZITZEN",
+  "@playingfromSelection": {
+    "description": "playingfromSelection"
+  },
   "playingfromArtist": "ARTISTATIK ERREPRODUZITZEN",
+  "@playingfromArtist": {
+    "description": "playingfromArtist"
+  },
   "randomSelection": "Ausazko Hautaketa",
+  "@randomSelection": {
+    "description": "randomSelection"
+  },
   "randomRadio": "Ausazko Irratia",
+  "@randomRadio": {
+    "description": "randomRadio"
+  },
   "autoOpenPlayer": "Ireki automatikoki erreproduzitzailearen pantaila",
+  "@autoOpenPlayer": {
+    "description": "autoOpenPlayer"
+  },
   "autoOpenPlayerDes": "Gaitu/desgaitu erreproduzitzailearen pantaila osoko irekiera automatikoa erreproduzitzeko abestia aukeratzerakoan",
+  "@autoOpenPlayerDes": {
+    "description": "autoOpenPlayerDes"
+  },
   "reArrangeSongs": "Abestiak berrantolatu",
+  "@reArrangeSongs": {
+    "description": "reArrangeSongs"
+  },
   "selectSongs": "Abestiak hautatu",
+  "@selectSongs": {
+    "description": "selectSongs"
+  },
   "selectAll": "Denak hautatu",
+  "@selectAll": {
+    "description": "selectAll"
+  },
   "exportErrorStorage": "Ez dago biltegiratze leku nahikorik",
+  "@exportErrorStorage": {
+    "description": "exportErrorStorage"
+  },
   "playlistImportedMsg": "Erreprodukzio-zerrenda behar bezala inportatu da",
+  "@playlistImportedMsg": {
+    "description": "playlistImportedMsg"
+  },
   "exportError": "Errorea erreprodukzio-zerrenda esportatzean",
+  "@exportError": {
+    "description": "exportError"
+  },
   "exportPlaylist": "Erreprodukzio-zerrenda esportatu",
+  "@exportPlaylist": {
+    "description": "exportPlaylist"
+  },
   "playlistExportedMsg": "Erreprodukzio-zerrenda arrakastaz esportatu da hona",
+  "@playlistExportedMsg": {
+    "description": "playlistExportedMsg"
+  },
   "importPlaylistDesc": "Hautatu inportatzeko aurretik esportatutako erreprodukzio-zerrenda JSON fitxategi bat",
+  "@importPlaylistDesc": {
+    "description": "importPlaylistDesc"
+  },
   "invalidPlaylistFile": "Erreprodukzio-zerrendaren fitxategi-egitura baliogabea",
+  "@invalidPlaylistFile": {
+    "description": "invalidPlaylistFile"
+  },
   "importLargeFileNote": "Oharra: baliteke erreprodukzio-zerrenda handiak inportatzeko denbora gehiago behar izatea",
+  "@importLargeFileNote": {
+    "description": "importLargeFileNote"
+  },
   "exportingPlaylist": "Erreprodukzio-zerrenda esportatzen...",
+  "@exportingPlaylist": {
+    "description": "exportingPlaylist"
+  },
   "exportErrorPermission": "Baimena ukatuta esportatzean",
+  "@exportErrorPermission": {
+    "description": "exportErrorPermission"
+  },
   "exportErrorFormat": "Errorea erreprodukzio-zerrendaren datuak formateatzen",
+  "@exportErrorFormat": {
+    "description": "exportErrorFormat"
+  },
   "importPlaylist": "Inportatu erreprodukzio-zerrenda",
+  "@importPlaylist": {
+    "description": "importPlaylist"
+  },
   "importingPlaylist": "Erreprodukzio-zerrenda inportatzen...",
+  "@importingPlaylist": {
+    "description": "importingPlaylist"
+  },
   "selectFile": "Hautatu fitxategia",
+  "@selectFile": {
+    "description": "selectFile"
+  },
   "importError": "Errorea erreprodukzio-zerrenda inportatzean",
+  "@importError": {
+    "description": "importError"
+  },
   "importErrorFileAccess": "Ezin izan da hautatutako fitxategira sartu",
+  "@importErrorFileAccess": {
+    "description": "importErrorFileAccess"
+  },
   "importErrorFormat": "Fitxategi formatu baliogabea",
+  "@importErrorFormat": {
+    "description": "importErrorFormat"
+  },
   "importErrorDatabase": "Errorea datu-basean gordetzean",
+  "@importErrorDatabase": {
+    "description": "importErrorDatabase"
+  },
   "fileNotFound": "Fitxategia ez da aurkitu",
+  "@fileNotFound": {
+    "description": "fileNotFound"
+  },
   "exportPlaylistCsv": "Esportatu erreprodukzio-zerrenda CSV gisa",
+  "@exportPlaylistCsv": {
+    "description": "exportPlaylistCsv"
+  },
   "exportPlaylistJson": "Esportatu erreprodukzio-zerrenda JSON formatuan",
+  "@exportPlaylistJson": {
+    "description": "exportPlaylistJson"
+  },
   "exportPlaylistJsonSubtitle": "Formatu hau inportatu daiteke",
+  "@exportPlaylistJsonSubtitle": {
+    "description": "exportPlaylistJsonSubtitle"
+  },
   "exportPlaylistCsvSubtitle": "Ezin da hemen inportatu",
+  "@exportPlaylistCsvSubtitle": {
+    "description": "exportPlaylistCsvSubtitle"
+  },
   "exportToYouTubeMusic": "Esportatu Youtube music-era",
+  "@exportToYouTubeMusic": {
+    "description": "exportToYouTubeMusic"
+  },
   "exportToYouTubeMusicSubtitle": "Zure erreprodukzio-zerrenda (50 abesti baino gutxiago) uneko ilaran jarriko du, ez ahaztu erreprodukzio-zerrendan gehitzea/gordetzea YtMusic-en ireki ondoren",
+  "@exportToYouTubeMusicSubtitle": {
+    "description": "exportToYouTubeMusicSubtitle"
+  },
   "linkCopied": "Esteka arbelean kopiatu da",
+  "@linkCopied": {
+    "description": "linkCopied"
+  },
   "keepScreenOnWhilePlaying": "Mantendu pantaila piztuta erreproduzitzen den bitartean",
-  "keepScreenOnWhilePlayingDes": "Gaituta badago, gailuaren pantaila piztuta egongo da musika erreproduzitzen den bitartean"
+  "@keepScreenOnWhilePlaying": {
+    "description": "keepScreenOnWhilePlaying"
+  },
+  "keepScreenOnWhilePlayingDes": "Gaituta badago, gailuaren pantaila piztuta egongo da musika erreproduzitzen den bitartean",
+  "@keepScreenOnWhilePlayingDes": {
+    "description": "keepScreenOnWhilePlayingDes"
+  }
 }

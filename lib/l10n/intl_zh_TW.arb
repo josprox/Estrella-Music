@@ -1,275 +1,1096 @@
 {
   "@@locale": "zh_TW",
   "createnAdd": "建立並新增",
+  "@createnAdd": {
+    "description": "createnAdd"
+  },
   "cachedOrOffline": "快取/離線",
+  "@cachedOrOffline": {
+    "description": "cachedOrOffline"
+  },
   "CreateNewPlaylist": "建立新的播放清單",
+  "@CreateNewPlaylist": {
+    "description": "CreateNewPlaylist"
+  },
   "cancel": "取消",
+  "@cancel": {
+    "description": "cancel"
+  },
   "create": "建立",
+  "@create": {
+    "description": "create"
+  },
   "rename": "重新命名",
+  "@rename": {
+    "description": "rename"
+  },
   "home": "首頁",
+  "@home": {
+    "description": "home"
+  },
   "songs": "歌曲",
+  "@songs": {
+    "description": "songs"
+  },
   "playlists": "撥放清單",
+  "@playlists": {
+    "description": "playlists"
+  },
   "albums": "專輯",
+  "@albums": {
+    "description": "albums"
+  },
   "singles": "單曲",
+  "@singles": {
+    "description": "singles"
+  },
   "artists": "藝人",
+  "@artists": {
+    "description": "artists"
+  },
   "settings": "設定",
+  "@settings": {
+    "description": "settings"
+  },
   "emptyPlaylist": "撥放清單是空的！",
+  "@emptyPlaylist": {
+    "description": "emptyPlaylist"
+  },
   "renamePlaylist": "重新命名播放清單",
+  "@renamePlaylist": {
+    "description": "renamePlaylist"
+  },
   "removePlaylist": "移除撥放清單",
+  "@removePlaylist": {
+    "description": "removePlaylist"
+  },
   "reArrangePlaylist": "重新排列播放清單",
+  "@reArrangePlaylist": {
+    "description": "reArrangePlaylist"
+  },
   "removeMultiple": "刪除多首歌曲",
+  "@removeMultiple": {
+    "description": "removeMultiple"
+  },
   "addMultipleSongs": "增加歌曲到播放清單",
+  "@addMultipleSongs": {
+    "description": "addMultipleSongs"
+  },
   "favorites": "我的最愛",
+  "@favorites": {
+    "description": "favorites"
+  },
   "startRadio": "開啟收音機",
+  "@startRadio": {
+    "description": "startRadio"
+  },
   "addToPlaylist": "新增至播放清單",
+  "@addToPlaylist": {
+    "description": "addToPlaylist"
+  },
   "downloads": "下載",
+  "@downloads": {
+    "description": "downloads"
+  },
   "communityplaylists": "社群播放清單",
+  "@communityplaylists": {
+    "description": "communityplaylists"
+  },
   "libSongs": "資料庫中的歌曲",
+  "@libSongs": {
+    "description": "libSongs"
+  },
   "ignoreBatOptDes": "如果您遇到通知問題或播放因系統最佳化而停止，請啟用此選項",
+  "@ignoreBatOptDes": {
+    "description": "ignoreBatOptDes"
+  },
   "backgroundPlayDes": "開啟/關閉背景音樂播放（當應用程式在背景執行時，可以從系統匣存取應用程式）",
+  "@backgroundPlayDes": {
+    "description": "backgroundPlayDes"
+  },
   "customInsSelectMsg": "請選擇自訂實例",
+  "@customInsSelectMsg": {
+    "description": "customInsSelectMsg"
+  },
   "playlistBlacklistAlert": "播放清單已被列入黑名單！",
+  "@playlistBlacklistAlert": {
+    "description": "playlistBlacklistAlert"
+  },
   "dark": "深色",
+  "@dark": {
+    "description": "dark"
+  },
   "searchRes": "搜尋結果",
+  "@searchRes": {
+    "description": "searchRes"
+  },
   "plain": "普通",
+  "@plain": {
+    "description": "plain"
+  },
   "search": "搜尋",
+  "@search": {
+    "description": "search"
+  },
   "library": "資料庫",
+  "@library": {
+    "description": "library"
+  },
   "featuredplaylists": "精選播放清單",
+  "@featuredplaylists": {
+    "description": "featuredplaylists"
+  },
   "items": "項目",
+  "@items": {
+    "description": "items"
+  },
   "networkError1": "歐歐~網路錯誤！",
+  "@networkError1": {
+    "description": "networkError1"
+  },
   "noOfflineSong": "沒有可離線存取的音樂！",
+  "@noOfflineSong": {
+    "description": "noOfflineSong"
+  },
   "recentlyPlayed": "最近播放",
+  "@recentlyPlayed": {
+    "description": "recentlyPlayed"
+  },
   "enqueueAll": "將全部新增至佇列",
+  "@enqueueAll": {
+    "description": "enqueueAll"
+  },
   "noBookmarks": "沒有收藏！",
+  "@noBookmarks": {
+    "description": "noBookmarks"
+  },
   "playNext": "播放下一首",
+  "@playNext": {
+    "description": "playNext"
+  },
   "libArtists": "資料庫中的藝人",
+  "@libArtists": {
+    "description": "libArtists"
+  },
   "libAlbums": "資料庫中的專輯",
+  "@libAlbums": {
+    "description": "libAlbums"
+  },
   "libPlaylists": "資料庫中的播放清單",
+  "@libPlaylists": {
+    "description": "libPlaylists"
+  },
   "noLibPlaylist": "您目前沒有任何播放清單！",
+  "@noLibPlaylist": {
+    "description": "noLibPlaylist"
+  },
   "enqueueSong": "將這首歌加入播放佇列",
+  "@enqueueSong": {
+    "description": "enqueueSong"
+  },
   "goToAlbum": "前往專輯",
+  "@goToAlbum": {
+    "description": "goToAlbum"
+  },
   "viewArtist": "檢視藝人",
+  "@viewArtist": {
+    "description": "viewArtist"
+  },
   "openIn": "在...中開啟",
+  "@openIn": {
+    "description": "openIn"
+  },
   "shareSong": "分享這首歌",
+  "@shareSong": {
+    "description": "shareSong"
+  },
   "removeFromPlaylist": "從播放清單移除",
+  "@removeFromPlaylist": {
+    "description": "removeFromPlaylist"
+  },
   "queueShufflingDeniedMsg": "當隨機播放模式已啟用時，無法打亂播放佇列",
+  "@queueShufflingDeniedMsg": {
+    "description": "queueShufflingDeniedMsg"
+  },
   "queuerearrangingDeniedMsg": "當隨機播放模式已啟用時，無法重新排列播放佇列",
+  "@queuerearrangingDeniedMsg": {
+    "description": "queuerearrangingDeniedMsg"
+  },
   "songNotPlayable": "由於伺服器限制，這首歌無法播放！",
+  "@songNotPlayable": {
+    "description": "songNotPlayable"
+  },
   "upNext": "接下來播放",
+  "@upNext": {
+    "description": "upNext"
+  },
   "playnextMsg": "下一首",
+  "@playnextMsg": {
+    "description": "playnextMsg"
+  },
   "shuffleQueue": "打亂播放佇列",
+  "@shuffleQueue": {
+    "description": "shuffleQueue"
+  },
   "queueLoop": "播放佇列循環",
+  "@queueLoop": {
+    "description": "queueLoop"
+  },
   "queueLoopNotDisMsg2": "在收音機模式下，無法啟用播放佇列循環模式。",
+  "@queueLoopNotDisMsg2": {
+    "description": "queueLoopNotDisMsg2"
+  },
   "removeFromLib": "從資料庫中移除歌曲",
+  "@removeFromLib": {
+    "description": "removeFromLib"
+  },
   "sleepTimer": "睡眠計時器",
+  "@sleepTimer": {
+    "description": "sleepTimer"
+  },
   "cancelTimer": "取消計時器",
+  "@cancelTimer": {
+    "description": "cancelTimer"
+  },
   "add5Minutes": "延長 5 分鐘",
+  "@add5Minutes": {
+    "description": "add5Minutes"
+  },
   "deleteDownloadData": "從「下載」中移除",
+  "@deleteDownloadData": {
+    "description": "deleteDownloadData"
+  },
   "minutes": "分鐘",
+  "@minutes": {
+    "description": "minutes"
+  },
   "endOfThisSong": "這首歌的結尾",
+  "@endOfThisSong": {
+    "description": "endOfThisSong"
+  },
   "appInfo": "應用程式資訊",
+  "@appInfo": {
+    "description": "appInfo"
+  },
   "download": "下載",
+  "@download": {
+    "description": "download"
+  },
   "autoDownFavSong": "自動下載最愛歌曲",
+  "@autoDownFavSong": {
+    "description": "autoDownFavSong"
+  },
   "autoDownFavSongDes": "將歌曲加入最愛時，自動下載最愛歌曲",
+  "@autoDownFavSongDes": {
+    "description": "autoDownFavSongDes"
+  },
   "networkError": "網路錯誤！請檢查您的網路連線。",
+  "@networkError": {
+    "description": "networkError"
+  },
   "downloadError2": "由於伺服器限制，請求的歌曲無法下載。您可以再試一次",
+  "@downloadError2": {
+    "description": "downloadError2"
+  },
   "language": "語言",
+  "@language": {
+    "description": "language"
+  },
   "playerUi": "播放器介面",
+  "@playerUi": {
+    "description": "playerUi"
+  },
   "playerUiDes": "選擇播放器介面",
+  "@playerUiDes": {
+    "description": "playerUiDes"
+  },
   "restoreLastPlaybackSession": "恢復上次的播放",
+  "@restoreLastPlaybackSession": {
+    "description": "restoreLastPlaybackSession"
+  },
   "restoreLastPlaybackSessionDes": "在應用程式啟動時，自動延續上次的播放內容",
+  "@restoreLastPlaybackSessionDes": {
+    "description": "restoreLastPlaybackSessionDes"
+  },
   "homeContentCountDes": "選擇初始首頁內容的數量（大約）。較少的結果可以加快載入速度",
+  "@homeContentCountDes": {
+    "description": "homeContentCountDes"
+  },
   "homeContentCount": "首頁內容數量",
+  "@homeContentCount": {
+    "description": "homeContentCount"
+  },
   "enableBottomNavDes": "切換到底部導航列",
+  "@enableBottomNavDes": {
+    "description": "enableBottomNavDes"
+  },
   "cacheSongs": "快取歌曲",
+  "@cacheSongs": {
+    "description": "cacheSongs"
+  },
   "cacheSongsDes": "在播放歌曲時進行快取以供未來或離線播放，這將佔用您設備的額外空間",
+  "@cacheSongsDes": {
+    "description": "cacheSongsDes"
+  },
   "loudnessNormalization": "音量標準化",
+  "@loudnessNormalization": {
+    "description": "loudnessNormalization"
+  },
   "loudnessNormalizationDes": "將所有歌曲調整成相同的音量（實驗性功能，不適用於在舊版本（< v1.10.0）下載的歌曲）",
+  "@loudnessNormalizationDes": {
+    "description": "loudnessNormalizationDes"
+  },
   "exportDowloadedFilesDes": "點擊這裡將已下載的檔案從應用程式匯出至外部目錄",
+  "@exportDowloadedFilesDes": {
+    "description": "exportDowloadedFilesDes"
+  },
   "exportDowloadedFiles": "匯出已下載的檔案",
+  "@exportDowloadedFiles": {
+    "description": "exportDowloadedFiles"
+  },
   "exportMsg": "檔案順利匯出",
+  "@exportMsg": {
+    "description": "exportMsg"
+  },
   "equalizer": "等化器",
+  "@equalizer": {
+    "description": "equalizer"
+  },
   "equalizerDes": "開啟系統等化器",
+  "@equalizerDes": {
+    "description": "equalizerDes"
+  },
   "close": "關閉",
+  "@close": {
+    "description": "close"
+  },
   "clearImgCacheAlert": "圖片快取已清除成功",
+  "@clearImgCacheAlert": {
+    "description": "clearImgCacheAlert"
+  },
   "clearImgCache": "清除圖片快取",
+  "@clearImgCache": {
+    "description": "clearImgCache"
+  },
   "ignoreBatOpt": "忽略電池最佳化",
+  "@ignoreBatOpt": {
+    "description": "ignoreBatOpt"
+  },
   "clearImgCacheDes": "按一下此處清除快取的縮圖/圖片。 （不推薦，除非想要更新快取的圖片資料）",
+  "@clearImgCacheDes": {
+    "description": "clearImgCacheDes"
+  },
   "disabled": "停用",
+  "@disabled": {
+    "description": "disabled"
+  },
   "github": "GitHub",
+  "@github": {
+    "description": "github"
+  },
   "status": "狀態",
+  "@status": {
+    "description": "status"
+  },
   "enabled": "啟用",
+  "@enabled": {
+    "description": "enabled"
+  },
   "videos": "影片",
+  "@videos": {
+    "description": "videos"
+  },
   "viewAll": "檢視全部",
+  "@viewAll": {
+    "description": "viewAll"
+  },
   "results": "結果",
+  "@results": {
+    "description": "results"
+  },
   "nomatch": "未找到符合以下搜尋內容的結果",
+  "@nomatch": {
+    "description": "nomatch"
+  },
   "for1": "為",
+  "@for1": {
+    "description": "for1"
+  },
   "subscribers": "訂閱者",
+  "@subscribers": {
+    "description": "subscribers"
+  },
   "synced": "已同步",
+  "@synced": {
+    "description": "synced"
+  },
   "songInfo": "歌曲資訊",
+  "@songInfo": {
+    "description": "songInfo"
+  },
   "id": "ID",
+  "@id": {
+    "description": "id"
+  },
   "title": "標題",
+  "@title": {
+    "description": "title"
+  },
   "duration": "長度",
+  "@duration": {
+    "description": "duration"
+  },
   "songRemovedfromQueueCurrSong": "您無法刪除目前正在播放的歌曲",
+  "@songRemovedfromQueueCurrSong": {
+    "description": "songRemovedfromQueueCurrSong"
+  },
   "songAddedToPlaylistAlert": "歌曲已新增至播放清單！",
+  "@songAddedToPlaylistAlert": {
+    "description": "songAddedToPlaylistAlert"
+  },
   "playlistCreatedAlert": "已建立播放清單！",
+  "@playlistCreatedAlert": {
+    "description": "playlistCreatedAlert"
+  },
   "playlistCreatednsongAddedAlert": "播放清單已建立，歌曲也已經加入！",
+  "@playlistCreatednsongAddedAlert": {
+    "description": "playlistCreatednsongAddedAlert"
+  },
   "pipedplstSyncAlert": "已同步Piped播放清單！",
+  "@pipedplstSyncAlert": {
+    "description": "pipedplstSyncAlert"
+  },
   "songEnqueueAlert": "歌曲已加入佇列！",
+  "@songEnqueueAlert": {
+    "description": "songEnqueueAlert"
+  },
   "songRemovedAlert": "已刪除自",
+  "@songRemovedAlert": {
+    "description": "songRemovedAlert"
+  },
   "playlistBookmarkAddAlert": "播放清單已加入收藏！",
+  "@playlistBookmarkAddAlert": {
+    "description": "playlistBookmarkAddAlert"
+  },
   "playlistBookmarkRemoveAlert": "播放清單已從收藏中移除！",
+  "@playlistBookmarkRemoveAlert": {
+    "description": "playlistBookmarkRemoveAlert"
+  },
   "playlistRemovedAlert": "播放清單已刪除！",
+  "@playlistRemovedAlert": {
+    "description": "playlistRemovedAlert"
+  },
   "albumBookmarkRemoveAlert": "專輯已從收藏中移除！",
+  "@albumBookmarkRemoveAlert": {
+    "description": "albumBookmarkRemoveAlert"
+  },
   "artistBookmarkAddAlert": "藝人已加入收藏！",
+  "@artistBookmarkAddAlert": {
+    "description": "artistBookmarkAddAlert"
+  },
   "albumBookmarkAddAlert": "專輯已加入收藏！",
+  "@albumBookmarkAddAlert": {
+    "description": "albumBookmarkAddAlert"
+  },
   "syncedLyricsNotAvailable": "暫無同步歌詞！",
+  "@syncedLyricsNotAvailable": {
+    "description": "syncedLyricsNotAvailable"
+  },
   "artistBookmarkRemoveAlert": "藝人已從收藏中移除！",
+  "@artistBookmarkRemoveAlert": {
+    "description": "artistBookmarkRemoveAlert"
+  },
   "lyricsNotAvailable": "暫無歌詞！",
+  "@lyricsNotAvailable": {
+    "description": "lyricsNotAvailable"
+  },
   "local": "本機",
+  "@local": {
+    "description": "local"
+  },
   "linkPipedDes": "連結Piped以管理播放清單",
+  "@linkPipedDes": {
+    "description": "linkPipedDes"
+  },
   "selectAuthIns": "選擇認證實例",
+  "@selectAuthIns": {
+    "description": "selectAuthIns"
+  },
   "resetblacklistedplaylist": "重設加入黑名單的播放清單",
+  "@resetblacklistedplaylist": {
+    "description": "resetblacklistedplaylist"
+  },
   "resetblacklistedplaylistDes": "重設所有被Piped列入黑名單的播放清單",
+  "@resetblacklistedplaylistDes": {
+    "description": "resetblacklistedplaylistDes"
+  },
   "blacklistPlstResetAlert": "重設成功！",
+  "@blacklistPlstResetAlert": {
+    "description": "blacklistPlstResetAlert"
+  },
   "stopMusicOnTaskClearDes": "應用程式在任務管理員中被滑掉後，音樂將會停止播放",
+  "@stopMusicOnTaskClearDes": {
+    "description": "stopMusicOnTaskClearDes"
+  },
   "letsStrart": "讓我們開始吧...",
+  "@letsStrart": {
+    "description": "letsStrart"
+  },
   "processFiles": "檔案處理中...",
+  "@processFiles": {
+    "description": "processFiles"
+  },
   "backFilesFound": "找到資料庫",
+  "@backFilesFound": {
+    "description": "backFilesFound"
+  },
   "backupMsg": "成功儲存備份！",
+  "@backupMsg": {
+    "description": "backupMsg"
+  },
   "misc": "其他選項",
+  "@misc": {
+    "description": "misc"
+  },
   "downloadError3": "由於網路/串流錯誤，下載失敗！請再試一次",
+  "@downloadError3": {
+    "description": "downloadError3"
+  },
   "musicAndPlayback": "音樂&播放",
+  "@musicAndPlayback": {
+    "description": "musicAndPlayback"
+  },
   "content": "內容",
+  "@content": {
+    "description": "content"
+  },
   "personalisation": "個人化",
+  "@personalisation": {
+    "description": "personalisation"
+  },
   "themeMode": "主題",
+  "@themeMode": {
+    "description": "themeMode"
+  },
   "dynamic": "動態",
+  "@dynamic": {
+    "description": "dynamic"
+  },
   "systemDefault": "系統預設",
+  "@systemDefault": {
+    "description": "systemDefault"
+  },
   "light": "淺色",
+  "@light": {
+    "description": "light"
+  },
   "standard": "標準",
+  "@standard": {
+    "description": "standard"
+  },
   "gesture": "手勢",
+  "@gesture": {
+    "description": "gesture"
+  },
   "languageDes": "設定應用程式語言",
+  "@languageDes": {
+    "description": "languageDes"
+  },
   "setDiscoverContent": "設定探索頁面內容",
+  "@setDiscoverContent": {
+    "description": "setDiscoverContent"
+  },
   "quickpicks": "快速選擇",
+  "@quickpicks": {
+    "description": "quickpicks"
+  },
   "discover": "探索",
+  "@discover": {
+    "description": "discover"
+  },
   "trending": "熱門趨勢",
+  "@trending": {
+    "description": "trending"
+  },
   "topmusicvideos": "熱門音樂影片",
+  "@topmusicvideos": {
+    "description": "topmusicvideos"
+  },
   "basedOnLast": "根據上次互動",
+  "@basedOnLast": {
+    "description": "basedOnLast"
+  },
   "enableBottomNav": "底部導航列",
+  "@enableBottomNav": {
+    "description": "enableBottomNav"
+  },
   "skipSilence": "跳過靜音部分",
+  "@skipSilence": {
+    "description": "skipSilence"
+  },
   "skipSilenceDes": "在音樂播放時，靜音部分將被跳過",
+  "@skipSilenceDes": {
+    "description": "skipSilenceDes"
+  },
   "streamingQuality": "串流品質",
+  "@streamingQuality": {
+    "description": "streamingQuality"
+  },
   "streamingQualityDes": "音樂串流時的品質",
+  "@streamingQualityDes": {
+    "description": "streamingQualityDes"
+  },
   "disableTransitionAnimation": "關閉過渡動畫",
+  "@disableTransitionAnimation": {
+    "description": "disableTransitionAnimation"
+  },
   "disableTransitionAnimationDes": "啟用此選項以關閉分頁過渡時的動畫",
+  "@disableTransitionAnimationDes": {
+    "description": "disableTransitionAnimationDes"
+  },
   "enableSlidableAction": "啟用滑動動作",
+  "@enableSlidableAction": {
+    "description": "enableSlidableAction"
+  },
   "high": "高",
+  "@high": {
+    "description": "high"
+  },
   "low": "低",
+  "@low": {
+    "description": "low"
+  },
   "backgroundPlay": "背景音樂播放",
+  "@backgroundPlay": {
+    "description": "backgroundPlay"
+  },
   "downloadLocation": "下載位置",
+  "@downloadLocation": {
+    "description": "downloadLocation"
+  },
   "cacheHomeScreenData": "快取首頁內容資料",
+  "@cacheHomeScreenData": {
+    "description": "cacheHomeScreenData"
+  },
   "cacheHomeScreenDataDes": "開啟首頁內容資料快取，若啟用此選項，首頁將立即加載",
+  "@cacheHomeScreenDataDes": {
+    "description": "cacheHomeScreenDataDes"
+  },
   "downloadingFormat": "下載檔案格式",
+  "@downloadingFormat": {
+    "description": "downloadingFormat"
+  },
   "downloadingFormatDes": "選擇下載的檔案格式。「Opus」將提供最佳品質",
+  "@downloadingFormatDes": {
+    "description": "downloadingFormatDes"
+  },
   "exportedFileLocation": "已下載檔案的匯出位置",
+  "@exportedFileLocation": {
+    "description": "exportedFileLocation"
+  },
   "export": "匯出",
+  "@export": {
+    "description": "export"
+  },
   "exporting": "正在匯出…",
+  "@exporting": {
+    "description": "exporting"
+  },
   "scanning": "掃描中...",
+  "@scanning": {
+    "description": "scanning"
+  },
   "downFilesFound": "找到已下載的檔案",
+  "@downFilesFound": {
+    "description": "downFilesFound"
+  },
   "resetToDefault": "還原預設值",
+  "@resetToDefault": {
+    "description": "resetToDefault"
+  },
   "resetToDefaultDes": "將應用程式設定重設為預設值 （需要重新啟動）",
+  "@resetToDefaultDes": {
+    "description": "resetToDefaultDes"
+  },
   "resetToDefaultMsg": "已重設為預設值，請重新啟動應用程式",
+  "@resetToDefaultMsg": {
+    "description": "resetToDefaultMsg"
+  },
   "githubDes": "檢視 GitHub 原始碼。\n如果您喜歡這個專案，別忘了給我們一顆⭐",
+  "@githubDes": {
+    "description": "githubDes"
+  },
   "searchDes": "歌曲、播放清單、專輯或藝人",
+  "@searchDes": {
+    "description": "searchDes"
+  },
   "audioCodec": "音訊轉碼器",
+  "@audioCodec": {
+    "description": "audioCodec"
+  },
   "bitrate": "位元率",
+  "@bitrate": {
+    "description": "bitrate"
+  },
   "loudnessDb": "響度（分貝）",
+  "@loudnessDb": {
+    "description": "loudnessDb"
+  },
   "deleteDownloadedDataAlert": "已成功從下載中刪除！",
+  "@deleteDownloadedDataAlert": {
+    "description": "deleteDownloadedDataAlert"
+  },
   "cancelTimerAlert": "睡眠計時器已取消",
+  "@cancelTimerAlert": {
+    "description": "cancelTimerAlert"
+  },
   "sleepTimeSetAlert": "您的睡眠計時器已設定",
+  "@sleepTimeSetAlert": {
+    "description": "sleepTimeSetAlert"
+  },
   "radioNotAvailable": "收音機不適用於此藝人！",
+  "@radioNotAvailable": {
+    "description": "radioNotAvailable"
+  },
   "songRemovedfromQueue": "已從播放佇列中刪除！",
+  "@songRemovedfromQueue": {
+    "description": "songRemovedfromQueue"
+  },
   "songAlreadyExists": "歌曲已經在這裡了！",
+  "@songAlreadyExists": {
+    "description": "songAlreadyExists"
+  },
   "songAlreadyOfflineAlert": "歌曲已經儲存在離線快取中",
+  "@songAlreadyOfflineAlert": {
+    "description": "songAlreadyOfflineAlert"
+  },
   "playlistRenameAlert": "重新命名成功！",
+  "@playlistRenameAlert": {
+    "description": "playlistRenameAlert"
+  },
   "artistDesNotAvailable": "暫無描述！",
+  "@artistDesNotAvailable": {
+    "description": "artistDesNotAvailable"
+  },
   "newVersionAvailable": "新版本已發布！",
+  "@newVersionAvailable": {
+    "description": "newVersionAvailable"
+  },
   "dontShowInfoAgain": "不再顯示此資訊",
+  "@dontShowInfoAgain": {
+    "description": "dontShowInfoAgain"
+  },
   "dismiss": "忽略",
+  "@dismiss": {
+    "description": "dismiss"
+  },
   "notaSongVideo": "這不是歌曲或MV！",
+  "@notaSongVideo": {
+    "description": "notaSongVideo"
+  },
   "notaValidLink": "連結無效！",
+  "@notaValidLink": {
+    "description": "notaValidLink"
+  },
   "operationFailed": "操作失敗",
+  "@operationFailed": {
+    "description": "operationFailed"
+  },
   "goToDownloadPage": "點擊此處進入下載頁面",
+  "@goToDownloadPage": {
+    "description": "goToDownloadPage"
+  },
   "Piped": "Piped",
+  "@Piped": {
+    "description": "Piped"
+  },
   "link": "連接",
+  "@link": {
+    "description": "link"
+  },
   "unLink": "解除連接",
+  "@unLink": {
+    "description": "unLink"
+  },
   "selectAuthInsMsg": "請選擇認證實例！",
+  "@selectAuthInsMsg": {
+    "description": "selectAuthInsMsg"
+  },
   "allFieldsReqMsg": "所有欄位皆為必填",
+  "@allFieldsReqMsg": {
+    "description": "allFieldsReqMsg"
+  },
   "username": "用戶名稱",
+  "@username": {
+    "description": "username"
+  },
   "password": "密碼",
+  "@password": {
+    "description": "password"
+  },
   "linkAlert": "成功連接！",
+  "@linkAlert": {
+    "description": "linkAlert"
+  },
   "unlinkAlert": "成功取消連接！",
+  "@unlinkAlert": {
+    "description": "unlinkAlert"
+  },
   "reset": "重設",
+  "@reset": {
+    "description": "reset"
+  },
   "stopMusicOnTaskClear": "清除背景任務時停止播放音樂",
+  "@stopMusicOnTaskClear": {
+    "description": "stopMusicOnTaskClear"
+  },
   "backupAppData": "備份應用程式資料",
+  "@backupAppData": {
+    "description": "backupAppData"
+  },
   "androidBackupWarning": "尚未測試：下載超過 60 個檔案後點選核取方塊可能會消耗大量記憶體，並可能導致手機或應用程式當機。請自行評估風險後進行。",
+  "@androidBackupWarning": {
+    "description": "androidBackupWarning"
+  },
   "backupSettingsAndPlaylistsDes": "將所有設定、播放清單和登入資料儲存至備份檔案中",
+  "@backupSettingsAndPlaylistsDes": {
+    "description": "backupSettingsAndPlaylistsDes"
+  },
   "backup": "備份",
+  "@backup": {
+    "description": "backup"
+  },
   "includeDownloadedFiles": "包含已下載的歌曲檔案",
+  "@includeDownloadedFiles": {
+    "description": "includeDownloadedFiles"
+  },
   "backupInProgress": "備份中...",
+  "@backupInProgress": {
+    "description": "backupInProgress"
+  },
   "restoreAppData": "還原應用程式資料",
+  "@restoreAppData": {
+    "description": "restoreAppData"
+  },
   "restoreSettingsAndPlaylistsDes": "從備份檔案還原所有設定、登入資訊和播放清單。將覆蓋所有目前的資料",
+  "@restoreSettingsAndPlaylistsDes": {
+    "description": "restoreSettingsAndPlaylistsDes"
+  },
   "restoreMsg": "成功還原！\n變更將在重新啟動後產生",
+  "@restoreMsg": {
+    "description": "restoreMsg"
+  },
   "restoring": "還原中...",
+  "@restoring": {
+    "description": "restoring"
+  },
   "restore": "還原",
+  "@restore": {
+    "description": "restore"
+  },
   "enableSlidableActionDes": "在歌曲區塊上啟用滑動動作",
+  "@enableSlidableActionDes": {
+    "description": "enableSlidableActionDes"
+  },
   "by": "開發者",
+  "@by": {
+    "description": "by"
+  },
   "about": "關於",
+  "@about": {
+    "description": "about"
+  },
   "errorOccuredAlert": "發生一些錯誤！",
+  "@errorOccuredAlert": {
+    "description": "errorOccuredAlert"
+  },
   "closeApp": "關閉程式",
+  "@closeApp": {
+    "description": "closeApp"
+  },
   "restartApp": "重新啟動程式",
+  "@restartApp": {
+    "description": "restartApp"
+  },
   "retry": "請重試！",
+  "@retry": {
+    "description": "retry"
+  },
   "removeFromQueue": "從播放佇列中移除",
+  "@removeFromQueue": {
+    "description": "removeFromQueue"
+  },
   "queueLoopNotDisMsg1": "當隨機播放模式啟用時，無法關閉播放佇列循環模式。",
+  "@queueLoopNotDisMsg1": {
+    "description": "queueLoopNotDisMsg1"
+  },
   "urlSearchDes": "已檢測到網址，按一下即可開啟/播放相關內容",
+  "@urlSearchDes": {
+    "description": "urlSearchDes"
+  },
   "hintApiUrl": "Piped 實例的 API URL",
+  "@hintApiUrl": {
+    "description": "hintApiUrl"
+  },
   "customIns": "自訂實例",
+  "@customIns": {
+    "description": "customIns"
+  },
   "playingfromArtist": "從藝人撥放",
+  "@playingfromArtist": {
+    "description": "playingfromArtist"
+  },
   "album": "專輯",
+  "@album": {
+    "description": "album"
+  },
   "playingfromAlbum": "從專輯撥放",
+  "@playingfromAlbum": {
+    "description": "playingfromAlbum"
+  },
   "playingfromPlaylist": "從播放清單撥放",
+  "@playingfromPlaylist": {
+    "description": "playingfromPlaylist"
+  },
   "playingfromSelection": "從精選撥放",
+  "@playingfromSelection": {
+    "description": "playingfromSelection"
+  },
   "randomSelection": "隨機選擇",
+  "@randomSelection": {
+    "description": "randomSelection"
+  },
   "randomRadio": "隨機廣播",
+  "@randomRadio": {
+    "description": "randomRadio"
+  },
   "autoOpenPlayer": "自動開啟播放器螢幕",
+  "@autoOpenPlayer": {
+    "description": "autoOpenPlayer"
+  },
   "autoOpenPlayerDes": "啟用/停用在選擇要播放的歌曲時自動全螢幕開啟播放器",
+  "@autoOpenPlayerDes": {
+    "description": "autoOpenPlayerDes"
+  },
   "selectAll": "全選",
+  "@selectAll": {
+    "description": "selectAll"
+  },
   "importError": "匯入播放清單時發生錯誤",
+  "@importError": {
+    "description": "importError"
+  },
   "reArrangeSongs": "重新排列歌曲",
+  "@reArrangeSongs": {
+    "description": "reArrangeSongs"
+  },
   "selectSongs": "選擇歌曲",
+  "@selectSongs": {
+    "description": "selectSongs"
+  },
   "importErrorFileAccess": "無法存取播放清單",
+  "@importErrorFileAccess": {
+    "description": "importErrorFileAccess"
+  },
   "exportPlaylist": "輸出播放清單",
+  "@exportPlaylist": {
+    "description": "exportPlaylist"
+  },
   "exportingPlaylist": "正在輸出播放清單……",
+  "@exportingPlaylist": {
+    "description": "exportingPlaylist"
+  },
   "playlistExportedMsg": "播放清單成功輸出至",
+  "@playlistExportedMsg": {
+    "description": "playlistExportedMsg"
+  },
   "exportError": "輸出播放清單時發生錯誤",
+  "@exportError": {
+    "description": "exportError"
+  },
   "exportErrorPermission": "匯出時權限被拒絕",
+  "@exportErrorPermission": {
+    "description": "exportErrorPermission"
+  },
   "exportErrorStorage": "儲存空間不足",
+  "@exportErrorStorage": {
+    "description": "exportErrorStorage"
+  },
   "exportErrorFormat": "格式化播放清單資料時出錯",
+  "@exportErrorFormat": {
+    "description": "exportErrorFormat"
+  },
   "importPlaylist": "匯入播放清單",
+  "@importPlaylist": {
+    "description": "importPlaylist"
+  },
   "importingPlaylist": "正在匯入播放清單……",
+  "@importingPlaylist": {
+    "description": "importingPlaylist"
+  },
   "importPlaylistDesc": "選擇先前匯出的播放清單 JSON 檔案進行匯入",
+  "@importPlaylistDesc": {
+    "description": "importPlaylistDesc"
+  },
   "selectFile": "選擇檔案",
+  "@selectFile": {
+    "description": "selectFile"
+  },
   "playlistImportedMsg": "成功匯入播放清單",
+  "@playlistImportedMsg": {
+    "description": "playlistImportedMsg"
+  },
   "importErrorFormat": "文件格式無效",
+  "@importErrorFormat": {
+    "description": "importErrorFormat"
+  },
   "invalidPlaylistFile": "播放清單檔案結構無效",
+  "@invalidPlaylistFile": {
+    "description": "invalidPlaylistFile"
+  },
   "importErrorDatabase": "儲存到資料庫時出錯",
+  "@importErrorDatabase": {
+    "description": "importErrorDatabase"
+  },
   "fileNotFound": "無法找到檔案",
+  "@fileNotFound": {
+    "description": "fileNotFound"
+  },
   "importLargeFileNote": "注意：匯入大型播放清單可能需要更長的時間",
+  "@importLargeFileNote": {
+    "description": "importLargeFileNote"
+  },
   "keepScreenOnWhilePlaying": "播放時保持螢幕常亮",
+  "@keepScreenOnWhilePlaying": {
+    "description": "keepScreenOnWhilePlaying"
+  },
   "keepScreenOnWhilePlayingDes": "啟用後，播放音樂時設備螢幕將保持亮起",
+  "@keepScreenOnWhilePlayingDes": {
+    "description": "keepScreenOnWhilePlayingDes"
+  },
   "downloadNotificationChannelName": "音樂下載",
+  "@downloadNotificationChannelName": {
+    "description": "downloadNotificationChannelName"
+  },
   "downloadNotificationChannelDescription": "讓音樂下載在背景持續執行。",
+  "@downloadNotificationChannelDescription": {
+    "description": "downloadNotificationChannelDescription"
+  },
   "downloadNotificationTitle": "正在下載音樂",
+  "@downloadNotificationTitle": {
+    "description": "downloadNotificationTitle"
+  },
   "downloadNotificationPreparing": "正在準備下載…",
-  "downloadNotificationSong": "正在下載：{songTitle}"
+  "@downloadNotificationPreparing": {
+    "description": "downloadNotificationPreparing"
+  },
+  "downloadNotificationSong": "正在下載：{songTitle}",
+  "@downloadNotificationSong": {
+    "placeholders": {
+      "songTitle": {
+        "type": "String"
+      }
+    },
+    "description": "downloadNotificationSong"
+  }
 }

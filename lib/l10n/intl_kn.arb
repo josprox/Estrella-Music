@@ -1,22 +1,79 @@
 {
   "@@locale": "kn",
   "libArtists": "",
+  "@libArtists": {
+    "description": "libArtists"
+  },
   "artists": "ಕಲಾವಿದರು",
+  "@artists": {
+    "description": "artists"
+  },
   "home": "ಮುಖಪುಟ",
+  "@home": {
+    "description": "home"
+  },
   "retry": "ಮರುಪ್ರಯತ್ನಿಸಿ!",
+  "@retry": {
+    "description": "retry"
+  },
   "songs": "ಹಾಡುಗಳು",
+  "@songs": {
+    "description": "songs"
+  },
   "recentlyPlayed": "ಇತ್ತೀಚಿಗೆ ಕೇಳಿದ ಹಾಡುಗಳು",
+  "@recentlyPlayed": {
+    "description": "recentlyPlayed"
+  },
   "settings": "ಸಂಯೋಜನೆಗಳು",
+  "@settings": {
+    "description": "settings"
+  },
   "playlists": "ಪಟ್ಟಿಗಳು",
+  "@playlists": {
+    "description": "playlists"
+  },
   "favorites": "ಇಷ್ಟವಾದವು",
+  "@favorites": {
+    "description": "favorites"
+  },
   "albums": "ಆಲ್ಬಂಗಳು",
+  "@albums": {
+    "description": "albums"
+  },
   "album": "ಆಲ್ಬಂ",
+  "@album": {
+    "description": "album"
+  },
   "noOfflineSong": "ಆಫ್ಲೈನ್ ಹಾಡುಗಳಿಲ್ಲ!",
+  "@noOfflineSong": {
+    "description": "noOfflineSong"
+  },
   "cachedOrOffline": "ಸಂಗ್ರಹಿಸಲಾಗಿದೆ/ಆಫ್ ಲೈನ್",
+  "@cachedOrOffline": {
+    "description": "cachedOrOffline"
+  },
   "downloads": "ಡೌನ್ಲೋಡ್ಗಳು",
+  "@downloads": {
+    "description": "downloads"
+  },
   "emptyPlaylist": "ಖಾಲಿ ಪ್ಲೇಪಟ್ಟಿ!",
+  "@emptyPlaylist": {
+    "description": "emptyPlaylist"
+  },
   "enqueueAll": "ಎಲ್ಲವನ್ನೂ ಎನ್ಕ್ಯೂ ಮಾಡಿ",
+  "@enqueueAll": {
+    "description": "enqueueAll"
+  },
   "renamePlaylist": "ಪ್ಲೇಪಟ್ಟಿಯನ್ನು ಮರುಹೆಸರಿಸಿ",
+  "@renamePlaylist": {
+    "description": "renamePlaylist"
+  },
   "keepScreenOnWhilePlaying": "ಪ್ಲೇ ಮಾಡುವಾಗ ಪರದೆ ಜಾಗೃತವಾಗಿರಲಿ",
-  "keepScreenOnWhilePlayingDes": "ಸಕ್ರಿಯಗೊಳಿಸಿದರೆ, ಸಂಗೀತ ಪ್ಲೇ ಮಾಡುವಾಗ ಸಾಧನದ ಪರದೆ ಜಾಗೃತವಾಗಿರುತ್ತದೆ"
+  "@keepScreenOnWhilePlaying": {
+    "description": "keepScreenOnWhilePlaying"
+  },
+  "keepScreenOnWhilePlayingDes": "ಸಕ್ರಿಯಗೊಳಿಸಿದರೆ, ಸಂಗೀತ ಪ್ಲೇ ಮಾಡುವಾಗ ಸಾಧನದ ಪರದೆ ಜಾಗೃತವಾಗಿರುತ್ತದೆ",
+  "@keepScreenOnWhilePlayingDes": {
+    "description": "keepScreenOnWhilePlayingDes"
+  }
 }

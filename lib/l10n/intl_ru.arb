@@ -1,324 +1,1152 @@
 {
   "@@locale": "ru",
   "home": "Главная",
+  "@home": {
+    "description": "home"
+  },
   "songs": "Песни",
+  "@songs": {
+    "description": "songs"
+  },
   "playlists": "Плейлисты",
+  "@playlists": {
+    "description": "playlists"
+  },
   "albums": "Альбомы",
+  "@albums": {
+    "description": "albums"
+  },
   "artists": "Исполнители",
+  "@artists": {
+    "description": "artists"
+  },
   "settings": "Настройки",
+  "@settings": {
+    "description": "settings"
+  },
   "libSongs": "Библиотека песен",
+  "@libSongs": {
+    "description": "libSongs"
+  },
   "libPlaylists": "Библиотека плейлистов",
+  "@libPlaylists": {
+    "description": "libPlaylists"
+  },
   "libAlbums": "Библиотека альбомов",
+  "@libAlbums": {
+    "description": "libAlbums"
+  },
   "libArtists": "Библиотека исполнителей",
+  "@libArtists": {
+    "description": "libArtists"
+  },
   "items": "объекты",
+  "@items": {
+    "description": "items"
+  },
   "networkError1": "Упс, ошибка сети!",
+  "@networkError1": {
+    "description": "networkError1"
+  },
   "retry": "Повторите попытку!",
+  "@retry": {
+    "description": "retry"
+  },
   "noOfflineSong": "Нет офлайн-песен!",
+  "@noOfflineSong": {
+    "description": "noOfflineSong"
+  },
   "recentlyPlayed": "Недавно проигранные",
+  "@recentlyPlayed": {
+    "description": "recentlyPlayed"
+  },
   "favorites": "Избранное",
+  "@favorites": {
+    "description": "favorites"
+  },
   "cachedOrOffline": "Кэшированные/Офлайн",
+  "@cachedOrOffline": {
+    "description": "cachedOrOffline"
+  },
   "emptyPlaylist": "Пустой плейлист!",
+  "@emptyPlaylist": {
+    "description": "emptyPlaylist"
+  },
   "enqueueAll": "Добавить всё в очередь",
+  "@enqueueAll": {
+    "description": "enqueueAll"
+  },
   "renamePlaylist": "Переименовать плейлист",
+  "@renamePlaylist": {
+    "description": "renamePlaylist"
+  },
   "removePlaylist": "Удалить плейлист",
+  "@removePlaylist": {
+    "description": "removePlaylist"
+  },
   "CreateNewPlaylist": "Создать новый плейлист",
+  "@CreateNewPlaylist": {
+    "description": "CreateNewPlaylist"
+  },
   "cancel": "Отмена",
+  "@cancel": {
+    "description": "cancel"
+  },
   "create": "Создать",
+  "@create": {
+    "description": "create"
+  },
   "createnAdd": "Создать и добавить",
+  "@createnAdd": {
+    "description": "createnAdd"
+  },
   "noBookmarks": "Нет закладок!",
+  "@noBookmarks": {
+    "description": "noBookmarks"
+  },
   "startRadio": "Запустить радио",
+  "@startRadio": {
+    "description": "startRadio"
+  },
   "playNext": "Включить следующим",
+  "@playNext": {
+    "description": "playNext"
+  },
   "addToPlaylist": "Добавить в плейлист",
+  "@addToPlaylist": {
+    "description": "addToPlaylist"
+  },
   "noLibPlaylist": "У вас нет плейлистов в библиотеке!",
+  "@noLibPlaylist": {
+    "description": "noLibPlaylist"
+  },
   "enqueueSong": "Добавить эту песню в очередь",
+  "@enqueueSong": {
+    "description": "enqueueSong"
+  },
   "goToAlbum": "Перейти в альбом",
+  "@goToAlbum": {
+    "description": "goToAlbum"
+  },
   "viewArtist": "Показать исполнителя",
+  "@viewArtist": {
+    "description": "viewArtist"
+  },
   "shareSong": "Поделиться этой песней",
+  "@shareSong": {
+    "description": "shareSong"
+  },
   "removeFromCache": "Удалить из кэша",
+  "@removeFromCache": {
+    "description": "removeFromCache"
+  },
   "dynamic": "Динамический",
+  "@dynamic": {
+    "description": "dynamic"
+  },
   "systemDefault": "По умолчанию системы",
+  "@systemDefault": {
+    "description": "systemDefault"
+  },
   "dark": "Тёмный",
+  "@dark": {
+    "description": "dark"
+  },
   "light": "Светлый",
+  "@light": {
+    "description": "light"
+  },
   "quickPics": "Быстрый выбор",
+  "@quickPics": {
+    "description": "quickPics"
+  },
   "discover": "Обнаружить",
+  "@discover": {
+    "description": "discover"
+  },
   "trending": "В тренде",
+  "@trending": {
+    "description": "trending"
+  },
   "topMusicVid": "Лучшие музыкальные клипы",
+  "@topMusicVid": {
+    "description": "topMusicVid"
+  },
   "basedOnLast": "На основе последнего взаимодействия",
+  "@basedOnLast": {
+    "description": "basedOnLast"
+  },
   "cacheSongs": "Кэш песен",
+  "@cacheSongs": {
+    "description": "cacheSongs"
+  },
   "cacheSongsDes": "Кэширование песен во время игры на будущее / оффлайн воспроизведение, это займет дополнительное пространство на вашем устройстве",
+  "@cacheSongsDes": {
+    "description": "cacheSongsDes"
+  },
   "skipSilence": "Пропускать тишину",
+  "@skipSilence": {
+    "description": "skipSilence"
+  },
   "skipSilenceDes": "Тишина будет пропущена при воспроизведении музыки",
+  "@skipSilenceDes": {
+    "description": "skipSilenceDes"
+  },
   "streamingQuality": "Потоковое качество",
+  "@streamingQuality": {
+    "description": "streamingQuality"
+  },
   "streamingQualityDes": "Качество музыкального потока",
+  "@streamingQualityDes": {
+    "description": "streamingQualityDes"
+  },
   "high": "Высокое",
+  "@high": {
+    "description": "high"
+  },
   "low": "Низкое",
+  "@low": {
+    "description": "low"
+  },
   "equalizer": "Эквалайзер",
+  "@equalizer": {
+    "description": "equalizer"
+  },
   "equalizerDes": "Открыть системный эквалайзер",
+  "@equalizerDes": {
+    "description": "equalizerDes"
+  },
   "ignoreBatOpt": "Игнорировать оптимизацию батареи",
+  "@ignoreBatOpt": {
+    "description": "ignoreBatOpt"
+  },
   "ignoreBatOptDes": "Если вы столкнулись с проблемами уведомлений или воспроизведение остановлено оптимизацией системы, пожалуйста, включите эту опцию",
+  "@ignoreBatOptDes": {
+    "description": "ignoreBatOptDes"
+  },
   "status": "Статус",
+  "@status": {
+    "description": "status"
+  },
   "enabled": "Включено",
+  "@enabled": {
+    "description": "enabled"
+  },
   "disabled": "Отключено",
+  "@disabled": {
+    "description": "disabled"
+  },
   "github": "GitHub",
+  "@github": {
+    "description": "github"
+  },
   "githubDes": "Посмотреть исходный код на GitHub\nесли вам нравится этот проект, не забудьте поставить ⭐",
+  "@githubDes": {
+    "description": "githubDes"
+  },
   "by": "от",
+  "@by": {
+    "description": "by"
+  },
   "search": "Поиск",
+  "@search": {
+    "description": "search"
+  },
   "searchDes": "Песни, плейлист, альбом или исполнитель",
+  "@searchDes": {
+    "description": "searchDes"
+  },
   "searchRes": "Результаты поиска",
+  "@searchRes": {
+    "description": "searchRes"
+  },
   "for1": "для",
+  "@for1": {
+    "description": "for1"
+  },
   "videos": "Видео",
+  "@videos": {
+    "description": "videos"
+  },
   "viewAll": "Показать все",
+  "@viewAll": {
+    "description": "viewAll"
+  },
   "results": "Результаты",
+  "@results": {
+    "description": "results"
+  },
   "nomatch": "Совпадений не найдено",
+  "@nomatch": {
+    "description": "nomatch"
+  },
   "subscribers": "подписчики",
+  "@subscribers": {
+    "description": "subscribers"
+  },
   "radioNotAvailable": "Радио недоступно для этого исполнителя!",
+  "@radioNotAvailable": {
+    "description": "radioNotAvailable"
+  },
   "songRemovedfromQueue": "Удалено из очереди!",
+  "@songRemovedfromQueue": {
+    "description": "songRemovedfromQueue"
+  },
   "songRemovedfromQueueCurrSong": "Вы не можете удалить проигрываемую песню",
+  "@songRemovedfromQueueCurrSong": {
+    "description": "songRemovedfromQueueCurrSong"
+  },
   "songAddedToPlaylistAlert": "Песня добавлена в плейлист!",
+  "@songAddedToPlaylistAlert": {
+    "description": "songAddedToPlaylistAlert"
+  },
   "songAlreadyExists": "Песня уже существует!",
+  "@songAlreadyExists": {
+    "description": "songAlreadyExists"
+  },
   "songEnqueueAlert": "Песня добавлена в очередь!",
+  "@songEnqueueAlert": {
+    "description": "songEnqueueAlert"
+  },
   "errorOccuredAlert": "Произошла ошибка!",
+  "@errorOccuredAlert": {
+    "description": "errorOccuredAlert"
+  },
   "playlistCreatedAlert": "Плейлист создан!",
+  "@playlistCreatedAlert": {
+    "description": "playlistCreatedAlert"
+  },
   "playlistCreatednsongAddedAlert": "Плейлист создан и песня добавлена!",
+  "@playlistCreatednsongAddedAlert": {
+    "description": "playlistCreatednsongAddedAlert"
+  },
   "playlistRenameAlert": "Переименовано успешно!",
+  "@playlistRenameAlert": {
+    "description": "playlistRenameAlert"
+  },
   "playlistRemovedAlert": "Плейлист удален!",
+  "@playlistRemovedAlert": {
+    "description": "playlistRemovedAlert"
+  },
   "playlistBookmarkAddAlert": "Плейлист добавлен в закладки!",
+  "@playlistBookmarkAddAlert": {
+    "description": "playlistBookmarkAddAlert"
+  },
   "playlistBookmarkRemoveAlert": "Плейлист удален из закладок!",
+  "@playlistBookmarkRemoveAlert": {
+    "description": "playlistBookmarkRemoveAlert"
+  },
   "albumBookmarkAddAlert": "Альбом в закладках!",
+  "@albumBookmarkAddAlert": {
+    "description": "albumBookmarkAddAlert"
+  },
   "artistDesNotAvailable": "Описание недоступно!",
+  "@artistDesNotAvailable": {
+    "description": "artistDesNotAvailable"
+  },
   "newVersionAvailable": "Доступна новая версия!",
+  "@newVersionAvailable": {
+    "description": "newVersionAvailable"
+  },
   "dontShowInfoAgain": "Не показывать эту информацию снова",
+  "@dontShowInfoAgain": {
+    "description": "dontShowInfoAgain"
+  },
   "dismiss": "Скрыть",
+  "@dismiss": {
+    "description": "dismiss"
+  },
   "notaSongVideo": "Не является видео!",
+  "@notaSongVideo": {
+    "description": "notaSongVideo"
+  },
   "albumBookmarkRemoveAlert": "Альбом удален из закладок!",
+  "@albumBookmarkRemoveAlert": {
+    "description": "albumBookmarkRemoveAlert"
+  },
   "artistBookmarkAddAlert": "Исполнитель в закладках!",
+  "@artistBookmarkAddAlert": {
+    "description": "artistBookmarkAddAlert"
+  },
   "artistBookmarkRemoveAlert": "Исполнитель удален из закладок!",
+  "@artistBookmarkRemoveAlert": {
+    "description": "artistBookmarkRemoveAlert"
+  },
   "notaValidLink": "Некорректная ссылка!",
+  "@notaValidLink": {
+    "description": "notaValidLink"
+  },
   "operationFailed": "Операция не удалась",
+  "@operationFailed": {
+    "description": "operationFailed"
+  },
   "removeFromQueue": "Удалить из очереди",
+  "@removeFromQueue": {
+    "description": "removeFromQueue"
+  },
   "themeMode": "Режим темы",
+  "@themeMode": {
+    "description": "themeMode"
+  },
   "setDiscoverContent": "Настроить контент на вкладке открытий",
+  "@setDiscoverContent": {
+    "description": "setDiscoverContent"
+  },
   "songRemovedAlert": "Удалено из",
+  "@songRemovedAlert": {
+    "description": "songRemovedAlert"
+  },
   "lyricsNotAvailable": "Слова песни не доступны!",
+  "@lyricsNotAvailable": {
+    "description": "lyricsNotAvailable"
+  },
   "linkPipedDes": "Связать с Piped для плейлистов",
+  "@linkPipedDes": {
+    "description": "linkPipedDes"
+  },
   "linkAlert": "Успешно привязано!",
+  "@linkAlert": {
+    "description": "linkAlert"
+  },
   "unlinkAlert": "Успешно отвязано!",
+  "@unlinkAlert": {
+    "description": "unlinkAlert"
+  },
   "reset": "Сбросить",
+  "@reset": {
+    "description": "reset"
+  },
   "resetblacklistedplaylistDes": "Сбросить все плейлисты Piped из черного списка",
+  "@resetblacklistedplaylistDes": {
+    "description": "resetblacklistedplaylistDes"
+  },
   "goToDownloadPage": "Нажмите здесь, чтобы перейти на страницу загрузки",
+  "@goToDownloadPage": {
+    "description": "goToDownloadPage"
+  },
   "local": "На устройстве",
+  "@local": {
+    "description": "local"
+  },
   "link": "Привязать",
+  "@link": {
+    "description": "link"
+  },
   "unLink": "Отвязать",
+  "@unLink": {
+    "description": "unLink"
+  },
   "selectAuthIns": "Выберите сервер аутентификации",
+  "@selectAuthIns": {
+    "description": "selectAuthIns"
+  },
   "username": "Имя пользователя",
+  "@username": {
+    "description": "username"
+  },
   "password": "Пароль",
+  "@password": {
+    "description": "password"
+  },
   "playlistBlacklistAlert": "Плейлист занесен в черный список!",
+  "@playlistBlacklistAlert": {
+    "description": "playlistBlacklistAlert"
+  },
   "blacklistPlstResetAlert": "Сброс выполнен успешно!",
+  "@blacklistPlstResetAlert": {
+    "description": "blacklistPlstResetAlert"
+  },
   "resetblacklistedplaylist": "Сбросить плейлисты из черного списка",
+  "@resetblacklistedplaylist": {
+    "description": "resetblacklistedplaylist"
+  },
   "stopMusicOnTaskClear": "Остановить музыку после выполнения задач",
+  "@stopMusicOnTaskClear": {
+    "description": "stopMusicOnTaskClear"
+  },
   "stopMusicOnTaskClearDes": "Воспроизведение музыки остановится, когда приложение будет удалено из диспетчера задач",
+  "@stopMusicOnTaskClearDes": {
+    "description": "stopMusicOnTaskClearDes"
+  },
   "communityplaylists": "Плейлисты сообщества",
+  "@communityplaylists": {
+    "description": "communityplaylists"
+  },
   "languageDes": "Язык приложения",
+  "@languageDes": {
+    "description": "languageDes"
+  },
   "customInsSelectMsg": "Пожалуйста, выберите пользовательский сервер",
+  "@customInsSelectMsg": {
+    "description": "customInsSelectMsg"
+  },
   "allFieldsReqMsg": "Все поля обязательны",
+  "@allFieldsReqMsg": {
+    "description": "allFieldsReqMsg"
+  },
   "rename": "Переименовать",
+  "@rename": {
+    "description": "rename"
+  },
   "selectAuthInsMsg": "Пожалуйста, выберите сервер аутентификации!",
+  "@selectAuthInsMsg": {
+    "description": "selectAuthInsMsg"
+  },
   "customIns": "Пользовательский сервер",
+  "@customIns": {
+    "description": "customIns"
+  },
   "Piped": "Piped",
+  "@Piped": {
+    "description": "Piped"
+  },
   "topmusicvideos": "Лучшие музыкальные клипы",
+  "@topmusicvideos": {
+    "description": "topmusicvideos"
+  },
   "singles": "Синглы",
+  "@singles": {
+    "description": "singles"
+  },
   "language": "Язык",
+  "@language": {
+    "description": "language"
+  },
   "hintApiUrl": "URL-адрес API сервера Piped",
+  "@hintApiUrl": {
+    "description": "hintApiUrl"
+  },
   "removeFromPlaylist": "Удалить из плейлиста",
+  "@removeFromPlaylist": {
+    "description": "removeFromPlaylist"
+  },
   "featuredplaylists": "Избранные плейлисты",
+  "@featuredplaylists": {
+    "description": "featuredplaylists"
+  },
   "quickpicks": "Быстрый выбор",
+  "@quickpicks": {
+    "description": "quickpicks"
+  },
   "downloads": "Загрузки",
+  "@downloads": {
+    "description": "downloads"
+  },
   "removeFromLib": "Удалить из библиотеки",
+  "@removeFromLib": {
+    "description": "removeFromLib"
+  },
   "downloadingFormat": "Загрузка формата файла",
+  "@downloadingFormat": {
+    "description": "downloadingFormat"
+  },
   "songAlreadyOfflineAlert": "Песня уже офлайн в кэше",
+  "@songAlreadyOfflineAlert": {
+    "description": "songAlreadyOfflineAlert"
+  },
   "downloadLocation": "Папка для загрузок",
+  "@downloadLocation": {
+    "description": "downloadLocation"
+  },
   "downloadingFormatDes": "Выберите формат файла загрузки. «Opus» обеспечит лучшее качество",
+  "@downloadingFormatDes": {
+    "description": "downloadingFormatDes"
+  },
   "sleepTimer": "Таймер сна",
+  "@sleepTimer": {
+    "description": "sleepTimer"
+  },
   "synced": "Синхронизировано",
+  "@synced": {
+    "description": "synced"
+  },
   "library": "Библиотека",
+  "@library": {
+    "description": "library"
+  },
   "minutes": "минуты",
+  "@minutes": {
+    "description": "minutes"
+  },
   "cancelTimerAlert": "Таймер сна отключен",
+  "@cancelTimerAlert": {
+    "description": "cancelTimerAlert"
+  },
   "add5Minutes": "Добавить 5 минут",
+  "@add5Minutes": {
+    "description": "add5Minutes"
+  },
   "reArrangePlaylist": "Упорядочить плейлист",
+  "@reArrangePlaylist": {
+    "description": "reArrangePlaylist"
+  },
   "removeMultiple": "Убрать несколько песен",
+  "@removeMultiple": {
+    "description": "removeMultiple"
+  },
   "addMultipleSongs": "Добавить песни в плейлист",
+  "@addMultipleSongs": {
+    "description": "addMultipleSongs"
+  },
   "deleteDownloadData": "Удалить из загруженных",
+  "@deleteDownloadData": {
+    "description": "deleteDownloadData"
+  },
   "enableBottomNav": "Панель навигации снизу",
+  "@enableBottomNav": {
+    "description": "enableBottomNav"
+  },
   "plain": "Обычно",
+  "@plain": {
+    "description": "plain"
+  },
   "disableTransitionAnimation": "Отключить анимацию перехода",
+  "@disableTransitionAnimation": {
+    "description": "disableTransitionAnimation"
+  },
   "cancelTimer": "Отменить таймер",
+  "@cancelTimer": {
+    "description": "cancelTimer"
+  },
   "disableTransitionAnimationDes": "Включите эту опцию, чтобы отключить анимацию перехода между вкладками",
+  "@disableTransitionAnimationDes": {
+    "description": "disableTransitionAnimationDes"
+  },
   "homeContentCount": "Количество контента на главной странице",
+  "@homeContentCount": {
+    "description": "homeContentCount"
+  },
   "homeContentCountDes": "Выберите примерное число изначального контента на главном экране. Меньше число - быстрее загрузка",
+  "@homeContentCountDes": {
+    "description": "homeContentCountDes"
+  },
   "enableBottomNavDes": "Переключится на расположение навигационной панели снизу",
+  "@enableBottomNavDes": {
+    "description": "enableBottomNavDes"
+  },
   "pipedplstSyncAlert": "Плейлист Piped синхронизирован!",
+  "@pipedplstSyncAlert": {
+    "description": "pipedplstSyncAlert"
+  },
   "sleepTimeSetAlert": "Ваш таймер сна установлен",
+  "@sleepTimeSetAlert": {
+    "description": "sleepTimeSetAlert"
+  },
   "syncedLyricsNotAvailable": "Синхронизированные слова песни недоступны!",
+  "@syncedLyricsNotAvailable": {
+    "description": "syncedLyricsNotAvailable"
+  },
   "endOfThisSong": "Конец песни",
+  "@endOfThisSong": {
+    "description": "endOfThisSong"
+  },
   "upNext": "Следующий",
+  "@upNext": {
+    "description": "upNext"
+  },
   "restoreLastPlaybackSessionDes": "Автоматически восстанавливает последнюю сессию прослушивания при запуске приложения",
+  "@restoreLastPlaybackSessionDes": {
+    "description": "restoreLastPlaybackSessionDes"
+  },
   "restoreLastPlaybackSession": "Восстановливать последнюю сессию прослушивания",
+  "@restoreLastPlaybackSession": {
+    "description": "restoreLastPlaybackSession"
+  },
   "backgroundPlay": "Фоновое проигрывание музыки",
+  "@backgroundPlay": {
+    "description": "backgroundPlay"
+  },
   "backgroundPlayDes": "Включает/отключает проигрывание музыки на заднем фоне (Когда приложение работает на заднем фоне, оно может быть вызвано из системного трея)",
+  "@backgroundPlayDes": {
+    "description": "backgroundPlayDes"
+  },
   "clearImgCache": "Очистить кэш изображений",
+  "@clearImgCache": {
+    "description": "clearImgCache"
+  },
   "cacheHomeScreenData": "Кэшировать контент с главной страницы",
+  "@cacheHomeScreenData": {
+    "description": "cacheHomeScreenData"
+  },
   "cacheHomeScreenDataDes": "Включает кэширование контента с главного экрана, главный экран будет загружаться мгновенно, если эта опция включена",
+  "@cacheHomeScreenDataDes": {
+    "description": "cacheHomeScreenDataDes"
+  },
   "deleteDownloadedDataAlert": "Успешно удалено из загруженных!",
+  "@deleteDownloadedDataAlert": {
+    "description": "deleteDownloadedDataAlert"
+  },
   "exportDowloadedFiles": "Экспортировать скачанные файлы",
+  "@exportDowloadedFiles": {
+    "description": "exportDowloadedFiles"
+  },
   "exportDowloadedFilesDes": "Нажмите сюда, чтобы экспортировать скачанные файлы из папки приложения во внешнюю папку",
+  "@exportDowloadedFilesDes": {
+    "description": "exportDowloadedFilesDes"
+  },
   "exportedFileLocation": "Место экспортирования скачанных файлов",
+  "@exportedFileLocation": {
+    "description": "exportedFileLocation"
+  },
   "export": "Экспортировать",
+  "@export": {
+    "description": "export"
+  },
   "exporting": "Экспортирование...",
+  "@exporting": {
+    "description": "exporting"
+  },
   "scanning": "Сканирование...",
+  "@scanning": {
+    "description": "scanning"
+  },
   "downFilesFound": "скачанных файлов найдено",
+  "@downFilesFound": {
+    "description": "downFilesFound"
+  },
   "close": "Закрывать",
+  "@close": {
+    "description": "close"
+  },
   "exportMsg": "Файлы успешно экспортированы",
+  "@exportMsg": {
+    "description": "exportMsg"
+  },
   "clearImgCacheAlert": "Кэш изображений успешно очищен",
+  "@clearImgCacheAlert": {
+    "description": "clearImgCacheAlert"
+  },
   "clearImgCacheDes": "Нажмите здесь чтобы очистить кэшированные миниатюры/изображения. (Не рекомендуется, если только вы не хотите обновить кэшированные изображения)",
+  "@clearImgCacheDes": {
+    "description": "clearImgCacheDes"
+  },
   "openIn": "Открыть в",
+  "@openIn": {
+    "description": "openIn"
+  },
   "closeApp": "Закрыть приложение",
+  "@closeApp": {
+    "description": "closeApp"
+  },
   "queueShufflingDeniedMsg": "Очередь нельзя перемешать, когда включен режим перемешивания",
+  "@queueShufflingDeniedMsg": {
+    "description": "queueShufflingDeniedMsg"
+  },
   "queuerearrangingDeniedMsg": "Очередь воспроизведения нельзя переупорядочить при включённом режиме перемешивания",
+  "@queuerearrangingDeniedMsg": {
+    "description": "queuerearrangingDeniedMsg"
+  },
   "networkError": "Ошибка сети! Проверьте подключение к сети.",
+  "@networkError": {
+    "description": "networkError"
+  },
   "personalisation": "Персонализация",
+  "@personalisation": {
+    "description": "personalisation"
+  },
   "downloadError3": "Загрузка не удалась из-за ошибки сети/потока! Попробуйте ещё раз",
+  "@downloadError3": {
+    "description": "downloadError3"
+  },
   "songNotPlayable": "Воспроизведение песни невозможно из-за ограничений сервера!",
+  "@songNotPlayable": {
+    "description": "songNotPlayable"
+  },
   "appInfo": "Справка",
+  "@appInfo": {
+    "description": "appInfo"
+  },
   "download": "Скачать",
+  "@download": {
+    "description": "download"
+  },
   "downloadError2": "Запрошенная песня не может быть скачана из-за ограничений сервера. Попробуйте снова",
+  "@downloadError2": {
+    "description": "downloadError2"
+  },
   "musicAndPlayback": "Музыка и Воспроизведение",
+  "@musicAndPlayback": {
+    "description": "musicAndPlayback"
+  },
   "content": "Содержание",
+  "@content": {
+    "description": "content"
+  },
   "loudnessNormalization": "Нормализация громкости",
+  "@loudnessNormalization": {
+    "description": "loudnessNormalization"
+  },
   "loudnessNormalizationDes": "Устанавливает одинаковый уровень громкости на всех песнях (Экспериментально) (Не будет работать с песнями, скачанными на версии 1.10.0 и ниже)",
+  "@loudnessNormalizationDes": {
+    "description": "loudnessNormalizationDes"
+  },
   "urlSearchDes": "Клик по Url открывает\\проигрывает контент",
+  "@urlSearchDes": {
+    "description": "urlSearchDes"
+  },
   "bitrate": "Битрейт",
+  "@bitrate": {
+    "description": "bitrate"
+  },
   "loudnessDb": "Громкость (Db)",
+  "@loudnessDb": {
+    "description": "loudnessDb"
+  },
   "backupSettingsAndPlaylistsDes": "Сохраняет все настройки, плейлисты и логин в файл бэкапа",
+  "@backupSettingsAndPlaylistsDes": {
+    "description": "backupSettingsAndPlaylistsDes"
+  },
   "androidBackupWarning": "Не проверено: при установке флажка после загрузки более 60 файлов процесс может занять большой объем памяти и привести к крашу телефона или приложения. Действуйте на свой страх и риск.",
+  "@androidBackupWarning": {
+    "description": "androidBackupWarning"
+  },
   "restoreSettingsAndPlaylistsDes": "Восстановляет все настройки, логин, плейлисты из бэкапа. Стирает все текущие данные",
+  "@restoreSettingsAndPlaylistsDes": {
+    "description": "restoreSettingsAndPlaylistsDes"
+  },
   "restoring": "Восстановляем...",
+  "@restoring": {
+    "description": "restoring"
+  },
   "includeDownloadedFiles": "Включать загруженные песни",
+  "@includeDownloadedFiles": {
+    "description": "includeDownloadedFiles"
+  },
   "songInfo": "Информация",
+  "@songInfo": {
+    "description": "songInfo"
+  },
   "title": "Название",
+  "@title": {
+    "description": "title"
+  },
   "restore": "Восстановить",
+  "@restore": {
+    "description": "restore"
+  },
   "id": "Id",
+  "@id": {
+    "description": "id"
+  },
   "duration": "Длина",
+  "@duration": {
+    "description": "duration"
+  },
   "audioCodec": "Кодек",
+  "@audioCodec": {
+    "description": "audioCodec"
+  },
   "backupInProgress": "Бэкап в процессе...",
+  "@backupInProgress": {
+    "description": "backupInProgress"
+  },
   "restoreAppData": "Восстановить данные приложения",
+  "@restoreAppData": {
+    "description": "restoreAppData"
+  },
   "restartApp": "Перезапустить",
+  "@restartApp": {
+    "description": "restartApp"
+  },
   "backupMsg": "Бэкап успешно сохранён!",
+  "@backupMsg": {
+    "description": "backupMsg"
+  },
   "backFilesFound": "база данных найдена",
+  "@backFilesFound": {
+    "description": "backFilesFound"
+  },
   "restoreMsg": "Восстановлено успешно!\nИзменения войду в силу после перезапуска",
+  "@restoreMsg": {
+    "description": "restoreMsg"
+  },
   "backupAppData": "Сделать бэкап приложения",
+  "@backupAppData": {
+    "description": "backupAppData"
+  },
   "backup": "Бэкап",
+  "@backup": {
+    "description": "backup"
+  },
   "letsStrart": "Давайте начнём...",
+  "@letsStrart": {
+    "description": "letsStrart"
+  },
   "processFiles": "Обработка файлов...",
+  "@processFiles": {
+    "description": "processFiles"
+  },
   "gesture": "Жест",
+  "@gesture": {
+    "description": "gesture"
+  },
   "playerUi": "Интерфейс плеера",
+  "@playerUi": {
+    "description": "playerUi"
+  },
   "playerUiDes": "Выберите интерфейс плеера",
+  "@playerUiDes": {
+    "description": "playerUiDes"
+  },
   "standard": "Стандарт",
+  "@standard": {
+    "description": "standard"
+  },
   "shuffleQueue": "Перемешать очередь",
+  "@shuffleQueue": {
+    "description": "shuffleQueue"
+  },
   "queueLoopNotDisMsg2": "Режим цикла очереди нельзя включить в режиме радио.",
+  "@queueLoopNotDisMsg2": {
+    "description": "queueLoopNotDisMsg2"
+  },
   "enableSlidableAction": "Включить скользящие действия",
+  "@enableSlidableAction": {
+    "description": "enableSlidableAction"
+  },
   "autoDownFavSongDes": "Автоматически загружать избранные песни при добавлении в избранное",
+  "@autoDownFavSongDes": {
+    "description": "autoDownFavSongDes"
+  },
   "playnextMsg": "Предстоящие",
+  "@playnextMsg": {
+    "description": "playnextMsg"
+  },
   "autoDownFavSong": "Автоматическая загрузка любимых песен",
+  "@autoDownFavSong": {
+    "description": "autoDownFavSong"
+  },
   "enableSlidableActionDes": "Включить скользящие действия на плитке песни",
+  "@enableSlidableActionDes": {
+    "description": "enableSlidableActionDes"
+  },
   "queueLoop": "Цикл очереди",
+  "@queueLoop": {
+    "description": "queueLoop"
+  },
   "queueLoopNotDisMsg1": "Режим цикла очереди нельзя отключить, если включен режим перемешивания.",
+  "@queueLoopNotDisMsg1": {
+    "description": "queueLoopNotDisMsg1"
+  },
   "resetToDefaultMsg": "Сброс настроек до значений по умолчанию завершен. Пожалуйста, перезапустите приложение",
+  "@resetToDefaultMsg": {
+    "description": "resetToDefaultMsg"
+  },
   "randomSelection": "Случайный выбор",
+  "@randomSelection": {
+    "description": "randomSelection"
+  },
   "misc": "Разное",
+  "@misc": {
+    "description": "misc"
+  },
   "resetToDefault": "Восстановить настройки по умолчанию",
+  "@resetToDefault": {
+    "description": "resetToDefault"
+  },
   "resetToDefaultDes": "Сбросить настройки приложения по умолчанию (требуется перезапуск)",
+  "@resetToDefaultDes": {
+    "description": "resetToDefaultDes"
+  },
   "album": "Альбом",
+  "@album": {
+    "description": "album"
+  },
   "playingfromAlbum": "Воспроизвести из альбома",
+  "@playingfromAlbum": {
+    "description": "playingfromAlbum"
+  },
   "playingfromSelection": "Воспроизвести выбранное",
+  "@playingfromSelection": {
+    "description": "playingfromSelection"
+  },
   "playingfromArtist": "Воспроизвести исполнителя",
+  "@playingfromArtist": {
+    "description": "playingfromArtist"
+  },
   "randomRadio": "Случайное радио",
+  "@randomRadio": {
+    "description": "randomRadio"
+  },
   "autoOpenPlayer": "Автоматически открывать экран проигрывателя",
+  "@autoOpenPlayer": {
+    "description": "autoOpenPlayer"
+  },
   "autoOpenPlayerDes": "Включить/выключить автоматическое открытие плеера на весь экран при выборе песни для воспроизведения",
+  "@autoOpenPlayerDes": {
+    "description": "autoOpenPlayerDes"
+  },
   "playingfromPlaylist": "Воспроизвести плейлист",
+  "@playingfromPlaylist": {
+    "description": "playingfromPlaylist"
+  },
   "reArrangeSongs": "Переставить песни",
+  "@reArrangeSongs": {
+    "description": "reArrangeSongs"
+  },
   "selectSongs": "Выбрать песни",
+  "@selectSongs": {
+    "description": "selectSongs"
+  },
   "selectAll": "Выбрать всё",
+  "@selectAll": {
+    "description": "selectAll"
+  },
   "exportPlaylist": "Экспортировать плейлист",
+  "@exportPlaylist": {
+    "description": "exportPlaylist"
+  },
   "exportingPlaylist": "Экспортируем плейлист...",
+  "@exportingPlaylist": {
+    "description": "exportingPlaylist"
+  },
   "playlistExportedMsg": "Плейлист успешно экспортирован в",
+  "@playlistExportedMsg": {
+    "description": "playlistExportedMsg"
+  },
   "exportError": "Ошибка при экспорте плейлиста",
+  "@exportError": {
+    "description": "exportError"
+  },
   "exportErrorStorage": "Недостаточно места для хранения",
+  "@exportErrorStorage": {
+    "description": "exportErrorStorage"
+  },
   "importLargeFileNote": "Примечание: импорт больших плейлистов может занять больше времени",
+  "@importLargeFileNote": {
+    "description": "importLargeFileNote"
+  },
   "importPlaylist": "Импортировать плейлист",
+  "@importPlaylist": {
+    "description": "importPlaylist"
+  },
   "importError": "Ошибка при импорте списка воспроизведения",
+  "@importError": {
+    "description": "importError"
+  },
   "invalidPlaylistFile": "Недопустимая структура файла плейлиста",
+  "@invalidPlaylistFile": {
+    "description": "invalidPlaylistFile"
+  },
   "exportErrorPermission": "Разрешение отказано при экспорте",
+  "@exportErrorPermission": {
+    "description": "exportErrorPermission"
+  },
   "exportErrorFormat": "Ошибка форматирования данных плейлиста",
+  "@exportErrorFormat": {
+    "description": "exportErrorFormat"
+  },
   "importingPlaylist": "Импорт списка воспроизведения...",
+  "@importingPlaylist": {
+    "description": "importingPlaylist"
+  },
   "importPlaylistDesc": "Выберите ранее экспортированный файл JSON с плейлистом для импорта",
+  "@importPlaylistDesc": {
+    "description": "importPlaylistDesc"
+  },
   "selectFile": "Выбрать файл",
+  "@selectFile": {
+    "description": "selectFile"
+  },
   "playlistImportedMsg": "Плейлист импортирован успешно",
+  "@playlistImportedMsg": {
+    "description": "playlistImportedMsg"
+  },
   "importErrorFileAccess": "Не удалось получить доступ к выбранному файлу",
+  "@importErrorFileAccess": {
+    "description": "importErrorFileAccess"
+  },
   "importErrorFormat": "Недопустимый формат файла",
+  "@importErrorFormat": {
+    "description": "importErrorFormat"
+  },
   "importErrorDatabase": "Ошибка при сохранении в базе данных",
+  "@importErrorDatabase": {
+    "description": "importErrorDatabase"
+  },
   "fileNotFound": "Файл не найден",
+  "@fileNotFound": {
+    "description": "fileNotFound"
+  },
   "exportPlaylistCsv": "Экспортировать плейлист как CSV",
+  "@exportPlaylistCsv": {
+    "description": "exportPlaylistCsv"
+  },
   "exportPlaylistJson": "Экспортировать плейлист в JSON",
+  "@exportPlaylistJson": {
+    "description": "exportPlaylistJson"
+  },
   "exportPlaylistJsonSubtitle": "Этот формат можно импортировать",
+  "@exportPlaylistJsonSubtitle": {
+    "description": "exportPlaylistJsonSubtitle"
+  },
   "exportPlaylistCsvSubtitle": "Импорт здесь недоступен",
+  "@exportPlaylistCsvSubtitle": {
+    "description": "exportPlaylistCsvSubtitle"
+  },
   "exportToYouTubeMusic": "Экспортировать в YouTube Music",
+  "@exportToYouTubeMusic": {
+    "description": "exportToYouTubeMusic"
+  },
   "exportToYouTubeMusicSubtitle": "Ваш плейлист (до 50 песен) будет добавлен в текущую очередь. Не забудьте добавить его в плейлист или сохранить после открытия в YtMusic",
+  "@exportToYouTubeMusicSubtitle": {
+    "description": "exportToYouTubeMusicSubtitle"
+  },
   "linkCopied": "Ссылка скопирована в буфер обмена",
+  "@linkCopied": {
+    "description": "linkCopied"
+  },
   "keepScreenOnWhilePlaying": "Держать экран включенным во время воспроизведения",
+  "@keepScreenOnWhilePlaying": {
+    "description": "keepScreenOnWhilePlaying"
+  },
   "keepScreenOnWhilePlayingDes": "Если включено, экран устройства будет оставаться включенным во время воспроизведения музыки",
+  "@keepScreenOnWhilePlayingDes": {
+    "description": "keepScreenOnWhilePlayingDes"
+  },
   "auth_login_success": "Успешно авторизован",
   "@auth_login_success": {
-    "description": ""
+    "description": "auth_login_success"
   },
   "settings_cloud_backup": "Облачное резервное копирование",
   "@settings_cloud_backup": {
-    "description": ""
+    "description": "settings_cloud_backup"
   },
   "settings_migration_title": "Миграция с Joss Music Kotlin",
   "@settings_migration_title": {
-    "description": ""
+    "description": "settings_migration_title"
   },
   "backup_confirm_question": "Вы хотите выполнить резервное копирование?",
   "@backup_confirm_question": {
-    "description": ""
+    "description": "backup_confirm_question"
   },
   "backup_selection_prompt": "Выберите, какие данные для резервного копирования",
   "@backup_selection_prompt": {
-    "description": ""
+    "description": "backup_selection_prompt"
   },
   "search_recent_title": "Недавние поиски",
   "@search_recent_title": {
-    "description": ""
+    "description": "search_recent_title"
   },
   "back": "Возвращаться",
   "@back": {
-    "description": ""
+    "description": "back"
   },
   "auth_forgot_password": "Я забыл свой пароль",
   "@auth_forgot_password": {
-    "description": ""
+    "description": "auth_forgot_password"
   },
   "auth_btn_login": "Авторизоваться",
   "@auth_btn_login": {
-    "description": ""
+    "description": "auth_btn_login"
   },
   "auth_btn_register": "Зарегистрироваться",
   "@auth_btn_register": {
-    "description": ""
+    "description": "auth_btn_register"
   },
   "email": "Электронная почта",
   "@email": {
-    "description": ""
+    "description": "email"
   },
   "password_text": "Пароль",
   "@password_text": {
@@ -326,372 +1154,869 @@
   },
   "auth_confirm_password": "Подтвердите пароль",
   "@auth_confirm_password": {
-    "description": ""
+    "description": "auth_confirm_password"
   },
   "auth_welcome_title": "Добро пожаловать в Estrella Music",
   "@auth_welcome_title": {
-    "description": ""
+    "description": "auth_welcome_title"
   },
   "auth_welcome_subtitle": "Добро пожаловать в Estrella Music",
   "@auth_welcome_subtitle": {
-    "description": ""
-  },
-  "@username": {
-    "description": ""
+    "description": "auth_welcome_subtitle"
   },
   "auth_first_name": "Имя",
   "@auth_first_name": {
-    "description": ""
+    "description": "auth_first_name"
   },
   "auth_last_name": "Фамилия",
   "@auth_last_name": {
-    "description": ""
+    "description": "auth_last_name"
   },
   "auth_agree_personal_data": "Примите использовать неправильные данные...",
   "@auth_agree_personal_data": {
-    "description": ""
+    "description": "auth_agree_personal_data"
   },
   "settings_general_section": "Общий",
   "@settings_general_section": {
-    "description": ""
+    "description": "settings_general_section"
   },
   "settings_logout": "Выйти",
   "@settings_logout": {
-    "description": ""
+    "description": "settings_logout"
   },
   "settings_cloud_backup_desc": "Загружайте, восстанавливайте и управляйте...",
   "@settings_cloud_backup_desc": {
-    "description": ""
+    "description": "settings_cloud_backup_desc"
   },
   "settings_migration_desc": "Импортируйте плейлисты, песни...",
   "@settings_migration_desc": {
-    "description": ""
+    "description": "settings_migration_desc"
   },
   "backup_btn_restart": "Перезапустить приложение",
   "@backup_btn_restart": {
-    "description": ""
+    "description": "backup_btn_restart"
   },
   "backup_btn_upload": "Загрузите резервную копию сейчас",
   "@backup_btn_upload": {
-    "description": ""
+    "description": "backup_btn_upload"
   },
   "backup_no_backups": "Резервных копий пока нет...",
   "@backup_no_backups": {
-    "description": ""
+    "description": "backup_no_backups"
   },
   "backup_auth_required": "Вам нужна активная сессия...",
   "@backup_auth_required": {
-    "description": ""
+    "description": "backup_auth_required"
   },
   "backup_upload_success": "Резервная копия загружена правильно.",
   "@backup_upload_success": {
-    "description": ""
+    "description": "backup_upload_success"
   },
   "backup_restore_success": "Резервная копия восстановлена. Перезапустите приложение.",
   "@backup_restore_success": {
-    "description": ""
+    "description": "backup_restore_success"
   },
   "backup_delete_success": "Резервная копия удалена.",
   "@backup_delete_success": {
-    "description": ""
+    "description": "backup_delete_success"
   },
   "genre_pop": "Поп",
   "@genre_pop": {
-    "description": ""
+    "description": "genre_pop"
   },
   "genre_rock": "Камень",
   "@genre_rock": {
-    "description": ""
+    "description": "genre_rock"
   },
   "genre_hiphop": "хип-хоп",
   "@genre_hiphop": {
-    "description": ""
+    "description": "genre_hiphop"
   },
   "genre_electronic": "Электроника",
   "@genre_electronic": {
-    "description": ""
+    "description": "genre_electronic"
   },
   "genre_jazz": "Джаз",
   "@genre_jazz": {
-    "description": ""
+    "description": "genre_jazz"
   },
   "genre_latin": "латинский",
   "@genre_latin": {
-    "description": ""
+    "description": "genre_latin"
   },
   "migration_btn_select": "Выбрать файл и импортировать",
   "@migration_btn_select": {
-    "description": ""
-  },
-  "@close": {
-    "description": ""
+    "description": "migration_btn_select"
   },
   "forgottenFavorites": "забытое избранное",
   "@forgottenFavorites": {
-    "description": ""
+    "description": "forgottenFavorites"
   },
   "mostListenedSong": "Самая прослушиваемая песня",
   "@mostListenedSong": {
-    "description": ""
+    "description": "mostListenedSong"
   },
   "reproducedBy": "Воспроизведено",
   "@reproducedBy": {
-    "description": ""
+    "description": "reproducedBy"
   },
   "recentSearches": "Недавние поиски",
   "@recentSearches": {
-    "description": ""
+    "description": "recentSearches"
   },
   "popularTracks": "Популярные треки",
   "@popularTracks": {
-    "description": ""
+    "description": "popularTracks"
   },
   "latestRelease": "Последний выпуск",
   "@latestRelease": {
-    "description": ""
+    "description": "latestRelease"
   },
   "follow": "Продолжать",
   "@follow": {
-    "description": ""
+    "description": "follow"
   },
   "following": "Следующий",
   "@following": {
-    "description": ""
+    "description": "following"
   },
   "listenNow": "Слушай сейчас",
   "@listenNow": {
-    "description": ""
+    "description": "listenNow"
   },
   "video": "Видео",
   "@video": {
-    "description": ""
+    "description": "video"
   },
   "about": "О",
   "@about": {
-    "description": ""
+    "description": "about"
   },
   "readMore": "Читать далее",
   "@readMore": {
-    "description": ""
+    "description": "readMore"
   },
   "speedAndPitch": "Скорость и шаг",
   "@speedAndPitch": {
-    "description": ""
+    "description": "speedAndPitch"
   },
   "playbackSpeed": "Скорость воспроизведения",
   "@playbackSpeed": {
-    "description": ""
+    "description": "playbackSpeed"
   },
   "songPitch": "тон песни",
   "@songPitch": {
-    "description": ""
+    "description": "songPitch"
   },
   "musicRecognition": "Распознавание музыки",
   "@musicRecognition": {
-    "description": ""
+    "description": "musicRecognition"
   },
   "listeningToEnvironment": "Слушаем окружающую среду...",
   "@listeningToEnvironment": {
-    "description": ""
+    "description": "listeningToEnvironment"
   },
   "micInstruction": "Убедитесь, что музыка рядом с микрофоном играет достаточно громко.",
   "@micInstruction": {
-    "description": ""
+    "description": "micInstruction"
   },
   "processingAudio": "Обработка звука...",
   "@processingAudio": {
-    "description": ""
+    "description": "processingAudio"
   },
   "shazamSearching": "Поиск совпадений в базе данных Shazam...",
   "@shazamSearching": {
-    "description": ""
+    "description": "shazamSearching"
   },
   "songFound": "Песня найдена!",
   "@songFound": {
-    "description": ""
+    "description": "songFound"
   },
   "playNow": "Играть сейчас",
   "@playNow": {
-    "description": ""
+    "description": "playNow"
   },
   "searchInLibrary": "Искать в библиотеке",
   "@searchInLibrary": {
-    "description": ""
+    "description": "searchInLibrary"
   },
   "noMatchesFound": "Нет совпадений",
   "@noMatchesFound": {
-    "description": ""
+    "description": "noMatchesFound"
   },
   "noMatchInstruction": "Не удалось найти ни одной песни в записанном аудио.",
   "@noMatchInstruction": {
-    "description": ""
+    "description": "noMatchInstruction"
   },
   "errorOccurred": "Произошла ошибка",
   "@errorOccurred": {
-    "description": ""
+    "description": "errorOccurred"
   },
   "playingRecognizedTrack": "Играю:",
   "@playingRecognizedTrack": {
-    "description": ""
+    "description": "playingRecognizedTrack"
   },
   "errorPlayingTrack": "Ошибка при воспроизведении:",
   "@errorPlayingTrack": {
-    "description": ""
+    "description": "errorPlayingTrack"
   },
   "welcome_title": "Ваша музыка, ваш путь",
+  "@welcome_title": {
+    "description": "welcome_title"
+  },
   "welcome_subtitle": "Выберите, как вы хотите теперь слушать Estrella Music.",
+  "@welcome_subtitle": {
+    "description": "welcome_subtitle"
+  },
   "welcome_intro": "Мы модернизировали нашу платформу. Старая система загрузки резервных копий вручную отключена. Теперь у вас есть два понятных способа управления вашей музыкальной библиотекой.",
+  "@welcome_intro": {
+    "description": "welcome_intro"
+  },
   "recommend_cloud": "Мы рекомендуем активировать облачный режим, чтобы получить возможности, подобные Spotify: синхронизация в реальном времени между всеми вашими устройствами и автоматическое резервное копирование без необходимости каких-либо действий.",
+  "@recommend_cloud": {
+    "description": "recommend_cloud"
+  },
   "swipe_prompt": "Проведите пальцем, чтобы просмотреть варианты ➔",
+  "@swipe_prompt": {
+    "description": "swipe_prompt"
+  },
   "local_title": "Локальный режим",
+  "@local_title": {
+    "description": "local_title"
+  },
   "local_subtitle": "Абсолютная конфиденциальность на вашем устройстве",
+  "@local_subtitle": {
+    "description": "local_subtitle"
+  },
   "local_b1": "Работает без необходимости входа в систему.",
+  "@local_b1": {
+    "description": "local_b1"
+  },
   "local_b2": "Вся ваша библиотека остается строго на этом компьютере.",
+  "@local_b2": {
+    "description": "local_b2"
+  },
   "local_b3": "Примечание. Резервное копирование в облако вручную не допускается. Если вы потеряете свое устройство или удалите приложение, ваши данные не смогут быть восстановлены.",
+  "@local_b3": {
+    "description": "local_b3"
+  },
   "local_btn": "Использовать только на этом устройстве",
+  "@local_btn": {
+    "description": "local_btn"
+  },
   "cloud_title": "Облачный режим (рекомендуется)",
+  "@cloud_title": {
+    "description": "cloud_title"
+  },
   "cloud_subtitle": "Синхронизация в реальном времени с Джоссом Редом",
+  "@cloud_subtitle": {
+    "description": "cloud_subtitle"
+  },
   "cloud_b1": "Безопасно войдите в систему, используя свою учетную запись Joss Red.",
+  "@cloud_b1": {
+    "description": "cloud_b1"
+  },
   "cloud_b2": "Получите мгновенный доступ к своим плейлистам, избранному и истории с любого устройства (Windows, Android и т. д.).",
+  "@cloud_b2": {
+    "description": "cloud_b2"
+  },
   "cloud_b3": "Умная синхронизация: работайте в автономном режиме и автоматически загружайте изменения при восстановлении доступа к Интернету.",
+  "@cloud_b3": {
+    "description": "cloud_b3"
+  },
   "cloud_btn": "Активировать облачную синхронизацию",
+  "@cloud_btn": {
+    "description": "cloud_btn"
+  },
   "slide_indicator": "Шаг {current} из 3",
+  "@slide_indicator": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      }
+    },
+    "description": "slide_indicator"
+  },
   "news_card_title": "Estrella Music изменилась!",
+  "@news_card_title": {
+    "description": "news_card_title"
+  },
   "news_card_subtitle": "100% синхронизация с Joss Red, плейлисты с друзьями и многое другое. Нажмите, чтобы увидеть, что нового.",
+  "@news_card_subtitle": {
+    "description": "news_card_subtitle"
+  },
   "news_dialog_title": "Музыкальные новости Эстреллы",
+  "@news_dialog_title": {
+    "description": "news_dialog_title"
+  },
   "news_item_sync_title": "Полная интеграция с Джоссом Редом",
+  "@news_item_sync_title": {
+    "description": "news_item_sync_title"
+  },
   "news_item_sync_desc": "Ваши плейлисты и избранное теперь автоматически сохраняются и синхронизируются в облаке с вашей основной учетной записью Joss Red.",
+  "@news_item_sync_desc": {
+    "description": "news_item_sync_desc"
+  },
   "news_item_collab_title": "Совместные плейлисты",
+  "@news_item_collab_title": {
+    "description": "news_item_collab_title"
+  },
   "news_item_collab_desc": "Создавайте плейлисты с друзьями! При создании плейлиста установите флажок «Совместная работа» и выберите друзей, которые будут редактировать его вместе.",
+  "@news_item_collab_desc": {
+    "description": "news_item_collab_desc"
+  },
   "news_item_trans_title": "Прозрачная синхронизация",
+  "@news_item_trans_title": {
+    "description": "news_item_trans_title"
+  },
   "news_item_trans_desc": "Вам больше не нужно нажимать кнопки ручной синхронизации; Новый мотор отвечает за автоматическое переключение передач вверх и вниз.",
+  "@news_item_trans_desc": {
+    "description": "news_item_trans_desc"
+  },
   "news_dialog_section_friends": "Друзья и управление аккаунтом:",
+  "@news_dialog_section_friends": {
+    "description": "news_dialog_section_friends"
+  },
   "news_dialog_friends_desc": "Чтобы добавлять друзей, принимать запросы или управлять своим профилем безопасности, используйте Joss Red на его официальных платформах:",
+  "@news_dialog_friends_desc": {
+    "description": "news_dialog_friends_desc"
+  },
   "news_btn_app": "Приложение Joss Red (Play Store)",
+  "@news_btn_app": {
+    "description": "news_btn_app"
+  },
   "news_btn_web": "Джосс Ред Веб",
+  "@news_btn_web": {
+    "description": "news_btn_web"
+  },
   "news_btn_dismiss": "Понял",
+  "@news_btn_dismiss": {
+    "description": "news_btn_dismiss"
+  },
   "settings_appearance_desc": "Анимация темы, языка и интерфейса.",
+  "@settings_appearance_desc": {
+    "description": "settings_appearance_desc"
+  },
   "settings_content_desc": "Откройте для себя фильтры, интеграцию с Piped и кэши.",
+  "@settings_content_desc": {
+    "description": "settings_content_desc"
+  },
   "settings_playback_desc": "Качество потоковой передачи, нормализация, тишина и батарея.",
+  "@settings_playback_desc": {
+    "description": "settings_playback_desc"
+  },
   "settings_downloads_desc": "Загрузки и хранение",
+  "@settings_downloads_desc": {
+    "description": "settings_downloads_desc"
+  },
   "settings_downloads_sub": "Аудиоформаты, папки и автоматические загрузки.",
+  "@settings_downloads_sub": {
+    "description": "settings_downloads_sub"
+  },
   "settings_account_desc": "Аккаунт и синхронизация",
+  "@settings_account_desc": {
+    "description": "settings_account_desc"
+  },
   "settings_account_sub": "Облачный режим, резервное копирование, список друзей и миграция.",
+  "@settings_account_sub": {
+    "description": "settings_account_sub"
+  },
   "settings_about_desc": "О музыке Эстрелла",
+  "@settings_about_desc": {
+    "description": "settings_about_desc"
+  },
   "settings_about_sub": "Версия, проект с открытым исходным кодом и GitHub.",
+  "@settings_about_sub": {
+    "description": "settings_about_sub"
+  },
   "settings_local_cloud_title": "Локальный режим / EMusic Cloud",
+  "@settings_local_cloud_title": {
+    "description": "settings_local_cloud_title"
+  },
   "settings_local_cloud_desc": "Выберите, перенесите или проверьте статус синхронизации с Joss Red.",
+  "@settings_local_cloud_desc": {
+    "description": "settings_local_cloud_desc"
+  },
   "settings_my_friends": "мои друзья",
+  "@settings_my_friends": {
+    "description": "settings_my_friends"
+  },
   "settings_my_friends_desc": "Управляйте своими друзьями Джосс Ред напрямую.",
+  "@settings_my_friends_desc": {
+    "description": "settings_my_friends_desc"
+  },
   "settings_refresh_visitor_title": "Обновить идентификатор (идентификатор посетителя)",
+  "@settings_refresh_visitor_title": {
+    "description": "settings_refresh_visitor_title"
+  },
   "settings_refresh_visitor_desc": "Восстановите свой идентификатор YouTube Music ID, если контент Discover не загружается.",
+  "@settings_refresh_visitor_desc": {
+    "description": "settings_refresh_visitor_desc"
+  },
   "settings_visitor_updated": "Обновленный идентификатор",
+  "@settings_visitor_updated": {
+    "description": "settings_visitor_updated"
+  },
   "settings_visitor_updated_desc": "Новый идентификатор посетителя был успешно создан.",
+  "@settings_visitor_updated_desc": {
+    "description": "settings_visitor_updated_desc"
+  },
   "settings_visitor_error": "Ошибка",
+  "@settings_visitor_error": {
+    "description": "settings_visitor_error"
+  },
   "settings_visitor_error_desc": "Не удалось создать новый идентификатор. Пожалуйста, повторите попытку позже.",
+  "@settings_visitor_error_desc": {
+    "description": "settings_visitor_error_desc"
+  },
   "settings_visitor_exception": "Произошла ошибка при регенерации: {error}.",
+  "@settings_visitor_exception": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    },
+    "description": "settings_visitor_exception"
+  },
   "migratedLibrary": "Перенесенная библиотека",
+  "@migratedLibrary": {
+    "description": "migratedLibrary"
+  },
   "noSongsInCollection": "В этом сборнике нет песен",
+  "@noSongsInCollection": {
+    "description": "noSongsInCollection"
+  },
   "startupScreen": "Открыть при запуске",
+  "@startupScreen": {
+    "description": "startupScreen"
+  },
   "startupScreenDescription": "Выберите раздел, который Estrella Music откроет первым.",
+  "@startupScreenDescription": {
+    "description": "startupScreenDescription"
+  },
   "friends": "Друзья",
+  "@friends": {
+    "description": "friends"
+  },
   "dailyDiscover": "Ежедневное открытие",
+  "@dailyDiscover": {
+    "description": "dailyDiscover"
+  },
   "keepListening": "продолжай слушать",
+  "@keepListening": {
+    "description": "keepListening"
+  },
   "similarToTitle": "Похоже на: {title}",
+  "@similarToTitle": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    },
+    "description": "similarToTitle"
+  },
   "pipedPlaylistDescription": "Трубчатый плейлист",
+  "@pipedPlaylistDescription": {
+    "description": "pipedPlaylistDescription"
+  },
   "collaborativePlaylistDescription": "Совместный плейлист",
+  "@collaborativePlaylistDescription": {
+    "description": "collaborativePlaylistDescription"
+  },
   "libraryPlaylistDescription": "Плейлист библиотеки",
+  "@libraryPlaylistDescription": {
+    "description": "libraryPlaylistDescription"
+  },
   "untitledSong": "Песня без названия",
+  "@untitledSong": {
+    "description": "untitledSong"
+  },
   "migratedPlaylist": "Перенесенный плейлист",
+  "@migratedPlaylist": {
+    "description": "migratedPlaylist"
+  },
   "migratedAlbum": "Перенесенный альбом",
+  "@migratedAlbum": {
+    "description": "migratedAlbum"
+  },
   "songsImportedFromJossMusic": "Песни, импортированные из Joss Music Kotlin",
+  "@songsImportedFromJossMusic": {
+    "description": "songsImportedFromJossMusic"
+  },
   "importedFromJossMusic": "Импортировано из Joss Music Kotlin.",
+  "@importedFromJossMusic": {
+    "description": "importedFromJossMusic"
+  },
   "syncLocalModeActive": "Локальный режим активен",
+  "@syncLocalModeActive": {
+    "description": "syncLocalModeActive"
+  },
   "syncCloudPending": "Облачный режим активен. Ожидается синхронизация.",
+  "@syncCloudPending": {
+    "description": "syncCloudPending"
+  },
   "syncCloudDownloadingExisting": "Облачный режим активирован. Скачиваем существующую библиотеку.",
+  "@syncCloudDownloadingExisting": {
+    "description": "syncCloudDownloadingExisting"
+  },
   "syncCloudMigrationComplete": "Облачный режим активирован. Перенесенная библиотека.",
+  "@syncCloudMigrationComplete": {
+    "description": "syncCloudMigrationComplete"
+  },
   "syncLocalDeviceOnly": "Ваши данные хранятся только на этом устройстве.",
+  "@syncLocalDeviceOnly": {
+    "description": "syncLocalDeviceOnly"
+  },
   "syncDownloading": "Загрузка изменений EMusic...",
+  "@syncDownloading": {
+    "description": "syncDownloading"
+  },
   "syncDownloadFailed": "Не удалось загрузить синхронизацию.",
+  "@syncDownloadFailed": {
+    "description": "syncDownloadFailed"
+  },
   "syncLocalChangesFirst": "Есть новые локальные изменения. Они будут загружены перед загрузкой.",
+  "@syncLocalChangesFirst": {
+    "description": "syncLocalChangesFirst"
+  },
   "syncLibrarySynced": "Синхронизированная библиотека.",
+  "@syncLibrarySynced": {
+    "description": "syncLibrarySynced"
+  },
   "syncOfflinePending": "Офлайн. Изменения ожидаются.",
+  "@syncOfflinePending": {
+    "description": "syncOfflinePending"
+  },
   "syncLibraryUpToDate": "Библиотека в актуальном состоянии.",
+  "@syncLibraryUpToDate": {
+    "description": "syncLibraryUpToDate"
+  },
   "syncChangesSynced": "{count}_ синхронизированных изменений.",
+  "@syncChangesSynced": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    },
+    "description": "syncChangesSynced"
+  },
   "syncUploading": "Загрузка изменений в EMusic...",
+  "@syncUploading": {
+    "description": "syncUploading"
+  },
   "syncUploadSuccessWs": "Изменения успешно загружены (WS).",
+  "@syncUploadSuccessWs": {
+    "description": "syncUploadSuccessWs"
+  },
   "syncUploadWsRetry": "Не удалось загрузить с помощью WS. Позже будет повторена попытка.",
+  "@syncUploadWsRetry": {
+    "description": "syncUploadWsRetry"
+  },
   "syncUploadSuccess": "Изменения загружены правильно.",
+  "@syncUploadSuccess": {
+    "description": "syncUploadSuccess"
+  },
   "syncUploadRetry": "Не мог встать. Позже будет повторена попытка.",
+  "@syncUploadRetry": {
+    "description": "syncUploadRetry"
+  },
   "syncOfflineRetry": "Офлайн. Изменения сохранены для повторной попытки.",
+  "@syncOfflineRetry": {
+    "description": "syncOfflineRetry"
+  },
   "syncUnconfirmedRetry": "EMusic не подтвердил все изменения. Они будут рассмотрены повторно.",
+  "@syncUnconfirmedRetry": {
+    "description": "syncUnconfirmedRetry"
+  },
   "syncChangesConfirmed": "Зафиксировано {count}_ изменений.",
+  "@syncChangesConfirmed": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    },
+    "description": "syncChangesConfirmed"
+  },
   "migrationAlreadyRunning": "Уже идет миграция.",
+  "@migrationAlreadyRunning": {
+    "description": "migrationAlreadyRunning"
+  },
   "migrationLoginRequired": "Прежде чем переходить к миграции, войдите в систему Joss Red.",
+  "@migrationLoginRequired": {
+    "description": "migrationLoginRequired"
+  },
   "migrationCheckingCloud": "Проверка наличия библиотеки в EMusic Cloud...",
+  "@migrationCheckingCloud": {
+    "description": "migrationCheckingCloud"
+  },
   "cloudLibraryFoundDeviceWillDownload": "Облачная библиотека была найдена. Это устройство загрузит его, не перезаписывая.",
+  "@cloudLibraryFoundDeviceWillDownload": {
+    "description": "cloudLibraryFoundDeviceWillDownload"
+  },
   "cloudLibraryFound": "Облачная библиотека найдена.",
+  "@cloudLibraryFound": {
+    "description": "cloudLibraryFound"
+  },
   "migrationCreatingBackup": "Создание локальной резервной копии перед подключением облака...",
+  "@migrationCreatingBackup": {
+    "description": "migrationCreatingBackup"
+  },
   "migrationAnalyzingLocal": "Анализ местной библиотеки...",
+  "@migrationAnalyzingLocal": {
+    "description": "migrationAnalyzingLocal"
+  },
   "migrationPreparingCloud": "Подготовка миграции в EMusic Cloud...",
+  "@migrationPreparingCloud": {
+    "description": "migrationPreparingCloud"
+  },
   "migrationStartFailed": "EMusic Cloud не удалось начать миграцию.",
+  "@migrationStartFailed": {
+    "description": "migrationStartFailed"
+  },
   "migrationUploadingData": "Загрузка плейлистов, избранного и истории...",
+  "@migrationUploadingData": {
+    "description": "migrationUploadingData"
+  },
   "migrationUploadIncomplete": "Не все данные удалось загрузить. Мы сохраняем вашу местную поддержку.",
+  "@migrationUploadIncomplete": {
+    "description": "migrationUploadIncomplete"
+  },
   "migrationVerifyingIntegrity": "Проверка целостности в EMusic Cloud...",
+  "@migrationVerifyingIntegrity": {
+    "description": "migrationVerifyingIntegrity"
+  },
   "migrationValidationFailed": "EMusic Cloud не удалось проверить миграцию.",
+  "@migrationValidationFailed": {
+    "description": "migrationValidationFailed"
+  },
   "cloudModeReadyOfflineCache": "Облачный режим готов. Это устройство будет работать как автономный кэш.",
+  "@cloudModeReadyOfflineCache": {
+    "description": "cloudModeReadyOfflineCache"
+  },
   "migrationCompleted": "Миграция завершена.",
+  "@migrationCompleted": {
+    "description": "migrationCompleted"
+  },
   "migrationFailedLocalPreserved": "Миграция не удалась. Ваши локальные данные не были изменены.",
+  "@migrationFailedLocalPreserved": {
+    "description": "migrationFailedLocalPreserved"
+  },
   "sessionExpiredLoginAgain": "Срок вашей сессии истек. Войдите снова.",
+  "@sessionExpiredLoginAgain": {
+    "description": "sessionExpiredLoginAgain"
+  },
   "selectedFileNotFound": "Выбранный файл не найден.",
+  "@selectedFileNotFound": {
+    "description": "selectedFileNotFound"
+  },
   "genericAlbum": "Альбом",
+  "@genericAlbum": {
+    "description": "genericAlbum"
+  },
   "friendsLoginRequired": "Войдите, чтобы найти друзей.",
+  "@friendsLoginRequired": {
+    "description": "friendsLoginRequired"
+  },
   "invalidSessionToken": "Сеанс не содержит допустимого токена.",
+  "@invalidSessionToken": {
+    "description": "invalidSessionToken"
+  },
   "userSearchFailed": "Не удалось найти пользователей ({statusCode}).",
+  "@userSearchFailed": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    },
+    "description": "userSearchFailed"
+  },
   "invalidServerResponse": "Неверный ответ сервера.",
+  "@invalidServerResponse": {
+    "description": "invalidServerResponse"
+  },
   "userListMissing": "Ответ не содержит списка пользователей.",
+  "@userListMissing": {
+    "description": "userListMissing"
+  },
   "playlistCollaboratorsTitle": "Авторы плейлиста",
+  "@playlistCollaboratorsTitle": {
+    "description": "playlistCollaboratorsTitle"
+  },
   "collaboratorsInstruction": "Выберите друзей, которые смогут просматривать и редактировать этот плейлист:",
+  "@collaboratorsInstruction": {
+    "description": "collaboratorsInstruction"
+  },
   "noJossRedFriends": "У вас нет добавленных друзей на Joss Red.",
+  "@noJossRedFriends": {
+    "description": "noJossRedFriends"
+  },
   "friendFallback": "Друг",
+  "@friendFallback": {
+    "description": "friendFallback"
+  },
   "collaboratorsUpdated": "Соавторы обновлены правильно.",
+  "@collaboratorsUpdated": {
+    "description": "collaboratorsUpdated"
+  },
   "save": "Держать",
+  "@save": {
+    "description": "save"
+  },
   "manageCollaborators": "Управление соавторами (друзьями)",
+  "@manageCollaborators": {
+    "description": "manageCollaborators"
+  },
   "done": "Готовый",
+  "@done": {
+    "description": "done"
+  },
   "notAuthenticated": "Не аутентифицирован",
+  "@notAuthenticated": {
+    "description": "notAuthenticated"
+  },
   "genericError": "Ошибка",
+  "@genericError": {
+    "description": "genericError"
+  },
   "friendRequestSent": "Запрос на добавление в друзья отправлен",
+  "@friendRequestSent": {
+    "description": "friendRequestSent"
+  },
   "friendRequestAccepted": "Запрос на добавление в друзья принят",
+  "@friendRequestAccepted": {
+    "description": "friendRequestAccepted"
+  },
   "friendshipRemoved": "Дружба удалена",
+  "@friendshipRemoved": {
+    "description": "friendshipRemoved"
+  },
   "userBlocked": "Заблокированный пользователь",
+  "@userBlocked": {
+    "description": "userBlocked"
+  },
   "userUnblocked": "Разблокированный пользователь",
+  "@userUnblocked": {
+    "description": "userUnblocked"
+  },
   "artistsByTaste": "По вашему вкусу",
+  "@artistsByTaste": {
+    "description": "artistsByTaste"
+  },
   "followedArtists": "подписан",
+  "@followedArtists": {
+    "description": "followedArtists"
+  },
   "recommendedArtists": "Рекомендуется",
+  "@recommendedArtists": {
+    "description": "recommendedArtists"
+  },
   "albumsByTaste": "По вашему вкусу",
+  "@albumsByTaste": {
+    "description": "albumsByTaste"
+  },
   "savedAlbums": "Сохранено",
+  "@savedAlbums": {
+    "description": "savedAlbums"
+  },
   "recommendedAlbums": "Рекомендуется",
+  "@recommendedAlbums": {
+    "description": "recommendedAlbums"
+  },
   "downloadNotificationChannelName": "загрузка музыки",
+  "@downloadNotificationChannelName": {
+    "description": "downloadNotificationChannelName"
+  },
   "downloadNotificationChannelDescription": "Сохраняет загрузку музыки активной в фоновом режиме.",
+  "@downloadNotificationChannelDescription": {
+    "description": "downloadNotificationChannelDescription"
+  },
   "downloadNotificationTitle": "Загрузка музыки",
+  "@downloadNotificationTitle": {
+    "description": "downloadNotificationTitle"
+  },
   "downloadNotificationPreparing": "Подготовка загрузок…",
+  "@downloadNotificationPreparing": {
+    "description": "downloadNotificationPreparing"
+  },
   "downloadNotificationSong": "Загрузка: {songTitle}",
+  "@downloadNotificationSong": {
+    "placeholders": {
+      "songTitle": {
+        "type": "String"
+      }
+    },
+    "description": "downloadNotificationSong"
+  },
   "syncCloudModeActive": "Облачный режим активен",
+  "@syncCloudModeActive": {
+    "description": "syncCloudModeActive"
+  },
   "permissionsConsentTitle": "Разрешения, чтобы начать работу",
+  "@permissionsConsentTitle": {
+    "description": "permissionsConsentTitle"
+  },
   "permissionsConsentDescription": "Estrella Music необходимы эти разрешения для управления вашей музыкой и предоставления всех функций воспроизведения.",
+  "@permissionsConsentDescription": {
+    "description": "permissionsConsentDescription"
+  },
   "permissionsStorageTitle": "Музыка и память",
+  "@permissionsStorageTitle": {
+    "description": "permissionsStorageTitle"
+  },
   "permissionsStorageDescription": "Он позволяет воспроизводить музыку, сохранять загрузки, экспортировать плейлисты и готовить обновления.",
+  "@permissionsStorageDescription": {
+    "description": "permissionsStorageDescription"
+  },
   "permissionsNotificationsTitle": "Уведомления",
+  "@permissionsNotificationsTitle": {
+    "description": "permissionsNotificationsTitle"
+  },
   "permissionsNotificationsDescription": "Показывает элементы управления воспроизведением, ход загрузки и важные уведомления приложений.",
+  "@permissionsNotificationsDescription": {
+    "description": "permissionsNotificationsDescription"
+  },
   "permissionsMicrophoneTitle": "Микрофон",
+  "@permissionsMicrophoneTitle": {
+    "description": "permissionsMicrophoneTitle"
+  },
   "permissionsMicrophoneDescription": "Он используется только тогда, когда вы решаете идентифицировать песню, которая играет вокруг вас.",
+  "@permissionsMicrophoneDescription": {
+    "description": "permissionsMicrophoneDescription"
+  },
   "permissionsContinueButton": "Предоставьте необходимые разрешения",
+  "@permissionsContinueButton": {
+    "description": "permissionsContinueButton"
+  },
   "permissionsRequiredNotice": "Для продолжения работы необходимы все три разрешения. Вы можете изменить их позже в настройках системы.",
+  "@permissionsRequiredNotice": {
+    "description": "permissionsRequiredNotice"
+  },
   "permissionsAllow": "Позволять",
+  "@permissionsAllow": {
+    "description": "permissionsAllow"
+  },
   "permissionsOpenSettings": "Настройки",
+  "@permissionsOpenSettings": {
+    "description": "permissionsOpenSettings"
+  },
   "auth_2fa_title": "Двухфакторная аутентификация",
+  "@auth_2fa_title": {
+    "description": "auth_2fa_title"
+  },
   "auth_2fa_subtitle": "Введите 6-значный код из приложения для аутентификации. Срок действия этого доступа истекает через 5 минут.",
+  "@auth_2fa_subtitle": {
+    "description": "auth_2fa_subtitle"
+  },
   "auth_2fa_code": "Код аутентификации",
+  "@auth_2fa_code": {
+    "description": "auth_2fa_code"
+  },
   "auth_2fa_verify": "Проверьте и продолжайте",
-  "auth_2fa_invalid": "Введите действительный 6-значный код или войдите в систему еще раз."
+  "@auth_2fa_verify": {
+    "description": "auth_2fa_verify"
+  },
+  "auth_2fa_invalid": "Введите действительный 6-значный код или войдите в систему еще раз.",
+  "@auth_2fa_invalid": {
+    "description": "auth_2fa_invalid"
+  }
 }

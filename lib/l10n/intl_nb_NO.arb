@@ -1,142 +1,559 @@
 {
   "@@locale": "nb_NO",
   "home": "Hjem",
+  "@home": {
+    "description": "home"
+  },
   "low": "Lav",
+  "@low": {
+    "description": "low"
+  },
   "high": "Høy",
+  "@high": {
+    "description": "high"
+  },
   "equalizerDes": "åpne system-tonekontroll",
+  "@equalizerDes": {
+    "description": "equalizerDes"
+  },
   "newVersionAvailable": "Ny versjon tilgjengelig.",
+  "@newVersionAvailable": {
+    "description": "newVersionAvailable"
+  },
   "addToPlaylist": "Legg til i spilleliste",
+  "@addToPlaylist": {
+    "description": "addToPlaylist"
+  },
   "viewAll": "Vis alle",
+  "@viewAll": {
+    "description": "viewAll"
+  },
   "subscribers": "abonnenter",
+  "@subscribers": {
+    "description": "subscribers"
+  },
   "enqueueAll": "Legg alt i kø",
+  "@enqueueAll": {
+    "description": "enqueueAll"
+  },
   "renamePlaylist": "Gi spillelisten nytt navn",
+  "@renamePlaylist": {
+    "description": "renamePlaylist"
+  },
   "about": "Om",
+  "@about": {
+    "description": "about"
+  },
   "themeMode": "Draktmodus",
+  "@themeMode": {
+    "description": "themeMode"
+  },
   "notaValidLink": "Ugyldig lenke",
+  "@notaValidLink": {
+    "description": "notaValidLink"
+  },
   "shareSong": "Del dette sporet",
+  "@shareSong": {
+    "description": "shareSong"
+  },
   "removeFromQueue": "Fjern fra kø",
+  "@removeFromQueue": {
+    "description": "removeFromQueue"
+  },
   "light": "lys",
+  "@light": {
+    "description": "light"
+  },
   "removePlaylist": "Fjern spilleliste",
+  "@removePlaylist": {
+    "description": "removePlaylist"
+  },
   "create": "Opprett",
+  "@create": {
+    "description": "create"
+  },
   "skipSilence": "Hopp over stillhet",
+  "@skipSilence": {
+    "description": "skipSilence"
+  },
   "status": "Status",
+  "@status": {
+    "description": "status"
+  },
   "streamingQualityDes": "Musikkstrømskvalitet",
+  "@streamingQualityDes": {
+    "description": "streamingQualityDes"
+  },
   "cacheSongsDes": "Under avspilling tar dette ekstra plass på enheten",
+  "@cacheSongsDes": {
+    "description": "cacheSongsDes"
+  },
   "streamingQuality": "Strømmingskvalitet",
+  "@streamingQuality": {
+    "description": "streamingQuality"
+  },
   "ignoreBatOpt": "Ingorer batterioptimalisering",
+  "@ignoreBatOpt": {
+    "description": "ignoreBatOpt"
+  },
   "enabled": "På",
+  "@enabled": {
+    "description": "enabled"
+  },
   "disabled": "Av",
+  "@disabled": {
+    "description": "disabled"
+  },
   "songAlreadyExists": "Sporet finnes allerede",
+  "@songAlreadyExists": {
+    "description": "songAlreadyExists"
+  },
   "playlistCreatedAlert": "Spilleliste opprettet",
+  "@playlistCreatedAlert": {
+    "description": "playlistCreatedAlert"
+  },
   "playlistRenameAlert": "Navn endret",
+  "@playlistRenameAlert": {
+    "description": "playlistRenameAlert"
+  },
   "viewArtist": "Vis artist",
+  "@viewArtist": {
+    "description": "viewArtist"
+  },
   "dynamic": "Dynamisk",
+  "@dynamic": {
+    "description": "dynamic"
+  },
   "systemDefault": "Systemforvalg",
+  "@systemDefault": {
+    "description": "systemDefault"
+  },
   "dark": "mørk",
+  "@dark": {
+    "description": "dark"
+  },
   "createnAdd": "Opprett og legg til",
+  "@createnAdd": {
+    "description": "createnAdd"
+  },
   "noBookmarks": "Ingen bokmerker",
+  "@noBookmarks": {
+    "description": "noBookmarks"
+  },
   "startRadio": "Start radio",
+  "@startRadio": {
+    "description": "startRadio"
+  },
   "playNext": "Spill neste",
+  "@playNext": {
+    "description": "playNext"
+  },
   "enqueueSong": "Legg dette sporet i kø",
+  "@enqueueSong": {
+    "description": "enqueueSong"
+  },
   "goToAlbum": "Gå til album",
+  "@goToAlbum": {
+    "description": "goToAlbum"
+  },
   "removeFromCache": "Fjern fra hurtiglager",
+  "@removeFromCache": {
+    "description": "removeFromCache"
+  },
   "basedOnLast": "Basert på siste interaksjon",
+  "@basedOnLast": {
+    "description": "basedOnLast"
+  },
   "cacheSongs": "Hurtiglagre spor",
+  "@cacheSongs": {
+    "description": "cacheSongs"
+  },
   "noLibPlaylist": "Du har ikke noen biblioteksspilleliste",
+  "@noLibPlaylist": {
+    "description": "noLibPlaylist"
+  },
   "setDiscoverContent": "Sett oppdagbart innhold",
+  "@setDiscoverContent": {
+    "description": "setDiscoverContent"
+  },
   "quickPics": "Hurtigbilder",
+  "@quickPics": {
+    "description": "quickPics"
+  },
   "discover": "Oppdagbart",
+  "@discover": {
+    "description": "discover"
+  },
   "trending": "På vei opp",
+  "@trending": {
+    "description": "trending"
+  },
   "topMusicVid": "Topp-musikkvideoer",
+  "@topMusicVid": {
+    "description": "topMusicVid"
+  },
   "equalizer": "Tonekontroll",
+  "@equalizer": {
+    "description": "equalizer"
+  },
   "github": "GitHub",
+  "@github": {
+    "description": "github"
+  },
   "searchRes": "Søkeresultater",
+  "@searchRes": {
+    "description": "searchRes"
+  },
   "for1": "for",
+  "@for1": {
+    "description": "for1"
+  },
   "videos": "Videoer",
+  "@videos": {
+    "description": "videos"
+  },
   "results": "Resultater",
+  "@results": {
+    "description": "results"
+  },
   "by": "av",
+  "@by": {
+    "description": "by"
+  },
   "search": "Søk",
+  "@search": {
+    "description": "search"
+  },
   "skipSilenceDes": "Hopper over tomme deler under musikkavspilling",
+  "@skipSilenceDes": {
+    "description": "skipSilenceDes"
+  },
   "searchDes": "Spor, spilleliste, album, eller artist",
+  "@searchDes": {
+    "description": "searchDes"
+  },
   "ignoreBatOptDes": "Hvis du har merknadsproblemer eller avspilling stoppes av systemoptimalisering",
+  "@ignoreBatOptDes": {
+    "description": "ignoreBatOptDes"
+  },
   "githubDes": "Vis kildekoden.\nHvis du liker prosjektet kan du gi en ⭐",
+  "@githubDes": {
+    "description": "githubDes"
+  },
   "songRemovedAlert": "Fjernet fra",
+  "@songRemovedAlert": {
+    "description": "songRemovedAlert"
+  },
   "dontShowInfoAgain": "Ikke vis denne infoen igjen",
+  "@dontShowInfoAgain": {
+    "description": "dontShowInfoAgain"
+  },
   "nomatch": "Resultatløst for",
+  "@nomatch": {
+    "description": "nomatch"
+  },
   "radioNotAvailable": "Radio ikke tilgjengelig for denne artisten",
+  "@radioNotAvailable": {
+    "description": "radioNotAvailable"
+  },
   "songRemovedfromQueue": "Fjernet fra kø",
+  "@songRemovedfromQueue": {
+    "description": "songRemovedfromQueue"
+  },
   "songRemovedfromQueueCurrSong": "Du kan ikke fjerne et spor som spilles",
+  "@songRemovedfromQueueCurrSong": {
+    "description": "songRemovedfromQueueCurrSong"
+  },
   "songAddedToPlaylistAlert": "Spor lagt til i spillelisten",
+  "@songAddedToPlaylistAlert": {
+    "description": "songAddedToPlaylistAlert"
+  },
   "songEnqueueAlert": "Spor lagt i spilleliste",
+  "@songEnqueueAlert": {
+    "description": "songEnqueueAlert"
+  },
   "errorOccuredAlert": "En feil inntraff",
+  "@errorOccuredAlert": {
+    "description": "errorOccuredAlert"
+  },
   "playlistCreatednsongAddedAlert": "Spilleliste opprettet og spor lagt til",
+  "@playlistCreatednsongAddedAlert": {
+    "description": "playlistCreatednsongAddedAlert"
+  },
   "playlistRemovedAlert": "Spilleliste fjernet",
+  "@playlistRemovedAlert": {
+    "description": "playlistRemovedAlert"
+  },
   "playlistBookmarkAddAlert": "Spilleliste bokmerket",
+  "@playlistBookmarkAddAlert": {
+    "description": "playlistBookmarkAddAlert"
+  },
   "playlistBookmarkRemoveAlert": "Spillelistebokmerke fjernet",
+  "@playlistBookmarkRemoveAlert": {
+    "description": "playlistBookmarkRemoveAlert"
+  },
   "albumBookmarkAddAlert": "Album bokmerket",
+  "@albumBookmarkAddAlert": {
+    "description": "albumBookmarkAddAlert"
+  },
   "albumBookmarkRemoveAlert": "Albumsbokmerke fjernet",
+  "@albumBookmarkRemoveAlert": {
+    "description": "albumBookmarkRemoveAlert"
+  },
   "artistBookmarkAddAlert": "Arist bokmerket",
+  "@artistBookmarkAddAlert": {
+    "description": "artistBookmarkAddAlert"
+  },
   "artistBookmarkRemoveAlert": "Artistbokmerke fjernet",
+  "@artistBookmarkRemoveAlert": {
+    "description": "artistBookmarkRemoveAlert"
+  },
   "dismiss": "Avslå",
+  "@dismiss": {
+    "description": "dismiss"
+  },
   "lyricsNotAvailable": "Sangtekst utilgjengelig",
+  "@lyricsNotAvailable": {
+    "description": "lyricsNotAvailable"
+  },
   "artistDesNotAvailable": "Beskrivelse utilgjengelig",
+  "@artistDesNotAvailable": {
+    "description": "artistDesNotAvailable"
+  },
   "notaSongVideo": "Ikke et spor/musikkvideo",
+  "@notaSongVideo": {
+    "description": "notaSongVideo"
+  },
   "operationFailed": "Operasjonen mislyktes",
+  "@operationFailed": {
+    "description": "operationFailed"
+  },
   "CreateNewPlaylist": "Opprett ny spilleliste",
+  "@CreateNewPlaylist": {
+    "description": "CreateNewPlaylist"
+  },
   "cancel": "Avbryt",
+  "@cancel": {
+    "description": "cancel"
+  },
   "playlists": "Spillelister",
+  "@playlists": {
+    "description": "playlists"
+  },
   "albums": "Album",
+  "@albums": {
+    "description": "albums"
+  },
   "artists": "Artister",
+  "@artists": {
+    "description": "artists"
+  },
   "settings": "Innstillinger",
+  "@settings": {
+    "description": "settings"
+  },
   "favorites": "Favoritter",
+  "@favorites": {
+    "description": "favorites"
+  },
   "recentlyPlayed": "Nylig spilt",
+  "@recentlyPlayed": {
+    "description": "recentlyPlayed"
+  },
   "songs": "Spor",
+  "@songs": {
+    "description": "songs"
+  },
   "libSongs": "Biblioteksspor",
+  "@libSongs": {
+    "description": "libSongs"
+  },
   "libPlaylists": "Biblioteksspillelister",
+  "@libPlaylists": {
+    "description": "libPlaylists"
+  },
   "libAlbums": "Biblioteksalbum",
+  "@libAlbums": {
+    "description": "libAlbums"
+  },
   "libArtists": "Biblioteksartister",
+  "@libArtists": {
+    "description": "libArtists"
+  },
   "items": "elementer",
+  "@items": {
+    "description": "items"
+  },
   "retry": "Prøv igjen",
+  "@retry": {
+    "description": "retry"
+  },
   "noOfflineSong": "Ingen frakoblede spor",
+  "@noOfflineSong": {
+    "description": "noOfflineSong"
+  },
   "emptyPlaylist": "Tom spilleliste",
+  "@emptyPlaylist": {
+    "description": "emptyPlaylist"
+  },
   "networkError1": "Nettverksfeil",
+  "@networkError1": {
+    "description": "networkError1"
+  },
   "cachedOrOffline": "Hurtiglagret/frakoblet",
+  "@cachedOrOffline": {
+    "description": "cachedOrOffline"
+  },
   "goToDownloadPage": "Klikk her for å gå til nedlastingssiden",
+  "@goToDownloadPage": {
+    "description": "goToDownloadPage"
+  },
   "local": "Lokalt",
+  "@local": {
+    "description": "local"
+  },
   "link": "Link",
+  "@link": {
+    "description": "link"
+  },
   "unLink": "Koble fra",
+  "@unLink": {
+    "description": "unLink"
+  },
   "linkPipedDes": "Link med piped for spillelister",
+  "@linkPipedDes": {
+    "description": "linkPipedDes"
+  },
   "linkAlert": "Tilknyttet vellykket!",
+  "@linkAlert": {
+    "description": "linkAlert"
+  },
   "unlinkAlert": "Koblet fra!",
+  "@unlinkAlert": {
+    "description": "unlinkAlert"
+  },
   "playlistBlacklistAlert": "Spilleliste svartelistet!",
+  "@playlistBlacklistAlert": {
+    "description": "playlistBlacklistAlert"
+  },
   "resetblacklistedplaylistDes": "Tilbakestill alle svartelistede spillelister",
+  "@resetblacklistedplaylistDes": {
+    "description": "resetblacklistedplaylistDes"
+  },
   "stopMusicOnTaskClearDes": "Musikkavspilling stopper når appen sveipes bort fra oppgavebehandlingen",
+  "@stopMusicOnTaskClearDes": {
+    "description": "stopMusicOnTaskClearDes"
+  },
   "selectAuthIns": "Velg Auth Instance",
+  "@selectAuthIns": {
+    "description": "selectAuthIns"
+  },
   "stopMusicOnTaskClear": "Stopp musikk",
+  "@stopMusicOnTaskClear": {
+    "description": "stopMusicOnTaskClear"
+  },
   "username": "Brukernavn",
+  "@username": {
+    "description": "username"
+  },
   "reset": "Nullstille",
+  "@reset": {
+    "description": "reset"
+  },
   "blacklistPlstResetAlert": "Tilbakestill vellykket!",
+  "@blacklistPlstResetAlert": {
+    "description": "blacklistPlstResetAlert"
+  },
   "password": "Passord",
+  "@password": {
+    "description": "password"
+  },
   "resetblacklistedplaylist": "Tilbakestill svartelistede spillelister",
+  "@resetblacklistedplaylist": {
+    "description": "resetblacklistedplaylist"
+  },
   "communityplaylists": "Gemenskapsspillelister",
+  "@communityplaylists": {
+    "description": "communityplaylists"
+  },
   "languageDes": "Sett programspråk",
+  "@languageDes": {
+    "description": "languageDes"
+  },
   "customInsSelectMsg": "Velg egendefinert instans",
+  "@customInsSelectMsg": {
+    "description": "customInsSelectMsg"
+  },
   "allFieldsReqMsg": "Alle felter må fylles ut",
+  "@allFieldsReqMsg": {
+    "description": "allFieldsReqMsg"
+  },
   "rename": "Gi nytt navn",
+  "@rename": {
+    "description": "rename"
+  },
   "selectAuthInsMsg": "Velg identitetbereftelsesinstans.",
+  "@selectAuthInsMsg": {
+    "description": "selectAuthInsMsg"
+  },
   "customIns": "Egendefinert instans",
+  "@customIns": {
+    "description": "customIns"
+  },
   "Piped": "Pipe",
+  "@Piped": {
+    "description": "Piped"
+  },
   "topmusicvideos": "Topp-musikkvideoer",
+  "@topmusicvideos": {
+    "description": "topmusicvideos"
+  },
   "singles": "Singler",
+  "@singles": {
+    "description": "singles"
+  },
   "language": "Språk",
+  "@language": {
+    "description": "language"
+  },
   "hintApiUrl": "API-nettadresse til Piped-instans",
+  "@hintApiUrl": {
+    "description": "hintApiUrl"
+  },
   "removeFromPlaylist": "Fjern fra spillelisten",
+  "@removeFromPlaylist": {
+    "description": "removeFromPlaylist"
+  },
   "featuredplaylists": "Framhevede spillelister",
+  "@featuredplaylists": {
+    "description": "featuredplaylists"
+  },
   "quickpicks": "Hurtigvalg",
+  "@quickpicks": {
+    "description": "quickpicks"
+  },
   "library": "Bibliotek",
+  "@library": {
+    "description": "library"
+  },
   "synced": "Synkronisert",
+  "@synced": {
+    "description": "synced"
+  },
   "cancelTimerAlert": "Tidsavbrudd avbrutt",
+  "@cancelTimerAlert": {
+    "description": "cancelTimerAlert"
+  },
   "minutes": "minutter",
+  "@minutes": {
+    "description": "minutes"
+  },
   "keepScreenOnWhilePlaying": "Hold skjermen på under avspilling",
-  "keepScreenOnWhilePlayingDes": "Hvis aktivert, vil enhetens skjerm være på mens musikk spilles"
+  "@keepScreenOnWhilePlaying": {
+    "description": "keepScreenOnWhilePlaying"
+  },
+  "keepScreenOnWhilePlayingDes": "Hvis aktivert, vil enhetens skjerm være på mens musikk spilles",
+  "@keepScreenOnWhilePlayingDes": {
+    "description": "keepScreenOnWhilePlayingDes"
+  }
 }

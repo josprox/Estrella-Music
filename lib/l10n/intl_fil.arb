@@ -1,216 +1,855 @@
 {
   "@@locale": "fil",
   "enqueueAll": "Patugtugin lahat",
+  "@enqueueAll": {
+    "description": "enqueueAll"
+  },
   "recentlyPlayed": "Nakaraang Tugtugin",
+  "@recentlyPlayed": {
+    "description": "recentlyPlayed"
+  },
   "playNext": "Sunod na patugtugin",
+  "@playNext": {
+    "description": "playNext"
+  },
   "artists": "Mga Kumanta",
+  "@artists": {
+    "description": "artists"
+  },
   "noLibPlaylist": "Wala kang kahit anong playlist!",
+  "@noLibPlaylist": {
+    "description": "noLibPlaylist"
+  },
   "communityplaylists": "Mga Playlist ng Komunidad",
+  "@communityplaylists": {
+    "description": "communityplaylists"
+  },
   "downloads": "Mga naDownload",
+  "@downloads": {
+    "description": "downloads"
+  },
   "reArrangePlaylist": "Ayusin ang playlist",
+  "@reArrangePlaylist": {
+    "description": "reArrangePlaylist"
+  },
   "addMultipleSongs": "Magdagdag ng kanta sa playlist",
+  "@addMultipleSongs": {
+    "description": "addMultipleSongs"
+  },
   "removePlaylist": "Alisin ang playlist",
+  "@removePlaylist": {
+    "description": "removePlaylist"
+  },
   "albums": "Plaka",
+  "@albums": {
+    "description": "albums"
+  },
   "songs": "Mga Kanta",
+  "@songs": {
+    "description": "songs"
+  },
   "goToAlbum": "Tignan ang Album",
+  "@goToAlbum": {
+    "description": "goToAlbum"
+  },
   "enqueueSong": "Ipila",
+  "@enqueueSong": {
+    "description": "enqueueSong"
+  },
   "noBookmarks": "Walang mga bookmark!",
+  "@noBookmarks": {
+    "description": "noBookmarks"
+  },
   "networkError1": "Oops wala kang signal!",
+  "@networkError1": {
+    "description": "networkError1"
+  },
   "create": "Gumawa",
+  "@create": {
+    "description": "create"
+  },
   "noOfflineSong": "Walang offline na mga kanta!",
+  "@noOfflineSong": {
+    "description": "noOfflineSong"
+  },
   "removeFromPlaylist": "Alisin sa playlist",
+  "@removeFromPlaylist": {
+    "description": "removeFromPlaylist"
+  },
   "rename": "Palitan ng Pangalan",
+  "@rename": {
+    "description": "rename"
+  },
   "renamePlaylist": "Palitan ng Pangalan ang Playlist",
+  "@renamePlaylist": {
+    "description": "renamePlaylist"
+  },
   "startRadio": "Magsimula ng radyo",
+  "@startRadio": {
+    "description": "startRadio"
+  },
   "openIn": "Buksan sa",
+  "@openIn": {
+    "description": "openIn"
+  },
   "cancel": "Kanselahin",
+  "@cancel": {
+    "description": "cancel"
+  },
   "addToPlaylist": "Idagdag sa playlist",
+  "@addToPlaylist": {
+    "description": "addToPlaylist"
+  },
   "items": "Mga Item",
+  "@items": {
+    "description": "items"
+  },
   "emptyPlaylist": "Walang laman ang playlist!",
+  "@emptyPlaylist": {
+    "description": "emptyPlaylist"
+  },
   "playlists": "Playlist",
+  "@playlists": {
+    "description": "playlists"
+  },
   "settings": "Pagsasaayos",
+  "@settings": {
+    "description": "settings"
+  },
   "libSongs": "Library ng mga Kanta",
+  "@libSongs": {
+    "description": "libSongs"
+  },
   "libPlaylists": "Imbakan ng mga Playlist",
+  "@libPlaylists": {
+    "description": "libPlaylists"
+  },
   "libAlbums": "Imbakan ng mga Album",
+  "@libAlbums": {
+    "description": "libAlbums"
+  },
   "libArtists": "Imbakan ng mga Artist",
+  "@libArtists": {
+    "description": "libArtists"
+  },
   "retry": "Subukang Muli!",
+  "@retry": {
+    "description": "retry"
+  },
   "favorites": "Mga Paborito",
+  "@favorites": {
+    "description": "favorites"
+  },
   "CreateNewPlaylist": "Gumawa ng panibagong playlist",
+  "@CreateNewPlaylist": {
+    "description": "CreateNewPlaylist"
+  },
   "createnAdd": "Gumawa at Magdagdag",
+  "@createnAdd": {
+    "description": "createnAdd"
+  },
   "viewArtist": "Tignan ang Artist",
+  "@viewArtist": {
+    "description": "viewArtist"
+  },
   "shareSong": "Ibahagi ang kanta",
+  "@shareSong": {
+    "description": "shareSong"
+  },
   "removeFromQueue": "Alisin sa pila",
+  "@removeFromQueue": {
+    "description": "removeFromQueue"
+  },
   "singles": "Mga Kantang Mag-isa",
+  "@singles": {
+    "description": "singles"
+  },
   "featuredplaylists": "Mga Tampok na Playlist",
+  "@featuredplaylists": {
+    "description": "featuredplaylists"
+  },
   "removeMultiple": "Mag-alis ng mga kanta",
+  "@removeMultiple": {
+    "description": "removeMultiple"
+  },
   "restartApp": "Buksan Muli ang App",
+  "@restartApp": {
+    "description": "restartApp"
+  },
   "home": "Bahay",
+  "@home": {
+    "description": "home"
+  },
   "library": "aklatan",
+  "@library": {
+    "description": "library"
+  },
   "album": "Mga album",
+  "@album": {
+    "description": "album"
+  },
   "selectSongs": "Pumili ng kanta",
+  "@selectSongs": {
+    "description": "selectSongs"
+  },
   "selectAll": "Piliin Lahat",
+  "@selectAll": {
+    "description": "selectAll"
+  },
   "queueShufflingDeniedMsg": "Hindi maisa-shuffle ang Queue kung bukas ang shuffle mode.",
+  "@queueShufflingDeniedMsg": {
+    "description": "queueShufflingDeniedMsg"
+  },
   "songNotPlayable": "Hindi mapapatugtog ito dahil sa server restrictions.",
+  "@songNotPlayable": {
+    "description": "songNotPlayable"
+  },
   "upNext": "Susunod",
+  "@upNext": {
+    "description": "upNext"
+  },
   "playingfromAlbum": "MULA SA ALBUM",
+  "@playingfromAlbum": {
+    "description": "playingfromAlbum"
+  },
   "playingfromPlaylist": "MULA SA PLAYLIST",
+  "@playingfromPlaylist": {
+    "description": "playingfromPlaylist"
+  },
   "playingfromSelection": "MULA SA MGA PINILI",
+  "@playingfromSelection": {
+    "description": "playingfromSelection"
+  },
   "playingfromArtist": "MULA SA MANG-AAWIT",
+  "@playingfromArtist": {
+    "description": "playingfromArtist"
+  },
   "removeFromLib": "Alisin sa Library ng Kanta",
+  "@removeFromLib": {
+    "description": "removeFromLib"
+  },
   "sleepTimer": "Oras sa Pagtulog",
+  "@sleepTimer": {
+    "description": "sleepTimer"
+  },
   "add5Minutes": "Dagdag ng 5 minuto",
+  "@add5Minutes": {
+    "description": "add5Minutes"
+  },
   "cancelTimer": "Itigil ang Timer",
+  "@cancelTimer": {
+    "description": "cancelTimer"
+  },
   "deleteDownloadData": "Alisin sa downloads",
+  "@deleteDownloadData": {
+    "description": "deleteDownloadData"
+  },
   "minutes": "minuto",
+  "@minutes": {
+    "description": "minutes"
+  },
   "endOfThisSong": "Dulo ng kanta",
+  "@endOfThisSong": {
+    "description": "endOfThisSong"
+  },
   "appInfo": "Tungkol sa App",
+  "@appInfo": {
+    "description": "appInfo"
+  },
   "misc": "Iba pa",
+  "@misc": {
+    "description": "misc"
+  },
   "autoDownFavSong": "I-auto download ang paborting kanta",
+  "@autoDownFavSong": {
+    "description": "autoDownFavSong"
+  },
   "networkError": "Problema sa network! Tignan ang iyong koneksyon.",
+  "@networkError": {
+    "description": "networkError"
+  },
   "downloadError2": "Hindi ma-download ang kanta dahil sa paghihigpit. Maaaring subukan muli.",
+  "@downloadError2": {
+    "description": "downloadError2"
+  },
   "downloadError3": "Bigo ang download dahil sa network/stream error! Subukan ulit.",
+  "@downloadError3": {
+    "description": "downloadError3"
+  },
   "musicAndPlayback": "Kanta at Pagtugtog",
+  "@musicAndPlayback": {
+    "description": "musicAndPlayback"
+  },
   "content": "Nilalaman",
+  "@content": {
+    "description": "content"
+  },
   "personalisation": "Pansarili",
+  "@personalisation": {
+    "description": "personalisation"
+  },
   "themeMode": "Uri ng Tema",
+  "@themeMode": {
+    "description": "themeMode"
+  },
   "dynamic": "Nagbabago",
+  "@dynamic": {
+    "description": "dynamic"
+  },
   "systemDefault": "Gamit ng system",
+  "@systemDefault": {
+    "description": "systemDefault"
+  },
   "dark": "Madilim",
+  "@dark": {
+    "description": "dark"
+  },
   "light": "Maliwanag",
+  "@light": {
+    "description": "light"
+  },
   "language": "Wika",
+  "@language": {
+    "description": "language"
+  },
   "playerUi": "Itsura ng Player",
+  "@playerUi": {
+    "description": "playerUi"
+  },
   "playerUiDes": "Pumili ng itsura ng player",
+  "@playerUiDes": {
+    "description": "playerUiDes"
+  },
   "languageDes": "Pumili ng wika ng App",
+  "@languageDes": {
+    "description": "languageDes"
+  },
   "quickpicks": "Bilis-Pili",
+  "@quickpicks": {
+    "description": "quickpicks"
+  },
   "discover": "Tuklasin",
+  "@discover": {
+    "description": "discover"
+  },
   "trending": "Mga Trending",
+  "@trending": {
+    "description": "trending"
+  },
   "basedOnLast": "Mula sa mga huling pili",
+  "@basedOnLast": {
+    "description": "basedOnLast"
+  },
   "restoreLastPlaybackSession": "Ibalik ang huling patugtog",
+  "@restoreLastPlaybackSession": {
+    "description": "restoreLastPlaybackSession"
+  },
   "restoreLastPlaybackSessionDes": "Ibalik ang huling patugtog sa pagbukas ng app",
+  "@restoreLastPlaybackSessionDes": {
+    "description": "restoreLastPlaybackSessionDes"
+  },
   "homeContentCount": "Bilang ng nilalaman sa Home",
+  "@homeContentCount": {
+    "description": "homeContentCount"
+  },
   "enableBottomNav": "Navibar sa baba",
+  "@enableBottomNav": {
+    "description": "enableBottomNav"
+  },
   "enableBottomNavDes": "Ilipat sa babang navibar",
+  "@enableBottomNavDes": {
+    "description": "enableBottomNavDes"
+  },
   "skipSilence": "Ilagpas ang walang tunog",
+  "@skipSilence": {
+    "description": "skipSilence"
+  },
   "skipSilenceDes": "Ilalagpas ang walang tunog sa kanta.",
+  "@skipSilenceDes": {
+    "description": "skipSilenceDes"
+  },
   "cachedOrOffline": "Na-cache/Offline",
+  "@cachedOrOffline": {
+    "description": "cachedOrOffline"
+  },
   "reArrangeSongs": "Ihanay ang mga kanta",
+  "@reArrangeSongs": {
+    "description": "reArrangeSongs"
+  },
   "queuerearrangingDeniedMsg": "Hindi mababago ang hanay kapag bukas ang Shuffle Mode",
+  "@queuerearrangingDeniedMsg": {
+    "description": "queuerearrangingDeniedMsg"
+  },
   "randomSelection": "Pa-random Pili",
+  "@randomSelection": {
+    "description": "randomSelection"
+  },
   "randomRadio": "Pa-random Radyo",
+  "@randomRadio": {
+    "description": "randomRadio"
+  },
   "playnextMsg": "Gamitin para sa => Susunod {Pangalan ng Kanta}",
+  "@playnextMsg": {
+    "description": "playnextMsg"
+  },
   "shuffleQueue": "Guluhin ang Hanay",
+  "@shuffleQueue": {
+    "description": "shuffleQueue"
+  },
   "queueLoop": "Hanay Ulit-ulitin",
+  "@queueLoop": {
+    "description": "queueLoop"
+  },
   "queueLoopNotDisMsg1": "Hindi madi-disable ang pag-uulit sa hanay sa Shuffle Mode.",
+  "@queueLoopNotDisMsg1": {
+    "description": "queueLoopNotDisMsg1"
+  },
   "queueLoopNotDisMsg2": "Hindi mai-enable ang pag-uulit sa hanay sa Radyo Mode.",
+  "@queueLoopNotDisMsg2": {
+    "description": "queueLoopNotDisMsg2"
+  },
   "download": "I-download",
+  "@download": {
+    "description": "download"
+  },
   "autoDownFavSongDes": "Agad i-download ang mga paboritong kanta kung madagdag ito sa mga paborito",
+  "@autoDownFavSongDes": {
+    "description": "autoDownFavSongDes"
+  },
   "standard": "Istandar",
+  "@standard": {
+    "description": "standard"
+  },
   "gesture": "Paggalaw",
+  "@gesture": {
+    "description": "gesture"
+  },
   "setDiscoverContent": "I-set ang pagtuklas sa nilalaman",
+  "@setDiscoverContent": {
+    "description": "setDiscoverContent"
+  },
   "topmusicvideos": "Sikat na Music Videos",
+  "@topmusicvideos": {
+    "description": "topmusicvideos"
+  },
   "autoOpenPlayer": "Awto-bukas ang player screen",
+  "@autoOpenPlayer": {
+    "description": "autoOpenPlayer"
+  },
   "autoOpenPlayerDes": "Gamitin/Di-gamitin ang awto-bukas ng player full screen sa pagpili ng kantang itutugtog",
+  "@autoOpenPlayerDes": {
+    "description": "autoOpenPlayerDes"
+  },
   "homeContentCountDes": "Piliin ang bilang ng paunang nilalaman sa homescreen (humigit-kumulang). Mabilis ang pag-load sa mababang bilang",
+  "@homeContentCountDes": {
+    "description": "homeContentCountDes"
+  },
   "cacheSongs": "I-cache ang mga Kanta",
+  "@cacheSongs": {
+    "description": "cacheSongs"
+  },
   "cacheSongsDes": "I-cache ang mga kanta para sa hinaharap/offline na patugtog, magagamit nito ang space ng iyong device",
+  "@cacheSongsDes": {
+    "description": "cacheSongsDes"
+  },
   "loudnessNormalization": "Pa-normal na Lakas",
+  "@loudnessNormalization": {
+    "description": "loudnessNormalization"
+  },
   "loudnessNormalizationDes": "I-ayon sa pantay na lebel ng lakas ang mga kanta (eksperimental) (Hindi gagana sa mga kantang na-download sa nakaraang bersyon(<v1.10.0))",
+  "@loudnessNormalizationDes": {
+    "description": "loudnessNormalizationDes"
+  },
   "streamingQuality": "Kalidad ng stream",
+  "@streamingQuality": {
+    "description": "streamingQuality"
+  },
   "streamingQualityDes": "Kalidad ng stream sa kanta",
+  "@streamingQualityDes": {
+    "description": "streamingQualityDes"
+  },
   "disableTransitionAnimation": "Di-gamitin ang transition animation",
+  "@disableTransitionAnimation": {
+    "description": "disableTransitionAnimation"
+  },
   "disableTransitionAnimationDes": "Gamitin ang opsyon para di-gamitin ang tab transition animation",
+  "@disableTransitionAnimationDes": {
+    "description": "disableTransitionAnimationDes"
+  },
   "enableSlidableAction": "Gamitin ang pa-slide na galaw",
+  "@enableSlidableAction": {
+    "description": "enableSlidableAction"
+  },
   "enableSlidableActionDes": "Gamitin ang pag-slide na galaw sa tile ng kanta",
+  "@enableSlidableActionDes": {
+    "description": "enableSlidableActionDes"
+  },
   "high": "Mataas",
+  "@high": {
+    "description": "high"
+  },
   "low": "Mababa",
+  "@low": {
+    "description": "low"
+  },
   "backgroundPlay": "Itugtog sa background",
+  "@backgroundPlay": {
+    "description": "backgroundPlay"
+  },
   "backgroundPlayDes": "Gamitin/Di-gamitin ang pagtugtog sa background (Mabubuksan ang app sa system tray kung gumagana ang app sa background)",
+  "@backgroundPlayDes": {
+    "description": "backgroundPlayDes"
+  },
   "downloadLocation": "Lokasyon ng Mga Download",
+  "@downloadLocation": {
+    "description": "downloadLocation"
+  },
   "cacheHomeScreenData": "I-cache ang nilalamang data ng home screen",
+  "@cacheHomeScreenData": {
+    "description": "cacheHomeScreenData"
+  },
   "cacheHomeScreenDataDes": "Gamitin ang pag-cache sa nilalamang data ng home screen, agad lalabas ang Home screen kung gagamitin ang opsyon na ito",
+  "@cacheHomeScreenDataDes": {
+    "description": "cacheHomeScreenDataDes"
+  },
   "downloadingFormat": "Uri ng File sa Pag-download",
+  "@downloadingFormat": {
+    "description": "downloadingFormat"
+  },
   "downloadingFormatDes": "Pumili ng format ng file sa pag-download. \"Opus\" ang may mataas na kalidad",
+  "@downloadingFormatDes": {
+    "description": "downloadingFormatDes"
+  },
   "exportDowloadedFiles": "I-export ang na-download na files",
+  "@exportDowloadedFiles": {
+    "description": "exportDowloadedFiles"
+  },
   "exportDowloadedFilesDes": "Pindutin para i-export ang na-download na mga file mula sa inApp dir papunta sa external dir",
+  "@exportDowloadedFilesDes": {
+    "description": "exportDowloadedFilesDes"
+  },
   "exportedFileLocation": "Lokasyon ng na-export na file",
+  "@exportedFileLocation": {
+    "description": "exportedFileLocation"
+  },
   "export": "I-export",
+  "@export": {
+    "description": "export"
+  },
   "exporting": "Ine-export...",
+  "@exporting": {
+    "description": "exporting"
+  },
   "scanning": "Sinusuri...",
+  "@scanning": {
+    "description": "scanning"
+  },
   "downFilesFound": "nahanap na downloaded files",
+  "@downFilesFound": {
+    "description": "downFilesFound"
+  },
   "close": "Isara",
+  "@close": {
+    "description": "close"
+  },
   "exportMsg": "Tagumpay ang pag-export ng mga file",
+  "@exportMsg": {
+    "description": "exportMsg"
+  },
   "equalizer": "Ekwaliser",
+  "@equalizer": {
+    "description": "equalizer"
+  },
   "equalizerDes": "Bukasan ang ekwaliser ng system",
+  "@equalizerDes": {
+    "description": "equalizerDes"
+  },
   "clearImgCache": "Ibura ang cache ng mga larawan",
+  "@clearImgCache": {
+    "description": "clearImgCache"
+  },
   "clearImgCacheAlert": "Nabura na ang mga na-cache na larawan",
+  "@clearImgCacheAlert": {
+    "description": "clearImgCacheAlert"
+  },
   "clearImgCacheDes": "Pindutin para burahin ang mga na-cache na larawan. (Hindi pinapayo kung gustong i-refresh ang cache ng mga larawan)",
+  "@clearImgCacheDes": {
+    "description": "clearImgCacheDes"
+  },
   "ignoreBatOpt": "Hayaan ang pag-optimize sa baterya",
+  "@ignoreBatOpt": {
+    "description": "ignoreBatOpt"
+  },
   "ignoreBatOptDes": "Kung may problema sa notification o sa pagtugtog na tinitigil ng system optimization, gamitin ang opsyong ito",
+  "@ignoreBatOptDes": {
+    "description": "ignoreBatOptDes"
+  },
   "status": "Istado",
+  "@status": {
+    "description": "status"
+  },
   "enabled": "Ginagamit",
+  "@enabled": {
+    "description": "enabled"
+  },
   "disabled": "Di-ginagamit",
+  "@disabled": {
+    "description": "disabled"
+  },
   "resetToDefault": "Ibalik sa default na settings",
+  "@resetToDefault": {
+    "description": "resetToDefault"
+  },
   "resetToDefaultDes": "Ibalik ang app sa dati nitong settings (Kailangang mag-restart)",
+  "@resetToDefaultDes": {
+    "description": "resetToDefaultDes"
+  },
   "resetToDefaultMsg": "Tapos na ang pag-balik sa settings, bukasan muli ang app",
+  "@resetToDefaultMsg": {
+    "description": "resetToDefaultMsg"
+  },
   "githubDes": "Tignan ang GitHub source code \nkung gusto mo ang project, huwag limutin magbigay ng ⭐",
+  "@githubDes": {
+    "description": "githubDes"
+  },
   "by": "mula kay",
+  "@by": {
+    "description": "by"
+  },
   "urlSearchDes": "Na-detect na Url pindutin para buksan/ipatugtog ang nilalaman",
+  "@urlSearchDes": {
+    "description": "urlSearchDes"
+  },
   "search": "Maghanap",
+  "@search": {
+    "description": "search"
+  },
   "searchDes": "Mga kanta, Playlist, Album o Artist",
+  "@searchDes": {
+    "description": "searchDes"
+  },
   "searchRes": "Resulta ng paghahanap",
+  "@searchRes": {
+    "description": "searchRes"
+  },
   "for1": "para sa",
+  "@for1": {
+    "description": "for1"
+  },
   "videos": "Mga Bidyo",
+  "@videos": {
+    "description": "videos"
+  },
   "viewAll": "Tignan lahat",
+  "@viewAll": {
+    "description": "viewAll"
+  },
   "results": "Mga resulta",
+  "@results": {
+    "description": "results"
+  },
   "nomatch": "Walang mahanap para sa",
+  "@nomatch": {
+    "description": "nomatch"
+  },
   "subscribers": "mga subscriber",
+  "@subscribers": {
+    "description": "subscribers"
+  },
   "about": "Tungkol Dito",
+  "@about": {
+    "description": "about"
+  },
   "synced": "Naka-sync",
+  "@synced": {
+    "description": "synced"
+  },
   "plain": "Payak",
+  "@plain": {
+    "description": "plain"
+  },
   "songInfo": "Info sa Kanta",
+  "@songInfo": {
+    "description": "songInfo"
+  },
   "id": "Id",
+  "@id": {
+    "description": "id"
+  },
   "title": "Titulo",
+  "@title": {
+    "description": "title"
+  },
   "duration": "Haba",
+  "@duration": {
+    "description": "duration"
+  },
   "audioCodec": "Codec ng Audio",
+  "@audioCodec": {
+    "description": "audioCodec"
+  },
   "bitrate": "Bitrate",
+  "@bitrate": {
+    "description": "bitrate"
+  },
   "loudnessDb": "Lakas (Db)",
+  "@loudnessDb": {
+    "description": "loudnessDb"
+  },
   "deleteDownloadedDataAlert": "Natanggal na sa mga download!",
+  "@deleteDownloadedDataAlert": {
+    "description": "deleteDownloadedDataAlert"
+  },
   "cancelTimerAlert": "Nakansela ang timer sa pagtulog",
+  "@cancelTimerAlert": {
+    "description": "cancelTimerAlert"
+  },
   "sleepTimeSetAlert": "Naka-set ang timer sa pagtulog",
+  "@sleepTimeSetAlert": {
+    "description": "sleepTimeSetAlert"
+  },
   "radioNotAvailable": "Walang radyo para sa artist na ito!",
+  "@radioNotAvailable": {
+    "description": "radioNotAvailable"
+  },
   "songRemovedfromQueue": "Nataggal na sa hilera!",
+  "@songRemovedfromQueue": {
+    "description": "songRemovedfromQueue"
+  },
   "songRemovedfromQueueCurrSong": "Hindi matatanggal ang tumutugtog na kanta",
+  "@songRemovedfromQueueCurrSong": {
+    "description": "songRemovedfromQueueCurrSong"
+  },
   "songAddedToPlaylistAlert": "Nadagdag na ang kanta sa playlist!",
+  "@songAddedToPlaylistAlert": {
+    "description": "songAddedToPlaylistAlert"
+  },
   "songAlreadyExists": "Naroon na ang kanta!",
+  "@songAlreadyExists": {
+    "description": "songAlreadyExists"
+  },
   "songAlreadyOfflineAlert": "Offline na ang kanta sa cache",
+  "@songAlreadyOfflineAlert": {
+    "description": "songAlreadyOfflineAlert"
+  },
   "songEnqueueAlert": "Nakahilera na ang kanta!",
+  "@songEnqueueAlert": {
+    "description": "songEnqueueAlert"
+  },
   "songRemovedAlert": "Tinanggal sa",
+  "@songRemovedAlert": {
+    "description": "songRemovedAlert"
+  },
   "errorOccuredAlert": "May umiral na error!",
+  "@errorOccuredAlert": {
+    "description": "errorOccuredAlert"
+  },
   "pipedplstSyncAlert": "Na-sync na ang Piped playlist!",
+  "@pipedplstSyncAlert": {
+    "description": "pipedplstSyncAlert"
+  },
   "playlistCreatedAlert": "Nagawa na ang playlist!",
+  "@playlistCreatedAlert": {
+    "description": "playlistCreatedAlert"
+  },
   "playlistCreatednsongAddedAlert": "Nagawa na ang playlist at nadagdag ang kanta!",
+  "@playlistCreatednsongAddedAlert": {
+    "description": "playlistCreatednsongAddedAlert"
+  },
   "playlistRenameAlert": "Napalitan na ang pangalan!",
+  "@playlistRenameAlert": {
+    "description": "playlistRenameAlert"
+  },
   "playlistRemovedAlert": "Natanggal na ang playlist!",
+  "@playlistRemovedAlert": {
+    "description": "playlistRemovedAlert"
+  },
   "playlistBookmarkAddAlert": "Na-bookmark na ang playlist!",
+  "@playlistBookmarkAddAlert": {
+    "description": "playlistBookmarkAddAlert"
+  },
   "playlistBookmarkRemoveAlert": "Natanggal na ang bookmark ng playlist!",
+  "@playlistBookmarkRemoveAlert": {
+    "description": "playlistBookmarkRemoveAlert"
+  },
   "albumBookmarkAddAlert": "Na-bookmark na ang album!",
+  "@albumBookmarkAddAlert": {
+    "description": "albumBookmarkAddAlert"
+  },
   "albumBookmarkRemoveAlert": "Natanggal na ang bookmark ng album!",
+  "@albumBookmarkRemoveAlert": {
+    "description": "albumBookmarkRemoveAlert"
+  },
   "artistBookmarkAddAlert": "Na-bookmark na ang artist!",
+  "@artistBookmarkAddAlert": {
+    "description": "artistBookmarkAddAlert"
+  },
   "artistBookmarkRemoveAlert": "Natanggal na ang bookmark ng artist!",
+  "@artistBookmarkRemoveAlert": {
+    "description": "artistBookmarkRemoveAlert"
+  },
   "lyricsNotAvailable": "Walang mahanap na liriko!",
+  "@lyricsNotAvailable": {
+    "description": "lyricsNotAvailable"
+  },
   "syncedLyricsNotAvailable": "Walang mahanap na lirikong may sync!",
+  "@syncedLyricsNotAvailable": {
+    "description": "syncedLyricsNotAvailable"
+  },
   "artistDesNotAvailable": "Walang deskripsyon na mahanap!",
+  "@artistDesNotAvailable": {
+    "description": "artistDesNotAvailable"
+  },
   "newVersionAvailable": "May bagong bersyon!",
+  "@newVersionAvailable": {
+    "description": "newVersionAvailable"
+  },
   "dontShowInfoAgain": "Huwag ulit ilabas ang info na ito",
+  "@dontShowInfoAgain": {
+    "description": "dontShowInfoAgain"
+  },
   "dismiss": "Alisin",
+  "@dismiss": {
+    "description": "dismiss"
+  },
   "notaSongVideo": "Hindi Kanta/Music Video!",
+  "@notaSongVideo": {
+    "description": "notaSongVideo"
+  },
   "notaValidLink": "Hindi gumagana ang link!",
+  "@notaValidLink": {
+    "description": "notaValidLink"
+  },
   "operationFailed": "Nabigo",
+  "@operationFailed": {
+    "description": "operationFailed"
+  },
   "goToDownloadPage": "Pindutin para sa pahina ng download",
+  "@goToDownloadPage": {
+    "description": "goToDownloadPage"
+  },
   "local": "Lokal",
+  "@local": {
+    "description": "local"
+  },
   "link": "Ikawing",
+  "@link": {
+    "description": "link"
+  },
   "unLink": "Huwag ikawing",
+  "@unLink": {
+    "description": "unLink"
+  },
   "allFieldsReqMsg": "Kailagan may laman ang mga field",
+  "@allFieldsReqMsg": {
+    "description": "allFieldsReqMsg"
+  },
   "keepScreenOnWhilePlaying": "Panatilihing naka-on ang screen habang tumutugtog",
-  "keepScreenOnWhilePlayingDes": "Kung naka-enable, mananatiling naka-on ang screen ng device habang tumutugtog ang musika"
+  "@keepScreenOnWhilePlaying": {
+    "description": "keepScreenOnWhilePlaying"
+  },
+  "keepScreenOnWhilePlayingDes": "Kung naka-enable, mananatiling naka-on ang screen ng device habang tumutugtog ang musika",
+  "@keepScreenOnWhilePlayingDes": {
+    "description": "keepScreenOnWhilePlayingDes"
+  }
 }

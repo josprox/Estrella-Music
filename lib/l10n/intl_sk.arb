@@ -1,279 +1,1107 @@
 {
   "@@locale": "sk",
   "nomatch": "Nenašla sa žiadna zhoda pre",
+  "@nomatch": {
+    "description": "nomatch"
+  },
   "subscribers": "Odberatelia",
+  "@subscribers": {
+    "description": "subscribers"
+  },
   "operationFailed": "Operácia zlyhala",
+  "@operationFailed": {
+    "description": "operationFailed"
+  },
   "Piped": "Piped",
+  "@Piped": {
+    "description": "Piped"
+  },
   "selectAuthInsMsg": "Vyberte autorizačnú inštanciu!",
+  "@selectAuthInsMsg": {
+    "description": "selectAuthInsMsg"
+  },
   "library": "Knižnica",
+  "@library": {
+    "description": "library"
+  },
   "libSongs": "Knižnica skladieb",
+  "@libSongs": {
+    "description": "libSongs"
+  },
   "cancel": "Zrušiť",
+  "@cancel": {
+    "description": "cancel"
+  },
   "create": "Vytvoriť",
+  "@create": {
+    "description": "create"
+  },
   "enqueueSong": "Pridať skladbu do poradia",
+  "@enqueueSong": {
+    "description": "enqueueSong"
+  },
   "goToAlbum": "Prejsť na album",
+  "@goToAlbum": {
+    "description": "goToAlbum"
+  },
   "removeFromLib": "Odstrániť z knižnice skladieb",
+  "@removeFromLib": {
+    "description": "removeFromLib"
+  },
   "sleepTimer": "Časovač spánku",
+  "@sleepTimer": {
+    "description": "sleepTimer"
+  },
   "add5Minutes": "Pridať 5 minút",
+  "@add5Minutes": {
+    "description": "add5Minutes"
+  },
   "cancelTimer": "Zrušiť časovač",
+  "@cancelTimer": {
+    "description": "cancelTimer"
+  },
   "endOfThisSong": "Koniec tejto skladby",
+  "@endOfThisSong": {
+    "description": "endOfThisSong"
+  },
   "themeMode": "Téma",
+  "@themeMode": {
+    "description": "themeMode"
+  },
   "homeContentCount": "Počet položiek na domovskej obrazovke",
+  "@homeContentCount": {
+    "description": "homeContentCount"
+  },
   "streamingQualityDes": "Kvalita hudobného streamu",
+  "@streamingQualityDes": {
+    "description": "streamingQualityDes"
+  },
   "high": "Vysoká",
+  "@high": {
+    "description": "high"
+  },
   "low": "Nízka",
+  "@low": {
+    "description": "low"
+  },
   "downloadLocation": "Miesto sťahovania",
+  "@downloadLocation": {
+    "description": "downloadLocation"
+  },
   "downloadingFormat": "Formát sťahovaného súboru",
+  "@downloadingFormat": {
+    "description": "downloadingFormat"
+  },
   "ignoreBatOptDes": "Ak máte problémy s oznámeniami alebo sa prehrávanie zastavilo kvôli optimalizácii systému, povoľte túto možnosť",
+  "@ignoreBatOptDes": {
+    "description": "ignoreBatOptDes"
+  },
   "disabled": "Vypnuté",
+  "@disabled": {
+    "description": "disabled"
+  },
   "searchDes": "Skladby, playlist, album, interpreta",
+  "@searchDes": {
+    "description": "searchDes"
+  },
   "for1": "pre",
+  "@for1": {
+    "description": "for1"
+  },
   "enabled": "Zapnuté",
+  "@enabled": {
+    "description": "enabled"
+  },
   "viewAll": "Zobraziť všetko",
+  "@viewAll": {
+    "description": "viewAll"
+  },
   "videos": "Videá",
+  "@videos": {
+    "description": "videos"
+  },
   "results": "Výsledky",
+  "@results": {
+    "description": "results"
+  },
   "playlistCreatednsongAddedAlert": "Playlist vytvorený a skladba pridaná!",
+  "@playlistCreatednsongAddedAlert": {
+    "description": "playlistCreatednsongAddedAlert"
+  },
   "playlistRenameAlert": "Premenované úspešne!",
+  "@playlistRenameAlert": {
+    "description": "playlistRenameAlert"
+  },
   "lyricsNotAvailable": "Text nie je k dispozícii!",
+  "@lyricsNotAvailable": {
+    "description": "lyricsNotAvailable"
+  },
   "home": "Domov",
+  "@home": {
+    "description": "home"
+  },
   "songs": "Skladby",
+  "@songs": {
+    "description": "songs"
+  },
   "playlists": "Playlisty",
+  "@playlists": {
+    "description": "playlists"
+  },
   "albums": "Albumy",
+  "@albums": {
+    "description": "albums"
+  },
   "artists": "Interpreti",
+  "@artists": {
+    "description": "artists"
+  },
   "settings": "Nastavenia",
+  "@settings": {
+    "description": "settings"
+  },
   "libPlaylists": "Knižnica playlistov",
+  "@libPlaylists": {
+    "description": "libPlaylists"
+  },
   "libAlbums": "Knižnica albumov",
+  "@libAlbums": {
+    "description": "libAlbums"
+  },
   "items": "položky",
+  "@items": {
+    "description": "items"
+  },
   "networkError1": "Chyba siete!",
+  "@networkError1": {
+    "description": "networkError1"
+  },
   "retry": "Skúste znova!",
+  "@retry": {
+    "description": "retry"
+  },
   "noOfflineSong": "Žiadne skladby offline!",
+  "@noOfflineSong": {
+    "description": "noOfflineSong"
+  },
   "emptyPlaylist": "Prázdny playlist!",
+  "@emptyPlaylist": {
+    "description": "emptyPlaylist"
+  },
   "CreateNewPlaylist": "Vytvoriť nový playlist",
+  "@CreateNewPlaylist": {
+    "description": "CreateNewPlaylist"
+  },
   "createnAdd": "Vytvoriť a pridať",
+  "@createnAdd": {
+    "description": "createnAdd"
+  },
   "startRadio": "Spustiť rádio",
+  "@startRadio": {
+    "description": "startRadio"
+  },
   "addToPlaylist": "Pridať do playlistu",
+  "@addToPlaylist": {
+    "description": "addToPlaylist"
+  },
   "noLibPlaylist": "Nemáte žiadny playlist v knižnici!",
+  "@noLibPlaylist": {
+    "description": "noLibPlaylist"
+  },
   "rename": "Premenovať",
+  "@rename": {
+    "description": "rename"
+  },
   "reArrangePlaylist": "Preskupiť playlist",
+  "@reArrangePlaylist": {
+    "description": "reArrangePlaylist"
+  },
   "removeMultiple": "Odstrániť viacero skladieb",
+  "@removeMultiple": {
+    "description": "removeMultiple"
+  },
   "addMultipleSongs": "Pridať skladby do playlistu",
+  "@addMultipleSongs": {
+    "description": "addMultipleSongs"
+  },
   "artistDesNotAvailable": "Popis nie je k dispozícii!",
+  "@artistDesNotAvailable": {
+    "description": "artistDesNotAvailable"
+  },
   "allFieldsReqMsg": "Všetky polia sú povinné",
+  "@allFieldsReqMsg": {
+    "description": "allFieldsReqMsg"
+  },
   "restoreLastPlaybackSession": "Obnoviť poslednú reláciu prehrávania",
+  "@restoreLastPlaybackSession": {
+    "description": "restoreLastPlaybackSession"
+  },
   "openIn": "Otvoriť v",
+  "@openIn": {
+    "description": "openIn"
+  },
   "dynamic": "Dynamická",
+  "@dynamic": {
+    "description": "dynamic"
+  },
   "systemDefault": "Systémová",
+  "@systemDefault": {
+    "description": "systemDefault"
+  },
   "removeFromQueue": "Odstrániť z poradia",
+  "@removeFromQueue": {
+    "description": "removeFromQueue"
+  },
   "dark": "Tmavá",
+  "@dark": {
+    "description": "dark"
+  },
   "light": "Svetlá",
+  "@light": {
+    "description": "light"
+  },
   "languageDes": "Nastavte jazyk aplikácie",
+  "@languageDes": {
+    "description": "languageDes"
+  },
   "quickpicks": "Rýchle výbery",
+  "@quickpicks": {
+    "description": "quickpicks"
+  },
   "trending": "Trendy",
+  "@trending": {
+    "description": "trending"
+  },
   "topmusicvideos": "Najlepšie hudobné videá",
+  "@topmusicvideos": {
+    "description": "topmusicvideos"
+  },
   "enableBottomNav": "Dolný navigačný panel",
+  "@enableBottomNav": {
+    "description": "enableBottomNav"
+  },
   "enableBottomNavDes": "Prepnúť na dolný navigačný panel",
+  "@enableBottomNavDes": {
+    "description": "enableBottomNavDes"
+  },
   "basedOnLast": "Na základe poslednej interakcie",
+  "@basedOnLast": {
+    "description": "basedOnLast"
+  },
   "skipSilenceDes": "Pri prehrávaní hudby sa vynechá ticho",
+  "@skipSilenceDes": {
+    "description": "skipSilenceDes"
+  },
   "streamingQuality": "Kvalita streamu",
+  "@streamingQuality": {
+    "description": "streamingQuality"
+  },
   "disableTransitionAnimationDes": "Zapnutím tejto možnosti zakážete prechodovú animáciu na karte",
+  "@disableTransitionAnimationDes": {
+    "description": "disableTransitionAnimationDes"
+  },
   "backgroundPlay": "Prehrávať hudbu na pozadí",
+  "@backgroundPlay": {
+    "description": "backgroundPlay"
+  },
   "cacheHomeScreenData": "Údaje obsahu domovskej obrazovky v medzipamäti",
+  "@cacheHomeScreenData": {
+    "description": "cacheHomeScreenData"
+  },
   "downloadingFormatDes": "Vyberte formát sťahovaného súboru. \"Opus\" poskytne najlepšiu kvalitu",
+  "@downloadingFormatDes": {
+    "description": "downloadingFormatDes"
+  },
   "exportDowloadedFiles": "Exportovať stiahnuté súbory",
+  "@exportDowloadedFiles": {
+    "description": "exportDowloadedFiles"
+  },
   "exportDowloadedFilesDes": "Kliknite sem pre export stiahnutého súboru z adresára aplikácie do externého adresára",
+  "@exportDowloadedFilesDes": {
+    "description": "exportDowloadedFilesDes"
+  },
   "exportedFileLocation": "Umiestnenie exportu stiahnutého súboru",
+  "@exportedFileLocation": {
+    "description": "exportedFileLocation"
+  },
   "export": "Exportovať",
+  "@export": {
+    "description": "export"
+  },
   "exporting": "Exportovanie...",
+  "@exporting": {
+    "description": "exporting"
+  },
   "downFilesFound": "stiahnuté súbory nájdené",
+  "@downFilesFound": {
+    "description": "downFilesFound"
+  },
   "close": "Zavrieť",
+  "@close": {
+    "description": "close"
+  },
   "exportMsg": "Súbory boli úspešne exportované",
+  "@exportMsg": {
+    "description": "exportMsg"
+  },
   "clearImgCacheAlert": "Medzipamäť obrázkov úspešne vymazaná",
+  "@clearImgCacheAlert": {
+    "description": "clearImgCacheAlert"
+  },
   "searchRes": "Výsledky vyhľadávania",
+  "@searchRes": {
+    "description": "searchRes"
+  },
   "about": "O aplikácii",
+  "@about": {
+    "description": "about"
+  },
   "synced": "Synchronizovaný",
+  "@synced": {
+    "description": "synced"
+  },
   "cancelTimerAlert": "Časovač spánku zrušený",
+  "@cancelTimerAlert": {
+    "description": "cancelTimerAlert"
+  },
   "songRemovedfromQueueCurrSong": "Aktuálne prehrávanú skladbu nemožno odstrániť",
+  "@songRemovedfromQueueCurrSong": {
+    "description": "songRemovedfromQueueCurrSong"
+  },
   "radioNotAvailable": "Rádio pre tohto interpreta nie je k dispozícii!",
+  "@radioNotAvailable": {
+    "description": "radioNotAvailable"
+  },
   "sleepTimeSetAlert": "Časovač spánku je nastavený",
+  "@sleepTimeSetAlert": {
+    "description": "sleepTimeSetAlert"
+  },
   "pipedplstSyncAlert": "Piped playlist synchronizovaný!",
+  "@pipedplstSyncAlert": {
+    "description": "pipedplstSyncAlert"
+  },
   "songRemovedAlert": "Odstránené z",
+  "@songRemovedAlert": {
+    "description": "songRemovedAlert"
+  },
   "songEnqueueAlert": "Skladba zaradená!",
+  "@songEnqueueAlert": {
+    "description": "songEnqueueAlert"
+  },
   "songAlreadyExists": "Skladba už existuje!",
+  "@songAlreadyExists": {
+    "description": "songAlreadyExists"
+  },
   "songAddedToPlaylistAlert": "Skladba pridaná do playlistu!",
+  "@songAddedToPlaylistAlert": {
+    "description": "songAddedToPlaylistAlert"
+  },
   "albumBookmarkAddAlert": "Album v záložkách!",
+  "@albumBookmarkAddAlert": {
+    "description": "albumBookmarkAddAlert"
+  },
   "playlistBookmarkAddAlert": "Playlist v záložkách!",
+  "@playlistBookmarkAddAlert": {
+    "description": "playlistBookmarkAddAlert"
+  },
   "playlistRemovedAlert": "Playlist odstránený!",
+  "@playlistRemovedAlert": {
+    "description": "playlistRemovedAlert"
+  },
   "playlistCreatedAlert": "Playlist vytvorený!",
+  "@playlistCreatedAlert": {
+    "description": "playlistCreatedAlert"
+  },
   "selectAuthIns": "Vybrať autorizačnú inštanciu",
+  "@selectAuthIns": {
+    "description": "selectAuthIns"
+  },
   "newVersionAvailable": "K dispozícii je nová verzia!",
+  "@newVersionAvailable": {
+    "description": "newVersionAvailable"
+  },
   "artistBookmarkAddAlert": "Interpret v záložkách!",
+  "@artistBookmarkAddAlert": {
+    "description": "artistBookmarkAddAlert"
+  },
   "albumBookmarkRemoveAlert": "Záložka albumu odstránená!",
+  "@albumBookmarkRemoveAlert": {
+    "description": "albumBookmarkRemoveAlert"
+  },
   "reset": "Resetovať",
+  "@reset": {
+    "description": "reset"
+  },
   "password": "Heslo",
+  "@password": {
+    "description": "password"
+  },
   "username": "Používateľské meno",
+  "@username": {
+    "description": "username"
+  },
   "resetblacklistedplaylist": "Resetovať playlisty z čiernej listiny",
+  "@resetblacklistedplaylist": {
+    "description": "resetblacklistedplaylist"
+  },
   "blacklistPlstResetAlert": "Resetovanie úspešné!",
+  "@blacklistPlstResetAlert": {
+    "description": "blacklistPlstResetAlert"
+  },
   "noBookmarks": "Žiadne záložky!",
+  "@noBookmarks": {
+    "description": "noBookmarks"
+  },
   "viewArtist": "Zobraziť interpreta",
+  "@viewArtist": {
+    "description": "viewArtist"
+  },
   "status": "Stav",
+  "@status": {
+    "description": "status"
+  },
   "songAlreadyOfflineAlert": "Skladba je už offline v medzipamäti",
+  "@songAlreadyOfflineAlert": {
+    "description": "songAlreadyOfflineAlert"
+  },
   "github": "GitHub",
+  "@github": {
+    "description": "github"
+  },
   "by": "od",
+  "@by": {
+    "description": "by"
+  },
   "notaValidLink": "Neplatný odkaz!",
+  "@notaValidLink": {
+    "description": "notaValidLink"
+  },
   "artistBookmarkRemoveAlert": "Záložka interpreta odstránená!",
+  "@artistBookmarkRemoveAlert": {
+    "description": "artistBookmarkRemoveAlert"
+  },
   "singles": "Single",
+  "@singles": {
+    "description": "singles"
+  },
   "libArtists": "Knižnica interpretov",
+  "@libArtists": {
+    "description": "libArtists"
+  },
   "communityplaylists": "Komunitné playlisty",
+  "@communityplaylists": {
+    "description": "communityplaylists"
+  },
   "recentlyPlayed": "Hrané naposledy",
+  "@recentlyPlayed": {
+    "description": "recentlyPlayed"
+  },
   "removePlaylist": "Odstrániť playlist",
+  "@removePlaylist": {
+    "description": "removePlaylist"
+  },
   "renamePlaylist": "Premenovať playlist",
+  "@renamePlaylist": {
+    "description": "renamePlaylist"
+  },
   "shareSong": "Zdieľať túto skladbu",
+  "@shareSong": {
+    "description": "shareSong"
+  },
   "removeFromPlaylist": "Odstrániť z playlistu",
+  "@removeFromPlaylist": {
+    "description": "removeFromPlaylist"
+  },
   "minutes": "minút",
+  "@minutes": {
+    "description": "minutes"
+  },
   "language": "Jazyk",
+  "@language": {
+    "description": "language"
+  },
   "restoreLastPlaybackSessionDes": "Automaticky obnoví poslednú reláciu prehrávania pri spustení aplikácie",
+  "@restoreLastPlaybackSessionDes": {
+    "description": "restoreLastPlaybackSessionDes"
+  },
   "featuredplaylists": "Odporúčané playlisty",
+  "@featuredplaylists": {
+    "description": "featuredplaylists"
+  },
   "favorites": "Obľúbené",
+  "@favorites": {
+    "description": "favorites"
+  },
   "cachedOrOffline": "Uložené v medzipamäti/offline",
+  "@cachedOrOffline": {
+    "description": "cachedOrOffline"
+  },
   "playlistBlacklistAlert": "Playlist na čiernej listine!",
+  "@playlistBlacklistAlert": {
+    "description": "playlistBlacklistAlert"
+  },
   "homeContentCountDes": "Vyberte si počet zobrazených položiek na domovskej obrazovke. Menší počet, rýchlejšie načítanie",
+  "@homeContentCountDes": {
+    "description": "homeContentCountDes"
+  },
   "cacheSongs": "Skladby medzipamäte",
+  "@cacheSongs": {
+    "description": "cacheSongs"
+  },
   "cacheSongsDes": "Ukladá skladby do medzipamäte počas prehrávania pre budúce/offline prehrávanie, zaberie dodatočné miesto v zariadení",
+  "@cacheSongsDes": {
+    "description": "cacheSongsDes"
+  },
   "skipSilence": "Vynechať ticho",
+  "@skipSilence": {
+    "description": "skipSilence"
+  },
   "backgroundPlayDes": "Zapnite/vypnite prehrávania hudby na pozadí (aplikácia je prístupná zo systémovej lišty, keď je spustená na pozadí)",
+  "@backgroundPlayDes": {
+    "description": "backgroundPlayDes"
+  },
   "scanning": "Skenovanie...",
+  "@scanning": {
+    "description": "scanning"
+  },
   "equalizer": "Ekvalizér",
+  "@equalizer": {
+    "description": "equalizer"
+  },
   "equalizerDes": "Otvorte systémový ekvalizér",
+  "@equalizerDes": {
+    "description": "equalizerDes"
+  },
   "clearImgCache": "Vymazať medzipamäť obrázkov",
+  "@clearImgCache": {
+    "description": "clearImgCache"
+  },
   "clearImgCacheDes": "Pre vymazanie miniatúr/obrázkov z medzipamäte kliknite sem. (Neodporúča sa, ak nechcete obnoviť údaje o obrázkoch v medzipamäti)",
+  "@clearImgCacheDes": {
+    "description": "clearImgCacheDes"
+  },
   "ignoreBatOpt": "Ignorovať optimalizáciu batérie",
+  "@ignoreBatOpt": {
+    "description": "ignoreBatOpt"
+  },
   "search": "Hľadať",
+  "@search": {
+    "description": "search"
+  },
   "githubDes": "Zobrazte zdrojový kód GitHub \nak sa vám tento projekt páči, nezabudnite dať ⭐",
+  "@githubDes": {
+    "description": "githubDes"
+  },
   "playlistBookmarkRemoveAlert": "Záložka playlistu odstránená!",
+  "@playlistBookmarkRemoveAlert": {
+    "description": "playlistBookmarkRemoveAlert"
+  },
   "enqueueAll": "Pridať všetko do poradia",
+  "@enqueueAll": {
+    "description": "enqueueAll"
+  },
   "setDiscoverContent": "Nastaviť obsah domovskej obrazovky",
+  "@setDiscoverContent": {
+    "description": "setDiscoverContent"
+  },
   "songRemovedfromQueue": "Odstránené z poradia!",
+  "@songRemovedfromQueue": {
+    "description": "songRemovedfromQueue"
+  },
   "syncedLyricsNotAvailable": "Synchronizovaný text nie je k dispozícii!",
+  "@syncedLyricsNotAvailable": {
+    "description": "syncedLyricsNotAvailable"
+  },
   "notaSongVideo": "Nie je to skladba/hudobné video!",
+  "@notaSongVideo": {
+    "description": "notaSongVideo"
+  },
   "dontShowInfoAgain": "Nezobrazovať tieto informácie znova",
+  "@dontShowInfoAgain": {
+    "description": "dontShowInfoAgain"
+  },
   "customIns": "Vlastná inštancia",
+  "@customIns": {
+    "description": "customIns"
+  },
   "hintApiUrl": "URL API na inštanciu Piped",
+  "@hintApiUrl": {
+    "description": "hintApiUrl"
+  },
   "resetblacklistedplaylistDes": "Resetuje všetky playlisty Piped na čiernej listine",
+  "@resetblacklistedplaylistDes": {
+    "description": "resetblacklistedplaylistDes"
+  },
   "stopMusicOnTaskClear": "Zastaviť hudbu",
+  "@stopMusicOnTaskClear": {
+    "description": "stopMusicOnTaskClear"
+  },
   "errorOccuredAlert": "Vyskytla sa chyba!",
+  "@errorOccuredAlert": {
+    "description": "errorOccuredAlert"
+  },
   "link": "Prepojiť",
+  "@link": {
+    "description": "link"
+  },
   "customInsSelectMsg": "Vyberte vlastnú inštanciu",
+  "@customInsSelectMsg": {
+    "description": "customInsSelectMsg"
+  },
   "restore": "Obnoviť",
+  "@restore": {
+    "description": "restore"
+  },
   "closeApp": "Zavrieť aplikáciu",
+  "@closeApp": {
+    "description": "closeApp"
+  },
   "restoring": "Obnovovanie...",
+  "@restoring": {
+    "description": "restoring"
+  },
   "restoreMsg": "Úspešne obnovené!\nZmeny sa aplikujú pri reštarte",
+  "@restoreMsg": {
+    "description": "restoreMsg"
+  },
   "backFilesFound": "databázy nájdené",
+  "@backFilesFound": {
+    "description": "backFilesFound"
+  },
   "backupMsg": "Záloha úspešne uložená!",
+  "@backupMsg": {
+    "description": "backupMsg"
+  },
   "restoreSettingsAndPlaylistsDes": "Obnoví všetky nastavenia, prihlasovacie údaje a playlisty zo záložného súboru. Prepíše všetky aktuálne údaje",
+  "@restoreSettingsAndPlaylistsDes": {
+    "description": "restoreSettingsAndPlaylistsDes"
+  },
   "restoreSettingsAndPlaylists": "Obnoviť nastavenia a playlisty",
+  "@restoreSettingsAndPlaylists": {
+    "description": "restoreSettingsAndPlaylists"
+  },
   "backupSettingsAndPlaylistsDes": "Uloží všetky nastavenia, playlisty a prihlasovacie údaje do záložného súboru",
+  "@backupSettingsAndPlaylistsDes": {
+    "description": "backupSettingsAndPlaylistsDes"
+  },
   "backupSettingsAndPlaylists": "Zálohovať nastavenia a playlisty",
+  "@backupSettingsAndPlaylists": {
+    "description": "backupSettingsAndPlaylists"
+  },
   "cacheHomeScreenDataDes": "Zapnite ukladanie údajov obsahu domovskej obrazovky do medzipamäte, Ak je táto možnosť povolená, domovská obrazovka sa načíta okamžite",
+  "@cacheHomeScreenDataDes": {
+    "description": "cacheHomeScreenDataDes"
+  },
   "stopMusicOnTaskClearDes": "Prehrávanie hudby sa zastaví, keď sa aplikácia odstráni preč zo správcu úloh",
+  "@stopMusicOnTaskClearDes": {
+    "description": "stopMusicOnTaskClearDes"
+  },
   "disableTransitionAnimation": "Vypnúť prechodovú animáciu",
+  "@disableTransitionAnimation": {
+    "description": "disableTransitionAnimation"
+  },
   "deleteDownloadData": "Odstrániť zo stiahnutých",
+  "@deleteDownloadData": {
+    "description": "deleteDownloadData"
+  },
   "local": "Lokálny",
+  "@local": {
+    "description": "local"
+  },
   "goToDownloadPage": "Ak chcete prejsť na stránku sťahovania, kliknite sem",
+  "@goToDownloadPage": {
+    "description": "goToDownloadPage"
+  },
   "unlinkAlert": "Odpojené úspešne!",
+  "@unlinkAlert": {
+    "description": "unlinkAlert"
+  },
   "downloads": "Stiahnuté",
+  "@downloads": {
+    "description": "downloads"
+  },
   "upNext": "Nasledujúce",
+  "@upNext": {
+    "description": "upNext"
+  },
   "discover": "Doporučené",
+  "@discover": {
+    "description": "discover"
+  },
   "plain": "Obyčajný",
+  "@plain": {
+    "description": "plain"
+  },
   "deleteDownloadedDataAlert": "Úspešne odstránené zo stiahnutých!",
+  "@deleteDownloadedDataAlert": {
+    "description": "deleteDownloadedDataAlert"
+  },
   "linkPipedDes": "Prepojte s Piped pre playlisty",
+  "@linkPipedDes": {
+    "description": "linkPipedDes"
+  },
   "playNext": "Prehrať ďalej",
+  "@playNext": {
+    "description": "playNext"
+  },
   "unLink": "Odpojiť",
+  "@unLink": {
+    "description": "unLink"
+  },
   "linkAlert": "Prepojené úspešne!",
+  "@linkAlert": {
+    "description": "linkAlert"
+  },
   "dismiss": "Odmietnuť",
+  "@dismiss": {
+    "description": "dismiss"
+  },
   "processFiles": "Spracovanie súborov...",
+  "@processFiles": {
+    "description": "processFiles"
+  },
   "includeDownloadedFiles": "Zahrnúť stiahnuté skladby",
+  "@includeDownloadedFiles": {
+    "description": "includeDownloadedFiles"
+  },
   "backupInProgress": "Prebieha zálohovanie...",
+  "@backupInProgress": {
+    "description": "backupInProgress"
+  },
   "restoreAppData": "Obnoviť dáta aplikácie",
+  "@restoreAppData": {
+    "description": "restoreAppData"
+  },
   "backup": "Zálohovať",
+  "@backup": {
+    "description": "backup"
+  },
   "backupAppData": "Zálohovať dáta aplikácie",
+  "@backupAppData": {
+    "description": "backupAppData"
+  },
   "letsStrart": "Začíname...",
+  "@letsStrart": {
+    "description": "letsStrart"
+  },
   "audioCodec": "Audio kodek",
+  "@audioCodec": {
+    "description": "audioCodec"
+  },
   "duration": "Dĺžka",
+  "@duration": {
+    "description": "duration"
+  },
   "title": "Názov",
+  "@title": {
+    "description": "title"
+  },
   "id": "ID",
+  "@id": {
+    "description": "id"
+  },
   "songInfo": "Informácie o skladbe",
+  "@songInfo": {
+    "description": "songInfo"
+  },
   "bitrate": "Bitrate",
+  "@bitrate": {
+    "description": "bitrate"
+  },
   "loudnessDb": "Hlasitosť (Db)",
+  "@loudnessDb": {
+    "description": "loudnessDb"
+  },
   "restartApp": "Reštartovať aplikáciu",
+  "@restartApp": {
+    "description": "restartApp"
+  },
   "downloadError2": "Požadovanú skladbu nie je možné stiahnuť z dôvodu obmedzenia servera. Môžete to skúsiť znova",
+  "@downloadError2": {
+    "description": "downloadError2"
+  },
   "download": "Stiahnuť",
+  "@download": {
+    "description": "download"
+  },
   "downloadError3": "Sťahovanie zlyhalo z dôvodu chyby siete/streamu! Skúste to prosím znova",
+  "@downloadError3": {
+    "description": "downloadError3"
+  },
   "content": "Obsah",
+  "@content": {
+    "description": "content"
+  },
   "personalisation": "Prispôsobenie",
+  "@personalisation": {
+    "description": "personalisation"
+  },
   "musicAndPlayback": "Hudba a prehrávanie",
+  "@musicAndPlayback": {
+    "description": "musicAndPlayback"
+  },
   "loudnessNormalization": "Normalizácia hlasitosti",
+  "@loudnessNormalization": {
+    "description": "loudnessNormalization"
+  },
   "queueShufflingDeniedMsg": "Keď je zapnutý režim náhodného výberu, poradie nie je možné premiešať",
+  "@queueShufflingDeniedMsg": {
+    "description": "queueShufflingDeniedMsg"
+  },
   "queuerearrangingDeniedMsg": "Keď je zapnutý režim premiešania, poradie nie je možné meniť",
+  "@queuerearrangingDeniedMsg": {
+    "description": "queuerearrangingDeniedMsg"
+  },
   "songNotPlayable": "Skladbu nie je možné prehrať z dôvodu obmedzenia servera!",
+  "@songNotPlayable": {
+    "description": "songNotPlayable"
+  },
   "appInfo": "Informácie o aplikácii",
+  "@appInfo": {
+    "description": "appInfo"
+  },
   "networkError": "Chyba siete! Skontrolujte pripojenie k internetu.",
+  "@networkError": {
+    "description": "networkError"
+  },
   "loudnessNormalizationDes": "Nastaví rovnakú úroveň hlasitosti pre všetky skladby (Experimentálne) (Nebude fungovať na skladbách stiahnutých v predchádzajúcej verzii(< v1.10.0))",
+  "@loudnessNormalizationDes": {
+    "description": "loudnessNormalizationDes"
+  },
   "urlSearchDes": "Zistená URL adresa Kliknutím na ňu otvoríte/prehráte súvisiaci obsah",
+  "@urlSearchDes": {
+    "description": "urlSearchDes"
+  },
   "androidBackupWarning": "Netestované: Po zaškrtnutí políčka po stiahnutí viac ako 60 súborov môže proces spotrebovať veľké množstvo pamäte a môže spôsobiť pád telefónu alebo aplikácie. Pokračujte na vlastné riziko.",
+  "@androidBackupWarning": {
+    "description": "androidBackupWarning"
+  },
   "playerUi": "Rozhranie prehrávača",
+  "@playerUi": {
+    "description": "playerUi"
+  },
   "standard": "Štandard",
+  "@standard": {
+    "description": "standard"
+  },
   "gesture": "Gestá",
+  "@gesture": {
+    "description": "gesture"
+  },
   "playerUiDes": "Vybrať používateľské rozhranie prehrávača",
+  "@playerUiDes": {
+    "description": "playerUiDes"
+  },
   "enableSlidableAction": "Povoliť akcie gestami",
+  "@enableSlidableAction": {
+    "description": "enableSlidableAction"
+  },
   "playnextMsg": "Nasleduje",
+  "@playnextMsg": {
+    "description": "playnextMsg"
+  },
   "shuffleQueue": "Premiešať",
+  "@shuffleQueue": {
+    "description": "shuffleQueue"
+  },
   "queueLoop": "Opakovať",
+  "@queueLoop": {
+    "description": "queueLoop"
+  },
   "queueLoopNotDisMsg1": "Režim opakovania nie je možné vypnúť, keď je zapnutý režim premiešania.",
+  "@queueLoopNotDisMsg1": {
+    "description": "queueLoopNotDisMsg1"
+  },
   "queueLoopNotDisMsg2": "V režime rádio nie je možné zapnúť opakovanie.",
+  "@queueLoopNotDisMsg2": {
+    "description": "queueLoopNotDisMsg2"
+  },
   "enableSlidableActionDes": "Povoliť akcie gestami pri skladbe",
+  "@enableSlidableActionDes": {
+    "description": "enableSlidableActionDes"
+  },
   "autoDownFavSong": "Automaticky sťahovať obľúbené skladby",
+  "@autoDownFavSong": {
+    "description": "autoDownFavSong"
+  },
   "autoDownFavSongDes": "Po pridaní do obľúbených položiek automaticky stiahne obľúbené skladby",
+  "@autoDownFavSongDes": {
+    "description": "autoDownFavSongDes"
+  },
   "resetToDefaultMsg": "Obnovenie predvolených nastavení je dokončené, reštartujte aplikáciu",
+  "@resetToDefaultMsg": {
+    "description": "resetToDefaultMsg"
+  },
   "misc": "Rôzne",
+  "@misc": {
+    "description": "misc"
+  },
   "resetToDefault": "Obnoviť predvolené nastavenia",
+  "@resetToDefault": {
+    "description": "resetToDefault"
+  },
   "resetToDefaultDes": "Obnoviť predvolené nastavenia aplikácie (vyžaduje sa reštart)",
+  "@resetToDefaultDes": {
+    "description": "resetToDefaultDes"
+  },
   "album": "Album",
+  "@album": {
+    "description": "album"
+  },
   "playingfromPlaylist": "Prehrávanie z playlistu",
+  "@playingfromPlaylist": {
+    "description": "playingfromPlaylist"
+  },
   "playingfromSelection": "Prehrávanie z výberu",
+  "@playingfromSelection": {
+    "description": "playingfromSelection"
+  },
   "randomSelection": "Náhodný výber",
+  "@randomSelection": {
+    "description": "randomSelection"
+  },
   "randomRadio": "Náhodné rádio",
+  "@randomRadio": {
+    "description": "randomRadio"
+  },
   "autoOpenPlayer": "Automaticky otvoriť obrazovku prehrávača",
+  "@autoOpenPlayer": {
+    "description": "autoOpenPlayer"
+  },
   "autoOpenPlayerDes": "Zapne/vypne automatické otvorenie prehrávača na celú obrazovku pri výbere skladby na prehrávanie",
+  "@autoOpenPlayerDes": {
+    "description": "autoOpenPlayerDes"
+  },
   "playingfromArtist": "Prehrávanie od umelca",
+  "@playingfromArtist": {
+    "description": "playingfromArtist"
+  },
   "playingfromAlbum": "Prehrávanie z albumu",
+  "@playingfromAlbum": {
+    "description": "playingfromAlbum"
+  },
   "reArrangeSongs": "Zmeniť usporiadanie skladieb",
+  "@reArrangeSongs": {
+    "description": "reArrangeSongs"
+  },
   "selectSongs": "Vybrať skladby",
+  "@selectSongs": {
+    "description": "selectSongs"
+  },
   "selectAll": "Vybrať všetko",
+  "@selectAll": {
+    "description": "selectAll"
+  },
   "playlistExportedMsg": "Playlist úspešne exportovaný do",
+  "@playlistExportedMsg": {
+    "description": "playlistExportedMsg"
+  },
   "importPlaylistDesc": "Výber predtým exportovaného súboru JSON s playlistom na import",
+  "@importPlaylistDesc": {
+    "description": "importPlaylistDesc"
+  },
   "exportPlaylist": "Exportovať playlist",
+  "@exportPlaylist": {
+    "description": "exportPlaylist"
+  },
   "exportingPlaylist": "Exportovanie playlistu...",
+  "@exportingPlaylist": {
+    "description": "exportingPlaylist"
+  },
   "exportError": "Chyba pri exportovaní playlistu",
+  "@exportError": {
+    "description": "exportError"
+  },
   "exportErrorPermission": "Povolenie zamietnuté počas exportovania",
+  "@exportErrorPermission": {
+    "description": "exportErrorPermission"
+  },
   "exportErrorStorage": "Nedostatok úložného miesta",
+  "@exportErrorStorage": {
+    "description": "exportErrorStorage"
+  },
   "exportErrorFormat": "Chyba formátovania dát playlistu",
+  "@exportErrorFormat": {
+    "description": "exportErrorFormat"
+  },
   "importPlaylist": "Importovať playlist",
+  "@importPlaylist": {
+    "description": "importPlaylist"
+  },
   "importingPlaylist": "Importovanie playlistu...",
+  "@importingPlaylist": {
+    "description": "importingPlaylist"
+  },
   "selectFile": "Vybrať súbor",
+  "@selectFile": {
+    "description": "selectFile"
+  },
   "playlistImportedMsg": "Playlist úspešne importovaný",
+  "@playlistImportedMsg": {
+    "description": "playlistImportedMsg"
+  },
   "importError": "Chyba pri importovaní playlistu",
+  "@importError": {
+    "description": "importError"
+  },
   "importErrorFileAccess": "Nebolo možné získať prístup k vybranému súboru",
+  "@importErrorFileAccess": {
+    "description": "importErrorFileAccess"
+  },
   "importErrorFormat": "Nesprávny formát súboru",
+  "@importErrorFormat": {
+    "description": "importErrorFormat"
+  },
   "invalidPlaylistFile": "Nesprávna štruktúra súboru playlistu",
+  "@invalidPlaylistFile": {
+    "description": "invalidPlaylistFile"
+  },
   "importErrorDatabase": "Chyba pri ukladaní do databázy",
+  "@importErrorDatabase": {
+    "description": "importErrorDatabase"
+  },
   "fileNotFound": "Súbor nenájdený",
+  "@fileNotFound": {
+    "description": "fileNotFound"
+  },
   "importLargeFileNote": "Poznámka: Import veľkých playlistov môže trvať dlhšie",
+  "@importLargeFileNote": {
+    "description": "importLargeFileNote"
+  },
   "exportPlaylistCsv": "Exportovať playlist ako CSV",
+  "@exportPlaylistCsv": {
+    "description": "exportPlaylistCsv"
+  },
   "exportPlaylistJson": "Exportovať playlist do JSON",
+  "@exportPlaylistJson": {
+    "description": "exportPlaylistJson"
+  },
   "exportPlaylistJsonSubtitle": "Tento formát môže byť importovaný",
+  "@exportPlaylistJsonSubtitle": {
+    "description": "exportPlaylistJsonSubtitle"
+  },
   "exportPlaylistCsvSubtitle": "Nemôže byť tu importovaný",
+  "@exportPlaylistCsvSubtitle": {
+    "description": "exportPlaylistCsvSubtitle"
+  },
   "exportToYouTubeMusic": "Exportovať do YouTube Music",
+  "@exportToYouTubeMusic": {
+    "description": "exportToYouTubeMusic"
+  },
   "exportToYouTubeMusicSubtitle": "Do aktuálneho zoznamu skladieb sa presunie váš playlist (menej ako 50 skladieb). Nezabudnite ho pridať do playlistu/uložiť po otvorení v YtMusic",
+  "@exportToYouTubeMusicSubtitle": {
+    "description": "exportToYouTubeMusicSubtitle"
+  },
   "linkCopied": "Odkaz skopírovaný do schránky",
+  "@linkCopied": {
+    "description": "linkCopied"
+  },
   "keepScreenOnWhilePlaying": "Nechajte obrazovku zapnutú počas prehrávania",
-  "keepScreenOnWhilePlayingDes": "Ak je povolené, obrazovka zariadenia zostane zapnutá počas prehrávania hudby"
+  "@keepScreenOnWhilePlaying": {
+    "description": "keepScreenOnWhilePlaying"
+  },
+  "keepScreenOnWhilePlayingDes": "Ak je povolené, obrazovka zariadenia zostane zapnutá počas prehrávania hudby",
+  "@keepScreenOnWhilePlayingDes": {
+    "description": "keepScreenOnWhilePlayingDes"
+  }
 }

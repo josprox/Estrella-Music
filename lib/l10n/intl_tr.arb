@@ -1,324 +1,1152 @@
 {
   "@@locale": "tr",
   "renamePlaylist": "Çalma Listesini Yeniden Adlandır",
+  "@renamePlaylist": {
+    "description": "renamePlaylist"
+  },
   "networkError1": "Oops ağ hatası!",
+  "@networkError1": {
+    "description": "networkError1"
+  },
   "libSongs": "Kitaplık Şarkıları",
+  "@libSongs": {
+    "description": "libSongs"
+  },
   "communityplaylists": "Topluluk Çalma Listeleri",
+  "@communityplaylists": {
+    "description": "communityplaylists"
+  },
   "libAlbums": "Kitaplık Albümleri",
+  "@libAlbums": {
+    "description": "libAlbums"
+  },
   "enqueueAll": "Tümünü kuyruğa al",
+  "@enqueueAll": {
+    "description": "enqueueAll"
+  },
   "create": "Oluştur",
+  "@create": {
+    "description": "create"
+  },
   "noBookmarks": "Yer işaretleri yok!",
+  "@noBookmarks": {
+    "description": "noBookmarks"
+  },
   "playlists": "Çalma Listeleri",
+  "@playlists": {
+    "description": "playlists"
+  },
   "rename": "Yeniden adlandır",
+  "@rename": {
+    "description": "rename"
+  },
   "items": "Öğeler",
+  "@items": {
+    "description": "items"
+  },
   "startRadio": "Radyo başlat",
+  "@startRadio": {
+    "description": "startRadio"
+  },
   "libArtists": "Kitaplık Sanatçıları",
+  "@libArtists": {
+    "description": "libArtists"
+  },
   "removePlaylist": "Çalma Listesini Kaldır",
+  "@removePlaylist": {
+    "description": "removePlaylist"
+  },
   "addToPlaylist": "Çalma listesine ekle",
+  "@addToPlaylist": {
+    "description": "addToPlaylist"
+  },
   "cachedOrOffline": "Önbelleğe Alınmış/Çevrimdışı",
+  "@cachedOrOffline": {
+    "description": "cachedOrOffline"
+  },
   "retry": "Yeniden dene!",
+  "@retry": {
+    "description": "retry"
+  },
   "artists": "Sanatçılar",
+  "@artists": {
+    "description": "artists"
+  },
   "albums": "Albümler",
+  "@albums": {
+    "description": "albums"
+  },
   "recentlyPlayed": "Son Çalınan",
+  "@recentlyPlayed": {
+    "description": "recentlyPlayed"
+  },
   "createnAdd": "Oluştur ve ekle",
+  "@createnAdd": {
+    "description": "createnAdd"
+  },
   "singles": "Single'lar",
+  "@singles": {
+    "description": "singles"
+  },
   "emptyPlaylist": "Bu çalma listesi boş!",
+  "@emptyPlaylist": {
+    "description": "emptyPlaylist"
+  },
   "favorites": "Favoriler",
+  "@favorites": {
+    "description": "favorites"
+  },
   "home": "Ana sayfa",
+  "@home": {
+    "description": "home"
+  },
   "cancel": "İptal et",
+  "@cancel": {
+    "description": "cancel"
+  },
   "libPlaylists": "Kitaplık Çalma Listeleri",
+  "@libPlaylists": {
+    "description": "libPlaylists"
+  },
   "CreateNewPlaylist": "Çalma Listesi Oluştur",
+  "@CreateNewPlaylist": {
+    "description": "CreateNewPlaylist"
+  },
   "playNext": "Bundan sonra çal",
+  "@playNext": {
+    "description": "playNext"
+  },
   "songs": "Şarkılar",
+  "@songs": {
+    "description": "songs"
+  },
   "settings": "Ayarlar",
+  "@settings": {
+    "description": "settings"
+  },
   "noOfflineSong": "Çevrimdışı şarkı yok!",
+  "@noOfflineSong": {
+    "description": "noOfflineSong"
+  },
   "featuredplaylists": "Öne Çıkan Listeler",
+  "@featuredplaylists": {
+    "description": "featuredplaylists"
+  },
   "playlistCreatednsongAddedAlert": "Çalma listesi oluşturuldu ve şarkı eklendi!",
+  "@playlistCreatednsongAddedAlert": {
+    "description": "playlistCreatednsongAddedAlert"
+  },
   "dismiss": "Vazgeç",
+  "@dismiss": {
+    "description": "dismiss"
+  },
   "goToDownloadPage": "Buradan indirme sayfasına gidin",
+  "@goToDownloadPage": {
+    "description": "goToDownloadPage"
+  },
   "songEnqueueAlert": "Şarkı sıraya eklendi!",
+  "@songEnqueueAlert": {
+    "description": "songEnqueueAlert"
+  },
   "songAddedToPlaylistAlert": "Şarkı çalma listesine eklendi!",
+  "@songAddedToPlaylistAlert": {
+    "description": "songAddedToPlaylistAlert"
+  },
   "unlinkAlert": "Bağlantı başarı ile kesildi!",
+  "@unlinkAlert": {
+    "description": "unlinkAlert"
+  },
   "playlistCreatedAlert": "Çalma listesi oluşturuldu!",
+  "@playlistCreatedAlert": {
+    "description": "playlistCreatedAlert"
+  },
   "reset": "Sıfırla",
+  "@reset": {
+    "description": "reset"
+  },
   "unLink": "Bağı kes",
+  "@unLink": {
+    "description": "unLink"
+  },
   "trending": "Trendler",
+  "@trending": {
+    "description": "trending"
+  },
   "searchRes": "Arama sonucu",
+  "@searchRes": {
+    "description": "searchRes"
+  },
   "cacheSongsDes": "Çevrimdışı oynatma için çalınmakta olan şarkıları önbelleğe al, cihazınızda ek alan kaplayacaktır",
+  "@cacheSongsDes": {
+    "description": "cacheSongsDes"
+  },
   "password": "Parola",
+  "@password": {
+    "description": "password"
+  },
   "noLibPlaylist": "Kitaplıkta hiç çalma listesi yok!",
+  "@noLibPlaylist": {
+    "description": "noLibPlaylist"
+  },
   "setDiscoverContent": "Keşfet içeriğini seç",
+  "@setDiscoverContent": {
+    "description": "setDiscoverContent"
+  },
   "songRemovedfromQueue": "Sıradan kaldırıldı!",
+  "@songRemovedfromQueue": {
+    "description": "songRemovedfromQueue"
+  },
   "githubDes": "Kaynak kodunu GitHub'da incele\nBu projeyi sevdiysen, ⭐lamayı ihmal etme",
+  "@githubDes": {
+    "description": "githubDes"
+  },
   "playlistRemovedAlert": "Çalma listesi silindi!",
+  "@playlistRemovedAlert": {
+    "description": "playlistRemovedAlert"
+  },
   "albumBookmarkRemoveAlert": "Albüm kitaplıktan kaldırıldı!",
+  "@albumBookmarkRemoveAlert": {
+    "description": "albumBookmarkRemoveAlert"
+  },
   "notaSongVideo": "Bu bir Şarkı/Müzik videosu değil!",
+  "@notaSongVideo": {
+    "description": "notaSongVideo"
+  },
   "ignoreBatOptDes": "Şayet bildirim sorunuyla karşılaşırsan veya çalma sistem tarafından durdurulursa bu tercihi lütfen işaretle",
+  "@ignoreBatOptDes": {
+    "description": "ignoreBatOptDes"
+  },
   "for1": "şunun için",
+  "@for1": {
+    "description": "for1"
+  },
   "low": "Düşük",
+  "@low": {
+    "description": "low"
+  },
   "link": "Bağla",
+  "@link": {
+    "description": "link"
+  },
   "selectAuthIns": "Yetki Instance'ını seç",
+  "@selectAuthIns": {
+    "description": "selectAuthIns"
+  },
   "languageDes": "Uygulama dilini seç",
+  "@languageDes": {
+    "description": "languageDes"
+  },
   "stopMusicOnTaskClear": "Uygulamayı kapatma halinde müziği durdur",
+  "@stopMusicOnTaskClear": {
+    "description": "stopMusicOnTaskClear"
+  },
   "customInsSelectMsg": "Lütfen özel Instance'ı seçin",
+  "@customInsSelectMsg": {
+    "description": "customInsSelectMsg"
+  },
   "skipSilence": "Sessizliği atla",
+  "@skipSilence": {
+    "description": "skipSilence"
+  },
   "equalizer": "Ekolayzır",
+  "@equalizer": {
+    "description": "equalizer"
+  },
   "enqueueSong": "Sıraya koy",
+  "@enqueueSong": {
+    "description": "enqueueSong"
+  },
   "videos": "Videolar",
+  "@videos": {
+    "description": "videos"
+  },
   "enabled": "Devrede",
+  "@enabled": {
+    "description": "enabled"
+  },
   "allFieldsReqMsg": "Alanların hepsi gerekli",
+  "@allFieldsReqMsg": {
+    "description": "allFieldsReqMsg"
+  },
   "artistBookmarkAddAlert": "Sanatçı kitaplığa eklendi!",
+  "@artistBookmarkAddAlert": {
+    "description": "artistBookmarkAddAlert"
+  },
   "removeFromCache": "Cache'ten al",
+  "@removeFromCache": {
+    "description": "removeFromCache"
+  },
   "viewAll": "Hepsine bak",
+  "@viewAll": {
+    "description": "viewAll"
+  },
   "github": "GitHub",
+  "@github": {
+    "description": "github"
+  },
   "newVersionAvailable": "Yeni sürüm mevcut!",
+  "@newVersionAvailable": {
+    "description": "newVersionAvailable"
+  },
   "subscribers": "Aboneler",
+  "@subscribers": {
+    "description": "subscribers"
+  },
   "discover": "Keşfet",
+  "@discover": {
+    "description": "discover"
+  },
   "cacheSongs": "Şarkıları önbelleğe al",
+  "@cacheSongs": {
+    "description": "cacheSongs"
+  },
   "songAlreadyExists": "Bu şarkı zaten var!",
+  "@songAlreadyExists": {
+    "description": "songAlreadyExists"
+  },
   "username": "Kullanıcı adı",
+  "@username": {
+    "description": "username"
+  },
   "light": "Aydınlık",
+  "@light": {
+    "description": "light"
+  },
   "resetblacklistedplaylist": "Çalma listeleri için kara listeyi sıfırla",
+  "@resetblacklistedplaylist": {
+    "description": "resetblacklistedplaylist"
+  },
   "dynamic": "Albüm kapağına göre",
+  "@dynamic": {
+    "description": "dynamic"
+  },
   "selectAuthInsMsg": "Lütfen Yetki Instance'ını seçin!",
+  "@selectAuthInsMsg": {
+    "description": "selectAuthInsMsg"
+  },
   "equalizerDes": "Sistem ekolayzırını aç",
+  "@equalizerDes": {
+    "description": "equalizerDes"
+  },
   "customIns": "Özel Instance",
+  "@customIns": {
+    "description": "customIns"
+  },
   "Piped": "Piped Instance",
+  "@Piped": {
+    "description": "Piped"
+  },
   "stopMusicOnTaskClearDes": "Müzik son uygulamalar listesinin temizlenmesi halinde dursun",
+  "@stopMusicOnTaskClearDes": {
+    "description": "stopMusicOnTaskClearDes"
+  },
   "playlistBookmarkAddAlert": "Çalma listesi kitaplığa eklendi!",
+  "@playlistBookmarkAddAlert": {
+    "description": "playlistBookmarkAddAlert"
+  },
   "radioNotAvailable": "Bu sanatçı için radyo mevcut değil!",
+  "@radioNotAvailable": {
+    "description": "radioNotAvailable"
+  },
   "viewArtist": "Sanatçıya bak",
+  "@viewArtist": {
+    "description": "viewArtist"
+  },
   "topmusicvideos": "En Üst Sıradaki Videolar",
+  "@topmusicvideos": {
+    "description": "topmusicvideos"
+  },
   "playlistBookmarkRemoveAlert": "Çalma listesi kitaplıktan kaldırıldı!",
+  "@playlistBookmarkRemoveAlert": {
+    "description": "playlistBookmarkRemoveAlert"
+  },
   "systemDefault": "Sistem varsayılanı",
+  "@systemDefault": {
+    "description": "systemDefault"
+  },
   "local": "Yerel",
+  "@local": {
+    "description": "local"
+  },
   "ignoreBatOpt": "Pil iyileştirmesine aldırma",
+  "@ignoreBatOpt": {
+    "description": "ignoreBatOpt"
+  },
   "linkAlert": "Başarı ile bağlandı!",
+  "@linkAlert": {
+    "description": "linkAlert"
+  },
   "status": "Durum",
+  "@status": {
+    "description": "status"
+  },
   "themeMode": "Tema tarzı",
+  "@themeMode": {
+    "description": "themeMode"
+  },
   "streamingQualityDes": "Şarkı akışının kalitesi",
+  "@streamingQualityDes": {
+    "description": "streamingQualityDes"
+  },
   "nomatch": "Şunun için eşleşme yok,",
+  "@nomatch": {
+    "description": "nomatch"
+  },
   "notaValidLink": "Link geçersiz!",
+  "@notaValidLink": {
+    "description": "notaValidLink"
+  },
   "dark": "Koyu",
+  "@dark": {
+    "description": "dark"
+  },
   "by": "Şu kişinin ürünü,",
+  "@by": {
+    "description": "by"
+  },
   "streamingQuality": "Akış kalitesi",
+  "@streamingQuality": {
+    "description": "streamingQuality"
+  },
   "linkPipedDes": "Çalma listeleri için piped'a bağla",
+  "@linkPipedDes": {
+    "description": "linkPipedDes"
+  },
   "disabled": "Devre dışı",
+  "@disabled": {
+    "description": "disabled"
+  },
   "blacklistPlstResetAlert": "Sıfırlama başarılı!",
+  "@blacklistPlstResetAlert": {
+    "description": "blacklistPlstResetAlert"
+  },
   "language": "Dil seçimi",
+  "@language": {
+    "description": "language"
+  },
   "search": "Ara",
+  "@search": {
+    "description": "search"
+  },
   "skipSilenceDes": "Şarkı çalma sırasında sessizlik atlanacak",
+  "@skipSilenceDes": {
+    "description": "skipSilenceDes"
+  },
   "errorOccuredAlert": "Bir hata oluştu!",
+  "@errorOccuredAlert": {
+    "description": "errorOccuredAlert"
+  },
   "high": "Yüksek",
+  "@high": {
+    "description": "high"
+  },
   "searchDes": "Şarkılar, Çalma Listesi, Albüm ya da Sanatçı",
+  "@searchDes": {
+    "description": "searchDes"
+  },
   "results": "Sonuç",
+  "@results": {
+    "description": "results"
+  },
   "playlistBlacklistAlert": "Çalma listesi kara listeye alındı!",
+  "@playlistBlacklistAlert": {
+    "description": "playlistBlacklistAlert"
+  },
   "artistDesNotAvailable": "Açıklama mevcut değil!",
+  "@artistDesNotAvailable": {
+    "description": "artistDesNotAvailable"
+  },
   "resetblacklistedplaylistDes": "Piped kara listesinin hepsini sıfırla",
+  "@resetblacklistedplaylistDes": {
+    "description": "resetblacklistedplaylistDes"
+  },
   "songRemovedfromQueueCurrSong": "Çalmakta olanı kaldıramazsınız",
+  "@songRemovedfromQueueCurrSong": {
+    "description": "songRemovedfromQueueCurrSong"
+  },
   "basedOnLast": "Son etkileşime dayalı",
+  "@basedOnLast": {
+    "description": "basedOnLast"
+  },
   "hintApiUrl": "API URL'i Piped instance'ına ver",
+  "@hintApiUrl": {
+    "description": "hintApiUrl"
+  },
   "playlistRenameAlert": "Ad başarı ile değiştirildi!",
+  "@playlistRenameAlert": {
+    "description": "playlistRenameAlert"
+  },
   "albumBookmarkAddAlert": "Albüm kitaplığa eklendi!",
+  "@albumBookmarkAddAlert": {
+    "description": "albumBookmarkAddAlert"
+  },
   "removeFromPlaylist": "Çalma listesinden çıkar",
+  "@removeFromPlaylist": {
+    "description": "removeFromPlaylist"
+  },
   "lyricsNotAvailable": "Şarkı sözleri mevcut değil!",
+  "@lyricsNotAvailable": {
+    "description": "lyricsNotAvailable"
+  },
   "dontShowInfoAgain": "Bunu artık gösterme",
+  "@dontShowInfoAgain": {
+    "description": "dontShowInfoAgain"
+  },
   "quickpicks": "Hızlı Seçimler",
+  "@quickpicks": {
+    "description": "quickpicks"
+  },
   "artistBookmarkRemoveAlert": "Sanatçı kitaplıktan kaldırıldı!",
+  "@artistBookmarkRemoveAlert": {
+    "description": "artistBookmarkRemoveAlert"
+  },
   "operationFailed": "İşlem başarısız oldu",
+  "@operationFailed": {
+    "description": "operationFailed"
+  },
   "goToAlbum": "Albüme git",
+  "@goToAlbum": {
+    "description": "goToAlbum"
+  },
   "removeFromQueue": "Sıradan kaldır",
+  "@removeFromQueue": {
+    "description": "removeFromQueue"
+  },
   "shareSong": "Paylaş",
+  "@shareSong": {
+    "description": "shareSong"
+  },
   "songRemovedAlert": "Şuradan çıkarıldı",
+  "@songRemovedAlert": {
+    "description": "songRemovedAlert"
+  },
   "downloads": "İndirilenler",
+  "@downloads": {
+    "description": "downloads"
+  },
   "removeFromLib": "Kitaplık şarkılarından kaldır",
+  "@removeFromLib": {
+    "description": "removeFromLib"
+  },
   "downloadingFormat": "İndirilen dosyanın formatı",
+  "@downloadingFormat": {
+    "description": "downloadingFormat"
+  },
   "songAlreadyOfflineAlert": "Şarkı zaten önbellekte çevrimdışı",
+  "@songAlreadyOfflineAlert": {
+    "description": "songAlreadyOfflineAlert"
+  },
   "downloadLocation": "İndirme Konumu",
+  "@downloadLocation": {
+    "description": "downloadLocation"
+  },
   "downloadingFormatDes": "İndirilen dosya biçimini seçin. \"Opus\" en iyi kaliteyi sağlar",
+  "@downloadingFormatDes": {
+    "description": "downloadingFormatDes"
+  },
   "library": "Kitaplık",
+  "@library": {
+    "description": "library"
+  },
   "minutes": "dakika",
+  "@minutes": {
+    "description": "minutes"
+  },
   "synced": "Senkron",
+  "@synced": {
+    "description": "synced"
+  },
   "cancelTimerAlert": "Uyku zamanlayıcısı iptal edildi",
+  "@cancelTimerAlert": {
+    "description": "cancelTimerAlert"
+  },
   "sleepTimer": "Uyku zamanlayıcısı",
+  "@sleepTimer": {
+    "description": "sleepTimer"
+  },
   "add5Minutes": "5 dakika ekle",
+  "@add5Minutes": {
+    "description": "add5Minutes"
+  },
   "cancelTimer": "Zamanlayıcıyı iptal et",
+  "@cancelTimer": {
+    "description": "cancelTimer"
+  },
   "homeContentCount": "Ana sayfadaki içerik sayısı",
+  "@homeContentCount": {
+    "description": "homeContentCount"
+  },
   "endOfThisSong": "Bu şarkının sonunda",
+  "@endOfThisSong": {
+    "description": "endOfThisSong"
+  },
   "enableBottomNav": "Alt gezinme çubuğu",
+  "@enableBottomNav": {
+    "description": "enableBottomNav"
+  },
   "enableBottomNavDes": "Alt gezinme çubuğuna geç",
+  "@enableBottomNavDes": {
+    "description": "enableBottomNavDes"
+  },
   "syncedLyricsNotAvailable": "Senkronize şarkı sözleri kullanılamıyor!",
+  "@syncedLyricsNotAvailable": {
+    "description": "syncedLyricsNotAvailable"
+  },
   "homeContentCountDes": "Ana sayfadaki içerik sayısını seçin (yaklaşık olarak). Daha az içerik daha hızlı yükleme sağlar",
+  "@homeContentCountDes": {
+    "description": "homeContentCountDes"
+  },
   "plain": "Normal",
+  "@plain": {
+    "description": "plain"
+  },
   "sleepTimeSetAlert": "Uyku zamanlayıcınız ayarlandı",
+  "@sleepTimeSetAlert": {
+    "description": "sleepTimeSetAlert"
+  },
   "pipedplstSyncAlert": "Piped oynatma listesi senkronize edildi!",
+  "@pipedplstSyncAlert": {
+    "description": "pipedplstSyncAlert"
+  },
   "deleteDownloadData": "İndirilenlerden kaldır",
+  "@deleteDownloadData": {
+    "description": "deleteDownloadData"
+  },
   "backgroundPlay": "Arka planda müzik çal",
+  "@backgroundPlay": {
+    "description": "backgroundPlay"
+  },
   "backgroundPlayDes": "Arka planda müzik çalmayı etkinleştirin/devre dışı bırakın (Uygulama arka planda çalışırken sistem tepsisinden uygulamaya erişilebilir)",
+  "@backgroundPlayDes": {
+    "description": "backgroundPlayDes"
+  },
   "deleteDownloadedDataAlert": "İndirmelerden başarıyla kaldırıldı!",
+  "@deleteDownloadedDataAlert": {
+    "description": "deleteDownloadedDataAlert"
+  },
   "upNext": "Sıradaki",
+  "@upNext": {
+    "description": "upNext"
+  },
   "clearImgCache": "Resim önbelleğini temizle",
+  "@clearImgCache": {
+    "description": "clearImgCache"
+  },
   "clearImgCacheDes": "Önbelleğe alınan küçük resimleri/görselleri temizlemek için buraya tıklayın. (Önbelleğe alınan resim verilerini yenilemek istemiyorsanız tavsiye edilmez)",
+  "@clearImgCacheDes": {
+    "description": "clearImgCacheDes"
+  },
   "reArrangePlaylist": "Çalma listesini yeniden düzenle",
+  "@reArrangePlaylist": {
+    "description": "reArrangePlaylist"
+  },
   "removeMultiple": "Birden fazla şarkıyı kaldır",
+  "@removeMultiple": {
+    "description": "removeMultiple"
+  },
   "restoreLastPlaybackSessionDes": "Uygulama başlatıldığında son çalma oturumunu otomatik olarak geri yükle",
+  "@restoreLastPlaybackSessionDes": {
+    "description": "restoreLastPlaybackSessionDes"
+  },
   "cacheHomeScreenDataDes": "Ana ekran içeriği verilerini önbelleğe alma etkinleştirildiğinde ana ekran anında yüklenecektir",
+  "@cacheHomeScreenDataDes": {
+    "description": "cacheHomeScreenDataDes"
+  },
   "cacheHomeScreenData": "Ana ekran içeriği verilerini önbelleğe al",
+  "@cacheHomeScreenData": {
+    "description": "cacheHomeScreenData"
+  },
   "addMultipleSongs": "Çalma listesine şarkı ekle",
+  "@addMultipleSongs": {
+    "description": "addMultipleSongs"
+  },
   "restoreLastPlaybackSession": "Son çalma oturumunu geri yükle",
+  "@restoreLastPlaybackSession": {
+    "description": "restoreLastPlaybackSession"
+  },
   "exportedFileLocation": "İndirilen dosya dışa aktarma konumu",
+  "@exportedFileLocation": {
+    "description": "exportedFileLocation"
+  },
   "export": "Dışarı aktar",
+  "@export": {
+    "description": "export"
+  },
   "scanning": "Taranıyor...",
+  "@scanning": {
+    "description": "scanning"
+  },
   "downFilesFound": "indirilen dosyalar bulundu",
+  "@downFilesFound": {
+    "description": "downFilesFound"
+  },
   "close": "Kapalı",
+  "@close": {
+    "description": "close"
+  },
   "exportMsg": "Dosyalar başarıyla dışa aktarıldı",
+  "@exportMsg": {
+    "description": "exportMsg"
+  },
   "clearImgCacheAlert": "Resim önbelleği başarıyla temizlendi",
+  "@clearImgCacheAlert": {
+    "description": "clearImgCacheAlert"
+  },
   "exportDowloadedFiles": "İndirilen dosyaları dışa aktar",
+  "@exportDowloadedFiles": {
+    "description": "exportDowloadedFiles"
+  },
   "exportDowloadedFilesDes": "İndirilen dosyayı uygulama dizininden harici dizine aktarmak için buraya tıklayın",
+  "@exportDowloadedFilesDes": {
+    "description": "exportDowloadedFilesDes"
+  },
   "exporting": "Dışa aktarılıyor...",
+  "@exporting": {
+    "description": "exporting"
+  },
   "disableTransitionAnimation": "Geçiş animasyonunu devre dışı bırak",
+  "@disableTransitionAnimation": {
+    "description": "disableTransitionAnimation"
+  },
   "disableTransitionAnimationDes": "Sekme geçiş animasyonunu devre dışı bırakmak için bu seçeneği etkinleştirin",
+  "@disableTransitionAnimationDes": {
+    "description": "disableTransitionAnimationDes"
+  },
   "openIn": "Uygulamada aç",
+  "@openIn": {
+    "description": "openIn"
+  },
   "backupSettingsAndPlaylists": "Yedekleme Ayarları ve Çalma Listeleri",
+  "@backupSettingsAndPlaylists": {
+    "description": "backupSettingsAndPlaylists"
+  },
   "restoreSettingsAndPlaylists": "Ayarları ve Çalma Listelerini Geri Yükle",
+  "@restoreSettingsAndPlaylists": {
+    "description": "restoreSettingsAndPlaylists"
+  },
   "backupSettingsAndPlaylistsDes": "Tüm ayarları, çalma listelerini ve oturum açma verilerini bir yedekleme dosyasına kaydeder",
+  "@backupSettingsAndPlaylistsDes": {
+    "description": "backupSettingsAndPlaylistsDes"
+  },
   "restoreSettingsAndPlaylistsDes": "Tüm ayarları, oturum açma verilerini ve çalma listelerini bir yedekleme dosyasından geri yükler. Mevcut tüm verilerin üzerine yazar",
+  "@restoreSettingsAndPlaylistsDes": {
+    "description": "restoreSettingsAndPlaylistsDes"
+  },
   "backupMsg": "Yedekleme başarıyla kaydedildi!",
+  "@backupMsg": {
+    "description": "backupMsg"
+  },
   "backFilesFound": "veri tabanları bulundu",
+  "@backFilesFound": {
+    "description": "backFilesFound"
+  },
   "restoreMsg": "Başarıyla geri yüklendi!\nDeğişiklikler yeniden başlatıldığında uygulanır",
+  "@restoreMsg": {
+    "description": "restoreMsg"
+  },
   "restoring": "Geri yükleniyor...",
+  "@restoring": {
+    "description": "restoring"
+  },
   "restore": "Geri Yükle",
+  "@restore": {
+    "description": "restore"
+  },
   "closeApp": "Uygulamayı Kapat",
+  "@closeApp": {
+    "description": "closeApp"
+  },
   "backupAppData": "Uygulama verilerini yedekle",
+  "@backupAppData": {
+    "description": "backupAppData"
+  },
   "backup": "Yedekle",
+  "@backup": {
+    "description": "backup"
+  },
   "letsStrart": "Başlayalım...",
+  "@letsStrart": {
+    "description": "letsStrart"
+  },
   "processFiles": "Dosyalar işleniyor...",
+  "@processFiles": {
+    "description": "processFiles"
+  },
   "includeDownloadedFiles": "İndirilen şarkı dosyalarını dahil et",
+  "@includeDownloadedFiles": {
+    "description": "includeDownloadedFiles"
+  },
   "backupInProgress": "Yedekleme devam ediyor...",
+  "@backupInProgress": {
+    "description": "backupInProgress"
+  },
   "restoreAppData": "Uygulama verilerini geri yükle",
+  "@restoreAppData": {
+    "description": "restoreAppData"
+  },
   "restartApp": "Uygulamayı yeniden başlat",
+  "@restartApp": {
+    "description": "restartApp"
+  },
   "songInfo": "Şarkı Bilgileri",
+  "@songInfo": {
+    "description": "songInfo"
+  },
   "id": "Kimlik",
+  "@id": {
+    "description": "id"
+  },
   "bitrate": "Bit Hızı",
+  "@bitrate": {
+    "description": "bitrate"
+  },
   "loudnessDb": "Ses Yüksekliği (Db)",
+  "@loudnessDb": {
+    "description": "loudnessDb"
+  },
   "title": "Başlık",
+  "@title": {
+    "description": "title"
+  },
   "duration": "Süre",
+  "@duration": {
+    "description": "duration"
+  },
   "audioCodec": "Ses Kod Çözücü",
+  "@audioCodec": {
+    "description": "audioCodec"
+  },
   "urlSearchDes": "URL algılandı, ilgili içeriği açmak/oynatmak için üzerine tıklayın",
+  "@urlSearchDes": {
+    "description": "urlSearchDes"
+  },
   "queueShufflingDeniedMsg": "Karıştırma modu etkinleştirildiğinde kuyruk karıştırılamaz",
+  "@queueShufflingDeniedMsg": {
+    "description": "queueShufflingDeniedMsg"
+  },
   "queuerearrangingDeniedMsg": "Karışık oynatma aktifken kuyruktaki şarkılar düzenlenemez",
+  "@queuerearrangingDeniedMsg": {
+    "description": "queuerearrangingDeniedMsg"
+  },
   "networkError": "Ağ hatası! Ağ bağlantınızı kontrol edin.",
+  "@networkError": {
+    "description": "networkError"
+  },
   "downloadError2": "Sunucu kısıtlaması nedeniyle istenen şarkı indirilemiyor. Tekrar deneyiniz",
+  "@downloadError2": {
+    "description": "downloadError2"
+  },
   "musicAndPlayback": "Müzik & Oynatma",
+  "@musicAndPlayback": {
+    "description": "musicAndPlayback"
+  },
   "content": "İçerik",
+  "@content": {
+    "description": "content"
+  },
   "personalisation": "Kişiselleştirme",
+  "@personalisation": {
+    "description": "personalisation"
+  },
   "songNotPlayable": "Şarkı sunucu kısıtlaması nedeniyle çalınamıyor!",
+  "@songNotPlayable": {
+    "description": "songNotPlayable"
+  },
   "downloadError3": "Ağ/akış hatası nedeniyle indirme başarısız oldu! Lütfen tekrar deneyin",
+  "@downloadError3": {
+    "description": "downloadError3"
+  },
   "loudnessNormalizationDes": "Tüm şarkılar için aynı ses yüksekliği seviyesini ayarlar (Deneysel) (Önceki sürümde (< v1.10.0) indirilen şarkılarda çalışmaz)",
+  "@loudnessNormalizationDes": {
+    "description": "loudnessNormalizationDes"
+  },
   "appInfo": "Uygulama Hakkında",
+  "@appInfo": {
+    "description": "appInfo"
+  },
   "playerUi": "Oynatıcı arayüzü",
+  "@playerUi": {
+    "description": "playerUi"
+  },
   "playerUiDes": "Oynatıcı arayüzünü seç",
+  "@playerUiDes": {
+    "description": "playerUiDes"
+  },
   "gesture": "Jest",
+  "@gesture": {
+    "description": "gesture"
+  },
   "standard": "Standart",
+  "@standard": {
+    "description": "standard"
+  },
   "enableSlidableAction": "Kaydırma eylemlerini aç",
+  "@enableSlidableAction": {
+    "description": "enableSlidableAction"
+  },
   "playnextMsg": "Sırada",
+  "@playnextMsg": {
+    "description": "playnextMsg"
+  },
   "shuffleQueue": "Karma Sırası",
+  "@shuffleQueue": {
+    "description": "shuffleQueue"
+  },
   "queueLoop": "Sıra döngüsü",
+  "@queueLoop": {
+    "description": "queueLoop"
+  },
   "queueLoopNotDisMsg1": "Sıra döngüsü, karma modu devrede iken devre dışı bırakılamıyor.",
+  "@queueLoopNotDisMsg1": {
+    "description": "queueLoopNotDisMsg1"
+  },
   "queueLoopNotDisMsg2": "Sırayı döndür, radyo modunda kullanılamıyor.",
+  "@queueLoopNotDisMsg2": {
+    "description": "queueLoopNotDisMsg2"
+  },
   "loudnessNormalization": "Ses yüksekliği normalizasyonu",
+  "@loudnessNormalization": {
+    "description": "loudnessNormalization"
+  },
   "download": "İndir",
+  "@download": {
+    "description": "download"
+  },
   "autoDownFavSongDes": "Favorilere eklendiğinde favori şarkıları otomatik olarak indir",
+  "@autoDownFavSongDes": {
+    "description": "autoDownFavSongDes"
+  },
   "autoDownFavSong": "Favori şarkıları otomatik indir",
+  "@autoDownFavSong": {
+    "description": "autoDownFavSong"
+  },
   "enableSlidableActionDes": "Şarkı döşemesinde kaydırılabilir eylemleri etkinleştir",
+  "@enableSlidableActionDes": {
+    "description": "enableSlidableActionDes"
+  },
   "androidBackupWarning": "Test edilmedi: 60'tan fazla dosya indirdikten sonra onay kutusunu seçmek, işlem büyük miktarda bellek tüketebilir ve telefonun veya uygulamanın çökmesine neden olabilir. Kendi riskinizle devam edin.",
+  "@androidBackupWarning": {
+    "description": "androidBackupWarning"
+  },
   "playingfromPlaylist": "OYNATMA LİSTESİNDEN ÇALINIYOR",
+  "@playingfromPlaylist": {
+    "description": "playingfromPlaylist"
+  },
   "randomSelection": "Rastgele Seçim",
+  "@randomSelection": {
+    "description": "randomSelection"
+  },
   "misc": "Diğer",
+  "@misc": {
+    "description": "misc"
+  },
   "resetToDefault": "Varsayılan ayarları geri yükle",
+  "@resetToDefault": {
+    "description": "resetToDefault"
+  },
   "resetToDefaultDes": "Uygulama ayarlarını varsayılana sıfırla (Yeniden başlatma gerekir)",
+  "@resetToDefaultDes": {
+    "description": "resetToDefaultDes"
+  },
   "album": "Albüm",
+  "@album": {
+    "description": "album"
+  },
   "randomRadio": "Rastgele Radyo",
+  "@randomRadio": {
+    "description": "randomRadio"
+  },
   "playingfromAlbum": "ALBÜMDEN ÇALINIYOR",
+  "@playingfromAlbum": {
+    "description": "playingfromAlbum"
+  },
   "playingfromSelection": "SEÇKİLERDEN ÇALINIYOR",
+  "@playingfromSelection": {
+    "description": "playingfromSelection"
+  },
   "playingfromArtist": "SANATÇILARDAN ÇALINIYOR",
+  "@playingfromArtist": {
+    "description": "playingfromArtist"
+  },
   "autoOpenPlayer": "Oynatıcı ekranını otomatik olarak aç",
+  "@autoOpenPlayer": {
+    "description": "autoOpenPlayer"
+  },
   "autoOpenPlayerDes": "Çalmak için şarkı seçildiğinde oynatıcının otomatik olarak tam ekran açılmasını etkinleştir",
+  "@autoOpenPlayerDes": {
+    "description": "autoOpenPlayerDes"
+  },
   "resetToDefaultMsg": "Ayarlar varsayılana sıfırlandı, lütfen uygulamayı yeniden başlatın",
+  "@resetToDefaultMsg": {
+    "description": "resetToDefaultMsg"
+  },
   "reArrangeSongs": "Şarkıları yeniden düzenle",
+  "@reArrangeSongs": {
+    "description": "reArrangeSongs"
+  },
   "selectSongs": "Şarkıları seçin",
+  "@selectSongs": {
+    "description": "selectSongs"
+  },
   "selectAll": "Tümünü Seç",
+  "@selectAll": {
+    "description": "selectAll"
+  },
   "exportPlaylist": "Çalma Listesini Dışa Aktar",
+  "@exportPlaylist": {
+    "description": "exportPlaylist"
+  },
   "exportPlaylistCsv": "Çalma Listesini CSV olarak Dışa Aktar",
+  "@exportPlaylistCsv": {
+    "description": "exportPlaylistCsv"
+  },
   "exportingPlaylist": "Çalma listesi dışarı aktarılıyor...",
+  "@exportingPlaylist": {
+    "description": "exportingPlaylist"
+  },
   "playlistExportedMsg": "Çalma listesi başarılı bir şekilde dışa aktarıldı",
+  "@playlistExportedMsg": {
+    "description": "playlistExportedMsg"
+  },
   "exportError": "Çalma listesini dışa aktarırken hata",
+  "@exportError": {
+    "description": "exportError"
+  },
   "exportErrorPermission": "Çalma listesi dışarı aktarılırken izin reddedildi",
+  "@exportErrorPermission": {
+    "description": "exportErrorPermission"
+  },
   "exportErrorStorage": "Yeterli depolama alanı yok",
+  "@exportErrorStorage": {
+    "description": "exportErrorStorage"
+  },
   "exportErrorFormat": "Çalma listesini biçimlendirirken hata oluştu",
+  "@exportErrorFormat": {
+    "description": "exportErrorFormat"
+  },
   "importPlaylist": "Çalma Listesini İçe Aktar",
+  "@importPlaylist": {
+    "description": "importPlaylist"
+  },
   "importingPlaylist": "Çalma listesi içeri aktarılıyor...",
+  "@importingPlaylist": {
+    "description": "importingPlaylist"
+  },
   "importPlaylistDesc": "Daha önce dışa aktarılmış bir çalma listesi JSON dosyasını seçin",
+  "@importPlaylistDesc": {
+    "description": "importPlaylistDesc"
+  },
   "selectFile": "Dosya Seç",
+  "@selectFile": {
+    "description": "selectFile"
+  },
   "playlistImportedMsg": "Çalma listesi başarılı bir şekilde içeri aktarıldı",
+  "@playlistImportedMsg": {
+    "description": "playlistImportedMsg"
+  },
   "importError": "Çalma listesini içeri aktarırken hata",
+  "@importError": {
+    "description": "importError"
+  },
   "importErrorFileAccess": "Seçilen dosyaya erişilemedi",
+  "@importErrorFileAccess": {
+    "description": "importErrorFileAccess"
+  },
   "importErrorFormat": "Geçersiz dosya biçimi",
+  "@importErrorFormat": {
+    "description": "importErrorFormat"
+  },
   "invalidPlaylistFile": "Geçersiz çalma listesi dosya yapısı",
+  "@invalidPlaylistFile": {
+    "description": "invalidPlaylistFile"
+  },
   "importErrorDatabase": "Veritabanına kaydedilirken hata oluştu",
+  "@importErrorDatabase": {
+    "description": "importErrorDatabase"
+  },
   "fileNotFound": "Dosya bulunamadı",
+  "@fileNotFound": {
+    "description": "fileNotFound"
+  },
   "importLargeFileNote": "Not: Büyük çalma listelerinin içe aktarılması daha uzun sürebilir",
+  "@importLargeFileNote": {
+    "description": "importLargeFileNote"
+  },
   "exportPlaylistJson": "Çalma listesini JSON olarak dışa aktar",
+  "@exportPlaylistJson": {
+    "description": "exportPlaylistJson"
+  },
   "exportPlaylistJsonSubtitle": "Bu format içe aktarılabilir",
+  "@exportPlaylistJsonSubtitle": {
+    "description": "exportPlaylistJsonSubtitle"
+  },
   "exportToYouTubeMusic": "YouTube Music'e aktar",
+  "@exportToYouTubeMusic": {
+    "description": "exportToYouTubeMusic"
+  },
   "linkCopied": "Bağlantı panoya kopyalandı",
+  "@linkCopied": {
+    "description": "linkCopied"
+  },
   "exportPlaylistCsvSubtitle": "Buraya aktarılamaz",
+  "@exportPlaylistCsvSubtitle": {
+    "description": "exportPlaylistCsvSubtitle"
+  },
   "exportToYouTubeMusicSubtitle": "Çalma listenizdeki 50 şarkıdan kısa olanları mevcut kuyruğa ekleyecek, YtMusic'te açtıktan sonra çalma listesine eklemeyi/kaydetmeyi unutmayın",
+  "@exportToYouTubeMusicSubtitle": {
+    "description": "exportToYouTubeMusicSubtitle"
+  },
   "keepScreenOnWhilePlaying": "Müzik çalarken ekranı açık tut",
+  "@keepScreenOnWhilePlaying": {
+    "description": "keepScreenOnWhilePlaying"
+  },
   "keepScreenOnWhilePlayingDes": "Etkinleştirildiğinde, müzik çalarken cihazın ekranı açık kalır",
+  "@keepScreenOnWhilePlayingDes": {
+    "description": "keepScreenOnWhilePlayingDes"
+  },
   "auth_login_success": "Başarıyla giriş yapıldı",
   "@auth_login_success": {
-    "description": ""
+    "description": "auth_login_success"
   },
   "settings_cloud_backup": "Bulut yedekleme",
   "@settings_cloud_backup": {
-    "description": ""
+    "description": "settings_cloud_backup"
   },
   "settings_migration_title": "Joss Music Kotlin'den geçiş",
   "@settings_migration_title": {
-    "description": ""
+    "description": "settings_migration_title"
   },
   "backup_confirm_question": "Yedekleme yapmak istiyor musunuz?",
   "@backup_confirm_question": {
-    "description": ""
+    "description": "backup_confirm_question"
   },
   "backup_selection_prompt": "Hangi verilerin yedekleneceğini seçin",
   "@backup_selection_prompt": {
-    "description": ""
+    "description": "backup_selection_prompt"
   },
   "search_recent_title": "Son aramalar",
   "@search_recent_title": {
-    "description": ""
+    "description": "search_recent_title"
   },
   "back": "Geri dönmek",
   "@back": {
-    "description": ""
+    "description": "back"
   },
   "auth_forgot_password": "Şifremi unuttum",
   "@auth_forgot_password": {
-    "description": ""
+    "description": "auth_forgot_password"
   },
   "auth_btn_login": "Giriş yapmak",
   "@auth_btn_login": {
-    "description": ""
+    "description": "auth_btn_login"
   },
   "auth_btn_register": "Kayıt olmak",
   "@auth_btn_register": {
-    "description": ""
+    "description": "auth_btn_register"
   },
   "email": "E-posta",
   "@email": {
-    "description": ""
+    "description": "email"
   },
   "password_text": "Şifre",
   "@password_text": {
@@ -326,372 +1154,869 @@
   },
   "auth_confirm_password": "Şifreyi Onayla",
   "@auth_confirm_password": {
-    "description": ""
+    "description": "auth_confirm_password"
   },
   "auth_welcome_title": "Estrella Music'e hoş geldiniz",
   "@auth_welcome_title": {
-    "description": ""
+    "description": "auth_welcome_title"
   },
   "auth_welcome_subtitle": "Estrella Music'e hoş geldiniz",
   "@auth_welcome_subtitle": {
-    "description": ""
-  },
-  "@username": {
-    "description": ""
+    "description": "auth_welcome_subtitle"
   },
   "auth_first_name": "İlk adı",
   "@auth_first_name": {
-    "description": ""
+    "description": "auth_first_name"
   },
   "auth_last_name": "Soy isim",
   "@auth_last_name": {
-    "description": ""
+    "description": "auth_last_name"
   },
   "auth_agree_personal_data": "Yanlış verileri kabul ediyoruz...",
   "@auth_agree_personal_data": {
-    "description": ""
+    "description": "auth_agree_personal_data"
   },
   "settings_general_section": "Genel",
   "@settings_general_section": {
-    "description": ""
+    "description": "settings_general_section"
   },
   "settings_logout": "Oturumu kapat",
   "@settings_logout": {
-    "description": ""
+    "description": "settings_logout"
   },
   "settings_cloud_backup_desc": "Yükleyin, geri yükleyin ve yönetin...",
   "@settings_cloud_backup_desc": {
-    "description": ""
+    "description": "settings_cloud_backup_desc"
   },
   "settings_migration_desc": "Çalma listelerini, şarkıları içe aktarın...",
   "@settings_migration_desc": {
-    "description": ""
+    "description": "settings_migration_desc"
   },
   "backup_btn_restart": "Uygulamayı yeniden başlat",
   "@backup_btn_restart": {
-    "description": ""
+    "description": "backup_btn_restart"
   },
   "backup_btn_upload": "Yedeği şimdi yükle",
   "@backup_btn_upload": {
-    "description": ""
+    "description": "backup_btn_upload"
   },
   "backup_no_backups": "Henüz yedek yok...",
   "@backup_no_backups": {
-    "description": ""
+    "description": "backup_no_backups"
   },
   "backup_auth_required": "Aktif bir oturuma ihtiyacınız var...",
   "@backup_auth_required": {
-    "description": ""
+    "description": "backup_auth_required"
   },
   "backup_upload_success": "Yedekleme doğru şekilde yüklendi.",
   "@backup_upload_success": {
-    "description": ""
+    "description": "backup_upload_success"
   },
   "backup_restore_success": "Yedekleme geri yüklendi. Uygulamayı yeniden başlatın.",
   "@backup_restore_success": {
-    "description": ""
+    "description": "backup_restore_success"
   },
   "backup_delete_success": "Yedekleme silindi.",
   "@backup_delete_success": {
-    "description": ""
+    "description": "backup_delete_success"
   },
   "genre_pop": "Pop",
   "@genre_pop": {
-    "description": ""
+    "description": "genre_pop"
   },
   "genre_rock": "Kaynak",
   "@genre_rock": {
-    "description": ""
+    "description": "genre_rock"
   },
   "genre_hiphop": "hip hop",
   "@genre_hiphop": {
-    "description": ""
+    "description": "genre_hiphop"
   },
   "genre_electronic": "Elektronik",
   "@genre_electronic": {
-    "description": ""
+    "description": "genre_electronic"
   },
   "genre_jazz": "Caz",
   "@genre_jazz": {
-    "description": ""
+    "description": "genre_jazz"
   },
   "genre_latin": "Latince",
   "@genre_latin": {
-    "description": ""
+    "description": "genre_latin"
   },
   "migration_btn_select": "Dosyayı seçin ve içe aktarın",
   "@migration_btn_select": {
-    "description": ""
-  },
-  "@close": {
-    "description": ""
+    "description": "migration_btn_select"
   },
   "forgottenFavorites": "unutulmuş favoriler",
   "@forgottenFavorites": {
-    "description": ""
+    "description": "forgottenFavorites"
   },
   "mostListenedSong": "En çok dinlenen şarkı",
   "@mostListenedSong": {
-    "description": ""
+    "description": "mostListenedSong"
   },
   "reproducedBy": "Tarafından çoğaltılmıştır",
   "@reproducedBy": {
-    "description": ""
+    "description": "reproducedBy"
   },
   "recentSearches": "Son aramalar",
   "@recentSearches": {
-    "description": ""
+    "description": "recentSearches"
   },
   "popularTracks": "Popüler parçalar",
   "@popularTracks": {
-    "description": ""
+    "description": "popularTracks"
   },
   "latestRelease": "En son sürüm",
   "@latestRelease": {
-    "description": ""
+    "description": "latestRelease"
   },
   "follow": "Devam etmek",
   "@follow": {
-    "description": ""
+    "description": "follow"
   },
   "following": "Takip etme",
   "@following": {
-    "description": ""
+    "description": "following"
   },
   "listenNow": "Şimdi dinle",
   "@listenNow": {
-    "description": ""
+    "description": "listenNow"
   },
   "video": "Video",
   "@video": {
-    "description": ""
+    "description": "video"
   },
   "about": "Hakkında",
   "@about": {
-    "description": ""
+    "description": "about"
   },
   "readMore": "Devamını oku",
   "@readMore": {
-    "description": ""
+    "description": "readMore"
   },
   "speedAndPitch": "Hız ve Pitch",
   "@speedAndPitch": {
-    "description": ""
+    "description": "speedAndPitch"
   },
   "playbackSpeed": "Oynatma hızı",
   "@playbackSpeed": {
-    "description": ""
+    "description": "playbackSpeed"
   },
   "songPitch": "şarkı sesi",
   "@songPitch": {
-    "description": ""
+    "description": "songPitch"
   },
   "musicRecognition": "Müzik Tanıma",
   "@musicRecognition": {
-    "description": ""
+    "description": "musicRecognition"
   },
   "listeningToEnvironment": "Çevreyi dinlemek...",
   "@listeningToEnvironment": {
-    "description": ""
+    "description": "listeningToEnvironment"
   },
   "micInstruction": "Müziğin mikrofonunuzun yakınında yeterince yüksek sesle çalındığından emin olun.",
   "@micInstruction": {
-    "description": ""
+    "description": "micInstruction"
   },
   "processingAudio": "Ses işleniyor...",
   "@processingAudio": {
-    "description": ""
+    "description": "processingAudio"
   },
   "shazamSearching": "Eşleşmeler için Shazam veritabanında arama yapılıyor...",
   "@shazamSearching": {
-    "description": ""
+    "description": "shazamSearching"
   },
   "songFound": "Şarkı Bulundu!",
   "@songFound": {
-    "description": ""
+    "description": "songFound"
   },
   "playNow": "Şimdi Oyna",
   "@playNow": {
-    "description": ""
+    "description": "playNow"
   },
   "searchInLibrary": "Kütüphanede Ara",
   "@searchInLibrary": {
-    "description": ""
+    "description": "searchInLibrary"
   },
   "noMatchesFound": "Eşleşme Yok",
   "@noMatchesFound": {
-    "description": ""
+    "description": "noMatchesFound"
   },
   "noMatchInstruction": "Kaydedilen ses dosyasında herhangi bir şarkı bulunamadı",
   "@noMatchInstruction": {
-    "description": ""
+    "description": "noMatchInstruction"
   },
   "errorOccurred": "Bir hata oluştu",
   "@errorOccurred": {
-    "description": ""
+    "description": "errorOccurred"
   },
   "playingRecognizedTrack": "Oynanıyor:",
   "@playingRecognizedTrack": {
-    "description": ""
+    "description": "playingRecognizedTrack"
   },
   "errorPlayingTrack": "Oynarken hata:",
   "@errorPlayingTrack": {
-    "description": ""
+    "description": "errorPlayingTrack"
   },
   "welcome_title": "Sizin müziğiniz, sizin tarzınız",
+  "@welcome_title": {
+    "description": "welcome_title"
+  },
   "welcome_subtitle": "Artık Estrella Music'i nasıl deneyimlemek istediğinizi seçin.",
+  "@welcome_subtitle": {
+    "description": "welcome_subtitle"
+  },
   "welcome_intro": "Platformumuzu modernleştirdik. Manuel yedeklemelerin yüklenmesine ilişkin eski sistem devre dışı bırakıldı. Artık müzik kitaplığınızı yönetmenin iki net yolu var.",
+  "@welcome_intro": {
+    "description": "welcome_intro"
+  },
   "recommend_cloud": "Spotify benzeri bir deneyim için Bulut Modunu etkinleştirmenizi öneririz: tüm cihazlarınız arasında gerçek zamanlı senkronizasyon ve hiçbir şey yapmanıza gerek kalmadan otomatik yedekleme.",
+  "@recommend_cloud": {
+    "description": "recommend_cloud"
+  },
   "swipe_prompt": "Seçenekleri keşfetmek için kaydırın ➔",
+  "@swipe_prompt": {
+    "description": "swipe_prompt"
+  },
   "local_title": "Yerel Mod",
+  "@local_title": {
+    "description": "local_title"
+  },
   "local_subtitle": "Cihazınızda mutlak gizlilik",
+  "@local_subtitle": {
+    "description": "local_subtitle"
+  },
   "local_b1": "Giriş yapmanıza gerek kalmadan çalışır.",
+  "@local_b1": {
+    "description": "local_b1"
+  },
   "local_b2": "Kitaplığınızın tamamı kesinlikle bu bilgisayarda kalır.",
+  "@local_b2": {
+    "description": "local_b2"
+  },
   "local_b3": "Not: Manuel bulut yedeklemesi yoktur. Cihazınızı kaybederseniz veya uygulamayı kaldırırsanız verileriniz kurtarılamaz.",
+  "@local_b3": {
+    "description": "local_b3"
+  },
   "local_btn": "Yalnızca bu cihazda kullanın",
+  "@local_btn": {
+    "description": "local_btn"
+  },
   "cloud_title": "Bulut Modu (Önerilen)",
+  "@cloud_title": {
+    "description": "cloud_title"
+  },
   "cloud_subtitle": "Joss Red ile gerçek zamanlı senkronizasyon",
+  "@cloud_subtitle": {
+    "description": "cloud_subtitle"
+  },
   "cloud_b1": "Joss Red hesabınızı kullanarak güvenli bir şekilde oturum açın.",
+  "@cloud_b1": {
+    "description": "cloud_b1"
+  },
   "cloud_b2": "Çalma listelerinize, favorilerinize ve geçmişinize herhangi bir cihazdan (Windows, Android vb.) anında erişin.",
+  "@cloud_b2": {
+    "description": "cloud_b2"
+  },
   "cloud_b3": "Akıllı Senkronizasyon: Çevrimdışı çalışın ve interneti kurtardığınızda değişiklikleri otomatik olarak yükleyin.",
+  "@cloud_b3": {
+    "description": "cloud_b3"
+  },
   "cloud_btn": "Bulut senkronizasyonunu etkinleştir",
+  "@cloud_btn": {
+    "description": "cloud_btn"
+  },
   "slide_indicator": "Adım {current} / 3",
+  "@slide_indicator": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      }
+    },
+    "description": "slide_indicator"
+  },
   "news_card_title": "Estrella Müzik gelişti!",
+  "@news_card_title": {
+    "description": "news_card_title"
+  },
   "news_card_subtitle": "Joss Red ile %100 senkronizasyon, arkadaşlarla çalma listeleri ve çok daha fazlası. Yenilikleri görmek için dokunun.",
+  "@news_card_subtitle": {
+    "description": "news_card_subtitle"
+  },
   "news_dialog_title": "Estrella Müzik Haberleri",
+  "@news_dialog_title": {
+    "description": "news_dialog_title"
+  },
   "news_item_sync_title": "Joss Red ile Tam Entegrasyon",
+  "@news_item_sync_title": {
+    "description": "news_item_sync_title"
+  },
   "news_item_sync_desc": "Çalma listeleriniz ve favorileriniz artık ana Joss Red hesabınızla otomatik olarak buluta kaydediliyor ve senkronize ediliyor.",
+  "@news_item_sync_desc": {
+    "description": "news_item_sync_desc"
+  },
   "news_item_collab_title": "Ortak Çalma Listeleri",
+  "@news_item_collab_title": {
+    "description": "news_item_collab_title"
+  },
   "news_item_collab_desc": "Arkadaşlarınızla çalma listeleri oluşturun! Bir çalma listesi oluştururken İşbirliği onay kutusunu seçin ve birlikte düzenleyeceğiniz arkadaşlarınızı seçin.",
+  "@news_item_collab_desc": {
+    "description": "news_item_collab_desc"
+  },
   "news_item_trans_title": "Şeffaf Senkronizasyon",
+  "@news_item_trans_title": {
+    "description": "news_item_trans_title"
+  },
   "news_item_trans_desc": "Artık manuel senkronizasyon düğmelerine tıklamanıza gerek yok; Yeni motor, viteslerin otomatik olarak yukarı ve aşağı kaydırılmasından sorumludur.",
+  "@news_item_trans_desc": {
+    "description": "news_item_trans_desc"
+  },
   "news_dialog_section_friends": "Arkadaşlar ve Hesap Yönetimi:",
+  "@news_dialog_section_friends": {
+    "description": "news_dialog_section_friends"
+  },
   "news_dialog_friends_desc": "Arkadaş eklemek, istekleri kabul etmek veya güvenlik profilinizi yönetmek için lütfen Joss Red'i resmi platformlarında kullanın:",
+  "@news_dialog_friends_desc": {
+    "description": "news_dialog_friends_desc"
+  },
   "news_btn_app": "Joss Red Uygulaması (Play Store)",
+  "@news_btn_app": {
+    "description": "news_btn_app"
+  },
   "news_btn_web": "Joss Kırmızı Ağı",
+  "@news_btn_web": {
+    "description": "news_btn_web"
+  },
   "news_btn_dismiss": "Anlaşıldı",
+  "@news_btn_dismiss": {
+    "description": "news_btn_dismiss"
+  },
   "settings_appearance_desc": "Tema, dil ve arayüz animasyonları.",
+  "@settings_appearance_desc": {
+    "description": "settings_appearance_desc"
+  },
   "settings_content_desc": "Filtreleri, Piped ve önbelleklerle entegrasyonu keşfedin.",
+  "@settings_content_desc": {
+    "description": "settings_content_desc"
+  },
   "settings_playback_desc": "Akış kalitesi, normalleştirme, sessizlikler ve pil.",
+  "@settings_playback_desc": {
+    "description": "settings_playback_desc"
+  },
   "settings_downloads_desc": "İndirmeler ve Depolama",
+  "@settings_downloads_desc": {
+    "description": "settings_downloads_desc"
+  },
   "settings_downloads_sub": "Ses formatları, klasörler ve otomatik indirmeler.",
+  "@settings_downloads_sub": {
+    "description": "settings_downloads_sub"
+  },
   "settings_account_desc": "Hesap ve Senkronizasyon",
+  "@settings_account_desc": {
+    "description": "settings_account_desc"
+  },
   "settings_account_sub": "Bulut modu, yedeklemeler, arkadaş listesi ve geçişler.",
+  "@settings_account_sub": {
+    "description": "settings_account_sub"
+  },
   "settings_about_desc": "Estrella Müzik Hakkında",
+  "@settings_about_desc": {
+    "description": "settings_about_desc"
+  },
   "settings_about_sub": "Sürüm, açık kaynak proje ve GitHub.",
+  "@settings_about_sub": {
+    "description": "settings_about_sub"
+  },
   "settings_local_cloud_title": "Yerel Mod / EMusic Cloud",
+  "@settings_local_cloud_title": {
+    "description": "settings_local_cloud_title"
+  },
   "settings_local_cloud_desc": "Joss Red ile senkronizasyon durumunu seçin, taşıyın veya inceleyin.",
+  "@settings_local_cloud_desc": {
+    "description": "settings_local_cloud_desc"
+  },
   "settings_my_friends": "arkadaşlarım",
+  "@settings_my_friends": {
+    "description": "settings_my_friends"
+  },
   "settings_my_friends_desc": "Joss Red arkadaşlarınızı doğrudan yönetin.",
+  "@settings_my_friends_desc": {
+    "description": "settings_my_friends_desc"
+  },
   "settings_refresh_visitor_title": "Kimliği Yenile (Ziyaretçi Kimliği)",
+  "@settings_refresh_visitor_title": {
+    "description": "settings_refresh_visitor_title"
+  },
   "settings_refresh_visitor_desc": "Keşfet içeriği yüklenmezse YouTube Müzik Kimliğinizi yeniden oluşturun.",
+  "@settings_refresh_visitor_desc": {
+    "description": "settings_refresh_visitor_desc"
+  },
   "settings_visitor_updated": "Güncellenmiş tanımlayıcı",
+  "@settings_visitor_updated": {
+    "description": "settings_visitor_updated"
+  },
   "settings_visitor_updated_desc": "Yeni bir Ziyaretçi Kimliği başarıyla oluşturuldu.",
+  "@settings_visitor_updated_desc": {
+    "description": "settings_visitor_updated_desc"
+  },
   "settings_visitor_error": "Hata",
+  "@settings_visitor_error": {
+    "description": "settings_visitor_error"
+  },
   "settings_visitor_error_desc": "Yeni bir tanımlayıcı oluşturulamadı. Lütfen daha sonra tekrar deneyin.",
+  "@settings_visitor_error_desc": {
+    "description": "settings_visitor_error_desc"
+  },
   "settings_visitor_exception": "Yeniden oluşturma sırasında bir hata oluştu: {error}",
+  "@settings_visitor_exception": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    },
+    "description": "settings_visitor_exception"
+  },
   "migratedLibrary": "Taşınan kitaplık",
+  "@migratedLibrary": {
+    "description": "migratedLibrary"
+  },
   "noSongsInCollection": "Bu koleksiyonda şarkı yok",
+  "@noSongsInCollection": {
+    "description": "noSongsInCollection"
+  },
   "startupScreen": "Başlangıçta aç",
+  "@startupScreen": {
+    "description": "startupScreen"
+  },
   "startupScreenDescription": "Estrella Music'in ilk açacağı bölümü seçin",
+  "@startupScreenDescription": {
+    "description": "startupScreenDescription"
+  },
   "friends": "Arkadaşlar",
+  "@friends": {
+    "description": "friends"
+  },
   "dailyDiscover": "Günlük keşif",
+  "@dailyDiscover": {
+    "description": "dailyDiscover"
+  },
   "keepListening": "dinlemeye devam et",
+  "@keepListening": {
+    "description": "keepListening"
+  },
   "similarToTitle": "{title} benzeri",
+  "@similarToTitle": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    },
+    "description": "similarToTitle"
+  },
   "pipedPlaylistDescription": "Borulu Çalma Listesi",
+  "@pipedPlaylistDescription": {
+    "description": "pipedPlaylistDescription"
+  },
   "collaborativePlaylistDescription": "Ortak Çalma Listesi",
+  "@collaborativePlaylistDescription": {
+    "description": "collaborativePlaylistDescription"
+  },
   "libraryPlaylistDescription": "Kütüphane Çalma Listesi",
+  "@libraryPlaylistDescription": {
+    "description": "libraryPlaylistDescription"
+  },
   "untitledSong": "İsimsiz şarkı",
+  "@untitledSong": {
+    "description": "untitledSong"
+  },
   "migratedPlaylist": "Taşınan Oynatma Listesi",
+  "@migratedPlaylist": {
+    "description": "migratedPlaylist"
+  },
   "migratedAlbum": "Taşınan albüm",
+  "@migratedAlbum": {
+    "description": "migratedAlbum"
+  },
   "songsImportedFromJossMusic": "Joss Music Kotlin'den içe aktarılan şarkılar",
+  "@songsImportedFromJossMusic": {
+    "description": "songsImportedFromJossMusic"
+  },
   "importedFromJossMusic": "Joss Music Kotlin'den içe aktarıldı",
+  "@importedFromJossMusic": {
+    "description": "importedFromJossMusic"
+  },
   "syncLocalModeActive": "Yerel mod etkin",
+  "@syncLocalModeActive": {
+    "description": "syncLocalModeActive"
+  },
   "syncCloudPending": "Bulut modu etkin. Senkronizasyon bekleniyor.",
+  "@syncCloudPending": {
+    "description": "syncCloudPending"
+  },
   "syncCloudDownloadingExisting": "Bulut modu etkinleştirildi. Mevcut kitaplığın indirilmesi.",
+  "@syncCloudDownloadingExisting": {
+    "description": "syncCloudDownloadingExisting"
+  },
   "syncCloudMigrationComplete": "Bulut modu etkinleştirildi. Taşınan kütüphane.",
+  "@syncCloudMigrationComplete": {
+    "description": "syncCloudMigrationComplete"
+  },
   "syncLocalDeviceOnly": "Verileriniz yalnızca bu cihazda tutuluyor.",
+  "@syncLocalDeviceOnly": {
+    "description": "syncLocalDeviceOnly"
+  },
   "syncDownloading": "EMusic değişiklikleri indiriliyor...",
+  "@syncDownloading": {
+    "description": "syncDownloading"
+  },
   "syncDownloadFailed": "Senkronizasyon indirilemedi.",
+  "@syncDownloadFailed": {
+    "description": "syncDownloadFailed"
+  },
   "syncLocalChangesFirst": "Yeni yerel değişiklikler var. İndirmeden önce yüklenecekler.",
+  "@syncLocalChangesFirst": {
+    "description": "syncLocalChangesFirst"
+  },
   "syncLibrarySynced": "Senkronize kütüphane.",
+  "@syncLibrarySynced": {
+    "description": "syncLibrarySynced"
+  },
   "syncOfflinePending": "Çevrimdışı. Değişiklikler beklemede.",
+  "@syncOfflinePending": {
+    "description": "syncOfflinePending"
+  },
   "syncLibraryUpToDate": "Kütüphane güncel.",
+  "@syncLibraryUpToDate": {
+    "description": "syncLibraryUpToDate"
+  },
   "syncChangesSynced": "{count} senkronize edilmiş değişiklikler.",
+  "@syncChangesSynced": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    },
+    "description": "syncChangesSynced"
+  },
   "syncUploading": "Değişiklikler EMusic'e yükleniyor...",
+  "@syncUploading": {
+    "description": "syncUploading"
+  },
   "syncUploadSuccessWs": "Değişiklikler başarıyla yüklendi (WS).",
+  "@syncUploadSuccessWs": {
+    "description": "syncUploadSuccessWs"
+  },
   "syncUploadWsRetry": "WS kullanılarak yüklenemedi. Daha sonra tekrar denenecektir.",
+  "@syncUploadWsRetry": {
+    "description": "syncUploadWsRetry"
+  },
   "syncUploadSuccess": "Değişiklikler doğru şekilde yüklendi.",
+  "@syncUploadSuccess": {
+    "description": "syncUploadSuccess"
+  },
   "syncUploadRetry": "Kalkamadım. Daha sonra tekrar denenecektir.",
+  "@syncUploadRetry": {
+    "description": "syncUploadRetry"
+  },
   "syncOfflineRetry": "Çevrimdışı. Değişiklikler yeniden denenmek üzere kaydedildi.",
+  "@syncOfflineRetry": {
+    "description": "syncOfflineRetry"
+  },
   "syncUnconfirmedRetry": "EMusic tüm değişiklikleri onaylamadı. Yeniden yargılanacaklar.",
+  "@syncUnconfirmedRetry": {
+    "description": "syncUnconfirmedRetry"
+  },
   "syncChangesConfirmed": "{count} değişiklik yapıldı.",
+  "@syncChangesConfirmed": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    },
+    "description": "syncChangesConfirmed"
+  },
   "migrationAlreadyRunning": "Halihazırda devam eden bir taşıma işlemi var.",
+  "@migrationAlreadyRunning": {
+    "description": "migrationAlreadyRunning"
+  },
   "migrationLoginRequired": "Geçiş yapmadan önce Joss Red'de oturum açın.",
+  "@migrationLoginRequired": {
+    "description": "migrationLoginRequired"
+  },
   "migrationCheckingCloud": "EMusic Cloud'un zaten bir kitaplığı olup olmadığı kontrol ediliyor...",
+  "@migrationCheckingCloud": {
+    "description": "migrationCheckingCloud"
+  },
   "cloudLibraryFoundDeviceWillDownload": "Bir bulut kitaplığı bulundu. Bu cihaz, üzerine yazmadan indirecektir.",
+  "@cloudLibraryFoundDeviceWillDownload": {
+    "description": "cloudLibraryFoundDeviceWillDownload"
+  },
   "cloudLibraryFound": "Bulut kitaplığı bulundu.",
+  "@cloudLibraryFound": {
+    "description": "cloudLibraryFound"
+  },
   "migrationCreatingBackup": "Buluta bağlanmadan önce yerel bir yedekleme oluşturuluyor...",
+  "@migrationCreatingBackup": {
+    "description": "migrationCreatingBackup"
+  },
   "migrationAnalyzingLocal": "Yerel kütüphane analiz ediliyor...",
+  "@migrationAnalyzingLocal": {
+    "description": "migrationAnalyzingLocal"
+  },
   "migrationPreparingCloud": "EMusic Cloud'da geçiş hazırlanıyor...",
+  "@migrationPreparingCloud": {
+    "description": "migrationPreparingCloud"
+  },
   "migrationStartFailed": "EMusic Cloud geçişi başlatamadı.",
+  "@migrationStartFailed": {
+    "description": "migrationStartFailed"
+  },
   "migrationUploadingData": "Çalma listeleri, favoriler ve geçmiş yükleniyor...",
+  "@migrationUploadingData": {
+    "description": "migrationUploadingData"
+  },
   "migrationUploadIncomplete": "Tüm veriler yüklenemedi. Yerel desteğinizi sürdürüyoruz.",
+  "@migrationUploadIncomplete": {
+    "description": "migrationUploadIncomplete"
+  },
   "migrationVerifyingIntegrity": "EMusic Cloud'da bütünlük doğrulanıyor...",
+  "@migrationVerifyingIntegrity": {
+    "description": "migrationVerifyingIntegrity"
+  },
   "migrationValidationFailed": "EMusic Cloud geçişi doğrulayamadı.",
+  "@migrationValidationFailed": {
+    "description": "migrationValidationFailed"
+  },
   "cloudModeReadyOfflineCache": "Bulut modu hazır. Bu cihaz çevrimdışı bir önbellek olarak çalışacak.",
+  "@cloudModeReadyOfflineCache": {
+    "description": "cloudModeReadyOfflineCache"
+  },
   "migrationCompleted": "Taşıma tamamlandı.",
+  "@migrationCompleted": {
+    "description": "migrationCompleted"
+  },
   "migrationFailedLocalPreserved": "Taşıma başarısız oldu. Yerel verileriniz değiştirilmedi.",
+  "@migrationFailedLocalPreserved": {
+    "description": "migrationFailedLocalPreserved"
+  },
   "sessionExpiredLoginAgain": "Oturumunuzun süresi doldu. Tekrar oturum açın.",
+  "@sessionExpiredLoginAgain": {
+    "description": "sessionExpiredLoginAgain"
+  },
   "selectedFileNotFound": "Seçilen dosya bulunamadı.",
+  "@selectedFileNotFound": {
+    "description": "selectedFileNotFound"
+  },
   "genericAlbum": "Albüm",
+  "@genericAlbum": {
+    "description": "genericAlbum"
+  },
   "friendsLoginRequired": "Arkadaş bulmak için oturum açın.",
+  "@friendsLoginRequired": {
+    "description": "friendsLoginRequired"
+  },
   "invalidSessionToken": "Oturum geçerli bir belirteç içermiyor.",
+  "@invalidSessionToken": {
+    "description": "invalidSessionToken"
+  },
   "userSearchFailed": "Kullanıcılar aranamadı ({statusCode}).",
+  "@userSearchFailed": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    },
+    "description": "userSearchFailed"
+  },
   "invalidServerResponse": "Geçersiz sunucu yanıtı.",
+  "@invalidServerResponse": {
+    "description": "invalidServerResponse"
+  },
   "userListMissing": "Yanıt, kullanıcıların listesini içermiyor.",
+  "@userListMissing": {
+    "description": "userListMissing"
+  },
   "playlistCollaboratorsTitle": "Oynatma listesine katkıda bulunanlar",
+  "@playlistCollaboratorsTitle": {
+    "description": "playlistCollaboratorsTitle"
+  },
   "collaboratorsInstruction": "Bu oynatma listesini görebilecek ve düzenleyebilecek arkadaşlarınızı seçin:",
+  "@collaboratorsInstruction": {
+    "description": "collaboratorsInstruction"
+  },
   "noJossRedFriends": "Joss Red'de eklenmiş arkadaşın yok.",
+  "@noJossRedFriends": {
+    "description": "noJossRedFriends"
+  },
   "friendFallback": "Arkadaş",
+  "@friendFallback": {
+    "description": "friendFallback"
+  },
   "collaboratorsUpdated": "Ortak çalışanlar doğru şekilde güncellendi.",
+  "@collaboratorsUpdated": {
+    "description": "collaboratorsUpdated"
+  },
   "save": "Kale",
+  "@save": {
+    "description": "save"
+  },
   "manageCollaborators": "Ortak çalışanları (arkadaşlar) yönetin",
+  "@manageCollaborators": {
+    "description": "manageCollaborators"
+  },
   "done": "Hazır",
+  "@done": {
+    "description": "done"
+  },
   "notAuthenticated": "Kimliği doğrulanmadı",
+  "@notAuthenticated": {
+    "description": "notAuthenticated"
+  },
   "genericError": "Hata",
+  "@genericError": {
+    "description": "genericError"
+  },
   "friendRequestSent": "Arkadaşlık isteği gönderildi",
+  "@friendRequestSent": {
+    "description": "friendRequestSent"
+  },
   "friendRequestAccepted": "Arkadaşlık isteği kabul edildi",
+  "@friendRequestAccepted": {
+    "description": "friendRequestAccepted"
+  },
   "friendshipRemoved": "Arkadaşlık kaldırıldı",
+  "@friendshipRemoved": {
+    "description": "friendshipRemoved"
+  },
   "userBlocked": "Kullanıcı engellendi",
+  "@userBlocked": {
+    "description": "userBlocked"
+  },
   "userUnblocked": "Kilidi açılmış kullanıcı",
+  "@userUnblocked": {
+    "description": "userUnblocked"
+  },
   "artistsByTaste": "Zevklerinize göre",
+  "@artistsByTaste": {
+    "description": "artistsByTaste"
+  },
   "followedArtists": "takip edildi",
+  "@followedArtists": {
+    "description": "followedArtists"
+  },
   "recommendedArtists": "Tavsiye edilen",
+  "@recommendedArtists": {
+    "description": "recommendedArtists"
+  },
   "albumsByTaste": "Zevklerinize göre",
+  "@albumsByTaste": {
+    "description": "albumsByTaste"
+  },
   "savedAlbums": "Kaydedildi",
+  "@savedAlbums": {
+    "description": "savedAlbums"
+  },
   "recommendedAlbums": "Tavsiye edilen",
+  "@recommendedAlbums": {
+    "description": "recommendedAlbums"
+  },
   "downloadNotificationChannelName": "müzik indirmeleri",
+  "@downloadNotificationChannelName": {
+    "description": "downloadNotificationChannelName"
+  },
   "downloadNotificationChannelDescription": "Müzik indirmelerinizi arka planda aktif tutar.",
+  "@downloadNotificationChannelDescription": {
+    "description": "downloadNotificationChannelDescription"
+  },
   "downloadNotificationTitle": "Müzik indiriliyor",
+  "@downloadNotificationTitle": {
+    "description": "downloadNotificationTitle"
+  },
   "downloadNotificationPreparing": "İndirmeleriniz hazırlanıyor…",
+  "@downloadNotificationPreparing": {
+    "description": "downloadNotificationPreparing"
+  },
   "downloadNotificationSong": "İndiriliyor: {songTitle}",
+  "@downloadNotificationSong": {
+    "placeholders": {
+      "songTitle": {
+        "type": "String"
+      }
+    },
+    "description": "downloadNotificationSong"
+  },
   "syncCloudModeActive": "Bulut modu etkin",
+  "@syncCloudModeActive": {
+    "description": "syncCloudModeActive"
+  },
   "permissionsConsentTitle": "Başlamak için izinler",
+  "@permissionsConsentTitle": {
+    "description": "permissionsConsentTitle"
+  },
   "permissionsConsentDescription": "Estrella Music, müziğinizi yönetmek ve tüm oynatma özelliklerini sunmak için bu izinlere ihtiyaç duyar.",
+  "@permissionsConsentDescription": {
+    "description": "permissionsConsentDescription"
+  },
   "permissionsStorageTitle": "Müzik ve depolama",
+  "@permissionsStorageTitle": {
+    "description": "permissionsStorageTitle"
+  },
   "permissionsStorageDescription": "Müzik çalmanıza, indirilenleri kaydetmenize, çalma listelerini dışa aktarmanıza ve güncellemeler hazırlamanıza olanak tanır.",
+  "@permissionsStorageDescription": {
+    "description": "permissionsStorageDescription"
+  },
   "permissionsNotificationsTitle": "Bildirimler",
+  "@permissionsNotificationsTitle": {
+    "description": "permissionsNotificationsTitle"
+  },
   "permissionsNotificationsDescription": "Oynatma kontrollerini, indirme ilerlemesini ve önemli uygulama bildirimlerini gösterir.",
+  "@permissionsNotificationsDescription": {
+    "description": "permissionsNotificationsDescription"
+  },
   "permissionsMicrophoneTitle": "Mikrofon",
+  "@permissionsMicrophoneTitle": {
+    "description": "permissionsMicrophoneTitle"
+  },
   "permissionsMicrophoneDescription": "Yalnızca etrafınızda çalan bir şarkıyı tanımlamayı seçtiğinizde kullanılır.",
+  "@permissionsMicrophoneDescription": {
+    "description": "permissionsMicrophoneDescription"
+  },
   "permissionsContinueButton": "Gerekli izinleri verin",
+  "@permissionsContinueButton": {
+    "description": "permissionsContinueButton"
+  },
   "permissionsRequiredNotice": "Devam etmek için üç iznin de alınması gerekiyor. Bunları daha sonra sistem ayarlarından değiştirebilirsiniz.",
+  "@permissionsRequiredNotice": {
+    "description": "permissionsRequiredNotice"
+  },
   "permissionsAllow": "İzin vermek",
+  "@permissionsAllow": {
+    "description": "permissionsAllow"
+  },
   "permissionsOpenSettings": "Ayarlar",
+  "@permissionsOpenSettings": {
+    "description": "permissionsOpenSettings"
+  },
   "auth_2fa_title": "İki faktörlü kimlik doğrulama",
+  "@auth_2fa_title": {
+    "description": "auth_2fa_title"
+  },
   "auth_2fa_subtitle": "Kimlik doğrulayıcı uygulamanızdan 6 haneli kodu girin. Bu erişimin süresi 5 dakika içinde dolacaktır.",
+  "@auth_2fa_subtitle": {
+    "description": "auth_2fa_subtitle"
+  },
   "auth_2fa_code": "Kimlik doğrulama kodu",
+  "@auth_2fa_code": {
+    "description": "auth_2fa_code"
+  },
   "auth_2fa_verify": "Kontrol edip devam edin",
-  "auth_2fa_invalid": "6 haneli geçerli bir kod girin veya tekrar oturum açın."
+  "@auth_2fa_verify": {
+    "description": "auth_2fa_verify"
+  },
+  "auth_2fa_invalid": "6 haneli geçerli bir kod girin veya tekrar oturum açın.",
+  "@auth_2fa_invalid": {
+    "description": "auth_2fa_invalid"
+  }
 }

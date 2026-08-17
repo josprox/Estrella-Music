@@ -1,227 +1,899 @@
 {
   "@@locale": "ia",
   "playlistCreatednsongAddedAlert": "Lista de reproduction create e canto addite!",
+  "@playlistCreatednsongAddedAlert": {
+    "description": "playlistCreatednsongAddedAlert"
+  },
   "dismiss": "Dimitter",
+  "@dismiss": {
+    "description": "dismiss"
+  },
   "songEnqueueAlert": "Canto in le cauda!",
+  "@songEnqueueAlert": {
+    "description": "songEnqueueAlert"
+  },
   "renamePlaylist": "Renominar le lista de reproduction",
+  "@renamePlaylist": {
+    "description": "renamePlaylist"
+  },
   "songAddedToPlaylistAlert": "Canto addite al lista!",
+  "@songAddedToPlaylistAlert": {
+    "description": "songAddedToPlaylistAlert"
+  },
   "playlistCreatedAlert": "Lista de reproduction create!",
+  "@playlistCreatedAlert": {
+    "description": "playlistCreatedAlert"
+  },
   "reset": "Reinitialisar",
+  "@reset": {
+    "description": "reset"
+  },
   "trending": "Tendentias",
+  "@trending": {
+    "description": "trending"
+  },
   "searchRes": "Resultatos del recerca",
+  "@searchRes": {
+    "description": "searchRes"
+  },
   "password": "Contrasigno",
+  "@password": {
+    "description": "password"
+  },
   "songRemovedfromQueue": "Removite ab le cauda!",
+  "@songRemovedfromQueue": {
+    "description": "songRemovedfromQueue"
+  },
   "libSongs": "Cantos del bibliotheca",
+  "@libSongs": {
+    "description": "libSongs"
+  },
   "communityplaylists": "Listas de reproduction del communitate",
+  "@communityplaylists": {
+    "description": "communityplaylists"
+  },
   "libAlbums": "Albumes del bibliotheca",
+  "@libAlbums": {
+    "description": "libAlbums"
+  },
   "for1": "pro",
+  "@for1": {
+    "description": "for1"
+  },
   "link": "Ligamine",
+  "@link": {
+    "description": "link"
+  },
   "selectAuthIns": "Selige un instantia de authentication",
+  "@selectAuthIns": {
+    "description": "selectAuthIns"
+  },
   "languageDes": "Definir le lingua del application",
+  "@languageDes": {
+    "description": "languageDes"
+  },
   "customInsSelectMsg": "Selige un instantia personalisate",
+  "@customInsSelectMsg": {
+    "description": "customInsSelectMsg"
+  },
   "skipSilence": "Saltar le silentio",
+  "@skipSilence": {
+    "description": "skipSilence"
+  },
   "create": "Crear",
+  "@create": {
+    "description": "create"
+  },
   "equalizer": "Equalisator",
+  "@equalizer": {
+    "description": "equalizer"
+  },
   "noBookmarks": "Necun marcatores!",
+  "@noBookmarks": {
+    "description": "noBookmarks"
+  },
   "playlists": "Listas de reproduction",
+  "@playlists": {
+    "description": "playlists"
+  },
   "videos": "Videos",
+  "@videos": {
+    "description": "videos"
+  },
   "enabled": "Activate",
+  "@enabled": {
+    "description": "enabled"
+  },
   "rename": "Renominar",
+  "@rename": {
+    "description": "rename"
+  },
   "viewAll": "Vider toto",
+  "@viewAll": {
+    "description": "viewAll"
+  },
   "github": "GitHub",
+  "@github": {
+    "description": "github"
+  },
   "newVersionAvailable": "Nove version disponibile!",
+  "@newVersionAvailable": {
+    "description": "newVersionAvailable"
+  },
   "items": "elementos",
+  "@items": {
+    "description": "items"
+  },
   "subscribers": "subscriptores",
+  "@subscribers": {
+    "description": "subscribers"
+  },
   "startRadio": "Initiar le radio",
+  "@startRadio": {
+    "description": "startRadio"
+  },
   "cacheSongs": "Cantos in cache",
+  "@cacheSongs": {
+    "description": "cacheSongs"
+  },
   "downloads": "Discargamentos",
+  "@downloads": {
+    "description": "downloads"
+  },
   "removeFromLib": "Remover ab le cantos de bibliotheca",
+  "@removeFromLib": {
+    "description": "removeFromLib"
+  },
   "songAlreadyExists": "Le canto jam existe!",
+  "@songAlreadyExists": {
+    "description": "songAlreadyExists"
+  },
   "libArtists": "Artistas del bibliotheca",
+  "@libArtists": {
+    "description": "libArtists"
+  },
   "username": "Nomine de usator",
+  "@username": {
+    "description": "username"
+  },
   "light": "Clar",
+  "@light": {
+    "description": "light"
+  },
   "dynamic": "Dynamic",
+  "@dynamic": {
+    "description": "dynamic"
+  },
   "selectAuthInsMsg": "Selige le instantia de authentication!",
+  "@selectAuthInsMsg": {
+    "description": "selectAuthInsMsg"
+  },
   "equalizerDes": "Aperir le equalisator de systema",
+  "@equalizerDes": {
+    "description": "equalizerDes"
+  },
   "removePlaylist": "Deler le lista de reproduction",
+  "@removePlaylist": {
+    "description": "removePlaylist"
+  },
   "customIns": "Instantia personalisate",
+  "@customIns": {
+    "description": "customIns"
+  },
   "Piped": "Piped",
+  "@Piped": {
+    "description": "Piped"
+  },
   "addToPlaylist": "Adder al lista de reproduction",
+  "@addToPlaylist": {
+    "description": "addToPlaylist"
+  },
   "cachedOrOffline": "In cache/Foras de linea",
+  "@cachedOrOffline": {
+    "description": "cachedOrOffline"
+  },
   "retry": "Retenta lo!",
+  "@retry": {
+    "description": "retry"
+  },
   "artists": "Artistas",
+  "@artists": {
+    "description": "artists"
+  },
   "albums": "Albumes",
+  "@albums": {
+    "description": "albums"
+  },
   "radioNotAvailable": "Radio non disponibile pro iste artista!",
+  "@radioNotAvailable": {
+    "description": "radioNotAvailable"
+  },
   "viewArtist": "Vider le artista",
+  "@viewArtist": {
+    "description": "viewArtist"
+  },
   "createnAdd": "Crear e adder",
+  "@createnAdd": {
+    "description": "createnAdd"
+  },
   "about": "A proposito de",
+  "@about": {
+    "description": "about"
+  },
   "systemDefault": "Predefinite del systema",
+  "@systemDefault": {
+    "description": "systemDefault"
+  },
   "local": "Local",
+  "@local": {
+    "description": "local"
+  },
   "status": "Stato",
+  "@status": {
+    "description": "status"
+  },
   "themeMode": "Modo de thema",
+  "@themeMode": {
+    "description": "themeMode"
+  },
   "streamingQualityDes": "Qualitate del fluxo de musica",
+  "@streamingQualityDes": {
+    "description": "streamingQualityDes"
+  },
   "notaValidLink": "Non es un ligamine valide!",
+  "@notaValidLink": {
+    "description": "notaValidLink"
+  },
   "emptyPlaylist": "Lista de reproduction vacue!",
+  "@emptyPlaylist": {
+    "description": "emptyPlaylist"
+  },
   "favorites": "Favoritos",
+  "@favorites": {
+    "description": "favorites"
+  },
   "dark": "Obscur",
+  "@dark": {
+    "description": "dark"
+  },
   "home": "Initio",
+  "@home": {
+    "description": "home"
+  },
   "cancel": "Cancellar",
+  "@cancel": {
+    "description": "cancel"
+  },
   "by": "per",
+  "@by": {
+    "description": "by"
+  },
   "streamingQuality": "Qualitate de fluxo",
+  "@streamingQuality": {
+    "description": "streamingQuality"
+  },
   "libPlaylists": "Listas de reproduction del bibliotheca",
+  "@libPlaylists": {
+    "description": "libPlaylists"
+  },
   "disabled": "Disactivate",
+  "@disabled": {
+    "description": "disabled"
+  },
   "CreateNewPlaylist": "Crear un nove lista de reproduction",
+  "@CreateNewPlaylist": {
+    "description": "CreateNewPlaylist"
+  },
   "language": "Lingua",
+  "@language": {
+    "description": "language"
+  },
   "search": "Cercar",
+  "@search": {
+    "description": "search"
+  },
   "playNext": "Reproducer sequente",
+  "@playNext": {
+    "description": "playNext"
+  },
   "songs": "Cantos",
+  "@songs": {
+    "description": "songs"
+  },
   "searchDes": "Cantos, Listas de reproduction, Album o Artista",
+  "@searchDes": {
+    "description": "searchDes"
+  },
   "results": "Resultatos",
+  "@results": {
+    "description": "results"
+  },
   "downloadLocation": "Location de discargamento",
+  "@downloadLocation": {
+    "description": "downloadLocation"
+  },
   "songRemovedfromQueueCurrSong": "Tu non pote remover le canto actualmente in reproduction",
+  "@songRemovedfromQueueCurrSong": {
+    "description": "songRemovedfromQueueCurrSong"
+  },
   "settings": "Parametros",
+  "@settings": {
+    "description": "settings"
+  },
   "hintApiUrl": "URL de API al instantia de Piped",
+  "@hintApiUrl": {
+    "description": "hintApiUrl"
+  },
   "removeFromPlaylist": "Remover ab le lista de reproduction",
+  "@removeFromPlaylist": {
+    "description": "removeFromPlaylist"
+  },
   "noOfflineSong": "Non il ha cantos foras de linea!",
+  "@noOfflineSong": {
+    "description": "noOfflineSong"
+  },
   "removeFromQueue": "Deler del cauda",
+  "@removeFromQueue": {
+    "description": "removeFromQueue"
+  },
   "shareSong": "Compartir iste canto",
+  "@shareSong": {
+    "description": "shareSong"
+  },
   "songRemovedAlert": "Removite ab",
+  "@songRemovedAlert": {
+    "description": "songRemovedAlert"
+  },
   "goToDownloadPage": "Clicca hic pro vader al pagina de discargamentos",
+  "@goToDownloadPage": {
+    "description": "goToDownloadPage"
+  },
   "unlinkAlert": "Separate con successo!",
+  "@unlinkAlert": {
+    "description": "unlinkAlert"
+  },
   "unLink": "Separar",
+  "@unLink": {
+    "description": "unLink"
+  },
   "noLibPlaylist": "Tu non ha necun lista de reproduction lib!",
+  "@noLibPlaylist": {
+    "description": "noLibPlaylist"
+  },
   "setDiscoverContent": "Definir le discoperta de contento",
+  "@setDiscoverContent": {
+    "description": "setDiscoverContent"
+  },
   "networkError1": "Oh, un error de rete!",
+  "@networkError1": {
+    "description": "networkError1"
+  },
   "githubDes": "Vider le codice fonte in GitHub\nSi te place iste project, non oblida de dar un ⭐",
+  "@githubDes": {
+    "description": "githubDes"
+  },
   "add5Minutes": "Adder 5 minutas",
+  "@add5Minutes": {
+    "description": "add5Minutes"
+  },
   "playlistRemovedAlert": "Lista de reproduction removite!",
+  "@playlistRemovedAlert": {
+    "description": "playlistRemovedAlert"
+  },
   "albumBookmarkRemoveAlert": "Marcator de album removite!",
+  "@albumBookmarkRemoveAlert": {
+    "description": "albumBookmarkRemoveAlert"
+  },
   "notaSongVideo": "Non es un canto/video musical!",
+  "@notaSongVideo": {
+    "description": "notaSongVideo"
+  },
   "ignoreBatOptDes": "Si tu ha problemas de notificationes o de reproduction stoppate per le optimisation de batteria, activa iste option",
+  "@ignoreBatOptDes": {
+    "description": "ignoreBatOptDes"
+  },
   "enableBottomNavDes": "Cambiar al barra de navigation basse",
+  "@enableBottomNavDes": {
+    "description": "enableBottomNavDes"
+  },
   "low": "Basse",
+  "@low": {
+    "description": "low"
+  },
   "enqueueAll": "Mitter toto in le cauda",
+  "@enqueueAll": {
+    "description": "enqueueAll"
+  },
   "enqueueSong": "Mitter iste canto in le cauda",
+  "@enqueueSong": {
+    "description": "enqueueSong"
+  },
   "syncedLyricsNotAvailable": "Parolas de canto synchronisate non disponibile!",
+  "@syncedLyricsNotAvailable": {
+    "description": "syncedLyricsNotAvailable"
+  },
   "allFieldsReqMsg": "Tote le campos es requirite",
+  "@allFieldsReqMsg": {
+    "description": "allFieldsReqMsg"
+  },
   "artistBookmarkAddAlert": "Artista marcate!",
+  "@artistBookmarkAddAlert": {
+    "description": "artistBookmarkAddAlert"
+  },
   "synced": "Synchronisate",
+  "@synced": {
+    "description": "synced"
+  },
   "discover": "Discoperir",
+  "@discover": {
+    "description": "discover"
+  },
   "downloadingFormat": "Formato de file de discarga",
+  "@downloadingFormat": {
+    "description": "downloadingFormat"
+  },
   "playlistBookmarkAddAlert": "Lista de reproduction marcate!",
+  "@playlistBookmarkAddAlert": {
+    "description": "playlistBookmarkAddAlert"
+  },
   "plain": "Plan",
+  "@plain": {
+    "description": "plain"
+  },
   "recentlyPlayed": "Reproducite recentemente",
+  "@recentlyPlayed": {
+    "description": "recentlyPlayed"
+  },
   "endOfThisSong": "Fin de iste canto",
+  "@endOfThisSong": {
+    "description": "endOfThisSong"
+  },
   "library": "Bibliotheca",
+  "@library": {
+    "description": "library"
+  },
   "playlistBookmarkRemoveAlert": "Marcator del lista de reproduction removite!",
+  "@playlistBookmarkRemoveAlert": {
+    "description": "playlistBookmarkRemoveAlert"
+  },
   "cancelTimer": "Cancellar temporisator",
+  "@cancelTimer": {
+    "description": "cancelTimer"
+  },
   "ignoreBatOpt": "Ignorar le optimisation del batteria",
+  "@ignoreBatOpt": {
+    "description": "ignoreBatOpt"
+  },
   "singles": "Singles",
+  "@singles": {
+    "description": "singles"
+  },
   "nomatch": "Nulle correspondentia trovate pro",
+  "@nomatch": {
+    "description": "nomatch"
+  },
   "linkPipedDes": "Ligamine con piped pro listas de reproduction",
+  "@linkPipedDes": {
+    "description": "linkPipedDes"
+  },
   "minutes": "minutas",
+  "@minutes": {
+    "description": "minutes"
+  },
   "blacklistPlstResetAlert": "Reinitialisate con successo!",
+  "@blacklistPlstResetAlert": {
+    "description": "blacklistPlstResetAlert"
+  },
   "songAlreadyOfflineAlert": "Canto jam foras de linea in le cache",
+  "@songAlreadyOfflineAlert": {
+    "description": "songAlreadyOfflineAlert"
+  },
   "skipSilenceDes": "Le silentio essera saltate in le reproduction de musica",
+  "@skipSilenceDes": {
+    "description": "skipSilenceDes"
+  },
   "enableBottomNav": "Barra de navigation basse",
+  "@enableBottomNav": {
+    "description": "enableBottomNav"
+  },
   "errorOccuredAlert": "Ocurreva alcun error!",
+  "@errorOccuredAlert": {
+    "description": "errorOccuredAlert"
+  },
   "high": "Alte",
+  "@high": {
+    "description": "high"
+  },
   "artistDesNotAvailable": "Description non disponibile!",
+  "@artistDesNotAvailable": {
+    "description": "artistDesNotAvailable"
+  },
   "basedOnLast": "Basate in le ultime interaction",
+  "@basedOnLast": {
+    "description": "basedOnLast"
+  },
   "playlistRenameAlert": "Renominate con successo!",
+  "@playlistRenameAlert": {
+    "description": "playlistRenameAlert"
+  },
   "downloadingFormatDes": "Selige le formato del file de discarga. \"Opus\" fornira le melior qualitate",
+  "@downloadingFormatDes": {
+    "description": "downloadingFormatDes"
+  },
   "sleepTimeSetAlert": "Tu temporisator de somno es definite",
+  "@sleepTimeSetAlert": {
+    "description": "sleepTimeSetAlert"
+  },
   "albumBookmarkAddAlert": "Album marcate!",
+  "@albumBookmarkAddAlert": {
+    "description": "albumBookmarkAddAlert"
+  },
   "lyricsNotAvailable": "Parolas de canto non disponibile!",
+  "@lyricsNotAvailable": {
+    "description": "lyricsNotAvailable"
+  },
   "dontShowInfoAgain": "Non monstrar iste information novemente",
+  "@dontShowInfoAgain": {
+    "description": "dontShowInfoAgain"
+  },
   "featuredplaylists": "Listas de reproduction eminente",
+  "@featuredplaylists": {
+    "description": "featuredplaylists"
+  },
   "homeContentCountDes": "Selige le numero de contentos del schermo de initio (approx.). Minus resultatos carga plus rapide",
+  "@homeContentCountDes": {
+    "description": "homeContentCountDes"
+  },
   "quickpicks": "Selectiones rapide",
+  "@quickpicks": {
+    "description": "quickpicks"
+  },
   "artistBookmarkRemoveAlert": "Marcator de artista removite!",
+  "@artistBookmarkRemoveAlert": {
+    "description": "artistBookmarkRemoveAlert"
+  },
   "operationFailed": "Falleva le operation",
+  "@operationFailed": {
+    "description": "operationFailed"
+  },
   "goToAlbum": "Vader al album",
+  "@goToAlbum": {
+    "description": "goToAlbum"
+  },
   "cancelTimerAlert": "Temporisator de somno cancellate",
+  "@cancelTimerAlert": {
+    "description": "cancelTimerAlert"
+  },
   "sleepTimer": "Temporisator de somno",
+  "@sleepTimer": {
+    "description": "sleepTimer"
+  },
   "cacheSongsDes": "Immagazinar le cantos in cache pro reproductiones futur e foras de linea, illo usara spatio additional in tu apparato",
+  "@cacheSongsDes": {
+    "description": "cacheSongsDes"
+  },
   "stopMusicOnTaskClear": "Stoppar le musica al rader le barra de cargas",
+  "@stopMusicOnTaskClear": {
+    "description": "stopMusicOnTaskClear"
+  },
   "resetblacklistedplaylist": "Restabilir le listas de reproduction in lista nigre",
+  "@resetblacklistedplaylist": {
+    "description": "resetblacklistedplaylist"
+  },
   "stopMusicOnTaskClearDes": "Le reproduction de musica stoppara quando le application sia glissate foras del gestor de cargas",
+  "@stopMusicOnTaskClearDes": {
+    "description": "stopMusicOnTaskClearDes"
+  },
   "topmusicvideos": "Videos musical plus reguardate",
+  "@topmusicvideos": {
+    "description": "topmusicvideos"
+  },
   "linkAlert": "Ligate con successo!",
+  "@linkAlert": {
+    "description": "linkAlert"
+  },
   "playlistBlacklistAlert": "Lista de reproduction in le lista nigre!",
+  "@playlistBlacklistAlert": {
+    "description": "playlistBlacklistAlert"
+  },
   "resetblacklistedplaylistDes": "Restabilir tote le listas de reproduction de piped in lista nigre",
+  "@resetblacklistedplaylistDes": {
+    "description": "resetblacklistedplaylistDes"
+  },
   "homeContentCount": "Computo de contentos",
+  "@homeContentCount": {
+    "description": "homeContentCount"
+  },
   "pipedplstSyncAlert": "Lista de reproduction de Piped synchronisate!",
+  "@pipedplstSyncAlert": {
+    "description": "pipedplstSyncAlert"
+  },
   "clearImgCache": "Rader le cache de imagines",
+  "@clearImgCache": {
+    "description": "clearImgCache"
+  },
   "clearImgCacheDes": "Clicca hic pro rader miniaturas e imagines in cache. (Non recommentate a minus que tu vole actualisar le datos de imagine in cache)",
+  "@clearImgCacheDes": {
+    "description": "clearImgCacheDes"
+  },
   "upNext": "Postea",
+  "@upNext": {
+    "description": "upNext"
+  },
   "backgroundPlay": "Reproducer musica in fundo",
+  "@backgroundPlay": {
+    "description": "backgroundPlay"
+  },
   "backgroundPlayDes": "Activar/Disactivar le reproduction de musica in fundo (Le application pote esser accessate ab la barra de systema quando ille es executante in secunde fundo)",
+  "@backgroundPlayDes": {
+    "description": "backgroundPlayDes"
+  },
   "deleteDownloadData": "Remover ab le discargamentos",
+  "@deleteDownloadData": {
+    "description": "deleteDownloadData"
+  },
   "deleteDownloadedDataAlert": "Removite con successo ab le discargamentos!",
+  "@deleteDownloadedDataAlert": {
+    "description": "deleteDownloadedDataAlert"
+  },
   "removeMultiple": "Deler multiple cantos",
+  "@removeMultiple": {
+    "description": "removeMultiple"
+  },
   "addMultipleSongs": "Adder cantos al lista de reproduction",
+  "@addMultipleSongs": {
+    "description": "addMultipleSongs"
+  },
   "restoreLastPlaybackSession": "Restaurar le ultime session de reproduction",
+  "@restoreLastPlaybackSession": {
+    "description": "restoreLastPlaybackSession"
+  },
   "restoreLastPlaybackSessionDes": "Restaura automaticamente le ultime session de reproduction al initio del application",
+  "@restoreLastPlaybackSessionDes": {
+    "description": "restoreLastPlaybackSessionDes"
+  },
   "reArrangePlaylist": "Rearrangiar le lista de reproduction",
+  "@reArrangePlaylist": {
+    "description": "reArrangePlaylist"
+  },
   "cacheHomeScreenData": "Cache del datos de contento del schermo de initio",
+  "@cacheHomeScreenData": {
+    "description": "cacheHomeScreenData"
+  },
   "cacheHomeScreenDataDes": "Activar le cache del datos de contento del schermo de initio, ille schermo cargara immediatemente si iste option es activate",
+  "@cacheHomeScreenDataDes": {
+    "description": "cacheHomeScreenDataDes"
+  },
   "export": "Exportar",
+  "@export": {
+    "description": "export"
+  },
   "exportedFileLocation": "Location de exportation de file discargate",
+  "@exportedFileLocation": {
+    "description": "exportedFileLocation"
+  },
   "downFilesFound": "files discargate trovate",
+  "@downFilesFound": {
+    "description": "downFilesFound"
+  },
   "close": "Clauder",
+  "@close": {
+    "description": "close"
+  },
   "exportMsg": "Files exportate con successo",
+  "@exportMsg": {
+    "description": "exportMsg"
+  },
   "exportDowloadedFiles": "Exportar files discargate",
+  "@exportDowloadedFiles": {
+    "description": "exportDowloadedFiles"
+  },
   "exporting": "In exportation...",
+  "@exporting": {
+    "description": "exporting"
+  },
   "scanning": "Scannante...",
+  "@scanning": {
+    "description": "scanning"
+  },
   "disableTransitionAnimation": "Disactivar animation de transition",
+  "@disableTransitionAnimation": {
+    "description": "disableTransitionAnimation"
+  },
   "disableTransitionAnimationDes": "Activa iste option pro disactivar le animation de transition de scheda",
+  "@disableTransitionAnimationDes": {
+    "description": "disableTransitionAnimationDes"
+  },
   "exportDowloadedFilesDes": "Clicca hic pro exportar files discargate ab directorio inApp a directorio externe",
+  "@exportDowloadedFilesDes": {
+    "description": "exportDowloadedFilesDes"
+  },
   "clearImgCacheAlert": "Imagines del cache delite con successo",
+  "@clearImgCacheAlert": {
+    "description": "clearImgCacheAlert"
+  },
   "openIn": "Aperir in",
+  "@openIn": {
+    "description": "openIn"
+  },
   "closeApp": "Clauder le application",
+  "@closeApp": {
+    "description": "closeApp"
+  },
   "backupSettingsAndPlaylists": "Copia de securitate del parametros e listas de reproduction",
+  "@backupSettingsAndPlaylists": {
+    "description": "backupSettingsAndPlaylists"
+  },
   "backupSettingsAndPlaylistsDes": "Salveguarda tote le parametros, listas de reproduction e datos de initio de session in un file de copia de securitate",
+  "@backupSettingsAndPlaylistsDes": {
+    "description": "backupSettingsAndPlaylistsDes"
+  },
   "restoreSettingsAndPlaylists": "Restaurar le parametros e listas de reproduction",
+  "@restoreSettingsAndPlaylists": {
+    "description": "restoreSettingsAndPlaylists"
+  },
   "backupMsg": "Copia de securitate salveguardate con successo!",
+  "@backupMsg": {
+    "description": "backupMsg"
+  },
   "backFilesFound": "bases de datos trovate",
+  "@backFilesFound": {
+    "description": "backFilesFound"
+  },
   "restoring": "in restauration...",
+  "@restoring": {
+    "description": "restoring"
+  },
   "restore": "Restaurar",
+  "@restore": {
+    "description": "restore"
+  },
   "restoreMsg": "Restaurate con successo!\nLe cambios essera applicate in le reinitio",
+  "@restoreMsg": {
+    "description": "restoreMsg"
+  },
   "restoreSettingsAndPlaylistsDes": "Restaura tote le parametros, datos de initio de session e listas de reproduction ab un file de copia de securitate. Superscribe tote le datos actual",
+  "@restoreSettingsAndPlaylistsDes": {
+    "description": "restoreSettingsAndPlaylistsDes"
+  },
   "backupInProgress": "Copia de securitate in progresso...",
+  "@backupInProgress": {
+    "description": "backupInProgress"
+  },
   "restartApp": "Reinitiar le app",
+  "@restartApp": {
+    "description": "restartApp"
+  },
   "includeDownloadedFiles": "Includer cantos discargate",
+  "@includeDownloadedFiles": {
+    "description": "includeDownloadedFiles"
+  },
   "bitrate": "Taxa de bits",
+  "@bitrate": {
+    "description": "bitrate"
+  },
   "backupAppData": "Copia de securitate de datos del application",
+  "@backupAppData": {
+    "description": "backupAppData"
+  },
   "duration": "Duration",
+  "@duration": {
+    "description": "duration"
+  },
   "loudnessDb": "LoudnessDb",
+  "@loudnessDb": {
+    "description": "loudnessDb"
+  },
   "processFiles": "Files in processo...",
+  "@processFiles": {
+    "description": "processFiles"
+  },
   "audioCodec": "Codec de audio",
+  "@audioCodec": {
+    "description": "audioCodec"
+  },
   "restoreAppData": "Restaurar datos del application",
+  "@restoreAppData": {
+    "description": "restoreAppData"
+  },
   "letsStrart": "Que nos comencia...",
+  "@letsStrart": {
+    "description": "letsStrart"
+  },
   "songInfo": "Information del canto",
+  "@songInfo": {
+    "description": "songInfo"
+  },
   "id": "Id",
+  "@id": {
+    "description": "id"
+  },
   "title": "Titulo",
+  "@title": {
+    "description": "title"
+  },
   "backup": "Copia de securitate",
+  "@backup": {
+    "description": "backup"
+  },
   "queueShufflingDeniedMsg": "Le cauda non pote esser miscite quando le modo aleatori es activate",
+  "@queueShufflingDeniedMsg": {
+    "description": "queueShufflingDeniedMsg"
+  },
   "queuerearrangingDeniedMsg": "Le cauda non pote esser rearrangiate quando le modo aleatori es activate",
+  "@queuerearrangingDeniedMsg": {
+    "description": "queuerearrangingDeniedMsg"
+  },
   "songNotPlayable": "Le canto non se pote reproducer a causa de un restriction de servitor!",
+  "@songNotPlayable": {
+    "description": "songNotPlayable"
+  },
   "appInfo": "Information del application",
+  "@appInfo": {
+    "description": "appInfo"
+  },
   "download": "Discargar",
+  "@download": {
+    "description": "download"
+  },
   "networkError": "Error de rete! Verifica tu connection.",
+  "@networkError": {
+    "description": "networkError"
+  },
   "musicAndPlayback": "Musica e reproduction",
+  "@musicAndPlayback": {
+    "description": "musicAndPlayback"
+  },
   "content": "Contento",
+  "@content": {
+    "description": "content"
+  },
   "personalisation": "Personalisation",
+  "@personalisation": {
+    "description": "personalisation"
+  },
   "loudnessNormalization": "Normalisation del volumine",
+  "@loudnessNormalization": {
+    "description": "loudnessNormalization"
+  },
   "loudnessNormalizationDes": "Define le mesme nivello de volumine pro tote le cantos (Experimental) (Non functionara con le cantos discargate sur le versiones previe (< v1.10.0))",
+  "@loudnessNormalizationDes": {
+    "description": "loudnessNormalizationDes"
+  },
   "urlSearchDes": "URL detegite. Clicca lo pro aperir/reproducer le contento associate",
+  "@urlSearchDes": {
+    "description": "urlSearchDes"
+  },
   "androidBackupWarning": "",
+  "@androidBackupWarning": {
+    "description": "androidBackupWarning"
+  },
   "downloadError3": "Falleva le discargamento a causa de un error de rete! Tenta de novo",
+  "@downloadError3": {
+    "description": "downloadError3"
+  },
   "downloadError2": "Le canto requestate non pote discargar se a causa de un restriction de servitor. Tu pote retentar lo",
+  "@downloadError2": {
+    "description": "downloadError2"
+  },
   "playerUi": "IU de reproductor",
+  "@playerUi": {
+    "description": "playerUi"
+  },
   "playerUiDes": "Selige le interfacie de usator del reproductor",
+  "@playerUiDes": {
+    "description": "playerUiDes"
+  },
   "enableSlidableAction": "Activar le acciones glissabile",
+  "@enableSlidableAction": {
+    "description": "enableSlidableAction"
+  },
   "keepScreenOnWhilePlaying": "Mantenir le schermo accendite durante le reproduction",
-  "keepScreenOnWhilePlayingDes": "Si activate, le schermo del dispositivo remanera accendite durante le reproduction del musica"
+  "@keepScreenOnWhilePlaying": {
+    "description": "keepScreenOnWhilePlaying"
+  },
+  "keepScreenOnWhilePlayingDes": "Si activate, le schermo del dispositivo remanera accendite durante le reproduction del musica",
+  "@keepScreenOnWhilePlayingDes": {
+    "description": "keepScreenOnWhilePlayingDes"
+  }
 }

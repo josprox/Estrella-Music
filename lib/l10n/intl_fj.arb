@@ -1,5 +1,11 @@
 {
   "@@locale": "fj",
   "keepScreenOnWhilePlaying": "Taura na mata ni bula tiko ni qito",
-  "keepScreenOnWhilePlayingDes": "Kevaka e vakayagataki, na mata ni iyaya ena bula tiko ni qito na sere"
+  "@keepScreenOnWhilePlaying": {
+    "description": "keepScreenOnWhilePlaying"
+  },
+  "keepScreenOnWhilePlayingDes": "Kevaka e vakayagataki, na mata ni iyaya ena bula tiko ni qito na sere",
+  "@keepScreenOnWhilePlayingDes": {
+    "description": "keepScreenOnWhilePlayingDes"
+  }
 }
