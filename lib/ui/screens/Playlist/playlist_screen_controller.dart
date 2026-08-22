@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:async';
 import 'package:audio_service/audio_service.dart' show MediaItem;
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/models/thumbnail.dart';
 import 'package:harmonymusic/services/system/permission_service.dart';

@@ -5,7 +5,7 @@ import 'package:dio/dio.dart';
 import 'package:harmonymusic/services/system/translation_service.dart';
 import 'package:harmonymusic/services/storage/sqlite_store.dart';
 import 'package:get/get.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:audio_service/audio_service.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:cached_network_image/cached_network_image.dart';

@@ -1,4 +1,4 @@
-﻿// ignore_for_file: constant_identifier_names
+// ignore_for_file: constant_identifier_names
 
 /*
 Copyright: Â© 2020, Akshath Jain. All rights reserved.
@@ -6,7 +6,7 @@ Licensing: More information can be found here: https://github.com/akshathjain/sl
 */
 
 import 'package:flutter/gestures.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'dart:math';
 
 import 'package:flutter/physics.dart';

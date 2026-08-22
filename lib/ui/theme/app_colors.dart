@@ -1,4 +1,4 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
 /// Centralized color tokens for the Material 3 Expressive design system.
 /// All UI files must reference these tokens — never hardcode colors.

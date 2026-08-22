@@ -108,6 +108,7 @@ dependencies:
   flutter_native_splash: ^2.4.4
   open_file: ^3.3.2
   shared_preferences: ^2.5.5
+  material_ui: ^1.0.1
 
 
 dev_dependencies:

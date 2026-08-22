@@ -1,4 +1,4 @@
-﻿import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/ui/widgets/modification_list.dart';
 import 'package:harmonymusic/utils/localization/l10n_extensions.dart';

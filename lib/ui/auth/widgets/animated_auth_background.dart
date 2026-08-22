@@ -1,8 +1,8 @@
-﻿import 'dart:async';
+import 'dart:async';
 import 'dart:math';
 import 'dart:ui';
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 class AnimatedAuthBackground extends StatefulWidget {
   const AnimatedAuthBackground({super.key});

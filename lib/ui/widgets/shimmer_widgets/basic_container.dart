@@ -1,4 +1,4 @@
-﻿import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 class BasicShimmerContainer extends StatelessWidget {
   const BasicShimmerContainer(this.size, {super.key, this.radius = 10});

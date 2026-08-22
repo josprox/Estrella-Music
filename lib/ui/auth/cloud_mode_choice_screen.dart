@@ -1,5 +1,5 @@
 import 'dart:ui';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'widgets/animated_auth_background.dart';
 
 class CloudModeChoiceScreen extends StatefulWidget {

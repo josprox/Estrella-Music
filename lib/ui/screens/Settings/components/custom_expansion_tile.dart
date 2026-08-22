@@ -1,4 +1,4 @@
-﻿import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 /// Material 3 Expressive settings section card.
 /// Shows a titled group of settings with an icon badge and subtle container.

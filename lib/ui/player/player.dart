@@ -1,6 +1,6 @@
 
 import 'package:get/get.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 import '/ui/player/components/standard_player.dart';
 import 'package:harmonymusic/utils/helpers/helper.dart';
