@@ -1007,7 +1007,7 @@ class SettingsAccountScreen extends StatelessWidget {
                 }
                 Get.snackbar(
                   S.current.settings_visitor_error,
-                  S.current.settings_visitor_exception(e),
+                  S.current.settings_visitor_exception(e.toString()),
                   snackPosition: SnackPosition.BOTTOM,
                   backgroundColor: Colors.black87,
                   colorText: Colors.white,

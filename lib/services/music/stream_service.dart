@@ -16,7 +16,9 @@ class StreamProvider {
     final yt = YoutubeExplode();
 
     try {
-      final res = await yt.videos.streamsClient.getManifest(videoId);
+      final res = await yt.videos.streamsClient.getManifest(videoId, ytClients: [
+        YoutubeApiClient.visionos
+      ]);
       final audio = res.audioOnly;
       return StreamProvider(
           playable: true,
@@ -27,8 +29,6 @@ class StreamProvider {
                   audioCodec:
                       e.audioCodec.contains('mp') ? Codec.mp4a : Codec.opus,
                   bitrate: e.bitrate.bitsPerSecond,
-                  duration: e.duration ?? 0,
-                  loudnessDb: e.loudnessDb,
                   url: e.url.toString(),
                   size: e.size.totalBytes))
               .toList());
@@ -50,11 +50,9 @@ class StreamProvider {
           statusMSG: "Song requires purchase",
         );
       } else if (e is VideoUnplayableException) {
-        final unavailable = _looksUnavailable('${e.reason ?? ''} ${e.message}');
         return StreamProvider(
           playable: false,
-          videoUnavailable: unavailable,
-          statusMSG: e.reason ?? "Song is unplayable",
+          statusMSG: "Song is unplayable",
         );
       } else if (e is YoutubeExplodeException) {
         return StreamProvider(
@@ -123,8 +121,8 @@ class Audio {
       {required this.itag,
       required this.audioCodec,
       required this.bitrate,
-      required this.duration,
-      required this.loudnessDb,
+      this.duration = 10000,
+      this.loudnessDb = 10.0,
       required this.url,
       required this.size});
 

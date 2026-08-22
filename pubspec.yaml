@@ -90,8 +90,9 @@ dependencies:
   window_manager: ^0.4.2
   youtube_explode_dart:
     git:
-      url: https://github.com/anandnet/youtube_explode_dart.git
-      ref: 1d9ec9baa806705b1d859260eeb389ec28c6b024
+      url: https://github.com/Bikram-Kumar/youtube_explode_dart.git
+      branch: master
+      ref: 6f28a8bf0f00c1ef7073c335bafe48f8bab05edc
   intl: ^0.20.2
   flutter_localizations:
     sdk: flutter
