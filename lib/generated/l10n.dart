@@ -5258,6 +5258,66 @@ class S {
       args: [],
     );
   }
+
+  /// `Backup settings and playlists`
+  String get backupSettingsAndPlaylists {
+    return Intl.message(
+      'Backup settings and playlists',
+      name: 'backupSettingsAndPlaylists',
+      desc: 'backupSettingsAndPlaylists',
+      args: [],
+    );
+  }
+
+  /// `Restore settings and playlists`
+  String get restoreSettingsAndPlaylists {
+    return Intl.message(
+      'Restore settings and playlists',
+      name: 'restoreSettingsAndPlaylists',
+      desc: 'restoreSettingsAndPlaylists',
+      args: [],
+    );
+  }
+
+  /// `Hello world`
+  String get helloWorld {
+    return Intl.message(
+      'Hello world',
+      name: 'helloWorld',
+      desc: 'Este texto es opcional',
+      args: [],
+    );
+  }
+
+  /// `Remove from cache`
+  String get removeFromCache {
+    return Intl.message(
+      'Remove from cache',
+      name: 'removeFromCache',
+      desc: 'removeFromCache',
+      args: [],
+    );
+  }
+
+  /// `Quick selection`
+  String get quickPics {
+    return Intl.message(
+      'Quick selection',
+      name: 'quickPics',
+      desc: 'quickPics',
+      args: [],
+    );
+  }
+
+  /// `Top music videos`
+  String get topMusicVid {
+    return Intl.message(
+      'Top music videos',
+      name: 'topMusicVid',
+      desc: 'topMusicVid',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

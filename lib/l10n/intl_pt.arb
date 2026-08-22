@@ -1986,5 +1986,315 @@
   "auth_2fa_invalid": "Insira um código válido de 6 dígitos ou faça login novamente.",
   "@auth_2fa_invalid": {
     "description": "auth_2fa_invalid"
+  },
+  "helloWorld": "Olá mundo",
+  "@helloWorld": {
+    "description": "Este texto es opcional"
+  },
+  "removeFromCache": "Remover do cache",
+  "@removeFromCache": {
+    "description": "removeFromCache"
+  },
+  "quickPics": "Seleção rápida",
+  "@quickPics": {
+    "description": "quickPics"
+  },
+  "topMusicVid": "Principais videoclipes",
+  "@topMusicVid": {
+    "description": "topMusicVid"
+  },
+  "exportPlaylistCsv": "Exportar lista de reprodução como CSV",
+  "@exportPlaylistCsv": {
+    "description": "exportPlaylistCsv"
+  },
+  "exportPlaylistJson": "Exportar lista de reprodução para JSON",
+  "@exportPlaylistJson": {
+    "description": "exportPlaylistJson"
+  },
+  "exportPlaylistJsonSubtitle": "Este formato pode ser importado",
+  "@exportPlaylistJsonSubtitle": {
+    "description": "exportPlaylistJsonSubtitle"
+  },
+  "exportPlaylistCsvSubtitle": "Não é possível importar aqui",
+  "@exportPlaylistCsvSubtitle": {
+    "description": "exportPlaylistCsvSubtitle"
+  },
+  "exportToYouTubeMusic": "Exportar para músicas do Youtube",
+  "@exportToYouTubeMusic": {
+    "description": "exportToYouTubeMusic"
+  },
+  "exportToYouTubeMusicSubtitle": "Ele irá empurrar sua playlist (músicas <50) para a fila atual, não se esqueça de adicioná-la à playlist/salvar após abri-la no YtMusic",
+  "@exportToYouTubeMusicSubtitle": {
+    "description": "exportToYouTubeMusicSubtitle"
+  },
+  "linkCopied": "Link copiado para a área de transferência",
+  "@linkCopied": {
+    "description": "linkCopied"
+  },
+  "lyrics": "Cartas",
+  "@lyrics": {
+    "description": "lyrics"
+  },
+  "no": "Não",
+  "@no": {
+    "description": "no"
+  },
+  "podcasts": "Podcasts",
+  "@podcasts": {
+    "description": "podcasts"
+  },
+  "episodes": "Episódios",
+  "@episodes": {
+    "description": "episodes"
+  },
+  "profiles": "Perfis",
+  "@profiles": {
+    "description": "profiles"
+  },
+  "addToLibrary": "Adicionar à biblioteca",
+  "@addToLibrary": {
+    "description": "addToLibrary"
+  },
+  "removeFromLibrary": "Excluir da biblioteca",
+  "@removeFromLibrary": {
+    "description": "removeFromLibrary"
+  },
+  "play": "Jogar",
+  "@play": {
+    "description": "play"
+  },
+  "enqueueAlbumSongs": "Adicionar músicas do álbum à fila",
+  "@enqueueAlbumSongs": {
+    "description": "enqueueAlbumSongs"
+  },
+  "downloadAlbumSongs": "Baixe músicas do álbum",
+  "@downloadAlbumSongs": {
+    "description": "downloadAlbumSongs"
+  },
+  "shareAlbum": "Compartilhar álbum",
+  "@shareAlbum": {
+    "description": "shareAlbum"
+  },
+  "imported": "Importado",
+  "@imported": {
+    "description": "imported"
+  },
+  "importedPlaylist": "Playlist importada",
+  "@importedPlaylist": {
+    "description": "importedPlaylist"
+  },
+  "permissionDenied": "Permissão negada",
+  "@permissionDenied": {
+    "description": "permissionDenied"
+  },
+  "enqueueSongs": "Adicionar músicas à fila",
+  "@enqueueSongs": {
+    "description": "enqueueSongs"
+  },
+  "shuffle": "Aleatório",
+  "@shuffle": {
+    "description": "shuffle"
+  },
+  "downloadPlaylist": "Baixar lista de reprodução",
+  "@downloadPlaylist": {
+    "description": "downloadPlaylist"
+  },
+  "syncPlaylistSongs": "Sincronizar músicas da lista de reprodução",
+  "@syncPlaylistSongs": {
+    "description": "syncPlaylistSongs"
+  },
+  "blacklistPipedPlaylist": "Lista negra da lista de reprodução",
+  "@blacklistPipedPlaylist": {
+    "description": "blacklistPipedPlaylist"
+  },
+  "sharePlaylist": "Compartilhar lista de reprodução",
+  "@sharePlaylist": {
+    "description": "sharePlaylist"
+  },
+  "playlist": "Lista de reprodução",
+  "@playlist": {
+    "description": "playlist"
+  },
+  "sortByName": "Classificar por nome",
+  "@sortByName": {
+    "description": "sortByName"
+  },
+  "sortByDate": "Classificar por data",
+  "@sortByDate": {
+    "description": "sortByDate"
+  },
+  "sortByDuration": "Classificar por duração",
+  "@sortByDuration": {
+    "description": "sortByDuration"
+  },
+  "sortAscendNDescend": "Classificar crescente/decrescente",
+  "@sortAscendNDescend": {
+    "description": "sortAscendNDescend"
+  },
+  "migration_summary_start": "Migração concluída de {source}.",
+  "@migration_summary_start": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      }
+    },
+    "description": "migration_summary_start"
+  },
+  "migration_summary_playlists": "Listas de reprodução: {count}",
+  "@migration_summary_playlists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_playlists"
+  },
+  "migration_summary_songs": "Músicas: {count}",
+  "@migration_summary_songs": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_songs"
+  },
+  "migration_summary_favorites": "Favoritos: {count}",
+  "@migration_summary_favorites": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_favorites"
+  },
+  "migration_summary_albums": "Álbuns: {count}",
+  "@migration_summary_albums": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_albums"
+  },
+  "migration_summary_artists": "Artistas: {count}",
+  "@migration_summary_artists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_artists"
+  },
+  "migration_select_file_dialog": "Selecione song.db ou um backup .backup",
+  "@migration_select_file_dialog": {
+    "description": "migration_select_file_dialog"
+  },
+  "migration_success": "Migração concluída com sucesso.",
+  "@migration_success": {
+    "description": "migration_success"
+  },
+  "backup_select_folder_dialog": "Selecione a pasta para backup",
+  "@backup_select_folder_dialog": {
+    "description": "backup_select_folder_dialog"
+  },
+  "restore_select_file_dialog": "Selecione o arquivo de backup",
+  "@restore_select_file_dialog": {
+    "description": "restore_select_file_dialog"
+  },
+  "auth_hint_email": "nome@mail.com",
+  "@auth_hint_email": {
+    "description": "auth_hint_email"
+  },
+  "auth_error_invalid_email": "Insira um e-mail válido.",
+  "@auth_error_invalid_email": {
+    "description": "auth_error_invalid_email"
+  },
+  "settings_cloud_backup_dialog_desc": "Carregue um backup .hmb do aplicativo no servidor e, se necessário, restaure qualquer um dos backups salvos.",
+  "@settings_cloud_backup_dialog_desc": {
+    "description": "settings_cloud_backup_dialog_desc"
+  },
+  "delete": "Excluir",
+  "@delete": {
+    "description": "delete"
+  },
+  "in_app_storage": "Diretório de armazenamento interno",
+  "@in_app_storage": {
+    "description": "in_app_storage"
+  },
+  "auth_brand_description_1": "Trouxemos o login, cadastro e recuperação de senha do projeto anterior, adaptado para este app de música.",
+  "@auth_brand_description_1": {
+    "description": "auth_brand_description_1"
+  },
+  "auth_brand_description_2": "Sua sessão fica em um armazenamento seguro e é validada com o mesmo back-end que você já estava usando.",
+  "@auth_brand_description_2": {
+    "description": "auth_brand_description_2"
+  },
+  "auth_brand_not_configured": "O arquivo .env precisa ser configurado para conectar o back-end de autenticação.",
+  "@auth_brand_not_configured": {
+    "description": "auth_brand_not_configured"
+  },
+  "auth_forgot_password_subtitle": "Enviaremos as instruções para o e-mail da sua conta.",
+  "@auth_forgot_password_subtitle": {
+    "description": "auth_forgot_password_subtitle"
+  },
+  "auth_btn_send_email": "Enviar e-mail",
+  "@auth_btn_send_email": {
+    "description": "auth_btn_send_email"
+  },
+  "auth_error_not_configured": "Falta o back-end de autenticação para ser configurado no arquivo .env.",
+  "@auth_error_not_configured": {
+    "description": "auth_error_not_configured"
+  },
+  "auth_error_invalid_credentials": "E-mail ou senha incorretos.",
+  "@auth_error_invalid_credentials": {
+    "description": "auth_error_invalid_credentials"
+  },
+  "auth_error_not_verified": "Sua conta ainda não foi verificada.",
+  "@auth_error_not_verified": {
+    "description": "auth_error_not_verified"
+  },
+  "auth_error_unknown": "Não foi possível concluir a operação.",
+  "@auth_error_unknown": {
+    "description": "auth_error_unknown"
+  },
+  "auth_register_success": "Conta criada com sucesso.",
+  "@auth_register_success": {
+    "description": "auth_register_success"
+  },
+  "auth_register_error": "A conta não pôde ser criada.",
+  "@auth_register_error": {
+    "description": "auth_register_error"
+  },
+  "auth_recovery_email_sent": "E-mail enviado.",
+  "@auth_recovery_email_sent": {
+    "description": "auth_recovery_email_sent"
+  },
+  "auth_recovery_email_error": "Não foi possível enviar o e-mail.",
+  "@auth_recovery_email_error": {
+    "description": "auth_recovery_email_error"
+  },
+  "latestVersion": "Versão mais recente disponível",
+  "@latestVersion": {
+    "description": "latestVersion"
+  },
+  "updateApp": "Atualizar aplicativo",
+  "@updateApp": {
+    "description": "updateApp"
+  },
+  "loadInfoUpdate": "Não foi possível carregar as informações de atualização",
+  "@loadInfoUpdate": {
+    "description": "loadInfoUpdate"
+  },
+  "infoNotAvailable": "Informação não disponível",
+  "@infoNotAvailable": {
+    "description": "infoNotAvailable"
+  },
+  "developedBy": "Desenvolvido e mantido por Joss Estrada (JOSPROX)",
+  "@developedBy": {
+    "description": "developedBy"
+  },
+  "copyrightNotice": "© 2026 JOSPROX. Licença GPL v3.0",
+  "@copyrightNotice": {
+    "description": "copyrightNotice"
   }
 }

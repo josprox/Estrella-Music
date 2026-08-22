@@ -22,17 +22,29 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(songTitle) => "Pobieranie: ${songTitle}";
 
-  static String m1(error) => "Wystąpił błąd podczas regeneracji: ${error}";
+  static String m1(count) => "Albumy: ${count}";
 
-  static String m2(title) => "Podobny do ${title}";
+  static String m2(count) => "Artyści: ${count}";
 
-  static String m3(current) => "Krok _${current} z 3";
+  static String m3(count) => "Ulubione: ${count}";
 
-  static String m4(count) => "${count} zmiany zatwierdzone.";
+  static String m4(count) => "Playlisty: ${count}";
 
-  static String m5(count) => "${count} zsynchronizowane zmiany.";
+  static String m5(count) => "Piosenki: ${count}";
 
-  static String m6(statusCode) =>
+  static String m6(source) => "Migracja zakończona z ${source}.";
+
+  static String m7(error) => "Wystąpił błąd podczas regeneracji: ${error}";
+
+  static String m8(title) => "Podobny do ${title}";
+
+  static String m9(current) => "Krok _${current} z 3";
+
+  static String m10(count) => "${count} zmiany zatwierdzone.";
+
+  static String m11(count) => "${count} zsynchronizowane zmiany.";
+
+  static String m12(statusCode) =>
       "Nie można wyszukać użytkowników (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -46,6 +58,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "addMultipleSongs": MessageLookupByLibrary.simpleMessage(
       "Dodaj utwory do listy odtwarzania",
     ),
+    "addToLibrary": MessageLookupByLibrary.simpleMessage("Dodaj do biblioteki"),
     "addToPlaylist": MessageLookupByLibrary.simpleMessage("Dodaj do playlisty"),
     "album": MessageLookupByLibrary.simpleMessage("Album"),
     "albumBookmarkAddAlert": MessageLookupByLibrary.simpleMessage(
@@ -97,18 +110,61 @@ class MessageLookup extends MessageLookupByLibrary {
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Akceptuj moje dane...",
     ),
+    "auth_brand_description_1": MessageLookupByLibrary.simpleMessage(
+      "Przynieśliśmy logowanie, rejestrację i odzyskiwanie hasła z poprzedniego projektu, dostosowane do tej aplikacji muzycznej.",
+    ),
+    "auth_brand_description_2": MessageLookupByLibrary.simpleMessage(
+      "Twoja sesja jest przechowywana w bezpiecznym magazynie i jest sprawdzana przy użyciu tego samego backendu, którego już używałeś.",
+    ),
+    "auth_brand_not_configured": MessageLookupByLibrary.simpleMessage(
+      "Aby połączyć moduł uwierzytelniania, należy skonfigurować plik .env.",
+    ),
     "auth_btn_login": MessageLookupByLibrary.simpleMessage("Login"),
     "auth_btn_register": MessageLookupByLibrary.simpleMessage("Rejestr"),
+    "auth_btn_send_email": MessageLookupByLibrary.simpleMessage(
+      "Wyślij pocztę",
+    ),
     "auth_confirm_password": MessageLookupByLibrary.simpleMessage(
       "Potwierdź hasło",
+    ),
+    "auth_error_invalid_credentials": MessageLookupByLibrary.simpleMessage(
+      "Nieprawidłowy adres e-mail lub hasło.",
+    ),
+    "auth_error_invalid_email": MessageLookupByLibrary.simpleMessage(
+      "Wpisz prawidłowy adres e-mail.",
+    ),
+    "auth_error_not_configured": MessageLookupByLibrary.simpleMessage(
+      "Brakuje modułu uwierzytelniania do skonfigurowania w pliku .env.",
+    ),
+    "auth_error_not_verified": MessageLookupByLibrary.simpleMessage(
+      "Twoje konto nie zostało jeszcze zweryfikowane.",
+    ),
+    "auth_error_unknown": MessageLookupByLibrary.simpleMessage(
+      "Nie udało się dokończyć operacji.",
     ),
     "auth_first_name": MessageLookupByLibrary.simpleMessage("Imię"),
     "auth_forgot_password": MessageLookupByLibrary.simpleMessage(
       "Zapomniałem hasła",
     ),
+    "auth_forgot_password_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Wyślemy Ci instrukcje na adres e-mail Twojego konta.",
+    ),
+    "auth_hint_email": MessageLookupByLibrary.simpleMessage("nazwa@mail.com"),
     "auth_last_name": MessageLookupByLibrary.simpleMessage("Nazwisko"),
     "auth_login_success": MessageLookupByLibrary.simpleMessage(
       "Zalogowano się pomyślnie",
+    ),
+    "auth_recovery_email_error": MessageLookupByLibrary.simpleMessage(
+      "Nie można było wysłać e-maila.",
+    ),
+    "auth_recovery_email_sent": MessageLookupByLibrary.simpleMessage(
+      "E-mail wysłany.",
+    ),
+    "auth_register_error": MessageLookupByLibrary.simpleMessage(
+      "Nie udało się utworzyć konta.",
+    ),
+    "auth_register_success": MessageLookupByLibrary.simpleMessage(
+      "Konto utworzone pomyślnie.",
     ),
     "auth_welcome_subtitle": MessageLookupByLibrary.simpleMessage(
       "Witamy w Estrella Music",
@@ -148,6 +204,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "backupMsg": MessageLookupByLibrary.simpleMessage(
       "Kopia zapasowa została pomyślnie zapisana!",
     ),
+    "backupSettingsAndPlaylists": MessageLookupByLibrary.simpleMessage(
+      "Kopia zapasowa ustawień i list odtwarzania",
+    ),
     "backupSettingsAndPlaylistsDes": MessageLookupByLibrary.simpleMessage(
       "Zapisuje wszystkie ustawienia, listy odtwarzania i dane logowania w pliku kopii zapasowej",
     ),
@@ -172,6 +231,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "backup_restore_success": MessageLookupByLibrary.simpleMessage(
       "Kopia zapasowa przywrócona. Uruchom ponownie aplikację.",
     ),
+    "backup_select_folder_dialog": MessageLookupByLibrary.simpleMessage(
+      "Wybierz folder do utworzenia kopii zapasowej",
+    ),
     "backup_selection_prompt": MessageLookupByLibrary.simpleMessage(
       "Wybierz, które dane chcesz wykonać w kopii zapasowej",
     ),
@@ -182,6 +244,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Na podstawie ostatniej interakcji",
     ),
     "bitrate": MessageLookupByLibrary.simpleMessage("Szybkość transmisji"),
+    "blacklistPipedPlaylist": MessageLookupByLibrary.simpleMessage(
+      "Czarna lista playlist",
+    ),
     "blacklistPlstResetAlert": MessageLookupByLibrary.simpleMessage(
       "Zresetowano pomyślnie!",
     ),
@@ -259,6 +324,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Społecznościowe playlisty",
     ),
     "content": MessageLookupByLibrary.simpleMessage("Zawartość"),
+    "copyrightNotice": MessageLookupByLibrary.simpleMessage(
+      "© 2026 JOSPROX. Licencja GPL v3.0",
+    ),
     "create": MessageLookupByLibrary.simpleMessage("Utwórz"),
     "createnAdd": MessageLookupByLibrary.simpleMessage("Utwórz i dodaj"),
     "customIns": MessageLookupByLibrary.simpleMessage(
@@ -269,11 +337,15 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "dailyDiscover": MessageLookupByLibrary.simpleMessage("Codzienne odkrycie"),
     "dark": MessageLookupByLibrary.simpleMessage("Ciemny"),
+    "delete": MessageLookupByLibrary.simpleMessage("Usuń"),
     "deleteDownloadData": MessageLookupByLibrary.simpleMessage(
       "Usuń z pobranych",
     ),
     "deleteDownloadedDataAlert": MessageLookupByLibrary.simpleMessage(
       "Pomyślnie usunięto z pobranych!",
+    ),
+    "developedBy": MessageLookupByLibrary.simpleMessage(
+      "Opracowany i utrzymywany przez Jossa Estradę (JOSPROX)",
     ),
     "disableTransitionAnimation": MessageLookupByLibrary.simpleMessage(
       "Wyłącz animację przejścia",
@@ -292,6 +364,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "znaleziono pobrane pliki",
     ),
     "download": MessageLookupByLibrary.simpleMessage("Pobierz"),
+    "downloadAlbumSongs": MessageLookupByLibrary.simpleMessage(
+      "Pobierz utwory z albumu",
+    ),
     "downloadError2": MessageLookupByLibrary.simpleMessage(
       "Żądany utwór nie może zostać pobrany z powodu ograniczeń serwera. Możesz spróbować ponownie",
     ),
@@ -314,6 +389,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "downloadNotificationSong": m0,
     "downloadNotificationTitle": MessageLookupByLibrary.simpleMessage(
       "Pobieranie muzyki",
+    ),
+    "downloadPlaylist": MessageLookupByLibrary.simpleMessage(
+      "Pobierz playlistę",
     ),
     "downloadingFormat": MessageLookupByLibrary.simpleMessage(
       "Pobierz format pliku",
@@ -344,10 +422,17 @@ class MessageLookup extends MessageLookupByLibrary {
     "endOfThisSong": MessageLookupByLibrary.simpleMessage(
       "Koniec tej piosenki",
     ),
+    "enqueueAlbumSongs": MessageLookupByLibrary.simpleMessage(
+      "Dodaj utwory z albumu do kolejki",
+    ),
     "enqueueAll": MessageLookupByLibrary.simpleMessage("Kolejkuj wszystkie"),
     "enqueueSong": MessageLookupByLibrary.simpleMessage(
       "Dodaj ten utwór do kolejki",
     ),
+    "enqueueSongs": MessageLookupByLibrary.simpleMessage(
+      "Dodaj utwory do kolejki",
+    ),
+    "episodes": MessageLookupByLibrary.simpleMessage("Odcinki"),
     "equalizer": MessageLookupByLibrary.simpleMessage("Korektor dźwięku"),
     "equalizerDes": MessageLookupByLibrary.simpleMessage(
       "Otwórz korektor systemowy",
@@ -381,6 +466,24 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "exportPlaylist": MessageLookupByLibrary.simpleMessage(
       "Eksportuj listę odtwarzania",
+    ),
+    "exportPlaylistCsv": MessageLookupByLibrary.simpleMessage(
+      "Eksportuj playlistę jako CSV",
+    ),
+    "exportPlaylistCsvSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Nie można importować tutaj",
+    ),
+    "exportPlaylistJson": MessageLookupByLibrary.simpleMessage(
+      "Eksportuj playlistę do JSON",
+    ),
+    "exportPlaylistJsonSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Ten format można importować",
+    ),
+    "exportToYouTubeMusic": MessageLookupByLibrary.simpleMessage(
+      "Eksportuj do muzyki z YouTube",
+    ),
+    "exportToYouTubeMusicSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Spowoduje to przesunięcie Twojej playlisty (utwory < 50) do bieżącej kolejki. Nie zapomnij dodać jej do playlisty/zapisać po otwarciu w YtMusic",
     ),
     "exportedFileLocation": MessageLookupByLibrary.simpleMessage(
       "Lokalizacja eksportu pobranego pliku",
@@ -434,6 +537,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "goToDownloadPage": MessageLookupByLibrary.simpleMessage(
       "Kliknij tutaj, aby przejść do strony pobierania",
     ),
+    "helloWorld": MessageLookupByLibrary.simpleMessage("Witaj świecie"),
     "high": MessageLookupByLibrary.simpleMessage("Wysoka"),
     "hintApiUrl": MessageLookupByLibrary.simpleMessage(
       "API URL do instancji Piped",
@@ -473,14 +577,24 @@ class MessageLookup extends MessageLookupByLibrary {
     "importPlaylistDesc": MessageLookupByLibrary.simpleMessage(
       "Wybierz wcześniej wyeksportowany plik playlisty w formacie JSON do zaimportowania",
     ),
+    "imported": MessageLookupByLibrary.simpleMessage("Importowane"),
     "importedFromJossMusic": MessageLookupByLibrary.simpleMessage(
       "Zaimportowane z Joss Music Kotlin",
+    ),
+    "importedPlaylist": MessageLookupByLibrary.simpleMessage(
+      "Zaimportowana playlista",
     ),
     "importingPlaylist": MessageLookupByLibrary.simpleMessage(
       "Importowanie listy odtwarzania…",
     ),
+    "in_app_storage": MessageLookupByLibrary.simpleMessage(
+      "Wewnętrzny katalog pamięci",
+    ),
     "includeDownloadedFiles": MessageLookupByLibrary.simpleMessage(
       "Dołącz pliki z pobranymi utworami",
+    ),
+    "infoNotAvailable": MessageLookupByLibrary.simpleMessage(
+      "Informacje niedostępne",
     ),
     "invalidPlaylistFile": MessageLookupByLibrary.simpleMessage(
       "Nieprawidłowa struktura pliku listy odtwarzania",
@@ -504,6 +618,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Ustaw język aplikacji",
     ),
     "latestRelease": MessageLookupByLibrary.simpleMessage("Najnowsze wydanie"),
+    "latestVersion": MessageLookupByLibrary.simpleMessage(
+      "Dostępna najnowsza wersja",
+    ),
     "letsStrart": MessageLookupByLibrary.simpleMessage("Zaczynajmy..."),
     "libAlbums": MessageLookupByLibrary.simpleMessage("Biblioteka Albumów"),
     "libArtists": MessageLookupByLibrary.simpleMessage("Biblioteka Wykonawców"),
@@ -516,12 +633,18 @@ class MessageLookup extends MessageLookupByLibrary {
     "light": MessageLookupByLibrary.simpleMessage("Jasny"),
     "link": MessageLookupByLibrary.simpleMessage("Odnośnik"),
     "linkAlert": MessageLookupByLibrary.simpleMessage("Połączono pomyślnie!"),
+    "linkCopied": MessageLookupByLibrary.simpleMessage(
+      "Link skopiowany do schowka",
+    ),
     "linkPipedDes": MessageLookupByLibrary.simpleMessage(
       "Link z potokiem dla list odtwarzania",
     ),
     "listenNow": MessageLookupByLibrary.simpleMessage("Posłuchaj teraz"),
     "listeningToEnvironment": MessageLookupByLibrary.simpleMessage(
       "Słuchając otoczenia...",
+    ),
+    "loadInfoUpdate": MessageLookupByLibrary.simpleMessage(
+      "Nie można załadować informacji o aktualizacji",
     ),
     "local": MessageLookupByLibrary.simpleMessage("Lokalny"),
     "local_b1": MessageLookupByLibrary.simpleMessage(
@@ -548,6 +671,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Ustawia ten sam poziom głośności dla wszystkich utworów (eksperymentalne) (nie działa z utworami pobranymi w poprzedniej wersji (< v1.10.0))",
     ),
     "low": MessageLookupByLibrary.simpleMessage("Niska"),
+    "lyrics": MessageLookupByLibrary.simpleMessage("Listy"),
     "lyricsNotAvailable": MessageLookupByLibrary.simpleMessage(
       "Tekst jest niedostępny!",
     ),
@@ -606,6 +730,18 @@ class MessageLookup extends MessageLookupByLibrary {
     "migration_btn_select": MessageLookupByLibrary.simpleMessage(
       "Wybierz plik i zaimportuj",
     ),
+    "migration_select_file_dialog": MessageLookupByLibrary.simpleMessage(
+      "Wybierz plik song.db lub plik kopii zapasowej .backup",
+    ),
+    "migration_success": MessageLookupByLibrary.simpleMessage(
+      "Migracja zakończyła się pomyślnie.",
+    ),
+    "migration_summary_albums": m1,
+    "migration_summary_artists": m2,
+    "migration_summary_favorites": m3,
+    "migration_summary_playlists": m4,
+    "migration_summary_songs": m5,
+    "migration_summary_start": m6,
     "minutes": MessageLookupByLibrary.simpleMessage("minut"),
     "misc": MessageLookupByLibrary.simpleMessage("Różne"),
     "mostListenedSong": MessageLookupByLibrary.simpleMessage(
@@ -662,6 +798,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "news_item_trans_title": MessageLookupByLibrary.simpleMessage(
       "Przejrzysta synchronizacja",
     ),
+    "no": MessageLookupByLibrary.simpleMessage("Nie"),
     "noBookmarks": MessageLookupByLibrary.simpleMessage("Brak zakładek!"),
     "noJossRedFriends": MessageLookupByLibrary.simpleMessage(
       "Nie masz dodanych znajomych na Joss Red.",
@@ -697,6 +834,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "password": MessageLookupByLibrary.simpleMessage("Hasło"),
     "password_text": MessageLookupByLibrary.simpleMessage("Hasło"),
+    "permissionDenied": MessageLookupByLibrary.simpleMessage(
+      "Odmowa pozwolenia",
+    ),
     "permissionsAllow": MessageLookupByLibrary.simpleMessage("Umożliwić"),
     "permissionsConsentDescription": MessageLookupByLibrary.simpleMessage(
       "Estrella Music potrzebuje tych uprawnień, aby zarządzać Twoją muzyką i oferować wszystkie funkcje odtwarzania.",
@@ -739,6 +879,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Zsynchronizowano playlisty z Piped!",
     ),
     "plain": MessageLookupByLibrary.simpleMessage("Zwykły"),
+    "play": MessageLookupByLibrary.simpleMessage("Zagraj"),
     "playNext": MessageLookupByLibrary.simpleMessage("Odtwórz następny"),
     "playNow": MessageLookupByLibrary.simpleMessage("Zagraj teraz"),
     "playbackSpeed": MessageLookupByLibrary.simpleMessage(
@@ -763,6 +904,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "playingfromSelection": MessageLookupByLibrary.simpleMessage(
       "ODTWARZANIE Z WYBRANEGO ZESTAWU",
     ),
+    "playlist": MessageLookupByLibrary.simpleMessage("Lista odtwarzania"),
     "playlistBlacklistAlert": MessageLookupByLibrary.simpleMessage(
       "Dodaj playlistę do czarnej listy!",
     ),
@@ -795,6 +937,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "playlists": MessageLookupByLibrary.simpleMessage("Playlisty"),
     "playnextMsg": MessageLookupByLibrary.simpleMessage("Nadchodzące"),
+    "podcasts": MessageLookupByLibrary.simpleMessage("Podcasty"),
     "popularTracks": MessageLookupByLibrary.simpleMessage("Popularne utwory"),
     "processFiles": MessageLookupByLibrary.simpleMessage(
       "Przetwarzanie plików...",
@@ -802,6 +945,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "processingAudio": MessageLookupByLibrary.simpleMessage(
       "Przetwarzanie dźwięku...",
     ),
+    "profiles": MessageLookupByLibrary.simpleMessage("Profile"),
     "queueLoop": MessageLookupByLibrary.simpleMessage("Pętla kolejki"),
     "queueLoopNotDisMsg1": MessageLookupByLibrary.simpleMessage(
       "Trybu pętli kolejki nie można wyłączyć, gdy włączony jest tryb losowy.",
@@ -815,6 +959,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "queuerearrangingDeniedMsg": MessageLookupByLibrary.simpleMessage(
       "Nie można zmienić kolejności kolejki, gdy włączony jest tryb losowy",
     ),
+    "quickPics": MessageLookupByLibrary.simpleMessage("Chwytliwe fotki"),
     "quickpicks": MessageLookupByLibrary.simpleMessage("Szybki wybór"),
     "radioNotAvailable": MessageLookupByLibrary.simpleMessage(
       "Radio niedostępne dla tego wykonawcy!",
@@ -839,8 +984,14 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "recommendedAlbums": MessageLookupByLibrary.simpleMessage("Zalecony"),
     "recommendedArtists": MessageLookupByLibrary.simpleMessage("Zalecony"),
+    "removeFromCache": MessageLookupByLibrary.simpleMessage(
+      "Usuń z pamięci podręcznej",
+    ),
     "removeFromLib": MessageLookupByLibrary.simpleMessage(
       "Usuń z Biblioteki Utworów",
+    ),
+    "removeFromLibrary": MessageLookupByLibrary.simpleMessage(
+      "Usuń z biblioteki",
     ),
     "removeFromPlaylist": MessageLookupByLibrary.simpleMessage(
       "Usuń z playlistę",
@@ -885,8 +1036,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "restoreMsg": MessageLookupByLibrary.simpleMessage(
       "Przywrócenie powiodło się!\nZmiany zostaną zastosowane po ponownym uruchomieniu",
     ),
+    "restoreSettingsAndPlaylists": MessageLookupByLibrary.simpleMessage(
+      "Przywracanie ustawień i list odtwarzania",
+    ),
     "restoreSettingsAndPlaylistsDes": MessageLookupByLibrary.simpleMessage(
       "Przywraca wszystkie ustawienia, dane logowania i listy odtwarzania z pliku kopii zapasowej. Nadpisuje wszystkie bieżące dane",
+    ),
+    "restore_select_file_dialog": MessageLookupByLibrary.simpleMessage(
+      "Wybierz plik kopii zapasowej",
     ),
     "restoring": MessageLookupByLibrary.simpleMessage("Przywracanie..."),
     "results": MessageLookupByLibrary.simpleMessage("Wyniki"),
@@ -945,6 +1102,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_cloud_backup_desc": MessageLookupByLibrary.simpleMessage(
       "Przesyłaj, przywracaj i zarządzaj...",
     ),
+    "settings_cloud_backup_dialog_desc": MessageLookupByLibrary.simpleMessage(
+      "Prześlij kopię zapasową aplikacji w formacie .hmb na serwer i w razie potrzeby przywróć dowolną z zapisanych kopii zapasowych.",
+    ),
     "settings_content_desc": MessageLookupByLibrary.simpleMessage(
       "Odkryj filtry, integrację z Piped i pamięciami podręcznymi.",
     ),
@@ -987,19 +1147,24 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
       "Nie można wygenerować nowego identyfikatora. Spróbuj ponownie później.",
     ),
-    "settings_visitor_exception": m1,
+    "settings_visitor_exception": m7,
     "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
       "Zaktualizowany identyfikator",
     ),
     "settings_visitor_updated_desc": MessageLookupByLibrary.simpleMessage(
       "Nowy identyfikator gościa został pomyślnie wygenerowany.",
     ),
+    "shareAlbum": MessageLookupByLibrary.simpleMessage("Udostępnij album"),
+    "sharePlaylist": MessageLookupByLibrary.simpleMessage(
+      "Udostępnij playlistę",
+    ),
     "shareSong": MessageLookupByLibrary.simpleMessage("Udostępnij ten utwór"),
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
       "Przeszukiwanie bazy danych Shazam w poszukiwaniu dopasowań...",
     ),
+    "shuffle": MessageLookupByLibrary.simpleMessage("Losowe"),
     "shuffleQueue": MessageLookupByLibrary.simpleMessage("Przetasuj kolejkę"),
-    "similarToTitle": m2,
+    "similarToTitle": m8,
     "singles": MessageLookupByLibrary.simpleMessage("Single"),
     "skipSilence": MessageLookupByLibrary.simpleMessage("Pomiń ciszę"),
     "skipSilenceDes": MessageLookupByLibrary.simpleMessage(
@@ -1009,7 +1174,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Wyłącznik czasowy jest ustawiony",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Wyłącznik czasowy"),
-    "slide_indicator": m3,
+    "slide_indicator": m9,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "Utwór dodano do playlisty!",
     ),
@@ -1039,6 +1204,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "songsImportedFromJossMusic": MessageLookupByLibrary.simpleMessage(
       "Utwory zaimportowane z Joss Music Kotlin",
     ),
+    "sortAscendNDescend": MessageLookupByLibrary.simpleMessage(
+      "Sortuj rosnąco/malejąco",
+    ),
+    "sortByDate": MessageLookupByLibrary.simpleMessage("Sortuj według daty"),
+    "sortByDuration": MessageLookupByLibrary.simpleMessage(
+      "Sortuj według czasu trwania",
+    ),
+    "sortByName": MessageLookupByLibrary.simpleMessage("Sortuj według nazwy"),
     "speedAndPitch": MessageLookupByLibrary.simpleMessage(
       "Szybkość i wysokość",
     ),
@@ -1067,8 +1240,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
       "Przesuń, aby poznać opcje ➔",
     ),
-    "syncChangesConfirmed": m4,
-    "syncChangesSynced": m5,
+    "syncChangesConfirmed": m10,
+    "syncChangesSynced": m11,
     "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
       "Aktywowano tryb chmury. Pobieranie istniejącej biblioteki.",
     ),
@@ -1108,6 +1281,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncOfflineRetry": MessageLookupByLibrary.simpleMessage(
       "Nieaktywny. Zmiany zostały zapisane do ponownej próby.",
     ),
+    "syncPlaylistSongs": MessageLookupByLibrary.simpleMessage(
+      "Synchronizuj utwory z listy odtwarzania",
+    ),
     "syncUnconfirmedRetry": MessageLookupByLibrary.simpleMessage(
       "EMusic nie potwierdził wszystkich zmian. Zostaną one rozpatrzone ponownie.",
     ),
@@ -1135,6 +1311,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "themeMode": MessageLookupByLibrary.simpleMessage("Motyw"),
     "title": MessageLookupByLibrary.simpleMessage("Tytuł"),
+    "topMusicVid": MessageLookupByLibrary.simpleMessage("Najlepsze teledyski"),
     "topmusicvideos": MessageLookupByLibrary.simpleMessage(
       "Najlepsze wideoklipy",
     ),
@@ -1143,6 +1320,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "unlinkAlert": MessageLookupByLibrary.simpleMessage("Odłączono pomyślnie!"),
     "untitledSong": MessageLookupByLibrary.simpleMessage("Piosenka bez tytułu"),
     "upNext": MessageLookupByLibrary.simpleMessage("Następne"),
+    "updateApp": MessageLookupByLibrary.simpleMessage("Zaktualizuj aplikację"),
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "Wykryty adres URL - kliknij go, aby otworzyć/odtworzyć powiązaną zawartość",
     ),
@@ -1152,7 +1330,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "Odpowiedź nie zawiera listy użytkowników.",
     ),
-    "userSearchFailed": m6,
+    "userSearchFailed": m12,
     "userUnblocked": MessageLookupByLibrary.simpleMessage(
       "Odblokowany użytkownik",
     ),

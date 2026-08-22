@@ -1075,5 +1075,1226 @@
   "keepScreenOnWhilePlayingDes": "Se está activado, a pantalla do dispositivo manterase acesa mentres se reproduce música",
   "@keepScreenOnWhilePlayingDes": {
     "description": "keepScreenOnWhilePlayingDes"
+  },
+  "auth_login_success": "Iniciouse con éxito",
+  "@auth_login_success": {
+    "description": "auth_login_success"
+  },
+  "settings_cloud_backup": "Copia de seguridade na nube",
+  "@settings_cloud_backup": {
+    "description": "settings_cloud_backup"
+  },
+  "settings_migration_title": "Migra desde Joss Music Kotlin",
+  "@settings_migration_title": {
+    "description": "settings_migration_title"
+  },
+  "backup_confirm_question": "Queres facer unha copia de seguridade?",
+  "@backup_confirm_question": {
+    "description": "backup_confirm_question"
+  },
+  "backup_selection_prompt": "Escolle que datos queres facer unha copia de seguranza",
+  "@backup_selection_prompt": {
+    "description": "backup_selection_prompt"
+  },
+  "search_recent_title": "Buscas recentes",
+  "@search_recent_title": {
+    "description": "search_recent_title"
+  },
+  "back": "Volver",
+  "@back": {
+    "description": "back"
+  },
+  "auth_forgot_password": "Esquecín o meu contrasinal",
+  "@auth_forgot_password": {
+    "description": "auth_forgot_password"
+  },
+  "auth_btn_login": "Iniciar sesión",
+  "@auth_btn_login": {
+    "description": "auth_btn_login"
+  },
+  "auth_btn_register": "Rexístrate",
+  "@auth_btn_register": {
+    "description": "auth_btn_register"
+  },
+  "email": "Correo electrónico",
+  "@email": {
+    "description": "email"
+  },
+  "password_text": "Contrasinal",
+  "@password_text": {
+    "description": "Contraseña texto traducido"
+  },
+  "auth_confirm_password": "Confirme o contrasinal",
+  "@auth_confirm_password": {
+    "description": "auth_confirm_password"
+  },
+  "auth_welcome_title": "Benvido a Estrella Music",
+  "@auth_welcome_title": {
+    "description": "auth_welcome_title"
+  },
+  "auth_welcome_subtitle": "Benvido a Estrella Music",
+  "@auth_welcome_subtitle": {
+    "description": "auth_welcome_subtitle"
+  },
+  "auth_first_name": "Nome de pila",
+  "@auth_first_name": {
+    "description": "auth_first_name"
+  },
+  "auth_last_name": "Apelido",
+  "@auth_last_name": {
+    "description": "auth_last_name"
+  },
+  "auth_agree_personal_data": "Acepto usar os meus datos...",
+  "@auth_agree_personal_data": {
+    "description": "auth_agree_personal_data"
+  },
+  "settings_general_section": "Xeral",
+  "@settings_general_section": {
+    "description": "settings_general_section"
+  },
+  "settings_logout": "Pechar sesión",
+  "@settings_logout": {
+    "description": "settings_logout"
+  },
+  "settings_cloud_backup_desc": "Carga, restaura e xestiona...",
+  "@settings_cloud_backup_desc": {
+    "description": "settings_cloud_backup_desc"
+  },
+  "settings_migration_desc": "Importar listas de reprodución, cancións...",
+  "@settings_migration_desc": {
+    "description": "settings_migration_desc"
+  },
+  "backup_btn_restart": "Reinicie a aplicación",
+  "@backup_btn_restart": {
+    "description": "backup_btn_restart"
+  },
+  "backup_btn_upload": "Carga copia de seguranza agora",
+  "@backup_btn_upload": {
+    "description": "backup_btn_upload"
+  },
+  "backup_no_backups": "Aínda non hai copias de seguranza...",
+  "@backup_no_backups": {
+    "description": "backup_no_backups"
+  },
+  "backup_auth_required": "Necesitas unha sesión activa...",
+  "@backup_auth_required": {
+    "description": "backup_auth_required"
+  },
+  "backup_upload_success": "Copia de seguranza cargada correctamente.",
+  "@backup_upload_success": {
+    "description": "backup_upload_success"
+  },
+  "backup_restore_success": "Copia de seguranza restablecida. Reinicie a aplicación.",
+  "@backup_restore_success": {
+    "description": "backup_restore_success"
+  },
+  "backup_delete_success": "Eliminouse a copia de seguranza.",
+  "@backup_delete_success": {
+    "description": "backup_delete_success"
+  },
+  "genre_pop": "Pop",
+  "@genre_pop": {
+    "description": "genre_pop"
+  },
+  "genre_rock": "Rock",
+  "@genre_rock": {
+    "description": "genre_rock"
+  },
+  "genre_hiphop": "hip hop",
+  "@genre_hiphop": {
+    "description": "genre_hiphop"
+  },
+  "genre_electronic": "Electrónica",
+  "@genre_electronic": {
+    "description": "genre_electronic"
+  },
+  "genre_jazz": "Jazz",
+  "@genre_jazz": {
+    "description": "genre_jazz"
+  },
+  "genre_latin": "latín",
+  "@genre_latin": {
+    "description": "genre_latin"
+  },
+  "migration_btn_select": "Selecciona o ficheiro e importa",
+  "@migration_btn_select": {
+    "description": "migration_btn_select"
+  },
+  "forgottenFavorites": "favoritos esquecidos",
+  "@forgottenFavorites": {
+    "description": "forgottenFavorites"
+  },
+  "mostListenedSong": "A canción máis escoitada",
+  "@mostListenedSong": {
+    "description": "mostListenedSong"
+  },
+  "reproducedBy": "Reproducido por",
+  "@reproducedBy": {
+    "description": "reproducedBy"
+  },
+  "recentSearches": "Buscas recentes",
+  "@recentSearches": {
+    "description": "recentSearches"
+  },
+  "popularTracks": "Pistas populares",
+  "@popularTracks": {
+    "description": "popularTracks"
+  },
+  "latestRelease": "Último lanzamento",
+  "@latestRelease": {
+    "description": "latestRelease"
+  },
+  "follow": "Continuar",
+  "@follow": {
+    "description": "follow"
+  },
+  "following": "Seguindo",
+  "@following": {
+    "description": "following"
+  },
+  "listenNow": "Escoita agora",
+  "@listenNow": {
+    "description": "listenNow"
+  },
+  "video": "Vídeo",
+  "@video": {
+    "description": "video"
+  },
+  "readMore": "Ler máis",
+  "@readMore": {
+    "description": "readMore"
+  },
+  "speedAndPitch": "Velocidade e Pitch",
+  "@speedAndPitch": {
+    "description": "speedAndPitch"
+  },
+  "playbackSpeed": "Velocidade de reprodución",
+  "@playbackSpeed": {
+    "description": "playbackSpeed"
+  },
+  "songPitch": "ton da canción",
+  "@songPitch": {
+    "description": "songPitch"
+  },
+  "musicRecognition": "Recoñecemento musical",
+  "@musicRecognition": {
+    "description": "musicRecognition"
+  },
+  "listeningToEnvironment": "Escoitando o medio ambiente...",
+  "@listeningToEnvironment": {
+    "description": "listeningToEnvironment"
+  },
+  "micInstruction": "Asegúrate de que a música soa o suficientemente alta preto do micrófono.",
+  "@micInstruction": {
+    "description": "micInstruction"
+  },
+  "processingAudio": "Procesando o audio...",
+  "@processingAudio": {
+    "description": "processingAudio"
+  },
+  "shazamSearching": "Buscando coincidencias na base de datos de Shazam...",
+  "@shazamSearching": {
+    "description": "shazamSearching"
+  },
+  "songFound": "Canción atopada!",
+  "@songFound": {
+    "description": "songFound"
+  },
+  "playNow": "Xoga agora",
+  "@playNow": {
+    "description": "playNow"
+  },
+  "searchInLibrary": "Busca na biblioteca",
+  "@searchInLibrary": {
+    "description": "searchInLibrary"
+  },
+  "noMatchesFound": "Sen coincidencias",
+  "@noMatchesFound": {
+    "description": "noMatchesFound"
+  },
+  "noMatchInstruction": "Non se puido atopar ningunha canción no audio gravado",
+  "@noMatchInstruction": {
+    "description": "noMatchInstruction"
+  },
+  "errorOccurred": "Produciuse un erro",
+  "@errorOccurred": {
+    "description": "errorOccurred"
+  },
+  "playingRecognizedTrack": "Xogando:",
+  "@playingRecognizedTrack": {
+    "description": "playingRecognizedTrack"
+  },
+  "errorPlayingTrack": "Erro ao xogar:",
+  "@errorPlayingTrack": {
+    "description": "errorPlayingTrack"
+  },
+  "welcome_title": "A túa música, ao teu xeito",
+  "@welcome_title": {
+    "description": "welcome_title"
+  },
+  "welcome_subtitle": "Escolle como queres experimentar Estrella Music a partir de agora.",
+  "@welcome_subtitle": {
+    "description": "welcome_subtitle"
+  },
+  "welcome_intro": "Modernizamos a nosa plataforma. Desactivouse o sistema antigo de carga de copias de seguranza manuais. Agora tes dúas formas claras de xestionar a túa biblioteca de música.",
+  "@welcome_intro": {
+    "description": "welcome_intro"
+  },
+  "recommend_cloud": "Recomendamos activar o Modo Cloud para unha experiencia similar a Spotify: sincronización en tempo real entre todos os teus dispositivos e copia de seguridade automática sen que teñas que facer nada.",
+  "@recommend_cloud": {
+    "description": "recommend_cloud"
+  },
+  "swipe_prompt": "Pasa o dedo para explorar as opcións",
+  "@swipe_prompt": {
+    "description": "swipe_prompt"
+  },
+  "local_title": "Modo local",
+  "@local_title": {
+    "description": "local_title"
+  },
+  "local_subtitle": "Privacidade absoluta no teu dispositivo",
+  "@local_subtitle": {
+    "description": "local_subtitle"
+  },
+  "local_b1": "Funciona sen necesidade de iniciar sesión.",
+  "@local_b1": {
+    "description": "local_b1"
+  },
+  "local_b2": "Toda a túa biblioteca permanece estrictamente neste ordenador.",
+  "@local_b2": {
+    "description": "local_b2"
+  },
+  "local_b3": "Nota: non hai copias de seguridade manuais na nube. Se perde o dispositivo ou desinstala a aplicación, os seus datos non se poderán recuperar.",
+  "@local_b3": {
+    "description": "local_b3"
+  },
+  "local_btn": "Use só neste dispositivo",
+  "@local_btn": {
+    "description": "local_btn"
+  },
+  "cloud_title": "Modo nube (recomendado)",
+  "@cloud_title": {
+    "description": "cloud_title"
+  },
+  "cloud_subtitle": "Sincronización en tempo real con Joss Red",
+  "@cloud_subtitle": {
+    "description": "cloud_subtitle"
+  },
+  "cloud_b1": "Inicia sesión de forma segura usando a túa conta Joss Red.",
+  "@cloud_b1": {
+    "description": "cloud_b1"
+  },
+  "cloud_b2": "Accede ás túas listas de reprodución, favoritos e historial desde calquera dispositivo (Windows, Android, etc.) ao instante.",
+  "@cloud_b2": {
+    "description": "cloud_b2"
+  },
+  "cloud_b3": "Sincronización intelixente: traballa sen conexión e carga os cambios automaticamente cando recuperas Internet.",
+  "@cloud_b3": {
+    "description": "cloud_b3"
+  },
+  "cloud_btn": "Activa a sincronización na nube",
+  "@cloud_btn": {
+    "description": "cloud_btn"
+  },
+  "slide_indicator": "Paso {current} de 3",
+  "@slide_indicator": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      }
+    },
+    "description": "slide_indicator"
+  },
+  "news_card_title": "Estrella Music evolucionou!",
+  "@news_card_title": {
+    "description": "news_card_title"
+  },
+  "news_card_subtitle": "Sincronización 100 % con Joss Red, listas de reprodución con amigos e moito máis. Toca para ver as novidades.",
+  "@news_card_subtitle": {
+    "description": "news_card_subtitle"
+  },
+  "news_dialog_title": "Estrella Music News",
+  "@news_dialog_title": {
+    "description": "news_dialog_title"
+  },
+  "news_item_sync_title": "Integración total con Joss Red",
+  "@news_item_sync_title": {
+    "description": "news_item_sync_title"
+  },
+  "news_item_sync_desc": "As túas listas de reprodución e favoritos agora gárdanse e sincronízanse na nube automaticamente coa túa conta principal de Joss Red.",
+  "@news_item_sync_desc": {
+    "description": "news_item_sync_desc"
+  },
+  "news_item_collab_title": "Listas de reprodución colaborativas",
+  "@news_item_collab_title": {
+    "description": "news_item_collab_title"
+  },
+  "news_item_collab_desc": "Crea listas de reprodución cos teus amigos! Cando crees unha lista de reprodución, selecciona a caixa de verificación Colaborativa e escolle os teus amigos para editar xuntos.",
+  "@news_item_collab_desc": {
+    "description": "news_item_collab_desc"
+  },
+  "news_item_trans_title": "Sincronización transparente",
+  "@news_item_trans_title": {
+    "description": "news_item_trans_title"
+  },
+  "news_item_trans_desc": "Xa non precisa facer clic nos botóns de sincronización manual; O novo motor encárgase de subir e baixar automaticamente.",
+  "@news_item_trans_desc": {
+    "description": "news_item_trans_desc"
+  },
+  "news_dialog_section_friends": "Amigos e xestión de contas:",
+  "@news_dialog_section_friends": {
+    "description": "news_dialog_section_friends"
+  },
+  "news_dialog_friends_desc": "Para engadir amigos, aceptar solicitudes ou xestionar o teu perfil de seguranza, utiliza Joss Red nas súas plataformas oficiais:",
+  "@news_dialog_friends_desc": {
+    "description": "news_dialog_friends_desc"
+  },
+  "news_btn_app": "Aplicación Joss Red (Play Store)",
+  "@news_btn_app": {
+    "description": "news_btn_app"
+  },
+  "news_btn_web": "Joss Red Web",
+  "@news_btn_web": {
+    "description": "news_btn_web"
+  },
+  "news_btn_dismiss": "Entendido",
+  "@news_btn_dismiss": {
+    "description": "news_btn_dismiss"
+  },
+  "settings_appearance_desc": "Animacións de tema, linguaxe e interface.",
+  "@settings_appearance_desc": {
+    "description": "settings_appearance_desc"
+  },
+  "settings_content_desc": "Descubra filtros, integración con Piped e cachés.",
+  "@settings_content_desc": {
+    "description": "settings_content_desc"
+  },
+  "settings_playback_desc": "Calidade de transmisión, normalización, silencios e batería.",
+  "@settings_playback_desc": {
+    "description": "settings_playback_desc"
+  },
+  "settings_downloads_desc": "Descargas e almacenamento",
+  "@settings_downloads_desc": {
+    "description": "settings_downloads_desc"
+  },
+  "settings_downloads_sub": "Formatos de audio, cartafoles e descargas automáticas.",
+  "@settings_downloads_sub": {
+    "description": "settings_downloads_sub"
+  },
+  "settings_account_desc": "Conta e sincronización",
+  "@settings_account_desc": {
+    "description": "settings_account_desc"
+  },
+  "settings_account_sub": "Modo nube, copias de seguridade, lista de amigos e migracións.",
+  "@settings_account_sub": {
+    "description": "settings_account_sub"
+  },
+  "settings_about_desc": "Sobre Estrella Music",
+  "@settings_about_desc": {
+    "description": "settings_about_desc"
+  },
+  "settings_about_sub": "Versión, proxecto de código aberto e GitHub.",
+  "@settings_about_sub": {
+    "description": "settings_about_sub"
+  },
+  "settings_local_cloud_title": "Modo local / EMusic Cloud",
+  "@settings_local_cloud_title": {
+    "description": "settings_local_cloud_title"
+  },
+  "settings_local_cloud_desc": "Escolle, migra ou revisa o estado de sincronización con Joss Red.",
+  "@settings_local_cloud_desc": {
+    "description": "settings_local_cloud_desc"
+  },
+  "settings_my_friends": "meus amigos",
+  "@settings_my_friends": {
+    "description": "settings_my_friends"
+  },
+  "settings_my_friends_desc": "Xestiona os teus amigos de Joss Red directamente.",
+  "@settings_my_friends_desc": {
+    "description": "settings_my_friends_desc"
+  },
+  "settings_refresh_visitor_title": "Actualizar ID (ID de visitante)",
+  "@settings_refresh_visitor_title": {
+    "description": "settings_refresh_visitor_title"
+  },
+  "settings_refresh_visitor_desc": "Rexenera o teu ID de YouTube Music se o contido de Discover non se carga.",
+  "@settings_refresh_visitor_desc": {
+    "description": "settings_refresh_visitor_desc"
+  },
+  "settings_visitor_updated": "Identificador actualizado",
+  "@settings_visitor_updated": {
+    "description": "settings_visitor_updated"
+  },
+  "settings_visitor_updated_desc": "Xerouse correctamente un novo ID de visitante.",
+  "@settings_visitor_updated_desc": {
+    "description": "settings_visitor_updated_desc"
+  },
+  "settings_visitor_error": "Erro",
+  "@settings_visitor_error": {
+    "description": "settings_visitor_error"
+  },
+  "settings_visitor_error_desc": "Non se puido xerar un novo identificador. Téntao de novo máis tarde.",
+  "@settings_visitor_error_desc": {
+    "description": "settings_visitor_error_desc"
+  },
+  "settings_visitor_exception": "Produciuse un erro ao rexenerar: {error}",
+  "@settings_visitor_exception": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    },
+    "description": "settings_visitor_exception"
+  },
+  "migratedLibrary": "Biblioteca migrada",
+  "@migratedLibrary": {
+    "description": "migratedLibrary"
+  },
+  "noSongsInCollection": "Non hai cancións nesta colección",
+  "@noSongsInCollection": {
+    "description": "noSongsInCollection"
+  },
+  "startupScreen": "Abrir ao iniciar",
+  "@startupScreen": {
+    "description": "startupScreen"
+  },
+  "startupScreenDescription": "Escolle primeiro a sección que estrea Estrella Music",
+  "@startupScreenDescription": {
+    "description": "startupScreenDescription"
+  },
+  "friends": "Amigos",
+  "@friends": {
+    "description": "friends"
+  },
+  "dailyDiscover": "Descubrimento diario",
+  "@dailyDiscover": {
+    "description": "dailyDiscover"
+  },
+  "keepListening": "segue escoitando",
+  "@keepListening": {
+    "description": "keepListening"
+  },
+  "similarToTitle": "Similar a {title}",
+  "@similarToTitle": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    },
+    "description": "similarToTitle"
+  },
+  "pipedPlaylistDescription": "Lista de reprodución canalizada",
+  "@pipedPlaylistDescription": {
+    "description": "pipedPlaylistDescription"
+  },
+  "collaborativePlaylistDescription": "Lista de reprodución colaborativa",
+  "@collaborativePlaylistDescription": {
+    "description": "collaborativePlaylistDescription"
+  },
+  "libraryPlaylistDescription": "Lista de reprodución da biblioteca",
+  "@libraryPlaylistDescription": {
+    "description": "libraryPlaylistDescription"
+  },
+  "untitledSong": "Canción sen título",
+  "@untitledSong": {
+    "description": "untitledSong"
+  },
+  "migratedPlaylist": "Lista de reprodución migrada",
+  "@migratedPlaylist": {
+    "description": "migratedPlaylist"
+  },
+  "migratedAlbum": "Álbum migrado",
+  "@migratedAlbum": {
+    "description": "migratedAlbum"
+  },
+  "songsImportedFromJossMusic": "Cancións importadas de Joss Music Kotlin",
+  "@songsImportedFromJossMusic": {
+    "description": "songsImportedFromJossMusic"
+  },
+  "importedFromJossMusic": "Importado de Joss Music Kotlin",
+  "@importedFromJossMusic": {
+    "description": "importedFromJossMusic"
+  },
+  "syncLocalModeActive": "Modo local activo",
+  "@syncLocalModeActive": {
+    "description": "syncLocalModeActive"
+  },
+  "syncCloudPending": "Modo nube activo. Sincronización pendente.",
+  "@syncCloudPending": {
+    "description": "syncCloudPending"
+  },
+  "syncCloudDownloadingExisting": "Modo nube activado. Descarga da biblioteca existente.",
+  "@syncCloudDownloadingExisting": {
+    "description": "syncCloudDownloadingExisting"
+  },
+  "syncCloudMigrationComplete": "Modo nube activado. Biblioteca migrada.",
+  "@syncCloudMigrationComplete": {
+    "description": "syncCloudMigrationComplete"
+  },
+  "syncLocalDeviceOnly": "Os teus datos só se conservan neste dispositivo.",
+  "@syncLocalDeviceOnly": {
+    "description": "syncLocalDeviceOnly"
+  },
+  "syncDownloading": "Descargando cambios de EMusic...",
+  "@syncDownloading": {
+    "description": "syncDownloading"
+  },
+  "syncDownloadFailed": "Produciuse un erro ao descargar a sincronización.",
+  "@syncDownloadFailed": {
+    "description": "syncDownloadFailed"
+  },
+  "syncLocalChangesFirst": "Hai novos cambios locais. Cargaranse antes da descarga.",
+  "@syncLocalChangesFirst": {
+    "description": "syncLocalChangesFirst"
+  },
+  "syncLibrarySynced": "Biblioteca sincronizada.",
+  "@syncLibrarySynced": {
+    "description": "syncLibrarySynced"
+  },
+  "syncOfflinePending": "Sen conexión. Os cambios están pendentes.",
+  "@syncOfflinePending": {
+    "description": "syncOfflinePending"
+  },
+  "syncLibraryUpToDate": "Biblioteca actualizada.",
+  "@syncLibraryUpToDate": {
+    "description": "syncLibraryUpToDate"
+  },
+  "syncChangesSynced": "{count} cambios sincronizados.",
+  "@syncChangesSynced": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    },
+    "description": "syncChangesSynced"
+  },
+  "syncUploading": "Cargando cambios en EMusic...",
+  "@syncUploading": {
+    "description": "syncUploading"
+  },
+  "syncUploadSuccessWs": "Cambios cargados correctamente (WS).",
+  "@syncUploadSuccessWs": {
+    "description": "syncUploadSuccessWs"
+  },
+  "syncUploadWsRetry": "Non se puido cargar usando WS. Retentarase máis tarde.",
+  "@syncUploadWsRetry": {
+    "description": "syncUploadWsRetry"
+  },
+  "syncUploadSuccess": "Cambios cargados correctamente.",
+  "@syncUploadSuccess": {
+    "description": "syncUploadSuccess"
+  },
+  "syncUploadRetry": "Non se puido levantar. Retentarase máis tarde.",
+  "@syncUploadRetry": {
+    "description": "syncUploadRetry"
+  },
+  "syncOfflineRetry": "Sen conexión. Os cambios gardáronse para tentalo de novo.",
+  "@syncOfflineRetry": {
+    "description": "syncOfflineRetry"
+  },
+  "syncUnconfirmedRetry": "EMusic non confirmou todos os cambios. Volveranse a probar.",
+  "@syncUnconfirmedRetry": {
+    "description": "syncUnconfirmedRetry"
+  },
+  "syncChangesConfirmed": "{count} cambios comprometidos.",
+  "@syncChangesConfirmed": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    },
+    "description": "syncChangesConfirmed"
+  },
+  "migrationAlreadyRunning": "Xa hai unha migración en curso.",
+  "@migrationAlreadyRunning": {
+    "description": "migrationAlreadyRunning"
+  },
+  "migrationLoginRequired": "Inicia sesión en Joss Red antes de migrar.",
+  "@migrationLoginRequired": {
+    "description": "migrationLoginRequired"
+  },
+  "migrationCheckingCloud": "Comprobando se EMusic Cloud xa ten unha biblioteca...",
+  "@migrationCheckingCloud": {
+    "description": "migrationCheckingCloud"
+  },
+  "cloudLibraryFoundDeviceWillDownload": "Atopouse unha biblioteca na nube. Este dispositivo descargarao sen sobreescribilo.",
+  "@cloudLibraryFoundDeviceWillDownload": {
+    "description": "cloudLibraryFoundDeviceWillDownload"
+  },
+  "cloudLibraryFound": "Atopouse a biblioteca na nube.",
+  "@cloudLibraryFound": {
+    "description": "cloudLibraryFound"
+  },
+  "migrationCreatingBackup": "Creando unha copia de seguranza local antes de conectar a nube...",
+  "@migrationCreatingBackup": {
+    "description": "migrationCreatingBackup"
+  },
+  "migrationAnalyzingLocal": "Analizando a biblioteca local...",
+  "@migrationAnalyzingLocal": {
+    "description": "migrationAnalyzingLocal"
+  },
+  "migrationPreparingCloud": "Preparando a migración en EMusic Cloud...",
+  "@migrationPreparingCloud": {
+    "description": "migrationPreparingCloud"
+  },
+  "migrationStartFailed": "EMusic Cloud non puido iniciar a migración.",
+  "@migrationStartFailed": {
+    "description": "migrationStartFailed"
+  },
+  "migrationUploadingData": "Cargando listas de reprodución, favoritos e historial...",
+  "@migrationUploadingData": {
+    "description": "migrationUploadingData"
+  },
+  "migrationUploadIncomplete": "Non se puideron cargar todos os datos. Mantemos o teu apoio local.",
+  "@migrationUploadIncomplete": {
+    "description": "migrationUploadIncomplete"
+  },
+  "migrationVerifyingIntegrity": "Verificando a integridade en EMusic Cloud...",
+  "@migrationVerifyingIntegrity": {
+    "description": "migrationVerifyingIntegrity"
+  },
+  "migrationValidationFailed": "EMusic Cloud non puido validar a migración.",
+  "@migrationValidationFailed": {
+    "description": "migrationValidationFailed"
+  },
+  "cloudModeReadyOfflineCache": "O modo nube está listo. Este dispositivo funcionará como caché sen conexión.",
+  "@cloudModeReadyOfflineCache": {
+    "description": "cloudModeReadyOfflineCache"
+  },
+  "migrationCompleted": "Migración completada.",
+  "@migrationCompleted": {
+    "description": "migrationCompleted"
+  },
+  "migrationFailedLocalPreserved": "Fallou a migración. Non se modificaron os teus datos locais.",
+  "@migrationFailedLocalPreserved": {
+    "description": "migrationFailedLocalPreserved"
+  },
+  "sessionExpiredLoginAgain": "A túa sesión caducou. Inicia sesión de novo.",
+  "@sessionExpiredLoginAgain": {
+    "description": "sessionExpiredLoginAgain"
+  },
+  "selectedFileNotFound": "Non se atopou o ficheiro seleccionado.",
+  "@selectedFileNotFound": {
+    "description": "selectedFileNotFound"
+  },
+  "genericAlbum": "Álbum",
+  "@genericAlbum": {
+    "description": "genericAlbum"
+  },
+  "friendsLoginRequired": "Inicia sesión para buscar amigos.",
+  "@friendsLoginRequired": {
+    "description": "friendsLoginRequired"
+  },
+  "invalidSessionToken": "A sesión non contén un token válido.",
+  "@invalidSessionToken": {
+    "description": "invalidSessionToken"
+  },
+  "userSearchFailed": "Non se puideron buscar usuarios ({statusCode}).",
+  "@userSearchFailed": {
+    "placeholders": {
+      "statusCode": {
+        "type": "int"
+      }
+    },
+    "description": "userSearchFailed"
+  },
+  "invalidServerResponse": "Resposta do servidor non válida.",
+  "@invalidServerResponse": {
+    "description": "invalidServerResponse"
+  },
+  "userListMissing": "A resposta non contén unha lista de usuarios.",
+  "@userListMissing": {
+    "description": "userListMissing"
+  },
+  "playlistCollaboratorsTitle": "Colaboradores da lista de reprodución",
+  "@playlistCollaboratorsTitle": {
+    "description": "playlistCollaboratorsTitle"
+  },
+  "collaboratorsInstruction": "Selecciona os amigos que poderán ver e editar esta lista de reprodución:",
+  "@collaboratorsInstruction": {
+    "description": "collaboratorsInstruction"
+  },
+  "noJossRedFriends": "Non tes amigos engadidos en Joss Red.",
+  "@noJossRedFriends": {
+    "description": "noJossRedFriends"
+  },
+  "friendFallback": "Amigo",
+  "@friendFallback": {
+    "description": "friendFallback"
+  },
+  "collaboratorsUpdated": "Colaboradores actualizados correctamente.",
+  "@collaboratorsUpdated": {
+    "description": "collaboratorsUpdated"
+  },
+  "save": "Manteña",
+  "@save": {
+    "description": "save"
+  },
+  "manageCollaborators": "Xestionar colaboradores (amigos)",
+  "@manageCollaborators": {
+    "description": "manageCollaborators"
+  },
+  "done": "Listo",
+  "@done": {
+    "description": "done"
+  },
+  "notAuthenticated": "Non autenticado",
+  "@notAuthenticated": {
+    "description": "notAuthenticated"
+  },
+  "genericError": "Erro",
+  "@genericError": {
+    "description": "genericError"
+  },
+  "friendRequestSent": "Solicitude de amizade enviada",
+  "@friendRequestSent": {
+    "description": "friendRequestSent"
+  },
+  "friendRequestAccepted": "Aceptouse a solicitude de amizade",
+  "@friendRequestAccepted": {
+    "description": "friendRequestAccepted"
+  },
+  "friendshipRemoved": "A amizade eliminada",
+  "@friendshipRemoved": {
+    "description": "friendshipRemoved"
+  },
+  "userBlocked": "Usuario bloqueado",
+  "@userBlocked": {
+    "description": "userBlocked"
+  },
+  "userUnblocked": "Usuario desbloqueado",
+  "@userUnblocked": {
+    "description": "userUnblocked"
+  },
+  "artistsByTaste": "Segundo os teus gustos",
+  "@artistsByTaste": {
+    "description": "artistsByTaste"
+  },
+  "followedArtists": "seguido",
+  "@followedArtists": {
+    "description": "followedArtists"
+  },
+  "recommendedArtists": "Recomendado",
+  "@recommendedArtists": {
+    "description": "recommendedArtists"
+  },
+  "albumsByTaste": "Segundo os teus gustos",
+  "@albumsByTaste": {
+    "description": "albumsByTaste"
+  },
+  "savedAlbums": "Gardado",
+  "@savedAlbums": {
+    "description": "savedAlbums"
+  },
+  "recommendedAlbums": "Recomendado",
+  "@recommendedAlbums": {
+    "description": "recommendedAlbums"
+  },
+  "downloadNotificationChannelName": "descargas de música",
+  "@downloadNotificationChannelName": {
+    "description": "downloadNotificationChannelName"
+  },
+  "downloadNotificationChannelDescription": "Mantén as túas descargas de música activas en segundo plano.",
+  "@downloadNotificationChannelDescription": {
+    "description": "downloadNotificationChannelDescription"
+  },
+  "downloadNotificationTitle": "Descargando música",
+  "@downloadNotificationTitle": {
+    "description": "downloadNotificationTitle"
+  },
+  "downloadNotificationPreparing": "Preparando as túas descargas...",
+  "@downloadNotificationPreparing": {
+    "description": "downloadNotificationPreparing"
+  },
+  "downloadNotificationSong": "Descargando: {songTitle}",
+  "@downloadNotificationSong": {
+    "placeholders": {
+      "songTitle": {
+        "type": "String"
+      }
+    },
+    "description": "downloadNotificationSong"
+  },
+  "syncCloudModeActive": "Modo nube activo",
+  "@syncCloudModeActive": {
+    "description": "syncCloudModeActive"
+  },
+  "permissionsConsentTitle": "Permisos para comezar",
+  "@permissionsConsentTitle": {
+    "description": "permissionsConsentTitle"
+  },
+  "permissionsConsentDescription": "Estrella Music necesita estes permisos para xestionar a túa música e ofrecer todas as funcións de reprodución.",
+  "@permissionsConsentDescription": {
+    "description": "permissionsConsentDescription"
+  },
+  "permissionsStorageTitle": "Música e almacenamento",
+  "@permissionsStorageTitle": {
+    "description": "permissionsStorageTitle"
+  },
+  "permissionsStorageDescription": "Permítelle reproducir música, gardar descargas, exportar listas de reprodución e preparar actualizacións.",
+  "@permissionsStorageDescription": {
+    "description": "permissionsStorageDescription"
+  },
+  "permissionsNotificationsTitle": "Notificacións",
+  "@permissionsNotificationsTitle": {
+    "description": "permissionsNotificationsTitle"
+  },
+  "permissionsNotificationsDescription": "Mostra os controis de reprodución, o progreso da descarga e avisos importantes das aplicacións.",
+  "@permissionsNotificationsDescription": {
+    "description": "permissionsNotificationsDescription"
+  },
+  "permissionsMicrophoneTitle": "Micrófono",
+  "@permissionsMicrophoneTitle": {
+    "description": "permissionsMicrophoneTitle"
+  },
+  "permissionsMicrophoneDescription": "Úsase só cando decide identificar unha canción que está a tocar ao seu redor.",
+  "@permissionsMicrophoneDescription": {
+    "description": "permissionsMicrophoneDescription"
+  },
+  "permissionsContinueButton": "Concede os permisos necesarios",
+  "@permissionsContinueButton": {
+    "description": "permissionsContinueButton"
+  },
+  "permissionsRequiredNotice": "Os tres permisos son necesarios para continuar. Podes cambialos máis tarde na configuración do sistema.",
+  "@permissionsRequiredNotice": {
+    "description": "permissionsRequiredNotice"
+  },
+  "permissionsAllow": "Permitir",
+  "@permissionsAllow": {
+    "description": "permissionsAllow"
+  },
+  "permissionsOpenSettings": "Configuración",
+  "@permissionsOpenSettings": {
+    "description": "permissionsOpenSettings"
+  },
+  "auth_2fa_title": "Autenticación de dous factores",
+  "@auth_2fa_title": {
+    "description": "auth_2fa_title"
+  },
+  "auth_2fa_subtitle": "Introduce o código de 6 díxitos da túa aplicación de autenticación. Este acceso caduca en 5 minutos.",
+  "@auth_2fa_subtitle": {
+    "description": "auth_2fa_subtitle"
+  },
+  "auth_2fa_code": "Código de autenticación",
+  "@auth_2fa_code": {
+    "description": "auth_2fa_code"
+  },
+  "auth_2fa_verify": "Comproba e continúa",
+  "@auth_2fa_verify": {
+    "description": "auth_2fa_verify"
+  },
+  "auth_2fa_invalid": "Introduce un código válido de 6 díxitos ou inicia sesión de novo.",
+  "@auth_2fa_invalid": {
+    "description": "auth_2fa_invalid"
+  },
+  "exportPlaylistCsv": "Exportar lista de reprodución como CSV",
+  "@exportPlaylistCsv": {
+    "description": "exportPlaylistCsv"
+  },
+  "exportPlaylistJson": "Exportar lista de reprodución a JSON",
+  "@exportPlaylistJson": {
+    "description": "exportPlaylistJson"
+  },
+  "exportPlaylistJsonSubtitle": "Este formato pódese importar",
+  "@exportPlaylistJsonSubtitle": {
+    "description": "exportPlaylistJsonSubtitle"
+  },
+  "exportPlaylistCsvSubtitle": "Non se pode importar aquí",
+  "@exportPlaylistCsvSubtitle": {
+    "description": "exportPlaylistCsvSubtitle"
+  },
+  "exportToYouTubeMusic": "Exportar música a Youtube",
+  "@exportToYouTubeMusic": {
+    "description": "exportToYouTubeMusic"
+  },
+  "exportToYouTubeMusicSubtitle": "Empuxará a túa lista de reprodución (cancións < 50) á cola actual, non esquezas engadila á lista de reprodución/gardala despois de abrila en YtMusic",
+  "@exportToYouTubeMusicSubtitle": {
+    "description": "exportToYouTubeMusicSubtitle"
+  },
+  "linkCopied": "A ligazón copiouse no portapapeis",
+  "@linkCopied": {
+    "description": "linkCopied"
+  },
+  "lyrics": "Letras",
+  "@lyrics": {
+    "description": "lyrics"
+  },
+  "no": "Non",
+  "@no": {
+    "description": "no"
+  },
+  "podcasts": "Podcasts",
+  "@podcasts": {
+    "description": "podcasts"
+  },
+  "episodes": "Episodios",
+  "@episodes": {
+    "description": "episodes"
+  },
+  "profiles": "Perfís",
+  "@profiles": {
+    "description": "profiles"
+  },
+  "addToLibrary": "Engadir á biblioteca",
+  "@addToLibrary": {
+    "description": "addToLibrary"
+  },
+  "removeFromLibrary": "Eliminar da biblioteca",
+  "@removeFromLibrary": {
+    "description": "removeFromLibrary"
+  },
+  "play": "Reproducir",
+  "@play": {
+    "description": "play"
+  },
+  "enqueueAlbumSongs": "Engade cancións do álbum á cola",
+  "@enqueueAlbumSongs": {
+    "description": "enqueueAlbumSongs"
+  },
+  "downloadAlbumSongs": "Descargar cancións do álbum",
+  "@downloadAlbumSongs": {
+    "description": "downloadAlbumSongs"
+  },
+  "shareAlbum": "Compartir álbum",
+  "@shareAlbum": {
+    "description": "shareAlbum"
+  },
+  "imported": "Importado",
+  "@imported": {
+    "description": "imported"
+  },
+  "importedPlaylist": "Lista de reprodución importada",
+  "@importedPlaylist": {
+    "description": "importedPlaylist"
+  },
+  "permissionDenied": "permiso denegado",
+  "@permissionDenied": {
+    "description": "permissionDenied"
+  },
+  "enqueueSongs": "Engade cancións á cola",
+  "@enqueueSongs": {
+    "description": "enqueueSongs"
+  },
+  "shuffle": "Aleatorio",
+  "@shuffle": {
+    "description": "shuffle"
+  },
+  "downloadPlaylist": "Descargar lista de reprodución",
+  "@downloadPlaylist": {
+    "description": "downloadPlaylist"
+  },
+  "syncPlaylistSongs": "Sincroniza cancións da lista de reprodución",
+  "@syncPlaylistSongs": {
+    "description": "syncPlaylistSongs"
+  },
+  "blacklistPipedPlaylist": "Lista negra de reprodución",
+  "@blacklistPipedPlaylist": {
+    "description": "blacklistPipedPlaylist"
+  },
+  "sharePlaylist": "Compartir lista de reprodución",
+  "@sharePlaylist": {
+    "description": "sharePlaylist"
+  },
+  "playlist": "Lista de reprodución",
+  "@playlist": {
+    "description": "playlist"
+  },
+  "sortByName": "Ordenar por nome",
+  "@sortByName": {
+    "description": "sortByName"
+  },
+  "sortByDate": "Ordenar por data",
+  "@sortByDate": {
+    "description": "sortByDate"
+  },
+  "sortByDuration": "Ordenar por duración",
+  "@sortByDuration": {
+    "description": "sortByDuration"
+  },
+  "sortAscendNDescend": "Ordenar ascendente/descendente",
+  "@sortAscendNDescend": {
+    "description": "sortAscendNDescend"
+  },
+  "migration_summary_start": "A migración completouse desde {source}.",
+  "@migration_summary_start": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      }
+    },
+    "description": "migration_summary_start"
+  },
+  "migration_summary_playlists": "Listas de reprodución: {count}",
+  "@migration_summary_playlists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_playlists"
+  },
+  "migration_summary_songs": "Cancións: {count}",
+  "@migration_summary_songs": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_songs"
+  },
+  "migration_summary_favorites": "Favoritos: {count}",
+  "@migration_summary_favorites": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_favorites"
+  },
+  "migration_summary_albums": "Álbums: {count}",
+  "@migration_summary_albums": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_albums"
+  },
+  "migration_summary_artists": "Artistas: {count}",
+  "@migration_summary_artists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_artists"
+  },
+  "migration_select_file_dialog": "Seleccione song.db ou unha copia de seguridade .backup",
+  "@migration_select_file_dialog": {
+    "description": "migration_select_file_dialog"
+  },
+  "migration_success": "A migración completouse correctamente.",
+  "@migration_success": {
+    "description": "migration_success"
+  },
+  "backup_select_folder_dialog": "Seleccione o cartafol para a copia de seguridade",
+  "@backup_select_folder_dialog": {
+    "description": "backup_select_folder_dialog"
+  },
+  "restore_select_file_dialog": "Seleccione o ficheiro de copia de seguridade",
+  "@restore_select_file_dialog": {
+    "description": "restore_select_file_dialog"
+  },
+  "auth_hint_email": "nome@mail.com",
+  "@auth_hint_email": {
+    "description": "auth_hint_email"
+  },
+  "auth_error_invalid_email": "Introduce un correo electrónico válido.",
+  "@auth_error_invalid_email": {
+    "description": "auth_error_invalid_email"
+  },
+  "settings_cloud_backup_dialog_desc": "Carga unha copia de seguranza .hmb da aplicación ao servidor e, se é necesario, restaura calquera das copias de seguridade gardadas.",
+  "@settings_cloud_backup_dialog_desc": {
+    "description": "settings_cloud_backup_dialog_desc"
+  },
+  "delete": "Eliminar",
+  "@delete": {
+    "description": "delete"
+  },
+  "in_app_storage": "Directorio de almacenamento interno",
+  "@in_app_storage": {
+    "description": "in_app_storage"
+  },
+  "auth_brand_description_1": "Traemos o inicio de sesión, o rexistro e a recuperación do contrasinal do proxecto anterior, adaptado para esta aplicación de música.",
+  "@auth_brand_description_1": {
+    "description": "auth_brand_description_1"
+  },
+  "auth_brand_description_2": "A túa sesión vive nun almacenamento seguro e validase co mesmo backend que xa estabas usando.",
+  "@auth_brand_description_2": {
+    "description": "auth_brand_description_2"
+  },
+  "auth_brand_not_configured": "O ficheiro .env debe configurarse para conectar o backend de autenticación.",
+  "@auth_brand_not_configured": {
+    "description": "auth_brand_not_configured"
+  },
+  "auth_forgot_password_subtitle": "Enviarémosche as instrucións ao correo electrónico da túa conta.",
+  "@auth_forgot_password_subtitle": {
+    "description": "auth_forgot_password_subtitle"
+  },
+  "auth_btn_send_email": "Enviar correo",
+  "@auth_btn_send_email": {
+    "description": "auth_btn_send_email"
+  },
+  "auth_error_not_configured": "Falta o backend de autenticación para configurarse no ficheiro .env.",
+  "@auth_error_not_configured": {
+    "description": "auth_error_not_configured"
+  },
+  "auth_error_invalid_credentials": "Correo electrónico ou contrasinal incorrectos.",
+  "@auth_error_invalid_credentials": {
+    "description": "auth_error_invalid_credentials"
+  },
+  "auth_error_not_verified": "A túa conta aínda non está verificada.",
+  "@auth_error_not_verified": {
+    "description": "auth_error_not_verified"
+  },
+  "auth_error_unknown": "Non foi posible completar a operación.",
+  "@auth_error_unknown": {
+    "description": "auth_error_unknown"
+  },
+  "auth_register_success": "A conta creouse correctamente.",
+  "@auth_register_success": {
+    "description": "auth_register_success"
+  },
+  "auth_register_error": "Non se puido crear a conta.",
+  "@auth_register_error": {
+    "description": "auth_register_error"
+  },
+  "auth_recovery_email_sent": "Correo electrónico enviado.",
+  "@auth_recovery_email_sent": {
+    "description": "auth_recovery_email_sent"
+  },
+  "auth_recovery_email_error": "Non foi posible enviar o correo electrónico.",
+  "@auth_recovery_email_error": {
+    "description": "auth_recovery_email_error"
+  },
+  "latestVersion": "Última versión dispoñible",
+  "@latestVersion": {
+    "description": "latestVersion"
+  },
+  "updateApp": "Aplicación de actualización",
+  "@updateApp": {
+    "description": "updateApp"
+  },
+  "loadInfoUpdate": "Non se puido cargar a información de actualización",
+  "@loadInfoUpdate": {
+    "description": "loadInfoUpdate"
+  },
+  "infoNotAvailable": "Información non dispoñible",
+  "@infoNotAvailable": {
+    "description": "infoNotAvailable"
+  },
+  "developedBy": "Desenvolvido e mantido por Joss Estrada (JOSPROX)",
+  "@developedBy": {
+    "description": "developedBy"
+  },
+  "copyrightNotice": "© 2026 JOSPOX. Licenza GPL v3.0",
+  "@copyrightNotice": {
+    "description": "copyrightNotice"
+  },
+  "helloWorld": "Ola mundo",
+  "@helloWorld": {
+    "description": "Este texto es opcional"
+  },
+  "removeFromCache": "Eliminar da caché",
+  "@removeFromCache": {
+    "description": "removeFromCache"
+  },
+  "quickPics": "Selección rápida",
+  "@quickPics": {
+    "description": "quickPics"
+  },
+  "topMusicVid": "Principais vídeos musicais",
+  "@topMusicVid": {
+    "description": "topMusicVid"
   }
 }

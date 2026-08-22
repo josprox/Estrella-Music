@@ -1978,5 +1978,323 @@
   "auth_2fa_invalid": "একটি বৈধ 6-সংখ্যার কোড লিখুন বা আবার সাইন ইন করুন৷",
   "@auth_2fa_invalid": {
     "description": "auth_2fa_invalid"
+  },
+  "backupSettingsAndPlaylists": "ব্যাকআপ সেটিংস এবং প্লেলিস্ট",
+  "@backupSettingsAndPlaylists": {
+    "description": "backupSettingsAndPlaylists"
+  },
+  "restoreSettingsAndPlaylists": "সেটিংস এবং প্লেলিস্ট পুনরুদ্ধার করুন",
+  "@restoreSettingsAndPlaylists": {
+    "description": "restoreSettingsAndPlaylists"
+  },
+  "helloWorld": "হ্যালো বিশ্ব",
+  "@helloWorld": {
+    "description": "Este texto es opcional"
+  },
+  "removeFromCache": "ক্যাশে থেকে সরান",
+  "@removeFromCache": {
+    "description": "removeFromCache"
+  },
+  "quickPics": "দ্রুত নির্বাচন",
+  "@quickPics": {
+    "description": "quickPics"
+  },
+  "topMusicVid": "সেরা মিউজিক ভিডিও",
+  "@topMusicVid": {
+    "description": "topMusicVid"
+  },
+  "exportPlaylistCsv": "CSV হিসাবে প্লেলিস্ট রপ্তানি করুন",
+  "@exportPlaylistCsv": {
+    "description": "exportPlaylistCsv"
+  },
+  "exportPlaylistJson": "JSON-এ প্লেলিস্ট রপ্তানি করুন",
+  "@exportPlaylistJson": {
+    "description": "exportPlaylistJson"
+  },
+  "exportPlaylistJsonSubtitle": "এই বিন্যাস আমদানি করা যেতে পারে",
+  "@exportPlaylistJsonSubtitle": {
+    "description": "exportPlaylistJsonSubtitle"
+  },
+  "exportPlaylistCsvSubtitle": "এখানে আমদানি করা যাবে না",
+  "@exportPlaylistCsvSubtitle": {
+    "description": "exportPlaylistCsvSubtitle"
+  },
+  "exportToYouTubeMusic": "Youtube সঙ্গীত রপ্তানি করুন",
+  "@exportToYouTubeMusic": {
+    "description": "exportToYouTubeMusic"
+  },
+  "exportToYouTubeMusicSubtitle": "এটি আপনার প্লেলিস্টকে (গান <50) বর্তমান সারিতে নিয়ে যাবে, YtMusic-এ খোলার পরে প্লেলিস্টে যোগ করতে/সেভ করতে ভুলবেন না",
+  "@exportToYouTubeMusicSubtitle": {
+    "description": "exportToYouTubeMusicSubtitle"
+  },
+  "linkCopied": "ক্লিপবোর্ডে লিঙ্ক কপি করা হয়েছে",
+  "@linkCopied": {
+    "description": "linkCopied"
+  },
+  "lyrics": "চিঠিপত্র",
+  "@lyrics": {
+    "description": "lyrics"
+  },
+  "no": "না",
+  "@no": {
+    "description": "no"
+  },
+  "podcasts": "পডকাস্ট",
+  "@podcasts": {
+    "description": "podcasts"
+  },
+  "episodes": "পর্বগুলি",
+  "@episodes": {
+    "description": "episodes"
+  },
+  "profiles": "প্রোফাইল",
+  "@profiles": {
+    "description": "profiles"
+  },
+  "addToLibrary": "লাইব্রেরিতে যোগ করুন",
+  "@addToLibrary": {
+    "description": "addToLibrary"
+  },
+  "removeFromLibrary": "লাইব্রেরি থেকে মুছুন",
+  "@removeFromLibrary": {
+    "description": "removeFromLibrary"
+  },
+  "play": "খেলা",
+  "@play": {
+    "description": "play"
+  },
+  "enqueueAlbumSongs": "সারিতে অ্যালবাম গান যোগ করুন",
+  "@enqueueAlbumSongs": {
+    "description": "enqueueAlbumSongs"
+  },
+  "downloadAlbumSongs": "অ্যালবাম থেকে গান ডাউনলোড করুন",
+  "@downloadAlbumSongs": {
+    "description": "downloadAlbumSongs"
+  },
+  "shareAlbum": "অ্যালবাম শেয়ার করুন",
+  "@shareAlbum": {
+    "description": "shareAlbum"
+  },
+  "imported": "আমদানিকৃত",
+  "@imported": {
+    "description": "imported"
+  },
+  "importedPlaylist": "আমদানি করা প্লেলিস্ট",
+  "@importedPlaylist": {
+    "description": "importedPlaylist"
+  },
+  "permissionDenied": "অনুমতি অস্বীকার করা হয়েছে",
+  "@permissionDenied": {
+    "description": "permissionDenied"
+  },
+  "enqueueSongs": "সারিতে গান যোগ করুন",
+  "@enqueueSongs": {
+    "description": "enqueueSongs"
+  },
+  "shuffle": "এলোমেলো",
+  "@shuffle": {
+    "description": "shuffle"
+  },
+  "downloadPlaylist": "প্লেলিস্ট ডাউনলোড করুন",
+  "@downloadPlaylist": {
+    "description": "downloadPlaylist"
+  },
+  "syncPlaylistSongs": "প্লেলিস্ট গান সিঙ্ক করুন",
+  "@syncPlaylistSongs": {
+    "description": "syncPlaylistSongs"
+  },
+  "blacklistPipedPlaylist": "প্লেলিস্ট কালো তালিকা",
+  "@blacklistPipedPlaylist": {
+    "description": "blacklistPipedPlaylist"
+  },
+  "sharePlaylist": "প্লেলিস্ট শেয়ার করুন",
+  "@sharePlaylist": {
+    "description": "sharePlaylist"
+  },
+  "playlist": "প্লেলিস্ট",
+  "@playlist": {
+    "description": "playlist"
+  },
+  "sortByName": "নাম অনুসারে সাজান",
+  "@sortByName": {
+    "description": "sortByName"
+  },
+  "sortByDate": "তারিখ অনুসারে সাজান",
+  "@sortByDate": {
+    "description": "sortByDate"
+  },
+  "sortByDuration": "সময়কাল অনুসারে সাজান",
+  "@sortByDuration": {
+    "description": "sortByDuration"
+  },
+  "sortAscendNDescend": "ক্রমবর্ধমান/অবরোহী বাছাই করুন",
+  "@sortAscendNDescend": {
+    "description": "sortAscendNDescend"
+  },
+  "migration_summary_start": "{source} থেকে স্থানান্তর সম্পন্ন হয়েছে৷",
+  "@migration_summary_start": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      }
+    },
+    "description": "migration_summary_start"
+  },
+  "migration_summary_playlists": "প্লেলিস্ট: {count}",
+  "@migration_summary_playlists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_playlists"
+  },
+  "migration_summary_songs": "গান: {count}",
+  "@migration_summary_songs": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_songs"
+  },
+  "migration_summary_favorites": "প্রিয়: {count}",
+  "@migration_summary_favorites": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_favorites"
+  },
+  "migration_summary_albums": "অ্যালবাম: {count}",
+  "@migration_summary_albums": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_albums"
+  },
+  "migration_summary_artists": "শিল্পী: {count}",
+  "@migration_summary_artists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_artists"
+  },
+  "migration_select_file_dialog": "song.db বা একটি ব্যাকআপ .backup নির্বাচন করুন",
+  "@migration_select_file_dialog": {
+    "description": "migration_select_file_dialog"
+  },
+  "migration_success": "স্থানান্তর সফলভাবে সম্পন্ন হয়েছে৷",
+  "@migration_success": {
+    "description": "migration_success"
+  },
+  "backup_select_folder_dialog": "ব্যাকআপের জন্য ফোল্ডার নির্বাচন করুন",
+  "@backup_select_folder_dialog": {
+    "description": "backup_select_folder_dialog"
+  },
+  "restore_select_file_dialog": "ব্যাকআপ ফাইল নির্বাচন করুন",
+  "@restore_select_file_dialog": {
+    "description": "restore_select_file_dialog"
+  },
+  "auth_hint_email": "name@mail.com",
+  "@auth_hint_email": {
+    "description": "auth_hint_email"
+  },
+  "auth_error_invalid_email": "একটি বৈধ ইমেল লিখুন.",
+  "@auth_error_invalid_email": {
+    "description": "auth_error_invalid_email"
+  },
+  "settings_cloud_backup_dialog_desc": "অ্যাপটির একটি .hmb ব্যাকআপ সার্ভারে আপলোড করুন এবং প্রয়োজনে সংরক্ষিত ব্যাকআপগুলির যেকোনো একটি পুনরুদ্ধার করুন।",
+  "@settings_cloud_backup_dialog_desc": {
+    "description": "settings_cloud_backup_dialog_desc"
+  },
+  "delete": "মুছে দিন",
+  "@delete": {
+    "description": "delete"
+  },
+  "in_app_storage": "অভ্যন্তরীণ স্টোরেজ ডিরেক্টরি",
+  "@in_app_storage": {
+    "description": "in_app_storage"
+  },
+  "auth_brand_description_1": "আমরা পূর্ববর্তী প্রকল্প থেকে লগইন, নিবন্ধন এবং পাসওয়ার্ড পুনরুদ্ধার নিয়ে এসেছি, এই সঙ্গীত অ্যাপের জন্য অভিযোজিত।",
+  "@auth_brand_description_1": {
+    "description": "auth_brand_description_1"
+  },
+  "auth_brand_description_2": "আপনার সেশন নিরাপদ সঞ্চয়স্থানে থাকে এবং আপনি ইতিমধ্যেই ব্যবহার করছিলেন একই ব্যাকএন্ডের সাথে যাচাই করা হয়।",
+  "@auth_brand_description_2": {
+    "description": "auth_brand_description_2"
+  },
+  "auth_brand_not_configured": "প্রমাণীকরণ ব্যাকএন্ড সংযোগ করতে .env ফাইলটিকে কনফিগার করতে হবে।",
+  "@auth_brand_not_configured": {
+    "description": "auth_brand_not_configured"
+  },
+  "auth_forgot_password_subtitle": "আমরা আপনাকে আপনার অ্যাকাউন্ট ইমেল নির্দেশাবলী পাঠাব.",
+  "@auth_forgot_password_subtitle": {
+    "description": "auth_forgot_password_subtitle"
+  },
+  "auth_btn_send_email": "মেইল পাঠান",
+  "@auth_btn_send_email": {
+    "description": "auth_btn_send_email"
+  },
+  "auth_error_not_configured": ".env ফাইলে কনফিগার করার জন্য প্রমাণীকরণ ব্যাকএন্ড অনুপস্থিত।",
+  "@auth_error_not_configured": {
+    "description": "auth_error_not_configured"
+  },
+  "auth_error_invalid_credentials": "ভুল ইমেল বা পাসওয়ার্ড।",
+  "@auth_error_invalid_credentials": {
+    "description": "auth_error_invalid_credentials"
+  },
+  "auth_error_not_verified": "আপনার অ্যাকাউন্ট এখনও যাচাই করা হয়নি.",
+  "@auth_error_not_verified": {
+    "description": "auth_error_not_verified"
+  },
+  "auth_error_unknown": "অপারেশন সম্পন্ন করা সম্ভব হয়নি।",
+  "@auth_error_unknown": {
+    "description": "auth_error_unknown"
+  },
+  "auth_register_success": "অ্যাকাউন্ট সফলভাবে তৈরি করা হয়েছে।",
+  "@auth_register_success": {
+    "description": "auth_register_success"
+  },
+  "auth_register_error": "অ্যাকাউন্ট তৈরি করা যায়নি।",
+  "@auth_register_error": {
+    "description": "auth_register_error"
+  },
+  "auth_recovery_email_sent": "ইমেইল পাঠানো হয়েছে।",
+  "@auth_recovery_email_sent": {
+    "description": "auth_recovery_email_sent"
+  },
+  "auth_recovery_email_error": "ইমেইল পাঠানো সম্ভব হয়নি।",
+  "@auth_recovery_email_error": {
+    "description": "auth_recovery_email_error"
+  },
+  "latestVersion": "সর্বশেষ সংস্করণ উপলব্ধ",
+  "@latestVersion": {
+    "description": "latestVersion"
+  },
+  "updateApp": "অ্যাপ্লিকেশন আপডেট করুন",
+  "@updateApp": {
+    "description": "updateApp"
+  },
+  "loadInfoUpdate": "আপডেট তথ্য লোড করা যায়নি",
+  "@loadInfoUpdate": {
+    "description": "loadInfoUpdate"
+  },
+  "infoNotAvailable": "তথ্য পাওয়া যায় না",
+  "@infoNotAvailable": {
+    "description": "infoNotAvailable"
+  },
+  "developedBy": "Joss Estrada (JOSPROX) দ্বারা বিকশিত এবং রক্ষণাবেক্ষণ করা হয়েছে",
+  "@developedBy": {
+    "description": "developedBy"
+  },
+  "copyrightNotice": "© 2026 JOSPROX. GPL লাইসেন্স v3.0",
+  "@copyrightNotice": {
+    "description": "copyrightNotice"
   }
 }

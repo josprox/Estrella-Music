@@ -1850,5 +1850,451 @@
   "auth_2fa_invalid": "ਇੱਕ ਵੈਧ 6-ਅੰਕਾਂ ਵਾਲਾ ਕੋਡ ਦਾਖਲ ਕਰੋ ਜਾਂ ਦੁਬਾਰਾ ਸਾਈਨ ਇਨ ਕਰੋ।",
   "@auth_2fa_invalid": {
     "description": "auth_2fa_invalid"
+  },
+  "album": "ਐਲਬਮ",
+  "@album": {
+    "description": "album"
+  },
+  "reArrangeSongs": "ਗੀਤਾਂ ਨੂੰ ਮੁੜ ਕ੍ਰਮਬੱਧ ਕਰੋ",
+  "@reArrangeSongs": {
+    "description": "reArrangeSongs"
+  },
+  "selectSongs": "ਗੀਤ ਚੁਣੋ",
+  "@selectSongs": {
+    "description": "selectSongs"
+  },
+  "selectAll": "ਸਭ ਚੁਣੋ",
+  "@selectAll": {
+    "description": "selectAll"
+  },
+  "playingfromAlbum": "ਐਲਬਮ ਤੋਂ ਚਲਾਇਆ ਜਾ ਰਿਹਾ ਹੈ",
+  "@playingfromAlbum": {
+    "description": "playingfromAlbum"
+  },
+  "playingfromPlaylist": "ਪਲੇਲਿਸਟ ਤੋਂ ਚੱਲ ਰਿਹਾ ਹੈ",
+  "@playingfromPlaylist": {
+    "description": "playingfromPlaylist"
+  },
+  "playingfromSelection": "ਚੋਣ ਤੋਂ ਖੇਡਣਾ",
+  "@playingfromSelection": {
+    "description": "playingfromSelection"
+  },
+  "resetToDefaultMsg": "ਸੈਟਿੰਗਾਂ ਨੂੰ ਡਿਫੌਲਟ 'ਤੇ ਰੀਸੈਟ ਕਰਨਾ ਪੂਰਾ ਹੋ ਗਿਆ ਹੈ, ਕਿਰਪਾ ਕਰਕੇ ਐਪ ਨੂੰ ਰੀਸਟਾਰਟ ਕਰੋ",
+  "@resetToDefaultMsg": {
+    "description": "resetToDefaultMsg"
+  },
+  "resetToDefaultDes": "ਐਪ ਸੈਟਿੰਗਾਂ ਨੂੰ ਡਿਫੌਲਟ 'ਤੇ ਰੀਸੈਟ ਕਰੋ (ਰੀਸਟਾਰਟ ਦੀ ਲੋੜ ਹੈ)",
+  "@resetToDefaultDes": {
+    "description": "resetToDefaultDes"
+  },
+  "misc": "ਵੱਖ-ਵੱਖ",
+  "@misc": {
+    "description": "misc"
+  },
+  "resetToDefault": "ਡਿਫੌਲਟ ਸੈਟਿੰਗਾਂ ਨੂੰ ਰੀਸਟੋਰ ਕਰੋ",
+  "@resetToDefault": {
+    "description": "resetToDefault"
+  },
+  "autoOpenPlayer": "ਪਲੇਅਰ ਸਕ੍ਰੀਨ ਆਟੋਮੈਟਿਕਲੀ ਖੋਲ੍ਹੋ",
+  "@autoOpenPlayer": {
+    "description": "autoOpenPlayer"
+  },
+  "autoOpenPlayerDes": "ਚਲਾਉਣ ਲਈ ਇੱਕ ਗਾਣਾ ਚੁਣਦੇ ਸਮੇਂ ਪਲੇਅਰ ਦੇ ਪੂਰੀ ਸਕ੍ਰੀਨ 'ਤੇ ਆਟੋਮੈਟਿਕ ਓਪਨਿੰਗ ਨੂੰ ਕਿਰਿਆਸ਼ੀਲ/ਅਕਿਰਿਆਸ਼ੀਲ ਕਰੋ",
+  "@autoOpenPlayerDes": {
+    "description": "autoOpenPlayerDes"
+  },
+  "playingfromArtist": "ਕਲਾਕਾਰ ਤੋਂ ਖੇਡ ਰਿਹਾ ਹੈ",
+  "@playingfromArtist": {
+    "description": "playingfromArtist"
+  },
+  "randomSelection": "ਬੇਤਰਤੀਬ ਚੋਣ",
+  "@randomSelection": {
+    "description": "randomSelection"
+  },
+  "randomRadio": "ਬੇਤਰਤੀਬ ਰੇਡੀਓ",
+  "@randomRadio": {
+    "description": "randomRadio"
+  },
+  "exportPlaylist": "ਪਲੇਲਿਸਟ ਨਿਰਯਾਤ ਕਰੋ",
+  "@exportPlaylist": {
+    "description": "exportPlaylist"
+  },
+  "importPlaylistDesc": "ਆਯਾਤ ਕਰਨ ਲਈ ਪਹਿਲਾਂ ਨਿਰਯਾਤ ਕੀਤੀ ਪਲੇਲਿਸਟ JSON ਫ਼ਾਈਲ ਚੁਣੋ",
+  "@importPlaylistDesc": {
+    "description": "importPlaylistDesc"
+  },
+  "invalidPlaylistFile": "ਅਵੈਧ ਪਲੇਲਿਸਟ ਫਾਈਲ ਬਣਤਰ",
+  "@invalidPlaylistFile": {
+    "description": "invalidPlaylistFile"
+  },
+  "fileNotFound": "ਫਾਈਲ ਨਹੀਂ ਮਿਲੀ",
+  "@fileNotFound": {
+    "description": "fileNotFound"
+  },
+  "exportErrorPermission": "ਨਿਰਯਾਤ ਕਰਨ ਵੇਲੇ ਇਜਾਜ਼ਤ ਅਸਵੀਕਾਰ ਕੀਤੀ ਗਈ",
+  "@exportErrorPermission": {
+    "description": "exportErrorPermission"
+  },
+  "importingPlaylist": "ਪਲੇਲਿਸਟ ਆਯਾਤ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ...",
+  "@importingPlaylist": {
+    "description": "importingPlaylist"
+  },
+  "exportErrorStorage": "ਨਾਕਾਫ਼ੀ ਸਟੋਰੇਜ ਸਪੇਸ",
+  "@exportErrorStorage": {
+    "description": "exportErrorStorage"
+  },
+  "exportingPlaylist": "ਪਲੇਲਿਸਟ ਨਿਰਯਾਤ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ...",
+  "@exportingPlaylist": {
+    "description": "exportingPlaylist"
+  },
+  "playlistExportedMsg": "ਪਲੇਲਿਸਟ ਨੂੰ ਸਫਲਤਾਪੂਰਵਕ ਨਿਰਯਾਤ ਕੀਤਾ ਗਿਆ",
+  "@playlistExportedMsg": {
+    "description": "playlistExportedMsg"
+  },
+  "exportError": "ਪਲੇਲਿਸਟ ਨਿਰਯਾਤ ਕਰਨ ਵਿੱਚ ਤਰੁੱਟੀ",
+  "@exportError": {
+    "description": "exportError"
+  },
+  "exportErrorFormat": "ਪਲੇਲਿਸਟ ਡੇਟਾ ਨੂੰ ਫਾਰਮੈਟ ਕਰਨ ਵਿੱਚ ਤਰੁੱਟੀ",
+  "@exportErrorFormat": {
+    "description": "exportErrorFormat"
+  },
+  "importPlaylist": "ਪਲੇਲਿਸਟ ਆਯਾਤ ਕਰੋ",
+  "@importPlaylist": {
+    "description": "importPlaylist"
+  },
+  "selectFile": "ਫਾਈਲ ਚੁਣੋ",
+  "@selectFile": {
+    "description": "selectFile"
+  },
+  "playlistImportedMsg": "ਪਲੇਲਿਸਟ ਨੂੰ ਸਫਲਤਾਪੂਰਵਕ ਆਯਾਤ ਕੀਤਾ ਗਿਆ",
+  "@playlistImportedMsg": {
+    "description": "playlistImportedMsg"
+  },
+  "importError": "ਪਲੇਲਿਸਟ ਆਯਾਤ ਕਰਨ ਵਿੱਚ ਤਰੁੱਟੀ",
+  "@importError": {
+    "description": "importError"
+  },
+  "importErrorFileAccess": "ਚੁਣੀ ਗਈ ਫ਼ਾਈਲ ਤੱਕ ਪਹੁੰਚ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕੀ",
+  "@importErrorFileAccess": {
+    "description": "importErrorFileAccess"
+  },
+  "importErrorFormat": "ਅਵੈਧ ਫ਼ਾਈਲ ਫਾਰਮੈਟ",
+  "@importErrorFormat": {
+    "description": "importErrorFormat"
+  },
+  "importErrorDatabase": "ਡੇਟਾਬੇਸ ਵਿੱਚ ਸੁਰੱਖਿਅਤ ਕਰਨ ਵਿੱਚ ਗਲਤੀ",
+  "@importErrorDatabase": {
+    "description": "importErrorDatabase"
+  },
+  "importLargeFileNote": "ਨੋਟ: ਵੱਡੀਆਂ ਪਲੇਲਿਸਟਾਂ ਨੂੰ ਆਯਾਤ ਕਰਨ ਵਿੱਚ ਜ਼ਿਆਦਾ ਸਮਾਂ ਲੱਗ ਸਕਦਾ ਹੈ",
+  "@importLargeFileNote": {
+    "description": "importLargeFileNote"
+  },
+  "exportPlaylistCsv": "ਪਲੇਲਿਸਟ ਨੂੰ CSV ਵਜੋਂ ਨਿਰਯਾਤ ਕਰੋ",
+  "@exportPlaylistCsv": {
+    "description": "exportPlaylistCsv"
+  },
+  "exportPlaylistJson": "ਪਲੇਲਿਸਟ ਨੂੰ JSON ਵਿੱਚ ਨਿਰਯਾਤ ਕਰੋ",
+  "@exportPlaylistJson": {
+    "description": "exportPlaylistJson"
+  },
+  "exportPlaylistJsonSubtitle": "ਇਹ ਫਾਰਮੈਟ ਆਯਾਤ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ",
+  "@exportPlaylistJsonSubtitle": {
+    "description": "exportPlaylistJsonSubtitle"
+  },
+  "exportPlaylistCsvSubtitle": "ਇੱਥੇ ਆਯਾਤ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ",
+  "@exportPlaylistCsvSubtitle": {
+    "description": "exportPlaylistCsvSubtitle"
+  },
+  "exportToYouTubeMusic": "ਯੂਟਿਊਬ ਸੰਗੀਤ ਨੂੰ ਨਿਰਯਾਤ ਕਰੋ",
+  "@exportToYouTubeMusic": {
+    "description": "exportToYouTubeMusic"
+  },
+  "exportToYouTubeMusicSubtitle": "ਇਹ ਤੁਹਾਡੀ ਪਲੇਲਿਸਟ (ਗਾਣੇ <50) ਨੂੰ ਮੌਜੂਦਾ ਕਤਾਰ ਵਿੱਚ ਧੱਕ ਦੇਵੇਗਾ, ਇਸਨੂੰ YtMusic ਵਿੱਚ ਖੋਲ੍ਹਣ ਤੋਂ ਬਾਅਦ ਇਸਨੂੰ ਪਲੇਲਿਸਟ ਵਿੱਚ ਜੋੜਨਾ/ਸੇਵ ਕਰਨਾ ਨਾ ਭੁੱਲੋ।",
+  "@exportToYouTubeMusicSubtitle": {
+    "description": "exportToYouTubeMusicSubtitle"
+  },
+  "linkCopied": "ਲਿੰਕ ਕਲਿੱਪਬੋਰਡ 'ਤੇ ਕਾਪੀ ਕੀਤਾ ਗਿਆ",
+  "@linkCopied": {
+    "description": "linkCopied"
+  },
+  "lyrics": "ਅੱਖਰ",
+  "@lyrics": {
+    "description": "lyrics"
+  },
+  "no": "ਨੰ",
+  "@no": {
+    "description": "no"
+  },
+  "podcasts": "ਪੋਡਕਾਸਟ",
+  "@podcasts": {
+    "description": "podcasts"
+  },
+  "episodes": "ਐਪੀਸੋਡ",
+  "@episodes": {
+    "description": "episodes"
+  },
+  "profiles": "ਪ੍ਰੋਫਾਈਲਾਂ",
+  "@profiles": {
+    "description": "profiles"
+  },
+  "addToLibrary": "ਲਾਇਬ੍ਰੇਰੀ ਵਿੱਚ ਸ਼ਾਮਲ ਕਰੋ",
+  "@addToLibrary": {
+    "description": "addToLibrary"
+  },
+  "removeFromLibrary": "ਲਾਇਬ੍ਰੇਰੀ ਤੋਂ ਮਿਟਾਓ",
+  "@removeFromLibrary": {
+    "description": "removeFromLibrary"
+  },
+  "play": "ਖੇਡੋ",
+  "@play": {
+    "description": "play"
+  },
+  "enqueueAlbumSongs": "ਕਤਾਰ ਵਿੱਚ ਐਲਬਮ ਗੀਤ ਸ਼ਾਮਲ ਕਰੋ",
+  "@enqueueAlbumSongs": {
+    "description": "enqueueAlbumSongs"
+  },
+  "downloadAlbumSongs": "ਐਲਬਮ ਤੋਂ ਗੀਤ ਡਾਊਨਲੋਡ ਕਰੋ",
+  "@downloadAlbumSongs": {
+    "description": "downloadAlbumSongs"
+  },
+  "shareAlbum": "ਐਲਬਮ ਸਾਂਝੀ ਕਰੋ",
+  "@shareAlbum": {
+    "description": "shareAlbum"
+  },
+  "imported": "ਆਯਾਤ ਕੀਤਾ",
+  "@imported": {
+    "description": "imported"
+  },
+  "importedPlaylist": "ਆਯਾਤ ਪਲੇਲਿਸਟ",
+  "@importedPlaylist": {
+    "description": "importedPlaylist"
+  },
+  "permissionDenied": "ਇਜਾਜ਼ਤ ਅਸਵੀਕਾਰ ਕੀਤੀ ਗਈ",
+  "@permissionDenied": {
+    "description": "permissionDenied"
+  },
+  "enqueueSongs": "ਕਤਾਰ ਵਿੱਚ ਗੀਤ ਸ਼ਾਮਲ ਕਰੋ",
+  "@enqueueSongs": {
+    "description": "enqueueSongs"
+  },
+  "shuffle": "ਬੇਤਰਤੀਬ",
+  "@shuffle": {
+    "description": "shuffle"
+  },
+  "downloadPlaylist": "ਪਲੇਲਿਸਟ ਡਾਊਨਲੋਡ ਕਰੋ",
+  "@downloadPlaylist": {
+    "description": "downloadPlaylist"
+  },
+  "syncPlaylistSongs": "ਪਲੇਲਿਸਟ ਗੀਤਾਂ ਨੂੰ ਸਿੰਕ ਕਰੋ",
+  "@syncPlaylistSongs": {
+    "description": "syncPlaylistSongs"
+  },
+  "blacklistPipedPlaylist": "ਪਲੇਲਿਸਟ ਬਲੈਕਲਿਸਟ",
+  "@blacklistPipedPlaylist": {
+    "description": "blacklistPipedPlaylist"
+  },
+  "sharePlaylist": "ਪਲੇਲਿਸਟ ਸਾਂਝੀ ਕਰੋ",
+  "@sharePlaylist": {
+    "description": "sharePlaylist"
+  },
+  "playlist": "ਪਲੇਲਿਸਟ",
+  "@playlist": {
+    "description": "playlist"
+  },
+  "sortByName": "ਨਾਮ ਦੁਆਰਾ ਛਾਂਟੋ",
+  "@sortByName": {
+    "description": "sortByName"
+  },
+  "sortByDate": "ਮਿਤੀ ਅਨੁਸਾਰ ਛਾਂਟੋ",
+  "@sortByDate": {
+    "description": "sortByDate"
+  },
+  "sortByDuration": "ਅਵਧੀ ਅਨੁਸਾਰ ਛਾਂਟੋ",
+  "@sortByDuration": {
+    "description": "sortByDuration"
+  },
+  "sortAscendNDescend": "ਚੜ੍ਹਦੇ/ਉਤਰਦੇ ਕ੍ਰਮਬੱਧ ਕਰੋ",
+  "@sortAscendNDescend": {
+    "description": "sortAscendNDescend"
+  },
+  "migration_summary_start": "{source} ਤੋਂ ਮਾਈਗ੍ਰੇਸ਼ਨ ਪੂਰਾ ਹੋਇਆ।",
+  "@migration_summary_start": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      }
+    },
+    "description": "migration_summary_start"
+  },
+  "migration_summary_playlists": "ਪਲੇਲਿਸਟਸ: {count}",
+  "@migration_summary_playlists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_playlists"
+  },
+  "migration_summary_songs": "ਗੀਤ: {count}",
+  "@migration_summary_songs": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_songs"
+  },
+  "migration_summary_favorites": "ਮਨਪਸੰਦ: {count}",
+  "@migration_summary_favorites": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_favorites"
+  },
+  "migration_summary_albums": "ਐਲਬਮਾਂ: {count}",
+  "@migration_summary_albums": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_albums"
+  },
+  "migration_summary_artists": "ਕਲਾਕਾਰ: {count}",
+  "@migration_summary_artists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_artists"
+  },
+  "migration_select_file_dialog": "song.db ਜਾਂ ਬੈਕਅੱਪ .backup ਚੁਣੋ",
+  "@migration_select_file_dialog": {
+    "description": "migration_select_file_dialog"
+  },
+  "migration_success": "ਮਾਈਗ੍ਰੇਸ਼ਨ ਸਫਲਤਾਪੂਰਵਕ ਪੂਰਾ ਹੋਇਆ।",
+  "@migration_success": {
+    "description": "migration_success"
+  },
+  "backup_select_folder_dialog": "ਬੈਕਅੱਪ ਲਈ ਫੋਲਡਰ ਦੀ ਚੋਣ ਕਰੋ",
+  "@backup_select_folder_dialog": {
+    "description": "backup_select_folder_dialog"
+  },
+  "restore_select_file_dialog": "ਬੈਕਅੱਪ ਫਾਇਲ ਦੀ ਚੋਣ ਕਰੋ",
+  "@restore_select_file_dialog": {
+    "description": "restore_select_file_dialog"
+  },
+  "auth_hint_email": "name@mail.com",
+  "@auth_hint_email": {
+    "description": "auth_hint_email"
+  },
+  "auth_error_invalid_email": "ਇੱਕ ਵੈਧ ਈਮੇਲ ਦਾਖਲ ਕਰੋ।",
+  "@auth_error_invalid_email": {
+    "description": "auth_error_invalid_email"
+  },
+  "settings_cloud_backup_dialog_desc": "ਐਪ ਦਾ ਇੱਕ .hmb ਬੈਕਅੱਪ ਸਰਵਰ 'ਤੇ ਅੱਪਲੋਡ ਕਰੋ ਅਤੇ, ਜੇਕਰ ਲੋੜ ਹੋਵੇ, ਤਾਂ ਕਿਸੇ ਵੀ ਸੁਰੱਖਿਅਤ ਕੀਤੇ ਬੈਕਅੱਪ ਨੂੰ ਰੀਸਟੋਰ ਕਰੋ।",
+  "@settings_cloud_backup_dialog_desc": {
+    "description": "settings_cloud_backup_dialog_desc"
+  },
+  "delete": "ਮਿਟਾਓ",
+  "@delete": {
+    "description": "delete"
+  },
+  "in_app_storage": "ਅੰਦਰੂਨੀ ਸਟੋਰੇਜ ਡਾਇਰੈਕਟਰੀ",
+  "@in_app_storage": {
+    "description": "in_app_storage"
+  },
+  "auth_brand_description_1": "ਅਸੀਂ ਇਸ ਸੰਗੀਤ ਐਪ ਲਈ ਅਨੁਕੂਲਿਤ ਪਿਛਲੇ ਪ੍ਰੋਜੈਕਟ ਤੋਂ ਲੌਗਇਨ, ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਅਤੇ ਪਾਸਵਰਡ ਰਿਕਵਰੀ ਲਿਆਏ ਹਾਂ।",
+  "@auth_brand_description_1": {
+    "description": "auth_brand_description_1"
+  },
+  "auth_brand_description_2": "ਤੁਹਾਡਾ ਸੈਸ਼ਨ ਸੁਰੱਖਿਅਤ ਸਟੋਰੇਜ ਵਿੱਚ ਰਹਿੰਦਾ ਹੈ ਅਤੇ ਉਸੇ ਬੈਕਐਂਡ ਨਾਲ ਪ੍ਰਮਾਣਿਤ ਹੁੰਦਾ ਹੈ ਜੋ ਤੁਸੀਂ ਪਹਿਲਾਂ ਹੀ ਵਰਤ ਰਹੇ ਸੀ।",
+  "@auth_brand_description_2": {
+    "description": "auth_brand_description_2"
+  },
+  "auth_brand_not_configured": ".env ਫਾਈਲ ਨੂੰ ਪ੍ਰਮਾਣਿਕਤਾ ਬੈਕਐਂਡ ਨਾਲ ਜੁੜਨ ਲਈ ਸੰਰਚਿਤ ਕਰਨ ਦੀ ਲੋੜ ਹੈ।",
+  "@auth_brand_not_configured": {
+    "description": "auth_brand_not_configured"
+  },
+  "auth_forgot_password_subtitle": "ਅਸੀਂ ਤੁਹਾਨੂੰ ਤੁਹਾਡੇ ਖਾਤੇ ਦੀ ਈਮੇਲ 'ਤੇ ਨਿਰਦੇਸ਼ ਭੇਜਾਂਗੇ।",
+  "@auth_forgot_password_subtitle": {
+    "description": "auth_forgot_password_subtitle"
+  },
+  "auth_btn_send_email": "ਮੇਲ ਭੇਜੋ",
+  "@auth_btn_send_email": {
+    "description": "auth_btn_send_email"
+  },
+  "auth_error_not_configured": ".env ਫਾਈਲ ਵਿੱਚ ਸੰਰਚਿਤ ਕਰਨ ਲਈ ਪ੍ਰਮਾਣਿਕਤਾ ਬੈਕਐਂਡ ਗੁੰਮ ਹੈ।",
+  "@auth_error_not_configured": {
+    "description": "auth_error_not_configured"
+  },
+  "auth_error_invalid_credentials": "ਗਲਤ ਈਮੇਲ ਜਾਂ ਪਾਸਵਰਡ।",
+  "@auth_error_invalid_credentials": {
+    "description": "auth_error_invalid_credentials"
+  },
+  "auth_error_not_verified": "ਤੁਹਾਡਾ ਖਾਤਾ ਅਜੇ ਤਸਦੀਕ ਨਹੀਂ ਹੋਇਆ ਹੈ।",
+  "@auth_error_not_verified": {
+    "description": "auth_error_not_verified"
+  },
+  "auth_error_unknown": "ਓਪਰੇਸ਼ਨ ਪੂਰਾ ਕਰਨਾ ਸੰਭਵ ਨਹੀਂ ਸੀ।",
+  "@auth_error_unknown": {
+    "description": "auth_error_unknown"
+  },
+  "auth_register_success": "ਖਾਤਾ ਸਫਲਤਾਪੂਰਵਕ ਬਣਾਇਆ ਗਿਆ।",
+  "@auth_register_success": {
+    "description": "auth_register_success"
+  },
+  "auth_register_error": "ਖਾਤਾ ਬਣਾਇਆ ਨਹੀਂ ਜਾ ਸਕਿਆ।",
+  "@auth_register_error": {
+    "description": "auth_register_error"
+  },
+  "auth_recovery_email_sent": "ਈਮੇਲ ਭੇਜੀ ਗਈ।",
+  "@auth_recovery_email_sent": {
+    "description": "auth_recovery_email_sent"
+  },
+  "auth_recovery_email_error": "ਈਮੇਲ ਭੇਜਣਾ ਸੰਭਵ ਨਹੀਂ ਸੀ।",
+  "@auth_recovery_email_error": {
+    "description": "auth_recovery_email_error"
+  },
+  "latestVersion": "ਨਵੀਨਤਮ ਸੰਸਕਰਣ ਉਪਲਬਧ ਹੈ",
+  "@latestVersion": {
+    "description": "latestVersion"
+  },
+  "updateApp": "ਐਪਲੀਕੇਸ਼ਨ ਨੂੰ ਅੱਪਡੇਟ ਕਰੋ",
+  "@updateApp": {
+    "description": "updateApp"
+  },
+  "loadInfoUpdate": "ਅੱਪਡੇਟ ਜਾਣਕਾਰੀ ਲੋਡ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕੀ",
+  "@loadInfoUpdate": {
+    "description": "loadInfoUpdate"
+  },
+  "infoNotAvailable": "ਜਾਣਕਾਰੀ ਉਪਲਬਧ ਨਹੀਂ ਹੈ",
+  "@infoNotAvailable": {
+    "description": "infoNotAvailable"
+  },
+  "developedBy": "Joss Estrada (JOSPROX) ਦੁਆਰਾ ਵਿਕਸਤ ਅਤੇ ਸੰਭਾਲਿਆ ਗਿਆ",
+  "@developedBy": {
+    "description": "developedBy"
+  },
+  "copyrightNotice": "© 2026 JOSPROX. GPL ਲਾਇਸੰਸ v3.0",
+  "@copyrightNotice": {
+    "description": "copyrightNotice"
+  },
+  "helloWorld": "ਹੈਲੋ ਸੰਸਾਰ",
+  "@helloWorld": {
+    "description": "Este texto es opcional"
+  },
+  "quickPics": "ਤੇਜ਼ ਚੋਣ",
+  "@quickPics": {
+    "description": "quickPics"
+  },
+  "topMusicVid": "ਪ੍ਰਮੁੱਖ ਸੰਗੀਤ ਵੀਡੀਓਜ਼",
+  "@topMusicVid": {
+    "description": "topMusicVid"
   }
 }

@@ -555,5 +555,1746 @@
   "keepScreenOnWhilePlayingDes": "Hvis aktivert, vil enhetens skjerm være på mens musikk spilles",
   "@keepScreenOnWhilePlayingDes": {
     "description": "keepScreenOnWhilePlayingDes"
+  },
+  "downloads": "Nedlastinger",
+  "@downloads": {
+    "description": "downloads"
+  },
+  "enableBottomNavDes": "Bytt til nederste navigasjonslinje",
+  "@enableBottomNavDes": {
+    "description": "enableBottomNavDes"
+  },
+  "homeContentCount": "Antall oppstartsinnhold",
+  "@homeContentCount": {
+    "description": "homeContentCount"
+  },
+  "songAlreadyOfflineAlert": "Sangen ligger allerede i cachen",
+  "@songAlreadyOfflineAlert": {
+    "description": "songAlreadyOfflineAlert"
+  },
+  "sleepTimer": "Sleep timer",
+  "@sleepTimer": {
+    "description": "sleepTimer"
+  },
+  "upNext": "Neste",
+  "@upNext": {
+    "description": "upNext"
+  },
+  "plain": "enkelt",
+  "@plain": {
+    "description": "plain"
+  },
+  "addMultipleSongs": "Legg til sanger i spillelisten",
+  "@addMultipleSongs": {
+    "description": "addMultipleSongs"
+  },
+  "removeMultiple": "Slett flere sanger",
+  "@removeMultiple": {
+    "description": "removeMultiple"
+  },
+  "restoreLastPlaybackSession": "Gjenopprett siste avspillingsøkt",
+  "@restoreLastPlaybackSession": {
+    "description": "restoreLastPlaybackSession"
+  },
+  "clearImgCacheAlert": "Bildebufferen ble tømt",
+  "@clearImgCacheAlert": {
+    "description": "clearImgCacheAlert"
+  },
+  "reArrangePlaylist": "Omorganiser spillelisten",
+  "@reArrangePlaylist": {
+    "description": "reArrangePlaylist"
+  },
+  "close": "Lukk",
+  "@close": {
+    "description": "close"
+  },
+  "disableTransitionAnimationDes": "Aktiver dette alternativet for å deaktivere faneovergangsanimasjonen",
+  "@disableTransitionAnimationDes": {
+    "description": "disableTransitionAnimationDes"
+  },
+  "openIn": "Åpne inn",
+  "@openIn": {
+    "description": "openIn"
+  },
+  "removeFromLib": "Fjern sanger fra biblioteket",
+  "@removeFromLib": {
+    "description": "removeFromLib"
+  },
+  "add5Minutes": "Legg til 5 minutter",
+  "@add5Minutes": {
+    "description": "add5Minutes"
+  },
+  "cancelTimer": "Avbryt tidtaker",
+  "@cancelTimer": {
+    "description": "cancelTimer"
+  },
+  "deleteDownloadData": "Fjern fra nedlastinger",
+  "@deleteDownloadData": {
+    "description": "deleteDownloadData"
+  },
+  "endOfThisSong": "Slutt på denne sangen",
+  "@endOfThisSong": {
+    "description": "endOfThisSong"
+  },
+  "homeContentCountDes": "Velg antall startskjerminnhold (ca.). Færre resultater lastes raskere",
+  "@homeContentCountDes": {
+    "description": "homeContentCountDes"
+  },
+  "backgroundPlay": "Spiller musikk i bakgrunnen",
+  "@backgroundPlay": {
+    "description": "backgroundPlay"
+  },
+  "cacheHomeScreenData": "Lagre innholdsdata på startskjermen",
+  "@cacheHomeScreenData": {
+    "description": "cacheHomeScreenData"
+  },
+  "cacheHomeScreenDataDes": "Aktiver lagring av innhold på startskjermen, startskjermen lastes umiddelbart hvis dette alternativet er aktivert",
+  "@cacheHomeScreenDataDes": {
+    "description": "cacheHomeScreenDataDes"
+  },
+  "downloadingFormatDes": "Velg nedlastningsfilformatet. «Opus» vil gi den beste kvaliteten",
+  "@downloadingFormatDes": {
+    "description": "downloadingFormatDes"
+  },
+  "exportDowloadedFiles": "Eksporter nedlastede filer",
+  "@exportDowloadedFiles": {
+    "description": "exportDowloadedFiles"
+  },
+  "exportedFileLocation": "Eksporter plasseringen av nedlastede filer",
+  "@exportedFileLocation": {
+    "description": "exportedFileLocation"
+  },
+  "exporting": "Eksporterer...",
+  "@exporting": {
+    "description": "exporting"
+  },
+  "scanning": "Skanner...",
+  "@scanning": {
+    "description": "scanning"
+  },
+  "downFilesFound": "nedlastede filer funnet",
+  "@downFilesFound": {
+    "description": "downFilesFound"
+  },
+  "exportMsg": "Filer ble eksportert",
+  "@exportMsg": {
+    "description": "exportMsg"
+  },
+  "clearImgCache": "Tøm bildebufferen",
+  "@clearImgCache": {
+    "description": "clearImgCache"
+  },
+  "clearImgCacheDes": "Klikk her for å tømme bufrede miniatyrbilder/bilder. (Anbefales ikke med mindre du vil oppdatere bufrede bildedata)",
+  "@clearImgCacheDes": {
+    "description": "clearImgCacheDes"
+  },
+  "deleteDownloadedDataAlert": "Fjernet fra nedlastinger!",
+  "@deleteDownloadedDataAlert": {
+    "description": "deleteDownloadedDataAlert"
+  },
+  "sleepTimeSetAlert": "Innsovningstimeren er stilt inn",
+  "@sleepTimeSetAlert": {
+    "description": "sleepTimeSetAlert"
+  },
+  "pipedplstSyncAlert": "Pipet spilleliste synkronisert!",
+  "@pipedplstSyncAlert": {
+    "description": "pipedplstSyncAlert"
+  },
+  "downloadLocation": "Last ned plassering",
+  "@downloadLocation": {
+    "description": "downloadLocation"
+  },
+  "downloadingFormat": "Last ned filformat",
+  "@downloadingFormat": {
+    "description": "downloadingFormat"
+  },
+  "disableTransitionAnimation": "Deaktiver overgangsanimasjon",
+  "@disableTransitionAnimation": {
+    "description": "disableTransitionAnimation"
+  },
+  "exportDowloadedFilesDes": "Klikk her for å eksportere de nedlastede filene fra applikasjonskatalogen til den eksterne katalogen",
+  "@exportDowloadedFilesDes": {
+    "description": "exportDowloadedFilesDes"
+  },
+  "export": "Eksporter",
+  "@export": {
+    "description": "export"
+  },
+  "backgroundPlayDes": "Aktiver/deaktiver avspilling av bakgrunnsmusikk (Appen kan nås fra systemstatusfeltet når appen kjører i bakgrunnen)",
+  "@backgroundPlayDes": {
+    "description": "backgroundPlayDes"
+  },
+  "restoreLastPlaybackSessionDes": "Gjenopprett automatisk siste avspillingsøkt når du starter appen",
+  "@restoreLastPlaybackSessionDes": {
+    "description": "restoreLastPlaybackSessionDes"
+  },
+  "enableBottomNav": "Nederste navigasjonslinje",
+  "@enableBottomNav": {
+    "description": "enableBottomNav"
+  },
+  "syncedLyricsNotAvailable": "Synkroniserte tekster er ikke tilgjengelige!",
+  "@syncedLyricsNotAvailable": {
+    "description": "syncedLyricsNotAvailable"
+  },
+  "restoreSettingsAndPlaylistsDes": "Gjenoppretter alle innstillinger, påloggingsdata og spillelister fra en sikkerhetskopi. Overskriver alle gjeldende data",
+  "@restoreSettingsAndPlaylistsDes": {
+    "description": "restoreSettingsAndPlaylistsDes"
+  },
+  "backupSettingsAndPlaylistsDes": "Lagre alle innstillinger, spillelister og påloggingsdata til en sikkerhetskopi",
+  "@backupSettingsAndPlaylistsDes": {
+    "description": "backupSettingsAndPlaylistsDes"
+  },
+  "backupMsg": "Sikkerhetskopien er lagret!",
+  "@backupMsg": {
+    "description": "backupMsg"
+  },
+  "backFilesFound": "databaser funnet",
+  "@backFilesFound": {
+    "description": "backFilesFound"
+  },
+  "restoreMsg": "Vellykket gjenopprettet!\nEndringer tas i bruk ved omstart",
+  "@restoreMsg": {
+    "description": "restoreMsg"
+  },
+  "restoring": "Gjenoppretter ...",
+  "@restoring": {
+    "description": "restoring"
+  },
+  "restore": "Gjenopprett",
+  "@restore": {
+    "description": "restore"
+  },
+  "closeApp": "Lukk søknaden",
+  "@closeApp": {
+    "description": "closeApp"
+  },
+  "standard": "Standard",
+  "@standard": {
+    "description": "standard"
+  },
+  "gesture": "Gest",
+  "@gesture": {
+    "description": "gesture"
+  },
+  "audioCodec": "Lydkodek",
+  "@audioCodec": {
+    "description": "audioCodec"
+  },
+  "autoDownFavSongDes": "Last ned favorittsanger automatisk når de legges til favoritter",
+  "@autoDownFavSongDes": {
+    "description": "autoDownFavSongDes"
+  },
+  "loudnessNormalization": "Normalisering av lydstyrken",
+  "@loudnessNormalization": {
+    "description": "loudnessNormalization"
+  },
+  "playerUi": "Spillergrensesnitt",
+  "@playerUi": {
+    "description": "playerUi"
+  },
+  "songNotPlayable": "Sangen kan ikke spilles på grunn av serverbegrensninger!",
+  "@songNotPlayable": {
+    "description": "songNotPlayable"
+  },
+  "loudnessDb": "LydstyrkeDb",
+  "@loudnessDb": {
+    "description": "loudnessDb"
+  },
+  "restoreAppData": "Gjenopprett appdata",
+  "@restoreAppData": {
+    "description": "restoreAppData"
+  },
+  "queueShufflingDeniedMsg": "Tilfeldig modus er aktivert. Du kan ikke blande køen manuelt.",
+  "@queueShufflingDeniedMsg": {
+    "description": "queueShufflingDeniedMsg"
+  },
+  "includeDownloadedFiles": "Inkluder nedlastede sangfiler",
+  "@includeDownloadedFiles": {
+    "description": "includeDownloadedFiles"
+  },
+  "backupInProgress": "Sikkerhetskopiering pågår...",
+  "@backupInProgress": {
+    "description": "backupInProgress"
+  },
+  "queuerearrangingDeniedMsg": "Køen kan ikke omorganiseres når tilfeldig rekkefølge er på",
+  "@queuerearrangingDeniedMsg": {
+    "description": "queuerearrangingDeniedMsg"
+  },
+  "content": "Innhold",
+  "@content": {
+    "description": "content"
+  },
+  "downloadError3": "Nedlasting mislyktes på grunn av nettverks-/overføringsfeil! Vennligst prøv igjen",
+  "@downloadError3": {
+    "description": "downloadError3"
+  },
+  "personalisation": "Personalisering",
+  "@personalisation": {
+    "description": "personalisation"
+  },
+  "playerUiDes": "Velg spillerens brukergrensesnitt",
+  "@playerUiDes": {
+    "description": "playerUiDes"
+  },
+  "musicAndPlayback": "Musikk og avspilling",
+  "@musicAndPlayback": {
+    "description": "musicAndPlayback"
+  },
+  "appInfo": "Søknadsinformasjon",
+  "@appInfo": {
+    "description": "appInfo"
+  },
+  "networkError": "Nettverksfeil! Sjekk Internett-tilkoblingen din.",
+  "@networkError": {
+    "description": "networkError"
+  },
+  "download": "Last ned",
+  "@download": {
+    "description": "download"
+  },
+  "downloadError2": "Den forespurte sangen kan ikke lastes ned på grunn av serverbegrensninger. Du kan prøve igjen",
+  "@downloadError2": {
+    "description": "downloadError2"
+  },
+  "letsStrart": "La oss begynne..",
+  "@letsStrart": {
+    "description": "letsStrart"
+  },
+  "processFiles": "Behandler filer...",
+  "@processFiles": {
+    "description": "processFiles"
+  },
+  "backupAppData": "Sikkerhetskopier appdata",
+  "@backupAppData": {
+    "description": "backupAppData"
+  },
+  "backup": "Sikkerhetskopiering",
+  "@backup": {
+    "description": "backup"
+  },
+  "playnextMsg": "Kommer snart",
+  "@playnextMsg": {
+    "description": "playnextMsg"
+  },
+  "shuffleQueue": "bland halen",
+  "@shuffleQueue": {
+    "description": "shuffleQueue"
+  },
+  "queueLoop": "haleløkke",
+  "@queueLoop": {
+    "description": "queueLoop"
+  },
+  "queueLoopNotDisMsg1": "Køløkkemodus kan ikke deaktiveres når tilfeldig rekkefølge er aktivert.",
+  "@queueLoopNotDisMsg1": {
+    "description": "queueLoopNotDisMsg1"
+  },
+  "queueLoopNotDisMsg2": "Haleslyngemodus kan ikke aktiveres i radiomodus.",
+  "@queueLoopNotDisMsg2": {
+    "description": "queueLoopNotDisMsg2"
+  },
+  "loudnessNormalizationDes": "Angir samme lydstyrkenivå for alle sanger (eksperimentelt) (fungerer ikke på sanger lastet ned i eldre versjoner (< v1.10.0))",
+  "@loudnessNormalizationDes": {
+    "description": "loudnessNormalizationDes"
+  },
+  "enableSlidableAction": "Aktiver glidebryterhandlinger",
+  "@enableSlidableAction": {
+    "description": "enableSlidableAction"
+  },
+  "enableSlidableActionDes": "Aktiver sveipehandlinger på sangflisen",
+  "@enableSlidableActionDes": {
+    "description": "enableSlidableActionDes"
+  },
+  "bitrate": "Bithastighet",
+  "@bitrate": {
+    "description": "bitrate"
+  },
+  "androidBackupWarning": "Ikke testet: Hvis du merker av i avmerkingsboksen etter at du har lastet ned mer enn 60 filer, kan det føre til at prosessen bruker mye minne og kan føre til at telefonen eller appen krasjer. Fortsett på egen risiko.",
+  "@androidBackupWarning": {
+    "description": "androidBackupWarning"
+  },
+  "songInfo": "Sanginformasjon",
+  "@songInfo": {
+    "description": "songInfo"
+  },
+  "id": "ID",
+  "@id": {
+    "description": "id"
+  },
+  "title": "Tittel",
+  "@title": {
+    "description": "title"
+  },
+  "restartApp": "Start programmet på nytt",
+  "@restartApp": {
+    "description": "restartApp"
+  },
+  "autoDownFavSong": "Automatisk nedlasting av favorittsanger",
+  "@autoDownFavSong": {
+    "description": "autoDownFavSong"
+  },
+  "duration": "Varighet",
+  "@duration": {
+    "description": "duration"
+  },
+  "urlSearchDes": "Oppdaget URL klikk på den for å åpne/spille av det tilknyttede innholdet",
+  "@urlSearchDes": {
+    "description": "urlSearchDes"
+  },
+  "album": "Album",
+  "@album": {
+    "description": "album"
+  },
+  "reArrangeSongs": "Omorganisere sanger",
+  "@reArrangeSongs": {
+    "description": "reArrangeSongs"
+  },
+  "selectSongs": "Velg sanger",
+  "@selectSongs": {
+    "description": "selectSongs"
+  },
+  "selectAll": "Velg alle",
+  "@selectAll": {
+    "description": "selectAll"
+  },
+  "playingfromAlbum": "SPILLER FRA ALBUM",
+  "@playingfromAlbum": {
+    "description": "playingfromAlbum"
+  },
+  "playingfromPlaylist": "SPILLER FRA SPILLELISTE",
+  "@playingfromPlaylist": {
+    "description": "playingfromPlaylist"
+  },
+  "playingfromSelection": "SPILLER FRA UTVALG",
+  "@playingfromSelection": {
+    "description": "playingfromSelection"
+  },
+  "auth_login_success": "Vellykket pålogget",
+  "@auth_login_success": {
+    "description": "auth_login_success"
+  },
+  "settings_cloud_backup": "Cloud backup",
+  "@settings_cloud_backup": {
+    "description": "settings_cloud_backup"
+  },
+  "settings_migration_title": "Migrer fra Joss Music Kotlin",
+  "@settings_migration_title": {
+    "description": "settings_migration_title"
+  },
+  "backup_confirm_question": "Vil du ta en sikkerhetskopi?",
+  "@backup_confirm_question": {
+    "description": "backup_confirm_question"
+  },
+  "backup_selection_prompt": "Velg hvilke data som skal sikkerhetskopieres",
+  "@backup_selection_prompt": {
+    "description": "backup_selection_prompt"
+  },
+  "search_recent_title": "Nylige søk",
+  "@search_recent_title": {
+    "description": "search_recent_title"
+  },
+  "back": "Tilbake",
+  "@back": {
+    "description": "back"
+  },
+  "auth_forgot_password": "Jeg har glemt passordet mitt",
+  "@auth_forgot_password": {
+    "description": "auth_forgot_password"
+  },
+  "auth_btn_login": "Logg på",
+  "@auth_btn_login": {
+    "description": "auth_btn_login"
+  },
+  "auth_btn_register": "Registrer deg",
+  "@auth_btn_register": {
+    "description": "auth_btn_register"
+  },
+  "email": "E-post",
+  "@email": {
+    "description": "email"
+  },
+  "password_text": "Passord",
+  "@password_text": {
+    "description": "Contraseña texto traducido"
+  },
+  "auth_confirm_password": "Bekreft passord",
+  "@auth_confirm_password": {
+    "description": "auth_confirm_password"
+  },
+  "auth_welcome_title": "Velkommen til Estrella Music",
+  "@auth_welcome_title": {
+    "description": "auth_welcome_title"
+  },
+  "auth_welcome_subtitle": "Velkommen til Estrella Music",
+  "@auth_welcome_subtitle": {
+    "description": "auth_welcome_subtitle"
+  },
+  "auth_first_name": "Fornavn",
+  "@auth_first_name": {
+    "description": "auth_first_name"
+  },
+  "auth_last_name": "Etternavn",
+  "@auth_last_name": {
+    "description": "auth_last_name"
+  },
+  "auth_agree_personal_data": "Jeg godtar å bruke dataene mine...",
+  "@auth_agree_personal_data": {
+    "description": "auth_agree_personal_data"
+  },
+  "settings_general_section": "Generelt",
+  "@settings_general_section": {
+    "description": "settings_general_section"
+  },
+  "settings_logout": "Logg ut",
+  "@settings_logout": {
+    "description": "settings_logout"
+  },
+  "settings_cloud_backup_desc": "Last opp, gjenopprett og administrer...",
+  "@settings_cloud_backup_desc": {
+    "description": "settings_cloud_backup_desc"
+  },
+  "settings_migration_desc": "Importer spillelister, sanger...",
+  "@settings_migration_desc": {
+    "description": "settings_migration_desc"
+  },
+  "backup_btn_restart": "Start appen på nytt",
+  "@backup_btn_restart": {
+    "description": "backup_btn_restart"
+  },
+  "backup_btn_upload": "Last opp sikkerhetskopi nå",
+  "@backup_btn_upload": {
+    "description": "backup_btn_upload"
+  },
+  "backup_no_backups": "Det er ingen sikkerhetskopier ennå...",
+  "@backup_no_backups": {
+    "description": "backup_no_backups"
+  },
+  "backup_auth_required": "Du trenger en aktiv økt...",
+  "@backup_auth_required": {
+    "description": "backup_auth_required"
+  },
+  "backup_upload_success": "Sikkerhetskopien er lastet opp på riktig måte.",
+  "@backup_upload_success": {
+    "description": "backup_upload_success"
+  },
+  "backup_restore_success": "Sikkerhetskopien gjenopprettet. Start appen på nytt.",
+  "@backup_restore_success": {
+    "description": "backup_restore_success"
+  },
+  "backup_delete_success": "Sikkerhetskopien slettet.",
+  "@backup_delete_success": {
+    "description": "backup_delete_success"
+  },
+  "genre_pop": "Pop",
+  "@genre_pop": {
+    "description": "genre_pop"
+  },
+  "genre_rock": "Rock",
+  "@genre_rock": {
+    "description": "genre_rock"
+  },
+  "genre_hiphop": "hip hop",
+  "@genre_hiphop": {
+    "description": "genre_hiphop"
+  },
+  "genre_electronic": "Elektronikk",
+  "@genre_electronic": {
+    "description": "genre_electronic"
+  },
+  "genre_jazz": "jazz",
+  "@genre_jazz": {
+    "description": "genre_jazz"
+  },
+  "genre_latin": "latin",
+  "@genre_latin": {
+    "description": "genre_latin"
+  },
+  "migration_btn_select": "Velg fil og importer",
+  "@migration_btn_select": {
+    "description": "migration_btn_select"
+  },
+  "forgottenFavorites": "glemte favoritter",
+  "@forgottenFavorites": {
+    "description": "forgottenFavorites"
+  },
+  "mostListenedSong": "Den mest lyttede sangen",
+  "@mostListenedSong": {
+    "description": "mostListenedSong"
+  },
+  "reproducedBy": "Gjengitt av",
+  "@reproducedBy": {
+    "description": "reproducedBy"
+  },
+  "recentSearches": "Nylige søk",
+  "@recentSearches": {
+    "description": "recentSearches"
+  },
+  "popularTracks": "Populære låter",
+  "@popularTracks": {
+    "description": "popularTracks"
+  },
+  "latestRelease": "Siste utgivelse",
+  "@latestRelease": {
+    "description": "latestRelease"
+  },
+  "follow": "Følg",
+  "@follow": {
+    "description": "follow"
+  },
+  "following": "Følger",
+  "@following": {
+    "description": "following"
+  },
+  "listenNow": "Hør nå",
+  "@listenNow": {
+    "description": "listenNow"
+  },
+  "video": "video",
+  "@video": {
+    "description": "video"
+  },
+  "readMore": "Les mer",
+  "@readMore": {
+    "description": "readMore"
+  },
+  "speedAndPitch": "Hastighet og pitch",
+  "@speedAndPitch": {
+    "description": "speedAndPitch"
+  },
+  "playbackSpeed": "Avspillingshastighet",
+  "@playbackSpeed": {
+    "description": "playbackSpeed"
+  },
+  "songPitch": "sang tone",
+  "@songPitch": {
+    "description": "songPitch"
+  },
+  "musicRecognition": "Musikkgjenkjenning",
+  "@musicRecognition": {
+    "description": "musicRecognition"
+  },
+  "listeningToEnvironment": "Å lytte til miljøet...",
+  "@listeningToEnvironment": {
+    "description": "listeningToEnvironment"
+  },
+  "micInstruction": "Sørg for at musikken spilles høyt nok i nærheten av mikrofonen.",
+  "@micInstruction": {
+    "description": "micInstruction"
+  },
+  "processingAudio": "Behandler lyden...",
+  "@processingAudio": {
+    "description": "processingAudio"
+  },
+  "shazamSearching": "Søker i Shazam-databasen etter treff...",
+  "@shazamSearching": {
+    "description": "shazamSearching"
+  },
+  "songFound": "Sangen funnet!",
+  "@songFound": {
+    "description": "songFound"
+  },
+  "playNow": "Spill nå",
+  "@playNow": {
+    "description": "playNow"
+  },
+  "searchInLibrary": "Søk i biblioteket",
+  "@searchInLibrary": {
+    "description": "searchInLibrary"
+  },
+  "noMatchesFound": "Ingen treff",
+  "@noMatchesFound": {
+    "description": "noMatchesFound"
+  },
+  "noMatchInstruction": "Kunne ikke finne noen sanger i den innspilte lyden",
+  "@noMatchInstruction": {
+    "description": "noMatchInstruction"
+  },
+  "errorOccurred": "Det oppsto en feil",
+  "@errorOccurred": {
+    "description": "errorOccurred"
+  },
+  "playingRecognizedTrack": "Spiller:",
+  "@playingRecognizedTrack": {
+    "description": "playingRecognizedTrack"
+  },
+  "errorPlayingTrack": "Feil under avspilling:",
+  "@errorPlayingTrack": {
+    "description": "errorPlayingTrack"
+  },
+  "welcome_title": "Din musikk, din måte",
+  "@welcome_title": {
+    "description": "welcome_title"
+  },
+  "welcome_subtitle": "Velg hvordan du vil oppleve Estrella Music fra nå av.",
+  "@welcome_subtitle": {
+    "description": "welcome_subtitle"
+  },
+  "welcome_intro": "Vi har modernisert plattformen vår. Det gamle systemet for opplasting av manuelle sikkerhetskopier er deaktivert. Du har nå to klare måter å administrere musikkbiblioteket på.",
+  "@welcome_intro": {
+    "description": "welcome_intro"
+  },
+  "recommend_cloud": "Vi anbefaler å aktivere skymodus for en Spotify-lignende opplevelse: sanntidssynkronisering mellom alle enhetene dine og automatisk sikkerhetskopiering uten at du trenger å gjøre noe.",
+  "@recommend_cloud": {
+    "description": "recommend_cloud"
+  },
+  "swipe_prompt": "Sveip for å utforske alternativer",
+  "@swipe_prompt": {
+    "description": "swipe_prompt"
+  },
+  "local_title": "Lokal modus",
+  "@local_title": {
+    "description": "local_title"
+  },
+  "local_subtitle": "Absolutt personvern på enheten din",
+  "@local_subtitle": {
+    "description": "local_subtitle"
+  },
+  "local_b1": "Det fungerer uten at du trenger å logge inn.",
+  "@local_b1": {
+    "description": "local_b1"
+  },
+  "local_b2": "Hele biblioteket ditt forblir strengt tatt på denne datamaskinen.",
+  "@local_b2": {
+    "description": "local_b2"
+  },
+  "local_b3": "Merk: Ingen manuell sikkerhetskopiering av skyen. Hvis du mister enheten eller avinstallerer appen, kan ikke dataene dine gjenopprettes.",
+  "@local_b3": {
+    "description": "local_b3"
+  },
+  "local_btn": "Bruk kun på denne enheten",
+  "@local_btn": {
+    "description": "local_btn"
+  },
+  "cloud_title": "Skymodus (anbefalt)",
+  "@cloud_title": {
+    "description": "cloud_title"
+  },
+  "cloud_subtitle": "Sanntidssynkronisering med Joss Red",
+  "@cloud_subtitle": {
+    "description": "cloud_subtitle"
+  },
+  "cloud_b1": "Logg på sikkert med din Joss Red-konto.",
+  "@cloud_b1": {
+    "description": "cloud_b1"
+  },
+  "cloud_b2": "Få tilgang til spillelistene, favorittene og historikken fra alle enheter (Windows, Android osv.) umiddelbart.",
+  "@cloud_b2": {
+    "description": "cloud_b2"
+  },
+  "cloud_b3": "Smart Sync: Arbeid offline og last opp endringer automatisk når du gjenoppretter internett.",
+  "@cloud_b3": {
+    "description": "cloud_b3"
+  },
+  "cloud_btn": "Aktiver skysynkronisering",
+  "@cloud_btn": {
+    "description": "cloud_btn"
+  },
+  "slide_indicator": "Trinn {current} av 3",
+  "@slide_indicator": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      }
+    },
+    "description": "slide_indicator"
+  },
+  "news_card_title": "Estrella Music har utviklet seg!",
+  "@news_card_title": {
+    "description": "news_card_title"
+  },
+  "news_card_subtitle": "100 % synkronisering med Joss Red, spillelister med venner og mye mer. Trykk for å se hva som er nytt.",
+  "@news_card_subtitle": {
+    "description": "news_card_subtitle"
+  },
+  "news_dialog_title": "Estrella Music News",
+  "@news_dialog_title": {
+    "description": "news_dialog_title"
+  },
+  "news_item_sync_title": "Full integrasjon med Joss Red",
+  "@news_item_sync_title": {
+    "description": "news_item_sync_title"
+  },
+  "news_item_sync_desc": "Spillelistene og favorittene dine lagres og synkroniseres automatisk i skyen med Joss Red-hovedkontoen din.",
+  "@news_item_sync_desc": {
+    "description": "news_item_sync_desc"
+  },
+  "news_item_collab_title": "Samarbeidende spillelister",
+  "@news_item_collab_title": {
+    "description": "news_item_collab_title"
+  },
+  "news_item_collab_desc": "Lag spillelister med vennene dine! Når du oppretter en spilleliste, merker du av for Collaborative og velger vennene dine å redigere sammen.",
+  "@news_item_collab_desc": {
+    "description": "news_item_collab_desc"
+  },
+  "news_item_trans_title": "Transparent synkronisering",
+  "@news_item_trans_title": {
+    "description": "news_item_trans_title"
+  },
+  "news_item_trans_desc": "Du trenger ikke lenger å klikke på knapper for manuell synkronisering; Den nye motoren er ansvarlig for å skifte opp og ned automatisk.",
+  "@news_item_trans_desc": {
+    "description": "news_item_trans_desc"
+  },
+  "news_dialog_section_friends": "Venner og kontoadministrasjon:",
+  "@news_dialog_section_friends": {
+    "description": "news_dialog_section_friends"
+  },
+  "news_dialog_friends_desc": "For å legge til venner, godta forespørsler eller administrere sikkerhetsprofilen din, vennligst bruk Joss Red på dens offisielle plattformer:",
+  "@news_dialog_friends_desc": {
+    "description": "news_dialog_friends_desc"
+  },
+  "news_btn_app": "Joss Red-appen (Play Store)",
+  "@news_btn_app": {
+    "description": "news_btn_app"
+  },
+  "news_btn_web": "Joss Red Web",
+  "@news_btn_web": {
+    "description": "news_btn_web"
+  },
+  "news_btn_dismiss": "Forstått",
+  "@news_btn_dismiss": {
+    "description": "news_btn_dismiss"
+  },
+  "settings_appearance_desc": "Tema-, språk- og grensesnittanimasjoner.",
+  "@settings_appearance_desc": {
+    "description": "settings_appearance_desc"
+  },
+  "settings_content_desc": "Oppdag filtre, integrasjon med Piped og cacher.",
+  "@settings_content_desc": {
+    "description": "settings_content_desc"
+  },
+  "settings_playback_desc": "Streamingkvalitet, normalisering, stillhet og batteri.",
+  "@settings_playback_desc": {
+    "description": "settings_playback_desc"
+  },
+  "settings_downloads_desc": "Nedlastinger og lagring",
+  "@settings_downloads_desc": {
+    "description": "settings_downloads_desc"
+  },
+  "settings_downloads_sub": "Lydformater, mapper og automatiske nedlastinger.",
+  "@settings_downloads_sub": {
+    "description": "settings_downloads_sub"
+  },
+  "settings_account_desc": "Konto og synkronisering",
+  "@settings_account_desc": {
+    "description": "settings_account_desc"
+  },
+  "settings_account_sub": "Skymodus, sikkerhetskopier, venneliste og migreringer.",
+  "@settings_account_sub": {
+    "description": "settings_account_sub"
+  },
+  "settings_about_desc": "Om Estrella Music",
+  "@settings_about_desc": {
+    "description": "settings_about_desc"
+  },
+  "settings_about_sub": "Versjon, åpen kildekode-prosjekt og GitHub.",
+  "@settings_about_sub": {
+    "description": "settings_about_sub"
+  },
+  "settings_local_cloud_title": "Lokal modus / EMusic Cloud",
+  "@settings_local_cloud_title": {
+    "description": "settings_local_cloud_title"
+  },
+  "settings_local_cloud_desc": "Velg, migrér eller se gjennom synkroniseringsstatusen med Joss Red.",
+  "@settings_local_cloud_desc": {
+    "description": "settings_local_cloud_desc"
+  },
+  "settings_my_friends": "vennene mine",
+  "@settings_my_friends": {
+    "description": "settings_my_friends"
+  },
+  "settings_my_friends_desc": "Administrer Joss Red-vennene dine direkte.",
+  "@settings_my_friends_desc": {
+    "description": "settings_my_friends_desc"
+  },
+  "settings_refresh_visitor_title": "Oppdater ID (besøks-ID)",
+  "@settings_refresh_visitor_title": {
+    "description": "settings_refresh_visitor_title"
+  },
+  "settings_refresh_visitor_desc": "Regenerer YouTube Music-ID-en din hvis Discover-innhold ikke lastes inn.",
+  "@settings_refresh_visitor_desc": {
+    "description": "settings_refresh_visitor_desc"
+  },
+  "settings_visitor_updated": "Oppdatert identifikator",
+  "@settings_visitor_updated": {
+    "description": "settings_visitor_updated"
+  },
+  "settings_visitor_updated_desc": "En ny besøks-ID ble generert.",
+  "@settings_visitor_updated_desc": {
+    "description": "settings_visitor_updated_desc"
+  },
+  "settings_visitor_error": "Feil",
+  "@settings_visitor_error": {
+    "description": "settings_visitor_error"
+  },
+  "settings_visitor_error_desc": "En ny identifikator kunne ikke genereres. Vennligst prøv igjen senere.",
+  "@settings_visitor_error_desc": {
+    "description": "settings_visitor_error_desc"
+  },
+  "settings_visitor_exception": "Det oppstod en feil under regenerering: {error}",
+  "@settings_visitor_exception": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    },
+    "description": "settings_visitor_exception"
+  },
+  "migratedLibrary": "Migrert bibliotek",
+  "@migratedLibrary": {
+    "description": "migratedLibrary"
+  },
+  "noSongsInCollection": "Det er ingen sanger i denne samlingen",
+  "@noSongsInCollection": {
+    "description": "noSongsInCollection"
+  },
+  "startupScreen": "Åpne ved oppstart",
+  "@startupScreen": {
+    "description": "startupScreen"
+  },
+  "startupScreenDescription": "Velg delen som Estrella Music åpner først",
+  "@startupScreenDescription": {
+    "description": "startupScreenDescription"
+  },
+  "friends": "Venner",
+  "@friends": {
+    "description": "friends"
+  },
+  "dailyDiscover": "Daglig oppdagelse",
+  "@dailyDiscover": {
+    "description": "dailyDiscover"
+  },
+  "keepListening": "fortsett å lytte",
+  "@keepListening": {
+    "description": "keepListening"
+  },
+  "similarToTitle": "Ligner på {title}",
+  "@similarToTitle": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    },
+    "description": "similarToTitle"
+  },
+  "pipedPlaylistDescription": "Pipet spilleliste",
+  "@pipedPlaylistDescription": {
+    "description": "pipedPlaylistDescription"
+  },
+  "collaborativePlaylistDescription": "Samarbeidsspilleliste",
+  "@collaborativePlaylistDescription": {
+    "description": "collaborativePlaylistDescription"
+  },
+  "libraryPlaylistDescription": "Bibliotek spilleliste",
+  "@libraryPlaylistDescription": {
+    "description": "libraryPlaylistDescription"
+  },
+  "untitledSong": "Unavngitt sang",
+  "@untitledSong": {
+    "description": "untitledSong"
+  },
+  "migratedPlaylist": "Migrert spilleliste",
+  "@migratedPlaylist": {
+    "description": "migratedPlaylist"
+  },
+  "migratedAlbum": "Migrert album",
+  "@migratedAlbum": {
+    "description": "migratedAlbum"
+  },
+  "songsImportedFromJossMusic": "Sanger importert fra Joss Music Kotlin",
+  "@songsImportedFromJossMusic": {
+    "description": "songsImportedFromJossMusic"
+  },
+  "importedFromJossMusic": "Importert fra Joss Music Kotlin",
+  "@importedFromJossMusic": {
+    "description": "importedFromJossMusic"
+  },
+  "syncLocalModeActive": "Lokal modus aktiv",
+  "@syncLocalModeActive": {
+    "description": "syncLocalModeActive"
+  },
+  "syncCloudPending": "Skymodus aktiv. Venter på synkronisering.",
+  "@syncCloudPending": {
+    "description": "syncCloudPending"
+  },
+  "syncCloudDownloadingExisting": "Skymodus aktivert. Laster ned det eksisterende biblioteket.",
+  "@syncCloudDownloadingExisting": {
+    "description": "syncCloudDownloadingExisting"
+  },
+  "syncCloudMigrationComplete": "Skymodus aktivert. Migrert bibliotek.",
+  "@syncCloudMigrationComplete": {
+    "description": "syncCloudMigrationComplete"
+  },
+  "syncLocalDeviceOnly": "Dataene dine lagres kun på denne enheten.",
+  "@syncLocalDeviceOnly": {
+    "description": "syncLocalDeviceOnly"
+  },
+  "syncDownloading": "Laster ned endringer i EMusic...",
+  "@syncDownloading": {
+    "description": "syncDownloading"
+  },
+  "syncDownloadFailed": "Kunne ikke laste ned synkronisering.",
+  "@syncDownloadFailed": {
+    "description": "syncDownloadFailed"
+  },
+  "syncLocalChangesFirst": "Det er nye lokale endringer. De vil bli lastet opp før nedlasting.",
+  "@syncLocalChangesFirst": {
+    "description": "syncLocalChangesFirst"
+  },
+  "syncLibrarySynced": "Synkronisert bibliotek.",
+  "@syncLibrarySynced": {
+    "description": "syncLibrarySynced"
+  },
+  "syncOfflinePending": "Frakoblet. Endringer venter.",
+  "@syncOfflinePending": {
+    "description": "syncOfflinePending"
+  },
+  "syncLibraryUpToDate": "Bibliotek oppdatert.",
+  "@syncLibraryUpToDate": {
+    "description": "syncLibraryUpToDate"
+  },
+  "syncChangesSynced": "{count} synkroniserte endringer.",
+  "@syncChangesSynced": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    },
+    "description": "syncChangesSynced"
+  },
+  "syncUploading": "Laster opp endringer til EMusic...",
+  "@syncUploading": {
+    "description": "syncUploading"
+  },
+  "syncUploadSuccessWs": "Endringer ble lastet opp (WS).",
+  "@syncUploadSuccessWs": {
+    "description": "syncUploadSuccessWs"
+  },
+  "syncUploadWsRetry": "Kunne ikke laste opp med WS. Det vil bli forsøkt på nytt senere.",
+  "@syncUploadWsRetry": {
+    "description": "syncUploadWsRetry"
+  },
+  "syncUploadSuccess": "Endringer lastet opp på riktig måte.",
+  "@syncUploadSuccess": {
+    "description": "syncUploadSuccess"
+  },
+  "syncUploadRetry": "Klarte ikke reise seg. Det vil bli forsøkt på nytt senere.",
+  "@syncUploadRetry": {
+    "description": "syncUploadRetry"
+  },
+  "syncOfflineRetry": "Frakoblet. Endringer lagret for nytt forsøk.",
+  "@syncOfflineRetry": {
+    "description": "syncOfflineRetry"
+  },
+  "syncUnconfirmedRetry": "EMusic bekreftet ikke alle endringene. De vil bli forsøkt på nytt.",
+  "@syncUnconfirmedRetry": {
+    "description": "syncUnconfirmedRetry"
+  },
+  "syncChangesConfirmed": "{count} endringer begått.",
+  "@syncChangesConfirmed": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    },
+    "description": "syncChangesConfirmed"
+  },
+  "migrationAlreadyRunning": "Det pågår allerede en migrering.",
+  "@migrationAlreadyRunning": {
+    "description": "migrationAlreadyRunning"
+  },
+  "migrationLoginRequired": "Logg på Joss Red før du migrerer.",
+  "@migrationLoginRequired": {
+    "description": "migrationLoginRequired"
+  },
+  "migrationCheckingCloud": "Sjekker om EMusic Cloud allerede har et bibliotek...",
+  "@migrationCheckingCloud": {
+    "description": "migrationCheckingCloud"
+  },
+  "cloudLibraryFoundDeviceWillDownload": "Et skybibliotek ble funnet. Denne enheten vil laste den ned uten å overskrive den.",
+  "@cloudLibraryFoundDeviceWillDownload": {
+    "description": "cloudLibraryFoundDeviceWillDownload"
+  },
+  "cloudLibraryFound": "Fant nettskybibliotek.",
+  "@cloudLibraryFound": {
+    "description": "cloudLibraryFound"
+  },
+  "migrationCreatingBackup": "Oppretter en lokal sikkerhetskopi før du kobler til skyen ...",
+  "@migrationCreatingBackup": {
+    "description": "migrationCreatingBackup"
+  },
+  "migrationAnalyzingLocal": "Analyserer det lokale biblioteket...",
+  "@migrationAnalyzingLocal": {
+    "description": "migrationAnalyzingLocal"
+  },
+  "migrationPreparingCloud": "Forbereder migreringen i EMusic Cloud...",
+  "@migrationPreparingCloud": {
+    "description": "migrationPreparingCloud"
+  },
+  "migrationStartFailed": "EMusic Cloud kunne ikke starte migreringen.",
+  "@migrationStartFailed": {
+    "description": "migrationStartFailed"
+  },
+  "migrationUploadingData": "Laster opp spillelister, favoritter og historie...",
+  "@migrationUploadingData": {
+    "description": "migrationUploadingData"
+  },
+  "migrationUploadIncomplete": "Ikke alle data kunne lastes opp. Vi beholder din lokale støtte.",
+  "@migrationUploadIncomplete": {
+    "description": "migrationUploadIncomplete"
+  },
+  "migrationVerifyingIntegrity": "Verifiserer integritet i EMusic Cloud...",
+  "@migrationVerifyingIntegrity": {
+    "description": "migrationVerifyingIntegrity"
+  },
+  "migrationValidationFailed": "EMusic Cloud kunne ikke validere migreringen.",
+  "@migrationValidationFailed": {
+    "description": "migrationValidationFailed"
+  },
+  "cloudModeReadyOfflineCache": "Skymodus er klar. Denne enheten vil fungere som en frakoblet hurtigbuffer.",
+  "@cloudModeReadyOfflineCache": {
+    "description": "cloudModeReadyOfflineCache"
+  },
+  "migrationCompleted": "Migrering fullført.",
+  "@migrationCompleted": {
+    "description": "migrationCompleted"
+  },
+  "migrationFailedLocalPreserved": "Migreringen mislyktes. Dine lokale data ble ikke endret.",
+  "@migrationFailedLocalPreserved": {
+    "description": "migrationFailedLocalPreserved"
+  },
+  "sessionExpiredLoginAgain": "Økten din er utløpt. Logg på igjen.",
+  "@sessionExpiredLoginAgain": {
+    "description": "sessionExpiredLoginAgain"
+  },
+  "selectedFileNotFound": "Den valgte filen ble ikke funnet.",
+  "@selectedFileNotFound": {
+    "description": "selectedFileNotFound"
+  },
+  "genericAlbum": "Album",
+  "@genericAlbum": {
+    "description": "genericAlbum"
+  },
+  "friendsLoginRequired": "Logg på for å finne venner.",
+  "@friendsLoginRequired": {
+    "description": "friendsLoginRequired"
+  },
+  "invalidSessionToken": "Økten inneholder ikke et gyldig token.",
+  "@invalidSessionToken": {
+    "description": "invalidSessionToken"
+  },
+  "userSearchFailed": "Kunne ikke søke etter brukere ({statusCode}).",
+  "@userSearchFailed": {
+    "placeholders": {
+      "statusCode": {
+        "type": "int"
+      }
+    },
+    "description": "userSearchFailed"
+  },
+  "invalidServerResponse": "Ugyldig serversvar.",
+  "@invalidServerResponse": {
+    "description": "invalidServerResponse"
+  },
+  "userListMissing": "Svaret inneholder ikke en liste over brukere.",
+  "@userListMissing": {
+    "description": "userListMissing"
+  },
+  "playlistCollaboratorsTitle": "Spillelistebidragsytere",
+  "@playlistCollaboratorsTitle": {
+    "description": "playlistCollaboratorsTitle"
+  },
+  "collaboratorsInstruction": "Velg vennene som skal kunne se og redigere denne spillelisten:",
+  "@collaboratorsInstruction": {
+    "description": "collaboratorsInstruction"
+  },
+  "noJossRedFriends": "Du har ingen lagt til venner på Joss Red.",
+  "@noJossRedFriends": {
+    "description": "noJossRedFriends"
+  },
+  "friendFallback": "Venn",
+  "@friendFallback": {
+    "description": "friendFallback"
+  },
+  "collaboratorsUpdated": "Samarbeidspartnere har oppdatert riktig.",
+  "@collaboratorsUpdated": {
+    "description": "collaboratorsUpdated"
+  },
+  "save": "Lagre",
+  "@save": {
+    "description": "save"
+  },
+  "manageCollaborators": "Administrer samarbeidspartnere (venner)",
+  "@manageCollaborators": {
+    "description": "manageCollaborators"
+  },
+  "done": "Klar",
+  "@done": {
+    "description": "done"
+  },
+  "notAuthenticated": "Ikke autentisert",
+  "@notAuthenticated": {
+    "description": "notAuthenticated"
+  },
+  "genericError": "Feil",
+  "@genericError": {
+    "description": "genericError"
+  },
+  "friendRequestSent": "Venneforespørsel sendt",
+  "@friendRequestSent": {
+    "description": "friendRequestSent"
+  },
+  "friendRequestAccepted": "Venneforespørsel godtatt",
+  "@friendRequestAccepted": {
+    "description": "friendRequestAccepted"
+  },
+  "friendshipRemoved": "Vennskap fjernet",
+  "@friendshipRemoved": {
+    "description": "friendshipRemoved"
+  },
+  "userBlocked": "Blokkert bruker",
+  "@userBlocked": {
+    "description": "userBlocked"
+  },
+  "userUnblocked": "Ulåst bruker",
+  "@userUnblocked": {
+    "description": "userUnblocked"
+  },
+  "artistsByTaste": "Etter din smak",
+  "@artistsByTaste": {
+    "description": "artistsByTaste"
+  },
+  "followedArtists": "fulgte",
+  "@followedArtists": {
+    "description": "followedArtists"
+  },
+  "recommendedArtists": "Anbefalt",
+  "@recommendedArtists": {
+    "description": "recommendedArtists"
+  },
+  "albumsByTaste": "Etter din smak",
+  "@albumsByTaste": {
+    "description": "albumsByTaste"
+  },
+  "savedAlbums": "Lagret",
+  "@savedAlbums": {
+    "description": "savedAlbums"
+  },
+  "recommendedAlbums": "Anbefalt",
+  "@recommendedAlbums": {
+    "description": "recommendedAlbums"
+  },
+  "downloadNotificationChannelName": "nedlasting av musikk",
+  "@downloadNotificationChannelName": {
+    "description": "downloadNotificationChannelName"
+  },
+  "downloadNotificationChannelDescription": "Holder musikknedlastingene dine aktive i bakgrunnen.",
+  "@downloadNotificationChannelDescription": {
+    "description": "downloadNotificationChannelDescription"
+  },
+  "downloadNotificationTitle": "Laster ned musikk",
+  "@downloadNotificationTitle": {
+    "description": "downloadNotificationTitle"
+  },
+  "downloadNotificationPreparing": "Forbereder nedlastingene dine …",
+  "@downloadNotificationPreparing": {
+    "description": "downloadNotificationPreparing"
+  },
+  "downloadNotificationSong": "Laster ned: {songTitle}",
+  "@downloadNotificationSong": {
+    "placeholders": {
+      "songTitle": {
+        "type": "String"
+      }
+    },
+    "description": "downloadNotificationSong"
+  },
+  "syncCloudModeActive": "Skymodus aktiv",
+  "@syncCloudModeActive": {
+    "description": "syncCloudModeActive"
+  },
+  "permissionsConsentTitle": "Tillatelser til å komme i gang",
+  "@permissionsConsentTitle": {
+    "description": "permissionsConsentTitle"
+  },
+  "permissionsConsentDescription": "Estrella Music trenger disse tillatelsene for å administrere musikken din og tilby alle avspillingsfunksjoner.",
+  "@permissionsConsentDescription": {
+    "description": "permissionsConsentDescription"
+  },
+  "permissionsStorageTitle": "Musikk og lagring",
+  "@permissionsStorageTitle": {
+    "description": "permissionsStorageTitle"
+  },
+  "permissionsStorageDescription": "Den lar deg spille musikk, lagre nedlastinger, eksportere spillelister og forberede oppdateringer.",
+  "@permissionsStorageDescription": {
+    "description": "permissionsStorageDescription"
+  },
+  "permissionsNotificationsTitle": "Varsler",
+  "@permissionsNotificationsTitle": {
+    "description": "permissionsNotificationsTitle"
+  },
+  "permissionsNotificationsDescription": "Viser avspillingskontroller, nedlastingsfremgang og viktige appmeldinger.",
+  "@permissionsNotificationsDescription": {
+    "description": "permissionsNotificationsDescription"
+  },
+  "permissionsMicrophoneTitle": "Mikrofon",
+  "@permissionsMicrophoneTitle": {
+    "description": "permissionsMicrophoneTitle"
+  },
+  "permissionsMicrophoneDescription": "Den brukes bare når du velger å identifisere en sang som spilles rundt deg.",
+  "@permissionsMicrophoneDescription": {
+    "description": "permissionsMicrophoneDescription"
+  },
+  "permissionsContinueButton": "Gi nødvendige tillatelser",
+  "@permissionsContinueButton": {
+    "description": "permissionsContinueButton"
+  },
+  "permissionsRequiredNotice": "Alle tre tillatelsene kreves for å fortsette. Du kan endre dem senere i systeminnstillingene.",
+  "@permissionsRequiredNotice": {
+    "description": "permissionsRequiredNotice"
+  },
+  "permissionsAllow": "Tillat",
+  "@permissionsAllow": {
+    "description": "permissionsAllow"
+  },
+  "permissionsOpenSettings": "Innstillinger",
+  "@permissionsOpenSettings": {
+    "description": "permissionsOpenSettings"
+  },
+  "auth_2fa_title": "To-faktor autentisering",
+  "@auth_2fa_title": {
+    "description": "auth_2fa_title"
+  },
+  "auth_2fa_subtitle": "Skriv inn den 6-sifrede koden fra autentiseringsappen din. Denne tilgangen utløper om 5 minutter.",
+  "@auth_2fa_subtitle": {
+    "description": "auth_2fa_subtitle"
+  },
+  "auth_2fa_code": "Autentiseringskode",
+  "@auth_2fa_code": {
+    "description": "auth_2fa_code"
+  },
+  "auth_2fa_verify": "Sjekk og fortsett",
+  "@auth_2fa_verify": {
+    "description": "auth_2fa_verify"
+  },
+  "auth_2fa_invalid": "Skriv inn en gyldig 6-sifret kode eller logg på igjen.",
+  "@auth_2fa_invalid": {
+    "description": "auth_2fa_invalid"
+  },
+  "resetToDefaultMsg": "Tilbakestilling av innstillinger til standard er fullført. Start appen på nytt",
+  "@resetToDefaultMsg": {
+    "description": "resetToDefaultMsg"
+  },
+  "resetToDefaultDes": "Tilbakestill appinnstillingene til standard (krever omstart)",
+  "@resetToDefaultDes": {
+    "description": "resetToDefaultDes"
+  },
+  "misc": "Ulike",
+  "@misc": {
+    "description": "misc"
+  },
+  "resetToDefault": "Gjenopprett standardinnstillinger",
+  "@resetToDefault": {
+    "description": "resetToDefault"
+  },
+  "autoOpenPlayer": "Åpne spillerskjermen automatisk",
+  "@autoOpenPlayer": {
+    "description": "autoOpenPlayer"
+  },
+  "autoOpenPlayerDes": "Aktiver/deaktiver automatisk åpning av spilleren til fullskjerm når du velger en sang som skal spilles",
+  "@autoOpenPlayerDes": {
+    "description": "autoOpenPlayerDes"
+  },
+  "playingfromArtist": "SPILLER FRA ARTIST",
+  "@playingfromArtist": {
+    "description": "playingfromArtist"
+  },
+  "randomSelection": "Tilfeldig utvalg",
+  "@randomSelection": {
+    "description": "randomSelection"
+  },
+  "randomRadio": "Tilfeldig radio",
+  "@randomRadio": {
+    "description": "randomRadio"
+  },
+  "exportPlaylist": "Eksporter spilleliste",
+  "@exportPlaylist": {
+    "description": "exportPlaylist"
+  },
+  "importPlaylistDesc": "Velg en tidligere eksportert spilleliste-JSON-fil som skal importeres",
+  "@importPlaylistDesc": {
+    "description": "importPlaylistDesc"
+  },
+  "invalidPlaylistFile": "Ugyldig spillelistefilstruktur",
+  "@invalidPlaylistFile": {
+    "description": "invalidPlaylistFile"
+  },
+  "fileNotFound": "Filen ble ikke funnet",
+  "@fileNotFound": {
+    "description": "fileNotFound"
+  },
+  "exportErrorPermission": "Tillatelse nektet ved eksport",
+  "@exportErrorPermission": {
+    "description": "exportErrorPermission"
+  },
+  "importingPlaylist": "Importerer spilleliste ...",
+  "@importingPlaylist": {
+    "description": "importingPlaylist"
+  },
+  "exportErrorStorage": "Utilstrekkelig lagringsplass",
+  "@exportErrorStorage": {
+    "description": "exportErrorStorage"
+  },
+  "exportingPlaylist": "Eksporterer spilleliste ...",
+  "@exportingPlaylist": {
+    "description": "exportingPlaylist"
+  },
+  "playlistExportedMsg": "Spillelisten ble eksportert til",
+  "@playlistExportedMsg": {
+    "description": "playlistExportedMsg"
+  },
+  "exportError": "Feil ved eksport av spilleliste",
+  "@exportError": {
+    "description": "exportError"
+  },
+  "exportErrorFormat": "Feil ved formatering av spillelistedata",
+  "@exportErrorFormat": {
+    "description": "exportErrorFormat"
+  },
+  "importPlaylist": "Importer spilleliste",
+  "@importPlaylist": {
+    "description": "importPlaylist"
+  },
+  "selectFile": "Velg Fil",
+  "@selectFile": {
+    "description": "selectFile"
+  },
+  "playlistImportedMsg": "Spillelisten ble importert",
+  "@playlistImportedMsg": {
+    "description": "playlistImportedMsg"
+  },
+  "importError": "Feil ved import av spilleliste",
+  "@importError": {
+    "description": "importError"
+  },
+  "importErrorFileAccess": "Den valgte filen fikk ikke tilgang",
+  "@importErrorFileAccess": {
+    "description": "importErrorFileAccess"
+  },
+  "importErrorFormat": "Ugyldig filformat",
+  "@importErrorFormat": {
+    "description": "importErrorFormat"
+  },
+  "importErrorDatabase": "Feil ved lagring i database",
+  "@importErrorDatabase": {
+    "description": "importErrorDatabase"
+  },
+  "importLargeFileNote": "Merk: Store spillelister kan ta lengre tid å importere",
+  "@importLargeFileNote": {
+    "description": "importLargeFileNote"
+  },
+  "exportPlaylistCsv": "Eksporter spilleliste som CSV",
+  "@exportPlaylistCsv": {
+    "description": "exportPlaylistCsv"
+  },
+  "exportPlaylistJson": "Eksporter spilleliste til JSON",
+  "@exportPlaylistJson": {
+    "description": "exportPlaylistJson"
+  },
+  "exportPlaylistJsonSubtitle": "Dette formatet kan importeres",
+  "@exportPlaylistJsonSubtitle": {
+    "description": "exportPlaylistJsonSubtitle"
+  },
+  "exportPlaylistCsvSubtitle": "Kan ikke importere her",
+  "@exportPlaylistCsvSubtitle": {
+    "description": "exportPlaylistCsvSubtitle"
+  },
+  "exportToYouTubeMusic": "Eksporter til YouTube-musikk",
+  "@exportToYouTubeMusic": {
+    "description": "exportToYouTubeMusic"
+  },
+  "exportToYouTubeMusicSubtitle": "Den vil presse spillelisten din (sanger < 50) til gjeldende kø, ikke glem å legge den til spillelisten/lagre etter å ha åpnet den i YtMusic",
+  "@exportToYouTubeMusicSubtitle": {
+    "description": "exportToYouTubeMusicSubtitle"
+  },
+  "linkCopied": "Linken er kopiert til utklippstavlen",
+  "@linkCopied": {
+    "description": "linkCopied"
+  },
+  "lyrics": "Bokstaver",
+  "@lyrics": {
+    "description": "lyrics"
+  },
+  "no": "Nei",
+  "@no": {
+    "description": "no"
+  },
+  "podcasts": "Podcaster",
+  "@podcasts": {
+    "description": "podcasts"
+  },
+  "episodes": "Episoder",
+  "@episodes": {
+    "description": "episodes"
+  },
+  "profiles": "Profiler",
+  "@profiles": {
+    "description": "profiles"
+  },
+  "addToLibrary": "Legg til i biblioteket",
+  "@addToLibrary": {
+    "description": "addToLibrary"
+  },
+  "removeFromLibrary": "Slett fra biblioteket",
+  "@removeFromLibrary": {
+    "description": "removeFromLibrary"
+  },
+  "play": "Spill",
+  "@play": {
+    "description": "play"
+  },
+  "enqueueAlbumSongs": "Legg til albumsanger i køen",
+  "@enqueueAlbumSongs": {
+    "description": "enqueueAlbumSongs"
+  },
+  "downloadAlbumSongs": "Last ned sanger fra albumet",
+  "@downloadAlbumSongs": {
+    "description": "downloadAlbumSongs"
+  },
+  "shareAlbum": "Del album",
+  "@shareAlbum": {
+    "description": "shareAlbum"
+  },
+  "imported": "Importert",
+  "@imported": {
+    "description": "imported"
+  },
+  "importedPlaylist": "Importert spilleliste",
+  "@importedPlaylist": {
+    "description": "importedPlaylist"
+  },
+  "permissionDenied": "Tillatelse nektet",
+  "@permissionDenied": {
+    "description": "permissionDenied"
+  },
+  "enqueueSongs": "Legg til sanger i køen",
+  "@enqueueSongs": {
+    "description": "enqueueSongs"
+  },
+  "shuffle": "Tilfeldig",
+  "@shuffle": {
+    "description": "shuffle"
+  },
+  "downloadPlaylist": "Last ned spilleliste",
+  "@downloadPlaylist": {
+    "description": "downloadPlaylist"
+  },
+  "syncPlaylistSongs": "Synkroniser spillelistesanger",
+  "@syncPlaylistSongs": {
+    "description": "syncPlaylistSongs"
+  },
+  "blacklistPipedPlaylist": "Spilleliste svarteliste",
+  "@blacklistPipedPlaylist": {
+    "description": "blacklistPipedPlaylist"
+  },
+  "sharePlaylist": "Del spilleliste",
+  "@sharePlaylist": {
+    "description": "sharePlaylist"
+  },
+  "playlist": "Spilleliste",
+  "@playlist": {
+    "description": "playlist"
+  },
+  "sortByName": "Sorter etter navn",
+  "@sortByName": {
+    "description": "sortByName"
+  },
+  "sortByDate": "Sorter etter dato",
+  "@sortByDate": {
+    "description": "sortByDate"
+  },
+  "sortByDuration": "Sorter etter varighet",
+  "@sortByDuration": {
+    "description": "sortByDuration"
+  },
+  "sortAscendNDescend": "Sorter stigende/synkende",
+  "@sortAscendNDescend": {
+    "description": "sortAscendNDescend"
+  },
+  "migration_summary_start": "Migrering fullført fra {source}.",
+  "@migration_summary_start": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      }
+    },
+    "description": "migration_summary_start"
+  },
+  "migration_summary_playlists": "Spillelister: {count}",
+  "@migration_summary_playlists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_playlists"
+  },
+  "migration_summary_songs": "Sanger: {count}",
+  "@migration_summary_songs": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_songs"
+  },
+  "migration_summary_favorites": "Favoritter: {count}",
+  "@migration_summary_favorites": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_favorites"
+  },
+  "migration_summary_albums": "Album: {count}",
+  "@migration_summary_albums": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_albums"
+  },
+  "migration_summary_artists": "Artister: {count}",
+  "@migration_summary_artists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_artists"
+  },
+  "migration_select_file_dialog": "Velg song.db eller en backup .backup",
+  "@migration_select_file_dialog": {
+    "description": "migration_select_file_dialog"
+  },
+  "migration_success": "Migreringen er fullført.",
+  "@migration_success": {
+    "description": "migration_success"
+  },
+  "backup_select_folder_dialog": "Velg mappen for sikkerhetskopiering",
+  "@backup_select_folder_dialog": {
+    "description": "backup_select_folder_dialog"
+  },
+  "restore_select_file_dialog": "Velg sikkerhetskopifilen",
+  "@restore_select_file_dialog": {
+    "description": "restore_select_file_dialog"
+  },
+  "auth_hint_email": "navn@mail.com",
+  "@auth_hint_email": {
+    "description": "auth_hint_email"
+  },
+  "auth_error_invalid_email": "Skriv inn en gyldig e-post.",
+  "@auth_error_invalid_email": {
+    "description": "auth_error_invalid_email"
+  },
+  "settings_cloud_backup_dialog_desc": "Last opp en .hmb-sikkerhetskopi av appen til serveren, og gjenopprett om nødvendig noen av de lagrede sikkerhetskopiene.",
+  "@settings_cloud_backup_dialog_desc": {
+    "description": "settings_cloud_backup_dialog_desc"
+  },
+  "delete": "Slett",
+  "@delete": {
+    "description": "delete"
+  },
+  "in_app_storage": "Intern lagringskatalog",
+  "@in_app_storage": {
+    "description": "in_app_storage"
+  },
+  "auth_brand_description_1": "Vi tok med pålogging, registrering og passordgjenoppretting fra forrige prosjekt, tilpasset denne musikkappen.",
+  "@auth_brand_description_1": {
+    "description": "auth_brand_description_1"
+  },
+  "auth_brand_description_2": "Økten din lever i sikker lagring og er validert med den samme backend du allerede brukte.",
+  "@auth_brand_description_2": {
+    "description": "auth_brand_description_2"
+  },
+  "auth_brand_not_configured": "Env-filen må konfigureres for å koble til autentiseringsbackend.",
+  "@auth_brand_not_configured": {
+    "description": "auth_brand_not_configured"
+  },
+  "auth_forgot_password_subtitle": "Vi sender deg instruksjonene til e-postadressen for kontoen din.",
+  "@auth_forgot_password_subtitle": {
+    "description": "auth_forgot_password_subtitle"
+  },
+  "auth_btn_send_email": "Send mail",
+  "@auth_btn_send_email": {
+    "description": "auth_btn_send_email"
+  },
+  "auth_error_not_configured": "Autentiseringsstøtten mangler for å konfigureres i .env-filen.",
+  "@auth_error_not_configured": {
+    "description": "auth_error_not_configured"
+  },
+  "auth_error_invalid_credentials": "Feil e-post eller passord.",
+  "@auth_error_invalid_credentials": {
+    "description": "auth_error_invalid_credentials"
+  },
+  "auth_error_not_verified": "Kontoen din er ikke bekreftet ennå.",
+  "@auth_error_not_verified": {
+    "description": "auth_error_not_verified"
+  },
+  "auth_error_unknown": "Det var ikke mulig å fullføre operasjonen.",
+  "@auth_error_unknown": {
+    "description": "auth_error_unknown"
+  },
+  "auth_register_success": "Konto opprettet.",
+  "@auth_register_success": {
+    "description": "auth_register_success"
+  },
+  "auth_register_error": "Kontoen kunne ikke opprettes.",
+  "@auth_register_error": {
+    "description": "auth_register_error"
+  },
+  "auth_recovery_email_sent": "E-post sendt.",
+  "@auth_recovery_email_sent": {
+    "description": "auth_recovery_email_sent"
+  },
+  "auth_recovery_email_error": "Det var ikke mulig å sende e-posten.",
+  "@auth_recovery_email_error": {
+    "description": "auth_recovery_email_error"
+  },
+  "latestVersion": "Siste versjon tilgjengelig",
+  "@latestVersion": {
+    "description": "latestVersion"
+  },
+  "updateApp": "Oppdater applikasjon",
+  "@updateApp": {
+    "description": "updateApp"
+  },
+  "loadInfoUpdate": "Kunne ikke laste inn oppdateringsinformasjon",
+  "@loadInfoUpdate": {
+    "description": "loadInfoUpdate"
+  },
+  "infoNotAvailable": "Informasjon ikke tilgjengelig",
+  "@infoNotAvailable": {
+    "description": "infoNotAvailable"
+  },
+  "developedBy": "Utviklet og vedlikeholdt av Joss Estrada (JOSPROX)",
+  "@developedBy": {
+    "description": "developedBy"
+  },
+  "copyrightNotice": "© 2026 JOSPROX. GPL-lisens v3.0",
+  "@copyrightNotice": {
+    "description": "copyrightNotice"
+  },
+  "backupSettingsAndPlaylists": "Sikkerhetskopieringsinnstillinger og spillelister",
+  "@backupSettingsAndPlaylists": {
+    "description": "backupSettingsAndPlaylists"
+  },
+  "restoreSettingsAndPlaylists": "Gjenopprett innstillinger og spillelister",
+  "@restoreSettingsAndPlaylists": {
+    "description": "restoreSettingsAndPlaylists"
+  },
+  "helloWorld": "Hei verden",
+  "@helloWorld": {
+    "description": "Este texto es opcional"
   }
 }

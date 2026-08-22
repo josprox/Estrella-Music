@@ -2018,5 +2018,283 @@
   "auth_2fa_invalid": "Въведете валиден 6-цифрен код или влезте отново.",
   "@auth_2fa_invalid": {
     "description": "auth_2fa_invalid"
+  },
+  "helloWorld": "здравей свят",
+  "@helloWorld": {
+    "description": "Este texto es opcional"
+  },
+  "quickPics": "Бърз избор",
+  "@quickPics": {
+    "description": "quickPics"
+  },
+  "topMusicVid": "Топ музикални видеоклипове",
+  "@topMusicVid": {
+    "description": "topMusicVid"
+  },
+  "lyrics": "Писма",
+  "@lyrics": {
+    "description": "lyrics"
+  },
+  "no": "не",
+  "@no": {
+    "description": "no"
+  },
+  "podcasts": "Подкасти",
+  "@podcasts": {
+    "description": "podcasts"
+  },
+  "episodes": "епизоди",
+  "@episodes": {
+    "description": "episodes"
+  },
+  "profiles": "Профили",
+  "@profiles": {
+    "description": "profiles"
+  },
+  "addToLibrary": "Добавяне към библиотеката",
+  "@addToLibrary": {
+    "description": "addToLibrary"
+  },
+  "removeFromLibrary": "Изтриване от библиотеката",
+  "@removeFromLibrary": {
+    "description": "removeFromLibrary"
+  },
+  "play": "Играйте",
+  "@play": {
+    "description": "play"
+  },
+  "enqueueAlbumSongs": "Добавете песни от албума към опашката",
+  "@enqueueAlbumSongs": {
+    "description": "enqueueAlbumSongs"
+  },
+  "downloadAlbumSongs": "Изтегляне на песни от албума",
+  "@downloadAlbumSongs": {
+    "description": "downloadAlbumSongs"
+  },
+  "shareAlbum": "Споделяне на албум",
+  "@shareAlbum": {
+    "description": "shareAlbum"
+  },
+  "imported": "Внесени",
+  "@imported": {
+    "description": "imported"
+  },
+  "importedPlaylist": "Импортиран плейлист",
+  "@importedPlaylist": {
+    "description": "importedPlaylist"
+  },
+  "permissionDenied": "Разрешението е отказано",
+  "@permissionDenied": {
+    "description": "permissionDenied"
+  },
+  "enqueueSongs": "Добавете песни към опашката",
+  "@enqueueSongs": {
+    "description": "enqueueSongs"
+  },
+  "shuffle": "Случаен",
+  "@shuffle": {
+    "description": "shuffle"
+  },
+  "downloadPlaylist": "Изтегляне на плейлист",
+  "@downloadPlaylist": {
+    "description": "downloadPlaylist"
+  },
+  "syncPlaylistSongs": "Синхронизиране на песни от плейлист",
+  "@syncPlaylistSongs": {
+    "description": "syncPlaylistSongs"
+  },
+  "blacklistPipedPlaylist": "Плейлист черен списък",
+  "@blacklistPipedPlaylist": {
+    "description": "blacklistPipedPlaylist"
+  },
+  "sharePlaylist": "Споделяне на плейлист",
+  "@sharePlaylist": {
+    "description": "sharePlaylist"
+  },
+  "playlist": "Плейлист",
+  "@playlist": {
+    "description": "playlist"
+  },
+  "sortByName": "Сортиране по име",
+  "@sortByName": {
+    "description": "sortByName"
+  },
+  "sortByDate": "Сортиране по дата",
+  "@sortByDate": {
+    "description": "sortByDate"
+  },
+  "sortByDuration": "Сортиране по продължителност",
+  "@sortByDuration": {
+    "description": "sortByDuration"
+  },
+  "sortAscendNDescend": "Сортиране възходящо/низходящо",
+  "@sortAscendNDescend": {
+    "description": "sortAscendNDescend"
+  },
+  "migration_summary_start": "Миграцията е завършена от {source}.",
+  "@migration_summary_start": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      }
+    },
+    "description": "migration_summary_start"
+  },
+  "migration_summary_playlists": "Плейлисти: {count}",
+  "@migration_summary_playlists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_playlists"
+  },
+  "migration_summary_songs": "Песни: {count}",
+  "@migration_summary_songs": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_songs"
+  },
+  "migration_summary_favorites": "Любими: {count}",
+  "@migration_summary_favorites": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_favorites"
+  },
+  "migration_summary_albums": "Албуми: {count}",
+  "@migration_summary_albums": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_albums"
+  },
+  "migration_summary_artists": "Изпълнители: {count}",
+  "@migration_summary_artists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_artists"
+  },
+  "migration_select_file_dialog": "Изберете song.db или резервно копие .backup",
+  "@migration_select_file_dialog": {
+    "description": "migration_select_file_dialog"
+  },
+  "migration_success": "Миграцията завърши успешно.",
+  "@migration_success": {
+    "description": "migration_success"
+  },
+  "backup_select_folder_dialog": "Изберете папката за архивиране",
+  "@backup_select_folder_dialog": {
+    "description": "backup_select_folder_dialog"
+  },
+  "restore_select_file_dialog": "Изберете архивния файл",
+  "@restore_select_file_dialog": {
+    "description": "restore_select_file_dialog"
+  },
+  "auth_hint_email": "име@mail.com",
+  "@auth_hint_email": {
+    "description": "auth_hint_email"
+  },
+  "auth_error_invalid_email": "Въведете валиден имейл.",
+  "@auth_error_invalid_email": {
+    "description": "auth_error_invalid_email"
+  },
+  "settings_cloud_backup_dialog_desc": "Качете .hmb резервно копие на приложението на сървъра и, ако е необходимо, възстановете някое от запазените архиви.",
+  "@settings_cloud_backup_dialog_desc": {
+    "description": "settings_cloud_backup_dialog_desc"
+  },
+  "delete": "Изтриване",
+  "@delete": {
+    "description": "delete"
+  },
+  "in_app_storage": "Вътрешна директория за съхранение",
+  "@in_app_storage": {
+    "description": "in_app_storage"
+  },
+  "auth_brand_description_1": "Донесохме вход, регистрация и възстановяване на парола от предишния проект, адаптиран за това музикално приложение.",
+  "@auth_brand_description_1": {
+    "description": "auth_brand_description_1"
+  },
+  "auth_brand_description_2": "Вашата сесия се съхранява в защитено хранилище и се валидира със същия бекенд, който вече сте използвали.",
+  "@auth_brand_description_2": {
+    "description": "auth_brand_description_2"
+  },
+  "auth_brand_not_configured": "Файлът .env трябва да бъде конфигуриран за свързване на бекенда за удостоверяване.",
+  "@auth_brand_not_configured": {
+    "description": "auth_brand_not_configured"
+  },
+  "auth_forgot_password_subtitle": "Ще ви изпратим инструкциите на имейла на вашия акаунт.",
+  "@auth_forgot_password_subtitle": {
+    "description": "auth_forgot_password_subtitle"
+  },
+  "auth_btn_send_email": "Изпращане на поща",
+  "@auth_btn_send_email": {
+    "description": "auth_btn_send_email"
+  },
+  "auth_error_not_configured": "Липсва бекендът за удостоверяване, за да бъде конфигуриран в .env файла.",
+  "@auth_error_not_configured": {
+    "description": "auth_error_not_configured"
+  },
+  "auth_error_invalid_credentials": "Неправилен имейл или парола.",
+  "@auth_error_invalid_credentials": {
+    "description": "auth_error_invalid_credentials"
+  },
+  "auth_error_not_verified": "Вашият акаунт все още не е потвърден.",
+  "@auth_error_not_verified": {
+    "description": "auth_error_not_verified"
+  },
+  "auth_error_unknown": "Не беше възможно да се завърши операцията.",
+  "@auth_error_unknown": {
+    "description": "auth_error_unknown"
+  },
+  "auth_register_success": "Акаунтът е създаден успешно.",
+  "@auth_register_success": {
+    "description": "auth_register_success"
+  },
+  "auth_register_error": "Акаунтът не можа да бъде създаден.",
+  "@auth_register_error": {
+    "description": "auth_register_error"
+  },
+  "auth_recovery_email_sent": "Имейлът е изпратен.",
+  "@auth_recovery_email_sent": {
+    "description": "auth_recovery_email_sent"
+  },
+  "auth_recovery_email_error": "Не беше възможно изпращането на имейла.",
+  "@auth_recovery_email_error": {
+    "description": "auth_recovery_email_error"
+  },
+  "latestVersion": "Налична последна версия",
+  "@latestVersion": {
+    "description": "latestVersion"
+  },
+  "updateApp": "Актуализиране на приложението",
+  "@updateApp": {
+    "description": "updateApp"
+  },
+  "loadInfoUpdate": "Неуспешно зареждане на информация за актуализация",
+  "@loadInfoUpdate": {
+    "description": "loadInfoUpdate"
+  },
+  "infoNotAvailable": "Няма налична информация",
+  "@infoNotAvailable": {
+    "description": "infoNotAvailable"
+  },
+  "developedBy": "Разработено и поддържано от Joss Estrada (JOSPROX)",
+  "@developedBy": {
+    "description": "developedBy"
+  },
+  "copyrightNotice": "© 2026 JOSPROX. GPL лиценз v3.0",
+  "@copyrightNotice": {
+    "description": "copyrightNotice"
   }
 }

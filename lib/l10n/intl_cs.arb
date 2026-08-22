@@ -2018,5 +2018,283 @@
   "auth_2fa_invalid": "Zadejte platný 6místný kód nebo se znovu přihlaste.",
   "@auth_2fa_invalid": {
     "description": "auth_2fa_invalid"
+  },
+  "helloWorld": "Ahoj světe",
+  "@helloWorld": {
+    "description": "Este texto es opcional"
+  },
+  "quickPics": "Rychlý výběr",
+  "@quickPics": {
+    "description": "quickPics"
+  },
+  "topMusicVid": "Nejlepší hudební videa",
+  "@topMusicVid": {
+    "description": "topMusicVid"
+  },
+  "lyrics": "Dopisy",
+  "@lyrics": {
+    "description": "lyrics"
+  },
+  "no": "Ne",
+  "@no": {
+    "description": "no"
+  },
+  "podcasts": "podcasty",
+  "@podcasts": {
+    "description": "podcasts"
+  },
+  "episodes": "Epizody",
+  "@episodes": {
+    "description": "episodes"
+  },
+  "profiles": "Profily",
+  "@profiles": {
+    "description": "profiles"
+  },
+  "addToLibrary": "Přidat do knihovny",
+  "@addToLibrary": {
+    "description": "addToLibrary"
+  },
+  "removeFromLibrary": "Smazat z knihovny",
+  "@removeFromLibrary": {
+    "description": "removeFromLibrary"
+  },
+  "play": "hrát",
+  "@play": {
+    "description": "play"
+  },
+  "enqueueAlbumSongs": "Přidejte skladby z alba do fronty",
+  "@enqueueAlbumSongs": {
+    "description": "enqueueAlbumSongs"
+  },
+  "downloadAlbumSongs": "Stáhněte si písně z alba",
+  "@downloadAlbumSongs": {
+    "description": "downloadAlbumSongs"
+  },
+  "shareAlbum": "Sdílejte album",
+  "@shareAlbum": {
+    "description": "shareAlbum"
+  },
+  "imported": "Importováno",
+  "@imported": {
+    "description": "imported"
+  },
+  "importedPlaylist": "Importovaný seznam skladeb",
+  "@importedPlaylist": {
+    "description": "importedPlaylist"
+  },
+  "permissionDenied": "Povolení odepřeno",
+  "@permissionDenied": {
+    "description": "permissionDenied"
+  },
+  "enqueueSongs": "Přidejte skladby do fronty",
+  "@enqueueSongs": {
+    "description": "enqueueSongs"
+  },
+  "shuffle": "Náhodné",
+  "@shuffle": {
+    "description": "shuffle"
+  },
+  "downloadPlaylist": "Stáhnout playlist",
+  "@downloadPlaylist": {
+    "description": "downloadPlaylist"
+  },
+  "syncPlaylistSongs": "Synchronizujte skladby ze seznamu skladeb",
+  "@syncPlaylistSongs": {
+    "description": "syncPlaylistSongs"
+  },
+  "blacklistPipedPlaylist": "Seznam zakázaných skladeb",
+  "@blacklistPipedPlaylist": {
+    "description": "blacklistPipedPlaylist"
+  },
+  "sharePlaylist": "Sdílejte seznam skladeb",
+  "@sharePlaylist": {
+    "description": "sharePlaylist"
+  },
+  "playlist": "Seznam skladeb",
+  "@playlist": {
+    "description": "playlist"
+  },
+  "sortByName": "Seřadit podle názvu",
+  "@sortByName": {
+    "description": "sortByName"
+  },
+  "sortByDate": "Seřadit podle data",
+  "@sortByDate": {
+    "description": "sortByDate"
+  },
+  "sortByDuration": "Seřadit podle trvání",
+  "@sortByDuration": {
+    "description": "sortByDuration"
+  },
+  "sortAscendNDescend": "Seřadit vzestupně/sestupně",
+  "@sortAscendNDescend": {
+    "description": "sortAscendNDescend"
+  },
+  "migration_summary_start": "Migrace dokončena z {source}.",
+  "@migration_summary_start": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      }
+    },
+    "description": "migration_summary_start"
+  },
+  "migration_summary_playlists": "Seznamy videí: {count}",
+  "@migration_summary_playlists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_playlists"
+  },
+  "migration_summary_songs": "Skladby: {count}",
+  "@migration_summary_songs": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_songs"
+  },
+  "migration_summary_favorites": "Oblíbené: {count}",
+  "@migration_summary_favorites": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_favorites"
+  },
+  "migration_summary_albums": "Alba: {count}",
+  "@migration_summary_albums": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_albums"
+  },
+  "migration_summary_artists": "Umělci: {count}",
+  "@migration_summary_artists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_artists"
+  },
+  "migration_select_file_dialog": "Vyberte song.db nebo záložní .backup",
+  "@migration_select_file_dialog": {
+    "description": "migration_select_file_dialog"
+  },
+  "migration_success": "Migrace byla úspěšně dokončena.",
+  "@migration_success": {
+    "description": "migration_success"
+  },
+  "backup_select_folder_dialog": "Vyberte složku pro zálohování",
+  "@backup_select_folder_dialog": {
+    "description": "backup_select_folder_dialog"
+  },
+  "restore_select_file_dialog": "Vyberte záložní soubor",
+  "@restore_select_file_dialog": {
+    "description": "restore_select_file_dialog"
+  },
+  "auth_hint_email": "jmeno@mail.com",
+  "@auth_hint_email": {
+    "description": "auth_hint_email"
+  },
+  "auth_error_invalid_email": "Zadejte platný e-mail.",
+  "@auth_error_invalid_email": {
+    "description": "auth_error_invalid_email"
+  },
+  "settings_cloud_backup_dialog_desc": "Nahrajte zálohu aplikace .hmb na server a v případě potřeby obnovte kteroukoli z uložených záloh.",
+  "@settings_cloud_backup_dialog_desc": {
+    "description": "settings_cloud_backup_dialog_desc"
+  },
+  "delete": "Smazat",
+  "@delete": {
+    "description": "delete"
+  },
+  "in_app_storage": "Adresář interního úložiště",
+  "@in_app_storage": {
+    "description": "in_app_storage"
+  },
+  "auth_brand_description_1": "Přinesli jsme přihlášení, registraci a obnovení hesla z předchozího projektu, přizpůsobené pro tuto hudební aplikaci.",
+  "@auth_brand_description_1": {
+    "description": "auth_brand_description_1"
+  },
+  "auth_brand_description_2": "Vaše relace žije v zabezpečeném úložišti a je ověřena stejným backendem, který jste již používali.",
+  "@auth_brand_description_2": {
+    "description": "auth_brand_description_2"
+  },
+  "auth_brand_not_configured": "Soubor .env musí být nakonfigurován pro připojení ověřovacího backendu.",
+  "@auth_brand_not_configured": {
+    "description": "auth_brand_not_configured"
+  },
+  "auth_forgot_password_subtitle": "Pokyny vám zašleme na e-mail vašeho účtu.",
+  "@auth_forgot_password_subtitle": {
+    "description": "auth_forgot_password_subtitle"
+  },
+  "auth_btn_send_email": "Odeslat poštu",
+  "@auth_btn_send_email": {
+    "description": "auth_btn_send_email"
+  },
+  "auth_error_not_configured": "V souboru .env chybí ověřovací backend pro konfiguraci.",
+  "@auth_error_not_configured": {
+    "description": "auth_error_not_configured"
+  },
+  "auth_error_invalid_credentials": "Nesprávný e-mail nebo heslo.",
+  "@auth_error_invalid_credentials": {
+    "description": "auth_error_invalid_credentials"
+  },
+  "auth_error_not_verified": "Váš účet ještě není ověřen.",
+  "@auth_error_not_verified": {
+    "description": "auth_error_not_verified"
+  },
+  "auth_error_unknown": "Operaci nebylo možné dokončit.",
+  "@auth_error_unknown": {
+    "description": "auth_error_unknown"
+  },
+  "auth_register_success": "Účet byl úspěšně vytvořen.",
+  "@auth_register_success": {
+    "description": "auth_register_success"
+  },
+  "auth_register_error": "Účet se nepodařilo vytvořit.",
+  "@auth_register_error": {
+    "description": "auth_register_error"
+  },
+  "auth_recovery_email_sent": "Email odeslán.",
+  "@auth_recovery_email_sent": {
+    "description": "auth_recovery_email_sent"
+  },
+  "auth_recovery_email_error": "E-mail nebylo možné odeslat.",
+  "@auth_recovery_email_error": {
+    "description": "auth_recovery_email_error"
+  },
+  "latestVersion": "Nejnovější dostupná verze",
+  "@latestVersion": {
+    "description": "latestVersion"
+  },
+  "updateApp": "Aktualizovat aplikaci",
+  "@updateApp": {
+    "description": "updateApp"
+  },
+  "loadInfoUpdate": "Nelze načíst informace o aktualizaci",
+  "@loadInfoUpdate": {
+    "description": "loadInfoUpdate"
+  },
+  "infoNotAvailable": "Informace nejsou k dispozici",
+  "@infoNotAvailable": {
+    "description": "infoNotAvailable"
+  },
+  "developedBy": "Vyvinul a spravuje Joss Estrada (JOSPROX)",
+  "@developedBy": {
+    "description": "developedBy"
+  },
+  "copyrightNotice": "© 2026 JOSPROX. Licence GPL v3.0",
+  "@copyrightNotice": {
+    "description": "copyrightNotice"
   }
 }

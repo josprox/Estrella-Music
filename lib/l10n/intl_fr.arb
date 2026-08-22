@@ -2026,5 +2026,275 @@
   "auth_2fa_invalid": "Entrez un code valide à 6 chiffres ou connectez-vous à nouveau.",
   "@auth_2fa_invalid": {
     "description": "auth_2fa_invalid"
+  },
+  "helloWorld": "Bonjour tout le monde",
+  "@helloWorld": {
+    "description": "Este texto es opcional"
+  },
+  "lyrics": "Lettres",
+  "@lyrics": {
+    "description": "lyrics"
+  },
+  "no": "Non",
+  "@no": {
+    "description": "no"
+  },
+  "podcasts": "Baladodiffusions",
+  "@podcasts": {
+    "description": "podcasts"
+  },
+  "episodes": "Épisodes",
+  "@episodes": {
+    "description": "episodes"
+  },
+  "profiles": "Profils",
+  "@profiles": {
+    "description": "profiles"
+  },
+  "addToLibrary": "Ajouter à la bibliothèque",
+  "@addToLibrary": {
+    "description": "addToLibrary"
+  },
+  "removeFromLibrary": "Supprimer de la bibliothèque",
+  "@removeFromLibrary": {
+    "description": "removeFromLibrary"
+  },
+  "play": "Jouer",
+  "@play": {
+    "description": "play"
+  },
+  "enqueueAlbumSongs": "Ajouter des chansons d'album à la file d'attente",
+  "@enqueueAlbumSongs": {
+    "description": "enqueueAlbumSongs"
+  },
+  "downloadAlbumSongs": "Télécharger des chansons de l'album",
+  "@downloadAlbumSongs": {
+    "description": "downloadAlbumSongs"
+  },
+  "shareAlbum": "Partager l'album",
+  "@shareAlbum": {
+    "description": "shareAlbum"
+  },
+  "imported": "Importé",
+  "@imported": {
+    "description": "imported"
+  },
+  "importedPlaylist": "Liste de lecture importée",
+  "@importedPlaylist": {
+    "description": "importedPlaylist"
+  },
+  "permissionDenied": "Autorisation refusée",
+  "@permissionDenied": {
+    "description": "permissionDenied"
+  },
+  "enqueueSongs": "Ajouter des chansons à la file d'attente",
+  "@enqueueSongs": {
+    "description": "enqueueSongs"
+  },
+  "shuffle": "Aléatoire",
+  "@shuffle": {
+    "description": "shuffle"
+  },
+  "downloadPlaylist": "Télécharger la liste de lecture",
+  "@downloadPlaylist": {
+    "description": "downloadPlaylist"
+  },
+  "syncPlaylistSongs": "Synchroniser les chansons de la liste de lecture",
+  "@syncPlaylistSongs": {
+    "description": "syncPlaylistSongs"
+  },
+  "blacklistPipedPlaylist": "Liste noire de la playlist",
+  "@blacklistPipedPlaylist": {
+    "description": "blacklistPipedPlaylist"
+  },
+  "sharePlaylist": "Partager la playlist",
+  "@sharePlaylist": {
+    "description": "sharePlaylist"
+  },
+  "playlist": "Liste de lecture",
+  "@playlist": {
+    "description": "playlist"
+  },
+  "sortByName": "Trier par nom",
+  "@sortByName": {
+    "description": "sortByName"
+  },
+  "sortByDate": "Trier par date",
+  "@sortByDate": {
+    "description": "sortByDate"
+  },
+  "sortByDuration": "Trier par durée",
+  "@sortByDuration": {
+    "description": "sortByDuration"
+  },
+  "sortAscendNDescend": "Trier par ordre croissant/décroissant",
+  "@sortAscendNDescend": {
+    "description": "sortAscendNDescend"
+  },
+  "migration_summary_start": "Migration terminée à partir du {source}.",
+  "@migration_summary_start": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      }
+    },
+    "description": "migration_summary_start"
+  },
+  "migration_summary_playlists": "Listes de lecture : {count}",
+  "@migration_summary_playlists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_playlists"
+  },
+  "migration_summary_songs": "Chansons : {count}",
+  "@migration_summary_songs": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_songs"
+  },
+  "migration_summary_favorites": "Favoris : {count}",
+  "@migration_summary_favorites": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_favorites"
+  },
+  "migration_summary_albums": "Albums : {count}",
+  "@migration_summary_albums": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_albums"
+  },
+  "migration_summary_artists": "Artistes : {count}",
+  "@migration_summary_artists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_artists"
+  },
+  "migration_select_file_dialog": "Sélectionnez song.db ou une sauvegarde .backup",
+  "@migration_select_file_dialog": {
+    "description": "migration_select_file_dialog"
+  },
+  "migration_success": "Migration terminée avec succès.",
+  "@migration_success": {
+    "description": "migration_success"
+  },
+  "backup_select_folder_dialog": "Sélectionnez le dossier pour la sauvegarde",
+  "@backup_select_folder_dialog": {
+    "description": "backup_select_folder_dialog"
+  },
+  "restore_select_file_dialog": "Sélectionnez le fichier de sauvegarde",
+  "@restore_select_file_dialog": {
+    "description": "restore_select_file_dialog"
+  },
+  "auth_hint_email": "nom@mail.com",
+  "@auth_hint_email": {
+    "description": "auth_hint_email"
+  },
+  "auth_error_invalid_email": "Entrez un email valide.",
+  "@auth_error_invalid_email": {
+    "description": "auth_error_invalid_email"
+  },
+  "settings_cloud_backup_dialog_desc": "Téléchargez une sauvegarde .hmb de l'application sur le serveur et, si nécessaire, restaurez l'une des sauvegardes enregistrées.",
+  "@settings_cloud_backup_dialog_desc": {
+    "description": "settings_cloud_backup_dialog_desc"
+  },
+  "delete": "Supprimer",
+  "@delete": {
+    "description": "delete"
+  },
+  "in_app_storage": "Répertoire de stockage interne",
+  "@in_app_storage": {
+    "description": "in_app_storage"
+  },
+  "auth_brand_description_1": "Nous avons apporté le login, l'enregistrement et la récupération du mot de passe du projet précédent, adaptés pour cette application musicale.",
+  "@auth_brand_description_1": {
+    "description": "auth_brand_description_1"
+  },
+  "auth_brand_description_2": "Votre session réside dans un stockage sécurisé et est validée avec le même backend que vous utilisiez déjà.",
+  "@auth_brand_description_2": {
+    "description": "auth_brand_description_2"
+  },
+  "auth_brand_not_configured": "Le fichier .env doit être configuré pour connecter le backend d'authentification.",
+  "@auth_brand_not_configured": {
+    "description": "auth_brand_not_configured"
+  },
+  "auth_forgot_password_subtitle": "Nous vous enverrons les instructions par e-mail sur votre compte.",
+  "@auth_forgot_password_subtitle": {
+    "description": "auth_forgot_password_subtitle"
+  },
+  "auth_btn_send_email": "Envoyer un courrier",
+  "@auth_btn_send_email": {
+    "description": "auth_btn_send_email"
+  },
+  "auth_error_not_configured": "Le backend d'authentification ne doit pas être configuré dans le fichier .env.",
+  "@auth_error_not_configured": {
+    "description": "auth_error_not_configured"
+  },
+  "auth_error_invalid_credentials": "Email ou mot de passe incorrect.",
+  "@auth_error_invalid_credentials": {
+    "description": "auth_error_invalid_credentials"
+  },
+  "auth_error_not_verified": "Votre compte n'est pas encore vérifié.",
+  "@auth_error_not_verified": {
+    "description": "auth_error_not_verified"
+  },
+  "auth_error_unknown": "Il n'a pas été possible de terminer l'opération.",
+  "@auth_error_unknown": {
+    "description": "auth_error_unknown"
+  },
+  "auth_register_success": "Compte créé avec succès.",
+  "@auth_register_success": {
+    "description": "auth_register_success"
+  },
+  "auth_register_error": "Le compte n'a pas pu être créé.",
+  "@auth_register_error": {
+    "description": "auth_register_error"
+  },
+  "auth_recovery_email_sent": "E-mail envoyé.",
+  "@auth_recovery_email_sent": {
+    "description": "auth_recovery_email_sent"
+  },
+  "auth_recovery_email_error": "Il n'a pas été possible d'envoyer l'e-mail.",
+  "@auth_recovery_email_error": {
+    "description": "auth_recovery_email_error"
+  },
+  "latestVersion": "Dernière version disponible",
+  "@latestVersion": {
+    "description": "latestVersion"
+  },
+  "updateApp": "Mettre à jour l'application",
+  "@updateApp": {
+    "description": "updateApp"
+  },
+  "loadInfoUpdate": "Impossible de charger les informations de mise à jour",
+  "@loadInfoUpdate": {
+    "description": "loadInfoUpdate"
+  },
+  "infoNotAvailable": "Informations non disponibles",
+  "@infoNotAvailable": {
+    "description": "infoNotAvailable"
+  },
+  "developedBy": "Développé et maintenu par Joss Estrada (JOSPROX)",
+  "@developedBy": {
+    "description": "developedBy"
+  },
+  "copyrightNotice": "© 2026 JOSPROX. Licence GPL v3.0",
+  "@copyrightNotice": {
+    "description": "copyrightNotice"
   }
 }

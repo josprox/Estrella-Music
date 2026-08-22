@@ -2018,5 +2018,283 @@
   "auth_2fa_invalid": "6 haneli geçerli bir kod girin veya tekrar oturum açın.",
   "@auth_2fa_invalid": {
     "description": "auth_2fa_invalid"
+  },
+  "helloWorld": "Merhaba dünya",
+  "@helloWorld": {
+    "description": "Este texto es opcional"
+  },
+  "quickPics": "Hızlı seçim",
+  "@quickPics": {
+    "description": "quickPics"
+  },
+  "topMusicVid": "En iyi müzik videoları",
+  "@topMusicVid": {
+    "description": "topMusicVid"
+  },
+  "lyrics": "Mektuplar",
+  "@lyrics": {
+    "description": "lyrics"
+  },
+  "no": "Hayır",
+  "@no": {
+    "description": "no"
+  },
+  "podcasts": "Podcast'ler",
+  "@podcasts": {
+    "description": "podcasts"
+  },
+  "episodes": "Bölümler",
+  "@episodes": {
+    "description": "episodes"
+  },
+  "profiles": "Profiller",
+  "@profiles": {
+    "description": "profiles"
+  },
+  "addToLibrary": "Kitaplığa ekle",
+  "@addToLibrary": {
+    "description": "addToLibrary"
+  },
+  "removeFromLibrary": "Kitaplıktan sil",
+  "@removeFromLibrary": {
+    "description": "removeFromLibrary"
+  },
+  "play": "Oyna",
+  "@play": {
+    "description": "play"
+  },
+  "enqueueAlbumSongs": "Albüm şarkılarını sıraya ekleyin",
+  "@enqueueAlbumSongs": {
+    "description": "enqueueAlbumSongs"
+  },
+  "downloadAlbumSongs": "Albümdeki şarkıları indirin",
+  "@downloadAlbumSongs": {
+    "description": "downloadAlbumSongs"
+  },
+  "shareAlbum": "Albümü paylaş",
+  "@shareAlbum": {
+    "description": "shareAlbum"
+  },
+  "imported": "İthal",
+  "@imported": {
+    "description": "imported"
+  },
+  "importedPlaylist": "İçe aktarılan oynatma listesi",
+  "@importedPlaylist": {
+    "description": "importedPlaylist"
+  },
+  "permissionDenied": "İzin reddedildi",
+  "@permissionDenied": {
+    "description": "permissionDenied"
+  },
+  "enqueueSongs": "Şarkıları sıraya ekleyin",
+  "@enqueueSongs": {
+    "description": "enqueueSongs"
+  },
+  "shuffle": "Rastgele",
+  "@shuffle": {
+    "description": "shuffle"
+  },
+  "downloadPlaylist": "Çalma listesini indir",
+  "@downloadPlaylist": {
+    "description": "downloadPlaylist"
+  },
+  "syncPlaylistSongs": "Çalma listesi şarkılarını senkronize et",
+  "@syncPlaylistSongs": {
+    "description": "syncPlaylistSongs"
+  },
+  "blacklistPipedPlaylist": "Çalma listesi kara listesi",
+  "@blacklistPipedPlaylist": {
+    "description": "blacklistPipedPlaylist"
+  },
+  "sharePlaylist": "Çalma listesini paylaş",
+  "@sharePlaylist": {
+    "description": "sharePlaylist"
+  },
+  "playlist": "Çalma listesi",
+  "@playlist": {
+    "description": "playlist"
+  },
+  "sortByName": "Ada göre sırala",
+  "@sortByName": {
+    "description": "sortByName"
+  },
+  "sortByDate": "Tarihe göre sırala",
+  "@sortByDate": {
+    "description": "sortByDate"
+  },
+  "sortByDuration": "Süreye göre sırala",
+  "@sortByDuration": {
+    "description": "sortByDuration"
+  },
+  "sortAscendNDescend": "Artan/azalan sıralama",
+  "@sortAscendNDescend": {
+    "description": "sortAscendNDescend"
+  },
+  "migration_summary_start": "Taşıma işlemi {source} tarihinden itibaren tamamlandı.",
+  "@migration_summary_start": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      }
+    },
+    "description": "migration_summary_start"
+  },
+  "migration_summary_playlists": "Oynatma listeleri: {count}",
+  "@migration_summary_playlists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_playlists"
+  },
+  "migration_summary_songs": "Şarkılar: {count}",
+  "@migration_summary_songs": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_songs"
+  },
+  "migration_summary_favorites": "Favoriler: {count}",
+  "@migration_summary_favorites": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_favorites"
+  },
+  "migration_summary_albums": "Albümler: {count}",
+  "@migration_summary_albums": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_albums"
+  },
+  "migration_summary_artists": "Sanatçılar: {count}",
+  "@migration_summary_artists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_artists"
+  },
+  "migration_select_file_dialog": "Song.db veya yedek bir .backup seçin",
+  "@migration_select_file_dialog": {
+    "description": "migration_select_file_dialog"
+  },
+  "migration_success": "Taşıma başarıyla tamamlandı.",
+  "@migration_success": {
+    "description": "migration_success"
+  },
+  "backup_select_folder_dialog": "Yedekleme için klasörü seçin",
+  "@backup_select_folder_dialog": {
+    "description": "backup_select_folder_dialog"
+  },
+  "restore_select_file_dialog": "Yedekleme dosyasını seçin",
+  "@restore_select_file_dialog": {
+    "description": "restore_select_file_dialog"
+  },
+  "auth_hint_email": "isim@mail.com",
+  "@auth_hint_email": {
+    "description": "auth_hint_email"
+  },
+  "auth_error_invalid_email": "Geçerli bir e-posta girin.",
+  "@auth_error_invalid_email": {
+    "description": "auth_error_invalid_email"
+  },
+  "settings_cloud_backup_dialog_desc": "Uygulamanın .hmb yedeğini sunucuya yükleyin ve gerekirse kaydedilen yedeklerden herhangi birini geri yükleyin.",
+  "@settings_cloud_backup_dialog_desc": {
+    "description": "settings_cloud_backup_dialog_desc"
+  },
+  "delete": "Sil",
+  "@delete": {
+    "description": "delete"
+  },
+  "in_app_storage": "Dahili depolama dizini",
+  "@in_app_storage": {
+    "description": "in_app_storage"
+  },
+  "auth_brand_description_1": "Önceki projedeki kullanıcı adı, kayıt ve şifre kurtarma bilgilerini bu müzik uygulamasına uyarladık.",
+  "@auth_brand_description_1": {
+    "description": "auth_brand_description_1"
+  },
+  "auth_brand_description_2": "Oturumunuz güvenli bir depolama alanında bulunur ve halihazırda kullanmakta olduğunuz arka uçla doğrulanır.",
+  "@auth_brand_description_2": {
+    "description": "auth_brand_description_2"
+  },
+  "auth_brand_not_configured": "Kimlik doğrulama arka ucuna bağlanmak için .env dosyasının yapılandırılması gerekir.",
+  "@auth_brand_not_configured": {
+    "description": "auth_brand_not_configured"
+  },
+  "auth_forgot_password_subtitle": "Talimatları hesap e-postanıza göndereceğiz.",
+  "@auth_forgot_password_subtitle": {
+    "description": "auth_forgot_password_subtitle"
+  },
+  "auth_btn_send_email": "Posta gönder",
+  "@auth_btn_send_email": {
+    "description": "auth_btn_send_email"
+  },
+  "auth_error_not_configured": ".env dosyasında yapılandırılacak kimlik doğrulama arka ucu eksik.",
+  "@auth_error_not_configured": {
+    "description": "auth_error_not_configured"
+  },
+  "auth_error_invalid_credentials": "Yanlış e-posta veya şifre.",
+  "@auth_error_invalid_credentials": {
+    "description": "auth_error_invalid_credentials"
+  },
+  "auth_error_not_verified": "Hesabınız henüz doğrulanmadı.",
+  "@auth_error_not_verified": {
+    "description": "auth_error_not_verified"
+  },
+  "auth_error_unknown": "Operasyonu tamamlamak mümkün olmadı.",
+  "@auth_error_unknown": {
+    "description": "auth_error_unknown"
+  },
+  "auth_register_success": "Hesap başarıyla oluşturuldu.",
+  "@auth_register_success": {
+    "description": "auth_register_success"
+  },
+  "auth_register_error": "Hesap oluşturulamadı.",
+  "@auth_register_error": {
+    "description": "auth_register_error"
+  },
+  "auth_recovery_email_sent": "E-posta gönderildi.",
+  "@auth_recovery_email_sent": {
+    "description": "auth_recovery_email_sent"
+  },
+  "auth_recovery_email_error": "E-postayı göndermek mümkün olmadı.",
+  "@auth_recovery_email_error": {
+    "description": "auth_recovery_email_error"
+  },
+  "latestVersion": "Mevcut En Son Sürüm",
+  "@latestVersion": {
+    "description": "latestVersion"
+  },
+  "updateApp": "Uygulamayı Güncelle",
+  "@updateApp": {
+    "description": "updateApp"
+  },
+  "loadInfoUpdate": "Güncelleme bilgileri yüklenemedi",
+  "@loadInfoUpdate": {
+    "description": "loadInfoUpdate"
+  },
+  "infoNotAvailable": "Bilgi mevcut değil",
+  "@infoNotAvailable": {
+    "description": "infoNotAvailable"
+  },
+  "developedBy": "Joss Estrada (JOSPROX) Tarafından Geliştirildi ve Korundu",
+  "@developedBy": {
+    "description": "developedBy"
+  },
+  "copyrightNotice": "© 2026 JOSPROX. GPL Lisansı v3.0",
+  "@copyrightNotice": {
+    "description": "copyrightNotice"
   }
 }

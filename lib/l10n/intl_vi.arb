@@ -2014,5 +2014,287 @@
   "auth_2fa_invalid": "Nhập mã gồm 6 chữ số hợp lệ hoặc đăng nhập lại.",
   "@auth_2fa_invalid": {
     "description": "auth_2fa_invalid"
+  },
+  "helloWorld": "Xin chào thế giới",
+  "@helloWorld": {
+    "description": "Este texto es opcional"
+  },
+  "removeFromCache": "Xóa khỏi bộ nhớ đệm",
+  "@removeFromCache": {
+    "description": "removeFromCache"
+  },
+  "quickPics": "Lựa chọn nhanh",
+  "@quickPics": {
+    "description": "quickPics"
+  },
+  "topMusicVid": "Video ca nhạc hàng đầu",
+  "@topMusicVid": {
+    "description": "topMusicVid"
+  },
+  "lyrics": "chữ cái",
+  "@lyrics": {
+    "description": "lyrics"
+  },
+  "no": "Không",
+  "@no": {
+    "description": "no"
+  },
+  "podcasts": "Podcast",
+  "@podcasts": {
+    "description": "podcasts"
+  },
+  "episodes": "tập phim",
+  "@episodes": {
+    "description": "episodes"
+  },
+  "profiles": "Hồ sơ",
+  "@profiles": {
+    "description": "profiles"
+  },
+  "addToLibrary": "Thêm vào thư viện",
+  "@addToLibrary": {
+    "description": "addToLibrary"
+  },
+  "removeFromLibrary": "Xóa khỏi thư viện",
+  "@removeFromLibrary": {
+    "description": "removeFromLibrary"
+  },
+  "play": "Chơi",
+  "@play": {
+    "description": "play"
+  },
+  "enqueueAlbumSongs": "Thêm bài hát trong album vào hàng đợi",
+  "@enqueueAlbumSongs": {
+    "description": "enqueueAlbumSongs"
+  },
+  "downloadAlbumSongs": "Tải bài hát từ album",
+  "@downloadAlbumSongs": {
+    "description": "downloadAlbumSongs"
+  },
+  "shareAlbum": "Chia sẻ album",
+  "@shareAlbum": {
+    "description": "shareAlbum"
+  },
+  "imported": "Đã nhập",
+  "@imported": {
+    "description": "imported"
+  },
+  "importedPlaylist": "Danh sách phát đã nhập",
+  "@importedPlaylist": {
+    "description": "importedPlaylist"
+  },
+  "permissionDenied": "Quyền bị từ chối",
+  "@permissionDenied": {
+    "description": "permissionDenied"
+  },
+  "enqueueSongs": "Thêm bài hát vào hàng đợi",
+  "@enqueueSongs": {
+    "description": "enqueueSongs"
+  },
+  "shuffle": "Ngẫu nhiên",
+  "@shuffle": {
+    "description": "shuffle"
+  },
+  "downloadPlaylist": "Tải xuống danh sách phát",
+  "@downloadPlaylist": {
+    "description": "downloadPlaylist"
+  },
+  "syncPlaylistSongs": "Đồng bộ danh sách bài hát",
+  "@syncPlaylistSongs": {
+    "description": "syncPlaylistSongs"
+  },
+  "blacklistPipedPlaylist": "Danh sách đen danh sách phát",
+  "@blacklistPipedPlaylist": {
+    "description": "blacklistPipedPlaylist"
+  },
+  "sharePlaylist": "Chia sẻ danh sách phát",
+  "@sharePlaylist": {
+    "description": "sharePlaylist"
+  },
+  "playlist": "Danh sách phát",
+  "@playlist": {
+    "description": "playlist"
+  },
+  "sortByName": "Sắp xếp theo tên",
+  "@sortByName": {
+    "description": "sortByName"
+  },
+  "sortByDate": "Sắp xếp theo ngày",
+  "@sortByDate": {
+    "description": "sortByDate"
+  },
+  "sortByDuration": "Sắp xếp theo thời lượng",
+  "@sortByDuration": {
+    "description": "sortByDuration"
+  },
+  "sortAscendNDescend": "Sắp xếp tăng dần/giảm dần",
+  "@sortAscendNDescend": {
+    "description": "sortAscendNDescend"
+  },
+  "migration_summary_start": "Quá trình di chuyển đã hoàn tất từ {source}.",
+  "@migration_summary_start": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      }
+    },
+    "description": "migration_summary_start"
+  },
+  "migration_summary_playlists": "Danh sách phát: {count}",
+  "@migration_summary_playlists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_playlists"
+  },
+  "migration_summary_songs": "Bài hát: {count}",
+  "@migration_summary_songs": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_songs"
+  },
+  "migration_summary_favorites": "Yêu thích: {count}",
+  "@migration_summary_favorites": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_favorites"
+  },
+  "migration_summary_albums": "Album: {count}",
+  "@migration_summary_albums": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_albums"
+  },
+  "migration_summary_artists": "Nghệ sĩ: {count}",
+  "@migration_summary_artists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_artists"
+  },
+  "migration_select_file_dialog": "Chọn song.db hoặc bản sao lưu .backup",
+  "@migration_select_file_dialog": {
+    "description": "migration_select_file_dialog"
+  },
+  "migration_success": "Quá trình di chuyển đã hoàn tất thành công.",
+  "@migration_success": {
+    "description": "migration_success"
+  },
+  "backup_select_folder_dialog": "Chọn thư mục để sao lưu",
+  "@backup_select_folder_dialog": {
+    "description": "backup_select_folder_dialog"
+  },
+  "restore_select_file_dialog": "Chọn tập tin sao lưu",
+  "@restore_select_file_dialog": {
+    "description": "restore_select_file_dialog"
+  },
+  "auth_hint_email": "tên@mail.com",
+  "@auth_hint_email": {
+    "description": "auth_hint_email"
+  },
+  "auth_error_invalid_email": "Nhập một email hợp lệ.",
+  "@auth_error_invalid_email": {
+    "description": "auth_error_invalid_email"
+  },
+  "settings_cloud_backup_dialog_desc": "Tải bản sao lưu .hmb của ứng dụng lên máy chủ và nếu cần, hãy khôi phục mọi bản sao lưu đã lưu.",
+  "@settings_cloud_backup_dialog_desc": {
+    "description": "settings_cloud_backup_dialog_desc"
+  },
+  "delete": "Xóa",
+  "@delete": {
+    "description": "delete"
+  },
+  "in_app_storage": "Thư mục lưu trữ nội bộ",
+  "@in_app_storage": {
+    "description": "in_app_storage"
+  },
+  "auth_brand_description_1": "Chúng tôi đã mang thông tin đăng nhập, đăng ký và khôi phục mật khẩu từ dự án trước, được điều chỉnh cho ứng dụng âm nhạc này.",
+  "@auth_brand_description_1": {
+    "description": "auth_brand_description_1"
+  },
+  "auth_brand_description_2": "Phiên của bạn được lưu trữ an toàn và được xác thực bằng chính chương trình phụ trợ mà bạn đang sử dụng.",
+  "@auth_brand_description_2": {
+    "description": "auth_brand_description_2"
+  },
+  "auth_brand_not_configured": "Tệp .env cần được cấu hình để kết nối phần phụ trợ xác thực.",
+  "@auth_brand_not_configured": {
+    "description": "auth_brand_not_configured"
+  },
+  "auth_forgot_password_subtitle": "Chúng tôi sẽ gửi cho bạn hướng dẫn tới email tài khoản của bạn.",
+  "@auth_forgot_password_subtitle": {
+    "description": "auth_forgot_password_subtitle"
+  },
+  "auth_btn_send_email": "Gửi thư",
+  "@auth_btn_send_email": {
+    "description": "auth_btn_send_email"
+  },
+  "auth_error_not_configured": "Thiếu phần phụ trợ xác thực để định cấu hình trong tệp .env.",
+  "@auth_error_not_configured": {
+    "description": "auth_error_not_configured"
+  },
+  "auth_error_invalid_credentials": "Email hoặc mật khẩu không chính xác.",
+  "@auth_error_invalid_credentials": {
+    "description": "auth_error_invalid_credentials"
+  },
+  "auth_error_not_verified": "Tài khoản của bạn chưa được xác minh.",
+  "@auth_error_not_verified": {
+    "description": "auth_error_not_verified"
+  },
+  "auth_error_unknown": "Không thể hoàn thành hoạt động.",
+  "@auth_error_unknown": {
+    "description": "auth_error_unknown"
+  },
+  "auth_register_success": "Tài khoản được tạo thành công.",
+  "@auth_register_success": {
+    "description": "auth_register_success"
+  },
+  "auth_register_error": "Không thể tạo tài khoản.",
+  "@auth_register_error": {
+    "description": "auth_register_error"
+  },
+  "auth_recovery_email_sent": "Đã gửi email.",
+  "@auth_recovery_email_sent": {
+    "description": "auth_recovery_email_sent"
+  },
+  "auth_recovery_email_error": "Không thể gửi email.",
+  "@auth_recovery_email_error": {
+    "description": "auth_recovery_email_error"
+  },
+  "latestVersion": "Phiên bản mới nhất có sẵn",
+  "@latestVersion": {
+    "description": "latestVersion"
+  },
+  "updateApp": "Cập nhật ứng dụng",
+  "@updateApp": {
+    "description": "updateApp"
+  },
+  "loadInfoUpdate": "Không thể tải thông tin cập nhật",
+  "@loadInfoUpdate": {
+    "description": "loadInfoUpdate"
+  },
+  "infoNotAvailable": "Thông tin không có sẵn",
+  "@infoNotAvailable": {
+    "description": "infoNotAvailable"
+  },
+  "developedBy": "Được phát triển và duy trì bởi Joss Estrada (JOSPROX)",
+  "@developedBy": {
+    "description": "developedBy"
+  },
+  "copyrightNotice": "© 2026 JOSPROX. Giấy phép GPL v3.0",
+  "@copyrightNotice": {
+    "description": "copyrightNotice"
   }
 }

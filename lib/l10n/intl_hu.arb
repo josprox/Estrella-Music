@@ -1334,5 +1334,967 @@
   "auth_2fa_invalid": "Adjon meg egy érvényes 6 számjegyű kódot, vagy jelentkezzen be újra.",
   "@auth_2fa_invalid": {
     "description": "auth_2fa_invalid"
+  },
+  "enableBottomNavDes": "Váltson az alsó navigációs sávra",
+  "@enableBottomNavDes": {
+    "description": "enableBottomNavDes"
+  },
+  "homeContentCount": "Startup Content Count",
+  "@homeContentCount": {
+    "description": "homeContentCount"
+  },
+  "playlistCreatednsongAddedAlert": "Lejátszási lista létrehozva és dal hozzáadva!",
+  "@playlistCreatednsongAddedAlert": {
+    "description": "playlistCreatednsongAddedAlert"
+  },
+  "songAlreadyOfflineAlert": "A dal már a gyorsítótárban van",
+  "@songAlreadyOfflineAlert": {
+    "description": "songAlreadyOfflineAlert"
+  },
+  "plain": "egyszerű",
+  "@plain": {
+    "description": "plain"
+  },
+  "videos": "Videók",
+  "@videos": {
+    "description": "videos"
+  },
+  "enqueueAll": "Az összes hozzáadása a sorhoz",
+  "@enqueueAll": {
+    "description": "enqueueAll"
+  },
+  "themeMode": "Téma mód",
+  "@themeMode": {
+    "description": "themeMode"
+  },
+  "equalizerDes": "Nyissa meg a rendszer hangszínszabályzóját",
+  "@equalizerDes": {
+    "description": "equalizerDes"
+  },
+  "notaSongVideo": "Ez nem egy dal/zenei videó!",
+  "@notaSongVideo": {
+    "description": "notaSongVideo"
+  },
+  "linkPipedDes": "Link a Piped-el a lejátszási listákhoz",
+  "@linkPipedDes": {
+    "description": "linkPipedDes"
+  },
+  "selectAuthIns": "Válassza ki a hitelesítési példányt",
+  "@selectAuthIns": {
+    "description": "selectAuthIns"
+  },
+  "password": "Jelszó",
+  "@password": {
+    "description": "password"
+  },
+  "restoreLastPlaybackSession": "Az utolsó lejátszási munkamenet visszaállítása",
+  "@restoreLastPlaybackSession": {
+    "description": "restoreLastPlaybackSession"
+  },
+  "clearImgCacheAlert": "A képgyorsítótár sikeresen törölve",
+  "@clearImgCacheAlert": {
+    "description": "clearImgCacheAlert"
+  },
+  "results": "Eredmények",
+  "@results": {
+    "description": "results"
+  },
+  "albumBookmarkRemoveAlert": "Az album könyvjelzője eltávolítva!",
+  "@albumBookmarkRemoveAlert": {
+    "description": "albumBookmarkRemoveAlert"
+  },
+  "disableTransitionAnimationDes": "Aktiválja ezt a lehetőséget a lapátmenet animációjának letiltásához",
+  "@disableTransitionAnimationDes": {
+    "description": "disableTransitionAnimationDes"
+  },
+  "homeContentCountDes": "Válassza ki a kezdőképernyő kezdeti tartalmának számát (kb.). Kevesebb eredmény gyorsabban töltődik be",
+  "@homeContentCountDes": {
+    "description": "homeContentCountDes"
+  },
+  "cacheSongsDes": "A dalok gyorsítótárazása lejátszás közben a jövőbeni/offline lejátszáshoz további helyet foglal el az eszközön",
+  "@cacheSongsDes": {
+    "description": "cacheSongsDes"
+  },
+  "skipSilence": "Átugrani a csendet",
+  "@skipSilence": {
+    "description": "skipSilence"
+  },
+  "skipSilenceDes": "Zenelejátszás közben a csend kimarad",
+  "@skipSilenceDes": {
+    "description": "skipSilenceDes"
+  },
+  "streamingQuality": "Streaming minőség",
+  "@streamingQuality": {
+    "description": "streamingQuality"
+  },
+  "high": "Magas",
+  "@high": {
+    "description": "high"
+  },
+  "backgroundPlay": "Zene lejátszása a háttérben",
+  "@backgroundPlay": {
+    "description": "backgroundPlay"
+  },
+  "cacheHomeScreenData": "Tárolja a kezdőképernyő tartalmát",
+  "@cacheHomeScreenData": {
+    "description": "cacheHomeScreenData"
+  },
+  "cacheHomeScreenDataDes": "Engedélyezze a kezdőképernyő tartalmának tárolását, a kezdőképernyő azonnal betöltődik, ha ez az opció engedélyezve van",
+  "@cacheHomeScreenDataDes": {
+    "description": "cacheHomeScreenDataDes"
+  },
+  "downloadingFormatDes": "Válassza ki a letöltési fájl formátumát. Az \"Opus\" biztosítja a legjobb minőséget",
+  "@downloadingFormatDes": {
+    "description": "downloadingFormatDes"
+  },
+  "exportDowloadedFiles": "A letöltött fájlok exportálása",
+  "@exportDowloadedFiles": {
+    "description": "exportDowloadedFiles"
+  },
+  "exportedFileLocation": "A letöltött fájlok helyének exportálása",
+  "@exportedFileLocation": {
+    "description": "exportedFileLocation"
+  },
+  "exporting": "Exportálás...",
+  "@exporting": {
+    "description": "exporting"
+  },
+  "scanning": "Szkennelés...",
+  "@scanning": {
+    "description": "scanning"
+  },
+  "downFilesFound": "letöltött fájlok találhatók",
+  "@downFilesFound": {
+    "description": "downFilesFound"
+  },
+  "exportMsg": "A fájlok sikeresen exportálva",
+  "@exportMsg": {
+    "description": "exportMsg"
+  },
+  "equalizer": "Equalizer",
+  "@equalizer": {
+    "description": "equalizer"
+  },
+  "clearImgCache": "Kép-gyorsítótár törlése",
+  "@clearImgCache": {
+    "description": "clearImgCache"
+  },
+  "clearImgCacheDes": "Kattintson ide a gyorsítótárazott bélyegképek/képek törléséhez. (Nem ajánlott, hacsak nem szeretné frissíteni a gyorsítótárazott képadatokat)",
+  "@clearImgCacheDes": {
+    "description": "clearImgCacheDes"
+  },
+  "disabled": "Letiltva",
+  "@disabled": {
+    "description": "disabled"
+  },
+  "ignoreBatOpt": "Az akkumulátor optimalizálás figyelmen kívül hagyása",
+  "@ignoreBatOpt": {
+    "description": "ignoreBatOpt"
+  },
+  "enabled": "Aktiválva",
+  "@enabled": {
+    "description": "enabled"
+  },
+  "github": "GitHub",
+  "@github": {
+    "description": "github"
+  },
+  "githubDes": "Tekintse meg a GitHub forráskódját \nHa tetszik ez a projekt, ne felejts el egy ⭐-t adni neki!",
+  "@githubDes": {
+    "description": "githubDes"
+  },
+  "by": "által",
+  "@by": {
+    "description": "by"
+  },
+  "searchDes": "Dalok, lejátszási listák, albumok vagy előadók",
+  "@searchDes": {
+    "description": "searchDes"
+  },
+  "searchRes": "Keresési eredmények",
+  "@searchRes": {
+    "description": "searchRes"
+  },
+  "for1": "számára",
+  "@for1": {
+    "description": "for1"
+  },
+  "viewAll": "Az összes megtekintése",
+  "@viewAll": {
+    "description": "viewAll"
+  },
+  "nomatch": "Nincs találat a következőre:",
+  "@nomatch": {
+    "description": "nomatch"
+  },
+  "subscribers": "előfizetők",
+  "@subscribers": {
+    "description": "subscribers"
+  },
+  "synced": "Szinkronizált",
+  "@synced": {
+    "description": "synced"
+  },
+  "deleteDownloadedDataAlert": "Sikeresen eltávolítva a letöltések közül!",
+  "@deleteDownloadedDataAlert": {
+    "description": "deleteDownloadedDataAlert"
+  },
+  "cancelTimerAlert": "Az elalvási időzítő törölve",
+  "@cancelTimerAlert": {
+    "description": "cancelTimerAlert"
+  },
+  "sleepTimeSetAlert": "Az elalvási időzítő be van állítva",
+  "@sleepTimeSetAlert": {
+    "description": "sleepTimeSetAlert"
+  },
+  "songRemovedfromQueueCurrSong": "Az éppen lejátszott dal nem törölhető",
+  "@songRemovedfromQueueCurrSong": {
+    "description": "songRemovedfromQueueCurrSong"
+  },
+  "songRemovedAlert": "eltávolítva",
+  "@songRemovedAlert": {
+    "description": "songRemovedAlert"
+  },
+  "pipedplstSyncAlert": "Piped lejátszási lista szinkronizálva!",
+  "@pipedplstSyncAlert": {
+    "description": "pipedplstSyncAlert"
+  },
+  "playlistRenameAlert": "Sikeres márkanévváltás!",
+  "@playlistRenameAlert": {
+    "description": "playlistRenameAlert"
+  },
+  "playlistRemovedAlert": "Lejátszási lista törölve!",
+  "@playlistRemovedAlert": {
+    "description": "playlistRemovedAlert"
+  },
+  "playlistBookmarkAddAlert": "Lejátszási lista hozzáadva a könyvjelzőkhöz!",
+  "@playlistBookmarkAddAlert": {
+    "description": "playlistBookmarkAddAlert"
+  },
+  "playlistBookmarkRemoveAlert": "Lejátszási lista könyvjelzője eltávolítva!",
+  "@playlistBookmarkRemoveAlert": {
+    "description": "playlistBookmarkRemoveAlert"
+  },
+  "albumBookmarkAddAlert": "Album hozzáadva a könyvjelzőkhöz!",
+  "@albumBookmarkAddAlert": {
+    "description": "albumBookmarkAddAlert"
+  },
+  "lyricsNotAvailable": "Dalszöveg nem elérhető!",
+  "@lyricsNotAvailable": {
+    "description": "lyricsNotAvailable"
+  },
+  "newVersionAvailable": "Új verzió elérhető!",
+  "@newVersionAvailable": {
+    "description": "newVersionAvailable"
+  },
+  "dontShowInfoAgain": "Ne jelenítse meg újra ezt az információt",
+  "@dontShowInfoAgain": {
+    "description": "dontShowInfoAgain"
+  },
+  "notaValidLink": "Ez nem érvényes link!",
+  "@notaValidLink": {
+    "description": "notaValidLink"
+  },
+  "operationFailed": "Sikertelen művelet",
+  "@operationFailed": {
+    "description": "operationFailed"
+  },
+  "Piped": "Csöves",
+  "@Piped": {
+    "description": "Piped"
+  },
+  "link": "Link",
+  "@link": {
+    "description": "link"
+  },
+  "unLink": "Leválasztás",
+  "@unLink": {
+    "description": "unLink"
+  },
+  "hintApiUrl": "API URL a vezetékes példányhoz",
+  "@hintApiUrl": {
+    "description": "hintApiUrl"
+  },
+  "customIns": "Egyéni példány",
+  "@customIns": {
+    "description": "customIns"
+  },
+  "linkAlert": "Sikeres linkelés!",
+  "@linkAlert": {
+    "description": "linkAlert"
+  },
+  "unlinkAlert": "Sikeresen leválasztva!",
+  "@unlinkAlert": {
+    "description": "unlinkAlert"
+  },
+  "stopMusicOnTaskClear": "Állítsa le a zenét az alkalmazás bezárásakor",
+  "@stopMusicOnTaskClear": {
+    "description": "stopMusicOnTaskClear"
+  },
+  "downloadLocation": "Letöltés helye",
+  "@downloadLocation": {
+    "description": "downloadLocation"
+  },
+  "low": "Alacsony",
+  "@low": {
+    "description": "low"
+  },
+  "downloadingFormat": "Fájlformátum letöltése",
+  "@downloadingFormat": {
+    "description": "downloadingFormat"
+  },
+  "ignoreBatOptDes": "Ha problémái vannak az értesítésekkel vagy a lejátszás leáll a rendszer optimalizálása miatt, aktiválja ezt az opciót",
+  "@ignoreBatOptDes": {
+    "description": "ignoreBatOptDes"
+  },
+  "status": "Állapot",
+  "@status": {
+    "description": "status"
+  },
+  "radioNotAvailable": "A rádió nem elérhető ennél az előadónál!",
+  "@radioNotAvailable": {
+    "description": "radioNotAvailable"
+  },
+  "songRemovedfromQueue": "Eltávolítva a sorból!",
+  "@songRemovedfromQueue": {
+    "description": "songRemovedfromQueue"
+  },
+  "artistBookmarkRemoveAlert": "Előadójelző eltávolítva!",
+  "@artistBookmarkRemoveAlert": {
+    "description": "artistBookmarkRemoveAlert"
+  },
+  "dismiss": "Eldobni",
+  "@dismiss": {
+    "description": "dismiss"
+  },
+  "goToDownloadPage": "Kattintson ide a letöltési oldal eléréséhez",
+  "@goToDownloadPage": {
+    "description": "goToDownloadPage"
+  },
+  "local": "Helyi",
+  "@local": {
+    "description": "local"
+  },
+  "cacheSongs": "Dalok gyorsítótárazása",
+  "@cacheSongs": {
+    "description": "cacheSongs"
+  },
+  "disableTransitionAnimation": "Az átmeneti animáció letiltása",
+  "@disableTransitionAnimation": {
+    "description": "disableTransitionAnimation"
+  },
+  "exportDowloadedFilesDes": "Ide kattintva exportálhatja a letöltött fájlokat az alkalmazáskönyvtárból a külső könyvtárba",
+  "@exportDowloadedFilesDes": {
+    "description": "exportDowloadedFilesDes"
+  },
+  "export": "Exportálás",
+  "@export": {
+    "description": "export"
+  },
+  "backgroundPlayDes": "Háttérzene lejátszásának engedélyezése/letiltása (Az alkalmazás a rendszertálcáról érhető el, ha az alkalmazás a háttérben fut)",
+  "@backgroundPlayDes": {
+    "description": "backgroundPlayDes"
+  },
+  "search": "Keresés",
+  "@search": {
+    "description": "search"
+  },
+  "songAddedToPlaylistAlert": "A dal felkerült a lejátszási listára!",
+  "@songAddedToPlaylistAlert": {
+    "description": "songAddedToPlaylistAlert"
+  },
+  "songAlreadyExists": "A dal már létezik!",
+  "@songAlreadyExists": {
+    "description": "songAlreadyExists"
+  },
+  "restoreLastPlaybackSessionDes": "Az utolsó lejátszási munkamenet automatikus visszaállítása az alkalmazás indításakor",
+  "@restoreLastPlaybackSessionDes": {
+    "description": "restoreLastPlaybackSessionDes"
+  },
+  "enableBottomNav": "Alsó navigációs sáv",
+  "@enableBottomNav": {
+    "description": "enableBottomNav"
+  },
+  "songEnqueueAlert": "A dal felkerült a sorba!",
+  "@songEnqueueAlert": {
+    "description": "songEnqueueAlert"
+  },
+  "artistBookmarkAddAlert": "Előadó hozzáadva a könyvjelzőkhöz!",
+  "@artistBookmarkAddAlert": {
+    "description": "artistBookmarkAddAlert"
+  },
+  "syncedLyricsNotAvailable": "Szinkronizált dalszöveg nem érhető el!",
+  "@syncedLyricsNotAvailable": {
+    "description": "syncedLyricsNotAvailable"
+  },
+  "artistDesNotAvailable": "Leírás nem elérhető!",
+  "@artistDesNotAvailable": {
+    "description": "artistDesNotAvailable"
+  },
+  "selectAuthInsMsg": "Kérjük, válassza ki a hitelesítési példányt!",
+  "@selectAuthInsMsg": {
+    "description": "selectAuthInsMsg"
+  },
+  "allFieldsReqMsg": "Minden mező kitöltése kötelező",
+  "@allFieldsReqMsg": {
+    "description": "allFieldsReqMsg"
+  },
+  "playlistBlacklistAlert": "Feketelistás lejátszási lista!",
+  "@playlistBlacklistAlert": {
+    "description": "playlistBlacklistAlert"
+  },
+  "blacklistPlstResetAlert": "Sikeres visszaállítás!",
+  "@blacklistPlstResetAlert": {
+    "description": "blacklistPlstResetAlert"
+  },
+  "resetblacklistedplaylist": "A feketelistán szereplő lejátszási listák visszaállítása",
+  "@resetblacklistedplaylist": {
+    "description": "resetblacklistedplaylist"
+  },
+  "resetblacklistedplaylistDes": "Állítsa vissza az összes feketelistán szereplő Piped lejátszási listát",
+  "@resetblacklistedplaylistDes": {
+    "description": "resetblacklistedplaylistDes"
+  },
+  "errorOccuredAlert": "Hiba történt!",
+  "@errorOccuredAlert": {
+    "description": "errorOccuredAlert"
+  },
+  "playlistCreatedAlert": "Lejátszási lista létrehozva!",
+  "@playlistCreatedAlert": {
+    "description": "playlistCreatedAlert"
+  },
+  "reset": "Reset",
+  "@reset": {
+    "description": "reset"
+  },
+  "streamingQualityDes": "Zene streaming minőség",
+  "@streamingQualityDes": {
+    "description": "streamingQualityDes"
+  },
+  "customInsSelectMsg": "Kérjük, válasszon egyéni példányt",
+  "@customInsSelectMsg": {
+    "description": "customInsSelectMsg"
+  },
+  "stopMusicOnTaskClearDes": "A zenelejátszás leáll, ha bezárja az alkalmazást a feladatkezelőből",
+  "@stopMusicOnTaskClearDes": {
+    "description": "stopMusicOnTaskClearDes"
+  },
+  "backupSettingsAndPlaylistsDes": "Mentse el az összes beállítást, lejátszási listát és bejelentkezési adatot egy biztonsági mentési fájlba",
+  "@backupSettingsAndPlaylistsDes": {
+    "description": "backupSettingsAndPlaylistsDes"
+  },
+  "gesture": "Gesztus",
+  "@gesture": {
+    "description": "gesture"
+  },
+  "audioCodec": "Audiokodek",
+  "@audioCodec": {
+    "description": "audioCodec"
+  },
+  "loudnessNormalization": "A hangerő normalizálása",
+  "@loudnessNormalization": {
+    "description": "loudnessNormalization"
+  },
+  "loudnessDb": "LoudnessDb",
+  "@loudnessDb": {
+    "description": "loudnessDb"
+  },
+  "includeDownloadedFiles": "Tartalmazza a letöltött dalfájlokat",
+  "@includeDownloadedFiles": {
+    "description": "includeDownloadedFiles"
+  },
+  "playerUiDes": "Válassza ki a lejátszó felhasználói felületét",
+  "@playerUiDes": {
+    "description": "playerUiDes"
+  },
+  "backupAppData": "Alkalmazásadatok biztonsági mentése",
+  "@backupAppData": {
+    "description": "backupAppData"
+  },
+  "backup": "Biztonsági mentés",
+  "@backup": {
+    "description": "backup"
+  },
+  "loudnessNormalizationDes": "Ugyanazt a hangerőszintet állítja be az összes dalhoz (kísérleti) (Nem működik a régebbi verziókban letöltött daloknál (< v1.10.0))",
+  "@loudnessNormalizationDes": {
+    "description": "loudnessNormalizationDes"
+  },
+  "enableSlidableAction": "Aktiválja a csúszkaműveleteket",
+  "@enableSlidableAction": {
+    "description": "enableSlidableAction"
+  },
+  "enableSlidableActionDes": "Csúsztatási műveletek aktiválása a dalcsempén",
+  "@enableSlidableActionDes": {
+    "description": "enableSlidableActionDes"
+  },
+  "bitrate": "Bitráta",
+  "@bitrate": {
+    "description": "bitrate"
+  },
+  "androidBackupWarning": "Nincs tesztelve: Ha több mint 60 fájl letöltése után bejelöli a jelölőnégyzetet, a folyamat nagy mennyiségű memóriát fogyaszthat, és a telefon vagy az alkalmazás összeomolhat. Továbblépés a saját felelősségére.",
+  "@androidBackupWarning": {
+    "description": "androidBackupWarning"
+  },
+  "songInfo": "Dal információ",
+  "@songInfo": {
+    "description": "songInfo"
+  },
+  "id": "ID",
+  "@id": {
+    "description": "id"
+  },
+  "title": "Cím",
+  "@title": {
+    "description": "title"
+  },
+  "duration": "Időtartam",
+  "@duration": {
+    "description": "duration"
+  },
+  "urlSearchDes": "Az észlelt URL kattintson rá a kapcsolódó tartalom megnyitásához/lejátszásához",
+  "@urlSearchDes": {
+    "description": "urlSearchDes"
+  },
+  "playingfromAlbum": "LEJÁTSZÁS ALBUMRÓL",
+  "@playingfromAlbum": {
+    "description": "playingfromAlbum"
+  },
+  "playingfromPlaylist": "LEJÁTSZÁS LEJÁTSZÁSI LISTÁBÓL",
+  "@playingfromPlaylist": {
+    "description": "playingfromPlaylist"
+  },
+  "playingfromSelection": "JÁTÉK VÁLASZTÁSBÓL",
+  "@playingfromSelection": {
+    "description": "playingfromSelection"
+  },
+  "resetToDefaultMsg": "Az alapértelmezett beállítások visszaállítása befejeződött, kérjük, indítsa újra az alkalmazást",
+  "@resetToDefaultMsg": {
+    "description": "resetToDefaultMsg"
+  },
+  "resetToDefaultDes": "Alkalmazásbeállítások visszaállítása az alapértelmezettre (Újraindítás szükséges)",
+  "@resetToDefaultDes": {
+    "description": "resetToDefaultDes"
+  },
+  "misc": "Különféle",
+  "@misc": {
+    "description": "misc"
+  },
+  "resetToDefault": "Az alapértelmezett beállítások visszaállítása",
+  "@resetToDefault": {
+    "description": "resetToDefault"
+  },
+  "autoOpenPlayer": "A lejátszó képernyőjének automatikus megnyitása",
+  "@autoOpenPlayer": {
+    "description": "autoOpenPlayer"
+  },
+  "autoOpenPlayerDes": "A lejátszó teljes képernyőre való automatikus megnyitásának be-/kikapcsolása a lejátszandó dal kiválasztásakor",
+  "@autoOpenPlayerDes": {
+    "description": "autoOpenPlayerDes"
+  },
+  "playingfromArtist": "JÁTSZÁS MŰVÉSZTŐL",
+  "@playingfromArtist": {
+    "description": "playingfromArtist"
+  },
+  "randomSelection": "Véletlenszerű kiválasztás",
+  "@randomSelection": {
+    "description": "randomSelection"
+  },
+  "randomRadio": "Véletlenszerű rádió",
+  "@randomRadio": {
+    "description": "randomRadio"
+  },
+  "exportPlaylist": "Lejátszási lista exportálása",
+  "@exportPlaylist": {
+    "description": "exportPlaylist"
+  },
+  "importPlaylistDesc": "Válasszon ki egy korábban exportált lejátszási lista JSON-fájlt az importáláshoz",
+  "@importPlaylistDesc": {
+    "description": "importPlaylistDesc"
+  },
+  "invalidPlaylistFile": "Érvénytelen lejátszási lista fájlszerkezet",
+  "@invalidPlaylistFile": {
+    "description": "invalidPlaylistFile"
+  },
+  "fileNotFound": "A fájl nem található",
+  "@fileNotFound": {
+    "description": "fileNotFound"
+  },
+  "exportErrorPermission": "Az exportálás során megtagadták az engedélyt",
+  "@exportErrorPermission": {
+    "description": "exportErrorPermission"
+  },
+  "importingPlaylist": "Lejátszási lista importálása...",
+  "@importingPlaylist": {
+    "description": "importingPlaylist"
+  },
+  "exportErrorStorage": "Nincs elegendő tárhely",
+  "@exportErrorStorage": {
+    "description": "exportErrorStorage"
+  },
+  "exportingPlaylist": "Lejátszási lista exportálása...",
+  "@exportingPlaylist": {
+    "description": "exportingPlaylist"
+  },
+  "playlistExportedMsg": "A lejátszási lista sikeresen exportálva ide",
+  "@playlistExportedMsg": {
+    "description": "playlistExportedMsg"
+  },
+  "exportError": "Hiba a lejátszási lista exportálása során",
+  "@exportError": {
+    "description": "exportError"
+  },
+  "exportErrorFormat": "Hiba a lejátszási lista adatainak formázásakor",
+  "@exportErrorFormat": {
+    "description": "exportErrorFormat"
+  },
+  "importPlaylist": "Lejátszási lista importálása",
+  "@importPlaylist": {
+    "description": "importPlaylist"
+  },
+  "selectFile": "Válassza a Fájl lehetőséget",
+  "@selectFile": {
+    "description": "selectFile"
+  },
+  "playlistImportedMsg": "A lejátszási lista sikeresen importálva",
+  "@playlistImportedMsg": {
+    "description": "playlistImportedMsg"
+  },
+  "importError": "Hiba a lejátszási lista importálásakor",
+  "@importError": {
+    "description": "importError"
+  },
+  "importErrorFileAccess": "A kiválasztott fájlhoz nem lehetett hozzáférni",
+  "@importErrorFileAccess": {
+    "description": "importErrorFileAccess"
+  },
+  "importErrorFormat": "Érvénytelen fájlformátum",
+  "@importErrorFormat": {
+    "description": "importErrorFormat"
+  },
+  "importErrorDatabase": "Hiba az adatbázisba mentéskor",
+  "@importErrorDatabase": {
+    "description": "importErrorDatabase"
+  },
+  "importLargeFileNote": "Megjegyzés: A nagy lejátszási listák importálása tovább tarthat",
+  "@importLargeFileNote": {
+    "description": "importLargeFileNote"
+  },
+  "exportPlaylistCsv": "Lejátszási lista exportálása CSV formátumban",
+  "@exportPlaylistCsv": {
+    "description": "exportPlaylistCsv"
+  },
+  "exportPlaylistJson": "Lejátszási lista exportálása JSON-ba",
+  "@exportPlaylistJson": {
+    "description": "exportPlaylistJson"
+  },
+  "exportPlaylistJsonSubtitle": "Ez a formátum importálható",
+  "@exportPlaylistJsonSubtitle": {
+    "description": "exportPlaylistJsonSubtitle"
+  },
+  "exportPlaylistCsvSubtitle": "Ide nem lehet importálni",
+  "@exportPlaylistCsvSubtitle": {
+    "description": "exportPlaylistCsvSubtitle"
+  },
+  "exportToYouTubeMusic": "Exportálás Youtube zenébe",
+  "@exportToYouTubeMusic": {
+    "description": "exportToYouTubeMusic"
+  },
+  "exportToYouTubeMusicSubtitle": "A lejátszási listát (50 alatti dalok) az aktuális sorba tolja, ne felejtse el hozzáadni a lejátszási listához / elmenteni, miután megnyitotta az YtMusicban",
+  "@exportToYouTubeMusicSubtitle": {
+    "description": "exportToYouTubeMusicSubtitle"
+  },
+  "linkCopied": "Link a vágólapra másolva",
+  "@linkCopied": {
+    "description": "linkCopied"
+  },
+  "lyrics": "Levelek",
+  "@lyrics": {
+    "description": "lyrics"
+  },
+  "no": "Nem",
+  "@no": {
+    "description": "no"
+  },
+  "podcasts": "Podcastok",
+  "@podcasts": {
+    "description": "podcasts"
+  },
+  "episodes": "Epizódok",
+  "@episodes": {
+    "description": "episodes"
+  },
+  "profiles": "Profilok",
+  "@profiles": {
+    "description": "profiles"
+  },
+  "addToLibrary": "Hozzáadás a könyvtárhoz",
+  "@addToLibrary": {
+    "description": "addToLibrary"
+  },
+  "removeFromLibrary": "Törlés a könyvtárból",
+  "@removeFromLibrary": {
+    "description": "removeFromLibrary"
+  },
+  "play": "Játssz",
+  "@play": {
+    "description": "play"
+  },
+  "enqueueAlbumSongs": "Adja hozzá az album dalait a sorhoz",
+  "@enqueueAlbumSongs": {
+    "description": "enqueueAlbumSongs"
+  },
+  "downloadAlbumSongs": "Dalok letöltése az albumról",
+  "@downloadAlbumSongs": {
+    "description": "downloadAlbumSongs"
+  },
+  "shareAlbum": "Album megosztása",
+  "@shareAlbum": {
+    "description": "shareAlbum"
+  },
+  "imported": "Importált",
+  "@imported": {
+    "description": "imported"
+  },
+  "importedPlaylist": "Importált lejátszási lista",
+  "@importedPlaylist": {
+    "description": "importedPlaylist"
+  },
+  "permissionDenied": "Engedély megtagadva",
+  "@permissionDenied": {
+    "description": "permissionDenied"
+  },
+  "enqueueSongs": "Dalok hozzáadása a sorhoz",
+  "@enqueueSongs": {
+    "description": "enqueueSongs"
+  },
+  "shuffle": "Véletlenszerű",
+  "@shuffle": {
+    "description": "shuffle"
+  },
+  "downloadPlaylist": "Lejátszási lista letöltése",
+  "@downloadPlaylist": {
+    "description": "downloadPlaylist"
+  },
+  "syncPlaylistSongs": "Lejátszási lista dalainak szinkronizálása",
+  "@syncPlaylistSongs": {
+    "description": "syncPlaylistSongs"
+  },
+  "blacklistPipedPlaylist": "Lejátszási lista feketelista",
+  "@blacklistPipedPlaylist": {
+    "description": "blacklistPipedPlaylist"
+  },
+  "sharePlaylist": "Lejátszási lista megosztása",
+  "@sharePlaylist": {
+    "description": "sharePlaylist"
+  },
+  "playlist": "Lejátszási lista elemre",
+  "@playlist": {
+    "description": "playlist"
+  },
+  "sortByName": "Rendezés név szerint",
+  "@sortByName": {
+    "description": "sortByName"
+  },
+  "sortByDate": "Rendezés dátum szerint",
+  "@sortByDate": {
+    "description": "sortByDate"
+  },
+  "sortByDuration": "Rendezés időtartam szerint",
+  "@sortByDuration": {
+    "description": "sortByDuration"
+  },
+  "sortAscendNDescend": "Növekvő/csökkenő rendezés",
+  "@sortAscendNDescend": {
+    "description": "sortAscendNDescend"
+  },
+  "migration_summary_start": "Az áttelepítés befejeződött innen: {source}.",
+  "@migration_summary_start": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      }
+    },
+    "description": "migration_summary_start"
+  },
+  "migration_summary_playlists": "Lejátszási listák: {count}",
+  "@migration_summary_playlists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_playlists"
+  },
+  "migration_summary_songs": "Dalok: {count}",
+  "@migration_summary_songs": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_songs"
+  },
+  "migration_summary_favorites": "Kedvencek: {count}",
+  "@migration_summary_favorites": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_favorites"
+  },
+  "migration_summary_albums": "Albumok: {count}",
+  "@migration_summary_albums": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_albums"
+  },
+  "migration_summary_artists": "Előadók: {count}",
+  "@migration_summary_artists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_artists"
+  },
+  "migration_select_file_dialog": "Válassza ki a song.db fájlt vagy a backup .backup fájlt",
+  "@migration_select_file_dialog": {
+    "description": "migration_select_file_dialog"
+  },
+  "migration_success": "Az áttelepítés sikeresen befejeződött.",
+  "@migration_success": {
+    "description": "migration_success"
+  },
+  "backup_select_folder_dialog": "Válassza ki a mappát a biztonsági mentéshez",
+  "@backup_select_folder_dialog": {
+    "description": "backup_select_folder_dialog"
+  },
+  "restore_select_file_dialog": "Válassza ki a biztonsági másolat fájlt",
+  "@restore_select_file_dialog": {
+    "description": "restore_select_file_dialog"
+  },
+  "auth_hint_email": "név@mail.com",
+  "@auth_hint_email": {
+    "description": "auth_hint_email"
+  },
+  "auth_error_invalid_email": "Adjon meg egy érvényes e-mail-címet.",
+  "@auth_error_invalid_email": {
+    "description": "auth_error_invalid_email"
+  },
+  "settings_cloud_backup_dialog_desc": "Töltse fel az alkalmazás .hmb biztonsági másolatát a szerverre, és ha szükséges, állítsa vissza a mentett biztonsági másolatok bármelyikét.",
+  "@settings_cloud_backup_dialog_desc": {
+    "description": "settings_cloud_backup_dialog_desc"
+  },
+  "delete": "Törölje",
+  "@delete": {
+    "description": "delete"
+  },
+  "in_app_storage": "Belső tárolási könyvtár",
+  "@in_app_storage": {
+    "description": "in_app_storage"
+  },
+  "auth_brand_description_1": "A bejelentkezést, a regisztrációt és a jelszó-helyreállítást az előző projektből hoztuk, ehhez a zenei alkalmazáshoz igazítva.",
+  "@auth_brand_description_1": {
+    "description": "auth_brand_description_1"
+  },
+  "auth_brand_description_2": "A munkamenet biztonságos tárhelyen él, és ugyanazzal a háttérprogrammal van érvényesítve, amelyet már használt.",
+  "@auth_brand_description_2": {
+    "description": "auth_brand_description_2"
+  },
+  "auth_brand_not_configured": "Az .env fájlt be kell állítani a hitelesítési háttérrendszer csatlakoztatásához.",
+  "@auth_brand_not_configured": {
+    "description": "auth_brand_not_configured"
+  },
+  "auth_forgot_password_subtitle": "Az utasításokat elküldjük a fiókod e-mail címére.",
+  "@auth_forgot_password_subtitle": {
+    "description": "auth_forgot_password_subtitle"
+  },
+  "auth_btn_send_email": "Levél küldése",
+  "@auth_btn_send_email": {
+    "description": "auth_btn_send_email"
+  },
+  "auth_error_not_configured": "Hiányzik a hitelesítési háttérprogram konfigurálása az .env fájlban.",
+  "@auth_error_not_configured": {
+    "description": "auth_error_not_configured"
+  },
+  "auth_error_invalid_credentials": "Hibás e-mail cím vagy jelszó.",
+  "@auth_error_invalid_credentials": {
+    "description": "auth_error_invalid_credentials"
+  },
+  "auth_error_not_verified": "Fiókja még nincs igazolva.",
+  "@auth_error_not_verified": {
+    "description": "auth_error_not_verified"
+  },
+  "auth_error_unknown": "A műveletet nem lehetett befejezni.",
+  "@auth_error_unknown": {
+    "description": "auth_error_unknown"
+  },
+  "auth_register_success": "A fiók sikeresen létrehozva.",
+  "@auth_register_success": {
+    "description": "auth_register_success"
+  },
+  "auth_register_error": "A fiók nem hozható létre.",
+  "@auth_register_error": {
+    "description": "auth_register_error"
+  },
+  "auth_recovery_email_sent": "E-mail elküldve.",
+  "@auth_recovery_email_sent": {
+    "description": "auth_recovery_email_sent"
+  },
+  "auth_recovery_email_error": "Az e-mailt nem lehetett elküldeni.",
+  "@auth_recovery_email_error": {
+    "description": "auth_recovery_email_error"
+  },
+  "latestVersion": "Elérhető legújabb verzió",
+  "@latestVersion": {
+    "description": "latestVersion"
+  },
+  "updateApp": "Alkalmazás frissítése",
+  "@updateApp": {
+    "description": "updateApp"
+  },
+  "loadInfoUpdate": "Nem sikerült betölteni a frissítési információkat",
+  "@loadInfoUpdate": {
+    "description": "loadInfoUpdate"
+  },
+  "infoNotAvailable": "Információ nem áll rendelkezésre",
+  "@infoNotAvailable": {
+    "description": "infoNotAvailable"
+  },
+  "developedBy": "Joss Estrada (JOSPROX) fejlesztette és karbantartotta",
+  "@developedBy": {
+    "description": "developedBy"
+  },
+  "copyrightNotice": "© 2026 JOSPROX. GPL licenc v3.0",
+  "@copyrightNotice": {
+    "description": "copyrightNotice"
+  },
+  "backupSettingsAndPlaylists": "Biztonsági mentési beállítások és lejátszási listák",
+  "@backupSettingsAndPlaylists": {
+    "description": "backupSettingsAndPlaylists"
+  },
+  "restoreSettingsAndPlaylists": "Beállítások és lejátszási listák visszaállítása",
+  "@restoreSettingsAndPlaylists": {
+    "description": "restoreSettingsAndPlaylists"
+  },
+  "helloWorld": "Helló világ",
+  "@helloWorld": {
+    "description": "Este texto es opcional"
+  },
+  "removeFromCache": "Távolítsa el a gyorsítótárból",
+  "@removeFromCache": {
+    "description": "removeFromCache"
+  },
+  "quickPics": "Gyors kiválasztás",
+  "@quickPics": {
+    "description": "quickPics"
+  },
+  "topMusicVid": "Legnépszerűbb zenei videók",
+  "@topMusicVid": {
+    "description": "topMusicVid"
   }
 }

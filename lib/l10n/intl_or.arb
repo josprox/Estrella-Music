@@ -1494,5 +1494,807 @@
   "auth_2fa_invalid": "ଏକ ବ valid ଧ 6 ଅଙ୍କ ବିଶିଷ୍ଟ କୋଡ୍ ପ୍ରବେଶ କରନ୍ତୁ କିମ୍ବା ପୁନର୍ବାର ସାଇନ୍ ଇନ୍ କରନ୍ତୁ |",
   "@auth_2fa_invalid": {
     "description": "auth_2fa_invalid"
+  },
+  "enableBottomNavDes": "ତଳ ନାଭିଗେସନ୍ ବାର୍ କୁ ସୁଇଚ୍ କରନ୍ତୁ |",
+  "@enableBottomNavDes": {
+    "description": "enableBottomNavDes"
+  },
+  "homeContentCount": "ଷ୍ଟାର୍ଟଅପ୍ ବିଷୟବସ୍ତୁ ଗଣନା |",
+  "@homeContentCount": {
+    "description": "homeContentCount"
+  },
+  "upNext": "ପରବର୍ତ୍ତୀ",
+  "@upNext": {
+    "description": "upNext"
+  },
+  "plain": "ସରଳ",
+  "@plain": {
+    "description": "plain"
+  },
+  "addMultipleSongs": "ପ୍ଲେ ଲିଷ୍ଟରେ ଗୀତ ଯୋଡନ୍ତୁ |",
+  "@addMultipleSongs": {
+    "description": "addMultipleSongs"
+  },
+  "restoreLastPlaybackSession": "ଶେଷ ପ୍ଲେକ୍ ଅଧିବେଶନକୁ ପୁନ ore ସ୍ଥାପନ କରନ୍ତୁ |",
+  "@restoreLastPlaybackSession": {
+    "description": "restoreLastPlaybackSession"
+  },
+  "clearImgCacheAlert": "ପ୍ରତିଛବି କ୍ୟାଚ୍ ସଫଳତାର ସହିତ ସଫା ହେଲା |",
+  "@clearImgCacheAlert": {
+    "description": "clearImgCacheAlert"
+  },
+  "reArrangePlaylist": "ପ୍ଲେ ଲିଷ୍ଟର୍ ରେକର୍ଡ କରନ୍ତୁ |",
+  "@reArrangePlaylist": {
+    "description": "reArrangePlaylist"
+  },
+  "disableTransitionAnimationDes": "ଟ୍ୟାବ୍ ଟ୍ରାନ୍ସମିସନ୍ ଆନିମେସନ୍ ଅକ୍ଷମ କରିବାକୁ ଏହି ବିକଳ୍ପକୁ ସକ୍ରିୟ କରନ୍ତୁ |",
+  "@disableTransitionAnimationDes": {
+    "description": "disableTransitionAnimationDes"
+  },
+  "openIn": "ଖୋଲନ୍ତୁ |",
+  "@openIn": {
+    "description": "openIn"
+  },
+  "add5Minutes": "5 ମିନିଟ୍ ଯୋଡନ୍ତୁ |",
+  "@add5Minutes": {
+    "description": "add5Minutes"
+  },
+  "cancelTimer": "ଟାଇମର୍ ବାତିଲ୍ କରନ୍ତୁ |",
+  "@cancelTimer": {
+    "description": "cancelTimer"
+  },
+  "deleteDownloadData": "ଡାଉନଲୋଡ୍ ରୁ ଅପସାରଣ କରନ୍ତୁ |",
+  "@deleteDownloadData": {
+    "description": "deleteDownloadData"
+  },
+  "homeContentCountDes": "ପ୍ରାରମ୍ଭିକ ହୋମ ସ୍କ୍ରିନ ବିଷୟବସ୍ତୁ ସଂଖ୍ୟା (ପାଖାପାଖି) ଚୟନ କରନ୍ତୁ | କମ୍ ଫଳାଫଳ ଶୀଘ୍ର ଲୋଡ୍ ହୁଏ |",
+  "@homeContentCountDes": {
+    "description": "homeContentCountDes"
+  },
+  "backgroundPlay": "ପୃଷ୍ଠଭୂମିରେ ସଙ୍ଗୀତ ବଜାଇବା |",
+  "@backgroundPlay": {
+    "description": "backgroundPlay"
+  },
+  "cacheHomeScreenData": "ହୋମ ସ୍କ୍ରିନ ବିଷୟବସ୍ତୁ ତଥ୍ୟ ଗଚ୍ଛିତ କରନ୍ତୁ |",
+  "@cacheHomeScreenData": {
+    "description": "cacheHomeScreenData"
+  },
+  "cacheHomeScreenDataDes": "ହୋମ ସ୍କ୍ରିନ ବିଷୟବସ୍ତୁ ତଥ୍ୟ ସଂରକ୍ଷଣକୁ ସକ୍ଷମ କରନ୍ତୁ, ଯଦି ଏହି ବିକଳ୍ପ ସକ୍ଷମ ହୁଏ ତେବେ ହୋମ ସ୍କ୍ରିନ ତୁରନ୍ତ ଲୋଡ୍ ହେବ |",
+  "@cacheHomeScreenDataDes": {
+    "description": "cacheHomeScreenDataDes"
+  },
+  "exportDowloadedFiles": "ଡାଉନଲୋଡ୍ ହୋଇଥିବା ଫାଇଲଗୁଡିକ ରପ୍ତାନି କରନ୍ତୁ |",
+  "@exportDowloadedFiles": {
+    "description": "exportDowloadedFiles"
+  },
+  "exportedFileLocation": "ଡାଉନଲୋଡ୍ ହୋଇଥିବା ଫାଇଲଗୁଡିକର ଅବସ୍ଥାନ ରପ୍ତାନି କରନ୍ତୁ |",
+  "@exportedFileLocation": {
+    "description": "exportedFileLocation"
+  },
+  "exporting": "ରପ୍ତାନି ...",
+  "@exporting": {
+    "description": "exporting"
+  },
+  "scanning": "ସ୍କାନିଂ ...",
+  "@scanning": {
+    "description": "scanning"
+  },
+  "downFilesFound": "ଡାଉନଲୋଡ୍ ହୋଇଥିବା ଫାଇଲଗୁଡିକ ମିଳିଲା |",
+  "@downFilesFound": {
+    "description": "downFilesFound"
+  },
+  "exportMsg": "ଫାଇଲଗୁଡିକ ସଫଳତାର ସହିତ ରପ୍ତାନି ହେଲା |",
+  "@exportMsg": {
+    "description": "exportMsg"
+  },
+  "clearImgCache": "ପ୍ରତିଛବି କ୍ୟାଚ୍ ସଫା କରନ୍ତୁ |",
+  "@clearImgCache": {
+    "description": "clearImgCache"
+  },
+  "clearImgCacheDes": "କ୍ୟାଚ୍ ହୋଇଥିବା ଥମ୍ବନେଲ / ପ୍ରତିଛବିଗୁଡିକ ସଫା କରିବାକୁ ଏଠାରେ କ୍ଲିକ୍ କରନ୍ତୁ | (ଯେପର୍ଯ୍ୟନ୍ତ ଆପଣ କ୍ୟାଚ୍ ହୋଇଥିବା ପ୍ରତିଛବି ତଥ୍ୟ ଅପଡେଟ୍ କରିବାକୁ ଚାହୁଁନାହାଁନ୍ତି ସୁପାରିଶ କରାଯାଏ)",
+  "@clearImgCacheDes": {
+    "description": "clearImgCacheDes"
+  },
+  "synced": "ସିଙ୍କ୍ରୋନାଇଜଡ୍",
+  "@synced": {
+    "description": "synced"
+  },
+  "deleteDownloadedDataAlert": "ଡାଉନଲୋଡ୍ ରୁ ସଫଳତାର ସହିତ ଅପସାରିତ ହେଲା!",
+  "@deleteDownloadedDataAlert": {
+    "description": "deleteDownloadedDataAlert"
+  },
+  "cancelTimerAlert": "ଶୋଇବା ସମୟ ବାତିଲ ହୋଇଛି |",
+  "@cancelTimerAlert": {
+    "description": "cancelTimerAlert"
+  },
+  "sleepTimeSetAlert": "ତୁମର ଶୋଇବା ସମୟ ସ୍ଥିର ହୋଇଛି |",
+  "@sleepTimeSetAlert": {
+    "description": "sleepTimeSetAlert"
+  },
+  "pipedplstSyncAlert": "ପାଇପ୍ ପ୍ଲେଲିଷ୍ଟ ସିଙ୍କ୍ ହୋଇଛି!",
+  "@pipedplstSyncAlert": {
+    "description": "pipedplstSyncAlert"
+  },
+  "disableTransitionAnimation": "ସଂକ୍ରମଣ ଆନିମେସନ୍ ଅକ୍ଷମ କରନ୍ତୁ |",
+  "@disableTransitionAnimation": {
+    "description": "disableTransitionAnimation"
+  },
+  "exportDowloadedFilesDes": "ଡାଉନଲୋଡ୍ ହୋଇଥିବା ଫାଇଲଗୁଡ଼ିକୁ ଆପ୍ଲିକେସନ୍ ଡିରେକ୍ଟୋରୀରୁ ବାହ୍ୟ ଡିରେକ୍ଟୋରୀକୁ ରପ୍ତାନି କରିବାକୁ ଏଠାରେ କ୍ଲିକ୍ କରନ୍ତୁ |",
+  "@exportDowloadedFilesDes": {
+    "description": "exportDowloadedFilesDes"
+  },
+  "export": "ରପ୍ତାନି କରନ୍ତୁ |",
+  "@export": {
+    "description": "export"
+  },
+  "backgroundPlayDes": "ବ୍ୟାକଗ୍ରାଉଣ୍ଡ୍ ମ୍ୟୁଜିକ୍ ପ୍ଲେକ୍ ସକ୍ଷମ / ଅକ୍ଷମ କରନ୍ତୁ (ଆପ୍ ବ୍ୟାକଗ୍ରାଉଣ୍ଡରେ ଚାଲୁଥିବାବେଳେ ସିଷ୍ଟମ୍ ଟ୍ରେରୁ ଆପ୍ ପ୍ରବେଶ କରାଯାଇପାରିବ)",
+  "@backgroundPlayDes": {
+    "description": "backgroundPlayDes"
+  },
+  "restoreLastPlaybackSessionDes": "ଆପ୍ ଆରମ୍ଭ କରିବା ସମୟରେ ସ୍ୱୟଂଚାଳିତ ଭାବରେ ଶେଷ ପ୍ଲେକ୍ ଅଧିବେଶନକୁ ପୁନ restore ସ୍ଥାପନ କରନ୍ତୁ |",
+  "@restoreLastPlaybackSessionDes": {
+    "description": "restoreLastPlaybackSessionDes"
+  },
+  "enableBottomNav": "ତଳ ନାଭିଗେସନ୍ ବାର୍ |",
+  "@enableBottomNav": {
+    "description": "enableBottomNav"
+  },
+  "syncedLyricsNotAvailable": "ସିଙ୍କ୍ରୋନାଇଜଡ୍ ଗୀତ ଉପଲବ୍ଧ ନାହିଁ!",
+  "@syncedLyricsNotAvailable": {
+    "description": "syncedLyricsNotAvailable"
+  },
+  "restoreSettingsAndPlaylistsDes": "ଏକ ବ୍ୟାକଅପ୍ ଫାଇଲରୁ ସମସ୍ତ ସେଟିଂସମୂହ, ଲଗଇନ୍ ଡାଟା ଏବଂ ପ୍ଲେଲିଷ୍ଟଗୁଡିକ ପୁନରୁଦ୍ଧାର କରେ | ସମସ୍ତ ସାମ୍ପ୍ରତିକ ତଥ୍ୟକୁ ଓଭର୍ ରାଇଟ୍ କରେ |",
+  "@restoreSettingsAndPlaylistsDes": {
+    "description": "restoreSettingsAndPlaylistsDes"
+  },
+  "backupSettingsAndPlaylistsDes": "ସମସ୍ତ ସେଟିଂସମୂହ, ପ୍ଲେଲିଷ୍ଟ ଏବଂ ଲଗଇନ୍ ଡାଟା ଏକ ବ୍ୟାକଅପ୍ ଫାଇଲ୍ ରେ ସେଭ୍ କରନ୍ତୁ |",
+  "@backupSettingsAndPlaylistsDes": {
+    "description": "backupSettingsAndPlaylistsDes"
+  },
+  "backupMsg": "ବ୍ୟାକଅପ୍ ସଫଳତାର ସହିତ ସଞ୍ଚୟ ହେଲା!",
+  "@backupMsg": {
+    "description": "backupMsg"
+  },
+  "backFilesFound": "ଡାଟାବେସ୍ ମିଳିଲା |",
+  "@backFilesFound": {
+    "description": "backFilesFound"
+  },
+  "restoreMsg": "ସଫଳତାର ସହିତ ପୁନ restored ସ୍ଥାପିତ!\nପୁନ bo ବୁଟ ଉପରେ ପରିବର୍ତ୍ତନ ପ୍ରୟୋଗ କରାଯାଏ |",
+  "@restoreMsg": {
+    "description": "restoreMsg"
+  },
+  "restoring": "ପୁନରୁଦ୍ଧାର ...",
+  "@restoring": {
+    "description": "restoring"
+  },
+  "restore": "ପୁନରୁଦ୍ଧାର କରନ୍ତୁ |",
+  "@restore": {
+    "description": "restore"
+  },
+  "closeApp": "ପ୍ରୟୋଗ ବନ୍ଦ କରନ୍ତୁ |",
+  "@closeApp": {
+    "description": "closeApp"
+  },
+  "standard": "ମାନକ",
+  "@standard": {
+    "description": "standard"
+  },
+  "gesture": "ଅଙ୍ଗଭଙ୍ଗୀ |",
+  "@gesture": {
+    "description": "gesture"
+  },
+  "audioCodec": "ଅଡିଓ କୋଡେକ୍ |",
+  "@audioCodec": {
+    "description": "audioCodec"
+  },
+  "autoDownFavSongDes": "ପ୍ରିୟମାନଙ୍କ ସହିତ ଯୋଡି ହେଲେ ସ୍ୱୟଂଚାଳିତ ଭାବରେ ପ୍ରିୟ ଗୀତଗୁଡ଼ିକୁ ଡାଉନଲୋଡ୍ କରନ୍ତୁ |",
+  "@autoDownFavSongDes": {
+    "description": "autoDownFavSongDes"
+  },
+  "loudnessNormalization": "ଉଚ୍ଚତା ସ୍ ization ାଭାବିକତା |",
+  "@loudnessNormalization": {
+    "description": "loudnessNormalization"
+  },
+  "playerUi": "ପ୍ଲେୟାର UI",
+  "@playerUi": {
+    "description": "playerUi"
+  },
+  "songNotPlayable": "ସର୍ଭର ପ୍ରତିବନ୍ଧକ ଯୋଗୁଁ ଗୀତଟି ବଜାଯାଇପାରିବ ନାହିଁ!",
+  "@songNotPlayable": {
+    "description": "songNotPlayable"
+  },
+  "loudnessDb": "LoudnessDb",
+  "@loudnessDb": {
+    "description": "loudnessDb"
+  },
+  "restoreAppData": "ଆପ୍ ଡାଟା ପୁନରୁଦ୍ଧାର କରନ୍ତୁ |",
+  "@restoreAppData": {
+    "description": "restoreAppData"
+  },
+  "queueShufflingDeniedMsg": "ରାଣ୍ଡମ୍ ମୋଡ୍ ସକ୍ରିୟ ହୋଇଛି | ଆପଣ ଧାଡିଟିକୁ ହସ୍ତକୃତ ଭାବରେ ମିଶ୍ରଣ କରିପାରିବେ ନାହିଁ |",
+  "@queueShufflingDeniedMsg": {
+    "description": "queueShufflingDeniedMsg"
+  },
+  "includeDownloadedFiles": "ଡାଉନଲୋଡ୍ ହୋଇଥିବା ଗୀତ ଫାଇଲଗୁଡିକ ଅନ୍ତର୍ଭୂକ୍ତ କରନ୍ତୁ |",
+  "@includeDownloadedFiles": {
+    "description": "includeDownloadedFiles"
+  },
+  "backupInProgress": "ବ୍ୟାକଅପ୍ ଚାଲିଛି ...",
+  "@backupInProgress": {
+    "description": "backupInProgress"
+  },
+  "queuerearrangingDeniedMsg": "ଶଫଲ୍ ମୋଡ୍ ଅନ୍ ଥିବାବେଳେ ଧାଡି ପୁନ order ରେକର୍ଡ ହୋଇପାରିବ ନାହିଁ |",
+  "@queuerearrangingDeniedMsg": {
+    "description": "queuerearrangingDeniedMsg"
+  },
+  "content": "ବିଷୟବସ୍ତୁ",
+  "@content": {
+    "description": "content"
+  },
+  "downloadError3": "ନେଟୱର୍କ / ଟ୍ରାନ୍ସମିସନ୍ ତ୍ରୁଟି ହେତୁ ଡାଉନଲୋଡ୍ ବିଫଳ ହେଲା! ଦୟାକରି ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ |",
+  "@downloadError3": {
+    "description": "downloadError3"
+  },
+  "personalisation": "ବ୍ୟକ୍ତିଗତକରଣ",
+  "@personalisation": {
+    "description": "personalisation"
+  },
+  "playerUiDes": "ପ୍ଲେୟାର ୟୁଜର୍ ଇଣ୍ଟରଫେସ୍ ଚୟନ କରନ୍ତୁ |",
+  "@playerUiDes": {
+    "description": "playerUiDes"
+  },
+  "musicAndPlayback": "ସଂଗୀତ ଏବଂ ଚଲାଇବା |",
+  "@musicAndPlayback": {
+    "description": "musicAndPlayback"
+  },
+  "appInfo": "ଆବେଦନ ସୂଚନା",
+  "@appInfo": {
+    "description": "appInfo"
+  },
+  "networkError": "ନେଟୱର୍କ ତ୍ରୁଟି! ଆପଣଙ୍କର ଇଣ୍ଟରନେଟ୍ ସଂଯୋଗ ଯାଞ୍ଚ କରନ୍ତୁ |",
+  "@networkError": {
+    "description": "networkError"
+  },
+  "download": "ଡାଉନଲୋଡ୍ କରନ୍ତୁ |",
+  "@download": {
+    "description": "download"
+  },
+  "downloadError2": "ସର୍ଭର ପ୍ରତିବନ୍ଧକ ହେତୁ ଅନୁରୋଧ କରାଯାଇଥିବା ଗୀତ ଡାଉନଲୋଡ୍ ହୋଇପାରିବ ନାହିଁ | ଆପଣ ପୁନର୍ବାର ଚେଷ୍ଟା କରିପାରିବେ |",
+  "@downloadError2": {
+    "description": "downloadError2"
+  },
+  "letsStrart": "ଚାଲ ଆରମ୍ଭ କରିବା ..",
+  "@letsStrart": {
+    "description": "letsStrart"
+  },
+  "processFiles": "ଫାଇଲଗୁଡିକ ପ୍ରକ୍ରିୟାକରଣ ...",
+  "@processFiles": {
+    "description": "processFiles"
+  },
+  "backupAppData": "ଆପ୍ ଡାଟା ବ୍ୟାକଅପ୍ କରନ୍ତୁ |",
+  "@backupAppData": {
+    "description": "backupAppData"
+  },
+  "backup": "ନକଲ ସଂରକ୍ଷଣ",
+  "@backup": {
+    "description": "backup"
+  },
+  "playnextMsg": "ଶୀଘ୍ର ଆସୁଛି |",
+  "@playnextMsg": {
+    "description": "playnextMsg"
+  },
+  "shuffleQueue": "ଲାଞ୍ଜ ମିଶ୍ରଣ କରନ୍ତୁ |",
+  "@shuffleQueue": {
+    "description": "shuffleQueue"
+  },
+  "queueLoop": "ଲାଞ୍ଜ ଲୁପ୍ |",
+  "@queueLoop": {
+    "description": "queueLoop"
+  },
+  "queueLoopNotDisMsg1": "ଶଫଲ୍ ମୋଡ୍ ସକ୍ଷମ ହେଲେ କ୍ୟୁ ଲୁପ୍ ମୋଡ୍ ଅକ୍ଷମ ହୋଇପାରିବ ନାହିଁ |",
+  "@queueLoopNotDisMsg1": {
+    "description": "queueLoopNotDisMsg1"
+  },
+  "queueLoopNotDisMsg2": "ରେଡିଓ ମୋଡରେ ଟେଲ୍ ଲୁପ୍ ମୋଡ୍ ସକ୍ରିୟ ହୋଇପାରିବ ନାହିଁ |",
+  "@queueLoopNotDisMsg2": {
+    "description": "queueLoopNotDisMsg2"
+  },
+  "loudnessNormalizationDes": "ସମସ୍ତ ଗୀତ (ପରୀକ୍ଷାମୂଳକ) ପାଇଁ ସମାନ ଉଚ୍ଚତା ସ୍ତର ସେଟ୍ କରେ (ପୁରାତନ ସଂସ୍କରଣରେ ଡାଉନଲୋଡ୍ ହୋଇଥିବା ଗୀତରେ କାମ କରିବ ନାହିଁ (<v1.10.0))",
+  "@loudnessNormalizationDes": {
+    "description": "loudnessNormalizationDes"
+  },
+  "enableSlidableAction": "ସ୍ଲାଇଡର୍ କ୍ରିୟାଗୁଡ଼ିକୁ ସକ୍ରିୟ କରନ୍ତୁ |",
+  "@enableSlidableAction": {
+    "description": "enableSlidableAction"
+  },
+  "enableSlidableActionDes": "ଗୀତ ଟାଇଲରେ ସ୍ୱାଇପ୍ କ୍ରିୟା ସକ୍ରିୟ କରନ୍ତୁ |",
+  "@enableSlidableActionDes": {
+    "description": "enableSlidableActionDes"
+  },
+  "bitrate": "ବିଟ୍ ହାର |",
+  "@bitrate": {
+    "description": "bitrate"
+  },
+  "androidBackupWarning": "ପରୀକ୍ଷିତ ନୁହେଁ: 60 ରୁ ଅଧିକ ଫାଇଲ୍ ଡାଉନଲୋଡ୍ କରିବା ପରେ ଚେକ୍ ବକ୍ସ ଚୟନ କରିବା ଦ୍ୱାରା ପ୍ରକ୍ରିୟା ବହୁ ପରିମାଣର ମେମୋରୀ ଗ୍ରାସ କରିପାରେ ଏବଂ ଫୋନ୍ କିମ୍ବା ଆପ୍ କ୍ରାସ୍ ହୋଇପାରେ | ନିଜ ବିପଦରେ ଆଗକୁ ବ .ନ୍ତୁ |",
+  "@androidBackupWarning": {
+    "description": "androidBackupWarning"
+  },
+  "songInfo": "ଗୀତ ସୂଚନା",
+  "@songInfo": {
+    "description": "songInfo"
+  },
+  "id": "ID",
+  "@id": {
+    "description": "id"
+  },
+  "title": "ଆଖ୍ୟା",
+  "@title": {
+    "description": "title"
+  },
+  "restartApp": "ପ୍ରୟୋଗକୁ ପୁନ Rest ଆରମ୍ଭ କରନ୍ତୁ |",
+  "@restartApp": {
+    "description": "restartApp"
+  },
+  "autoDownFavSong": "ପ୍ରିୟ ଗୀତଗୁଡ଼ିକର ସ୍ୱୟଂଚାଳିତ ଡାଉନଲୋଡ୍ |",
+  "@autoDownFavSong": {
+    "description": "autoDownFavSong"
+  },
+  "duration": "ଅବଧି",
+  "@duration": {
+    "description": "duration"
+  },
+  "urlSearchDes": "ସଂପୃକ୍ତ ବିଷୟବସ୍ତୁ ଖୋଲିବା / ଖେଳିବା ପାଇଁ ଚିହ୍ନଟ URL ଏଥିରେ କ୍ଲିକ୍ କରନ୍ତୁ |",
+  "@urlSearchDes": {
+    "description": "urlSearchDes"
+  },
+  "reArrangeSongs": "ଗୀତଗୁଡିକ ରେକର୍ଡ କରନ୍ତୁ |",
+  "@reArrangeSongs": {
+    "description": "reArrangeSongs"
+  },
+  "selectSongs": "ଗୀତ ଚୟନ କରନ୍ତୁ |",
+  "@selectSongs": {
+    "description": "selectSongs"
+  },
+  "selectAll": "ସମସ୍ତ ଚୟନ କରନ୍ତୁ |",
+  "@selectAll": {
+    "description": "selectAll"
+  },
+  "playingfromAlbum": "ଆଲବମ୍ ଠାରୁ ଖେଳିବା |",
+  "@playingfromAlbum": {
+    "description": "playingfromAlbum"
+  },
+  "playingfromPlaylist": "ପ୍ଲେଲିଷ୍ଟରୁ ଖେଳିବା |",
+  "@playingfromPlaylist": {
+    "description": "playingfromPlaylist"
+  },
+  "playingfromSelection": "ଚୟନରୁ ଖେଳିବା |",
+  "@playingfromSelection": {
+    "description": "playingfromSelection"
+  },
+  "resetToDefaultMsg": "ଡିଫଲ୍ଟରେ ସେଟିଂସମୂହ ପୁନ res ସେଟ୍ ସମ୍ପୂର୍ଣ୍ଣ ହୋଇଛି, ଦୟାକରି ଆପକୁ ପୁନ rest ଆରମ୍ଭ କରନ୍ତୁ |",
+  "@resetToDefaultMsg": {
+    "description": "resetToDefaultMsg"
+  },
+  "resetToDefaultDes": "ଡିଫଲ୍ଟ ଭାବରେ ଆପ୍ ସେଟିଂସମୂହ ପୁନ Res ସେଟ୍ କରନ୍ତୁ (ପୁନ rest ଆରମ୍ଭ ଆବଶ୍ୟକ କରେ)",
+  "@resetToDefaultDes": {
+    "description": "resetToDefaultDes"
+  },
+  "misc": "ବିଭିନ୍ନ |",
+  "@misc": {
+    "description": "misc"
+  },
+  "resetToDefault": "ଡିଫଲ୍ଟ ସେଟିଂସମୂହ ପୁନରୁଦ୍ଧାର କରନ୍ତୁ |",
+  "@resetToDefault": {
+    "description": "resetToDefault"
+  },
+  "autoOpenPlayer": "ସ୍ୱୟଂଚାଳିତ ଭାବରେ ପ୍ଲେୟାର ସ୍କ୍ରିନ୍ ଖୋଲନ୍ତୁ |",
+  "@autoOpenPlayer": {
+    "description": "autoOpenPlayer"
+  },
+  "autoOpenPlayerDes": "ଖେଳିବାକୁ ଏକ ଗୀତ ବାଛିବାବେଳେ ପ୍ଲେୟାରର ସ୍ୱୟଂଚାଳିତ ଖୋଲିବାକୁ ପୂର୍ଣ୍ଣ ସ୍କ୍ରିନରେ ସକ୍ରିୟ / ନିଷ୍କ୍ରିୟ କରନ୍ତୁ |",
+  "@autoOpenPlayerDes": {
+    "description": "autoOpenPlayerDes"
+  },
+  "playingfromArtist": "କଳାକାରଙ୍କ ଠାରୁ ଖେଳିବା |",
+  "@playingfromArtist": {
+    "description": "playingfromArtist"
+  },
+  "randomSelection": "ଅନିୟମିତ ଚୟନ |",
+  "@randomSelection": {
+    "description": "randomSelection"
+  },
+  "randomRadio": "ରାଣ୍ଡମ୍ ରେଡିଓ |",
+  "@randomRadio": {
+    "description": "randomRadio"
+  },
+  "exportPlaylist": "ପ୍ଲେ ଲିଷ୍ଟ ରପ୍ତାନି କରନ୍ତୁ |",
+  "@exportPlaylist": {
+    "description": "exportPlaylist"
+  },
+  "importPlaylistDesc": "ଆମଦାନୀ କରିବାକୁ ପୂର୍ବରୁ ରପ୍ତାନି ହୋଇଥିବା ପ୍ଲେଲିଷ୍ଟ JSON ଫାଇଲ୍ ଚୟନ କରନ୍ତୁ |",
+  "@importPlaylistDesc": {
+    "description": "importPlaylistDesc"
+  },
+  "invalidPlaylistFile": "ଅବ play ଧ ପ୍ଲେଲିଷ୍ଟ ଫାଇଲ୍ ଗଠନ |",
+  "@invalidPlaylistFile": {
+    "description": "invalidPlaylistFile"
+  },
+  "fileNotFound": "ଫାଇଲ ମିଳିଲା ନାହିଁ",
+  "@fileNotFound": {
+    "description": "fileNotFound"
+  },
+  "exportErrorPermission": "ରପ୍ତାନି କରିବା ସମୟରେ ଅନୁମତି ପ୍ରତ୍ୟାଖ୍ୟାନ |",
+  "@exportErrorPermission": {
+    "description": "exportErrorPermission"
+  },
+  "importingPlaylist": "ପ୍ଲେ ଲିଷ୍ଟ ଆମଦାନି କରୁଛି ...",
+  "@importingPlaylist": {
+    "description": "importingPlaylist"
+  },
+  "exportErrorStorage": "ପର୍ଯ୍ୟାପ୍ତ ସ୍ଥାନ ସଂରକ୍ଷଣ ସ୍ଥାନ |",
+  "@exportErrorStorage": {
+    "description": "exportErrorStorage"
+  },
+  "exportingPlaylist": "ପ୍ଲେ ଲିଷ୍ଟ ରପ୍ତାନି କରୁଛି ...",
+  "@exportingPlaylist": {
+    "description": "exportingPlaylist"
+  },
+  "playlistExportedMsg": "ପ୍ଲେଲିଷ୍ଟ ସଫଳତାର ସହିତ ରପ୍ତାନି ହୋଇଛି |",
+  "@playlistExportedMsg": {
+    "description": "playlistExportedMsg"
+  },
+  "exportError": "ପ୍ଲେ ଲିଷ୍ଟ ରପ୍ତାନିରେ ତ୍ରୁଟି |",
+  "@exportError": {
+    "description": "exportError"
+  },
+  "exportErrorFormat": "ପ୍ଲେଲିଷ୍ଟ ଡାଟା ଫର୍ମାଟିଂରେ ତ୍ରୁଟି |",
+  "@exportErrorFormat": {
+    "description": "exportErrorFormat"
+  },
+  "importPlaylist": "ପ୍ଲେଲିଷ୍ଟ ଆମଦାନୀ କରନ୍ତୁ |",
+  "@importPlaylist": {
+    "description": "importPlaylist"
+  },
+  "selectFile": "ଫାଇଲ୍ ଚୟନ କରନ୍ତୁ |",
+  "@selectFile": {
+    "description": "selectFile"
+  },
+  "playlistImportedMsg": "ପ୍ଲେଲିଷ୍ଟ ସଫଳତାର ସହିତ ଆମଦାନୀ ହୋଇଛି |",
+  "@playlistImportedMsg": {
+    "description": "playlistImportedMsg"
+  },
+  "importError": "ପ୍ଲେଲିଷ୍ଟ ଆମଦାନି କରିବାରେ ତ୍ରୁଟି |",
+  "@importError": {
+    "description": "importError"
+  },
+  "importErrorFileAccess": "ମନୋନୀତ ଫାଇଲକୁ ପ୍ରବେଶ କରାଯାଇପାରିବ ନାହିଁ |",
+  "@importErrorFileAccess": {
+    "description": "importErrorFileAccess"
+  },
+  "importErrorFormat": "ଅବ val ଧ ଫାଇଲ୍ ଫର୍ମାଟ୍ |",
+  "@importErrorFormat": {
+    "description": "importErrorFormat"
+  },
+  "importErrorDatabase": "ଡାଟାବେସରେ ସେଭ୍ କରିବାରେ ତ୍ରୁଟି |",
+  "@importErrorDatabase": {
+    "description": "importErrorDatabase"
+  },
+  "importLargeFileNote": "ଟିପନ୍ତୁ: ବଡ ପ୍ଲେଲିଷ୍ଟଗୁଡିକ ଆମଦାନୀ କରିବାକୁ ଅଧିକ ସମୟ ନେଇପାରେ |",
+  "@importLargeFileNote": {
+    "description": "importLargeFileNote"
+  },
+  "exportPlaylistCsv": "CSV ଭାବରେ ପ୍ଲେ ଲିଷ୍ଟ ରପ୍ତାନି କରନ୍ତୁ |",
+  "@exportPlaylistCsv": {
+    "description": "exportPlaylistCsv"
+  },
+  "exportPlaylistJson": "JSON କୁ ପ୍ଲେଲିଷ୍ଟ ରପ୍ତାନି କରନ୍ତୁ |",
+  "@exportPlaylistJson": {
+    "description": "exportPlaylistJson"
+  },
+  "exportPlaylistJsonSubtitle": "ଏହି ଫର୍ମାଟ୍ ଆମଦାନୀ ହୋଇପାରିବ |",
+  "@exportPlaylistJsonSubtitle": {
+    "description": "exportPlaylistJsonSubtitle"
+  },
+  "exportPlaylistCsvSubtitle": "ଏଠାରେ ଆମଦାନି କରିପାରିବ ନାହିଁ |",
+  "@exportPlaylistCsvSubtitle": {
+    "description": "exportPlaylistCsvSubtitle"
+  },
+  "exportToYouTubeMusic": "ୟୁଟ୍ୟୁବ୍ ସଙ୍ଗୀତକୁ ରପ୍ତାନି କରନ୍ତୁ |",
+  "@exportToYouTubeMusic": {
+    "description": "exportToYouTubeMusic"
+  },
+  "exportToYouTubeMusicSubtitle": "ଏହା ତୁମର ପ୍ଲେ ଲିଷ୍ଟ (ଗୀତ <50) କୁ ସାମ୍ପ୍ରତିକ ଧାଡିରେ ଠେଲି ଦେବ, ଏହାକୁ YtMusic ରେ ଖୋଲିବା ପରେ ଏହାକୁ ପ୍ଲେ ଲିଷ୍ଟରେ ଯୋଡିବାକୁ ଭୁଲିବ ନାହିଁ |",
+  "@exportToYouTubeMusicSubtitle": {
+    "description": "exportToYouTubeMusicSubtitle"
+  },
+  "linkCopied": "ଲିଙ୍କ୍ କ୍ଲିପବୋର୍ଡରେ କପି ହୋଇଛି |",
+  "@linkCopied": {
+    "description": "linkCopied"
+  },
+  "lyrics": "ଅକ୍ଷରଗୁଡ଼ିକ",
+  "@lyrics": {
+    "description": "lyrics"
+  },
+  "no": "ନା",
+  "@no": {
+    "description": "no"
+  },
+  "podcasts": "ପୋଡକଷ୍ଟସ୍ |",
+  "@podcasts": {
+    "description": "podcasts"
+  },
+  "episodes": "ଏପିସୋଡ୍",
+  "@episodes": {
+    "description": "episodes"
+  },
+  "profiles": "ପ୍ରୋଫାଇଲ୍",
+  "@profiles": {
+    "description": "profiles"
+  },
+  "addToLibrary": "ଲାଇବ୍ରେରୀରେ ଯୋଡନ୍ତୁ |",
+  "@addToLibrary": {
+    "description": "addToLibrary"
+  },
+  "removeFromLibrary": "ଲାଇବ୍ରେରୀରୁ ଡିଲିଟ୍ କରନ୍ତୁ |",
+  "@removeFromLibrary": {
+    "description": "removeFromLibrary"
+  },
+  "play": "ଖେଳନ୍ତୁ |",
+  "@play": {
+    "description": "play"
+  },
+  "enqueueAlbumSongs": "ଧାଡିରେ ଆଲବମ୍ ଗୀତ ଯୋଡନ୍ତୁ |",
+  "@enqueueAlbumSongs": {
+    "description": "enqueueAlbumSongs"
+  },
+  "downloadAlbumSongs": "ଆଲବମରୁ ଗୀତ ଡାଉନଲୋଡ୍ କରନ୍ତୁ |",
+  "@downloadAlbumSongs": {
+    "description": "downloadAlbumSongs"
+  },
+  "shareAlbum": "ଆଲବମ୍ ଅଂଶୀଦାର କରନ୍ତୁ |",
+  "@shareAlbum": {
+    "description": "shareAlbum"
+  },
+  "imported": "ଆମଦାନୀ ହୋଇଛି |",
+  "@imported": {
+    "description": "imported"
+  },
+  "importedPlaylist": "ଆମଦାନୀ ହୋଇଥିବା ପ୍ଲେଲିଷ୍ଟ |",
+  "@importedPlaylist": {
+    "description": "importedPlaylist"
+  },
+  "permissionDenied": "ଅନୁମତି ପ୍ରତ୍ୟାଖ୍ୟାନ |",
+  "@permissionDenied": {
+    "description": "permissionDenied"
+  },
+  "enqueueSongs": "ଧାଡିରେ ଗୀତ ଯୋଡନ୍ତୁ |",
+  "@enqueueSongs": {
+    "description": "enqueueSongs"
+  },
+  "shuffle": "ଅନିୟମିତ |",
+  "@shuffle": {
+    "description": "shuffle"
+  },
+  "downloadPlaylist": "ପ୍ଲେଲିଷ୍ଟ ଡାଉନଲୋଡ୍ କରନ୍ତୁ |",
+  "@downloadPlaylist": {
+    "description": "downloadPlaylist"
+  },
+  "syncPlaylistSongs": "ପ୍ଲେଲିଷ୍ଟ ଗୀତଗୁଡିକ ସିଙ୍କ କରନ୍ତୁ |",
+  "@syncPlaylistSongs": {
+    "description": "syncPlaylistSongs"
+  },
+  "blacklistPipedPlaylist": "ପ୍ଲେଲିଷ୍ଟ କଳା ତାଲିକା |",
+  "@blacklistPipedPlaylist": {
+    "description": "blacklistPipedPlaylist"
+  },
+  "sharePlaylist": "ପ୍ଲେଲିଷ୍ଟ ଅଂଶୀଦାର କରନ୍ତୁ |",
+  "@sharePlaylist": {
+    "description": "sharePlaylist"
+  },
+  "playlist": "ପ୍ଲେଲିଷ୍ଟ |",
+  "@playlist": {
+    "description": "playlist"
+  },
+  "sortByName": "ନାମ ଅନୁଯାୟୀ ସର୍ଟ କରନ୍ତୁ |",
+  "@sortByName": {
+    "description": "sortByName"
+  },
+  "sortByDate": "ତାରିଖ ଅନୁଯାୟୀ ସର୍ଟ କରନ୍ତୁ |",
+  "@sortByDate": {
+    "description": "sortByDate"
+  },
+  "sortByDuration": "ଅବଧି ଅନୁଯାୟୀ ସର୍ଟ କରନ୍ତୁ |",
+  "@sortByDuration": {
+    "description": "sortByDuration"
+  },
+  "sortAscendNDescend": "ଆରୋହଣ / ତଳକୁ ସର୍ଟ କରନ୍ତୁ |",
+  "@sortAscendNDescend": {
+    "description": "sortAscendNDescend"
+  },
+  "migration_summary_start": "{source} ରୁ ସ୍ଥାନାନ୍ତରଣ ସମାପ୍ତ |",
+  "@migration_summary_start": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      }
+    },
+    "description": "migration_summary_start"
+  },
+  "migration_summary_playlists": "ପ୍ଲେଲିଷ୍ଟଗୁଡିକ: {count} |",
+  "@migration_summary_playlists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_playlists"
+  },
+  "migration_summary_songs": "ଗୀତ: {count}",
+  "@migration_summary_songs": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_songs"
+  },
+  "migration_summary_favorites": "ପସନ୍ଦ: {count}",
+  "@migration_summary_favorites": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_favorites"
+  },
+  "migration_summary_albums": "ଆଲବମ୍: {count}",
+  "@migration_summary_albums": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_albums"
+  },
+  "migration_summary_artists": "କଳାକାର: {count} |",
+  "@migration_summary_artists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_artists"
+  },
+  "migration_select_file_dialog": "Song.db କିମ୍ବା ଏକ ବ୍ୟାକଅପ୍ .backup ଚୟନ କରନ୍ତୁ |",
+  "@migration_select_file_dialog": {
+    "description": "migration_select_file_dialog"
+  },
+  "migration_success": "ସ୍ଥାନାନ୍ତରଣ ସଫଳତାର ସହିତ ସମାପ୍ତ ହେଲା |",
+  "@migration_success": {
+    "description": "migration_success"
+  },
+  "backup_select_folder_dialog": "ବ୍ୟାକଅପ୍ ପାଇଁ ଫୋଲ୍ଡର୍ ଚୟନ କରନ୍ତୁ |",
+  "@backup_select_folder_dialog": {
+    "description": "backup_select_folder_dialog"
+  },
+  "restore_select_file_dialog": "ବ୍ୟାକଅପ୍ ଫାଇଲ୍ ଚୟନ କରନ୍ତୁ |",
+  "@restore_select_file_dialog": {
+    "description": "restore_select_file_dialog"
+  },
+  "auth_hint_email": "name@mail.com",
+  "@auth_hint_email": {
+    "description": "auth_hint_email"
+  },
+  "auth_error_invalid_email": "ଏକ ବ valid ଧ ଇମେଲ୍ ପ୍ରବେଶ କରନ୍ତୁ |",
+  "@auth_error_invalid_email": {
+    "description": "auth_error_invalid_email"
+  },
+  "settings_cloud_backup_dialog_desc": "ଆପର ଏକ .hmb ବ୍ୟାକଅପ୍ ସର୍ଭରରେ ଅପଲୋଡ୍ କରନ୍ତୁ ଏବଂ ଯଦି ଆବଶ୍ୟକ ହୁଏ, କ saved ଣସି ସଞ୍ଚିତ ବ୍ୟାକଅପ୍ ପୁନ restore ସ୍ଥାପନ କରନ୍ତୁ |",
+  "@settings_cloud_backup_dialog_desc": {
+    "description": "settings_cloud_backup_dialog_desc"
+  },
+  "delete": "ବିଲୋପ କରନ୍ତୁ |",
+  "@delete": {
+    "description": "delete"
+  },
+  "in_app_storage": "ଆଭ୍ୟନ୍ତରୀଣ ଷ୍ଟୋରେଜ୍ ଡିରେକ୍ଟୋରୀ |",
+  "@in_app_storage": {
+    "description": "in_app_storage"
+  },
+  "auth_brand_description_1": "ଏହି ମ୍ୟୁଜିକ୍ ଆପ୍ ପାଇଁ ଅନୁକୂଳ ହୋଇଥିବା ପୂର୍ବ ପ୍ରୋଜେକ୍ଟରୁ ଆମେ ଲଗଇନ୍, ପଞ୍ଜୀକରଣ ଏବଂ ପାସୱାର୍ଡ ପୁନରୁଦ୍ଧାର ଆଣିଛୁ |",
+  "@auth_brand_description_1": {
+    "description": "auth_brand_description_1"
+  },
+  "auth_brand_description_2": "ତୁମର ଅଧିବେଶନ ସୁରକ୍ଷିତ ଷ୍ଟୋରେଜରେ ରୁହେ ଏବଂ ତୁମେ ପୂର୍ବରୁ ବ୍ୟବହାର କରୁଥିବା ସମାନ ବ୍ୟାକେଣ୍ଡ ସହିତ ବ valid ଧ ହୋଇଛି |",
+  "@auth_brand_description_2": {
+    "description": "auth_brand_description_2"
+  },
+  "auth_brand_not_configured": "ପ୍ରାମାଣିକିକରଣ ବ୍ୟାକେଣ୍ଡକୁ ସଂଯୋଗ କରିବା ପାଇଁ .env ଫାଇଲକୁ ବିନ୍ୟାସ କରିବା ଆବଶ୍ୟକ |",
+  "@auth_brand_not_configured": {
+    "description": "auth_brand_not_configured"
+  },
+  "auth_forgot_password_subtitle": "ଆମେ ତୁମ ଖାତା ଇମେଲକୁ ନିର୍ଦ୍ଦେଶାବଳୀ ପଠାଇବୁ |",
+  "@auth_forgot_password_subtitle": {
+    "description": "auth_forgot_password_subtitle"
+  },
+  "auth_btn_send_email": "ମେଲ୍ ପଠାନ୍ତୁ |",
+  "@auth_btn_send_email": {
+    "description": "auth_btn_send_email"
+  },
+  "auth_error_not_configured": "ପ୍ରାମାଣିକିକରଣ ବ୍ୟାକେଣ୍ଡ .env ଫାଇଲରେ ବିନ୍ୟାସ ହେବା ପାଇଁ ଅନୁପସ୍ଥିତ |",
+  "@auth_error_not_configured": {
+    "description": "auth_error_not_configured"
+  },
+  "auth_error_invalid_credentials": "ଭୁଲ ଇମେଲ କିମ୍ବା ପାସୱାର୍ଡ |",
+  "@auth_error_invalid_credentials": {
+    "description": "auth_error_invalid_credentials"
+  },
+  "auth_error_not_verified": "ଆପଣଙ୍କର ଖାତା ଏପର୍ଯ୍ୟନ୍ତ ଯାଞ୍ଚ ହୋଇନାହିଁ |",
+  "@auth_error_not_verified": {
+    "description": "auth_error_not_verified"
+  },
+  "auth_error_unknown": "ଅପରେସନ୍ ସଂପୂର୍ଣ୍ଣ କରିବା ସମ୍ଭବ ନୁହେଁ |",
+  "@auth_error_unknown": {
+    "description": "auth_error_unknown"
+  },
+  "auth_register_success": "ଖାତା ସଫଳତାର ସହିତ ସୃଷ୍ଟି ହେଲା |",
+  "@auth_register_success": {
+    "description": "auth_register_success"
+  },
+  "auth_register_error": "ଖାତା ସୃଷ୍ଟି ହୋଇପାରିଲା ନାହିଁ |",
+  "@auth_register_error": {
+    "description": "auth_register_error"
+  },
+  "auth_recovery_email_sent": "ଇମେଲ୍ ପଠାଯାଇଛି |",
+  "@auth_recovery_email_sent": {
+    "description": "auth_recovery_email_sent"
+  },
+  "auth_recovery_email_error": "ଇମେଲ ପଠାଇବା ସମ୍ଭବ ନୁହେଁ |",
+  "@auth_recovery_email_error": {
+    "description": "auth_recovery_email_error"
+  },
+  "latestVersion": "ସର୍ବଶେଷ ସଂସ୍କରଣ ଉପଲବ୍ଧ |",
+  "@latestVersion": {
+    "description": "latestVersion"
+  },
+  "updateApp": "ଆବେଦନ ଅଦ୍ୟତନ କରନ୍ତୁ |",
+  "@updateApp": {
+    "description": "updateApp"
+  },
+  "loadInfoUpdate": "ଅଦ୍ୟତନ ସୂଚନା ଲୋଡ୍ ହୋଇପାରିଲା ନାହିଁ |",
+  "@loadInfoUpdate": {
+    "description": "loadInfoUpdate"
+  },
+  "infoNotAvailable": "ସୂଚନା ଉପଲବ୍ଧ ନାହିଁ |",
+  "@infoNotAvailable": {
+    "description": "infoNotAvailable"
+  },
+  "developedBy": "ଜୋସ୍ ଏଷ୍ଟ୍ରାଡା (JOSPROX) ଦ୍ୱାରା ବିକଶିତ ଏବଂ ରକ୍ଷଣାବେକ୍ଷଣ |",
+  "@developedBy": {
+    "description": "developedBy"
+  },
+  "copyrightNotice": "© 2026 JOSPROX | GPL ଲାଇସେନ୍ସ v3.0",
+  "@copyrightNotice": {
+    "description": "copyrightNotice"
+  },
+  "backupSettingsAndPlaylists": "ବ୍ୟାକଅପ୍ ସେଟିଂସମୂହ ଏବଂ ପ୍ଲେଲିଷ୍ଟଗୁଡିକ |",
+  "@backupSettingsAndPlaylists": {
+    "description": "backupSettingsAndPlaylists"
+  },
+  "restoreSettingsAndPlaylists": "ସେଟିଂସମୂହ ଏବଂ ପ୍ଲେଲିଷ୍ଟଗୁଡିକ ପୁନ ore ସ୍ଥାପନ କରନ୍ତୁ |",
+  "@restoreSettingsAndPlaylists": {
+    "description": "restoreSettingsAndPlaylists"
+  },
+  "helloWorld": "ନମସ୍କାର ଦୁନିଆ |",
+  "@helloWorld": {
+    "description": "Este texto es opcional"
+  },
+  "quickPics": "ଶୀଘ୍ର ଚୟନ",
+  "@quickPics": {
+    "description": "quickPics"
+  },
+  "topMusicVid": "ଶୀର୍ଷ ମ୍ୟୁଜିକ୍ ଭିଡିଓଗୁଡିକ |",
+  "@topMusicVid": {
+    "description": "topMusicVid"
   }
 }

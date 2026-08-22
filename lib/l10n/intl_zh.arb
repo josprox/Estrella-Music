@@ -926,5 +926,1375 @@
   "auth_2fa_invalid": "输入有效的 6 位数代码或重新登录。",
   "@auth_2fa_invalid": {
     "description": "auth_2fa_invalid"
+  },
+  "library": "图书馆",
+  "@library": {
+    "description": "library"
+  },
+  "libPlaylists": "图书馆播放列表",
+  "@libPlaylists": {
+    "description": "libPlaylists"
+  },
+  "libAlbums": "图书馆相册",
+  "@libAlbums": {
+    "description": "libAlbums"
+  },
+  "libArtists": "图书馆艺术家",
+  "@libArtists": {
+    "description": "libArtists"
+  },
+  "items": "元素",
+  "@items": {
+    "description": "items"
+  },
+  "networkError1": "糟糕，网络错误！",
+  "@networkError1": {
+    "description": "networkError1"
+  },
+  "retry": "重试！",
+  "@retry": {
+    "description": "retry"
+  },
+  "home": "首页",
+  "@home": {
+    "description": "home"
+  },
+  "playlists": "播放列表",
+  "@playlists": {
+    "description": "playlists"
+  },
+  "albums": "专辑",
+  "@albums": {
+    "description": "albums"
+  },
+  "artists": "艺术家",
+  "@artists": {
+    "description": "artists"
+  },
+  "settings": "设置",
+  "@settings": {
+    "description": "settings"
+  },
+  "libSongs": "图书馆歌曲",
+  "@libSongs": {
+    "description": "libSongs"
+  },
+  "communityplaylists": "社区播放列表",
+  "@communityplaylists": {
+    "description": "communityplaylists"
+  },
+  "singles": "简单",
+  "@singles": {
+    "description": "singles"
+  },
+  "recentlyPlayed": "最近玩过",
+  "@recentlyPlayed": {
+    "description": "recentlyPlayed"
+  },
+  "songs": "歌曲",
+  "@songs": {
+    "description": "songs"
+  },
+  "favorites": "收藏夹",
+  "@favorites": {
+    "description": "favorites"
+  },
+  "cachedOrOffline": "缓存/离线",
+  "@cachedOrOffline": {
+    "description": "cachedOrOffline"
+  },
+  "downloads": "下载",
+  "@downloads": {
+    "description": "downloads"
+  },
+  "emptyPlaylist": "播放列表为空！",
+  "@emptyPlaylist": {
+    "description": "emptyPlaylist"
+  },
+  "featuredplaylists": "精选播放列表",
+  "@featuredplaylists": {
+    "description": "featuredplaylists"
+  },
+  "noOfflineSong": "没有离线歌曲！",
+  "@noOfflineSong": {
+    "description": "noOfflineSong"
+  },
+  "enableBottomNavDes": "切换到底部导航栏",
+  "@enableBottomNavDes": {
+    "description": "enableBottomNavDes"
+  },
+  "homeContentCount": "启动内容计数",
+  "@homeContentCount": {
+    "description": "homeContentCount"
+  },
+  "playlistCreatednsongAddedAlert": "创建播放列表并添加歌曲！",
+  "@playlistCreatednsongAddedAlert": {
+    "description": "playlistCreatednsongAddedAlert"
+  },
+  "songAlreadyOfflineAlert": "该歌曲已在缓存中",
+  "@songAlreadyOfflineAlert": {
+    "description": "songAlreadyOfflineAlert"
+  },
+  "sleepTimer": "睡眠定时器",
+  "@sleepTimer": {
+    "description": "sleepTimer"
+  },
+  "upNext": "下一页",
+  "@upNext": {
+    "description": "upNext"
+  },
+  "plain": "简单",
+  "@plain": {
+    "description": "plain"
+  },
+  "addMultipleSongs": "将歌曲添加到播放列表",
+  "@addMultipleSongs": {
+    "description": "addMultipleSongs"
+  },
+  "renamePlaylist": "重命名播放列表",
+  "@renamePlaylist": {
+    "description": "renamePlaylist"
+  },
+  "videos": "视频",
+  "@videos": {
+    "description": "videos"
+  },
+  "enqueueAll": "将全部添加到队列中",
+  "@enqueueAll": {
+    "description": "enqueueAll"
+  },
+  "removePlaylist": "删除播放列表",
+  "@removePlaylist": {
+    "description": "removePlaylist"
+  },
+  "CreateNewPlaylist": "创建新的播放列表",
+  "@CreateNewPlaylist": {
+    "description": "CreateNewPlaylist"
+  },
+  "createnAdd": "创建并添加",
+  "@createnAdd": {
+    "description": "createnAdd"
+  },
+  "noBookmarks": "没有书签！",
+  "@noBookmarks": {
+    "description": "noBookmarks"
+  },
+  "startRadio": "启动收音机",
+  "@startRadio": {
+    "description": "startRadio"
+  },
+  "playNext": "播放下一个",
+  "@playNext": {
+    "description": "playNext"
+  },
+  "noLibPlaylist": "您的媒体库中没有任何播放列表！",
+  "@noLibPlaylist": {
+    "description": "noLibPlaylist"
+  },
+  "enqueueSong": "将这首歌添加到队列中",
+  "@enqueueSong": {
+    "description": "enqueueSong"
+  },
+  "themeMode": "主题模式",
+  "@themeMode": {
+    "description": "themeMode"
+  },
+  "systemDefault": "系统默认值",
+  "@systemDefault": {
+    "description": "systemDefault"
+  },
+  "setDiscoverContent": "设置发现内容",
+  "@setDiscoverContent": {
+    "description": "setDiscoverContent"
+  },
+  "discover": "发现",
+  "@discover": {
+    "description": "discover"
+  },
+  "equalizerDes": "打开系统均衡器",
+  "@equalizerDes": {
+    "description": "equalizerDes"
+  },
+  "basedOnLast": "基于上次交互",
+  "@basedOnLast": {
+    "description": "basedOnLast"
+  },
+  "notaSongVideo": "这不是歌曲/音乐视频！",
+  "@notaSongVideo": {
+    "description": "notaSongVideo"
+  },
+  "linkPipedDes": "与播放列表的 Piped 链接",
+  "@linkPipedDes": {
+    "description": "linkPipedDes"
+  },
+  "selectAuthIns": "选择认证实例",
+  "@selectAuthIns": {
+    "description": "selectAuthIns"
+  },
+  "password": "密码",
+  "@password": {
+    "description": "password"
+  },
+  "rename": "重命名",
+  "@rename": {
+    "description": "rename"
+  },
+  "removeMultiple": "删除多首歌曲",
+  "@removeMultiple": {
+    "description": "removeMultiple"
+  },
+  "restoreLastPlaybackSession": "恢复上次播放会话",
+  "@restoreLastPlaybackSession": {
+    "description": "restoreLastPlaybackSession"
+  },
+  "clearImgCacheAlert": "图片缓存清除成功",
+  "@clearImgCacheAlert": {
+    "description": "clearImgCacheAlert"
+  },
+  "dynamic": "动态",
+  "@dynamic": {
+    "description": "dynamic"
+  },
+  "results": "结果",
+  "@results": {
+    "description": "results"
+  },
+  "albumBookmarkRemoveAlert": "专辑书签已删除！",
+  "@albumBookmarkRemoveAlert": {
+    "description": "albumBookmarkRemoveAlert"
+  },
+  "reArrangePlaylist": "重新排序播放列表",
+  "@reArrangePlaylist": {
+    "description": "reArrangePlaylist"
+  },
+  "cancel": "取消",
+  "@cancel": {
+    "description": "cancel"
+  },
+  "create": "创建",
+  "@create": {
+    "description": "create"
+  },
+  "disableTransitionAnimationDes": "激活此选项以禁用选项卡过渡动画",
+  "@disableTransitionAnimationDes": {
+    "description": "disableTransitionAnimationDes"
+  },
+  "openIn": "打开于",
+  "@openIn": {
+    "description": "openIn"
+  },
+  "removeFromLib": "从库中删除歌曲",
+  "@removeFromLib": {
+    "description": "removeFromLib"
+  },
+  "add5Minutes": "添加 5 分钟",
+  "@add5Minutes": {
+    "description": "add5Minutes"
+  },
+  "cancelTimer": "取消定时器",
+  "@cancelTimer": {
+    "description": "cancelTimer"
+  },
+  "deleteDownloadData": "从下载中删除",
+  "@deleteDownloadData": {
+    "description": "deleteDownloadData"
+  },
+  "minutes": "分钟",
+  "@minutes": {
+    "description": "minutes"
+  },
+  "endOfThisSong": "这首歌结束",
+  "@endOfThisSong": {
+    "description": "endOfThisSong"
+  },
+  "dark": "黑暗",
+  "@dark": {
+    "description": "dark"
+  },
+  "light": "当然",
+  "@light": {
+    "description": "light"
+  },
+  "language": "语言",
+  "@language": {
+    "description": "language"
+  },
+  "languageDes": "设置应用语言",
+  "@languageDes": {
+    "description": "languageDes"
+  },
+  "quickpicks": "快速精选",
+  "@quickpicks": {
+    "description": "quickpicks"
+  },
+  "homeContentCountDes": "选择初始主屏幕内容的数量（大约）。结果更少加载速度更快",
+  "@homeContentCountDes": {
+    "description": "homeContentCountDes"
+  },
+  "cacheSongsDes": "在播放歌曲时缓存歌曲以供将来/离线播放将占用您设备上的额外空间",
+  "@cacheSongsDes": {
+    "description": "cacheSongsDes"
+  },
+  "skipSilence": "跳过沉默",
+  "@skipSilence": {
+    "description": "skipSilence"
+  },
+  "skipSilenceDes": "播放音乐时将跳过静音",
+  "@skipSilenceDes": {
+    "description": "skipSilenceDes"
+  },
+  "streamingQuality": "流媒体质量",
+  "@streamingQuality": {
+    "description": "streamingQuality"
+  },
+  "high": "高",
+  "@high": {
+    "description": "high"
+  },
+  "backgroundPlay": "在后台播放音乐",
+  "@backgroundPlay": {
+    "description": "backgroundPlay"
+  },
+  "cacheHomeScreenData": "存储主屏幕内容数据",
+  "@cacheHomeScreenData": {
+    "description": "cacheHomeScreenData"
+  },
+  "cacheHomeScreenDataDes": "启用主屏幕内容数据存储，如果启用此选项，主屏幕将立即加载",
+  "@cacheHomeScreenDataDes": {
+    "description": "cacheHomeScreenDataDes"
+  },
+  "downloadingFormatDes": "选择下载文件格式。 “Opus”将提供最好的品质",
+  "@downloadingFormatDes": {
+    "description": "downloadingFormatDes"
+  },
+  "exportDowloadedFiles": "导出下载的文件",
+  "@exportDowloadedFiles": {
+    "description": "exportDowloadedFiles"
+  },
+  "exportedFileLocation": "下载文件的导出位置",
+  "@exportedFileLocation": {
+    "description": "exportedFileLocation"
+  },
+  "exporting": "正在导出...",
+  "@exporting": {
+    "description": "exporting"
+  },
+  "scanning": "正在扫描...",
+  "@scanning": {
+    "description": "scanning"
+  },
+  "downFilesFound": "找到下载的文件",
+  "@downFilesFound": {
+    "description": "downFilesFound"
+  },
+  "exportMsg": "文件导出成功",
+  "@exportMsg": {
+    "description": "exportMsg"
+  },
+  "equalizer": "均衡器",
+  "@equalizer": {
+    "description": "equalizer"
+  },
+  "clearImgCache": "清除图像缓存",
+  "@clearImgCache": {
+    "description": "clearImgCache"
+  },
+  "clearImgCacheDes": "单击此处清除缓存的缩略图/图像。 （不推荐，除非您想更新缓存的图像数据）",
+  "@clearImgCacheDes": {
+    "description": "clearImgCacheDes"
+  },
+  "disabled": "残疾人",
+  "@disabled": {
+    "description": "disabled"
+  },
+  "ignoreBatOpt": "忽略电池优化",
+  "@ignoreBatOpt": {
+    "description": "ignoreBatOpt"
+  },
+  "enabled": "已激活",
+  "@enabled": {
+    "description": "enabled"
+  },
+  "github": "GitHub",
+  "@github": {
+    "description": "github"
+  },
+  "githubDes": "查看 GitHub 源代码 \n如果你喜欢这个项目，别忘了给它一个⭐！",
+  "@githubDes": {
+    "description": "githubDes"
+  },
+  "by": "通过",
+  "@by": {
+    "description": "by"
+  },
+  "searchDes": "歌曲、播放列表、专辑或艺术家",
+  "@searchDes": {
+    "description": "searchDes"
+  },
+  "searchRes": "搜索结果",
+  "@searchRes": {
+    "description": "searchRes"
+  },
+  "for1": "为了",
+  "@for1": {
+    "description": "for1"
+  },
+  "viewAll": "查看全部",
+  "@viewAll": {
+    "description": "viewAll"
+  },
+  "nomatch": "没有找到匹配项",
+  "@nomatch": {
+    "description": "nomatch"
+  },
+  "subscribers": "订户",
+  "@subscribers": {
+    "description": "subscribers"
+  },
+  "synced": "同步",
+  "@synced": {
+    "description": "synced"
+  },
+  "deleteDownloadedDataAlert": "已成功从下载中删除！",
+  "@deleteDownloadedDataAlert": {
+    "description": "deleteDownloadedDataAlert"
+  },
+  "cancelTimerAlert": "睡眠定时器已取消",
+  "@cancelTimerAlert": {
+    "description": "cancelTimerAlert"
+  },
+  "sleepTimeSetAlert": "您的睡眠定时器已设置",
+  "@sleepTimeSetAlert": {
+    "description": "sleepTimeSetAlert"
+  },
+  "songRemovedfromQueueCurrSong": "您无法删除当前播放的歌曲",
+  "@songRemovedfromQueueCurrSong": {
+    "description": "songRemovedfromQueueCurrSong"
+  },
+  "songRemovedAlert": "删除自",
+  "@songRemovedAlert": {
+    "description": "songRemovedAlert"
+  },
+  "pipedplstSyncAlert": "管道播放列表已同步！",
+  "@pipedplstSyncAlert": {
+    "description": "pipedplstSyncAlert"
+  },
+  "playlistRenameAlert": "品牌更名成功！",
+  "@playlistRenameAlert": {
+    "description": "playlistRenameAlert"
+  },
+  "playlistRemovedAlert": "播放列表已删除！",
+  "@playlistRemovedAlert": {
+    "description": "playlistRemovedAlert"
+  },
+  "playlistBookmarkAddAlert": "播放列表已添加到书签！",
+  "@playlistBookmarkAddAlert": {
+    "description": "playlistBookmarkAddAlert"
+  },
+  "playlistBookmarkRemoveAlert": "播放列表书签已删除！",
+  "@playlistBookmarkRemoveAlert": {
+    "description": "playlistBookmarkRemoveAlert"
+  },
+  "albumBookmarkAddAlert": "相册已添加至书签！",
+  "@albumBookmarkAddAlert": {
+    "description": "albumBookmarkAddAlert"
+  },
+  "lyricsNotAvailable": "歌词不可用！",
+  "@lyricsNotAvailable": {
+    "description": "lyricsNotAvailable"
+  },
+  "newVersionAvailable": "新版本上线！",
+  "@newVersionAvailable": {
+    "description": "newVersionAvailable"
+  },
+  "dontShowInfoAgain": "不再显示该信息",
+  "@dontShowInfoAgain": {
+    "description": "dontShowInfoAgain"
+  },
+  "notaValidLink": "这不是有效链接！",
+  "@notaValidLink": {
+    "description": "notaValidLink"
+  },
+  "operationFailed": "操作失败",
+  "@operationFailed": {
+    "description": "operationFailed"
+  },
+  "Piped": "管道式",
+  "@Piped": {
+    "description": "Piped"
+  },
+  "link": "链接",
+  "@link": {
+    "description": "link"
+  },
+  "unLink": "取消链接",
+  "@unLink": {
+    "description": "unLink"
+  },
+  "hintApiUrl": "管道实例的 API URL",
+  "@hintApiUrl": {
+    "description": "hintApiUrl"
+  },
+  "customIns": "自定义实例",
+  "@customIns": {
+    "description": "customIns"
+  },
+  "linkAlert": "链接成功！",
+  "@linkAlert": {
+    "description": "linkAlert"
+  },
+  "unlinkAlert": "解除链接成功！",
+  "@unlinkAlert": {
+    "description": "unlinkAlert"
+  },
+  "stopMusicOnTaskClear": "关闭应用程序时停止音乐",
+  "@stopMusicOnTaskClear": {
+    "description": "stopMusicOnTaskClear"
+  },
+  "goToAlbum": "前往相册",
+  "@goToAlbum": {
+    "description": "goToAlbum"
+  },
+  "downloadLocation": "下载位置",
+  "@downloadLocation": {
+    "description": "downloadLocation"
+  },
+  "low": "低",
+  "@low": {
+    "description": "low"
+  },
+  "downloadingFormat": "下载文件格式",
+  "@downloadingFormat": {
+    "description": "downloadingFormat"
+  },
+  "ignoreBatOptDes": "如果您因系统优化而遇到通知问题或播放停止，请激活此选项",
+  "@ignoreBatOptDes": {
+    "description": "ignoreBatOptDes"
+  },
+  "status": "状态",
+  "@status": {
+    "description": "status"
+  },
+  "radioNotAvailable": "该艺术家无法收听广播！",
+  "@radioNotAvailable": {
+    "description": "radioNotAvailable"
+  },
+  "songRemovedfromQueue": "已从队列中删除！",
+  "@songRemovedfromQueue": {
+    "description": "songRemovedfromQueue"
+  },
+  "artistBookmarkRemoveAlert": "艺术家标记已删除！",
+  "@artistBookmarkRemoveAlert": {
+    "description": "artistBookmarkRemoveAlert"
+  },
+  "dismiss": "丢弃",
+  "@dismiss": {
+    "description": "dismiss"
+  },
+  "goToDownloadPage": "点击此处进入下载页面",
+  "@goToDownloadPage": {
+    "description": "goToDownloadPage"
+  },
+  "local": "本地",
+  "@local": {
+    "description": "local"
+  },
+  "addToPlaylist": "添加到播放列表",
+  "@addToPlaylist": {
+    "description": "addToPlaylist"
+  },
+  "cacheSongs": "缓存歌曲",
+  "@cacheSongs": {
+    "description": "cacheSongs"
+  },
+  "disableTransitionAnimation": "禁用过渡动画",
+  "@disableTransitionAnimation": {
+    "description": "disableTransitionAnimation"
+  },
+  "exportDowloadedFilesDes": "点击这里将下载的文件从应用程序目录导出到外部目录",
+  "@exportDowloadedFilesDes": {
+    "description": "exportDowloadedFilesDes"
+  },
+  "export": "出口",
+  "@export": {
+    "description": "export"
+  },
+  "backgroundPlayDes": "启用/禁用背景音乐播放（当应用程序在后台运行时，可以从系统托盘访问该应用程序）",
+  "@backgroundPlayDes": {
+    "description": "backgroundPlayDes"
+  },
+  "search": "搜索",
+  "@search": {
+    "description": "search"
+  },
+  "songAddedToPlaylistAlert": "歌曲已添加到播放列表！",
+  "@songAddedToPlaylistAlert": {
+    "description": "songAddedToPlaylistAlert"
+  },
+  "songAlreadyExists": "这首歌已经存在了！",
+  "@songAlreadyExists": {
+    "description": "songAlreadyExists"
+  },
+  "topmusicvideos": "最佳音乐视频",
+  "@topmusicvideos": {
+    "description": "topmusicvideos"
+  },
+  "restoreLastPlaybackSessionDes": "启动应用程序时自动恢复上次播放会话",
+  "@restoreLastPlaybackSessionDes": {
+    "description": "restoreLastPlaybackSessionDes"
+  },
+  "enableBottomNav": "底部导航栏",
+  "@enableBottomNav": {
+    "description": "enableBottomNav"
+  },
+  "songEnqueueAlert": "歌曲已添加到队列中！",
+  "@songEnqueueAlert": {
+    "description": "songEnqueueAlert"
+  },
+  "artistBookmarkAddAlert": "艺术家已添加到书签！",
+  "@artistBookmarkAddAlert": {
+    "description": "artistBookmarkAddAlert"
+  },
+  "syncedLyricsNotAvailable": "无法同步歌词！",
+  "@syncedLyricsNotAvailable": {
+    "description": "syncedLyricsNotAvailable"
+  },
+  "artistDesNotAvailable": "描述不可用！",
+  "@artistDesNotAvailable": {
+    "description": "artistDesNotAvailable"
+  },
+  "selectAuthInsMsg": "请选择认证实例！",
+  "@selectAuthInsMsg": {
+    "description": "selectAuthInsMsg"
+  },
+  "allFieldsReqMsg": "所有字段均为必填",
+  "@allFieldsReqMsg": {
+    "description": "allFieldsReqMsg"
+  },
+  "playlistBlacklistAlert": "列入黑名单的播放列表！",
+  "@playlistBlacklistAlert": {
+    "description": "playlistBlacklistAlert"
+  },
+  "blacklistPlstResetAlert": "重置成功！",
+  "@blacklistPlstResetAlert": {
+    "description": "blacklistPlstResetAlert"
+  },
+  "resetblacklistedplaylist": "重置黑名单播放列表",
+  "@resetblacklistedplaylist": {
+    "description": "resetblacklistedplaylist"
+  },
+  "resetblacklistedplaylistDes": "重置所有列入黑名单的管道播放列表",
+  "@resetblacklistedplaylistDes": {
+    "description": "resetblacklistedplaylistDes"
+  },
+  "restoreSettingsAndPlaylistsDes": "从备份文件恢复所有设置、登录数据和播放列表。覆盖所有当前数据",
+  "@restoreSettingsAndPlaylistsDes": {
+    "description": "restoreSettingsAndPlaylistsDes"
+  },
+  "errorOccuredAlert": "发生错误！",
+  "@errorOccuredAlert": {
+    "description": "errorOccuredAlert"
+  },
+  "playlistCreatedAlert": "播放列表已创建！",
+  "@playlistCreatedAlert": {
+    "description": "playlistCreatedAlert"
+  },
+  "shareSong": "分享这首歌",
+  "@shareSong": {
+    "description": "shareSong"
+  },
+  "trending": "趋势",
+  "@trending": {
+    "description": "trending"
+  },
+  "reset": "重置",
+  "@reset": {
+    "description": "reset"
+  },
+  "viewArtist": "查看艺术家",
+  "@viewArtist": {
+    "description": "viewArtist"
+  },
+  "removeFromPlaylist": "从播放列表中删除",
+  "@removeFromPlaylist": {
+    "description": "removeFromPlaylist"
+  },
+  "removeFromQueue": "从队列中删除",
+  "@removeFromQueue": {
+    "description": "removeFromQueue"
+  },
+  "streamingQualityDes": "音乐流媒体质量",
+  "@streamingQualityDes": {
+    "description": "streamingQualityDes"
+  },
+  "customInsSelectMsg": "请选择自定义实例",
+  "@customInsSelectMsg": {
+    "description": "customInsSelectMsg"
+  },
+  "stopMusicOnTaskClearDes": "从任务管理器关闭应用程序时音乐播放将停止",
+  "@stopMusicOnTaskClearDes": {
+    "description": "stopMusicOnTaskClearDes"
+  },
+  "backupSettingsAndPlaylistsDes": "将所有设置、播放列表和登录数据保存到备份文件",
+  "@backupSettingsAndPlaylistsDes": {
+    "description": "backupSettingsAndPlaylistsDes"
+  },
+  "backupMsg": "备份保存成功！",
+  "@backupMsg": {
+    "description": "backupMsg"
+  },
+  "backFilesFound": "找到数据库",
+  "@backFilesFound": {
+    "description": "backFilesFound"
+  },
+  "restoreMsg": "恢复成功！\n更改将在重新启动后应用",
+  "@restoreMsg": {
+    "description": "restoreMsg"
+  },
+  "restoring": "正在恢复...",
+  "@restoring": {
+    "description": "restoring"
+  },
+  "restore": "恢复",
+  "@restore": {
+    "description": "restore"
+  },
+  "closeApp": "关闭申请",
+  "@closeApp": {
+    "description": "closeApp"
+  },
+  "standard": "标准型",
+  "@standard": {
+    "description": "standard"
+  },
+  "gesture": "手势",
+  "@gesture": {
+    "description": "gesture"
+  },
+  "audioCodec": "音频编解码器",
+  "@audioCodec": {
+    "description": "audioCodec"
+  },
+  "autoDownFavSongDes": "添加到收藏夹后自动下载喜爱的歌曲",
+  "@autoDownFavSongDes": {
+    "description": "autoDownFavSongDes"
+  },
+  "loudnessNormalization": "响度归一化",
+  "@loudnessNormalization": {
+    "description": "loudnessNormalization"
+  },
+  "playerUi": "玩家界面",
+  "@playerUi": {
+    "description": "playerUi"
+  },
+  "songNotPlayable": "由于服务器限制，歌曲无法播放！",
+  "@songNotPlayable": {
+    "description": "songNotPlayable"
+  },
+  "loudnessDb": "响度Db",
+  "@loudnessDb": {
+    "description": "loudnessDb"
+  },
+  "restoreAppData": "恢复应用程序数据",
+  "@restoreAppData": {
+    "description": "restoreAppData"
+  },
+  "queueShufflingDeniedMsg": "随机模式已激活。您无法手动混合队列。",
+  "@queueShufflingDeniedMsg": {
+    "description": "queueShufflingDeniedMsg"
+  },
+  "includeDownloadedFiles": "包括下载的歌曲文件",
+  "@includeDownloadedFiles": {
+    "description": "includeDownloadedFiles"
+  },
+  "backupInProgress": "备份正在进行中...",
+  "@backupInProgress": {
+    "description": "backupInProgress"
+  },
+  "queuerearrangingDeniedMsg": "当随机模式开启时，队列无法重新排序",
+  "@queuerearrangingDeniedMsg": {
+    "description": "queuerearrangingDeniedMsg"
+  },
+  "content": "内容",
+  "@content": {
+    "description": "content"
+  },
+  "downloadError3": "由于网络/传输错误，下载失败！请重试",
+  "@downloadError3": {
+    "description": "downloadError3"
+  },
+  "personalisation": "个性化",
+  "@personalisation": {
+    "description": "personalisation"
+  },
+  "playerUiDes": "选择播放器用户界面",
+  "@playerUiDes": {
+    "description": "playerUiDes"
+  },
+  "musicAndPlayback": "音乐和播放",
+  "@musicAndPlayback": {
+    "description": "musicAndPlayback"
+  },
+  "appInfo": "申请信息",
+  "@appInfo": {
+    "description": "appInfo"
+  },
+  "networkError": "网络错误！检查您的互联网连接。",
+  "@networkError": {
+    "description": "networkError"
+  },
+  "download": "下载",
+  "@download": {
+    "description": "download"
+  },
+  "downloadError2": "由于服务器限制，无法下载请求的歌曲。您可以再试一次",
+  "@downloadError2": {
+    "description": "downloadError2"
+  },
+  "letsStrart": "让我们开始吧..",
+  "@letsStrart": {
+    "description": "letsStrart"
+  },
+  "processFiles": "正在处理文件...",
+  "@processFiles": {
+    "description": "processFiles"
+  },
+  "backupAppData": "备份应用程序数据",
+  "@backupAppData": {
+    "description": "backupAppData"
+  },
+  "backup": "备份",
+  "@backup": {
+    "description": "backup"
+  },
+  "playnextMsg": "即将推出",
+  "@playnextMsg": {
+    "description": "playnextMsg"
+  },
+  "shuffleQueue": "混合尾巴",
+  "@shuffleQueue": {
+    "description": "shuffleQueue"
+  },
+  "queueLoop": "尾环",
+  "@queueLoop": {
+    "description": "queueLoop"
+  },
+  "queueLoopNotDisMsg1": "当启用 shuffle 模式时，无法禁用队列循环模式。",
+  "@queueLoopNotDisMsg1": {
+    "description": "queueLoopNotDisMsg1"
+  },
+  "queueLoopNotDisMsg2": "在无线电模式下无法激活尾循环模式。",
+  "@queueLoopNotDisMsg2": {
+    "description": "queueLoopNotDisMsg2"
+  },
+  "loudnessNormalizationDes": "为所有歌曲设置相同的响度级别（实验）（不适用于旧版本 (< v1.10.0) 下载的歌曲）",
+  "@loudnessNormalizationDes": {
+    "description": "loudnessNormalizationDes"
+  },
+  "enableSlidableAction": "激活滑块操作",
+  "@enableSlidableAction": {
+    "description": "enableSlidableAction"
+  },
+  "enableSlidableActionDes": "激活歌曲图块上的滑动操作",
+  "@enableSlidableActionDes": {
+    "description": "enableSlidableActionDes"
+  },
+  "bitrate": "比特率",
+  "@bitrate": {
+    "description": "bitrate"
+  },
+  "androidBackupWarning": "未经测试：下载超过 60 个文件后选中该复选框可能会导致进程消耗大量内存，并可能导致手机或应用程序崩溃。请自行承担风险。",
+  "@androidBackupWarning": {
+    "description": "androidBackupWarning"
+  },
+  "songInfo": "歌曲信息",
+  "@songInfo": {
+    "description": "songInfo"
+  },
+  "id": "身份证号",
+  "@id": {
+    "description": "id"
+  },
+  "title": "标题",
+  "@title": {
+    "description": "title"
+  },
+  "restartApp": "重新启动应用程序",
+  "@restartApp": {
+    "description": "restartApp"
+  },
+  "autoDownFavSong": "自动下载喜爱的歌曲",
+  "@autoDownFavSong": {
+    "description": "autoDownFavSong"
+  },
+  "duration": "持续时间",
+  "@duration": {
+    "description": "duration"
+  },
+  "urlSearchDes": "检测到的 URL 单击它可打开/播放相关内容",
+  "@urlSearchDes": {
+    "description": "urlSearchDes"
+  },
+  "album": "专辑",
+  "@album": {
+    "description": "album"
+  },
+  "reArrangeSongs": "重新排序歌曲",
+  "@reArrangeSongs": {
+    "description": "reArrangeSongs"
+  },
+  "selectSongs": "选择歌曲",
+  "@selectSongs": {
+    "description": "selectSongs"
+  },
+  "selectAll": "选择全部",
+  "@selectAll": {
+    "description": "selectAll"
+  },
+  "playingfromAlbum": "从专辑中播放",
+  "@playingfromAlbum": {
+    "description": "playingfromAlbum"
+  },
+  "playingfromPlaylist": "从播放列表中播放",
+  "@playingfromPlaylist": {
+    "description": "playingfromPlaylist"
+  },
+  "playingfromSelection": "从选择中播放",
+  "@playingfromSelection": {
+    "description": "playingfromSelection"
+  },
+  "keepScreenOnWhilePlaying": "播放时保持屏幕常亮",
+  "@keepScreenOnWhilePlaying": {
+    "description": "keepScreenOnWhilePlaying"
+  },
+  "keepScreenOnWhilePlayingDes": "如果启用，设备屏幕将在播放音乐时保持唤醒状态",
+  "@keepScreenOnWhilePlayingDes": {
+    "description": "keepScreenOnWhilePlayingDes"
+  },
+  "resetToDefaultMsg": "设置重置为默认完成，请重新启动应用程序",
+  "@resetToDefaultMsg": {
+    "description": "resetToDefaultMsg"
+  },
+  "resetToDefaultDes": "将应用程序设置重置为默认值（需要重新启动）",
+  "@resetToDefaultDes": {
+    "description": "resetToDefaultDes"
+  },
+  "misc": "各种",
+  "@misc": {
+    "description": "misc"
+  },
+  "resetToDefault": "恢复默认设置",
+  "@resetToDefault": {
+    "description": "resetToDefault"
+  },
+  "autoOpenPlayer": "自动打开播放器屏幕",
+  "@autoOpenPlayer": {
+    "description": "autoOpenPlayer"
+  },
+  "autoOpenPlayerDes": "选择要播放的歌曲时激活/停用播放器自动打开全屏",
+  "@autoOpenPlayerDes": {
+    "description": "autoOpenPlayerDes"
+  },
+  "playingfromArtist": "艺术家演奏",
+  "@playingfromArtist": {
+    "description": "playingfromArtist"
+  },
+  "randomSelection": "随机选择",
+  "@randomSelection": {
+    "description": "randomSelection"
+  },
+  "randomRadio": "随机广播",
+  "@randomRadio": {
+    "description": "randomRadio"
+  },
+  "exportPlaylist": "导出播放列表",
+  "@exportPlaylist": {
+    "description": "exportPlaylist"
+  },
+  "importPlaylistDesc": "选择之前导出的播放列表 JSON 文件进行导入",
+  "@importPlaylistDesc": {
+    "description": "importPlaylistDesc"
+  },
+  "invalidPlaylistFile": "播放列表文件结构无效",
+  "@invalidPlaylistFile": {
+    "description": "invalidPlaylistFile"
+  },
+  "fileNotFound": "找不到文件",
+  "@fileNotFound": {
+    "description": "fileNotFound"
+  },
+  "exportErrorPermission": "导出时权限被拒绝",
+  "@exportErrorPermission": {
+    "description": "exportErrorPermission"
+  },
+  "importingPlaylist": "正在导入播放列表...",
+  "@importingPlaylist": {
+    "description": "importingPlaylist"
+  },
+  "exportErrorStorage": "存储空间不足",
+  "@exportErrorStorage": {
+    "description": "exportErrorStorage"
+  },
+  "exportingPlaylist": "正在导出播放列表...",
+  "@exportingPlaylist": {
+    "description": "exportingPlaylist"
+  },
+  "playlistExportedMsg": "播放列表已成功导出到",
+  "@playlistExportedMsg": {
+    "description": "playlistExportedMsg"
+  },
+  "exportError": "导出播放列表时出错",
+  "@exportError": {
+    "description": "exportError"
+  },
+  "exportErrorFormat": "格式化播放列表数据时出错",
+  "@exportErrorFormat": {
+    "description": "exportErrorFormat"
+  },
+  "importPlaylist": "导入播放列表",
+  "@importPlaylist": {
+    "description": "importPlaylist"
+  },
+  "selectFile": "选择文件",
+  "@selectFile": {
+    "description": "selectFile"
+  },
+  "playlistImportedMsg": "播放列表导入成功",
+  "@playlistImportedMsg": {
+    "description": "playlistImportedMsg"
+  },
+  "importError": "导入播放列表时出错",
+  "@importError": {
+    "description": "importError"
+  },
+  "importErrorFileAccess": "无法访问所选文件",
+  "@importErrorFileAccess": {
+    "description": "importErrorFileAccess"
+  },
+  "importErrorFormat": "文件格式无效",
+  "@importErrorFormat": {
+    "description": "importErrorFormat"
+  },
+  "importErrorDatabase": "保存到数据库时出错",
+  "@importErrorDatabase": {
+    "description": "importErrorDatabase"
+  },
+  "importLargeFileNote": "注意：导入大型播放列表可能需要更长的时间",
+  "@importLargeFileNote": {
+    "description": "importLargeFileNote"
+  },
+  "exportPlaylistCsv": "将播放列表导出为 CSV",
+  "@exportPlaylistCsv": {
+    "description": "exportPlaylistCsv"
+  },
+  "exportPlaylistJson": "将播放列表导出为 JSON",
+  "@exportPlaylistJson": {
+    "description": "exportPlaylistJson"
+  },
+  "exportPlaylistJsonSubtitle": "这个格式可以导入",
+  "@exportPlaylistJsonSubtitle": {
+    "description": "exportPlaylistJsonSubtitle"
+  },
+  "exportPlaylistCsvSubtitle": "这里无法导入",
+  "@exportPlaylistCsvSubtitle": {
+    "description": "exportPlaylistCsvSubtitle"
+  },
+  "exportToYouTubeMusic": "导出到 YouTube 音乐",
+  "@exportToYouTubeMusic": {
+    "description": "exportToYouTubeMusic"
+  },
+  "exportToYouTubeMusicSubtitle": "它将把您的播放列表（歌曲 < 50）推送到当前队列，在 YtMusic 中打开它后不要忘记将其添加到播放列表/保存",
+  "@exportToYouTubeMusicSubtitle": {
+    "description": "exportToYouTubeMusicSubtitle"
+  },
+  "linkCopied": "链接已复制到剪贴板",
+  "@linkCopied": {
+    "description": "linkCopied"
+  },
+  "lyrics": "信件",
+  "@lyrics": {
+    "description": "lyrics"
+  },
+  "no": "否",
+  "@no": {
+    "description": "no"
+  },
+  "podcasts": "播客",
+  "@podcasts": {
+    "description": "podcasts"
+  },
+  "episodes": "剧集数",
+  "@episodes": {
+    "description": "episodes"
+  },
+  "profiles": "型材",
+  "@profiles": {
+    "description": "profiles"
+  },
+  "addToLibrary": "添加到库",
+  "@addToLibrary": {
+    "description": "addToLibrary"
+  },
+  "removeFromLibrary": "从库中删除",
+  "@removeFromLibrary": {
+    "description": "removeFromLibrary"
+  },
+  "play": "玩",
+  "@play": {
+    "description": "play"
+  },
+  "enqueueAlbumSongs": "将专辑歌曲添加到队列",
+  "@enqueueAlbumSongs": {
+    "description": "enqueueAlbumSongs"
+  },
+  "downloadAlbumSongs": "下载专辑中的歌曲",
+  "@downloadAlbumSongs": {
+    "description": "downloadAlbumSongs"
+  },
+  "shareAlbum": "分享相册",
+  "@shareAlbum": {
+    "description": "shareAlbum"
+  },
+  "imported": "进口",
+  "@imported": {
+    "description": "imported"
+  },
+  "importedPlaylist": "导入的播放列表",
+  "@importedPlaylist": {
+    "description": "importedPlaylist"
+  },
+  "permissionDenied": "权限被拒绝",
+  "@permissionDenied": {
+    "description": "permissionDenied"
+  },
+  "enqueueSongs": "将歌曲添加到队列",
+  "@enqueueSongs": {
+    "description": "enqueueSongs"
+  },
+  "shuffle": "随机",
+  "@shuffle": {
+    "description": "shuffle"
+  },
+  "downloadPlaylist": "下载播放列表",
+  "@downloadPlaylist": {
+    "description": "downloadPlaylist"
+  },
+  "syncPlaylistSongs": "同步播放列表歌曲",
+  "@syncPlaylistSongs": {
+    "description": "syncPlaylistSongs"
+  },
+  "blacklistPipedPlaylist": "播放列表黑名单",
+  "@blacklistPipedPlaylist": {
+    "description": "blacklistPipedPlaylist"
+  },
+  "sharePlaylist": "分享播放列表",
+  "@sharePlaylist": {
+    "description": "sharePlaylist"
+  },
+  "playlist": "播放列表",
+  "@playlist": {
+    "description": "playlist"
+  },
+  "sortByName": "按名称排序",
+  "@sortByName": {
+    "description": "sortByName"
+  },
+  "sortByDate": "按日期排序",
+  "@sortByDate": {
+    "description": "sortByDate"
+  },
+  "sortByDuration": "按持续时间排序",
+  "@sortByDuration": {
+    "description": "sortByDuration"
+  },
+  "sortAscendNDescend": "升序/降序排序",
+  "@sortAscendNDescend": {
+    "description": "sortAscendNDescend"
+  },
+  "migration_summary_start": "迁移从 {source} 完成。",
+  "@migration_summary_start": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      }
+    },
+    "description": "migration_summary_start"
+  },
+  "migration_summary_playlists": "播放列表：{count}",
+  "@migration_summary_playlists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_playlists"
+  },
+  "migration_summary_songs": "歌曲：{count}",
+  "@migration_summary_songs": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_songs"
+  },
+  "migration_summary_favorites": "收藏夹：{count}",
+  "@migration_summary_favorites": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_favorites"
+  },
+  "migration_summary_albums": "专辑： {count}",
+  "@migration_summary_albums": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_albums"
+  },
+  "migration_summary_artists": "艺术家： {count}",
+  "@migration_summary_artists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_artists"
+  },
+  "migration_select_file_dialog": "选择song.db或备份.backup",
+  "@migration_select_file_dialog": {
+    "description": "migration_select_file_dialog"
+  },
+  "migration_success": "迁移成功完成。",
+  "@migration_success": {
+    "description": "migration_success"
+  },
+  "backup_select_folder_dialog": "选择要备份的文件夹",
+  "@backup_select_folder_dialog": {
+    "description": "backup_select_folder_dialog"
+  },
+  "restore_select_file_dialog": "选择备份文件",
+  "@restore_select_file_dialog": {
+    "description": "restore_select_file_dialog"
+  },
+  "auth_hint_email": "姓名@mail.com",
+  "@auth_hint_email": {
+    "description": "auth_hint_email"
+  },
+  "auth_error_invalid_email": "输入有效的电子邮件。",
+  "@auth_error_invalid_email": {
+    "description": "auth_error_invalid_email"
+  },
+  "settings_cloud_backup_dialog_desc": "将应用程序的 .hmb 备份上传到服务器，并根据需要恢复任何已保存的备份。",
+  "@settings_cloud_backup_dialog_desc": {
+    "description": "settings_cloud_backup_dialog_desc"
+  },
+  "delete": "删除",
+  "@delete": {
+    "description": "delete"
+  },
+  "in_app_storage": "内部存储目录",
+  "@in_app_storage": {
+    "description": "in_app_storage"
+  },
+  "auth_brand_description_1": "我们从之前的项目中引入了登录、注册和密码恢复功能，适用于这个音乐应用程序。",
+  "@auth_brand_description_1": {
+    "description": "auth_brand_description_1"
+  },
+  "auth_brand_description_2": "您的会话位于安全存储中，并使用您已使用的相同后端进行验证。",
+  "@auth_brand_description_2": {
+    "description": "auth_brand_description_2"
+  },
+  "auth_brand_not_configured": "需要配置 .env 文件以连接身份验证后端。",
+  "@auth_brand_not_configured": {
+    "description": "auth_brand_not_configured"
+  },
+  "auth_forgot_password_subtitle": "我们会将说明发送到您的帐户电子邮件中。",
+  "@auth_forgot_password_subtitle": {
+    "description": "auth_forgot_password_subtitle"
+  },
+  "auth_btn_send_email": "发送邮件",
+  "@auth_btn_send_email": {
+    "description": "auth_btn_send_email"
+  },
+  "auth_error_not_configured": ".env 文件中缺少配置身份验证后端。",
+  "@auth_error_not_configured": {
+    "description": "auth_error_not_configured"
+  },
+  "auth_error_invalid_credentials": "电子邮件或密码不正确。",
+  "@auth_error_invalid_credentials": {
+    "description": "auth_error_invalid_credentials"
+  },
+  "auth_error_not_verified": "您的帐户尚未验证。",
+  "@auth_error_not_verified": {
+    "description": "auth_error_not_verified"
+  },
+  "auth_error_unknown": "无法完成该操作。",
+  "@auth_error_unknown": {
+    "description": "auth_error_unknown"
+  },
+  "auth_register_success": "帐户创建成功。",
+  "@auth_register_success": {
+    "description": "auth_register_success"
+  },
+  "auth_register_error": "无法创建该帐户。",
+  "@auth_register_error": {
+    "description": "auth_register_error"
+  },
+  "auth_recovery_email_sent": "电子邮件已发送。",
+  "@auth_recovery_email_sent": {
+    "description": "auth_recovery_email_sent"
+  },
+  "auth_recovery_email_error": "无法发送电子邮件。",
+  "@auth_recovery_email_error": {
+    "description": "auth_recovery_email_error"
+  },
+  "latestVersion": "最新版本可用",
+  "@latestVersion": {
+    "description": "latestVersion"
+  },
+  "updateApp": "更新应用程序",
+  "@updateApp": {
+    "description": "updateApp"
+  },
+  "loadInfoUpdate": "无法加载更新信息",
+  "@loadInfoUpdate": {
+    "description": "loadInfoUpdate"
+  },
+  "infoNotAvailable": "信息不可用",
+  "@infoNotAvailable": {
+    "description": "infoNotAvailable"
+  },
+  "developedBy": "由 Joss Estrada (JOSPROX) 开发和维护",
+  "@developedBy": {
+    "description": "developedBy"
+  },
+  "copyrightNotice": "© 2026 JOSPROX。 GPL 许可证 v3.0",
+  "@copyrightNotice": {
+    "description": "copyrightNotice"
+  },
+  "backupSettingsAndPlaylists": "备份设置和播放列表",
+  "@backupSettingsAndPlaylists": {
+    "description": "backupSettingsAndPlaylists"
+  },
+  "restoreSettingsAndPlaylists": "恢复设置和播放列表",
+  "@restoreSettingsAndPlaylists": {
+    "description": "restoreSettingsAndPlaylists"
+  },
+  "removeFromCache": "从缓存中删除",
+  "@removeFromCache": {
+    "description": "removeFromCache"
+  },
+  "quickPics": "快速选择",
+  "@quickPics": {
+    "description": "quickPics"
+  },
+  "topMusicVid": "热门音乐视频",
+  "@topMusicVid": {
+    "description": "topMusicVid"
   }
 }

@@ -22,17 +22,29 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(songTitle) => "Ladataan: ${songTitle}";
 
-  static String m1(error) => "Uudelleen luomisessa tapahtui virhe: ${error}";
+  static String m1(count) => "Albumit: ${count}";
 
-  static String m2(title) => "Samanlainen kuin ${title}";
+  static String m2(count) => "Artistit: ${count}";
 
-  static String m3(current) => "Vaihe ${current}/3";
+  static String m3(count) => "Suosikit: ${count}";
 
-  static String m4(count) => "${count} muutoksia tehty.";
+  static String m4(count) => "Soittolistat: ${count}";
 
-  static String m5(count) => "${count} synkronoidut muutokset.";
+  static String m5(count) => "Kappaleet: ${count}";
 
-  static String m6(statusCode) => "Käyttäjiä ei voitu etsiä (${statusCode}).";
+  static String m6(source) => "Siirto suoritettu ${source}.";
+
+  static String m7(error) => "Uudelleen luomisessa tapahtui virhe: ${error}";
+
+  static String m8(title) => "Samanlainen kuin ${title}";
+
+  static String m9(current) => "Vaihe ${current}/3";
+
+  static String m10(count) => "${count} muutoksia tehty.";
+
+  static String m11(count) => "${count} synkronoidut muutokset.";
+
+  static String m12(statusCode) => "Käyttäjiä ei voitu etsiä (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -42,9 +54,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "Piped": MessageLookupByLibrary.simpleMessage("Piped"),
     "about": MessageLookupByLibrary.simpleMessage("Noin"),
     "add5Minutes": MessageLookupByLibrary.simpleMessage("Lisää 5 minuuttia"),
+    "addMultipleSongs": MessageLookupByLibrary.simpleMessage(
+      "Lisää kappaleita soittolistaan",
+    ),
+    "addToLibrary": MessageLookupByLibrary.simpleMessage("Lisää kirjastoon"),
     "addToPlaylist": MessageLookupByLibrary.simpleMessage(
       "Lisää soittolistaan",
     ),
+    "album": MessageLookupByLibrary.simpleMessage("Albumi"),
     "albumBookmarkAddAlert": MessageLookupByLibrary.simpleMessage(
       "Albumi lisätty kirjanmerkkeihin!",
     ),
@@ -58,6 +75,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "allFieldsReqMsg": MessageLookupByLibrary.simpleMessage(
       "Kaikki tiedot vaaditaan",
     ),
+    "androidBackupWarning": MessageLookupByLibrary.simpleMessage(
+      "Ei testattu: Jos valitset valintaruudun yli 60 tiedoston lataamisen jälkeen, prosessi saattaa kuluttaa paljon muistia ja saattaa aiheuttaa puhelimen tai sovelluksen kaatumisen. Jatka omalla vastuullasi.",
+    ),
+    "appInfo": MessageLookupByLibrary.simpleMessage("Sovelluksen tiedot"),
     "artistBookmarkAddAlert": MessageLookupByLibrary.simpleMessage(
       "Artisti lisätty kirjanmerkkeihin!",
     ),
@@ -71,6 +92,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "artistsByTaste": MessageLookupByLibrary.simpleMessage(
       "Sinun makusi mukaan",
     ),
+    "audioCodec": MessageLookupByLibrary.simpleMessage("Äänikoodekki"),
     "auth_2fa_code": MessageLookupByLibrary.simpleMessage("Todennuskoodi"),
     "auth_2fa_invalid": MessageLookupByLibrary.simpleMessage(
       "Anna kelvollinen 6-numeroinen koodi tai kirjaudu sisään uudelleen.",
@@ -87,18 +109,61 @@ class MessageLookup extends MessageLookupByLibrary {
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Acepto usar mis datos...",
     ),
+    "auth_brand_description_1": MessageLookupByLibrary.simpleMessage(
+      "Toimme sisäänkirjautumisen, rekisteröinnin ja salasanan palautuksen edellisestä projektista, mukautettuna tähän musiikkisovellukseen.",
+    ),
+    "auth_brand_description_2": MessageLookupByLibrary.simpleMessage(
+      "Istuntosi on suojatussa tallennustilassa, ja se on validoitu samalla taustalla, jota jo käytit.",
+    ),
+    "auth_brand_not_configured": MessageLookupByLibrary.simpleMessage(
+      ".env-tiedosto on määritettävä, jotta todennustausta voidaan yhdistää.",
+    ),
     "auth_btn_login": MessageLookupByLibrary.simpleMessage("Kirjaudu sisään"),
     "auth_btn_register": MessageLookupByLibrary.simpleMessage("Rekisteröidy"),
+    "auth_btn_send_email": MessageLookupByLibrary.simpleMessage(
+      "Lähetä postia",
+    ),
     "auth_confirm_password": MessageLookupByLibrary.simpleMessage(
       "Vahvista salasana",
+    ),
+    "auth_error_invalid_credentials": MessageLookupByLibrary.simpleMessage(
+      "Väärä sähköpostiosoite tai salasana.",
+    ),
+    "auth_error_invalid_email": MessageLookupByLibrary.simpleMessage(
+      "Anna kelvollinen sähköpostiosoite.",
+    ),
+    "auth_error_not_configured": MessageLookupByLibrary.simpleMessage(
+      "Todennustaustaosaa ei voida määrittää .env-tiedostossa.",
+    ),
+    "auth_error_not_verified": MessageLookupByLibrary.simpleMessage(
+      "Tiliäsi ei ole vielä vahvistettu.",
+    ),
+    "auth_error_unknown": MessageLookupByLibrary.simpleMessage(
+      "Operaatiota ei voitu suorittaa loppuun.",
     ),
     "auth_first_name": MessageLookupByLibrary.simpleMessage("Etunimi"),
     "auth_forgot_password": MessageLookupByLibrary.simpleMessage(
       "Unohdin salasanani",
     ),
+    "auth_forgot_password_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Lähetämme ohjeet tilisi sähköpostiisi.",
+    ),
+    "auth_hint_email": MessageLookupByLibrary.simpleMessage("nimi@mail.com"),
     "auth_last_name": MessageLookupByLibrary.simpleMessage("Sukunimi"),
     "auth_login_success": MessageLookupByLibrary.simpleMessage(
       "Sisäänkirjautuminen onnistui",
+    ),
+    "auth_recovery_email_error": MessageLookupByLibrary.simpleMessage(
+      "Sähköpostia ei voitu lähettää.",
+    ),
+    "auth_recovery_email_sent": MessageLookupByLibrary.simpleMessage(
+      "Sähköposti lähetetty.",
+    ),
+    "auth_register_error": MessageLookupByLibrary.simpleMessage(
+      "Tiliä ei voitu luoda.",
+    ),
+    "auth_register_success": MessageLookupByLibrary.simpleMessage(
+      "Tili luotu onnistuneesti.",
     ),
     "auth_welcome_subtitle": MessageLookupByLibrary.simpleMessage(
       "Tervetuloa Estrella Musiciin",
@@ -106,7 +171,44 @@ class MessageLookup extends MessageLookupByLibrary {
     "auth_welcome_title": MessageLookupByLibrary.simpleMessage(
       "Tervetuloa Estrella Musiciin",
     ),
+    "autoDownFavSong": MessageLookupByLibrary.simpleMessage(
+      "Suosikkikappaleiden automaattinen lataus",
+    ),
+    "autoDownFavSongDes": MessageLookupByLibrary.simpleMessage(
+      "Lataa suosikkikappaleet automaattisesti, kun ne lisätään suosikkeihin",
+    ),
+    "autoOpenPlayer": MessageLookupByLibrary.simpleMessage(
+      "Avaa automaattisesti soittimen näyttö",
+    ),
+    "autoOpenPlayerDes": MessageLookupByLibrary.simpleMessage(
+      "Aktivoi/deaktivoi soittimen automaattinen avautuminen koko näytölle, kun valitset toistettavan kappaleen",
+    ),
     "back": MessageLookupByLibrary.simpleMessage("Palata"),
+    "backFilesFound": MessageLookupByLibrary.simpleMessage(
+      "tietokantoja löytynyt",
+    ),
+    "backgroundPlay": MessageLookupByLibrary.simpleMessage(
+      "Musiikin toisto taustalla",
+    ),
+    "backgroundPlayDes": MessageLookupByLibrary.simpleMessage(
+      "Ota taustamusiikin toisto käyttöön tai poista se käytöstä (sovellusta voidaan käyttää ilmaisinalueelta, kun sovellus on käynnissä taustalla)",
+    ),
+    "backup": MessageLookupByLibrary.simpleMessage("Varmuuskopio"),
+    "backupAppData": MessageLookupByLibrary.simpleMessage(
+      "Varmuuskopioi sovellustiedot",
+    ),
+    "backupInProgress": MessageLookupByLibrary.simpleMessage(
+      "Varmuuskopiointi käynnissä...",
+    ),
+    "backupMsg": MessageLookupByLibrary.simpleMessage(
+      "Varmuuskopio tallennettu onnistuneesti!",
+    ),
+    "backupSettingsAndPlaylists": MessageLookupByLibrary.simpleMessage(
+      "Varmuuskopiointiasetukset ja soittolistat",
+    ),
+    "backupSettingsAndPlaylistsDes": MessageLookupByLibrary.simpleMessage(
+      "Tallenna kaikki asetukset, soittolistat ja kirjautumistiedot varmuuskopiotiedostoon",
+    ),
     "backup_auth_required": MessageLookupByLibrary.simpleMessage(
       "Tarvitset aktiivisen istunnon...",
     ),
@@ -128,6 +230,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "backup_restore_success": MessageLookupByLibrary.simpleMessage(
       "Varmuuskopio palautettu. Käynnistä sovellus uudelleen.",
     ),
+    "backup_select_folder_dialog": MessageLookupByLibrary.simpleMessage(
+      "Valitse kansio varmuuskopiointia varten",
+    ),
     "backup_selection_prompt": MessageLookupByLibrary.simpleMessage(
       "Valitse varmuuskopioitavat tiedot",
     ),
@@ -137,10 +242,20 @@ class MessageLookup extends MessageLookupByLibrary {
     "basedOnLast": MessageLookupByLibrary.simpleMessage(
       "Viimeisimpään toimintaan perustuvat",
     ),
+    "bitrate": MessageLookupByLibrary.simpleMessage("Bittinopeus"),
+    "blacklistPipedPlaylist": MessageLookupByLibrary.simpleMessage(
+      "Soittolistan musta lista",
+    ),
     "blacklistPlstResetAlert": MessageLookupByLibrary.simpleMessage(
       "Nollattu!",
     ),
     "by": MessageLookupByLibrary.simpleMessage("by"),
+    "cacheHomeScreenData": MessageLookupByLibrary.simpleMessage(
+      "Tallenna aloitusnäytön sisältötiedot",
+    ),
+    "cacheHomeScreenDataDes": MessageLookupByLibrary.simpleMessage(
+      "Ota käyttöön aloitusnäytön sisällön tietojen tallennus, aloitusnäyttö latautuu välittömästi, jos tämä vaihtoehto on käytössä",
+    ),
     "cacheSongs": MessageLookupByLibrary.simpleMessage(
       "Kappaleet välimuistiin",
     ),
@@ -155,7 +270,17 @@ class MessageLookup extends MessageLookupByLibrary {
     "cancelTimerAlert": MessageLookupByLibrary.simpleMessage(
       "Uniajastin peruutettu",
     ),
+    "clearImgCache": MessageLookupByLibrary.simpleMessage(
+      "Tyhjennä kuvavälimuisti",
+    ),
+    "clearImgCacheAlert": MessageLookupByLibrary.simpleMessage(
+      "Kuvavälimuisti tyhjennetty onnistuneesti",
+    ),
+    "clearImgCacheDes": MessageLookupByLibrary.simpleMessage(
+      "Napsauta tätä tyhjentääksesi välimuistissa olevat pikkukuvat/kuvat. (Ei suositella, ellet halua päivittää välimuistissa olevia kuvatietoja)",
+    ),
     "close": MessageLookupByLibrary.simpleMessage("Lähellä"),
+    "closeApp": MessageLookupByLibrary.simpleMessage("Sulje sovellus"),
     "cloudLibraryFound": MessageLookupByLibrary.simpleMessage(
       "Pilvikirjasto löytyi.",
     ),
@@ -193,6 +318,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "communityplaylists": MessageLookupByLibrary.simpleMessage(
       "Yhteisön soittolistat",
     ),
+    "content": MessageLookupByLibrary.simpleMessage("Sisältö"),
+    "copyrightNotice": MessageLookupByLibrary.simpleMessage(
+      "© 2026 JOSPROX. GPL-lisenssi v3.0",
+    ),
     "create": MessageLookupByLibrary.simpleMessage("Luo"),
     "createnAdd": MessageLookupByLibrary.simpleMessage("Luo & lisää"),
     "customIns": MessageLookupByLibrary.simpleMessage("Muu instanssi"),
@@ -201,12 +330,41 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "dailyDiscover": MessageLookupByLibrary.simpleMessage("Päivittäinen löytö"),
     "dark": MessageLookupByLibrary.simpleMessage("Tumma"),
+    "delete": MessageLookupByLibrary.simpleMessage("Poista"),
+    "deleteDownloadData": MessageLookupByLibrary.simpleMessage(
+      "Poista latauksista",
+    ),
+    "deleteDownloadedDataAlert": MessageLookupByLibrary.simpleMessage(
+      "Poistettu latauksista onnistuneesti!",
+    ),
+    "developedBy": MessageLookupByLibrary.simpleMessage(
+      "Kehittäjä ja ylläpitäjä Joss Estrada (JOSPROX)",
+    ),
+    "disableTransitionAnimation": MessageLookupByLibrary.simpleMessage(
+      "Poista siirtymäanimaatio käytöstä",
+    ),
+    "disableTransitionAnimationDes": MessageLookupByLibrary.simpleMessage(
+      "Aktivoi tämä vaihtoehto, jos haluat poistaa välilehden siirtymän animaation käytöstä",
+    ),
     "disabled": MessageLookupByLibrary.simpleMessage("Poissa käytöstä"),
     "discover": MessageLookupByLibrary.simpleMessage("Löydöt"),
     "dismiss": MessageLookupByLibrary.simpleMessage("Ohita"),
     "done": MessageLookupByLibrary.simpleMessage("Valmis"),
     "dontShowInfoAgain": MessageLookupByLibrary.simpleMessage(
       "Älä näytä tätä uudelleen",
+    ),
+    "downFilesFound": MessageLookupByLibrary.simpleMessage(
+      "ladatut tiedostot löytyivät",
+    ),
+    "download": MessageLookupByLibrary.simpleMessage("Lataa"),
+    "downloadAlbumSongs": MessageLookupByLibrary.simpleMessage(
+      "Lataa kappaleita albumilta",
+    ),
+    "downloadError2": MessageLookupByLibrary.simpleMessage(
+      "Pyydettyä kappaletta ei voi ladata palvelinrajoitusten vuoksi. Voit yrittää uudelleen",
+    ),
+    "downloadError3": MessageLookupByLibrary.simpleMessage(
+      "Lataus epäonnistui verkko-/siirtovirheen vuoksi! Yritä uudelleen",
     ),
     "downloadLocation": MessageLookupByLibrary.simpleMessage(
       "Latausten sijainti",
@@ -225,6 +383,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "downloadNotificationTitle": MessageLookupByLibrary.simpleMessage(
       "Musiikin lataaminen",
     ),
+    "downloadPlaylist": MessageLookupByLibrary.simpleMessage(
+      "Lataa soittolista",
+    ),
     "downloadingFormat": MessageLookupByLibrary.simpleMessage(
       "Latausten tiedostomuoto",
     ),
@@ -232,6 +393,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Valitse ladattavan tiedoston muoto. \"Opus\" tarjoaa parhaan laadun",
     ),
     "downloads": MessageLookupByLibrary.simpleMessage("Lataukset"),
+    "duration": MessageLookupByLibrary.simpleMessage("Kesto"),
     "dynamic": MessageLookupByLibrary.simpleMessage("Dynaaminen"),
     "email": MessageLookupByLibrary.simpleMessage("Sähköposti"),
     "emptyPlaylist": MessageLookupByLibrary.simpleMessage("Tyhjä soittolista!"),
@@ -241,12 +403,25 @@ class MessageLookup extends MessageLookupByLibrary {
     "enableBottomNavDes": MessageLookupByLibrary.simpleMessage(
       "Siirrä navigointipalkki ruudun alaosaan",
     ),
+    "enableSlidableAction": MessageLookupByLibrary.simpleMessage(
+      "Aktivoi liukusäätimen toiminnot",
+    ),
+    "enableSlidableActionDes": MessageLookupByLibrary.simpleMessage(
+      "Aktivoi pyyhkäisytoiminnot kappaleruudussa",
+    ),
     "enabled": MessageLookupByLibrary.simpleMessage("Käytössä"),
     "endOfThisSong": MessageLookupByLibrary.simpleMessage(
       "Soita kappale loppuun",
     ),
+    "enqueueAlbumSongs": MessageLookupByLibrary.simpleMessage(
+      "Lisää albumin kappaleita jonoon",
+    ),
     "enqueueAll": MessageLookupByLibrary.simpleMessage("Lisää kaikki jonoon"),
     "enqueueSong": MessageLookupByLibrary.simpleMessage("Lisää jonoon"),
+    "enqueueSongs": MessageLookupByLibrary.simpleMessage(
+      "Lisää kappaleita jonoon",
+    ),
+    "episodes": MessageLookupByLibrary.simpleMessage("Jaksot"),
     "equalizer": MessageLookupByLibrary.simpleMessage("Taajuuskorjain"),
     "equalizerDes": MessageLookupByLibrary.simpleMessage(
       "avaa järjestelmän taajuuskorjain",
@@ -258,10 +433,59 @@ class MessageLookup extends MessageLookupByLibrary {
     "errorPlayingTrack": MessageLookupByLibrary.simpleMessage(
       "Virhe pelatessa:",
     ),
+    "export": MessageLookupByLibrary.simpleMessage("Vie"),
+    "exportDowloadedFiles": MessageLookupByLibrary.simpleMessage(
+      "Vie ladatut tiedostot",
+    ),
+    "exportDowloadedFilesDes": MessageLookupByLibrary.simpleMessage(
+      "Napsauta tätä viedäksesi ladatut tiedostot sovellushakemistosta ulkoiseen hakemistoon",
+    ),
+    "exportError": MessageLookupByLibrary.simpleMessage(
+      "Virhe vietäessä soittolistaa",
+    ),
+    "exportErrorFormat": MessageLookupByLibrary.simpleMessage(
+      "Virhe soittolistan tietojen muotoilussa",
+    ),
+    "exportErrorPermission": MessageLookupByLibrary.simpleMessage(
+      "Lupa evätty viennin aikana",
+    ),
+    "exportErrorStorage": MessageLookupByLibrary.simpleMessage(
+      "Säilytystila ei riitä",
+    ),
+    "exportMsg": MessageLookupByLibrary.simpleMessage(
+      "Tiedostojen vienti onnistui",
+    ),
+    "exportPlaylist": MessageLookupByLibrary.simpleMessage("Vie soittolista"),
+    "exportPlaylistCsv": MessageLookupByLibrary.simpleMessage(
+      "Vie soittolista CSV-muodossa",
+    ),
+    "exportPlaylistCsvSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Ei voi tuoda tänne",
+    ),
+    "exportPlaylistJson": MessageLookupByLibrary.simpleMessage(
+      "Vie soittolista JSON-muotoon",
+    ),
+    "exportPlaylistJsonSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Tämä muoto voidaan tuoda",
+    ),
+    "exportToYouTubeMusic": MessageLookupByLibrary.simpleMessage(
+      "Vie Youtube-musiikkiin",
+    ),
+    "exportToYouTubeMusicSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Se työntää soittolistasi (kappaleita < 50) nykyiseen jonoon, älä unohda lisätä sitä soittolistaan/tallentaa avattuasi sen YtMusicissa",
+    ),
+    "exportedFileLocation": MessageLookupByLibrary.simpleMessage(
+      "Vie ladattujen tiedostojen sijainti",
+    ),
+    "exporting": MessageLookupByLibrary.simpleMessage("Viedään..."),
+    "exportingPlaylist": MessageLookupByLibrary.simpleMessage(
+      "Viedään soittolistaa...",
+    ),
     "favorites": MessageLookupByLibrary.simpleMessage("Suosikit"),
     "featuredplaylists": MessageLookupByLibrary.simpleMessage(
       "Suositellut soittolistat",
     ),
+    "fileNotFound": MessageLookupByLibrary.simpleMessage("Tiedostoa ei löydy"),
     "follow": MessageLookupByLibrary.simpleMessage("Jatkaa"),
     "followedArtists": MessageLookupByLibrary.simpleMessage("seurannut"),
     "following": MessageLookupByLibrary.simpleMessage("Jälkeen"),
@@ -291,6 +515,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "genre_latin": MessageLookupByLibrary.simpleMessage("latina"),
     "genre_pop": MessageLookupByLibrary.simpleMessage("Pop"),
     "genre_rock": MessageLookupByLibrary.simpleMessage("Rock"),
+    "gesture": MessageLookupByLibrary.simpleMessage("Ele"),
     "github": MessageLookupByLibrary.simpleMessage("GitHub"),
     "githubDes": MessageLookupByLibrary.simpleMessage(
       "Näytä lähdekoodi GitHubissa\njos pidät tästä projektista, muista antaa ⭐",
@@ -299,6 +524,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "goToDownloadPage": MessageLookupByLibrary.simpleMessage(
       "Avaa tästä lataussivu",
     ),
+    "helloWorld": MessageLookupByLibrary.simpleMessage("Hei maailma"),
     "high": MessageLookupByLibrary.simpleMessage("Korkea"),
     "hintApiUrl": MessageLookupByLibrary.simpleMessage(
       "Piped-instanssin API:n URL",
@@ -310,14 +536,53 @@ class MessageLookup extends MessageLookupByLibrary {
     "homeContentCountDes": MessageLookupByLibrary.simpleMessage(
       "Valitse lähtökohtainen aloitusnäkymän sisällön määrä. Pienempi määrä latautuu nopeammin",
     ),
+    "id": MessageLookupByLibrary.simpleMessage("ID"),
     "ignoreBatOpt": MessageLookupByLibrary.simpleMessage(
       "Poista akun optimointi käytöstä",
     ),
     "ignoreBatOptDes": MessageLookupByLibrary.simpleMessage(
       "Jos kohtaat ongelmia ilmoitusten tai toiston kanssa, ota tämä käyttöön.",
     ),
+    "importError": MessageLookupByLibrary.simpleMessage(
+      "Virhe soittolistan tuonnissa",
+    ),
+    "importErrorDatabase": MessageLookupByLibrary.simpleMessage(
+      "Virhe tallennettaessa tietokantaan",
+    ),
+    "importErrorFileAccess": MessageLookupByLibrary.simpleMessage(
+      "Valittua tiedostoa ei voitu käyttää",
+    ),
+    "importErrorFormat": MessageLookupByLibrary.simpleMessage(
+      "Virheellinen tiedostomuoto",
+    ),
+    "importLargeFileNote": MessageLookupByLibrary.simpleMessage(
+      "Huomautus: suurten soittolistojen tuonti voi kestää kauemmin",
+    ),
+    "importPlaylist": MessageLookupByLibrary.simpleMessage("Tuo soittolista"),
+    "importPlaylistDesc": MessageLookupByLibrary.simpleMessage(
+      "Valitse tuotavaksi aiemmin viety soittolistan JSON-tiedosto",
+    ),
+    "imported": MessageLookupByLibrary.simpleMessage("Tuotu"),
     "importedFromJossMusic": MessageLookupByLibrary.simpleMessage(
       "Tuotu Joss Music Kotlinista",
+    ),
+    "importedPlaylist": MessageLookupByLibrary.simpleMessage(
+      "Tuotu soittolista",
+    ),
+    "importingPlaylist": MessageLookupByLibrary.simpleMessage(
+      "Tuodaan soittolistaa...",
+    ),
+    "in_app_storage": MessageLookupByLibrary.simpleMessage(
+      "Sisäinen tallennushakemisto",
+    ),
+    "includeDownloadedFiles": MessageLookupByLibrary.simpleMessage(
+      "Sisällytä ladatut kappaletiedostot",
+    ),
+    "infoNotAvailable": MessageLookupByLibrary.simpleMessage(
+      "Tietoja ei ole saatavilla",
+    ),
+    "invalidPlaylistFile": MessageLookupByLibrary.simpleMessage(
+      "Virheellinen soittolistatiedostorakenne",
     ),
     "invalidServerResponse": MessageLookupByLibrary.simpleMessage(
       "Virheellinen palvelimen vastaus.",
@@ -340,6 +605,10 @@ class MessageLookup extends MessageLookupByLibrary {
       "Valitse sovelluksen kieli",
     ),
     "latestRelease": MessageLookupByLibrary.simpleMessage("Viimeisin julkaisu"),
+    "latestVersion": MessageLookupByLibrary.simpleMessage(
+      "Uusin versio saatavilla",
+    ),
+    "letsStrart": MessageLookupByLibrary.simpleMessage("Aloitetaan.."),
     "libAlbums": MessageLookupByLibrary.simpleMessage("Kirjaston albumit"),
     "libArtists": MessageLookupByLibrary.simpleMessage("Kirjaston artistit"),
     "libPlaylists": MessageLookupByLibrary.simpleMessage(
@@ -353,12 +622,18 @@ class MessageLookup extends MessageLookupByLibrary {
     "light": MessageLookupByLibrary.simpleMessage("Vaalea"),
     "link": MessageLookupByLibrary.simpleMessage("Yhdistä"),
     "linkAlert": MessageLookupByLibrary.simpleMessage("Yhdistetty!"),
+    "linkCopied": MessageLookupByLibrary.simpleMessage(
+      "Linkki kopioitu leikepöydälle",
+    ),
     "linkPipedDes": MessageLookupByLibrary.simpleMessage(
       "Yhdistä Piped soittolistojen synkronointiin",
     ),
     "listenNow": MessageLookupByLibrary.simpleMessage("Kuuntele nyt"),
     "listeningToEnvironment": MessageLookupByLibrary.simpleMessage(
       "Kuuntelee ympäristöä...",
+    ),
+    "loadInfoUpdate": MessageLookupByLibrary.simpleMessage(
+      "Päivitystietoja ei voitu ladata",
     ),
     "local": MessageLookupByLibrary.simpleMessage("Paikallinen"),
     "local_b1": MessageLookupByLibrary.simpleMessage(
@@ -377,7 +652,15 @@ class MessageLookup extends MessageLookupByLibrary {
       "Täydellinen yksityisyys laitteellasi",
     ),
     "local_title": MessageLookupByLibrary.simpleMessage("Paikallinen tila"),
+    "loudnessDb": MessageLookupByLibrary.simpleMessage("LoudnessDb"),
+    "loudnessNormalization": MessageLookupByLibrary.simpleMessage(
+      "Äänenvoimakkuuden normalisointi",
+    ),
+    "loudnessNormalizationDes": MessageLookupByLibrary.simpleMessage(
+      "Asettaa saman äänenvoimakkuustason kaikille kappaleille (kokeellinen) (Ei toimi vanhemmissa versioissa ladatuissa kappaleissa (< v1.10.0))",
+    ),
     "low": MessageLookupByLibrary.simpleMessage("Matala"),
+    "lyrics": MessageLookupByLibrary.simpleMessage("Kirjeitä"),
     "lyricsNotAvailable": MessageLookupByLibrary.simpleMessage(
       "Sanoituksia ei ole saatavilla!",
     ),
@@ -436,12 +719,31 @@ class MessageLookup extends MessageLookupByLibrary {
     "migration_btn_select": MessageLookupByLibrary.simpleMessage(
       "Valitse tiedosto ja tuo",
     ),
+    "migration_select_file_dialog": MessageLookupByLibrary.simpleMessage(
+      "Valitse song.db tai varmuuskopio .backup",
+    ),
+    "migration_success": MessageLookupByLibrary.simpleMessage(
+      "Siirto suoritettu onnistuneesti.",
+    ),
+    "migration_summary_albums": m1,
+    "migration_summary_artists": m2,
+    "migration_summary_favorites": m3,
+    "migration_summary_playlists": m4,
+    "migration_summary_songs": m5,
+    "migration_summary_start": m6,
     "minutes": MessageLookupByLibrary.simpleMessage("minuuttia"),
+    "misc": MessageLookupByLibrary.simpleMessage("Erilaisia"),
     "mostListenedSong": MessageLookupByLibrary.simpleMessage(
       "Eniten kuunneltu kappale",
     ),
+    "musicAndPlayback": MessageLookupByLibrary.simpleMessage(
+      "Musiikki ja toisto",
+    ),
     "musicRecognition": MessageLookupByLibrary.simpleMessage(
       "Musiikin tunnistus",
+    ),
+    "networkError": MessageLookupByLibrary.simpleMessage(
+      "Verkkovirhe! Tarkista Internet-yhteytesi.",
     ),
     "networkError1": MessageLookupByLibrary.simpleMessage("Oho, verkkovirhe!"),
     "newVersionAvailable": MessageLookupByLibrary.simpleMessage(
@@ -485,6 +787,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "news_item_trans_title": MessageLookupByLibrary.simpleMessage(
       "Läpinäkyvä synkronointi",
     ),
+    "no": MessageLookupByLibrary.simpleMessage("Ei"),
     "noBookmarks": MessageLookupByLibrary.simpleMessage("Ei kirjanmerkkejä!"),
     "noJossRedFriends": MessageLookupByLibrary.simpleMessage(
       "Sinulla ei ole lisättyjä ystäviä Joss Redissä.",
@@ -508,11 +811,13 @@ class MessageLookup extends MessageLookupByLibrary {
       "Ei kappale/musiikkivideo!",
     ),
     "notaValidLink": MessageLookupByLibrary.simpleMessage("Epäkelpo linkki!"),
+    "openIn": MessageLookupByLibrary.simpleMessage("Avaa sisään"),
     "operationFailed": MessageLookupByLibrary.simpleMessage(
       "Toiminto epäonnistui",
     ),
     "password": MessageLookupByLibrary.simpleMessage("Salasana"),
     "password_text": MessageLookupByLibrary.simpleMessage("Salasana"),
+    "permissionDenied": MessageLookupByLibrary.simpleMessage("Lupa evätty"),
     "permissionsAllow": MessageLookupByLibrary.simpleMessage("Salli"),
     "permissionsConsentDescription": MessageLookupByLibrary.simpleMessage(
       "Estrella Music tarvitsee nämä luvat hallitakseen musiikkiasi ja tarjotakseen kaikkia toistoominaisuuksia.",
@@ -547,18 +852,40 @@ class MessageLookup extends MessageLookupByLibrary {
     "permissionsStorageTitle": MessageLookupByLibrary.simpleMessage(
       "Musiikkia ja tallennustilaa",
     ),
+    "personalisation": MessageLookupByLibrary.simpleMessage("Personointi"),
     "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage(
       "Piped-soittolista",
     ),
     "pipedplstSyncAlert": MessageLookupByLibrary.simpleMessage(
       "Synkronoitu Piped-soittolista!",
     ),
+    "plain": MessageLookupByLibrary.simpleMessage("yksinkertainen"),
+    "play": MessageLookupByLibrary.simpleMessage("Pelaa"),
     "playNext": MessageLookupByLibrary.simpleMessage("Toista seuraavaksi"),
     "playNow": MessageLookupByLibrary.simpleMessage("Pelaa nyt"),
     "playbackSpeed": MessageLookupByLibrary.simpleMessage("Toistonopeus"),
+    "playerUi": MessageLookupByLibrary.simpleMessage(
+      "Soittimen käyttöliittymä",
+    ),
+    "playerUiDes": MessageLookupByLibrary.simpleMessage(
+      "Valitse soittimen käyttöliittymä",
+    ),
     "playingRecognizedTrack": MessageLookupByLibrary.simpleMessage(
       "Toistetaan:",
     ),
+    "playingfromAlbum": MessageLookupByLibrary.simpleMessage(
+      "SOITTAMME ALBUMILLA",
+    ),
+    "playingfromArtist": MessageLookupByLibrary.simpleMessage(
+      "TOISTAA ARTISTILTA",
+    ),
+    "playingfromPlaylist": MessageLookupByLibrary.simpleMessage(
+      "TOISTAMINEN SOITTOLISTALTA",
+    ),
+    "playingfromSelection": MessageLookupByLibrary.simpleMessage(
+      "PELAAMINEN VALINNASTA",
+    ),
+    "playlist": MessageLookupByLibrary.simpleMessage("Soittolista"),
     "playlistBlacklistAlert": MessageLookupByLibrary.simpleMessage(
       "Soittolista siirretty mustalle listalla!",
     ),
@@ -577,6 +904,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "playlistCreatednsongAddedAlert": MessageLookupByLibrary.simpleMessage(
       "Soittolista luotu & kappale lisätty!",
     ),
+    "playlistExportedMsg": MessageLookupByLibrary.simpleMessage(
+      "Soittolista vietiin onnistuneesti kohteeseen",
+    ),
+    "playlistImportedMsg": MessageLookupByLibrary.simpleMessage(
+      "Soittolistan tuonti onnistui",
+    ),
     "playlistRemovedAlert": MessageLookupByLibrary.simpleMessage(
       "Soittolista poistettu!",
     ),
@@ -584,15 +917,45 @@ class MessageLookup extends MessageLookupByLibrary {
       "Nimi muutettu!",
     ),
     "playlists": MessageLookupByLibrary.simpleMessage("Soittolistat"),
+    "playnextMsg": MessageLookupByLibrary.simpleMessage("Tulossa pian"),
+    "podcasts": MessageLookupByLibrary.simpleMessage("Podcastit"),
     "popularTracks": MessageLookupByLibrary.simpleMessage(
       "Suosittuja kappaleita",
+    ),
+    "processFiles": MessageLookupByLibrary.simpleMessage(
+      "Käsitellään tiedostoja...",
     ),
     "processingAudio": MessageLookupByLibrary.simpleMessage(
       "Käsitellään ääntä...",
     ),
+    "profiles": MessageLookupByLibrary.simpleMessage("Profiilit"),
+    "queueLoop": MessageLookupByLibrary.simpleMessage("häntälenkki"),
+    "queueLoopNotDisMsg1": MessageLookupByLibrary.simpleMessage(
+      "Jonosilmukkatilaa ei voi poistaa käytöstä, kun satunnaistoistotila on käytössä.",
+    ),
+    "queueLoopNotDisMsg2": MessageLookupByLibrary.simpleMessage(
+      "Tail loop -tilaa ei voi aktivoida radiotilassa.",
+    ),
+    "queueShufflingDeniedMsg": MessageLookupByLibrary.simpleMessage(
+      "Satunnainen tila on aktivoitu. Et voi sekoittaa jonoa manuaalisesti.",
+    ),
+    "queuerearrangingDeniedMsg": MessageLookupByLibrary.simpleMessage(
+      "Jonoa ei voi järjestää uudelleen, kun satunnaistoisto on päällä",
+    ),
+    "quickPics": MessageLookupByLibrary.simpleMessage("Nopea valinta"),
     "quickpicks": MessageLookupByLibrary.simpleMessage("Pikavalinnat"),
     "radioNotAvailable": MessageLookupByLibrary.simpleMessage(
       "Tälle artistille ei ole saatavilla radiota!",
+    ),
+    "randomRadio": MessageLookupByLibrary.simpleMessage("Random Radio"),
+    "randomSelection": MessageLookupByLibrary.simpleMessage(
+      "Satunnainen valinta",
+    ),
+    "reArrangePlaylist": MessageLookupByLibrary.simpleMessage(
+      "Järjestä soittolista uudelleen",
+    ),
+    "reArrangeSongs": MessageLookupByLibrary.simpleMessage(
+      "Järjestä kappaleet uudelleen",
     ),
     "readMore": MessageLookupByLibrary.simpleMessage("Lue lisää"),
     "recentSearches": MessageLookupByLibrary.simpleMessage(
@@ -604,11 +967,20 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "recommendedAlbums": MessageLookupByLibrary.simpleMessage("Suositeltava"),
     "recommendedArtists": MessageLookupByLibrary.simpleMessage("Suositeltava"),
+    "removeFromCache": MessageLookupByLibrary.simpleMessage(
+      "Poista välimuistista",
+    ),
     "removeFromLib": MessageLookupByLibrary.simpleMessage("Poista kirjastosta"),
+    "removeFromLibrary": MessageLookupByLibrary.simpleMessage(
+      "Poista kirjastosta",
+    ),
     "removeFromPlaylist": MessageLookupByLibrary.simpleMessage(
       "Poista soittolistalta",
     ),
     "removeFromQueue": MessageLookupByLibrary.simpleMessage("Poista jonosta"),
+    "removeMultiple": MessageLookupByLibrary.simpleMessage(
+      "Poista useita kappaleita",
+    ),
     "removePlaylist": MessageLookupByLibrary.simpleMessage(
       "Poista soittolista",
     ),
@@ -618,16 +990,52 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "reproducedBy": MessageLookupByLibrary.simpleMessage("Toistettu"),
     "reset": MessageLookupByLibrary.simpleMessage("Nollaa"),
+    "resetToDefault": MessageLookupByLibrary.simpleMessage(
+      "Palauta oletusasetukset",
+    ),
+    "resetToDefaultDes": MessageLookupByLibrary.simpleMessage(
+      "Palauta sovelluksen oletusasetukset (vaatii uudelleenkäynnistyksen)",
+    ),
+    "resetToDefaultMsg": MessageLookupByLibrary.simpleMessage(
+      "Oletusasetusten palautus on valmis, käynnistä sovellus uudelleen",
+    ),
     "resetblacklistedplaylist": MessageLookupByLibrary.simpleMessage(
       "Nollaa soittolistojen musta lista",
     ),
     "resetblacklistedplaylistDes": MessageLookupByLibrary.simpleMessage(
       "Nollaa kaikki Pipedin soittolistojen mustat listat",
     ),
+    "restartApp": MessageLookupByLibrary.simpleMessage(
+      "Käynnistä sovellus uudelleen",
+    ),
+    "restore": MessageLookupByLibrary.simpleMessage("Palauta"),
+    "restoreAppData": MessageLookupByLibrary.simpleMessage(
+      "Palauta sovellustiedot",
+    ),
+    "restoreLastPlaybackSession": MessageLookupByLibrary.simpleMessage(
+      "Palauta viimeinen toistoistunto",
+    ),
+    "restoreLastPlaybackSessionDes": MessageLookupByLibrary.simpleMessage(
+      "Palauta viimeinen toistoistunto automaattisesti, kun sovellus käynnistetään",
+    ),
+    "restoreMsg": MessageLookupByLibrary.simpleMessage(
+      "Onnistuneesti kunnostettu!\nMuutokset otetaan käyttöön uudelleenkäynnistyksen yhteydessä",
+    ),
+    "restoreSettingsAndPlaylists": MessageLookupByLibrary.simpleMessage(
+      "Palauta asetukset ja soittolistat",
+    ),
+    "restoreSettingsAndPlaylistsDes": MessageLookupByLibrary.simpleMessage(
+      "Palauttaa kaikki asetukset, kirjautumistiedot ja soittolistat varmuuskopiotiedostosta. Korvaa kaikki nykyiset tiedot",
+    ),
+    "restore_select_file_dialog": MessageLookupByLibrary.simpleMessage(
+      "Valitse varmuuskopiotiedosto",
+    ),
+    "restoring": MessageLookupByLibrary.simpleMessage("Palautetaan..."),
     "results": MessageLookupByLibrary.simpleMessage("Tulokset"),
     "retry": MessageLookupByLibrary.simpleMessage("Yritä uudelleen!"),
     "save": MessageLookupByLibrary.simpleMessage("Pitää"),
     "savedAlbums": MessageLookupByLibrary.simpleMessage("Tallennettu"),
+    "scanning": MessageLookupByLibrary.simpleMessage("Skannataan..."),
     "search": MessageLookupByLibrary.simpleMessage("Etsi"),
     "searchDes": MessageLookupByLibrary.simpleMessage(
       "Kappale, soittolista, albumi tai artisti",
@@ -637,10 +1045,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "search_recent_title": MessageLookupByLibrary.simpleMessage(
       "Viimeaikaiset haut",
     ),
+    "selectAll": MessageLookupByLibrary.simpleMessage("Valitse kaikki"),
     "selectAuthIns": MessageLookupByLibrary.simpleMessage("Valitse instanssi"),
     "selectAuthInsMsg": MessageLookupByLibrary.simpleMessage(
       "Valitse instanssi!",
     ),
+    "selectFile": MessageLookupByLibrary.simpleMessage("Valitse Tiedosto"),
+    "selectSongs": MessageLookupByLibrary.simpleMessage("Valitse kappaleet"),
     "selectedFileNotFound": MessageLookupByLibrary.simpleMessage(
       "Valittua tiedostoa ei löytynyt.",
     ),
@@ -671,6 +1082,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "settings_cloud_backup_desc": MessageLookupByLibrary.simpleMessage(
       "Lataa, palauta ja hallinnoi...",
+    ),
+    "settings_cloud_backup_dialog_desc": MessageLookupByLibrary.simpleMessage(
+      "Lataa sovelluksen .hmb-varmuuskopio palvelimelle ja palauta tarvittaessa kaikki tallennetut varmuuskopiot.",
     ),
     "settings_content_desc": MessageLookupByLibrary.simpleMessage(
       "Tutustu suodattimiin, integraatioon Pipediin ja välimuistiin.",
@@ -714,18 +1128,22 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
       "Uutta tunnistetta ei voitu luoda. Yritä myöhemmin uudelleen.",
     ),
-    "settings_visitor_exception": m1,
+    "settings_visitor_exception": m7,
     "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
       "Tunniste päivitetty",
     ),
     "settings_visitor_updated_desc": MessageLookupByLibrary.simpleMessage(
       "Uusi vierailijatunnus luotiin onnistuneesti.",
     ),
+    "shareAlbum": MessageLookupByLibrary.simpleMessage("Jaa albumi"),
+    "sharePlaylist": MessageLookupByLibrary.simpleMessage("Jaa soittolista"),
     "shareSong": MessageLookupByLibrary.simpleMessage("Jaa kappale"),
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
       "Haetaan osumia Shazam-tietokannasta...",
     ),
-    "similarToTitle": m2,
+    "shuffle": MessageLookupByLibrary.simpleMessage("Satunnainen"),
+    "shuffleQueue": MessageLookupByLibrary.simpleMessage("sekoita häntää"),
+    "similarToTitle": m8,
     "singles": MessageLookupByLibrary.simpleMessage("Singlet"),
     "skipSilence": MessageLookupByLibrary.simpleMessage("Ohita hiljaisuus"),
     "skipSilenceDes": MessageLookupByLibrary.simpleMessage(
@@ -735,7 +1153,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Uniajastin on asetettu",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Uniajastin"),
-    "slide_indicator": m3,
+    "slide_indicator": m9,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "Kappale lisätty soittolistaan!",
     ),
@@ -749,6 +1167,10 @@ class MessageLookup extends MessageLookupByLibrary {
       "Kappale lisätty jonoon!",
     ),
     "songFound": MessageLookupByLibrary.simpleMessage("Kappale löytynyt!"),
+    "songInfo": MessageLookupByLibrary.simpleMessage("Kappaleen tiedot"),
+    "songNotPlayable": MessageLookupByLibrary.simpleMessage(
+      "Kappaletta ei voi soittaa palvelinrajoitusten vuoksi!",
+    ),
     "songPitch": MessageLookupByLibrary.simpleMessage("laulun sävy"),
     "songRemovedAlert": MessageLookupByLibrary.simpleMessage(
       "Poistettu kohteesta",
@@ -763,9 +1185,22 @@ class MessageLookup extends MessageLookupByLibrary {
     "songsImportedFromJossMusic": MessageLookupByLibrary.simpleMessage(
       "Joss Music Kotlinista tuotuja kappaleita",
     ),
+    "sortAscendNDescend": MessageLookupByLibrary.simpleMessage(
+      "Lajittele nousevasti/laskevasti",
+    ),
+    "sortByDate": MessageLookupByLibrary.simpleMessage(
+      "Lajittele päivämäärän mukaan",
+    ),
+    "sortByDuration": MessageLookupByLibrary.simpleMessage(
+      "Lajittele keston mukaan",
+    ),
+    "sortByName": MessageLookupByLibrary.simpleMessage(
+      "Lajittele nimen mukaan",
+    ),
     "speedAndPitch": MessageLookupByLibrary.simpleMessage(
       "Nopeus ja sävelkorkeus",
     ),
+    "standard": MessageLookupByLibrary.simpleMessage("Vakio"),
     "startRadio": MessageLookupByLibrary.simpleMessage("Käynnistä radio"),
     "startupScreen": MessageLookupByLibrary.simpleMessage(
       "Avaa käynnistyksen yhteydessä",
@@ -790,8 +1225,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
       "Selaa vaihtoehtoja pyyhkäisemällä ➔",
     ),
-    "syncChangesConfirmed": m4,
-    "syncChangesSynced": m5,
+    "syncChangesConfirmed": m10,
+    "syncChangesSynced": m11,
     "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
       "Pilvitila aktivoitu. Ladataan olemassa olevaa kirjastoa.",
     ),
@@ -831,6 +1266,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncOfflineRetry": MessageLookupByLibrary.simpleMessage(
       "Offline-tilassa. Muutokset tallennettu uudelleen yrittämistä varten.",
     ),
+    "syncPlaylistSongs": MessageLookupByLibrary.simpleMessage(
+      "Synkronoi soittolistan kappaleita",
+    ),
     "syncUnconfirmedRetry": MessageLookupByLibrary.simpleMessage(
       "EMusic ei vahvistanut kaikkia muutoksia. Niitä yritetään uudelleen.",
     ),
@@ -857,6 +1295,10 @@ class MessageLookup extends MessageLookupByLibrary {
       "Järjestelmän oletus",
     ),
     "themeMode": MessageLookupByLibrary.simpleMessage("Teeman tila"),
+    "title": MessageLookupByLibrary.simpleMessage("Otsikko"),
+    "topMusicVid": MessageLookupByLibrary.simpleMessage(
+      "Suosituimmat musiikkivideot",
+    ),
     "topmusicvideos": MessageLookupByLibrary.simpleMessage(
       "Parhaat musiikkivideot",
     ),
@@ -864,11 +1306,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "unLink": MessageLookupByLibrary.simpleMessage("Poista yhteys"),
     "unlinkAlert": MessageLookupByLibrary.simpleMessage("Yhteys poistettu!"),
     "untitledSong": MessageLookupByLibrary.simpleMessage("Nimetön kappale"),
+    "upNext": MessageLookupByLibrary.simpleMessage("Seuraavaksi"),
+    "updateApp": MessageLookupByLibrary.simpleMessage("Päivitä sovellus"),
+    "urlSearchDes": MessageLookupByLibrary.simpleMessage(
+      "Havaittu URL-osoite napsauttamalla sitä avataksesi tai toistaaksesi siihen liittyvän sisällön",
+    ),
     "userBlocked": MessageLookupByLibrary.simpleMessage("Estetty käyttäjä"),
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "Vastaus ei sisällä luetteloa käyttäjistä.",
     ),
-    "userSearchFailed": m6,
+    "userSearchFailed": m12,
     "userUnblocked": MessageLookupByLibrary.simpleMessage("Avattu käyttäjä"),
     "username": MessageLookupByLibrary.simpleMessage("Käyttäjätunnus"),
     "video": MessageLookupByLibrary.simpleMessage("Video"),

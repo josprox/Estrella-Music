@@ -2272,5 +2272,29 @@
   "auth_2fa_invalid": "Ingresa un código válido de 6 dígitos o inicia sesión nuevamente.",
   "@auth_2fa_invalid": {
     "description": "auth_2fa_invalid"
+  },
+  "backupSettingsAndPlaylists": "Configuración de copia de seguridad y listas de reproducción",
+  "@backupSettingsAndPlaylists": {
+    "description": "backupSettingsAndPlaylists"
+  },
+  "restoreSettingsAndPlaylists": "Restaurar configuraciones y listas de reproducción",
+  "@restoreSettingsAndPlaylists": {
+    "description": "restoreSettingsAndPlaylists"
+  },
+  "helloWorld": "hola mundo",
+  "@helloWorld": {
+    "description": "Este texto es opcional"
+  },
+  "removeFromCache": "Eliminar del caché",
+  "@removeFromCache": {
+    "description": "removeFromCache"
+  },
+  "quickPics": "Selección rápida",
+  "@quickPics": {
+    "description": "quickPics"
+  },
+  "topMusicVid": "Mejores vídeos musicales",
+  "@topMusicVid": {
+    "description": "topMusicVid"
   }
 }

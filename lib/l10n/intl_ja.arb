@@ -2014,5 +2014,287 @@
   "auth_2fa_invalid": "有効な 6 桁のコードを入力するか、再度サインインしてください。",
   "@auth_2fa_invalid": {
     "description": "auth_2fa_invalid"
+  },
+  "helloWorld": "こんにちは、世界",
+  "@helloWorld": {
+    "description": "Este texto es opcional"
+  },
+  "removeFromCache": "キャッシュから削除",
+  "@removeFromCache": {
+    "description": "removeFromCache"
+  },
+  "quickPics": "クイック選択",
+  "@quickPics": {
+    "description": "quickPics"
+  },
+  "topMusicVid": "人気のミュージック ビデオ",
+  "@topMusicVid": {
+    "description": "topMusicVid"
+  },
+  "lyrics": "手紙",
+  "@lyrics": {
+    "description": "lyrics"
+  },
+  "no": "いいえ",
+  "@no": {
+    "description": "no"
+  },
+  "podcasts": "ポッドキャスト",
+  "@podcasts": {
+    "description": "podcasts"
+  },
+  "episodes": "エピソード",
+  "@episodes": {
+    "description": "episodes"
+  },
+  "profiles": "プロフィール",
+  "@profiles": {
+    "description": "profiles"
+  },
+  "addToLibrary": "ライブラリに追加",
+  "@addToLibrary": {
+    "description": "addToLibrary"
+  },
+  "removeFromLibrary": "ライブラリから削除",
+  "@removeFromLibrary": {
+    "description": "removeFromLibrary"
+  },
+  "play": "遊ぶ",
+  "@play": {
+    "description": "play"
+  },
+  "enqueueAlbumSongs": "アルバム曲をキューに追加する",
+  "@enqueueAlbumSongs": {
+    "description": "enqueueAlbumSongs"
+  },
+  "downloadAlbumSongs": "アルバムから曲をダウンロードする",
+  "@downloadAlbumSongs": {
+    "description": "downloadAlbumSongs"
+  },
+  "shareAlbum": "アルバムを共有する",
+  "@shareAlbum": {
+    "description": "shareAlbum"
+  },
+  "imported": "輸入品",
+  "@imported": {
+    "description": "imported"
+  },
+  "importedPlaylist": "インポートされたプレイリスト",
+  "@importedPlaylist": {
+    "description": "importedPlaylist"
+  },
+  "permissionDenied": "許可が拒否されました",
+  "@permissionDenied": {
+    "description": "permissionDenied"
+  },
+  "enqueueSongs": "曲をキューに追加する",
+  "@enqueueSongs": {
+    "description": "enqueueSongs"
+  },
+  "shuffle": "ランダム",
+  "@shuffle": {
+    "description": "shuffle"
+  },
+  "downloadPlaylist": "プレイリストをダウンロードする",
+  "@downloadPlaylist": {
+    "description": "downloadPlaylist"
+  },
+  "syncPlaylistSongs": "プレイリストの曲を同期する",
+  "@syncPlaylistSongs": {
+    "description": "syncPlaylistSongs"
+  },
+  "blacklistPipedPlaylist": "プレイリストのブラックリスト",
+  "@blacklistPipedPlaylist": {
+    "description": "blacklistPipedPlaylist"
+  },
+  "sharePlaylist": "プレイリストを共有する",
+  "@sharePlaylist": {
+    "description": "sharePlaylist"
+  },
+  "playlist": "プレイリスト",
+  "@playlist": {
+    "description": "playlist"
+  },
+  "sortByName": "名前順に並べ替える",
+  "@sortByName": {
+    "description": "sortByName"
+  },
+  "sortByDate": "日付順に並べ替える",
+  "@sortByDate": {
+    "description": "sortByDate"
+  },
+  "sortByDuration": "期間ごとに並べ替える",
+  "@sortByDuration": {
+    "description": "sortByDuration"
+  },
+  "sortAscendNDescend": "昇順/降順に並べ替える",
+  "@sortAscendNDescend": {
+    "description": "sortAscendNDescend"
+  },
+  "migration_summary_start": "{source} から移行が完了しました。",
+  "@migration_summary_start": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      }
+    },
+    "description": "migration_summary_start"
+  },
+  "migration_summary_playlists": "プレイリスト: {count}",
+  "@migration_summary_playlists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_playlists"
+  },
+  "migration_summary_songs": "曲: {count}",
+  "@migration_summary_songs": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_songs"
+  },
+  "migration_summary_favorites": "お気に入り: {count}",
+  "@migration_summary_favorites": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_favorites"
+  },
+  "migration_summary_albums": "アルバム: {count}",
+  "@migration_summary_albums": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_albums"
+  },
+  "migration_summary_artists": "アーティスト: {count}",
+  "@migration_summary_artists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_artists"
+  },
+  "migration_select_file_dialog": "Song.db またはバックアップ .backup を選択します",
+  "@migration_select_file_dialog": {
+    "description": "migration_select_file_dialog"
+  },
+  "migration_success": "移行は正常に完了しました。",
+  "@migration_success": {
+    "description": "migration_success"
+  },
+  "backup_select_folder_dialog": "バックアップ用のフォルダーを選択します",
+  "@backup_select_folder_dialog": {
+    "description": "backup_select_folder_dialog"
+  },
+  "restore_select_file_dialog": "バックアップファイルを選択します",
+  "@restore_select_file_dialog": {
+    "description": "restore_select_file_dialog"
+  },
+  "auth_hint_email": "name@mail.com",
+  "@auth_hint_email": {
+    "description": "auth_hint_email"
+  },
+  "auth_error_invalid_email": "有効な電子メールを入力してください。",
+  "@auth_error_invalid_email": {
+    "description": "auth_error_invalid_email"
+  },
+  "settings_cloud_backup_dialog_desc": "アプリの .hmb バックアップをサーバーにアップロードし、必要に応じて、保存されているバックアップを復元します。",
+  "@settings_cloud_backup_dialog_desc": {
+    "description": "settings_cloud_backup_dialog_desc"
+  },
+  "delete": "削除",
+  "@delete": {
+    "description": "delete"
+  },
+  "in_app_storage": "内部ストレージディレクトリ",
+  "@in_app_storage": {
+    "description": "in_app_storage"
+  },
+  "auth_brand_description_1": "以前のプロジェクトからログイン、登録、パスワード回復機能をこの音楽アプリに合わせて導入しました。",
+  "@auth_brand_description_1": {
+    "description": "auth_brand_description_1"
+  },
+  "auth_brand_description_2": "セッションは安全なストレージに保存され、すでに使用していたものと同じバックエンドで検証されます。",
+  "@auth_brand_description_2": {
+    "description": "auth_brand_description_2"
+  },
+  "auth_brand_not_configured": ".env ファイルは、認証バックエンドに接続するように構成する必要があります。",
+  "@auth_brand_not_configured": {
+    "description": "auth_brand_not_configured"
+  },
+  "auth_forgot_password_subtitle": "アカウントのメールアドレスに手順を送信します。",
+  "@auth_forgot_password_subtitle": {
+    "description": "auth_forgot_password_subtitle"
+  },
+  "auth_btn_send_email": "メールを送信する",
+  "@auth_btn_send_email": {
+    "description": "auth_btn_send_email"
+  },
+  "auth_error_not_configured": "認証バックエンドが .env ファイル内で構成されていません。",
+  "@auth_error_not_configured": {
+    "description": "auth_error_not_configured"
+  },
+  "auth_error_invalid_credentials": "メールアドレスまたはパスワードが間違っています。",
+  "@auth_error_invalid_credentials": {
+    "description": "auth_error_invalid_credentials"
+  },
+  "auth_error_not_verified": "あなたのアカウントはまだ認証されていません。",
+  "@auth_error_not_verified": {
+    "description": "auth_error_not_verified"
+  },
+  "auth_error_unknown": "操作を完了できませんでした。",
+  "@auth_error_unknown": {
+    "description": "auth_error_unknown"
+  },
+  "auth_register_success": "アカウントが正常に作成されました。",
+  "@auth_register_success": {
+    "description": "auth_register_success"
+  },
+  "auth_register_error": "アカウントを作成できませんでした。",
+  "@auth_register_error": {
+    "description": "auth_register_error"
+  },
+  "auth_recovery_email_sent": "メールが送信されました。",
+  "@auth_recovery_email_sent": {
+    "description": "auth_recovery_email_sent"
+  },
+  "auth_recovery_email_error": "メールを送信できませんでした。",
+  "@auth_recovery_email_error": {
+    "description": "auth_recovery_email_error"
+  },
+  "latestVersion": "利用可能な最新バージョン",
+  "@latestVersion": {
+    "description": "latestVersion"
+  },
+  "updateApp": "アプリケーションを更新する",
+  "@updateApp": {
+    "description": "updateApp"
+  },
+  "loadInfoUpdate": "アップデート情報を読み込めませんでした",
+  "@loadInfoUpdate": {
+    "description": "loadInfoUpdate"
+  },
+  "infoNotAvailable": "情報がありません",
+  "@infoNotAvailable": {
+    "description": "infoNotAvailable"
+  },
+  "developedBy": "Joss Estrada (JOSPROX) によって開発および保守されています。",
+  "@developedBy": {
+    "description": "developedBy"
+  },
+  "copyrightNotice": "© 2026 ジョスプロックス。 GPL ライセンス v3.0",
+  "@copyrightNotice": {
+    "description": "copyrightNotice"
   }
 }

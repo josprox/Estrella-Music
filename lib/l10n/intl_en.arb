@@ -2272,5 +2272,29 @@
   "auth_2fa_invalid": "Enter a valid 6-digit code or sign in again.",
   "@auth_2fa_invalid": {
     "description": "auth_2fa_invalid"
+  },
+  "backupSettingsAndPlaylists": "Backup settings and playlists",
+  "@backupSettingsAndPlaylists": {
+    "description": "backupSettingsAndPlaylists"
+  },
+  "restoreSettingsAndPlaylists": "Restore settings and playlists",
+  "@restoreSettingsAndPlaylists": {
+    "description": "restoreSettingsAndPlaylists"
+  },
+  "helloWorld": "Hello world",
+  "@helloWorld": {
+    "description": "Este texto es opcional"
+  },
+  "removeFromCache": "Remove from cache",
+  "@removeFromCache": {
+    "description": "removeFromCache"
+  },
+  "quickPics": "Quick selection",
+  "@quickPics": {
+    "description": "quickPics"
+  },
+  "topMusicVid": "Top music videos",
+  "@topMusicVid": {
+    "description": "topMusicVid"
   }
 }

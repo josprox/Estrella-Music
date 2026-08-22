@@ -22,17 +22,29 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(songTitle) => "Mengunduh: _${songTitle}";
 
-  static String m1(error) => "Terjadi kesalahan saat membuat ulang: ${error}";
+  static String m1(count) => "Album: ${count}";
 
-  static String m2(title) => "Mirip dengan _${title}";
+  static String m2(count) => "Artis: ${count}";
 
-  static String m3(current) => "Langkah _${current} dari 3";
+  static String m3(count) => "Favorit: ${count}";
 
-  static String m4(count) => "_${count} perubahan dilakukan.";
+  static String m4(count) => "Daftar Putar: ${count}";
 
-  static String m5(count) => "_${count} perubahan yang disinkronkan.";
+  static String m5(count) => "Lagu: ${count}";
 
-  static String m6(statusCode) =>
+  static String m6(source) => "Migrasi selesai dari ${source}.";
+
+  static String m7(error) => "Terjadi kesalahan saat membuat ulang: ${error}";
+
+  static String m8(title) => "Mirip dengan _${title}";
+
+  static String m9(current) => "Langkah _${current} dari 3";
+
+  static String m10(count) => "_${count} perubahan dilakukan.";
+
+  static String m11(count) => "_${count} perubahan yang disinkronkan.";
+
+  static String m12(statusCode) =>
       "Tidak dapat mencari pengguna (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -45,6 +57,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "add5Minutes": MessageLookupByLibrary.simpleMessage("Tambah 5 menit"),
     "addMultipleSongs": MessageLookupByLibrary.simpleMessage(
       "Tambahkan ke daftar putar",
+    ),
+    "addToLibrary": MessageLookupByLibrary.simpleMessage(
+      "Tambahkan ke perpustakaan",
     ),
     "addToPlaylist": MessageLookupByLibrary.simpleMessage(
       "Tambah ke daftar putar",
@@ -95,18 +110,59 @@ class MessageLookup extends MessageLookupByLibrary {
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Terima penggunaan data yang salah...",
     ),
+    "auth_brand_description_1": MessageLookupByLibrary.simpleMessage(
+      "Kami menghadirkan login, registrasi, dan pemulihan kata sandi dari proyek sebelumnya, yang diadaptasi untuk aplikasi musik ini.",
+    ),
+    "auth_brand_description_2": MessageLookupByLibrary.simpleMessage(
+      "Sesi Anda berada di penyimpanan aman dan divalidasi dengan backend yang sama dengan yang sudah Anda gunakan.",
+    ),
+    "auth_brand_not_configured": MessageLookupByLibrary.simpleMessage(
+      "File .env perlu dikonfigurasi untuk menghubungkan backend otentikasi.",
+    ),
     "auth_btn_login": MessageLookupByLibrary.simpleMessage("Login"),
     "auth_btn_register": MessageLookupByLibrary.simpleMessage("Daftar"),
+    "auth_btn_send_email": MessageLookupByLibrary.simpleMessage("Kirim email"),
     "auth_confirm_password": MessageLookupByLibrary.simpleMessage(
       "Konfirmasi Kata Sandi",
+    ),
+    "auth_error_invalid_credentials": MessageLookupByLibrary.simpleMessage(
+      "Email atau kata sandi salah.",
+    ),
+    "auth_error_invalid_email": MessageLookupByLibrary.simpleMessage(
+      "Masukkan email yang valid.",
+    ),
+    "auth_error_not_configured": MessageLookupByLibrary.simpleMessage(
+      "Backend autentikasi tidak ada untuk dikonfigurasi dalam file .env.",
+    ),
+    "auth_error_not_verified": MessageLookupByLibrary.simpleMessage(
+      "Akun Anda belum diverifikasi.",
+    ),
+    "auth_error_unknown": MessageLookupByLibrary.simpleMessage(
+      "Operasi tersebut tidak dapat diselesaikan.",
     ),
     "auth_first_name": MessageLookupByLibrary.simpleMessage("Nama depan"),
     "auth_forgot_password": MessageLookupByLibrary.simpleMessage(
       "Saya lupa kata sandi saya",
     ),
+    "auth_forgot_password_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Kami akan mengirimkan petunjuknya ke email akun Anda.",
+    ),
+    "auth_hint_email": MessageLookupByLibrary.simpleMessage("nama@mail.com"),
     "auth_last_name": MessageLookupByLibrary.simpleMessage("Nama belakang"),
     "auth_login_success": MessageLookupByLibrary.simpleMessage(
       "Berhasil masuk",
+    ),
+    "auth_recovery_email_error": MessageLookupByLibrary.simpleMessage(
+      "Tidak mungkin mengirim email.",
+    ),
+    "auth_recovery_email_sent": MessageLookupByLibrary.simpleMessage(
+      "Email terkirim.",
+    ),
+    "auth_register_error": MessageLookupByLibrary.simpleMessage(
+      "Akun tidak dapat dibuat.",
+    ),
+    "auth_register_success": MessageLookupByLibrary.simpleMessage(
+      "Akun berhasil dibuat.",
     ),
     "auth_welcome_subtitle": MessageLookupByLibrary.simpleMessage(
       "Selamat datang di Musik Estrella",
@@ -146,6 +202,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "backupMsg": MessageLookupByLibrary.simpleMessage(
       "Cadangan berhasil disimpan!",
     ),
+    "backupSettingsAndPlaylists": MessageLookupByLibrary.simpleMessage(
+      "Pengaturan cadangan dan daftar putar",
+    ),
     "backupSettingsAndPlaylistsDes": MessageLookupByLibrary.simpleMessage(
       "Menyimpan semua pengaturan, daftar putar, dan data masuk ke file cadangan",
     ),
@@ -170,6 +229,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "backup_restore_success": MessageLookupByLibrary.simpleMessage(
       "Cadangan dipulihkan. Mulai ulang aplikasi.",
     ),
+    "backup_select_folder_dialog": MessageLookupByLibrary.simpleMessage(
+      "Pilih folder untuk cadangan",
+    ),
     "backup_selection_prompt": MessageLookupByLibrary.simpleMessage(
       "Pilih data mana yang akan dicadangkan",
     ),
@@ -180,6 +242,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Berdasarkan interaksi terakhir",
     ),
     "bitrate": MessageLookupByLibrary.simpleMessage("Bitrate"),
+    "blacklistPipedPlaylist": MessageLookupByLibrary.simpleMessage(
+      "Daftar hitam daftar putar",
+    ),
     "blacklistPlstResetAlert": MessageLookupByLibrary.simpleMessage(
       "Setel ulang berhasil!",
     ),
@@ -253,6 +318,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Daftar Putar Komunitas",
     ),
     "content": MessageLookupByLibrary.simpleMessage("Konten"),
+    "copyrightNotice": MessageLookupByLibrary.simpleMessage(
+      "© 2026JOSPROX. Lisensi GPL v3.0",
+    ),
     "create": MessageLookupByLibrary.simpleMessage("Buat"),
     "createnAdd": MessageLookupByLibrary.simpleMessage("Buat & Tambah"),
     "customIns": MessageLookupByLibrary.simpleMessage("Mesin Virtual Khusus"),
@@ -261,11 +329,15 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "dailyDiscover": MessageLookupByLibrary.simpleMessage("Penemuan harian"),
     "dark": MessageLookupByLibrary.simpleMessage("Gelap"),
+    "delete": MessageLookupByLibrary.simpleMessage("Hapus"),
     "deleteDownloadData": MessageLookupByLibrary.simpleMessage(
       "Hapus dari unduhan",
     ),
     "deleteDownloadedDataAlert": MessageLookupByLibrary.simpleMessage(
       "Berhasil dihapus dari unduhan!",
+    ),
+    "developedBy": MessageLookupByLibrary.simpleMessage(
+      "Dikembangkan dan Dikelola oleh Joss Estrada (JOSPROX)",
     ),
     "disableTransitionAnimation": MessageLookupByLibrary.simpleMessage(
       "Matikan animasi transisi",
@@ -284,6 +356,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "file yang terunduh ditemukan",
     ),
     "download": MessageLookupByLibrary.simpleMessage("Unduh"),
+    "downloadAlbumSongs": MessageLookupByLibrary.simpleMessage(
+      "Unduh lagu dari album",
+    ),
     "downloadError2": MessageLookupByLibrary.simpleMessage(
       "Lagu yang diminta tidak dapat diunduh karena pembatasan server. Anda bisa mencoba lagi",
     ),
@@ -304,6 +379,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "downloadNotificationSong": m0,
     "downloadNotificationTitle": MessageLookupByLibrary.simpleMessage(
       "Mengunduh musik",
+    ),
+    "downloadPlaylist": MessageLookupByLibrary.simpleMessage(
+      "Unduh daftar putar",
     ),
     "downloadingFormat": MessageLookupByLibrary.simpleMessage(
       "Mengunduh Format File",
@@ -334,10 +412,17 @@ class MessageLookup extends MessageLookupByLibrary {
     "endOfThisSong": MessageLookupByLibrary.simpleMessage(
       "Akhir dari lagu ini",
     ),
+    "enqueueAlbumSongs": MessageLookupByLibrary.simpleMessage(
+      "Tambahkan lagu album ke antrean",
+    ),
     "enqueueAll": MessageLookupByLibrary.simpleMessage("Antrikan semua"),
     "enqueueSong": MessageLookupByLibrary.simpleMessage(
       "Tambahkan lagu ini ke antrian",
     ),
+    "enqueueSongs": MessageLookupByLibrary.simpleMessage(
+      "Tambahkan lagu ke antrean",
+    ),
+    "episodes": MessageLookupByLibrary.simpleMessage("Episode"),
     "equalizer": MessageLookupByLibrary.simpleMessage("Ekualizer"),
     "equalizerDes": MessageLookupByLibrary.simpleMessage(
       "Buka ekualizer sistem",
@@ -373,6 +458,24 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "exportPlaylist": MessageLookupByLibrary.simpleMessage(
       "Ekspor Daftar Putar",
+    ),
+    "exportPlaylistCsv": MessageLookupByLibrary.simpleMessage(
+      "Ekspor daftar putar sebagai CSV",
+    ),
+    "exportPlaylistCsvSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Tidak dapat mengimpor ke sini",
+    ),
+    "exportPlaylistJson": MessageLookupByLibrary.simpleMessage(
+      "Ekspor daftar putar ke JSON",
+    ),
+    "exportPlaylistJsonSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Format ini dapat diimpor",
+    ),
+    "exportToYouTubeMusic": MessageLookupByLibrary.simpleMessage(
+      "Ekspor ke musik Youtube",
+    ),
+    "exportToYouTubeMusicSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Ini akan mendorong playlist Anda (lagu <50) ke antrian saat ini, jangan lupa untuk menambahkannya ke playlist/simpan setelah membukanya di YtMusic",
     ),
     "exportedFileLocation": MessageLookupByLibrary.simpleMessage(
       "Lokasi ekspor file yang terunduh",
@@ -426,6 +529,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "goToDownloadPage": MessageLookupByLibrary.simpleMessage(
       "Klik di sini untuk pergi ke halaman unduh",
     ),
+    "helloWorld": MessageLookupByLibrary.simpleMessage("Halo dunia"),
     "high": MessageLookupByLibrary.simpleMessage("Tinggi"),
     "hintApiUrl": MessageLookupByLibrary.simpleMessage(
       "URL API ke instance yang disalurkan",
@@ -465,14 +569,24 @@ class MessageLookup extends MessageLookupByLibrary {
     "importPlaylistDesc": MessageLookupByLibrary.simpleMessage(
       "Pilih file JSON daftar putar yang diekspor sebelumnya untuk diimpor",
     ),
+    "imported": MessageLookupByLibrary.simpleMessage("Diimpor"),
     "importedFromJossMusic": MessageLookupByLibrary.simpleMessage(
       "Diimpor dari Joss Music Kotlin",
+    ),
+    "importedPlaylist": MessageLookupByLibrary.simpleMessage(
+      "Daftar putar yang diimpor",
     ),
     "importingPlaylist": MessageLookupByLibrary.simpleMessage(
       "Mengimpor daftar putar...",
     ),
+    "in_app_storage": MessageLookupByLibrary.simpleMessage(
+      "Direktori penyimpanan internal",
+    ),
     "includeDownloadedFiles": MessageLookupByLibrary.simpleMessage(
       "Sertakan file lagu-lagu yang diunduh",
+    ),
+    "infoNotAvailable": MessageLookupByLibrary.simpleMessage(
+      "Informasi tidak tersedia",
     ),
     "invalidPlaylistFile": MessageLookupByLibrary.simpleMessage(
       "struktur file daftar putar tidak valid",
@@ -496,6 +610,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Setel bahasa Aplikasi",
     ),
     "latestRelease": MessageLookupByLibrary.simpleMessage("Rilis terbaru"),
+    "latestVersion": MessageLookupByLibrary.simpleMessage(
+      "Versi Terbaru Tersedia",
+    ),
     "letsStrart": MessageLookupByLibrary.simpleMessage("Mari mulai.."),
     "libAlbums": MessageLookupByLibrary.simpleMessage("Pustaka Album"),
     "libArtists": MessageLookupByLibrary.simpleMessage("Pustaka Artis"),
@@ -510,12 +627,18 @@ class MessageLookup extends MessageLookupByLibrary {
     "light": MessageLookupByLibrary.simpleMessage("Terang"),
     "link": MessageLookupByLibrary.simpleMessage("Tautan"),
     "linkAlert": MessageLookupByLibrary.simpleMessage("Berhasil ditautkan!"),
+    "linkCopied": MessageLookupByLibrary.simpleMessage(
+      "Tautan disalin ke papan klip",
+    ),
     "linkPipedDes": MessageLookupByLibrary.simpleMessage(
       "Tautan dengan saluran untuk daftar putar",
     ),
     "listenNow": MessageLookupByLibrary.simpleMessage("Dengarkan sekarang"),
     "listeningToEnvironment": MessageLookupByLibrary.simpleMessage(
       "Mendengarkan lingkungan...",
+    ),
+    "loadInfoUpdate": MessageLookupByLibrary.simpleMessage(
+      "Tidak dapat memuat informasi pembaruan",
     ),
     "local": MessageLookupByLibrary.simpleMessage("Lokal"),
     "local_b1": MessageLookupByLibrary.simpleMessage(
@@ -542,6 +665,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Atur level kekerasan suara yang sama untuk semua lagu (Eksperimental) (Tidak akan berfungsi pada lagu yang diunduh di versi sebelumnya (< v1.10.0))",
     ),
     "low": MessageLookupByLibrary.simpleMessage("Rendah"),
+    "lyrics": MessageLookupByLibrary.simpleMessage("Surat"),
     "lyricsNotAvailable": MessageLookupByLibrary.simpleMessage(
       "Lirik tidak tersedia!",
     ),
@@ -602,6 +726,18 @@ class MessageLookup extends MessageLookupByLibrary {
     "migration_btn_select": MessageLookupByLibrary.simpleMessage(
       "Pilih file dan impor",
     ),
+    "migration_select_file_dialog": MessageLookupByLibrary.simpleMessage(
+      "Pilih song.db atau cadangan .backup",
+    ),
+    "migration_success": MessageLookupByLibrary.simpleMessage(
+      "Migrasi berhasil diselesaikan.",
+    ),
+    "migration_summary_albums": m1,
+    "migration_summary_artists": m2,
+    "migration_summary_favorites": m3,
+    "migration_summary_playlists": m4,
+    "migration_summary_songs": m5,
+    "migration_summary_start": m6,
     "minutes": MessageLookupByLibrary.simpleMessage("menit"),
     "misc": MessageLookupByLibrary.simpleMessage("Lain-lain"),
     "mostListenedSong": MessageLookupByLibrary.simpleMessage(
@@ -660,6 +796,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "news_item_trans_title": MessageLookupByLibrary.simpleMessage(
       "Sinkronisasi Transparan",
     ),
+    "no": MessageLookupByLibrary.simpleMessage("Tidak"),
     "noBookmarks": MessageLookupByLibrary.simpleMessage("Tidak ada penanda!"),
     "noJossRedFriends": MessageLookupByLibrary.simpleMessage(
       "Anda tidak memiliki teman tambahan di Joss Red.",
@@ -695,6 +832,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "operationFailed": MessageLookupByLibrary.simpleMessage("Operasi gagal"),
     "password": MessageLookupByLibrary.simpleMessage("Sandi"),
     "password_text": MessageLookupByLibrary.simpleMessage("Kata sandi"),
+    "permissionDenied": MessageLookupByLibrary.simpleMessage("Izin ditolak"),
     "permissionsAllow": MessageLookupByLibrary.simpleMessage("Mengizinkan"),
     "permissionsConsentDescription": MessageLookupByLibrary.simpleMessage(
       "Estrella Music memerlukan izin ini untuk mengelola musik Anda dan menawarkan semua fitur pemutaran.",
@@ -737,6 +875,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Daftar putar yang disalurkan tersinkronkan!",
     ),
     "plain": MessageLookupByLibrary.simpleMessage("Polos"),
+    "play": MessageLookupByLibrary.simpleMessage("Mainkan"),
     "playNext": MessageLookupByLibrary.simpleMessage("Putar berikutnya"),
     "playNow": MessageLookupByLibrary.simpleMessage("Mainkan Sekarang"),
     "playbackSpeed": MessageLookupByLibrary.simpleMessage(
@@ -759,6 +898,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "playingfromSelection": MessageLookupByLibrary.simpleMessage(
       "MEMUTAR LAGU YANG DI-SELEKSI",
     ),
+    "playlist": MessageLookupByLibrary.simpleMessage("Daftar putar"),
     "playlistBlacklistAlert": MessageLookupByLibrary.simpleMessage(
       "Daftar putar masuk daftar hitam!",
     ),
@@ -791,11 +931,13 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "playlists": MessageLookupByLibrary.simpleMessage("Daftar Putar"),
     "playnextMsg": MessageLookupByLibrary.simpleMessage("Selanjutnya"),
+    "podcasts": MessageLookupByLibrary.simpleMessage("Podcast"),
     "popularTracks": MessageLookupByLibrary.simpleMessage("Lagu populer"),
     "processFiles": MessageLookupByLibrary.simpleMessage("Memproses file..."),
     "processingAudio": MessageLookupByLibrary.simpleMessage(
       "Memproses audio...",
     ),
+    "profiles": MessageLookupByLibrary.simpleMessage("Profil"),
     "queueLoop": MessageLookupByLibrary.simpleMessage("Ulangi Antrean"),
     "queueLoopNotDisMsg1": MessageLookupByLibrary.simpleMessage(
       "Mode ulangi antrean tidak dapat dinonaktifkan saat mode acak diaktifkan.",
@@ -809,6 +951,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "queuerearrangingDeniedMsg": MessageLookupByLibrary.simpleMessage(
       "Antrian tidak bisa diatur ulang ketika mode acak diaktifkan",
     ),
+    "quickPics": MessageLookupByLibrary.simpleMessage("Seleksi cepat"),
     "quickpicks": MessageLookupByLibrary.simpleMessage("Pilihan Cepat"),
     "radioNotAvailable": MessageLookupByLibrary.simpleMessage(
       "Radio tidak tersedia untuk artis ini!",
@@ -831,8 +974,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "recommendedArtists": MessageLookupByLibrary.simpleMessage(
       "Direkomendasikan",
     ),
+    "removeFromCache": MessageLookupByLibrary.simpleMessage("Hapus dari cache"),
     "removeFromLib": MessageLookupByLibrary.simpleMessage(
       "Hapus dari Pustaka Lagu",
+    ),
+    "removeFromLibrary": MessageLookupByLibrary.simpleMessage(
+      "Hapus dari perpustakaan",
     ),
     "removeFromPlaylist": MessageLookupByLibrary.simpleMessage(
       "Hapus dari daftar putar",
@@ -881,8 +1028,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "restoreMsg": MessageLookupByLibrary.simpleMessage(
       "Berhasil dipulihkan!\nPerubahan akan diterapkan setelah dimulai ulang",
     ),
+    "restoreSettingsAndPlaylists": MessageLookupByLibrary.simpleMessage(
+      "Pulihkan pengaturan dan daftar putar",
+    ),
     "restoreSettingsAndPlaylistsDes": MessageLookupByLibrary.simpleMessage(
       "Pulihkan semua pengaturan, data masuk, dan daftar putar dari file cadangan. Akan menimpa seluruh data saat ini",
+    ),
+    "restore_select_file_dialog": MessageLookupByLibrary.simpleMessage(
+      "Pilih file cadangan",
     ),
     "restoring": MessageLookupByLibrary.simpleMessage("Memulihkan..."),
     "results": MessageLookupByLibrary.simpleMessage("Hasil"),
@@ -939,6 +1092,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_cloud_backup_desc": MessageLookupByLibrary.simpleMessage(
       "Unggah, pulihkan, dan kelola...",
     ),
+    "settings_cloud_backup_dialog_desc": MessageLookupByLibrary.simpleMessage(
+      "Unggah cadangan aplikasi .hmb ke server dan, jika perlu, pulihkan cadangan yang disimpan.",
+    ),
     "settings_content_desc": MessageLookupByLibrary.simpleMessage(
       "Temukan filter, integrasi dengan Piped dan cache.",
     ),
@@ -981,19 +1137,24 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
       "Pengidentifikasi baru tidak dapat dibuat. Silakan coba lagi nanti.",
     ),
-    "settings_visitor_exception": m1,
+    "settings_visitor_exception": m7,
     "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
       "Pengidentifikasi yang diperbarui",
     ),
     "settings_visitor_updated_desc": MessageLookupByLibrary.simpleMessage(
       "ID Pengunjung baru berhasil dibuat.",
     ),
+    "shareAlbum": MessageLookupByLibrary.simpleMessage("Bagikan album"),
+    "sharePlaylist": MessageLookupByLibrary.simpleMessage(
+      "Bagikan daftar putar",
+    ),
     "shareSong": MessageLookupByLibrary.simpleMessage("Bagikan lagu ini"),
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
       "Mencari kecocokan di database Shazam...",
     ),
+    "shuffle": MessageLookupByLibrary.simpleMessage("Acak"),
     "shuffleQueue": MessageLookupByLibrary.simpleMessage("Acak Antrean"),
-    "similarToTitle": m2,
+    "similarToTitle": m8,
     "singles": MessageLookupByLibrary.simpleMessage("Single"),
     "skipSilence": MessageLookupByLibrary.simpleMessage("Lewati keheningan"),
     "skipSilenceDes": MessageLookupByLibrary.simpleMessage(
@@ -1003,7 +1164,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Timer tidur Anda telah diatur",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Pengatur Waktu Tidur"),
-    "slide_indicator": m3,
+    "slide_indicator": m9,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "Lagu ditambahkan ke daftar putar!",
     ),
@@ -1033,6 +1194,18 @@ class MessageLookup extends MessageLookupByLibrary {
     "songsImportedFromJossMusic": MessageLookupByLibrary.simpleMessage(
       "Lagu diimpor dari Joss Music Kotlin",
     ),
+    "sortAscendNDescend": MessageLookupByLibrary.simpleMessage(
+      "Urutkan naik/turun",
+    ),
+    "sortByDate": MessageLookupByLibrary.simpleMessage(
+      "Urutkan berdasarkan tanggal",
+    ),
+    "sortByDuration": MessageLookupByLibrary.simpleMessage(
+      "Urutkan berdasarkan durasi",
+    ),
+    "sortByName": MessageLookupByLibrary.simpleMessage(
+      "Urutkan berdasarkan nama",
+    ),
     "speedAndPitch": MessageLookupByLibrary.simpleMessage(
       "Kecepatan dan Pitch",
     ),
@@ -1059,8 +1232,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
       "Geser untuk menjelajahi opsi ➔",
     ),
-    "syncChangesConfirmed": m4,
-    "syncChangesSynced": m5,
+    "syncChangesConfirmed": m10,
+    "syncChangesSynced": m11,
     "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
       "Mode awan diaktifkan. Mengunduh perpustakaan yang ada.",
     ),
@@ -1100,6 +1273,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncOfflineRetry": MessageLookupByLibrary.simpleMessage(
       "Luring. Perubahan disimpan untuk dicoba lagi.",
     ),
+    "syncPlaylistSongs": MessageLookupByLibrary.simpleMessage(
+      "Sinkronkan lagu daftar putar",
+    ),
     "syncUnconfirmedRetry": MessageLookupByLibrary.simpleMessage(
       "EMusic tidak mengkonfirmasi semua perubahan tersebut. Mereka akan diadili ulang.",
     ),
@@ -1125,6 +1301,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "systemDefault": MessageLookupByLibrary.simpleMessage("Bawaan sistem"),
     "themeMode": MessageLookupByLibrary.simpleMessage("Mode Tema"),
     "title": MessageLookupByLibrary.simpleMessage("Judul"),
+    "topMusicVid": MessageLookupByLibrary.simpleMessage("Video musik teratas"),
     "topmusicvideos": MessageLookupByLibrary.simpleMessage(
       "Video Musik Teratas",
     ),
@@ -1135,6 +1312,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "untitledSong": MessageLookupByLibrary.simpleMessage("Lagu tanpa judul"),
     "upNext": MessageLookupByLibrary.simpleMessage("Selanjutnya"),
+    "updateApp": MessageLookupByLibrary.simpleMessage("Perbarui Aplikasi"),
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "Url terdeteksi, klik untuk membuka/memutar konten terkait",
     ),
@@ -1144,7 +1322,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "Responsnya tidak berisi daftar pengguna.",
     ),
-    "userSearchFailed": m6,
+    "userSearchFailed": m12,
     "userUnblocked": MessageLookupByLibrary.simpleMessage(
       "Pengguna tidak terkunci",
     ),

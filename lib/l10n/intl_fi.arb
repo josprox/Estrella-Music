@@ -1526,5 +1526,775 @@
   "auth_2fa_invalid": "Anna kelvollinen 6-numeroinen koodi tai kirjaudu sisään uudelleen.",
   "@auth_2fa_invalid": {
     "description": "auth_2fa_invalid"
+  },
+  "upNext": "Seuraavaksi",
+  "@upNext": {
+    "description": "upNext"
+  },
+  "plain": "yksinkertainen",
+  "@plain": {
+    "description": "plain"
+  },
+  "addMultipleSongs": "Lisää kappaleita soittolistaan",
+  "@addMultipleSongs": {
+    "description": "addMultipleSongs"
+  },
+  "removeMultiple": "Poista useita kappaleita",
+  "@removeMultiple": {
+    "description": "removeMultiple"
+  },
+  "restoreLastPlaybackSession": "Palauta viimeinen toistoistunto",
+  "@restoreLastPlaybackSession": {
+    "description": "restoreLastPlaybackSession"
+  },
+  "clearImgCacheAlert": "Kuvavälimuisti tyhjennetty onnistuneesti",
+  "@clearImgCacheAlert": {
+    "description": "clearImgCacheAlert"
+  },
+  "reArrangePlaylist": "Järjestä soittolista uudelleen",
+  "@reArrangePlaylist": {
+    "description": "reArrangePlaylist"
+  },
+  "disableTransitionAnimationDes": "Aktivoi tämä vaihtoehto, jos haluat poistaa välilehden siirtymän animaation käytöstä",
+  "@disableTransitionAnimationDes": {
+    "description": "disableTransitionAnimationDes"
+  },
+  "openIn": "Avaa sisään",
+  "@openIn": {
+    "description": "openIn"
+  },
+  "deleteDownloadData": "Poista latauksista",
+  "@deleteDownloadData": {
+    "description": "deleteDownloadData"
+  },
+  "backgroundPlay": "Musiikin toisto taustalla",
+  "@backgroundPlay": {
+    "description": "backgroundPlay"
+  },
+  "cacheHomeScreenData": "Tallenna aloitusnäytön sisältötiedot",
+  "@cacheHomeScreenData": {
+    "description": "cacheHomeScreenData"
+  },
+  "cacheHomeScreenDataDes": "Ota käyttöön aloitusnäytön sisällön tietojen tallennus, aloitusnäyttö latautuu välittömästi, jos tämä vaihtoehto on käytössä",
+  "@cacheHomeScreenDataDes": {
+    "description": "cacheHomeScreenDataDes"
+  },
+  "exportDowloadedFiles": "Vie ladatut tiedostot",
+  "@exportDowloadedFiles": {
+    "description": "exportDowloadedFiles"
+  },
+  "exportedFileLocation": "Vie ladattujen tiedostojen sijainti",
+  "@exportedFileLocation": {
+    "description": "exportedFileLocation"
+  },
+  "exporting": "Viedään...",
+  "@exporting": {
+    "description": "exporting"
+  },
+  "scanning": "Skannataan...",
+  "@scanning": {
+    "description": "scanning"
+  },
+  "downFilesFound": "ladatut tiedostot löytyivät",
+  "@downFilesFound": {
+    "description": "downFilesFound"
+  },
+  "exportMsg": "Tiedostojen vienti onnistui",
+  "@exportMsg": {
+    "description": "exportMsg"
+  },
+  "clearImgCache": "Tyhjennä kuvavälimuisti",
+  "@clearImgCache": {
+    "description": "clearImgCache"
+  },
+  "clearImgCacheDes": "Napsauta tätä tyhjentääksesi välimuistissa olevat pikkukuvat/kuvat. (Ei suositella, ellet halua päivittää välimuistissa olevia kuvatietoja)",
+  "@clearImgCacheDes": {
+    "description": "clearImgCacheDes"
+  },
+  "deleteDownloadedDataAlert": "Poistettu latauksista onnistuneesti!",
+  "@deleteDownloadedDataAlert": {
+    "description": "deleteDownloadedDataAlert"
+  },
+  "disableTransitionAnimation": "Poista siirtymäanimaatio käytöstä",
+  "@disableTransitionAnimation": {
+    "description": "disableTransitionAnimation"
+  },
+  "exportDowloadedFilesDes": "Napsauta tätä viedäksesi ladatut tiedostot sovellushakemistosta ulkoiseen hakemistoon",
+  "@exportDowloadedFilesDes": {
+    "description": "exportDowloadedFilesDes"
+  },
+  "export": "Vie",
+  "@export": {
+    "description": "export"
+  },
+  "backgroundPlayDes": "Ota taustamusiikin toisto käyttöön tai poista se käytöstä (sovellusta voidaan käyttää ilmaisinalueelta, kun sovellus on käynnissä taustalla)",
+  "@backgroundPlayDes": {
+    "description": "backgroundPlayDes"
+  },
+  "restoreLastPlaybackSessionDes": "Palauta viimeinen toistoistunto automaattisesti, kun sovellus käynnistetään",
+  "@restoreLastPlaybackSessionDes": {
+    "description": "restoreLastPlaybackSessionDes"
+  },
+  "restoreSettingsAndPlaylistsDes": "Palauttaa kaikki asetukset, kirjautumistiedot ja soittolistat varmuuskopiotiedostosta. Korvaa kaikki nykyiset tiedot",
+  "@restoreSettingsAndPlaylistsDes": {
+    "description": "restoreSettingsAndPlaylistsDes"
+  },
+  "backupSettingsAndPlaylistsDes": "Tallenna kaikki asetukset, soittolistat ja kirjautumistiedot varmuuskopiotiedostoon",
+  "@backupSettingsAndPlaylistsDes": {
+    "description": "backupSettingsAndPlaylistsDes"
+  },
+  "backupMsg": "Varmuuskopio tallennettu onnistuneesti!",
+  "@backupMsg": {
+    "description": "backupMsg"
+  },
+  "backFilesFound": "tietokantoja löytynyt",
+  "@backFilesFound": {
+    "description": "backFilesFound"
+  },
+  "restoreMsg": "Onnistuneesti kunnostettu!\nMuutokset otetaan käyttöön uudelleenkäynnistyksen yhteydessä",
+  "@restoreMsg": {
+    "description": "restoreMsg"
+  },
+  "restoring": "Palautetaan...",
+  "@restoring": {
+    "description": "restoring"
+  },
+  "restore": "Palauta",
+  "@restore": {
+    "description": "restore"
+  },
+  "closeApp": "Sulje sovellus",
+  "@closeApp": {
+    "description": "closeApp"
+  },
+  "standard": "Vakio",
+  "@standard": {
+    "description": "standard"
+  },
+  "gesture": "Ele",
+  "@gesture": {
+    "description": "gesture"
+  },
+  "audioCodec": "Äänikoodekki",
+  "@audioCodec": {
+    "description": "audioCodec"
+  },
+  "autoDownFavSongDes": "Lataa suosikkikappaleet automaattisesti, kun ne lisätään suosikkeihin",
+  "@autoDownFavSongDes": {
+    "description": "autoDownFavSongDes"
+  },
+  "loudnessNormalization": "Äänenvoimakkuuden normalisointi",
+  "@loudnessNormalization": {
+    "description": "loudnessNormalization"
+  },
+  "playerUi": "Soittimen käyttöliittymä",
+  "@playerUi": {
+    "description": "playerUi"
+  },
+  "songNotPlayable": "Kappaletta ei voi soittaa palvelinrajoitusten vuoksi!",
+  "@songNotPlayable": {
+    "description": "songNotPlayable"
+  },
+  "loudnessDb": "LoudnessDb",
+  "@loudnessDb": {
+    "description": "loudnessDb"
+  },
+  "restoreAppData": "Palauta sovellustiedot",
+  "@restoreAppData": {
+    "description": "restoreAppData"
+  },
+  "queueShufflingDeniedMsg": "Satunnainen tila on aktivoitu. Et voi sekoittaa jonoa manuaalisesti.",
+  "@queueShufflingDeniedMsg": {
+    "description": "queueShufflingDeniedMsg"
+  },
+  "includeDownloadedFiles": "Sisällytä ladatut kappaletiedostot",
+  "@includeDownloadedFiles": {
+    "description": "includeDownloadedFiles"
+  },
+  "backupInProgress": "Varmuuskopiointi käynnissä...",
+  "@backupInProgress": {
+    "description": "backupInProgress"
+  },
+  "queuerearrangingDeniedMsg": "Jonoa ei voi järjestää uudelleen, kun satunnaistoisto on päällä",
+  "@queuerearrangingDeniedMsg": {
+    "description": "queuerearrangingDeniedMsg"
+  },
+  "content": "Sisältö",
+  "@content": {
+    "description": "content"
+  },
+  "downloadError3": "Lataus epäonnistui verkko-/siirtovirheen vuoksi! Yritä uudelleen",
+  "@downloadError3": {
+    "description": "downloadError3"
+  },
+  "personalisation": "Personointi",
+  "@personalisation": {
+    "description": "personalisation"
+  },
+  "playerUiDes": "Valitse soittimen käyttöliittymä",
+  "@playerUiDes": {
+    "description": "playerUiDes"
+  },
+  "musicAndPlayback": "Musiikki ja toisto",
+  "@musicAndPlayback": {
+    "description": "musicAndPlayback"
+  },
+  "appInfo": "Sovelluksen tiedot",
+  "@appInfo": {
+    "description": "appInfo"
+  },
+  "networkError": "Verkkovirhe! Tarkista Internet-yhteytesi.",
+  "@networkError": {
+    "description": "networkError"
+  },
+  "download": "Lataa",
+  "@download": {
+    "description": "download"
+  },
+  "downloadError2": "Pyydettyä kappaletta ei voi ladata palvelinrajoitusten vuoksi. Voit yrittää uudelleen",
+  "@downloadError2": {
+    "description": "downloadError2"
+  },
+  "letsStrart": "Aloitetaan..",
+  "@letsStrart": {
+    "description": "letsStrart"
+  },
+  "processFiles": "Käsitellään tiedostoja...",
+  "@processFiles": {
+    "description": "processFiles"
+  },
+  "backupAppData": "Varmuuskopioi sovellustiedot",
+  "@backupAppData": {
+    "description": "backupAppData"
+  },
+  "backup": "Varmuuskopio",
+  "@backup": {
+    "description": "backup"
+  },
+  "playnextMsg": "Tulossa pian",
+  "@playnextMsg": {
+    "description": "playnextMsg"
+  },
+  "shuffleQueue": "sekoita häntää",
+  "@shuffleQueue": {
+    "description": "shuffleQueue"
+  },
+  "queueLoop": "häntälenkki",
+  "@queueLoop": {
+    "description": "queueLoop"
+  },
+  "queueLoopNotDisMsg1": "Jonosilmukkatilaa ei voi poistaa käytöstä, kun satunnaistoistotila on käytössä.",
+  "@queueLoopNotDisMsg1": {
+    "description": "queueLoopNotDisMsg1"
+  },
+  "queueLoopNotDisMsg2": "Tail loop -tilaa ei voi aktivoida radiotilassa.",
+  "@queueLoopNotDisMsg2": {
+    "description": "queueLoopNotDisMsg2"
+  },
+  "loudnessNormalizationDes": "Asettaa saman äänenvoimakkuustason kaikille kappaleille (kokeellinen) (Ei toimi vanhemmissa versioissa ladatuissa kappaleissa (< v1.10.0))",
+  "@loudnessNormalizationDes": {
+    "description": "loudnessNormalizationDes"
+  },
+  "enableSlidableAction": "Aktivoi liukusäätimen toiminnot",
+  "@enableSlidableAction": {
+    "description": "enableSlidableAction"
+  },
+  "enableSlidableActionDes": "Aktivoi pyyhkäisytoiminnot kappaleruudussa",
+  "@enableSlidableActionDes": {
+    "description": "enableSlidableActionDes"
+  },
+  "bitrate": "Bittinopeus",
+  "@bitrate": {
+    "description": "bitrate"
+  },
+  "androidBackupWarning": "Ei testattu: Jos valitset valintaruudun yli 60 tiedoston lataamisen jälkeen, prosessi saattaa kuluttaa paljon muistia ja saattaa aiheuttaa puhelimen tai sovelluksen kaatumisen. Jatka omalla vastuullasi.",
+  "@androidBackupWarning": {
+    "description": "androidBackupWarning"
+  },
+  "songInfo": "Kappaleen tiedot",
+  "@songInfo": {
+    "description": "songInfo"
+  },
+  "id": "ID",
+  "@id": {
+    "description": "id"
+  },
+  "title": "Otsikko",
+  "@title": {
+    "description": "title"
+  },
+  "restartApp": "Käynnistä sovellus uudelleen",
+  "@restartApp": {
+    "description": "restartApp"
+  },
+  "autoDownFavSong": "Suosikkikappaleiden automaattinen lataus",
+  "@autoDownFavSong": {
+    "description": "autoDownFavSong"
+  },
+  "duration": "Kesto",
+  "@duration": {
+    "description": "duration"
+  },
+  "urlSearchDes": "Havaittu URL-osoite napsauttamalla sitä avataksesi tai toistaaksesi siihen liittyvän sisällön",
+  "@urlSearchDes": {
+    "description": "urlSearchDes"
+  },
+  "album": "Albumi",
+  "@album": {
+    "description": "album"
+  },
+  "reArrangeSongs": "Järjestä kappaleet uudelleen",
+  "@reArrangeSongs": {
+    "description": "reArrangeSongs"
+  },
+  "selectSongs": "Valitse kappaleet",
+  "@selectSongs": {
+    "description": "selectSongs"
+  },
+  "selectAll": "Valitse kaikki",
+  "@selectAll": {
+    "description": "selectAll"
+  },
+  "playingfromAlbum": "SOITTAMME ALBUMILLA",
+  "@playingfromAlbum": {
+    "description": "playingfromAlbum"
+  },
+  "playingfromPlaylist": "TOISTAMINEN SOITTOLISTALTA",
+  "@playingfromPlaylist": {
+    "description": "playingfromPlaylist"
+  },
+  "playingfromSelection": "PELAAMINEN VALINNASTA",
+  "@playingfromSelection": {
+    "description": "playingfromSelection"
+  },
+  "resetToDefaultMsg": "Oletusasetusten palautus on valmis, käynnistä sovellus uudelleen",
+  "@resetToDefaultMsg": {
+    "description": "resetToDefaultMsg"
+  },
+  "resetToDefaultDes": "Palauta sovelluksen oletusasetukset (vaatii uudelleenkäynnistyksen)",
+  "@resetToDefaultDes": {
+    "description": "resetToDefaultDes"
+  },
+  "misc": "Erilaisia",
+  "@misc": {
+    "description": "misc"
+  },
+  "resetToDefault": "Palauta oletusasetukset",
+  "@resetToDefault": {
+    "description": "resetToDefault"
+  },
+  "autoOpenPlayer": "Avaa automaattisesti soittimen näyttö",
+  "@autoOpenPlayer": {
+    "description": "autoOpenPlayer"
+  },
+  "autoOpenPlayerDes": "Aktivoi/deaktivoi soittimen automaattinen avautuminen koko näytölle, kun valitset toistettavan kappaleen",
+  "@autoOpenPlayerDes": {
+    "description": "autoOpenPlayerDes"
+  },
+  "playingfromArtist": "TOISTAA ARTISTILTA",
+  "@playingfromArtist": {
+    "description": "playingfromArtist"
+  },
+  "randomSelection": "Satunnainen valinta",
+  "@randomSelection": {
+    "description": "randomSelection"
+  },
+  "randomRadio": "Random Radio",
+  "@randomRadio": {
+    "description": "randomRadio"
+  },
+  "exportPlaylist": "Vie soittolista",
+  "@exportPlaylist": {
+    "description": "exportPlaylist"
+  },
+  "importPlaylistDesc": "Valitse tuotavaksi aiemmin viety soittolistan JSON-tiedosto",
+  "@importPlaylistDesc": {
+    "description": "importPlaylistDesc"
+  },
+  "invalidPlaylistFile": "Virheellinen soittolistatiedostorakenne",
+  "@invalidPlaylistFile": {
+    "description": "invalidPlaylistFile"
+  },
+  "fileNotFound": "Tiedostoa ei löydy",
+  "@fileNotFound": {
+    "description": "fileNotFound"
+  },
+  "exportErrorPermission": "Lupa evätty viennin aikana",
+  "@exportErrorPermission": {
+    "description": "exportErrorPermission"
+  },
+  "importingPlaylist": "Tuodaan soittolistaa...",
+  "@importingPlaylist": {
+    "description": "importingPlaylist"
+  },
+  "exportErrorStorage": "Säilytystila ei riitä",
+  "@exportErrorStorage": {
+    "description": "exportErrorStorage"
+  },
+  "exportingPlaylist": "Viedään soittolistaa...",
+  "@exportingPlaylist": {
+    "description": "exportingPlaylist"
+  },
+  "playlistExportedMsg": "Soittolista vietiin onnistuneesti kohteeseen",
+  "@playlistExportedMsg": {
+    "description": "playlistExportedMsg"
+  },
+  "exportError": "Virhe vietäessä soittolistaa",
+  "@exportError": {
+    "description": "exportError"
+  },
+  "exportErrorFormat": "Virhe soittolistan tietojen muotoilussa",
+  "@exportErrorFormat": {
+    "description": "exportErrorFormat"
+  },
+  "importPlaylist": "Tuo soittolista",
+  "@importPlaylist": {
+    "description": "importPlaylist"
+  },
+  "selectFile": "Valitse Tiedosto",
+  "@selectFile": {
+    "description": "selectFile"
+  },
+  "playlistImportedMsg": "Soittolistan tuonti onnistui",
+  "@playlistImportedMsg": {
+    "description": "playlistImportedMsg"
+  },
+  "importError": "Virhe soittolistan tuonnissa",
+  "@importError": {
+    "description": "importError"
+  },
+  "importErrorFileAccess": "Valittua tiedostoa ei voitu käyttää",
+  "@importErrorFileAccess": {
+    "description": "importErrorFileAccess"
+  },
+  "importErrorFormat": "Virheellinen tiedostomuoto",
+  "@importErrorFormat": {
+    "description": "importErrorFormat"
+  },
+  "importErrorDatabase": "Virhe tallennettaessa tietokantaan",
+  "@importErrorDatabase": {
+    "description": "importErrorDatabase"
+  },
+  "importLargeFileNote": "Huomautus: suurten soittolistojen tuonti voi kestää kauemmin",
+  "@importLargeFileNote": {
+    "description": "importLargeFileNote"
+  },
+  "exportPlaylistCsv": "Vie soittolista CSV-muodossa",
+  "@exportPlaylistCsv": {
+    "description": "exportPlaylistCsv"
+  },
+  "exportPlaylistJson": "Vie soittolista JSON-muotoon",
+  "@exportPlaylistJson": {
+    "description": "exportPlaylistJson"
+  },
+  "exportPlaylistJsonSubtitle": "Tämä muoto voidaan tuoda",
+  "@exportPlaylistJsonSubtitle": {
+    "description": "exportPlaylistJsonSubtitle"
+  },
+  "exportPlaylistCsvSubtitle": "Ei voi tuoda tänne",
+  "@exportPlaylistCsvSubtitle": {
+    "description": "exportPlaylistCsvSubtitle"
+  },
+  "exportToYouTubeMusic": "Vie Youtube-musiikkiin",
+  "@exportToYouTubeMusic": {
+    "description": "exportToYouTubeMusic"
+  },
+  "exportToYouTubeMusicSubtitle": "Se työntää soittolistasi (kappaleita < 50) nykyiseen jonoon, älä unohda lisätä sitä soittolistaan/tallentaa avattuasi sen YtMusicissa",
+  "@exportToYouTubeMusicSubtitle": {
+    "description": "exportToYouTubeMusicSubtitle"
+  },
+  "linkCopied": "Linkki kopioitu leikepöydälle",
+  "@linkCopied": {
+    "description": "linkCopied"
+  },
+  "lyrics": "Kirjeitä",
+  "@lyrics": {
+    "description": "lyrics"
+  },
+  "no": "Ei",
+  "@no": {
+    "description": "no"
+  },
+  "podcasts": "Podcastit",
+  "@podcasts": {
+    "description": "podcasts"
+  },
+  "episodes": "Jaksot",
+  "@episodes": {
+    "description": "episodes"
+  },
+  "profiles": "Profiilit",
+  "@profiles": {
+    "description": "profiles"
+  },
+  "addToLibrary": "Lisää kirjastoon",
+  "@addToLibrary": {
+    "description": "addToLibrary"
+  },
+  "removeFromLibrary": "Poista kirjastosta",
+  "@removeFromLibrary": {
+    "description": "removeFromLibrary"
+  },
+  "play": "Pelaa",
+  "@play": {
+    "description": "play"
+  },
+  "enqueueAlbumSongs": "Lisää albumin kappaleita jonoon",
+  "@enqueueAlbumSongs": {
+    "description": "enqueueAlbumSongs"
+  },
+  "downloadAlbumSongs": "Lataa kappaleita albumilta",
+  "@downloadAlbumSongs": {
+    "description": "downloadAlbumSongs"
+  },
+  "shareAlbum": "Jaa albumi",
+  "@shareAlbum": {
+    "description": "shareAlbum"
+  },
+  "imported": "Tuotu",
+  "@imported": {
+    "description": "imported"
+  },
+  "importedPlaylist": "Tuotu soittolista",
+  "@importedPlaylist": {
+    "description": "importedPlaylist"
+  },
+  "permissionDenied": "Lupa evätty",
+  "@permissionDenied": {
+    "description": "permissionDenied"
+  },
+  "enqueueSongs": "Lisää kappaleita jonoon",
+  "@enqueueSongs": {
+    "description": "enqueueSongs"
+  },
+  "shuffle": "Satunnainen",
+  "@shuffle": {
+    "description": "shuffle"
+  },
+  "downloadPlaylist": "Lataa soittolista",
+  "@downloadPlaylist": {
+    "description": "downloadPlaylist"
+  },
+  "syncPlaylistSongs": "Synkronoi soittolistan kappaleita",
+  "@syncPlaylistSongs": {
+    "description": "syncPlaylistSongs"
+  },
+  "blacklistPipedPlaylist": "Soittolistan musta lista",
+  "@blacklistPipedPlaylist": {
+    "description": "blacklistPipedPlaylist"
+  },
+  "sharePlaylist": "Jaa soittolista",
+  "@sharePlaylist": {
+    "description": "sharePlaylist"
+  },
+  "playlist": "Soittolista",
+  "@playlist": {
+    "description": "playlist"
+  },
+  "sortByName": "Lajittele nimen mukaan",
+  "@sortByName": {
+    "description": "sortByName"
+  },
+  "sortByDate": "Lajittele päivämäärän mukaan",
+  "@sortByDate": {
+    "description": "sortByDate"
+  },
+  "sortByDuration": "Lajittele keston mukaan",
+  "@sortByDuration": {
+    "description": "sortByDuration"
+  },
+  "sortAscendNDescend": "Lajittele nousevasti/laskevasti",
+  "@sortAscendNDescend": {
+    "description": "sortAscendNDescend"
+  },
+  "migration_summary_start": "Siirto suoritettu {source}.",
+  "@migration_summary_start": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      }
+    },
+    "description": "migration_summary_start"
+  },
+  "migration_summary_playlists": "Soittolistat: {count}",
+  "@migration_summary_playlists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_playlists"
+  },
+  "migration_summary_songs": "Kappaleet: {count}",
+  "@migration_summary_songs": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_songs"
+  },
+  "migration_summary_favorites": "Suosikit: {count}",
+  "@migration_summary_favorites": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_favorites"
+  },
+  "migration_summary_albums": "Albumit: {count}",
+  "@migration_summary_albums": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_albums"
+  },
+  "migration_summary_artists": "Artistit: {count}",
+  "@migration_summary_artists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_artists"
+  },
+  "migration_select_file_dialog": "Valitse song.db tai varmuuskopio .backup",
+  "@migration_select_file_dialog": {
+    "description": "migration_select_file_dialog"
+  },
+  "migration_success": "Siirto suoritettu onnistuneesti.",
+  "@migration_success": {
+    "description": "migration_success"
+  },
+  "backup_select_folder_dialog": "Valitse kansio varmuuskopiointia varten",
+  "@backup_select_folder_dialog": {
+    "description": "backup_select_folder_dialog"
+  },
+  "restore_select_file_dialog": "Valitse varmuuskopiotiedosto",
+  "@restore_select_file_dialog": {
+    "description": "restore_select_file_dialog"
+  },
+  "auth_hint_email": "nimi@mail.com",
+  "@auth_hint_email": {
+    "description": "auth_hint_email"
+  },
+  "auth_error_invalid_email": "Anna kelvollinen sähköpostiosoite.",
+  "@auth_error_invalid_email": {
+    "description": "auth_error_invalid_email"
+  },
+  "settings_cloud_backup_dialog_desc": "Lataa sovelluksen .hmb-varmuuskopio palvelimelle ja palauta tarvittaessa kaikki tallennetut varmuuskopiot.",
+  "@settings_cloud_backup_dialog_desc": {
+    "description": "settings_cloud_backup_dialog_desc"
+  },
+  "delete": "Poista",
+  "@delete": {
+    "description": "delete"
+  },
+  "in_app_storage": "Sisäinen tallennushakemisto",
+  "@in_app_storage": {
+    "description": "in_app_storage"
+  },
+  "auth_brand_description_1": "Toimme sisäänkirjautumisen, rekisteröinnin ja salasanan palautuksen edellisestä projektista, mukautettuna tähän musiikkisovellukseen.",
+  "@auth_brand_description_1": {
+    "description": "auth_brand_description_1"
+  },
+  "auth_brand_description_2": "Istuntosi on suojatussa tallennustilassa, ja se on validoitu samalla taustalla, jota jo käytit.",
+  "@auth_brand_description_2": {
+    "description": "auth_brand_description_2"
+  },
+  "auth_brand_not_configured": ".env-tiedosto on määritettävä, jotta todennustausta voidaan yhdistää.",
+  "@auth_brand_not_configured": {
+    "description": "auth_brand_not_configured"
+  },
+  "auth_forgot_password_subtitle": "Lähetämme ohjeet tilisi sähköpostiisi.",
+  "@auth_forgot_password_subtitle": {
+    "description": "auth_forgot_password_subtitle"
+  },
+  "auth_btn_send_email": "Lähetä postia",
+  "@auth_btn_send_email": {
+    "description": "auth_btn_send_email"
+  },
+  "auth_error_not_configured": "Todennustaustaosaa ei voida määrittää .env-tiedostossa.",
+  "@auth_error_not_configured": {
+    "description": "auth_error_not_configured"
+  },
+  "auth_error_invalid_credentials": "Väärä sähköpostiosoite tai salasana.",
+  "@auth_error_invalid_credentials": {
+    "description": "auth_error_invalid_credentials"
+  },
+  "auth_error_not_verified": "Tiliäsi ei ole vielä vahvistettu.",
+  "@auth_error_not_verified": {
+    "description": "auth_error_not_verified"
+  },
+  "auth_error_unknown": "Operaatiota ei voitu suorittaa loppuun.",
+  "@auth_error_unknown": {
+    "description": "auth_error_unknown"
+  },
+  "auth_register_success": "Tili luotu onnistuneesti.",
+  "@auth_register_success": {
+    "description": "auth_register_success"
+  },
+  "auth_register_error": "Tiliä ei voitu luoda.",
+  "@auth_register_error": {
+    "description": "auth_register_error"
+  },
+  "auth_recovery_email_sent": "Sähköposti lähetetty.",
+  "@auth_recovery_email_sent": {
+    "description": "auth_recovery_email_sent"
+  },
+  "auth_recovery_email_error": "Sähköpostia ei voitu lähettää.",
+  "@auth_recovery_email_error": {
+    "description": "auth_recovery_email_error"
+  },
+  "latestVersion": "Uusin versio saatavilla",
+  "@latestVersion": {
+    "description": "latestVersion"
+  },
+  "updateApp": "Päivitä sovellus",
+  "@updateApp": {
+    "description": "updateApp"
+  },
+  "loadInfoUpdate": "Päivitystietoja ei voitu ladata",
+  "@loadInfoUpdate": {
+    "description": "loadInfoUpdate"
+  },
+  "infoNotAvailable": "Tietoja ei ole saatavilla",
+  "@infoNotAvailable": {
+    "description": "infoNotAvailable"
+  },
+  "developedBy": "Kehittäjä ja ylläpitäjä Joss Estrada (JOSPROX)",
+  "@developedBy": {
+    "description": "developedBy"
+  },
+  "copyrightNotice": "© 2026 JOSPROX. GPL-lisenssi v3.0",
+  "@copyrightNotice": {
+    "description": "copyrightNotice"
+  },
+  "backupSettingsAndPlaylists": "Varmuuskopiointiasetukset ja soittolistat",
+  "@backupSettingsAndPlaylists": {
+    "description": "backupSettingsAndPlaylists"
+  },
+  "restoreSettingsAndPlaylists": "Palauta asetukset ja soittolistat",
+  "@restoreSettingsAndPlaylists": {
+    "description": "restoreSettingsAndPlaylists"
+  },
+  "helloWorld": "Hei maailma",
+  "@helloWorld": {
+    "description": "Este texto es opcional"
+  },
+  "removeFromCache": "Poista välimuistista",
+  "@removeFromCache": {
+    "description": "removeFromCache"
+  },
+  "quickPics": "Nopea valinta",
+  "@quickPics": {
+    "description": "quickPics"
+  },
+  "topMusicVid": "Suosituimmat musiikkivideot",
+  "@topMusicVid": {
+    "description": "topMusicVid"
   }
 }

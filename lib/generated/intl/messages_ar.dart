@@ -20,19 +20,32 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ar';
 
-  static String m0(songTitle) => "التنزيل: __PH_0____";
+  static String m0(songTitle) => "التنزيل: ${songTitle}";
 
-  static String m1(error) => "حدث خطأ أثناء إعادة الإنشاء: __PH_0____";
+  static String m1(count) => "الألبومات: ${count}";
 
-  static String m2(title) => "مشابهة لـ __PH_0____";
+  static String m2(count) => "الفنانين: ${count}";
 
-  static String m3(current) => "الخطوة __PH_0____ من 3";
+  static String m3(count) => "المفضلة: ${count}";
 
-  static String m4(count) => "__PH_0____ التغييرات التي تم تنفيذها.";
+  static String m4(count) => "قوائم التشغيل: ${count}";
 
-  static String m5(count) => "__PH_0____ التغييرات المتزامنة.";
+  static String m5(count) => "الأغاني: ${count}";
 
-  static String m6(statusCode) => "تعذر البحث عن المستخدمين (_${statusCode}_).";
+  static String m6(source) => "اكتمل الترحيل من ${source}.";
+
+  static String m7(error) => "حدث خطأ أثناء إعادة الإنشاء: ${error}";
+
+  static String m8(title) => "مشابهة لـ ${title}";
+
+  static String m9(current) => "الخطوة ${current} من 3";
+
+  static String m10(count) => "${count} التغييرات التي تم تنفيذها.";
+
+  static String m11(count) => "${count} التغييرات المتزامنة.";
+
+  static String m12(statusCode) =>
+      "تعذر البحث عن المستخدمين (_${statusCode}_).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -45,6 +58,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "addMultipleSongs": MessageLookupByLibrary.simpleMessage(
       "إضافة الأغاني إلى قائمة التشغيل",
     ),
+    "addToLibrary": MessageLookupByLibrary.simpleMessage("أضف إلى المكتبة"),
     "addToPlaylist": MessageLookupByLibrary.simpleMessage(
       "إضافة إلى قائمة التشغيل",
     ),
@@ -88,18 +102,59 @@ class MessageLookup extends MessageLookupByLibrary {
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "قبول استخدام بيانات خاطئة...",
     ),
+    "auth_brand_description_1": MessageLookupByLibrary.simpleMessage(
+      "لقد أحضرنا تسجيل الدخول والتسجيل واستعادة كلمة المرور من المشروع السابق، وتم تكييفه ليناسب تطبيق الموسيقى هذا.",
+    ),
+    "auth_brand_description_2": MessageLookupByLibrary.simpleMessage(
+      "تعيش جلستك في مساحة تخزين آمنة ويتم التحقق من صحتها بنفس الواجهة الخلفية التي كنت تستخدمها بالفعل.",
+    ),
+    "auth_brand_not_configured": MessageLookupByLibrary.simpleMessage(
+      "يجب تكوين ملف .env لتوصيل الواجهة الخلفية للمصادقة.",
+    ),
     "auth_btn_login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
     "auth_btn_register": MessageLookupByLibrary.simpleMessage("يسجل"),
+    "auth_btn_send_email": MessageLookupByLibrary.simpleMessage("إرسال البريد"),
     "auth_confirm_password": MessageLookupByLibrary.simpleMessage(
       "تأكيد كلمة المرور",
+    ),
+    "auth_error_invalid_credentials": MessageLookupByLibrary.simpleMessage(
+      "البريد الإلكتروني أو كلمة المرور غير صحيحة.",
+    ),
+    "auth_error_invalid_email": MessageLookupByLibrary.simpleMessage(
+      "أدخل بريدًا إلكترونيًا صالحًا.",
+    ),
+    "auth_error_not_configured": MessageLookupByLibrary.simpleMessage(
+      "الواجهة الخلفية للمصادقة مفقودة ليتم تكوينها في ملف .env.",
+    ),
+    "auth_error_not_verified": MessageLookupByLibrary.simpleMessage(
+      "لم يتم التحقق من حسابك بعد.",
+    ),
+    "auth_error_unknown": MessageLookupByLibrary.simpleMessage(
+      "لم يكن من الممكن إكمال العملية.",
     ),
     "auth_first_name": MessageLookupByLibrary.simpleMessage("الاسم الأول"),
     "auth_forgot_password": MessageLookupByLibrary.simpleMessage(
       "لقد نسيت كلمة المرور الخاصة بي",
     ),
+    "auth_forgot_password_subtitle": MessageLookupByLibrary.simpleMessage(
+      "سنرسل لك التعليمات إلى البريد الإلكتروني الخاص بحسابك.",
+    ),
+    "auth_hint_email": MessageLookupByLibrary.simpleMessage("name@mail.com"),
     "auth_last_name": MessageLookupByLibrary.simpleMessage("اسم العائلة"),
     "auth_login_success": MessageLookupByLibrary.simpleMessage(
       "تم تسجيل الدخول بنجاح",
+    ),
+    "auth_recovery_email_error": MessageLookupByLibrary.simpleMessage(
+      "لم يكن من الممكن إرسال البريد الإلكتروني.",
+    ),
+    "auth_recovery_email_sent": MessageLookupByLibrary.simpleMessage(
+      "تم إرسال البريد الإلكتروني.",
+    ),
+    "auth_register_error": MessageLookupByLibrary.simpleMessage(
+      "لا يمكن إنشاء الحساب.",
+    ),
+    "auth_register_success": MessageLookupByLibrary.simpleMessage(
+      "تم إنشاء الحساب بنجاح.",
     ),
     "auth_welcome_subtitle": MessageLookupByLibrary.simpleMessage(
       "مرحبا بكم في استريلا الموسيقى",
@@ -112,6 +167,12 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "autoDownFavSongDes": MessageLookupByLibrary.simpleMessage(
       "تحميل الأغاني المفضلة تلقائيًا عند إضافتها إلى قائمة الاغاني المفضلة",
+    ),
+    "autoOpenPlayer": MessageLookupByLibrary.simpleMessage(
+      "فتح شاشة المشغل تلقائيًا",
+    ),
+    "autoOpenPlayerDes": MessageLookupByLibrary.simpleMessage(
+      "تنشيط/إلغاء تنشيط الفتح التلقائي للمشغل إلى وضع ملء الشاشة عند اختيار أغنية لتشغيلها",
     ),
     "back": MessageLookupByLibrary.simpleMessage("يعود"),
     "backFilesFound": MessageLookupByLibrary.simpleMessage(
@@ -132,6 +193,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "backupMsg": MessageLookupByLibrary.simpleMessage(
       "تم حفظ النسخة الاحتياطية بنجاح!",
+    ),
+    "backupSettingsAndPlaylists": MessageLookupByLibrary.simpleMessage(
+      "إعدادات النسخ الاحتياطي وقوائم التشغيل",
     ),
     "backupSettingsAndPlaylistsDes": MessageLookupByLibrary.simpleMessage(
       "حفظ جميع الإعدادات، وقوائم التشغيل، وبيانات تسجيل الدخول في ملف نسخة احتياطية",
@@ -157,6 +221,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "backup_restore_success": MessageLookupByLibrary.simpleMessage(
       "تمت استعادة النسخة الاحتياطية. أعد تشغيل التطبيق.",
     ),
+    "backup_select_folder_dialog": MessageLookupByLibrary.simpleMessage(
+      "حدد المجلد للنسخ الاحتياطي",
+    ),
     "backup_selection_prompt": MessageLookupByLibrary.simpleMessage(
       "اختر البيانات التي تريد نسخها احتياطيًا",
     ),
@@ -167,6 +234,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "بناء على تفاعلاتك الأخيرة",
     ),
     "bitrate": MessageLookupByLibrary.simpleMessage("معدّل البتات"),
+    "blacklistPipedPlaylist": MessageLookupByLibrary.simpleMessage(
+      "القائمة السوداء لقائمة التشغيل",
+    ),
     "blacklistPlstResetAlert": MessageLookupByLibrary.simpleMessage(
       "تمت إعادة الضبط بنجاح!",
     ),
@@ -240,6 +310,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "قوائم تشغيل الاخرين",
     ),
     "content": MessageLookupByLibrary.simpleMessage("المحتوى"),
+    "copyrightNotice": MessageLookupByLibrary.simpleMessage(
+      "© 2026 جوسبروكس. ترخيص GPL v3.0",
+    ),
     "create": MessageLookupByLibrary.simpleMessage("إنشاء"),
     "createnAdd": MessageLookupByLibrary.simpleMessage("إنشاء وإضافة"),
     "customIns": MessageLookupByLibrary.simpleMessage("نسخة مخصصة"),
@@ -248,11 +321,15 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "dailyDiscover": MessageLookupByLibrary.simpleMessage("الاكتشاف اليومي"),
     "dark": MessageLookupByLibrary.simpleMessage("مظلم"),
+    "delete": MessageLookupByLibrary.simpleMessage("اِسْتَبْعَد"),
     "deleteDownloadData": MessageLookupByLibrary.simpleMessage(
       "إزالة من التنزيلات",
     ),
     "deleteDownloadedDataAlert": MessageLookupByLibrary.simpleMessage(
       "تمت الإزالة من التنزيلات بنجاح!",
+    ),
+    "developedBy": MessageLookupByLibrary.simpleMessage(
+      "تم تطويره وصيانته بواسطة جوس استرادا (JOSPROX)",
     ),
     "disableTransitionAnimation": MessageLookupByLibrary.simpleMessage(
       "إيقاف الرسوم المتحركة الانتقالية",
@@ -271,6 +348,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "تم العثور على الملفات التي تم تنزيلها",
     ),
     "download": MessageLookupByLibrary.simpleMessage("تحميل"),
+    "downloadAlbumSongs": MessageLookupByLibrary.simpleMessage(
+      "تحميل الأغاني من الألبوم",
+    ),
     "downloadError2": MessageLookupByLibrary.simpleMessage(
       "الأغنية المطلوبة غير قابلة للتحميل بسبب قيود النظام. يمكنك المحاولة مرة أخرى",
     ),
@@ -291,6 +371,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "downloadNotificationSong": m0,
     "downloadNotificationTitle": MessageLookupByLibrary.simpleMessage(
       "تنزيل الموسيقى",
+    ),
+    "downloadPlaylist": MessageLookupByLibrary.simpleMessage(
+      "تحميل قائمة التشغيل",
     ),
     "downloadingFormat": MessageLookupByLibrary.simpleMessage(
       "صيغة تحميل الملفات",
@@ -317,10 +400,17 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "enabled": MessageLookupByLibrary.simpleMessage("ممكّن"),
     "endOfThisSong": MessageLookupByLibrary.simpleMessage("نهاية هذه الأغنية"),
+    "enqueueAlbumSongs": MessageLookupByLibrary.simpleMessage(
+      "أضف أغاني الألبوم إلى قائمة الانتظار",
+    ),
     "enqueueAll": MessageLookupByLibrary.simpleMessage("إدراج الكل"),
     "enqueueSong": MessageLookupByLibrary.simpleMessage(
       "قم بإدراج هذه الأغنية",
     ),
+    "enqueueSongs": MessageLookupByLibrary.simpleMessage(
+      "إضافة الأغاني إلى قائمة الانتظار",
+    ),
+    "episodes": MessageLookupByLibrary.simpleMessage("الحلقات"),
     "equalizer": MessageLookupByLibrary.simpleMessage("المعادل"),
     "equalizerDes": MessageLookupByLibrary.simpleMessage(
       "فتح المعادل الخاص بالنظام",
@@ -339,13 +429,52 @@ class MessageLookup extends MessageLookupByLibrary {
     "exportDowloadedFilesDes": MessageLookupByLibrary.simpleMessage(
       "انقر هنا لتصدير الملف الذي تم تنزيله من دليل التطبيق إلى مكان خارجي",
     ),
+    "exportError": MessageLookupByLibrary.simpleMessage(
+      "حدث خطأ أثناء تصدير قائمة التشغيل",
+    ),
+    "exportErrorFormat": MessageLookupByLibrary.simpleMessage(
+      "خطأ في تنسيق بيانات قائمة التشغيل",
+    ),
+    "exportErrorPermission": MessageLookupByLibrary.simpleMessage(
+      "تم رفض الإذن عند التصدير",
+    ),
+    "exportErrorStorage": MessageLookupByLibrary.simpleMessage(
+      "مساحة تخزين غير كافية",
+    ),
     "exportMsg": MessageLookupByLibrary.simpleMessage("تم تصدير الملفات بنجاح"),
+    "exportPlaylist": MessageLookupByLibrary.simpleMessage(
+      "تصدير قائمة التشغيل",
+    ),
+    "exportPlaylistCsv": MessageLookupByLibrary.simpleMessage(
+      "تصدير قائمة التشغيل كملف CSV",
+    ),
+    "exportPlaylistCsvSubtitle": MessageLookupByLibrary.simpleMessage(
+      "لا يمكن الاستيراد هنا",
+    ),
+    "exportPlaylistJson": MessageLookupByLibrary.simpleMessage(
+      "تصدير قائمة التشغيل إلى JSON",
+    ),
+    "exportPlaylistJsonSubtitle": MessageLookupByLibrary.simpleMessage(
+      "يمكن استيراد هذا التنسيق",
+    ),
+    "exportToYouTubeMusic": MessageLookupByLibrary.simpleMessage(
+      "تصدير إلى موسيقى يوتيوب",
+    ),
+    "exportToYouTubeMusicSubtitle": MessageLookupByLibrary.simpleMessage(
+      "سيؤدي ذلك إلى دفع قائمة التشغيل الخاصة بك (الأغاني <50) إلى قائمة الانتظار الحالية، لا تنس إضافتها إلى قائمة التشغيل/الحفظ بعد فتحها في YtMusic",
+    ),
     "exportedFileLocation": MessageLookupByLibrary.simpleMessage(
       "موقع تصدير الملف الذي تم تنزيله",
     ),
     "exporting": MessageLookupByLibrary.simpleMessage("جار التصدير..."),
+    "exportingPlaylist": MessageLookupByLibrary.simpleMessage(
+      "جارٍ تصدير قائمة التشغيل...",
+    ),
     "favorites": MessageLookupByLibrary.simpleMessage("المفضلة"),
     "featuredplaylists": MessageLookupByLibrary.simpleMessage("قوائم مقترحة"),
+    "fileNotFound": MessageLookupByLibrary.simpleMessage(
+      "لم يتم العثور على الملف",
+    ),
     "follow": MessageLookupByLibrary.simpleMessage("يكمل"),
     "followedArtists": MessageLookupByLibrary.simpleMessage("يتبع"),
     "following": MessageLookupByLibrary.simpleMessage("التالي"),
@@ -384,6 +513,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "goToDownloadPage": MessageLookupByLibrary.simpleMessage(
       "انقر هنا للذهاب إلى صفحة التحميل",
     ),
+    "helloWorld": MessageLookupByLibrary.simpleMessage("مرحبا بالعالم"),
     "high": MessageLookupByLibrary.simpleMessage("عالي"),
     "hintApiUrl": MessageLookupByLibrary.simpleMessage("عنوان URL لطلب النقل"),
     "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
@@ -400,11 +530,48 @@ class MessageLookup extends MessageLookupByLibrary {
     "ignoreBatOptDes": MessageLookupByLibrary.simpleMessage(
       "إذا كنت تواجه مشكلات في الإشعارات أو توقف التشغيل عن طريق تحسين النظام، فيرجى تمكين هذا الخيار",
     ),
+    "importError": MessageLookupByLibrary.simpleMessage(
+      "حدث خطأ أثناء استيراد قائمة التشغيل",
+    ),
+    "importErrorDatabase": MessageLookupByLibrary.simpleMessage(
+      "حدث خطأ أثناء الحفظ في قاعدة البيانات",
+    ),
+    "importErrorFileAccess": MessageLookupByLibrary.simpleMessage(
+      "لا يمكن الوصول إلى الملف المحدد",
+    ),
+    "importErrorFormat": MessageLookupByLibrary.simpleMessage(
+      "تنسيق الملف غير صالح",
+    ),
+    "importLargeFileNote": MessageLookupByLibrary.simpleMessage(
+      "ملاحظة: قد يستغرق استيراد قوائم التشغيل الكبيرة وقتًا أطول",
+    ),
+    "importPlaylist": MessageLookupByLibrary.simpleMessage(
+      "استيراد قائمة التشغيل",
+    ),
+    "importPlaylistDesc": MessageLookupByLibrary.simpleMessage(
+      "حدد ملف JSON لقائمة التشغيل التي تم تصديرها مسبقًا لاستيرادها",
+    ),
+    "imported": MessageLookupByLibrary.simpleMessage("مستورد"),
     "importedFromJossMusic": MessageLookupByLibrary.simpleMessage(
       "مستورد من جوس ميوزيك كوتلين",
     ),
+    "importedPlaylist": MessageLookupByLibrary.simpleMessage(
+      "قائمة التشغيل المستوردة",
+    ),
+    "importingPlaylist": MessageLookupByLibrary.simpleMessage(
+      "جارٍ استيراد قائمة التشغيل...",
+    ),
+    "in_app_storage": MessageLookupByLibrary.simpleMessage(
+      "دليل التخزين الداخلي",
+    ),
     "includeDownloadedFiles": MessageLookupByLibrary.simpleMessage(
       "تضمين ملفات الأغاني المحملة",
+    ),
+    "infoNotAvailable": MessageLookupByLibrary.simpleMessage(
+      "المعلومات غير متوفرة",
+    ),
+    "invalidPlaylistFile": MessageLookupByLibrary.simpleMessage(
+      "بنية ملف قائمة التشغيل غير صالحة",
     ),
     "invalidServerResponse": MessageLookupByLibrary.simpleMessage(
       "استجابة الخادم غير صالحة.",
@@ -423,6 +590,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "language": MessageLookupByLibrary.simpleMessage("اللغة"),
     "languageDes": MessageLookupByLibrary.simpleMessage("ضبط لغة التطبيق"),
     "latestRelease": MessageLookupByLibrary.simpleMessage("أحدث إصدار"),
+    "latestVersion": MessageLookupByLibrary.simpleMessage("أحدث إصدار متاح"),
     "letsStrart": MessageLookupByLibrary.simpleMessage("لنبدأ.."),
     "libAlbums": MessageLookupByLibrary.simpleMessage("البومات المكتبة"),
     "libArtists": MessageLookupByLibrary.simpleMessage("فنانين المكتبة"),
@@ -435,12 +603,18 @@ class MessageLookup extends MessageLookupByLibrary {
     "light": MessageLookupByLibrary.simpleMessage("مضيء"),
     "link": MessageLookupByLibrary.simpleMessage("ربط"),
     "linkAlert": MessageLookupByLibrary.simpleMessage("تم ربطه بنجاح!"),
+    "linkCopied": MessageLookupByLibrary.simpleMessage(
+      "تم نسخ الرابط إلى الحافظة",
+    ),
     "linkPipedDes": MessageLookupByLibrary.simpleMessage(
       "رابط مع Piped للقوائم التشغيل",
     ),
     "listenNow": MessageLookupByLibrary.simpleMessage("استمع الآن"),
     "listeningToEnvironment": MessageLookupByLibrary.simpleMessage(
       "الاستماع إلى البيئة...",
+    ),
+    "loadInfoUpdate": MessageLookupByLibrary.simpleMessage(
+      "تعذر تحميل معلومات التحديث",
     ),
     "local": MessageLookupByLibrary.simpleMessage("محلي"),
     "local_b1": MessageLookupByLibrary.simpleMessage(
@@ -467,6 +641,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "تعيين نفس مستوى شدة الصوت لجميع الأغاني (تجريبي) (لن يعمل على الأغاني التي تم تحميلها في النسخ السابقة (< v1.10.0))",
     ),
     "low": MessageLookupByLibrary.simpleMessage("منخفض"),
+    "lyrics": MessageLookupByLibrary.simpleMessage("رسائل"),
     "lyricsNotAvailable": MessageLookupByLibrary.simpleMessage(
       "كلمات غير متوفرة!",
     ),
@@ -523,7 +698,20 @@ class MessageLookup extends MessageLookupByLibrary {
     "migration_btn_select": MessageLookupByLibrary.simpleMessage(
       "حدد الملف والاستيراد",
     ),
+    "migration_select_file_dialog": MessageLookupByLibrary.simpleMessage(
+      "حدد أغنية.db أو نسخة احتياطية",
+    ),
+    "migration_success": MessageLookupByLibrary.simpleMessage(
+      "تمت عملية الترحيل بنجاح.",
+    ),
+    "migration_summary_albums": m1,
+    "migration_summary_artists": m2,
+    "migration_summary_favorites": m3,
+    "migration_summary_playlists": m4,
+    "migration_summary_songs": m5,
+    "migration_summary_start": m6,
     "minutes": MessageLookupByLibrary.simpleMessage("دقائق"),
+    "misc": MessageLookupByLibrary.simpleMessage("عديد"),
     "mostListenedSong": MessageLookupByLibrary.simpleMessage(
       "الأكثر استماعا للأغنية",
     ),
@@ -578,6 +766,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "news_item_trans_title": MessageLookupByLibrary.simpleMessage(
       "مزامنة شفافة",
     ),
+    "no": MessageLookupByLibrary.simpleMessage("لا"),
     "noBookmarks": MessageLookupByLibrary.simpleMessage(
       "لا الإشارات المرجعية!",
     ),
@@ -609,6 +798,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "operationFailed": MessageLookupByLibrary.simpleMessage("فشلت العملية"),
     "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
     "password_text": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+    "permissionDenied": MessageLookupByLibrary.simpleMessage("تم رفض الإذن"),
     "permissionsAllow": MessageLookupByLibrary.simpleMessage("يسمح"),
     "permissionsConsentDescription": MessageLookupByLibrary.simpleMessage(
       "تحتاج Estrella Music إلى هذه الأذونات لإدارة الموسيقى الخاصة بك وتقديم جميع ميزات التشغيل.",
@@ -649,6 +839,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "تمت مزامنة قائمة التشغيل المنقولة!",
     ),
     "plain": MessageLookupByLibrary.simpleMessage("عادي"),
+    "play": MessageLookupByLibrary.simpleMessage("إعادة إنتاج"),
     "playNext": MessageLookupByLibrary.simpleMessage("تشغيل التالي"),
     "playNow": MessageLookupByLibrary.simpleMessage("العب الآن"),
     "playbackSpeed": MessageLookupByLibrary.simpleMessage("سرعة التشغيل"),
@@ -658,12 +849,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "playingfromAlbum": MessageLookupByLibrary.simpleMessage(
       "اللعب من الألبوم",
     ),
+    "playingfromArtist": MessageLookupByLibrary.simpleMessage(
+      "اللعب من الفنان",
+    ),
     "playingfromPlaylist": MessageLookupByLibrary.simpleMessage(
       "التشغيل من قائمة التشغيل",
     ),
     "playingfromSelection": MessageLookupByLibrary.simpleMessage(
       "اللعب من المختارة",
     ),
+    "playlist": MessageLookupByLibrary.simpleMessage("قائمة التشغيل"),
     "playlistBlacklistAlert": MessageLookupByLibrary.simpleMessage(
       "قائمة التشغيل في القائمة السوداء!",
     ),
@@ -682,6 +877,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "playlistCreatednsongAddedAlert": MessageLookupByLibrary.simpleMessage(
       "تم إنشاء قائمة التشغيل وإضافة الأغنية!",
     ),
+    "playlistExportedMsg": MessageLookupByLibrary.simpleMessage(
+      "تم تصدير قائمة التشغيل إلى",
+    ),
+    "playlistImportedMsg": MessageLookupByLibrary.simpleMessage(
+      "تم استيراد قائمة التشغيل بنجاح",
+    ),
     "playlistRemovedAlert": MessageLookupByLibrary.simpleMessage(
       "تمت إزالة قائمة التشغيل!",
     ),
@@ -690,11 +891,13 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "playlists": MessageLookupByLibrary.simpleMessage("قوائم التشغيل"),
     "playnextMsg": MessageLookupByLibrary.simpleMessage("ألتالي"),
+    "podcasts": MessageLookupByLibrary.simpleMessage("البودكاست"),
     "popularTracks": MessageLookupByLibrary.simpleMessage("المسارات الشعبية"),
     "processFiles": MessageLookupByLibrary.simpleMessage(
       "جاري معالجة الملفات...",
     ),
     "processingAudio": MessageLookupByLibrary.simpleMessage("معالجة الصوت..."),
+    "profiles": MessageLookupByLibrary.simpleMessage("الملفات الشخصية"),
     "queueLoop": MessageLookupByLibrary.simpleMessage("تكرار قائمة الانتظار"),
     "queueLoopNotDisMsg1": MessageLookupByLibrary.simpleMessage(
       "لا يمكن ايقاف وضع تكرار قائمة الانتظار عند تفعيل وضع التبديل.",
@@ -708,10 +911,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "queuerearrangingDeniedMsg": MessageLookupByLibrary.simpleMessage(
       "لا يمكن إعادة ترتيب قائمة الانتظار عند تفعيل وضع التبديل",
     ),
+    "quickPics": MessageLookupByLibrary.simpleMessage("اختيار سريع"),
     "quickpicks": MessageLookupByLibrary.simpleMessage("اختيارات سريعة"),
     "radioNotAvailable": MessageLookupByLibrary.simpleMessage(
       "الراديو غير متوفر لهذا الفنان!",
     ),
+    "randomRadio": MessageLookupByLibrary.simpleMessage("راديو عشوائي"),
+    "randomSelection": MessageLookupByLibrary.simpleMessage("اختيار عشوائي"),
     "reArrangePlaylist": MessageLookupByLibrary.simpleMessage(
       "إعادة ترتيب قوائم التشغيل",
     ),
@@ -728,9 +934,13 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "recommendedAlbums": MessageLookupByLibrary.simpleMessage("مُستَحسَن"),
     "recommendedArtists": MessageLookupByLibrary.simpleMessage("مُستَحسَن"),
+    "removeFromCache": MessageLookupByLibrary.simpleMessage(
+      "إزالة من ذاكرة التخزين المؤقت",
+    ),
     "removeFromLib": MessageLookupByLibrary.simpleMessage(
       "إزالة من مكتبة الأغاني",
     ),
+    "removeFromLibrary": MessageLookupByLibrary.simpleMessage("حذف من المكتبة"),
     "removeFromPlaylist": MessageLookupByLibrary.simpleMessage(
       "إزالة من قائمة التشغيل",
     ),
@@ -749,6 +959,15 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "reproducedBy": MessageLookupByLibrary.simpleMessage("مستنسخة بواسطة"),
     "reset": MessageLookupByLibrary.simpleMessage("إعادة ضبط"),
+    "resetToDefault": MessageLookupByLibrary.simpleMessage(
+      "استعادة الإعدادات الافتراضية",
+    ),
+    "resetToDefaultDes": MessageLookupByLibrary.simpleMessage(
+      "إعادة ضبط إعدادات التطبيق على الوضع الافتراضي (يتطلب إعادة التشغيل)",
+    ),
+    "resetToDefaultMsg": MessageLookupByLibrary.simpleMessage(
+      "اكتملت عملية إعادة تعيين الإعدادات إلى الوضع الافتراضي، يرجى إعادة تشغيل التطبيق",
+    ),
     "resetblacklistedplaylist": MessageLookupByLibrary.simpleMessage(
       "إعادة تعيين قوائم التشغيل المدرجة في القائمة السوداء",
     ),
@@ -769,8 +988,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "restoreMsg": MessageLookupByLibrary.simpleMessage(
       "تمت الاستعادة بنجاح!\n سيتم تطبيق التغييرات عند إعادة التشغيل",
     ),
+    "restoreSettingsAndPlaylists": MessageLookupByLibrary.simpleMessage(
+      "استعادة الإعدادات وقوائم التشغيل",
+    ),
     "restoreSettingsAndPlaylistsDes": MessageLookupByLibrary.simpleMessage(
       "استعادة كافة الإعدادات، وبيانات تسجيل الدخول وقوائم التشغيل من ملف النسخ الاحتياطي. سيتم استبدال جميع البيانات الحالية",
+    ),
+    "restore_select_file_dialog": MessageLookupByLibrary.simpleMessage(
+      "حدد ملف النسخ الاحتياطي",
     ),
     "restoring": MessageLookupByLibrary.simpleMessage("جار استعادة..."),
     "results": MessageLookupByLibrary.simpleMessage("النتائج"),
@@ -792,6 +1017,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "selectAuthInsMsg": MessageLookupByLibrary.simpleMessage(
       "الرجاء تحديد نسخة المصادقة!",
     ),
+    "selectFile": MessageLookupByLibrary.simpleMessage("حدد ملف"),
     "selectSongs": MessageLookupByLibrary.simpleMessage("اختر الأغاني"),
     "selectedFileNotFound": MessageLookupByLibrary.simpleMessage(
       "لم يتم العثور على الملف المحدد.",
@@ -823,6 +1049,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "settings_cloud_backup_desc": MessageLookupByLibrary.simpleMessage(
       "تحميل واستعادة وإدارة...",
+    ),
+    "settings_cloud_backup_dialog_desc": MessageLookupByLibrary.simpleMessage(
+      "قم بتحميل نسخة احتياطية ‎.hmb من التطبيق إلى الخادم، وإذا لزم الأمر، قم باستعادة أي من النسخ الاحتياطية المحفوظة.",
     ),
     "settings_content_desc": MessageLookupByLibrary.simpleMessage(
       "اكتشف عوامل التصفية والتكامل مع الأنابيب وذاكرة التخزين المؤقت.",
@@ -864,19 +1093,24 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
       "لا يمكن إنشاء معرف جديد. يرجى المحاولة مرة أخرى في وقت لاحق.",
     ),
-    "settings_visitor_exception": m1,
+    "settings_visitor_exception": m7,
     "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
       "المعرف المحدث",
     ),
     "settings_visitor_updated_desc": MessageLookupByLibrary.simpleMessage(
       "تم إنشاء معرف زائر جديد بنجاح.",
     ),
+    "shareAlbum": MessageLookupByLibrary.simpleMessage("مشاركة الألبوم"),
+    "sharePlaylist": MessageLookupByLibrary.simpleMessage(
+      "مشاركة قائمة التشغيل",
+    ),
     "shareSong": MessageLookupByLibrary.simpleMessage("مشاركة هذه الأغنية"),
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
       "جارٍ البحث في قاعدة بيانات Shazam عن التطابقات...",
     ),
+    "shuffle": MessageLookupByLibrary.simpleMessage("عشوائي"),
     "shuffleQueue": MessageLookupByLibrary.simpleMessage("خلط قائمة الانتظار"),
-    "similarToTitle": m2,
+    "similarToTitle": m8,
     "singles": MessageLookupByLibrary.simpleMessage("منفردة"),
     "skipSilence": MessageLookupByLibrary.simpleMessage("تخطي الصمت"),
     "skipSilenceDes": MessageLookupByLibrary.simpleMessage(
@@ -886,7 +1120,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "تم ضبط مؤقت نوم",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("مؤقت النوم"),
-    "slide_indicator": m3,
+    "slide_indicator": m9,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "تمت إضافة الأغنية إلى قائمة التشغيل!",
     ),
@@ -916,6 +1150,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "songsImportedFromJossMusic": MessageLookupByLibrary.simpleMessage(
       "الأغاني المستوردة من Joss Music Kotlin",
     ),
+    "sortAscendNDescend": MessageLookupByLibrary.simpleMessage(
+      "فرز تصاعدي / تنازلي",
+    ),
+    "sortByDate": MessageLookupByLibrary.simpleMessage("الترتيب حسب التاريخ"),
+    "sortByDuration": MessageLookupByLibrary.simpleMessage("الترتيب حسب المدة"),
+    "sortByName": MessageLookupByLibrary.simpleMessage("الترتيب حسب الاسم"),
     "speedAndPitch": MessageLookupByLibrary.simpleMessage("السرعة والملعب"),
     "standard": MessageLookupByLibrary.simpleMessage("الافتراضي"),
     "startRadio": MessageLookupByLibrary.simpleMessage("تشغيل الراديو"),
@@ -940,8 +1180,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
       "اسحب لاستكشاف الخيارات ➔",
     ),
-    "syncChangesConfirmed": m4,
-    "syncChangesSynced": m5,
+    "syncChangesConfirmed": m10,
+    "syncChangesSynced": m11,
     "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
       "تم تفعيل الوضع السحابي. تنزيل المكتبة الموجودة.",
     ),
@@ -979,6 +1219,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncOfflineRetry": MessageLookupByLibrary.simpleMessage(
       "غير متصل. تم حفظ التغييرات لإعادة المحاولة.",
     ),
+    "syncPlaylistSongs": MessageLookupByLibrary.simpleMessage(
+      "مزامنة أغاني قائمة التشغيل",
+    ),
     "syncUnconfirmedRetry": MessageLookupByLibrary.simpleMessage(
       "لم يؤكد EMusic كافة التغييرات. ستتم إعادة محاكمتهم.",
     ),
@@ -1004,6 +1247,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "systemDefault": MessageLookupByLibrary.simpleMessage("الافتراضي للنظام"),
     "themeMode": MessageLookupByLibrary.simpleMessage("وضع السمة"),
     "title": MessageLookupByLibrary.simpleMessage("عنوان"),
+    "topMusicVid": MessageLookupByLibrary.simpleMessage(
+      "أعلى مقاطع الفيديو الموسيقية",
+    ),
     "topmusicvideos": MessageLookupByLibrary.simpleMessage(
       "اشهر مقاطع الفيديو الموسيقية",
     ),
@@ -1014,6 +1260,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "untitledSong": MessageLookupByLibrary.simpleMessage("أغنية بلا عنوان"),
     "upNext": MessageLookupByLibrary.simpleMessage("التالي"),
+    "updateApp": MessageLookupByLibrary.simpleMessage("تحديث التطبيق"),
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "تم العثور على رابط، انقر عليه لفتح/تشغيل المحتوى المرتبط",
     ),
@@ -1021,7 +1268,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "لا يحتوي الرد على قائمة المستخدمين.",
     ),
-    "userSearchFailed": m6,
+    "userSearchFailed": m12,
     "userUnblocked": MessageLookupByLibrary.simpleMessage("مستخدم غير مقفل"),
     "username": MessageLookupByLibrary.simpleMessage("اسم المستخدم"),
     "video": MessageLookupByLibrary.simpleMessage("فيديو"),

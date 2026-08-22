@@ -1438,5 +1438,863 @@
   "auth_2fa_invalid": "یک کد 6 رقمی معتبر وارد کنید یا دوباره وارد شوید.",
   "@auth_2fa_invalid": {
     "description": "auth_2fa_invalid"
+  },
+  "playlistCreatednsongAddedAlert": "لیست پخش ایجاد شد و آهنگ اضافه شد!",
+  "@playlistCreatednsongAddedAlert": {
+    "description": "playlistCreatednsongAddedAlert"
+  },
+  "songAlreadyOfflineAlert": "آهنگ از قبل در حافظه پنهان است",
+  "@songAlreadyOfflineAlert": {
+    "description": "songAlreadyOfflineAlert"
+  },
+  "plain": "ساده",
+  "@plain": {
+    "description": "plain"
+  },
+  "videos": "ویدیوها",
+  "@videos": {
+    "description": "videos"
+  },
+  "equalizerDes": "اکولایزر سیستم را باز کنید",
+  "@equalizerDes": {
+    "description": "equalizerDes"
+  },
+  "notaSongVideo": "این یک آهنگ / موزیک ویدیو نیست!",
+  "@notaSongVideo": {
+    "description": "notaSongVideo"
+  },
+  "linkPipedDes": "پیوند با Piped برای لیست های پخش",
+  "@linkPipedDes": {
+    "description": "linkPipedDes"
+  },
+  "selectAuthIns": "نمونه احراز هویت را انتخاب کنید",
+  "@selectAuthIns": {
+    "description": "selectAuthIns"
+  },
+  "password": "رمز عبور",
+  "@password": {
+    "description": "password"
+  },
+  "clearImgCacheAlert": "حافظه پنهان تصویر با موفقیت پاک شد",
+  "@clearImgCacheAlert": {
+    "description": "clearImgCacheAlert"
+  },
+  "results": "نتایج",
+  "@results": {
+    "description": "results"
+  },
+  "albumBookmarkRemoveAlert": "نشانک آلبوم حذف شد!",
+  "@albumBookmarkRemoveAlert": {
+    "description": "albumBookmarkRemoveAlert"
+  },
+  "downloadingFormatDes": "فرمت فایل دانلودی را انتخاب کنید. \"Opus\" بهترین کیفیت را ارائه خواهد کرد",
+  "@downloadingFormatDes": {
+    "description": "downloadingFormatDes"
+  },
+  "exportDowloadedFiles": "فایل های دانلود شده را صادر کنید",
+  "@exportDowloadedFiles": {
+    "description": "exportDowloadedFiles"
+  },
+  "exportedFileLocation": "صادرات محل فایل های دانلود شده",
+  "@exportedFileLocation": {
+    "description": "exportedFileLocation"
+  },
+  "exporting": "صادرات...",
+  "@exporting": {
+    "description": "exporting"
+  },
+  "scanning": "در حال اسکن...",
+  "@scanning": {
+    "description": "scanning"
+  },
+  "downFilesFound": "فایل های دانلود شده پیدا شد",
+  "@downFilesFound": {
+    "description": "downFilesFound"
+  },
+  "exportMsg": "فایل ها با موفقیت صادر شدند",
+  "@exportMsg": {
+    "description": "exportMsg"
+  },
+  "equalizer": "اکولایزر",
+  "@equalizer": {
+    "description": "equalizer"
+  },
+  "clearImgCache": "کش تصویر را پاک کنید",
+  "@clearImgCache": {
+    "description": "clearImgCache"
+  },
+  "clearImgCacheDes": "برای پاک کردن ریز عکسها/تصاویر ذخیره شده اینجا را کلیک کنید. (توصیه نمی شود مگر اینکه بخواهید داده های تصویر کش شده را به روز کنید)",
+  "@clearImgCacheDes": {
+    "description": "clearImgCacheDes"
+  },
+  "disabled": "از کار افتاده است",
+  "@disabled": {
+    "description": "disabled"
+  },
+  "ignoreBatOpt": "بهینه سازی باتری را نادیده بگیرید",
+  "@ignoreBatOpt": {
+    "description": "ignoreBatOpt"
+  },
+  "enabled": "فعال شد",
+  "@enabled": {
+    "description": "enabled"
+  },
+  "github": "GitHub",
+  "@github": {
+    "description": "github"
+  },
+  "githubDes": "کد منبع GitHub را مشاهده کنید \nاگر این پروژه را دوست دارید، فراموش نکنید که به آن ⭐ بدهید!",
+  "@githubDes": {
+    "description": "githubDes"
+  },
+  "by": "توسط",
+  "@by": {
+    "description": "by"
+  },
+  "searchDes": "آهنگ ها، لیست های پخش، آلبوم ها یا هنرمندان",
+  "@searchDes": {
+    "description": "searchDes"
+  },
+  "searchRes": "نتایج جستجو",
+  "@searchRes": {
+    "description": "searchRes"
+  },
+  "for1": "برای",
+  "@for1": {
+    "description": "for1"
+  },
+  "viewAll": "همه را ببینید",
+  "@viewAll": {
+    "description": "viewAll"
+  },
+  "nomatch": "هیچ منطبقی برای پیدا نشد",
+  "@nomatch": {
+    "description": "nomatch"
+  },
+  "subscribers": "مشترکین",
+  "@subscribers": {
+    "description": "subscribers"
+  },
+  "synced": "همگام شده است",
+  "@synced": {
+    "description": "synced"
+  },
+  "deleteDownloadedDataAlert": "با موفقیت از دانلودها حذف شد!",
+  "@deleteDownloadedDataAlert": {
+    "description": "deleteDownloadedDataAlert"
+  },
+  "cancelTimerAlert": "تایمر خواب لغو شد",
+  "@cancelTimerAlert": {
+    "description": "cancelTimerAlert"
+  },
+  "sleepTimeSetAlert": "تایمر خواب شما تنظیم شده است",
+  "@sleepTimeSetAlert": {
+    "description": "sleepTimeSetAlert"
+  },
+  "songRemovedfromQueueCurrSong": "شما نمی توانید آهنگ در حال پخش را حذف کنید",
+  "@songRemovedfromQueueCurrSong": {
+    "description": "songRemovedfromQueueCurrSong"
+  },
+  "songRemovedAlert": "حذف شده از",
+  "@songRemovedAlert": {
+    "description": "songRemovedAlert"
+  },
+  "pipedplstSyncAlert": "لیست پخش لوله شده همگام سازی شد!",
+  "@pipedplstSyncAlert": {
+    "description": "pipedplstSyncAlert"
+  },
+  "playlistRenameAlert": "با موفقیت تغییر نام داد!",
+  "@playlistRenameAlert": {
+    "description": "playlistRenameAlert"
+  },
+  "playlistRemovedAlert": "لیست پخش حذف شد!",
+  "@playlistRemovedAlert": {
+    "description": "playlistRemovedAlert"
+  },
+  "playlistBookmarkAddAlert": "لیست پخش به نشانک ها اضافه شد!",
+  "@playlistBookmarkAddAlert": {
+    "description": "playlistBookmarkAddAlert"
+  },
+  "playlistBookmarkRemoveAlert": "نشانک لیست پخش حذف شد!",
+  "@playlistBookmarkRemoveAlert": {
+    "description": "playlistBookmarkRemoveAlert"
+  },
+  "albumBookmarkAddAlert": "آلبوم به نشانک ها اضافه شد!",
+  "@albumBookmarkAddAlert": {
+    "description": "albumBookmarkAddAlert"
+  },
+  "lyricsNotAvailable": "متن آهنگ در دسترس نیست!",
+  "@lyricsNotAvailable": {
+    "description": "lyricsNotAvailable"
+  },
+  "newVersionAvailable": "نسخه جدید موجود است!",
+  "@newVersionAvailable": {
+    "description": "newVersionAvailable"
+  },
+  "dontShowInfoAgain": "این اطلاعات را دیگر نشان ندهید",
+  "@dontShowInfoAgain": {
+    "description": "dontShowInfoAgain"
+  },
+  "notaValidLink": "این یک لینک معتبر نیست!",
+  "@notaValidLink": {
+    "description": "notaValidLink"
+  },
+  "operationFailed": "عملیات ناموفق",
+  "@operationFailed": {
+    "description": "operationFailed"
+  },
+  "Piped": "لوله شده",
+  "@Piped": {
+    "description": "Piped"
+  },
+  "link": "پیوند",
+  "@link": {
+    "description": "link"
+  },
+  "unLink": "لغو پیوند",
+  "@unLink": {
+    "description": "unLink"
+  },
+  "hintApiUrl": "URL API به نمونه Piped",
+  "@hintApiUrl": {
+    "description": "hintApiUrl"
+  },
+  "customIns": "نمونه سفارشی",
+  "@customIns": {
+    "description": "customIns"
+  },
+  "linkAlert": "با موفقیت پیوند خورد!",
+  "@linkAlert": {
+    "description": "linkAlert"
+  },
+  "unlinkAlert": "با موفقیت لغو شد!",
+  "@unlinkAlert": {
+    "description": "unlinkAlert"
+  },
+  "stopMusicOnTaskClear": "هنگام بستن برنامه، موسیقی را متوقف کنید",
+  "@stopMusicOnTaskClear": {
+    "description": "stopMusicOnTaskClear"
+  },
+  "downloadingFormat": "فرمت فایل دانلود کنید",
+  "@downloadingFormat": {
+    "description": "downloadingFormat"
+  },
+  "ignoreBatOptDes": "اگر به دلیل بهینه سازی سیستم با اعلان ها یا توقف پخش مشکل دارید، این گزینه را فعال کنید",
+  "@ignoreBatOptDes": {
+    "description": "ignoreBatOptDes"
+  },
+  "status": "وضعیت",
+  "@status": {
+    "description": "status"
+  },
+  "radioNotAvailable": "رادیو برای این هنرمند در دسترس نیست!",
+  "@radioNotAvailable": {
+    "description": "radioNotAvailable"
+  },
+  "songRemovedfromQueue": "از صف حذف شد!",
+  "@songRemovedfromQueue": {
+    "description": "songRemovedfromQueue"
+  },
+  "artistBookmarkRemoveAlert": "نشانگر هنرمند حذف شد!",
+  "@artistBookmarkRemoveAlert": {
+    "description": "artistBookmarkRemoveAlert"
+  },
+  "dismiss": "دور انداختن",
+  "@dismiss": {
+    "description": "dismiss"
+  },
+  "goToDownloadPage": "برای رفتن به صفحه دانلود اینجا کلیک کنید",
+  "@goToDownloadPage": {
+    "description": "goToDownloadPage"
+  },
+  "local": "محلی",
+  "@local": {
+    "description": "local"
+  },
+  "exportDowloadedFilesDes": "اینجا را کلیک کنید تا فایل های دانلود شده از دایرکتوری برنامه به دایرکتوری خارجی صادر شود",
+  "@exportDowloadedFilesDes": {
+    "description": "exportDowloadedFilesDes"
+  },
+  "export": "صادرات",
+  "@export": {
+    "description": "export"
+  },
+  "search": "جستجو کنید",
+  "@search": {
+    "description": "search"
+  },
+  "songAddedToPlaylistAlert": "آهنگ به لیست پخش اضافه شد",
+  "@songAddedToPlaylistAlert": {
+    "description": "songAddedToPlaylistAlert"
+  },
+  "songAlreadyExists": "آهنگ از قبل وجود دارد!",
+  "@songAlreadyExists": {
+    "description": "songAlreadyExists"
+  },
+  "songEnqueueAlert": "آهنگ به صف اضافه شد",
+  "@songEnqueueAlert": {
+    "description": "songEnqueueAlert"
+  },
+  "artistBookmarkAddAlert": "هنرمند به نشانک ها اضافه شد!",
+  "@artistBookmarkAddAlert": {
+    "description": "artistBookmarkAddAlert"
+  },
+  "syncedLyricsNotAvailable": "اشعار همگام شده در دسترس نیست!",
+  "@syncedLyricsNotAvailable": {
+    "description": "syncedLyricsNotAvailable"
+  },
+  "artistDesNotAvailable": "توضیحات موجود نیست!",
+  "@artistDesNotAvailable": {
+    "description": "artistDesNotAvailable"
+  },
+  "selectAuthInsMsg": "لطفاً نمونه احراز هویت را انتخاب کنید!",
+  "@selectAuthInsMsg": {
+    "description": "selectAuthInsMsg"
+  },
+  "allFieldsReqMsg": "همه فیلدها الزامی است",
+  "@allFieldsReqMsg": {
+    "description": "allFieldsReqMsg"
+  },
+  "playlistBlacklistAlert": "لیست پخش لیست سیاه!",
+  "@playlistBlacklistAlert": {
+    "description": "playlistBlacklistAlert"
+  },
+  "blacklistPlstResetAlert": "با موفقیت بازنشانی شد!",
+  "@blacklistPlstResetAlert": {
+    "description": "blacklistPlstResetAlert"
+  },
+  "resetblacklistedplaylist": "بازنشانی لیست های پخش لیست سیاه",
+  "@resetblacklistedplaylist": {
+    "description": "resetblacklistedplaylist"
+  },
+  "resetblacklistedplaylistDes": "همه لیست‌های پخش Piped را بازنشانی کنید",
+  "@resetblacklistedplaylistDes": {
+    "description": "resetblacklistedplaylistDes"
+  },
+  "restoreSettingsAndPlaylistsDes": "تمام تنظیمات، داده های ورود به سیستم و لیست های پخش را از یک فایل پشتیبان بازیابی می کند. همه داده های فعلی را بازنویسی می کند",
+  "@restoreSettingsAndPlaylistsDes": {
+    "description": "restoreSettingsAndPlaylistsDes"
+  },
+  "errorOccuredAlert": "خطایی رخ داده است!",
+  "@errorOccuredAlert": {
+    "description": "errorOccuredAlert"
+  },
+  "playlistCreatedAlert": "لیست پخش ایجاد شد!",
+  "@playlistCreatedAlert": {
+    "description": "playlistCreatedAlert"
+  },
+  "reset": "بازنشانی کنید",
+  "@reset": {
+    "description": "reset"
+  },
+  "customInsSelectMsg": "لطفاً یک نمونه سفارشی انتخاب کنید",
+  "@customInsSelectMsg": {
+    "description": "customInsSelectMsg"
+  },
+  "stopMusicOnTaskClearDes": "وقتی برنامه از مدیر وظیفه بسته شود، پخش موسیقی متوقف می شود",
+  "@stopMusicOnTaskClearDes": {
+    "description": "stopMusicOnTaskClearDes"
+  },
+  "backupSettingsAndPlaylistsDes": "تمام تنظیمات، لیست های پخش و داده های ورود به سیستم را در یک فایل پشتیبان ذخیره کنید",
+  "@backupSettingsAndPlaylistsDes": {
+    "description": "backupSettingsAndPlaylistsDes"
+  },
+  "backupMsg": "پشتیبان گیری با موفقیت ذخیره شد!",
+  "@backupMsg": {
+    "description": "backupMsg"
+  },
+  "backFilesFound": "پایگاه های داده یافت شد",
+  "@backFilesFound": {
+    "description": "backFilesFound"
+  },
+  "restoreMsg": "با موفقیت بازیابی شد!\nتغییرات پس از راه اندازی مجدد اعمال می شود",
+  "@restoreMsg": {
+    "description": "restoreMsg"
+  },
+  "restoring": "در حال بازیابی...",
+  "@restoring": {
+    "description": "restoring"
+  },
+  "restore": "بازیابی کنید",
+  "@restore": {
+    "description": "restore"
+  },
+  "closeApp": "برنامه را ببندید",
+  "@closeApp": {
+    "description": "closeApp"
+  },
+  "audioCodec": "کدک صوتی",
+  "@audioCodec": {
+    "description": "audioCodec"
+  },
+  "loudnessDb": "LoudnessDb",
+  "@loudnessDb": {
+    "description": "loudnessDb"
+  },
+  "restoreAppData": "بازیابی اطلاعات برنامه",
+  "@restoreAppData": {
+    "description": "restoreAppData"
+  },
+  "includeDownloadedFiles": "شامل فایل های آهنگ دانلود شده",
+  "@includeDownloadedFiles": {
+    "description": "includeDownloadedFiles"
+  },
+  "backupInProgress": "پشتیبان گیری در حال انجام است...",
+  "@backupInProgress": {
+    "description": "backupInProgress"
+  },
+  "letsStrart": "شروع کنیم..",
+  "@letsStrart": {
+    "description": "letsStrart"
+  },
+  "processFiles": "در حال پردازش فایل ها...",
+  "@processFiles": {
+    "description": "processFiles"
+  },
+  "backupAppData": "پشتیبان گیری از داده های برنامه",
+  "@backupAppData": {
+    "description": "backupAppData"
+  },
+  "backup": "پشتیبان گیری",
+  "@backup": {
+    "description": "backup"
+  },
+  "bitrate": "نرخ بیت",
+  "@bitrate": {
+    "description": "bitrate"
+  },
+  "androidBackupWarning": "تست نشده: انتخاب کادر انتخاب پس از دانلود بیش از 60 فایل ممکن است باعث شود که این فرآیند مقدار زیادی از حافظه را مصرف کند و باعث از کار افتادن گوشی یا برنامه شود. با مسئولیت خود ادامه دهید.",
+  "@androidBackupWarning": {
+    "description": "androidBackupWarning"
+  },
+  "songInfo": "اطلاعات آهنگ",
+  "@songInfo": {
+    "description": "songInfo"
+  },
+  "id": "شناسه",
+  "@id": {
+    "description": "id"
+  },
+  "title": "عنوان",
+  "@title": {
+    "description": "title"
+  },
+  "restartApp": "برنامه را مجدداً راه اندازی کنید",
+  "@restartApp": {
+    "description": "restartApp"
+  },
+  "duration": "مدت زمان",
+  "@duration": {
+    "description": "duration"
+  },
+  "urlSearchDes": "URL شناسایی شده روی آن کلیک کنید تا محتوای مرتبط باز شود/باز شود",
+  "@urlSearchDes": {
+    "description": "urlSearchDes"
+  },
+  "resetToDefaultMsg": "بازنشانی تنظیمات به پیش‌فرض کامل شد، لطفاً برنامه را مجدداً راه‌اندازی کنید",
+  "@resetToDefaultMsg": {
+    "description": "resetToDefaultMsg"
+  },
+  "resetToDefaultDes": "بازنشانی تنظیمات برنامه به پیش فرض (نیاز به راه اندازی مجدد)",
+  "@resetToDefaultDes": {
+    "description": "resetToDefaultDes"
+  },
+  "resetToDefault": "تنظیمات پیش فرض را بازیابی کنید",
+  "@resetToDefault": {
+    "description": "resetToDefault"
+  },
+  "exportPlaylist": "صادر کردن لیست پخش",
+  "@exportPlaylist": {
+    "description": "exportPlaylist"
+  },
+  "importPlaylistDesc": "یک فایل JSON لیست پخش صادر شده قبلی را برای وارد کردن انتخاب کنید",
+  "@importPlaylistDesc": {
+    "description": "importPlaylistDesc"
+  },
+  "invalidPlaylistFile": "ساختار فایل لیست پخش نامعتبر است",
+  "@invalidPlaylistFile": {
+    "description": "invalidPlaylistFile"
+  },
+  "fileNotFound": "فایل پیدا نشد",
+  "@fileNotFound": {
+    "description": "fileNotFound"
+  },
+  "exportErrorPermission": "مجوز هنگام صادرات رد شد",
+  "@exportErrorPermission": {
+    "description": "exportErrorPermission"
+  },
+  "importingPlaylist": "در حال وارد کردن لیست پخش...",
+  "@importingPlaylist": {
+    "description": "importingPlaylist"
+  },
+  "exportErrorStorage": "فضای ذخیره سازی ناکافی",
+  "@exportErrorStorage": {
+    "description": "exportErrorStorage"
+  },
+  "exportingPlaylist": "در حال صادر کردن لیست پخش...",
+  "@exportingPlaylist": {
+    "description": "exportingPlaylist"
+  },
+  "playlistExportedMsg": "لیست پخش با موفقیت به صادر شد",
+  "@playlistExportedMsg": {
+    "description": "playlistExportedMsg"
+  },
+  "exportError": "خطا در صدور لیست پخش",
+  "@exportError": {
+    "description": "exportError"
+  },
+  "exportErrorFormat": "خطا در قالب‌بندی داده‌های فهرست پخش",
+  "@exportErrorFormat": {
+    "description": "exportErrorFormat"
+  },
+  "importPlaylist": "لیست پخش را وارد کنید",
+  "@importPlaylist": {
+    "description": "importPlaylist"
+  },
+  "selectFile": "فایل را انتخاب کنید",
+  "@selectFile": {
+    "description": "selectFile"
+  },
+  "playlistImportedMsg": "لیست پخش با موفقیت وارد شد",
+  "@playlistImportedMsg": {
+    "description": "playlistImportedMsg"
+  },
+  "importError": "خطا در وارد کردن لیست پخش",
+  "@importError": {
+    "description": "importError"
+  },
+  "importErrorFileAccess": "فایل انتخابی قابل دسترسی نیست",
+  "@importErrorFileAccess": {
+    "description": "importErrorFileAccess"
+  },
+  "importErrorFormat": "فرمت فایل نامعتبر است",
+  "@importErrorFormat": {
+    "description": "importErrorFormat"
+  },
+  "importErrorDatabase": "خطا در ذخیره در پایگاه داده",
+  "@importErrorDatabase": {
+    "description": "importErrorDatabase"
+  },
+  "importLargeFileNote": "توجه: فهرست‌های پخش بزرگ ممکن است بیشتر طول بکشد تا وارد شوند",
+  "@importLargeFileNote": {
+    "description": "importLargeFileNote"
+  },
+  "exportPlaylistCsv": "لیست پخش را به عنوان CSV صادر کنید",
+  "@exportPlaylistCsv": {
+    "description": "exportPlaylistCsv"
+  },
+  "exportPlaylistJson": "لیست پخش را به JSON صادر کنید",
+  "@exportPlaylistJson": {
+    "description": "exportPlaylistJson"
+  },
+  "exportPlaylistJsonSubtitle": "این قالب را می توان وارد کرد",
+  "@exportPlaylistJsonSubtitle": {
+    "description": "exportPlaylistJsonSubtitle"
+  },
+  "exportPlaylistCsvSubtitle": "نمی توان اینجا وارد کرد",
+  "@exportPlaylistCsvSubtitle": {
+    "description": "exportPlaylistCsvSubtitle"
+  },
+  "exportToYouTubeMusic": "صادرات به موسیقی یوتیوب",
+  "@exportToYouTubeMusic": {
+    "description": "exportToYouTubeMusic"
+  },
+  "exportToYouTubeMusicSubtitle": "این لیست پخش شما (آهنگ های کمتر از 50) را به صف فعلی می برد، فراموش نکنید که پس از باز کردن آن در YtMusic آن را به لیست پخش اضافه کنید/ذخیره کنید.",
+  "@exportToYouTubeMusicSubtitle": {
+    "description": "exportToYouTubeMusicSubtitle"
+  },
+  "linkCopied": "پیوند در کلیپ بورد کپی شد",
+  "@linkCopied": {
+    "description": "linkCopied"
+  },
+  "lyrics": "نامه ها",
+  "@lyrics": {
+    "description": "lyrics"
+  },
+  "no": "خیر",
+  "@no": {
+    "description": "no"
+  },
+  "podcasts": "پادکست ها",
+  "@podcasts": {
+    "description": "podcasts"
+  },
+  "episodes": "اپیزودها",
+  "@episodes": {
+    "description": "episodes"
+  },
+  "profiles": "پروفایل ها",
+  "@profiles": {
+    "description": "profiles"
+  },
+  "addToLibrary": "به کتابخانه اضافه کنید",
+  "@addToLibrary": {
+    "description": "addToLibrary"
+  },
+  "removeFromLibrary": "حذف از کتابخانه",
+  "@removeFromLibrary": {
+    "description": "removeFromLibrary"
+  },
+  "play": "بازی کنید",
+  "@play": {
+    "description": "play"
+  },
+  "enqueueAlbumSongs": "آهنگ های آلبوم را به صف اضافه کنید",
+  "@enqueueAlbumSongs": {
+    "description": "enqueueAlbumSongs"
+  },
+  "downloadAlbumSongs": "دانلود آهنگ های آلبوم",
+  "@downloadAlbumSongs": {
+    "description": "downloadAlbumSongs"
+  },
+  "shareAlbum": "آلبوم را به اشتراک بگذارید",
+  "@shareAlbum": {
+    "description": "shareAlbum"
+  },
+  "imported": "وارداتی",
+  "@imported": {
+    "description": "imported"
+  },
+  "importedPlaylist": "لیست پخش وارد شده",
+  "@importedPlaylist": {
+    "description": "importedPlaylist"
+  },
+  "permissionDenied": "اجازه رد شد",
+  "@permissionDenied": {
+    "description": "permissionDenied"
+  },
+  "enqueueSongs": "آهنگ ها را به صف اضافه کنید",
+  "@enqueueSongs": {
+    "description": "enqueueSongs"
+  },
+  "shuffle": "تصادفی",
+  "@shuffle": {
+    "description": "shuffle"
+  },
+  "downloadPlaylist": "دانلود لیست پخش",
+  "@downloadPlaylist": {
+    "description": "downloadPlaylist"
+  },
+  "syncPlaylistSongs": "همگام سازی آهنگ های لیست پخش",
+  "@syncPlaylistSongs": {
+    "description": "syncPlaylistSongs"
+  },
+  "blacklistPipedPlaylist": "لیست پخش لیست سیاه",
+  "@blacklistPipedPlaylist": {
+    "description": "blacklistPipedPlaylist"
+  },
+  "sharePlaylist": "لیست پخش را به اشتراک بگذارید",
+  "@sharePlaylist": {
+    "description": "sharePlaylist"
+  },
+  "playlist": "لیست پخش",
+  "@playlist": {
+    "description": "playlist"
+  },
+  "sortByName": "مرتب سازی بر اساس نام",
+  "@sortByName": {
+    "description": "sortByName"
+  },
+  "sortByDate": "مرتب سازی بر اساس تاریخ",
+  "@sortByDate": {
+    "description": "sortByDate"
+  },
+  "sortByDuration": "مرتب سازی بر اساس مدت",
+  "@sortByDuration": {
+    "description": "sortByDuration"
+  },
+  "sortAscendNDescend": "مرتب سازی صعودی/نزولی",
+  "@sortAscendNDescend": {
+    "description": "sortAscendNDescend"
+  },
+  "migration_summary_start": "انتقال از {source} انجام شد.",
+  "@migration_summary_start": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      }
+    },
+    "description": "migration_summary_start"
+  },
+  "migration_summary_playlists": "لیست های پخش: {count}",
+  "@migration_summary_playlists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_playlists"
+  },
+  "migration_summary_songs": "آهنگ ها: {count}",
+  "@migration_summary_songs": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_songs"
+  },
+  "migration_summary_favorites": "موارد دلخواه: {count}",
+  "@migration_summary_favorites": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_favorites"
+  },
+  "migration_summary_albums": "آلبوم ها: {count}",
+  "@migration_summary_albums": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_albums"
+  },
+  "migration_summary_artists": "هنرمندان: {count}",
+  "@migration_summary_artists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_artists"
+  },
+  "migration_select_file_dialog": "song.db یا یک نسخه پشتیبان را انتخاب کنید",
+  "@migration_select_file_dialog": {
+    "description": "migration_select_file_dialog"
+  },
+  "migration_success": "مهاجرت با موفقیت انجام شد.",
+  "@migration_success": {
+    "description": "migration_success"
+  },
+  "backup_select_folder_dialog": "پوشه را برای پشتیبان گیری انتخاب کنید",
+  "@backup_select_folder_dialog": {
+    "description": "backup_select_folder_dialog"
+  },
+  "restore_select_file_dialog": "فایل پشتیبان را انتخاب کنید",
+  "@restore_select_file_dialog": {
+    "description": "restore_select_file_dialog"
+  },
+  "auth_hint_email": "name@mail.com",
+  "@auth_hint_email": {
+    "description": "auth_hint_email"
+  },
+  "auth_error_invalid_email": "یک ایمیل معتبر وارد کنید.",
+  "@auth_error_invalid_email": {
+    "description": "auth_error_invalid_email"
+  },
+  "settings_cloud_backup_dialog_desc": "یک نسخه پشتیبان .hmb از برنامه را در سرور آپلود کنید و در صورت نیاز، هر یک از نسخه های پشتیبان ذخیره شده را بازیابی کنید.",
+  "@settings_cloud_backup_dialog_desc": {
+    "description": "settings_cloud_backup_dialog_desc"
+  },
+  "delete": "حذف کنید",
+  "@delete": {
+    "description": "delete"
+  },
+  "in_app_storage": "فهرست ذخیره سازی داخلی",
+  "@in_app_storage": {
+    "description": "in_app_storage"
+  },
+  "auth_brand_description_1": "ما لاگین، ثبت نام و بازیابی رمز عبور را از پروژه قبلی که برای این برنامه موسیقی اقتباس شده بود آورده ایم.",
+  "@auth_brand_description_1": {
+    "description": "auth_brand_description_1"
+  },
+  "auth_brand_description_2": "جلسه شما در فضای ذخیره سازی امن زندگی می کند و با همان Backendی که قبلاً استفاده می کردید تأیید می شود.",
+  "@auth_brand_description_2": {
+    "description": "auth_brand_description_2"
+  },
+  "auth_brand_not_configured": "فایل .env باید پیکربندی شود تا به پشتیبان احراز هویت متصل شود.",
+  "@auth_brand_not_configured": {
+    "description": "auth_brand_not_configured"
+  },
+  "auth_forgot_password_subtitle": "ما دستورالعمل‌ها را به ایمیل حسابتان ارسال می‌کنیم.",
+  "@auth_forgot_password_subtitle": {
+    "description": "auth_forgot_password_subtitle"
+  },
+  "auth_btn_send_email": "ارسال نامه",
+  "@auth_btn_send_email": {
+    "description": "auth_btn_send_email"
+  },
+  "auth_error_not_configured": "پشتیبان احراز هویت برای پیکربندی در فایل .env وجود ندارد.",
+  "@auth_error_not_configured": {
+    "description": "auth_error_not_configured"
+  },
+  "auth_error_invalid_credentials": "ایمیل یا رمز عبور نادرست",
+  "@auth_error_invalid_credentials": {
+    "description": "auth_error_invalid_credentials"
+  },
+  "auth_error_not_verified": "حساب شما هنوز تایید نشده است.",
+  "@auth_error_not_verified": {
+    "description": "auth_error_not_verified"
+  },
+  "auth_error_unknown": "امکان تکمیل عملیات وجود نداشت.",
+  "@auth_error_unknown": {
+    "description": "auth_error_unknown"
+  },
+  "auth_register_success": "حساب با موفقیت ایجاد شد.",
+  "@auth_register_success": {
+    "description": "auth_register_success"
+  },
+  "auth_register_error": "حساب ایجاد نشد.",
+  "@auth_register_error": {
+    "description": "auth_register_error"
+  },
+  "auth_recovery_email_sent": "ایمیل ارسال شد.",
+  "@auth_recovery_email_sent": {
+    "description": "auth_recovery_email_sent"
+  },
+  "auth_recovery_email_error": "امکان ارسال ایمیل وجود نداشت.",
+  "@auth_recovery_email_error": {
+    "description": "auth_recovery_email_error"
+  },
+  "latestVersion": "آخرین نسخه موجود",
+  "@latestVersion": {
+    "description": "latestVersion"
+  },
+  "updateApp": "به روز رسانی برنامه",
+  "@updateApp": {
+    "description": "updateApp"
+  },
+  "loadInfoUpdate": "اطلاعات به‌روزرسانی بارگیری نشد",
+  "@loadInfoUpdate": {
+    "description": "loadInfoUpdate"
+  },
+  "infoNotAvailable": "اطلاعات در دسترس نیست",
+  "@infoNotAvailable": {
+    "description": "infoNotAvailable"
+  },
+  "developedBy": "توسعه و نگهداری توسط Joss Estrada (JOSPROX)",
+  "@developedBy": {
+    "description": "developedBy"
+  },
+  "copyrightNotice": "© 2026 JOSPROX. مجوز GPL نسخه 3.0",
+  "@copyrightNotice": {
+    "description": "copyrightNotice"
+  },
+  "backupSettingsAndPlaylists": "از تنظیمات و لیست پخش نسخه پشتیبان تهیه کنید",
+  "@backupSettingsAndPlaylists": {
+    "description": "backupSettingsAndPlaylists"
+  },
+  "restoreSettingsAndPlaylists": "تنظیمات و لیست های پخش را بازیابی کنید",
+  "@restoreSettingsAndPlaylists": {
+    "description": "restoreSettingsAndPlaylists"
+  },
+  "helloWorld": "سلام دنیا",
+  "@helloWorld": {
+    "description": "Este texto es opcional"
+  },
+  "removeFromCache": "حذف از حافظه پنهان",
+  "@removeFromCache": {
+    "description": "removeFromCache"
+  },
+  "quickPics": "انتخاب سریع",
+  "@quickPics": {
+    "description": "quickPics"
+  },
+  "topMusicVid": "موزیک ویدیوهای برتر",
+  "@topMusicVid": {
+    "description": "topMusicVid"
   }
 }

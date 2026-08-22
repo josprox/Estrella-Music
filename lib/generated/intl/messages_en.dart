@@ -22,29 +22,30 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(songTitle) => "Downloading: ${songTitle}";
 
-  static String m7(count) => "Albums: ${count}";
+  static String m1(count) => "Albums: ${count}";
 
-  static String m8(count) => "Artists: ${count}";
+  static String m2(count) => "Artists: ${count}";
 
-  static String m9(count) => "Favorites: ${count}";
+  static String m3(count) => "Favorites: ${count}";
 
-  static String m10(count) => "Playlists: ${count}";
+  static String m4(count) => "Playlists: ${count}";
 
-  static String m11(count) => "Songs: ${count}";
+  static String m5(count) => "Songs: ${count}";
 
-  static String m12(source) => "Migration completed from ${source}.";
+  static String m6(source) => "Migration completed from ${source}.";
 
-  static String m1(error) => "An error occurred while regenerating: ${error}";
+  static String m7(error) => "An error occurred while regenerating: ${error}";
 
-  static String m2(title) => "Similar to ${title}";
+  static String m8(title) => "Similar to ${title}";
 
-  static String m3(current) => "Step ${current} of 3";
+  static String m9(current) => "Step ${current} of 3";
 
-  static String m4(count) => "${count} changes committed.";
+  static String m10(count) => "${count} changes committed.";
 
-  static String m5(count) => "${count} synchronized changes.";
+  static String m11(count) => "${count} synchronized changes.";
 
-  static String m6(statusCode) => "Could not search for users (${statusCode}).";
+  static String m12(statusCode) =>
+      "Could not search for users (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -196,6 +197,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "backupMsg": MessageLookupByLibrary.simpleMessage(
       "Backup successfully saved!",
+    ),
+    "backupSettingsAndPlaylists": MessageLookupByLibrary.simpleMessage(
+      "Backup settings and playlists",
     ),
     "backupSettingsAndPlaylistsDes": MessageLookupByLibrary.simpleMessage(
       "Saves all settings, playlists and login data in a backup file",
@@ -503,6 +507,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "goToDownloadPage": MessageLookupByLibrary.simpleMessage(
       "Click here to go to download page",
     ),
+    "helloWorld": MessageLookupByLibrary.simpleMessage("Hello world"),
     "high": MessageLookupByLibrary.simpleMessage("High"),
     "hintApiUrl": MessageLookupByLibrary.simpleMessage(
       "API URL to Piped instance",
@@ -695,12 +700,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "migration_success": MessageLookupByLibrary.simpleMessage(
       "Migration completed successfully.",
     ),
-    "migration_summary_albums": m7,
-    "migration_summary_artists": m8,
-    "migration_summary_favorites": m9,
-    "migration_summary_playlists": m10,
-    "migration_summary_songs": m11,
-    "migration_summary_start": m12,
+    "migration_summary_albums": m1,
+    "migration_summary_artists": m2,
+    "migration_summary_favorites": m3,
+    "migration_summary_playlists": m4,
+    "migration_summary_songs": m5,
+    "migration_summary_start": m6,
     "minutes": MessageLookupByLibrary.simpleMessage("minutes"),
     "misc": MessageLookupByLibrary.simpleMessage("Misc"),
     "mostListenedSong": MessageLookupByLibrary.simpleMessage(
@@ -904,6 +909,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "queuerearrangingDeniedMsg": MessageLookupByLibrary.simpleMessage(
       "Queue can\'t be rearranged when shuffle mode is enabled",
     ),
+    "quickPics": MessageLookupByLibrary.simpleMessage("Quick selection"),
     "quickpicks": MessageLookupByLibrary.simpleMessage("Quick Picks"),
     "radioNotAvailable": MessageLookupByLibrary.simpleMessage(
       "Radio not available for this artist!",
@@ -922,6 +928,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "recommendedAlbums": MessageLookupByLibrary.simpleMessage("Recommended"),
     "recommendedArtists": MessageLookupByLibrary.simpleMessage("Recommended"),
+    "removeFromCache": MessageLookupByLibrary.simpleMessage(
+      "Remove from cache",
+    ),
     "removeFromLib": MessageLookupByLibrary.simpleMessage(
       "Remove from Library Songs",
     ),
@@ -968,6 +977,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "restoreMsg": MessageLookupByLibrary.simpleMessage(
       "Successfully restored!\nChanges are applied on restart",
+    ),
+    "restoreSettingsAndPlaylists": MessageLookupByLibrary.simpleMessage(
+      "Restore settings and playlists",
     ),
     "restoreSettingsAndPlaylistsDes": MessageLookupByLibrary.simpleMessage(
       "Restores all settings, login data and playlists from a backup file. Overwrites all current data",
@@ -1075,7 +1087,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
       "A new identifier could not be generated. ",
     ),
-    "settings_visitor_exception": m1,
+    "settings_visitor_exception": m7,
     "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
       "Updated identifier",
     ),
@@ -1090,7 +1102,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "shuffle": MessageLookupByLibrary.simpleMessage("Shuffle"),
     "shuffleQueue": MessageLookupByLibrary.simpleMessage("Shuffle Queue"),
-    "similarToTitle": m2,
+    "similarToTitle": m8,
     "singles": MessageLookupByLibrary.simpleMessage("Singles"),
     "skipSilence": MessageLookupByLibrary.simpleMessage("Skip silence"),
     "skipSilenceDes": MessageLookupByLibrary.simpleMessage(
@@ -1100,7 +1112,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Your sleep timer is set",
     ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Sleep Timer"),
-    "slide_indicator": m3,
+    "slide_indicator": m9,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "Song added to playlist!",
     ),
@@ -1158,8 +1170,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
       "Swipe to explore options",
     ),
-    "syncChangesConfirmed": m4,
-    "syncChangesSynced": m5,
+    "syncChangesConfirmed": m10,
+    "syncChangesSynced": m11,
     "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
       "Cloud mode activated. ",
     ),
@@ -1223,6 +1235,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "systemDefault": MessageLookupByLibrary.simpleMessage("System default"),
     "themeMode": MessageLookupByLibrary.simpleMessage("Theme Mode"),
     "title": MessageLookupByLibrary.simpleMessage("Title"),
+    "topMusicVid": MessageLookupByLibrary.simpleMessage("Top music videos"),
     "topmusicvideos": MessageLookupByLibrary.simpleMessage("Top Music Videos"),
     "trending": MessageLookupByLibrary.simpleMessage("Trending"),
     "unLink": MessageLookupByLibrary.simpleMessage("Unlink"),
@@ -1239,7 +1252,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "The response does not contain a list of users.",
     ),
-    "userSearchFailed": m6,
+    "userSearchFailed": m12,
     "userUnblocked": MessageLookupByLibrary.simpleMessage("Unlocked user"),
     "username": MessageLookupByLibrary.simpleMessage("Username"),
     "video": MessageLookupByLibrary.simpleMessage("Video"),

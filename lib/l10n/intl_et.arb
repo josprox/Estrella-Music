@@ -1095,5 +1095,1206 @@
   "keepScreenOnWhilePlayingDes": "Kui see on lubatud, jääb seadme ekraan muusika esituse ajal ärkvel",
   "@keepScreenOnWhilePlayingDes": {
     "description": "keepScreenOnWhilePlayingDes"
+  },
+  "backupSettingsAndPlaylists": "Varundamisseaded ja esitusloendid",
+  "@backupSettingsAndPlaylists": {
+    "description": "backupSettingsAndPlaylists"
+  },
+  "restoreSettingsAndPlaylists": "Taasta seaded ja esitusloendid",
+  "@restoreSettingsAndPlaylists": {
+    "description": "restoreSettingsAndPlaylists"
+  },
+  "helloWorld": "Tere maailm",
+  "@helloWorld": {
+    "description": "Este texto es opcional"
+  },
+  "removeFromCache": "Eemalda vahemälust",
+  "@removeFromCache": {
+    "description": "removeFromCache"
+  },
+  "quickPics": "Kiire valik",
+  "@quickPics": {
+    "description": "quickPics"
+  },
+  "topMusicVid": "Parimad muusikavideod",
+  "@topMusicVid": {
+    "description": "topMusicVid"
+  },
+  "auth_login_success": "Sisselogimine õnnestus",
+  "@auth_login_success": {
+    "description": "auth_login_success"
+  },
+  "settings_cloud_backup": "Pilvevarundamine",
+  "@settings_cloud_backup": {
+    "description": "settings_cloud_backup"
+  },
+  "settings_migration_title": "Mine üle Joss Music Kotlinilt",
+  "@settings_migration_title": {
+    "description": "settings_migration_title"
+  },
+  "backup_confirm_question": "Kas soovite teha varukoopia?",
+  "@backup_confirm_question": {
+    "description": "backup_confirm_question"
+  },
+  "backup_selection_prompt": "Valige, milliseid andmeid varundada",
+  "@backup_selection_prompt": {
+    "description": "backup_selection_prompt"
+  },
+  "search_recent_title": "Viimased otsingud",
+  "@search_recent_title": {
+    "description": "search_recent_title"
+  },
+  "back": "Tagasi",
+  "@back": {
+    "description": "back"
+  },
+  "auth_forgot_password": "Unustasin oma parooli",
+  "@auth_forgot_password": {
+    "description": "auth_forgot_password"
+  },
+  "auth_btn_login": "Logi sisse",
+  "@auth_btn_login": {
+    "description": "auth_btn_login"
+  },
+  "auth_btn_register": "Registreeru",
+  "@auth_btn_register": {
+    "description": "auth_btn_register"
+  },
+  "email": "Meil",
+  "@email": {
+    "description": "email"
+  },
+  "password_text": "Parool",
+  "@password_text": {
+    "description": "Contraseña texto traducido"
+  },
+  "auth_confirm_password": "Kinnitage parool",
+  "@auth_confirm_password": {
+    "description": "auth_confirm_password"
+  },
+  "auth_welcome_title": "Tere tulemast Estrella muusikasse",
+  "@auth_welcome_title": {
+    "description": "auth_welcome_title"
+  },
+  "auth_welcome_subtitle": "Tere tulemast Estrella muusikasse",
+  "@auth_welcome_subtitle": {
+    "description": "auth_welcome_subtitle"
+  },
+  "auth_first_name": "Eesnimi",
+  "@auth_first_name": {
+    "description": "auth_first_name"
+  },
+  "auth_last_name": "Perekonnanimi",
+  "@auth_last_name": {
+    "description": "auth_last_name"
+  },
+  "auth_agree_personal_data": "Nõustun oma andmeid kasutama...",
+  "@auth_agree_personal_data": {
+    "description": "auth_agree_personal_data"
+  },
+  "settings_general_section": "Kindral",
+  "@settings_general_section": {
+    "description": "settings_general_section"
+  },
+  "settings_logout": "Logi välja",
+  "@settings_logout": {
+    "description": "settings_logout"
+  },
+  "settings_cloud_backup_desc": "Laadige üles, taastage ja hallake...",
+  "@settings_cloud_backup_desc": {
+    "description": "settings_cloud_backup_desc"
+  },
+  "settings_migration_desc": "Esitusloendite, laulude importimine...",
+  "@settings_migration_desc": {
+    "description": "settings_migration_desc"
+  },
+  "backup_btn_restart": "Taaskäivitage rakendus",
+  "@backup_btn_restart": {
+    "description": "backup_btn_restart"
+  },
+  "backup_btn_upload": "Laadige varukoopia kohe üles",
+  "@backup_btn_upload": {
+    "description": "backup_btn_upload"
+  },
+  "backup_no_backups": "Varukoopiaid veel pole...",
+  "@backup_no_backups": {
+    "description": "backup_no_backups"
+  },
+  "backup_auth_required": "Vajad aktiivset seanssi...",
+  "@backup_auth_required": {
+    "description": "backup_auth_required"
+  },
+  "backup_upload_success": "Varukoopia on õigesti üles laaditud.",
+  "@backup_upload_success": {
+    "description": "backup_upload_success"
+  },
+  "backup_restore_success": "Varukoopia taastatud. Taaskäivitage rakendus.",
+  "@backup_restore_success": {
+    "description": "backup_restore_success"
+  },
+  "backup_delete_success": "Varukoopia kustutatud.",
+  "@backup_delete_success": {
+    "description": "backup_delete_success"
+  },
+  "genre_pop": "Pop",
+  "@genre_pop": {
+    "description": "genre_pop"
+  },
+  "genre_rock": "Rock",
+  "@genre_rock": {
+    "description": "genre_rock"
+  },
+  "genre_hiphop": "hip hop",
+  "@genre_hiphop": {
+    "description": "genre_hiphop"
+  },
+  "genre_electronic": "Elektroonika",
+  "@genre_electronic": {
+    "description": "genre_electronic"
+  },
+  "genre_jazz": "jazz",
+  "@genre_jazz": {
+    "description": "genre_jazz"
+  },
+  "genre_latin": "ladina keel",
+  "@genre_latin": {
+    "description": "genre_latin"
+  },
+  "migration_btn_select": "Valige fail ja importige",
+  "@migration_btn_select": {
+    "description": "migration_btn_select"
+  },
+  "forgottenFavorites": "unustatud lemmikud",
+  "@forgottenFavorites": {
+    "description": "forgottenFavorites"
+  },
+  "mostListenedSong": "Enim kuulatud laul",
+  "@mostListenedSong": {
+    "description": "mostListenedSong"
+  },
+  "reproducedBy": "Reprodutseerinud",
+  "@reproducedBy": {
+    "description": "reproducedBy"
+  },
+  "recentSearches": "Viimased otsingud",
+  "@recentSearches": {
+    "description": "recentSearches"
+  },
+  "popularTracks": "Populaarsed palad",
+  "@popularTracks": {
+    "description": "popularTracks"
+  },
+  "latestRelease": "Viimane väljalase",
+  "@latestRelease": {
+    "description": "latestRelease"
+  },
+  "follow": "Jälgi",
+  "@follow": {
+    "description": "follow"
+  },
+  "following": "Jälgides",
+  "@following": {
+    "description": "following"
+  },
+  "listenNow": "Kuulake nüüd",
+  "@listenNow": {
+    "description": "listenNow"
+  },
+  "video": "video",
+  "@video": {
+    "description": "video"
+  },
+  "readMore": "Loe edasi",
+  "@readMore": {
+    "description": "readMore"
+  },
+  "speedAndPitch": "Kiirus ja kõrgus",
+  "@speedAndPitch": {
+    "description": "speedAndPitch"
+  },
+  "playbackSpeed": "Taasesituse kiirus",
+  "@playbackSpeed": {
+    "description": "playbackSpeed"
+  },
+  "songPitch": "laulu toon",
+  "@songPitch": {
+    "description": "songPitch"
+  },
+  "musicRecognition": "Muusika äratundmine",
+  "@musicRecognition": {
+    "description": "musicRecognition"
+  },
+  "listeningToEnvironment": "Keskkonda kuulates...",
+  "@listeningToEnvironment": {
+    "description": "listeningToEnvironment"
+  },
+  "micInstruction": "Veenduge, et muusika mängiks mikrofoni läheduses piisavalt valjult.",
+  "@micInstruction": {
+    "description": "micInstruction"
+  },
+  "processingAudio": "Heli töötlemine...",
+  "@processingAudio": {
+    "description": "processingAudio"
+  },
+  "shazamSearching": "Shazami andmebaasist vastete otsimine...",
+  "@shazamSearching": {
+    "description": "shazamSearching"
+  },
+  "songFound": "Laul leitud!",
+  "@songFound": {
+    "description": "songFound"
+  },
+  "playNow": "Mängi kohe",
+  "@playNow": {
+    "description": "playNow"
+  },
+  "searchInLibrary": "Otsige raamatukogust",
+  "@searchInLibrary": {
+    "description": "searchInLibrary"
+  },
+  "noMatchesFound": "Vasteid pole",
+  "@noMatchesFound": {
+    "description": "noMatchesFound"
+  },
+  "noMatchInstruction": "Salvestatud helist ei leitud ühtegi laulu",
+  "@noMatchInstruction": {
+    "description": "noMatchInstruction"
+  },
+  "errorOccurred": "Ilmnes viga",
+  "@errorOccurred": {
+    "description": "errorOccurred"
+  },
+  "playingRecognizedTrack": "Mängib:",
+  "@playingRecognizedTrack": {
+    "description": "playingRecognizedTrack"
+  },
+  "errorPlayingTrack": "Viga mängimisel:",
+  "@errorPlayingTrack": {
+    "description": "errorPlayingTrack"
+  },
+  "welcome_title": "Sinu muusika, sinu viis",
+  "@welcome_title": {
+    "description": "welcome_title"
+  },
+  "welcome_subtitle": "Valige, kuidas soovite edaspidi Estrella muusikat kogeda.",
+  "@welcome_subtitle": {
+    "description": "welcome_subtitle"
+  },
+  "welcome_intro": "Oleme oma platvormi moderniseerinud. Vana käsitsi varukoopiate üleslaadimise süsteem on keelatud. Teil on nüüd kaks selget viisi oma muusikakogu haldamiseks.",
+  "@welcome_intro": {
+    "description": "welcome_intro"
+  },
+  "recommend_cloud": "Soovitame aktiveerida pilverežiimi Spotify-laadse kogemuse saamiseks: reaalajas sünkroonimine kõigi teie seadmete vahel ja automaatne varundamine ilma, et peaksite midagi tegema.",
+  "@recommend_cloud": {
+    "description": "recommend_cloud"
+  },
+  "swipe_prompt": "Pühkige valikute uurimiseks",
+  "@swipe_prompt": {
+    "description": "swipe_prompt"
+  },
+  "local_title": "Kohalik režiim",
+  "@local_title": {
+    "description": "local_title"
+  },
+  "local_subtitle": "Täielik privaatsus teie seadmes",
+  "@local_subtitle": {
+    "description": "local_subtitle"
+  },
+  "local_b1": "See töötab ilma sisselogimise vajaduseta.",
+  "@local_b1": {
+    "description": "local_b1"
+  },
+  "local_b2": "Kogu teie raamatukogu jääb rangelt sellesse arvutisse.",
+  "@local_b2": {
+    "description": "local_b2"
+  },
+  "local_b3": "Märkus. Käsitsi pilvevarundamist ei tehta. Kui kaotate oma seadme või desinstallite rakenduse, ei saa teie andmeid taastada.",
+  "@local_b3": {
+    "description": "local_b3"
+  },
+  "local_btn": "Kasutage ainult selles seadmes",
+  "@local_btn": {
+    "description": "local_btn"
+  },
+  "cloud_title": "Pilverežiim (soovitatav)",
+  "@cloud_title": {
+    "description": "cloud_title"
+  },
+  "cloud_subtitle": "Reaalajas sünkroonimine Joss Rediga",
+  "@cloud_subtitle": {
+    "description": "cloud_subtitle"
+  },
+  "cloud_b1": "Logige turvaliselt sisse, kasutades oma Joss Redi kontot.",
+  "@cloud_b1": {
+    "description": "cloud_b1"
+  },
+  "cloud_b2": "Juurdepääs oma esitusloenditele, lemmikutele ja ajaloole mis tahes seadmest (Windows, Android jne) koheselt.",
+  "@cloud_b2": {
+    "description": "cloud_b2"
+  },
+  "cloud_b3": "Nutikas sünkroonimine: töötage võrguühenduseta ja laadige muudatused Interneti taastamisel automaatselt üles.",
+  "@cloud_b3": {
+    "description": "cloud_b3"
+  },
+  "cloud_btn": "Aktiveerige pilvesünkroonimine",
+  "@cloud_btn": {
+    "description": "cloud_btn"
+  },
+  "slide_indicator": "Samm {current} 3-st",
+  "@slide_indicator": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      }
+    },
+    "description": "slide_indicator"
+  },
+  "news_card_title": "Estrella muusika on arenenud!",
+  "@news_card_title": {
+    "description": "news_card_title"
+  },
+  "news_card_subtitle": "100% sünkroonimine Joss Rediga, esitusloendid sõpradega ja palju muud. Puudutage, et näha, mis on uut.",
+  "@news_card_subtitle": {
+    "description": "news_card_subtitle"
+  },
+  "news_dialog_title": "Estrella Muusikauudised",
+  "@news_dialog_title": {
+    "description": "news_dialog_title"
+  },
+  "news_item_sync_title": "Täielik integratsioon Joss Rediga",
+  "@news_item_sync_title": {
+    "description": "news_item_sync_title"
+  },
+  "news_item_sync_desc": "Teie esitusloendid ja lemmikud salvestatakse nüüd ja sünkroonitakse automaatselt pilves teie Joss Redi põhikontoga.",
+  "@news_item_sync_desc": {
+    "description": "news_item_sync_desc"
+  },
+  "news_item_collab_title": "Koostöö esitusloendid",
+  "@news_item_collab_title": {
+    "description": "news_item_collab_title"
+  },
+  "news_item_collab_desc": "Looge oma sõpradega esitusloendeid! Esitusloendi loomisel märkige ruut Collaborative ja valige sõbrad, keda koos muuta.",
+  "@news_item_collab_desc": {
+    "description": "news_item_collab_desc"
+  },
+  "news_item_trans_title": "Läbipaistev sünkroonimine",
+  "@news_item_trans_title": {
+    "description": "news_item_trans_title"
+  },
+  "news_item_trans_desc": "Te ei pea enam klõpsama käsitsi sünkroonimise nuppe; Uus mootor vastutab automaatse üles-alla käiguvahetuse eest.",
+  "@news_item_trans_desc": {
+    "description": "news_item_trans_desc"
+  },
+  "news_dialog_section_friends": "Sõbrad ja kontohaldus:",
+  "@news_dialog_section_friends": {
+    "description": "news_dialog_section_friends"
+  },
+  "news_dialog_friends_desc": "Sõprade lisamiseks, taotluste vastuvõtmiseks või turvaprofiili haldamiseks kasutage Joss Redi selle ametlikel platvormidel:",
+  "@news_dialog_friends_desc": {
+    "description": "news_dialog_friends_desc"
+  },
+  "news_btn_app": "Joss Redi rakendus (Play pood)",
+  "@news_btn_app": {
+    "description": "news_btn_app"
+  },
+  "news_btn_web": "Joss Red Web",
+  "@news_btn_web": {
+    "description": "news_btn_web"
+  },
+  "news_btn_dismiss": "Arusaadav",
+  "@news_btn_dismiss": {
+    "description": "news_btn_dismiss"
+  },
+  "settings_appearance_desc": "Teema, keele ja liidese animatsioonid.",
+  "@settings_appearance_desc": {
+    "description": "settings_appearance_desc"
+  },
+  "settings_content_desc": "Avastage filtrid, integratsioon Pipediga ja vahemälu.",
+  "@settings_content_desc": {
+    "description": "settings_content_desc"
+  },
+  "settings_playback_desc": "Voogesituse kvaliteet, normaliseerimine, vaigistamine ja aku.",
+  "@settings_playback_desc": {
+    "description": "settings_playback_desc"
+  },
+  "settings_downloads_desc": "Allalaadimised ja salvestusruum",
+  "@settings_downloads_desc": {
+    "description": "settings_downloads_desc"
+  },
+  "settings_downloads_sub": "Helivormingud, kaustad ja automaatsed allalaadimised.",
+  "@settings_downloads_sub": {
+    "description": "settings_downloads_sub"
+  },
+  "settings_account_desc": "Konto ja sünkroonimine",
+  "@settings_account_desc": {
+    "description": "settings_account_desc"
+  },
+  "settings_account_sub": "Pilverežiim, varukoopiad, sõprade loend ja migratsioonid.",
+  "@settings_account_sub": {
+    "description": "settings_account_sub"
+  },
+  "settings_about_desc": "Estrella muusikast",
+  "@settings_about_desc": {
+    "description": "settings_about_desc"
+  },
+  "settings_about_sub": "Versioon, avatud lähtekoodiga projekt ja GitHub.",
+  "@settings_about_sub": {
+    "description": "settings_about_sub"
+  },
+  "settings_local_cloud_title": "Kohalik režiim / EMusic Cloud",
+  "@settings_local_cloud_title": {
+    "description": "settings_local_cloud_title"
+  },
+  "settings_local_cloud_desc": "Valige, viige üle või vaadake sünkroonimisolekut Joss Rediga.",
+  "@settings_local_cloud_desc": {
+    "description": "settings_local_cloud_desc"
+  },
+  "settings_my_friends": "mu sõbrad",
+  "@settings_my_friends": {
+    "description": "settings_my_friends"
+  },
+  "settings_my_friends_desc": "Hallake oma Joss Redi sõpru otse.",
+  "@settings_my_friends_desc": {
+    "description": "settings_my_friends_desc"
+  },
+  "settings_refresh_visitor_title": "Värskenda ID (külastaja ID)",
+  "@settings_refresh_visitor_title": {
+    "description": "settings_refresh_visitor_title"
+  },
+  "settings_refresh_visitor_desc": "Kui Discoveri sisu ei laadita, looge oma YouTube Music ID uuesti.",
+  "@settings_refresh_visitor_desc": {
+    "description": "settings_refresh_visitor_desc"
+  },
+  "settings_visitor_updated": "Uuendatud identifikaator",
+  "@settings_visitor_updated": {
+    "description": "settings_visitor_updated"
+  },
+  "settings_visitor_updated_desc": "Uue külastaja ID genereerimine õnnestus.",
+  "@settings_visitor_updated_desc": {
+    "description": "settings_visitor_updated_desc"
+  },
+  "settings_visitor_error": "Viga",
+  "@settings_visitor_error": {
+    "description": "settings_visitor_error"
+  },
+  "settings_visitor_error_desc": "Uut identifikaatorit ei saanud luua. Proovige hiljem uuesti.",
+  "@settings_visitor_error_desc": {
+    "description": "settings_visitor_error_desc"
+  },
+  "settings_visitor_exception": "Taasloomisel ilmnes viga: {error}",
+  "@settings_visitor_exception": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    },
+    "description": "settings_visitor_exception"
+  },
+  "migratedLibrary": "Migreeritud raamatukogu",
+  "@migratedLibrary": {
+    "description": "migratedLibrary"
+  },
+  "noSongsInCollection": "Selles kogus pole laule",
+  "@noSongsInCollection": {
+    "description": "noSongsInCollection"
+  },
+  "startupScreen": "Avage käivitamisel",
+  "@startupScreen": {
+    "description": "startupScreen"
+  },
+  "startupScreenDescription": "Valige jaotis, mille Estrella Music esimesena avab",
+  "@startupScreenDescription": {
+    "description": "startupScreenDescription"
+  },
+  "friends": "Sõbrad",
+  "@friends": {
+    "description": "friends"
+  },
+  "dailyDiscover": "Igapäevane avastus",
+  "@dailyDiscover": {
+    "description": "dailyDiscover"
+  },
+  "keepListening": "kuula edasi",
+  "@keepListening": {
+    "description": "keepListening"
+  },
+  "similarToTitle": "Sarnane {title}",
+  "@similarToTitle": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    },
+    "description": "similarToTitle"
+  },
+  "pipedPlaylistDescription": "Piped esitusloend",
+  "@pipedPlaylistDescription": {
+    "description": "pipedPlaylistDescription"
+  },
+  "collaborativePlaylistDescription": "Koostöö esitusloend",
+  "@collaborativePlaylistDescription": {
+    "description": "collaborativePlaylistDescription"
+  },
+  "libraryPlaylistDescription": "Raamatukogu esitusloend",
+  "@libraryPlaylistDescription": {
+    "description": "libraryPlaylistDescription"
+  },
+  "untitledSong": "Pealkirjata laul",
+  "@untitledSong": {
+    "description": "untitledSong"
+  },
+  "migratedPlaylist": "Migreeritud esitusloend",
+  "@migratedPlaylist": {
+    "description": "migratedPlaylist"
+  },
+  "migratedAlbum": "Album on üle viidud",
+  "@migratedAlbum": {
+    "description": "migratedAlbum"
+  },
+  "songsImportedFromJossMusic": "Joss Music Kotlinist imporditud laulud",
+  "@songsImportedFromJossMusic": {
+    "description": "songsImportedFromJossMusic"
+  },
+  "importedFromJossMusic": "Imporditud Joss Music Kotlinist",
+  "@importedFromJossMusic": {
+    "description": "importedFromJossMusic"
+  },
+  "syncLocalModeActive": "Kohalik režiim aktiivne",
+  "@syncLocalModeActive": {
+    "description": "syncLocalModeActive"
+  },
+  "syncCloudPending": "Pilverežiim aktiivne. Ootel sünkroonimine.",
+  "@syncCloudPending": {
+    "description": "syncCloudPending"
+  },
+  "syncCloudDownloadingExisting": "Pilverežiim aktiveeritud. Olemasoleva raamatukogu allalaadimine.",
+  "@syncCloudDownloadingExisting": {
+    "description": "syncCloudDownloadingExisting"
+  },
+  "syncCloudMigrationComplete": "Pilverežiim aktiveeritud. Migreeritud raamatukogu.",
+  "@syncCloudMigrationComplete": {
+    "description": "syncCloudMigrationComplete"
+  },
+  "syncLocalDeviceOnly": "Teie andmeid hoitakse ainult selles seadmes.",
+  "@syncLocalDeviceOnly": {
+    "description": "syncLocalDeviceOnly"
+  },
+  "syncDownloading": "EMusicu muudatuste allalaadimine...",
+  "@syncDownloading": {
+    "description": "syncDownloading"
+  },
+  "syncDownloadFailed": "Sünkroonimise allalaadimine ebaõnnestus.",
+  "@syncDownloadFailed": {
+    "description": "syncDownloadFailed"
+  },
+  "syncLocalChangesFirst": "Kohapeal on uued muudatused. Need laaditakse üles enne allalaadimist.",
+  "@syncLocalChangesFirst": {
+    "description": "syncLocalChangesFirst"
+  },
+  "syncLibrarySynced": "Sünkroonitud raamatukogu.",
+  "@syncLibrarySynced": {
+    "description": "syncLibrarySynced"
+  },
+  "syncOfflinePending": "Võrguühenduseta. Muudatused on ootel.",
+  "@syncOfflinePending": {
+    "description": "syncOfflinePending"
+  },
+  "syncLibraryUpToDate": "Raamatukogu ajakohane.",
+  "@syncLibraryUpToDate": {
+    "description": "syncLibraryUpToDate"
+  },
+  "syncChangesSynced": "{count} sünkroonitud muudatused.",
+  "@syncChangesSynced": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    },
+    "description": "syncChangesSynced"
+  },
+  "syncUploading": "Muudatuste üleslaadimine rakendusse EMusic...",
+  "@syncUploading": {
+    "description": "syncUploading"
+  },
+  "syncUploadSuccessWs": "Muudatuste üleslaadimine õnnestus (WS).",
+  "@syncUploadSuccessWs": {
+    "description": "syncUploadSuccessWs"
+  },
+  "syncUploadWsRetry": "WS-i abil ei saanud üles laadida. Seda proovitakse hiljem uuesti.",
+  "@syncUploadWsRetry": {
+    "description": "syncUploadWsRetry"
+  },
+  "syncUploadSuccess": "Muudatused on õigesti üles laaditud.",
+  "@syncUploadSuccess": {
+    "description": "syncUploadSuccess"
+  },
+  "syncUploadRetry": "Ei saanud püsti. Seda proovitakse hiljem uuesti.",
+  "@syncUploadRetry": {
+    "description": "syncUploadRetry"
+  },
+  "syncOfflineRetry": "Võrguühenduseta. Muudatused salvestati uuesti proovimiseks.",
+  "@syncOfflineRetry": {
+    "description": "syncOfflineRetry"
+  },
+  "syncUnconfirmedRetry": "EMusic ei kinnitanud kõiki muudatusi. Neid proovitakse uuesti.",
+  "@syncUnconfirmedRetry": {
+    "description": "syncUnconfirmedRetry"
+  },
+  "syncChangesConfirmed": "{count} tehtud muudatusi.",
+  "@syncChangesConfirmed": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    },
+    "description": "syncChangesConfirmed"
+  },
+  "migrationAlreadyRunning": "Migratsioon on juba pooleli.",
+  "@migrationAlreadyRunning": {
+    "description": "migrationAlreadyRunning"
+  },
+  "migrationLoginRequired": "Enne migreerimist logige Joss Redi sisse.",
+  "@migrationLoginRequired": {
+    "description": "migrationLoginRequired"
+  },
+  "migrationCheckingCloud": "Kontrollimine, kas EMusic Cloudil on juba teek...",
+  "@migrationCheckingCloud": {
+    "description": "migrationCheckingCloud"
+  },
+  "cloudLibraryFoundDeviceWillDownload": "Leiti pilvteek. See seade laadib selle alla ilma seda üle kirjutamata.",
+  "@cloudLibraryFoundDeviceWillDownload": {
+    "description": "cloudLibraryFoundDeviceWillDownload"
+  },
+  "cloudLibraryFound": "Pilveteek leitud.",
+  "@cloudLibraryFound": {
+    "description": "cloudLibraryFound"
+  },
+  "migrationCreatingBackup": "Kohaliku varukoopia loomine enne pilve ühendamist...",
+  "@migrationCreatingBackup": {
+    "description": "migrationCreatingBackup"
+  },
+  "migrationAnalyzingLocal": "Kohaliku raamatukogu analüüsimine...",
+  "@migrationAnalyzingLocal": {
+    "description": "migrationAnalyzingLocal"
+  },
+  "migrationPreparingCloud": "Migratsiooni ettevalmistamine EMusic Cloudis...",
+  "@migrationPreparingCloud": {
+    "description": "migrationPreparingCloud"
+  },
+  "migrationStartFailed": "EMusic Cloud ei saanud migreerimist alustada.",
+  "@migrationStartFailed": {
+    "description": "migrationStartFailed"
+  },
+  "migrationUploadingData": "Esitusloendite, lemmikute ja ajaloo üleslaadimine...",
+  "@migrationUploadingData": {
+    "description": "migrationUploadingData"
+  },
+  "migrationUploadIncomplete": "Kõiki andmeid ei saanud üles laadida. Hoiame teie kohalikku tuge.",
+  "@migrationUploadIncomplete": {
+    "description": "migrationUploadIncomplete"
+  },
+  "migrationVerifyingIntegrity": "Terviklikkuse kontrollimine EMusic Cloudis...",
+  "@migrationVerifyingIntegrity": {
+    "description": "migrationVerifyingIntegrity"
+  },
+  "migrationValidationFailed": "EMusic Cloud ei saanud migratsiooni kinnitada.",
+  "@migrationValidationFailed": {
+    "description": "migrationValidationFailed"
+  },
+  "cloudModeReadyOfflineCache": "Pilverežiim on valmis. See seade töötab võrguühenduseta vahemäluna.",
+  "@cloudModeReadyOfflineCache": {
+    "description": "cloudModeReadyOfflineCache"
+  },
+  "migrationCompleted": "Migreerimine lõpetatud.",
+  "@migrationCompleted": {
+    "description": "migrationCompleted"
+  },
+  "migrationFailedLocalPreserved": "Migratsioon ebaõnnestus. Teie kohalikke andmeid ei muudetud.",
+  "@migrationFailedLocalPreserved": {
+    "description": "migrationFailedLocalPreserved"
+  },
+  "sessionExpiredLoginAgain": "Teie seanss on aegunud. Logige uuesti sisse.",
+  "@sessionExpiredLoginAgain": {
+    "description": "sessionExpiredLoginAgain"
+  },
+  "selectedFileNotFound": "Valitud faili ei leitud.",
+  "@selectedFileNotFound": {
+    "description": "selectedFileNotFound"
+  },
+  "genericAlbum": "Album",
+  "@genericAlbum": {
+    "description": "genericAlbum"
+  },
+  "friendsLoginRequired": "Sõprade leidmiseks logige sisse.",
+  "@friendsLoginRequired": {
+    "description": "friendsLoginRequired"
+  },
+  "invalidSessionToken": "Seanss ei sisalda kehtivat luba.",
+  "@invalidSessionToken": {
+    "description": "invalidSessionToken"
+  },
+  "userSearchFailed": "Kasutajaid ei saanud otsida ({statusCode}).",
+  "@userSearchFailed": {
+    "placeholders": {
+      "statusCode": {
+        "type": "int"
+      }
+    },
+    "description": "userSearchFailed"
+  },
+  "invalidServerResponse": "Vale serveri vastus.",
+  "@invalidServerResponse": {
+    "description": "invalidServerResponse"
+  },
+  "userListMissing": "Vastus ei sisalda kasutajate loendit.",
+  "@userListMissing": {
+    "description": "userListMissing"
+  },
+  "playlistCollaboratorsTitle": "Esitusloendi kaasautorid",
+  "@playlistCollaboratorsTitle": {
+    "description": "playlistCollaboratorsTitle"
+  },
+  "collaboratorsInstruction": "Valige sõbrad, kes saavad seda esitusloendit näha ja muuta:",
+  "@collaboratorsInstruction": {
+    "description": "collaboratorsInstruction"
+  },
+  "noJossRedFriends": "Teil pole Joss Redis sõpru lisatud.",
+  "@noJossRedFriends": {
+    "description": "noJossRedFriends"
+  },
+  "friendFallback": "sõber",
+  "@friendFallback": {
+    "description": "friendFallback"
+  },
+  "collaboratorsUpdated": "Kaasautoreid värskendati õigesti.",
+  "@collaboratorsUpdated": {
+    "description": "collaboratorsUpdated"
+  },
+  "save": "Salvesta",
+  "@save": {
+    "description": "save"
+  },
+  "manageCollaborators": "Kaastöötajate (sõprade) haldamine",
+  "@manageCollaborators": {
+    "description": "manageCollaborators"
+  },
+  "done": "Valmis",
+  "@done": {
+    "description": "done"
+  },
+  "notAuthenticated": "Pole autentitud",
+  "@notAuthenticated": {
+    "description": "notAuthenticated"
+  },
+  "genericError": "Viga",
+  "@genericError": {
+    "description": "genericError"
+  },
+  "friendRequestSent": "Sõbrakutse saadetud",
+  "@friendRequestSent": {
+    "description": "friendRequestSent"
+  },
+  "friendRequestAccepted": "Sõbrakutse vastu võetud",
+  "@friendRequestAccepted": {
+    "description": "friendRequestAccepted"
+  },
+  "friendshipRemoved": "Sõprus eemaldati",
+  "@friendshipRemoved": {
+    "description": "friendshipRemoved"
+  },
+  "userBlocked": "Blokeeritud kasutaja",
+  "@userBlocked": {
+    "description": "userBlocked"
+  },
+  "userUnblocked": "Avatud kasutaja",
+  "@userUnblocked": {
+    "description": "userUnblocked"
+  },
+  "artistsByTaste": "Teie maitse järgi",
+  "@artistsByTaste": {
+    "description": "artistsByTaste"
+  },
+  "followedArtists": "järgnesid",
+  "@followedArtists": {
+    "description": "followedArtists"
+  },
+  "recommendedArtists": "Soovitatav",
+  "@recommendedArtists": {
+    "description": "recommendedArtists"
+  },
+  "albumsByTaste": "Teie maitse järgi",
+  "@albumsByTaste": {
+    "description": "albumsByTaste"
+  },
+  "savedAlbums": "Salvestatud",
+  "@savedAlbums": {
+    "description": "savedAlbums"
+  },
+  "recommendedAlbums": "Soovitatav",
+  "@recommendedAlbums": {
+    "description": "recommendedAlbums"
+  },
+  "downloadNotificationChannelName": "muusika allalaadimine",
+  "@downloadNotificationChannelName": {
+    "description": "downloadNotificationChannelName"
+  },
+  "downloadNotificationChannelDescription": "Hoiab teie muusika allalaadimist taustal aktiivsena.",
+  "@downloadNotificationChannelDescription": {
+    "description": "downloadNotificationChannelDescription"
+  },
+  "downloadNotificationTitle": "Muusika allalaadimine",
+  "@downloadNotificationTitle": {
+    "description": "downloadNotificationTitle"
+  },
+  "downloadNotificationPreparing": "Allalaadimiste ettevalmistamine…",
+  "@downloadNotificationPreparing": {
+    "description": "downloadNotificationPreparing"
+  },
+  "downloadNotificationSong": "Allalaadimine: {songTitle}",
+  "@downloadNotificationSong": {
+    "placeholders": {
+      "songTitle": {
+        "type": "String"
+      }
+    },
+    "description": "downloadNotificationSong"
+  },
+  "syncCloudModeActive": "Pilverežiim aktiivne",
+  "@syncCloudModeActive": {
+    "description": "syncCloudModeActive"
+  },
+  "permissionsConsentTitle": "Load alustamiseks",
+  "@permissionsConsentTitle": {
+    "description": "permissionsConsentTitle"
+  },
+  "permissionsConsentDescription": "Estrella Music vajab neid lube teie muusika haldamiseks ja kõigi taasesitusfunktsioonide pakkumiseks.",
+  "@permissionsConsentDescription": {
+    "description": "permissionsConsentDescription"
+  },
+  "permissionsStorageTitle": "Muusika ja salvestusruum",
+  "@permissionsStorageTitle": {
+    "description": "permissionsStorageTitle"
+  },
+  "permissionsStorageDescription": "See võimaldab teil esitada muusikat, salvestada allalaadimisi, eksportida esitusloendeid ja valmistada ette värskendusi.",
+  "@permissionsStorageDescription": {
+    "description": "permissionsStorageDescription"
+  },
+  "permissionsNotificationsTitle": "Märguanded",
+  "@permissionsNotificationsTitle": {
+    "description": "permissionsNotificationsTitle"
+  },
+  "permissionsNotificationsDescription": "Näitab taasesituse juhtnuppe, allalaadimise edenemist ja olulisi rakendusteateid.",
+  "@permissionsNotificationsDescription": {
+    "description": "permissionsNotificationsDescription"
+  },
+  "permissionsMicrophoneTitle": "Mikrofon",
+  "@permissionsMicrophoneTitle": {
+    "description": "permissionsMicrophoneTitle"
+  },
+  "permissionsMicrophoneDescription": "Seda kasutatakse ainult siis, kui otsustate tuvastada teie ümber mängiva loo.",
+  "@permissionsMicrophoneDescription": {
+    "description": "permissionsMicrophoneDescription"
+  },
+  "permissionsContinueButton": "Andke vajalikud load",
+  "@permissionsContinueButton": {
+    "description": "permissionsContinueButton"
+  },
+  "permissionsRequiredNotice": "Jätkamiseks on vaja kõiki kolme luba. Saate neid hiljem süsteemiseadetes muuta.",
+  "@permissionsRequiredNotice": {
+    "description": "permissionsRequiredNotice"
+  },
+  "permissionsAllow": "Luba",
+  "@permissionsAllow": {
+    "description": "permissionsAllow"
+  },
+  "permissionsOpenSettings": "Seaded",
+  "@permissionsOpenSettings": {
+    "description": "permissionsOpenSettings"
+  },
+  "auth_2fa_title": "Kahefaktoriline autentimine",
+  "@auth_2fa_title": {
+    "description": "auth_2fa_title"
+  },
+  "auth_2fa_subtitle": "Sisestage autentimisrakenduse 6-kohaline kood. See juurdepääs aegub 5 minuti pärast.",
+  "@auth_2fa_subtitle": {
+    "description": "auth_2fa_subtitle"
+  },
+  "auth_2fa_code": "Autentimiskood",
+  "@auth_2fa_code": {
+    "description": "auth_2fa_code"
+  },
+  "auth_2fa_verify": "Kontrollige ja jätkake",
+  "@auth_2fa_verify": {
+    "description": "auth_2fa_verify"
+  },
+  "auth_2fa_invalid": "Sisestage kehtiv 6-kohaline kood või logige uuesti sisse.",
+  "@auth_2fa_invalid": {
+    "description": "auth_2fa_invalid"
+  },
+  "lyrics": "Kirjad",
+  "@lyrics": {
+    "description": "lyrics"
+  },
+  "no": "Ei",
+  "@no": {
+    "description": "no"
+  },
+  "podcasts": "Podcastid",
+  "@podcasts": {
+    "description": "podcasts"
+  },
+  "episodes": "Episoodid",
+  "@episodes": {
+    "description": "episodes"
+  },
+  "profiles": "Profiilid",
+  "@profiles": {
+    "description": "profiles"
+  },
+  "addToLibrary": "Lisa raamatukogusse",
+  "@addToLibrary": {
+    "description": "addToLibrary"
+  },
+  "removeFromLibrary": "Kustuta raamatukogust",
+  "@removeFromLibrary": {
+    "description": "removeFromLibrary"
+  },
+  "play": "Mängi",
+  "@play": {
+    "description": "play"
+  },
+  "enqueueAlbumSongs": "Lisage albumi lood järjekorda",
+  "@enqueueAlbumSongs": {
+    "description": "enqueueAlbumSongs"
+  },
+  "downloadAlbumSongs": "Laadige laule albumist alla",
+  "@downloadAlbumSongs": {
+    "description": "downloadAlbumSongs"
+  },
+  "shareAlbum": "Jaga albumit",
+  "@shareAlbum": {
+    "description": "shareAlbum"
+  },
+  "imported": "Imporditud",
+  "@imported": {
+    "description": "imported"
+  },
+  "importedPlaylist": "Imporditud esitusloend",
+  "@importedPlaylist": {
+    "description": "importedPlaylist"
+  },
+  "permissionDenied": "Luba ei antud",
+  "@permissionDenied": {
+    "description": "permissionDenied"
+  },
+  "enqueueSongs": "Lisage lugusid järjekorda",
+  "@enqueueSongs": {
+    "description": "enqueueSongs"
+  },
+  "shuffle": "Juhuslik",
+  "@shuffle": {
+    "description": "shuffle"
+  },
+  "downloadPlaylist": "Laadige esitusloend alla",
+  "@downloadPlaylist": {
+    "description": "downloadPlaylist"
+  },
+  "syncPlaylistSongs": "Esitusloendi lugude sünkroonimine",
+  "@syncPlaylistSongs": {
+    "description": "syncPlaylistSongs"
+  },
+  "blacklistPipedPlaylist": "Esitusloendite must nimekiri",
+  "@blacklistPipedPlaylist": {
+    "description": "blacklistPipedPlaylist"
+  },
+  "sharePlaylist": "Esitusloendi jagamine",
+  "@sharePlaylist": {
+    "description": "sharePlaylist"
+  },
+  "playlist": "Esitusloend",
+  "@playlist": {
+    "description": "playlist"
+  },
+  "sortByName": "Sorteeri nime järgi",
+  "@sortByName": {
+    "description": "sortByName"
+  },
+  "sortByDate": "Sorteeri kuupäeva järgi",
+  "@sortByDate": {
+    "description": "sortByDate"
+  },
+  "sortByDuration": "Sorteeri kestuse järgi",
+  "@sortByDuration": {
+    "description": "sortByDuration"
+  },
+  "sortAscendNDescend": "Järjesta kasvavalt/kahanevalt",
+  "@sortAscendNDescend": {
+    "description": "sortAscendNDescend"
+  },
+  "migration_summary_start": "Migreerimine lõpetati alates {source}.",
+  "@migration_summary_start": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      }
+    },
+    "description": "migration_summary_start"
+  },
+  "migration_summary_playlists": "Esitusloendid: {count}",
+  "@migration_summary_playlists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_playlists"
+  },
+  "migration_summary_songs": "Laulud: {count}",
+  "@migration_summary_songs": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_songs"
+  },
+  "migration_summary_favorites": "Lemmikud: {count}",
+  "@migration_summary_favorites": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_favorites"
+  },
+  "migration_summary_albums": "Albumid: {count}",
+  "@migration_summary_albums": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_albums"
+  },
+  "migration_summary_artists": "Artistid: {count}",
+  "@migration_summary_artists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_artists"
+  },
+  "migration_select_file_dialog": "Valige song.db või varukoopia .backup",
+  "@migration_select_file_dialog": {
+    "description": "migration_select_file_dialog"
+  },
+  "migration_success": "Migreerimine on edukalt lõpule viidud.",
+  "@migration_success": {
+    "description": "migration_success"
+  },
+  "backup_select_folder_dialog": "Valige varundamiseks kaust",
+  "@backup_select_folder_dialog": {
+    "description": "backup_select_folder_dialog"
+  },
+  "restore_select_file_dialog": "Valige varufail",
+  "@restore_select_file_dialog": {
+    "description": "restore_select_file_dialog"
+  },
+  "auth_hint_email": "nimi@mail.com",
+  "@auth_hint_email": {
+    "description": "auth_hint_email"
+  },
+  "auth_error_invalid_email": "Sisestage kehtiv e-posti aadress.",
+  "@auth_error_invalid_email": {
+    "description": "auth_error_invalid_email"
+  },
+  "settings_cloud_backup_dialog_desc": "Laadige serverisse üles rakenduse .hmb varukoopia ja vajadusel taastage kõik salvestatud varukoopiad.",
+  "@settings_cloud_backup_dialog_desc": {
+    "description": "settings_cloud_backup_dialog_desc"
+  },
+  "delete": "Kustuta",
+  "@delete": {
+    "description": "delete"
+  },
+  "in_app_storage": "Sisemälu kataloog",
+  "@in_app_storage": {
+    "description": "in_app_storage"
+  },
+  "auth_brand_description_1": "Tõime sisselogimise, registreerimise ja parooli taastamise eelmisest projektist, kohandatud selle muusikarakenduse jaoks.",
+  "@auth_brand_description_1": {
+    "description": "auth_brand_description_1"
+  },
+  "auth_brand_description_2": "Teie seanss asub turvalises salvestusruumis ja seda kontrollitakse sama taustaprogrammiga, mida te juba kasutasite.",
+  "@auth_brand_description_2": {
+    "description": "auth_brand_description_2"
+  },
+  "auth_brand_not_configured": "Env-fail tuleb autentimise taustaprogrammiga ühendamiseks konfigureerida.",
+  "@auth_brand_not_configured": {
+    "description": "auth_brand_not_configured"
+  },
+  "auth_forgot_password_subtitle": "Saadame teile juhised teie konto e-posti aadressile.",
+  "@auth_forgot_password_subtitle": {
+    "description": "auth_forgot_password_subtitle"
+  },
+  "auth_btn_send_email": "Saada kiri",
+  "@auth_btn_send_email": {
+    "description": "auth_btn_send_email"
+  },
+  "auth_error_not_configured": "Autentimise taustaprogramm puudub .env-failis konfigureerimiseks.",
+  "@auth_error_not_configured": {
+    "description": "auth_error_not_configured"
+  },
+  "auth_error_invalid_credentials": "Vale e-posti aadress või parool.",
+  "@auth_error_invalid_credentials": {
+    "description": "auth_error_invalid_credentials"
+  },
+  "auth_error_not_verified": "Teie konto pole veel kinnitatud.",
+  "@auth_error_not_verified": {
+    "description": "auth_error_not_verified"
+  },
+  "auth_error_unknown": "Operatsiooni ei olnud võimalik lõpule viia.",
+  "@auth_error_unknown": {
+    "description": "auth_error_unknown"
+  },
+  "auth_register_success": "Konto loomine õnnestus.",
+  "@auth_register_success": {
+    "description": "auth_register_success"
+  },
+  "auth_register_error": "Kontot ei saanud luua.",
+  "@auth_register_error": {
+    "description": "auth_register_error"
+  },
+  "auth_recovery_email_sent": "Meil saadetud.",
+  "@auth_recovery_email_sent": {
+    "description": "auth_recovery_email_sent"
+  },
+  "auth_recovery_email_error": "Meili ei olnud võimalik saata.",
+  "@auth_recovery_email_error": {
+    "description": "auth_recovery_email_error"
+  },
+  "latestVersion": "Uusim versioon saadaval",
+  "@latestVersion": {
+    "description": "latestVersion"
+  },
+  "updateApp": "Rakenduse värskendamine",
+  "@updateApp": {
+    "description": "updateApp"
+  },
+  "loadInfoUpdate": "Värskendusteavet ei saanud laadida",
+  "@loadInfoUpdate": {
+    "description": "loadInfoUpdate"
+  },
+  "infoNotAvailable": "Teave pole saadaval",
+  "@infoNotAvailable": {
+    "description": "infoNotAvailable"
+  },
+  "developedBy": "Arendanud ja hooldanud Joss Estrada (JOSPROX)",
+  "@developedBy": {
+    "description": "developedBy"
+  },
+  "copyrightNotice": "© 2026 JOSPROX. GPL-i litsents v3.0",
+  "@copyrightNotice": {
+    "description": "copyrightNotice"
   }
 }

@@ -22,17 +22,29 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(songTitle) => "Letöltés: ${songTitle}";
 
-  static String m1(error) => "Hiba történt a regenerálás során: ${error}";
+  static String m1(count) => "Albumok: ${count}";
 
-  static String m2(title) => "Hasonló ehhez: ${title}";
+  static String m2(count) => "Előadók: ${count}";
 
-  static String m3(current) => "3. ${current}. lépés";
+  static String m3(count) => "Kedvencek: ${count}";
 
-  static String m4(count) => "${count} változtatások végrehajtva.";
+  static String m4(count) => "Lejátszási listák: ${count}";
 
-  static String m5(count) => "${count} szinkronizált változtatások.";
+  static String m5(count) => "Dalok: ${count}";
 
-  static String m6(statusCode) =>
+  static String m6(source) => "Az áttelepítés befejeződött innen: ${source}.";
+
+  static String m7(error) => "Hiba történt a regenerálás során: ${error}";
+
+  static String m8(title) => "Hasonló ehhez: ${title}";
+
+  static String m9(current) => "3. ${current}. lépés";
+
+  static String m10(count) => "${count} változtatások végrehajtva.";
+
+  static String m11(count) => "${count} szinkronizált változtatások.";
+
+  static String m12(statusCode) =>
       "Nem sikerült felhasználókat keresni (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -40,24 +52,50 @@ class MessageLookup extends MessageLookupByLibrary {
     "CreateNewPlaylist": MessageLookupByLibrary.simpleMessage(
       "Új lejátszólista",
     ),
+    "Piped": MessageLookupByLibrary.simpleMessage("Csöves"),
     "about": MessageLookupByLibrary.simpleMessage("Körülbelül"),
     "add5Minutes": MessageLookupByLibrary.simpleMessage("Még 5 perc"),
     "addMultipleSongs": MessageLookupByLibrary.simpleMessage(
       "Dalok lejátszólistához adása",
     ),
+    "addToLibrary": MessageLookupByLibrary.simpleMessage(
+      "Hozzáadás a könyvtárhoz",
+    ),
     "addToPlaylist": MessageLookupByLibrary.simpleMessage(
       "Hozzáadás lejátszólistához",
     ),
     "album": MessageLookupByLibrary.simpleMessage("Album"),
+    "albumBookmarkAddAlert": MessageLookupByLibrary.simpleMessage(
+      "Album hozzáadva a könyvjelzőkhöz!",
+    ),
+    "albumBookmarkRemoveAlert": MessageLookupByLibrary.simpleMessage(
+      "Az album könyvjelzője eltávolítva!",
+    ),
     "albums": MessageLookupByLibrary.simpleMessage("Albumok"),
     "albumsByTaste": MessageLookupByLibrary.simpleMessage(
       "Az Ön ízlése szerint",
     ),
+    "allFieldsReqMsg": MessageLookupByLibrary.simpleMessage(
+      "Minden mező kitöltése kötelező",
+    ),
+    "androidBackupWarning": MessageLookupByLibrary.simpleMessage(
+      "Nincs tesztelve: Ha több mint 60 fájl letöltése után bejelöli a jelölőnégyzetet, a folyamat nagy mennyiségű memóriát fogyaszthat, és a telefon vagy az alkalmazás összeomolhat. Továbblépés a saját felelősségére.",
+    ),
     "appInfo": MessageLookupByLibrary.simpleMessage("Alkalmazás információ"),
+    "artistBookmarkAddAlert": MessageLookupByLibrary.simpleMessage(
+      "Előadó hozzáadva a könyvjelzőkhöz!",
+    ),
+    "artistBookmarkRemoveAlert": MessageLookupByLibrary.simpleMessage(
+      "Előadójelző eltávolítva!",
+    ),
+    "artistDesNotAvailable": MessageLookupByLibrary.simpleMessage(
+      "Leírás nem elérhető!",
+    ),
     "artists": MessageLookupByLibrary.simpleMessage("Előadók"),
     "artistsByTaste": MessageLookupByLibrary.simpleMessage(
       "Az Ön ízlése szerint",
     ),
+    "audioCodec": MessageLookupByLibrary.simpleMessage("Audiokodek"),
     "auth_2fa_code": MessageLookupByLibrary.simpleMessage("Hitelesítési kód"),
     "auth_2fa_invalid": MessageLookupByLibrary.simpleMessage(
       "Adjon meg egy érvényes 6 számjegyű kódot, vagy jelentkezzen be újra.",
@@ -74,18 +112,61 @@ class MessageLookup extends MessageLookupByLibrary {
     "auth_agree_personal_data": MessageLookupByLibrary.simpleMessage(
       "Acepto usar mis datos...",
     ),
+    "auth_brand_description_1": MessageLookupByLibrary.simpleMessage(
+      "A bejelentkezést, a regisztrációt és a jelszó-helyreállítást az előző projektből hoztuk, ehhez a zenei alkalmazáshoz igazítva.",
+    ),
+    "auth_brand_description_2": MessageLookupByLibrary.simpleMessage(
+      "A munkamenet biztonságos tárhelyen él, és ugyanazzal a háttérprogrammal van érvényesítve, amelyet már használt.",
+    ),
+    "auth_brand_not_configured": MessageLookupByLibrary.simpleMessage(
+      "Az .env fájlt be kell állítani a hitelesítési háttérrendszer csatlakoztatásához.",
+    ),
     "auth_btn_login": MessageLookupByLibrary.simpleMessage("Bejelentkezés"),
     "auth_btn_register": MessageLookupByLibrary.simpleMessage("Nyilvántartás"),
+    "auth_btn_send_email": MessageLookupByLibrary.simpleMessage(
+      "Levél küldése",
+    ),
     "auth_confirm_password": MessageLookupByLibrary.simpleMessage(
       "Jelszó megerősítése",
+    ),
+    "auth_error_invalid_credentials": MessageLookupByLibrary.simpleMessage(
+      "Hibás e-mail cím vagy jelszó.",
+    ),
+    "auth_error_invalid_email": MessageLookupByLibrary.simpleMessage(
+      "Adjon meg egy érvényes e-mail-címet.",
+    ),
+    "auth_error_not_configured": MessageLookupByLibrary.simpleMessage(
+      "Hiányzik a hitelesítési háttérprogram konfigurálása az .env fájlban.",
+    ),
+    "auth_error_not_verified": MessageLookupByLibrary.simpleMessage(
+      "Fiókja még nincs igazolva.",
+    ),
+    "auth_error_unknown": MessageLookupByLibrary.simpleMessage(
+      "A műveletet nem lehetett befejezni.",
     ),
     "auth_first_name": MessageLookupByLibrary.simpleMessage("Keresztnév"),
     "auth_forgot_password": MessageLookupByLibrary.simpleMessage(
       "Elfelejtettem a jelszavamat",
     ),
+    "auth_forgot_password_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Az utasításokat elküldjük a fiókod e-mail címére.",
+    ),
+    "auth_hint_email": MessageLookupByLibrary.simpleMessage("név@mail.com"),
     "auth_last_name": MessageLookupByLibrary.simpleMessage("Vezetéknév"),
     "auth_login_success": MessageLookupByLibrary.simpleMessage(
       "Sikeres bejelentkezés",
+    ),
+    "auth_recovery_email_error": MessageLookupByLibrary.simpleMessage(
+      "Az e-mailt nem lehetett elküldeni.",
+    ),
+    "auth_recovery_email_sent": MessageLookupByLibrary.simpleMessage(
+      "E-mail elküldve.",
+    ),
+    "auth_register_error": MessageLookupByLibrary.simpleMessage(
+      "A fiók nem hozható létre.",
+    ),
+    "auth_register_success": MessageLookupByLibrary.simpleMessage(
+      "A fiók sikeresen létrehozva.",
     ),
     "auth_welcome_subtitle": MessageLookupByLibrary.simpleMessage(
       "Üdvözöljük az Estrella Music oldalán",
@@ -99,15 +180,37 @@ class MessageLookup extends MessageLookupByLibrary {
     "autoDownFavSongDes": MessageLookupByLibrary.simpleMessage(
       "A kedvelt dalok automatikus letöltése, ha hozzáadja a kedvencekhez",
     ),
+    "autoOpenPlayer": MessageLookupByLibrary.simpleMessage(
+      "A lejátszó képernyőjének automatikus megnyitása",
+    ),
+    "autoOpenPlayerDes": MessageLookupByLibrary.simpleMessage(
+      "A lejátszó teljes képernyőre való automatikus megnyitásának be-/kikapcsolása a lejátszandó dal kiválasztásakor",
+    ),
     "back": MessageLookupByLibrary.simpleMessage("Visszatérés"),
     "backFilesFound": MessageLookupByLibrary.simpleMessage(
       "adatbázis található",
+    ),
+    "backgroundPlay": MessageLookupByLibrary.simpleMessage(
+      "Zene lejátszása a háttérben",
+    ),
+    "backgroundPlayDes": MessageLookupByLibrary.simpleMessage(
+      "Háttérzene lejátszásának engedélyezése/letiltása (Az alkalmazás a rendszertálcáról érhető el, ha az alkalmazás a háttérben fut)",
+    ),
+    "backup": MessageLookupByLibrary.simpleMessage("Biztonsági mentés"),
+    "backupAppData": MessageLookupByLibrary.simpleMessage(
+      "Alkalmazásadatok biztonsági mentése",
     ),
     "backupInProgress": MessageLookupByLibrary.simpleMessage(
       "Mentés folyamatban...",
     ),
     "backupMsg": MessageLookupByLibrary.simpleMessage(
       "A mentés sikeresen elkészült!",
+    ),
+    "backupSettingsAndPlaylists": MessageLookupByLibrary.simpleMessage(
+      "Biztonsági mentési beállítások és lejátszási listák",
+    ),
+    "backupSettingsAndPlaylistsDes": MessageLookupByLibrary.simpleMessage(
+      "Mentse el az összes beállítást, lejátszási listát és bejelentkezési adatot egy biztonsági mentési fájlba",
     ),
     "backup_auth_required": MessageLookupByLibrary.simpleMessage(
       "Aktív foglalkozásra van szüksége...",
@@ -130,6 +233,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "backup_restore_success": MessageLookupByLibrary.simpleMessage(
       "A biztonsági mentés visszaállítva. Indítsa újra az alkalmazást.",
     ),
+    "backup_select_folder_dialog": MessageLookupByLibrary.simpleMessage(
+      "Válassza ki a mappát a biztonsági mentéshez",
+    ),
     "backup_selection_prompt": MessageLookupByLibrary.simpleMessage(
       "Válassza ki, hogy mely adatokról szeretne biztonsági másolatot készíteni",
     ),
@@ -139,11 +245,43 @@ class MessageLookup extends MessageLookupByLibrary {
     "basedOnLast": MessageLookupByLibrary.simpleMessage(
       "Az utolsó interakció alapján",
     ),
+    "bitrate": MessageLookupByLibrary.simpleMessage("Bitráta"),
+    "blacklistPipedPlaylist": MessageLookupByLibrary.simpleMessage(
+      "Lejátszási lista feketelista",
+    ),
+    "blacklistPlstResetAlert": MessageLookupByLibrary.simpleMessage(
+      "Sikeres visszaállítás!",
+    ),
+    "by": MessageLookupByLibrary.simpleMessage("által"),
+    "cacheHomeScreenData": MessageLookupByLibrary.simpleMessage(
+      "Tárolja a kezdőképernyő tartalmát",
+    ),
+    "cacheHomeScreenDataDes": MessageLookupByLibrary.simpleMessage(
+      "Engedélyezze a kezdőképernyő tartalmának tárolását, a kezdőképernyő azonnal betöltődik, ha ez az opció engedélyezve van",
+    ),
+    "cacheSongs": MessageLookupByLibrary.simpleMessage(
+      "Dalok gyorsítótárazása",
+    ),
+    "cacheSongsDes": MessageLookupByLibrary.simpleMessage(
+      "A dalok gyorsítótárazása lejátszás közben a jövőbeni/offline lejátszáshoz további helyet foglal el az eszközön",
+    ),
     "cachedOrOffline": MessageLookupByLibrary.simpleMessage(
       "Cache-elt/offline",
     ),
     "cancel": MessageLookupByLibrary.simpleMessage("Mégse"),
     "cancelTimer": MessageLookupByLibrary.simpleMessage("Időzítés vége"),
+    "cancelTimerAlert": MessageLookupByLibrary.simpleMessage(
+      "Az elalvási időzítő törölve",
+    ),
+    "clearImgCache": MessageLookupByLibrary.simpleMessage(
+      "Kép-gyorsítótár törlése",
+    ),
+    "clearImgCacheAlert": MessageLookupByLibrary.simpleMessage(
+      "A képgyorsítótár sikeresen törölve",
+    ),
+    "clearImgCacheDes": MessageLookupByLibrary.simpleMessage(
+      "Kattintson ide a gyorsítótárazott bélyegképek/képek törléséhez. (Nem ajánlott, hacsak nem szeretné frissíteni a gyorsítótárazott képadatokat)",
+    ),
     "close": MessageLookupByLibrary.simpleMessage("Közeli"),
     "closeApp": MessageLookupByLibrary.simpleMessage("Alkalmazás bezárása"),
     "cloudLibraryFound": MessageLookupByLibrary.simpleMessage(
@@ -184,24 +322,56 @@ class MessageLookup extends MessageLookupByLibrary {
       "Közösségi lejátszólisták",
     ),
     "content": MessageLookupByLibrary.simpleMessage("Tartalom"),
+    "copyrightNotice": MessageLookupByLibrary.simpleMessage(
+      "© 2026 JOSPROX. GPL licenc v3.0",
+    ),
     "create": MessageLookupByLibrary.simpleMessage("Létrehozás"),
     "createnAdd": MessageLookupByLibrary.simpleMessage(
       "Létrehozás és hozzáadás",
     ),
+    "customIns": MessageLookupByLibrary.simpleMessage("Egyéni példány"),
+    "customInsSelectMsg": MessageLookupByLibrary.simpleMessage(
+      "Kérjük, válasszon egyéni példányt",
+    ),
     "dailyDiscover": MessageLookupByLibrary.simpleMessage("Napi felfedezés"),
     "dark": MessageLookupByLibrary.simpleMessage("Sötét"),
+    "delete": MessageLookupByLibrary.simpleMessage("Törölje"),
     "deleteDownloadData": MessageLookupByLibrary.simpleMessage(
       "Eltávolítás a letöltések közül",
     ),
+    "deleteDownloadedDataAlert": MessageLookupByLibrary.simpleMessage(
+      "Sikeresen eltávolítva a letöltések közül!",
+    ),
+    "developedBy": MessageLookupByLibrary.simpleMessage(
+      "Joss Estrada (JOSPROX) fejlesztette és karbantartotta",
+    ),
+    "disableTransitionAnimation": MessageLookupByLibrary.simpleMessage(
+      "Az átmeneti animáció letiltása",
+    ),
+    "disableTransitionAnimationDes": MessageLookupByLibrary.simpleMessage(
+      "Aktiválja ezt a lehetőséget a lapátmenet animációjának letiltásához",
+    ),
+    "disabled": MessageLookupByLibrary.simpleMessage("Letiltva"),
     "discover": MessageLookupByLibrary.simpleMessage("Felfedezés"),
+    "dismiss": MessageLookupByLibrary.simpleMessage("Eldobni"),
     "done": MessageLookupByLibrary.simpleMessage("Kész"),
+    "dontShowInfoAgain": MessageLookupByLibrary.simpleMessage(
+      "Ne jelenítse meg újra ezt az információt",
+    ),
+    "downFilesFound": MessageLookupByLibrary.simpleMessage(
+      "letöltött fájlok találhatók",
+    ),
     "download": MessageLookupByLibrary.simpleMessage("Letöltés"),
+    "downloadAlbumSongs": MessageLookupByLibrary.simpleMessage(
+      "Dalok letöltése az albumról",
+    ),
     "downloadError2": MessageLookupByLibrary.simpleMessage(
       "A kért dal nem tölthető le a szerver korlátozása miatt. Megpróbálhatja újra",
     ),
     "downloadError3": MessageLookupByLibrary.simpleMessage(
       "A letöltés hálózati/lejátszási hiba miatt megszakadt! Próbáld újra",
     ),
+    "downloadLocation": MessageLookupByLibrary.simpleMessage("Letöltés helye"),
     "downloadNotificationChannelDescription":
         MessageLookupByLibrary.simpleMessage(
           "Aktívan tartja a zeneletöltéseket a háttérben.",
@@ -216,25 +386,117 @@ class MessageLookup extends MessageLookupByLibrary {
     "downloadNotificationTitle": MessageLookupByLibrary.simpleMessage(
       "Zene letöltése",
     ),
+    "downloadPlaylist": MessageLookupByLibrary.simpleMessage(
+      "Lejátszási lista letöltése",
+    ),
+    "downloadingFormat": MessageLookupByLibrary.simpleMessage(
+      "Fájlformátum letöltése",
+    ),
+    "downloadingFormatDes": MessageLookupByLibrary.simpleMessage(
+      "Válassza ki a letöltési fájl formátumát. Az \"Opus\" biztosítja a legjobb minőséget",
+    ),
     "downloads": MessageLookupByLibrary.simpleMessage("Letöltések"),
+    "duration": MessageLookupByLibrary.simpleMessage("Időtartam"),
     "dynamic": MessageLookupByLibrary.simpleMessage("Dinamikus"),
     "email": MessageLookupByLibrary.simpleMessage("Email"),
     "emptyPlaylist": MessageLookupByLibrary.simpleMessage(
       "Üres lejátszólista!",
     ),
+    "enableBottomNav": MessageLookupByLibrary.simpleMessage(
+      "Alsó navigációs sáv",
+    ),
+    "enableBottomNavDes": MessageLookupByLibrary.simpleMessage(
+      "Váltson az alsó navigációs sávra",
+    ),
+    "enableSlidableAction": MessageLookupByLibrary.simpleMessage(
+      "Aktiválja a csúszkaműveleteket",
+    ),
+    "enableSlidableActionDes": MessageLookupByLibrary.simpleMessage(
+      "Csúsztatási műveletek aktiválása a dalcsempén",
+    ),
+    "enabled": MessageLookupByLibrary.simpleMessage("Aktiválva"),
     "endOfThisSong": MessageLookupByLibrary.simpleMessage("A dal vége"),
+    "enqueueAlbumSongs": MessageLookupByLibrary.simpleMessage(
+      "Adja hozzá az album dalait a sorhoz",
+    ),
+    "enqueueAll": MessageLookupByLibrary.simpleMessage(
+      "Az összes hozzáadása a sorhoz",
+    ),
     "enqueueSong": MessageLookupByLibrary.simpleMessage("Dal sorba állítása"),
+    "enqueueSongs": MessageLookupByLibrary.simpleMessage(
+      "Dalok hozzáadása a sorhoz",
+    ),
+    "episodes": MessageLookupByLibrary.simpleMessage("Epizódok"),
+    "equalizer": MessageLookupByLibrary.simpleMessage("Equalizer"),
+    "equalizerDes": MessageLookupByLibrary.simpleMessage(
+      "Nyissa meg a rendszer hangszínszabályzóját",
+    ),
+    "errorOccuredAlert": MessageLookupByLibrary.simpleMessage("Hiba történt!"),
     "errorOccurred": MessageLookupByLibrary.simpleMessage("Hiba történt"),
     "errorPlayingTrack": MessageLookupByLibrary.simpleMessage(
       "Hiba lejátszás közben:",
+    ),
+    "export": MessageLookupByLibrary.simpleMessage("Exportálás"),
+    "exportDowloadedFiles": MessageLookupByLibrary.simpleMessage(
+      "A letöltött fájlok exportálása",
+    ),
+    "exportDowloadedFilesDes": MessageLookupByLibrary.simpleMessage(
+      "Ide kattintva exportálhatja a letöltött fájlokat az alkalmazáskönyvtárból a külső könyvtárba",
+    ),
+    "exportError": MessageLookupByLibrary.simpleMessage(
+      "Hiba a lejátszási lista exportálása során",
+    ),
+    "exportErrorFormat": MessageLookupByLibrary.simpleMessage(
+      "Hiba a lejátszási lista adatainak formázásakor",
+    ),
+    "exportErrorPermission": MessageLookupByLibrary.simpleMessage(
+      "Az exportálás során megtagadták az engedélyt",
+    ),
+    "exportErrorStorage": MessageLookupByLibrary.simpleMessage(
+      "Nincs elegendő tárhely",
+    ),
+    "exportMsg": MessageLookupByLibrary.simpleMessage(
+      "A fájlok sikeresen exportálva",
+    ),
+    "exportPlaylist": MessageLookupByLibrary.simpleMessage(
+      "Lejátszási lista exportálása",
+    ),
+    "exportPlaylistCsv": MessageLookupByLibrary.simpleMessage(
+      "Lejátszási lista exportálása CSV formátumban",
+    ),
+    "exportPlaylistCsvSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Ide nem lehet importálni",
+    ),
+    "exportPlaylistJson": MessageLookupByLibrary.simpleMessage(
+      "Lejátszási lista exportálása JSON-ba",
+    ),
+    "exportPlaylistJsonSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Ez a formátum importálható",
+    ),
+    "exportToYouTubeMusic": MessageLookupByLibrary.simpleMessage(
+      "Exportálás Youtube zenébe",
+    ),
+    "exportToYouTubeMusicSubtitle": MessageLookupByLibrary.simpleMessage(
+      "A lejátszási listát (50 alatti dalok) az aktuális sorba tolja, ne felejtse el hozzáadni a lejátszási listához / elmenteni, miután megnyitotta az YtMusicban",
+    ),
+    "exportedFileLocation": MessageLookupByLibrary.simpleMessage(
+      "A letöltött fájlok helyének exportálása",
+    ),
+    "exporting": MessageLookupByLibrary.simpleMessage("Exportálás..."),
+    "exportingPlaylist": MessageLookupByLibrary.simpleMessage(
+      "Lejátszási lista exportálása...",
     ),
     "favorites": MessageLookupByLibrary.simpleMessage("Kedvencek"),
     "featuredplaylists": MessageLookupByLibrary.simpleMessage(
       "Kiemelt lejátszólisták",
     ),
+    "fileNotFound": MessageLookupByLibrary.simpleMessage(
+      "A fájl nem található",
+    ),
     "follow": MessageLookupByLibrary.simpleMessage("Folytatás"),
     "followedArtists": MessageLookupByLibrary.simpleMessage("követte"),
     "following": MessageLookupByLibrary.simpleMessage("Következő"),
+    "for1": MessageLookupByLibrary.simpleMessage("számára"),
     "forgottenFavorites": MessageLookupByLibrary.simpleMessage(
       "elfelejtett kedvencek",
     ),
@@ -260,10 +522,76 @@ class MessageLookup extends MessageLookupByLibrary {
     "genre_latin": MessageLookupByLibrary.simpleMessage("latin"),
     "genre_pop": MessageLookupByLibrary.simpleMessage("Pop"),
     "genre_rock": MessageLookupByLibrary.simpleMessage("Szikla"),
+    "gesture": MessageLookupByLibrary.simpleMessage("Gesztus"),
+    "github": MessageLookupByLibrary.simpleMessage("GitHub"),
+    "githubDes": MessageLookupByLibrary.simpleMessage(
+      "Tekintse meg a GitHub forráskódját \nHa tetszik ez a projekt, ne felejts el egy ⭐-t adni neki!",
+    ),
     "goToAlbum": MessageLookupByLibrary.simpleMessage("Irány az album"),
+    "goToDownloadPage": MessageLookupByLibrary.simpleMessage(
+      "Kattintson ide a letöltési oldal eléréséhez",
+    ),
+    "helloWorld": MessageLookupByLibrary.simpleMessage("Helló világ"),
+    "high": MessageLookupByLibrary.simpleMessage("Magas"),
+    "hintApiUrl": MessageLookupByLibrary.simpleMessage(
+      "API URL a vezetékes példányhoz",
+    ),
     "home": MessageLookupByLibrary.simpleMessage("Kezdőlap"),
+    "homeContentCount": MessageLookupByLibrary.simpleMessage(
+      "Startup Content Count",
+    ),
+    "homeContentCountDes": MessageLookupByLibrary.simpleMessage(
+      "Válassza ki a kezdőképernyő kezdeti tartalmának számát (kb.). Kevesebb eredmény gyorsabban töltődik be",
+    ),
+    "id": MessageLookupByLibrary.simpleMessage("ID"),
+    "ignoreBatOpt": MessageLookupByLibrary.simpleMessage(
+      "Az akkumulátor optimalizálás figyelmen kívül hagyása",
+    ),
+    "ignoreBatOptDes": MessageLookupByLibrary.simpleMessage(
+      "Ha problémái vannak az értesítésekkel vagy a lejátszás leáll a rendszer optimalizálása miatt, aktiválja ezt az opciót",
+    ),
+    "importError": MessageLookupByLibrary.simpleMessage(
+      "Hiba a lejátszási lista importálásakor",
+    ),
+    "importErrorDatabase": MessageLookupByLibrary.simpleMessage(
+      "Hiba az adatbázisba mentéskor",
+    ),
+    "importErrorFileAccess": MessageLookupByLibrary.simpleMessage(
+      "A kiválasztott fájlhoz nem lehetett hozzáférni",
+    ),
+    "importErrorFormat": MessageLookupByLibrary.simpleMessage(
+      "Érvénytelen fájlformátum",
+    ),
+    "importLargeFileNote": MessageLookupByLibrary.simpleMessage(
+      "Megjegyzés: A nagy lejátszási listák importálása tovább tarthat",
+    ),
+    "importPlaylist": MessageLookupByLibrary.simpleMessage(
+      "Lejátszási lista importálása",
+    ),
+    "importPlaylistDesc": MessageLookupByLibrary.simpleMessage(
+      "Válasszon ki egy korábban exportált lejátszási lista JSON-fájlt az importáláshoz",
+    ),
+    "imported": MessageLookupByLibrary.simpleMessage("Importált"),
     "importedFromJossMusic": MessageLookupByLibrary.simpleMessage(
       "Joss Music Kotlinból importálva",
+    ),
+    "importedPlaylist": MessageLookupByLibrary.simpleMessage(
+      "Importált lejátszási lista",
+    ),
+    "importingPlaylist": MessageLookupByLibrary.simpleMessage(
+      "Lejátszási lista importálása...",
+    ),
+    "in_app_storage": MessageLookupByLibrary.simpleMessage(
+      "Belső tárolási könyvtár",
+    ),
+    "includeDownloadedFiles": MessageLookupByLibrary.simpleMessage(
+      "Tartalmazza a letöltött dalfájlokat",
+    ),
+    "infoNotAvailable": MessageLookupByLibrary.simpleMessage(
+      "Információ nem áll rendelkezésre",
+    ),
+    "invalidPlaylistFile": MessageLookupByLibrary.simpleMessage(
+      "Érvénytelen lejátszási lista fájlszerkezet",
     ),
     "invalidServerResponse": MessageLookupByLibrary.simpleMessage(
       "Érvénytelen szerver válasz.",
@@ -284,6 +612,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Állítsa be az alkalmazás nyelvét",
     ),
     "latestRelease": MessageLookupByLibrary.simpleMessage("Legújabb kiadás"),
+    "latestVersion": MessageLookupByLibrary.simpleMessage(
+      "Elérhető legújabb verzió",
+    ),
     "letsStrart": MessageLookupByLibrary.simpleMessage("Kezdjük!"),
     "libAlbums": MessageLookupByLibrary.simpleMessage("Gyűjtemény albumai"),
     "libArtists": MessageLookupByLibrary.simpleMessage("Gyűjtemény előadói"),
@@ -296,10 +627,22 @@ class MessageLookup extends MessageLookupByLibrary {
       "Library Playlist",
     ),
     "light": MessageLookupByLibrary.simpleMessage("Világos"),
+    "link": MessageLookupByLibrary.simpleMessage("Link"),
+    "linkAlert": MessageLookupByLibrary.simpleMessage("Sikeres linkelés!"),
+    "linkCopied": MessageLookupByLibrary.simpleMessage(
+      "Link a vágólapra másolva",
+    ),
+    "linkPipedDes": MessageLookupByLibrary.simpleMessage(
+      "Link a Piped-el a lejátszási listákhoz",
+    ),
     "listenNow": MessageLookupByLibrary.simpleMessage("Figyelj most"),
     "listeningToEnvironment": MessageLookupByLibrary.simpleMessage(
       "A környezetre figyelve...",
     ),
+    "loadInfoUpdate": MessageLookupByLibrary.simpleMessage(
+      "Nem sikerült betölteni a frissítési információkat",
+    ),
+    "local": MessageLookupByLibrary.simpleMessage("Helyi"),
     "local_b1": MessageLookupByLibrary.simpleMessage(
       "Bejelentkezés nélkül működik.",
     ),
@@ -316,6 +659,18 @@ class MessageLookup extends MessageLookupByLibrary {
       "Abszolút adatvédelem az eszközön",
     ),
     "local_title": MessageLookupByLibrary.simpleMessage("Helyi mód"),
+    "loudnessDb": MessageLookupByLibrary.simpleMessage("LoudnessDb"),
+    "loudnessNormalization": MessageLookupByLibrary.simpleMessage(
+      "A hangerő normalizálása",
+    ),
+    "loudnessNormalizationDes": MessageLookupByLibrary.simpleMessage(
+      "Ugyanazt a hangerőszintet állítja be az összes dalhoz (kísérleti) (Nem működik a régebbi verziókban letöltött daloknál (< v1.10.0))",
+    ),
+    "low": MessageLookupByLibrary.simpleMessage("Alacsony"),
+    "lyrics": MessageLookupByLibrary.simpleMessage("Levelek"),
+    "lyricsNotAvailable": MessageLookupByLibrary.simpleMessage(
+      "Dalszöveg nem elérhető!",
+    ),
     "manageCollaborators": MessageLookupByLibrary.simpleMessage(
       "Együttműködők (barátok) kezelése",
     ),
@@ -371,7 +726,20 @@ class MessageLookup extends MessageLookupByLibrary {
     "migration_btn_select": MessageLookupByLibrary.simpleMessage(
       "Válassza ki a fájlt és importálja",
     ),
+    "migration_select_file_dialog": MessageLookupByLibrary.simpleMessage(
+      "Válassza ki a song.db fájlt vagy a backup .backup fájlt",
+    ),
+    "migration_success": MessageLookupByLibrary.simpleMessage(
+      "Az áttelepítés sikeresen befejeződött.",
+    ),
+    "migration_summary_albums": m1,
+    "migration_summary_artists": m2,
+    "migration_summary_favorites": m3,
+    "migration_summary_playlists": m4,
+    "migration_summary_songs": m5,
+    "migration_summary_start": m6,
     "minutes": MessageLookupByLibrary.simpleMessage("perc"),
+    "misc": MessageLookupByLibrary.simpleMessage("Különféle"),
     "mostListenedSong": MessageLookupByLibrary.simpleMessage(
       "A leghallgatottabb dal",
     ),
@@ -384,6 +752,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "networkError1": MessageLookupByLibrary.simpleMessage(
       "Hoppá, hálózati hiba!",
+    ),
+    "newVersionAvailable": MessageLookupByLibrary.simpleMessage(
+      "Új verzió elérhető!",
     ),
     "news_btn_app": MessageLookupByLibrary.simpleMessage(
       "Joss Red App (Play Áruház)",
@@ -423,6 +794,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "news_item_trans_title": MessageLookupByLibrary.simpleMessage(
       "Átlátszó szinkronizálás",
     ),
+    "no": MessageLookupByLibrary.simpleMessage("Nem"),
     "noBookmarks": MessageLookupByLibrary.simpleMessage(
       "Nincsenek könyvjelzők!",
     ),
@@ -442,11 +814,27 @@ class MessageLookup extends MessageLookupByLibrary {
     "noSongsInCollection": MessageLookupByLibrary.simpleMessage(
       "Ebben a gyűjteményben nincsenek dalok",
     ),
+    "nomatch": MessageLookupByLibrary.simpleMessage(
+      "Nincs találat a következőre:",
+    ),
     "notAuthenticated": MessageLookupByLibrary.simpleMessage(
       "Nincs hitelesítve",
     ),
+    "notaSongVideo": MessageLookupByLibrary.simpleMessage(
+      "Ez nem egy dal/zenei videó!",
+    ),
+    "notaValidLink": MessageLookupByLibrary.simpleMessage(
+      "Ez nem érvényes link!",
+    ),
     "openIn": MessageLookupByLibrary.simpleMessage("Megnyitás itt:"),
+    "operationFailed": MessageLookupByLibrary.simpleMessage(
+      "Sikertelen művelet",
+    ),
+    "password": MessageLookupByLibrary.simpleMessage("Jelszó"),
     "password_text": MessageLookupByLibrary.simpleMessage("Jelszó"),
+    "permissionDenied": MessageLookupByLibrary.simpleMessage(
+      "Engedély megtagadva",
+    ),
     "permissionsAllow": MessageLookupByLibrary.simpleMessage("Engedélyezze"),
     "permissionsConsentDescription": MessageLookupByLibrary.simpleMessage(
       "Az Estrella Musicnak szüksége van ezekre az engedélyekre a zene kezeléséhez és az összes lejátszási funkció biztosításához.",
@@ -485,20 +873,69 @@ class MessageLookup extends MessageLookupByLibrary {
     "pipedPlaylistDescription": MessageLookupByLibrary.simpleMessage(
       "Piped Playlist",
     ),
+    "pipedplstSyncAlert": MessageLookupByLibrary.simpleMessage(
+      "Piped lejátszási lista szinkronizálva!",
+    ),
+    "plain": MessageLookupByLibrary.simpleMessage("egyszerű"),
+    "play": MessageLookupByLibrary.simpleMessage("Játssz"),
     "playNext": MessageLookupByLibrary.simpleMessage("Következő lejátszása"),
     "playNow": MessageLookupByLibrary.simpleMessage("Játssz most"),
     "playbackSpeed": MessageLookupByLibrary.simpleMessage(
       "Lejátszási sebesség",
     ),
     "playerUi": MessageLookupByLibrary.simpleMessage("Lejátszó Ui"),
+    "playerUiDes": MessageLookupByLibrary.simpleMessage(
+      "Válassza ki a lejátszó felhasználói felületét",
+    ),
     "playingRecognizedTrack": MessageLookupByLibrary.simpleMessage(
       "Lejátszás:",
+    ),
+    "playingfromAlbum": MessageLookupByLibrary.simpleMessage(
+      "LEJÁTSZÁS ALBUMRÓL",
+    ),
+    "playingfromArtist": MessageLookupByLibrary.simpleMessage(
+      "JÁTSZÁS MŰVÉSZTŐL",
+    ),
+    "playingfromPlaylist": MessageLookupByLibrary.simpleMessage(
+      "LEJÁTSZÁS LEJÁTSZÁSI LISTÁBÓL",
+    ),
+    "playingfromSelection": MessageLookupByLibrary.simpleMessage(
+      "JÁTÉK VÁLASZTÁSBÓL",
+    ),
+    "playlist": MessageLookupByLibrary.simpleMessage("Lejátszási lista elemre"),
+    "playlistBlacklistAlert": MessageLookupByLibrary.simpleMessage(
+      "Feketelistás lejátszási lista!",
+    ),
+    "playlistBookmarkAddAlert": MessageLookupByLibrary.simpleMessage(
+      "Lejátszási lista hozzáadva a könyvjelzőkhöz!",
+    ),
+    "playlistBookmarkRemoveAlert": MessageLookupByLibrary.simpleMessage(
+      "Lejátszási lista könyvjelzője eltávolítva!",
     ),
     "playlistCollaboratorsTitle": MessageLookupByLibrary.simpleMessage(
       "Lejátszási listák közreműködői",
     ),
+    "playlistCreatedAlert": MessageLookupByLibrary.simpleMessage(
+      "Lejátszási lista létrehozva!",
+    ),
+    "playlistCreatednsongAddedAlert": MessageLookupByLibrary.simpleMessage(
+      "Lejátszási lista létrehozva és dal hozzáadva!",
+    ),
+    "playlistExportedMsg": MessageLookupByLibrary.simpleMessage(
+      "A lejátszási lista sikeresen exportálva ide",
+    ),
+    "playlistImportedMsg": MessageLookupByLibrary.simpleMessage(
+      "A lejátszási lista sikeresen importálva",
+    ),
+    "playlistRemovedAlert": MessageLookupByLibrary.simpleMessage(
+      "Lejátszási lista törölve!",
+    ),
+    "playlistRenameAlert": MessageLookupByLibrary.simpleMessage(
+      "Sikeres márkanévváltás!",
+    ),
     "playlists": MessageLookupByLibrary.simpleMessage("Lejátszólisták"),
     "playnextMsg": MessageLookupByLibrary.simpleMessage("Következő"),
+    "podcasts": MessageLookupByLibrary.simpleMessage("Podcastok"),
     "popularTracks": MessageLookupByLibrary.simpleMessage("Népszerű számok"),
     "processFiles": MessageLookupByLibrary.simpleMessage(
       "Fájlok előkészítése...",
@@ -506,6 +943,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "processingAudio": MessageLookupByLibrary.simpleMessage(
       "Hang feldolgozása...",
     ),
+    "profiles": MessageLookupByLibrary.simpleMessage("Profilok"),
     "queueLoop": MessageLookupByLibrary.simpleMessage("Várólista ismétlése"),
     "queueLoopNotDisMsg1": MessageLookupByLibrary.simpleMessage(
       "A várólista ismétlése mód nem tiltható le, ha a keverés mód engedélyezett.",
@@ -519,7 +957,15 @@ class MessageLookup extends MessageLookupByLibrary {
     "queuerearrangingDeniedMsg": MessageLookupByLibrary.simpleMessage(
       "A várólista nem rendezhető át, ha a keverés mód engedélyezett",
     ),
+    "quickPics": MessageLookupByLibrary.simpleMessage("Gyors kiválasztás"),
     "quickpicks": MessageLookupByLibrary.simpleMessage("Gyors választások"),
+    "radioNotAvailable": MessageLookupByLibrary.simpleMessage(
+      "A rádió nem elérhető ennél az előadónál!",
+    ),
+    "randomRadio": MessageLookupByLibrary.simpleMessage("Véletlenszerű rádió"),
+    "randomSelection": MessageLookupByLibrary.simpleMessage(
+      "Véletlenszerű kiválasztás",
+    ),
     "reArrangePlaylist": MessageLookupByLibrary.simpleMessage(
       "Lejátszólista rendezése",
     ),
@@ -536,8 +982,14 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "recommendedAlbums": MessageLookupByLibrary.simpleMessage("Ajánlott"),
     "recommendedArtists": MessageLookupByLibrary.simpleMessage("Ajánlott"),
+    "removeFromCache": MessageLookupByLibrary.simpleMessage(
+      "Távolítsa el a gyorsítótárból",
+    ),
     "removeFromLib": MessageLookupByLibrary.simpleMessage(
       "Eltávolítás a gyűjteményből",
+    ),
+    "removeFromLibrary": MessageLookupByLibrary.simpleMessage(
+      "Törlés a könyvtárból",
     ),
     "removeFromPlaylist": MessageLookupByLibrary.simpleMessage(
       "Eltávolítás a lejátszólistáról",
@@ -556,6 +1008,22 @@ class MessageLookup extends MessageLookupByLibrary {
       "Lejátszólista átnevezése",
     ),
     "reproducedBy": MessageLookupByLibrary.simpleMessage("Reprodukálta"),
+    "reset": MessageLookupByLibrary.simpleMessage("Reset"),
+    "resetToDefault": MessageLookupByLibrary.simpleMessage(
+      "Az alapértelmezett beállítások visszaállítása",
+    ),
+    "resetToDefaultDes": MessageLookupByLibrary.simpleMessage(
+      "Alkalmazásbeállítások visszaállítása az alapértelmezettre (Újraindítás szükséges)",
+    ),
+    "resetToDefaultMsg": MessageLookupByLibrary.simpleMessage(
+      "Az alapértelmezett beállítások visszaállítása befejeződött, kérjük, indítsa újra az alkalmazást",
+    ),
+    "resetblacklistedplaylist": MessageLookupByLibrary.simpleMessage(
+      "A feketelistán szereplő lejátszási listák visszaállítása",
+    ),
+    "resetblacklistedplaylistDes": MessageLookupByLibrary.simpleMessage(
+      "Állítsa vissza az összes feketelistán szereplő Piped lejátszási listát",
+    ),
     "restartApp": MessageLookupByLibrary.simpleMessage(
       "Alkalmazás újraindítása",
     ),
@@ -563,23 +1031,51 @@ class MessageLookup extends MessageLookupByLibrary {
     "restoreAppData": MessageLookupByLibrary.simpleMessage(
       "Alkalmazás adatok visszaállítása",
     ),
+    "restoreLastPlaybackSession": MessageLookupByLibrary.simpleMessage(
+      "Az utolsó lejátszási munkamenet visszaállítása",
+    ),
+    "restoreLastPlaybackSessionDes": MessageLookupByLibrary.simpleMessage(
+      "Az utolsó lejátszási munkamenet automatikus visszaállítása az alkalmazás indításakor",
+    ),
     "restoreMsg": MessageLookupByLibrary.simpleMessage(
       "Sikeresen visszaállítva!\nA változtatások a következő újraindításnál életbelépnek",
+    ),
+    "restoreSettingsAndPlaylists": MessageLookupByLibrary.simpleMessage(
+      "Beállítások és lejátszási listák visszaállítása",
     ),
     "restoreSettingsAndPlaylistsDes": MessageLookupByLibrary.simpleMessage(
       "Minden beállítást, belépési adatot, lejátszási listát visszaállít a mentési fájlból. Felülír minden jelenlegi adatot",
     ),
+    "restore_select_file_dialog": MessageLookupByLibrary.simpleMessage(
+      "Válassza ki a biztonsági másolat fájlt",
+    ),
     "restoring": MessageLookupByLibrary.simpleMessage("Visszaállítás..."),
+    "results": MessageLookupByLibrary.simpleMessage("Eredmények"),
     "retry": MessageLookupByLibrary.simpleMessage("Újrapróbálom!"),
     "save": MessageLookupByLibrary.simpleMessage("Tartsa"),
     "savedAlbums": MessageLookupByLibrary.simpleMessage("Mentve"),
+    "scanning": MessageLookupByLibrary.simpleMessage("Szkennelés..."),
+    "search": MessageLookupByLibrary.simpleMessage("Keresés"),
+    "searchDes": MessageLookupByLibrary.simpleMessage(
+      "Dalok, lejátszási listák, albumok vagy előadók",
+    ),
     "searchInLibrary": MessageLookupByLibrary.simpleMessage(
       "Keresés a könyvtárban",
     ),
+    "searchRes": MessageLookupByLibrary.simpleMessage("Keresési eredmények"),
     "search_recent_title": MessageLookupByLibrary.simpleMessage(
       "Legutóbbi keresések",
     ),
     "selectAll": MessageLookupByLibrary.simpleMessage("Összes kiválasztása"),
+    "selectAuthIns": MessageLookupByLibrary.simpleMessage(
+      "Válassza ki a hitelesítési példányt",
+    ),
+    "selectAuthInsMsg": MessageLookupByLibrary.simpleMessage(
+      "Kérjük, válassza ki a hitelesítési példányt!",
+    ),
+    "selectFile": MessageLookupByLibrary.simpleMessage(
+      "Válassza a Fájl lehetőséget",
+    ),
     "selectSongs": MessageLookupByLibrary.simpleMessage("Számok kiválástása"),
     "selectedFileNotFound": MessageLookupByLibrary.simpleMessage(
       "A kiválasztott fájl nem található.",
@@ -611,6 +1107,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "settings_cloud_backup_desc": MessageLookupByLibrary.simpleMessage(
       "Feltöltés, visszaállítás és kezelés...",
+    ),
+    "settings_cloud_backup_dialog_desc": MessageLookupByLibrary.simpleMessage(
+      "Töltse fel az alkalmazás .hmb biztonsági másolatát a szerverre, és ha szükséges, állítsa vissza a mentett biztonsági másolatok bármelyikét.",
     ),
     "settings_content_desc": MessageLookupByLibrary.simpleMessage(
       "Fedezze fel a szűrőket, a Pipeddel való integrációt és a gyorsítótárakat.",
@@ -654,31 +1153,73 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
       "Nem sikerült új azonosítót létrehozni. Kérjük, próbálja újra később.",
     ),
-    "settings_visitor_exception": m1,
+    "settings_visitor_exception": m7,
     "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
       "Frissített azonosító",
     ),
     "settings_visitor_updated_desc": MessageLookupByLibrary.simpleMessage(
       "Sikeresen létrehoztunk egy új látogatóazonosítót.",
     ),
+    "shareAlbum": MessageLookupByLibrary.simpleMessage("Album megosztása"),
+    "sharePlaylist": MessageLookupByLibrary.simpleMessage(
+      "Lejátszási lista megosztása",
+    ),
     "shareSong": MessageLookupByLibrary.simpleMessage("Dal megosztása"),
     "shazamSearching": MessageLookupByLibrary.simpleMessage(
       "Egyezések keresése a Shazam adatbázisban...",
     ),
+    "shuffle": MessageLookupByLibrary.simpleMessage("Véletlenszerű"),
     "shuffleQueue": MessageLookupByLibrary.simpleMessage("Várólista keverése"),
-    "similarToTitle": m2,
+    "similarToTitle": m8,
     "singles": MessageLookupByLibrary.simpleMessage("Kislemezek"),
+    "skipSilence": MessageLookupByLibrary.simpleMessage("Átugrani a csendet"),
+    "skipSilenceDes": MessageLookupByLibrary.simpleMessage(
+      "Zenelejátszás közben a csend kimarad",
+    ),
+    "sleepTimeSetAlert": MessageLookupByLibrary.simpleMessage(
+      "Az elalvási időzítő be van állítva",
+    ),
     "sleepTimer": MessageLookupByLibrary.simpleMessage("Alvás időzítő"),
-    "slide_indicator": m3,
+    "slide_indicator": m9,
+    "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
+      "A dal felkerült a lejátszási listára!",
+    ),
+    "songAlreadyExists": MessageLookupByLibrary.simpleMessage(
+      "A dal már létezik!",
+    ),
+    "songAlreadyOfflineAlert": MessageLookupByLibrary.simpleMessage(
+      "A dal már a gyorsítótárban van",
+    ),
+    "songEnqueueAlert": MessageLookupByLibrary.simpleMessage(
+      "A dal felkerült a sorba!",
+    ),
     "songFound": MessageLookupByLibrary.simpleMessage("Dal megtalálva!"),
+    "songInfo": MessageLookupByLibrary.simpleMessage("Dal információ"),
     "songNotPlayable": MessageLookupByLibrary.simpleMessage(
       "A dal nem játszható le, a szerver korlátozása miatt!",
     ),
     "songPitch": MessageLookupByLibrary.simpleMessage("dal hangja"),
+    "songRemovedAlert": MessageLookupByLibrary.simpleMessage("eltávolítva"),
+    "songRemovedfromQueue": MessageLookupByLibrary.simpleMessage(
+      "Eltávolítva a sorból!",
+    ),
+    "songRemovedfromQueueCurrSong": MessageLookupByLibrary.simpleMessage(
+      "Az éppen lejátszott dal nem törölhető",
+    ),
     "songs": MessageLookupByLibrary.simpleMessage("Számok"),
     "songsImportedFromJossMusic": MessageLookupByLibrary.simpleMessage(
       "A Joss Music Kotlinból importált dalok",
     ),
+    "sortAscendNDescend": MessageLookupByLibrary.simpleMessage(
+      "Növekvő/csökkenő rendezés",
+    ),
+    "sortByDate": MessageLookupByLibrary.simpleMessage(
+      "Rendezés dátum szerint",
+    ),
+    "sortByDuration": MessageLookupByLibrary.simpleMessage(
+      "Rendezés időtartam szerint",
+    ),
+    "sortByName": MessageLookupByLibrary.simpleMessage("Rendezés név szerint"),
     "speedAndPitch": MessageLookupByLibrary.simpleMessage(
       "Sebesség és hangmagasság",
     ),
@@ -690,11 +1231,25 @@ class MessageLookup extends MessageLookupByLibrary {
     "startupScreenDescription": MessageLookupByLibrary.simpleMessage(
       "Válassza ki azt a részt, amelyet az Estrella Music először nyit meg",
     ),
+    "status": MessageLookupByLibrary.simpleMessage("Állapot"),
+    "stopMusicOnTaskClear": MessageLookupByLibrary.simpleMessage(
+      "Állítsa le a zenét az alkalmazás bezárásakor",
+    ),
+    "stopMusicOnTaskClearDes": MessageLookupByLibrary.simpleMessage(
+      "A zenelejátszás leáll, ha bezárja az alkalmazást a feladatkezelőből",
+    ),
+    "streamingQuality": MessageLookupByLibrary.simpleMessage(
+      "Streaming minőség",
+    ),
+    "streamingQualityDes": MessageLookupByLibrary.simpleMessage(
+      "Zene streaming minőség",
+    ),
+    "subscribers": MessageLookupByLibrary.simpleMessage("előfizetők"),
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
       "Csúsztassa ujját a lehetőségek felfedezéséhez ➔",
     ),
-    "syncChangesConfirmed": m4,
-    "syncChangesSynced": m5,
+    "syncChangesConfirmed": m10,
+    "syncChangesSynced": m11,
     "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
       "Felhő mód aktiválva. A meglévő könyvtár letöltése.",
     ),
@@ -734,6 +1289,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncOfflineRetry": MessageLookupByLibrary.simpleMessage(
       "Offline. A változtatások mentve újrapróbálkozáshoz.",
     ),
+    "syncPlaylistSongs": MessageLookupByLibrary.simpleMessage(
+      "Lejátszási lista dalainak szinkronizálása",
+    ),
     "syncUnconfirmedRetry": MessageLookupByLibrary.simpleMessage(
       "Az EMusic nem erősítette meg az összes változtatást. Újra meg fogják próbálni.",
     ),
@@ -752,25 +1310,44 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncUploading": MessageLookupByLibrary.simpleMessage(
       "Módosítások feltöltése az EMusicba...",
     ),
+    "synced": MessageLookupByLibrary.simpleMessage("Szinkronizált"),
+    "syncedLyricsNotAvailable": MessageLookupByLibrary.simpleMessage(
+      "Szinkronizált dalszöveg nem érhető el!",
+    ),
     "systemDefault": MessageLookupByLibrary.simpleMessage("Alapértelmezett"),
+    "themeMode": MessageLookupByLibrary.simpleMessage("Téma mód"),
+    "title": MessageLookupByLibrary.simpleMessage("Cím"),
+    "topMusicVid": MessageLookupByLibrary.simpleMessage(
+      "Legnépszerűbb zenei videók",
+    ),
     "topmusicvideos": MessageLookupByLibrary.simpleMessage(
       "Legjobb Zenei Videók",
     ),
     "trending": MessageLookupByLibrary.simpleMessage("Felkapott"),
+    "unLink": MessageLookupByLibrary.simpleMessage("Leválasztás"),
+    "unlinkAlert": MessageLookupByLibrary.simpleMessage(
+      "Sikeresen leválasztva!",
+    ),
     "untitledSong": MessageLookupByLibrary.simpleMessage("Névtelen dal"),
     "upNext": MessageLookupByLibrary.simpleMessage("Következő"),
+    "updateApp": MessageLookupByLibrary.simpleMessage("Alkalmazás frissítése"),
+    "urlSearchDes": MessageLookupByLibrary.simpleMessage(
+      "Az észlelt URL kattintson rá a kapcsolódó tartalom megnyitásához/lejátszásához",
+    ),
     "userBlocked": MessageLookupByLibrary.simpleMessage(
       "Letiltott felhasználó",
     ),
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "A válasz nem tartalmazza a felhasználók listáját.",
     ),
-    "userSearchFailed": m6,
+    "userSearchFailed": m12,
     "userUnblocked": MessageLookupByLibrary.simpleMessage(
       "Feloldott felhasználó",
     ),
     "username": MessageLookupByLibrary.simpleMessage("Felhasználónév"),
     "video": MessageLookupByLibrary.simpleMessage("Videó"),
+    "videos": MessageLookupByLibrary.simpleMessage("Videók"),
+    "viewAll": MessageLookupByLibrary.simpleMessage("Az összes megtekintése"),
     "viewArtist": MessageLookupByLibrary.simpleMessage("Irány az előadó"),
     "welcome_intro": MessageLookupByLibrary.simpleMessage(
       "Korszerűsítettük platformunkat. A manuális biztonsági mentések feltöltésének régi rendszere le van tiltva. Mostantól két egyértelmű módon kezelheti zenei könyvtárát.",

@@ -543,5 +543,1758 @@
   "keepScreenOnWhilePlayingDes": "సక్రియపెడితే, సంగీతం ప్లే చేస్తున్నప్పుడు పరికరం యొక్క స్క్రీన్ ఆన్ గా ఉంటుంది",
   "@keepScreenOnWhilePlayingDes": {
     "description": "keepScreenOnWhilePlayingDes"
+  },
+  "playlistCreatednsongAddedAlert": "ప్లేజాబితా సృష్టించబడింది మరియు పాట జోడించబడింది!",
+  "@playlistCreatednsongAddedAlert": {
+    "description": "playlistCreatednsongAddedAlert"
+  },
+  "songAlreadyOfflineAlert": "పాట ఇప్పటికే క్యాష్‌లో ఉంది",
+  "@songAlreadyOfflineAlert": {
+    "description": "songAlreadyOfflineAlert"
+  },
+  "plain": "సాధారణ",
+  "@plain": {
+    "description": "plain"
+  },
+  "videos": "వీడియోలు",
+  "@videos": {
+    "description": "videos"
+  },
+  "equalizerDes": "సిస్టమ్ ఈక్వలైజర్‌ని తెరవండి",
+  "@equalizerDes": {
+    "description": "equalizerDes"
+  },
+  "notaSongVideo": "ఇది పాట/సంగీత వీడియో కాదు!",
+  "@notaSongVideo": {
+    "description": "notaSongVideo"
+  },
+  "linkPipedDes": "ప్లేజాబితాల కోసం పైప్డ్‌తో లింక్ చేయండి",
+  "@linkPipedDes": {
+    "description": "linkPipedDes"
+  },
+  "selectAuthIns": "ప్రామాణీకరణ ఉదాహరణను ఎంచుకోండి",
+  "@selectAuthIns": {
+    "description": "selectAuthIns"
+  },
+  "password": "పాస్వర్డ్",
+  "@password": {
+    "description": "password"
+  },
+  "clearImgCacheAlert": "చిత్రం కాష్ విజయవంతంగా క్లియర్ చేయబడింది",
+  "@clearImgCacheAlert": {
+    "description": "clearImgCacheAlert"
+  },
+  "results": "ఫలితాలు",
+  "@results": {
+    "description": "results"
+  },
+  "albumBookmarkRemoveAlert": "ఆల్బమ్ బుక్‌మార్క్ తీసివేయబడింది!",
+  "@albumBookmarkRemoveAlert": {
+    "description": "albumBookmarkRemoveAlert"
+  },
+  "close": "మూసివేయి",
+  "@close": {
+    "description": "close"
+  },
+  "scanning": "స్కాన్ చేస్తోంది...",
+  "@scanning": {
+    "description": "scanning"
+  },
+  "downFilesFound": "డౌన్‌లోడ్ చేసిన ఫైల్‌లు కనుగొనబడ్డాయి",
+  "@downFilesFound": {
+    "description": "downFilesFound"
+  },
+  "exportMsg": "ఫైల్‌లు విజయవంతంగా ఎగుమతి చేయబడ్డాయి",
+  "@exportMsg": {
+    "description": "exportMsg"
+  },
+  "equalizer": "ఈక్వలైజర్",
+  "@equalizer": {
+    "description": "equalizer"
+  },
+  "clearImgCache": "ఇమేజ్ కాష్‌ని క్లియర్ చేయండి",
+  "@clearImgCache": {
+    "description": "clearImgCache"
+  },
+  "clearImgCacheDes": "కాష్ చేయబడిన సూక్ష్మచిత్రాలు/చిత్రాలను క్లియర్ చేయడానికి ఇక్కడ క్లిక్ చేయండి. (మీరు కాష్ చేసిన ఇమేజ్ డేటాను అప్‌డేట్ చేయాలనుకుంటే తప్ప సిఫార్సు చేయబడదు)",
+  "@clearImgCacheDes": {
+    "description": "clearImgCacheDes"
+  },
+  "disabled": "వికలాంగుడు",
+  "@disabled": {
+    "description": "disabled"
+  },
+  "ignoreBatOpt": "బ్యాటరీ ఆప్టిమైజేషన్‌ను విస్మరించండి",
+  "@ignoreBatOpt": {
+    "description": "ignoreBatOpt"
+  },
+  "enabled": "యాక్టివేట్ చేయబడింది",
+  "@enabled": {
+    "description": "enabled"
+  },
+  "github": "GitHub",
+  "@github": {
+    "description": "github"
+  },
+  "githubDes": "GitHub సోర్స్ కోడ్‌ని వీక్షించండి \nమీకు ఈ ప్రాజెక్ట్ నచ్చితే, దానికి ⭐ ఇవ్వడం మర్చిపోవద్దు!",
+  "@githubDes": {
+    "description": "githubDes"
+  },
+  "by": "ద్వారా",
+  "@by": {
+    "description": "by"
+  },
+  "searchDes": "పాటలు, ప్లేజాబితాలు, ఆల్బమ్‌లు లేదా కళాకారులు",
+  "@searchDes": {
+    "description": "searchDes"
+  },
+  "searchRes": "శోధన ఫలితాలు",
+  "@searchRes": {
+    "description": "searchRes"
+  },
+  "for1": "కోసం",
+  "@for1": {
+    "description": "for1"
+  },
+  "viewAll": "అన్నీ చూడండి",
+  "@viewAll": {
+    "description": "viewAll"
+  },
+  "nomatch": "దీనికి సరిపోలికలు ఏవీ కనుగొనబడలేదు",
+  "@nomatch": {
+    "description": "nomatch"
+  },
+  "subscribers": "చందాదారులు",
+  "@subscribers": {
+    "description": "subscribers"
+  },
+  "synced": "సమకాలీకరించబడింది",
+  "@synced": {
+    "description": "synced"
+  },
+  "deleteDownloadedDataAlert": "డౌన్‌లోడ్‌ల నుండి విజయవంతంగా తీసివేయబడింది!",
+  "@deleteDownloadedDataAlert": {
+    "description": "deleteDownloadedDataAlert"
+  },
+  "cancelTimerAlert": "నిద్ర టైమర్ రద్దు చేయబడింది",
+  "@cancelTimerAlert": {
+    "description": "cancelTimerAlert"
+  },
+  "sleepTimeSetAlert": "మీ నిద్ర టైమర్ సెట్ చేయబడింది",
+  "@sleepTimeSetAlert": {
+    "description": "sleepTimeSetAlert"
+  },
+  "songRemovedfromQueueCurrSong": "మీరు ప్రస్తుతం ప్లే అవుతున్న పాటను తొలగించలేరు",
+  "@songRemovedfromQueueCurrSong": {
+    "description": "songRemovedfromQueueCurrSong"
+  },
+  "songRemovedAlert": "నుండి తీసివేయబడింది",
+  "@songRemovedAlert": {
+    "description": "songRemovedAlert"
+  },
+  "pipedplstSyncAlert": "పైప్డ్ ప్లేజాబితా సమకాలీకరించబడింది!",
+  "@pipedplstSyncAlert": {
+    "description": "pipedplstSyncAlert"
+  },
+  "playlistRenameAlert": "విజయవంతంగా రీబ్రాండ్ చేయబడింది!",
+  "@playlistRenameAlert": {
+    "description": "playlistRenameAlert"
+  },
+  "playlistRemovedAlert": "ప్లేజాబితా తొలగించబడింది!",
+  "@playlistRemovedAlert": {
+    "description": "playlistRemovedAlert"
+  },
+  "playlistBookmarkAddAlert": "బుక్‌మార్క్‌లకు ప్లేజాబితా జోడించబడింది!",
+  "@playlistBookmarkAddAlert": {
+    "description": "playlistBookmarkAddAlert"
+  },
+  "playlistBookmarkRemoveAlert": "ప్లేజాబితా బుక్‌మార్క్ తీసివేయబడింది!",
+  "@playlistBookmarkRemoveAlert": {
+    "description": "playlistBookmarkRemoveAlert"
+  },
+  "albumBookmarkAddAlert": "ఆల్బమ్ బుక్‌మార్క్‌లకు జోడించబడింది!",
+  "@albumBookmarkAddAlert": {
+    "description": "albumBookmarkAddAlert"
+  },
+  "lyricsNotAvailable": "సాహిత్యం అందుబాటులో లేదు!",
+  "@lyricsNotAvailable": {
+    "description": "lyricsNotAvailable"
+  },
+  "newVersionAvailable": "కొత్త వెర్షన్ అందుబాటులో ఉంది!",
+  "@newVersionAvailable": {
+    "description": "newVersionAvailable"
+  },
+  "dontShowInfoAgain": "ఈ సమాచారాన్ని మళ్లీ చూపవద్దు",
+  "@dontShowInfoAgain": {
+    "description": "dontShowInfoAgain"
+  },
+  "notaValidLink": "ఇది చెల్లుబాటు అయ్యే లింక్ కాదు!",
+  "@notaValidLink": {
+    "description": "notaValidLink"
+  },
+  "operationFailed": "ఆపరేషన్ విఫలమైంది",
+  "@operationFailed": {
+    "description": "operationFailed"
+  },
+  "Piped": "పైప్డ్",
+  "@Piped": {
+    "description": "Piped"
+  },
+  "link": "లింక్",
+  "@link": {
+    "description": "link"
+  },
+  "unLink": "అన్‌లింక్ చేయండి",
+  "@unLink": {
+    "description": "unLink"
+  },
+  "hintApiUrl": "పైప్ చేసిన ఉదాహరణకి API URL",
+  "@hintApiUrl": {
+    "description": "hintApiUrl"
+  },
+  "customIns": "అనుకూల ఉదాహరణ",
+  "@customIns": {
+    "description": "customIns"
+  },
+  "linkAlert": "విజయవంతంగా లింక్ చేయబడింది!",
+  "@linkAlert": {
+    "description": "linkAlert"
+  },
+  "unlinkAlert": "విజయవంతంగా అన్‌లింక్ చేయబడింది!",
+  "@unlinkAlert": {
+    "description": "unlinkAlert"
+  },
+  "stopMusicOnTaskClear": "యాప్‌ను మూసివేసేటప్పుడు సంగీతాన్ని ఆపివేయండి",
+  "@stopMusicOnTaskClear": {
+    "description": "stopMusicOnTaskClear"
+  },
+  "ignoreBatOptDes": "సిస్టమ్ ఆప్టిమైజేషన్ కారణంగా నోటిఫికేషన్‌లు లేదా ప్లేబ్యాక్ స్టాప్‌లతో మీకు సమస్యలు ఉంటే, ఈ ఎంపికను సక్రియం చేయండి",
+  "@ignoreBatOptDes": {
+    "description": "ignoreBatOptDes"
+  },
+  "status": "స్థితి",
+  "@status": {
+    "description": "status"
+  },
+  "radioNotAvailable": "ఈ కళాకారుడికి రేడియో అందుబాటులో లేదు!",
+  "@radioNotAvailable": {
+    "description": "radioNotAvailable"
+  },
+  "songRemovedfromQueue": "క్యూ నుండి తీసివేయబడింది!",
+  "@songRemovedfromQueue": {
+    "description": "songRemovedfromQueue"
+  },
+  "artistBookmarkRemoveAlert": "ఆర్టిస్ట్ మార్కర్ తీసివేయబడింది!",
+  "@artistBookmarkRemoveAlert": {
+    "description": "artistBookmarkRemoveAlert"
+  },
+  "dismiss": "విస్మరించండి",
+  "@dismiss": {
+    "description": "dismiss"
+  },
+  "goToDownloadPage": "డౌన్‌లోడ్ పేజీకి వెళ్లడానికి ఇక్కడ క్లిక్ చేయండి",
+  "@goToDownloadPage": {
+    "description": "goToDownloadPage"
+  },
+  "local": "స్థానిక",
+  "@local": {
+    "description": "local"
+  },
+  "search": "శోధించండి",
+  "@search": {
+    "description": "search"
+  },
+  "songAddedToPlaylistAlert": "పాట ప్లేజాబితాకు జోడించబడింది!",
+  "@songAddedToPlaylistAlert": {
+    "description": "songAddedToPlaylistAlert"
+  },
+  "songAlreadyExists": "పాట ఇప్పటికే ఉంది!",
+  "@songAlreadyExists": {
+    "description": "songAlreadyExists"
+  },
+  "songEnqueueAlert": "పాట క్యూలో జోడించబడింది!",
+  "@songEnqueueAlert": {
+    "description": "songEnqueueAlert"
+  },
+  "artistBookmarkAddAlert": "కళాకారుడు బుక్‌మార్క్‌లకు జోడించబడ్డాడు!",
+  "@artistBookmarkAddAlert": {
+    "description": "artistBookmarkAddAlert"
+  },
+  "syncedLyricsNotAvailable": "సమకాలీకరించబడిన సాహిత్యం అందుబాటులో లేదు!",
+  "@syncedLyricsNotAvailable": {
+    "description": "syncedLyricsNotAvailable"
+  },
+  "artistDesNotAvailable": "వివరణ అందుబాటులో లేదు!",
+  "@artistDesNotAvailable": {
+    "description": "artistDesNotAvailable"
+  },
+  "selectAuthInsMsg": "దయచేసి ప్రమాణీకరణ దృష్టాంతాన్ని ఎంచుకోండి!",
+  "@selectAuthInsMsg": {
+    "description": "selectAuthInsMsg"
+  },
+  "allFieldsReqMsg": "అన్ని ఫీల్డ్‌లు అవసరం",
+  "@allFieldsReqMsg": {
+    "description": "allFieldsReqMsg"
+  },
+  "username": "వినియోగదారు పేరు",
+  "@username": {
+    "description": "username"
+  },
+  "playlistBlacklistAlert": "బ్లాక్‌లిస్ట్ చేసిన ప్లేజాబితా!",
+  "@playlistBlacklistAlert": {
+    "description": "playlistBlacklistAlert"
+  },
+  "blacklistPlstResetAlert": "విజయవంతంగా రీసెట్ చేయబడింది!",
+  "@blacklistPlstResetAlert": {
+    "description": "blacklistPlstResetAlert"
+  },
+  "resetblacklistedplaylist": "బ్లాక్‌లిస్ట్ చేసిన ప్లేజాబితాలను రీసెట్ చేయండి",
+  "@resetblacklistedplaylist": {
+    "description": "resetblacklistedplaylist"
+  },
+  "resetblacklistedplaylistDes": "బ్లాక్‌లిస్ట్ చేయబడిన అన్ని పైప్డ్ ప్లేజాబితాలను రీసెట్ చేయండి",
+  "@resetblacklistedplaylistDes": {
+    "description": "resetblacklistedplaylistDes"
+  },
+  "restoreSettingsAndPlaylistsDes": "బ్యాకప్ ఫైల్ నుండి అన్ని సెట్టింగ్‌లు, లాగిన్ డేటా మరియు ప్లేజాబితాలను పునరుద్ధరిస్తుంది. ప్రస్తుత డేటా మొత్తాన్ని ఓవర్‌రైట్ చేస్తుంది",
+  "@restoreSettingsAndPlaylistsDes": {
+    "description": "restoreSettingsAndPlaylistsDes"
+  },
+  "errorOccuredAlert": "ఒక లోపం సంభవించింది!",
+  "@errorOccuredAlert": {
+    "description": "errorOccuredAlert"
+  },
+  "playlistCreatedAlert": "ప్లేజాబితా సృష్టించబడింది!",
+  "@playlistCreatedAlert": {
+    "description": "playlistCreatedAlert"
+  },
+  "reset": "రీసెట్ చేయండి",
+  "@reset": {
+    "description": "reset"
+  },
+  "customInsSelectMsg": "దయచేసి అనుకూల ఉదాహరణను ఎంచుకోండి",
+  "@customInsSelectMsg": {
+    "description": "customInsSelectMsg"
+  },
+  "stopMusicOnTaskClearDes": "టాస్క్ మేనేజర్ నుండి యాప్ మూసివేయబడినప్పుడు మ్యూజిక్ ప్లేబ్యాక్ ఆగిపోతుంది",
+  "@stopMusicOnTaskClearDes": {
+    "description": "stopMusicOnTaskClearDes"
+  },
+  "backupSettingsAndPlaylistsDes": "బ్యాకప్ ఫైల్‌లో అన్ని సెట్టింగ్‌లు, ప్లేజాబితాలు మరియు లాగిన్ డేటాను సేవ్ చేయండి",
+  "@backupSettingsAndPlaylistsDes": {
+    "description": "backupSettingsAndPlaylistsDes"
+  },
+  "backupMsg": "బ్యాకప్ విజయవంతంగా సేవ్ చేయబడింది!",
+  "@backupMsg": {
+    "description": "backupMsg"
+  },
+  "backFilesFound": "డేటాబేస్లు కనుగొనబడ్డాయి",
+  "@backFilesFound": {
+    "description": "backFilesFound"
+  },
+  "restoreMsg": "విజయవంతంగా పునరుద్ధరించబడింది!\nరీబూట్ చేసిన తర్వాత మార్పులు వర్తిస్తాయి",
+  "@restoreMsg": {
+    "description": "restoreMsg"
+  },
+  "restoring": "పునరుద్ధరిస్తోంది...",
+  "@restoring": {
+    "description": "restoring"
+  },
+  "restore": "పునరుద్ధరించు",
+  "@restore": {
+    "description": "restore"
+  },
+  "closeApp": "అప్లికేషన్‌ను మూసివేయండి",
+  "@closeApp": {
+    "description": "closeApp"
+  },
+  "audioCodec": "ఆడియో కోడెక్",
+  "@audioCodec": {
+    "description": "audioCodec"
+  },
+  "loudnessDb": "లౌడ్‌నెస్ డిబి",
+  "@loudnessDb": {
+    "description": "loudnessDb"
+  },
+  "restoreAppData": "యాప్ డేటాను పునరుద్ధరించండి",
+  "@restoreAppData": {
+    "description": "restoreAppData"
+  },
+  "includeDownloadedFiles": "డౌన్‌లోడ్ చేసిన పాట ఫైల్‌లను చేర్చండి",
+  "@includeDownloadedFiles": {
+    "description": "includeDownloadedFiles"
+  },
+  "backupInProgress": "బ్యాకప్ ప్రోగ్రెస్‌లో ఉంది...",
+  "@backupInProgress": {
+    "description": "backupInProgress"
+  },
+  "letsStrart": "ప్రారంభిద్దాం..",
+  "@letsStrart": {
+    "description": "letsStrart"
+  },
+  "processFiles": "ఫైల్‌లను ప్రాసెస్ చేస్తోంది...",
+  "@processFiles": {
+    "description": "processFiles"
+  },
+  "backupAppData": "యాప్ డేటాను బ్యాకప్ చేయండి",
+  "@backupAppData": {
+    "description": "backupAppData"
+  },
+  "backup": "బ్యాకప్",
+  "@backup": {
+    "description": "backup"
+  },
+  "bitrate": "బిట్ రేటు",
+  "@bitrate": {
+    "description": "bitrate"
+  },
+  "androidBackupWarning": "పరీక్షించబడలేదు: 60 కంటే ఎక్కువ ఫైల్‌లను డౌన్‌లోడ్ చేసిన తర్వాత చెక్‌బాక్స్‌ని ఎంచుకోవడం వలన ప్రాసెస్ పెద్ద మొత్తంలో మెమరీని వినియోగించుకోవచ్చు మరియు ఫోన్ లేదా యాప్ క్రాష్ కావచ్చు. మీ స్వంత పూచీతో కొనసాగండి.",
+  "@androidBackupWarning": {
+    "description": "androidBackupWarning"
+  },
+  "songInfo": "పాట సమాచారం",
+  "@songInfo": {
+    "description": "songInfo"
+  },
+  "id": "ID",
+  "@id": {
+    "description": "id"
+  },
+  "title": "శీర్షిక",
+  "@title": {
+    "description": "title"
+  },
+  "restartApp": "అప్లికేషన్ పునఃప్రారంభించండి",
+  "@restartApp": {
+    "description": "restartApp"
+  },
+  "duration": "వ్యవధి",
+  "@duration": {
+    "description": "duration"
+  },
+  "urlSearchDes": "అనుబంధిత కంటెంట్‌ను తెరవడానికి/ప్లే చేయడానికి గుర్తించబడిన URL దానిపై క్లిక్ చేయండి",
+  "@urlSearchDes": {
+    "description": "urlSearchDes"
+  },
+  "auth_login_success": "విజయవంతంగా లాగిన్ చేయబడింది",
+  "@auth_login_success": {
+    "description": "auth_login_success"
+  },
+  "settings_cloud_backup": "క్లౌడ్ బ్యాకప్",
+  "@settings_cloud_backup": {
+    "description": "settings_cloud_backup"
+  },
+  "settings_migration_title": "జాస్ మ్యూజిక్ కోట్లిన్ నుండి మైగ్రేట్ చేయండి",
+  "@settings_migration_title": {
+    "description": "settings_migration_title"
+  },
+  "backup_confirm_question": "మీరు బ్యాకప్ చేయాలనుకుంటున్నారా?",
+  "@backup_confirm_question": {
+    "description": "backup_confirm_question"
+  },
+  "backup_selection_prompt": "ఏ డేటాను బ్యాకప్ చేయాలో ఎంచుకోండి",
+  "@backup_selection_prompt": {
+    "description": "backup_selection_prompt"
+  },
+  "search_recent_title": "ఇటీవలి శోధనలు",
+  "@search_recent_title": {
+    "description": "search_recent_title"
+  },
+  "back": "వెనుకకు",
+  "@back": {
+    "description": "back"
+  },
+  "auth_forgot_password": "నేను నా పాస్‌వర్డ్‌ను మర్చిపోయాను",
+  "@auth_forgot_password": {
+    "description": "auth_forgot_password"
+  },
+  "auth_btn_login": "సైన్ ఇన్ చేయండి",
+  "@auth_btn_login": {
+    "description": "auth_btn_login"
+  },
+  "auth_btn_register": "నమోదు చేసుకోండి",
+  "@auth_btn_register": {
+    "description": "auth_btn_register"
+  },
+  "email": "ఇమెయిల్",
+  "@email": {
+    "description": "email"
+  },
+  "password_text": "పాస్వర్డ్",
+  "@password_text": {
+    "description": "Contraseña texto traducido"
+  },
+  "auth_confirm_password": "పాస్వర్డ్ను నిర్ధారించండి",
+  "@auth_confirm_password": {
+    "description": "auth_confirm_password"
+  },
+  "auth_welcome_title": "ఎస్ట్రెల్లా సంగీతానికి స్వాగతం",
+  "@auth_welcome_title": {
+    "description": "auth_welcome_title"
+  },
+  "auth_welcome_subtitle": "ఎస్ట్రెల్లా సంగీతానికి స్వాగతం",
+  "@auth_welcome_subtitle": {
+    "description": "auth_welcome_subtitle"
+  },
+  "auth_first_name": "మొదటి పేరు",
+  "@auth_first_name": {
+    "description": "auth_first_name"
+  },
+  "auth_last_name": "ఇంటిపేరు",
+  "@auth_last_name": {
+    "description": "auth_last_name"
+  },
+  "auth_agree_personal_data": "నా డేటాను ఉపయోగించడానికి నేను అంగీకరిస్తున్నాను...",
+  "@auth_agree_personal_data": {
+    "description": "auth_agree_personal_data"
+  },
+  "settings_general_section": "జనరల్",
+  "@settings_general_section": {
+    "description": "settings_general_section"
+  },
+  "settings_logout": "లాగ్ అవుట్ చేయండి",
+  "@settings_logout": {
+    "description": "settings_logout"
+  },
+  "settings_cloud_backup_desc": "అప్‌లోడ్ చేయండి, పునరుద్ధరించండి మరియు నిర్వహించండి...",
+  "@settings_cloud_backup_desc": {
+    "description": "settings_cloud_backup_desc"
+  },
+  "settings_migration_desc": "ప్లేజాబితాలు, పాటలు దిగుమతి...",
+  "@settings_migration_desc": {
+    "description": "settings_migration_desc"
+  },
+  "backup_btn_restart": "యాప్‌ని పునఃప్రారంభించండి",
+  "@backup_btn_restart": {
+    "description": "backup_btn_restart"
+  },
+  "backup_btn_upload": "ఇప్పుడే బ్యాకప్‌ని అప్‌లోడ్ చేయండి",
+  "@backup_btn_upload": {
+    "description": "backup_btn_upload"
+  },
+  "backup_no_backups": "ఇంకా బ్యాకప్‌లు లేవు...",
+  "@backup_no_backups": {
+    "description": "backup_no_backups"
+  },
+  "backup_auth_required": "మీకు సక్రియ సెషన్ అవసరం...",
+  "@backup_auth_required": {
+    "description": "backup_auth_required"
+  },
+  "backup_upload_success": "బ్యాకప్ సరిగ్గా అప్‌లోడ్ చేయబడింది.",
+  "@backup_upload_success": {
+    "description": "backup_upload_success"
+  },
+  "backup_restore_success": "బ్యాకప్ పునరుద్ధరించబడింది. యాప్‌ని రీస్టార్ట్ చేయండి.",
+  "@backup_restore_success": {
+    "description": "backup_restore_success"
+  },
+  "backup_delete_success": "బ్యాకప్ తొలగించబడింది.",
+  "@backup_delete_success": {
+    "description": "backup_delete_success"
+  },
+  "genre_pop": "పాప్",
+  "@genre_pop": {
+    "description": "genre_pop"
+  },
+  "genre_rock": "రాక్",
+  "@genre_rock": {
+    "description": "genre_rock"
+  },
+  "genre_hiphop": "హిప్ హాప్",
+  "@genre_hiphop": {
+    "description": "genre_hiphop"
+  },
+  "genre_electronic": "ఎలక్ట్రానిక్స్",
+  "@genre_electronic": {
+    "description": "genre_electronic"
+  },
+  "genre_jazz": "జాజ్",
+  "@genre_jazz": {
+    "description": "genre_jazz"
+  },
+  "genre_latin": "లాటిన్",
+  "@genre_latin": {
+    "description": "genre_latin"
+  },
+  "migration_btn_select": "ఫైల్‌ని ఎంచుకోండి మరియు దిగుమతి చేయండి",
+  "@migration_btn_select": {
+    "description": "migration_btn_select"
+  },
+  "forgottenFavorites": "ఇష్టమైనవి మర్చిపోయారు",
+  "@forgottenFavorites": {
+    "description": "forgottenFavorites"
+  },
+  "mostListenedSong": "ఎక్కువగా విన్న పాట",
+  "@mostListenedSong": {
+    "description": "mostListenedSong"
+  },
+  "reproducedBy": "ద్వారా పునరుత్పత్తి చేయబడింది",
+  "@reproducedBy": {
+    "description": "reproducedBy"
+  },
+  "recentSearches": "ఇటీవలి శోధనలు",
+  "@recentSearches": {
+    "description": "recentSearches"
+  },
+  "popularTracks": "జనాదరణ పొందిన ట్రాక్‌లు",
+  "@popularTracks": {
+    "description": "popularTracks"
+  },
+  "latestRelease": "తాజా విడుదల",
+  "@latestRelease": {
+    "description": "latestRelease"
+  },
+  "follow": "అనుసరించండి",
+  "@follow": {
+    "description": "follow"
+  },
+  "following": "అనుసరిస్తోంది",
+  "@following": {
+    "description": "following"
+  },
+  "listenNow": "ఇప్పుడు వినండి",
+  "@listenNow": {
+    "description": "listenNow"
+  },
+  "video": "వీడియో",
+  "@video": {
+    "description": "video"
+  },
+  "about": "గురించి",
+  "@about": {
+    "description": "about"
+  },
+  "readMore": "మరింత చదవండి",
+  "@readMore": {
+    "description": "readMore"
+  },
+  "speedAndPitch": "వేగం మరియు పిచ్",
+  "@speedAndPitch": {
+    "description": "speedAndPitch"
+  },
+  "playbackSpeed": "ప్లేబ్యాక్ వేగం",
+  "@playbackSpeed": {
+    "description": "playbackSpeed"
+  },
+  "songPitch": "పాట స్వరం",
+  "@songPitch": {
+    "description": "songPitch"
+  },
+  "musicRecognition": "సంగీత గుర్తింపు",
+  "@musicRecognition": {
+    "description": "musicRecognition"
+  },
+  "listeningToEnvironment": "పర్యావరణాన్ని వింటూ...",
+  "@listeningToEnvironment": {
+    "description": "listeningToEnvironment"
+  },
+  "micInstruction": "మీ మైక్రోఫోన్ దగ్గర సంగీతం తగినంత బిగ్గరగా ప్లే అవుతుందని నిర్ధారించుకోండి.",
+  "@micInstruction": {
+    "description": "micInstruction"
+  },
+  "processingAudio": "ఆడియోను ప్రాసెస్ చేస్తోంది...",
+  "@processingAudio": {
+    "description": "processingAudio"
+  },
+  "shazamSearching": "మ్యాచ్‌ల కోసం Shazam డేటాబేస్‌ని శోధిస్తోంది...",
+  "@shazamSearching": {
+    "description": "shazamSearching"
+  },
+  "songFound": "పాట దొరికింది!",
+  "@songFound": {
+    "description": "songFound"
+  },
+  "playNow": "ఇప్పుడే ఆడండి",
+  "@playNow": {
+    "description": "playNow"
+  },
+  "searchInLibrary": "లైబ్రరీలో శోధించండి",
+  "@searchInLibrary": {
+    "description": "searchInLibrary"
+  },
+  "noMatchesFound": "మ్యాచ్‌లు లేవు",
+  "@noMatchesFound": {
+    "description": "noMatchesFound"
+  },
+  "noMatchInstruction": "రికార్డ్ చేసిన ఆడియోలో పాటలు ఏవీ కనుగొనబడలేదు",
+  "@noMatchInstruction": {
+    "description": "noMatchInstruction"
+  },
+  "errorOccurred": "ఒక లోపం సంభవించింది",
+  "@errorOccurred": {
+    "description": "errorOccurred"
+  },
+  "playingRecognizedTrack": "ఆడుతోంది:",
+  "@playingRecognizedTrack": {
+    "description": "playingRecognizedTrack"
+  },
+  "errorPlayingTrack": "ప్లే చేస్తున్నప్పుడు లోపం:",
+  "@errorPlayingTrack": {
+    "description": "errorPlayingTrack"
+  },
+  "welcome_title": "మీ సంగీతం, మీ మార్గం",
+  "@welcome_title": {
+    "description": "welcome_title"
+  },
+  "welcome_subtitle": "మీరు ఇప్పటి నుండి ఎస్ట్రెల్లా సంగీతాన్ని ఎలా అనుభవించాలనుకుంటున్నారో ఎంచుకోండి.",
+  "@welcome_subtitle": {
+    "description": "welcome_subtitle"
+  },
+  "welcome_intro": "మేము మా ప్లాట్‌ఫారమ్‌ను ఆధునీకరించాము. మాన్యువల్ బ్యాకప్‌లను అప్‌లోడ్ చేసే పాత సిస్టమ్ నిలిపివేయబడింది. మీ సంగీత లైబ్రరీని నిర్వహించడానికి మీకు ఇప్పుడు రెండు స్పష్టమైన మార్గాలు ఉన్నాయి.",
+  "@welcome_intro": {
+    "description": "welcome_intro"
+  },
+  "recommend_cloud": "Spotify లాంటి అనుభవం కోసం క్లౌడ్ మోడ్‌ని యాక్టివేట్ చేయమని మేము సిఫార్సు చేస్తున్నాము: మీ అన్ని పరికరాల మధ్య నిజ-సమయ సమకాలీకరణ మరియు మీరు ఏమీ చేయనవసరం లేకుండా ఆటోమేటిక్ బ్యాకప్.",
+  "@recommend_cloud": {
+    "description": "recommend_cloud"
+  },
+  "swipe_prompt": "ఎంపికలను అన్వేషించడానికి స్వైప్ చేయండి",
+  "@swipe_prompt": {
+    "description": "swipe_prompt"
+  },
+  "local_title": "స్థానిక మోడ్",
+  "@local_title": {
+    "description": "local_title"
+  },
+  "local_subtitle": "మీ పరికరంలో సంపూర్ణ గోప్యత",
+  "@local_subtitle": {
+    "description": "local_subtitle"
+  },
+  "local_b1": "ఇది లాగిన్ అవసరం లేకుండా పనిచేస్తుంది.",
+  "@local_b1": {
+    "description": "local_b1"
+  },
+  "local_b2": "మీ మొత్తం లైబ్రరీ ఖచ్చితంగా ఈ కంప్యూటర్‌లో ఉంటుంది.",
+  "@local_b2": {
+    "description": "local_b2"
+  },
+  "local_b3": "గమనిక: మాన్యువల్ క్లౌడ్ బ్యాకప్‌లు లేవు. మీరు మీ పరికరాన్ని పోగొట్టుకున్నా లేదా యాప్‌ను అన్‌ఇన్‌స్టాల్ చేసినా, మీ డేటాను తిరిగి పొందలేరు.",
+  "@local_b3": {
+    "description": "local_b3"
+  },
+  "local_btn": "ఈ పరికరంలో మాత్రమే ఉపయోగించండి",
+  "@local_btn": {
+    "description": "local_btn"
+  },
+  "cloud_title": "క్లౌడ్ మోడ్ (సిఫార్సు చేయబడింది)",
+  "@cloud_title": {
+    "description": "cloud_title"
+  },
+  "cloud_subtitle": "జాస్ రెడ్‌తో రియల్ టైమ్ సింక్రొనైజేషన్",
+  "@cloud_subtitle": {
+    "description": "cloud_subtitle"
+  },
+  "cloud_b1": "మీ Joss Red ఖాతాను ఉపయోగించి సురక్షితంగా లాగిన్ చేయండి.",
+  "@cloud_b1": {
+    "description": "cloud_b1"
+  },
+  "cloud_b2": "ఏదైనా పరికరం నుండి (Windows, Android, మొదలైనవి) తక్షణమే మీ ప్లేజాబితాలు, ఇష్టమైనవి మరియు చరిత్రను యాక్సెస్ చేయండి.",
+  "@cloud_b2": {
+    "description": "cloud_b2"
+  },
+  "cloud_b3": "స్మార్ట్ సింక్: ఆఫ్‌లైన్‌లో పని చేయండి మరియు మీరు ఇంటర్నెట్‌ని పునరుద్ధరించినప్పుడు స్వయంచాలకంగా మార్పులను అప్‌లోడ్ చేయండి.",
+  "@cloud_b3": {
+    "description": "cloud_b3"
+  },
+  "cloud_btn": "క్లౌడ్ సమకాలీకరణను సక్రియం చేయండి",
+  "@cloud_btn": {
+    "description": "cloud_btn"
+  },
+  "slide_indicator": "3లో {current} దశ",
+  "@slide_indicator": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      }
+    },
+    "description": "slide_indicator"
+  },
+  "news_card_title": "ఎస్ట్రెల్లా సంగీతం అభివృద్ధి చెందింది!",
+  "@news_card_title": {
+    "description": "news_card_title"
+  },
+  "news_card_subtitle": "జాస్ రెడ్‌తో 100% సింక్రొనైజేషన్, స్నేహితులతో ప్లేజాబితాలు మరియు మరిన్ని. కొత్తవి ఏమిటో చూడటానికి నొక్కండి.",
+  "@news_card_subtitle": {
+    "description": "news_card_subtitle"
+  },
+  "news_dialog_title": "ఎస్ట్రెల్లా మ్యూజిక్ న్యూస్",
+  "@news_dialog_title": {
+    "description": "news_dialog_title"
+  },
+  "news_item_sync_title": "జాస్ రెడ్‌తో పూర్తి ఏకీకరణ",
+  "@news_item_sync_title": {
+    "description": "news_item_sync_title"
+  },
+  "news_item_sync_desc": "మీ ప్లేజాబితాలు మరియు ఇష్టమైనవి ఇప్పుడు మీ ప్రధాన Joss Red ఖాతాతో స్వయంచాలకంగా క్లౌడ్‌లో సేవ్ చేయబడతాయి మరియు సమకాలీకరించబడతాయి.",
+  "@news_item_sync_desc": {
+    "description": "news_item_sync_desc"
+  },
+  "news_item_collab_title": "సహకార ప్లేజాబితాలు",
+  "@news_item_collab_title": {
+    "description": "news_item_collab_title"
+  },
+  "news_item_collab_desc": "మీ స్నేహితులతో ప్లేజాబితాలను సృష్టించండి! ప్లేజాబితాను సృష్టించేటప్పుడు, సహకార చెక్‌బాక్స్‌ని ఎంచుకుని, మీ స్నేహితులను కలిసి సవరించడానికి ఎంచుకోండి.",
+  "@news_item_collab_desc": {
+    "description": "news_item_collab_desc"
+  },
+  "news_item_trans_title": "పారదర్శక సమకాలీకరణ",
+  "@news_item_trans_title": {
+    "description": "news_item_trans_title"
+  },
+  "news_item_trans_desc": "మీరు ఇకపై మాన్యువల్ సింక్ బటన్‌లను క్లిక్ చేయనవసరం లేదు; స్వయంచాలకంగా పైకి క్రిందికి మారడానికి కొత్త మోటారు బాధ్యత వహిస్తుంది.",
+  "@news_item_trans_desc": {
+    "description": "news_item_trans_desc"
+  },
+  "news_dialog_section_friends": "స్నేహితులు మరియు ఖాతా నిర్వహణ:",
+  "@news_dialog_section_friends": {
+    "description": "news_dialog_section_friends"
+  },
+  "news_dialog_friends_desc": "స్నేహితులను జోడించడానికి, అభ్యర్థనలను ఆమోదించడానికి లేదా మీ భద్రతా ప్రొఫైల్‌ని నిర్వహించడానికి, దయచేసి దాని అధికారిక ప్లాట్‌ఫారమ్‌లలో Joss Redని ఉపయోగించండి:",
+  "@news_dialog_friends_desc": {
+    "description": "news_dialog_friends_desc"
+  },
+  "news_btn_app": "జాస్ రెడ్ యాప్ (ప్లే స్టోర్)",
+  "@news_btn_app": {
+    "description": "news_btn_app"
+  },
+  "news_btn_web": "జాస్ రెడ్ వెబ్",
+  "@news_btn_web": {
+    "description": "news_btn_web"
+  },
+  "news_btn_dismiss": "అర్థమైంది",
+  "@news_btn_dismiss": {
+    "description": "news_btn_dismiss"
+  },
+  "settings_appearance_desc": "థీమ్, భాష మరియు ఇంటర్‌ఫేస్ యానిమేషన్‌లు.",
+  "@settings_appearance_desc": {
+    "description": "settings_appearance_desc"
+  },
+  "settings_content_desc": "ఫిల్టర్‌లను కనుగొనండి, పైప్డ్ మరియు కాష్‌లతో ఏకీకరణ.",
+  "@settings_content_desc": {
+    "description": "settings_content_desc"
+  },
+  "settings_playback_desc": "స్ట్రీమింగ్ నాణ్యత, సాధారణీకరణ, నిశ్శబ్దాలు మరియు బ్యాటరీ.",
+  "@settings_playback_desc": {
+    "description": "settings_playback_desc"
+  },
+  "settings_downloads_desc": "డౌన్‌లోడ్‌లు మరియు నిల్వ",
+  "@settings_downloads_desc": {
+    "description": "settings_downloads_desc"
+  },
+  "settings_downloads_sub": "ఆడియో ఫార్మాట్‌లు, ఫోల్డర్‌లు మరియు ఆటోమేటిక్ డౌన్‌లోడ్‌లు.",
+  "@settings_downloads_sub": {
+    "description": "settings_downloads_sub"
+  },
+  "settings_account_desc": "ఖాతా మరియు సమకాలీకరణ",
+  "@settings_account_desc": {
+    "description": "settings_account_desc"
+  },
+  "settings_account_sub": "క్లౌడ్ మోడ్, బ్యాకప్‌లు, స్నేహితుల జాబితా మరియు వలసలు.",
+  "@settings_account_sub": {
+    "description": "settings_account_sub"
+  },
+  "settings_about_desc": "ఎస్ట్రెల్లా సంగీతం గురించి",
+  "@settings_about_desc": {
+    "description": "settings_about_desc"
+  },
+  "settings_about_sub": "వెర్షన్, ఓపెన్ సోర్స్ ప్రాజెక్ట్ మరియు GitHub.",
+  "@settings_about_sub": {
+    "description": "settings_about_sub"
+  },
+  "settings_local_cloud_title": "స్థానిక మోడ్ / EMusic క్లౌడ్",
+  "@settings_local_cloud_title": {
+    "description": "settings_local_cloud_title"
+  },
+  "settings_local_cloud_desc": "Joss Redతో సమకాలీకరణ స్థితిని ఎంచుకోండి, తరలించండి లేదా సమీక్షించండి.",
+  "@settings_local_cloud_desc": {
+    "description": "settings_local_cloud_desc"
+  },
+  "settings_my_friends": "నా స్నేహితులు",
+  "@settings_my_friends": {
+    "description": "settings_my_friends"
+  },
+  "settings_my_friends_desc": "మీ Joss Red స్నేహితులను నేరుగా నిర్వహించండి.",
+  "@settings_my_friends_desc": {
+    "description": "settings_my_friends_desc"
+  },
+  "settings_refresh_visitor_title": "రిఫ్రెష్ ID (సందర్శకుల ID)",
+  "@settings_refresh_visitor_title": {
+    "description": "settings_refresh_visitor_title"
+  },
+  "settings_refresh_visitor_desc": "Discover కంటెంట్ లోడ్ కాకపోతే మీ YouTube Music IDని రీజెనరేట్ చేయండి.",
+  "@settings_refresh_visitor_desc": {
+    "description": "settings_refresh_visitor_desc"
+  },
+  "settings_visitor_updated": "నవీకరించబడిన ఐడెంటిఫైయర్",
+  "@settings_visitor_updated": {
+    "description": "settings_visitor_updated"
+  },
+  "settings_visitor_updated_desc": "కొత్త సందర్శకుల ID విజయవంతంగా రూపొందించబడింది.",
+  "@settings_visitor_updated_desc": {
+    "description": "settings_visitor_updated_desc"
+  },
+  "settings_visitor_error": "లోపం",
+  "@settings_visitor_error": {
+    "description": "settings_visitor_error"
+  },
+  "settings_visitor_error_desc": "కొత్త ఐడెంటిఫైయర్‌ని రూపొందించడం సాధ్యం కాలేదు. దయచేసి తర్వాత మళ్లీ ప్రయత్నించండి.",
+  "@settings_visitor_error_desc": {
+    "description": "settings_visitor_error_desc"
+  },
+  "settings_visitor_exception": "పునరుత్పత్తి చేస్తున్నప్పుడు లోపం సంభవించింది: {error}",
+  "@settings_visitor_exception": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    },
+    "description": "settings_visitor_exception"
+  },
+  "migratedLibrary": "వలస వచ్చిన లైబ్రరీ",
+  "@migratedLibrary": {
+    "description": "migratedLibrary"
+  },
+  "noSongsInCollection": "ఈ సేకరణలో పాటలు లేవు",
+  "@noSongsInCollection": {
+    "description": "noSongsInCollection"
+  },
+  "startupScreen": "స్టార్టప్‌లో తెరవండి",
+  "@startupScreen": {
+    "description": "startupScreen"
+  },
+  "startupScreenDescription": "ఎస్ట్రెల్లా సంగీతం మొదట తెరిచే విభాగాన్ని ఎంచుకోండి",
+  "@startupScreenDescription": {
+    "description": "startupScreenDescription"
+  },
+  "friends": "స్నేహితులు",
+  "@friends": {
+    "description": "friends"
+  },
+  "dailyDiscover": "రోజువారీ ఆవిష్కరణ",
+  "@dailyDiscover": {
+    "description": "dailyDiscover"
+  },
+  "keepListening": "వింటూ ఉండండి",
+  "@keepListening": {
+    "description": "keepListening"
+  },
+  "similarToTitle": "{title} మాదిరిగానే",
+  "@similarToTitle": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    },
+    "description": "similarToTitle"
+  },
+  "pipedPlaylistDescription": "పైప్డ్ ప్లేజాబితా",
+  "@pipedPlaylistDescription": {
+    "description": "pipedPlaylistDescription"
+  },
+  "collaborativePlaylistDescription": "సహకార ప్లేజాబితా",
+  "@collaborativePlaylistDescription": {
+    "description": "collaborativePlaylistDescription"
+  },
+  "libraryPlaylistDescription": "లైబ్రరీ ప్లేజాబితా",
+  "@libraryPlaylistDescription": {
+    "description": "libraryPlaylistDescription"
+  },
+  "untitledSong": "పేరులేని పాట",
+  "@untitledSong": {
+    "description": "untitledSong"
+  },
+  "migratedPlaylist": "ప్లేజాబితా తరలించబడింది",
+  "@migratedPlaylist": {
+    "description": "migratedPlaylist"
+  },
+  "migratedAlbum": "మార్చబడిన ఆల్బమ్",
+  "@migratedAlbum": {
+    "description": "migratedAlbum"
+  },
+  "songsImportedFromJossMusic": "జాస్ మ్యూజిక్ కోట్లిన్ నుండి పాటలు దిగుమతి చేయబడ్డాయి",
+  "@songsImportedFromJossMusic": {
+    "description": "songsImportedFromJossMusic"
+  },
+  "importedFromJossMusic": "జాస్ మ్యూజిక్ కోట్లిన్ నుండి దిగుమతి చేయబడింది",
+  "@importedFromJossMusic": {
+    "description": "importedFromJossMusic"
+  },
+  "syncLocalModeActive": "స్థానిక మోడ్ సక్రియంగా ఉంది",
+  "@syncLocalModeActive": {
+    "description": "syncLocalModeActive"
+  },
+  "syncCloudPending": "క్లౌడ్ మోడ్ సక్రియంగా ఉంది. సమకాలీకరణ పెండింగ్‌లో ఉంది.",
+  "@syncCloudPending": {
+    "description": "syncCloudPending"
+  },
+  "syncCloudDownloadingExisting": "క్లౌడ్ మోడ్ యాక్టివేట్ చేయబడింది. ఇప్పటికే ఉన్న లైబ్రరీని డౌన్‌లోడ్ చేస్తోంది.",
+  "@syncCloudDownloadingExisting": {
+    "description": "syncCloudDownloadingExisting"
+  },
+  "syncCloudMigrationComplete": "క్లౌడ్ మోడ్ యాక్టివేట్ చేయబడింది. వలస వచ్చిన లైబ్రరీ.",
+  "@syncCloudMigrationComplete": {
+    "description": "syncCloudMigrationComplete"
+  },
+  "syncLocalDeviceOnly": "మీ డేటా ఈ పరికరంలో మాత్రమే ఉంచబడుతుంది.",
+  "@syncLocalDeviceOnly": {
+    "description": "syncLocalDeviceOnly"
+  },
+  "syncDownloading": "EMusic మార్పులను డౌన్‌లోడ్ చేస్తోంది...",
+  "@syncDownloading": {
+    "description": "syncDownloading"
+  },
+  "syncDownloadFailed": "సమకాలీకరణను డౌన్‌లోడ్ చేయడంలో విఫలమైంది.",
+  "@syncDownloadFailed": {
+    "description": "syncDownloadFailed"
+  },
+  "syncLocalChangesFirst": "కొత్త స్థానిక మార్పులు ఉన్నాయి. డౌన్‌లోడ్ చేసే ముందు అవి అప్‌లోడ్ చేయబడతాయి.",
+  "@syncLocalChangesFirst": {
+    "description": "syncLocalChangesFirst"
+  },
+  "syncLibrarySynced": "సమకాలీకరించబడిన లైబ్రరీ.",
+  "@syncLibrarySynced": {
+    "description": "syncLibrarySynced"
+  },
+  "syncOfflinePending": "ఆఫ్‌లైన్. మార్పులు పెండింగ్‌లో ఉన్నాయి.",
+  "@syncOfflinePending": {
+    "description": "syncOfflinePending"
+  },
+  "syncLibraryUpToDate": "లైబ్రరీ తాజాగా ఉంది.",
+  "@syncLibraryUpToDate": {
+    "description": "syncLibraryUpToDate"
+  },
+  "syncChangesSynced": "{count} సమకాలీకరించబడిన మార్పులు.",
+  "@syncChangesSynced": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    },
+    "description": "syncChangesSynced"
+  },
+  "syncUploading": "EMusicకి మార్పులను అప్‌లోడ్ చేస్తోంది...",
+  "@syncUploading": {
+    "description": "syncUploading"
+  },
+  "syncUploadSuccessWs": "మార్పులు విజయవంతంగా అప్‌లోడ్ చేయబడ్డాయి (WS).",
+  "@syncUploadSuccessWs": {
+    "description": "syncUploadSuccessWs"
+  },
+  "syncUploadWsRetry": "WSని ఉపయోగించి అప్‌లోడ్ చేయడం సాధ్యపడలేదు. ఇది తర్వాత మళ్లీ ప్రయత్నించబడుతుంది.",
+  "@syncUploadWsRetry": {
+    "description": "syncUploadWsRetry"
+  },
+  "syncUploadSuccess": "మార్పులు సరిగ్గా అప్‌లోడ్ చేయబడ్డాయి.",
+  "@syncUploadSuccess": {
+    "description": "syncUploadSuccess"
+  },
+  "syncUploadRetry": "లేవలేకపోయింది. ఇది తర్వాత మళ్లీ ప్రయత్నించబడుతుంది.",
+  "@syncUploadRetry": {
+    "description": "syncUploadRetry"
+  },
+  "syncOfflineRetry": "ఆఫ్‌లైన్. మళ్లీ ప్రయత్నించడానికి మార్పులు సేవ్ చేయబడ్డాయి.",
+  "@syncOfflineRetry": {
+    "description": "syncOfflineRetry"
+  },
+  "syncUnconfirmedRetry": "EMusic అన్ని మార్పులను నిర్ధారించలేదు. వాటిని మళ్లీ విచారించనున్నారు.",
+  "@syncUnconfirmedRetry": {
+    "description": "syncUnconfirmedRetry"
+  },
+  "syncChangesConfirmed": "{count} మార్పులు కట్టుబడి ఉన్నాయి.",
+  "@syncChangesConfirmed": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    },
+    "description": "syncChangesConfirmed"
+  },
+  "migrationAlreadyRunning": "ఇప్పటికే వలసలు జరుగుతున్నాయి.",
+  "@migrationAlreadyRunning": {
+    "description": "migrationAlreadyRunning"
+  },
+  "migrationLoginRequired": "మైగ్రేట్ చేయడానికి ముందు Joss Redకి లాగిన్ చేయండి.",
+  "@migrationLoginRequired": {
+    "description": "migrationLoginRequired"
+  },
+  "migrationCheckingCloud": "EMusic క్లౌడ్‌లో ఇప్పటికే లైబ్రరీ ఉందో లేదో తనిఖీ చేస్తోంది...",
+  "@migrationCheckingCloud": {
+    "description": "migrationCheckingCloud"
+  },
+  "cloudLibraryFoundDeviceWillDownload": "క్లౌడ్ లైబ్రరీ కనుగొనబడింది. ఈ పరికరం ఓవర్‌రైట్ చేయకుండానే డౌన్‌లోడ్ చేస్తుంది.",
+  "@cloudLibraryFoundDeviceWillDownload": {
+    "description": "cloudLibraryFoundDeviceWillDownload"
+  },
+  "cloudLibraryFound": "క్లౌడ్ లైబ్రరీ కనుగొనబడింది.",
+  "@cloudLibraryFound": {
+    "description": "cloudLibraryFound"
+  },
+  "migrationCreatingBackup": "క్లౌడ్‌ని కనెక్ట్ చేయడానికి ముందు స్థానిక బ్యాకప్‌ని సృష్టిస్తోంది...",
+  "@migrationCreatingBackup": {
+    "description": "migrationCreatingBackup"
+  },
+  "migrationAnalyzingLocal": "స్థానిక లైబ్రరీని విశ్లేషిస్తోంది...",
+  "@migrationAnalyzingLocal": {
+    "description": "migrationAnalyzingLocal"
+  },
+  "migrationPreparingCloud": "EMusic క్లౌడ్‌లో మైగ్రేషన్‌ని సిద్ధం చేస్తోంది...",
+  "@migrationPreparingCloud": {
+    "description": "migrationPreparingCloud"
+  },
+  "migrationStartFailed": "EMusic క్లౌడ్ మైగ్రేషన్‌ని ప్రారంభించలేకపోయింది.",
+  "@migrationStartFailed": {
+    "description": "migrationStartFailed"
+  },
+  "migrationUploadingData": "ప్లేజాబితాలు, ఇష్టమైనవి మరియు చరిత్రను అప్‌లోడ్ చేస్తోంది...",
+  "@migrationUploadingData": {
+    "description": "migrationUploadingData"
+  },
+  "migrationUploadIncomplete": "మొత్తం డేటాను అప్‌లోడ్ చేయడం సాధ్యం కాదు. మేము మీ స్థానిక మద్దతును ఉంచుతాము.",
+  "@migrationUploadIncomplete": {
+    "description": "migrationUploadIncomplete"
+  },
+  "migrationVerifyingIntegrity": "EMusic క్లౌడ్‌లో సమగ్రతను ధృవీకరిస్తోంది...",
+  "@migrationVerifyingIntegrity": {
+    "description": "migrationVerifyingIntegrity"
+  },
+  "migrationValidationFailed": "EMusic క్లౌడ్ మైగ్రేషన్‌ని ధృవీకరించలేకపోయింది.",
+  "@migrationValidationFailed": {
+    "description": "migrationValidationFailed"
+  },
+  "cloudModeReadyOfflineCache": "క్లౌడ్ మోడ్ సిద్ధంగా ఉంది. ఈ పరికరం ఆఫ్‌లైన్ కాష్‌గా పని చేస్తుంది.",
+  "@cloudModeReadyOfflineCache": {
+    "description": "cloudModeReadyOfflineCache"
+  },
+  "migrationCompleted": "వలస పూర్తయింది.",
+  "@migrationCompleted": {
+    "description": "migrationCompleted"
+  },
+  "migrationFailedLocalPreserved": "వలస విఫలమైంది. మీ స్థానిక డేటా సవరించబడలేదు.",
+  "@migrationFailedLocalPreserved": {
+    "description": "migrationFailedLocalPreserved"
+  },
+  "sessionExpiredLoginAgain": "మీ సెషన్ గడువు ముగిసింది. మళ్లీ సైన్ ఇన్ చేయండి.",
+  "@sessionExpiredLoginAgain": {
+    "description": "sessionExpiredLoginAgain"
+  },
+  "selectedFileNotFound": "ఎంచుకున్న ఫైల్ కనుగొనబడలేదు.",
+  "@selectedFileNotFound": {
+    "description": "selectedFileNotFound"
+  },
+  "genericAlbum": "ఆల్బమ్",
+  "@genericAlbum": {
+    "description": "genericAlbum"
+  },
+  "friendsLoginRequired": "స్నేహితులను కనుగొనడానికి సైన్ ఇన్ చేయండి.",
+  "@friendsLoginRequired": {
+    "description": "friendsLoginRequired"
+  },
+  "invalidSessionToken": "సెషన్‌లో చెల్లుబాటు అయ్యే టోకెన్ లేదు.",
+  "@invalidSessionToken": {
+    "description": "invalidSessionToken"
+  },
+  "userSearchFailed": "వినియోగదారుల కోసం శోధించడం సాధ్యపడలేదు ({statusCode}).",
+  "@userSearchFailed": {
+    "placeholders": {
+      "statusCode": {
+        "type": "int"
+      }
+    },
+    "description": "userSearchFailed"
+  },
+  "invalidServerResponse": "చెల్లని సర్వర్ ప్రతిస్పందన.",
+  "@invalidServerResponse": {
+    "description": "invalidServerResponse"
+  },
+  "userListMissing": "ప్రతిస్పందనలో వినియోగదారుల జాబితా లేదు.",
+  "@userListMissing": {
+    "description": "userListMissing"
+  },
+  "playlistCollaboratorsTitle": "ప్లేజాబితా సహకారులు",
+  "@playlistCollaboratorsTitle": {
+    "description": "playlistCollaboratorsTitle"
+  },
+  "collaboratorsInstruction": "ఈ ప్లేజాబితాను చూడగలిగే మరియు సవరించగల స్నేహితులను ఎంచుకోండి:",
+  "@collaboratorsInstruction": {
+    "description": "collaboratorsInstruction"
+  },
+  "noJossRedFriends": "Joss Redలో మీకు జోడించిన స్నేహితులు లేరు.",
+  "@noJossRedFriends": {
+    "description": "noJossRedFriends"
+  },
+  "friendFallback": "స్నేహితుడు",
+  "@friendFallback": {
+    "description": "friendFallback"
+  },
+  "collaboratorsUpdated": "సహకారులు సరిగ్గా నవీకరించబడ్డారు.",
+  "@collaboratorsUpdated": {
+    "description": "collaboratorsUpdated"
+  },
+  "save": "సేవ్ చేయండి",
+  "@save": {
+    "description": "save"
+  },
+  "manageCollaborators": "సహకారులను (స్నేహితులను) నిర్వహించండి",
+  "@manageCollaborators": {
+    "description": "manageCollaborators"
+  },
+  "done": "సిద్ధంగా ఉంది",
+  "@done": {
+    "description": "done"
+  },
+  "notAuthenticated": "ప్రమాణీకరించబడలేదు",
+  "@notAuthenticated": {
+    "description": "notAuthenticated"
+  },
+  "genericError": "లోపం",
+  "@genericError": {
+    "description": "genericError"
+  },
+  "friendRequestSent": "స్నేహ అభ్యర్థన పంపబడింది",
+  "@friendRequestSent": {
+    "description": "friendRequestSent"
+  },
+  "friendRequestAccepted": "స్నేహితుని అభ్యర్థన ఆమోదించబడింది",
+  "@friendRequestAccepted": {
+    "description": "friendRequestAccepted"
+  },
+  "friendshipRemoved": "స్నేహం తొలగించబడింది",
+  "@friendshipRemoved": {
+    "description": "friendshipRemoved"
+  },
+  "userBlocked": "బ్లాక్ చేయబడిన వినియోగదారు",
+  "@userBlocked": {
+    "description": "userBlocked"
+  },
+  "userUnblocked": "అన్‌లాక్ చేయబడిన వినియోగదారు",
+  "@userUnblocked": {
+    "description": "userUnblocked"
+  },
+  "artistsByTaste": "మీ అభిరుచుల ప్రకారం",
+  "@artistsByTaste": {
+    "description": "artistsByTaste"
+  },
+  "followedArtists": "అనుసరించాడు",
+  "@followedArtists": {
+    "description": "followedArtists"
+  },
+  "recommendedArtists": "సిఫార్సు చేయబడింది",
+  "@recommendedArtists": {
+    "description": "recommendedArtists"
+  },
+  "albumsByTaste": "మీ అభిరుచుల ప్రకారం",
+  "@albumsByTaste": {
+    "description": "albumsByTaste"
+  },
+  "savedAlbums": "సేవ్ చేయబడింది",
+  "@savedAlbums": {
+    "description": "savedAlbums"
+  },
+  "recommendedAlbums": "సిఫార్సు చేయబడింది",
+  "@recommendedAlbums": {
+    "description": "recommendedAlbums"
+  },
+  "downloadNotificationChannelName": "సంగీతం డౌన్‌లోడ్‌లు",
+  "@downloadNotificationChannelName": {
+    "description": "downloadNotificationChannelName"
+  },
+  "downloadNotificationChannelDescription": "మీ మ్యూజిక్ డౌన్‌లోడ్‌లను బ్యాక్‌గ్రౌండ్‌లో యాక్టివ్‌గా ఉంచుతుంది.",
+  "@downloadNotificationChannelDescription": {
+    "description": "downloadNotificationChannelDescription"
+  },
+  "downloadNotificationTitle": "సంగీతాన్ని డౌన్‌లోడ్ చేస్తోంది",
+  "@downloadNotificationTitle": {
+    "description": "downloadNotificationTitle"
+  },
+  "downloadNotificationPreparing": "మీ డౌన్‌లోడ్‌లను సిద్ధం చేస్తోంది...",
+  "@downloadNotificationPreparing": {
+    "description": "downloadNotificationPreparing"
+  },
+  "downloadNotificationSong": "డౌన్‌లోడ్ చేస్తోంది: {songTitle}",
+  "@downloadNotificationSong": {
+    "placeholders": {
+      "songTitle": {
+        "type": "String"
+      }
+    },
+    "description": "downloadNotificationSong"
+  },
+  "syncCloudModeActive": "క్లౌడ్ మోడ్ సక్రియంగా ఉంది",
+  "@syncCloudModeActive": {
+    "description": "syncCloudModeActive"
+  },
+  "permissionsConsentTitle": "ప్రారంభించడానికి అనుమతులు",
+  "@permissionsConsentTitle": {
+    "description": "permissionsConsentTitle"
+  },
+  "permissionsConsentDescription": "మీ సంగీతాన్ని నిర్వహించడానికి మరియు అన్ని ప్లేబ్యాక్ ఫీచర్‌లను అందించడానికి Estrella Musicకి ఈ అనుమతులు అవసరం.",
+  "@permissionsConsentDescription": {
+    "description": "permissionsConsentDescription"
+  },
+  "permissionsStorageTitle": "సంగీతం మరియు నిల్వ",
+  "@permissionsStorageTitle": {
+    "description": "permissionsStorageTitle"
+  },
+  "permissionsStorageDescription": "ఇది సంగీతాన్ని ప్లే చేయడానికి, డౌన్‌లోడ్‌లను సేవ్ చేయడానికి, ప్లేజాబితాలను ఎగుమతి చేయడానికి మరియు నవీకరణలను సిద్ధం చేయడానికి మిమ్మల్ని అనుమతిస్తుంది.",
+  "@permissionsStorageDescription": {
+    "description": "permissionsStorageDescription"
+  },
+  "permissionsNotificationsTitle": "నోటిఫికేషన్‌లు",
+  "@permissionsNotificationsTitle": {
+    "description": "permissionsNotificationsTitle"
+  },
+  "permissionsNotificationsDescription": "ప్లేబ్యాక్ నియంత్రణలు, డౌన్‌లోడ్ పురోగతి మరియు ముఖ్యమైన యాప్ నోటీసులను చూపుతుంది.",
+  "@permissionsNotificationsDescription": {
+    "description": "permissionsNotificationsDescription"
+  },
+  "permissionsMicrophoneTitle": "మైక్రోఫోన్",
+  "@permissionsMicrophoneTitle": {
+    "description": "permissionsMicrophoneTitle"
+  },
+  "permissionsMicrophoneDescription": "మీ చుట్టూ ప్లే అవుతున్న పాటను గుర్తించడానికి మీరు ఎంచుకున్నప్పుడు మాత్రమే ఇది ఉపయోగించబడుతుంది.",
+  "@permissionsMicrophoneDescription": {
+    "description": "permissionsMicrophoneDescription"
+  },
+  "permissionsContinueButton": "అవసరమైన అనుమతులను మంజూరు చేయండి",
+  "@permissionsContinueButton": {
+    "description": "permissionsContinueButton"
+  },
+  "permissionsRequiredNotice": "కొనసాగించడానికి మూడు అనుమతులు అవసరం. మీరు వాటిని తర్వాత సిస్టమ్ సెట్టింగ్‌లలో మార్చవచ్చు.",
+  "@permissionsRequiredNotice": {
+    "description": "permissionsRequiredNotice"
+  },
+  "permissionsAllow": "అనుమతించు",
+  "@permissionsAllow": {
+    "description": "permissionsAllow"
+  },
+  "permissionsOpenSettings": "సెట్టింగ్‌లు",
+  "@permissionsOpenSettings": {
+    "description": "permissionsOpenSettings"
+  },
+  "auth_2fa_title": "రెండు-కారకాల ప్రమాణీకరణ",
+  "@auth_2fa_title": {
+    "description": "auth_2fa_title"
+  },
+  "auth_2fa_subtitle": "మీ ప్రామాణీకరణ యాప్ నుండి 6-అంకెల కోడ్‌ను నమోదు చేయండి. ఈ యాక్సెస్ గడువు 5 నిమిషాల్లో ముగుస్తుంది.",
+  "@auth_2fa_subtitle": {
+    "description": "auth_2fa_subtitle"
+  },
+  "auth_2fa_code": "ప్రమాణీకరణ కోడ్",
+  "@auth_2fa_code": {
+    "description": "auth_2fa_code"
+  },
+  "auth_2fa_verify": "తనిఖీ చేసి కొనసాగించండి",
+  "@auth_2fa_verify": {
+    "description": "auth_2fa_verify"
+  },
+  "auth_2fa_invalid": "చెల్లుబాటు అయ్యే 6-అంకెల కోడ్‌ని నమోదు చేయండి లేదా మళ్లీ సైన్ ఇన్ చేయండి.",
+  "@auth_2fa_invalid": {
+    "description": "auth_2fa_invalid"
+  },
+  "resetToDefaultMsg": "డిఫాల్ట్‌కి రీసెట్ చేసిన సెట్టింగ్‌లు పూర్తయ్యాయి, దయచేసి యాప్‌ని పునఃప్రారంభించండి",
+  "@resetToDefaultMsg": {
+    "description": "resetToDefaultMsg"
+  },
+  "resetToDefaultDes": "యాప్ సెట్టింగ్‌లను డిఫాల్ట్‌గా రీసెట్ చేయండి (పునఃప్రారంభం అవసరం)",
+  "@resetToDefaultDes": {
+    "description": "resetToDefaultDes"
+  },
+  "resetToDefault": "డిఫాల్ట్ సెట్టింగ్‌లను పునరుద్ధరించండి",
+  "@resetToDefault": {
+    "description": "resetToDefault"
+  },
+  "exportPlaylist": "ప్లేజాబితాను ఎగుమతి చేయండి",
+  "@exportPlaylist": {
+    "description": "exportPlaylist"
+  },
+  "importPlaylistDesc": "దిగుమతి చేయడానికి గతంలో ఎగుమతి చేసిన ప్లేజాబితా JSON ఫైల్‌ను ఎంచుకోండి",
+  "@importPlaylistDesc": {
+    "description": "importPlaylistDesc"
+  },
+  "invalidPlaylistFile": "చెల్లని ప్లేజాబితా ఫైల్ నిర్మాణం",
+  "@invalidPlaylistFile": {
+    "description": "invalidPlaylistFile"
+  },
+  "fileNotFound": "ఫైల్ కనుగొనబడలేదు",
+  "@fileNotFound": {
+    "description": "fileNotFound"
+  },
+  "exportErrorPermission": "ఎగుమతి చేస్తున్నప్పుడు అనుమతి నిరాకరించబడింది",
+  "@exportErrorPermission": {
+    "description": "exportErrorPermission"
+  },
+  "importingPlaylist": "ప్లేజాబితాను దిగుమతి చేస్తోంది...",
+  "@importingPlaylist": {
+    "description": "importingPlaylist"
+  },
+  "exportErrorStorage": "తగినంత నిల్వ స్థలం లేదు",
+  "@exportErrorStorage": {
+    "description": "exportErrorStorage"
+  },
+  "exportingPlaylist": "ప్లేజాబితాను ఎగుమతి చేస్తోంది...",
+  "@exportingPlaylist": {
+    "description": "exportingPlaylist"
+  },
+  "playlistExportedMsg": "ప్లేజాబితా విజయవంతంగా ఎగుమతి చేయబడింది",
+  "@playlistExportedMsg": {
+    "description": "playlistExportedMsg"
+  },
+  "exportError": "ప్లేజాబితాను ఎగుమతి చేయడంలో లోపం",
+  "@exportError": {
+    "description": "exportError"
+  },
+  "exportErrorFormat": "ప్లేజాబితా డేటాను ఫార్మాట్ చేయడంలో లోపం",
+  "@exportErrorFormat": {
+    "description": "exportErrorFormat"
+  },
+  "importPlaylist": "ప్లేజాబితాని దిగుమతి చేయండి",
+  "@importPlaylist": {
+    "description": "importPlaylist"
+  },
+  "selectFile": "ఫైల్‌ని ఎంచుకోండి",
+  "@selectFile": {
+    "description": "selectFile"
+  },
+  "playlistImportedMsg": "ప్లేజాబితా విజయవంతంగా దిగుమతి చేయబడింది",
+  "@playlistImportedMsg": {
+    "description": "playlistImportedMsg"
+  },
+  "importError": "ప్లేజాబితాను దిగుమతి చేయడంలో లోపం",
+  "@importError": {
+    "description": "importError"
+  },
+  "importErrorFileAccess": "ఎంచుకున్న ఫైల్‌ని యాక్సెస్ చేయడం సాధ్యపడలేదు",
+  "@importErrorFileAccess": {
+    "description": "importErrorFileAccess"
+  },
+  "importErrorFormat": "చెల్లని ఫైల్ ఫార్మాట్",
+  "@importErrorFormat": {
+    "description": "importErrorFormat"
+  },
+  "importErrorDatabase": "డేటాబేస్‌లో సేవ్ చేయడంలో లోపం",
+  "@importErrorDatabase": {
+    "description": "importErrorDatabase"
+  },
+  "importLargeFileNote": "గమనిక: పెద్ద ప్లేజాబితాలు దిగుమతి చేసుకోవడానికి ఎక్కువ సమయం పట్టవచ్చు",
+  "@importLargeFileNote": {
+    "description": "importLargeFileNote"
+  },
+  "exportPlaylistCsv": "ప్లేజాబితాను CSVగా ఎగుమతి చేయండి",
+  "@exportPlaylistCsv": {
+    "description": "exportPlaylistCsv"
+  },
+  "exportPlaylistJson": "JSONకి ప్లేజాబితాను ఎగుమతి చేయండి",
+  "@exportPlaylistJson": {
+    "description": "exportPlaylistJson"
+  },
+  "exportPlaylistJsonSubtitle": "ఈ ఆకృతిని దిగుమతి చేసుకోవచ్చు",
+  "@exportPlaylistJsonSubtitle": {
+    "description": "exportPlaylistJsonSubtitle"
+  },
+  "exportPlaylistCsvSubtitle": "ఇక్కడికి దిగుమతి చేయడం సాధ్యపడదు",
+  "@exportPlaylistCsvSubtitle": {
+    "description": "exportPlaylistCsvSubtitle"
+  },
+  "exportToYouTubeMusic": "Youtube సంగీతానికి ఎగుమతి చేయండి",
+  "@exportToYouTubeMusic": {
+    "description": "exportToYouTubeMusic"
+  },
+  "exportToYouTubeMusicSubtitle": "ఇది మీ ప్లేజాబితాను (పాటలు < 50) ప్రస్తుత క్యూకి నెట్టివేస్తుంది, దీన్ని YtMusicలో తెరిచిన తర్వాత ప్లేజాబితాకు జోడించడం/సేవ్ చేయడం మర్చిపోవద్దు",
+  "@exportToYouTubeMusicSubtitle": {
+    "description": "exportToYouTubeMusicSubtitle"
+  },
+  "linkCopied": "లింక్ క్లిప్‌బోర్డ్‌కి కాపీ చేయబడింది",
+  "@linkCopied": {
+    "description": "linkCopied"
+  },
+  "lyrics": "అక్షరాలు",
+  "@lyrics": {
+    "description": "lyrics"
+  },
+  "no": "నం",
+  "@no": {
+    "description": "no"
+  },
+  "podcasts": "పాడ్‌కాస్ట్‌లు",
+  "@podcasts": {
+    "description": "podcasts"
+  },
+  "episodes": "ఎపిసోడ్‌లు",
+  "@episodes": {
+    "description": "episodes"
+  },
+  "profiles": "ప్రొఫైల్స్",
+  "@profiles": {
+    "description": "profiles"
+  },
+  "addToLibrary": "లైబ్రరీకి జోడించండి",
+  "@addToLibrary": {
+    "description": "addToLibrary"
+  },
+  "removeFromLibrary": "లైబ్రరీ నుండి తొలగించండి",
+  "@removeFromLibrary": {
+    "description": "removeFromLibrary"
+  },
+  "play": "ఆడండి",
+  "@play": {
+    "description": "play"
+  },
+  "enqueueAlbumSongs": "క్యూలో ఆల్బమ్ పాటలను జోడించండి",
+  "@enqueueAlbumSongs": {
+    "description": "enqueueAlbumSongs"
+  },
+  "downloadAlbumSongs": "ఆల్బమ్ నుండి పాటలను డౌన్‌లోడ్ చేయండి",
+  "@downloadAlbumSongs": {
+    "description": "downloadAlbumSongs"
+  },
+  "shareAlbum": "ఆల్బమ్‌ను భాగస్వామ్యం చేయండి",
+  "@shareAlbum": {
+    "description": "shareAlbum"
+  },
+  "imported": "దిగుమతి చేయబడింది",
+  "@imported": {
+    "description": "imported"
+  },
+  "importedPlaylist": "దిగుమతి చేయబడిన ప్లేజాబితా",
+  "@importedPlaylist": {
+    "description": "importedPlaylist"
+  },
+  "permissionDenied": "అనుమతి నిరాకరించబడింది",
+  "@permissionDenied": {
+    "description": "permissionDenied"
+  },
+  "enqueueSongs": "క్యూలో పాటలను జోడించండి",
+  "@enqueueSongs": {
+    "description": "enqueueSongs"
+  },
+  "shuffle": "యాదృచ్ఛికంగా",
+  "@shuffle": {
+    "description": "shuffle"
+  },
+  "downloadPlaylist": "ప్లేజాబితాను డౌన్‌లోడ్ చేయండి",
+  "@downloadPlaylist": {
+    "description": "downloadPlaylist"
+  },
+  "syncPlaylistSongs": "ప్లేజాబితా పాటలను సమకాలీకరించండి",
+  "@syncPlaylistSongs": {
+    "description": "syncPlaylistSongs"
+  },
+  "blacklistPipedPlaylist": "ప్లేజాబితా బ్లాక్‌లిస్ట్",
+  "@blacklistPipedPlaylist": {
+    "description": "blacklistPipedPlaylist"
+  },
+  "sharePlaylist": "ప్లేజాబితాను భాగస్వామ్యం చేయండి",
+  "@sharePlaylist": {
+    "description": "sharePlaylist"
+  },
+  "playlist": "ప్లేజాబితా",
+  "@playlist": {
+    "description": "playlist"
+  },
+  "sortByName": "పేరు ద్వారా క్రమబద్ధీకరించండి",
+  "@sortByName": {
+    "description": "sortByName"
+  },
+  "sortByDate": "తేదీ వారీగా క్రమబద్ధీకరించండి",
+  "@sortByDate": {
+    "description": "sortByDate"
+  },
+  "sortByDuration": "వ్యవధి ప్రకారం క్రమబద్ధీకరించండి",
+  "@sortByDuration": {
+    "description": "sortByDuration"
+  },
+  "sortAscendNDescend": "ఆరోహణ/అవరోహణ క్రమబద్ధీకరణ",
+  "@sortAscendNDescend": {
+    "description": "sortAscendNDescend"
+  },
+  "migration_summary_start": "{source} నుండి మైగ్రేషన్ పూర్తయింది.",
+  "@migration_summary_start": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      }
+    },
+    "description": "migration_summary_start"
+  },
+  "migration_summary_playlists": "ప్లేజాబితాలు: {count}",
+  "@migration_summary_playlists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_playlists"
+  },
+  "migration_summary_songs": "పాటలు: {count}",
+  "@migration_summary_songs": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_songs"
+  },
+  "migration_summary_favorites": "ఇష్టమైనవి: {count}",
+  "@migration_summary_favorites": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_favorites"
+  },
+  "migration_summary_albums": "ఆల్బమ్‌లు: {count}",
+  "@migration_summary_albums": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_albums"
+  },
+  "migration_summary_artists": "కళాకారులు: {count}",
+  "@migration_summary_artists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_artists"
+  },
+  "migration_select_file_dialog": "song.db లేదా బ్యాకప్ .backupని ఎంచుకోండి",
+  "@migration_select_file_dialog": {
+    "description": "migration_select_file_dialog"
+  },
+  "migration_success": "వలస విజయవంతంగా పూర్తయింది.",
+  "@migration_success": {
+    "description": "migration_success"
+  },
+  "backup_select_folder_dialog": "బ్యాకప్ కోసం ఫోల్డర్‌ను ఎంచుకోండి",
+  "@backup_select_folder_dialog": {
+    "description": "backup_select_folder_dialog"
+  },
+  "restore_select_file_dialog": "బ్యాకప్ ఫైల్‌ను ఎంచుకోండి",
+  "@restore_select_file_dialog": {
+    "description": "restore_select_file_dialog"
+  },
+  "auth_hint_email": "name@mail.com",
+  "@auth_hint_email": {
+    "description": "auth_hint_email"
+  },
+  "auth_error_invalid_email": "చెల్లుబాటు అయ్యే ఇమెయిల్‌ను నమోదు చేయండి.",
+  "@auth_error_invalid_email": {
+    "description": "auth_error_invalid_email"
+  },
+  "settings_cloud_backup_dialog_desc": "యాప్ యొక్క .hmb బ్యాకప్‌ను సర్వర్‌కి అప్‌లోడ్ చేయండి మరియు అవసరమైతే, సేవ్ చేసిన బ్యాకప్‌లలో దేనినైనా పునరుద్ధరించండి.",
+  "@settings_cloud_backup_dialog_desc": {
+    "description": "settings_cloud_backup_dialog_desc"
+  },
+  "delete": "తొలగించు",
+  "@delete": {
+    "description": "delete"
+  },
+  "in_app_storage": "అంతర్గత నిల్వ డైరెక్టరీ",
+  "@in_app_storage": {
+    "description": "in_app_storage"
+  },
+  "auth_brand_description_1": "మేము మునుపటి ప్రాజెక్ట్ నుండి లాగిన్, రిజిస్ట్రేషన్ మరియు పాస్‌వర్డ్ పునరుద్ధరణను ఈ మ్యూజిక్ యాప్ కోసం స్వీకరించాము.",
+  "@auth_brand_description_1": {
+    "description": "auth_brand_description_1"
+  },
+  "auth_brand_description_2": "మీ సెషన్ సురక్షిత నిల్వలో నివసిస్తుంది మరియు మీరు ఇప్పటికే ఉపయోగిస్తున్న అదే బ్యాకెండ్‌తో ధృవీకరించబడుతుంది.",
+  "@auth_brand_description_2": {
+    "description": "auth_brand_description_2"
+  },
+  "auth_brand_not_configured": "ప్రామాణీకరణ బ్యాకెండ్‌ను కనెక్ట్ చేయడానికి .env ఫైల్‌ను కాన్ఫిగర్ చేయాలి.",
+  "@auth_brand_not_configured": {
+    "description": "auth_brand_not_configured"
+  },
+  "auth_forgot_password_subtitle": "మేము మీ ఖాతా ఇమెయిల్‌కు సూచనలను పంపుతాము.",
+  "@auth_forgot_password_subtitle": {
+    "description": "auth_forgot_password_subtitle"
+  },
+  "auth_btn_send_email": "మెయిల్ పంపండి",
+  "@auth_btn_send_email": {
+    "description": "auth_btn_send_email"
+  },
+  "auth_error_not_configured": ".env ఫైల్‌లో కాన్ఫిగర్ చేయడానికి ప్రామాణీకరణ బ్యాకెండ్ లేదు.",
+  "@auth_error_not_configured": {
+    "description": "auth_error_not_configured"
+  },
+  "auth_error_invalid_credentials": "తప్పు ఇమెయిల్ లేదా పాస్‌వర్డ్.",
+  "@auth_error_invalid_credentials": {
+    "description": "auth_error_invalid_credentials"
+  },
+  "auth_error_not_verified": "మీ ఖాతా ఇంకా ధృవీకరించబడలేదు.",
+  "@auth_error_not_verified": {
+    "description": "auth_error_not_verified"
+  },
+  "auth_error_unknown": "ఆపరేషన్ పూర్తి చేయడం సాధ్యం కాలేదు.",
+  "@auth_error_unknown": {
+    "description": "auth_error_unknown"
+  },
+  "auth_register_success": "ఖాతా విజయవంతంగా సృష్టించబడింది.",
+  "@auth_register_success": {
+    "description": "auth_register_success"
+  },
+  "auth_register_error": "ఖాతాను సృష్టించడం సాధ్యపడలేదు.",
+  "@auth_register_error": {
+    "description": "auth_register_error"
+  },
+  "auth_recovery_email_sent": "ఇమెయిల్ పంపబడింది.",
+  "@auth_recovery_email_sent": {
+    "description": "auth_recovery_email_sent"
+  },
+  "auth_recovery_email_error": "ఇమెయిల్ పంపడం సాధ్యం కాలేదు.",
+  "@auth_recovery_email_error": {
+    "description": "auth_recovery_email_error"
+  },
+  "latestVersion": "తాజా వెర్షన్ అందుబాటులో ఉంది",
+  "@latestVersion": {
+    "description": "latestVersion"
+  },
+  "updateApp": "అప్‌డేట్ అప్లికేషన్",
+  "@updateApp": {
+    "description": "updateApp"
+  },
+  "loadInfoUpdate": "నవీకరణ సమాచారాన్ని లోడ్ చేయడం సాధ్యపడలేదు",
+  "@loadInfoUpdate": {
+    "description": "loadInfoUpdate"
+  },
+  "infoNotAvailable": "సమాచారం అందుబాటులో లేదు",
+  "@infoNotAvailable": {
+    "description": "infoNotAvailable"
+  },
+  "developedBy": "జాస్ ఎస్ట్రాడా (JOSPROX) చే అభివృద్ధి చేయబడింది మరియు నిర్వహించబడుతుంది",
+  "@developedBy": {
+    "description": "developedBy"
+  },
+  "copyrightNotice": "© 2026 JOSPROX. GPL లైసెన్స్ v3.0",
+  "@copyrightNotice": {
+    "description": "copyrightNotice"
+  },
+  "backupSettingsAndPlaylists": "బ్యాకప్ సెట్టింగ్‌లు మరియు ప్లేజాబితాలు",
+  "@backupSettingsAndPlaylists": {
+    "description": "backupSettingsAndPlaylists"
+  },
+  "restoreSettingsAndPlaylists": "సెట్టింగ్‌లు మరియు ప్లేజాబితాలను పునరుద్ధరించండి",
+  "@restoreSettingsAndPlaylists": {
+    "description": "restoreSettingsAndPlaylists"
+  },
+  "helloWorld": "హలో వరల్డ్",
+  "@helloWorld": {
+    "description": "Este texto es opcional"
+  },
+  "removeFromCache": "కాష్ నుండి తీసివేయండి",
+  "@removeFromCache": {
+    "description": "removeFromCache"
+  },
+  "quickPics": "త్వరిత ఎంపిక",
+  "@quickPics": {
+    "description": "quickPics"
+  },
+  "topMusicVid": "అగ్ర సంగీత వీడియోలు",
+  "@topMusicVid": {
+    "description": "topMusicVid"
   }
 }

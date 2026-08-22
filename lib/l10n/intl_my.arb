@@ -7,5 +7,2294 @@
   "keepScreenOnWhilePlayingDes": "ဖွင့်ထားပါက အသံလှည့်နေစဉ် စက်ပစ္စည်း၏ မျက်နှာပြင် မအိပ်ဘဲ ပွင့်နေပါလိမ့်မည်",
   "@keepScreenOnWhilePlayingDes": {
     "description": "keepScreenOnWhilePlayingDes"
+  },
+  "library": "စာကြည့်တိုက်",
+  "@library": {
+    "description": "library"
+  },
+  "libPlaylists": "စာကြည့်တိုက် အစီအစဉ်များ",
+  "@libPlaylists": {
+    "description": "libPlaylists"
+  },
+  "libAlbums": "စာကြည့်တိုက် အယ်လ်ဘမ်များ",
+  "@libAlbums": {
+    "description": "libAlbums"
+  },
+  "libArtists": "စာကြည့်တိုက် အနုပညာရှင်များ",
+  "@libArtists": {
+    "description": "libArtists"
+  },
+  "items": "ဒြပ်စင်",
+  "@items": {
+    "description": "items"
+  },
+  "networkError1": "အိုး၊ ကွန်ရက် အမှား။",
+  "@networkError1": {
+    "description": "networkError1"
+  },
+  "retry": "ထပ်ကြိုးစားပါ။",
+  "@retry": {
+    "description": "retry"
+  },
+  "home": "အိမ်",
+  "@home": {
+    "description": "home"
+  },
+  "playlists": "အစီအစဉ်များ",
+  "@playlists": {
+    "description": "playlists"
+  },
+  "albums": "အယ်လ်ဘမ်များ",
+  "@albums": {
+    "description": "albums"
+  },
+  "artists": "အနုပညာရှင်များ",
+  "@artists": {
+    "description": "artists"
+  },
+  "settings": "ဆက်တင်များ",
+  "@settings": {
+    "description": "settings"
+  },
+  "libSongs": "စာကြည့်တိုက်သီချင်းများ",
+  "@libSongs": {
+    "description": "libSongs"
+  },
+  "communityplaylists": "ကွန်မြူနတီ အစီအစဉ်များ",
+  "@communityplaylists": {
+    "description": "communityplaylists"
+  },
+  "singles": "ရိုးရိုးရှင်းရှင်း",
+  "@singles": {
+    "description": "singles"
+  },
+  "recentlyPlayed": "မကြာသေးမီက ကစားခဲ့သည်။",
+  "@recentlyPlayed": {
+    "description": "recentlyPlayed"
+  },
+  "songs": "သီချင်းများ",
+  "@songs": {
+    "description": "songs"
+  },
+  "favorites": "အကြိုက်ဆုံးများ",
+  "@favorites": {
+    "description": "favorites"
+  },
+  "cachedOrOffline": "ကက်ရှ်/အော့ဖ်လိုင်း",
+  "@cachedOrOffline": {
+    "description": "cachedOrOffline"
+  },
+  "downloads": "ဒေါင်းလုဒ်များ",
+  "@downloads": {
+    "description": "downloads"
+  },
+  "emptyPlaylist": "ဖွင့်ရန်စာရင်း ဗလာ။",
+  "@emptyPlaylist": {
+    "description": "emptyPlaylist"
+  },
+  "featuredplaylists": "အထူးအသားပေး အစီအစဉ်များ",
+  "@featuredplaylists": {
+    "description": "featuredplaylists"
+  },
+  "noOfflineSong": "အော့ဖ်လိုင်းသီချင်းများ မရှိပါ။",
+  "@noOfflineSong": {
+    "description": "noOfflineSong"
+  },
+  "enableBottomNavDes": "အောက်ခြေလမ်းညွှန်ဘားသို့ ပြောင်းပါ။",
+  "@enableBottomNavDes": {
+    "description": "enableBottomNavDes"
+  },
+  "homeContentCount": "စတင်ခြင်း အကြောင်းအရာ အရေအတွက်",
+  "@homeContentCount": {
+    "description": "homeContentCount"
+  },
+  "playlistCreatednsongAddedAlert": "ဖွင့်ရန်စာရင်းကို ဖန်တီးပြီး သီချင်းထည့်ထားသည်။",
+  "@playlistCreatednsongAddedAlert": {
+    "description": "playlistCreatednsongAddedAlert"
+  },
+  "songAlreadyOfflineAlert": "သီချင်းသည် ကက်ရှ်တွင် ရှိနှင့်ပြီးဖြစ်သည်။",
+  "@songAlreadyOfflineAlert": {
+    "description": "songAlreadyOfflineAlert"
+  },
+  "sleepTimer": "အိပ်ချိန်ချိန်စက်",
+  "@sleepTimer": {
+    "description": "sleepTimer"
+  },
+  "upNext": "နောက်တစ်ခု",
+  "@upNext": {
+    "description": "upNext"
+  },
+  "plain": "ရိုးရှင်းသော",
+  "@plain": {
+    "description": "plain"
+  },
+  "addMultipleSongs": "သီချင်းများကို အစီအစဉ်တွင် ထည့်သွင်းပါ။",
+  "@addMultipleSongs": {
+    "description": "addMultipleSongs"
+  },
+  "renamePlaylist": "အစီအစဉ်ကို အမည်ပြောင်းပါ။",
+  "@renamePlaylist": {
+    "description": "renamePlaylist"
+  },
+  "videos": "ဗီဒီယိုများ",
+  "@videos": {
+    "description": "videos"
+  },
+  "enqueueAll": "အားလုံးကို တန်းစီရန် ထည့်ပါ။",
+  "@enqueueAll": {
+    "description": "enqueueAll"
+  },
+  "removePlaylist": "အစီအစဉ်ကို ဖျက်ပါ။",
+  "@removePlaylist": {
+    "description": "removePlaylist"
+  },
+  "CreateNewPlaylist": "အစီအစဉ်အသစ်ဖန်တီးပါ။",
+  "@CreateNewPlaylist": {
+    "description": "CreateNewPlaylist"
+  },
+  "createnAdd": "ဖန်တီးပြီး ထည့်ပါ။",
+  "@createnAdd": {
+    "description": "createnAdd"
+  },
+  "noBookmarks": "စာညှပ်များ မရှိပါ။",
+  "@noBookmarks": {
+    "description": "noBookmarks"
+  },
+  "startRadio": "ရေဒီယိုကို စတင်ပါ။",
+  "@startRadio": {
+    "description": "startRadio"
+  },
+  "playNext": "နောက်ကစားပါ။",
+  "@playNext": {
+    "description": "playNext"
+  },
+  "noLibPlaylist": "သင့်ဒစ်ဂျစ်တိုက်တွင် သင့်တွင် မည်သည့်အစီအစဉ်မျှ မရှိပါ။",
+  "@noLibPlaylist": {
+    "description": "noLibPlaylist"
+  },
+  "enqueueSong": "ဤသီချင်းကို တန်းစီရန် ထည့်ပါ။",
+  "@enqueueSong": {
+    "description": "enqueueSong"
+  },
+  "themeMode": "အပြင်အဆင် မုဒ်",
+  "@themeMode": {
+    "description": "themeMode"
+  },
+  "systemDefault": "စနစ် ပုံသေ",
+  "@systemDefault": {
+    "description": "systemDefault"
+  },
+  "setDiscoverContent": "ရှာဖွေတွေ့ရှိမှု အကြောင်းအရာ သတ်မှတ်ပါ။",
+  "@setDiscoverContent": {
+    "description": "setDiscoverContent"
+  },
+  "discover": "ရှာဖွေပါ။",
+  "@discover": {
+    "description": "discover"
+  },
+  "equalizerDes": "စနစ်ချေပချက်ကိုဖွင့်ပါ။",
+  "@equalizerDes": {
+    "description": "equalizerDes"
+  },
+  "basedOnLast": "နောက်ဆုံးအပြန်အလှန်အကျိုးသက်ရောက်မှုအပေါ်အခြေခံသည်။",
+  "@basedOnLast": {
+    "description": "basedOnLast"
+  },
+  "notaSongVideo": "၎င်းသည် သီချင်း/ဂီတဗီဒီယို မဟုတ်ပါ။",
+  "@notaSongVideo": {
+    "description": "notaSongVideo"
+  },
+  "linkPipedDes": "အစီအစဉ်များအတွက် Piped နှင့် လင့်ခ်ချိတ်ပါ။",
+  "@linkPipedDes": {
+    "description": "linkPipedDes"
+  },
+  "selectAuthIns": "အထောက်အထားစိစစ်ခြင်း ဥပမာကို ရွေးပါ။",
+  "@selectAuthIns": {
+    "description": "selectAuthIns"
+  },
+  "password": "စကားဝှက်",
+  "@password": {
+    "description": "password"
+  },
+  "rename": "အမည်ပြောင်းပါ။",
+  "@rename": {
+    "description": "rename"
+  },
+  "removeMultiple": "သီချင်းများစွာကို ဖျက်ပါ။",
+  "@removeMultiple": {
+    "description": "removeMultiple"
+  },
+  "restoreLastPlaybackSession": "နောက်ဆုံးပြန်ဖွင့်သည့် စက်ရှင်ကို ပြန်ယူပါ။",
+  "@restoreLastPlaybackSession": {
+    "description": "restoreLastPlaybackSession"
+  },
+  "clearImgCacheAlert": "ပုံ cache ကို အောင်မြင်စွာ ရှင်းလင်းပြီးပါပြီ။",
+  "@clearImgCacheAlert": {
+    "description": "clearImgCacheAlert"
+  },
+  "dynamic": "တက်ကြွသော",
+  "@dynamic": {
+    "description": "dynamic"
+  },
+  "results": "ရလဒ်များ",
+  "@results": {
+    "description": "results"
+  },
+  "albumBookmarkRemoveAlert": "အယ်လ်ဘမ်စာညှပ်ကို ဖယ်ရှားလိုက်ပါပြီ။",
+  "@albumBookmarkRemoveAlert": {
+    "description": "albumBookmarkRemoveAlert"
+  },
+  "reArrangePlaylist": "အစီအစဉ်ကို ပြန်စီပါ။",
+  "@reArrangePlaylist": {
+    "description": "reArrangePlaylist"
+  },
+  "cancel": "မလုပ်တော့",
+  "@cancel": {
+    "description": "cancel"
+  },
+  "create": "ဖန်တီးပါ။",
+  "@create": {
+    "description": "create"
+  },
+  "close": "ပိတ်လိုက်",
+  "@close": {
+    "description": "close"
+  },
+  "disableTransitionAnimationDes": "တက်ဘ်အကူးအပြောင်း လှုပ်ရှားသက်ဝင်မှုကို ပိတ်ရန် ဤရွေးချယ်မှုကို အသက်သွင်းပါ။",
+  "@disableTransitionAnimationDes": {
+    "description": "disableTransitionAnimationDes"
+  },
+  "openIn": "ဝင်ဖွင့်ပါ။",
+  "@openIn": {
+    "description": "openIn"
+  },
+  "removeFromLib": "ဒစ်ဂျစ်တိုက်မှ သီချင်းများကို ဖယ်ရှားပါ။",
+  "@removeFromLib": {
+    "description": "removeFromLib"
+  },
+  "add5Minutes": "5 မိနစ်ထည့်ပါ။",
+  "@add5Minutes": {
+    "description": "add5Minutes"
+  },
+  "cancelTimer": "အချိန်တိုင်းကိရိယာကို ပယ်ဖျက်ပါ။",
+  "@cancelTimer": {
+    "description": "cancelTimer"
+  },
+  "deleteDownloadData": "ဒေါင်းလုဒ်များမှ ဖယ်ရှားပါ။",
+  "@deleteDownloadData": {
+    "description": "deleteDownloadData"
+  },
+  "minutes": "မိနစ်",
+  "@minutes": {
+    "description": "minutes"
+  },
+  "endOfThisSong": "ဒီသီချင်းရဲ့အဆုံး",
+  "@endOfThisSong": {
+    "description": "endOfThisSong"
+  },
+  "dark": "မှောင်",
+  "@dark": {
+    "description": "dark"
+  },
+  "light": "သေချာပါတယ်။",
+  "@light": {
+    "description": "light"
+  },
+  "language": "ဘာသာစကား",
+  "@language": {
+    "description": "language"
+  },
+  "languageDes": "အက်ပ်ဘာသာစကားကို သတ်မှတ်ပါ။",
+  "@languageDes": {
+    "description": "languageDes"
+  },
+  "quickpicks": "အမြန်ရွေးချယ်မှုများ",
+  "@quickpicks": {
+    "description": "quickpicks"
+  },
+  "homeContentCountDes": "မူလပင်မစခရင်မှ အကြောင်းအရာ အရေအတွက် (ခန့်မှန်းခြေ) ကို ရွေးပါ။ ရလဒ်နည်းပါးပြီး ပိုမြန်သည်။",
+  "@homeContentCountDes": {
+    "description": "homeContentCountDes"
+  },
+  "cacheSongsDes": "၎င်းတို့ကို အနာဂတ်/အော့ဖ်လိုင်း ပြန်ဖွင့်ရန်အတွက် ဖွင့်နေစဉ်တွင် သိမ်းဆည်းထားသော သီချင်းများသည် သင့်စက်ပစ္စည်းပေါ်တွင် နေရာပိုယူမည်ဖြစ်သည်။",
+  "@cacheSongsDes": {
+    "description": "cacheSongsDes"
+  },
+  "skipSilence": "တိတ်ဆိတ်ခြင်းကို ကျော်သွားပါ။",
+  "@skipSilence": {
+    "description": "skipSilence"
+  },
+  "skipSilenceDes": "သီချင်းဖွင့်သည့်အခါ အသံတိတ်သွားပါမည်။",
+  "@skipSilenceDes": {
+    "description": "skipSilenceDes"
+  },
+  "streamingQuality": "လွှင့်အရည်အသွေး",
+  "@streamingQuality": {
+    "description": "streamingQuality"
+  },
+  "high": "မြင့်သည်။",
+  "@high": {
+    "description": "high"
+  },
+  "backgroundPlay": "နောက်ခံတွင် သီချင်းဖွင့်ခြင်း။",
+  "@backgroundPlay": {
+    "description": "backgroundPlay"
+  },
+  "cacheHomeScreenData": "ပင်မစခရင်တွင် အကြောင်းအရာဒေတာကို သိမ်းဆည်းပါ။",
+  "@cacheHomeScreenData": {
+    "description": "cacheHomeScreenData"
+  },
+  "cacheHomeScreenDataDes": "ပင်မစခရင်၏ အကြောင်းအရာဒေတာ သိုလှောင်မှုကို ဖွင့်ပါ၊ ဤရွေးချယ်မှုကို ဖွင့်ထားပါက ပင်မစခရင်သည် ချက်ခြင်း စတင်ပါလိမ့်မည်။",
+  "@cacheHomeScreenDataDes": {
+    "description": "cacheHomeScreenDataDes"
+  },
+  "downloadingFormatDes": "ဒေါင်းလုဒ်ဖိုင်ဖော်မတ်ကို ရွေးပါ။ \"Opus\" သည် အကောင်းဆုံးအရည်အသွေးကို ပေးဆောင်မည်ဖြစ်သည်။",
+  "@downloadingFormatDes": {
+    "description": "downloadingFormatDes"
+  },
+  "exportDowloadedFiles": "ဒေါင်းလုဒ်လုပ်ထားသောဖိုင်များကို ထုတ်ယူပါ။",
+  "@exportDowloadedFiles": {
+    "description": "exportDowloadedFiles"
+  },
+  "exportedFileLocation": "ဒေါင်းလုဒ်လုပ်ထားသောဖိုင်များ၏ တည်နေရာကို ထုတ်ယူပါ။",
+  "@exportedFileLocation": {
+    "description": "exportedFileLocation"
+  },
+  "exporting": "တင်ပို့နေသည်...",
+  "@exporting": {
+    "description": "exporting"
+  },
+  "scanning": "စကင်ဖတ်နေသည်...",
+  "@scanning": {
+    "description": "scanning"
+  },
+  "downFilesFound": "ဒေါင်းလုဒ်လုပ်ထားသော ဖိုင်များကို တွေ့ရှိခဲ့သည်။",
+  "@downFilesFound": {
+    "description": "downFilesFound"
+  },
+  "exportMsg": "ဖိုင်များကို အောင်မြင်စွာ ထုတ်ယူပြီးပါပြီ။",
+  "@exportMsg": {
+    "description": "exportMsg"
+  },
+  "equalizer": "ချေပသည်။",
+  "@equalizer": {
+    "description": "equalizer"
+  },
+  "clearImgCache": "ရုပ်ပုံ cache ကိုရှင်းလင်းပါ။",
+  "@clearImgCache": {
+    "description": "clearImgCache"
+  },
+  "clearImgCacheDes": "သိမ်းဆည်းထားသော ပုံသေး/ပုံများကို ရှင်းလင်းရန် ဤနေရာကို နှိပ်ပါ။ (Cached ပုံဒေတာကို အပ်ဒိတ်မလုပ်ပါက မထောက်ခံပါ)",
+  "@clearImgCacheDes": {
+    "description": "clearImgCacheDes"
+  },
+  "disabled": "မသန်စွမ်း",
+  "@disabled": {
+    "description": "disabled"
+  },
+  "ignoreBatOpt": "ဘက်ထရီ ပိုမိုကောင်းမွန်အောင် လုပ်ဆောင်ခြင်းကို လျစ်လျူရှုပါ။",
+  "@ignoreBatOpt": {
+    "description": "ignoreBatOpt"
+  },
+  "enabled": "ရပါပြီ။",
+  "@enabled": {
+    "description": "enabled"
+  },
+  "github": "GitHub",
+  "@github": {
+    "description": "github"
+  },
+  "githubDes": "GitHub အရင်းအမြစ်ကုဒ်ကိုကြည့်ပါ။ \nဒီပရောဂျက်ကို သဘောကျရင် ⭐ လက်ဆောင်ပေးဖို့ မမေ့နဲ့နော်။",
+  "@githubDes": {
+    "description": "githubDes"
+  },
+  "by": "အားဖြင့်",
+  "@by": {
+    "description": "by"
+  },
+  "searchDes": "သီချင်းများ၊ အစီအစဉ်များ၊ အယ်လ်ဘမ်များ သို့မဟုတ် အနုပညာရှင်များ",
+  "@searchDes": {
+    "description": "searchDes"
+  },
+  "searchRes": "ရှာဖွေမှုရလဒ်များ",
+  "@searchRes": {
+    "description": "searchRes"
+  },
+  "for1": "အတွက်",
+  "@for1": {
+    "description": "for1"
+  },
+  "viewAll": "အားလုံးကြည့်",
+  "@viewAll": {
+    "description": "viewAll"
+  },
+  "nomatch": "ကိုက်ညီမှု မတွေ့ပါ။",
+  "@nomatch": {
+    "description": "nomatch"
+  },
+  "subscribers": "စာရင်းသွင်းသူများ",
+  "@subscribers": {
+    "description": "subscribers"
+  },
+  "synced": "ထပ်တူပြုသည်။",
+  "@synced": {
+    "description": "synced"
+  },
+  "deleteDownloadedDataAlert": "ဒေါင်းလုဒ်များမှ အောင်မြင်စွာ ဖယ်ရှားခဲ့သည်။",
+  "@deleteDownloadedDataAlert": {
+    "description": "deleteDownloadedDataAlert"
+  },
+  "cancelTimerAlert": "အိပ်ချိန်ချိန်စက်ကို ပယ်ဖျက်လိုက်ပါပြီ။",
+  "@cancelTimerAlert": {
+    "description": "cancelTimerAlert"
+  },
+  "sleepTimeSetAlert": "သင်၏ အိပ်ချိန်ချိန်စက်ကို သတ်မှတ်ထားသည်။",
+  "@sleepTimeSetAlert": {
+    "description": "sleepTimeSetAlert"
+  },
+  "songRemovedfromQueueCurrSong": "လက်ရှိဖွင့်နေသည့် သီချင်းကို သင် ဖျက်၍မရပါ။",
+  "@songRemovedfromQueueCurrSong": {
+    "description": "songRemovedfromQueueCurrSong"
+  },
+  "songRemovedAlert": "မှဖယ်ရှားခဲ့သည်။",
+  "@songRemovedAlert": {
+    "description": "songRemovedAlert"
+  },
+  "pipedplstSyncAlert": "ပိုက်ထည့်ထားသော အစီအစဉ်ကို စင့်ခ်လုပ်ထားသည်။",
+  "@pipedplstSyncAlert": {
+    "description": "pipedplstSyncAlert"
+  },
+  "playlistRenameAlert": "အောင်မြင်စွာ နာမည်ပြောင်းပြီးပါပြီ။",
+  "@playlistRenameAlert": {
+    "description": "playlistRenameAlert"
+  },
+  "playlistRemovedAlert": "အစီအစဉ်ကို ဖျက်လိုက်ပါပြီ။",
+  "@playlistRemovedAlert": {
+    "description": "playlistRemovedAlert"
+  },
+  "playlistBookmarkAddAlert": "ဖွင့်ရန်စာရင်းကို စာညှပ်များထဲသို့ ထည့်ထားသည်။",
+  "@playlistBookmarkAddAlert": {
+    "description": "playlistBookmarkAddAlert"
+  },
+  "playlistBookmarkRemoveAlert": "ဖွင့်ရန်စာရင်းစာညှပ်ကို ဖယ်ရှားခဲ့သည်။",
+  "@playlistBookmarkRemoveAlert": {
+    "description": "playlistBookmarkRemoveAlert"
+  },
+  "albumBookmarkAddAlert": "အယ်လ်ဘမ်ကို စာညှပ်များထဲသို့ ထည့်လိုက်သည် ။",
+  "@albumBookmarkAddAlert": {
+    "description": "albumBookmarkAddAlert"
+  },
+  "lyricsNotAvailable": "စာသားမရရှိနိုင်ပါ။",
+  "@lyricsNotAvailable": {
+    "description": "lyricsNotAvailable"
+  },
+  "newVersionAvailable": "ဗားရှင်းအသစ် ရပါပြီ။",
+  "@newVersionAvailable": {
+    "description": "newVersionAvailable"
+  },
+  "dontShowInfoAgain": "ဤအချက်အလက်ကို ထပ်မပြပါနှင့်",
+  "@dontShowInfoAgain": {
+    "description": "dontShowInfoAgain"
+  },
+  "notaValidLink": "၎င်းသည် မှန်ကန်သော လင့်ခ်တစ်ခု မဟုတ်ပါ။",
+  "@notaValidLink": {
+    "description": "notaValidLink"
+  },
+  "operationFailed": "လည်ပတ်မှု မအောင်မြင်ပါ။",
+  "@operationFailed": {
+    "description": "operationFailed"
+  },
+  "Piped": "ပိုက်",
+  "@Piped": {
+    "description": "Piped"
+  },
+  "link": "လင့်",
+  "@link": {
+    "description": "link"
+  },
+  "unLink": "လင့်ခ်ဖြုတ်ပါ။",
+  "@unLink": {
+    "description": "unLink"
+  },
+  "hintApiUrl": "Piped ဥပမာသို့ API URL",
+  "@hintApiUrl": {
+    "description": "hintApiUrl"
+  },
+  "customIns": "စိတ်ကြိုက်ဥပမာ",
+  "@customIns": {
+    "description": "customIns"
+  },
+  "linkAlert": "အောင်မြင်စွာ ချိတ်ဆက်ပြီးပါပြီ။",
+  "@linkAlert": {
+    "description": "linkAlert"
+  },
+  "unlinkAlert": "အောင်မြင်စွာ လင့်ခ်ဖြုတ်လိုက်ပါပြီ။",
+  "@unlinkAlert": {
+    "description": "unlinkAlert"
+  },
+  "stopMusicOnTaskClear": "အက်ပ်ကိုပိတ်သည့်အခါ တေးဂီတကို ရပ်ပါ။",
+  "@stopMusicOnTaskClear": {
+    "description": "stopMusicOnTaskClear"
+  },
+  "goToAlbum": "အယ်လ်ဘမ်သို့သွားပါ။",
+  "@goToAlbum": {
+    "description": "goToAlbum"
+  },
+  "downloadLocation": "တည်နေရာကို ဒေါင်းလုဒ်လုပ်ပါ။",
+  "@downloadLocation": {
+    "description": "downloadLocation"
+  },
+  "low": "နိမ့်သည်။",
+  "@low": {
+    "description": "low"
+  },
+  "downloadingFormat": "ဖိုင်ဖော်မတ်ကို ဒေါင်းလုဒ်လုပ်ပါ။",
+  "@downloadingFormat": {
+    "description": "downloadingFormat"
+  },
+  "ignoreBatOptDes": "စနစ်ပိုကောင်းအောင်ပြုလုပ်ခြင်းကြောင့် အကြောင်းကြားချက်များ သို့မဟုတ် ပြန်ဖွင့်ခြင်းရပ်တန့်ခြင်းတွင် ပြဿနာများရှိပါက၊ ဤရွေးချယ်မှုကို အသက်သွင်းပါ။",
+  "@ignoreBatOptDes": {
+    "description": "ignoreBatOptDes"
+  },
+  "status": "အဆင့်အတန်း",
+  "@status": {
+    "description": "status"
+  },
+  "radioNotAvailable": "ဤအနုပညာရှင်အတွက် ရေဒီယို မရရှိနိုင်ပါ။",
+  "@radioNotAvailable": {
+    "description": "radioNotAvailable"
+  },
+  "songRemovedfromQueue": "တန်းစီခြင်းမှ ဖယ်ရှားခဲ့သည်။",
+  "@songRemovedfromQueue": {
+    "description": "songRemovedfromQueue"
+  },
+  "artistBookmarkRemoveAlert": "အနုပညာရှင် အမှတ်အသားကို ဖယ်ရှားလိုက်ပါပြီ။",
+  "@artistBookmarkRemoveAlert": {
+    "description": "artistBookmarkRemoveAlert"
+  },
+  "dismiss": "ပစ်ပယ်",
+  "@dismiss": {
+    "description": "dismiss"
+  },
+  "goToDownloadPage": "ဒေါင်းလုဒ်စာမျက်နှာသို့သွားရန် ဤနေရာကိုနှိပ်ပါ။",
+  "@goToDownloadPage": {
+    "description": "goToDownloadPage"
+  },
+  "local": "ပြည်တွင်း",
+  "@local": {
+    "description": "local"
+  },
+  "addToPlaylist": "အစီအစဉ်သို့ ထည့်ပါ။",
+  "@addToPlaylist": {
+    "description": "addToPlaylist"
+  },
+  "cacheSongs": "သိမ်းဆည်းထားသော သီချင်းများ",
+  "@cacheSongs": {
+    "description": "cacheSongs"
+  },
+  "disableTransitionAnimation": "အကူးအပြောင်း လှုပ်ရှားသက်ဝင်မှုကို ပိတ်ပါ။",
+  "@disableTransitionAnimation": {
+    "description": "disableTransitionAnimation"
+  },
+  "exportDowloadedFilesDes": "ဒေါင်းလုဒ်လုပ်ထားသောဖိုင်များကို အပလီကေးရှင်းလမ်းညွှန်မှ ပြင်ပလမ်းညွှန်သို့ တင်ပို့ရန် ဤနေရာကိုနှိပ်ပါ။",
+  "@exportDowloadedFilesDes": {
+    "description": "exportDowloadedFilesDes"
+  },
+  "export": "တင်ပို့ခြင်း။",
+  "@export": {
+    "description": "export"
+  },
+  "backgroundPlayDes": "နောက်ခံတေးဂီတဖွင့်ခြင်းကို ဖွင့်/ပိတ်ခြင်း (အက်ပ်အား နောက်ခံတွင် လုပ်ဆောင်နေချိန်တွင် စနစ်ဗန်းမှ ဝင်ရောက်ကြည့်ရှုနိုင်သည်)",
+  "@backgroundPlayDes": {
+    "description": "backgroundPlayDes"
+  },
+  "search": "ရှာရန်",
+  "@search": {
+    "description": "search"
+  },
+  "songAddedToPlaylistAlert": "သီချင်းကို ဖွင့်ရန်စာရင်းသို့ ထည့်ထားသည်။",
+  "@songAddedToPlaylistAlert": {
+    "description": "songAddedToPlaylistAlert"
+  },
+  "songAlreadyExists": "သီချင်းက ရှိပြီးသား။",
+  "@songAlreadyExists": {
+    "description": "songAlreadyExists"
+  },
+  "topmusicvideos": "အကောင်းဆုံးတေးဂီတဗီဒီယိုများ",
+  "@topmusicvideos": {
+    "description": "topmusicvideos"
+  },
+  "restoreLastPlaybackSessionDes": "အက်ပ်ကို စတင်သောအခါ နောက်ဆုံးဖွင့်သည့် ဆက်ရှင်ကို အလိုအလျောက် ပြန်လည်ရယူပါ။",
+  "@restoreLastPlaybackSessionDes": {
+    "description": "restoreLastPlaybackSessionDes"
+  },
+  "enableBottomNav": "အောက်ခြေလမ်းညွှန်ဘား",
+  "@enableBottomNav": {
+    "description": "enableBottomNav"
+  },
+  "songEnqueueAlert": "သီချင်းကို တန်းစီရန် ထည့်ထားသည်။",
+  "@songEnqueueAlert": {
+    "description": "songEnqueueAlert"
+  },
+  "artistBookmarkAddAlert": "အနုပညာရှင်ကို စာညှပ်များထဲသို့ ထည့်ခဲ့သည်။",
+  "@artistBookmarkAddAlert": {
+    "description": "artistBookmarkAddAlert"
+  },
+  "syncedLyricsNotAvailable": "ထပ်တူပြုထားသော သီချင်းစာသားများကို မရနိုင်ပါ။",
+  "@syncedLyricsNotAvailable": {
+    "description": "syncedLyricsNotAvailable"
+  },
+  "artistDesNotAvailable": "ဖော်ပြချက် မရရှိနိုင်ပါ။",
+  "@artistDesNotAvailable": {
+    "description": "artistDesNotAvailable"
+  },
+  "selectAuthInsMsg": "ကျေးဇူးပြု၍ စစ်မှန်ကြောင်းအထောက်အထားပြခြင်းကို ရွေးချယ်ပါ။",
+  "@selectAuthInsMsg": {
+    "description": "selectAuthInsMsg"
+  },
+  "allFieldsReqMsg": "အကွက်အားလုံး လိုအပ်သည်။",
+  "@allFieldsReqMsg": {
+    "description": "allFieldsReqMsg"
+  },
+  "username": "အသုံးပြုသူအမည်",
+  "@username": {
+    "description": "username"
+  },
+  "playlistBlacklistAlert": "အမည်ပျက်စာရင်းသွင်းထားသော အစီအစဉ်။",
+  "@playlistBlacklistAlert": {
+    "description": "playlistBlacklistAlert"
+  },
+  "blacklistPlstResetAlert": "အောင်မြင်စွာ ပြန်လည်သတ်မှတ်ပါ။",
+  "@blacklistPlstResetAlert": {
+    "description": "blacklistPlstResetAlert"
+  },
+  "resetblacklistedplaylist": "အမည်ပျက်စာရင်းသွင်းထားသော အစီအစဉ်များကို ပြန်လည်သတ်မှတ်ပါ။",
+  "@resetblacklistedplaylist": {
+    "description": "resetblacklistedplaylist"
+  },
+  "resetblacklistedplaylistDes": "အမည်ပျက်စာရင်းသွင်းထားသော Piped အစီအစဉ်အားလုံးကို ပြန်လည်သတ်မှတ်ပါ။",
+  "@resetblacklistedplaylistDes": {
+    "description": "resetblacklistedplaylistDes"
+  },
+  "restoreSettingsAndPlaylistsDes": "ဆက်တင်များ၊ အကောင့်ဝင်ဒေတာနှင့် အစီအစဉ်အားလုံးကို အရန်ဖိုင်တစ်ခုမှ ပြန်လည်ရယူသည်။ လက်ရှိဒေတာအားလုံးကို ထပ်ရေးသည်။",
+  "@restoreSettingsAndPlaylistsDes": {
+    "description": "restoreSettingsAndPlaylistsDes"
+  },
+  "errorOccuredAlert": "အမှားအယွင်းတစ်ခု ဖြစ်ပွားခဲ့သည်။",
+  "@errorOccuredAlert": {
+    "description": "errorOccuredAlert"
+  },
+  "playlistCreatedAlert": "အစီအစဉ်ကို ဖန်တီးပြီးပါပြီ။",
+  "@playlistCreatedAlert": {
+    "description": "playlistCreatedAlert"
+  },
+  "shareSong": "ဒီသီချင်းကို မျှဝေပါ။",
+  "@shareSong": {
+    "description": "shareSong"
+  },
+  "trending": "ခေတ်ရေစီးကြောင်း",
+  "@trending": {
+    "description": "trending"
+  },
+  "reset": "ပြန်လည်သတ်မှတ်ပါ။",
+  "@reset": {
+    "description": "reset"
+  },
+  "viewArtist": "အနုပညာရှင်ကိုကြည့်ပါ။",
+  "@viewArtist": {
+    "description": "viewArtist"
+  },
+  "removeFromPlaylist": "အစီအစဉ်မှ ဖယ်ရှားပါ။",
+  "@removeFromPlaylist": {
+    "description": "removeFromPlaylist"
+  },
+  "removeFromQueue": "တန်းစီခြင်းမှ ဖယ်ရှားပါ။",
+  "@removeFromQueue": {
+    "description": "removeFromQueue"
+  },
+  "streamingQualityDes": "ဂီတထုတ်လွှင့်မှု အရည်အသွေး",
+  "@streamingQualityDes": {
+    "description": "streamingQualityDes"
+  },
+  "customInsSelectMsg": "ကျေးဇူးပြု၍ စိတ်ကြိုက်ဥပမာတစ်ခုကို ရွေးပါ။",
+  "@customInsSelectMsg": {
+    "description": "customInsSelectMsg"
+  },
+  "stopMusicOnTaskClearDes": "Task Manager မှ အက်ပ်ကို ပိတ်လိုက်သောအခါ တေးဂီတဖွင့်ခြင်းကို ရပ်သွားပါမည်။",
+  "@stopMusicOnTaskClearDes": {
+    "description": "stopMusicOnTaskClearDes"
+  },
+  "backupSettingsAndPlaylistsDes": "ဆက်တင်များ၊ အစီအစဉ်များနှင့် အကောင့်ဝင်ဒေတာအားလုံးကို အရန်ဖိုင်တစ်ခုတွင် သိမ်းဆည်းပါ။",
+  "@backupSettingsAndPlaylistsDes": {
+    "description": "backupSettingsAndPlaylistsDes"
+  },
+  "backupMsg": "အရန်သိမ်းခြင်းကို အောင်မြင်စွာ သိမ်းဆည်းပြီးပါပြီ။",
+  "@backupMsg": {
+    "description": "backupMsg"
+  },
+  "backFilesFound": "ဒေတာဘေ့စ်များကို တွေ့ရှိခဲ့သည်။",
+  "@backFilesFound": {
+    "description": "backFilesFound"
+  },
+  "restoreMsg": "အောင်မြင်စွာ ပြန်လည်ရယူနိုင်ပါပြီ။\nပြန်လည်စတင်ချိန်တွင် အပြောင်းအလဲများကို သက်ရောက်သည်။",
+  "@restoreMsg": {
+    "description": "restoreMsg"
+  },
+  "restoring": "ပြန်လည်ရယူနေသည်...",
+  "@restoring": {
+    "description": "restoring"
+  },
+  "restore": "ပြန်ယူပါ။",
+  "@restore": {
+    "description": "restore"
+  },
+  "closeApp": "အပလီကေးရှင်းကို ပိတ်ပါ။",
+  "@closeApp": {
+    "description": "closeApp"
+  },
+  "standard": "စံ",
+  "@standard": {
+    "description": "standard"
+  },
+  "gesture": "လက်ဟန်ခြေဟန်",
+  "@gesture": {
+    "description": "gesture"
+  },
+  "audioCodec": "အသံကုဒ်ဒက်",
+  "@audioCodec": {
+    "description": "audioCodec"
+  },
+  "autoDownFavSongDes": "အကြိုက်ဆုံးများထဲသို့ ထည့်သောအခါ အကြိုက်ဆုံးသီချင်းများကို အလိုအလျောက် ဒေါင်းလုဒ်လုပ်ပါ။",
+  "@autoDownFavSongDes": {
+    "description": "autoDownFavSongDes"
+  },
+  "loudnessNormalization": "အသံကျယ်ခြင်းကို ပုံမှန်ဖြစ်စေသည်။",
+  "@loudnessNormalization": {
+    "description": "loudnessNormalization"
+  },
+  "playerUi": "ကစားသမား UI",
+  "@playerUi": {
+    "description": "playerUi"
+  },
+  "songNotPlayable": "ဆာဗာကန့်သတ်ချက်များကြောင့် သီချင်းဖွင့်၍မရပါ။",
+  "@songNotPlayable": {
+    "description": "songNotPlayable"
+  },
+  "loudnessDb": "အသံကျယ်ခြင်းDb",
+  "@loudnessDb": {
+    "description": "loudnessDb"
+  },
+  "restoreAppData": "အက်ပ်ဒေတာကို ပြန်ယူပါ။",
+  "@restoreAppData": {
+    "description": "restoreAppData"
+  },
+  "queueShufflingDeniedMsg": "ကျပန်းမုဒ်ကို ဖွင့်ထားသည်။ တန်းစီခြင်းကို ကိုယ်တိုင်ရောနှော၍မရပါ။",
+  "@queueShufflingDeniedMsg": {
+    "description": "queueShufflingDeniedMsg"
+  },
+  "includeDownloadedFiles": "ဒေါင်းလုဒ်လုပ်ထားသော သီချင်းဖိုင်များကို ထည့်သွင်းပါ။",
+  "@includeDownloadedFiles": {
+    "description": "includeDownloadedFiles"
+  },
+  "backupInProgress": "အရန်သိမ်းခြင်းကို လုပ်ဆောင်နေသည်...",
+  "@backupInProgress": {
+    "description": "backupInProgress"
+  },
+  "queuerearrangingDeniedMsg": "shuffle မုဒ်ဖွင့်ထားသည့်အခါ တန်းစီခြင်းကို ပြန်လည်စီစစ်၍မရပါ။",
+  "@queuerearrangingDeniedMsg": {
+    "description": "queuerearrangingDeniedMsg"
+  },
+  "content": "အကြောင်းအရာ",
+  "@content": {
+    "description": "content"
+  },
+  "downloadError3": "ကွန်ရက်/ထုတ်လွှင့်မှု အမှားအယွင်းကြောင့် ဒေါင်းလုဒ် မအောင်မြင်ပါ။ ထပ်စမ်းကြည့်ပါ။",
+  "@downloadError3": {
+    "description": "downloadError3"
+  },
+  "personalisation": "စိတ်ကြိုက်လုပ်ပါ။",
+  "@personalisation": {
+    "description": "personalisation"
+  },
+  "playerUiDes": "ကစားသမားအသုံးပြုသူ အင်တာဖေ့စ်ကို ရွေးပါ။",
+  "@playerUiDes": {
+    "description": "playerUiDes"
+  },
+  "musicAndPlayback": "ဂီတနှင့် ပြန်ဖွင့်ခြင်း။",
+  "@musicAndPlayback": {
+    "description": "musicAndPlayback"
+  },
+  "appInfo": "လျှောက်လွှာအချက်အလက်",
+  "@appInfo": {
+    "description": "appInfo"
+  },
+  "networkError": "ကွန်ရက် အမှား။ သင်၏အင်တာနက်ချိတ်ဆက်မှုကိုစစ်ဆေးပါ။",
+  "@networkError": {
+    "description": "networkError"
+  },
+  "download": "ဒေါင်းလုဒ်လုပ်ပါ။",
+  "@download": {
+    "description": "download"
+  },
+  "downloadError2": "ဆာဗာကန့်သတ်ချက်များကြောင့် တောင်းဆိုထားသောသီချင်းကို ဒေါင်းလုဒ်လုပ်၍မရပါ။ ထပ်ကြိုးစားနိုင်ပါတယ်။",
+  "@downloadError2": {
+    "description": "downloadError2"
+  },
+  "letsStrart": "စလိုက်ရအောင်..",
+  "@letsStrart": {
+    "description": "letsStrart"
+  },
+  "processFiles": "ဖိုင်များကို လုပ်ဆောင်နေသည်...",
+  "@processFiles": {
+    "description": "processFiles"
+  },
+  "backupAppData": "အက်ပ်ဒေတာကို အရန်သိမ်းဆည်းပါ။",
+  "@backupAppData": {
+    "description": "backupAppData"
+  },
+  "backup": "မိတ္တူ",
+  "@backup": {
+    "description": "backup"
+  },
+  "playnextMsg": "မကြာမီလာမည်",
+  "@playnextMsg": {
+    "description": "playnextMsg"
+  },
+  "shuffleQueue": "အမြီးရောမွှေပါ။",
+  "@shuffleQueue": {
+    "description": "shuffleQueue"
+  },
+  "queueLoop": "tail loop",
+  "@queueLoop": {
+    "description": "queueLoop"
+  },
+  "queueLoopNotDisMsg1": "shuffle mode ကိုဖွင့်ထားသောအခါ Queue loop mode ကို ပိတ်ထား၍မရပါ။",
+  "@queueLoopNotDisMsg1": {
+    "description": "queueLoopNotDisMsg1"
+  },
+  "queueLoopNotDisMsg2": "Tail loop mode ကို ရေဒီယိုမုဒ်တွင် အသက်မသွင်းနိုင်ပါ။",
+  "@queueLoopNotDisMsg2": {
+    "description": "queueLoopNotDisMsg2"
+  },
+  "loudnessNormalizationDes": "သီချင်းအားလုံးအတွက် တူညီသော ကျယ်လောင်မှုအဆင့်ကို သတ်မှတ်ပေးသည် (စမ်းသပ်ဆဲ) (ဗားရှင်းအဟောင်းများတွင် ဒေါင်းလုဒ်လုပ်ထားသော သီချင်းများ (<v1.10.0))၊",
+  "@loudnessNormalizationDes": {
+    "description": "loudnessNormalizationDes"
+  },
+  "enableSlidableAction": "ဆလိုက်ဒါလုပ်ဆောင်ချက်များကို အသက်သွင်းပါ။",
+  "@enableSlidableAction": {
+    "description": "enableSlidableAction"
+  },
+  "enableSlidableActionDes": "သီချင်းအကွက်ပေါ်တွင် ပွတ်ဆွဲလုပ်ဆောင်မှုများကို အသက်သွင်းပါ။",
+  "@enableSlidableActionDes": {
+    "description": "enableSlidableActionDes"
+  },
+  "bitrate": "ဘစ်နှုန်း",
+  "@bitrate": {
+    "description": "bitrate"
+  },
+  "androidBackupWarning": "မစမ်းသပ်ရသေးပါ- ဖိုင် 60 ကျော်ကို ဒေါင်းလုဒ်လုပ်ပြီးနောက် အမှန်ခြစ်ဘောက်စ်ကို ရွေးခြင်းသည် လုပ်ငန်းစဉ်သည် မန်မိုရီပမာဏ အများအပြားကို စားသုံးစေပြီး ဖုန်း သို့မဟုတ် အက်ပ်ကို ပျက်စီးသွားစေနိုင်သည်။ သင့်ကိုယ်ပိုင်စွန့်စားလုပ်ဆောင်ပါ။",
+  "@androidBackupWarning": {
+    "description": "androidBackupWarning"
+  },
+  "songInfo": "သီချင်းအချက်အလက်",
+  "@songInfo": {
+    "description": "songInfo"
+  },
+  "id": "အမှတ်သညာ",
+  "@id": {
+    "description": "id"
+  },
+  "title": "ခေါင်းစဉ်",
+  "@title": {
+    "description": "title"
+  },
+  "restartApp": "အပလီကေးရှင်းကို ပြန်လည်စတင်ပါ။",
+  "@restartApp": {
+    "description": "restartApp"
+  },
+  "autoDownFavSong": "အကြိုက်ဆုံးသီချင်းများကို အလိုအလျောက်ဒေါင်းလုဒ်လုပ်ပါ။",
+  "@autoDownFavSong": {
+    "description": "autoDownFavSong"
+  },
+  "duration": "သင်တန်းကာလ",
+  "@duration": {
+    "description": "duration"
+  },
+  "urlSearchDes": "ဆက်စပ်အကြောင်းအရာကို ဖွင့်ရန်/ဖွင့်ရန် တွေ့ရှိရသော URL ကို နှိပ်ပါ။",
+  "@urlSearchDes": {
+    "description": "urlSearchDes"
+  },
+  "album": "အခွေ",
+  "@album": {
+    "description": "album"
+  },
+  "reArrangeSongs": "သီချင်းများကို ပြန်စီပါ။",
+  "@reArrangeSongs": {
+    "description": "reArrangeSongs"
+  },
+  "selectSongs": "သီချင်းများကို ရွေးပါ။",
+  "@selectSongs": {
+    "description": "selectSongs"
+  },
+  "selectAll": "အားလုံးကို ရွေးပါ။",
+  "@selectAll": {
+    "description": "selectAll"
+  },
+  "playingfromAlbum": "အယ်လ်ဘမ်မှ ဖွင့်နေသည်။",
+  "@playingfromAlbum": {
+    "description": "playingfromAlbum"
+  },
+  "playingfromPlaylist": "PLAYLIST မှ ကစားနေသည်။",
+  "@playingfromPlaylist": {
+    "description": "playingfromPlaylist"
+  },
+  "playingfromSelection": "ရွေးချယ်မှုမှ ကစားခြင်း။",
+  "@playingfromSelection": {
+    "description": "playingfromSelection"
+  },
+  "auth_login_success": "အောင်မြင်စွာ ဝင်ရောက်ပြီးပါပြီ။",
+  "@auth_login_success": {
+    "description": "auth_login_success"
+  },
+  "settings_cloud_backup": "တိမ်တိုက်အရန်ကူးခြင်း။",
+  "@settings_cloud_backup": {
+    "description": "settings_cloud_backup"
+  },
+  "settings_migration_title": "Joss Music Kotlin မှ ပြောင်းရွှေ့ပါ။",
+  "@settings_migration_title": {
+    "description": "settings_migration_title"
+  },
+  "backup_confirm_question": "အရန်ကူးယူလိုပါသလား။",
+  "@backup_confirm_question": {
+    "description": "backup_confirm_question"
+  },
+  "backup_selection_prompt": "အရန်သိမ်းရန် မည်သည့်ဒေတာကို ရွေးပါ။",
+  "@backup_selection_prompt": {
+    "description": "backup_selection_prompt"
+  },
+  "search_recent_title": "လတ်တလော ရှာဖွေမှုများ",
+  "@search_recent_title": {
+    "description": "search_recent_title"
+  },
+  "back": "ကျော",
+  "@back": {
+    "description": "back"
+  },
+  "auth_forgot_password": "ငါ့စကားဝှက်ကိုမေ့သွားတယ်။",
+  "@auth_forgot_password": {
+    "description": "auth_forgot_password"
+  },
+  "auth_btn_login": "ဝင်ရောက်ပါ။",
+  "@auth_btn_login": {
+    "description": "auth_btn_login"
+  },
+  "auth_btn_register": "မှတ်ပုံတင်ပါ။",
+  "@auth_btn_register": {
+    "description": "auth_btn_register"
+  },
+  "email": "အီးမေးလ်",
+  "@email": {
+    "description": "email"
+  },
+  "password_text": "စကားဝှက်",
+  "@password_text": {
+    "description": "Contraseña texto traducido"
+  },
+  "auth_confirm_password": "စကားဝှက်ကို အတည်ပြုပါ။",
+  "@auth_confirm_password": {
+    "description": "auth_confirm_password"
+  },
+  "auth_welcome_title": "Estrella Music မှလှိုက်လှဲစွာကြိုဆိုပါသည်။",
+  "@auth_welcome_title": {
+    "description": "auth_welcome_title"
+  },
+  "auth_welcome_subtitle": "Estrella Music မှလှိုက်လှဲစွာကြိုဆိုပါသည်။",
+  "@auth_welcome_subtitle": {
+    "description": "auth_welcome_subtitle"
+  },
+  "auth_first_name": "ပထမအမည်",
+  "@auth_first_name": {
+    "description": "auth_first_name"
+  },
+  "auth_last_name": "မျိုးရိုးအမည်",
+  "@auth_last_name": {
+    "description": "auth_last_name"
+  },
+  "auth_agree_personal_data": "ကျွန်ုပ်၏ဒေတာကို အသုံးပြုရန် သဘောတူပါသည်...",
+  "@auth_agree_personal_data": {
+    "description": "auth_agree_personal_data"
+  },
+  "settings_general_section": "အထွေထွေ",
+  "@settings_general_section": {
+    "description": "settings_general_section"
+  },
+  "settings_logout": "ထွက်လိုက်ပါ။",
+  "@settings_logout": {
+    "description": "settings_logout"
+  },
+  "settings_cloud_backup_desc": "အပ်လုဒ်လုပ်ခြင်း၊ ပြန်လည်ရယူခြင်းနှင့် စီမံခန့်ခွဲခြင်း...",
+  "@settings_cloud_backup_desc": {
+    "description": "settings_cloud_backup_desc"
+  },
+  "settings_migration_desc": "အစီအစဉ်များ၊ သီချင်းများကို တင်သွင်းပါ...",
+  "@settings_migration_desc": {
+    "description": "settings_migration_desc"
+  },
+  "backup_btn_restart": "အက်ပ်ကို ပြန်လည်စတင်ပါ။",
+  "@backup_btn_restart": {
+    "description": "backup_btn_restart"
+  },
+  "backup_btn_upload": "ယခု အရန်ကူးယူပါ။",
+  "@backup_btn_upload": {
+    "description": "backup_btn_upload"
+  },
+  "backup_no_backups": "အရန်သိမ်းခြင်းမရှိသေးပါ...",
+  "@backup_no_backups": {
+    "description": "backup_no_backups"
+  },
+  "backup_auth_required": "အသက်ဝင်သော စက်ရှင်တစ်ခု လိုအပ်သည်...",
+  "@backup_auth_required": {
+    "description": "backup_auth_required"
+  },
+  "backup_upload_success": "အရန်ကူးယူ မှန်ကန်စွာ အပ်လုဒ်လုပ်ပါ။",
+  "@backup_upload_success": {
+    "description": "backup_upload_success"
+  },
+  "backup_restore_success": "အရန်သိမ်းခြင်းကို ပြန်လည်ရယူခဲ့သည်။ အက်ပ်ကို ပြန်လည်စတင်ပါ။",
+  "@backup_restore_success": {
+    "description": "backup_restore_success"
+  },
+  "backup_delete_success": "အရန်သိမ်းခြင်းကို ဖျက်လိုက်ပါပြီ။",
+  "@backup_delete_success": {
+    "description": "backup_delete_success"
+  },
+  "genre_pop": "ပ်",
+  "@genre_pop": {
+    "description": "genre_pop"
+  },
+  "genre_rock": "ကျောက်",
+  "@genre_rock": {
+    "description": "genre_rock"
+  },
+  "genre_hiphop": "ဟစ်ဟော့",
+  "@genre_hiphop": {
+    "description": "genre_hiphop"
+  },
+  "genre_electronic": "လျှပ်စစ်ပစ္စည်း",
+  "@genre_electronic": {
+    "description": "genre_electronic"
+  },
+  "genre_jazz": "ဂျက်ဇ်",
+  "@genre_jazz": {
+    "description": "genre_jazz"
+  },
+  "genre_latin": "လက်တင်",
+  "@genre_latin": {
+    "description": "genre_latin"
+  },
+  "migration_btn_select": "ဖိုင်ကိုရွေးချယ်ပြီး တင်သွင်းပါ။",
+  "@migration_btn_select": {
+    "description": "migration_btn_select"
+  },
+  "forgottenFavorites": "အကြိုက်ဆုံးများ မေ့သွားသည်",
+  "@forgottenFavorites": {
+    "description": "forgottenFavorites"
+  },
+  "mostListenedSong": "နားထောင်မှုအများဆုံးသီချင်း",
+  "@mostListenedSong": {
+    "description": "mostListenedSong"
+  },
+  "reproducedBy": "ပြန်လည်ထုတ်ဝေသည်။",
+  "@reproducedBy": {
+    "description": "reproducedBy"
+  },
+  "recentSearches": "လတ်တလော ရှာဖွေမှုများ",
+  "@recentSearches": {
+    "description": "recentSearches"
+  },
+  "popularTracks": "လူကြိုက်များသော သီချင်းများ",
+  "@popularTracks": {
+    "description": "popularTracks"
+  },
+  "latestRelease": "နောက်ဆုံးထွက်",
+  "@latestRelease": {
+    "description": "latestRelease"
+  },
+  "follow": "လိုက်နာပါ။",
+  "@follow": {
+    "description": "follow"
+  },
+  "following": "လိုက်နေသည်။",
+  "@following": {
+    "description": "following"
+  },
+  "listenNow": "ယခု နားထောင်ပါ။",
+  "@listenNow": {
+    "description": "listenNow"
+  },
+  "video": "ဗီဒီယို",
+  "@video": {
+    "description": "video"
+  },
+  "about": "အကြောင်း",
+  "@about": {
+    "description": "about"
+  },
+  "readMore": "စာများများဖတ်ပါ။",
+  "@readMore": {
+    "description": "readMore"
+  },
+  "speedAndPitch": "အရှိန်နှင့် အသံထွက်",
+  "@speedAndPitch": {
+    "description": "speedAndPitch"
+  },
+  "playbackSpeed": "ပြန်ဖွင့်နှုန်း",
+  "@playbackSpeed": {
+    "description": "playbackSpeed"
+  },
+  "songPitch": "သီချင်းသံ",
+  "@songPitch": {
+    "description": "songPitch"
+  },
+  "musicRecognition": "ဂီတအသိ",
+  "@musicRecognition": {
+    "description": "musicRecognition"
+  },
+  "listeningToEnvironment": "ပတ်ဝန်းကျင်ကို နားထောင်ရင်း...",
+  "@listeningToEnvironment": {
+    "description": "listeningToEnvironment"
+  },
+  "micInstruction": "သင့်မိုက်ခရိုဖုန်းအနီးတွင် တေးဂီတကို ကျယ်လောင်စွာဖွင့်ထားကြောင်း သေချာပါစေ။",
+  "@micInstruction": {
+    "description": "micInstruction"
+  },
+  "processingAudio": "အသံဖိုင်ကို လုပ်ဆောင်နေသည်...",
+  "@processingAudio": {
+    "description": "processingAudio"
+  },
+  "shazamSearching": "ကိုက်ညီမှုများအတွက် Shazam ဒေတာဘေ့စ်ကို ရှာဖွေနေသည်...",
+  "@shazamSearching": {
+    "description": "shazamSearching"
+  },
+  "songFound": "သီချင်းတွေ့ပြီ",
+  "@songFound": {
+    "description": "songFound"
+  },
+  "playNow": "ယခုကစားပါ။",
+  "@playNow": {
+    "description": "playNow"
+  },
+  "searchInLibrary": "စာကြည့်တိုက်တွင် ရှာဖွေပါ။",
+  "@searchInLibrary": {
+    "description": "searchInLibrary"
+  },
+  "noMatchesFound": "ကိုက်ညီမှုမရှိပါ။",
+  "@noMatchesFound": {
+    "description": "noMatchesFound"
+  },
+  "noMatchInstruction": "မှတ်တမ်းတင်ထားသော အသံတွင် မည်သည့်သီချင်းကိုမျှ ရှာမတွေ့ပါ။",
+  "@noMatchInstruction": {
+    "description": "noMatchInstruction"
+  },
+  "errorOccurred": "အမှားအယွင်းတစ်ခု ဖြစ်ပွားခဲ့သည်။",
+  "@errorOccurred": {
+    "description": "errorOccurred"
+  },
+  "playingRecognizedTrack": "ကစားနေသည်",
+  "@playingRecognizedTrack": {
+    "description": "playingRecognizedTrack"
+  },
+  "errorPlayingTrack": "ကစားသည့်အခါ အမှားအယွင်း",
+  "@errorPlayingTrack": {
+    "description": "errorPlayingTrack"
+  },
+  "welcome_title": "မင်းရဲ့သီချင်း၊ မင်းရဲ့လမ်း",
+  "@welcome_title": {
+    "description": "welcome_title"
+  },
+  "welcome_subtitle": "ယခုမှစပြီး Estrella Music ကို သင်ခံစားလိုသည့်ပုံစံကို ရွေးချယ်ပါ။",
+  "@welcome_subtitle": {
+    "description": "welcome_subtitle"
+  },
+  "welcome_intro": "ကျွန်ုပ်တို့သည် ကျွန်ုပ်တို့၏ platform ကို ခေတ်မီအောင်ပြုလုပ်ထားပါသည်။ လူကိုယ်တိုင် အရန်ကူးယူခြင်းစနစ်ဟောင်းကို ပိတ်ထားသည်။ ယခု သင့်တွင် သင့်ဂီတဒစ်ဂျစ်တိုက်ကို စီမံခန့်ခွဲရန် ရှင်းလင်းသော နည်းလမ်းနှစ်ခုရှိသည်။",
+  "@welcome_intro": {
+    "description": "welcome_intro"
+  },
+  "recommend_cloud": "Spotify ကဲ့သို့သော အတွေ့အကြုံအတွက် Cloud Mode ကို အသက်သွင်းရန် ကျွန်ုပ်တို့ အကြံပြုပါသည်- သင့်စက်များအားလုံးကြားတွင် အချိန်နှင့်တစ်ပြေးညီ ထပ်တူပြုခြင်း နှင့် သင်ဘာမှလုပ်စရာမလိုဘဲ အလိုအလျောက် အရန်ကူးယူခြင်းဖြစ်သည်။",
+  "@recommend_cloud": {
+    "description": "recommend_cloud"
+  },
+  "swipe_prompt": "ရွေးချယ်စရာများကို လေ့လာရန် ပွတ်ဆွဲပါ။",
+  "@swipe_prompt": {
+    "description": "swipe_prompt"
+  },
+  "local_title": "Local Mode",
+  "@local_title": {
+    "description": "local_title"
+  },
+  "local_subtitle": "သင့်စက်ပစ္စည်းပေါ်ရှိ ပကတိကိုယ်ရေးကိုယ်တာ",
+  "@local_subtitle": {
+    "description": "local_subtitle"
+  },
+  "local_b1": "အကောင့်ဝင်ရန်မလိုအပ်ဘဲအလုပ်လုပ်သည်။",
+  "@local_b1": {
+    "description": "local_b1"
+  },
+  "local_b2": "သင်၏ဒစ်ဂျစ်တိုက်တစ်ခုလုံးသည် ဤကွန်ပြူတာတွင် တင်းကြပ်စွာရှိနေပါသည်။",
+  "@local_b2": {
+    "description": "local_b2"
+  },
+  "local_b3": "မှတ်ချက်- လူကိုယ်တိုင် cloud အရန်ကူးခြင်း မရှိပါ။ သင့်စက်ပျောက်ဆုံးသွားပါက သို့မဟုတ် အက်ပ်ကို ဖြုတ်လိုက်လျှင် သင့်ဒေတာများကို ပြန်လည်ရယူ၍မရနိုင်ပါ။",
+  "@local_b3": {
+    "description": "local_b3"
+  },
+  "local_btn": "ဤစက်ပစ္စည်းပေါ်တွင်သာ အသုံးပြုပါ။",
+  "@local_btn": {
+    "description": "local_btn"
+  },
+  "cloud_title": "Cloud မုဒ် (အကြံပြုထားသည်)",
+  "@cloud_title": {
+    "description": "cloud_title"
+  },
+  "cloud_subtitle": "Joss Red နှင့် အချိန်နှင့်တပြေးညီ ထပ်တူပြုခြင်း။",
+  "@cloud_subtitle": {
+    "description": "cloud_subtitle"
+  },
+  "cloud_b1": "သင်၏ Joss Red အကောင့်ကို အသုံးပြု၍ လုံခြုံစွာဝင်ရောက်ပါ။",
+  "@cloud_b1": {
+    "description": "cloud_b1"
+  },
+  "cloud_b2": "သင့်အစီအစဉ်များ၊ အကြိုက်ဆုံးများနှင့် မှတ်တမ်းများကို မည်သည့်စက်ပစ္စည်း (Windows၊ Android စသည်ဖြင့်) မှ ချက်ချင်းဝင်ရောက်ကြည့်ရှုပါ။",
+  "@cloud_b2": {
+    "description": "cloud_b2"
+  },
+  "cloud_b3": "Smart Sync- အော့ဖ်လိုင်းအလုပ်လုပ်ပြီး အင်တာနက်ပြန်လည်ရယူသည့်အခါ အလိုအလျောက်အပြောင်းအလဲများကို အပ်လုဒ်လုပ်ပါ။",
+  "@cloud_b3": {
+    "description": "cloud_b3"
+  },
+  "cloud_btn": "Cloud စင့်ခ်လုပ်ခြင်းကို အသက်သွင်းပါ။",
+  "@cloud_btn": {
+    "description": "cloud_btn"
+  },
+  "slide_indicator": "အဆင့် 3 မှ {current}",
+  "@slide_indicator": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      }
+    },
+    "description": "slide_indicator"
+  },
+  "news_card_title": "Estrella တေးဂီတသည် ပြောင်းလဲလာသည်။",
+  "@news_card_title": {
+    "description": "news_card_title"
+  },
+  "news_card_subtitle": "Joss Red နှင့် 100% ထပ်တူပြုခြင်း၊ သူငယ်ချင်းများနှင့်အတူ ပြသရန်စာရင်းများနှင့် အခြားအရာများ။ အသစ်အဆန်းများကိုကြည့်ရန် တို့ပါ။",
+  "@news_card_subtitle": {
+    "description": "news_card_subtitle"
+  },
+  "news_dialog_title": "Estrella ဂီတသတင်း",
+  "@news_dialog_title": {
+    "description": "news_dialog_title"
+  },
+  "news_item_sync_title": "Joss Red နှင့် အပြည့်အဝပေါင်းစပ်ခြင်း။",
+  "@news_item_sync_title": {
+    "description": "news_item_sync_title"
+  },
+  "news_item_sync_desc": "သင်၏ အစီအစဉ်များနှင့် အကြိုက်ဆုံးများကို ယခု သိမ်းဆည်းပြီး သင်၏ပင်မ Joss Red အကောင့်ဖြင့် အလိုအလျောက် cloud တွင် စင့်ခ်လုပ်ထားပါသည်။",
+  "@news_item_sync_desc": {
+    "description": "news_item_sync_desc"
+  },
+  "news_item_collab_title": "ပူးပေါင်းဆောင်ရွက်သော အစီအစဉ်များ",
+  "@news_item_collab_title": {
+    "description": "news_item_collab_title"
+  },
+  "news_item_collab_desc": "သင့်သူငယ်ချင်းများနှင့်အတူ အစီအစဉ်များဖန်တီးပါ။ အစီအစဉ်တစ်ခုကို ဖန်တီးသောအခါ၊ ပူးပေါင်းဆောင်ရွက်သည့် အမှတ်ခြစ်ကွက်ကို ရွေးပြီး အတူတကွတည်းဖြတ်ရန် သင့်သူငယ်ချင်းများကို ရွေးချယ်ပါ။",
+  "@news_item_collab_desc": {
+    "description": "news_item_collab_desc"
+  },
+  "news_item_trans_title": "ဖောက်ထွင်းဖန်တီးမှု",
+  "@news_item_trans_title": {
+    "description": "news_item_trans_title"
+  },
+  "news_item_trans_desc": "Manual sync ခလုတ်များကို နှိပ်ရန် မလိုအပ်တော့ပါ။ မော်တာအသစ်သည် အလိုအလျောက် အတက်အဆင်း ပြောင်းလဲခြင်းအတွက် တာဝန်ရှိသည်။",
+  "@news_item_trans_desc": {
+    "description": "news_item_trans_desc"
+  },
+  "news_dialog_section_friends": "သူငယ်ချင်းများနှင့် အကောင့်စီမံခန့်ခွဲမှု-",
+  "@news_dialog_section_friends": {
+    "description": "news_dialog_section_friends"
+  },
+  "news_dialog_friends_desc": "သူငယ်ချင်းများထည့်ရန်၊ တောင်းဆိုချက်များကိုလက်ခံရန် သို့မဟုတ် သင်၏လုံခြုံရေးပရိုဖိုင်ကို စီမံခန့်ခွဲရန်၊ Joss Red ကို ၎င်း၏တရားဝင်ပလက်ဖောင်းများတွင် အသုံးပြုပါ-",
+  "@news_dialog_friends_desc": {
+    "description": "news_dialog_friends_desc"
+  },
+  "news_btn_app": "Joss Red အက်ပ် (Play Store)",
+  "@news_btn_app": {
+    "description": "news_btn_app"
+  },
+  "news_btn_web": "Joss Red Web",
+  "@news_btn_web": {
+    "description": "news_btn_web"
+  },
+  "news_btn_dismiss": "သဘောပေါက်တယ်။",
+  "@news_btn_dismiss": {
+    "description": "news_btn_dismiss"
+  },
+  "settings_appearance_desc": "အပြင်အဆင်၊ ဘာသာစကားနှင့် အင်တာဖေ့စ်ကာတွန်းများ။",
+  "@settings_appearance_desc": {
+    "description": "settings_appearance_desc"
+  },
+  "settings_content_desc": "စစ်ထုတ်မှုများကို ရှာဖွေပါ၊ Piped နှင့် ကက်ရှ်များဖြင့် ပေါင်းစည်းပါ။",
+  "@settings_content_desc": {
+    "description": "settings_content_desc"
+  },
+  "settings_playback_desc": "ထုတ်လွှင့်မှုအရည်အသွေး၊ ပုံမှန်ပြုလုပ်ခြင်း၊ အသံတိတ်ခြင်းနှင့် ဘက်ထရီ။",
+  "@settings_playback_desc": {
+    "description": "settings_playback_desc"
+  },
+  "settings_downloads_desc": "ဒေါင်းလုဒ်များနှင့် သိုလှောင်မှု",
+  "@settings_downloads_desc": {
+    "description": "settings_downloads_desc"
+  },
+  "settings_downloads_sub": "အသံဖော်မတ်များ၊ ဖိုင်တွဲများနှင့် အလိုအလျောက် ဒေါင်းလုဒ်များ။",
+  "@settings_downloads_sub": {
+    "description": "settings_downloads_sub"
+  },
+  "settings_account_desc": "အကောင့်နှင့် စင့်ခ်လုပ်ပါ။",
+  "@settings_account_desc": {
+    "description": "settings_account_desc"
+  },
+  "settings_account_sub": "Cloud မုဒ်၊ မိတ္တူ၊ သူငယ်ချင်းစာရင်း နှင့် ပြောင်းရွှေ့မှုများ။",
+  "@settings_account_sub": {
+    "description": "settings_account_sub"
+  },
+  "settings_about_desc": "Estrella ဂီတအကြောင်း",
+  "@settings_about_desc": {
+    "description": "settings_about_desc"
+  },
+  "settings_about_sub": "ဗားရှင်း၊ အရင်းအမြစ်ပရောဂျက်နှင့် GitHub။",
+  "@settings_about_sub": {
+    "description": "settings_about_sub"
+  },
+  "settings_local_cloud_title": "Local Mode / EMusic Cloud",
+  "@settings_local_cloud_title": {
+    "description": "settings_local_cloud_title"
+  },
+  "settings_local_cloud_desc": "Joss Red ဖြင့် တစ်ပြိုင်တည်းလုပ်ဆောင်ခြင်းအခြေအနေကို ရွေးချယ်ပါ၊ ပြောင်းရွှေ့ပါ သို့မဟုတ် ပြန်လည်သုံးသပ်ပါ။",
+  "@settings_local_cloud_desc": {
+    "description": "settings_local_cloud_desc"
+  },
+  "settings_my_friends": "ငါ့သူငယ်ချင်း",
+  "@settings_my_friends": {
+    "description": "settings_my_friends"
+  },
+  "settings_my_friends_desc": "သင်၏ Joss Red သူငယ်ချင်းများကို တိုက်ရိုက်စီမံခန့်ခွဲပါ။",
+  "@settings_my_friends_desc": {
+    "description": "settings_my_friends_desc"
+  },
+  "settings_refresh_visitor_title": "ပြန်လည်စတင်ခြင်း ID (ဧည့်သည် ID)",
+  "@settings_refresh_visitor_title": {
+    "description": "settings_refresh_visitor_title"
+  },
+  "settings_refresh_visitor_desc": "Discover အကြောင်းအရာ မဖွင့်ပါက သင်၏ YouTube Music ID ကို ပြန်လည်ထုတ်ပေးပါ။",
+  "@settings_refresh_visitor_desc": {
+    "description": "settings_refresh_visitor_desc"
+  },
+  "settings_visitor_updated": "မွမ်းမံသတ်မှတ်မှု",
+  "@settings_visitor_updated": {
+    "description": "settings_visitor_updated"
+  },
+  "settings_visitor_updated_desc": "ဧည့်သည် ID အသစ်ကို အောင်မြင်စွာ ထုတ်လုပ်လိုက်ပါပြီ။",
+  "@settings_visitor_updated_desc": {
+    "description": "settings_visitor_updated_desc"
+  },
+  "settings_visitor_error": "အမှား",
+  "@settings_visitor_error": {
+    "description": "settings_visitor_error"
+  },
+  "settings_visitor_error_desc": "အထောက်အထားအသစ်ကို မထုတ်ပေးနိုင်ခဲ့ပါ။ နောက်မှ ထပ်စမ်းကြည့်ပါ။",
+  "@settings_visitor_error_desc": {
+    "description": "settings_visitor_error_desc"
+  },
+  "settings_visitor_exception": "{error} ပြန်ထုတ်နေစဉ် အမှားဖြစ်သွားသည်",
+  "@settings_visitor_exception": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    },
+    "description": "settings_visitor_exception"
+  },
+  "migratedLibrary": "ရွေ့ပြောင်းစာကြည့်တိုက်",
+  "@migratedLibrary": {
+    "description": "migratedLibrary"
+  },
+  "noSongsInCollection": "ဤစုစည်းမှုတွင် သီချင်းများမရှိပါ။",
+  "@noSongsInCollection": {
+    "description": "noSongsInCollection"
+  },
+  "startupScreen": "စတင်ချိန်တွင် ဖွင့်ပါ။",
+  "@startupScreen": {
+    "description": "startupScreen"
+  },
+  "startupScreenDescription": "Estrella Music ပထမဆုံးဖွင့်သည့်အပိုင်းကို ရွေးပါ။",
+  "@startupScreenDescription": {
+    "description": "startupScreenDescription"
+  },
+  "friends": "သူငယ်ချင်း",
+  "@friends": {
+    "description": "friends"
+  },
+  "dailyDiscover": "နေ့စဉ်ရှာဖွေတွေ့ရှိမှု",
+  "@dailyDiscover": {
+    "description": "dailyDiscover"
+  },
+  "keepListening": "ဆက်နားထောင်ပါ။",
+  "@keepListening": {
+    "description": "keepListening"
+  },
+  "similarToTitle": "{title} နှင့် ဆင်တူသည်",
+  "@similarToTitle": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    },
+    "description": "similarToTitle"
+  },
+  "pipedPlaylistDescription": "ပိုက်ထည့်ထားသော အစီအစဉ်",
+  "@pipedPlaylistDescription": {
+    "description": "pipedPlaylistDescription"
+  },
+  "collaborativePlaylistDescription": "ပူးပေါင်းဆောင်ရွက်သော အစီအစဉ်",
+  "@collaborativePlaylistDescription": {
+    "description": "collaborativePlaylistDescription"
+  },
+  "libraryPlaylistDescription": "စာကြည့်တိုက်ဖွင့်စာရင်း",
+  "@libraryPlaylistDescription": {
+    "description": "libraryPlaylistDescription"
+  },
+  "untitledSong": "ခေါင်းစဉ်မဲ့ သီချင်း",
+  "@untitledSong": {
+    "description": "untitledSong"
+  },
+  "migratedPlaylist": "ပြောင်းရွှေ့ထားသော အစီအစဉ်",
+  "@migratedPlaylist": {
+    "description": "migratedPlaylist"
+  },
+  "migratedAlbum": "ပြောင်းရွှေ့ထားသော အယ်လ်ဘမ်",
+  "@migratedAlbum": {
+    "description": "migratedAlbum"
+  },
+  "songsImportedFromJossMusic": "Joss Music Kotlin မှ တင်သွင်းသော သီချင်းများ",
+  "@songsImportedFromJossMusic": {
+    "description": "songsImportedFromJossMusic"
+  },
+  "importedFromJossMusic": "Joss Music Kotlin မှ တင်သွင်းသည်။",
+  "@importedFromJossMusic": {
+    "description": "importedFromJossMusic"
+  },
+  "syncLocalModeActive": "စက်တွင်းမုဒ် အသက်ဝင်သည်။",
+  "@syncLocalModeActive": {
+    "description": "syncLocalModeActive"
+  },
+  "syncCloudPending": "Cloud မုဒ်ကို ဖွင့်ထားသည်။ စင့်ခ်လုပ်ခြင်းကို ဆိုင်းငံ့ထားသည်။",
+  "@syncCloudPending": {
+    "description": "syncCloudPending"
+  },
+  "syncCloudDownloadingExisting": "တိမ်တိုက်မုဒ်ကို ဖွင့်ထားသည်။ ရှိပြီးသားစာကြည့်တိုက်ကို ဒေါင်းလုဒ်လုပ်နေသည်။",
+  "@syncCloudDownloadingExisting": {
+    "description": "syncCloudDownloadingExisting"
+  },
+  "syncCloudMigrationComplete": "တိမ်တိုက်မုဒ်ကို ဖွင့်ထားသည်။ ရွေ့ပြောင်းစာကြည့်တိုက်။",
+  "@syncCloudMigrationComplete": {
+    "description": "syncCloudMigrationComplete"
+  },
+  "syncLocalDeviceOnly": "သင့်ဒေတာကို ဤစက်ပစ္စည်းပေါ်တွင်သာ သိမ်းဆည်းထားသည်။",
+  "@syncLocalDeviceOnly": {
+    "description": "syncLocalDeviceOnly"
+  },
+  "syncDownloading": "EMusic ပြောင်းလဲမှုများကို ဒေါင်းလုဒ်လုပ်နေသည်...",
+  "@syncDownloading": {
+    "description": "syncDownloading"
+  },
+  "syncDownloadFailed": "စင့်ခ်လုပ်ခြင်းကို ဒေါင်းလုဒ်လုပ်၍မရပါ။",
+  "@syncDownloadFailed": {
+    "description": "syncDownloadFailed"
+  },
+  "syncLocalChangesFirst": "ပြည်တွင်း အပြောင်းအလဲ အသစ်တွေ ရှိတယ်။ ဒေါင်းလုဒ်မလုပ်မီ ၎င်းတို့ကို အပ်လုဒ်လုပ်ပါမည်။",
+  "@syncLocalChangesFirst": {
+    "description": "syncLocalChangesFirst"
+  },
+  "syncLibrarySynced": "ထပ်တူပြုထားသည့် စာကြည့်တိုက်။",
+  "@syncLibrarySynced": {
+    "description": "syncLibrarySynced"
+  },
+  "syncOfflinePending": "အော့ဖ်လိုင်း။ အပြောင်းအလဲများကို ဆိုင်းငံ့ထားသည်။",
+  "@syncOfflinePending": {
+    "description": "syncOfflinePending"
+  },
+  "syncLibraryUpToDate": "စာကြည့်တိုက်သည် နောက်ဆုံးပေါ်။",
+  "@syncLibraryUpToDate": {
+    "description": "syncLibraryUpToDate"
+  },
+  "syncChangesSynced": "{count} အပြောင်းအလဲများကို ထပ်တူပြုပါသည်။",
+  "@syncChangesSynced": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    },
+    "description": "syncChangesSynced"
+  },
+  "syncUploading": "EMusic သို့ ပြောင်းလဲမှုများကို အပ်လုဒ်လုပ်နေသည်...",
+  "@syncUploading": {
+    "description": "syncUploading"
+  },
+  "syncUploadSuccessWs": "အပြောင်းအလဲများကို အောင်မြင်စွာ အပ်လုဒ်လုပ်ထားသည် (WS)။",
+  "@syncUploadSuccessWs": {
+    "description": "syncUploadSuccessWs"
+  },
+  "syncUploadWsRetry": "WS ကို အသုံးပြု၍ အပ်လုဒ်လုပ်၍မရပါ။ ၎င်းကို နောက်မှ ထပ်စမ်းကြည့်ပါမည်။",
+  "@syncUploadWsRetry": {
+    "description": "syncUploadWsRetry"
+  },
+  "syncUploadSuccess": "အပြောင်းအလဲများကို မှန်ကန်စွာ အပ်လုဒ်လုပ်ပါ။",
+  "@syncUploadSuccess": {
+    "description": "syncUploadSuccess"
+  },
+  "syncUploadRetry": "မထနိုင်။ ၎င်းကို နောက်မှ ထပ်စမ်းကြည့်ပါမည်။",
+  "@syncUploadRetry": {
+    "description": "syncUploadRetry"
+  },
+  "syncOfflineRetry": "အော့ဖ်လိုင်း။ ပြန်လည်ကြိုးစားရန်အတွက် အပြောင်းအလဲများကို သိမ်းဆည်းထားသည်။",
+  "@syncOfflineRetry": {
+    "description": "syncOfflineRetry"
+  },
+  "syncUnconfirmedRetry": "EMusic သည် ပြောင်းလဲမှုအားလုံးကို အတည်မပြုပါ။ ၎င်းတို့ကို ပြန်လည်ကြိုးစားမည်ဖြစ်သည်။",
+  "@syncUnconfirmedRetry": {
+    "description": "syncUnconfirmedRetry"
+  },
+  "syncChangesConfirmed": "{count} အပြောင်းအလဲများ ကျူးလွန်ခဲ့သည်။",
+  "@syncChangesConfirmed": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    },
+    "description": "syncChangesConfirmed"
+  },
+  "migrationAlreadyRunning": "ရွှေ့ပြောင်းခြင်းလုပ်ငန်းကို လုပ်ဆောင်နေပြီဖြစ်သည်။",
+  "@migrationAlreadyRunning": {
+    "description": "migrationAlreadyRunning"
+  },
+  "migrationLoginRequired": "မပြောင်းရွှေ့မီ Joss Red သို့ အကောင့်ဝင်ပါ။",
+  "@migrationLoginRequired": {
+    "description": "migrationLoginRequired"
+  },
+  "migrationCheckingCloud": "EMusic Cloud တွင် ဒစ်ဂျစ်တိုက်ရှိမရှိ စစ်ဆေးနေသည်...",
+  "@migrationCheckingCloud": {
+    "description": "migrationCheckingCloud"
+  },
+  "cloudLibraryFoundDeviceWillDownload": "cloud စာကြည့်တိုက်တစ်ခုကို တွေ့ရှိခဲ့သည်။ ဤစက်ပစ္စည်းသည် ၎င်းကို ထပ်မရေးဘဲ ဒေါင်းလုဒ်လုပ်ပါမည်။",
+  "@cloudLibraryFoundDeviceWillDownload": {
+    "description": "cloudLibraryFoundDeviceWillDownload"
+  },
+  "cloudLibraryFound": "Cloud စာကြည့်တိုက်ကို တွေ့ရှိခဲ့သည်။",
+  "@cloudLibraryFound": {
+    "description": "cloudLibraryFound"
+  },
+  "migrationCreatingBackup": "cloud မချိတ်ဆက်မီ စက်တွင်းအရန်ကူးယူခြင်းကို ဖန်တီးနေသည်...",
+  "@migrationCreatingBackup": {
+    "description": "migrationCreatingBackup"
+  },
+  "migrationAnalyzingLocal": "ဒေသတွင်း စာကြည့်တိုက်ကို ဆန်းစစ်ခြင်း...",
+  "@migrationAnalyzingLocal": {
+    "description": "migrationAnalyzingLocal"
+  },
+  "migrationPreparingCloud": "EMusic Cloud တွင် ရွှေ့ပြောင်းခြင်းကို ပြင်ဆင်နေသည်...",
+  "@migrationPreparingCloud": {
+    "description": "migrationPreparingCloud"
+  },
+  "migrationStartFailed": "EMusic Cloud သည် ရွှေ့ပြောင်းခြင်းကို မစတင်နိုင်ပါ။",
+  "@migrationStartFailed": {
+    "description": "migrationStartFailed"
+  },
+  "migrationUploadingData": "အစီအစဉ်များ၊ အကြိုက်ဆုံးများနှင့် မှတ်တမ်းများကို အပ်လုဒ်လုပ်နေသည်...",
+  "@migrationUploadingData": {
+    "description": "migrationUploadingData"
+  },
+  "migrationUploadIncomplete": "ဒေတာအားလုံးကို အပ်လုဒ်လုပ်၍မရပါ။ ကျွန်ုပ်တို့သည် သင်၏ဒေသခံအထောက်အပံ့ကို စောင့်ရှောက်ပါသည်။",
+  "@migrationUploadIncomplete": {
+    "description": "migrationUploadIncomplete"
+  },
+  "migrationVerifyingIntegrity": "EMusic Cloud တွင် မှန်ကန်မှုကို စစ်ဆေးနေသည်...",
+  "@migrationVerifyingIntegrity": {
+    "description": "migrationVerifyingIntegrity"
+  },
+  "migrationValidationFailed": "EMusic Cloud သည် ရွှေ့ပြောင်းခြင်းအား အတည်ပြု၍မရပါ။",
+  "@migrationValidationFailed": {
+    "description": "migrationValidationFailed"
+  },
+  "cloudModeReadyOfflineCache": "Cloud မုဒ် အဆင်သင့်ဖြစ်ပါပြီ။ ဤစက်ပစ္စည်းသည် အော့ဖ်လိုင်း ကက်ရှ်တစ်ခုအဖြစ် အလုပ်လုပ်ပါမည်။",
+  "@cloudModeReadyOfflineCache": {
+    "description": "cloudModeReadyOfflineCache"
+  },
+  "migrationCompleted": "ရွှေ့ပြောင်းခြင်း ပြီးသွားပါပြီ။",
+  "@migrationCompleted": {
+    "description": "migrationCompleted"
+  },
+  "migrationFailedLocalPreserved": "ရွှေ့ပြောင်းမှု မအောင်မြင်ပါ။ သင့်ဒေသခံဒေတာကို ပြုပြင်မွမ်းမံပါ။",
+  "@migrationFailedLocalPreserved": {
+    "description": "migrationFailedLocalPreserved"
+  },
+  "sessionExpiredLoginAgain": "သင့်စက်ရှင် သက်တမ်းကုန်သွားပါပြီ။ ထပ်မံဝင်ရောက်ပါ။",
+  "@sessionExpiredLoginAgain": {
+    "description": "sessionExpiredLoginAgain"
+  },
+  "selectedFileNotFound": "ရွေးထားသောဖိုင်ကို ရှာမတွေ့ပါ။",
+  "@selectedFileNotFound": {
+    "description": "selectedFileNotFound"
+  },
+  "genericAlbum": "အခွေ",
+  "@genericAlbum": {
+    "description": "genericAlbum"
+  },
+  "friendsLoginRequired": "သူငယ်ချင်းများရှာဖွေရန် အကောင့်ဝင်ပါ။",
+  "@friendsLoginRequired": {
+    "description": "friendsLoginRequired"
+  },
+  "invalidSessionToken": "စက်ရှင်တွင် မှန်ကန်သော တိုကင်တစ်ခု မပါဝင်ပါ။",
+  "@invalidSessionToken": {
+    "description": "invalidSessionToken"
+  },
+  "userSearchFailed": "အသုံးပြုသူများ ({statusCode}) ကို ရှာဖွေ၍မရပါ။",
+  "@userSearchFailed": {
+    "placeholders": {
+      "statusCode": {
+        "type": "int"
+      }
+    },
+    "description": "userSearchFailed"
+  },
+  "invalidServerResponse": "မမှန်ကန်သော ဆာဗာတုံ့ပြန်မှု။",
+  "@invalidServerResponse": {
+    "description": "invalidServerResponse"
+  },
+  "userListMissing": "တုံ့ပြန်မှုတွင် အသုံးပြုသူများစာရင်း မပါဝင်ပါ။",
+  "@userListMissing": {
+    "description": "userListMissing"
+  },
+  "playlistCollaboratorsTitle": "အစီအစဉ်တင်ဆက်သူများ",
+  "@playlistCollaboratorsTitle": {
+    "description": "playlistCollaboratorsTitle"
+  },
+  "collaboratorsInstruction": "ဤအစီအစဉ်ကို ကြည့်ရှုပြီး တည်းဖြတ်နိုင်မည့် သူငယ်ချင်းများကို ရွေးပါ-",
+  "@collaboratorsInstruction": {
+    "description": "collaboratorsInstruction"
+  },
+  "noJossRedFriends": "Joss Red တွင် သင့်တွင် သူငယ်ချင်းပေါင်းထည့်ထားခြင်းမရှိပါ။",
+  "@noJossRedFriends": {
+    "description": "noJossRedFriends"
+  },
+  "friendFallback": "သူငယ်ချင်း",
+  "@friendFallback": {
+    "description": "friendFallback"
+  },
+  "collaboratorsUpdated": "ပူးပေါင်းဆောင်ရွက်သူများသည် မှန်ကန်စွာ အပ်ဒိတ်လုပ်ထားသည်။",
+  "@collaboratorsUpdated": {
+    "description": "collaboratorsUpdated"
+  },
+  "save": "သိမ်းဆည်းပါ။",
+  "@save": {
+    "description": "save"
+  },
+  "manageCollaborators": "လုပ်ဖော်ကိုင်ဖက်များ (သူငယ်ချင်းများ) ကို စီမံခန့်ခွဲပါ",
+  "@manageCollaborators": {
+    "description": "manageCollaborators"
+  },
+  "done": "အဆင်သင့်",
+  "@done": {
+    "description": "done"
+  },
+  "notAuthenticated": "အစစ်အမှန်မဟုတ်ပေ။",
+  "@notAuthenticated": {
+    "description": "notAuthenticated"
+  },
+  "genericError": "အမှား",
+  "@genericError": {
+    "description": "genericError"
+  },
+  "friendRequestSent": "သူငယ်ချင်းတောင်းဆိုမှု ပေးပို့ခဲ့သည်။",
+  "@friendRequestSent": {
+    "description": "friendRequestSent"
+  },
+  "friendRequestAccepted": "သူငယ်ချင်းတောင်းဆိုမှုကို လက်ခံခဲ့သည်။",
+  "@friendRequestAccepted": {
+    "description": "friendRequestAccepted"
+  },
+  "friendshipRemoved": "ခင်မင်ရင်းနှီးမှုကို ဖယ်ရှားခဲ့သည်။",
+  "@friendshipRemoved": {
+    "description": "friendshipRemoved"
+  },
+  "userBlocked": "ပိတ်ထားသောအသုံးပြုသူ",
+  "@userBlocked": {
+    "description": "userBlocked"
+  },
+  "userUnblocked": "သော့ဖွင့်ထားသောအသုံးပြုသူ",
+  "@userUnblocked": {
+    "description": "userUnblocked"
+  },
+  "artistsByTaste": "မင်းရဲ့ဆန္ဒအရ",
+  "@artistsByTaste": {
+    "description": "artistsByTaste"
+  },
+  "followedArtists": "လိုက်ခဲ့သည်။",
+  "@followedArtists": {
+    "description": "followedArtists"
+  },
+  "recommendedArtists": "အကြံပြုသည်။",
+  "@recommendedArtists": {
+    "description": "recommendedArtists"
+  },
+  "albumsByTaste": "မင်းရဲ့ဆန္ဒအရ",
+  "@albumsByTaste": {
+    "description": "albumsByTaste"
+  },
+  "savedAlbums": "သိမ်းဆည်းထားသည်။",
+  "@savedAlbums": {
+    "description": "savedAlbums"
+  },
+  "recommendedAlbums": "အကြံပြုသည်။",
+  "@recommendedAlbums": {
+    "description": "recommendedAlbums"
+  },
+  "downloadNotificationChannelName": "သီချင်းဒေါင်းလုဒ်များ",
+  "@downloadNotificationChannelName": {
+    "description": "downloadNotificationChannelName"
+  },
+  "downloadNotificationChannelDescription": "သင့်တေးဂီတဒေါင်းလုဒ်များကို နောက်ခံတွင် သိမ်းထားပါ။",
+  "@downloadNotificationChannelDescription": {
+    "description": "downloadNotificationChannelDescription"
+  },
+  "downloadNotificationTitle": "သီချင်းဒေါင်းလုဒ်လုပ်ခြင်း။",
+  "@downloadNotificationTitle": {
+    "description": "downloadNotificationTitle"
+  },
+  "downloadNotificationPreparing": "သင့်ဒေါင်းလုဒ်များကို ပြင်ဆင်နေသည်...",
+  "@downloadNotificationPreparing": {
+    "description": "downloadNotificationPreparing"
+  },
+  "downloadNotificationSong": "ဒေါင်းလုဒ်လုပ်နေသည်- {songTitle}",
+  "@downloadNotificationSong": {
+    "placeholders": {
+      "songTitle": {
+        "type": "String"
+      }
+    },
+    "description": "downloadNotificationSong"
+  },
+  "syncCloudModeActive": "Cloud မုဒ်ကို ဖွင့်ထားသည်။",
+  "@syncCloudModeActive": {
+    "description": "syncCloudModeActive"
+  },
+  "permissionsConsentTitle": "စတင်ရန်ခွင့်ပြုချက်များ",
+  "@permissionsConsentTitle": {
+    "description": "permissionsConsentTitle"
+  },
+  "permissionsConsentDescription": "Estrella Music သည် သင့်တေးဂီတကို စီမံခန့်ခွဲရန်နှင့် ပြန်ဖွင့်ခြင်းဆိုင်ရာ အင်္ဂါရပ်အားလုံးကို ပေးဆောင်ရန် ဤခွင့်ပြုချက်များ လိုအပ်ပါသည်။",
+  "@permissionsConsentDescription": {
+    "description": "permissionsConsentDescription"
+  },
+  "permissionsStorageTitle": "ဂီတနှင့် သိုလှောင်မှု",
+  "@permissionsStorageTitle": {
+    "description": "permissionsStorageTitle"
+  },
+  "permissionsStorageDescription": "၎င်းသည် သင့်အား တေးဂီတဖွင့်ရန်၊ ဒေါင်းလုဒ်များကို သိမ်းဆည်းရန်၊ အစီအစဉ်များကို ထုတ်ယူရန်နှင့် အပ်ဒိတ်များကို ပြင်ဆင်နိုင်သည်။",
+  "@permissionsStorageDescription": {
+    "description": "permissionsStorageDescription"
+  },
+  "permissionsNotificationsTitle": "အသိပေးချက်များ",
+  "@permissionsNotificationsTitle": {
+    "description": "permissionsNotificationsTitle"
+  },
+  "permissionsNotificationsDescription": "ပြန်ဖွင့်ထိန်းချုပ်မှုများ၊ ဒေါင်းလုဒ်တိုးတက်မှုနှင့် အရေးကြီးသောအက်ပ်သတိပေးချက်များကို ပြသသည်။",
+  "@permissionsNotificationsDescription": {
+    "description": "permissionsNotificationsDescription"
+  },
+  "permissionsMicrophoneTitle": "မိုက်ခရိုဖုန်း",
+  "@permissionsMicrophoneTitle": {
+    "description": "permissionsMicrophoneTitle"
+  },
+  "permissionsMicrophoneDescription": "သင့်ပတ်ဝန်းကျင်တွင် ဖွင့်နေသည့် သီချင်းကို ခွဲခြားသတ်မှတ်ရန် ရွေးချယ်သည့်အခါမှသာ ၎င်းကို အသုံးပြုသည်။",
+  "@permissionsMicrophoneDescription": {
+    "description": "permissionsMicrophoneDescription"
+  },
+  "permissionsContinueButton": "လိုအပ်သောခွင့်ပြုချက်များပေးပါ။",
+  "@permissionsContinueButton": {
+    "description": "permissionsContinueButton"
+  },
+  "permissionsRequiredNotice": "ပါမစ်သုံးခုစလုံးကို ဆက်လက်လုပ်ဆောင်ရန် လိုအပ်သည်။ ၎င်းတို့ကို စနစ်ဆက်တင်များတွင် နောက်ပိုင်းတွင် သင်ပြောင်းနိုင်သည်။",
+  "@permissionsRequiredNotice": {
+    "description": "permissionsRequiredNotice"
+  },
+  "permissionsAllow": "ခွင့်ပြုပါ။",
+  "@permissionsAllow": {
+    "description": "permissionsAllow"
+  },
+  "permissionsOpenSettings": "ဆက်တင်များ",
+  "@permissionsOpenSettings": {
+    "description": "permissionsOpenSettings"
+  },
+  "auth_2fa_title": "two-factor authentication",
+  "@auth_2fa_title": {
+    "description": "auth_2fa_title"
+  },
+  "auth_2fa_subtitle": "သင့်အထောက်အထားစိစစ်သူအက်ပ်မှ ဂဏန်း 6 လုံးကုဒ်ကို ထည့်ပါ။ ဤဝင်ရောက်ခွင့်သည် 5 မိနစ်အတွင်း သက်တမ်းကုန်ဆုံးမည်ဖြစ်သည်။",
+  "@auth_2fa_subtitle": {
+    "description": "auth_2fa_subtitle"
+  },
+  "auth_2fa_code": "စစ်မှန်ကြောင်းအထောက်အထားပြကုဒ်",
+  "@auth_2fa_code": {
+    "description": "auth_2fa_code"
+  },
+  "auth_2fa_verify": "စစ်ဆေးပြီး ဆက်လုပ်ပါ။",
+  "@auth_2fa_verify": {
+    "description": "auth_2fa_verify"
+  },
+  "auth_2fa_invalid": "မှန်ကန်သော ဂဏန်း 6 လုံးကုဒ်ကို ရိုက်ထည့်ပါ သို့မဟုတ် ထပ်မံ၍ လက်မှတ်ထိုးဝင်ပါ။",
+  "@auth_2fa_invalid": {
+    "description": "auth_2fa_invalid"
+  },
+  "resetToDefaultMsg": "ဆက်တင်များကို မူရင်းအတိုင်း ပြန်လည်သတ်မှတ်ခြင်း ပြီးပါပြီ၊ ကျေးဇူးပြု၍ အက်ပ်ကို ပြန်လည်စတင်ပါ။",
+  "@resetToDefaultMsg": {
+    "description": "resetToDefaultMsg"
+  },
+  "resetToDefaultDes": "အက်ပ်ဆက်တင်များကို မူရင်းအဖြစ် ပြန်လည်သတ်မှတ်ပါ (ပြန်လည်စတင်ရန် လိုအပ်သည်)",
+  "@resetToDefaultDes": {
+    "description": "resetToDefaultDes"
+  },
+  "misc": "အမျိုးမျိုး",
+  "@misc": {
+    "description": "misc"
+  },
+  "resetToDefault": "မူရင်းဆက်တင်များကို ပြန်လည်ရယူပါ။",
+  "@resetToDefault": {
+    "description": "resetToDefault"
+  },
+  "autoOpenPlayer": "ကစားသမားမျက်နှာပြင်ကို အလိုအလျောက်ဖွင့်ပါ။",
+  "@autoOpenPlayer": {
+    "description": "autoOpenPlayer"
+  },
+  "autoOpenPlayerDes": "ဖွင့်ရန်သီချင်းကိုရွေးချယ်သောအခါတွင် ပလေယာ၏အလိုအလျောက်ဖွင့်ခြင်းကို စခရင်အပြည့်ဖွင့်ခြင်း/ပိတ်ပါ။",
+  "@autoOpenPlayerDes": {
+    "description": "autoOpenPlayerDes"
+  },
+  "playingfromArtist": "အနုပညာရှင်ထံမှ ကစားနေသည်။",
+  "@playingfromArtist": {
+    "description": "playingfromArtist"
+  },
+  "randomSelection": "ကျပန်းရွေးချယ်မှု",
+  "@randomSelection": {
+    "description": "randomSelection"
+  },
+  "randomRadio": "ကျပန်းရေဒီယို",
+  "@randomRadio": {
+    "description": "randomRadio"
+  },
+  "exportPlaylist": "အစီအစဉ်ကို ထုတ်ယူပါ။",
+  "@exportPlaylist": {
+    "description": "exportPlaylist"
+  },
+  "importPlaylistDesc": "တင်သွင်းရန် ယခင်ထုတ်ထားသော အစီအစဉ် JSON ဖိုင်ကို ရွေးချယ်ပါ။",
+  "@importPlaylistDesc": {
+    "description": "importPlaylistDesc"
+  },
+  "invalidPlaylistFile": "မမှန်ကန်သော ဖွင့်စာရင်းဖိုင်ဖွဲ့စည်းပုံ",
+  "@invalidPlaylistFile": {
+    "description": "invalidPlaylistFile"
+  },
+  "fileNotFound": "ဖိုင်မတွေ့ပါ။",
+  "@fileNotFound": {
+    "description": "fileNotFound"
+  },
+  "exportErrorPermission": "တင်ပို့သည့်အခါ ခွင့်ပြုချက် ငြင်းပယ်ခဲ့သည်။",
+  "@exportErrorPermission": {
+    "description": "exportErrorPermission"
+  },
+  "importingPlaylist": "အစီအစဉ်ကို ထည့်သွင်းနေသည်...",
+  "@importingPlaylist": {
+    "description": "importingPlaylist"
+  },
+  "exportErrorStorage": "သိုလှောင်ရန်နေရာ မလုံလောက်ပါ။",
+  "@exportErrorStorage": {
+    "description": "exportErrorStorage"
+  },
+  "exportingPlaylist": "အစီအစဉ်ကို ထုတ်ယူနေသည်...",
+  "@exportingPlaylist": {
+    "description": "exportingPlaylist"
+  },
+  "playlistExportedMsg": "အစီအစဉ်ကို အောင်မြင်စွာ တင်ပို့ပြီးပါပြီ။",
+  "@playlistExportedMsg": {
+    "description": "playlistExportedMsg"
+  },
+  "exportError": "အစီအစဉ်ကို ထုတ်ယူရာတွင် အမှားအယွင်းရှိနေသည်။",
+  "@exportError": {
+    "description": "exportError"
+  },
+  "exportErrorFormat": "အစီအစဉ်ဒေတာကို ဖော်မတ်ချရာတွင် အမှားအယွင်းရှိနေသည်။",
+  "@exportErrorFormat": {
+    "description": "exportErrorFormat"
+  },
+  "importPlaylist": "အစီအစဉ်ကို ထည့်သွင်းပါ။",
+  "@importPlaylist": {
+    "description": "importPlaylist"
+  },
+  "selectFile": "File ကို ရွေးပါ။",
+  "@selectFile": {
+    "description": "selectFile"
+  },
+  "playlistImportedMsg": "အစီအစဉ်ကို အောင်မြင်စွာ ထည့်သွင်းပြီးပါပြီ။",
+  "@playlistImportedMsg": {
+    "description": "playlistImportedMsg"
+  },
+  "importError": "အစီအစဉ်ကို ထည့်သွင်းရာတွင် အမှားအယွင်းရှိနေသည်။",
+  "@importError": {
+    "description": "importError"
+  },
+  "importErrorFileAccess": "ရွေးထားသောဖိုင်ကို ဝင်သုံး၍မရပါ။",
+  "@importErrorFileAccess": {
+    "description": "importErrorFileAccess"
+  },
+  "importErrorFormat": "ဖိုင်ဖော်မတ် မမှန်ကန်ပါ။",
+  "@importErrorFormat": {
+    "description": "importErrorFormat"
+  },
+  "importErrorDatabase": "ဒေတာဘေ့စ်သို့ သိမ်းဆည်းရာတွင် အမှားအယွင်းရှိသည်။",
+  "@importErrorDatabase": {
+    "description": "importErrorDatabase"
+  },
+  "importLargeFileNote": "မှတ်ချက်- ကြီးမားသော အစီအစဉ်များကို ထည့်သွင်းရန် အချိန်ပိုကြာနိုင်သည်။",
+  "@importLargeFileNote": {
+    "description": "importLargeFileNote"
+  },
+  "exportPlaylistCsv": "ပြသစာရင်းကို CSV အဖြစ် ထုတ်ယူပါ။",
+  "@exportPlaylistCsv": {
+    "description": "exportPlaylistCsv"
+  },
+  "exportPlaylistJson": "အစီအစဉ်ကို JSON သို့ ထုတ်ယူပါ။",
+  "@exportPlaylistJson": {
+    "description": "exportPlaylistJson"
+  },
+  "exportPlaylistJsonSubtitle": "ဤဖော်မတ်ကို ထည့်သွင်းနိုင်သည်။",
+  "@exportPlaylistJsonSubtitle": {
+    "description": "exportPlaylistJsonSubtitle"
+  },
+  "exportPlaylistCsvSubtitle": "ဤနေရာတွင် ထည့်သွင်း၍မရပါ။",
+  "@exportPlaylistCsvSubtitle": {
+    "description": "exportPlaylistCsvSubtitle"
+  },
+  "exportToYouTubeMusic": "Youtube သီချင်းသို့ တင်ပို့ပါ။",
+  "@exportToYouTubeMusic": {
+    "description": "exportToYouTubeMusic"
+  },
+  "exportToYouTubeMusicSubtitle": "၎င်းသည် သင်၏ဖွင့်စာရင်း (သီချင်းများ < 50) ကို လက်ရှိတန်းစီသို့ တွန်းပို့မည်၊ ၎င်းကို YtMusic တွင်ဖွင့်ပြီးနောက် ၎င်းကို ဖွင့်ကြည့်ရန်/သိမ်းဆည်းရန် မမေ့ပါနှင့်။",
+  "@exportToYouTubeMusicSubtitle": {
+    "description": "exportToYouTubeMusicSubtitle"
+  },
+  "linkCopied": "လင့်ခ်ကို ကလစ်ဘုတ်သို့ ကူးယူထားသည်။",
+  "@linkCopied": {
+    "description": "linkCopied"
+  },
+  "lyrics": "စာတွေ",
+  "@lyrics": {
+    "description": "lyrics"
+  },
+  "no": "မရှိ",
+  "@no": {
+    "description": "no"
+  },
+  "podcasts": "ပေါ့တ်ကာစ်များ",
+  "@podcasts": {
+    "description": "podcasts"
+  },
+  "episodes": "ဇာတ်လမ်းတွဲများ",
+  "@episodes": {
+    "description": "episodes"
+  },
+  "profiles": "ကိုယ်ရေးအကျဉ်းများ",
+  "@profiles": {
+    "description": "profiles"
+  },
+  "addToLibrary": "ဒစ်ဂျစ်တိုက်သို့ထည့်ပါ။",
+  "@addToLibrary": {
+    "description": "addToLibrary"
+  },
+  "removeFromLibrary": "စာကြည့်တိုက်မှ ဖျက်ပါ။",
+  "@removeFromLibrary": {
+    "description": "removeFromLibrary"
+  },
+  "play": "ကစားပါ။",
+  "@play": {
+    "description": "play"
+  },
+  "enqueueAlbumSongs": "တန်းစီရန် အယ်လ်ဘမ်သီချင်းများ ထည့်ပါ။",
+  "@enqueueAlbumSongs": {
+    "description": "enqueueAlbumSongs"
+  },
+  "downloadAlbumSongs": "အယ်လ်ဘမ်မှ သီချင်းများကို ဒေါင်းလုဒ်လုပ်ပါ။",
+  "@downloadAlbumSongs": {
+    "description": "downloadAlbumSongs"
+  },
+  "shareAlbum": "အယ်လ်ဘမ်မျှဝေပါ။",
+  "@shareAlbum": {
+    "description": "shareAlbum"
+  },
+  "imported": "တင်သွင်းခဲ့သည်။",
+  "@imported": {
+    "description": "imported"
+  },
+  "importedPlaylist": "ထည့်သွင်းထားသော အစီအစဉ်",
+  "@importedPlaylist": {
+    "description": "importedPlaylist"
+  },
+  "permissionDenied": "ခွင့်ပြုချက် ငြင်းဆိုထားသည်။",
+  "@permissionDenied": {
+    "description": "permissionDenied"
+  },
+  "enqueueSongs": "တန်းစီရန် သီချင်းများထည့်ပါ။",
+  "@enqueueSongs": {
+    "description": "enqueueSongs"
+  },
+  "shuffle": "ကြုံသလို",
+  "@shuffle": {
+    "description": "shuffle"
+  },
+  "downloadPlaylist": "အစီအစဉ်ကို ဒေါင်းလုဒ်လုပ်ပါ။",
+  "@downloadPlaylist": {
+    "description": "downloadPlaylist"
+  },
+  "syncPlaylistSongs": "အစီအစဉ်သီချင်းများကို စင့်ခ်လုပ်ပါ။",
+  "@syncPlaylistSongs": {
+    "description": "syncPlaylistSongs"
+  },
+  "blacklistPipedPlaylist": "အစီအစဉ်ပျက်စာရင်း",
+  "@blacklistPipedPlaylist": {
+    "description": "blacklistPipedPlaylist"
+  },
+  "sharePlaylist": "အစီအစဉ်ကို မျှဝေပါ။",
+  "@sharePlaylist": {
+    "description": "sharePlaylist"
+  },
+  "playlist": "အစီအစဉ်",
+  "@playlist": {
+    "description": "playlist"
+  },
+  "sortByName": "နာမည်အလိုက် စီပါ။",
+  "@sortByName": {
+    "description": "sortByName"
+  },
+  "sortByDate": "ရက်စွဲအလိုက်စီပါ။",
+  "@sortByDate": {
+    "description": "sortByDate"
+  },
+  "sortByDuration": "ကြာချိန်အလိုက်စီပါ။",
+  "@sortByDuration": {
+    "description": "sortByDuration"
+  },
+  "sortAscendNDescend": "အတက်/အဆင်း စီပါ။",
+  "@sortAscendNDescend": {
+    "description": "sortAscendNDescend"
+  },
+  "migration_summary_start": "{source} မှ ပြောင်းရွှေ့ခြင်း ပြီးဆုံးသွားပါပြီ။",
+  "@migration_summary_start": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      }
+    },
+    "description": "migration_summary_start"
+  },
+  "migration_summary_playlists": "အစီအစဉ်များ- {count}",
+  "@migration_summary_playlists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_playlists"
+  },
+  "migration_summary_songs": "သီချင်းများ- {count}",
+  "@migration_summary_songs": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_songs"
+  },
+  "migration_summary_favorites": "အကြိုက်ဆုံးများ- {count}",
+  "@migration_summary_favorites": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_favorites"
+  },
+  "migration_summary_albums": "အယ်လ်ဘမ်များ- {count}",
+  "@migration_summary_albums": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_albums"
+  },
+  "migration_summary_artists": "အနုပညာရှင်များ- {count}",
+  "@migration_summary_artists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_artists"
+  },
+  "migration_select_file_dialog": "song.db သို့မဟုတ် အရန် .backup ကို ရွေးပါ။",
+  "@migration_select_file_dialog": {
+    "description": "migration_select_file_dialog"
+  },
+  "migration_success": "ရွှေ့ပြောင်းခြင်း အောင်မြင်စွာပြီးမြောက်ခဲ့သည်။",
+  "@migration_success": {
+    "description": "migration_success"
+  },
+  "backup_select_folder_dialog": "အရန်ကူးရန် ဖိုင်တွဲကို ရွေးပါ။",
+  "@backup_select_folder_dialog": {
+    "description": "backup_select_folder_dialog"
+  },
+  "restore_select_file_dialog": "အရန်ဖိုင်ကို ရွေးပါ။",
+  "@restore_select_file_dialog": {
+    "description": "restore_select_file_dialog"
+  },
+  "auth_hint_email": "name@mail.com",
+  "@auth_hint_email": {
+    "description": "auth_hint_email"
+  },
+  "auth_error_invalid_email": "မှန်ကန်သောအီးမေးလ်ကို ထည့်ပါ။",
+  "@auth_error_invalid_email": {
+    "description": "auth_error_invalid_email"
+  },
+  "settings_cloud_backup_dialog_desc": "အက်ပ်၏ .hmb မိတ္တူကို ဆာဗာသို့ အပ်လုဒ်လုပ်ကာ လိုအပ်ပါက သိမ်းဆည်းထားသော အရန်များအားလုံးကို ပြန်လည်ရယူပါ။",
+  "@settings_cloud_backup_dialog_desc": {
+    "description": "settings_cloud_backup_dialog_desc"
+  },
+  "delete": "ဖျက်ပါ။",
+  "@delete": {
+    "description": "delete"
+  },
+  "in_app_storage": "အတွင်းပိုင်းသိုလှောင်မှုလမ်းညွှန်",
+  "@in_app_storage": {
+    "description": "in_app_storage"
+  },
+  "auth_brand_description_1": "ဤဂီတအက်ပ်အတွက် လိုက်လျောညီထွေဖြစ်အောင် ယခင်ပရောဂျက်မှ အကောင့်ဝင်ခြင်း၊ မှတ်ပုံတင်ခြင်းနှင့် စကားဝှက်ပြန်လည်ရယူခြင်းတို့ကို ယူဆောင်လာပါသည်။",
+  "@auth_brand_description_1": {
+    "description": "auth_brand_description_1"
+  },
+  "auth_brand_description_2": "သင့်စက်ရှင်သည် လုံခြုံသော သိုလှောင်မှုတွင် နေထိုင်ပြီး သင်အသုံးပြုပြီးသား တူညီသော နောက်ခံဖိုင်ဖြင့် အတည်ပြုထားသည်။",
+  "@auth_brand_description_2": {
+    "description": "auth_brand_description_2"
+  },
+  "auth_brand_not_configured": "authentication backend ကိုချိတ်ဆက်ရန် .env ဖိုင်ကို configure ပြုလုပ်ရန်လိုအပ်ပါသည်။",
+  "@auth_brand_not_configured": {
+    "description": "auth_brand_not_configured"
+  },
+  "auth_forgot_password_subtitle": "သင့်အကောင့်အီးမေးလ်သို့ လမ်းညွှန်ချက်များကို ကျွန်ုပ်တို့ ပေးပို့ပါမည်။",
+  "@auth_forgot_password_subtitle": {
+    "description": "auth_forgot_password_subtitle"
+  },
+  "auth_btn_send_email": "မေးလ်ပို့ပါ။",
+  "@auth_btn_send_email": {
+    "description": "auth_btn_send_email"
+  },
+  "auth_error_not_configured": ".env ဖိုင်တွင် configure လုပ်ရန် စစ်မှန်ကြောင်းအထောက်အထားပြမှု နောက်ကွယ်တွင် ပျောက်ဆုံးနေပါသည်။",
+  "@auth_error_not_configured": {
+    "description": "auth_error_not_configured"
+  },
+  "auth_error_invalid_credentials": "အီးမေးလ် သို့မဟုတ် စကားဝှက် မမှန်ကန်ပါ။",
+  "@auth_error_invalid_credentials": {
+    "description": "auth_error_invalid_credentials"
+  },
+  "auth_error_not_verified": "သင့်အကောင့်ကို မစစ်ဆေးရသေးပါ။",
+  "@auth_error_not_verified": {
+    "description": "auth_error_not_verified"
+  },
+  "auth_error_unknown": "လုပ်ဆောင်ချက်ကို အပြီးသတ်ရန် မဖြစ်နိုင်ပါ။",
+  "@auth_error_unknown": {
+    "description": "auth_error_unknown"
+  },
+  "auth_register_success": "အကောင့်ကို အောင်မြင်စွာ ဖန်တီးပြီးပါပြီ။",
+  "@auth_register_success": {
+    "description": "auth_register_success"
+  },
+  "auth_register_error": "အကောင့်ကို ဖန်တီး၍မရပါ။",
+  "@auth_register_error": {
+    "description": "auth_register_error"
+  },
+  "auth_recovery_email_sent": "အီးမေးလ်ပို့တယ်။",
+  "@auth_recovery_email_sent": {
+    "description": "auth_recovery_email_sent"
+  },
+  "auth_recovery_email_error": "အီးမေးလ်ပို့ရန် မဖြစ်နိုင်ပါ။",
+  "@auth_recovery_email_error": {
+    "description": "auth_recovery_email_error"
+  },
+  "latestVersion": "နောက်ဆုံးထွက်ဗားရှင်း ရရှိနိုင်ပါပြီ။",
+  "@latestVersion": {
+    "description": "latestVersion"
+  },
+  "updateApp": "လျှောက်လွှာကို အပ်ဒိတ်လုပ်ပါ။",
+  "@updateApp": {
+    "description": "updateApp"
+  },
+  "loadInfoUpdate": "အပ်ဒိတ်အချက်အလက်ကို တင်၍မရပါ။",
+  "@loadInfoUpdate": {
+    "description": "loadInfoUpdate"
+  },
+  "infoNotAvailable": "အချက်အလက် မရရှိနိုင်ပါ။",
+  "@infoNotAvailable": {
+    "description": "infoNotAvailable"
+  },
+  "developedBy": "Joss Estrada (JOSPROX) မှတီထွင်ထိန်းသိမ်းထား",
+  "@developedBy": {
+    "description": "developedBy"
+  },
+  "copyrightNotice": "© 2026 JOSPROX။ GPL လိုင်စင် v3.0",
+  "@copyrightNotice": {
+    "description": "copyrightNotice"
+  },
+  "backupSettingsAndPlaylists": "အရန်ဆက်တင်များနှင့် အစီအစဉ်များ",
+  "@backupSettingsAndPlaylists": {
+    "description": "backupSettingsAndPlaylists"
+  },
+  "restoreSettingsAndPlaylists": "ဆက်တင်များနှင့် အစီအစဉ်များကို ပြန်လည်ရယူပါ။",
+  "@restoreSettingsAndPlaylists": {
+    "description": "restoreSettingsAndPlaylists"
+  },
+  "helloWorld": "မင်္ဂလာပါ ကမ္ဘာ",
+  "@helloWorld": {
+    "description": "Este texto es opcional"
+  },
+  "removeFromCache": "ကက်ရှ်မှဖယ်ရှားပါ။",
+  "@removeFromCache": {
+    "description": "removeFromCache"
+  },
+  "quickPics": "အမြန်ရွေးချယ်မှု",
+  "@quickPics": {
+    "description": "quickPics"
+  },
+  "topMusicVid": "ထိပ်တန်းတေးဂီတဗီဒီယိုများ",
+  "@topMusicVid": {
+    "description": "topMusicVid"
   }
 }

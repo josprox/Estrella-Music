@@ -1634,5 +1634,667 @@
   "auth_2fa_invalid": "유효한 6자리 코드를 입력하거나 다시 로그인하세요.",
   "@auth_2fa_invalid": {
     "description": "auth_2fa_invalid"
+  },
+  "backupSettingsAndPlaylists": "백업 설정 및 재생 목록",
+  "@backupSettingsAndPlaylists": {
+    "description": "backupSettingsAndPlaylists"
+  },
+  "restoreSettingsAndPlaylists": "설정 및 재생 목록 복원",
+  "@restoreSettingsAndPlaylists": {
+    "description": "restoreSettingsAndPlaylists"
+  },
+  "helloWorld": "안녕하세요 세상",
+  "@helloWorld": {
+    "description": "Este texto es opcional"
+  },
+  "removeFromCache": "캐시에서 제거",
+  "@removeFromCache": {
+    "description": "removeFromCache"
+  },
+  "quickPics": "빠른 선택",
+  "@quickPics": {
+    "description": "quickPics"
+  },
+  "topMusicVid": "인기 뮤직 비디오",
+  "@topMusicVid": {
+    "description": "topMusicVid"
+  },
+  "restoreSettingsAndPlaylistsDes": "백업 파일에서 모든 설정, 로그인 데이터 및 재생 목록을 복원합니다. 현재 데이터를 모두 덮어씁니다.",
+  "@restoreSettingsAndPlaylistsDes": {
+    "description": "restoreSettingsAndPlaylistsDes"
+  },
+  "backupSettingsAndPlaylistsDes": "모든 설정, 재생 목록 및 로그인 데이터를 백업 파일에 저장",
+  "@backupSettingsAndPlaylistsDes": {
+    "description": "backupSettingsAndPlaylistsDes"
+  },
+  "backupMsg": "백업이 성공적으로 저장되었습니다!",
+  "@backupMsg": {
+    "description": "backupMsg"
+  },
+  "backFilesFound": "데이터베이스를 찾았습니다",
+  "@backFilesFound": {
+    "description": "backFilesFound"
+  },
+  "restoreMsg": "성공적으로 복원되었습니다!\n재부팅 시 변경 사항이 적용됩니다.",
+  "@restoreMsg": {
+    "description": "restoreMsg"
+  },
+  "restoring": "복원 중...",
+  "@restoring": {
+    "description": "restoring"
+  },
+  "restore": "복원",
+  "@restore": {
+    "description": "restore"
+  },
+  "closeApp": "지원서 닫기",
+  "@closeApp": {
+    "description": "closeApp"
+  },
+  "standard": "표준",
+  "@standard": {
+    "description": "standard"
+  },
+  "gesture": "제스처",
+  "@gesture": {
+    "description": "gesture"
+  },
+  "audioCodec": "오디오 코덱",
+  "@audioCodec": {
+    "description": "audioCodec"
+  },
+  "autoDownFavSongDes": "즐겨찾기에 추가하면 좋아하는 노래를 자동으로 다운로드",
+  "@autoDownFavSongDes": {
+    "description": "autoDownFavSongDes"
+  },
+  "loudnessNormalization": "음량 정규화",
+  "@loudnessNormalization": {
+    "description": "loudnessNormalization"
+  },
+  "playerUi": "플레이어 UI",
+  "@playerUi": {
+    "description": "playerUi"
+  },
+  "songNotPlayable": "서버 제한으로 인해 노래를 재생할 수 없습니다!",
+  "@songNotPlayable": {
+    "description": "songNotPlayable"
+  },
+  "loudnessDb": "음량Db",
+  "@loudnessDb": {
+    "description": "loudnessDb"
+  },
+  "restoreAppData": "앱 데이터 복원",
+  "@restoreAppData": {
+    "description": "restoreAppData"
+  },
+  "queueShufflingDeniedMsg": "랜덤 모드가 활성화되었습니다. 대기열을 수동으로 혼합할 수는 없습니다.",
+  "@queueShufflingDeniedMsg": {
+    "description": "queueShufflingDeniedMsg"
+  },
+  "includeDownloadedFiles": "다운로드한 노래 파일 포함",
+  "@includeDownloadedFiles": {
+    "description": "includeDownloadedFiles"
+  },
+  "backupInProgress": "백업 진행 중...",
+  "@backupInProgress": {
+    "description": "backupInProgress"
+  },
+  "queuerearrangingDeniedMsg": "셔플 모드가 켜져 있으면 대기열을 재정렬할 수 없습니다.",
+  "@queuerearrangingDeniedMsg": {
+    "description": "queuerearrangingDeniedMsg"
+  },
+  "content": "내용",
+  "@content": {
+    "description": "content"
+  },
+  "downloadError3": "네트워크/전송 오류로 인해 다운로드에 실패했습니다! 다시 시도해 주세요",
+  "@downloadError3": {
+    "description": "downloadError3"
+  },
+  "personalisation": "개인화",
+  "@personalisation": {
+    "description": "personalisation"
+  },
+  "playerUiDes": "플레이어 사용자 인터페이스 선택",
+  "@playerUiDes": {
+    "description": "playerUiDes"
+  },
+  "musicAndPlayback": "음악 및 재생",
+  "@musicAndPlayback": {
+    "description": "musicAndPlayback"
+  },
+  "appInfo": "신청정보",
+  "@appInfo": {
+    "description": "appInfo"
+  },
+  "networkError": "네트워크 오류입니다! 인터넷 연결을 확인하세요.",
+  "@networkError": {
+    "description": "networkError"
+  },
+  "download": "다운로드",
+  "@download": {
+    "description": "download"
+  },
+  "downloadError2": "요청하신 곡은 서버 제한으로 인해 다운로드가 불가능합니다. 다시 시도해 보세요.",
+  "@downloadError2": {
+    "description": "downloadError2"
+  },
+  "letsStrart": "시작하자..",
+  "@letsStrart": {
+    "description": "letsStrart"
+  },
+  "processFiles": "파일 처리 중...",
+  "@processFiles": {
+    "description": "processFiles"
+  },
+  "backupAppData": "백업 앱 데이터",
+  "@backupAppData": {
+    "description": "backupAppData"
+  },
+  "backup": "백업",
+  "@backup": {
+    "description": "backup"
+  },
+  "playnextMsg": "곧 출시 예정",
+  "@playnextMsg": {
+    "description": "playnextMsg"
+  },
+  "shuffleQueue": "꼬리를 섞다",
+  "@shuffleQueue": {
+    "description": "shuffleQueue"
+  },
+  "queueLoop": "테일 루프",
+  "@queueLoop": {
+    "description": "queueLoop"
+  },
+  "queueLoopNotDisMsg1": "셔플 모드가 활성화된 경우 대기열 루프 모드를 비활성화할 수 없습니다.",
+  "@queueLoopNotDisMsg1": {
+    "description": "queueLoopNotDisMsg1"
+  },
+  "queueLoopNotDisMsg2": "라디오 모드에서는 테일 루프 모드를 활성화할 수 없습니다.",
+  "@queueLoopNotDisMsg2": {
+    "description": "queueLoopNotDisMsg2"
+  },
+  "loudnessNormalizationDes": "모든 노래에 동일한 음량 레벨 설정(실험)(이전 버전(< v1.10.0)에서 다운로드한 노래에서는 작동하지 않음)",
+  "@loudnessNormalizationDes": {
+    "description": "loudnessNormalizationDes"
+  },
+  "enableSlidableAction": "슬라이더 동작 활성화",
+  "@enableSlidableAction": {
+    "description": "enableSlidableAction"
+  },
+  "enableSlidableActionDes": "노래 타일에서 스와이프 동작 활성화",
+  "@enableSlidableActionDes": {
+    "description": "enableSlidableActionDes"
+  },
+  "bitrate": "비트 전송률",
+  "@bitrate": {
+    "description": "bitrate"
+  },
+  "androidBackupWarning": "테스트되지 않음: 60개 이상의 파일을 다운로드한 후 확인란을 선택하면 프로세스가 많은 양의 메모리를 소비하고 휴대폰이나 앱이 충돌할 수 있습니다. 자신의 책임하에 진행하십시오.",
+  "@androidBackupWarning": {
+    "description": "androidBackupWarning"
+  },
+  "songInfo": "노래정보",
+  "@songInfo": {
+    "description": "songInfo"
+  },
+  "id": "아이디",
+  "@id": {
+    "description": "id"
+  },
+  "title": "제목",
+  "@title": {
+    "description": "title"
+  },
+  "restartApp": "애플리케이션 다시 시작",
+  "@restartApp": {
+    "description": "restartApp"
+  },
+  "autoDownFavSong": "좋아하는 노래 자동 다운로드",
+  "@autoDownFavSong": {
+    "description": "autoDownFavSong"
+  },
+  "duration": "기간",
+  "@duration": {
+    "description": "duration"
+  },
+  "urlSearchDes": "감지된 URL을 클릭하면 관련 콘텐츠가 열리거나 재생됩니다.",
+  "@urlSearchDes": {
+    "description": "urlSearchDes"
+  },
+  "album": "앨범",
+  "@album": {
+    "description": "album"
+  },
+  "reArrangeSongs": "노래 재정렬",
+  "@reArrangeSongs": {
+    "description": "reArrangeSongs"
+  },
+  "selectSongs": "노래 선택",
+  "@selectSongs": {
+    "description": "selectSongs"
+  },
+  "selectAll": "모두 선택",
+  "@selectAll": {
+    "description": "selectAll"
+  },
+  "playingfromAlbum": "앨범에서 재생 중",
+  "@playingfromAlbum": {
+    "description": "playingfromAlbum"
+  },
+  "playingfromPlaylist": "재생 목록에서 재생",
+  "@playingfromPlaylist": {
+    "description": "playingfromPlaylist"
+  },
+  "playingfromSelection": "선택에서 재생",
+  "@playingfromSelection": {
+    "description": "playingfromSelection"
+  },
+  "resetToDefaultMsg": "설정 기본값으로 재설정이 완료되었습니다. 앱을 다시 시작하세요.",
+  "@resetToDefaultMsg": {
+    "description": "resetToDefaultMsg"
+  },
+  "resetToDefaultDes": "앱 설정을 기본값으로 재설정(다시 시작해야 함)",
+  "@resetToDefaultDes": {
+    "description": "resetToDefaultDes"
+  },
+  "misc": "다양한",
+  "@misc": {
+    "description": "misc"
+  },
+  "resetToDefault": "기본 설정 복원",
+  "@resetToDefault": {
+    "description": "resetToDefault"
+  },
+  "autoOpenPlayer": "플레이어 화면 자동 열기",
+  "@autoOpenPlayer": {
+    "description": "autoOpenPlayer"
+  },
+  "autoOpenPlayerDes": "재생할 노래를 선택할 때 플레이어가 자동으로 전체 화면으로 열리는 것을 활성화/비활성화합니다.",
+  "@autoOpenPlayerDes": {
+    "description": "autoOpenPlayerDes"
+  },
+  "playingfromArtist": "아티스트와 함께 플레이하기",
+  "@playingfromArtist": {
+    "description": "playingfromArtist"
+  },
+  "randomSelection": "무작위 선택",
+  "@randomSelection": {
+    "description": "randomSelection"
+  },
+  "randomRadio": "무작위 라디오",
+  "@randomRadio": {
+    "description": "randomRadio"
+  },
+  "exportPlaylist": "재생목록 내보내기",
+  "@exportPlaylist": {
+    "description": "exportPlaylist"
+  },
+  "importPlaylistDesc": "가져올 이전에 내보낸 재생목록 JSON 파일을 선택하세요.",
+  "@importPlaylistDesc": {
+    "description": "importPlaylistDesc"
+  },
+  "invalidPlaylistFile": "잘못된 재생 목록 파일 구조",
+  "@invalidPlaylistFile": {
+    "description": "invalidPlaylistFile"
+  },
+  "fileNotFound": "파일을 찾을 수 없습니다",
+  "@fileNotFound": {
+    "description": "fileNotFound"
+  },
+  "exportErrorPermission": "내보낼 때 권한이 거부되었습니다.",
+  "@exportErrorPermission": {
+    "description": "exportErrorPermission"
+  },
+  "importingPlaylist": "재생목록을 가져오는 중...",
+  "@importingPlaylist": {
+    "description": "importingPlaylist"
+  },
+  "exportErrorStorage": "저장공간이 부족함",
+  "@exportErrorStorage": {
+    "description": "exportErrorStorage"
+  },
+  "exportingPlaylist": "재생목록을 내보내는 중...",
+  "@exportingPlaylist": {
+    "description": "exportingPlaylist"
+  },
+  "playlistExportedMsg": "재생목록을 다음으로 성공적으로 내보냈습니다.",
+  "@playlistExportedMsg": {
+    "description": "playlistExportedMsg"
+  },
+  "exportError": "재생목록을 내보내는 중에 오류가 발생했습니다.",
+  "@exportError": {
+    "description": "exportError"
+  },
+  "exportErrorFormat": "재생목록 데이터 형식을 지정하는 중에 오류가 발생했습니다.",
+  "@exportErrorFormat": {
+    "description": "exportErrorFormat"
+  },
+  "importPlaylist": "재생목록 가져오기",
+  "@importPlaylist": {
+    "description": "importPlaylist"
+  },
+  "selectFile": "파일 선택",
+  "@selectFile": {
+    "description": "selectFile"
+  },
+  "playlistImportedMsg": "재생목록을 성공적으로 가져왔습니다.",
+  "@playlistImportedMsg": {
+    "description": "playlistImportedMsg"
+  },
+  "importError": "재생목록을 가져오는 중에 오류가 발생했습니다.",
+  "@importError": {
+    "description": "importError"
+  },
+  "importErrorFileAccess": "선택한 파일에 접근할 수 없습니다",
+  "@importErrorFileAccess": {
+    "description": "importErrorFileAccess"
+  },
+  "importErrorFormat": "잘못된 파일 형식",
+  "@importErrorFormat": {
+    "description": "importErrorFormat"
+  },
+  "importErrorDatabase": "데이터베이스에 저장하는 중 오류가 발생했습니다.",
+  "@importErrorDatabase": {
+    "description": "importErrorDatabase"
+  },
+  "importLargeFileNote": "참고: 큰 재생목록은 가져오는 데 시간이 더 오래 걸릴 수 있습니다.",
+  "@importLargeFileNote": {
+    "description": "importLargeFileNote"
+  },
+  "exportPlaylistCsv": "재생목록을 CSV로 내보내기",
+  "@exportPlaylistCsv": {
+    "description": "exportPlaylistCsv"
+  },
+  "exportPlaylistJson": "재생 목록을 JSON으로 내보내기",
+  "@exportPlaylistJson": {
+    "description": "exportPlaylistJson"
+  },
+  "exportPlaylistJsonSubtitle": "이 형식을 가져올 수 있습니다.",
+  "@exportPlaylistJsonSubtitle": {
+    "description": "exportPlaylistJsonSubtitle"
+  },
+  "exportPlaylistCsvSubtitle": "여기에서는 가져올 수 없습니다.",
+  "@exportPlaylistCsvSubtitle": {
+    "description": "exportPlaylistCsvSubtitle"
+  },
+  "exportToYouTubeMusic": "유튜브 뮤직으로 내보내기",
+  "@exportToYouTubeMusic": {
+    "description": "exportToYouTubeMusic"
+  },
+  "exportToYouTubeMusicSubtitle": "재생 목록(50개 미만의 노래)을 현재 대기열로 푸시합니다. 재생 목록에 추가하거나 YtMusic에서 연 후 저장하는 것을 잊지 마세요.",
+  "@exportToYouTubeMusicSubtitle": {
+    "description": "exportToYouTubeMusicSubtitle"
+  },
+  "linkCopied": "링크가 클립보드에 복사되었습니다.",
+  "@linkCopied": {
+    "description": "linkCopied"
+  },
+  "lyrics": "편지",
+  "@lyrics": {
+    "description": "lyrics"
+  },
+  "no": "아니요",
+  "@no": {
+    "description": "no"
+  },
+  "podcasts": "팟캐스트",
+  "@podcasts": {
+    "description": "podcasts"
+  },
+  "episodes": "에피소드",
+  "@episodes": {
+    "description": "episodes"
+  },
+  "profiles": "프로필",
+  "@profiles": {
+    "description": "profiles"
+  },
+  "addToLibrary": "라이브러리에 추가",
+  "@addToLibrary": {
+    "description": "addToLibrary"
+  },
+  "removeFromLibrary": "라이브러리에서 삭제",
+  "@removeFromLibrary": {
+    "description": "removeFromLibrary"
+  },
+  "play": "플레이",
+  "@play": {
+    "description": "play"
+  },
+  "enqueueAlbumSongs": "대기열에 앨범 노래 추가",
+  "@enqueueAlbumSongs": {
+    "description": "enqueueAlbumSongs"
+  },
+  "downloadAlbumSongs": "앨범에서 노래 다운로드",
+  "@downloadAlbumSongs": {
+    "description": "downloadAlbumSongs"
+  },
+  "shareAlbum": "앨범 공유",
+  "@shareAlbum": {
+    "description": "shareAlbum"
+  },
+  "imported": "수입됨",
+  "@imported": {
+    "description": "imported"
+  },
+  "importedPlaylist": "가져온 재생목록",
+  "@importedPlaylist": {
+    "description": "importedPlaylist"
+  },
+  "permissionDenied": "허가가 거부되었습니다",
+  "@permissionDenied": {
+    "description": "permissionDenied"
+  },
+  "enqueueSongs": "대기열에 노래 추가",
+  "@enqueueSongs": {
+    "description": "enqueueSongs"
+  },
+  "shuffle": "무작위",
+  "@shuffle": {
+    "description": "shuffle"
+  },
+  "downloadPlaylist": "재생목록 다운로드",
+  "@downloadPlaylist": {
+    "description": "downloadPlaylist"
+  },
+  "syncPlaylistSongs": "재생목록 노래 동기화",
+  "@syncPlaylistSongs": {
+    "description": "syncPlaylistSongs"
+  },
+  "blacklistPipedPlaylist": "재생목록 블랙리스트",
+  "@blacklistPipedPlaylist": {
+    "description": "blacklistPipedPlaylist"
+  },
+  "sharePlaylist": "재생목록 공유",
+  "@sharePlaylist": {
+    "description": "sharePlaylist"
+  },
+  "playlist": "재생목록",
+  "@playlist": {
+    "description": "playlist"
+  },
+  "sortByName": "이름순으로 정렬",
+  "@sortByName": {
+    "description": "sortByName"
+  },
+  "sortByDate": "날짜별로 정렬",
+  "@sortByDate": {
+    "description": "sortByDate"
+  },
+  "sortByDuration": "기간별로 정렬",
+  "@sortByDuration": {
+    "description": "sortByDuration"
+  },
+  "sortAscendNDescend": "오름차순/내림차순 정렬",
+  "@sortAscendNDescend": {
+    "description": "sortAscendNDescend"
+  },
+  "migration_summary_start": "{source}에서 마이그레이션이 완료되었습니다.",
+  "@migration_summary_start": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      }
+    },
+    "description": "migration_summary_start"
+  },
+  "migration_summary_playlists": "재생목록: {count}",
+  "@migration_summary_playlists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_playlists"
+  },
+  "migration_summary_songs": "노래: {count}",
+  "@migration_summary_songs": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_songs"
+  },
+  "migration_summary_favorites": "즐겨찾기: {count}",
+  "@migration_summary_favorites": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_favorites"
+  },
+  "migration_summary_albums": "앨범: {count}",
+  "@migration_summary_albums": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_albums"
+  },
+  "migration_summary_artists": "아티스트: {count}",
+  "@migration_summary_artists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_artists"
+  },
+  "migration_select_file_dialog": "song.db 또는 백업 .backup을 선택하세요.",
+  "@migration_select_file_dialog": {
+    "description": "migration_select_file_dialog"
+  },
+  "migration_success": "마이그레이션이 성공적으로 완료되었습니다.",
+  "@migration_success": {
+    "description": "migration_success"
+  },
+  "backup_select_folder_dialog": "백업할 폴더를 선택하세요",
+  "@backup_select_folder_dialog": {
+    "description": "backup_select_folder_dialog"
+  },
+  "restore_select_file_dialog": "백업 파일을 선택하세요",
+  "@restore_select_file_dialog": {
+    "description": "restore_select_file_dialog"
+  },
+  "auth_hint_email": "이름@mail.com",
+  "@auth_hint_email": {
+    "description": "auth_hint_email"
+  },
+  "auth_error_invalid_email": "유효한 이메일을 입력하세요.",
+  "@auth_error_invalid_email": {
+    "description": "auth_error_invalid_email"
+  },
+  "settings_cloud_backup_dialog_desc": "앱의 .hmb 백업을 서버에 업로드하고 필요한 경우 저장된 백업을 복원합니다.",
+  "@settings_cloud_backup_dialog_desc": {
+    "description": "settings_cloud_backup_dialog_desc"
+  },
+  "delete": "삭제",
+  "@delete": {
+    "description": "delete"
+  },
+  "in_app_storage": "내부 저장소 디렉토리",
+  "@in_app_storage": {
+    "description": "in_app_storage"
+  },
+  "auth_brand_description_1": "이전 프로젝트의 로그인, 등록 및 비밀번호 복구 기능을 이 음악 앱에 맞게 조정했습니다.",
+  "@auth_brand_description_1": {
+    "description": "auth_brand_description_1"
+  },
+  "auth_brand_description_2": "귀하의 세션은 보안 저장소에 있으며 이미 사용하고 있는 것과 동일한 백엔드로 검증됩니다.",
+  "@auth_brand_description_2": {
+    "description": "auth_brand_description_2"
+  },
+  "auth_brand_not_configured": "인증 백엔드를 연결하려면 .env 파일을 구성해야 합니다.",
+  "@auth_brand_not_configured": {
+    "description": "auth_brand_not_configured"
+  },
+  "auth_forgot_password_subtitle": "귀하의 계정 이메일로 지침을 보내드리겠습니다.",
+  "@auth_forgot_password_subtitle": {
+    "description": "auth_forgot_password_subtitle"
+  },
+  "auth_btn_send_email": "메일 보내기",
+  "@auth_btn_send_email": {
+    "description": "auth_btn_send_email"
+  },
+  "auth_error_not_configured": ".env 파일에 구성할 인증 백엔드가 없습니다.",
+  "@auth_error_not_configured": {
+    "description": "auth_error_not_configured"
+  },
+  "auth_error_invalid_credentials": "이메일이나 비밀번호가 잘못되었습니다.",
+  "@auth_error_invalid_credentials": {
+    "description": "auth_error_invalid_credentials"
+  },
+  "auth_error_not_verified": "귀하의 계정은 아직 확인되지 않았습니다.",
+  "@auth_error_not_verified": {
+    "description": "auth_error_not_verified"
+  },
+  "auth_error_unknown": "작업을 완료할 수 없습니다.",
+  "@auth_error_unknown": {
+    "description": "auth_error_unknown"
+  },
+  "auth_register_success": "계정이 성공적으로 생성되었습니다.",
+  "@auth_register_success": {
+    "description": "auth_register_success"
+  },
+  "auth_register_error": "계정을 생성할 수 없습니다.",
+  "@auth_register_error": {
+    "description": "auth_register_error"
+  },
+  "auth_recovery_email_sent": "이메일이 전송되었습니다.",
+  "@auth_recovery_email_sent": {
+    "description": "auth_recovery_email_sent"
+  },
+  "auth_recovery_email_error": "이메일을 보낼 수 없었습니다.",
+  "@auth_recovery_email_error": {
+    "description": "auth_recovery_email_error"
+  },
+  "latestVersion": "최신 버전 사용 가능",
+  "@latestVersion": {
+    "description": "latestVersion"
+  },
+  "updateApp": "애플리케이션 업데이트",
+  "@updateApp": {
+    "description": "updateApp"
+  },
+  "loadInfoUpdate": "업데이트 정보를 로드할 수 없습니다.",
+  "@loadInfoUpdate": {
+    "description": "loadInfoUpdate"
+  },
+  "infoNotAvailable": "정보를 사용할 수 없음",
+  "@infoNotAvailable": {
+    "description": "infoNotAvailable"
+  },
+  "developedBy": "Joss Estrada(JOSPROX)가 개발 및 유지 관리",
+  "@developedBy": {
+    "description": "developedBy"
+  },
+  "copyrightNotice": "© 2026 조스프록스. GPL 라이센스 v3.0",
+  "@copyrightNotice": {
+    "description": "copyrightNotice"
   }
 }

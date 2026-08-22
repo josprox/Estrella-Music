@@ -1582,5 +1582,719 @@
   "auth_2fa_invalid": "Ange en giltig 6-siffrig kod eller logga in igen.",
   "@auth_2fa_invalid": {
     "description": "auth_2fa_invalid"
+  },
+  "plain": "enkelt",
+  "@plain": {
+    "description": "plain"
+  },
+  "selectAuthIns": "Välj autentiseringsinstans",
+  "@selectAuthIns": {
+    "description": "selectAuthIns"
+  },
+  "openIn": "Öppna in",
+  "@openIn": {
+    "description": "openIn"
+  },
+  "endOfThisSong": "Slutet på den här låten",
+  "@endOfThisSong": {
+    "description": "endOfThisSong"
+  },
+  "cacheSongsDes": "Att cachelagra låtar medan de spelas för framtida/offlineuppspelning kommer att ta upp ytterligare utrymme på din enhet",
+  "@cacheSongsDes": {
+    "description": "cacheSongsDes"
+  },
+  "cacheHomeScreenData": "Lagra innehållsdata på startskärmen",
+  "@cacheHomeScreenData": {
+    "description": "cacheHomeScreenData"
+  },
+  "cacheHomeScreenDataDes": "Aktivera lagring av innehåll på startskärmen, startskärmen laddas omedelbart om det här alternativet är aktiverat",
+  "@cacheHomeScreenDataDes": {
+    "description": "cacheHomeScreenDataDes"
+  },
+  "unlinkAlert": "Länken har tagits bort!",
+  "@unlinkAlert": {
+    "description": "unlinkAlert"
+  },
+  "stopMusicOnTaskClear": "Stoppa musik när du stänger appen",
+  "@stopMusicOnTaskClear": {
+    "description": "stopMusicOnTaskClear"
+  },
+  "downloadLocation": "Ladda ner plats",
+  "@downloadLocation": {
+    "description": "downloadLocation"
+  },
+  "local": "Lokalt",
+  "@local": {
+    "description": "local"
+  },
+  "cacheSongs": "Cachar låtar",
+  "@cacheSongs": {
+    "description": "cacheSongs"
+  },
+  "restoreSettingsAndPlaylistsDes": "Återställer alla inställningar, inloggningsdata och spellistor från en säkerhetskopia. Skriver över alla aktuella data",
+  "@restoreSettingsAndPlaylistsDes": {
+    "description": "restoreSettingsAndPlaylistsDes"
+  },
+  "stopMusicOnTaskClearDes": "Musikuppspelningen stoppas när appen stängs från aktivitetshanteraren",
+  "@stopMusicOnTaskClearDes": {
+    "description": "stopMusicOnTaskClearDes"
+  },
+  "backupSettingsAndPlaylistsDes": "Spara alla inställningar, spellistor och inloggningsdata till en säkerhetskopia",
+  "@backupSettingsAndPlaylistsDes": {
+    "description": "backupSettingsAndPlaylistsDes"
+  },
+  "backupMsg": "Säkerhetskopieringen har sparats!",
+  "@backupMsg": {
+    "description": "backupMsg"
+  },
+  "backFilesFound": "hittade databaser",
+  "@backFilesFound": {
+    "description": "backFilesFound"
+  },
+  "restoreMsg": "Återställts framgångsrikt!\nÄndringar tillämpas vid omstart",
+  "@restoreMsg": {
+    "description": "restoreMsg"
+  },
+  "restoring": "Återställer...",
+  "@restoring": {
+    "description": "restoring"
+  },
+  "restore": "Återställ",
+  "@restore": {
+    "description": "restore"
+  },
+  "closeApp": "Stäng ansökan",
+  "@closeApp": {
+    "description": "closeApp"
+  },
+  "standard": "Standard",
+  "@standard": {
+    "description": "standard"
+  },
+  "gesture": "Gest",
+  "@gesture": {
+    "description": "gesture"
+  },
+  "audioCodec": "Ljud-codec",
+  "@audioCodec": {
+    "description": "audioCodec"
+  },
+  "autoDownFavSongDes": "Ladda ned favoritlåtar automatiskt när de läggs till i favoriter",
+  "@autoDownFavSongDes": {
+    "description": "autoDownFavSongDes"
+  },
+  "loudnessNormalization": "Normalisering av ljudstyrkan",
+  "@loudnessNormalization": {
+    "description": "loudnessNormalization"
+  },
+  "playerUi": "Spelarens gränssnitt",
+  "@playerUi": {
+    "description": "playerUi"
+  },
+  "songNotPlayable": "Låten kan inte spelas på grund av serverbegränsningar!",
+  "@songNotPlayable": {
+    "description": "songNotPlayable"
+  },
+  "loudnessDb": "LoudnessDb",
+  "@loudnessDb": {
+    "description": "loudnessDb"
+  },
+  "restoreAppData": "Återställ appdata",
+  "@restoreAppData": {
+    "description": "restoreAppData"
+  },
+  "queueShufflingDeniedMsg": "Slumpmässigt läge är aktiverat. Du kan inte blanda kön manuellt.",
+  "@queueShufflingDeniedMsg": {
+    "description": "queueShufflingDeniedMsg"
+  },
+  "includeDownloadedFiles": "Inkludera nedladdade låtfiler",
+  "@includeDownloadedFiles": {
+    "description": "includeDownloadedFiles"
+  },
+  "backupInProgress": "Säkerhetskopiering pågår...",
+  "@backupInProgress": {
+    "description": "backupInProgress"
+  },
+  "queuerearrangingDeniedMsg": "Kön kan inte ordnas om när shuffle-läget är på",
+  "@queuerearrangingDeniedMsg": {
+    "description": "queuerearrangingDeniedMsg"
+  },
+  "content": "Innehåll",
+  "@content": {
+    "description": "content"
+  },
+  "downloadError3": "Nedladdningen misslyckades på grund av nätverks-/överföringsfel! Försök igen",
+  "@downloadError3": {
+    "description": "downloadError3"
+  },
+  "personalisation": "Personalisering",
+  "@personalisation": {
+    "description": "personalisation"
+  },
+  "playerUiDes": "Välj spelarens användargränssnitt",
+  "@playerUiDes": {
+    "description": "playerUiDes"
+  },
+  "musicAndPlayback": "Musik och uppspelning",
+  "@musicAndPlayback": {
+    "description": "musicAndPlayback"
+  },
+  "appInfo": "Ansökningsinformation",
+  "@appInfo": {
+    "description": "appInfo"
+  },
+  "networkError": "Nätverksfel! Kontrollera din internetanslutning.",
+  "@networkError": {
+    "description": "networkError"
+  },
+  "download": "Ladda ner",
+  "@download": {
+    "description": "download"
+  },
+  "downloadError2": "Den begärda låten kan inte laddas ner på grund av serverbegränsningar. Du kan försöka igen",
+  "@downloadError2": {
+    "description": "downloadError2"
+  },
+  "letsStrart": "Låt oss börja..",
+  "@letsStrart": {
+    "description": "letsStrart"
+  },
+  "processFiles": "Bearbetar filer...",
+  "@processFiles": {
+    "description": "processFiles"
+  },
+  "backupAppData": "Säkerhetskopiera appdata",
+  "@backupAppData": {
+    "description": "backupAppData"
+  },
+  "backup": "Säkerhetskopiering",
+  "@backup": {
+    "description": "backup"
+  },
+  "playnextMsg": "Kommer snart",
+  "@playnextMsg": {
+    "description": "playnextMsg"
+  },
+  "shuffleQueue": "blanda svans",
+  "@shuffleQueue": {
+    "description": "shuffleQueue"
+  },
+  "queueLoop": "svansögla",
+  "@queueLoop": {
+    "description": "queueLoop"
+  },
+  "queueLoopNotDisMsg1": "Köloopläge kan inte inaktiveras när shuffle-läget är aktiverat.",
+  "@queueLoopNotDisMsg1": {
+    "description": "queueLoopNotDisMsg1"
+  },
+  "queueLoopNotDisMsg2": "Svansögleläge kan inte aktiveras i radioläge.",
+  "@queueLoopNotDisMsg2": {
+    "description": "queueLoopNotDisMsg2"
+  },
+  "loudnessNormalizationDes": "Ställer in samma ljudstyrka för alla låtar (experimentell) (fungerar inte på låtar som laddats ner i äldre versioner (< v1.10.0))",
+  "@loudnessNormalizationDes": {
+    "description": "loudnessNormalizationDes"
+  },
+  "enableSlidableAction": "Aktivera reglageåtgärder",
+  "@enableSlidableAction": {
+    "description": "enableSlidableAction"
+  },
+  "enableSlidableActionDes": "Aktivera svepåtgärder på låtbrickan",
+  "@enableSlidableActionDes": {
+    "description": "enableSlidableActionDes"
+  },
+  "bitrate": "Bithastighet",
+  "@bitrate": {
+    "description": "bitrate"
+  },
+  "androidBackupWarning": "Ej testat: Om du markerar kryssrutan efter att ha laddat ner mer än 60 filer kan processen förbruka en stor mängd minne och kan orsaka att telefonen eller appen kraschar. Fortsätt på egen risk.",
+  "@androidBackupWarning": {
+    "description": "androidBackupWarning"
+  },
+  "songInfo": "Låtinformation",
+  "@songInfo": {
+    "description": "songInfo"
+  },
+  "id": "ID",
+  "@id": {
+    "description": "id"
+  },
+  "title": "Titel",
+  "@title": {
+    "description": "title"
+  },
+  "restartApp": "Starta om programmet",
+  "@restartApp": {
+    "description": "restartApp"
+  },
+  "autoDownFavSong": "Automatisk nedladdning av favoritlåtar",
+  "@autoDownFavSong": {
+    "description": "autoDownFavSong"
+  },
+  "duration": "Varaktighet",
+  "@duration": {
+    "description": "duration"
+  },
+  "urlSearchDes": "Upptäckt URL klicka på den för att öppna/spela upp det associerade innehållet",
+  "@urlSearchDes": {
+    "description": "urlSearchDes"
+  },
+  "album": "Album",
+  "@album": {
+    "description": "album"
+  },
+  "reArrangeSongs": "Ordna om låtarna",
+  "@reArrangeSongs": {
+    "description": "reArrangeSongs"
+  },
+  "selectSongs": "Välj låtar",
+  "@selectSongs": {
+    "description": "selectSongs"
+  },
+  "selectAll": "Välj alla",
+  "@selectAll": {
+    "description": "selectAll"
+  },
+  "playingfromAlbum": "SPELAR FRÅN ALBUM",
+  "@playingfromAlbum": {
+    "description": "playingfromAlbum"
+  },
+  "playingfromPlaylist": "SPELAR FRÅN SPELLISTA",
+  "@playingfromPlaylist": {
+    "description": "playingfromPlaylist"
+  },
+  "playingfromSelection": "SPELAR FRÅN URVAL",
+  "@playingfromSelection": {
+    "description": "playingfromSelection"
+  },
+  "resetToDefaultMsg": "Inställningsåterställningen till standard är klar. Starta om appen",
+  "@resetToDefaultMsg": {
+    "description": "resetToDefaultMsg"
+  },
+  "resetToDefaultDes": "Återställ appinställningarna till standard (kräver omstart)",
+  "@resetToDefaultDes": {
+    "description": "resetToDefaultDes"
+  },
+  "misc": "Olika",
+  "@misc": {
+    "description": "misc"
+  },
+  "resetToDefault": "Återställ standardinställningar",
+  "@resetToDefault": {
+    "description": "resetToDefault"
+  },
+  "autoOpenPlayer": "Öppna spelarskärmen automatiskt",
+  "@autoOpenPlayer": {
+    "description": "autoOpenPlayer"
+  },
+  "autoOpenPlayerDes": "Aktivera/avaktivera automatisk öppning av spelaren till helskärm när du väljer en låt att spela",
+  "@autoOpenPlayerDes": {
+    "description": "autoOpenPlayerDes"
+  },
+  "playingfromArtist": "SPELAR FRÅN ARTIST",
+  "@playingfromArtist": {
+    "description": "playingfromArtist"
+  },
+  "randomSelection": "Slumpmässigt urval",
+  "@randomSelection": {
+    "description": "randomSelection"
+  },
+  "randomRadio": "Slumpmässig radio",
+  "@randomRadio": {
+    "description": "randomRadio"
+  },
+  "exportPlaylist": "Exportera spellista",
+  "@exportPlaylist": {
+    "description": "exportPlaylist"
+  },
+  "importPlaylistDesc": "Välj en tidigare exporterad spellista JSON-fil att importera",
+  "@importPlaylistDesc": {
+    "description": "importPlaylistDesc"
+  },
+  "invalidPlaylistFile": "Ogiltig filstruktur för spellistan",
+  "@invalidPlaylistFile": {
+    "description": "invalidPlaylistFile"
+  },
+  "fileNotFound": "Filen hittades inte",
+  "@fileNotFound": {
+    "description": "fileNotFound"
+  },
+  "exportErrorPermission": "Tillstånd nekad vid export",
+  "@exportErrorPermission": {
+    "description": "exportErrorPermission"
+  },
+  "importingPlaylist": "Importerar spellista...",
+  "@importingPlaylist": {
+    "description": "importingPlaylist"
+  },
+  "exportErrorStorage": "Otillräckligt lagringsutrymme",
+  "@exportErrorStorage": {
+    "description": "exportErrorStorage"
+  },
+  "exportingPlaylist": "Exporterar spellista...",
+  "@exportingPlaylist": {
+    "description": "exportingPlaylist"
+  },
+  "playlistExportedMsg": "Spellistan har exporterats till",
+  "@playlistExportedMsg": {
+    "description": "playlistExportedMsg"
+  },
+  "exportError": "Det gick inte att exportera spellistan",
+  "@exportError": {
+    "description": "exportError"
+  },
+  "exportErrorFormat": "Fel vid formatering av spellistdata",
+  "@exportErrorFormat": {
+    "description": "exportErrorFormat"
+  },
+  "importPlaylist": "Importera spellista",
+  "@importPlaylist": {
+    "description": "importPlaylist"
+  },
+  "selectFile": "Välj Arkiv",
+  "@selectFile": {
+    "description": "selectFile"
+  },
+  "playlistImportedMsg": "Spellistan har importerats",
+  "@playlistImportedMsg": {
+    "description": "playlistImportedMsg"
+  },
+  "importError": "Fel vid import av spellista",
+  "@importError": {
+    "description": "importError"
+  },
+  "importErrorFileAccess": "Det gick inte att komma åt den valda filen",
+  "@importErrorFileAccess": {
+    "description": "importErrorFileAccess"
+  },
+  "importErrorFormat": "Ogiltigt filformat",
+  "@importErrorFormat": {
+    "description": "importErrorFormat"
+  },
+  "importErrorDatabase": "Det gick inte att spara i databasen",
+  "@importErrorDatabase": {
+    "description": "importErrorDatabase"
+  },
+  "importLargeFileNote": "Obs! Det kan ta längre tid att importera stora spellistor",
+  "@importLargeFileNote": {
+    "description": "importLargeFileNote"
+  },
+  "exportPlaylistCsv": "Exportera spellista som CSV",
+  "@exportPlaylistCsv": {
+    "description": "exportPlaylistCsv"
+  },
+  "exportPlaylistJson": "Exportera spellista till JSON",
+  "@exportPlaylistJson": {
+    "description": "exportPlaylistJson"
+  },
+  "exportPlaylistJsonSubtitle": "Detta format kan importeras",
+  "@exportPlaylistJsonSubtitle": {
+    "description": "exportPlaylistJsonSubtitle"
+  },
+  "exportPlaylistCsvSubtitle": "Kan inte importera hit",
+  "@exportPlaylistCsvSubtitle": {
+    "description": "exportPlaylistCsvSubtitle"
+  },
+  "exportToYouTubeMusic": "Exportera till Youtube-musik",
+  "@exportToYouTubeMusic": {
+    "description": "exportToYouTubeMusic"
+  },
+  "exportToYouTubeMusicSubtitle": "Det kommer att skicka din spellista (låtar < 50) till den aktuella kön, glöm inte att lägga till den i spellistan/spara efter att ha öppnat den i YtMusic",
+  "@exportToYouTubeMusicSubtitle": {
+    "description": "exportToYouTubeMusicSubtitle"
+  },
+  "linkCopied": "Länken har kopierats till urklipp",
+  "@linkCopied": {
+    "description": "linkCopied"
+  },
+  "lyrics": "Bokstäver",
+  "@lyrics": {
+    "description": "lyrics"
+  },
+  "no": "Nej",
+  "@no": {
+    "description": "no"
+  },
+  "podcasts": "Podcasts",
+  "@podcasts": {
+    "description": "podcasts"
+  },
+  "episodes": "Avsnitt",
+  "@episodes": {
+    "description": "episodes"
+  },
+  "profiles": "Profiler",
+  "@profiles": {
+    "description": "profiles"
+  },
+  "addToLibrary": "Lägg till i biblioteket",
+  "@addToLibrary": {
+    "description": "addToLibrary"
+  },
+  "removeFromLibrary": "Ta bort från biblioteket",
+  "@removeFromLibrary": {
+    "description": "removeFromLibrary"
+  },
+  "play": "Spela",
+  "@play": {
+    "description": "play"
+  },
+  "enqueueAlbumSongs": "Lägg till albumlåtar i kön",
+  "@enqueueAlbumSongs": {
+    "description": "enqueueAlbumSongs"
+  },
+  "downloadAlbumSongs": "Ladda ner låtar från albumet",
+  "@downloadAlbumSongs": {
+    "description": "downloadAlbumSongs"
+  },
+  "shareAlbum": "Dela album",
+  "@shareAlbum": {
+    "description": "shareAlbum"
+  },
+  "imported": "Importerad",
+  "@imported": {
+    "description": "imported"
+  },
+  "importedPlaylist": "Importerad spellista",
+  "@importedPlaylist": {
+    "description": "importedPlaylist"
+  },
+  "permissionDenied": "Tillstånd nekad",
+  "@permissionDenied": {
+    "description": "permissionDenied"
+  },
+  "enqueueSongs": "Lägg till låtar i kön",
+  "@enqueueSongs": {
+    "description": "enqueueSongs"
+  },
+  "shuffle": "Slumpmässigt",
+  "@shuffle": {
+    "description": "shuffle"
+  },
+  "downloadPlaylist": "Ladda ner spellista",
+  "@downloadPlaylist": {
+    "description": "downloadPlaylist"
+  },
+  "syncPlaylistSongs": "Synkronisera spellistlåtar",
+  "@syncPlaylistSongs": {
+    "description": "syncPlaylistSongs"
+  },
+  "blacklistPipedPlaylist": "Spellista svartlista",
+  "@blacklistPipedPlaylist": {
+    "description": "blacklistPipedPlaylist"
+  },
+  "sharePlaylist": "Dela spellista",
+  "@sharePlaylist": {
+    "description": "sharePlaylist"
+  },
+  "playlist": "Spellista",
+  "@playlist": {
+    "description": "playlist"
+  },
+  "sortByName": "Sortera efter namn",
+  "@sortByName": {
+    "description": "sortByName"
+  },
+  "sortByDate": "Sortera efter datum",
+  "@sortByDate": {
+    "description": "sortByDate"
+  },
+  "sortByDuration": "Sortera efter varaktighet",
+  "@sortByDuration": {
+    "description": "sortByDuration"
+  },
+  "sortAscendNDescend": "Sortera stigande/fallande",
+  "@sortAscendNDescend": {
+    "description": "sortAscendNDescend"
+  },
+  "migration_summary_start": "Migreringen slutförd från {source}.",
+  "@migration_summary_start": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      }
+    },
+    "description": "migration_summary_start"
+  },
+  "migration_summary_playlists": "Spellistor: {count}",
+  "@migration_summary_playlists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_playlists"
+  },
+  "migration_summary_songs": "Låtar: {count}",
+  "@migration_summary_songs": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_songs"
+  },
+  "migration_summary_favorites": "Favoriter: {count}",
+  "@migration_summary_favorites": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_favorites"
+  },
+  "migration_summary_albums": "Album: {count}",
+  "@migration_summary_albums": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_albums"
+  },
+  "migration_summary_artists": "Artister: {count}",
+  "@migration_summary_artists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_artists"
+  },
+  "migration_select_file_dialog": "Välj song.db eller en backup .backup",
+  "@migration_select_file_dialog": {
+    "description": "migration_select_file_dialog"
+  },
+  "migration_success": "Migreringen slutfördes.",
+  "@migration_success": {
+    "description": "migration_success"
+  },
+  "backup_select_folder_dialog": "Välj mappen för säkerhetskopiering",
+  "@backup_select_folder_dialog": {
+    "description": "backup_select_folder_dialog"
+  },
+  "restore_select_file_dialog": "Välj säkerhetskopian",
+  "@restore_select_file_dialog": {
+    "description": "restore_select_file_dialog"
+  },
+  "auth_hint_email": "namn@mail.com",
+  "@auth_hint_email": {
+    "description": "auth_hint_email"
+  },
+  "auth_error_invalid_email": "Ange en giltig e-postadress.",
+  "@auth_error_invalid_email": {
+    "description": "auth_error_invalid_email"
+  },
+  "settings_cloud_backup_dialog_desc": "Ladda upp en .hmb-säkerhetskopia av appen till servern och, om det behövs, återställ någon av de sparade säkerhetskopiorna.",
+  "@settings_cloud_backup_dialog_desc": {
+    "description": "settings_cloud_backup_dialog_desc"
+  },
+  "delete": "Ta bort",
+  "@delete": {
+    "description": "delete"
+  },
+  "in_app_storage": "Intern lagringskatalog",
+  "@in_app_storage": {
+    "description": "in_app_storage"
+  },
+  "auth_brand_description_1": "Vi tog med inloggning, registrering och lösenordsåterställning från det tidigare projektet, anpassat för den här musikappen.",
+  "@auth_brand_description_1": {
+    "description": "auth_brand_description_1"
+  },
+  "auth_brand_description_2": "Din session lever i säker lagring och valideras med samma backend som du redan använde.",
+  "@auth_brand_description_2": {
+    "description": "auth_brand_description_2"
+  },
+  "auth_brand_not_configured": ".env-filen måste konfigureras för att ansluta autentiseringsbackend.",
+  "@auth_brand_not_configured": {
+    "description": "auth_brand_not_configured"
+  },
+  "auth_forgot_password_subtitle": "Vi skickar instruktionerna till ditt kontos e-postadress.",
+  "@auth_forgot_password_subtitle": {
+    "description": "auth_forgot_password_subtitle"
+  },
+  "auth_btn_send_email": "Skicka mail",
+  "@auth_btn_send_email": {
+    "description": "auth_btn_send_email"
+  },
+  "auth_error_not_configured": "Autentiseringsbackend saknas för att konfigureras i .env-filen.",
+  "@auth_error_not_configured": {
+    "description": "auth_error_not_configured"
+  },
+  "auth_error_invalid_credentials": "Felaktig e-postadress eller lösenord.",
+  "@auth_error_invalid_credentials": {
+    "description": "auth_error_invalid_credentials"
+  },
+  "auth_error_not_verified": "Ditt konto är inte verifierat än.",
+  "@auth_error_not_verified": {
+    "description": "auth_error_not_verified"
+  },
+  "auth_error_unknown": "Det gick inte att slutföra operationen.",
+  "@auth_error_unknown": {
+    "description": "auth_error_unknown"
+  },
+  "auth_register_success": "Kontot har skapats.",
+  "@auth_register_success": {
+    "description": "auth_register_success"
+  },
+  "auth_register_error": "Kontot kunde inte skapas.",
+  "@auth_register_error": {
+    "description": "auth_register_error"
+  },
+  "auth_recovery_email_sent": "E-post skickat.",
+  "@auth_recovery_email_sent": {
+    "description": "auth_recovery_email_sent"
+  },
+  "auth_recovery_email_error": "Det gick inte att skicka mejlet.",
+  "@auth_recovery_email_error": {
+    "description": "auth_recovery_email_error"
+  },
+  "latestVersion": "Senaste versionen tillgänglig",
+  "@latestVersion": {
+    "description": "latestVersion"
+  },
+  "updateApp": "Uppdatera applikation",
+  "@updateApp": {
+    "description": "updateApp"
+  },
+  "loadInfoUpdate": "Det gick inte att ladda uppdateringsinformation",
+  "@loadInfoUpdate": {
+    "description": "loadInfoUpdate"
+  },
+  "infoNotAvailable": "Information inte tillgänglig",
+  "@infoNotAvailable": {
+    "description": "infoNotAvailable"
+  },
+  "developedBy": "Utvecklad och underhållen av Joss Estrada (JOSPROX)",
+  "@developedBy": {
+    "description": "developedBy"
+  },
+  "copyrightNotice": "© 2026 JOSPROX. GPL-licens v3.0",
+  "@copyrightNotice": {
+    "description": "copyrightNotice"
+  },
+  "backupSettingsAndPlaylists": "Säkerhetskopieringsinställningar och spellistor",
+  "@backupSettingsAndPlaylists": {
+    "description": "backupSettingsAndPlaylists"
+  },
+  "restoreSettingsAndPlaylists": "Återställ inställningar och spellistor",
+  "@restoreSettingsAndPlaylists": {
+    "description": "restoreSettingsAndPlaylists"
+  },
+  "helloWorld": "Hej världen",
+  "@helloWorld": {
+    "description": "Este texto es opcional"
+  },
+  "removeFromCache": "Ta bort från cachen",
+  "@removeFromCache": {
+    "description": "removeFromCache"
+  },
+  "quickPics": "Snabbt urval",
+  "@quickPics": {
+    "description": "quickPics"
+  },
+  "topMusicVid": "Bästa musikvideor",
+  "@topMusicVid": {
+    "description": "topMusicVid"
   }
 }

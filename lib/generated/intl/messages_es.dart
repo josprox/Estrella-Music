@@ -22,29 +22,30 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(songTitle) => "Descargando: ${songTitle}";
 
-  static String m7(count) => "Álbumes: ${count}";
+  static String m1(count) => "Álbumes: ${count}";
 
-  static String m8(count) => "Artistas: ${count}";
+  static String m2(count) => "Artistas: ${count}";
 
-  static String m9(count) => "Favoritos: ${count}";
+  static String m3(count) => "Favoritos: ${count}";
 
-  static String m10(count) => "Playlists: ${count}";
+  static String m4(count) => "Playlists: ${count}";
 
-  static String m11(count) => "Canciones: ${count}";
+  static String m5(count) => "Canciones: ${count}";
 
-  static String m12(source) => "Migración completada desde ${source}.";
+  static String m6(source) => "Migración completada desde ${source}.";
 
-  static String m1(error) => "Ocurrió un error al regenerar: ${error}";
+  static String m7(error) => "Ocurrió un error al regenerar: ${error}";
 
-  static String m2(title) => "Similar a ${title}";
+  static String m8(title) => "Similar a ${title}";
 
-  static String m3(current) => "Paso ${current} de 3";
+  static String m9(current) => "Paso ${current} de 3";
 
-  static String m4(count) => "${count} cambios confirmados.";
+  static String m10(count) => "${count} cambios confirmados.";
 
-  static String m5(count) => "${count} cambios sincronizados.";
+  static String m11(count) => "${count} cambios sincronizados.";
 
-  static String m6(statusCode) => "No se pudo buscar usuarios (${statusCode}).";
+  static String m12(statusCode) =>
+      "No se pudo buscar usuarios (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -206,6 +207,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "backupMsg": MessageLookupByLibrary.simpleMessage(
       "¡Copia de seguridad guardada con éxito!",
+    ),
+    "backupSettingsAndPlaylists": MessageLookupByLibrary.simpleMessage(
+      "Configuración de copia de seguridad y listas de reproducción",
     ),
     "backupSettingsAndPlaylistsDes": MessageLookupByLibrary.simpleMessage(
       "Guarda todos los ajustes, listas de reproducción y datos de inicio de sesión en un archivo de copia de seguridad",
@@ -539,6 +543,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "goToDownloadPage": MessageLookupByLibrary.simpleMessage(
       "Haz clic aquí para ir a la página de descarga",
     ),
+    "helloWorld": MessageLookupByLibrary.simpleMessage("hola mundo"),
     "high": MessageLookupByLibrary.simpleMessage("Alta"),
     "hintApiUrl": MessageLookupByLibrary.simpleMessage(
       "URL de la API a la instancia de Piped",
@@ -747,12 +752,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "migration_success": MessageLookupByLibrary.simpleMessage(
       "Migración completada correctamente.",
     ),
-    "migration_summary_albums": m7,
-    "migration_summary_artists": m8,
-    "migration_summary_favorites": m9,
-    "migration_summary_playlists": m10,
-    "migration_summary_songs": m11,
-    "migration_summary_start": m12,
+    "migration_summary_albums": m1,
+    "migration_summary_artists": m2,
+    "migration_summary_favorites": m3,
+    "migration_summary_playlists": m4,
+    "migration_summary_songs": m5,
+    "migration_summary_start": m6,
     "minutes": MessageLookupByLibrary.simpleMessage("minutos"),
     "misc": MessageLookupByLibrary.simpleMessage("Varios"),
     "mostListenedSong": MessageLookupByLibrary.simpleMessage(
@@ -968,6 +973,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "queuerearrangingDeniedMsg": MessageLookupByLibrary.simpleMessage(
       "La cola no se puede reordenar cuando el modo aleatorio está activado",
     ),
+    "quickPics": MessageLookupByLibrary.simpleMessage("Selección rápida"),
     "quickpicks": MessageLookupByLibrary.simpleMessage("Selecciones rápidas"),
     "radioNotAvailable": MessageLookupByLibrary.simpleMessage(
       "¡Radio no disponible para este artista!",
@@ -994,6 +1000,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "recommendedAlbums": MessageLookupByLibrary.simpleMessage("Recomendados"),
     "recommendedArtists": MessageLookupByLibrary.simpleMessage("Recomendados"),
+    "removeFromCache": MessageLookupByLibrary.simpleMessage(
+      "Eliminar del caché",
+    ),
     "removeFromLib": MessageLookupByLibrary.simpleMessage(
       "Eliminar de las canciones de la biblioteca",
     ),
@@ -1046,6 +1055,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "restoreMsg": MessageLookupByLibrary.simpleMessage(
       "¡Restaurado con éxito!\nLos cambios se aplican al reiniciar",
+    ),
+    "restoreSettingsAndPlaylists": MessageLookupByLibrary.simpleMessage(
+      "Restaurar configuraciones y listas de reproducción",
     ),
     "restoreSettingsAndPlaylistsDes": MessageLookupByLibrary.simpleMessage(
       "Restaura todos los ajustes, datos de inicio de sesión y listas de reproducción desde un archivo de copia de seguridad. Sobrescribe todos los datos actuales",
@@ -1155,7 +1167,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings_visitor_error_desc": MessageLookupByLibrary.simpleMessage(
       "No se pudo generar un nuevo identificador. Inténtalo más tarde.",
     ),
-    "settings_visitor_exception": m1,
+    "settings_visitor_exception": m7,
     "settings_visitor_updated": MessageLookupByLibrary.simpleMessage(
       "Identificador actualizado",
     ),
@@ -1172,7 +1184,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "shuffle": MessageLookupByLibrary.simpleMessage("Aleatorio"),
     "shuffleQueue": MessageLookupByLibrary.simpleMessage("Mezclar cola"),
-    "similarToTitle": m2,
+    "similarToTitle": m8,
     "singles": MessageLookupByLibrary.simpleMessage("Sencillos"),
     "skipSilence": MessageLookupByLibrary.simpleMessage("Saltar silencio"),
     "skipSilenceDes": MessageLookupByLibrary.simpleMessage(
@@ -1184,7 +1196,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "sleepTimer": MessageLookupByLibrary.simpleMessage(
       "Temporizador de apagado",
     ),
-    "slide_indicator": m3,
+    "slide_indicator": m9,
     "songAddedToPlaylistAlert": MessageLookupByLibrary.simpleMessage(
       "¡Canción añadida a la lista de reproducción!",
     ),
@@ -1248,8 +1260,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "swipe_prompt": MessageLookupByLibrary.simpleMessage(
       "Desliza para explorar las opciones",
     ),
-    "syncChangesConfirmed": m4,
-    "syncChangesSynced": m5,
+    "syncChangesConfirmed": m10,
+    "syncChangesSynced": m11,
     "syncCloudDownloadingExisting": MessageLookupByLibrary.simpleMessage(
       "Modo cloud activado. Descargando la biblioteca existente.",
     ),
@@ -1319,6 +1331,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "themeMode": MessageLookupByLibrary.simpleMessage("Modo de tema"),
     "title": MessageLookupByLibrary.simpleMessage("Título"),
+    "topMusicVid": MessageLookupByLibrary.simpleMessage(
+      "Mejores vídeos musicales",
+    ),
     "topmusicvideos": MessageLookupByLibrary.simpleMessage(
       "Mejores videos musicales",
     ),
@@ -1337,7 +1352,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "La respuesta no contiene una lista de usuarios.",
     ),
-    "userSearchFailed": m6,
+    "userSearchFailed": m12,
     "userUnblocked": MessageLookupByLibrary.simpleMessage(
       "Usuario desbloqueado",
     ),

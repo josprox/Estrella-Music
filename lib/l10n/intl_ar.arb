@@ -1284,9 +1284,14 @@
   "@cloud_btn": {
     "description": "cloud_btn"
   },
-  "slide_indicator": "الخطوة __PH_0____ من 3",
+  "slide_indicator": "الخطوة {current} من 3",
   "@slide_indicator": {
-    "description": "slide_indicator"
+    "description": "slide_indicator",
+    "placeholders": {
+      "current": {
+        "type": "String"
+      }
+    }
   },
   "news_card_title": "لقد تطورت موسيقى استريلا!",
   "@news_card_title": {
@@ -1420,9 +1425,14 @@
   "@settings_visitor_error_desc": {
     "description": "settings_visitor_error_desc"
   },
-  "settings_visitor_exception": "حدث خطأ أثناء إعادة الإنشاء: __PH_0____",
+  "settings_visitor_exception": "حدث خطأ أثناء إعادة الإنشاء: {error}",
   "@settings_visitor_exception": {
-    "description": "settings_visitor_exception"
+    "description": "settings_visitor_exception",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
   },
   "migratedLibrary": "المكتبة المهاجرة",
   "@migratedLibrary": {
@@ -1452,9 +1462,14 @@
   "@keepListening": {
     "description": "keepListening"
   },
-  "similarToTitle": "مشابهة لـ __PH_0____",
+  "similarToTitle": "مشابهة لـ {title}",
   "@similarToTitle": {
-    "description": "similarToTitle"
+    "description": "similarToTitle",
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
   },
   "pipedPlaylistDescription": "قائمة التشغيل عبر الأنابيب",
   "@pipedPlaylistDescription": {
@@ -1532,9 +1547,14 @@
   "@syncLibraryUpToDate": {
     "description": "syncLibraryUpToDate"
   },
-  "syncChangesSynced": "__PH_0____ التغييرات المتزامنة.",
+  "syncChangesSynced": "{count} التغييرات المتزامنة.",
   "@syncChangesSynced": {
-    "description": "syncChangesSynced"
+    "description": "syncChangesSynced",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
   },
   "syncUploading": "جارٍ تحميل التغييرات إلى EMusic...",
   "@syncUploading": {
@@ -1564,9 +1584,14 @@
   "@syncUnconfirmedRetry": {
     "description": "syncUnconfirmedRetry"
   },
-  "syncChangesConfirmed": "__PH_0____ التغييرات التي تم تنفيذها.",
+  "syncChangesConfirmed": "{count} التغييرات التي تم تنفيذها.",
   "@syncChangesConfirmed": {
-    "description": "syncChangesConfirmed"
+    "description": "syncChangesConfirmed",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
   },
   "migrationAlreadyRunning": "هناك بالفعل عملية ترحيل قيد التقدم.",
   "@migrationAlreadyRunning": {
@@ -1769,9 +1794,14 @@
   "@downloadNotificationPreparing": {
     "description": "downloadNotificationPreparing"
   },
-  "downloadNotificationSong": "التنزيل: __PH_0____",
+  "downloadNotificationSong": "التنزيل: {songTitle}",
   "@downloadNotificationSong": {
-    "description": "downloadNotificationSong"
+    "description": "downloadNotificationSong",
+    "placeholders": {
+      "songTitle": {
+        "type": "String"
+      }
+    }
   },
   "syncCloudModeActive": "الوضع السحابي نشط",
   "@syncCloudModeActive": {
@@ -1844,5 +1874,427 @@
   "auth_2fa_invalid": "أدخل رمزًا صالحًا مكونًا من 6 أرقام أو قم بتسجيل الدخول مرة أخرى.",
   "@auth_2fa_invalid": {
     "description": "auth_2fa_invalid"
+  },
+  "helloWorld": "مرحبا بالعالم",
+  "@helloWorld": {
+    "description": "Este texto es opcional"
+  },
+  "removeFromCache": "إزالة من ذاكرة التخزين المؤقت",
+  "@removeFromCache": {
+    "description": "removeFromCache"
+  },
+  "resetToDefaultMsg": "اكتملت عملية إعادة تعيين الإعدادات إلى الوضع الافتراضي، يرجى إعادة تشغيل التطبيق",
+  "@resetToDefaultMsg": {
+    "description": "resetToDefaultMsg"
+  },
+  "resetToDefaultDes": "إعادة ضبط إعدادات التطبيق على الوضع الافتراضي (يتطلب إعادة التشغيل)",
+  "@resetToDefaultDes": {
+    "description": "resetToDefaultDes"
+  },
+  "misc": "عديد",
+  "@misc": {
+    "description": "misc"
+  },
+  "resetToDefault": "استعادة الإعدادات الافتراضية",
+  "@resetToDefault": {
+    "description": "resetToDefault"
+  },
+  "autoOpenPlayer": "فتح شاشة المشغل تلقائيًا",
+  "@autoOpenPlayer": {
+    "description": "autoOpenPlayer"
+  },
+  "autoOpenPlayerDes": "تنشيط/إلغاء تنشيط الفتح التلقائي للمشغل إلى وضع ملء الشاشة عند اختيار أغنية لتشغيلها",
+  "@autoOpenPlayerDes": {
+    "description": "autoOpenPlayerDes"
+  },
+  "playingfromArtist": "اللعب من الفنان",
+  "@playingfromArtist": {
+    "description": "playingfromArtist"
+  },
+  "randomSelection": "اختيار عشوائي",
+  "@randomSelection": {
+    "description": "randomSelection"
+  },
+  "randomRadio": "راديو عشوائي",
+  "@randomRadio": {
+    "description": "randomRadio"
+  },
+  "exportPlaylist": "تصدير قائمة التشغيل",
+  "@exportPlaylist": {
+    "description": "exportPlaylist"
+  },
+  "importPlaylistDesc": "حدد ملف JSON لقائمة التشغيل التي تم تصديرها مسبقًا لاستيرادها",
+  "@importPlaylistDesc": {
+    "description": "importPlaylistDesc"
+  },
+  "invalidPlaylistFile": "بنية ملف قائمة التشغيل غير صالحة",
+  "@invalidPlaylistFile": {
+    "description": "invalidPlaylistFile"
+  },
+  "fileNotFound": "لم يتم العثور على الملف",
+  "@fileNotFound": {
+    "description": "fileNotFound"
+  },
+  "exportErrorPermission": "تم رفض الإذن عند التصدير",
+  "@exportErrorPermission": {
+    "description": "exportErrorPermission"
+  },
+  "importingPlaylist": "جارٍ استيراد قائمة التشغيل...",
+  "@importingPlaylist": {
+    "description": "importingPlaylist"
+  },
+  "exportErrorStorage": "مساحة تخزين غير كافية",
+  "@exportErrorStorage": {
+    "description": "exportErrorStorage"
+  },
+  "exportingPlaylist": "جارٍ تصدير قائمة التشغيل...",
+  "@exportingPlaylist": {
+    "description": "exportingPlaylist"
+  },
+  "playlistExportedMsg": "تم تصدير قائمة التشغيل إلى",
+  "@playlistExportedMsg": {
+    "description": "playlistExportedMsg"
+  },
+  "exportError": "حدث خطأ أثناء تصدير قائمة التشغيل",
+  "@exportError": {
+    "description": "exportError"
+  },
+  "exportErrorFormat": "خطأ في تنسيق بيانات قائمة التشغيل",
+  "@exportErrorFormat": {
+    "description": "exportErrorFormat"
+  },
+  "importPlaylist": "استيراد قائمة التشغيل",
+  "@importPlaylist": {
+    "description": "importPlaylist"
+  },
+  "selectFile": "حدد ملف",
+  "@selectFile": {
+    "description": "selectFile"
+  },
+  "playlistImportedMsg": "تم استيراد قائمة التشغيل بنجاح",
+  "@playlistImportedMsg": {
+    "description": "playlistImportedMsg"
+  },
+  "importError": "حدث خطأ أثناء استيراد قائمة التشغيل",
+  "@importError": {
+    "description": "importError"
+  },
+  "importErrorFileAccess": "لا يمكن الوصول إلى الملف المحدد",
+  "@importErrorFileAccess": {
+    "description": "importErrorFileAccess"
+  },
+  "importErrorFormat": "تنسيق الملف غير صالح",
+  "@importErrorFormat": {
+    "description": "importErrorFormat"
+  },
+  "importErrorDatabase": "حدث خطأ أثناء الحفظ في قاعدة البيانات",
+  "@importErrorDatabase": {
+    "description": "importErrorDatabase"
+  },
+  "importLargeFileNote": "ملاحظة: قد يستغرق استيراد قوائم التشغيل الكبيرة وقتًا أطول",
+  "@importLargeFileNote": {
+    "description": "importLargeFileNote"
+  },
+  "exportPlaylistCsv": "تصدير قائمة التشغيل كملف CSV",
+  "@exportPlaylistCsv": {
+    "description": "exportPlaylistCsv"
+  },
+  "exportPlaylistJson": "تصدير قائمة التشغيل إلى JSON",
+  "@exportPlaylistJson": {
+    "description": "exportPlaylistJson"
+  },
+  "exportPlaylistJsonSubtitle": "يمكن استيراد هذا التنسيق",
+  "@exportPlaylistJsonSubtitle": {
+    "description": "exportPlaylistJsonSubtitle"
+  },
+  "exportPlaylistCsvSubtitle": "لا يمكن الاستيراد هنا",
+  "@exportPlaylistCsvSubtitle": {
+    "description": "exportPlaylistCsvSubtitle"
+  },
+  "exportToYouTubeMusic": "تصدير إلى موسيقى يوتيوب",
+  "@exportToYouTubeMusic": {
+    "description": "exportToYouTubeMusic"
+  },
+  "exportToYouTubeMusicSubtitle": "سيؤدي ذلك إلى دفع قائمة التشغيل الخاصة بك (الأغاني <50) إلى قائمة الانتظار الحالية، لا تنس إضافتها إلى قائمة التشغيل/الحفظ بعد فتحها في YtMusic",
+  "@exportToYouTubeMusicSubtitle": {
+    "description": "exportToYouTubeMusicSubtitle"
+  },
+  "linkCopied": "تم نسخ الرابط إلى الحافظة",
+  "@linkCopied": {
+    "description": "linkCopied"
+  },
+  "quickPics": "اختيار سريع",
+  "@quickPics": {
+    "description": "quickPics"
+  },
+  "topMusicVid": "أعلى مقاطع الفيديو الموسيقية",
+  "@topMusicVid": {
+    "description": "topMusicVid"
+  },
+  "lyrics": "رسائل",
+  "@lyrics": {
+    "description": "lyrics"
+  },
+  "no": "لا",
+  "@no": {
+    "description": "no"
+  },
+  "podcasts": "البودكاست",
+  "@podcasts": {
+    "description": "podcasts"
+  },
+  "episodes": "الحلقات",
+  "@episodes": {
+    "description": "episodes"
+  },
+  "profiles": "الملفات الشخصية",
+  "@profiles": {
+    "description": "profiles"
+  },
+  "addToLibrary": "أضف إلى المكتبة",
+  "@addToLibrary": {
+    "description": "addToLibrary"
+  },
+  "removeFromLibrary": "حذف من المكتبة",
+  "@removeFromLibrary": {
+    "description": "removeFromLibrary"
+  },
+  "play": "إعادة إنتاج",
+  "@play": {
+    "description": "play"
+  },
+  "enqueueAlbumSongs": "أضف أغاني الألبوم إلى قائمة الانتظار",
+  "@enqueueAlbumSongs": {
+    "description": "enqueueAlbumSongs"
+  },
+  "downloadAlbumSongs": "تحميل الأغاني من الألبوم",
+  "@downloadAlbumSongs": {
+    "description": "downloadAlbumSongs"
+  },
+  "shareAlbum": "مشاركة الألبوم",
+  "@shareAlbum": {
+    "description": "shareAlbum"
+  },
+  "imported": "مستورد",
+  "@imported": {
+    "description": "imported"
+  },
+  "importedPlaylist": "قائمة التشغيل المستوردة",
+  "@importedPlaylist": {
+    "description": "importedPlaylist"
+  },
+  "permissionDenied": "تم رفض الإذن",
+  "@permissionDenied": {
+    "description": "permissionDenied"
+  },
+  "enqueueSongs": "إضافة الأغاني إلى قائمة الانتظار",
+  "@enqueueSongs": {
+    "description": "enqueueSongs"
+  },
+  "shuffle": "عشوائي",
+  "@shuffle": {
+    "description": "shuffle"
+  },
+  "downloadPlaylist": "تحميل قائمة التشغيل",
+  "@downloadPlaylist": {
+    "description": "downloadPlaylist"
+  },
+  "syncPlaylistSongs": "مزامنة أغاني قائمة التشغيل",
+  "@syncPlaylistSongs": {
+    "description": "syncPlaylistSongs"
+  },
+  "blacklistPipedPlaylist": "القائمة السوداء لقائمة التشغيل",
+  "@blacklistPipedPlaylist": {
+    "description": "blacklistPipedPlaylist"
+  },
+  "sharePlaylist": "مشاركة قائمة التشغيل",
+  "@sharePlaylist": {
+    "description": "sharePlaylist"
+  },
+  "playlist": "قائمة التشغيل",
+  "@playlist": {
+    "description": "playlist"
+  },
+  "sortByName": "الترتيب حسب الاسم",
+  "@sortByName": {
+    "description": "sortByName"
+  },
+  "sortByDate": "الترتيب حسب التاريخ",
+  "@sortByDate": {
+    "description": "sortByDate"
+  },
+  "sortByDuration": "الترتيب حسب المدة",
+  "@sortByDuration": {
+    "description": "sortByDuration"
+  },
+  "sortAscendNDescend": "فرز تصاعدي / تنازلي",
+  "@sortAscendNDescend": {
+    "description": "sortAscendNDescend"
+  },
+  "migration_summary_start": "اكتمل الترحيل من {source}.",
+  "@migration_summary_start": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      }
+    },
+    "description": "migration_summary_start"
+  },
+  "migration_summary_playlists": "قوائم التشغيل: {count}",
+  "@migration_summary_playlists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_playlists"
+  },
+  "migration_summary_songs": "الأغاني: {count}",
+  "@migration_summary_songs": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_songs"
+  },
+  "migration_summary_favorites": "المفضلة: {count}",
+  "@migration_summary_favorites": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_favorites"
+  },
+  "migration_summary_albums": "الألبومات: {count}",
+  "@migration_summary_albums": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_albums"
+  },
+  "migration_summary_artists": "الفنانين: {count}",
+  "@migration_summary_artists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_artists"
+  },
+  "migration_select_file_dialog": "حدد أغنية.db أو نسخة احتياطية",
+  "@migration_select_file_dialog": {
+    "description": "migration_select_file_dialog"
+  },
+  "migration_success": "تمت عملية الترحيل بنجاح.",
+  "@migration_success": {
+    "description": "migration_success"
+  },
+  "backup_select_folder_dialog": "حدد المجلد للنسخ الاحتياطي",
+  "@backup_select_folder_dialog": {
+    "description": "backup_select_folder_dialog"
+  },
+  "restore_select_file_dialog": "حدد ملف النسخ الاحتياطي",
+  "@restore_select_file_dialog": {
+    "description": "restore_select_file_dialog"
+  },
+  "auth_hint_email": "name@mail.com",
+  "@auth_hint_email": {
+    "description": "auth_hint_email"
+  },
+  "auth_error_invalid_email": "أدخل بريدًا إلكترونيًا صالحًا.",
+  "@auth_error_invalid_email": {
+    "description": "auth_error_invalid_email"
+  },
+  "settings_cloud_backup_dialog_desc": "قم بتحميل نسخة احتياطية ‎.hmb من التطبيق إلى الخادم، وإذا لزم الأمر، قم باستعادة أي من النسخ الاحتياطية المحفوظة.",
+  "@settings_cloud_backup_dialog_desc": {
+    "description": "settings_cloud_backup_dialog_desc"
+  },
+  "delete": "اِسْتَبْعَد",
+  "@delete": {
+    "description": "delete"
+  },
+  "in_app_storage": "دليل التخزين الداخلي",
+  "@in_app_storage": {
+    "description": "in_app_storage"
+  },
+  "auth_brand_description_1": "لقد أحضرنا تسجيل الدخول والتسجيل واستعادة كلمة المرور من المشروع السابق، وتم تكييفه ليناسب تطبيق الموسيقى هذا.",
+  "@auth_brand_description_1": {
+    "description": "auth_brand_description_1"
+  },
+  "auth_brand_description_2": "تعيش جلستك في مساحة تخزين آمنة ويتم التحقق من صحتها بنفس الواجهة الخلفية التي كنت تستخدمها بالفعل.",
+  "@auth_brand_description_2": {
+    "description": "auth_brand_description_2"
+  },
+  "auth_brand_not_configured": "يجب تكوين ملف .env لتوصيل الواجهة الخلفية للمصادقة.",
+  "@auth_brand_not_configured": {
+    "description": "auth_brand_not_configured"
+  },
+  "auth_forgot_password_subtitle": "سنرسل لك التعليمات إلى البريد الإلكتروني الخاص بحسابك.",
+  "@auth_forgot_password_subtitle": {
+    "description": "auth_forgot_password_subtitle"
+  },
+  "auth_btn_send_email": "إرسال البريد",
+  "@auth_btn_send_email": {
+    "description": "auth_btn_send_email"
+  },
+  "auth_error_not_configured": "الواجهة الخلفية للمصادقة مفقودة ليتم تكوينها في ملف .env.",
+  "@auth_error_not_configured": {
+    "description": "auth_error_not_configured"
+  },
+  "auth_error_invalid_credentials": "البريد الإلكتروني أو كلمة المرور غير صحيحة.",
+  "@auth_error_invalid_credentials": {
+    "description": "auth_error_invalid_credentials"
+  },
+  "auth_error_not_verified": "لم يتم التحقق من حسابك بعد.",
+  "@auth_error_not_verified": {
+    "description": "auth_error_not_verified"
+  },
+  "auth_error_unknown": "لم يكن من الممكن إكمال العملية.",
+  "@auth_error_unknown": {
+    "description": "auth_error_unknown"
+  },
+  "auth_register_success": "تم إنشاء الحساب بنجاح.",
+  "@auth_register_success": {
+    "description": "auth_register_success"
+  },
+  "auth_register_error": "لا يمكن إنشاء الحساب.",
+  "@auth_register_error": {
+    "description": "auth_register_error"
+  },
+  "auth_recovery_email_sent": "تم إرسال البريد الإلكتروني.",
+  "@auth_recovery_email_sent": {
+    "description": "auth_recovery_email_sent"
+  },
+  "auth_recovery_email_error": "لم يكن من الممكن إرسال البريد الإلكتروني.",
+  "@auth_recovery_email_error": {
+    "description": "auth_recovery_email_error"
+  },
+  "latestVersion": "أحدث إصدار متاح",
+  "@latestVersion": {
+    "description": "latestVersion"
+  },
+  "updateApp": "تحديث التطبيق",
+  "@updateApp": {
+    "description": "updateApp"
+  },
+  "loadInfoUpdate": "تعذر تحميل معلومات التحديث",
+  "@loadInfoUpdate": {
+    "description": "loadInfoUpdate"
+  },
+  "infoNotAvailable": "المعلومات غير متوفرة",
+  "@infoNotAvailable": {
+    "description": "infoNotAvailable"
+  },
+  "developedBy": "تم تطويره وصيانته بواسطة جوس استرادا (JOSPROX)",
+  "@developedBy": {
+    "description": "developedBy"
+  },
+  "copyrightNotice": "© 2026 جوسبروكس. ترخيص GPL v3.0",
+  "@copyrightNotice": {
+    "description": "copyrightNotice"
   }
 }

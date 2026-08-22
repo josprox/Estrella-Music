@@ -2018,5 +2018,283 @@
   "auth_2fa_invalid": "Введите действительный 6-значный код или войдите в систему еще раз.",
   "@auth_2fa_invalid": {
     "description": "auth_2fa_invalid"
+  },
+  "backupSettingsAndPlaylists": "Резервное копирование настроек и плейлистов",
+  "@backupSettingsAndPlaylists": {
+    "description": "backupSettingsAndPlaylists"
+  },
+  "restoreSettingsAndPlaylists": "Восстановление настроек и плейлистов",
+  "@restoreSettingsAndPlaylists": {
+    "description": "restoreSettingsAndPlaylists"
+  },
+  "helloWorld": "Привет, мир",
+  "@helloWorld": {
+    "description": "Este texto es opcional"
+  },
+  "lyrics": "Письма",
+  "@lyrics": {
+    "description": "lyrics"
+  },
+  "no": "Нет",
+  "@no": {
+    "description": "no"
+  },
+  "podcasts": "Подкасты",
+  "@podcasts": {
+    "description": "podcasts"
+  },
+  "episodes": "Эпизоды",
+  "@episodes": {
+    "description": "episodes"
+  },
+  "profiles": "Профили",
+  "@profiles": {
+    "description": "profiles"
+  },
+  "addToLibrary": "Добавить в библиотеку",
+  "@addToLibrary": {
+    "description": "addToLibrary"
+  },
+  "removeFromLibrary": "Удалить из библиотеки",
+  "@removeFromLibrary": {
+    "description": "removeFromLibrary"
+  },
+  "play": "Играть",
+  "@play": {
+    "description": "play"
+  },
+  "enqueueAlbumSongs": "Добавить песни альбома в очередь",
+  "@enqueueAlbumSongs": {
+    "description": "enqueueAlbumSongs"
+  },
+  "downloadAlbumSongs": "Скачать песни из альбома",
+  "@downloadAlbumSongs": {
+    "description": "downloadAlbumSongs"
+  },
+  "shareAlbum": "Поделиться альбомом",
+  "@shareAlbum": {
+    "description": "shareAlbum"
+  },
+  "imported": "Импортировано",
+  "@imported": {
+    "description": "imported"
+  },
+  "importedPlaylist": "Импортированный плейлист",
+  "@importedPlaylist": {
+    "description": "importedPlaylist"
+  },
+  "permissionDenied": "Разрешение отклонено",
+  "@permissionDenied": {
+    "description": "permissionDenied"
+  },
+  "enqueueSongs": "Добавить песни в очередь",
+  "@enqueueSongs": {
+    "description": "enqueueSongs"
+  },
+  "shuffle": "Случайный",
+  "@shuffle": {
+    "description": "shuffle"
+  },
+  "downloadPlaylist": "Скачать плейлист",
+  "@downloadPlaylist": {
+    "description": "downloadPlaylist"
+  },
+  "syncPlaylistSongs": "Синхронизировать песни плейлиста",
+  "@syncPlaylistSongs": {
+    "description": "syncPlaylistSongs"
+  },
+  "blacklistPipedPlaylist": "Черный список плейлистов",
+  "@blacklistPipedPlaylist": {
+    "description": "blacklistPipedPlaylist"
+  },
+  "sharePlaylist": "Поделиться плейлистом",
+  "@sharePlaylist": {
+    "description": "sharePlaylist"
+  },
+  "playlist": "Плейлист",
+  "@playlist": {
+    "description": "playlist"
+  },
+  "sortByName": "Сортировать по имени",
+  "@sortByName": {
+    "description": "sortByName"
+  },
+  "sortByDate": "Сортировать по дате",
+  "@sortByDate": {
+    "description": "sortByDate"
+  },
+  "sortByDuration": "Сортировать по продолжительности",
+  "@sortByDuration": {
+    "description": "sortByDuration"
+  },
+  "sortAscendNDescend": "Сортировать по возрастанию/убыванию",
+  "@sortAscendNDescend": {
+    "description": "sortAscendNDescend"
+  },
+  "migration_summary_start": "Миграция завершена с {source}.",
+  "@migration_summary_start": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      }
+    },
+    "description": "migration_summary_start"
+  },
+  "migration_summary_playlists": "Плейлисты: {count}",
+  "@migration_summary_playlists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_playlists"
+  },
+  "migration_summary_songs": "Песни: {count}",
+  "@migration_summary_songs": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_songs"
+  },
+  "migration_summary_favorites": "Избранное: {count}",
+  "@migration_summary_favorites": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_favorites"
+  },
+  "migration_summary_albums": "Альбомы: {count}",
+  "@migration_summary_albums": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_albums"
+  },
+  "migration_summary_artists": "Исполнители: {count}",
+  "@migration_summary_artists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_artists"
+  },
+  "migration_select_file_dialog": "Выберите song.db или резервную копию .backup.",
+  "@migration_select_file_dialog": {
+    "description": "migration_select_file_dialog"
+  },
+  "migration_success": "Миграция завершена успешно.",
+  "@migration_success": {
+    "description": "migration_success"
+  },
+  "backup_select_folder_dialog": "Выберите папку для резервного копирования",
+  "@backup_select_folder_dialog": {
+    "description": "backup_select_folder_dialog"
+  },
+  "restore_select_file_dialog": "Выберите файл резервной копии",
+  "@restore_select_file_dialog": {
+    "description": "restore_select_file_dialog"
+  },
+  "auth_hint_email": "имя@mail.com",
+  "@auth_hint_email": {
+    "description": "auth_hint_email"
+  },
+  "auth_error_invalid_email": "Введите действительный адрес электронной почты.",
+  "@auth_error_invalid_email": {
+    "description": "auth_error_invalid_email"
+  },
+  "settings_cloud_backup_dialog_desc": "Загрузите резервную копию приложения в формате .hmb на сервер и при необходимости восстановите любую из сохраненных резервных копий.",
+  "@settings_cloud_backup_dialog_desc": {
+    "description": "settings_cloud_backup_dialog_desc"
+  },
+  "delete": "Удалить",
+  "@delete": {
+    "description": "delete"
+  },
+  "in_app_storage": "Каталог внутреннего хранилища",
+  "@in_app_storage": {
+    "description": "in_app_storage"
+  },
+  "auth_brand_description_1": "Мы принесли логин, регистрацию и восстановление пароля из предыдущего проекта, адаптированного под это музыкальное приложение.",
+  "@auth_brand_description_1": {
+    "description": "auth_brand_description_1"
+  },
+  "auth_brand_description_2": "Ваш сеанс хранится в безопасном хранилище и проверяется с помощью того же бэкэнда, который вы уже использовали.",
+  "@auth_brand_description_2": {
+    "description": "auth_brand_description_2"
+  },
+  "auth_brand_not_configured": "Файл .env необходимо настроить для подключения серверной части аутентификации.",
+  "@auth_brand_not_configured": {
+    "description": "auth_brand_not_configured"
+  },
+  "auth_forgot_password_subtitle": "Мы вышлем вам инструкции на электронную почту вашего аккаунта.",
+  "@auth_forgot_password_subtitle": {
+    "description": "auth_forgot_password_subtitle"
+  },
+  "auth_btn_send_email": "Отправить письмо",
+  "@auth_btn_send_email": {
+    "description": "auth_btn_send_email"
+  },
+  "auth_error_not_configured": "Серверная часть аутентификации отсутствует, ее можно настроить в файле .env.",
+  "@auth_error_not_configured": {
+    "description": "auth_error_not_configured"
+  },
+  "auth_error_invalid_credentials": "Неправильный адрес электронной почты или пароль.",
+  "@auth_error_invalid_credentials": {
+    "description": "auth_error_invalid_credentials"
+  },
+  "auth_error_not_verified": "Ваша учетная запись еще не подтверждена.",
+  "@auth_error_not_verified": {
+    "description": "auth_error_not_verified"
+  },
+  "auth_error_unknown": "Завершить операцию не удалось.",
+  "@auth_error_unknown": {
+    "description": "auth_error_unknown"
+  },
+  "auth_register_success": "Аккаунт успешно создан.",
+  "@auth_register_success": {
+    "description": "auth_register_success"
+  },
+  "auth_register_error": "Не удалось создать учетную запись.",
+  "@auth_register_error": {
+    "description": "auth_register_error"
+  },
+  "auth_recovery_email_sent": "Письмо отправлено.",
+  "@auth_recovery_email_sent": {
+    "description": "auth_recovery_email_sent"
+  },
+  "auth_recovery_email_error": "Отправить письмо не удалось.",
+  "@auth_recovery_email_error": {
+    "description": "auth_recovery_email_error"
+  },
+  "latestVersion": "Доступна последняя версия",
+  "@latestVersion": {
+    "description": "latestVersion"
+  },
+  "updateApp": "Обновить приложение",
+  "@updateApp": {
+    "description": "updateApp"
+  },
+  "loadInfoUpdate": "Не удалось загрузить информацию об обновлении",
+  "@loadInfoUpdate": {
+    "description": "loadInfoUpdate"
+  },
+  "infoNotAvailable": "Информация недоступна",
+  "@infoNotAvailable": {
+    "description": "infoNotAvailable"
+  },
+  "developedBy": "Разработан и поддерживается Джоссом Эстрадой (JOSPROX)",
+  "@developedBy": {
+    "description": "developedBy"
+  },
+  "copyrightNotice": "© 2026 ЙОСПРОКС. Лицензия GPL v3.0",
+  "@copyrightNotice": {
+    "description": "copyrightNotice"
   }
 }

@@ -1978,5 +1978,323 @@
   "auth_2fa_invalid": "Masukkan kode 6 digit yang valid atau masuk lagi.",
   "@auth_2fa_invalid": {
     "description": "auth_2fa_invalid"
+  },
+  "backupSettingsAndPlaylists": "Pengaturan cadangan dan daftar putar",
+  "@backupSettingsAndPlaylists": {
+    "description": "backupSettingsAndPlaylists"
+  },
+  "restoreSettingsAndPlaylists": "Pulihkan pengaturan dan daftar putar",
+  "@restoreSettingsAndPlaylists": {
+    "description": "restoreSettingsAndPlaylists"
+  },
+  "helloWorld": "Halo dunia",
+  "@helloWorld": {
+    "description": "Este texto es opcional"
+  },
+  "removeFromCache": "Hapus dari cache",
+  "@removeFromCache": {
+    "description": "removeFromCache"
+  },
+  "quickPics": "Seleksi cepat",
+  "@quickPics": {
+    "description": "quickPics"
+  },
+  "topMusicVid": "Video musik teratas",
+  "@topMusicVid": {
+    "description": "topMusicVid"
+  },
+  "exportPlaylistCsv": "Ekspor daftar putar sebagai CSV",
+  "@exportPlaylistCsv": {
+    "description": "exportPlaylistCsv"
+  },
+  "exportPlaylistJson": "Ekspor daftar putar ke JSON",
+  "@exportPlaylistJson": {
+    "description": "exportPlaylistJson"
+  },
+  "exportPlaylistJsonSubtitle": "Format ini dapat diimpor",
+  "@exportPlaylistJsonSubtitle": {
+    "description": "exportPlaylistJsonSubtitle"
+  },
+  "exportPlaylistCsvSubtitle": "Tidak dapat mengimpor ke sini",
+  "@exportPlaylistCsvSubtitle": {
+    "description": "exportPlaylistCsvSubtitle"
+  },
+  "exportToYouTubeMusic": "Ekspor ke musik Youtube",
+  "@exportToYouTubeMusic": {
+    "description": "exportToYouTubeMusic"
+  },
+  "exportToYouTubeMusicSubtitle": "Ini akan mendorong playlist Anda (lagu <50) ke antrian saat ini, jangan lupa untuk menambahkannya ke playlist/simpan setelah membukanya di YtMusic",
+  "@exportToYouTubeMusicSubtitle": {
+    "description": "exportToYouTubeMusicSubtitle"
+  },
+  "linkCopied": "Tautan disalin ke papan klip",
+  "@linkCopied": {
+    "description": "linkCopied"
+  },
+  "lyrics": "Surat",
+  "@lyrics": {
+    "description": "lyrics"
+  },
+  "no": "Tidak",
+  "@no": {
+    "description": "no"
+  },
+  "podcasts": "Podcast",
+  "@podcasts": {
+    "description": "podcasts"
+  },
+  "episodes": "Episode",
+  "@episodes": {
+    "description": "episodes"
+  },
+  "profiles": "Profil",
+  "@profiles": {
+    "description": "profiles"
+  },
+  "addToLibrary": "Tambahkan ke perpustakaan",
+  "@addToLibrary": {
+    "description": "addToLibrary"
+  },
+  "removeFromLibrary": "Hapus dari perpustakaan",
+  "@removeFromLibrary": {
+    "description": "removeFromLibrary"
+  },
+  "play": "Mainkan",
+  "@play": {
+    "description": "play"
+  },
+  "enqueueAlbumSongs": "Tambahkan lagu album ke antrean",
+  "@enqueueAlbumSongs": {
+    "description": "enqueueAlbumSongs"
+  },
+  "downloadAlbumSongs": "Unduh lagu dari album",
+  "@downloadAlbumSongs": {
+    "description": "downloadAlbumSongs"
+  },
+  "shareAlbum": "Bagikan album",
+  "@shareAlbum": {
+    "description": "shareAlbum"
+  },
+  "imported": "Diimpor",
+  "@imported": {
+    "description": "imported"
+  },
+  "importedPlaylist": "Daftar putar yang diimpor",
+  "@importedPlaylist": {
+    "description": "importedPlaylist"
+  },
+  "permissionDenied": "Izin ditolak",
+  "@permissionDenied": {
+    "description": "permissionDenied"
+  },
+  "enqueueSongs": "Tambahkan lagu ke antrean",
+  "@enqueueSongs": {
+    "description": "enqueueSongs"
+  },
+  "shuffle": "Acak",
+  "@shuffle": {
+    "description": "shuffle"
+  },
+  "downloadPlaylist": "Unduh daftar putar",
+  "@downloadPlaylist": {
+    "description": "downloadPlaylist"
+  },
+  "syncPlaylistSongs": "Sinkronkan lagu daftar putar",
+  "@syncPlaylistSongs": {
+    "description": "syncPlaylistSongs"
+  },
+  "blacklistPipedPlaylist": "Daftar hitam daftar putar",
+  "@blacklistPipedPlaylist": {
+    "description": "blacklistPipedPlaylist"
+  },
+  "sharePlaylist": "Bagikan daftar putar",
+  "@sharePlaylist": {
+    "description": "sharePlaylist"
+  },
+  "playlist": "Daftar putar",
+  "@playlist": {
+    "description": "playlist"
+  },
+  "sortByName": "Urutkan berdasarkan nama",
+  "@sortByName": {
+    "description": "sortByName"
+  },
+  "sortByDate": "Urutkan berdasarkan tanggal",
+  "@sortByDate": {
+    "description": "sortByDate"
+  },
+  "sortByDuration": "Urutkan berdasarkan durasi",
+  "@sortByDuration": {
+    "description": "sortByDuration"
+  },
+  "sortAscendNDescend": "Urutkan naik/turun",
+  "@sortAscendNDescend": {
+    "description": "sortAscendNDescend"
+  },
+  "migration_summary_start": "Migrasi selesai dari {source}.",
+  "@migration_summary_start": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      }
+    },
+    "description": "migration_summary_start"
+  },
+  "migration_summary_playlists": "Daftar Putar: {count}",
+  "@migration_summary_playlists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_playlists"
+  },
+  "migration_summary_songs": "Lagu: {count}",
+  "@migration_summary_songs": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_songs"
+  },
+  "migration_summary_favorites": "Favorit: {count}",
+  "@migration_summary_favorites": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_favorites"
+  },
+  "migration_summary_albums": "Album: {count}",
+  "@migration_summary_albums": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_albums"
+  },
+  "migration_summary_artists": "Artis: {count}",
+  "@migration_summary_artists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_artists"
+  },
+  "migration_select_file_dialog": "Pilih song.db atau cadangan .backup",
+  "@migration_select_file_dialog": {
+    "description": "migration_select_file_dialog"
+  },
+  "migration_success": "Migrasi berhasil diselesaikan.",
+  "@migration_success": {
+    "description": "migration_success"
+  },
+  "backup_select_folder_dialog": "Pilih folder untuk cadangan",
+  "@backup_select_folder_dialog": {
+    "description": "backup_select_folder_dialog"
+  },
+  "restore_select_file_dialog": "Pilih file cadangan",
+  "@restore_select_file_dialog": {
+    "description": "restore_select_file_dialog"
+  },
+  "auth_hint_email": "nama@mail.com",
+  "@auth_hint_email": {
+    "description": "auth_hint_email"
+  },
+  "auth_error_invalid_email": "Masukkan email yang valid.",
+  "@auth_error_invalid_email": {
+    "description": "auth_error_invalid_email"
+  },
+  "settings_cloud_backup_dialog_desc": "Unggah cadangan aplikasi .hmb ke server dan, jika perlu, pulihkan cadangan yang disimpan.",
+  "@settings_cloud_backup_dialog_desc": {
+    "description": "settings_cloud_backup_dialog_desc"
+  },
+  "delete": "Hapus",
+  "@delete": {
+    "description": "delete"
+  },
+  "in_app_storage": "Direktori penyimpanan internal",
+  "@in_app_storage": {
+    "description": "in_app_storage"
+  },
+  "auth_brand_description_1": "Kami menghadirkan login, registrasi, dan pemulihan kata sandi dari proyek sebelumnya, yang diadaptasi untuk aplikasi musik ini.",
+  "@auth_brand_description_1": {
+    "description": "auth_brand_description_1"
+  },
+  "auth_brand_description_2": "Sesi Anda berada di penyimpanan aman dan divalidasi dengan backend yang sama dengan yang sudah Anda gunakan.",
+  "@auth_brand_description_2": {
+    "description": "auth_brand_description_2"
+  },
+  "auth_brand_not_configured": "File .env perlu dikonfigurasi untuk menghubungkan backend otentikasi.",
+  "@auth_brand_not_configured": {
+    "description": "auth_brand_not_configured"
+  },
+  "auth_forgot_password_subtitle": "Kami akan mengirimkan petunjuknya ke email akun Anda.",
+  "@auth_forgot_password_subtitle": {
+    "description": "auth_forgot_password_subtitle"
+  },
+  "auth_btn_send_email": "Kirim email",
+  "@auth_btn_send_email": {
+    "description": "auth_btn_send_email"
+  },
+  "auth_error_not_configured": "Backend autentikasi tidak ada untuk dikonfigurasi dalam file .env.",
+  "@auth_error_not_configured": {
+    "description": "auth_error_not_configured"
+  },
+  "auth_error_invalid_credentials": "Email atau kata sandi salah.",
+  "@auth_error_invalid_credentials": {
+    "description": "auth_error_invalid_credentials"
+  },
+  "auth_error_not_verified": "Akun Anda belum diverifikasi.",
+  "@auth_error_not_verified": {
+    "description": "auth_error_not_verified"
+  },
+  "auth_error_unknown": "Operasi tersebut tidak dapat diselesaikan.",
+  "@auth_error_unknown": {
+    "description": "auth_error_unknown"
+  },
+  "auth_register_success": "Akun berhasil dibuat.",
+  "@auth_register_success": {
+    "description": "auth_register_success"
+  },
+  "auth_register_error": "Akun tidak dapat dibuat.",
+  "@auth_register_error": {
+    "description": "auth_register_error"
+  },
+  "auth_recovery_email_sent": "Email terkirim.",
+  "@auth_recovery_email_sent": {
+    "description": "auth_recovery_email_sent"
+  },
+  "auth_recovery_email_error": "Tidak mungkin mengirim email.",
+  "@auth_recovery_email_error": {
+    "description": "auth_recovery_email_error"
+  },
+  "latestVersion": "Versi Terbaru Tersedia",
+  "@latestVersion": {
+    "description": "latestVersion"
+  },
+  "updateApp": "Perbarui Aplikasi",
+  "@updateApp": {
+    "description": "updateApp"
+  },
+  "loadInfoUpdate": "Tidak dapat memuat informasi pembaruan",
+  "@loadInfoUpdate": {
+    "description": "loadInfoUpdate"
+  },
+  "infoNotAvailable": "Informasi tidak tersedia",
+  "@infoNotAvailable": {
+    "description": "infoNotAvailable"
+  },
+  "developedBy": "Dikembangkan dan Dikelola oleh Joss Estrada (JOSPROX)",
+  "@developedBy": {
+    "description": "developedBy"
+  },
+  "copyrightNotice": "© 2026JOSPROX. Lisensi GPL v3.0",
+  "@copyrightNotice": {
+    "description": "copyrightNotice"
   }
 }

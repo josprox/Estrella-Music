@@ -1662,5 +1662,639 @@
   "auth_2fa_invalid": "Voer een geldige 6-cijferige code in of log opnieuw in.",
   "@auth_2fa_invalid": {
     "description": "auth_2fa_invalid"
+  },
+  "backupMsg": "Back-up succesvol opgeslagen!",
+  "@backupMsg": {
+    "description": "backupMsg"
+  },
+  "backFilesFound": "databanken gevonden",
+  "@backFilesFound": {
+    "description": "backFilesFound"
+  },
+  "restoreMsg": "Succesvol hersteld!\nWijzigingen worden toegepast bij het opnieuw opstarten",
+  "@restoreMsg": {
+    "description": "restoreMsg"
+  },
+  "restoring": "Herstellen...",
+  "@restoring": {
+    "description": "restoring"
+  },
+  "restore": "Herstellen",
+  "@restore": {
+    "description": "restore"
+  },
+  "closeApp": "Sluit de applicatie",
+  "@closeApp": {
+    "description": "closeApp"
+  },
+  "standard": "Standaard",
+  "@standard": {
+    "description": "standard"
+  },
+  "gesture": "Gebaar",
+  "@gesture": {
+    "description": "gesture"
+  },
+  "audioCodec": "Audiocodec",
+  "@audioCodec": {
+    "description": "audioCodec"
+  },
+  "autoDownFavSongDes": "Download automatisch favoriete nummers wanneer ze aan favorieten worden toegevoegd",
+  "@autoDownFavSongDes": {
+    "description": "autoDownFavSongDes"
+  },
+  "loudnessNormalization": "Normalisatie van de luidheid",
+  "@loudnessNormalization": {
+    "description": "loudnessNormalization"
+  },
+  "playerUi": "Speler-UI",
+  "@playerUi": {
+    "description": "playerUi"
+  },
+  "songNotPlayable": "Het nummer kan niet worden afgespeeld vanwege serverbeperkingen!",
+  "@songNotPlayable": {
+    "description": "songNotPlayable"
+  },
+  "loudnessDb": "LuidheidDb",
+  "@loudnessDb": {
+    "description": "loudnessDb"
+  },
+  "restoreAppData": "App-gegevens herstellen",
+  "@restoreAppData": {
+    "description": "restoreAppData"
+  },
+  "queueShufflingDeniedMsg": "De willekeurige modus is geactiveerd. U kunt de wachtrij niet handmatig mixen.",
+  "@queueShufflingDeniedMsg": {
+    "description": "queueShufflingDeniedMsg"
+  },
+  "includeDownloadedFiles": "Inclusief gedownloade songbestanden",
+  "@includeDownloadedFiles": {
+    "description": "includeDownloadedFiles"
+  },
+  "backupInProgress": "Back-up wordt uitgevoerd...",
+  "@backupInProgress": {
+    "description": "backupInProgress"
+  },
+  "queuerearrangingDeniedMsg": "De wachtrij kan niet opnieuw worden gerangschikt als de shuffle-modus is ingeschakeld",
+  "@queuerearrangingDeniedMsg": {
+    "description": "queuerearrangingDeniedMsg"
+  },
+  "content": "Inhoud",
+  "@content": {
+    "description": "content"
+  },
+  "downloadError3": "Downloaden mislukt vanwege netwerk-/transmissiefout! Probeer het opnieuw",
+  "@downloadError3": {
+    "description": "downloadError3"
+  },
+  "personalisation": "Personalisatie",
+  "@personalisation": {
+    "description": "personalisation"
+  },
+  "playerUiDes": "Selecteer de gebruikersinterface van de speler",
+  "@playerUiDes": {
+    "description": "playerUiDes"
+  },
+  "musicAndPlayback": "Muziek en afspelen",
+  "@musicAndPlayback": {
+    "description": "musicAndPlayback"
+  },
+  "appInfo": "Applicatie-informatie",
+  "@appInfo": {
+    "description": "appInfo"
+  },
+  "networkError": "Netwerkfout! Controleer uw internetverbinding.",
+  "@networkError": {
+    "description": "networkError"
+  },
+  "download": "Downloaden",
+  "@download": {
+    "description": "download"
+  },
+  "downloadError2": "Het opgevraagde nummer kan niet worden gedownload vanwege serverbeperkingen. Je kunt het opnieuw proberen",
+  "@downloadError2": {
+    "description": "downloadError2"
+  },
+  "letsStrart": "Laten we beginnen..",
+  "@letsStrart": {
+    "description": "letsStrart"
+  },
+  "processFiles": "Bestanden verwerken...",
+  "@processFiles": {
+    "description": "processFiles"
+  },
+  "backupAppData": "Maak een back-up van app-gegevens",
+  "@backupAppData": {
+    "description": "backupAppData"
+  },
+  "backup": "Back-up",
+  "@backup": {
+    "description": "backup"
+  },
+  "playnextMsg": "Binnenkort beschikbaar",
+  "@playnextMsg": {
+    "description": "playnextMsg"
+  },
+  "shuffleQueue": "gemengde staart",
+  "@shuffleQueue": {
+    "description": "shuffleQueue"
+  },
+  "queueLoop": "staart lus",
+  "@queueLoop": {
+    "description": "queueLoop"
+  },
+  "queueLoopNotDisMsg1": "De wachtrijlusmodus kan niet worden uitgeschakeld als de shuffle-modus is ingeschakeld.",
+  "@queueLoopNotDisMsg1": {
+    "description": "queueLoopNotDisMsg1"
+  },
+  "queueLoopNotDisMsg2": "De staartlusmodus kan niet worden geactiveerd in de radiomodus.",
+  "@queueLoopNotDisMsg2": {
+    "description": "queueLoopNotDisMsg2"
+  },
+  "loudnessNormalizationDes": "Stelt hetzelfde luidheidsniveau in voor alle nummers (experimenteel) (werkt niet op nummers die zijn gedownload in oudere versies (< v1.10.0))",
+  "@loudnessNormalizationDes": {
+    "description": "loudnessNormalizationDes"
+  },
+  "enableSlidableAction": "Activeer schuifacties",
+  "@enableSlidableAction": {
+    "description": "enableSlidableAction"
+  },
+  "enableSlidableActionDes": "Activeer veegacties op de nummertegel",
+  "@enableSlidableActionDes": {
+    "description": "enableSlidableActionDes"
+  },
+  "bitrate": "Bitsnelheid",
+  "@bitrate": {
+    "description": "bitrate"
+  },
+  "androidBackupWarning": "Niet getest: als u het selectievakje inschakelt nadat u meer dan 60 bestanden hebt gedownload, kan het proces een grote hoeveelheid geheugen in beslag nemen en kan de telefoon of app crashen. Ga verder op eigen risico.",
+  "@androidBackupWarning": {
+    "description": "androidBackupWarning"
+  },
+  "songInfo": "Informatie over het nummer",
+  "@songInfo": {
+    "description": "songInfo"
+  },
+  "id": "Identiteitskaart",
+  "@id": {
+    "description": "id"
+  },
+  "title": "Titel",
+  "@title": {
+    "description": "title"
+  },
+  "restartApp": "Start de applicatie opnieuw",
+  "@restartApp": {
+    "description": "restartApp"
+  },
+  "autoDownFavSong": "Automatisch downloaden van favoriete nummers",
+  "@autoDownFavSong": {
+    "description": "autoDownFavSong"
+  },
+  "duration": "Duur",
+  "@duration": {
+    "description": "duration"
+  },
+  "urlSearchDes": "Gedetecteerde URL klik erop om de bijbehorende inhoud te openen/af te spelen",
+  "@urlSearchDes": {
+    "description": "urlSearchDes"
+  },
+  "reArrangeSongs": "Nummers opnieuw ordenen",
+  "@reArrangeSongs": {
+    "description": "reArrangeSongs"
+  },
+  "playingfromAlbum": "SPELEN VAN ALBUM",
+  "@playingfromAlbum": {
+    "description": "playingfromAlbum"
+  },
+  "playingfromPlaylist": "AFSPELEN VANUIT AFSPEELLIJST",
+  "@playingfromPlaylist": {
+    "description": "playingfromPlaylist"
+  },
+  "playingfromSelection": "SPELEN VANUIT SELECTIE",
+  "@playingfromSelection": {
+    "description": "playingfromSelection"
+  },
+  "resetToDefaultMsg": "Het terugzetten van de instellingen naar de standaardinstellingen is voltooid. Start de app opnieuw",
+  "@resetToDefaultMsg": {
+    "description": "resetToDefaultMsg"
+  },
+  "resetToDefaultDes": "App-instellingen terugzetten naar standaard (herstart vereist)",
+  "@resetToDefaultDes": {
+    "description": "resetToDefaultDes"
+  },
+  "misc": "Diversen",
+  "@misc": {
+    "description": "misc"
+  },
+  "resetToDefault": "Standaardinstellingen herstellen",
+  "@resetToDefault": {
+    "description": "resetToDefault"
+  },
+  "autoOpenPlayer": "Automatisch spelersscherm openen",
+  "@autoOpenPlayer": {
+    "description": "autoOpenPlayer"
+  },
+  "autoOpenPlayerDes": "Activeer/deactiveer het automatisch openen van de speler naar volledig scherm bij het selecteren van een nummer om af te spelen",
+  "@autoOpenPlayerDes": {
+    "description": "autoOpenPlayerDes"
+  },
+  "playingfromArtist": "SPELEN VAN KUNSTENAAR",
+  "@playingfromArtist": {
+    "description": "playingfromArtist"
+  },
+  "randomSelection": "Willekeurige selectie",
+  "@randomSelection": {
+    "description": "randomSelection"
+  },
+  "randomRadio": "Willekeurige radio",
+  "@randomRadio": {
+    "description": "randomRadio"
+  },
+  "exportPlaylist": "Afspeellijst exporteren",
+  "@exportPlaylist": {
+    "description": "exportPlaylist"
+  },
+  "importPlaylistDesc": "Selecteer een eerder geëxporteerd afspeellijst-JSON-bestand om te importeren",
+  "@importPlaylistDesc": {
+    "description": "importPlaylistDesc"
+  },
+  "invalidPlaylistFile": "Ongeldige bestandsstructuur van afspeellijst",
+  "@invalidPlaylistFile": {
+    "description": "invalidPlaylistFile"
+  },
+  "fileNotFound": "Bestand niet gevonden",
+  "@fileNotFound": {
+    "description": "fileNotFound"
+  },
+  "exportErrorPermission": "Toestemming geweigerd bij exporteren",
+  "@exportErrorPermission": {
+    "description": "exportErrorPermission"
+  },
+  "importingPlaylist": "Afspeellijst importeren...",
+  "@importingPlaylist": {
+    "description": "importingPlaylist"
+  },
+  "exportErrorStorage": "Onvoldoende opslagruimte",
+  "@exportErrorStorage": {
+    "description": "exportErrorStorage"
+  },
+  "exportingPlaylist": "Afspeellijst exporteren...",
+  "@exportingPlaylist": {
+    "description": "exportingPlaylist"
+  },
+  "playlistExportedMsg": "Afspeellijst succesvol geëxporteerd naar",
+  "@playlistExportedMsg": {
+    "description": "playlistExportedMsg"
+  },
+  "exportError": "Fout bij exporteren van afspeellijst",
+  "@exportError": {
+    "description": "exportError"
+  },
+  "exportErrorFormat": "Fout bij het formatteren van afspeellijstgegevens",
+  "@exportErrorFormat": {
+    "description": "exportErrorFormat"
+  },
+  "importPlaylist": "Importeer afspeellijst",
+  "@importPlaylist": {
+    "description": "importPlaylist"
+  },
+  "selectFile": "Selecteer Bestand",
+  "@selectFile": {
+    "description": "selectFile"
+  },
+  "playlistImportedMsg": "Afspeellijst geïmporteerd",
+  "@playlistImportedMsg": {
+    "description": "playlistImportedMsg"
+  },
+  "importError": "Fout bij importeren van afspeellijst",
+  "@importError": {
+    "description": "importError"
+  },
+  "importErrorFileAccess": "Het geselecteerde bestand kon niet worden geopend",
+  "@importErrorFileAccess": {
+    "description": "importErrorFileAccess"
+  },
+  "importErrorFormat": "Ongeldig bestandsformaat",
+  "@importErrorFormat": {
+    "description": "importErrorFormat"
+  },
+  "importErrorDatabase": "Fout bij opslaan in database",
+  "@importErrorDatabase": {
+    "description": "importErrorDatabase"
+  },
+  "importLargeFileNote": "Opmerking: het importeren van grote afspeellijsten kan langer duren",
+  "@importLargeFileNote": {
+    "description": "importLargeFileNote"
+  },
+  "exportPlaylistCsv": "Exporteer afspeellijst als CSV",
+  "@exportPlaylistCsv": {
+    "description": "exportPlaylistCsv"
+  },
+  "exportPlaylistJson": "Exporteer afspeellijst naar JSON",
+  "@exportPlaylistJson": {
+    "description": "exportPlaylistJson"
+  },
+  "exportPlaylistJsonSubtitle": "Dit formaat kan worden geïmporteerd",
+  "@exportPlaylistJsonSubtitle": {
+    "description": "exportPlaylistJsonSubtitle"
+  },
+  "exportPlaylistCsvSubtitle": "Kan hier niet importeren",
+  "@exportPlaylistCsvSubtitle": {
+    "description": "exportPlaylistCsvSubtitle"
+  },
+  "exportToYouTubeMusic": "Exporteren naar YouTube-muziek",
+  "@exportToYouTubeMusic": {
+    "description": "exportToYouTubeMusic"
+  },
+  "exportToYouTubeMusicSubtitle": "Het zal je afspeellijst (nummers < 50) naar de huidige wachtrij pushen, vergeet niet om deze aan de afspeellijst toe te voegen/op te slaan nadat je deze in YtMusic hebt geopend",
+  "@exportToYouTubeMusicSubtitle": {
+    "description": "exportToYouTubeMusicSubtitle"
+  },
+  "linkCopied": "Link gekopieerd naar klembord",
+  "@linkCopied": {
+    "description": "linkCopied"
+  },
+  "lyrics": "Brieven",
+  "@lyrics": {
+    "description": "lyrics"
+  },
+  "no": "Nee",
+  "@no": {
+    "description": "no"
+  },
+  "podcasts": "Podcasts",
+  "@podcasts": {
+    "description": "podcasts"
+  },
+  "episodes": "Afleveringen",
+  "@episodes": {
+    "description": "episodes"
+  },
+  "profiles": "Profielen",
+  "@profiles": {
+    "description": "profiles"
+  },
+  "addToLibrary": "Toevoegen aan bibliotheek",
+  "@addToLibrary": {
+    "description": "addToLibrary"
+  },
+  "removeFromLibrary": "Verwijderen uit bibliotheek",
+  "@removeFromLibrary": {
+    "description": "removeFromLibrary"
+  },
+  "play": "Spelen",
+  "@play": {
+    "description": "play"
+  },
+  "enqueueAlbumSongs": "Voeg albumnummers toe aan de wachtrij",
+  "@enqueueAlbumSongs": {
+    "description": "enqueueAlbumSongs"
+  },
+  "downloadAlbumSongs": "Download nummers van het album",
+  "@downloadAlbumSongs": {
+    "description": "downloadAlbumSongs"
+  },
+  "shareAlbum": "Album delen",
+  "@shareAlbum": {
+    "description": "shareAlbum"
+  },
+  "imported": "Geïmporteerd",
+  "@imported": {
+    "description": "imported"
+  },
+  "importedPlaylist": "Geïmporteerde afspeellijst",
+  "@importedPlaylist": {
+    "description": "importedPlaylist"
+  },
+  "permissionDenied": "Toestemming geweigerd",
+  "@permissionDenied": {
+    "description": "permissionDenied"
+  },
+  "enqueueSongs": "Voeg nummers toe aan de wachtrij",
+  "@enqueueSongs": {
+    "description": "enqueueSongs"
+  },
+  "shuffle": "Willekeurig",
+  "@shuffle": {
+    "description": "shuffle"
+  },
+  "downloadPlaylist": "Speellijst downloaden",
+  "@downloadPlaylist": {
+    "description": "downloadPlaylist"
+  },
+  "syncPlaylistSongs": "Synchroniseer afspeellijstnummers",
+  "@syncPlaylistSongs": {
+    "description": "syncPlaylistSongs"
+  },
+  "blacklistPipedPlaylist": "Zwarte lijst voor afspeellijsten",
+  "@blacklistPipedPlaylist": {
+    "description": "blacklistPipedPlaylist"
+  },
+  "sharePlaylist": "Deel afspeellijst",
+  "@sharePlaylist": {
+    "description": "sharePlaylist"
+  },
+  "playlist": "Afspeellijst",
+  "@playlist": {
+    "description": "playlist"
+  },
+  "sortByName": "Sorteer op naam",
+  "@sortByName": {
+    "description": "sortByName"
+  },
+  "sortByDate": "Sorteer op datum",
+  "@sortByDate": {
+    "description": "sortByDate"
+  },
+  "sortByDuration": "Sorteer op duur",
+  "@sortByDuration": {
+    "description": "sortByDuration"
+  },
+  "sortAscendNDescend": "Sorteer oplopend/aflopend",
+  "@sortAscendNDescend": {
+    "description": "sortAscendNDescend"
+  },
+  "migration_summary_start": "Migratie voltooid vanaf {source}.",
+  "@migration_summary_start": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      }
+    },
+    "description": "migration_summary_start"
+  },
+  "migration_summary_playlists": "Afspeellijsten: {count}",
+  "@migration_summary_playlists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_playlists"
+  },
+  "migration_summary_songs": "Nummers: {count}",
+  "@migration_summary_songs": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_songs"
+  },
+  "migration_summary_favorites": "Favorieten: {count}",
+  "@migration_summary_favorites": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_favorites"
+  },
+  "migration_summary_albums": "Albums: {count}",
+  "@migration_summary_albums": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_albums"
+  },
+  "migration_summary_artists": "Artiesten: {count}",
+  "@migration_summary_artists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_artists"
+  },
+  "migration_select_file_dialog": "Selecteer song.db of een back-up .backup",
+  "@migration_select_file_dialog": {
+    "description": "migration_select_file_dialog"
+  },
+  "migration_success": "Migratie succesvol afgerond.",
+  "@migration_success": {
+    "description": "migration_success"
+  },
+  "backup_select_folder_dialog": "Selecteer de map voor back-up",
+  "@backup_select_folder_dialog": {
+    "description": "backup_select_folder_dialog"
+  },
+  "restore_select_file_dialog": "Selecteer het back-upbestand",
+  "@restore_select_file_dialog": {
+    "description": "restore_select_file_dialog"
+  },
+  "auth_hint_email": "naam@mail.com",
+  "@auth_hint_email": {
+    "description": "auth_hint_email"
+  },
+  "auth_error_invalid_email": "Voer een geldig e-mailadres in.",
+  "@auth_error_invalid_email": {
+    "description": "auth_error_invalid_email"
+  },
+  "settings_cloud_backup_dialog_desc": "Upload een .hmb-back-up van de app naar de server en herstel indien nodig een van de opgeslagen back-ups.",
+  "@settings_cloud_backup_dialog_desc": {
+    "description": "settings_cloud_backup_dialog_desc"
+  },
+  "delete": "Verwijderen",
+  "@delete": {
+    "description": "delete"
+  },
+  "in_app_storage": "Interne opslagmap",
+  "@in_app_storage": {
+    "description": "in_app_storage"
+  },
+  "auth_brand_description_1": "We hebben de login, registratie en wachtwoordherstel van het vorige project meegenomen, aangepast voor deze muziekapp.",
+  "@auth_brand_description_1": {
+    "description": "auth_brand_description_1"
+  },
+  "auth_brand_description_2": "Uw sessie bevindt zich in een beveiligde opslag en wordt gevalideerd met dezelfde backend die u al gebruikte.",
+  "@auth_brand_description_2": {
+    "description": "auth_brand_description_2"
+  },
+  "auth_brand_not_configured": "Het .env-bestand moet worden geconfigureerd om verbinding te maken met de authenticatie-backend.",
+  "@auth_brand_not_configured": {
+    "description": "auth_brand_not_configured"
+  },
+  "auth_forgot_password_subtitle": "We sturen u de instructies naar uw account-e-mailadres.",
+  "@auth_forgot_password_subtitle": {
+    "description": "auth_forgot_password_subtitle"
+  },
+  "auth_btn_send_email": "Stuur e-mail",
+  "@auth_btn_send_email": {
+    "description": "auth_btn_send_email"
+  },
+  "auth_error_not_configured": "De authenticatie-backend ontbreekt om te worden geconfigureerd in het .env-bestand.",
+  "@auth_error_not_configured": {
+    "description": "auth_error_not_configured"
+  },
+  "auth_error_invalid_credentials": "Onjuist e-mailadres of wachtwoord.",
+  "@auth_error_invalid_credentials": {
+    "description": "auth_error_invalid_credentials"
+  },
+  "auth_error_not_verified": "Uw account is nog niet geverifieerd.",
+  "@auth_error_not_verified": {
+    "description": "auth_error_not_verified"
+  },
+  "auth_error_unknown": "Het was niet mogelijk de operatie te voltooien.",
+  "@auth_error_unknown": {
+    "description": "auth_error_unknown"
+  },
+  "auth_register_success": "Account aangemaakt.",
+  "@auth_register_success": {
+    "description": "auth_register_success"
+  },
+  "auth_register_error": "Het account kon niet worden aangemaakt.",
+  "@auth_register_error": {
+    "description": "auth_register_error"
+  },
+  "auth_recovery_email_sent": "E-mail verzonden.",
+  "@auth_recovery_email_sent": {
+    "description": "auth_recovery_email_sent"
+  },
+  "auth_recovery_email_error": "Het was niet mogelijk om de e-mail te verzenden.",
+  "@auth_recovery_email_error": {
+    "description": "auth_recovery_email_error"
+  },
+  "latestVersion": "Nieuwste versie beschikbaar",
+  "@latestVersion": {
+    "description": "latestVersion"
+  },
+  "updateApp": "Applicatie bijwerken",
+  "@updateApp": {
+    "description": "updateApp"
+  },
+  "loadInfoUpdate": "Kan update-informatie niet laden",
+  "@loadInfoUpdate": {
+    "description": "loadInfoUpdate"
+  },
+  "infoNotAvailable": "Informatie niet beschikbaar",
+  "@infoNotAvailable": {
+    "description": "infoNotAvailable"
+  },
+  "developedBy": "Ontwikkeld en onderhouden door Joss Estrada (JOSPROX)",
+  "@developedBy": {
+    "description": "developedBy"
+  },
+  "copyrightNotice": "© 2026 JOSPROX. GPL-licentie v3.0",
+  "@copyrightNotice": {
+    "description": "copyrightNotice"
+  },
+  "helloWorld": "Hallo wereld",
+  "@helloWorld": {
+    "description": "Este texto es opcional"
+  },
+  "removeFromCache": "Verwijderen uit cache",
+  "@removeFromCache": {
+    "description": "removeFromCache"
+  },
+  "quickPics": "Snelle selectie",
+  "@quickPics": {
+    "description": "quickPics"
+  },
+  "topMusicVid": "Topmuziekvideo's",
+  "@topMusicVid": {
+    "description": "topMusicVid"
   }
 }

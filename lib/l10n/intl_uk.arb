@@ -2014,5 +2014,287 @@
   "auth_2fa_invalid": "Введіть дійсний 6-значний код або увійдіть знову.",
   "@auth_2fa_invalid": {
     "description": "auth_2fa_invalid"
+  },
+  "helloWorld": "Привіт світ",
+  "@helloWorld": {
+    "description": "Este texto es opcional"
+  },
+  "removeFromCache": "Видалити з кешу",
+  "@removeFromCache": {
+    "description": "removeFromCache"
+  },
+  "quickPics": "Швидкий вибір",
+  "@quickPics": {
+    "description": "quickPics"
+  },
+  "topMusicVid": "Топ музичних відео",
+  "@topMusicVid": {
+    "description": "topMusicVid"
+  },
+  "lyrics": "Листи",
+  "@lyrics": {
+    "description": "lyrics"
+  },
+  "no": "немає",
+  "@no": {
+    "description": "no"
+  },
+  "podcasts": "Подкасти",
+  "@podcasts": {
+    "description": "podcasts"
+  },
+  "episodes": "епізоди",
+  "@episodes": {
+    "description": "episodes"
+  },
+  "profiles": "Профілі",
+  "@profiles": {
+    "description": "profiles"
+  },
+  "addToLibrary": "Додати до бібліотеки",
+  "@addToLibrary": {
+    "description": "addToLibrary"
+  },
+  "removeFromLibrary": "Видалити з бібліотеки",
+  "@removeFromLibrary": {
+    "description": "removeFromLibrary"
+  },
+  "play": "грати",
+  "@play": {
+    "description": "play"
+  },
+  "enqueueAlbumSongs": "Додайте пісні з альбому в чергу",
+  "@enqueueAlbumSongs": {
+    "description": "enqueueAlbumSongs"
+  },
+  "downloadAlbumSongs": "Скачати пісні з альбому",
+  "@downloadAlbumSongs": {
+    "description": "downloadAlbumSongs"
+  },
+  "shareAlbum": "Поділитися альбомом",
+  "@shareAlbum": {
+    "description": "shareAlbum"
+  },
+  "imported": "Імпортні",
+  "@imported": {
+    "description": "imported"
+  },
+  "importedPlaylist": "Імпортований список відтворення",
+  "@importedPlaylist": {
+    "description": "importedPlaylist"
+  },
+  "permissionDenied": "У дозволі відмовлено",
+  "@permissionDenied": {
+    "description": "permissionDenied"
+  },
+  "enqueueSongs": "Додайте пісні в чергу",
+  "@enqueueSongs": {
+    "description": "enqueueSongs"
+  },
+  "shuffle": "Випадковий",
+  "@shuffle": {
+    "description": "shuffle"
+  },
+  "downloadPlaylist": "Завантажити плейлист",
+  "@downloadPlaylist": {
+    "description": "downloadPlaylist"
+  },
+  "syncPlaylistSongs": "Синхронізація пісень списку відтворення",
+  "@syncPlaylistSongs": {
+    "description": "syncPlaylistSongs"
+  },
+  "blacklistPipedPlaylist": "Чорний список відтворення",
+  "@blacklistPipedPlaylist": {
+    "description": "blacklistPipedPlaylist"
+  },
+  "sharePlaylist": "Поділіться списком відтворення",
+  "@sharePlaylist": {
+    "description": "sharePlaylist"
+  },
+  "playlist": "Список відтворення",
+  "@playlist": {
+    "description": "playlist"
+  },
+  "sortByName": "Сортувати за назвою",
+  "@sortByName": {
+    "description": "sortByName"
+  },
+  "sortByDate": "Сортувати за датою",
+  "@sortByDate": {
+    "description": "sortByDate"
+  },
+  "sortByDuration": "Сортувати за тривалістю",
+  "@sortByDuration": {
+    "description": "sortByDuration"
+  },
+  "sortAscendNDescend": "Сортувати за зростанням/спаданням",
+  "@sortAscendNDescend": {
+    "description": "sortAscendNDescend"
+  },
+  "migration_summary_start": "Переміщення завершено з {source}.",
+  "@migration_summary_start": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      }
+    },
+    "description": "migration_summary_start"
+  },
+  "migration_summary_playlists": "Списки відтворення: {count}",
+  "@migration_summary_playlists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_playlists"
+  },
+  "migration_summary_songs": "Пісень: {count}",
+  "@migration_summary_songs": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_songs"
+  },
+  "migration_summary_favorites": "Вибране: {count}",
+  "@migration_summary_favorites": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_favorites"
+  },
+  "migration_summary_albums": "Альбоми: {count}",
+  "@migration_summary_albums": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_albums"
+  },
+  "migration_summary_artists": "Виконавці: {count}",
+  "@migration_summary_artists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_artists"
+  },
+  "migration_select_file_dialog": "Виберіть song.db або резервну копію .backup",
+  "@migration_select_file_dialog": {
+    "description": "migration_select_file_dialog"
+  },
+  "migration_success": "Перенесення успішно завершено.",
+  "@migration_success": {
+    "description": "migration_success"
+  },
+  "backup_select_folder_dialog": "Виберіть папку для резервного копіювання",
+  "@backup_select_folder_dialog": {
+    "description": "backup_select_folder_dialog"
+  },
+  "restore_select_file_dialog": "Виберіть файл резервної копії",
+  "@restore_select_file_dialog": {
+    "description": "restore_select_file_dialog"
+  },
+  "auth_hint_email": "name@mail.com",
+  "@auth_hint_email": {
+    "description": "auth_hint_email"
+  },
+  "auth_error_invalid_email": "Введіть дійсну електронну адресу.",
+  "@auth_error_invalid_email": {
+    "description": "auth_error_invalid_email"
+  },
+  "settings_cloud_backup_dialog_desc": "Завантажте резервну копію програми .hmb на сервер і, якщо потрібно, відновіть будь-яку зі збережених резервних копій.",
+  "@settings_cloud_backup_dialog_desc": {
+    "description": "settings_cloud_backup_dialog_desc"
+  },
+  "delete": "Видалити",
+  "@delete": {
+    "description": "delete"
+  },
+  "in_app_storage": "Внутрішній каталог зберігання",
+  "@in_app_storage": {
+    "description": "in_app_storage"
+  },
+  "auth_brand_description_1": "Ми взяли логін, реєстрацію та відновлення пароля з попереднього проекту, адаптованого для цього музичного додатку.",
+  "@auth_brand_description_1": {
+    "description": "auth_brand_description_1"
+  },
+  "auth_brand_description_2": "Ваш сеанс зберігається в захищеному сховищі та перевіряється тим самим сервером, який ви вже використовували.",
+  "@auth_brand_description_2": {
+    "description": "auth_brand_description_2"
+  },
+  "auth_brand_not_configured": "Файл .env потрібно налаштувати для підключення серверної частини автентифікації.",
+  "@auth_brand_not_configured": {
+    "description": "auth_brand_not_configured"
+  },
+  "auth_forgot_password_subtitle": "Ми надішлемо вам інструкції на електронну адресу вашого облікового запису.",
+  "@auth_forgot_password_subtitle": {
+    "description": "auth_forgot_password_subtitle"
+  },
+  "auth_btn_send_email": "Надіслати лист",
+  "@auth_btn_send_email": {
+    "description": "auth_btn_send_email"
+  },
+  "auth_error_not_configured": "У файлі .env не налаштовано серверну систему автентифікації.",
+  "@auth_error_not_configured": {
+    "description": "auth_error_not_configured"
+  },
+  "auth_error_invalid_credentials": "Неправильна адреса електронної пошти або пароль.",
+  "@auth_error_invalid_credentials": {
+    "description": "auth_error_invalid_credentials"
+  },
+  "auth_error_not_verified": "Ваш обліковий запис ще не підтверджено.",
+  "@auth_error_not_verified": {
+    "description": "auth_error_not_verified"
+  },
+  "auth_error_unknown": "Завершити операцію не вдалося.",
+  "@auth_error_unknown": {
+    "description": "auth_error_unknown"
+  },
+  "auth_register_success": "Обліковий запис успішно створено.",
+  "@auth_register_success": {
+    "description": "auth_register_success"
+  },
+  "auth_register_error": "Не вдалося створити обліковий запис.",
+  "@auth_register_error": {
+    "description": "auth_register_error"
+  },
+  "auth_recovery_email_sent": "Електронна пошта надіслана.",
+  "@auth_recovery_email_sent": {
+    "description": "auth_recovery_email_sent"
+  },
+  "auth_recovery_email_error": "Не вдалося надіслати електронний лист.",
+  "@auth_recovery_email_error": {
+    "description": "auth_recovery_email_error"
+  },
+  "latestVersion": "Остання доступна версія",
+  "@latestVersion": {
+    "description": "latestVersion"
+  },
+  "updateApp": "Оновлення програми",
+  "@updateApp": {
+    "description": "updateApp"
+  },
+  "loadInfoUpdate": "Не вдалося завантажити інформацію про оновлення",
+  "@loadInfoUpdate": {
+    "description": "loadInfoUpdate"
+  },
+  "infoNotAvailable": "Інформація недоступна",
+  "@infoNotAvailable": {
+    "description": "infoNotAvailable"
+  },
+  "developedBy": "Розроблено та підтримується Джоссом Естрадою (JOSPROX)",
+  "@developedBy": {
+    "description": "developedBy"
+  },
+  "copyrightNotice": "© 2026 JOSPROX. Ліцензія GPL v3.0",
+  "@copyrightNotice": {
+    "description": "copyrightNotice"
   }
 }

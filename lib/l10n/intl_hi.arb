@@ -972,5 +972,1329 @@
       }
     },
     "description": "downloadNotificationSong"
+  },
+  "album": "एल्बम",
+  "@album": {
+    "description": "album"
+  },
+  "reArrangeSongs": "गाने पुन: व्यवस्थित करें",
+  "@reArrangeSongs": {
+    "description": "reArrangeSongs"
+  },
+  "selectSongs": "गाने चुनें",
+  "@selectSongs": {
+    "description": "selectSongs"
+  },
+  "selectAll": "सबका चयन करें",
+  "@selectAll": {
+    "description": "selectAll"
+  },
+  "playingfromAlbum": "एल्बम से बजाना",
+  "@playingfromAlbum": {
+    "description": "playingfromAlbum"
+  },
+  "playingfromPlaylist": "प्लेलिस्ट से खेलना",
+  "@playingfromPlaylist": {
+    "description": "playingfromPlaylist"
+  },
+  "playingfromSelection": "चयन से खेलना",
+  "@playingfromSelection": {
+    "description": "playingfromSelection"
+  },
+  "auth_login_success": "सफलतापूर्वक लॉग इन किया गया",
+  "@auth_login_success": {
+    "description": "auth_login_success"
+  },
+  "settings_cloud_backup": "मेघ बैकअप",
+  "@settings_cloud_backup": {
+    "description": "settings_cloud_backup"
+  },
+  "settings_migration_title": "जॉस म्यूजिक कोटलिन से माइग्रेट करें",
+  "@settings_migration_title": {
+    "description": "settings_migration_title"
+  },
+  "backup_confirm_question": "क्या आप बैकअप बनाना चाहते हैं?",
+  "@backup_confirm_question": {
+    "description": "backup_confirm_question"
+  },
+  "backup_selection_prompt": "चुनें कि किस डेटा का बैकअप लेना है",
+  "@backup_selection_prompt": {
+    "description": "backup_selection_prompt"
+  },
+  "search_recent_title": "हाल की खोजें",
+  "@search_recent_title": {
+    "description": "search_recent_title"
+  },
+  "back": "वापस करना",
+  "@back": {
+    "description": "back"
+  },
+  "auth_forgot_password": "मैं अपना पासवर्ड भूल गया",
+  "@auth_forgot_password": {
+    "description": "auth_forgot_password"
+  },
+  "auth_btn_login": "लॉग इन करें",
+  "@auth_btn_login": {
+    "description": "auth_btn_login"
+  },
+  "auth_btn_register": "पंजीकरण करवाना",
+  "@auth_btn_register": {
+    "description": "auth_btn_register"
+  },
+  "email": "ई-मेल",
+  "@email": {
+    "description": "email"
+  },
+  "password_text": "पासवर्ड",
+  "@password_text": {
+    "description": "Contraseña texto traducido"
+  },
+  "auth_confirm_password": "पासवर्ड की पुष्टि कीजिये",
+  "@auth_confirm_password": {
+    "description": "auth_confirm_password"
+  },
+  "auth_welcome_title": "एस्ट्रेला म्यूजिक में आपका स्वागत है",
+  "@auth_welcome_title": {
+    "description": "auth_welcome_title"
+  },
+  "auth_welcome_subtitle": "एस्ट्रेला म्यूजिक में आपका स्वागत है",
+  "@auth_welcome_subtitle": {
+    "description": "auth_welcome_subtitle"
+  },
+  "auth_first_name": "पहला नाम",
+  "@auth_first_name": {
+    "description": "auth_first_name"
+  },
+  "auth_last_name": "उपनाम",
+  "@auth_last_name": {
+    "description": "auth_last_name"
+  },
+  "auth_agree_personal_data": "मैं अपने डेटा का उपयोग करने के लिए सहमत हूं...",
+  "@auth_agree_personal_data": {
+    "description": "auth_agree_personal_data"
+  },
+  "settings_general_section": "सामान्य",
+  "@settings_general_section": {
+    "description": "settings_general_section"
+  },
+  "settings_logout": "लॉग आउट",
+  "@settings_logout": {
+    "description": "settings_logout"
+  },
+  "settings_cloud_backup_desc": "अपलोड करें, पुनर्स्थापित करें और प्रबंधित करें...",
+  "@settings_cloud_backup_desc": {
+    "description": "settings_cloud_backup_desc"
+  },
+  "settings_migration_desc": "प्लेलिस्ट, गाने आयात करें...",
+  "@settings_migration_desc": {
+    "description": "settings_migration_desc"
+  },
+  "backup_btn_restart": "ऐप पुनः प्रारंभ करें",
+  "@backup_btn_restart": {
+    "description": "backup_btn_restart"
+  },
+  "backup_btn_upload": "अभी बैकअप अपलोड करें",
+  "@backup_btn_upload": {
+    "description": "backup_btn_upload"
+  },
+  "backup_no_backups": "अभी तक कोई बैकअप नहीं है...",
+  "@backup_no_backups": {
+    "description": "backup_no_backups"
+  },
+  "backup_auth_required": "आपको एक सक्रिय सत्र की आवश्यकता है...",
+  "@backup_auth_required": {
+    "description": "backup_auth_required"
+  },
+  "backup_upload_success": "बैकअप सही ढंग से अपलोड किया गया.",
+  "@backup_upload_success": {
+    "description": "backup_upload_success"
+  },
+  "backup_restore_success": "बैकअप पुनर्स्थापित किया गया. ऐप पुनः प्रारंभ करें.",
+  "@backup_restore_success": {
+    "description": "backup_restore_success"
+  },
+  "backup_delete_success": "बैकअप हटा दिया गया.",
+  "@backup_delete_success": {
+    "description": "backup_delete_success"
+  },
+  "genre_pop": "जल्दी से आना",
+  "@genre_pop": {
+    "description": "genre_pop"
+  },
+  "genre_rock": "चट्टान",
+  "@genre_rock": {
+    "description": "genre_rock"
+  },
+  "genre_hiphop": "हिप हॉप",
+  "@genre_hiphop": {
+    "description": "genre_hiphop"
+  },
+  "genre_electronic": "इलेक्ट्रानिक्स",
+  "@genre_electronic": {
+    "description": "genre_electronic"
+  },
+  "genre_jazz": "जाज",
+  "@genre_jazz": {
+    "description": "genre_jazz"
+  },
+  "genre_latin": "लैटिन",
+  "@genre_latin": {
+    "description": "genre_latin"
+  },
+  "migration_btn_select": "फ़ाइल चुनें और आयात करें",
+  "@migration_btn_select": {
+    "description": "migration_btn_select"
+  },
+  "forgottenFavorites": "भूले हुए पसंदीदा",
+  "@forgottenFavorites": {
+    "description": "forgottenFavorites"
+  },
+  "mostListenedSong": "सबसे ज्यादा सुना जाने वाला गाना",
+  "@mostListenedSong": {
+    "description": "mostListenedSong"
+  },
+  "reproducedBy": "द्वारा पुनरुत्पादित",
+  "@reproducedBy": {
+    "description": "reproducedBy"
+  },
+  "recentSearches": "हाल की खोजें",
+  "@recentSearches": {
+    "description": "recentSearches"
+  },
+  "popularTracks": "लोकप्रिय ट्रैक",
+  "@popularTracks": {
+    "description": "popularTracks"
+  },
+  "latestRelease": "नवीनतम रिलीज",
+  "@latestRelease": {
+    "description": "latestRelease"
+  },
+  "follow": "जारी रखना",
+  "@follow": {
+    "description": "follow"
+  },
+  "following": "अगले",
+  "@following": {
+    "description": "following"
+  },
+  "listenNow": "अभी सुनो",
+  "@listenNow": {
+    "description": "listenNow"
+  },
+  "video": "वीडियो",
+  "@video": {
+    "description": "video"
+  },
+  "readMore": "और पढ़ें",
+  "@readMore": {
+    "description": "readMore"
+  },
+  "speedAndPitch": "गति और पिच",
+  "@speedAndPitch": {
+    "description": "speedAndPitch"
+  },
+  "playbackSpeed": "प्लेबैक गति",
+  "@playbackSpeed": {
+    "description": "playbackSpeed"
+  },
+  "songPitch": "गीत का स्वर",
+  "@songPitch": {
+    "description": "songPitch"
+  },
+  "musicRecognition": "संगीत पहचान",
+  "@musicRecognition": {
+    "description": "musicRecognition"
+  },
+  "listeningToEnvironment": "पर्यावरण को सुनना...",
+  "@listeningToEnvironment": {
+    "description": "listeningToEnvironment"
+  },
+  "micInstruction": "सुनिश्चित करें कि आपके माइक्रोफ़ोन के पास संगीत पर्याप्त तेज़ चल रहा है।",
+  "@micInstruction": {
+    "description": "micInstruction"
+  },
+  "processingAudio": "ऑडियो संसाधित हो रहा है...",
+  "@processingAudio": {
+    "description": "processingAudio"
+  },
+  "shazamSearching": "मैचों के लिए शाज़म डेटाबेस खोजा जा रहा है...",
+  "@shazamSearching": {
+    "description": "shazamSearching"
+  },
+  "songFound": "गाना मिल गया!",
+  "@songFound": {
+    "description": "songFound"
+  },
+  "playNow": "अब खेलते हैं",
+  "@playNow": {
+    "description": "playNow"
+  },
+  "searchInLibrary": "लाइब्रेरी में खोजें",
+  "@searchInLibrary": {
+    "description": "searchInLibrary"
+  },
+  "noMatchesFound": "कोई मेल नहीं",
+  "@noMatchesFound": {
+    "description": "noMatchesFound"
+  },
+  "noMatchInstruction": "रिकॉर्ड किए गए ऑडियो में कोई गाना नहीं मिल सका",
+  "@noMatchInstruction": {
+    "description": "noMatchInstruction"
+  },
+  "errorOccurred": "एक त्रुटि पाई गई",
+  "@errorOccurred": {
+    "description": "errorOccurred"
+  },
+  "playingRecognizedTrack": "खेलना:",
+  "@playingRecognizedTrack": {
+    "description": "playingRecognizedTrack"
+  },
+  "errorPlayingTrack": "खेलते समय त्रुटि:",
+  "@errorPlayingTrack": {
+    "description": "errorPlayingTrack"
+  },
+  "welcome_title": "आपका संगीत, आपका तरीका",
+  "@welcome_title": {
+    "description": "welcome_title"
+  },
+  "welcome_subtitle": "चुनें कि आप अब से एस्ट्रेला संगीत का अनुभव कैसे करना चाहते हैं।",
+  "@welcome_subtitle": {
+    "description": "welcome_subtitle"
+  },
+  "welcome_intro": "हमने अपने प्लेटफॉर्म का आधुनिकीकरण किया है। मैन्युअल बैकअप अपलोड करने की पुरानी प्रणाली अक्षम कर दी गई है. अब आपके पास अपनी संगीत लाइब्रेरी को प्रबंधित करने के दो स्पष्ट तरीके हैं।",
+  "@welcome_intro": {
+    "description": "welcome_intro"
+  },
+  "recommend_cloud": "हम Spotify जैसे अनुभव के लिए क्लाउड मोड को सक्रिय करने की सलाह देते हैं: आपके सभी उपकरणों के बीच वास्तविक समय सिंक्रनाइज़ेशन और बिना कुछ किए स्वचालित बैकअप।",
+  "@recommend_cloud": {
+    "description": "recommend_cloud"
+  },
+  "swipe_prompt": "विकल्प तलाशने के लिए स्वाइप करें",
+  "@swipe_prompt": {
+    "description": "swipe_prompt"
+  },
+  "local_title": "स्थानीय मोड",
+  "@local_title": {
+    "description": "local_title"
+  },
+  "local_subtitle": "आपके डिवाइस पर पूर्ण गोपनीयता",
+  "@local_subtitle": {
+    "description": "local_subtitle"
+  },
+  "local_b1": "यह लॉग इन करने की आवश्यकता के बिना काम करता है।",
+  "@local_b1": {
+    "description": "local_b1"
+  },
+  "local_b2": "आपकी पूरी लाइब्रेरी पूरी तरह से इसी कंप्यूटर पर रहती है।",
+  "@local_b2": {
+    "description": "local_b2"
+  },
+  "local_b3": "ध्यान दें: कोई मैन्युअल क्लाउड बैकअप नहीं। यदि आप अपना डिवाइस खो देते हैं या ऐप अनइंस्टॉल कर देते हैं, तो आपका डेटा पुनर्प्राप्त नहीं किया जा सकता है।",
+  "@local_b3": {
+    "description": "local_b3"
+  },
+  "local_btn": "केवल इस डिवाइस पर उपयोग करें",
+  "@local_btn": {
+    "description": "local_btn"
+  },
+  "cloud_title": "क्लाउड मोड (अनुशंसित)",
+  "@cloud_title": {
+    "description": "cloud_title"
+  },
+  "cloud_subtitle": "जॉस रेड के साथ वास्तविक समय सिंक्रनाइज़ेशन",
+  "@cloud_subtitle": {
+    "description": "cloud_subtitle"
+  },
+  "cloud_b1": "अपने जॉस रेड खाते का उपयोग करके सुरक्षित रूप से लॉग इन करें।",
+  "@cloud_b1": {
+    "description": "cloud_b1"
+  },
+  "cloud_b2": "किसी भी डिवाइस (विंडोज, एंड्रॉइड आदि) से तुरंत अपनी प्लेलिस्ट, पसंदीदा और इतिहास तक पहुंचें।",
+  "@cloud_b2": {
+    "description": "cloud_b2"
+  },
+  "cloud_b3": "स्मार्ट सिंक: ऑफ़लाइन काम करें और इंटरनेट पुनर्प्राप्त होने पर परिवर्तन स्वचालित रूप से अपलोड करें।",
+  "@cloud_b3": {
+    "description": "cloud_b3"
+  },
+  "cloud_btn": "क्लाउड सिंक सक्रिय करें",
+  "@cloud_btn": {
+    "description": "cloud_btn"
+  },
+  "slide_indicator": "3 में से चरण {current}",
+  "@slide_indicator": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      }
+    },
+    "description": "slide_indicator"
+  },
+  "news_card_title": "एस्ट्रेला संगीत विकसित हो गया है!",
+  "@news_card_title": {
+    "description": "news_card_title"
+  },
+  "news_card_subtitle": "जॉस रेड के साथ 100% सिंक्रनाइज़ेशन, दोस्तों के साथ प्लेलिस्ट और भी बहुत कुछ। नया क्या है यह देखने के लिए टैप करें.",
+  "@news_card_subtitle": {
+    "description": "news_card_subtitle"
+  },
+  "news_dialog_title": "एस्ट्रेला संगीत समाचार",
+  "@news_dialog_title": {
+    "description": "news_dialog_title"
+  },
+  "news_item_sync_title": "जॉस रेड के साथ पूर्ण एकीकरण",
+  "@news_item_sync_title": {
+    "description": "news_item_sync_title"
+  },
+  "news_item_sync_desc": "आपकी प्लेलिस्ट और पसंदीदा अब आपके मुख्य जॉस रेड खाते के साथ क्लाउड में स्वचालित रूप से सहेजे और सिंक किए गए हैं।",
+  "@news_item_sync_desc": {
+    "description": "news_item_sync_desc"
+  },
+  "news_item_collab_title": "सहयोगात्मक प्लेलिस्ट",
+  "@news_item_collab_title": {
+    "description": "news_item_collab_title"
+  },
+  "news_item_collab_desc": "अपने दोस्तों के साथ प्लेलिस्ट बनाएं! प्लेलिस्ट बनाते समय, सहयोगात्मक चेकबॉक्स का चयन करें और एक साथ संपादित करने के लिए अपने दोस्तों को चुनें।",
+  "@news_item_collab_desc": {
+    "description": "news_item_collab_desc"
+  },
+  "news_item_trans_title": "पारदर्शी तुल्यकालन",
+  "@news_item_trans_title": {
+    "description": "news_item_trans_title"
+  },
+  "news_item_trans_desc": "अब आपको मैन्युअल सिंक बटन क्लिक करने की आवश्यकता नहीं है; नई मोटर स्वचालित रूप से ऊपर और नीचे शिफ्ट होने के लिए जिम्मेदार है।",
+  "@news_item_trans_desc": {
+    "description": "news_item_trans_desc"
+  },
+  "news_dialog_section_friends": "मित्र और खाता प्रबंधन:",
+  "@news_dialog_section_friends": {
+    "description": "news_dialog_section_friends"
+  },
+  "news_dialog_friends_desc": "मित्रों को जोड़ने, अनुरोध स्वीकार करने या अपनी सुरक्षा प्रोफ़ाइल प्रबंधित करने के लिए, कृपया इसके आधिकारिक प्लेटफ़ॉर्म पर जॉस रेड का उपयोग करें:",
+  "@news_dialog_friends_desc": {
+    "description": "news_dialog_friends_desc"
+  },
+  "news_btn_app": "जॉस रेड ऐप (प्ले स्टोर)",
+  "@news_btn_app": {
+    "description": "news_btn_app"
+  },
+  "news_btn_web": "जॉस रेड वेब",
+  "@news_btn_web": {
+    "description": "news_btn_web"
+  },
+  "news_btn_dismiss": "समझा",
+  "@news_btn_dismiss": {
+    "description": "news_btn_dismiss"
+  },
+  "settings_appearance_desc": "थीम, भाषा और इंटरफ़ेस एनिमेशन।",
+  "@settings_appearance_desc": {
+    "description": "settings_appearance_desc"
+  },
+  "settings_content_desc": "फ़िल्टर, पाइप्ड और कैश के साथ एकीकरण की खोज करें।",
+  "@settings_content_desc": {
+    "description": "settings_content_desc"
+  },
+  "settings_playback_desc": "स्ट्रीमिंग गुणवत्ता, सामान्यीकरण, मौन और बैटरी।",
+  "@settings_playback_desc": {
+    "description": "settings_playback_desc"
+  },
+  "settings_downloads_desc": "डाउनलोड और भंडारण",
+  "@settings_downloads_desc": {
+    "description": "settings_downloads_desc"
+  },
+  "settings_downloads_sub": "ऑडियो प्रारूप, फ़ोल्डर और स्वचालित डाउनलोड।",
+  "@settings_downloads_sub": {
+    "description": "settings_downloads_sub"
+  },
+  "settings_account_desc": "खाता और समन्वयन",
+  "@settings_account_desc": {
+    "description": "settings_account_desc"
+  },
+  "settings_account_sub": "क्लाउड मोड, बैकअप, मित्र सूची और माइग्रेशन।",
+  "@settings_account_sub": {
+    "description": "settings_account_sub"
+  },
+  "settings_about_desc": "एस्ट्रेला संगीत के बारे में",
+  "@settings_about_desc": {
+    "description": "settings_about_desc"
+  },
+  "settings_about_sub": "संस्करण, ओपन सोर्स प्रोजेक्ट और GitHub।",
+  "@settings_about_sub": {
+    "description": "settings_about_sub"
+  },
+  "settings_local_cloud_title": "स्थानीय मोड / ईम्यूजिक क्लाउड",
+  "@settings_local_cloud_title": {
+    "description": "settings_local_cloud_title"
+  },
+  "settings_local_cloud_desc": "जॉस रेड के साथ सिंक्रोनाइज़ेशन स्थिति चुनें, माइग्रेट करें या समीक्षा करें।",
+  "@settings_local_cloud_desc": {
+    "description": "settings_local_cloud_desc"
+  },
+  "settings_my_friends": "मेरे दोस्त",
+  "@settings_my_friends": {
+    "description": "settings_my_friends"
+  },
+  "settings_my_friends_desc": "अपने जॉस रेड मित्रों को सीधे प्रबंधित करें।",
+  "@settings_my_friends_desc": {
+    "description": "settings_my_friends_desc"
+  },
+  "settings_refresh_visitor_title": "ताज़ा आईडी (विज़िटर आईडी)",
+  "@settings_refresh_visitor_title": {
+    "description": "settings_refresh_visitor_title"
+  },
+  "settings_refresh_visitor_desc": "यदि डिस्कवर सामग्री लोड नहीं होती है तो अपनी YouTube संगीत आईडी पुनः जनरेट करें।",
+  "@settings_refresh_visitor_desc": {
+    "description": "settings_refresh_visitor_desc"
+  },
+  "settings_visitor_updated": "अद्यतन पहचानकर्ता",
+  "@settings_visitor_updated": {
+    "description": "settings_visitor_updated"
+  },
+  "settings_visitor_updated_desc": "एक नया विज़िटर आईडी सफलतापूर्वक जनरेट किया गया।",
+  "@settings_visitor_updated_desc": {
+    "description": "settings_visitor_updated_desc"
+  },
+  "settings_visitor_error": "गलती",
+  "@settings_visitor_error": {
+    "description": "settings_visitor_error"
+  },
+  "settings_visitor_error_desc": "नया पहचानकर्ता उत्पन्न नहीं किया जा सका. कृपया बाद में पुन: प्रयास करें।",
+  "@settings_visitor_error_desc": {
+    "description": "settings_visitor_error_desc"
+  },
+  "settings_visitor_exception": "पुन: जनरेट करते समय एक त्रुटि उत्पन्न हुई: {error}",
+  "@settings_visitor_exception": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    },
+    "description": "settings_visitor_exception"
+  },
+  "migratedLibrary": "विस्थापित पुस्तकालय",
+  "@migratedLibrary": {
+    "description": "migratedLibrary"
+  },
+  "noSongsInCollection": "इस संग्रह में कोई गीत नहीं हैं",
+  "@noSongsInCollection": {
+    "description": "noSongsInCollection"
+  },
+  "startupScreen": "स्टार्टअप पर खोलें",
+  "@startupScreen": {
+    "description": "startupScreen"
+  },
+  "startupScreenDescription": "वह अनुभाग चुनें जो एस्ट्रेला म्यूज़िक सबसे पहले खुलता है",
+  "@startupScreenDescription": {
+    "description": "startupScreenDescription"
+  },
+  "friends": "दोस्त",
+  "@friends": {
+    "description": "friends"
+  },
+  "dailyDiscover": "दैनिक खोज",
+  "@dailyDiscover": {
+    "description": "dailyDiscover"
+  },
+  "keepListening": "सुनते रहो",
+  "@keepListening": {
+    "description": "keepListening"
+  },
+  "similarToTitle": "{title} के समान",
+  "@similarToTitle": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    },
+    "description": "similarToTitle"
+  },
+  "pipedPlaylistDescription": "पाइप्ड प्लेलिस्ट",
+  "@pipedPlaylistDescription": {
+    "description": "pipedPlaylistDescription"
+  },
+  "collaborativePlaylistDescription": "सहयोगात्मक प्लेलिस्ट",
+  "@collaborativePlaylistDescription": {
+    "description": "collaborativePlaylistDescription"
+  },
+  "libraryPlaylistDescription": "लाइब्रेरी प्लेलिस्ट",
+  "@libraryPlaylistDescription": {
+    "description": "libraryPlaylistDescription"
+  },
+  "untitledSong": "शीर्षकहीन गीत",
+  "@untitledSong": {
+    "description": "untitledSong"
+  },
+  "migratedPlaylist": "माइग्रेट की गई प्लेलिस्ट",
+  "@migratedPlaylist": {
+    "description": "migratedPlaylist"
+  },
+  "migratedAlbum": "माइग्रेट किया गया एल्बम",
+  "@migratedAlbum": {
+    "description": "migratedAlbum"
+  },
+  "songsImportedFromJossMusic": "जॉस म्यूजिक कोटलिन से आयातित गाने",
+  "@songsImportedFromJossMusic": {
+    "description": "songsImportedFromJossMusic"
+  },
+  "importedFromJossMusic": "जॉस म्यूज़िक कोटलिन से आयातित",
+  "@importedFromJossMusic": {
+    "description": "importedFromJossMusic"
+  },
+  "syncLocalModeActive": "स्थानीय मोड सक्रिय",
+  "@syncLocalModeActive": {
+    "description": "syncLocalModeActive"
+  },
+  "syncCloudPending": "क्लाउड मोड सक्रिय. समन्वयन लंबित.",
+  "@syncCloudPending": {
+    "description": "syncCloudPending"
+  },
+  "syncCloudDownloadingExisting": "क्लाउड मोड सक्रिय किया गया. मौजूदा लाइब्रेरी डाउनलोड कर रहा है.",
+  "@syncCloudDownloadingExisting": {
+    "description": "syncCloudDownloadingExisting"
+  },
+  "syncCloudMigrationComplete": "क्लाउड मोड सक्रिय किया गया. विस्थापित पुस्तकालय.",
+  "@syncCloudMigrationComplete": {
+    "description": "syncCloudMigrationComplete"
+  },
+  "syncLocalDeviceOnly": "आपका डेटा केवल इसी डिवाइस पर रखा जाता है.",
+  "@syncLocalDeviceOnly": {
+    "description": "syncLocalDeviceOnly"
+  },
+  "syncDownloading": "ईम्यूजिक परिवर्तन डाउनलोड हो रहा है...",
+  "@syncDownloading": {
+    "description": "syncDownloading"
+  },
+  "syncDownloadFailed": "सिंक डाउनलोड करने में विफल.",
+  "@syncDownloadFailed": {
+    "description": "syncDownloadFailed"
+  },
+  "syncLocalChangesFirst": "नए स्थानीय परिवर्तन हैं. डाउनलोड करने से पहले उन्हें अपलोड किया जाएगा.",
+  "@syncLocalChangesFirst": {
+    "description": "syncLocalChangesFirst"
+  },
+  "syncLibrarySynced": "सिंक्रनाइज़ लाइब्रेरी.",
+  "@syncLibrarySynced": {
+    "description": "syncLibrarySynced"
+  },
+  "syncOfflinePending": "ऑफ़लाइन. परिवर्तन लंबित हैं.",
+  "@syncOfflinePending": {
+    "description": "syncOfflinePending"
+  },
+  "syncLibraryUpToDate": "लाइब्रेरी अद्यतित है।",
+  "@syncLibraryUpToDate": {
+    "description": "syncLibraryUpToDate"
+  },
+  "syncChangesSynced": "{count} समन्वयित परिवर्तन.",
+  "@syncChangesSynced": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    },
+    "description": "syncChangesSynced"
+  },
+  "syncUploading": "EMusic में परिवर्तन अपलोड हो रहे हैं...",
+  "@syncUploading": {
+    "description": "syncUploading"
+  },
+  "syncUploadSuccessWs": "परिवर्तन सफलतापूर्वक अपलोड किए गए (WS)।",
+  "@syncUploadSuccessWs": {
+    "description": "syncUploadSuccessWs"
+  },
+  "syncUploadWsRetry": "WS का उपयोग करके अपलोड नहीं किया जा सका. बाद में इसका दोबारा प्रयास किया जाएगा.",
+  "@syncUploadWsRetry": {
+    "description": "syncUploadWsRetry"
+  },
+  "syncUploadSuccess": "परिवर्तन सही ढंग से अपलोड किए गए.",
+  "@syncUploadSuccess": {
+    "description": "syncUploadSuccess"
+  },
+  "syncUploadRetry": "उठ नहीं सका. बाद में इसका दोबारा प्रयास किया जाएगा.",
+  "@syncUploadRetry": {
+    "description": "syncUploadRetry"
+  },
+  "syncOfflineRetry": "ऑफ़लाइन. पुनः प्रयास के लिए परिवर्तन सहेजे गए.",
+  "@syncOfflineRetry": {
+    "description": "syncOfflineRetry"
+  },
+  "syncUnconfirmedRetry": "ईम्यूजिक ने सभी परिवर्तनों की पुष्टि नहीं की। उनका पुन: प्रयास किया जाएगा।",
+  "@syncUnconfirmedRetry": {
+    "description": "syncUnconfirmedRetry"
+  },
+  "syncChangesConfirmed": "{count} परिवर्तन प्रतिबद्ध।",
+  "@syncChangesConfirmed": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    },
+    "description": "syncChangesConfirmed"
+  },
+  "migrationAlreadyRunning": "वहाँ पहले से ही प्रवास चल रहा है।",
+  "@migrationAlreadyRunning": {
+    "description": "migrationAlreadyRunning"
+  },
+  "migrationLoginRequired": "माइग्रेट करने से पहले जॉस रेड में लॉग इन करें।",
+  "@migrationLoginRequired": {
+    "description": "migrationLoginRequired"
+  },
+  "migrationCheckingCloud": "जाँच की जा रही है कि क्या EMusic Cloud में पहले से ही कोई लाइब्रेरी है...",
+  "@migrationCheckingCloud": {
+    "description": "migrationCheckingCloud"
+  },
+  "cloudLibraryFoundDeviceWillDownload": "एक क्लाउड लाइब्रेरी मिली. यह डिवाइस इसे ओवरराइट किए बिना डाउनलोड कर देगा.",
+  "@cloudLibraryFoundDeviceWillDownload": {
+    "description": "cloudLibraryFoundDeviceWillDownload"
+  },
+  "cloudLibraryFound": "क्लाउड लाइब्रेरी मिली.",
+  "@cloudLibraryFound": {
+    "description": "cloudLibraryFound"
+  },
+  "migrationCreatingBackup": "क्लाउड कनेक्ट करने से पहले एक स्थानीय बैकअप बनाया जा रहा है...",
+  "@migrationCreatingBackup": {
+    "description": "migrationCreatingBackup"
+  },
+  "migrationAnalyzingLocal": "स्थानीय पुस्तकालय का विश्लेषण...",
+  "@migrationAnalyzingLocal": {
+    "description": "migrationAnalyzingLocal"
+  },
+  "migrationPreparingCloud": "ईम्यूजिक क्लाउड में माइग्रेशन की तैयारी की जा रही है...",
+  "@migrationPreparingCloud": {
+    "description": "migrationPreparingCloud"
+  },
+  "migrationStartFailed": "ईम्यूज़िक क्लाउड माइग्रेशन प्रारंभ नहीं कर सका.",
+  "@migrationStartFailed": {
+    "description": "migrationStartFailed"
+  },
+  "migrationUploadingData": "प्लेलिस्ट, पसंदीदा और इतिहास अपलोड हो रहा है...",
+  "@migrationUploadingData": {
+    "description": "migrationUploadingData"
+  },
+  "migrationUploadIncomplete": "सारा डेटा अपलोड नहीं किया जा सका. हम आपका स्थानीय समर्थन बनाए रखते हैं।",
+  "@migrationUploadIncomplete": {
+    "description": "migrationUploadIncomplete"
+  },
+  "migrationVerifyingIntegrity": "ईम्यूजिक क्लाउड में सत्यनिष्ठा का सत्यापन किया जा रहा है...",
+  "@migrationVerifyingIntegrity": {
+    "description": "migrationVerifyingIntegrity"
+  },
+  "migrationValidationFailed": "ईम्यूजिक क्लाउड माइग्रेशन को सत्यापित नहीं कर सका।",
+  "@migrationValidationFailed": {
+    "description": "migrationValidationFailed"
+  },
+  "cloudModeReadyOfflineCache": "क्लाउड मोड तैयार है. यह डिवाइस ऑफलाइन कैश की तरह काम करेगा।",
+  "@cloudModeReadyOfflineCache": {
+    "description": "cloudModeReadyOfflineCache"
+  },
+  "migrationCompleted": "माइग्रेशन पूरा हुआ.",
+  "@migrationCompleted": {
+    "description": "migrationCompleted"
+  },
+  "migrationFailedLocalPreserved": "माइग्रेशन विफल रहा. आपका स्थानीय डेटा संशोधित नहीं किया गया था.",
+  "@migrationFailedLocalPreserved": {
+    "description": "migrationFailedLocalPreserved"
+  },
+  "sessionExpiredLoginAgain": "आपका सत्र समाप्त हो गया है। पुनः साइन इन करें.",
+  "@sessionExpiredLoginAgain": {
+    "description": "sessionExpiredLoginAgain"
+  },
+  "selectedFileNotFound": "चयनित फ़ाइल नहीं मिली.",
+  "@selectedFileNotFound": {
+    "description": "selectedFileNotFound"
+  },
+  "genericAlbum": "एल्बम",
+  "@genericAlbum": {
+    "description": "genericAlbum"
+  },
+  "friendsLoginRequired": "मित्रों को ढूंढने के लिए साइन इन करें.",
+  "@friendsLoginRequired": {
+    "description": "friendsLoginRequired"
+  },
+  "invalidSessionToken": "सत्र में कोई वैध टोकन नहीं है.",
+  "@invalidSessionToken": {
+    "description": "invalidSessionToken"
+  },
+  "userSearchFailed": "उपयोगकर्ताओं को नहीं खोजा जा सका ({statusCode}).",
+  "@userSearchFailed": {
+    "placeholders": {
+      "statusCode": {
+        "type": "int"
+      }
+    },
+    "description": "userSearchFailed"
+  },
+  "invalidServerResponse": "अमान्य सर्वर प्रतिक्रिया.",
+  "@invalidServerResponse": {
+    "description": "invalidServerResponse"
+  },
+  "userListMissing": "प्रतिक्रिया में उपयोगकर्ताओं की सूची नहीं है.",
+  "@userListMissing": {
+    "description": "userListMissing"
+  },
+  "playlistCollaboratorsTitle": "प्लेलिस्ट योगदानकर्ता",
+  "@playlistCollaboratorsTitle": {
+    "description": "playlistCollaboratorsTitle"
+  },
+  "collaboratorsInstruction": "उन मित्रों का चयन करें जो इस प्लेलिस्ट को देख और संपादित कर सकेंगे:",
+  "@collaboratorsInstruction": {
+    "description": "collaboratorsInstruction"
+  },
+  "noJossRedFriends": "जॉस रेड पर आपका कोई मित्र नहीं है।",
+  "@noJossRedFriends": {
+    "description": "noJossRedFriends"
+  },
+  "friendFallback": "दोस्त",
+  "@friendFallback": {
+    "description": "friendFallback"
+  },
+  "collaboratorsUpdated": "सहयोगियों ने सही ढंग से अद्यतन किया।",
+  "@collaboratorsUpdated": {
+    "description": "collaboratorsUpdated"
+  },
+  "save": "रखना",
+  "@save": {
+    "description": "save"
+  },
+  "manageCollaborators": "सहयोगियों (मित्रों) को प्रबंधित करें",
+  "@manageCollaborators": {
+    "description": "manageCollaborators"
+  },
+  "done": "तैयार",
+  "@done": {
+    "description": "done"
+  },
+  "notAuthenticated": "प्रमाणित नहीं",
+  "@notAuthenticated": {
+    "description": "notAuthenticated"
+  },
+  "genericError": "गलती",
+  "@genericError": {
+    "description": "genericError"
+  },
+  "friendRequestSent": "मित्र अनुरोध भेज दिया",
+  "@friendRequestSent": {
+    "description": "friendRequestSent"
+  },
+  "friendRequestAccepted": "मित्र अनुरोध स्वीकार कर लिया गया",
+  "@friendRequestAccepted": {
+    "description": "friendRequestAccepted"
+  },
+  "friendshipRemoved": "दोस्ती हटा दी गई",
+  "@friendshipRemoved": {
+    "description": "friendshipRemoved"
+  },
+  "userBlocked": "उपयोगकर्ता को अवरोधित किया गया",
+  "@userBlocked": {
+    "description": "userBlocked"
+  },
+  "userUnblocked": "उपयोगकर्ता को अनलॉक किया गया",
+  "@userUnblocked": {
+    "description": "userUnblocked"
+  },
+  "artistsByTaste": "आपके स्वाद के अनुसार",
+  "@artistsByTaste": {
+    "description": "artistsByTaste"
+  },
+  "followedArtists": "पालन ​​किया",
+  "@followedArtists": {
+    "description": "followedArtists"
+  },
+  "recommendedArtists": "अनुशंसित",
+  "@recommendedArtists": {
+    "description": "recommendedArtists"
+  },
+  "albumsByTaste": "आपके स्वाद के अनुसार",
+  "@albumsByTaste": {
+    "description": "albumsByTaste"
+  },
+  "savedAlbums": "सहेजा गया",
+  "@savedAlbums": {
+    "description": "savedAlbums"
+  },
+  "recommendedAlbums": "अनुशंसित",
+  "@recommendedAlbums": {
+    "description": "recommendedAlbums"
+  },
+  "syncCloudModeActive": "क्लाउड मोड सक्रिय",
+  "@syncCloudModeActive": {
+    "description": "syncCloudModeActive"
+  },
+  "permissionsConsentTitle": "आरंभ करने की अनुमतियाँ",
+  "@permissionsConsentTitle": {
+    "description": "permissionsConsentTitle"
+  },
+  "permissionsConsentDescription": "एस्ट्रेला म्यूज़िक को आपके संगीत को प्रबंधित करने और सभी प्लेबैक सुविधाएँ प्रदान करने के लिए इन अनुमतियों की आवश्यकता है।",
+  "@permissionsConsentDescription": {
+    "description": "permissionsConsentDescription"
+  },
+  "permissionsStorageTitle": "संगीत और भंडारण",
+  "@permissionsStorageTitle": {
+    "description": "permissionsStorageTitle"
+  },
+  "permissionsStorageDescription": "यह आपको संगीत चलाने, डाउनलोड सहेजने, प्लेलिस्ट निर्यात करने और अपडेट तैयार करने की अनुमति देता है।",
+  "@permissionsStorageDescription": {
+    "description": "permissionsStorageDescription"
+  },
+  "permissionsNotificationsTitle": "सूचनाएं",
+  "@permissionsNotificationsTitle": {
+    "description": "permissionsNotificationsTitle"
+  },
+  "permissionsNotificationsDescription": "प्लेबैक नियंत्रण, डाउनलोड प्रगति और महत्वपूर्ण ऐप नोटिस दिखाता है।",
+  "@permissionsNotificationsDescription": {
+    "description": "permissionsNotificationsDescription"
+  },
+  "permissionsMicrophoneTitle": "माइक्रोफ़ोन",
+  "@permissionsMicrophoneTitle": {
+    "description": "permissionsMicrophoneTitle"
+  },
+  "permissionsMicrophoneDescription": "इसका उपयोग केवल तभी किया जाता है जब आप अपने आस-पास बज रहे किसी गाने की पहचान करना चुनते हैं।",
+  "@permissionsMicrophoneDescription": {
+    "description": "permissionsMicrophoneDescription"
+  },
+  "permissionsContinueButton": "आवश्यक अनुमतियाँ प्रदान करें",
+  "@permissionsContinueButton": {
+    "description": "permissionsContinueButton"
+  },
+  "permissionsRequiredNotice": "जारी रखने के लिए सभी तीन परमिट आवश्यक हैं। आप उन्हें बाद में सिस्टम सेटिंग्स में बदल सकते हैं।",
+  "@permissionsRequiredNotice": {
+    "description": "permissionsRequiredNotice"
+  },
+  "permissionsAllow": "अनुमति दें",
+  "@permissionsAllow": {
+    "description": "permissionsAllow"
+  },
+  "permissionsOpenSettings": "सेटिंग्स",
+  "@permissionsOpenSettings": {
+    "description": "permissionsOpenSettings"
+  },
+  "auth_2fa_title": "दो-कारक प्रमाणीकरण",
+  "@auth_2fa_title": {
+    "description": "auth_2fa_title"
+  },
+  "auth_2fa_subtitle": "अपने प्रमाणक ऐप से 6 अंकों का कोड दर्ज करें। यह पहुंच 5 मिनट में समाप्त हो जाती है.",
+  "@auth_2fa_subtitle": {
+    "description": "auth_2fa_subtitle"
+  },
+  "auth_2fa_code": "प्रमाणीकरण कोड",
+  "@auth_2fa_code": {
+    "description": "auth_2fa_code"
+  },
+  "auth_2fa_verify": "जांचें और जारी रखें",
+  "@auth_2fa_verify": {
+    "description": "auth_2fa_verify"
+  },
+  "auth_2fa_invalid": "वैध 6-अंकीय कोड दर्ज करें या फिर से साइन इन करें।",
+  "@auth_2fa_invalid": {
+    "description": "auth_2fa_invalid"
+  },
+  "resetToDefaultMsg": "सेटिंग्स को डिफ़ॉल्ट पर रीसेट करना पूरा हो गया है, कृपया ऐप को पुनरारंभ करें",
+  "@resetToDefaultMsg": {
+    "description": "resetToDefaultMsg"
+  },
+  "resetToDefaultDes": "ऐप सेटिंग को डिफ़ॉल्ट पर रीसेट करें (पुनः आरंभ करने की आवश्यकता है)",
+  "@resetToDefaultDes": {
+    "description": "resetToDefaultDes"
+  },
+  "misc": "अनेक",
+  "@misc": {
+    "description": "misc"
+  },
+  "resetToDefault": "डिफाल्ट सेटिंग रिस्टोर करो",
+  "@resetToDefault": {
+    "description": "resetToDefault"
+  },
+  "autoOpenPlayer": "प्लेयर स्क्रीन स्वचालित रूप से खोलें",
+  "@autoOpenPlayer": {
+    "description": "autoOpenPlayer"
+  },
+  "autoOpenPlayerDes": "बजाने के लिए किसी गाने का चयन करते समय प्लेयर को पूर्ण स्क्रीन पर स्वचालित रूप से खोलने को सक्रिय/निष्क्रिय करें",
+  "@autoOpenPlayerDes": {
+    "description": "autoOpenPlayerDes"
+  },
+  "playingfromArtist": "कलाकार से बजाना",
+  "@playingfromArtist": {
+    "description": "playingfromArtist"
+  },
+  "randomSelection": "यादृच्छिक चयन",
+  "@randomSelection": {
+    "description": "randomSelection"
+  },
+  "randomRadio": "यादृच्छिक रेडियो",
+  "@randomRadio": {
+    "description": "randomRadio"
+  },
+  "exportPlaylist": "प्लेलिस्ट निर्यात करें",
+  "@exportPlaylist": {
+    "description": "exportPlaylist"
+  },
+  "importPlaylistDesc": "आयात करने के लिए पहले से निर्यात की गई प्लेलिस्ट JSON फ़ाइल का चयन करें",
+  "@importPlaylistDesc": {
+    "description": "importPlaylistDesc"
+  },
+  "invalidPlaylistFile": "अमान्य प्लेलिस्ट फ़ाइल संरचना",
+  "@invalidPlaylistFile": {
+    "description": "invalidPlaylistFile"
+  },
+  "fileNotFound": "फ़ाइल प्राप्त नहीं हुई",
+  "@fileNotFound": {
+    "description": "fileNotFound"
+  },
+  "exportErrorPermission": "निर्यात करते समय अनुमति अस्वीकार कर दी गई",
+  "@exportErrorPermission": {
+    "description": "exportErrorPermission"
+  },
+  "importingPlaylist": "प्लेलिस्ट आयात कर रहा है...",
+  "@importingPlaylist": {
+    "description": "importingPlaylist"
+  },
+  "exportErrorStorage": "अपर्याप्त भंडारण स्थान",
+  "@exportErrorStorage": {
+    "description": "exportErrorStorage"
+  },
+  "exportingPlaylist": "प्लेलिस्ट निर्यात कर रहा है...",
+  "@exportingPlaylist": {
+    "description": "exportingPlaylist"
+  },
+  "playlistExportedMsg": "प्लेलिस्ट सफलतापूर्वक यहां निर्यात की गई",
+  "@playlistExportedMsg": {
+    "description": "playlistExportedMsg"
+  },
+  "exportError": "प्लेलिस्ट निर्यात करने में त्रुटि",
+  "@exportError": {
+    "description": "exportError"
+  },
+  "exportErrorFormat": "प्लेलिस्ट डेटा को फ़ॉर्मेट करने में त्रुटि",
+  "@exportErrorFormat": {
+    "description": "exportErrorFormat"
+  },
+  "importPlaylist": "प्लेलिस्ट आयात करें",
+  "@importPlaylist": {
+    "description": "importPlaylist"
+  },
+  "selectFile": "फ़ाइल चुनें",
+  "@selectFile": {
+    "description": "selectFile"
+  },
+  "playlistImportedMsg": "प्लेलिस्ट सफलतापूर्वक आयात की गई",
+  "@playlistImportedMsg": {
+    "description": "playlistImportedMsg"
+  },
+  "importError": "प्लेलिस्ट आयात करने में त्रुटि",
+  "@importError": {
+    "description": "importError"
+  },
+  "importErrorFileAccess": "चयनित फ़ाइल तक नहीं पहुंचा जा सका",
+  "@importErrorFileAccess": {
+    "description": "importErrorFileAccess"
+  },
+  "importErrorFormat": "अमान्य फाइल प्रारूप",
+  "@importErrorFormat": {
+    "description": "importErrorFormat"
+  },
+  "importErrorDatabase": "डेटाबेस में सहेजने में त्रुटि",
+  "@importErrorDatabase": {
+    "description": "importErrorDatabase"
+  },
+  "importLargeFileNote": "नोट: बड़ी प्लेलिस्ट को आयात होने में अधिक समय लग सकता है",
+  "@importLargeFileNote": {
+    "description": "importLargeFileNote"
+  },
+  "exportPlaylistCsv": "प्लेलिस्ट को सीएसवी के रूप में निर्यात करें",
+  "@exportPlaylistCsv": {
+    "description": "exportPlaylistCsv"
+  },
+  "exportPlaylistJson": "प्लेलिस्ट को JSON में निर्यात करें",
+  "@exportPlaylistJson": {
+    "description": "exportPlaylistJson"
+  },
+  "exportPlaylistJsonSubtitle": "यह प्रारूप आयात किया जा सकता है",
+  "@exportPlaylistJsonSubtitle": {
+    "description": "exportPlaylistJsonSubtitle"
+  },
+  "exportPlaylistCsvSubtitle": "यहां आयात नहीं किया जा सकता",
+  "@exportPlaylistCsvSubtitle": {
+    "description": "exportPlaylistCsvSubtitle"
+  },
+  "exportToYouTubeMusic": "यूट्यूब संगीत पर निर्यात करें",
+  "@exportToYouTubeMusic": {
+    "description": "exportToYouTubeMusic"
+  },
+  "exportToYouTubeMusicSubtitle": "यह आपकी प्लेलिस्ट (गाने <50) को वर्तमान कतार में धकेल देगा, इसे प्लेलिस्ट में जोड़ना/YtMusic में खोलने के बाद सेव करना न भूलें।",
+  "@exportToYouTubeMusicSubtitle": {
+    "description": "exportToYouTubeMusicSubtitle"
+  },
+  "linkCopied": "लिंक को क्लिपबोर्ड पर कॉपी किया गया",
+  "@linkCopied": {
+    "description": "linkCopied"
+  },
+  "lyrics": "पत्र",
+  "@lyrics": {
+    "description": "lyrics"
+  },
+  "no": "नहीं",
+  "@no": {
+    "description": "no"
+  },
+  "podcasts": "पॉडकास्ट",
+  "@podcasts": {
+    "description": "podcasts"
+  },
+  "episodes": "एपिसोड",
+  "@episodes": {
+    "description": "episodes"
+  },
+  "profiles": "प्रोफाइल",
+  "@profiles": {
+    "description": "profiles"
+  },
+  "addToLibrary": "लाइब्रेरी में जोड़ें",
+  "@addToLibrary": {
+    "description": "addToLibrary"
+  },
+  "removeFromLibrary": "लाइब्रेरी से हटाएँ",
+  "@removeFromLibrary": {
+    "description": "removeFromLibrary"
+  },
+  "play": "प्रतिलिपि प्रस्तुत करना",
+  "@play": {
+    "description": "play"
+  },
+  "enqueueAlbumSongs": "कतार में एल्बम गाने जोड़ें",
+  "@enqueueAlbumSongs": {
+    "description": "enqueueAlbumSongs"
+  },
+  "downloadAlbumSongs": "एल्बम से गाने डाउनलोड करें",
+  "@downloadAlbumSongs": {
+    "description": "downloadAlbumSongs"
+  },
+  "shareAlbum": "एल्बम साझा करें",
+  "@shareAlbum": {
+    "description": "shareAlbum"
+  },
+  "imported": "आयातित",
+  "@imported": {
+    "description": "imported"
+  },
+  "importedPlaylist": "आयातित प्लेलिस्ट",
+  "@importedPlaylist": {
+    "description": "importedPlaylist"
+  },
+  "permissionDenied": "अनुमति नहीं मिली",
+  "@permissionDenied": {
+    "description": "permissionDenied"
+  },
+  "enqueueSongs": "कतार में गाने जोड़ें",
+  "@enqueueSongs": {
+    "description": "enqueueSongs"
+  },
+  "shuffle": "यादृच्छिक",
+  "@shuffle": {
+    "description": "shuffle"
+  },
+  "downloadPlaylist": "प्लेलिस्ट डाउनलोड करें",
+  "@downloadPlaylist": {
+    "description": "downloadPlaylist"
+  },
+  "syncPlaylistSongs": "प्लेलिस्ट गाने सिंक करें",
+  "@syncPlaylistSongs": {
+    "description": "syncPlaylistSongs"
+  },
+  "blacklistPipedPlaylist": "प्लेलिस्ट ब्लैकलिस्ट",
+  "@blacklistPipedPlaylist": {
+    "description": "blacklistPipedPlaylist"
+  },
+  "sharePlaylist": "प्लेलिस्ट साझा करें",
+  "@sharePlaylist": {
+    "description": "sharePlaylist"
+  },
+  "playlist": "प्लेलिस्ट",
+  "@playlist": {
+    "description": "playlist"
+  },
+  "sortByName": "नाम के अनुसार क्रमबद्ध करें",
+  "@sortByName": {
+    "description": "sortByName"
+  },
+  "sortByDate": "दिनांक के अनुसार क्रमबद्ध करें",
+  "@sortByDate": {
+    "description": "sortByDate"
+  },
+  "sortByDuration": "अवधि के अनुसार क्रमबद्ध करें",
+  "@sortByDuration": {
+    "description": "sortByDuration"
+  },
+  "sortAscendNDescend": "आरोही/अवरोही क्रम में लगाएं",
+  "@sortAscendNDescend": {
+    "description": "sortAscendNDescend"
+  },
+  "migration_summary_start": "माइग्रेशन {source} से पूरा हुआ।",
+  "@migration_summary_start": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      }
+    },
+    "description": "migration_summary_start"
+  },
+  "migration_summary_playlists": "प्लेलिस्ट: {count}",
+  "@migration_summary_playlists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_playlists"
+  },
+  "migration_summary_songs": "गाने: {count}",
+  "@migration_summary_songs": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_songs"
+  },
+  "migration_summary_favorites": "पसंदीदा: {count}",
+  "@migration_summary_favorites": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_favorites"
+  },
+  "migration_summary_albums": "एल्बम: {count}",
+  "@migration_summary_albums": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_albums"
+  },
+  "migration_summary_artists": "कलाकार: {count}",
+  "@migration_summary_artists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_artists"
+  },
+  "migration_select_file_dialog": "गाना.डीबी या बैकअप .बैकअप चुनें",
+  "@migration_select_file_dialog": {
+    "description": "migration_select_file_dialog"
+  },
+  "migration_success": "माइग्रेशन सफलतापूर्वक पूरा हुआ.",
+  "@migration_success": {
+    "description": "migration_success"
+  },
+  "backup_select_folder_dialog": "बैकअप के लिए फ़ोल्डर का चयन करें",
+  "@backup_select_folder_dialog": {
+    "description": "backup_select_folder_dialog"
+  },
+  "restore_select_file_dialog": "बैकअप फ़ाइल का चयन करें",
+  "@restore_select_file_dialog": {
+    "description": "restore_select_file_dialog"
+  },
+  "auth_hint_email": "name@mail.com",
+  "@auth_hint_email": {
+    "description": "auth_hint_email"
+  },
+  "auth_error_invalid_email": "एक वैध ईमेल दर्ज करें.",
+  "@auth_error_invalid_email": {
+    "description": "auth_error_invalid_email"
+  },
+  "settings_cloud_backup_dialog_desc": "ऐप का .hmb बैकअप सर्वर पर अपलोड करें और यदि आवश्यक हो, तो सहेजे गए किसी भी बैकअप को पुनर्स्थापित करें।",
+  "@settings_cloud_backup_dialog_desc": {
+    "description": "settings_cloud_backup_dialog_desc"
+  },
+  "delete": "हटाना",
+  "@delete": {
+    "description": "delete"
+  },
+  "in_app_storage": "आंतरिक भंडारण निर्देशिका",
+  "@in_app_storage": {
+    "description": "in_app_storage"
+  },
+  "auth_brand_description_1": "हम इस संगीत ऐप के लिए अनुकूलित पिछले प्रोजेक्ट से लॉगिन, पंजीकरण और पासवर्ड रिकवरी लाए हैं।",
+  "@auth_brand_description_1": {
+    "description": "auth_brand_description_1"
+  },
+  "auth_brand_description_2": "आपका सत्र सुरक्षित भंडारण में रहता है और उसी बैकएंड से मान्य होता है जिसका आप पहले से उपयोग कर रहे थे।",
+  "@auth_brand_description_2": {
+    "description": "auth_brand_description_2"
+  },
+  "auth_brand_not_configured": "प्रमाणीकरण बैकएंड को कनेक्ट करने के लिए .env फ़ाइल को कॉन्फ़िगर करने की आवश्यकता है।",
+  "@auth_brand_not_configured": {
+    "description": "auth_brand_not_configured"
+  },
+  "auth_forgot_password_subtitle": "हम आपको आपके खाते के ईमेल पर निर्देश भेजेंगे।",
+  "@auth_forgot_password_subtitle": {
+    "description": "auth_forgot_password_subtitle"
+  },
+  "auth_btn_send_email": "मेल भेजने",
+  "@auth_btn_send_email": {
+    "description": "auth_btn_send_email"
+  },
+  "auth_error_not_configured": "प्रमाणीकरण बैकएंड .env फ़ाइल में कॉन्फ़िगर करने के लिए अनुपलब्ध है।",
+  "@auth_error_not_configured": {
+    "description": "auth_error_not_configured"
+  },
+  "auth_error_invalid_credentials": "गलत ईमेल या पासवर्ड।",
+  "@auth_error_invalid_credentials": {
+    "description": "auth_error_invalid_credentials"
+  },
+  "auth_error_not_verified": "आपका खाता अभी तक सत्यापित नहीं है.",
+  "@auth_error_not_verified": {
+    "description": "auth_error_not_verified"
+  },
+  "auth_error_unknown": "ऑपरेशन पूरा करना संभव नहीं था.",
+  "@auth_error_unknown": {
+    "description": "auth_error_unknown"
+  },
+  "auth_register_success": "खाता सफलतापूर्वक बनाया गया.",
+  "@auth_register_success": {
+    "description": "auth_register_success"
+  },
+  "auth_register_error": "खाता नहीं बनाया जा सका.",
+  "@auth_register_error": {
+    "description": "auth_register_error"
+  },
+  "auth_recovery_email_sent": "ईमेल भेजा गया.",
+  "@auth_recovery_email_sent": {
+    "description": "auth_recovery_email_sent"
+  },
+  "auth_recovery_email_error": "ईमेल भेजना संभव नहीं था.",
+  "@auth_recovery_email_error": {
+    "description": "auth_recovery_email_error"
+  },
+  "latestVersion": "नवीनतम संस्करण उपलब्ध है",
+  "@latestVersion": {
+    "description": "latestVersion"
+  },
+  "updateApp": "एप्लिकेशन अपडेट करें",
+  "@updateApp": {
+    "description": "updateApp"
+  },
+  "loadInfoUpdate": "अद्यतन जानकारी लोड नहीं हो सकी",
+  "@loadInfoUpdate": {
+    "description": "loadInfoUpdate"
+  },
+  "infoNotAvailable": "जानकारी उपलब्ध नहीं है",
+  "@infoNotAvailable": {
+    "description": "infoNotAvailable"
+  },
+  "developedBy": "जॉस एस्ट्राडा (JOSPROX) द्वारा विकसित और अनुरक्षित",
+  "@developedBy": {
+    "description": "developedBy"
+  },
+  "copyrightNotice": "© 2026 जोसप्रोक्स। जीपीएल लाइसेंस v3.0",
+  "@copyrightNotice": {
+    "description": "copyrightNotice"
+  },
+  "helloWorld": "हैलो वर्ल्ड",
+  "@helloWorld": {
+    "description": "Este texto es opcional"
   }
 }
