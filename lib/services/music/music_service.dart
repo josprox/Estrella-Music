@@ -214,7 +214,7 @@ class MusicServices extends getx.GetxService {
         return response;
       }
       if (_shouldRetry(response.statusCode) && attempt < 1) {
-        return sendRequest(
+        return await sendRequest(
           action,
           data,
           additionalParams: additionalParams,
@@ -229,7 +229,7 @@ class MusicServices extends getx.GetxService {
     } on DioException catch (e) {
       printINFO("Error $e");
       if (_shouldRetry(e.response?.statusCode) && attempt < 1) {
-        return sendRequest(
+        return await sendRequest(
           action,
           data,
           additionalParams: additionalParams,
