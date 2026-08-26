@@ -5,8 +5,6 @@ import 'package:file_picker/file_picker.dart';
 import 'package:material_ui/material_ui.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/services/auth/auth_service.dart';
-import 'package:harmonymusic/services/sync/cloud_migration_service.dart';
-import 'package:harmonymusic/services/sync/sync_service.dart';
 import 'package:harmonymusic/services/system/permission_service.dart';
 import 'package:harmonymusic/services/storage/sqlite_store.dart';
 import 'package:path_provider/path_provider.dart';
@@ -56,45 +54,6 @@ class SettingsScreenController extends GetxController {
   final playbackSpeed = 1.0.obs;
   final playbackPitch = 1.0.obs;
   final currentVersion = "".obs;
-  final isForceReplacingCloud = false.obs;
-
-  Future<CloudMigrationResult> forceReplaceRemoteLibrary() async {
-    if (isForceReplacingCloud.value) {
-      return CloudMigrationResult(
-        success: false,
-        message: S.current.migrationAlreadyRunning,
-      );
-    }
-    final sync = Get.find<SyncService>();
-    final migration = Get.find<CloudMigrationService>();
-    isForceReplacingCloud.value = true;
-    final paused = await sync.pauseForAuthoritativeUpload();
-    if (!paused) {
-      isForceReplacingCloud.value = false;
-      return CloudMigrationResult(
-        success: false,
-        message: S.current.syncForceReplacePauseFailed,
-      );
-    }
-
-    try {
-      final result = await migration.forceReplaceRemoteWithLocal();
-      if (result.success) {
-        await sync.completeAuthoritativeUpload(result.serverVersion);
-      } else {
-        sync.resumeAfterAuthoritativeUploadFailure();
-      }
-      return result;
-    } catch (_) {
-      sync.resumeAfterAuthoritativeUploadFailure();
-      return CloudMigrationResult(
-        success: false,
-        message: S.current.syncForceReplaceFailedLocalPreserved,
-      );
-    } finally {
-      isForceReplacingCloud.value = false;
-    }
-  }
 
   @override
   void onInit() {
