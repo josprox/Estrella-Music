@@ -115,22 +115,31 @@ jobs:
           KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
         run: |
-          if [[ -n "$KEYSTORE_BASE64" ]]; then
-            printf '%s' "$KEYSTORE_BASE64" | base64 --decode > android/app/jossestrada.keystore
-            store_password="$KEYSTORE_PASSWORD"
-            key_alias="$KEY_ALIAS"
-            key_password="$KEY_PASSWORD"
-          else
-            keytool -genkeypair -keystore android/app/jossestrada.keystore -alias jossestrada -keyalg RSA -keysize 2048 -validity 10000 -storepass testpassword -keypass testpassword -dname 'CN=Estrella Music, O=JOSPROX, C=MX'
-            store_password=testpassword
-            key_alias=jossestrada
-            key_password=testpassword
+          set -euo pipefail
+          for secret_name in KEYSTORE_BASE64 KEYSTORE_PASSWORD KEY_ALIAS KEY_PASSWORD; do
+            if [[ -z "${!secret_name:-}" ]]; then
+              echo "::error::$secret_name is required. Temporary signing keys are forbidden."
+              exit 1
+            fi
+          done
+
+          printf '%s' "$KEYSTORE_BASE64" | tr -d '\r\n ' | base64 --decode > android/app/jossestrada.keystore
+          signing_sha256=$(keytool -list -v \
+            -keystore android/app/jossestrada.keystore \
+            -alias "$KEY_ALIAS" \
+            -storepass "$KEYSTORE_PASSWORD" \
+            | sed -n 's/.*SHA256: //p' | head -n 1 | tr -d ':' | tr '[:lower:]' '[:upper:]')
+          expected_sha256='DBF27FF8DB0F765CC1FC0762B37557AFFA53378AC14020E2FB588140B0A61945'
+          if [[ "$signing_sha256" != "$expected_sha256" ]]; then
+            echo "::error::KEYSTORE_BASE64 does not contain the Estrella Music release certificate."
+            exit 1
           fi
+
           {
             echo 'storeFile=jossestrada.keystore'
-            echo "storePassword=$store_password"
-            echo "keyAlias=$key_alias"
-            echo "keyPassword=$key_password"
+            echo "storePassword=$KEYSTORE_PASSWORD"
+            echo "keyAlias=$KEY_ALIAS"
+            echo "keyPassword=$KEY_PASSWORD"
           } > android/key.properties
       - run: flutter pub get
       - name: Build Android packages

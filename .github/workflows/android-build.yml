@@ -53,25 +53,38 @@ jobs:
           fi
 
       - name: Setup Signing Keystore
+        env:
+          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
         run: |
-          if [ -n "${{ secrets.KEYSTORE_BASE64 }}" ]; then
-            echo "Decoding release keystore..."
-            echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 --decode > android/app/jossestrada.keystore
-            echo "storeFile=jossestrada.keystore" > android/key.properties
-            echo "storePassword=${{ secrets.KEYSTORE_PASSWORD }}" >> android/key.properties
-            echo "keyAlias=${{ secrets.KEY_ALIAS }}" >> android/key.properties
-            echo "keyPassword=${{ secrets.KEY_PASSWORD }}" >> android/key.properties
-          else
-            echo "No custom keystore secret found. Generating temporary dummy keystore for compilation..."
-            keytool -genkey -v -keystore android/app/jossestrada.keystore \
-              -alias jossestrada -keyalg RSA -keysize 2048 -validity 10000 \
-              -storepass testpassword -keypass testpassword \
-              -dname "CN=Joss, OU=Dev, O=JOSPROX, L=MX, S=MX, C=MX"
-            echo "storeFile=jossestrada.keystore" > android/key.properties
-            echo "storePassword=testpassword" >> android/key.properties
-            echo "keyAlias=jossestrada" >> android/key.properties
-            echo "keyPassword=testpassword" >> android/key.properties
+          set -euo pipefail
+          for secret_name in KEYSTORE_BASE64 KEYSTORE_PASSWORD KEY_ALIAS KEY_PASSWORD; do
+            if [ -z "${!secret_name:-}" ]; then
+              echo "::error::$secret_name is required. Temporary signing keys are forbidden."
+              exit 1
+            fi
+          done
+
+          printf '%s' "$KEYSTORE_BASE64" | tr -d '\r\n ' | base64 --decode > android/app/jossestrada.keystore
+          signing_sha256=$(keytool -list -v \
+            -keystore android/app/jossestrada.keystore \
+            -alias "$KEY_ALIAS" \
+            -storepass "$KEYSTORE_PASSWORD" \
+            | sed -n 's/.*SHA256: //p' | head -n 1 | tr -d ':' | tr '[:lower:]' '[:upper:]')
+          expected_sha256='DBF27FF8DB0F765CC1FC0762B37557AFFA53378AC14020E2FB588140B0A61945'
+          if [ "$signing_sha256" != "$expected_sha256" ]; then
+            echo "::error::KEYSTORE_BASE64 does not contain the Estrella Music release certificate."
+            exit 1
           fi
+
+          {
+            echo "storeFile=jossestrada.keystore"
+            echo "storePassword=$KEYSTORE_PASSWORD"
+            echo "keyAlias=$KEY_ALIAS"
+            echo "keyPassword=$KEY_PASSWORD"
+          } > android/key.properties
 
       - name: Build Split APKs
         run: |
