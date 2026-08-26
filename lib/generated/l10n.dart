@@ -1,6 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+
 import 'intl/messages_all.dart';
 
 // **************************************************************************
@@ -5316,6 +5317,166 @@ class S {
       name: 'topMusicVid',
       desc: 'topMusicVid',
       args: [],
+    );
+  }
+
+  /// `Cancel sync and upload this database`
+  String get syncForceReplaceTitle {
+    return Intl.message(
+      'Cancel sync and upload this database',
+      name: 'syncForceReplaceTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pauses pending sync and forcefully replaces your remote music library with the data currently on this device. Downloads stay local.`
+  String get syncForceReplaceDescription {
+    return Intl.message(
+      'Pauses pending sync and forcefully replaces your remote music library with the data currently on this device. Downloads stay local.',
+      name: 'syncForceReplaceDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Replace the remote music library?`
+  String get syncForceReplaceConfirmTitle {
+    return Intl.message(
+      'Replace the remote music library?',
+      name: 'syncForceReplaceConfirmTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A recovery backup will be created first. Then playlists, favorites, history, albums, artists, and music settings in EMusic Cloud will be replaced with this device's current data. This cannot be undone from the server.`
+  String get syncForceReplaceConfirmBody {
+    return Intl.message(
+      'A recovery backup will be created first. Then playlists, favorites, history, albums, artists, and music settings in EMusic Cloud will be replaced with this device\'s current data. This cannot be undone from the server.',
+      name: 'syncForceReplaceConfirmBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Replace and upload`
+  String get syncForceReplaceConfirmAction {
+    return Intl.message(
+      'Replace and upload',
+      name: 'syncForceReplaceConfirmAction',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pausing sync, creating a backup, and uploading the local library...`
+  String get syncForceReplaceInProgress {
+    return Intl.message(
+      'Pausing sync, creating a backup, and uploading the local library...',
+      name: 'syncForceReplaceInProgress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Creating a recovery backup before replacing cloud data...`
+  String get syncForceReplaceCreatingBackup {
+    return Intl.message(
+      'Creating a recovery backup before replacing cloud data...',
+      name: 'syncForceReplaceCreatingBackup',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Validating the uploaded library before replacing cloud data...`
+  String get syncForceReplaceValidating {
+    return Intl.message(
+      'Validating the uploaded library before replacing cloud data...',
+      name: 'syncForceReplaceValidating',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `EMusic Cloud could not replace the remote library.`
+  String get syncForceReplaceFailed {
+    return Intl.message(
+      'EMusic Cloud could not replace the remote library.',
+      name: 'syncForceReplaceFailed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The uploaded counts do not match the local library. Remote replacement could not be confirmed.`
+  String get syncForceReplaceCountMismatch {
+    return Intl.message(
+      'The uploaded counts do not match the local library. Remote replacement could not be confirmed.',
+      name: 'syncForceReplaceCountMismatch',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The remote music library was replaced with this device's current data.`
+  String get syncForceReplaceSuccess {
+    return Intl.message(
+      'The remote music library was replaced with this device\'s current data.',
+      name: 'syncForceReplaceSuccess',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Upload completed`
+  String get syncForceReplaceSuccessTitle {
+    return Intl.message(
+      'Upload completed',
+      name: 'syncForceReplaceSuccessTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Upload not completed`
+  String get syncForceReplaceFailedTitle {
+    return Intl.message(
+      'Upload not completed',
+      name: 'syncForceReplaceFailedTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The remote replacement failed. Your local data and recovery backup were preserved.`
+  String get syncForceReplaceFailedLocalPreserved {
+    return Intl.message(
+      'The remote replacement failed. Your local data and recovery backup were preserved.',
+      name: 'syncForceReplaceFailedLocalPreserved',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Current synchronization could not be paused safely. Try again in a moment.`
+  String get syncForceReplacePauseFailed {
+    return Intl.message(
+      'Current synchronization could not be paused safely. Try again in a moment.',
+      name: 'syncForceReplacePauseFailed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Recovery backup: {path}`
+  String syncForceReplaceBackupSaved(String path) {
+    return Intl.message(
+      'Recovery backup: $path',
+      name: 'syncForceReplaceBackupSaved',
+      desc: '',
+      args: [path],
     );
   }
 }

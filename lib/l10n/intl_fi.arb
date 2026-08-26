@@ -2296,5 +2296,9 @@
   "topMusicVid": "Suosituimmat musiikkivideot",
   "@topMusicVid": {
     "description": "topMusicVid"
-  }
+  },
+  "syncForceReplaceTitle": "Cancelar sincronización y subir esta base",
+  "syncForceReplaceConfirmAction": "Reemplazar y subir",
+  "syncForceReplaceDescription": "Pausa la sincronización pendiente y reemplaza a la fuerza tu biblioteca musical remota con los datos actuales de este dispositivo. Las descargas permanecen locales.",
+  "syncForceReplaceConfirmBody": "Primero se creará un respaldo de recuperación. Después, las playlists, favoritos, historical, álbumes, artistas y ajustes musicales de EMusic Cloud se reemplazarán con los datos actuales de este dispositivo. No se puede deshacer desde el servidor."
 }

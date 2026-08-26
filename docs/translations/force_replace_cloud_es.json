@@ -1,0 +1,18 @@
+{
+  "syncForceReplaceTitle": "Cancelar sincronización y subir esta base",
+  "syncForceReplaceDescription": "Pausa la sincronización pendiente y reemplaza a la fuerza tu biblioteca musical remota con los datos actuales de este dispositivo. Las descargas permanecen locales.",
+  "syncForceReplaceConfirmTitle": "¿Reemplazar la biblioteca musical remota?",
+  "syncForceReplaceConfirmBody": "Primero se creará un respaldo de recuperación. Después, las playlists, favoritos, historial, álbumes, artistas y ajustes musicales de EMusic Cloud se reemplazarán con los datos actuales de este dispositivo. No se puede deshacer desde el servidor.",
+  "syncForceReplaceConfirmAction": "Reemplazar y subir",
+  "syncForceReplaceInProgress": "Pausando la sincronización, creando el respaldo y subiendo la biblioteca local...",
+  "syncForceReplaceCreatingBackup": "Creando un respaldo de recuperación antes de reemplazar los datos cloud...",
+  "syncForceReplaceValidating": "Validando la biblioteca subida antes de reemplazar los datos cloud...",
+  "syncForceReplaceFailed": "EMusic Cloud no pudo reemplazar la biblioteca remota.",
+  "syncForceReplaceCountMismatch": "Los conteos subidos no coinciden con la biblioteca local. No se pudo confirmar el reemplazo remoto.",
+  "syncForceReplaceSuccess": "La biblioteca musical remota se reemplazó con los datos actuales de este dispositivo.",
+  "syncForceReplaceSuccessTitle": "Subida completada",
+  "syncForceReplaceFailedTitle": "No se completó la subida",
+  "syncForceReplaceFailedLocalPreserved": "Falló el reemplazo remoto. Tus datos locales y el respaldo de recuperación se conservaron.",
+  "syncForceReplacePauseFailed": "No se pudo pausar con seguridad la sincronización actual. Inténtalo de nuevo en un momento.",
+  "syncForceReplaceBackupSaved": "Respaldo de recuperación: {path}"
+}

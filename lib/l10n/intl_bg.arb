@@ -2296,5 +2296,11 @@
   "copyrightNotice": "© 2026 JOSPROX. GPL лиценз v3.0",
   "@copyrightNotice": {
     "description": "copyrightNotice"
-  }
+  },
+  "syncForceReplaceTitle": "Отмяна на sincronización y subir esta base",
+  "syncForceReplaceConfirmAction": "Reemplazar y subir",
+  "syncForceReplaceDescription": "Pausa la sincronización pendiente y reemplaza a la fuerza tu biblioteca music remota con los datos actuales de este dispositivo. Las descargas permanentecen locales.",
+  "syncForceReplaceConfirmBody": "Primero se creará un respaldo de recuperación. Después, las playlists, favoritos, historial, albumes, artistas y ajustes musicales de EMusic Cloud se reemplazarán con los datos actuales de este dispositivo. No se puede deshacer desde el servidor.",
+  "syncForceReplaceConfirmTitle": "Reemplazar la biblioteca music remota?",
+  "syncForceReplaceInProgress": "Pausando la sincronización, creando el respaldo y subiendo la biblioteca local..."
 }

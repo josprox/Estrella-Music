@@ -2296,5 +2296,10 @@
   "topMusicVid": "മുൻനിര സംഗീത വീഡിയോകൾ",
   "@topMusicVid": {
     "description": "topMusicVid"
-  }
+  },
+  "syncForceReplaceTitle": "Cancelar sincronización y subir esta base",
+  "syncForceReplaceConfirmAction": "റീംപ്ലാസർ വൈ സുബീർ",
+  "syncForceReplaceDescription": "Pausa la sincronización pendiente y reemplaza a la fuerza tu biblioteca music remota con los datos actuales de este dispositivo. Las descargas permanentecen locales.",
+  "syncForceReplaceConfirmBody": "പ്രൈമറോ സെ ക്രിയാര അൺ റെസ്പാൽഡോ ഡി റിക്കവറി. Después, las playlists, favoritos, historyial, albumes, artistas y ajustes musicales de EMusic Cloud se reemplazarán con los datos actuales de este dispositivo. No se puede deshacer desde el servidor.",
+  "syncForceReplaceConfirmTitle": "Reemplazar la biblioteca music remota?"
 }

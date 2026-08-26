@@ -18,6 +18,8 @@ class CloudMigrationResult {
     this.migrationId,
     this.receivedCounts = const <String, dynamic>{},
     this.usedExistingCloud = false,
+    this.serverVersion = 0,
+    this.recoveryBackupPath,
   });
 
   final bool success;
@@ -25,6 +27,8 @@ class CloudMigrationResult {
   final String? migrationId;
   final Map<String, dynamic> receivedCounts;
   final bool usedExistingCloud;
+  final int serverVersion;
+  final String? recoveryBackupPath;
 }
 
 class CloudMigrationService extends GetxService {
@@ -170,6 +174,133 @@ class CloudMigrationService extends GetxService {
         S.current.migrationFailedLocalPreserved,
         migrationId: migrationId,
         error: e,
+      );
+    } finally {
+      isMigrating.value = false;
+    }
+  }
+
+  Future<CloudMigrationResult> forceReplaceRemoteWithLocal() async {
+    if (isMigrating.value) {
+      return CloudMigrationResult(
+        success: false,
+        message: S.current.migrationAlreadyRunning,
+      );
+    }
+    if (!_authService.isAuthenticated.value) {
+      return CloudMigrationResult(
+        success: false,
+        message: S.current.migrationLoginRequired,
+      );
+    }
+
+    isMigrating.value = true;
+    progress.value = 0;
+    lastError.value = '';
+
+    String? migrationId;
+    String? recoveryBackupPath;
+    try {
+      final prefs = SqliteStore.box('AppPrefs');
+      await prefs.put(_statusKey, 'force_replace_backup');
+      statusMessage.value = S.current.syncForceReplaceCreatingBackup;
+      final backupFile = await _appBackupService.createRecoveryBackupArchive();
+      recoveryBackupPath = backupFile.path;
+      final backupHash =
+          'local-${await backupFile.length()}-${DateTime.now().millisecondsSinceEpoch}';
+      await prefs.put(_backupHashKey, backupHash);
+      progress.value = 0.12;
+
+      statusMessage.value = S.current.migrationAnalyzingLocal;
+      final snapshot = await buildLocalSnapshot();
+      final expectedCounts = _countSnapshot(snapshot);
+      final deviceId = await _ensureDeviceId();
+      migrationId = _newMigrationId(deviceId);
+      await prefs.put(_migrationIdKey, migrationId);
+      progress.value = 0.25;
+
+      statusMessage.value = S.current.migrationPreparingCloud;
+      final startResponse = await _dio.post(
+        '${_normalizedBaseUrl()}api/music/migration/start',
+        options: Options(headers: await _headers()),
+        data: {
+          'migration_id': migrationId,
+          'device_id': deviceId,
+          'local_backup_hash': backupHash,
+          'expected_counts': expectedCounts,
+          'force_replace': true,
+        },
+      );
+      if (startResponse.statusCode != 200) {
+        return _fail(
+          S.current.migrationStartFailed,
+          migrationId: migrationId,
+          response: startResponse,
+          recoveryBackupPath: recoveryBackupPath,
+        );
+      }
+
+      statusMessage.value = S.current.migrationUploadingData;
+      final uploaded = await _uploadSnapshot(
+        migrationId: migrationId,
+        deviceId: deviceId,
+        snapshot: snapshot,
+      );
+      if (!uploaded) {
+        return _fail(
+          S.current.migrationUploadIncomplete,
+          migrationId: migrationId,
+          recoveryBackupPath: recoveryBackupPath,
+        );
+      }
+
+      statusMessage.value = S.current.syncForceReplaceValidating;
+      final replaceResponse = await _dio.post(
+        '${_normalizedBaseUrl()}api/sync/force-replace',
+        options: Options(headers: await _headers()),
+        data: {
+          'migration_id': migrationId,
+          'confirmation': 'REPLACE_REMOTE_MUSIC',
+        },
+      );
+      if (replaceResponse.statusCode != 200) {
+        return _fail(
+          S.current.syncForceReplaceFailed,
+          migrationId: migrationId,
+          response: replaceResponse,
+          recoveryBackupPath: recoveryBackupPath,
+        );
+      }
+
+      final responseData = _asMap(replaceResponse.data);
+      final receivedCounts = _asMap(responseData['received_counts']);
+      if (!_countsMatch(expectedCounts, receivedCounts)) {
+        return _fail(
+          S.current.syncForceReplaceCountMismatch,
+          migrationId: migrationId,
+          recoveryBackupPath: recoveryBackupPath,
+        );
+      }
+
+      final serverVersion = _asInt(responseData['server_version']);
+      await prefs.put(_statusKey, 'force_replace_completed');
+      await prefs.put('lastSuccessfulSyncAt', DateTime.now().toIso8601String());
+      progress.value = 1;
+      statusMessage.value = S.current.syncForceReplaceSuccess;
+      return CloudMigrationResult(
+        success: true,
+        message: S.current.syncForceReplaceSuccess,
+        migrationId: migrationId,
+        receivedCounts: receivedCounts,
+        serverVersion: serverVersion,
+        recoveryBackupPath: recoveryBackupPath,
+      );
+    } catch (error) {
+      return _fail(
+        S.current.syncForceReplaceFailedLocalPreserved,
+        migrationId: migrationId,
+        error: error,
+        recoveryBackupPath: recoveryBackupPath,
       );
     } finally {
       isMigrating.value = false;
@@ -371,6 +502,30 @@ class CloudMigrationService extends GetxService {
     return false;
   }
 
+  bool _countsMatch(
+    Map<String, dynamic> expected,
+    Map<String, dynamic> received,
+  ) {
+    const keys = [
+      'playlists',
+      'favorites',
+      'recent_plays',
+      'albums',
+      'artists',
+      'settings',
+    ];
+    for (final key in keys) {
+      if (_asInt(expected[key]) != _asInt(received[key])) return false;
+    }
+    return true;
+  }
+
+  int _asInt(dynamic value) {
+    if (value is int) return value;
+    if (value is num) return value.toInt();
+    return int.tryParse(value?.toString() ?? '') ?? 0;
+  }
+
   Future<String> _ensureDeviceId() async {
     final prefs = SqliteStore.box('AppPrefs');
     final existing = prefs.get(_deviceIdKey)?.toString();
@@ -426,6 +581,7 @@ class CloudMigrationService extends GetxService {
     String? migrationId,
     Response<dynamic>? response,
     Object? error,
+    String? recoveryBackupPath,
   }) {
     final detail = response == null
         ? error?.toString()
@@ -439,6 +595,7 @@ class CloudMigrationService extends GetxService {
       success: false,
       message: message,
       migrationId: migrationId,
+      recoveryBackupPath: recoveryBackupPath,
     );
   }
 

@@ -44,6 +44,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m11(count) => "${count} synchronized changes.";
 
+  static String m13(path) => "Recovery backup: ${path}";
+
   static String m12(statusCode) =>
       "Could not search for users (${statusCode}).";
 
@@ -1189,6 +1191,53 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "syncDownloading": MessageLookupByLibrary.simpleMessage(
       "Downloading EMusic changes...",
+    ),
+    "syncForceReplaceBackupSaved": m13,
+    "syncForceReplaceConfirmAction": MessageLookupByLibrary.simpleMessage(
+      "Replace and upload",
+    ),
+    "syncForceReplaceConfirmBody": MessageLookupByLibrary.simpleMessage(
+      "A recovery backup will be created first. Then playlists, favorites, history, albums, artists, and music settings in EMusic Cloud will be replaced with this device\'s current data. This cannot be undone from the server.",
+    ),
+    "syncForceReplaceConfirmTitle": MessageLookupByLibrary.simpleMessage(
+      "Replace the remote music library?",
+    ),
+    "syncForceReplaceCountMismatch": MessageLookupByLibrary.simpleMessage(
+      "The uploaded counts do not match the local library. Remote replacement could not be confirmed.",
+    ),
+    "syncForceReplaceCreatingBackup": MessageLookupByLibrary.simpleMessage(
+      "Creating a recovery backup before replacing cloud data...",
+    ),
+    "syncForceReplaceDescription": MessageLookupByLibrary.simpleMessage(
+      "Pauses pending sync and forcefully replaces your remote music library with the data currently on this device. Downloads stay local.",
+    ),
+    "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud could not replace the remote library.",
+    ),
+    "syncForceReplaceFailedLocalPreserved":
+        MessageLookupByLibrary.simpleMessage(
+          "The remote replacement failed. Your local data and recovery backup were preserved.",
+        ),
+    "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
+      "Upload not completed",
+    ),
+    "syncForceReplaceInProgress": MessageLookupByLibrary.simpleMessage(
+      "Pausing sync, creating a backup, and uploading the local library...",
+    ),
+    "syncForceReplacePauseFailed": MessageLookupByLibrary.simpleMessage(
+      "Current synchronization could not be paused safely. Try again in a moment.",
+    ),
+    "syncForceReplaceSuccess": MessageLookupByLibrary.simpleMessage(
+      "The remote music library was replaced with this device\'s current data.",
+    ),
+    "syncForceReplaceSuccessTitle": MessageLookupByLibrary.simpleMessage(
+      "Upload completed",
+    ),
+    "syncForceReplaceTitle": MessageLookupByLibrary.simpleMessage(
+      "Cancel sync and upload this database",
+    ),
+    "syncForceReplaceValidating": MessageLookupByLibrary.simpleMessage(
+      "Validating the uploaded library before replacing cloud data...",
     ),
     "syncLibrarySynced": MessageLookupByLibrary.simpleMessage(
       "Synchronized library.",

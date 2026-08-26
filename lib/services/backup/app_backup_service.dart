@@ -110,6 +110,18 @@ class AppBackupService extends GetxService {
     );
   }
 
+  Future<File> createRecoveryBackupArchive() async {
+    final backupDirectory =
+        Directory(p.join(await supportDirPath, 'recovery_backups'));
+    await backupDirectory.create(recursive: true);
+    return createBackupArchive(
+      outputPath: p.join(
+        backupDirectory.path,
+        'before_cloud_replace_${DateTime.now().millisecondsSinceEpoch}.hmb',
+      ),
+    );
+  }
+
   Future<void> restoreBackupFile(String filePath) async {
     await restoreBackupBytes(await File(filePath).readAsBytes());
   }

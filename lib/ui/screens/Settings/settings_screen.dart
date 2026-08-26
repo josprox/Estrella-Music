@@ -897,6 +897,73 @@ class SettingsDownloadsScreen extends StatelessWidget {
 class SettingsAccountScreen extends StatelessWidget {
   const SettingsAccountScreen({super.key});
 
+  Future<void> _forceReplaceRemote(
+    BuildContext context,
+    SettingsScreenController ctrl,
+  ) async {
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (dialogContext) => AlertDialog(
+        icon: const Icon(Icons.warning_amber_rounded),
+        title: Text(S.current.syncForceReplaceConfirmTitle),
+        content: Text(S.current.syncForceReplaceConfirmBody),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(dialogContext, false),
+            child: Text(S.current.cancel),
+          ),
+          FilledButton(
+            onPressed: () => Navigator.pop(dialogContext, true),
+            child: Text(S.current.syncForceReplaceConfirmAction),
+          ),
+        ],
+      ),
+    );
+    if (confirmed != true || !context.mounted) return;
+
+    final rootNavigator = Navigator.of(context, rootNavigator: true);
+    showDialog<void>(
+      context: context,
+      barrierDismissible: false,
+      builder: (_) => PopScope(
+        canPop: false,
+        child: AlertDialog(
+          content: Row(
+            children: [
+              const CircularProgressIndicator(),
+              const SizedBox(width: 20),
+              Expanded(child: Text(S.current.syncForceReplaceInProgress)),
+            ],
+          ),
+        ),
+      ),
+    );
+    final result = await ctrl.forceReplaceRemoteLibrary();
+    if (rootNavigator.canPop()) rootNavigator.pop();
+    if (!context.mounted) return;
+
+    final backupPath = result.recoveryBackupPath;
+    await showDialog<void>(
+      context: context,
+      builder: (dialogContext) => AlertDialog(
+        icon: Icon(
+            result.success ? Icons.cloud_done_rounded : Icons.error_outline),
+        title: Text(result.success
+            ? S.current.syncForceReplaceSuccessTitle
+            : S.current.syncForceReplaceFailedTitle),
+        content: Text(backupPath != null && backupPath.isNotEmpty
+            ? '${result.message}\n\n${S.current.syncForceReplaceBackupSaved(backupPath)}'
+            : result.message),
+        actions: [
+          FilledButton(
+            onPressed: () => Navigator.pop(dialogContext),
+            child: Text(S.current.close),
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final ctrl = Get.find<SettingsScreenController>();
@@ -948,6 +1015,17 @@ class SettingsAccountScreen extends StatelessWidget {
                 .whenComplete(() => Get.delete<CloudBackupDialogController>()),
             trailing: const Icon(Icons.chevron_right_rounded),
           ),
+          if (SqliteStore.box('AppPrefs')
+                  .get('emusicDataMode', defaultValue: 'local') ==
+              'cloud')
+            SettingsTile(
+              title: S.current.syncForceReplaceTitle,
+              subtitle: S.current.syncForceReplaceDescription,
+              leadingIcon: Icons.cloud_upload_rounded,
+              onTap: () => _forceReplaceRemote(context, ctrl),
+              trailing: const Icon(Icons.chevron_right_rounded),
+              isThreeLine: true,
+            ),
           SettingsTile(
             title: S.current.settings_local_cloud_title,
             subtitle: S.current.settings_local_cloud_desc,

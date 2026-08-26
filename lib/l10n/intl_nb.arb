@@ -2296,5 +2296,10 @@
   "topMusicVid": "Topp musikkvideoer",
   "@topMusicVid": {
     "description": "topMusicVid"
-  }
+  },
+  "syncForceReplaceTitle": "Avbryt sincronización y subir esta base",
+  "syncForceReplaceConfirmAction": "Replacer og subir",
+  "syncForceReplaceDescription": "Pausa la sincronización pendiente y reemplaza a la fuerza tu biblioteca musikalsk remota con los data actuales de este dispositivo. Last ned permanecen lokaler.",
+  "syncForceReplaceConfirmBody": "Primero se creará un respaldo de recuperación. Después, spillelister, favoritter, historikk, albumer, artister og rettferdige musikaler fra EMusic Cloud er reemplazarán med de faktiske dataene de siste dispositivene. No se puede deshacer desde el servidor.",
+  "syncForceReplaceConfirmTitle": "¿Reemplazar la biblioteca musical remote?"
 }

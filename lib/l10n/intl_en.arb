@@ -2296,5 +2296,28 @@
   "topMusicVid": "Top music videos",
   "@topMusicVid": {
     "description": "topMusicVid"
+  },
+  "syncForceReplaceTitle": "Cancel sync and upload this database",
+  "syncForceReplaceDescription": "Pauses pending sync and forcefully replaces your remote music library with the data currently on this device. Downloads stay local.",
+  "syncForceReplaceConfirmTitle": "Replace the remote music library?",
+  "syncForceReplaceConfirmBody": "A recovery backup will be created first. Then playlists, favorites, history, albums, artists, and music settings in EMusic Cloud will be replaced with this device's current data. This cannot be undone from the server.",
+  "syncForceReplaceConfirmAction": "Replace and upload",
+  "syncForceReplaceInProgress": "Pausing sync, creating a backup, and uploading the local library...",
+  "syncForceReplaceCreatingBackup": "Creating a recovery backup before replacing cloud data...",
+  "syncForceReplaceValidating": "Validating the uploaded library before replacing cloud data...",
+  "syncForceReplaceFailed": "EMusic Cloud could not replace the remote library.",
+  "syncForceReplaceCountMismatch": "The uploaded counts do not match the local library. Remote replacement could not be confirmed.",
+  "syncForceReplaceSuccess": "The remote music library was replaced with this device's current data.",
+  "syncForceReplaceSuccessTitle": "Upload completed",
+  "syncForceReplaceFailedTitle": "Upload not completed",
+  "syncForceReplaceFailedLocalPreserved": "The remote replacement failed. Your local data and recovery backup were preserved.",
+  "syncForceReplacePauseFailed": "Current synchronization could not be paused safely. Try again in a moment.",
+  "syncForceReplaceBackupSaved": "Recovery backup: {path}",
+  "@syncForceReplaceBackupSaved": {
+    "placeholders": {
+      "path": {
+        "type": "String"
+      }
+    }
   }
 }

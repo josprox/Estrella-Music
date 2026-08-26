@@ -44,6 +44,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m11(count) => "${count} cambios sincronizados.";
 
+  static String m13(path) => "Respaldo de recuperación: ${path}";
+
   static String m12(statusCode) =>
       "No se pudo buscar usuarios (${statusCode}).";
 
@@ -1279,6 +1281,53 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "syncDownloading": MessageLookupByLibrary.simpleMessage(
       "Descargando cambios de EMusic...",
+    ),
+    "syncForceReplaceBackupSaved": m13,
+    "syncForceReplaceConfirmAction": MessageLookupByLibrary.simpleMessage(
+      "Reemplazar y subir",
+    ),
+    "syncForceReplaceConfirmBody": MessageLookupByLibrary.simpleMessage(
+      "Primero se creará un respaldo de recuperación. Después, las playlists, favoritos, historial, álbumes, artistas y ajustes musicales de EMusic Cloud se reemplazarán con los datos actuales de este dispositivo. No se puede deshacer desde el servidor.",
+    ),
+    "syncForceReplaceConfirmTitle": MessageLookupByLibrary.simpleMessage(
+      "¿Reemplazar la biblioteca musical remota?",
+    ),
+    "syncForceReplaceCountMismatch": MessageLookupByLibrary.simpleMessage(
+      "Los conteos subidos no coinciden con la biblioteca local. No se pudo confirmar el reemplazo remoto.",
+    ),
+    "syncForceReplaceCreatingBackup": MessageLookupByLibrary.simpleMessage(
+      "Creando un respaldo de recuperación antes de reemplazar los datos cloud...",
+    ),
+    "syncForceReplaceDescription": MessageLookupByLibrary.simpleMessage(
+      "Pausa la sincronización pendiente y reemplaza a la fuerza tu biblioteca musical remota con los datos actuales de este dispositivo. Las descargas permanecen locales.",
+    ),
+    "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud no pudo reemplazar la biblioteca remota.",
+    ),
+    "syncForceReplaceFailedLocalPreserved":
+        MessageLookupByLibrary.simpleMessage(
+          "Falló el reemplazo remoto. Tus datos locales y el respaldo de recuperación se conservaron.",
+        ),
+    "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
+      "No se completó la subida",
+    ),
+    "syncForceReplaceInProgress": MessageLookupByLibrary.simpleMessage(
+      "Pausando la sincronización, creando el respaldo y subiendo la biblioteca local...",
+    ),
+    "syncForceReplacePauseFailed": MessageLookupByLibrary.simpleMessage(
+      "No se pudo pausar con seguridad la sincronización actual. Inténtalo de nuevo en un momento.",
+    ),
+    "syncForceReplaceSuccess": MessageLookupByLibrary.simpleMessage(
+      "La biblioteca musical remota se reemplazó con los datos actuales de este dispositivo.",
+    ),
+    "syncForceReplaceSuccessTitle": MessageLookupByLibrary.simpleMessage(
+      "Subida completada",
+    ),
+    "syncForceReplaceTitle": MessageLookupByLibrary.simpleMessage(
+      "Cancelar sincronización y subir esta base",
+    ),
+    "syncForceReplaceValidating": MessageLookupByLibrary.simpleMessage(
+      "Validando la biblioteca subida antes de reemplazar los datos cloud...",
     ),
     "syncLibrarySynced": MessageLookupByLibrary.simpleMessage(
       "Biblioteca sincronizada.",

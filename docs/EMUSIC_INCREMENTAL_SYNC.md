@@ -25,8 +25,21 @@ restauracion y compatibilidad con clientes antiguos.
 6. La respuesta incluye `accepted_change_ids` y `server_version`.
 7. Flutter elimina solamente los IDs confirmados de la outbox.
 
-Si no hay conexion, los pasos 3-7 se reintentan. La UI y las descargas siguen
-funcionando desde el almacenamiento local.
+Si no hay conexion, los pasos 3-7 se reintentan con espera exponencial de 5,
+10, 20, 40, 80, 160 y hasta 300 segundos. Una escritura local nueva puede
+adelantar el siguiente intento, pero una respuesta 5xx nunca inicia un bucle
+inmediato. La UI y las descargas siguen funcionando desde el almacenamiento
+local.
+
+## Compatibilidad con Joss 3.6
+
+- GranDB recibe inserts mediante un unico mapa `{"columna": valor}`. EMusic no
+  usa el contrato legacy de arreglos paralelos.
+- Los cambios de Schema usan closures de blueprint. La migracion inicial crea
+  las columnas JSON musicales como `LONGTEXT` y agrega los campos colaborativos.
+- `api.joss` inicializa la conexion durante la carga de la aplicacion. Los forks
+  HTTP y WebSocket comparten asi un solo pool SQL en vez de abrir uno por
+  solicitud cuando la conexion lazy todavia es nula.
 
 ## Push
 
@@ -125,3 +138,25 @@ para ejecutar este importador. Ningun flujo normal lee o escribe Hive.
 3. Publicar Flutter con SQLite/outbox.
 4. Observar rechazos, reintentos y diferencias de version.
 5. Retirar el snapshot cotidiano solo cuando no queden clientes antiguos.
+
+## Reemplazo remoto desde Configuracion
+
+Cuando la copia cloud queda dañada, el usuario puede elegir **Cancelar
+sincronizacion y subir esta base** en Configuracion > Cuenta. El flujo:
+
+1. Pausa push, pull y WebSocket sin eliminar cambios locales nuevos.
+2. Crea un archivo `.hmb` persistente en `recovery_backups/`.
+3. Construye un snapshot musical; nunca incluye `SongDownloads`, rutas ni
+   estados de descarga.
+4. Prepara y sube los bloques con los endpoints de migracion existentes.
+5. Finaliza mediante `POST /api/sync/force-replace`, incluyendo el
+   `migration_id` y `confirmation=REPLACE_REMOTE_MUSIC`.
+6. EMusic valida los conteos staged antes del reemplazo, sustituye solo los
+   datos musicales del usuario autenticado y publica un evento
+   `library_reset`.
+7. Los demas dispositivos que reciben ese evento invalidan su bootstrap y
+   descargan el snapshot completo en el siguiente pull.
+
+El endpoint usa `Auth::id()`; no acepta ni confia en un `user_id` enviado por
+el cliente. La accion funciona para el usuario 1 solo cuando su JWT pertenece
+a ese usuario.

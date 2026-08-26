@@ -375,6 +375,16 @@ class MusicSqliteService extends GetxService {
         [accountKey],
       ).isNotEmpty;
 
+  List<String> pendingChangeIds(String accountKey) => db
+      .select(
+        '''SELECT change_id FROM sync_outbox
+           WHERE account_key = ? AND status IN ('pending', 'retry')
+           ORDER BY created_at ASC''',
+        [accountKey],
+      )
+      .map((row) => row['change_id'] as String)
+      .toList(growable: false);
+
   Future<void> markChangesSynced(
     String accountKey,
     Iterable<String> changeIds,
@@ -434,6 +444,12 @@ class MusicSqliteService extends GetxService {
     _transaction(() {
       _setState(accountKey, 'bootstrap_complete', 'true');
       _setState(accountKey, 'last_server_version', serverVersion.toString());
+    });
+  }
+
+  Future<void> markBootstrapIncomplete(String accountKey) async {
+    _transaction(() {
+      _setState(accountKey, 'bootstrap_complete', 'false');
     });
   }
 

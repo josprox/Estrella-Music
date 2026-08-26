@@ -11,7 +11,7 @@ import 'package:harmonymusic/ui/widgets/liquid_bottom_navigation_bar.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:dynamic_color/dynamic_color.dart';
 
-import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:material_ui/material_ui.dart' as mui;
 import 'generated/l10n.dart';
 import 'package:harmonymusic/services/backup/app_backup_service.dart';
 import 'package:harmonymusic/services/auth/auth_service.dart';
@@ -127,9 +127,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         localizationsDelegates: const [
           S.delegate,
-          GlobalMaterialLocalizations.delegate,
-          GlobalWidgetsLocalizations.delegate,
-          GlobalCupertinoLocalizations.delegate,
+          ...mui.GlobalMaterialLocalizations.delegates,
         ],
         supportedLocales: S.delegate.supportedLocales,
         locale: (SqliteStore.box("AppPrefs").get('currentAppLanguageCode') ==
