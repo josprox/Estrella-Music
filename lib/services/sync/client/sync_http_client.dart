@@ -54,22 +54,37 @@ class SyncHttpClient {
 
   Future<bool> push(
       String baseUrl, String token, Map<String, dynamic> payload) async {
-    final response = await _dio.post(
-      '${baseUrl}api/sync/push',
-      options: Options(headers: _headers(token)),
-      data: payload,
-    );
+    var attempts = 0;
+    const maxAttempts = 3;
+    var retryDelay = const Duration(milliseconds: 1000);
 
-    if (response.statusCode == 200 && response.data is Map) {
-      final data = Map<String, dynamic>.from(response.data as Map);
-      return data['status'] == 'success' &&
-          _summaryMatchesPayload(data['summary'], payload);
+    while (attempts < maxAttempts) {
+      attempts++;
+      final response = await _dio.post(
+        '${baseUrl}api/sync/push',
+        options: Options(headers: _headers(token)),
+        data: payload,
+      );
+
+      if (response.statusCode == 200 && response.data is Map) {
+        final data = Map<String, dynamic>.from(response.data as Map);
+        return data['status'] == 'success' &&
+            _summaryMatchesPayload(data['summary'], payload);
+      }
+
+      if (response.statusCode == 429 && attempts < maxAttempts) {
+        await Future<void>.delayed(retryDelay);
+        retryDelay *= 2;
+        continue;
+      }
+
+      throw DioException(
+        requestOptions: response.requestOptions,
+        response: response,
+        message: 'Sync HTTP push failed with status ${response.statusCode}',
+      );
     }
-    throw DioException(
-      requestOptions: response.requestOptions,
-      response: response,
-      message: 'Sync HTTP push failed with status ${response.statusCode}',
-    );
+    return false;
   }
 
   Future<Map<String, dynamic>> pushChanges(
@@ -78,21 +93,36 @@ class SyncHttpClient {
     List<Map<String, dynamic>> changes,
     String deviceId,
   ) async {
-    final response = await _dio.post(
-      '${baseUrl}api/sync/changes',
-      options: Options(headers: _headers(token)),
-      data: {'changes': changes, 'device_id': deviceId},
-    );
-    if (response.statusCode == 200 && response.data is Map) {
-      final data = Map<String, dynamic>.from(response.data as Map);
-      if (data['status'] == 'success') return data;
+    var attempts = 0;
+    const maxAttempts = 4;
+    var retryDelay = const Duration(milliseconds: 1000);
+
+    while (attempts < maxAttempts) {
+      attempts++;
+      final response = await _dio.post(
+        '${baseUrl}api/sync/changes',
+        options: Options(headers: _headers(token)),
+        data: {'changes': changes, 'device_id': deviceId},
+      );
+      if (response.statusCode == 200 && response.data is Map) {
+        final data = Map<String, dynamic>.from(response.data as Map);
+        if (data['status'] == 'success') return data;
+      }
+
+      if (response.statusCode == 429 && attempts < maxAttempts) {
+        await Future<void>.delayed(retryDelay);
+        retryDelay *= 2;
+        continue;
+      }
+
+      throw DioException(
+        requestOptions: response.requestOptions,
+        response: response,
+        message:
+            'Incremental sync push failed with status ${response.statusCode}',
+      );
     }
-    throw DioException(
-      requestOptions: response.requestOptions,
-      response: response,
-      message:
-          'Incremental sync push failed with status ${response.statusCode}',
-    );
+    throw StateError('Incremental sync push failed after $maxAttempts attempts');
   }
 
   Future<Map<String, dynamic>> pullChanges(
@@ -100,21 +130,36 @@ class SyncHttpClient {
     String token,
     int sinceVersion,
   ) async {
-    final response = await _dio.get(
-      '${baseUrl}api/sync/changes',
-      queryParameters: {'since_version': sinceVersion},
-      options: Options(headers: _headers(token)),
-    );
-    if (response.statusCode == 200 && response.data is Map) {
-      final data = Map<String, dynamic>.from(response.data as Map);
-      if (data['status'] == 'success') return data;
+    var attempts = 0;
+    const maxAttempts = 3;
+    var retryDelay = const Duration(milliseconds: 1000);
+
+    while (attempts < maxAttempts) {
+      attempts++;
+      final response = await _dio.get(
+        '${baseUrl}api/sync/changes',
+        queryParameters: {'since_version': sinceVersion},
+        options: Options(headers: _headers(token)),
+      );
+      if (response.statusCode == 200 && response.data is Map) {
+        final data = Map<String, dynamic>.from(response.data as Map);
+        if (data['status'] == 'success') return data;
+      }
+
+      if (response.statusCode == 429 && attempts < maxAttempts) {
+        await Future<void>.delayed(retryDelay);
+        retryDelay *= 2;
+        continue;
+      }
+
+      throw DioException(
+        requestOptions: response.requestOptions,
+        response: response,
+        message:
+            'Incremental sync pull failed with status ${response.statusCode}',
+      );
     }
-    throw DioException(
-      requestOptions: response.requestOptions,
-      response: response,
-      message:
-          'Incremental sync pull failed with status ${response.statusCode}',
-    );
+    throw StateError('Incremental sync pull failed after $maxAttempts attempts');
   }
 
   Future<bool> pushCollaborative(String baseUrl, String token,

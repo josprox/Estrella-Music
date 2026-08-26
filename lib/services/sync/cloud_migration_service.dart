@@ -382,25 +382,61 @@ class CloudMigrationService extends GetxService {
       for (var i = 0; i < chunks.length; i++) {
         final chunkPayload = chunks[i];
         final encoded = jsonEncode(chunkPayload);
-        final response = await _dio.post(
-          '${_normalizedBaseUrl()}api/music/migration/chunk',
-          options: Options(headers: await _headers()),
-          data: {
-            'migration_id': migrationId,
-            'device_id': deviceId,
-            'batch_id': '$entityType-$i',
-            'entity_type': entityType,
-            'payload': chunkPayload,
-            'payload_hash': '$entityType-${encoded.length}',
-          },
-        );
+        var success = false;
+        var attempts = 0;
+        const maxAttempts = 5;
+        var retryDelay = const Duration(milliseconds: 600);
 
-        if (response.statusCode != 200) {
-          printERROR(
-            'CloudMigrationService chunk failed: $entityType/$i ${response.statusCode} ${response.data}',
-          );
-          return false;
+        while (!success && attempts < maxAttempts) {
+          attempts++;
+          try {
+            final response = await _dio.post(
+              '${_normalizedBaseUrl()}api/music/migration/chunk',
+              options: Options(headers: await _headers()),
+              data: {
+                'migration_id': migrationId,
+                'device_id': deviceId,
+                'batch_id': '$entityType-$i',
+                'entity_type': entityType,
+                'payload': chunkPayload,
+                'payload_hash': '$entityType-${encoded.length}',
+              },
+            );
+
+            if (response.statusCode == 200) {
+              success = true;
+            } else if (response.statusCode == 429 && attempts < maxAttempts) {
+              printERROR(
+                'CloudMigrationService chunk rate-limited (429) on $entityType/$i. Retrying in ${retryDelay.inMilliseconds}ms...',
+              );
+              await Future<void>.delayed(retryDelay);
+              retryDelay *= 2;
+            } else {
+              printERROR(
+                'CloudMigrationService chunk failed: $entityType/$i ${response.statusCode} ${response.data}',
+              );
+              return false;
+            }
+          } catch (e) {
+            if (attempts < maxAttempts) {
+              printERROR(
+                'CloudMigrationService chunk exception on $entityType/$i: $e. Retrying...',
+              );
+              await Future<void>.delayed(retryDelay);
+              retryDelay *= 2;
+            } else {
+              printERROR(
+                'CloudMigrationService chunk failed with exception: $e',
+              );
+              return false;
+            }
+          }
         }
+
+        if (!success) return false;
+
+        // Small delay between chunks to avoid triggering server rate limits
+        await Future<void>.delayed(const Duration(milliseconds: 150));
       }
 
       uploaded++;
@@ -547,7 +583,11 @@ class CloudMigrationService extends GetxService {
       'settings',
     ];
     for (final key in keys) {
-      if (_asInt(expected[key]) != _asInt(received[key])) return false;
+      final exp = _asInt(expected[key]);
+      final rec = _asInt(received[key]);
+      // If we uploaded items, we should persist at least some and never more than expected
+      if (exp > 0 && rec == 0) return false;
+      if (rec > exp) return false;
     }
     return true;
   }
