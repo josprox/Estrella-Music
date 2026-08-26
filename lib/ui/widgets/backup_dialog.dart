@@ -13,6 +13,7 @@ import 'package:harmonymusic/utils/helpers/helper.dart';
 import 'package:harmonymusic/services/system/permission_service.dart';
 import 'common_dialog_widget.dart';
 import 'package:harmonymusic/generated/l10n.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:harmonymusic/services/backup/app_backup_service.dart';
 
 class BackupDialog extends StatelessWidget {
@@ -139,14 +140,18 @@ class BackupDialogController extends GetxController {
 
   Future<void> backup() async {
     errorMessage.value = '';
-    if (!await PermissionService.getExtStoragePermission()) {
-      return;
-    }
+    String? pickedFolderPath;
 
-    final String? pickedFolderPath = await FilePicker.platform
-        .getDirectoryPath(dialogTitle: S.current.backup_select_folder_dialog);
-    if (pickedFolderPath == null || pickedFolderPath.isEmpty || pickedFolderPath == '/') {
-      return;
+    if (!GetPlatform.isAndroid) {
+      if (!await PermissionService.getExtStoragePermission()) {
+        return;
+      }
+
+      pickedFolderPath = await FilePicker.platform
+          .getDirectoryPath(dialogTitle: S.current.backup_select_folder_dialog);
+      if (pickedFolderPath == null || pickedFolderPath.isEmpty || pickedFolderPath == '/') {
+        return;
+      }
     }
 
     scanning.value = true;
@@ -159,16 +164,28 @@ class BackupDialogController extends GetxController {
     }
 
     backupRunning.value = true;
-    final exportDirPath = pickedFolderPath.toString();
-    final outputPath = '$exportDirPath/estrellamusic_backup_${DateTime.now().millisecondsSinceEpoch}.hmb';
-
     try {
-      await Get.find<AppBackupService>().createBackupArchive(
-        outputPath: outputPath,
-      );
-      isbackupCompleted.value = true;
+      final fileName = 'estrellamusic_backup_${DateTime.now().millisecondsSinceEpoch}.hmb';
+      
+      if (GetPlatform.isAndroid) {
+        // En Android moderno (Scoped Storage), escribir directamente en una ruta arbitraria obtenida por FilePicker
+        // suele arrojar Errno = 1 (Operation not permitted). Creamos el archivo temporalmente y permitimos guardarlo/compartirlo.
+        final tempFile = await Get.find<AppBackupService>().createTemporaryBackupArchive();
+        await Share.shareXFiles(
+          [XFile(tempFile.path, name: fileName, mimeType: 'application/octet-stream')],
+          subject: 'Estrella Music Backup',
+        );
+        isbackupCompleted.value = true;
+      } else {
+        final exportDirPath = pickedFolderPath.toString();
+        final outputPath = '$exportDirPath/$fileName';
+        await Get.find<AppBackupService>().createBackupArchive(
+          outputPath: outputPath,
+        );
+        isbackupCompleted.value = true;
+      }
     } catch (e) {
-      printERROR('Error during compression: $e');
+      printERROR('Error during backup: $e');
       errorMessage.value = e.toString();
     } finally {
       backupRunning.value = false;
