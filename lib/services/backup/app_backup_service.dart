@@ -29,21 +29,36 @@ class AppBackupService extends GetxService {
   }
 
   Future<List<String>> collectFilesToBackup() async {
-    SqliteStore.checkpoint();
+    try {
+      SqliteStore.checkpoint();
+    } catch (e) {
+      printERROR('Error checkpointing SqliteStore: $e');
+    }
     if (Get.isRegistered<MusicSqliteService>()) {
-      Get.find<MusicSqliteService>().checkpoint();
+      try {
+        Get.find<MusicSqliteService>().checkpoint();
+      } catch (e) {
+        printERROR('Error checkpointing MusicSqliteService: $e');
+      }
     }
     final files = <String>[];
     final databaseDirectories = <String>{
       await databaseDirPath,
       '${await supportDirPath}/db',
+      await supportDirPath,
     };
     for (final path in databaseDirectories) {
       final dbDir = Directory(path);
       if (await dbDir.exists()) {
         await for (final entity in dbDir.list(recursive: false)) {
-          if (entity is File && entity.path.endsWith('.sqlite3')) {
-            files.add(entity.path);
+          if (entity is File) {
+            final fileName = p.basename(entity.path);
+            if (fileName.endsWith('.sqlite3') ||
+                fileName.endsWith('.sqlite3-wal') ||
+                fileName.endsWith('.sqlite3-shm') ||
+                fileName.endsWith('.hive')) {
+              files.add(entity.path);
+            }
           }
         }
       }

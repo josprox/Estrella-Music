@@ -53,16 +53,21 @@ class BackupDialog extends StatelessWidget {
                       Column(
                         children: [
                           Obx(() => Text(
-                                backupDialogController.scanning.isTrue
-                                    ? S.current.scanning
-                                    : backupDialogController
-                                            .backupRunning.isTrue
-                                        ? S.current.backupInProgress
+                                backupDialogController.errorMessage.value.isNotEmpty
+                                    ? backupDialogController.errorMessage.value
+                                    : backupDialogController.scanning.isTrue
+                                        ? S.current.scanning
                                         : backupDialogController
-                                                .isbackupCompleted.isTrue
-                                            ? S.current.backupMsg
-                                            : S.current.letsStrart,
+                                                .backupRunning.isTrue
+                                            ? S.current.backupInProgress
+                                            : backupDialogController
+                                                    .isbackupCompleted.isTrue
+                                                ? S.current.backupMsg
+                                                : S.current.letsStrart,
                                 textAlign: TextAlign.center,
+                                style: backupDialogController.errorMessage.value.isNotEmpty
+                                    ? const TextStyle(color: Colors.redAccent)
+                                    : null,
                               )),
                         ],
                       )
@@ -125,6 +130,7 @@ class BackupDialogController extends GetxController {
   final scanning = false.obs;
   final isbackupCompleted = false.obs;
   final backupRunning = false.obs;
+  final errorMessage = ''.obs;
   List<String> filesToExport = [];
 
   Future<void> scanFilesToBackup() async {
@@ -132,38 +138,41 @@ class BackupDialogController extends GetxController {
   }
 
   Future<void> backup() async {
-    if (!await PermissionService.getExtStoragePermission()) {
-      return;
-    }
-
+    errorMessage.value = '';
     if (!await PermissionService.getExtStoragePermission()) {
       return;
     }
 
     final String? pickedFolderPath = await FilePicker.platform
         .getDirectoryPath(dialogTitle: S.current.backup_select_folder_dialog);
-    if (pickedFolderPath == '/' || pickedFolderPath == null) {
+    if (pickedFolderPath == null || pickedFolderPath.isEmpty || pickedFolderPath == '/') {
       return;
     }
 
     scanning.value = true;
-    await Future.delayed(const Duration(seconds: 4));
-    await scanFilesToBackup();
-    scanning.value = false;
+    try {
+      await scanFilesToBackup();
+    } catch (e) {
+      printERROR('Error scanning files to backup: $e');
+    } finally {
+      scanning.value = false;
+    }
 
     backupRunning.value = true;
     final exportDirPath = pickedFolderPath.toString();
+    final outputPath = '$exportDirPath/estrellamusic_backup_${DateTime.now().millisecondsSinceEpoch}.hmb';
 
-    Get.find<AppBackupService>()
-        .createBackupArchive(
-      outputPath: '$exportDirPath/${DateTime.now().millisecondsSinceEpoch}.hmb',
-    )
-        .then((_) {
-      backupRunning.value = false;
+    try {
+      await Get.find<AppBackupService>().createBackupArchive(
+        outputPath: outputPath,
+      );
       isbackupCompleted.value = true;
-    }).catchError((e) {
+    } catch (e) {
       printERROR('Error during compression: $e');
-    });
+      errorMessage.value = e.toString();
+    } finally {
+      backupRunning.value = false;
+    }
   }
 }
 
