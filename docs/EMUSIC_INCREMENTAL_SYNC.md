@@ -147,7 +147,8 @@ sincronizacion y subir esta base** en Configuracion > Cuenta. El flujo:
 1. Pausa push, pull y WebSocket sin eliminar cambios locales nuevos.
 2. Crea un archivo `.hmb` persistente en `recovery_backups/`.
 3. Construye un snapshot musical; nunca incluye `SongDownloads`, rutas ni
-   estados de descarga.
+   estados de descarga. Tambien elimina URLs de reproduccion temporales y
+   divide las playlists individualmente para evitar cuerpos HTTP gigantes.
 4. Prepara y sube los bloques con los endpoints de migracion existentes.
 5. Finaliza mediante `POST /api/sync/force-replace`, incluyendo el
    `migration_id` y `confirmation=REPLACE_REMOTE_MUSIC`.

@@ -257,7 +257,11 @@ class CloudMigrationService extends GetxService {
       statusMessage.value = S.current.syncForceReplaceValidating;
       final replaceResponse = await _dio.post(
         '${_normalizedBaseUrl()}api/sync/force-replace',
-        options: Options(headers: await _headers()),
+        options: Options(
+          headers: await _headers(),
+          receiveTimeout: const Duration(minutes: 10),
+          sendTimeout: const Duration(minutes: 2),
+        ),
         data: {
           'migration_id': migrationId,
           'confirmation': 'REPLACE_REMOTE_MUSIC',
@@ -311,10 +315,10 @@ class CloudMigrationService extends GetxService {
     final appPrefs = SqliteStore.box('AppPrefs');
     return {
       'playlists': await _collectPlaylists(),
-      'favorites': SqliteStore.box('LIBFAV').values.toList(),
-      'recent_plays': SqliteStore.box('LIBRP').values.toList(),
-      'albums': SqliteStore.box('LibraryAlbums').values.toList(),
-      'artists': SqliteStore.box('LibraryArtists').values.toList(),
+      'favorites': _sanitizeCollection(SqliteStore.box('LIBFAV').values),
+      'recent_plays': _sanitizeCollection(SqliteStore.box('LIBRP').values),
+      'albums': _sanitizeCollection(SqliteStore.box('LibraryAlbums').values),
+      'artists': _sanitizeCollection(SqliteStore.box('LibraryArtists').values),
       'settings': _syncableSettings(appPrefs),
     };
   }
@@ -415,7 +419,9 @@ class CloudMigrationService extends GetxService {
       return [const []];
     }
 
-    const chunkSize = 200;
+    // A playlist may contain thousands of embedded tracks. Sending all
+    // playlists in one request caused oversized bodies and client timeouts.
+    final chunkSize = entityType == 'playlists' ? 1 : 200;
     final chunks = <List<dynamic>>[];
     for (var index = 0; index < items.length; index += chunkSize) {
       final end =
@@ -442,11 +448,37 @@ class CloudMigrationService extends GetxService {
           : await SqliteStore.openBox(boxName);
       result.add({
         ...playlist,
-        'tracks': tracksBox.values.toList(),
+        'tracks': _sanitizeCollection(tracksBox.values),
       });
       // Keep the tracks box open to prevent async read/write exceptions on closed boxes
     }
 
+    return result;
+  }
+
+  List<dynamic> _sanitizeCollection(Iterable<dynamic> values) => values
+      .map(_sanitizeMusicEntity)
+      .whereType<Map<String, dynamic>>()
+      .toList(growable: false);
+
+  Map<String, dynamic>? _sanitizeMusicEntity(dynamic value) {
+    if (value is! Map) return null;
+    final result = value.map(
+      (key, item) => MapEntry(key.toString(), item),
+    );
+    // Playback/download URLs are temporary and device-specific. In
+    // particular, never upload file:/// paths from SongDownloads metadata.
+    const localOnlyKeys = {
+      'url',
+      'downloadPath',
+      'localPath',
+      'filePath',
+      'downloadStatus',
+      'isDownloaded',
+    };
+    for (final key in localOnlyKeys) {
+      result.remove(key);
+    }
     return result;
   }
 
@@ -591,9 +623,10 @@ class CloudMigrationService extends GetxService {
     progress.value = 0;
     SqliteStore.box('AppPrefs').put(_statusKey, 'failed');
     printERROR('CloudMigrationService failed: $message ${detail ?? ''}');
+    final responseSuffix = response == null ? '' : ' (${response.statusCode})';
     return CloudMigrationResult(
       success: false,
-      message: message,
+      message: '$message$responseSuffix',
       migrationId: migrationId,
       recoveryBackupPath: recoveryBackupPath,
     );
