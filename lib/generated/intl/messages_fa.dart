@@ -1220,6 +1220,21 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncDownloading": MessageLookupByLibrary.simpleMessage(
       "در حال دانلود تغییرات EMusic...",
     ),
+    "syncForceReplaceConfirmAction": MessageLookupByLibrary.simpleMessage(
+      "ریمپلازار و سابیر",
+    ),
+    "syncForceReplaceConfirmBody": MessageLookupByLibrary.simpleMessage(
+      "نخستين بار براي بازيافتن. مظلومانه، لیست‌های پخش، برگزیده‌ها، تاریخی، آلبوم‌ها، هنرمندان و موسیقی‌دانان موسیقی EMusic Cloud به‌منظور بازخوانی داده‌های واقعی این دیسپوزیتیو. No se puede deshacer desde el servidor.",
+    ),
+    "syncForceReplaceConfirmTitle": MessageLookupByLibrary.simpleMessage(
+      "¿Reemplazar la biblioteca musical remota؟",
+    ),
+    "syncForceReplaceDescription": MessageLookupByLibrary.simpleMessage(
+      "Pausa la sincronización pendiente y reemplaza a la fuerza tu biblioteca musical remota con los datos actuales de este dispositivo. Las descargas permanecen locales.",
+    ),
+    "syncForceReplaceTitle": MessageLookupByLibrary.simpleMessage(
+      "لغو sincronización y subir esta base",
+    ),
     "syncLibrarySynced": MessageLookupByLibrary.simpleMessage(
       "کتابخانه همگام شده",
     ),

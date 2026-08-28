@@ -839,6 +839,21 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncDownloading": MessageLookupByLibrary.simpleMessage(
       "正在下载 EMusic 更改...",
     ),
+    "syncForceReplaceConfirmAction": MessageLookupByLibrary.simpleMessage(
+      "Reemplazar y subir",
+    ),
+    "syncForceReplaceConfirmBody": MessageLookupByLibrary.simpleMessage(
+      "Primero se creará un respaldo de recuperación。Después, las playlists, favoritos, historicalial, álbumes, artistas y ajustes musicales de EMusic Cloud se reemplazarán con los datos actuales de este dispositivo.没有se puede deshacer desde el servidor。",
+    ),
+    "syncForceReplaceConfirmTitle": MessageLookupByLibrary.simpleMessage(
+      "¿Reemplazar la biblioteca musical remota ？",
+    ),
+    "syncForceReplaceDescription": MessageLookupByLibrary.simpleMessage(
+      "Pausa la sincronización pendiente y reemplaza a la fuerza tu biblioteca musical remota con los datos actuales de este dispositivo. Las descargas permanecen loces.",
+    ),
+    "syncForceReplaceTitle": MessageLookupByLibrary.simpleMessage(
+      "取消sincronización y subir esta base",
+    ),
     "syncLibrarySynced": MessageLookupByLibrary.simpleMessage("同步库。"),
     "syncLibraryUpToDate": MessageLookupByLibrary.simpleMessage("图书馆是最新的。"),
     "syncLocalChangesFirst": MessageLookupByLibrary.simpleMessage(

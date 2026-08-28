@@ -1223,6 +1223,21 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncDownloading": MessageLookupByLibrary.simpleMessage(
       "EMusic değişiklikleri indiriliyor...",
     ),
+    "syncForceReplaceConfirmAction": MessageLookupByLibrary.simpleMessage(
+      "Reemplazar y subir",
+    ),
+    "syncForceReplaceConfirmBody": MessageLookupByLibrary.simpleMessage(
+      "Primero se creará un respaldo de recuperación. Después, las çalma listeleri, favoritos, historial, álbumes, artistas y ajustes musicales de EMusic Cloud se reemplazarán con los datos actuales de este dispositivo. No puede deshacer desde el servidor.",
+    ),
+    "syncForceReplaceConfirmTitle": MessageLookupByLibrary.simpleMessage(
+      "¿Reemplazar la biblioteca müzikal remota?",
+    ),
+    "syncForceReplaceDescription": MessageLookupByLibrary.simpleMessage(
+      "Pausa la sincronización pendiente y reemplaza a la fuerza tu biblioteca musical remota con los datos actuales de este dispositivo. Las descargas permanentecen locales.",
+    ),
+    "syncForceReplaceTitle": MessageLookupByLibrary.simpleMessage(
+      "Cancelar sincronización y subir esta üssü",
+    ),
     "syncLibrarySynced": MessageLookupByLibrary.simpleMessage(
       "Senkronize kütüphane.",
     ),

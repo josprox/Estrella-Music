@@ -1226,6 +1226,21 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncDownloading": MessageLookupByLibrary.simpleMessage(
       "ইমিউজিক পরিবর্তনগুলি ডাউনলোড করা হচ্ছে...",
     ),
+    "syncForceReplaceConfirmAction": MessageLookupByLibrary.simpleMessage(
+      "Reemplazar y subir",
+    ),
+    "syncForceReplaceConfirmBody": MessageLookupByLibrary.simpleMessage(
+      "Primero se creará un respaldo de recuperación । Después, las playlists, favoritos, historial, álbumes, artistas y ajustes musicales de EMusic Cloud se reemplazarán con los dataos actuales de este dispositivo. কোন সে puede deshacer desde el servidor ।",
+    ),
+    "syncForceReplaceConfirmTitle": MessageLookupByLibrary.simpleMessage(
+      "¿Reemplazar la biblioteca মিউজিকাল রিমোটা?",
+    ),
+    "syncForceReplaceDescription": MessageLookupByLibrary.simpleMessage(
+      "Pausa la sincronización pendiente y reemplaza a la fuerza tu biblioteca musical remota con los datos actuales de este dispositivo. Las descargas স্থায়ীভাবে স্থানীয়করণ ।",
+    ),
+    "syncForceReplaceTitle": MessageLookupByLibrary.simpleMessage(
+      "Cancelar sincronización y subir esta base",
+    ),
     "syncLibrarySynced": MessageLookupByLibrary.simpleMessage(
       "সিঙ্ক্রোনাইজড লাইব্রেরি।",
     ),

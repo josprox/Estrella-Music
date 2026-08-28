@@ -1228,6 +1228,21 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncDownloading": MessageLookupByLibrary.simpleMessage(
       "Laster ned EMusic-endringer...",
     ),
+    "syncForceReplaceConfirmAction": MessageLookupByLibrary.simpleMessage(
+      "Replacer og subir",
+    ),
+    "syncForceReplaceConfirmBody": MessageLookupByLibrary.simpleMessage(
+      "Primero se creará un respaldo de recuperación. Después, spillelister, favoritter, historikk, albumer, artister og rettferdige musikaler fra EMusic Cloud er reemplazarán med de faktiske dataene de siste dispositivene. No se puede deshacer desde el servidor.",
+    ),
+    "syncForceReplaceConfirmTitle": MessageLookupByLibrary.simpleMessage(
+      "¿Reemplazar la biblioteca musical remote?",
+    ),
+    "syncForceReplaceDescription": MessageLookupByLibrary.simpleMessage(
+      "Pausa la sincronización pendiente y reemplaza a la fuerza tu biblioteca musikalsk remota con los data actuales de este dispositivo. Last ned permanecen lokaler.",
+    ),
+    "syncForceReplaceTitle": MessageLookupByLibrary.simpleMessage(
+      "Avbryt sincronización y subir esta base",
+    ),
     "syncLibrarySynced": MessageLookupByLibrary.simpleMessage(
       "Synkronisert bibliotek.",
     ),

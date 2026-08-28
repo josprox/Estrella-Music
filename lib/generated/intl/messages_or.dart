@@ -1276,6 +1276,21 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncDownloading": MessageLookupByLibrary.simpleMessage(
       "EMusic ପରିବର୍ତ୍ତନଗୁଡ଼ିକୁ ଡାଉନଲୋଡ୍ କରୁଛି ...",
     ),
+    "syncForceReplaceConfirmAction": MessageLookupByLibrary.simpleMessage(
+      "ଏଲିନା କହିଲ",
+    ),
+    "syncForceReplaceConfirmBody": MessageLookupByLibrary.simpleMessage(
+      "ଉତ୍ତରପ୍ରଦେଶର ମିରିଟରେ ଆଜି ଉପଦ୍ରାବକରୀମାନେ ସମ୍ଭିଧାନ ପ୍ରଣେତା ଡକ୍ଟର ବି ॰ ଆର ॰ ଆମ୍ବେଦକରଙ୍କ ପ୍ରତିମୂର୍ତ୍ତି ଭାଙ୍ଗି ଦେଇଛନ୍ତି । ଡିସପ୍ୟୁଜ୍ ‌, ଲାସ୍ ‌ ପ୍ଲେଲିଷ୍ଟ୍ ‌, ଫେରିଟୋସ୍ ‌, ଐତିହାସିକ, ଆଲବମ୍ ‌, ଆର୍ଟିଷ୍ଟସ୍ ‌ ଓ୍ଵାଇ ଆଜାଷ୍ଟସ୍ ‌ ମ୍ୟୁଜିକାଲ୍ ‌ ଡି ଇମ୍ ‌ ମ୍ୟୁଜିକ୍ ‌ କ୍ଲାଉଡ୍ ‌ ସେ ରିମପ୍ଲାଜାନ୍ ‌ କନ୍ ‌ ଲସ୍ ‌ ଡାଟାସ୍ ‌ ଆକ୍ଟସ୍ ‌ ଡେ ଏଷ୍ଟୋସିଟିଭୋ । ଏଲିନା କହିଲ",
+    ),
+    "syncForceReplaceConfirmTitle": MessageLookupByLibrary.simpleMessage(
+      "ଓଡ଼ିଆ ଉଇକିପିଡ଼ିଆର ସମ୍ପାଦକ କିଏ?",
+    ),
+    "syncForceReplaceDescription": MessageLookupByLibrary.simpleMessage(
+      "ଓଡ଼ିଆ ବାକ୍ୟ (Odia Sentence) ଓଡ଼ିଆ ସାହିତ୍ୟ (Odia Sentence). Las descargas ସ୍ଥାୟୀ ଭାବରେ ସ୍ଥାନଗୁଡ଼ିକୁ ସ୍ଥାୟୀ କରିଥାଏ ।",
+    ),
+    "syncForceReplaceTitle": MessageLookupByLibrary.simpleMessage(
+      "Cancelar sincronización y subir esta base",
+    ),
     "syncLibrarySynced": MessageLookupByLibrary.simpleMessage(
       "ସିଙ୍କ୍ରୋନାଇଜଡ୍ ଲାଇବ୍ରେରୀ |",
     ),

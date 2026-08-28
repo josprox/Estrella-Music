@@ -1242,6 +1242,24 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncDownloading": MessageLookupByLibrary.simpleMessage(
       "Спампоўка змен EMusic...",
     ),
+    "syncForceReplaceConfirmAction": MessageLookupByLibrary.simpleMessage(
+      "Reemplazar і subir",
+    ),
+    "syncForceReplaceConfirmBody": MessageLookupByLibrary.simpleMessage(
+      "Primero se creará un respaldo de recoveryación. Después, las плэйлісты, фаварыты, гістарычныя, альбумы, artistas y ajustes musicales de EMusic Cloud se reemplazarán con los datos actuales de este dispositivo. Ніякага дэсантна-эль-сэрвідора.",
+    ),
+    "syncForceReplaceConfirmTitle": MessageLookupByLibrary.simpleMessage(
+      "¿Reemplazar la biblioteca music remota?",
+    ),
+    "syncForceReplaceDescription": MessageLookupByLibrary.simpleMessage(
+      "Pausa la sincronización pendiente y reemplaza a la fuerza tu biblioteca musical remota con los datos actuales de este dispositivo. Лас descargas permanecen locales.",
+    ),
+    "syncForceReplaceInProgress": MessageLookupByLibrary.simpleMessage(
+      "Pausando la sincronización, creando el respaldo y subiendo la biblioteca local...",
+    ),
+    "syncForceReplaceTitle": MessageLookupByLibrary.simpleMessage(
+      "Адмена сінкранізацыйнай і субирной базы",
+    ),
     "syncLibrarySynced": MessageLookupByLibrary.simpleMessage(
       "Сінхранізаваная бібліятэка.",
     ),
