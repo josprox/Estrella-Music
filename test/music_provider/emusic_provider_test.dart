@@ -66,9 +66,25 @@ void main() {
     expect(adapter.lastProfileId, 'personal');
   });
 
+  test('requests a dedicated authorized download source with the format',
+      () async {
+    final source = await provider.getDownload(
+      (await provider.getTrack('t1'))!,
+      format: 'opus',
+    );
+
+    expect(source.uri.toString(), 'https://download.test/t1.opus');
+    expect(source.headers['X-Download'], 'authorized');
+    expect(source.contentLength, 123456);
+    expect(adapter.lastDownloadRequest?['format'], 'opus');
+    expect(adapter.lastDownloadRequest?['visitorData'], 'visitor-token');
+    expect(adapter.lastProfileId, 'personal');
+  });
+
   test('routes rich catalog requests through eMusic with playback context',
       () async {
     final discovery = provider as MusicDiscoveryProvider;
+    expect(await discovery.getSearchSuggestion('estrella'), ['Estrella Music']);
     expect(await discovery.getSearchSuggestion('estrella'), ['Estrella Music']);
     expect(
         adapter.lastCatalogRequest?['action'], 'music/get_search_suggestions');
@@ -76,6 +92,21 @@ void main() {
     expect(adapter.lastCatalogRequest?['clientIp'], '203.0.113.8');
     expect(adapter.lastCatalogRequest?['poToken'], 'po-token');
     expect(adapter.lastProfileId, 'personal');
+    expect(adapter.catalogRequestCount, 1,
+        reason: 'identical catalog requests share a five-minute cache');
+  });
+
+  test('keeps an eMusic profile active when capabilities are unavailable',
+      () async {
+    final offline = EMusicProvider(
+      baseUrl: () => 'https://emusic.test',
+      tokenLoader: () async => 'joss-red-jwt',
+      client: Dio()..httpClientAdapter = _OfflineAdapter(),
+    );
+
+    await offline.initialize(const MusicProviderContext(profileId: 'offline'));
+    expect(offline.capabilities.tracks, isTrue);
+    expect(offline.capabilities.sync, isFalse);
   });
 
   test('reports missing authentication and provider errors explicitly',
@@ -99,7 +130,9 @@ void main() {
 class _EMusicAdapter implements HttpClientAdapter {
   Map<String, dynamic>? lastPlaybackRequest;
   Map<String, dynamic>? lastCatalogRequest;
+  Map<String, dynamic>? lastDownloadRequest;
   String? lastProfileId;
+  int catalogRequestCount = 0;
 
   @override
   Future<ResponseBody> fetch(
@@ -127,6 +160,7 @@ class _EMusicAdapter implements HttpClientAdapter {
         }
       };
     } else if (path.endsWith('/catalog')) {
+      catalogRequestCount++;
       lastCatalogRequest = Map<String, dynamic>.from(options.data as Map);
       lastProfileId = options.headers['X-Music-Profile-Id']?.toString();
       body = {
@@ -195,6 +229,19 @@ class _EMusicAdapter implements HttpClientAdapter {
           'headers': {'X-Playback': 'authorized'},
         }
       };
+    } else if (path.endsWith('/download')) {
+      lastDownloadRequest = Map<String, dynamic>.from(options.data as Map);
+      lastProfileId = options.headers['X-Music-Profile-Id']?.toString();
+      body = {
+        'status': 'success',
+        'data': {
+          'url': 'https://download.test/t1.opus',
+          'mimeType': 'audio/webm; codecs="opus"',
+          'bitrate': 160000,
+          'size': 123456,
+          'headers': {'X-Download': 'authorized'},
+        }
+      };
     } else {
       status = 404;
       body = {'status': 'error', 'message': 'Not found'};
@@ -207,6 +254,22 @@ class _EMusicAdapter implements HttpClientAdapter {
       },
     );
   }
+
+  @override
+  void close({bool force = false}) {}
+}
+
+class _OfflineAdapter implements HttpClientAdapter {
+  @override
+  Future<ResponseBody> fetch(
+    RequestOptions options,
+    Stream<Uint8List>? requestStream,
+    Future<void>? cancelFuture,
+  ) =>
+      throw DioException.connectionError(
+        requestOptions: options,
+        reason: 'offline',
+      );
 
   @override
   void close({bool force = false}) {}

@@ -10,6 +10,7 @@ import 'package:harmonymusic/music_provider/models/provider_entities.dart';
 import 'package:harmonymusic/profiles/profile_manager.dart';
 
 import 'music_provider.dart';
+import 'music_download_provider.dart';
 import 'music_discovery_provider.dart';
 import 'music_provider_manager.dart';
 
@@ -91,6 +92,34 @@ class MusicCatalogService extends GetxService {
       metadata: item.extras ?? const {},
     );
     return provider.getPlayback(track);
+  }
+
+  Future<PlaybackSource> resolveDownload(
+    MediaItem item, {
+    required String format,
+  }) async {
+    final identity = identityFromMediaItem(item);
+    _assertActiveIdentity(identity);
+    final activeProvider = provider;
+    if (activeProvider is! MusicDownloadProvider) {
+      throw const MusicProviderException(
+        'The active provider does not expose downloadable media',
+      );
+    }
+    final track = ProviderTrack(
+      identity: identity,
+      title: item.title,
+      artist: item.artist ?? 'Unknown artist',
+      album: item.album ?? 'Unknown album',
+      duration: item.duration,
+      artworkUri: item.artUri,
+      filePath: item.extras?['url']?.toString(),
+      metadata: item.extras ?? const {},
+    );
+    return (activeProvider as MusicDownloadProvider).getDownload(
+      track,
+      format: format,
+    );
   }
 
   Future<ProviderLyrics?> lyricsFor(MediaItem item) async {

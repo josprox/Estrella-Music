@@ -52,6 +52,7 @@ class HomeScreenController extends GetxController {
   final exploreNetworkError = false.obs;
   final List<StreamSubscription<dynamic>> _localSectionSubscriptions = [];
   Timer? _localSectionsRefreshDebounce;
+  Timer? _recommendationsDelay;
   Future<void>? _activeContentLoad;
 
   @override
@@ -72,7 +73,12 @@ class HomeScreenController extends GetxController {
     await _musicServices.init();
     await loadContent();
     if (updateCheckFlag) _checkNewVersion();
-    unawaited(reloadRecommendations());
+    // Home itself has priority. Recommendation sections are expensive catalog
+    // lookups, so let the cached/primary view settle before requesting them.
+    _recommendationsDelay?.cancel();
+    _recommendationsDelay = Timer(const Duration(seconds: 2), () {
+      unawaited(reloadRecommendations());
+    });
   }
 
   void _watchLocalSections() {
@@ -100,7 +106,7 @@ class HomeScreenController extends GetxController {
       final allFavs =
           favBox.values.map((e) => MediaItemBuilder.fromJson(e)).toList();
       allFavs.shuffle();
-      final seeds = allFavs.take(5).toList();
+      final seeds = allFavs.take(2).toList();
 
       List<MediaItem> recommendations = [];
 
@@ -157,7 +163,7 @@ class HomeScreenController extends GetxController {
       final allFavs =
           favBox.values.map((e) => MediaItemBuilder.fromJson(e)).toList();
       allFavs.shuffle();
-      final seeds = allFavs.take(3).toList();
+      final seeds = allFavs.take(1).toList();
 
       List<MediaItem> recommendations = [];
 
@@ -219,7 +225,7 @@ class HomeScreenController extends GetxController {
           return lastB.compareTo(lastA);
         });
 
-      final seeds = keepList.take(3).toList();
+      final seeds = keepList.take(1).toList();
       List<MediaItem> recommendations = [];
       recommendations.addAll(seeds);
 
@@ -792,6 +798,7 @@ class HomeScreenController extends GetxController {
 
   @override
   void dispose() {
+    _recommendationsDelay?.cancel();
     _localSectionsRefreshDebounce?.cancel();
     for (final subscription in _localSectionSubscriptions) {
       subscription.cancel();

@@ -919,7 +919,6 @@ class LibraryAlbumsController extends GetxController {
 }
 
 class LibraryArtistsController extends GetxController {
-  static final Map<String, Future<Artist?>> _profileRequests = {};
   final MusicCatalogService _musicServices = Get.find<MusicCatalogService>();
   final libraryArtists = <Artist>[].obs;
   final selectedCollection = LibraryArtistCollection.tastes.obs;
@@ -1066,12 +1065,9 @@ class LibraryArtistsController extends GetxController {
           resolved = Artist.fromJson(Map<dynamic, dynamic>.from(cached));
         } catch (_) {}
       }
-      if (resolved == null || resolved.thumbnailUrl.isEmpty) {
-        resolved = await _fetchArtistProfile(artist);
-        if (resolved != null && resolved.thumbnailUrl.isNotEmpty) {
-          await cache.put(cacheKey, resolved.toJson());
-        }
-      }
+      // Library hydration is cache-only. Artist lookup belongs to the artist
+      // detail screen; doing it here previously created a request per row and
+      // competed with direct stream downloads.
       if (resolved != null && resolved.thumbnailUrl.isNotEmpty) {
         _tasteArtists[index] = resolved;
         if (selectedCollection.value == LibraryArtistCollection.tastes &&
@@ -1079,60 +1075,6 @@ class LibraryArtistsController extends GetxController {
           libraryArtists.assignAll(_tasteArtists);
         }
       }
-    }
-  }
-
-  Future<Artist?> _fetchArtistProfile(Artist artist) async {
-    final requestKey = artist.browseId.isEmpty
-        ? artist.name.trim().toLowerCase()
-        : artist.browseId;
-    final existingRequest = _profileRequests[requestKey];
-    if (existingRequest != null) return existingRequest;
-
-    final request = _resolveArtistProfile(artist);
-    _profileRequests[requestKey] = request;
-    try {
-      return await request;
-    } finally {
-      if (identical(_profileRequests[requestKey], request)) {
-        _profileRequests.remove(requestKey);
-      }
-    }
-  }
-
-  Future<Artist?> _resolveArtistProfile(Artist artist) async {
-    if (!artist.browseId.startsWith('LOCAL_ARTIST_')) {
-      try {
-        final data = await _musicServices.getArtist(artist.browseId);
-        final json = Map<String, dynamic>.from(data)
-          ..['artist'] = data['name'] ?? artist.name
-          ..['browseId'] = artist.browseId;
-        final resolved = Artist.fromJson(json);
-        if (resolved.thumbnailUrl.isNotEmpty) return resolved;
-      } catch (error) {
-        debugPrint(
-            'Artist ID ${artist.browseId} is no longer valid for ${artist.name}: $error');
-        if (error.toString().contains('429')) return null;
-      }
-    }
-    try {
-      final results =
-          await _musicServices.search(artist.name, filter: 'artists', limit: 8);
-      final candidates = results.values
-          .whereType<List>()
-          .expand((items) => items)
-          .whereType<Artist>()
-          .toList();
-      final normalizedName = artist.name.trim().toLowerCase();
-      for (final candidate in candidates) {
-        if (candidate.name.trim().toLowerCase() == normalizedName) {
-          return candidate;
-        }
-      }
-      return candidates.firstOrNull;
-    } catch (error) {
-      debugPrint('Error searching profile photo for ${artist.name}: $error');
-      return null;
     }
   }
 

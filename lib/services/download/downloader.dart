@@ -1,19 +1,17 @@
-﻿import 'dart:async';
+import 'dart:async';
 import 'dart:io';
 
 import 'package:audio_service/audio_service.dart';
 import 'package:dio/dio.dart';
-import 'package:audiotags/audiotags.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/services/auth/catalog_recovery_service.dart';
 import 'package:harmonymusic/services/background/background_execution_service.dart';
+import 'package:harmonymusic/services/download/download_integrity_service.dart';
 import 'package:harmonymusic/services/storage/sqlite_store.dart';
 
 import 'package:harmonymusic/ui/screens/Album/album_screen_controller.dart';
 import 'package:harmonymusic/ui/screens/Playlist/playlist_screen_controller.dart';
-import 'package:harmonymusic/models/hm_streaming_data.dart';
 import 'package:harmonymusic/music_provider/music_catalog_service.dart';
 import 'package:harmonymusic/music_provider/models/playback_source.dart';
 import 'package:harmonymusic/ui/widgets/snackbar.dart';
@@ -188,118 +186,107 @@ class Downloader extends GetxService {
   }
 
   Future<void> writeFileStream(MediaItem song) async {
-    Completer<void> complete = Completer();
-
     final settingsScreenController = Get.find<SettingsScreenController>();
     final downloadingFormat = settingsScreenController.downloadingFormat.string;
 
     final source = await _resolveDownloadSource(song, downloadingFormat);
     if (source == null) {
-      complete.complete();
-      return complete.future;
+      return;
     }
     final progressId = song.id;
     song = source.song;
-    final requiredAudioStream = source.audio;
+    final playback = source.playback;
     unawaited(BackgroundExecutionService.updateCurrentSong(song.title));
 
     final dirPath = settingsScreenController.downloadLocationPath.string;
     final actualDownformat =
-        requiredAudioStream.audioCodec.name.contains("mp") ? "m4a" : "opus";
+        playback.mimeType?.contains('mp4') == true ? "m4a" : "opus";
     final RegExp invalidChar =
         RegExp(r'Container.|\/|\\|\"|\<|\>|\*|\?|\:|\!|\[|\]|\Â¡|\||\%');
     final songTitle = "${song.title.trim()} (${song.artist?.trim()})"
         .replaceAll(invalidChar, "");
-    String filePath = "$dirPath/$songTitle.$actualDownformat";
+    final filePath = "$dirPath/$songTitle.$actualDownformat";
+    final temporaryFilePath = '$filePath.part';
     printINFO("Downloading filePath: $filePath");
-    final totalBytes = requiredAudioStream.size;
+    final temporaryFile = File(temporaryFilePath);
+    if (await temporaryFile.exists()) await temporaryFile.delete();
+    final stopwatch = Stopwatch()..start();
 
-    _dio.download(
-        requiredAudioStream.url,
-        options: Options(headers: {"Range": 'bytes=0-$totalBytes'}),
-        filePath, onReceiveProgress: (count, total) {
-      if (total <= 0) return;
-      songProgressMap[progressId] = ((count / total) * 100).toInt();
-    }).then(
-      (value) async {
-        printINFO(value.data);
+    try {
+      final downloadHeaders = Map<String, String>.from(playback.headers);
+      final contentLength = playback.contentLength;
+      if (contentLength != null && contentLength > 0) {
+        downloadHeaders['Range'] = 'bytes=0-${contentLength - 1}';
+      }
+      final response = await _dio.download(
+        playback.uri.toString(),
+        temporaryFilePath,
+        options: Options(headers: downloadHeaders),
+        onReceiveProgress: (count, total) {
+          if (total <= 0) return;
+          songProgressMap[progressId] = ((count / total) * 100).toInt();
+        },
+      );
+      if (!await temporaryFile.exists() || await temporaryFile.length() == 0) {
+        throw const FileSystemException(
+            'The audio stream returned an empty file');
+      }
+      final finalFile = File(filePath);
+      if (await finalFile.exists()) await finalFile.delete();
+      await temporaryFile.rename(filePath);
+      if (!await DownloadIntegrityService.isPlausibleAudioFile(finalFile)) {
+        await finalFile.delete();
+        throw const FileSystemException(
+            'The audio stream is not a valid audio file');
+      }
+      stopwatch.stop();
+      final bytes = await finalFile.length();
+      final seconds = stopwatch.elapsedMilliseconds / 1000;
+      final kilobytesPerSecond = seconds <= 0 ? 0 : bytes / 1024 / seconds;
+      printINFO(
+        'Download completed (${response.statusCode}): '
+        '${(bytes / 1024 / 1024).toStringAsFixed(2)} MiB in '
+        '${seconds.toStringAsFixed(1)}s '
+        '(${kilobytesPerSecond.toStringAsFixed(0)} KiB/s)',
+      );
 
-        String? year;
-        try {
-          if (song.extras?['year'] != null) {
-            year = song.extras?['year'];
-          }
-        } catch (_) {}
+      // Save Thumbnail
+      try {
+        final thumbnailPath =
+            "${settingsScreenController.supportDirPath}/thumbnails/${song.id}.png";
+        await _dio.downloadUri(song.artUri!, thumbnailPath);
+        // ignore: empty_catches
+      } catch (e) {}
 
-        // Save Thumbnail
-        try {
-          final thumbnailPath =
-              "${settingsScreenController.supportDirPath}/thumbnails/${song.id}.png";
-          await _dio.downloadUri(song.artUri!, thumbnailPath);
-          // ignore: empty_catches
-        } catch (e) {}
+      if (song.extras == null) {
+        song = song.copyWith(extras: {});
+      }
+      song.extras!['url'] = filePath;
+      song.extras!['date'] = DateTime.now().millisecondsSinceEpoch;
+      final songJson = MediaItemBuilder.toJson(song);
+      final streamInfoJson = <String, dynamic>{
+        'url': filePath,
+        'headers': playback.headers,
+        'mimeType': playback.mimeType,
+        'bitrate': playback.bitrate,
+        'size': contentLength ?? await finalFile.length(),
+        'loudnessDb': playback.loudnessDb,
+      };
+      // [playbility status, info map]
+      songJson["streamInfo"] = [true, streamInfoJson];
 
-        if (song.extras == null) {
-          song = song.copyWith(extras: {});
-        }
-        song.extras!['url'] = filePath;
-        song.extras!['date'] = DateTime.now().millisecondsSinceEpoch;
-        final songJson = MediaItemBuilder.toJson(song);
-        final streamInfoJson = requiredAudioStream.toJson();
-        streamInfoJson['url'] = filePath;
-        // [playbility status, info map]
-        songJson["streamInfo"] = [true, streamInfoJson];
+      SqliteStore.box("SongDownloads").put(song.id, songJson);
+      Get.find<LibrarySongsController>().librarySongsList.add(song);
+      printINFO("Downloaded successfully");
 
-        SqliteStore.box("SongDownloads").put(song.id, songJson);
-        Get.find<LibrarySongsController>().librarySongsList.add(song);
-        printINFO("Downloaded successfully");
-
-        final trackDetails = (song.extras?['trackDetails'])?.split("/");
-        final int? trackNumber = int.tryParse(trackDetails?[0] ?? "");
-        final int? totalTracks = int.tryParse(trackDetails?[1] ?? "");
-
-        try {
-          /// Reverted -- Removed AudioTags as using this package, app is flagged as TROJ_GEN.R002V01K623 by TrendMicro-HouseCall
-          final imageUrl = song.artUri!.toString();
-          Tag tag = Tag(
-              title: song.title,
-              trackArtist: song.artist,
-              album: song.album,
-              year: int.tryParse(year ?? ""),
-              trackNumber: trackNumber,
-              trackTotal: totalTracks,
-              albumArtist: song.artist,
-              genre: song.genre,
-              pictures: [
-                Picture(
-                    bytes: (await NetworkAssetBundle(Uri.parse((imageUrl)))
-                            .load(imageUrl))
-                        .buffer
-                        .asUint8List(),
-                    mimeType: MimeType.png,
-                    pictureType: PictureType.coverFront)
-              ]);
-
-          await AudioTags.write(filePath, tag);
-        } catch (e) {
-          printERROR("$e");
-        }
-        complete.complete();
-      },
-    ).onError(
-      (error, stackTrace) {
-        ScaffoldMessenger.of(Get.context!).showSnackBar(snackbar(
-            Get.context!, S.current.downloadError3,
-            size: SanckBarSize.BIG,
-            duration: const Duration(seconds: 2),
-            top: !GetPlatform.isDesktop));
-        printINFO(
-            "Downloading failed due to network/stream error! Please try again");
-        complete.complete();
-      },
-    );
-
-    return complete.future;
+      // Metadata is persisted in SongDownloads. Avoid mutating a streamed
+      // container after download: AudioTags cannot safely rewrite every
+      // Opus/M4A response and used to leave truncated files marked complete.
+    } catch (error, stackTrace) {
+      if (await temporaryFile.exists()) await temporaryFile.delete();
+      printERROR('Downloading failed for ${song.id}: $error\n$stackTrace');
+      _showDownloadError(S.current.downloadError3);
+    }
   }
 
   Future<_DownloadSource?> _resolveDownloadSource(
@@ -307,15 +294,14 @@ class Downloader extends GetxService {
     String downloadingFormat,
   ) async {
     try {
-      final source =
-          await Get.find<MusicCatalogService>().resolvePlayback(song);
+      final source = await Get.find<MusicCatalogService>()
+          .resolveDownload(song, format: downloadingFormat);
       if (source.type != PlaybackSourceType.authorizedStream) {
         throw const _UnavailableVideoException(
           'The active provider does not expose a downloadable stream',
         );
       }
-      final audio = _audioFromSource(source);
-      return _DownloadSource(song: song, audio: audio);
+      return _DownloadSource(song: song, playback: source);
     } on _UnavailableVideoException catch (error) {
       return _recoverUnavailableSong(song, downloadingFormat, error.message);
     } catch (error) {
@@ -345,13 +331,12 @@ class Downloader extends GetxService {
         return null;
       }
 
-      final source =
-          await Get.find<MusicCatalogService>().resolvePlayback(recovered);
+      final source = await Get.find<MusicCatalogService>()
+          .resolveDownload(recovered, format: downloadingFormat);
       if (source.type != PlaybackSourceType.authorizedStream) {
         _showDownloadError(originalError);
         return null;
       }
-      final audio = _audioFromSource(source);
 
       try {
         await Get.find<CatalogRecoveryService>().persistRecoveredSong(
@@ -366,24 +351,13 @@ class Downloader extends GetxService {
           '$error\n$stackTrace',
         );
       }
-      return _DownloadSource(song: recovered, audio: audio);
+      return _DownloadSource(song: recovered, playback: source);
     } catch (error, stackTrace) {
       printERROR('No fue posible recuperar ${song.id}: $error\n$stackTrace');
       _showDownloadError(originalError);
       return null;
     }
   }
-
-  Audio _audioFromSource(PlaybackSource source) => Audio(
-        itag: 0,
-        audioCodec:
-            source.mimeType?.contains('opus') == true ? Codec.opus : Codec.mp4a,
-        bitrate: source.bitrate ?? 0,
-        duration: 0,
-        loudnessDb: source.loudnessDb,
-        url: source.uri.toString(),
-        size: 0,
-      );
 
   void _showDownloadError(String message) {
     final context = Get.context;
@@ -400,10 +374,10 @@ class Downloader extends GetxService {
 }
 
 class _DownloadSource {
-  const _DownloadSource({required this.song, required this.audio});
+  const _DownloadSource({required this.song, required this.playback});
 
   final MediaItem song;
-  final Audio audio;
+  final PlaybackSource playback;
 }
 
 class _UnavailableVideoException implements Exception {

@@ -8,6 +8,7 @@ import '../models/playback_source.dart';
 import '../models/provider_capabilities.dart';
 import '../models/provider_entities.dart';
 import '../music_provider.dart';
+import '../music_download_provider.dart';
 import '../music_discovery_provider.dart';
 import 'package:harmonymusic/utils/helpers/helper.dart';
 import 'package:harmonymusic/services/music/music_service.dart';
@@ -35,7 +36,8 @@ class EMusicPlaybackContext {
       };
 }
 
-class EMusicProvider implements MusicProvider, MusicDiscoveryProvider {
+class EMusicProvider
+    implements MusicProvider, MusicDiscoveryProvider, MusicDownloadProvider {
   EMusicProvider({
     required String Function() baseUrl,
     required ProviderTokenLoader tokenLoader,
@@ -55,6 +57,10 @@ class EMusicProvider implements MusicProvider, MusicDiscoveryProvider {
   String? _profileId;
   ProviderCapabilities _capabilities = const ProviderCapabilities();
   MusicServices? _catalog;
+  final Map<String, _CatalogCacheEntry> _catalogCache = {};
+  final Map<String, Future<Map<String, dynamic>>> _catalogInFlight = {};
+
+  static const _catalogCacheLimit = 64;
 
   @override
   String get id => providerId;
@@ -75,10 +81,29 @@ class EMusicProvider implements MusicProvider, MusicDiscoveryProvider {
       visitorData: playbackContext.visitorData,
       languageCode: context.settings['languageCode']?.toString() ?? 'en',
     );
-    final response = await _request('GET', 'capabilities');
-    _capabilities = ProviderCapabilities.fromJson(
-      _map(response['capabilities'] ?? response['data']),
-    );
+    try {
+      final response = await _request('GET', 'capabilities');
+      _capabilities = ProviderCapabilities.fromJson(
+        _map(response['capabilities'] ?? response['data']),
+      );
+    } on MusicProviderException catch (error) {
+      if (error.cause is! DioException) rethrow;
+      // A profile that was already configured must remain usable offline. In
+      // particular, its namespaced SongDownloads are local playback sources;
+      // failing a capability probe must not silently switch the user to Local.
+      printINFO('[EMusicProvider] Starting offline: $error');
+      _capabilities = const ProviderCapabilities(
+        tracks: true,
+        artists: true,
+        albums: true,
+        artwork: true,
+        lyrics: true,
+        playlists: true,
+        favorites: true,
+        history: true,
+        home: true,
+      );
+    }
   }
 
   @override
@@ -97,6 +122,34 @@ class EMusicProvider implements MusicProvider, MusicDiscoveryProvider {
     Map<dynamic, dynamic> payload,
     String additionalParams,
   ) async {
+    final normalizedPayload =
+        payload.map((key, value) => MapEntry('$key', value));
+    final key = '$_requireProfileId|$action|$additionalParams|'
+        '${jsonEncode(normalizedPayload)}';
+    final cached = _catalogCache[key];
+    if (cached != null && !cached.isExpired) return cached.copy();
+
+    final current = _catalogInFlight[key];
+    if (current != null) return current;
+
+    final request = _loadCatalogRequest(
+      action: action,
+      payload: normalizedPayload,
+      additionalParams: additionalParams,
+    );
+    _catalogInFlight[key] = request;
+    try {
+      return await request;
+    } finally {
+      _catalogInFlight.remove(key);
+    }
+  }
+
+  Future<Map<String, dynamic>> _loadCatalogRequest({
+    required String action,
+    required Map<String, dynamic> payload,
+    required String additionalParams,
+  }) async {
     final context =
         await _playbackContextLoader?.call() ?? const EMusicPlaybackContext();
     final data = await _request(
@@ -104,12 +157,18 @@ class EMusicProvider implements MusicProvider, MusicDiscoveryProvider {
       'catalog',
       body: {
         'action': action,
-        'payload': payload.map((key, value) => MapEntry('$key', value)),
+        'payload': payload,
         'additionalParams': additionalParams,
         ...context.toJson(),
       },
     );
-    return _map(data['response'] ?? data);
+    final result = _map(data['response'] ?? data);
+    if (_catalogCache.length >= _catalogCacheLimit) {
+      _catalogCache.remove(_catalogCache.keys.first);
+    }
+    _catalogCache['$_requireProfileId|$action|$additionalParams|'
+        '${jsonEncode(payload)}'] = _CatalogCacheEntry(result);
+    return _CatalogCacheEntry.copyOf(result);
   }
 
   @override
@@ -404,8 +463,7 @@ class EMusicProvider implements MusicProvider, MusicDiscoveryProvider {
         final streamData = _map(streamResp.data);
         final status =
             _map(streamData['playabilityStatus'])['status']?.toString();
-        printINFO(
-            '[EMusicProvider] Client $clientName status: $status');
+        printINFO('[EMusicProvider] Client $clientName status: $status');
         if (status == 'OK') {
           final formats =
               _list(_map(streamData['streamingData'])['adaptiveFormats']);
@@ -428,6 +486,7 @@ class EMusicProvider implements MusicProvider, MusicDiscoveryProvider {
               headers: playHeaders,
               mimeType: best['mimeType']?.toString() ?? 'audio/mp4',
               bitrate: _int(best['bitrate']),
+              contentLength: _int(best['contentLength']),
               loudnessDb: _double(best['loudnessDb']) ?? 0,
             );
           }
@@ -461,11 +520,158 @@ class EMusicProvider implements MusicProvider, MusicDiscoveryProvider {
       headers: rawHeaders.map((key, value) => MapEntry(key, value.toString())),
       mimeType: data['mimeType']?.toString(),
       bitrate: _int(data['bitrate']),
+      contentLength: _int(data['size'] ?? data['contentLength']),
       loudnessDb: _double(data['loudnessDb']) ?? 0,
       expiresAt: data['expiresAt'] == null
           ? null
           : DateTime.tryParse(data['expiresAt'].toString()),
     );
+  }
+
+  @override
+  Future<PlaybackSource> getDownload(
+    ProviderTrack track, {
+    required String format,
+  }) async {
+    final clientSource = await _resolveDownloadWithClientRecipe(track, format);
+    if (clientSource != null) return clientSource;
+
+    final playbackContext =
+        await _playbackContextLoader?.call() ?? const EMusicPlaybackContext();
+    final data = await _request(
+      'POST',
+      'download',
+      body: {
+        'trackId': track.identity.sourceId,
+        'format': format,
+        ...playbackContext.toJson(),
+      },
+    );
+    final url = data['url']?.toString();
+    if (url == null || url.isEmpty) {
+      throw MusicProviderException(
+        data['message']?.toString() ??
+            'eMusic did not return a downloadable source',
+      );
+    }
+    return PlaybackSource(
+      type: PlaybackSourceType.authorizedStream,
+      uri: Uri.parse(url),
+      headers: _map(data['headers'])
+          .map((key, value) => MapEntry(key, value.toString())),
+      mimeType: data['mimeType']?.toString(),
+      bitrate: _int(data['bitrate']),
+      contentLength: _int(data['size'] ?? data['contentLength']),
+      loudnessDb: _double(data['loudnessDb']) ?? 0,
+      expiresAt: data['expiresAt'] == null
+          ? null
+          : DateTime.tryParse(data['expiresAt'].toString()),
+    );
+  }
+
+  /// The server owns the client recipe, while the device performs the final
+  /// authorized request. This preserves the source binding expected by some
+  /// providers and avoids treating a server-side playback session as the
+  /// user's download session.
+  Future<PlaybackSource?> _resolveDownloadWithClientRecipe(
+    ProviderTrack track,
+    String format,
+  ) async {
+    final playbackContext =
+        await _playbackContextLoader?.call() ?? const EMusicPlaybackContext();
+    final preferredCodec = format == 'm4a' ? 'mp4a' : format;
+    try {
+      final recipeData = await _request(
+        'POST',
+        'orchestrator/resolve-recipe',
+        body: {'videoId': track.identity.sourceId},
+      );
+      final orchestration = _map(recipeData['orchestration']);
+      final clients = _list(orchestration['recommendedClients']);
+      final sts = _int(recipeData['signatureTimestamp']) ?? 20684;
+      final visitorData =
+          recipeData['visitorData']?.toString() ?? playbackContext.visitorData;
+
+      for (final rawSpec in clients) {
+        final spec = _map(rawSpec);
+        final apiUrl = spec['apiUrl']?.toString();
+        if (apiUrl == null || apiUrl.isEmpty) continue;
+        final client = Map<String, dynamic>.from(_map(spec['client']));
+        final useVisitor = spec['useVisitor'] == true;
+        final useSts = spec['useSts'] == true;
+        if (useVisitor && visitorData != null && visitorData.isNotEmpty) {
+          client['visitorData'] = visitorData;
+        }
+        final payload = <String, dynamic>{
+          'context': {'client': client},
+          'videoId': track.identity.sourceId,
+          if (useSts)
+            'playbackContext': {
+              'contentPlaybackContext': {
+                'html5Preference': 'HTML5_PREF_WANTS',
+                'signatureTimestamp': sts,
+              }
+            },
+          if (spec['contentCheckOk'] == true) 'contentCheckOk': true,
+          if (spec['racyCheckOk'] == true) 'racyCheckOk': true,
+        };
+        final headers = Map<String, String>.from(_map(spec['requestHeaders']));
+        if (useVisitor && visitorData != null && visitorData.isNotEmpty) {
+          headers['X-Goog-Visitor-Id'] = visitorData;
+        }
+        final response = await Dio().post<dynamic>(
+          apiUrl,
+          data: payload,
+          options: Options(headers: headers, validateStatus: (_) => true),
+        );
+        final data = _map(response.data);
+        if (_map(data['playabilityStatus'])['status']?.toString() != 'OK') {
+          continue;
+        }
+        final formats = _list(_map(data['streamingData'])['adaptiveFormats'])
+            .where((item) =>
+                item['url'] != null &&
+                item['url'].toString().isNotEmpty &&
+                (item['mimeType']?.toString().contains('audio') ?? false))
+            .toList();
+        final matching = formats
+            .where((item) =>
+                item['mimeType']
+                    ?.toString()
+                    .toLowerCase()
+                    .contains(preferredCodec) ==
+                true)
+            .toList();
+        final candidates = matching.isEmpty ? formats : matching;
+        if (candidates.isEmpty) continue;
+        candidates.sort((a, b) =>
+            (_int(b['bitrate']) ?? 0).compareTo(_int(a['bitrate']) ?? 0));
+        final selected = candidates.first;
+        final playbackHeaders = Map<String, String>.from(
+          _map(spec['playbackHeaders']),
+        );
+        printINFO(
+          '[EMusicProvider] Download source resolved with '
+          '${spec['name'] ?? spec['clientName'] ?? 'UNKNOWN'} '
+          '(${selected['bitrate'] ?? 0} bps, $preferredCodec)',
+        );
+        return PlaybackSource(
+          type: PlaybackSourceType.authorizedStream,
+          uri: Uri.parse(selected['url'].toString()),
+          headers: playbackHeaders,
+          mimeType: selected['mimeType']?.toString(),
+          bitrate: _int(selected['bitrate']),
+          contentLength: _int(selected['contentLength']),
+          loudnessDb: _double(selected['loudnessDb']) ?? 0,
+        );
+      }
+    } catch (error) {
+      printWarning(
+        '[EMusicProvider] Client download recipe failed; using server fallback: '
+        '$error',
+      );
+    }
+    return null;
   }
 
   ProviderTrack _track(Map<String, dynamic> json) {
@@ -503,8 +709,8 @@ class EMusicProvider implements MusicProvider, MusicDiscoveryProvider {
         identity: MusicIdentity(
           providerId: providerId,
           profileId: _requireProfileId,
-          sourceId: _first(
-              json, const ['sourceId', 'albumId', 'browseId', 'playlistId', 'id']),
+          sourceId: _first(json,
+              const ['sourceId', 'albumId', 'browseId', 'playlistId', 'id']),
         ),
         title: json['title']?.toString() ??
             json['name']?.toString() ??
@@ -646,7 +852,26 @@ class EMusicProvider implements MusicProvider, MusicDiscoveryProvider {
   @override
   Future<void> dispose() async {
     _catalog = null;
+    _catalogCache.clear();
+    _catalogInFlight.clear();
     _profileId = null;
     _capabilities = const ProviderCapabilities();
   }
+}
+
+class _CatalogCacheEntry {
+  _CatalogCacheEntry(Map<String, dynamic> data)
+      : _data = copyOf(data),
+        createdAt = DateTime.now();
+
+  final Map<String, dynamic> _data;
+  final DateTime createdAt;
+
+  bool get isExpired =>
+      DateTime.now().difference(createdAt) > const Duration(minutes: 5);
+
+  Map<String, dynamic> copy() => copyOf(_data);
+
+  static Map<String, dynamic> copyOf(Map<String, dynamic> value) =>
+      Map<String, dynamic>.from(jsonDecode(jsonEncode(value)) as Map);
 }

@@ -17,20 +17,14 @@
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
                 <category android:name="android.intent.category.DEFAULT"/>
-                <data
-                    android:scheme="https"
-                    android:host="emusic.joss.red"
-                    android:pathPrefix="/share/"/>
+                <data android:scheme="https" android:host="emusic.joss.red" android:pathPrefix="/share/"/>
             </intent-filter>
 
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
                 <category android:name="android.intent.category.DEFAULT"/>
-                <data
-                    android:scheme="estrellamusic"
-                    android:host="share"
-                    android:pathPrefix="/"/>
+                <data android:scheme="estrellamusic" android:host="share" android:pathPrefix="/"/>
             </intent-filter>
 
             <intent-filter>
@@ -51,10 +45,7 @@
         </intent-filter>
         </service>
 
-        <service
-            android:name="com.pravera.flutter_foreground_task.service.ForegroundService"
-            android:exported="false"
-            android:foregroundServiceType="dataSync" />
+        <service android:name="com.pravera.flutter_foreground_task.service.ForegroundService" android:exported="false" android:foregroundServiceType="dataSync"/>
 
         <receiver android:name="com.ryanheise.audioservice.MediaButtonReceiver" android:exported="true" tools:ignore="Instantiatable">
         <intent-filter>
@@ -63,14 +54,8 @@
         </receiver>
 
         <!-- FileProvider para instalación de APK descargado -->
-        <provider
-            android:name="androidx.core.content.FileProvider"
-            android:authorities="${applicationId}.fileprovider"
-            android:exported="false"
-            android:grantUriPermissions="true">
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths"/>
+        <provider android:name="androidx.core.content.FileProvider" android:authorities="${applicationId}.fileprovider" android:exported="false" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
         </provider>
     </application>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28"/>

@@ -13,6 +13,7 @@ class PlaybackSource {
     this.mimeType,
     this.expiresAt,
     this.bitrate,
+    this.contentLength,
     this.loudnessDb = 0,
   });
 
@@ -22,6 +23,7 @@ class PlaybackSource {
   final String? mimeType;
   final DateTime? expiresAt;
   final int? bitrate;
+  final int? contentLength;
   final double loudnessDb;
 
   bool get isLocal => type == PlaybackSourceType.localFile;
