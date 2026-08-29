@@ -137,7 +137,9 @@ class SettingsScreenController extends GetxController {
 
     exportLocationPath.value =
         setBox.get("exportLocationPath") ?? "/storage/emulated/0/Music";
-    downloadingFormat.value = setBox.get('downloadingFormat') ?? "m4a";
+    // Opus/Ogg is the default for new profiles. Existing explicit selections
+    // are respected, so users who deliberately chose M4A are not migrated.
+    downloadingFormat.value = setBox.get('downloadingFormat') ?? "opus";
     discoverContentType.value = setBox.get('discoverContentType') ?? "QP";
     slidableActionEnabled.value = setBox.get('slidableActionEnabled') ?? true;
     stopPlyabackOnSwipeAway.value =
