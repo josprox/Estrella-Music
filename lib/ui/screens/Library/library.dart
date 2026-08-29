@@ -1,13 +1,13 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '/ui/widgets/modification_list.dart';
-import 'package:harmonymusic/models/playlist.dart';
+import 'package:estrella_music/models/playlist.dart';
 import 'library_controller.dart';
-import 'package:harmonymusic/ui/widgets/content_list_widget_item.dart';
-import 'package:harmonymusic/ui/widgets/list_widget.dart';
-import 'package:harmonymusic/ui/widgets/sort_widget.dart';
-import 'package:harmonymusic/generated/l10n.dart';
+import 'package:estrella_music/ui/widgets/content_list_widget_item.dart';
+import 'package:estrella_music/ui/widgets/list_widget.dart';
+import 'package:estrella_music/ui/widgets/sort_widget.dart';
+import 'package:estrella_music/generated/l10n.dart';
 
 class SongsLibraryWidget extends StatelessWidget {
   const SongsLibraryWidget({super.key, this.isBottomNavActive = false});

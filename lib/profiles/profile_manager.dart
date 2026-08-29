@@ -2,9 +2,9 @@ import 'dart:async';
 
 import 'package:get/get.dart';
 
-import 'package:harmonymusic/music_provider/music_provider_manager.dart';
-import 'package:harmonymusic/services/sync/sync_service.dart';
-import 'package:harmonymusic/ui/player/player_controller.dart';
+import 'package:estrella_music/music_provider/music_provider_manager.dart';
+import 'package:estrella_music/services/sync/sync_service.dart';
+import 'package:estrella_music/ui/player/player_controller.dart';
 
 import 'music_profile.dart';
 import 'profile_persistence.dart';

@@ -6,9 +6,9 @@ import 'package:get/get.dart';
 
 import '/ui/screens/Home/home_screen_controller.dart';
 import '/ui/screens/Settings/settings_screen_controller.dart';
-import 'package:harmonymusic/utils/helpers/helper.dart';
-import 'package:harmonymusic/ui/navigator.dart';
-import 'package:harmonymusic/ui/player/player.dart';
+import 'package:estrella_music/utils/helpers/helper.dart';
+import 'package:estrella_music/ui/navigator.dart';
+import 'package:estrella_music/ui/player/player.dart';
 import 'player/components/mini_player.dart';
 import 'player/player_controller.dart';
 import 'widgets/bottom_nav_bar.dart';
@@ -16,7 +16,7 @@ import 'widgets/scroll_to_hide.dart';
 import 'widgets/sliding_up_panel.dart';
 import 'widgets/snackbar.dart';
 import 'widgets/up_next_queue.dart';
-import 'package:harmonymusic/generated/l10n.dart';
+import 'package:estrella_music/generated/l10n.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});

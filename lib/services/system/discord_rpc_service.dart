@@ -1,7 +1,7 @@
 import 'dart:math';
 import 'package:get/get.dart';
 import 'package:dart_discord_presence/dart_discord_presence.dart';
-import 'package:harmonymusic/utils/helpers/helper.dart';
+import 'package:estrella_music/utils/helpers/helper.dart';
 
 class DiscordRpcService {
   static final DiscordRpcService _instance = DiscordRpcService._internal();

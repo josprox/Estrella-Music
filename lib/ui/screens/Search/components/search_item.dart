@@ -1,8 +1,8 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '/ui/screens/Search/search_screen_controller.dart';
 
-import 'package:harmonymusic/ui/navigator.dart';
+import 'package:estrella_music/ui/navigator.dart';
 
 class SearchItem extends StatelessWidget {
   final String queryString;

@@ -2,22 +2,22 @@ import 'package:audio_service/audio_service.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/models/playling_from.dart';
-import 'package:harmonymusic/models/thumbnail.dart';
-import 'package:harmonymusic/ui/widgets/playlist_album_scroll_behaviour.dart';
-import 'package:harmonymusic/services/storage/sqlite_store.dart';
-import 'package:harmonymusic/ui/widgets/custom_marquee.dart';
-import 'package:harmonymusic/utils/helpers/music_share_manager.dart';
+import 'package:estrella_music/models/playling_from.dart';
+import 'package:estrella_music/models/thumbnail.dart';
+import 'package:estrella_music/ui/widgets/playlist_album_scroll_behaviour.dart';
+import 'package:estrella_music/services/storage/sqlite_store.dart';
+import 'package:estrella_music/ui/widgets/custom_marquee.dart';
+import 'package:estrella_music/utils/helpers/music_share_manager.dart';
 
-import 'package:harmonymusic/services/download/downloader.dart';
-import 'package:harmonymusic/ui/player/player_controller.dart';
-import 'package:harmonymusic/ui/widgets/loader.dart';
-import 'package:harmonymusic/ui/widgets/snackbar.dart';
-import 'package:harmonymusic/ui/widgets/song_list_tile.dart';
-import 'package:harmonymusic/ui/widgets/songinfo_bottom_sheet.dart';
-import 'package:harmonymusic/ui/widgets/sort_widget.dart';
+import 'package:estrella_music/services/download/downloader.dart';
+import 'package:estrella_music/ui/player/player_controller.dart';
+import 'package:estrella_music/ui/widgets/loader.dart';
+import 'package:estrella_music/ui/widgets/snackbar.dart';
+import 'package:estrella_music/ui/widgets/song_list_tile.dart';
+import 'package:estrella_music/ui/widgets/songinfo_bottom_sheet.dart';
+import 'package:estrella_music/ui/widgets/sort_widget.dart';
 import 'album_screen_controller.dart';
-import 'package:harmonymusic/generated/l10n.dart';
+import 'package:estrella_music/generated/l10n.dart';
 
 class AlbumScreen extends StatelessWidget {
   const AlbumScreen({super.key});

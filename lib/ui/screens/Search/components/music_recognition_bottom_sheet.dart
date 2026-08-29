@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:audio_service/audio_service.dart';
-import 'package:harmonymusic/services/music/music_recognition_service.dart';
-import 'package:harmonymusic/music_provider/music_catalog_service.dart';
-import 'package:harmonymusic/ui/player/player_controller.dart';
-import 'package:harmonymusic/ui/widgets/loader.dart';
-import 'package:harmonymusic/ui/navigator.dart';
-import 'package:harmonymusic/generated/l10n.dart';
+import 'package:estrella_music/services/music/music_recognition_service.dart';
+import 'package:estrella_music/music_provider/music_catalog_service.dart';
+import 'package:estrella_music/ui/player/player_controller.dart';
+import 'package:estrella_music/ui/widgets/loader.dart';
+import 'package:estrella_music/ui/navigator.dart';
+import 'package:estrella_music/generated/l10n.dart';
 
 class MusicRecognitionBottomSheet extends StatefulWidget {
   const MusicRecognitionBottomSheet({super.key});

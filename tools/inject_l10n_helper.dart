@@ -18,7 +18,7 @@ void main() {
     // Check if it's NOT a literal replacement already handled
     // Actually, if it has .tr, it needs the helper extension to work.
     
-    if (!content.contains("import 'package:harmonymusic/utils/l10n_helper.dart';") &&
+    if (!content.contains("import 'package:estrella_music/utils/l10n_helper.dart';") &&
         !content.contains("import '/utils/l10n_helper.dart';")) {
       
       final lines = content.split('\n');
@@ -28,7 +28,7 @@ void main() {
           insertIndex = i + 1;
         }
       }
-      lines.insert(insertIndex, "import 'package:harmonymusic/utils/l10n_helper.dart';");
+      lines.insert(insertIndex, "import 'package:estrella_music/utils/l10n_helper.dart';");
       file.writeAsStringSync(lines.join('\n'));
       modifiedCount++;
       print('Added helper import to ${file.path}');

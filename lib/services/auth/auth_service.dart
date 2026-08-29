@@ -4,10 +4,10 @@ import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/services/storage/safe_secure_storage.dart';
-import 'package:harmonymusic/services/sync/cloud_sync_manager.dart';
-import 'package:harmonymusic/services/system/fcm_notification_service.dart';
-import 'package:harmonymusic/services/system/notification_service.dart';
+import 'package:estrella_music/services/storage/safe_secure_storage.dart';
+import 'package:estrella_music/services/sync/cloud_sync_manager.dart';
+import 'package:estrella_music/services/system/fcm_notification_service.dart';
+import 'package:estrella_music/services/system/notification_service.dart';
 
 class AuthService extends GetxService {
   static const _jwtTokenKey = 'jwt_token';

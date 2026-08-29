@@ -7,7 +7,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:harmonymusic/services/storage/safe_secure_storage.dart';
+import 'package:estrella_music/services/storage/safe_secure_storage.dart';
 import 'package:http/http.dart' as http;
 
 import 'notification_service.dart';

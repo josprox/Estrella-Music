@@ -10,8 +10,8 @@ import '../models/provider_entities.dart';
 import '../music_provider.dart';
 import '../music_download_provider.dart';
 import '../music_discovery_provider.dart';
-import 'package:harmonymusic/utils/helpers/helper.dart';
-import 'package:harmonymusic/services/music/music_service.dart';
+import 'package:estrella_music/utils/helpers/helper.dart';
+import 'package:estrella_music/services/music/music_service.dart';
 
 typedef ProviderTokenLoader = Future<String?> Function();
 typedef ProviderPlaybackContextLoader = Future<EMusicPlaybackContext>

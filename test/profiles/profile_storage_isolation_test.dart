@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:harmonymusic/profiles/profile_storage_namespace.dart';
-import 'package:harmonymusic/services/storage/sqlite_store.dart';
+import 'package:estrella_music/profiles/profile_storage_namespace.dart';
+import 'package:estrella_music/services/storage/sqlite_store.dart';
 
 void main() {
   late Directory directory;

@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '/ui/screens/Artists/artist_screen.dart' show AboutArtist;
-import 'package:harmonymusic/ui/navigator.dart';
-import 'package:harmonymusic/ui/widgets/loader.dart';
-import 'package:harmonymusic/ui/widgets/separate_tab_item_widget.dart';
+import 'package:estrella_music/ui/navigator.dart';
+import 'package:estrella_music/ui/widgets/loader.dart';
+import 'package:estrella_music/ui/widgets/separate_tab_item_widget.dart';
 import 'artist_screen_controller.dart';
-import 'package:harmonymusic/generated/l10n.dart';
+import 'package:estrella_music/generated/l10n.dart';
 
 class ArtistScreenBN extends StatelessWidget {
   const ArtistScreenBN(

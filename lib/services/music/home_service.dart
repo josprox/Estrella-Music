@@ -1,9 +1,9 @@
 import 'dart:math';
 
 import 'package:audio_service/audio_service.dart';
-import 'package:harmonymusic/services/system/nav_parser.dart';
-import 'package:harmonymusic/services/system/continuations.dart';
-import 'package:harmonymusic/services/music/music_service.dart';
+import 'package:estrella_music/services/system/nav_parser.dart';
+import 'package:estrella_music/services/system/continuations.dart';
+import 'package:estrella_music/services/music/music_service.dart';
 
 class HomeService {
   final MusicServices _musicServices;

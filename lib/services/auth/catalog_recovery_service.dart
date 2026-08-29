@@ -2,17 +2,17 @@ import 'dart:io';
 
 import 'package:audio_service/audio_service.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/services/storage/sqlite_store.dart';
+import 'package:estrella_music/services/storage/sqlite_store.dart';
 import 'package:path_provider/path_provider.dart';
 
-import 'package:harmonymusic/models/album.dart';
-import 'package:harmonymusic/models/artist.dart';
-import 'package:harmonymusic/models/media_item_builder.dart';
-import 'package:harmonymusic/models/playlist.dart';
-import 'package:harmonymusic/ui/screens/Library/library_controller.dart';
-import 'package:harmonymusic/utils/helpers/helper.dart';
-import 'package:harmonymusic/music_provider/music_catalog_service.dart';
-import 'package:harmonymusic/services/sync/sync_service.dart';
+import 'package:estrella_music/models/album.dart';
+import 'package:estrella_music/models/artist.dart';
+import 'package:estrella_music/models/media_item_builder.dart';
+import 'package:estrella_music/models/playlist.dart';
+import 'package:estrella_music/ui/screens/Library/library_controller.dart';
+import 'package:estrella_music/utils/helpers/helper.dart';
+import 'package:estrella_music/music_provider/music_catalog_service.dart';
+import 'package:estrella_music/services/sync/sync_service.dart';
 
 class CatalogRecoveryService extends GetxService {
   MusicCatalogService get _musicServices => Get.find<MusicCatalogService>();

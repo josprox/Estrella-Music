@@ -1,17 +1,17 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:audio_service/audio_service.dart';
-import 'package:harmonymusic/services/storage/sqlite_store.dart';
-import 'package:harmonymusic/utils/helpers/helper.dart';
+import 'package:estrella_music/services/storage/sqlite_store.dart';
+import 'package:estrella_music/utils/helpers/helper.dart';
 
-import 'package:harmonymusic/ui/navigator.dart';
+import 'package:estrella_music/ui/navigator.dart';
 import 'image_widget.dart';
 import 'playlist_cover_widget.dart';
 import 'hover_card_wrapper.dart';
-import 'package:harmonymusic/models/playling_from.dart';
-import 'package:harmonymusic/models/media_item_builder.dart';
-import 'package:harmonymusic/music_provider/music_catalog_service.dart';
-import 'package:harmonymusic/ui/player/player_controller.dart';
+import 'package:estrella_music/models/playling_from.dart';
+import 'package:estrella_music/models/media_item_builder.dart';
+import 'package:estrella_music/music_provider/music_catalog_service.dart';
+import 'package:estrella_music/ui/player/player_controller.dart';
 
 class ContentListItem extends StatelessWidget {
   final double? width;

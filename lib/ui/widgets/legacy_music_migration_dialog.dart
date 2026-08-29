@@ -1,9 +1,9 @@
-﻿import 'package:file_picker/file_picker.dart';
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/generated/l10n.dart';
+import 'package:estrella_music/generated/l10n.dart';
 
-import 'package:harmonymusic/services/sync/legacy_music_migration_service.dart';
+import 'package:estrella_music/services/sync/legacy_music_migration_service.dart';
 import 'common_dialog_widget.dart';
 import 'snackbar.dart';
 

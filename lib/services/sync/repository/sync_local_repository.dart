@@ -1,5 +1,5 @@
-import 'package:harmonymusic/services/storage/sqlite_store.dart';
-import 'package:harmonymusic/utils/helpers/helper.dart';
+import 'package:estrella_music/services/storage/sqlite_store.dart';
+import 'package:estrella_music/utils/helpers/helper.dart';
 
 class SyncLocalRepository {
   Future<Map<String, dynamic>> buildPushPayload() async {

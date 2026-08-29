@@ -4,9 +4,9 @@ import 'dart:typed_data';
 import 'package:dio/dio.dart';
 import 'package:get/get.dart' hide FormData, MultipartFile;
 
-import 'package:harmonymusic/utils/helpers/helper.dart';
-import 'package:harmonymusic/services/auth/auth_service.dart';
-import 'package:harmonymusic/services/storage/sqlite_store.dart';
+import 'package:estrella_music/utils/helpers/helper.dart';
+import 'package:estrella_music/services/auth/auth_service.dart';
+import 'package:estrella_music/services/storage/sqlite_store.dart';
 
 class CloudBackupFile {
   CloudBackupFile({

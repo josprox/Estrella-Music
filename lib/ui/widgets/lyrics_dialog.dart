@@ -1,10 +1,10 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '/ui/player/components/lyrics_switch.dart';
 import '/ui/player/components/lyrics_widget.dart';
 import '/ui/widgets/common_dialog_widget.dart';
-import 'package:harmonymusic/ui/player/player_controller.dart';
+import 'package:estrella_music/ui/player/player_controller.dart';
 
 class LyricsDialog extends StatelessWidget {
   const LyricsDialog({super.key});

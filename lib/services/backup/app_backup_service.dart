@@ -3,12 +3,12 @@ import 'dart:typed_data';
 
 import 'package:archive/archive_io.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/services/storage/sqlite_store.dart';
+import 'package:estrella_music/services/storage/sqlite_store.dart';
 import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
 
-import 'package:harmonymusic/utils/helpers/helper.dart';
-import 'package:harmonymusic/services/sync/music_sqlite_service.dart';
+import 'package:estrella_music/utils/helpers/helper.dart';
+import 'package:estrella_music/services/sync/music_sqlite_service.dart';
 
 class AppBackupService extends GetxService {
   Future<String> get supportDirPath async {

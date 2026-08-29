@@ -1,25 +1,25 @@
-﻿import 'dart:io';
+import 'dart:io';
 
 import 'package:audio_service/audio_service.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/services/auth/auth_service.dart';
-import 'package:harmonymusic/services/system/permission_service.dart';
-import 'package:harmonymusic/services/storage/sqlite_store.dart';
+import 'package:estrella_music/services/auth/auth_service.dart';
+import 'package:estrella_music/services/system/permission_service.dart';
+import 'package:estrella_music/services/storage/sqlite_store.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:permission_handler/permission_handler.dart';
 
-import 'package:harmonymusic/utils/helpers/update_check_flag_file.dart';
-import 'package:harmonymusic/utils/helpers/helper.dart';
-import 'package:harmonymusic/music_provider/music_catalog_service.dart';
-import 'package:harmonymusic/music_provider/models/playback_source.dart';
-import 'package:harmonymusic/ui/player/player_controller.dart';
-import 'package:harmonymusic/ui/screens/Home/home_screen_controller.dart';
+import 'package:estrella_music/utils/helpers/update_check_flag_file.dart';
+import 'package:estrella_music/utils/helpers/helper.dart';
+import 'package:estrella_music/music_provider/music_catalog_service.dart';
+import 'package:estrella_music/music_provider/models/playback_source.dart';
+import 'package:estrella_music/ui/player/player_controller.dart';
+import 'package:estrella_music/ui/screens/Home/home_screen_controller.dart';
 import '/ui/utils/theme_controller.dart';
 import 'package:wakelock_plus/wakelock_plus.dart';
-import 'package:harmonymusic/generated/l10n.dart';
+import 'package:estrella_music/generated/l10n.dart';
 
 class SettingsScreenController extends GetxController {
   String _supportDir = "";

@@ -1,8 +1,8 @@
-﻿import 'package:flutter/material.dart';
-import 'package:harmonymusic/services/storage/sqlite_store.dart';
+import 'package:flutter/material.dart';
+import 'package:estrella_music/services/storage/sqlite_store.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:harmonymusic/utils/helpers/helper.dart';
-import 'package:harmonymusic/models/playlist.dart';
+import 'package:estrella_music/utils/helpers/helper.dart';
+import 'package:estrella_music/models/playlist.dart';
 import 'image_widget.dart';
 
 class PlaylistCoverWidget extends StatelessWidget {

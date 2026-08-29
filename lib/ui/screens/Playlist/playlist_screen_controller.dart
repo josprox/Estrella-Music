@@ -1,29 +1,29 @@
-﻿import 'dart:convert';
+import 'dart:convert';
 import 'dart:io';
 import 'dart:async';
 import 'package:audio_service/audio_service.dart' show MediaItem;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/models/thumbnail.dart';
-import 'package:harmonymusic/services/system/permission_service.dart';
-import 'package:harmonymusic/ui/screens/Settings/settings_screen_controller.dart';
-import 'package:harmonymusic/ui/widgets/snackbar.dart';
-import 'package:harmonymusic/utils/helpers/helper.dart';
-import 'package:harmonymusic/services/storage/sqlite_store.dart';
+import 'package:estrella_music/models/thumbnail.dart';
+import 'package:estrella_music/services/system/permission_service.dart';
+import 'package:estrella_music/ui/screens/Settings/settings_screen_controller.dart';
+import 'package:estrella_music/ui/widgets/snackbar.dart';
+import 'package:estrella_music/utils/helpers/helper.dart';
+import 'package:estrella_music/services/storage/sqlite_store.dart';
 import 'package:path_provider/path_provider.dart' as path_provider;
 
-import 'package:harmonymusic/base_class/playlist_album_screen_con_base.dart';
-import 'package:harmonymusic/mixins/additional_opeartion_mixin.dart';
+import 'package:estrella_music/base_class/playlist_album_screen_con_base.dart';
+import 'package:estrella_music/mixins/additional_opeartion_mixin.dart';
 import '../../../models/album.dart' show Album;
-import 'package:harmonymusic/models/media_item_builder.dart';
-import 'package:harmonymusic/models/playlist.dart';
-import 'package:harmonymusic/services/auth/catalog_recovery_service.dart';
-import 'package:harmonymusic/music_provider/music_catalog_service.dart';
-import 'package:harmonymusic/music_provider/music_provider.dart';
-import 'package:harmonymusic/services/sync/sync_service.dart';
-import 'package:harmonymusic/ui/screens/Home/home_screen_controller.dart';
-import 'package:harmonymusic/ui/screens/Library/library_controller.dart';
-import 'package:harmonymusic/generated/l10n.dart';
+import 'package:estrella_music/models/media_item_builder.dart';
+import 'package:estrella_music/models/playlist.dart';
+import 'package:estrella_music/services/auth/catalog_recovery_service.dart';
+import 'package:estrella_music/music_provider/music_catalog_service.dart';
+import 'package:estrella_music/music_provider/music_provider.dart';
+import 'package:estrella_music/services/sync/sync_service.dart';
+import 'package:estrella_music/ui/screens/Home/home_screen_controller.dart';
+import 'package:estrella_music/ui/screens/Library/library_controller.dart';
+import 'package:estrella_music/generated/l10n.dart';
 
 ///PlaylistScreenController handles playlist screen
 ///
@@ -678,7 +678,7 @@ class PlaylistScreenController extends PlaylistAlbumScreenControllerBase
   // Helper method to get the appropriate export directory for each platform
   Future<Directory> _getExportDirectory() async {
     Directory directory;
-    const appFolderName = "HarmonyMusic";
+    const appFolderName = "EstrellaMusic";
 
     try {
       if (Platform.isAndroid) {
@@ -720,11 +720,11 @@ class PlaylistScreenController extends PlaylistAlbumScreenControllerBase
   // Helper method to get a user-friendly location message
   String _getLocationMessage(String path) {
     if (Platform.isAndroid) {
-      return "Downloads/HarmonyMusic";
+      return "Downloads/EstrellaMusic";
     } else if (Platform.isIOS) {
-      return "Files App > HarmonyMusic";
+      return "Files App > EstrellaMusic";
     } else if (Platform.isWindows || Platform.isLinux || Platform.isMacOS) {
-      return "Downloads/HarmonyMusic";
+      return "Downloads/EstrellaMusic";
     } else {
       return path.split('/').last;
     }

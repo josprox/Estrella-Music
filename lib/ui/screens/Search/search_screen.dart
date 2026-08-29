@@ -1,12 +1,12 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/generated/l10n.dart';
+import 'package:estrella_music/generated/l10n.dart';
 
 import '/ui/navigator.dart';
 import '/ui/screens/Settings/settings_screen_controller.dart';
-import 'package:harmonymusic/ui/widgets/nebula_background.dart';
-import 'package:harmonymusic/music_provider/music_catalog_service.dart';
+import 'package:estrella_music/ui/widgets/nebula_background.dart';
+import 'package:estrella_music/music_provider/music_catalog_service.dart';
 import 'components/search_item.dart';
 import 'components/music_recognition_bottom_sheet.dart';
 import 'search_screen_controller.dart';

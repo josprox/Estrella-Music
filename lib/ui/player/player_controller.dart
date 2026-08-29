@@ -2,37 +2,37 @@ import 'dart:async';
 import 'dart:io';
 import 'package:flutter_lyric/lyrics_reader.dart';
 import 'package:dio/dio.dart';
-import 'package:harmonymusic/services/system/translation_service.dart';
-import 'package:harmonymusic/services/storage/sqlite_store.dart';
+import 'package:estrella_music/services/system/translation_service.dart';
+import 'package:estrella_music/services/storage/sqlite_store.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:audio_service/audio_service.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
-import 'package:harmonymusic/models/playling_from.dart';
-import 'package:harmonymusic/services/auth/catalog_recovery_service.dart';
-import 'package:harmonymusic/services/download/downloader.dart';
-import 'package:harmonymusic/ui/screens/Playlist/playlist_screen_controller.dart';
-import 'package:harmonymusic/ui/widgets/snackbar.dart';
-import 'package:harmonymusic/services/music/synced_lyrics_service.dart';
+import 'package:estrella_music/models/playling_from.dart';
+import 'package:estrella_music/services/auth/catalog_recovery_service.dart';
+import 'package:estrella_music/services/download/downloader.dart';
+import 'package:estrella_music/ui/screens/Playlist/playlist_screen_controller.dart';
+import 'package:estrella_music/ui/widgets/snackbar.dart';
+import 'package:estrella_music/services/music/synced_lyrics_service.dart';
 import '/ui/screens/Settings/settings_screen_controller.dart';
 import 'package:wakelock_plus/wakelock_plus.dart';
-import 'package:harmonymusic/services/music/windows_audio_service.dart';
-import 'package:harmonymusic/utils/helpers/helper.dart';
-import 'package:harmonymusic/ui/utils/theme_controller.dart';
+import 'package:estrella_music/services/music/windows_audio_service.dart';
+import 'package:estrella_music/utils/helpers/helper.dart';
+import 'package:estrella_music/ui/utils/theme_controller.dart';
 import '/models/media_item_builder.dart';
-import 'package:harmonymusic/ui/screens/Home/home_screen_controller.dart';
-import 'package:harmonymusic/ui/widgets/sliding_up_panel.dart';
+import 'package:estrella_music/ui/screens/Home/home_screen_controller.dart';
+import 'package:estrella_music/ui/widgets/sliding_up_panel.dart';
 import '/models/durationstate.dart';
-import 'package:harmonymusic/music_provider/music_catalog_service.dart';
-import 'package:harmonymusic/music_provider/music_provider.dart';
-import 'package:harmonymusic/generated/l10n.dart';
-import 'package:harmonymusic/utils/localization/l10n_extensions.dart';
-import 'package:harmonymusic/services/sync/sync_service.dart';
-import 'package:harmonymusic/services/social/colistening_service.dart';
-import 'package:harmonymusic/services/system/discord_rpc_service.dart';
-import 'package:harmonymusic/ui/widgets/up_next_queue.dart';
+import 'package:estrella_music/music_provider/music_catalog_service.dart';
+import 'package:estrella_music/music_provider/music_provider.dart';
+import 'package:estrella_music/generated/l10n.dart';
+import 'package:estrella_music/utils/localization/l10n_extensions.dart';
+import 'package:estrella_music/services/sync/sync_service.dart';
+import 'package:estrella_music/services/social/colistening_service.dart';
+import 'package:estrella_music/services/system/discord_rpc_service.dart';
+import 'package:estrella_music/ui/widgets/up_next_queue.dart';
 
 enum PlayButtonState { paused, playing, loading }
 
@@ -1072,16 +1072,20 @@ class PlayerController extends GetxController
             "plainLyrics": providerLyrics.plain ?? "",
           };
         } else if (song != null) {
-          // Fallback: Try online lyric service via title/artist
+          // This fallback belongs to the player, not to a concrete provider.
+          // eMusic and Local profiles therefore receive the same online lyrics
+          // and can use the translation control consistently.
           try {
-            final neteaseRes = await TranslationService.fetchNetEaseTranslation(
-                song.title, song.artist ?? "");
-            if (neteaseRes != null &&
-                ((neteaseRes["synced"]?.isNotEmpty ?? false) ||
-                    (neteaseRes["plain"]?.isNotEmpty ?? false))) {
+            final onlineLyrics = await TranslationService.fetchOnlineLyrics(
+              title: song.title,
+              artist: song.artist ?? '',
+              album: song.album,
+              duration: song.duration,
+            );
+            if (onlineLyrics != null) {
               lyrics.value = {
-                "synced": neteaseRes["synced"] ?? "",
-                "plainLyrics": neteaseRes["plain"] ?? "NA",
+                "synced": onlineLyrics["synced"] ?? "",
+                "plainLyrics": onlineLyrics["plain"] ?? "",
               };
             } else {
               lyrics.value = {"synced": "", "plainLyrics": "NA"};
@@ -1140,14 +1144,15 @@ class PlayerController extends GetxController
       }
       await lyricsBox.close();
 
-      if (lyrics["synced"].isEmpty && lyrics["plainLyrics"].isEmpty) {
+      if (_lyricsAreUnavailable) {
         await loadLyrics();
       }
 
       final originalSynced = lyrics["synced"].toString();
       final originalPlain = lyrics["plainLyrics"].toString();
 
-      if (originalSynced.isEmpty && originalPlain.isEmpty) {
+      if (_isUnavailableLyricsText(originalSynced) &&
+          _isUnavailableLyricsText(originalPlain)) {
         translatedLyrics.value = {"synced": "", "plainLyrics": ""};
         isTranslationLoading.value = false;
         return;
@@ -1221,6 +1226,15 @@ class PlayerController extends GetxController
     if (isTranslationEnabled.value) {
       await loadTranslation();
     }
+  }
+
+  bool get _lyricsAreUnavailable =>
+      _isUnavailableLyricsText(lyrics['synced']?.toString() ?? '') &&
+      _isUnavailableLyricsText(lyrics['plainLyrics']?.toString() ?? '');
+
+  bool _isUnavailableLyricsText(String value) {
+    final normalized = value.trim();
+    return normalized.isEmpty || normalized == 'NA';
   }
 
   void changeLyricsMode(int? val) {

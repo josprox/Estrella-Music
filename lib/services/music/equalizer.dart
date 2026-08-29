@@ -1,4 +1,4 @@
-import 'package:harmonymusic/native_bindings/andrid_utils.dart';
+import 'package:estrella_music/native_bindings/andrid_utils.dart';
 import 'package:jni/jni.dart';
 
 class EqualizerService {

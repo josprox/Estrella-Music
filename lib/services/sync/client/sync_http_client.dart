@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
-import 'package:harmonymusic/generated/l10n.dart';
-import 'package:harmonymusic/utils/helpers/helper.dart';
+import 'package:estrella_music/generated/l10n.dart';
+import 'package:estrella_music/utils/helpers/helper.dart';
 
 class SyncHttpClient {
   final Dio _dio = Dio(

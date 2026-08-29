@@ -4,10 +4,10 @@
 import 'package:audio_service/audio_service.dart';
 
 import '/models/media_item_builder.dart';
-import 'package:harmonymusic/services/system/utils.dart';
-import 'package:harmonymusic/models/album.dart';
-import 'package:harmonymusic/models/artist.dart';
-import 'package:harmonymusic/models/playlist.dart';
+import 'package:estrella_music/services/system/utils.dart';
+import 'package:estrella_music/models/album.dart';
+import 'package:estrella_music/models/artist.dart';
+import 'package:estrella_music/models/playlist.dart';
 
 const single_column = ['contents', 'singleColumnBrowseResultsRenderer'];
 const tab_content = ['tabs', 0, 'tabRenderer', 'content'];

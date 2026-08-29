@@ -1,8 +1,8 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/services/sync/sync_service.dart';
-import 'package:harmonymusic/ui/widgets/snackbar.dart';
+import 'package:estrella_music/services/sync/sync_service.dart';
+import 'package:estrella_music/ui/widgets/snackbar.dart';
 
 class FriendsManagementScreen extends StatefulWidget {
   const FriendsManagementScreen({super.key});

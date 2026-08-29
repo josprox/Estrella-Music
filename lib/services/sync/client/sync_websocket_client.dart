@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:harmonymusic/utils/helpers/helper.dart';
+import 'package:estrella_music/utils/helpers/helper.dart';
 
 class SyncWebSocketClient {
   static const _authenticationTimeout = Duration(seconds: 15);

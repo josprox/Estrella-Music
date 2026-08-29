@@ -3,17 +3,17 @@ import 'dart:typed_data';
 
 import 'package:archive/archive.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/services/storage/sqlite_store.dart';
+import 'package:estrella_music/services/storage/sqlite_store.dart';
 import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
 import 'package:sqlite3/sqlite3.dart';
 
-import 'package:harmonymusic/models/album.dart';
-import 'package:harmonymusic/models/artist.dart';
-import 'package:harmonymusic/models/playlist.dart';
-import 'package:harmonymusic/generated/l10n.dart';
-import 'package:harmonymusic/ui/screens/Library/library_controller.dart';
-import 'package:harmonymusic/utils/helpers/helper.dart';
+import 'package:estrella_music/models/album.dart';
+import 'package:estrella_music/models/artist.dart';
+import 'package:estrella_music/models/playlist.dart';
+import 'package:estrella_music/generated/l10n.dart';
+import 'package:estrella_music/ui/screens/Library/library_controller.dart';
+import 'package:estrella_music/utils/helpers/helper.dart';
 
 class LegacyMigrationSummary {
   const LegacyMigrationSummary({
@@ -526,7 +526,7 @@ class LegacyMusicMigrationService extends GetxService {
           await SqliteStore.openBox(legacyLibraryPlaylistId);
       await legacyPlaylistBox.clear();
       for (var index = 0; index < legacySongs.length; index++) {
-        await legacyPlaylistBox.put(index, legacySongs[index].toHarmonyJson());
+        await legacyPlaylistBox.put(index, legacySongs[index].toLegacyJson());
       }
       await legacyPlaylistBox.close();
 
@@ -546,7 +546,7 @@ class LegacyMusicMigrationService extends GetxService {
     }
 
     for (final song in songs.values.where((song) => song.liked)) {
-      await favoritesBox.put(song.id, song.toHarmonyJson());
+      await favoritesBox.put(song.id, song.toLegacyJson());
     }
 
     for (final playlist in playlists) {
@@ -558,7 +558,7 @@ class LegacyMusicMigrationService extends GetxService {
       final playlistBox = await SqliteStore.openBox(playlistId);
       await playlistBox.clear();
       for (var index = 0; index < playlist.songs.length; index++) {
-        await playlistBox.put(index, playlist.songs[index].toHarmonyJson());
+        await playlistBox.put(index, playlist.songs[index].toLegacyJson());
       }
       await playlistBox.close();
 
@@ -582,7 +582,7 @@ class LegacyMusicMigrationService extends GetxService {
       final albumBox = await SqliteStore.openBox(album.id);
       await albumBox.clear();
       for (var index = 0; index < album.songs.length; index++) {
-        await albumBox.put(index, album.songs[index].toHarmonyJson());
+        await albumBox.put(index, album.songs[index].toLegacyJson());
       }
       await albumBox.close();
 
@@ -771,7 +771,7 @@ class _LegacySong {
     return 'https://i.ytimg.com/vi/$id/hqdefault.jpg';
   }
 
-  Map<String, dynamic> toHarmonyJson() {
+  Map<String, dynamic> toLegacyJson() {
     return {
       'videoId': id,
       'title': title,

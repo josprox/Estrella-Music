@@ -1,6 +1,6 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
-import 'package:harmonymusic/services/storage/sqlite_store.dart';
+import 'package:estrella_music/services/storage/sqlite_store.dart';
 
 /// Wraps a child widget and overlays small download/like badge icons
 /// that reactively update when the SqliteStore boxes change.

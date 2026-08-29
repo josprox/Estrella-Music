@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:harmonymusic/ui/screens/Playlist/playlist_screen_controller.dart';
+import 'package:estrella_music/ui/screens/Playlist/playlist_screen_controller.dart';
 import 'common_dialog_widget.dart';
-import 'package:harmonymusic/generated/l10n.dart';
+import 'package:estrella_music/generated/l10n.dart';
 
 class PlaylistExportDialog extends StatelessWidget {
   const PlaylistExportDialog({

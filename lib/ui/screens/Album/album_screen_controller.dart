@@ -1,19 +1,19 @@
-﻿import 'package:audio_service/audio_service.dart' show MediaItem;
+import 'package:audio_service/audio_service.dart' show MediaItem;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/base_class/playlist_album_screen_con_base.dart';
-import 'package:harmonymusic/models/album.dart';
-import 'package:harmonymusic/models/playlist.dart';
-import 'package:harmonymusic/services/auth/catalog_recovery_service.dart';
-import 'package:harmonymusic/music_provider/music_provider.dart';
-import 'package:harmonymusic/utils/helpers/helper.dart';
-import 'package:harmonymusic/services/storage/sqlite_store.dart';
+import 'package:estrella_music/base_class/playlist_album_screen_con_base.dart';
+import 'package:estrella_music/models/album.dart';
+import 'package:estrella_music/models/playlist.dart';
+import 'package:estrella_music/services/auth/catalog_recovery_service.dart';
+import 'package:estrella_music/music_provider/music_provider.dart';
+import 'package:estrella_music/utils/helpers/helper.dart';
+import 'package:estrella_music/services/storage/sqlite_store.dart';
 
-import 'package:harmonymusic/mixins/additional_opeartion_mixin.dart';
-import 'package:harmonymusic/models/media_item_builder.dart';
-import 'package:harmonymusic/ui/screens/Home/home_screen_controller.dart';
-import 'package:harmonymusic/ui/screens/Library/library_controller.dart';
-import 'package:harmonymusic/services/sync/sync_service.dart';
+import 'package:estrella_music/mixins/additional_opeartion_mixin.dart';
+import 'package:estrella_music/models/media_item_builder.dart';
+import 'package:estrella_music/ui/screens/Home/home_screen_controller.dart';
+import 'package:estrella_music/ui/screens/Library/library_controller.dart';
+import 'package:estrella_music/services/sync/sync_service.dart';
 
 ///AlbumScreenController handles album screen
 ///

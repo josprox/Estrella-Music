@@ -1,12 +1,12 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/services/storage/sqlite_store.dart';
+import 'package:estrella_music/services/storage/sqlite_store.dart';
 
-import 'package:harmonymusic/utils/helpers/helper.dart';
-import 'package:harmonymusic/services/backup/app_backup_service.dart';
-import 'package:harmonymusic/services/auth/auth_service.dart';
-import 'package:harmonymusic/services/backup/cloud_backup_service.dart';
-import 'package:harmonymusic/services/sync/legacy_music_migration_service.dart';
+import 'package:estrella_music/utils/helpers/helper.dart';
+import 'package:estrella_music/services/backup/app_backup_service.dart';
+import 'package:estrella_music/services/auth/auth_service.dart';
+import 'package:estrella_music/services/backup/cloud_backup_service.dart';
+import 'package:estrella_music/services/sync/legacy_music_migration_service.dart';
 
 class UserDataBootstrapService extends GetxService {
   final isPreparing = false.obs;

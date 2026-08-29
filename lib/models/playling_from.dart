@@ -1,6 +1,6 @@
 // ignore_for_file: constant_identifier_names
 
-import 'package:harmonymusic/generated/l10n.dart';
+import 'package:estrella_music/generated/l10n.dart';
 
 class PlaylingFrom {
   PlaylingFromType type;

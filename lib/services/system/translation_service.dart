@@ -1,8 +1,73 @@
 import 'package:dio/dio.dart';
-import 'package:harmonymusic/utils/helpers/helper.dart';
+import 'package:estrella_music/utils/helpers/helper.dart';
 
 class TranslationService {
   static final Dio _dio = Dio();
+
+  /// Finds public lyrics independently from the active music provider.
+  ///
+  /// Providers may supply their own lyrics, but online lookup is a playback UI
+  /// feature: it must work equally for local and eMusic profiles.  Keeping it
+  /// here prevents the local provider from being the only profile with this
+  /// fallback.
+  static Future<Map<String, String>?> fetchOnlineLyrics({
+    required String title,
+    required String artist,
+    String? album,
+    Duration? duration,
+  }) async {
+    final normalizedTitle = title.trim();
+    if (normalizedTitle.isEmpty) return null;
+
+    final normalizedArtist = artist.trim();
+    final normalizedAlbum = album?.trim() ?? '';
+    final dio = Dio(BaseOptions(
+      connectTimeout: const Duration(seconds: 4),
+      receiveTimeout: const Duration(seconds: 4),
+      headers: const {'User-Agent': 'EstrellaMusic/2.0'},
+    ));
+
+    Map<String, String>? parseLyrics(dynamic value) {
+      if (value is! Map) return null;
+      final synced = value['syncedLyrics']?.toString().trim() ?? '';
+      final plain = value['plainLyrics']?.toString().trim() ?? '';
+      if (synced.isEmpty && plain.isEmpty) return null;
+      return {'synced': synced, 'plain': plain};
+    }
+
+    try {
+      final response = await dio.get(
+        'https://lrclib.net/api/get',
+        queryParameters: {
+          'track_name': normalizedTitle,
+          if (normalizedArtist.isNotEmpty) 'artist_name': normalizedArtist,
+          if (normalizedAlbum.isNotEmpty) 'album_name': normalizedAlbum,
+          if (duration != null && duration.inSeconds > 0)
+            'duration': duration.inSeconds,
+        },
+      );
+      final lyrics = parseLyrics(response.data);
+      if (lyrics != null) return lyrics;
+    } catch (_) {
+      // A fuzzy search below handles incomplete or inconsistent metadata.
+    }
+
+    try {
+      final response = await dio.get(
+        'https://lrclib.net/api/search',
+        queryParameters: {'q': '$normalizedTitle $normalizedArtist'.trim()},
+      );
+      if (response.data is List) {
+        for (final candidate in response.data as List) {
+          final lyrics = parseLyrics(candidate);
+          if (lyrics != null) return lyrics;
+        }
+      }
+    } catch (error) {
+      printERROR('Failed to find online lyrics: $error');
+    }
+    return null;
+  }
 
   /// Attempt to fetch translated lyrics from NetEase.
   /// Returns a Map with 'synced' and 'plain' translated lyrics if found.

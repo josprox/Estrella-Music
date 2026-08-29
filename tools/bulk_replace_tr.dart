@@ -84,7 +84,7 @@ void main() {
 
     if (modified) {
       // Add S class import at the top after other imports
-      if (!newContent.contains("import 'package:harmonymusic/generated/l10n.dart';") && 
+      if (!newContent.contains("import 'package:estrella_music/generated/l10n.dart';") &&
           !newContent.contains("import 'generated/l10n.dart';") &&
           !newContent.contains("import '../generated/l10n.dart';") &&
           !newContent.contains("import '../../generated/l10n.dart';")) {
@@ -99,7 +99,7 @@ void main() {
             break; 
           }
         }
-        lines.insert(insertIndex, "import 'package:harmonymusic/generated/l10n.dart';");
+        lines.insert(insertIndex, "import 'package:estrella_music/generated/l10n.dart';");
         newContent = lines.join('\n');
       }
       

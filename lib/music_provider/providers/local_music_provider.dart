@@ -2,9 +2,9 @@ import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:audiotags/audiotags.dart';
-import 'package:dio/dio.dart';
 import 'package:path/path.dart' as path;
 import 'package:path_provider/path_provider.dart';
+import 'package:estrella_music/services/system/translation_service.dart';
 
 import '../models/music_identity.dart';
 import '../models/playback_source.dart';
@@ -446,71 +446,20 @@ class LocalMusicProvider implements MusicProvider {
       }
     } catch (_) {}
 
-    // 3. Search lyrics on the Web (LRCLIB & NetEase online lookup)
-    try {
-      final title = track.title;
-      final artist = track.artist == 'Unknown artist' ? '' : track.artist;
-      final album = track.album == 'Unknown album' ? '' : track.album;
-      final duration = track.duration?.inSeconds;
-
-      // Primary web lookup: LRCLIB (open database for synced lyrics)
-      final dio = Dio(BaseOptions(
-        connectTimeout: const Duration(seconds: 4),
-        receiveTimeout: const Duration(seconds: 4),
-        headers: {'User-Agent': 'EstrellaMusic/2.0'},
-      ));
-
-      try {
-        final queryParams = <String, dynamic>{
-          'track_name': title,
-          if (artist.isNotEmpty) 'artist_name': artist,
-          if (album.isNotEmpty) 'album_name': album,
-          if (duration != null && duration > 0) 'duration': duration,
-        };
-        final lrclibRes = await dio.get(
-          'https://lrclib.net/api/get',
-          queryParameters: queryParams,
-        );
-        if (lrclibRes.statusCode == 200 && lrclibRes.data is Map) {
-          final synced = lrclibRes.data['syncedLyrics']?.toString();
-          final plain = lrclibRes.data['plainLyrics']?.toString();
-          if ((synced != null && synced.trim().isNotEmpty) ||
-              (plain != null && plain.trim().isNotEmpty)) {
-            return ProviderLyrics(
-              synced:
-                  (synced != null && synced.trim().isNotEmpty) ? synced : null,
-              plain: plain,
-            );
-          }
-        }
-      } catch (_) {
-        // Try LRCLIB search endpoint as fuzzy fallback
-        try {
-          final searchRes = await dio.get(
-            'https://lrclib.net/api/search',
-            queryParameters: {'q': '$title $artist'.trim()},
-          );
-          if (searchRes.statusCode == 200 &&
-              searchRes.data is List &&
-              (searchRes.data as List).isNotEmpty) {
-            final first = (searchRes.data as List).first;
-            if (first is Map) {
-              final synced = first['syncedLyrics']?.toString();
-              final plain = first['plainLyrics']?.toString();
-              if ((synced != null && synced.trim().isNotEmpty) ||
-                  (plain != null && plain.trim().isNotEmpty)) {
-                return ProviderLyrics(
-                  synced: (synced != null && synced.trim().isNotEmpty)
-                      ? synced
-                      : null,
-                  plain: plain,
-                );
-              }
-            }
-          }
-        } catch (_) {}
-      }
-    } catch (_) {}
+    // 3. Shared online lookup. It is intentionally provider-neutral so the
+    // same result is available from local and cloud profiles.
+    final onlineLyrics = await TranslationService.fetchOnlineLyrics(
+      title: track.title,
+      artist: track.artist == 'Unknown artist' ? '' : track.artist,
+      album: track.album == 'Unknown album' ? null : track.album,
+      duration: track.duration,
+    );
+    if (onlineLyrics != null) {
+      return ProviderLyrics(
+        synced: onlineLyrics['synced'],
+        plain: onlineLyrics['plain'],
+      );
+    }
 
     return null;
   }

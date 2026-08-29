@@ -3,11 +3,11 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:restart_app/restart_app.dart';
-import 'package:harmonymusic/generated/l10n.dart';
+import 'package:estrella_music/generated/l10n.dart';
 
-import 'package:harmonymusic/services/backup/app_backup_service.dart';
-import 'package:harmonymusic/services/auth/auth_service.dart';
-import 'package:harmonymusic/services/backup/cloud_backup_service.dart';
+import 'package:estrella_music/services/backup/app_backup_service.dart';
+import 'package:estrella_music/services/auth/auth_service.dart';
+import 'package:estrella_music/services/backup/cloud_backup_service.dart';
 import 'common_dialog_widget.dart';
 import 'snackbar.dart';
 

@@ -1,16 +1,16 @@
-﻿import 'dart:ui';
+import 'dart:ui';
 
 import 'package:audio_video_progress_bar/audio_video_progress_bar.dart';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/ui/player/components/backgroud_image.dart';
-import 'package:harmonymusic/utils/helpers/ionicons.dart';
-import 'package:harmonymusic/ui/widgets/custom_marquee.dart';
+import 'package:estrella_music/ui/player/components/backgroud_image.dart';
+import 'package:estrella_music/utils/helpers/ionicons.dart';
+import 'package:estrella_music/ui/widgets/custom_marquee.dart';
 
-import 'package:harmonymusic/ui/widgets/songinfo_bottom_sheet.dart';
-import 'package:harmonymusic/ui/utils/theme_controller.dart';
-import 'package:harmonymusic/ui/player/player_controller.dart';
+import 'package:estrella_music/ui/widgets/songinfo_bottom_sheet.dart';
+import 'package:estrella_music/ui/utils/theme_controller.dart';
+import 'package:estrella_music/ui/player/player_controller.dart';
 
 class GesturePlayer extends StatelessWidget {
   const GesturePlayer({super.key});

@@ -1,14 +1,14 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'package:harmonymusic/ui/screens/Search/search_result_screen_controller.dart';
-import 'package:harmonymusic/models/artist.dart';
-import 'package:harmonymusic/ui/navigator.dart';
+import 'package:estrella_music/ui/screens/Search/search_result_screen_controller.dart';
+import 'package:estrella_music/models/artist.dart';
+import 'package:estrella_music/ui/navigator.dart';
 import '/ui/widgets/content_list_widget_item.dart';
 import 'image_widget.dart';
 import 'hover_card_wrapper.dart';
 import '/ui/theme/app_spacing.dart';
-import 'package:harmonymusic/generated/l10n.dart';
+import 'package:estrella_music/generated/l10n.dart';
 
 class ContentListWidget extends StatelessWidget {
   /// ContentListWidget renders a horizontal-scroll section of Albums or Playlists

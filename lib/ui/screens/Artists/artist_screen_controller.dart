@@ -1,20 +1,20 @@
-﻿import 'package:audio_service/audio_service.dart';
+import 'package:audio_service/audio_service.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/services/storage/sqlite_store.dart';
+import 'package:estrella_music/services/storage/sqlite_store.dart';
 
-import 'package:harmonymusic/ui/widgets/add_to_playlist.dart';
+import 'package:estrella_music/ui/widgets/add_to_playlist.dart';
 import '/ui/widgets/sort_widget.dart';
-import 'package:harmonymusic/models/artist.dart';
-import 'package:harmonymusic/services/auth/catalog_recovery_service.dart';
-import 'package:harmonymusic/utils/helpers/helper.dart';
-import 'package:harmonymusic/ui/screens/Library/library_controller.dart';
-import 'package:harmonymusic/music_provider/music_catalog_service.dart';
-import 'package:harmonymusic/music_provider/music_provider.dart';
+import 'package:estrella_music/models/artist.dart';
+import 'package:estrella_music/services/auth/catalog_recovery_service.dart';
+import 'package:estrella_music/utils/helpers/helper.dart';
+import 'package:estrella_music/ui/screens/Library/library_controller.dart';
+import 'package:estrella_music/music_provider/music_catalog_service.dart';
+import 'package:estrella_music/music_provider/music_provider.dart';
 import '/ui/screens/Home/home_screen_controller.dart';
 import '/ui/screens/Settings/settings_screen_controller.dart';
-import 'package:harmonymusic/models/media_item_builder.dart';
-import 'package:harmonymusic/services/sync/sync_service.dart';
+import 'package:estrella_music/models/media_item_builder.dart';
+import 'package:estrella_music/services/sync/sync_service.dart';
 
 class ArtistScreenController extends GetxController
     with GetSingleTickerProviderStateMixin {

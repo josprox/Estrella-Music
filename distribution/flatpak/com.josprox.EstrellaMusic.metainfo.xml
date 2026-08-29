@@ -13,7 +13,7 @@
   <launchable type="desktop-id">com.josprox.EstrellaMusic.desktop</launchable>
   <url type="homepage">https://github.com/josprox/Estrella-Music</url>
   <provides>
-    <binary>harmonymusic</binary>
+    <binary>estrellamusic</binary>
   </provides>
   <content_rating type="oars-1.1"/>
 </component>

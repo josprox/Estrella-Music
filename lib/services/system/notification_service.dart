@@ -3,7 +3,7 @@ import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:harmonymusic/services/storage/safe_secure_storage.dart';
+import 'package:estrella_music/services/storage/safe_secure_storage.dart';
 import 'package:http/http.dart' as http;
 
 class NotificationService {

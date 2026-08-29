@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:harmonymusic/utils/helpers/queue_reorder.dart';
+import 'package:estrella_music/utils/helpers/queue_reorder.dart';
 
 void main() {
   group('reorderQueue', () {

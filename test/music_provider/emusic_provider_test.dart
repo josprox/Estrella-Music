@@ -3,10 +3,10 @@ import 'dart:typed_data';
 
 import 'package:dio/dio.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:harmonymusic/music_provider/models/playback_source.dart';
-import 'package:harmonymusic/music_provider/music_discovery_provider.dart';
-import 'package:harmonymusic/music_provider/music_provider.dart';
-import 'package:harmonymusic/music_provider/providers/emusic_provider.dart';
+import 'package:estrella_music/music_provider/models/playback_source.dart';
+import 'package:estrella_music/music_provider/music_discovery_provider.dart';
+import 'package:estrella_music/music_provider/music_provider.dart';
+import 'package:estrella_music/music_provider/providers/emusic_provider.dart';
 
 void main() {
   late Dio dio;

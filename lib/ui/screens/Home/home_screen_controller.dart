@@ -3,19 +3,19 @@ import 'dart:async';
 import 'package:audio_service/audio_service.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/services/storage/sqlite_store.dart';
+import 'package:estrella_music/services/storage/sqlite_store.dart';
 
 import '/models/media_item_builder.dart';
-import 'package:harmonymusic/ui/player/player_controller.dart';
-import 'package:harmonymusic/utils/helpers/update_check_flag_file.dart';
-import 'package:harmonymusic/utils/helpers/helper.dart';
+import 'package:estrella_music/ui/player/player_controller.dart';
+import 'package:estrella_music/utils/helpers/update_check_flag_file.dart';
+import 'package:estrella_music/utils/helpers/helper.dart';
 import '/models/album.dart';
 import '/models/playlist.dart';
 import '/models/artist.dart';
-import 'package:harmonymusic/generated/l10n.dart';
+import 'package:estrella_music/generated/l10n.dart';
 import '/models/quick_picks.dart';
-import 'package:harmonymusic/music_provider/music_catalog_service.dart';
-import 'package:harmonymusic/ui/screens/Settings/settings_screen_controller.dart';
+import 'package:estrella_music/music_provider/music_catalog_service.dart';
+import 'package:estrella_music/ui/screens/Settings/settings_screen_controller.dart';
 import '/ui/widgets/new_version_dialog.dart';
 
 class HomeScreenController extends GetxController {

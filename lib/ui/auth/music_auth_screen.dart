@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'package:harmonymusic/generated/l10n.dart';
-import 'package:harmonymusic/services/auth/auth_service.dart';
+import 'package:estrella_music/generated/l10n.dart';
+import 'package:estrella_music/services/auth/auth_service.dart';
 import 'widgets/animated_auth_background.dart';
 
 enum _MusicAuthMode { welcome, login, twoFactor, register, forgotPassword }

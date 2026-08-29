@@ -1,4 +1,4 @@
-import 'package:harmonymusic/models/thumbnail.dart';
+import 'package:estrella_music/models/thumbnail.dart';
 
 class Artist {
   Artist({

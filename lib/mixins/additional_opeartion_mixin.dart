@@ -1,11 +1,11 @@
-﻿import 'package:audio_service/audio_service.dart' show MediaItem;
+import 'package:audio_service/audio_service.dart' show MediaItem;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/base_class/playlist_album_screen_con_base.dart';
+import 'package:estrella_music/base_class/playlist_album_screen_con_base.dart';
 
-import 'package:harmonymusic/ui/widgets/add_to_playlist.dart';
-import 'package:harmonymusic/ui/widgets/sort_widget.dart';
-import 'package:harmonymusic/utils/helpers/helper.dart';
+import 'package:estrella_music/ui/widgets/add_to_playlist.dart';
+import 'package:estrella_music/ui/widgets/sort_widget.dart';
+import 'package:estrella_music/utils/helpers/helper.dart';
 
 mixin AdditionalOpeartionMixin on PlaylistAlbumScreenControllerBase {
   // This mixin is used to handle additional operations like sorting, searching, and performing actions on a list of songs.

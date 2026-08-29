@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:file_picker/file_picker.dart';
 
-import 'package:harmonymusic/music_provider/music_provider_manager.dart';
-import 'package:harmonymusic/profiles/music_profile.dart';
-import 'package:harmonymusic/profiles/profile_manager.dart';
-import 'package:harmonymusic/ui/screens/Home/home_screen_controller.dart';
-import 'package:harmonymusic/ui/screens/Library/library_controller.dart';
+import 'package:estrella_music/music_provider/music_provider_manager.dart';
+import 'package:estrella_music/profiles/music_profile.dart';
+import 'package:estrella_music/profiles/profile_manager.dart';
+import 'package:estrella_music/ui/screens/Home/home_screen_controller.dart';
+import 'package:estrella_music/ui/screens/Library/library_controller.dart';
 
 class ProfileSwitcher extends StatelessWidget {
   const ProfileSwitcher({super.key, this.expanded = true});

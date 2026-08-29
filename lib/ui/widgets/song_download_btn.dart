@@ -1,13 +1,13 @@
-﻿import 'package:audio_service/audio_service.dart';
+import 'package:audio_service/audio_service.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/services/download/downloader.dart';
-import 'package:harmonymusic/ui/player/player_controller.dart';
-import 'package:harmonymusic/services/storage/sqlite_store.dart';
+import 'package:estrella_music/services/download/downloader.dart';
+import 'package:estrella_music/ui/player/player_controller.dart';
+import 'package:estrella_music/services/storage/sqlite_store.dart';
 
 import 'loader.dart';
 import 'snackbar.dart';
-import 'package:harmonymusic/generated/l10n.dart';
+import 'package:estrella_music/generated/l10n.dart';
 
 class SongDownloadButton extends StatelessWidget {
   const SongDownloadButton(

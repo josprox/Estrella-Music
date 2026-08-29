@@ -1,9 +1,9 @@
 import 'package:audio_service/audio_service.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:harmonymusic/models/album.dart';
-import 'package:harmonymusic/models/artist.dart';
-import 'package:harmonymusic/models/media_item_builder.dart';
-import 'package:harmonymusic/models/playlist.dart';
+import 'package:estrella_music/models/album.dart';
+import 'package:estrella_music/models/artist.dart';
+import 'package:estrella_music/models/media_item_builder.dart';
+import 'package:estrella_music/models/playlist.dart';
 
 void main() {
   test('musical entities preserve provider profile and source identity', () {

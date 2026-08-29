@@ -1,10 +1,10 @@
 [Desktop Entry]
 Name=Estrella Music
 Comment=A cross platform app for music streaming
-Exec=harmonymusic %U
+Exec=estrellamusic %U
 Icon=com.josprox.EstrellaMusic
 Terminal=false
 Type=Application
 Categories=AudioVideo;Audio;Music;Player;
 MimeType=audio/mpeg;audio/flac;audio/ogg;audio/aac;audio/m4a;
-StartupWMClass=harmonymusic
+StartupWMClass=estrellamusic

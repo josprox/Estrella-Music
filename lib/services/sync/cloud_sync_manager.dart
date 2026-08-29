@@ -2,10 +2,10 @@ import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/generated/l10n.dart';
-import 'package:harmonymusic/services/auth/auth_service.dart';
-import 'package:harmonymusic/services/sync/sync_service.dart';
-import 'package:harmonymusic/profiles/profile_manager.dart';
+import 'package:estrella_music/generated/l10n.dart';
+import 'package:estrella_music/services/auth/auth_service.dart';
+import 'package:estrella_music/services/sync/sync_service.dart';
+import 'package:estrella_music/profiles/profile_manager.dart';
 
 enum DataMode { local, cloud }
 

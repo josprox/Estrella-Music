@@ -1,13 +1,13 @@
-﻿import 'dart:io';
+import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/ui/screens/Settings/settings_screen_controller.dart';
-import 'package:harmonymusic/ui/widgets/loader.dart';
+import 'package:estrella_music/ui/screens/Settings/settings_screen_controller.dart';
+import 'package:estrella_music/ui/widgets/loader.dart';
 
-import 'package:harmonymusic/services/system/permission_service.dart';
+import 'package:estrella_music/services/system/permission_service.dart';
 import 'common_dialog_widget.dart';
-import 'package:harmonymusic/generated/l10n.dart';
+import 'package:estrella_music/generated/l10n.dart';
 
 class ExportFileDialog extends StatelessWidget {
   const ExportFileDialog({super.key});

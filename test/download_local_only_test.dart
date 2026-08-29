@@ -1,9 +1,9 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:harmonymusic/services/storage/sqlite_store.dart';
-import 'package:harmonymusic/services/sync/music_sqlite_service.dart';
-import 'package:harmonymusic/services/sync/repository/sync_local_repository.dart';
+import 'package:estrella_music/services/storage/sqlite_store.dart';
+import 'package:estrella_music/services/sync/music_sqlite_service.dart';
+import 'package:estrella_music/services/sync/repository/sync_local_repository.dart';
 import 'package:path/path.dart' as p;
 import 'package:sqlite3/sqlite3.dart';
 

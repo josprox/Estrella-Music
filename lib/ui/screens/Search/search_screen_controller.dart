@@ -1,11 +1,11 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/services/storage/sqlite_store.dart';
-import 'package:harmonymusic/generated/l10n.dart';
+import 'package:estrella_music/services/storage/sqlite_store.dart';
+import 'package:estrella_music/generated/l10n.dart';
 
-import 'package:harmonymusic/utils/desktop/app_link_controller.dart'
+import 'package:estrella_music/utils/desktop/app_link_controller.dart'
     show ProcessLink;
-import 'package:harmonymusic/music_provider/music_catalog_service.dart';
+import 'package:estrella_music/music_provider/music_catalog_service.dart';
 
 class SearchCategory {
   final String name;

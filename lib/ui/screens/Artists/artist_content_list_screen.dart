@@ -1,15 +1,15 @@
-﻿import 'package:audio_service/audio_service.dart';
+import 'package:audio_service/audio_service.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:harmonymusic/services/storage/sqlite_store.dart';
+import 'package:estrella_music/services/storage/sqlite_store.dart';
 import '/models/album.dart';
 import '/models/media_item_builder.dart';
 import '/models/playlist.dart';
-import 'package:harmonymusic/music_provider/music_catalog_service.dart';
-import 'package:harmonymusic/services/sync/sync_service.dart';
+import 'package:estrella_music/music_provider/music_catalog_service.dart';
+import 'package:estrella_music/services/sync/sync_service.dart';
 import '/ui/widgets/loader.dart';
-import 'package:harmonymusic/ui/player/player_controller.dart';
+import 'package:estrella_music/ui/player/player_controller.dart';
 import '/ui/navigator.dart';
 
 class ArtistContentListController extends GetxController {

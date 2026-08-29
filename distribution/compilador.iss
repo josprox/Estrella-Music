@@ -4,7 +4,7 @@
 #define MyAppName "Estrella Music"
 #define MyAppPublisher "JOSPROX MX"
 #define MyAppURL "https://github.com/josprox/Estrella-Music-v2"
-#define MyAppExeName "harmonymusic.exe"
+#define MyAppExeName "estrellamusic.exe"
 
 ; Dynamic build path configuration
 #define BuildPath "..\build\windows\x64\runner\Release"

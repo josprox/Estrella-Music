@@ -5,15 +5,15 @@ import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:get/get.dart';
 import 'custom_marquee.dart';
 
-import 'package:harmonymusic/models/playlist.dart';
-import 'package:harmonymusic/ui/player/player_controller.dart';
-import 'package:harmonymusic/ui/screens/Settings/settings_screen_controller.dart';
+import 'package:estrella_music/models/playlist.dart';
+import 'package:estrella_music/ui/player/player_controller.dart';
+import 'package:estrella_music/ui/screens/Settings/settings_screen_controller.dart';
 import '/ui/theme/app_spacing.dart';
 import 'add_to_playlist.dart';
 import 'image_widget.dart';
 import 'snackbar.dart';
 import 'songinfo_bottom_sheet.dart';
-import 'package:harmonymusic/generated/l10n.dart';
+import 'package:estrella_music/generated/l10n.dart';
 import 'song_status_badges.dart';
 
 class SongListTile extends StatelessWidget with RemoveSongFromPlaylistMixin {

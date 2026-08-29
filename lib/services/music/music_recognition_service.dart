@@ -6,7 +6,7 @@ import 'package:dio/dio.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:record/record.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:harmonymusic/services/music/shazam_signature_generator.dart';
+import 'package:estrella_music/services/music/shazam_signature_generator.dart';
 
 enum RecognitionState {
   idle,

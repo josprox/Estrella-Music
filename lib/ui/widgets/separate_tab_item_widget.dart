@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/ui/widgets/modification_list.dart';
-import 'package:harmonymusic/utils/localization/l10n_extensions.dart';
+import 'package:estrella_music/ui/widgets/modification_list.dart';
+import 'package:estrella_music/utils/localization/l10n_extensions.dart';
 
-import 'package:harmonymusic/ui/screens/Artists/artist_screen_controller.dart';
+import 'package:estrella_music/ui/screens/Artists/artist_screen_controller.dart';
 import 'list_widget.dart';
 import 'loader.dart';
 import 'sort_widget.dart';
-import 'package:harmonymusic/generated/l10n.dart';
+import 'package:estrella_music/generated/l10n.dart';
 
 class SeparateTabItemWidget extends StatelessWidget {
   const SeparateTabItemWidget(

@@ -2,9 +2,9 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/services/storage/sqlite_store.dart';
+import 'package:estrella_music/services/storage/sqlite_store.dart';
 import 'package:palette_generator/palette_generator.dart';
-import 'package:harmonymusic/utils/helpers/helper.dart';
+import 'package:estrella_music/utils/helpers/helper.dart';
 
 class ThemeController extends GetxController {
   final primaryColor = const Color(0xFF6C63FF).obs;

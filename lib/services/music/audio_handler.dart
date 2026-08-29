@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'dart:math';
 
-import 'package:harmonymusic/services/storage/sqlite_store.dart';
+import 'package:estrella_music/services/storage/sqlite_store.dart';
 import 'package:get/get.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:just_audio_media_kit/just_audio_media_kit.dart';
@@ -11,30 +11,33 @@ import 'package:audio_service/audio_service.dart';
 import 'package:rxdart/rxdart.dart';
 
 import '/models/album.dart';
-import 'package:harmonymusic/services/auth/catalog_recovery_service.dart';
-import 'package:harmonymusic/services/download/download_integrity_service.dart';
-import 'package:harmonymusic/models/playlist.dart';
-import 'package:harmonymusic/services/music/equalizer.dart';
-import 'package:harmonymusic/music_provider/music_catalog_service.dart';
-import 'package:harmonymusic/music_provider/models/playback_source.dart';
+import 'package:estrella_music/services/auth/catalog_recovery_service.dart';
+import 'package:estrella_music/services/download/download_integrity_service.dart';
+import 'package:estrella_music/models/playlist.dart';
+import 'package:estrella_music/services/music/equalizer.dart';
+import 'package:estrella_music/music_provider/music_catalog_service.dart';
+import 'package:estrella_music/music_provider/models/playback_source.dart';
 import '/models/hm_streaming_data.dart';
-import 'package:harmonymusic/ui/player/player_controller.dart';
-import 'package:harmonymusic/ui/screens/Home/home_screen_controller.dart';
-import 'package:harmonymusic/services/system/permission_service.dart';
-import 'package:harmonymusic/utils/helpers/queue_reorder.dart';
-import 'package:harmonymusic/utils/helpers/helper.dart';
+import 'package:estrella_music/ui/player/player_controller.dart';
+import 'package:estrella_music/ui/screens/Home/home_screen_controller.dart';
+import 'package:estrella_music/services/system/permission_service.dart';
+import 'package:estrella_music/utils/helpers/queue_reorder.dart';
+import 'package:estrella_music/utils/helpers/helper.dart';
 import '/models/media_item_builder.dart';
-import 'package:harmonymusic/ui/screens/Settings/settings_screen_controller.dart';
-import 'package:harmonymusic/ui/screens/Library/library_controller.dart';
+import 'package:estrella_music/ui/screens/Settings/settings_screen_controller.dart';
+import 'package:estrella_music/ui/screens/Library/library_controller.dart';
 // ignore: unused_import, implementation_imports, depend_on_referenced_packages
 import "package:media_kit/src/player/platform_player.dart" show MPVLogLevel;
-import 'package:harmonymusic/generated/l10n.dart';
+import 'package:estrella_music/generated/l10n.dart';
 
 Future<AudioHandler> initAudioService() async {
   return await AudioService.init(
     builder: () => MyAudioHandler(),
     config: const AudioServiceConfig(
-      androidNotificationIcon: 'mipmap/ic_launcher_monochrome',
+      // Used when the current item has no album artwork (or Android cannot
+      // load it).  Keep this tied to Estrella Music's launcher identity, not
+      // the inherited monochrome resource.
+      androidNotificationIcon: 'mipmap/launcher_icon',
       androidNotificationChannelId: 'com.mycompany.myapp.audio',
       androidNotificationChannelName: 'Estrella Music Notification',
       androidNotificationOngoing: false,
@@ -975,8 +978,8 @@ class MyAudioHandler extends BaseAudioHandler with GetxServiceMixin {
         SqliteStore.box('AppPrefs').get('streamingQuality') ?? 1;
     HMStreamingData? streamInfo;
 
-    final item = providerTrack ??
-        MediaItem(id: songId, title: songId, extras: const {});
+    final item =
+        providerTrack ?? MediaItem(id: songId, title: songId, extras: const {});
     try {
       final source =
           await Get.find<MusicCatalogService>().resolvePlayback(item);

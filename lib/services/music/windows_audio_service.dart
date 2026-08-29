@@ -1,8 +1,8 @@
 import 'package:get/get.dart';
-import 'package:harmonymusic/utils/helpers/helper.dart';
+import 'package:estrella_music/utils/helpers/helper.dart';
 import 'package:smtc_windows/smtc_windows.dart';
 
-import 'package:harmonymusic/ui/player/player_controller.dart';
+import 'package:estrella_music/ui/player/player_controller.dart';
 
 class WindowsAudioService extends GetxService {
   late SMTCWindows smtc;

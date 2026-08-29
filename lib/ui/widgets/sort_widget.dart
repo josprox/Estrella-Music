@@ -2,11 +2,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/ui/screens/Library/library_controller.dart';
+import 'package:estrella_music/ui/screens/Library/library_controller.dart';
 
 import 'additional_operation_dialog.dart';
 import 'modified_text_field.dart';
-import 'package:harmonymusic/generated/l10n.dart';
+import 'package:estrella_music/generated/l10n.dart';
 
 enum OperationMode { arrange, delete, addToPlaylist, none }
 

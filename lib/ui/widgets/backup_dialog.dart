@@ -9,12 +9,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '/ui/widgets/loader.dart';
-import 'package:harmonymusic/utils/helpers/helper.dart';
-import 'package:harmonymusic/services/system/permission_service.dart';
+import 'package:estrella_music/utils/helpers/helper.dart';
+import 'package:estrella_music/services/system/permission_service.dart';
 import 'common_dialog_widget.dart';
-import 'package:harmonymusic/generated/l10n.dart';
+import 'package:estrella_music/generated/l10n.dart';
 import 'package:share_plus/share_plus.dart';
-import 'package:harmonymusic/services/backup/app_backup_service.dart';
+import 'package:estrella_music/services/backup/app_backup_service.dart';
 
 class BackupDialog extends StatelessWidget {
   const BackupDialog({super.key});

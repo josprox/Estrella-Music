@@ -1,7 +1,7 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'package:harmonymusic/ui/player/player_controller.dart';
+import 'package:estrella_music/ui/player/player_controller.dart';
 import '/ui/widgets/image_widget.dart';
 import 'animated_play_button.dart';
 import '/ui/screens/Settings/settings_screen_controller.dart';

@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
-import 'package:harmonymusic/services/storage/sqlite_store.dart';
-import 'package:harmonymusic/profiles/profile_manager.dart';
+import 'package:estrella_music/services/storage/sqlite_store.dart';
+import 'package:estrella_music/profiles/profile_manager.dart';
 
 class PendingSyncQueueService extends GetxService {
   static const boxName = 'PendingSyncChanges';

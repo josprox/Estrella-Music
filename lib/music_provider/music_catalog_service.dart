@@ -1,13 +1,13 @@
 import 'package:audio_service/audio_service.dart';
 import 'package:get/get.dart';
 
-import 'package:harmonymusic/models/album.dart';
-import 'package:harmonymusic/models/artist.dart';
-import 'package:harmonymusic/music_provider/models/music_identity.dart';
-import 'package:harmonymusic/music_provider/models/playback_source.dart';
-import 'package:harmonymusic/music_provider/models/provider_capabilities.dart';
-import 'package:harmonymusic/music_provider/models/provider_entities.dart';
-import 'package:harmonymusic/profiles/profile_manager.dart';
+import 'package:estrella_music/models/album.dart';
+import 'package:estrella_music/models/artist.dart';
+import 'package:estrella_music/music_provider/models/music_identity.dart';
+import 'package:estrella_music/music_provider/models/playback_source.dart';
+import 'package:estrella_music/music_provider/models/provider_capabilities.dart';
+import 'package:estrella_music/music_provider/models/provider_entities.dart';
+import 'package:estrella_music/profiles/profile_manager.dart';
 
 import 'music_provider.dart';
 import 'music_download_provider.dart';

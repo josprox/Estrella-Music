@@ -1,10 +1,10 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:harmonymusic/ui/screens/Home/home_screen_controller.dart';
+import 'package:estrella_music/ui/screens/Home/home_screen_controller.dart';
 import 'common_dialog_widget.dart';
-import 'package:harmonymusic/generated/l10n.dart';
+import 'package:estrella_music/generated/l10n.dart';
 
 class NewVersionDialog extends StatelessWidget {
   const NewVersionDialog({super.key});
@@ -31,7 +31,7 @@ class NewVersionDialog extends StatelessWidget {
                       onPressed: () {
                         launchUrl(
                           Uri.parse(
-                            'https://github.com/anandnet/Harmony-Music/releases/latest',
+                            'https://github.com/josprox/Estrella-Music/releases/latest',
                           ),
                           mode: LaunchMode.externalApplication,
                         );

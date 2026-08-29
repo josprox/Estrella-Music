@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'custom_marquee.dart';
 
-import 'package:harmonymusic/services/sync/sync_service.dart';
-import 'package:harmonymusic/ui/screens/Library/library_controller.dart';
+import 'package:estrella_music/services/sync/sync_service.dart';
+import 'package:estrella_music/ui/screens/Library/library_controller.dart';
 import '/ui/widgets/snackbar.dart';
-import 'package:harmonymusic/models/playlist.dart';
+import 'package:estrella_music/models/playlist.dart';
 import 'common_dialog_widget.dart';
 import 'modified_text_field.dart';
-import 'package:harmonymusic/generated/l10n.dart';
+import 'package:estrella_music/generated/l10n.dart';
 
 class CreateNRenamePlaylistPopup extends StatefulWidget {
   const CreateNRenamePlaylistPopup({

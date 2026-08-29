@@ -2,26 +2,26 @@ import 'package:audio_service/audio_service.dart';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/services/storage/sqlite_store.dart';
+import 'package:estrella_music/services/storage/sqlite_store.dart';
 
-import 'package:harmonymusic/services/download/downloader.dart';
-import 'package:harmonymusic/services/sync/sync_service.dart';
-import 'package:harmonymusic/ui/screens/Playlist/playlist_screen_controller.dart';
-import 'package:harmonymusic/ui/screens/Settings/settings_screen_controller.dart';
-import 'package:harmonymusic/utils/helpers/helper.dart';
+import 'package:estrella_music/services/download/downloader.dart';
+import 'package:estrella_music/services/sync/sync_service.dart';
+import 'package:estrella_music/ui/screens/Playlist/playlist_screen_controller.dart';
+import 'package:estrella_music/ui/screens/Settings/settings_screen_controller.dart';
+import 'package:estrella_music/utils/helpers/helper.dart';
 import '/ui/widgets/sleep_timer_bottom_sheet.dart';
-import 'package:harmonymusic/ui/player/player_controller.dart';
-import 'package:harmonymusic/ui/screens/Library/library_controller.dart';
+import 'package:estrella_music/ui/player/player_controller.dart';
+import 'package:estrella_music/ui/screens/Library/library_controller.dart';
 import '/ui/widgets/add_to_playlist.dart';
 import '/ui/widgets/snackbar.dart';
-import 'package:harmonymusic/models/media_item_builder.dart';
-import 'package:harmonymusic/models/playlist.dart';
-import 'package:harmonymusic/ui/navigator.dart';
+import 'package:estrella_music/models/media_item_builder.dart';
+import 'package:estrella_music/models/playlist.dart';
+import 'package:estrella_music/ui/navigator.dart';
 import 'song_download_btn.dart';
 import 'image_widget.dart';
 import 'song_info_dialog.dart';
-import 'package:harmonymusic/generated/l10n.dart';
-import 'package:harmonymusic/utils/helpers/music_share_manager.dart';
+import 'package:estrella_music/generated/l10n.dart';
+import 'package:estrella_music/utils/helpers/music_share_manager.dart';
 
 class SongInfoBottomSheet extends StatelessWidget {
   const SongInfoBottomSheet(this.song,

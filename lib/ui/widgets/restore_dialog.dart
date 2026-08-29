@@ -1,14 +1,14 @@
-﻿import 'dart:io';
+import 'dart:io';
 
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/services/backup/app_backup_service.dart';
+import 'package:estrella_music/services/backup/app_backup_service.dart';
 import 'package:restart_app/restart_app.dart';
 
-import 'package:harmonymusic/services/system/permission_service.dart';
+import 'package:estrella_music/services/system/permission_service.dart';
 import 'common_dialog_widget.dart';
-import 'package:harmonymusic/generated/l10n.dart';
+import 'package:estrella_music/generated/l10n.dart';
 
 class RestoreDialog extends StatelessWidget {
   const RestoreDialog({super.key});

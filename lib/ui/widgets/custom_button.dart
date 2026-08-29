@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:harmonymusic/generated/l10n.dart';
+import 'package:estrella_music/generated/l10n.dart';
 
 class ProceedButton extends StatelessWidget {
   const ProceedButton({

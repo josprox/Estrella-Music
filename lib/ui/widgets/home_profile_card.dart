@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:file_picker/file_picker.dart';
-import 'package:harmonymusic/music_provider/music_provider_manager.dart';
-import 'package:harmonymusic/profiles/profile_manager.dart';
-import 'package:harmonymusic/ui/profiles/profile_switcher.dart';
+import 'package:estrella_music/music_provider/music_provider_manager.dart';
+import 'package:estrella_music/profiles/profile_manager.dart';
+import 'package:estrella_music/ui/profiles/profile_switcher.dart';
 
 class HomeProfileCard extends StatelessWidget {
   const HomeProfileCard({super.key});

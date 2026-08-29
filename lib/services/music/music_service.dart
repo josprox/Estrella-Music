@@ -1,7 +1,7 @@
 // ignore_for_file: constant_identifier_names
 
 import 'package:dio/dio.dart';
-import 'package:harmonymusic/services/system/nav_parser.dart';
+import 'package:estrella_music/services/system/nav_parser.dart';
 
 import 'home_service.dart';
 import 'search_service.dart';

@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '/models/quick_picks.dart';
-import 'package:harmonymusic/ui/player/player_controller.dart';
+import 'package:estrella_music/ui/player/player_controller.dart';
 import 'image_widget.dart';
 import 'hover_card_wrapper.dart';
 import 'songinfo_bottom_sheet.dart';
-import 'package:harmonymusic/utils/localization/l10n_extensions.dart';
+import 'package:estrella_music/utils/localization/l10n_extensions.dart';
 import 'song_status_badges.dart';
 
 class QuickPicksWidget extends StatelessWidget {

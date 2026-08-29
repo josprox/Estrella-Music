@@ -2,24 +2,24 @@ import 'dart:ui';
 import 'package:audio_video_progress_bar/audio_video_progress_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/utils/helpers/ionicons.dart';
-import 'package:harmonymusic/ui/widgets/custom_marquee.dart';
+import 'package:estrella_music/utils/helpers/ionicons.dart';
+import 'package:estrella_music/ui/widgets/custom_marquee.dart';
 import 'package:audio_service/audio_service.dart';
-import 'package:harmonymusic/utils/helpers/music_share_manager.dart';
-import 'package:harmonymusic/ui/widgets/up_next_queue.dart';
+import 'package:estrella_music/utils/helpers/music_share_manager.dart';
+import 'package:estrella_music/ui/widgets/up_next_queue.dart';
 
 import '/ui/player/components/animated_play_button.dart';
 import '/ui/player/components/backgroud_image.dart';
 import '/ui/player/components/lyrics_widget.dart';
 import '/ui/player/components/lyrics_switch.dart';
-import 'package:harmonymusic/ui/player/player_controller.dart';
-import 'package:harmonymusic/services/social/colistening_service.dart';
+import 'package:estrella_music/ui/player/player_controller.dart';
+import 'package:estrella_music/services/social/colistening_service.dart';
 import 'full_lyrics_page.dart';
 import '/ui/widgets/image_widget.dart';
-import 'package:harmonymusic/ui/widgets/songinfo_bottom_sheet.dart';
+import 'package:estrella_music/ui/widgets/songinfo_bottom_sheet.dart';
 import '/ui/navigator.dart';
-import 'package:harmonymusic/generated/l10n.dart';
-import 'package:harmonymusic/ui/screens/Settings/settings_screen_controller.dart';
+import 'package:estrella_music/generated/l10n.dart';
+import 'package:estrella_music/ui/screens/Settings/settings_screen_controller.dart';
 
 class StandardPlayer extends StatelessWidget {
   final ScrollController? mainScrollController;

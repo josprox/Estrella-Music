@@ -1,4 +1,4 @@
-import 'package:harmonymusic/generated/l10n.dart';
+import 'package:estrella_music/generated/l10n.dart';
 
 extension StringL10n on String {
   String get t {

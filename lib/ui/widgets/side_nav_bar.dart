@@ -1,12 +1,12 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/ui/screens/Home/home_screen_controller.dart';
-import 'package:harmonymusic/generated/l10n.dart';
-import 'package:harmonymusic/ui/screens/Settings/settings_screen.dart';
-import 'package:harmonymusic/ui/navigator.dart';
-import 'package:harmonymusic/services/auth/auth_service.dart';
-import 'package:harmonymusic/ui/screens/Settings/settings_screen_controller.dart';
-import 'package:harmonymusic/ui/profiles/profile_switcher.dart';
+import 'package:estrella_music/ui/screens/Home/home_screen_controller.dart';
+import 'package:estrella_music/generated/l10n.dart';
+import 'package:estrella_music/ui/screens/Settings/settings_screen.dart';
+import 'package:estrella_music/ui/navigator.dart';
+import 'package:estrella_music/services/auth/auth_service.dart';
+import 'package:estrella_music/ui/screens/Settings/settings_screen_controller.dart';
+import 'package:estrella_music/ui/profiles/profile_switcher.dart';
 
 /// Material 3 Expressive side navigation rail â€” no glass blur, solid surface.
 class SideNavBar extends StatefulWidget {

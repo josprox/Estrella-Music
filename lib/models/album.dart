@@ -1,6 +1,6 @@
 import 'package:audio_service/audio_service.dart' show MediaItem;
 
-import 'package:harmonymusic/models/thumbnail.dart';
+import 'package:estrella_music/models/thumbnail.dart';
 
 class AlbumContent {
   AlbumContent({required this.title, required this.albumList});

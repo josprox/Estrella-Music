@@ -5,23 +5,23 @@ import 'package:audio_service/audio_service.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/services/auth/catalog_recovery_service.dart';
-import 'package:harmonymusic/services/background/background_execution_service.dart';
-import 'package:harmonymusic/services/download/download_integrity_service.dart';
-import 'package:harmonymusic/services/storage/sqlite_store.dart';
+import 'package:estrella_music/services/auth/catalog_recovery_service.dart';
+import 'package:estrella_music/services/background/background_execution_service.dart';
+import 'package:estrella_music/services/download/download_integrity_service.dart';
+import 'package:estrella_music/services/storage/sqlite_store.dart';
 
-import 'package:harmonymusic/ui/screens/Album/album_screen_controller.dart';
-import 'package:harmonymusic/ui/screens/Playlist/playlist_screen_controller.dart';
-import 'package:harmonymusic/music_provider/music_catalog_service.dart';
-import 'package:harmonymusic/music_provider/models/playback_source.dart';
-import 'package:harmonymusic/ui/widgets/snackbar.dart';
-import 'package:harmonymusic/services/system/permission_service.dart';
-import 'package:harmonymusic/ui/screens/Settings/settings_screen_controller.dart';
-import 'package:harmonymusic/utils/helpers/helper.dart';
+import 'package:estrella_music/ui/screens/Album/album_screen_controller.dart';
+import 'package:estrella_music/ui/screens/Playlist/playlist_screen_controller.dart';
+import 'package:estrella_music/music_provider/music_catalog_service.dart';
+import 'package:estrella_music/music_provider/models/playback_source.dart';
+import 'package:estrella_music/ui/widgets/snackbar.dart';
+import 'package:estrella_music/services/system/permission_service.dart';
+import 'package:estrella_music/ui/screens/Settings/settings_screen_controller.dart';
+import 'package:estrella_music/utils/helpers/helper.dart';
 import '/models/media_item_builder.dart';
-import 'package:harmonymusic/ui/screens/Library/library_controller.dart';
-import 'package:harmonymusic/generated/l10n.dart';
-import 'package:harmonymusic/utils/localization/l10n_extensions.dart';
+import 'package:estrella_music/ui/screens/Library/library_controller.dart';
+import 'package:estrella_music/generated/l10n.dart';
+import 'package:estrella_music/utils/localization/l10n_extensions.dart';
 
 class Downloader extends GetxService {
   final _dio = Dio(BaseOptions(

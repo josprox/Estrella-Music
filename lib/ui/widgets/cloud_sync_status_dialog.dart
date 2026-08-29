@@ -1,10 +1,10 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/services/storage/sqlite_store.dart';
+import 'package:estrella_music/services/storage/sqlite_store.dart';
 
-import 'package:harmonymusic/services/sync/cloud_sync_manager.dart';
-import 'package:harmonymusic/services/sync/pending_sync_queue_service.dart';
-import 'package:harmonymusic/services/sync/sync_service.dart';
+import 'package:estrella_music/services/sync/cloud_sync_manager.dart';
+import 'package:estrella_music/services/sync/pending_sync_queue_service.dart';
+import 'package:estrella_music/services/sync/sync_service.dart';
 
 class CloudSyncStatusDialog extends StatelessWidget {
   const CloudSyncStatusDialog({super.key});

@@ -5,24 +5,24 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/services/storage/sqlite_store.dart';
-import 'package:harmonymusic/generated/l10n.dart';
+import 'package:estrella_music/services/storage/sqlite_store.dart';
+import 'package:estrella_music/generated/l10n.dart';
 
-import 'package:harmonymusic/models/playlist.dart';
-import 'package:harmonymusic/ui/screens/Library/library_controller.dart';
-import 'package:harmonymusic/ui/screens/Playlist/playlist_screen_controller.dart';
-import 'package:harmonymusic/ui/player/player_controller.dart';
-import 'package:harmonymusic/utils/helpers/helper.dart';
-import 'package:harmonymusic/services/auth/auth_service.dart';
-import 'package:harmonymusic/services/sync/pending_sync_queue_service.dart';
-import 'package:harmonymusic/services/sync/music_sqlite_service.dart';
-import 'package:harmonymusic/profiles/profile_manager.dart';
-import 'package:harmonymusic/profiles/music_profile.dart';
-import 'package:harmonymusic/music_provider/music_provider_manager.dart';
+import 'package:estrella_music/models/playlist.dart';
+import 'package:estrella_music/ui/screens/Library/library_controller.dart';
+import 'package:estrella_music/ui/screens/Playlist/playlist_screen_controller.dart';
+import 'package:estrella_music/ui/player/player_controller.dart';
+import 'package:estrella_music/utils/helpers/helper.dart';
+import 'package:estrella_music/services/auth/auth_service.dart';
+import 'package:estrella_music/services/sync/pending_sync_queue_service.dart';
+import 'package:estrella_music/services/sync/music_sqlite_service.dart';
+import 'package:estrella_music/profiles/profile_manager.dart';
+import 'package:estrella_music/profiles/music_profile.dart';
+import 'package:estrella_music/music_provider/music_provider_manager.dart';
 
-import 'package:harmonymusic/services/sync/client/sync_http_client.dart';
-import 'package:harmonymusic/services/sync/client/sync_websocket_client.dart';
-import 'package:harmonymusic/services/sync/repository/sync_local_repository.dart';
+import 'package:estrella_music/services/sync/client/sync_http_client.dart';
+import 'package:estrella_music/services/sync/client/sync_websocket_client.dart';
+import 'package:estrella_music/services/sync/repository/sync_local_repository.dart';
 
 class SyncService extends GetxService {
   String get _profileKey =>

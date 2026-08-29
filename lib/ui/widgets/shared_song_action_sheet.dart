@@ -1,8 +1,8 @@
-﻿import 'package:audio_service/audio_service.dart';
+import 'package:audio_service/audio_service.dart';
 import 'package:flutter/material.dart';
 
-import 'package:harmonymusic/generated/l10n.dart';
-import 'package:harmonymusic/ui/widgets/image_widget.dart';
+import 'package:estrella_music/generated/l10n.dart';
+import 'package:estrella_music/ui/widgets/image_widget.dart';
 
 enum SharedSongAction {
   play,

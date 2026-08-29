@@ -2,11 +2,11 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/generated/l10n.dart';
-import 'package:harmonymusic/services/system/fcm_notification_service.dart';
-import 'package:harmonymusic/services/system/permission_service.dart';
-import 'package:harmonymusic/music_provider/music_catalog_service.dart';
-import 'package:harmonymusic/ui/profiles/profile_switcher.dart';
+import 'package:estrella_music/generated/l10n.dart';
+import 'package:estrella_music/services/system/fcm_notification_service.dart';
+import 'package:estrella_music/services/system/permission_service.dart';
+import 'package:estrella_music/music_provider/music_catalog_service.dart';
+import 'package:estrella_music/ui/profiles/profile_switcher.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 class PermissionConsentGate extends StatefulWidget {

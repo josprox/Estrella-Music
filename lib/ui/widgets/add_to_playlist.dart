@@ -1,16 +1,16 @@
-﻿import 'package:audio_service/audio_service.dart';
+import 'package:audio_service/audio_service.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/services/storage/sqlite_store.dart';
-import 'package:harmonymusic/utils/helpers/helper.dart';
+import 'package:estrella_music/services/storage/sqlite_store.dart';
+import 'package:estrella_music/utils/helpers/helper.dart';
 
-import 'package:harmonymusic/services/sync/sync_service.dart';
+import 'package:estrella_music/services/sync/sync_service.dart';
 import '/models/media_item_builder.dart';
 import '/ui/widgets/create_playlist_dialog.dart';
-import 'package:harmonymusic/models/playlist.dart';
+import 'package:estrella_music/models/playlist.dart';
 import 'common_dialog_widget.dart';
 import 'snackbar.dart';
-import 'package:harmonymusic/generated/l10n.dart';
+import 'package:estrella_music/generated/l10n.dart';
 
 class AddToPlaylist extends StatelessWidget {
   const AddToPlaylist(this.songItems, {super.key});

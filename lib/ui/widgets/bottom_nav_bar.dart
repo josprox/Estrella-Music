@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:harmonymusic/ui/screens/Home/home_screen_controller.dart';
+import 'package:estrella_music/ui/screens/Home/home_screen_controller.dart';
 
 class BottomNavBar extends StatelessWidget {
   const BottomNavBar({super.key});

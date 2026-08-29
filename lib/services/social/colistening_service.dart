@@ -4,10 +4,10 @@ import 'dart:io';
 
 import 'package:audio_service/audio_service.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/services/auth/auth_service.dart';
-import 'package:harmonymusic/services/sync/sync_service.dart';
-import 'package:harmonymusic/ui/player/player_controller.dart';
-import 'package:harmonymusic/utils/helpers/helper.dart';
+import 'package:estrella_music/services/auth/auth_service.dart';
+import 'package:estrella_music/services/sync/sync_service.dart';
+import 'package:estrella_music/ui/player/player_controller.dart';
+import 'package:estrella_music/utils/helpers/helper.dart';
 
 class ColisteningService extends GetxService {
   static const _pingInterval = Duration(seconds: 30);

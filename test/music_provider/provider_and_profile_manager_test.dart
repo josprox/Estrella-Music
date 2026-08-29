@@ -1,15 +1,15 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/music_provider/models/music_identity.dart';
-import 'package:harmonymusic/music_provider/models/playback_source.dart';
-import 'package:harmonymusic/music_provider/models/provider_capabilities.dart';
-import 'package:harmonymusic/music_provider/models/provider_entities.dart';
-import 'package:harmonymusic/music_provider/music_provider.dart';
-import 'package:harmonymusic/music_provider/music_provider_manager.dart';
-import 'package:harmonymusic/music_provider/providers/local_music_provider.dart';
-import 'package:harmonymusic/profiles/music_profile.dart';
-import 'package:harmonymusic/profiles/profile_manager.dart';
-import 'package:harmonymusic/profiles/profile_persistence.dart';
+import 'package:estrella_music/music_provider/models/music_identity.dart';
+import 'package:estrella_music/music_provider/models/playback_source.dart';
+import 'package:estrella_music/music_provider/models/provider_capabilities.dart';
+import 'package:estrella_music/music_provider/models/provider_entities.dart';
+import 'package:estrella_music/music_provider/music_provider.dart';
+import 'package:estrella_music/music_provider/music_provider_manager.dart';
+import 'package:estrella_music/music_provider/providers/local_music_provider.dart';
+import 'package:estrella_music/profiles/music_profile.dart';
+import 'package:estrella_music/profiles/profile_manager.dart';
+import 'package:estrella_music/profiles/profile_persistence.dart';
 
 void main() {
   tearDown(Get.reset);

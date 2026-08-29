@@ -1,10 +1,10 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/generated/l10n.dart';
-import 'package:harmonymusic/ui/utils/theme_controller.dart';
+import 'package:estrella_music/generated/l10n.dart';
+import 'package:estrella_music/ui/utils/theme_controller.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 
-import 'package:harmonymusic/ui/player/player_controller.dart';
+import 'package:estrella_music/ui/player/player_controller.dart';
 
 class LyricsSwitch extends StatelessWidget {
   const LyricsSwitch({super.key});

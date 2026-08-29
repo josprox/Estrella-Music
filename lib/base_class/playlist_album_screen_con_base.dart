@@ -1,14 +1,14 @@
 import 'package:audio_service/audio_service.dart' show MediaItem;
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/services/storage/sqlite_store.dart';
+import 'package:estrella_music/services/storage/sqlite_store.dart';
 
-import 'package:harmonymusic/models/album.dart';
-import 'package:harmonymusic/models/media_item_builder.dart';
-import 'package:harmonymusic/models/playlist.dart';
-import 'package:harmonymusic/music_provider/music_catalog_service.dart';
-import 'package:harmonymusic/ui/widgets/sort_widget.dart';
-import 'package:harmonymusic/utils/helpers/helper.dart';
+import 'package:estrella_music/models/album.dart';
+import 'package:estrella_music/models/media_item_builder.dart';
+import 'package:estrella_music/models/playlist.dart';
+import 'package:estrella_music/music_provider/music_catalog_service.dart';
+import 'package:estrella_music/ui/widgets/sort_widget.dart';
+import 'package:estrella_music/utils/helpers/helper.dart';
 
 /// An abstract base class for managing playlist and album screens in the application.
 /// This class provides a set of methods and properties to handle various operations

@@ -1,7 +1,7 @@
 import 'package:flutter_foreground_task/flutter_foreground_task.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/generated/l10n.dart';
-import 'package:harmonymusic/utils/helpers/helper.dart';
+import 'package:estrella_music/generated/l10n.dart';
+import 'package:estrella_music/utils/helpers/helper.dart';
 
 @pragma('vm:entry-point')
 void backgroundExecutionStartCallback() {

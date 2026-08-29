@@ -1,4 +1,4 @@
-import 'package:harmonymusic/services/storage/sqlite_store.dart';
+import 'package:estrella_music/services/storage/sqlite_store.dart';
 
 import 'music_profile.dart';
 

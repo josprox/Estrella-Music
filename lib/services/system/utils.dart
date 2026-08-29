@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:harmonymusic/services/system/nav_parser.dart';
+import 'package:estrella_music/services/system/nav_parser.dart';
 
 int getDatestamp() {
   final DateTime now = DateTime.now();

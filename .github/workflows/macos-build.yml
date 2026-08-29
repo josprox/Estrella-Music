@@ -52,7 +52,7 @@ jobs:
         run: |
           mkdir -p distribution
           cd build/macos/Build/Products/Release
-          zip -r ../../../../../distribution/EstrellaMusic_macOS_Portable.zip harmonymusic.app
+          zip -r ../../../../../distribution/EstrellaMusic_macOS_Portable.zip estrellamusic.app
 
       - name: Upload Portable ZIP
         uses: actions/upload-artifact@v4

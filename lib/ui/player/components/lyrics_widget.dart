@@ -1,10 +1,10 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_lyric/lyrics_reader.dart';
 import 'package:get/get.dart';
 
-import 'package:harmonymusic/ui/widgets/loader.dart';
-import 'package:harmonymusic/ui/player/player_controller.dart';
-import 'package:harmonymusic/generated/l10n.dart';
+import 'package:estrella_music/ui/widgets/loader.dart';
+import 'package:estrella_music/ui/player/player_controller.dart';
+import 'package:estrella_music/generated/l10n.dart';
 
 class LyricsWidget extends StatelessWidget {
   final EdgeInsetsGeometry padding;

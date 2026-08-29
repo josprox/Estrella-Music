@@ -1,27 +1,27 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/services/auth/auth_service.dart';
-import 'package:harmonymusic/ui/screens/Friends/friends_management_screen.dart';
-import 'package:harmonymusic/ui/profiles/profile_switcher.dart';
-import 'package:harmonymusic/music_provider/models/playback_source.dart';
+import 'package:estrella_music/services/auth/auth_service.dart';
+import 'package:estrella_music/ui/screens/Friends/friends_management_screen.dart';
+import 'package:estrella_music/ui/profiles/profile_switcher.dart';
+import 'package:estrella_music/music_provider/models/playback_source.dart';
 
-import 'package:harmonymusic/utils/localization/lang_mapping.dart';
+import 'package:estrella_music/utils/localization/lang_mapping.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:harmonymusic/ui/widgets/common_dialog_widget.dart';
-import 'package:harmonymusic/ui/widgets/cust_switch.dart';
-import 'package:harmonymusic/ui/widgets/export_file_dialog.dart';
-import 'package:harmonymusic/ui/widgets/backup_dialog.dart';
-import 'package:harmonymusic/ui/widgets/cloud_backup_dialog.dart';
-import 'package:harmonymusic/ui/widgets/cloud_sync_status_dialog.dart';
-import 'package:harmonymusic/ui/widgets/legacy_music_migration_dialog.dart';
-import 'package:harmonymusic/ui/widgets/restore_dialog.dart';
-import 'package:harmonymusic/ui/widgets/snackbar.dart';
+import 'package:estrella_music/ui/widgets/common_dialog_widget.dart';
+import 'package:estrella_music/ui/widgets/cust_switch.dart';
+import 'package:estrella_music/ui/widgets/export_file_dialog.dart';
+import 'package:estrella_music/ui/widgets/backup_dialog.dart';
+import 'package:estrella_music/ui/widgets/cloud_backup_dialog.dart';
+import 'package:estrella_music/ui/widgets/cloud_sync_status_dialog.dart';
+import 'package:estrella_music/ui/widgets/legacy_music_migration_dialog.dart';
+import 'package:estrella_music/ui/widgets/restore_dialog.dart';
+import 'package:estrella_music/ui/widgets/snackbar.dart';
 
 import '/ui/utils/theme_controller.dart';
 import 'components/custom_expansion_tile.dart';
 import 'settings_screen_controller.dart';
-import 'package:harmonymusic/generated/l10n.dart';
+import 'package:estrella_music/generated/l10n.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key, this.isBottomNavActive = false});
@@ -143,7 +143,7 @@ class SettingsScreen extends StatelessWidget {
                       child: ListTile(
                         onTap: () => launchUrl(
                             Uri.parse(
-                                'https://github.com/anandnet/Harmony-Music/releases/latest'),
+                                'https://github.com/josprox/Estrella-Music/releases/latest'),
                             mode: LaunchMode.externalApplication),
                         leading: Icon(Icons.download_rounded,
                             color: cs.onPrimaryContainer),

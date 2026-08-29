@@ -8,7 +8,7 @@ llevar tu experiencia musical al siguiente nivel.
 
 Acerca de esta version:
 -----------------------
-Estrella Music v2 es una fusion entre el potente motor de Harmony Music y el
+Estrella Music v2 es una fusion entre el potente motor de Estrella Music y el
 legado y vision del proyecto original Estrella Music (Kotlin). Disfruta de
 una interfaz Material 3 inmersiva, streaming sin anuncios y una gestion de
 biblioteca avanzada.

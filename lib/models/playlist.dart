@@ -1,6 +1,6 @@
 import 'package:audio_service/audio_service.dart' show MediaItem;
 
-import 'package:harmonymusic/models/thumbnail.dart';
+import 'package:estrella_music/models/thumbnail.dart';
 
 class PlaylistContent {
   PlaylistContent({required this.title, required this.playlistList});
@@ -52,7 +52,7 @@ class Playlist {
   final String? profileId;
   final String sourceId;
   static const thumbPlaceholderUrl =
-      "https://raw.githubusercontent.com/anandnet/Harmony-Music/refs/heads/main/playlist_placeholder.png";
+      "https://raw.githubusercontent.com/josprox/Estrella-Music/main/assets/icons/song.png";
 
   factory Playlist.fromJson(Map<dynamic, dynamic> json) {
     final thumbnailUrl = _thumbnailUrlFromJson(json);

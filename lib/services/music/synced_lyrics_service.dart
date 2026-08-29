@@ -1,5 +1,5 @@
-import 'package:harmonymusic/utils/helpers/helper.dart';
-import 'package:harmonymusic/services/storage/sqlite_store.dart';
+import 'package:estrella_music/utils/helpers/helper.dart';
+import 'package:estrella_music/services/storage/sqlite_store.dart';
 
 class SyncedLyricsService {
   /// Save manual/automatic translation to local SqliteStore box for a song ID

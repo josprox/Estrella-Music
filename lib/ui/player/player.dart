@@ -1,13 +1,13 @@
-﻿import 'package:get/get.dart';
+import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 
 import '/ui/player/components/standard_player.dart';
-import 'package:harmonymusic/utils/helpers/helper.dart';
-import 'package:harmonymusic/ui/widgets/snackbar.dart';
-import 'package:harmonymusic/ui/widgets/up_next_queue.dart';
-import 'package:harmonymusic/ui/player/player_controller.dart';
-import 'package:harmonymusic/ui/widgets/sliding_up_panel.dart';
-import 'package:harmonymusic/generated/l10n.dart';
+import 'package:estrella_music/utils/helpers/helper.dart';
+import 'package:estrella_music/ui/widgets/snackbar.dart';
+import 'package:estrella_music/ui/widgets/up_next_queue.dart';
+import 'package:estrella_music/ui/player/player_controller.dart';
+import 'package:estrella_music/ui/widgets/sliding_up_panel.dart';
+import 'package:estrella_music/generated/l10n.dart';
 
 /// Player screen
 /// Contains the player ui

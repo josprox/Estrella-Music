@@ -5,16 +5,16 @@ import 'package:audio_service/audio_service.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'package:harmonymusic/generated/l10n.dart';
-import 'package:harmonymusic/models/playling_from.dart';
-import 'package:harmonymusic/music_provider/music_catalog_service.dart';
-import 'package:harmonymusic/ui/navigator.dart';
-import 'package:harmonymusic/ui/player/player_controller.dart';
-import 'package:harmonymusic/ui/widgets/add_to_playlist.dart';
-import 'package:harmonymusic/ui/widgets/loader.dart';
-import 'package:harmonymusic/ui/widgets/shared_song_action_sheet.dart';
-import 'package:harmonymusic/ui/widgets/snackbar.dart';
-import 'package:harmonymusic/ui/widgets/songinfo_bottom_sheet.dart';
+import 'package:estrella_music/generated/l10n.dart';
+import 'package:estrella_music/models/playling_from.dart';
+import 'package:estrella_music/music_provider/music_catalog_service.dart';
+import 'package:estrella_music/ui/navigator.dart';
+import 'package:estrella_music/ui/player/player_controller.dart';
+import 'package:estrella_music/ui/widgets/add_to_playlist.dart';
+import 'package:estrella_music/ui/widgets/loader.dart';
+import 'package:estrella_music/ui/widgets/shared_song_action_sheet.dart';
+import 'package:estrella_music/ui/widgets/snackbar.dart';
+import 'package:estrella_music/ui/widgets/songinfo_bottom_sheet.dart';
 
 class AppLinksController extends GetxController with ProcessLink {
   late AppLinks _appLinks;

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:file_picker/file_picker.dart';
-import 'package:harmonymusic/services/storage/sqlite_store.dart';
-import 'package:harmonymusic/services/sync/sync_service.dart';
-import 'package:harmonymusic/music_provider/music_provider_manager.dart';
-import 'package:harmonymusic/profiles/profile_manager.dart';
-import 'package:harmonymusic/ui/home.dart';
-import 'package:harmonymusic/ui/profiles/profile_switcher.dart';
+import 'package:estrella_music/services/storage/sqlite_store.dart';
+import 'package:estrella_music/services/sync/sync_service.dart';
+import 'package:estrella_music/music_provider/music_provider_manager.dart';
+import 'package:estrella_music/profiles/profile_manager.dart';
+import 'package:estrella_music/ui/home.dart';
+import 'package:estrella_music/ui/profiles/profile_switcher.dart';
 import 'widgets/animated_auth_background.dart';
 
 class WelcomeProfileSetupScreen extends StatefulWidget {
