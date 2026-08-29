@@ -1112,6 +1112,7 @@ class LibraryArtistsController extends GetxController {
       } catch (error) {
         debugPrint(
             'Artist ID ${artist.browseId} is no longer valid for ${artist.name}: $error');
+        if (error.toString().contains('429')) return null;
       }
     }
     try {

@@ -21,9 +21,9 @@ typedef MusicCatalogRequest = Future<Map<String, dynamic>> Function(
   String additionalParams,
 );
 
-/// YouTube Music response parser owned by an online provider.
+/// eMusic catalog and response parser owned by an online provider.
 ///
-/// It never contacts YouTube directly: every request is delegated to eMusic.
+/// Every request is delegated to eMusic.
 class MusicServices {
   MusicServices({
     required MusicCatalogRequest request,

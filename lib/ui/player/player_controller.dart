@@ -456,11 +456,15 @@ class PlayerController extends GetxController
         prevSessionData.close();
         await _audioHandler.addQueueItems(songList);
         _playerPanelCheck(restoreSession: true);
-        await _audioHandler.customAction("playByIndex", {
-          "index": currentIndex,
-          "position": position,
-          "restoreSession": true
-        });
+        try {
+          await _audioHandler.customAction("playByIndex", {
+            "index": currentIndex,
+            "position": position,
+            "restoreSession": true
+          });
+        } catch (e) {
+          printERROR("Failed to restore previous session playback: $e");
+        }
       }
     }
     _startSessionPersistence();

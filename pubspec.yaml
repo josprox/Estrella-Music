@@ -104,7 +104,6 @@ dependencies:
   open_file: ^3.3.2
   shared_preferences: ^2.5.5
 
-
 dev_dependencies:
   intl_utils: ^2.8.12
   flutter_lints: ^4.0.0

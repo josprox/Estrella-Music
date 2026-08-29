@@ -1,4 +1,4 @@
-﻿import 'dart:ui';
+import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -84,7 +84,7 @@ class _MusicRecognitionBottomSheetState
     });
 
     try {
-      // 1. Search YouTube for matching track
+      // 1. Search catalog for matching track
       final query = "${_result!.title} ${_result!.artist}";
       final searchRes =
           await _musicServices.search(query, filter: "songs", limit: 3);

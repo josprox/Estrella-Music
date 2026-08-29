@@ -4,7 +4,7 @@
 
 <h1>Estrella Music v2</h1>
 
-<p><strong>Cross-platform music streaming · Flutter · YouTube Music</strong></p>
+<p><strong>Cross-platform music player & streaming · Flutter · Music Provider Architecture</strong></p>
 
 <!-- Badges -->
 <p>
@@ -43,7 +43,7 @@
 
 ## ✨ What is Estrella Music v2?
 
-**Estrella Music v2** is the full Flutter evolution of the original Kotlin version. Built on top of a powerful engine and deeply integrated with the **YouTube Music** ecosystem, v2 brings a premium cross-platform experience to Android, Windows, Linux, macOS, and iOS — with cloud sync powered by **EMusic** and identity by **Joss Red**.
+**Estrella Music v2** is the full Flutter evolution of the original Kotlin version. Built around a modular **MusicProvider** architecture, v2 delivers a 100% functional local playback experience alongside online cloud streaming powered by **EMusic** and identity by **Joss Red** across Android, Windows, Linux, macOS, and iOS.
 
 > **Migrate seamlessly** from your old `song.db` or `.backup` files. Your playlists, history, and favorites come with you.
 
@@ -56,7 +56,7 @@
 <td width="50%">
 
 ### 🎵 Streaming & Playback
-- Stream millions of songs, albums & playlists via YouTube Music
+- Local audio playback & rich online streaming via modular providers
 - High-quality audio with smart chunk caching
 - Gapless playback & skip silence
 - Background playback with native media controls
@@ -65,7 +65,7 @@
 ### 📜 Library & Discovery
 - Local library management (songs, albums, artists)
 - Synced & plain-text lyrics via **LRCLIB**
-- Playlist import (YouTube Music, Piped)
+- Playlist management & import
 - Persistent playback queue
 
 </td>
@@ -78,10 +78,7 @@
 - Multi-device support with Joss Red identity
 
 ### 🖥️ Cross-Platform
-- **Android** — Material 3 UI + Android Auto
-- **Windows & Linux** — Desktop sidebar + tray
-- **macOS** — Native macOS window management
-- **iOS** — Unsigned IPA via SideStore
+- Native desktop & mobile experience
 
 ### 🔐 Auth & Updates
 - Identity via **Joss Red** (JWT · profile · backups · friends)
@@ -118,13 +115,14 @@
 | Layer | Technology |
 |---|---|
 | **Framework** | [Flutter](https://flutter.dev) 3.x · Dart |
+| **Architecture** | Modular `MusicProvider` (`LocalMusicProvider`, `EMusicProvider`) |
 | **State** | [GetX](https://pub.dev/packages/get) |
 | **Audio (Android/iOS)** | `just_audio` |
 | **Audio (Desktop)** | `media_kit` via `just_audio_media_kit` |
-| **Networking** | [Dio](https://pub.dev/packages/dio) · [YouTube Explode](https://pub.dev/packages/youtube_explode_dart) |
-| **Database** | SQLite (`sqlite3`) with legacy Hive migration |
+| **Networking** | [Dio](https://pub.dev/packages/dio) |
+| **Database** | Hive (Local state & profiles) · SQLite (EMusic sync & outbox) |
 | **Auth & Identity** | Joss Red (JWT · profile · backups · friends) |
-| **Cloud Music** | EMusic (playlists · sync · offline · history) |
+| **Cloud Music** | EMusic (catalog orchestrator · playlists · sync) |
 | **Notifications** | `flutter_local_notifications` · Firebase Messaging |
 | **Build & Release** | GitHub Actions — multi-platform · draft releases |
 

@@ -31,7 +31,7 @@ class HomeService {
         final contents = section['contents'];
         return contents is List && contents.any((item) => item is MediaItem);
       });
-      // YouTube Music often returns albums/playlists first. Do not stop at the
+      // EMusic often returns albums/playlists first. Do not stop at the
       // requested section count until at least one playable song section has
       // been found, otherwise Quick Picks stays empty until a manual refresh.
       final continuationLimit =

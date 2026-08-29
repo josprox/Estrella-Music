@@ -1,19 +1,21 @@
-# Copilot Instructions for Harmony Music
+# Copilot Instructions for Estrella Music v2
 
 ## Project Overview
 
-Harmony Music is a cross-platform music streaming application built with Flutter, supporting Android, Windows, and Linux. The app streams music from YouTube/YouTube Music without requiring login or showing advertisements.
+Estrella Music v2 is a cross-platform music streaming and local player application built with Flutter, supporting Android, Windows, Linux, macOS, and iOS. The app operates around a modular `MusicProvider` architecture (featuring `LocalMusicProvider` for offline media and `EMusicProvider` for cloud streaming with Joss Red authentication).
 
 ## Technology Stack
 
 - **Framework**: Flutter 3.24.2+ (Dart SDK >=3.1.5 <4.0.0)
+- **Architecture**: Modular `MusicProvider` and `ProfileManager`
 - **State Management**: GetX (get: ^4.7.1)
 - **Audio Playback**:
-  - Android: just_audio (^0.9.46)
+  - Android/iOS: just_audio (^0.9.46)
   - Linux/Windows: media_kit via just_audio_media_kit
   - Background audio: audio_service (^0.18.17)
-- **Local Storage**: Hive (^2.2.3) with hive_flutter
-- **YouTube API**: youtube_explode_dart (custom fork)
+- **Local Storage**: Hive (^2.2.3) for local profiles, SQLite (`sqlite3`) for EMusic sync/outbox
+- **Authentication**: Joss Red (JWT global session)
+- **Cloud Music**: EMusic server
 - **HTTP Client**: dio (^5.7.0)
 - **UI Components**: animations, cached_network_image, flutter_slidable, shimmer
 
@@ -24,20 +26,24 @@ lib/
 ├── base_class/      # Base classes and abstractions
 ├── mixins/          # Reusable mixins
 ├── models/          # Data models
-├── native_bindings/ # Platform-specific native code bindings
-├── services/        # Business logic services (audio, music, downloader, piped)
+├── music_provider/  # MusicProvider contract, LocalMusicProvider, EMusicProvider
+├── profiles/        # ProfileManager and profile state isolation
+├── services/        # Business logic services (audio, music catalog, sync, downloader)
 ├── ui/              # User interface
 │   ├── player/      # Music player UI and controllers
-│   ├── screens/     # App screens (Home, Library, Settings, Search)
+│   ├── screens/     # App screens (Home, Library, Settings, Search, Auth)
 │   ├── utils/       # UI utilities (theme controller)
 │   └── widgets/     # Reusable widgets
 └── utils/           # General utilities and helpers
 ```
 
-## Key Controllers (GetX)
+## Key Controllers & Services (GetX)
 
 - `PlayerController` - Manages music playback
-- `HomeScreenController` - Home screen state
+- `MusicCatalogService` - Neutral catalog interface for active provider
+- `ProfileManager` - Manages active musical profiles and isolated contexts
+- `MusicProviderManager` - Manages and resolves provider instances
+- `SyncService` - Syncs cloud data when provider/profile is authorized
 - `LibraryController` - Library/collection management
 - `SettingsScreenController` - App settings
 - `SearchScreenController` - Search functionality
@@ -45,79 +51,17 @@ lib/
 
 ## Architecture Patterns
 
+- **MusicProvider Contract**: UI depends strictly on neutral contracts, never on concrete providers
+- **Profile Isolation**: Favorites, playlists, history, and downloads are namespaced per `profileId`
 - **State Management**: GetX pattern with controllers
 - **Dependency Injection**: GetX dependency injection (`Get.put`, `Get.find`)
-- **Services**: Centralized service classes for audio, music fetching, and downloads
-- **Mixins**: Used for code reuse across controllers
-
-## Development Workflow
-
-### Setup
-```bash
-flutter pub get
-```
-
-### Linting
-```bash
-flutter analyze
-```
-
-### Building
-```bash
-# Android
-flutter build apk
-
-# Windows
-flutter build windows
-
-# Linux
-flutter build linux
-```
-
-### Testing
-```bash
-flutter test
-```
-
-## Coding Guidelines
-
-1. **Follow Dart/Flutter best practices**:
-   - Use `flutter_lints` package rules (already configured)
-   - Follow the official Dart style guide
-   - Maintain consistent code formatting
-
-2. **State Management**:
-   - Use GetX controllers for state management
-   - Use `Get.put()` for controller initialization
-   - Use `Get.find()` to access existing controllers
-   - Controllers should be placed in their respective screen directories
-
-3. **File Organization**:
-   - Keep related files together (screen + controller)
-   - Place reusable widgets in `ui/widgets/`
-   - Place business logic in `services/`
-   - Keep models in `models/`
-
-4. **Platform Considerations**:
-   - Use `GetPlatform.isAndroid`, `GetPlatform.isDesktop`, etc. for platform-specific code
-   - Android uses just_audio, Desktop uses media_kit
-   - Consider mobile vs desktop UI patterns
-
-5. **Assets and Resources**:
-   - Icons are located in `assets/icons/`
-   - Localization files are in `localization/`
-   - Use the GetX translation system (`Languages()`)
-
-6. **Dependencies**:
-   - Several packages use custom forks (youtube_explode_dart, just_audio_media_kit, etc.)
-   - Be cautious when suggesting package updates
-   - Check pubspec.yaml for git-based dependencies
+- **Offline First**: `LocalMusicProvider` is always available as fallback
 
 ## Important Considerations
 
-1. **No Login Required**: The app operates without user authentication
-2. **Ad-Free**: No advertisement integration
-3. **GPL v3.0 License**: Code must remain open source
+1. **Joss Red Authentication**: Global login is required before entering the application.
+2. **Local Privacy**: Local files and downloads are strictly stored locally in Hive and never synced to cloud.
+3. **Neutral UI**: No provider-specific conditionals in UI widgets. Use `capabilities`.
 4. **Third Party Content**: Be mindful of copyright and content usage
 5. **Cross-Platform**: Changes should consider all target platforms (Android, Windows, Linux)
 6. **Offline Support**: App caches songs and supports offline playback

@@ -9,6 +9,7 @@ import '../models/provider_capabilities.dart';
 import '../models/provider_entities.dart';
 import '../music_provider.dart';
 import '../music_discovery_provider.dart';
+import 'package:harmonymusic/utils/helpers/helper.dart';
 import 'package:harmonymusic/services/music/music_service.dart';
 
 typedef ProviderTokenLoader = Future<String?> Function();
@@ -320,101 +321,121 @@ class EMusicProvider implements MusicProvider, MusicDiscoveryProvider {
     final playbackContext =
         await _playbackContextLoader?.call() ?? const EMusicPlaybackContext();
 
-    // 1. Resolve stream using eMusic orchestration recipe on client device
+    final videoId = track.identity.sourceId;
+    printINFO(
+        '[EMusicProvider] getPlayback requested for $videoId ("${track.title}")');
+
+    // 1. Resolve stream using dynamic eMusic orchestrator recipe on client device
+    List<dynamic> recommendedClients = const [];
+    int sts = 20684;
+    String? visitorData = playbackContext.visitorData;
+
     try {
       final recipeData = await _request(
         'POST',
         'orchestrator/resolve-recipe',
-        body: {'videoId': track.identity.sourceId},
+        body: {'videoId': videoId},
       );
       final orchestration = _map(recipeData['orchestration']);
-      final recommendedClients = _list(orchestration['recommendedClients']);
-      final sts = _int(recipeData['signatureTimestamp']) ?? 20684;
-      final visitorData = recipeData['visitorData']?.toString() ??
-          playbackContext.visitorData;
-
-      for (final clientSpec in recommendedClients) {
-        final clientName = clientSpec['name']?.toString() ??
-            clientSpec['clientName']?.toString() ??
-            'UNKNOWN';
-        final apiUrl = clientSpec['apiUrl']?.toString() ??
-            'https://www.youtube.com/youtubei/v1/player?prettyPrint=false';
-        final clientObj = Map<String, dynamic>.from(_map(clientSpec['client']));
-        final useSts = clientSpec['useSts'] == true;
-        final useVisitor = clientSpec['useVisitor'] == true;
-        final contentCheckOk = clientSpec['contentCheckOk'] == true;
-        final racyCheckOk = clientSpec['racyCheckOk'] == true;
-
-        if (useVisitor && visitorData != null && visitorData.isNotEmpty) {
-          clientObj['visitorData'] = visitorData;
-        }
-
-        final payload = <String, dynamic>{
-          'context': {'client': clientObj},
-          'videoId': track.identity.sourceId,
-          if (useSts)
-            'playbackContext': {
-              'contentPlaybackContext': {
-                'html5Preference': 'HTML5_PREF_WANTS',
-                'signatureTimestamp': sts,
-              }
-            },
-          if (contentCheckOk) 'contentCheckOk': true,
-          if (racyCheckOk) 'racyCheckOk': true,
-        };
-
-        final headers = <String, String>{
-          'User-Agent': clientSpec['userAgent']?.toString() ?? 'Mozilla/5.0',
-          'X-Youtube-Client-Name':
-              clientSpec['clientName']?.toString() ?? clientName,
-          'X-Youtube-Client-Version':
-              clientObj['clientVersion']?.toString() ?? '',
-          'Content-Type': 'application/json',
-          'Accept': '*/*',
-          if (clientSpec['origin'] != null)
-            'Origin': clientSpec['origin'].toString(),
-        };
-
-        try {
-          final clientDio = Dio();
-          final streamResp = await clientDio.post<dynamic>(
-            apiUrl,
-            data: payload,
-            options: Options(headers: headers, validateStatus: (_) => true),
-          );
-          final streamData = _map(streamResp.data);
-          final status =
-              _map(streamData['playabilityStatus'])['status']?.toString();
-          if (status == 'OK') {
-            final formats =
-                _list(_map(streamData['streamingData'])['adaptiveFormats']);
-            final audioFormats = formats
-                .where((f) =>
-                    f['url'] != null &&
-                    f['url'].toString().isNotEmpty &&
-                    (f['mimeType']?.toString().contains('audio') ?? false))
-                .toList();
-            if (audioFormats.isNotEmpty) {
-              audioFormats.sort((a, b) =>
-                  (_int(b['bitrate']) ?? 0).compareTo(_int(a['bitrate']) ?? 0));
-              final best = audioFormats.first;
-              final url = best['url'].toString();
-              return PlaybackSource(
-                type: PlaybackSourceType.authorizedStream,
-                uri: Uri.parse(url),
-                headers: headers,
-                mimeType: best['mimeType']?.toString() ?? 'audio/mp4',
-                bitrate: _int(best['bitrate']),
-                loudnessDb: _double(best['loudnessDb']) ?? 0,
-              );
-            }
-          }
-        } catch (_) {
-          continue;
-        }
+      recommendedClients = _list(orchestration['recommendedClients']);
+      sts = _int(recipeData['signatureTimestamp']) ?? 20684;
+      if (recipeData['visitorData'] != null) {
+        visitorData = recipeData['visitorData'].toString();
       }
-    } catch (_) {
-      // Fall through to server-side resolution fallback
+      printINFO(
+          '[EMusicProvider] Recipe received: ${recommendedClients.length} clients, sts=$sts');
+    } catch (e) {
+      printERROR('[EMusicProvider] Recipe request failed: $e');
+    }
+
+    for (final rawSpec in recommendedClients) {
+      final clientSpec = _map(rawSpec);
+      final clientName = clientSpec['name']?.toString() ??
+          clientSpec['clientName']?.toString() ??
+          'UNKNOWN';
+      final apiUrl = clientSpec['apiUrl']?.toString();
+      if (apiUrl == null || apiUrl.isEmpty) {
+        continue;
+      }
+      final clientObj = Map<String, dynamic>.from(_map(clientSpec['client']));
+      final useSts = clientSpec['useSts'] == true;
+      final useVisitor = clientSpec['useVisitor'] == true;
+      final contentCheckOk = clientSpec['contentCheckOk'] == true;
+      final racyCheckOk = clientSpec['racyCheckOk'] == true;
+
+      if (useVisitor && visitorData != null && visitorData.isNotEmpty) {
+        clientObj['visitorData'] = visitorData;
+      }
+
+      final payload = <String, dynamic>{
+        'context': {'client': clientObj},
+        'videoId': videoId,
+        if (useSts)
+          'playbackContext': {
+            'contentPlaybackContext': {
+              'html5Preference': 'HTML5_PREF_WANTS',
+              'signatureTimestamp': sts,
+            }
+          },
+        if (contentCheckOk) 'contentCheckOk': true,
+        if (racyCheckOk) 'racyCheckOk': true,
+      };
+
+      final reqHeaders =
+          Map<String, String>.from(_map(clientSpec['requestHeaders']));
+
+      if (useVisitor && visitorData != null && visitorData.isNotEmpty) {
+        reqHeaders['X-Goog-Visitor-Id'] = visitorData;
+      }
+
+      final playHeaders =
+          Map<String, String>.from(_map(clientSpec['playbackHeaders']));
+
+      printINFO(
+          '[EMusicProvider] Resolving stream with client: $clientName ($apiUrl)');
+
+      try {
+        final clientDio = Dio();
+        final streamResp = await clientDio.post<dynamic>(
+          apiUrl,
+          data: payload,
+          options: Options(headers: reqHeaders, validateStatus: (_) => true),
+        );
+        final streamData = _map(streamResp.data);
+        final status =
+            _map(streamData['playabilityStatus'])['status']?.toString();
+        printINFO(
+            '[EMusicProvider] Client $clientName status: $status');
+        if (status == 'OK') {
+          final formats =
+              _list(_map(streamData['streamingData'])['adaptiveFormats']);
+          final audioFormats = formats
+              .where((f) =>
+                  f['url'] != null &&
+                  f['url'].toString().isNotEmpty &&
+                  (f['mimeType']?.toString().contains('audio') ?? false))
+              .toList();
+          if (audioFormats.isNotEmpty) {
+            audioFormats.sort((a, b) =>
+                (_int(b['bitrate']) ?? 0).compareTo(_int(a['bitrate']) ?? 0));
+            final best = audioFormats.first;
+            final url = best['url'].toString();
+            printINFO(
+                '[EMusicProvider] Successfully resolved stream with $clientName. Bitrate: ${best['bitrate']}, PlaybackHeaders: $playHeaders');
+            return PlaybackSource(
+              type: PlaybackSourceType.authorizedStream,
+              uri: Uri.parse(url),
+              headers: playHeaders,
+              mimeType: best['mimeType']?.toString() ?? 'audio/mp4',
+              bitrate: _int(best['bitrate']),
+              loudnessDb: _double(best['loudnessDb']) ?? 0,
+            );
+          }
+        }
+      } catch (e) {
+        printERROR('[EMusicProvider] Client $clientName resolution error: $e');
+        continue;
+      }
     }
 
     // 2. Fallback to server-side resolution endpoint

@@ -5,13 +5,13 @@
 Las URLs públicas son:
 
 ```text
-https://emusic.joss.red/share/song/{youtubeVideoId}
-https://emusic.joss.red/share/album/{youtubePlaylistId}
-https://emusic.joss.red/share/playlist/{youtubePlaylistId}
-https://emusic.joss.red/share/artist/{youtubeBrowseId}
+https://emusic.joss.red/share/song/{sourceId}
+https://emusic.joss.red/share/album/{sourceId}
+https://emusic.joss.red/share/playlist/{sourceId}
+https://emusic.joss.red/share/artist/{sourceId}
 ```
 
-Por ahora todos los identificadores pertenecen a YouTube/YouTube Music.
+Los identificadores corresponden al `sourceId` del elemento musical en eMusic.
 
 ## Flujo
 
@@ -22,7 +22,7 @@ Por ahora todos los identificadores pertenecen a YouTube/YouTube Music.
    correspondiente, como si el usuario hubiese seleccionado el elemento dentro
    de Estrella Music.
 4. Si el sistema no entrega el enlace a la app, EMusic intenta el protocolo
-   `estrellamusic://share/{tipo}/{youtubeId}` para instalaciones de escritorio
+   `estrellamusic://share/{tipo}/{sourceId}` para instalaciones de escritorio
    y como respaldo móvil.
 5. Si la app no está instalada, la página cambia a la URL equivalente de
    YouTube o YouTube Music según el tipo compartido.

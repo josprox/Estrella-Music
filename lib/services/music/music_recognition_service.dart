@@ -28,9 +28,7 @@ class RecognitionResult {
   final String? releaseDate;
   final String? label;
   final List<String>? lyrics;
-  final String? shazamUrl;
-  final String? spotifyUrl;
-  final String? youtubeVideoId;
+  final String? externalUrl;
   final String? isrc;
 
   RecognitionResult({
@@ -44,9 +42,7 @@ class RecognitionResult {
     this.releaseDate,
     this.label,
     this.lyrics,
-    this.shazamUrl,
-    this.spotifyUrl,
-    this.youtubeVideoId,
+    this.externalUrl,
     this.isrc,
   });
 
@@ -104,57 +100,6 @@ class RecognitionResult {
     final genres = track['genres'] as Map<String, dynamic>?;
     final genre = genres?['primary'] as String?;
 
-    final hub = track['hub'] as Map<String, dynamic>?;
-    final options = hub?['options'] as List<dynamic>?;
-
-    final providers = hub?['providers'] as List<dynamic>?;
-    Map<String, dynamic>? spotifyProvider;
-    if (providers != null) {
-      for (var prov in providers) {
-        if (prov != null &&
-            prov['caption']?.toString().toLowerCase().contains('spotify') ==
-                true) {
-          spotifyProvider = prov as Map<String, dynamic>;
-          break;
-        }
-      }
-    }
-    String? spotifyUrl;
-    final spotifyActions = spotifyProvider?['actions'] as List<dynamic>?;
-    if (spotifyActions != null && spotifyActions.isNotEmpty) {
-      spotifyUrl = spotifyActions.first?['uri'] as String?;
-    }
-
-    Map<String, dynamic>? youtubeAction;
-    if (options != null) {
-      for (var opt in options) {
-        if (opt != null &&
-            opt['type']?.toString().toLowerCase().contains('video') == true) {
-          final actions = opt['actions'] as List<dynamic>?;
-          if (actions != null && actions.isNotEmpty) {
-            youtubeAction = actions.first as Map<String, dynamic>;
-            break;
-          }
-        }
-      }
-    }
-
-    String? youtubeVideoId;
-    final youtubeUri = youtubeAction?['uri'] as String?;
-    if (youtubeUri != null) {
-      if (youtubeUri.contains('v=')) {
-        youtubeVideoId = youtubeUri.split('v=').last;
-        if (youtubeVideoId.contains('&')) {
-          youtubeVideoId = youtubeVideoId.split('&').first;
-        }
-      } else {
-        youtubeVideoId = youtubeUri.split('/').last;
-      }
-      if (youtubeVideoId.length != 11) {
-        youtubeVideoId = null;
-      }
-    }
-
     return RecognitionResult(
       trackId: track['key']?.toString() ?? json['tagid']?.toString() ?? '',
       title: track['title']?.toString() ?? '',
@@ -166,9 +111,7 @@ class RecognitionResult {
       releaseDate: releaseDate,
       label: label,
       lyrics: lyrics,
-      shazamUrl: track['url']?.toString(),
-      spotifyUrl: spotifyUrl,
-      youtubeVideoId: youtubeVideoId,
+      externalUrl: track['url']?.toString(),
       isrc: track['isrc']?.toString(),
     );
   }
