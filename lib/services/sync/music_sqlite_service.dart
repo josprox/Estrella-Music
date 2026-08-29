@@ -59,7 +59,6 @@ class MusicSqliteService extends GetxService {
         path == ':memory:' ? sqlite3.openInMemory() : sqlite3.open(path);
     _configureDatabase();
     _createSchema();
-    await migrateFromLocalStoreIfNeeded();
   }
 
   Future<String> _defaultDatabasePath() async {
@@ -141,7 +140,9 @@ class MusicSqliteService extends GetxService {
     db.execute('PRAGMA user_version = $schemaVersion');
   }
 
-  Future<void> migrateFromLocalStoreIfNeeded() async {
+  /// Explicit legacy import used only by a user-confirmed eMusic migration.
+  /// It must never run during local-profile startup.
+  Future<void> importLocalStoreForAuthorizedMigration() async {
     const migrationKey = 'local_store_to_music_sqlite_v1';
     final existing = db.select(
       'SELECT status FROM local_migrations WHERE migration_key = ?',

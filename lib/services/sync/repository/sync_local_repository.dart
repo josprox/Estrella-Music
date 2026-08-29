@@ -3,11 +3,21 @@ import 'package:harmonymusic/utils/helpers/helper.dart';
 
 class SyncLocalRepository {
   Future<Map<String, dynamic>> buildPushPayload() async {
-    final appPrefs = SqliteStore.isBoxOpen('AppPrefs') ? SqliteStore.box('AppPrefs') : await SqliteStore.openBox('AppPrefs');
-    final libFav = SqliteStore.isBoxOpen('LIBFAV') ? SqliteStore.box('LIBFAV') : await SqliteStore.openBox('LIBFAV');
-    final libRp = SqliteStore.isBoxOpen('LIBRP') ? SqliteStore.box('LIBRP') : await SqliteStore.openBox('LIBRP');
-    final libAlbums = SqliteStore.isBoxOpen('LibraryAlbums') ? SqliteStore.box('LibraryAlbums') : await SqliteStore.openBox('LibraryAlbums');
-    final libArtists = SqliteStore.isBoxOpen('LibraryArtists') ? SqliteStore.box('LibraryArtists') : await SqliteStore.openBox('LibraryArtists');
+    final appPrefs = SqliteStore.isBoxOpen('AppPrefs')
+        ? SqliteStore.box('AppPrefs')
+        : await SqliteStore.openBox('AppPrefs');
+    final libFav = SqliteStore.isBoxOpen('LIBFAV')
+        ? SqliteStore.box('LIBFAV')
+        : await SqliteStore.openBox('LIBFAV');
+    final libRp = SqliteStore.isBoxOpen('LIBRP')
+        ? SqliteStore.box('LIBRP')
+        : await SqliteStore.openBox('LIBRP');
+    final libAlbums = SqliteStore.isBoxOpen('LibraryAlbums')
+        ? SqliteStore.box('LibraryAlbums')
+        : await SqliteStore.openBox('LibraryAlbums');
+    final libArtists = SqliteStore.isBoxOpen('LibraryArtists')
+        ? SqliteStore.box('LibraryArtists')
+        : await SqliteStore.openBox('LibraryArtists');
     return {
       'playlists': await _collectPlaylists(),
       'favorites': libFav.values.toList(),
@@ -32,8 +42,9 @@ class SyncLocalRepository {
 
       final boxName = sanitizeBoxName(playlistId);
       final wasOpen = SqliteStore.isBoxOpen(boxName);
-      final tracksBox =
-          wasOpen ? SqliteStore.box(boxName) : await SqliteStore.openBox(boxName);
+      final tracksBox = wasOpen
+          ? SqliteStore.box(boxName)
+          : await SqliteStore.openBox(boxName);
       result.add({
         ...playlist,
         'tracks': tracksBox.values.toList(),
@@ -67,7 +78,8 @@ class SyncLocalRepository {
   Future<void> mergePlaylists(dynamic value) async {
     if (value == null) return;
     if (value is! List) {
-      printWarning('SyncLocalRepository: playlists ignoradas (${value.runtimeType}).');
+      printWarning(
+          'SyncLocalRepository: playlists ignoradas (${value.runtimeType}).');
       return;
     }
 
@@ -88,23 +100,27 @@ class SyncLocalRepository {
         final boxName = sanitizeBoxName(playlistId);
         try {
           final wasOpen = SqliteStore.isBoxOpen(boxName);
-          final tracksBox =
-              wasOpen ? SqliteStore.box(boxName) : await SqliteStore.openBox(boxName);
+          final tracksBox = wasOpen
+              ? SqliteStore.box(boxName)
+              : await SqliteStore.openBox(boxName);
           await tracksBox.clear();
           for (var i = 0; i < tracks.length; i++) {
             await tracksBox.put(i, tracks[i]);
           }
         } catch (e) {
-          printERROR('SyncLocalRepository: no se pudo abrir box para playlist $playlistId: $e');
+          printERROR(
+              'SyncLocalRepository: no se pudo abrir box para playlist $playlistId: $e');
         }
       }
       merged++;
     }
 
     if (merged == 0 && value.isNotEmpty) {
-      printWarning('SyncLocalRepository: ninguna playlist mapeada de ${value.length} recibidas.');
+      printWarning(
+          'SyncLocalRepository: ninguna playlist mapeada de ${value.length} recibidas.');
     } else if (merged > 0) {
-      printINFO('SyncLocalRepository: playlists mapeadas=$merged de ${value.length}.');
+      printINFO(
+          'SyncLocalRepository: playlists mapeadas=$merged de ${value.length}.');
     }
   }
 
@@ -113,10 +129,16 @@ class SyncLocalRepository {
     dynamic value, {
     List<String> idKeys = const ['videoId', 'id'],
   }) async {
-    if (value is! List) return;
+    if (value is! List) {
+      printWarning(
+          'SyncLocalRepository: $boxName no es una lista (${value.runtimeType})');
+      return;
+    }
     final box = SqliteStore.isBoxOpen(boxName)
         ? SqliteStore.box(boxName)
         : await SqliteStore.openBox(boxName);
+    printINFO(
+        'SyncLocalRepository: Guardando en $boxName (${value.length} elementos)');
     await box.clear();
     for (var i = 0; i < value.length; i++) {
       final item = _asMap(value[i]);

@@ -11,7 +11,10 @@ class Artist {
     required this.thumbnailUrl,
     this.subscribers,
     this.monthlyListeners,
-  });
+    this.providerId,
+    this.profileId,
+    String? sourceId,
+  }) : sourceId = sourceId ?? browseId;
   final String name;
   final String browseId;
   final String? radioId;
@@ -20,8 +23,12 @@ class Artist {
   final bool isSubscribed;
   final String? subscribers;
   final String thumbnailUrl;
+
   /// Monthly listeners string, e.g. "12,345,678 monthly listeners"
   final String? monthlyListeners;
+  final String? providerId;
+  final String? profileId;
+  final String sourceId;
 
   factory Artist.fromJson(dynamic json) => Artist(
       name: json['artist'] ?? json['title'] ?? "Unknown Artist",
@@ -30,17 +37,27 @@ class Artist {
       shuffleId: json['shuffleId'],
       isProfile: json['isProfile'] ?? false,
       isSubscribed: json['isSubscribed'] ?? false,
+      providerId: json['providerId']?.toString(),
+      profileId: json['profileId']?.toString(),
+      sourceId: json['sourceId']?.toString(),
       monthlyListeners: json['monthlyListeners'],
       subscribers: (json['subscribers']) == null
           ? ""
           : (json['subscribers']).runtimeType.toString() == "String"
               ? json['subscribers']
               : json['subscribers']['text'],
-      thumbnailUrl: Thumbnail(json["thumbnails"] != null && json["thumbnails"].isNotEmpty ? json["thumbnails"][0]["url"] : "").high);
+      thumbnailUrl: Thumbnail(
+              json["thumbnails"] != null && json["thumbnails"].isNotEmpty
+                  ? json["thumbnails"][0]["url"]
+                  : "")
+          .high);
 
   Map<String, dynamic> toJson() => {
         'artist': name,
         'browseId': browseId,
+        'providerId': providerId,
+        'profileId': profileId,
+        'sourceId': sourceId,
         'radioId': radioId,
         'shuffleId': shuffleId,
         'isProfile': isProfile,

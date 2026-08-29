@@ -1,4 +1,4 @@
-import 'package:material_ui/material_ui.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '/ui/player/components/lyrics_widget.dart';
@@ -27,11 +27,9 @@ class AlbumArtNLyrics extends StatelessWidget {
                       borderRadius:
                           BorderRadius.vertical(top: Radius.circular(10.0)),
                     ),
-
                     isScrollControlled: true,
                     context:
                         playerController.homeScaffoldkey.currentState!.context,
-
                     builder: (context) => SongInfoBottomSheet(
                       playerController.currentSong.value!,
                       calledFromPlayer: true,
@@ -131,7 +129,6 @@ class AlbumArtNLyrics extends StatelessWidget {
                               isScrollControlled: true,
                               context: playerController
                                   .homeScaffoldkey.currentState!.context,
-
                               builder: (context) =>
                                   const SleepTimerBottomSheet(),
                             );

@@ -1,4 +1,4 @@
-import 'package:material_ui/material_ui.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:harmonymusic/ui/screens/Home/home_screen_controller.dart';
@@ -35,7 +35,7 @@ class _M3ExpressiveNavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Build icon for each tab — show filled when selected, outlined otherwise
+    // Build icon for each tab â€” show filled when selected, outlined otherwise
     Widget buildIcon(IconData filled, IconData outlined, int index) {
       final isSelected = currentIndex == index;
       return AnimatedSwitcher(
@@ -101,24 +101,24 @@ class _M3ExpressiveNavBar extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.fromLTRB(8, 6, 8, 6),
           child: GNav(
-            // ── Colors ──────────────────────────────────────────────────────
+            // â”€â”€ Colors â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
             color: colorScheme.onSurfaceVariant,
             activeColor: colorScheme.onSecondaryContainer,
             tabBackgroundColor: colorScheme.secondaryContainer,
             hoverColor: colorScheme.secondaryContainer.withValues(alpha: 0.5),
             rippleColor: colorScheme.secondaryContainer.withValues(alpha: 0.3),
 
-            // ── Layout ──────────────────────────────────────────────────────
+            // â”€â”€ Layout â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
             gap: 4,
             iconSize: 24,
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
             mainAxisAlignment: MainAxisAlignment.spaceAround,
 
-            // ── Animation ───────────────────────────────────────────────────
+            // â”€â”€ Animation â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
             duration: const Duration(milliseconds: 300),
             curve: Curves.easeInOutCubicEmphasized,
 
-            // ── Typography ──────────────────────────────────────────────────
+            // â”€â”€ Typography â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
             textStyle: TextStyle(
               fontSize: 13,
               fontWeight: FontWeight.w600,
@@ -126,7 +126,7 @@ class _M3ExpressiveNavBar extends StatelessWidget {
               color: colorScheme.onSecondaryContainer,
             ),
 
-            // ── Tabs ────────────────────────────────────────────────────────
+            // â”€â”€ Tabs â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
             tabs: tabs,
             selectedIndex: currentIndex,
             onTabChange: onTap,

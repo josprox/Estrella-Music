@@ -11,13 +11,12 @@ import 'package:harmonymusic/ui/widgets/liquid_bottom_navigation_bar.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:dynamic_color/dynamic_color.dart';
 
-import 'package:material_ui/material_ui.dart' as mui;
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'generated/l10n.dart';
 import 'package:harmonymusic/services/backup/app_backup_service.dart';
 import 'package:harmonymusic/services/auth/auth_service.dart';
 import 'package:harmonymusic/services/auth/catalog_recovery_service.dart';
 import 'package:harmonymusic/services/backup/cloud_backup_service.dart';
-import 'package:harmonymusic/services/sync/cloud_migration_service.dart';
 import 'package:harmonymusic/services/sync/legacy_music_migration_service.dart';
 import 'package:harmonymusic/services/system/notification_service.dart';
 import 'package:harmonymusic/services/system/fcm_notification_service.dart';
@@ -30,10 +29,16 @@ import 'package:harmonymusic/services/auth/user_data_bootstrap_service.dart';
 import '/ui/screens/Search/search_screen_controller.dart';
 import 'package:harmonymusic/services/download/downloader.dart';
 import 'package:harmonymusic/services/background/background_execution_service.dart';
-import 'package:harmonymusic/services/social/piped_service.dart';
 import 'package:harmonymusic/utils/desktop/app_link_controller.dart';
 import 'package:harmonymusic/services/music/audio_handler.dart';
-import 'package:harmonymusic/services/music/music_service.dart';
+import 'package:harmonymusic/music_provider/music_catalog_service.dart';
+import 'package:harmonymusic/music_provider/music_provider_manager.dart';
+import 'package:harmonymusic/music_provider/providers/emusic_provider.dart';
+import 'package:harmonymusic/music_provider/providers/local_music_provider.dart';
+import 'package:harmonymusic/profiles/app_profile_lifecycle_coordinator.dart';
+import 'package:harmonymusic/profiles/profile_manager.dart';
+import 'package:harmonymusic/profiles/profile_persistence.dart';
+import 'package:harmonymusic/profiles/profile_storage_namespace.dart';
 import 'package:harmonymusic/ui/player/player_controller.dart';
 import 'ui/screens/Settings/settings_screen_controller.dart';
 import 'ui/auth/auth_gate.dart';
@@ -53,6 +58,44 @@ Future<void> main() async {
     await dotenv.load(fileName: '.env');
   } catch (_) {}
   await initLocalStorage();
+  final authService = Get.put(AuthService(), permanent: true);
+  // Provider restoration happens only after the global Joss Red session has
+  // been restored, otherwise a saved eMusic profile would fail on every boot.
+  await authService.restoreSession();
+  final providerManager = MusicProviderManager(
+    localProviderId: LocalMusicProvider.providerId,
+  );
+  providerManager.register(const ProviderRegistration(
+    id: LocalMusicProvider.providerId,
+    displayName: 'Local',
+    factory: LocalMusicProvider.new,
+    trust: ProviderTrust.local,
+  ));
+  providerManager.register(ProviderRegistration(
+    id: EMusicProvider.providerId,
+    displayName: 'eMusic',
+    factory: () => EMusicProvider(
+      baseUrl: () => dotenv.env['EMUSICWEB'] ?? authService.baseUrl ?? '',
+      tokenLoader: authService.getAccessToken,
+      playbackContextLoader: _loadEMusicPlaybackContext,
+    ),
+    trust: ProviderTrust.jossRedAuthorized,
+  ));
+  Get.put(providerManager, permanent: true);
+  final profileManager = ProfileManager(
+    providerManager: providerManager,
+    persistence: SqliteProfilePersistence(),
+    lifecycle: AppProfileLifecycleCoordinator(),
+  );
+  Get.put(profileManager, permanent: true);
+  await profileManager.initialize();
+  Get.put(
+    MusicCatalogService(
+      providerManager: providerManager,
+      profileManager: profileManager,
+    ),
+    permanent: true,
+  );
   final musicDatabase = MusicSqliteService();
   await musicDatabase.initialize();
   final appPrefs = await SqliteStore.openBox('AppPrefs');
@@ -87,6 +130,27 @@ Future<void> main() async {
   unawaited(NotificationService.initInboxSync(
     mobile: GetPlatform.isAndroid || GetPlatform.isIOS,
   ));
+}
+
+Future<EMusicPlaybackContext> _loadEMusicPlaybackContext() async {
+  final prefs = SqliteStore.box('AppPrefs');
+  final visitorEntry = prefs.get('visitorId');
+  final visitorData = visitorEntry is Map
+      ? visitorEntry['id']?.toString()
+      : visitorEntry?.toString();
+  String? firstString(List<String> keys) {
+    for (final key in keys) {
+      final value = prefs.get(key)?.toString().trim();
+      if (value != null && value.isNotEmpty && value != 'null') return value;
+    }
+    return null;
+  }
+
+  return EMusicPlaybackContext(
+    clientIp: firstString(const ['clientIp', 'clientIP', 'streamClientIp']),
+    visitorData: visitorData,
+    poToken: firstString(const ['poToken', 'po_token', 'streamPoToken']),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -127,7 +191,9 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         localizationsDelegates: const [
           S.delegate,
-          ...mui.GlobalMaterialLocalizations.delegates,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
         ],
         supportedLocales: S.delegate.supportedLocales,
         locale: (SqliteStore.box("AppPrefs").get('currentAppLanguageCode') ==
@@ -192,7 +258,6 @@ class MyApp extends StatelessWidget {
 }
 
 void startApplicationServices(MusicSqliteService musicDatabase) {
-  Get.put(AuthService(), permanent: true);
   Get.put(musicDatabase, permanent: true);
   Get.put(PendingSyncQueueService(), permanent: true);
   Get.put(SyncService(), permanent: true);
@@ -201,11 +266,8 @@ void startApplicationServices(MusicSqliteService musicDatabase) {
   Get.put(AppBackupService(), permanent: true);
   Get.put(CatalogRecoveryService(), permanent: true);
   Get.put(CloudBackupService(), permanent: true);
-  Get.put(CloudMigrationService(), permanent: true);
   Get.put(LegacyMusicMigrationService(), permanent: true);
   Get.put(UserDataBootstrapService(), permanent: true);
-  Get.lazyPut(() => PipedServices(), fenix: true);
-  Get.lazyPut(() => MusicServices(), fenix: true);
   Get.lazyPut(() => ThemeController(), fenix: true);
   Get.lazyPut(() => PlayerController(), fenix: true);
   Get.lazyPut(() => HomeScreenController(), fenix: true);
@@ -231,57 +293,43 @@ Future<void> initLocalStorage() async {
         (await getApplicationDocumentsDirectory()).path;
   }
   await SqliteStore.initFlutter(applicationDataDirectoryPath);
-  await SqliteStore.openBox("SongsCache");
-  await SqliteStore.openBox("SongDownloads");
-  await SqliteStore.openBox('SongsUrlCache');
-  await SqliteStore.openBox("AppPrefs");
-
-  // Pre-create the logical stores most controllers use during startup.
-  await SqliteStore.openBox("LIBFAV");
-  await SqliteStore.openBox("LIBRP");
-  await SqliteStore.openBox("LibraryArtists");
-  await SqliteStore.openBox("LibraryAlbums");
-  await SqliteStore.openBox("LibraryPlaylists");
-  await SqliteStore.openBox("homeScreenData");
-  await SqliteStore.openBox(PendingSyncQueueService.boxName);
+  SqliteStore.boxNameResolver = ProfileStorageNamespace.resolve;
+  SqliteStore.boxBackendResolver = ProfileStorageNamespace.backendFor;
+  for (final globalBox in const [
+    'AppPrefs',
+    'MusicProfiles',
+    'MusicProfileState',
+  ]) {
+    await SqliteStore.copySqliteBoxToHive(
+      sourcePhysicalName: globalBox,
+      targetPhysicalName: globalBox,
+    );
+    await SqliteStore.openBox(globalBox);
+  }
 }
 
 void _setAppInitPrefs() {
   final appPrefs = SqliteStore.box("AppPrefs");
-  if (appPrefs.isEmpty) {
-    appPrefs.putAll({
-      'themeModeType': 0,
-      "cacheSongs": false,
-      "skipSilenceEnabled": false,
-      'streamingQuality': 1,
-      'themePrimaryColor': 4278199603,
-      'discoverContentType': "QP",
-      'startupTabIndex': 0,
-      'newVersionVisibility': updateCheckFlag,
-      "cacheHomeScreenData": true,
-      "restrorePlaybackSession": true,
-      "autoLanguage": true,
-      "app_first_run_timestamp": DateTime.now().toIso8601String(),
-      "emusicDataMode": "local",
-      "hasPendingSync": false,
-      "cloudMigrationStatus": "not_started",
-      "linkedDeviceId": "",
-      "emusicModeChoiceCompleted": false,
-      "emusicCloudRequested": false,
-    });
-  } else {
-    appPrefs.put("emusicDataMode",
-        appPrefs.get("emusicDataMode", defaultValue: "local"));
-    appPrefs.put(
-        "hasPendingSync", appPrefs.get("hasPendingSync", defaultValue: false));
-    appPrefs.put("cloudMigrationStatus",
-        appPrefs.get("cloudMigrationStatus", defaultValue: "not_started"));
-    appPrefs.put(
-        "linkedDeviceId", appPrefs.get("linkedDeviceId", defaultValue: ""));
-    appPrefs.put("emusicModeChoiceCompleted",
-        appPrefs.get("emusicModeChoiceCompleted", defaultValue: false));
-    appPrefs.put("emusicCloudRequested",
-        appPrefs.get("emusicCloudRequested", defaultValue: false));
+  final defaults = <String, dynamic>{
+    'themeModeType': 0,
+    'cacheSongs': false,
+    'skipSilenceEnabled': false,
+    'streamingQuality': 1,
+    'themePrimaryColor': 4278199603,
+    'discoverContentType': 'QP',
+    'startupTabIndex': 0,
+    'newVersionVisibility': updateCheckFlag,
+    'cacheHomeScreenData': true,
+    'restrorePlaybackSession': true,
+    'autoLanguage': true,
+    'app_first_run_timestamp': DateTime.now().toIso8601String(),
+    'hasPendingSync': false,
+    'linkedDeviceId': '',
+  };
+  for (final entry in defaults.entries) {
+    if (!appPrefs.containsKey(entry.key)) {
+      appPrefs.put(entry.key, entry.value);
+    }
   }
 }
 

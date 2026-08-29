@@ -28,7 +28,11 @@ class Album {
       this.audioPlaylistId,
       this.isPodcast = false,
       this.episodeCount,
-      required this.thumbnailUrl});
+      this.providerId,
+      this.profileId,
+      String? sourceId,
+      required this.thumbnailUrl})
+      : sourceId = sourceId ?? browseId;
   final String browseId;
   final String? audioPlaylistId;
   final String title;
@@ -38,6 +42,9 @@ class Album {
   final bool isPodcast;
   final String? episodeCount;
   final String thumbnailUrl;
+  final String? providerId;
+  final String? profileId;
+  final String sourceId;
 
   factory Album.fromJson(Map<dynamic, dynamic> json) => Album(
       title: json["title"],
@@ -48,19 +55,31 @@ class Album {
               ? [
                   {'name': json["author"], 'id': json["authorId"]}
                 ]
-          : [
-              {'name': ''}
-            ],
+              : [
+                  {'name': ''}
+                ],
       year: json['year']?.toString(),
       audioPlaylistId: json['audioPlaylistId'],
-      description: json['description'] ?? json["type"] ?? (json['isPodcast'] == true ? "Podcast" : "Album"),
+      description: json['description'] ??
+          json["type"] ??
+          (json['isPodcast'] == true ? "Podcast" : "Album"),
       isPodcast: json['isPodcast'] ?? false,
       episodeCount: json['episodeCount'],
-      thumbnailUrl: Thumbnail(json["thumbnails"] != null && json["thumbnails"].isNotEmpty ? json["thumbnails"][0]["url"] : "").medium);
+      providerId: json['providerId']?.toString(),
+      profileId: json['profileId']?.toString(),
+      sourceId: json['sourceId']?.toString(),
+      thumbnailUrl: Thumbnail(
+              json["thumbnails"] != null && json["thumbnails"].isNotEmpty
+                  ? json["thumbnails"][0]["url"]
+                  : "")
+          .medium);
 
   Map<String, dynamic> toJson() => {
         "title": title,
         "browseId": browseId,
+        'providerId': providerId,
+        'profileId': profileId,
+        'sourceId': sourceId,
         'artists': artists,
         'year': year,
         'audioPlaylistId': audioPlaylistId,

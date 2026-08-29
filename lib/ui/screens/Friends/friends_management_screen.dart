@@ -1,4 +1,4 @@
-import 'package:material_ui/material_ui.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/services/sync/sync_service.dart';
@@ -146,7 +146,7 @@ class _FriendsManagementScreenState extends State<FriendsManagementScreen>
         title: Text("Eliminar amigo",
             style: TextStyle(color: Theme.of(context).colorScheme.onSurface)),
         content: Text(
-            "¿Estás seguro de que quieres eliminar a este usuario de tus amigos?",
+            "Â¿EstÃ¡s seguro de que quieres eliminar a este usuario de tus amigos?",
             style: TextStyle(
                 color: Theme.of(context).colorScheme.onSurfaceVariant)),
         actions: [
@@ -186,7 +186,7 @@ class _FriendsManagementScreenState extends State<FriendsManagementScreen>
         backgroundColor: Theme.of(context).colorScheme.surface,
         title: Text("Bloquear usuario",
             style: TextStyle(color: Theme.of(context).colorScheme.onSurface)),
-        content: Text("¿Estás seguro de que deseas bloquear a este usuario?",
+        content: Text("Â¿EstÃ¡s seguro de que deseas bloquear a este usuario?",
             style: TextStyle(
                 color: Theme.of(context).colorScheme.onSurfaceVariant)),
         actions: [
@@ -347,9 +347,9 @@ class _FriendsManagementScreenState extends State<FriendsManagementScreen>
     if (_friends.isEmpty) {
       return _buildEmptyState(
         icon: Icons.people_outline_rounded,
-        title: "No tienes amigos agregados aún",
+        title: "No tienes amigos agregados aÃºn",
         subtitle:
-            "Ve a la pestaña 'Buscar' para encontrar amigos y enviar solicitudes.",
+            "Ve a la pestaÃ±a 'Buscar' para encontrar amigos y enviar solicitudes.",
       );
     }
 
@@ -428,7 +428,7 @@ class _FriendsManagementScreenState extends State<FriendsManagementScreen>
         icon: Icons.mail_outline_rounded,
         title: "No tienes solicitudes de amistad",
         subtitle:
-            "Aquí aparecerán las solicitudes entrantes que te envíen otros usuarios.",
+            "AquÃ­ aparecerÃ¡n las solicitudes entrantes que te envÃ­en otros usuarios.",
       );
     }
 
@@ -558,7 +558,7 @@ class _FriendsManagementScreenState extends State<FriendsManagementScreen>
               child: _buildEmptyState(
                 icon: Icons.search_off_rounded,
                 title: "No se encontraron usuarios",
-                subtitle: "Prueba con otro username o correo electrónico.",
+                subtitle: "Prueba con otro username o correo electrÃ³nico.",
               ),
             )
           else if (_searchResults.isEmpty)
@@ -687,7 +687,7 @@ class _FriendsManagementScreenState extends State<FriendsManagementScreen>
         icon: Icons.block_rounded,
         title: "No tienes usuarios bloqueados",
         subtitle:
-            "Los usuarios que bloquees aparecerán listados en esta pestaña.",
+            "Los usuarios que bloquees aparecerÃ¡n listados en esta pestaÃ±a.",
       );
     }
 

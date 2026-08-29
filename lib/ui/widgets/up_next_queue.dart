@@ -1,6 +1,6 @@
-import 'dart:async';
+﻿import 'dart:async';
 import 'package:audio_service/audio_service.dart';
-import 'package:material_ui/material_ui.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/generated/l10n.dart';
 import 'package:harmonymusic/models/media_item_builder.dart';
@@ -349,7 +349,7 @@ class _UpNextQueueModalState extends State<UpNextQueueModal> {
                               ),
                               // Download Icon
                               SongDownloadButton(song_: song),
-                              // Options Icon (three dots ⋮ matching Image 1)
+                              // Options Icon (three dots â‹® matching Image 1)
                               IconButton(
                                 onPressed: () {
                                   showModalBottomSheet(

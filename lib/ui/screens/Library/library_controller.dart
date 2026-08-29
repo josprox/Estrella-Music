@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 import 'package:audio_service/audio_service.dart';
-import 'package:material_ui/material_ui.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/ui/widgets/snackbar.dart';
 import 'package:harmonymusic/services/storage/sqlite_store.dart';
@@ -13,8 +13,7 @@ import 'package:harmonymusic/utils/helpers/house_keeping.dart';
 import 'package:harmonymusic/ui/widgets/add_to_playlist.dart';
 import '/ui/widgets/sort_widget.dart';
 import 'package:harmonymusic/ui/screens/Settings/settings_screen_controller.dart';
-import 'package:harmonymusic/services/social/piped_service.dart';
-import 'package:harmonymusic/services/music/music_service.dart';
+import 'package:harmonymusic/music_provider/music_catalog_service.dart';
 import 'package:harmonymusic/services/sync/sync_service.dart';
 import 'package:harmonymusic/utils/helpers/helper.dart';
 import '/models/album.dart';
@@ -151,6 +150,25 @@ class LibrarySongsController extends GetxController {
         }
       }
     }
+
+    if (Get.isRegistered<MusicCatalogService>()) {
+      try {
+        final catalog = Get.find<MusicCatalogService>();
+        if (collection == LibrarySongCollection.downloads ||
+            catalog.activeProviderId == 'local.device') {
+          final providerTracks = await catalog.tracks();
+          for (final track in providerTracks) {
+            final item = catalog.mediaItemFromTrack(track);
+            if (item.id.isNotEmpty) {
+              songsById[item.id] = item;
+            }
+          }
+        }
+      } catch (error) {
+        debugPrint('Unable to fetch provider tracks for library: $error');
+      }
+    }
+
     if (revision == _collectionLoadRevision &&
         collection == selectedCollection.value) {
       librarySongsList.value = songsById.values.toList();
@@ -349,11 +367,6 @@ class LibraryPlaylistsController extends GetxController
 
     libraryPlaylists.value = loaded;
 
-    final appPrefsBox = SqliteStore.box("AppPrefs");
-    if (appPrefsBox.containsKey("piped")) {
-      if (appPrefsBox.get("piped")['isLoggedIn']) await syncPipedPlaylist();
-    }
-
     isContentFetched.value = true;
   }
 
@@ -363,75 +376,13 @@ class LibraryPlaylistsController extends GetxController
     refreshLib();
   }
 
-  void removePipedPlaylists() {
-    for (Playlist plst in libraryPlaylists.toList()) {
-      if (plst.isPipedPlaylist) {
-        libraryPlaylists.remove(plst);
-      }
-    }
-  }
-
-  Future<void> syncPipedPlaylist() async {
-    final res = await Get.find<PipedServices>().getAllPlaylists();
-    final box = await SqliteStore.openBox('blacklistedPlaylist');
-    final blacklistedPlaylist = box.values.whereType<String>().toList();
-    final libPipedPlaylistsId = libraryPlaylists
-            .toList()
-            .map((e) {
-              if (e.isPipedPlaylist) {
-                return e.playlistId;
-              }
-            })
-            .whereType<String>()
-            .toList() +
-        blacklistedPlaylist;
-
-    if (res.code == 1) {
-      final cloudpipedPlaylistsId = res.response
-          .map((e) {
-            return e['id'];
-          })
-          .whereType<String>()
-          .toList();
-      //add new playlist from cloud
-      for (dynamic playlist in res.response) {
-        if (!libPipedPlaylistsId.contains(playlist['id'])) {
-          final plst = Playlist(
-            title: playlist['name'],
-            playlistId: playlist['id'],
-            description: S.current.pipedPlaylistDescription,
-            thumbnailUrl: playlist['thumbnail'],
-            isPipedPlaylist: true,
-          );
-          libraryPlaylists.add(plst);
-        }
-      }
-
-      //remove playist if removed from cloud
-      for (Playlist playlist in libraryPlaylists.toList()) {
-        if (!cloudpipedPlaylistsId.contains(playlist.playlistId) &&
-            playlist.isPipedPlaylist) {
-          libraryPlaylists.removeWhere(
-              (element) => element.playlistId == playlist.playlistId);
-        }
-      }
-    }
-  }
-
   Future<bool> renamePlaylist(Playlist playlist) async {
     String title = textInputController.text;
     if (title.trim().isNotEmpty) {
-      if (playlist.isPipedPlaylist) {
-        final res = await Get.find<PipedServices>()
-            .renamePlaylist(playlist.playlistId, title);
-        if (res.code == 0) return false;
-        playlist.newTitle = title;
-      } else {
-        final box = await SqliteStore.openBox("LibraryPlaylists");
-        title = "${title[0].toUpperCase()}${title.substring(1).toLowerCase()}";
-        playlist.newTitle = title;
-        box.put(playlist.playlistId, playlist.toJson());
-      }
+      final box = await SqliteStore.openBox("LibraryPlaylists");
+      title = "${title[0].toUpperCase()}${title.substring(1).toLowerCase()}";
+      playlist.newTitle = title;
+      box.put(playlist.playlistId, playlist.toJson());
       refreshLib();
       return true;
     }
@@ -450,43 +401,22 @@ class LibraryPlaylistsController extends GetxController
   }) async {
     String title = textInputController.text;
     if (title.trim().isNotEmpty) {
-      dynamic newplst;
-
-      if (playlistCreationMode.value == "piped") {
-        creationInProgress.value = true;
-        final res = await Get.find<PipedServices>().createPlaylist(title);
-        if (res.code == 1) {
-          newplst = Playlist(
-              title: title,
-              playlistId: "${res.response['playlistId']}",
-              thumbnailUrl: songItems != null
-                  ? songItems[0].artUri.toString()
-                  : Playlist.thumbPlaceholderUrl,
-              description: S.current.pipedPlaylistDescription,
-              isCloudPlaylist: true,
-              isPipedPlaylist: true);
-        } else {
-          creationInProgress.value = false;
-          return false;
-        }
-      } else {
-        final isCloudMode = Get.find<SyncService>().isCloudMode;
-        newplst = Playlist(
-            title: title,
-            playlistId: "LIB${DateTime.now().millisecondsSinceEpoch}",
-            thumbnailUrl: songItems != null
-                ? songItems[0].artUri.toString()
-                : Playlist.thumbPlaceholderUrl,
-            description: isCollaborative
-                ? S.current.collaborativePlaylistDescription
-                : S.current.libraryPlaylistDescription,
-            isCloudPlaylist: isCloudMode,
-            isCollaborative: isCollaborative,
-            collaborators: collaborators);
-        final box = await SqliteStore.openBox("LibraryPlaylists");
-        box.put(newplst.playlistId, newplst.toJson());
-        await box.close();
-      }
+      final isCloudMode = Get.find<SyncService>().isCloudMode;
+      final newplst = Playlist(
+          title: title,
+          playlistId: "LIB${DateTime.now().millisecondsSinceEpoch}",
+          thumbnailUrl: songItems != null
+              ? songItems[0].artUri.toString()
+              : Playlist.thumbPlaceholderUrl,
+          description: isCollaborative
+              ? S.current.collaborativePlaylistDescription
+              : S.current.libraryPlaylistDescription,
+          isCloudPlaylist: isCloudMode,
+          isCollaborative: isCollaborative,
+          collaborators: collaborators);
+      final box = await SqliteStore.openBox("LibraryPlaylists");
+      box.put(newplst.playlistId, newplst.toJson());
+      await box.close();
 
       libraryPlaylists.add(newplst);
 
@@ -496,11 +426,6 @@ class LibraryPlaylistsController extends GetxController
         for (MediaItem item in songItems!) {
           plastbox.add(MediaItemBuilder.toJson(item));
         }
-      } else if ((createPlaylistNaddSong &&
-          playlistCreationMode.value == "piped")) {
-        final songIds = songItems!.map((e) => e.id).toList();
-        await Get.find<PipedServices>()
-            .addToPlaylist(newplst.playlistId, songIds);
       }
       if (playlistCreationMode.value == "local") {
         if (isCollaborative) {
@@ -514,18 +439,6 @@ class LibraryPlaylistsController extends GetxController
       return true;
     }
     return false;
-  }
-
-  Future<void> blacklistPipedPlaylist(Playlist playlist) async {
-    final box = await SqliteStore.openBox('blacklistedPlaylist');
-    box.add(playlist.playlistId);
-    libraryPlaylists.remove(playlist);
-  }
-
-  Future<void> resetBlacklistedPlaylist() async {
-    final box = await SqliteStore.openBox('blacklistedPlaylist');
-    box.clear();
-    syncPipedPlaylist();
   }
 
   void onSort(SortType sortType, bool isAscending) {
@@ -730,7 +643,7 @@ class LibraryPlaylistsController extends GetxController
 }
 
 class LibraryAlbumsController extends GetxController {
-  final MusicServices _musicServices = Get.find<MusicServices>();
+  final MusicCatalogService _musicServices = Get.find<MusicCatalogService>();
   final libraryAlbums = <Album>[].obs;
   final selectedCollection = LibraryAlbumCollection.tastes.obs;
   final isContentFetched = false.obs;
@@ -790,6 +703,28 @@ class LibraryAlbumsController extends GetxController {
       } catch (error, stack) {
         debugPrint('Error parsing saved album: $error\n$stack');
       }
+    }
+    if (Get.isRegistered<MusicCatalogService>()) {
+      try {
+        final catalog = Get.find<MusicCatalogService>();
+        final providerAlbums = await catalog.albums();
+        final existingIds = loaded.map((e) => e.browseId).toSet();
+        for (final palbum in providerAlbums) {
+          if (!existingIds.contains(palbum.identity.sourceId)) {
+            loaded.add(Album(
+              title: palbum.title,
+              browseId: palbum.identity.sourceId,
+              providerId: palbum.identity.providerId,
+              profileId: palbum.identity.profileId,
+              sourceId: palbum.identity.sourceId,
+              artists: [
+                {'name': palbum.artist}
+              ],
+              thumbnailUrl: palbum.artworkUri?.toString() ?? '',
+            ));
+          }
+        }
+      } catch (_) {}
     }
     _savedAlbums
       ..clear()
@@ -985,7 +920,7 @@ class LibraryAlbumsController extends GetxController {
 
 class LibraryArtistsController extends GetxController {
   static final Map<String, Future<Artist?>> _profileRequests = {};
-  final MusicServices _musicServices = Get.find<MusicServices>();
+  final MusicCatalogService _musicServices = Get.find<MusicCatalogService>();
   final libraryArtists = <Artist>[].obs;
   final selectedCollection = LibraryArtistCollection.tastes.obs;
   final isContentFetched = false.obs;
@@ -1049,6 +984,25 @@ class LibraryArtistsController extends GetxController {
       } catch (error, stack) {
         debugPrint('Error parsing followed artist: $error\n$stack');
       }
+    }
+    if (Get.isRegistered<MusicCatalogService>()) {
+      try {
+        final catalog = Get.find<MusicCatalogService>();
+        final providerArtists = await catalog.artists();
+        final existingIds = loaded.map((e) => e.browseId).toSet();
+        for (final partist in providerArtists) {
+          if (!existingIds.contains(partist.identity.sourceId)) {
+            loaded.add(Artist(
+              name: partist.name,
+              browseId: partist.identity.sourceId,
+              providerId: partist.identity.providerId,
+              profileId: partist.identity.profileId,
+              sourceId: partist.identity.sourceId,
+              thumbnailUrl: partist.artworkUri?.toString() ?? '',
+            ));
+          }
+        }
+      } catch (_) {}
     }
     _followedArtists
       ..clear()

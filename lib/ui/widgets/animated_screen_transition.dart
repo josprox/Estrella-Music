@@ -1,5 +1,5 @@
 import 'package:animations/animations.dart';
-import 'package:material_ui/material_ui.dart';
+import 'package:flutter/material.dart';
 
 class AnimatedScreenTransition extends StatelessWidget {
   const AnimatedScreenTransition(
@@ -41,11 +41,13 @@ class AnimatedScreenTransition extends StatelessWidget {
         return DualTransitionBuilder(
           animation: primaryAnimation,
           forwardBuilder: (context, animation, child) => SlideTransition(
-            position: forwardTween.animate(CurvedAnimation(parent: primaryAnimation, curve: Curves.easeOutCubic)),
+            position: forwardTween.animate(CurvedAnimation(
+                parent: primaryAnimation, curve: Curves.easeOutCubic)),
             child: child,
           ),
           reverseBuilder: (context, animation, child) => SlideTransition(
-            position: reverseTween.animate(CurvedAnimation(parent: secondaryAnimation, curve: Curves.easeOutCubic)),
+            position: reverseTween.animate(CurvedAnimation(
+                parent: secondaryAnimation, curve: Curves.easeOutCubic)),
             child: child,
           ),
           child: child,

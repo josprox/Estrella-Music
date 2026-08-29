@@ -1,5 +1,5 @@
 import 'package:audio_service/audio_service.dart';
-import 'package:material_ui/material_ui.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'package:harmonymusic/ui/screens/Search/search_result_screen_controller.dart';
@@ -13,8 +13,6 @@ import 'package:harmonymusic/generated/l10n.dart';
 import 'package:harmonymusic/ui/player/player_controller.dart';
 
 import '/ui/navigator.dart';
-
-
 
 class ResultWidget extends StatelessWidget {
   const ResultWidget({super.key, this.isv2Used = false});
@@ -32,31 +30,33 @@ class ResultWidget extends StatelessWidget {
             controller: searchResScrController.scrollController,
             physics: const BouncingScrollPhysics(),
             slivers: [
-               if (!isv2Used)
-                 SliverToBoxAdapter(
-                   child: Padding(
-                     padding: const EdgeInsets.only(left: 16, bottom: 8, top: 16),
-                     child: Text(
-                        S.current.searchRes,
-                        style: Theme.of(context).textTheme.titleLarge,
-                     ),
-                   ),
-                 ),
-               if (!isv2Used)
-                 SliverToBoxAdapter(
-                   child: Padding(
-                     padding: const EdgeInsets.only(left: 16, bottom: 16),
-                     child: Text(
-                        "${S.current.for1} \"${searchResScrController.queryString.value}\"",
-                        style: Theme.of(context).textTheme.titleMedium,
-                     ),
-                   ),
-                 ),
-               if (searchResScrController.isResultContentFetced.value)
-                  ..._buildBloomeeSlivers(context, searchResScrController)
-               else
-                  const SliverFillRemaining(child: Center(child: CircularProgressIndicator())),
-               const SliverPadding(padding: EdgeInsets.only(bottom: 200)),
+              if (!isv2Used)
+                SliverToBoxAdapter(
+                  child: Padding(
+                    padding:
+                        const EdgeInsets.only(left: 16, bottom: 8, top: 16),
+                    child: Text(
+                      S.current.searchRes,
+                      style: Theme.of(context).textTheme.titleLarge,
+                    ),
+                  ),
+                ),
+              if (!isv2Used)
+                SliverToBoxAdapter(
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 16, bottom: 16),
+                    child: Text(
+                      "${S.current.for1} \"${searchResScrController.queryString.value}\"",
+                      style: Theme.of(context).textTheme.titleMedium,
+                    ),
+                  ),
+                ),
+              if (searchResScrController.isResultContentFetced.value)
+                ..._buildBloomeeSlivers(context, searchResScrController)
+              else
+                const SliverFillRemaining(
+                    child: Center(child: CircularProgressIndicator())),
+              const SliverPadding(padding: EdgeInsets.only(bottom: 200)),
             ],
           ),
         ),
@@ -64,16 +64,17 @@ class ResultWidget extends StatelessWidget {
     );
   }
 
-  List<Widget> _buildBloomeeSlivers(BuildContext context, SearchResultScreenController controller) {
+  List<Widget> _buildBloomeeSlivers(
+      BuildContext context, SearchResultScreenController controller) {
     List<Widget> slivers = [];
     final playerController = Get.find<PlayerController>();
 
     for (dynamic item in controller.resultContent.entries) {
       final values = item.value is List ? item.value as List : [item.value];
       if (values.isEmpty) continue;
-      
+
       final key = item.key;
-      
+
       // Filter out non-category keys
       if (key == "searchEndpoint" || key == "params") continue;
 
@@ -92,57 +93,64 @@ class ResultWidget extends StatelessWidget {
         ),
       );
 
-      if (key == "Songs" || key == "Videos" || key == "Episodes" || key == "Top Result" || key == "Top result") {
+      if (key == "Songs" ||
+          key == "Videos" ||
+          key == "Episodes" ||
+          key == "Top Result" ||
+          key == "Top result") {
         final mediaItems = values.whereType<MediaItem>().toList();
         if (mediaItems.isNotEmpty) {
-           slivers.add(
-             SliverPadding(
-               padding: const EdgeInsets.only(bottom: 12),
-               sliver: SliverList(
-                 delegate: SliverChildBuilderDelegate(
-                   (context, index) {
-                     return Padding(
-                       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 2),
-                       child: SongListTile(
-                         song: mediaItems[index],
-                         onTap: () {
-                           playerController.pushSongToQueue(mediaItems[index]);
-                         },
-                       ),
-                     );
-                   },
-                   childCount: mediaItems.length,
-                 ),
-               ),
-             ),
-           );
+          slivers.add(
+            SliverPadding(
+              padding: const EdgeInsets.only(bottom: 12),
+              sliver: SliverList(
+                delegate: SliverChildBuilderDelegate(
+                  (context, index) {
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 12, vertical: 2),
+                      child: SongListTile(
+                        song: mediaItems[index],
+                        onTap: () {
+                          playerController.pushSongToQueue(mediaItems[index]);
+                        },
+                      ),
+                    );
+                  },
+                  childCount: mediaItems.length,
+                ),
+              ),
+            ),
+          );
         }
       } else if (key == "Albums" || key == "Podcasts") {
         final albums = values.whereType<Album>().toList();
         if (albums.isNotEmpty) {
-           slivers.add(_buildResponsiveGrid(albums));
+          slivers.add(_buildResponsiveGrid(albums));
         }
-      } else if (key == "Playlists" || key == "Featured playlists" || key == "Community playlists") {
+      } else if (key == "Playlists" ||
+          key == "Featured playlists" ||
+          key == "Community playlists") {
         final playlists = values.whereType<Playlist>().toList();
         if (playlists.isNotEmpty) {
-           slivers.add(_buildResponsiveGrid(playlists));
+          slivers.add(_buildResponsiveGrid(playlists));
         }
       } else if (key.contains("Artist") || key == "Profiles") {
         final artists = values.whereType<Artist>().toList();
         if (artists.isNotEmpty) {
-           slivers.add(
-              SliverPadding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
-                sliver: SliverToBoxAdapter(
-                  child: Wrap(
-                    spacing: 20,
-                    runSpacing: 28,
-                    alignment: WrapAlignment.start,
-                    children: artists.map((a) => _buildArtistGridItem(context, a)).toList(),
-                  ),
-                ),
-              )
-           );
+          slivers.add(SliverPadding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            sliver: SliverToBoxAdapter(
+              child: Wrap(
+                spacing: 20,
+                runSpacing: 28,
+                alignment: WrapAlignment.start,
+                children: artists
+                    .map((a) => _buildArtistGridItem(context, a))
+                    .toList(),
+              ),
+            ),
+          ));
         }
       }
     }
@@ -168,7 +176,8 @@ class ResultWidget extends StatelessWidget {
     return InkWell(
       borderRadius: BorderRadius.circular(12),
       onTap: () {
-         Get.toNamed(ScreenNavigationSetup.artistScreen, id: ScreenNavigationSetup.id, arguments: [false, artist]);
+        Get.toNamed(ScreenNavigationSetup.artistScreen,
+            id: ScreenNavigationSetup.id, arguments: [false, artist]);
       },
       child: SizedBox(
         width: 100,
@@ -186,7 +195,10 @@ class ResultWidget extends StatelessWidget {
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
               textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.titleSmall?.copyWith(fontWeight: FontWeight.w600),
+              style: Theme.of(context)
+                  .textTheme
+                  .titleSmall
+                  ?.copyWith(fontWeight: FontWeight.w600),
             ),
             if (artist.subscribers?.isNotEmpty == true)
               Text(
@@ -194,7 +206,11 @@ class ResultWidget extends StatelessWidget {
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.6)),
+                style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                    color: Theme.of(context)
+                        .colorScheme
+                        .onSurface
+                        .withValues(alpha: 0.6)),
               ),
           ],
         ),

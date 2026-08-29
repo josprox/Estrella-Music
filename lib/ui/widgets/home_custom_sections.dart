@@ -1,4 +1,4 @@
-import 'package:material_ui/material_ui.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:audio_service/audio_service.dart';
 import 'package:harmonymusic/generated/l10n.dart';
@@ -71,7 +71,8 @@ class MostListenedWidget extends StatelessWidget {
                         ),
                         const SizedBox(height: 4),
                         Text(
-                          S.current.reproducedBy.replaceAll('\$timeStr', timeStr),
+                          S.current.reproducedBy
+                              .replaceAll('\$timeStr', timeStr),
                           style: const TextStyle(
                             color: Colors.white70,
                             fontSize: 14,
@@ -84,7 +85,8 @@ class MostListenedWidget extends StatelessWidget {
                     top: 16,
                     right: 16,
                     child: CircleAvatar(
-                      backgroundColor: Theme.of(context).colorScheme.primaryContainer,
+                      backgroundColor:
+                          Theme.of(context).colorScheme.primaryContainer,
                       child: Icon(
                         Icons.play_arrow_rounded,
                         color: Theme.of(context).colorScheme.onPrimaryContainer,

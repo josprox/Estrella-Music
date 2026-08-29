@@ -29,8 +29,8 @@ class ThemeController extends GetxController {
       primaryColor.value = Color(storedColor as int);
     }
 
-    changeThemeModeType(
-        ThemeType.values[SqliteStore.box('AppPrefs').get("themeModeType") ?? 0]);
+    changeThemeModeType(ThemeType
+        .values[SqliteStore.box('AppPrefs').get("themeModeType") ?? 0]);
 
     _listenSystemBrightness();
     super.onInit();
@@ -46,15 +46,17 @@ class ThemeController extends GetxController {
     };
   }
 
-  void changeThemeModeType(dynamic value, {bool sysCall = false, ColorScheme? dynamicColors}) {
+  void changeThemeModeType(dynamic value,
+      {bool sysCall = false, ColorScheme? dynamicColors}) {
     final themeType = value is ThemeType ? value : ThemeType.values[value ?? 0];
-    
+
     // Determine brightness
     Brightness brightness;
     if (themeType == ThemeType.system || themeType == ThemeType.dynamic) {
       brightness = systemBrightness;
     } else {
-      brightness = themeType == ThemeType.light ? Brightness.light : Brightness.dark;
+      brightness =
+          themeType == ThemeType.light ? Brightness.light : Brightness.dark;
     }
 
     // Prioritize song's dominant color palette (primaryColor) over system dynamic colors when a song is active
@@ -74,11 +76,8 @@ class ThemeController extends GetxController {
     _lastPrimaryColor = primaryColor.value;
     _lastDynamicColors = finalDynamicColors;
 
-    themedata.value = _buildThemeData(
-      primaryColor.value, 
-      brightness, 
-      dynamicColors: finalDynamicColors
-    );
+    themedata.value = _buildThemeData(primaryColor.value, brightness,
+        dynamicColors: finalDynamicColors);
     setWindowsTitleBarColor(themedata.value!.scaffoldBackgroundColor);
   }
 
@@ -102,8 +101,9 @@ class ThemeController extends GetxController {
 
     // Adjust seed for visibility if necessary, but keep it mostly true to the art
     primaryColor.value = seed;
-    
-    final type = ThemeType.values[SqliteStore.box('AppPrefs').get("themeModeType") ?? 0];
+
+    final type =
+        ThemeType.values[SqliteStore.box('AppPrefs').get("themeModeType") ?? 0];
     Brightness brightness;
     if (type == ThemeType.light) {
       brightness = Brightness.light;
@@ -117,7 +117,8 @@ class ThemeController extends GetxController {
     themedata.value = _buildThemeData(seed, brightness);
     currentSongId = songId;
 
-    SqliteStore.box('AppPrefs').put("themePrimaryColor", primaryColor.value.toARGB32());
+    SqliteStore.box('AppPrefs')
+        .put("themePrimaryColor", primaryColor.value.toARGB32());
     setWindowsTitleBarColor(themedata.value!.scaffoldBackgroundColor);
   }
 
@@ -125,7 +126,8 @@ class ThemeController extends GetxController {
   // Theme builder — Material 3 enabled for all modes
   // ─────────────────────────────────────────────────────────────────────────
 
-  ThemeData _buildThemeData(Color seedColor, Brightness brightness, {ColorScheme? dynamicColors}) {
+  ThemeData _buildThemeData(Color seedColor, Brightness brightness,
+      {ColorScheme? dynamicColors}) {
     final isDark = brightness == Brightness.dark;
     _applySystemUiOverlay(isDark);
 
@@ -143,7 +145,9 @@ class ThemeController extends GetxController {
     // Material 3 typography (2021 spec)
     final textTheme = Typography.material2021(platform: defaultTargetPlatform)
         .black
-        .apply(displayColor: colorScheme.onSurface, bodyColor: colorScheme.onSurface);
+        .apply(
+            displayColor: colorScheme.onSurface,
+            bodyColor: colorScheme.onSurface);
 
     return ThemeData(
       useMaterial3: true,
@@ -169,7 +173,8 @@ class ThemeController extends GetxController {
           letterSpacing: -0.3,
         ),
         iconTheme: IconThemeData(color: colorScheme.onSurfaceVariant, size: 24),
-        actionsIconTheme: IconThemeData(color: colorScheme.onSurfaceVariant, size: 24),
+        actionsIconTheme:
+            IconThemeData(color: colorScheme.onSurfaceVariant, size: 24),
       ),
 
       // ── Bottom Sheet ──────────────────────────────────────────────────────
@@ -232,8 +237,10 @@ class ThemeController extends GetxController {
         indicatorShape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16),
         ),
-        selectedIconTheme: IconThemeData(color: colorScheme.onSecondaryContainer, size: 24),
-        unselectedIconTheme: IconThemeData(color: colorScheme.onSurfaceVariant, size: 22),
+        selectedIconTheme:
+            IconThemeData(color: colorScheme.onSecondaryContainer, size: 24),
+        unselectedIconTheme:
+            IconThemeData(color: colorScheme.onSurfaceVariant, size: 22),
         selectedLabelTextStyle: TextStyle(
           color: colorScheme.onSurface,
           fontWeight: FontWeight.w700,
@@ -299,7 +306,8 @@ class ThemeController extends GetxController {
         ),
         iconColor: colorScheme.onSurfaceVariant,
         tileColor: Colors.transparent,
-        selectedTileColor: colorScheme.secondaryContainer.withValues(alpha: 0.5),
+        selectedTileColor:
+            colorScheme.secondaryContainer.withValues(alpha: 0.5),
         selectedColor: colorScheme.onSecondaryContainer,
       ),
 
@@ -426,11 +434,13 @@ class ThemeController extends GetxController {
           borderRadius: BorderRadius.circular(16),
           borderSide: BorderSide(color: colorScheme.error, width: 1.5),
         ),
-        hintStyle: TextStyle(color: colorScheme.onSurfaceVariant.withValues(alpha: 0.6)),
+        hintStyle: TextStyle(
+            color: colorScheme.onSurfaceVariant.withValues(alpha: 0.6)),
         labelStyle: TextStyle(color: colorScheme.onSurfaceVariant),
         prefixIconColor: colorScheme.onSurfaceVariant,
         suffixIconColor: colorScheme.onSurfaceVariant,
-        contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+        contentPadding:
+            const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
       ),
 
       textSelectionTheme: TextSelectionThemeData(
@@ -487,7 +497,8 @@ class ThemeController extends GetxController {
       // ── Switch ────────────────────────────────────────────────────────────
       switchTheme: SwitchThemeData(
         thumbColor: WidgetStateProperty.resolveWith((states) {
-          if (states.contains(WidgetState.selected)) return colorScheme.onPrimary;
+          if (states.contains(WidgetState.selected))
+            return colorScheme.onPrimary;
           return colorScheme.outline;
         }),
         trackColor: WidgetStateProperty.resolveWith((states) {
@@ -524,7 +535,8 @@ class ThemeController extends GetxController {
         labelColor: colorScheme.primary,
         unselectedLabelColor: colorScheme.onSurfaceVariant,
         labelStyle: const TextStyle(fontWeight: FontWeight.w700, fontSize: 14),
-        unselectedLabelStyle: const TextStyle(fontWeight: FontWeight.w500, fontSize: 14),
+        unselectedLabelStyle:
+            const TextStyle(fontWeight: FontWeight.w500, fontSize: 14),
         indicatorColor: colorScheme.primary,
         indicatorSize: TabBarIndicatorSize.label,
         dividerColor: colorScheme.outlineVariant.withValues(alpha: 0.5),

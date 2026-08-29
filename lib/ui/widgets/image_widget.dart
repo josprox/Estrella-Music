@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:audio_service/audio_service.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:material_ui/material_ui.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shimmer/shimmer.dart';
 
@@ -40,13 +40,33 @@ class ImageWidget extends StatelessWidget {
                     ? artist!.thumbnailUrl
                     : "";
 
-    /// only valid for offline songs
-    final bool offlineAvailable =
-        song != null && (song?.extras?["url"] ?? "").contains("file");
+    final bool isFileUri = imageUrl.startsWith("file://") ||
+        (song?.artUri != null && song!.artUri!.isScheme("file"));
 
-    final String localThumbnailPath = song != null 
-        ? "${Get.find<SettingsScreenController>().supportDirPath}/thumbnails/${song!.id}.png"
+    final String localFilePath = isFileUri
+        ? (song?.artUri?.toFilePath() ??
+            (imageUrl.startsWith("file://")
+                ? Uri.parse(imageUrl).toFilePath()
+                : ""))
         : "";
+
+    final String supportDir = Get.isRegistered<SettingsScreenController>()
+        ? Get.find<SettingsScreenController>().supportDirPath
+        : '';
+
+    final String localThumbnailPath = song != null
+        ? (supportDir.isNotEmpty
+            ? "$supportDir/thumbnails/${song!.id}.png"
+            : "")
+        : album != null && album!.browseId.isNotEmpty
+            ? (supportDir.isNotEmpty
+                ? "$supportDir/thumbnails/${album!.browseId}.png"
+                : "")
+            : artist != null && artist!.browseId.isNotEmpty
+                ? (supportDir.isNotEmpty
+                    ? "$supportDir/thumbnails/${artist!.browseId}.png"
+                    : "")
+                : "";
 
     return Container(
       height: size,
@@ -56,31 +76,44 @@ class ImageWidget extends StatelessWidget {
         shape: artist != null ? BoxShape.circle : BoxShape.rectangle,
         borderRadius: artist != null ? null : BorderRadius.circular(5),
       ),
-      child: (offlineAvailable && localThumbnailPath.isNotEmpty && File(localThumbnailPath).existsSync())
+      child: (localFilePath.isNotEmpty && File(localFilePath).existsSync())
           ? Image.file(
-              File(localThumbnailPath),
+              File(localFilePath),
               height: size,
               width: size,
               fit: BoxFit.cover,
-              errorBuilder: (context, error, stackTrace) => CachedNetworkImage(
-                height: size,
-                width: size,
-                memCacheHeight: (song != null && !isPlayerArtImage) ? 140 : null,
-                imageUrl: imageUrl,
-                fit: BoxFit.cover,
-                errorWidget: (context, url, error) => _buildErrorWidget(context),
-                progressIndicatorBuilder: (context, url, progress) => _buildLoader(context),
-              ),
+              errorBuilder: (context, error, stackTrace) =>
+                  _buildErrorWidget(context),
             )
-          : CachedNetworkImage(
-              height: size,
-              width: size,
-              memCacheHeight: (song != null && !isPlayerArtImage) ? 140 : null,
-              imageUrl: imageUrl,
-              fit: BoxFit.cover,
-              errorWidget: (context, url, error) => _buildErrorWidget(context),
-              progressIndicatorBuilder: (context, url, progress) => _buildLoader(context),
-            ),
+          : (localThumbnailPath.isNotEmpty &&
+                  File(localThumbnailPath).existsSync())
+              ? Image.file(
+                  File(localThumbnailPath),
+                  height: size,
+                  width: size,
+                  fit: BoxFit.cover,
+                  errorBuilder: (context, error, stackTrace) =>
+                      _buildNetworkOrFallback(context, imageUrl),
+                )
+              : _buildNetworkOrFallback(context, imageUrl),
+    );
+  }
+
+  Widget _buildNetworkOrFallback(BuildContext context, String imageUrl) {
+    if (imageUrl.isEmpty ||
+        imageUrl.startsWith("data:") ||
+        imageUrl.startsWith("file:")) {
+      return _buildErrorWidget(context);
+    }
+    return CachedNetworkImage(
+      height: size,
+      width: size,
+      memCacheHeight: (song != null && !isPlayerArtImage) ? 140 : null,
+      imageUrl: imageUrl,
+      fit: BoxFit.cover,
+      errorWidget: (context, url, error) => _buildErrorWidget(context),
+      progressIndicatorBuilder: (context, url, progress) =>
+          _buildLoader(context),
     );
   }
 

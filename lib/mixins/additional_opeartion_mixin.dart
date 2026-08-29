@@ -1,5 +1,5 @@
-import 'package:audio_service/audio_service.dart' show MediaItem;
-import 'package:material_ui/material_ui.dart';
+﻿import 'package:audio_service/audio_service.dart' show MediaItem;
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/base_class/playlist_album_screen_con_base.dart';
 

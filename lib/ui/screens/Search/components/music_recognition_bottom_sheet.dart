@@ -1,10 +1,10 @@
-import 'dart:ui';
-import 'package:material_ui/material_ui.dart';
+﻿import 'dart:ui';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:audio_service/audio_service.dart';
 import 'package:harmonymusic/services/music/music_recognition_service.dart';
-import 'package:harmonymusic/services/music/music_service.dart';
+import 'package:harmonymusic/music_provider/music_catalog_service.dart';
 import 'package:harmonymusic/ui/player/player_controller.dart';
 import 'package:harmonymusic/ui/widgets/loader.dart';
 import 'package:harmonymusic/ui/navigator.dart';
@@ -14,12 +14,14 @@ class MusicRecognitionBottomSheet extends StatefulWidget {
   const MusicRecognitionBottomSheet({super.key});
 
   @override
-  State<MusicRecognitionBottomSheet> createState() => _MusicRecognitionBottomSheetState();
+  State<MusicRecognitionBottomSheet> createState() =>
+      _MusicRecognitionBottomSheetState();
 }
 
-class _MusicRecognitionBottomSheetState extends State<MusicRecognitionBottomSheet> {
+class _MusicRecognitionBottomSheetState
+    extends State<MusicRecognitionBottomSheet> {
   final MusicRecognitionService _recognitionService = MusicRecognitionService();
-  final MusicServices _musicServices = Get.find<MusicServices>();
+  final MusicCatalogService _musicServices = Get.find<MusicCatalogService>();
   final PlayerController _playerController = Get.find<PlayerController>();
 
   RecognitionState _state = RecognitionState.idle;
@@ -84,7 +86,8 @@ class _MusicRecognitionBottomSheetState extends State<MusicRecognitionBottomShee
     try {
       // 1. Search YouTube for matching track
       final query = "${_result!.title} ${_result!.artist}";
-      final searchRes = await _musicServices.search(query, filter: "songs", limit: 3);
+      final searchRes =
+          await _musicServices.search(query, filter: "songs", limit: 3);
       final List<dynamic>? songs = searchRes['Songs'];
 
       if (songs != null && songs.isNotEmpty) {
@@ -95,7 +98,8 @@ class _MusicRecognitionBottomSheetState extends State<MusicRecognitionBottomShee
           Navigator.pop(context); // Close bottom sheet
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
-              content: Text('${S.current.playingRecognizedTrack} ${matchItem.title} - ${matchItem.artist}'),
+              content: Text(
+                  '${S.current.playingRecognizedTrack} ${matchItem.title} - ${matchItem.artist}'),
               behavior: SnackBarBehavior.floating,
               backgroundColor: Theme.of(context).colorScheme.primary,
             ),
@@ -112,14 +116,16 @@ class _MusicRecognitionBottomSheetState extends State<MusicRecognitionBottomShee
             Navigator.pop(context);
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
-                content: Text('${S.current.playingRecognizedTrack} ${matchItem.title} - ${matchItem.artist}'),
+                content: Text(
+                    '${S.current.playingRecognizedTrack} ${matchItem.title} - ${matchItem.artist}'),
                 behavior: SnackBarBehavior.floating,
                 backgroundColor: Theme.of(context).colorScheme.primary,
               ),
             );
           }
         } else {
-          throw Exception("No se encontró el tema en los servidores de reproducción.");
+          throw Exception(
+              "No se encontrÃ³ el tema en los servidores de reproducciÃ³n.");
         }
       }
     } catch (e) {
@@ -149,7 +155,8 @@ class _MusicRecognitionBottomSheetState extends State<MusicRecognitionBottomShee
     return BackdropFilter(
       filter: ImageFilter.blur(sigmaX: 20, sigmaY: 20),
       child: Obx(() {
-        final double playerHeight = _playerController.playerPanelMinHeight.value;
+        final double playerHeight =
+            _playerController.playerPanelMinHeight.value;
         final double extraBottomPadding = playerHeight > 0
             ? (playerHeight > Get.mediaQuery.padding.bottom
                 ? playerHeight - Get.mediaQuery.padding.bottom
@@ -324,7 +331,8 @@ class _MusicRecognitionBottomSheetState extends State<MusicRecognitionBottomShee
   Widget _buildSuccessState() {
     if (_result == null) return const SizedBox.shrink();
     final theme = Theme.of(context);
-    final hasCover = _result!.coverArtHqUrl != null || _result!.coverArtUrl != null;
+    final hasCover =
+        _result!.coverArtHqUrl != null || _result!.coverArtUrl != null;
     final coverUrl = _result!.coverArtHqUrl ?? _result!.coverArtUrl ?? '';
 
     return Column(
@@ -359,17 +367,22 @@ class _MusicRecognitionBottomSheetState extends State<MusicRecognitionBottomShee
                       imageUrl: coverUrl,
                       fit: BoxFit.cover,
                       placeholder: (context, url) => Container(
-                        color: theme.colorScheme.onSurface.withValues(alpha: 0.08),
+                        color:
+                            theme.colorScheme.onSurface.withValues(alpha: 0.08),
                         child: const Center(child: CircularProgressIndicator()),
                       ),
                       errorWidget: (context, url, error) => Container(
-                        color: theme.colorScheme.onSurface.withValues(alpha: 0.08),
-                        child: Icon(Icons.music_note, size: 50, color: theme.colorScheme.primary),
+                        color:
+                            theme.colorScheme.onSurface.withValues(alpha: 0.08),
+                        child: Icon(Icons.music_note,
+                            size: 50, color: theme.colorScheme.primary),
                       ),
                     )
                   : Container(
-                      color: theme.colorScheme.onSurface.withValues(alpha: 0.08),
-                      child: Icon(Icons.music_note, size: 50, color: theme.colorScheme.primary),
+                      color:
+                          theme.colorScheme.onSurface.withValues(alpha: 0.08),
+                      child: Icon(Icons.music_note,
+                          size: 50, color: theme.colorScheme.primary),
                     ),
             ),
           ),
@@ -424,7 +437,8 @@ class _MusicRecognitionBottomSheetState extends State<MusicRecognitionBottomShee
                     ? const SizedBox(
                         width: 20,
                         height: 20,
-                        child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white),
+                        child: CircularProgressIndicator(
+                            strokeWidth: 2, color: Colors.white),
                       )
                     : const Icon(Icons.play_arrow_rounded),
                 label: Text(S.current.playNow),
@@ -451,7 +465,8 @@ class _MusicRecognitionBottomSheetState extends State<MusicRecognitionBottomShee
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(16),
                   ),
-                  side: BorderSide(color: theme.colorScheme.outline.withValues(alpha: 0.4)),
+                  side: BorderSide(
+                      color: theme.colorScheme.outline.withValues(alpha: 0.4)),
                 ),
                 icon: const Icon(Icons.search_rounded),
                 label: Text(S.current.searchInLibrary),

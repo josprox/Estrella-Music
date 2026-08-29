@@ -1,18 +1,14 @@
-import 'package:audio_service/audio_service.dart';
+﻿import 'package:audio_service/audio_service.dart';
 
-import 'package:material_ui/material_ui.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/services/storage/sqlite_store.dart';
-import 'package:harmonymusic/utils/helpers/ionicons.dart';
-
-import 'package:url_launcher/url_launcher.dart';
 
 import 'package:harmonymusic/services/download/downloader.dart';
 import 'package:harmonymusic/services/sync/sync_service.dart';
 import 'package:harmonymusic/ui/screens/Playlist/playlist_screen_controller.dart';
 import 'package:harmonymusic/ui/screens/Settings/settings_screen_controller.dart';
 import 'package:harmonymusic/utils/helpers/helper.dart';
-import 'package:harmonymusic/services/social/piped_service.dart';
 import '/ui/widgets/sleep_timer_bottom_sheet.dart';
 import 'package:harmonymusic/ui/player/player_controller.dart';
 import 'package:harmonymusic/ui/screens/Library/library_controller.dart';
@@ -266,34 +262,6 @@ class SongInfoBottomSheet extends StatelessWidget {
                       )
                     : const SizedBox.shrink(),
               ),
-              ListTile(
-                leading: const Icon(Icons.open_with),
-                title: Text(S.current.openIn),
-                trailing: SizedBox(
-                  width: 200,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      IconButton(
-                        splashRadius: 10,
-                        onPressed: () {
-                          launchUrl(Uri.parse(
-                              YoutubeShareManager.getSongUrl(song.id)));
-                        },
-                        icon: const Icon(Ionicons.logoYoutube),
-                      ),
-                      IconButton(
-                        splashRadius: 10,
-                        onPressed: () {
-                          launchUrl(Uri.parse(
-                              YoutubeShareManager.getMusicSongUrl(song.id)));
-                        },
-                        icon: const Icon(Ionicons.playCircle),
-                      )
-                    ],
-                  ),
-                ),
-              ),
               if (calledFromPlayer)
                 ListTile(
                   contentPadding: const EdgeInsets.only(left: 15),
@@ -434,7 +402,8 @@ mixin RemoveSongFromPlaylistMixin {
   Future<void> removeSongFromPlaylist(MediaItem item, Playlist playlist) async {
     final syncService = Get.find<SyncService>();
     await syncService.performLocalMutation(() async {
-      final box = await SqliteStore.openBox(sanitizeBoxName(playlist.playlistId));
+      final box =
+          await SqliteStore.openBox(sanitizeBoxName(playlist.playlistId));
       //Library songs case
       if (playlist.playlistId == "SongsCache") {
         if (!box.containsKey(item.id)) {
@@ -458,20 +427,6 @@ mixin RemoveSongFromPlaylistMixin {
       try {
         final plstCntroller = Get.find<PlaylistScreenController>(
             tag: Key(playlist.playlistId).hashCode.toString());
-        if (playlist.isPipedPlaylist) {
-          final res = await Get.find<PipedServices>()
-              .getPlaylistSongs(playlist.playlistId);
-          final songIndex = res.indexWhere((element) => element.id == item.id);
-          if (songIndex != -1) {
-            final res = await Get.find<PipedServices>()
-                .removeFromPlaylist(playlist.playlistId, songIndex);
-            if (res.code == 1) {
-              plstCntroller.addNRemoveItemsinList(item, action: 'remove');
-            }
-          }
-          return;
-        }
-
         try {
           plstCntroller.addNRemoveItemsinList(item, action: 'remove');
           // ignore: empty_catches

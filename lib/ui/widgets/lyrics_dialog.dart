@@ -1,11 +1,10 @@
-import 'package:material_ui/material_ui.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '/ui/player/components/lyrics_switch.dart';
 import '/ui/player/components/lyrics_widget.dart';
 import '/ui/widgets/common_dialog_widget.dart';
 import 'package:harmonymusic/ui/player/player_controller.dart';
-import 'package:harmonymusic/ui/widgets/lyrics_search_dialog.dart';
 
 class LyricsDialog extends StatelessWidget {
   const LyricsDialog({super.key});
@@ -19,13 +18,15 @@ class LyricsDialog extends StatelessWidget {
       child: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.only(bottom: 10.0, top: 20, left: 20, right: 20),
+            padding: const EdgeInsets.only(
+                bottom: 10.0, top: 20, left: 20, right: 20),
             child: Row(
               children: [
                 const Expanded(child: LyricsSwitch()),
                 const SizedBox(width: 12),
                 Obx(() {
-                  final isTranslating = playerController.isTranslationLoading.value;
+                  final isTranslating =
+                      playerController.isTranslationLoading.value;
                   final isEnabled = playerController.isTranslationEnabled.value;
                   return IconButton(
                     tooltip: 'Traducir',
@@ -44,22 +45,12 @@ class LyricsDialog extends StatelessWidget {
                     onPressed: () => playerController.toggleTranslation(),
                   );
                 }),
-                const SizedBox(width: 4),
-                IconButton(
-                  tooltip: 'Buscar letras',
-                  icon: const Icon(Icons.search_rounded),
-                  onPressed: () {
-                    showDialog(
-                      context: context,
-                      builder: (context) => const LyricsSearchDialog(),
-                    );
-                  },
-                ),
               ],
             ),
           ),
           const Expanded(
-            child: LyricsWidget(padding: EdgeInsets.symmetric(vertical: 24, horizontal: 20)),
+            child: LyricsWidget(
+                padding: EdgeInsets.symmetric(vertical: 24, horizontal: 20)),
           ),
         ],
       ),

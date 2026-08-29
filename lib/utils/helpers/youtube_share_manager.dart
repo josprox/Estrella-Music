@@ -2,8 +2,6 @@ import 'package:share_plus/share_plus.dart';
 
 class YoutubeShareManager {
   static const String _emusicShareDomain = 'https://emusic.joss.red';
-  static const String _youtubeMusicDomain = 'https://music.youtube.com';
-  static const String _youtubeVideoDomain = 'https://youtube.com';
 
   /// Comparte una canción
   static Future<void> shareSong(String songId,
@@ -46,15 +44,5 @@ class YoutubeShareManager {
     } else {
       await Share.share(url);
     }
-  }
-
-  /// Obtiene solo el enlace de una canción (por ejemplo, para copiar)
-  static String getSongUrl(String songId) {
-    return '$_youtubeVideoDomain/watch?v=$songId';
-  }
-
-  /// Obtiene solo el enlace de Music
-  static String getMusicSongUrl(String songId) {
-    return '$_youtubeMusicDomain/watch?v=$songId';
   }
 }

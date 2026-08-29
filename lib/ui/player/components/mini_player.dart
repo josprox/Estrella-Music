@@ -1,4 +1,4 @@
-import 'package:material_ui/material_ui.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'package:harmonymusic/ui/player/player_controller.dart';
@@ -42,23 +42,25 @@ class _MiniPlayerContent extends StatelessWidget {
     final isWideScreen = screenWidth > 800;
 
     return Obx(() {
-      final isBottomNavBarEnabled = Get.find<SettingsScreenController>().isBottomNavBarEnabled.isTrue;
+      final isBottomNavBarEnabled =
+          Get.find<SettingsScreenController>().isBottomNavBarEnabled.isTrue;
       bool isHomeOnTop = false;
       if (Get.isRegistered<HomeScreenController>()) {
         isHomeOnTop = Get.find<HomeScreenController>().isHomeSreenOnTop.isTrue;
       }
-      final isBottomNavBarVisible = isBottomNavBarEnabled &&
-          isHomeOnTop &&
-          ctrl.isPanelGTHOpened.isFalse;
+      final isBottomNavBarVisible =
+          isBottomNavBarEnabled && isHomeOnTop && ctrl.isPanelGTHOpened.isFalse;
 
-      final bottomPadding = isBottomNavBarVisible ? 0.0 : MediaQuery.of(context).padding.bottom;
+      final bottomPadding =
+          isBottomNavBarVisible ? 0.0 : MediaQuery.of(context).padding.bottom;
 
       if (isWideScreen) {
         // Floating premium capsule bar for desktop widescreen
         return Container(
           width: screenWidth,
           height: 105.0,
-          padding: const EdgeInsets.only(left: 24, right: 24, bottom: 16, top: 8),
+          padding:
+              const EdgeInsets.only(left: 24, right: 24, bottom: 16, top: 8),
           color: Colors.transparent, // outer space transparent to float
           child: GestureDetector(
             behavior: HitTestBehavior.opaque,
@@ -124,7 +126,8 @@ class _MiniPlayerContent extends StatelessWidget {
                   ),
                   // Content
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 10),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 24, vertical: 10),
                     child: Row(
                       children: [
                         // Album Art
@@ -134,7 +137,8 @@ class _MiniPlayerContent extends StatelessWidget {
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(12),
                               border: Border.all(
-                                color: colorScheme.outlineVariant.withValues(alpha: 0.35),
+                                color: colorScheme.outlineVariant
+                                    .withValues(alpha: 0.35),
                                 width: 1,
                               ),
                               boxShadow: [
@@ -179,7 +183,8 @@ class _MiniPlayerContent extends StatelessWidget {
                                 maxLines: 1,
                                 overflow: TextOverflow.ellipsis,
                                 style: textTheme.bodyMedium?.copyWith(
-                                  color: colorScheme.onSurfaceVariant.withValues(alpha: 0.8),
+                                  color: colorScheme.onSurfaceVariant
+                                      .withValues(alpha: 0.8),
                                   fontWeight: FontWeight.w600,
                                   fontSize: 12.5,
                                 ),
@@ -212,7 +217,8 @@ class _MiniPlayerContent extends StatelessWidget {
                                 color: colorScheme.primaryContainer,
                                 boxShadow: [
                                   BoxShadow(
-                                    color: colorScheme.primary.withValues(alpha: 0.2),
+                                    color: colorScheme.primary
+                                        .withValues(alpha: 0.2),
                                     blurRadius: 6,
                                     offset: const Offset(0, 3),
                                   ),
@@ -301,7 +307,8 @@ class _MiniPlayerContent extends StatelessWidget {
                     width: 36,
                     height: 4,
                     decoration: BoxDecoration(
-                      color: colorScheme.onSurfaceVariant.withValues(alpha: 0.4),
+                      color:
+                          colorScheme.onSurfaceVariant.withValues(alpha: 0.4),
                       borderRadius: BorderRadius.circular(2),
                     ),
                   ),
@@ -321,9 +328,8 @@ class _MiniPlayerContent extends StatelessWidget {
                             c.progressBarStatus.value.total.inMilliseconds;
                         final current =
                             c.progressBarStatus.value.current.inMilliseconds;
-                        final pct = total > 0
-                            ? (current / total).clamp(0.0, 1.0)
-                            : 0.0;
+                        final pct =
+                            total > 0 ? (current / total).clamp(0.0, 1.0) : 0.0;
                         return Stack(
                           fit: StackFit.expand,
                           children: [
@@ -360,7 +366,8 @@ class _MiniPlayerContent extends StatelessWidget {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             border: Border.all(
-                              color: colorScheme.outlineVariant.withValues(alpha: 0.35),
+                              color: colorScheme.outlineVariant
+                                  .withValues(alpha: 0.35),
                               width: 1,
                             ),
                             boxShadow: [
@@ -405,7 +412,8 @@ class _MiniPlayerContent extends StatelessWidget {
                               maxLines: 1,
                               overflow: TextOverflow.ellipsis,
                               style: textTheme.bodySmall?.copyWith(
-                                color: colorScheme.onSurfaceVariant.withValues(alpha: 0.8),
+                                color: colorScheme.onSurfaceVariant
+                                    .withValues(alpha: 0.8),
                                 fontWeight: FontWeight.w600,
                                 fontSize: 11.5,
                               ),
@@ -424,8 +432,8 @@ class _MiniPlayerContent extends StatelessWidget {
                               onPressed: ctrl.toggleFavourite,
                               icon: Icon(
                                 ctrl.isCurrentSongFav.isTrue
-                                      ? Icons.favorite_rounded
-                                      : Icons.favorite_border_rounded,
+                                    ? Icons.favorite_rounded
+                                    : Icons.favorite_border_rounded,
                                 color: ctrl.isCurrentSongFav.isTrue
                                     ? colorScheme.error
                                     : colorScheme.onSurfaceVariant,
@@ -434,7 +442,7 @@ class _MiniPlayerContent extends StatelessWidget {
                             ),
                           ),
                           const SizedBox(width: 6),
-                          
+
                           // Circular action backdrop for Play Button
                           Container(
                             width: 42,
@@ -444,7 +452,8 @@ class _MiniPlayerContent extends StatelessWidget {
                               color: colorScheme.primaryContainer,
                               boxShadow: [
                                 BoxShadow(
-                                  color: colorScheme.primary.withValues(alpha: 0.15),
+                                  color: colorScheme.primary
+                                      .withValues(alpha: 0.15),
                                   blurRadius: 4,
                                   offset: const Offset(0, 2),
                                 ),
@@ -457,7 +466,7 @@ class _MiniPlayerContent extends StatelessWidget {
                               ),
                             ),
                           ),
-                          
+
                           const SizedBox(width: 6),
                           IconButton(
                             onPressed: ctrl.next,

@@ -23,7 +23,9 @@ class SearchService {
     final data = Map.from(_musicServices.context);
     data['input'] = queryStr;
     final res = nav(
-            (await _musicServices.sendRequest("music/get_search_suggestions", data)).data,
+            (await _musicServices.sendRequest(
+                    "music/get_search_suggestions", data))
+                .data,
             ['contents', 0, 'searchSuggestionsSectionRenderer', 'contents']) ??
         [];
     return res
@@ -90,7 +92,8 @@ class SearchService {
 
     dynamic results;
 
-    if (response['contents'] != null && (response['contents']).containsKey('tabbedSearchResultsRenderer')) {
+    if (response['contents'] != null &&
+        (response['contents']).containsKey('tabbedSearchResultsRenderer')) {
       final tabIndex =
           scope == null || filter != null ? 0 : scopes.indexOf(scope) + 1;
       results = response['contents']['tabbedSearchResultsRenderer']['tabs']
@@ -137,8 +140,13 @@ class SearchService {
       if (res is! Map) continue;
 
       // Extract additional chips if present in sections (common in some YTM responses)
-      final sectionChips = nav(res, ['itemSectionRenderer', 'header', "chipCloudRenderer", "chips"]) ??
-                           nav(res, ["chipCloudRenderer", "chips"]);
+      final sectionChips = nav(res, [
+            'itemSectionRenderer',
+            'header',
+            "chipCloudRenderer",
+            "chips"
+          ]) ??
+          nav(res, ["chipCloudRenderer", "chips"]);
       if (sectionChips != null && filter == null) {
         for (dynamic chipsItemRenderer in sectionChips) {
           final chip = chipsItemRenderer['chipCloudChipRenderer'];
@@ -152,29 +160,53 @@ class SearchService {
 
       if (res.containsKey('musicCardShelfRenderer')) {
         final card = res['musicCardShelfRenderer'];
-        final topResult = parseTopResult(card,
-            ['artist', 'playlist', 'song', 'video', 'station', 'podcast', 'episode', 'profile']);
+        final topResult = parseTopResult(card, [
+          'artist',
+          'playlist',
+          'song',
+          'video',
+          'station',
+          'podcast',
+          'episode',
+          'profile'
+        ]);
         if (topResult != null) {
           _addToSearchResults(searchResults, 'Top result', [topResult]);
-          
+
           if (card.containsKey('contents')) {
-            final cardItems = parseSearchResults(card['contents'],
-                ['artist', 'playlist', 'song', 'video', 'station', 'podcast', 'episode', 'profile'], null, 'Top result');
+            final cardItems = parseSearchResults(
+                card['contents'],
+                [
+                  'artist',
+                  'playlist',
+                  'song',
+                  'video',
+                  'station',
+                  'podcast',
+                  'episode',
+                  'profile'
+                ],
+                null,
+                'Top result');
             if (filter == null) {
               _groupResultsByType(cardItems, searchResults);
             }
           }
         }
       } else if (res.containsKey('musicShelfRenderer')) {
-        await _parseAndAddShelf(res['musicShelfRenderer'], searchResults, filter, type, data, limit);
+        await _parseAndAddShelf(res['musicShelfRenderer'], searchResults,
+            filter, type, data, limit);
       } else if (res.containsKey('musicCarouselShelfRenderer')) {
-        await _parseAndAddShelf(res['musicCarouselShelfRenderer'], searchResults, filter, type, data, limit);
+        await _parseAndAddShelf(res['musicCarouselShelfRenderer'],
+            searchResults, filter, type, data, limit);
       } else if (res.containsKey('itemSectionRenderer')) {
         final sectionContents = res['itemSectionRenderer']['contents'];
         if (sectionContents is List) {
           bool hasShelves = false;
           for (var content in sectionContents) {
-            if (content is Map && (content.containsKey('musicShelfRenderer') || content.containsKey('musicCarouselShelfRenderer'))) {
+            if (content is Map &&
+                (content.containsKey('musicShelfRenderer') ||
+                    content.containsKey('musicCarouselShelfRenderer'))) {
               hasShelves = true;
               break;
             }
@@ -183,15 +215,26 @@ class SearchService {
             for (var content in sectionContents) {
               if (content is! Map) continue;
               if (content.containsKey('musicShelfRenderer')) {
-                await _parseAndAddShelf(content['musicShelfRenderer'], searchResults, filter, type, data, limit);
+                await _parseAndAddShelf(content['musicShelfRenderer'],
+                    searchResults, filter, type, data, limit);
               } else if (content.containsKey('musicCarouselShelfRenderer')) {
-                await _parseAndAddShelf(content['musicCarouselShelfRenderer'], searchResults, filter, type, data, limit);
+                await _parseAndAddShelf(content['musicCarouselShelfRenderer'],
+                    searchResults, filter, type, data, limit);
               }
             }
           } else {
             final parsedItems = parseSearchResults(
               sectionContents,
-              ['artist', 'playlist', 'song', 'video', 'station', 'podcast', 'episode', 'profile'],
+              [
+                'artist',
+                'playlist',
+                'song',
+                'video',
+                'station',
+                'podcast',
+                'episode',
+                'profile'
+              ],
               type,
               'mixed',
             );
@@ -222,30 +265,43 @@ class SearchService {
         'Featured playlists'
       ];
       final Map<String, dynamic> orderedResults = {};
-      
+
       if (searchResults.containsKey('searchEndpoint')) {
         orderedResults['searchEndpoint'] = searchResults['searchEndpoint'];
       }
-      
+
       for (var key in orderedKeys) {
-        if (searchResults.containsKey(key) && searchResults[key] != null && (searchResults[key] as List).isNotEmpty) {
-           orderedResults[key] = (searchResults[key] as List).distinctBy((item) => item is MediaItem ? item.id : (item is Artist ? item.browseId : (item is Album ? item.browseId : (item is Playlist ? item.playlistId : item.toString())))).toList();
+        if (searchResults.containsKey(key) &&
+            searchResults[key] != null &&
+            (searchResults[key] as List).isNotEmpty) {
+          orderedResults[key] = (searchResults[key] as List)
+              .distinctBy((item) => item is MediaItem
+                  ? item.id
+                  : (item is Artist
+                      ? item.browseId
+                      : (item is Album
+                          ? item.browseId
+                          : (item is Playlist
+                              ? item.playlistId
+                              : item.toString()))))
+              .toList();
         }
       }
-      
+
       searchResults.forEach((key, value) {
         if (!orderedResults.containsKey(key) && key != 'searchEndpoint') {
           orderedResults[key] = value;
         }
       });
-      
+
       return orderedResults;
     }
 
     return searchResults;
   }
 
-  void _addToSearchResults(Map<String, dynamic> searchResults, String category, List<dynamic> items) {
+  void _addToSearchResults(Map<String, dynamic> searchResults, String category,
+      List<dynamic> items) {
     if (searchResults.containsKey(category)) {
       (searchResults[category] as List).addAll(items);
     } else {
@@ -253,7 +309,8 @@ class SearchService {
     }
   }
 
-  void _groupResultsByType(List<dynamic> items, Map<String, dynamic> searchResults) {
+  void _groupResultsByType(
+      List<dynamic> items, Map<String, dynamic> searchResults) {
     for (var item in items) {
       String itemType = "Other";
       if (item is MediaItem) {
@@ -272,11 +329,11 @@ class SearchService {
       } else if (item is Playlist) {
         itemType = "Playlists";
       }
-      
+
       if (!searchResults.containsKey(itemType)) {
         searchResults[itemType] = [];
       }
-      
+
       if ((searchResults[itemType] as List).length < 10) {
         (searchResults[itemType] as List).add(item);
       }
@@ -293,13 +350,30 @@ class SearchService {
   ) async {
     final itemResults = shelf['contents'];
     if (itemResults == null) return;
-    
-    final apiTitle = nav(shelf, title_text) ?? nav(shelf, ['header', 'musicCarouselShelfBasicHeaderRenderer', 'title', 'runs', 0, 'text']);
+
+    final apiTitle = nav(shelf, title_text) ??
+        nav(shelf, [
+          'header',
+          'musicCarouselShelfBasicHeaderRenderer',
+          'title',
+          'runs',
+          0,
+          'text'
+        ]);
     final category = apiTitle ?? "mixed";
 
     final mixedItems = parseSearchResults(
       itemResults,
-      ['artist', 'playlist', 'song', 'video', 'station', 'podcast', 'episode', 'profile'],
+      [
+        'artist',
+        'playlist',
+        'song',
+        'video',
+        'station',
+        'podcast',
+        'episode',
+        'profile'
+      ],
       type,
       category,
     );
@@ -315,12 +389,23 @@ class SearchService {
     }
 
     if (filter != null) {
-      requestFunc(additionalParams) async =>
-          (await _musicServices.sendRequest("search", data,
-                  additionalParams: additionalParams))
-              .data;
-      parseFunc(contents) => parseSearchResults(contents,
-          ['artist', 'playlist', 'song', 'video', 'station', 'podcast', 'episode', 'profile'], type, category);
+      requestFunc(additionalParams) async => (await _musicServices
+              .sendRequest("search", data, additionalParams: additionalParams))
+          .data;
+      parseFunc(contents) => parseSearchResults(
+          contents,
+          [
+            'artist',
+            'playlist',
+            'song',
+            'video',
+            'station',
+            'podcast',
+            'episode',
+            'profile'
+          ],
+          type,
+          category);
 
       if (searchResults.containsKey(category)) {
         final x = await getContinuations(
@@ -353,12 +438,24 @@ class SearchService {
     final category = additionalParamsNext['category'];
     final Map<String, dynamic> searchResults = {};
 
-    requestFunc(additionalParams) async =>
-        (await _musicServices.sendRequest("search", data, additionalParams: additionalParams))
-            .data;
+    requestFunc(additionalParams) async => (await _musicServices
+            .sendRequest("search", data, additionalParams: additionalParams))
+        .data;
 
-    parseFunc(contents) => parseSearchResults(contents,
-        ['artist', 'playlist', 'song', 'video', 'station', 'podcast', 'episode', 'profile'], type, category);
+    parseFunc(contents) => parseSearchResults(
+        contents,
+        [
+          'artist',
+          'playlist',
+          'song',
+          'video',
+          'station',
+          'podcast',
+          'episode',
+          'profile'
+        ],
+        type,
+        category);
 
     final x = await getContinuations(
         {}, 'musicShelfContinuation', limit, requestFunc, parseFunc,

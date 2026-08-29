@@ -1,18 +1,16 @@
-import 'package:material_ui/material_ui.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/services/storage/sqlite_store.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-
 import 'package:harmonymusic/services/auth/auth_service.dart';
+import 'package:harmonymusic/services/auth/authentication_access_policy.dart';
 import 'package:harmonymusic/services/system/update_service.dart';
 import 'package:harmonymusic/services/auth/user_data_bootstrap_service.dart';
+import 'package:harmonymusic/profiles/profile_manager.dart';
 import 'package:harmonymusic/ui/home.dart';
 import 'package:harmonymusic/ui/screens/Update/update_screen.dart';
+import 'package:harmonymusic/services/storage/sqlite_store.dart';
 import 'account_bootstrap_screen.dart';
-import 'cloud_migration_screen.dart';
-import 'cloud_mode_choice_screen.dart';
-import 'package:harmonymusic/services/backup/cloud_backup_service.dart';
 import 'music_auth_screen.dart';
+import 'welcome_profile_setup_screen.dart';
 
 class AuthGate extends StatefulWidget {
   const AuthGate({super.key});
@@ -22,9 +20,9 @@ class AuthGate extends StatefulWidget {
 }
 
 class _AuthGateState extends State<AuthGate> {
+  static const _accessPolicy = AuthenticationAccessPolicy();
   final isUpdateChecked = false.obs;
   final updateRequired = false.obs;
-  bool _modeChoiceCompleted = false;
 
   @override
   void initState() {
@@ -37,62 +35,10 @@ class _AuthGateState extends State<AuthGate> {
     updateRequired.value = hasUpdate;
     isUpdateChecked.value = true;
 
-    final sprefs = await SharedPreferences.getInstance();
-    _modeChoiceCompleted = sprefs.getBool('emusicModeChoiceCompleted') ?? false;
-
-    if (!hasUpdate) {
-      Get.find<AuthService>().restoreSession();
+    if (!hasUpdate && !Get.find<AuthService>().isAuthenticated.value) {
+      await Get.find<AuthService>().restoreSession();
     }
     if (mounted) setState(() {});
-  }
-
-  Future<void> _keepLocalMode() async {
-    final prefs = SqliteStore.box('AppPrefs');
-    await prefs.put('emusicDataMode', 'local');
-    await prefs.put('emusicCloudRequested', false);
-    await prefs.put('hasPendingSync', false);
-    
-    final sprefs = await SharedPreferences.getInstance();
-    await sprefs.setBool('emusicModeChoiceCompleted', true);
-    
-    final authService = Get.find<AuthService>();
-    if (authService.isAuthenticated.value) {
-      _clearCloudBackups();
-    }
-    
-    setState(() {
-      _modeChoiceCompleted = true;
-    });
-  }
-
-  Future<void> _chooseCloudMode() async {
-    final prefs = SqliteStore.box('AppPrefs');
-    await prefs.put('emusicCloudRequested', true);
-    
-    final sprefs = await SharedPreferences.getInstance();
-    await sprefs.setBool('emusicModeChoiceCompleted', true);
-    
-    final authService = Get.find<AuthService>();
-    if (authService.isAuthenticated.value) {
-      _clearCloudBackups();
-    }
-    
-    setState(() {
-      _modeChoiceCompleted = true;
-    });
-  }
-
-  Future<void> _clearCloudBackups() async {
-    try {
-      final cloudBackupService = Get.find<CloudBackupService>();
-      final backups = await cloudBackupService.listBackups();
-      for (final backup in backups) {
-        await cloudBackupService.deleteBackup(backup);
-      }
-      debugPrint("Cleared all cloud backups on mode selection.");
-    } catch (e) {
-      debugPrint("Error clearing cloud backups: $e");
-    }
   }
 
   @override
@@ -100,12 +46,6 @@ class _AuthGateState extends State<AuthGate> {
     final authService = Get.find<AuthService>();
     final bootstrapService = Get.find<UserDataBootstrapService>();
     return Obx(() {
-      final prefs = SqliteStore.box('AppPrefs');
-      final cloudRequested =
-          prefs.get('emusicCloudRequested', defaultValue: false) == true;
-      final dataMode =
-          prefs.get('emusicDataMode', defaultValue: 'local').toString();
-
       if (isUpdateChecked.isFalse) {
         return const AccountBootstrapScreen(
           title: 'Estrella Music',
@@ -117,13 +57,6 @@ class _AuthGateState extends State<AuthGate> {
         return const UpdateScreen();
       }
 
-      if (!_modeChoiceCompleted) {
-        return CloudModeChoiceScreen(
-          onKeepLocal: _keepLocalMode,
-          onChooseCloud: _chooseCloudMode,
-        );
-      }
-
       if (authService.isLoadingSession.isTrue) {
         return const AccountBootstrapScreen(
           title: 'Validando tu sesion',
@@ -131,23 +64,29 @@ class _AuthGateState extends State<AuthGate> {
         );
       }
 
-      if (authService.isAuthenticated.isFalse) {
-        if (!cloudRequested && dataMode == 'local') {
-          return const Home();
-        }
+      if (!_accessPolicy.canEnterApplication(
+        isAuthenticated: authService.isAuthenticated.value,
+      )) {
         bootstrapService.resetRuntimeState();
         return const MusicAuthScreen();
       }
 
-      if (cloudRequested && dataMode != 'cloud') {
-        return const CloudMigrationScreen();
+      final isWelcomeCompleted = SqliteStore.box('AppPrefs')
+              .get('welcomeProfileOnboardingCompleted', defaultValue: false)
+          as bool;
+
+      if (!isWelcomeCompleted) {
+        return const WelcomeProfileSetupScreen();
       }
 
-      if (bootstrapService.needsBootstrapForCurrentUser) {
+      final profileManager = Get.find<ProfileManager>();
+      if (profileManager.activeProfileMaySync &&
+          bootstrapService.needsBootstrapForCurrentUser) {
         Future.microtask(bootstrapService.prepareForAuthenticatedUser);
       }
 
-      if (bootstrapService.isPreparing.isTrue) {
+      if (profileManager.activeProfileMaySync &&
+          bootstrapService.isPreparing.isTrue) {
         return AccountBootstrapScreen(
           title: 'Sincronizando tu cuenta',
           message: bootstrapService.statusMessage.value,

@@ -57,7 +57,7 @@ class RecognitionResult {
     }
 
     final sections = track['sections'] as List<dynamic>?;
-    
+
     Map<String, dynamic>? songSection;
     if (sections != null) {
       for (var sec in sections) {
@@ -67,7 +67,7 @@ class RecognitionResult {
         }
       }
     }
-    
+
     final metadata = songSection?['metadata'] as List<dynamic>?;
     String? album;
     String? label;
@@ -111,7 +111,9 @@ class RecognitionResult {
     Map<String, dynamic>? spotifyProvider;
     if (providers != null) {
       for (var prov in providers) {
-        if (prov != null && prov['caption']?.toString().toLowerCase().contains('spotify') == true) {
+        if (prov != null &&
+            prov['caption']?.toString().toLowerCase().contains('spotify') ==
+                true) {
           spotifyProvider = prov as Map<String, dynamic>;
           break;
         }
@@ -126,7 +128,8 @@ class RecognitionResult {
     Map<String, dynamic>? youtubeAction;
     if (options != null) {
       for (var opt in options) {
-        if (opt != null && opt['type']?.toString().toLowerCase().contains('video') == true) {
+        if (opt != null &&
+            opt['type']?.toString().toLowerCase().contains('video') == true) {
           final actions = opt['actions'] as List<dynamic>?;
           if (actions != null && actions.isNotEmpty) {
             youtubeAction = actions.first as Map<String, dynamic>;
@@ -189,8 +192,12 @@ class MusicRecognitionService {
   ];
 
   static final List<String> _timezones = [
-    "Europe/Paris", "Europe/London", "America/New_York",
-    "America/Los_Angeles", "Asia/Tokyo", "Asia/Dubai"
+    "Europe/Paris",
+    "Europe/London",
+    "America/New_York",
+    "America/Los_Angeles",
+    "Asia/Tokyo",
+    "Asia/Dubai"
   ];
 
   Future<RecognitionResult?> recognizeMusic({
@@ -207,7 +214,8 @@ class MusicRecognitionService {
       }
 
       final tempDir = await getTemporaryDirectory();
-      final tempPath = '${tempDir.path}/shazam_rec_${DateTime.now().millisecondsSinceEpoch}.wav';
+      final tempPath =
+          '${tempDir.path}/shazam_rec_${DateTime.now().millisecondsSinceEpoch}.wav';
 
       _isRecording = true;
       await _audioRecorder.start(
@@ -249,7 +257,8 @@ class MusicRecognitionService {
 
       // Skip WAV header (44 bytes) to get the raw 16-bit PCM little-endian data
       final pcmBytes = fileBytes.sublist(44);
-      final int16samples = pcmBytes.buffer.asInt16List(pcmBytes.offsetInBytes, pcmBytes.length ~/ 2);
+      final int16samples = pcmBytes.buffer
+          .asInt16List(pcmBytes.offsetInBytes, pcmBytes.length ~/ 2);
 
       // Generate Shazam signature in pure Dart!
       final signature = ShazamSignatureGenerator.fromI16(int16samples);
@@ -260,7 +269,7 @@ class MusicRecognitionService {
       } catch (_) {}
 
       onStateChanged(RecognitionState.processing);
-      
+
       final timestamp = DateTime.now().millisecondsSinceEpoch ~/ 1000;
       final uuid1 = _generateUuid().toUpperCase();
       final uuid2 = _generateUuid();

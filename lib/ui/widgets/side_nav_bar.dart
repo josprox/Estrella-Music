@@ -1,4 +1,4 @@
-import 'package:material_ui/material_ui.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/ui/screens/Home/home_screen_controller.dart';
 import 'package:harmonymusic/generated/l10n.dart';
@@ -6,8 +6,9 @@ import 'package:harmonymusic/ui/screens/Settings/settings_screen.dart';
 import 'package:harmonymusic/ui/navigator.dart';
 import 'package:harmonymusic/services/auth/auth_service.dart';
 import 'package:harmonymusic/ui/screens/Settings/settings_screen_controller.dart';
+import 'package:harmonymusic/ui/profiles/profile_switcher.dart';
 
-/// Material 3 Expressive side navigation rail — no glass blur, solid surface.
+/// Material 3 Expressive side navigation rail â€” no glass blur, solid surface.
 class SideNavBar extends StatefulWidget {
   const SideNavBar({super.key});
 
@@ -51,11 +52,11 @@ class _SideNavBarState extends State<SideNavBar> {
             ),
             child: Column(
               children: [
-                // ── Header ──────────────────────────────────────────────────
+                // â”€â”€ Header â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
                 _buildHeader(isExpanded, colorScheme, settingsScreenController),
                 const SizedBox(height: 8),
 
-                // ── Nav Items ───────────────────────────────────────────────
+                // â”€â”€ Nav Items â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
                 Expanded(
                   child: Obx(
                     () => ListView(
@@ -67,8 +68,7 @@ class _SideNavBarState extends State<SideNavBar> {
                           icon: Icons.home_outlined,
                           activeIcon: Icons.home_rounded,
                           label: S.current.home,
-                          isSelected:
-                              homeScreenController.tabIndex.value == 0,
+                          isSelected: homeScreenController.tabIndex.value == 0,
                           isExpanded: isExpanded,
                           onTap: () =>
                               homeScreenController.onSideBarTabSelected(0),
@@ -78,8 +78,7 @@ class _SideNavBarState extends State<SideNavBar> {
                           icon: Icons.audiotrack_outlined,
                           activeIcon: Icons.audiotrack_rounded,
                           label: S.current.songs,
-                          isSelected:
-                              homeScreenController.tabIndex.value == 1,
+                          isSelected: homeScreenController.tabIndex.value == 1,
                           isExpanded: isExpanded,
                           onTap: () =>
                               homeScreenController.onSideBarTabSelected(1),
@@ -89,8 +88,7 @@ class _SideNavBarState extends State<SideNavBar> {
                           icon: Icons.search_outlined,
                           activeIcon: Icons.search_rounded,
                           label: S.current.search,
-                          isSelected:
-                              homeScreenController.tabIndex.value == 2,
+                          isSelected: homeScreenController.tabIndex.value == 2,
                           isExpanded: isExpanded,
                           onTap: () =>
                               homeScreenController.onSideBarTabSelected(2),
@@ -100,8 +98,7 @@ class _SideNavBarState extends State<SideNavBar> {
                           icon: Icons.album_outlined,
                           activeIcon: Icons.album_rounded,
                           label: S.current.albums,
-                          isSelected:
-                              homeScreenController.tabIndex.value == 3,
+                          isSelected: homeScreenController.tabIndex.value == 3,
                           isExpanded: isExpanded,
                           onTap: () =>
                               homeScreenController.onSideBarTabSelected(3),
@@ -111,8 +108,7 @@ class _SideNavBarState extends State<SideNavBar> {
                           icon: Icons.people_outline,
                           activeIcon: Icons.people_rounded,
                           label: S.current.artists,
-                          isSelected:
-                              homeScreenController.tabIndex.value == 4,
+                          isSelected: homeScreenController.tabIndex.value == 4,
                           isExpanded: isExpanded,
                           onTap: () =>
                               homeScreenController.onSideBarTabSelected(4),
@@ -122,8 +118,7 @@ class _SideNavBarState extends State<SideNavBar> {
                           icon: Icons.library_music_outlined,
                           activeIcon: Icons.library_music_rounded,
                           label: S.current.playlists,
-                          isSelected:
-                              homeScreenController.tabIndex.value == 5,
+                          isSelected: homeScreenController.tabIndex.value == 5,
                           isExpanded: isExpanded,
                           onTap: () =>
                               homeScreenController.onSideBarTabSelected(5),
@@ -137,7 +132,8 @@ class _SideNavBarState extends State<SideNavBar> {
                           isExpanded: isExpanded,
                           onTap: () {
                             Get.to(
-                              () => const SettingsScreen(isBottomNavActive: false),
+                              () => const SettingsScreen(
+                                  isBottomNavActive: false),
                               id: ScreenNavigationSetup.id,
                               transition: Transition.rightToLeft,
                             );
@@ -148,7 +144,13 @@ class _SideNavBarState extends State<SideNavBar> {
                   ),
                 ),
 
-                // ── Profile section ──────────────────────────────────────────
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8),
+                  child: ProfileSwitcher(expanded: isExpanded),
+                ),
+                const SizedBox(height: 8),
+
+                // â”€â”€ Account section â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
                 _buildProfileSection(isExpanded, colorScheme),
                 const SizedBox(height: 8),
               ],
@@ -159,7 +161,8 @@ class _SideNavBarState extends State<SideNavBar> {
     );
   }
 
-  Widget _buildHeader(bool isExpanded, ColorScheme colorScheme, SettingsScreenController settingsScreenController) {
+  Widget _buildHeader(bool isExpanded, ColorScheme colorScheme,
+      SettingsScreenController settingsScreenController) {
     return Container(
       height: 72,
       padding: EdgeInsets.symmetric(
@@ -207,7 +210,8 @@ class _SideNavBarState extends State<SideNavBar> {
                         ),
                       ),
                       Obx(() => Text(
-                            settingsScreenController.currentVersion.value.isNotEmpty
+                            settingsScreenController
+                                    .currentVersion.value.isNotEmpty
                                 ? settingsScreenController.currentVersion.value
                                 : 'V2.3.6',
                             style: TextStyle(
@@ -257,8 +261,9 @@ class _SideNavBarState extends State<SideNavBar> {
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 6),
             child: Row(
-              mainAxisAlignment:
-                  isExpanded ? MainAxisAlignment.start : MainAxisAlignment.center,
+              mainAxisAlignment: isExpanded
+                  ? MainAxisAlignment.start
+                  : MainAxisAlignment.center,
               children: [
                 // Avatar circle
                 Container(

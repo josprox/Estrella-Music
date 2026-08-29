@@ -73,7 +73,13 @@ android/app/.cxx/Debug/*
 
 *.exe
 
+# Python test tooling
+__pycache__/
+*.py[cod]
+
 /EMusic/
 lib/l10n/translation_log.xlsx
 lib/l10n/translation_history.json
 android/app/google-services.json
+
+/scripts/

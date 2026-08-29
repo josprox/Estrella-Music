@@ -1,18 +1,17 @@
-import 'package:material_ui/material_ui.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 
 import 'package:harmonymusic/utils/helpers/helper.dart';
 import 'package:harmonymusic/ui/screens/Home/home_screen_controller.dart';
-import 'package:harmonymusic/services/music/music_service.dart';
+import 'package:harmonymusic/music_provider/music_catalog_service.dart';
 import '/ui/widgets/sort_widget.dart';
 
 class SearchResultScreenController extends GetxController {
   final isResultContentFetced = false.obs;
   final resultContent = <String, dynamic>{}.obs;
-  final musicServices = Get.find<MusicServices>();
+  final musicServices = Get.find<MusicCatalogService>();
   final queryString = ''.obs;
-  
+
   // Lista de filtros disponibles (Chips)
   final filters = <String>[].obs;
   final currentFilter = 'All'.obs;
@@ -36,7 +35,8 @@ class SearchResultScreenController extends GetxController {
     if (currentScroll >= maxScroll - 200 && currentFilter.value != 'All') {
       if (!continuationInProgress &&
           additionalParamNext['additionalParams'] != null &&
-          additionalParamNext['additionalParams'] != '&ctoken=null&continuation=null') {
+          additionalParamNext['additionalParams'] !=
+              '&ctoken=null&continuation=null') {
         continuationInProgress = true;
         getContinuationContents();
       }
@@ -45,16 +45,16 @@ class SearchResultScreenController extends GetxController {
 
   Future<void> getContinuationContents() async {
     final x = await musicServices.getSearchContinuation(additionalParamNext);
-    
+
     // Anexamos los nuevos resultados a resultContent
     final Map<String, dynamic> currentData = Map.from(resultContent);
     x.forEach((key, value) {
       if (key != 'params' && key != 'searchEndpoint') {
-         if (currentData.containsKey(key)) {
-            currentData[key].addAll(value);
-         } else {
-            currentData[key] = value;
-         }
+        if (currentData.containsKey(key)) {
+          currentData[key].addAll(value);
+        } else {
+          currentData[key] = value;
+        }
       }
     });
 
@@ -68,24 +68,26 @@ class SearchResultScreenController extends GetxController {
 
   Future<void> applyFilter(String filterName) async {
     if (currentFilter.value == filterName) return;
-    
+
     currentFilter.value = filterName;
     isResultContentFetced.value = false;
-    
+
     if (filterName == 'All') {
       // Re-fetch all
       resultContent.value = await musicServices.search(queryString.value);
     } else {
       final filterMap = (resultContent['searchEndpoint'] as Map?) ?? {};
-      final itemCount = (filterName == 'Songs' || filterName == 'Videos' || filterName == 'Episodes') ? 25 : 10;
-      final x = await musicServices.search(
-        queryString.value,
-        filter: filterName.replaceAll(" ", "_").toLowerCase(),
-        limit: itemCount,
-        filterParams: filterMap[filterName]
-      );
-      
-      // En este modo, resultContent solo tendrá la llave del filtro (ej. "Songs") y "params"
+      final itemCount = (filterName == 'Songs' ||
+              filterName == 'Videos' ||
+              filterName == 'Episodes')
+          ? 25
+          : 10;
+      final x = await musicServices.search(queryString.value,
+          filter: filterName.replaceAll(" ", "_").toLowerCase(),
+          limit: itemCount,
+          filterParams: filterMap[filterName]);
+
+      // En este modo, resultContent solo tendrÃ¡ la llave del filtro (ej. "Songs") y "params"
       resultContent.value = x;
       if (x['params'] != null) {
         additionalParamNext.value = x['params'];
@@ -94,7 +96,7 @@ class SearchResultScreenController extends GetxController {
       }
     }
     isResultContentFetced.value = true;
-    
+
     // Reset scroll al aplicar filtro
     if (scrollController.hasClients) {
       scrollController.jumpTo(0);
@@ -107,13 +109,14 @@ class SearchResultScreenController extends GetxController {
     if (args != null) {
       queryString.value = args;
       resultContent.value = await musicServices.search(args);
-      
+
       final Set<String> allCategories = {'All'};
-      
+
       if (resultContent.containsKey('searchEndpoint')) {
-        allCategories.addAll((resultContent['searchEndpoint'] as Map).keys.cast<String>());
+        allCategories.addAll(
+            (resultContent['searchEndpoint'] as Map).keys.cast<String>());
       }
-      
+
       final List<String> orderedList = [
         "All",
         "Songs",
@@ -127,7 +130,7 @@ class SearchResultScreenController extends GetxController {
         "Featured playlists",
         "Profiles"
       ];
-      
+
       final List<String> sortedKeys = allCategories.toList();
       sortedKeys.sort((a, b) {
         int indexA = orderedList.indexOf(a);
@@ -144,7 +147,7 @@ class SearchResultScreenController extends GetxController {
 
   void onSort(SortType sortType, bool isAscending, String title) {
     if (!resultContent.containsKey(title)) return;
-    
+
     if (title == "Songs" || title == "Videos" || title == "Episodes") {
       final songList = resultContent[title].toList();
       sortSongsNVideos(songList, sortType, isAscending);

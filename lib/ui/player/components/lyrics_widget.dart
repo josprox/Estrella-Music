@@ -1,4 +1,4 @@
-import 'package:material_ui/material_ui.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:flutter_lyric/lyrics_reader.dart';
 import 'package:get/get.dart';
 
@@ -30,7 +30,8 @@ class LyricsWidget extends StatelessWidget {
       final colorScheme = Theme.of(context).colorScheme;
       final showTranslation = playerController.isTranslationEnabled.value;
       final tSynced = playerController.translatedLyrics["synced"].toString();
-      final tPlain = playerController.translatedLyrics["plainLyrics"].toString();
+      final tPlain =
+          playerController.translatedLyrics["plainLyrics"].toString();
 
       bool showSynced = false;
       if (mode == 0) {
@@ -52,8 +53,8 @@ class LyricsWidget extends StatelessWidget {
           child: LyricsReader(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             lyricUi: playerController.lyricUi,
-            position: playerController
-                .progressBarStatus.value.current.inMilliseconds,
+            position:
+                playerController.progressBarStatus.value.current.inMilliseconds,
             model: model.getModel(),
             emptyBuilder: () => _buildNoLyrics(context, playerController),
           ),
@@ -75,10 +76,12 @@ class LyricsWidget extends StatelessWidget {
                 text: "$orig\n",
                 style: playerController.isDesktopLyricsDialogOpen
                     ? Theme.of(context).textTheme.titleMedium!.copyWith(
-                          fontSize:
-                              (Theme.of(context).textTheme.titleMedium!.fontSize ??
-                                      16) *
-                                  currentScale,
+                          fontSize: (Theme.of(context)
+                                      .textTheme
+                                      .titleMedium!
+                                      .fontSize ??
+                                  16) *
+                              currentScale,
                           fontWeight: FontWeight.w700,
                         )
                     : TextStyle(
@@ -96,10 +99,12 @@ class LyricsWidget extends StatelessWidget {
                 style: playerController.isDesktopLyricsDialogOpen
                     ? Theme.of(context).textTheme.bodyMedium!.copyWith(
                           color: colorScheme.onSurface.withValues(alpha: 0.65),
-                          fontSize:
-                              (Theme.of(context).textTheme.bodyMedium!.fontSize ??
-                                      14) *
-                                  currentScale,
+                          fontSize: (Theme.of(context)
+                                      .textTheme
+                                      .bodyMedium!
+                                      .fontSize ??
+                                  14) *
+                              currentScale,
                           fontWeight: FontWeight.w500,
                         )
                     : TextStyle(
@@ -129,12 +134,10 @@ class LyricsWidget extends StatelessWidget {
                 : TextAlign.center,
             style: playerController.isDesktopLyricsDialogOpen
                 ? Theme.of(context).textTheme.titleMedium!.copyWith(
-                      fontSize: (Theme.of(context)
-                                  .textTheme
-                                  .titleMedium!
-                                  .fontSize ??
-                              16) *
-                          currentScale,
+                      fontSize:
+                          (Theme.of(context).textTheme.titleMedium!.fontSize ??
+                                  16) *
+                              currentScale,
                     )
                 : TextStyle(
                     color: colorScheme.onSurface,
@@ -187,7 +190,10 @@ class LyricsWidget extends StatelessWidget {
         textAlign: TextAlign.center,
         style: ctrl.isDesktopLyricsDialogOpen
             ? Theme.of(context).textTheme.titleMedium!.copyWith(
-                  fontSize: (Theme.of(context).textTheme.titleMedium!.fontSize ?? 16) * currentScale,
+                  fontSize:
+                      (Theme.of(context).textTheme.titleMedium!.fontSize ??
+                              16) *
+                          currentScale,
                 )
             : TextStyle(
                 color: Theme.of(context).colorScheme.onSurfaceVariant,

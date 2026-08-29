@@ -19,7 +19,8 @@ class DiscordRpcService {
     _initialized = true;
 
     if (!GetPlatform.isDesktop) {
-      printINFO("Discord RPC: Supported only on Desktop platforms (Windows, macOS, Linux). Skipping initialization.");
+      printINFO(
+          "Discord RPC: Supported only on Desktop platforms (Windows, macOS, Linux). Skipping initialization.");
       return;
     }
 
@@ -47,11 +48,11 @@ class DiscordRpcService {
     try {
       final state = isPlaying ? "Reproduciendo" : "Pausado";
       final details = "$title - $artist";
-      
+
       // Calculate timestamps for remaining time if playing
       DateTime? startTime;
       DateTime? endTime;
-      
+
       if (isPlaying && currentPosition != null && totalDuration != null) {
         final now = DateTime.now();
         startTime = now.subtract(currentPosition);
@@ -59,14 +60,16 @@ class DiscordRpcService {
       }
 
       printINFO("Updating Discord RPC Presence: $details ($state)");
-      
+
       await _rpc?.setPresence(
         DiscordPresence(
           state: state,
           details: details.substring(0, min(127, details.length)),
           largeAsset: DiscordAsset(
             key: "music_player",
-            text: (album != null && album.isNotEmpty) ? album.substring(0, min(127, album.length)) : "Estrella Music",
+            text: (album != null && album.isNotEmpty)
+                ? album.substring(0, min(127, album.length))
+                : "Estrella Music",
           ),
           smallAsset: DiscordAsset(
             key: isPlaying ? "play" : "pause",

@@ -29,6 +29,9 @@ class MediaItemBuilder {
         artUri: Uri.parse(Thumbnail(json["thumbnails"][0]['url']).high),
         extras: {
           'url': json['url'] ?? url,
+          'providerId': json['providerId'],
+          'profileId': json['profileId'],
+          'sourceId': json['sourceId'] ?? json['videoId'],
           'length': json['length'],
           'album': album,
           'artists': json['artists'],
@@ -66,6 +69,9 @@ class MediaItemBuilder {
   static Map<String, dynamic> toJson(MediaItem mediaItem) => {
         "videoId": mediaItem.id,
         "title": mediaItem.title,
+        'providerId': mediaItem.extras?['providerId'],
+        'profileId': mediaItem.extras?['profileId'],
+        'sourceId': mediaItem.extras?['sourceId'] ?? mediaItem.id,
         'album': mediaItem.extras!['album'],
         'artists': mediaItem.extras!['artists'],
         'length': mediaItem.extras!['length'],

@@ -1,4 +1,4 @@
-import 'package:material_ui/material_ui.dart';
+import 'package:flutter/material.dart';
 import 'package:harmonymusic/generated/l10n.dart';
 
 class ProceedButton extends StatelessWidget {
@@ -43,7 +43,7 @@ class CancelButton extends StatelessWidget {
       ),
       onTap: () {
         Navigator.of(context).pop();
-         if (onPressed != null) {
+        if (onPressed != null) {
           onPressed!();
         }
       },

@@ -1,10 +1,12 @@
 import 'package:get/get.dart';
 import 'package:harmonymusic/services/storage/sqlite_store.dart';
+import 'package:harmonymusic/profiles/profile_manager.dart';
 
 class PendingSyncQueueService extends GetxService {
   static const boxName = 'PendingSyncChanges';
 
   final pendingCount = 0.obs;
+  Worker? _profileWorker;
 
   SqliteBox get _box => SqliteStore.box(boxName);
 
@@ -12,6 +14,12 @@ class PendingSyncQueueService extends GetxService {
   void onInit() {
     super.onInit();
     refreshCount();
+    if (Get.isRegistered<ProfileManager>()) {
+      _profileWorker = ever(
+        Get.find<ProfileManager>().activeProfile,
+        (_) => refreshCount(),
+      );
+    }
   }
 
   Future<void> enqueueSnapshotChange({
@@ -58,5 +66,11 @@ class PendingSyncQueueService extends GetxService {
 
   void refreshCount() {
     pendingCount.value = _box.length;
+  }
+
+  @override
+  void onClose() {
+    _profileWorker?.dispose();
+    super.onClose();
   }
 }

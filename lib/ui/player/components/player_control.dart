@@ -1,5 +1,5 @@
-import 'package:audio_video_progress_bar/audio_video_progress_bar.dart';
-import 'package:material_ui/material_ui.dart';
+﻿import 'package:audio_video_progress_bar/audio_video_progress_bar.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/utils/helpers/ionicons.dart';
 import 'package:harmonymusic/ui/widgets/custom_marquee.dart';
@@ -22,7 +22,7 @@ class PlayerControlWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        // ── Song info + favourite ─────────────────────────────────────────────
+        // â”€â”€ Song info + favourite â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -88,7 +88,7 @@ class PlayerControlWidget extends StatelessWidget {
 
         const SizedBox(height: AppSpacing.xl),
 
-        // ── Progress bar ─────────────────────────────────────────────────────
+        // â”€â”€ Progress bar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         GetX<PlayerController>(
           builder: (c) => ProgressBar(
             thumbRadius: 7,
@@ -111,7 +111,7 @@ class PlayerControlWidget extends StatelessWidget {
 
         const SizedBox(height: AppSpacing.lg),
 
-        // ── Transport controls ────────────────────────────────────────────────
+        // â”€â”€ Transport controls â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -133,7 +133,7 @@ class PlayerControlWidget extends StatelessWidget {
               onTap: ctrl.prev,
             ),
 
-            // Play / Pause — large glowing button
+            // Play / Pause â€” large glowing button
             const GlassPlayButton(
               size: 72,
               child: AnimatedPlayButton(

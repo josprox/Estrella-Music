@@ -1,4 +1,4 @@
-import 'package:material_ui/material_ui.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'package:harmonymusic/ui/screens/Search/search_result_screen_controller.dart';
@@ -34,7 +34,7 @@ class ContentListWidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // ── Section header ────────────────────────────────────────────────
+          // â”€â”€ Section header â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
           Padding(
             padding: const EdgeInsets.only(
                 left: AppSpacing.sm,
@@ -47,7 +47,7 @@ class ContentListWidget extends StatelessWidget {
                 Flexible(
                   child: Text(
                     !isHomeContent && content.title.length > 14
-                        ? '${content.title.substring(0, 14)}…'
+                        ? '${content.title.substring(0, 14)}â€¦'
                         : content.title,
                     style: tt.headlineSmall?.copyWith(
                       fontWeight: FontWeight.w800,
@@ -88,7 +88,7 @@ class ContentListWidget extends StatelessWidget {
             ),
           ),
 
-          // ── Horizontal list ────────────────────────────────────────────────
+          // â”€â”€ Horizontal list â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
           SizedBox(
             height: 212,
             child: Scrollbar(

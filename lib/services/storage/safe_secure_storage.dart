@@ -56,7 +56,8 @@ class SafeSecureStorage {
       await _storage.deleteAll();
       return true;
     } catch (e, stack) {
-      debugPrint('[SafeSecureStorage] Error borrando todo el almacenamiento: $e');
+      debugPrint(
+          '[SafeSecureStorage] Error borrando todo el almacenamiento: $e');
       if (kDebugMode) {
         debugPrint(stack.toString());
       }

@@ -69,7 +69,8 @@ class _SignatureGeneratorState {
   int numSamples = 0;
 
   // Band -> list of peaks (bands 0..3)
-  final List<List<_FrequencyPeak>> bandPeaks = List<List<_FrequencyPeak>>.generate(
+  final List<List<_FrequencyPeak>> bandPeaks =
+      List<List<_FrequencyPeak>>.generate(
     4,
     (_) => <_FrequencyPeak>[],
   );
@@ -103,8 +104,10 @@ class _SignatureGeneratorState {
   void doFFT() {
     final windowed = Float64List(ShazamSignatureGenerator.fftSize);
     for (int i = 0; i < ShazamSignatureGenerator.fftSize; i++) {
-      windowed[i] = samplesRing[(samplesPos + i) % ShazamSignatureGenerator.fftSize].toDouble() *
-          ShazamSignatureGenerator._hanning[i];
+      windowed[i] =
+          samplesRing[(samplesPos + i) % ShazamSignatureGenerator.fftSize]
+                  .toDouble() *
+              ShazamSignatureGenerator._hanning[i];
     }
     final result = computeRfft(windowed);
     fftOutputs[fftPos].setAll(0, result);
@@ -120,17 +123,22 @@ class _SignatureGeneratorState {
   }
 
   void doPeakSpreading() {
-    final lastFftIdx = (fftPos - 1 + ShazamSignatureGenerator.ringBufSize) % ShazamSignatureGenerator.ringBufSize;
+    final lastFftIdx = (fftPos - 1 + ShazamSignatureGenerator.ringBufSize) %
+        ShazamSignatureGenerator.ringBufSize;
     final spread = Float64List.fromList(fftOutputs[lastFftIdx]);
 
     for (int pos = 0; pos < ShazamSignatureGenerator.fftOutputSize - 2; pos++) {
-      spread[pos] = math.max(spread[pos], math.max(spread[pos + 1], spread[pos + 2]));
+      spread[pos] =
+          math.max(spread[pos], math.max(spread[pos + 1], spread[pos + 2]));
     }
 
     for (int pos = 0; pos < ShazamSignatureGenerator.fftOutputSize; pos++) {
       double maxVal = spread[pos];
       for (int offset in const [-1, -3, -6]) {
-        final idx = ((spreadPos + offset) % ShazamSignatureGenerator.ringBufSize + ShazamSignatureGenerator.ringBufSize) % ShazamSignatureGenerator.ringBufSize;
+        final idx =
+            ((spreadPos + offset) % ShazamSignatureGenerator.ringBufSize +
+                    ShazamSignatureGenerator.ringBufSize) %
+                ShazamSignatureGenerator.ringBufSize;
         final oldVal = spreadFfts[idx][pos];
         if (oldVal > maxVal) maxVal = oldVal;
         spreadFfts[idx][pos] = maxVal;
@@ -143,12 +151,33 @@ class _SignatureGeneratorState {
   }
 
   void doPeakRecognition() {
-    final fftMinus46 = fftOutputs[(fftPos - 46 + ShazamSignatureGenerator.ringBufSize * 2) % ShazamSignatureGenerator.ringBufSize];
-    final spreadMinus49 = spreadFfts[(spreadPos - 49 + ShazamSignatureGenerator.ringBufSize * 2) % ShazamSignatureGenerator.ringBufSize];
+    final fftMinus46 = fftOutputs[
+        (fftPos - 46 + ShazamSignatureGenerator.ringBufSize * 2) %
+            ShazamSignatureGenerator.ringBufSize];
+    final spreadMinus49 = spreadFfts[
+        (spreadPos - 49 + ShazamSignatureGenerator.ringBufSize * 2) %
+            ShazamSignatureGenerator.ringBufSize];
 
-    const otherOffsets = [-53, -45, 165, 172, 179, 186, 193, 200, 214, 221, 228, 235, 242, 249];
+    const otherOffsets = [
+      -53,
+      -45,
+      165,
+      172,
+      179,
+      186,
+      193,
+      200,
+      214,
+      221,
+      228,
+      235,
+      242,
+      249
+    ];
 
-    for (int binPos = 10; binPos < ShazamSignatureGenerator.fftOutputSize - 8; binPos++) {
+    for (int binPos = 10;
+        binPos < ShazamSignatureGenerator.fftOutputSize - 8;
+        binPos++) {
       final fftVal = fftMinus46[binPos];
       if (fftVal < 1.0 / 64.0 || fftVal < spreadMinus49[binPos]) continue;
 
@@ -161,7 +190,10 @@ class _SignatureGeneratorState {
 
       double maxNeighborOther = maxNeighborSpread49;
       for (int otherOffset in otherOffsets) {
-        final spreadIdx = ((spreadPos + otherOffset) % ShazamSignatureGenerator.ringBufSize + ShazamSignatureGenerator.ringBufSize) % ShazamSignatureGenerator.ringBufSize;
+        final spreadIdx =
+            ((spreadPos + otherOffset) % ShazamSignatureGenerator.ringBufSize +
+                    ShazamSignatureGenerator.ringBufSize) %
+                ShazamSignatureGenerator.ringBufSize;
         final v = spreadFfts[spreadIdx][binPos - 1];
         if (v > maxNeighborOther) maxNeighborOther = v;
       }
@@ -170,11 +202,16 @@ class _SignatureGeneratorState {
       final fftNumber = spreadNumWritten - 46;
 
       final peakMag = math.log(math.max(1.0 / 64.0, fftVal)) * 1477.3 + 6144;
-      final peakMagBefore = math.log(math.max(1.0 / 64.0, fftMinus46[binPos - 1])) * 1477.3 + 6144;
-      final peakMagAfter = math.log(math.max(1.0 / 64.0, fftMinus46[binPos + 1])) * 1477.3 + 6144;
+      final peakMagBefore =
+          math.log(math.max(1.0 / 64.0, fftMinus46[binPos - 1])) * 1477.3 +
+              6144;
+      final peakMagAfter =
+          math.log(math.max(1.0 / 64.0, fftMinus46[binPos + 1])) * 1477.3 +
+              6144;
 
       final peakVariation1 = peakMag * 2 - peakMagBefore - peakMagAfter;
-      final peakVariation2 = (peakMagAfter - peakMagBefore) * 32 / peakVariation1;
+      final peakVariation2 =
+          (peakMagAfter - peakMagBefore) * 32 / peakVariation1;
 
       final correctedBin = binPos * 64.0 + peakVariation2;
       final frequencyHz = correctedBin * (16000.0 / 2.0 / 1024.0 / 64.0);
@@ -239,17 +276,19 @@ class _SignatureGeneratorState {
     }
 
     final sizeMinusHeader = contentsStream.length + 8;
-    final samplesAndOffset = (numSamples + ShazamSignatureGenerator.sampleRate * 0.24).toInt();
+    final samplesAndOffset =
+        (numSamples + ShazamSignatureGenerator.sampleRate * 0.24).toInt();
 
     final headerBytes = ByteData(48);
     headerBytes.setInt32(0, 0xcafe2580, Endian.little); // magic1
-    headerBytes.setInt32(4, 0, Endian.little);          // crc32 placeholder
-    headerBytes.setInt32(8, sizeMinusHeader, Endian.little); // size_minus_header
+    headerBytes.setInt32(4, 0, Endian.little); // crc32 placeholder
+    headerBytes.setInt32(
+        8, sizeMinusHeader, Endian.little); // size_minus_header
     headerBytes.setInt32(12, 0x94119c00.toInt(), Endian.little); // magic2
     headerBytes.setInt32(16, 0, Endian.little);
     headerBytes.setInt32(20, 0, Endian.little);
     headerBytes.setInt32(24, 0, Endian.little);
-    headerBytes.setInt32(28, 3 << 27, Endian.little);  // shifted_sample_rate_id
+    headerBytes.setInt32(28, 3 << 27, Endian.little); // shifted_sample_rate_id
     headerBytes.setInt32(32, 0, Endian.little);
     headerBytes.setInt32(36, 0, Endian.little);
     headerBytes.setInt32(40, samplesAndOffset, Endian.little);
@@ -301,8 +340,12 @@ class _SignatureGeneratorState {
       }
       j = j ^ bit;
       if (i < j) {
-        final tmpRe = re[i]; re[i] = re[j]; re[j] = tmpRe;
-        final tmpIm = im[i]; im[i] = im[j]; im[j] = tmpIm;
+        final tmpRe = re[i];
+        re[i] = re[j];
+        re[j] = tmpRe;
+        final tmpIm = im[i];
+        im[i] = im[j];
+        im[j] = tmpIm;
       }
     }
 

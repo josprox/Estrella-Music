@@ -1,6 +1,6 @@
 import 'dart:math' as math;
 import 'dart:ui';
-import 'package:material_ui/material_ui.dart';
+import 'package:flutter/material.dart';
 
 /// Label visibility mode
 enum LabelVisibility { selectedOnly, always, never }
@@ -173,7 +173,8 @@ class _LiquidBottomNavigationBarState extends State<LiquidBottomNavigationBar>
     if (DateTime.now().isBefore(_ignoreScrollUntil)) return;
     if (!_isCollapsed && DateTime.now().isBefore(_expandedLockUntil)) return;
 
-    final double topSnapOffset = widget.collapseStartOffset.clamp(0, double.infinity);
+    final double topSnapOffset =
+        widget.collapseStartOffset.clamp(0, double.infinity);
     final double pixelThreshold = topSnapOffset;
 
     if (delta.abs() > 120) return;
@@ -223,7 +224,8 @@ class _LiquidBottomNavigationBarState extends State<LiquidBottomNavigationBar>
   Widget build(BuildContext context) {
     final route = ModalRoute.of(context);
     final primaryAnim = route?.animation ?? kAlwaysCompleteAnimation;
-    final secondaryAnim = route?.secondaryAnimation ?? kAlwaysDismissedAnimation;
+    final secondaryAnim =
+        route?.secondaryAnimation ?? kAlwaysDismissedAnimation;
 
     return AnimatedBuilder(
       animation: Listenable.merge([primaryAnim, secondaryAnim]),
@@ -451,7 +453,8 @@ class _LiquidBottomNavigationBarState extends State<LiquidBottomNavigationBar>
                       flex: flexValues[index],
                       child: GestureDetector(
                         onTap: () {
-                          _pauseScrollHandling(const Duration(milliseconds: 1200));
+                          _pauseScrollHandling(
+                              const Duration(milliseconds: 1200));
                           _lockExpanded(const Duration(milliseconds: 1200));
                           widget.onTap?.call(index);
                         },

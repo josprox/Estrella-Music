@@ -1,9 +1,9 @@
-import 'package:material_ui/material_ui.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/services/storage/sqlite_store.dart';
 import 'package:harmonymusic/services/auth/auth_service.dart';
 import 'package:harmonymusic/ui/screens/Friends/friends_management_screen.dart';
-import 'package:harmonymusic/ui/screens/Home/home_screen_controller.dart';
+import 'package:harmonymusic/ui/profiles/profile_switcher.dart';
+import 'package:harmonymusic/music_provider/models/playback_source.dart';
 
 import 'package:harmonymusic/utils/localization/lang_mapping.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -16,10 +16,7 @@ import 'package:harmonymusic/ui/widgets/cloud_backup_dialog.dart';
 import 'package:harmonymusic/ui/widgets/cloud_sync_status_dialog.dart';
 import 'package:harmonymusic/ui/widgets/legacy_music_migration_dialog.dart';
 import 'package:harmonymusic/ui/widgets/restore_dialog.dart';
-import 'package:harmonymusic/ui/screens/Library/library_controller.dart';
 import 'package:harmonymusic/ui/widgets/snackbar.dart';
-import '/ui/widgets/link_piped.dart';
-import 'package:harmonymusic/services/music/music_service.dart';
 
 import '/ui/utils/theme_controller.dart';
 import 'components/custom_expansion_tile.dart';
@@ -80,7 +77,7 @@ class SettingsScreen extends StatelessWidget {
             ),
             const SizedBox(height: 16),
             Text(
-              "${ctrl.currentVersion.value} • ${S.current.developedBy}",
+              "${ctrl.currentVersion.value} â€¢ ${S.current.developedBy}",
               style: tt.labelSmall
                   ?.copyWith(color: cs.onSurfaceVariant.withValues(alpha: 0.6)),
             ),
@@ -102,7 +99,7 @@ class SettingsScreen extends StatelessWidget {
         slivers: [
           SliverToBoxAdapter(child: SizedBox(height: topPad)),
 
-          // ── Header ───────────────────────────────────────────────────────
+          // â”€â”€ Header â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
           SliverToBoxAdapter(
             child: Padding(
               padding: const EdgeInsets.fromLTRB(20, 0, 20, 8),
@@ -134,7 +131,7 @@ class SettingsScreen extends StatelessWidget {
             ),
           ),
 
-          // ── Update banner ─────────────────────────────────────────────────
+          // â”€â”€ Update banner â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
           SliverToBoxAdapter(
             child: Obx(() => ctrl.isNewVersionAvailable.value
                 ? Padding(
@@ -244,7 +241,7 @@ class SettingsScreen extends StatelessWidget {
             ),
           ),
 
-          // ── Footer ───────────────────────────────────────────────────────
+          // â”€â”€ Footer â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
           SliverToBoxAdapter(
             child: Padding(
               padding: const EdgeInsets.only(top: 24.0),
@@ -440,9 +437,9 @@ Widget radioWidget(
   });
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Sub-secciones de Configuración
-// ─────────────────────────────────────────────────────────────────────────────
+// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// Sub-secciones de ConfiguraciÃ³n
+// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 class SettingsAppearanceScreen extends StatelessWidget {
   const SettingsAppearanceScreen({super.key});
@@ -626,45 +623,6 @@ class SettingsContentScreen extends StatelessWidget {
                 onChanged: ctrl.toggleCacheHomeScreenData)),
           ),
           SettingsTile(
-            title: S.current.Piped,
-            subtitle: S.current.linkPipedDes,
-            leadingIcon: Icons.sync_alt_rounded,
-            trailing: TextButton(
-              onPressed: () {
-                if (ctrl.isLinkedWithPiped.isFalse) {
-                  showDialog(
-                          context: context, builder: (_) => const LinkPiped())
-                      .whenComplete(() => Get.delete<PipedLinkedController>());
-                } else {
-                  ctrl.unlinkPiped();
-                }
-              },
-              child: Obx(() => Text(
-                  ctrl.isLinkedWithPiped.value
-                      ? S.current.unLink
-                      : S.current.link,
-                  style: const TextStyle(fontWeight: FontWeight.bold))),
-            ),
-          ),
-          Obx(() => ctrl.isLinkedWithPiped.isTrue
-              ? SettingsTile(
-                  title: S.current.resetblacklistedplaylist,
-                  subtitle: S.current.resetblacklistedplaylistDes,
-                  leadingIcon: Icons.block_rounded,
-                  trailing: TextButton(
-                    onPressed: () async {
-                      await Get.find<LibraryPlaylistsController>()
-                          .resetBlacklistedPlaylist();
-                      ScaffoldMessenger.of(Get.context!).showSnackBar(snackbar(
-                          Get.context!, S.current.blacklistPlstResetAlert,
-                          size: SanckBarSize.MEDIUM));
-                    },
-                    child: Text(S.current.reset,
-                        style: const TextStyle(fontWeight: FontWeight.bold)),
-                  ),
-                )
-              : const SizedBox.shrink()),
-          SettingsTile(
             title: S.current.clearImgCache,
             subtitle: S.current.clearImgCacheDes,
             leadingIcon: Icons.image_not_supported_rounded,
@@ -710,9 +668,9 @@ class SettingsPlaybackScreen extends StatelessWidget {
                   value: ctrl.streamingQuality.value,
                   items: [
                     DropdownMenuItem(
-                        value: AudioQuality.Low, child: Text(S.current.low)),
+                        value: AudioQuality.low, child: Text(S.current.low)),
                     DropdownMenuItem(
-                        value: AudioQuality.High, child: Text(S.current.high)),
+                        value: AudioQuality.high, child: Text(S.current.high)),
                   ],
                   onChanged: ctrl.setStreamingQuality,
                 )),
@@ -862,10 +820,7 @@ class SettingsDownloadsScreen extends StatelessWidget {
                 child: Text(S.current.reset,
                     style: const TextStyle(fontWeight: FontWeight.bold))),
           ),
-          if (GetPlatform.isAndroid &&
-              SqliteStore.box('AppPrefs')
-                      .get('emusicCloudRequested', defaultValue: false) !=
-                  true)
+          if (GetPlatform.isAndroid)
             SettingsTile(
               title: S.current.exportDowloadedFiles,
               subtitle: S.current.exportDowloadedFilesDes,
@@ -876,10 +831,7 @@ class SettingsDownloadsScreen extends StatelessWidget {
                       builder: (_) => const ExportFileDialog())
                   .whenComplete(() => Get.delete<ExportFileDialogController>()),
             ),
-          if (GetPlatform.isAndroid &&
-              SqliteStore.box('AppPrefs')
-                      .get('emusicCloudRequested', defaultValue: false) !=
-                  true)
+          if (GetPlatform.isAndroid)
             SettingsTile(
               title: S.current.exportedFileLocation,
               leadingIcon: Icons.drive_folder_upload_rounded,
@@ -938,6 +890,10 @@ class SettingsAccountScreen extends StatelessWidget {
                       style: const TextStyle(fontWeight: FontWeight.bold)),
                 ),
               )),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            child: ProfileSwitcher(),
+          ),
           const Divider(height: 1, indent: 16, endIndent: 16),
           SettingsTile(
             title: S.current.settings_cloud_backup,
@@ -957,63 +913,12 @@ class SettingsAccountScreen extends StatelessWidget {
                 builder: (_) => const CloudSyncStatusDialog()),
             trailing: const Icon(Icons.chevron_right_rounded),
           ),
-          if (SqliteStore.box('AppPrefs')
-                  .get('emusicDataMode', defaultValue: 'local') ==
-              'cloud')
-            SettingsTile(
-              title: S.current.settings_my_friends,
-              subtitle: S.current.settings_my_friends_desc,
-              leadingIcon: Icons.people_outline_rounded,
-              onTap: () => Get.to(() => const FriendsManagementScreen()),
-              trailing: const Icon(Icons.chevron_right_rounded),
-            ),
           SettingsTile(
-            title: S.current.settings_refresh_visitor_title,
-            subtitle: S.current.settings_refresh_visitor_desc,
-            leadingIcon: Icons.refresh_rounded,
-            onTap: () async {
-              Get.dialog(
-                const Center(child: CircularProgressIndicator()),
-                barrierDismissible: false,
-              );
-              try {
-                final musicServices = Get.find<MusicServices>();
-                final newId = await musicServices.genrateVisitorId();
-                Get.back(); // close loading dialog
-                if (newId != null) {
-                  musicServices.setVisitorId(newId);
-                  Get.snackbar(
-                    S.current.settings_visitor_updated,
-                    S.current.settings_visitor_updated_desc,
-                    snackPosition: SnackPosition.BOTTOM,
-                    backgroundColor: Colors.black87,
-                    colorText: Colors.white,
-                  );
-                  if (Get.isRegistered<HomeScreenController>()) {
-                    Get.find<HomeScreenController>().loadContent();
-                  }
-                } else {
-                  Get.snackbar(
-                    S.current.settings_visitor_error,
-                    S.current.settings_visitor_error_desc,
-                    snackPosition: SnackPosition.BOTTOM,
-                    backgroundColor: Colors.black87,
-                    colorText: Colors.white,
-                  );
-                }
-              } catch (e) {
-                if (Get.isOverlaysOpen) {
-                  Get.back();
-                }
-                Get.snackbar(
-                  S.current.settings_visitor_error,
-                  S.current.settings_visitor_exception(e.toString()),
-                  snackPosition: SnackPosition.BOTTOM,
-                  backgroundColor: Colors.black87,
-                  colorText: Colors.white,
-                );
-              }
-            },
+            title: S.current.settings_my_friends,
+            subtitle: S.current.settings_my_friends_desc,
+            leadingIcon: Icons.people_outline_rounded,
+            onTap: () => Get.to(() => const FriendsManagementScreen()),
+            trailing: const Icon(Icons.chevron_right_rounded),
           ),
           SettingsTile(
             title: S.current.settings_migration_title,

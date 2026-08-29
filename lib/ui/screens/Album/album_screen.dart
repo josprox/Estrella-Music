@@ -1,6 +1,6 @@
 import 'package:audio_service/audio_service.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:material_ui/material_ui.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/models/playling_from.dart';
 import 'package:harmonymusic/models/thumbnail.dart';
@@ -70,20 +70,15 @@ class AlbumScreen extends StatelessWidget {
                               spreadRadius: 200,
                               blurRadius: 100,
                               offset: Offset(
-                                  0,
-                                  landscape
-                                      ? size.height
-                                      : size.width + 80),
+                                  0, landscape ? size.height : size.width + 80),
                             )
                           ],
                         ),
                         child: CachedNetworkImage(
-                          imageUrl: Thumbnail(albumController
-                                  .album.value.thumbnailUrl)
+                          imageUrl: Thumbnail(
+                                  albumController.album.value.thumbnailUrl)
                               .extraHigh,
-                          fit: landscape
-                              ? BoxFit.fitHeight
-                              : BoxFit.fitWidth,
+                          fit: landscape ? BoxFit.fitHeight : BoxFit.fitWidth,
                           width: landscape ? null : size.width,
                           height: landscape ? size.height : null,
                         ),
@@ -134,12 +129,12 @@ class AlbumScreen extends StatelessWidget {
                             ? const Padding(
                                 padding: EdgeInsets.only(right: 8),
                                 child: Chip(
-                                  label: Text('Sin conexión',
+                                  label: Text('Sin conexiÃ³n',
                                       style: TextStyle(
                                           fontSize: 11,
                                           fontWeight: FontWeight.w600)),
-                                  avatar: Icon(Icons.wifi_off_rounded,
-                                      size: 14),
+                                  avatar:
+                                      Icon(Icons.wifi_off_rounded, size: 14),
                                   visualDensity: VisualDensity.compact,
                                   padding: EdgeInsets.zero,
                                 ),
@@ -183,7 +178,7 @@ class AlbumScreen extends StatelessWidget {
                                         children: [
                                           // Bookmark button
                                           Obx(() => IconButton(
-                                            tooltip: albumController
+                                              tooltip: albumController
                                                       .isAddedToLibrary.isFalse
                                                   ? S.current.addToLibrary
                                                   : S.current.removeFromLibrary,
@@ -203,9 +198,12 @@ class AlbumScreen extends StatelessWidget {
                                                           context,
                                                           value
                                                               ? add
-                                                                  ? S.current.albumBookmarkAddAlert
-                                                                  : S.current.albumBookmarkRemoveAlert
-                                                              : S.current.operationFailed,
+                                                                  ? S.current
+                                                                      .albumBookmarkAddAlert
+                                                                  : S.current
+                                                                      .albumBookmarkRemoveAlert
+                                                              : S.current
+                                                                  .operationFailed,
                                                           size: SanckBarSize
                                                               .MEDIUM));
                                                 });
@@ -216,7 +214,7 @@ class AlbumScreen extends StatelessWidget {
                                                   : Icons.bookmark_added))),
                                           // Play button
                                           IconButton(
-                                            tooltip: S.current.play,
+                                              tooltip: S.current.play,
                                               onPressed: () {
                                                 playerController
                                                     .playPlayListSong(
@@ -243,7 +241,8 @@ class AlbumScreen extends StatelessWidget {
                                               )),
                                           // Enqueue button
                                           IconButton(
-                                            tooltip: S.current.enqueueAlbumSongs,
+                                              tooltip:
+                                                  S.current.enqueueAlbumSongs,
                                               onPressed: () {
                                                 Get.find<PlayerController>()
                                                     .enqueueSongList(
@@ -255,7 +254,8 @@ class AlbumScreen extends StatelessWidget {
                                                             context)
                                                         .showSnackBar(snackbar(
                                                             context,
-                                                            S.current.songEnqueueAlert,
+                                                            S.current
+                                                                .songEnqueueAlert,
                                                             size: SanckBarSize
                                                                 .MEDIUM));
                                                   }
@@ -274,7 +274,8 @@ class AlbumScreen extends StatelessWidget {
                                             final id = albumController
                                                 .album.value.browseId;
                                             return IconButton(
-                                              tooltip: S.current.downloadAlbumSongs,
+                                              tooltip:
+                                                  S.current.downloadAlbumSongs,
                                               onPressed: () {
                                                 if (albumController
                                                     .isDownloaded.isTrue) {
@@ -313,8 +314,8 @@ class AlbumScreen extends StatelessWidget {
                                                             const Center(
                                                                 child:
                                                                     LoadingIndicator(
-                                                                dimension: 30,
-                                                              ))
+                                                              dimension: 30,
+                                                            ))
                                                           ],
                                                         )
                                                       : controller.playlistQueue
@@ -339,13 +340,18 @@ class AlbumScreen extends StatelessWidget {
                                             );
                                           }),
                                           IconButton(
-                                            tooltip: S.current.shareAlbum,
+                                              tooltip: S.current.shareAlbum,
                                               visualDensity:
                                                   const VisualDensity(
                                                       vertical: -3),
                                               splashRadius: 10,
                                               onPressed: () {
-                                                YoutubeShareManager.shareAlbum(albumController.album.value.audioPlaylistId ?? '', albumTitle: albumController.album.value.title);
+                                                YoutubeShareManager.shareAlbum(
+                                                    albumController.album.value
+                                                            .audioPlaylistId ??
+                                                        '',
+                                                    albumTitle: albumController
+                                                        .album.value.title);
                                               },
                                               icon: const Icon(
                                                 Icons.share,
@@ -419,9 +425,13 @@ class AlbumScreen extends StatelessWidget {
                                 padding:
                                     const EdgeInsets.only(left: 20.0, right: 5),
                                 child: Obx(() {
-                                  final song = albumController.songList[index - 3];
-                                  final isDownloaded = SqliteStore.box('SongDownloads').containsKey(song.id);
-                                  final isOffline = albumController.isOffline.isTrue;
+                                  final song =
+                                      albumController.songList[index - 3];
+                                  final isDownloaded =
+                                      SqliteStore.box('SongDownloads')
+                                          .containsKey(song.id);
+                                  final isOffline =
+                                      albumController.isOffline.isTrue;
                                   final disabled = isOffline && !isDownloaded;
                                   return Opacity(
                                     opacity: disabled ? 0.38 : 1.0,
@@ -436,7 +446,8 @@ class AlbumScreen extends StatelessWidget {
                                                 playfrom: PlaylingFrom(
                                                     name: albumController
                                                         .album.value.title,
-                                                    type: PlaylingFromType.ALBUM));
+                                                    type: PlaylingFromType
+                                                        .ALBUM));
                                           },
                                           song: song,
                                           isPlaylistOrAlbum: true,
@@ -528,10 +539,8 @@ class AlbumScreen extends StatelessWidget {
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(10.0)),
       ),
-
       isScrollControlled: true,
       context: context,
-
       builder: (context) => SongInfoBottomSheet(song),
     ).whenComplete(() => Get.delete<SongInfoController>());
   }

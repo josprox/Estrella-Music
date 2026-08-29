@@ -49,8 +49,7 @@ class CloudBackupFile {
     final name = fileIdFileName.isNotEmpty ? fileIdFileName : fileName;
 
     // Patrón ISO reducido: YYYY-MM-DDTHH (ej: 2024-05-08T143022)
-    final isoPattern = RegExp(
-        r'(\d{4})-(\d{2})-(\d{2})T(\d{2})(\d{2})(\d{2})');
+    final isoPattern = RegExp(r'(\d{4})-(\d{2})-(\d{2})T(\d{2})(\d{2})(\d{2})');
     final isoMatch = isoPattern.firstMatch(name);
     if (isoMatch != null) {
       return DateTime.tryParse(
@@ -60,8 +59,8 @@ class CloudBackupFile {
     }
 
     // Patrón compacto: YYYYMMDD_HHmmss o YYYYMMDD-HHmmss
-    final compactPattern = RegExp(
-        r'(\d{4})(\d{2})(\d{2})[_\-T](\d{2})(\d{2})(\d{2})');
+    final compactPattern =
+        RegExp(r'(\d{4})(\d{2})(\d{2})[_\-T](\d{2})(\d{2})(\d{2})');
     final compactMatch = compactPattern.firstMatch(name);
     if (compactMatch != null) {
       return DateTime.tryParse(
@@ -192,7 +191,8 @@ class CloudBackupService extends GetxService {
     if (response.statusCode == 200) {
       // Actualizar el timestamp para el control de frecuencia (4h/12h)
       final appPrefs = SqliteStore.box('AppPrefs');
-      await appPrefs.put('last_cloud_backup_timestamp', DateTime.now().toIso8601String());
+      await appPrefs.put(
+          'last_cloud_backup_timestamp', DateTime.now().toIso8601String());
     } else {
       throw StateError('No fue posible subir el backup a la nube.');
     }

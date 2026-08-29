@@ -1,14 +1,12 @@
-import 'package:material_ui/material_ui.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '/ui/widgets/modification_list.dart';
 import 'package:harmonymusic/models/playlist.dart';
-import 'package:harmonymusic/ui/widgets/piped_sync_widget.dart';
 import 'library_controller.dart';
 import 'package:harmonymusic/ui/widgets/content_list_widget_item.dart';
 import 'package:harmonymusic/ui/widgets/list_widget.dart';
 import 'package:harmonymusic/ui/widgets/sort_widget.dart';
-import 'package:harmonymusic/ui/screens/Settings/settings_screen_controller.dart';
 import 'package:harmonymusic/generated/l10n.dart';
 
 class SongsLibraryWidget extends StatelessWidget {
@@ -215,7 +213,6 @@ class PlaylistNAlbumLibraryWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final libralbumCntrller = Get.find<LibraryAlbumsController>();
     final librplstCntrller = Get.find<LibraryPlaylistsController>();
-    final settingscrnController = Get.find<SettingsScreenController>();
 
     const double itemHeight = 180;
     const double itemWidth = 130;
@@ -238,15 +235,6 @@ class PlaylistNAlbumLibraryWidget extends StatelessWidget {
                 context,
                 isAlbumContent ? S.current.libAlbums : S.current.libPlaylists,
               ),
-              if (!(settingscrnController.isBottomNavBarEnabled.isTrue ||
-                  isAlbumContent ||
-                  settingscrnController.isLinkedWithPiped.isFalse))
-                const Positioned(
-                  right: 0,
-                  child: PipedSyncWidget(
-                    padding: EdgeInsets.zero,
-                  ),
-                )
             ],
           ),
           if (isAlbumContent)

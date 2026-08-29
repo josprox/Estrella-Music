@@ -32,7 +32,11 @@ class Playlist {
       this.isPublic = false,
       this.isCollaborative = false,
       this.collaborators = const [],
-      this.ownerId});
+      this.ownerId,
+      this.providerId,
+      this.profileId,
+      String? sourceId})
+      : sourceId = sourceId ?? playlistId;
   final String playlistId;
   String title;
   final bool isPipedPlaylist;
@@ -44,6 +48,9 @@ class Playlist {
   bool isCollaborative;
   List<dynamic> collaborators;
   final int? ownerId;
+  final String? providerId;
+  final String? profileId;
+  final String sourceId;
   static const thumbPlaceholderUrl =
       "https://raw.githubusercontent.com/anandnet/Harmony-Music/refs/heads/main/playlist_placeholder.png";
 
@@ -51,14 +58,15 @@ class Playlist {
     final thumbnailUrl = _thumbnailUrlFromJson(json);
     return Playlist(
       title: json["title"]?.toString() ?? "Playlist",
-      playlistId: (json["playlistId"] ?? json["playlist_id"] ?? json["browseId"])
-          .toString(),
+      playlistId:
+          (json["playlistId"] ?? json["playlist_id"] ?? json["browseId"])
+              .toString(),
       thumbnailUrl: thumbnailUrl.isEmpty
           ? Thumbnail(thumbPlaceholderUrl).extraHigh
           : Thumbnail(thumbnailUrl).extraHigh,
       description: json["description"]?.toString() ?? "Playlist",
-      songCount: (json['itemCount'] ?? json['count'] ?? json['songCount'])
-          ?.toString(),
+      songCount:
+          (json['itemCount'] ?? json['count'] ?? json['songCount'])?.toString(),
       isPipedPlaylist: _boolFromJson(json["isPipedPlaylist"]),
       isCloudPlaylist: json.containsKey("isCloudPlaylist")
           ? _boolFromJson(json["isCloudPlaylist"])
@@ -68,6 +76,9 @@ class Playlist {
           _boolFromJson(json["isCollaborative"] ?? json["is_collaborative"]),
       collaborators: json["collaborators"] as List? ?? [],
       ownerId: _intFromJson(json["ownerId"] ?? json["owner_id"]),
+      providerId: json['providerId']?.toString(),
+      profileId: json['profileId']?.toString(),
+      sourceId: json['sourceId']?.toString(),
     );
   }
 
@@ -106,6 +117,9 @@ class Playlist {
   Map<String, dynamic> toJson() => {
         "title": title,
         "playlistId": playlistId,
+        'providerId': providerId,
+        'profileId': profileId,
+        'sourceId': sourceId,
         "description": description,
         'thumbnails': [
           {'url': thumbnailUrl}
@@ -138,7 +152,10 @@ class Playlist {
         isPublic: isPublic ?? this.isPublic,
         isCollaborative: isCollaborative ?? this.isCollaborative,
         collaborators: collaborators ?? this.collaborators,
-        ownerId: ownerId ?? this.ownerId);
+        ownerId: ownerId ?? this.ownerId,
+        providerId: providerId,
+        profileId: profileId,
+        sourceId: sourceId);
   }
 
   // Converts this object to a MediaItem object.

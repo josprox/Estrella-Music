@@ -1,11 +1,11 @@
-import 'package:audio_service/audio_service.dart' show MediaItem;
-import 'package:material_ui/material_ui.dart';
+﻿import 'package:audio_service/audio_service.dart' show MediaItem;
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/base_class/playlist_album_screen_con_base.dart';
 import 'package:harmonymusic/models/album.dart';
 import 'package:harmonymusic/models/playlist.dart';
 import 'package:harmonymusic/services/auth/catalog_recovery_service.dart';
-import 'package:harmonymusic/services/music/music_service.dart' show NetworkError;
+import 'package:harmonymusic/music_provider/music_provider.dart';
 import 'package:harmonymusic/utils/helpers/helper.dart';
 import 'package:harmonymusic/services/storage/sqlite_store.dart';
 
@@ -67,7 +67,9 @@ class AlbumScreenController extends PlaylistAlbumScreenControllerBase
       if (wasInLibrary) {
         // Load cached tracks immediately for instant visual load
         final box = await SqliteStore.openBox(sanitizeBoxName(albumId));
-        final sortedKeys = box.keys.toList()..sort((a, b) => int.parse(a.toString()).compareTo(int.parse(b.toString())));
+        final sortedKeys = box.keys.toList()
+          ..sort((a, b) =>
+              int.parse(a.toString()).compareTo(int.parse(b.toString())));
         songList.value = sortedKeys
             .map((key) => MediaItemBuilder.fromJson(box.get(key)))
             .whereType<MediaItem>()
@@ -76,15 +78,14 @@ class AlbumScreenController extends PlaylistAlbumScreenControllerBase
       }
 
       // Fetch the most updated tracklist from the network
-      final isPodcast =
-          album_?.isPodcast == true || albumId.startsWith('MPSP');
+      final isPodcast = album_?.isPodcast == true || albumId.startsWith('MPSP');
       final content = isPodcast
           ? await musicServices.podcast(albumId)
           : await musicServices.getPlaylistOrAlbumSongs(albumId: albumId);
       content['browseId'] = albumId;
       album.value = Album.fromJson(content);
       animationController.forward();
-      
+
       // Update with the latest network songs
       songList.value = List<MediaItem>.from(content['tracks'] ?? []);
       _cacheAlbumThumbnail(albumId, album.value.thumbnailUrl);
@@ -93,7 +94,7 @@ class AlbumScreenController extends PlaylistAlbumScreenControllerBase
         updateSongsIntoDb();
       }
       checkDownloadStatus();
-    } on NetworkError catch (error) {
+    } on MusicProviderException catch (error) {
       printERROR("Error fetching album details (offline): $error");
       await _loadOfflineMode(albumId);
     } catch (e) {
@@ -106,7 +107,6 @@ class AlbumScreenController extends PlaylistAlbumScreenControllerBase
   String _albumTitleHint() {
     return album.value.title.trim();
   }
-
 
   /// Saves album thumbnail URL to SqliteStore for offline access
   Future<void> _cacheAlbumThumbnail(String albumId, String url) async {
@@ -139,7 +139,9 @@ class AlbumScreenController extends PlaylistAlbumScreenControllerBase
     try {
       final box = await SqliteStore.openBox(sanitizeBoxName(albumId));
       if (box.isNotEmpty) {
-        final sortedKeys = box.keys.toList()..sort((a, b) => int.parse(a.toString()).compareTo(int.parse(b.toString())));
+        final sortedKeys = box.keys.toList()
+          ..sort((a, b) =>
+              int.parse(a.toString()).compareTo(int.parse(b.toString())));
         songList.value = sortedKeys
             .map((key) => MediaItemBuilder.fromJson(box.get(key)))
             .whereType<MediaItem>()
@@ -207,7 +209,8 @@ class AlbumScreenController extends PlaylistAlbumScreenControllerBase
 
   @override
   Future<void> updateSongsIntoDb() async {
-    final songsBox = await SqliteStore.openBox(sanitizeBoxName(album.value.browseId));
+    final songsBox =
+        await SqliteStore.openBox(sanitizeBoxName(album.value.browseId));
     await songsBox.clear();
     final songListCopy = songList.toList();
     for (int i = 0; i < songListCopy.length; i++) {

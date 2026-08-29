@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:audio_service/audio_service.dart';
-import 'package:material_ui/material_ui.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/services/storage/sqlite_store.dart';
 
@@ -14,7 +14,7 @@ import '/models/playlist.dart';
 import '/models/artist.dart';
 import 'package:harmonymusic/generated/l10n.dart';
 import '/models/quick_picks.dart';
-import 'package:harmonymusic/services/music/music_service.dart';
+import 'package:harmonymusic/music_provider/music_catalog_service.dart';
 import 'package:harmonymusic/ui/screens/Settings/settings_screen_controller.dart';
 import '/ui/widgets/new_version_dialog.dart';
 
@@ -27,7 +27,7 @@ class HomeScreenController extends GetxController {
     return supportedStartupTabs.contains(index) ? index! : 0;
   }
 
-  final MusicServices _musicServices = Get.find<MusicServices>();
+  final MusicCatalogService _musicServices = Get.find<MusicCatalogService>();
   final isContentFetched = false.obs;
   final tabIndex = _initialTabIndex().obs;
   final networkError = false.obs;
@@ -61,14 +61,18 @@ class HomeScreenController extends GetxController {
     _initAndLoad();
   }
 
+  Future<void> reloadRecommendations() async {
+    await _loadDailyDiscover();
+    await _loadCommunityPlaylists();
+    await _loadKeepListening();
+    await _loadSimilarRecommendations();
+  }
+
   Future<void> _initAndLoad() async {
     await _musicServices.init();
     await loadContent();
     if (updateCheckFlag) _checkNewVersion();
-    _loadDailyDiscover();
-    _loadCommunityPlaylists();
-    _loadKeepListening();
-    _loadSimilarRecommendations();
+    unawaited(reloadRecommendations());
   }
 
   void _watchLocalSections() {
@@ -328,6 +332,18 @@ class HomeScreenController extends GetxController {
           final song = MediaItemBuilder.fromJson(value);
           if (song.id.isNotEmpty) localQuickPicks[song.id] = song;
         }
+        // Fallback: If SongsCache & favBox are empty, load directly from provider (e.g. LocalMusicProvider)
+        if (localQuickPicks.isEmpty &&
+            Get.isRegistered<MusicCatalogService>()) {
+          try {
+            final catalog = Get.find<MusicCatalogService>();
+            final tracks = await catalog.tracks();
+            for (final track in tracks) {
+              final item = catalog.mediaItemFromTrack(track);
+              if (item.id.isNotEmpty) localQuickPicks[item.id] = item;
+            }
+          } catch (_) {}
+        }
         if (localQuickPicks.isNotEmpty) {
           final songs = localQuickPicks.values.toList()..shuffle();
           quickPicks.value = QuickPicks(
@@ -530,8 +546,8 @@ class HomeScreenController extends GetxController {
       final appPrefs = await SqliteStore.openBox("AppPrefs");
       await appPrefs.put(
           "homeScreenDataTime", DateTime.now().millisecondsSinceEpoch);
-    } on NetworkError catch (r) {
-      printERROR("Home Content not loaded due to ${r.message}");
+    } catch (r) {
+      printERROR("Home Content not loaded: $r");
       await Future.delayed(const Duration(seconds: 1));
       networkError.value = !silent;
     }

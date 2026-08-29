@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'package:material_ui/material_ui.dart';
+import 'package:flutter/material.dart';
 
 class Marquee extends StatefulWidget {
   final String id;
@@ -43,14 +43,14 @@ class _MarqueeState extends State<Marquee> {
 
   void _animate() {
     if (!mounted || !_scrollController.hasClients) return;
-    
+
     final maxExtent = _scrollController.position.maxScrollExtent;
     if (maxExtent <= 0) return;
 
     final target = _scrollingForward ? maxExtent : 0.0;
     final currentPosition = _scrollController.position.pixels;
     final distance = (target - currentPosition).abs();
-    
+
     if (distance < 0.1) {
       _scrollingForward = !_scrollingForward;
       _startAnimation();
@@ -62,11 +62,13 @@ class _MarqueeState extends State<Marquee> {
     final speed = configuredSpeed.clamp(0.025, 0.08);
     final durationMs = (distance / speed).clamp(250.0, 30000.0).toInt();
 
-    _scrollController.animateTo(
+    _scrollController
+        .animateTo(
       target,
       duration: Duration(milliseconds: durationMs),
       curve: Curves.linear,
-    ).then((_) {
+    )
+        .then((_) {
       if (mounted) {
         _scrollingForward = !_scrollingForward;
         _startAnimation();

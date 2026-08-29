@@ -7,7 +7,9 @@ class QuickPicks {
   final String title;
 
   factory QuickPicks.fromJson(Map<dynamic, dynamic> json) => QuickPicks(
-      (json['songList'] as List).map((e) => MediaItemBuilder.fromJson(e)).toList(),
+      (json['songList'] as List)
+          .map((e) => MediaItemBuilder.fromJson(e))
+          .toList(),
       title: json['title']);
 
   Map<String, dynamic> toJson() => {

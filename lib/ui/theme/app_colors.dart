@@ -27,10 +27,11 @@ abstract class AppColors {
   static const Color textSecondaryDark = Color(0xFFB0B0D0);
   static const Color textTertiaryDark = Color(0xFF6A6A9A);
   static const Color textPrimaryLight = Color(0xFF1C1B1F); // M3 dark on surface
-  static const Color textSecondaryLight = Color(0xFF49454F); // M3 on surface variant
+  static const Color textSecondaryLight =
+      Color(0xFF49454F); // M3 on surface variant
 
   // ─── Semantic ─────────────────────────────────────────────────────────────
   static const Color success = Color(0xFF386A20); // M3 green tone
   static const Color warning = Color(0xFF7A5900); // M3 amber tone
-  static const Color error = Color(0xFFBA1A1A);   // M3 red tone
+  static const Color error = Color(0xFFBA1A1A); // M3 red tone
 }

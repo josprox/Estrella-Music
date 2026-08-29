@@ -14,19 +14,20 @@ class UpdateService {
 
       final dio = Dio();
       final response = await dio.get(checkUpdates);
-      
+
       if (response.statusCode != 200) return false;
 
       final data = response.data;
       if (data == null || data['Version'] == null) return false;
-      
+
       String latestVersion = data['Version'].toString();
 
       PackageInfo packageInfo = await PackageInfo.fromPlatform();
       String currentVersion = packageInfo.version;
 
       if (kDebugMode) {
-        print("Checking updates: Latest=$latestVersion, Current=$currentVersion");
+        print(
+            "Checking updates: Latest=$latestVersion, Current=$currentVersion");
       }
 
       return _isVersionGreater(latestVersion, currentVersion);
@@ -38,8 +39,10 @@ class UpdateService {
 
   static bool _isVersionGreater(String latestVersion, String currentVersion) {
     // Limpiar strings: quitar 'v', espacios y separar por '.'
-    List<String> latestParts = latestVersion.toLowerCase().replaceAll('v', '').split('.');
-    List<String> currentParts = currentVersion.toLowerCase().replaceAll('v', '').split('.');
+    List<String> latestParts =
+        latestVersion.toLowerCase().replaceAll('v', '').split('.');
+    List<String> currentParts =
+        currentVersion.toLowerCase().replaceAll('v', '').split('.');
 
     // Normalizar longitudes (ej: 1.0 vs 1.0.1 -> 1.0.0 vs 1.0.1)
     while (latestParts.length < currentParts.length) {
@@ -51,8 +54,10 @@ class UpdateService {
 
     for (int i = 0; i < latestParts.length; i++) {
       // Extraer solo números de cada parte (por si hay +63 o texto adicional)
-      int latestPart = int.tryParse(latestParts[i].replaceAll(RegExp(r'[^0-9]'), '')) ?? 0;
-      int currentPart = int.tryParse(currentParts[i].replaceAll(RegExp(r'[^0-9]'), '')) ?? 0;
+      int latestPart =
+          int.tryParse(latestParts[i].replaceAll(RegExp(r'[^0-9]'), '')) ?? 0;
+      int currentPart =
+          int.tryParse(currentParts[i].replaceAll(RegExp(r'[^0-9]'), '')) ?? 0;
 
       if (latestPart > currentPart) return true;
       if (latestPart < currentPart) return false;

@@ -14,7 +14,6 @@ import 'package:harmonymusic/models/playlist.dart';
 import 'package:harmonymusic/generated/l10n.dart';
 import 'package:harmonymusic/ui/screens/Library/library_controller.dart';
 import 'package:harmonymusic/utils/helpers/helper.dart';
-import 'package:harmonymusic/services/music/music_service.dart';
 
 class LegacyMigrationSummary {
   const LegacyMigrationSummary({
@@ -61,14 +60,6 @@ class LegacyMusicMigrationService extends GetxService {
     );
 
     try {
-      if (resolved.settingsFile != null) {
-        final visitorId =
-            _extractVisitorDataFromSettings(resolved.settingsFile!);
-        if (visitorId != null && visitorId.isNotEmpty) {
-          Get.find<MusicServices>().setVisitorId(visitorId);
-        }
-      }
-
       final songArtists = _loadSongArtists(database);
       final albumArtists = _loadAlbumArtists(database);
       final bookmarkedAlbumIds = _loadBookmarkedAlbumIds(database);
@@ -176,21 +167,6 @@ class LegacyMusicMigrationService extends GetxService {
       settingsFile: settingsFile,
       cleanupDirectory: extractDir,
     );
-  }
-
-  String? _extractVisitorDataFromSettings(File settingsFile) {
-    try {
-      final bytes = settingsFile.readAsBytesSync();
-      final content = String.fromCharCodes(bytes);
-      if (content.contains('visitorData')) {
-        final reg = RegExp(r'Cg[a-zA-Z0-9_\-%]{10,}');
-        final match = reg.firstMatch(content);
-        return match?.group(0);
-      }
-    } catch (e) {
-      printERROR('Fallo al extraer visitorData de settings: $e');
-    }
-    return null;
   }
 
   Map<String, List<Map<String, String>>> _loadSongArtists(Database database) {

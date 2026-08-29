@@ -1,5 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:material_ui/material_ui.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/services/storage/sqlite_store.dart';
 import 'package:audio_service/audio_service.dart';
@@ -40,9 +40,9 @@ class ArtistScreen extends StatelessWidget {
   }
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
+// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 // Spotify-style Artist Screen
-// ─────────────────────────────────────────────────────────────────────────────
+// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 class _SpotifyArtistScreen extends StatelessWidget {
   final ArtistScreenController ctrl;
   final String tag;
@@ -66,7 +66,7 @@ class _SpotifyArtistScreen extends StatelessWidget {
           return const Center(child: LoadingIndicator());
         }
 
-        // ── Offline mode ─────────────────────────────────────────────────
+        // â”€â”€ Offline mode â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         if (ctrl.isOffline.isTrue) {
           return _OfflineArtistView(
             ctrl: ctrl,
@@ -100,7 +100,7 @@ class _SpotifyArtistScreen extends StatelessWidget {
         return CustomScrollView(
           physics: const BouncingScrollPhysics(),
           slivers: [
-            // ── Hero image + gradient overlay ─────────────────────────────
+            // â”€â”€ Hero image + gradient overlay â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
             SliverToBoxAdapter(
               child: Stack(
                 children: [
@@ -246,7 +246,7 @@ class _SpotifyArtistScreen extends StatelessWidget {
               ),
             ),
 
-            // ── Floating Action Row ───────────────────────────────────────
+            // â”€â”€ Floating Action Row â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
             SliverToBoxAdapter(
               child: Padding(
                 padding:
@@ -327,7 +327,7 @@ class _SpotifyArtistScreen extends StatelessWidget {
               ),
             ),
 
-            // ── About section ─────────────────────────────────────────────
+            // â”€â”€ About section â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
             if (description != null && description.isNotEmpty)
               SliverToBoxAdapter(
                 child: Padding(
@@ -372,7 +372,7 @@ class _SpotifyArtistScreen extends StatelessWidget {
                 ),
               ),
 
-            // ── Liked Songs section ───────────────────────────────────
+            // â”€â”€ Liked Songs section â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
             Obx(() {
               if (ctrl.likedSongsOfArtist.isEmpty) {
                 return const SliverToBoxAdapter();
@@ -435,7 +435,7 @@ class _SpotifyArtistScreen extends StatelessWidget {
                                           .showSnackBar(
                                         const SnackBar(
                                             content: Text(
-                                                "Todas las favoritas ya están descargadas")),
+                                                "Todas las favoritas ya estÃ¡n descargadas")),
                                       );
                                     }
                                   },
@@ -476,7 +476,7 @@ class _SpotifyArtistScreen extends StatelessWidget {
               );
             }),
 
-            // ── Popular Tracks header ─────────────────────────────────────
+            // â”€â”€ Popular Tracks header â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
             SliverToBoxAdapter(
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(20, 0, 20, 12),
@@ -510,7 +510,7 @@ class _SpotifyArtistScreen extends StatelessWidget {
               ),
             ),
 
-            // ── Popular Tracks List ───────────────────────────────────────
+            // â”€â”€ Popular Tracks List â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
             Obx(() {
               final songs = ctrl.artistData['Songs'];
               if (songs == null) return const SliverToBoxAdapter();
@@ -530,7 +530,7 @@ class _SpotifyArtistScreen extends StatelessWidget {
               );
             }),
 
-            // ── Albums ─────────────────────────────────────────────
+            // â”€â”€ Albums â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
             Obx(() {
               final albums = ctrl.artistData['Albums'];
               if (albums == null) return const SliverToBoxAdapter();
@@ -600,16 +600,16 @@ class _SpotifyArtistScreen extends StatelessWidget {
               );
             }),
 
-            // ── Singles ────────────────────────────────────────────
+            // â”€â”€ Singles â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
             _buildHorizontalSection(context, ctrl, 'Singles'),
 
-            // ── Videos ────────────────────────────────────────────
+            // â”€â”€ Videos â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
             _buildHorizontalSection(context, ctrl, 'Videos', isVideo: true),
 
-            // ── Podcasts ─────────────────────────────────────────
+            // â”€â”€ Podcasts â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
             _buildHorizontalSection(context, ctrl, 'Podcasts'),
 
-            // ── Episodes ─────────────────────────────────────────
+            // â”€â”€ Episodes â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
             Obx(() {
               final episodes = ctrl.artistData['Episodes'];
               if (episodes == null) return const SliverToBoxAdapter();
@@ -668,7 +668,7 @@ class _SpotifyArtistScreen extends StatelessWidget {
               );
             }),
 
-            // ── Playlists ─────────────────────────────────────────
+            // â”€â”€ Playlists â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
             _buildHorizontalSection(context, ctrl, 'Playlists',
                 isPlaylist: true),
 
@@ -881,7 +881,7 @@ class _SpotifyArtistScreen extends StatelessWidget {
     return CustomScrollView(
       physics: const BouncingScrollPhysics(),
       slivers: [
-        // ── Desktop Header ───────────────────────────────────────
+        // â”€â”€ Desktop Header â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         SliverToBoxAdapter(
           child: Container(
             height: 380,
@@ -1236,7 +1236,7 @@ class _SpotifyArtistScreen extends StatelessWidget {
           ),
         ),
 
-        // ── Main Content Grid/Columns ─────────────────────────────
+        // â”€â”€ Main Content Grid/Columns â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         SliverPadding(
           padding: const EdgeInsets.symmetric(horizontal: 40),
           sliver: SliverToBoxAdapter(
@@ -1375,7 +1375,7 @@ class _SpotifyArtistScreen extends StatelessWidget {
                                                 .showSnackBar(
                                               const SnackBar(
                                                   content: Text(
-                                                      "Todas las favoritas ya están descargadas")),
+                                                      "Todas las favoritas ya estÃ¡n descargadas")),
                                             );
                                           }
                                         },
@@ -1471,7 +1471,7 @@ class _SpotifyArtistScreen extends StatelessWidget {
           ),
         ),
 
-        // ── Horizontal sections for Albums, Singles, Videos, Playlists, etc. ─────────────────────────────
+        // â”€â”€ Horizontal sections for Albums, Singles, Videos, Playlists, etc. â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         SliverPadding(
           padding: const EdgeInsets.symmetric(horizontal: 40),
           sliver: SliverList(
@@ -1599,9 +1599,9 @@ class _SpotifyArtistScreen extends StatelessWidget {
   }
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
+// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 // Track row widget
-// ─────────────────────────────────────────────────────────────────────────────
+// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 class _TrackRow extends StatelessWidget {
   final int index;
   final dynamic item;
@@ -1795,9 +1795,9 @@ class _TrackRow extends StatelessWidget {
   }
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
+// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 // Content Modal for "Show All"
-// ─────────────────────────────────────────────────────────────────────────────
+// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 class _ContentModal extends StatefulWidget {
   final String title;
   final List initialItems;
@@ -2027,9 +2027,9 @@ class _ContentModalState extends State<_ContentModal> {
   }
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
+// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 // Album card
-// ─────────────────────────────────────────────────────────────────────────────
+// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 class _AlbumCard extends StatelessWidget {
   final dynamic item;
   final bool isVideo;
@@ -2166,7 +2166,7 @@ class _AlbumCard extends StatelessWidget {
             ),
             const SizedBox(height: 4),
             Text(
-              '$type${year.isNotEmpty ? ' Â· $year' : ''}',
+              '$type${year.isNotEmpty ? ' Ã‚Â· $year' : ''}',
               style: TextStyle(
                 color: Theme.of(context).colorScheme.onSurface.withAlpha(138),
                 fontSize: 12,
@@ -2181,9 +2181,9 @@ class _AlbumCard extends StatelessWidget {
   }
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// AboutArtist — kept for backward compatibility (used in ArtistScreenBN)
-// ─────────────────────────────────────────────────────────────────────────────
+// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// AboutArtist â€” kept for backward compatibility (used in ArtistScreenBN)
+// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 class AboutArtist extends StatelessWidget {
   const AboutArtist({
     super.key,
@@ -2231,9 +2231,9 @@ class AboutArtist extends StatelessWidget {
   }
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
+// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 // Offline Artist View
-// ─────────────────────────────────────────────────────────────────────────────
+// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 class _OfflineArtistView extends StatelessWidget {
   final ArtistScreenController ctrl;
   final PlayerController playerController;
@@ -2253,7 +2253,7 @@ class _OfflineArtistView extends StatelessWidget {
     return CustomScrollView(
       physics: const BouncingScrollPhysics(),
       slivers: [
-        // ── Hero image ────────────────────────────────────────────────────
+        // â”€â”€ Hero image â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         SliverToBoxAdapter(
           child: Stack(
             children: [
@@ -2353,7 +2353,7 @@ class _OfflineArtistView extends StatelessWidget {
                     const SizedBox(height: 8),
                     const Chip(
                       label: Text(
-                        'Sin conexión',
+                        'Sin conexiÃ³n',
                         style: TextStyle(
                             fontSize: 12, fontWeight: FontWeight.w600),
                       ),
@@ -2368,7 +2368,7 @@ class _OfflineArtistView extends StatelessWidget {
           ),
         ),
 
-        // ── Downloaded songs header ────────────────────────────────────────
+        // â”€â”€ Downloaded songs header â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         SliverToBoxAdapter(
           child: Padding(
             padding: const EdgeInsets.fromLTRB(20, 16, 20, 12),
@@ -2383,7 +2383,7 @@ class _OfflineArtistView extends StatelessWidget {
           ),
         ),
 
-        // ── Downloaded songs list ─────────────────────────────────────────
+        // â”€â”€ Downloaded songs list â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         Obx(() {
           if (ctrl.offlineDownloadedSongs.isEmpty) {
             return SliverToBoxAdapter(

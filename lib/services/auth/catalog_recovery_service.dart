@@ -11,11 +11,11 @@ import 'package:harmonymusic/models/media_item_builder.dart';
 import 'package:harmonymusic/models/playlist.dart';
 import 'package:harmonymusic/ui/screens/Library/library_controller.dart';
 import 'package:harmonymusic/utils/helpers/helper.dart';
-import 'package:harmonymusic/services/music/music_service.dart';
+import 'package:harmonymusic/music_provider/music_catalog_service.dart';
 import 'package:harmonymusic/services/sync/sync_service.dart';
 
 class CatalogRecoveryService extends GetxService {
-  MusicServices get _musicServices => Get.find<MusicServices>();
+  MusicCatalogService get _musicServices => Get.find<MusicCatalogService>();
 
   Future<Artist?> findSimilarArtist({
     required String artistName,
@@ -450,14 +450,14 @@ class CatalogRecoveryService extends GetxService {
               'Syncing recovered track ${recoveredSong.id} to playlist $boxName '
               'at position $position (key=$key, key type: ${key.runtimeType})',
             );
-            
+
             // Delete old song ID from cloud playlist
             await syncService.recordPlaylistTrackChange(
               boxName,
               oldSongId,
               deleted: true,
             );
-            
+
             // Add new song ID to cloud playlist
             await syncService.recordPlaylistTrackChange(
               boxName,

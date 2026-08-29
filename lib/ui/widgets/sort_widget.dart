@@ -1,6 +1,6 @@
 // ignore_for_file: constant_identifier_names
 
-import 'package:material_ui/material_ui.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/ui/screens/Library/library_controller.dart';
 
@@ -177,8 +177,7 @@ class SortWidget extends StatelessWidget {
                     ),
                     Obx(
                       () => _customIconButton(
-                        isSelected:
-                            controller.sortType.value == SortType.Name,
+                        isSelected: controller.sortType.value == SortType.Name,
                         icon: Icons.sort_by_alpha,
                         tooltip: S.current.sortByName,
                         onPressed: () {
@@ -257,12 +256,11 @@ class SortWidget extends StatelessWidget {
                                     screenController: screenController,
                                     controller: controller,
                                   ));
-                
+
                           controller.setActiveMode(mode);
                           startAdditionalOperation!(controller, mode);
                         },
-                        itemBuilder: (BuildContext context) =>
-                            <PopupMenuEntry>[
+                        itemBuilder: (BuildContext context) => <PopupMenuEntry>[
                           if (isPlaylistRearrageFeatureRequired)
                             PopupMenuItem(
                               value: OperationMode.arrange,

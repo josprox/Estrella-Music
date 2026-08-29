@@ -1,5 +1,10 @@
 # EMusic incremental sync
 
+> Este documento describe el pipeline SQLite de perfiles eMusic. No aplica al
+> perfil local: local usa Hive y nunca se importa ni sincroniza
+> automáticamente. La referencia vigente es
+> `ESTRELLA_MUSIC_PROVIDER_ARCHITECTURE.md`.
+
 Estado: implementado como flujo principal para mutaciones posteriores al
 bootstrap cloud. El snapshot completo queda reservado para migracion inicial,
 restauracion y compatibilidad con clientes antiguos.

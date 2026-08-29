@@ -1,4 +1,4 @@
-import 'package:material_ui/material_ui.dart';
+﻿import 'package:flutter/material.dart';
 
 /// Material 3 Expressive settings section card.
 /// Shows a titled group of settings with an icon badge and subtle container.
@@ -107,10 +107,13 @@ class SettingsTile extends StatelessWidget {
                   color: cs.secondaryContainer,
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: Icon(leadingIcon, color: cs.onSecondaryContainer, size: 18),
+                child:
+                    Icon(leadingIcon, color: cs.onSecondaryContainer, size: 18),
               )
             : null,
-        title: Text(title, style: tt.bodyLarge?.copyWith(fontWeight: FontWeight.w600, letterSpacing: 0.1)),
+        title: Text(title,
+            style: tt.bodyLarge
+                ?.copyWith(fontWeight: FontWeight.w600, letterSpacing: 0.1)),
         subtitle: subtitle != null
             ? Text(
                 subtitle!,

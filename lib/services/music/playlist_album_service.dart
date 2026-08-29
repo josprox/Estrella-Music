@@ -1,7 +1,5 @@
-import 'package:dio/dio.dart';
 import 'package:harmonymusic/services/system/nav_parser.dart';
 import 'package:harmonymusic/services/system/utils.dart';
-import 'package:harmonymusic/services/system/constant.dart';
 import 'package:harmonymusic/services/system/continuations.dart';
 import 'package:harmonymusic/services/music/music_service.dart';
 
@@ -11,16 +9,8 @@ class PlaylistAlbumService {
   PlaylistAlbumService(this._musicServices);
 
   Future<String> getAlbumBrowseId(String audioPlaylistId) async {
-    final response = await _musicServices.dio.get("${domain}playlist",
-        options: Options(headers: _musicServices.headers),
-        queryParameters: {"list": audioPlaylistId});
-    final reg = RegExp(r'\"MPRE.+?\"');
-    final matchs = reg.firstMatch(response.data.toString());
-    if (matchs != null) {
-      final x = (matchs[0])!;
-      final res = (x.substring(1)).split("\\")[0];
-      return res;
-    }
+    // Public HTML scraping used to happen in Flutter. Provider catalog calls
+    // now go exclusively through eMusic, so retain the canonical ID here.
     return audioPlaylistId;
   }
 
@@ -100,7 +90,7 @@ class PlaylistAlbumService {
       final String count = (((header['secondSubtitle']['runs']
                       [secondSubtitleRunCount % 3]['text'])
                   .split(' ')[0])
-               .split(',') as List)
+              .split(',') as List)
           .join();
       final int songCount = int.parse(count);
       if (header['secondSubtitle']['runs'].length > 1) {

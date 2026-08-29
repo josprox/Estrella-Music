@@ -1,4 +1,4 @@
-import 'package:material_ui/material_ui.dart';
+import 'package:flutter/material.dart';
 
 class HoverCardWrapper extends StatefulWidget {
   final Widget child;
@@ -18,7 +18,8 @@ class HoverCardWrapper extends StatefulWidget {
   State<HoverCardWrapper> createState() => _HoverCardWrapperState();
 }
 
-class _HoverCardWrapperState extends State<HoverCardWrapper> with SingleTickerProviderStateMixin {
+class _HoverCardWrapperState extends State<HoverCardWrapper>
+    with SingleTickerProviderStateMixin {
   bool _isHovered = false;
 
   @override
@@ -39,7 +40,9 @@ class _HoverCardWrapperState extends State<HoverCardWrapper> with SingleTickerPr
           curve: Curves.easeOutCubic,
           decoration: BoxDecoration(
             shape: widget.isCircle ? BoxShape.circle : BoxShape.rectangle,
-            borderRadius: widget.isCircle ? null : BorderRadius.circular(widget.borderRadius),
+            borderRadius: widget.isCircle
+                ? null
+                : BorderRadius.circular(widget.borderRadius),
             boxShadow: _isHovered
                 ? [
                     BoxShadow(
@@ -68,8 +71,12 @@ class _HoverCardWrapperState extends State<HoverCardWrapper> with SingleTickerPr
                     duration: const Duration(milliseconds: 200),
                     child: Container(
                       decoration: BoxDecoration(
-                        shape: widget.isCircle ? BoxShape.circle : BoxShape.rectangle,
-                        borderRadius: widget.isCircle ? null : BorderRadius.circular(widget.borderRadius),
+                        shape: widget.isCircle
+                            ? BoxShape.circle
+                            : BoxShape.rectangle,
+                        borderRadius: widget.isCircle
+                            ? null
+                            : BorderRadius.circular(widget.borderRadius),
                         color: Colors.black.withValues(alpha: 0.35),
                       ),
                       child: Center(

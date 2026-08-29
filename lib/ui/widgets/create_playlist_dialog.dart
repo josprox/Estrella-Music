@@ -1,9 +1,8 @@
 import 'package:audio_service/audio_service.dart';
-import 'package:material_ui/material_ui.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'custom_marquee.dart';
 
-import 'package:harmonymusic/services/social/piped_service.dart';
 import 'package:harmonymusic/services/sync/sync_service.dart';
 import 'package:harmonymusic/ui/screens/Library/library_controller.dart';
 import '/ui/widgets/snackbar.dart';
@@ -27,10 +26,12 @@ class CreateNRenamePlaylistPopup extends StatefulWidget {
   final Playlist? playlist;
 
   @override
-  State<CreateNRenamePlaylistPopup> createState() => _CreateNRenamePlaylistPopupState();
+  State<CreateNRenamePlaylistPopup> createState() =>
+      _CreateNRenamePlaylistPopupState();
 }
 
-class _CreateNRenamePlaylistPopupState extends State<CreateNRenamePlaylistPopup> {
+class _CreateNRenamePlaylistPopupState
+    extends State<CreateNRenamePlaylistPopup> {
   bool _isCollaborative = false;
   final List<dynamic> _selectedFriends = [];
   late Future<List<Map<String, dynamic>>> _friendsFuture;
@@ -47,12 +48,12 @@ class _CreateNRenamePlaylistPopupState extends State<CreateNRenamePlaylistPopup>
     final librPlstCntrller = Get.find<LibraryPlaylistsController>();
     librPlstCntrller.changeCreationMode("local");
     librPlstCntrller.textInputController.text = "";
-    final isPipedLinked = Get.find<PipedServices>().isLoggedIn;
     final isCloudMode = Get.find<SyncService>().isCloudMode;
 
     return CommonDialog(
       child: Container(
-        padding: const EdgeInsets.only(top: 24, left: 24, right: 24, bottom: 16),
+        padding:
+            const EdgeInsets.only(top: 24, left: 24, right: 24, bottom: 16),
         child: SingleChildScrollView(
           child: Column(
             mainAxisSize: MainAxisSize.min,
@@ -71,41 +72,7 @@ class _CreateNRenamePlaylistPopupState extends State<CreateNRenamePlaylistPopup>
                 ),
               ),
               const SizedBox(height: 12),
-              
-              if (isPipedLinked && !widget.renamePlaylist)
-                Obx(
-                  () => Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Row(
-                        children: [
-                          Radio(
-                            value: "piped",
-                            // ignore: deprecated_member_use
-                            groupValue: librPlstCntrller.playlistCreationMode.value,
-                            // ignore: deprecated_member_use
-                            onChanged: librPlstCntrller.changeCreationMode,
-                          ),
-                          Text(S.current.Piped),
-                        ],
-                      ),
-                      const SizedBox(width: 15),
-                      Row(
-                        children: [
-                          Radio(
-                            value: "local",
-                            // ignore: deprecated_member_use
-                            groupValue: librPlstCntrller.playlistCreationMode.value,
-                            // ignore: deprecated_member_use
-                            onChanged: librPlstCntrller.changeCreationMode,
-                          ),
-                          Text(S.current.local),
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-              
+
               ModifiedTextField(
                 textCapitalization: TextCapitalization.sentences,
                 autofocus: true,
@@ -127,7 +94,7 @@ class _CreateNRenamePlaylistPopupState extends State<CreateNRenamePlaylistPopup>
                     style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
                   ),
                   subtitle: const Text(
-                    "Tus amigos seleccionados podrán ver y editar esta playlist",
+                    "Tus amigos seleccionados podrÃ¡n ver y editar esta playlist",
                     style: TextStyle(fontSize: 12),
                   ),
                   value: _isCollaborative,
@@ -152,17 +119,21 @@ class _CreateNRenamePlaylistPopupState extends State<CreateNRenamePlaylistPopup>
                           ),
                         );
                       }
-                      if (snapshot.hasError || snapshot.data == null || snapshot.data!.isEmpty) {
+                      if (snapshot.hasError ||
+                          snapshot.data == null ||
+                          snapshot.data!.isEmpty) {
                         return const Padding(
                           padding: EdgeInsets.symmetric(vertical: 8.0),
                           child: Text(
-                            "No tienes amigos agregados aún para colaborar.",
-                            style: TextStyle(fontSize: 12, color: Colors.white54),
+                            "No tienes amigos agregados aÃºn para colaborar.",
+                            style:
+                                TextStyle(fontSize: 12, color: Colors.white54),
                           ),
                         );
                       }
                       final friends = snapshot.data!;
-                      final double containerHeight = (friends.length * 50.0).clamp(50.0, 120.0);
+                      final double containerHeight =
+                          (friends.length * 50.0).clamp(50.0, 120.0);
                       return Container(
                         height: containerHeight,
                         decoration: BoxDecoration(
@@ -175,9 +146,13 @@ class _CreateNRenamePlaylistPopupState extends State<CreateNRenamePlaylistPopup>
                             children: [
                               for (var friend in friends) ...[
                                 (() {
-                                  final friendId = friend['id'] ?? friend['username'];
-                                  final friendName = friend['name'] ?? friend['username'] ?? 'Amigo';
-                                  final isChecked = _selectedFriends.any((c) => (c is Map ? c['id'] : c) == friendId);
+                                  final friendId =
+                                      friend['id'] ?? friend['username'];
+                                  final friendName = friend['name'] ??
+                                      friend['username'] ??
+                                      'Amigo';
+                                  final isChecked = _selectedFriends.any((c) =>
+                                      (c is Map ? c['id'] : c) == friendId);
                                   return CheckboxListTile(
                                     dense: true,
                                     title: Text(friendName.toString()),
@@ -188,11 +163,15 @@ class _CreateNRenamePlaylistPopupState extends State<CreateNRenamePlaylistPopup>
                                           _selectedFriends.add({
                                             'id': friend['id'],
                                             'username': friend['username'],
-                                            'first_name': friend['first_name'] ?? '',
-                                            'last_name': friend['last_name'] ?? '',
+                                            'first_name':
+                                                friend['first_name'] ?? '',
+                                            'last_name':
+                                                friend['last_name'] ?? '',
                                           });
                                         } else {
-                                          _selectedFriends.removeWhere((c) => (c is Map ? c['id'] : c) == friendId);
+                                          _selectedFriends.removeWhere((c) =>
+                                              (c is Map ? c['id'] : c) ==
+                                              friendId);
                                         }
                                       });
                                     },
@@ -225,35 +204,40 @@ class _CreateNRenamePlaylistPopupState extends State<CreateNRenamePlaylistPopup>
                     ),
                     child: InkWell(
                       child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 15.0, vertical: 10),
                         child: Text(
                           widget.isCreateNadd
                               ? S.current.createnAdd
                               : widget.renamePlaylist
                                   ? S.current.rename
                                   : S.current.create,
-                          style: TextStyle(color: Theme.of(context).canvasColor),
+                          style:
+                              TextStyle(color: Theme.of(context).canvasColor),
                         ),
                       ),
                       onTap: () async {
                         if (widget.renamePlaylist) {
-                          librPlstCntrller.renamePlaylist(widget.playlist!).then((value) {
+                          librPlstCntrller
+                              .renamePlaylist(widget.playlist!)
+                              .then((value) {
                             if (value) {
                               if (!context.mounted) return;
                               Navigator.of(context).pop();
                               ScaffoldMessenger.of(context).showSnackBar(
-                                snackbar(context, S.current.playlistRenameAlert, size: SanckBarSize.MEDIUM),
+                                snackbar(context, S.current.playlistRenameAlert,
+                                    size: SanckBarSize.MEDIUM),
                               );
                             }
                           });
                         } else {
                           librPlstCntrller
                               .createNewPlaylist(
-                                createPlaylistNaddSong: widget.isCreateNadd,
-                                songItems: widget.songItems,
-                                isCollaborative: _isCollaborative,
-                                collaborators: _selectedFriends,
-                              )
+                            createPlaylistNaddSong: widget.isCreateNadd,
+                            songItems: widget.songItems,
+                            isCollaborative: _isCollaborative,
+                            collaborators: _selectedFriends,
+                          )
                               .then((value) {
                             if (!context.mounted) return;
                             if (value) {
@@ -268,7 +252,8 @@ class _CreateNRenamePlaylistPopupState extends State<CreateNRenamePlaylistPopup>
                               );
                             } else {
                               ScaffoldMessenger.of(context).showSnackBar(
-                                snackbar(context, S.current.errorOccuredAlert, size: SanckBarSize.MEDIUM),
+                                snackbar(context, S.current.errorOccuredAlert,
+                                    size: SanckBarSize.MEDIUM),
                               );
                             }
                             Navigator.of(context).pop();

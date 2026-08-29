@@ -1,4 +1,4 @@
-import 'package:material_ui/material_ui.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '/ui/screens/Search/search_screen_controller.dart';
 
@@ -49,12 +49,15 @@ class SearchItem extends StatelessWidget {
                   splashRadius: 18,
                   visualDensity: const VisualDensity(horizontal: -2),
                   onPressed: () {
-                    searchScreenController
-                        .removeQueryFromHistory(queryString);
+                    searchScreenController.removeQueryFromHistory(queryString);
                   },
                   icon: Icon(
                     Icons.clear,
-                    color: Theme.of(context).textTheme.titleMedium!.color?.withValues(alpha: 0.7),
+                    color: Theme.of(context)
+                        .textTheme
+                        .titleMedium!
+                        .color
+                        ?.withValues(alpha: 0.7),
                   ),
                 )
               else
@@ -70,7 +73,11 @@ class SearchItem extends StatelessWidget {
                 },
                 icon: Icon(
                   Icons.north_west,
-                  color: Theme.of(context).textTheme.titleMedium!.color?.withValues(alpha: 0.7),
+                  color: Theme.of(context)
+                      .textTheme
+                      .titleMedium!
+                      .color
+                      ?.withValues(alpha: 0.7),
                 ),
               ),
             ],

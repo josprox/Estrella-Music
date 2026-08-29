@@ -1,10 +1,9 @@
-import 'package:material_ui/material_ui.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:harmonymusic/services/storage/sqlite_store.dart';
 
 import '/ui/screens/Search/search_screen_controller.dart';
 import 'package:harmonymusic/ui/screens/Search/search_screen.dart';
-import 'package:harmonymusic/ui/widgets/news_card.dart';
+import 'package:harmonymusic/ui/widgets/home_profile_card.dart';
 import '/ui/widgets/animated_screen_transition.dart';
 
 import 'package:harmonymusic/ui/widgets/side_nav_bar.dart';
@@ -100,7 +99,7 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-// _GlassFab removed — replaced by standard FloatingActionButton above
+// _GlassFab removed â€” replaced by standard FloatingActionButton above
 
 class Body extends StatelessWidget {
   const Body({super.key});
@@ -137,7 +136,7 @@ class Body extends StatelessWidget {
                         final items = homeScreenController
                                 .isContentFetched.value
                             ? [
-                                const NewsCard(),
+                                const HomeProfileCard(),
                                 Obx(() {
                                   final sc = ScrollController();
                                   homeScreenController.contentScrollControllers
@@ -240,25 +239,18 @@ class Body extends StatelessWidget {
                                           ),
                                     ),
                                     const Spacer(),
-                                    if (SqliteStore.box('AppPrefs').get(
-                                            'emusicDataMode',
-                                            defaultValue: 'local') ==
-                                        'cloud') ...[
-                                      IconButton(
-                                        icon: const Icon(
-                                            Icons.group_add_rounded,
-                                            size: 30),
-                                        tooltip: S.current.friends,
-                                        onPressed: () {
-                                          Get.to(
-                                            () =>
-                                                const FriendsManagementScreen(),
-                                            id: ScreenNavigationSetup.id,
-                                            transition: Transition.rightToLeft,
-                                          );
-                                        },
-                                      ),
-                                    ],
+                                    IconButton(
+                                      icon: const Icon(Icons.group_add_rounded,
+                                          size: 30),
+                                      tooltip: S.current.friends,
+                                      onPressed: () {
+                                        Get.to(
+                                          () => const FriendsManagementScreen(),
+                                          id: ScreenNavigationSetup.id,
+                                          transition: Transition.rightToLeft,
+                                        );
+                                      },
+                                    ),
                                     IconButton(
                                       icon: const Icon(Icons.settings_outlined,
                                           size: 30),

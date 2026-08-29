@@ -13,20 +13,25 @@ import 'package:harmonymusic/ui/screens/Library/library_controller.dart';
 import 'package:harmonymusic/ui/screens/Playlist/playlist_screen_controller.dart';
 import 'package:harmonymusic/ui/player/player_controller.dart';
 import 'package:harmonymusic/utils/helpers/helper.dart';
-import 'package:harmonymusic/services/backup/app_backup_service.dart';
 import 'package:harmonymusic/services/auth/auth_service.dart';
-import 'package:harmonymusic/services/sync/cloud_migration_service.dart';
 import 'package:harmonymusic/services/sync/pending_sync_queue_service.dart';
 import 'package:harmonymusic/services/sync/music_sqlite_service.dart';
+import 'package:harmonymusic/profiles/profile_manager.dart';
+import 'package:harmonymusic/profiles/music_profile.dart';
+import 'package:harmonymusic/music_provider/music_provider_manager.dart';
 
 import 'package:harmonymusic/services/sync/client/sync_http_client.dart';
 import 'package:harmonymusic/services/sync/client/sync_websocket_client.dart';
 import 'package:harmonymusic/services/sync/repository/sync_local_repository.dart';
 
 class SyncService extends GetxService {
-  static const _modeKey = 'emusicDataMode';
-  static const _pendingKey = 'hasPendingSync';
-  static const _lastSyncKey = 'lastSuccessfulSyncAt';
+  String get _profileKey =>
+      Get.find<ProfileManager>().activeProfile.value?.id ?? 'no-profile';
+  String get _pendingKey => 'hasPendingSync::$_profileKey';
+  String get _lastSyncKey => 'lastSuccessfulSyncAt::$_profileKey';
+  String get pendingPreferenceKey => _pendingKey;
+  String get lastSyncPreferenceKey => _lastSyncKey;
+  bool get hasPendingChanges => _hasPendingLocalChanges;
 
   final SyncHttpClient _httpClient = SyncHttpClient();
   final SyncLocalRepository _repository = SyncLocalRepository();
@@ -47,6 +52,8 @@ class SyncService extends GetxService {
   bool _fullPullRequested = false;
   List<String> _authoritativeOutboxIds = const [];
   List<String> _authoritativeQueueIds = const [];
+  final List<StreamSubscription<dynamic>> _profileBoxSubscriptions = [];
+  Worker? _profileWorker;
 
   AuthService get _authService => Get.find<AuthService>();
   PendingSyncQueueService get _queue => Get.find<PendingSyncQueueService>();
@@ -54,8 +61,12 @@ class SyncService extends GetxService {
 
   String get _accountKey {
     final user = _authService.userProfile.value;
-    return (user?['id'] ?? user?['user_id'] ?? user?['email'] ?? 'cloud-user')
-        .toString();
+    final account =
+        (user?['id'] ?? user?['user_id'] ?? user?['email'] ?? 'cloud-user')
+            .toString();
+    final profileId =
+        Get.find<ProfileManager>().activeProfile.value?.id ?? 'no-profile';
+    return '$account::$profileId';
   }
 
   @override
@@ -76,6 +87,10 @@ class SyncService extends GetxService {
       }
     });
     _setupLocalMutationWatchers();
+    _profileWorker = ever<MusicProfile?>(
+      Get.find<ProfileManager>().activeProfile,
+      (_) => _setupLocalMutationWatchers(),
+    );
 
     ever(_authService.isAuthenticated, (bool authenticated) {
       if (authenticated && isCloudMode) {
@@ -113,6 +128,10 @@ class SyncService extends GetxService {
   }
 
   void _setupLocalMutationWatchers() {
+    for (final subscription in _profileBoxSubscriptions) {
+      unawaited(subscription.cancel());
+    }
+    _profileBoxSubscriptions.clear();
     const entityBoxes = {
       'LIBFAV': 'favorite',
       'LIBRP': 'recent_play',
@@ -122,7 +141,8 @@ class SyncService extends GetxService {
     };
 
     for (final entry in entityBoxes.entries) {
-      SqliteStore.box(entry.key).watch().listen((event) {
+      _profileBoxSubscriptions
+          .add(SqliteStore.box(entry.key).watch().listen((event) {
         if (_isApplyingRemoteChanges) return;
         if (entry.key == 'LibraryPlaylists') {
           final playlistId = event.key.toString();
@@ -133,10 +153,11 @@ class SyncService extends GetxService {
           return;
         }
         unawaited(_recordBoxMutation(entry.key, entry.value, event));
-      });
+      }));
     }
 
-    SqliteStore.box('AppPrefs').watch().listen((event) {
+    _profileBoxSubscriptions
+        .add(SqliteStore.box('AppPrefs').watch().listen((event) {
       if (_isApplyingRemoteChanges) return;
       const allowedKeys = [
         'themeModeType',
@@ -160,7 +181,7 @@ class SyncService extends GetxService {
               : {'key': event.key.toString(), 'value': event.value},
         ));
       }
-    });
+    }));
   }
 
   Future<void> _recordBoxMutation(
@@ -217,12 +238,14 @@ class SyncService extends GetxService {
     _wsClient?.dispose();
     _retryTimer?.cancel();
     _debounce?.cancel();
+    _profileWorker?.dispose();
+    for (final subscription in _profileBoxSubscriptions) {
+      unawaited(subscription.cancel());
+    }
     super.onClose();
   }
 
-  bool get isCloudMode =>
-      SqliteStore.box('AppPrefs').get(_modeKey, defaultValue: 'local') ==
-      'cloud';
+  bool get isCloudMode => Get.find<ProfileManager>().activeProfileMaySync;
 
   String? get syncBaseUrl {
     final isDebugEnv = dotenv.env['DEBUG']?.toLowerCase() == 'true';
@@ -244,35 +267,38 @@ class SyncService extends GetxService {
       return;
     }
 
-    final migrationResult =
-        await Get.find<CloudMigrationService>().migrateLocalLibraryToCloud();
-    if (!migrationResult.success) {
-      await SqliteStore.box('AppPrefs').put(_modeKey, 'local');
-      await SqliteStore.box('AppPrefs').put(_pendingKey, false);
-      lastStatusMessage.value = migrationResult.message;
-      return;
+    final profiles = Get.find<ProfileManager>();
+    final providers = Get.find<MusicProviderManager>();
+    final authorizedProviderId =
+        providers.availableProviderIds.firstWhereOrNull(
+      (id) =>
+          providers.registrationFor(id)?.trust ==
+          ProviderTrust.jossRedAuthorized,
+    );
+    if (authorizedProviderId == null) {
+      throw StateError('No authorized Joss Red music provider is installed');
     }
-
-    await SqliteStore.box('AppPrefs').put(_modeKey, 'cloud');
+    var cloudProfile = profiles.profiles.firstWhereOrNull(
+      (profile) => profile.providerId == authorizedProviderId,
+    );
+    cloudProfile ??= await profiles.createProfile(
+      name: 'eMusic',
+      providerId: authorizedProviderId,
+    );
+    await profiles.switchProfile(cloudProfile.id);
     await SqliteStore.box('AppPrefs').put(_pendingKey, false);
-    await SqliteStore.box('AppPrefs').put('emusicCloudRequested', false);
-    await SqliteStore.box('AppPrefs').put('emusicModeChoiceCompleted', true);
-    lastStatusMessage.value = migrationResult.usedExistingCloud
-        ? S.current.syncCloudDownloadingExisting
-        : S.current.syncCloudMigrationComplete;
-
-    if (migrationResult.usedExistingCloud) {
-      await Get.find<AppBackupService>().clearLocalMusicData();
-    }
-
+    lastStatusMessage.value = S.current.syncCloudDownloadingExisting;
     await pull();
   }
 
   Future<void> keepLocalMode() async {
-    await SqliteStore.box('AppPrefs').put(_modeKey, 'local');
+    final profiles = Get.find<ProfileManager>();
+    final localProviderId = Get.find<MusicProviderManager>().localProviderId;
+    final local = profiles.profiles.firstWhere(
+      (profile) => profile.providerId == localProviderId,
+    );
+    await profiles.switchProfile(local.id);
     await SqliteStore.box('AppPrefs').put(_pendingKey, false);
-    await SqliteStore.box('AppPrefs').put('emusicCloudRequested', false);
-    await SqliteStore.box('AppPrefs').put('emusicModeChoiceCompleted', true);
     lastStatusMessage.value = S.current.syncLocalDeviceOnly;
   }
 
@@ -347,27 +373,16 @@ class SyncService extends GetxService {
     Map<String, dynamic> payload = const {},
     String? parentId,
   }) async {
-    final accountKey = isCloudMode ? _accountKey : 'local';
-    if (isCloudMode) {
-      await _musicDatabase.recordLocalChange(
-        accountKey: accountKey,
-        entityType: entityType,
-        entityId: entityId,
-        operation: operation,
-        payload: payload,
-        parentId: parentId,
-      );
-      triggerPush();
-    } else {
-      await _musicDatabase.mirrorLocalEntity(
-        accountKey: accountKey,
-        entityType: entityType,
-        entityId: entityId,
-        operation: operation,
-        payload: payload,
-        parentId: parentId,
-      );
-    }
+    if (!isCloudMode) return;
+    await _musicDatabase.recordLocalChange(
+      accountKey: _accountKey,
+      entityType: entityType,
+      entityId: entityId,
+      operation: operation,
+      payload: payload,
+      parentId: parentId,
+    );
+    triggerPush();
   }
 
   Future<void> recordPlaylistChange(

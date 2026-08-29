@@ -1,4 +1,4 @@
-import 'package:material_ui/material_ui.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/models/album.dart';
 import 'package:harmonymusic/models/artist.dart';
@@ -72,11 +72,10 @@ class ScreenNavigation extends StatelessWidget {
         onGenerateRoute: (settings) {
           Get.routing.args = settings.arguments;
           switch (settings.name) {
-
             case ScreenNavigationSetup.homeScreen:
               return GetPageRoute(
                   page: () => const HomeScreen(), settings: settings);
-            
+
             case ScreenNavigationSetup.albumScreen:
               final id = (settings.arguments as (Album?, String)).$2;
               return GetPageRoute(
@@ -84,23 +83,23 @@ class ScreenNavigation extends StatelessWidget {
                         key: Key(id),
                       ),
                   settings: settings);
-            
+
             case ScreenNavigationSetup.playlistScreen:
-             final id = (settings.arguments as List)[1] as String;
+              final id = (settings.arguments as List)[1] as String;
               return GetPageRoute(
                   page: () => PlaylistScreen(
                         key: Key(id),
                       ),
                   settings: settings);
-            
+
             case ScreenNavigationSetup.searchScreen:
               return GetPageRoute(
                   page: () => const SearchScreen(), settings: settings);
-            
+
             case ScreenNavigationSetup.searchResultScreen:
               return GetPageRoute(
                   page: () => const SearchResultScreen(), settings: settings);
-            
+
             case ScreenNavigationSetup.artistScreen:
               final args = settings.arguments as List;
               final id = args[0] ? args[1] : (args[1] as Artist).browseId;
@@ -109,12 +108,12 @@ class ScreenNavigation extends StatelessWidget {
                         key: Key(id),
                       ),
                   settings: settings);
-            
+
             case ScreenNavigationSetup.artistContentListScreen:
               return GetPageRoute(
                   page: () => const ArtistContentListScreen(),
                   settings: settings);
-            
+
             default:
               return null;
           }

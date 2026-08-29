@@ -8,7 +8,6 @@ import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
 
 import 'package:harmonymusic/utils/helpers/helper.dart';
-import 'package:harmonymusic/services/music/music_service.dart';
 import 'package:harmonymusic/services/sync/music_sqlite_service.dart';
 
 class AppBackupService extends GetxService {
@@ -228,12 +227,8 @@ class AppBackupService extends GetxService {
     if (reopenCoreBoxes) {
       await ensureCoreBoxesOpen();
 
-      // Refresh visitor data from restored prefs
-      final appPrefs = SqliteStore.box('AppPrefs');
-      final visitorData = appPrefs.get('visitorId');
-      if (visitorData != null && visitorData['id'] != null) {
-        Get.find<MusicServices>().setVisitorId(visitorData['id'].toString());
-      }
+      // EMusicProvider reads restored visitor data lazily from AppPrefs when
+      // resolving playback, so no concrete catalog service is refreshed here.
     }
   }
 

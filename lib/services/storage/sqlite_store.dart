@@ -4,14 +4,18 @@ import 'dart:io';
 
 import 'package:archive/archive_io.dart';
 import 'package:flutter/foundation.dart';
-import 'package:hive/hive.dart' as legacy_hive;
+import 'package:hive/hive.dart' as hive;
 import 'package:path/path.dart' as p;
 import 'package:sqlite3/sqlite3.dart';
 
-/// SQLite-backed key/value store used by all local application features.
+enum MusicStoreBackend { hive, sqlite }
+
+/// Provider-aware key/value facade.
 ///
-/// The API intentionally covers the small Hive subset used by the app so the
-/// storage engine can be replaced without coupling widgets to SQL details.
+/// Local profiles and global application state are persisted in Hive. SQLite
+/// is reserved for eMusic profile state and its synchronization pipeline. The
+/// legacy class name is intentionally kept while consumers migrate so widgets
+/// remain storage-agnostic.
 class SqliteStore {
   static const databaseFileName = 'estrella_local.sqlite3';
   static const _legacyMigrationKey = 'legacy_hive_to_sqlite_v1';
@@ -19,6 +23,8 @@ class SqliteStore {
   static Database? _database;
   static String? _directoryPath;
   static final Map<String, SqliteBox<dynamic>> _boxes = {};
+  static String Function(String logicalName)? boxNameResolver;
+  static MusicStoreBackend Function(String logicalName)? boxBackendResolver;
 
   static Database get database {
     final value = _database;
@@ -27,6 +33,8 @@ class SqliteStore {
     }
     return value;
   }
+
+  static bool get isInitialized => _database != null;
 
   static String get databasePath {
     final directory = _directoryPath;
@@ -42,13 +50,14 @@ class SqliteStore {
 
   static Future<void> initialize(
     String directoryPath, {
-    bool migrateLegacyHive = true,
-    bool deleteLegacyAfterVerification = true,
+    bool migrateLegacyHive = false,
+    bool deleteLegacyAfterVerification = false,
   }) async {
     if (_database != null) return;
     final directory = Directory(directoryPath);
     await directory.create(recursive: true);
     _directoryPath = directory.path;
+    hive.Hive.init(directory.path);
     _database = sqlite3.open(p.join(directory.path, databaseFileName));
     _configure();
     _createSchema();
@@ -90,19 +99,47 @@ class SqliteStore {
     ''');
   }
 
-  static Future<SqliteBox<T>> openBox<T>(String name) async => box<T>(name);
+  static Future<SqliteBox<T>> openBox<T>(String name) async {
+    final resolved = _resolved(name);
+    if (resolved.backend == MusicStoreBackend.hive &&
+        !hive.Hive.isBoxOpen(resolved.name)) {
+      await hive.Hive.openBox<dynamic>(resolved.name);
+    }
+    return _box<T>(resolved);
+  }
 
   static SqliteBox<T> box<T>(String name) {
-    final normalized = _normalizeBoxName(name);
-    final existing = _boxes[normalized];
+    final resolved = _resolved(name);
+    if (resolved.backend == MusicStoreBackend.hive &&
+        !hive.Hive.isBoxOpen(resolved.name)) {
+      throw SqliteStoreException(
+        'Hive box ${resolved.name} must be opened before synchronous access',
+      );
+    }
+    return _box<T>(resolved);
+  }
+
+  static SqliteBox<T> _box<T>(_ResolvedBox resolved) {
+    final cacheKey = '${resolved.backend.name}::${resolved.name}';
+    final existing = _boxes[cacheKey];
     if (existing != null) return existing as SqliteBox<T>;
-    final created = SqliteBox<T>._(normalized);
-    _boxes[normalized] = created;
+    final created = SqliteBox<T>._(
+      resolved.name,
+      resolved.backend,
+      resolved.backend == MusicStoreBackend.hive
+          ? hive.Hive.box<dynamic>(resolved.name)
+          : null,
+    );
+    _boxes[cacheKey] = created;
     return created;
   }
 
-  static bool isBoxOpen(String name) =>
-      _boxes.containsKey(_normalizeBoxName(name));
+  static bool isBoxOpen(String name) {
+    final resolved = _resolved(name);
+    return _boxes.containsKey('${resolved.backend.name}::${resolved.name}') ||
+        (resolved.backend == MusicStoreBackend.hive &&
+            hive.Hive.isBoxOpen(resolved.name));
+  }
 
   static void checkpoint() {
     database.execute('PRAGMA wal_checkpoint(TRUNCATE)');
@@ -112,16 +149,99 @@ class SqliteStore {
     await box(name).deleteFromDisk();
   }
 
+  /// Copies a SQLite box into Hive only when the Hive destination is empty.
+  /// The SQLite source is intentionally retained as a recovery copy.
+  static Future<int> copySqliteBoxToHive({
+    required String sourcePhysicalName,
+    required String targetPhysicalName,
+  }) async {
+    final source = sourcePhysicalName.trim().toLowerCase();
+    final target = targetPhysicalName.trim().toLowerCase();
+    final hiveBox = hive.Hive.isBoxOpen(target)
+        ? hive.Hive.box<dynamic>(target)
+        : await hive.Hive.openBox<dynamic>(target);
+    if (hiveBox.isNotEmpty) return 0;
+    final rows = database.select(
+      '''SELECT key_type, key_value, value_json
+         FROM local_store_entries WHERE box_name = ? ORDER BY sequence ASC''',
+      [source],
+    );
+    if (rows.isEmpty) return 0;
+    final values = <dynamic, dynamic>{};
+    for (final row in rows) {
+      values[_EncodedKey.decode(
+        row['key_type'] as String,
+        row['key_value'] as String,
+      )] = _ValueCodec.decode(row['value_json']);
+    }
+    await hiveBox.putAll(values);
+    return values.length;
+  }
+
+  /// Preserves an existing SQLite local profile by copying every namespaced
+  /// box to Hive. No source rows or files are removed.
+  static Future<int> preserveLocalProfileInHive(String profileId) async {
+    final safeProfile =
+        profileId.toLowerCase().replaceAll(RegExp(r'[^a-z0-9_.-]'), '_');
+    final prefix = 'profiles__${safeProfile}__';
+    final names = database
+        .select(
+          '''SELECT DISTINCT box_name FROM local_store_entries
+             WHERE box_name LIKE ? ORDER BY box_name''',
+          ['$prefix%'],
+        )
+        .map((row) => row['box_name'] as String)
+        .toSet();
+
+    const legacyLocalBoxes = {
+      'songscache',
+      'songdownloads',
+      'songsurlcache',
+      'libfav',
+      'librp',
+      'libraryartists',
+      'libraryalbums',
+      'libraryplaylists',
+      'homescreendata',
+      'prevsessiondata',
+      'pendingsyncchanges',
+    };
+    var copied = 0;
+    if (profileId == 'local-default') {
+      for (final legacyName in legacyLocalBoxes) {
+        copied += await copySqliteBoxToHive(
+          sourcePhysicalName: legacyName,
+          targetPhysicalName: '$prefix$legacyName',
+        );
+      }
+    }
+    for (final name in names) {
+      copied += await copySqliteBoxToHive(
+        sourcePhysicalName: name,
+        targetPhysicalName: name,
+      );
+    }
+    return copied;
+  }
+
   static Future<void> close() async {
     for (final value in _boxes.values) {
       await value._dispose();
     }
     _boxes.clear();
+    await hive.Hive.close();
     _database?.dispose();
     _database = null;
   }
 
-  static String _normalizeBoxName(String name) => name.trim().toLowerCase();
+  static _ResolvedBox _resolved(String logicalName) => _ResolvedBox(
+        (boxNameResolver?.call(logicalName) ?? logicalName)
+            .trim()
+            .toLowerCase(),
+        boxBackendResolver?.call(logicalName) ?? MusicStoreBackend.sqlite,
+      );
+
+  static String _normalizeBoxName(String name) => _resolved(name).name;
 
   static Future<void> _migrateLegacyHive({
     required bool deleteAfterVerification,
@@ -152,11 +272,11 @@ class SqliteStore {
 
     final backup = await _archiveLegacyFiles(hiveFiles);
     final snapshots = <String, List<MapEntry<dynamic, dynamic>>>{};
-    legacy_hive.Hive.init(directory.path);
+    hive.Hive.init(directory.path);
     try {
       for (final file in hiveFiles) {
         final name = p.basenameWithoutExtension(file.path);
-        final legacyBox = await legacy_hive.Hive.openBox<dynamic>(name);
+        final legacyBox = await hive.Hive.openBox<dynamic>(name);
         snapshots[_normalizeBoxName(name)] = [
           for (final key in legacyBox.keys)
             MapEntry<dynamic, dynamic>(key, legacyBox.get(key)),
@@ -168,7 +288,7 @@ class SqliteStore {
         error,
       );
     } finally {
-      await legacy_hive.Hive.close();
+      await hive.Hive.close();
     }
 
     var expectedEntries = 0;
@@ -311,11 +431,28 @@ class SqliteStore {
   }
 }
 
-class SqliteBox<T> extends ChangeNotifier
-    implements ValueListenable<SqliteBox<T>> {
-  SqliteBox._(this.name);
+class _ResolvedBox {
+  const _ResolvedBox(this.name, this.backend);
 
   final String name;
+  final MusicStoreBackend backend;
+}
+
+class SqliteBox<T> extends ChangeNotifier
+    implements ValueListenable<SqliteBox<T>> {
+  SqliteBox._(this.name, this.backend, this._hiveBox) {
+    if (_hiveBox != null) {
+      _hiveSubscription = _hiveBox!.watch().listen((event) {
+        final value = event.deleted ? null : event.value;
+        _changed(SqliteBoxEvent(event.key, value, event.deleted), emit: false);
+      });
+    }
+  }
+
+  final String name;
+  final MusicStoreBackend backend;
+  final hive.Box<dynamic>? _hiveBox;
+  StreamSubscription<hive.BoxEvent>? _hiveSubscription;
   final StreamController<SqliteBoxEvent> _events =
       StreamController<SqliteBoxEvent>.broadcast();
 
@@ -328,16 +465,25 @@ class SqliteBox<T> extends ChangeNotifier
   bool get isEmpty => length == 0;
   bool get isNotEmpty => length != 0;
 
-  int get length => (_db.select(
+  int get length =>
+      _hiveBox?.length ??
+      (_db.select(
         'SELECT COUNT(*) AS total FROM local_store_entries WHERE box_name = ?',
         [name],
       ).first['total'] as int);
 
-  Iterable<dynamic> get keys => _rows().map(_decodeRowKey).toList();
-  Iterable<T> get values =>
-      _rows().map((row) => _ValueCodec.decode(row['value_json']) as T).toList();
+  Iterable<dynamic> get keys =>
+      _hiveBox?.keys ?? _rows().map(_decodeRowKey).toList();
+  Iterable<T> get values => _hiveBox != null
+      ? _hiveBox!.values.cast<T>()
+      : _rows()
+          .map((row) => _ValueCodec.decode(row['value_json']) as T)
+          .toList();
 
   T? get(dynamic key, {T? defaultValue}) {
+    if (_hiveBox != null) {
+      return _hiveBox!.get(key, defaultValue: defaultValue) as T?;
+    }
     final encoded = _EncodedKey.from(key);
     final rows = _db.select(
       '''SELECT value_json FROM local_store_entries
@@ -349,12 +495,14 @@ class SqliteBox<T> extends ChangeNotifier
   }
 
   T? getAt(int index) {
+    if (_hiveBox != null) return _hiveBox!.getAt(index) as T?;
     final rows = _rows();
     if (index < 0 || index >= rows.length) return null;
     return _ValueCodec.decode(rows[index]['value_json']) as T?;
   }
 
   bool containsKey(dynamic key) {
+    if (_hiveBox != null) return _hiveBox!.containsKey(key);
     final encoded = _EncodedKey.from(key);
     return _db.select(
       '''SELECT 1 FROM local_store_entries
@@ -364,6 +512,10 @@ class SqliteBox<T> extends ChangeNotifier
   }
 
   Future<void> put(dynamic key, T value) async {
+    if (_hiveBox != null) {
+      await _hiveBox!.put(key, value);
+      return;
+    }
     final encoded = _EncodedKey.from(key);
     final current = _db.select(
       '''SELECT sequence FROM local_store_entries
@@ -395,6 +547,10 @@ class SqliteBox<T> extends ChangeNotifier
   }
 
   Future<void> putAll(Map<dynamic, T> entries) async {
+    if (_hiveBox != null) {
+      await _hiveBox!.putAll(entries);
+      return;
+    }
     _db.execute('BEGIN IMMEDIATE');
     try {
       for (final entry in entries.entries) {
@@ -408,6 +564,7 @@ class SqliteBox<T> extends ChangeNotifier
   }
 
   Future<int> add(T value) async {
+    if (_hiveBox != null) return _hiveBox!.add(value);
     final rows = _db.select(
       '''SELECT key_value FROM local_store_entries
          WHERE box_name = ? AND key_type = 'int'
@@ -420,6 +577,10 @@ class SqliteBox<T> extends ChangeNotifier
   }
 
   Future<void> delete(dynamic key) async {
+    if (_hiveBox != null) {
+      await _hiveBox!.delete(key);
+      return;
+    }
     final previous = get(key);
     final encoded = _EncodedKey.from(key);
     _db.execute(
@@ -431,18 +592,27 @@ class SqliteBox<T> extends ChangeNotifier
   }
 
   Future<void> deleteAt(int index) async {
+    if (_hiveBox != null) {
+      await _hiveBox!.deleteAt(index);
+      return;
+    }
     final rows = _rows();
     if (index < 0 || index >= rows.length) return;
     await delete(_decodeRowKey(rows[index]));
   }
 
   Future<void> deleteAll(Iterable<dynamic> keys) async {
+    if (_hiveBox != null) {
+      await _hiveBox!.deleteAll(keys);
+      return;
+    }
     for (final key in keys.toList()) {
       await delete(key);
     }
   }
 
   Future<int> clear() async {
+    if (_hiveBox != null) return _hiveBox!.clear();
     final oldLength = length;
     if (oldLength == 0) return 0;
     _db.execute('DELETE FROM local_store_entries WHERE box_name = ?', [name]);
@@ -454,10 +624,7 @@ class SqliteBox<T> extends ChangeNotifier
     await clear();
   }
 
-  Future<void> close() async {
-    // SQLite uses one application-wide connection. Closing a logical box is a
-    // compatibility no-op and cannot invalidate another controller's reader.
-  }
+  Future<void> close() async {}
 
   Stream<SqliteBoxEvent> watch({dynamic key}) => key == null
       ? _events.stream
@@ -474,12 +641,14 @@ class SqliteBox<T> extends ChangeNotifier
   dynamic _decodeRowKey(Row row) =>
       _EncodedKey.decode(row['key_type'] as String, row['key_value'] as String);
 
-  void _changed(SqliteBoxEvent event) {
-    if (!_events.isClosed) _events.add(event);
+  void _changed(SqliteBoxEvent event, {bool emit = true}) {
+    if (emit && !_events.isClosed) _events.add(event);
+    if (!emit && !_events.isClosed) _events.add(event);
     notifyListeners();
   }
 
   Future<void> _dispose() async {
+    await _hiveSubscription?.cancel();
     await _events.close();
     dispose();
   }

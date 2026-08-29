@@ -92,9 +92,9 @@ class TrackService {
 
     dynamic additionalParamsForNext;
     if (results.containsKey('continuations') || additionalParamsNext != null) {
-      requestFunc(additionalParams) async =>
-          (await _musicServices.sendRequest("next", data, additionalParams: additionalParams))
-              .data;
+      requestFunc(additionalParams) async => (await _musicServices
+              .sendRequest("next", data, additionalParams: additionalParams))
+          .data;
       parseFunc(contents) => parseWatchPlaylist(contents);
       final x = await getContinuations(results, 'playlistPanelContinuation',
           limit - tracks.length, requestFunc, parseFunc,
@@ -114,19 +114,21 @@ class TrackService {
     };
   }
 
-  Future<List<Map<String, dynamic>>> getContentRelatedToSong(String videoId, String hlCode) async {
+  Future<List<Map<String, dynamic>>> getContentRelatedToSong(
+      String videoId, String hlCode) async {
     try {
-      final params = await getWatchPlaylist(videoId: videoId, onlyRelated: true);
+      final params =
+          await getWatchPlaylist(videoId: videoId, onlyRelated: true);
       if (params['related'] == null) return [];
-      
+
       final data = Map.from(_musicServices.context);
       data['browseId'] = params['related'];
       data['context']['client']['hl'] = hlCode;
-      
+
       final response = (await _musicServices.sendRequest('browse', data)).data;
       final sections = nav(response, ['contents'] + section_list);
       if (sections == null) return [];
-      
+
       final x = parseMixedContent(sections);
       return x;
     } catch (e) {

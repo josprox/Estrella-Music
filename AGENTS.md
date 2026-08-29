@@ -71,8 +71,8 @@ La app Flutter de la raiz es la app por defecto. Cualquier cambio debe preservar
 
 Flujo esperado:
 
-1. Flutter puede operar en modo local sin cuenta.
-2. Si el usuario elige cloud, Flutter autentica contra Joss Red.
+1. Flutter exige una sesion global de Joss Red antes de entrar a la app.
+2. La sesion de Joss Red no activa sincronizacion musical por si sola.
 3. Flutter guarda el JWT/token.
 4. Flutter llama a EMusic solo para endpoints musicales protegidos.
 5. EMusic aisla datos por `Auth::id()`.
@@ -81,16 +81,16 @@ Flujo esperado:
 
 ## Migration target: modo Spotify
 
-Objetivo del modo cloud:
+Objetivo del sistema de providers y perfiles:
 
 - Joss Red = identidad y cuenta.
 - EMusic = fuente principal musical en servidor.
 - Flutter = cache inteligente, reproductor local y experiencia offline.
 
-El usuario debe poder elegir:
-
-- "Mantener mis datos solo en este dispositivo".
-- "Migrar a Joss Red y sincronizar mi musica".
+- Debe existir siempre un perfil local con `LocalMusicProvider`.
+- Una cuenta puede tener multiples perfiles musicales.
+- Un provider puede pertenecer a multiples perfiles.
+- El contenido online solo puede entrar mediante `MusicProvider`.
 
 Reglas de migracion:
 
@@ -99,7 +99,8 @@ Reglas de migracion:
 - Subir por lotes.
 - Validar conteos y checksums/versions.
 - Activar cloud solo despues de confirmar integridad.
-- Mantener descargas offline y toda su metadata exclusivamente en SQLite/local.
+- Mantener descargas offline y toda su metadata exclusivamente en Hive para
+  perfiles locales; SQLite se reserva para perfiles eMusic y su outbox.
 - No enviar a EMusic rutas, estados ni cambios de `SongDownloads`.
 
 ## Endpoints que NO deben duplicarse en EMusic
@@ -169,6 +170,36 @@ Notas confirmadas:
 6. No duplicar responsabilidades de Joss Red.
 7. Documentar cambios de API y migraciones.
 8. Validar con `joss server start` cuando se toque Joss/SCSS.
+
+## Arquitectura de providers y perfiles
+
+- Estrella Music funciona primero como reproductor local, pero el login global
+  de Joss Red es obligatorio.
+- Toda fuente online debe implementar `MusicProvider`.
+- La UI y el player dependen de contratos neutrales, nunca de un provider
+  concreto.
+- El login de Joss Red es independiente del provider musical activo.
+- El contenido de `LocalMusicProvider` nunca se sincroniza con Joss Red.
+- `SyncService` solo funciona si el perfil activo usa un provider con capability
+  sync y trust explicito `jossRedAuthorized`.
+- Los providers comunitarios nunca reciben acceso implicito a Joss Red, tokens,
+  cuenta, backups, amigos ni APIs internas.
+- Toda entidad musical identifica `providerId`, `profileId` y `sourceId`.
+- Toda persistencia musical se aisla por `profileId`; `SongDownloads` permanece
+  local y fuera de sync.
+- Hive es la fuente de verdad de perfiles locales y estado global. SQLite solo
+  almacena el contexto eMusic, versiones y outbox autorizado. Nunca ejecutar
+  una migracion Hive -> SQLite automaticamente ni borrar el origen al copiar.
+- `clientIp`, `visitorData` y `poToken` pueden viajar a eMusic para resolver
+  playback, pero deben quedar encapsulados en `EMusicProvider`; la UI, el
+  player neutral y providers comunitarios no acceden a ellos.
+- Un provider puede tener multiples perfiles. No persistir nombres de clases;
+  persistir IDs estables y resolverlos mediante el registry/manager.
+- No introducir `if provider == ...` ni logica especifica de providers en UI.
+- Al migrar una funcionalidad, retirar el acceso heredado y sus duplicados; no
+  mantener dos arquitecturas permanentes.
+- La referencia detallada vive en
+  `docs/ESTRELLA_MUSIC_PROVIDER_ARCHITECTURE.md`.
 
 ## Entrega de traducciones
 

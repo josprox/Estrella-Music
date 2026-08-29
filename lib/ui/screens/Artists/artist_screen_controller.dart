@@ -1,5 +1,5 @@
-import 'package:audio_service/audio_service.dart';
-import 'package:material_ui/material_ui.dart';
+﻿import 'package:audio_service/audio_service.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/services/storage/sqlite_store.dart';
 
@@ -9,7 +9,8 @@ import 'package:harmonymusic/models/artist.dart';
 import 'package:harmonymusic/services/auth/catalog_recovery_service.dart';
 import 'package:harmonymusic/utils/helpers/helper.dart';
 import 'package:harmonymusic/ui/screens/Library/library_controller.dart';
-import 'package:harmonymusic/services/music/music_service.dart';
+import 'package:harmonymusic/music_provider/music_catalog_service.dart';
+import 'package:harmonymusic/music_provider/music_provider.dart';
 import '/ui/screens/Home/home_screen_controller.dart';
 import '/ui/screens/Settings/settings_screen_controller.dart';
 import 'package:harmonymusic/models/media_item_builder.dart';
@@ -19,7 +20,7 @@ class ArtistScreenController extends GetxController
     with GetSingleTickerProviderStateMixin {
   final isArtistContentFetced = false.obs;
   final navigationRailCurrentIndex = 0.obs;
-  final musicServices = Get.find<MusicServices>();
+  final musicServices = Get.find<MusicCatalogService>();
   final railItems = <String>[].obs;
   final artistData = <String, dynamic>{}.obs;
   final sepataredContent = <String, dynamic>{}.obs;
@@ -59,7 +60,8 @@ class ArtistScreenController extends GetxController
         try {
           _init(false, args);
         } catch (e) {
-          printERROR("Error initializing artist screen with args: $args. Error: $e");
+          printERROR(
+              "Error initializing artist screen with args: $args. Error: $e");
         }
       }
     }
@@ -119,7 +121,7 @@ class ArtistScreenController extends GetxController
       );
       // Save the artist thumbnail URL for offline use
       _cacheArtistThumbnail(id);
-    } on NetworkError catch (error) {
+    } on MusicProviderException catch (error) {
       printERROR("Error fetching artist details: $error");
       // Try catalog recovery first
       final recoveredArtist =
@@ -237,20 +239,32 @@ class ArtistScreenController extends GetxController
   }) {
     artistData.value = content;
     // Map various possible names to standard keys
-    artistData["Singles"] = artistData["Singles"] ?? artistData["Singles & EPs"] ?? artistData["Sencillos y EPs"];
-    artistData["Songs"] = artistData["Songs"] ?? artistData["Top songs"] ?? artistData["Canciones populares"];
-    artistData["Albums"] = artistData["Albums"] ?? artistData["Ãlbumes"];
-    artistData["Videos"] = artistData["Videos"] ?? artistData["Popular music videos"] ?? artistData["Vídeos"];
-    artistData["Playlists"] = artistData["Playlists"] ?? artistData["Listas de reproducción"];
-    artistData["Podcasts"] = artistData["Podcasts"] ?? artistData["Podcast shows"] ?? artistData["Podcasts"];
-    artistData["Episodes"] = artistData["Episodes"] ?? artistData["New episodes"] ?? artistData["Episodios"];
+    artistData["Singles"] = artistData["Singles"] ??
+        artistData["Singles & EPs"] ??
+        artistData["Sencillos y EPs"];
+    artistData["Songs"] = artistData["Songs"] ??
+        artistData["Top songs"] ??
+        artistData["Canciones populares"];
+    artistData["Albums"] = artistData["Albums"] ?? artistData["ÃƒÂlbumes"];
+    artistData["Videos"] = artistData["Videos"] ??
+        artistData["Popular music videos"] ??
+        artistData["VÃ­deos"];
+    artistData["Playlists"] =
+        artistData["Playlists"] ?? artistData["Listas de reproducciÃ³n"];
+    artistData["Podcasts"] = artistData["Podcasts"] ??
+        artistData["Podcast shows"] ??
+        artistData["Podcasts"];
+    artistData["Episodes"] = artistData["Episodes"] ??
+        artistData["New episodes"] ??
+        artistData["Episodios"];
 
     final subscribers = artistData['subscribers']?.toString().trim();
     final monthly = artistData['monthlyListeners']?.toString().trim();
     final subBool = artistData['isSubscribed'] == true;
     final shuffleEndpointId = artistData['shuffleId']?.toString();
 
-    monthlyListeners.value = (monthly != null && monthly.isNotEmpty) ? monthly : null;
+    monthlyListeners.value =
+        (monthly != null && monthly.isNotEmpty) ? monthly : null;
     isSubscribed.value = subBool;
     shuffleId.value = shuffleEndpointId;
 
@@ -267,7 +281,8 @@ class ArtistScreenController extends GetxController
       radioId: artistData["radioId"],
       shuffleId: shuffleEndpointId,
       isSubscribed: subBool,
-      monthlyListeners: (monthly != null && monthly.isNotEmpty) ? monthly : null,
+      monthlyListeners:
+          (monthly != null && monthly.isNotEmpty) ? monthly : null,
     );
     hasArtistSeed = true;
 
@@ -286,9 +301,10 @@ class ArtistScreenController extends GetxController
   Future<List<dynamic>> fetchCategoryContent(String category) async {
     final section = artistData[category];
     if (section == null) return [];
-    
+
     // If we have params, it means there's more to fetch
-    if (section is Map && (section.containsKey('browseId') || section.containsKey('params'))) {
+    if (section is Map &&
+        (section.containsKey('browseId') || section.containsKey('params'))) {
       try {
         final result = await musicServices.getArtistRealtedContent(
           Map<String, dynamic>.from(section),
@@ -296,7 +312,8 @@ class ArtistScreenController extends GetxController
         );
         final results = result['results'] ?? [];
         if (results.isNotEmpty) {
-          final updatedSection = Map<String, dynamic>.from(artistData[category]);
+          final updatedSection =
+              Map<String, dynamic>.from(artistData[category]);
           updatedSection['content'] = results;
           artistData[category] = updatedSection;
           artistData.refresh();
@@ -306,7 +323,7 @@ class ArtistScreenController extends GetxController
         printERROR("Error fetching full category $category: $e");
       }
     }
-    
+
     // Fallback to what we already have
     return (section['content'] as List?) ?? [];
   }
@@ -320,7 +337,7 @@ class ArtistScreenController extends GetxController
       final List<MediaItem> filtered = [];
       for (final e in box.values) {
         if (e is! Map) continue;
-        
+
         bool matches = false;
         final artistsList = e['artists'] as List?;
         if (artistsList != null) {

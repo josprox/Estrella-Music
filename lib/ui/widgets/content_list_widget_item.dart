@@ -1,4 +1,4 @@
-import 'package:material_ui/material_ui.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:audio_service/audio_service.dart';
 import 'package:harmonymusic/services/storage/sqlite_store.dart';
@@ -10,7 +10,7 @@ import 'playlist_cover_widget.dart';
 import 'hover_card_wrapper.dart';
 import 'package:harmonymusic/models/playling_from.dart';
 import 'package:harmonymusic/models/media_item_builder.dart';
-import 'package:harmonymusic/services/music/music_service.dart';
+import 'package:harmonymusic/music_provider/music_catalog_service.dart';
 import 'package:harmonymusic/ui/player/player_controller.dart';
 
 class ContentListItem extends StatelessWidget {
@@ -38,19 +38,26 @@ class ContentListItem extends StatelessWidget {
     final finalHeight = height ?? 194.0;
     final finalImageSize = imageSize ?? 120.0;
     final isAlbum = content.runtimeType.toString() == "Album";
-    
+
     final String subtitle;
     if (isLibraryItem) {
       if (isAlbum) {
-        final artistName = (content.artists != null && content.artists!.isNotEmpty)
-            ? content.artists![0]['name'] ?? ""
-            : "";
-        subtitle = artistName.isNotEmpty ? "Álbum • $artistName" : "Álbum";
+        final artistName =
+            (content.artists != null && content.artists!.isNotEmpty)
+                ? content.artists![0]['name'] ?? ""
+                : "";
+        subtitle = artistName.isNotEmpty ? "Ãlbum â€¢ $artistName" : "Ãlbum";
       } else {
         final count = SqliteStore.isBoxOpen(content.playlistId)
             ? SqliteStore.box(content.playlistId).length
-            : (content.songCount != null ? int.tryParse(content.songCount!.replaceAll(RegExp(r'\D'), '')) ?? 0 : 0);
-        subtitle = count > 0 ? "Playlist • $count ${count == 1 ? 'canción' : 'canciones'}" : "Playlist";
+            : (content.songCount != null
+                ? int.tryParse(
+                        content.songCount!.replaceAll(RegExp(r'\D'), '')) ??
+                    0
+                : 0);
+        subtitle = count > 0
+            ? "Playlist â€¢ $count ${count == 1 ? 'canciÃ³n' : 'canciones'}"
+            : "Playlist";
       }
     } else {
       subtitle = isAlbum
@@ -83,13 +90,16 @@ class ContentListItem extends StatelessWidget {
           children: [
             HoverCardWrapper(
               borderRadius: 12.0,
-              onPlayTap: (isAlbum || !(content.playlistId == 'LIBRP' || content.playlistId == 'SongsCache'))
+              onPlayTap: (isAlbum ||
+                      !(content.playlistId == 'LIBRP' ||
+                          content.playlistId == 'SongsCache'))
                   ? () async {
                       final playerController = Get.find<PlayerController>();
-                      final musicServices = Get.find<MusicServices>();
+                      final musicServices = Get.find<MusicCatalogService>();
                       final scaffoldMessenger = ScaffoldMessenger.of(context);
                       try {
-                        final id = isAlbum ? content.browseId : content.playlistId;
+                        final id =
+                            isAlbum ? content.browseId : content.playlistId;
 
                         scaffoldMessenger.showSnackBar(
                           SnackBar(
@@ -99,9 +109,11 @@ class ContentListItem extends StatelessWidget {
                         );
 
                         if (id == 'LIBFAV' || id == 'SongDownloads') {
-                          final box = await SqliteStore.openBox(sanitizeBoxName(id));
+                          final box =
+                              await SqliteStore.openBox(sanitizeBoxName(id));
                           final tracks = box.values
-                              .map<MediaItem?>((item) => MediaItemBuilder.fromJson(item))
+                              .map<MediaItem?>(
+                                  (item) => MediaItemBuilder.fromJson(item))
                               .whereType<MediaItem>()
                               .toList();
                           if (tracks.isNotEmpty) {
@@ -119,27 +131,34 @@ class ContentListItem extends StatelessWidget {
 
                         Map<String, dynamic> data;
                         if (isAlbum) {
-                          final isPodcast = content.isPodcast == true || id.startsWith('MPSP');
+                          final isPodcast = content.isPodcast == true ||
+                              id.startsWith('MPSP');
                           data = isPodcast
                               ? await musicServices.podcast(id)
-                              : await musicServices.getPlaylistOrAlbumSongs(albumId: id);
+                              : await musicServices.getPlaylistOrAlbumSongs(
+                                  albumId: id);
                         } else {
-                          data = await musicServices.getPlaylistOrAlbumSongs(playlistId: id);
+                          data = await musicServices.getPlaylistOrAlbumSongs(
+                              playlistId: id);
                         }
-                        final tracks = List<MediaItem>.from(data['tracks'] ?? []);
+                        final tracks =
+                            List<MediaItem>.from(data['tracks'] ?? []);
                         if (tracks.isNotEmpty) {
                           playerController.playPlayListSong(
                             tracks,
                             0,
                             playfrom: PlaylingFrom(
                               name: content.title,
-                              type: isAlbum ? PlaylingFromType.ALBUM : PlaylingFromType.PLAYLIST,
+                              type: isAlbum
+                                  ? PlaylingFromType.ALBUM
+                                  : PlaylingFromType.PLAYLIST,
                             ),
                           );
                         } else {
                           scaffoldMessenger.showSnackBar(
                             const SnackBar(
-                              content: Text('No se encontraron canciones en esta lista.'),
+                              content: Text(
+                                  'No se encontraron canciones en esta lista.'),
                             ),
                           );
                         }
@@ -147,7 +166,7 @@ class ContentListItem extends StatelessWidget {
                         printERROR("Failed to hover-play: $e");
                         scaffoldMessenger.showSnackBar(
                           const SnackBar(
-                            content: Text('Error al cargar la música.'),
+                            content: Text('Error al cargar la mÃºsica.'),
                           ),
                         );
                       }
@@ -176,9 +195,8 @@ class ContentListItem extends StatelessWidget {
                                   width: 18,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(5),
-                                    color: Theme.of(context)
-                                        .colorScheme
-                                        .secondary,
+                                    color:
+                                        Theme.of(context).colorScheme.secondary,
                                   ),
                                   child: Center(
                                       child: Text(
@@ -201,9 +219,8 @@ class ContentListItem extends StatelessWidget {
                                   width: 18,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(5),
-                                    color: Theme.of(context)
-                                        .colorScheme
-                                        .secondary,
+                                    color:
+                                        Theme.of(context).colorScheme.secondary,
                                   ),
                                   child: Center(
                                       child: Text(

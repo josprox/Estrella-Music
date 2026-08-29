@@ -1,4 +1,4 @@
-import 'package:material_ui/material_ui.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '/ui/screens/Artists/artist_screen.dart' show AboutArtist;
@@ -35,12 +35,17 @@ class ArtistScreenBN extends StatelessWidget {
             isScrollable: true,
             controller: artistScreenController.tabController!,
             onTap: artistScreenController.onDestinationSelected,
-            tabs:
-                [S.current.about, S.current.songs, S.current.videos, S.current.albums, S.current.singles]
-                    .map((e) => Tab(
-                          text: e,
-                        ))
-                    .toList(),
+            tabs: [
+              S.current.about,
+              S.current.songs,
+              S.current.videos,
+              S.current.albums,
+              S.current.singles
+            ]
+                .map((e) => Tab(
+                      text: e,
+                    ))
+                .toList(),
           ),
           title: Obx(
             () => artistScreenController.isArtistContentFetced.isTrue

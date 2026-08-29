@@ -1,10 +1,11 @@
-import 'package:material_ui/material_ui.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/services/storage/sqlite_store.dart';
 import 'package:harmonymusic/generated/l10n.dart';
 
-import 'package:harmonymusic/utils/desktop/app_link_controller.dart' show ProcessLink;
-import 'package:harmonymusic/services/music/music_service.dart';
+import 'package:harmonymusic/utils/desktop/app_link_controller.dart'
+    show ProcessLink;
+import 'package:harmonymusic/music_provider/music_catalog_service.dart';
 
 class SearchCategory {
   final String name;
@@ -20,7 +21,7 @@ class SearchCategory {
 
 class SearchScreenController extends GetxController with ProcessLink {
   final textInputController = TextEditingController();
-  final musicServices = Get.find<MusicServices>();
+  final musicServices = Get.find<MusicCatalogService>();
   final suggestionList = [].obs;
   final historyQuerylist = [].obs;
   late SqliteBox<dynamic> queryBox;
@@ -31,37 +32,44 @@ class SearchScreenController extends GetxController with ProcessLink {
     SearchCategory(
       name: S.current.genre_pop,
       color: const Color(0xFFFF007F),
-      imageUrl: 'https://images.unsplash.com/photo-1514525253361-bee8a187c9bc?q=80&w=250&auto=format&fit=crop',
+      imageUrl:
+          'https://images.unsplash.com/photo-1514525253361-bee8a187c9bc?q=80&w=250&auto=format&fit=crop',
     ),
     SearchCategory(
       name: S.current.genre_rock,
       color: const Color(0xFF0056D2),
-      imageUrl: 'https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?q=80&w=250&auto=format&fit=crop',
+      imageUrl:
+          'https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?q=80&w=250&auto=format&fit=crop',
     ),
     SearchCategory(
       name: S.current.genre_hiphop,
       color: const Color(0xFFF16E00),
-      imageUrl: 'https://images.unsplash.com/photo-1547153760-18fc86324498?q=80&w=250&auto=format&fit=crop',
+      imageUrl:
+          'https://images.unsplash.com/photo-1547153760-18fc86324498?q=80&w=250&auto=format&fit=crop',
     ),
     SearchCategory(
       name: S.current.genre_electronic,
       color: const Color(0xFF8A2BE2),
-      imageUrl: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=250&auto=format&fit=crop',
+      imageUrl:
+          'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=250&auto=format&fit=crop',
     ),
     SearchCategory(
       name: S.current.genre_jazz,
       color: const Color(0xFFD4AF37),
-      imageUrl: 'https://images.unsplash.com/photo-1511192336575-5a79af67a629?q=80&w=250&auto=format&fit=crop',
+      imageUrl:
+          'https://images.unsplash.com/photo-1511192336575-5a79af67a629?q=80&w=250&auto=format&fit=crop',
     ),
     SearchCategory(
       name: S.current.genre_latin,
       color: const Color(0xFF008080),
-      imageUrl: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=250&auto=format&fit=crop',
+      imageUrl:
+          'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=250&auto=format&fit=crop',
     ),
     const SearchCategory(
       name: "Podcasts",
       color: Color(0xFFE91E63),
-      imageUrl: 'https://images.unsplash.com/photo-1590602847861-f357a9332bbc?q=80&w=250&auto=format&fit=crop',
+      imageUrl:
+          'https://images.unsplash.com/photo-1590602847861-f357a9332bbc?q=80&w=250&auto=format&fit=crop',
     ),
   ];
 
@@ -85,8 +93,8 @@ class SearchScreenController extends GetxController with ProcessLink {
   }
 
   _init() async {
-    if(GetPlatform.isDesktop){
-      focusNode.addListener((){
+    if (GetPlatform.isDesktop) {
+      focusNode.addListener(() {
         isSearchBarInFocus.value = focusNode.hasFocus;
       });
     }
@@ -96,14 +104,14 @@ class SearchScreenController extends GetxController with ProcessLink {
 
   void onChanged(String text) {
     searchText.value = text;
-    if(text.contains("https://")){
-      urlPasted.value = true; 
+    if (text.contains("https://")) {
+      urlPasted.value = true;
       return;
     }
     urlPasted.value = false;
   }
 
-  // Lógica de combinación: filtra historial local que coincida y añade sugerencias de API
+  // LÃ³gica de combinaciÃ³n: filtra historial local que coincida y aÃ±ade sugerencias de API
   List<String> get filteredHistory {
     final query = searchText.value.trim().toLowerCase();
     if (query.isEmpty) return historyQuerylist.take(8).cast<String>().toList();

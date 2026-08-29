@@ -6,7 +6,7 @@ import 'package:harmonymusic/services/storage/sqlite_store.dart';
 import 'package:harmonymusic/models/album.dart';
 import 'package:harmonymusic/models/media_item_builder.dart';
 import 'package:harmonymusic/models/playlist.dart';
-import 'package:harmonymusic/services/music/music_service.dart';
+import 'package:harmonymusic/music_provider/music_catalog_service.dart';
 import 'package:harmonymusic/ui/widgets/sort_widget.dart';
 import 'package:harmonymusic/utils/helpers/helper.dart';
 
@@ -14,8 +14,8 @@ import 'package:harmonymusic/utils/helpers/helper.dart';
 /// This class provides a set of methods and properties to handle various operations
 /// such as fetching album/playlist details, managing songs, and performing additional operations.
 abstract class PlaylistAlbumScreenControllerBase extends GetxController {
-  /// Instance of [MusicServices] used to interact with music-related services.
-  final MusicServices musicServices = Get.find<MusicServices>();
+  /// Provider-neutral catalog used by album and playlist controllers.
+  final MusicCatalogService musicServices = Get.find<MusicCatalogService>();
 
   /// Observable boolean indicating whether the album is offline.
   final RxBool isOffline = false.obs;

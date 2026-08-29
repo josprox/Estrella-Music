@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:material_ui/material_ui.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:restart_app/restart_app.dart';
 import 'package:harmonymusic/generated/l10n.dart';
@@ -96,8 +96,7 @@ class CloudBackupDialog extends StatelessWidget {
               child: Obx(() {
                 if (controller.backups.isEmpty) {
                   return Center(
-                    child: Text(
-                        S.of(context).backup_no_backups),
+                    child: Text(S.of(context).backup_no_backups),
                   );
                 }
 
@@ -164,8 +163,7 @@ class CloudBackupDialogController extends GetxController {
 
   Future<void> refreshBackups() async {
     if (!_authService.isAuthenticated.value) {
-      errorMessage.value =
-          S.current.backup_auth_required;
+      errorMessage.value = S.current.backup_auth_required;
       backups.clear();
       return;
     }
@@ -251,7 +249,8 @@ class CloudBackupDialogController extends GetxController {
       await refreshBackups();
       if (!context.mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
-        snackbar(context, S.current.backup_delete_success, size: SanckBarSize.MEDIUM),
+        snackbar(context, S.current.backup_delete_success,
+            size: SanckBarSize.MEDIUM),
       );
     } catch (e) {
       errorMessage.value = e.toString().replaceFirst('Bad state: ', '');

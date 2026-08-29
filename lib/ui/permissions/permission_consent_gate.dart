@@ -1,10 +1,12 @@
 import 'dart:async';
 
-import 'package:material_ui/material_ui.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/generated/l10n.dart';
 import 'package:harmonymusic/services/system/fcm_notification_service.dart';
 import 'package:harmonymusic/services/system/permission_service.dart';
+import 'package:harmonymusic/music_provider/music_catalog_service.dart';
+import 'package:harmonymusic/ui/profiles/profile_switcher.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 class PermissionConsentGate extends StatefulWidget {
@@ -48,10 +50,23 @@ class _PermissionConsentGateState extends State<PermissionConsentGate>
   Future<void> _refreshPermissions() async {
     final status = await PermissionService.requiredPermissionStatus();
     if (!mounted) return;
+    final wasGranted = _status?.allGranted == true;
     setState(() => _status = status);
     if (status.allGranted && !_startedNotifications) {
       _startedNotifications = true;
       unawaited(FcmNotificationService.initialize());
+    }
+    if (status.allGranted && !wasGranted) {
+      // Retrigger active provider refresh so local files are scanned immediately
+      unawaited(Future.delayed(const Duration(milliseconds: 300), () async {
+        if (Get.isRegistered<MusicCatalogService>()) {
+          final catalog = Get.find<MusicCatalogService>();
+          try {
+            await catalog.provider.refresh();
+          } catch (_) {}
+        }
+        await ProfileSwitcher.refreshActiveContext();
+      }));
     }
   }
 

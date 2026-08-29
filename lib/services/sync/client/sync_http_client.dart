@@ -122,7 +122,8 @@ class SyncHttpClient {
             'Incremental sync push failed with status ${response.statusCode}',
       );
     }
-    throw StateError('Incremental sync push failed after $maxAttempts attempts');
+    throw StateError(
+        'Incremental sync push failed after $maxAttempts attempts');
   }
 
   Future<Map<String, dynamic>> pullChanges(
@@ -159,7 +160,8 @@ class SyncHttpClient {
             'Incremental sync pull failed with status ${response.statusCode}',
       );
     }
-    throw StateError('Incremental sync pull failed after $maxAttempts attempts');
+    throw StateError(
+        'Incremental sync pull failed after $maxAttempts attempts');
   }
 
   Future<bool> pushCollaborative(String baseUrl, String token,

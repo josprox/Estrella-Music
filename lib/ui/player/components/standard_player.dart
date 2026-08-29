@@ -1,6 +1,6 @@
-import 'dart:ui';
+﻿import 'dart:ui';
 import 'package:audio_video_progress_bar/audio_video_progress_bar.dart';
-import 'package:material_ui/material_ui.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/utils/helpers/ionicons.dart';
 import 'package:harmonymusic/ui/widgets/custom_marquee.dart';
@@ -12,7 +12,6 @@ import '/ui/player/components/animated_play_button.dart';
 import '/ui/player/components/backgroud_image.dart';
 import '/ui/player/components/lyrics_widget.dart';
 import '/ui/player/components/lyrics_switch.dart';
-import 'package:harmonymusic/ui/widgets/lyrics_search_dialog.dart';
 import 'package:harmonymusic/ui/player/player_controller.dart';
 import 'package:harmonymusic/services/social/colistening_service.dart';
 import 'full_lyrics_page.dart';
@@ -42,7 +41,7 @@ class StandardPlayer extends StatelessWidget {
   }
 }
 
-// ── Stateless content widget — receives explicit song & ctrl ─────────────────
+// â”€â”€ Stateless content widget â€” receives explicit song & ctrl â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 class _StandardPlayerContent extends StatelessWidget {
   final MediaItem song;
   final PlayerController ctrl;
@@ -68,7 +67,7 @@ class _StandardPlayerContent extends StatelessWidget {
         opacity: ctrl.panelPosition.value.clamp(0.0, 1.0),
         child: Stack(
           children: [
-            // ── Background: blurred album art ──────────────────────────────
+            // â”€â”€ Background: blurred album art â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
             Positioned.fill(
               child: RepaintBoundary(
                 child: ImageFiltered(
@@ -86,7 +85,7 @@ class _StandardPlayerContent extends StatelessWidget {
                 ),
               ),
             ),
-            // ── Gradient overlay ───────────────────────────────────────────
+            // â”€â”€ Gradient overlay â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
             Positioned.fill(
               child: DecoratedBox(
                 decoration: BoxDecoration(
@@ -104,7 +103,7 @@ class _StandardPlayerContent extends StatelessWidget {
               ),
             ),
 
-            // ── Main Content ─────────────────────────────────────────
+            // â”€â”€ Main Content â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
             SafeArea(
               child: isWide
                   ? _buildWideLayout(context, size, colorScheme, textTheme)
@@ -139,7 +138,7 @@ class _StandardPlayerContent extends StatelessWidget {
                     ctrl: ctrl, textTheme: textTheme, colorScheme: colorScheme),
                 const SizedBox(height: 24),
 
-                // Album art — centered
+                // Album art â€” centered
                 Center(child: _AlbumArt(song: song, artSize: artSize)),
                 const SizedBox(height: 36),
 
@@ -277,7 +276,7 @@ class _StandardPlayerContent extends StatelessWidget {
   }
 }
 
-// ── Sub-widgets ──────────────────────────────────────────────────────────────
+// â”€â”€ Sub-widgets â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 class _TopBar extends StatelessWidget {
   final PlayerController ctrl;
@@ -375,7 +374,7 @@ class _TopBar extends StatelessWidget {
                 children: [
                   if (colistening.currentRoomCode.isEmpty) ...[
                     const Text(
-                      "Comparte un código de sala para escuchar la misma canción al mismo tiempo con amigos.",
+                      "Comparte un cÃ³digo de sala para escuchar la misma canciÃ³n al mismo tiempo con amigos.",
                       style: TextStyle(fontSize: 13),
                       textAlign: TextAlign.center,
                     ),
@@ -401,7 +400,7 @@ class _TopBar extends StatelessWidget {
                     TextField(
                       controller: roomController,
                       decoration: const InputDecoration(
-                        hintText: "Código de 6 dígitos",
+                        hintText: "CÃ³digo de 6 dÃ­gitos",
                         border: OutlineInputBorder(),
                         contentPadding:
                             EdgeInsets.symmetric(horizontal: 12, vertical: 8),
@@ -459,7 +458,7 @@ class _TopBar extends StatelessWidget {
                         style: const TextStyle(fontSize: 14),
                       )
                     else
-                      const Text("Sincronizando música...",
+                      const Text("Sincronizando mÃºsica...",
                           style: TextStyle(fontSize: 14)),
                     const SizedBox(height: 24),
                     ElevatedButton.icon(
@@ -585,7 +584,7 @@ class _SongInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Extract album browseId from extras (stored by MusicServices as 'album' map)
+    // Extract album identity from the provider-neutral track metadata.
     final albumMap = song.extras?['album'] as Map?;
     final albumId = albumMap?['id'] as String?;
     // Artist ID: extras['artists'] is a list of {id, name} maps
@@ -603,7 +602,7 @@ class _SongInfo extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // ── Song title â†’ navigate to album ──────────────────────
+              // â”€â”€ Song title Ã¢â€ â€™ navigate to album â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
               GestureDetector(
                 behavior: HitTestBehavior.opaque,
                 onTap: albumId != null && albumId.isNotEmpty
@@ -635,7 +634,7 @@ class _SongInfo extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 4),
-              // ── Artist name â†’ navigate to artist ───────────────────
+              // â”€â”€ Artist name Ã¢â€ â€™ navigate to artist â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
               GestureDetector(
                 behavior: HitTestBehavior.opaque,
                 onTap: artistId != null && artistId.isNotEmpty
@@ -777,7 +776,7 @@ class _TransportControls extends StatelessWidget {
             ),
           ),
 
-          // Play / Pause — prominent M3 filled circle
+          // Play / Pause â€” prominent M3 filled circle
           _PlayButton(ctrl: ctrl, colorScheme: colorScheme),
 
           // Next
@@ -1333,15 +1332,6 @@ class _DesktopLyricsTab extends StatelessWidget {
                   onPressed: () => ctrl.toggleTranslation(),
                 );
               }),
-              IconButton(
-                tooltip: 'Buscar letras',
-                icon: Icon(Icons.search_rounded,
-                    color: colorScheme.onSurfaceVariant),
-                onPressed: () => showDialog(
-                  context: context,
-                  builder: (context) => const LyricsSearchDialog(),
-                ),
-              ),
               IconButton(
                 tooltip: 'Pantalla completa',
                 icon: Icon(Icons.open_in_full_rounded,

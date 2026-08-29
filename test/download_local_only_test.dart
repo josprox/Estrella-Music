@@ -138,4 +138,17 @@ void main() {
     );
     expect(downloads.get('track-1'), isNotNull);
   });
+
+  test('starting the sync database never imports a local library', () async {
+    await SqliteStore.box('LIBFAV').put('local-track', {
+      'videoId': 'local-track',
+      'title': 'Only on this device',
+    });
+    final service = MusicSqliteService();
+    addTearDown(service.closeDatabase);
+    await service.initialize(databasePath: ':memory:');
+
+    expect(service.db.select('SELECT * FROM music_entities'), isEmpty);
+    expect(service.db.select('SELECT * FROM sync_outbox'), isEmpty);
+  });
 }

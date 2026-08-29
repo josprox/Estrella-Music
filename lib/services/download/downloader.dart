@@ -1,10 +1,10 @@
-import 'dart:async';
+﻿import 'dart:async';
 import 'dart:io';
 
 import 'package:audio_service/audio_service.dart';
 import 'package:dio/dio.dart';
 import 'package:audiotags/audiotags.dart';
-import 'package:material_ui/material_ui.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/services/auth/catalog_recovery_service.dart';
@@ -13,14 +13,15 @@ import 'package:harmonymusic/services/storage/sqlite_store.dart';
 
 import 'package:harmonymusic/ui/screens/Album/album_screen_controller.dart';
 import 'package:harmonymusic/ui/screens/Playlist/playlist_screen_controller.dart';
-import 'package:harmonymusic/services/music/stream_service.dart';
+import 'package:harmonymusic/models/hm_streaming_data.dart';
+import 'package:harmonymusic/music_provider/music_catalog_service.dart';
+import 'package:harmonymusic/music_provider/models/playback_source.dart';
 import 'package:harmonymusic/ui/widgets/snackbar.dart';
 import 'package:harmonymusic/services/system/permission_service.dart';
 import 'package:harmonymusic/ui/screens/Settings/settings_screen_controller.dart';
 import 'package:harmonymusic/utils/helpers/helper.dart';
 import '/models/media_item_builder.dart';
 import 'package:harmonymusic/ui/screens/Library/library_controller.dart';
-import 'package:harmonymusic/services/music/music_service.dart';
 import 'package:harmonymusic/generated/l10n.dart';
 import 'package:harmonymusic/utils/localization/l10n_extensions.dart';
 
@@ -157,9 +158,8 @@ class Downloader extends GetxService {
       // Wait if we reached the limit of concurrent downloads
       while (activeDownloads.length >= maxConcurrentDownloads) {
         await Future.any(activeDownloads);
-        activeDownloads.removeWhere((f) =>
-            f.hashCode ==
-            -1); // cleaned up via .then() below
+        activeDownloads.removeWhere(
+            (f) => f.hashCode == -1); // cleaned up via .then() below
       }
 
       final downloadTask = _downloadSongTask(song, isPlaylist, jobSongList);
@@ -207,7 +207,7 @@ class Downloader extends GetxService {
     final actualDownformat =
         requiredAudioStream.audioCodec.name.contains("mp") ? "m4a" : "opus";
     final RegExp invalidChar =
-        RegExp(r'Container.|\/|\\|\"|\<|\>|\*|\?|\:|\!|\[|\]|\¡|\||\%');
+        RegExp(r'Container.|\/|\\|\"|\<|\>|\*|\?|\:|\!|\[|\]|\Â¡|\||\%');
     final songTitle = "${song.title.trim()} (${song.artist?.trim()})"
         .replaceAll(invalidChar, "");
     String filePath = "$dirPath/$songTitle.$actualDownformat";
@@ -228,11 +228,6 @@ class Downloader extends GetxService {
         try {
           if (song.extras?['year'] != null) {
             year = song.extras?['year'];
-          } else {
-            if (song.album != null) {
-              final musicServ = Get.find<MusicServices>();
-              year = await musicServ.getSongYear(song.id);
-            }
           }
         } catch (_) {}
 
@@ -312,27 +307,14 @@ class Downloader extends GetxService {
     String downloadingFormat,
   ) async {
     try {
-      final response = await StreamProvider.fetch(song.id);
-      if (response.videoUnavailable) {
-        printINFO(
-          'Video ${song.id} is unavailable; attempting to find replacement',
+      final source =
+          await Get.find<MusicCatalogService>().resolvePlayback(song);
+      if (source.type != PlaybackSourceType.authorizedStream) {
+        throw const _UnavailableVideoException(
+          'The active provider does not expose a downloadable stream',
         );
-        throw _UnavailableVideoException(response.statusMSG);
       }
-      if (!response.playable) {
-        printINFO(
-          'Song ${song.id} is not playable (${response.statusMSG}); '
-          'attempting recovery as it may have a new ID',
-        );
-        // Treat all non-playable songs the same as unavailable — the video
-        // ID may have changed and a search can find the replacement.
-        throw _UnavailableVideoException(response.statusMSG);
-      }
-      final audio = _selectAudio(response, downloadingFormat);
-      if (audio == null) {
-        _showDownloadError(response.statusMSG);
-        return null;
-      }
+      final audio = _audioFromSource(source);
       return _DownloadSource(song: song, audio: audio);
     } on _UnavailableVideoException catch (error) {
       return _recoverUnavailableSong(song, downloadingFormat, error.message);
@@ -363,16 +345,13 @@ class Downloader extends GetxService {
         return null;
       }
 
-      final response = await StreamProvider.fetch(recovered.id);
-      final audio = _selectAudio(response, downloadingFormat);
-      if (!response.playable || audio == null) {
-        printINFO(
-          'Replacement ${recovered.id} is not downloadable: '
-          '${response.statusMSG}',
-        );
-        _showDownloadError(response.statusMSG);
+      final source =
+          await Get.find<MusicCatalogService>().resolvePlayback(recovered);
+      if (source.type != PlaybackSourceType.authorizedStream) {
+        _showDownloadError(originalError);
         return null;
       }
+      final audio = _audioFromSource(source);
 
       try {
         await Get.find<CatalogRecoveryService>().persistRecoveredSong(
@@ -395,12 +374,16 @@ class Downloader extends GetxService {
     }
   }
 
-  Audio? _selectAudio(StreamProvider response, String format) {
-    if (!response.playable) return null;
-    return format == 'opus'
-        ? response.highestBitrateOpusAudio
-        : response.highestBitrateMp4aAudio;
-  }
+  Audio _audioFromSource(PlaybackSource source) => Audio(
+        itag: 0,
+        audioCodec:
+            source.mimeType?.contains('opus') == true ? Codec.opus : Codec.mp4a,
+        bitrate: source.bitrate ?? 0,
+        duration: 0,
+        loudnessDb: source.loudnessDb,
+        url: source.uri.toString(),
+        size: 0,
+      );
 
   void _showDownloadError(String message) {
     final context = Get.context;

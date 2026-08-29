@@ -1,11 +1,12 @@
 import 'dart:ui';
-import 'package:material_ui/material_ui.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/generated/l10n.dart';
 
 import '/ui/navigator.dart';
 import '/ui/screens/Settings/settings_screen_controller.dart';
 import 'package:harmonymusic/ui/widgets/nebula_background.dart';
+import 'package:harmonymusic/music_provider/music_catalog_service.dart';
 import 'components/search_item.dart';
 import 'components/music_recognition_bottom_sheet.dart';
 import 'search_screen_controller.dart';
@@ -24,7 +25,6 @@ class SearchScreen extends StatelessWidget {
       },
       child: Scaffold(
         resizeToAvoidBottomInset: false,
-
         body: Stack(
           children: [
             NebulaBackground(seedString: searchScreenController.searchText),
@@ -39,11 +39,15 @@ class SearchScreen extends StatelessWidget {
                       child: Column(
                         children: [
                           Padding(
-                            padding: EdgeInsets.only(top: context.isLandscape ? 10.0 : 20.0),
+                            padding: EdgeInsets.only(
+                                top: context.isLandscape ? 10.0 : 20.0),
                             child: IconButton(
                               icon: Icon(
                                 Icons.arrow_back_ios_new,
-                                color: Theme.of(context).textTheme.titleMedium!.color,
+                                color: Theme.of(context)
+                                    .textTheme
+                                    .titleMedium!
+                                    .color,
                               ),
                               onPressed: () {
                                 Get.nestedKey(ScreenNavigationSetup.id)!
@@ -59,13 +63,19 @@ class SearchScreen extends StatelessWidget {
                     child: CustomScrollView(
                       physics: const BouncingScrollPhysics(),
                       slivers: [
-                        _ExpressiveTitleSliver(controller: searchScreenController),
+                        _ExpressiveTitleSliver(
+                            controller: searchScreenController),
                         _SearchBarSliver(controller: searchScreenController),
-                        _ExpressiveGridCategoriesSliver(controller: searchScreenController),
-                        _RecentSearchesHeaderSliver(controller: searchScreenController),
-                        _RecentSearchesSliver(controller: searchScreenController),
-                        _SearchResultsSliver(controller: searchScreenController),
-                        const SliverPadding(padding: EdgeInsets.only(bottom: 220)),
+                        _ExpressiveGridCategoriesSliver(
+                            controller: searchScreenController),
+                        _RecentSearchesHeaderSliver(
+                            controller: searchScreenController),
+                        _RecentSearchesSliver(
+                            controller: searchScreenController),
+                        _SearchResultsSliver(
+                            controller: searchScreenController),
+                        const SliverPadding(
+                            padding: EdgeInsets.only(bottom: 220)),
                       ],
                     ),
                   ),
@@ -91,7 +101,8 @@ class _ExpressiveTitleSliver extends StatelessWidget {
       }
       return SliverToBoxAdapter(
         child: Padding(
-          padding: const EdgeInsets.only(left: 20.0, right: 20.0, top: 24.0, bottom: 8.0),
+          padding: const EdgeInsets.only(
+              left: 20.0, right: 20.0, top: 24.0, bottom: 8.0),
           child: Text(
             S.current.search,
             style: Theme.of(context).textTheme.displaySmall?.copyWith(
@@ -193,8 +204,7 @@ class _SearchBarDelegate extends SliverPersistentHeaderDelegate {
                     decoration: InputDecoration(
                       border: InputBorder.none,
                       isDense: true,
-                      contentPadding:
-                          const EdgeInsets.symmetric(vertical: 14),
+                      contentPadding: const EdgeInsets.symmetric(vertical: 14),
                       hintText: S.current.searchDes,
                       hintStyle: TextStyle(
                         color: Theme.of(context)
@@ -223,28 +233,32 @@ class _SearchBarDelegate extends SliverPersistentHeaderDelegate {
                     : Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          IconButton(
-                            splashColor: Colors.transparent,
-                            highlightColor: Colors.transparent,
-                            icon: Icon(
-                              Icons.mic_rounded,
-                              color: Theme.of(context)
-                                  .colorScheme
-                                  .onSurface
-                                  .withValues(alpha: 0.7),
-                              size: 22,
+                          if (Get.isRegistered<MusicCatalogService>() &&
+                              Get.find<MusicCatalogService>()
+                                  .capabilities
+                                  .recognition) ...[
+                            IconButton(
+                              splashColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              icon: Icon(
+                                Icons.mic_rounded,
+                                color: Theme.of(context)
+                                    .colorScheme
+                                    .onSurface
+                                    .withValues(alpha: 0.7),
+                                size: 22,
+                              ),
+                              onPressed: () {
+                                showModalBottomSheet(
+                                  context: context,
+                                  isScrollControlled: true,
+                                  builder: (context) =>
+                                      const MusicRecognitionBottomSheet(),
+                                );
+                              },
                             ),
-                            onPressed: () {
-                              showModalBottomSheet(
-                                context: context,
-                                isScrollControlled: true,
-
-                                builder: (context) =>
-                                    const MusicRecognitionBottomSheet(),
-                              );
-                            },
-                          ),
-                          const SizedBox(width: 4),
+                            const SizedBox(width: 4),
+                          ],
                         ],
                       )),
               ],
@@ -373,8 +387,10 @@ class _CategoryCardState extends State<_CategoryCard> {
                         begin: Alignment.bottomLeft,
                         end: Alignment.topRight,
                         colors: [
-                          widget.category.color.withValues(alpha: _isHovered ? 0.90 : 0.80),
-                          widget.category.color.withValues(alpha: _isHovered ? 0.35 : 0.20),
+                          widget.category.color
+                              .withValues(alpha: _isHovered ? 0.90 : 0.80),
+                          widget.category.color
+                              .withValues(alpha: _isHovered ? 0.35 : 0.20),
                         ],
                       ),
                     ),
@@ -419,19 +435,24 @@ class _RecentSearchesHeaderSliver extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Obx(() {
-      if (controller.searchText.value.isNotEmpty || controller.historyQuerylist.isEmpty) {
+      if (controller.searchText.value.isNotEmpty ||
+          controller.historyQuerylist.isEmpty) {
         return const SliverToBoxAdapter(child: SizedBox.shrink());
       }
       return SliverToBoxAdapter(
         child: Padding(
-          padding: const EdgeInsets.only(left: 20.0, right: 20.0, top: 20.0, bottom: 8.0),
+          padding: const EdgeInsets.only(
+              left: 20.0, right: 20.0, top: 20.0, bottom: 8.0),
           child: Text(
             S.current.recentSearches,
             style: Theme.of(context).textTheme.titleMedium?.copyWith(
                   fontWeight: FontWeight.w800,
                   fontSize: 16,
                   letterSpacing: -0.2,
-                  color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.7),
+                  color: Theme.of(context)
+                      .colorScheme
+                      .onSurface
+                      .withValues(alpha: 0.7),
                 ),
           ),
         ),
@@ -466,20 +487,27 @@ class _RecentSearchesSliver extends StatelessWidget {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(16),
                   child: Material(
-                    color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.04),
+                    color: Theme.of(context)
+                        .colorScheme
+                        .onSurface
+                        .withValues(alpha: 0.04),
                     child: InkWell(
                       onTap: () {
                         Get.toNamed(ScreenNavigationSetup.searchResultScreen,
                             id: ScreenNavigationSetup.id, arguments: query);
                       },
                       child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 14.0),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 16.0, vertical: 14.0),
                         child: Row(
                           children: [
                             Container(
                               padding: const EdgeInsets.all(8),
                               decoration: BoxDecoration(
-                                color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.1),
+                                color: Theme.of(context)
+                                    .colorScheme
+                                    .primary
+                                    .withValues(alpha: 0.1),
                                 shape: BoxShape.circle,
                               ),
                               child: Icon(
@@ -493,7 +521,10 @@ class _RecentSearchesSliver extends StatelessWidget {
                               child: Text(
                                 query,
                                 style: TextStyle(
-                                  color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.9),
+                                  color: Theme.of(context)
+                                      .colorScheme
+                                      .onSurface
+                                      .withValues(alpha: 0.9),
                                   fontSize: 15,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -504,9 +535,13 @@ class _RecentSearchesSliver extends StatelessWidget {
                               icon: Icon(
                                 Icons.close_rounded,
                                 size: 18,
-                                color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.45),
+                                color: Theme.of(context)
+                                    .colorScheme
+                                    .onSurface
+                                    .withValues(alpha: 0.45),
                               ),
-                              onPressed: () => controller.removeQueryFromHistory(query),
+                              onPressed: () =>
+                                  controller.removeQueryFromHistory(query),
                             ),
                           ],
                         ),
@@ -543,16 +578,23 @@ class _SearchResultsSliver extends StatelessWidget {
               padding: const EdgeInsets.only(top: 40.0, left: 24, right: 24),
               child: InkWell(
                 onTap: () {
-                  controller.filterLinks(Uri.parse(controller.textInputController.text));
+                  controller.filterLinks(
+                      Uri.parse(controller.textInputController.text));
                   controller.reset();
                 },
                 child: Container(
                   padding: const EdgeInsets.all(20),
                   decoration: BoxDecoration(
-                    color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.05),
+                    color: Theme.of(context)
+                        .colorScheme
+                        .onSurface
+                        .withValues(alpha: 0.05),
                     borderRadius: BorderRadius.circular(16),
                     border: Border.all(
-                      color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.08),
+                      color: Theme.of(context)
+                          .colorScheme
+                          .onSurface
+                          .withValues(alpha: 0.08),
                     ),
                   ),
                   child: Text(
@@ -570,11 +612,11 @@ class _SearchResultsSliver extends StatelessWidget {
       }
 
       final combinedList = <Map<String, dynamic>>[];
-      
+
       for (var query in controller.filteredHistory) {
         combinedList.add({'query': query, 'isHistory': true});
       }
-      
+
       for (var query in controller.apiSuggestions) {
         combinedList.add({'query': query, 'isHistory': false});
       }

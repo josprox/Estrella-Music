@@ -1,8 +1,8 @@
-import 'dart:convert';
+﻿import 'dart:convert';
 import 'dart:io';
 import 'dart:async';
 import 'package:audio_service/audio_service.dart' show MediaItem;
-import 'package:material_ui/material_ui.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/models/thumbnail.dart';
 import 'package:harmonymusic/services/system/permission_service.dart';
@@ -18,8 +18,8 @@ import '../../../models/album.dart' show Album;
 import 'package:harmonymusic/models/media_item_builder.dart';
 import 'package:harmonymusic/models/playlist.dart';
 import 'package:harmonymusic/services/auth/catalog_recovery_service.dart';
-import 'package:harmonymusic/services/music/music_service.dart';
-import 'package:harmonymusic/services/social/piped_service.dart';
+import 'package:harmonymusic/music_provider/music_catalog_service.dart';
+import 'package:harmonymusic/music_provider/music_provider.dart';
 import 'package:harmonymusic/services/sync/sync_service.dart';
 import 'package:harmonymusic/ui/screens/Home/home_screen_controller.dart';
 import 'package:harmonymusic/ui/screens/Library/library_controller.dart';
@@ -30,7 +30,7 @@ import 'package:harmonymusic/generated/l10n.dart';
 ///Playlist title,image,songs
 class PlaylistScreenController extends PlaylistAlbumScreenControllerBase
     with AdditionalOpeartionMixin, GetSingleTickerProviderStateMixin {
-  final MusicServices _musicServices = Get.find<MusicServices>();
+  final MusicCatalogService _musicServices = Get.find<MusicCatalogService>();
   final CatalogRecoveryService _catalogRecoveryService =
       Get.find<CatalogRecoveryService>();
   final playlist = Playlist(
@@ -156,9 +156,8 @@ class PlaylistScreenController extends PlaylistAlbumScreenControllerBase
     isContentFetched.value = false;
 
     if (isPipedPlaylist) {
-      songList.value = (await Get.find<PipedServices>().getPlaylistSongs(id));
+      songList.clear();
       isContentFetched.value = true;
-      checkDownloadStatus();
       return;
     }
 
@@ -173,7 +172,7 @@ class PlaylistScreenController extends PlaylistAlbumScreenControllerBase
       }
       songList.value = List<MediaItem>.from(content['tracks']);
       checkDownloadStatus();
-    } on NetworkError catch (error) {
+    } on MusicProviderException catch (error) {
       printERROR("Error fetching playlist details: $error");
       final recoveredPlaylist =
           await _catalogRecoveryService.findSimilarPlaylist(
@@ -231,30 +230,23 @@ class PlaylistScreenController extends PlaylistAlbumScreenControllerBase
   @override
   Future<bool> addNremoveFromLibrary(dynamic content, {bool add = true}) async {
     try {
-      if (content.isPipedPlaylist && !add) {
-        //remove piped playlist from lib
-        final res =
-            await Get.find<PipedServices>().deletePlaylist(content.playlistId);
-        Get.find<LibraryPlaylistsController>().syncPipedPlaylist();
-        return (res.code == 1);
+      final box = await SqliteStore.openBox("LibraryPlaylists");
+      final id = content.playlistId;
+      if (add) {
+        box.put(id, content.toJson());
+        updateSongsIntoDb();
       } else {
-        final box = await SqliteStore.openBox("LibraryPlaylists");
-        final id = content.playlistId;
-        if (add) {
-          box.put(id, content.toJson());
-          updateSongsIntoDb();
-        } else {
-          box.delete(id);
-          final songsBox = await SqliteStore.openBox(sanitizeBoxName(id));
-          songsBox.deleteFromDisk();
-        }
-        isAddedToLibrary.value = add;
+        box.delete(id);
+        final songsBox = await SqliteStore.openBox(sanitizeBoxName(id));
+        songsBox.deleteFromDisk();
       }
+      isAddedToLibrary.value = add;
       //Update frontend
       Get.find<LibraryPlaylistsController>().refreshLib();
       Get.find<SyncService>().triggerPush();
       if (!content.isCloudPlaylist && !add) {
-        final plstbox = await SqliteStore.openBox(sanitizeBoxName(content.playlistId));
+        final plstbox =
+            await SqliteStore.openBox(sanitizeBoxName(content.playlistId));
         plstbox.deleteFromDisk();
       }
       return true;

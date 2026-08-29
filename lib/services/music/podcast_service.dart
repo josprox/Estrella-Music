@@ -58,9 +58,9 @@ class PodcastService {
         ]) ??
         results;
 
-    final descriptionShelf =
-        findObjectByKey(results, description_shelf[0], isKey: true) ??
-            findObjectByKey(secondarySections, description_shelf[0], isKey: true);
+    final descriptionShelf = findObjectByKey(results, description_shelf[0],
+            isKey: true) ??
+        findObjectByKey(secondarySections, description_shelf[0], isKey: true);
 
     final title = nav(header, title_text) ?? "";
     final authorRun = nav(header, ['straplineTextOne', 'runs', 0]);
@@ -72,7 +72,9 @@ class PodcastService {
           'thumbnail',
           'thumbnails'
         ]) ??
-        [{'url': ''}];
+        [
+          {'url': ''}
+        ];
 
     List<dynamic>? episodeContents;
     dynamic episodeShelf;
@@ -142,14 +144,22 @@ class PodcastService {
     return podcastData;
   }
 
-  Future<List<dynamic>> getPodcastEpisodes(String browseId, String params, {int limit = 100}) async {
+  Future<List<dynamic>> getPodcastEpisodes(String browseId, String params,
+      {int limit = 100}) async {
     final data = Map.from(_musicServices.context);
     data['browseId'] = browseId;
     data['params'] = params;
-    
+
     final response = (await _musicServices.sendRequest("browse", data)).data;
-    final results = nav(response, [...single_column_tab, ...section_list, 0, 'musicPlaylistShelfRenderer', 'contents']) ?? [];
-    
+    final results = nav(response, [
+          ...single_column_tab,
+          ...section_list,
+          0,
+          'musicPlaylistShelfRenderer',
+          'contents'
+        ]) ??
+        [];
+
     final episodes = parsePlaylistItems(results);
     return episodes;
   }
@@ -174,14 +184,18 @@ class PodcastService {
       List items = [];
       if (contents?['gridRenderer'] != null) {
         items = contents?['gridRenderer']['items']
-            ?.map((item) => parseTwoRowItem(item['musicTwoRowItemRenderer']))
-            ?.where((e) => e != null)
-            ?.toList() ?? [];
+                ?.map(
+                    (item) => parseTwoRowItem(item['musicTwoRowItemRenderer']))
+                ?.where((e) => e != null)
+                ?.toList() ??
+            [];
       } else if (contents?['musicShelfRenderer'] != null) {
         items = contents?['musicShelfRenderer']['contents']
-            ?.map((item) => parseSongFlat(item['musicResponsiveListItemRenderer']))
-            ?.where((e) => e != null)
-            ?.toList() ?? [];
+                ?.map((item) =>
+                    parseSongFlat(item['musicResponsiveListItemRenderer']))
+                ?.where((e) => e != null)
+                ?.toList() ??
+            [];
       }
       return items.where((element) => element.isPodcast == true).toList();
     } catch (e) {
@@ -204,13 +218,15 @@ class PodcastService {
         0
       ]);
 
-      final shelfContents = contents?['musicPlaylistShelfRenderer']?['contents'] ??
+      final shelfContents = contents?['musicPlaylistShelfRenderer']
+              ?['contents'] ??
           contents?['musicShelfRenderer']?['contents'];
 
       if (shelfContents == null) return [];
 
       return shelfContents
-          .map((item) => parseEpisodeFlat(item['musicResponsiveListItemRenderer'] ?? item))
+          .map((item) =>
+              parseEpisodeFlat(item['musicResponsiveListItemRenderer'] ?? item))
           .where((item) => item != null)
           .toList();
     } catch (e) {

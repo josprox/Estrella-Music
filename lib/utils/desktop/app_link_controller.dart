@@ -1,13 +1,13 @@
-import 'dart:async';
+﻿import 'dart:async';
 
 import 'package:app_links/app_links.dart';
 import 'package:audio_service/audio_service.dart';
-import 'package:material_ui/material_ui.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'package:harmonymusic/generated/l10n.dart';
 import 'package:harmonymusic/models/playling_from.dart';
-import 'package:harmonymusic/services/music/music_service.dart';
+import 'package:harmonymusic/music_provider/music_catalog_service.dart';
 import 'package:harmonymusic/ui/navigator.dart';
 import 'package:harmonymusic/ui/player/player_controller.dart';
 import 'package:harmonymusic/ui/widgets/add_to_playlist.dart';
@@ -324,7 +324,8 @@ mixin ProcessLink {
     );
 
     try {
-      final result = await Get.find<MusicServices>().getSongWithId(songId);
+      final result =
+          await Get.find<MusicCatalogService>().getSongWithId(songId);
       if (Get.context != null && Navigator.of(Get.context!).canPop()) {
         Navigator.of(Get.context!).pop();
       }

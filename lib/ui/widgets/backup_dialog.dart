@@ -5,7 +5,7 @@ import 'dart:isolate';
 import 'package:archive/archive_io.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/foundation.dart';
-import 'package:material_ui/material_ui.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '/ui/widgets/loader.dart';
@@ -54,7 +54,8 @@ class BackupDialog extends StatelessWidget {
                       Column(
                         children: [
                           Obx(() => Text(
-                                backupDialogController.errorMessage.value.isNotEmpty
+                                backupDialogController
+                                        .errorMessage.value.isNotEmpty
                                     ? backupDialogController.errorMessage.value
                                     : backupDialogController.scanning.isTrue
                                         ? S.current.scanning
@@ -66,7 +67,8 @@ class BackupDialog extends StatelessWidget {
                                                 ? S.current.backupMsg
                                                 : S.current.letsStrart,
                                 textAlign: TextAlign.center,
-                                style: backupDialogController.errorMessage.value.isNotEmpty
+                                style: backupDialogController
+                                        .errorMessage.value.isNotEmpty
                                     ? const TextStyle(color: Colors.redAccent)
                                     : null,
                               )),
@@ -149,7 +151,9 @@ class BackupDialogController extends GetxController {
 
       pickedFolderPath = await FilePicker.platform
           .getDirectoryPath(dialogTitle: S.current.backup_select_folder_dialog);
-      if (pickedFolderPath == null || pickedFolderPath.isEmpty || pickedFolderPath == '/') {
+      if (pickedFolderPath == null ||
+          pickedFolderPath.isEmpty ||
+          pickedFolderPath == '/') {
         return;
       }
     }
@@ -165,14 +169,19 @@ class BackupDialogController extends GetxController {
 
     backupRunning.value = true;
     try {
-      final fileName = 'estrellamusic_backup_${DateTime.now().millisecondsSinceEpoch}.hmb';
-      
+      final fileName =
+          'estrellamusic_backup_${DateTime.now().millisecondsSinceEpoch}.hmb';
+
       if (GetPlatform.isAndroid) {
         // En Android moderno (Scoped Storage), escribir directamente en una ruta arbitraria obtenida por FilePicker
         // suele arrojar Errno = 1 (Operation not permitted). Creamos el archivo temporalmente y permitimos guardarlo/compartirlo.
-        final tempFile = await Get.find<AppBackupService>().createTemporaryBackupArchive();
+        final tempFile =
+            await Get.find<AppBackupService>().createTemporaryBackupArchive();
         await Share.shareXFiles(
-          [XFile(tempFile.path, name: fileName, mimeType: 'application/octet-stream')],
+          [
+            XFile(tempFile.path,
+                name: fileName, mimeType: 'application/octet-stream')
+          ],
           subject: 'Estrella Music Backup',
         );
         isbackupCompleted.value = true;

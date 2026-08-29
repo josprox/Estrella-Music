@@ -5,7 +5,7 @@ import 'package:dio/dio.dart';
 import 'package:harmonymusic/services/system/translation_service.dart';
 import 'package:harmonymusic/services/storage/sqlite_store.dart';
 import 'package:get/get.dart';
-import 'package:material_ui/material_ui.dart';
+import 'package:flutter/material.dart';
 import 'package:audio_service/audio_service.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -25,13 +25,15 @@ import '/models/media_item_builder.dart';
 import 'package:harmonymusic/ui/screens/Home/home_screen_controller.dart';
 import 'package:harmonymusic/ui/widgets/sliding_up_panel.dart';
 import '/models/durationstate.dart';
-import 'package:harmonymusic/services/music/music_service.dart';
+import 'package:harmonymusic/music_provider/music_catalog_service.dart';
+import 'package:harmonymusic/music_provider/music_provider.dart';
 import 'package:harmonymusic/generated/l10n.dart';
 import 'package:harmonymusic/utils/localization/l10n_extensions.dart';
 import 'package:harmonymusic/services/sync/sync_service.dart';
 import 'package:harmonymusic/services/social/colistening_service.dart';
 import 'package:harmonymusic/services/system/discord_rpc_service.dart';
 import 'package:harmonymusic/ui/widgets/up_next_queue.dart';
+
 enum PlayButtonState { paused, playing, loading }
 
 class CustomLyricUI extends UINetease {
@@ -116,7 +118,7 @@ class PlayerController extends GetxController
     with GetSingleTickerProviderStateMixin {
   final _audioHandler = Get.find<AudioHandler>();
   final _catalogRecoveryService = Get.find<CatalogRecoveryService>();
-  final _musicServices = Get.find<MusicServices>();
+  final _musicServices = Get.find<MusicCatalogService>();
   final currentQueue = <MediaItem>[].obs;
   final queueSearchQuery = ''.obs;
   final currentSongIndex = (0).obs;
@@ -157,6 +159,7 @@ class PlayerController extends GetxController
       builder: (context) => const UpNextQueueModal(),
     );
   }
+
   final isShuffleModeEnabled = false.obs;
   final currentSong = Rxn<MediaItem>();
   final isCurrentSongFav = false.obs;
@@ -463,6 +466,13 @@ class PlayerController extends GetxController
     _startSessionPersistence();
   }
 
+  /// Restores the queue stored in the currently active profile namespace.
+  Future<void> restoreProfilePlaybackState() async {
+    await _audioHandler.stop();
+    await _audioHandler.updateQueue(const []);
+    await _restorePrevSession();
+  }
+
   void _startSessionPersistence() {
     _persistenceTimer?.cancel();
     _persistenceTimer = Timer.periodic(const Duration(seconds: 10), (timer) {
@@ -530,7 +540,7 @@ class PlayerController extends GetxController
             _audioHandler
                 .customAction("upadateMediaItemInAudioService", {"index": 0});
           }
-        } on NetworkError catch (error) {
+        } on MusicProviderException catch (error) {
           printERROR("Error resolving queue for song: $error");
           final recoveredSong = await _recoverQueueSeedSong(queueSeedSong);
           if (recoveredSong == null) {
@@ -1049,20 +1059,32 @@ class PlayerController extends GetxController
     if (lyrics["synced"].isEmpty && lyrics['plainLyrics'].isEmpty) {
       isLyricsLoading.value = true;
       try {
-        final Map<String, dynamic>? lyricsR =
-            await SyncedLyricsService.getSyncedLyrics(
-                currentSong.value!, progressBarStatus.value.total.inSeconds);
-        if (lyricsR != null) {
-          lyrics.value = lyricsR;
-          isLyricsLoading.value = false;
-          return;
-        }
-        final related = await _musicServices.getWatchPlaylist(
-            videoId: currentSong.value!.id, onlyRelated: true);
-        final relatedLyricsId = related['lyrics'];
-        if (relatedLyricsId != null) {
-          final lyrics_ = await _musicServices.getLyrics(relatedLyricsId);
-          lyrics.value = {"synced": "", "plainLyrics": lyrics_};
+        final song = currentSong.value;
+        final providerLyrics =
+            song != null ? await _musicServices.lyricsFor(song) : null;
+        if (providerLyrics != null && !providerLyrics.isEmpty) {
+          lyrics.value = {
+            "synced": providerLyrics.synced ?? "",
+            "plainLyrics": providerLyrics.plain ?? "",
+          };
+        } else if (song != null) {
+          // Fallback: Try online lyric service via title/artist
+          try {
+            final neteaseRes = await TranslationService.fetchNetEaseTranslation(
+                song.title, song.artist ?? "");
+            if (neteaseRes != null &&
+                ((neteaseRes["synced"]?.isNotEmpty ?? false) ||
+                    (neteaseRes["plain"]?.isNotEmpty ?? false))) {
+              lyrics.value = {
+                "synced": neteaseRes["synced"] ?? "",
+                "plainLyrics": neteaseRes["plain"] ?? "NA",
+              };
+            } else {
+              lyrics.value = {"synced": "", "plainLyrics": "NA"};
+            }
+          } catch (_) {
+            lyrics.value = {"synced": "", "plainLyrics": "NA"};
+          }
         } else {
           lyrics.value = {"synced": "", "plainLyrics": "NA"};
         }

@@ -1,6 +1,6 @@
 import 'package:audio_service/audio_service.dart' show MediaItem;
 import 'package:flutter/gestures.dart';
-import 'package:material_ui/material_ui.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:get/get.dart';
 import 'custom_marquee.dart';
@@ -216,10 +216,8 @@ class SongListTile extends StatelessWidget with RemoveSongFromPlaylistMixin {
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(28)),
       ),
-
       isScrollControlled: true,
       context: playerController.homeScaffoldkey.currentState!.context,
-
       builder: (_) => SongInfoBottomSheet(song, playlist: playlist),
     ).whenComplete(() => Get.delete<SongInfoController>());
   }

@@ -1,4 +1,10 @@
-# Estrella Music / EMusic Cloud Architecture
+# Estrella Music / EMusic Cloud Architecture (historico)
+
+> Documento de transicion anterior. La arquitectura vigente es
+> [ESTRELLA_MUSIC_PROVIDER_ARCHITECTURE.md](ESTRELLA_MUSIC_PROVIDER_ARCHITECTURE.md).
+> `emusicDataMode` ya no gobierna la aplicacion: el login global de Joss Red es
+> obligatorio, el perfil musical activo selecciona el provider y solo perfiles
+> eMusic autorizados pueden sincronizar.
 
 Fecha de actualizacion: 2026-07-09
 

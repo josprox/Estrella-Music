@@ -1,4 +1,4 @@
-import 'package:material_ui/material_ui.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/services/storage/sqlite_store.dart';
 
@@ -7,9 +7,6 @@ import 'package:harmonymusic/services/backup/app_backup_service.dart';
 import 'package:harmonymusic/services/auth/auth_service.dart';
 import 'package:harmonymusic/services/backup/cloud_backup_service.dart';
 import 'package:harmonymusic/services/sync/legacy_music_migration_service.dart';
-import 'package:harmonymusic/services/sync/sync_service.dart';
-import 'package:harmonymusic/services/sync/cloud_migration_service.dart';
-
 
 class UserDataBootstrapService extends GetxService {
   final isPreparing = false.obs;
@@ -48,13 +45,6 @@ class UserDataBootstrapService extends GetxService {
   bool get needsBootstrapForCurrentUser {
     final userKey = currentUserKey;
     if (!_authService.isAuthenticated.value || userKey == null) {
-      return false;
-    }
-    final prefs = SqliteStore.box('AppPrefs');
-    final dataMode = prefs.get('emusicDataMode', defaultValue: 'local');
-    final cloudRequested =
-        prefs.get('emusicCloudRequested', defaultValue: false) == true;
-    if (dataMode == 'cloud' || cloudRequested) {
       return false;
     }
     if (isPreparing.value) {
@@ -122,34 +112,6 @@ class UserDataBootstrapService extends GetxService {
       final hasLocalData = await hasMeaningfulLocalData();
       willReplaceLocalData.value = hasLocalData;
 
-      statusMessage.value = 'Buscando biblioteca en la nube...';
-      final migrationService = Get.find<CloudMigrationService>();
-      final remoteSummary = await migrationService.fetchRemoteSummary();
-      final hasCloudData = remoteSummary.isNotEmpty &&
-          ((remoteSummary['playlists'] as num? ?? 0) > 0 ||
-           (remoteSummary['favorites'] as num? ?? 0) > 0 ||
-           (remoteSummary['recent_plays'] as num? ?? 0) > 0 ||
-           (remoteSummary['albums'] as num? ?? 0) > 0 ||
-           (remoteSummary['artists'] as num? ?? 0) > 0);
-
-      if (hasCloudData) {
-        statusMessage.value = 'Configurando tu biblioteca de la nube...';
-        final prefs = SqliteStore.box('AppPrefs');
-        await prefs.put('emusicDataMode', 'cloud');
-        await prefs.put('hasPendingSync', false);
-        await prefs.put('emusicCloudRequested', false);
-        await prefs.put('emusicModeChoiceCompleted', true);
-
-        // Clean local data before pulling
-        await _appBackupService.clearLocalMusicData();
-
-        statusMessage.value = 'Descargando tu música...';
-        await Get.find<SyncService>().pull();
-
-        await _confirmBootstrap(userKey);
-        return;
-      }
-
       statusMessage.value = 'Buscando backups de tu cuenta...';
       final estrellaBackups = await _cloudBackupService.listBackups(
         appName: CloudBackupService.defaultAppName,
@@ -169,14 +131,14 @@ class UserDataBootstrapService extends GetxService {
               fileId: latest.fileId,
             ) &&
             hasLocalData) {
-          statusMessage.value = 'Tu biblioteca ya está sincronizada.';
+          statusMessage.value = 'Tu biblioteca ya estÃ¡ sincronizada.';
           await _confirmBootstrap(userKey);
           return;
         }
 
         foundBackups.assignAll(allRecentBackups);
         requiresUserConfirmation.value = true;
-        statusMessage.value = '¡Encontramos respaldos de tu cuenta!';
+        statusMessage.value = 'Â¡Encontramos respaldos de tu cuenta!';
         // Wait for user input via requiresUserConfirmation flow
         return;
       }
@@ -188,7 +150,7 @@ class UserDataBootstrapService extends GetxService {
     } catch (e) {
       lastError.value = e.toString().replaceFirst('Bad state: ', '');
       statusMessage.value = willReplaceLocalData.value
-          ? 'No se pudo completar la búsqueda de respaldos. Entrando...'
+          ? 'No se pudo completar la bÃºsqueda de respaldos. Entrando...'
           : 'No se pudo recuperar tu backup. Entrando...';
       printERROR('Bootstrap de usuario fallo: $e');
       await _confirmBootstrap(userKey);
@@ -198,7 +160,6 @@ class UserDataBootstrapService extends GetxService {
       }
     }
   }
-
 
   Future<void> restoreSelectedBackup(CloudBackupFile backup) async {
     final userKey = _currentProcessingUserKey;
@@ -216,8 +177,13 @@ class UserDataBootstrapService extends GetxService {
       final bytes = await _cloudBackupService.downloadBackupBytes(backup);
 
       if (willReplaceLocalData.value) {
-        statusMessage.value = 'Borrando datos locales antes de restaurar...';
-        await _appBackupService.clearLocalMusicData();
+        statusMessage.value = 'Creando respaldo local de seguridad...';
+        final safetyBackup =
+            await _appBackupService.createTemporaryBackupArchive();
+        await SqliteStore.box('AppPrefs').put(
+          'last_restore_safety_backup',
+          safetyBackup.path,
+        );
       }
 
       statusMessage.value = 'Restaurando tu respaldo de $label...';
@@ -242,12 +208,12 @@ class UserDataBootstrapService extends GetxService {
       );
 
       _applyLocaleFromAppPrefs();
-      statusMessage.value = '¡Tu biblioteca ha sido restaurada!';
+      statusMessage.value = 'Â¡Tu biblioteca ha sido restaurada!';
       await _confirmBootstrap(userKey);
     } catch (e) {
       lastError.value = e.toString().replaceFirst('Bad state: ', '');
-      statusMessage.value = 'La restauración falló. Entrando a la app...';
-      printERROR('Restauración manual falló: $e');
+      statusMessage.value = 'La restauraciÃ³n fallÃ³. Entrando a la app...';
+      printERROR('RestauraciÃ³n manual fallÃ³: $e');
       await _confirmBootstrap(userKey);
     } finally {
       isPreparing.value = false;
@@ -278,7 +244,9 @@ class UserDataBootstrapService extends GetxService {
 
     for (final boxName in boxesToCheck) {
       final wasOpen = SqliteStore.isBoxOpen(boxName);
-      final box = wasOpen ? SqliteStore.box(boxName) : await SqliteStore.openBox(boxName);
+      final box = wasOpen
+          ? SqliteStore.box(boxName)
+          : await SqliteStore.openBox(boxName);
       final hasData = box.isNotEmpty;
       if (!wasOpen) {
         await box.close();
@@ -289,7 +257,6 @@ class UserDataBootstrapService extends GetxService {
     }
     return false;
   }
-
 
   bool _wasBackupAlreadyProcessed({
     required String userKey,

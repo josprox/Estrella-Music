@@ -1,5 +1,5 @@
 import 'package:audio_service/audio_service.dart';
-import 'package:material_ui/material_ui.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/generated/l10n.dart';
 import 'package:harmonymusic/utils/localization/l10n_extensions.dart';
@@ -178,7 +178,7 @@ class ListWidget extends StatelessWidget with RemoveSongFromPlaylistMixin {
               for (dynamic items in (albums[index].artists).sublist(1)) {
                 artistName = "${artistName + items['name']},";
               }
-            // ignore: empty_catches
+              // ignore: empty_catches
             } catch (e) {}
             artistName = artistName.length > 16
                 ? artistName.substring(0, 16)
@@ -189,7 +189,7 @@ class ListWidget extends StatelessWidget with RemoveSongFromPlaylistMixin {
                 subtitle: artistName,
                 subtitle2: albums[index].artists.isEmpty
                     ? "${albums[index].year}"
-                    : "${(albums[index].artists[0]['name'])} • ${albums[index].year}");
+                    : "${(albums[index].artists[0]['name'])} â€¢ ${albums[index].year}");
           }),
     );
   }
@@ -250,7 +250,8 @@ class ListWidget extends StatelessWidget with RemoveSongFromPlaylistMixin {
                           fontSize: 14,
                         ),
                   ),
-                  if (artist.subscribers != null && artist.subscribers.isNotEmpty)
+                  if (artist.subscribers != null &&
+                      artist.subscribers.isNotEmpty)
                     Padding(
                       padding: const EdgeInsets.only(top: 2),
                       child: Text(
@@ -259,7 +260,9 @@ class ListWidget extends StatelessWidget with RemoveSongFromPlaylistMixin {
                         textAlign: TextAlign.center,
                         overflow: TextOverflow.ellipsis,
                         style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                              color: Theme.of(context).colorScheme.onSurfaceVariant,
+                              color: Theme.of(context)
+                                  .colorScheme
+                                  .onSurfaceVariant,
                             ),
                       ),
                     ),

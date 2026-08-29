@@ -1,10 +1,9 @@
-import 'package:audio_service/audio_service.dart';
-import 'package:material_ui/material_ui.dart';
+﻿import 'package:audio_service/audio_service.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/services/storage/sqlite_store.dart';
 import 'package:harmonymusic/utils/helpers/helper.dart';
 
-import 'package:harmonymusic/services/social/piped_service.dart';
 import 'package:harmonymusic/services/sync/sync_service.dart';
 import '/models/media_item_builder.dart';
 import '/ui/widgets/create_playlist_dialog.dart';
@@ -20,10 +19,9 @@ class AddToPlaylist extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final addToPlaylistController = Get.put(AddToPlaylistController());
-    final isPipedLinked = Get.find<PipedServices>().isLoggedIn;
     return CommonDialog(
       child: Container(
-        height: isPipedLinked ? 450 : 380,
+        height: 380,
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
@@ -70,47 +68,6 @@ class AddToPlaylist extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 16),
-            if (isPipedLinked) ...[
-              Obx(
-                () => Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    FilterChip(
-                      selected:
-                          addToPlaylistController.playlistType.value == "local",
-                      label: Text(S.current.local),
-                      onSelected: (val) {
-                        if (val) {
-                          addToPlaylistController.changePlaylistType("local");
-                        }
-                      },
-                      selectedColor: Theme.of(context)
-                          .colorScheme
-                          .primary
-                          .withValues(alpha: 0.15),
-                      checkmarkColor: Theme.of(context).colorScheme.primary,
-                    ),
-                    const SizedBox(width: 8),
-                    FilterChip(
-                      selected:
-                          addToPlaylistController.playlistType.value == "piped",
-                      label: Text(S.current.Piped),
-                      onSelected: (val) {
-                        if (val) {
-                          addToPlaylistController.changePlaylistType("piped");
-                        }
-                      },
-                      selectedColor: Theme.of(context)
-                          .colorScheme
-                          .primary
-                          .withValues(alpha: 0.15),
-                      checkmarkColor: Theme.of(context).colorScheme.primary,
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(height: 12),
-            ],
             Expanded(
               child: Obx(() {
                 if (addToPlaylistController.playlists.isEmpty) {
@@ -144,8 +101,7 @@ class AddToPlaylist extends StatelessWidget {
                       const SizedBox(height: 8),
                   itemBuilder: (context, index) {
                     final playlist = addToPlaylistController.playlists[index];
-                    final isPiped = playlist.isPipedPlaylist;
-                    final isCloud = playlist.isCloudPlaylist && !isPiped;
+                    final isCloud = playlist.isCloudPlaylist;
 
                     return InkWell(
                       onTap: () {
@@ -195,15 +151,10 @@ class AddToPlaylist extends StatelessWidget {
                                           Colors.blue.shade600,
                                           Colors.indigo.shade400
                                         ]
-                                      : isPiped
-                                          ? [
-                                              Colors.red.shade600,
-                                              Colors.orange.shade400
-                                            ]
-                                          : [
-                                              Colors.purple.shade600,
-                                              Colors.pink.shade400
-                                            ],
+                                      : [
+                                          Colors.purple.shade600,
+                                          Colors.pink.shade400
+                                        ],
                                   begin: Alignment.topLeft,
                                   end: Alignment.bottomRight,
                                 ),
@@ -234,23 +185,15 @@ class AddToPlaylist extends StatelessWidget {
                                       Icon(
                                         isCloud
                                             ? Icons.cloud_done_rounded
-                                            : isPiped
-                                                ? Icons.language_rounded
-                                                : Icons.phone_android_rounded,
+                                            : Icons.phone_android_rounded,
                                         size: 13,
                                         color: isCloud
                                             ? Colors.blue.shade400
-                                            : isPiped
-                                                ? Colors.red.shade400
-                                                : Colors.green.shade400,
+                                            : Colors.green.shade400,
                                       ),
                                       const SizedBox(width: 4),
                                       Text(
-                                        isCloud
-                                            ? "Cloud"
-                                            : isPiped
-                                                ? "Piped"
-                                                : "Local",
+                                        isCloud ? "Cloud" : "Local",
                                         style: TextStyle(
                                           fontSize: 11,
                                           color:
@@ -289,7 +232,6 @@ class AddToPlaylistController extends GetxController {
   final playlistType = "local".obs;
   final additionInProgress = false.obs;
   List<Playlist> localPlaylists = [];
-  List<Playlist> pipedPlaylists = [];
   AddToPlaylistController() {
     _getAllPlaylist();
   }
@@ -299,59 +241,35 @@ class AddToPlaylistController extends GetxController {
     playlists.value =
         plstsBox.values.map((e) => Playlist.fromJson(e as Map)).toList();
     localPlaylists = playlists.toList();
-    if (Get.find<PipedServices>().isLoggedIn) {
-      final res = await Get.find<PipedServices>().getAllPlaylists();
-      if (res.code == 1) {
-        pipedPlaylists = res.response
-            .map((item) => Playlist(
-                  title: item['name'],
-                  playlistId: item['id'],
-                  description: S.current.pipedPlaylistDescription,
-                  thumbnailUrl: item['thumbnail'],
-                  isPipedPlaylist: true,
-                ))
-            .whereType<Playlist>()
-            .toList();
-      }
-    }
   }
 
   void changePlaylistType(val) {
     playlistType.value = val;
-    playlists.value = val == "piped" ? pipedPlaylists : localPlaylists;
+    playlists.value = localPlaylists;
   }
 
   Future<bool> addSongsToPlaylist(
       List<MediaItem> songs, String playlistId, BuildContext context) async {
     additionInProgress.value = true;
-    if (playlistType.value == "local") {
-      final syncService = Get.find<SyncService>();
-      await syncService.performLocalMutation(() async {
-        final plstBox = await SqliteStore.openBox(sanitizeBoxName(playlistId));
-        final playlistSongIds = plstBox.values.map((item) => item['videoId']);
-        for (MediaItem element in songs) {
-          if (!playlistSongIds.contains(element.id)) {
-            final track = MediaItemBuilder.toJson(element);
-            final position = await plstBox.add(track);
-            await syncService.recordPlaylistTrackChange(
-              playlistId,
-              element.id,
-              deleted: false,
-              track: track,
-              position: position,
-            );
-          }
+    final syncService = Get.find<SyncService>();
+    await syncService.performLocalMutation(() async {
+      final plstBox = await SqliteStore.openBox(sanitizeBoxName(playlistId));
+      final playlistSongIds = plstBox.values.map((item) => item['videoId']);
+      for (MediaItem element in songs) {
+        if (!playlistSongIds.contains(element.id)) {
+          final track = MediaItemBuilder.toJson(element);
+          final position = await plstBox.add(track);
+          await syncService.recordPlaylistTrackChange(
+            playlistId,
+            element.id,
+            deleted: false,
+            track: track,
+            position: position,
+          );
         }
-      });
-      // Keep box open to prevent "SqliteBox has already been closed" errors
-      additionInProgress.value = false;
-      return true;
-    } else {
-      final videosId = songs.map((e) => e.id).toList();
-      final res =
-          await Get.find<PipedServices>().addToPlaylist(playlistId, videosId);
-      additionInProgress.value = false;
-      return (res.code == 1);
-    }
+      }
+    });
+    additionInProgress.value = false;
+    return true;
   }
 }

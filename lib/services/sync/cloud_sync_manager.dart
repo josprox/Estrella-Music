@@ -4,9 +4,8 @@ import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/generated/l10n.dart';
 import 'package:harmonymusic/services/auth/auth_service.dart';
-import 'package:harmonymusic/services/storage/sqlite_store.dart';
-import 'package:harmonymusic/services/sync/cloud_migration_service.dart';
 import 'package:harmonymusic/services/sync/sync_service.dart';
+import 'package:harmonymusic/profiles/profile_manager.dart';
 
 enum DataMode { local, cloud }
 
@@ -44,10 +43,8 @@ class SyncResult {
 /// Gestor unificado para controlar el modo de datos (Local vs Cloud)
 /// y orquestar el pipeline de sincronización multidispositivo con seguridad.
 class CloudSyncManager extends GetxService {
-  static const String _modeKey = 'emusicDataMode';
-  static const String _pendingKey = 'hasPendingSync';
-
   final Rx<DataMode> currentMode = DataMode.local.obs;
+  Worker? _profileWorker;
 
   AuthService get _authService => Get.find<AuthService>();
   SyncService get _syncService => Get.find<SyncService>();
@@ -56,12 +53,16 @@ class CloudSyncManager extends GetxService {
   void onInit() {
     super.onInit();
     _loadStoredMode();
+    _profileWorker = ever(
+      Get.find<ProfileManager>().activeProfile,
+      (_) => _loadStoredMode(),
+    );
   }
 
   void _loadStoredMode() {
-    final modeStr =
-        SqliteStore.box('AppPrefs').get(_modeKey, defaultValue: 'local');
-    currentMode.value = modeStr == 'cloud' ? DataMode.cloud : DataMode.local;
+    currentMode.value = Get.find<ProfileManager>().activeProfileMaySync
+        ? DataMode.cloud
+        : DataMode.local;
   }
 
   bool get isCloudMode => currentMode.value == DataMode.cloud;
@@ -79,7 +80,7 @@ class CloudSyncManager extends GetxService {
     }
 
     if (newMode == DataMode.local) {
-      await SqliteStore.box('AppPrefs').put(_modeKey, 'local');
+      await _syncService.keepLocalMode();
       currentMode.value = DataMode.local;
       _syncService.disconnectSocket();
       return SyncResult(
@@ -92,22 +93,12 @@ class CloudSyncManager extends GetxService {
     if (!_authService.isAuthenticated.value) {
       return SyncResult(
         status: SyncStatus.skippedNotAuthenticated,
-        message: 'Se requiere iniciar sesión en Joss Red para usar el modo nube.',
+        message:
+            'Se requiere iniciar sesión en Joss Red para usar el modo nube.',
       );
     }
 
-    final migrationResult =
-        await Get.find<CloudMigrationService>().migrateLocalLibraryToCloud();
-    if (!migrationResult.success) {
-      await SqliteStore.box('AppPrefs').put(_modeKey, 'local');
-      currentMode.value = DataMode.local;
-      return SyncResult(
-        status: SyncStatus.failed,
-        message: migrationResult.message,
-      );
-    }
-
-    await SqliteStore.box('AppPrefs').put(_modeKey, 'cloud');
+    await _syncService.enableCloudMode();
     currentMode.value = DataMode.cloud;
     _syncService.connectSocket();
 
@@ -154,11 +145,12 @@ class CloudSyncManager extends GetxService {
       // FASE 1: Traer cambios remotos primero para asegurar el estado del servidor
       final pullSuccess = await _syncService.pull();
       if (!pullSuccess) {
-        debugPrint('[CloudSyncManager] Advertencia en Fase 1 (Pull). Continuando con verificación local.');
+        debugPrint(
+            '[CloudSyncManager] Advertencia en Fase 1 (Pull). Continuando con verificación local.');
       }
 
       // FASE 2 y 3: Si existen cambios locales pendientes resueltos, enviarlos
-      final hasPending = SqliteStore.box('AppPrefs').get(_pendingKey) == true;
+      final hasPending = _syncService.hasPendingChanges;
       if (hasPending) {
         final pushSuccess = await _syncService.push();
         if (!pushSuccess) {
@@ -174,12 +166,19 @@ class CloudSyncManager extends GetxService {
         message: S.current.syncUploadSuccess,
       );
     } catch (e, stack) {
-      debugPrint('[CloudSyncManager] Error durante el pipeline de sync: $e\n$stack');
+      debugPrint(
+          '[CloudSyncManager] Error durante el pipeline de sync: $e\n$stack');
       return SyncResult(
         status: SyncStatus.failed,
         message: 'Fallo durante la sincronización: $e',
         error: e,
       );
     }
+  }
+
+  @override
+  void onClose() {
+    _profileWorker?.dispose();
+    super.onClose();
   }
 }

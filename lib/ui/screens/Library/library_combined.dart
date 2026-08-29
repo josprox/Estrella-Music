@@ -1,8 +1,6 @@
-import 'package:material_ui/material_ui.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '/ui/screens/Settings/settings_screen_controller.dart';
-import '/ui/widgets/piped_sync_widget.dart';
 import 'package:harmonymusic/ui/widgets/create_playlist_dialog.dart';
 import 'library.dart';
 import 'package:harmonymusic/generated/l10n.dart';
@@ -13,7 +11,6 @@ class CombinedLibrary extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final tabCon = Get.put(CombinedLibraryController());
-    final settingscrnController = Get.find<SettingsScreenController>();
     final cs = Theme.of(context).colorScheme;
     final tt = Theme.of(context).textTheme;
     final topPadding = MediaQuery.of(context).padding.top;
@@ -28,7 +25,7 @@ class CombinedLibrary extends StatelessWidget {
             backgroundColor: cs.surface,
             surfaceTintColor: Colors.transparent,
             elevation: 0,
-            // toolbarHeight cero — toda la UI va en flexibleSpace
+            // toolbarHeight cero â€” toda la UI va en flexibleSpace
             toolbarHeight: 0,
             expandedHeight: topPadding + 112,
             flexibleSpace: FlexibleSpaceBar(
@@ -39,7 +36,7 @@ class CombinedLibrary extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      // ── Fila título + acciones ──────────────────────────
+                      // â”€â”€ Fila tÃ­tulo + acciones â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
@@ -63,13 +60,7 @@ class CombinedLibrary extends StatelessWidget {
                             ),
                           ),
                           const Spacer(),
-                          // Piped sync
-                          Obx(() => settingscrnController
-                                  .isLinkedWithPiped.isTrue
-                              ? const PipedSyncWidget(
-                                  padding: EdgeInsets.only(right: 8))
-                              : const SizedBox.shrink()),
-                          // Botón crear playlist
+                          // BotÃ³n crear playlist
                           FilledButton.tonalIcon(
                             onPressed: () => showDialog(
                               context: context,

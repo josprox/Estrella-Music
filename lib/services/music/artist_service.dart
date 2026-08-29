@@ -15,41 +15,53 @@ class ArtistService {
     data['context']['client']["hl"] = 'en';
     data['browseId'] = channelId;
     final response = (await _musicServices.sendRequest("browse", data)).data;
-    final results = nav(response, [...single_column_tab, ...section_list]) ?? [];
+    final results =
+        nav(response, [...single_column_tab, ...section_list]) ?? [];
 
     final Map<String, dynamic> artist = {'description': null, 'views': null};
-    
+
     // Header can be immersive, visual, or responsive (for profiles)
-    final dynamic header = response['header']?['musicImmersiveHeaderRenderer'] ??
+    final dynamic header = response['header']
+            ?['musicImmersiveHeaderRenderer'] ??
         response['header']?['musicVisualHeaderRenderer'] ??
         response['header']?['musicHeaderRenderer'] ??
-        response['header']?['musicEditablePlaylistDetailHeaderRenderer']?['header']?['musicResponsiveHeaderRenderer'];
+        response['header']?['musicEditablePlaylistDetailHeaderRenderer']
+            ?['header']?['musicResponsiveHeaderRenderer'];
 
     if (header != null) {
-      artist['name'] = nav(header, title_text) ?? nav(header, ['title', 'runs', 0, 'text']);
+      artist['name'] =
+          nav(header, title_text) ?? nav(header, ['title', 'runs', 0, 'text']);
       artist['thumbnails'] = nav(header, thumbnails) ??
           nav(header, thumbnail_renderer) ??
           nav(header, ['thumbnail', 'thumbnails']) ??
-          [{'url': ''}];
-      
+          [
+            {'url': ''}
+          ];
+
       final dynamic subscriptionButton = header['subscriptionButton'] != null
           ? header['subscriptionButton']['subscribeButtonRenderer']
           : null;
-      
+
       artist['subscribers'] = subscriptionButton != null
           ? nav(subscriptionButton, ['subscriberCountText', 'runs', 0, 'text'])
           : null;
-      
-      artist['isSubscribed'] = subscriptionButton != null ? (nav(subscriptionButton, ['subscribed']) ?? false) : false;
-      artist['monthlyListeners'] = nav(header, ['monthlyListenerCount', 'runs', 0, 'text']);
-      
-      artist['shuffleId'] = nav(header, ['playButton', 'buttonRenderer', ...navigation_watch_playlist_id]);
-      artist['radioId'] = nav(header, ['startRadioButton', 'buttonRenderer'] + navigation_playlist_id);
+
+      artist['isSubscribed'] = subscriptionButton != null
+          ? (nav(subscriptionButton, ['subscribed']) ?? false)
+          : false;
+      artist['monthlyListeners'] =
+          nav(header, ['monthlyListenerCount', 'runs', 0, 'text']);
+
+      artist['shuffleId'] = nav(header,
+          ['playButton', 'buttonRenderer', ...navigation_watch_playlist_id]);
+      artist['radioId'] = nav(header,
+          ['startRadioButton', 'buttonRenderer'] + navigation_playlist_id);
     }
 
     artist['channelId'] = channelId;
-    
-    final descriptionShelf = findObjectByKey(results, description_shelf[0], isKey: true);
+
+    final descriptionShelf =
+        findObjectByKey(results, description_shelf[0], isKey: true);
     if (descriptionShelf != null) {
       artist['description'] = nav(descriptionShelf, description);
       artist['views'] = descriptionShelf['subheader'] == null
@@ -70,34 +82,28 @@ class ArtistService {
     final data = Map.of(browseEndpoint);
     data.remove("content");
     if (data.isEmpty) return result;
-    
+
     // We need to merge with the client context
     final requestData = Map.from(_musicServices.context);
     requestData.addAll(data);
 
-    final response =
-        (await _musicServices.sendRequest("browse", requestData, additionalParams: additionalParams))
-            .data;
+    final response = (await _musicServices.sendRequest("browse", requestData,
+            additionalParams: additionalParams))
+        .data;
 
     List<dynamic> contentList = [];
     dynamic renderer;
 
     if (additionalParams.isNotEmpty) {
-      contentList = nav(response, [
-            'continuationContents',
-            'gridContinuation',
-            'items'
-          ]) ??
+      contentList = nav(response,
+              ['continuationContents', 'gridContinuation', 'items']) ??
           nav(response, [
             'continuationContents',
             'musicPlaylistShelfContinuation',
             'contents'
           ]) ??
-          nav(response, [
-            'continuationContents',
-            'musicShelfContinuation',
-            'contents'
-          ]) ??
+          nav(response,
+              ['continuationContents', 'musicShelfContinuation', 'contents']) ??
           nav(response, [
             'onResponseReceivedActions',
             0,
@@ -105,7 +111,8 @@ class ArtistService {
             'continuationItems'
           ]) ??
           [];
-      result['additionalParams'] = _musicServices.continuationParamsFromResponse(response);
+      result['additionalParams'] =
+          _musicServices.continuationParamsFromResponse(response);
     } else {
       final firstSection = nav(response, [
         'contents',
@@ -132,7 +139,8 @@ class ArtistService {
     return result;
   }
 
-  List<dynamic> _parseArtistRelatedItems(List<dynamic> contentList, String category) {
+  List<dynamic> _parseArtistRelatedItems(
+      List<dynamic> contentList, String category) {
     return contentList
         .map((item) {
           if (item.containsKey(mtrir)) {
