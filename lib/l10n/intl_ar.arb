@@ -1405,7 +1405,7 @@
   "@settings_refresh_visitor_title": {
     "description": "settings_refresh_visitor_title"
   },
-  "settings_refresh_visitor_desc": "قم بإعادة إنشاء معرف YouTube Music الخاص بك إذا لم يتم تحميل محتوى Discover.",
+  "settings_refresh_visitor_desc": "قم بإعادة إنشاء معرف Online Music الخاص بك إذا لم يتم تحميل محتوى Discover.",
   "@settings_refresh_visitor_desc": {
     "description": "settings_refresh_visitor_desc"
   },
@@ -2011,13 +2011,13 @@
   "@exportPlaylistCsvSubtitle": {
     "description": "exportPlaylistCsvSubtitle"
   },
-  "exportToYouTubeMusic": "تصدير إلى موسيقى يوتيوب",
-  "@exportToYouTubeMusic": {
-    "description": "exportToYouTubeMusic"
+  "exportToOnlineMusic": "تصدير إلى موسيقى يوتيوب",
+  "@exportToOnlineMusic": {
+    "description": "exportToOnlineMusic"
   },
-  "exportToYouTubeMusicSubtitle": "سيؤدي ذلك إلى دفع قائمة التشغيل الخاصة بك (الأغاني <50) إلى قائمة الانتظار الحالية، لا تنس إضافتها إلى قائمة التشغيل/الحفظ بعد فتحها في YtMusic",
-  "@exportToYouTubeMusicSubtitle": {
-    "description": "exportToYouTubeMusicSubtitle"
+  "exportToOnlineMusicSubtitle": "سيؤدي ذلك إلى دفع قائمة التشغيل الخاصة بك (الأغاني <50) إلى قائمة الانتظار الحالية، لا تنس إضافتها إلى قائمة التشغيل/الحفظ بعد فتحها في MusicService",
+  "@exportToOnlineMusicSubtitle": {
+    "description": "exportToOnlineMusicSubtitle"
   },
   "linkCopied": "تم نسخ الرابط إلى الحافظة",
   "@linkCopied": {

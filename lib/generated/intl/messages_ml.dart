@@ -488,11 +488,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "exportPlaylistJsonSubtitle": MessageLookupByLibrary.simpleMessage(
       "ഈ ഫോർമാറ്റ് ഇറക്കുമതി ചെയ്യാൻ കഴിയും",
     ),
-    "exportToYouTubeMusic": MessageLookupByLibrary.simpleMessage(
-      "Youtube സംഗീതത്തിലേക്ക് കയറ്റുമതി ചെയ്യുക",
+    "exportToOnlineMusic": MessageLookupByLibrary.simpleMessage(
+      "Online സംഗീതത്തിലേക്ക് കയറ്റുമതി ചെയ്യുക",
     ),
-    "exportToYouTubeMusicSubtitle": MessageLookupByLibrary.simpleMessage(
-      "ഇത് നിങ്ങളുടെ പ്ലേലിസ്റ്റ് (ഗാനങ്ങൾ < 50) നിലവിലെ ക്യൂവിലേക്ക് തള്ളും, YtMusic-ൽ തുറന്നതിന് ശേഷം അത് പ്ലേലിസ്റ്റിലേക്ക് ചേർക്കാൻ/സംരക്ഷിക്കാൻ മറക്കരുത്",
+    "exportToOnlineMusicSubtitle": MessageLookupByLibrary.simpleMessage(
+      "ഇത് നിങ്ങളുടെ പ്ലേലിസ്റ്റ് (ഗാനങ്ങൾ < 50) നിലവിലെ ക്യൂവിലേക്ക് തള്ളും, MusicService-ൽ തുറന്നതിന് ശേഷം അത് പ്ലേലിസ്റ്റിലേക്ക് ചേർക്കാൻ/സംരക്ഷിക്കാൻ മറക്കരുത്",
     ),
     "exportedFileLocation": MessageLookupByLibrary.simpleMessage(
       "ഡൗൺലോഡ് ചെയ്ത ഫയലുകളുടെ ലൊക്കേഷൻ കയറ്റുമതി ചെയ്യുക",
@@ -1167,7 +1167,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "സ്ട്രീമിംഗ് നിലവാരം, നോർമലൈസേഷൻ, നിശബ്ദത, ബാറ്ററി.",
     ),
     "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
-      "Discover ഉള്ളടക്കം ലോഡ് ചെയ്യുന്നില്ലെങ്കിൽ നിങ്ങളുടെ YouTube Music ID പുനഃസൃഷ്ടിക്കുക.",
+      "Discover ഉള്ളടക്കം ലോഡ് ചെയ്യുന്നില്ലെങ്കിൽ നിങ്ങളുടെ Online Music ID പുനഃസൃഷ്ടിക്കുക.",
     ),
     "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
       "ഐഡി പുതുക്കുക (സന്ദർശക ഐഡി)",

@@ -1,4 +1,4 @@
-﻿import 'package:audio_service/audio_service.dart';
+import 'package:audio_service/audio_service.dart';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -21,7 +21,7 @@ import 'song_download_btn.dart';
 import 'image_widget.dart';
 import 'song_info_dialog.dart';
 import 'package:harmonymusic/generated/l10n.dart';
-import 'package:harmonymusic/utils/helpers/youtube_share_manager.dart';
+import 'package:harmonymusic/utils/helpers/music_share_manager.dart';
 
 class SongInfoBottomSheet extends StatelessWidget {
   const SongInfoBottomSheet(this.song,
@@ -288,7 +288,7 @@ class SongInfoBottomSheet extends StatelessWidget {
                 visualDensity: const VisualDensity(vertical: -1),
                 leading: const Icon(Icons.share),
                 title: Text(S.current.shareSong),
-                onTap: () => YoutubeShareManager.shareSong(song.id,
+                onTap: () => MusicShareManager.shareSong(song.id,
                     title: song.title, artist: song.artist),
               ),
             ],

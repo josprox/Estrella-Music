@@ -479,11 +479,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "exportPlaylistJsonSubtitle": MessageLookupByLibrary.simpleMessage(
       "Този формат може да бъде внесен",
     ),
-    "exportToYouTubeMusic": MessageLookupByLibrary.simpleMessage(
-      "Изнасяне в Youtube музика",
+    "exportToOnlineMusic": MessageLookupByLibrary.simpleMessage(
+      "Изнасяне в Online музика",
     ),
-    "exportToYouTubeMusicSubtitle": MessageLookupByLibrary.simpleMessage(
-      "Това ще премести плейлиста ви (песни < 50) в текущата опашка, не забравяйте да добавите към плейлиста/запазите след отваряне в YtMusic",
+    "exportToOnlineMusicSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Това ще премести плейлиста ви (песни < 50) в текущата опашка, не забравяйте да добавите към плейлиста/запазите след отваряне в MusicService",
     ),
     "exportedFileLocation": MessageLookupByLibrary.simpleMessage(
       "Местоположение за изнасяне на изтегления файл",
@@ -1138,7 +1138,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Качество на стрийминг, нормализиране, тишина и батерия.",
     ),
     "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
-      "Генерирайте отново вашия YouTube Music ID, ако съдържанието на Discover не се зареди.",
+      "Генерирайте отново вашия Online Music ID, ако съдържанието на Discover не се зареди.",
     ),
     "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
       "Опресняване на ID (ID на посетител)",

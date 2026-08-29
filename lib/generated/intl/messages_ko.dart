@@ -376,11 +376,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "exportPlaylistJsonSubtitle": MessageLookupByLibrary.simpleMessage(
       "이 형식을 가져올 수 있습니다.",
     ),
-    "exportToYouTubeMusic": MessageLookupByLibrary.simpleMessage(
+    "exportToOnlineMusic": MessageLookupByLibrary.simpleMessage(
       "유튜브 뮤직으로 내보내기",
     ),
-    "exportToYouTubeMusicSubtitle": MessageLookupByLibrary.simpleMessage(
-      "재생 목록(50개 미만의 노래)을 현재 대기열로 푸시합니다. 재생 목록에 추가하거나 YtMusic에서 연 후 저장하는 것을 잊지 마세요.",
+    "exportToOnlineMusicSubtitle": MessageLookupByLibrary.simpleMessage(
+      "재생 목록(50개 미만의 노래)을 현재 대기열로 푸시합니다. 재생 목록에 추가하거나 MusicService에서 연 후 저장하는 것을 잊지 마세요.",
     ),
     "exportedFileLocation": MessageLookupByLibrary.simpleMessage(
       "다운로드한 파일을 내보낼 위치",
@@ -891,7 +891,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "스트리밍 품질, 정규화, 무음 및 배터리.",
     ),
     "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
-      "Discover 콘텐츠가 로드되지 않으면 YouTube Music ID를 다시 생성하세요.",
+      "Discover 콘텐츠가 로드되지 않으면 Online Music ID를 다시 생성하세요.",
     ),
     "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
       "새로고침 ID(방문자 ID)",

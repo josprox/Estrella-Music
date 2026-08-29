@@ -139,7 +139,7 @@ class SearchService {
     for (var res in results) {
       if (res is! Map) continue;
 
-      // Extract additional chips if present in sections (common in some YTM responses)
+      // Extract additional chips if present in sections from some providers.
       final sectionChips = nav(res, [
             'itemSectionRenderer',
             'header',

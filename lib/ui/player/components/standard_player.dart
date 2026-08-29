@@ -1,11 +1,11 @@
-﻿import 'dart:ui';
+import 'dart:ui';
 import 'package:audio_video_progress_bar/audio_video_progress_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:harmonymusic/utils/helpers/ionicons.dart';
 import 'package:harmonymusic/ui/widgets/custom_marquee.dart';
 import 'package:audio_service/audio_service.dart';
-import 'package:harmonymusic/utils/helpers/youtube_share_manager.dart';
+import 'package:harmonymusic/utils/helpers/music_share_manager.dart';
 import 'package:harmonymusic/ui/widgets/up_next_queue.dart';
 
 import '/ui/player/components/animated_play_button.dart';
@@ -862,7 +862,7 @@ class _SecondaryActions extends StatelessWidget {
           onTap: () {
             final currentSong = ctrl.currentSong.value;
             if (currentSong != null) {
-              YoutubeShareManager.shareSong(
+              MusicShareManager.shareSong(
                 currentSong.id,
                 title: currentSong.title,
                 artist: currentSong.artist,

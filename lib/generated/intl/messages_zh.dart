@@ -337,11 +337,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "exportPlaylistJsonSubtitle": MessageLookupByLibrary.simpleMessage(
           "这个格式可以导入",
         ),
-        "exportToYouTubeMusic": MessageLookupByLibrary.simpleMessage(
-          "导出到 YouTube 音乐",
+        "exportToOnlineMusic": MessageLookupByLibrary.simpleMessage(
+          "导出到 Online 音乐",
         ),
-        "exportToYouTubeMusicSubtitle": MessageLookupByLibrary.simpleMessage(
-          "它将把您的播放列表（歌曲 < 50）推送到当前队列，在 YtMusic 中打开它后不要忘记将其添加到播放列表/保存",
+        "exportToOnlineMusicSubtitle": MessageLookupByLibrary.simpleMessage(
+          "它将把您的播放列表（歌曲 < 50）推送到当前队列，在 MusicService 中打开它后不要忘记将其添加到播放列表/保存",
         ),
         "exportedFileLocation":
             MessageLookupByLibrary.simpleMessage("下载文件的导出位置"),
@@ -810,7 +810,7 @@ class MessageLookup extends MessageLookupByLibrary {
           "流媒体质量、标准化、静音和电池。",
         ),
         "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
-          "如果发现内容未加载，请重新生成您的 YouTube 音乐 ID。",
+          "如果发现内容未加载，请重新生成您的 Online 音乐 ID。",
         ),
         "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
           "刷新ID（访客ID）",

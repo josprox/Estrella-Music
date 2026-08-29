@@ -490,11 +490,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "exportPlaylistJsonSubtitle": MessageLookupByLibrary.simpleMessage(
       "Αυτή η μορφή μπορεί να εισαχθεί",
     ),
-    "exportToYouTubeMusic": MessageLookupByLibrary.simpleMessage(
-      "Εξαγωγή σε μουσική Youtube",
+    "exportToOnlineMusic": MessageLookupByLibrary.simpleMessage(
+      "Εξαγωγή σε μουσική Online",
     ),
-    "exportToYouTubeMusicSubtitle": MessageLookupByLibrary.simpleMessage(
-      "Θα ωθήσει τη λίστα αναπαραγωγής σας (τραγούδια < 50) στην τρέχουσα ουρά, μην ξεχάσετε να την προσθέσετε στη λίστα αναπαραγωγής/αποθήκευση αφού την ανοίξετε στο YtMusic",
+    "exportToOnlineMusicSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Θα ωθήσει τη λίστα αναπαραγωγής σας (τραγούδια < 50) στην τρέχουσα ουρά, μην ξεχάσετε να την προσθέσετε στη λίστα αναπαραγωγής/αποθήκευση αφού την ανοίξετε στο MusicService",
     ),
     "exportedFileLocation": MessageLookupByLibrary.simpleMessage(
       "Εξαγωγή τοποθεσίας των ληφθέντων αρχείων",
@@ -1163,7 +1163,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Ποιότητα ροής, κανονικοποίηση, σιωπές και μπαταρία.",
     ),
     "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
-      "Ανανεώστε το YouTube Music ID σας εάν δεν φορτωθεί το περιεχόμενο του Discover.",
+      "Ανανεώστε το Online Music ID σας εάν δεν φορτωθεί το περιεχόμενο του Discover.",
     ),
     "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
       "Αναγνωριστικό ανανέωσης (αναγνωριστικό επισκέπτη)",

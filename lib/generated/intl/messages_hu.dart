@@ -473,11 +473,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "exportPlaylistJsonSubtitle": MessageLookupByLibrary.simpleMessage(
       "Ez a formátum importálható",
     ),
-    "exportToYouTubeMusic": MessageLookupByLibrary.simpleMessage(
-      "Exportálás Youtube zenébe",
+    "exportToOnlineMusic": MessageLookupByLibrary.simpleMessage(
+      "Exportálás Online zenébe",
     ),
-    "exportToYouTubeMusicSubtitle": MessageLookupByLibrary.simpleMessage(
-      "A lejátszási listát (50 alatti dalok) az aktuális sorba tolja, ne felejtse el hozzáadni a lejátszási listához / elmenteni, miután megnyitotta az YtMusicban",
+    "exportToOnlineMusicSubtitle": MessageLookupByLibrary.simpleMessage(
+      "A lejátszási listát (50 alatti dalok) az aktuális sorba tolja, ne felejtse el hozzáadni a lejátszási listához / elmenteni, miután megnyitotta az MusicServiceban",
     ),
     "exportedFileLocation": MessageLookupByLibrary.simpleMessage(
       "A letöltött fájlok helyének exportálása",
@@ -1144,7 +1144,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Streaming minőség, normalizálás, némítás és akkumulátor.",
     ),
     "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
-      "Ha a Discover-tartalom nem töltődik be, állítsd újra a YouTube Music ID-t.",
+      "Ha a Discover-tartalom nem töltődik be, állítsd újra a Online Music ID-t.",
     ),
     "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
       "Frissítési azonosító (látogatóazonosító)",

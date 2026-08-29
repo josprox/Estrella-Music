@@ -457,7 +457,7 @@
   "@settings_refresh_visitor_title": {
     "description": "settings_refresh_visitor_title"
   },
-  "settings_refresh_visitor_desc": "Ανανεώστε το YouTube Music ID σας εάν δεν φορτωθεί το περιεχόμενο του Discover.",
+  "settings_refresh_visitor_desc": "Ανανεώστε το Online Music ID σας εάν δεν φορτωθεί το περιεχόμενο του Discover.",
   "@settings_refresh_visitor_desc": {
     "description": "settings_refresh_visitor_desc"
   },
@@ -1999,13 +1999,13 @@
   "@exportPlaylistCsvSubtitle": {
     "description": "exportPlaylistCsvSubtitle"
   },
-  "exportToYouTubeMusic": "Εξαγωγή σε μουσική Youtube",
-  "@exportToYouTubeMusic": {
-    "description": "exportToYouTubeMusic"
+  "exportToOnlineMusic": "Εξαγωγή σε μουσική Online",
+  "@exportToOnlineMusic": {
+    "description": "exportToOnlineMusic"
   },
-  "exportToYouTubeMusicSubtitle": "Θα ωθήσει τη λίστα αναπαραγωγής σας (τραγούδια < 50) στην τρέχουσα ουρά, μην ξεχάσετε να την προσθέσετε στη λίστα αναπαραγωγής/αποθήκευση αφού την ανοίξετε στο YtMusic",
-  "@exportToYouTubeMusicSubtitle": {
-    "description": "exportToYouTubeMusicSubtitle"
+  "exportToOnlineMusicSubtitle": "Θα ωθήσει τη λίστα αναπαραγωγής σας (τραγούδια < 50) στην τρέχουσα ουρά, μην ξεχάσετε να την προσθέσετε στη λίστα αναπαραγωγής/αποθήκευση αφού την ανοίξετε στο MusicService",
+  "@exportToOnlineMusicSubtitle": {
+    "description": "exportToOnlineMusicSubtitle"
   },
   "linkCopied": "Ο σύνδεσμος αντιγράφηκε στο πρόχειρο",
   "@linkCopied": {

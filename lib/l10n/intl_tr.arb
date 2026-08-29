@@ -1080,9 +1080,9 @@
   "@exportPlaylistJsonSubtitle": {
     "description": "exportPlaylistJsonSubtitle"
   },
-  "exportToYouTubeMusic": "YouTube Music'e aktar",
-  "@exportToYouTubeMusic": {
-    "description": "exportToYouTubeMusic"
+  "exportToOnlineMusic": "Online Music'e aktar",
+  "@exportToOnlineMusic": {
+    "description": "exportToOnlineMusic"
   },
   "linkCopied": "Bağlantı panoya kopyalandı",
   "@linkCopied": {
@@ -1092,9 +1092,9 @@
   "@exportPlaylistCsvSubtitle": {
     "description": "exportPlaylistCsvSubtitle"
   },
-  "exportToYouTubeMusicSubtitle": "Çalma listenizdeki 50 şarkıdan kısa olanları mevcut kuyruğa ekleyecek, YtMusic'te açtıktan sonra çalma listesine eklemeyi/kaydetmeyi unutmayın",
-  "@exportToYouTubeMusicSubtitle": {
-    "description": "exportToYouTubeMusicSubtitle"
+  "exportToOnlineMusicSubtitle": "Çalma listenizdeki 50 şarkıdan kısa olanları mevcut kuyruğa ekleyecek, MusicService'te açtıktan sonra çalma listesine eklemeyi/kaydetmeyi unutmayın",
+  "@exportToOnlineMusicSubtitle": {
+    "description": "exportToOnlineMusicSubtitle"
   },
   "keepScreenOnWhilePlaying": "Müzik çalarken ekranı açık tut",
   "@keepScreenOnWhilePlaying": {
@@ -1549,7 +1549,7 @@
   "@settings_refresh_visitor_title": {
     "description": "settings_refresh_visitor_title"
   },
-  "settings_refresh_visitor_desc": "Keşfet içeriği yüklenmezse YouTube Müzik Kimliğinizi yeniden oluşturun.",
+  "settings_refresh_visitor_desc": "Keşfet içeriği yüklenmezse Online Müzik Kimliğinizi yeniden oluşturun.",
   "@settings_refresh_visitor_desc": {
     "description": "settings_refresh_visitor_desc"
   },

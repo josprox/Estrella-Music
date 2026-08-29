@@ -482,11 +482,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "exportPlaylistJsonSubtitle": MessageLookupByLibrary.simpleMessage(
       "Dieses Format kann importiert werden",
     ),
-    "exportToYouTubeMusic": MessageLookupByLibrary.simpleMessage(
-      "Exportieren Sie Musik in YouTube",
+    "exportToOnlineMusic": MessageLookupByLibrary.simpleMessage(
+      "Exportieren Sie Musik in Online",
     ),
-    "exportToYouTubeMusicSubtitle": MessageLookupByLibrary.simpleMessage(
-      "Dadurch wird Ihre Playlist (Songs < 50) in die aktuelle Warteschlange verschoben. Vergessen Sie nicht, sie der Playlist hinzuzufügen/zu speichern, nachdem Sie sie in YtMusic geöffnet haben",
+    "exportToOnlineMusicSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Dadurch wird Ihre Playlist (Songs < 50) in die aktuelle Warteschlange verschoben. Vergessen Sie nicht, sie der Playlist hinzuzufügen/zu speichern, nachdem Sie sie in MusicService geöffnet haben",
     ),
     "exportedFileLocation": MessageLookupByLibrary.simpleMessage(
       "Exportverzeichnis",
@@ -1157,7 +1157,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Streaming-Qualität, Normalisierung, Stille und Akku.",
     ),
     "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
-      "Generieren Sie Ihre YouTube Music ID neu, wenn Discover-Inhalte nicht geladen werden.",
+      "Generieren Sie Ihre Online Music ID neu, wenn Discover-Inhalte nicht geladen werden.",
     ),
     "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
       "Aktualisierungs-ID (Besucher-ID)",

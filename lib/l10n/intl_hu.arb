@@ -865,7 +865,7 @@
   "@settings_refresh_visitor_title": {
     "description": "settings_refresh_visitor_title"
   },
-  "settings_refresh_visitor_desc": "Ha a Discover-tartalom nem töltődik be, állítsd újra a YouTube Music ID-t.",
+  "settings_refresh_visitor_desc": "Ha a Discover-tartalom nem töltődik be, állítsd újra a Online Music ID-t.",
   "@settings_refresh_visitor_desc": {
     "description": "settings_refresh_visitor_desc"
   },
@@ -1995,13 +1995,13 @@
   "@exportPlaylistCsvSubtitle": {
     "description": "exportPlaylistCsvSubtitle"
   },
-  "exportToYouTubeMusic": "Exportálás Youtube zenébe",
-  "@exportToYouTubeMusic": {
-    "description": "exportToYouTubeMusic"
+  "exportToOnlineMusic": "Exportálás Online zenébe",
+  "@exportToOnlineMusic": {
+    "description": "exportToOnlineMusic"
   },
-  "exportToYouTubeMusicSubtitle": "A lejátszási listát (50 alatti dalok) az aktuális sorba tolja, ne felejtse el hozzáadni a lejátszási listához / elmenteni, miután megnyitotta az YtMusicban",
-  "@exportToYouTubeMusicSubtitle": {
-    "description": "exportToYouTubeMusicSubtitle"
+  "exportToOnlineMusicSubtitle": "A lejátszási listát (50 alatti dalok) az aktuális sorba tolja, ne felejtse el hozzáadni a lejátszási listához / elmenteni, miután megnyitotta az MusicServiceban",
+  "@exportToOnlineMusicSubtitle": {
+    "description": "exportToOnlineMusicSubtitle"
   },
   "linkCopied": "Link a vágólapra másolva",
   "@linkCopied": {

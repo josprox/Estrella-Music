@@ -1113,7 +1113,7 @@
   "@settings_refresh_visitor_title": {
     "description": "settings_refresh_visitor_title"
   },
-  "settings_refresh_visitor_desc": "Återskapa ditt YouTube Music-ID om Discover-innehåll inte läses in.",
+  "settings_refresh_visitor_desc": "Återskapa ditt Online Music-ID om Discover-innehåll inte läses in.",
   "@settings_refresh_visitor_desc": {
     "description": "settings_refresh_visitor_desc"
   },
@@ -1995,13 +1995,13 @@
   "@exportPlaylistCsvSubtitle": {
     "description": "exportPlaylistCsvSubtitle"
   },
-  "exportToYouTubeMusic": "Exportera till Youtube-musik",
-  "@exportToYouTubeMusic": {
-    "description": "exportToYouTubeMusic"
+  "exportToOnlineMusic": "Exportera till Online-musik",
+  "@exportToOnlineMusic": {
+    "description": "exportToOnlineMusic"
   },
-  "exportToYouTubeMusicSubtitle": "Det kommer att skicka din spellista (låtar < 50) till den aktuella kön, glöm inte att lägga till den i spellistan/spara efter att ha öppnat den i YtMusic",
-  "@exportToYouTubeMusicSubtitle": {
-    "description": "exportToYouTubeMusicSubtitle"
+  "exportToOnlineMusicSubtitle": "Det kommer att skicka din spellista (låtar < 50) till den aktuella kön, glöm inte att lägga till den i spellistan/spara efter att ha öppnat den i MusicService",
+  "@exportToOnlineMusicSubtitle": {
+    "description": "exportToOnlineMusicSubtitle"
   },
   "linkCopied": "Länken har kopierats till urklipp",
   "@linkCopied": {

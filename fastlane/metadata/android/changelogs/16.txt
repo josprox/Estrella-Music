@@ -7,7 +7,7 @@
 * Poweramp support #82
 * Enabled backup and restore feature for Android #90 #250
 * Made App landscape mode compatible #218 #115
-* Added support for direct opening of YTM links #242
+* Added support for direct opening of music links #242
 * Added song info for current song #201
 * Added shuffle mode #174 #252
 * Added loudness normalization feature (Android) #15 #243

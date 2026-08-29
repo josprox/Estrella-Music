@@ -378,11 +378,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "exportPlaylistJsonSubtitle": MessageLookupByLibrary.simpleMessage(
       "この形式は取り入れできません",
     ),
-    "exportToYouTubeMusic": MessageLookupByLibrary.simpleMessage(
-      "Youtube musicへエクスポート",
+    "exportToOnlineMusic": MessageLookupByLibrary.simpleMessage(
+      "Online musicへエクスポート",
     ),
-    "exportToYouTubeMusicSubtitle": MessageLookupByLibrary.simpleMessage(
-      "再生リスト (曲数50未満) を現在のキューに追加する。YtMusicで開いたら、再生リストへの追加/保存を忘れないよう",
+    "exportToOnlineMusicSubtitle": MessageLookupByLibrary.simpleMessage(
+      "再生リスト (曲数50未満) を現在のキューに追加する。MusicServiceで開いたら、再生リストへの追加/保存を忘れないよう",
     ),
     "exportedFileLocation": MessageLookupByLibrary.simpleMessage(
       "ダウンロード済みファイルのエクスポート先",
@@ -889,7 +889,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "ストリーミング品質、正規化、無音、バッテリー。",
     ),
     "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
-      "Discover コンテンツが読み込まれない場合は、YouTube Music ID を再生成します。",
+      "Discover コンテンツが読み込まれない場合は、Online Music ID を再生成します。",
     ),
     "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
       "リフレッシュID（訪問者ID）",

@@ -1193,7 +1193,7 @@
   "@settings_refresh_visitor_title": {
     "description": "settings_refresh_visitor_title"
   },
-  "settings_refresh_visitor_desc": "Genereer je YouTube Music-ID opnieuw als Discover-content niet wordt geladen.",
+  "settings_refresh_visitor_desc": "Genereer je Online Music-ID opnieuw als Discover-content niet wordt geladen.",
   "@settings_refresh_visitor_desc": {
     "description": "settings_refresh_visitor_desc"
   },
@@ -2003,13 +2003,13 @@
   "@exportPlaylistCsvSubtitle": {
     "description": "exportPlaylistCsvSubtitle"
   },
-  "exportToYouTubeMusic": "Exporteren naar YouTube-muziek",
-  "@exportToYouTubeMusic": {
-    "description": "exportToYouTubeMusic"
+  "exportToOnlineMusic": "Exporteren naar Online-muziek",
+  "@exportToOnlineMusic": {
+    "description": "exportToOnlineMusic"
   },
-  "exportToYouTubeMusicSubtitle": "Het zal je afspeellijst (nummers < 50) naar de huidige wachtrij pushen, vergeet niet om deze aan de afspeellijst toe te voegen/op te slaan nadat je deze in YtMusic hebt geopend",
-  "@exportToYouTubeMusicSubtitle": {
-    "description": "exportToYouTubeMusicSubtitle"
+  "exportToOnlineMusicSubtitle": "Het zal je afspeellijst (nummers < 50) naar de huidige wachtrij pushen, vergeet niet om deze aan de afspeellijst toe te voegen/op te slaan nadat je deze in MusicService hebt geopend",
+  "@exportToOnlineMusicSubtitle": {
+    "description": "exportToOnlineMusicSubtitle"
   },
   "linkCopied": "Link gekopieerd naar klembord",
   "@linkCopied": {

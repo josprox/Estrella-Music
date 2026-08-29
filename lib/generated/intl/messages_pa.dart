@@ -463,11 +463,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "exportPlaylistJsonSubtitle": MessageLookupByLibrary.simpleMessage(
       "ਇਹ ਫਾਰਮੈਟ ਆਯਾਤ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ",
     ),
-    "exportToYouTubeMusic": MessageLookupByLibrary.simpleMessage(
+    "exportToOnlineMusic": MessageLookupByLibrary.simpleMessage(
       "ਯੂਟਿਊਬ ਸੰਗੀਤ ਨੂੰ ਨਿਰਯਾਤ ਕਰੋ",
     ),
-    "exportToYouTubeMusicSubtitle": MessageLookupByLibrary.simpleMessage(
-      "ਇਹ ਤੁਹਾਡੀ ਪਲੇਲਿਸਟ (ਗਾਣੇ <50) ਨੂੰ ਮੌਜੂਦਾ ਕਤਾਰ ਵਿੱਚ ਧੱਕ ਦੇਵੇਗਾ, ਇਸਨੂੰ YtMusic ਵਿੱਚ ਖੋਲ੍ਹਣ ਤੋਂ ਬਾਅਦ ਇਸਨੂੰ ਪਲੇਲਿਸਟ ਵਿੱਚ ਜੋੜਨਾ/ਸੇਵ ਕਰਨਾ ਨਾ ਭੁੱਲੋ।",
+    "exportToOnlineMusicSubtitle": MessageLookupByLibrary.simpleMessage(
+      "ਇਹ ਤੁਹਾਡੀ ਪਲੇਲਿਸਟ (ਗਾਣੇ <50) ਨੂੰ ਮੌਜੂਦਾ ਕਤਾਰ ਵਿੱਚ ਧੱਕ ਦੇਵੇਗਾ, ਇਸਨੂੰ MusicService ਵਿੱਚ ਖੋਲ੍ਹਣ ਤੋਂ ਬਾਅਦ ਇਸਨੂੰ ਪਲੇਲਿਸਟ ਵਿੱਚ ਜੋੜਨਾ/ਸੇਵ ਕਰਨਾ ਨਾ ਭੁੱਲੋ।",
     ),
     "exportedFileLocation": MessageLookupByLibrary.simpleMessage(
       "ਡਾਊਨਲੋਡ ਕੀਤੀ ਫ਼ਾਈਲ ਦਾ ਐਕਸਪੋਰਟ ਸਥਾਨ",
@@ -1098,7 +1098,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "ਸਟ੍ਰੀਮਿੰਗ ਗੁਣਵੱਤਾ, ਸਧਾਰਣਕਰਨ, ਚੁੱਪ ਅਤੇ ਬੈਟਰੀ।",
     ),
     "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
-      "ਜੇਕਰ ਡਿਸਕਵਰ ਸਮੱਗਰੀ ਲੋਡ ਨਹੀਂ ਹੁੰਦੀ ਹੈ ਤਾਂ ਆਪਣੀ YouTube ਸੰਗੀਤ ਆਈ.ਡੀ. ਨੂੰ ਦੁਬਾਰਾ ਬਣਾਓ।",
+      "ਜੇਕਰ ਡਿਸਕਵਰ ਸਮੱਗਰੀ ਲੋਡ ਨਹੀਂ ਹੁੰਦੀ ਹੈ ਤਾਂ ਆਪਣੀ Online ਸੰਗੀਤ ਆਈ.ਡੀ. ਨੂੰ ਦੁਬਾਰਾ ਬਣਾਓ।",
     ),
     "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
       "ਆਈਡੀ ਨੂੰ ਤਾਜ਼ਾ ਕਰੋ (ਵਿਜ਼ਿਟਰ ਆਈਡੀ)",

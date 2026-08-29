@@ -453,11 +453,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "exportPlaylistJsonSubtitle": MessageLookupByLibrary.simpleMessage(
       "This format can be imported",
     ),
-    "exportToYouTubeMusic": MessageLookupByLibrary.simpleMessage(
-      "Export to Youtube music",
+    "exportToOnlineMusic": MessageLookupByLibrary.simpleMessage(
+      "Export to Online music",
     ),
-    "exportToYouTubeMusicSubtitle": MessageLookupByLibrary.simpleMessage(
-      "It will push your playlist (songs < 50) to current queue, don\'t forget to add to playlist/save after opening in YtMusic",
+    "exportToOnlineMusicSubtitle": MessageLookupByLibrary.simpleMessage(
+      "It will push your playlist (songs < 50) to current queue, don\'t forget to add to playlist/save after opening in MusicService",
     ),
     "exportedFileLocation": MessageLookupByLibrary.simpleMessage(
       "Downloaded file export location",
@@ -1080,7 +1080,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Streaming quality, normalization, silences and battery.",
     ),
     "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
-      "Regenerate your YouTube Music ID if Discover content doesn\'t load.",
+      "Regenerate your Online Music ID if Discover content doesn\'t load.",
     ),
     "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
       "Refresh ID (Visitor ID)",
@@ -1214,9 +1214,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
       "EMusic Cloud could not replace the remote library.",
     ),
-    "syncForceReplaceFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
-      "The remote replacement failed. Your local data and recovery backup were preserved.",
-    ),
+    "syncForceReplaceFailedLocalPreserved":
+        MessageLookupByLibrary.simpleMessage(
+          "The remote replacement failed. Your local data and recovery backup were preserved.",
+        ),
     "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
       "Upload not completed",
     ),

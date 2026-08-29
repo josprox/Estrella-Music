@@ -1509,7 +1509,7 @@
   "@settings_refresh_visitor_title": {
     "description": "settings_refresh_visitor_title"
   },
-  "settings_refresh_visitor_desc": "ডিসকভার কন্টেন্ট লোড না হলে আপনার YouTube মিউজিক আইডি আবার জেনারেট করুন।",
+  "settings_refresh_visitor_desc": "ডিসকভার কন্টেন্ট লোড না হলে আপনার Online মিউজিক আইডি আবার জেনারেট করুন।",
   "@settings_refresh_visitor_desc": {
     "description": "settings_refresh_visitor_desc"
   },
@@ -2019,13 +2019,13 @@
   "@exportPlaylistCsvSubtitle": {
     "description": "exportPlaylistCsvSubtitle"
   },
-  "exportToYouTubeMusic": "Youtube সঙ্গীত রপ্তানি করুন",
-  "@exportToYouTubeMusic": {
-    "description": "exportToYouTubeMusic"
+  "exportToOnlineMusic": "Online সঙ্গীত রপ্তানি করুন",
+  "@exportToOnlineMusic": {
+    "description": "exportToOnlineMusic"
   },
-  "exportToYouTubeMusicSubtitle": "এটি আপনার প্লেলিস্টকে (গান <50) বর্তমান সারিতে নিয়ে যাবে, YtMusic-এ খোলার পরে প্লেলিস্টে যোগ করতে/সেভ করতে ভুলবেন না",
-  "@exportToYouTubeMusicSubtitle": {
-    "description": "exportToYouTubeMusicSubtitle"
+  "exportToOnlineMusicSubtitle": "এটি আপনার প্লেলিস্টকে (গান <50) বর্তমান সারিতে নিয়ে যাবে, MusicService-এ খোলার পরে প্লেলিস্টে যোগ করতে/সেভ করতে ভুলবেন না",
+  "@exportToOnlineMusicSubtitle": {
+    "description": "exportToOnlineMusicSubtitle"
   },
   "linkCopied": "ক্লিপবোর্ডে লিঙ্ক কপি করা হয়েছে",
   "@linkCopied": {

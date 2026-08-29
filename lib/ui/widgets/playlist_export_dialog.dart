@@ -1,12 +1,7 @@
-﻿import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:url_launcher/url_launcher.dart';
-import 'package:html/parser.dart' as html_parser;
 
-import '/ui/screens/Playlist/playlist_screen_controller.dart';
+import 'package:harmonymusic/ui/screens/Playlist/playlist_screen_controller.dart';
 import 'common_dialog_widget.dart';
-import 'snackbar.dart';
 import 'package:harmonymusic/generated/l10n.dart';
 
 class PlaylistExportDialog extends StatelessWidget {
@@ -28,7 +23,6 @@ class PlaylistExportDialog extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            // Title
             Padding(
               padding: const EdgeInsets.only(bottom: 20, top: 10),
               child: Text(
@@ -37,7 +31,6 @@ class PlaylistExportDialog extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
             ),
-            // Button 1: Export to JSON
             _ExportButton(
               icon: Icons.save,
               title: S.current.exportPlaylistJson,
@@ -48,7 +41,6 @@ class PlaylistExportDialog extends StatelessWidget {
               },
             ),
             const SizedBox(height: 12),
-            // Button 2: Export to CSV
             _ExportButton(
               icon: Icons.table_chart,
               title: S.current.exportPlaylistCsv,
@@ -58,23 +50,7 @@ class PlaylistExportDialog extends StatelessWidget {
                 controller.exportPlaylistToCsv(parentContext);
               },
             ),
-            const SizedBox(height: 12),
-            // Button 3: Export to YouTube Music (split button)
-            _SplitExportButton(
-              icon: Icons.open_in_new,
-              title: S.current.exportToYouTubeMusic,
-              subtitle: S.current.exportToYouTubeMusicSubtitle,
-              onMainTap: () {
-                Navigator.of(context).pop();
-                _openInYouTubeMusic();
-              },
-              onCopyTap: () {
-                Navigator.of(context).pop();
-                _copyYouTubeMusicLink();
-              },
-            ),
             const SizedBox(height: 20),
-            // Close button
             Align(
               alignment: Alignment.centerRight,
               child: TextButton(
@@ -89,59 +65,6 @@ class PlaylistExportDialog extends StatelessWidget {
         ),
       ),
     );
-  }
-
-  Future<void> _openInYouTubeMusic() async {
-    final videoIds = controller.songList.map((song) => song.id).join(',');
-    final url = 'https://www.youtube.com/watch_videos?video_ids=$videoIds';
-    final ytmUrl = await _generateYTMUrl(url);
-
-    launchUrl(
-      Uri.parse(ytmUrl ?? url),
-      mode: LaunchMode.externalApplication,
-    );
-  }
-
-  Future<String?> _generateYTMUrl(String ytSimpleUrl) async {
-    if (controller.generatedYtmPlaylistUrl.isNotEmpty) {
-      return controller.generatedYtmPlaylistUrl;
-    }
-
-    try {
-      final x = (await Dio().get(ytSimpleUrl)).data;
-      final document = html_parser.parse(x);
-
-      // Find the <link> element with rel="canonical"
-      final canonicalLink = document.querySelector('link[rel="canonical"]');
-
-      // Extract its href attribute
-      String? href = canonicalLink?.attributes['href'];
-      href = href?.replaceAll('www', 'music');
-      if (href != null) {
-        controller.generatedYtmPlaylistUrl = href;
-        return href;
-      }
-      // ignore: empty_catches
-    } catch (e) {}
-    return null;
-  }
-
-  Future<void> _copyYouTubeMusicLink() async {
-    final videoIds = controller.songList.map((song) => song.id).join(',');
-    final url = 'https://www.youtube.com/watch_videos?video_ids=$videoIds';
-    final ytmUrl = await _generateYTMUrl(url);
-
-    Clipboard.setData(ClipboardData(text: ytmUrl ?? url)).then((_) {
-      if (parentContext.mounted) {
-        ScaffoldMessenger.of(parentContext).showSnackBar(
-          snackbar(
-            parentContext,
-            S.current.linkCopied,
-            size: SanckBarSize.MEDIUM,
-          ),
-        );
-      }
-    });
   }
 }
 
@@ -176,127 +99,17 @@ class _ExportButton extends StatelessWidget {
           ),
           child: Row(
             children: [
-              Icon(
-                icon,
-                color: Theme.of(context).textTheme.titleMedium!.color,
-              ),
+              Icon(icon, color: Theme.of(context).textTheme.titleMedium!.color),
               const SizedBox(width: 16),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      title,
-                      style: Theme.of(context).textTheme.titleMedium,
-                    ),
+                    Text(title, style: Theme.of(context).textTheme.titleMedium),
                     const SizedBox(height: 4),
-                    Text(
-                      subtitle,
-                      style: Theme.of(context).textTheme.bodySmall,
-                    ),
+                    Text(subtitle,
+                        style: Theme.of(context).textTheme.bodySmall),
                   ],
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class _SplitExportButton extends StatelessWidget {
-  const _SplitExportButton({
-    required this.icon,
-    required this.title,
-    required this.subtitle,
-    required this.onMainTap,
-    required this.onCopyTap,
-  });
-
-  final IconData icon;
-  final String title;
-  final String subtitle;
-  final VoidCallback onMainTap;
-  final VoidCallback onCopyTap;
-
-  @override
-  Widget build(BuildContext context) {
-    return Material(
-      color: Theme.of(context).cardColor,
-      borderRadius: BorderRadius.circular(10),
-      child: Container(
-        decoration: BoxDecoration(
-          border: Border.all(
-            color: Theme.of(context).dividerColor.withValues(alpha: 0.2),
-          ),
-          borderRadius: BorderRadius.circular(10),
-        ),
-        child: IntrinsicHeight(
-          child: Row(
-            children: [
-              // Main button part (80%)
-              Expanded(
-                flex: 8,
-                child: InkWell(
-                  onTap: onMainTap,
-                  borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(10),
-                    bottomLeft: Radius.circular(10),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(16),
-                    child: Row(
-                      children: [
-                        Icon(
-                          icon,
-                          color: Theme.of(context).textTheme.titleMedium!.color,
-                        ),
-                        const SizedBox(width: 16),
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                title,
-                                style: Theme.of(context).textTheme.titleMedium,
-                              ),
-                              const SizedBox(height: 4),
-                              Text(
-                                subtitle,
-                                style: Theme.of(context).textTheme.bodySmall,
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              // Divider
-              VerticalDivider(
-                width: 1,
-                thickness: 1,
-                color: Theme.of(context).dividerColor.withValues(alpha: 0.2),
-              ),
-              // Copy button part (20%)
-              Expanded(
-                flex: 2,
-                child: InkWell(
-                  onTap: onCopyTap,
-                  borderRadius: const BorderRadius.only(
-                    topRight: Radius.circular(10),
-                    bottomRight: Radius.circular(10),
-                  ),
-                  child: Container(
-                    padding: const EdgeInsets.all(16),
-                    child: Icon(
-                      Icons.copy,
-                      color: Theme.of(context).textTheme.titleMedium!.color,
-                      size: 20,
-                    ),
-                  ),
                 ),
               ),
             ],

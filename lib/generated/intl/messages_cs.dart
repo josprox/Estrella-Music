@@ -464,11 +464,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "exportPlaylistJsonSubtitle": MessageLookupByLibrary.simpleMessage(
       "Tento formát lze importovat",
     ),
-    "exportToYouTubeMusic": MessageLookupByLibrary.simpleMessage(
-      "Exportovat na YouTube Music",
+    "exportToOnlineMusic": MessageLookupByLibrary.simpleMessage(
+      "Exportovat na Online Music",
     ),
-    "exportToYouTubeMusicSubtitle": MessageLookupByLibrary.simpleMessage(
-      "Vaše playlisty (s méně než 50 skladbami) se přesunou do aktuální fronty. Nezapomeňte je po otevření v YtMusic přidat do playlistu/uložit",
+    "exportToOnlineMusicSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Vaše playlisty (s méně než 50 skladbami) se přesunou do aktuální fronty. Nezapomeňte je po otevření v MusicService přidat do playlistu/uložit",
     ),
     "exportedFileLocation": MessageLookupByLibrary.simpleMessage(
       "Umístění exportu staženého souboru",
@@ -1117,7 +1117,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Kvalita streamování, normalizace, ztišení a baterie.",
     ),
     "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
-      "Pokud se obsah kanálu Objevit nenačte, znovu vygenerujte své ID YouTube Music.",
+      "Pokud se obsah kanálu Objevit nenačte, znovu vygenerujte své ID Online Music.",
     ),
     "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
       "Obnovit ID (ID návštěvníka)",

@@ -46,8 +46,6 @@ class PlaylistScreenController extends PlaylistAlbumScreenControllerBase
 
   final isArranging = false.obs;
 
-  String generatedYtmPlaylistUrl = '';
-
   StreamSubscription? _playlistSub;
   StreamSubscription? _songsSub;
 

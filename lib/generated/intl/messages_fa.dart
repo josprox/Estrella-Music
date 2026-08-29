@@ -461,11 +461,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "exportPlaylistJsonSubtitle": MessageLookupByLibrary.simpleMessage(
       "این قالب را می توان وارد کرد",
     ),
-    "exportToYouTubeMusic": MessageLookupByLibrary.simpleMessage(
+    "exportToOnlineMusic": MessageLookupByLibrary.simpleMessage(
       "صادرات به موسیقی یوتیوب",
     ),
-    "exportToYouTubeMusicSubtitle": MessageLookupByLibrary.simpleMessage(
-      "این لیست پخش شما (آهنگ های کمتر از 50) را به صف فعلی می برد، فراموش نکنید که پس از باز کردن آن در YtMusic آن را به لیست پخش اضافه کنید/ذخیره کنید.",
+    "exportToOnlineMusicSubtitle": MessageLookupByLibrary.simpleMessage(
+      "این لیست پخش شما (آهنگ های کمتر از 50) را به صف فعلی می برد، فراموش نکنید که پس از باز کردن آن در MusicService آن را به لیست پخش اضافه کنید/ذخیره کنید.",
     ),
     "exportedFileLocation": MessageLookupByLibrary.simpleMessage(
       "صادرات محل فایل های دانلود شده",
@@ -1096,7 +1096,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "کیفیت پخش، عادی سازی، سکوت و باتری.",
     ),
     "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
-      "اگر محتوای Discover بارگیری نشد، شناسه موسیقی YouTube خود را دوباره ایجاد کنید.",
+      "اگر محتوای Discover بارگیری نشد، شناسه موسیقی Online خود را دوباره ایجاد کنید.",
     ),
     "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
       "شناسه بازخوانی (شناسه بازدیدکننده)",

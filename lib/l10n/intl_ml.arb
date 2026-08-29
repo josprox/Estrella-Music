@@ -705,7 +705,7 @@
   "@settings_refresh_visitor_title": {
     "description": "settings_refresh_visitor_title"
   },
-  "settings_refresh_visitor_desc": "Discover ഉള്ളടക്കം ലോഡ് ചെയ്യുന്നില്ലെങ്കിൽ നിങ്ങളുടെ YouTube Music ID പുനഃസൃഷ്ടിക്കുക.",
+  "settings_refresh_visitor_desc": "Discover ഉള്ളടക്കം ലോഡ് ചെയ്യുന്നില്ലെങ്കിൽ നിങ്ങളുടെ Online Music ID പുനഃസൃഷ്ടിക്കുക.",
   "@settings_refresh_visitor_desc": {
     "description": "settings_refresh_visitor_desc"
   },
@@ -1995,13 +1995,13 @@
   "@exportPlaylistCsvSubtitle": {
     "description": "exportPlaylistCsvSubtitle"
   },
-  "exportToYouTubeMusic": "Youtube സംഗീതത്തിലേക്ക് കയറ്റുമതി ചെയ്യുക",
-  "@exportToYouTubeMusic": {
-    "description": "exportToYouTubeMusic"
+  "exportToOnlineMusic": "Online സംഗീതത്തിലേക്ക് കയറ്റുമതി ചെയ്യുക",
+  "@exportToOnlineMusic": {
+    "description": "exportToOnlineMusic"
   },
-  "exportToYouTubeMusicSubtitle": "ഇത് നിങ്ങളുടെ പ്ലേലിസ്റ്റ് (ഗാനങ്ങൾ < 50) നിലവിലെ ക്യൂവിലേക്ക് തള്ളും, YtMusic-ൽ തുറന്നതിന് ശേഷം അത് പ്ലേലിസ്റ്റിലേക്ക് ചേർക്കാൻ/സംരക്ഷിക്കാൻ മറക്കരുത്",
-  "@exportToYouTubeMusicSubtitle": {
-    "description": "exportToYouTubeMusicSubtitle"
+  "exportToOnlineMusicSubtitle": "ഇത് നിങ്ങളുടെ പ്ലേലിസ്റ്റ് (ഗാനങ്ങൾ < 50) നിലവിലെ ക്യൂവിലേക്ക് തള്ളും, MusicService-ൽ തുറന്നതിന് ശേഷം അത് പ്ലേലിസ്റ്റിലേക്ക് ചേർക്കാൻ/സംരക്ഷിക്കാൻ മറക്കരുത്",
+  "@exportToOnlineMusicSubtitle": {
+    "description": "exportToOnlineMusicSubtitle"
   },
   "linkCopied": "ലിങ്ക് ക്ലിപ്പ്ബോർഡിലേക്ക് പകർത്തി",
   "@linkCopied": {

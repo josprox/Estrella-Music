@@ -468,11 +468,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "exportPlaylistJsonSubtitle": MessageLookupByLibrary.simpleMessage(
       "Tämä muoto voidaan tuoda",
     ),
-    "exportToYouTubeMusic": MessageLookupByLibrary.simpleMessage(
-      "Vie Youtube-musiikkiin",
+    "exportToOnlineMusic": MessageLookupByLibrary.simpleMessage(
+      "Vie Online-musiikkiin",
     ),
-    "exportToYouTubeMusicSubtitle": MessageLookupByLibrary.simpleMessage(
-      "Se työntää soittolistasi (kappaleita < 50) nykyiseen jonoon, älä unohda lisätä sitä soittolistaan/tallentaa avattuasi sen YtMusicissa",
+    "exportToOnlineMusicSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Se työntää soittolistasi (kappaleita < 50) nykyiseen jonoon, älä unohda lisätä sitä soittolistaan/tallentaa avattuasi sen MusicServiceissa",
     ),
     "exportedFileLocation": MessageLookupByLibrary.simpleMessage(
       "Vie ladattujen tiedostojen sijainti",
@@ -1119,7 +1119,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Suoratoiston laatu, normalisointi, hiljaisuudet ja akku.",
     ),
     "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
-      "Luo YouTube Music -tunnuksesi uudelleen, jos Discover-sisältö ei lataudu.",
+      "Luo Online Music -tunnuksesi uudelleen, jos Discover-sisältö ei lataudu.",
     ),
     "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
       "Päivitä tunnus (vierailijatunnus)",

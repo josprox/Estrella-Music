@@ -1057,7 +1057,7 @@
   "@settings_refresh_visitor_title": {
     "description": "settings_refresh_visitor_title"
   },
-  "settings_refresh_visitor_desc": "Luo YouTube Music -tunnuksesi uudelleen, jos Discover-sisältö ei lataudu.",
+  "settings_refresh_visitor_desc": "Luo Online Music -tunnuksesi uudelleen, jos Discover-sisältö ei lataudu.",
   "@settings_refresh_visitor_desc": {
     "description": "settings_refresh_visitor_desc"
   },
@@ -1995,13 +1995,13 @@
   "@exportPlaylistCsvSubtitle": {
     "description": "exportPlaylistCsvSubtitle"
   },
-  "exportToYouTubeMusic": "Vie Youtube-musiikkiin",
-  "@exportToYouTubeMusic": {
-    "description": "exportToYouTubeMusic"
+  "exportToOnlineMusic": "Vie Online-musiikkiin",
+  "@exportToOnlineMusic": {
+    "description": "exportToOnlineMusic"
   },
-  "exportToYouTubeMusicSubtitle": "Se työntää soittolistasi (kappaleita < 50) nykyiseen jonoon, älä unohda lisätä sitä soittolistaan/tallentaa avattuasi sen YtMusicissa",
-  "@exportToYouTubeMusicSubtitle": {
-    "description": "exportToYouTubeMusicSubtitle"
+  "exportToOnlineMusicSubtitle": "Se työntää soittolistasi (kappaleita < 50) nykyiseen jonoon, älä unohda lisätä sitä soittolistaan/tallentaa avattuasi sen MusicServiceissa",
+  "@exportToOnlineMusicSubtitle": {
+    "description": "exportToOnlineMusicSubtitle"
   },
   "linkCopied": "Linkki kopioitu leikepöydälle",
   "@linkCopied": {

@@ -1509,7 +1509,7 @@
   "@settings_refresh_visitor_title": {
     "description": "settings_refresh_visitor_title"
   },
-  "settings_refresh_visitor_desc": "Buat ulang ID YouTube Music Anda jika konten Discover tidak dapat dimuat.",
+  "settings_refresh_visitor_desc": "Buat ulang ID Online Music Anda jika konten Discover tidak dapat dimuat.",
   "@settings_refresh_visitor_desc": {
     "description": "settings_refresh_visitor_desc"
   },
@@ -2019,13 +2019,13 @@
   "@exportPlaylistCsvSubtitle": {
     "description": "exportPlaylistCsvSubtitle"
   },
-  "exportToYouTubeMusic": "Ekspor ke musik Youtube",
-  "@exportToYouTubeMusic": {
-    "description": "exportToYouTubeMusic"
+  "exportToOnlineMusic": "Ekspor ke musik Online",
+  "@exportToOnlineMusic": {
+    "description": "exportToOnlineMusic"
   },
-  "exportToYouTubeMusicSubtitle": "Ini akan mendorong playlist Anda (lagu <50) ke antrian saat ini, jangan lupa untuk menambahkannya ke playlist/simpan setelah membukanya di YtMusic",
-  "@exportToYouTubeMusicSubtitle": {
-    "description": "exportToYouTubeMusicSubtitle"
+  "exportToOnlineMusicSubtitle": "Ini akan mendorong playlist Anda (lagu <50) ke antrian saat ini, jangan lupa untuk menambahkannya ke playlist/simpan setelah membukanya di MusicService",
+  "@exportToOnlineMusicSubtitle": {
+    "description": "exportToOnlineMusicSubtitle"
   },
   "linkCopied": "Tautan disalin ke papan klip",
   "@linkCopied": {

@@ -1517,7 +1517,7 @@
   "@settings_refresh_visitor_title": {
     "description": "settings_refresh_visitor_title"
   },
-  "settings_refresh_visitor_desc": "Gere novamente seu ID do YouTube Music se o conteúdo do Discover não carregar.",
+  "settings_refresh_visitor_desc": "Gere novamente seu ID do Online Music se o conteúdo do Discover não carregar.",
   "@settings_refresh_visitor_desc": {
     "description": "settings_refresh_visitor_desc"
   },
@@ -2019,13 +2019,13 @@
   "@exportPlaylistCsvSubtitle": {
     "description": "exportPlaylistCsvSubtitle"
   },
-  "exportToYouTubeMusic": "Exportar para músicas do Youtube",
-  "@exportToYouTubeMusic": {
-    "description": "exportToYouTubeMusic"
+  "exportToOnlineMusic": "Exportar para músicas do Online",
+  "@exportToOnlineMusic": {
+    "description": "exportToOnlineMusic"
   },
-  "exportToYouTubeMusicSubtitle": "Ele irá empurrar sua playlist (músicas <50) para a fila atual, não se esqueça de adicioná-la à playlist/salvar após abri-la no YtMusic",
-  "@exportToYouTubeMusicSubtitle": {
-    "description": "exportToYouTubeMusicSubtitle"
+  "exportToOnlineMusicSubtitle": "Ele irá empurrar sua playlist (músicas <50) para a fila atual, não se esqueça de adicioná-la à playlist/salvar após abri-la no MusicService",
+  "@exportToOnlineMusicSubtitle": {
+    "description": "exportToOnlineMusicSubtitle"
   },
   "linkCopied": "Link copiado para a área de transferência",
   "@linkCopied": {

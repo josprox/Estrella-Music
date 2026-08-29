@@ -457,11 +457,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "exportPlaylistJsonSubtitle": MessageLookupByLibrary.simpleMessage(
       "يمكن استيراد هذا التنسيق",
     ),
-    "exportToYouTubeMusic": MessageLookupByLibrary.simpleMessage(
+    "exportToOnlineMusic": MessageLookupByLibrary.simpleMessage(
       "تصدير إلى موسيقى يوتيوب",
     ),
-    "exportToYouTubeMusicSubtitle": MessageLookupByLibrary.simpleMessage(
-      "سيؤدي ذلك إلى دفع قائمة التشغيل الخاصة بك (الأغاني <50) إلى قائمة الانتظار الحالية، لا تنس إضافتها إلى قائمة التشغيل/الحفظ بعد فتحها في YtMusic",
+    "exportToOnlineMusicSubtitle": MessageLookupByLibrary.simpleMessage(
+      "سيؤدي ذلك إلى دفع قائمة التشغيل الخاصة بك (الأغاني <50) إلى قائمة الانتظار الحالية، لا تنس إضافتها إلى قائمة التشغيل/الحفظ بعد فتحها في MusicService",
     ),
     "exportedFileLocation": MessageLookupByLibrary.simpleMessage(
       "موقع تصدير الملف الذي تم تنزيله",
@@ -1084,7 +1084,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "جودة البث والتطبيع والصمت والبطارية.",
     ),
     "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
-      "قم بإعادة إنشاء معرف YouTube Music الخاص بك إذا لم يتم تحميل محتوى Discover.",
+      "قم بإعادة إنشاء معرف Online Music الخاص بك إذا لم يتم تحميل محتوى Discover.",
     ),
     "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
       "معرف التحديث (معرف الزائر)",

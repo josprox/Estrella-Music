@@ -479,11 +479,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "exportPlaylistJsonSubtitle": MessageLookupByLibrary.simpleMessage(
       "ଏହି ଫର୍ମାଟ୍ ଆମଦାନୀ ହୋଇପାରିବ |",
     ),
-    "exportToYouTubeMusic": MessageLookupByLibrary.simpleMessage(
+    "exportToOnlineMusic": MessageLookupByLibrary.simpleMessage(
       "ୟୁଟ୍ୟୁବ୍ ସଙ୍ଗୀତକୁ ରପ୍ତାନି କରନ୍ତୁ |",
     ),
-    "exportToYouTubeMusicSubtitle": MessageLookupByLibrary.simpleMessage(
-      "ଏହା ତୁମର ପ୍ଲେ ଲିଷ୍ଟ (ଗୀତ <50) କୁ ସାମ୍ପ୍ରତିକ ଧାଡିରେ ଠେଲି ଦେବ, ଏହାକୁ YtMusic ରେ ଖୋଲିବା ପରେ ଏହାକୁ ପ୍ଲେ ଲିଷ୍ଟରେ ଯୋଡିବାକୁ ଭୁଲିବ ନାହିଁ |",
+    "exportToOnlineMusicSubtitle": MessageLookupByLibrary.simpleMessage(
+      "ଏହା ତୁମର ପ୍ଲେ ଲିଷ୍ଟ (ଗୀତ <50) କୁ ସାମ୍ପ୍ରତିକ ଧାଡିରେ ଠେଲି ଦେବ, ଏହାକୁ MusicService ରେ ଖୋଲିବା ପରେ ଏହାକୁ ପ୍ଲେ ଲିଷ୍ଟରେ ଯୋଡିବାକୁ ଭୁଲିବ ନାହିଁ |",
     ),
     "exportedFileLocation": MessageLookupByLibrary.simpleMessage(
       "ଡାଉନଲୋଡ୍ ହୋଇଥିବା ଫାଇଲଗୁଡିକର ଅବସ୍ଥାନ ରପ୍ତାନି କରନ୍ତୁ |",

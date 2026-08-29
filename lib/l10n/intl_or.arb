@@ -1999,13 +1999,13 @@
   "@exportPlaylistCsvSubtitle": {
     "description": "exportPlaylistCsvSubtitle"
   },
-  "exportToYouTubeMusic": "ୟୁଟ୍ୟୁବ୍ ସଙ୍ଗୀତକୁ ରପ୍ତାନି କରନ୍ତୁ |",
-  "@exportToYouTubeMusic": {
-    "description": "exportToYouTubeMusic"
+  "exportToOnlineMusic": "ୟୁଟ୍ୟୁବ୍ ସଙ୍ଗୀତକୁ ରପ୍ତାନି କରନ୍ତୁ |",
+  "@exportToOnlineMusic": {
+    "description": "exportToOnlineMusic"
   },
-  "exportToYouTubeMusicSubtitle": "ଏହା ତୁମର ପ୍ଲେ ଲିଷ୍ଟ (ଗୀତ <50) କୁ ସାମ୍ପ୍ରତିକ ଧାଡିରେ ଠେଲି ଦେବ, ଏହାକୁ YtMusic ରେ ଖୋଲିବା ପରେ ଏହାକୁ ପ୍ଲେ ଲିଷ୍ଟରେ ଯୋଡିବାକୁ ଭୁଲିବ ନାହିଁ |",
-  "@exportToYouTubeMusicSubtitle": {
-    "description": "exportToYouTubeMusicSubtitle"
+  "exportToOnlineMusicSubtitle": "ଏହା ତୁମର ପ୍ଲେ ଲିଷ୍ଟ (ଗୀତ <50) କୁ ସାମ୍ପ୍ରତିକ ଧାଡିରେ ଠେଲି ଦେବ, ଏହାକୁ MusicService ରେ ଖୋଲିବା ପରେ ଏହାକୁ ପ୍ଲେ ଲିଷ୍ଟରେ ଯୋଡିବାକୁ ଭୁଲିବ ନାହିଁ |",
+  "@exportToOnlineMusicSubtitle": {
+    "description": "exportToOnlineMusicSubtitle"
   },
   "linkCopied": "ଲିଙ୍କ୍ କ୍ଲିପବୋର୍ଡରେ କପି ହୋଇଛି |",
   "@linkCopied": {

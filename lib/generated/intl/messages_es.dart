@@ -487,11 +487,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "exportPlaylistJsonSubtitle": MessageLookupByLibrary.simpleMessage(
       "Este formato puede ser importado",
     ),
-    "exportToYouTubeMusic": MessageLookupByLibrary.simpleMessage(
-      "Exportar a Youtube music",
+    "exportToOnlineMusic": MessageLookupByLibrary.simpleMessage(
+      "Exportar a música online",
     ),
-    "exportToYouTubeMusicSubtitle": MessageLookupByLibrary.simpleMessage(
-      "Empujará tu lista de reproducción (canciones < 50) a la cola actual, no olvides añadirla a la lista de reproducción/guardar después de abrirla en YtMusic",
+    "exportToOnlineMusicSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Abre la lista de reproducción en el servicio musical configurado.",
     ),
     "exportedFileLocation": MessageLookupByLibrary.simpleMessage(
       "Ubicación de exportación de archivos descargados",
@@ -1160,7 +1160,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Calidad de streaming, normalización, silencios y batería.",
     ),
     "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
-      "Regenera el identificador de YouTube Music si el contenido de Descubrir no carga.",
+      "Regenera el identificador del proveedor si el contenido de Descubrir no carga.",
     ),
     "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
       "Refrescar identificador (Visitor ID)",
@@ -1304,9 +1304,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
       "EMusic Cloud no pudo reemplazar la biblioteca remota.",
     ),
-    "syncForceReplaceFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
-      "Falló el reemplazo remoto. Tus datos locales y el respaldo de recuperación se conservaron.",
-    ),
+    "syncForceReplaceFailedLocalPreserved":
+        MessageLookupByLibrary.simpleMessage(
+          "Falló el reemplazo remoto. Tus datos locales y el respaldo de recuperación se conservaron.",
+        ),
     "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
       "No se completó la subida",
     ),

@@ -455,11 +455,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "exportPlaylistJsonSubtitle": MessageLookupByLibrary.simpleMessage(
       "Detta format kan importeras",
     ),
-    "exportToYouTubeMusic": MessageLookupByLibrary.simpleMessage(
-      "Exportera till Youtube-musik",
+    "exportToOnlineMusic": MessageLookupByLibrary.simpleMessage(
+      "Exportera till Online-musik",
     ),
-    "exportToYouTubeMusicSubtitle": MessageLookupByLibrary.simpleMessage(
-      "Det kommer att skicka din spellista (låtar < 50) till den aktuella kön, glöm inte att lägga till den i spellistan/spara efter att ha öppnat den i YtMusic",
+    "exportToOnlineMusicSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Det kommer att skicka din spellista (låtar < 50) till den aktuella kön, glöm inte att lägga till den i spellistan/spara efter att ha öppnat den i MusicService",
     ),
     "exportedFileLocation": MessageLookupByLibrary.simpleMessage(
       "Välj plats för nedladdade filer",
@@ -1094,7 +1094,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Streamingkvalitet, normalisering, tystnad och batteri.",
     ),
     "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
-      "Återskapa ditt YouTube Music-ID om Discover-innehåll inte läses in.",
+      "Återskapa ditt Online Music-ID om Discover-innehåll inte läses in.",
     ),
     "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
       "Uppdatera ID (besökar-ID)",

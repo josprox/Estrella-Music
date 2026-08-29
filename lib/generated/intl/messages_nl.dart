@@ -472,11 +472,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "exportPlaylistJsonSubtitle": MessageLookupByLibrary.simpleMessage(
       "Dit formaat kan worden geïmporteerd",
     ),
-    "exportToYouTubeMusic": MessageLookupByLibrary.simpleMessage(
-      "Exporteren naar YouTube-muziek",
+    "exportToOnlineMusic": MessageLookupByLibrary.simpleMessage(
+      "Exporteren naar Online-muziek",
     ),
-    "exportToYouTubeMusicSubtitle": MessageLookupByLibrary.simpleMessage(
-      "Het zal je afspeellijst (nummers < 50) naar de huidige wachtrij pushen, vergeet niet om deze aan de afspeellijst toe te voegen/op te slaan nadat je deze in YtMusic hebt geopend",
+    "exportToOnlineMusicSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Het zal je afspeellijst (nummers < 50) naar de huidige wachtrij pushen, vergeet niet om deze aan de afspeellijst toe te voegen/op te slaan nadat je deze in MusicService hebt geopend",
     ),
     "exportedFileLocation": MessageLookupByLibrary.simpleMessage(
       "Gedownload bestand exporteerlocatie",
@@ -1137,7 +1137,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Streamingkwaliteit, normalisatie, stiltes en batterij.",
     ),
     "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
-      "Genereer je YouTube Music-ID opnieuw als Discover-content niet wordt geladen.",
+      "Genereer je Online Music-ID opnieuw als Discover-content niet wordt geladen.",
     ),
     "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
       "Vernieuwings-ID (bezoekers-ID)",

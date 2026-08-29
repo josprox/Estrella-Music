@@ -467,11 +467,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "exportPlaylistJsonSubtitle": MessageLookupByLibrary.simpleMessage(
       "এই বিন্যাস আমদানি করা যেতে পারে",
     ),
-    "exportToYouTubeMusic": MessageLookupByLibrary.simpleMessage(
-      "Youtube সঙ্গীত রপ্তানি করুন",
+    "exportToOnlineMusic": MessageLookupByLibrary.simpleMessage(
+      "Online সঙ্গীত রপ্তানি করুন",
     ),
-    "exportToYouTubeMusicSubtitle": MessageLookupByLibrary.simpleMessage(
-      "এটি আপনার প্লেলিস্টকে (গান <50) বর্তমান সারিতে নিয়ে যাবে, YtMusic-এ খোলার পরে প্লেলিস্টে যোগ করতে/সেভ করতে ভুলবেন না",
+    "exportToOnlineMusicSubtitle": MessageLookupByLibrary.simpleMessage(
+      "এটি আপনার প্লেলিস্টকে (গান <50) বর্তমান সারিতে নিয়ে যাবে, MusicService-এ খোলার পরে প্লেলিস্টে যোগ করতে/সেভ করতে ভুলবেন না",
     ),
     "exportedFileLocation": MessageLookupByLibrary.simpleMessage(
       "ডাউনলোড করা ফাইল এক্সপোর্টের অবস্থান",
@@ -1110,7 +1110,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "স্ট্রিমিং গুণমান, স্বাভাবিককরণ, নীরবতা এবং ব্যাটারি।",
     ),
     "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
-      "ডিসকভার কন্টেন্ট লোড না হলে আপনার YouTube মিউজিক আইডি আবার জেনারেট করুন।",
+      "ডিসকভার কন্টেন্ট লোড না হলে আপনার Online মিউজিক আইডি আবার জেনারেট করুন।",
     ),
     "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
       "রিফ্রেশ আইডি (ভিজিটর আইডি)",

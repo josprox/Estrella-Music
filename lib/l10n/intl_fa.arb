@@ -969,7 +969,7 @@
   "@settings_refresh_visitor_title": {
     "description": "settings_refresh_visitor_title"
   },
-  "settings_refresh_visitor_desc": "اگر محتوای Discover بارگیری نشد، شناسه موسیقی YouTube خود را دوباره ایجاد کنید.",
+  "settings_refresh_visitor_desc": "اگر محتوای Discover بارگیری نشد، شناسه موسیقی Online خود را دوباره ایجاد کنید.",
   "@settings_refresh_visitor_desc": {
     "description": "settings_refresh_visitor_desc"
   },
@@ -1995,13 +1995,13 @@
   "@exportPlaylistCsvSubtitle": {
     "description": "exportPlaylistCsvSubtitle"
   },
-  "exportToYouTubeMusic": "صادرات به موسیقی یوتیوب",
-  "@exportToYouTubeMusic": {
-    "description": "exportToYouTubeMusic"
+  "exportToOnlineMusic": "صادرات به موسیقی یوتیوب",
+  "@exportToOnlineMusic": {
+    "description": "exportToOnlineMusic"
   },
-  "exportToYouTubeMusicSubtitle": "این لیست پخش شما (آهنگ های کمتر از 50) را به صف فعلی می برد، فراموش نکنید که پس از باز کردن آن در YtMusic آن را به لیست پخش اضافه کنید/ذخیره کنید.",
-  "@exportToYouTubeMusicSubtitle": {
-    "description": "exportToYouTubeMusicSubtitle"
+  "exportToOnlineMusicSubtitle": "این لیست پخش شما (آهنگ های کمتر از 50) را به صف فعلی می برد، فراموش نکنید که پس از باز کردن آن در MusicService آن را به لیست پخش اضافه کنید/ذخیره کنید.",
+  "@exportToOnlineMusicSubtitle": {
+    "description": "exportToOnlineMusicSubtitle"
   },
   "linkCopied": "پیوند در کلیپ بورد کپی شد",
   "@linkCopied": {

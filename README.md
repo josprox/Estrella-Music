@@ -214,7 +214,7 @@ Licensed under the **[GNU General Public License v3.0](LICENSE)**.
 - You may not publish modified versions on closed-source stores (Google Play, App Store).
 - See [CREDITS.md](CREDITS.md) for full third-party acknowledgments.
 
-*This project is not affiliated with, funded, authorized, or endorsed by Google LLC or YouTube. All trademarks belong to their respective owners.*
+*This project is not affiliated with, funded, authorized, or endorsed by external music services. All trademarks belong to their respective owners.*
 
 ---
 

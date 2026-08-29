@@ -480,11 +480,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "exportPlaylistJsonSubtitle": MessageLookupByLibrary.simpleMessage(
       "Ce format peut être importé",
     ),
-    "exportToYouTubeMusic": MessageLookupByLibrary.simpleMessage(
-      "Exporter vers YouTube Music",
+    "exportToOnlineMusic": MessageLookupByLibrary.simpleMessage(
+      "Exporter vers Online Music",
     ),
-    "exportToYouTubeMusicSubtitle": MessageLookupByLibrary.simpleMessage(
-      "Cela poussera votre playlist (titres < 50) vers la file d\'attente actuelle. N\'oubliez pas de l\'ajouter à la playlist/de l\'enregistrer après l\'ouverture dans YouTube Music",
+    "exportToOnlineMusicSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Cela poussera votre playlist (titres < 50) vers la file d\'attente actuelle. N\'oubliez pas de l\'ajouter à la playlist/de l\'enregistrer après l\'ouverture dans Online Music",
     ),
     "exportedFileLocation": MessageLookupByLibrary.simpleMessage(
       "Emplacement d\'exportation du fichier téléchargé",
@@ -1157,7 +1157,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Qualité du streaming, normalisation, silences et batterie.",
     ),
     "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
-      "Régénérez votre identifiant YouTube Music si le contenu Discover ne se charge pas.",
+      "Régénérez votre identifiant Online Music si le contenu Discover ne se charge pas.",
     ),
     "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
       "Actualiser l\'ID (ID visiteur)",

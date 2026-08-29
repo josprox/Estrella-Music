@@ -1080,13 +1080,13 @@
   "@exportPlaylistCsvSubtitle": {
     "description": "exportPlaylistCsvSubtitle"
   },
-  "exportToYouTubeMusic": "Експортувати до Youtube Music",
-  "@exportToYouTubeMusic": {
-    "description": "exportToYouTubeMusic"
+  "exportToOnlineMusic": "Експортувати до Online Music",
+  "@exportToOnlineMusic": {
+    "description": "exportToOnlineMusic"
   },
-  "exportToYouTubeMusicSubtitle": "Це додасть ваш список відтворення (пісень < 50) до поточної черги, не забудьте додати до плейлиста / зберегти після відкриття в YtMusic",
-  "@exportToYouTubeMusicSubtitle": {
-    "description": "exportToYouTubeMusicSubtitle"
+  "exportToOnlineMusicSubtitle": "Це додасть ваш список відтворення (пісень < 50) до поточної черги, не забудьте додати до плейлиста / зберегти після відкриття в MusicService",
+  "@exportToOnlineMusicSubtitle": {
+    "description": "exportToOnlineMusicSubtitle"
   },
   "linkCopied": "Посилання скопійовано в буфер обміну",
   "@linkCopied": {
@@ -1545,7 +1545,7 @@
   "@settings_refresh_visitor_title": {
     "description": "settings_refresh_visitor_title"
   },
-  "settings_refresh_visitor_desc": "Повторно згенеруйте свій ідентифікатор YouTube Music, якщо вміст Discover не завантажується.",
+  "settings_refresh_visitor_desc": "Повторно згенеруйте свій ідентифікатор Online Music, якщо вміст Discover не завантажується.",
   "@settings_refresh_visitor_desc": {
     "description": "settings_refresh_visitor_desc"
   },

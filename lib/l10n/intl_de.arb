@@ -1529,7 +1529,7 @@
   "@settings_refresh_visitor_title": {
     "description": "settings_refresh_visitor_title"
   },
-  "settings_refresh_visitor_desc": "Generieren Sie Ihre YouTube Music ID neu, wenn Discover-Inhalte nicht geladen werden.",
+  "settings_refresh_visitor_desc": "Generieren Sie Ihre Online Music ID neu, wenn Discover-Inhalte nicht geladen werden.",
   "@settings_refresh_visitor_desc": {
     "description": "settings_refresh_visitor_desc"
   },
@@ -2019,13 +2019,13 @@
   "@exportPlaylistCsvSubtitle": {
     "description": "exportPlaylistCsvSubtitle"
   },
-  "exportToYouTubeMusic": "Exportieren Sie Musik in YouTube",
-  "@exportToYouTubeMusic": {
-    "description": "exportToYouTubeMusic"
+  "exportToOnlineMusic": "Exportieren Sie Musik in Online",
+  "@exportToOnlineMusic": {
+    "description": "exportToOnlineMusic"
   },
-  "exportToYouTubeMusicSubtitle": "Dadurch wird Ihre Playlist (Songs < 50) in die aktuelle Warteschlange verschoben. Vergessen Sie nicht, sie der Playlist hinzuzufügen/zu speichern, nachdem Sie sie in YtMusic geöffnet haben",
-  "@exportToYouTubeMusicSubtitle": {
-    "description": "exportToYouTubeMusicSubtitle"
+  "exportToOnlineMusicSubtitle": "Dadurch wird Ihre Playlist (Songs < 50) in die aktuelle Warteschlange verschoben. Vergessen Sie nicht, sie der Playlist hinzuzufügen/zu speichern, nachdem Sie sie in MusicService geöffnet haben",
+  "@exportToOnlineMusicSubtitle": {
+    "description": "exportToOnlineMusicSubtitle"
   },
   "linkCopied": "Link in die Zwischenablage kopiert",
   "@linkCopied": {

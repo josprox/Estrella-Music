@@ -457,7 +457,7 @@
   "@settings_refresh_visitor_title": {
     "description": "settings_refresh_visitor_title"
   },
-  "settings_refresh_visitor_desc": "如果发现内容未加载，请重新生成您的 YouTube 音乐 ID。",
+  "settings_refresh_visitor_desc": "如果发现内容未加载，请重新生成您的 Online 音乐 ID。",
   "@settings_refresh_visitor_desc": {
     "description": "settings_refresh_visitor_desc"
   },
@@ -1999,13 +1999,13 @@
   "@exportPlaylistCsvSubtitle": {
     "description": "exportPlaylistCsvSubtitle"
   },
-  "exportToYouTubeMusic": "导出到 YouTube 音乐",
-  "@exportToYouTubeMusic": {
-    "description": "exportToYouTubeMusic"
+  "exportToOnlineMusic": "导出到 Online 音乐",
+  "@exportToOnlineMusic": {
+    "description": "exportToOnlineMusic"
   },
-  "exportToYouTubeMusicSubtitle": "它将把您的播放列表（歌曲 < 50）推送到当前队列，在 YtMusic 中打开它后不要忘记将其添加到播放列表/保存",
-  "@exportToYouTubeMusicSubtitle": {
-    "description": "exportToYouTubeMusicSubtitle"
+  "exportToOnlineMusicSubtitle": "它将把您的播放列表（歌曲 < 50）推送到当前队列，在 MusicService 中打开它后不要忘记将其添加到播放列表/保存",
+  "@exportToOnlineMusicSubtitle": {
+    "description": "exportToOnlineMusicSubtitle"
   },
   "linkCopied": "链接已复制到剪贴板",
   "@linkCopied": {

@@ -477,11 +477,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "exportPlaylistJsonSubtitle": MessageLookupByLibrary.simpleMessage(
           "Không thể nhập bằng định dạng này",
         ),
-        "exportToYouTubeMusic": MessageLookupByLibrary.simpleMessage(
-          "Xuất ra Youtube Nhạc",
+        "exportToOnlineMusic": MessageLookupByLibrary.simpleMessage(
+          "Xuất ra Online Nhạc",
         ),
-        "exportToYouTubeMusicSubtitle": MessageLookupByLibrary.simpleMessage(
-          "Nó sẽ đẩy danh sách phát của bạn (bài hát < 50) vào hàng đợi hiện tại, đừng quên thêm vào danh sách phát/lưu sau khi mở trong YtMusic",
+        "exportToOnlineMusicSubtitle": MessageLookupByLibrary.simpleMessage(
+          "Nó sẽ đẩy danh sách phát của bạn (bài hát < 50) vào hàng đợi hiện tại, đừng quên thêm vào danh sách phát/lưu sau khi mở trong MusicService",
         ),
         "exportedFileLocation": MessageLookupByLibrary.simpleMessage(
           "Vị trí xuất tệp đã tải về",
@@ -1155,7 +1155,7 @@ class MessageLookup extends MessageLookupByLibrary {
           "Chất lượng phát trực tuyến, chuẩn hóa, im lặng và pin.",
         ),
         "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
-          "Tạo lại ID nhạc YouTube của bạn nếu nội dung Khám phá không tải.",
+          "Tạo lại ID nhạc Online của bạn nếu nội dung Khám phá không tải.",
         ),
         "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
           "Làm mới ID (ID khách truy cập)",

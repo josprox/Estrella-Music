@@ -7,7 +7,7 @@ import 'package:harmonymusic/models/thumbnail.dart';
 import 'package:harmonymusic/ui/widgets/playlist_album_scroll_behaviour.dart';
 import 'package:harmonymusic/services/storage/sqlite_store.dart';
 import 'package:harmonymusic/ui/widgets/custom_marquee.dart';
-import 'package:harmonymusic/utils/helpers/youtube_share_manager.dart';
+import 'package:harmonymusic/utils/helpers/music_share_manager.dart';
 
 import 'package:harmonymusic/services/download/downloader.dart';
 import 'package:harmonymusic/ui/player/player_controller.dart';
@@ -346,7 +346,7 @@ class AlbumScreen extends StatelessWidget {
                                                       vertical: -3),
                                               splashRadius: 10,
                                               onPressed: () {
-                                                YoutubeShareManager.shareAlbum(
+                                                MusicShareManager.shareAlbum(
                                                     albumController.album.value
                                                             .audioPlaylistId ??
                                                         '',

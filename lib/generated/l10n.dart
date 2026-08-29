@@ -1,6 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+
 import 'intl/messages_all.dart';
 
 // **************************************************************************
@@ -3304,22 +3305,22 @@ class S {
     );
   }
 
-  /// `Export to Youtube music`
-  String get exportToYouTubeMusic {
+  /// `Export to Online music`
+  String get exportToOnlineMusic {
     return Intl.message(
-      'Export to Youtube music',
-      name: 'exportToYouTubeMusic',
-      desc: 'exportToYouTubeMusic',
+      'Export to Online music',
+      name: 'exportToOnlineMusic',
+      desc: 'exportToOnlineMusic',
       args: [],
     );
   }
 
-  /// `It will push your playlist (songs < 50) to current queue, don't forget to add to playlist/save after opening in YtMusic`
-  String get exportToYouTubeMusicSubtitle {
+  /// `It will push your playlist (songs < 50) to current queue, don't forget to add to playlist/save after opening in MusicService`
+  String get exportToOnlineMusicSubtitle {
     return Intl.message(
-      'It will push your playlist (songs < 50) to current queue, don\'t forget to add to playlist/save after opening in YtMusic',
-      name: 'exportToYouTubeMusicSubtitle',
-      desc: 'exportToYouTubeMusicSubtitle',
+      'It will push your playlist (songs < 50) to current queue, don\'t forget to add to playlist/save after opening in MusicService',
+      name: 'exportToOnlineMusicSubtitle',
+      desc: 'exportToOnlineMusicSubtitle',
       args: [],
     );
   }
@@ -4979,10 +4980,10 @@ class S {
     );
   }
 
-  /// `Regenerate your YouTube Music ID if Discover content doesn't load.`
+  /// `Regenerate your Online Music ID if Discover content doesn't load.`
   String get settings_refresh_visitor_desc {
     return Intl.message(
-      'Regenerate your YouTube Music ID if Discover content doesn\'t load.',
+      'Regenerate your Online Music ID if Discover content doesn\'t load.',
       name: 'settings_refresh_visitor_desc',
       desc: 'settings_refresh_visitor_desc',
       args: [],

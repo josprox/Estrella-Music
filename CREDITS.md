@@ -17,8 +17,8 @@
 - [**Harmony Music**](https://github.com/anandnet/Harmony-Music): The foundational Flutter engine used for this distribution. Multi-platform music streaming capabilities.
 
 ### **Inspirational Projects**
-- [**InnerTune**](https://github.com/z-huang/InnerTune): Original Material 3 UI/UX concepts for YouTube Music clients.
-- [**ViMusic**](https://github.com/vfsfitvnm/ViMusic): Breakthrough concepts in lightweight YouTube Music streaming.
+- [**InnerTune**](https://github.com/z-huang/InnerTune): Original Material 3 UI/UX concepts for music clients.
+- [**ViMusic**](https://github.com/vfsfitvnm/ViMusic): Breakthrough concepts in lightweight music streaming.
 
 ### **Legacy Version**
 - [**Estrella Music Kotlin**](https://github.com/josprox/Joss-Music): The original project that defined the vision and user base for this evolution.
@@ -33,7 +33,6 @@ We would like to thank the following libraries and their maintainers:
 - **GetX**: High-performance state management.
 - **just_audio**: Powerful audio player for Android.
 - **media_kit**: Cross-platform audio playback (Windows/Linux).
-- **youtube_explode_dart**: YouTube Music data scraping.
 - **Hive**: Lightweight and blazing fast offline database.
 - **OneSignal**: Push notifications and cloud synchronization.
 - **Dio**: HTTP networking.

@@ -1,4 +1,4 @@
-﻿import 'dart:async';
+import 'dart:async';
 
 import 'package:app_links/app_links.dart';
 import 'package:audio_service/audio_service.dart';
@@ -15,7 +15,6 @@ import 'package:harmonymusic/ui/widgets/loader.dart';
 import 'package:harmonymusic/ui/widgets/shared_song_action_sheet.dart';
 import 'package:harmonymusic/ui/widgets/snackbar.dart';
 import 'package:harmonymusic/ui/widgets/songinfo_bottom_sheet.dart';
-import 'package:harmonymusic/utils/helpers/helper.dart';
 
 class AppLinksController extends GetxController with ProcessLink {
   late AppLinks _appLinks;
@@ -138,34 +137,7 @@ mixin ProcessLink {
       }
     }
 
-    if (!_isYoutubeLink(uri)) {
-      _showInvalidLinkMessage();
-      return;
-    }
-
-    printINFO("pathsegmet: ${uri.pathSegments} params:${uri.queryParameters}");
-    if (uri.pathSegments.isEmpty) {
-      _showInvalidLinkMessage();
-    } else if (uri.pathSegments[0] == "playlist" &&
-        uri.queryParameters.containsKey("list")) {
-      await openPlaylistOrAlbum(uri.queryParameters["list"]!);
-    } else if (uri.pathSegments[0] == "shorts") {
-      _showSongVideoMessage();
-    } else if (uri.pathSegments[0] == "watch") {
-      final songId = uri.queryParameters["v"];
-      if (songId == null) {
-        _showInvalidLinkMessage();
-      } else {
-        await playSong(songId);
-      }
-    } else if (uri.pathSegments[0] == "channel" &&
-        uri.pathSegments.length > 1) {
-      await openArtist(uri.pathSegments[1]);
-    } else if (uri.host == "youtu.be") {
-      await playSong(uri.pathSegments[0]);
-    } else {
-      _showInvalidLinkMessage();
-    }
+    _showInvalidLinkMessage();
   }
 
   _SharedItem? _emusicSharedItem(Uri uri) {
@@ -186,32 +158,12 @@ mixin ProcessLink {
     return _SharedItem(type: type, id: uri.pathSegments.last);
   }
 
-  bool _isYoutubeLink(Uri uri) {
-    return {
-      "youtube.com",
-      "music.youtube.com",
-      "youtu.be",
-      "www.youtube.com",
-      "m.youtube.com",
-    }.contains(uri.host);
-  }
-
   void _showInvalidLinkMessage() {
     final context = Get.context;
     if (context == null) return;
     ScaffoldMessenger.of(context).showSnackBar(snackbar(
       context,
       S.current.notaValidLink,
-      size: SanckBarSize.MEDIUM,
-    ));
-  }
-
-  void _showSongVideoMessage() {
-    final context = Get.context;
-    if (context == null) return;
-    ScaffoldMessenger.of(context).showSnackBar(snackbar(
-      context,
-      S.current.notaSongVideo,
       size: SanckBarSize.MEDIUM,
     ));
   }
@@ -332,15 +284,25 @@ mixin ProcessLink {
       if (result[0]) {
         return List<MediaItem>.from(result[1]);
       }
-      _showSongVideoMessage();
+      _showUnavailableSongMessage();
       return null;
     } catch (_) {
       if (Get.context != null && Navigator.of(Get.context!).canPop()) {
         Navigator.of(Get.context!).pop();
       }
-      _showSongVideoMessage();
+      _showUnavailableSongMessage();
       return null;
     }
+  }
+
+  void _showUnavailableSongMessage() {
+    final context = Get.context;
+    if (context == null) return;
+    ScaffoldMessenger.of(context).showSnackBar(snackbar(
+      context,
+      S.current.notaSongVideo,
+      size: SanckBarSize.MEDIUM,
+    ));
   }
 }
 

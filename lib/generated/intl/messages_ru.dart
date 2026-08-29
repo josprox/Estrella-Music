@@ -477,11 +477,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "exportPlaylistJsonSubtitle": MessageLookupByLibrary.simpleMessage(
       "Этот формат можно импортировать",
     ),
-    "exportToYouTubeMusic": MessageLookupByLibrary.simpleMessage(
-      "Экспортировать в YouTube Music",
+    "exportToOnlineMusic": MessageLookupByLibrary.simpleMessage(
+      "Экспортировать в Online Music",
     ),
-    "exportToYouTubeMusicSubtitle": MessageLookupByLibrary.simpleMessage(
-      "Ваш плейлист (до 50 песен) будет добавлен в текущую очередь. Не забудьте добавить его в плейлист или сохранить после открытия в YtMusic",
+    "exportToOnlineMusicSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Ваш плейлист (до 50 песен) будет добавлен в текущую очередь. Не забудьте добавить его в плейлист или сохранить после открытия в MusicService",
     ),
     "exportedFileLocation": MessageLookupByLibrary.simpleMessage(
       "Место экспортирования скачанных файлов",
@@ -1120,7 +1120,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Качество потоковой передачи, нормализация, тишина и батарея.",
     ),
     "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
-      "Восстановите свой идентификатор YouTube Music ID, если контент Discover не загружается.",
+      "Восстановите свой идентификатор Online Music ID, если контент Discover не загружается.",
     ),
     "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
       "Обновить идентификатор (идентификатор посетителя)",

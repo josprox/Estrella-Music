@@ -1092,13 +1092,13 @@
   "@exportPlaylistCsvSubtitle": {
     "description": "exportPlaylistCsvSubtitle"
   },
-  "exportToYouTubeMusic": "Exporter vers YouTube Music",
-  "@exportToYouTubeMusic": {
-    "description": "exportToYouTubeMusic"
+  "exportToOnlineMusic": "Exporter vers Online Music",
+  "@exportToOnlineMusic": {
+    "description": "exportToOnlineMusic"
   },
-  "exportToYouTubeMusicSubtitle": "Cela poussera votre playlist (titres < 50) vers la file d'attente actuelle. N'oubliez pas de l'ajouter à la playlist/de l'enregistrer après l'ouverture dans YouTube Music",
-  "@exportToYouTubeMusicSubtitle": {
-    "description": "exportToYouTubeMusicSubtitle"
+  "exportToOnlineMusicSubtitle": "Cela poussera votre playlist (titres < 50) vers la file d'attente actuelle. N'oubliez pas de l'ajouter à la playlist/de l'enregistrer après l'ouverture dans Online Music",
+  "@exportToOnlineMusicSubtitle": {
+    "description": "exportToOnlineMusicSubtitle"
   },
   "linkCopied": "Lien copié dans le presse-papiers",
   "@linkCopied": {
@@ -1557,7 +1557,7 @@
   "@settings_refresh_visitor_title": {
     "description": "settings_refresh_visitor_title"
   },
-  "settings_refresh_visitor_desc": "Régénérez votre identifiant YouTube Music si le contenu Discover ne se charge pas.",
+  "settings_refresh_visitor_desc": "Régénérez votre identifiant Online Music si le contenu Discover ne se charge pas.",
   "@settings_refresh_visitor_desc": {
     "description": "settings_refresh_visitor_desc"
   },

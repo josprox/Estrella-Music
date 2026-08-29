@@ -177,7 +177,7 @@ class HomeScreenController extends GetxController {
               return MediaItem(
                 id: e.playlistId,
                 title: e.title,
-                artist: e.description ?? "YouTube Music",
+                artist: e.description ?? "eMusic",
                 artUri: Uri.tryParse(e.thumbnailUrl),
                 extras: {'resultType': 'playlist'},
               );
@@ -516,7 +516,7 @@ class HomeScreenController extends GetxController {
       if (networkQuickPicks != null && networkQuickPicks.songList.isNotEmpty) {
         quickPicks.value = networkQuickPicks;
       } else if (quickPicks.value.songList.isEmpty) {
-        // Keep Home useful when the personalized YouTube response temporarily
+        // Keep Home useful when the personalized provider response temporarily
         // contains only albums/playlists. The local section will be refreshed
         // again automatically after an EMusic pull changes SQLite.
         await loadLocalCustomSections();

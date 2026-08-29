@@ -471,11 +471,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "exportPlaylistJsonSubtitle": MessageLookupByLibrary.simpleMessage(
       "Format ini dapat diimpor",
     ),
-    "exportToYouTubeMusic": MessageLookupByLibrary.simpleMessage(
-      "Ekspor ke musik Youtube",
+    "exportToOnlineMusic": MessageLookupByLibrary.simpleMessage(
+      "Ekspor ke musik Online",
     ),
-    "exportToYouTubeMusicSubtitle": MessageLookupByLibrary.simpleMessage(
-      "Ini akan mendorong playlist Anda (lagu <50) ke antrian saat ini, jangan lupa untuk menambahkannya ke playlist/simpan setelah membukanya di YtMusic",
+    "exportToOnlineMusicSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Ini akan mendorong playlist Anda (lagu <50) ke antrian saat ini, jangan lupa untuk menambahkannya ke playlist/simpan setelah membukanya di MusicService",
     ),
     "exportedFileLocation": MessageLookupByLibrary.simpleMessage(
       "Lokasi ekspor file yang terunduh",
@@ -1128,7 +1128,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Kualitas streaming, normalisasi, senyap, dan baterai.",
     ),
     "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
-      "Buat ulang ID YouTube Music Anda jika konten Discover tidak dapat dimuat.",
+      "Buat ulang ID Online Music Anda jika konten Discover tidak dapat dimuat.",
     ),
     "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
       "Segarkan ID (ID Pengunjung)",

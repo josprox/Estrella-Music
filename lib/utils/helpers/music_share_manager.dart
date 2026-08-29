@@ -1,9 +1,9 @@
 import 'package:share_plus/share_plus.dart';
 
-class YoutubeShareManager {
+/// Creates provider-neutral public links owned by eMusic.
+class MusicShareManager {
   static const String _emusicShareDomain = 'https://emusic.joss.red';
 
-  /// Comparte una canción
   static Future<void> shareSong(String songId,
       {String? title, String? artist}) async {
     final url = '$_emusicShareDomain/share/song/$songId';
@@ -14,10 +14,8 @@ class YoutubeShareManager {
     }
   }
 
-  /// Comparte un álbum (que en YouTube Music funciona como playlist)
-  static Future<void> shareAlbum(String playlistId,
-      {String? albumTitle}) async {
-    final url = '$_emusicShareDomain/share/album/$playlistId';
+  static Future<void> shareAlbum(String albumId, {String? albumTitle}) async {
+    final url = '$_emusicShareDomain/share/album/$albumId';
     if (albumTitle != null) {
       await Share.share('Escucha el álbum $albumTitle en $url');
     } else {
@@ -25,7 +23,6 @@ class YoutubeShareManager {
     }
   }
 
-  /// Comparte una lista de reproducción
   static Future<void> sharePlaylist(String playlistId,
       {String? playlistTitle}) async {
     final url = '$_emusicShareDomain/share/playlist/$playlistId';
@@ -36,9 +33,8 @@ class YoutubeShareManager {
     }
   }
 
-  /// Comparte un artista
-  static Future<void> shareArtist(String browseId, {String? artistName}) async {
-    final url = '$_emusicShareDomain/share/artist/$browseId';
+  static Future<void> shareArtist(String artistId, {String? artistName}) async {
+    final url = '$_emusicShareDomain/share/artist/$artistId';
     if (artistName != null) {
       await Share.share('Escucha a $artistName en $url');
     } else {

@@ -465,11 +465,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "exportPlaylistJsonSubtitle": MessageLookupByLibrary.simpleMessage(
       "Гэты фармат можна імпартаваць",
     ),
-    "exportToYouTubeMusic": MessageLookupByLibrary.simpleMessage(
-      "Экспарт музыкі ў Youtube",
+    "exportToOnlineMusic": MessageLookupByLibrary.simpleMessage(
+      "Экспарт музыкі ў Online",
     ),
-    "exportToYouTubeMusicSubtitle": MessageLookupByLibrary.simpleMessage(
-      "Ён перанясе ваш спіс прайгравання (песень < 50) у бягучую чаргу, не забудзьцеся дадаць яго ў спіс прайгравання/захаваць пасля адкрыцця ў YtMusic",
+    "exportToOnlineMusicSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Ён перанясе ваш спіс прайгравання (песень < 50) у бягучую чаргу, не забудзьцеся дадаць яго ў спіс прайгравання/захаваць пасля адкрыцця ў MusicService",
     ),
     "exportedFileLocation": MessageLookupByLibrary.simpleMessage(
       "Экспарт размяшчэння спампаваных файлаў",
@@ -1120,7 +1120,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Якасць трансляцыі, нармалізацыя, цішыня і акумулятар.",
     ),
     "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
-      "Аднавіце свой ідэнтыфікатар YouTube Music, калі змесціва Discover не загружаецца.",
+      "Аднавіце свой ідэнтыфікатар Online Music, калі змесціва Discover не загружаецца.",
     ),
     "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
       "Абнавіць ID (ID наведвальніка)",

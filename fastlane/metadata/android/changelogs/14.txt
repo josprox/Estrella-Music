@@ -1,4 +1,4 @@
-- Added open in youtube/youtube music option
+- Added external link opening option
 - fixed list widget size issue 
 - fixed queue rearrange issue
 - Ucommented audiotags implementation for Auditagging

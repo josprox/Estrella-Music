@@ -39,14 +39,14 @@ python scripts\test_emusic_server.py
 
 `VISIONOS` sigue siendo el cliente principal del orquestador. La salida de la
 prueba muestra `clientUsed` para saber si eMusic tuvo que usar IOS o ANDROID.
-Un PO token se envia tanto en `X-YouTube-Po-Token` como en
+Un PO token se envía tanto en la cabecera correspondiente como en
 `serviceIntegrityDimensions.poToken`; debe corresponder al cliente y al
 contenido para el que fue generado.
 
 Antes de solicitar el player, eMusic obtiene el contexto público de la página
 del video y añade el `signatureTimestamp` y visitor data usados por el cliente
 VISIONOS. Si la aplicación ya envió `visitorData`, se conserva ese valor. Este
-paso replica la secuencia de `YoutubeApiClient.visionos` que utilizaba la app
+paso replica la secuencia del cliente VISIONOS que utilizaba la app
 antes de mover la resolución de streams al servidor.
 
 La opcion `--play` reproduce la muestra con `ffplay` cuando esta herramienta
@@ -56,10 +56,10 @@ muestra truncada.
 
 ## Interpretacion de errores
 
-- `LOGIN_REQUIRED`: YouTube rechazo todos los clientes desde la IP de salida
+- `LOGIN_REQUIRED`: el upstream rechazó todos los clientes desde la IP de salida
   del servidor o falta un PO token compatible.
 - `El stream devolvio HTTP 403`: la URL se resolvio, pero el GVS rechazo el
   contexto, IP o PO token.
 - album sin pista equivalente: el browse ID no corresponde a la cancion. Se
-  comparan primero IDs y despues titulo/artista porque YouTube puede asignar un
+  comparan primero IDs y después título/artista porque el proveedor puede asignar un
   video ID distinto al audio incluido en el album.

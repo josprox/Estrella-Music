@@ -1080,13 +1080,13 @@
   "@exportPlaylistCsvSubtitle": {
     "description": "exportPlaylistCsvSubtitle"
   },
-  "exportToYouTubeMusic": "Youtube musicへエクスポート",
-  "@exportToYouTubeMusic": {
-    "description": "exportToYouTubeMusic"
+  "exportToOnlineMusic": "Online musicへエクスポート",
+  "@exportToOnlineMusic": {
+    "description": "exportToOnlineMusic"
   },
-  "exportToYouTubeMusicSubtitle": "再生リスト (曲数50未満) を現在のキューに追加する。YtMusicで開いたら、再生リストへの追加/保存を忘れないよう",
-  "@exportToYouTubeMusicSubtitle": {
-    "description": "exportToYouTubeMusicSubtitle"
+  "exportToOnlineMusicSubtitle": "再生リスト (曲数50未満) を現在のキューに追加する。MusicServiceで開いたら、再生リストへの追加/保存を忘れないよう",
+  "@exportToOnlineMusicSubtitle": {
+    "description": "exportToOnlineMusicSubtitle"
   },
   "linkCopied": "リンクをクリップボードにコピー",
   "@linkCopied": {
@@ -1545,7 +1545,7 @@
   "@settings_refresh_visitor_title": {
     "description": "settings_refresh_visitor_title"
   },
-  "settings_refresh_visitor_desc": "Discover コンテンツが読み込まれない場合は、YouTube Music ID を再生成します。",
+  "settings_refresh_visitor_desc": "Discover コンテンツが読み込まれない場合は、Online Music ID を再生成します。",
   "@settings_refresh_visitor_desc": {
     "description": "settings_refresh_visitor_desc"
   },

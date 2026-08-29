@@ -470,11 +470,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "exportPlaylistJsonSubtitle": MessageLookupByLibrary.simpleMessage(
       "Bu format içe aktarılabilir",
     ),
-    "exportToYouTubeMusic": MessageLookupByLibrary.simpleMessage(
-      "YouTube Music\'e aktar",
+    "exportToOnlineMusic": MessageLookupByLibrary.simpleMessage(
+      "Online Music\'e aktar",
     ),
-    "exportToYouTubeMusicSubtitle": MessageLookupByLibrary.simpleMessage(
-      "Çalma listenizdeki 50 şarkıdan kısa olanları mevcut kuyruğa ekleyecek, YtMusic\'te açtıktan sonra çalma listesine eklemeyi/kaydetmeyi unutmayın",
+    "exportToOnlineMusicSubtitle": MessageLookupByLibrary.simpleMessage(
+      "Çalma listenizdeki 50 şarkıdan kısa olanları mevcut kuyruğa ekleyecek, MusicService\'te açtıktan sonra çalma listesine eklemeyi/kaydetmeyi unutmayın",
     ),
     "exportedFileLocation": MessageLookupByLibrary.simpleMessage(
       "İndirilen dosya dışa aktarma konumu",
@@ -1105,7 +1105,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Akış kalitesi, normalleştirme, sessizlikler ve pil.",
     ),
     "settings_refresh_visitor_desc": MessageLookupByLibrary.simpleMessage(
-      "Keşfet içeriği yüklenmezse YouTube Müzik Kimliğinizi yeniden oluşturun.",
+      "Keşfet içeriği yüklenmezse Online Müzik Kimliğinizi yeniden oluşturun.",
     ),
     "settings_refresh_visitor_title": MessageLookupByLibrary.simpleMessage(
       "Kimliği Yenile (Ziyaretçi Kimliği)",

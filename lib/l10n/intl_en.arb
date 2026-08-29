@@ -1424,13 +1424,13 @@
   "@exportPlaylistCsvSubtitle": {
     "description": "exportPlaylistCsvSubtitle"
   },
-  "exportToYouTubeMusic": "Export to Youtube music",
-  "@exportToYouTubeMusic": {
-    "description": "exportToYouTubeMusic"
+  "exportToOnlineMusic": "Export to Online music",
+  "@exportToOnlineMusic": {
+    "description": "exportToOnlineMusic"
   },
-  "exportToYouTubeMusicSubtitle": "It will push your playlist (songs < 50) to current queue, don't forget to add to playlist/save after opening in YtMusic",
-  "@exportToYouTubeMusicSubtitle": {
-    "description": "exportToYouTubeMusicSubtitle"
+  "exportToOnlineMusicSubtitle": "It will push your playlist (songs < 50) to current queue, don't forget to add to playlist/save after opening in MusicService",
+  "@exportToOnlineMusicSubtitle": {
+    "description": "exportToOnlineMusicSubtitle"
   },
   "linkCopied": "Link copied to clipboard",
   "@linkCopied": {
@@ -2151,7 +2151,7 @@
   "@settings_refresh_visitor_title": {
     "description": "settings_refresh_visitor_title"
   },
-  "settings_refresh_visitor_desc": "Regenerate your YouTube Music ID if Discover content doesn't load.",
+  "settings_refresh_visitor_desc": "Regenerate your Online Music ID if Discover content doesn't load.",
   "@settings_refresh_visitor_desc": {
     "description": "settings_refresh_visitor_desc"
   },

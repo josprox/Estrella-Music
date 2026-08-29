@@ -1424,13 +1424,13 @@
   "@exportPlaylistCsvSubtitle": {
     "description": "exportPlaylistCsvSubtitle"
   },
-  "exportToYouTubeMusic": "Exportar a Youtube music",
-  "@exportToYouTubeMusic": {
-    "description": "exportToYouTubeMusic"
+  "exportToOnlineMusic": "Exportar a música online",
+  "@exportToOnlineMusic": {
+    "description": "exportToOnlineMusic"
   },
-  "exportToYouTubeMusicSubtitle": "Empujará tu lista de reproducción (canciones < 50) a la cola actual, no olvides añadirla a la lista de reproducción/guardar después de abrirla en YtMusic",
-  "@exportToYouTubeMusicSubtitle": {
-    "description": "exportToYouTubeMusicSubtitle"
+  "exportToOnlineMusicSubtitle": "Abre la lista de reproducción en el servicio musical configurado.",
+  "@exportToOnlineMusicSubtitle": {
+    "description": "exportToOnlineMusicSubtitle"
   },
   "linkCopied": "Link copiado al portapapeles",
   "@linkCopied": {
@@ -2151,7 +2151,7 @@
   "@settings_refresh_visitor_title": {
     "description": "settings_refresh_visitor_title"
   },
-  "settings_refresh_visitor_desc": "Regenera el identificador de YouTube Music si el contenido de Descubrir no carga.",
+  "settings_refresh_visitor_desc": "Regenera el identificador del proveedor si el contenido de Descubrir no carga.",
   "@settings_refresh_visitor_desc": {
     "description": "settings_refresh_visitor_desc"
   },

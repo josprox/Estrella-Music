@@ -457,7 +457,7 @@
   "@settings_refresh_visitor_title": {
     "description": "settings_refresh_visitor_title"
   },
-  "settings_refresh_visitor_desc": "Regenerer YouTube Music-ID-en din hvis Discover-innhold ikke lastes inn.",
+  "settings_refresh_visitor_desc": "Regenerer Online Music-ID-en din hvis Discover-innhold ikke lastes inn.",
   "@settings_refresh_visitor_desc": {
     "description": "settings_refresh_visitor_desc"
   },
@@ -1999,13 +1999,13 @@
   "@exportPlaylistCsvSubtitle": {
     "description": "exportPlaylistCsvSubtitle"
   },
-  "exportToYouTubeMusic": "Eksporter til YouTube-musikk",
-  "@exportToYouTubeMusic": {
-    "description": "exportToYouTubeMusic"
+  "exportToOnlineMusic": "Eksporter til Online-musikk",
+  "@exportToOnlineMusic": {
+    "description": "exportToOnlineMusic"
   },
-  "exportToYouTubeMusicSubtitle": "Den vil presse spillelisten din (sanger < 50) til gjeldende kø, ikke glem å legge den til spillelisten/lagre etter å ha åpnet den i YtMusic",
-  "@exportToYouTubeMusicSubtitle": {
-    "description": "exportToYouTubeMusicSubtitle"
+  "exportToOnlineMusicSubtitle": "Den vil presse spillelisten din (sanger < 50) til gjeldende kø, ikke glem å legge den til spillelisten/lagre etter å ha åpnet den i MusicService",
+  "@exportToOnlineMusicSubtitle": {
+    "description": "exportToOnlineMusicSubtitle"
   },
   "linkCopied": "Linken er kopiert til utklippstavlen",
   "@linkCopied": {

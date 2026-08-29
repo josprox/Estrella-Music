@@ -12,7 +12,7 @@ import 'package:harmonymusic/ui/widgets/songinfo_bottom_sheet.dart';
 import '/models/album.dart';
 import '/models/playlist.dart';
 import '/ui/widgets/image_widget.dart';
-import 'package:harmonymusic/utils/helpers/youtube_share_manager.dart';
+import 'package:harmonymusic/utils/helpers/music_share_manager.dart';
 import 'package:harmonymusic/generated/l10n.dart';
 import '/ui/widgets/song_status_badges.dart';
 import '/ui/widgets/song_download_btn.dart';
@@ -317,7 +317,7 @@ class _SpotifyArtistScreen extends StatelessWidget {
                     const Spacer(),
                     // Share
                     IconButton.filledTonal(
-                      onPressed: () => YoutubeShareManager.shareArtist(
+                      onPressed: () => MusicShareManager.shareArtist(
                           ctrl.artist_.browseId,
                           artistName: ctrl.artist_.name),
                       icon: const Icon(Icons.share_rounded, size: 20),
@@ -1200,7 +1200,7 @@ class _SpotifyArtistScreen extends StatelessWidget {
                                 // Share Button
                                 GestureDetector(
                                   onTap: () {
-                                    YoutubeShareManager.shareArtist(
+                                    MusicShareManager.shareArtist(
                                       artist.browseId,
                                       artistName: artist.name,
                                     );

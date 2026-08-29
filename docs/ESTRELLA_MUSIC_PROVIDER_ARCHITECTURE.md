@@ -8,9 +8,9 @@ Estado: arquitectura principal desde 2026-08-25.
 
 `MyAudioHandler` recibia un `MediaItem`, consultaba descargas/caches y, si no
 existia un archivo local, llamaba a `getStreamInfo`. Esa funcion ejecutaba
-`StreamProvider.fetch` con `youtube_explode_dart`. `Downloader` repetia la
+`StreamProvider.fetch` mediante un extractor remoto. `Downloader` repetia la
 misma resolucion. Por tanto, el player y las descargas conocian el identificador
-YouTube y la forma de obtener sus URLs.
+remoto y la forma de obtener sus URLs.
 
 EMusic ya incluia `OrchestratorService`, con una lista de clientes, fallback
 VISIONOS/IOS y soporte historico para `clientIp`, `visitorData` y `poToken`.
@@ -19,7 +19,7 @@ aceptaba valores proporcionados por el cliente.
 
 ### Catalogo, Home y busqueda
 
-`MusicServices` era un cliente YouTube Music completo dentro de Flutter. Creaba
+`MusicServices` era un cliente de catálogo remoto completo dentro de Flutter. Creaba
 visitor IDs, cabeceras y contexto, enviaba solicitudes `browse`, `search`,
 `next` y `player`, y delegaba parsing a `HomeService`, `SearchService`,
 `ArtistService`, `PlaylistAlbumService`, `PodcastService` y `TrackService`.
@@ -158,7 +158,7 @@ MediaItem
 
 `PlaybackSource` distingue archivo local, stream autorizado, playback externo y
 embebido. `AudioHandler` conserva cache y descargas locales, pero no resuelve
-YouTube ni selecciona clientes. `Downloader` solo acepta un stream autorizado
+el upstream ni selecciona clientes. `Downloader` solo acepta un stream autorizado
 devuelto por el provider; un archivo local no se vuelve a descargar.
 
 ## 7. Perfiles y persistencia

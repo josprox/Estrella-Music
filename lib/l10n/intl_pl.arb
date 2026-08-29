@@ -1529,7 +1529,7 @@
   "@settings_refresh_visitor_title": {
     "description": "settings_refresh_visitor_title"
   },
-  "settings_refresh_visitor_desc": "Wygeneruj ponownie swój identyfikator YouTube Music, jeśli treści Discover nie zostaną wczytane.",
+  "settings_refresh_visitor_desc": "Wygeneruj ponownie swój identyfikator Online Music, jeśli treści Discover nie zostaną wczytane.",
   "@settings_refresh_visitor_desc": {
     "description": "settings_refresh_visitor_desc"
   },
@@ -2019,13 +2019,13 @@
   "@exportPlaylistCsvSubtitle": {
     "description": "exportPlaylistCsvSubtitle"
   },
-  "exportToYouTubeMusic": "Eksportuj do muzyki z YouTube",
-  "@exportToYouTubeMusic": {
-    "description": "exportToYouTubeMusic"
+  "exportToOnlineMusic": "Eksportuj do muzyki z Online",
+  "@exportToOnlineMusic": {
+    "description": "exportToOnlineMusic"
   },
-  "exportToYouTubeMusicSubtitle": "Spowoduje to przesunięcie Twojej playlisty (utwory < 50) do bieżącej kolejki. Nie zapomnij dodać jej do playlisty/zapisać po otwarciu w YtMusic",
-  "@exportToYouTubeMusicSubtitle": {
-    "description": "exportToYouTubeMusicSubtitle"
+  "exportToOnlineMusicSubtitle": "Spowoduje to przesunięcie Twojej playlisty (utwory < 50) do bieżącej kolejki. Nie zapomnij dodać jej do playlisty/zapisać po otwarciu w MusicService",
+  "@exportToOnlineMusicSubtitle": {
+    "description": "exportToOnlineMusicSubtitle"
   },
   "linkCopied": "Link skopiowany do schowka",
   "@linkCopied": {

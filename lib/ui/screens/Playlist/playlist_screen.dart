@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import 'package:harmonymusic/services/storage/sqlite_store.dart';
 import 'package:harmonymusic/services/sync/sync_service.dart';
 import 'package:harmonymusic/ui/widgets/custom_marquee.dart';
-import 'package:harmonymusic/utils/helpers/youtube_share_manager.dart';
+import 'package:harmonymusic/utils/helpers/music_share_manager.dart';
 
 import '/models/playling_from.dart';
 import '/models/playlist.dart';
@@ -21,7 +21,7 @@ import 'package:harmonymusic/ui/widgets/snackbar.dart';
 import 'package:harmonymusic/ui/widgets/song_list_tile.dart';
 import 'package:harmonymusic/ui/widgets/songinfo_bottom_sheet.dart';
 import 'package:harmonymusic/ui/widgets/sort_widget.dart';
-import 'playlist_screen_controller.dart';
+import 'package:harmonymusic/ui/screens/Playlist/playlist_screen_controller.dart';
 import 'package:harmonymusic/generated/l10n.dart';
 
 class PlaylistScreen extends StatelessWidget {
@@ -448,7 +448,7 @@ class PlaylistScreen extends StatelessWidget {
                                             final content = playlistController
                                                 .playlist.value;
                                             if (content.isPipedPlaylist) {
-                                              YoutubeShareManager.sharePlaylist(
+                                              MusicShareManager.sharePlaylist(
                                                   content.playlistId);
                                             } else {
                                               final isPlaylistIdPrefixAvlbl =
@@ -459,7 +459,7 @@ class PlaylistScreen extends StatelessWidget {
                                                   ? content.playlistId
                                                       .substring(2)
                                                   : content.playlistId;
-                                              YoutubeShareManager.sharePlaylist(
+                                              MusicShareManager.sharePlaylist(
                                                   id);
                                             }
                                           },

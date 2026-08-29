@@ -1381,7 +1381,7 @@
   "@settings_refresh_visitor_title": {
     "description": "settings_refresh_visitor_title"
   },
-  "settings_refresh_visitor_desc": "ਜੇਕਰ ਡਿਸਕਵਰ ਸਮੱਗਰੀ ਲੋਡ ਨਹੀਂ ਹੁੰਦੀ ਹੈ ਤਾਂ ਆਪਣੀ YouTube ਸੰਗੀਤ ਆਈ.ਡੀ. ਨੂੰ ਦੁਬਾਰਾ ਬਣਾਓ।",
+  "settings_refresh_visitor_desc": "ਜੇਕਰ ਡਿਸਕਵਰ ਸਮੱਗਰੀ ਲੋਡ ਨਹੀਂ ਹੁੰਦੀ ਹੈ ਤਾਂ ਆਪਣੀ Online ਸੰਗੀਤ ਆਈ.ਡੀ. ਨੂੰ ਦੁਬਾਰਾ ਬਣਾਓ।",
   "@settings_refresh_visitor_desc": {
     "description": "settings_refresh_visitor_desc"
   },
@@ -2007,13 +2007,13 @@
   "@exportPlaylistCsvSubtitle": {
     "description": "exportPlaylistCsvSubtitle"
   },
-  "exportToYouTubeMusic": "ਯੂਟਿਊਬ ਸੰਗੀਤ ਨੂੰ ਨਿਰਯਾਤ ਕਰੋ",
-  "@exportToYouTubeMusic": {
-    "description": "exportToYouTubeMusic"
+  "exportToOnlineMusic": "ਯੂਟਿਊਬ ਸੰਗੀਤ ਨੂੰ ਨਿਰਯਾਤ ਕਰੋ",
+  "@exportToOnlineMusic": {
+    "description": "exportToOnlineMusic"
   },
-  "exportToYouTubeMusicSubtitle": "ਇਹ ਤੁਹਾਡੀ ਪਲੇਲਿਸਟ (ਗਾਣੇ <50) ਨੂੰ ਮੌਜੂਦਾ ਕਤਾਰ ਵਿੱਚ ਧੱਕ ਦੇਵੇਗਾ, ਇਸਨੂੰ YtMusic ਵਿੱਚ ਖੋਲ੍ਹਣ ਤੋਂ ਬਾਅਦ ਇਸਨੂੰ ਪਲੇਲਿਸਟ ਵਿੱਚ ਜੋੜਨਾ/ਸੇਵ ਕਰਨਾ ਨਾ ਭੁੱਲੋ।",
-  "@exportToYouTubeMusicSubtitle": {
-    "description": "exportToYouTubeMusicSubtitle"
+  "exportToOnlineMusicSubtitle": "ਇਹ ਤੁਹਾਡੀ ਪਲੇਲਿਸਟ (ਗਾਣੇ <50) ਨੂੰ ਮੌਜੂਦਾ ਕਤਾਰ ਵਿੱਚ ਧੱਕ ਦੇਵੇਗਾ, ਇਸਨੂੰ MusicService ਵਿੱਚ ਖੋਲ੍ਹਣ ਤੋਂ ਬਾਅਦ ਇਸਨੂੰ ਪਲੇਲਿਸਟ ਵਿੱਚ ਜੋੜਨਾ/ਸੇਵ ਕਰਨਾ ਨਾ ਭੁੱਲੋ।",
+  "@exportToOnlineMusicSubtitle": {
+    "description": "exportToOnlineMusicSubtitle"
   },
   "linkCopied": "ਲਿੰਕ ਕਲਿੱਪਬੋਰਡ 'ਤੇ ਕਾਪੀ ਕੀਤਾ ਗਿਆ",
   "@linkCopied": {

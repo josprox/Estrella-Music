@@ -25,7 +25,7 @@ Los identificadores corresponden al `sourceId` del elemento musical en eMusic.
    `estrellamusic://share/{tipo}/{sourceId}` para instalaciones de escritorio
    y como respaldo móvil.
 5. Si la app no está instalada, la página cambia a la URL equivalente de
-   YouTube o YouTube Music según el tipo compartido.
+   un destino web compatible según el tipo compartido.
 
 La redirección del servidor no compite con Android App Links ni con iOS
 Universal Links: el sistema operativo decide si abre la app antes de solicitar
@@ -90,16 +90,16 @@ Start-Process "estrellamusic://share/artist/UC_example"
 
 El navegador sí hace las solicitudes desde la IP del visitante, pero eso no
 significa que pueda reutilizar de forma fiable el extractor nativo actual.
-YouTube puede bloquear por CORS las solicitudes de resolución o del CDN; un
+El upstream puede bloquear por CORS las solicitudes de resolución o del CDN; un
 service worker tampoco puede saltarse CORS. Además, las URLs de audio firmadas
-caducan y dependen de lógica interna de YouTube que puede cambiar.
+caducan y dependen de lógica interna del upstream que puede cambiar.
 
 Arquitectura recomendada:
 
 - EMusic conserva identificadores y metadata, no actúa como proxy del audio.
 - Android, iOS y escritorio mantienen el resolvedor local actual.
 - Flutter web usa un adaptador específico basado en el reproductor embebido
-  oficial de YouTube/IFrame. La reproducción y el tráfico salen del navegador
+  oficial del proveedor/IFrame. La reproducción y el tráfico salen del navegador
   del usuario.
 - La capa del player expone la misma interfaz (`play`, `pause`, `seek`,
   posición y estado), pero selecciona la implementación con `kIsWeb`.
@@ -107,5 +107,5 @@ Arquitectura recomendada:
 Si se exige un reproductor de audio completamente personalizado en web, la
 alternativa técnica sería resolver URLs en el cliente o servidor y reproducir
 el CDN directamente. No es una base estable: sigue expuesta a CORS, URLs
-expirables, cambios de firma y a las condiciones de uso de YouTube. Por eso el
+expirables, cambios de firma y a las condiciones de uso del proveedor. Por eso el
 IFrame es la opción segura para la primera versión web.
