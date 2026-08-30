@@ -81,14 +81,10 @@ class MusicServices {
         data: response,
       );
     } catch (error) {
-      if (attempt < 1) {
-        return await sendRequest(
-          action,
-          data,
-          additionalParams: additionalParams,
-          attempt: attempt + 1,
-        );
-      }
+      // Do not immediately duplicate an expensive catalog request. A 502 or
+      // timeout commonly means the upstream/server is already saturated; an
+      // automatic retry from every client amplifies that outage. UI retries
+      // remain explicit and provider-level caches serve successful responses.
       if (error is NetworkError) rethrow;
       throw NetworkError(message: '$error');
     }

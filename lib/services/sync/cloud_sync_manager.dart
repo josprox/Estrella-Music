@@ -125,15 +125,6 @@ class CloudSyncManager extends GetxService {
       );
     }
 
-    final isConnected = await _syncService.checkConnection();
-    if (!isConnected) {
-      _syncService.isOnline.value = false;
-      return SyncResult(
-        status: SyncStatus.offline,
-        message: S.current.syncOfflineRetry,
-      );
-    }
-
     if (_syncService.isSyncing.value) {
       return SyncResult(
         status: SyncStatus.alreadySyncing,

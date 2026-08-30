@@ -8,11 +8,13 @@ import 'package:estrella_music/music_provider/models/playback_source.dart';
 import 'package:estrella_music/music_provider/models/provider_capabilities.dart';
 import 'package:estrella_music/music_provider/models/provider_entities.dart';
 import 'package:estrella_music/profiles/profile_manager.dart';
+import 'package:estrella_music/services/storage/sqlite_store.dart';
 
 import 'music_provider.dart';
 import 'music_download_provider.dart';
 import 'music_discovery_provider.dart';
 import 'music_provider_manager.dart';
+import 'music_source_cache_control.dart';
 
 /// Provider-neutral application facade used by controllers and playback.
 class MusicCatalogService extends GetxService {
@@ -81,6 +83,9 @@ class MusicCatalogService extends GetxService {
   Future<PlaybackSource> resolvePlayback(MediaItem item) async {
     final identity = identityFromMediaItem(item);
     _assertActiveIdentity(identity);
+    final cacheKey = _sourceCacheKey(identity, 'stream');
+    final cached = await _readCachedSource(cacheKey);
+    if (cached != null) return cached;
     final track = ProviderTrack(
       identity: identity,
       title: item.title,
@@ -91,7 +96,9 @@ class MusicCatalogService extends GetxService {
       filePath: item.extras?['url']?.toString(),
       metadata: item.extras ?? const {},
     );
-    return provider.getPlayback(track);
+    final source = await provider.getPlayback(track);
+    await _writeCachedSource(cacheKey, source);
+    return source;
   }
 
   Future<PlaybackSource> resolveDownload(
@@ -100,6 +107,9 @@ class MusicCatalogService extends GetxService {
   }) async {
     final identity = identityFromMediaItem(item);
     _assertActiveIdentity(identity);
+    final cacheKey = _sourceCacheKey(identity, 'download|$format');
+    final cached = await _readCachedSource(cacheKey);
+    if (cached != null) return cached;
     final activeProvider = provider;
     if (activeProvider is! MusicDownloadProvider) {
       throw const MusicProviderException(
@@ -116,11 +126,127 @@ class MusicCatalogService extends GetxService {
       filePath: item.extras?['url']?.toString(),
       metadata: item.extras ?? const {},
     );
-    return (activeProvider as MusicDownloadProvider).getDownload(
+    final source = await (activeProvider as MusicDownloadProvider).getDownload(
       track,
       format: format,
     );
+    await _writeCachedSource(cacheKey, source);
+    return source;
   }
+
+  Future<void> invalidatePlayback(MediaItem item) async {
+    final identity = identityFromMediaItem(item);
+    _assertActiveIdentity(identity);
+    await _deleteCachedSource(_sourceCacheKey(identity, 'stream'));
+    final activeProvider = provider;
+    if (activeProvider is MusicSourceCacheControl) {
+      (activeProvider as MusicSourceCacheControl)
+          .invalidatePlaybackSource(identity);
+    }
+  }
+
+  Future<void> invalidateDownload(
+    MediaItem item, {
+    required String format,
+  }) async {
+    final identity = identityFromMediaItem(item);
+    _assertActiveIdentity(identity);
+    await _deleteCachedSource(
+      _sourceCacheKey(identity, 'download|$format'),
+    );
+    final activeProvider = provider;
+    if (activeProvider is MusicSourceCacheControl) {
+      (activeProvider as MusicSourceCacheControl)
+          .invalidateDownloadSource(identity, format: format);
+    }
+  }
+
+  String _sourceCacheKey(MusicIdentity identity, String purpose) =>
+      'provider-source-v1|${identity.namespacedId}|$purpose';
+
+  Future<PlaybackSource?> _readCachedSource(String key) async {
+    if (!SqliteStore.isInitialized || !SqliteStore.isBoxOpen('SongsUrlCache')) {
+      return null;
+    }
+    final box = SqliteStore.box<dynamic>('SongsUrlCache');
+    final raw = box.get(key);
+    if (raw is! List || raw.length < 2 || raw[1] is! Map) return null;
+    final data = Map<String, dynamic>.from(
+      (raw[1] as Map).map((key, value) => MapEntry('$key', value)),
+    );
+    final expiresAt = DateTime.tryParse(data['expiresAt']?.toString() ?? '');
+    if (expiresAt == null ||
+        !DateTime.now().add(const Duration(seconds: 45)).isBefore(expiresAt)) {
+      await box.delete(key);
+      return null;
+    }
+    final uri = Uri.tryParse(data['url']?.toString() ?? '');
+    if (uri == null || !uri.hasScheme) {
+      await box.delete(key);
+      return null;
+    }
+    final typeName = data['type']?.toString();
+    final type = PlaybackSourceType.values.firstWhere(
+      (value) => value.name == typeName,
+      orElse: () => PlaybackSourceType.authorizedStream,
+    );
+    final rawHeaders = data['headers'];
+    final headers = rawHeaders is Map
+        ? rawHeaders.map(
+            (key, value) => MapEntry(key.toString(), value.toString()),
+          )
+        : const <String, String>{};
+    return PlaybackSource(
+      type: type,
+      uri: uri,
+      headers: headers,
+      mimeType: data['mimeType']?.toString(),
+      expiresAt: expiresAt,
+      bitrate: _cachedInt(data['bitrate']),
+      contentLength: _cachedInt(data['contentLength']),
+      loudnessDb: _cachedDouble(data['loudnessDb']) ?? 0,
+    );
+  }
+
+  Future<void> _writeCachedSource(
+    String key,
+    PlaybackSource source,
+  ) async {
+    final expiresAt = source.expiresAt;
+    if (source.type != PlaybackSourceType.authorizedStream ||
+        expiresAt == null ||
+        !SqliteStore.isInitialized ||
+        !SqliteStore.isBoxOpen('SongsUrlCache')) {
+      return;
+    }
+    await SqliteStore.box<dynamic>('SongsUrlCache').put(key, [
+      true,
+      {
+        'type': source.type.name,
+        'url': source.uri.toString(),
+        'headers': source.headers,
+        'mimeType': source.mimeType,
+        'expiresAt': expiresAt.toUtc().toIso8601String(),
+        'bitrate': source.bitrate,
+        'contentLength': source.contentLength,
+        'loudnessDb': source.loudnessDb,
+      },
+    ]);
+  }
+
+  Future<void> _deleteCachedSource(String key) async {
+    if (!SqliteStore.isInitialized || !SqliteStore.isBoxOpen('SongsUrlCache')) {
+      return;
+    }
+    await SqliteStore.box<dynamic>('SongsUrlCache').delete(key);
+  }
+
+  int? _cachedInt(dynamic value) =>
+      value is num ? value.toInt() : int.tryParse(value?.toString() ?? '');
+
+  double? _cachedDouble(dynamic value) => value is num
+      ? value.toDouble()
+      : double.tryParse(value?.toString() ?? '');
 
   Future<ProviderLyrics?> lyricsFor(MediaItem item) async {
     if (!capabilities.lyrics) return null;

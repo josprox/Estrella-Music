@@ -57,18 +57,43 @@ void main() {
     expect(artwork?.uri.toString(), 'https://img.test/star.jpg');
 
     final source = await provider.getPlayback((await provider.getTrack('t1'))!);
+    final cachedSource =
+        await provider.getPlayback((await provider.getTrack('t1'))!);
     expect(source.type, PlaybackSourceType.authorizedStream);
     expect(source.uri.toString(), 'https://stream.test/t1.m4a');
+    expect(cachedSource.uri, source.uri);
     expect(source.headers['X-Playback'], 'authorized');
     expect(adapter.lastPlaybackRequest?['clientIp'], '203.0.113.8');
     expect(adapter.lastPlaybackRequest?['visitorData'], 'visitor-token');
     expect(adapter.lastPlaybackRequest?['poToken'], 'po-token');
     expect(adapter.lastProfileId, 'personal');
+    expect(adapter.libraryRequestCount, 1,
+        reason: 'all library entity reads share one snapshot');
+    expect(adapter.lastRecipeRequest?['clientIp'], '203.0.113.8');
+    expect(adapter.lastRecipeRequest?['visitorData'], 'visitor-token');
+    expect(adapter.lastRecipeRequest?['poToken'], 'po-token');
+    expect(adapter.playbackRequestCount, 1);
+    expect(adapter.recipeRequestCount, 1);
+  });
+
+  test('coalesces concurrent library reads into one server request', () async {
+    await Future.wait<dynamic>([
+      provider.getTracks(),
+      provider.getAlbums(),
+      provider.getArtists(),
+      provider.getTrack('t1'),
+    ]);
+
+    expect(adapter.libraryRequestCount, 1);
   });
 
   test('requests a dedicated authorized download source with the format',
       () async {
     final source = await provider.getDownload(
+      (await provider.getTrack('t1'))!,
+      format: 'opus',
+    );
+    await provider.getDownload(
       (await provider.getTrack('t1'))!,
       format: 'opus',
     );
@@ -78,6 +103,8 @@ void main() {
     expect(source.contentLength, 123456);
     expect(adapter.lastDownloadRequest?['format'], 'opus');
     expect(adapter.lastDownloadRequest?['visitorData'], 'visitor-token');
+    expect(adapter.downloadRequestCount, 1);
+    expect(adapter.recipeRequestCount, 1);
     expect(adapter.lastProfileId, 'personal');
   });
 
@@ -122,8 +149,7 @@ void main() {
       ),
       throwsA(isA<MusicProviderException>()),
     );
-    expect(() => provider.getTrack('missing'),
-        throwsA(isA<MusicProviderException>()));
+    expect(await provider.getTrack('missing'), isNull);
   });
 }
 
@@ -131,8 +157,13 @@ class _EMusicAdapter implements HttpClientAdapter {
   Map<String, dynamic>? lastPlaybackRequest;
   Map<String, dynamic>? lastCatalogRequest;
   Map<String, dynamic>? lastDownloadRequest;
+  Map<String, dynamic>? lastRecipeRequest;
   String? lastProfileId;
   int catalogRequestCount = 0;
+  int libraryRequestCount = 0;
+  int recipeRequestCount = 0;
+  int playbackRequestCount = 0;
+  int downloadRequestCount = 0;
 
   @override
   Future<ResponseBody> fetch(
@@ -194,30 +225,31 @@ class _EMusicAdapter implements HttpClientAdapter {
           'artists': [_artist],
         }
       };
-    } else if (path.endsWith('/tracks/t1')) {
+    } else if (path.endsWith('/library')) {
+      libraryRequestCount++;
       body = {
         'status': 'success',
-        'data': {'track': _track}
+        'data': {
+          'tracks': [_track],
+          'albums': [_album],
+          'artists': [_artist],
+          'playlists': [],
+        }
       };
-    } else if (path.endsWith('/tracks/missing')) {
-      status = 404;
-      body = {'status': 'error', 'message': 'Track not found'};
-    } else if (path.endsWith('/albums/a1')) {
+    } else if (path.endsWith('/resolve-recipe')) {
+      recipeRequestCount++;
+      lastRecipeRequest = Map<String, dynamic>.from(options.data as Map);
+      lastProfileId = options.headers['X-Music-Profile-Id']?.toString();
       body = {
         'status': 'success',
-        'data': {'album': _album}
-      };
-    } else if (path.endsWith('/artists/r1')) {
-      body = {
-        'status': 'success',
-        'data': {'artist': _artist}
-      };
-    } else if (path.endsWith('/artwork/t1')) {
-      body = {
-        'status': 'success',
-        'data': {'url': 'https://img.test/star.jpg'}
+        'data': {
+          'signatureTimestamp': 20684,
+          'visitorData': 'visitor-token',
+          'orchestration': {'recommendedClients': []},
+        }
       };
     } else if (path.endsWith('/playback')) {
+      playbackRequestCount++;
       lastPlaybackRequest = Map<String, dynamic>.from(options.data as Map);
       lastProfileId = options.headers['X-Music-Profile-Id']?.toString();
       body = {
@@ -230,6 +262,7 @@ class _EMusicAdapter implements HttpClientAdapter {
         }
       };
     } else if (path.endsWith('/download')) {
+      downloadRequestCount++;
       lastDownloadRequest = Map<String, dynamic>.from(options.data as Map);
       lastProfileId = options.headers['X-Music-Profile-Id']?.toString();
       body = {

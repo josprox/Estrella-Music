@@ -19,7 +19,6 @@ import 'package:estrella_music/services/auth/catalog_recovery_service.dart';
 import 'package:estrella_music/services/backup/cloud_backup_service.dart';
 import 'package:estrella_music/services/sync/legacy_music_migration_service.dart';
 import 'package:estrella_music/services/system/notification_service.dart';
-import 'package:estrella_music/services/system/fcm_notification_service.dart';
 import 'package:estrella_music/services/sync/pending_sync_queue_service.dart';
 import 'package:estrella_music/services/sync/music_sqlite_service.dart';
 import 'package:estrella_music/services/sync/sync_service.dart';
@@ -338,13 +337,15 @@ class LifecycleHandler extends WidgetsBindingObserver {
   void didChangeAppLifecycleState(AppLifecycleState state) async {
     if (state == AppLifecycleState.resumed) {
       SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
-      unawaited(NotificationService.syncMessages());
-      if (GetPlatform.isAndroid || GetPlatform.isIOS) {
-        unawaited(FcmNotificationService.registerCurrentToken());
-      }
+      unawaited(NotificationService.syncMessagesOnResume());
+      NotificationService.resumeDesktopPolling();
       if (Get.isRegistered<SyncService>()) {
         unawaited(Get.find<SyncService>().pullRemoteChanges());
       }
+    } else if (state == AppLifecycleState.inactive ||
+        state == AppLifecycleState.paused ||
+        state == AppLifecycleState.hidden) {
+      NotificationService.pauseDesktopPolling();
     } else if (state == AppLifecycleState.detached) {
       await Get.find<AudioHandler>().customAction("saveSession");
     }

@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
+import 'dart:math';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
@@ -10,6 +11,13 @@ class NotificationService {
   static const appId = 'estrella_music';
   static Timer? _desktopSyncTimer;
   static bool _syncing = false;
+  static bool _desktopPollingEnabled = false;
+  static bool _mobile = false;
+  static DateTime? _lastSyncAttempt;
+  static final Random _pollRandom = Random();
+  static const _minimumManualSyncInterval = Duration(minutes: 1);
+  static const _desktopPollBase = Duration(minutes: 10);
+  static const _desktopPollJitter = Duration(minutes: 10);
 
   static void Function(String title, String message, String type)?
       _onNotificationReceived;
@@ -30,17 +38,23 @@ class NotificationService {
   }
 
   static Future<void> initInboxSync({required bool mobile}) async {
-    await syncMessages();
+    _mobile = mobile;
+    await syncMessages(force: true);
     if (mobile) return;
-    _desktopSyncTimer?.cancel();
-    _desktopSyncTimer = Timer.periodic(
-      const Duration(seconds: 15),
-      (_) => syncMessages(),
-    );
+    _desktopPollingEnabled = true;
+    _scheduleDesktopSync();
   }
 
-  static Future<void> syncMessages() async {
+  static Future<void> syncMessages({bool force = false}) async {
     if (_syncing) return;
+    final now = DateTime.now();
+    final lastAttempt = _lastSyncAttempt;
+    if (!force &&
+        lastAttempt != null &&
+        now.difference(lastAttempt) < _minimumManualSyncInterval) {
+      return;
+    }
+    _lastSyncAttempt = now;
     _syncing = true;
     try {
       final token = await SafeSecureStorage.read('jwt_token');
@@ -69,6 +83,45 @@ class NotificationService {
     } finally {
       _syncing = false;
     }
+  }
+
+  static Future<void> syncMessagesOnResume() async {
+    final lastAttempt = _lastSyncAttempt;
+    final minimumInterval =
+        _mobile ? const Duration(hours: 6) : _minimumManualSyncInterval;
+    if (lastAttempt != null &&
+        DateTime.now().difference(lastAttempt) < minimumInterval) {
+      return;
+    }
+    await syncMessages(force: true);
+  }
+
+  static void _scheduleDesktopSync() {
+    _desktopSyncTimer?.cancel();
+    if (!_desktopPollingEnabled) return;
+    final jitter = _pollRandom.nextInt(
+      _desktopPollJitter.inSeconds + 1,
+    );
+    _desktopSyncTimer = Timer(
+      _desktopPollBase + Duration(seconds: jitter),
+      () async {
+        await syncMessages(force: true);
+        _scheduleDesktopSync();
+      },
+    );
+  }
+
+  static void pauseDesktopPolling() {
+    _desktopPollingEnabled = false;
+    _desktopSyncTimer?.cancel();
+    _desktopSyncTimer = null;
+  }
+
+  static void resumeDesktopPolling() {
+    if (_mobile) return;
+    if (_desktopPollingEnabled) return;
+    _desktopPollingEnabled = true;
+    _scheduleDesktopSync();
   }
 
   static void handleNativeNotification(Map<String, dynamic> data) {
@@ -141,6 +194,7 @@ class NotificationService {
   }
 
   static Future<void> disconnect() async {
+    _desktopPollingEnabled = false;
     _desktopSyncTimer?.cancel();
     _desktopSyncTimer = null;
   }

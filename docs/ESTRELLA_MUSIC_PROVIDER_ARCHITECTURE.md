@@ -135,6 +135,12 @@ no forma parte del contrato genérico ni llega a la UI.
 
 EMusic publica capabilities, search, tracks, albums, artists, artwork y
 playback. La biblioteca guardada se mantiene aislada por `Auth::id()`. El
+endpoint protegido `GET /api/music/provider/library` entrega tracks, albums,
+artists y playlists en un solo snapshot consistente. `EMusicProvider`
+coalesce las lecturas simultaneas y conserva ese snapshot brevemente por
+perfil; las vistas no deben volver a consultar endpoints separados durante el
+mismo arranque.
+
 catalogo de descubrimiento (Home, Quick Picks, sugerencias, busqueda,
 continuaciones, albums, artistas y contenido relacionado) usa el contrato
 opcional `MusicDiscoveryProvider`. `EMusicProvider` envia solamente las
@@ -142,9 +148,13 @@ operaciones permitidas `browse`, `search`, `next` y
 `music/get_search_suggestions` a `POST /api/music/provider/catalog`; Flutter
 da forma a la respuesta, pero no contacta directamente con el upstream.
 
-La resolucion final del stream llama a `OrchestratorService` en el servidor. El
-endpoint de playback acepta esos tres valores exclusivamente desde el provider
-autorizado y los entrega al orquestador eMusic.
+La receta de resolucion se obtiene de `OrchestratorService` y se reutiliza por
+una ventana corta. Las fuentes firmadas se cachean por perfil, track, formato y
+proposito hasta poco antes de su expiracion. Este cache es local, persiste entre
+reinicios en el namespace del perfil y nunca se sincroniza. Las solicitudes
+concurrentes para la misma fuente comparten un unico Future. El endpoint acepta
+`clientIp`, `visitorData` y `poToken` exclusivamente desde el provider
+autorizado.
 
 ## 6. Playback
 
@@ -159,7 +169,13 @@ MediaItem
 `PlaybackSource` distingue archivo local, stream autorizado, playback externo y
 embebido. `AudioHandler` conserva cache y descargas locales, pero no resuelve
 el upstream ni selecciona clientes. `Downloader` solo acepta un stream autorizado
-devuelto por el provider; un archivo local no se vuelve a descargar.
+devuelto por el provider; un archivo local no se vuelve a descargar. Los
+workers transfieren audio directamente desde la fuente firmada y comparten una
+sola consulta de receta al orquestador, por lo que la concurrencia no multiplica
+peticiones a eMusic. Un archivo incompleto se conserva como `.part` y el
+siguiente intento pide solamente el rango restante; si el origen ignora
+`Range`, se reinicia esa transferencia de forma controlada para evitar
+corrupcion.
 
 ## 7. Perfiles y persistencia
 
@@ -251,7 +267,7 @@ comunitario registrado, con credenciales propias y sin acceso a Joss Red.
 
 ## 12. API protegida de eMusic
 
-Las rutas `GET /api/music/provider/capabilities`, `search`, `tracks`, `albums`,
+Las rutas `GET /api/music/provider/capabilities`, `library`, `search`, `tracks`, `albums`,
 `artists`, `artwork/{id}`, `POST /api/music/provider/catalog` y
 `POST /api/music/provider/playback` viven dentro de `auth_api`. Las rutas
 antiguas del orquestador tambien quedaron protegidas. La app Flutter solo
@@ -261,3 +277,14 @@ visitor data y PoToken a los endpoints protegidos.
 EMusic es un repositorio Git anidado dentro del workspace Flutter. Sus cambios
 se validan y versionan en ese repositorio, no en el indice Git del repositorio
 raiz.
+
+## 13. Trafico y capacidad
+
+Sync usa WebSocket como senal de invalidacion y la outbox como disparador de
+escrituras; no hace polling HTTP cuando no existen cambios. Home,
+recomendaciones, biblioteca y fuentes firmadas tienen caches con scopes y TTL
+explicitos. Los reintentos usan backoff con jitter y nunca se duplica de forma
+inmediata una peticion de catalogo fallida.
+
+El analisis de carga, las cifras antes/despues y los requisitos operativos para
+10 000 usuarios estan documentados en `docs/EMUSIC_CAPACITY_10000.md`.

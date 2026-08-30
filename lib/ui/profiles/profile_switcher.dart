@@ -101,9 +101,9 @@ class ProfileSwitcher extends StatelessWidget {
     if (Get.isRegistered<HomeScreenController>()) {
       final homeCtrl = Get.find<HomeScreenController>();
       homeCtrl.isContentFetched.value = false;
-      await homeCtrl.loadContent();
+      await homeCtrl.loadContent(forceRefresh: true);
       await homeCtrl.loadLocalCustomSections();
-      unawaited(homeCtrl.reloadRecommendations());
+      unawaited(homeCtrl.reloadRecommendations(force: true));
     }
     if (Get.isRegistered<LibrarySongsController>()) {
       await Get.find<LibrarySongsController>().refreshCollections();

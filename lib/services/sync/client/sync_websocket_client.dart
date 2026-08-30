@@ -1,13 +1,14 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
+import 'dart:math';
 
 import 'package:estrella_music/utils/helpers/helper.dart';
 
 class SyncWebSocketClient {
   static const _authenticationTimeout = Duration(seconds: 15);
   static const _pushTimeout = Duration(seconds: 30);
-  static const _pingInterval = Duration(seconds: 30);
+  static const _pingInterval = Duration(seconds: 45);
 
   Completer<bool>? _pushCompleter;
   Map<String, int>? _expectedPushCounts;
@@ -23,6 +24,7 @@ class SyncWebSocketClient {
   bool _connecting = false;
   int _connectionGeneration = 0;
   int _reconnectDelaySeconds = 5;
+  final Random _reconnectRandom = Random();
   String? _activeUrl;
   String? _activeToken;
   String? _desiredUrl;
@@ -30,8 +32,10 @@ class SyncWebSocketClient {
 
   final String deviceId;
   final _onSyncUpdateController = StreamController<void>.broadcast();
+  final _onAuthenticatedController = StreamController<void>.broadcast();
 
   Stream<void> get onSyncUpdate => _onSyncUpdateController.stream;
+  Stream<void> get onAuthenticated => _onAuthenticatedController.stream;
   bool get isConnected => _socket?.readyState == WebSocket.open;
   bool get isAuthenticated => isConnected && _isSocketAuthenticated;
 
@@ -135,7 +139,9 @@ class SyncWebSocketClient {
     if (wsUrl == null || token == null || token.isEmpty) return;
 
     _reconnectTimer?.cancel();
-    final delay = _reconnectDelaySeconds;
+    final baseDelay = _reconnectDelaySeconds;
+    final jitterWindow = min(baseDelay * 5, 300);
+    final delay = baseDelay + _reconnectRandom.nextInt(jitterWindow + 1);
     printINFO(
       'SyncWebSocketClient: Scheduling reconnect in $delay seconds...',
     );
@@ -235,6 +241,7 @@ class SyncWebSocketClient {
           _isSocketAuthenticated = true;
           _reconnectDelaySeconds = 5;
           printINFO('SyncWebSocketClient: WS Authenticated successfully.');
+          _onAuthenticatedController.add(null);
           break;
         case 'auth_failed':
           _isSocketAuthenticated = false;
@@ -317,5 +324,6 @@ class SyncWebSocketClient {
     _disposed = true;
     disconnect();
     _onSyncUpdateController.close();
+    _onAuthenticatedController.close();
   }
 }

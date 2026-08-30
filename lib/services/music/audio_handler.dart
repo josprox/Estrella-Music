@@ -981,8 +981,11 @@ class MyAudioHandler extends BaseAudioHandler with GetxServiceMixin {
     final item =
         providerTrack ?? MediaItem(id: songId, title: songId, extras: const {});
     try {
-      final source =
-          await Get.find<MusicCatalogService>().resolvePlayback(item);
+      final catalog = Get.find<MusicCatalogService>();
+      if (generateNewUrl) {
+        await catalog.invalidatePlayback(item);
+      }
+      final source = await catalog.resolvePlayback(item);
       final audio = _audioFromPlaybackSource(source);
       streamInfo = HMStreamingData(
         playable: true,

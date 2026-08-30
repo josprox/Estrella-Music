@@ -203,7 +203,7 @@ class Body extends StatelessWidget {
                             : [const HomeShimmer()];
 
                         return RefreshIndicator(
-                          onRefresh: () => homeScreenController.loadContent(),
+                          onRefresh: homeScreenController.refreshContent,
                           child: CustomScrollView(
                             physics: const AlwaysScrollableScrollPhysics(
                               parent: BouncingScrollPhysics(),

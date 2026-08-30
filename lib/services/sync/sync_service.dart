@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'dart:async';
 import 'dart:convert';
+import 'dart:math';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
@@ -41,7 +42,8 @@ class SyncService extends GetxService {
   final isOnline = true.obs;
   final lastStatusMessage = S.current.syncLocalModeActive.obs;
   Timer? _debounce;
-  Timer? _retryTimer;
+  final Random _retryRandom = Random();
+  DateTime? _lastResumeRefreshAttempt;
   bool _isApplyingRemoteChanges = false;
   int _localMutationRevision = 0;
   int _pushRetryAttempt = 0;
@@ -49,6 +51,7 @@ class SyncService extends GetxService {
   int _activeLocalMutations = 0;
   Completer<void>? _pullCompletion;
   bool _authoritativeUploadInProgress = false;
+  bool _startupSynchronizationPending = true;
   bool _fullPullRequested = false;
   List<String> _authoritativeOutboxIds = const [];
   List<String> _authoritativeQueueIds = const [];
@@ -72,20 +75,6 @@ class SyncService extends GetxService {
   @override
   void onInit() {
     super.onInit();
-    _retryTimer = Timer.periodic(const Duration(minutes: 2), (_) async {
-      if (_authoritativeUploadInProgress) return;
-      if (!isCloudMode || !_authService.isAuthenticated.value) return;
-      final online = await checkConnection();
-      if (!online) return;
-
-      final hasPending = SqliteStore.box('AppPrefs').get(_pendingKey) == true;
-      if (hasPending) {
-        final success = await push();
-        if (success) await pull();
-      } else {
-        await pull();
-      }
-    });
     _setupLocalMutationWatchers();
     _profileWorker = ever<MusicProfile?>(
       Get.find<ProfileManager>().activeProfile,
@@ -107,23 +96,24 @@ class SyncService extends GetxService {
   }
 
   Future<void> _syncOnStartup() async {
-    // Wait a brief moment to let other services initialize (e.g. HttpClient, AuthService)
-    await Future.delayed(const Duration(milliseconds: 500));
-    if (_authoritativeUploadInProgress ||
-        !isCloudMode ||
-        !_authService.isAuthenticated.value) {
-      return;
-    }
+    try {
+      // Wait a brief moment to let other services initialize (e.g. HttpClient, AuthService)
+      await Future.delayed(const Duration(milliseconds: 500));
+      if (_authoritativeUploadInProgress ||
+          !isCloudMode ||
+          !_authService.isAuthenticated.value) {
+        return;
+      }
 
-    final online = await checkConnection();
-    if (!online) return;
-
-    final hasPending = SqliteStore.box('AppPrefs').get(_pendingKey) == true;
-    if (hasPending) {
-      final success = await push();
-      if (success) await pull();
-    } else {
-      await pull();
+      final hasPending = _hasPendingLocalChanges;
+      if (hasPending) {
+        final success = await push();
+        if (success) await pull();
+      } else {
+        await pull();
+      }
+    } finally {
+      _startupSynchronizationPending = false;
     }
   }
 
@@ -224,11 +214,32 @@ class SyncService extends GetxService {
     return key?.toString();
   }
 
-  Future<void> pullRemoteChanges() async {
+  /// Refreshes after a meaningful foreground transition.
+  ///
+  /// The WebSocket is the normal remote-change signal. This fallback pull is
+  /// deliberately throttled so repeatedly opening the notification shade or
+  /// switching apps cannot turn into an HTTP polling loop.
+  Future<void> pullRemoteChanges({bool force = false}) async {
     if (!isCloudMode || !_authService.isAuthenticated.value) return;
     if (isSyncing.value) return;
-    final online = await checkConnection();
-    if (!online) return;
+    unawaited(connectSocket());
+    if (_hasPendingLocalChanges) {
+      _schedulePush(delay: Duration.zero);
+      return;
+    }
+
+    final now = DateTime.now();
+    final lastAttempt = _lastResumeRefreshAttempt;
+    final lastSuccessful = DateTime.tryParse(
+      SqliteStore.box('AppPrefs').get(_lastSyncKey)?.toString() ?? '',
+    );
+    final recentlyAttempted = lastAttempt != null &&
+        now.difference(lastAttempt) < const Duration(minutes: 15);
+    final recentlySynchronized = lastSuccessful != null &&
+        now.difference(lastSuccessful) < const Duration(minutes: 15);
+    if (!force && (recentlyAttempted || recentlySynchronized)) return;
+
+    _lastResumeRefreshAttempt = now;
     await pull();
   }
 
@@ -236,7 +247,6 @@ class SyncService extends GetxService {
   void onClose() {
     disconnectSocket();
     _wsClient?.dispose();
-    _retryTimer?.cancel();
     _debounce?.cancel();
     _profileWorker?.dispose();
     for (final subscription in _profileBoxSubscriptions) {
@@ -453,17 +463,19 @@ class SyncService extends GetxService {
     if (_authoritativeUploadInProgress) return;
     _debounce?.cancel();
     _debounce = Timer(delay, () {
-      unawaited(push());
+      if (_hasPendingLocalChanges) unawaited(push());
     });
   }
 
   Duration _nextPushRetryDelay() {
-    const retrySeconds = [5, 10, 20, 40, 80, 160, 300];
+    const retrySeconds = [10, 30, 60, 120, 240, 480, 900];
     final index = _pushRetryAttempt < retrySeconds.length
         ? _pushRetryAttempt
         : retrySeconds.length - 1;
     _pushRetryAttempt++;
-    return Duration(seconds: retrySeconds[index]);
+    final base = retrySeconds[index];
+    final jitterWindow = min(base, 120);
+    return Duration(seconds: base + _retryRandom.nextInt(jitterWindow + 1));
   }
 
   Future<bool> checkConnection() async {
@@ -484,6 +496,7 @@ class SyncService extends GetxService {
     if (!isCloudMode || !_authService.isAuthenticated.value) {
       return true;
     }
+    if (!_hasPendingLocalChanges) return true;
     if (_hasPendingLocalChanges) {
       printINFO(
           'SyncService: Pull skipped because there are pending local changes to push.');
@@ -513,6 +526,7 @@ class SyncService extends GetxService {
         lastStatusMessage.value = S.current.syncDownloadFailed;
         return false;
       }
+      isOnline.value = true;
 
       // Never apply a remote snapshot over a mutation made while the request
       // was in flight. The pending push will run after this pull releases the
@@ -607,44 +621,56 @@ class SyncService extends GetxService {
 
   Future<bool> _pullIncremental(String token) async {
     final accountKey = _accountKey;
-    final sinceVersion = _musicDatabase.lastServerVersion(accountKey);
-    final response = await _httpClient.pullChanges(
-      _normalizedBaseUrl(),
-      token,
-      sinceVersion,
-    );
-    final rawChanges = response['changes'];
-    final changes = rawChanges is List
-        ? rawChanges
-            .whereType<Map>()
-            .map((change) => Map<String, dynamic>.from(change))
-            .toList()
-        : <Map<String, dynamic>>[];
-    final serverVersion = _asInt(response['server_version']);
-
-    if (changes.any(
-        (change) => change['entity_type']?.toString() == 'library_reset')) {
-      await _discardPendingChangesSupersededByReset(serverVersion);
-      await _musicDatabase.markBootstrapIncomplete(accountKey);
-      _fullPullRequested = true;
-      lastStatusMessage.value = S.current.syncDownloading;
-      return false;
-    }
-
+    var cursor = _musicDatabase.lastServerVersion(accountKey);
+    var appliedCount = 0;
     _isApplyingRemoteChanges = true;
     try {
-      await _musicDatabase.applyRemoteChanges(accountKey, changes);
-      await _applyIncrementalChangesToLocalStore(changes);
-      await _musicDatabase.markBootstrapComplete(accountKey, serverVersion);
+      while (true) {
+        final response = await _httpClient.pullChanges(
+          _normalizedBaseUrl(),
+          token,
+          cursor,
+        );
+        isOnline.value = true;
+        final rawChanges = response['changes'];
+        final changes = rawChanges is List
+            ? rawChanges
+                .whereType<Map>()
+                .map((change) => Map<String, dynamic>.from(change))
+                .toList()
+            : <Map<String, dynamic>>[];
+        final serverVersion = _asInt(response['server_version']);
+
+        if (changes.any(
+            (change) => change['entity_type']?.toString() == 'library_reset')) {
+          await _discardPendingChangesSupersededByReset(serverVersion);
+          await _musicDatabase.markBootstrapIncomplete(accountKey);
+          _fullPullRequested = true;
+          lastStatusMessage.value = S.current.syncDownloading;
+          return false;
+        }
+
+        await _musicDatabase.applyRemoteChanges(accountKey, changes);
+        await _applyIncrementalChangesToLocalStore(changes);
+        await _musicDatabase.markBootstrapComplete(accountKey, serverVersion);
+        appliedCount += changes.length;
+
+        final hasMore = response['has_more'] == true;
+        if (!hasMore) break;
+        if (serverVersion <= cursor) {
+          throw StateError('Incremental sync cursor did not advance');
+        }
+        cursor = serverVersion;
+      }
       await SqliteStore.box('AppPrefs')
           .put(_lastSyncKey, DateTime.now().toIso8601String());
     } finally {
       _isApplyingRemoteChanges = false;
     }
     _refreshLibraryControllers();
-    lastStatusMessage.value = changes.isEmpty
+    lastStatusMessage.value = appliedCount == 0
         ? S.current.syncLibraryUpToDate
-        : S.current.syncChangesSynced(changes.length);
+        : S.current.syncChangesSynced(appliedCount);
     return true;
   }
 
@@ -866,6 +892,7 @@ class SyncService extends GetxService {
         final success = await _wsClient!.sendPushPayload(payload);
         if (success) {
           pushSucceeded = true;
+          isOnline.value = true;
           _pushRetryAttempt = 0;
           await _acknowledgePush(capturedPendingIds, capturedRevision);
           await SqliteStore.box('AppPrefs')
@@ -886,6 +913,7 @@ class SyncService extends GetxService {
 
       if (success) {
         pushSucceeded = true;
+        isOnline.value = true;
         _pushRetryAttempt = 0;
         await _acknowledgePush(capturedPendingIds, capturedRevision);
         await SqliteStore.box('AppPrefs')
@@ -1175,6 +1203,9 @@ class SyncService extends GetxService {
             "SyncService: WS received sync_update, pulling remote changes...");
         unawaited(_handleRemoteSyncUpdate());
       });
+      _wsClient!.onAuthenticated.listen((_) {
+        unawaited(_synchronizeAfterSocketRecovery());
+      });
     }
 
     final token = await _authService.getAccessToken();
@@ -1186,6 +1217,20 @@ class SyncService extends GetxService {
   void disconnectSocket() {
     _wsClient?.disconnect();
     printINFO("SyncService: WS Disconnected.");
+  }
+
+  Future<void> _synchronizeAfterSocketRecovery() async {
+    if (_startupSynchronizationPending ||
+        _authoritativeUploadInProgress ||
+        isSyncing.value ||
+        !isCloudMode) {
+      return;
+    }
+    if (_hasPendingLocalChanges) {
+      _schedulePush(delay: Duration.zero);
+      return;
+    }
+    await pull();
   }
 
   Future<String> _ensureDeviceId() async {

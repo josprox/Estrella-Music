@@ -20,6 +20,8 @@ import '/ui/widgets/new_version_dialog.dart';
 
 class HomeScreenController extends GetxController {
   static const supportedStartupTabs = {0, 1, 3, 4, 5};
+  static const _homeCacheTtl = Duration(minutes: 30);
+  static const _recommendationsCacheTtl = Duration(minutes: 30);
 
   static int _initialTabIndex() {
     final saved = SqliteStore.box('AppPrefs').get('startupTabIndex');
@@ -54,6 +56,7 @@ class HomeScreenController extends GetxController {
   Timer? _localSectionsRefreshDebounce;
   Timer? _recommendationsDelay;
   Future<void>? _activeContentLoad;
+  Future<void>? _activeRecommendationsLoad;
 
   @override
   onInit() {
@@ -62,11 +65,29 @@ class HomeScreenController extends GetxController {
     _initAndLoad();
   }
 
-  Future<void> reloadRecommendations() async {
+  Future<void> reloadRecommendations({bool force = false}) {
+    final activeLoad = _activeRecommendationsLoad;
+    if (activeLoad != null) return activeLoad;
+    final operation = _reloadRecommendations(force: force);
+    _activeRecommendationsLoad = operation;
+    return operation.whenComplete(() {
+      if (identical(_activeRecommendationsLoad, operation)) {
+        _activeRecommendationsLoad = null;
+      }
+    });
+  }
+
+  Future<void> _reloadRecommendations({required bool force}) async {
+    if (!force &&
+        _hasRestoredRecommendations &&
+        _isCacheFresh('homeRecommendationsTime', _recommendationsCacheTtl)) {
+      return;
+    }
     await _loadDailyDiscover();
     await _loadCommunityPlaylists();
     await _loadKeepListening();
     await _loadSimilarRecommendations();
+    await _cacheRecommendations();
   }
 
   Future<void> _initAndLoad() async {
@@ -397,11 +418,11 @@ class HomeScreenController extends GetxController {
     }
   }
 
-  Future<void> loadContent() {
+  Future<void> loadContent({bool forceRefresh = false}) {
     final activeLoad = _activeContentLoad;
     if (activeLoad != null) return activeLoad;
 
-    final operation = _loadContent();
+    final operation = _loadContent(forceRefresh: forceRefresh);
     _activeContentLoad = operation;
     return operation.whenComplete(() {
       if (identical(_activeContentLoad, operation)) {
@@ -410,9 +431,19 @@ class HomeScreenController extends GetxController {
     });
   }
 
-  Future<void> _loadContent() async {
+  Future<void> refreshContent() async {
+    await loadContent(forceRefresh: true);
+    await reloadRecommendations(force: true);
+  }
+
+  Future<void> _loadContent({required bool forceRefresh}) async {
     final loadedFromCache = await loadContentFromDb();
     await loadLocalCustomSections();
+    if (!forceRefresh &&
+        loadedFromCache &&
+        _isCacheFresh('homeScreenDataTime', _homeCacheTtl)) {
+      return;
+    }
     await loadContentFromNetwork(silent: loadedFromCache);
   }
 
@@ -440,12 +471,63 @@ class HomeScreenController extends GetxController {
         if (e["type"] == "Artist Content") return ArtistContent.fromJson(e);
         return PlaylistContent.fromJson(e);
       }).toList();
+      _restoreRecommendations(homeScreenData.get('recommendations'));
       isContentFetched.value = true;
       printINFO("Loaded from offline db");
       return true;
     } else {
       return false;
     }
+  }
+
+  bool get _hasRestoredRecommendations =>
+      dailyDiscover.value != null ||
+      communityPlaylists.value != null ||
+      keepListening.value != null ||
+      similarRecommendations.value != null;
+
+  bool _isCacheFresh(String key, Duration ttl) {
+    final raw = SqliteStore.box('AppPrefs').get(key);
+    final timestamp = raw is int ? raw : int.tryParse('$raw');
+    if (timestamp == null) return false;
+    return DateTime.now().millisecondsSinceEpoch - timestamp <
+        ttl.inMilliseconds;
+  }
+
+  void _restoreRecommendations(dynamic raw) {
+    if (raw is! Map) return;
+    QuickPicks? decode(dynamic value) {
+      if (value is! Map) return null;
+      try {
+        return QuickPicks.fromJson(value);
+      } catch (_) {
+        return null;
+      }
+    }
+
+    dailyDiscover.value = decode(raw['dailyDiscover']);
+    communityPlaylists.value = decode(raw['communityPlaylists']);
+    keepListening.value = decode(raw['keepListening']);
+    similarRecommendations.value = decode(raw['similarRecommendations']);
+  }
+
+  Future<void> _cacheRecommendations() async {
+    if (!_hasRestoredRecommendations) return;
+    final box = await SqliteStore.openBox('homeScreenData');
+    await box.put('recommendations', {
+      if (dailyDiscover.value != null)
+        'dailyDiscover': dailyDiscover.value!.toJson(),
+      if (communityPlaylists.value != null)
+        'communityPlaylists': communityPlaylists.value!.toJson(),
+      if (keepListening.value != null)
+        'keepListening': keepListening.value!.toJson(),
+      if (similarRecommendations.value != null)
+        'similarRecommendations': similarRecommendations.value!.toJson(),
+    });
+    await SqliteStore.box('AppPrefs').put(
+      'homeRecommendationsTime',
+      DateTime.now().millisecondsSinceEpoch,
+    );
   }
 
   Future<void> loadContentFromNetwork({bool silent = false}) async {

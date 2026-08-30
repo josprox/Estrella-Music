@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 import 'dart:typed_data';
 
@@ -10,6 +11,7 @@ import '../models/provider_entities.dart';
 import '../music_provider.dart';
 import '../music_download_provider.dart';
 import '../music_discovery_provider.dart';
+import '../music_source_cache_control.dart';
 import 'package:estrella_music/utils/helpers/helper.dart';
 import 'package:estrella_music/services/music/music_service.dart';
 
@@ -37,7 +39,11 @@ class EMusicPlaybackContext {
 }
 
 class EMusicProvider
-    implements MusicProvider, MusicDiscoveryProvider, MusicDownloadProvider {
+    implements
+        MusicProvider,
+        MusicDiscoveryProvider,
+        MusicDownloadProvider,
+        MusicSourceCacheControl {
   EMusicProvider({
     required String Function() baseUrl,
     required ProviderTokenLoader tokenLoader,
@@ -59,8 +65,18 @@ class EMusicProvider
   MusicServices? _catalog;
   final Map<String, _CatalogCacheEntry> _catalogCache = {};
   final Map<String, Future<Map<String, dynamic>>> _catalogInFlight = {};
+  _EMusicLibrarySnapshot? _libraryCache;
+  DateTime? _libraryCachedAt;
+  Future<_EMusicLibrarySnapshot>? _libraryInFlight;
+  _RecipeCacheEntry? _recipeCache;
+  Future<Map<String, dynamic>>? _recipeInFlight;
+  final Map<String, _PlaybackSourceCacheEntry> _sourceCache = {};
+  final Map<String, Future<PlaybackSource>> _sourceInFlight = {};
+  Future<void> _serverResolutionTail = Future.value();
 
   static const _catalogCacheLimit = 64;
+  static const _libraryCacheTtl = Duration(minutes: 2);
+  static const _recipeCacheTtl = Duration(minutes: 15);
 
   @override
   String get id => providerId;
@@ -107,7 +123,11 @@ class EMusicProvider
   }
 
   @override
-  Future<void> refresh() async {}
+  Future<void> refresh() async {
+    _libraryCache = null;
+    _libraryCachedAt = null;
+    _catalogCache.clear();
+  }
 
   MusicServices get _discovery {
     final value = _catalog;
@@ -292,72 +312,141 @@ class EMusicProvider
   @override
   Future<List<ProviderTrack>> getTracks() async {
     _requireCapability(_capabilities.tracks, 'tracks');
-    final data = await _request('GET', 'tracks');
-    return _list(data['tracks'] ?? data['data'])
-        .map(_track)
-        .toList(growable: false);
+    return (await _loadLibrarySnapshot()).tracks;
   }
 
   @override
   Future<ProviderTrack?> getTrack(String sourceId) async {
     _requireCapability(_capabilities.tracks, 'tracks');
-    final data =
-        await _request('GET', 'tracks/${Uri.encodeComponent(sourceId)}');
-    final value = _map(data['track'] ?? data['data']);
-    return value.isEmpty ? null : _track(value);
+    return _findBySourceId(
+      (await _loadLibrarySnapshot()).tracks,
+      sourceId,
+      (track) => track.identity,
+    );
+  }
+
+  Future<_EMusicLibrarySnapshot> _loadLibrarySnapshot() async {
+    final cached = _libraryCache;
+    final cachedAt = _libraryCachedAt;
+    if (cached != null &&
+        cachedAt != null &&
+        DateTime.now().difference(cachedAt) < _libraryCacheTtl) {
+      return cached;
+    }
+
+    final current = _libraryInFlight;
+    if (current != null) return current;
+
+    final request = _fetchLibrarySnapshot();
+    _libraryInFlight = request;
+    try {
+      final snapshot = await request;
+      _libraryCache = snapshot;
+      _libraryCachedAt = DateTime.now();
+      return snapshot;
+    } finally {
+      _libraryInFlight = null;
+    }
+  }
+
+  Future<_EMusicLibrarySnapshot> _fetchLibrarySnapshot() async {
+    Map<String, dynamic> data;
+    try {
+      data = await _request('GET', 'library');
+    } on MusicProviderException catch (error) {
+      if (!error.message.contains('(404)')) rethrow;
+      // Compatibility during a staggered deployment. Requests are sequential
+      // and still sit behind this method's single in-flight Future.
+      final tracks = await _request('GET', 'tracks');
+      final albums = await _request('GET', 'albums');
+      final artists = await _request('GET', 'artists');
+      data = {
+        'tracks': tracks['tracks'] ?? tracks['data'],
+        'albums': albums['albums'] ?? albums['data'],
+        'artists': artists['artists'] ?? artists['data'],
+      };
+    }
+    return _EMusicLibrarySnapshot(
+      tracks: List.unmodifiable(_list(data['tracks']).map(_track)),
+      albums: List.unmodifiable(_list(data['albums']).map(_album)),
+      artists: List.unmodifiable(_list(data['artists']).map(_artist)),
+    );
+  }
+
+  T? _findBySourceId<T>(
+    Iterable<T> values,
+    String sourceId,
+    MusicIdentity Function(T value) identityOf,
+  ) {
+    for (final value in values) {
+      if (identityOf(value).sourceId == sourceId) return value;
+    }
+    return null;
   }
 
   @override
   Future<List<ProviderAlbum>> getAlbums() async {
     _requireCapability(_capabilities.albums, 'albums');
-    final data = await _request('GET', 'albums');
-    return _list(data['albums'] ?? data['data'])
-        .map(_album)
-        .toList(growable: false);
+    return (await _loadLibrarySnapshot()).albums;
   }
 
   @override
   Future<ProviderAlbum?> getAlbum(String sourceId) async {
     _requireCapability(_capabilities.albums, 'albums');
-    final data =
-        await _request('GET', 'albums/${Uri.encodeComponent(sourceId)}');
-    final value = _map(data['album'] ?? data['data']);
-    return value.isEmpty ? null : _album(value);
+    return _findBySourceId(
+      (await _loadLibrarySnapshot()).albums,
+      sourceId,
+      (album) => album.identity,
+    );
   }
 
   @override
   Future<List<ProviderArtist>> getArtists() async {
     _requireCapability(_capabilities.artists, 'artists');
-    final data = await _request('GET', 'artists');
-    return _list(data['artists'] ?? data['data'])
-        .map(_artist)
-        .toList(growable: false);
+    return (await _loadLibrarySnapshot()).artists;
   }
 
   @override
   Future<ProviderArtist?> getArtist(String sourceId) async {
     _requireCapability(_capabilities.artists, 'artists');
-    final data =
-        await _request('GET', 'artists/${Uri.encodeComponent(sourceId)}');
-    final value = _map(data['artist'] ?? data['data']);
-    return value.isEmpty ? null : _artist(value);
+    return _findBySourceId(
+      (await _loadLibrarySnapshot()).artists,
+      sourceId,
+      (artist) => artist.identity,
+    );
   }
 
   @override
   Future<ProviderArtwork?> getArtwork(MusicIdentity identity) async {
     _requireCapability(_capabilities.artwork, 'artwork');
-    final data = await _request(
-      'GET',
-      'artwork/${Uri.encodeComponent(identity.sourceId)}',
+    final library = await _loadLibrarySnapshot();
+    final track = _findBySourceId(
+      library.tracks,
+      identity.sourceId,
+      (item) => item.identity,
     );
-    final url = data['url']?.toString();
-    final encoded = data['bytes']?.toString();
+    final album = _findBySourceId(
+      library.albums,
+      identity.sourceId,
+      (item) => item.identity,
+    );
+    final artist = _findBySourceId(
+      library.artists,
+      identity.sourceId,
+      (item) => item.identity,
+    );
+    final url = (track?.artworkUri ?? album?.artworkUri ?? artist?.artworkUri)
+        ?.toString();
+    final encoded = track?.metadata['artworkBytes']?.toString();
+    if ((url == null || url.isEmpty) && (encoded == null || encoded.isEmpty)) {
+      return null;
+    }
     return ProviderArtwork(
       uri: url == null || url.isEmpty ? null : Uri.tryParse(url),
       bytes: encoded == null || encoded.isEmpty
           ? null
           : Uint8List.fromList(base64Decode(encoded)),
-      mimeType: data['mimeType']?.toString(),
+      mimeType: null,
     );
   }
 
@@ -374,8 +463,91 @@ class EMusicProvider
     );
   }
 
+  Future<Map<String, dynamic>> _loadResolveRecipe(
+    String videoId,
+    EMusicPlaybackContext playbackContext,
+  ) async {
+    final cached = _recipeCache;
+    if (cached != null && !cached.isExpired) return cached.copy();
+
+    final current = _recipeInFlight;
+    if (current != null) return current;
+
+    final request = _request(
+      'POST',
+      'orchestrator/resolve-recipe',
+      body: {
+        'videoId': videoId,
+        ...playbackContext.toJson(),
+      },
+    );
+    _recipeInFlight = request;
+    try {
+      final result = await request;
+      _recipeCache = _RecipeCacheEntry(result);
+      return _RecipeCacheEntry.copyOf(result);
+    } finally {
+      _recipeInFlight = null;
+    }
+  }
+
+  Future<PlaybackSource> _loadPlaybackSource(
+    String key,
+    Future<PlaybackSource> Function() loader,
+  ) async {
+    final namespacedKey = '$_requireProfileId|$key';
+    final cached = _sourceCache[namespacedKey];
+    if (cached != null && cached.isUsable) return cached.source;
+    if (cached != null) _sourceCache.remove(namespacedKey);
+
+    final current = _sourceInFlight[namespacedKey];
+    if (current != null) return current;
+
+    final request = loader();
+    _sourceInFlight[namespacedKey] = request;
+    try {
+      final source = await request;
+      _sourceCache[namespacedKey] = _PlaybackSourceCacheEntry(source);
+      return source;
+    } finally {
+      _sourceInFlight.remove(namespacedKey);
+    }
+  }
+
+  DateTime? _expiryFromUri(Uri uri) {
+    final raw = uri.queryParameters['expire'] ??
+        uri.queryParameters['expires'] ??
+        uri.queryParameters['expiry'];
+    if (raw == null || raw.isEmpty) return null;
+    final unix = int.tryParse(raw);
+    if (unix != null) {
+      final milliseconds = unix > 9999999999 ? unix : unix * 1000;
+      return DateTime.fromMillisecondsSinceEpoch(milliseconds);
+    }
+    return DateTime.tryParse(raw);
+  }
+
+  Future<T> _serializeServerResolution<T>(Future<T> Function() loader) async {
+    final previous = _serverResolutionTail;
+    final release = Completer<void>();
+    _serverResolutionTail = release.future;
+    await previous;
+    try {
+      return await loader();
+    } finally {
+      release.complete();
+    }
+  }
+
   @override
   Future<PlaybackSource> getPlayback(ProviderTrack track) async {
+    return _loadPlaybackSource(
+      'stream|${track.identity.sourceId}',
+      () => _resolvePlayback(track),
+    );
+  }
+
+  Future<PlaybackSource> _resolvePlayback(ProviderTrack track) async {
     _requireCapability(_capabilities.playback, 'playback');
     final playbackContext =
         await _playbackContextLoader?.call() ?? const EMusicPlaybackContext();
@@ -390,15 +562,12 @@ class EMusicProvider
     String? visitorData = playbackContext.visitorData;
 
     try {
-      final recipeData = await _request(
-        'POST',
-        'orchestrator/resolve-recipe',
-        body: {'videoId': videoId},
-      );
+      final recipeData = await _loadResolveRecipe(videoId, playbackContext);
       final orchestration = _map(recipeData['orchestration']);
       recommendedClients = _list(orchestration['recommendedClients']);
       sts = _int(recipeData['signatureTimestamp']) ?? 20684;
-      if (recipeData['visitorData'] != null) {
+      if ((visitorData == null || visitorData.isEmpty) &&
+          recipeData['visitorData'] != null) {
         visitorData = recipeData['visitorData'].toString();
       }
       printINFO(
@@ -429,6 +598,11 @@ class EMusicProvider
       final payload = <String, dynamic>{
         'context': {'client': clientObj},
         'videoId': videoId,
+        if (playbackContext.poToken != null &&
+            playbackContext.poToken!.isNotEmpty)
+          'serviceIntegrityDimensions': {
+            'poToken': playbackContext.poToken,
+          },
         if (useSts)
           'playbackContext': {
             'contentPlaybackContext': {
@@ -445,6 +619,10 @@ class EMusicProvider
 
       if (useVisitor && visitorData != null && visitorData.isNotEmpty) {
         reqHeaders['X-Goog-Visitor-Id'] = visitorData;
+      }
+      if (playbackContext.poToken != null &&
+          playbackContext.poToken!.isNotEmpty) {
+        reqHeaders['X-YouTube-Po-Token'] = playbackContext.poToken!;
       }
 
       final playHeaders =
@@ -480,14 +658,16 @@ class EMusicProvider
             final url = best['url'].toString();
             printINFO(
                 '[EMusicProvider] Successfully resolved stream with $clientName. Bitrate: ${best['bitrate']}, PlaybackHeaders: $playHeaders');
+            final uri = Uri.parse(url);
             return PlaybackSource(
               type: PlaybackSourceType.authorizedStream,
-              uri: Uri.parse(url),
+              uri: uri,
               headers: playHeaders,
               mimeType: best['mimeType']?.toString() ?? 'audio/mp4',
               bitrate: _int(best['bitrate']),
               contentLength: _int(best['contentLength']),
               loudnessDb: _double(best['loudnessDb']) ?? 0,
+              expiresAt: _expiryFromUri(uri),
             );
           }
         }
@@ -498,13 +678,15 @@ class EMusicProvider
     }
 
     // 2. Fallback to server-side resolution endpoint
-    final data = await _request(
-      'POST',
-      'playback',
-      body: {
-        'trackId': track.identity.sourceId,
-        ...playbackContext.toJson(),
-      },
+    final data = await _serializeServerResolution(
+      () => _request(
+        'POST',
+        'playback',
+        body: {
+          'trackId': track.identity.sourceId,
+          ...playbackContext.toJson(),
+        },
+      ),
     );
     final url = data['url']?.toString();
     if (url == null || url.isEmpty) {
@@ -514,16 +696,17 @@ class EMusicProvider
       );
     }
     final rawHeaders = _map(data['headers']);
+    final uri = Uri.parse(url);
     return PlaybackSource(
       type: PlaybackSourceType.authorizedStream,
-      uri: Uri.parse(url),
+      uri: uri,
       headers: rawHeaders.map((key, value) => MapEntry(key, value.toString())),
       mimeType: data['mimeType']?.toString(),
       bitrate: _int(data['bitrate']),
       contentLength: _int(data['size'] ?? data['contentLength']),
       loudnessDb: _double(data['loudnessDb']) ?? 0,
       expiresAt: data['expiresAt'] == null
-          ? null
+          ? _expiryFromUri(uri)
           : DateTime.tryParse(data['expiresAt'].toString()),
     );
   }
@@ -533,19 +716,48 @@ class EMusicProvider
     ProviderTrack track, {
     required String format,
   }) async {
+    return _loadPlaybackSource(
+      'download|$format|${track.identity.sourceId}',
+      () => _resolveDownload(track, format: format),
+    );
+  }
+
+  @override
+  void invalidatePlaybackSource(MusicIdentity identity) {
+    _sourceCache.remove(
+      '${identity.profileId}|stream|${identity.sourceId}',
+    );
+  }
+
+  @override
+  void invalidateDownloadSource(
+    MusicIdentity identity, {
+    required String format,
+  }) {
+    _sourceCache.remove(
+      '${identity.profileId}|download|$format|${identity.sourceId}',
+    );
+  }
+
+  Future<PlaybackSource> _resolveDownload(
+    ProviderTrack track, {
+    required String format,
+  }) async {
     final clientSource = await _resolveDownloadWithClientRecipe(track, format);
     if (clientSource != null) return clientSource;
 
     final playbackContext =
         await _playbackContextLoader?.call() ?? const EMusicPlaybackContext();
-    final data = await _request(
-      'POST',
-      'download',
-      body: {
-        'trackId': track.identity.sourceId,
-        'format': format,
-        ...playbackContext.toJson(),
-      },
+    final data = await _serializeServerResolution(
+      () => _request(
+        'POST',
+        'download',
+        body: {
+          'trackId': track.identity.sourceId,
+          'format': format,
+          ...playbackContext.toJson(),
+        },
+      ),
     );
     final url = data['url']?.toString();
     if (url == null || url.isEmpty) {
@@ -554,9 +766,10 @@ class EMusicProvider
             'eMusic did not return a downloadable source',
       );
     }
+    final uri = Uri.parse(url);
     return PlaybackSource(
       type: PlaybackSourceType.authorizedStream,
-      uri: Uri.parse(url),
+      uri: uri,
       headers: _map(data['headers'])
           .map((key, value) => MapEntry(key, value.toString())),
       mimeType: data['mimeType']?.toString(),
@@ -564,7 +777,7 @@ class EMusicProvider
       contentLength: _int(data['size'] ?? data['contentLength']),
       loudnessDb: _double(data['loudnessDb']) ?? 0,
       expiresAt: data['expiresAt'] == null
-          ? null
+          ? _expiryFromUri(uri)
           : DateTime.tryParse(data['expiresAt'].toString()),
     );
   }
@@ -581,16 +794,15 @@ class EMusicProvider
         await _playbackContextLoader?.call() ?? const EMusicPlaybackContext();
     final preferredCodec = format == 'm4a' ? 'mp4a' : format;
     try {
-      final recipeData = await _request(
-        'POST',
-        'orchestrator/resolve-recipe',
-        body: {'videoId': track.identity.sourceId},
+      final recipeData = await _loadResolveRecipe(
+        track.identity.sourceId,
+        playbackContext,
       );
       final orchestration = _map(recipeData['orchestration']);
       final clients = _list(orchestration['recommendedClients']);
       final sts = _int(recipeData['signatureTimestamp']) ?? 20684;
       final visitorData =
-          recipeData['visitorData']?.toString() ?? playbackContext.visitorData;
+          playbackContext.visitorData ?? recipeData['visitorData']?.toString();
 
       for (final rawSpec in clients) {
         final spec = _map(rawSpec);
@@ -605,6 +817,11 @@ class EMusicProvider
         final payload = <String, dynamic>{
           'context': {'client': client},
           'videoId': track.identity.sourceId,
+          if (playbackContext.poToken != null &&
+              playbackContext.poToken!.isNotEmpty)
+            'serviceIntegrityDimensions': {
+              'poToken': playbackContext.poToken,
+            },
           if (useSts)
             'playbackContext': {
               'contentPlaybackContext': {
@@ -618,6 +835,10 @@ class EMusicProvider
         final headers = Map<String, String>.from(_map(spec['requestHeaders']));
         if (useVisitor && visitorData != null && visitorData.isNotEmpty) {
           headers['X-Goog-Visitor-Id'] = visitorData;
+        }
+        if (playbackContext.poToken != null &&
+            playbackContext.poToken!.isNotEmpty) {
+          headers['X-YouTube-Po-Token'] = playbackContext.poToken!;
         }
         final response = await Dio().post<dynamic>(
           apiUrl,
@@ -655,14 +876,16 @@ class EMusicProvider
           '${spec['name'] ?? spec['clientName'] ?? 'UNKNOWN'} '
           '(${selected['bitrate'] ?? 0} bps, $preferredCodec)',
         );
+        final uri = Uri.parse(selected['url'].toString());
         return PlaybackSource(
           type: PlaybackSourceType.authorizedStream,
-          uri: Uri.parse(selected['url'].toString()),
+          uri: uri,
           headers: playbackHeaders,
           mimeType: selected['mimeType']?.toString(),
           bitrate: _int(selected['bitrate']),
           contentLength: _int(selected['contentLength']),
           loudnessDb: _double(selected['loudnessDb']) ?? 0,
+          expiresAt: _expiryFromUri(uri),
         );
       }
     } catch (error) {
@@ -854,9 +1077,60 @@ class EMusicProvider
     _catalog = null;
     _catalogCache.clear();
     _catalogInFlight.clear();
+    _libraryCache = null;
+    _libraryCachedAt = null;
+    _libraryInFlight = null;
+    _recipeCache = null;
+    _recipeInFlight = null;
+    _sourceCache.clear();
+    _sourceInFlight.clear();
     _profileId = null;
     _capabilities = const ProviderCapabilities();
   }
+}
+
+class _EMusicLibrarySnapshot {
+  const _EMusicLibrarySnapshot({
+    required this.tracks,
+    required this.albums,
+    required this.artists,
+  });
+
+  final List<ProviderTrack> tracks;
+  final List<ProviderAlbum> albums;
+  final List<ProviderArtist> artists;
+}
+
+class _PlaybackSourceCacheEntry {
+  _PlaybackSourceCacheEntry(this.source) : createdAt = DateTime.now();
+
+  final PlaybackSource source;
+  final DateTime createdAt;
+
+  bool get isUsable {
+    // Signed URLs should not be handed to the player immediately before they
+    // expire. Sources without an explicit expiry are kept only briefly.
+    final expiresAt =
+        source.expiresAt ?? createdAt.add(const Duration(minutes: 2));
+    return DateTime.now().add(const Duration(seconds: 45)).isBefore(expiresAt);
+  }
+}
+
+class _RecipeCacheEntry {
+  _RecipeCacheEntry(Map<String, dynamic> data)
+      : _data = copyOf(data),
+        createdAt = DateTime.now();
+
+  final Map<String, dynamic> _data;
+  final DateTime createdAt;
+
+  bool get isExpired =>
+      DateTime.now().difference(createdAt) > EMusicProvider._recipeCacheTtl;
+
+  Map<String, dynamic> copy() => copyOf(_data);
+
+  static Map<String, dynamic> copyOf(Map<String, dynamic> value) =>
+      Map<String, dynamic>.from(jsonDecode(jsonEncode(value)) as Map);
 }
 
 class _CatalogCacheEntry {

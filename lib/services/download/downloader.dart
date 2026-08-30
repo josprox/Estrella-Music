@@ -4,7 +4,7 @@ import 'dart:io';
 import 'package:audio_service/audio_service.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:get/get.dart' hide Response;
 import 'package:estrella_music/services/auth/catalog_recovery_service.dart';
 import 'package:estrella_music/services/background/background_execution_service.dart';
 import 'package:estrella_music/services/download/download_integrity_service.dart';
@@ -35,6 +35,9 @@ class Downloader extends GetxService {
   final songProgressMap = <String, int>{}.obs;
   final playlistDownloadingProgress = 0.obs;
   final isJobRunning = false.obs;
+  // The provider coalesces the single orchestrator recipe request. These
+  // workers transfer audio directly from the signed source, so concurrency
+  // improves playlist speed without multiplying requests to eMusic.
   final int maxConcurrentDownloads = 3;
 
   RxList<MediaItem> songQueue = <MediaItem>[].obs;
@@ -156,8 +159,6 @@ class Downloader extends GetxService {
       // Wait if we reached the limit of concurrent downloads
       while (activeDownloads.length >= maxConcurrentDownloads) {
         await Future.any(activeDownloads);
-        activeDownloads.removeWhere(
-            (f) => f.hashCode == -1); // cleaned up via .then() below
       }
 
       final downloadTask = _downloadSongTask(song, isPlaylist, jobSongList);
@@ -209,24 +210,46 @@ class Downloader extends GetxService {
     final temporaryFilePath = '$filePath.part';
     printINFO("Downloading filePath: $filePath");
     final temporaryFile = File(temporaryFilePath);
-    if (await temporaryFile.exists()) await temporaryFile.delete();
     final stopwatch = Stopwatch()..start();
 
     try {
       final downloadHeaders = Map<String, String>.from(playback.headers);
       final contentLength = playback.contentLength;
-      if (contentLength != null && contentLength > 0) {
-        downloadHeaders['Range'] = 'bytes=0-${contentLength - 1}';
+      var existingBytes =
+          await temporaryFile.exists() ? await temporaryFile.length() : 0;
+      if (contentLength != null &&
+          contentLength > 0 &&
+          existingBytes >= contentLength) {
+        final complete = existingBytes == contentLength &&
+            await DownloadIntegrityService.isPlausibleAudioFile(
+              temporaryFile,
+              expectedSize: contentLength,
+            );
+        if (!complete) {
+          await temporaryFile.delete();
+          existingBytes = 0;
+        }
       }
-      final response = await _dio.download(
-        playback.uri.toString(),
-        temporaryFilePath,
-        options: Options(headers: downloadHeaders),
-        onReceiveProgress: (count, total) {
-          if (total <= 0) return;
-          songProgressMap[progressId] = ((count / total) * 100).toInt();
-        },
-      );
+
+      Response<dynamic>? response;
+      if (existingBytes == 0 ||
+          contentLength == null ||
+          existingBytes < contentLength) {
+        response = await _downloadResumableAudio(
+          uri: playback.uri,
+          destination: temporaryFile,
+          headers: downloadHeaders,
+          expectedSize: contentLength,
+          progressId: progressId,
+          existingBytes: existingBytes,
+        );
+      } else {
+        songProgressMap[progressId] = 100;
+        printINFO(
+          'Reusing completed partial download for ${song.id} '
+          '(${(existingBytes / 1024 / 1024).toStringAsFixed(2)} MiB)',
+        );
+      }
       if (!await temporaryFile.exists() || await temporaryFile.length() == 0) {
         throw const FileSystemException(
             'The audio stream returned an empty file');
@@ -234,7 +257,10 @@ class Downloader extends GetxService {
       final finalFile = File(filePath);
       if (await finalFile.exists()) await finalFile.delete();
       await temporaryFile.rename(filePath);
-      if (!await DownloadIntegrityService.isPlausibleAudioFile(finalFile)) {
+      if (!await DownloadIntegrityService.isPlausibleAudioFile(
+        finalFile,
+        expectedSize: contentLength ?? 0,
+      )) {
         await finalFile.delete();
         throw const FileSystemException(
             'The audio stream is not a valid audio file');
@@ -244,7 +270,7 @@ class Downloader extends GetxService {
       final seconds = stopwatch.elapsedMilliseconds / 1000;
       final kilobytesPerSecond = seconds <= 0 ? 0 : bytes / 1024 / seconds;
       printINFO(
-        'Download completed (${response.statusCode}): '
+        'Download completed (${response?.statusCode ?? 'resumed'}): '
         '${(bytes / 1024 / 1024).toStringAsFixed(2)} MiB in '
         '${seconds.toStringAsFixed(1)}s '
         '(${kilobytesPerSecond.toStringAsFixed(0)} KiB/s)',
@@ -283,10 +309,68 @@ class Downloader extends GetxService {
       // container after download: AudioTags cannot safely rewrite every
       // Opus/M4A response and used to leave truncated files marked complete.
     } catch (error, stackTrace) {
-      if (await temporaryFile.exists()) await temporaryFile.delete();
+      // Keep a non-empty .part file. A later attempt for the same song will
+      // request only the missing byte range instead of starting over.
+      if (error is DioException &&
+          const {401, 403, 410}.contains(error.response?.statusCode)) {
+        await Get.find<MusicCatalogService>().invalidateDownload(
+          song,
+          format: downloadingFormat,
+        );
+      }
       printERROR('Downloading failed for ${song.id}: $error\n$stackTrace');
       _showDownloadError(S.current.downloadError3);
     }
+  }
+
+  Future<Response<dynamic>> _downloadResumableAudio({
+    required Uri uri,
+    required File destination,
+    required Map<String, String> headers,
+    required int? expectedSize,
+    required String progressId,
+    required int existingBytes,
+  }) async {
+    var offset = existingBytes;
+    final requestHeaders = Map<String, String>.from(headers);
+    if (offset > 0) {
+      requestHeaders['Range'] = expectedSize != null && expectedSize > 0
+          ? 'bytes=$offset-${expectedSize - 1}'
+          : 'bytes=$offset-';
+    } else if (expectedSize != null && expectedSize > 0) {
+      requestHeaders['Range'] = 'bytes=0-${expectedSize - 1}';
+    }
+
+    Future<Response<dynamic>> startDownload(FileAccessMode mode) =>
+        _dio.download(
+          uri.toString(),
+          destination.path,
+          options: Options(headers: requestHeaders),
+          deleteOnError: false,
+          fileAccessMode: mode,
+          onReceiveProgress: (count, total) {
+            final completeBytes = offset + count;
+            final fullSize = expectedSize ?? (total > 0 ? offset + total : 0);
+            if (fullSize <= 0) return;
+            songProgressMap[progressId] =
+                ((completeBytes / fullSize) * 100).clamp(0, 100).toInt();
+          },
+        );
+
+    var response = await startDownload(
+      offset > 0 ? FileAccessMode.append : FileAccessMode.write,
+    );
+    if (offset > 0 && response.statusCode != HttpStatus.partialContent) {
+      // The origin ignored Range. Appending a full 200 response would corrupt
+      // the file, so restart only in this compatibility case.
+      await destination.delete();
+      offset = 0;
+      requestHeaders['Range'] = expectedSize != null && expectedSize > 0
+          ? 'bytes=0-${expectedSize - 1}'
+          : 'bytes=0-';
+      response = await startDownload(FileAccessMode.write);
+    }
+    return response;
   }
 
   Future<_DownloadSource?> _resolveDownloadSource(

@@ -115,8 +115,12 @@ Future<void> _acknowledgeFromBackground(dynamic id) async {
 }
 
 class FcmNotificationService {
+  static const _registrationSignatureKey = 'fcm_registration_signature';
+  static const _registrationTimeKey = 'fcm_registration_time';
+  static const _registrationRefreshInterval = Duration(days: 7);
   static FlutterLocalNotificationsPlugin? _localNotifications;
   static bool _initialized = false;
+  static Future<bool>? _registrationInFlight;
 
   static Future<void> initialize() async {
     if (_initialized ||
@@ -150,7 +154,7 @@ class FcmNotificationService {
       });
 
       FirebaseMessaging.instance.onTokenRefresh.listen((_) {
-        registerCurrentToken();
+        registerCurrentToken(force: true);
       });
       await registerCurrentToken();
     } catch (error) {
@@ -159,7 +163,19 @@ class FcmNotificationService {
     }
   }
 
-  static Future<bool> registerCurrentToken() async {
+  static Future<bool> registerCurrentToken({bool force = false}) {
+    final current = _registrationInFlight;
+    if (current != null) return current;
+    final operation = _registerCurrentToken(force: force);
+    _registrationInFlight = operation;
+    return operation.whenComplete(() {
+      if (identical(_registrationInFlight, operation)) {
+        _registrationInFlight = null;
+      }
+    });
+  }
+
+  static Future<bool> _registerCurrentToken({required bool force}) async {
     try {
       final jwt = await SafeSecureStorage.read('jwt_token');
       var base = dotenv.env['JOSSRED']?.trim();
@@ -180,6 +196,19 @@ class FcmNotificationService {
       if (base.endsWith('/')) base = base.substring(0, base.length - 1);
       if (base.endsWith('/api')) base = base.substring(0, base.length - 4);
 
+      final signature = '$deviceToken|$notificationsEnabled|$jwt';
+      final previousSignature =
+          await SafeSecureStorage.read(_registrationSignatureKey);
+      final previousRegistration = DateTime.tryParse(
+        await SafeSecureStorage.read(_registrationTimeKey) ?? '',
+      );
+      final registrationIsFresh = previousRegistration != null &&
+          DateTime.now().difference(previousRegistration) <
+              _registrationRefreshInterval;
+      if (!force && previousSignature == signature && registrationIsFresh) {
+        return true;
+      }
+
       final response = await http.post(
         Uri.parse('$base/api/notification-devices'),
         headers: {
@@ -195,7 +224,13 @@ class FcmNotificationService {
               defaultTargetPlatform == TargetPlatform.iOS ? 'ios' : 'android',
         }),
       );
-      return response.statusCode == 200;
+      if (response.statusCode != 200) return false;
+      await SafeSecureStorage.write(_registrationSignatureKey, signature);
+      await SafeSecureStorage.write(
+        _registrationTimeKey,
+        DateTime.now().toUtc().toIso8601String(),
+      );
+      return true;
     } catch (error) {
       debugPrint('[FCM] No se pudo registrar el dispositivo: $error');
       return false;
@@ -231,6 +266,9 @@ class FcmNotificationService {
       );
     } catch (error) {
       debugPrint('[FCM] No se pudo desactivar el dispositivo: $error');
+    } finally {
+      await SafeSecureStorage.delete(_registrationSignatureKey);
+      await SafeSecureStorage.delete(_registrationTimeKey);
     }
   }
 }
