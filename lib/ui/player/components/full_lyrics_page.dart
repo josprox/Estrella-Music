@@ -6,6 +6,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter_lyric/lyrics_reader.dart';
 import 'package:estrella_music/ui/player/player_controller.dart';
 import '/ui/utils/theme_controller.dart';
+import 'package:estrella_music/ui/widgets/search_lyrics_dialog.dart';
 import 'lyrics_widget.dart';
 
 class AnimatedAlbumArt extends StatefulWidget {
@@ -214,11 +215,26 @@ class FullLyricsPage extends StatelessWidget {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
+                              IconButton(
+                                onPressed: () =>
+                                    SearchLyricsDialog.show(context),
+                                tooltip: "Buscar / cambiar letra",
+                                style: IconButton.styleFrom(
+                                  backgroundColor:
+                                      colorScheme.surfaceContainerHighest,
+                                  foregroundColor: colorScheme.onSurface,
+                                  hoverColor: colorScheme.onSurface
+                                      .withValues(alpha: 0.08),
+                                ),
+                                icon: const Icon(
+                                    Icons.manage_search_rounded,
+                                    size: 22),
+                              ),
                               if (!isWide)
                                 Expanded(
                                   child: Padding(
                                     padding: const EdgeInsets.symmetric(
-                                        horizontal: 16),
+                                        horizontal: 12),
                                     child: Column(
                                       children: [
                                         Text(
@@ -247,8 +263,23 @@ class FullLyricsPage extends StatelessWidget {
                                     ),
                                   ),
                                 )
-                              else
-                                const Spacer(),
+                              else ...[
+                                const SizedBox(width: 16),
+                                Expanded(
+                                  child: Text(
+                                    "${currentSong?.title ?? ''} • ${currentSong?.artist ?? ''}",
+                                    textAlign: TextAlign.center,
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: TextStyle(
+                                      color: colorScheme.onSurface,
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
+                                const SizedBox(width: 16),
+                              ],
                               IconButton(
                                 onPressed: () => Get.back(),
                                 style: IconButton.styleFrom(
@@ -724,6 +755,27 @@ class FullLyricsPage extends StatelessWidget {
                   ),
                 );
               }),
+              SizedBox(
+                height: 16,
+                child: VerticalDivider(
+                  color: colorScheme.outlineVariant,
+                  width: 12,
+                  thickness: 1,
+                ),
+              ),
+              IconButton(
+                onPressed: () => SearchLyricsDialog.show(context),
+                tooltip: "Buscar / cambiar letra",
+                icon: Icon(
+                  Icons.manage_search_rounded,
+                  size: 18,
+                  color: colorScheme.onSurfaceVariant,
+                ),
+                style: IconButton.styleFrom(
+                  padding: EdgeInsets.zero,
+                  minimumSize: const Size(28, 28),
+                ),
+              ),
             ],
           ),
         ),

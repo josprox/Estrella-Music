@@ -17,6 +17,7 @@ import 'package:estrella_music/services/social/colistening_service.dart';
 import 'full_lyrics_page.dart';
 import '/ui/widgets/image_widget.dart';
 import 'package:estrella_music/ui/widgets/songinfo_bottom_sheet.dart';
+import 'package:estrella_music/ui/widgets/search_lyrics_dialog.dart';
 import '/ui/navigator.dart';
 import 'package:estrella_music/generated/l10n.dart';
 import 'package:estrella_music/ui/screens/Settings/settings_screen_controller.dart';
@@ -1229,36 +1230,56 @@ class _LyricsCard extends StatelessWidget {
                     letterSpacing: 2,
                   ),
                 ),
-                if (hasLyrics || hasSynced)
-                  GestureDetector(
-                    onTap: () => Get.to(
-                      () => const FullLyricsPage(),
-                      transition: Transition.downToUp,
-                    ),
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 12, vertical: 6),
-                      decoration: BoxDecoration(
-                        color: colorScheme.primary.withValues(alpha: 0.12),
-                        borderRadius: BorderRadius.circular(20),
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    IconButton(
+                      tooltip: 'Buscar / cambiar letra',
+                      icon: Icon(
+                        Icons.manage_search_rounded,
+                        size: 20,
+                        color: colorScheme.onPrimaryContainer,
                       ),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Icon(Icons.open_in_full_rounded,
-                              size: 14, color: colorScheme.primary),
-                          const SizedBox(width: 4),
-                          Text(
-                            'Ver todo',
-                            style: textTheme.labelSmall?.copyWith(
-                              color: colorScheme.primary,
-                              fontWeight: FontWeight.w700,
-                            ),
+                      style: IconButton.styleFrom(
+                        padding: const EdgeInsets.all(6),
+                        minimumSize: const Size(32, 32),
+                      ),
+                      onPressed: () => SearchLyricsDialog.show(context),
+                    ),
+                    if (hasLyrics || hasSynced) ...[
+                      const SizedBox(width: 4),
+                      GestureDetector(
+                        onTap: () => Get.to(
+                          () => const FullLyricsPage(),
+                          transition: Transition.downToUp,
+                        ),
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 12, vertical: 6),
+                          decoration: BoxDecoration(
+                            color: colorScheme.primary.withValues(alpha: 0.12),
+                            borderRadius: BorderRadius.circular(20),
                           ),
-                        ],
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Icon(Icons.open_in_full_rounded,
+                                  size: 14, color: colorScheme.primary),
+                              const SizedBox(width: 4),
+                              Text(
+                                'Ver todo',
+                                style: textTheme.labelSmall?.copyWith(
+                                  color: colorScheme.primary,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
-                    ),
-                  ),
+                    ],
+                  ],
+                ),
               ],
             ),
             const SizedBox(height: 16),
@@ -1332,6 +1353,12 @@ class _DesktopLyricsTab extends StatelessWidget {
                   onPressed: () => ctrl.toggleTranslation(),
                 );
               }),
+              IconButton(
+                tooltip: 'Buscar / cambiar letra',
+                icon: Icon(Icons.manage_search_rounded,
+                    color: colorScheme.onSurfaceVariant),
+                onPressed: () => SearchLyricsDialog.show(context),
+              ),
               IconButton(
                 tooltip: 'Pantalla completa',
                 icon: Icon(Icons.open_in_full_rounded,

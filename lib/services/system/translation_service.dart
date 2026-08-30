@@ -210,4 +210,117 @@ class TranslationService {
     }
     return "";
   }
+
+  /// Search candidate lyrics from online providers (LRCLIB, NetEase)
+  static Future<List<LyricsCandidate>> searchLyricsCandidates(
+      String query) async {
+    final results = <LyricsCandidate>[];
+    final normalized = query.trim();
+    if (normalized.isEmpty) return results;
+
+    final dio = Dio(BaseOptions(
+      connectTimeout: const Duration(seconds: 6),
+      receiveTimeout: const Duration(seconds: 6),
+      headers: const {'User-Agent': 'EstrellaMusic/2.0'},
+    ));
+
+    // 1. Search LRCLIB
+    try {
+      final response = await dio.get(
+        'https://lrclib.net/api/search',
+        queryParameters: {'q': normalized},
+      );
+      if (response.data is List) {
+        for (final item in response.data) {
+          if (item is Map) {
+            final synced = item['syncedLyrics']?.toString().trim() ?? '';
+            final plain = item['plainLyrics']?.toString().trim() ?? '';
+            if (synced.isNotEmpty || plain.isNotEmpty) {
+              results.add(LyricsCandidate(
+                title: item['trackName']?.toString() ?? '',
+                artist: item['artistName']?.toString() ?? '',
+                album: item['albumName']?.toString() ?? '',
+                duration: item['duration'] is num
+                    ? (item['duration'] as num).toInt()
+                    : 0,
+                syncedLyrics: synced,
+                plainLyrics: plain,
+                provider: 'LRCLIB',
+              ));
+            }
+          }
+        }
+      }
+    } catch (e) {
+      printERROR('LRCLIB search error: $e');
+    }
+
+    // 2. Search NetEase
+    try {
+      final neteaseUrl =
+          "http://music.163.com/api/search/get/web?type=1&limit=5&s=${Uri.encodeComponent(normalized)}";
+      final neteaseRes = await _dio.get(neteaseUrl);
+      if (neteaseRes.statusCode == 200 &&
+          neteaseRes.data is Map &&
+          neteaseRes.data['result'] != null &&
+          neteaseRes.data['result']['songs'] is List) {
+        final List songs = neteaseRes.data['result']['songs'];
+        for (final song in songs.take(3)) {
+          final sId = song['id'];
+          if (sId != null) {
+            final lUrl =
+                "http://music.163.com/api/song/lyric?os=pc&id=$sId&lv=-1&kv=-1&tv=-1";
+            final lRes = await _dio.get(lUrl);
+            if (lRes.statusCode == 200 && lRes.data is Map) {
+              final lrc =
+                  lRes.data['lrc']?['lyric']?.toString().trim() ?? '';
+              if (lrc.isNotEmpty) {
+                final artistName = (song['artists'] is List &&
+                        song['artists'].isNotEmpty)
+                    ? song['artists'][0]['name']?.toString() ?? ''
+                    : '';
+                results.add(LyricsCandidate(
+                  title: song['name']?.toString() ?? '',
+                  artist: artistName,
+                  album: song['album']?['name']?.toString() ?? '',
+                  duration: song['duration'] is num
+                      ? ((song['duration'] as num) / 1000).toInt()
+                      : 0,
+                  syncedLyrics: lrc,
+                  plainLyrics: '',
+                  provider: 'NetEase',
+                ));
+              }
+            }
+          }
+        }
+      }
+    } catch (e) {
+      printERROR('NetEase search error: $e');
+    }
+
+    return results;
+  }
+}
+
+class LyricsCandidate {
+  final String title;
+  final String artist;
+  final String album;
+  final int duration;
+  final String syncedLyrics;
+  final String plainLyrics;
+  final String provider;
+
+  bool get hasSynced => syncedLyrics.isNotEmpty;
+
+  const LyricsCandidate({
+    required this.title,
+    required this.artist,
+    required this.album,
+    required this.duration,
+    required this.syncedLyrics,
+    required this.plainLyrics,
+    required this.provider,
+  });
 }

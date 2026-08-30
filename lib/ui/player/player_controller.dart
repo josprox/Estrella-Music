@@ -1228,6 +1228,29 @@ class PlayerController extends GetxController
     }
   }
 
+  /// Manually update and save selected lyrics from alternative providers
+  Future<void> updateSongLyrics(String synced, String plain) async {
+    final song = currentSong.value;
+    lyrics.value = {
+      "synced": synced,
+      "plainLyrics": plain,
+    };
+    if (song != null) {
+      final lyricsBox = await SqliteStore.openBox("lyrics");
+      await lyricsBox.put(song.id, {
+        "synced": synced,
+        "plainLyrics": plain,
+        "translatedSynced": "",
+        "translatedPlain": "",
+      });
+      await lyricsBox.close();
+    }
+    translatedLyrics.value = {"synced": "", "plainLyrics": ""};
+    if (isTranslationEnabled.value) {
+      await loadTranslation();
+    }
+  }
+
   bool get _lyricsAreUnavailable =>
       _isUnavailableLyricsText(lyrics['synced']?.toString() ?? '') &&
       _isUnavailableLyricsText(lyrics['plainLyrics']?.toString() ?? '');
