@@ -117,6 +117,7 @@ class EMusicProvider
         playlists: true,
         favorites: true,
         history: true,
+        sync: true,
         home: true,
       );
     }

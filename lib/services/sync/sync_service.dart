@@ -10,6 +10,7 @@ import 'package:estrella_music/services/storage/sqlite_store.dart';
 import 'package:estrella_music/generated/l10n.dart';
 
 import 'package:estrella_music/models/playlist.dart';
+import 'package:estrella_music/ui/screens/Home/home_screen_controller.dart';
 import 'package:estrella_music/ui/screens/Library/library_controller.dart';
 import 'package:estrella_music/ui/screens/Playlist/playlist_screen_controller.dart';
 import 'package:estrella_music/ui/player/player_controller.dart';
@@ -496,7 +497,6 @@ class SyncService extends GetxService {
     if (!isCloudMode || !_authService.isAuthenticated.value) {
       return true;
     }
-    if (!_hasPendingLocalChanges) return true;
     if (_hasPendingLocalChanges) {
       printINFO(
           'SyncService: Pull skipped because there are pending local changes to push.');
@@ -508,6 +508,11 @@ class SyncService extends GetxService {
       return false;
     }
     if (isSyncing.value) return false;
+    printINFO(
+      'SyncService pull: profile=$_profileKey | '
+      'bootstrap=${_musicDatabase.isBootstrapComplete(_accountKey)} | '
+      'pending=$_hasPendingLocalChanges',
+    );
     isSyncing.value = true;
     final pullCompletion = Completer<void>();
     _pullCompletion = pullCompletion;
@@ -600,6 +605,12 @@ class SyncService extends GetxService {
     } catch (e, stack) {
       isOnline.value = false;
       lastStatusMessage.value = S.current.syncOfflinePending;
+      if (e is DioException) {
+        printERROR(
+          'SyncService pull HTTP: status=${e.response?.statusCode} | '
+          'data=${e.response?.data}',
+        );
+      }
       printERROR('SyncService pull failed: $e\n$stack');
       return false;
     } finally {
@@ -1245,6 +1256,11 @@ class SyncService extends GetxService {
   }
 
   void _refreshLibraryControllers() {
+    if (Get.isRegistered<HomeScreenController>()) {
+      final home = Get.find<HomeScreenController>();
+      unawaited(home.loadLocalCustomSections());
+      unawaited(home.reloadRecommendations(force: true));
+    }
     if (Get.isRegistered<LibraryPlaylistsController>()) {
       Get.find<LibraryPlaylistsController>().refreshLib();
     }

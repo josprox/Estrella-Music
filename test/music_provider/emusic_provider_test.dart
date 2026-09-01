@@ -133,7 +133,7 @@ void main() {
 
     await offline.initialize(const MusicProviderContext(profileId: 'offline'));
     expect(offline.capabilities.tracks, isTrue);
-    expect(offline.capabilities.sync, isFalse);
+    expect(offline.capabilities.sync, isTrue);
   });
 
   test('reports missing authentication and provider errors explicitly',

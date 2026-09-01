@@ -40,7 +40,7 @@ class PendingMusicChange {
 ///
 /// Normalized music entities, server versions and transactional sync outbox.
 class MusicSqliteService extends GetxService {
-  static const schemaVersion = 2;
+  static const schemaVersion = 3;
   static const databaseFileName = 'estrella_music.sqlite3';
 
   Database? _database;
@@ -136,6 +136,15 @@ class MusicSqliteService extends GetxService {
       // Remove only sync mirrors/outbox entries; SongDownloads remains intact.
       db.execute("DELETE FROM sync_outbox WHERE entity_type = 'download'");
       db.execute("DELETE FROM music_entities WHERE entity_type = 'download'");
+    }
+    if (currentVersion < 3) {
+      // v2 could mark an eMusic profile bootstrapped while its profile-scoped
+      // cache was still empty. Preserve every local row and request one fresh
+      // server snapshot on the next cloud synchronization.
+      db.execute(
+        "UPDATE sync_state SET state_value = 'false' "
+        "WHERE state_key = 'bootstrap_complete'",
+      );
     }
     db.execute('PRAGMA user_version = $schemaVersion');
   }

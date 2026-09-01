@@ -41,8 +41,7 @@ void main() {
     expect(downloads.length, 1);
   });
 
-  test('schema v2 removes download sync mirrors but keeps local downloads',
-      () async {
+  test('schema v3 repairs bootstrap and keeps downloads local', () async {
     final downloads = SqliteStore.box('SongDownloads');
     await downloads.put('track-1', {
       'videoId': 'track-1',
@@ -81,6 +80,14 @@ void main() {
         last_attempt_at TEXT
       )
     ''');
+    legacyDatabase.execute('''
+      CREATE TABLE sync_state (
+        account_key TEXT NOT NULL,
+        state_key TEXT NOT NULL,
+        state_value TEXT NOT NULL,
+        PRIMARY KEY (account_key, state_key)
+      )
+    ''');
     legacyDatabase.execute(
       '''INSERT INTO music_entities
          (account_key, entity_type, entity_id, payload_json, updated_at)
@@ -104,6 +111,10 @@ void main() {
           payload_json, created_at)
          VALUES ('favorite-change', 'user-1', 'favorite', 'track-2',
                  'upsert', '{}', '2026-07-28')''',
+    );
+    legacyDatabase.execute(
+      '''INSERT INTO sync_state (account_key, state_key, state_value)
+         VALUES ('user-1', 'bootstrap_complete', 'true')''',
     );
     legacyDatabase.execute('PRAGMA user_version = 1');
     legacyDatabase.dispose();
@@ -136,6 +147,7 @@ void main() {
       ),
       isNotEmpty,
     );
+    expect(service.isBootstrapComplete('user-1'), isFalse);
     expect(downloads.get('track-1'), isNotNull);
   });
 

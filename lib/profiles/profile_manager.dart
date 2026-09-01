@@ -227,12 +227,18 @@ class ProfileManager extends GetxService {
       activeProfile.value = available;
       await _persistence.saveProfile(available);
       await _persistence.saveActiveProfileId(available.id);
+      if (Get.isRegistered<SyncService>()) {
+        final syncService = Get.find<SyncService>();
+        if (activeProfileMaySync) {
+          unawaited(syncService.connectSocket());
+          await syncService.pull();
+        } else {
+          syncService.disconnectSocket();
+        }
+      }
       await _lifecycle.activate(
           available, await _persistence.loadState(available.id));
       if (previous != null) await _providerManager.deactivate(previous.id);
-      if (activeProfileMaySync && Get.isRegistered<SyncService>()) {
-        unawaited(Get.find<SyncService>().pull());
-      }
     } catch (error) {
       lastError.value = error.toString();
       await _markUnavailable(

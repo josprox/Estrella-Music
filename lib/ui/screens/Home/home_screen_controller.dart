@@ -132,28 +132,10 @@ class HomeScreenController extends GetxController {
       List<MediaItem> recommendations = [];
 
       for (final seed in seeds) {
-        if (seed.id.isNotEmpty) {
-          final rel = await _musicServices.getContentRelatedToSong(
-              seed.id, getContentHlCode());
-          if (rel.isNotEmpty) {
-            printINFO(
-                "Daily Discover: Fetched ${rel.length} sections for seed ${seed.title}");
-            // Find the first section that contains songs
-            for (var section in rel) {
-              if (section["contents"] != null && section["contents"] is List) {
-                final items = (section["contents"] as List)
-                    .whereType<MediaItem>()
-                    .where((item) => item.id != seed.id)
-                    .toList();
-
-                if (items.isNotEmpty) {
-                  items.shuffle();
-                  recommendations.add(items.first);
-                  break; // Move to next seed after finding one recommendation
-                }
-              }
-            }
-          }
+        final items = await _relatedOrCatalogSongs(seed, limit: 8);
+        if (items.isNotEmpty) {
+          items.shuffle();
+          recommendations.add(items.first);
         }
       }
 
@@ -251,22 +233,10 @@ class HomeScreenController extends GetxController {
       recommendations.addAll(seeds);
 
       for (final seed in seeds) {
-        if (seed.id.isNotEmpty) {
-          final rel = await _musicServices.getContentRelatedToSong(
-              seed.id, getContentHlCode());
-          if (rel.isNotEmpty) {
-            final con = rel.first;
-            if (con["contents"] != null && con["contents"] is List) {
-              final items =
-                  (con["contents"] as List).whereType<MediaItem>().toList();
-              items.shuffle();
-              final recList =
-                  items.where((item) => item.id != seed.id).toList();
-              if (recList.isNotEmpty) {
-                recommendations.add(recList.first);
-              }
-            }
-          }
+        final items = await _relatedOrCatalogSongs(seed, limit: 8);
+        if (items.isNotEmpty) {
+          items.shuffle();
+          recommendations.add(items.first);
         }
       }
 
@@ -298,28 +268,7 @@ class HomeScreenController extends GetxController {
       allFavs.shuffle();
       final seed = allFavs.first;
 
-      List<MediaItem> recommendations = [];
-
-      if (seed.id.isNotEmpty) {
-        final rel = await _musicServices.getContentRelatedToSong(
-            seed.id, getContentHlCode());
-        if (rel.isNotEmpty) {
-          // Find the first section that contains songs
-          for (var section in rel) {
-            if (section["contents"] != null && section["contents"] is List) {
-              final items = (section["contents"] as List)
-                  .whereType<MediaItem>()
-                  .where((item) => item.id != seed.id)
-                  .toList();
-
-              if (items.isNotEmpty) {
-                recommendations.addAll(items.take(15));
-                break;
-              }
-            }
-          }
-        }
-      }
+      final recommendations = await _relatedOrCatalogSongs(seed, limit: 15);
 
       if (recommendations.isNotEmpty) {
         final uniqueRecs = <String, MediaItem>{};
@@ -339,6 +288,67 @@ class HomeScreenController extends GetxController {
     } catch (e) {
       printERROR("Similar Recommendations failed: $e");
     }
+  }
+
+  Future<List<MediaItem>> _relatedOrCatalogSongs(
+    MediaItem seed, {
+    required int limit,
+  }) async {
+    final unique = <String, MediaItem>{};
+
+    if (seed.id.isNotEmpty) {
+      final related = await _musicServices.getContentRelatedToSong(
+        seed.id,
+        getContentHlCode(),
+      );
+      for (final section in related) {
+        final contents = section['contents'];
+        if (contents is! List) continue;
+        for (final item in contents.whereType<MediaItem>()) {
+          if (item.id.isNotEmpty && item.id != seed.id) {
+            unique[item.id] = item;
+          }
+        }
+      }
+    }
+
+    if (unique.isNotEmpty) {
+      return unique.values.take(limit).toList();
+    }
+
+    // Legacy favorites can outlive their related browse tab. The fallback
+    // stays provider-neutral and searches the active online catalog.
+    final queries = <String>{
+      if (seed.artist != null &&
+          seed.artist!.trim().isNotEmpty &&
+          seed.artist!.toLowerCase() != 'unknown artist')
+        seed.artist!.trim(),
+      seed.title.trim(),
+    };
+    for (final query in queries) {
+      if (query.isEmpty) continue;
+      final results = await _musicServices.search(
+        query,
+        filter: 'songs',
+        limit: limit + 5,
+      );
+      for (final value in results.values) {
+        if (value is! List) continue;
+        for (final item in value.whereType<MediaItem>()) {
+          if (item.id.isNotEmpty && item.id != seed.id) {
+            unique[item.id] = item;
+          }
+        }
+      }
+      if (unique.length >= limit) break;
+    }
+    if (unique.isNotEmpty) {
+      printINFO(
+        'Recommendations: catalog fallback found ${unique.length} songs '
+        'for ${seed.title}',
+      );
+    }
+    return unique.values.take(limit).toList();
   }
 
   Future<void> loadLocalCustomSections() async {
