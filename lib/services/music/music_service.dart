@@ -75,10 +75,14 @@ class MusicServices {
       {additionalParams = "", int attempt = 0}) async {
     try {
       final response = await _request(action, data, '$additionalParams');
+      final dynamic rawData =
+          (response.containsKey('response') && response['response'] is Map)
+              ? response['response']
+              : response;
       return Response<dynamic>(
         requestOptions: RequestOptions(path: action),
         statusCode: 200,
-        data: response,
+        data: rawData,
       );
     } catch (error) {
       // Do not immediately duplicate an expensive catalog request. A 502 or

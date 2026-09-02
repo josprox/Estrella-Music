@@ -619,7 +619,8 @@ class HomeScreenController extends GetxController {
             if (rel.isNotEmpty) {
               final con = rel.removeAt(0);
               final List<MediaItem> items =
-                  (con["contents"] as List).whereType<MediaItem>().toList();
+                  (con["contents"] as List?)?.whereType<MediaItem>().toList() ??
+                      const <MediaItem>[];
               networkQuickPicks = QuickPicks(items,
                   title: con["title"] ?? S.current.basedOnLast);
               middleContentTemp.addAll(rel);

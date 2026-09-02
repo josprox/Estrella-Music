@@ -13,6 +13,7 @@ import '../music_discovery_provider.dart';
 import '../music_source_cache_control.dart';
 import 'package:estrella_music/utils/helpers/helper.dart';
 import 'package:estrella_music/services/music/music_service.dart';
+import 'public_ip_resolver.dart';
 
 typedef ProviderTokenLoader = Future<String?> Function();
 typedef ProviderPlaybackContextLoader = Future<StreamingPlaybackContext>
@@ -44,10 +45,12 @@ class StreamingProvider
     required String Function() baseUrl,
     required ProviderTokenLoader tokenLoader,
     ProviderPlaybackContextLoader? playbackContextLoader,
+    PublicIpResolver? ipResolver,
     Dio? client,
   })  : _baseUrl = baseUrl,
         _tokenLoader = tokenLoader,
         _playbackContextLoader = playbackContextLoader,
+        _ipResolver = ipResolver ?? PublicIpResolver(),
         _client = client ?? Dio();
 
   static const providerId = 'joss.streaming';
@@ -56,6 +59,7 @@ class StreamingProvider
   final String Function() _baseUrl;
   final ProviderTokenLoader _tokenLoader;
   final ProviderPlaybackContextLoader? _playbackContextLoader;
+  final PublicIpResolver _ipResolver;
   final Dio _client;
   String? _profileId;
   String? _customServerUrl;
@@ -159,12 +163,16 @@ class StreamingProvider
     );
     _catalogInFlight[cacheKey] = request;
     try {
-      final response = await request;
+      final raw = await request;
+      final payloadResponse =
+          (raw.containsKey('response') && raw['response'] is Map)
+              ? _map(raw['response'])
+              : raw;
       if (_catalogCache.length >= _catalogCacheLimit) {
         _catalogCache.remove(_catalogCache.keys.first);
       }
-      _catalogCache[cacheKey] = _CatalogCacheEntry(response);
-      return response;
+      _catalogCache[cacheKey] = _CatalogCacheEntry(payloadResponse);
+      return payloadResponse;
     } finally {
       _catalogInFlight.remove(cacheKey);
     }
@@ -507,10 +515,147 @@ class StreamingProvider
     );
   }
 
+  Future<PlaybackSource?> _resolveViaRecipe(
+    String sourceId, {
+    String? requestedFormat,
+    StreamingPlaybackContext? context,
+  }) async {
+    try {
+      final recipeResponse = await _request(
+        'POST',
+        'orchestrator/resolve-recipe',
+        body: {
+          'videoId': sourceId,
+          if (context?.visitorData != null && context!.visitorData!.isNotEmpty)
+            'visitorData': context.visitorData,
+        },
+      );
+
+      final recipeData = _map(recipeResponse['data'] ?? recipeResponse);
+      final rawCandidates = _list(recipeData['candidates']);
+      if (rawCandidates.isEmpty) return null;
+
+      final requestedCodec =
+          (requestedFormat == 'm4a') ? 'mp4a' : requestedFormat;
+
+      for (final rawCandidate in rawCandidates) {
+        final candidate = _map(rawCandidate);
+        final url = candidate['url']?.toString();
+        if (url == null || url.isEmpty) continue;
+
+        final method = candidate['method']?.toString() ?? 'POST';
+        final headers = _map(candidate['headers'])
+            .map((k, v) => MapEntry(k.toString(), v.toString()));
+        final body = candidate['body'];
+        final playbackHeaders = _map(candidate['playbackHeaders'])
+            .map((k, v) => MapEntry(k.toString(), v.toString()));
+
+        try {
+          final response = await _client.request<dynamic>(
+            url,
+            data: body,
+            options: Options(
+              method: method,
+              headers: headers,
+              validateStatus: (status) => status != null && status < 500,
+            ),
+          );
+
+          final respData = _map(response.data);
+          final playability = _map(respData['playabilityStatus']);
+          final status = playability['status']?.toString();
+          if (status != null && status != 'OK') {
+            continue;
+          }
+
+          final streamingData = _map(respData['streamingData']);
+          final formats = _list(
+            streamingData['adaptiveFormats'] ??
+                streamingData['formats'] ??
+                respData['adaptiveFormats'] ??
+                respData['formats'],
+          );
+
+          if (formats.isEmpty) continue;
+
+          Map<String, dynamic>? selected;
+          Map<String, dynamic>? fallback;
+
+          for (final rawFmt in formats) {
+            final fmt = _map(rawFmt);
+            final fmtUrl = fmt['url']?.toString();
+            final mime = fmt['mimeType']?.toString() ?? '';
+            if (fmtUrl == null || fmtUrl.isEmpty || !mime.contains('audio/')) {
+              continue;
+            }
+
+            final bitrate = _int(fmt['bitrate']) ?? 0;
+            if (fallback == null ||
+                bitrate > (_int(fallback['bitrate']) ?? 0)) {
+              fallback = fmt;
+            }
+
+            if (requestedCodec != null && requestedCodec.isNotEmpty) {
+              final isOpus = mime.contains('opus');
+              final codec = isOpus ? 'opus' : 'mp4a';
+              if (codec == requestedCodec) {
+                if (selected == null ||
+                    bitrate > (_int(selected['bitrate']) ?? 0)) {
+                  selected = fmt;
+                }
+              }
+            }
+          }
+
+          final targetFmt = selected ?? fallback;
+          if (targetFmt == null) continue;
+
+          final streamUrl = targetFmt['url']?.toString();
+          if (streamUrl == null || streamUrl.isEmpty) continue;
+
+          final uri = Uri.parse(streamUrl);
+          final isOpus =
+              (targetFmt['mimeType']?.toString() ?? '').contains('opus');
+          final mimeType = isOpus ? 'audio/webm' : 'audio/mp4';
+
+          return PlaybackSource(
+            type: PlaybackSourceType.authorizedStream,
+            uri: uri,
+            headers: playbackHeaders,
+            mimeType: targetFmt['mimeType']?.toString() ?? mimeType,
+            bitrate: _int(targetFmt['bitrate']),
+            contentLength:
+                _int(targetFmt['contentLength'] ?? targetFmt['size']),
+            loudnessDb: _double(targetFmt['loudnessDb']) ?? 0,
+            expiresAt: _expiryFromUri(uri),
+          );
+        } catch (_) {
+          continue;
+        }
+      }
+    } catch (_) {
+      // Recipe resolution failed, will fall back to server
+    }
+    return null;
+  }
+
   Future<PlaybackSource> _resolvePlayback(ProviderTrack track) async {
     _requireCapability(_capabilities.playback, 'playback');
     final playbackContext = await _playbackContextLoader?.call() ??
         const StreamingPlaybackContext();
+
+    final recipeSource = await _resolveViaRecipe(
+      track.identity.sourceId,
+      context: playbackContext,
+    );
+    if (recipeSource != null) {
+      return recipeSource;
+    }
+
+    var clientIp = playbackContext.clientIp;
+    if (clientIp == null || clientIp.trim().isEmpty) {
+      clientIp = await _ipResolver.getPublicIp();
+    }
 
     final data = await _serializeServerResolution(
       () => _request(
@@ -518,7 +663,10 @@ class StreamingProvider
         'playback',
         body: {
           'trackId': track.identity.sourceId,
-          ...playbackContext.toJson(),
+          if (playbackContext.visitorData != null &&
+              playbackContext.visitorData!.isNotEmpty)
+            'visitorData': playbackContext.visitorData,
+          if (clientIp != null && clientIp.isNotEmpty) 'clientIp': clientIp,
         },
       ),
     );
@@ -579,6 +727,21 @@ class StreamingProvider
   }) async {
     final playbackContext = await _playbackContextLoader?.call() ??
         const StreamingPlaybackContext();
+
+    final recipeSource = await _resolveViaRecipe(
+      track.identity.sourceId,
+      requestedFormat: format,
+      context: playbackContext,
+    );
+    if (recipeSource != null) {
+      return recipeSource;
+    }
+
+    var clientIp = playbackContext.clientIp;
+    if (clientIp == null || clientIp.trim().isEmpty) {
+      clientIp = await _ipResolver.getPublicIp();
+    }
+
     final data = await _serializeServerResolution(
       () => _request(
         'POST',
@@ -586,7 +749,10 @@ class StreamingProvider
         body: {
           'trackId': track.identity.sourceId,
           'format': format,
-          ...playbackContext.toJson(),
+          if (playbackContext.visitorData != null &&
+              playbackContext.visitorData!.isNotEmpty)
+            'visitorData': playbackContext.visitorData,
+          if (clientIp != null && clientIp.isNotEmpty) 'clientIp': clientIp,
         },
       ),
     );

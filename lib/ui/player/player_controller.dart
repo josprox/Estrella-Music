@@ -532,10 +532,15 @@ class PlayerController extends GetxController
             playlistId: playlistid,
           );
           radioContinuationParam = content['additionalParamsForNext'];
-          await _audioHandler
-              .updateQueue(List<MediaItem>.from(content['tracks']));
-          if (isShuffleModeEnabled.isTrue) {
-            await _audioHandler.customAction("shuffleCmd", {"index": 0});
+          final tracks = (content['tracks'] as List?)
+                  ?.whereType<MediaItem>()
+                  .toList() ??
+              const <MediaItem>[];
+          if (tracks.isNotEmpty) {
+            await _audioHandler.updateQueue(tracks);
+            if (isShuffleModeEnabled.isTrue) {
+              await _audioHandler.customAction("shuffleCmd", {"index": 0});
+            }
           }
 
           // added here to broadcast current mediaitem via Audio Service as list is updated
@@ -557,10 +562,15 @@ class PlayerController extends GetxController
             playlistId: playlistid,
           );
           radioContinuationParam = content['additionalParamsForNext'];
-          await _audioHandler
-              .updateQueue(List<MediaItem>.from(content['tracks']));
-          if (isShuffleModeEnabled.isTrue) {
-            await _audioHandler.customAction("shuffleCmd", {"index": 0});
+          final recTracks = (content['tracks'] as List?)
+                  ?.whereType<MediaItem>()
+                  .toList() ??
+              const <MediaItem>[];
+          if (recTracks.isNotEmpty) {
+            await _audioHandler.updateQueue(recTracks);
+            if (isShuffleModeEnabled.isTrue) {
+              await _audioHandler.customAction("shuffleCmd", {"index": 0});
+            }
           }
           if (radio && (currentSong.value?.id == recoveredSong.id)) {
             _audioHandler

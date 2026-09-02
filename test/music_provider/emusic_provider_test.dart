@@ -6,6 +6,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:estrella_music/music_provider/models/playback_source.dart';
 import 'package:estrella_music/music_provider/music_discovery_provider.dart';
 import 'package:estrella_music/music_provider/music_provider.dart';
+import 'package:estrella_music/music_provider/providers/public_ip_resolver.dart';
 import 'package:estrella_music/music_provider/providers/streaming_provider.dart';
 
 void main() {
@@ -36,8 +37,8 @@ void main() {
 
     final results = await provider.search('star');
     expect(results.tracks.single.title, 'Star');
-    expect(
-        results.tracks.single.identity.providerId, StreamingProvider.providerId);
+    expect(results.tracks.single.identity.providerId,
+        StreamingProvider.providerId);
     expect(results.tracks.single.identity.profileId, 'personal');
     expect(results.albums.single.title, 'Sky');
     expect(results.artists.single.name, 'Estrella');
@@ -101,7 +102,8 @@ void main() {
     expect(adapter.lastProfileId, 'personal');
   });
 
-  test('routes rich catalog requests through streaming server with playback context',
+  test(
+      'routes rich catalog requests through streaming server with playback context',
       () async {
     final discovery = provider as MusicDiscoveryProvider;
     expect(await discovery.getSearchSuggestion('estrella'), ['Estrella Music']);
@@ -139,9 +141,129 @@ void main() {
     );
     expect(await provider.getTrack('missing'), isNull);
   });
+
+  test('uses context clientIp without querying the public IP resolver',
+      () async {
+    final ipAdapter = _MockIpResolverAdapter(ip: '198.51.100.99');
+    final ipResolver = PublicIpResolver(
+      client: Dio()..httpClientAdapter = ipAdapter,
+    );
+
+    final customProvider = StreamingProvider(
+      baseUrl: () => 'https://emusic.test',
+      tokenLoader: () async => 'joss-red-jwt',
+      playbackContextLoader: () async => const StreamingPlaybackContext(
+        clientIp: '203.0.113.8',
+        visitorData: 'visitor-token',
+      ),
+      ipResolver: ipResolver,
+      client: dio,
+    );
+    await customProvider
+        .initialize(const MusicProviderContext(profileId: 'personal'));
+
+    final track = (await customProvider.getTrack('t1'))!;
+    await customProvider.getPlayback(track);
+
+    expect(adapter.lastPlaybackRequest?['clientIp'], '203.0.113.8');
+    expect(ipAdapter.requestCount, 0,
+        reason: 'IP resolver should not be called when context has clientIp');
+  });
+
+  test(
+      'resolves clientIp lazily and sends it in playback and download when missing from context',
+      () async {
+    final ipAdapter = _MockIpResolverAdapter(ip: '198.51.100.50');
+    final ipResolver = PublicIpResolver(
+      client: Dio()..httpClientAdapter = ipAdapter,
+    );
+
+    final lazyProvider = StreamingProvider(
+      baseUrl: () => 'https://emusic.test',
+      tokenLoader: () async => 'joss-red-jwt',
+      playbackContextLoader: () async => const StreamingPlaybackContext(
+        visitorData: 'visitor-token',
+      ),
+      ipResolver: ipResolver,
+      client: dio,
+    );
+    await lazyProvider
+        .initialize(const MusicProviderContext(profileId: 'lazy-profile'));
+
+    expect(ipAdapter.requestCount, 0,
+        reason:
+            'App startup and provider initialize must not block on IP lookup');
+
+    final track = (await lazyProvider.getTrack('t1'))!;
+    await lazyProvider.getPlayback(track);
+
+    expect(ipAdapter.requestCount, 1);
+    expect(adapter.lastPlaybackRequest?['clientIp'], '198.51.100.50');
+
+    await lazyProvider.getDownload(track, format: 'opus');
+    expect(adapter.lastDownloadRequest?['clientIp'], '198.51.100.50');
+    expect(ipAdapter.requestCount, 1,
+        reason: 'Cached IP is reused across playback and download');
+  });
+
+  test('resolver failure does not crash playback and omits clientIp gracefully',
+      () async {
+    final ipResolver = PublicIpResolver(
+      client: Dio()..httpClientAdapter = _FailingIpResolverAdapter(),
+    );
+
+    final fallbackProvider = StreamingProvider(
+      baseUrl: () => 'https://emusic.test',
+      tokenLoader: () async => 'joss-red-jwt',
+      playbackContextLoader: () async => const StreamingPlaybackContext(),
+      ipResolver: ipResolver,
+      client: dio,
+    );
+    await fallbackProvider
+        .initialize(const MusicProviderContext(profileId: 'fallback'));
+
+    final track = (await fallbackProvider.getTrack('t1'))!;
+    final source = await fallbackProvider.getPlayback(track);
+
+    expect(source.type, PlaybackSourceType.authorizedStream);
+    expect(adapter.lastPlaybackRequest?.containsKey('clientIp'), isFalse);
+  });
+
+  test(
+      'resolves stream directly on device via server recipe without server playback fallback',
+      () async {
+    adapter.enableRecipe = true;
+    final track = (await provider.getTrack('t1'))!;
+    final source = await provider.getPlayback(track);
+
+    expect(source.type, PlaybackSourceType.authorizedStream);
+    expect(source.uri.toString(), 'https://stream.direct.test/audio.m4a');
+    expect(source.bitrate, 320000);
+    expect(adapter.recipeRequestCount, 1);
+    expect(adapter.upstreamPlayerRequestCount, 1);
+    expect(adapter.playbackRequestCount, 0,
+        reason: 'Direct recipe execution avoids server playback endpoint');
+  });
+
+  test(
+      'resolves download directly on device via server recipe without server download fallback',
+      () async {
+    adapter.enableRecipe = true;
+    final track = (await provider.getTrack('t1'))!;
+    final source = await provider.getDownload(track, format: 'opus');
+
+    expect(source.type, PlaybackSourceType.authorizedStream);
+    expect(source.uri.toString(), 'https://stream.direct.test/audio.opus');
+    expect(source.bitrate, 160000);
+    expect(adapter.recipeRequestCount, 1);
+    expect(adapter.upstreamPlayerRequestCount, 1);
+    expect(adapter.downloadRequestCount, 0,
+        reason: 'Direct recipe execution avoids server download endpoint');
+  });
 }
 
 class _StreamingAdapter implements HttpClientAdapter {
+  bool enableRecipe = false;
   Map<String, dynamic>? lastPlaybackRequest;
   Map<String, dynamic>? lastCatalogRequest;
   Map<String, dynamic>? lastDownloadRequest;
@@ -150,6 +272,8 @@ class _StreamingAdapter implements HttpClientAdapter {
   int libraryRequestCount = 0;
   int playbackRequestCount = 0;
   int downloadRequestCount = 0;
+  int recipeRequestCount = 0;
+  int upstreamPlayerRequestCount = 0;
 
   @override
   Future<ResponseBody> fetch(
@@ -325,6 +449,47 @@ class _StreamingAdapter implements HttpClientAdapter {
               DateTime.now().add(const Duration(hours: 1)).toIso8601String(),
         }
       };
+    } else if (path.endsWith('/resolve-recipe') && enableRecipe) {
+      recipeRequestCount++;
+      body = {
+        'status': 'success',
+        'data': {
+          'status': 'success',
+          'videoId': 't1',
+          'candidates': [
+            {
+              'url': 'https://upstream.test/player',
+              'method': 'POST',
+              'headers': {'User-Agent': 'MockClient/1.0'},
+              'body': {'videoId': 't1'},
+              'playbackHeaders': {'User-Agent': 'MockClient/1.0'},
+            }
+          ]
+        }
+      };
+    } else if (options.uri.host == 'upstream.test') {
+      upstreamPlayerRequestCount++;
+      body = {
+        'playabilityStatus': {'status': 'OK'},
+        'streamingData': {
+          'adaptiveFormats': [
+            {
+              'url': 'https://stream.direct.test/audio.m4a',
+              'mimeType': 'audio/mp4; codecs="mp4a.40.2"',
+              'bitrate': 320000,
+              'contentLength': 234567,
+              'loudnessDb': -1.5,
+            },
+            {
+              'url': 'https://stream.direct.test/audio.opus',
+              'mimeType': 'audio/webm; codecs="opus"',
+              'bitrate': 160000,
+              'contentLength': 123456,
+              'loudnessDb': -1.5,
+            }
+          ]
+        }
+      };
     } else if (path.contains('/tracks/missing')) {
       status = 404;
       body = {'status': 'error', 'message': 'Missing track'};
@@ -374,6 +539,51 @@ class _OfflineAdapter implements HttpClientAdapter {
       requestOptions: options,
       type: DioExceptionType.connectionError,
       error: 'Offline',
+    );
+  }
+
+  @override
+  void close({bool force = false}) {}
+}
+
+class _MockIpResolverAdapter implements HttpClientAdapter {
+  _MockIpResolverAdapter({required this.ip});
+
+  final String ip;
+  int requestCount = 0;
+
+  @override
+  Future<ResponseBody> fetch(
+    RequestOptions options,
+    Stream<Uint8List>? requestStream,
+    Future<void>? cancelFuture,
+  ) async {
+    requestCount++;
+    final encoded = utf8.encode(jsonEncode({'ip': ip}));
+    return ResponseBody.fromBytes(
+      encoded,
+      200,
+      headers: {
+        Headers.contentTypeHeader: [Headers.jsonContentType],
+      },
+    );
+  }
+
+  @override
+  void close({bool force = false}) {}
+}
+
+class _FailingIpResolverAdapter implements HttpClientAdapter {
+  @override
+  Future<ResponseBody> fetch(
+    RequestOptions options,
+    Stream<Uint8List>? requestStream,
+    Future<void>? cancelFuture,
+  ) async {
+    throw DioException(
+      requestOptions: options,
+      type: DioExceptionType.connectionError,
+      error: 'Cannot reach IP service',
     );
   }
 

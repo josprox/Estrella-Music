@@ -22,10 +22,7 @@ class PlaylistAlbumService {
       int suggestionsLimit = 0}) async {
     String browseId = playlistId != null
         ? (playlistId.startsWith("VL") ? playlistId : "VL$playlistId")
-        : albumId!;
-    if (albumId != null && albumId.contains("OLAK5uy")) {
-      browseId = await getAlbumBrowseId(browseId);
-    }
+        : (albumId!.startsWith("OLAK5uy") ? "VL$albumId" : albumId);
     final data = Map.from(_musicServices.context);
     data['browseId'] = browseId;
     final Map<String, dynamic> response =
