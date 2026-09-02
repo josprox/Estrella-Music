@@ -4,7 +4,7 @@
 
 <h1>Estrella Music v2</h1>
 
-<p><strong>Cross-platform music player & streaming · Flutter · Music Provider Architecture</strong></p>
+<p><strong>Offline-First Cross-Platform Music Player · Flutter · Modular Music Providers</strong></p>
 
 <!-- Badges -->
 <p>
@@ -43,47 +43,67 @@
 
 ## ✨ What is Estrella Music v2?
 
-**Estrella Music v2** is the full Flutter evolution of the original Kotlin version. Built around a modular **MusicProvider** architecture, v2 delivers a 100% functional local playback experience alongside online cloud streaming powered by **EMusic** and identity by **Joss Red** across Android, Windows, Linux, macOS, and iOS.
+**Estrella Music v2** is a modern, high-performance, **offline-first local music player** built with Flutter for Android, Windows, Linux, macOS, and iOS. 
 
-> **Migrate seamlessly** from your old `song.db` or `.backup` files. Your playlists, history, and favorites come with you.
+Designed around a neutral, extensible **MusicProvider** architecture, Estrella Music works out-of-the-box as a powerful local audio manager that scans and organizes your device's audio files without requiring an active internet connection.
+
+> 🔒 **Identity by Joss Red**: The app requires a global Joss Red account session for profile management, friend lists, and encrypted backups.
+>
+> ⚠️ **Disclaimer of Liability**: External streaming reproductions and community recipe servers are user-configured external sources. Estrella Music and its developers assume no responsibility for external content or third-party usage.
 
 ---
 
-## 🚀 Features
+## 🏗️ Project Architecture & Ecosystem Separation
+
+This repository and ecosystem consist of three distinct components:
+
+```
+┌────────────────────────────────────────┐       JWT / Auth       ┌──────────────────────────────┐
+│       Estrella Music (Flutter)         │ ─────────────────────► │          Joss Red            │
+│  ────────────────────────────────────  │                        │   Primary Identity & Auth    │
+│  • Default Offline-First Music Player  │                        │   User Profiles · Backups    │
+│  • Smart local audio scanning & tags   │                        │   Friends & Social Features  │
+│  • Neutral Multi-Profile Player        │                        └──────────────────────────────┘
+│  • External Recipe / URL / QR Support  │
+└────────────────────────────────────────┘
+                    │ (Optional Sync / Streaming)
+                    ▼
+       ┌──────────────────────────┐
+       │     EMusic (Secondary)   │
+       │  Standalone Cloud Backend│
+       │  Music Sync & Shared Queues
+       └──────────────────────────┘
+```
+
+1. **Flutter App (`/`) [Core Project]**: The default client application and real user experience. Operates as an offline-first local audio player with intelligent metadata enrichment, playlist management, and dynamic theme engine.
+2. **Joss Red [Primary Identity Service]**: The core backend responsible for authentication, JWT verification, profile updates, encrypted backups, friends, and permissions.
+3. **`EMusic/` [Secondary Standalone Service]**: A secondary, optional Joss backend dedicated to cloud music synchronization, co-listening, and legacy streaming. **EMusic is NOT part of the core Flutter client**.
+
+---
+
+## 🚀 Key Features
 
 <table>
 <tr>
 <td width="50%">
 
-### 🎵 Streaming & Playback
-- Local audio playback & rich online streaming via modular providers
-- High-quality audio with smart chunk caching
-- Gapless playback & skip silence
-- Background playback with native media controls
-- Radio / continuous discovery mode
-
-### 📜 Library & Discovery
-- Local library management (songs, albums, artists)
-- Synced & plain-text lyrics via **LRCLIB**
-- Playlist management & import
-- Persistent playback queue
+### 🎧 Local Playback (Default Mode)
+- **100% Offline-first local player**: No internet needed for audio playback.
+- **Smart Directory Indexer**: Filters out noise (voice notes, WhatsApp audio, ringtones).
+- **Composite Metadata Provider**: Enriches tags & high-resolution album artwork (iTunes & MusicBrainz).
+- **Directory Sidecar Artwork**: Auto-detects `cover.jpg`, `folder.png`, embedded tags.
+- **High-Fidelity Audio**: Gapless playback, equalizer, skip silence, persistent queue.
+- **Synced Lyrics**: Time-synced and plain lyrics via LRCLIB.
 
 </td>
 <td width="50%">
 
-### ☁️ Cloud & Sync *(EMusic)*
-- Cloud library sync via **EMusic** server
-- Device-local offline downloads
-- Conflict-free incremental sync with queue
-- Multi-device support with Joss Red identity
-
-### 🖥️ Cross-Platform
-- Native desktop & mobile experience
-
-### 🔐 Auth & Updates
-- Identity via **Joss Red** (JWT · profile · backups · friends)
-- In-app updater with per-platform download & install
-- Blocking update gate with world-class UI
+### 🌐 Modular Providers & Streaming
+- **Neutral MusicProvider Contract**: Decoupled player core.
+- **External Streaming & Recipes (Stremio-style)**: Connect custom recipe servers or community endpoints.
+- **QR Code & URL Scanner**: Import custom server endpoints instantly via camera or clipboard.
+- **Multi-Profile Support**: Switch between multiple local and external profiles seamlessly.
+- **Joss Red Cloud Backups**: Securely back up playlists and settings to your Joss Red account.
 
 </td>
 </tr>
@@ -94,7 +114,7 @@
 ## 📸 Screenshots
 
 <div align="center">
-<p><em>Library, Wrap & Stats Screens (from the Kotlin version)</em></p>
+<p><em>Library, Wrap & Stats Screens</em></p>
 
 <table>
   <tr>
@@ -115,16 +135,15 @@
 | Layer | Technology |
 |---|---|
 | **Framework** | [Flutter](https://flutter.dev) 3.x · Dart |
-| **Architecture** | Modular `MusicProvider` (`LocalMusicProvider`, `EMusicProvider`) |
-| **State** | [GetX](https://pub.dev/packages/get) |
-| **Audio (Android/iOS)** | `just_audio` |
-| **Audio (Desktop)** | `media_kit` via `just_audio_media_kit` |
-| **Networking** | [Dio](https://pub.dev/packages/dio) |
-| **Database** | Hive (Local state & profiles) · SQLite (EMusic sync & outbox) |
-| **Auth & Identity** | Joss Red (JWT · profile · backups · friends) |
-| **Cloud Music** | EMusic (catalog orchestrator · playlists · sync) |
-| **Notifications** | `flutter_local_notifications` · Firebase Messaging |
-| **Build & Release** | GitHub Actions — multi-platform · draft releases |
+| **Architecture** | Neutral `MusicProvider` (`LocalMusicProvider`, `EMusicProvider`, Custom) |
+| **State Management** | [GetX](https://pub.dev/packages/get) |
+| **Mobile Audio** | `just_audio` · `audio_service` |
+| **Desktop Audio** | `media_kit` via `just_audio_media_kit` |
+| **Local Storage & State** | Hive (local state, downloads & offline caching) · SQLite (profiles & outbox) |
+| **Identity & Sessions** | **Joss Red** (JWT · profiles · cloud backups · friends) |
+| **QR & Scanner** | `mobile_scanner` |
+| **Lyrics & Metadata** | LRCLIB · iTunes API · MusicBrainz |
+| **Build & Release** | GitHub Actions multi-platform CI/CD |
 
 ---
 
@@ -142,23 +161,17 @@ Download the latest release for your platform:
 | 🍎 **macOS** | `EstrellaMusic-macos.zip` | Extract & drag to Applications. If Gatekeeper blocks it: **right-click → Open** |
 | 🐙 **All** | [GitHub Releases →](https://github.com/josprox/Estrella-Music/releases/latest) | |
 
-> The in-app updater will notify you and handle download + installation automatically on Android and Windows.
-
 ---
 
 ### 🍏 iPhone / iOS — Automatic Signing with SideStore
 
-To install the `.ipa` without the signature expiring after 7 days:
+To install the `.ipa` without weekly revokes:
 
-1. **Install SideStore** by following the official guide at [sidestore.io](https://sidestore.io) (requires initial computer setup + internal WireGuard VPN).
-2. **Configure EMusic Anisette Server:**
-   - SideStore → **Settings** → **Anisette Server URL**
-   - Replace with: `https://emusic.joss.red/api/anisette`
-   - Log in with your Apple ID inside SideStore.
-3. **Install the App:**
+1. **Install SideStore** following [sidestore.io](https://sidestore.io).
+2. **Install the App:**
    - Download `EstrellaMusic-ios-unsigned.ipa` on your iPhone → **Files**.
    - SideStore → **My Apps** → **`+`** → select the `.ipa` file.
-4. **Auto-renewal:** Open SideStore on Wi-Fi once a week and the signatures will renew in the background.
+3. **Auto-renewal:** Open SideStore on Wi-Fi once a week to renew signatures automatically.
 
 ---
 
@@ -171,7 +184,7 @@ cd Estrella-Music
 
 # 2. Environment
 cp .env.example .env
-# Edit .env — set API_URL, ONESIGNAL_APP_ID, UPDATE_CHECK_URL
+# Edit .env — configure API endpoints if needed
 
 # 3. Dependencies
 flutter pub get
@@ -182,28 +195,6 @@ flutter run
 
 ---
 
-## ☁️ Architecture — Joss Ecosystem
-
-```
-┌────────────────────┐     JWT      ┌──────────────────┐
-│   Estrella Music   │ ──────────► │    Joss Red      │
-│  (Flutter Client)  │             │  Identity · Auth  │
-│                    │             │  Profile · Backup │
-│  Local cache       │             └──────────────────┘
-│  Offline playback  │
-│  Smart sync queue  │    Music     ┌──────────────────┐
-│                    │ ──────────► │     EMusic       │
-└────────────────────┘             │  Playlists · Sync │
-                                   │  History · Cloud  │
-                                   └──────────────────┘
-```
-
-- **Joss Red** — source of truth for users, sessions, JWT, profile, friends and backups.
-- **EMusic** — specialized music cloud service (library, playlists, favorites, offline metadata, sync).
-- **Flutter app** — primary client that works fully offline and syncs when connected.
-
----
-
 ## 📜 License & Authorship
 
 **Copyright © 2026 Joss Estrada (JOSPROX). All rights reserved.**
@@ -211,22 +202,14 @@ flutter run
 Licensed under the **[GNU General Public License v3.0](LICENSE)**.
 
 - You may not use modified versions for non-free or commercial purposes.
-- You may not publish modified versions on closed-source stores (Google Play, App Store).
+- You may not publish modified versions on closed-source stores without authorization.
 - See [CREDITS.md](CREDITS.md) for full third-party acknowledgments.
 
-*This project is not affiliated with, funded, authorized, or endorsed by external music services. All trademarks belong to their respective owners.*
-
----
-
-## 📈 Growth
-
-[![Star History Chart](https://api.star-history.com/svg?repos=josprox/Estrella-Music&type=Date)](https://star-history.com/#josprox/Estrella-Music&Date)
+*This project is an independent open-source audio player and is not affiliated with external streaming platforms. All trademarks belong to their respective owners.*
 
 ---
 
 <div align="center">
-
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/josprox/Estrella-Music)
 
 Made with ❤️ by **[JOSPROX](https://github.com/josprox)**
 

@@ -34,7 +34,6 @@ import 'package:estrella_music/music_provider/music_catalog_service.dart';
 import 'package:estrella_music/music_provider/music_provider_manager.dart';
 import 'package:estrella_music/music_provider/providers/emusic_provider.dart';
 import 'package:estrella_music/music_provider/providers/local_music_provider.dart';
-import 'package:estrella_music/music_provider/providers/musicbrainz_metadata_provider.dart';
 import 'package:estrella_music/music_provider/providers/composite_metadata_provider.dart';
 import 'package:estrella_music/profiles/app_profile_lifecycle_coordinator.dart';
 import 'package:estrella_music/profiles/profile_manager.dart';
@@ -74,7 +73,7 @@ Future<void> main() async {
   ));
   providerManager.register(ProviderRegistration(
     id: EMusicProvider.providerId,
-    displayName: 'eMusic',
+    displayName: 'Streaming Externo',
     factory: () => EMusicProvider(
       baseUrl: () => dotenv.env['EMUSICWEB'] ?? authService.baseUrl ?? '',
       tokenLoader: authService.getAccessToken,

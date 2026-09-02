@@ -1,0 +1,12 @@
+{
+  "external_streaming_mode": "Reproducción de streaming externo",
+  "external_streaming_mode_desc": "Conecta un servidor de recetas o streaming externo (estilo Stremio).",
+  "external_streaming_disclaimer": "Aviso: Las reproducciones externas no nos hacemos responsables de cómo se usen. Estrella Music funciona por defecto como reproductor local offline.",
+  "local_mode_default_offline": "Modo local (Por defecto offline)",
+  "local_mode_default_offline_desc": "Reproductor local de tu dispositivo. No requiere internet ni servidores externos.",
+  "server_url_optional": "URL del servidor (opcional / personalizado)",
+  "scan_server_qr": "Escanear Servidor QR",
+  "paste_url_from_clipboard": "Pegar URL desde el portapapeles",
+  "camera_not_available": "Cámara no disponible",
+  "camera_not_supported_platform": "Cámara no compatible en esta plataforma. Pega la URL del servidor directamente."
+}

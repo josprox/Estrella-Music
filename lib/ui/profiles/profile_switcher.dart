@@ -8,6 +8,7 @@ import 'package:estrella_music/profiles/music_profile.dart';
 import 'package:estrella_music/profiles/profile_manager.dart';
 import 'package:estrella_music/ui/screens/Home/home_screen_controller.dart';
 import 'package:estrella_music/ui/screens/Library/library_controller.dart';
+import 'package:estrella_music/ui/widgets/qr_server_scanner_dialog.dart';
 
 class ProfileSwitcher extends StatelessWidget {
   const ProfileSwitcher({super.key, this.expanded = true});
@@ -202,53 +203,99 @@ class _ManageProfilesDialog extends StatelessWidget {
     final providerManager = Get.find<MusicProviderManager>();
     final profileManager = Get.find<ProfileManager>();
     final controller = TextEditingController();
+    final serverUrlController = TextEditingController();
     var providerId = providerManager.localProviderId;
     String? libraryFolder;
     final created = await showDialog<bool>(
       context: context,
       builder: (_) => StatefulBuilder(builder: (context, setState) {
+        final isLocal = providerManager.registrationFor(providerId)?.trust ==
+            ProviderTrust.local;
         return AlertDialog(
           title: const Text('Crear perfil musical'),
-          content: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              TextField(
-                controller: controller,
-                autofocus: true,
-                decoration: const InputDecoration(labelText: 'Nombre'),
-              ),
-              const SizedBox(height: 12),
-              DropdownButtonFormField<String>(
-                initialValue: providerId,
-                decoration: const InputDecoration(labelText: 'Proveedor'),
-                items: [
-                  for (final id in providerManager.availableProviderIds)
-                    DropdownMenuItem(
-                      value: id,
-                      child: Text(
-                          providerManager.registrationFor(id)?.displayName ??
-                              id),
-                    ),
-                ],
-                onChanged: (value) =>
-                    setState(() => providerId = value ?? providerId),
-              ),
-              if (providerManager.registrationFor(providerId)?.trust ==
-                  ProviderTrust.local) ...[
-                const SizedBox(height: 12),
-                OutlinedButton.icon(
-                  onPressed: () async {
-                    final selected =
-                        await FilePicker.platform.getDirectoryPath();
-                    if (selected != null) {
-                      setState(() => libraryFolder = selected);
-                    }
-                  },
-                  icon: const Icon(Icons.folder_open_rounded),
-                  label: Text(libraryFolder ?? 'Elegir carpeta de mÃºsica'),
+          content: SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                TextField(
+                  controller: controller,
+                  autofocus: true,
+                  decoration: const InputDecoration(labelText: 'Nombre'),
                 ),
+                const SizedBox(height: 12),
+                DropdownButtonFormField<String>(
+                  initialValue: providerId,
+                  decoration: const InputDecoration(labelText: 'Proveedor'),
+                  items: [
+                    for (final id in providerManager.availableProviderIds)
+                      DropdownMenuItem(
+                        value: id,
+                        child: Text(
+                            providerManager.registrationFor(id)?.displayName ??
+                                id),
+                      ),
+                  ],
+                  onChanged: (value) =>
+                      setState(() => providerId = value ?? providerId),
+                ),
+                if (isLocal) ...[
+                  const SizedBox(height: 12),
+                  OutlinedButton.icon(
+                    onPressed: () async {
+                      final selected =
+                          await FilePicker.platform.getDirectoryPath();
+                      if (selected != null) {
+                        setState(() => libraryFolder = selected);
+                      }
+                    },
+                    icon: const Icon(Icons.folder_open_rounded),
+                    label: Text(libraryFolder ?? 'Elegir carpeta de música'),
+                  ),
+                ] else ...[
+                  const SizedBox(height: 12),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: TextField(
+                          controller: serverUrlController,
+                          decoration: const InputDecoration(
+                            labelText: 'URL del servidor (opcional)',
+                            hintText: 'https://tu-servidor-o-receta.com',
+                            prefixIcon: Icon(Icons.link_rounded),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(width: 6),
+                      IconButton(
+                        tooltip: 'Escanear QR de servidor',
+                        icon: const Icon(Icons.qr_code_scanner_rounded),
+                        onPressed: () async {
+                          final scanned =
+                              await QrServerScannerDialog.scan(context);
+                          if (scanned != null && scanned.isNotEmpty) {
+                            setState(
+                                () => serverUrlController.text = scanned);
+                          }
+                        },
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 10),
+                  Container(
+                    padding: const EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: Colors.amber.withValues(alpha: 0.12),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: const Text(
+                      'Aviso: Las reproducciones externas no nos hacemos responsables de cómo se usen.',
+                      style: TextStyle(fontSize: 11.5, color: Colors.amber),
+                    ),
+                  ),
+                ],
               ],
-            ],
+            ),
           ),
           actions: [
             TextButton(onPressed: Get.back, child: const Text('Cancelar')),
@@ -261,13 +308,16 @@ class _ManageProfilesDialog extends StatelessWidget {
       }),
     );
     final name = controller.text.trim();
+    final serverUrl = serverUrlController.text.trim();
     controller.dispose();
+    serverUrlController.dispose();
     if (created == true) {
       await profileManager.createProfile(
         name: name.isEmpty ? 'Nuevo perfil' : name,
         providerId: providerId,
         settings: {
           if (libraryFolder != null) 'libraryRoots': [libraryFolder],
+          if (serverUrl.isNotEmpty) 'serverUrl': serverUrl,
         },
       );
     }

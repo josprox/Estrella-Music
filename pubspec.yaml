@@ -103,6 +103,7 @@ dependencies:
   flutter_native_splash: ^2.4.4
   open_file: ^3.3.2
   shared_preferences: ^2.5.5
+  mobile_scanner: ^7.4.0
 
 dev_dependencies:
   intl_utils: ^2.8.12

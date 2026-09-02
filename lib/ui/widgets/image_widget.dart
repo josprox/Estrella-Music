@@ -41,14 +41,27 @@ class ImageWidget extends StatelessWidget {
                     : "";
 
     final bool isFileUri = imageUrl.startsWith("file://") ||
+        imageUrl.startsWith("/") ||
         (song?.artUri != null && song!.artUri!.isScheme("file"));
 
-    final String localFilePath = isFileUri
-        ? (song?.artUri?.toFilePath() ??
-            (imageUrl.startsWith("file://")
-                ? Uri.parse(imageUrl).toFilePath()
-                : ""))
-        : "";
+    String localFilePath = "";
+    if (isFileUri) {
+      if (song?.artUri != null && song!.artUri!.isScheme("file")) {
+        try {
+          localFilePath = song!.artUri!.toFilePath();
+        } catch (_) {
+          localFilePath = song!.artUri!.path;
+        }
+      } else if (imageUrl.startsWith("file://")) {
+        try {
+          localFilePath = Uri.parse(imageUrl).toFilePath();
+        } catch (_) {
+          localFilePath = imageUrl.replaceFirst(RegExp(r'^file://+'), '/');
+        }
+      } else if (imageUrl.startsWith("/")) {
+        localFilePath = imageUrl;
+      }
+    }
 
     final String supportDir = Get.isRegistered<SettingsScreenController>()
         ? Get.find<SettingsScreenController>().supportDirPath
@@ -102,7 +115,8 @@ class ImageWidget extends StatelessWidget {
   Widget _buildNetworkOrFallback(BuildContext context, String imageUrl) {
     if (imageUrl.isEmpty ||
         imageUrl.startsWith("data:") ||
-        imageUrl.startsWith("file:")) {
+        imageUrl.startsWith("file:") ||
+        imageUrl.startsWith("/")) {
       return _buildErrorWidget(context);
     }
     return CachedNetworkImage(

@@ -61,6 +61,7 @@ class EMusicProvider
   final ProviderPlaybackContextLoader? _playbackContextLoader;
   final Dio _client;
   String? _profileId;
+  String? _customServerUrl;
   ProviderCapabilities _capabilities = const ProviderCapabilities();
   MusicServices? _catalog;
   final Map<String, _CatalogCacheEntry> _catalogCache = {};
@@ -82,7 +83,7 @@ class EMusicProvider
   String get id => providerId;
 
   @override
-  String get displayName => 'eMusic';
+  String get displayName => 'Streaming Externo';
 
   @override
   ProviderCapabilities get capabilities => _capabilities;
@@ -90,6 +91,10 @@ class EMusicProvider
   @override
   Future<void> initialize(MusicProviderContext context) async {
     _profileId = context.profileId;
+    final configuredUrl = context.settings['serverUrl']?.toString().trim();
+    _customServerUrl = (configuredUrl != null && configuredUrl.isNotEmpty)
+        ? configuredUrl
+        : null;
     final playbackContext =
         await _playbackContextLoader?.call() ?? const EMusicPlaybackContext();
     _catalog = MusicServices(
@@ -974,7 +979,8 @@ class EMusicProvider
       throw const MusicProviderException(
           'A valid Joss Red session is required');
     }
-    final base = _baseUrl().replaceAll(RegExp(r'/+$'), '');
+    final base =
+        (_customServerUrl ?? _baseUrl()).replaceAll(RegExp(r'/+$'), '');
     final fullPath = path.startsWith('/')
         ? '$base$path'
         : (path.startsWith('orchestrator/')
@@ -1086,6 +1092,7 @@ class EMusicProvider
     _sourceCache.clear();
     _sourceInFlight.clear();
     _profileId = null;
+    _customServerUrl = null;
     _capabilities = const ProviderCapabilities();
   }
 }

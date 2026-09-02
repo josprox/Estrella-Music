@@ -1,7 +1,10 @@
+import 'dart:io';
+
 import 'package:audio_service/audio_service.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:estrella_music/models/album.dart';
 import 'package:estrella_music/models/playling_from.dart';
 import 'package:estrella_music/models/thumbnail.dart';
 import 'package:estrella_music/ui/widgets/playlist_album_scroll_behaviour.dart';
@@ -11,6 +14,7 @@ import 'package:estrella_music/utils/helpers/music_share_manager.dart';
 
 import 'package:estrella_music/services/download/downloader.dart';
 import 'package:estrella_music/ui/player/player_controller.dart';
+import 'package:estrella_music/ui/screens/Settings/settings_screen_controller.dart';
 import 'package:estrella_music/ui/widgets/loader.dart';
 import 'package:estrella_music/ui/widgets/snackbar.dart';
 import 'package:estrella_music/ui/widgets/song_list_tile.dart';
@@ -74,13 +78,12 @@ class AlbumScreen extends StatelessWidget {
                             )
                           ],
                         ),
-                        child: CachedNetworkImage(
-                          imageUrl: Thumbnail(
-                                  albumController.album.value.thumbnailUrl)
-                              .extraHigh,
-                          fit: landscape ? BoxFit.fitHeight : BoxFit.fitWidth,
-                          width: landscape ? null : size.width,
-                          height: landscape ? size.height : null,
+                        child: _buildAlbumCoverImage(
+                          context,
+                          album: albumController.album.value,
+                          songList: albumController.songList,
+                          landscape: landscape,
+                          size: size,
                         ),
                       ))
                   : SizedBox(
@@ -543,5 +546,105 @@ class AlbumScreen extends StatelessWidget {
       context: context,
       builder: (context) => SongInfoBottomSheet(song),
     ).whenComplete(() => Get.delete<SongInfoController>());
+  }
+
+  Widget _buildAlbumCoverImage(
+    BuildContext context, {
+    required Album album,
+    required List<MediaItem> songList,
+    required bool landscape,
+    required Size size,
+  }) {
+    var rawUrl = album.thumbnailUrl;
+    if (rawUrl.isEmpty && songList.isNotEmpty) {
+      rawUrl = songList.first.artUri?.toString() ?? '';
+    }
+
+    final isFile = rawUrl.startsWith('file://') || rawUrl.startsWith('/');
+    if (isFile) {
+      String filePath = rawUrl;
+      if (rawUrl.startsWith('file://')) {
+        try {
+          filePath = Uri.parse(rawUrl).toFilePath();
+        } catch (_) {
+          filePath = rawUrl.replaceFirst(RegExp(r'^file://+'), '/');
+        }
+      }
+      final file = File(filePath);
+      if (file.existsSync()) {
+        return Image.file(
+          file,
+          fit: landscape ? BoxFit.fitHeight : BoxFit.fitWidth,
+          width: landscape ? null : size.width,
+          height: landscape ? size.height : null,
+          errorBuilder: (_, __, ___) => Container(
+            width: landscape ? null : size.width,
+            height: landscape ? size.height : size.width,
+            color: Theme.of(context).canvasColor,
+          ),
+        );
+      }
+    }
+
+    final supportDir = Get.isRegistered<SettingsScreenController>()
+        ? Get.find<SettingsScreenController>().supportDirPath
+        : '';
+    if (supportDir.isNotEmpty) {
+      if (album.browseId.isNotEmpty) {
+        final albumThumb = File('$supportDir/thumbnails/${album.browseId}.png');
+        if (albumThumb.existsSync()) {
+          return Image.file(
+            albumThumb,
+            fit: landscape ? BoxFit.fitHeight : BoxFit.fitWidth,
+            width: landscape ? null : size.width,
+            height: landscape ? size.height : null,
+            errorBuilder: (_, __, ___) => Container(
+              width: landscape ? null : size.width,
+              height: landscape ? size.height : size.width,
+              color: Theme.of(context).canvasColor,
+            ),
+          );
+        }
+      }
+      if (songList.isNotEmpty) {
+        final firstSongThumb =
+            File('$supportDir/thumbnails/${songList.first.id}.png');
+        if (firstSongThumb.existsSync()) {
+          return Image.file(
+            firstSongThumb,
+            fit: landscape ? BoxFit.fitHeight : BoxFit.fitWidth,
+            width: landscape ? null : size.width,
+            height: landscape ? size.height : null,
+            errorBuilder: (_, __, ___) => Container(
+              width: landscape ? null : size.width,
+              height: landscape ? size.height : size.width,
+              color: Theme.of(context).canvasColor,
+            ),
+          );
+        }
+      }
+    }
+
+    if (rawUrl.isEmpty ||
+        rawUrl.startsWith('data:') ||
+        rawUrl.startsWith('file:')) {
+      return Container(
+        width: landscape ? null : size.width,
+        height: landscape ? size.height : size.width,
+        color: Theme.of(context).canvasColor,
+      );
+    }
+
+    return CachedNetworkImage(
+      imageUrl: Thumbnail(rawUrl).extraHigh,
+      fit: landscape ? BoxFit.fitHeight : BoxFit.fitWidth,
+      width: landscape ? null : size.width,
+      height: landscape ? size.height : null,
+      errorWidget: (_, __, ___) => Container(
+        width: landscape ? null : size.width,
+        height: landscape ? size.height : size.width,
+        color: Theme.of(context).canvasColor,
+      ),
+    );
   }
 }

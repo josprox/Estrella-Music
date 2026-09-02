@@ -1,9 +1,12 @@
+import 'dart:io';
+
 import 'package:audio_service/audio_service.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:estrella_music/services/storage/sqlite_store.dart';
 import 'package:estrella_music/services/sync/sync_service.dart';
+import 'package:estrella_music/ui/screens/Settings/settings_screen_controller.dart';
 import 'package:estrella_music/ui/widgets/custom_marquee.dart';
 import 'package:estrella_music/utils/helpers/music_share_manager.dart';
 
@@ -80,13 +83,12 @@ class PlaylistScreen extends StatelessWidget {
                             )
                           ],
                         ),
-                        child: CachedNetworkImage(
-                          imageUrl: Thumbnail(playlistController
-                                  .playlist.value.thumbnailUrl)
-                              .extraHigh,
-                          fit: landscape ? BoxFit.fitHeight : BoxFit.cover,
-                          width: landscape ? null : size.width,
-                          height: landscape ? size.height : size.width,
+                        child: _buildPlaylistCoverImage(
+                          context,
+                          playlist: playlistController.playlist.value,
+                          songList: playlistController.songList,
+                          landscape: landscape,
+                          size: size,
                         ),
                       ))
                   : SizedBox(
@@ -922,6 +924,107 @@ class PlaylistScreen extends StatelessWidget {
                 style: const TextStyle(fontWeight: FontWeight.bold)),
           ),
         ],
+      ),
+    );
+  }
+
+  Widget _buildPlaylistCoverImage(
+    BuildContext context, {
+    required Playlist playlist,
+    required List<MediaItem> songList,
+    required bool landscape,
+    required Size size,
+  }) {
+    var rawUrl = playlist.thumbnailUrl;
+    if (rawUrl.isEmpty && songList.isNotEmpty) {
+      rawUrl = songList.first.artUri?.toString() ?? '';
+    }
+
+    final isFile = rawUrl.startsWith('file://') || rawUrl.startsWith('/');
+    if (isFile) {
+      String filePath = rawUrl;
+      if (rawUrl.startsWith('file://')) {
+        try {
+          filePath = Uri.parse(rawUrl).toFilePath();
+        } catch (_) {
+          filePath = rawUrl.replaceFirst(RegExp(r'^file://+'), '/');
+        }
+      }
+      final file = File(filePath);
+      if (file.existsSync()) {
+        return Image.file(
+          file,
+          fit: landscape ? BoxFit.fitHeight : BoxFit.cover,
+          width: landscape ? null : size.width,
+          height: landscape ? size.height : size.width,
+          errorBuilder: (_, __, ___) => Container(
+            width: landscape ? null : size.width,
+            height: landscape ? size.height : size.width,
+            color: Theme.of(context).canvasColor,
+          ),
+        );
+      }
+    }
+
+    final supportDir = Get.isRegistered<SettingsScreenController>()
+        ? Get.find<SettingsScreenController>().supportDirPath
+        : '';
+    if (supportDir.isNotEmpty) {
+      if (playlist.playlistId.isNotEmpty) {
+        final plThumb =
+            File('$supportDir/thumbnails/${playlist.playlistId}.png');
+        if (plThumb.existsSync()) {
+          return Image.file(
+            plThumb,
+            fit: landscape ? BoxFit.fitHeight : BoxFit.cover,
+            width: landscape ? null : size.width,
+            height: landscape ? size.height : size.width,
+            errorBuilder: (_, __, ___) => Container(
+              width: landscape ? null : size.width,
+              height: landscape ? size.height : size.width,
+              color: Theme.of(context).canvasColor,
+            ),
+          );
+        }
+      }
+      if (songList.isNotEmpty) {
+        final firstSongThumb =
+            File('$supportDir/thumbnails/${songList.first.id}.png');
+        if (firstSongThumb.existsSync()) {
+          return Image.file(
+            firstSongThumb,
+            fit: landscape ? BoxFit.fitHeight : BoxFit.cover,
+            width: landscape ? null : size.width,
+            height: landscape ? size.height : size.width,
+            errorBuilder: (_, __, ___) => Container(
+              width: landscape ? null : size.width,
+              height: landscape ? size.height : size.width,
+              color: Theme.of(context).canvasColor,
+            ),
+          );
+        }
+      }
+    }
+
+    if (rawUrl.isEmpty ||
+        rawUrl.startsWith('data:') ||
+        rawUrl.startsWith('file:')) {
+      return Container(
+        width: landscape ? null : size.width,
+        height: landscape ? size.height : size.width,
+        color: Theme.of(context).canvasColor,
+      );
+    }
+
+    return CachedNetworkImage(
+      imageUrl: Thumbnail(rawUrl).extraHigh,
+      fit: landscape ? BoxFit.fitHeight : BoxFit.cover,
+      width: landscape ? null : size.width,
+      height: landscape ? size.height : size.width,
+      errorWidget: (_, __, ___) => Container(
+        width: landscape ? null : size.width,
+        height: landscape ? size.height : size.width,
+        color: Theme.of(context).canvasColor,
       ),
     );
   }

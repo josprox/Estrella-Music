@@ -7,6 +7,7 @@ import 'package:estrella_music/music_provider/music_provider_manager.dart';
 import 'package:estrella_music/profiles/profile_manager.dart';
 import 'package:estrella_music/ui/home.dart';
 import 'package:estrella_music/ui/profiles/profile_switcher.dart';
+import 'package:estrella_music/ui/widgets/qr_server_scanner_dialog.dart';
 import 'widgets/animated_auth_background.dart';
 
 class WelcomeProfileSetupScreen extends StatefulWidget {
@@ -24,6 +25,7 @@ class _WelcomeProfileSetupScreenState extends State<WelcomeProfileSetupScreen> {
 
   final TextEditingController _nameController =
       TextEditingController(text: 'Música Local');
+  final TextEditingController _serverUrlController = TextEditingController();
 
   MusicProviderManager get _providerManager => Get.find<MusicProviderManager>();
 
@@ -40,6 +42,7 @@ class _WelcomeProfileSetupScreenState extends State<WelcomeProfileSetupScreen> {
   @override
   void dispose() {
     _nameController.dispose();
+    _serverUrlController.dispose();
     super.dispose();
   }
 
@@ -59,7 +62,7 @@ class _WelcomeProfileSetupScreenState extends State<WelcomeProfileSetupScreen> {
               : _providerManager
                       .registrationFor(_selectedProvider)
                       ?.displayName ??
-                  'Perfil musical')
+                  'Streaming Externo')
           : _nameController.text.trim();
 
       final existing = profileManager.profiles.firstWhereOrNull(
@@ -71,23 +74,30 @@ class _WelcomeProfileSetupScreenState extends State<WelcomeProfileSetupScreen> {
       }
       await Future.delayed(const Duration(milliseconds: 350));
 
+      final serverUrl = _serverUrlController.text.trim();
+
       if (existing != null) {
-        if (_customFolder != null && _isLocal(_selectedProvider)) {
-          final updated = existing.copyWith(
-            name: name,
-            settings: {
+        final updated = existing.copyWith(
+          name: name,
+          settings: {
+            ...existing.settings,
+            if (_customFolder != null && _isLocal(_selectedProvider))
               'libraryRoots': [_customFolder],
-            },
-          );
-          await profileManager.saveProfile(updated);
-        }
+            if (!_isLocal(_selectedProvider) && serverUrl.isNotEmpty)
+              'serverUrl': serverUrl,
+          },
+        );
+        await profileManager.saveProfile(updated);
         await profileManager.switchProfile(existing.id);
       } else {
         final created = await profileManager.createProfile(
           name: name,
           providerId: _selectedProvider,
           settings: {
-            if (_customFolder != null) 'libraryRoots': [_customFolder],
+            if (_customFolder != null && _isLocal(_selectedProvider))
+              'libraryRoots': [_customFolder],
+            if (!_isLocal(_selectedProvider) && serverUrl.isNotEmpty)
+              'serverUrl': serverUrl,
           },
         );
         await profileManager.switchProfile(created.id);
@@ -297,14 +307,11 @@ class _WelcomeProfileSetupScreenState extends State<WelcomeProfileSetupScreen> {
                           _buildOptionCard(
                             providerId: providerId,
                             title: _isLocal(providerId)
-                                ? 'Modo local (tu dispositivo)'
-                                : _providerManager
-                                        .registrationFor(providerId)
-                                        ?.displayName ??
-                                    providerId,
+                                ? 'Modo local (Por defecto offline)'
+                                : 'Reproducción de streaming externo',
                             subtitle: _isLocal(providerId)
-                                ? 'Reproductor local. Detecta tus canciones, álbumes y artistas del dispositivo.'
-                                : 'Contenido y funciones declaradas por este proveedor.',
+                                ? 'Reproductor local de tu dispositivo. No requiere internet ni servidores externos.'
+                                : 'Conecta un servidor de recetas o streaming externo (estilo Stremio).',
                             icon: _isLocal(providerId)
                                 ? Icons.phone_android_rounded
                                 : Icons.cloud_done_rounded,
@@ -314,6 +321,39 @@ class _WelcomeProfileSetupScreenState extends State<WelcomeProfileSetupScreen> {
                           ),
                           const SizedBox(height: 12),
                         ],
+                        const SizedBox(height: 12),
+                        // Disclaimer banner for liability
+                        Container(
+                          padding: const EdgeInsets.all(14),
+                          decoration: BoxDecoration(
+                            color: const Color(0xFFFF9F1C).withValues(alpha: 0.10),
+                            borderRadius: BorderRadius.circular(16),
+                            border: Border.all(
+                              color: const Color(0xFFFF9F1C).withValues(alpha: 0.28),
+                            ),
+                          ),
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const Icon(
+                                Icons.verified_user_outlined,
+                                color: Color(0xFFFF9F1C),
+                                size: 20,
+                              ),
+                              const SizedBox(width: 10),
+                              Expanded(
+                                child: Text(
+                                  'Aviso: Las reproducciones externas no nos hacemos responsables de cómo se usen. Estrella Music funciona por defecto como reproductor local offline.',
+                                  style: TextStyle(
+                                    color: Colors.white.withValues(alpha: 0.85),
+                                    fontSize: 12,
+                                    height: 1.35,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
                         const SizedBox(height: 20),
                         TextField(
                           controller: _nameController,
@@ -363,6 +403,67 @@ class _WelcomeProfileSetupScreenState extends State<WelcomeProfileSetupScreen> {
                                   : 'Carpeta personalizada (opcional)',
                               overflow: TextOverflow.ellipsis,
                             ),
+                          ),
+                        ] else ...[
+                          const SizedBox(height: 14),
+                          Row(
+                            children: [
+                              Expanded(
+                                child: TextField(
+                                  controller: _serverUrlController,
+                                  style: const TextStyle(color: Colors.white),
+                                  decoration: InputDecoration(
+                                    labelText:
+                                        'URL del servidor (opcional / personalizado)',
+                                    hintText: 'https://tu-servidor-o-receta.com',
+                                    hintStyle: TextStyle(
+                                      color: Colors.white.withValues(alpha: 0.3),
+                                    ),
+                                    labelStyle:
+                                        const TextStyle(color: Colors.white70),
+                                    prefixIcon: const Icon(Icons.link_rounded,
+                                        color: Colors.white70),
+                                    filled: true,
+                                    fillColor:
+                                        Colors.white.withValues(alpha: 0.06),
+                                    border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(16),
+                                      borderSide: BorderSide(
+                                          color: Colors.white
+                                              .withValues(alpha: 0.15)),
+                                    ),
+                                    enabledBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(16),
+                                      borderSide: BorderSide(
+                                          color: Colors.white
+                                              .withValues(alpha: 0.15)),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              const SizedBox(width: 8),
+                              IconButton.filled(
+                                style: IconButton.styleFrom(
+                                  backgroundColor: const Color(0xFFFF9F1C)
+                                      .withValues(alpha: 0.2),
+                                  padding: const EdgeInsets.all(14),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(16),
+                                  ),
+                                ),
+                                tooltip: 'Escanear QR de servidor',
+                                icon: const Icon(Icons.qr_code_scanner_rounded,
+                                    color: Color(0xFFFF9F1C)),
+                                onPressed: () async {
+                                  final scanned =
+                                      await QrServerScannerDialog.scan(context);
+                                  if (scanned != null && scanned.isNotEmpty) {
+                                    setState(
+                                        () => _serverUrlController.text = scanned);
+                                  }
+                                },
+                              ),
+                            ],
                           ),
                         ],
                         const SizedBox(height: 26),
@@ -423,11 +524,11 @@ class _WelcomeProfileSetupScreenState extends State<WelcomeProfileSetupScreen> {
           _selectedProvider = providerId;
           if (_nameController.text == 'Mi Música' ||
               _nameController.text == 'Música Local' ||
-              _nameController.text == 'eMusic Cloud') {
+              _nameController.text == 'eMusic Cloud' ||
+              _nameController.text == 'Streaming Externo') {
             _nameController.text = _isLocal(providerId)
                 ? 'Música Local'
-                : _providerManager.registrationFor(providerId)?.displayName ??
-                    'Perfil musical';
+                : 'Streaming Externo';
           }
         });
       },

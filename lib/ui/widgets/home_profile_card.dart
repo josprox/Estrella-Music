@@ -4,6 +4,7 @@ import 'package:file_picker/file_picker.dart';
 import 'package:estrella_music/music_provider/music_provider_manager.dart';
 import 'package:estrella_music/profiles/profile_manager.dart';
 import 'package:estrella_music/ui/profiles/profile_switcher.dart';
+import 'package:estrella_music/ui/widgets/qr_server_scanner_dialog.dart';
 
 class HomeProfileCard extends StatelessWidget {
   const HomeProfileCard({super.key});
@@ -72,12 +73,16 @@ class HomeProfileCard extends StatelessWidget {
                       children: [
                         Row(
                           children: [
-                            Text(
-                              active?.name ?? 'Perfil Actual',
-                              style: const TextStyle(
-                                color: Colors.white,
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
+                            Flexible(
+                              child: Text(
+                                active?.name ?? 'Perfil Actual',
+                                style: const TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
                               ),
                             ),
                             const SizedBox(width: 8),
@@ -97,6 +102,8 @@ class HomeProfileCard extends StatelessWidget {
                                   fontWeight: FontWeight.w800,
                                   letterSpacing: 0.5,
                                 ),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
                               ),
                             ),
                           ],
@@ -215,118 +222,194 @@ class HomeProfileCard extends StatelessWidget {
     final providerManager = Get.find<MusicProviderManager>();
     final profileManager = Get.find<ProfileManager>();
     final nameController = TextEditingController();
+    final serverUrlController = TextEditingController();
     var selectedProvider = providerManager.localProviderId;
     String? folder;
 
     showDialog(
       context: context,
       builder: (ctx) => StatefulBuilder(
-        builder: (context, setState) => AlertDialog(
-          backgroundColor: const Color(0xFF0F1E28),
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-          title: const Row(
-            children: [
-              Icon(Icons.person_add_alt_1_rounded, color: Color(0xFFFF9F1C)),
-              SizedBox(width: 10),
-              Text('Crear Perfil Musical',
-                  style: TextStyle(color: Colors.white, fontSize: 18)),
-            ],
-          ),
-          content: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              TextField(
-                controller: nameController,
-                style: const TextStyle(color: Colors.white),
-                decoration: InputDecoration(
-                  labelText: 'Nombre del perfil',
-                  labelStyle: const TextStyle(color: Colors.white70),
-                  filled: true,
-                  fillColor: Colors.white.withValues(alpha: 0.06),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(14),
-                  ),
-                ),
-              ),
-              const SizedBox(height: 14),
-              DropdownButtonFormField<String>(
-                dropdownColor: const Color(0xFF182836),
-                initialValue: selectedProvider,
-                style: const TextStyle(color: Colors.white),
-                decoration: InputDecoration(
-                  labelText: 'Proveedor',
-                  labelStyle: const TextStyle(color: Colors.white70),
-                  filled: true,
-                  fillColor: Colors.white.withValues(alpha: 0.06),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(14),
-                  ),
-                ),
-                items: [
-                  for (final id in providerManager.availableProviderIds)
-                    DropdownMenuItem(
-                      value: id,
-                      child: Text(
-                        providerManager.registrationFor(id)?.displayName ?? id,
-                        style: const TextStyle(color: Colors.white),
+        builder: (context, setState) {
+          final isLocal =
+              providerManager.registrationFor(selectedProvider)?.trust ==
+                  ProviderTrust.local;
+          return AlertDialog(
+            backgroundColor: const Color(0xFF0F1E28),
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+            title: const Row(
+              children: [
+                Icon(Icons.person_add_alt_1_rounded, color: Color(0xFFFF9F1C)),
+                SizedBox(width: 10),
+                Text('Crear Perfil Musical',
+                    style: TextStyle(color: Colors.white, fontSize: 18)),
+              ],
+            ),
+            content: SingleChildScrollView(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  TextField(
+                    controller: nameController,
+                    style: const TextStyle(color: Colors.white),
+                    decoration: InputDecoration(
+                      labelText: 'Nombre del perfil',
+                      labelStyle: const TextStyle(color: Colors.white70),
+                      filled: true,
+                      fillColor: Colors.white.withValues(alpha: 0.06),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(14),
                       ),
                     ),
-                ],
-                onChanged: (val) {
-                  if (val != null) setState(() => selectedProvider = val);
-                },
-              ),
-              if (providerManager.registrationFor(selectedProvider)?.trust ==
-                  ProviderTrust.local) ...[
-                const SizedBox(height: 14),
-                OutlinedButton.icon(
-                  onPressed: () async {
-                    final selected =
-                        await FilePicker.platform.getDirectoryPath();
-                    if (selected != null) {
-                      setState(() => folder = selected);
-                    }
-                  },
-                  style: OutlinedButton.styleFrom(
-                    foregroundColor: Colors.white,
-                    side:
-                        BorderSide(color: Colors.white.withValues(alpha: 0.2)),
                   ),
-                  icon: const Icon(Icons.folder_open_rounded),
-                  label: Text(folder ?? 'Carpeta personalizada (opcional)',
-                      overflow: TextOverflow.ellipsis),
-                ),
-              ],
-            ],
-          ),
-          actions: [
-            TextButton(
-              onPressed: () => Navigator.of(ctx).pop(),
-              child: const Text('Cancelar',
-                  style: TextStyle(color: Colors.white60)),
-            ),
-            FilledButton(
-              style: FilledButton.styleFrom(
-                backgroundColor: const Color(0xFFFF9F1C),
+                  const SizedBox(height: 14),
+                  DropdownButtonFormField<String>(
+                    dropdownColor: const Color(0xFF182836),
+                    initialValue: selectedProvider,
+                    style: const TextStyle(color: Colors.white),
+                    decoration: InputDecoration(
+                      labelText: 'Proveedor',
+                      labelStyle: const TextStyle(color: Colors.white70),
+                      filled: true,
+                      fillColor: Colors.white.withValues(alpha: 0.06),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(14),
+                      ),
+                    ),
+                    items: [
+                      for (final id in providerManager.availableProviderIds)
+                        DropdownMenuItem(
+                          value: id,
+                          child: Text(
+                            providerManager.registrationFor(id)?.displayName ??
+                                id,
+                            style: const TextStyle(color: Colors.white),
+                          ),
+                        ),
+                    ],
+                    onChanged: (val) {
+                      if (val != null) setState(() => selectedProvider = val);
+                    },
+                  ),
+                  if (isLocal) ...[
+                    const SizedBox(height: 14),
+                    OutlinedButton.icon(
+                      onPressed: () async {
+                        final selected =
+                            await FilePicker.platform.getDirectoryPath();
+                        if (selected != null) {
+                          setState(() => folder = selected);
+                        }
+                      },
+                      style: OutlinedButton.styleFrom(
+                        foregroundColor: Colors.white,
+                        side: BorderSide(
+                            color: Colors.white.withValues(alpha: 0.2)),
+                      ),
+                      icon: const Icon(Icons.folder_open_rounded),
+                      label: Text(folder ?? 'Carpeta personalizada (opcional)',
+                          overflow: TextOverflow.ellipsis),
+                    ),
+                  ] else ...[
+                    const SizedBox(height: 14),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: TextField(
+                            controller: serverUrlController,
+                            style: const TextStyle(color: Colors.white),
+                            decoration: InputDecoration(
+                              labelText: 'URL del servidor (opcional)',
+                              hintText: 'https://tu-servidor-o-receta.com',
+                              hintStyle: TextStyle(
+                                  color: Colors.white.withValues(alpha: 0.3)),
+                              labelStyle:
+                                  const TextStyle(color: Colors.white70),
+                              prefixIcon: const Icon(Icons.link_rounded,
+                                  color: Colors.white70),
+                              filled: true,
+                              fillColor: Colors.white.withValues(alpha: 0.06),
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(14),
+                              ),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 8),
+                        IconButton(
+                          style: IconButton.styleFrom(
+                            backgroundColor: const Color(0xFFFF9F1C)
+                                .withValues(alpha: 0.2),
+                            padding: const EdgeInsets.all(12),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(14),
+                            ),
+                          ),
+                          tooltip: 'Escanear QR de servidor',
+                          icon: const Icon(Icons.qr_code_scanner_rounded,
+                              color: Color(0xFFFF9F1C)),
+                          onPressed: () async {
+                            final scanned =
+                                await QrServerScannerDialog.scan(context);
+                            if (scanned != null && scanned.isNotEmpty) {
+                              setState(
+                                  () => serverUrlController.text = scanned);
+                            }
+                          },
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 10),
+                    Container(
+                      padding: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFFF9F1C).withValues(alpha: 0.12),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: const Text(
+                        'Aviso: Las reproducciones externas no nos hacemos responsables de cómo se usen.',
+                        style: TextStyle(
+                          fontSize: 11.5,
+                          color: Color(0xFFFF9F1C),
+                        ),
+                      ),
+                    ),
+                  ],
+                ],
               ),
-              onPressed: () async {
-                final name = nameController.text.trim();
-                Navigator.of(ctx).pop();
-                await profileManager.createProfile(
-                  name: name.isEmpty ? 'Nuevo Perfil' : name,
-                  providerId: selectedProvider,
-                  settings: {
-                    if (folder != null) 'libraryRoots': [folder],
-                  },
-                );
-                await ProfileSwitcher.refreshActiveContext();
-              },
-              child: const Text('Crear y Activar',
-                  style: TextStyle(fontWeight: FontWeight.bold)),
             ),
-          ],
-        ),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.of(ctx).pop(),
+                child: const Text('Cancelar',
+                    style: TextStyle(color: Colors.white60)),
+              ),
+              FilledButton(
+                style: FilledButton.styleFrom(
+                  backgroundColor: const Color(0xFFFF9F1C),
+                ),
+                onPressed: () async {
+                  final name = nameController.text.trim();
+                  final serverUrl = serverUrlController.text.trim();
+                  Navigator.of(ctx).pop();
+                  await profileManager.createProfile(
+                    name: name.isEmpty ? 'Nuevo Perfil' : name,
+                    providerId: selectedProvider,
+                    settings: {
+                      if (folder != null && isLocal) 'libraryRoots': [folder],
+                      if (!isLocal && serverUrl.isNotEmpty)
+                        'serverUrl': serverUrl,
+                    },
+                  );
+                  await ProfileSwitcher.refreshActiveContext();
+                },
+                child: const Text('Crear y Activar',
+                    style: TextStyle(fontWeight: FontWeight.bold)),
+              ),
+            ],
+          );
+        },
       ),
     );
   }
