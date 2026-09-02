@@ -111,9 +111,9 @@ This repository and ecosystem consist of three distinct components:
 
 ---
 
-## 📲 Conectar Servidor de Streaming Externo (QR & URL)
+## 📲 Connect External Streaming Server (QR & URL)
 
-Si deseas conectar el servidor de streaming externo (`https://emusic.joss.red`), puedes escanear este código QR directamente con la cámara de la aplicación o ingresar la URL manualmente:
+To connect the external streaming server (`https://emusic.joss.red`), you can scan this QR code directly using the in-app camera scanner or enter the URL manually:
 
 <div align="center">
 
@@ -123,7 +123,7 @@ Si deseas conectar el servidor de streaming externo (`https://emusic.joss.red`),
 https://emusic.joss.red
 ```
 
-<p><em>En la app: Selecciona <strong>Reproducción de streaming externo</strong> → Toca el botón de <strong>Escanear QR</strong> y enfoca este código.</em></p>
+<p><em>Inside the app: Select <strong>External Streaming Playback</strong> → Tap the <strong>Scan QR</strong> button and point your camera at this code.</em></p>
 
 </div>
 
