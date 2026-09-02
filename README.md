@@ -111,6 +111,24 @@ This repository and ecosystem consist of three distinct components:
 
 ---
 
+## 📲 Conectar Servidor de Streaming Externo (QR & URL)
+
+Si deseas conectar el servidor de streaming externo (`https://emusic.joss.red`), puedes escanear este código QR directamente con la cámara de la aplicación o ingresar la URL manualmente:
+
+<div align="center">
+
+<img src="assets/qr_emusic.png" width="190" height="190" alt="QR EMusic Server" style="border-radius:14px; margin: 12px 0; border: 1px solid rgba(255,255,255,0.15);"/>
+
+```text
+https://emusic.joss.red
+```
+
+<p><em>En la app: Selecciona <strong>Reproducción de streaming externo</strong> → Toca el botón de <strong>Escanear QR</strong> y enfoca este código.</em></p>
+
+</div>
+
+---
+
 ## 📸 Screenshots
 
 <div align="center">
