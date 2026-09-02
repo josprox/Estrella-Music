@@ -1,336 +1,36 @@
 {
   "@@locale": "pl",
-  "home": "Główna",
-  "@home": {
-    "description": "home"
-  },
-  "songs": "Utwory",
-  "@songs": {
-    "description": "songs"
-  },
-  "playlists": "Playlisty",
-  "@playlists": {
-    "description": "playlists"
-  },
-  "albums": "Albumy",
-  "@albums": {
-    "description": "albums"
-  },
-  "artists": "Wykonawcy",
-  "@artists": {
-    "description": "artists"
-  },
-  "settings": "Ustawienia",
-  "@settings": {
-    "description": "settings"
-  },
-  "libAlbums": "Biblioteka Albumów",
-  "@libAlbums": {
-    "description": "libAlbums"
-  },
-  "libArtists": "Biblioteka Wykonawców",
-  "@libArtists": {
-    "description": "libArtists"
-  },
-  "items": "pozycje",
-  "@items": {
-    "description": "items"
-  },
-  "libSongs": "Biblioteka utworów",
-  "@libSongs": {
-    "description": "libSongs"
-  },
-  "libPlaylists": "Biblioteka Playlist",
-  "@libPlaylists": {
-    "description": "libPlaylists"
-  },
-  "networkError1": "Ups, błąd sieci!",
-  "@networkError1": {
-    "description": "networkError1"
-  },
-  "retry": "Spróbuj ponownie!",
-  "@retry": {
-    "description": "retry"
-  },
-  "noOfflineSong": "Brak utworów offline!",
-  "@noOfflineSong": {
-    "description": "noOfflineSong"
-  },
-  "recentlyPlayed": "Ostatnio odtwarzane",
-  "@recentlyPlayed": {
-    "description": "recentlyPlayed"
-  },
-  "favorites": "Ulubione",
-  "@favorites": {
-    "description": "favorites"
-  },
-  "emptyPlaylist": "Playlista jest pusta!",
-  "@emptyPlaylist": {
-    "description": "emptyPlaylist"
-  },
-  "enqueueAll": "Kolejkuj wszystkie",
-  "@enqueueAll": {
-    "description": "enqueueAll"
-  },
-  "renamePlaylist": "Zmień nazwę playlisty",
-  "@renamePlaylist": {
-    "description": "renamePlaylist"
-  },
-  "removePlaylist": "Usuń playlistę",
-  "@removePlaylist": {
-    "description": "removePlaylist"
-  },
   "CreateNewPlaylist": "Utwórz nową playlistę",
   "@CreateNewPlaylist": {
     "description": "CreateNewPlaylist"
   },
-  "create": "Utwórz",
-  "@create": {
-    "description": "create"
+  "Piped": "Piped",
+  "@Piped": {
+    "description": "Piped"
   },
-  "createnAdd": "Utwórz i dodaj",
-  "@createnAdd": {
-    "description": "createnAdd"
+  "about": "O",
+  "@about": {
+    "description": "about"
   },
-  "noBookmarks": "Brak zakładek!",
-  "@noBookmarks": {
-    "description": "noBookmarks"
+  "add5Minutes": "Dodaj 5 minut",
+  "@add5Minutes": {
+    "description": "add5Minutes"
   },
-  "startRadio": "Uruchom radio",
-  "@startRadio": {
-    "description": "startRadio"
+  "addMultipleSongs": "Dodaj utwory do listy odtwarzania",
+  "@addMultipleSongs": {
+    "description": "addMultipleSongs"
   },
-  "playNext": "Odtwórz następny",
-  "@playNext": {
-    "description": "playNext"
+  "addToLibrary": "Dodaj do biblioteki",
+  "@addToLibrary": {
+    "description": "addToLibrary"
   },
   "addToPlaylist": "Dodaj do playlisty",
   "@addToPlaylist": {
     "description": "addToPlaylist"
   },
-  "noLibPlaylist": "Nie masz żadnej playlisty!",
-  "@noLibPlaylist": {
-    "description": "noLibPlaylist"
-  },
-  "enqueueSong": "Dodaj ten utwór do kolejki",
-  "@enqueueSong": {
-    "description": "enqueueSong"
-  },
-  "goToAlbum": "Przejdź do albumu",
-  "@goToAlbum": {
-    "description": "goToAlbum"
-  },
-  "viewArtist": "Zobacz wykonawcę",
-  "@viewArtist": {
-    "description": "viewArtist"
-  },
-  "shareSong": "Udostępnij ten utwór",
-  "@shareSong": {
-    "description": "shareSong"
-  },
-  "removeFromQueue": "Usuń z kolejki",
-  "@removeFromQueue": {
-    "description": "removeFromQueue"
-  },
-  "themeMode": "Motyw",
-  "@themeMode": {
-    "description": "themeMode"
-  },
-  "dynamic": "Dynamiczny",
-  "@dynamic": {
-    "description": "dynamic"
-  },
-  "systemDefault": "Domyślne ustawienia systemowe",
-  "@systemDefault": {
-    "description": "systemDefault"
-  },
-  "dark": "Ciemny",
-  "@dark": {
-    "description": "dark"
-  },
-  "light": "Jasny",
-  "@light": {
-    "description": "light"
-  },
-  "setDiscoverContent": "Wykryj zawartość",
-  "@setDiscoverContent": {
-    "description": "setDiscoverContent"
-  },
-  "quickPics": "Chwytliwe fotki",
-  "@quickPics": {
-    "description": "quickPics"
-  },
-  "discover": "Odkrywaj",
-  "@discover": {
-    "description": "discover"
-  },
-  "topMusicVid": "Najlepsze teledyski",
-  "@topMusicVid": {
-    "description": "topMusicVid"
-  },
-  "basedOnLast": "Na podstawie ostatniej interakcji",
-  "@basedOnLast": {
-    "description": "basedOnLast"
-  },
-  "trending": "Trendy",
-  "@trending": {
-    "description": "trending"
-  },
-  "cacheSongs": "Utwory w pamięci podręcznej",
-  "@cacheSongs": {
-    "description": "cacheSongs"
-  },
-  "skipSilence": "Pomiń ciszę",
-  "@skipSilence": {
-    "description": "skipSilence"
-  },
-  "cacheSongsDes": "Pozwól na pobieranie otwieranych utworów do pamięci podręcznej podczas odtwarzania, aby odtworzyć je w przyszłości. Pliki offline zajmą dodatkowe miejsce w pamięci urządzenia",
-  "@cacheSongsDes": {
-    "description": "cacheSongsDes"
-  },
-  "skipSilenceDes": "Cisza będzie pomijana podczas odtwarzania muzyki",
-  "@skipSilenceDes": {
-    "description": "skipSilenceDes"
-  },
-  "streamingQuality": "Jakość streamingu",
-  "@streamingQuality": {
-    "description": "streamingQuality"
-  },
-  "streamingQualityDes": "Jakość strumienia muzyki",
-  "@streamingQualityDes": {
-    "description": "streamingQualityDes"
-  },
-  "high": "Wysoka",
-  "@high": {
-    "description": "high"
-  },
-  "low": "Niska",
-  "@low": {
-    "description": "low"
-  },
-  "equalizer": "Korektor dźwięku",
-  "@equalizer": {
-    "description": "equalizer"
-  },
-  "ignoreBatOpt": "Zignoruj optymalizację baterii",
-  "@ignoreBatOpt": {
-    "description": "ignoreBatOpt"
-  },
-  "equalizerDes": "Otwórz korektor systemowy",
-  "@equalizerDes": {
-    "description": "equalizerDes"
-  },
-  "ignoreBatOptDes": "Jeśli masz problemy z powiadomieniami lub odtwarzanie zostało zatrzymane przez optymalizację systemu, włącz tę opcję",
-  "@ignoreBatOptDes": {
-    "description": "ignoreBatOptDes"
-  },
-  "status": "Stan",
-  "@status": {
-    "description": "status"
-  },
-  "enabled": "Włączony",
-  "@enabled": {
-    "description": "enabled"
-  },
-  "disabled": "Wyłączony",
-  "@disabled": {
-    "description": "disabled"
-  },
-  "github": "Github",
-  "@github": {
-    "description": "github"
-  },
-  "githubDes": "Zobacz kod źródłowy na Github, \njeśli podoba Ci się ten projekt, nie zapomnij dać ⭐",
-  "@githubDes": {
-    "description": "githubDes"
-  },
-  "by": "autorstwa",
-  "@by": {
-    "description": "by"
-  },
-  "search": "Szukaj",
-  "@search": {
-    "description": "search"
-  },
-  "searchDes": "Utwory, Playlista, Album lub Wykonawca",
-  "@searchDes": {
-    "description": "searchDes"
-  },
-  "searchRes": "Wyniki wyszukiwania",
-  "@searchRes": {
-    "description": "searchRes"
-  },
-  "for1": "dla",
-  "@for1": {
-    "description": "for1"
-  },
-  "videos": "Teledyski",
-  "@videos": {
-    "description": "videos"
-  },
-  "viewAll": "Pokaż wszystko",
-  "@viewAll": {
-    "description": "viewAll"
-  },
-  "results": "Wyniki",
-  "@results": {
-    "description": "results"
-  },
-  "songRemovedfromQueue": "Usunięto z kolejki!",
-  "@songRemovedfromQueue": {
-    "description": "songRemovedfromQueue"
-  },
-  "radioNotAvailable": "Radio niedostępne dla tego wykonawcy!",
-  "@radioNotAvailable": {
-    "description": "radioNotAvailable"
-  },
-  "songRemovedfromQueueCurrSong": "Nie można usunąć aktualnie odtwarzanego utworu",
-  "@songRemovedfromQueueCurrSong": {
-    "description": "songRemovedfromQueueCurrSong"
-  },
-  "songAddedToPlaylistAlert": "Utwór dodano do playlisty!",
-  "@songAddedToPlaylistAlert": {
-    "description": "songAddedToPlaylistAlert"
-  },
-  "songAlreadyExists": "Ten utwór już istnieje!",
-  "@songAlreadyExists": {
-    "description": "songAlreadyExists"
-  },
-  "songEnqueueAlert": "Utwór dodano do kolejki!",
-  "@songEnqueueAlert": {
-    "description": "songEnqueueAlert"
-  },
-  "songRemovedAlert": "Usunięto z",
-  "@songRemovedAlert": {
-    "description": "songRemovedAlert"
-  },
-  "errorOccuredAlert": "Wystąpił błąd!",
-  "@errorOccuredAlert": {
-    "description": "errorOccuredAlert"
-  },
-  "playlistCreatedAlert": "Playlista została utworzona!",
-  "@playlistCreatedAlert": {
-    "description": "playlistCreatedAlert"
-  },
-  "playlistCreatednsongAddedAlert": "Utworzono playlistę i dodano utwór!",
-  "@playlistCreatednsongAddedAlert": {
-    "description": "playlistCreatednsongAddedAlert"
-  },
-  "playlistRenameAlert": "Zmiana nazwy zakończona powodzeniem!",
-  "@playlistRenameAlert": {
-    "description": "playlistRenameAlert"
-  },
-  "playlistRemovedAlert": "Usunięto Playlistę!",
-  "@playlistRemovedAlert": {
-    "description": "playlistRemovedAlert"
-  },
-  "playlistBookmarkAddAlert": "Dodano Playlistę do zakładek!",
-  "@playlistBookmarkAddAlert": {
-    "description": "playlistBookmarkAddAlert"
-  },
-  "playlistBookmarkRemoveAlert": "Usunięto Playlistę z zakładek!",
-  "@playlistBookmarkRemoveAlert": {
-    "description": "playlistBookmarkRemoveAlert"
+  "album": "Album",
+  "@album": {
+    "description": "album"
   },
   "albumBookmarkAddAlert": "Dodano Album do zakładek!",
   "@albumBookmarkAddAlert": {
@@ -340,6 +40,26 @@
   "@albumBookmarkRemoveAlert": {
     "description": "albumBookmarkRemoveAlert"
   },
+  "albums": "Albumy",
+  "@albums": {
+    "description": "albums"
+  },
+  "albumsByTaste": "Według Twoich upodobań",
+  "@albumsByTaste": {
+    "description": "albumsByTaste"
+  },
+  "allFieldsReqMsg": "Wymagane są wszystkie pola",
+  "@allFieldsReqMsg": {
+    "description": "allFieldsReqMsg"
+  },
+  "androidBackupWarning": "Nie przetestowano: Zaznaczenie pola wyboru po pobraniu ponad 60 plików może spowodować zużycie dużej ilości pamięci i awarię telefonu lub aplikacji. Postępujesz na własne ryzyko.",
+  "@androidBackupWarning": {
+    "description": "androidBackupWarning"
+  },
+  "appInfo": "Informacje o aplikacji",
+  "@appInfo": {
+    "description": "appInfo"
+  },
   "artistBookmarkAddAlert": "Dodano Wykonawcę do zakładek!",
   "@artistBookmarkAddAlert": {
     "description": "artistBookmarkAddAlert"
@@ -348,773 +68,57 @@
   "@artistBookmarkRemoveAlert": {
     "description": "artistBookmarkRemoveAlert"
   },
-  "lyricsNotAvailable": "Tekst jest niedostępny!",
-  "@lyricsNotAvailable": {
-    "description": "lyricsNotAvailable"
-  },
   "artistDesNotAvailable": "Opis jest niedostępny!",
   "@artistDesNotAvailable": {
     "description": "artistDesNotAvailable"
   },
-  "newVersionAvailable": "Nowa wersja już dostępna!",
-  "@newVersionAvailable": {
-    "description": "newVersionAvailable"
-  },
-  "dontShowInfoAgain": "Nie pokazuj więcej tej informacji",
-  "@dontShowInfoAgain": {
-    "description": "dontShowInfoAgain"
-  },
-  "dismiss": "Odrzuć",
-  "@dismiss": {
-    "description": "dismiss"
-  },
-  "notaSongVideo": "To nie utwór muzyczny/teledysk!",
-  "@notaSongVideo": {
-    "description": "notaSongVideo"
-  },
-  "notaValidLink": "Nieprawidłowy link!",
-  "@notaValidLink": {
-    "description": "notaValidLink"
-  },
-  "operationFailed": "Operacja zakończyła się niepowodzeniem",
-  "@operationFailed": {
-    "description": "operationFailed"
-  },
-  "link": "Odnośnik",
-  "@link": {
-    "description": "link"
-  },
-  "unLink": "Odłącz",
-  "@unLink": {
-    "description": "unLink"
-  },
-  "local": "Lokalny",
-  "@local": {
-    "description": "local"
-  },
-  "selectAuthIns": "Wybierz instancję do uwierzytelniania",
-  "@selectAuthIns": {
-    "description": "selectAuthIns"
-  },
-  "username": "Nazwa użytkownika",
-  "@username": {
-    "description": "username"
-  },
-  "password": "Hasło",
-  "@password": {
-    "description": "password"
-  },
-  "linkAlert": "Połączono pomyślnie!",
-  "@linkAlert": {
-    "description": "linkAlert"
-  },
-  "unlinkAlert": "Odłączono pomyślnie!",
-  "@unlinkAlert": {
-    "description": "unlinkAlert"
-  },
-  "reset": "Resetuj",
-  "@reset": {
-    "description": "reset"
-  },
-  "resetblacklistedplaylist": "Usuń playlistę z czarnej listy",
-  "@resetblacklistedplaylist": {
-    "description": "resetblacklistedplaylist"
-  },
-  "playlistBlacklistAlert": "Dodaj playlistę do czarnej listy!",
-  "@playlistBlacklistAlert": {
-    "description": "playlistBlacklistAlert"
-  },
-  "cachedOrOffline": "Pamięć podręczna/Oflline",
-  "@cachedOrOffline": {
-    "description": "cachedOrOffline"
-  },
-  "cancel": "Anuluj",
-  "@cancel": {
-    "description": "cancel"
-  },
-  "removeFromCache": "Usuń z pamięci podręcznej",
-  "@removeFromCache": {
-    "description": "removeFromCache"
-  },
-  "goToDownloadPage": "Kliknij tutaj, aby przejść do strony pobierania",
-  "@goToDownloadPage": {
-    "description": "goToDownloadPage"
-  },
-  "nomatch": "Nie znaleziono dopasowania dla",
-  "@nomatch": {
-    "description": "nomatch"
-  },
-  "linkPipedDes": "Link z potokiem dla list odtwarzania",
-  "@linkPipedDes": {
-    "description": "linkPipedDes"
-  },
-  "subscribers": "subskrybentów",
-  "@subscribers": {
-    "description": "subscribers"
-  },
-  "resetblacklistedplaylistDes": "Zresetuj wszystkie potokowane playlisty z czarnej listy",
-  "@resetblacklistedplaylistDes": {
-    "description": "resetblacklistedplaylistDes"
-  },
-  "blacklistPlstResetAlert": "Zresetowano pomyślnie!",
-  "@blacklistPlstResetAlert": {
-    "description": "blacklistPlstResetAlert"
-  },
-  "stopMusicOnTaskClearDes": "Odtwarzanie muzyki zostanie zatrzymane, gdy aplikacja zostanie usunięta z menedżera zadań",
-  "@stopMusicOnTaskClearDes": {
-    "description": "stopMusicOnTaskClearDes"
-  },
-  "stopMusicOnTaskClear": "Zatrzymaj muzykę",
-  "@stopMusicOnTaskClear": {
-    "description": "stopMusicOnTaskClear"
-  },
-  "communityplaylists": "Społecznościowe playlisty",
-  "@communityplaylists": {
-    "description": "communityplaylists"
-  },
-  "languageDes": "Ustaw język aplikacji",
-  "@languageDes": {
-    "description": "languageDes"
-  },
-  "customInsSelectMsg": "Proszę wybierz niestandardową Instancję",
-  "@customInsSelectMsg": {
-    "description": "customInsSelectMsg"
-  },
-  "allFieldsReqMsg": "Wymagane są wszystkie pola",
-  "@allFieldsReqMsg": {
-    "description": "allFieldsReqMsg"
-  },
-  "rename": "Zmień nazwę",
-  "@rename": {
-    "description": "rename"
-  },
-  "selectAuthInsMsg": "Należy wybrać instancję uwierzytelniania!",
-  "@selectAuthInsMsg": {
-    "description": "selectAuthInsMsg"
-  },
-  "customIns": "Niestandardowe wystąpienie",
-  "@customIns": {
-    "description": "customIns"
-  },
-  "Piped": "Piped",
-  "@Piped": {
-    "description": "Piped"
-  },
-  "topmusicvideos": "Najlepsze wideoklipy",
-  "@topmusicvideos": {
-    "description": "topmusicvideos"
-  },
-  "singles": "Single",
-  "@singles": {
-    "description": "singles"
-  },
-  "language": "Język",
-  "@language": {
-    "description": "language"
-  },
-  "hintApiUrl": "API URL do instancji Piped",
-  "@hintApiUrl": {
-    "description": "hintApiUrl"
-  },
-  "removeFromPlaylist": "Usuń z playlistę",
-  "@removeFromPlaylist": {
-    "description": "removeFromPlaylist"
-  },
-  "featuredplaylists": "Polecane playlisty",
-  "@featuredplaylists": {
-    "description": "featuredplaylists"
-  },
-  "quickpicks": "Szybki wybór",
-  "@quickpicks": {
-    "description": "quickpicks"
-  },
-  "downloads": "Pobrania",
-  "@downloads": {
-    "description": "downloads"
-  },
-  "removeFromLib": "Usuń z Biblioteki Utworów",
-  "@removeFromLib": {
-    "description": "removeFromLib"
-  },
-  "downloadingFormat": "Pobierz format pliku",
-  "@downloadingFormat": {
-    "description": "downloadingFormat"
-  },
-  "songAlreadyOfflineAlert": "Utwór jest już offline w pamięci podręcznej",
-  "@songAlreadyOfflineAlert": {
-    "description": "songAlreadyOfflineAlert"
-  },
-  "downloadLocation": "Lokalizacja Pobierania",
-  "@downloadLocation": {
-    "description": "downloadLocation"
-  },
-  "downloadingFormatDes": "Wybierz format pliku do pobrania. „Opus” zapewni najlepszą jakość",
-  "@downloadingFormatDes": {
-    "description": "downloadingFormatDes"
-  },
-  "library": "Biblioteka",
-  "@library": {
-    "description": "library"
-  },
-  "minutes": "minut",
-  "@minutes": {
-    "description": "minutes"
-  },
-  "endOfThisSong": "Koniec tej piosenki",
-  "@endOfThisSong": {
-    "description": "endOfThisSong"
-  },
-  "enableBottomNav": "Dolny pasek nawigacyjny",
-  "@enableBottomNav": {
-    "description": "enableBottomNav"
-  },
-  "enableBottomNavDes": "Przełącz na dolny pasek nawigacyjny",
-  "@enableBottomNavDes": {
-    "description": "enableBottomNavDes"
-  },
-  "syncedLyricsNotAvailable": "Synchronizowanie tekstu nie jest dostępne!",
-  "@syncedLyricsNotAvailable": {
-    "description": "syncedLyricsNotAvailable"
-  },
-  "homeContentCountDes": "Wybierz liczbę treści na ekranie głównym (w przybliżeniu). Mniej zawartości = szybsze ładowanie",
-  "@homeContentCountDes": {
-    "description": "homeContentCountDes"
-  },
-  "plain": "Zwykły",
-  "@plain": {
-    "description": "plain"
-  },
-  "add5Minutes": "Dodaj 5 minut",
-  "@add5Minutes": {
-    "description": "add5Minutes"
-  },
-  "sleepTimer": "Wyłącznik czasowy",
-  "@sleepTimer": {
-    "description": "sleepTimer"
-  },
-  "synced": "Zsynchronizowano",
-  "@synced": {
-    "description": "synced"
-  },
-  "cancelTimerAlert": "Wyłącznik uśpienia anulowany",
-  "@cancelTimerAlert": {
-    "description": "cancelTimerAlert"
-  },
-  "pipedplstSyncAlert": "Zsynchronizowano playlisty z Piped!",
-  "@pipedplstSyncAlert": {
-    "description": "pipedplstSyncAlert"
-  },
-  "cancelTimer": "Anuluj wyłącznik czasowy",
-  "@cancelTimer": {
-    "description": "cancelTimer"
-  },
-  "homeContentCount": "Ilość treści na ekranie głównym",
-  "@homeContentCount": {
-    "description": "homeContentCount"
-  },
-  "sleepTimeSetAlert": "Wyłącznik czasowy jest ustawiony",
-  "@sleepTimeSetAlert": {
-    "description": "sleepTimeSetAlert"
-  },
-  "clearImgCache": "Wyczyść pamięć podręczną obrazów",
-  "@clearImgCache": {
-    "description": "clearImgCache"
-  },
-  "clearImgCacheDes": "Kliknij tutaj, aby wyczyścić zapisane w pamięci podręcznej miniatury/obrazy. (Niezalecane, chyba że chcesz odświeżyć dane obrazów zapisanych w pamięci podręcznej)",
-  "@clearImgCacheDes": {
-    "description": "clearImgCacheDes"
-  },
-  "upNext": "Następne",
-  "@upNext": {
-    "description": "upNext"
-  },
-  "backgroundPlay": "Odtwarzanie muzyki w tle",
-  "@backgroundPlay": {
-    "description": "backgroundPlay"
-  },
-  "backgroundPlayDes": "Włączanie/wyłączanie odtwarzania muzyki w tle (aplikacja jest dostępna z zasobnika systemowego, gdy aplikacja działa w tle)",
-  "@backgroundPlayDes": {
-    "description": "backgroundPlayDes"
-  },
-  "deleteDownloadData": "Usuń z pobranych",
-  "@deleteDownloadData": {
-    "description": "deleteDownloadData"
-  },
-  "deleteDownloadedDataAlert": "Pomyślnie usunięto z pobranych!",
-  "@deleteDownloadedDataAlert": {
-    "description": "deleteDownloadedDataAlert"
-  },
-  "reArrangePlaylist": "Zmień kolejność listy odtwarzania",
-  "@reArrangePlaylist": {
-    "description": "reArrangePlaylist"
-  },
-  "removeMultiple": "Usuń wiele utworów",
-  "@removeMultiple": {
-    "description": "removeMultiple"
-  },
-  "addMultipleSongs": "Dodaj utwory do listy odtwarzania",
-  "@addMultipleSongs": {
-    "description": "addMultipleSongs"
-  },
-  "restoreLastPlaybackSession": "Przywróć ostatnią sesję odtwarzania",
-  "@restoreLastPlaybackSession": {
-    "description": "restoreLastPlaybackSession"
-  },
-  "restoreLastPlaybackSessionDes": "Automatyczne przywracanie ostatniej sesji odtwarzania po uruchomieniu aplikacji",
-  "@restoreLastPlaybackSessionDes": {
-    "description": "restoreLastPlaybackSessionDes"
-  },
-  "cacheHomeScreenData": "Pamięć podręczna danych zawartości ekranu głównego",
-  "@cacheHomeScreenData": {
-    "description": "cacheHomeScreenData"
-  },
-  "cacheHomeScreenDataDes": "Włącz buforowanie danych zawartości ekranu głównego, ekran główny załaduje się natychmiast, jeśli ta opcja jest włączona",
-  "@cacheHomeScreenDataDes": {
-    "description": "cacheHomeScreenDataDes"
-  },
-  "exportDowloadedFiles": "Eksportuj pobrane pliki",
-  "@exportDowloadedFiles": {
-    "description": "exportDowloadedFiles"
-  },
-  "exportDowloadedFilesDes": "Kliknij tutaj, aby wyeksportować pobrany plik z katalogu inApp do zewnętrznego katalogu",
-  "@exportDowloadedFilesDes": {
-    "description": "exportDowloadedFilesDes"
-  },
-  "exportedFileLocation": "Lokalizacja eksportu pobranego pliku",
-  "@exportedFileLocation": {
-    "description": "exportedFileLocation"
-  },
-  "export": "Eksportuj",
-  "@export": {
-    "description": "export"
-  },
-  "close": "Zamknąć",
-  "@close": {
-    "description": "close"
-  },
-  "exportMsg": "Pliki zostały pomyślnie wyeksportowane",
-  "@exportMsg": {
-    "description": "exportMsg"
-  },
-  "clearImgCacheAlert": "Pomyślnie wyczyszczono pamięć podręczną obrazów",
-  "@clearImgCacheAlert": {
-    "description": "clearImgCacheAlert"
-  },
-  "disableTransitionAnimation": "Wyłącz animację przejścia",
-  "@disableTransitionAnimation": {
-    "description": "disableTransitionAnimation"
-  },
-  "disableTransitionAnimationDes": "Włącz tę opcję, aby wyłączyć animację przejścia między kartami",
-  "@disableTransitionAnimationDes": {
-    "description": "disableTransitionAnimationDes"
-  },
-  "exporting": "Eksportowanie...",
-  "@exporting": {
-    "description": "exporting"
-  },
-  "scanning": "Skanowanie...",
-  "@scanning": {
-    "description": "scanning"
-  },
-  "downFilesFound": "znaleziono pobrane pliki",
-  "@downFilesFound": {
-    "description": "downFilesFound"
-  },
-  "openIn": "Otwórz w",
-  "@openIn": {
-    "description": "openIn"
-  },
-  "backupSettingsAndPlaylists": "Kopia zapasowa ustawień i list odtwarzania",
-  "@backupSettingsAndPlaylists": {
-    "description": "backupSettingsAndPlaylists"
-  },
-  "backupSettingsAndPlaylistsDes": "Zapisuje wszystkie ustawienia, listy odtwarzania i dane logowania w pliku kopii zapasowej",
-  "@backupSettingsAndPlaylistsDes": {
-    "description": "backupSettingsAndPlaylistsDes"
-  },
-  "restoreSettingsAndPlaylistsDes": "Przywraca wszystkie ustawienia, dane logowania i listy odtwarzania z pliku kopii zapasowej. Nadpisuje wszystkie bieżące dane",
-  "@restoreSettingsAndPlaylistsDes": {
-    "description": "restoreSettingsAndPlaylistsDes"
-  },
-  "backFilesFound": "znalezione bazy danych",
-  "@backFilesFound": {
-    "description": "backFilesFound"
-  },
-  "restoreSettingsAndPlaylists": "Przywracanie ustawień i list odtwarzania",
-  "@restoreSettingsAndPlaylists": {
-    "description": "restoreSettingsAndPlaylists"
-  },
-  "backupMsg": "Kopia zapasowa została pomyślnie zapisana!",
-  "@backupMsg": {
-    "description": "backupMsg"
-  },
-  "restoreMsg": "Przywrócenie powiodło się!\nZmiany zostaną zastosowane po ponownym uruchomieniu",
-  "@restoreMsg": {
-    "description": "restoreMsg"
-  },
-  "restoring": "Przywracanie...",
-  "@restoring": {
-    "description": "restoring"
-  },
-  "restore": "Przywracanie",
-  "@restore": {
-    "description": "restore"
-  },
-  "closeApp": "Zamknij aplikację",
-  "@closeApp": {
-    "description": "closeApp"
-  },
-  "letsStrart": "Zaczynajmy...",
-  "@letsStrart": {
-    "description": "letsStrart"
-  },
-  "processFiles": "Przetwarzanie plików...",
-  "@processFiles": {
-    "description": "processFiles"
-  },
-  "includeDownloadedFiles": "Dołącz pliki z pobranymi utworami",
-  "@includeDownloadedFiles": {
-    "description": "includeDownloadedFiles"
-  },
-  "backupInProgress": "Trwa tworzenie kopii zapasowej...",
-  "@backupInProgress": {
-    "description": "backupInProgress"
-  },
-  "restoreAppData": "Przywracanie danych aplikacji",
-  "@restoreAppData": {
-    "description": "restoreAppData"
-  },
-  "restartApp": "Restart aplikacji",
-  "@restartApp": {
-    "description": "restartApp"
-  },
-  "backupAppData": "Kopia zapasowa danych aplikacji",
-  "@backupAppData": {
-    "description": "backupAppData"
-  },
-  "backup": "Kopia zapasowa",
-  "@backup": {
-    "description": "backup"
-  },
-  "queueShufflingDeniedMsg": "Nie można zmienić kolejności kolejki, gdy włączony jest tryb losowy",
-  "@queueShufflingDeniedMsg": {
-    "description": "queueShufflingDeniedMsg"
-  },
-  "songNotPlayable": "Nie można odtworzyć utworu z powodu ograniczeń serwera!",
-  "@songNotPlayable": {
-    "description": "songNotPlayable"
-  },
-  "queuerearrangingDeniedMsg": "Nie można zmienić kolejności kolejki, gdy włączony jest tryb losowy",
-  "@queuerearrangingDeniedMsg": {
-    "description": "queuerearrangingDeniedMsg"
-  },
-  "shuffleQueue": "Przetasuj kolejkę",
-  "@shuffleQueue": {
-    "description": "shuffleQueue"
-  },
-  "queueLoop": "Pętla kolejki",
-  "@queueLoop": {
-    "description": "queueLoop"
-  },
-  "queueLoopNotDisMsg1": "Trybu pętli kolejki nie można wyłączyć, gdy włączony jest tryb losowy.",
-  "@queueLoopNotDisMsg1": {
-    "description": "queueLoopNotDisMsg1"
-  },
-  "musicAndPlayback": "Muzyka i Odtwarzanie",
-  "@musicAndPlayback": {
-    "description": "musicAndPlayback"
-  },
-  "content": "Zawartość",
-  "@content": {
-    "description": "content"
-  },
-  "personalisation": "Personalizacja",
-  "@personalisation": {
-    "description": "personalisation"
-  },
-  "autoDownFavSong": "Automatyczne pobieranie ulubionych utworów",
-  "@autoDownFavSong": {
-    "description": "autoDownFavSong"
-  },
-  "loudnessNormalization": "Normalizacja głośności",
-  "@loudnessNormalization": {
-    "description": "loudnessNormalization"
-  },
-  "autoDownFavSongDes": "Automatyczne pobieranie ulubionych utworów po dodaniu ich do ulubionych",
-  "@autoDownFavSongDes": {
-    "description": "autoDownFavSongDes"
-  },
-  "loudnessNormalizationDes": "Ustawia ten sam poziom głośności dla wszystkich utworów (eksperymentalne) (nie działa z utworami pobranymi w poprzedniej wersji (< v1.10.0))",
-  "@loudnessNormalizationDes": {
-    "description": "loudnessNormalizationDes"
-  },
-  "title": "Tytuł",
-  "@title": {
-    "description": "title"
-  },
-  "id": "Id",
-  "@id": {
-    "description": "id"
-  },
-  "songInfo": "Informacje o utworze",
-  "@songInfo": {
-    "description": "songInfo"
-  },
-  "androidBackupWarning": "Nie przetestowano: Zaznaczenie pola wyboru po pobraniu ponad 60 plików może spowodować zużycie dużej ilości pamięci i awarię telefonu lub aplikacji. Postępujesz na własne ryzyko.",
-  "@androidBackupWarning": {
-    "description": "androidBackupWarning"
-  },
-  "gesture": "Gesty",
-  "@gesture": {
-    "description": "gesture"
-  },
-  "appInfo": "Informacje o aplikacji",
-  "@appInfo": {
-    "description": "appInfo"
-  },
-  "download": "Pobierz",
-  "@download": {
-    "description": "download"
-  },
-  "networkError": "Błąd sieci! Sprawdź połączenie sieciowe.",
-  "@networkError": {
-    "description": "networkError"
-  },
-  "downloadError2": "Żądany utwór nie może zostać pobrany z powodu ograniczeń serwera. Możesz spróbować ponownie",
-  "@downloadError2": {
-    "description": "downloadError2"
-  },
-  "downloadError3": "Pobieranie nie powiodło się z powodu błędu sieci/strumienia! Spróbuj ponownie",
-  "@downloadError3": {
-    "description": "downloadError3"
-  },
-  "duration": "Czas trwania",
-  "@duration": {
-    "description": "duration"
+  "artists": "Wykonawcy",
+  "@artists": {
+    "description": "artists"
+  },
+  "artistsByTaste": "Według Twoich upodobań",
+  "@artistsByTaste": {
+    "description": "artistsByTaste"
   },
   "audioCodec": "Kodek dźwięku",
   "@audioCodec": {
     "description": "audioCodec"
   },
-  "playerUiDes": "Wybierz interfejs użytkownika odtwarzacza",
-  "@playerUiDes": {
-    "description": "playerUiDes"
+  "auth_2fa_code": "Kod uwierzytelniający",
+  "@auth_2fa_code": {
+    "description": "auth_2fa_code"
   },
-  "standard": "Standard",
-  "@standard": {
-    "description": "standard"
+  "auth_2fa_invalid": "Wprowadź ważny 6-cyfrowy kod lub zaloguj się ponownie.",
+  "@auth_2fa_invalid": {
+    "description": "auth_2fa_invalid"
   },
-  "urlSearchDes": "Wykryty adres URL - kliknij go, aby otworzyć/odtworzyć powiązaną zawartość",
-  "@urlSearchDes": {
-    "description": "urlSearchDes"
+  "auth_2fa_subtitle": "Wprowadź 6-cyfrowy kod z aplikacji uwierzytelniającej. Dostęp ten wygasa za 5 minut.",
+  "@auth_2fa_subtitle": {
+    "description": "auth_2fa_subtitle"
   },
-  "queueLoopNotDisMsg2": "Tryb pętli kolejki nie może być włączony w trybie radiowym.",
-  "@queueLoopNotDisMsg2": {
-    "description": "queueLoopNotDisMsg2"
+  "auth_2fa_title": "Uwierzytelnianie dwuskładnikowe",
+  "@auth_2fa_title": {
+    "description": "auth_2fa_title"
   },
-  "enableSlidableAction": "Włącz przesuwalne akcje",
-  "@enableSlidableAction": {
-    "description": "enableSlidableAction"
+  "auth_2fa_verify": "Sprawdź i kontynuuj",
+  "@auth_2fa_verify": {
+    "description": "auth_2fa_verify"
   },
-  "enableSlidableActionDes": "Włącz przesuwalne akcje na kafelku utworu",
-  "@enableSlidableActionDes": {
-    "description": "enableSlidableActionDes"
+  "auth_agree_personal_data": "Akceptuj moje dane...",
+  "@auth_agree_personal_data": {
+    "description": "auth_agree_personal_data"
   },
-  "bitrate": "Szybkość transmisji",
-  "@bitrate": {
-    "description": "bitrate"
+  "auth_brand_description_1": "Przynieśliśmy logowanie, rejestrację i odzyskiwanie hasła z poprzedniego projektu, dostosowane do tej aplikacji muzycznej.",
+  "@auth_brand_description_1": {
+    "description": "auth_brand_description_1"
   },
-  "playerUi": "Interfejs użytkownika gracza",
-  "@playerUi": {
-    "description": "playerUi"
+  "auth_brand_description_2": "Twoja sesja jest przechowywana w bezpiecznym magazynie i jest sprawdzana przy użyciu tego samego backendu, którego już używałeś.",
+  "@auth_brand_description_2": {
+    "description": "auth_brand_description_2"
   },
-  "playnextMsg": "Nadchodzące",
-  "@playnextMsg": {
-    "description": "playnextMsg"
-  },
-  "loudnessDb": "GłośnośćDb",
-  "@loudnessDb": {
-    "description": "loudnessDb"
-  },
-  "misc": "Różne",
-  "@misc": {
-    "description": "misc"
-  },
-  "resetToDefault": "Przywracanie ustawień domyślnych",
-  "@resetToDefault": {
-    "description": "resetToDefault"
-  },
-  "resetToDefaultDes": "Przywróć domyślne ustawienia aplikacji (wymagane ponowne uruchomienie)",
-  "@resetToDefaultDes": {
-    "description": "resetToDefaultDes"
-  },
-  "resetToDefaultMsg": "Przywracanie ustawień domyślnych zakończone, uruchom ponownie aplikację",
-  "@resetToDefaultMsg": {
-    "description": "resetToDefaultMsg"
-  },
-  "autoOpenPlayer": "Automatyczne otwieranie ekranu odtwarzacza",
-  "@autoOpenPlayer": {
-    "description": "autoOpenPlayer"
-  },
-  "album": "Album",
-  "@album": {
-    "description": "album"
-  },
-  "playingfromAlbum": "ODTWARZANIE Z ALBUMU",
-  "@playingfromAlbum": {
-    "description": "playingfromAlbum"
-  },
-  "playingfromPlaylist": "ODTWARZANIE Z PLAYLISTY",
-  "@playingfromPlaylist": {
-    "description": "playingfromPlaylist"
-  },
-  "playingfromSelection": "ODTWARZANIE Z WYBRANEGO ZESTAWU",
-  "@playingfromSelection": {
-    "description": "playingfromSelection"
-  },
-  "playingfromArtist": "ODTWARZANIE WG. ARTYSTY",
-  "@playingfromArtist": {
-    "description": "playingfromArtist"
-  },
-  "randomSelection": "Wybór losowy",
-  "@randomSelection": {
-    "description": "randomSelection"
-  },
-  "randomRadio": "Losowe Radio",
-  "@randomRadio": {
-    "description": "randomRadio"
-  },
-  "autoOpenPlayerDes": "Włączenie/wyłączenie automatycznego otwierania odtwarzacza na pełnym ekranie po wybraniu utworu do odtwarzania",
-  "@autoOpenPlayerDes": {
-    "description": "autoOpenPlayerDes"
-  },
-  "reArrangeSongs": "Zmień kolejność utworów",
-  "@reArrangeSongs": {
-    "description": "reArrangeSongs"
-  },
-  "selectSongs": "Wybierz utwory",
-  "@selectSongs": {
-    "description": "selectSongs"
-  },
-  "selectAll": "Zaznacz wszystko",
-  "@selectAll": {
-    "description": "selectAll"
-  },
-  "exportPlaylist": "Eksportuj listę odtwarzania",
-  "@exportPlaylist": {
-    "description": "exportPlaylist"
-  },
-  "exportingPlaylist": "Eksportowanie listy odtwarzania…",
-  "@exportingPlaylist": {
-    "description": "exportingPlaylist"
-  },
-  "exportError": "Błąd podczas eksportowania listy odtwarzania",
-  "@exportError": {
-    "description": "exportError"
-  },
-  "exportErrorPermission": "Odmowa dostępu podczas eksportowania",
-  "@exportErrorPermission": {
-    "description": "exportErrorPermission"
-  },
-  "exportErrorStorage": "Za mało wolnego miejsca na dysku",
-  "@exportErrorStorage": {
-    "description": "exportErrorStorage"
-  },
-  "exportErrorFormat": "Błąd formatowania danych listy odtwarzania",
-  "@exportErrorFormat": {
-    "description": "exportErrorFormat"
-  },
-  "importPlaylist": "Importuj listę odtwarzania",
-  "@importPlaylist": {
-    "description": "importPlaylist"
-  },
-  "importingPlaylist": "Importowanie listy odtwarzania…",
-  "@importingPlaylist": {
-    "description": "importingPlaylist"
-  },
-  "selectFile": "Wybierz plik",
-  "@selectFile": {
-    "description": "selectFile"
-  },
-  "playlistImportedMsg": "Lista odtwarzania została pomyślnie zaimportowana",
-  "@playlistImportedMsg": {
-    "description": "playlistImportedMsg"
-  },
-  "importErrorFileAccess": "Nie udało się uzyskać dostępu do wybranego pliku",
-  "@importErrorFileAccess": {
-    "description": "importErrorFileAccess"
-  },
-  "importErrorFormat": "Nieprawidłowy format pliku",
-  "@importErrorFormat": {
-    "description": "importErrorFormat"
-  },
-  "invalidPlaylistFile": "Nieprawidłowa struktura pliku listy odtwarzania",
-  "@invalidPlaylistFile": {
-    "description": "invalidPlaylistFile"
-  },
-  "importErrorDatabase": "Błąd podczas zapisywania do bazy danych",
-  "@importErrorDatabase": {
-    "description": "importErrorDatabase"
-  },
-  "fileNotFound": "Plik nie został znaleziony",
-  "@fileNotFound": {
-    "description": "fileNotFound"
-  },
-  "importLargeFileNote": "Uwaga: import dużych list odtwarzania może potrwać dłużej",
-  "@importLargeFileNote": {
-    "description": "importLargeFileNote"
-  },
-  "importPlaylistDesc": "Wybierz wcześniej wyeksportowany plik playlisty w formacie JSON do zaimportowania",
-  "@importPlaylistDesc": {
-    "description": "importPlaylistDesc"
-  },
-  "playlistExportedMsg": "Lista odtwarzania została pomyślnie wyeksportowana do",
-  "@playlistExportedMsg": {
-    "description": "playlistExportedMsg"
-  },
-  "importError": "Błąd podczas importowania listy odtwarzania",
-  "@importError": {
-    "description": "importError"
-  },
-  "keepScreenOnWhilePlaying": "Utrzymuj ekran włączony podczas odtwarzania",
-  "@keepScreenOnWhilePlaying": {
-    "description": "keepScreenOnWhilePlaying"
-  },
-  "keepScreenOnWhilePlayingDes": "Jeśli włączone, ekran urządzenia pozostanie włączony podczas odtwarzania muzyki",
-  "@keepScreenOnWhilePlayingDes": {
-    "description": "keepScreenOnWhilePlayingDes"
-  },
-  "auth_login_success": "Zalogowano się pomyślnie",
-  "@auth_login_success": {
-    "description": "auth_login_success"
-  },
-  "settings_cloud_backup": "Kopia zapasowa w chmurze",
-  "@settings_cloud_backup": {
-    "description": "settings_cloud_backup"
-  },
-  "settings_migration_title": "Przeprowadź migrację z Joss Music Kotlin",
-  "@settings_migration_title": {
-    "description": "settings_migration_title"
-  },
-  "backup_confirm_question": "Czy chcesz wykonać kopię zapasową?",
-  "@backup_confirm_question": {
-    "description": "backup_confirm_question"
-  },
-  "backup_selection_prompt": "Wybierz, które dane chcesz wykonać w kopii zapasowej",
-  "@backup_selection_prompt": {
-    "description": "backup_selection_prompt"
-  },
-  "search_recent_title": "Ostatnie wyszukiwania",
-  "@search_recent_title": {
-    "description": "search_recent_title"
-  },
-  "back": "Powrót",
-  "@back": {
-    "description": "back"
-  },
-  "auth_forgot_password": "Zapomniałem hasła",
-  "@auth_forgot_password": {
-    "description": "auth_forgot_password"
+  "auth_brand_not_configured": "Aby połączyć moduł uwierzytelniania, należy skonfigurować plik .env.",
+  "@auth_brand_not_configured": {
+    "description": "auth_brand_not_configured"
   },
   "auth_btn_login": "Login",
   "@auth_btn_login": {
@@ -1124,53 +128,141 @@
   "@auth_btn_register": {
     "description": "auth_btn_register"
   },
-  "email": "E-mail",
-  "@email": {
-    "description": "email"
-  },
-  "password_text": "Hasło",
-  "@password_text": {
-    "description": "Contraseña texto traducido"
+  "auth_btn_send_email": "Wyślij pocztę",
+  "@auth_btn_send_email": {
+    "description": "auth_btn_send_email"
   },
   "auth_confirm_password": "Potwierdź hasło",
   "@auth_confirm_password": {
     "description": "auth_confirm_password"
   },
-  "auth_welcome_title": "Witamy w Estrella Music",
-  "@auth_welcome_title": {
-    "description": "auth_welcome_title"
+  "auth_error_invalid_credentials": "Nieprawidłowy adres e-mail lub hasło.",
+  "@auth_error_invalid_credentials": {
+    "description": "auth_error_invalid_credentials"
   },
-  "auth_welcome_subtitle": "Witamy w Estrella Music",
-  "@auth_welcome_subtitle": {
-    "description": "auth_welcome_subtitle"
+  "auth_error_invalid_email": "Wpisz prawidłowy adres e-mail.",
+  "@auth_error_invalid_email": {
+    "description": "auth_error_invalid_email"
+  },
+  "auth_error_not_configured": "Brakuje modułu uwierzytelniania do skonfigurowania w pliku .env.",
+  "@auth_error_not_configured": {
+    "description": "auth_error_not_configured"
+  },
+  "auth_error_not_verified": "Twoje konto nie zostało jeszcze zweryfikowane.",
+  "@auth_error_not_verified": {
+    "description": "auth_error_not_verified"
+  },
+  "auth_error_unknown": "Nie udało się dokończyć operacji.",
+  "@auth_error_unknown": {
+    "description": "auth_error_unknown"
   },
   "auth_first_name": "Imię",
   "@auth_first_name": {
     "description": "auth_first_name"
   },
+  "auth_forgot_password": "Zapomniałem hasła",
+  "@auth_forgot_password": {
+    "description": "auth_forgot_password"
+  },
+  "auth_forgot_password_subtitle": "Wyślemy Ci instrukcje na adres e-mail Twojego konta.",
+  "@auth_forgot_password_subtitle": {
+    "description": "auth_forgot_password_subtitle"
+  },
+  "auth_hint_email": "nazwa@mail.com",
+  "@auth_hint_email": {
+    "description": "auth_hint_email"
+  },
   "auth_last_name": "Nazwisko",
   "@auth_last_name": {
     "description": "auth_last_name"
   },
-  "auth_agree_personal_data": "Akceptuj moje dane...",
-  "@auth_agree_personal_data": {
-    "description": "auth_agree_personal_data"
+  "auth_login_success": "Zalogowano się pomyślnie",
+  "@auth_login_success": {
+    "description": "auth_login_success"
   },
-  "settings_general_section": "Ogólny",
-  "@settings_general_section": {
-    "description": "settings_general_section"
+  "auth_recovery_email_error": "Nie można było wysłać e-maila.",
+  "@auth_recovery_email_error": {
+    "description": "auth_recovery_email_error"
   },
-  "settings_logout": "Wyloguj się",
-  "@settings_logout": {
-    "description": "settings_logout"
+  "auth_recovery_email_sent": "E-mail wysłany.",
+  "@auth_recovery_email_sent": {
+    "description": "auth_recovery_email_sent"
   },
-  "settings_cloud_backup_desc": "Przesyłaj, przywracaj i zarządzaj...",
-  "@settings_cloud_backup_desc": {
-    "description": "settings_cloud_backup_desc"
+  "auth_register_error": "Nie udało się utworzyć konta.",
+  "@auth_register_error": {
+    "description": "auth_register_error"
   },
-  "settings_migration_desc": "Importuj playlisty, utwory...",
-  "@settings_migration_desc": {
-    "description": "settings_migration_desc"
+  "auth_register_success": "Konto utworzone pomyślnie.",
+  "@auth_register_success": {
+    "description": "auth_register_success"
+  },
+  "auth_welcome_subtitle": "Witamy w Estrella Music",
+  "@auth_welcome_subtitle": {
+    "description": "auth_welcome_subtitle"
+  },
+  "auth_welcome_title": "Witamy w Estrella Music",
+  "@auth_welcome_title": {
+    "description": "auth_welcome_title"
+  },
+  "autoDownFavSong": "Automatyczne pobieranie ulubionych utworów",
+  "@autoDownFavSong": {
+    "description": "autoDownFavSong"
+  },
+  "autoDownFavSongDes": "Automatyczne pobieranie ulubionych utworów po dodaniu ich do ulubionych",
+  "@autoDownFavSongDes": {
+    "description": "autoDownFavSongDes"
+  },
+  "autoOpenPlayer": "Automatyczne otwieranie ekranu odtwarzacza",
+  "@autoOpenPlayer": {
+    "description": "autoOpenPlayer"
+  },
+  "autoOpenPlayerDes": "Włączenie/wyłączenie automatycznego otwierania odtwarzacza na pełnym ekranie po wybraniu utworu do odtwarzania",
+  "@autoOpenPlayerDes": {
+    "description": "autoOpenPlayerDes"
+  },
+  "back": "Powrót",
+  "@back": {
+    "description": "back"
+  },
+  "backFilesFound": "znalezione bazy danych",
+  "@backFilesFound": {
+    "description": "backFilesFound"
+  },
+  "backgroundPlay": "Odtwarzanie muzyki w tle",
+  "@backgroundPlay": {
+    "description": "backgroundPlay"
+  },
+  "backgroundPlayDes": "Włączanie/wyłączanie odtwarzania muzyki w tle (aplikacja jest dostępna z zasobnika systemowego, gdy aplikacja działa w tle)",
+  "@backgroundPlayDes": {
+    "description": "backgroundPlayDes"
+  },
+  "backup": "Kopia zapasowa",
+  "@backup": {
+    "description": "backup"
+  },
+  "backupAppData": "Kopia zapasowa danych aplikacji",
+  "@backupAppData": {
+    "description": "backupAppData"
+  },
+  "backupInProgress": "Trwa tworzenie kopii zapasowej...",
+  "@backupInProgress": {
+    "description": "backupInProgress"
+  },
+  "backupMsg": "Kopia zapasowa została pomyślnie zapisana!",
+  "@backupMsg": {
+    "description": "backupMsg"
+  },
+  "backupSettingsAndPlaylists": "Kopia zapasowa ustawień i list odtwarzania",
+  "@backupSettingsAndPlaylists": {
+    "description": "backupSettingsAndPlaylists"
+  },
+  "backupSettingsAndPlaylistsDes": "Zapisuje wszystkie ustawienia, listy odtwarzania i dane logowania w pliku kopii zapasowej",
+  "@backupSettingsAndPlaylistsDes": {
+    "description": "backupSettingsAndPlaylistsDes"
+  },
+  "backup_auth_required": "Potrzebujesz aktywnej sesji...",
+  "@backup_auth_required": {
+    "description": "backup_auth_required"
   },
   "backup_btn_restart": "Uruchom ponownie aplikację",
   "@backup_btn_restart": {
@@ -1180,217 +272,117 @@
   "@backup_btn_upload": {
     "description": "backup_btn_upload"
   },
-  "backup_no_backups": "Nie ma jeszcze żadnych kopii zapasowych...",
-  "@backup_no_backups": {
-    "description": "backup_no_backups"
-  },
-  "backup_auth_required": "Potrzebujesz aktywnej sesji...",
-  "@backup_auth_required": {
-    "description": "backup_auth_required"
-  },
-  "backup_upload_success": "Kopia zapasowa przesłana poprawnie.",
-  "@backup_upload_success": {
-    "description": "backup_upload_success"
-  },
-  "backup_restore_success": "Kopia zapasowa przywrócona. Uruchom ponownie aplikację.",
-  "@backup_restore_success": {
-    "description": "backup_restore_success"
+  "backup_confirm_question": "Czy chcesz wykonać kopię zapasową?",
+  "@backup_confirm_question": {
+    "description": "backup_confirm_question"
   },
   "backup_delete_success": "Kopia zapasowa została usunięta.",
   "@backup_delete_success": {
     "description": "backup_delete_success"
   },
-  "genre_pop": "Muzyka pop",
-  "@genre_pop": {
-    "description": "genre_pop"
+  "backup_no_backups": "Nie ma jeszcze żadnych kopii zapasowych...",
+  "@backup_no_backups": {
+    "description": "backup_no_backups"
   },
-  "genre_rock": "Głaz",
-  "@genre_rock": {
-    "description": "genre_rock"
+  "backup_restore_success": "Kopia zapasowa przywrócona. Uruchom ponownie aplikację.",
+  "@backup_restore_success": {
+    "description": "backup_restore_success"
   },
-  "genre_hiphop": "hip-hop",
-  "@genre_hiphop": {
-    "description": "genre_hiphop"
+  "backup_select_folder_dialog": "Wybierz folder do utworzenia kopii zapasowej",
+  "@backup_select_folder_dialog": {
+    "description": "backup_select_folder_dialog"
   },
-  "genre_electronic": "Elektronika",
-  "@genre_electronic": {
-    "description": "genre_electronic"
+  "backup_selection_prompt": "Wybierz, które dane chcesz wykonać w kopii zapasowej",
+  "@backup_selection_prompt": {
+    "description": "backup_selection_prompt"
   },
-  "genre_jazz": "Jazz",
-  "@genre_jazz": {
-    "description": "genre_jazz"
+  "backup_upload_success": "Kopia zapasowa przesłana poprawnie.",
+  "@backup_upload_success": {
+    "description": "backup_upload_success"
   },
-  "genre_latin": "łacina",
-  "@genre_latin": {
-    "description": "genre_latin"
+  "basedOnLast": "Na podstawie ostatniej interakcji",
+  "@basedOnLast": {
+    "description": "basedOnLast"
   },
-  "migration_btn_select": "Wybierz plik i zaimportuj",
-  "@migration_btn_select": {
-    "description": "migration_btn_select"
+  "bitrate": "Szybkość transmisji",
+  "@bitrate": {
+    "description": "bitrate"
   },
-  "forgottenFavorites": "zapomniane ulubione",
-  "@forgottenFavorites": {
-    "description": "forgottenFavorites"
+  "blacklistPipedPlaylist": "Czarna lista playlist",
+  "@blacklistPipedPlaylist": {
+    "description": "blacklistPipedPlaylist"
   },
-  "mostListenedSong": "Najczęściej słuchana piosenka",
-  "@mostListenedSong": {
-    "description": "mostListenedSong"
+  "blacklistPlstResetAlert": "Zresetowano pomyślnie!",
+  "@blacklistPlstResetAlert": {
+    "description": "blacklistPlstResetAlert"
   },
-  "reproducedBy": "Reprodukowane przez",
-  "@reproducedBy": {
-    "description": "reproducedBy"
+  "by": "autorstwa",
+  "@by": {
+    "description": "by"
   },
-  "recentSearches": "Ostatnie wyszukiwania",
-  "@recentSearches": {
-    "description": "recentSearches"
+  "cacheHomeScreenData": "Pamięć podręczna danych zawartości ekranu głównego",
+  "@cacheHomeScreenData": {
+    "description": "cacheHomeScreenData"
   },
-  "popularTracks": "Popularne utwory",
-  "@popularTracks": {
-    "description": "popularTracks"
+  "cacheHomeScreenDataDes": "Włącz buforowanie danych zawartości ekranu głównego, ekran główny załaduje się natychmiast, jeśli ta opcja jest włączona",
+  "@cacheHomeScreenDataDes": {
+    "description": "cacheHomeScreenDataDes"
   },
-  "latestRelease": "Najnowsze wydanie",
-  "@latestRelease": {
-    "description": "latestRelease"
+  "cacheSongs": "Utwory w pamięci podręcznej",
+  "@cacheSongs": {
+    "description": "cacheSongs"
   },
-  "follow": "Kontynuować",
-  "@follow": {
-    "description": "follow"
+  "cacheSongsDes": "Pozwól na pobieranie otwieranych utworów do pamięci podręcznej podczas odtwarzania, aby odtworzyć je w przyszłości. Pliki offline zajmą dodatkowe miejsce w pamięci urządzenia",
+  "@cacheSongsDes": {
+    "description": "cacheSongsDes"
   },
-  "following": "Następny",
-  "@following": {
-    "description": "following"
+  "cachedOrOffline": "Pamięć podręczna/Oflline",
+  "@cachedOrOffline": {
+    "description": "cachedOrOffline"
   },
-  "listenNow": "Posłuchaj teraz",
-  "@listenNow": {
-    "description": "listenNow"
+  "cancel": "Anuluj",
+  "@cancel": {
+    "description": "cancel"
   },
-  "video": "Wideo",
-  "@video": {
-    "description": "video"
+  "cancelTimer": "Anuluj wyłącznik czasowy",
+  "@cancelTimer": {
+    "description": "cancelTimer"
   },
-  "about": "O",
-  "@about": {
-    "description": "about"
+  "cancelTimerAlert": "Wyłącznik uśpienia anulowany",
+  "@cancelTimerAlert": {
+    "description": "cancelTimerAlert"
   },
-  "readMore": "Przeczytaj więcej",
-  "@readMore": {
-    "description": "readMore"
+  "clearImgCache": "Wyczyść pamięć podręczną obrazów",
+  "@clearImgCache": {
+    "description": "clearImgCache"
   },
-  "speedAndPitch": "Szybkość i wysokość",
-  "@speedAndPitch": {
-    "description": "speedAndPitch"
+  "clearImgCacheAlert": "Pomyślnie wyczyszczono pamięć podręczną obrazów",
+  "@clearImgCacheAlert": {
+    "description": "clearImgCacheAlert"
   },
-  "playbackSpeed": "Szybkość odtwarzania",
-  "@playbackSpeed": {
-    "description": "playbackSpeed"
+  "clearImgCacheDes": "Kliknij tutaj, aby wyczyścić zapisane w pamięci podręcznej miniatury/obrazy. (Niezalecane, chyba że chcesz odświeżyć dane obrazów zapisanych w pamięci podręcznej)",
+  "@clearImgCacheDes": {
+    "description": "clearImgCacheDes"
   },
-  "songPitch": "ton piosenki",
-  "@songPitch": {
-    "description": "songPitch"
+  "close": "Zamknąć",
+  "@close": {
+    "description": "close"
   },
-  "musicRecognition": "Rozpoznawanie muzyki",
-  "@musicRecognition": {
-    "description": "musicRecognition"
+  "closeApp": "Zamknij aplikację",
+  "@closeApp": {
+    "description": "closeApp"
   },
-  "listeningToEnvironment": "Słuchając otoczenia...",
-  "@listeningToEnvironment": {
-    "description": "listeningToEnvironment"
+  "cloudLibraryFound": "Znaleziono bibliotekę chmurową.",
+  "@cloudLibraryFound": {
+    "description": "cloudLibraryFound"
   },
-  "micInstruction": "Upewnij się, że muzyka gra wystarczająco głośno w pobliżu mikrofonu.",
-  "@micInstruction": {
-    "description": "micInstruction"
+  "cloudLibraryFoundDeviceWillDownload": "Znaleziono bibliotekę w chmurze. To urządzenie pobierze je bez nadpisywania.",
+  "@cloudLibraryFoundDeviceWillDownload": {
+    "description": "cloudLibraryFoundDeviceWillDownload"
   },
-  "processingAudio": "Przetwarzanie dźwięku...",
-  "@processingAudio": {
-    "description": "processingAudio"
-  },
-  "shazamSearching": "Przeszukiwanie bazy danych Shazam w poszukiwaniu dopasowań...",
-  "@shazamSearching": {
-    "description": "shazamSearching"
-  },
-  "songFound": "Znaleziono piosenkę!",
-  "@songFound": {
-    "description": "songFound"
-  },
-  "playNow": "Zagraj teraz",
-  "@playNow": {
-    "description": "playNow"
-  },
-  "searchInLibrary": "Szukaj w Bibliotece",
-  "@searchInLibrary": {
-    "description": "searchInLibrary"
-  },
-  "noMatchesFound": "Brak dopasowań",
-  "@noMatchesFound": {
-    "description": "noMatchesFound"
-  },
-  "noMatchInstruction": "Nie udało się znaleźć żadnych utworów w nagranym dźwięku",
-  "@noMatchInstruction": {
-    "description": "noMatchInstruction"
-  },
-  "errorOccurred": "Wystąpił błąd",
-  "@errorOccurred": {
-    "description": "errorOccurred"
-  },
-  "playingRecognizedTrack": "Gra:",
-  "@playingRecognizedTrack": {
-    "description": "playingRecognizedTrack"
-  },
-  "errorPlayingTrack": "Błąd podczas odtwarzania:",
-  "@errorPlayingTrack": {
-    "description": "errorPlayingTrack"
-  },
-  "welcome_title": "Twoja muzyka, na Twój sposób",
-  "@welcome_title": {
-    "description": "welcome_title"
-  },
-  "welcome_subtitle": "Wybierz, w jaki sposób chcesz odtąd korzystać z Estrella Music.",
-  "@welcome_subtitle": {
-    "description": "welcome_subtitle"
-  },
-  "welcome_intro": "Zmodernizowaliśmy naszą platformę. Stary system ręcznego przesyłania kopii zapasowych został wyłączony. Masz teraz dwa jasne sposoby zarządzania swoją biblioteką muzyczną.",
-  "@welcome_intro": {
-    "description": "welcome_intro"
-  },
-  "recommend_cloud": "Zalecamy aktywację trybu chmury, aby uzyskać wrażenia podobne do Spotify: synchronizację w czasie rzeczywistym między wszystkimi urządzeniami i automatyczne tworzenie kopii zapasowych bez konieczności wykonywania jakichkolwiek czynności.",
-  "@recommend_cloud": {
-    "description": "recommend_cloud"
-  },
-  "swipe_prompt": "Przesuń, aby poznać opcje ➔",
-  "@swipe_prompt": {
-    "description": "swipe_prompt"
-  },
-  "local_title": "Tryb lokalny",
-  "@local_title": {
-    "description": "local_title"
-  },
-  "local_subtitle": "Całkowita prywatność na Twoim urządzeniu",
-  "@local_subtitle": {
-    "description": "local_subtitle"
-  },
-  "local_b1": "Działa bez konieczności logowania.",
-  "@local_b1": {
-    "description": "local_b1"
-  },
-  "local_b2": "Cała Twoja biblioteka pozostaje wyłącznie na tym komputerze.",
-  "@local_b2": {
-    "description": "local_b2"
-  },
-  "local_b3": "Uwaga: brak ręcznych kopii zapasowych w chmurze. Jeśli zgubisz urządzenie lub odinstalujesz aplikację, odzyskanie danych będzie niemożliwe.",
-  "@local_b3": {
-    "description": "local_b3"
-  },
-  "local_btn": "Używaj tylko na tym urządzeniu",
-  "@local_btn": {
-    "description": "local_btn"
-  },
-  "cloud_title": "Tryb chmury (zalecany)",
-  "@cloud_title": {
-    "description": "cloud_title"
-  },
-  "cloud_subtitle": "Synchronizacja w czasie rzeczywistym z Joss Red",
-  "@cloud_subtitle": {
-    "description": "cloud_subtitle"
+  "cloudModeReadyOfflineCache": "Tryb chmury jest gotowy. To urządzenie będzie działać jako pamięć podręczna offline.",
+  "@cloudModeReadyOfflineCache": {
+    "description": "cloudModeReadyOfflineCache"
   },
   "cloud_b1": "Zaloguj się bezpiecznie, korzystając ze swojego konta Joss Red.",
   "@cloud_b1": {
@@ -1408,511 +400,137 @@
   "@cloud_btn": {
     "description": "cloud_btn"
   },
-  "slide_indicator": "Krok _{current} z 3",
-  "@slide_indicator": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      }
-    },
-    "description": "slide_indicator"
+  "cloud_subtitle": "Synchronizacja w czasie rzeczywistym z Joss Red",
+  "@cloud_subtitle": {
+    "description": "cloud_subtitle"
   },
-  "news_card_title": "Estrella Music ewoluowała!",
-  "@news_card_title": {
-    "description": "news_card_title"
-  },
-  "news_card_subtitle": "100% synchronizacja z Joss Red, playlisty ze znajomymi i wiele więcej. Kliknij, aby zobaczyć, co nowego.",
-  "@news_card_subtitle": {
-    "description": "news_card_subtitle"
-  },
-  "news_dialog_title": "Wiadomości muzyczne Estrelli",
-  "@news_dialog_title": {
-    "description": "news_dialog_title"
-  },
-  "news_item_sync_title": "Pełna integracja z Joss Red",
-  "@news_item_sync_title": {
-    "description": "news_item_sync_title"
-  },
-  "news_item_sync_desc": "Twoje playlisty i ulubione są teraz automatycznie zapisywane i synchronizowane w chmurze z Twoim głównym kontem Joss Red.",
-  "@news_item_sync_desc": {
-    "description": "news_item_sync_desc"
-  },
-  "news_item_collab_title": "Wspólne playlisty",
-  "@news_item_collab_title": {
-    "description": "news_item_collab_title"
-  },
-  "news_item_collab_desc": "Twórz playlisty ze znajomymi! Tworząc playlistę, zaznacz pole wyboru Współpraca i wybierz znajomych, których chcesz wspólnie edytować.",
-  "@news_item_collab_desc": {
-    "description": "news_item_collab_desc"
-  },
-  "news_item_trans_title": "Przejrzysta synchronizacja",
-  "@news_item_trans_title": {
-    "description": "news_item_trans_title"
-  },
-  "news_item_trans_desc": "Nie musisz już klikać przycisków ręcznej synchronizacji; Nowy silnik odpowiada za automatyczną zmianę biegów w górę i w dół.",
-  "@news_item_trans_desc": {
-    "description": "news_item_trans_desc"
-  },
-  "news_dialog_section_friends": "Przyjaciele i zarządzanie kontem:",
-  "@news_dialog_section_friends": {
-    "description": "news_dialog_section_friends"
-  },
-  "news_dialog_friends_desc": "Aby dodawać znajomych, akceptować prośby lub zarządzać swoim profilem bezpieczeństwa, skorzystaj z Joss Red na jego oficjalnych platformach:",
-  "@news_dialog_friends_desc": {
-    "description": "news_dialog_friends_desc"
-  },
-  "news_btn_app": "Aplikacja Joss Red (Sklep Play)",
-  "@news_btn_app": {
-    "description": "news_btn_app"
-  },
-  "news_btn_web": "Joss Red Web",
-  "@news_btn_web": {
-    "description": "news_btn_web"
-  },
-  "news_btn_dismiss": "Zrozumiany",
-  "@news_btn_dismiss": {
-    "description": "news_btn_dismiss"
-  },
-  "settings_appearance_desc": "Animacje tematyczne, językowe i interfejsowe.",
-  "@settings_appearance_desc": {
-    "description": "settings_appearance_desc"
-  },
-  "settings_content_desc": "Odkryj filtry, integrację z Piped i pamięciami podręcznymi.",
-  "@settings_content_desc": {
-    "description": "settings_content_desc"
-  },
-  "settings_playback_desc": "Jakość przesyłania strumieniowego, normalizacja, wyciszenie i bateria.",
-  "@settings_playback_desc": {
-    "description": "settings_playback_desc"
-  },
-  "settings_downloads_desc": "Pobieranie i przechowywanie",
-  "@settings_downloads_desc": {
-    "description": "settings_downloads_desc"
-  },
-  "settings_downloads_sub": "Formaty audio, foldery i automatyczne pobieranie.",
-  "@settings_downloads_sub": {
-    "description": "settings_downloads_sub"
-  },
-  "settings_account_desc": "Konto i synchronizacja",
-  "@settings_account_desc": {
-    "description": "settings_account_desc"
-  },
-  "settings_account_sub": "Tryb chmury, kopie zapasowe, lista znajomych i migracje.",
-  "@settings_account_sub": {
-    "description": "settings_account_sub"
-  },
-  "settings_about_desc": "O muzyce Estrella",
-  "@settings_about_desc": {
-    "description": "settings_about_desc"
-  },
-  "settings_about_sub": "Wersja, projekt open source i GitHub.",
-  "@settings_about_sub": {
-    "description": "settings_about_sub"
-  },
-  "settings_local_cloud_title": "Tryb lokalny / chmura EMusic",
-  "@settings_local_cloud_title": {
-    "description": "settings_local_cloud_title"
-  },
-  "settings_local_cloud_desc": "Wybierz, przeprowadź migrację lub przejrzyj status synchronizacji za pomocą Joss Red.",
-  "@settings_local_cloud_desc": {
-    "description": "settings_local_cloud_desc"
-  },
-  "settings_my_friends": "moi przyjaciele",
-  "@settings_my_friends": {
-    "description": "settings_my_friends"
-  },
-  "settings_my_friends_desc": "Zarządzaj bezpośrednio swoimi przyjaciółmi Joss Red.",
-  "@settings_my_friends_desc": {
-    "description": "settings_my_friends_desc"
-  },
-  "settings_refresh_visitor_title": "Odśwież identyfikator (identyfikator gościa)",
-  "@settings_refresh_visitor_title": {
-    "description": "settings_refresh_visitor_title"
-  },
-  "settings_refresh_visitor_desc": "Wygeneruj ponownie swój identyfikator Online Music, jeśli treści Discover nie zostaną wczytane.",
-  "@settings_refresh_visitor_desc": {
-    "description": "settings_refresh_visitor_desc"
-  },
-  "settings_visitor_updated": "Zaktualizowany identyfikator",
-  "@settings_visitor_updated": {
-    "description": "settings_visitor_updated"
-  },
-  "settings_visitor_updated_desc": "Nowy identyfikator gościa został pomyślnie wygenerowany.",
-  "@settings_visitor_updated_desc": {
-    "description": "settings_visitor_updated_desc"
-  },
-  "settings_visitor_error": "Błąd",
-  "@settings_visitor_error": {
-    "description": "settings_visitor_error"
-  },
-  "settings_visitor_error_desc": "Nie można wygenerować nowego identyfikatora. Spróbuj ponownie później.",
-  "@settings_visitor_error_desc": {
-    "description": "settings_visitor_error_desc"
-  },
-  "settings_visitor_exception": "Wystąpił błąd podczas regeneracji: {error}",
-  "@settings_visitor_exception": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    },
-    "description": "settings_visitor_exception"
-  },
-  "migratedLibrary": "Przeniesiona biblioteka",
-  "@migratedLibrary": {
-    "description": "migratedLibrary"
-  },
-  "noSongsInCollection": "W tej kolekcji nie ma żadnych utworów",
-  "@noSongsInCollection": {
-    "description": "noSongsInCollection"
-  },
-  "startupScreen": "Otwórz przy uruchomieniu",
-  "@startupScreen": {
-    "description": "startupScreen"
-  },
-  "startupScreenDescription": "Wybierz sekcję, którą Estrella Music otworzy jako pierwszą",
-  "@startupScreenDescription": {
-    "description": "startupScreenDescription"
-  },
-  "friends": "Przyjaciele",
-  "@friends": {
-    "description": "friends"
-  },
-  "dailyDiscover": "Codzienne odkrycie",
-  "@dailyDiscover": {
-    "description": "dailyDiscover"
-  },
-  "keepListening": "słuchaj dalej",
-  "@keepListening": {
-    "description": "keepListening"
-  },
-  "similarToTitle": "Podobny do {title}",
-  "@similarToTitle": {
-    "placeholders": {
-      "title": {
-        "type": "String"
-      }
-    },
-    "description": "similarToTitle"
-  },
-  "pipedPlaylistDescription": "Przesłana playlista",
-  "@pipedPlaylistDescription": {
-    "description": "pipedPlaylistDescription"
+  "cloud_title": "Tryb chmury (zalecany)",
+  "@cloud_title": {
+    "description": "cloud_title"
   },
   "collaborativePlaylistDescription": "Wspólna playlista",
   "@collaborativePlaylistDescription": {
     "description": "collaborativePlaylistDescription"
   },
-  "libraryPlaylistDescription": "Playlista biblioteczna",
-  "@libraryPlaylistDescription": {
-    "description": "libraryPlaylistDescription"
-  },
-  "untitledSong": "Piosenka bez tytułu",
-  "@untitledSong": {
-    "description": "untitledSong"
-  },
-  "migratedPlaylist": "Przeniesiona playlista",
-  "@migratedPlaylist": {
-    "description": "migratedPlaylist"
-  },
-  "migratedAlbum": "Przeniesiony album",
-  "@migratedAlbum": {
-    "description": "migratedAlbum"
-  },
-  "songsImportedFromJossMusic": "Utwory zaimportowane z Joss Music Kotlin",
-  "@songsImportedFromJossMusic": {
-    "description": "songsImportedFromJossMusic"
-  },
-  "importedFromJossMusic": "Zaimportowane z Joss Music Kotlin",
-  "@importedFromJossMusic": {
-    "description": "importedFromJossMusic"
-  },
-  "syncLocalModeActive": "Tryb lokalny aktywny",
-  "@syncLocalModeActive": {
-    "description": "syncLocalModeActive"
-  },
-  "syncCloudPending": "Tryb chmury aktywny. Oczekująca synchronizacja.",
-  "@syncCloudPending": {
-    "description": "syncCloudPending"
-  },
-  "syncCloudDownloadingExisting": "Aktywowano tryb chmury. Pobieranie istniejącej biblioteki.",
-  "@syncCloudDownloadingExisting": {
-    "description": "syncCloudDownloadingExisting"
-  },
-  "syncCloudMigrationComplete": "Aktywowano tryb chmury. Przeniesiona biblioteka.",
-  "@syncCloudMigrationComplete": {
-    "description": "syncCloudMigrationComplete"
-  },
-  "syncLocalDeviceOnly": "Twoje dane są przechowywane wyłącznie na tym urządzeniu.",
-  "@syncLocalDeviceOnly": {
-    "description": "syncLocalDeviceOnly"
-  },
-  "syncDownloading": "Pobieram zmiany w EMusic...",
-  "@syncDownloading": {
-    "description": "syncDownloading"
-  },
-  "syncDownloadFailed": "Nie udało się pobrać synchronizacji.",
-  "@syncDownloadFailed": {
-    "description": "syncDownloadFailed"
-  },
-  "syncLocalChangesFirst": "Są nowe zmiany lokalne. Zostaną przesłane przed pobraniem.",
-  "@syncLocalChangesFirst": {
-    "description": "syncLocalChangesFirst"
-  },
-  "syncLibrarySynced": "Zsynchronizowana biblioteka.",
-  "@syncLibrarySynced": {
-    "description": "syncLibrarySynced"
-  },
-  "syncOfflinePending": "Nieaktywny. Zmiany oczekują.",
-  "@syncOfflinePending": {
-    "description": "syncOfflinePending"
-  },
-  "syncLibraryUpToDate": "Biblioteka na bieżąco.",
-  "@syncLibraryUpToDate": {
-    "description": "syncLibraryUpToDate"
-  },
-  "syncChangesSynced": "{count} zsynchronizowane zmiany.",
-  "@syncChangesSynced": {
-    "placeholders": {
-      "count": {
-        "type": "String"
-      }
-    },
-    "description": "syncChangesSynced"
-  },
-  "syncUploading": "Przesyłanie zmian do EMusic...",
-  "@syncUploading": {
-    "description": "syncUploading"
-  },
-  "syncUploadSuccessWs": "Zmiany przesłane pomyślnie (WS).",
-  "@syncUploadSuccessWs": {
-    "description": "syncUploadSuccessWs"
-  },
-  "syncUploadWsRetry": "Nie można przesłać za pomocą WS. Próba zostanie ponowiona później.",
-  "@syncUploadWsRetry": {
-    "description": "syncUploadWsRetry"
-  },
-  "syncUploadSuccess": "Zmiany przesłane poprawnie.",
-  "@syncUploadSuccess": {
-    "description": "syncUploadSuccess"
-  },
-  "syncUploadRetry": "Nie mogłem wstać. Próba zostanie ponowiona później.",
-  "@syncUploadRetry": {
-    "description": "syncUploadRetry"
-  },
-  "syncOfflineRetry": "Nieaktywny. Zmiany zostały zapisane do ponownej próby.",
-  "@syncOfflineRetry": {
-    "description": "syncOfflineRetry"
-  },
-  "syncUnconfirmedRetry": "EMusic nie potwierdził wszystkich zmian. Zostaną one rozpatrzone ponownie.",
-  "@syncUnconfirmedRetry": {
-    "description": "syncUnconfirmedRetry"
-  },
-  "syncChangesConfirmed": "{count} zmiany zatwierdzone.",
-  "@syncChangesConfirmed": {
-    "placeholders": {
-      "count": {
-        "type": "String"
-      }
-    },
-    "description": "syncChangesConfirmed"
-  },
-  "migrationAlreadyRunning": "Migracja już trwa.",
-  "@migrationAlreadyRunning": {
-    "description": "migrationAlreadyRunning"
-  },
-  "migrationLoginRequired": "Przed migracją zaloguj się do Joss Red.",
-  "@migrationLoginRequired": {
-    "description": "migrationLoginRequired"
-  },
-  "migrationCheckingCloud": "Sprawdzanie, czy EMusic Cloud ma już bibliotekę...",
-  "@migrationCheckingCloud": {
-    "description": "migrationCheckingCloud"
-  },
-  "cloudLibraryFoundDeviceWillDownload": "Znaleziono bibliotekę w chmurze. To urządzenie pobierze je bez nadpisywania.",
-  "@cloudLibraryFoundDeviceWillDownload": {
-    "description": "cloudLibraryFoundDeviceWillDownload"
-  },
-  "cloudLibraryFound": "Znaleziono bibliotekę chmurową.",
-  "@cloudLibraryFound": {
-    "description": "cloudLibraryFound"
-  },
-  "migrationCreatingBackup": "Tworzenie lokalnej kopii zapasowej przed połączeniem z chmurą...",
-  "@migrationCreatingBackup": {
-    "description": "migrationCreatingBackup"
-  },
-  "migrationAnalyzingLocal": "Analizując lokalną bibliotekę...",
-  "@migrationAnalyzingLocal": {
-    "description": "migrationAnalyzingLocal"
-  },
-  "migrationPreparingCloud": "Przygotowanie migracji w EMusic Cloud...",
-  "@migrationPreparingCloud": {
-    "description": "migrationPreparingCloud"
-  },
-  "migrationStartFailed": "EMusic Cloud nie mógł rozpocząć migracji.",
-  "@migrationStartFailed": {
-    "description": "migrationStartFailed"
-  },
-  "migrationUploadingData": "Przesyłanie list odtwarzania, ulubionych i historii...",
-  "@migrationUploadingData": {
-    "description": "migrationUploadingData"
-  },
-  "migrationUploadIncomplete": "Nie wszystkie dane mogły zostać przesłane. Utrzymujemy Twoje lokalne wsparcie.",
-  "@migrationUploadIncomplete": {
-    "description": "migrationUploadIncomplete"
-  },
-  "migrationVerifyingIntegrity": "Sprawdzanie integralności w chmurze EMusic...",
-  "@migrationVerifyingIntegrity": {
-    "description": "migrationVerifyingIntegrity"
-  },
-  "migrationValidationFailed": "EMusic Cloud nie mógł zweryfikować migracji.",
-  "@migrationValidationFailed": {
-    "description": "migrationValidationFailed"
-  },
-  "cloudModeReadyOfflineCache": "Tryb chmury jest gotowy. To urządzenie będzie działać jako pamięć podręczna offline.",
-  "@cloudModeReadyOfflineCache": {
-    "description": "cloudModeReadyOfflineCache"
-  },
-  "migrationCompleted": "Migracja zakończona.",
-  "@migrationCompleted": {
-    "description": "migrationCompleted"
-  },
-  "migrationFailedLocalPreserved": "Migracja nie powiodła się. Twoje dane lokalne nie zostały zmodyfikowane.",
-  "@migrationFailedLocalPreserved": {
-    "description": "migrationFailedLocalPreserved"
-  },
-  "sessionExpiredLoginAgain": "Twoja sesja wygasła. Zaloguj się ponownie.",
-  "@sessionExpiredLoginAgain": {
-    "description": "sessionExpiredLoginAgain"
-  },
-  "selectedFileNotFound": "Nie znaleziono wybranego pliku.",
-  "@selectedFileNotFound": {
-    "description": "selectedFileNotFound"
-  },
-  "genericAlbum": "Album",
-  "@genericAlbum": {
-    "description": "genericAlbum"
-  },
-  "friendsLoginRequired": "Zaloguj się, aby znaleźć przyjaciół.",
-  "@friendsLoginRequired": {
-    "description": "friendsLoginRequired"
-  },
-  "invalidSessionToken": "Sesja nie zawiera prawidłowego tokena.",
-  "@invalidSessionToken": {
-    "description": "invalidSessionToken"
-  },
-  "userSearchFailed": "Nie można wyszukać użytkowników ({statusCode}).",
-  "@userSearchFailed": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    },
-    "description": "userSearchFailed"
-  },
-  "invalidServerResponse": "Nieprawidłowa odpowiedź serwera.",
-  "@invalidServerResponse": {
-    "description": "invalidServerResponse"
-  },
-  "userListMissing": "Odpowiedź nie zawiera listy użytkowników.",
-  "@userListMissing": {
-    "description": "userListMissing"
-  },
-  "playlistCollaboratorsTitle": "Współtwórcy playlisty",
-  "@playlistCollaboratorsTitle": {
-    "description": "playlistCollaboratorsTitle"
-  },
   "collaboratorsInstruction": "Wybierz znajomych, którzy będą mogli oglądać i edytować tę playlistę:",
   "@collaboratorsInstruction": {
     "description": "collaboratorsInstruction"
-  },
-  "noJossRedFriends": "Nie masz dodanych znajomych na Joss Red.",
-  "@noJossRedFriends": {
-    "description": "noJossRedFriends"
-  },
-  "friendFallback": "Przyjaciel",
-  "@friendFallback": {
-    "description": "friendFallback"
   },
   "collaboratorsUpdated": "Współpracownicy zaktualizowani poprawnie.",
   "@collaboratorsUpdated": {
     "description": "collaboratorsUpdated"
   },
-  "save": "Trzymać",
-  "@save": {
-    "description": "save"
+  "communityplaylists": "Społecznościowe playlisty",
+  "@communityplaylists": {
+    "description": "communityplaylists"
   },
-  "manageCollaborators": "Zarządzaj współpracownikami (znajomymi)",
-  "@manageCollaborators": {
-    "description": "manageCollaborators"
+  "content": "Zawartość",
+  "@content": {
+    "description": "content"
+  },
+  "copyrightNotice": "© 2026 JOSPROX. Licencja GPL v3.0",
+  "@copyrightNotice": {
+    "description": "copyrightNotice"
+  },
+  "create": "Utwórz",
+  "@create": {
+    "description": "create"
+  },
+  "createnAdd": "Utwórz i dodaj",
+  "@createnAdd": {
+    "description": "createnAdd"
+  },
+  "customIns": "Niestandardowe wystąpienie",
+  "@customIns": {
+    "description": "customIns"
+  },
+  "customInsSelectMsg": "Proszę wybierz niestandardową Instancję",
+  "@customInsSelectMsg": {
+    "description": "customInsSelectMsg"
+  },
+  "dailyDiscover": "Codzienne odkrycie",
+  "@dailyDiscover": {
+    "description": "dailyDiscover"
+  },
+  "dark": "Ciemny",
+  "@dark": {
+    "description": "dark"
+  },
+  "delete": "Usuń",
+  "@delete": {
+    "description": "delete"
+  },
+  "deleteDownloadData": "Usuń z pobranych",
+  "@deleteDownloadData": {
+    "description": "deleteDownloadData"
+  },
+  "deleteDownloadedDataAlert": "Pomyślnie usunięto z pobranych!",
+  "@deleteDownloadedDataAlert": {
+    "description": "deleteDownloadedDataAlert"
+  },
+  "developedBy": "Opracowany i utrzymywany przez Jossa Estradę (JOSPROX)",
+  "@developedBy": {
+    "description": "developedBy"
+  },
+  "disableTransitionAnimation": "Wyłącz animację przejścia",
+  "@disableTransitionAnimation": {
+    "description": "disableTransitionAnimation"
+  },
+  "disableTransitionAnimationDes": "Włącz tę opcję, aby wyłączyć animację przejścia między kartami",
+  "@disableTransitionAnimationDes": {
+    "description": "disableTransitionAnimationDes"
+  },
+  "disabled": "Wyłączony",
+  "@disabled": {
+    "description": "disabled"
+  },
+  "discover": "Odkrywaj",
+  "@discover": {
+    "description": "discover"
+  },
+  "dismiss": "Odrzuć",
+  "@dismiss": {
+    "description": "dismiss"
   },
   "done": "Gotowy",
   "@done": {
     "description": "done"
   },
-  "notAuthenticated": "Nieuwierzytelnione",
-  "@notAuthenticated": {
-    "description": "notAuthenticated"
+  "dontShowInfoAgain": "Nie pokazuj więcej tej informacji",
+  "@dontShowInfoAgain": {
+    "description": "dontShowInfoAgain"
   },
-  "genericError": "Błąd",
-  "@genericError": {
-    "description": "genericError"
+  "downFilesFound": "znaleziono pobrane pliki",
+  "@downFilesFound": {
+    "description": "downFilesFound"
   },
-  "friendRequestSent": "Wysłano zaproszenie do grona znajomych",
-  "@friendRequestSent": {
-    "description": "friendRequestSent"
+  "download": "Pobierz",
+  "@download": {
+    "description": "download"
   },
-  "friendRequestAccepted": "Zaproszenie do grona znajomych zaakceptowane",
-  "@friendRequestAccepted": {
-    "description": "friendRequestAccepted"
+  "downloadAlbumSongs": "Pobierz utwory z albumu",
+  "@downloadAlbumSongs": {
+    "description": "downloadAlbumSongs"
   },
-  "friendshipRemoved": "Przyjaźń usunięta",
-  "@friendshipRemoved": {
-    "description": "friendshipRemoved"
+  "downloadError2": "Żądany utwór nie może zostać pobrany z powodu ograniczeń serwera. Możesz spróbować ponownie",
+  "@downloadError2": {
+    "description": "downloadError2"
   },
-  "userBlocked": "Zablokowany użytkownik",
-  "@userBlocked": {
-    "description": "userBlocked"
+  "downloadError3": "Pobieranie nie powiodło się z powodu błędu sieci/strumienia! Spróbuj ponownie",
+  "@downloadError3": {
+    "description": "downloadError3"
   },
-  "userUnblocked": "Odblokowany użytkownik",
-  "@userUnblocked": {
-    "description": "userUnblocked"
-  },
-  "artistsByTaste": "Według Twoich upodobań",
-  "@artistsByTaste": {
-    "description": "artistsByTaste"
-  },
-  "followedArtists": "podążał",
-  "@followedArtists": {
-    "description": "followedArtists"
-  },
-  "recommendedArtists": "Zalecony",
-  "@recommendedArtists": {
-    "description": "recommendedArtists"
-  },
-  "albumsByTaste": "Według Twoich upodobań",
-  "@albumsByTaste": {
-    "description": "albumsByTaste"
-  },
-  "savedAlbums": "Zapisano",
-  "@savedAlbums": {
-    "description": "savedAlbums"
-  },
-  "recommendedAlbums": "Zalecony",
-  "@recommendedAlbums": {
-    "description": "recommendedAlbums"
-  },
-  "downloadNotificationChannelName": "pobieranie muzyki",
-  "@downloadNotificationChannelName": {
-    "description": "downloadNotificationChannelName"
+  "downloadLocation": "Lokalizacja Pobierania",
+  "@downloadLocation": {
+    "description": "downloadLocation"
   },
   "downloadNotificationChannelDescription": "Utrzymuje pobieranie muzyki aktywne w tle.",
   "@downloadNotificationChannelDescription": {
     "description": "downloadNotificationChannelDescription"
   },
-  "downloadNotificationTitle": "Pobieranie muzyki",
-  "@downloadNotificationTitle": {
-    "description": "downloadNotificationTitle"
+  "downloadNotificationChannelName": "pobieranie muzyki",
+  "@downloadNotificationChannelName": {
+    "description": "downloadNotificationChannelName"
   },
   "downloadNotificationPreparing": "Przygotowuję pliki do pobrania…",
   "@downloadNotificationPreparing": {
@@ -1927,85 +545,149 @@
     },
     "description": "downloadNotificationSong"
   },
-  "syncCloudModeActive": "Tryb chmury aktywny",
-  "@syncCloudModeActive": {
-    "description": "syncCloudModeActive"
+  "downloadNotificationTitle": "Pobieranie muzyki",
+  "@downloadNotificationTitle": {
+    "description": "downloadNotificationTitle"
   },
-  "permissionsConsentTitle": "Uprawnienia do rozpoczęcia",
-  "@permissionsConsentTitle": {
-    "description": "permissionsConsentTitle"
+  "downloadPlaylist": "Pobierz playlistę",
+  "@downloadPlaylist": {
+    "description": "downloadPlaylist"
   },
-  "permissionsConsentDescription": "Estrella Music potrzebuje tych uprawnień, aby zarządzać Twoją muzyką i oferować wszystkie funkcje odtwarzania.",
-  "@permissionsConsentDescription": {
-    "description": "permissionsConsentDescription"
+  "downloadingFormat": "Pobierz format pliku",
+  "@downloadingFormat": {
+    "description": "downloadingFormat"
   },
-  "permissionsStorageTitle": "Muzyka i przechowywanie",
-  "@permissionsStorageTitle": {
-    "description": "permissionsStorageTitle"
+  "downloadingFormatDes": "Wybierz format pliku do pobrania. „Opus” zapewni najlepszą jakość",
+  "@downloadingFormatDes": {
+    "description": "downloadingFormatDes"
   },
-  "permissionsStorageDescription": "Umożliwia odtwarzanie muzyki, zapisywanie pobranych plików, eksportowanie list odtwarzania i przygotowywanie aktualizacji.",
-  "@permissionsStorageDescription": {
-    "description": "permissionsStorageDescription"
+  "downloads": "Pobrania",
+  "@downloads": {
+    "description": "downloads"
   },
-  "permissionsNotificationsTitle": "Powiadomienia",
-  "@permissionsNotificationsTitle": {
-    "description": "permissionsNotificationsTitle"
+  "duration": "Czas trwania",
+  "@duration": {
+    "description": "duration"
   },
-  "permissionsNotificationsDescription": "Pokazuje elementy sterujące odtwarzaniem, postęp pobierania i ważne powiadomienia o aplikacjach.",
-  "@permissionsNotificationsDescription": {
-    "description": "permissionsNotificationsDescription"
+  "dynamic": "Dynamiczny",
+  "@dynamic": {
+    "description": "dynamic"
   },
-  "permissionsMicrophoneTitle": "Mikrofon",
-  "@permissionsMicrophoneTitle": {
-    "description": "permissionsMicrophoneTitle"
+  "email": "E-mail",
+  "@email": {
+    "description": "email"
   },
-  "permissionsMicrophoneDescription": "Jest używany tylko wtedy, gdy zdecydujesz się zidentyfikować piosenkę odtwarzaną wokół ciebie.",
-  "@permissionsMicrophoneDescription": {
-    "description": "permissionsMicrophoneDescription"
+  "emptyPlaylist": "Playlista jest pusta!",
+  "@emptyPlaylist": {
+    "description": "emptyPlaylist"
   },
-  "permissionsContinueButton": "Przyznaj wymagane uprawnienia",
-  "@permissionsContinueButton": {
-    "description": "permissionsContinueButton"
+  "enableBottomNav": "Dolny pasek nawigacyjny",
+  "@enableBottomNav": {
+    "description": "enableBottomNav"
   },
-  "permissionsRequiredNotice": "Aby kontynuować, wymagane są wszystkie trzy zezwolenia. Możesz je później zmienić w ustawieniach systemu.",
-  "@permissionsRequiredNotice": {
-    "description": "permissionsRequiredNotice"
+  "enableBottomNavDes": "Przełącz na dolny pasek nawigacyjny",
+  "@enableBottomNavDes": {
+    "description": "enableBottomNavDes"
   },
-  "permissionsAllow": "Umożliwić",
-  "@permissionsAllow": {
-    "description": "permissionsAllow"
+  "enableSlidableAction": "Włącz przesuwalne akcje",
+  "@enableSlidableAction": {
+    "description": "enableSlidableAction"
   },
-  "permissionsOpenSettings": "Ustawienia",
-  "@permissionsOpenSettings": {
-    "description": "permissionsOpenSettings"
+  "enableSlidableActionDes": "Włącz przesuwalne akcje na kafelku utworu",
+  "@enableSlidableActionDes": {
+    "description": "enableSlidableActionDes"
   },
-  "auth_2fa_title": "Uwierzytelnianie dwuskładnikowe",
-  "@auth_2fa_title": {
-    "description": "auth_2fa_title"
+  "enabled": "Włączony",
+  "@enabled": {
+    "description": "enabled"
   },
-  "auth_2fa_subtitle": "Wprowadź 6-cyfrowy kod z aplikacji uwierzytelniającej. Dostęp ten wygasa za 5 minut.",
-  "@auth_2fa_subtitle": {
-    "description": "auth_2fa_subtitle"
+  "endOfThisSong": "Koniec tej piosenki",
+  "@endOfThisSong": {
+    "description": "endOfThisSong"
   },
-  "auth_2fa_code": "Kod uwierzytelniający",
-  "@auth_2fa_code": {
-    "description": "auth_2fa_code"
+  "enqueueAlbumSongs": "Dodaj utwory z albumu do kolejki",
+  "@enqueueAlbumSongs": {
+    "description": "enqueueAlbumSongs"
   },
-  "auth_2fa_verify": "Sprawdź i kontynuuj",
-  "@auth_2fa_verify": {
-    "description": "auth_2fa_verify"
+  "enqueueAll": "Kolejkuj wszystkie",
+  "@enqueueAll": {
+    "description": "enqueueAll"
   },
-  "auth_2fa_invalid": "Wprowadź ważny 6-cyfrowy kod lub zaloguj się ponownie.",
-  "@auth_2fa_invalid": {
-    "description": "auth_2fa_invalid"
+  "enqueueSong": "Dodaj ten utwór do kolejki",
+  "@enqueueSong": {
+    "description": "enqueueSong"
   },
-  "helloWorld": "Witaj świecie",
-  "@helloWorld": {
-    "description": "Este texto es opcional"
+  "enqueueSongs": "Dodaj utwory do kolejki",
+  "@enqueueSongs": {
+    "description": "enqueueSongs"
+  },
+  "episodes": "Odcinki",
+  "@episodes": {
+    "description": "episodes"
+  },
+  "equalizer": "Korektor dźwięku",
+  "@equalizer": {
+    "description": "equalizer"
+  },
+  "equalizerDes": "Otwórz korektor systemowy",
+  "@equalizerDes": {
+    "description": "equalizerDes"
+  },
+  "errorOccuredAlert": "Wystąpił błąd!",
+  "@errorOccuredAlert": {
+    "description": "errorOccuredAlert"
+  },
+  "errorOccurred": "Wystąpił błąd",
+  "@errorOccurred": {
+    "description": "errorOccurred"
+  },
+  "errorPlayingTrack": "Błąd podczas odtwarzania:",
+  "@errorPlayingTrack": {
+    "description": "errorPlayingTrack"
+  },
+  "export": "Eksportuj",
+  "@export": {
+    "description": "export"
+  },
+  "exportDowloadedFiles": "Eksportuj pobrane pliki",
+  "@exportDowloadedFiles": {
+    "description": "exportDowloadedFiles"
+  },
+  "exportDowloadedFilesDes": "Kliknij tutaj, aby wyeksportować pobrany plik z katalogu inApp do zewnętrznego katalogu",
+  "@exportDowloadedFilesDes": {
+    "description": "exportDowloadedFilesDes"
+  },
+  "exportError": "Błąd podczas eksportowania listy odtwarzania",
+  "@exportError": {
+    "description": "exportError"
+  },
+  "exportErrorFormat": "Błąd formatowania danych listy odtwarzania",
+  "@exportErrorFormat": {
+    "description": "exportErrorFormat"
+  },
+  "exportErrorPermission": "Odmowa dostępu podczas eksportowania",
+  "@exportErrorPermission": {
+    "description": "exportErrorPermission"
+  },
+  "exportErrorStorage": "Za mało wolnego miejsca na dysku",
+  "@exportErrorStorage": {
+    "description": "exportErrorStorage"
+  },
+  "exportMsg": "Pliki zostały pomyślnie wyeksportowane",
+  "@exportMsg": {
+    "description": "exportMsg"
+  },
+  "exportPlaylist": "Eksportuj listę odtwarzania",
+  "@exportPlaylist": {
+    "description": "exportPlaylist"
   },
   "exportPlaylistCsv": "Eksportuj playlistę jako CSV",
   "@exportPlaylistCsv": {
     "description": "exportPlaylistCsv"
+  },
+  "exportPlaylistCsvSubtitle": "Nie można importować tutaj",
+  "@exportPlaylistCsvSubtitle": {
+    "description": "exportPlaylistCsvSubtitle"
   },
   "exportPlaylistJson": "Eksportuj playlistę do JSON",
   "@exportPlaylistJson": {
@@ -2015,10 +697,6 @@
   "@exportPlaylistJsonSubtitle": {
     "description": "exportPlaylistJsonSubtitle"
   },
-  "exportPlaylistCsvSubtitle": "Nie można importować tutaj",
-  "@exportPlaylistCsvSubtitle": {
-    "description": "exportPlaylistCsvSubtitle"
-  },
   "exportToOnlineMusic": "Eksportuj do muzyki z Online",
   "@exportToOnlineMusic": {
     "description": "exportToOnlineMusic"
@@ -2027,145 +705,489 @@
   "@exportToOnlineMusicSubtitle": {
     "description": "exportToOnlineMusicSubtitle"
   },
-  "linkCopied": "Link skopiowany do schowka",
-  "@linkCopied": {
-    "description": "linkCopied"
+  "exportedFileLocation": "Lokalizacja eksportu pobranego pliku",
+  "@exportedFileLocation": {
+    "description": "exportedFileLocation"
   },
-  "lyrics": "Listy",
-  "@lyrics": {
-    "description": "lyrics"
+  "exporting": "Eksportowanie...",
+  "@exporting": {
+    "description": "exporting"
   },
-  "no": "Nie",
-  "@no": {
-    "description": "no"
+  "exportingPlaylist": "Eksportowanie listy odtwarzania…",
+  "@exportingPlaylist": {
+    "description": "exportingPlaylist"
   },
-  "podcasts": "Podcasty",
-  "@podcasts": {
-    "description": "podcasts"
+  "favorites": "Ulubione",
+  "@favorites": {
+    "description": "favorites"
   },
-  "episodes": "Odcinki",
-  "@episodes": {
-    "description": "episodes"
+  "featuredplaylists": "Polecane playlisty",
+  "@featuredplaylists": {
+    "description": "featuredplaylists"
   },
-  "profiles": "Profile",
-  "@profiles": {
-    "description": "profiles"
+  "fileNotFound": "Plik nie został znaleziony",
+  "@fileNotFound": {
+    "description": "fileNotFound"
   },
-  "addToLibrary": "Dodaj do biblioteki",
-  "@addToLibrary": {
-    "description": "addToLibrary"
+  "follow": "Kontynuować",
+  "@follow": {
+    "description": "follow"
   },
-  "removeFromLibrary": "Usuń z biblioteki",
-  "@removeFromLibrary": {
-    "description": "removeFromLibrary"
+  "followedArtists": "podążał",
+  "@followedArtists": {
+    "description": "followedArtists"
   },
-  "play": "Zagraj",
-  "@play": {
-    "description": "play"
+  "following": "Następny",
+  "@following": {
+    "description": "following"
   },
-  "enqueueAlbumSongs": "Dodaj utwory z albumu do kolejki",
-  "@enqueueAlbumSongs": {
-    "description": "enqueueAlbumSongs"
+  "for1": "dla",
+  "@for1": {
+    "description": "for1"
   },
-  "downloadAlbumSongs": "Pobierz utwory z albumu",
-  "@downloadAlbumSongs": {
-    "description": "downloadAlbumSongs"
+  "forgottenFavorites": "zapomniane ulubione",
+  "@forgottenFavorites": {
+    "description": "forgottenFavorites"
   },
-  "shareAlbum": "Udostępnij album",
-  "@shareAlbum": {
-    "description": "shareAlbum"
+  "friendFallback": "Przyjaciel",
+  "@friendFallback": {
+    "description": "friendFallback"
+  },
+  "friendRequestAccepted": "Zaproszenie do grona znajomych zaakceptowane",
+  "@friendRequestAccepted": {
+    "description": "friendRequestAccepted"
+  },
+  "friendRequestSent": "Wysłano zaproszenie do grona znajomych",
+  "@friendRequestSent": {
+    "description": "friendRequestSent"
+  },
+  "friends": "Przyjaciele",
+  "@friends": {
+    "description": "friends"
+  },
+  "friendsLoginRequired": "Zaloguj się, aby znaleźć przyjaciół.",
+  "@friendsLoginRequired": {
+    "description": "friendsLoginRequired"
+  },
+  "friendshipRemoved": "Przyjaźń usunięta",
+  "@friendshipRemoved": {
+    "description": "friendshipRemoved"
+  },
+  "genericAlbum": "Album",
+  "@genericAlbum": {
+    "description": "genericAlbum"
+  },
+  "genericError": "Błąd",
+  "@genericError": {
+    "description": "genericError"
+  },
+  "genre_electronic": "Elektronika",
+  "@genre_electronic": {
+    "description": "genre_electronic"
+  },
+  "genre_hiphop": "hip-hop",
+  "@genre_hiphop": {
+    "description": "genre_hiphop"
+  },
+  "genre_jazz": "Jazz",
+  "@genre_jazz": {
+    "description": "genre_jazz"
+  },
+  "genre_latin": "łacina",
+  "@genre_latin": {
+    "description": "genre_latin"
+  },
+  "genre_pop": "Muzyka pop",
+  "@genre_pop": {
+    "description": "genre_pop"
+  },
+  "genre_rock": "Głaz",
+  "@genre_rock": {
+    "description": "genre_rock"
+  },
+  "gesture": "Gesty",
+  "@gesture": {
+    "description": "gesture"
+  },
+  "github": "Github",
+  "@github": {
+    "description": "github"
+  },
+  "githubDes": "Zobacz kod źródłowy na Github, \njeśli podoba Ci się ten projekt, nie zapomnij dać ⭐",
+  "@githubDes": {
+    "description": "githubDes"
+  },
+  "goToAlbum": "Przejdź do albumu",
+  "@goToAlbum": {
+    "description": "goToAlbum"
+  },
+  "goToDownloadPage": "Kliknij tutaj, aby przejść do strony pobierania",
+  "@goToDownloadPage": {
+    "description": "goToDownloadPage"
+  },
+  "helloWorld": "Witaj świecie",
+  "@helloWorld": {
+    "description": "Este texto es opcional"
+  },
+  "high": "Wysoka",
+  "@high": {
+    "description": "high"
+  },
+  "hintApiUrl": "API URL do instancji Piped",
+  "@hintApiUrl": {
+    "description": "hintApiUrl"
+  },
+  "home": "Główna",
+  "@home": {
+    "description": "home"
+  },
+  "homeContentCount": "Ilość treści na ekranie głównym",
+  "@homeContentCount": {
+    "description": "homeContentCount"
+  },
+  "homeContentCountDes": "Wybierz liczbę treści na ekranie głównym (w przybliżeniu). Mniej zawartości = szybsze ładowanie",
+  "@homeContentCountDes": {
+    "description": "homeContentCountDes"
+  },
+  "id": "Id",
+  "@id": {
+    "description": "id"
+  },
+  "identifySongMetadata": "Identyfikacja metadanych",
+  "@identifySongMetadata": {
+    "description": "Action that searches and embeds metadata for a local song"
+  },
+  "ignoreBatOpt": "Zignoruj optymalizację baterii",
+  "@ignoreBatOpt": {
+    "description": "ignoreBatOpt"
+  },
+  "ignoreBatOptDes": "Jeśli masz problemy z powiadomieniami lub odtwarzanie zostało zatrzymane przez optymalizację systemu, włącz tę opcję",
+  "@ignoreBatOptDes": {
+    "description": "ignoreBatOptDes"
+  },
+  "importError": "Błąd podczas importowania listy odtwarzania",
+  "@importError": {
+    "description": "importError"
+  },
+  "importErrorDatabase": "Błąd podczas zapisywania do bazy danych",
+  "@importErrorDatabase": {
+    "description": "importErrorDatabase"
+  },
+  "importErrorFileAccess": "Nie udało się uzyskać dostępu do wybranego pliku",
+  "@importErrorFileAccess": {
+    "description": "importErrorFileAccess"
+  },
+  "importErrorFormat": "Nieprawidłowy format pliku",
+  "@importErrorFormat": {
+    "description": "importErrorFormat"
+  },
+  "importLargeFileNote": "Uwaga: import dużych list odtwarzania może potrwać dłużej",
+  "@importLargeFileNote": {
+    "description": "importLargeFileNote"
+  },
+  "importPlaylist": "Importuj listę odtwarzania",
+  "@importPlaylist": {
+    "description": "importPlaylist"
+  },
+  "importPlaylistDesc": "Wybierz wcześniej wyeksportowany plik playlisty w formacie JSON do zaimportowania",
+  "@importPlaylistDesc": {
+    "description": "importPlaylistDesc"
   },
   "imported": "Importowane",
   "@imported": {
     "description": "imported"
   },
+  "importedFromJossMusic": "Zaimportowane z Joss Music Kotlin",
+  "@importedFromJossMusic": {
+    "description": "importedFromJossMusic"
+  },
   "importedPlaylist": "Zaimportowana playlista",
   "@importedPlaylist": {
     "description": "importedPlaylist"
   },
-  "permissionDenied": "Odmowa pozwolenia",
-  "@permissionDenied": {
-    "description": "permissionDenied"
+  "importingPlaylist": "Importowanie listy odtwarzania…",
+  "@importingPlaylist": {
+    "description": "importingPlaylist"
   },
-  "enqueueSongs": "Dodaj utwory do kolejki",
-  "@enqueueSongs": {
-    "description": "enqueueSongs"
+  "in_app_storage": "Wewnętrzny katalog pamięci",
+  "@in_app_storage": {
+    "description": "in_app_storage"
   },
-  "shuffle": "Losowe",
-  "@shuffle": {
-    "description": "shuffle"
+  "includeDownloadedFiles": "Dołącz pliki z pobranymi utworami",
+  "@includeDownloadedFiles": {
+    "description": "includeDownloadedFiles"
   },
-  "downloadPlaylist": "Pobierz playlistę",
-  "@downloadPlaylist": {
-    "description": "downloadPlaylist"
+  "infoNotAvailable": "Informacje niedostępne",
+  "@infoNotAvailable": {
+    "description": "infoNotAvailable"
   },
-  "syncPlaylistSongs": "Synchronizuj utwory z listy odtwarzania",
-  "@syncPlaylistSongs": {
-    "description": "syncPlaylistSongs"
+  "invalidPlaylistFile": "Nieprawidłowa struktura pliku listy odtwarzania",
+  "@invalidPlaylistFile": {
+    "description": "invalidPlaylistFile"
   },
-  "blacklistPipedPlaylist": "Czarna lista playlist",
-  "@blacklistPipedPlaylist": {
-    "description": "blacklistPipedPlaylist"
+  "invalidServerResponse": "Nieprawidłowa odpowiedź serwera.",
+  "@invalidServerResponse": {
+    "description": "invalidServerResponse"
   },
-  "sharePlaylist": "Udostępnij playlistę",
-  "@sharePlaylist": {
-    "description": "sharePlaylist"
+  "invalidSessionToken": "Sesja nie zawiera prawidłowego tokena.",
+  "@invalidSessionToken": {
+    "description": "invalidSessionToken"
   },
-  "playlist": "Lista odtwarzania",
-  "@playlist": {
-    "description": "playlist"
+  "items": "pozycje",
+  "@items": {
+    "description": "items"
   },
-  "sortByName": "Sortuj według nazwy",
-  "@sortByName": {
-    "description": "sortByName"
+  "keepListening": "słuchaj dalej",
+  "@keepListening": {
+    "description": "keepListening"
   },
-  "sortByDate": "Sortuj według daty",
-  "@sortByDate": {
-    "description": "sortByDate"
+  "keepScreenOnWhilePlaying": "Utrzymuj ekran włączony podczas odtwarzania",
+  "@keepScreenOnWhilePlaying": {
+    "description": "keepScreenOnWhilePlaying"
   },
-  "sortByDuration": "Sortuj według czasu trwania",
-  "@sortByDuration": {
-    "description": "sortByDuration"
+  "keepScreenOnWhilePlayingDes": "Jeśli włączone, ekran urządzenia pozostanie włączony podczas odtwarzania muzyki",
+  "@keepScreenOnWhilePlayingDes": {
+    "description": "keepScreenOnWhilePlayingDes"
   },
-  "sortAscendNDescend": "Sortuj rosnąco/malejąco",
-  "@sortAscendNDescend": {
-    "description": "sortAscendNDescend"
+  "language": "Język",
+  "@language": {
+    "description": "language"
   },
-  "migration_summary_start": "Migracja zakończona z {source}.",
-  "@migration_summary_start": {
-    "placeholders": {
-      "source": {
-        "type": "String"
-      }
-    },
-    "description": "migration_summary_start"
+  "languageDes": "Ustaw język aplikacji",
+  "@languageDes": {
+    "description": "languageDes"
   },
-  "migration_summary_playlists": "Playlisty: {count}",
-  "@migration_summary_playlists": {
-    "placeholders": {
-      "count": {
-        "type": "num"
-      }
-    },
-    "description": "migration_summary_playlists"
+  "latestRelease": "Najnowsze wydanie",
+  "@latestRelease": {
+    "description": "latestRelease"
   },
-  "migration_summary_songs": "Piosenki: {count}",
-  "@migration_summary_songs": {
-    "placeholders": {
-      "count": {
-        "type": "num"
-      }
-    },
-    "description": "migration_summary_songs"
+  "latestVersion": "Dostępna najnowsza wersja",
+  "@latestVersion": {
+    "description": "latestVersion"
   },
-  "migration_summary_favorites": "Ulubione: {count}",
-  "@migration_summary_favorites": {
-    "placeholders": {
-      "count": {
-        "type": "num"
-      }
-    },
-    "description": "migration_summary_favorites"
+  "letsStrart": "Zaczynajmy...",
+  "@letsStrart": {
+    "description": "letsStrart"
+  },
+  "libAlbums": "Biblioteka Albumów",
+  "@libAlbums": {
+    "description": "libAlbums"
+  },
+  "libArtists": "Biblioteka Wykonawców",
+  "@libArtists": {
+    "description": "libArtists"
+  },
+  "libPlaylists": "Biblioteka Playlist",
+  "@libPlaylists": {
+    "description": "libPlaylists"
+  },
+  "libSongs": "Biblioteka utworów",
+  "@libSongs": {
+    "description": "libSongs"
+  },
+  "library": "Biblioteka",
+  "@library": {
+    "description": "library"
+  },
+  "libraryPlaylistDescription": "Playlista biblioteczna",
+  "@libraryPlaylistDescription": {
+    "description": "libraryPlaylistDescription"
+  },
+  "light": "Jasny",
+  "@light": {
+    "description": "light"
+  },
+  "link": "Odnośnik",
+  "@link": {
+    "description": "link"
+  },
+  "linkAlert": "Połączono pomyślnie!",
+  "@linkAlert": {
+    "description": "linkAlert"
+  },
+  "linkCopied": "Link skopiowany do schowka",
+  "@linkCopied": {
+    "description": "linkCopied"
+  },
+  "linkPipedDes": "Link z potokiem dla list odtwarzania",
+  "@linkPipedDes": {
+    "description": "linkPipedDes"
+  },
+  "listenNow": "Posłuchaj teraz",
+  "@listenNow": {
+    "description": "listenNow"
+  },
+  "listeningToEnvironment": "Słuchając otoczenia...",
+  "@listeningToEnvironment": {
+    "description": "listeningToEnvironment"
+  },
+  "loadInfoUpdate": "Nie można załadować informacji o aktualizacji",
+  "@loadInfoUpdate": {
+    "description": "loadInfoUpdate"
+  },
+  "local": "Lokalny",
+  "@local": {
+    "description": "local"
+  },
+  "local_b1": "Działa bez konieczności logowania.",
+  "@local_b1": {
+    "description": "local_b1"
+  },
+  "local_b2": "Cała Twoja biblioteka pozostaje wyłącznie na tym komputerze.",
+  "@local_b2": {
+    "description": "local_b2"
+  },
+  "local_b3": "Uwaga: brak ręcznych kopii zapasowych w chmurze. Jeśli zgubisz urządzenie lub odinstalujesz aplikację, odzyskanie danych będzie niemożliwe.",
+  "@local_b3": {
+    "description": "local_b3"
+  },
+  "local_btn": "Używaj tylko na tym urządzeniu",
+  "@local_btn": {
+    "description": "local_btn"
+  },
+  "local_subtitle": "Całkowita prywatność na Twoim urządzeniu",
+  "@local_subtitle": {
+    "description": "local_subtitle"
+  },
+  "local_title": "Tryb lokalny",
+  "@local_title": {
+    "description": "local_title"
+  },
+  "loudnessDb": "GłośnośćDb",
+  "@loudnessDb": {
+    "description": "loudnessDb"
+  },
+  "loudnessNormalization": "Normalizacja głośności",
+  "@loudnessNormalization": {
+    "description": "loudnessNormalization"
+  },
+  "loudnessNormalizationDes": "Ustawia ten sam poziom głośności dla wszystkich utworów (eksperymentalne) (nie działa z utworami pobranymi w poprzedniej wersji (< v1.10.0))",
+  "@loudnessNormalizationDes": {
+    "description": "loudnessNormalizationDes"
+  },
+  "low": "Niska",
+  "@low": {
+    "description": "low"
+  },
+  "lyrics": "Listy",
+  "@lyrics": {
+    "description": "lyrics"
+  },
+  "lyricsNotAvailable": "Tekst jest niedostępny!",
+  "@lyricsNotAvailable": {
+    "description": "lyricsNotAvailable"
+  },
+  "manageCollaborators": "Zarządzaj współpracownikami (znajomymi)",
+  "@manageCollaborators": {
+    "description": "manageCollaborators"
+  },
+  "metadataApplySuccess": "Metadane były osadzone w lokalnym pliku.",
+  "@metadataApplySuccess": {
+    "description": "Success message after writing local tags"
+  },
+  "metadataNoResults": "Brak dopasowań. Spróbuj innego wyszukiwania.",
+  "@metadataNoResults": {
+    "description": "Empty state for metadata search"
+  },
+  "metadataOperationFailed": "Operacja metadanych nie powiodła się.",
+  "@metadataOperationFailed": {
+    "description": "Generic metadata lookup or write error"
+  },
+  "metadataOverwriteWarning": "To nadpisze wbudowany tytuł, artysta, album i okładkę, zachowując pola, których mecz nie zapewnia.",
+  "@metadataOverwriteWarning": {
+    "description": "Confirmation before writing tags to a local audio file"
+  },
+  "metadataSearchDescription": "Wybierz odpowiedni mecz, aby umieścić jego tytuł, artysta, album i okładkę w pliku lokalnym.",
+  "@metadataSearchDescription": {
+    "description": "Explanation shown above metadata search results"
+  },
+  "metadataSearchHint": "Nazwa piosenki lub artysty",
+  "@metadataSearchHint": {
+    "description": "Hint for the metadata search field"
+  },
+  "metadataSearchTitle": "Identyfikacja piosenki",
+  "@metadataSearchTitle": {
+    "description": "Title of the local song metadata search dialog"
+  },
+  "micInstruction": "Upewnij się, że muzyka gra wystarczająco głośno w pobliżu mikrofonu.",
+  "@micInstruction": {
+    "description": "micInstruction"
+  },
+  "migratedAlbum": "Przeniesiony album",
+  "@migratedAlbum": {
+    "description": "migratedAlbum"
+  },
+  "migratedLibrary": "Przeniesiona biblioteka",
+  "@migratedLibrary": {
+    "description": "migratedLibrary"
+  },
+  "migratedPlaylist": "Przeniesiona playlista",
+  "@migratedPlaylist": {
+    "description": "migratedPlaylist"
+  },
+  "migrationAlreadyRunning": "Migracja już trwa.",
+  "@migrationAlreadyRunning": {
+    "description": "migrationAlreadyRunning"
+  },
+  "migrationAnalyzingLocal": "Analizując lokalną bibliotekę...",
+  "@migrationAnalyzingLocal": {
+    "description": "migrationAnalyzingLocal"
+  },
+  "migrationCheckingCloud": "Sprawdzanie, czy EMusic Cloud ma już bibliotekę...",
+  "@migrationCheckingCloud": {
+    "description": "migrationCheckingCloud"
+  },
+  "migrationCompleted": "Migracja zakończona.",
+  "@migrationCompleted": {
+    "description": "migrationCompleted"
+  },
+  "migrationCreatingBackup": "Tworzenie lokalnej kopii zapasowej przed połączeniem z chmurą...",
+  "@migrationCreatingBackup": {
+    "description": "migrationCreatingBackup"
+  },
+  "migrationFailedLocalPreserved": "Migracja nie powiodła się. Twoje dane lokalne nie zostały zmodyfikowane.",
+  "@migrationFailedLocalPreserved": {
+    "description": "migrationFailedLocalPreserved"
+  },
+  "migrationLoginRequired": "Przed migracją zaloguj się do Joss Red.",
+  "@migrationLoginRequired": {
+    "description": "migrationLoginRequired"
+  },
+  "migrationPreparingCloud": "Przygotowanie migracji w EMusic Cloud...",
+  "@migrationPreparingCloud": {
+    "description": "migrationPreparingCloud"
+  },
+  "migrationStartFailed": "EMusic Cloud nie mógł rozpocząć migracji.",
+  "@migrationStartFailed": {
+    "description": "migrationStartFailed"
+  },
+  "migrationUploadIncomplete": "Nie wszystkie dane mogły zostać przesłane. Utrzymujemy Twoje lokalne wsparcie.",
+  "@migrationUploadIncomplete": {
+    "description": "migrationUploadIncomplete"
+  },
+  "migrationUploadingData": "Przesyłanie list odtwarzania, ulubionych i historii...",
+  "@migrationUploadingData": {
+    "description": "migrationUploadingData"
+  },
+  "migrationValidationFailed": "EMusic Cloud nie mógł zweryfikować migracji.",
+  "@migrationValidationFailed": {
+    "description": "migrationValidationFailed"
+  },
+  "migrationVerifyingIntegrity": "Sprawdzanie integralności w chmurze EMusic...",
+  "@migrationVerifyingIntegrity": {
+    "description": "migrationVerifyingIntegrity"
+  },
+  "migration_btn_select": "Wybierz plik i zaimportuj",
+  "@migration_btn_select": {
+    "description": "migration_btn_select"
+  },
+  "migration_select_file_dialog": "Wybierz plik song.db lub plik kopii zapasowej .backup",
+  "@migration_select_file_dialog": {
+    "description": "migration_select_file_dialog"
+  },
+  "migration_success": "Migracja zakończyła się pomyślnie.",
+  "@migration_success": {
+    "description": "migration_success"
   },
   "migration_summary_albums": "Albumy: {count}",
   "@migration_summary_albums": {
@@ -2185,121 +1207,1166 @@
     },
     "description": "migration_summary_artists"
   },
-  "migration_select_file_dialog": "Wybierz plik song.db lub plik kopii zapasowej .backup",
-  "@migration_select_file_dialog": {
-    "description": "migration_select_file_dialog"
+  "migration_summary_favorites": "Ulubione: {count}",
+  "@migration_summary_favorites": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_favorites"
   },
-  "migration_success": "Migracja zakończyła się pomyślnie.",
-  "@migration_success": {
-    "description": "migration_success"
+  "migration_summary_playlists": "Playlisty: {count}",
+  "@migration_summary_playlists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_playlists"
   },
-  "backup_select_folder_dialog": "Wybierz folder do utworzenia kopii zapasowej",
-  "@backup_select_folder_dialog": {
-    "description": "backup_select_folder_dialog"
+  "migration_summary_songs": "Piosenki: {count}",
+  "@migration_summary_songs": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_songs"
+  },
+  "migration_summary_start": "Migracja zakończona z {source}.",
+  "@migration_summary_start": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      }
+    },
+    "description": "migration_summary_start"
+  },
+  "minutes": "minut",
+  "@minutes": {
+    "description": "minutes"
+  },
+  "misc": "Różne",
+  "@misc": {
+    "description": "misc"
+  },
+  "mostListenedSong": "Najczęściej słuchana piosenka",
+  "@mostListenedSong": {
+    "description": "mostListenedSong"
+  },
+  "musicAndPlayback": "Muzyka i Odtwarzanie",
+  "@musicAndPlayback": {
+    "description": "musicAndPlayback"
+  },
+  "musicRecognition": "Rozpoznawanie muzyki",
+  "@musicRecognition": {
+    "description": "musicRecognition"
+  },
+  "networkError": "Błąd sieci! Sprawdź połączenie sieciowe.",
+  "@networkError": {
+    "description": "networkError"
+  },
+  "networkError1": "Ups, błąd sieci!",
+  "@networkError1": {
+    "description": "networkError1"
+  },
+  "newVersionAvailable": "Nowa wersja już dostępna!",
+  "@newVersionAvailable": {
+    "description": "newVersionAvailable"
+  },
+  "news_btn_app": "Aplikacja Joss Red (Sklep Play)",
+  "@news_btn_app": {
+    "description": "news_btn_app"
+  },
+  "news_btn_dismiss": "Zrozumiany",
+  "@news_btn_dismiss": {
+    "description": "news_btn_dismiss"
+  },
+  "news_btn_web": "Joss Red Web",
+  "@news_btn_web": {
+    "description": "news_btn_web"
+  },
+  "news_card_subtitle": "100% synchronizacja z Joss Red, playlisty ze znajomymi i wiele więcej. Kliknij, aby zobaczyć, co nowego.",
+  "@news_card_subtitle": {
+    "description": "news_card_subtitle"
+  },
+  "news_card_title": "Estrella Music ewoluowała!",
+  "@news_card_title": {
+    "description": "news_card_title"
+  },
+  "news_dialog_friends_desc": "Aby dodawać znajomych, akceptować prośby lub zarządzać swoim profilem bezpieczeństwa, skorzystaj z Joss Red na jego oficjalnych platformach:",
+  "@news_dialog_friends_desc": {
+    "description": "news_dialog_friends_desc"
+  },
+  "news_dialog_section_friends": "Przyjaciele i zarządzanie kontem:",
+  "@news_dialog_section_friends": {
+    "description": "news_dialog_section_friends"
+  },
+  "news_dialog_title": "Wiadomości muzyczne Estrelli",
+  "@news_dialog_title": {
+    "description": "news_dialog_title"
+  },
+  "news_item_collab_desc": "Twórz playlisty ze znajomymi! Tworząc playlistę, zaznacz pole wyboru Współpraca i wybierz znajomych, których chcesz wspólnie edytować.",
+  "@news_item_collab_desc": {
+    "description": "news_item_collab_desc"
+  },
+  "news_item_collab_title": "Wspólne playlisty",
+  "@news_item_collab_title": {
+    "description": "news_item_collab_title"
+  },
+  "news_item_sync_desc": "Twoje playlisty i ulubione są teraz automatycznie zapisywane i synchronizowane w chmurze z Twoim głównym kontem Joss Red.",
+  "@news_item_sync_desc": {
+    "description": "news_item_sync_desc"
+  },
+  "news_item_sync_title": "Pełna integracja z Joss Red",
+  "@news_item_sync_title": {
+    "description": "news_item_sync_title"
+  },
+  "news_item_trans_desc": "Nie musisz już klikać przycisków ręcznej synchronizacji; Nowy silnik odpowiada za automatyczną zmianę biegów w górę i w dół.",
+  "@news_item_trans_desc": {
+    "description": "news_item_trans_desc"
+  },
+  "news_item_trans_title": "Przejrzysta synchronizacja",
+  "@news_item_trans_title": {
+    "description": "news_item_trans_title"
+  },
+  "no": "Nie",
+  "@no": {
+    "description": "no"
+  },
+  "noBookmarks": "Brak zakładek!",
+  "@noBookmarks": {
+    "description": "noBookmarks"
+  },
+  "noJossRedFriends": "Nie masz dodanych znajomych na Joss Red.",
+  "@noJossRedFriends": {
+    "description": "noJossRedFriends"
+  },
+  "noLibPlaylist": "Nie masz żadnej playlisty!",
+  "@noLibPlaylist": {
+    "description": "noLibPlaylist"
+  },
+  "noMatchInstruction": "Nie udało się znaleźć żadnych utworów w nagranym dźwięku",
+  "@noMatchInstruction": {
+    "description": "noMatchInstruction"
+  },
+  "noMatchesFound": "Brak dopasowań",
+  "@noMatchesFound": {
+    "description": "noMatchesFound"
+  },
+  "noOfflineSong": "Brak utworów offline!",
+  "@noOfflineSong": {
+    "description": "noOfflineSong"
+  },
+  "noSongsInCollection": "W tej kolekcji nie ma żadnych utworów",
+  "@noSongsInCollection": {
+    "description": "noSongsInCollection"
+  },
+  "nomatch": "Nie znaleziono dopasowania dla",
+  "@nomatch": {
+    "description": "nomatch"
+  },
+  "notAuthenticated": "Nieuwierzytelnione",
+  "@notAuthenticated": {
+    "description": "notAuthenticated"
+  },
+  "notaSongVideo": "To nie utwór muzyczny/teledysk!",
+  "@notaSongVideo": {
+    "description": "notaSongVideo"
+  },
+  "notaValidLink": "Nieprawidłowy link!",
+  "@notaValidLink": {
+    "description": "notaValidLink"
+  },
+  "openIn": "Otwórz w",
+  "@openIn": {
+    "description": "openIn"
+  },
+  "operationFailed": "Operacja zakończyła się niepowodzeniem",
+  "@operationFailed": {
+    "description": "operationFailed"
+  },
+  "password": "Hasło",
+  "@password": {
+    "description": "password"
+  },
+  "password_text": "Hasło",
+  "@password_text": {
+    "description": "Contraseña texto traducido"
+  },
+  "permissionDenied": "Odmowa pozwolenia",
+  "@permissionDenied": {
+    "description": "permissionDenied"
+  },
+  "permissionsAllow": "Umożliwić",
+  "@permissionsAllow": {
+    "description": "permissionsAllow"
+  },
+  "permissionsConsentDescription": "Estrella Music potrzebuje tych uprawnień, aby zarządzać Twoją muzyką i oferować wszystkie funkcje odtwarzania.",
+  "@permissionsConsentDescription": {
+    "description": "permissionsConsentDescription"
+  },
+  "permissionsConsentTitle": "Uprawnienia do rozpoczęcia",
+  "@permissionsConsentTitle": {
+    "description": "permissionsConsentTitle"
+  },
+  "permissionsContinueButton": "Przyznaj wymagane uprawnienia",
+  "@permissionsContinueButton": {
+    "description": "permissionsContinueButton"
+  },
+  "permissionsMicrophoneDescription": "Jest używany tylko wtedy, gdy zdecydujesz się zidentyfikować piosenkę odtwarzaną wokół ciebie.",
+  "@permissionsMicrophoneDescription": {
+    "description": "permissionsMicrophoneDescription"
+  },
+  "permissionsMicrophoneTitle": "Mikrofon",
+  "@permissionsMicrophoneTitle": {
+    "description": "permissionsMicrophoneTitle"
+  },
+  "permissionsNotificationsDescription": "Pokazuje elementy sterujące odtwarzaniem, postęp pobierania i ważne powiadomienia o aplikacjach.",
+  "@permissionsNotificationsDescription": {
+    "description": "permissionsNotificationsDescription"
+  },
+  "permissionsNotificationsTitle": "Powiadomienia",
+  "@permissionsNotificationsTitle": {
+    "description": "permissionsNotificationsTitle"
+  },
+  "permissionsOpenSettings": "Ustawienia",
+  "@permissionsOpenSettings": {
+    "description": "permissionsOpenSettings"
+  },
+  "permissionsRequiredNotice": "Aby kontynuować, wymagane są wszystkie trzy zezwolenia. Możesz je później zmienić w ustawieniach systemu.",
+  "@permissionsRequiredNotice": {
+    "description": "permissionsRequiredNotice"
+  },
+  "permissionsStorageDescription": "Umożliwia odtwarzanie muzyki, zapisywanie pobranych plików, eksportowanie list odtwarzania i przygotowywanie aktualizacji.",
+  "@permissionsStorageDescription": {
+    "description": "permissionsStorageDescription"
+  },
+  "permissionsStorageTitle": "Muzyka i przechowywanie",
+  "@permissionsStorageTitle": {
+    "description": "permissionsStorageTitle"
+  },
+  "personalisation": "Personalizacja",
+  "@personalisation": {
+    "description": "personalisation"
+  },
+  "pipedPlaylistDescription": "Przesłana playlista",
+  "@pipedPlaylistDescription": {
+    "description": "pipedPlaylistDescription"
+  },
+  "pipedplstSyncAlert": "Zsynchronizowano playlisty z Piped!",
+  "@pipedplstSyncAlert": {
+    "description": "pipedplstSyncAlert"
+  },
+  "plain": "Zwykły",
+  "@plain": {
+    "description": "plain"
+  },
+  "play": "Zagraj",
+  "@play": {
+    "description": "play"
+  },
+  "playNext": "Odtwórz następny",
+  "@playNext": {
+    "description": "playNext"
+  },
+  "playNow": "Zagraj teraz",
+  "@playNow": {
+    "description": "playNow"
+  },
+  "playbackSpeed": "Szybkość odtwarzania",
+  "@playbackSpeed": {
+    "description": "playbackSpeed"
+  },
+  "playerUi": "Interfejs użytkownika gracza",
+  "@playerUi": {
+    "description": "playerUi"
+  },
+  "playerUiDes": "Wybierz interfejs użytkownika odtwarzacza",
+  "@playerUiDes": {
+    "description": "playerUiDes"
+  },
+  "playingRecognizedTrack": "Gra:",
+  "@playingRecognizedTrack": {
+    "description": "playingRecognizedTrack"
+  },
+  "playingfromAlbum": "ODTWARZANIE Z ALBUMU",
+  "@playingfromAlbum": {
+    "description": "playingfromAlbum"
+  },
+  "playingfromArtist": "ODTWARZANIE WG. ARTYSTY",
+  "@playingfromArtist": {
+    "description": "playingfromArtist"
+  },
+  "playingfromPlaylist": "ODTWARZANIE Z PLAYLISTY",
+  "@playingfromPlaylist": {
+    "description": "playingfromPlaylist"
+  },
+  "playingfromSelection": "ODTWARZANIE Z WYBRANEGO ZESTAWU",
+  "@playingfromSelection": {
+    "description": "playingfromSelection"
+  },
+  "playlist": "Lista odtwarzania",
+  "@playlist": {
+    "description": "playlist"
+  },
+  "playlistBlacklistAlert": "Dodaj playlistę do czarnej listy!",
+  "@playlistBlacklistAlert": {
+    "description": "playlistBlacklistAlert"
+  },
+  "playlistBookmarkAddAlert": "Dodano Playlistę do zakładek!",
+  "@playlistBookmarkAddAlert": {
+    "description": "playlistBookmarkAddAlert"
+  },
+  "playlistBookmarkRemoveAlert": "Usunięto Playlistę z zakładek!",
+  "@playlistBookmarkRemoveAlert": {
+    "description": "playlistBookmarkRemoveAlert"
+  },
+  "playlistCollaboratorsTitle": "Współtwórcy playlisty",
+  "@playlistCollaboratorsTitle": {
+    "description": "playlistCollaboratorsTitle"
+  },
+  "playlistCreatedAlert": "Playlista została utworzona!",
+  "@playlistCreatedAlert": {
+    "description": "playlistCreatedAlert"
+  },
+  "playlistCreatednsongAddedAlert": "Utworzono playlistę i dodano utwór!",
+  "@playlistCreatednsongAddedAlert": {
+    "description": "playlistCreatednsongAddedAlert"
+  },
+  "playlistExportedMsg": "Lista odtwarzania została pomyślnie wyeksportowana do",
+  "@playlistExportedMsg": {
+    "description": "playlistExportedMsg"
+  },
+  "playlistImportedMsg": "Lista odtwarzania została pomyślnie zaimportowana",
+  "@playlistImportedMsg": {
+    "description": "playlistImportedMsg"
+  },
+  "playlistRemovedAlert": "Usunięto Playlistę!",
+  "@playlistRemovedAlert": {
+    "description": "playlistRemovedAlert"
+  },
+  "playlistRenameAlert": "Zmiana nazwy zakończona powodzeniem!",
+  "@playlistRenameAlert": {
+    "description": "playlistRenameAlert"
+  },
+  "playlists": "Playlisty",
+  "@playlists": {
+    "description": "playlists"
+  },
+  "playnextMsg": "Nadchodzące",
+  "@playnextMsg": {
+    "description": "playnextMsg"
+  },
+  "podcasts": "Podcasty",
+  "@podcasts": {
+    "description": "podcasts"
+  },
+  "popularTracks": "Popularne utwory",
+  "@popularTracks": {
+    "description": "popularTracks"
+  },
+  "processFiles": "Przetwarzanie plików...",
+  "@processFiles": {
+    "description": "processFiles"
+  },
+  "processingAudio": "Przetwarzanie dźwięku...",
+  "@processingAudio": {
+    "description": "processingAudio"
+  },
+  "profiles": "Profile",
+  "@profiles": {
+    "description": "profiles"
+  },
+  "queueLoop": "Pętla kolejki",
+  "@queueLoop": {
+    "description": "queueLoop"
+  },
+  "queueLoopNotDisMsg1": "Trybu pętli kolejki nie można wyłączyć, gdy włączony jest tryb losowy.",
+  "@queueLoopNotDisMsg1": {
+    "description": "queueLoopNotDisMsg1"
+  },
+  "queueLoopNotDisMsg2": "Tryb pętli kolejki nie może być włączony w trybie radiowym.",
+  "@queueLoopNotDisMsg2": {
+    "description": "queueLoopNotDisMsg2"
+  },
+  "queueShufflingDeniedMsg": "Nie można zmienić kolejności kolejki, gdy włączony jest tryb losowy",
+  "@queueShufflingDeniedMsg": {
+    "description": "queueShufflingDeniedMsg"
+  },
+  "queuerearrangingDeniedMsg": "Nie można zmienić kolejności kolejki, gdy włączony jest tryb losowy",
+  "@queuerearrangingDeniedMsg": {
+    "description": "queuerearrangingDeniedMsg"
+  },
+  "quickPics": "Chwytliwe fotki",
+  "@quickPics": {
+    "description": "quickPics"
+  },
+  "quickpicks": "Szybki wybór",
+  "@quickpicks": {
+    "description": "quickpicks"
+  },
+  "radioNotAvailable": "Radio niedostępne dla tego wykonawcy!",
+  "@radioNotAvailable": {
+    "description": "radioNotAvailable"
+  },
+  "randomRadio": "Losowe Radio",
+  "@randomRadio": {
+    "description": "randomRadio"
+  },
+  "randomSelection": "Wybór losowy",
+  "@randomSelection": {
+    "description": "randomSelection"
+  },
+  "reArrangePlaylist": "Zmień kolejność listy odtwarzania",
+  "@reArrangePlaylist": {
+    "description": "reArrangePlaylist"
+  },
+  "reArrangeSongs": "Zmień kolejność utworów",
+  "@reArrangeSongs": {
+    "description": "reArrangeSongs"
+  },
+  "readMore": "Przeczytaj więcej",
+  "@readMore": {
+    "description": "readMore"
+  },
+  "recentSearches": "Ostatnie wyszukiwania",
+  "@recentSearches": {
+    "description": "recentSearches"
+  },
+  "recentlyPlayed": "Ostatnio odtwarzane",
+  "@recentlyPlayed": {
+    "description": "recentlyPlayed"
+  },
+  "recommend_cloud": "Zalecamy aktywację trybu chmury, aby uzyskać wrażenia podobne do Spotify: synchronizację w czasie rzeczywistym między wszystkimi urządzeniami i automatyczne tworzenie kopii zapasowych bez konieczności wykonywania jakichkolwiek czynności.",
+  "@recommend_cloud": {
+    "description": "recommend_cloud"
+  },
+  "recommendedAlbums": "Zalecony",
+  "@recommendedAlbums": {
+    "description": "recommendedAlbums"
+  },
+  "recommendedArtists": "Zalecony",
+  "@recommendedArtists": {
+    "description": "recommendedArtists"
+  },
+  "removeFromCache": "Usuń z pamięci podręcznej",
+  "@removeFromCache": {
+    "description": "removeFromCache"
+  },
+  "removeFromLib": "Usuń z Biblioteki Utworów",
+  "@removeFromLib": {
+    "description": "removeFromLib"
+  },
+  "removeFromLibrary": "Usuń z biblioteki",
+  "@removeFromLibrary": {
+    "description": "removeFromLibrary"
+  },
+  "removeFromPlaylist": "Usuń z playlistę",
+  "@removeFromPlaylist": {
+    "description": "removeFromPlaylist"
+  },
+  "removeFromQueue": "Usuń z kolejki",
+  "@removeFromQueue": {
+    "description": "removeFromQueue"
+  },
+  "removeMultiple": "Usuń wiele utworów",
+  "@removeMultiple": {
+    "description": "removeMultiple"
+  },
+  "removePlaylist": "Usuń playlistę",
+  "@removePlaylist": {
+    "description": "removePlaylist"
+  },
+  "rename": "Zmień nazwę",
+  "@rename": {
+    "description": "rename"
+  },
+  "renamePlaylist": "Zmień nazwę playlisty",
+  "@renamePlaylist": {
+    "description": "renamePlaylist"
+  },
+  "reproducedBy": "Reprodukowane przez",
+  "@reproducedBy": {
+    "description": "reproducedBy"
+  },
+  "reset": "Resetuj",
+  "@reset": {
+    "description": "reset"
+  },
+  "resetToDefault": "Przywracanie ustawień domyślnych",
+  "@resetToDefault": {
+    "description": "resetToDefault"
+  },
+  "resetToDefaultDes": "Przywróć domyślne ustawienia aplikacji (wymagane ponowne uruchomienie)",
+  "@resetToDefaultDes": {
+    "description": "resetToDefaultDes"
+  },
+  "resetToDefaultMsg": "Przywracanie ustawień domyślnych zakończone, uruchom ponownie aplikację",
+  "@resetToDefaultMsg": {
+    "description": "resetToDefaultMsg"
+  },
+  "resetblacklistedplaylist": "Usuń playlistę z czarnej listy",
+  "@resetblacklistedplaylist": {
+    "description": "resetblacklistedplaylist"
+  },
+  "resetblacklistedplaylistDes": "Zresetuj wszystkie potokowane playlisty z czarnej listy",
+  "@resetblacklistedplaylistDes": {
+    "description": "resetblacklistedplaylistDes"
+  },
+  "restartApp": "Restart aplikacji",
+  "@restartApp": {
+    "description": "restartApp"
+  },
+  "restore": "Przywracanie",
+  "@restore": {
+    "description": "restore"
+  },
+  "restoreAppData": "Przywracanie danych aplikacji",
+  "@restoreAppData": {
+    "description": "restoreAppData"
+  },
+  "restoreLastPlaybackSession": "Przywróć ostatnią sesję odtwarzania",
+  "@restoreLastPlaybackSession": {
+    "description": "restoreLastPlaybackSession"
+  },
+  "restoreLastPlaybackSessionDes": "Automatyczne przywracanie ostatniej sesji odtwarzania po uruchomieniu aplikacji",
+  "@restoreLastPlaybackSessionDes": {
+    "description": "restoreLastPlaybackSessionDes"
+  },
+  "restoreMsg": "Przywrócenie powiodło się!\nZmiany zostaną zastosowane po ponownym uruchomieniu",
+  "@restoreMsg": {
+    "description": "restoreMsg"
+  },
+  "restoreSettingsAndPlaylists": "Przywracanie ustawień i list odtwarzania",
+  "@restoreSettingsAndPlaylists": {
+    "description": "restoreSettingsAndPlaylists"
+  },
+  "restoreSettingsAndPlaylistsDes": "Przywraca wszystkie ustawienia, dane logowania i listy odtwarzania z pliku kopii zapasowej. Nadpisuje wszystkie bieżące dane",
+  "@restoreSettingsAndPlaylistsDes": {
+    "description": "restoreSettingsAndPlaylistsDes"
   },
   "restore_select_file_dialog": "Wybierz plik kopii zapasowej",
   "@restore_select_file_dialog": {
     "description": "restore_select_file_dialog"
   },
-  "auth_hint_email": "nazwa@mail.com",
-  "@auth_hint_email": {
-    "description": "auth_hint_email"
+  "restoring": "Przywracanie...",
+  "@restoring": {
+    "description": "restoring"
   },
-  "auth_error_invalid_email": "Wpisz prawidłowy adres e-mail.",
-  "@auth_error_invalid_email": {
-    "description": "auth_error_invalid_email"
+  "results": "Wyniki",
+  "@results": {
+    "description": "results"
+  },
+  "retry": "Spróbuj ponownie!",
+  "@retry": {
+    "description": "retry"
+  },
+  "save": "Trzymać",
+  "@save": {
+    "description": "save"
+  },
+  "savedAlbums": "Zapisano",
+  "@savedAlbums": {
+    "description": "savedAlbums"
+  },
+  "scanning": "Skanowanie...",
+  "@scanning": {
+    "description": "scanning"
+  },
+  "search": "Szukaj",
+  "@search": {
+    "description": "search"
+  },
+  "searchDes": "Utwory, Playlista, Album lub Wykonawca",
+  "@searchDes": {
+    "description": "searchDes"
+  },
+  "searchInLibrary": "Szukaj w Bibliotece",
+  "@searchInLibrary": {
+    "description": "searchInLibrary"
+  },
+  "searchRes": "Wyniki wyszukiwania",
+  "@searchRes": {
+    "description": "searchRes"
+  },
+  "search_recent_title": "Ostatnie wyszukiwania",
+  "@search_recent_title": {
+    "description": "search_recent_title"
+  },
+  "selectAll": "Zaznacz wszystko",
+  "@selectAll": {
+    "description": "selectAll"
+  },
+  "selectAuthIns": "Wybierz instancję do uwierzytelniania",
+  "@selectAuthIns": {
+    "description": "selectAuthIns"
+  },
+  "selectAuthInsMsg": "Należy wybrać instancję uwierzytelniania!",
+  "@selectAuthInsMsg": {
+    "description": "selectAuthInsMsg"
+  },
+  "selectFile": "Wybierz plik",
+  "@selectFile": {
+    "description": "selectFile"
+  },
+  "selectSongs": "Wybierz utwory",
+  "@selectSongs": {
+    "description": "selectSongs"
+  },
+  "selectedFileNotFound": "Nie znaleziono wybranego pliku.",
+  "@selectedFileNotFound": {
+    "description": "selectedFileNotFound"
+  },
+  "sessionExpiredLoginAgain": "Twoja sesja wygasła. Zaloguj się ponownie.",
+  "@sessionExpiredLoginAgain": {
+    "description": "sessionExpiredLoginAgain"
+  },
+  "setDiscoverContent": "Wykryj zawartość",
+  "@setDiscoverContent": {
+    "description": "setDiscoverContent"
+  },
+  "settings": "Ustawienia",
+  "@settings": {
+    "description": "settings"
+  },
+  "settings_about_desc": "O muzyce Estrella",
+  "@settings_about_desc": {
+    "description": "settings_about_desc"
+  },
+  "settings_about_sub": "Wersja, projekt open source i GitHub.",
+  "@settings_about_sub": {
+    "description": "settings_about_sub"
+  },
+  "settings_account_desc": "Konto i synchronizacja",
+  "@settings_account_desc": {
+    "description": "settings_account_desc"
+  },
+  "settings_account_sub": "Tryb chmury, kopie zapasowe, lista znajomych i migracje.",
+  "@settings_account_sub": {
+    "description": "settings_account_sub"
+  },
+  "settings_appearance_desc": "Animacje tematyczne, językowe i interfejsowe.",
+  "@settings_appearance_desc": {
+    "description": "settings_appearance_desc"
+  },
+  "settings_cloud_backup": "Kopia zapasowa w chmurze",
+  "@settings_cloud_backup": {
+    "description": "settings_cloud_backup"
+  },
+  "settings_cloud_backup_desc": "Przesyłaj, przywracaj i zarządzaj...",
+  "@settings_cloud_backup_desc": {
+    "description": "settings_cloud_backup_desc"
   },
   "settings_cloud_backup_dialog_desc": "Prześlij kopię zapasową aplikacji w formacie .hmb na serwer i w razie potrzeby przywróć dowolną z zapisanych kopii zapasowych.",
   "@settings_cloud_backup_dialog_desc": {
     "description": "settings_cloud_backup_dialog_desc"
   },
-  "delete": "Usuń",
-  "@delete": {
-    "description": "delete"
+  "settings_content_desc": "Odkryj filtry, integrację z Piped i pamięciami podręcznymi.",
+  "@settings_content_desc": {
+    "description": "settings_content_desc"
   },
-  "in_app_storage": "Wewnętrzny katalog pamięci",
-  "@in_app_storage": {
-    "description": "in_app_storage"
+  "settings_downloads_desc": "Pobieranie i przechowywanie",
+  "@settings_downloads_desc": {
+    "description": "settings_downloads_desc"
   },
-  "auth_brand_description_1": "Przynieśliśmy logowanie, rejestrację i odzyskiwanie hasła z poprzedniego projektu, dostosowane do tej aplikacji muzycznej.",
-  "@auth_brand_description_1": {
-    "description": "auth_brand_description_1"
+  "settings_downloads_sub": "Formaty audio, foldery i automatyczne pobieranie.",
+  "@settings_downloads_sub": {
+    "description": "settings_downloads_sub"
   },
-  "auth_brand_description_2": "Twoja sesja jest przechowywana w bezpiecznym magazynie i jest sprawdzana przy użyciu tego samego backendu, którego już używałeś.",
-  "@auth_brand_description_2": {
-    "description": "auth_brand_description_2"
+  "settings_general_section": "Ogólny",
+  "@settings_general_section": {
+    "description": "settings_general_section"
   },
-  "auth_brand_not_configured": "Aby połączyć moduł uwierzytelniania, należy skonfigurować plik .env.",
-  "@auth_brand_not_configured": {
-    "description": "auth_brand_not_configured"
+  "settings_local_cloud_desc": "Wybierz, przeprowadź migrację lub przejrzyj status synchronizacji za pomocą Joss Red.",
+  "@settings_local_cloud_desc": {
+    "description": "settings_local_cloud_desc"
   },
-  "auth_forgot_password_subtitle": "Wyślemy Ci instrukcje na adres e-mail Twojego konta.",
-  "@auth_forgot_password_subtitle": {
-    "description": "auth_forgot_password_subtitle"
+  "settings_local_cloud_title": "Tryb lokalny / chmura EMusic",
+  "@settings_local_cloud_title": {
+    "description": "settings_local_cloud_title"
   },
-  "auth_btn_send_email": "Wyślij pocztę",
-  "@auth_btn_send_email": {
-    "description": "auth_btn_send_email"
+  "settings_logout": "Wyloguj się",
+  "@settings_logout": {
+    "description": "settings_logout"
   },
-  "auth_error_not_configured": "Brakuje modułu uwierzytelniania do skonfigurowania w pliku .env.",
-  "@auth_error_not_configured": {
-    "description": "auth_error_not_configured"
+  "settings_migration_desc": "Importuj playlisty, utwory...",
+  "@settings_migration_desc": {
+    "description": "settings_migration_desc"
   },
-  "auth_error_invalid_credentials": "Nieprawidłowy adres e-mail lub hasło.",
-  "@auth_error_invalid_credentials": {
-    "description": "auth_error_invalid_credentials"
+  "settings_migration_title": "Przeprowadź migrację z Joss Music Kotlin",
+  "@settings_migration_title": {
+    "description": "settings_migration_title"
   },
-  "auth_error_not_verified": "Twoje konto nie zostało jeszcze zweryfikowane.",
-  "@auth_error_not_verified": {
-    "description": "auth_error_not_verified"
+  "settings_my_friends": "moi przyjaciele",
+  "@settings_my_friends": {
+    "description": "settings_my_friends"
   },
-  "auth_error_unknown": "Nie udało się dokończyć operacji.",
-  "@auth_error_unknown": {
-    "description": "auth_error_unknown"
+  "settings_my_friends_desc": "Zarządzaj bezpośrednio swoimi przyjaciółmi Joss Red.",
+  "@settings_my_friends_desc": {
+    "description": "settings_my_friends_desc"
   },
-  "auth_register_success": "Konto utworzone pomyślnie.",
-  "@auth_register_success": {
-    "description": "auth_register_success"
+  "settings_playback_desc": "Jakość przesyłania strumieniowego, normalizacja, wyciszenie i bateria.",
+  "@settings_playback_desc": {
+    "description": "settings_playback_desc"
   },
-  "auth_register_error": "Nie udało się utworzyć konta.",
-  "@auth_register_error": {
-    "description": "auth_register_error"
+  "settings_refresh_visitor_desc": "Wygeneruj ponownie swój identyfikator Online Music, jeśli treści Discover nie zostaną wczytane.",
+  "@settings_refresh_visitor_desc": {
+    "description": "settings_refresh_visitor_desc"
   },
-  "auth_recovery_email_sent": "E-mail wysłany.",
-  "@auth_recovery_email_sent": {
-    "description": "auth_recovery_email_sent"
+  "settings_refresh_visitor_title": "Odśwież identyfikator (identyfikator gościa)",
+  "@settings_refresh_visitor_title": {
+    "description": "settings_refresh_visitor_title"
   },
-  "auth_recovery_email_error": "Nie można było wysłać e-maila.",
-  "@auth_recovery_email_error": {
-    "description": "auth_recovery_email_error"
+  "settings_visitor_error": "Błąd",
+  "@settings_visitor_error": {
+    "description": "settings_visitor_error"
   },
-  "latestVersion": "Dostępna najnowsza wersja",
-  "@latestVersion": {
-    "description": "latestVersion"
+  "settings_visitor_error_desc": "Nie można wygenerować nowego identyfikatora. Spróbuj ponownie później.",
+  "@settings_visitor_error_desc": {
+    "description": "settings_visitor_error_desc"
+  },
+  "settings_visitor_exception": "Wystąpił błąd podczas regeneracji: {error}",
+  "@settings_visitor_exception": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    },
+    "description": "settings_visitor_exception"
+  },
+  "settings_visitor_updated": "Zaktualizowany identyfikator",
+  "@settings_visitor_updated": {
+    "description": "settings_visitor_updated"
+  },
+  "settings_visitor_updated_desc": "Nowy identyfikator gościa został pomyślnie wygenerowany.",
+  "@settings_visitor_updated_desc": {
+    "description": "settings_visitor_updated_desc"
+  },
+  "shareAlbum": "Udostępnij album",
+  "@shareAlbum": {
+    "description": "shareAlbum"
+  },
+  "sharePlaylist": "Udostępnij playlistę",
+  "@sharePlaylist": {
+    "description": "sharePlaylist"
+  },
+  "shareSong": "Udostępnij ten utwór",
+  "@shareSong": {
+    "description": "shareSong"
+  },
+  "shazamSearching": "Przeszukiwanie bazy danych Shazam w poszukiwaniu dopasowań...",
+  "@shazamSearching": {
+    "description": "shazamSearching"
+  },
+  "shuffle": "Losowe",
+  "@shuffle": {
+    "description": "shuffle"
+  },
+  "shuffleQueue": "Przetasuj kolejkę",
+  "@shuffleQueue": {
+    "description": "shuffleQueue"
+  },
+  "similarToTitle": "Podobny do {title}",
+  "@similarToTitle": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    },
+    "description": "similarToTitle"
+  },
+  "singles": "Single",
+  "@singles": {
+    "description": "singles"
+  },
+  "skipSilence": "Pomiń ciszę",
+  "@skipSilence": {
+    "description": "skipSilence"
+  },
+  "skipSilenceDes": "Cisza będzie pomijana podczas odtwarzania muzyki",
+  "@skipSilenceDes": {
+    "description": "skipSilenceDes"
+  },
+  "sleepTimeSetAlert": "Wyłącznik czasowy jest ustawiony",
+  "@sleepTimeSetAlert": {
+    "description": "sleepTimeSetAlert"
+  },
+  "sleepTimer": "Wyłącznik czasowy",
+  "@sleepTimer": {
+    "description": "sleepTimer"
+  },
+  "slide_indicator": "Krok _{current} z 3",
+  "@slide_indicator": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      }
+    },
+    "description": "slide_indicator"
+  },
+  "songAddedToPlaylistAlert": "Utwór dodano do playlisty!",
+  "@songAddedToPlaylistAlert": {
+    "description": "songAddedToPlaylistAlert"
+  },
+  "songAlreadyExists": "Ten utwór już istnieje!",
+  "@songAlreadyExists": {
+    "description": "songAlreadyExists"
+  },
+  "songAlreadyOfflineAlert": "Utwór jest już offline w pamięci podręcznej",
+  "@songAlreadyOfflineAlert": {
+    "description": "songAlreadyOfflineAlert"
+  },
+  "songEnqueueAlert": "Utwór dodano do kolejki!",
+  "@songEnqueueAlert": {
+    "description": "songEnqueueAlert"
+  },
+  "songFound": "Znaleziono piosenkę!",
+  "@songFound": {
+    "description": "songFound"
+  },
+  "songInfo": "Informacje o utworze",
+  "@songInfo": {
+    "description": "songInfo"
+  },
+  "songNotPlayable": "Nie można odtworzyć utworu z powodu ograniczeń serwera!",
+  "@songNotPlayable": {
+    "description": "songNotPlayable"
+  },
+  "songPitch": "ton piosenki",
+  "@songPitch": {
+    "description": "songPitch"
+  },
+  "songRemovedAlert": "Usunięto z",
+  "@songRemovedAlert": {
+    "description": "songRemovedAlert"
+  },
+  "songRemovedfromQueue": "Usunięto z kolejki!",
+  "@songRemovedfromQueue": {
+    "description": "songRemovedfromQueue"
+  },
+  "songRemovedfromQueueCurrSong": "Nie można usunąć aktualnie odtwarzanego utworu",
+  "@songRemovedfromQueueCurrSong": {
+    "description": "songRemovedfromQueueCurrSong"
+  },
+  "songs": "Utwory",
+  "@songs": {
+    "description": "songs"
+  },
+  "songsImportedFromJossMusic": "Utwory zaimportowane z Joss Music Kotlin",
+  "@songsImportedFromJossMusic": {
+    "description": "songsImportedFromJossMusic"
+  },
+  "sortAscendNDescend": "Sortuj rosnąco/malejąco",
+  "@sortAscendNDescend": {
+    "description": "sortAscendNDescend"
+  },
+  "sortByDate": "Sortuj według daty",
+  "@sortByDate": {
+    "description": "sortByDate"
+  },
+  "sortByDuration": "Sortuj według czasu trwania",
+  "@sortByDuration": {
+    "description": "sortByDuration"
+  },
+  "sortByName": "Sortuj według nazwy",
+  "@sortByName": {
+    "description": "sortByName"
+  },
+  "speedAndPitch": "Szybkość i wysokość",
+  "@speedAndPitch": {
+    "description": "speedAndPitch"
+  },
+  "standard": "Standard",
+  "@standard": {
+    "description": "standard"
+  },
+  "startRadio": "Uruchom radio",
+  "@startRadio": {
+    "description": "startRadio"
+  },
+  "startupScreen": "Otwórz przy uruchomieniu",
+  "@startupScreen": {
+    "description": "startupScreen"
+  },
+  "startupScreenDescription": "Wybierz sekcję, którą Estrella Music otworzy jako pierwszą",
+  "@startupScreenDescription": {
+    "description": "startupScreenDescription"
+  },
+  "status": "Stan",
+  "@status": {
+    "description": "status"
+  },
+  "stopMusicOnTaskClear": "Zatrzymaj muzykę",
+  "@stopMusicOnTaskClear": {
+    "description": "stopMusicOnTaskClear"
+  },
+  "stopMusicOnTaskClearDes": "Odtwarzanie muzyki zostanie zatrzymane, gdy aplikacja zostanie usunięta z menedżera zadań",
+  "@stopMusicOnTaskClearDes": {
+    "description": "stopMusicOnTaskClearDes"
+  },
+  "streamingQuality": "Jakość streamingu",
+  "@streamingQuality": {
+    "description": "streamingQuality"
+  },
+  "streamingQualityDes": "Jakość strumienia muzyki",
+  "@streamingQualityDes": {
+    "description": "streamingQualityDes"
+  },
+  "subscribers": "subskrybentów",
+  "@subscribers": {
+    "description": "subscribers"
+  },
+  "swipe_prompt": "Przesuń, aby poznać opcje ➔",
+  "@swipe_prompt": {
+    "description": "swipe_prompt"
+  },
+  "syncChangesConfirmed": "{count} zmiany zatwierdzone.",
+  "@syncChangesConfirmed": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    },
+    "description": "syncChangesConfirmed"
+  },
+  "syncChangesSynced": "{count} zsynchronizowane zmiany.",
+  "@syncChangesSynced": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    },
+    "description": "syncChangesSynced"
+  },
+  "syncCloudDownloadingExisting": "Aktywowano tryb chmury. Pobieranie istniejącej biblioteki.",
+  "@syncCloudDownloadingExisting": {
+    "description": "syncCloudDownloadingExisting"
+  },
+  "syncCloudMigrationComplete": "Aktywowano tryb chmury. Przeniesiona biblioteka.",
+  "@syncCloudMigrationComplete": {
+    "description": "syncCloudMigrationComplete"
+  },
+  "syncCloudModeActive": "Tryb chmury aktywny",
+  "@syncCloudModeActive": {
+    "description": "syncCloudModeActive"
+  },
+  "syncCloudPending": "Tryb chmury aktywny. Oczekująca synchronizacja.",
+  "@syncCloudPending": {
+    "description": "syncCloudPending"
+  },
+  "syncDownloadFailed": "Nie udało się pobrać synchronizacji.",
+  "@syncDownloadFailed": {
+    "description": "syncDownloadFailed"
+  },
+  "syncDownloading": "Pobieram zmiany w EMusic...",
+  "@syncDownloading": {
+    "description": "syncDownloading"
+  },
+  "syncForceReplaceBackupSaved": "Backup odzyskiwania: {path}",
+  "@syncForceReplaceBackupSaved": {
+    "placeholders": {
+      "path": {}
+    }
+  },
+  "syncForceReplaceConfirmAction": "Reemplazar y subir",
+  "@syncForceReplaceConfirmAction": {},
+  "syncForceReplaceConfirmBody": "Primero se creará un respaldo de recuperación. Después, las playlists, favoritos, historial, álbumes, artistas y ajustes musicales de EMusic Cloud se reemplazarán con los datos actuales de este dispositivo. No se puede deshacer desde el servidor.",
+  "@syncForceReplaceConfirmBody": {},
+  "syncForceReplaceConfirmTitle": "¿Reemplazar la biblioteca remota muzyczna?",
+  "@syncForceReplaceConfirmTitle": {},
+  "syncForceReplaceCountMismatch": "Wgrane liczby nie pasują do lokalnej biblioteki. Zdalna wymiana nie mogła być potwierdzona.",
+  "@syncForceReplaceCountMismatch": {},
+  "syncForceReplaceCreatingBackup": "Tworzenie kopii zapasowej przed zastąpieniem danych w chmurze...",
+  "@syncForceReplaceCreatingBackup": {},
+  "syncForceReplaceDescription": "Pausa la sincronización pendiente y reemplaza a la fuerza tu biblioteca musical remota con los datos actuales de este dispositivo. Las descargas permanecen locales.",
+  "@syncForceReplaceDescription": {},
+  "syncForceReplaceFailed": "Emusic Cloud nie mógł zastąpić zdalnej biblioteki.",
+  "@syncForceReplaceFailed": {},
+  "syncForceReplaceFailedLocalPreserved": "Zdalna wymiana nie powiodła się. Twoje lokalne dane i kopie zapasowe zostały zachowane.",
+  "@syncForceReplaceFailedLocalPreserved": {},
+  "syncForceReplaceFailedTitle": "Wysyłanie nie zakończone",
+  "@syncForceReplaceFailedTitle": {},
+  "syncForceReplaceInProgress": "Przerwanie synchronizacji, tworzenie kopii zapasowych i wysyłanie lokalnej biblioteki...",
+  "@syncForceReplaceInProgress": {},
+  "syncForceReplacePauseFailed": "Obecna synchronizacja nie mogła być bezpiecznie wstrzymana. Spróbuj jeszcze raz za chwilę.",
+  "@syncForceReplacePauseFailed": {},
+  "syncForceReplaceSuccess": "Zdalna biblioteka muzyczna została zastąpiona bieżącymi danymi tego urządzenia.",
+  "@syncForceReplaceSuccess": {},
+  "syncForceReplaceSuccessTitle": "Wysyłanie zakończone",
+  "@syncForceReplaceSuccessTitle": {},
+  "syncForceReplaceTitle": "Cancelar sincronización y subir esta base",
+  "@syncForceReplaceTitle": {},
+  "syncForceReplaceValidating": "Walidacja przesłanej biblioteki przed zastąpieniem danych w chmurze...",
+  "@syncForceReplaceValidating": {},
+  "syncLibrarySynced": "Zsynchronizowana biblioteka.",
+  "@syncLibrarySynced": {
+    "description": "syncLibrarySynced"
+  },
+  "syncLibraryUpToDate": "Biblioteka na bieżąco.",
+  "@syncLibraryUpToDate": {
+    "description": "syncLibraryUpToDate"
+  },
+  "syncLocalChangesFirst": "Są nowe zmiany lokalne. Zostaną przesłane przed pobraniem.",
+  "@syncLocalChangesFirst": {
+    "description": "syncLocalChangesFirst"
+  },
+  "syncLocalDeviceOnly": "Twoje dane są przechowywane wyłącznie na tym urządzeniu.",
+  "@syncLocalDeviceOnly": {
+    "description": "syncLocalDeviceOnly"
+  },
+  "syncLocalModeActive": "Tryb lokalny aktywny",
+  "@syncLocalModeActive": {
+    "description": "syncLocalModeActive"
+  },
+  "syncOfflinePending": "Nieaktywny. Zmiany oczekują.",
+  "@syncOfflinePending": {
+    "description": "syncOfflinePending"
+  },
+  "syncOfflineRetry": "Nieaktywny. Zmiany zostały zapisane do ponownej próby.",
+  "@syncOfflineRetry": {
+    "description": "syncOfflineRetry"
+  },
+  "syncPlaylistSongs": "Synchronizuj utwory z listy odtwarzania",
+  "@syncPlaylistSongs": {
+    "description": "syncPlaylistSongs"
+  },
+  "syncUnconfirmedRetry": "EMusic nie potwierdził wszystkich zmian. Zostaną one rozpatrzone ponownie.",
+  "@syncUnconfirmedRetry": {
+    "description": "syncUnconfirmedRetry"
+  },
+  "syncUploadRetry": "Nie mogłem wstać. Próba zostanie ponowiona później.",
+  "@syncUploadRetry": {
+    "description": "syncUploadRetry"
+  },
+  "syncUploadSuccess": "Zmiany przesłane poprawnie.",
+  "@syncUploadSuccess": {
+    "description": "syncUploadSuccess"
+  },
+  "syncUploadSuccessWs": "Zmiany przesłane pomyślnie (WS).",
+  "@syncUploadSuccessWs": {
+    "description": "syncUploadSuccessWs"
+  },
+  "syncUploadWsRetry": "Nie można przesłać za pomocą WS. Próba zostanie ponowiona później.",
+  "@syncUploadWsRetry": {
+    "description": "syncUploadWsRetry"
+  },
+  "syncUploading": "Przesyłanie zmian do EMusic...",
+  "@syncUploading": {
+    "description": "syncUploading"
+  },
+  "synced": "Zsynchronizowano",
+  "@synced": {
+    "description": "synced"
+  },
+  "syncedLyricsNotAvailable": "Synchronizowanie tekstu nie jest dostępne!",
+  "@syncedLyricsNotAvailable": {
+    "description": "syncedLyricsNotAvailable"
+  },
+  "systemDefault": "Domyślne ustawienia systemowe",
+  "@systemDefault": {
+    "description": "systemDefault"
+  },
+  "themeMode": "Motyw",
+  "@themeMode": {
+    "description": "themeMode"
+  },
+  "title": "Tytuł",
+  "@title": {
+    "description": "title"
+  },
+  "topMusicVid": "Najlepsze teledyski",
+  "@topMusicVid": {
+    "description": "topMusicVid"
+  },
+  "topmusicvideos": "Najlepsze wideoklipy",
+  "@topmusicvideos": {
+    "description": "topmusicvideos"
+  },
+  "trending": "Trendy",
+  "@trending": {
+    "description": "trending"
+  },
+  "unLink": "Odłącz",
+  "@unLink": {
+    "description": "unLink"
+  },
+  "unlinkAlert": "Odłączono pomyślnie!",
+  "@unlinkAlert": {
+    "description": "unlinkAlert"
+  },
+  "untitledSong": "Piosenka bez tytułu",
+  "@untitledSong": {
+    "description": "untitledSong"
+  },
+  "upNext": "Następne",
+  "@upNext": {
+    "description": "upNext"
   },
   "updateApp": "Zaktualizuj aplikację",
   "@updateApp": {
     "description": "updateApp"
   },
-  "loadInfoUpdate": "Nie można załadować informacji o aktualizacji",
-  "@loadInfoUpdate": {
-    "description": "loadInfoUpdate"
+  "urlSearchDes": "Wykryty adres URL - kliknij go, aby otworzyć/odtworzyć powiązaną zawartość",
+  "@urlSearchDes": {
+    "description": "urlSearchDes"
   },
-  "infoNotAvailable": "Informacje niedostępne",
-  "@infoNotAvailable": {
-    "description": "infoNotAvailable"
+  "useThisMetadata": "Użyj tych metadanych",
+  "@useThisMetadata": {
+    "description": "Button for selecting a metadata candidate"
   },
-  "developedBy": "Opracowany i utrzymywany przez Jossa Estradę (JOSPROX)",
-  "@developedBy": {
-    "description": "developedBy"
+  "userBlocked": "Zablokowany użytkownik",
+  "@userBlocked": {
+    "description": "userBlocked"
   },
-  "copyrightNotice": "© 2026 JOSPROX. Licencja GPL v3.0",
-  "@copyrightNotice": {
-    "description": "copyrightNotice"
+  "userListMissing": "Odpowiedź nie zawiera listy użytkowników.",
+  "@userListMissing": {
+    "description": "userListMissing"
   },
-  "syncForceReplaceTitle": "Cancelar sincronización y subir esta base",
-  "syncForceReplaceConfirmAction": "Reemplazar y subir",
-  "syncForceReplaceDescription": "Pausa la sincronización pendiente y reemplaza a la fuerza tu biblioteca musical remota con los datos actuales de este dispositivo. Las descargas permanecen locales.",
-  "syncForceReplaceConfirmBody": "Primero se creará un respaldo de recuperación. Después, las playlists, favoritos, historial, álbumes, artistas y ajustes musicales de EMusic Cloud se reemplazarán con los datos actuales de este dispositivo. No se puede deshacer desde el servidor.",
-  "syncForceReplaceConfirmTitle": "¿Reemplazar la biblioteca remota muzyczna?"
+  "userSearchFailed": "Nie można wyszukać użytkowników ({statusCode}).",
+  "@userSearchFailed": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    },
+    "description": "userSearchFailed"
+  },
+  "userUnblocked": "Odblokowany użytkownik",
+  "@userUnblocked": {
+    "description": "userUnblocked"
+  },
+  "username": "Nazwa użytkownika",
+  "@username": {
+    "description": "username"
+  },
+  "video": "Wideo",
+  "@video": {
+    "description": "video"
+  },
+  "videos": "Teledyski",
+  "@videos": {
+    "description": "videos"
+  },
+  "viewAll": "Pokaż wszystko",
+  "@viewAll": {
+    "description": "viewAll"
+  },
+  "viewArtist": "Zobacz wykonawcę",
+  "@viewArtist": {
+    "description": "viewArtist"
+  },
+  "welcome_intro": "Zmodernizowaliśmy naszą platformę. Stary system ręcznego przesyłania kopii zapasowych został wyłączony. Masz teraz dwa jasne sposoby zarządzania swoją biblioteką muzyczną.",
+  "@welcome_intro": {
+    "description": "welcome_intro"
+  },
+  "welcome_subtitle": "Wybierz, w jaki sposób chcesz odtąd korzystać z Estrella Music.",
+  "@welcome_subtitle": {
+    "description": "welcome_subtitle"
+  },
+  "welcome_title": "Twoja muzyka, na Twój sposób",
+  "@welcome_title": {
+    "description": "welcome_title"
+  }
 }

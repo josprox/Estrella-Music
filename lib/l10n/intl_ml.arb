@@ -1,288 +1,124 @@
 {
   "@@locale": "ml",
-  "songs": "പാട്ടുകൾ",
-  "@songs": {
-    "description": "songs"
-  },
-  "home": "ഹോംപേജ്",
-  "@home": {
-    "description": "home"
-  },
-  "libPlaylists": "ലൈബ്രറി പ്ലേലിസ്റ്റുകൾ",
-  "@libPlaylists": {
-    "description": "libPlaylists"
-  },
-  "libSongs": "ലൈബ്രറി ഗാനങ്ങൾ",
-  "@libSongs": {
-    "description": "libSongs"
-  },
-  "artists": "കലാകാരന്മാർ",
-  "@artists": {
-    "description": "artists"
-  },
-  "settings": "ക്രമീകരണങ്ങൾ",
-  "@settings": {
-    "description": "settings"
-  },
-  "libArtists": "ലൈബ്രറി ആർട്ടിസ്റ്റുകൾ",
-  "@libArtists": {
-    "description": "libArtists"
-  },
-  "albums": "ആൽബം",
-  "@albums": {
-    "description": "albums"
-  },
-  "communityplaylists": "കമ്മ്യൂണിറ്റി പ്ലേലിസ്റ്റുകൾ",
-  "@communityplaylists": {
-    "description": "communityplaylists"
-  },
-  "singles": "സിംഗിൾസ്",
-  "@singles": {
-    "description": "singles"
-  },
-  "library": "ലൈബ്രറി",
-  "@library": {
-    "description": "library"
-  },
-  "album": "ആൽബം",
-  "@album": {
-    "description": "album"
-  },
-  "playlists": "പ്ലേലിസ്റ്റുകൾ",
-  "@playlists": {
-    "description": "playlists"
-  },
-  "libAlbums": "ലൈബ്രറി ആൽബങ്ങൾ",
-  "@libAlbums": {
-    "description": "libAlbums"
-  },
-  "items": "ഇനങ്ങൾ",
-  "@items": {
-    "description": "items"
-  },
-  "cachedOrOffline": "കാഷെ ചെയ്‌തത്/ഓഫ്‌ലൈൻ",
-  "@cachedOrOffline": {
-    "description": "cachedOrOffline"
-  },
-  "renamePlaylist": "പ്ലേലിസ്റ്റ് പേരുമാറ്റുക",
-  "@renamePlaylist": {
-    "description": "renamePlaylist"
-  },
-  "removePlaylist": "പ്ലേലിസ്റ്റ് നീക്കം ചെയ്യുക",
-  "@removePlaylist": {
-    "description": "removePlaylist"
-  },
-  "enqueueAll": "എല്ലാം എൻക്യൂ",
-  "@enqueueAll": {
-    "description": "enqueueAll"
-  },
-  "reArrangePlaylist": "പ്ലേലിസ്റ്റ് പുനഃക്രമീകരിക്കുക",
-  "@reArrangePlaylist": {
-    "description": "reArrangePlaylist"
-  },
-  "removeMultiple": "ഒന്നിലധികം പാട്ടുകൾ നീക്കം ചെയ്യുക",
-  "@removeMultiple": {
-    "description": "removeMultiple"
-  },
-  "networkError1": "അയ്യോ നെറ്റ്‌വർക്ക് പിശക്!",
-  "@networkError1": {
-    "description": "networkError1"
-  },
-  "favorites": "പ്രിയപ്പെട്ടവ",
-  "@favorites": {
-    "description": "favorites"
-  },
-  "emptyPlaylist": "പ്ലേലിസ്റ്റ് ശൂന്യം!",
-  "@emptyPlaylist": {
-    "description": "emptyPlaylist"
-  },
   "CreateNewPlaylist": "പുതിയ പ്ലേലിസ്റ്റ് സൃഷ്ടിക്കുക",
   "@CreateNewPlaylist": {
     "description": "CreateNewPlaylist"
   },
-  "cancel": "റദ്ദാക്കുക",
-  "@cancel": {
-    "description": "cancel"
+  "Piped": "പൈപ്പ് ചെയ്തു",
+  "@Piped": {
+    "description": "Piped"
   },
-  "create": "സൃഷ്ടിക്കുക",
-  "@create": {
-    "description": "create"
+  "about": "കുറിച്ച്",
+  "@about": {
+    "description": "about"
   },
-  "createnAdd": "സൃഷ്‌ടിക്കുകയും ചേർക്കുകയും ചെയ്യുക",
-  "@createnAdd": {
-    "description": "createnAdd"
-  },
-  "startRadio": "റേഡിയോ ആരംഭിക്കുക",
-  "@startRadio": {
-    "description": "startRadio"
-  },
-  "addToPlaylist": "പ്ലേലിസ്റ്റിലേക്ക് ചേർക്കുക",
-  "@addToPlaylist": {
-    "description": "addToPlaylist"
-  },
-  "noLibPlaylist": "നിങ്ങളുടെ കയ്യിൽ ഒരു ലിബ് പ്ലേലിസ്റ്റും ഇല്ലേ!",
-  "@noLibPlaylist": {
-    "description": "noLibPlaylist"
-  },
-  "enqueueSong": "ഈ പാട്ട് ക്യൂവിൽ ചേർക്കുക",
-  "@enqueueSong": {
-    "description": "enqueueSong"
+  "add5Minutes": "5 മിനിറ്റ് ചേർക്കുക",
+  "@add5Minutes": {
+    "description": "add5Minutes"
   },
   "addMultipleSongs": "പ്ലേലിസ്റ്റിലേക്ക് പാട്ടുകൾ ചേർക്കുക",
   "@addMultipleSongs": {
     "description": "addMultipleSongs"
   },
-  "downloads": "ഡൗൺലോഡുകൾ",
-  "@downloads": {
-    "description": "downloads"
+  "addToLibrary": "ലൈബ്രറിയിലേക്ക് ചേർക്കുക",
+  "@addToLibrary": {
+    "description": "addToLibrary"
   },
-  "featuredplaylists": "തിരഞ്ഞെടുത്ത പ്ലേലിസ്റ്റുകൾ",
-  "@featuredplaylists": {
-    "description": "featuredplaylists"
+  "addToPlaylist": "പ്ലേലിസ്റ്റിലേക്ക് ചേർക്കുക",
+  "@addToPlaylist": {
+    "description": "addToPlaylist"
   },
-  "noOfflineSong": "ഓഫ്‌ലൈൻ പാട്ടുകളൊന്നുമില്ല!",
-  "@noOfflineSong": {
-    "description": "noOfflineSong"
+  "album": "ആൽബം",
+  "@album": {
+    "description": "album"
   },
-  "recentlyPlayed": "അടുത്തിടെ കളിച്ചത്",
-  "@recentlyPlayed": {
-    "description": "recentlyPlayed"
+  "albumBookmarkAddAlert": "ബുക്ക്‌മാർക്കുകളിലേക്ക് ആൽബം ചേർത്തു!",
+  "@albumBookmarkAddAlert": {
+    "description": "albumBookmarkAddAlert"
   },
-  "rename": "പേരുമാറ്റുക",
-  "@rename": {
-    "description": "rename"
+  "albumBookmarkRemoveAlert": "ആൽബം ബുക്ക്മാർക്ക് നീക്കം ചെയ്‌തു!",
+  "@albumBookmarkRemoveAlert": {
+    "description": "albumBookmarkRemoveAlert"
   },
-  "retry": "വീണ്ടും ശ്രമിക്കുക!",
-  "@retry": {
-    "description": "retry"
+  "albums": "ആൽബം",
+  "@albums": {
+    "description": "albums"
   },
-  "noBookmarks": "ബുക്ക്‌മാർക്കുകളൊന്നുമില്ല!",
-  "@noBookmarks": {
-    "description": "noBookmarks"
+  "albumsByTaste": "നിങ്ങളുടെ അഭിരുചിക്കനുസരിച്ച്",
+  "@albumsByTaste": {
+    "description": "albumsByTaste"
   },
-  "playNext": "അടുത്ത പാട്ട് കേൾക്കൂ",
-  "@playNext": {
-    "description": "playNext"
+  "allFieldsReqMsg": "എല്ലാ ഫീൽഡുകളും ആവശ്യമാണ്",
+  "@allFieldsReqMsg": {
+    "description": "allFieldsReqMsg"
   },
-  "reArrangeSongs": "പാട്ടുകൾ പുനഃക്രമീകരിക്കുക",
-  "@reArrangeSongs": {
-    "description": "reArrangeSongs"
+  "androidBackupWarning": "പരീക്ഷിച്ചിട്ടില്ല: 60-ലധികം ഫയലുകൾ ഡൗൺലോഡ് ചെയ്‌തതിന് ശേഷം ചെക്ക്‌ബോക്‌സ് തിരഞ്ഞെടുക്കുന്നത് പ്രോസസ്സിന് വലിയ അളവിലുള്ള മെമ്മറി ഉപയോഗിക്കുന്നതിന് കാരണമായേക്കാം, ഇത് ഫോണോ ആപ്പോ ക്രാഷുചെയ്യുന്നതിന് കാരണമായേക്കാം. നിങ്ങളുടെ സ്വന്തം ഉത്തരവാദിത്തത്തിൽ തുടരുക.",
+  "@androidBackupWarning": {
+    "description": "androidBackupWarning"
   },
-  "selectSongs": "പാട്ടുകൾ തിരഞ്ഞെടുക്കുക",
-  "@selectSongs": {
-    "description": "selectSongs"
+  "appInfo": "അപേക്ഷാ വിവരങ്ങൾ",
+  "@appInfo": {
+    "description": "appInfo"
   },
-  "selectAll": "എല്ലാം തിരഞ്ഞെടുക്കുക",
-  "@selectAll": {
-    "description": "selectAll"
+  "artistBookmarkAddAlert": "ബുക്ക്‌മാർക്കുകളിലേക്ക് ആർട്ടിസ്‌റ്റ് ചേർത്തു!",
+  "@artistBookmarkAddAlert": {
+    "description": "artistBookmarkAddAlert"
   },
-  "goToAlbum": "ആൽബത്തിലേക്ക് പോകുക",
-  "@goToAlbum": {
-    "description": "goToAlbum"
+  "artistBookmarkRemoveAlert": "ആർട്ടിസ്റ്റ് മാർക്കർ നീക്കം ചെയ്തു!",
+  "@artistBookmarkRemoveAlert": {
+    "description": "artistBookmarkRemoveAlert"
   },
-  "viewArtist": "ആർട്ടിസ്റ്റ്",
-  "@viewArtist": {
-    "description": "viewArtist"
+  "artistDesNotAvailable": "വിവരണം ലഭ്യമല്ല!",
+  "@artistDesNotAvailable": {
+    "description": "artistDesNotAvailable"
   },
-  "openIn": "തുറക്കുക",
-  "@openIn": {
-    "description": "openIn"
+  "artists": "കലാകാരന്മാർ",
+  "@artists": {
+    "description": "artists"
   },
-  "shareSong": "ഈ ഗാനം ഷെയർ ചെയ്യുക",
-  "@shareSong": {
-    "description": "shareSong"
+  "artistsByTaste": "നിങ്ങളുടെ അഭിരുചിക്കനുസരിച്ച്",
+  "@artistsByTaste": {
+    "description": "artistsByTaste"
   },
-  "removeFromPlaylist": "പ്ലേലിസ്റ്റിൽ നിന്ന് നീക്കം ചെയ്യുക",
-  "@removeFromPlaylist": {
-    "description": "removeFromPlaylist"
+  "audioCodec": "ഓഡിയോ കോഡെക്",
+  "@audioCodec": {
+    "description": "audioCodec"
   },
-  "removeFromQueue": "ക്യൂവിൽ നിന്ന് നീക്കം ചെയ്യുക",
-  "@removeFromQueue": {
-    "description": "removeFromQueue"
+  "auth_2fa_code": "പ്രാമാണീകരണ കോഡ്",
+  "@auth_2fa_code": {
+    "description": "auth_2fa_code"
   },
-  "queueShufflingDeniedMsg": "ഷഫിൾ മോഡ് പ്രവർത്തനക്ഷമമാക്കിയിരിക്കുമ്പോൾ ക്യൂ ഷഫിൾ ചെയ്യാൻ കഴിയില്ല",
-  "@queueShufflingDeniedMsg": {
-    "description": "queueShufflingDeniedMsg"
+  "auth_2fa_invalid": "സാധുതയുള്ള 6 അക്ക കോഡ് നൽകുക അല്ലെങ്കിൽ വീണ്ടും സൈൻ ഇൻ ചെയ്യുക.",
+  "@auth_2fa_invalid": {
+    "description": "auth_2fa_invalid"
   },
-  "queuerearrangingDeniedMsg": "ഷഫിൾ മോഡ് പ്രവർത്തനക്ഷമമാക്കിയിരിക്കുമ്പോൾ ക്യൂ പുനഃക്രമീകരിക്കാൻ കഴിയില്ല",
-  "@queuerearrangingDeniedMsg": {
-    "description": "queuerearrangingDeniedMsg"
+  "auth_2fa_subtitle": "നിങ്ങളുടെ ഓതൻ്റിക്കേറ്റർ ആപ്പിൽ നിന്നുള്ള 6 അക്ക കോഡ് നൽകുക. ഈ ആക്‌സസ് 5 മിനിറ്റിനുള്ളിൽ കാലഹരണപ്പെടും.",
+  "@auth_2fa_subtitle": {
+    "description": "auth_2fa_subtitle"
   },
-  "songNotPlayable": "സെർവർ നിയന്ത്രണം കാരണം ഗാനം പ്ലേ ചെയ്യാൻ കഴിയില്ല",
-  "@songNotPlayable": {
-    "description": "songNotPlayable"
+  "auth_2fa_title": "രണ്ട്-ഘടക പ്രാമാണീകരണം",
+  "@auth_2fa_title": {
+    "description": "auth_2fa_title"
   },
-  "upNext": "അടുത്തത്",
-  "@upNext": {
-    "description": "upNext"
+  "auth_2fa_verify": "പരിശോധിച്ച് തുടരുക",
+  "@auth_2fa_verify": {
+    "description": "auth_2fa_verify"
   },
-  "playingfromAlbum": "ആൽബത്തിൽ നിന്ന് പ്ലേ ചെയ്യുന്നു",
-  "@playingfromAlbum": {
-    "description": "playingfromAlbum"
+  "auth_agree_personal_data": "അസെപ്റ്റോ യൂസർ മിസ് ഡാറ്റസ്...",
+  "@auth_agree_personal_data": {
+    "description": "auth_agree_personal_data"
   },
-  "playingfromPlaylist": "പ്ലേലിസ്റ്റിൽ നിന്ന് പ്ലേ ചെയ്യുന്നു",
-  "@playingfromPlaylist": {
-    "description": "playingfromPlaylist"
+  "auth_brand_description_1": "ഈ മ്യൂസിക് ആപ്പിന് അനുയോജ്യമായ മുൻ പ്രോജക്റ്റിൽ നിന്ന് ലോഗിൻ, രജിസ്ട്രേഷൻ, പാസ്‌വേഡ് വീണ്ടെടുക്കൽ എന്നിവ ഞങ്ങൾ കൊണ്ടുവന്നു.",
+  "@auth_brand_description_1": {
+    "description": "auth_brand_description_1"
   },
-  "playingfromSelection": "സെലക്ഷനിൽ നിന്ന് പ്ലേ ചെയ്യുന്നു",
-  "@playingfromSelection": {
-    "description": "playingfromSelection"
+  "auth_brand_description_2": "നിങ്ങളുടെ സെഷൻ സുരക്ഷിതമായ സംഭരണത്തിലാണ് ജീവിക്കുന്നത്, നിങ്ങൾ ഇതിനകം ഉപയോഗിച്ചിരുന്ന അതേ ബാക്കെൻഡ് ഉപയോഗിച്ച് സാധൂകരിക്കപ്പെടുന്നു.",
+  "@auth_brand_description_2": {
+    "description": "auth_brand_description_2"
   },
-  "playingfromArtist": "ആർട്ടിസ്റ്റിൽ നിന്ന് പ്ലേ ചെയ്യുന്നു",
-  "@playingfromArtist": {
-    "description": "playingfromArtist"
-  },
-  "randomSelection": "ക്രമരഹിതമായ തിരഞ്ഞെടുത്തതു",
-  "@randomSelection": {
-    "description": "randomSelection"
-  },
-  "randomRadio": "റാൻഡം റേഡിയോ",
-  "@randomRadio": {
-    "description": "randomRadio"
-  },
-  "playnextMsg": "വെരാൻ പോകുന്നത്",
-  "@playnextMsg": {
-    "description": "playnextMsg"
-  },
-  "keepScreenOnWhilePlaying": "പ്ലേ ചെയ്യുമ്പോൾ സ്‌ക്രീൻ ഓണായിരിക്കട്ടെ",
-  "@keepScreenOnWhilePlaying": {
-    "description": "keepScreenOnWhilePlaying"
-  },
-  "keepScreenOnWhilePlayingDes": "സജ്ജമാക്കിയാൽ, സംഗീതം പ്ലേ ചെയ്യുമ്പോൾ ഡിവൈസിന്റെ സ്‌ക്രീൻ ഓണായിരിക്കുമെന്ന് ഉറപ്പ ചെയ്യും",
-  "@keepScreenOnWhilePlayingDes": {
-    "description": "keepScreenOnWhilePlayingDes"
-  },
-  "auth_login_success": "ലോഗിൻ ചെയ്തു",
-  "@auth_login_success": {
-    "description": "auth_login_success"
-  },
-  "settings_cloud_backup": "ക്ലൗഡ് ബാക്കപ്പ്",
-  "@settings_cloud_backup": {
-    "description": "settings_cloud_backup"
-  },
-  "settings_migration_title": "ജോസ് മ്യൂസിക് കോട്ലിനിൽ നിന്ന് മൈഗ്രേറ്റ് ചെയ്യുക",
-  "@settings_migration_title": {
-    "description": "settings_migration_title"
-  },
-  "backup_confirm_question": "നിങ്ങൾക്ക് ഒരു ബാക്കപ്പ് നടത്താൻ താൽപ്പര്യമുണ്ടോ?",
-  "@backup_confirm_question": {
-    "description": "backup_confirm_question"
-  },
-  "backup_selection_prompt": "ഏത് ഡാറ്റയാണ് ബാക്കപ്പ് ചെയ്യേണ്ടതെന്ന് തിരഞ്ഞെടുക്കുക",
-  "@backup_selection_prompt": {
-    "description": "backup_selection_prompt"
-  },
-  "search_recent_title": "സമീപകാല തിരയലുകൾ",
-  "@search_recent_title": {
-    "description": "search_recent_title"
-  },
-  "back": "മടങ്ങുക",
-  "@back": {
-    "description": "back"
-  },
-  "auth_forgot_password": "ഞാൻ എൻ്റെ പാസ്‌വേഡ് മറന്നു",
-  "@auth_forgot_password": {
-    "description": "auth_forgot_password"
+  "auth_brand_not_configured": "പ്രാമാണീകരണ ബാക്കെൻഡ് ബന്ധിപ്പിക്കുന്നതിന് .env ഫയൽ കോൺഫിഗർ ചെയ്യേണ്ടതുണ്ട്.",
+  "@auth_brand_not_configured": {
+    "description": "auth_brand_not_configured"
   },
   "auth_btn_login": "ലോഗിൻ",
   "@auth_btn_login": {
@@ -292,57 +128,141 @@
   "@auth_btn_register": {
     "description": "auth_btn_register"
   },
-  "email": "ഇ-മെയിൽ",
-  "@email": {
-    "description": "email"
-  },
-  "password_text": "രഹസ്യവാക്ക്",
-  "@password_text": {
-    "description": "Contraseña texto traducido"
+  "auth_btn_send_email": "മെയിൽ അയക്കുക",
+  "@auth_btn_send_email": {
+    "description": "auth_btn_send_email"
   },
   "auth_confirm_password": "പാസ്വേഡ് സ്ഥിരീകരിക്കുക",
   "@auth_confirm_password": {
     "description": "auth_confirm_password"
   },
-  "auth_welcome_title": "എസ്ട്രെല്ല സംഗീതത്തിലേക്ക് സ്വാഗതം",
-  "@auth_welcome_title": {
-    "description": "auth_welcome_title"
+  "auth_error_invalid_credentials": "തെറ്റായ ഇമെയിൽ അല്ലെങ്കിൽ പാസ്‌വേഡ്.",
+  "@auth_error_invalid_credentials": {
+    "description": "auth_error_invalid_credentials"
   },
-  "auth_welcome_subtitle": "എസ്ട്രെല്ല സംഗീതത്തിലേക്ക് സ്വാഗതം",
-  "@auth_welcome_subtitle": {
-    "description": "auth_welcome_subtitle"
+  "auth_error_invalid_email": "സാധുവായ ഒരു ഇമെയിൽ നൽകുക.",
+  "@auth_error_invalid_email": {
+    "description": "auth_error_invalid_email"
   },
-  "username": "ഉപയോക്തൃനാമം",
-  "@username": {
-    "description": "username"
+  "auth_error_not_configured": ".env ഫയലിൽ കോൺഫിഗർ ചെയ്യാൻ പ്രാമാണീകരണ ബാക്കെൻഡ് കാണുന്നില്ല.",
+  "@auth_error_not_configured": {
+    "description": "auth_error_not_configured"
+  },
+  "auth_error_not_verified": "നിങ്ങളുടെ അക്കൗണ്ട് ഇതുവരെ പരിശോധിച്ചിട്ടില്ല.",
+  "@auth_error_not_verified": {
+    "description": "auth_error_not_verified"
+  },
+  "auth_error_unknown": "ഓപ്പറേഷൻ പൂർത്തിയാക്കാൻ കഴിഞ്ഞില്ല.",
+  "@auth_error_unknown": {
+    "description": "auth_error_unknown"
   },
   "auth_first_name": "പേരിന്റെ ആദ്യഭാഗം",
   "@auth_first_name": {
     "description": "auth_first_name"
   },
+  "auth_forgot_password": "ഞാൻ എൻ്റെ പാസ്‌വേഡ് മറന്നു",
+  "@auth_forgot_password": {
+    "description": "auth_forgot_password"
+  },
+  "auth_forgot_password_subtitle": "നിങ്ങളുടെ അക്കൗണ്ട് ഇമെയിലിലേക്ക് ഞങ്ങൾ നിർദ്ദേശങ്ങൾ അയയ്ക്കും.",
+  "@auth_forgot_password_subtitle": {
+    "description": "auth_forgot_password_subtitle"
+  },
+  "auth_hint_email": "name@mail.com",
+  "@auth_hint_email": {
+    "description": "auth_hint_email"
+  },
   "auth_last_name": "പേരിന്റെ അവസാന ഭാഗം",
   "@auth_last_name": {
     "description": "auth_last_name"
   },
-  "auth_agree_personal_data": "അസെപ്റ്റോ യൂസർ മിസ് ഡാറ്റസ്...",
-  "@auth_agree_personal_data": {
-    "description": "auth_agree_personal_data"
+  "auth_login_success": "ലോഗിൻ ചെയ്തു",
+  "@auth_login_success": {
+    "description": "auth_login_success"
   },
-  "settings_general_section": "ജനറൽ",
-  "@settings_general_section": {
-    "description": "settings_general_section"
+  "auth_recovery_email_error": "ഇമെയിൽ അയക്കാൻ കഴിഞ്ഞില്ല.",
+  "@auth_recovery_email_error": {
+    "description": "auth_recovery_email_error"
   },
-  "settings_logout": "പുറത്തുകടക്കുക",
-  "@settings_logout": {
-    "description": "settings_logout"
+  "auth_recovery_email_sent": "ഇമെയിൽ അയച്ചു.",
+  "@auth_recovery_email_sent": {
+    "description": "auth_recovery_email_sent"
   },
-  "settings_cloud_backup_desc": "അപ്‌ലോഡ് ചെയ്യുക, പുനഃസ്ഥാപിക്കുക, നിയന്ത്രിക്കുക...",
-  "@settings_cloud_backup_desc": {
-    "description": "settings_cloud_backup_desc"
+  "auth_register_error": "അക്കൗണ്ട് സൃഷ്ടിക്കാൻ കഴിഞ്ഞില്ല.",
+  "@auth_register_error": {
+    "description": "auth_register_error"
   },
-  "settings_migration_desc": "പ്ലേലിസ്റ്റുകളും പാട്ടുകളും ഇറക്കുമതി ചെയ്യുക...",
-  "@settings_migration_desc": {
-    "description": "settings_migration_desc"
+  "auth_register_success": "അക്കൗണ്ട് സൃഷ്ടിച്ചു.",
+  "@auth_register_success": {
+    "description": "auth_register_success"
+  },
+  "auth_welcome_subtitle": "എസ്ട്രെല്ല സംഗീതത്തിലേക്ക് സ്വാഗതം",
+  "@auth_welcome_subtitle": {
+    "description": "auth_welcome_subtitle"
+  },
+  "auth_welcome_title": "എസ്ട്രെല്ല സംഗീതത്തിലേക്ക് സ്വാഗതം",
+  "@auth_welcome_title": {
+    "description": "auth_welcome_title"
+  },
+  "autoDownFavSong": "പ്രിയപ്പെട്ട പാട്ടുകളുടെ സ്വയമേവ ഡൗൺലോഡ്",
+  "@autoDownFavSong": {
+    "description": "autoDownFavSong"
+  },
+  "autoDownFavSongDes": "പ്രിയപ്പെട്ടവയിലേക്ക് ചേർക്കുമ്പോൾ പ്രിയപ്പെട്ട പാട്ടുകൾ സ്വയമേവ ഡൗൺലോഡ് ചെയ്യുക",
+  "@autoDownFavSongDes": {
+    "description": "autoDownFavSongDes"
+  },
+  "autoOpenPlayer": "പ്ലേയർ സ്‌ക്രീൻ യാന്ത്രികമായി തുറക്കുക",
+  "@autoOpenPlayer": {
+    "description": "autoOpenPlayer"
+  },
+  "autoOpenPlayerDes": "പ്ലേ ചെയ്യാൻ ഒരു പാട്ട് തിരഞ്ഞെടുക്കുമ്പോൾ പ്ലെയറിൻ്റെ പൂർണ്ണ സ്‌ക്രീനിലേക്ക് സ്വയമേവ തുറക്കുന്നത് സജീവമാക്കുക/നിർജ്ജീവമാക്കുക",
+  "@autoOpenPlayerDes": {
+    "description": "autoOpenPlayerDes"
+  },
+  "back": "മടങ്ങുക",
+  "@back": {
+    "description": "back"
+  },
+  "backFilesFound": "ഡാറ്റാബേസുകൾ കണ്ടെത്തി",
+  "@backFilesFound": {
+    "description": "backFilesFound"
+  },
+  "backgroundPlay": "പശ്ചാത്തലത്തിൽ സംഗീതം പ്ലേ ചെയ്യുന്നു",
+  "@backgroundPlay": {
+    "description": "backgroundPlay"
+  },
+  "backgroundPlayDes": "പശ്ചാത്തല സംഗീത പ്ലേബാക്ക് പ്രവർത്തനക്ഷമമാക്കുക/പ്രവർത്തനരഹിതമാക്കുക (ആപ്പ് പശ്ചാത്തലത്തിൽ പ്രവർത്തിക്കുമ്പോൾ സിസ്റ്റം ട്രേയിൽ നിന്ന് ആപ്പ് ആക്‌സസ് ചെയ്യാൻ കഴിയും)",
+  "@backgroundPlayDes": {
+    "description": "backgroundPlayDes"
+  },
+  "backup": "ബാക്കപ്പ്",
+  "@backup": {
+    "description": "backup"
+  },
+  "backupAppData": "ആപ്പ് ഡാറ്റ ബാക്കപ്പ് ചെയ്യുക",
+  "@backupAppData": {
+    "description": "backupAppData"
+  },
+  "backupInProgress": "ബാക്കപ്പ് പുരോഗമിക്കുന്നു...",
+  "@backupInProgress": {
+    "description": "backupInProgress"
+  },
+  "backupMsg": "ബാക്കപ്പ് വിജയകരമായി സംരക്ഷിച്ചു!",
+  "@backupMsg": {
+    "description": "backupMsg"
+  },
+  "backupSettingsAndPlaylists": "ബാക്കപ്പ് ക്രമീകരണങ്ങളും പ്ലേലിസ്റ്റുകളും",
+  "@backupSettingsAndPlaylists": {
+    "description": "backupSettingsAndPlaylists"
+  },
+  "backupSettingsAndPlaylistsDes": "ഒരു ബാക്കപ്പ് ഫയലിലേക്ക് എല്ലാ ക്രമീകരണങ്ങളും പ്ലേലിസ്റ്റുകളും ലോഗിൻ ഡാറ്റയും സംരക്ഷിക്കുക",
+  "@backupSettingsAndPlaylistsDes": {
+    "description": "backupSettingsAndPlaylistsDes"
+  },
+  "backup_auth_required": "നിങ്ങൾക്ക് ഒരു സജീവ സെഷൻ ആവശ്യമാണ്...",
+  "@backup_auth_required": {
+    "description": "backup_auth_required"
   },
   "backup_btn_restart": "ആപ്പ് പുനരാരംഭിക്കുക",
   "@backup_btn_restart": {
@@ -352,221 +272,117 @@
   "@backup_btn_upload": {
     "description": "backup_btn_upload"
   },
-  "backup_no_backups": "ഇതുവരെ ബാക്കപ്പുകളൊന്നുമില്ല...",
-  "@backup_no_backups": {
-    "description": "backup_no_backups"
-  },
-  "backup_auth_required": "നിങ്ങൾക്ക് ഒരു സജീവ സെഷൻ ആവശ്യമാണ്...",
-  "@backup_auth_required": {
-    "description": "backup_auth_required"
-  },
-  "backup_upload_success": "ബാക്കപ്പ് ശരിയായി അപ്‌ലോഡ് ചെയ്‌തു.",
-  "@backup_upload_success": {
-    "description": "backup_upload_success"
-  },
-  "backup_restore_success": "ബാക്കപ്പ് പുനഃസ്ഥാപിച്ചു. ആപ്പ് പുനരാരംഭിക്കുക.",
-  "@backup_restore_success": {
-    "description": "backup_restore_success"
+  "backup_confirm_question": "നിങ്ങൾക്ക് ഒരു ബാക്കപ്പ് നടത്താൻ താൽപ്പര്യമുണ്ടോ?",
+  "@backup_confirm_question": {
+    "description": "backup_confirm_question"
   },
   "backup_delete_success": "ബാക്കപ്പ് ഇല്ലാതാക്കി.",
   "@backup_delete_success": {
     "description": "backup_delete_success"
   },
-  "genre_pop": "പോപ്പ്",
-  "@genre_pop": {
-    "description": "genre_pop"
+  "backup_no_backups": "ഇതുവരെ ബാക്കപ്പുകളൊന്നുമില്ല...",
+  "@backup_no_backups": {
+    "description": "backup_no_backups"
   },
-  "genre_rock": "പാറ",
-  "@genre_rock": {
-    "description": "genre_rock"
+  "backup_restore_success": "ബാക്കപ്പ് പുനഃസ്ഥാപിച്ചു. ആപ്പ് പുനരാരംഭിക്കുക.",
+  "@backup_restore_success": {
+    "description": "backup_restore_success"
   },
-  "genre_hiphop": "ഹിപ് ഹോപ്പ്",
-  "@genre_hiphop": {
-    "description": "genre_hiphop"
+  "backup_select_folder_dialog": "ബാക്കപ്പിനായി ഫോൾഡർ തിരഞ്ഞെടുക്കുക",
+  "@backup_select_folder_dialog": {
+    "description": "backup_select_folder_dialog"
   },
-  "genre_electronic": "ഇലക്ട്രോണിക്സ്",
-  "@genre_electronic": {
-    "description": "genre_electronic"
+  "backup_selection_prompt": "ഏത് ഡാറ്റയാണ് ബാക്കപ്പ് ചെയ്യേണ്ടതെന്ന് തിരഞ്ഞെടുക്കുക",
+  "@backup_selection_prompt": {
+    "description": "backup_selection_prompt"
   },
-  "genre_jazz": "ജാസ്",
-  "@genre_jazz": {
-    "description": "genre_jazz"
+  "backup_upload_success": "ബാക്കപ്പ് ശരിയായി അപ്‌ലോഡ് ചെയ്‌തു.",
+  "@backup_upload_success": {
+    "description": "backup_upload_success"
   },
-  "genre_latin": "ലാറ്റിൻ",
-  "@genre_latin": {
-    "description": "genre_latin"
+  "basedOnLast": "അവസാനത്തെ ഇടപെടലിനെ അടിസ്ഥാനമാക്കി",
+  "@basedOnLast": {
+    "description": "basedOnLast"
   },
-  "migration_btn_select": "ഫയൽ തിരഞ്ഞെടുത്ത് ഇറക്കുമതി ചെയ്യുക",
-  "@migration_btn_select": {
-    "description": "migration_btn_select"
+  "bitrate": "ബിറ്റ് നിരക്ക്",
+  "@bitrate": {
+    "description": "bitrate"
+  },
+  "blacklistPipedPlaylist": "പ്ലേലിസ്റ്റ് ബ്ലാക്ക്‌ലിസ്റ്റ്",
+  "@blacklistPipedPlaylist": {
+    "description": "blacklistPipedPlaylist"
+  },
+  "blacklistPlstResetAlert": "പുനഃസജ്ജീകരിച്ചു!",
+  "@blacklistPlstResetAlert": {
+    "description": "blacklistPlstResetAlert"
+  },
+  "by": "വഴി",
+  "@by": {
+    "description": "by"
+  },
+  "cacheHomeScreenData": "ഹോം സ്‌ക്രീൻ ഉള്ളടക്ക ഡാറ്റ സംഭരിക്കുക",
+  "@cacheHomeScreenData": {
+    "description": "cacheHomeScreenData"
+  },
+  "cacheHomeScreenDataDes": "ഹോം സ്‌ക്രീൻ ഉള്ളടക്ക ഡാറ്റ സംഭരണം പ്രവർത്തനക്ഷമമാക്കുക, ഈ ഓപ്‌ഷൻ പ്രവർത്തനക്ഷമമാക്കിയാൽ ഹോം സ്‌ക്രീൻ തൽക്ഷണം ലോഡ് ചെയ്യും",
+  "@cacheHomeScreenDataDes": {
+    "description": "cacheHomeScreenDataDes"
+  },
+  "cacheSongs": "പാട്ടുകൾ കാഷെ ചെയ്യുന്നു",
+  "@cacheSongs": {
+    "description": "cacheSongs"
+  },
+  "cacheSongsDes": "ഭാവി/ഓഫ്‌ലൈൻ പ്ലേബാക്കിനായി പാട്ടുകൾ പ്ലേ ചെയ്യുമ്പോൾ അവ കാഷെ ചെയ്യുന്നത് നിങ്ങളുടെ ഉപകരണത്തിൽ അധിക ഇടം എടുക്കും",
+  "@cacheSongsDes": {
+    "description": "cacheSongsDes"
+  },
+  "cachedOrOffline": "കാഷെ ചെയ്‌തത്/ഓഫ്‌ലൈൻ",
+  "@cachedOrOffline": {
+    "description": "cachedOrOffline"
+  },
+  "cancel": "റദ്ദാക്കുക",
+  "@cancel": {
+    "description": "cancel"
+  },
+  "cancelTimer": "ടൈമർ റദ്ദാക്കുക",
+  "@cancelTimer": {
+    "description": "cancelTimer"
+  },
+  "cancelTimerAlert": "സ്ലീപ്പ് ടൈമർ റദ്ദാക്കി",
+  "@cancelTimerAlert": {
+    "description": "cancelTimerAlert"
+  },
+  "clearImgCache": "ഇമേജ് കാഷെ മായ്‌ക്കുക",
+  "@clearImgCache": {
+    "description": "clearImgCache"
+  },
+  "clearImgCacheAlert": "ഇമേജ് കാഷെ വിജയകരമായി മായ്ച്ചു",
+  "@clearImgCacheAlert": {
+    "description": "clearImgCacheAlert"
+  },
+  "clearImgCacheDes": "കാഷെ ചെയ്‌ത ലഘുചിത്രങ്ങൾ/ചിത്രങ്ങൾ മായ്‌ക്കാൻ ഇവിടെ ക്ലിക്ക് ചെയ്യുക. (കാഷെ ചെയ്‌ത ഇമേജ് ഡാറ്റ അപ്‌ഡേറ്റ് ചെയ്യാൻ നിങ്ങൾ ആഗ്രഹിക്കുന്നില്ലെങ്കിൽ ശുപാർശ ചെയ്യുന്നില്ല)",
+  "@clearImgCacheDes": {
+    "description": "clearImgCacheDes"
   },
   "close": "അടയ്ക്കുക",
   "@close": {
     "description": "close"
   },
-  "forgottenFavorites": "മറന്നുപോയ പ്രിയപ്പെട്ടവ",
-  "@forgottenFavorites": {
-    "description": "forgottenFavorites"
+  "closeApp": "ആപ്ലിക്കേഷൻ അടയ്ക്കുക",
+  "@closeApp": {
+    "description": "closeApp"
   },
-  "mostListenedSong": "ഏറ്റവും കൂടുതൽ കേട്ട പാട്ട്",
-  "@mostListenedSong": {
-    "description": "mostListenedSong"
+  "cloudLibraryFound": "ക്ലൗഡ് ലൈബ്രറി കണ്ടെത്തി.",
+  "@cloudLibraryFound": {
+    "description": "cloudLibraryFound"
   },
-  "reproducedBy": "പുനർനിർമ്മിച്ചത്",
-  "@reproducedBy": {
-    "description": "reproducedBy"
+  "cloudLibraryFoundDeviceWillDownload": "ഒരു ക്ലൗഡ് ലൈബ്രറി കണ്ടെത്തി. ഈ ഉപകരണം അത് തിരുത്തിയെഴുതാതെ തന്നെ ഡൗൺലോഡ് ചെയ്യും.",
+  "@cloudLibraryFoundDeviceWillDownload": {
+    "description": "cloudLibraryFoundDeviceWillDownload"
   },
-  "recentSearches": "സമീപകാല തിരയലുകൾ",
-  "@recentSearches": {
-    "description": "recentSearches"
-  },
-  "popularTracks": "ജനപ്രിയ ട്രാക്കുകൾ",
-  "@popularTracks": {
-    "description": "popularTracks"
-  },
-  "latestRelease": "ഏറ്റവും പുതിയ റിലീസ്",
-  "@latestRelease": {
-    "description": "latestRelease"
-  },
-  "follow": "തുടരുക",
-  "@follow": {
-    "description": "follow"
-  },
-  "following": "പിന്തുടരുന്നു",
-  "@following": {
-    "description": "following"
-  },
-  "listenNow": "ഇപ്പോൾ കേൾക്കൂ",
-  "@listenNow": {
-    "description": "listenNow"
-  },
-  "video": "വീഡിയോ",
-  "@video": {
-    "description": "video"
-  },
-  "about": "കുറിച്ച്",
-  "@about": {
-    "description": "about"
-  },
-  "readMore": "കൂടുതൽ വായിക്കുക",
-  "@readMore": {
-    "description": "readMore"
-  },
-  "speedAndPitch": "വേഗതയും പിച്ചും",
-  "@speedAndPitch": {
-    "description": "speedAndPitch"
-  },
-  "playbackSpeed": "പ്ലേബാക്ക് വേഗത",
-  "@playbackSpeed": {
-    "description": "playbackSpeed"
-  },
-  "songPitch": "പാട്ടിൻ്റെ സ്വരം",
-  "@songPitch": {
-    "description": "songPitch"
-  },
-  "musicRecognition": "സംഗീതം തിരിച്ചറിയൽ",
-  "@musicRecognition": {
-    "description": "musicRecognition"
-  },
-  "listeningToEnvironment": "പരിസ്ഥിതിയെ ശ്രദ്ധിക്കുന്നു...",
-  "@listeningToEnvironment": {
-    "description": "listeningToEnvironment"
-  },
-  "micInstruction": "നിങ്ങളുടെ മൈക്രോഫോണിന് സമീപം സംഗീതം വേണ്ടത്ര ഉച്ചത്തിൽ പ്ലേ ചെയ്യുന്നുണ്ടെന്ന് ഉറപ്പാക്കുക.",
-  "@micInstruction": {
-    "description": "micInstruction"
-  },
-  "processingAudio": "ഓഡിയോ പ്രോസസ്സ് ചെയ്യുന്നു...",
-  "@processingAudio": {
-    "description": "processingAudio"
-  },
-  "shazamSearching": "പൊരുത്തങ്ങൾക്കായി Shazam ഡാറ്റാബേസിൽ തിരയുന്നു...",
-  "@shazamSearching": {
-    "description": "shazamSearching"
-  },
-  "songFound": "ഗാനം കണ്ടെത്തി!",
-  "@songFound": {
-    "description": "songFound"
-  },
-  "playNow": "ഇപ്പോൾ കളിക്കുക",
-  "@playNow": {
-    "description": "playNow"
-  },
-  "searchInLibrary": "ലൈബ്രറിയിൽ തിരയുക",
-  "@searchInLibrary": {
-    "description": "searchInLibrary"
-  },
-  "noMatchesFound": "പൊരുത്തമില്ല",
-  "@noMatchesFound": {
-    "description": "noMatchesFound"
-  },
-  "noMatchInstruction": "റെക്കോർഡ് ചെയ്‌ത ഓഡിയോയിൽ പാട്ടുകളൊന്നും കണ്ടെത്താൻ കഴിഞ്ഞില്ല",
-  "@noMatchInstruction": {
-    "description": "noMatchInstruction"
-  },
-  "errorOccurred": "ഒരു പിശക് സംഭവിച്ചു",
-  "@errorOccurred": {
-    "description": "errorOccurred"
-  },
-  "playingRecognizedTrack": "കളിക്കുന്നു:",
-  "@playingRecognizedTrack": {
-    "description": "playingRecognizedTrack"
-  },
-  "errorPlayingTrack": "കളിക്കുമ്പോൾ പിശക്:",
-  "@errorPlayingTrack": {
-    "description": "errorPlayingTrack"
-  },
-  "welcome_title": "നിങ്ങളുടെ സംഗീതം, നിങ്ങളുടെ വഴി",
-  "@welcome_title": {
-    "description": "welcome_title"
-  },
-  "welcome_subtitle": "ഇനി മുതൽ എസ്ട്രെല്ല മ്യൂസിക് എങ്ങനെ ആസ്വദിക്കണമെന്ന് തിരഞ്ഞെടുക്കുക.",
-  "@welcome_subtitle": {
-    "description": "welcome_subtitle"
-  },
-  "welcome_intro": "ഞങ്ങൾ ഞങ്ങളുടെ പ്ലാറ്റ്ഫോം നവീകരിച്ചു. സ്വമേധയാലുള്ള ബാക്കപ്പുകൾ അപ്‌ലോഡ് ചെയ്യുന്നതിനുള്ള പഴയ സംവിധാനം പ്രവർത്തനരഹിതമാക്കി. നിങ്ങളുടെ സംഗീത ലൈബ്രറി മാനേജ് ചെയ്യാൻ നിങ്ങൾക്ക് ഇപ്പോൾ രണ്ട് വ്യക്തമായ വഴികളുണ്ട്.",
-  "@welcome_intro": {
-    "description": "welcome_intro"
-  },
-  "recommend_cloud": "സ്‌പോട്ടിഫൈ പോലുള്ള അനുഭവത്തിനായി ക്ലൗഡ് മോഡ് സജീവമാക്കാൻ ഞങ്ങൾ ശുപാർശ ചെയ്യുന്നു: നിങ്ങളുടെ എല്ലാ ഉപകരണങ്ങൾക്കുമിടയിൽ തത്സമയ സമന്വയവും നിങ്ങൾ ഒന്നും ചെയ്യാതെ തന്നെ സ്വയമേവയുള്ള ബാക്കപ്പും.",
-  "@recommend_cloud": {
-    "description": "recommend_cloud"
-  },
-  "swipe_prompt": "ഓപ്ഷനുകൾ പര്യവേക്ഷണം ചെയ്യാൻ സ്വൈപ്പ് ➔",
-  "@swipe_prompt": {
-    "description": "swipe_prompt"
-  },
-  "local_title": "പ്രാദേശിക മോഡ്",
-  "@local_title": {
-    "description": "local_title"
-  },
-  "local_subtitle": "നിങ്ങളുടെ ഉപകരണത്തിൽ സമ്പൂർണ്ണ സ്വകാര്യത",
-  "@local_subtitle": {
-    "description": "local_subtitle"
-  },
-  "local_b1": "ലോഗിൻ ചെയ്യേണ്ട ആവശ്യമില്ലാതെ ഇത് പ്രവർത്തിക്കുന്നു.",
-  "@local_b1": {
-    "description": "local_b1"
-  },
-  "local_b2": "നിങ്ങളുടെ മുഴുവൻ ലൈബ്രറിയും ഈ കമ്പ്യൂട്ടറിൽ കർശനമായി തുടരുന്നു.",
-  "@local_b2": {
-    "description": "local_b2"
-  },
-  "local_b3": "ശ്രദ്ധിക്കുക: മാനുവൽ ക്ലൗഡ് ബാക്കപ്പുകളൊന്നുമില്ല. നിങ്ങളുടെ ഉപകരണം നഷ്‌ടപ്പെടുകയോ ആപ്പ് അൺഇൻസ്റ്റാൾ ചെയ്യുകയോ ചെയ്‌താൽ, നിങ്ങളുടെ ഡാറ്റ വീണ്ടെടുക്കാൻ കഴിയില്ല.",
-  "@local_b3": {
-    "description": "local_b3"
-  },
-  "local_btn": "ഈ ഉപകരണത്തിൽ മാത്രം ഉപയോഗിക്കുക",
-  "@local_btn": {
-    "description": "local_btn"
-  },
-  "cloud_title": "ക്ലൗഡ് മോഡ് (ശുപാർശ ചെയ്യുന്നത്)",
-  "@cloud_title": {
-    "description": "cloud_title"
-  },
-  "cloud_subtitle": "ജോസ് റെഡ് ഉപയോഗിച്ച് തത്സമയ സമന്വയം",
-  "@cloud_subtitle": {
-    "description": "cloud_subtitle"
+  "cloudModeReadyOfflineCache": "ക്ലൗഡ് മോഡ് തയ്യാറാണ്. ഈ ഉപകരണം ഒരു ഓഫ്‌ലൈൻ കാഷെ ആയി പ്രവർത്തിക്കും.",
+  "@cloudModeReadyOfflineCache": {
+    "description": "cloudModeReadyOfflineCache"
   },
   "cloud_b1": "നിങ്ങളുടെ ജോസ് റെഡ് അക്കൗണ്ട് ഉപയോഗിച്ച് സുരക്ഷിതമായി ലോഗിൻ ചെയ്യുക.",
   "@cloud_b1": {
@@ -584,511 +400,137 @@
   "@cloud_btn": {
     "description": "cloud_btn"
   },
-  "slide_indicator": "ഘട്ടം {current} / 3",
-  "@slide_indicator": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      }
-    },
-    "description": "slide_indicator"
+  "cloud_subtitle": "ജോസ് റെഡ് ഉപയോഗിച്ച് തത്സമയ സമന്വയം",
+  "@cloud_subtitle": {
+    "description": "cloud_subtitle"
   },
-  "news_card_title": "എസ്ട്രെല്ല സംഗീതം വികസിച്ചു!",
-  "@news_card_title": {
-    "description": "news_card_title"
-  },
-  "news_card_subtitle": "100% ജോസ് റെഡ് സിൻക്രൊണൈസേഷൻ, സുഹൃത്തുക്കളുമൊത്തുള്ള പ്ലേലിസ്റ്റുകൾ എന്നിവയും അതിലേറെയും. പുതിയതെന്താണെന്ന് കാണാൻ ടാപ്പ് ചെയ്യുക.",
-  "@news_card_subtitle": {
-    "description": "news_card_subtitle"
-  },
-  "news_dialog_title": "എസ്ട്രെല്ല സംഗീത വാർത്ത",
-  "@news_dialog_title": {
-    "description": "news_dialog_title"
-  },
-  "news_item_sync_title": "ജോസ് റെഡ് ഫുൾ ഇൻ്റഗ്രേഷൻ",
-  "@news_item_sync_title": {
-    "description": "news_item_sync_title"
-  },
-  "news_item_sync_desc": "നിങ്ങളുടെ പ്ലേലിസ്റ്റുകളും പ്രിയങ്കരങ്ങളും ഇപ്പോൾ നിങ്ങളുടെ പ്രധാന ജോസ് റെഡ് അക്കൗണ്ട് ഉപയോഗിച്ച് സ്വയമേവ ക്ലൗഡിൽ സംരക്ഷിക്കുകയും സമന്വയിപ്പിക്കുകയും ചെയ്യുന്നു.",
-  "@news_item_sync_desc": {
-    "description": "news_item_sync_desc"
-  },
-  "news_item_collab_title": "സഹകരണ പ്ലേലിസ്റ്റുകൾ",
-  "@news_item_collab_title": {
-    "description": "news_item_collab_title"
-  },
-  "news_item_collab_desc": "നിങ്ങളുടെ സുഹൃത്തുക്കളുമായി പ്ലേലിസ്റ്റുകൾ സൃഷ്ടിക്കുക! ഒരു പ്ലേലിസ്റ്റ് സൃഷ്‌ടിക്കുമ്പോൾ, സഹകരണ ചെക്ക്‌ബോക്‌സ് തിരഞ്ഞെടുത്ത് ഒരുമിച്ച് എഡിറ്റ് ചെയ്യാൻ നിങ്ങളുടെ സുഹൃത്തുക്കളെ തിരഞ്ഞെടുക്കുക.",
-  "@news_item_collab_desc": {
-    "description": "news_item_collab_desc"
-  },
-  "news_item_trans_title": "സുതാര്യമായ സമന്വയം",
-  "@news_item_trans_title": {
-    "description": "news_item_trans_title"
-  },
-  "news_item_trans_desc": "നിങ്ങൾ മേലിൽ മാനുവൽ സമന്വയ ബട്ടണുകൾ ക്ലിക്ക് ചെയ്യേണ്ടതില്ല; ഓട്ടോമാറ്റിക്കായി മുകളിലേക്കും താഴേക്കും മാറുന്നതിന് പുതിയ മോട്ടോർ ഉത്തരവാദിയാണ്.",
-  "@news_item_trans_desc": {
-    "description": "news_item_trans_desc"
-  },
-  "news_dialog_section_friends": "സുഹൃത്തുക്കളും അക്കൗണ്ട് മാനേജ്മെൻ്റും:",
-  "@news_dialog_section_friends": {
-    "description": "news_dialog_section_friends"
-  },
-  "news_dialog_friends_desc": "സുഹൃത്തുക്കളെ ചേർക്കുന്നതിനോ അഭ്യർത്ഥനകൾ സ്വീകരിക്കുന്നതിനോ നിങ്ങളുടെ സുരക്ഷാ പ്രൊഫൈൽ മാനേജ് ചെയ്യുന്നതിനോ അതിൻ്റെ ഔദ്യോഗിക പ്ലാറ്റ്‌ഫോമുകളിൽ Joss Red ഉപയോഗിക്കുക:",
-  "@news_dialog_friends_desc": {
-    "description": "news_dialog_friends_desc"
-  },
-  "news_btn_app": "ജോസ് റെഡ് ആപ്പ് (പ്ലേ സ്റ്റോർ)",
-  "@news_btn_app": {
-    "description": "news_btn_app"
-  },
-  "news_btn_web": "ജോസ് റെഡ് വെബ്",
-  "@news_btn_web": {
-    "description": "news_btn_web"
-  },
-  "news_btn_dismiss": "മനസ്സിലായി",
-  "@news_btn_dismiss": {
-    "description": "news_btn_dismiss"
-  },
-  "settings_appearance_desc": "തീം, ഭാഷ, ഇൻ്റർഫേസ് ആനിമേഷനുകൾ.",
-  "@settings_appearance_desc": {
-    "description": "settings_appearance_desc"
-  },
-  "settings_content_desc": "ഫിൽട്ടറുകൾ കണ്ടെത്തുക, പൈപ്പ്, കാഷെകൾ എന്നിവയുമായുള്ള സംയോജനം.",
-  "@settings_content_desc": {
-    "description": "settings_content_desc"
-  },
-  "settings_playback_desc": "സ്ട്രീമിംഗ് നിലവാരം, നോർമലൈസേഷൻ, നിശബ്ദത, ബാറ്ററി.",
-  "@settings_playback_desc": {
-    "description": "settings_playback_desc"
-  },
-  "settings_downloads_desc": "ഡൗൺലോഡുകളും സംഭരണവും",
-  "@settings_downloads_desc": {
-    "description": "settings_downloads_desc"
-  },
-  "settings_downloads_sub": "ഓഡിയോ ഫോർമാറ്റുകൾ, ഫോൾഡറുകൾ, ഓട്ടോമാറ്റിക് ഡൗൺലോഡുകൾ.",
-  "@settings_downloads_sub": {
-    "description": "settings_downloads_sub"
-  },
-  "settings_account_desc": "അക്കൗണ്ടും സമന്വയവും",
-  "@settings_account_desc": {
-    "description": "settings_account_desc"
-  },
-  "settings_account_sub": "ക്ലൗഡ് മോഡ്, ബാക്കപ്പുകൾ, സുഹൃത്തുക്കളുടെ പട്ടിക, മൈഗ്രേഷനുകൾ.",
-  "@settings_account_sub": {
-    "description": "settings_account_sub"
-  },
-  "settings_about_desc": "എസ്ട്രെല്ല സംഗീതത്തെക്കുറിച്ച്",
-  "@settings_about_desc": {
-    "description": "settings_about_desc"
-  },
-  "settings_about_sub": "പതിപ്പ്, ഓപ്പൺ സോഴ്സ് പ്രോജക്റ്റ്, GitHub.",
-  "@settings_about_sub": {
-    "description": "settings_about_sub"
-  },
-  "settings_local_cloud_title": "ലോക്കൽ മോഡ് / ഇമ്യൂസിക് ക്ലൗഡ്",
-  "@settings_local_cloud_title": {
-    "description": "settings_local_cloud_title"
-  },
-  "settings_local_cloud_desc": "ജോസ് റെഡ് ഉപയോഗിച്ച് സിൻക്രൊണൈസേഷൻ സ്റ്റാറ്റസ് തിരഞ്ഞെടുക്കുക, മൈഗ്രേറ്റ് ചെയ്യുക അല്ലെങ്കിൽ അവലോകനം ചെയ്യുക.",
-  "@settings_local_cloud_desc": {
-    "description": "settings_local_cloud_desc"
-  },
-  "settings_my_friends": "എന്റെ സുഹൃത്തുക്കൾ",
-  "@settings_my_friends": {
-    "description": "settings_my_friends"
-  },
-  "settings_my_friends_desc": "നിങ്ങളുടെ ജോസ് റെഡ് സുഹൃത്തുക്കളെ നേരിട്ട് നിയന്ത്രിക്കുക.",
-  "@settings_my_friends_desc": {
-    "description": "settings_my_friends_desc"
-  },
-  "settings_refresh_visitor_title": "ഐഡി പുതുക്കുക (സന്ദർശക ഐഡി)",
-  "@settings_refresh_visitor_title": {
-    "description": "settings_refresh_visitor_title"
-  },
-  "settings_refresh_visitor_desc": "Discover ഉള്ളടക്കം ലോഡ് ചെയ്യുന്നില്ലെങ്കിൽ നിങ്ങളുടെ Online Music ID പുനഃസൃഷ്ടിക്കുക.",
-  "@settings_refresh_visitor_desc": {
-    "description": "settings_refresh_visitor_desc"
-  },
-  "settings_visitor_updated": "പുതുക്കിയ ഐഡൻ്റിഫയർ",
-  "@settings_visitor_updated": {
-    "description": "settings_visitor_updated"
-  },
-  "settings_visitor_updated_desc": "ഒരു പുതിയ സന്ദർശക ഐഡി വിജയകരമായി സൃഷ്ടിച്ചു.",
-  "@settings_visitor_updated_desc": {
-    "description": "settings_visitor_updated_desc"
-  },
-  "settings_visitor_error": "തെറ്റ്",
-  "@settings_visitor_error": {
-    "description": "settings_visitor_error"
-  },
-  "settings_visitor_error_desc": "ഒരു പുതിയ ഐഡൻ്റിഫയർ സൃഷ്ടിക്കാൻ കഴിഞ്ഞില്ല. ദയവായി പിന്നീട് വീണ്ടും ശ്രമിക്കുക.",
-  "@settings_visitor_error_desc": {
-    "description": "settings_visitor_error_desc"
-  },
-  "settings_visitor_exception": "പുനഃസൃഷ്ടിക്കുമ്പോൾ ഒരു പിശക് സംഭവിച്ചു: {error}",
-  "@settings_visitor_exception": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    },
-    "description": "settings_visitor_exception"
-  },
-  "migratedLibrary": "മൈഗ്രേറ്റഡ് ലൈബ്രറി",
-  "@migratedLibrary": {
-    "description": "migratedLibrary"
-  },
-  "noSongsInCollection": "ഈ ശേഖരത്തിൽ പാട്ടുകളൊന്നുമില്ല",
-  "@noSongsInCollection": {
-    "description": "noSongsInCollection"
-  },
-  "startupScreen": "സ്റ്റാർട്ടപ്പിൽ തുറക്കുക",
-  "@startupScreen": {
-    "description": "startupScreen"
-  },
-  "startupScreenDescription": "എസ്ട്രെല്ല മ്യൂസിക് ആദ്യം തുറക്കുന്ന വിഭാഗം തിരഞ്ഞെടുക്കുക",
-  "@startupScreenDescription": {
-    "description": "startupScreenDescription"
-  },
-  "friends": "സുഹൃത്തുക്കൾ",
-  "@friends": {
-    "description": "friends"
-  },
-  "dailyDiscover": "ദൈനംദിന കണ്ടെത്തൽ",
-  "@dailyDiscover": {
-    "description": "dailyDiscover"
-  },
-  "keepListening": "കേട്ടുകൊണ്ടിരിക്കുക",
-  "@keepListening": {
-    "description": "keepListening"
-  },
-  "similarToTitle": "{title} ന് സമാനമാണ്",
-  "@similarToTitle": {
-    "placeholders": {
-      "title": {
-        "type": "String"
-      }
-    },
-    "description": "similarToTitle"
-  },
-  "pipedPlaylistDescription": "പൈപ്പ് പ്ലേലിസ്റ്റ്",
-  "@pipedPlaylistDescription": {
-    "description": "pipedPlaylistDescription"
+  "cloud_title": "ക്ലൗഡ് മോഡ് (ശുപാർശ ചെയ്യുന്നത്)",
+  "@cloud_title": {
+    "description": "cloud_title"
   },
   "collaborativePlaylistDescription": "സഹകരണ പ്ലേലിസ്റ്റ്",
   "@collaborativePlaylistDescription": {
     "description": "collaborativePlaylistDescription"
   },
-  "libraryPlaylistDescription": "ലൈബ്രറി പ്ലേലിസ്റ്റ്",
-  "@libraryPlaylistDescription": {
-    "description": "libraryPlaylistDescription"
-  },
-  "untitledSong": "പേരിടാത്ത ഗാനം",
-  "@untitledSong": {
-    "description": "untitledSong"
-  },
-  "migratedPlaylist": "മൈഗ്രേറ്റഡ് പ്ലേലിസ്റ്റ്",
-  "@migratedPlaylist": {
-    "description": "migratedPlaylist"
-  },
-  "migratedAlbum": "മൈഗ്രേറ്റഡ് ആൽബം",
-  "@migratedAlbum": {
-    "description": "migratedAlbum"
-  },
-  "songsImportedFromJossMusic": "ജോസ് മ്യൂസിക് കോട്ലിനിൽ നിന്ന് ഇറക്കുമതി ചെയ്ത ഗാനങ്ങൾ",
-  "@songsImportedFromJossMusic": {
-    "description": "songsImportedFromJossMusic"
-  },
-  "importedFromJossMusic": "ജോസ് മ്യൂസിക് കോട്ലിനിൽ നിന്ന് ഇറക്കുമതി ചെയ്തത്",
-  "@importedFromJossMusic": {
-    "description": "importedFromJossMusic"
-  },
-  "syncLocalModeActive": "ലോക്കൽ മോഡ് സജീവമാണ്",
-  "@syncLocalModeActive": {
-    "description": "syncLocalModeActive"
-  },
-  "syncCloudPending": "ക്ലൗഡ് മോഡ് സജീവമാണ്. ശേഷിക്കുന്ന സമന്വയം.",
-  "@syncCloudPending": {
-    "description": "syncCloudPending"
-  },
-  "syncCloudDownloadingExisting": "ക്ലൗഡ് മോഡ് സജീവമാക്കി. നിലവിലുള്ള ലൈബ്രറി ഡൗൺലോഡ് ചെയ്യുന്നു.",
-  "@syncCloudDownloadingExisting": {
-    "description": "syncCloudDownloadingExisting"
-  },
-  "syncCloudMigrationComplete": "ക്ലൗഡ് മോഡ് സജീവമാക്കി. മൈഗ്രേറ്റഡ് ലൈബ്രറി.",
-  "@syncCloudMigrationComplete": {
-    "description": "syncCloudMigrationComplete"
-  },
-  "syncLocalDeviceOnly": "നിങ്ങളുടെ ഡാറ്റ ഈ ഉപകരണത്തിൽ മാത്രമേ സൂക്ഷിച്ചിട്ടുള്ളൂ.",
-  "@syncLocalDeviceOnly": {
-    "description": "syncLocalDeviceOnly"
-  },
-  "syncDownloading": "EMusic മാറ്റങ്ങൾ ഡൗൺലോഡ് ചെയ്യുന്നു...",
-  "@syncDownloading": {
-    "description": "syncDownloading"
-  },
-  "syncDownloadFailed": "സമന്വയം ഡൗൺലോഡ് ചെയ്യുന്നതിൽ പരാജയപ്പെട്ടു.",
-  "@syncDownloadFailed": {
-    "description": "syncDownloadFailed"
-  },
-  "syncLocalChangesFirst": "പുതിയ പ്രാദേശിക മാറ്റങ്ങളുണ്ട്. ഡൗൺലോഡ് ചെയ്യുന്നതിന് മുമ്പ് അവ അപ്‌ലോഡ് ചെയ്യും.",
-  "@syncLocalChangesFirst": {
-    "description": "syncLocalChangesFirst"
-  },
-  "syncLibrarySynced": "സമന്വയിപ്പിച്ച ലൈബ്രറി.",
-  "@syncLibrarySynced": {
-    "description": "syncLibrarySynced"
-  },
-  "syncOfflinePending": "ഓഫ്‌ലൈൻ. മാറ്റങ്ങൾ തീർച്ചപ്പെടുത്തിയിട്ടില്ല.",
-  "@syncOfflinePending": {
-    "description": "syncOfflinePending"
-  },
-  "syncLibraryUpToDate": "കാലികമായ ലൈബ്രറി.",
-  "@syncLibraryUpToDate": {
-    "description": "syncLibraryUpToDate"
-  },
-  "syncChangesSynced": "{count} സമന്വയിപ്പിച്ച മാറ്റങ്ങൾ.",
-  "@syncChangesSynced": {
-    "placeholders": {
-      "count": {
-        "type": "String"
-      }
-    },
-    "description": "syncChangesSynced"
-  },
-  "syncUploading": "EMusic-ലേക്ക് മാറ്റങ്ങൾ അപ്‌ലോഡ് ചെയ്യുന്നു...",
-  "@syncUploading": {
-    "description": "syncUploading"
-  },
-  "syncUploadSuccessWs": "മാറ്റങ്ങൾ അപ്‌ലോഡ് ചെയ്‌തു (WS).",
-  "@syncUploadSuccessWs": {
-    "description": "syncUploadSuccessWs"
-  },
-  "syncUploadWsRetry": "WS ഉപയോഗിച്ച് അപ്‌ലോഡ് ചെയ്യാൻ കഴിഞ്ഞില്ല. പിന്നീട് വീണ്ടും ശ്രമിക്കും.",
-  "@syncUploadWsRetry": {
-    "description": "syncUploadWsRetry"
-  },
-  "syncUploadSuccess": "മാറ്റങ്ങൾ ശരിയായി അപ്‌ലോഡ് ചെയ്‌തു.",
-  "@syncUploadSuccess": {
-    "description": "syncUploadSuccess"
-  },
-  "syncUploadRetry": "എഴുന്നേൽക്കാൻ കഴിഞ്ഞില്ല. പിന്നീട് വീണ്ടും ശ്രമിക്കും.",
-  "@syncUploadRetry": {
-    "description": "syncUploadRetry"
-  },
-  "syncOfflineRetry": "ഓഫ്‌ലൈൻ. മാറ്റങ്ങൾ വീണ്ടും ശ്രമിക്കുന്നതിനായി സംരക്ഷിച്ചു.",
-  "@syncOfflineRetry": {
-    "description": "syncOfflineRetry"
-  },
-  "syncUnconfirmedRetry": "എല്ലാ മാറ്റങ്ങളും EMusic സ്ഥിരീകരിച്ചിട്ടില്ല. അവരെ വീണ്ടും വിചാരണ ചെയ്യും.",
-  "@syncUnconfirmedRetry": {
-    "description": "syncUnconfirmedRetry"
-  },
-  "syncChangesConfirmed": "{count} മാറ്റങ്ങൾ വരുത്തി.",
-  "@syncChangesConfirmed": {
-    "placeholders": {
-      "count": {
-        "type": "String"
-      }
-    },
-    "description": "syncChangesConfirmed"
-  },
-  "migrationAlreadyRunning": "ഇതിനകം ഒരു മൈഗ്രേഷൻ പുരോഗതിയിലാണ്.",
-  "@migrationAlreadyRunning": {
-    "description": "migrationAlreadyRunning"
-  },
-  "migrationLoginRequired": "മൈഗ്രേറ്റ് ചെയ്യുന്നതിന് മുമ്പ് Joss Red-ലേക്ക് ലോഗിൻ ചെയ്യുക.",
-  "@migrationLoginRequired": {
-    "description": "migrationLoginRequired"
-  },
-  "migrationCheckingCloud": "EMusic ക്ലൗഡിന് ഇതിനകം ഒരു ലൈബ്രറി ഉണ്ടോയെന്ന് പരിശോധിക്കുന്നു...",
-  "@migrationCheckingCloud": {
-    "description": "migrationCheckingCloud"
-  },
-  "cloudLibraryFoundDeviceWillDownload": "ഒരു ക്ലൗഡ് ലൈബ്രറി കണ്ടെത്തി. ഈ ഉപകരണം അത് തിരുത്തിയെഴുതാതെ തന്നെ ഡൗൺലോഡ് ചെയ്യും.",
-  "@cloudLibraryFoundDeviceWillDownload": {
-    "description": "cloudLibraryFoundDeviceWillDownload"
-  },
-  "cloudLibraryFound": "ക്ലൗഡ് ലൈബ്രറി കണ്ടെത്തി.",
-  "@cloudLibraryFound": {
-    "description": "cloudLibraryFound"
-  },
-  "migrationCreatingBackup": "ക്ലൗഡ് ബന്ധിപ്പിക്കുന്നതിന് മുമ്പ് ഒരു പ്രാദേശിക ബാക്കപ്പ് സൃഷ്‌ടിക്കുന്നു...",
-  "@migrationCreatingBackup": {
-    "description": "migrationCreatingBackup"
-  },
-  "migrationAnalyzingLocal": "പ്രാദേശിക ലൈബ്രറി വിശകലനം ചെയ്യുന്നു...",
-  "@migrationAnalyzingLocal": {
-    "description": "migrationAnalyzingLocal"
-  },
-  "migrationPreparingCloud": "EMusic ക്ലൗഡിൽ മൈഗ്രേഷൻ തയ്യാറാക്കുന്നു...",
-  "@migrationPreparingCloud": {
-    "description": "migrationPreparingCloud"
-  },
-  "migrationStartFailed": "EMusic ക്ലൗഡിന് മൈഗ്രേഷൻ ആരംഭിക്കാനായില്ല.",
-  "@migrationStartFailed": {
-    "description": "migrationStartFailed"
-  },
-  "migrationUploadingData": "പ്ലേലിസ്റ്റുകളും പ്രിയങ്കരങ്ങളും ചരിത്രവും അപ്‌ലോഡ് ചെയ്യുന്നു...",
-  "@migrationUploadingData": {
-    "description": "migrationUploadingData"
-  },
-  "migrationUploadIncomplete": "എല്ലാ ഡാറ്റയും അപ്‌ലോഡ് ചെയ്യാൻ കഴിഞ്ഞില്ല. നിങ്ങളുടെ പ്രാദേശിക പിന്തുണ ഞങ്ങൾ നിലനിർത്തുന്നു.",
-  "@migrationUploadIncomplete": {
-    "description": "migrationUploadIncomplete"
-  },
-  "migrationVerifyingIntegrity": "EMusic ക്ലൗഡിൽ സമഗ്രത പരിശോധിക്കുന്നു...",
-  "@migrationVerifyingIntegrity": {
-    "description": "migrationVerifyingIntegrity"
-  },
-  "migrationValidationFailed": "EMusic ക്ലൗഡിന് മൈഗ്രേഷൻ സാധൂകരിക്കാനായില്ല.",
-  "@migrationValidationFailed": {
-    "description": "migrationValidationFailed"
-  },
-  "cloudModeReadyOfflineCache": "ക്ലൗഡ് മോഡ് തയ്യാറാണ്. ഈ ഉപകരണം ഒരു ഓഫ്‌ലൈൻ കാഷെ ആയി പ്രവർത്തിക്കും.",
-  "@cloudModeReadyOfflineCache": {
-    "description": "cloudModeReadyOfflineCache"
-  },
-  "migrationCompleted": "മൈഗ്രേഷൻ പൂർത്തിയായി.",
-  "@migrationCompleted": {
-    "description": "migrationCompleted"
-  },
-  "migrationFailedLocalPreserved": "മൈഗ്രേഷൻ പരാജയപ്പെട്ടു. നിങ്ങളുടെ പ്രാദേശിക ഡാറ്റ പരിഷ്കരിച്ചിട്ടില്ല.",
-  "@migrationFailedLocalPreserved": {
-    "description": "migrationFailedLocalPreserved"
-  },
-  "sessionExpiredLoginAgain": "നിങ്ങളുടെ സെഷൻ കാലഹരണപ്പെട്ടു. വീണ്ടും സൈൻ ഇൻ ചെയ്യുക.",
-  "@sessionExpiredLoginAgain": {
-    "description": "sessionExpiredLoginAgain"
-  },
-  "selectedFileNotFound": "തിരഞ്ഞെടുത്ത ഫയൽ കണ്ടെത്തിയില്ല.",
-  "@selectedFileNotFound": {
-    "description": "selectedFileNotFound"
-  },
-  "genericAlbum": "ആൽബം",
-  "@genericAlbum": {
-    "description": "genericAlbum"
-  },
-  "friendsLoginRequired": "സുഹൃത്തുക്കളെ കണ്ടെത്താൻ സൈൻ ഇൻ ചെയ്യുക.",
-  "@friendsLoginRequired": {
-    "description": "friendsLoginRequired"
-  },
-  "invalidSessionToken": "സെഷനിൽ സാധുവായ ഒരു ടോക്കൺ അടങ്ങിയിട്ടില്ല.",
-  "@invalidSessionToken": {
-    "description": "invalidSessionToken"
-  },
-  "userSearchFailed": "ഉപയോക്താക്കൾക്കായി തിരയാൻ കഴിഞ്ഞില്ല ({statusCode}).",
-  "@userSearchFailed": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    },
-    "description": "userSearchFailed"
-  },
-  "invalidServerResponse": "അസാധുവായ സെർവർ പ്രതികരണം.",
-  "@invalidServerResponse": {
-    "description": "invalidServerResponse"
-  },
-  "userListMissing": "പ്രതികരണത്തിൽ ഉപയോക്താക്കളുടെ ഒരു ലിസ്റ്റ് അടങ്ങിയിട്ടില്ല.",
-  "@userListMissing": {
-    "description": "userListMissing"
-  },
-  "playlistCollaboratorsTitle": "പ്ലേലിസ്റ്റ് സംഭാവകർ",
-  "@playlistCollaboratorsTitle": {
-    "description": "playlistCollaboratorsTitle"
-  },
   "collaboratorsInstruction": "ഈ പ്ലേലിസ്റ്റ് കാണാനും എഡിറ്റ് ചെയ്യാനുമുള്ള സുഹൃത്തുക്കളെ തിരഞ്ഞെടുക്കുക:",
   "@collaboratorsInstruction": {
     "description": "collaboratorsInstruction"
-  },
-  "noJossRedFriends": "Joss Red-ൽ നിങ്ങൾക്ക് സുഹൃത്തുക്കളൊന്നും ചേർത്തിട്ടില്ല.",
-  "@noJossRedFriends": {
-    "description": "noJossRedFriends"
-  },
-  "friendFallback": "സുഹൃത്ത്",
-  "@friendFallback": {
-    "description": "friendFallback"
   },
   "collaboratorsUpdated": "സഹകാരികൾ ശരിയായി അപ്ഡേറ്റ് ചെയ്തു.",
   "@collaboratorsUpdated": {
     "description": "collaboratorsUpdated"
   },
-  "save": "സൂക്ഷിക്കുക",
-  "@save": {
-    "description": "save"
+  "communityplaylists": "കമ്മ്യൂണിറ്റി പ്ലേലിസ്റ്റുകൾ",
+  "@communityplaylists": {
+    "description": "communityplaylists"
   },
-  "manageCollaborators": "സഹകാരികളെ നിയന്ത്രിക്കുക (സുഹൃത്തുക്കൾ)",
-  "@manageCollaborators": {
-    "description": "manageCollaborators"
+  "content": "ഉള്ളടക്കം",
+  "@content": {
+    "description": "content"
+  },
+  "copyrightNotice": "© 2026 JOSPROX. GPL ലൈസൻസ് v3.0",
+  "@copyrightNotice": {
+    "description": "copyrightNotice"
+  },
+  "create": "സൃഷ്ടിക്കുക",
+  "@create": {
+    "description": "create"
+  },
+  "createnAdd": "സൃഷ്‌ടിക്കുകയും ചേർക്കുകയും ചെയ്യുക",
+  "@createnAdd": {
+    "description": "createnAdd"
+  },
+  "customIns": "ഇഷ്‌ടാനുസൃത ഉദാഹരണം",
+  "@customIns": {
+    "description": "customIns"
+  },
+  "customInsSelectMsg": "ഒരു ഇഷ്‌ടാനുസൃത ഉദാഹരണം തിരഞ്ഞെടുക്കുക",
+  "@customInsSelectMsg": {
+    "description": "customInsSelectMsg"
+  },
+  "dailyDiscover": "ദൈനംദിന കണ്ടെത്തൽ",
+  "@dailyDiscover": {
+    "description": "dailyDiscover"
+  },
+  "dark": "ഇരുണ്ട്",
+  "@dark": {
+    "description": "dark"
+  },
+  "delete": "ഇല്ലാതാക്കുക",
+  "@delete": {
+    "description": "delete"
+  },
+  "deleteDownloadData": "ഡൗൺലോഡുകളിൽ നിന്ന് നീക്കം ചെയ്യുക",
+  "@deleteDownloadData": {
+    "description": "deleteDownloadData"
+  },
+  "deleteDownloadedDataAlert": "ഡൗൺലോഡുകളിൽ നിന്ന് നീക്കം ചെയ്‌തു!",
+  "@deleteDownloadedDataAlert": {
+    "description": "deleteDownloadedDataAlert"
+  },
+  "developedBy": "വികസിപ്പിച്ചതും പരിപാലിക്കുന്നതും ജോസ് എസ്ട്രാഡ (JOSPROX)",
+  "@developedBy": {
+    "description": "developedBy"
+  },
+  "disableTransitionAnimation": "സംക്രമണ ആനിമേഷൻ പ്രവർത്തനരഹിതമാക്കുക",
+  "@disableTransitionAnimation": {
+    "description": "disableTransitionAnimation"
+  },
+  "disableTransitionAnimationDes": "ടാബ് ട്രാൻസിഷൻ ആനിമേഷൻ പ്രവർത്തനരഹിതമാക്കാൻ ഈ ഓപ്‌ഷൻ സജീവമാക്കുക",
+  "@disableTransitionAnimationDes": {
+    "description": "disableTransitionAnimationDes"
+  },
+  "disabled": "അപ്രാപ്തമാക്കി",
+  "@disabled": {
+    "description": "disabled"
+  },
+  "discover": "കണ്ടെത്തുക",
+  "@discover": {
+    "description": "discover"
+  },
+  "dismiss": "നിരസിക്കുക",
+  "@dismiss": {
+    "description": "dismiss"
   },
   "done": "തയ്യാറാണ്",
   "@done": {
     "description": "done"
   },
-  "notAuthenticated": "ആധികാരികതയില്ല",
-  "@notAuthenticated": {
-    "description": "notAuthenticated"
+  "dontShowInfoAgain": "ഈ വിവരം വീണ്ടും കാണിക്കരുത്",
+  "@dontShowInfoAgain": {
+    "description": "dontShowInfoAgain"
   },
-  "genericError": "തെറ്റ്",
-  "@genericError": {
-    "description": "genericError"
+  "downFilesFound": "ഡൗൺലോഡ് ചെയ്ത ഫയലുകൾ കണ്ടെത്തി",
+  "@downFilesFound": {
+    "description": "downFilesFound"
   },
-  "friendRequestSent": "സൗഹൃദ അഭ്യർത്ഥന അയച്ചു",
-  "@friendRequestSent": {
-    "description": "friendRequestSent"
+  "download": "ഡൗൺലോഡ് ചെയ്യുക",
+  "@download": {
+    "description": "download"
   },
-  "friendRequestAccepted": "സുഹൃത്ത് അഭ്യർത്ഥന സ്വീകരിച്ചു",
-  "@friendRequestAccepted": {
-    "description": "friendRequestAccepted"
+  "downloadAlbumSongs": "ആൽബത്തിൽ നിന്ന് പാട്ടുകൾ ഡൗൺലോഡ് ചെയ്യുക",
+  "@downloadAlbumSongs": {
+    "description": "downloadAlbumSongs"
   },
-  "friendshipRemoved": "സൗഹൃദം നീക്കം ചെയ്തു",
-  "@friendshipRemoved": {
-    "description": "friendshipRemoved"
+  "downloadError2": "സെർവർ നിയന്ത്രണങ്ങൾ കാരണം ആവശ്യപ്പെട്ട ഗാനം ഡൗൺലോഡ് ചെയ്യാൻ കഴിയില്ല. നിങ്ങൾക്ക് വീണ്ടും ശ്രമിക്കാം",
+  "@downloadError2": {
+    "description": "downloadError2"
   },
-  "userBlocked": "തടഞ്ഞ ഉപയോക്താവ്",
-  "@userBlocked": {
-    "description": "userBlocked"
+  "downloadError3": "നെറ്റ്‌വർക്ക്/ട്രാൻസ്മിഷൻ പിശക് കാരണം ഡൗൺലോഡ് പരാജയപ്പെട്ടു! ദയവായി വീണ്ടും ശ്രമിക്കുക",
+  "@downloadError3": {
+    "description": "downloadError3"
   },
-  "userUnblocked": "അൺലോക്ക് ചെയ്ത ഉപയോക്താവ്",
-  "@userUnblocked": {
-    "description": "userUnblocked"
-  },
-  "artistsByTaste": "നിങ്ങളുടെ അഭിരുചിക്കനുസരിച്ച്",
-  "@artistsByTaste": {
-    "description": "artistsByTaste"
-  },
-  "followedArtists": "പിന്തുടർന്നു",
-  "@followedArtists": {
-    "description": "followedArtists"
-  },
-  "recommendedArtists": "ശുപാർശ ചെയ്തത്",
-  "@recommendedArtists": {
-    "description": "recommendedArtists"
-  },
-  "albumsByTaste": "നിങ്ങളുടെ അഭിരുചിക്കനുസരിച്ച്",
-  "@albumsByTaste": {
-    "description": "albumsByTaste"
-  },
-  "savedAlbums": "സംരക്ഷിച്ചു",
-  "@savedAlbums": {
-    "description": "savedAlbums"
-  },
-  "recommendedAlbums": "ശുപാർശ ചെയ്തത്",
-  "@recommendedAlbums": {
-    "description": "recommendedAlbums"
-  },
-  "downloadNotificationChannelName": "സംഗീത ഡൗൺലോഡുകൾ",
-  "@downloadNotificationChannelName": {
-    "description": "downloadNotificationChannelName"
+  "downloadLocation": "ലൊക്കേഷൻ ഡൗൺലോഡ് ചെയ്യുക",
+  "@downloadLocation": {
+    "description": "downloadLocation"
   },
   "downloadNotificationChannelDescription": "പശ്ചാത്തലത്തിൽ നിങ്ങളുടെ സംഗീത ഡൗൺലോഡുകൾ സജീവമായി നിലനിർത്തുന്നു.",
   "@downloadNotificationChannelDescription": {
     "description": "downloadNotificationChannelDescription"
   },
-  "downloadNotificationTitle": "സംഗീതം ഡൗൺലോഡ് ചെയ്യുന്നു",
-  "@downloadNotificationTitle": {
-    "description": "downloadNotificationTitle"
+  "downloadNotificationChannelName": "സംഗീത ഡൗൺലോഡുകൾ",
+  "@downloadNotificationChannelName": {
+    "description": "downloadNotificationChannelName"
   },
   "downloadNotificationPreparing": "നിങ്ങളുടെ ഡൗൺലോഡുകൾ തയ്യാറാക്കുന്നു...",
   "@downloadNotificationPreparing": {
@@ -1103,737 +545,49 @@
     },
     "description": "downloadNotificationSong"
   },
-  "syncCloudModeActive": "ക്ലൗഡ് മോഡ് സജീവമാണ്",
-  "@syncCloudModeActive": {
-    "description": "syncCloudModeActive"
-  },
-  "permissionsConsentTitle": "ആരംഭിക്കുന്നതിനുള്ള അനുമതികൾ",
-  "@permissionsConsentTitle": {
-    "description": "permissionsConsentTitle"
-  },
-  "permissionsConsentDescription": "നിങ്ങളുടെ സംഗീതം നിയന്ത്രിക്കാനും എല്ലാ പ്ലേബാക്ക് ഫീച്ചറുകളും ഓഫർ ചെയ്യാനും Estrella Music-ന് ഈ അനുമതികൾ ആവശ്യമാണ്.",
-  "@permissionsConsentDescription": {
-    "description": "permissionsConsentDescription"
-  },
-  "permissionsStorageTitle": "സംഗീതവും സംഭരണവും",
-  "@permissionsStorageTitle": {
-    "description": "permissionsStorageTitle"
-  },
-  "permissionsStorageDescription": "സംഗീതം പ്ലേ ചെയ്യാനും ഡൗൺലോഡുകൾ സംരക്ഷിക്കാനും പ്ലേലിസ്റ്റുകൾ കയറ്റുമതി ചെയ്യാനും അപ്‌ഡേറ്റുകൾ തയ്യാറാക്കാനും ഇത് നിങ്ങളെ അനുവദിക്കുന്നു.",
-  "@permissionsStorageDescription": {
-    "description": "permissionsStorageDescription"
-  },
-  "permissionsNotificationsTitle": "അറിയിപ്പുകൾ",
-  "@permissionsNotificationsTitle": {
-    "description": "permissionsNotificationsTitle"
-  },
-  "permissionsNotificationsDescription": "പ്ലേബാക്ക് നിയന്ത്രണങ്ങൾ, ഡൗൺലോഡ് പുരോഗതി, പ്രധാനപ്പെട്ട ആപ്പ് അറിയിപ്പുകൾ എന്നിവ കാണിക്കുന്നു.",
-  "@permissionsNotificationsDescription": {
-    "description": "permissionsNotificationsDescription"
-  },
-  "permissionsMicrophoneTitle": "മൈക്രോഫോൺ",
-  "@permissionsMicrophoneTitle": {
-    "description": "permissionsMicrophoneTitle"
-  },
-  "permissionsMicrophoneDescription": "നിങ്ങൾക്ക് ചുറ്റും പ്ലേ ചെയ്യുന്ന ഒരു ഗാനം തിരിച്ചറിയാൻ നിങ്ങൾ തിരഞ്ഞെടുക്കുമ്പോൾ മാത്രമേ ഇത് ഉപയോഗിക്കൂ.",
-  "@permissionsMicrophoneDescription": {
-    "description": "permissionsMicrophoneDescription"
-  },
-  "permissionsContinueButton": "ആവശ്യമായ അനുമതികൾ നൽകുക",
-  "@permissionsContinueButton": {
-    "description": "permissionsContinueButton"
-  },
-  "permissionsRequiredNotice": "തുടരുന്നതിന് മൂന്ന് പെർമിറ്റുകളും ആവശ്യമാണ്. സിസ്റ്റം ക്രമീകരണങ്ങളിൽ നിങ്ങൾക്ക് അവ പിന്നീട് മാറ്റാവുന്നതാണ്.",
-  "@permissionsRequiredNotice": {
-    "description": "permissionsRequiredNotice"
-  },
-  "permissionsAllow": "അനുവദിക്കുക",
-  "@permissionsAllow": {
-    "description": "permissionsAllow"
-  },
-  "permissionsOpenSettings": "ക്രമീകരണങ്ങൾ",
-  "@permissionsOpenSettings": {
-    "description": "permissionsOpenSettings"
-  },
-  "auth_2fa_title": "രണ്ട്-ഘടക പ്രാമാണീകരണം",
-  "@auth_2fa_title": {
-    "description": "auth_2fa_title"
-  },
-  "auth_2fa_subtitle": "നിങ്ങളുടെ ഓതൻ്റിക്കേറ്റർ ആപ്പിൽ നിന്നുള്ള 6 അക്ക കോഡ് നൽകുക. ഈ ആക്‌സസ് 5 മിനിറ്റിനുള്ളിൽ കാലഹരണപ്പെടും.",
-  "@auth_2fa_subtitle": {
-    "description": "auth_2fa_subtitle"
-  },
-  "auth_2fa_code": "പ്രാമാണീകരണ കോഡ്",
-  "@auth_2fa_code": {
-    "description": "auth_2fa_code"
-  },
-  "auth_2fa_verify": "പരിശോധിച്ച് തുടരുക",
-  "@auth_2fa_verify": {
-    "description": "auth_2fa_verify"
-  },
-  "auth_2fa_invalid": "സാധുതയുള്ള 6 അക്ക കോഡ് നൽകുക അല്ലെങ്കിൽ വീണ്ടും സൈൻ ഇൻ ചെയ്യുക.",
-  "@auth_2fa_invalid": {
-    "description": "auth_2fa_invalid"
-  },
-  "enableBottomNavDes": "താഴെയുള്ള നാവിഗേഷൻ ബാറിലേക്ക് മാറുക",
-  "@enableBottomNavDes": {
-    "description": "enableBottomNavDes"
-  },
-  "homeContentCount": "സ്റ്റാർട്ടപ്പ് ഉള്ളടക്കങ്ങളുടെ എണ്ണം",
-  "@homeContentCount": {
-    "description": "homeContentCount"
-  },
-  "playlistCreatednsongAddedAlert": "പ്ലേലിസ്റ്റ് സൃഷ്‌ടിക്കുകയും ഗാനം ചേർക്കുകയും ചെയ്‌തു!",
-  "@playlistCreatednsongAddedAlert": {
-    "description": "playlistCreatednsongAddedAlert"
-  },
-  "songAlreadyOfflineAlert": "ഗാനം ഇതിനകം കാഷെയിലാണ്",
-  "@songAlreadyOfflineAlert": {
-    "description": "songAlreadyOfflineAlert"
-  },
-  "sleepTimer": "സ്ലീപ്പ് ടൈമർ",
-  "@sleepTimer": {
-    "description": "sleepTimer"
-  },
-  "plain": "ലളിതമായ",
-  "@plain": {
-    "description": "plain"
-  },
-  "videos": "വീഡിയോകൾ",
-  "@videos": {
-    "description": "videos"
-  },
-  "themeMode": "തീം മോഡ്",
-  "@themeMode": {
-    "description": "themeMode"
-  },
-  "systemDefault": "സിസ്റ്റം ഡിഫോൾട്ട്",
-  "@systemDefault": {
-    "description": "systemDefault"
-  },
-  "setDiscoverContent": "കണ്ടെത്തൽ ഉള്ളടക്കം സജ്ജമാക്കുക",
-  "@setDiscoverContent": {
-    "description": "setDiscoverContent"
-  },
-  "discover": "കണ്ടെത്തുക",
-  "@discover": {
-    "description": "discover"
-  },
-  "equalizerDes": "സിസ്റ്റം ഇക്വലൈസർ തുറക്കുക",
-  "@equalizerDes": {
-    "description": "equalizerDes"
-  },
-  "basedOnLast": "അവസാനത്തെ ഇടപെടലിനെ അടിസ്ഥാനമാക്കി",
-  "@basedOnLast": {
-    "description": "basedOnLast"
-  },
-  "notaSongVideo": "ഇതൊരു പാട്ട്/സംഗീത വീഡിയോ അല്ല!",
-  "@notaSongVideo": {
-    "description": "notaSongVideo"
-  },
-  "linkPipedDes": "പ്ലേലിസ്റ്റുകൾക്കായി പൈപ്പ് ഉപയോഗിച്ചുള്ള ലിങ്ക്",
-  "@linkPipedDes": {
-    "description": "linkPipedDes"
-  },
-  "selectAuthIns": "പ്രാമാണീകരണ ഉദാഹരണം തിരഞ്ഞെടുക്കുക",
-  "@selectAuthIns": {
-    "description": "selectAuthIns"
-  },
-  "password": "രഹസ്യവാക്ക്",
-  "@password": {
-    "description": "password"
-  },
-  "restoreLastPlaybackSession": "അവസാനത്തെ പ്ലേബാക്ക് സെഷൻ പുനഃസ്ഥാപിക്കുക",
-  "@restoreLastPlaybackSession": {
-    "description": "restoreLastPlaybackSession"
-  },
-  "clearImgCacheAlert": "ഇമേജ് കാഷെ വിജയകരമായി മായ്ച്ചു",
-  "@clearImgCacheAlert": {
-    "description": "clearImgCacheAlert"
-  },
-  "dynamic": "ചലനാത്മകം",
-  "@dynamic": {
-    "description": "dynamic"
-  },
-  "results": "ഫലങ്ങൾ",
-  "@results": {
-    "description": "results"
-  },
-  "albumBookmarkRemoveAlert": "ആൽബം ബുക്ക്മാർക്ക് നീക്കം ചെയ്‌തു!",
-  "@albumBookmarkRemoveAlert": {
-    "description": "albumBookmarkRemoveAlert"
-  },
-  "disableTransitionAnimationDes": "ടാബ് ട്രാൻസിഷൻ ആനിമേഷൻ പ്രവർത്തനരഹിതമാക്കാൻ ഈ ഓപ്‌ഷൻ സജീവമാക്കുക",
-  "@disableTransitionAnimationDes": {
-    "description": "disableTransitionAnimationDes"
-  },
-  "removeFromLib": "ലൈബ്രറി ഗാനങ്ങളിൽ നിന്ന് നീക്കം ചെയ്യുക",
-  "@removeFromLib": {
-    "description": "removeFromLib"
-  },
-  "add5Minutes": "5 മിനിറ്റ് ചേർക്കുക",
-  "@add5Minutes": {
-    "description": "add5Minutes"
-  },
-  "cancelTimer": "ടൈമർ റദ്ദാക്കുക",
-  "@cancelTimer": {
-    "description": "cancelTimer"
-  },
-  "deleteDownloadData": "ഡൗൺലോഡുകളിൽ നിന്ന് നീക്കം ചെയ്യുക",
-  "@deleteDownloadData": {
-    "description": "deleteDownloadData"
-  },
-  "minutes": "മിനിറ്റ്",
-  "@minutes": {
-    "description": "minutes"
-  },
-  "endOfThisSong": "ഈ പാട്ടിൻ്റെ അവസാനം",
-  "@endOfThisSong": {
-    "description": "endOfThisSong"
-  },
-  "dark": "ഇരുണ്ട്",
-  "@dark": {
-    "description": "dark"
-  },
-  "light": "തീർച്ചയായും",
-  "@light": {
-    "description": "light"
-  },
-  "language": "ഭാഷ",
-  "@language": {
-    "description": "language"
-  },
-  "languageDes": "ആപ്പ് ഭാഷ സജ്ജീകരിക്കുക",
-  "@languageDes": {
-    "description": "languageDes"
-  },
-  "quickpicks": "ദ്രുത തിരഞ്ഞെടുക്കലുകൾ",
-  "@quickpicks": {
-    "description": "quickpicks"
-  },
-  "homeContentCountDes": "പ്രാരംഭ ഹോം സ്‌ക്രീൻ ഉള്ളടക്കങ്ങളുടെ എണ്ണം തിരഞ്ഞെടുക്കുക (ഏകദേശം.). കുറച്ച് ഫലങ്ങൾ വേഗത്തിൽ ലോഡ് ചെയ്യുന്നു",
-  "@homeContentCountDes": {
-    "description": "homeContentCountDes"
-  },
-  "cacheSongsDes": "ഭാവി/ഓഫ്‌ലൈൻ പ്ലേബാക്കിനായി പാട്ടുകൾ പ്ലേ ചെയ്യുമ്പോൾ അവ കാഷെ ചെയ്യുന്നത് നിങ്ങളുടെ ഉപകരണത്തിൽ അധിക ഇടം എടുക്കും",
-  "@cacheSongsDes": {
-    "description": "cacheSongsDes"
-  },
-  "skipSilence": "നിശബ്ദത ഒഴിവാക്കുക",
-  "@skipSilence": {
-    "description": "skipSilence"
-  },
-  "skipSilenceDes": "സംഗീതം പ്ലേ ചെയ്യുമ്പോൾ നിശബ്ദത ഒഴിവാക്കും",
-  "@skipSilenceDes": {
-    "description": "skipSilenceDes"
-  },
-  "streamingQuality": "സ്ട്രീമിംഗ് നിലവാരം",
-  "@streamingQuality": {
-    "description": "streamingQuality"
-  },
-  "high": "ഉയർന്നത്",
-  "@high": {
-    "description": "high"
-  },
-  "backgroundPlay": "പശ്ചാത്തലത്തിൽ സംഗീതം പ്ലേ ചെയ്യുന്നു",
-  "@backgroundPlay": {
-    "description": "backgroundPlay"
-  },
-  "cacheHomeScreenData": "ഹോം സ്‌ക്രീൻ ഉള്ളടക്ക ഡാറ്റ സംഭരിക്കുക",
-  "@cacheHomeScreenData": {
-    "description": "cacheHomeScreenData"
-  },
-  "cacheHomeScreenDataDes": "ഹോം സ്‌ക്രീൻ ഉള്ളടക്ക ഡാറ്റ സംഭരണം പ്രവർത്തനക്ഷമമാക്കുക, ഈ ഓപ്‌ഷൻ പ്രവർത്തനക്ഷമമാക്കിയാൽ ഹോം സ്‌ക്രീൻ തൽക്ഷണം ലോഡ് ചെയ്യും",
-  "@cacheHomeScreenDataDes": {
-    "description": "cacheHomeScreenDataDes"
-  },
-  "downloadingFormatDes": "ഡൗൺലോഡ് ഫയൽ ഫോർമാറ്റ് തിരഞ്ഞെടുക്കുക. \"ഓപസ്\" മികച്ച നിലവാരം നൽകും",
-  "@downloadingFormatDes": {
-    "description": "downloadingFormatDes"
-  },
-  "exportDowloadedFiles": "ഡൗൺലോഡ് ചെയ്ത ഫയലുകൾ കയറ്റുമതി ചെയ്യുക",
-  "@exportDowloadedFiles": {
-    "description": "exportDowloadedFiles"
-  },
-  "exportedFileLocation": "ഡൗൺലോഡ് ചെയ്ത ഫയലുകളുടെ ലൊക്കേഷൻ കയറ്റുമതി ചെയ്യുക",
-  "@exportedFileLocation": {
-    "description": "exportedFileLocation"
-  },
-  "exporting": "കയറ്റുമതി ചെയ്യുന്നു...",
-  "@exporting": {
-    "description": "exporting"
-  },
-  "scanning": "സ്കാൻ ചെയ്യുന്നു...",
-  "@scanning": {
-    "description": "scanning"
-  },
-  "downFilesFound": "ഡൗൺലോഡ് ചെയ്ത ഫയലുകൾ കണ്ടെത്തി",
-  "@downFilesFound": {
-    "description": "downFilesFound"
-  },
-  "exportMsg": "ഫയലുകൾ വിജയകരമായി കയറ്റുമതി ചെയ്തു",
-  "@exportMsg": {
-    "description": "exportMsg"
-  },
-  "equalizer": "ഇക്വലൈസർ",
-  "@equalizer": {
-    "description": "equalizer"
-  },
-  "clearImgCache": "ഇമേജ് കാഷെ മായ്‌ക്കുക",
-  "@clearImgCache": {
-    "description": "clearImgCache"
-  },
-  "clearImgCacheDes": "കാഷെ ചെയ്‌ത ലഘുചിത്രങ്ങൾ/ചിത്രങ്ങൾ മായ്‌ക്കാൻ ഇവിടെ ക്ലിക്ക് ചെയ്യുക. (കാഷെ ചെയ്‌ത ഇമേജ് ഡാറ്റ അപ്‌ഡേറ്റ് ചെയ്യാൻ നിങ്ങൾ ആഗ്രഹിക്കുന്നില്ലെങ്കിൽ ശുപാർശ ചെയ്യുന്നില്ല)",
-  "@clearImgCacheDes": {
-    "description": "clearImgCacheDes"
-  },
-  "disabled": "അപ്രാപ്തമാക്കി",
-  "@disabled": {
-    "description": "disabled"
-  },
-  "ignoreBatOpt": "ബാറ്ററി ഒപ്റ്റിമൈസേഷൻ അവഗണിക്കുക",
-  "@ignoreBatOpt": {
-    "description": "ignoreBatOpt"
-  },
-  "enabled": "സജീവമാക്കി",
-  "@enabled": {
-    "description": "enabled"
-  },
-  "github": "GitHub",
-  "@github": {
-    "description": "github"
-  },
-  "githubDes": "GitHub സോഴ്സ് കോഡ് കാണുക \nനിങ്ങൾക്ക് ഈ പ്രോജക്റ്റ് ഇഷ്‌ടമാണെങ്കിൽ, ഒരു ⭐ നൽകാൻ മറക്കരുത്!",
-  "@githubDes": {
-    "description": "githubDes"
-  },
-  "by": "വഴി",
-  "@by": {
-    "description": "by"
-  },
-  "searchDes": "പാട്ടുകൾ, പ്ലേലിസ്റ്റുകൾ, ആൽബങ്ങൾ അല്ലെങ്കിൽ കലാകാരന്മാർ",
-  "@searchDes": {
-    "description": "searchDes"
-  },
-  "searchRes": "തിരയൽ ഫലങ്ങൾ",
-  "@searchRes": {
-    "description": "searchRes"
-  },
-  "for1": "വേണ്ടി",
-  "@for1": {
-    "description": "for1"
-  },
-  "viewAll": "എല്ലാം കാണുക",
-  "@viewAll": {
-    "description": "viewAll"
-  },
-  "nomatch": "പൊരുത്തങ്ങളൊന്നും കണ്ടെത്തിയില്ല",
-  "@nomatch": {
-    "description": "nomatch"
-  },
-  "subscribers": "വരിക്കാർ",
-  "@subscribers": {
-    "description": "subscribers"
-  },
-  "synced": "സമന്വയിപ്പിച്ചു",
-  "@synced": {
-    "description": "synced"
-  },
-  "deleteDownloadedDataAlert": "ഡൗൺലോഡുകളിൽ നിന്ന് നീക്കം ചെയ്‌തു!",
-  "@deleteDownloadedDataAlert": {
-    "description": "deleteDownloadedDataAlert"
-  },
-  "cancelTimerAlert": "സ്ലീപ്പ് ടൈമർ റദ്ദാക്കി",
-  "@cancelTimerAlert": {
-    "description": "cancelTimerAlert"
-  },
-  "sleepTimeSetAlert": "നിങ്ങളുടെ സ്ലീപ്പ് ടൈമർ സജ്ജീകരിച്ചിരിക്കുന്നു",
-  "@sleepTimeSetAlert": {
-    "description": "sleepTimeSetAlert"
-  },
-  "songRemovedfromQueueCurrSong": "നിങ്ങൾക്ക് നിലവിൽ പ്ലേ ചെയ്യുന്ന ഗാനം ഇല്ലാതാക്കാൻ കഴിയില്ല",
-  "@songRemovedfromQueueCurrSong": {
-    "description": "songRemovedfromQueueCurrSong"
-  },
-  "songRemovedAlert": "നിന്ന് നീക്കം ചെയ്തു",
-  "@songRemovedAlert": {
-    "description": "songRemovedAlert"
-  },
-  "pipedplstSyncAlert": "പൈപ്പ് പ്ലേലിസ്റ്റ് സമന്വയിപ്പിച്ചു!",
-  "@pipedplstSyncAlert": {
-    "description": "pipedplstSyncAlert"
-  },
-  "playlistRenameAlert": "റീബ്രാൻഡ് ചെയ്‌തു!",
-  "@playlistRenameAlert": {
-    "description": "playlistRenameAlert"
-  },
-  "playlistRemovedAlert": "പ്ലേലിസ്റ്റ് ഇല്ലാതാക്കി!",
-  "@playlistRemovedAlert": {
-    "description": "playlistRemovedAlert"
-  },
-  "playlistBookmarkAddAlert": "ബുക്ക്‌മാർക്കുകളിലേക്ക് പ്ലേലിസ്റ്റ് ചേർത്തു!",
-  "@playlistBookmarkAddAlert": {
-    "description": "playlistBookmarkAddAlert"
-  },
-  "playlistBookmarkRemoveAlert": "പ്ലേലിസ്റ്റ് ബുക്ക്മാർക്ക് നീക്കം ചെയ്തു!",
-  "@playlistBookmarkRemoveAlert": {
-    "description": "playlistBookmarkRemoveAlert"
-  },
-  "albumBookmarkAddAlert": "ബുക്ക്‌മാർക്കുകളിലേക്ക് ആൽബം ചേർത്തു!",
-  "@albumBookmarkAddAlert": {
-    "description": "albumBookmarkAddAlert"
-  },
-  "lyricsNotAvailable": "വരികൾ ലഭ്യമല്ല!",
-  "@lyricsNotAvailable": {
-    "description": "lyricsNotAvailable"
-  },
-  "newVersionAvailable": "പുതിയ പതിപ്പ് ലഭ്യമാണ്!",
-  "@newVersionAvailable": {
-    "description": "newVersionAvailable"
-  },
-  "dontShowInfoAgain": "ഈ വിവരം വീണ്ടും കാണിക്കരുത്",
-  "@dontShowInfoAgain": {
-    "description": "dontShowInfoAgain"
-  },
-  "notaValidLink": "ഇതൊരു സാധുവായ ലിങ്കല്ല!",
-  "@notaValidLink": {
-    "description": "notaValidLink"
-  },
-  "operationFailed": "പ്രവർത്തനം പരാജയപ്പെട്ടു",
-  "@operationFailed": {
-    "description": "operationFailed"
-  },
-  "Piped": "പൈപ്പ് ചെയ്തു",
-  "@Piped": {
-    "description": "Piped"
-  },
-  "link": "ലിങ്ക്",
-  "@link": {
-    "description": "link"
-  },
-  "unLink": "അൺലിങ്ക് ചെയ്യുക",
-  "@unLink": {
-    "description": "unLink"
-  },
-  "hintApiUrl": "API URL-ലേക്കുള്ള പൈപ്പ് ഉദാഹരണം",
-  "@hintApiUrl": {
-    "description": "hintApiUrl"
-  },
-  "customIns": "ഇഷ്‌ടാനുസൃത ഉദാഹരണം",
-  "@customIns": {
-    "description": "customIns"
-  },
-  "linkAlert": "ലിങ്ക് ചെയ്‌തു!",
-  "@linkAlert": {
-    "description": "linkAlert"
-  },
-  "unlinkAlert": "അൺലിങ്ക് ചെയ്‌തു!",
-  "@unlinkAlert": {
-    "description": "unlinkAlert"
-  },
-  "stopMusicOnTaskClear": "ആപ്പ് അടയ്‌ക്കുമ്പോൾ സംഗീതം നിർത്തുക",
-  "@stopMusicOnTaskClear": {
-    "description": "stopMusicOnTaskClear"
-  },
-  "downloadLocation": "ലൊക്കേഷൻ ഡൗൺലോഡ് ചെയ്യുക",
-  "@downloadLocation": {
-    "description": "downloadLocation"
-  },
-  "low": "താഴ്ന്നത്",
-  "@low": {
-    "description": "low"
+  "downloadNotificationTitle": "സംഗീതം ഡൗൺലോഡ് ചെയ്യുന്നു",
+  "@downloadNotificationTitle": {
+    "description": "downloadNotificationTitle"
+  },
+  "downloadPlaylist": "പ്ലേലിസ്റ്റ് ഡൗൺലോഡ് ചെയ്യുക",
+  "@downloadPlaylist": {
+    "description": "downloadPlaylist"
   },
   "downloadingFormat": "ഫയൽ ഫോർമാറ്റ് ഡൗൺലോഡ് ചെയ്യുക",
   "@downloadingFormat": {
     "description": "downloadingFormat"
   },
-  "ignoreBatOptDes": "സിസ്റ്റം ഒപ്റ്റിമൈസേഷൻ കാരണം അറിയിപ്പുകളിലോ പ്ലേബാക്ക് സ്റ്റോപ്പുകളിലോ നിങ്ങൾക്ക് പ്രശ്നങ്ങളുണ്ടെങ്കിൽ, ഈ ഓപ്ഷൻ സജീവമാക്കുക",
-  "@ignoreBatOptDes": {
-    "description": "ignoreBatOptDes"
+  "downloadingFormatDes": "ഡൗൺലോഡ് ഫയൽ ഫോർമാറ്റ് തിരഞ്ഞെടുക്കുക. \"ഓപസ്\" മികച്ച നിലവാരം നൽകും",
+  "@downloadingFormatDes": {
+    "description": "downloadingFormatDes"
   },
-  "status": "നില",
-  "@status": {
-    "description": "status"
+  "downloads": "ഡൗൺലോഡുകൾ",
+  "@downloads": {
+    "description": "downloads"
   },
-  "radioNotAvailable": "ഈ കലാകാരന് റേഡിയോ ലഭ്യമല്ല!",
-  "@radioNotAvailable": {
-    "description": "radioNotAvailable"
+  "duration": "ദൈർഘ്യം",
+  "@duration": {
+    "description": "duration"
   },
-  "songRemovedfromQueue": "ക്യൂവിൽ നിന്ന് നീക്കം ചെയ്‌തു!",
-  "@songRemovedfromQueue": {
-    "description": "songRemovedfromQueue"
+  "dynamic": "ചലനാത്മകം",
+  "@dynamic": {
+    "description": "dynamic"
   },
-  "artistBookmarkRemoveAlert": "ആർട്ടിസ്റ്റ് മാർക്കർ നീക്കം ചെയ്തു!",
-  "@artistBookmarkRemoveAlert": {
-    "description": "artistBookmarkRemoveAlert"
+  "email": "ഇ-മെയിൽ",
+  "@email": {
+    "description": "email"
   },
-  "dismiss": "നിരസിക്കുക",
-  "@dismiss": {
-    "description": "dismiss"
-  },
-  "goToDownloadPage": "ഡൗൺലോഡ് പേജിലേക്ക് പോകാൻ ഇവിടെ ക്ലിക്ക് ചെയ്യുക",
-  "@goToDownloadPage": {
-    "description": "goToDownloadPage"
-  },
-  "local": "പ്രാദേശിക",
-  "@local": {
-    "description": "local"
-  },
-  "cacheSongs": "പാട്ടുകൾ കാഷെ ചെയ്യുന്നു",
-  "@cacheSongs": {
-    "description": "cacheSongs"
-  },
-  "disableTransitionAnimation": "സംക്രമണ ആനിമേഷൻ പ്രവർത്തനരഹിതമാക്കുക",
-  "@disableTransitionAnimation": {
-    "description": "disableTransitionAnimation"
-  },
-  "exportDowloadedFilesDes": "ആപ്ലിക്കേഷൻ ഡയറക്‌ടറിയിൽ നിന്ന് ബാഹ്യ ഡയറക്‌ടറിയിലേക്ക് ഡൗൺലോഡ് ചെയ്‌ത ഫയലുകൾ എക്‌സ്‌പോർട്ട് ചെയ്യാൻ ഇവിടെ ക്ലിക്ക് ചെയ്യുക",
-  "@exportDowloadedFilesDes": {
-    "description": "exportDowloadedFilesDes"
-  },
-  "export": "കയറ്റുമതി",
-  "@export": {
-    "description": "export"
-  },
-  "backgroundPlayDes": "പശ്ചാത്തല സംഗീത പ്ലേബാക്ക് പ്രവർത്തനക്ഷമമാക്കുക/പ്രവർത്തനരഹിതമാക്കുക (ആപ്പ് പശ്ചാത്തലത്തിൽ പ്രവർത്തിക്കുമ്പോൾ സിസ്റ്റം ട്രേയിൽ നിന്ന് ആപ്പ് ആക്‌സസ് ചെയ്യാൻ കഴിയും)",
-  "@backgroundPlayDes": {
-    "description": "backgroundPlayDes"
-  },
-  "search": "തിരയുക",
-  "@search": {
-    "description": "search"
-  },
-  "songAddedToPlaylistAlert": "പാട്ട് പ്ലേലിസ്റ്റിലേക്ക് ചേർത്തു!",
-  "@songAddedToPlaylistAlert": {
-    "description": "songAddedToPlaylistAlert"
-  },
-  "songAlreadyExists": "ഗാനം ഇതിനകം നിലവിലുണ്ട്!",
-  "@songAlreadyExists": {
-    "description": "songAlreadyExists"
-  },
-  "topmusicvideos": "മികച്ച സംഗീത വീഡിയോകൾ",
-  "@topmusicvideos": {
-    "description": "topmusicvideos"
-  },
-  "restoreLastPlaybackSessionDes": "ആപ്പ് ആരംഭിക്കുമ്പോൾ അവസാനത്തെ പ്ലേബാക്ക് സെഷൻ സ്വയമേവ പുനഃസ്ഥാപിക്കുക",
-  "@restoreLastPlaybackSessionDes": {
-    "description": "restoreLastPlaybackSessionDes"
+  "emptyPlaylist": "പ്ലേലിസ്റ്റ് ശൂന്യം!",
+  "@emptyPlaylist": {
+    "description": "emptyPlaylist"
   },
   "enableBottomNav": "താഴെയുള്ള നാവിഗേഷൻ ബാർ",
   "@enableBottomNav": {
     "description": "enableBottomNav"
   },
-  "songEnqueueAlert": "ഗാനം ക്യൂവിൽ ചേർത്തു!",
-  "@songEnqueueAlert": {
-    "description": "songEnqueueAlert"
-  },
-  "artistBookmarkAddAlert": "ബുക്ക്‌മാർക്കുകളിലേക്ക് ആർട്ടിസ്‌റ്റ് ചേർത്തു!",
-  "@artistBookmarkAddAlert": {
-    "description": "artistBookmarkAddAlert"
-  },
-  "syncedLyricsNotAvailable": "സമന്വയിപ്പിച്ച വരികൾ ലഭ്യമല്ല!",
-  "@syncedLyricsNotAvailable": {
-    "description": "syncedLyricsNotAvailable"
-  },
-  "artistDesNotAvailable": "വിവരണം ലഭ്യമല്ല!",
-  "@artistDesNotAvailable": {
-    "description": "artistDesNotAvailable"
-  },
-  "selectAuthInsMsg": "പ്രാമാണീകരണ ഉദാഹരണം തിരഞ്ഞെടുക്കുക!",
-  "@selectAuthInsMsg": {
-    "description": "selectAuthInsMsg"
-  },
-  "allFieldsReqMsg": "എല്ലാ ഫീൽഡുകളും ആവശ്യമാണ്",
-  "@allFieldsReqMsg": {
-    "description": "allFieldsReqMsg"
-  },
-  "playlistBlacklistAlert": "ബ്ലാക്ക്‌ലിസ്റ്റ് ചെയ്ത പ്ലേലിസ്റ്റ്!",
-  "@playlistBlacklistAlert": {
-    "description": "playlistBlacklistAlert"
-  },
-  "blacklistPlstResetAlert": "പുനഃസജ്ജീകരിച്ചു!",
-  "@blacklistPlstResetAlert": {
-    "description": "blacklistPlstResetAlert"
-  },
-  "resetblacklistedplaylist": "ബ്ലാക്ക്‌ലിസ്റ്റ് ചെയ്‌ത പ്ലേലിസ്റ്റുകൾ പുനഃസജ്ജമാക്കുക",
-  "@resetblacklistedplaylist": {
-    "description": "resetblacklistedplaylist"
-  },
-  "resetblacklistedplaylistDes": "ബ്ലാക്ക്‌ലിസ്റ്റ് ചെയ്‌ത എല്ലാ പൈപ്പ് പ്ലേലിസ്റ്റുകളും പുനഃസജ്ജമാക്കുക",
-  "@resetblacklistedplaylistDes": {
-    "description": "resetblacklistedplaylistDes"
-  },
-  "restoreSettingsAndPlaylistsDes": "ഒരു ബാക്കപ്പ് ഫയലിൽ നിന്ന് എല്ലാ ക്രമീകരണങ്ങളും ലോഗിൻ ഡാറ്റയും പ്ലേലിസ്റ്റുകളും പുനഃസ്ഥാപിക്കുന്നു. നിലവിലുള്ള എല്ലാ ഡാറ്റയും പുനരാലേഖനം ചെയ്യുന്നു",
-  "@restoreSettingsAndPlaylistsDes": {
-    "description": "restoreSettingsAndPlaylistsDes"
-  },
-  "errorOccuredAlert": "ഒരു പിശക് സംഭവിച്ചു!",
-  "@errorOccuredAlert": {
-    "description": "errorOccuredAlert"
-  },
-  "playlistCreatedAlert": "പ്ലേലിസ്റ്റ് സൃഷ്ടിച്ചു!",
-  "@playlistCreatedAlert": {
-    "description": "playlistCreatedAlert"
-  },
-  "trending": "ട്രെൻഡുകൾ",
-  "@trending": {
-    "description": "trending"
-  },
-  "reset": "പുനഃസജ്ജമാക്കുക",
-  "@reset": {
-    "description": "reset"
-  },
-  "streamingQualityDes": "സംഗീത സ്ട്രീമിംഗ് നിലവാരം",
-  "@streamingQualityDes": {
-    "description": "streamingQualityDes"
-  },
-  "customInsSelectMsg": "ഒരു ഇഷ്‌ടാനുസൃത ഉദാഹരണം തിരഞ്ഞെടുക്കുക",
-  "@customInsSelectMsg": {
-    "description": "customInsSelectMsg"
-  },
-  "stopMusicOnTaskClearDes": "ടാസ്‌ക് മാനേജറിൽ നിന്ന് ആപ്പ് അടയ്‌ക്കുമ്പോൾ മ്യൂസിക് പ്ലേബാക്ക് നിലയ്ക്കും",
-  "@stopMusicOnTaskClearDes": {
-    "description": "stopMusicOnTaskClearDes"
-  },
-  "backupSettingsAndPlaylistsDes": "ഒരു ബാക്കപ്പ് ഫയലിലേക്ക് എല്ലാ ക്രമീകരണങ്ങളും പ്ലേലിസ്റ്റുകളും ലോഗിൻ ഡാറ്റയും സംരക്ഷിക്കുക",
-  "@backupSettingsAndPlaylistsDes": {
-    "description": "backupSettingsAndPlaylistsDes"
-  },
-  "backupMsg": "ബാക്കപ്പ് വിജയകരമായി സംരക്ഷിച്ചു!",
-  "@backupMsg": {
-    "description": "backupMsg"
-  },
-  "backFilesFound": "ഡാറ്റാബേസുകൾ കണ്ടെത്തി",
-  "@backFilesFound": {
-    "description": "backFilesFound"
-  },
-  "restoreMsg": "വിജയകരമായി പുനഃസ്ഥാപിച്ചു!\nറീബൂട്ട് ചെയ്യുമ്പോൾ മാറ്റങ്ങൾ പ്രയോഗിക്കുന്നു",
-  "@restoreMsg": {
-    "description": "restoreMsg"
-  },
-  "restoring": "പുനഃസ്ഥാപിക്കുന്നു...",
-  "@restoring": {
-    "description": "restoring"
-  },
-  "restore": "പുനഃസ്ഥാപിക്കുക",
-  "@restore": {
-    "description": "restore"
-  },
-  "closeApp": "ആപ്ലിക്കേഷൻ അടയ്ക്കുക",
-  "@closeApp": {
-    "description": "closeApp"
-  },
-  "standard": "സ്റ്റാൻഡേർഡ്",
-  "@standard": {
-    "description": "standard"
-  },
-  "gesture": "ആംഗ്യം",
-  "@gesture": {
-    "description": "gesture"
-  },
-  "audioCodec": "ഓഡിയോ കോഡെക്",
-  "@audioCodec": {
-    "description": "audioCodec"
-  },
-  "autoDownFavSongDes": "പ്രിയപ്പെട്ടവയിലേക്ക് ചേർക്കുമ്പോൾ പ്രിയപ്പെട്ട പാട്ടുകൾ സ്വയമേവ ഡൗൺലോഡ് ചെയ്യുക",
-  "@autoDownFavSongDes": {
-    "description": "autoDownFavSongDes"
-  },
-  "loudnessNormalization": "ഉച്ചത്തിലുള്ള നോർമലൈസേഷൻ",
-  "@loudnessNormalization": {
-    "description": "loudnessNormalization"
-  },
-  "playerUi": "പ്ലെയർ യുഐ",
-  "@playerUi": {
-    "description": "playerUi"
-  },
-  "loudnessDb": "ഉച്ചത്തിലുള്ള ഡിബി",
-  "@loudnessDb": {
-    "description": "loudnessDb"
-  },
-  "restoreAppData": "ആപ്പ് ഡാറ്റ പുനഃസ്ഥാപിക്കുക",
-  "@restoreAppData": {
-    "description": "restoreAppData"
-  },
-  "includeDownloadedFiles": "ഡൗൺലോഡ് ചെയ്ത പാട്ട് ഫയലുകൾ ഉൾപ്പെടുത്തുക",
-  "@includeDownloadedFiles": {
-    "description": "includeDownloadedFiles"
-  },
-  "backupInProgress": "ബാക്കപ്പ് പുരോഗമിക്കുന്നു...",
-  "@backupInProgress": {
-    "description": "backupInProgress"
-  },
-  "content": "ഉള്ളടക്കം",
-  "@content": {
-    "description": "content"
-  },
-  "downloadError3": "നെറ്റ്‌വർക്ക്/ട്രാൻസ്മിഷൻ പിശക് കാരണം ഡൗൺലോഡ് പരാജയപ്പെട്ടു! ദയവായി വീണ്ടും ശ്രമിക്കുക",
-  "@downloadError3": {
-    "description": "downloadError3"
-  },
-  "personalisation": "വ്യക്തിഗതമാക്കൽ",
-  "@personalisation": {
-    "description": "personalisation"
-  },
-  "playerUiDes": "പ്ലെയർ യൂസർ ഇൻ്റർഫേസ് തിരഞ്ഞെടുക്കുക",
-  "@playerUiDes": {
-    "description": "playerUiDes"
-  },
-  "musicAndPlayback": "സംഗീതവും പ്ലേബാക്കും",
-  "@musicAndPlayback": {
-    "description": "musicAndPlayback"
-  },
-  "appInfo": "അപേക്ഷാ വിവരങ്ങൾ",
-  "@appInfo": {
-    "description": "appInfo"
-  },
-  "networkError": "നെറ്റ്‌വർക്ക് പിശക്! നിങ്ങളുടെ ഇൻ്റർനെറ്റ് കണക്ഷൻ പരിശോധിക്കുക.",
-  "@networkError": {
-    "description": "networkError"
-  },
-  "download": "ഡൗൺലോഡ് ചെയ്യുക",
-  "@download": {
-    "description": "download"
-  },
-  "downloadError2": "സെർവർ നിയന്ത്രണങ്ങൾ കാരണം ആവശ്യപ്പെട്ട ഗാനം ഡൗൺലോഡ് ചെയ്യാൻ കഴിയില്ല. നിങ്ങൾക്ക് വീണ്ടും ശ്രമിക്കാം",
-  "@downloadError2": {
-    "description": "downloadError2"
-  },
-  "letsStrart": "നമുക്ക് തുടങ്ങാം..",
-  "@letsStrart": {
-    "description": "letsStrart"
-  },
-  "processFiles": "ഫയലുകൾ പ്രോസസ്സ് ചെയ്യുന്നു...",
-  "@processFiles": {
-    "description": "processFiles"
-  },
-  "backupAppData": "ആപ്പ് ഡാറ്റ ബാക്കപ്പ് ചെയ്യുക",
-  "@backupAppData": {
-    "description": "backupAppData"
-  },
-  "backup": "ബാക്കപ്പ്",
-  "@backup": {
-    "description": "backup"
-  },
-  "shuffleQueue": "വാൽ ഇളക്കുക",
-  "@shuffleQueue": {
-    "description": "shuffleQueue"
-  },
-  "queueLoop": "ടെയിൽ ലൂപ്പ്",
-  "@queueLoop": {
-    "description": "queueLoop"
-  },
-  "queueLoopNotDisMsg1": "ഷഫിൾ മോഡ് പ്രവർത്തനക്ഷമമാക്കുമ്പോൾ ക്യൂ ലൂപ്പ് മോഡ് പ്രവർത്തനരഹിതമാക്കാൻ കഴിയില്ല.",
-  "@queueLoopNotDisMsg1": {
-    "description": "queueLoopNotDisMsg1"
-  },
-  "queueLoopNotDisMsg2": "റേഡിയോ മോഡിൽ ടെയിൽ ലൂപ്പ് മോഡ് സജീവമാക്കാൻ കഴിയില്ല.",
-  "@queueLoopNotDisMsg2": {
-    "description": "queueLoopNotDisMsg2"
-  },
-  "loudnessNormalizationDes": "എല്ലാ പാട്ടുകൾക്കും ഒരേ ഉച്ചത്തിലുള്ള ലെവൽ സജ്ജീകരിക്കുന്നു (പരീക്ഷണാത്മകം) (പഴയ പതിപ്പുകളിൽ ഡൗൺലോഡ് ചെയ്‌ത പാട്ടുകളിൽ പ്രവർത്തിക്കില്ല (< v1.10.0))",
-  "@loudnessNormalizationDes": {
-    "description": "loudnessNormalizationDes"
+  "enableBottomNavDes": "താഴെയുള്ള നാവിഗേഷൻ ബാറിലേക്ക് മാറുക",
+  "@enableBottomNavDes": {
+    "description": "enableBottomNavDes"
   },
   "enableSlidableAction": "സ്ലൈഡർ പ്രവർത്തനങ്ങൾ സജീവമാക്കുക",
   "@enableSlidableAction": {
@@ -1843,101 +597,65 @@
   "@enableSlidableActionDes": {
     "description": "enableSlidableActionDes"
   },
-  "bitrate": "ബിറ്റ് നിരക്ക്",
-  "@bitrate": {
-    "description": "bitrate"
+  "enabled": "സജീവമാക്കി",
+  "@enabled": {
+    "description": "enabled"
   },
-  "androidBackupWarning": "പരീക്ഷിച്ചിട്ടില്ല: 60-ലധികം ഫയലുകൾ ഡൗൺലോഡ് ചെയ്‌തതിന് ശേഷം ചെക്ക്‌ബോക്‌സ് തിരഞ്ഞെടുക്കുന്നത് പ്രോസസ്സിന് വലിയ അളവിലുള്ള മെമ്മറി ഉപയോഗിക്കുന്നതിന് കാരണമായേക്കാം, ഇത് ഫോണോ ആപ്പോ ക്രാഷുചെയ്യുന്നതിന് കാരണമായേക്കാം. നിങ്ങളുടെ സ്വന്തം ഉത്തരവാദിത്തത്തിൽ തുടരുക.",
-  "@androidBackupWarning": {
-    "description": "androidBackupWarning"
+  "endOfThisSong": "ഈ പാട്ടിൻ്റെ അവസാനം",
+  "@endOfThisSong": {
+    "description": "endOfThisSong"
   },
-  "songInfo": "പാട്ടിൻ്റെ വിവരങ്ങൾ",
-  "@songInfo": {
-    "description": "songInfo"
+  "enqueueAlbumSongs": "ക്യൂവിൽ ആൽബം ഗാനങ്ങൾ ചേർക്കുക",
+  "@enqueueAlbumSongs": {
+    "description": "enqueueAlbumSongs"
   },
-  "id": "ഐഡി",
-  "@id": {
-    "description": "id"
+  "enqueueAll": "എല്ലാം എൻക്യൂ",
+  "@enqueueAll": {
+    "description": "enqueueAll"
   },
-  "title": "തലക്കെട്ട്",
-  "@title": {
-    "description": "title"
+  "enqueueSong": "ഈ പാട്ട് ക്യൂവിൽ ചേർക്കുക",
+  "@enqueueSong": {
+    "description": "enqueueSong"
   },
-  "restartApp": "അപ്ലിക്കേഷൻ പുനരാരംഭിക്കുക",
-  "@restartApp": {
-    "description": "restartApp"
+  "enqueueSongs": "ക്യൂവിൽ പാട്ടുകൾ ചേർക്കുക",
+  "@enqueueSongs": {
+    "description": "enqueueSongs"
   },
-  "autoDownFavSong": "പ്രിയപ്പെട്ട പാട്ടുകളുടെ സ്വയമേവ ഡൗൺലോഡ്",
-  "@autoDownFavSong": {
-    "description": "autoDownFavSong"
+  "episodes": "എപ്പിസോഡുകൾ",
+  "@episodes": {
+    "description": "episodes"
   },
-  "duration": "ദൈർഘ്യം",
-  "@duration": {
-    "description": "duration"
+  "equalizer": "ഇക്വലൈസർ",
+  "@equalizer": {
+    "description": "equalizer"
   },
-  "urlSearchDes": "ബന്ധപ്പെട്ട ഉള്ളടക്കം തുറക്കാൻ/പ്ലേ ചെയ്യാൻ കണ്ടെത്തിയ URL അതിൽ ക്ലിക്ക് ചെയ്യുക",
-  "@urlSearchDes": {
-    "description": "urlSearchDes"
+  "equalizerDes": "സിസ്റ്റം ഇക്വലൈസർ തുറക്കുക",
+  "@equalizerDes": {
+    "description": "equalizerDes"
   },
-  "resetToDefaultMsg": "ഡിഫോൾട്ടിലേക്ക് പുനഃസജ്ജമാക്കൽ ക്രമീകരണം പൂർത്തിയായി, ദയവായി ആപ്പ് പുനരാരംഭിക്കുക",
-  "@resetToDefaultMsg": {
-    "description": "resetToDefaultMsg"
+  "errorOccuredAlert": "ഒരു പിശക് സംഭവിച്ചു!",
+  "@errorOccuredAlert": {
+    "description": "errorOccuredAlert"
   },
-  "resetToDefaultDes": "ആപ്പ് ക്രമീകരണങ്ങൾ ഡിഫോൾട്ടായി പുനഃസജ്ജമാക്കുക (പുനരാരംഭിക്കേണ്ടതുണ്ട്)",
-  "@resetToDefaultDes": {
-    "description": "resetToDefaultDes"
+  "errorOccurred": "ഒരു പിശക് സംഭവിച്ചു",
+  "@errorOccurred": {
+    "description": "errorOccurred"
   },
-  "misc": "വിവിധ",
-  "@misc": {
-    "description": "misc"
+  "errorPlayingTrack": "കളിക്കുമ്പോൾ പിശക്:",
+  "@errorPlayingTrack": {
+    "description": "errorPlayingTrack"
   },
-  "resetToDefault": "സ്ഥിരസ്ഥിതി ക്രമീകരണങ്ങൾ പുനഃസ്ഥാപിക്കുക",
-  "@resetToDefault": {
-    "description": "resetToDefault"
+  "export": "കയറ്റുമതി",
+  "@export": {
+    "description": "export"
   },
-  "autoOpenPlayer": "പ്ലേയർ സ്‌ക്രീൻ യാന്ത്രികമായി തുറക്കുക",
-  "@autoOpenPlayer": {
-    "description": "autoOpenPlayer"
+  "exportDowloadedFiles": "ഡൗൺലോഡ് ചെയ്ത ഫയലുകൾ കയറ്റുമതി ചെയ്യുക",
+  "@exportDowloadedFiles": {
+    "description": "exportDowloadedFiles"
   },
-  "autoOpenPlayerDes": "പ്ലേ ചെയ്യാൻ ഒരു പാട്ട് തിരഞ്ഞെടുക്കുമ്പോൾ പ്ലെയറിൻ്റെ പൂർണ്ണ സ്‌ക്രീനിലേക്ക് സ്വയമേവ തുറക്കുന്നത് സജീവമാക്കുക/നിർജ്ജീവമാക്കുക",
-  "@autoOpenPlayerDes": {
-    "description": "autoOpenPlayerDes"
-  },
-  "exportPlaylist": "കയറ്റുമതി പ്ലേലിസ്റ്റ്",
-  "@exportPlaylist": {
-    "description": "exportPlaylist"
-  },
-  "importPlaylistDesc": "ഇറക്കുമതി ചെയ്യുന്നതിന് മുമ്പ് കയറ്റുമതി ചെയ്ത പ്ലേലിസ്റ്റ് JSON ഫയൽ തിരഞ്ഞെടുക്കുക",
-  "@importPlaylistDesc": {
-    "description": "importPlaylistDesc"
-  },
-  "invalidPlaylistFile": "അസാധുവായ പ്ലേലിസ്റ്റ് ഫയൽ ഘടന",
-  "@invalidPlaylistFile": {
-    "description": "invalidPlaylistFile"
-  },
-  "fileNotFound": "ഫയൽ കണ്ടെത്തിയില്ല",
-  "@fileNotFound": {
-    "description": "fileNotFound"
-  },
-  "exportErrorPermission": "കയറ്റുമതി ചെയ്യുമ്പോൾ അനുമതി നിഷേധിച്ചു",
-  "@exportErrorPermission": {
-    "description": "exportErrorPermission"
-  },
-  "importingPlaylist": "പ്ലേലിസ്റ്റ് ഇമ്പോർട്ടുചെയ്യുന്നു...",
-  "@importingPlaylist": {
-    "description": "importingPlaylist"
-  },
-  "exportErrorStorage": "മതിയായ സംഭരണ ഇടമില്ല",
-  "@exportErrorStorage": {
-    "description": "exportErrorStorage"
-  },
-  "exportingPlaylist": "പ്ലേലിസ്റ്റ് കയറ്റുമതി ചെയ്യുന്നു...",
-  "@exportingPlaylist": {
-    "description": "exportingPlaylist"
-  },
-  "playlistExportedMsg": "പ്ലേലിസ്റ്റ് വിജയകരമായി കയറ്റുമതി ചെയ്തു",
-  "@playlistExportedMsg": {
-    "description": "playlistExportedMsg"
+  "exportDowloadedFilesDes": "ആപ്ലിക്കേഷൻ ഡയറക്‌ടറിയിൽ നിന്ന് ബാഹ്യ ഡയറക്‌ടറിയിലേക്ക് ഡൗൺലോഡ് ചെയ്‌ത ഫയലുകൾ എക്‌സ്‌പോർട്ട് ചെയ്യാൻ ഇവിടെ ക്ലിക്ക് ചെയ്യുക",
+  "@exportDowloadedFilesDes": {
+    "description": "exportDowloadedFilesDes"
   },
   "exportError": "പ്ലേലിസ്റ്റ് കയറ്റുമതി ചെയ്യുന്നതിൽ പിശക്",
   "@exportError": {
@@ -1947,41 +665,29 @@
   "@exportErrorFormat": {
     "description": "exportErrorFormat"
   },
-  "importPlaylist": "പ്ലേലിസ്റ്റ് ഇറക്കുമതി ചെയ്യുക",
-  "@importPlaylist": {
-    "description": "importPlaylist"
+  "exportErrorPermission": "കയറ്റുമതി ചെയ്യുമ്പോൾ അനുമതി നിഷേധിച്ചു",
+  "@exportErrorPermission": {
+    "description": "exportErrorPermission"
   },
-  "selectFile": "ഫയൽ തിരഞ്ഞെടുക്കുക",
-  "@selectFile": {
-    "description": "selectFile"
+  "exportErrorStorage": "മതിയായ സംഭരണ ഇടമില്ല",
+  "@exportErrorStorage": {
+    "description": "exportErrorStorage"
   },
-  "playlistImportedMsg": "പ്ലേലിസ്റ്റ് വിജയകരമായി ഇറക്കുമതി ചെയ്തു",
-  "@playlistImportedMsg": {
-    "description": "playlistImportedMsg"
+  "exportMsg": "ഫയലുകൾ വിജയകരമായി കയറ്റുമതി ചെയ്തു",
+  "@exportMsg": {
+    "description": "exportMsg"
   },
-  "importError": "പ്ലേലിസ്റ്റ് ഇറക്കുമതി ചെയ്യുന്നതിൽ പിശക്",
-  "@importError": {
-    "description": "importError"
-  },
-  "importErrorFileAccess": "തിരഞ്ഞെടുത്ത ഫയൽ ആക്സസ് ചെയ്യാൻ കഴിഞ്ഞില്ല",
-  "@importErrorFileAccess": {
-    "description": "importErrorFileAccess"
-  },
-  "importErrorFormat": "അസാധുവായ ഫയൽ ഫോർമാറ്റ്",
-  "@importErrorFormat": {
-    "description": "importErrorFormat"
-  },
-  "importErrorDatabase": "ഡാറ്റാബേസിൽ സംരക്ഷിക്കുന്നതിൽ പിശക്",
-  "@importErrorDatabase": {
-    "description": "importErrorDatabase"
-  },
-  "importLargeFileNote": "ശ്രദ്ധിക്കുക: വലിയ പ്ലേലിസ്റ്റുകൾ ഇറക്കുമതി ചെയ്യാൻ കൂടുതൽ സമയം എടുത്തേക്കാം",
-  "@importLargeFileNote": {
-    "description": "importLargeFileNote"
+  "exportPlaylist": "കയറ്റുമതി പ്ലേലിസ്റ്റ്",
+  "@exportPlaylist": {
+    "description": "exportPlaylist"
   },
   "exportPlaylistCsv": "പ്ലേലിസ്റ്റ് CSV ആയി കയറ്റുമതി ചെയ്യുക",
   "@exportPlaylistCsv": {
     "description": "exportPlaylistCsv"
+  },
+  "exportPlaylistCsvSubtitle": "ഇവിടെ ഇറക്കുമതി ചെയ്യാൻ കഴിയില്ല",
+  "@exportPlaylistCsvSubtitle": {
+    "description": "exportPlaylistCsvSubtitle"
   },
   "exportPlaylistJson": "JSON-ലേക്ക് പ്ലേലിസ്റ്റ് എക്‌സ്‌പോർട്ടുചെയ്യുക",
   "@exportPlaylistJson": {
@@ -1991,10 +697,6 @@
   "@exportPlaylistJsonSubtitle": {
     "description": "exportPlaylistJsonSubtitle"
   },
-  "exportPlaylistCsvSubtitle": "ഇവിടെ ഇറക്കുമതി ചെയ്യാൻ കഴിയില്ല",
-  "@exportPlaylistCsvSubtitle": {
-    "description": "exportPlaylistCsvSubtitle"
-  },
   "exportToOnlineMusic": "Online സംഗീതത്തിലേക്ക് കയറ്റുമതി ചെയ്യുക",
   "@exportToOnlineMusic": {
     "description": "exportToOnlineMusic"
@@ -2003,145 +705,489 @@
   "@exportToOnlineMusicSubtitle": {
     "description": "exportToOnlineMusicSubtitle"
   },
-  "linkCopied": "ലിങ്ക് ക്ലിപ്പ്ബോർഡിലേക്ക് പകർത്തി",
-  "@linkCopied": {
-    "description": "linkCopied"
+  "exportedFileLocation": "ഡൗൺലോഡ് ചെയ്ത ഫയലുകളുടെ ലൊക്കേഷൻ കയറ്റുമതി ചെയ്യുക",
+  "@exportedFileLocation": {
+    "description": "exportedFileLocation"
   },
-  "lyrics": "കത്തുകൾ",
-  "@lyrics": {
-    "description": "lyrics"
+  "exporting": "കയറ്റുമതി ചെയ്യുന്നു...",
+  "@exporting": {
+    "description": "exporting"
   },
-  "no": "ഇല്ല",
-  "@no": {
-    "description": "no"
+  "exportingPlaylist": "പ്ലേലിസ്റ്റ് കയറ്റുമതി ചെയ്യുന്നു...",
+  "@exportingPlaylist": {
+    "description": "exportingPlaylist"
   },
-  "podcasts": "പോഡ്കാസ്റ്റുകൾ",
-  "@podcasts": {
-    "description": "podcasts"
+  "favorites": "പ്രിയപ്പെട്ടവ",
+  "@favorites": {
+    "description": "favorites"
   },
-  "episodes": "എപ്പിസോഡുകൾ",
-  "@episodes": {
-    "description": "episodes"
+  "featuredplaylists": "തിരഞ്ഞെടുത്ത പ്ലേലിസ്റ്റുകൾ",
+  "@featuredplaylists": {
+    "description": "featuredplaylists"
   },
-  "profiles": "പ്രൊഫൈലുകൾ",
-  "@profiles": {
-    "description": "profiles"
+  "fileNotFound": "ഫയൽ കണ്ടെത്തിയില്ല",
+  "@fileNotFound": {
+    "description": "fileNotFound"
   },
-  "addToLibrary": "ലൈബ്രറിയിലേക്ക് ചേർക്കുക",
-  "@addToLibrary": {
-    "description": "addToLibrary"
+  "follow": "തുടരുക",
+  "@follow": {
+    "description": "follow"
   },
-  "removeFromLibrary": "ലൈബ്രറിയിൽ നിന്ന് ഇല്ലാതാക്കുക",
-  "@removeFromLibrary": {
-    "description": "removeFromLibrary"
+  "followedArtists": "പിന്തുടർന്നു",
+  "@followedArtists": {
+    "description": "followedArtists"
   },
-  "play": "കളിക്കുക",
-  "@play": {
-    "description": "play"
+  "following": "പിന്തുടരുന്നു",
+  "@following": {
+    "description": "following"
   },
-  "enqueueAlbumSongs": "ക്യൂവിൽ ആൽബം ഗാനങ്ങൾ ചേർക്കുക",
-  "@enqueueAlbumSongs": {
-    "description": "enqueueAlbumSongs"
+  "for1": "വേണ്ടി",
+  "@for1": {
+    "description": "for1"
   },
-  "downloadAlbumSongs": "ആൽബത്തിൽ നിന്ന് പാട്ടുകൾ ഡൗൺലോഡ് ചെയ്യുക",
-  "@downloadAlbumSongs": {
-    "description": "downloadAlbumSongs"
+  "forgottenFavorites": "മറന്നുപോയ പ്രിയപ്പെട്ടവ",
+  "@forgottenFavorites": {
+    "description": "forgottenFavorites"
   },
-  "shareAlbum": "ആൽബം പങ്കിടുക",
-  "@shareAlbum": {
-    "description": "shareAlbum"
+  "friendFallback": "സുഹൃത്ത്",
+  "@friendFallback": {
+    "description": "friendFallback"
+  },
+  "friendRequestAccepted": "സുഹൃത്ത് അഭ്യർത്ഥന സ്വീകരിച്ചു",
+  "@friendRequestAccepted": {
+    "description": "friendRequestAccepted"
+  },
+  "friendRequestSent": "സൗഹൃദ അഭ്യർത്ഥന അയച്ചു",
+  "@friendRequestSent": {
+    "description": "friendRequestSent"
+  },
+  "friends": "സുഹൃത്തുക്കൾ",
+  "@friends": {
+    "description": "friends"
+  },
+  "friendsLoginRequired": "സുഹൃത്തുക്കളെ കണ്ടെത്താൻ സൈൻ ഇൻ ചെയ്യുക.",
+  "@friendsLoginRequired": {
+    "description": "friendsLoginRequired"
+  },
+  "friendshipRemoved": "സൗഹൃദം നീക്കം ചെയ്തു",
+  "@friendshipRemoved": {
+    "description": "friendshipRemoved"
+  },
+  "genericAlbum": "ആൽബം",
+  "@genericAlbum": {
+    "description": "genericAlbum"
+  },
+  "genericError": "തെറ്റ്",
+  "@genericError": {
+    "description": "genericError"
+  },
+  "genre_electronic": "ഇലക്ട്രോണിക്സ്",
+  "@genre_electronic": {
+    "description": "genre_electronic"
+  },
+  "genre_hiphop": "ഹിപ് ഹോപ്പ്",
+  "@genre_hiphop": {
+    "description": "genre_hiphop"
+  },
+  "genre_jazz": "ജാസ്",
+  "@genre_jazz": {
+    "description": "genre_jazz"
+  },
+  "genre_latin": "ലാറ്റിൻ",
+  "@genre_latin": {
+    "description": "genre_latin"
+  },
+  "genre_pop": "പോപ്പ്",
+  "@genre_pop": {
+    "description": "genre_pop"
+  },
+  "genre_rock": "പാറ",
+  "@genre_rock": {
+    "description": "genre_rock"
+  },
+  "gesture": "ആംഗ്യം",
+  "@gesture": {
+    "description": "gesture"
+  },
+  "github": "GitHub",
+  "@github": {
+    "description": "github"
+  },
+  "githubDes": "GitHub സോഴ്സ് കോഡ് കാണുക \nനിങ്ങൾക്ക് ഈ പ്രോജക്റ്റ് ഇഷ്‌ടമാണെങ്കിൽ, ഒരു ⭐ നൽകാൻ മറക്കരുത്!",
+  "@githubDes": {
+    "description": "githubDes"
+  },
+  "goToAlbum": "ആൽബത്തിലേക്ക് പോകുക",
+  "@goToAlbum": {
+    "description": "goToAlbum"
+  },
+  "goToDownloadPage": "ഡൗൺലോഡ് പേജിലേക്ക് പോകാൻ ഇവിടെ ക്ലിക്ക് ചെയ്യുക",
+  "@goToDownloadPage": {
+    "description": "goToDownloadPage"
+  },
+  "helloWorld": "ഹലോ വേൾഡ്",
+  "@helloWorld": {
+    "description": "Este texto es opcional"
+  },
+  "high": "ഉയർന്നത്",
+  "@high": {
+    "description": "high"
+  },
+  "hintApiUrl": "API URL-ലേക്കുള്ള പൈപ്പ് ഉദാഹരണം",
+  "@hintApiUrl": {
+    "description": "hintApiUrl"
+  },
+  "home": "ഹോംപേജ്",
+  "@home": {
+    "description": "home"
+  },
+  "homeContentCount": "സ്റ്റാർട്ടപ്പ് ഉള്ളടക്കങ്ങളുടെ എണ്ണം",
+  "@homeContentCount": {
+    "description": "homeContentCount"
+  },
+  "homeContentCountDes": "പ്രാരംഭ ഹോം സ്‌ക്രീൻ ഉള്ളടക്കങ്ങളുടെ എണ്ണം തിരഞ്ഞെടുക്കുക (ഏകദേശം.). കുറച്ച് ഫലങ്ങൾ വേഗത്തിൽ ലോഡ് ചെയ്യുന്നു",
+  "@homeContentCountDes": {
+    "description": "homeContentCountDes"
+  },
+  "id": "ഐഡി",
+  "@id": {
+    "description": "id"
+  },
+  "identifySongMetadata": "മെറ്റാഡാറ്റ തിരിച്ചറിയുക",
+  "@identifySongMetadata": {
+    "description": "Action that searches and embeds metadata for a local song"
+  },
+  "ignoreBatOpt": "ബാറ്ററി ഒപ്റ്റിമൈസേഷൻ അവഗണിക്കുക",
+  "@ignoreBatOpt": {
+    "description": "ignoreBatOpt"
+  },
+  "ignoreBatOptDes": "സിസ്റ്റം ഒപ്റ്റിമൈസേഷൻ കാരണം അറിയിപ്പുകളിലോ പ്ലേബാക്ക് സ്റ്റോപ്പുകളിലോ നിങ്ങൾക്ക് പ്രശ്നങ്ങളുണ്ടെങ്കിൽ, ഈ ഓപ്ഷൻ സജീവമാക്കുക",
+  "@ignoreBatOptDes": {
+    "description": "ignoreBatOptDes"
+  },
+  "importError": "പ്ലേലിസ്റ്റ് ഇറക്കുമതി ചെയ്യുന്നതിൽ പിശക്",
+  "@importError": {
+    "description": "importError"
+  },
+  "importErrorDatabase": "ഡാറ്റാബേസിൽ സംരക്ഷിക്കുന്നതിൽ പിശക്",
+  "@importErrorDatabase": {
+    "description": "importErrorDatabase"
+  },
+  "importErrorFileAccess": "തിരഞ്ഞെടുത്ത ഫയൽ ആക്സസ് ചെയ്യാൻ കഴിഞ്ഞില്ല",
+  "@importErrorFileAccess": {
+    "description": "importErrorFileAccess"
+  },
+  "importErrorFormat": "അസാധുവായ ഫയൽ ഫോർമാറ്റ്",
+  "@importErrorFormat": {
+    "description": "importErrorFormat"
+  },
+  "importLargeFileNote": "ശ്രദ്ധിക്കുക: വലിയ പ്ലേലിസ്റ്റുകൾ ഇറക്കുമതി ചെയ്യാൻ കൂടുതൽ സമയം എടുത്തേക്കാം",
+  "@importLargeFileNote": {
+    "description": "importLargeFileNote"
+  },
+  "importPlaylist": "പ്ലേലിസ്റ്റ് ഇറക്കുമതി ചെയ്യുക",
+  "@importPlaylist": {
+    "description": "importPlaylist"
+  },
+  "importPlaylistDesc": "ഇറക്കുമതി ചെയ്യുന്നതിന് മുമ്പ് കയറ്റുമതി ചെയ്ത പ്ലേലിസ്റ്റ് JSON ഫയൽ തിരഞ്ഞെടുക്കുക",
+  "@importPlaylistDesc": {
+    "description": "importPlaylistDesc"
   },
   "imported": "ഇറക്കുമതി ചെയ്തത്",
   "@imported": {
     "description": "imported"
   },
+  "importedFromJossMusic": "ജോസ് മ്യൂസിക് കോട്ലിനിൽ നിന്ന് ഇറക്കുമതി ചെയ്തത്",
+  "@importedFromJossMusic": {
+    "description": "importedFromJossMusic"
+  },
   "importedPlaylist": "ഇറക്കുമതി ചെയ്ത പ്ലേലിസ്റ്റ്",
   "@importedPlaylist": {
     "description": "importedPlaylist"
   },
-  "permissionDenied": "അനുമതി നിഷേധിച്ചു",
-  "@permissionDenied": {
-    "description": "permissionDenied"
+  "importingPlaylist": "പ്ലേലിസ്റ്റ് ഇമ്പോർട്ടുചെയ്യുന്നു...",
+  "@importingPlaylist": {
+    "description": "importingPlaylist"
   },
-  "enqueueSongs": "ക്യൂവിൽ പാട്ടുകൾ ചേർക്കുക",
-  "@enqueueSongs": {
-    "description": "enqueueSongs"
+  "in_app_storage": "ആന്തരിക സംഭരണ ഡയറക്ടറി",
+  "@in_app_storage": {
+    "description": "in_app_storage"
   },
-  "shuffle": "ക്രമരഹിതം",
-  "@shuffle": {
-    "description": "shuffle"
+  "includeDownloadedFiles": "ഡൗൺലോഡ് ചെയ്ത പാട്ട് ഫയലുകൾ ഉൾപ്പെടുത്തുക",
+  "@includeDownloadedFiles": {
+    "description": "includeDownloadedFiles"
   },
-  "downloadPlaylist": "പ്ലേലിസ്റ്റ് ഡൗൺലോഡ് ചെയ്യുക",
-  "@downloadPlaylist": {
-    "description": "downloadPlaylist"
+  "infoNotAvailable": "വിവരങ്ങൾ ലഭ്യമല്ല",
+  "@infoNotAvailable": {
+    "description": "infoNotAvailable"
   },
-  "syncPlaylistSongs": "പ്ലേലിസ്റ്റ് ഗാനങ്ങൾ സമന്വയിപ്പിക്കുക",
-  "@syncPlaylistSongs": {
-    "description": "syncPlaylistSongs"
+  "invalidPlaylistFile": "അസാധുവായ പ്ലേലിസ്റ്റ് ഫയൽ ഘടന",
+  "@invalidPlaylistFile": {
+    "description": "invalidPlaylistFile"
   },
-  "blacklistPipedPlaylist": "പ്ലേലിസ്റ്റ് ബ്ലാക്ക്‌ലിസ്റ്റ്",
-  "@blacklistPipedPlaylist": {
-    "description": "blacklistPipedPlaylist"
+  "invalidServerResponse": "അസാധുവായ സെർവർ പ്രതികരണം.",
+  "@invalidServerResponse": {
+    "description": "invalidServerResponse"
   },
-  "sharePlaylist": "പ്ലേലിസ്റ്റ് പങ്കിടുക",
-  "@sharePlaylist": {
-    "description": "sharePlaylist"
+  "invalidSessionToken": "സെഷനിൽ സാധുവായ ഒരു ടോക്കൺ അടങ്ങിയിട്ടില്ല.",
+  "@invalidSessionToken": {
+    "description": "invalidSessionToken"
   },
-  "playlist": "പ്ലേലിസ്റ്റ്",
-  "@playlist": {
-    "description": "playlist"
+  "items": "ഇനങ്ങൾ",
+  "@items": {
+    "description": "items"
   },
-  "sortByName": "പേര് പ്രകാരം അടുക്കുക",
-  "@sortByName": {
-    "description": "sortByName"
+  "keepListening": "കേട്ടുകൊണ്ടിരിക്കുക",
+  "@keepListening": {
+    "description": "keepListening"
   },
-  "sortByDate": "തീയതി പ്രകാരം അടുക്കുക",
-  "@sortByDate": {
-    "description": "sortByDate"
+  "keepScreenOnWhilePlaying": "പ്ലേ ചെയ്യുമ്പോൾ സ്‌ക്രീൻ ഓണായിരിക്കട്ടെ",
+  "@keepScreenOnWhilePlaying": {
+    "description": "keepScreenOnWhilePlaying"
   },
-  "sortByDuration": "ദൈർഘ്യമനുസരിച്ച് അടുക്കുക",
-  "@sortByDuration": {
-    "description": "sortByDuration"
+  "keepScreenOnWhilePlayingDes": "സജ്ജമാക്കിയാൽ, സംഗീതം പ്ലേ ചെയ്യുമ്പോൾ ഡിവൈസിന്റെ സ്‌ക്രീൻ ഓണായിരിക്കുമെന്ന് ഉറപ്പ ചെയ്യും",
+  "@keepScreenOnWhilePlayingDes": {
+    "description": "keepScreenOnWhilePlayingDes"
   },
-  "sortAscendNDescend": "ആരോഹണ/അവരോഹണം അടുക്കുക",
-  "@sortAscendNDescend": {
-    "description": "sortAscendNDescend"
+  "language": "ഭാഷ",
+  "@language": {
+    "description": "language"
   },
-  "migration_summary_start": "{source} മുതൽ മൈഗ്രേഷൻ പൂർത്തിയായി.",
-  "@migration_summary_start": {
-    "placeholders": {
-      "source": {
-        "type": "String"
-      }
-    },
-    "description": "migration_summary_start"
+  "languageDes": "ആപ്പ് ഭാഷ സജ്ജീകരിക്കുക",
+  "@languageDes": {
+    "description": "languageDes"
   },
-  "migration_summary_playlists": "പ്ലേലിസ്റ്റുകൾ: {count}",
-  "@migration_summary_playlists": {
-    "placeholders": {
-      "count": {
-        "type": "num"
-      }
-    },
-    "description": "migration_summary_playlists"
+  "latestRelease": "ഏറ്റവും പുതിയ റിലീസ്",
+  "@latestRelease": {
+    "description": "latestRelease"
   },
-  "migration_summary_songs": "ഗാനങ്ങൾ: {count}",
-  "@migration_summary_songs": {
-    "placeholders": {
-      "count": {
-        "type": "num"
-      }
-    },
-    "description": "migration_summary_songs"
+  "latestVersion": "ഏറ്റവും പുതിയ പതിപ്പ് ലഭ്യമാണ്",
+  "@latestVersion": {
+    "description": "latestVersion"
   },
-  "migration_summary_favorites": "പ്രിയങ്കരങ്ങൾ: {count}",
-  "@migration_summary_favorites": {
-    "placeholders": {
-      "count": {
-        "type": "num"
-      }
-    },
-    "description": "migration_summary_favorites"
+  "letsStrart": "നമുക്ക് തുടങ്ങാം..",
+  "@letsStrart": {
+    "description": "letsStrart"
+  },
+  "libAlbums": "ലൈബ്രറി ആൽബങ്ങൾ",
+  "@libAlbums": {
+    "description": "libAlbums"
+  },
+  "libArtists": "ലൈബ്രറി ആർട്ടിസ്റ്റുകൾ",
+  "@libArtists": {
+    "description": "libArtists"
+  },
+  "libPlaylists": "ലൈബ്രറി പ്ലേലിസ്റ്റുകൾ",
+  "@libPlaylists": {
+    "description": "libPlaylists"
+  },
+  "libSongs": "ലൈബ്രറി ഗാനങ്ങൾ",
+  "@libSongs": {
+    "description": "libSongs"
+  },
+  "library": "ലൈബ്രറി",
+  "@library": {
+    "description": "library"
+  },
+  "libraryPlaylistDescription": "ലൈബ്രറി പ്ലേലിസ്റ്റ്",
+  "@libraryPlaylistDescription": {
+    "description": "libraryPlaylistDescription"
+  },
+  "light": "തീർച്ചയായും",
+  "@light": {
+    "description": "light"
+  },
+  "link": "ലിങ്ക്",
+  "@link": {
+    "description": "link"
+  },
+  "linkAlert": "ലിങ്ക് ചെയ്‌തു!",
+  "@linkAlert": {
+    "description": "linkAlert"
+  },
+  "linkCopied": "ലിങ്ക് ക്ലിപ്പ്ബോർഡിലേക്ക് പകർത്തി",
+  "@linkCopied": {
+    "description": "linkCopied"
+  },
+  "linkPipedDes": "പ്ലേലിസ്റ്റുകൾക്കായി പൈപ്പ് ഉപയോഗിച്ചുള്ള ലിങ്ക്",
+  "@linkPipedDes": {
+    "description": "linkPipedDes"
+  },
+  "listenNow": "ഇപ്പോൾ കേൾക്കൂ",
+  "@listenNow": {
+    "description": "listenNow"
+  },
+  "listeningToEnvironment": "പരിസ്ഥിതിയെ ശ്രദ്ധിക്കുന്നു...",
+  "@listeningToEnvironment": {
+    "description": "listeningToEnvironment"
+  },
+  "loadInfoUpdate": "അപ്ഡേറ്റ് വിവരങ്ങൾ ലോഡ് ചെയ്യാനായില്ല",
+  "@loadInfoUpdate": {
+    "description": "loadInfoUpdate"
+  },
+  "local": "പ്രാദേശിക",
+  "@local": {
+    "description": "local"
+  },
+  "local_b1": "ലോഗിൻ ചെയ്യേണ്ട ആവശ്യമില്ലാതെ ഇത് പ്രവർത്തിക്കുന്നു.",
+  "@local_b1": {
+    "description": "local_b1"
+  },
+  "local_b2": "നിങ്ങളുടെ മുഴുവൻ ലൈബ്രറിയും ഈ കമ്പ്യൂട്ടറിൽ കർശനമായി തുടരുന്നു.",
+  "@local_b2": {
+    "description": "local_b2"
+  },
+  "local_b3": "ശ്രദ്ധിക്കുക: മാനുവൽ ക്ലൗഡ് ബാക്കപ്പുകളൊന്നുമില്ല. നിങ്ങളുടെ ഉപകരണം നഷ്‌ടപ്പെടുകയോ ആപ്പ് അൺഇൻസ്റ്റാൾ ചെയ്യുകയോ ചെയ്‌താൽ, നിങ്ങളുടെ ഡാറ്റ വീണ്ടെടുക്കാൻ കഴിയില്ല.",
+  "@local_b3": {
+    "description": "local_b3"
+  },
+  "local_btn": "ഈ ഉപകരണത്തിൽ മാത്രം ഉപയോഗിക്കുക",
+  "@local_btn": {
+    "description": "local_btn"
+  },
+  "local_subtitle": "നിങ്ങളുടെ ഉപകരണത്തിൽ സമ്പൂർണ്ണ സ്വകാര്യത",
+  "@local_subtitle": {
+    "description": "local_subtitle"
+  },
+  "local_title": "പ്രാദേശിക മോഡ്",
+  "@local_title": {
+    "description": "local_title"
+  },
+  "loudnessDb": "ഉച്ചത്തിലുള്ള ഡിബി",
+  "@loudnessDb": {
+    "description": "loudnessDb"
+  },
+  "loudnessNormalization": "ഉച്ചത്തിലുള്ള നോർമലൈസേഷൻ",
+  "@loudnessNormalization": {
+    "description": "loudnessNormalization"
+  },
+  "loudnessNormalizationDes": "എല്ലാ പാട്ടുകൾക്കും ഒരേ ഉച്ചത്തിലുള്ള ലെവൽ സജ്ജീകരിക്കുന്നു (പരീക്ഷണാത്മകം) (പഴയ പതിപ്പുകളിൽ ഡൗൺലോഡ് ചെയ്‌ത പാട്ടുകളിൽ പ്രവർത്തിക്കില്ല (< v1.10.0))",
+  "@loudnessNormalizationDes": {
+    "description": "loudnessNormalizationDes"
+  },
+  "low": "താഴ്ന്നത്",
+  "@low": {
+    "description": "low"
+  },
+  "lyrics": "കത്തുകൾ",
+  "@lyrics": {
+    "description": "lyrics"
+  },
+  "lyricsNotAvailable": "വരികൾ ലഭ്യമല്ല!",
+  "@lyricsNotAvailable": {
+    "description": "lyricsNotAvailable"
+  },
+  "manageCollaborators": "സഹകാരികളെ നിയന്ത്രിക്കുക (സുഹൃത്തുക്കൾ)",
+  "@manageCollaborators": {
+    "description": "manageCollaborators"
+  },
+  "metadataApplySuccess": "മെറ്റാഡാറ്റ ലോക്കൽ ഫയലിൽ ഉൾച്ചേർത്തതാണ്.",
+  "@metadataApplySuccess": {
+    "description": "Success message after writing local tags"
+  },
+  "metadataNoResults": "പൊരുത്തങ്ങളൊന്നും കണ്ടെത്തിയില്ല. മറ്റൊരു തിരയൽ ശ്രമിക്കുക.",
+  "@metadataNoResults": {
+    "description": "Empty state for metadata search"
+  },
+  "metadataOperationFailed": "മെറ്റാഡാറ്റ പ്രവർത്തനം പരാജയപ്പെട്ടു.",
+  "@metadataOperationFailed": {
+    "description": "Generic metadata lookup or write error"
+  },
+  "metadataOverwriteWarning": "പൊരുത്തം നൽകാത്ത ഏതെങ്കിലും ഫീൽഡുകൾ സംരക്ഷിക്കുമ്പോൾ ഇത് ഉൾച്ചേർത്ത ശീർഷകം, കലാകാരൻ, ആൽബം, കവർ എന്നിവ തിരുത്തിയെഴുതും.",
+  "@metadataOverwriteWarning": {
+    "description": "Confirmation before writing tags to a local audio file"
+  },
+  "metadataSearchDescription": "പ്രാദേശിക ഫയലിൽ അതിന്റെ ശീർഷകം, കലാകാരൻ, ആൽബം, കവർ എന്നിവ ഉൾച്ചേർക്കാൻ ശരിയായ പൊരുത്തം തിരഞ്ഞെടുക്കുക.",
+  "@metadataSearchDescription": {
+    "description": "Explanation shown above metadata search results"
+  },
+  "metadataSearchHint": "പാട്ടിന്റെയോ ആർട്ടിസ്റ്റിന്റെയോ പേര്",
+  "@metadataSearchHint": {
+    "description": "Hint for the metadata search field"
+  },
+  "metadataSearchTitle": "പാട്ട് തിരിച്ചറിയുക",
+  "@metadataSearchTitle": {
+    "description": "Title of the local song metadata search dialog"
+  },
+  "micInstruction": "നിങ്ങളുടെ മൈക്രോഫോണിന് സമീപം സംഗീതം വേണ്ടത്ര ഉച്ചത്തിൽ പ്ലേ ചെയ്യുന്നുണ്ടെന്ന് ഉറപ്പാക്കുക.",
+  "@micInstruction": {
+    "description": "micInstruction"
+  },
+  "migratedAlbum": "മൈഗ്രേറ്റഡ് ആൽബം",
+  "@migratedAlbum": {
+    "description": "migratedAlbum"
+  },
+  "migratedLibrary": "മൈഗ്രേറ്റഡ് ലൈബ്രറി",
+  "@migratedLibrary": {
+    "description": "migratedLibrary"
+  },
+  "migratedPlaylist": "മൈഗ്രേറ്റഡ് പ്ലേലിസ്റ്റ്",
+  "@migratedPlaylist": {
+    "description": "migratedPlaylist"
+  },
+  "migrationAlreadyRunning": "ഇതിനകം ഒരു മൈഗ്രേഷൻ പുരോഗതിയിലാണ്.",
+  "@migrationAlreadyRunning": {
+    "description": "migrationAlreadyRunning"
+  },
+  "migrationAnalyzingLocal": "പ്രാദേശിക ലൈബ്രറി വിശകലനം ചെയ്യുന്നു...",
+  "@migrationAnalyzingLocal": {
+    "description": "migrationAnalyzingLocal"
+  },
+  "migrationCheckingCloud": "EMusic ക്ലൗഡിന് ഇതിനകം ഒരു ലൈബ്രറി ഉണ്ടോയെന്ന് പരിശോധിക്കുന്നു...",
+  "@migrationCheckingCloud": {
+    "description": "migrationCheckingCloud"
+  },
+  "migrationCompleted": "മൈഗ്രേഷൻ പൂർത്തിയായി.",
+  "@migrationCompleted": {
+    "description": "migrationCompleted"
+  },
+  "migrationCreatingBackup": "ക്ലൗഡ് ബന്ധിപ്പിക്കുന്നതിന് മുമ്പ് ഒരു പ്രാദേശിക ബാക്കപ്പ് സൃഷ്‌ടിക്കുന്നു...",
+  "@migrationCreatingBackup": {
+    "description": "migrationCreatingBackup"
+  },
+  "migrationFailedLocalPreserved": "മൈഗ്രേഷൻ പരാജയപ്പെട്ടു. നിങ്ങളുടെ പ്രാദേശിക ഡാറ്റ പരിഷ്കരിച്ചിട്ടില്ല.",
+  "@migrationFailedLocalPreserved": {
+    "description": "migrationFailedLocalPreserved"
+  },
+  "migrationLoginRequired": "മൈഗ്രേറ്റ് ചെയ്യുന്നതിന് മുമ്പ് Joss Red-ലേക്ക് ലോഗിൻ ചെയ്യുക.",
+  "@migrationLoginRequired": {
+    "description": "migrationLoginRequired"
+  },
+  "migrationPreparingCloud": "EMusic ക്ലൗഡിൽ മൈഗ്രേഷൻ തയ്യാറാക്കുന്നു...",
+  "@migrationPreparingCloud": {
+    "description": "migrationPreparingCloud"
+  },
+  "migrationStartFailed": "EMusic ക്ലൗഡിന് മൈഗ്രേഷൻ ആരംഭിക്കാനായില്ല.",
+  "@migrationStartFailed": {
+    "description": "migrationStartFailed"
+  },
+  "migrationUploadIncomplete": "എല്ലാ ഡാറ്റയും അപ്‌ലോഡ് ചെയ്യാൻ കഴിഞ്ഞില്ല. നിങ്ങളുടെ പ്രാദേശിക പിന്തുണ ഞങ്ങൾ നിലനിർത്തുന്നു.",
+  "@migrationUploadIncomplete": {
+    "description": "migrationUploadIncomplete"
+  },
+  "migrationUploadingData": "പ്ലേലിസ്റ്റുകളും പ്രിയങ്കരങ്ങളും ചരിത്രവും അപ്‌ലോഡ് ചെയ്യുന്നു...",
+  "@migrationUploadingData": {
+    "description": "migrationUploadingData"
+  },
+  "migrationValidationFailed": "EMusic ക്ലൗഡിന് മൈഗ്രേഷൻ സാധൂകരിക്കാനായില്ല.",
+  "@migrationValidationFailed": {
+    "description": "migrationValidationFailed"
+  },
+  "migrationVerifyingIntegrity": "EMusic ക്ലൗഡിൽ സമഗ്രത പരിശോധിക്കുന്നു...",
+  "@migrationVerifyingIntegrity": {
+    "description": "migrationVerifyingIntegrity"
+  },
+  "migration_btn_select": "ഫയൽ തിരഞ്ഞെടുത്ത് ഇറക്കുമതി ചെയ്യുക",
+  "@migration_btn_select": {
+    "description": "migration_btn_select"
+  },
+  "migration_select_file_dialog": "song.db അല്ലെങ്കിൽ ഒരു ബാക്കപ്പ് .ബാക്കപ്പ് തിരഞ്ഞെടുക്കുക",
+  "@migration_select_file_dialog": {
+    "description": "migration_select_file_dialog"
+  },
+  "migration_success": "മൈഗ്രേഷൻ വിജയകരമായി പൂർത്തിയാക്കി.",
+  "@migration_success": {
+    "description": "migration_success"
   },
   "migration_summary_albums": "ആൽബങ്ങൾ: {count}",
   "@migration_summary_albums": {
@@ -2161,145 +1207,1166 @@
     },
     "description": "migration_summary_artists"
   },
-  "migration_select_file_dialog": "song.db അല്ലെങ്കിൽ ഒരു ബാക്കപ്പ് .ബാക്കപ്പ് തിരഞ്ഞെടുക്കുക",
-  "@migration_select_file_dialog": {
-    "description": "migration_select_file_dialog"
+  "migration_summary_favorites": "പ്രിയങ്കരങ്ങൾ: {count}",
+  "@migration_summary_favorites": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_favorites"
   },
-  "migration_success": "മൈഗ്രേഷൻ വിജയകരമായി പൂർത്തിയാക്കി.",
-  "@migration_success": {
-    "description": "migration_success"
+  "migration_summary_playlists": "പ്ലേലിസ്റ്റുകൾ: {count}",
+  "@migration_summary_playlists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_playlists"
   },
-  "backup_select_folder_dialog": "ബാക്കപ്പിനായി ഫോൾഡർ തിരഞ്ഞെടുക്കുക",
-  "@backup_select_folder_dialog": {
-    "description": "backup_select_folder_dialog"
+  "migration_summary_songs": "ഗാനങ്ങൾ: {count}",
+  "@migration_summary_songs": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_songs"
   },
-  "restore_select_file_dialog": "ബാക്കപ്പ് ഫയൽ തിരഞ്ഞെടുക്കുക",
-  "@restore_select_file_dialog": {
-    "description": "restore_select_file_dialog"
+  "migration_summary_start": "{source} മുതൽ മൈഗ്രേഷൻ പൂർത്തിയായി.",
+  "@migration_summary_start": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      }
+    },
+    "description": "migration_summary_start"
   },
-  "auth_hint_email": "name@mail.com",
-  "@auth_hint_email": {
-    "description": "auth_hint_email"
+  "minutes": "മിനിറ്റ്",
+  "@minutes": {
+    "description": "minutes"
   },
-  "auth_error_invalid_email": "സാധുവായ ഒരു ഇമെയിൽ നൽകുക.",
-  "@auth_error_invalid_email": {
-    "description": "auth_error_invalid_email"
+  "misc": "വിവിധ",
+  "@misc": {
+    "description": "misc"
   },
-  "settings_cloud_backup_dialog_desc": "സെർവറിലേക്ക് ആപ്പിൻ്റെ .hmb ബാക്കപ്പ് അപ്‌ലോഡ് ചെയ്യുക, ആവശ്യമെങ്കിൽ, സംരക്ഷിച്ച ഏതെങ്കിലും ബാക്കപ്പുകൾ പുനഃസ്ഥാപിക്കുക.",
-  "@settings_cloud_backup_dialog_desc": {
-    "description": "settings_cloud_backup_dialog_desc"
+  "mostListenedSong": "ഏറ്റവും കൂടുതൽ കേട്ട പാട്ട്",
+  "@mostListenedSong": {
+    "description": "mostListenedSong"
   },
-  "delete": "ഇല്ലാതാക്കുക",
-  "@delete": {
-    "description": "delete"
+  "musicAndPlayback": "സംഗീതവും പ്ലേബാക്കും",
+  "@musicAndPlayback": {
+    "description": "musicAndPlayback"
   },
-  "in_app_storage": "ആന്തരിക സംഭരണ ഡയറക്ടറി",
-  "@in_app_storage": {
-    "description": "in_app_storage"
+  "musicRecognition": "സംഗീതം തിരിച്ചറിയൽ",
+  "@musicRecognition": {
+    "description": "musicRecognition"
   },
-  "auth_brand_description_1": "ഈ മ്യൂസിക് ആപ്പിന് അനുയോജ്യമായ മുൻ പ്രോജക്റ്റിൽ നിന്ന് ലോഗിൻ, രജിസ്ട്രേഷൻ, പാസ്‌വേഡ് വീണ്ടെടുക്കൽ എന്നിവ ഞങ്ങൾ കൊണ്ടുവന്നു.",
-  "@auth_brand_description_1": {
-    "description": "auth_brand_description_1"
+  "networkError": "നെറ്റ്‌വർക്ക് പിശക്! നിങ്ങളുടെ ഇൻ്റർനെറ്റ് കണക്ഷൻ പരിശോധിക്കുക.",
+  "@networkError": {
+    "description": "networkError"
   },
-  "auth_brand_description_2": "നിങ്ങളുടെ സെഷൻ സുരക്ഷിതമായ സംഭരണത്തിലാണ് ജീവിക്കുന്നത്, നിങ്ങൾ ഇതിനകം ഉപയോഗിച്ചിരുന്ന അതേ ബാക്കെൻഡ് ഉപയോഗിച്ച് സാധൂകരിക്കപ്പെടുന്നു.",
-  "@auth_brand_description_2": {
-    "description": "auth_brand_description_2"
+  "networkError1": "അയ്യോ നെറ്റ്‌വർക്ക് പിശക്!",
+  "@networkError1": {
+    "description": "networkError1"
   },
-  "auth_brand_not_configured": "പ്രാമാണീകരണ ബാക്കെൻഡ് ബന്ധിപ്പിക്കുന്നതിന് .env ഫയൽ കോൺഫിഗർ ചെയ്യേണ്ടതുണ്ട്.",
-  "@auth_brand_not_configured": {
-    "description": "auth_brand_not_configured"
+  "newVersionAvailable": "പുതിയ പതിപ്പ് ലഭ്യമാണ്!",
+  "@newVersionAvailable": {
+    "description": "newVersionAvailable"
   },
-  "auth_forgot_password_subtitle": "നിങ്ങളുടെ അക്കൗണ്ട് ഇമെയിലിലേക്ക് ഞങ്ങൾ നിർദ്ദേശങ്ങൾ അയയ്ക്കും.",
-  "@auth_forgot_password_subtitle": {
-    "description": "auth_forgot_password_subtitle"
+  "news_btn_app": "ജോസ് റെഡ് ആപ്പ് (പ്ലേ സ്റ്റോർ)",
+  "@news_btn_app": {
+    "description": "news_btn_app"
   },
-  "auth_btn_send_email": "മെയിൽ അയക്കുക",
-  "@auth_btn_send_email": {
-    "description": "auth_btn_send_email"
+  "news_btn_dismiss": "മനസ്സിലായി",
+  "@news_btn_dismiss": {
+    "description": "news_btn_dismiss"
   },
-  "auth_error_not_configured": ".env ഫയലിൽ കോൺഫിഗർ ചെയ്യാൻ പ്രാമാണീകരണ ബാക്കെൻഡ് കാണുന്നില്ല.",
-  "@auth_error_not_configured": {
-    "description": "auth_error_not_configured"
+  "news_btn_web": "ജോസ് റെഡ് വെബ്",
+  "@news_btn_web": {
+    "description": "news_btn_web"
   },
-  "auth_error_invalid_credentials": "തെറ്റായ ഇമെയിൽ അല്ലെങ്കിൽ പാസ്‌വേഡ്.",
-  "@auth_error_invalid_credentials": {
-    "description": "auth_error_invalid_credentials"
+  "news_card_subtitle": "100% ജോസ് റെഡ് സിൻക്രൊണൈസേഷൻ, സുഹൃത്തുക്കളുമൊത്തുള്ള പ്ലേലിസ്റ്റുകൾ എന്നിവയും അതിലേറെയും. പുതിയതെന്താണെന്ന് കാണാൻ ടാപ്പ് ചെയ്യുക.",
+  "@news_card_subtitle": {
+    "description": "news_card_subtitle"
   },
-  "auth_error_not_verified": "നിങ്ങളുടെ അക്കൗണ്ട് ഇതുവരെ പരിശോധിച്ചിട്ടില്ല.",
-  "@auth_error_not_verified": {
-    "description": "auth_error_not_verified"
+  "news_card_title": "എസ്ട്രെല്ല സംഗീതം വികസിച്ചു!",
+  "@news_card_title": {
+    "description": "news_card_title"
   },
-  "auth_error_unknown": "ഓപ്പറേഷൻ പൂർത്തിയാക്കാൻ കഴിഞ്ഞില്ല.",
-  "@auth_error_unknown": {
-    "description": "auth_error_unknown"
+  "news_dialog_friends_desc": "സുഹൃത്തുക്കളെ ചേർക്കുന്നതിനോ അഭ്യർത്ഥനകൾ സ്വീകരിക്കുന്നതിനോ നിങ്ങളുടെ സുരക്ഷാ പ്രൊഫൈൽ മാനേജ് ചെയ്യുന്നതിനോ അതിൻ്റെ ഔദ്യോഗിക പ്ലാറ്റ്‌ഫോമുകളിൽ Joss Red ഉപയോഗിക്കുക:",
+  "@news_dialog_friends_desc": {
+    "description": "news_dialog_friends_desc"
   },
-  "auth_register_success": "അക്കൗണ്ട് സൃഷ്ടിച്ചു.",
-  "@auth_register_success": {
-    "description": "auth_register_success"
+  "news_dialog_section_friends": "സുഹൃത്തുക്കളും അക്കൗണ്ട് മാനേജ്മെൻ്റും:",
+  "@news_dialog_section_friends": {
+    "description": "news_dialog_section_friends"
   },
-  "auth_register_error": "അക്കൗണ്ട് സൃഷ്ടിക്കാൻ കഴിഞ്ഞില്ല.",
-  "@auth_register_error": {
-    "description": "auth_register_error"
+  "news_dialog_title": "എസ്ട്രെല്ല സംഗീത വാർത്ത",
+  "@news_dialog_title": {
+    "description": "news_dialog_title"
   },
-  "auth_recovery_email_sent": "ഇമെയിൽ അയച്ചു.",
-  "@auth_recovery_email_sent": {
-    "description": "auth_recovery_email_sent"
+  "news_item_collab_desc": "നിങ്ങളുടെ സുഹൃത്തുക്കളുമായി പ്ലേലിസ്റ്റുകൾ സൃഷ്ടിക്കുക! ഒരു പ്ലേലിസ്റ്റ് സൃഷ്‌ടിക്കുമ്പോൾ, സഹകരണ ചെക്ക്‌ബോക്‌സ് തിരഞ്ഞെടുത്ത് ഒരുമിച്ച് എഡിറ്റ് ചെയ്യാൻ നിങ്ങളുടെ സുഹൃത്തുക്കളെ തിരഞ്ഞെടുക്കുക.",
+  "@news_item_collab_desc": {
+    "description": "news_item_collab_desc"
   },
-  "auth_recovery_email_error": "ഇമെയിൽ അയക്കാൻ കഴിഞ്ഞില്ല.",
-  "@auth_recovery_email_error": {
-    "description": "auth_recovery_email_error"
+  "news_item_collab_title": "സഹകരണ പ്ലേലിസ്റ്റുകൾ",
+  "@news_item_collab_title": {
+    "description": "news_item_collab_title"
   },
-  "latestVersion": "ഏറ്റവും പുതിയ പതിപ്പ് ലഭ്യമാണ്",
-  "@latestVersion": {
-    "description": "latestVersion"
+  "news_item_sync_desc": "നിങ്ങളുടെ പ്ലേലിസ്റ്റുകളും പ്രിയങ്കരങ്ങളും ഇപ്പോൾ നിങ്ങളുടെ പ്രധാന ജോസ് റെഡ് അക്കൗണ്ട് ഉപയോഗിച്ച് സ്വയമേവ ക്ലൗഡിൽ സംരക്ഷിക്കുകയും സമന്വയിപ്പിക്കുകയും ചെയ്യുന്നു.",
+  "@news_item_sync_desc": {
+    "description": "news_item_sync_desc"
   },
-  "updateApp": "ആപ്ലിക്കേഷൻ അപ്ഡേറ്റ് ചെയ്യുക",
-  "@updateApp": {
-    "description": "updateApp"
+  "news_item_sync_title": "ജോസ് റെഡ് ഫുൾ ഇൻ്റഗ്രേഷൻ",
+  "@news_item_sync_title": {
+    "description": "news_item_sync_title"
   },
-  "loadInfoUpdate": "അപ്ഡേറ്റ് വിവരങ്ങൾ ലോഡ് ചെയ്യാനായില്ല",
-  "@loadInfoUpdate": {
-    "description": "loadInfoUpdate"
+  "news_item_trans_desc": "നിങ്ങൾ മേലിൽ മാനുവൽ സമന്വയ ബട്ടണുകൾ ക്ലിക്ക് ചെയ്യേണ്ടതില്ല; ഓട്ടോമാറ്റിക്കായി മുകളിലേക്കും താഴേക്കും മാറുന്നതിന് പുതിയ മോട്ടോർ ഉത്തരവാദിയാണ്.",
+  "@news_item_trans_desc": {
+    "description": "news_item_trans_desc"
   },
-  "infoNotAvailable": "വിവരങ്ങൾ ലഭ്യമല്ല",
-  "@infoNotAvailable": {
-    "description": "infoNotAvailable"
+  "news_item_trans_title": "സുതാര്യമായ സമന്വയം",
+  "@news_item_trans_title": {
+    "description": "news_item_trans_title"
   },
-  "developedBy": "വികസിപ്പിച്ചതും പരിപാലിക്കുന്നതും ജോസ് എസ്ട്രാഡ (JOSPROX)",
-  "@developedBy": {
-    "description": "developedBy"
+  "no": "ഇല്ല",
+  "@no": {
+    "description": "no"
   },
-  "copyrightNotice": "© 2026 JOSPROX. GPL ലൈസൻസ് v3.0",
-  "@copyrightNotice": {
-    "description": "copyrightNotice"
+  "noBookmarks": "ബുക്ക്‌മാർക്കുകളൊന്നുമില്ല!",
+  "@noBookmarks": {
+    "description": "noBookmarks"
   },
-  "backupSettingsAndPlaylists": "ബാക്കപ്പ് ക്രമീകരണങ്ങളും പ്ലേലിസ്റ്റുകളും",
-  "@backupSettingsAndPlaylists": {
-    "description": "backupSettingsAndPlaylists"
+  "noJossRedFriends": "Joss Red-ൽ നിങ്ങൾക്ക് സുഹൃത്തുക്കളൊന്നും ചേർത്തിട്ടില്ല.",
+  "@noJossRedFriends": {
+    "description": "noJossRedFriends"
   },
-  "restoreSettingsAndPlaylists": "ക്രമീകരണങ്ങളും പ്ലേലിസ്റ്റുകളും പുനഃസ്ഥാപിക്കുക",
-  "@restoreSettingsAndPlaylists": {
-    "description": "restoreSettingsAndPlaylists"
+  "noLibPlaylist": "നിങ്ങളുടെ കയ്യിൽ ഒരു ലിബ് പ്ലേലിസ്റ്റും ഇല്ലേ!",
+  "@noLibPlaylist": {
+    "description": "noLibPlaylist"
   },
-  "helloWorld": "ഹലോ വേൾഡ്",
-  "@helloWorld": {
-    "description": "Este texto es opcional"
+  "noMatchInstruction": "റെക്കോർഡ് ചെയ്‌ത ഓഡിയോയിൽ പാട്ടുകളൊന്നും കണ്ടെത്താൻ കഴിഞ്ഞില്ല",
+  "@noMatchInstruction": {
+    "description": "noMatchInstruction"
   },
-  "removeFromCache": "കാഷെയിൽ നിന്ന് നീക്കം ചെയ്യുക",
-  "@removeFromCache": {
-    "description": "removeFromCache"
+  "noMatchesFound": "പൊരുത്തമില്ല",
+  "@noMatchesFound": {
+    "description": "noMatchesFound"
+  },
+  "noOfflineSong": "ഓഫ്‌ലൈൻ പാട്ടുകളൊന്നുമില്ല!",
+  "@noOfflineSong": {
+    "description": "noOfflineSong"
+  },
+  "noSongsInCollection": "ഈ ശേഖരത്തിൽ പാട്ടുകളൊന്നുമില്ല",
+  "@noSongsInCollection": {
+    "description": "noSongsInCollection"
+  },
+  "nomatch": "പൊരുത്തങ്ങളൊന്നും കണ്ടെത്തിയില്ല",
+  "@nomatch": {
+    "description": "nomatch"
+  },
+  "notAuthenticated": "ആധികാരികതയില്ല",
+  "@notAuthenticated": {
+    "description": "notAuthenticated"
+  },
+  "notaSongVideo": "ഇതൊരു പാട്ട്/സംഗീത വീഡിയോ അല്ല!",
+  "@notaSongVideo": {
+    "description": "notaSongVideo"
+  },
+  "notaValidLink": "ഇതൊരു സാധുവായ ലിങ്കല്ല!",
+  "@notaValidLink": {
+    "description": "notaValidLink"
+  },
+  "openIn": "തുറക്കുക",
+  "@openIn": {
+    "description": "openIn"
+  },
+  "operationFailed": "പ്രവർത്തനം പരാജയപ്പെട്ടു",
+  "@operationFailed": {
+    "description": "operationFailed"
+  },
+  "password": "രഹസ്യവാക്ക്",
+  "@password": {
+    "description": "password"
+  },
+  "password_text": "രഹസ്യവാക്ക്",
+  "@password_text": {
+    "description": "Contraseña texto traducido"
+  },
+  "permissionDenied": "അനുമതി നിഷേധിച്ചു",
+  "@permissionDenied": {
+    "description": "permissionDenied"
+  },
+  "permissionsAllow": "അനുവദിക്കുക",
+  "@permissionsAllow": {
+    "description": "permissionsAllow"
+  },
+  "permissionsConsentDescription": "നിങ്ങളുടെ സംഗീതം നിയന്ത്രിക്കാനും എല്ലാ പ്ലേബാക്ക് ഫീച്ചറുകളും ഓഫർ ചെയ്യാനും Estrella Music-ന് ഈ അനുമതികൾ ആവശ്യമാണ്.",
+  "@permissionsConsentDescription": {
+    "description": "permissionsConsentDescription"
+  },
+  "permissionsConsentTitle": "ആരംഭിക്കുന്നതിനുള്ള അനുമതികൾ",
+  "@permissionsConsentTitle": {
+    "description": "permissionsConsentTitle"
+  },
+  "permissionsContinueButton": "ആവശ്യമായ അനുമതികൾ നൽകുക",
+  "@permissionsContinueButton": {
+    "description": "permissionsContinueButton"
+  },
+  "permissionsMicrophoneDescription": "നിങ്ങൾക്ക് ചുറ്റും പ്ലേ ചെയ്യുന്ന ഒരു ഗാനം തിരിച്ചറിയാൻ നിങ്ങൾ തിരഞ്ഞെടുക്കുമ്പോൾ മാത്രമേ ഇത് ഉപയോഗിക്കൂ.",
+  "@permissionsMicrophoneDescription": {
+    "description": "permissionsMicrophoneDescription"
+  },
+  "permissionsMicrophoneTitle": "മൈക്രോഫോൺ",
+  "@permissionsMicrophoneTitle": {
+    "description": "permissionsMicrophoneTitle"
+  },
+  "permissionsNotificationsDescription": "പ്ലേബാക്ക് നിയന്ത്രണങ്ങൾ, ഡൗൺലോഡ് പുരോഗതി, പ്രധാനപ്പെട്ട ആപ്പ് അറിയിപ്പുകൾ എന്നിവ കാണിക്കുന്നു.",
+  "@permissionsNotificationsDescription": {
+    "description": "permissionsNotificationsDescription"
+  },
+  "permissionsNotificationsTitle": "അറിയിപ്പുകൾ",
+  "@permissionsNotificationsTitle": {
+    "description": "permissionsNotificationsTitle"
+  },
+  "permissionsOpenSettings": "ക്രമീകരണങ്ങൾ",
+  "@permissionsOpenSettings": {
+    "description": "permissionsOpenSettings"
+  },
+  "permissionsRequiredNotice": "തുടരുന്നതിന് മൂന്ന് പെർമിറ്റുകളും ആവശ്യമാണ്. സിസ്റ്റം ക്രമീകരണങ്ങളിൽ നിങ്ങൾക്ക് അവ പിന്നീട് മാറ്റാവുന്നതാണ്.",
+  "@permissionsRequiredNotice": {
+    "description": "permissionsRequiredNotice"
+  },
+  "permissionsStorageDescription": "സംഗീതം പ്ലേ ചെയ്യാനും ഡൗൺലോഡുകൾ സംരക്ഷിക്കാനും പ്ലേലിസ്റ്റുകൾ കയറ്റുമതി ചെയ്യാനും അപ്‌ഡേറ്റുകൾ തയ്യാറാക്കാനും ഇത് നിങ്ങളെ അനുവദിക്കുന്നു.",
+  "@permissionsStorageDescription": {
+    "description": "permissionsStorageDescription"
+  },
+  "permissionsStorageTitle": "സംഗീതവും സംഭരണവും",
+  "@permissionsStorageTitle": {
+    "description": "permissionsStorageTitle"
+  },
+  "personalisation": "വ്യക്തിഗതമാക്കൽ",
+  "@personalisation": {
+    "description": "personalisation"
+  },
+  "pipedPlaylistDescription": "പൈപ്പ് പ്ലേലിസ്റ്റ്",
+  "@pipedPlaylistDescription": {
+    "description": "pipedPlaylistDescription"
+  },
+  "pipedplstSyncAlert": "പൈപ്പ് പ്ലേലിസ്റ്റ് സമന്വയിപ്പിച്ചു!",
+  "@pipedplstSyncAlert": {
+    "description": "pipedplstSyncAlert"
+  },
+  "plain": "ലളിതമായ",
+  "@plain": {
+    "description": "plain"
+  },
+  "play": "കളിക്കുക",
+  "@play": {
+    "description": "play"
+  },
+  "playNext": "അടുത്ത പാട്ട് കേൾക്കൂ",
+  "@playNext": {
+    "description": "playNext"
+  },
+  "playNow": "ഇപ്പോൾ കളിക്കുക",
+  "@playNow": {
+    "description": "playNow"
+  },
+  "playbackSpeed": "പ്ലേബാക്ക് വേഗത",
+  "@playbackSpeed": {
+    "description": "playbackSpeed"
+  },
+  "playerUi": "പ്ലെയർ യുഐ",
+  "@playerUi": {
+    "description": "playerUi"
+  },
+  "playerUiDes": "പ്ലെയർ യൂസർ ഇൻ്റർഫേസ് തിരഞ്ഞെടുക്കുക",
+  "@playerUiDes": {
+    "description": "playerUiDes"
+  },
+  "playingRecognizedTrack": "കളിക്കുന്നു:",
+  "@playingRecognizedTrack": {
+    "description": "playingRecognizedTrack"
+  },
+  "playingfromAlbum": "ആൽബത്തിൽ നിന്ന് പ്ലേ ചെയ്യുന്നു",
+  "@playingfromAlbum": {
+    "description": "playingfromAlbum"
+  },
+  "playingfromArtist": "ആർട്ടിസ്റ്റിൽ നിന്ന് പ്ലേ ചെയ്യുന്നു",
+  "@playingfromArtist": {
+    "description": "playingfromArtist"
+  },
+  "playingfromPlaylist": "പ്ലേലിസ്റ്റിൽ നിന്ന് പ്ലേ ചെയ്യുന്നു",
+  "@playingfromPlaylist": {
+    "description": "playingfromPlaylist"
+  },
+  "playingfromSelection": "സെലക്ഷനിൽ നിന്ന് പ്ലേ ചെയ്യുന്നു",
+  "@playingfromSelection": {
+    "description": "playingfromSelection"
+  },
+  "playlist": "പ്ലേലിസ്റ്റ്",
+  "@playlist": {
+    "description": "playlist"
+  },
+  "playlistBlacklistAlert": "ബ്ലാക്ക്‌ലിസ്റ്റ് ചെയ്ത പ്ലേലിസ്റ്റ്!",
+  "@playlistBlacklistAlert": {
+    "description": "playlistBlacklistAlert"
+  },
+  "playlistBookmarkAddAlert": "ബുക്ക്‌മാർക്കുകളിലേക്ക് പ്ലേലിസ്റ്റ് ചേർത്തു!",
+  "@playlistBookmarkAddAlert": {
+    "description": "playlistBookmarkAddAlert"
+  },
+  "playlistBookmarkRemoveAlert": "പ്ലേലിസ്റ്റ് ബുക്ക്മാർക്ക് നീക്കം ചെയ്തു!",
+  "@playlistBookmarkRemoveAlert": {
+    "description": "playlistBookmarkRemoveAlert"
+  },
+  "playlistCollaboratorsTitle": "പ്ലേലിസ്റ്റ് സംഭാവകർ",
+  "@playlistCollaboratorsTitle": {
+    "description": "playlistCollaboratorsTitle"
+  },
+  "playlistCreatedAlert": "പ്ലേലിസ്റ്റ് സൃഷ്ടിച്ചു!",
+  "@playlistCreatedAlert": {
+    "description": "playlistCreatedAlert"
+  },
+  "playlistCreatednsongAddedAlert": "പ്ലേലിസ്റ്റ് സൃഷ്‌ടിക്കുകയും ഗാനം ചേർക്കുകയും ചെയ്‌തു!",
+  "@playlistCreatednsongAddedAlert": {
+    "description": "playlistCreatednsongAddedAlert"
+  },
+  "playlistExportedMsg": "പ്ലേലിസ്റ്റ് വിജയകരമായി കയറ്റുമതി ചെയ്തു",
+  "@playlistExportedMsg": {
+    "description": "playlistExportedMsg"
+  },
+  "playlistImportedMsg": "പ്ലേലിസ്റ്റ് വിജയകരമായി ഇറക്കുമതി ചെയ്തു",
+  "@playlistImportedMsg": {
+    "description": "playlistImportedMsg"
+  },
+  "playlistRemovedAlert": "പ്ലേലിസ്റ്റ് ഇല്ലാതാക്കി!",
+  "@playlistRemovedAlert": {
+    "description": "playlistRemovedAlert"
+  },
+  "playlistRenameAlert": "റീബ്രാൻഡ് ചെയ്‌തു!",
+  "@playlistRenameAlert": {
+    "description": "playlistRenameAlert"
+  },
+  "playlists": "പ്ലേലിസ്റ്റുകൾ",
+  "@playlists": {
+    "description": "playlists"
+  },
+  "playnextMsg": "വെരാൻ പോകുന്നത്",
+  "@playnextMsg": {
+    "description": "playnextMsg"
+  },
+  "podcasts": "പോഡ്കാസ്റ്റുകൾ",
+  "@podcasts": {
+    "description": "podcasts"
+  },
+  "popularTracks": "ജനപ്രിയ ട്രാക്കുകൾ",
+  "@popularTracks": {
+    "description": "popularTracks"
+  },
+  "processFiles": "ഫയലുകൾ പ്രോസസ്സ് ചെയ്യുന്നു...",
+  "@processFiles": {
+    "description": "processFiles"
+  },
+  "processingAudio": "ഓഡിയോ പ്രോസസ്സ് ചെയ്യുന്നു...",
+  "@processingAudio": {
+    "description": "processingAudio"
+  },
+  "profiles": "പ്രൊഫൈലുകൾ",
+  "@profiles": {
+    "description": "profiles"
+  },
+  "queueLoop": "ടെയിൽ ലൂപ്പ്",
+  "@queueLoop": {
+    "description": "queueLoop"
+  },
+  "queueLoopNotDisMsg1": "ഷഫിൾ മോഡ് പ്രവർത്തനക്ഷമമാക്കുമ്പോൾ ക്യൂ ലൂപ്പ് മോഡ് പ്രവർത്തനരഹിതമാക്കാൻ കഴിയില്ല.",
+  "@queueLoopNotDisMsg1": {
+    "description": "queueLoopNotDisMsg1"
+  },
+  "queueLoopNotDisMsg2": "റേഡിയോ മോഡിൽ ടെയിൽ ലൂപ്പ് മോഡ് സജീവമാക്കാൻ കഴിയില്ല.",
+  "@queueLoopNotDisMsg2": {
+    "description": "queueLoopNotDisMsg2"
+  },
+  "queueShufflingDeniedMsg": "ഷഫിൾ മോഡ് പ്രവർത്തനക്ഷമമാക്കിയിരിക്കുമ്പോൾ ക്യൂ ഷഫിൾ ചെയ്യാൻ കഴിയില്ല",
+  "@queueShufflingDeniedMsg": {
+    "description": "queueShufflingDeniedMsg"
+  },
+  "queuerearrangingDeniedMsg": "ഷഫിൾ മോഡ് പ്രവർത്തനക്ഷമമാക്കിയിരിക്കുമ്പോൾ ക്യൂ പുനഃക്രമീകരിക്കാൻ കഴിയില്ല",
+  "@queuerearrangingDeniedMsg": {
+    "description": "queuerearrangingDeniedMsg"
   },
   "quickPics": "ദ്രുത തിരഞ്ഞെടുപ്പ്",
   "@quickPics": {
     "description": "quickPics"
   },
+  "quickpicks": "ദ്രുത തിരഞ്ഞെടുക്കലുകൾ",
+  "@quickpicks": {
+    "description": "quickpicks"
+  },
+  "radioNotAvailable": "ഈ കലാകാരന് റേഡിയോ ലഭ്യമല്ല!",
+  "@radioNotAvailable": {
+    "description": "radioNotAvailable"
+  },
+  "randomRadio": "റാൻഡം റേഡിയോ",
+  "@randomRadio": {
+    "description": "randomRadio"
+  },
+  "randomSelection": "ക്രമരഹിതമായ തിരഞ്ഞെടുത്തതു",
+  "@randomSelection": {
+    "description": "randomSelection"
+  },
+  "reArrangePlaylist": "പ്ലേലിസ്റ്റ് പുനഃക്രമീകരിക്കുക",
+  "@reArrangePlaylist": {
+    "description": "reArrangePlaylist"
+  },
+  "reArrangeSongs": "പാട്ടുകൾ പുനഃക്രമീകരിക്കുക",
+  "@reArrangeSongs": {
+    "description": "reArrangeSongs"
+  },
+  "readMore": "കൂടുതൽ വായിക്കുക",
+  "@readMore": {
+    "description": "readMore"
+  },
+  "recentSearches": "സമീപകാല തിരയലുകൾ",
+  "@recentSearches": {
+    "description": "recentSearches"
+  },
+  "recentlyPlayed": "അടുത്തിടെ കളിച്ചത്",
+  "@recentlyPlayed": {
+    "description": "recentlyPlayed"
+  },
+  "recommend_cloud": "സ്‌പോട്ടിഫൈ പോലുള്ള അനുഭവത്തിനായി ക്ലൗഡ് മോഡ് സജീവമാക്കാൻ ഞങ്ങൾ ശുപാർശ ചെയ്യുന്നു: നിങ്ങളുടെ എല്ലാ ഉപകരണങ്ങൾക്കുമിടയിൽ തത്സമയ സമന്വയവും നിങ്ങൾ ഒന്നും ചെയ്യാതെ തന്നെ സ്വയമേവയുള്ള ബാക്കപ്പും.",
+  "@recommend_cloud": {
+    "description": "recommend_cloud"
+  },
+  "recommendedAlbums": "ശുപാർശ ചെയ്തത്",
+  "@recommendedAlbums": {
+    "description": "recommendedAlbums"
+  },
+  "recommendedArtists": "ശുപാർശ ചെയ്തത്",
+  "@recommendedArtists": {
+    "description": "recommendedArtists"
+  },
+  "removeFromCache": "കാഷെയിൽ നിന്ന് നീക്കം ചെയ്യുക",
+  "@removeFromCache": {
+    "description": "removeFromCache"
+  },
+  "removeFromLib": "ലൈബ്രറി ഗാനങ്ങളിൽ നിന്ന് നീക്കം ചെയ്യുക",
+  "@removeFromLib": {
+    "description": "removeFromLib"
+  },
+  "removeFromLibrary": "ലൈബ്രറിയിൽ നിന്ന് ഇല്ലാതാക്കുക",
+  "@removeFromLibrary": {
+    "description": "removeFromLibrary"
+  },
+  "removeFromPlaylist": "പ്ലേലിസ്റ്റിൽ നിന്ന് നീക്കം ചെയ്യുക",
+  "@removeFromPlaylist": {
+    "description": "removeFromPlaylist"
+  },
+  "removeFromQueue": "ക്യൂവിൽ നിന്ന് നീക്കം ചെയ്യുക",
+  "@removeFromQueue": {
+    "description": "removeFromQueue"
+  },
+  "removeMultiple": "ഒന്നിലധികം പാട്ടുകൾ നീക്കം ചെയ്യുക",
+  "@removeMultiple": {
+    "description": "removeMultiple"
+  },
+  "removePlaylist": "പ്ലേലിസ്റ്റ് നീക്കം ചെയ്യുക",
+  "@removePlaylist": {
+    "description": "removePlaylist"
+  },
+  "rename": "പേരുമാറ്റുക",
+  "@rename": {
+    "description": "rename"
+  },
+  "renamePlaylist": "പ്ലേലിസ്റ്റ് പേരുമാറ്റുക",
+  "@renamePlaylist": {
+    "description": "renamePlaylist"
+  },
+  "reproducedBy": "പുനർനിർമ്മിച്ചത്",
+  "@reproducedBy": {
+    "description": "reproducedBy"
+  },
+  "reset": "പുനഃസജ്ജമാക്കുക",
+  "@reset": {
+    "description": "reset"
+  },
+  "resetToDefault": "സ്ഥിരസ്ഥിതി ക്രമീകരണങ്ങൾ പുനഃസ്ഥാപിക്കുക",
+  "@resetToDefault": {
+    "description": "resetToDefault"
+  },
+  "resetToDefaultDes": "ആപ്പ് ക്രമീകരണങ്ങൾ ഡിഫോൾട്ടായി പുനഃസജ്ജമാക്കുക (പുനരാരംഭിക്കേണ്ടതുണ്ട്)",
+  "@resetToDefaultDes": {
+    "description": "resetToDefaultDes"
+  },
+  "resetToDefaultMsg": "ഡിഫോൾട്ടിലേക്ക് പുനഃസജ്ജമാക്കൽ ക്രമീകരണം പൂർത്തിയായി, ദയവായി ആപ്പ് പുനരാരംഭിക്കുക",
+  "@resetToDefaultMsg": {
+    "description": "resetToDefaultMsg"
+  },
+  "resetblacklistedplaylist": "ബ്ലാക്ക്‌ലിസ്റ്റ് ചെയ്‌ത പ്ലേലിസ്റ്റുകൾ പുനഃസജ്ജമാക്കുക",
+  "@resetblacklistedplaylist": {
+    "description": "resetblacklistedplaylist"
+  },
+  "resetblacklistedplaylistDes": "ബ്ലാക്ക്‌ലിസ്റ്റ് ചെയ്‌ത എല്ലാ പൈപ്പ് പ്ലേലിസ്റ്റുകളും പുനഃസജ്ജമാക്കുക",
+  "@resetblacklistedplaylistDes": {
+    "description": "resetblacklistedplaylistDes"
+  },
+  "restartApp": "അപ്ലിക്കേഷൻ പുനരാരംഭിക്കുക",
+  "@restartApp": {
+    "description": "restartApp"
+  },
+  "restore": "പുനഃസ്ഥാപിക്കുക",
+  "@restore": {
+    "description": "restore"
+  },
+  "restoreAppData": "ആപ്പ് ഡാറ്റ പുനഃസ്ഥാപിക്കുക",
+  "@restoreAppData": {
+    "description": "restoreAppData"
+  },
+  "restoreLastPlaybackSession": "അവസാനത്തെ പ്ലേബാക്ക് സെഷൻ പുനഃസ്ഥാപിക്കുക",
+  "@restoreLastPlaybackSession": {
+    "description": "restoreLastPlaybackSession"
+  },
+  "restoreLastPlaybackSessionDes": "ആപ്പ് ആരംഭിക്കുമ്പോൾ അവസാനത്തെ പ്ലേബാക്ക് സെഷൻ സ്വയമേവ പുനഃസ്ഥാപിക്കുക",
+  "@restoreLastPlaybackSessionDes": {
+    "description": "restoreLastPlaybackSessionDes"
+  },
+  "restoreMsg": "വിജയകരമായി പുനഃസ്ഥാപിച്ചു!\nറീബൂട്ട് ചെയ്യുമ്പോൾ മാറ്റങ്ങൾ പ്രയോഗിക്കുന്നു",
+  "@restoreMsg": {
+    "description": "restoreMsg"
+  },
+  "restoreSettingsAndPlaylists": "ക്രമീകരണങ്ങളും പ്ലേലിസ്റ്റുകളും പുനഃസ്ഥാപിക്കുക",
+  "@restoreSettingsAndPlaylists": {
+    "description": "restoreSettingsAndPlaylists"
+  },
+  "restoreSettingsAndPlaylistsDes": "ഒരു ബാക്കപ്പ് ഫയലിൽ നിന്ന് എല്ലാ ക്രമീകരണങ്ങളും ലോഗിൻ ഡാറ്റയും പ്ലേലിസ്റ്റുകളും പുനഃസ്ഥാപിക്കുന്നു. നിലവിലുള്ള എല്ലാ ഡാറ്റയും പുനരാലേഖനം ചെയ്യുന്നു",
+  "@restoreSettingsAndPlaylistsDes": {
+    "description": "restoreSettingsAndPlaylistsDes"
+  },
+  "restore_select_file_dialog": "ബാക്കപ്പ് ഫയൽ തിരഞ്ഞെടുക്കുക",
+  "@restore_select_file_dialog": {
+    "description": "restore_select_file_dialog"
+  },
+  "restoring": "പുനഃസ്ഥാപിക്കുന്നു...",
+  "@restoring": {
+    "description": "restoring"
+  },
+  "results": "ഫലങ്ങൾ",
+  "@results": {
+    "description": "results"
+  },
+  "retry": "വീണ്ടും ശ്രമിക്കുക!",
+  "@retry": {
+    "description": "retry"
+  },
+  "save": "സൂക്ഷിക്കുക",
+  "@save": {
+    "description": "save"
+  },
+  "savedAlbums": "സംരക്ഷിച്ചു",
+  "@savedAlbums": {
+    "description": "savedAlbums"
+  },
+  "scanning": "സ്കാൻ ചെയ്യുന്നു...",
+  "@scanning": {
+    "description": "scanning"
+  },
+  "search": "തിരയുക",
+  "@search": {
+    "description": "search"
+  },
+  "searchDes": "പാട്ടുകൾ, പ്ലേലിസ്റ്റുകൾ, ആൽബങ്ങൾ അല്ലെങ്കിൽ കലാകാരന്മാർ",
+  "@searchDes": {
+    "description": "searchDes"
+  },
+  "searchInLibrary": "ലൈബ്രറിയിൽ തിരയുക",
+  "@searchInLibrary": {
+    "description": "searchInLibrary"
+  },
+  "searchRes": "തിരയൽ ഫലങ്ങൾ",
+  "@searchRes": {
+    "description": "searchRes"
+  },
+  "search_recent_title": "സമീപകാല തിരയലുകൾ",
+  "@search_recent_title": {
+    "description": "search_recent_title"
+  },
+  "selectAll": "എല്ലാം തിരഞ്ഞെടുക്കുക",
+  "@selectAll": {
+    "description": "selectAll"
+  },
+  "selectAuthIns": "പ്രാമാണീകരണ ഉദാഹരണം തിരഞ്ഞെടുക്കുക",
+  "@selectAuthIns": {
+    "description": "selectAuthIns"
+  },
+  "selectAuthInsMsg": "പ്രാമാണീകരണ ഉദാഹരണം തിരഞ്ഞെടുക്കുക!",
+  "@selectAuthInsMsg": {
+    "description": "selectAuthInsMsg"
+  },
+  "selectFile": "ഫയൽ തിരഞ്ഞെടുക്കുക",
+  "@selectFile": {
+    "description": "selectFile"
+  },
+  "selectSongs": "പാട്ടുകൾ തിരഞ്ഞെടുക്കുക",
+  "@selectSongs": {
+    "description": "selectSongs"
+  },
+  "selectedFileNotFound": "തിരഞ്ഞെടുത്ത ഫയൽ കണ്ടെത്തിയില്ല.",
+  "@selectedFileNotFound": {
+    "description": "selectedFileNotFound"
+  },
+  "sessionExpiredLoginAgain": "നിങ്ങളുടെ സെഷൻ കാലഹരണപ്പെട്ടു. വീണ്ടും സൈൻ ഇൻ ചെയ്യുക.",
+  "@sessionExpiredLoginAgain": {
+    "description": "sessionExpiredLoginAgain"
+  },
+  "setDiscoverContent": "കണ്ടെത്തൽ ഉള്ളടക്കം സജ്ജമാക്കുക",
+  "@setDiscoverContent": {
+    "description": "setDiscoverContent"
+  },
+  "settings": "ക്രമീകരണങ്ങൾ",
+  "@settings": {
+    "description": "settings"
+  },
+  "settings_about_desc": "എസ്ട്രെല്ല സംഗീതത്തെക്കുറിച്ച്",
+  "@settings_about_desc": {
+    "description": "settings_about_desc"
+  },
+  "settings_about_sub": "പതിപ്പ്, ഓപ്പൺ സോഴ്സ് പ്രോജക്റ്റ്, GitHub.",
+  "@settings_about_sub": {
+    "description": "settings_about_sub"
+  },
+  "settings_account_desc": "അക്കൗണ്ടും സമന്വയവും",
+  "@settings_account_desc": {
+    "description": "settings_account_desc"
+  },
+  "settings_account_sub": "ക്ലൗഡ് മോഡ്, ബാക്കപ്പുകൾ, സുഹൃത്തുക്കളുടെ പട്ടിക, മൈഗ്രേഷനുകൾ.",
+  "@settings_account_sub": {
+    "description": "settings_account_sub"
+  },
+  "settings_appearance_desc": "തീം, ഭാഷ, ഇൻ്റർഫേസ് ആനിമേഷനുകൾ.",
+  "@settings_appearance_desc": {
+    "description": "settings_appearance_desc"
+  },
+  "settings_cloud_backup": "ക്ലൗഡ് ബാക്കപ്പ്",
+  "@settings_cloud_backup": {
+    "description": "settings_cloud_backup"
+  },
+  "settings_cloud_backup_desc": "അപ്‌ലോഡ് ചെയ്യുക, പുനഃസ്ഥാപിക്കുക, നിയന്ത്രിക്കുക...",
+  "@settings_cloud_backup_desc": {
+    "description": "settings_cloud_backup_desc"
+  },
+  "settings_cloud_backup_dialog_desc": "സെർവറിലേക്ക് ആപ്പിൻ്റെ .hmb ബാക്കപ്പ് അപ്‌ലോഡ് ചെയ്യുക, ആവശ്യമെങ്കിൽ, സംരക്ഷിച്ച ഏതെങ്കിലും ബാക്കപ്പുകൾ പുനഃസ്ഥാപിക്കുക.",
+  "@settings_cloud_backup_dialog_desc": {
+    "description": "settings_cloud_backup_dialog_desc"
+  },
+  "settings_content_desc": "ഫിൽട്ടറുകൾ കണ്ടെത്തുക, പൈപ്പ്, കാഷെകൾ എന്നിവയുമായുള്ള സംയോജനം.",
+  "@settings_content_desc": {
+    "description": "settings_content_desc"
+  },
+  "settings_downloads_desc": "ഡൗൺലോഡുകളും സംഭരണവും",
+  "@settings_downloads_desc": {
+    "description": "settings_downloads_desc"
+  },
+  "settings_downloads_sub": "ഓഡിയോ ഫോർമാറ്റുകൾ, ഫോൾഡറുകൾ, ഓട്ടോമാറ്റിക് ഡൗൺലോഡുകൾ.",
+  "@settings_downloads_sub": {
+    "description": "settings_downloads_sub"
+  },
+  "settings_general_section": "ജനറൽ",
+  "@settings_general_section": {
+    "description": "settings_general_section"
+  },
+  "settings_local_cloud_desc": "ജോസ് റെഡ് ഉപയോഗിച്ച് സിൻക്രൊണൈസേഷൻ സ്റ്റാറ്റസ് തിരഞ്ഞെടുക്കുക, മൈഗ്രേറ്റ് ചെയ്യുക അല്ലെങ്കിൽ അവലോകനം ചെയ്യുക.",
+  "@settings_local_cloud_desc": {
+    "description": "settings_local_cloud_desc"
+  },
+  "settings_local_cloud_title": "ലോക്കൽ മോഡ് / ഇമ്യൂസിക് ക്ലൗഡ്",
+  "@settings_local_cloud_title": {
+    "description": "settings_local_cloud_title"
+  },
+  "settings_logout": "പുറത്തുകടക്കുക",
+  "@settings_logout": {
+    "description": "settings_logout"
+  },
+  "settings_migration_desc": "പ്ലേലിസ്റ്റുകളും പാട്ടുകളും ഇറക്കുമതി ചെയ്യുക...",
+  "@settings_migration_desc": {
+    "description": "settings_migration_desc"
+  },
+  "settings_migration_title": "ജോസ് മ്യൂസിക് കോട്ലിനിൽ നിന്ന് മൈഗ്രേറ്റ് ചെയ്യുക",
+  "@settings_migration_title": {
+    "description": "settings_migration_title"
+  },
+  "settings_my_friends": "എന്റെ സുഹൃത്തുക്കൾ",
+  "@settings_my_friends": {
+    "description": "settings_my_friends"
+  },
+  "settings_my_friends_desc": "നിങ്ങളുടെ ജോസ് റെഡ് സുഹൃത്തുക്കളെ നേരിട്ട് നിയന്ത്രിക്കുക.",
+  "@settings_my_friends_desc": {
+    "description": "settings_my_friends_desc"
+  },
+  "settings_playback_desc": "സ്ട്രീമിംഗ് നിലവാരം, നോർമലൈസേഷൻ, നിശബ്ദത, ബാറ്ററി.",
+  "@settings_playback_desc": {
+    "description": "settings_playback_desc"
+  },
+  "settings_refresh_visitor_desc": "Discover ഉള്ളടക്കം ലോഡ് ചെയ്യുന്നില്ലെങ്കിൽ നിങ്ങളുടെ Online Music ID പുനഃസൃഷ്ടിക്കുക.",
+  "@settings_refresh_visitor_desc": {
+    "description": "settings_refresh_visitor_desc"
+  },
+  "settings_refresh_visitor_title": "ഐഡി പുതുക്കുക (സന്ദർശക ഐഡി)",
+  "@settings_refresh_visitor_title": {
+    "description": "settings_refresh_visitor_title"
+  },
+  "settings_visitor_error": "തെറ്റ്",
+  "@settings_visitor_error": {
+    "description": "settings_visitor_error"
+  },
+  "settings_visitor_error_desc": "ഒരു പുതിയ ഐഡൻ്റിഫയർ സൃഷ്ടിക്കാൻ കഴിഞ്ഞില്ല. ദയവായി പിന്നീട് വീണ്ടും ശ്രമിക്കുക.",
+  "@settings_visitor_error_desc": {
+    "description": "settings_visitor_error_desc"
+  },
+  "settings_visitor_exception": "പുനഃസൃഷ്ടിക്കുമ്പോൾ ഒരു പിശക് സംഭവിച്ചു: {error}",
+  "@settings_visitor_exception": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    },
+    "description": "settings_visitor_exception"
+  },
+  "settings_visitor_updated": "പുതുക്കിയ ഐഡൻ്റിഫയർ",
+  "@settings_visitor_updated": {
+    "description": "settings_visitor_updated"
+  },
+  "settings_visitor_updated_desc": "ഒരു പുതിയ സന്ദർശക ഐഡി വിജയകരമായി സൃഷ്ടിച്ചു.",
+  "@settings_visitor_updated_desc": {
+    "description": "settings_visitor_updated_desc"
+  },
+  "shareAlbum": "ആൽബം പങ്കിടുക",
+  "@shareAlbum": {
+    "description": "shareAlbum"
+  },
+  "sharePlaylist": "പ്ലേലിസ്റ്റ് പങ്കിടുക",
+  "@sharePlaylist": {
+    "description": "sharePlaylist"
+  },
+  "shareSong": "ഈ ഗാനം ഷെയർ ചെയ്യുക",
+  "@shareSong": {
+    "description": "shareSong"
+  },
+  "shazamSearching": "പൊരുത്തങ്ങൾക്കായി Shazam ഡാറ്റാബേസിൽ തിരയുന്നു...",
+  "@shazamSearching": {
+    "description": "shazamSearching"
+  },
+  "shuffle": "ക്രമരഹിതം",
+  "@shuffle": {
+    "description": "shuffle"
+  },
+  "shuffleQueue": "വാൽ ഇളക്കുക",
+  "@shuffleQueue": {
+    "description": "shuffleQueue"
+  },
+  "similarToTitle": "{title} ന് സമാനമാണ്",
+  "@similarToTitle": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    },
+    "description": "similarToTitle"
+  },
+  "singles": "സിംഗിൾസ്",
+  "@singles": {
+    "description": "singles"
+  },
+  "skipSilence": "നിശബ്ദത ഒഴിവാക്കുക",
+  "@skipSilence": {
+    "description": "skipSilence"
+  },
+  "skipSilenceDes": "സംഗീതം പ്ലേ ചെയ്യുമ്പോൾ നിശബ്ദത ഒഴിവാക്കും",
+  "@skipSilenceDes": {
+    "description": "skipSilenceDes"
+  },
+  "sleepTimeSetAlert": "നിങ്ങളുടെ സ്ലീപ്പ് ടൈമർ സജ്ജീകരിച്ചിരിക്കുന്നു",
+  "@sleepTimeSetAlert": {
+    "description": "sleepTimeSetAlert"
+  },
+  "sleepTimer": "സ്ലീപ്പ് ടൈമർ",
+  "@sleepTimer": {
+    "description": "sleepTimer"
+  },
+  "slide_indicator": "ഘട്ടം {current} / 3",
+  "@slide_indicator": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      }
+    },
+    "description": "slide_indicator"
+  },
+  "songAddedToPlaylistAlert": "പാട്ട് പ്ലേലിസ്റ്റിലേക്ക് ചേർത്തു!",
+  "@songAddedToPlaylistAlert": {
+    "description": "songAddedToPlaylistAlert"
+  },
+  "songAlreadyExists": "ഗാനം ഇതിനകം നിലവിലുണ്ട്!",
+  "@songAlreadyExists": {
+    "description": "songAlreadyExists"
+  },
+  "songAlreadyOfflineAlert": "ഗാനം ഇതിനകം കാഷെയിലാണ്",
+  "@songAlreadyOfflineAlert": {
+    "description": "songAlreadyOfflineAlert"
+  },
+  "songEnqueueAlert": "ഗാനം ക്യൂവിൽ ചേർത്തു!",
+  "@songEnqueueAlert": {
+    "description": "songEnqueueAlert"
+  },
+  "songFound": "ഗാനം കണ്ടെത്തി!",
+  "@songFound": {
+    "description": "songFound"
+  },
+  "songInfo": "പാട്ടിൻ്റെ വിവരങ്ങൾ",
+  "@songInfo": {
+    "description": "songInfo"
+  },
+  "songNotPlayable": "സെർവർ നിയന്ത്രണം കാരണം ഗാനം പ്ലേ ചെയ്യാൻ കഴിയില്ല",
+  "@songNotPlayable": {
+    "description": "songNotPlayable"
+  },
+  "songPitch": "പാട്ടിൻ്റെ സ്വരം",
+  "@songPitch": {
+    "description": "songPitch"
+  },
+  "songRemovedAlert": "നിന്ന് നീക്കം ചെയ്തു",
+  "@songRemovedAlert": {
+    "description": "songRemovedAlert"
+  },
+  "songRemovedfromQueue": "ക്യൂവിൽ നിന്ന് നീക്കം ചെയ്‌തു!",
+  "@songRemovedfromQueue": {
+    "description": "songRemovedfromQueue"
+  },
+  "songRemovedfromQueueCurrSong": "നിങ്ങൾക്ക് നിലവിൽ പ്ലേ ചെയ്യുന്ന ഗാനം ഇല്ലാതാക്കാൻ കഴിയില്ല",
+  "@songRemovedfromQueueCurrSong": {
+    "description": "songRemovedfromQueueCurrSong"
+  },
+  "songs": "പാട്ടുകൾ",
+  "@songs": {
+    "description": "songs"
+  },
+  "songsImportedFromJossMusic": "ജോസ് മ്യൂസിക് കോട്ലിനിൽ നിന്ന് ഇറക്കുമതി ചെയ്ത ഗാനങ്ങൾ",
+  "@songsImportedFromJossMusic": {
+    "description": "songsImportedFromJossMusic"
+  },
+  "sortAscendNDescend": "ആരോഹണ/അവരോഹണം അടുക്കുക",
+  "@sortAscendNDescend": {
+    "description": "sortAscendNDescend"
+  },
+  "sortByDate": "തീയതി പ്രകാരം അടുക്കുക",
+  "@sortByDate": {
+    "description": "sortByDate"
+  },
+  "sortByDuration": "ദൈർഘ്യമനുസരിച്ച് അടുക്കുക",
+  "@sortByDuration": {
+    "description": "sortByDuration"
+  },
+  "sortByName": "പേര് പ്രകാരം അടുക്കുക",
+  "@sortByName": {
+    "description": "sortByName"
+  },
+  "speedAndPitch": "വേഗതയും പിച്ചും",
+  "@speedAndPitch": {
+    "description": "speedAndPitch"
+  },
+  "standard": "സ്റ്റാൻഡേർഡ്",
+  "@standard": {
+    "description": "standard"
+  },
+  "startRadio": "റേഡിയോ ആരംഭിക്കുക",
+  "@startRadio": {
+    "description": "startRadio"
+  },
+  "startupScreen": "സ്റ്റാർട്ടപ്പിൽ തുറക്കുക",
+  "@startupScreen": {
+    "description": "startupScreen"
+  },
+  "startupScreenDescription": "എസ്ട്രെല്ല മ്യൂസിക് ആദ്യം തുറക്കുന്ന വിഭാഗം തിരഞ്ഞെടുക്കുക",
+  "@startupScreenDescription": {
+    "description": "startupScreenDescription"
+  },
+  "status": "നില",
+  "@status": {
+    "description": "status"
+  },
+  "stopMusicOnTaskClear": "ആപ്പ് അടയ്‌ക്കുമ്പോൾ സംഗീതം നിർത്തുക",
+  "@stopMusicOnTaskClear": {
+    "description": "stopMusicOnTaskClear"
+  },
+  "stopMusicOnTaskClearDes": "ടാസ്‌ക് മാനേജറിൽ നിന്ന് ആപ്പ് അടയ്‌ക്കുമ്പോൾ മ്യൂസിക് പ്ലേബാക്ക് നിലയ്ക്കും",
+  "@stopMusicOnTaskClearDes": {
+    "description": "stopMusicOnTaskClearDes"
+  },
+  "streamingQuality": "സ്ട്രീമിംഗ് നിലവാരം",
+  "@streamingQuality": {
+    "description": "streamingQuality"
+  },
+  "streamingQualityDes": "സംഗീത സ്ട്രീമിംഗ് നിലവാരം",
+  "@streamingQualityDes": {
+    "description": "streamingQualityDes"
+  },
+  "subscribers": "വരിക്കാർ",
+  "@subscribers": {
+    "description": "subscribers"
+  },
+  "swipe_prompt": "ഓപ്ഷനുകൾ പര്യവേക്ഷണം ചെയ്യാൻ സ്വൈപ്പ് ➔",
+  "@swipe_prompt": {
+    "description": "swipe_prompt"
+  },
+  "syncChangesConfirmed": "{count} മാറ്റങ്ങൾ വരുത്തി.",
+  "@syncChangesConfirmed": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    },
+    "description": "syncChangesConfirmed"
+  },
+  "syncChangesSynced": "{count} സമന്വയിപ്പിച്ച മാറ്റങ്ങൾ.",
+  "@syncChangesSynced": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    },
+    "description": "syncChangesSynced"
+  },
+  "syncCloudDownloadingExisting": "ക്ലൗഡ് മോഡ് സജീവമാക്കി. നിലവിലുള്ള ലൈബ്രറി ഡൗൺലോഡ് ചെയ്യുന്നു.",
+  "@syncCloudDownloadingExisting": {
+    "description": "syncCloudDownloadingExisting"
+  },
+  "syncCloudMigrationComplete": "ക്ലൗഡ് മോഡ് സജീവമാക്കി. മൈഗ്രേറ്റഡ് ലൈബ്രറി.",
+  "@syncCloudMigrationComplete": {
+    "description": "syncCloudMigrationComplete"
+  },
+  "syncCloudModeActive": "ക്ലൗഡ് മോഡ് സജീവമാണ്",
+  "@syncCloudModeActive": {
+    "description": "syncCloudModeActive"
+  },
+  "syncCloudPending": "ക്ലൗഡ് മോഡ് സജീവമാണ്. ശേഷിക്കുന്ന സമന്വയം.",
+  "@syncCloudPending": {
+    "description": "syncCloudPending"
+  },
+  "syncDownloadFailed": "സമന്വയം ഡൗൺലോഡ് ചെയ്യുന്നതിൽ പരാജയപ്പെട്ടു.",
+  "@syncDownloadFailed": {
+    "description": "syncDownloadFailed"
+  },
+  "syncDownloading": "EMusic മാറ്റങ്ങൾ ഡൗൺലോഡ് ചെയ്യുന്നു...",
+  "@syncDownloading": {
+    "description": "syncDownloading"
+  },
+  "syncForceReplaceBackupSaved": "റിക്കവറി ബാക്കപ്പ്:{path}",
+  "@syncForceReplaceBackupSaved": {
+    "placeholders": {
+      "path": {}
+    }
+  },
+  "syncForceReplaceConfirmAction": "റീംപ്ലാസർ വൈ സുബീർ",
+  "@syncForceReplaceConfirmAction": {},
+  "syncForceReplaceConfirmBody": "പ്രൈമറോ സെ ക്രിയാര അൺ റെസ്പാൽഡോ ഡി റിക്കവറി. Después, las playlists, favoritos, historyial, albumes, artistas y ajustes musicales de EMusic Cloud se reemplazarán con los datos actuales de este dispositivo. No se puede deshacer desde el servidor.",
+  "@syncForceReplaceConfirmBody": {},
+  "syncForceReplaceConfirmTitle": "Reemplazar la biblioteca music remota?",
+  "@syncForceReplaceConfirmTitle": {},
+  "syncForceReplaceCountMismatch": "അപ്‌ലോഡ് ചെയ്ത എണ്ണങ്ങൾ പ്രാദേശിക ലൈബ്രറിയുമായി പൊരുത്തപ്പെടുന്നില്ല. റിമോട്ട് മാറ്റിസ്ഥാപിക്കൽ സ്ഥിരീകരിക്കാൻ കഴിഞ്ഞില്ല.",
+  "@syncForceReplaceCountMismatch": {},
+  "syncForceReplaceCreatingBackup": "ക്ലൗഡ് ഡാറ്റ മാറ്റിസ്ഥാപിക്കുന്നതിന് മുമ്പ് ഒരു റിക്കവറി ബാക്കപ്പ് സൃഷ്ടിക്കുന്നു...",
+  "@syncForceReplaceCreatingBackup": {},
+  "syncForceReplaceDescription": "Pausa la sincronización pendiente y reemplaza a la fuerza tu biblioteca music remota con los datos actuales de este dispositivo. Las descargas permanentecen locales.",
+  "@syncForceReplaceDescription": {},
+  "syncForceReplaceFailed": "EMusic ക്ലൗഡിന് റിമോട്ട് ലൈബ്രറി മാറ്റിസ്ഥാപിക്കാൻ കഴിഞ്ഞില്ല.",
+  "@syncForceReplaceFailed": {},
+  "syncForceReplaceFailedLocalPreserved": "റിമോട്ട് മാറ്റിസ്ഥാപിക്കൽ പരാജയപ്പെട്ടു. നിങ്ങളുടെ പ്രാദേശിക ഡാറ്റയും വീണ്ടെടുക്കൽ ബാക്കപ്പും സംരക്ഷിച്ചു.",
+  "@syncForceReplaceFailedLocalPreserved": {},
+  "syncForceReplaceFailedTitle": "അപ്‌ലോഡ് പൂർത്തിയായിട്ടില്ല",
+  "@syncForceReplaceFailedTitle": {},
+  "syncForceReplaceInProgress": "സമന്വയം താൽക്കാലികമായി നിർത്തുന്നു, ഒരു ബാക്കപ്പ് സൃഷ്ടിക്കുന്നു, പ്രാദേശിക ലൈബ്രറി അപ്‌ലോഡ് ചെയ്യുന്നു...",
+  "@syncForceReplaceInProgress": {},
+  "syncForceReplacePauseFailed": "നിലവിലെ സമന്വയം സുരക്ഷിതമായി താൽക്കാലികമായി നിർത്താൻ കഴിഞ്ഞില്ല. ഒരു നിമിഷത്തിനുള്ളിൽ വീണ്ടും ശ്രമിക്കുക.",
+  "@syncForceReplacePauseFailed": {},
+  "syncForceReplaceSuccess": "ഈ ഉപകരണത്തിന്റെ നിലവിലെ ഡാറ്റ ഉപയോഗിച്ച് റിമോട്ട് മ്യൂസിക് ലൈബ്രറി മാറ്റിസ്ഥാപിച്ചു.",
+  "@syncForceReplaceSuccess": {},
+  "syncForceReplaceSuccessTitle": "അപ്‌ലോഡ് പൂർത്തിയായി",
+  "@syncForceReplaceSuccessTitle": {},
+  "syncForceReplaceTitle": "Cancelar sincronización y subir esta base",
+  "@syncForceReplaceTitle": {},
+  "syncForceReplaceValidating": "ക്ലൗഡ് ഡാറ്റ മാറ്റിസ്ഥാപിക്കുന്നതിന് മുമ്പ് അപ്‌ലോഡ് ചെയ്ത ലൈബ്രറി സാധൂകരിക്കുന്നു...",
+  "@syncForceReplaceValidating": {},
+  "syncLibrarySynced": "സമന്വയിപ്പിച്ച ലൈബ്രറി.",
+  "@syncLibrarySynced": {
+    "description": "syncLibrarySynced"
+  },
+  "syncLibraryUpToDate": "കാലികമായ ലൈബ്രറി.",
+  "@syncLibraryUpToDate": {
+    "description": "syncLibraryUpToDate"
+  },
+  "syncLocalChangesFirst": "പുതിയ പ്രാദേശിക മാറ്റങ്ങളുണ്ട്. ഡൗൺലോഡ് ചെയ്യുന്നതിന് മുമ്പ് അവ അപ്‌ലോഡ് ചെയ്യും.",
+  "@syncLocalChangesFirst": {
+    "description": "syncLocalChangesFirst"
+  },
+  "syncLocalDeviceOnly": "നിങ്ങളുടെ ഡാറ്റ ഈ ഉപകരണത്തിൽ മാത്രമേ സൂക്ഷിച്ചിട്ടുള്ളൂ.",
+  "@syncLocalDeviceOnly": {
+    "description": "syncLocalDeviceOnly"
+  },
+  "syncLocalModeActive": "ലോക്കൽ മോഡ് സജീവമാണ്",
+  "@syncLocalModeActive": {
+    "description": "syncLocalModeActive"
+  },
+  "syncOfflinePending": "ഓഫ്‌ലൈൻ. മാറ്റങ്ങൾ തീർച്ചപ്പെടുത്തിയിട്ടില്ല.",
+  "@syncOfflinePending": {
+    "description": "syncOfflinePending"
+  },
+  "syncOfflineRetry": "ഓഫ്‌ലൈൻ. മാറ്റങ്ങൾ വീണ്ടും ശ്രമിക്കുന്നതിനായി സംരക്ഷിച്ചു.",
+  "@syncOfflineRetry": {
+    "description": "syncOfflineRetry"
+  },
+  "syncPlaylistSongs": "പ്ലേലിസ്റ്റ് ഗാനങ്ങൾ സമന്വയിപ്പിക്കുക",
+  "@syncPlaylistSongs": {
+    "description": "syncPlaylistSongs"
+  },
+  "syncUnconfirmedRetry": "എല്ലാ മാറ്റങ്ങളും EMusic സ്ഥിരീകരിച്ചിട്ടില്ല. അവരെ വീണ്ടും വിചാരണ ചെയ്യും.",
+  "@syncUnconfirmedRetry": {
+    "description": "syncUnconfirmedRetry"
+  },
+  "syncUploadRetry": "എഴുന്നേൽക്കാൻ കഴിഞ്ഞില്ല. പിന്നീട് വീണ്ടും ശ്രമിക്കും.",
+  "@syncUploadRetry": {
+    "description": "syncUploadRetry"
+  },
+  "syncUploadSuccess": "മാറ്റങ്ങൾ ശരിയായി അപ്‌ലോഡ് ചെയ്‌തു.",
+  "@syncUploadSuccess": {
+    "description": "syncUploadSuccess"
+  },
+  "syncUploadSuccessWs": "മാറ്റങ്ങൾ അപ്‌ലോഡ് ചെയ്‌തു (WS).",
+  "@syncUploadSuccessWs": {
+    "description": "syncUploadSuccessWs"
+  },
+  "syncUploadWsRetry": "WS ഉപയോഗിച്ച് അപ്‌ലോഡ് ചെയ്യാൻ കഴിഞ്ഞില്ല. പിന്നീട് വീണ്ടും ശ്രമിക്കും.",
+  "@syncUploadWsRetry": {
+    "description": "syncUploadWsRetry"
+  },
+  "syncUploading": "EMusic-ലേക്ക് മാറ്റങ്ങൾ അപ്‌ലോഡ് ചെയ്യുന്നു...",
+  "@syncUploading": {
+    "description": "syncUploading"
+  },
+  "synced": "സമന്വയിപ്പിച്ചു",
+  "@synced": {
+    "description": "synced"
+  },
+  "syncedLyricsNotAvailable": "സമന്വയിപ്പിച്ച വരികൾ ലഭ്യമല്ല!",
+  "@syncedLyricsNotAvailable": {
+    "description": "syncedLyricsNotAvailable"
+  },
+  "systemDefault": "സിസ്റ്റം ഡിഫോൾട്ട്",
+  "@systemDefault": {
+    "description": "systemDefault"
+  },
+  "themeMode": "തീം മോഡ്",
+  "@themeMode": {
+    "description": "themeMode"
+  },
+  "title": "തലക്കെട്ട്",
+  "@title": {
+    "description": "title"
+  },
   "topMusicVid": "മുൻനിര സംഗീത വീഡിയോകൾ",
   "@topMusicVid": {
     "description": "topMusicVid"
   },
-  "syncForceReplaceTitle": "Cancelar sincronización y subir esta base",
-  "syncForceReplaceConfirmAction": "റീംപ്ലാസർ വൈ സുബീർ",
-  "syncForceReplaceDescription": "Pausa la sincronización pendiente y reemplaza a la fuerza tu biblioteca music remota con los datos actuales de este dispositivo. Las descargas permanentecen locales.",
-  "syncForceReplaceConfirmBody": "പ്രൈമറോ സെ ക്രിയാര അൺ റെസ്പാൽഡോ ഡി റിക്കവറി. Después, las playlists, favoritos, historyial, albumes, artistas y ajustes musicales de EMusic Cloud se reemplazarán con los datos actuales de este dispositivo. No se puede deshacer desde el servidor.",
-  "syncForceReplaceConfirmTitle": "Reemplazar la biblioteca music remota?"
+  "topmusicvideos": "മികച്ച സംഗീത വീഡിയോകൾ",
+  "@topmusicvideos": {
+    "description": "topmusicvideos"
+  },
+  "trending": "ട്രെൻഡുകൾ",
+  "@trending": {
+    "description": "trending"
+  },
+  "unLink": "അൺലിങ്ക് ചെയ്യുക",
+  "@unLink": {
+    "description": "unLink"
+  },
+  "unlinkAlert": "അൺലിങ്ക് ചെയ്‌തു!",
+  "@unlinkAlert": {
+    "description": "unlinkAlert"
+  },
+  "untitledSong": "പേരിടാത്ത ഗാനം",
+  "@untitledSong": {
+    "description": "untitledSong"
+  },
+  "upNext": "അടുത്തത്",
+  "@upNext": {
+    "description": "upNext"
+  },
+  "updateApp": "ആപ്ലിക്കേഷൻ അപ്ഡേറ്റ് ചെയ്യുക",
+  "@updateApp": {
+    "description": "updateApp"
+  },
+  "urlSearchDes": "ബന്ധപ്പെട്ട ഉള്ളടക്കം തുറക്കാൻ/പ്ലേ ചെയ്യാൻ കണ്ടെത്തിയ URL അതിൽ ക്ലിക്ക് ചെയ്യുക",
+  "@urlSearchDes": {
+    "description": "urlSearchDes"
+  },
+  "useThisMetadata": "ഈ മെറ്റാഡാറ്റ ഉപയോഗിക്കുക",
+  "@useThisMetadata": {
+    "description": "Button for selecting a metadata candidate"
+  },
+  "userBlocked": "തടഞ്ഞ ഉപയോക്താവ്",
+  "@userBlocked": {
+    "description": "userBlocked"
+  },
+  "userListMissing": "പ്രതികരണത്തിൽ ഉപയോക്താക്കളുടെ ഒരു ലിസ്റ്റ് അടങ്ങിയിട്ടില്ല.",
+  "@userListMissing": {
+    "description": "userListMissing"
+  },
+  "userSearchFailed": "ഉപയോക്താക്കൾക്കായി തിരയാൻ കഴിഞ്ഞില്ല ({statusCode}).",
+  "@userSearchFailed": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    },
+    "description": "userSearchFailed"
+  },
+  "userUnblocked": "അൺലോക്ക് ചെയ്ത ഉപയോക്താവ്",
+  "@userUnblocked": {
+    "description": "userUnblocked"
+  },
+  "username": "ഉപയോക്തൃനാമം",
+  "@username": {
+    "description": "username"
+  },
+  "video": "വീഡിയോ",
+  "@video": {
+    "description": "video"
+  },
+  "videos": "വീഡിയോകൾ",
+  "@videos": {
+    "description": "videos"
+  },
+  "viewAll": "എല്ലാം കാണുക",
+  "@viewAll": {
+    "description": "viewAll"
+  },
+  "viewArtist": "ആർട്ടിസ്റ്റ്",
+  "@viewArtist": {
+    "description": "viewArtist"
+  },
+  "welcome_intro": "ഞങ്ങൾ ഞങ്ങളുടെ പ്ലാറ്റ്ഫോം നവീകരിച്ചു. സ്വമേധയാലുള്ള ബാക്കപ്പുകൾ അപ്‌ലോഡ് ചെയ്യുന്നതിനുള്ള പഴയ സംവിധാനം പ്രവർത്തനരഹിതമാക്കി. നിങ്ങളുടെ സംഗീത ലൈബ്രറി മാനേജ് ചെയ്യാൻ നിങ്ങൾക്ക് ഇപ്പോൾ രണ്ട് വ്യക്തമായ വഴികളുണ്ട്.",
+  "@welcome_intro": {
+    "description": "welcome_intro"
+  },
+  "welcome_subtitle": "ഇനി മുതൽ എസ്ട്രെല്ല മ്യൂസിക് എങ്ങനെ ആസ്വദിക്കണമെന്ന് തിരഞ്ഞെടുക്കുക.",
+  "@welcome_subtitle": {
+    "description": "welcome_subtitle"
+  },
+  "welcome_title": "നിങ്ങളുടെ സംഗീതം, നിങ്ങളുടെ വഴി",
+  "@welcome_title": {
+    "description": "welcome_title"
+  }
 }

@@ -22,6 +22,8 @@ import 'image_widget.dart';
 import 'song_info_dialog.dart';
 import 'package:estrella_music/generated/l10n.dart';
 import 'package:estrella_music/utils/helpers/music_share_manager.dart';
+import 'package:estrella_music/music_provider/music_catalog_service.dart';
+import 'local_metadata_search_dialog.dart';
 
 class SongInfoBottomSheet extends StatelessWidget {
   const SongInfoBottomSheet(this.song,
@@ -123,6 +125,27 @@ class SongInfoBottomSheet extends StatelessWidget {
                   playerController.startRadio(song);
                 },
               ),
+              if (Get.find<MusicCatalogService>().canEditMetadata(song))
+                ListTile(
+                  visualDensity: const VisualDensity(vertical: -1),
+                  leading: const Icon(Icons.auto_fix_high),
+                  title: Text(S.current.identifySongMetadata),
+                  onTap: () async {
+                    final messenger = ScaffoldMessenger.of(context);
+                    final successSnackbar = snackbar(
+                      context,
+                      S.current.metadataApplySuccess,
+                      size: SanckBarSize.MEDIUM,
+                    );
+                    final updated = await showDialog<MediaItem>(
+                      context: context,
+                      builder: (_) => LocalMetadataSearchDialog(song: song),
+                    );
+                    if (updated == null || !context.mounted) return;
+                    Navigator.of(context).pop();
+                    messenger.showSnackBar(successSnackbar);
+                  },
+                ),
               (calledFromPlayer || calledFromQueue)
                   ? const SizedBox.shrink()
                   : ListTile(

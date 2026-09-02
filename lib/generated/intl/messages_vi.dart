@@ -44,7 +44,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m11(count) => "${count} thay đổi được đồng bộ hóa.";
 
-  static String m12(statusCode) =>
+  static String m12(path) => "Sao lưu phục hồi: ${path}";
+
+  static String m13(statusCode) =>
       "Không thể tìm kiếm người dùng (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -538,6 +540,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Chọn số lượng nội dung trên màn hình chính (tương đối). Số lượng ít sẽ tải nhanh hơn",
     ),
     "id": MessageLookupByLibrary.simpleMessage("Khoá"),
+    "identifySongMetadata": MessageLookupByLibrary.simpleMessage(
+      "Xác định siêu dữ liệu",
+    ),
     "ignoreBatOpt": MessageLookupByLibrary.simpleMessage(
       "Bỏ qua tối ưu hóa pin",
     ),
@@ -669,6 +674,27 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "manageCollaborators": MessageLookupByLibrary.simpleMessage(
       "Quản lý cộng tác viên (bạn bè)",
+    ),
+    "metadataApplySuccess": MessageLookupByLibrary.simpleMessage(
+      "Siêu dữ liệu đã được nhúng vào tập tin cục bộ.",
+    ),
+    "metadataNoResults": MessageLookupByLibrary.simpleMessage(
+      "Không tìm thấy trùng khớp. Thử tìm kiếm khác xem.",
+    ),
+    "metadataOperationFailed": MessageLookupByLibrary.simpleMessage(
+      "Thao tác siêu dữ liệu thất bại.",
+    ),
+    "metadataOverwriteWarning": MessageLookupByLibrary.simpleMessage(
+      "Điều này sẽ ghi đè lên tiêu đề, họa sĩ, album và trang bìa trong khi lưu giữ các lĩnh vực không cung cấp.",
+    ),
+    "metadataSearchDescription": MessageLookupByLibrary.simpleMessage(
+      "Chọn đúng khớp để nhúng tiêu đề, họa sĩ, album và trang bìa trong tập tin địa phương.",
+    ),
+    "metadataSearchHint": MessageLookupByLibrary.simpleMessage(
+      "Bài hát hay tên nghệ sĩ",
+    ),
+    "metadataSearchTitle": MessageLookupByLibrary.simpleMessage(
+      "Nhận diện bài hát",
     ),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
       "Đảm bảo nhạc đang phát đủ lớn ở gần micrô của bạn.",
@@ -1246,6 +1272,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncDownloading": MessageLookupByLibrary.simpleMessage(
       "Đang tải xuống các thay đổi của EMusic...",
     ),
+    "syncForceReplaceBackupSaved": m12,
     "syncForceReplaceConfirmAction": MessageLookupByLibrary.simpleMessage(
       "Reemplazar y subir",
     ),
@@ -1255,11 +1282,42 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceConfirmTitle": MessageLookupByLibrary.simpleMessage(
       "¿Reemplazar la biblioteca âm nhạc remota?",
     ),
+    "syncForceReplaceCountMismatch": MessageLookupByLibrary.simpleMessage(
+      "Số đếm được tải lên không khớp với thư viện cục bộ. Không thể xác nhận việc thay thế từ xa.",
+    ),
+    "syncForceReplaceCreatingBackup": MessageLookupByLibrary.simpleMessage(
+      "Đang tạo bản sao lưu trước khi thay thế dữ liệu đám mây...",
+    ),
     "syncForceReplaceDescription": MessageLookupByLibrary.simpleMessage(
       "Pausa laruxureronización pendiente y reemplaza a la fuerza tu biblioteca musical remota con los datos actuales de este dispositivo. Las descargas permanecen locales.",
     ),
+    "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
+      "E Music Cloud không thể thay thế thư viện từ xa.",
+    ),
+    "syncForceReplaceFailedLocalPreserved":
+        MessageLookupByLibrary.simpleMessage(
+          "Việc thay thế từ xa bị lỗi. Dữ liệu và bản sao lưu của anh đã được bảo quản.",
+        ),
+    "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
+      "Tải lên chưa xong",
+    ),
+    "syncForceReplaceInProgress": MessageLookupByLibrary.simpleMessage(
+      "Đồng bộ hoá, tạo bản sao lưu, và tải lên thư viện địa phương...",
+    ),
+    "syncForceReplacePauseFailed": MessageLookupByLibrary.simpleMessage(
+      "Sự đồng bộ hóa hiện thời không thể tạm dừng một cách an toàn. Hãy thử lại lần nữa.",
+    ),
+    "syncForceReplaceSuccess": MessageLookupByLibrary.simpleMessage(
+      "Thư viện âm nhạc từ xa đã được thay thế bằng dữ liệu hiện tại của thiết bị này.",
+    ),
+    "syncForceReplaceSuccessTitle": MessageLookupByLibrary.simpleMessage(
+      "Tải lên hoàn tất",
+    ),
     "syncForceReplaceTitle": MessageLookupByLibrary.simpleMessage(
       "Cơ sở Cancelarruxureronización y subir esta",
+    ),
+    "syncForceReplaceValidating": MessageLookupByLibrary.simpleMessage(
+      "Kiểm tra thư viện đã tải lên trước khi thay thế dữ liệu đám mây...",
     ),
     "syncLibrarySynced": MessageLookupByLibrary.simpleMessage(
       "Thư viện đồng bộ.",
@@ -1327,11 +1385,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "Nhấn vào liên kết được phát hiện để mở nội dung",
     ),
+    "useThisMetadata": MessageLookupByLibrary.simpleMessage(
+      "Dùng siêu dữ liệu này",
+    ),
     "userBlocked": MessageLookupByLibrary.simpleMessage("Người dùng bị chặn"),
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "Phản hồi không chứa danh sách người dùng.",
     ),
-    "userSearchFailed": m12,
+    "userSearchFailed": m13,
     "userUnblocked": MessageLookupByLibrary.simpleMessage(
       "Người dùng đã được mở khóa",
     ),

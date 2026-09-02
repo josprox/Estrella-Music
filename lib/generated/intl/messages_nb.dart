@@ -44,7 +44,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m11(count) => "${count} synkroniserte endringer.";
 
-  static String m12(statusCode) =>
+  static String m12(path) => "Recovery sikkerhetskopi: ${path}";
+
+  static String m13(statusCode) =>
       "Kunne ikke søke etter brukere (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -532,6 +534,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Velg antall startskjerminnhold (ca.). Færre resultater lastes raskere",
     ),
     "id": MessageLookupByLibrary.simpleMessage("ID"),
+    "identifySongMetadata": MessageLookupByLibrary.simpleMessage(
+      "Identifiser metadata",
+    ),
     "ignoreBatOpt": MessageLookupByLibrary.simpleMessage(
       "Ignorer batterioptimalisering",
     ),
@@ -659,6 +664,27 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "manageCollaborators": MessageLookupByLibrary.simpleMessage(
       "Administrer samarbeidspartnere (venner)",
+    ),
+    "metadataApplySuccess": MessageLookupByLibrary.simpleMessage(
+      "Metadata ble innebygd i den lokale filen.",
+    ),
+    "metadataNoResults": MessageLookupByLibrary.simpleMessage(
+      "Ingen treff funnet. Prøv et annet søk.",
+    ),
+    "metadataOperationFailed": MessageLookupByLibrary.simpleMessage(
+      "Metadataoperasjonen mislyktes.",
+    ),
+    "metadataOverwriteWarning": MessageLookupByLibrary.simpleMessage(
+      "Dette vil overskrive den innebygde tittelen, artisten, albumet og omslaget mens du bevarer feltene som matchen ikke gir.",
+    ),
+    "metadataSearchDescription": MessageLookupByLibrary.simpleMessage(
+      "Velg riktig match for å legge inn tittel, artist, album og deksel i den lokale filen.",
+    ),
+    "metadataSearchHint": MessageLookupByLibrary.simpleMessage(
+      "Sang eller kunstnernavn",
+    ),
+    "metadataSearchTitle": MessageLookupByLibrary.simpleMessage(
+      "Identifiser sang",
     ),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
       "Sørg for at musikken spilles høyt nok i nærheten av mikrofonen.",
@@ -1228,6 +1254,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncDownloading": MessageLookupByLibrary.simpleMessage(
       "Laster ned EMusic-endringer...",
     ),
+    "syncForceReplaceBackupSaved": m12,
     "syncForceReplaceConfirmAction": MessageLookupByLibrary.simpleMessage(
       "Replacer og subir",
     ),
@@ -1237,11 +1264,42 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceConfirmTitle": MessageLookupByLibrary.simpleMessage(
       "¿Reemplazar la biblioteca musical remote?",
     ),
+    "syncForceReplaceCountMismatch": MessageLookupByLibrary.simpleMessage(
+      "De opplastede tallene passer ikke til det lokale biblioteket. Ekstern erstatning kan ikke bekreftes.",
+    ),
+    "syncForceReplaceCreatingBackup": MessageLookupByLibrary.simpleMessage(
+      "Opprette en gjenoppretting sikkerhetskopi før erstatte skydata...",
+    ),
     "syncForceReplaceDescription": MessageLookupByLibrary.simpleMessage(
       "Pausa la sincronización pendiente y reemplaza a la fuerza tu biblioteca musikalsk remota con los data actuales de este dispositivo. Last ned permanecen lokaler.",
     ),
+    "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud kan ikke erstatte fjernbiblioteket.",
+    ),
+    "syncForceReplaceFailedLocalPreserved":
+        MessageLookupByLibrary.simpleMessage(
+          "Fjernutskiftingen mislyktes. Dine lokale data og gjenoppretting backup ble bevart.",
+        ),
+    "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
+      "Last opp ikke fullført",
+    ),
+    "syncForceReplaceInProgress": MessageLookupByLibrary.simpleMessage(
+      "Pausing synkronisere, opprette en sikkerhetskopi og laste opp det lokale biblioteket...",
+    ),
+    "syncForceReplacePauseFailed": MessageLookupByLibrary.simpleMessage(
+      "Nåværende synkronisering kunne ikke settes på pause trygt. Prøv igjen om et øyeblikk.",
+    ),
+    "syncForceReplaceSuccess": MessageLookupByLibrary.simpleMessage(
+      "Det eksterne musikkbiblioteket ble erstattet med enhetens gjeldende data.",
+    ),
+    "syncForceReplaceSuccessTitle": MessageLookupByLibrary.simpleMessage(
+      "Last opp fullført",
+    ),
     "syncForceReplaceTitle": MessageLookupByLibrary.simpleMessage(
       "Avbryt sincronización y subir esta base",
+    ),
+    "syncForceReplaceValidating": MessageLookupByLibrary.simpleMessage(
+      "Validere det opplastede biblioteket før erstatte skydata...",
     ),
     "syncLibrarySynced": MessageLookupByLibrary.simpleMessage(
       "Synkronisert bibliotek.",
@@ -1305,11 +1363,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "Oppdaget URL klikk på den for å åpne/spille av det tilknyttede innholdet",
     ),
+    "useThisMetadata": MessageLookupByLibrary.simpleMessage(
+      "Bruk denne metadataen",
+    ),
     "userBlocked": MessageLookupByLibrary.simpleMessage("Blokkert bruker"),
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "Svaret inneholder ikke en liste over brukere.",
     ),
-    "userSearchFailed": m12,
+    "userSearchFailed": m13,
     "userUnblocked": MessageLookupByLibrary.simpleMessage("Ulåst bruker"),
     "username": MessageLookupByLibrary.simpleMessage("Brukernavn"),
     "video": MessageLookupByLibrary.simpleMessage("Video"),

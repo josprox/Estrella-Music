@@ -44,7 +44,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m11(count) => "_${count} perubahan yang disinkronkan.";
 
-  static String m12(statusCode) =>
+  static String m12(path) => "Backup Pemulihan: ${path}";
+
+  static String m13(statusCode) =>
       "Tidak dapat mencari pengguna (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -542,6 +544,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Pilih jumlah konten beranda awal (perkiraan). Hasil yang lebih sedikit mempercepat pemuatan",
     ),
     "id": MessageLookupByLibrary.simpleMessage("Id"),
+    "identifySongMetadata": MessageLookupByLibrary.simpleMessage(
+      "Mengidentifikasi metadata",
+    ),
     "ignoreBatOpt": MessageLookupByLibrary.simpleMessage(
       "Abaikan pengoptimalan baterai",
     ),
@@ -671,6 +676,27 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "manageCollaborators": MessageLookupByLibrary.simpleMessage(
       "Kelola kolaborator (teman)",
+    ),
+    "metadataApplySuccess": MessageLookupByLibrary.simpleMessage(
+      "Metadata tertanam dalam berkas lokal.",
+    ),
+    "metadataNoResults": MessageLookupByLibrary.simpleMessage(
+      "Tak ada yang cocok. Cobalah pencarian yang berbeda.",
+    ),
+    "metadataOperationFailed": MessageLookupByLibrary.simpleMessage(
+      "Operasi metadata gagal.",
+    ),
+    "metadataOverwriteWarning": MessageLookupByLibrary.simpleMessage(
+      "Ini akan menimpa judul, artis, dan sampul yang tertanam saat mempertahankan ruas yang cocok tidak menyediakan.",
+    ),
+    "metadataSearchDescription": MessageLookupByLibrary.simpleMessage(
+      "Pilih yang benar untuk memasukkan judul, artis, album, dan sampul dalam berkas lokal.",
+    ),
+    "metadataSearchHint": MessageLookupByLibrary.simpleMessage(
+      "Nama artis atau lagu",
+    ),
+    "metadataSearchTitle": MessageLookupByLibrary.simpleMessage(
+      "Identifikasi lagu",
     ),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
       "Pastikan musik diputar cukup keras di dekat mikrofon Anda.",
@@ -1252,6 +1278,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncDownloading": MessageLookupByLibrary.simpleMessage(
       "Mengunduh perubahan EMusic...",
     ),
+    "syncForceReplaceBackupSaved": m12,
     "syncForceReplaceConfirmAction": MessageLookupByLibrary.simpleMessage(
       "Reemplazar y subir",
     ),
@@ -1261,11 +1288,41 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceConfirmTitle": MessageLookupByLibrary.simpleMessage(
       "¿Remota musikal Reemplazar la biblioteca?",
     ),
+    "syncForceReplaceCountMismatch": MessageLookupByLibrary.simpleMessage(
+      "Jumlah yang diunggah tidak cocok dengan perpustakaan lokal. Pengganti jarak jauh tidak dapat dikonfirmasi.",
+    ),
+    "syncForceReplaceCreatingBackup": MessageLookupByLibrary.simpleMessage(
+      "Membuat backup pemulihan sebelum mengganti data awan...",
+    ),
     "syncForceReplaceDescription": MessageLookupByLibrary.simpleMessage(
       "Pausa laầronización pendiente y reemplaza a la fuerza tu biblioteca musical remota con los datos actuales de este dispositivo. Las descargas permanecen locales.",
     ),
+    "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
+      "Awan EMusic tidak dapat menggantikan pustaka jarak jauh.",
+    ),
+    "syncForceReplaceFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
+      "Pengganti remote gagal. Data lokal dan bala bantuan pemulihanmu dijaga.",
+    ),
+    "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
+      "Upload tidak selesai",
+    ),
+    "syncForceReplaceInProgress": MessageLookupByLibrary.simpleMessage(
+      "Menahan sinkronisasi, membuat cadangan, dan mengunggah pustaka lokal...",
+    ),
+    "syncForceReplacePauseFailed": MessageLookupByLibrary.simpleMessage(
+      "Sinkronisasi saat ini tidak dapat diistirahatkan dengan aman. Coba lagi sebentar lagi.",
+    ),
+    "syncForceReplaceSuccess": MessageLookupByLibrary.simpleMessage(
+      "Pustaka musik jauh diganti dengan data perangkat saat ini.",
+    ),
+    "syncForceReplaceSuccessTitle": MessageLookupByLibrary.simpleMessage(
+      "Upload selesai",
+    ),
     "syncForceReplaceTitle": MessageLookupByLibrary.simpleMessage(
       "Basis Cancelar;ronización y subir esta",
+    ),
+    "syncForceReplaceValidating": MessageLookupByLibrary.simpleMessage(
+      "Validasi perpustakaan upload sebelum mengganti data awan...",
     ),
     "syncLibrarySynced": MessageLookupByLibrary.simpleMessage(
       "Perpustakaan yang disinkronkan.",
@@ -1331,13 +1388,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "Url terdeteksi, klik untuk membuka/memutar konten terkait",
     ),
+    "useThisMetadata": MessageLookupByLibrary.simpleMessage(
+      "Gunakan metadata ini",
+    ),
     "userBlocked": MessageLookupByLibrary.simpleMessage(
       "Pengguna yang diblokir",
     ),
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "Responsnya tidak berisi daftar pengguna.",
     ),
-    "userSearchFailed": m12,
+    "userSearchFailed": m13,
     "userUnblocked": MessageLookupByLibrary.simpleMessage(
       "Pengguna tidak terkunci",
     ),

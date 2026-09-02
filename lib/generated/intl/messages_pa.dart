@@ -44,7 +44,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m11(count) => "${count} ਸਮਕਾਲੀ ਤਬਦੀਲੀਆਂ।";
 
-  static String m12(statusCode) =>
+  static String m12(path) => "ਰਿਕਵਰੀ ਬੈਕਅੱਪ: ${path}";
+
+  static String m13(statusCode) =>
       "ਉਪਭੋਗਤਾਵਾਂ ਲਈ ਖੋਜ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕੀ (${statusCode})।";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -530,6 +532,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "ਸ਼ੁਰੂਆਤੀ ਹੋਮਸਕ੍ਰੀਨ ਕੰਟੈਂਟ ਦੀ (ਲਗਭਗ)ਸੰਖਿਆ ਚੁਣੋ। ਘੱਟ ਨਤੀਜੇ ਤੇਜੀ ਨਾਲ ਲੋਡਿੰਗ",
     ),
     "id": MessageLookupByLibrary.simpleMessage("ਆਈ.ਡੀ"),
+    "identifySongMetadata": MessageLookupByLibrary.simpleMessage(
+      "ਮੈਟਾਡਾਟਾ ਪਛਾਣੋ",
+    ),
     "ignoreBatOpt": MessageLookupByLibrary.simpleMessage(
       "ਬੈਟਰੀ ਅਨੁਕੂਲਤਾ ਨੂੰ ਅਣਡਿੱਠ ਕਰੋ",
     ),
@@ -654,6 +659,25 @@ class MessageLookup extends MessageLookupByLibrary {
     "manageCollaborators": MessageLookupByLibrary.simpleMessage(
       "ਸਹਿਯੋਗੀਆਂ (ਦੋਸਤ) ਦਾ ਪ੍ਰਬੰਧਨ ਕਰੋ",
     ),
+    "metadataApplySuccess": MessageLookupByLibrary.simpleMessage(
+      "ਮੇਟਾਡਾਟਾ ਲੋਕਲ ਫਾਇਲ ਵਿੱਚ ਸ਼ਾਮਿਲ ਕੀਤਾ ਗਿਆ ਹੈ ।",
+    ),
+    "metadataNoResults": MessageLookupByLibrary.simpleMessage(
+      "ਕੋਈ ਮੇਲ ਨਹੀਂ ਲੱਭਿਆ । ਇੱਕ ਵੱਖਰੀ ਖੋਜ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ ।",
+    ),
+    "metadataOperationFailed": MessageLookupByLibrary.simpleMessage(
+      "ਮੇਟਾਡਾਟਾ ਓਪਰੇਸ਼ਨ ਫੇਲ੍ਹ ਹੈ ।",
+    ),
+    "metadataOverwriteWarning": MessageLookupByLibrary.simpleMessage(
+      "ਇਹ ਏਮਬੇਡਡ ਸਿਰਲੇਖ, ਕਲਾਕਾਰ, ਐਲਬਮ ਅਤੇ ਕਵਰ ਨੂੰ ਓਵਰਰਾਈਟ ਕਰੇਗਾ ਜਦੋਂ ਕਿ ਮੈਚ ਪ੍ਰਦਾਨ ਨਹੀਂ ਕਰਦਾ ਕਿਸੇ ਵੀ ਖੇਤਰ ਨੂੰ ਸੁਰੱਖਿਅਤ ਰੱਖਦਾ ਹੈ.",
+    ),
+    "metadataSearchDescription": MessageLookupByLibrary.simpleMessage(
+      "ਇਸ ਦੇ ਸਿਰਲੇਖ, ਕਲਾਕਾਰ, ਐਲਬਮ ਅਤੇ ਕਵਰ ਨੂੰ ਸਥਾਨਕ ਫਾਇਲ ਵਿੱਚ ਸ਼ਾਮਿਲ ਕਰਨ ਲਈ ਸਹੀ ਮੇਲ ਚੁਣੋ.",
+    ),
+    "metadataSearchHint": MessageLookupByLibrary.simpleMessage(
+      "ਗੀਤ ਜਾਂ ਕਲਾਕਾਰ ਦਾ ਨਾਮ",
+    ),
+    "metadataSearchTitle": MessageLookupByLibrary.simpleMessage("ਗੀਤ ਪਛਾਣੋ"),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
       "ਯਕੀਨੀ ਬਣਾਓ ਕਿ ਤੁਹਾਡੇ ਮਾਈਕ੍ਰੋਫ਼ੋਨ ਦੇ ਨੇੜੇ ਸੰਗੀਤ ਕਾਫ਼ੀ ਉੱਚੀ ਆਵਾਜ਼ ਵਿੱਚ ਚੱਲ ਰਿਹਾ ਹੈ।",
     ),
@@ -1214,6 +1238,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncDownloading": MessageLookupByLibrary.simpleMessage(
       "EMusic ਤਬਦੀਲੀਆਂ ਨੂੰ ਡਾਊਨਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ...",
     ),
+    "syncForceReplaceBackupSaved": m12,
     "syncForceReplaceConfirmAction": MessageLookupByLibrary.simpleMessage(
       "Reemplazar y subir",
     ),
@@ -1223,11 +1248,42 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceConfirmTitle": MessageLookupByLibrary.simpleMessage(
       "¿Reemplazar la biblioteca ਸੰਗੀਤਕ ਰਿਮੋਟਾ?",
     ),
+    "syncForceReplaceCountMismatch": MessageLookupByLibrary.simpleMessage(
+      "ਅੱਪਲੋਡ ਕੀਤੀਆਂ ਗਿਣਤੀਆਂ ਲੋਕਲ ਲਾਇਬਰੇਰੀ ਨਾਲ ਮੇਲ ਨਹੀਂ ਖਾਂਦੀਆਂ । ਰਿਮੋਟ ਰਿਪਲੇਸਮੈਂਟ ਦੀ ਪੁਸ਼ਟੀ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕੀ ।",
+    ),
+    "syncForceReplaceCreatingBackup": MessageLookupByLibrary.simpleMessage(
+      "ਕਲਾਉਡ ਡੇਟਾ ਨੂੰ ਬਦਲਣ ਤੋਂ ਪਹਿਲਾਂ ਰਿਕਵਰੀ ਬੈਕਅਪ ਬਣਾਉਣਾ...",
+    ),
     "syncForceReplaceDescription": MessageLookupByLibrary.simpleMessage(
       "Pausa la sincronización pendiente y reemplaza a la fuerza tu biblioteca musical remota con los datos actuales de este dispositivo. ਲਾਸ Descargas permanentecen ਲੋਕਲ.",
     ),
+    "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
+      "EMusic ਕਲਾਉਡ ਰਿਮੋਟ ਲਾਇਬਰੇਰੀ ਨੂੰ ਤਬਦੀਲ ਨਹੀਂ ਕਰ ਸਕਿਆ ।",
+    ),
+    "syncForceReplaceFailedLocalPreserved":
+        MessageLookupByLibrary.simpleMessage(
+          "ਰਿਮੋਟ ਰਿਪਲੇਸਮੈਂਟ ਫੇਲ੍ਹ ਹੈ । ਤੁਹਾਡਾ ਸਥਾਨਕ ਡੇਟਾ ਅਤੇ ਰਿਕਵਰੀ ਬੈਕਅਪ ਸੁਰੱਖਿਅਤ ਕੀਤਾ ਗਿਆ ਸੀ.",
+        ),
+    "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
+      "ਅੱਪਲੋਡ ਪੂਰਾ ਨਹੀਂ ਹੋਇਆ",
+    ),
+    "syncForceReplaceInProgress": MessageLookupByLibrary.simpleMessage(
+      "ਸਿੰਕ ਰੋਕਿਆ ਜਾ ਰਿਹਾ ਹੈ, ਬੈਕਅੱਪ ਬਣਾਇਆ ਜਾ ਰਿਹਾ ਹੈ, ਅਤੇ ਲੋਕਲ ਲਾਇਬਰੇਰੀ ਅੱਪਲੋਡ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ...",
+    ),
+    "syncForceReplacePauseFailed": MessageLookupByLibrary.simpleMessage(
+      "ਮੌਜੂਦਾ ਸਿੰਕ੍ਰੋਨਾਈਜ਼ੇਸ਼ਨ ਨੂੰ ਸੁਰੱਖਿਅਤ ਢੰਗ ਨਾਲ ਰੋਕਿਆ ਨਹੀਂ ਜਾ ਸਕਿਆ । ਇੱਕ ਪਲ ਵਿੱਚ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ.",
+    ),
+    "syncForceReplaceSuccess": MessageLookupByLibrary.simpleMessage(
+      "ਰਿਮੋਟ ਸੰਗੀਤ ਲਾਇਬਰੇਰੀ ਨੂੰ ਇਸ ਜੰਤਰ ਦੇ ਮੌਜੂਦਾ ਡਾਟਾ ਨਾਲ ਤਬਦੀਲ ਕੀਤਾ ਗਿਆ ਸੀ ।",
+    ),
+    "syncForceReplaceSuccessTitle": MessageLookupByLibrary.simpleMessage(
+      "ਅੱਪਲੋਡ ਪੂਰਾ ਹੋਇਆ",
+    ),
     "syncForceReplaceTitle": MessageLookupByLibrary.simpleMessage(
       "ਰੱਦ ਕਰੋlar sincronización y subir esta base",
+    ),
+    "syncForceReplaceValidating": MessageLookupByLibrary.simpleMessage(
+      "ਕਲਾਉਡ ਡਾਟਾ ਬਦਲਣ ਤੋਂ ਪਹਿਲਾਂ ਅੱਪਲੋਡ ਕੀਤੀ ਲਾਇਬਰੇਰੀ ਨੂੰ ਪ੍ਰਮਾਣਿਤ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ...",
     ),
     "syncLibrarySynced": MessageLookupByLibrary.simpleMessage(
       "ਸਮਕਾਲੀ ਲਾਇਬ੍ਰੇਰੀ।",
@@ -1299,11 +1355,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "url ਖੋਜਿਆ ਗਿਆ ਸੰਬੰਧਿਤ ਸਮੱਗਰੀ ਨੂੰ ਖੋਲ੍ਹਣ/ਪਲੇ ਕਰਨ ਲਈ ਇਸ \'ਤੇ ਕਲਿੱਕ ਕਰੋ",
     ),
+    "useThisMetadata": MessageLookupByLibrary.simpleMessage(
+      "ਇਹ ਮੇਟਾਡਾਟਾ ਵਰਤੋਂ",
+    ),
     "userBlocked": MessageLookupByLibrary.simpleMessage("ਬਲੌਕ ਕੀਤਾ ਉਪਭੋਗਤਾ"),
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "ਜਵਾਬ ਵਿੱਚ ਉਪਭੋਗਤਾਵਾਂ ਦੀ ਸੂਚੀ ਨਹੀਂ ਹੈ।",
     ),
-    "userSearchFailed": m12,
+    "userSearchFailed": m13,
     "userUnblocked": MessageLookupByLibrary.simpleMessage("ਅਣਲਾਕ ਕੀਤਾ ਉਪਭੋਗਤਾ"),
     "username": MessageLookupByLibrary.simpleMessage("ਯੂਜ਼ਰਨੇਮ"),
     "video": MessageLookupByLibrary.simpleMessage("ਵੀਡੀਓ"),

@@ -44,7 +44,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m11(count) => "${count} szinkronizált változtatások.";
 
-  static String m12(statusCode) =>
+  static String m12(path) => "Biztonsági mentés: ${path}";
+
+  static String m13(statusCode) =>
       "Nem sikerült felhasználókat keresni (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -544,6 +546,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Válassza ki a kezdőképernyő kezdeti tartalmának számát (kb.). Kevesebb eredmény gyorsabban töltődik be",
     ),
     "id": MessageLookupByLibrary.simpleMessage("ID"),
+    "identifySongMetadata": MessageLookupByLibrary.simpleMessage(
+      "A metaadatok azonosítása",
+    ),
     "ignoreBatOpt": MessageLookupByLibrary.simpleMessage(
       "Az akkumulátor optimalizálás figyelmen kívül hagyása",
     ),
@@ -673,6 +678,27 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "manageCollaborators": MessageLookupByLibrary.simpleMessage(
       "Együttműködők (barátok) kezelése",
+    ),
+    "metadataApplySuccess": MessageLookupByLibrary.simpleMessage(
+      "A metaadatok bekerültek a helyi fájlba.",
+    ),
+    "metadataNoResults": MessageLookupByLibrary.simpleMessage(
+      "Nincs találat. Próbáljon meg egy másik keresést.",
+    ),
+    "metadataOperationFailed": MessageLookupByLibrary.simpleMessage(
+      "A metaadat művelet sikertelen.",
+    ),
+    "metadataOverwriteWarning": MessageLookupByLibrary.simpleMessage(
+      "Ez felülírja a beágyazott címet, művészt, albumot és borít, miközben megőrzi a mezőket, amelyeket a mérkőzés nem biztosít.",
+    ),
+    "metadataSearchDescription": MessageLookupByLibrary.simpleMessage(
+      "Válassza ki a megfelelő mérkőzés beágyazott címe, művész, album és borító a helyi fájl.",
+    ),
+    "metadataSearchHint": MessageLookupByLibrary.simpleMessage(
+      "Ének- vagy művésznév",
+    ),
+    "metadataSearchTitle": MessageLookupByLibrary.simpleMessage(
+      "A dal azonosítása",
     ),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
       "Győződjön meg arról, hogy a zene elég hangosan szól a mikrofon közelében.",
@@ -1268,6 +1294,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncDownloading": MessageLookupByLibrary.simpleMessage(
       "Az EMusic módosításainak letöltése...",
     ),
+    "syncForceReplaceBackupSaved": m12,
     "syncForceReplaceConfirmAction": MessageLookupByLibrary.simpleMessage(
       "Reemplazar y subir",
     ),
@@ -1277,11 +1304,42 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceConfirmTitle": MessageLookupByLibrary.simpleMessage(
       "Reemplazar la biblioteca musical remota?",
     ),
+    "syncForceReplaceCountMismatch": MessageLookupByLibrary.simpleMessage(
+      "A feltöltött számok nem egyeznek a helyi könyvtárral. A távoli csere nem erősíthető meg.",
+    ),
+    "syncForceReplaceCreatingBackup": MessageLookupByLibrary.simpleMessage(
+      "Létrehozunk egy biztonsági mentést, mielőtt kicseréljük a felhőadatokat...",
+    ),
     "syncForceReplaceDescription": MessageLookupByLibrary.simpleMessage(
       "Pausa la sincronización pendiente y reemplaza a la fuerza tu biblioteca musical remota con los datos actuales de este dispositivo. Las descargas permanecen locales.",
     ),
+    "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
+      "Az emusztikus felhő nem helyettesíthette a távoli könyvtárat.",
+    ),
+    "syncForceReplaceFailedLocalPreserved":
+        MessageLookupByLibrary.simpleMessage(
+          "A távoli csere nem sikerült. Megőrizték a helyi adatokat és a helyreállítást.",
+        ),
+    "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
+      "A feltöltés nem fejeződött be",
+    ),
+    "syncForceReplaceInProgress": MessageLookupByLibrary.simpleMessage(
+      "Szinkronizálás, erősítés és a helyi könyvtár feltöltése...",
+    ),
+    "syncForceReplacePauseFailed": MessageLookupByLibrary.simpleMessage(
+      "A jelenlegi szinkronizációt nem lehetett biztonságosan leállítani. Próbáld újra egy pillanat alatt.",
+    ),
+    "syncForceReplaceSuccess": MessageLookupByLibrary.simpleMessage(
+      "A távoli zenei könyvtár helyébe az eszköz aktuális adatai léptek.",
+    ),
+    "syncForceReplaceSuccessTitle": MessageLookupByLibrary.simpleMessage(
+      "Feltöltés befejezve",
+    ),
     "syncForceReplaceTitle": MessageLookupByLibrary.simpleMessage(
       "Cancelar sincronización y subir ESTA base",
+    ),
+    "syncForceReplaceValidating": MessageLookupByLibrary.simpleMessage(
+      "A feltöltött könyvtár hitelesítése a felhőadatok cseréje előtt...",
     ),
     "syncLibrarySynced": MessageLookupByLibrary.simpleMessage(
       "Szinkronizált könyvtár.",
@@ -1349,13 +1407,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "Az észlelt URL kattintson rá a kapcsolódó tartalom megnyitásához/lejátszásához",
     ),
+    "useThisMetadata": MessageLookupByLibrary.simpleMessage(
+      "A metaadatok használata",
+    ),
     "userBlocked": MessageLookupByLibrary.simpleMessage(
       "Letiltott felhasználó",
     ),
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "A válasz nem tartalmazza a felhasználók listáját.",
     ),
-    "userSearchFailed": m12,
+    "userSearchFailed": m13,
     "userUnblocked": MessageLookupByLibrary.simpleMessage(
       "Feloldott felhasználó",
     ),

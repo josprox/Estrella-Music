@@ -44,7 +44,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m11(count) => "${count} 同步更改。";
 
-  static String m12(statusCode) => "无法搜索用户 (${statusCode})。";
+  static String m12(path) => "恢复备份 : ${path}";
+
+  static String m13(statusCode) => "无法搜索用户 (${statusCode})。";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -365,6 +367,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "选择初始主屏幕内容的数量（大约）。结果更少加载速度更快",
     ),
     "id": MessageLookupByLibrary.simpleMessage("身份证号"),
+    "identifySongMetadata": MessageLookupByLibrary.simpleMessage("识别元数据"),
     "ignoreBatOpt": MessageLookupByLibrary.simpleMessage("忽略电池优化"),
     "ignoreBatOptDes": MessageLookupByLibrary.simpleMessage(
       "如果您因系统优化而遇到通知问题或播放停止，请激活此选项",
@@ -439,6 +442,23 @@ class MessageLookup extends MessageLookupByLibrary {
     "lyrics": MessageLookupByLibrary.simpleMessage("信件"),
     "lyricsNotAvailable": MessageLookupByLibrary.simpleMessage("歌词不可用！"),
     "manageCollaborators": MessageLookupByLibrary.simpleMessage("管理合作者（朋友）"),
+    "metadataApplySuccess": MessageLookupByLibrary.simpleMessage(
+      "元数据已嵌入本地文件 。",
+    ),
+    "metadataNoResults": MessageLookupByLibrary.simpleMessage(
+      "没有找到匹配 。 尝试不同的搜索。",
+    ),
+    "metadataOperationFailed": MessageLookupByLibrary.simpleMessage(
+      "元数据操作失败 。",
+    ),
+    "metadataOverwriteWarning": MessageLookupByLibrary.simpleMessage(
+      "这将覆盖嵌入式标题,艺术家,相册和封面,同时保留匹配不提供的任何字段.",
+    ),
+    "metadataSearchDescription": MessageLookupByLibrary.simpleMessage(
+      "选择正确的匹配将它的标题,艺术家,相册和封面嵌入本地文件.",
+    ),
+    "metadataSearchHint": MessageLookupByLibrary.simpleMessage("歌曲或艺名"),
+    "metadataSearchTitle": MessageLookupByLibrary.simpleMessage("识别歌曲"),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
       "确保麦克风附近的音乐播放声音足够大。",
     ),
@@ -839,6 +859,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncDownloading": MessageLookupByLibrary.simpleMessage(
       "正在下载 EMusic 更改...",
     ),
+    "syncForceReplaceBackupSaved": m12,
     "syncForceReplaceConfirmAction": MessageLookupByLibrary.simpleMessage(
       "Reemplazar y subir",
     ),
@@ -848,11 +869,40 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceConfirmTitle": MessageLookupByLibrary.simpleMessage(
       "¿Reemplazar la biblioteca musical remota ？",
     ),
+    "syncForceReplaceCountMismatch": MessageLookupByLibrary.simpleMessage(
+      "上传的计数与本地库不符 。 远程替换无法确认 。",
+    ),
+    "syncForceReplaceCreatingBackup": MessageLookupByLibrary.simpleMessage(
+      "在替换云数据之前创建恢复备份...",
+    ),
     "syncForceReplaceDescription": MessageLookupByLibrary.simpleMessage(
       "Pausa la sincronización pendiente y reemplaza a la fuerza tu biblioteca musical remota con los datos actuales de este dispositivo. Las descargas permanecen loces.",
     ),
+    "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud 无法替换远程库 。",
+    ),
+    "syncForceReplaceFailedLocalPreserved":
+        MessageLookupByLibrary.simpleMessage("远程替换失败 。 您的本地数据和回收备份被保存了下来 。"),
+    "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
+      "上传未完成",
+    ),
+    "syncForceReplaceInProgress": MessageLookupByLibrary.simpleMessage(
+      "暂停同步,创建备份,并上传本地库...",
+    ),
+    "syncForceReplacePauseFailed": MessageLookupByLibrary.simpleMessage(
+      "无法安全地暂停当前同步 。 再试一下",
+    ),
+    "syncForceReplaceSuccess": MessageLookupByLibrary.simpleMessage(
+      "远程音乐库被这个设备的当前数据所取代.",
+    ),
+    "syncForceReplaceSuccessTitle": MessageLookupByLibrary.simpleMessage(
+      "上传完成",
+    ),
     "syncForceReplaceTitle": MessageLookupByLibrary.simpleMessage(
       "取消sincronización y subir esta base",
+    ),
+    "syncForceReplaceValidating": MessageLookupByLibrary.simpleMessage(
+      "在替换云数据前验证上传库...",
     ),
     "syncLibrarySynced": MessageLookupByLibrary.simpleMessage("同步库。"),
     "syncLibraryUpToDate": MessageLookupByLibrary.simpleMessage("图书馆是最新的。"),
@@ -894,9 +944,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "检测到的 URL 单击它可打开/播放相关内容",
     ),
+    "useThisMetadata": MessageLookupByLibrary.simpleMessage("使用此元数据"),
     "userBlocked": MessageLookupByLibrary.simpleMessage("被阻止的用户"),
     "userListMissing": MessageLookupByLibrary.simpleMessage("响应不包含用户列表。"),
-    "userSearchFailed": m12,
+    "userSearchFailed": m13,
     "userUnblocked": MessageLookupByLibrary.simpleMessage("解锁用户"),
     "username": MessageLookupByLibrary.simpleMessage("用户名"),
     "video": MessageLookupByLibrary.simpleMessage("视频"),

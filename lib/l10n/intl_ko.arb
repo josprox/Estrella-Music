@@ -1,700 +1,36 @@
 {
   "@@locale": "ko",
-  "deleteDownloadData": "다운로드에서 제거",
-  "@deleteDownloadData": {
-    "description": "deleteDownloadData"
-  },
-  "trending": "인기 급상승",
-  "@trending": {
-    "description": "trending"
-  },
-  "clearImgCache": "이미지 캐시 비우기",
-  "@clearImgCache": {
-    "description": "clearImgCache"
-  },
-  "clearImgCacheDes": "클릭하면 캐시된 썸네일과 이미지를 비웁니다. (캐시된 이미지들을 갱신하고 싶은 경우가 아니라면 추천하지 않습니다)",
-  "@clearImgCacheDes": {
-    "description": "clearImgCacheDes"
-  },
-  "ignoreBatOpt": "배터리 최적화 무시",
-  "@ignoreBatOpt": {
-    "description": "ignoreBatOpt"
-  },
-  "ignoreBatOptDes": "만약 배터리 최적화 기능 때문에 푸시 알림이 오지 않거나 음악이 멈춘다면, 이 설정을 활성화해주세요",
-  "@ignoreBatOptDes": {
-    "description": "ignoreBatOptDes"
-  },
-  "status": "상태",
-  "@status": {
-    "description": "status"
-  },
-  "enabled": "활성화됨",
-  "@enabled": {
-    "description": "enabled"
-  },
-  "disabled": "비활성화됨",
-  "@disabled": {
-    "description": "disabled"
-  },
-  "by": "창시자",
-  "@by": {
-    "description": "by"
-  },
-  "deleteDownloadedDataAlert": "다운로드에서 제거했습니다!",
-  "@deleteDownloadedDataAlert": {
-    "description": "deleteDownloadedDataAlert"
-  },
-  "searchDes": "음악,플레이리스트,앨범 혹은 아티스트",
-  "@searchDes": {
-    "description": "searchDes"
-  },
-  "searchRes": "검색 결과",
-  "@searchRes": {
-    "description": "searchRes"
-  },
-  "videos": "동영상",
-  "@videos": {
-    "description": "videos"
-  },
-  "nomatch": "검색결과 없음",
-  "@nomatch": {
-    "description": "nomatch"
-  },
-  "resetblacklistedplaylistDes": "블랙리스트에 추가한 Piped의 모든 플레이리스트를 초기화",
-  "@resetblacklistedplaylistDes": {
-    "description": "resetblacklistedplaylistDes"
-  },
-  "library": "라이브러리",
-  "@library": {
-    "description": "library"
-  },
-  "startRadio": "라디오 시작",
-  "@startRadio": {
-    "description": "startRadio"
-  },
-  "libAlbums": "라이브러리 앨범",
-  "@libAlbums": {
-    "description": "libAlbums"
-  },
-  "communityplaylists": "커뮤니티 플레이리스트",
-  "@communityplaylists": {
-    "description": "communityplaylists"
-  },
-  "retry": "재시도!",
-  "@retry": {
-    "description": "retry"
-  },
-  "recentlyPlayed": "최근 재생됨",
-  "@recentlyPlayed": {
-    "description": "recentlyPlayed"
-  },
-  "favorites": "즐겨찾기",
-  "@favorites": {
-    "description": "favorites"
-  },
-  "rename": "이름 바꾸기",
-  "@rename": {
-    "description": "rename"
-  },
-  "playNext": "다음에 재생",
-  "@playNext": {
-    "description": "playNext"
-  },
-  "cancelTimer": "타이머 취소",
-  "@cancelTimer": {
-    "description": "cancelTimer"
-  },
-  "minutes": "분",
-  "@minutes": {
-    "description": "minutes"
-  },
-  "endOfThisSong": "이 음악의 끝",
-  "@endOfThisSong": {
-    "description": "endOfThisSong"
-  },
-  "themeMode": "테마 모드",
-  "@themeMode": {
-    "description": "themeMode"
-  },
-  "dynamic": "동적",
-  "@dynamic": {
-    "description": "dynamic"
-  },
-  "systemDefault": "시스템 기본",
-  "@systemDefault": {
-    "description": "systemDefault"
-  },
-  "dark": "다크",
-  "@dark": {
-    "description": "dark"
-  },
-  "homeContentCount": "홈 컨텐츠 수",
-  "@homeContentCount": {
-    "description": "homeContentCount"
-  },
-  "enableBottomNav": "하단의 네비게이션 바",
-  "@enableBottomNav": {
-    "description": "enableBottomNav"
-  },
-  "enableBottomNavDes": "하단 내비게이션 바로 변경",
-  "@enableBottomNavDes": {
-    "description": "enableBottomNavDes"
-  },
-  "low": "낮음",
-  "@low": {
-    "description": "low"
-  },
-  "downloadLocation": "다운로드 위치",
-  "@downloadLocation": {
-    "description": "downloadLocation"
-  },
-  "downloadingFormat": "다운로드 파일의 형식",
-  "@downloadingFormat": {
-    "description": "downloadingFormat"
-  },
-  "songAlreadyOfflineAlert": "음악이 이미 캐시에 있습니다",
-  "@songAlreadyOfflineAlert": {
-    "description": "songAlreadyOfflineAlert"
-  },
-  "cancelTimerAlert": "취침 타이머 취소됨",
-  "@cancelTimerAlert": {
-    "description": "cancelTimerAlert"
-  },
-  "sleepTimeSetAlert": "취침 타이머가 설정됨",
-  "@sleepTimeSetAlert": {
-    "description": "sleepTimeSetAlert"
-  },
-  "downloads": "다운로드",
-  "@downloads": {
-    "description": "downloads"
-  },
-  "removePlaylist": "플레이리스트 삭제",
-  "@removePlaylist": {
-    "description": "removePlaylist"
-  },
-  "cancel": "취소",
-  "@cancel": {
-    "description": "cancel"
-  },
-  "light": "라이트",
-  "@light": {
-    "description": "light"
-  },
-  "skipSilenceDes": "음악 재생 중에 묵음이 있는 구간은 건너뛰어집니다",
-  "@skipSilenceDes": {
-    "description": "skipSilenceDes"
-  },
-  "streamingQuality": "스트리밍 음질",
-  "@streamingQuality": {
-    "description": "streamingQuality"
-  },
-  "high": "높음",
-  "@high": {
-    "description": "high"
-  },
-  "equalizerDes": "시스템 이퀄라이저 열기",
-  "@equalizerDes": {
-    "description": "equalizerDes"
-  },
-  "search": "검색",
-  "@search": {
-    "description": "search"
-  },
-  "linkPipedDes": "플레이리스트를 Piped로부터 가져오기",
-  "@linkPipedDes": {
-    "description": "linkPipedDes"
-  },
-  "stopMusicOnTaskClear": "작업 관리자에서 종료되면 음악을 끝냄",
-  "@stopMusicOnTaskClear": {
-    "description": "stopMusicOnTaskClear"
-  },
-  "stopMusicOnTaskClearDes": "작업 관리자에서 앱이 종료되면 음악이 더이상 재생되지 않습니다",
-  "@stopMusicOnTaskClearDes": {
-    "description": "stopMusicOnTaskClearDes"
-  },
-  "libPlaylists": "라이브러리 플레이리스트",
-  "@libPlaylists": {
-    "description": "libPlaylists"
-  },
-  "libSongs": "라이브러리 음악",
-  "@libSongs": {
-    "description": "libSongs"
-  },
-  "playlists": "플레이리스트",
-  "@playlists": {
-    "description": "playlists"
-  },
-  "artists": "아티스트",
-  "@artists": {
-    "description": "artists"
-  },
-  "settings": "설정",
-  "@settings": {
-    "description": "settings"
-  },
-  "enqueueSong": "이 곡을 대기열에 추가",
-  "@enqueueSong": {
-    "description": "enqueueSong"
-  },
-  "goToAlbum": "앨범으로 이동",
-  "@goToAlbum": {
-    "description": "goToAlbum"
-  },
-  "playlistRenameAlert": "이름 바꾸기 완료!",
-  "@playlistRenameAlert": {
-    "description": "playlistRenameAlert"
-  },
-  "playlistRemovedAlert": "플레이리스트 삭제함!",
-  "@playlistRemovedAlert": {
-    "description": "playlistRemovedAlert"
-  },
-  "playlistBookmarkAddAlert": "플레이리스트를 즐겨찾기에 추가함!",
-  "@playlistBookmarkAddAlert": {
-    "description": "playlistBookmarkAddAlert"
-  },
-  "items": "항목",
-  "@items": {
-    "description": "items"
-  },
-  "enqueueAll": "모두 대기열에 추가",
-  "@enqueueAll": {
-    "description": "enqueueAll"
-  },
-  "renamePlaylist": "플레이리스트 이름 변경",
-  "@renamePlaylist": {
-    "description": "renamePlaylist"
-  },
-  "cachedOrOffline": "캐시됨/오프라인",
-  "@cachedOrOffline": {
-    "description": "cachedOrOffline"
-  },
-  "emptyPlaylist": "빈 플레이리스트!",
-  "@emptyPlaylist": {
-    "description": "emptyPlaylist"
-  },
-  "quickpicks": "빠른 추천",
-  "@quickpicks": {
-    "description": "quickpicks"
-  },
-  "discover": "탐색",
-  "@discover": {
-    "description": "discover"
-  },
-  "cacheSongs": "음악을 캐시에 저장",
-  "@cacheSongs": {
-    "description": "cacheSongs"
-  },
-  "skipSilence": "묵음 건너뛰기",
-  "@skipSilence": {
-    "description": "skipSilence"
-  },
-  "streamingQualityDes": "음악 스트림의 음질",
-  "@streamingQualityDes": {
-    "description": "streamingQualityDes"
-  },
-  "githubDes": "Github 소스 코드 보기\n이 프로젝트가 마음에 든다면, ⭐을 남겨주세요",
-  "@githubDes": {
-    "description": "githubDes"
-  },
-  "for1": "어구",
-  "@for1": {
-    "description": "for1"
-  },
-  "songRemovedfromQueueCurrSong": "지금 재생중인 곡을 제거할 순 없습니다",
-  "@songRemovedfromQueueCurrSong": {
-    "description": "songRemovedfromQueueCurrSong"
-  },
-  "songAddedToPlaylistAlert": "플레이리스트에 음악 추가됨!",
-  "@songAddedToPlaylistAlert": {
-    "description": "songAddedToPlaylistAlert"
-  },
-  "link": "로그인",
-  "@link": {
-    "description": "link"
-  },
-  "singles": "싱글",
-  "@singles": {
-    "description": "singles"
-  },
-  "networkError1": "네트워크 에러!",
-  "@networkError1": {
-    "description": "networkError1"
-  },
-  "create": "생성",
-  "@create": {
-    "description": "create"
-  },
-  "songRemovedfromQueue": "대기열에서 제거됨!",
-  "@songRemovedfromQueue": {
-    "description": "songRemovedfromQueue"
-  },
-  "operationFailed": "동작 실패",
-  "@operationFailed": {
-    "description": "operationFailed"
-  },
-  "goToDownloadPage": "다운로드 페이지로 가려면 클릭",
-  "@goToDownloadPage": {
-    "description": "goToDownloadPage"
-  },
-  "add5Minutes": "5분 추가",
-  "@add5Minutes": {
-    "description": "add5Minutes"
-  },
-  "language": "언어",
-  "@language": {
-    "description": "language"
-  },
-  "upNext": "재생 예정",
-  "@upNext": {
-    "description": "upNext"
-  },
-  "setDiscoverContent": "탐색할 컨텐츠를 설정",
-  "@setDiscoverContent": {
-    "description": "setDiscoverContent"
-  },
-  "topmusicvideos": "인기 뮤직 비디오",
-  "@topmusicvideos": {
-    "description": "topmusicvideos"
-  },
-  "basedOnLast": "당신의 최근 취향에 기반함",
-  "@basedOnLast": {
-    "description": "basedOnLast"
-  },
-  "downloadingFormatDes": "다운로드 파일의 형식을 정해주세요. \"Opus\" 형식이 최고 음질입니다",
-  "@downloadingFormatDes": {
-    "description": "downloadingFormatDes"
-  },
-  "allFieldsReqMsg": "모든 항목을 기입해주세요",
-  "@allFieldsReqMsg": {
-    "description": "allFieldsReqMsg"
-  },
-  "lyricsNotAvailable": "가사를 찾지 못했습니다!",
-  "@lyricsNotAvailable": {
-    "description": "lyricsNotAvailable"
-  },
-  "selectAuthIns": "인증 인스턴스를 선택",
-  "@selectAuthIns": {
-    "description": "selectAuthIns"
-  },
-  "home": "홈",
-  "@home": {
-    "description": "home"
-  },
-  "songs": "음악",
-  "@songs": {
-    "description": "songs"
-  },
-  "albums": "앨범",
-  "@albums": {
-    "description": "albums"
-  },
-  "libArtists": "라이브러리 아티스트",
-  "@libArtists": {
-    "description": "libArtists"
-  },
-  "featuredplaylists": "인기 플레이리스트",
-  "@featuredplaylists": {
-    "description": "featuredplaylists"
-  },
-  "noOfflineSong": "오프라인 음악이 없습니다!",
-  "@noOfflineSong": {
-    "description": "noOfflineSong"
-  },
   "CreateNewPlaylist": "새 플레이리스트 만들기",
   "@CreateNewPlaylist": {
     "description": "CreateNewPlaylist"
-  },
-  "createnAdd": "생성 및 추가",
-  "@createnAdd": {
-    "description": "createnAdd"
-  },
-  "noBookmarks": "북마크 없음!",
-  "@noBookmarks": {
-    "description": "noBookmarks"
-  },
-  "languageDes": "앱 언어 설정",
-  "@languageDes": {
-    "description": "languageDes"
-  },
-  "homeContentCountDes": "홈스크린에서 보여줄 컨텐츠의 대략적인 수를 정해주세요. 수가 적을수록 빨리 불러와집니다",
-  "@homeContentCountDes": {
-    "description": "homeContentCountDes"
-  },
-  "cacheSongsDes": "추후/오프라인 재생을 위해 곡을 캐싱하지만, 기기의 공간을 차지할 것입니다",
-  "@cacheSongsDes": {
-    "description": "cacheSongsDes"
-  },
-  "cacheHomeScreenDataDes": "홈 스크린의 컨텐츠 데이터를 캐시에 저장하면, 홈 스크린이 즉시 불러와집니다",
-  "@cacheHomeScreenDataDes": {
-    "description": "cacheHomeScreenDataDes"
-  },
-  "scanning": "스캔하는 중...",
-  "@scanning": {
-    "description": "scanning"
-  },
-  "equalizer": "이퀄라이저",
-  "@equalizer": {
-    "description": "equalizer"
-  },
-  "github": "Github",
-  "@github": {
-    "description": "github"
-  },
-  "viewAll": "모두 보기",
-  "@viewAll": {
-    "description": "viewAll"
-  },
-  "results": "결과",
-  "@results": {
-    "description": "results"
-  },
-  "songEnqueueAlert": "대기열에 음악 추가됨!",
-  "@songEnqueueAlert": {
-    "description": "songEnqueueAlert"
-  },
-  "pipedplstSyncAlert": "Piped 플레이리스트 동기화됨!",
-  "@pipedplstSyncAlert": {
-    "description": "pipedplstSyncAlert"
-  },
-  "playlistCreatednsongAddedAlert": "플레이리스트를 생성하고 음악 추가함!",
-  "@playlistCreatednsongAddedAlert": {
-    "description": "playlistCreatednsongAddedAlert"
-  },
-  "playlistBookmarkRemoveAlert": "플레이리스트 즐겨찾기 제거함!",
-  "@playlistBookmarkRemoveAlert": {
-    "description": "playlistBookmarkRemoveAlert"
-  },
-  "artistBookmarkRemoveAlert": "아티스트를 즐겨찾기에서 제거함!",
-  "@artistBookmarkRemoveAlert": {
-    "description": "artistBookmarkRemoveAlert"
-  },
-  "syncedLyricsNotAvailable": "동기화된 가사를 찾지 못했습니다!",
-  "@syncedLyricsNotAvailable": {
-    "description": "syncedLyricsNotAvailable"
-  },
-  "backgroundPlay": "백그라운드에서 음악 재생",
-  "@backgroundPlay": {
-    "description": "backgroundPlay"
-  },
-  "backgroundPlayDes": "백그라운드 음악 재생을 활성화/비활성화 (백그라운드에서 동작하는 동안은 시스템 트레이에서 접근 가능합니다)",
-  "@backgroundPlayDes": {
-    "description": "backgroundPlayDes"
-  },
-  "subscribers": "구독자",
-  "@subscribers": {
-    "description": "subscribers"
-  },
-  "synced": "동기화됨",
-  "@synced": {
-    "description": "synced"
-  },
-  "plain": "보통",
-  "@plain": {
-    "description": "plain"
-  },
-  "radioNotAvailable": "이 아티스트의 라디오는 없습니다!",
-  "@radioNotAvailable": {
-    "description": "radioNotAvailable"
-  },
-  "songAlreadyExists": "음악이 이미 있습니다!",
-  "@songAlreadyExists": {
-    "description": "songAlreadyExists"
-  },
-  "songRemovedAlert": "다음으로부터 제거됨",
-  "@songRemovedAlert": {
-    "description": "songRemovedAlert"
-  },
-  "artistDesNotAvailable": "설명을 찾지 못했습니다!",
-  "@artistDesNotAvailable": {
-    "description": "artistDesNotAvailable"
-  },
-  "notaValidLink": "유효한 링크가 아님!",
-  "@notaValidLink": {
-    "description": "notaValidLink"
-  },
-  "dismiss": "무시",
-  "@dismiss": {
-    "description": "dismiss"
-  },
-  "local": "기기",
-  "@local": {
-    "description": "local"
-  },
-  "notaSongVideo": "음악/뮤직비디오가 아님!",
-  "@notaSongVideo": {
-    "description": "notaSongVideo"
   },
   "Piped": "Piped",
   "@Piped": {
     "description": "Piped"
   },
-  "unLink": "로그아웃",
-  "@unLink": {
-    "description": "unLink"
+  "about": "에 대한",
+  "@about": {
+    "description": "about"
   },
-  "hintApiUrl": "Piped 인스턴스의 API URL",
-  "@hintApiUrl": {
-    "description": "hintApiUrl"
-  },
-  "customIns": "커스텀 인스턴스",
-  "@customIns": {
-    "description": "customIns"
-  },
-  "selectAuthInsMsg": "인증 인스턴스를 선택해주세요!",
-  "@selectAuthInsMsg": {
-    "description": "selectAuthInsMsg"
-  },
-  "password": "비밀번호",
-  "@password": {
-    "description": "password"
-  },
-  "linkAlert": "로그인 성공!",
-  "@linkAlert": {
-    "description": "linkAlert"
-  },
-  "customInsSelectMsg": "커스텀 인스턴스를 선택해주세요",
-  "@customInsSelectMsg": {
-    "description": "customInsSelectMsg"
-  },
-  "unlinkAlert": "로그아웃 성공!",
-  "@unlinkAlert": {
-    "description": "unlinkAlert"
-  },
-  "playlistBlacklistAlert": "플레이리스트를 블랙리스트에 추가함!",
-  "@playlistBlacklistAlert": {
-    "description": "playlistBlacklistAlert"
-  },
-  "reset": "초기화",
-  "@reset": {
-    "description": "reset"
-  },
-  "blacklistPlstResetAlert": "초기화 성공!",
-  "@blacklistPlstResetAlert": {
-    "description": "blacklistPlstResetAlert"
-  },
-  "reArrangePlaylist": "플레이리스트 순서 변경",
-  "@reArrangePlaylist": {
-    "description": "reArrangePlaylist"
-  },
-  "removeMultiple": "여러 개의 음악을 제거",
-  "@removeMultiple": {
-    "description": "removeMultiple"
+  "add5Minutes": "5분 추가",
+  "@add5Minutes": {
+    "description": "add5Minutes"
   },
   "addMultipleSongs": "음악을 플레이리스트에 추가",
   "@addMultipleSongs": {
     "description": "addMultipleSongs"
   },
+  "addToLibrary": "라이브러리에 추가",
+  "@addToLibrary": {
+    "description": "addToLibrary"
+  },
   "addToPlaylist": "플레이리스트에 추가",
   "@addToPlaylist": {
     "description": "addToPlaylist"
   },
-  "noLibPlaylist": "라이브러리 플레이리스트가 없습니다!",
-  "@noLibPlaylist": {
-    "description": "noLibPlaylist"
-  },
-  "viewArtist": "아티스트 정보",
-  "@viewArtist": {
-    "description": "viewArtist"
-  },
-  "shareSong": "이 곡을 공유",
-  "@shareSong": {
-    "description": "shareSong"
-  },
-  "removeFromPlaylist": "플레이리스트에서 제거",
-  "@removeFromPlaylist": {
-    "description": "removeFromPlaylist"
-  },
-  "removeFromQueue": "대기열에서 제거",
-  "@removeFromQueue": {
-    "description": "removeFromQueue"
-  },
-  "removeFromLib": "라이브러리 음악에서 제거",
-  "@removeFromLib": {
-    "description": "removeFromLib"
-  },
-  "sleepTimer": "취침 타이머",
-  "@sleepTimer": {
-    "description": "sleepTimer"
-  },
-  "restoreLastPlaybackSession": "마지막 재생 세션을 복원",
-  "@restoreLastPlaybackSession": {
-    "description": "restoreLastPlaybackSession"
-  },
-  "restoreLastPlaybackSessionDes": "앱 시작 시 자동으로 마지막 재생 세션을 복원",
-  "@restoreLastPlaybackSessionDes": {
-    "description": "restoreLastPlaybackSessionDes"
-  },
-  "dontShowInfoAgain": "다시 보지 않기",
-  "@dontShowInfoAgain": {
-    "description": "dontShowInfoAgain"
-  },
-  "username": "사용자 이름",
-  "@username": {
-    "description": "username"
-  },
-  "newVersionAvailable": "새 버전을 이용할 수 있음!",
-  "@newVersionAvailable": {
-    "description": "newVersionAvailable"
-  },
-  "errorOccuredAlert": "알 수 없는 오류가 생겼습니다!",
-  "@errorOccuredAlert": {
-    "description": "errorOccuredAlert"
-  },
-  "resetblacklistedplaylist": "블랙리스트에 추가한 플레이리스트를 초기화",
-  "@resetblacklistedplaylist": {
-    "description": "resetblacklistedplaylist"
-  },
-  "disableTransitionAnimation": "전환 애니메이션 비활성화",
-  "@disableTransitionAnimation": {
-    "description": "disableTransitionAnimation"
-  },
-  "disableTransitionAnimationDes": "이 옵션을 활성화시키면 탭 전환 애니메이션이 비활성화됩니다",
-  "@disableTransitionAnimationDes": {
-    "description": "disableTransitionAnimationDes"
-  },
-  "cacheHomeScreenData": "홈 스크린의 컨텐츠를 캐시에 저장",
-  "@cacheHomeScreenData": {
-    "description": "cacheHomeScreenData"
-  },
-  "exportDowloadedFiles": "다운로드한 파일을 내보내기",
-  "@exportDowloadedFiles": {
-    "description": "exportDowloadedFiles"
-  },
-  "exportDowloadedFilesDes": "인앱 디렉토리에 있는 다운로드한 파일들을 외부 디렉토리로 옮기려면 클릭하세요",
-  "@exportDowloadedFilesDes": {
-    "description": "exportDowloadedFilesDes"
-  },
-  "exportedFileLocation": "다운로드한 파일을 내보낼 위치",
-  "@exportedFileLocation": {
-    "description": "exportedFileLocation"
-  },
-  "export": "내보내기",
-  "@export": {
-    "description": "export"
-  },
-  "exporting": "내보내는 중...",
-  "@exporting": {
-    "description": "exporting"
-  },
-  "downFilesFound": "다운로드한 파일이 발견됨",
-  "@downFilesFound": {
-    "description": "downFilesFound"
-  },
-  "close": "닫다",
-  "@close": {
-    "description": "close"
-  },
-  "exportMsg": "파일을 성공적으로 내보냈습니다",
-  "@exportMsg": {
-    "description": "exportMsg"
-  },
-  "clearImgCacheAlert": "이미지 캐시를 성공적으로 비웠습니다",
-  "@clearImgCacheAlert": {
-    "description": "clearImgCacheAlert"
-  },
-  "playlistCreatedAlert": "플레이리스트 생성됨!",
-  "@playlistCreatedAlert": {
-    "description": "playlistCreatedAlert"
+  "album": "앨범",
+  "@album": {
+    "description": "album"
   },
   "albumBookmarkAddAlert": "앨범을 즐겨찾기에 추가함!",
   "@albumBookmarkAddAlert": {
@@ -704,53 +40,85 @@
   "@albumBookmarkRemoveAlert": {
     "description": "albumBookmarkRemoveAlert"
   },
+  "albums": "앨범",
+  "@albums": {
+    "description": "albums"
+  },
+  "albumsByTaste": "당신의 취향에 따라",
+  "@albumsByTaste": {
+    "description": "albumsByTaste"
+  },
+  "allFieldsReqMsg": "모든 항목을 기입해주세요",
+  "@allFieldsReqMsg": {
+    "description": "allFieldsReqMsg"
+  },
+  "androidBackupWarning": "테스트되지 않음: 60개 이상의 파일을 다운로드한 후 확인란을 선택하면 프로세스가 많은 양의 메모리를 소비하고 휴대폰이나 앱이 충돌할 수 있습니다. 자신의 책임하에 진행하십시오.",
+  "@androidBackupWarning": {
+    "description": "androidBackupWarning"
+  },
+  "appInfo": "신청정보",
+  "@appInfo": {
+    "description": "appInfo"
+  },
   "artistBookmarkAddAlert": "아티스트를 즐겨찾기에 추가함!",
   "@artistBookmarkAddAlert": {
     "description": "artistBookmarkAddAlert"
   },
-  "openIn": "열기",
-  "@openIn": {
-    "description": "openIn"
+  "artistBookmarkRemoveAlert": "아티스트를 즐겨찾기에서 제거함!",
+  "@artistBookmarkRemoveAlert": {
+    "description": "artistBookmarkRemoveAlert"
   },
-  "keepScreenOnWhilePlaying": "재생 중 화면 켜짐 유지",
-  "@keepScreenOnWhilePlaying": {
-    "description": "keepScreenOnWhilePlaying"
+  "artistDesNotAvailable": "설명을 찾지 못했습니다!",
+  "@artistDesNotAvailable": {
+    "description": "artistDesNotAvailable"
   },
-  "keepScreenOnWhilePlayingDes": "활성화하면 음악 재생 중에 기기 화면이 켜진 상태로 유지됩니다",
-  "@keepScreenOnWhilePlayingDes": {
-    "description": "keepScreenOnWhilePlayingDes"
+  "artists": "아티스트",
+  "@artists": {
+    "description": "artists"
   },
-  "auth_login_success": "성공적으로 로그인되었습니다",
-  "@auth_login_success": {
-    "description": "auth_login_success"
+  "artistsByTaste": "당신의 취향에 따라",
+  "@artistsByTaste": {
+    "description": "artistsByTaste"
   },
-  "settings_cloud_backup": "클라우드 백업",
-  "@settings_cloud_backup": {
-    "description": "settings_cloud_backup"
+  "audioCodec": "오디오 코덱",
+  "@audioCodec": {
+    "description": "audioCodec"
   },
-  "settings_migration_title": "Joss Music Kotlin에서 마이그레이션",
-  "@settings_migration_title": {
-    "description": "settings_migration_title"
+  "auth_2fa_code": "인증코드",
+  "@auth_2fa_code": {
+    "description": "auth_2fa_code"
   },
-  "backup_confirm_question": "백업을 수행하시겠습니까?",
-  "@backup_confirm_question": {
-    "description": "backup_confirm_question"
+  "auth_2fa_invalid": "유효한 6자리 코드를 입력하거나 다시 로그인하세요.",
+  "@auth_2fa_invalid": {
+    "description": "auth_2fa_invalid"
   },
-  "backup_selection_prompt": "백업할 데이터 선택",
-  "@backup_selection_prompt": {
-    "description": "backup_selection_prompt"
+  "auth_2fa_subtitle": "인증 앱의 6자리 코드를 입력하세요. 이 액세스 권한은 5분 후에 만료됩니다.",
+  "@auth_2fa_subtitle": {
+    "description": "auth_2fa_subtitle"
   },
-  "search_recent_title": "최근 검색어",
-  "@search_recent_title": {
-    "description": "search_recent_title"
+  "auth_2fa_title": "이중 인증",
+  "@auth_2fa_title": {
+    "description": "auth_2fa_title"
   },
-  "back": "반품",
-  "@back": {
-    "description": "back"
+  "auth_2fa_verify": "확인하고 계속하세요",
+  "@auth_2fa_verify": {
+    "description": "auth_2fa_verify"
   },
-  "auth_forgot_password": "비밀번호를 잊어버렸어요",
-  "@auth_forgot_password": {
-    "description": "auth_forgot_password"
+  "auth_agree_personal_data": "Accepto usar mis datos...",
+  "@auth_agree_personal_data": {
+    "description": "auth_agree_personal_data"
+  },
+  "auth_brand_description_1": "이전 프로젝트의 로그인, 등록 및 비밀번호 복구 기능을 이 음악 앱에 맞게 조정했습니다.",
+  "@auth_brand_description_1": {
+    "description": "auth_brand_description_1"
+  },
+  "auth_brand_description_2": "귀하의 세션은 보안 저장소에 있으며 이미 사용하고 있는 것과 동일한 백엔드로 검증됩니다.",
+  "@auth_brand_description_2": {
+    "description": "auth_brand_description_2"
+  },
+  "auth_brand_not_configured": "인증 백엔드를 연결하려면 .env 파일을 구성해야 합니다.",
+  "@auth_brand_not_configured": {
+    "description": "auth_brand_not_configured"
   },
   "auth_btn_login": "로그인",
   "@auth_btn_login": {
@@ -760,53 +128,141 @@
   "@auth_btn_register": {
     "description": "auth_btn_register"
   },
-  "email": "이메일",
-  "@email": {
-    "description": "email"
-  },
-  "password_text": "비밀번호",
-  "@password_text": {
-    "description": "Contraseña texto traducido"
+  "auth_btn_send_email": "메일 보내기",
+  "@auth_btn_send_email": {
+    "description": "auth_btn_send_email"
   },
   "auth_confirm_password": "비밀번호 확인",
   "@auth_confirm_password": {
     "description": "auth_confirm_password"
   },
-  "auth_welcome_title": "Estrella Music에 오신 것을 환영합니다.",
-  "@auth_welcome_title": {
-    "description": "auth_welcome_title"
+  "auth_error_invalid_credentials": "이메일이나 비밀번호가 잘못되었습니다.",
+  "@auth_error_invalid_credentials": {
+    "description": "auth_error_invalid_credentials"
   },
-  "auth_welcome_subtitle": "Estrella Music에 오신 것을 환영합니다.",
-  "@auth_welcome_subtitle": {
-    "description": "auth_welcome_subtitle"
+  "auth_error_invalid_email": "유효한 이메일을 입력하세요.",
+  "@auth_error_invalid_email": {
+    "description": "auth_error_invalid_email"
+  },
+  "auth_error_not_configured": ".env 파일에 구성할 인증 백엔드가 없습니다.",
+  "@auth_error_not_configured": {
+    "description": "auth_error_not_configured"
+  },
+  "auth_error_not_verified": "귀하의 계정은 아직 확인되지 않았습니다.",
+  "@auth_error_not_verified": {
+    "description": "auth_error_not_verified"
+  },
+  "auth_error_unknown": "작업을 완료할 수 없습니다.",
+  "@auth_error_unknown": {
+    "description": "auth_error_unknown"
   },
   "auth_first_name": "이름",
   "@auth_first_name": {
     "description": "auth_first_name"
   },
+  "auth_forgot_password": "비밀번호를 잊어버렸어요",
+  "@auth_forgot_password": {
+    "description": "auth_forgot_password"
+  },
+  "auth_forgot_password_subtitle": "귀하의 계정 이메일로 지침을 보내드리겠습니다.",
+  "@auth_forgot_password_subtitle": {
+    "description": "auth_forgot_password_subtitle"
+  },
+  "auth_hint_email": "이름@mail.com",
+  "@auth_hint_email": {
+    "description": "auth_hint_email"
+  },
   "auth_last_name": "성",
   "@auth_last_name": {
     "description": "auth_last_name"
   },
-  "auth_agree_personal_data": "Accepto usar mis datos...",
-  "@auth_agree_personal_data": {
-    "description": "auth_agree_personal_data"
+  "auth_login_success": "성공적으로 로그인되었습니다",
+  "@auth_login_success": {
+    "description": "auth_login_success"
   },
-  "settings_general_section": "일반적인",
-  "@settings_general_section": {
-    "description": "settings_general_section"
+  "auth_recovery_email_error": "이메일을 보낼 수 없었습니다.",
+  "@auth_recovery_email_error": {
+    "description": "auth_recovery_email_error"
   },
-  "settings_logout": "로그아웃",
-  "@settings_logout": {
-    "description": "settings_logout"
+  "auth_recovery_email_sent": "이메일이 전송되었습니다.",
+  "@auth_recovery_email_sent": {
+    "description": "auth_recovery_email_sent"
   },
-  "settings_cloud_backup_desc": "업로드, 복원 및 관리...",
-  "@settings_cloud_backup_desc": {
-    "description": "settings_cloud_backup_desc"
+  "auth_register_error": "계정을 생성할 수 없습니다.",
+  "@auth_register_error": {
+    "description": "auth_register_error"
   },
-  "settings_migration_desc": "재생목록, 노래 가져오기...",
-  "@settings_migration_desc": {
-    "description": "settings_migration_desc"
+  "auth_register_success": "계정이 성공적으로 생성되었습니다.",
+  "@auth_register_success": {
+    "description": "auth_register_success"
+  },
+  "auth_welcome_subtitle": "Estrella Music에 오신 것을 환영합니다.",
+  "@auth_welcome_subtitle": {
+    "description": "auth_welcome_subtitle"
+  },
+  "auth_welcome_title": "Estrella Music에 오신 것을 환영합니다.",
+  "@auth_welcome_title": {
+    "description": "auth_welcome_title"
+  },
+  "autoDownFavSong": "좋아하는 노래 자동 다운로드",
+  "@autoDownFavSong": {
+    "description": "autoDownFavSong"
+  },
+  "autoDownFavSongDes": "즐겨찾기에 추가하면 좋아하는 노래를 자동으로 다운로드",
+  "@autoDownFavSongDes": {
+    "description": "autoDownFavSongDes"
+  },
+  "autoOpenPlayer": "플레이어 화면 자동 열기",
+  "@autoOpenPlayer": {
+    "description": "autoOpenPlayer"
+  },
+  "autoOpenPlayerDes": "재생할 노래를 선택할 때 플레이어가 자동으로 전체 화면으로 열리는 것을 활성화/비활성화합니다.",
+  "@autoOpenPlayerDes": {
+    "description": "autoOpenPlayerDes"
+  },
+  "back": "반품",
+  "@back": {
+    "description": "back"
+  },
+  "backFilesFound": "데이터베이스를 찾았습니다",
+  "@backFilesFound": {
+    "description": "backFilesFound"
+  },
+  "backgroundPlay": "백그라운드에서 음악 재생",
+  "@backgroundPlay": {
+    "description": "backgroundPlay"
+  },
+  "backgroundPlayDes": "백그라운드 음악 재생을 활성화/비활성화 (백그라운드에서 동작하는 동안은 시스템 트레이에서 접근 가능합니다)",
+  "@backgroundPlayDes": {
+    "description": "backgroundPlayDes"
+  },
+  "backup": "백업",
+  "@backup": {
+    "description": "backup"
+  },
+  "backupAppData": "백업 앱 데이터",
+  "@backupAppData": {
+    "description": "backupAppData"
+  },
+  "backupInProgress": "백업 진행 중...",
+  "@backupInProgress": {
+    "description": "backupInProgress"
+  },
+  "backupMsg": "백업이 성공적으로 저장되었습니다!",
+  "@backupMsg": {
+    "description": "backupMsg"
+  },
+  "backupSettingsAndPlaylists": "백업 설정 및 재생 목록",
+  "@backupSettingsAndPlaylists": {
+    "description": "backupSettingsAndPlaylists"
+  },
+  "backupSettingsAndPlaylistsDes": "모든 설정, 재생 목록 및 로그인 데이터를 백업 파일에 저장",
+  "@backupSettingsAndPlaylistsDes": {
+    "description": "backupSettingsAndPlaylistsDes"
+  },
+  "backup_auth_required": "활성 세션이 필요합니다...",
+  "@backup_auth_required": {
+    "description": "backup_auth_required"
   },
   "backup_btn_restart": "앱 다시 시작",
   "@backup_btn_restart": {
@@ -816,217 +272,117 @@
   "@backup_btn_upload": {
     "description": "backup_btn_upload"
   },
-  "backup_no_backups": "아직 백업이 없습니다...",
-  "@backup_no_backups": {
-    "description": "backup_no_backups"
-  },
-  "backup_auth_required": "활성 세션이 필요합니다...",
-  "@backup_auth_required": {
-    "description": "backup_auth_required"
-  },
-  "backup_upload_success": "백업이 올바르게 업로드되었습니다.",
-  "@backup_upload_success": {
-    "description": "backup_upload_success"
-  },
-  "backup_restore_success": "백업이 복원되었습니다. 앱을 다시 시작하세요.",
-  "@backup_restore_success": {
-    "description": "backup_restore_success"
+  "backup_confirm_question": "백업을 수행하시겠습니까?",
+  "@backup_confirm_question": {
+    "description": "backup_confirm_question"
   },
   "backup_delete_success": "백업이 삭제되었습니다.",
   "@backup_delete_success": {
     "description": "backup_delete_success"
   },
-  "genre_pop": "팝",
-  "@genre_pop": {
-    "description": "genre_pop"
+  "backup_no_backups": "아직 백업이 없습니다...",
+  "@backup_no_backups": {
+    "description": "backup_no_backups"
   },
-  "genre_rock": "바위",
-  "@genre_rock": {
-    "description": "genre_rock"
+  "backup_restore_success": "백업이 복원되었습니다. 앱을 다시 시작하세요.",
+  "@backup_restore_success": {
+    "description": "backup_restore_success"
   },
-  "genre_hiphop": "힙합",
-  "@genre_hiphop": {
-    "description": "genre_hiphop"
+  "backup_select_folder_dialog": "백업할 폴더를 선택하세요",
+  "@backup_select_folder_dialog": {
+    "description": "backup_select_folder_dialog"
   },
-  "genre_electronic": "전자제품",
-  "@genre_electronic": {
-    "description": "genre_electronic"
+  "backup_selection_prompt": "백업할 데이터 선택",
+  "@backup_selection_prompt": {
+    "description": "backup_selection_prompt"
   },
-  "genre_jazz": "재즈",
-  "@genre_jazz": {
-    "description": "genre_jazz"
+  "backup_upload_success": "백업이 올바르게 업로드되었습니다.",
+  "@backup_upload_success": {
+    "description": "backup_upload_success"
   },
-  "genre_latin": "라틴어",
-  "@genre_latin": {
-    "description": "genre_latin"
+  "basedOnLast": "당신의 최근 취향에 기반함",
+  "@basedOnLast": {
+    "description": "basedOnLast"
   },
-  "migration_btn_select": "파일을 선택하고 가져오기",
-  "@migration_btn_select": {
-    "description": "migration_btn_select"
+  "bitrate": "비트 전송률",
+  "@bitrate": {
+    "description": "bitrate"
   },
-  "forgottenFavorites": "잊혀진 즐겨찾기",
-  "@forgottenFavorites": {
-    "description": "forgottenFavorites"
+  "blacklistPipedPlaylist": "재생목록 블랙리스트",
+  "@blacklistPipedPlaylist": {
+    "description": "blacklistPipedPlaylist"
   },
-  "mostListenedSong": "가장 많이 듣는 노래",
-  "@mostListenedSong": {
-    "description": "mostListenedSong"
+  "blacklistPlstResetAlert": "초기화 성공!",
+  "@blacklistPlstResetAlert": {
+    "description": "blacklistPlstResetAlert"
   },
-  "reproducedBy": "재생산자:",
-  "@reproducedBy": {
-    "description": "reproducedBy"
+  "by": "창시자",
+  "@by": {
+    "description": "by"
   },
-  "recentSearches": "최근 검색어",
-  "@recentSearches": {
-    "description": "recentSearches"
+  "cacheHomeScreenData": "홈 스크린의 컨텐츠를 캐시에 저장",
+  "@cacheHomeScreenData": {
+    "description": "cacheHomeScreenData"
   },
-  "popularTracks": "인기 트랙",
-  "@popularTracks": {
-    "description": "popularTracks"
+  "cacheHomeScreenDataDes": "홈 스크린의 컨텐츠 데이터를 캐시에 저장하면, 홈 스크린이 즉시 불러와집니다",
+  "@cacheHomeScreenDataDes": {
+    "description": "cacheHomeScreenDataDes"
   },
-  "latestRelease": "최신 릴리스",
-  "@latestRelease": {
-    "description": "latestRelease"
+  "cacheSongs": "음악을 캐시에 저장",
+  "@cacheSongs": {
+    "description": "cacheSongs"
   },
-  "follow": "계속하다",
-  "@follow": {
-    "description": "follow"
+  "cacheSongsDes": "추후/오프라인 재생을 위해 곡을 캐싱하지만, 기기의 공간을 차지할 것입니다",
+  "@cacheSongsDes": {
+    "description": "cacheSongsDes"
   },
-  "following": "수행원",
-  "@following": {
-    "description": "following"
+  "cachedOrOffline": "캐시됨/오프라인",
+  "@cachedOrOffline": {
+    "description": "cachedOrOffline"
   },
-  "listenNow": "지금 들어보세요",
-  "@listenNow": {
-    "description": "listenNow"
+  "cancel": "취소",
+  "@cancel": {
+    "description": "cancel"
   },
-  "video": "동영상",
-  "@video": {
-    "description": "video"
+  "cancelTimer": "타이머 취소",
+  "@cancelTimer": {
+    "description": "cancelTimer"
   },
-  "about": "에 대한",
-  "@about": {
-    "description": "about"
+  "cancelTimerAlert": "취침 타이머 취소됨",
+  "@cancelTimerAlert": {
+    "description": "cancelTimerAlert"
   },
-  "readMore": "더 읽어보세요",
-  "@readMore": {
-    "description": "readMore"
+  "clearImgCache": "이미지 캐시 비우기",
+  "@clearImgCache": {
+    "description": "clearImgCache"
   },
-  "speedAndPitch": "속도와 피치",
-  "@speedAndPitch": {
-    "description": "speedAndPitch"
+  "clearImgCacheAlert": "이미지 캐시를 성공적으로 비웠습니다",
+  "@clearImgCacheAlert": {
+    "description": "clearImgCacheAlert"
   },
-  "playbackSpeed": "재생 속도",
-  "@playbackSpeed": {
-    "description": "playbackSpeed"
+  "clearImgCacheDes": "클릭하면 캐시된 썸네일과 이미지를 비웁니다. (캐시된 이미지들을 갱신하고 싶은 경우가 아니라면 추천하지 않습니다)",
+  "@clearImgCacheDes": {
+    "description": "clearImgCacheDes"
   },
-  "songPitch": "노래 톤",
-  "@songPitch": {
-    "description": "songPitch"
+  "close": "닫다",
+  "@close": {
+    "description": "close"
   },
-  "musicRecognition": "음악 인식",
-  "@musicRecognition": {
-    "description": "musicRecognition"
+  "closeApp": "지원서 닫기",
+  "@closeApp": {
+    "description": "closeApp"
   },
-  "listeningToEnvironment": "환경에 귀를 기울이다...",
-  "@listeningToEnvironment": {
-    "description": "listeningToEnvironment"
+  "cloudLibraryFound": "클라우드 라이브러리를 찾았습니다.",
+  "@cloudLibraryFound": {
+    "description": "cloudLibraryFound"
   },
-  "micInstruction": "마이크 근처에서 음악이 충분히 크게 재생되는지 확인하세요.",
-  "@micInstruction": {
-    "description": "micInstruction"
+  "cloudLibraryFoundDeviceWillDownload": "클라우드 라이브러리가 발견되었습니다. 이 장치는 덮어쓰지 않고 다운로드합니다.",
+  "@cloudLibraryFoundDeviceWillDownload": {
+    "description": "cloudLibraryFoundDeviceWillDownload"
   },
-  "processingAudio": "오디오 처리 중...",
-  "@processingAudio": {
-    "description": "processingAudio"
-  },
-  "shazamSearching": "Shazam 데이터베이스에서 일치하는 항목을 검색하는 중...",
-  "@shazamSearching": {
-    "description": "shazamSearching"
-  },
-  "songFound": "노래 발견!",
-  "@songFound": {
-    "description": "songFound"
-  },
-  "playNow": "지금 플레이",
-  "@playNow": {
-    "description": "playNow"
-  },
-  "searchInLibrary": "도서관에서 검색",
-  "@searchInLibrary": {
-    "description": "searchInLibrary"
-  },
-  "noMatchesFound": "일치하는 항목 없음",
-  "@noMatchesFound": {
-    "description": "noMatchesFound"
-  },
-  "noMatchInstruction": "녹음된 오디오에서 노래를 찾을 수 없습니다.",
-  "@noMatchInstruction": {
-    "description": "noMatchInstruction"
-  },
-  "errorOccurred": "오류가 발생했습니다",
-  "@errorOccurred": {
-    "description": "errorOccurred"
-  },
-  "playingRecognizedTrack": "재생 중:",
-  "@playingRecognizedTrack": {
-    "description": "playingRecognizedTrack"
-  },
-  "errorPlayingTrack": "플레이 중 오류:",
-  "@errorPlayingTrack": {
-    "description": "errorPlayingTrack"
-  },
-  "welcome_title": "나만의 음악, 나만의 방식",
-  "@welcome_title": {
-    "description": "welcome_title"
-  },
-  "welcome_subtitle": "지금부터 Estrella Music을 어떻게 경험하고 싶은지 선택하세요.",
-  "@welcome_subtitle": {
-    "description": "welcome_subtitle"
-  },
-  "welcome_intro": "우리는 플랫폼을 현대화했습니다. 수동 백업을 업로드하는 이전 시스템이 비활성화되었습니다. 이제 음악 라이브러리를 관리하는 두 가지 명확한 방법이 있습니다.",
-  "@welcome_intro": {
-    "description": "welcome_intro"
-  },
-  "recommend_cloud": "Spotify와 같은 경험을 위해서는 클라우드 모드를 활성화하는 것이 좋습니다. 아무 것도 하지 않고도 모든 장치 간의 실시간 동기화와 자동 백업이 가능합니다.",
-  "@recommend_cloud": {
-    "description": "recommend_cloud"
-  },
-  "swipe_prompt": "스와이프하여 옵션 탐색 ➔",
-  "@swipe_prompt": {
-    "description": "swipe_prompt"
-  },
-  "local_title": "로컬 모드",
-  "@local_title": {
-    "description": "local_title"
-  },
-  "local_subtitle": "귀하의 장치에 대한 완벽한 개인 정보 보호",
-  "@local_subtitle": {
-    "description": "local_subtitle"
-  },
-  "local_b1": "로그인할 필요 없이 작동됩니다.",
-  "@local_b1": {
-    "description": "local_b1"
-  },
-  "local_b2": "전체 라이브러리는 이 컴퓨터에만 유지됩니다.",
-  "@local_b2": {
-    "description": "local_b2"
-  },
-  "local_b3": "참고: 수동 클라우드 백업은 없습니다. 기기를 분실하거나 앱을 제거한 경우 데이터를 복구할 수 없습니다.",
-  "@local_b3": {
-    "description": "local_b3"
-  },
-  "local_btn": "이 기기에서만 사용하세요",
-  "@local_btn": {
-    "description": "local_btn"
-  },
-  "cloud_title": "클라우드 모드(권장)",
-  "@cloud_title": {
-    "description": "cloud_title"
-  },
-  "cloud_subtitle": "Joss Red와 실시간 동기화",
-  "@cloud_subtitle": {
-    "description": "cloud_subtitle"
+  "cloudModeReadyOfflineCache": "클라우드 모드가 준비되었습니다. 이 장치는 오프라인 캐시로 작동합니다.",
+  "@cloudModeReadyOfflineCache": {
+    "description": "cloudModeReadyOfflineCache"
   },
   "cloud_b1": "Joss Red 계정을 사용하여 안전하게 로그인하세요.",
   "@cloud_b1": {
@@ -1044,511 +400,137 @@
   "@cloud_btn": {
     "description": "cloud_btn"
   },
-  "slide_indicator": "3단계 중 {current} 단계",
-  "@slide_indicator": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      }
-    },
-    "description": "slide_indicator"
+  "cloud_subtitle": "Joss Red와 실시간 동기화",
+  "@cloud_subtitle": {
+    "description": "cloud_subtitle"
   },
-  "news_card_title": "Estrella Music이 진화했습니다!",
-  "@news_card_title": {
-    "description": "news_card_title"
-  },
-  "news_card_subtitle": "Joss Red와의 100% 동기화, 친구들과의 재생 목록 등. 새로운 소식을 보려면 탭하세요.",
-  "@news_card_subtitle": {
-    "description": "news_card_subtitle"
-  },
-  "news_dialog_title": "Estrella 음악 뉴스",
-  "@news_dialog_title": {
-    "description": "news_dialog_title"
-  },
-  "news_item_sync_title": "Joss Red와의 완전한 통합",
-  "@news_item_sync_title": {
-    "description": "news_item_sync_title"
-  },
-  "news_item_sync_desc": "이제 재생 목록과 즐겨찾기가 기본 Joss Red 계정을 통해 자동으로 클라우드에 저장되고 동기화됩니다.",
-  "@news_item_sync_desc": {
-    "description": "news_item_sync_desc"
-  },
-  "news_item_collab_title": "공동 재생 목록",
-  "@news_item_collab_title": {
-    "description": "news_item_collab_title"
-  },
-  "news_item_collab_desc": "친구들과 함께 재생목록을 만들어보세요! 재생목록을 생성할 때 공동작업 확인란을 선택하고 함께 편집할 친구를 선택하세요.",
-  "@news_item_collab_desc": {
-    "description": "news_item_collab_desc"
-  },
-  "news_item_trans_title": "투명한 동기화",
-  "@news_item_trans_title": {
-    "description": "news_item_trans_title"
-  },
-  "news_item_trans_desc": "더 이상 수동 동기화 버튼을 클릭할 필요가 없습니다. 새 모터는 자동으로 위아래로 변속을 담당합니다.",
-  "@news_item_trans_desc": {
-    "description": "news_item_trans_desc"
-  },
-  "news_dialog_section_friends": "친구 및 계정 관리:",
-  "@news_dialog_section_friends": {
-    "description": "news_dialog_section_friends"
-  },
-  "news_dialog_friends_desc": "친구를 추가하고, 요청을 수락하고, 보안 프로필을 관리하려면 공식 플랫폼에서 Joss Red를 사용하세요.",
-  "@news_dialog_friends_desc": {
-    "description": "news_dialog_friends_desc"
-  },
-  "news_btn_app": "조스 레드 앱(Play 스토어)",
-  "@news_btn_app": {
-    "description": "news_btn_app"
-  },
-  "news_btn_web": "조스 레드 웹",
-  "@news_btn_web": {
-    "description": "news_btn_web"
-  },
-  "news_btn_dismiss": "이해했다",
-  "@news_btn_dismiss": {
-    "description": "news_btn_dismiss"
-  },
-  "settings_appearance_desc": "테마, 언어 및 인터페이스 애니메이션.",
-  "@settings_appearance_desc": {
-    "description": "settings_appearance_desc"
-  },
-  "settings_content_desc": "필터, Piped 및 캐시와의 통합을 살펴보세요.",
-  "@settings_content_desc": {
-    "description": "settings_content_desc"
-  },
-  "settings_playback_desc": "스트리밍 품질, 정규화, 무음 및 배터리.",
-  "@settings_playback_desc": {
-    "description": "settings_playback_desc"
-  },
-  "settings_downloads_desc": "다운로드 및 저장",
-  "@settings_downloads_desc": {
-    "description": "settings_downloads_desc"
-  },
-  "settings_downloads_sub": "오디오 형식, 폴더 및 자동 다운로드.",
-  "@settings_downloads_sub": {
-    "description": "settings_downloads_sub"
-  },
-  "settings_account_desc": "계정 및 동기화",
-  "@settings_account_desc": {
-    "description": "settings_account_desc"
-  },
-  "settings_account_sub": "클라우드 모드, 백업, 친구 목록 및 마이그레이션.",
-  "@settings_account_sub": {
-    "description": "settings_account_sub"
-  },
-  "settings_about_desc": "Estrella Music 소개",
-  "@settings_about_desc": {
-    "description": "settings_about_desc"
-  },
-  "settings_about_sub": "버전, 오픈 소스 프로젝트 및 GitHub.",
-  "@settings_about_sub": {
-    "description": "settings_about_sub"
-  },
-  "settings_local_cloud_title": "로컬 모드 / EMusic Cloud",
-  "@settings_local_cloud_title": {
-    "description": "settings_local_cloud_title"
-  },
-  "settings_local_cloud_desc": "Joss Red와의 동기화 상태를 선택, 마이그레이션 또는 검토하세요.",
-  "@settings_local_cloud_desc": {
-    "description": "settings_local_cloud_desc"
-  },
-  "settings_my_friends": "내 친구들",
-  "@settings_my_friends": {
-    "description": "settings_my_friends"
-  },
-  "settings_my_friends_desc": "Joss Red 친구를 직접 관리하세요.",
-  "@settings_my_friends_desc": {
-    "description": "settings_my_friends_desc"
-  },
-  "settings_refresh_visitor_title": "새로고침 ID(방문자 ID)",
-  "@settings_refresh_visitor_title": {
-    "description": "settings_refresh_visitor_title"
-  },
-  "settings_refresh_visitor_desc": "Discover 콘텐츠가 로드되지 않으면 Online Music ID를 다시 생성하세요.",
-  "@settings_refresh_visitor_desc": {
-    "description": "settings_refresh_visitor_desc"
-  },
-  "settings_visitor_updated": "업데이트된 식별자",
-  "@settings_visitor_updated": {
-    "description": "settings_visitor_updated"
-  },
-  "settings_visitor_updated_desc": "새 방문자 ID가 성공적으로 생성되었습니다.",
-  "@settings_visitor_updated_desc": {
-    "description": "settings_visitor_updated_desc"
-  },
-  "settings_visitor_error": "실수",
-  "@settings_visitor_error": {
-    "description": "settings_visitor_error"
-  },
-  "settings_visitor_error_desc": "새 식별자를 생성할 수 없습니다. 나중에 다시 시도해 주세요.",
-  "@settings_visitor_error_desc": {
-    "description": "settings_visitor_error_desc"
-  },
-  "settings_visitor_exception": "재생성하는 동안 오류가 발생했습니다: {error}",
-  "@settings_visitor_exception": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    },
-    "description": "settings_visitor_exception"
-  },
-  "migratedLibrary": "마이그레이션된 라이브러리",
-  "@migratedLibrary": {
-    "description": "migratedLibrary"
-  },
-  "noSongsInCollection": "이 컬렉션에는 노래가 없습니다",
-  "@noSongsInCollection": {
-    "description": "noSongsInCollection"
-  },
-  "startupScreen": "시작 시 열기",
-  "@startupScreen": {
-    "description": "startupScreen"
-  },
-  "startupScreenDescription": "Estrella Music이 먼저 열리는 섹션을 선택하세요.",
-  "@startupScreenDescription": {
-    "description": "startupScreenDescription"
-  },
-  "friends": "친구",
-  "@friends": {
-    "description": "friends"
-  },
-  "dailyDiscover": "매일의 발견",
-  "@dailyDiscover": {
-    "description": "dailyDiscover"
-  },
-  "keepListening": "계속 들어봐",
-  "@keepListening": {
-    "description": "keepListening"
-  },
-  "similarToTitle": "_{title} 과 유사함",
-  "@similarToTitle": {
-    "placeholders": {
-      "title": {
-        "type": "String"
-      }
-    },
-    "description": "similarToTitle"
-  },
-  "pipedPlaylistDescription": "파이프 재생목록",
-  "@pipedPlaylistDescription": {
-    "description": "pipedPlaylistDescription"
+  "cloud_title": "클라우드 모드(권장)",
+  "@cloud_title": {
+    "description": "cloud_title"
   },
   "collaborativePlaylistDescription": "공동 재생 목록",
   "@collaborativePlaylistDescription": {
     "description": "collaborativePlaylistDescription"
   },
-  "libraryPlaylistDescription": "도서관 재생목록",
-  "@libraryPlaylistDescription": {
-    "description": "libraryPlaylistDescription"
-  },
-  "untitledSong": "제목 없는 노래",
-  "@untitledSong": {
-    "description": "untitledSong"
-  },
-  "migratedPlaylist": "마이그레이션된 재생목록",
-  "@migratedPlaylist": {
-    "description": "migratedPlaylist"
-  },
-  "migratedAlbum": "이전된 앨범",
-  "@migratedAlbum": {
-    "description": "migratedAlbum"
-  },
-  "songsImportedFromJossMusic": "Joss Music Kotlin에서 가져온 노래",
-  "@songsImportedFromJossMusic": {
-    "description": "songsImportedFromJossMusic"
-  },
-  "importedFromJossMusic": "Joss Music Kotlin에서 가져옴",
-  "@importedFromJossMusic": {
-    "description": "importedFromJossMusic"
-  },
-  "syncLocalModeActive": "로컬 모드 활성화",
-  "@syncLocalModeActive": {
-    "description": "syncLocalModeActive"
-  },
-  "syncCloudPending": "클라우드 모드가 활성화되었습니다. 동기화 대기 중입니다.",
-  "@syncCloudPending": {
-    "description": "syncCloudPending"
-  },
-  "syncCloudDownloadingExisting": "클라우드 모드가 활성화되었습니다. 기존 라이브러리를 다운로드합니다.",
-  "@syncCloudDownloadingExisting": {
-    "description": "syncCloudDownloadingExisting"
-  },
-  "syncCloudMigrationComplete": "클라우드 모드가 활성화되었습니다. 마이그레이션된 라이브러리.",
-  "@syncCloudMigrationComplete": {
-    "description": "syncCloudMigrationComplete"
-  },
-  "syncLocalDeviceOnly": "귀하의 데이터는 이 장치에만 보관됩니다.",
-  "@syncLocalDeviceOnly": {
-    "description": "syncLocalDeviceOnly"
-  },
-  "syncDownloading": "EMusic 변경사항 다운로드 중...",
-  "@syncDownloading": {
-    "description": "syncDownloading"
-  },
-  "syncDownloadFailed": "동기화를 다운로드하지 못했습니다.",
-  "@syncDownloadFailed": {
-    "description": "syncDownloadFailed"
-  },
-  "syncLocalChangesFirst": "새로운 로컬 변경 사항이 있습니다. 다운로드하기 전에 업로드됩니다.",
-  "@syncLocalChangesFirst": {
-    "description": "syncLocalChangesFirst"
-  },
-  "syncLibrarySynced": "동기화된 라이브러리.",
-  "@syncLibrarySynced": {
-    "description": "syncLibrarySynced"
-  },
-  "syncOfflinePending": "오프라인. 변경사항이 보류 중입니다.",
-  "@syncOfflinePending": {
-    "description": "syncOfflinePending"
-  },
-  "syncLibraryUpToDate": "라이브러리가 최신 상태입니다.",
-  "@syncLibraryUpToDate": {
-    "description": "syncLibraryUpToDate"
-  },
-  "syncChangesSynced": "_{count} 변경사항이 동기화되었습니다.",
-  "@syncChangesSynced": {
-    "placeholders": {
-      "count": {
-        "type": "String"
-      }
-    },
-    "description": "syncChangesSynced"
-  },
-  "syncUploading": "EMusic에 변경사항을 업로드하는 중...",
-  "@syncUploading": {
-    "description": "syncUploading"
-  },
-  "syncUploadSuccessWs": "변경사항이 성공적으로 업로드되었습니다(WS).",
-  "@syncUploadSuccessWs": {
-    "description": "syncUploadSuccessWs"
-  },
-  "syncUploadWsRetry": "WS를 사용하여 업로드할 수 없습니다. 나중에 다시 시도됩니다.",
-  "@syncUploadWsRetry": {
-    "description": "syncUploadWsRetry"
-  },
-  "syncUploadSuccess": "변경사항이 올바르게 업로드되었습니다.",
-  "@syncUploadSuccess": {
-    "description": "syncUploadSuccess"
-  },
-  "syncUploadRetry": "일어날 수 없었다. 나중에 다시 시도됩니다.",
-  "@syncUploadRetry": {
-    "description": "syncUploadRetry"
-  },
-  "syncOfflineRetry": "오프라인. 재시도를 위해 변경사항이 저장되었습니다.",
-  "@syncOfflineRetry": {
-    "description": "syncOfflineRetry"
-  },
-  "syncUnconfirmedRetry": "EMusic은 모든 변경 사항을 확인하지 않았습니다. 재시도될 것입니다.",
-  "@syncUnconfirmedRetry": {
-    "description": "syncUnconfirmedRetry"
-  },
-  "syncChangesConfirmed": "_{count} 변경사항이 커밋되었습니다.",
-  "@syncChangesConfirmed": {
-    "placeholders": {
-      "count": {
-        "type": "String"
-      }
-    },
-    "description": "syncChangesConfirmed"
-  },
-  "migrationAlreadyRunning": "이미 마이그레이션이 진행 중입니다.",
-  "@migrationAlreadyRunning": {
-    "description": "migrationAlreadyRunning"
-  },
-  "migrationLoginRequired": "마이그레이션하기 전에 Joss Red에 로그인하세요.",
-  "@migrationLoginRequired": {
-    "description": "migrationLoginRequired"
-  },
-  "migrationCheckingCloud": "EMusic Cloud에 이미 라이브러리가 있는지 확인하는 중...",
-  "@migrationCheckingCloud": {
-    "description": "migrationCheckingCloud"
-  },
-  "cloudLibraryFoundDeviceWillDownload": "클라우드 라이브러리가 발견되었습니다. 이 장치는 덮어쓰지 않고 다운로드합니다.",
-  "@cloudLibraryFoundDeviceWillDownload": {
-    "description": "cloudLibraryFoundDeviceWillDownload"
-  },
-  "cloudLibraryFound": "클라우드 라이브러리를 찾았습니다.",
-  "@cloudLibraryFound": {
-    "description": "cloudLibraryFound"
-  },
-  "migrationCreatingBackup": "클라우드에 연결하기 전에 로컬 백업 생성 중...",
-  "@migrationCreatingBackup": {
-    "description": "migrationCreatingBackup"
-  },
-  "migrationAnalyzingLocal": "지역 도서관을 분석하는 중...",
-  "@migrationAnalyzingLocal": {
-    "description": "migrationAnalyzingLocal"
-  },
-  "migrationPreparingCloud": "EMusic Cloud에서 마이그레이션 준비 중...",
-  "@migrationPreparingCloud": {
-    "description": "migrationPreparingCloud"
-  },
-  "migrationStartFailed": "EMusic Cloud가 마이그레이션을 시작할 수 없습니다.",
-  "@migrationStartFailed": {
-    "description": "migrationStartFailed"
-  },
-  "migrationUploadingData": "재생목록, 즐겨찾기, 기록 업로드 중...",
-  "@migrationUploadingData": {
-    "description": "migrationUploadingData"
-  },
-  "migrationUploadIncomplete": "모든 데이터를 업로드할 수는 없습니다. 우리는 귀하의 지역 지원을 유지합니다.",
-  "@migrationUploadIncomplete": {
-    "description": "migrationUploadIncomplete"
-  },
-  "migrationVerifyingIntegrity": "EMusic Cloud에서 무결성을 확인하는 중...",
-  "@migrationVerifyingIntegrity": {
-    "description": "migrationVerifyingIntegrity"
-  },
-  "migrationValidationFailed": "EMusic Cloud가 마이그레이션을 검증할 수 없습니다.",
-  "@migrationValidationFailed": {
-    "description": "migrationValidationFailed"
-  },
-  "cloudModeReadyOfflineCache": "클라우드 모드가 준비되었습니다. 이 장치는 오프라인 캐시로 작동합니다.",
-  "@cloudModeReadyOfflineCache": {
-    "description": "cloudModeReadyOfflineCache"
-  },
-  "migrationCompleted": "마이그레이션이 완료되었습니다.",
-  "@migrationCompleted": {
-    "description": "migrationCompleted"
-  },
-  "migrationFailedLocalPreserved": "마이그레이션이 실패했습니다. 로컬 데이터가 수정되지 않았습니다.",
-  "@migrationFailedLocalPreserved": {
-    "description": "migrationFailedLocalPreserved"
-  },
-  "sessionExpiredLoginAgain": "세션이 만료되었습니다. 다시 로그인하세요.",
-  "@sessionExpiredLoginAgain": {
-    "description": "sessionExpiredLoginAgain"
-  },
-  "selectedFileNotFound": "선택한 파일을 찾을 수 없습니다.",
-  "@selectedFileNotFound": {
-    "description": "selectedFileNotFound"
-  },
-  "genericAlbum": "앨범",
-  "@genericAlbum": {
-    "description": "genericAlbum"
-  },
-  "friendsLoginRequired": "친구를 찾으려면 로그인하세요.",
-  "@friendsLoginRequired": {
-    "description": "friendsLoginRequired"
-  },
-  "invalidSessionToken": "세션에 유효한 토큰이 포함되어 있지 않습니다.",
-  "@invalidSessionToken": {
-    "description": "invalidSessionToken"
-  },
-  "userSearchFailed": "사용자({statusCode})를 검색할 수 없습니다.",
-  "@userSearchFailed": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    },
-    "description": "userSearchFailed"
-  },
-  "invalidServerResponse": "서버 응답이 잘못되었습니다.",
-  "@invalidServerResponse": {
-    "description": "invalidServerResponse"
-  },
-  "userListMissing": "응답에는 사용자 목록이 포함되어 있지 않습니다.",
-  "@userListMissing": {
-    "description": "userListMissing"
-  },
-  "playlistCollaboratorsTitle": "재생목록 참여자",
-  "@playlistCollaboratorsTitle": {
-    "description": "playlistCollaboratorsTitle"
-  },
   "collaboratorsInstruction": "이 재생목록을 보고 편집할 수 있는 친구를 선택하세요.",
   "@collaboratorsInstruction": {
     "description": "collaboratorsInstruction"
-  },
-  "noJossRedFriends": "Joss Red에 추가된 친구가 없습니다.",
-  "@noJossRedFriends": {
-    "description": "noJossRedFriends"
-  },
-  "friendFallback": "친구",
-  "@friendFallback": {
-    "description": "friendFallback"
   },
   "collaboratorsUpdated": "공동작업자가 올바르게 업데이트되었습니다.",
   "@collaboratorsUpdated": {
     "description": "collaboratorsUpdated"
   },
-  "save": "유지하다",
-  "@save": {
-    "description": "save"
+  "communityplaylists": "커뮤니티 플레이리스트",
+  "@communityplaylists": {
+    "description": "communityplaylists"
   },
-  "manageCollaborators": "공동작업자(친구) 관리",
-  "@manageCollaborators": {
-    "description": "manageCollaborators"
+  "content": "내용",
+  "@content": {
+    "description": "content"
+  },
+  "copyrightNotice": "© 2026 조스프록스. GPL 라이센스 v3.0",
+  "@copyrightNotice": {
+    "description": "copyrightNotice"
+  },
+  "create": "생성",
+  "@create": {
+    "description": "create"
+  },
+  "createnAdd": "생성 및 추가",
+  "@createnAdd": {
+    "description": "createnAdd"
+  },
+  "customIns": "커스텀 인스턴스",
+  "@customIns": {
+    "description": "customIns"
+  },
+  "customInsSelectMsg": "커스텀 인스턴스를 선택해주세요",
+  "@customInsSelectMsg": {
+    "description": "customInsSelectMsg"
+  },
+  "dailyDiscover": "매일의 발견",
+  "@dailyDiscover": {
+    "description": "dailyDiscover"
+  },
+  "dark": "다크",
+  "@dark": {
+    "description": "dark"
+  },
+  "delete": "삭제",
+  "@delete": {
+    "description": "delete"
+  },
+  "deleteDownloadData": "다운로드에서 제거",
+  "@deleteDownloadData": {
+    "description": "deleteDownloadData"
+  },
+  "deleteDownloadedDataAlert": "다운로드에서 제거했습니다!",
+  "@deleteDownloadedDataAlert": {
+    "description": "deleteDownloadedDataAlert"
+  },
+  "developedBy": "Joss Estrada(JOSPROX)가 개발 및 유지 관리",
+  "@developedBy": {
+    "description": "developedBy"
+  },
+  "disableTransitionAnimation": "전환 애니메이션 비활성화",
+  "@disableTransitionAnimation": {
+    "description": "disableTransitionAnimation"
+  },
+  "disableTransitionAnimationDes": "이 옵션을 활성화시키면 탭 전환 애니메이션이 비활성화됩니다",
+  "@disableTransitionAnimationDes": {
+    "description": "disableTransitionAnimationDes"
+  },
+  "disabled": "비활성화됨",
+  "@disabled": {
+    "description": "disabled"
+  },
+  "discover": "탐색",
+  "@discover": {
+    "description": "discover"
+  },
+  "dismiss": "무시",
+  "@dismiss": {
+    "description": "dismiss"
   },
   "done": "준비가 된",
   "@done": {
     "description": "done"
   },
-  "notAuthenticated": "인증되지 않음",
-  "@notAuthenticated": {
-    "description": "notAuthenticated"
+  "dontShowInfoAgain": "다시 보지 않기",
+  "@dontShowInfoAgain": {
+    "description": "dontShowInfoAgain"
   },
-  "genericError": "실수",
-  "@genericError": {
-    "description": "genericError"
+  "downFilesFound": "다운로드한 파일이 발견됨",
+  "@downFilesFound": {
+    "description": "downFilesFound"
   },
-  "friendRequestSent": "친구 요청이 전송되었습니다",
-  "@friendRequestSent": {
-    "description": "friendRequestSent"
+  "download": "다운로드",
+  "@download": {
+    "description": "download"
   },
-  "friendRequestAccepted": "친구 요청이 수락되었습니다.",
-  "@friendRequestAccepted": {
-    "description": "friendRequestAccepted"
+  "downloadAlbumSongs": "앨범에서 노래 다운로드",
+  "@downloadAlbumSongs": {
+    "description": "downloadAlbumSongs"
   },
-  "friendshipRemoved": "우정이 제거되었습니다.",
-  "@friendshipRemoved": {
-    "description": "friendshipRemoved"
+  "downloadError2": "요청하신 곡은 서버 제한으로 인해 다운로드가 불가능합니다. 다시 시도해 보세요.",
+  "@downloadError2": {
+    "description": "downloadError2"
   },
-  "userBlocked": "차단된 사용자",
-  "@userBlocked": {
-    "description": "userBlocked"
+  "downloadError3": "네트워크/전송 오류로 인해 다운로드에 실패했습니다! 다시 시도해 주세요",
+  "@downloadError3": {
+    "description": "downloadError3"
   },
-  "userUnblocked": "잠금 해제된 사용자",
-  "@userUnblocked": {
-    "description": "userUnblocked"
-  },
-  "artistsByTaste": "당신의 취향에 따라",
-  "@artistsByTaste": {
-    "description": "artistsByTaste"
-  },
-  "followedArtists": "팔로우함",
-  "@followedArtists": {
-    "description": "followedArtists"
-  },
-  "recommendedArtists": "추천",
-  "@recommendedArtists": {
-    "description": "recommendedArtists"
-  },
-  "albumsByTaste": "당신의 취향에 따라",
-  "@albumsByTaste": {
-    "description": "albumsByTaste"
-  },
-  "savedAlbums": "저장됨",
-  "@savedAlbums": {
-    "description": "savedAlbums"
-  },
-  "recommendedAlbums": "추천",
-  "@recommendedAlbums": {
-    "description": "recommendedAlbums"
-  },
-  "downloadNotificationChannelName": "음악 다운로드",
-  "@downloadNotificationChannelName": {
-    "description": "downloadNotificationChannelName"
+  "downloadLocation": "다운로드 위치",
+  "@downloadLocation": {
+    "description": "downloadLocation"
   },
   "downloadNotificationChannelDescription": "백그라운드에서 음악 다운로드를 활성 상태로 유지합니다.",
   "@downloadNotificationChannelDescription": {
     "description": "downloadNotificationChannelDescription"
   },
-  "downloadNotificationTitle": "음악 다운로드 중",
-  "@downloadNotificationTitle": {
-    "description": "downloadNotificationTitle"
+  "downloadNotificationChannelName": "음악 다운로드",
+  "@downloadNotificationChannelName": {
+    "description": "downloadNotificationChannelName"
   },
   "downloadNotificationPreparing": "다운로드 준비 중…",
   "@downloadNotificationPreparing": {
@@ -1563,261 +545,49 @@
     },
     "description": "downloadNotificationSong"
   },
-  "syncCloudModeActive": "클라우드 모드 활성화",
-  "@syncCloudModeActive": {
-    "description": "syncCloudModeActive"
+  "downloadNotificationTitle": "음악 다운로드 중",
+  "@downloadNotificationTitle": {
+    "description": "downloadNotificationTitle"
   },
-  "permissionsConsentTitle": "시작하기 위한 권한",
-  "@permissionsConsentTitle": {
-    "description": "permissionsConsentTitle"
+  "downloadPlaylist": "재생목록 다운로드",
+  "@downloadPlaylist": {
+    "description": "downloadPlaylist"
   },
-  "permissionsConsentDescription": "Estrella Music은 음악을 관리하고 모든 재생 기능을 제공하려면 이러한 권한이 필요합니다.",
-  "@permissionsConsentDescription": {
-    "description": "permissionsConsentDescription"
+  "downloadingFormat": "다운로드 파일의 형식",
+  "@downloadingFormat": {
+    "description": "downloadingFormat"
   },
-  "permissionsStorageTitle": "음악 및 저장공간",
-  "@permissionsStorageTitle": {
-    "description": "permissionsStorageTitle"
+  "downloadingFormatDes": "다운로드 파일의 형식을 정해주세요. \"Opus\" 형식이 최고 음질입니다",
+  "@downloadingFormatDes": {
+    "description": "downloadingFormatDes"
   },
-  "permissionsStorageDescription": "음악을 재생하고, 다운로드를 저장하고, 재생 목록을 내보내고, 업데이트를 준비할 수 있습니다.",
-  "@permissionsStorageDescription": {
-    "description": "permissionsStorageDescription"
+  "downloads": "다운로드",
+  "@downloads": {
+    "description": "downloads"
   },
-  "permissionsNotificationsTitle": "알림",
-  "@permissionsNotificationsTitle": {
-    "description": "permissionsNotificationsTitle"
+  "duration": "기간",
+  "@duration": {
+    "description": "duration"
   },
-  "permissionsNotificationsDescription": "재생 제어, 다운로드 진행 상황, 중요한 앱 알림을 표시합니다.",
-  "@permissionsNotificationsDescription": {
-    "description": "permissionsNotificationsDescription"
+  "dynamic": "동적",
+  "@dynamic": {
+    "description": "dynamic"
   },
-  "permissionsMicrophoneTitle": "마이크로폰",
-  "@permissionsMicrophoneTitle": {
-    "description": "permissionsMicrophoneTitle"
+  "email": "이메일",
+  "@email": {
+    "description": "email"
   },
-  "permissionsMicrophoneDescription": "주변에서 재생되는 노래를 식별하기로 선택한 경우에만 사용됩니다.",
-  "@permissionsMicrophoneDescription": {
-    "description": "permissionsMicrophoneDescription"
+  "emptyPlaylist": "빈 플레이리스트!",
+  "@emptyPlaylist": {
+    "description": "emptyPlaylist"
   },
-  "permissionsContinueButton": "필수 권한 부여",
-  "@permissionsContinueButton": {
-    "description": "permissionsContinueButton"
+  "enableBottomNav": "하단의 네비게이션 바",
+  "@enableBottomNav": {
+    "description": "enableBottomNav"
   },
-  "permissionsRequiredNotice": "계속하려면 세 가지 허가가 모두 필요합니다. 나중에 시스템 설정에서 변경할 수 있습니다.",
-  "@permissionsRequiredNotice": {
-    "description": "permissionsRequiredNotice"
-  },
-  "permissionsAllow": "허용하다",
-  "@permissionsAllow": {
-    "description": "permissionsAllow"
-  },
-  "permissionsOpenSettings": "설정",
-  "@permissionsOpenSettings": {
-    "description": "permissionsOpenSettings"
-  },
-  "auth_2fa_title": "이중 인증",
-  "@auth_2fa_title": {
-    "description": "auth_2fa_title"
-  },
-  "auth_2fa_subtitle": "인증 앱의 6자리 코드를 입력하세요. 이 액세스 권한은 5분 후에 만료됩니다.",
-  "@auth_2fa_subtitle": {
-    "description": "auth_2fa_subtitle"
-  },
-  "auth_2fa_code": "인증코드",
-  "@auth_2fa_code": {
-    "description": "auth_2fa_code"
-  },
-  "auth_2fa_verify": "확인하고 계속하세요",
-  "@auth_2fa_verify": {
-    "description": "auth_2fa_verify"
-  },
-  "auth_2fa_invalid": "유효한 6자리 코드를 입력하거나 다시 로그인하세요.",
-  "@auth_2fa_invalid": {
-    "description": "auth_2fa_invalid"
-  },
-  "backupSettingsAndPlaylists": "백업 설정 및 재생 목록",
-  "@backupSettingsAndPlaylists": {
-    "description": "backupSettingsAndPlaylists"
-  },
-  "restoreSettingsAndPlaylists": "설정 및 재생 목록 복원",
-  "@restoreSettingsAndPlaylists": {
-    "description": "restoreSettingsAndPlaylists"
-  },
-  "helloWorld": "안녕하세요 세상",
-  "@helloWorld": {
-    "description": "Este texto es opcional"
-  },
-  "removeFromCache": "캐시에서 제거",
-  "@removeFromCache": {
-    "description": "removeFromCache"
-  },
-  "quickPics": "빠른 선택",
-  "@quickPics": {
-    "description": "quickPics"
-  },
-  "topMusicVid": "인기 뮤직 비디오",
-  "@topMusicVid": {
-    "description": "topMusicVid"
-  },
-  "restoreSettingsAndPlaylistsDes": "백업 파일에서 모든 설정, 로그인 데이터 및 재생 목록을 복원합니다. 현재 데이터를 모두 덮어씁니다.",
-  "@restoreSettingsAndPlaylistsDes": {
-    "description": "restoreSettingsAndPlaylistsDes"
-  },
-  "backupSettingsAndPlaylistsDes": "모든 설정, 재생 목록 및 로그인 데이터를 백업 파일에 저장",
-  "@backupSettingsAndPlaylistsDes": {
-    "description": "backupSettingsAndPlaylistsDes"
-  },
-  "backupMsg": "백업이 성공적으로 저장되었습니다!",
-  "@backupMsg": {
-    "description": "backupMsg"
-  },
-  "backFilesFound": "데이터베이스를 찾았습니다",
-  "@backFilesFound": {
-    "description": "backFilesFound"
-  },
-  "restoreMsg": "성공적으로 복원되었습니다!\n재부팅 시 변경 사항이 적용됩니다.",
-  "@restoreMsg": {
-    "description": "restoreMsg"
-  },
-  "restoring": "복원 중...",
-  "@restoring": {
-    "description": "restoring"
-  },
-  "restore": "복원",
-  "@restore": {
-    "description": "restore"
-  },
-  "closeApp": "지원서 닫기",
-  "@closeApp": {
-    "description": "closeApp"
-  },
-  "standard": "표준",
-  "@standard": {
-    "description": "standard"
-  },
-  "gesture": "제스처",
-  "@gesture": {
-    "description": "gesture"
-  },
-  "audioCodec": "오디오 코덱",
-  "@audioCodec": {
-    "description": "audioCodec"
-  },
-  "autoDownFavSongDes": "즐겨찾기에 추가하면 좋아하는 노래를 자동으로 다운로드",
-  "@autoDownFavSongDes": {
-    "description": "autoDownFavSongDes"
-  },
-  "loudnessNormalization": "음량 정규화",
-  "@loudnessNormalization": {
-    "description": "loudnessNormalization"
-  },
-  "playerUi": "플레이어 UI",
-  "@playerUi": {
-    "description": "playerUi"
-  },
-  "songNotPlayable": "서버 제한으로 인해 노래를 재생할 수 없습니다!",
-  "@songNotPlayable": {
-    "description": "songNotPlayable"
-  },
-  "loudnessDb": "음량Db",
-  "@loudnessDb": {
-    "description": "loudnessDb"
-  },
-  "restoreAppData": "앱 데이터 복원",
-  "@restoreAppData": {
-    "description": "restoreAppData"
-  },
-  "queueShufflingDeniedMsg": "랜덤 모드가 활성화되었습니다. 대기열을 수동으로 혼합할 수는 없습니다.",
-  "@queueShufflingDeniedMsg": {
-    "description": "queueShufflingDeniedMsg"
-  },
-  "includeDownloadedFiles": "다운로드한 노래 파일 포함",
-  "@includeDownloadedFiles": {
-    "description": "includeDownloadedFiles"
-  },
-  "backupInProgress": "백업 진행 중...",
-  "@backupInProgress": {
-    "description": "backupInProgress"
-  },
-  "queuerearrangingDeniedMsg": "셔플 모드가 켜져 있으면 대기열을 재정렬할 수 없습니다.",
-  "@queuerearrangingDeniedMsg": {
-    "description": "queuerearrangingDeniedMsg"
-  },
-  "content": "내용",
-  "@content": {
-    "description": "content"
-  },
-  "downloadError3": "네트워크/전송 오류로 인해 다운로드에 실패했습니다! 다시 시도해 주세요",
-  "@downloadError3": {
-    "description": "downloadError3"
-  },
-  "personalisation": "개인화",
-  "@personalisation": {
-    "description": "personalisation"
-  },
-  "playerUiDes": "플레이어 사용자 인터페이스 선택",
-  "@playerUiDes": {
-    "description": "playerUiDes"
-  },
-  "musicAndPlayback": "음악 및 재생",
-  "@musicAndPlayback": {
-    "description": "musicAndPlayback"
-  },
-  "appInfo": "신청정보",
-  "@appInfo": {
-    "description": "appInfo"
-  },
-  "networkError": "네트워크 오류입니다! 인터넷 연결을 확인하세요.",
-  "@networkError": {
-    "description": "networkError"
-  },
-  "download": "다운로드",
-  "@download": {
-    "description": "download"
-  },
-  "downloadError2": "요청하신 곡은 서버 제한으로 인해 다운로드가 불가능합니다. 다시 시도해 보세요.",
-  "@downloadError2": {
-    "description": "downloadError2"
-  },
-  "letsStrart": "시작하자..",
-  "@letsStrart": {
-    "description": "letsStrart"
-  },
-  "processFiles": "파일 처리 중...",
-  "@processFiles": {
-    "description": "processFiles"
-  },
-  "backupAppData": "백업 앱 데이터",
-  "@backupAppData": {
-    "description": "backupAppData"
-  },
-  "backup": "백업",
-  "@backup": {
-    "description": "backup"
-  },
-  "playnextMsg": "곧 출시 예정",
-  "@playnextMsg": {
-    "description": "playnextMsg"
-  },
-  "shuffleQueue": "꼬리를 섞다",
-  "@shuffleQueue": {
-    "description": "shuffleQueue"
-  },
-  "queueLoop": "테일 루프",
-  "@queueLoop": {
-    "description": "queueLoop"
-  },
-  "queueLoopNotDisMsg1": "셔플 모드가 활성화된 경우 대기열 루프 모드를 비활성화할 수 없습니다.",
-  "@queueLoopNotDisMsg1": {
-    "description": "queueLoopNotDisMsg1"
-  },
-  "queueLoopNotDisMsg2": "라디오 모드에서는 테일 루프 모드를 활성화할 수 없습니다.",
-  "@queueLoopNotDisMsg2": {
-    "description": "queueLoopNotDisMsg2"
-  },
-  "loudnessNormalizationDes": "모든 노래에 동일한 음량 레벨 설정(실험)(이전 버전(< v1.10.0)에서 다운로드한 노래에서는 작동하지 않음)",
-  "@loudnessNormalizationDes": {
-    "description": "loudnessNormalizationDes"
+  "enableBottomNavDes": "하단 내비게이션 바로 변경",
+  "@enableBottomNavDes": {
+    "description": "enableBottomNavDes"
   },
   "enableSlidableAction": "슬라이더 동작 활성화",
   "@enableSlidableAction": {
@@ -1827,141 +597,65 @@
   "@enableSlidableActionDes": {
     "description": "enableSlidableActionDes"
   },
-  "bitrate": "비트 전송률",
-  "@bitrate": {
-    "description": "bitrate"
+  "enabled": "활성화됨",
+  "@enabled": {
+    "description": "enabled"
   },
-  "androidBackupWarning": "테스트되지 않음: 60개 이상의 파일을 다운로드한 후 확인란을 선택하면 프로세스가 많은 양의 메모리를 소비하고 휴대폰이나 앱이 충돌할 수 있습니다. 자신의 책임하에 진행하십시오.",
-  "@androidBackupWarning": {
-    "description": "androidBackupWarning"
+  "endOfThisSong": "이 음악의 끝",
+  "@endOfThisSong": {
+    "description": "endOfThisSong"
   },
-  "songInfo": "노래정보",
-  "@songInfo": {
-    "description": "songInfo"
+  "enqueueAlbumSongs": "대기열에 앨범 노래 추가",
+  "@enqueueAlbumSongs": {
+    "description": "enqueueAlbumSongs"
   },
-  "id": "아이디",
-  "@id": {
-    "description": "id"
+  "enqueueAll": "모두 대기열에 추가",
+  "@enqueueAll": {
+    "description": "enqueueAll"
   },
-  "title": "제목",
-  "@title": {
-    "description": "title"
+  "enqueueSong": "이 곡을 대기열에 추가",
+  "@enqueueSong": {
+    "description": "enqueueSong"
   },
-  "restartApp": "애플리케이션 다시 시작",
-  "@restartApp": {
-    "description": "restartApp"
+  "enqueueSongs": "대기열에 노래 추가",
+  "@enqueueSongs": {
+    "description": "enqueueSongs"
   },
-  "autoDownFavSong": "좋아하는 노래 자동 다운로드",
-  "@autoDownFavSong": {
-    "description": "autoDownFavSong"
+  "episodes": "에피소드",
+  "@episodes": {
+    "description": "episodes"
   },
-  "duration": "기간",
-  "@duration": {
-    "description": "duration"
+  "equalizer": "이퀄라이저",
+  "@equalizer": {
+    "description": "equalizer"
   },
-  "urlSearchDes": "감지된 URL을 클릭하면 관련 콘텐츠가 열리거나 재생됩니다.",
-  "@urlSearchDes": {
-    "description": "urlSearchDes"
+  "equalizerDes": "시스템 이퀄라이저 열기",
+  "@equalizerDes": {
+    "description": "equalizerDes"
   },
-  "album": "앨범",
-  "@album": {
-    "description": "album"
+  "errorOccuredAlert": "알 수 없는 오류가 생겼습니다!",
+  "@errorOccuredAlert": {
+    "description": "errorOccuredAlert"
   },
-  "reArrangeSongs": "노래 재정렬",
-  "@reArrangeSongs": {
-    "description": "reArrangeSongs"
+  "errorOccurred": "오류가 발생했습니다",
+  "@errorOccurred": {
+    "description": "errorOccurred"
   },
-  "selectSongs": "노래 선택",
-  "@selectSongs": {
-    "description": "selectSongs"
+  "errorPlayingTrack": "플레이 중 오류:",
+  "@errorPlayingTrack": {
+    "description": "errorPlayingTrack"
   },
-  "selectAll": "모두 선택",
-  "@selectAll": {
-    "description": "selectAll"
+  "export": "내보내기",
+  "@export": {
+    "description": "export"
   },
-  "playingfromAlbum": "앨범에서 재생 중",
-  "@playingfromAlbum": {
-    "description": "playingfromAlbum"
+  "exportDowloadedFiles": "다운로드한 파일을 내보내기",
+  "@exportDowloadedFiles": {
+    "description": "exportDowloadedFiles"
   },
-  "playingfromPlaylist": "재생 목록에서 재생",
-  "@playingfromPlaylist": {
-    "description": "playingfromPlaylist"
-  },
-  "playingfromSelection": "선택에서 재생",
-  "@playingfromSelection": {
-    "description": "playingfromSelection"
-  },
-  "resetToDefaultMsg": "설정 기본값으로 재설정이 완료되었습니다. 앱을 다시 시작하세요.",
-  "@resetToDefaultMsg": {
-    "description": "resetToDefaultMsg"
-  },
-  "resetToDefaultDes": "앱 설정을 기본값으로 재설정(다시 시작해야 함)",
-  "@resetToDefaultDes": {
-    "description": "resetToDefaultDes"
-  },
-  "misc": "다양한",
-  "@misc": {
-    "description": "misc"
-  },
-  "resetToDefault": "기본 설정 복원",
-  "@resetToDefault": {
-    "description": "resetToDefault"
-  },
-  "autoOpenPlayer": "플레이어 화면 자동 열기",
-  "@autoOpenPlayer": {
-    "description": "autoOpenPlayer"
-  },
-  "autoOpenPlayerDes": "재생할 노래를 선택할 때 플레이어가 자동으로 전체 화면으로 열리는 것을 활성화/비활성화합니다.",
-  "@autoOpenPlayerDes": {
-    "description": "autoOpenPlayerDes"
-  },
-  "playingfromArtist": "아티스트와 함께 플레이하기",
-  "@playingfromArtist": {
-    "description": "playingfromArtist"
-  },
-  "randomSelection": "무작위 선택",
-  "@randomSelection": {
-    "description": "randomSelection"
-  },
-  "randomRadio": "무작위 라디오",
-  "@randomRadio": {
-    "description": "randomRadio"
-  },
-  "exportPlaylist": "재생목록 내보내기",
-  "@exportPlaylist": {
-    "description": "exportPlaylist"
-  },
-  "importPlaylistDesc": "가져올 이전에 내보낸 재생목록 JSON 파일을 선택하세요.",
-  "@importPlaylistDesc": {
-    "description": "importPlaylistDesc"
-  },
-  "invalidPlaylistFile": "잘못된 재생 목록 파일 구조",
-  "@invalidPlaylistFile": {
-    "description": "invalidPlaylistFile"
-  },
-  "fileNotFound": "파일을 찾을 수 없습니다",
-  "@fileNotFound": {
-    "description": "fileNotFound"
-  },
-  "exportErrorPermission": "내보낼 때 권한이 거부되었습니다.",
-  "@exportErrorPermission": {
-    "description": "exportErrorPermission"
-  },
-  "importingPlaylist": "재생목록을 가져오는 중...",
-  "@importingPlaylist": {
-    "description": "importingPlaylist"
-  },
-  "exportErrorStorage": "저장공간이 부족함",
-  "@exportErrorStorage": {
-    "description": "exportErrorStorage"
-  },
-  "exportingPlaylist": "재생목록을 내보내는 중...",
-  "@exportingPlaylist": {
-    "description": "exportingPlaylist"
-  },
-  "playlistExportedMsg": "재생목록을 다음으로 성공적으로 내보냈습니다.",
-  "@playlistExportedMsg": {
-    "description": "playlistExportedMsg"
+  "exportDowloadedFilesDes": "인앱 디렉토리에 있는 다운로드한 파일들을 외부 디렉토리로 옮기려면 클릭하세요",
+  "@exportDowloadedFilesDes": {
+    "description": "exportDowloadedFilesDes"
   },
   "exportError": "재생목록을 내보내는 중에 오류가 발생했습니다.",
   "@exportError": {
@@ -1971,41 +665,29 @@
   "@exportErrorFormat": {
     "description": "exportErrorFormat"
   },
-  "importPlaylist": "재생목록 가져오기",
-  "@importPlaylist": {
-    "description": "importPlaylist"
+  "exportErrorPermission": "내보낼 때 권한이 거부되었습니다.",
+  "@exportErrorPermission": {
+    "description": "exportErrorPermission"
   },
-  "selectFile": "파일 선택",
-  "@selectFile": {
-    "description": "selectFile"
+  "exportErrorStorage": "저장공간이 부족함",
+  "@exportErrorStorage": {
+    "description": "exportErrorStorage"
   },
-  "playlistImportedMsg": "재생목록을 성공적으로 가져왔습니다.",
-  "@playlistImportedMsg": {
-    "description": "playlistImportedMsg"
+  "exportMsg": "파일을 성공적으로 내보냈습니다",
+  "@exportMsg": {
+    "description": "exportMsg"
   },
-  "importError": "재생목록을 가져오는 중에 오류가 발생했습니다.",
-  "@importError": {
-    "description": "importError"
-  },
-  "importErrorFileAccess": "선택한 파일에 접근할 수 없습니다",
-  "@importErrorFileAccess": {
-    "description": "importErrorFileAccess"
-  },
-  "importErrorFormat": "잘못된 파일 형식",
-  "@importErrorFormat": {
-    "description": "importErrorFormat"
-  },
-  "importErrorDatabase": "데이터베이스에 저장하는 중 오류가 발생했습니다.",
-  "@importErrorDatabase": {
-    "description": "importErrorDatabase"
-  },
-  "importLargeFileNote": "참고: 큰 재생목록은 가져오는 데 시간이 더 오래 걸릴 수 있습니다.",
-  "@importLargeFileNote": {
-    "description": "importLargeFileNote"
+  "exportPlaylist": "재생목록 내보내기",
+  "@exportPlaylist": {
+    "description": "exportPlaylist"
   },
   "exportPlaylistCsv": "재생목록을 CSV로 내보내기",
   "@exportPlaylistCsv": {
     "description": "exportPlaylistCsv"
+  },
+  "exportPlaylistCsvSubtitle": "여기에서는 가져올 수 없습니다.",
+  "@exportPlaylistCsvSubtitle": {
+    "description": "exportPlaylistCsvSubtitle"
   },
   "exportPlaylistJson": "재생 목록을 JSON으로 내보내기",
   "@exportPlaylistJson": {
@@ -2015,10 +697,6 @@
   "@exportPlaylistJsonSubtitle": {
     "description": "exportPlaylistJsonSubtitle"
   },
-  "exportPlaylistCsvSubtitle": "여기에서는 가져올 수 없습니다.",
-  "@exportPlaylistCsvSubtitle": {
-    "description": "exportPlaylistCsvSubtitle"
-  },
   "exportToOnlineMusic": "유튜브 뮤직으로 내보내기",
   "@exportToOnlineMusic": {
     "description": "exportToOnlineMusic"
@@ -2027,145 +705,489 @@
   "@exportToOnlineMusicSubtitle": {
     "description": "exportToOnlineMusicSubtitle"
   },
-  "linkCopied": "링크가 클립보드에 복사되었습니다.",
-  "@linkCopied": {
-    "description": "linkCopied"
+  "exportedFileLocation": "다운로드한 파일을 내보낼 위치",
+  "@exportedFileLocation": {
+    "description": "exportedFileLocation"
   },
-  "lyrics": "편지",
-  "@lyrics": {
-    "description": "lyrics"
+  "exporting": "내보내는 중...",
+  "@exporting": {
+    "description": "exporting"
   },
-  "no": "아니요",
-  "@no": {
-    "description": "no"
+  "exportingPlaylist": "재생목록을 내보내는 중...",
+  "@exportingPlaylist": {
+    "description": "exportingPlaylist"
   },
-  "podcasts": "팟캐스트",
-  "@podcasts": {
-    "description": "podcasts"
+  "favorites": "즐겨찾기",
+  "@favorites": {
+    "description": "favorites"
   },
-  "episodes": "에피소드",
-  "@episodes": {
-    "description": "episodes"
+  "featuredplaylists": "인기 플레이리스트",
+  "@featuredplaylists": {
+    "description": "featuredplaylists"
   },
-  "profiles": "프로필",
-  "@profiles": {
-    "description": "profiles"
+  "fileNotFound": "파일을 찾을 수 없습니다",
+  "@fileNotFound": {
+    "description": "fileNotFound"
   },
-  "addToLibrary": "라이브러리에 추가",
-  "@addToLibrary": {
-    "description": "addToLibrary"
+  "follow": "계속하다",
+  "@follow": {
+    "description": "follow"
   },
-  "removeFromLibrary": "라이브러리에서 삭제",
-  "@removeFromLibrary": {
-    "description": "removeFromLibrary"
+  "followedArtists": "팔로우함",
+  "@followedArtists": {
+    "description": "followedArtists"
   },
-  "play": "플레이",
-  "@play": {
-    "description": "play"
+  "following": "수행원",
+  "@following": {
+    "description": "following"
   },
-  "enqueueAlbumSongs": "대기열에 앨범 노래 추가",
-  "@enqueueAlbumSongs": {
-    "description": "enqueueAlbumSongs"
+  "for1": "어구",
+  "@for1": {
+    "description": "for1"
   },
-  "downloadAlbumSongs": "앨범에서 노래 다운로드",
-  "@downloadAlbumSongs": {
-    "description": "downloadAlbumSongs"
+  "forgottenFavorites": "잊혀진 즐겨찾기",
+  "@forgottenFavorites": {
+    "description": "forgottenFavorites"
   },
-  "shareAlbum": "앨범 공유",
-  "@shareAlbum": {
-    "description": "shareAlbum"
+  "friendFallback": "친구",
+  "@friendFallback": {
+    "description": "friendFallback"
+  },
+  "friendRequestAccepted": "친구 요청이 수락되었습니다.",
+  "@friendRequestAccepted": {
+    "description": "friendRequestAccepted"
+  },
+  "friendRequestSent": "친구 요청이 전송되었습니다",
+  "@friendRequestSent": {
+    "description": "friendRequestSent"
+  },
+  "friends": "친구",
+  "@friends": {
+    "description": "friends"
+  },
+  "friendsLoginRequired": "친구를 찾으려면 로그인하세요.",
+  "@friendsLoginRequired": {
+    "description": "friendsLoginRequired"
+  },
+  "friendshipRemoved": "우정이 제거되었습니다.",
+  "@friendshipRemoved": {
+    "description": "friendshipRemoved"
+  },
+  "genericAlbum": "앨범",
+  "@genericAlbum": {
+    "description": "genericAlbum"
+  },
+  "genericError": "실수",
+  "@genericError": {
+    "description": "genericError"
+  },
+  "genre_electronic": "전자제품",
+  "@genre_electronic": {
+    "description": "genre_electronic"
+  },
+  "genre_hiphop": "힙합",
+  "@genre_hiphop": {
+    "description": "genre_hiphop"
+  },
+  "genre_jazz": "재즈",
+  "@genre_jazz": {
+    "description": "genre_jazz"
+  },
+  "genre_latin": "라틴어",
+  "@genre_latin": {
+    "description": "genre_latin"
+  },
+  "genre_pop": "팝",
+  "@genre_pop": {
+    "description": "genre_pop"
+  },
+  "genre_rock": "바위",
+  "@genre_rock": {
+    "description": "genre_rock"
+  },
+  "gesture": "제스처",
+  "@gesture": {
+    "description": "gesture"
+  },
+  "github": "Github",
+  "@github": {
+    "description": "github"
+  },
+  "githubDes": "Github 소스 코드 보기\n이 프로젝트가 마음에 든다면, ⭐을 남겨주세요",
+  "@githubDes": {
+    "description": "githubDes"
+  },
+  "goToAlbum": "앨범으로 이동",
+  "@goToAlbum": {
+    "description": "goToAlbum"
+  },
+  "goToDownloadPage": "다운로드 페이지로 가려면 클릭",
+  "@goToDownloadPage": {
+    "description": "goToDownloadPage"
+  },
+  "helloWorld": "안녕하세요 세상",
+  "@helloWorld": {
+    "description": "Este texto es opcional"
+  },
+  "high": "높음",
+  "@high": {
+    "description": "high"
+  },
+  "hintApiUrl": "Piped 인스턴스의 API URL",
+  "@hintApiUrl": {
+    "description": "hintApiUrl"
+  },
+  "home": "홈",
+  "@home": {
+    "description": "home"
+  },
+  "homeContentCount": "홈 컨텐츠 수",
+  "@homeContentCount": {
+    "description": "homeContentCount"
+  },
+  "homeContentCountDes": "홈스크린에서 보여줄 컨텐츠의 대략적인 수를 정해주세요. 수가 적을수록 빨리 불러와집니다",
+  "@homeContentCountDes": {
+    "description": "homeContentCountDes"
+  },
+  "id": "아이디",
+  "@id": {
+    "description": "id"
+  },
+  "identifySongMetadata": "메타데이터를 식별",
+  "@identifySongMetadata": {
+    "description": "Action that searches and embeds metadata for a local song"
+  },
+  "ignoreBatOpt": "배터리 최적화 무시",
+  "@ignoreBatOpt": {
+    "description": "ignoreBatOpt"
+  },
+  "ignoreBatOptDes": "만약 배터리 최적화 기능 때문에 푸시 알림이 오지 않거나 음악이 멈춘다면, 이 설정을 활성화해주세요",
+  "@ignoreBatOptDes": {
+    "description": "ignoreBatOptDes"
+  },
+  "importError": "재생목록을 가져오는 중에 오류가 발생했습니다.",
+  "@importError": {
+    "description": "importError"
+  },
+  "importErrorDatabase": "데이터베이스에 저장하는 중 오류가 발생했습니다.",
+  "@importErrorDatabase": {
+    "description": "importErrorDatabase"
+  },
+  "importErrorFileAccess": "선택한 파일에 접근할 수 없습니다",
+  "@importErrorFileAccess": {
+    "description": "importErrorFileAccess"
+  },
+  "importErrorFormat": "잘못된 파일 형식",
+  "@importErrorFormat": {
+    "description": "importErrorFormat"
+  },
+  "importLargeFileNote": "참고: 큰 재생목록은 가져오는 데 시간이 더 오래 걸릴 수 있습니다.",
+  "@importLargeFileNote": {
+    "description": "importLargeFileNote"
+  },
+  "importPlaylist": "재생목록 가져오기",
+  "@importPlaylist": {
+    "description": "importPlaylist"
+  },
+  "importPlaylistDesc": "가져올 이전에 내보낸 재생목록 JSON 파일을 선택하세요.",
+  "@importPlaylistDesc": {
+    "description": "importPlaylistDesc"
   },
   "imported": "수입됨",
   "@imported": {
     "description": "imported"
   },
+  "importedFromJossMusic": "Joss Music Kotlin에서 가져옴",
+  "@importedFromJossMusic": {
+    "description": "importedFromJossMusic"
+  },
   "importedPlaylist": "가져온 재생목록",
   "@importedPlaylist": {
     "description": "importedPlaylist"
   },
-  "permissionDenied": "허가가 거부되었습니다",
-  "@permissionDenied": {
-    "description": "permissionDenied"
+  "importingPlaylist": "재생목록을 가져오는 중...",
+  "@importingPlaylist": {
+    "description": "importingPlaylist"
   },
-  "enqueueSongs": "대기열에 노래 추가",
-  "@enqueueSongs": {
-    "description": "enqueueSongs"
+  "in_app_storage": "내부 저장소 디렉토리",
+  "@in_app_storage": {
+    "description": "in_app_storage"
   },
-  "shuffle": "무작위",
-  "@shuffle": {
-    "description": "shuffle"
+  "includeDownloadedFiles": "다운로드한 노래 파일 포함",
+  "@includeDownloadedFiles": {
+    "description": "includeDownloadedFiles"
   },
-  "downloadPlaylist": "재생목록 다운로드",
-  "@downloadPlaylist": {
-    "description": "downloadPlaylist"
+  "infoNotAvailable": "정보를 사용할 수 없음",
+  "@infoNotAvailable": {
+    "description": "infoNotAvailable"
   },
-  "syncPlaylistSongs": "재생목록 노래 동기화",
-  "@syncPlaylistSongs": {
-    "description": "syncPlaylistSongs"
+  "invalidPlaylistFile": "잘못된 재생 목록 파일 구조",
+  "@invalidPlaylistFile": {
+    "description": "invalidPlaylistFile"
   },
-  "blacklistPipedPlaylist": "재생목록 블랙리스트",
-  "@blacklistPipedPlaylist": {
-    "description": "blacklistPipedPlaylist"
+  "invalidServerResponse": "서버 응답이 잘못되었습니다.",
+  "@invalidServerResponse": {
+    "description": "invalidServerResponse"
   },
-  "sharePlaylist": "재생목록 공유",
-  "@sharePlaylist": {
-    "description": "sharePlaylist"
+  "invalidSessionToken": "세션에 유효한 토큰이 포함되어 있지 않습니다.",
+  "@invalidSessionToken": {
+    "description": "invalidSessionToken"
   },
-  "playlist": "재생목록",
-  "@playlist": {
-    "description": "playlist"
+  "items": "항목",
+  "@items": {
+    "description": "items"
   },
-  "sortByName": "이름순으로 정렬",
-  "@sortByName": {
-    "description": "sortByName"
+  "keepListening": "계속 들어봐",
+  "@keepListening": {
+    "description": "keepListening"
   },
-  "sortByDate": "날짜별로 정렬",
-  "@sortByDate": {
-    "description": "sortByDate"
+  "keepScreenOnWhilePlaying": "재생 중 화면 켜짐 유지",
+  "@keepScreenOnWhilePlaying": {
+    "description": "keepScreenOnWhilePlaying"
   },
-  "sortByDuration": "기간별로 정렬",
-  "@sortByDuration": {
-    "description": "sortByDuration"
+  "keepScreenOnWhilePlayingDes": "활성화하면 음악 재생 중에 기기 화면이 켜진 상태로 유지됩니다",
+  "@keepScreenOnWhilePlayingDes": {
+    "description": "keepScreenOnWhilePlayingDes"
   },
-  "sortAscendNDescend": "오름차순/내림차순 정렬",
-  "@sortAscendNDescend": {
-    "description": "sortAscendNDescend"
+  "language": "언어",
+  "@language": {
+    "description": "language"
   },
-  "migration_summary_start": "{source}에서 마이그레이션이 완료되었습니다.",
-  "@migration_summary_start": {
-    "placeholders": {
-      "source": {
-        "type": "String"
-      }
-    },
-    "description": "migration_summary_start"
+  "languageDes": "앱 언어 설정",
+  "@languageDes": {
+    "description": "languageDes"
   },
-  "migration_summary_playlists": "재생목록: {count}",
-  "@migration_summary_playlists": {
-    "placeholders": {
-      "count": {
-        "type": "num"
-      }
-    },
-    "description": "migration_summary_playlists"
+  "latestRelease": "최신 릴리스",
+  "@latestRelease": {
+    "description": "latestRelease"
   },
-  "migration_summary_songs": "노래: {count}",
-  "@migration_summary_songs": {
-    "placeholders": {
-      "count": {
-        "type": "num"
-      }
-    },
-    "description": "migration_summary_songs"
+  "latestVersion": "최신 버전 사용 가능",
+  "@latestVersion": {
+    "description": "latestVersion"
   },
-  "migration_summary_favorites": "즐겨찾기: {count}",
-  "@migration_summary_favorites": {
-    "placeholders": {
-      "count": {
-        "type": "num"
-      }
-    },
-    "description": "migration_summary_favorites"
+  "letsStrart": "시작하자..",
+  "@letsStrart": {
+    "description": "letsStrart"
+  },
+  "libAlbums": "라이브러리 앨범",
+  "@libAlbums": {
+    "description": "libAlbums"
+  },
+  "libArtists": "라이브러리 아티스트",
+  "@libArtists": {
+    "description": "libArtists"
+  },
+  "libPlaylists": "라이브러리 플레이리스트",
+  "@libPlaylists": {
+    "description": "libPlaylists"
+  },
+  "libSongs": "라이브러리 음악",
+  "@libSongs": {
+    "description": "libSongs"
+  },
+  "library": "라이브러리",
+  "@library": {
+    "description": "library"
+  },
+  "libraryPlaylistDescription": "도서관 재생목록",
+  "@libraryPlaylistDescription": {
+    "description": "libraryPlaylistDescription"
+  },
+  "light": "라이트",
+  "@light": {
+    "description": "light"
+  },
+  "link": "로그인",
+  "@link": {
+    "description": "link"
+  },
+  "linkAlert": "로그인 성공!",
+  "@linkAlert": {
+    "description": "linkAlert"
+  },
+  "linkCopied": "링크가 클립보드에 복사되었습니다.",
+  "@linkCopied": {
+    "description": "linkCopied"
+  },
+  "linkPipedDes": "플레이리스트를 Piped로부터 가져오기",
+  "@linkPipedDes": {
+    "description": "linkPipedDes"
+  },
+  "listenNow": "지금 들어보세요",
+  "@listenNow": {
+    "description": "listenNow"
+  },
+  "listeningToEnvironment": "환경에 귀를 기울이다...",
+  "@listeningToEnvironment": {
+    "description": "listeningToEnvironment"
+  },
+  "loadInfoUpdate": "업데이트 정보를 로드할 수 없습니다.",
+  "@loadInfoUpdate": {
+    "description": "loadInfoUpdate"
+  },
+  "local": "기기",
+  "@local": {
+    "description": "local"
+  },
+  "local_b1": "로그인할 필요 없이 작동됩니다.",
+  "@local_b1": {
+    "description": "local_b1"
+  },
+  "local_b2": "전체 라이브러리는 이 컴퓨터에만 유지됩니다.",
+  "@local_b2": {
+    "description": "local_b2"
+  },
+  "local_b3": "참고: 수동 클라우드 백업은 없습니다. 기기를 분실하거나 앱을 제거한 경우 데이터를 복구할 수 없습니다.",
+  "@local_b3": {
+    "description": "local_b3"
+  },
+  "local_btn": "이 기기에서만 사용하세요",
+  "@local_btn": {
+    "description": "local_btn"
+  },
+  "local_subtitle": "귀하의 장치에 대한 완벽한 개인 정보 보호",
+  "@local_subtitle": {
+    "description": "local_subtitle"
+  },
+  "local_title": "로컬 모드",
+  "@local_title": {
+    "description": "local_title"
+  },
+  "loudnessDb": "음량Db",
+  "@loudnessDb": {
+    "description": "loudnessDb"
+  },
+  "loudnessNormalization": "음량 정규화",
+  "@loudnessNormalization": {
+    "description": "loudnessNormalization"
+  },
+  "loudnessNormalizationDes": "모든 노래에 동일한 음량 레벨 설정(실험)(이전 버전(< v1.10.0)에서 다운로드한 노래에서는 작동하지 않음)",
+  "@loudnessNormalizationDes": {
+    "description": "loudnessNormalizationDes"
+  },
+  "low": "낮음",
+  "@low": {
+    "description": "low"
+  },
+  "lyrics": "편지",
+  "@lyrics": {
+    "description": "lyrics"
+  },
+  "lyricsNotAvailable": "가사를 찾지 못했습니다!",
+  "@lyricsNotAvailable": {
+    "description": "lyricsNotAvailable"
+  },
+  "manageCollaborators": "공동작업자(친구) 관리",
+  "@manageCollaborators": {
+    "description": "manageCollaborators"
+  },
+  "metadataApplySuccess": "Metadata는 로컬 파일에 삽입되었습니다.",
+  "@metadataApplySuccess": {
+    "description": "Success message after writing local tags"
+  },
+  "metadataNoResults": "인기 상품 다른 검색을 시도하십시오.",
+  "@metadataNoResults": {
+    "description": "Empty state for metadata search"
+  },
+  "metadataOperationFailed": "metadata 동작이 실패했습니다.",
+  "@metadataOperationFailed": {
+    "description": "Generic metadata lookup or write error"
+  },
+  "metadataOverwriteWarning": "이 임베디드 제목, 아티스트, 앨범 및 커버를 덮어 어떤 필드를 보존하지 않습니다.",
+  "@metadataOverwriteWarning": {
+    "description": "Confirmation before writing tags to a local audio file"
+  },
+  "metadataSearchDescription": "제목, 아티스트, 앨범 및 현지 파일에 맞는 일치를 선택하십시오.",
+  "@metadataSearchDescription": {
+    "description": "Explanation shown above metadata search results"
+  },
+  "metadataSearchHint": "송 또는 아티스트 이름",
+  "@metadataSearchHint": {
+    "description": "Hint for the metadata search field"
+  },
+  "metadataSearchTitle": "노래를 식별",
+  "@metadataSearchTitle": {
+    "description": "Title of the local song metadata search dialog"
+  },
+  "micInstruction": "마이크 근처에서 음악이 충분히 크게 재생되는지 확인하세요.",
+  "@micInstruction": {
+    "description": "micInstruction"
+  },
+  "migratedAlbum": "이전된 앨범",
+  "@migratedAlbum": {
+    "description": "migratedAlbum"
+  },
+  "migratedLibrary": "마이그레이션된 라이브러리",
+  "@migratedLibrary": {
+    "description": "migratedLibrary"
+  },
+  "migratedPlaylist": "마이그레이션된 재생목록",
+  "@migratedPlaylist": {
+    "description": "migratedPlaylist"
+  },
+  "migrationAlreadyRunning": "이미 마이그레이션이 진행 중입니다.",
+  "@migrationAlreadyRunning": {
+    "description": "migrationAlreadyRunning"
+  },
+  "migrationAnalyzingLocal": "지역 도서관을 분석하는 중...",
+  "@migrationAnalyzingLocal": {
+    "description": "migrationAnalyzingLocal"
+  },
+  "migrationCheckingCloud": "EMusic Cloud에 이미 라이브러리가 있는지 확인하는 중...",
+  "@migrationCheckingCloud": {
+    "description": "migrationCheckingCloud"
+  },
+  "migrationCompleted": "마이그레이션이 완료되었습니다.",
+  "@migrationCompleted": {
+    "description": "migrationCompleted"
+  },
+  "migrationCreatingBackup": "클라우드에 연결하기 전에 로컬 백업 생성 중...",
+  "@migrationCreatingBackup": {
+    "description": "migrationCreatingBackup"
+  },
+  "migrationFailedLocalPreserved": "마이그레이션이 실패했습니다. 로컬 데이터가 수정되지 않았습니다.",
+  "@migrationFailedLocalPreserved": {
+    "description": "migrationFailedLocalPreserved"
+  },
+  "migrationLoginRequired": "마이그레이션하기 전에 Joss Red에 로그인하세요.",
+  "@migrationLoginRequired": {
+    "description": "migrationLoginRequired"
+  },
+  "migrationPreparingCloud": "EMusic Cloud에서 마이그레이션 준비 중...",
+  "@migrationPreparingCloud": {
+    "description": "migrationPreparingCloud"
+  },
+  "migrationStartFailed": "EMusic Cloud가 마이그레이션을 시작할 수 없습니다.",
+  "@migrationStartFailed": {
+    "description": "migrationStartFailed"
+  },
+  "migrationUploadIncomplete": "모든 데이터를 업로드할 수는 없습니다. 우리는 귀하의 지역 지원을 유지합니다.",
+  "@migrationUploadIncomplete": {
+    "description": "migrationUploadIncomplete"
+  },
+  "migrationUploadingData": "재생목록, 즐겨찾기, 기록 업로드 중...",
+  "@migrationUploadingData": {
+    "description": "migrationUploadingData"
+  },
+  "migrationValidationFailed": "EMusic Cloud가 마이그레이션을 검증할 수 없습니다.",
+  "@migrationValidationFailed": {
+    "description": "migrationValidationFailed"
+  },
+  "migrationVerifyingIntegrity": "EMusic Cloud에서 무결성을 확인하는 중...",
+  "@migrationVerifyingIntegrity": {
+    "description": "migrationVerifyingIntegrity"
+  },
+  "migration_btn_select": "파일을 선택하고 가져오기",
+  "@migration_btn_select": {
+    "description": "migration_btn_select"
+  },
+  "migration_select_file_dialog": "song.db 또는 백업 .backup을 선택하세요.",
+  "@migration_select_file_dialog": {
+    "description": "migration_select_file_dialog"
+  },
+  "migration_success": "마이그레이션이 성공적으로 완료되었습니다.",
+  "@migration_success": {
+    "description": "migration_success"
   },
   "migration_summary_albums": "앨범: {count}",
   "@migration_summary_albums": {
@@ -2185,121 +1207,1166 @@
     },
     "description": "migration_summary_artists"
   },
-  "migration_select_file_dialog": "song.db 또는 백업 .backup을 선택하세요.",
-  "@migration_select_file_dialog": {
-    "description": "migration_select_file_dialog"
+  "migration_summary_favorites": "즐겨찾기: {count}",
+  "@migration_summary_favorites": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_favorites"
   },
-  "migration_success": "마이그레이션이 성공적으로 완료되었습니다.",
-  "@migration_success": {
-    "description": "migration_success"
+  "migration_summary_playlists": "재생목록: {count}",
+  "@migration_summary_playlists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_playlists"
   },
-  "backup_select_folder_dialog": "백업할 폴더를 선택하세요",
-  "@backup_select_folder_dialog": {
-    "description": "backup_select_folder_dialog"
+  "migration_summary_songs": "노래: {count}",
+  "@migration_summary_songs": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_songs"
+  },
+  "migration_summary_start": "{source}에서 마이그레이션이 완료되었습니다.",
+  "@migration_summary_start": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      }
+    },
+    "description": "migration_summary_start"
+  },
+  "minutes": "분",
+  "@minutes": {
+    "description": "minutes"
+  },
+  "misc": "다양한",
+  "@misc": {
+    "description": "misc"
+  },
+  "mostListenedSong": "가장 많이 듣는 노래",
+  "@mostListenedSong": {
+    "description": "mostListenedSong"
+  },
+  "musicAndPlayback": "음악 및 재생",
+  "@musicAndPlayback": {
+    "description": "musicAndPlayback"
+  },
+  "musicRecognition": "음악 인식",
+  "@musicRecognition": {
+    "description": "musicRecognition"
+  },
+  "networkError": "네트워크 오류입니다! 인터넷 연결을 확인하세요.",
+  "@networkError": {
+    "description": "networkError"
+  },
+  "networkError1": "네트워크 에러!",
+  "@networkError1": {
+    "description": "networkError1"
+  },
+  "newVersionAvailable": "새 버전을 이용할 수 있음!",
+  "@newVersionAvailable": {
+    "description": "newVersionAvailable"
+  },
+  "news_btn_app": "조스 레드 앱(Play 스토어)",
+  "@news_btn_app": {
+    "description": "news_btn_app"
+  },
+  "news_btn_dismiss": "이해했다",
+  "@news_btn_dismiss": {
+    "description": "news_btn_dismiss"
+  },
+  "news_btn_web": "조스 레드 웹",
+  "@news_btn_web": {
+    "description": "news_btn_web"
+  },
+  "news_card_subtitle": "Joss Red와의 100% 동기화, 친구들과의 재생 목록 등. 새로운 소식을 보려면 탭하세요.",
+  "@news_card_subtitle": {
+    "description": "news_card_subtitle"
+  },
+  "news_card_title": "Estrella Music이 진화했습니다!",
+  "@news_card_title": {
+    "description": "news_card_title"
+  },
+  "news_dialog_friends_desc": "친구를 추가하고, 요청을 수락하고, 보안 프로필을 관리하려면 공식 플랫폼에서 Joss Red를 사용하세요.",
+  "@news_dialog_friends_desc": {
+    "description": "news_dialog_friends_desc"
+  },
+  "news_dialog_section_friends": "친구 및 계정 관리:",
+  "@news_dialog_section_friends": {
+    "description": "news_dialog_section_friends"
+  },
+  "news_dialog_title": "Estrella 음악 뉴스",
+  "@news_dialog_title": {
+    "description": "news_dialog_title"
+  },
+  "news_item_collab_desc": "친구들과 함께 재생목록을 만들어보세요! 재생목록을 생성할 때 공동작업 확인란을 선택하고 함께 편집할 친구를 선택하세요.",
+  "@news_item_collab_desc": {
+    "description": "news_item_collab_desc"
+  },
+  "news_item_collab_title": "공동 재생 목록",
+  "@news_item_collab_title": {
+    "description": "news_item_collab_title"
+  },
+  "news_item_sync_desc": "이제 재생 목록과 즐겨찾기가 기본 Joss Red 계정을 통해 자동으로 클라우드에 저장되고 동기화됩니다.",
+  "@news_item_sync_desc": {
+    "description": "news_item_sync_desc"
+  },
+  "news_item_sync_title": "Joss Red와의 완전한 통합",
+  "@news_item_sync_title": {
+    "description": "news_item_sync_title"
+  },
+  "news_item_trans_desc": "더 이상 수동 동기화 버튼을 클릭할 필요가 없습니다. 새 모터는 자동으로 위아래로 변속을 담당합니다.",
+  "@news_item_trans_desc": {
+    "description": "news_item_trans_desc"
+  },
+  "news_item_trans_title": "투명한 동기화",
+  "@news_item_trans_title": {
+    "description": "news_item_trans_title"
+  },
+  "no": "아니요",
+  "@no": {
+    "description": "no"
+  },
+  "noBookmarks": "북마크 없음!",
+  "@noBookmarks": {
+    "description": "noBookmarks"
+  },
+  "noJossRedFriends": "Joss Red에 추가된 친구가 없습니다.",
+  "@noJossRedFriends": {
+    "description": "noJossRedFriends"
+  },
+  "noLibPlaylist": "라이브러리 플레이리스트가 없습니다!",
+  "@noLibPlaylist": {
+    "description": "noLibPlaylist"
+  },
+  "noMatchInstruction": "녹음된 오디오에서 노래를 찾을 수 없습니다.",
+  "@noMatchInstruction": {
+    "description": "noMatchInstruction"
+  },
+  "noMatchesFound": "일치하는 항목 없음",
+  "@noMatchesFound": {
+    "description": "noMatchesFound"
+  },
+  "noOfflineSong": "오프라인 음악이 없습니다!",
+  "@noOfflineSong": {
+    "description": "noOfflineSong"
+  },
+  "noSongsInCollection": "이 컬렉션에는 노래가 없습니다",
+  "@noSongsInCollection": {
+    "description": "noSongsInCollection"
+  },
+  "nomatch": "검색결과 없음",
+  "@nomatch": {
+    "description": "nomatch"
+  },
+  "notAuthenticated": "인증되지 않음",
+  "@notAuthenticated": {
+    "description": "notAuthenticated"
+  },
+  "notaSongVideo": "음악/뮤직비디오가 아님!",
+  "@notaSongVideo": {
+    "description": "notaSongVideo"
+  },
+  "notaValidLink": "유효한 링크가 아님!",
+  "@notaValidLink": {
+    "description": "notaValidLink"
+  },
+  "openIn": "열기",
+  "@openIn": {
+    "description": "openIn"
+  },
+  "operationFailed": "동작 실패",
+  "@operationFailed": {
+    "description": "operationFailed"
+  },
+  "password": "비밀번호",
+  "@password": {
+    "description": "password"
+  },
+  "password_text": "비밀번호",
+  "@password_text": {
+    "description": "Contraseña texto traducido"
+  },
+  "permissionDenied": "허가가 거부되었습니다",
+  "@permissionDenied": {
+    "description": "permissionDenied"
+  },
+  "permissionsAllow": "허용하다",
+  "@permissionsAllow": {
+    "description": "permissionsAllow"
+  },
+  "permissionsConsentDescription": "Estrella Music은 음악을 관리하고 모든 재생 기능을 제공하려면 이러한 권한이 필요합니다.",
+  "@permissionsConsentDescription": {
+    "description": "permissionsConsentDescription"
+  },
+  "permissionsConsentTitle": "시작하기 위한 권한",
+  "@permissionsConsentTitle": {
+    "description": "permissionsConsentTitle"
+  },
+  "permissionsContinueButton": "필수 권한 부여",
+  "@permissionsContinueButton": {
+    "description": "permissionsContinueButton"
+  },
+  "permissionsMicrophoneDescription": "주변에서 재생되는 노래를 식별하기로 선택한 경우에만 사용됩니다.",
+  "@permissionsMicrophoneDescription": {
+    "description": "permissionsMicrophoneDescription"
+  },
+  "permissionsMicrophoneTitle": "마이크로폰",
+  "@permissionsMicrophoneTitle": {
+    "description": "permissionsMicrophoneTitle"
+  },
+  "permissionsNotificationsDescription": "재생 제어, 다운로드 진행 상황, 중요한 앱 알림을 표시합니다.",
+  "@permissionsNotificationsDescription": {
+    "description": "permissionsNotificationsDescription"
+  },
+  "permissionsNotificationsTitle": "알림",
+  "@permissionsNotificationsTitle": {
+    "description": "permissionsNotificationsTitle"
+  },
+  "permissionsOpenSettings": "설정",
+  "@permissionsOpenSettings": {
+    "description": "permissionsOpenSettings"
+  },
+  "permissionsRequiredNotice": "계속하려면 세 가지 허가가 모두 필요합니다. 나중에 시스템 설정에서 변경할 수 있습니다.",
+  "@permissionsRequiredNotice": {
+    "description": "permissionsRequiredNotice"
+  },
+  "permissionsStorageDescription": "음악을 재생하고, 다운로드를 저장하고, 재생 목록을 내보내고, 업데이트를 준비할 수 있습니다.",
+  "@permissionsStorageDescription": {
+    "description": "permissionsStorageDescription"
+  },
+  "permissionsStorageTitle": "음악 및 저장공간",
+  "@permissionsStorageTitle": {
+    "description": "permissionsStorageTitle"
+  },
+  "personalisation": "개인화",
+  "@personalisation": {
+    "description": "personalisation"
+  },
+  "pipedPlaylistDescription": "파이프 재생목록",
+  "@pipedPlaylistDescription": {
+    "description": "pipedPlaylistDescription"
+  },
+  "pipedplstSyncAlert": "Piped 플레이리스트 동기화됨!",
+  "@pipedplstSyncAlert": {
+    "description": "pipedplstSyncAlert"
+  },
+  "plain": "보통",
+  "@plain": {
+    "description": "plain"
+  },
+  "play": "플레이",
+  "@play": {
+    "description": "play"
+  },
+  "playNext": "다음에 재생",
+  "@playNext": {
+    "description": "playNext"
+  },
+  "playNow": "지금 플레이",
+  "@playNow": {
+    "description": "playNow"
+  },
+  "playbackSpeed": "재생 속도",
+  "@playbackSpeed": {
+    "description": "playbackSpeed"
+  },
+  "playerUi": "플레이어 UI",
+  "@playerUi": {
+    "description": "playerUi"
+  },
+  "playerUiDes": "플레이어 사용자 인터페이스 선택",
+  "@playerUiDes": {
+    "description": "playerUiDes"
+  },
+  "playingRecognizedTrack": "재생 중:",
+  "@playingRecognizedTrack": {
+    "description": "playingRecognizedTrack"
+  },
+  "playingfromAlbum": "앨범에서 재생 중",
+  "@playingfromAlbum": {
+    "description": "playingfromAlbum"
+  },
+  "playingfromArtist": "아티스트와 함께 플레이하기",
+  "@playingfromArtist": {
+    "description": "playingfromArtist"
+  },
+  "playingfromPlaylist": "재생 목록에서 재생",
+  "@playingfromPlaylist": {
+    "description": "playingfromPlaylist"
+  },
+  "playingfromSelection": "선택에서 재생",
+  "@playingfromSelection": {
+    "description": "playingfromSelection"
+  },
+  "playlist": "재생목록",
+  "@playlist": {
+    "description": "playlist"
+  },
+  "playlistBlacklistAlert": "플레이리스트를 블랙리스트에 추가함!",
+  "@playlistBlacklistAlert": {
+    "description": "playlistBlacklistAlert"
+  },
+  "playlistBookmarkAddAlert": "플레이리스트를 즐겨찾기에 추가함!",
+  "@playlistBookmarkAddAlert": {
+    "description": "playlistBookmarkAddAlert"
+  },
+  "playlistBookmarkRemoveAlert": "플레이리스트 즐겨찾기 제거함!",
+  "@playlistBookmarkRemoveAlert": {
+    "description": "playlistBookmarkRemoveAlert"
+  },
+  "playlistCollaboratorsTitle": "재생목록 참여자",
+  "@playlistCollaboratorsTitle": {
+    "description": "playlistCollaboratorsTitle"
+  },
+  "playlistCreatedAlert": "플레이리스트 생성됨!",
+  "@playlistCreatedAlert": {
+    "description": "playlistCreatedAlert"
+  },
+  "playlistCreatednsongAddedAlert": "플레이리스트를 생성하고 음악 추가함!",
+  "@playlistCreatednsongAddedAlert": {
+    "description": "playlistCreatednsongAddedAlert"
+  },
+  "playlistExportedMsg": "재생목록을 다음으로 성공적으로 내보냈습니다.",
+  "@playlistExportedMsg": {
+    "description": "playlistExportedMsg"
+  },
+  "playlistImportedMsg": "재생목록을 성공적으로 가져왔습니다.",
+  "@playlistImportedMsg": {
+    "description": "playlistImportedMsg"
+  },
+  "playlistRemovedAlert": "플레이리스트 삭제함!",
+  "@playlistRemovedAlert": {
+    "description": "playlistRemovedAlert"
+  },
+  "playlistRenameAlert": "이름 바꾸기 완료!",
+  "@playlistRenameAlert": {
+    "description": "playlistRenameAlert"
+  },
+  "playlists": "플레이리스트",
+  "@playlists": {
+    "description": "playlists"
+  },
+  "playnextMsg": "곧 출시 예정",
+  "@playnextMsg": {
+    "description": "playnextMsg"
+  },
+  "podcasts": "팟캐스트",
+  "@podcasts": {
+    "description": "podcasts"
+  },
+  "popularTracks": "인기 트랙",
+  "@popularTracks": {
+    "description": "popularTracks"
+  },
+  "processFiles": "파일 처리 중...",
+  "@processFiles": {
+    "description": "processFiles"
+  },
+  "processingAudio": "오디오 처리 중...",
+  "@processingAudio": {
+    "description": "processingAudio"
+  },
+  "profiles": "프로필",
+  "@profiles": {
+    "description": "profiles"
+  },
+  "queueLoop": "테일 루프",
+  "@queueLoop": {
+    "description": "queueLoop"
+  },
+  "queueLoopNotDisMsg1": "셔플 모드가 활성화된 경우 대기열 루프 모드를 비활성화할 수 없습니다.",
+  "@queueLoopNotDisMsg1": {
+    "description": "queueLoopNotDisMsg1"
+  },
+  "queueLoopNotDisMsg2": "라디오 모드에서는 테일 루프 모드를 활성화할 수 없습니다.",
+  "@queueLoopNotDisMsg2": {
+    "description": "queueLoopNotDisMsg2"
+  },
+  "queueShufflingDeniedMsg": "랜덤 모드가 활성화되었습니다. 대기열을 수동으로 혼합할 수는 없습니다.",
+  "@queueShufflingDeniedMsg": {
+    "description": "queueShufflingDeniedMsg"
+  },
+  "queuerearrangingDeniedMsg": "셔플 모드가 켜져 있으면 대기열을 재정렬할 수 없습니다.",
+  "@queuerearrangingDeniedMsg": {
+    "description": "queuerearrangingDeniedMsg"
+  },
+  "quickPics": "빠른 선택",
+  "@quickPics": {
+    "description": "quickPics"
+  },
+  "quickpicks": "빠른 추천",
+  "@quickpicks": {
+    "description": "quickpicks"
+  },
+  "radioNotAvailable": "이 아티스트의 라디오는 없습니다!",
+  "@radioNotAvailable": {
+    "description": "radioNotAvailable"
+  },
+  "randomRadio": "무작위 라디오",
+  "@randomRadio": {
+    "description": "randomRadio"
+  },
+  "randomSelection": "무작위 선택",
+  "@randomSelection": {
+    "description": "randomSelection"
+  },
+  "reArrangePlaylist": "플레이리스트 순서 변경",
+  "@reArrangePlaylist": {
+    "description": "reArrangePlaylist"
+  },
+  "reArrangeSongs": "노래 재정렬",
+  "@reArrangeSongs": {
+    "description": "reArrangeSongs"
+  },
+  "readMore": "더 읽어보세요",
+  "@readMore": {
+    "description": "readMore"
+  },
+  "recentSearches": "최근 검색어",
+  "@recentSearches": {
+    "description": "recentSearches"
+  },
+  "recentlyPlayed": "최근 재생됨",
+  "@recentlyPlayed": {
+    "description": "recentlyPlayed"
+  },
+  "recommend_cloud": "Spotify와 같은 경험을 위해서는 클라우드 모드를 활성화하는 것이 좋습니다. 아무 것도 하지 않고도 모든 장치 간의 실시간 동기화와 자동 백업이 가능합니다.",
+  "@recommend_cloud": {
+    "description": "recommend_cloud"
+  },
+  "recommendedAlbums": "추천",
+  "@recommendedAlbums": {
+    "description": "recommendedAlbums"
+  },
+  "recommendedArtists": "추천",
+  "@recommendedArtists": {
+    "description": "recommendedArtists"
+  },
+  "removeFromCache": "캐시에서 제거",
+  "@removeFromCache": {
+    "description": "removeFromCache"
+  },
+  "removeFromLib": "라이브러리 음악에서 제거",
+  "@removeFromLib": {
+    "description": "removeFromLib"
+  },
+  "removeFromLibrary": "라이브러리에서 삭제",
+  "@removeFromLibrary": {
+    "description": "removeFromLibrary"
+  },
+  "removeFromPlaylist": "플레이리스트에서 제거",
+  "@removeFromPlaylist": {
+    "description": "removeFromPlaylist"
+  },
+  "removeFromQueue": "대기열에서 제거",
+  "@removeFromQueue": {
+    "description": "removeFromQueue"
+  },
+  "removeMultiple": "여러 개의 음악을 제거",
+  "@removeMultiple": {
+    "description": "removeMultiple"
+  },
+  "removePlaylist": "플레이리스트 삭제",
+  "@removePlaylist": {
+    "description": "removePlaylist"
+  },
+  "rename": "이름 바꾸기",
+  "@rename": {
+    "description": "rename"
+  },
+  "renamePlaylist": "플레이리스트 이름 변경",
+  "@renamePlaylist": {
+    "description": "renamePlaylist"
+  },
+  "reproducedBy": "재생산자:",
+  "@reproducedBy": {
+    "description": "reproducedBy"
+  },
+  "reset": "초기화",
+  "@reset": {
+    "description": "reset"
+  },
+  "resetToDefault": "기본 설정 복원",
+  "@resetToDefault": {
+    "description": "resetToDefault"
+  },
+  "resetToDefaultDes": "앱 설정을 기본값으로 재설정(다시 시작해야 함)",
+  "@resetToDefaultDes": {
+    "description": "resetToDefaultDes"
+  },
+  "resetToDefaultMsg": "설정 기본값으로 재설정이 완료되었습니다. 앱을 다시 시작하세요.",
+  "@resetToDefaultMsg": {
+    "description": "resetToDefaultMsg"
+  },
+  "resetblacklistedplaylist": "블랙리스트에 추가한 플레이리스트를 초기화",
+  "@resetblacklistedplaylist": {
+    "description": "resetblacklistedplaylist"
+  },
+  "resetblacklistedplaylistDes": "블랙리스트에 추가한 Piped의 모든 플레이리스트를 초기화",
+  "@resetblacklistedplaylistDes": {
+    "description": "resetblacklistedplaylistDes"
+  },
+  "restartApp": "애플리케이션 다시 시작",
+  "@restartApp": {
+    "description": "restartApp"
+  },
+  "restore": "복원",
+  "@restore": {
+    "description": "restore"
+  },
+  "restoreAppData": "앱 데이터 복원",
+  "@restoreAppData": {
+    "description": "restoreAppData"
+  },
+  "restoreLastPlaybackSession": "마지막 재생 세션을 복원",
+  "@restoreLastPlaybackSession": {
+    "description": "restoreLastPlaybackSession"
+  },
+  "restoreLastPlaybackSessionDes": "앱 시작 시 자동으로 마지막 재생 세션을 복원",
+  "@restoreLastPlaybackSessionDes": {
+    "description": "restoreLastPlaybackSessionDes"
+  },
+  "restoreMsg": "성공적으로 복원되었습니다!\n재부팅 시 변경 사항이 적용됩니다.",
+  "@restoreMsg": {
+    "description": "restoreMsg"
+  },
+  "restoreSettingsAndPlaylists": "설정 및 재생 목록 복원",
+  "@restoreSettingsAndPlaylists": {
+    "description": "restoreSettingsAndPlaylists"
+  },
+  "restoreSettingsAndPlaylistsDes": "백업 파일에서 모든 설정, 로그인 데이터 및 재생 목록을 복원합니다. 현재 데이터를 모두 덮어씁니다.",
+  "@restoreSettingsAndPlaylistsDes": {
+    "description": "restoreSettingsAndPlaylistsDes"
   },
   "restore_select_file_dialog": "백업 파일을 선택하세요",
   "@restore_select_file_dialog": {
     "description": "restore_select_file_dialog"
   },
-  "auth_hint_email": "이름@mail.com",
-  "@auth_hint_email": {
-    "description": "auth_hint_email"
+  "restoring": "복원 중...",
+  "@restoring": {
+    "description": "restoring"
   },
-  "auth_error_invalid_email": "유효한 이메일을 입력하세요.",
-  "@auth_error_invalid_email": {
-    "description": "auth_error_invalid_email"
+  "results": "결과",
+  "@results": {
+    "description": "results"
+  },
+  "retry": "재시도!",
+  "@retry": {
+    "description": "retry"
+  },
+  "save": "유지하다",
+  "@save": {
+    "description": "save"
+  },
+  "savedAlbums": "저장됨",
+  "@savedAlbums": {
+    "description": "savedAlbums"
+  },
+  "scanning": "스캔하는 중...",
+  "@scanning": {
+    "description": "scanning"
+  },
+  "search": "검색",
+  "@search": {
+    "description": "search"
+  },
+  "searchDes": "음악,플레이리스트,앨범 혹은 아티스트",
+  "@searchDes": {
+    "description": "searchDes"
+  },
+  "searchInLibrary": "도서관에서 검색",
+  "@searchInLibrary": {
+    "description": "searchInLibrary"
+  },
+  "searchRes": "검색 결과",
+  "@searchRes": {
+    "description": "searchRes"
+  },
+  "search_recent_title": "최근 검색어",
+  "@search_recent_title": {
+    "description": "search_recent_title"
+  },
+  "selectAll": "모두 선택",
+  "@selectAll": {
+    "description": "selectAll"
+  },
+  "selectAuthIns": "인증 인스턴스를 선택",
+  "@selectAuthIns": {
+    "description": "selectAuthIns"
+  },
+  "selectAuthInsMsg": "인증 인스턴스를 선택해주세요!",
+  "@selectAuthInsMsg": {
+    "description": "selectAuthInsMsg"
+  },
+  "selectFile": "파일 선택",
+  "@selectFile": {
+    "description": "selectFile"
+  },
+  "selectSongs": "노래 선택",
+  "@selectSongs": {
+    "description": "selectSongs"
+  },
+  "selectedFileNotFound": "선택한 파일을 찾을 수 없습니다.",
+  "@selectedFileNotFound": {
+    "description": "selectedFileNotFound"
+  },
+  "sessionExpiredLoginAgain": "세션이 만료되었습니다. 다시 로그인하세요.",
+  "@sessionExpiredLoginAgain": {
+    "description": "sessionExpiredLoginAgain"
+  },
+  "setDiscoverContent": "탐색할 컨텐츠를 설정",
+  "@setDiscoverContent": {
+    "description": "setDiscoverContent"
+  },
+  "settings": "설정",
+  "@settings": {
+    "description": "settings"
+  },
+  "settings_about_desc": "Estrella Music 소개",
+  "@settings_about_desc": {
+    "description": "settings_about_desc"
+  },
+  "settings_about_sub": "버전, 오픈 소스 프로젝트 및 GitHub.",
+  "@settings_about_sub": {
+    "description": "settings_about_sub"
+  },
+  "settings_account_desc": "계정 및 동기화",
+  "@settings_account_desc": {
+    "description": "settings_account_desc"
+  },
+  "settings_account_sub": "클라우드 모드, 백업, 친구 목록 및 마이그레이션.",
+  "@settings_account_sub": {
+    "description": "settings_account_sub"
+  },
+  "settings_appearance_desc": "테마, 언어 및 인터페이스 애니메이션.",
+  "@settings_appearance_desc": {
+    "description": "settings_appearance_desc"
+  },
+  "settings_cloud_backup": "클라우드 백업",
+  "@settings_cloud_backup": {
+    "description": "settings_cloud_backup"
+  },
+  "settings_cloud_backup_desc": "업로드, 복원 및 관리...",
+  "@settings_cloud_backup_desc": {
+    "description": "settings_cloud_backup_desc"
   },
   "settings_cloud_backup_dialog_desc": "앱의 .hmb 백업을 서버에 업로드하고 필요한 경우 저장된 백업을 복원합니다.",
   "@settings_cloud_backup_dialog_desc": {
     "description": "settings_cloud_backup_dialog_desc"
   },
-  "delete": "삭제",
-  "@delete": {
-    "description": "delete"
+  "settings_content_desc": "필터, Piped 및 캐시와의 통합을 살펴보세요.",
+  "@settings_content_desc": {
+    "description": "settings_content_desc"
   },
-  "in_app_storage": "내부 저장소 디렉토리",
-  "@in_app_storage": {
-    "description": "in_app_storage"
+  "settings_downloads_desc": "다운로드 및 저장",
+  "@settings_downloads_desc": {
+    "description": "settings_downloads_desc"
   },
-  "auth_brand_description_1": "이전 프로젝트의 로그인, 등록 및 비밀번호 복구 기능을 이 음악 앱에 맞게 조정했습니다.",
-  "@auth_brand_description_1": {
-    "description": "auth_brand_description_1"
+  "settings_downloads_sub": "오디오 형식, 폴더 및 자동 다운로드.",
+  "@settings_downloads_sub": {
+    "description": "settings_downloads_sub"
   },
-  "auth_brand_description_2": "귀하의 세션은 보안 저장소에 있으며 이미 사용하고 있는 것과 동일한 백엔드로 검증됩니다.",
-  "@auth_brand_description_2": {
-    "description": "auth_brand_description_2"
+  "settings_general_section": "일반적인",
+  "@settings_general_section": {
+    "description": "settings_general_section"
   },
-  "auth_brand_not_configured": "인증 백엔드를 연결하려면 .env 파일을 구성해야 합니다.",
-  "@auth_brand_not_configured": {
-    "description": "auth_brand_not_configured"
+  "settings_local_cloud_desc": "Joss Red와의 동기화 상태를 선택, 마이그레이션 또는 검토하세요.",
+  "@settings_local_cloud_desc": {
+    "description": "settings_local_cloud_desc"
   },
-  "auth_forgot_password_subtitle": "귀하의 계정 이메일로 지침을 보내드리겠습니다.",
-  "@auth_forgot_password_subtitle": {
-    "description": "auth_forgot_password_subtitle"
+  "settings_local_cloud_title": "로컬 모드 / EMusic Cloud",
+  "@settings_local_cloud_title": {
+    "description": "settings_local_cloud_title"
   },
-  "auth_btn_send_email": "메일 보내기",
-  "@auth_btn_send_email": {
-    "description": "auth_btn_send_email"
+  "settings_logout": "로그아웃",
+  "@settings_logout": {
+    "description": "settings_logout"
   },
-  "auth_error_not_configured": ".env 파일에 구성할 인증 백엔드가 없습니다.",
-  "@auth_error_not_configured": {
-    "description": "auth_error_not_configured"
+  "settings_migration_desc": "재생목록, 노래 가져오기...",
+  "@settings_migration_desc": {
+    "description": "settings_migration_desc"
   },
-  "auth_error_invalid_credentials": "이메일이나 비밀번호가 잘못되었습니다.",
-  "@auth_error_invalid_credentials": {
-    "description": "auth_error_invalid_credentials"
+  "settings_migration_title": "Joss Music Kotlin에서 마이그레이션",
+  "@settings_migration_title": {
+    "description": "settings_migration_title"
   },
-  "auth_error_not_verified": "귀하의 계정은 아직 확인되지 않았습니다.",
-  "@auth_error_not_verified": {
-    "description": "auth_error_not_verified"
+  "settings_my_friends": "내 친구들",
+  "@settings_my_friends": {
+    "description": "settings_my_friends"
   },
-  "auth_error_unknown": "작업을 완료할 수 없습니다.",
-  "@auth_error_unknown": {
-    "description": "auth_error_unknown"
+  "settings_my_friends_desc": "Joss Red 친구를 직접 관리하세요.",
+  "@settings_my_friends_desc": {
+    "description": "settings_my_friends_desc"
   },
-  "auth_register_success": "계정이 성공적으로 생성되었습니다.",
-  "@auth_register_success": {
-    "description": "auth_register_success"
+  "settings_playback_desc": "스트리밍 품질, 정규화, 무음 및 배터리.",
+  "@settings_playback_desc": {
+    "description": "settings_playback_desc"
   },
-  "auth_register_error": "계정을 생성할 수 없습니다.",
-  "@auth_register_error": {
-    "description": "auth_register_error"
+  "settings_refresh_visitor_desc": "Discover 콘텐츠가 로드되지 않으면 Online Music ID를 다시 생성하세요.",
+  "@settings_refresh_visitor_desc": {
+    "description": "settings_refresh_visitor_desc"
   },
-  "auth_recovery_email_sent": "이메일이 전송되었습니다.",
-  "@auth_recovery_email_sent": {
-    "description": "auth_recovery_email_sent"
+  "settings_refresh_visitor_title": "새로고침 ID(방문자 ID)",
+  "@settings_refresh_visitor_title": {
+    "description": "settings_refresh_visitor_title"
   },
-  "auth_recovery_email_error": "이메일을 보낼 수 없었습니다.",
-  "@auth_recovery_email_error": {
-    "description": "auth_recovery_email_error"
+  "settings_visitor_error": "실수",
+  "@settings_visitor_error": {
+    "description": "settings_visitor_error"
   },
-  "latestVersion": "최신 버전 사용 가능",
-  "@latestVersion": {
-    "description": "latestVersion"
+  "settings_visitor_error_desc": "새 식별자를 생성할 수 없습니다. 나중에 다시 시도해 주세요.",
+  "@settings_visitor_error_desc": {
+    "description": "settings_visitor_error_desc"
+  },
+  "settings_visitor_exception": "재생성하는 동안 오류가 발생했습니다: {error}",
+  "@settings_visitor_exception": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    },
+    "description": "settings_visitor_exception"
+  },
+  "settings_visitor_updated": "업데이트된 식별자",
+  "@settings_visitor_updated": {
+    "description": "settings_visitor_updated"
+  },
+  "settings_visitor_updated_desc": "새 방문자 ID가 성공적으로 생성되었습니다.",
+  "@settings_visitor_updated_desc": {
+    "description": "settings_visitor_updated_desc"
+  },
+  "shareAlbum": "앨범 공유",
+  "@shareAlbum": {
+    "description": "shareAlbum"
+  },
+  "sharePlaylist": "재생목록 공유",
+  "@sharePlaylist": {
+    "description": "sharePlaylist"
+  },
+  "shareSong": "이 곡을 공유",
+  "@shareSong": {
+    "description": "shareSong"
+  },
+  "shazamSearching": "Shazam 데이터베이스에서 일치하는 항목을 검색하는 중...",
+  "@shazamSearching": {
+    "description": "shazamSearching"
+  },
+  "shuffle": "무작위",
+  "@shuffle": {
+    "description": "shuffle"
+  },
+  "shuffleQueue": "꼬리를 섞다",
+  "@shuffleQueue": {
+    "description": "shuffleQueue"
+  },
+  "similarToTitle": "_{title} 과 유사함",
+  "@similarToTitle": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    },
+    "description": "similarToTitle"
+  },
+  "singles": "싱글",
+  "@singles": {
+    "description": "singles"
+  },
+  "skipSilence": "묵음 건너뛰기",
+  "@skipSilence": {
+    "description": "skipSilence"
+  },
+  "skipSilenceDes": "음악 재생 중에 묵음이 있는 구간은 건너뛰어집니다",
+  "@skipSilenceDes": {
+    "description": "skipSilenceDes"
+  },
+  "sleepTimeSetAlert": "취침 타이머가 설정됨",
+  "@sleepTimeSetAlert": {
+    "description": "sleepTimeSetAlert"
+  },
+  "sleepTimer": "취침 타이머",
+  "@sleepTimer": {
+    "description": "sleepTimer"
+  },
+  "slide_indicator": "3단계 중 {current} 단계",
+  "@slide_indicator": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      }
+    },
+    "description": "slide_indicator"
+  },
+  "songAddedToPlaylistAlert": "플레이리스트에 음악 추가됨!",
+  "@songAddedToPlaylistAlert": {
+    "description": "songAddedToPlaylistAlert"
+  },
+  "songAlreadyExists": "음악이 이미 있습니다!",
+  "@songAlreadyExists": {
+    "description": "songAlreadyExists"
+  },
+  "songAlreadyOfflineAlert": "음악이 이미 캐시에 있습니다",
+  "@songAlreadyOfflineAlert": {
+    "description": "songAlreadyOfflineAlert"
+  },
+  "songEnqueueAlert": "대기열에 음악 추가됨!",
+  "@songEnqueueAlert": {
+    "description": "songEnqueueAlert"
+  },
+  "songFound": "노래 발견!",
+  "@songFound": {
+    "description": "songFound"
+  },
+  "songInfo": "노래정보",
+  "@songInfo": {
+    "description": "songInfo"
+  },
+  "songNotPlayable": "서버 제한으로 인해 노래를 재생할 수 없습니다!",
+  "@songNotPlayable": {
+    "description": "songNotPlayable"
+  },
+  "songPitch": "노래 톤",
+  "@songPitch": {
+    "description": "songPitch"
+  },
+  "songRemovedAlert": "다음으로부터 제거됨",
+  "@songRemovedAlert": {
+    "description": "songRemovedAlert"
+  },
+  "songRemovedfromQueue": "대기열에서 제거됨!",
+  "@songRemovedfromQueue": {
+    "description": "songRemovedfromQueue"
+  },
+  "songRemovedfromQueueCurrSong": "지금 재생중인 곡을 제거할 순 없습니다",
+  "@songRemovedfromQueueCurrSong": {
+    "description": "songRemovedfromQueueCurrSong"
+  },
+  "songs": "음악",
+  "@songs": {
+    "description": "songs"
+  },
+  "songsImportedFromJossMusic": "Joss Music Kotlin에서 가져온 노래",
+  "@songsImportedFromJossMusic": {
+    "description": "songsImportedFromJossMusic"
+  },
+  "sortAscendNDescend": "오름차순/내림차순 정렬",
+  "@sortAscendNDescend": {
+    "description": "sortAscendNDescend"
+  },
+  "sortByDate": "날짜별로 정렬",
+  "@sortByDate": {
+    "description": "sortByDate"
+  },
+  "sortByDuration": "기간별로 정렬",
+  "@sortByDuration": {
+    "description": "sortByDuration"
+  },
+  "sortByName": "이름순으로 정렬",
+  "@sortByName": {
+    "description": "sortByName"
+  },
+  "speedAndPitch": "속도와 피치",
+  "@speedAndPitch": {
+    "description": "speedAndPitch"
+  },
+  "standard": "표준",
+  "@standard": {
+    "description": "standard"
+  },
+  "startRadio": "라디오 시작",
+  "@startRadio": {
+    "description": "startRadio"
+  },
+  "startupScreen": "시작 시 열기",
+  "@startupScreen": {
+    "description": "startupScreen"
+  },
+  "startupScreenDescription": "Estrella Music이 먼저 열리는 섹션을 선택하세요.",
+  "@startupScreenDescription": {
+    "description": "startupScreenDescription"
+  },
+  "status": "상태",
+  "@status": {
+    "description": "status"
+  },
+  "stopMusicOnTaskClear": "작업 관리자에서 종료되면 음악을 끝냄",
+  "@stopMusicOnTaskClear": {
+    "description": "stopMusicOnTaskClear"
+  },
+  "stopMusicOnTaskClearDes": "작업 관리자에서 앱이 종료되면 음악이 더이상 재생되지 않습니다",
+  "@stopMusicOnTaskClearDes": {
+    "description": "stopMusicOnTaskClearDes"
+  },
+  "streamingQuality": "스트리밍 음질",
+  "@streamingQuality": {
+    "description": "streamingQuality"
+  },
+  "streamingQualityDes": "음악 스트림의 음질",
+  "@streamingQualityDes": {
+    "description": "streamingQualityDes"
+  },
+  "subscribers": "구독자",
+  "@subscribers": {
+    "description": "subscribers"
+  },
+  "swipe_prompt": "스와이프하여 옵션 탐색 ➔",
+  "@swipe_prompt": {
+    "description": "swipe_prompt"
+  },
+  "syncChangesConfirmed": "_{count} 변경사항이 커밋되었습니다.",
+  "@syncChangesConfirmed": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    },
+    "description": "syncChangesConfirmed"
+  },
+  "syncChangesSynced": "_{count} 변경사항이 동기화되었습니다.",
+  "@syncChangesSynced": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    },
+    "description": "syncChangesSynced"
+  },
+  "syncCloudDownloadingExisting": "클라우드 모드가 활성화되었습니다. 기존 라이브러리를 다운로드합니다.",
+  "@syncCloudDownloadingExisting": {
+    "description": "syncCloudDownloadingExisting"
+  },
+  "syncCloudMigrationComplete": "클라우드 모드가 활성화되었습니다. 마이그레이션된 라이브러리.",
+  "@syncCloudMigrationComplete": {
+    "description": "syncCloudMigrationComplete"
+  },
+  "syncCloudModeActive": "클라우드 모드 활성화",
+  "@syncCloudModeActive": {
+    "description": "syncCloudModeActive"
+  },
+  "syncCloudPending": "클라우드 모드가 활성화되었습니다. 동기화 대기 중입니다.",
+  "@syncCloudPending": {
+    "description": "syncCloudPending"
+  },
+  "syncDownloadFailed": "동기화를 다운로드하지 못했습니다.",
+  "@syncDownloadFailed": {
+    "description": "syncDownloadFailed"
+  },
+  "syncDownloading": "EMusic 변경사항 다운로드 중...",
+  "@syncDownloading": {
+    "description": "syncDownloading"
+  },
+  "syncForceReplaceBackupSaved": "복구 백업: {path}",
+  "@syncForceReplaceBackupSaved": {
+    "placeholders": {
+      "path": {}
+    }
+  },
+  "syncForceReplaceConfirmAction": "Reemplazar y subir",
+  "@syncForceReplaceConfirmAction": {},
+  "syncForceReplaceConfirmBody": "Primero se creará un respaldo de recuperación. Después, las playlists, favoritos, historial, álbumes, artistas y ajustes musicales de EMusic Cloud se reemplazarán con los datos actuales de este dispositivo. No se puede deshacer desde el servidor.",
+  "@syncForceReplaceConfirmBody": {},
+  "syncForceReplaceConfirmTitle": "¿Reemplazar la biblioteca musical remota?",
+  "@syncForceReplaceConfirmTitle": {},
+  "syncForceReplaceCountMismatch": "업로드 된 수는 로컬 라이브러리와 일치하지 않습니다. 먼 보충은 확인될 수 있었습니다.",
+  "@syncForceReplaceCountMismatch": {},
+  "syncForceReplaceCreatingBackup": "클라우드 데이터를 대체하기 전에 복구 백업 만들기 ...",
+  "@syncForceReplaceCreatingBackup": {},
+  "syncForceReplaceDescription": "Pausa la sincronización pendiente y reemplaza a la fuerza tu biblioteca musical remota con los datos actuales de este dispositivo. Las descargas permanecen 지역.",
+  "@syncForceReplaceDescription": {},
+  "syncForceReplaceFailed": "EMusic Cloud는 원격 라이브러리를 대체 할 수 없습니다.",
+  "@syncForceReplaceFailed": {},
+  "syncForceReplaceFailedLocalPreserved": "원격 교체 실패. 현지 데이터 및 복구 백업이 보존되었습니다.",
+  "@syncForceReplaceFailedLocalPreserved": {},
+  "syncForceReplaceFailedTitle": "완료되지 않음",
+  "@syncForceReplaceFailedTitle": {},
+  "syncForceReplaceInProgress": "Pausing sync, 백업 생성 및 로컬 라이브러리 업로드 ...",
+  "@syncForceReplaceInProgress": {},
+  "syncForceReplacePauseFailed": "현재 동기화는 안전하게 일시 중지 할 수 없습니다. 한 순간에 다시 시도하십시오.",
+  "@syncForceReplacePauseFailed": {},
+  "syncForceReplaceSuccess": "먼 음악 도서관은 이 장치의 현재 자료로 대체되었습니다.",
+  "@syncForceReplaceSuccess": {},
+  "syncForceReplaceSuccessTitle": "첨부파일",
+  "@syncForceReplaceSuccessTitle": {},
+  "syncForceReplaceTitle": "Cancelar sincronización y subir esta base",
+  "@syncForceReplaceTitle": {},
+  "syncForceReplaceValidating": "클라우드 데이터를 대체하기 전에 업로드 된 라이브러리를 검증 ...",
+  "@syncForceReplaceValidating": {},
+  "syncLibrarySynced": "동기화된 라이브러리.",
+  "@syncLibrarySynced": {
+    "description": "syncLibrarySynced"
+  },
+  "syncLibraryUpToDate": "라이브러리가 최신 상태입니다.",
+  "@syncLibraryUpToDate": {
+    "description": "syncLibraryUpToDate"
+  },
+  "syncLocalChangesFirst": "새로운 로컬 변경 사항이 있습니다. 다운로드하기 전에 업로드됩니다.",
+  "@syncLocalChangesFirst": {
+    "description": "syncLocalChangesFirst"
+  },
+  "syncLocalDeviceOnly": "귀하의 데이터는 이 장치에만 보관됩니다.",
+  "@syncLocalDeviceOnly": {
+    "description": "syncLocalDeviceOnly"
+  },
+  "syncLocalModeActive": "로컬 모드 활성화",
+  "@syncLocalModeActive": {
+    "description": "syncLocalModeActive"
+  },
+  "syncOfflinePending": "오프라인. 변경사항이 보류 중입니다.",
+  "@syncOfflinePending": {
+    "description": "syncOfflinePending"
+  },
+  "syncOfflineRetry": "오프라인. 재시도를 위해 변경사항이 저장되었습니다.",
+  "@syncOfflineRetry": {
+    "description": "syncOfflineRetry"
+  },
+  "syncPlaylistSongs": "재생목록 노래 동기화",
+  "@syncPlaylistSongs": {
+    "description": "syncPlaylistSongs"
+  },
+  "syncUnconfirmedRetry": "EMusic은 모든 변경 사항을 확인하지 않았습니다. 재시도될 것입니다.",
+  "@syncUnconfirmedRetry": {
+    "description": "syncUnconfirmedRetry"
+  },
+  "syncUploadRetry": "일어날 수 없었다. 나중에 다시 시도됩니다.",
+  "@syncUploadRetry": {
+    "description": "syncUploadRetry"
+  },
+  "syncUploadSuccess": "변경사항이 올바르게 업로드되었습니다.",
+  "@syncUploadSuccess": {
+    "description": "syncUploadSuccess"
+  },
+  "syncUploadSuccessWs": "변경사항이 성공적으로 업로드되었습니다(WS).",
+  "@syncUploadSuccessWs": {
+    "description": "syncUploadSuccessWs"
+  },
+  "syncUploadWsRetry": "WS를 사용하여 업로드할 수 없습니다. 나중에 다시 시도됩니다.",
+  "@syncUploadWsRetry": {
+    "description": "syncUploadWsRetry"
+  },
+  "syncUploading": "EMusic에 변경사항을 업로드하는 중...",
+  "@syncUploading": {
+    "description": "syncUploading"
+  },
+  "synced": "동기화됨",
+  "@synced": {
+    "description": "synced"
+  },
+  "syncedLyricsNotAvailable": "동기화된 가사를 찾지 못했습니다!",
+  "@syncedLyricsNotAvailable": {
+    "description": "syncedLyricsNotAvailable"
+  },
+  "systemDefault": "시스템 기본",
+  "@systemDefault": {
+    "description": "systemDefault"
+  },
+  "themeMode": "테마 모드",
+  "@themeMode": {
+    "description": "themeMode"
+  },
+  "title": "제목",
+  "@title": {
+    "description": "title"
+  },
+  "topMusicVid": "인기 뮤직 비디오",
+  "@topMusicVid": {
+    "description": "topMusicVid"
+  },
+  "topmusicvideos": "인기 뮤직 비디오",
+  "@topmusicvideos": {
+    "description": "topmusicvideos"
+  },
+  "trending": "인기 급상승",
+  "@trending": {
+    "description": "trending"
+  },
+  "unLink": "로그아웃",
+  "@unLink": {
+    "description": "unLink"
+  },
+  "unlinkAlert": "로그아웃 성공!",
+  "@unlinkAlert": {
+    "description": "unlinkAlert"
+  },
+  "untitledSong": "제목 없는 노래",
+  "@untitledSong": {
+    "description": "untitledSong"
+  },
+  "upNext": "재생 예정",
+  "@upNext": {
+    "description": "upNext"
   },
   "updateApp": "애플리케이션 업데이트",
   "@updateApp": {
     "description": "updateApp"
   },
-  "loadInfoUpdate": "업데이트 정보를 로드할 수 없습니다.",
-  "@loadInfoUpdate": {
-    "description": "loadInfoUpdate"
+  "urlSearchDes": "감지된 URL을 클릭하면 관련 콘텐츠가 열리거나 재생됩니다.",
+  "@urlSearchDes": {
+    "description": "urlSearchDes"
   },
-  "infoNotAvailable": "정보를 사용할 수 없음",
-  "@infoNotAvailable": {
-    "description": "infoNotAvailable"
+  "useThisMetadata": "이 메타데이터 사용",
+  "@useThisMetadata": {
+    "description": "Button for selecting a metadata candidate"
   },
-  "developedBy": "Joss Estrada(JOSPROX)가 개발 및 유지 관리",
-  "@developedBy": {
-    "description": "developedBy"
+  "userBlocked": "차단된 사용자",
+  "@userBlocked": {
+    "description": "userBlocked"
   },
-  "copyrightNotice": "© 2026 조스프록스. GPL 라이센스 v3.0",
-  "@copyrightNotice": {
-    "description": "copyrightNotice"
+  "userListMissing": "응답에는 사용자 목록이 포함되어 있지 않습니다.",
+  "@userListMissing": {
+    "description": "userListMissing"
   },
-  "syncForceReplaceTitle": "Cancelar sincronización y subir esta base",
-  "syncForceReplaceConfirmAction": "Reemplazar y subir",
-  "syncForceReplaceDescription": "Pausa la sincronización pendiente y reemplaza a la fuerza tu biblioteca musical remota con los datos actuales de este dispositivo. Las descargas permanecen 지역.",
-  "syncForceReplaceConfirmBody": "Primero se creará un respaldo de recuperación. Después, las playlists, favoritos, historial, álbumes, artistas y ajustes musicales de EMusic Cloud se reemplazarán con los datos actuales de este dispositivo. No se puede deshacer desde el servidor.",
-  "syncForceReplaceConfirmTitle": "¿Reemplazar la biblioteca musical remota?"
+  "userSearchFailed": "사용자({statusCode})를 검색할 수 없습니다.",
+  "@userSearchFailed": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    },
+    "description": "userSearchFailed"
+  },
+  "userUnblocked": "잠금 해제된 사용자",
+  "@userUnblocked": {
+    "description": "userUnblocked"
+  },
+  "username": "사용자 이름",
+  "@username": {
+    "description": "username"
+  },
+  "video": "동영상",
+  "@video": {
+    "description": "video"
+  },
+  "videos": "동영상",
+  "@videos": {
+    "description": "videos"
+  },
+  "viewAll": "모두 보기",
+  "@viewAll": {
+    "description": "viewAll"
+  },
+  "viewArtist": "아티스트 정보",
+  "@viewArtist": {
+    "description": "viewArtist"
+  },
+  "welcome_intro": "우리는 플랫폼을 현대화했습니다. 수동 백업을 업로드하는 이전 시스템이 비활성화되었습니다. 이제 음악 라이브러리를 관리하는 두 가지 명확한 방법이 있습니다.",
+  "@welcome_intro": {
+    "description": "welcome_intro"
+  },
+  "welcome_subtitle": "지금부터 Estrella Music을 어떻게 경험하고 싶은지 선택하세요.",
+  "@welcome_subtitle": {
+    "description": "welcome_subtitle"
+  },
+  "welcome_title": "나만의 음악, 나만의 방식",
+  "@welcome_title": {
+    "description": "welcome_title"
+  }
 }

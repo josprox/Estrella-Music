@@ -1,572 +1,36 @@
 {
   "@@locale": "nl",
-  "enqueueAll": "Alles in wachtrij",
-  "@enqueueAll": {
-    "description": "enqueueAll"
+  "CreateNewPlaylist": "Creëer nieuwe afspeellijst",
+  "@CreateNewPlaylist": {
+    "description": "CreateNewPlaylist"
   },
-  "removePlaylist": "Verwijder Afspeellijst",
-  "@removePlaylist": {
-    "description": "removePlaylist"
+  "Piped": "Piped",
+  "@Piped": {
+    "description": "Piped"
   },
-  "playNext": "Speel volgende",
-  "@playNext": {
-    "description": "playNext"
-  },
-  "sleepTimer": "Slaap timer",
-  "@sleepTimer": {
-    "description": "sleepTimer"
-  },
-  "deleteDownloadData": "Verwijder van downloads",
-  "@deleteDownloadData": {
-    "description": "deleteDownloadData"
-  },
-  "systemDefault": "Systeem standaard",
-  "@systemDefault": {
-    "description": "systemDefault"
-  },
-  "restoreLastPlaybackSessionDes": "Herstel automatisch de laatste afspeelsessie wanneer de app start",
-  "@restoreLastPlaybackSessionDes": {
-    "description": "restoreLastPlaybackSessionDes"
-  },
-  "skipSilence": "Stilte overslaan",
-  "@skipSilence": {
-    "description": "skipSilence"
-  },
-  "exportedFileLocation": "Gedownload bestand exporteerlocatie",
-  "@exportedFileLocation": {
-    "description": "exportedFileLocation"
-  },
-  "export": "Exporteer",
-  "@export": {
-    "description": "export"
-  },
-  "exporting": "Exporteren...",
-  "@exporting": {
-    "description": "exporting"
-  },
-  "nomatch": "Geen overeenkomst gevonden",
-  "@nomatch": {
-    "description": "nomatch"
-  },
-  "searchDes": "Liedjes, Afspeelijst, Album of Artiest",
-  "@searchDes": {
-    "description": "searchDes"
-  },
-  "searchRes": "Zoek resultaten",
-  "@searchRes": {
-    "description": "searchRes"
-  },
-  "videos": "Videos",
-  "@videos": {
-    "description": "videos"
-  },
-  "unLink": "Unlink",
-  "@unLink": {
-    "description": "unLink"
-  },
-  "linkPipedDes": "Link met piped voor afspeellijsten",
-  "@linkPipedDes": {
-    "description": "linkPipedDes"
-  },
-  "playlistBlacklistAlert": "Afspeellijst op zwarte lijst gezet!",
-  "@playlistBlacklistAlert": {
-    "description": "playlistBlacklistAlert"
-  },
-  "resetblacklistedplaylistDes": "Reset alle piped, op de zwarte lijst gezette afspeellijsten",
-  "@resetblacklistedplaylistDes": {
-    "description": "resetblacklistedplaylistDes"
-  },
-  "language": "Taal",
-  "@language": {
-    "description": "language"
-  },
-  "high": "Hoog",
-  "@high": {
-    "description": "high"
-  },
-  "backgroundPlay": "Achtergrond muziek spelen",
-  "@backgroundPlay": {
-    "description": "backgroundPlay"
-  },
-  "downloadLocation": "Downloadlocatie",
-  "@downloadLocation": {
-    "description": "downloadLocation"
-  },
-  "githubDes": "Bekijk GitHub-broncode\nals je dit project leuk vindt, vergeet dan niet een ⭐ te geven",
-  "@githubDes": {
-    "description": "githubDes"
-  },
-  "viewAll": "Bekijk alles",
-  "@viewAll": {
-    "description": "viewAll"
-  },
-  "deleteDownloadedDataAlert": "Successvol verwijderd van downloads!",
-  "@deleteDownloadedDataAlert": {
-    "description": "deleteDownloadedDataAlert"
-  },
-  "artistDesNotAvailable": "Beschrijving niet beschikbaar!",
-  "@artistDesNotAvailable": {
-    "description": "artistDesNotAvailable"
-  },
-  "dismiss": "Afwijzen",
-  "@dismiss": {
-    "description": "dismiss"
-  },
-  "notaSongVideo": "Niet een Liedje/Muziekvideo!",
-  "@notaSongVideo": {
-    "description": "notaSongVideo"
-  },
-  "notaValidLink": "Niet een valide link!",
-  "@notaValidLink": {
-    "description": "notaValidLink"
-  },
-  "operationFailed": "Operatie gefaald",
-  "@operationFailed": {
-    "description": "operationFailed"
-  },
-  "hintApiUrl": "API URL naar Piped instantie",
-  "@hintApiUrl": {
-    "description": "hintApiUrl"
-  },
-  "customIns": "Aangepaste Instantie",
-  "@customIns": {
-    "description": "customIns"
-  },
-  "customInsSelectMsg": "Selecteer Aangepaste Instantie",
-  "@customInsSelectMsg": {
-    "description": "customInsSelectMsg"
-  },
-  "allFieldsReqMsg": "Alle velden zijn vereist",
-  "@allFieldsReqMsg": {
-    "description": "allFieldsReqMsg"
-  },
-  "selectAuthIns": "Selecteer Auth Instantie",
-  "@selectAuthIns": {
-    "description": "selectAuthIns"
-  },
-  "username": "Gebruikersnaam",
-  "@username": {
-    "description": "username"
-  },
-  "resetblacklistedplaylist": "Reset op de zwarte lijst gezette afspeellijsten",
-  "@resetblacklistedplaylist": {
-    "description": "resetblacklistedplaylist"
-  },
-  "library": "Bibliotheek",
-  "@library": {
-    "description": "library"
-  },
-  "networkError1": "Oops netwerk error!",
-  "@networkError1": {
-    "description": "networkError1"
-  },
-  "retry": "Probeer opnieuw!",
-  "@retry": {
-    "description": "retry"
-  },
-  "noOfflineSong": "Geen offline liedjes!",
-  "@noOfflineSong": {
-    "description": "noOfflineSong"
-  },
-  "recentlyPlayed": "Onlangs Gespeeld",
-  "@recentlyPlayed": {
-    "description": "recentlyPlayed"
-  },
-  "favorites": "Favorieten",
-  "@favorites": {
-    "description": "favorites"
-  },
-  "cachedOrOffline": "Cached/Offline",
-  "@cachedOrOffline": {
-    "description": "cachedOrOffline"
-  },
-  "emptyPlaylist": "Lege Afspeellijst!",
-  "@emptyPlaylist": {
-    "description": "emptyPlaylist"
-  },
-  "createnAdd": "Creëer & voeg toe",
-  "@createnAdd": {
-    "description": "createnAdd"
-  },
-  "noLibPlaylist": "Je hebt geen lib afspeellijsten!",
-  "@noLibPlaylist": {
-    "description": "noLibPlaylist"
+  "about": "Over",
+  "@about": {
+    "description": "about"
   },
   "add5Minutes": "Voeg 5 minuten toe",
   "@add5Minutes": {
     "description": "add5Minutes"
   },
-  "cancelTimer": "Annuleer timer",
-  "@cancelTimer": {
-    "description": "cancelTimer"
-  },
-  "minutes": "minuten",
-  "@minutes": {
-    "description": "minutes"
-  },
-  "endOfThisSong": "Einde van dit liedje",
-  "@endOfThisSong": {
-    "description": "endOfThisSong"
-  },
-  "homeContentCount": "Home inhoudsaantal",
-  "@homeContentCount": {
-    "description": "homeContentCount"
-  },
-  "homeContentCountDes": "Selecteer het nummer van initiële homescherminhoud(gemiddeld). Minder resultaten sneller laden",
-  "@homeContentCountDes": {
-    "description": "homeContentCountDes"
-  },
-  "enableBottomNav": "Onderste navigatiebalk",
-  "@enableBottomNav": {
-    "description": "enableBottomNav"
-  },
-  "enableBottomNavDes": "Schakel naar onderste navigatiebalk",
-  "@enableBottomNavDes": {
-    "description": "enableBottomNavDes"
-  },
-  "low": "Laag",
-  "@low": {
-    "description": "low"
-  },
-  "by": "door",
-  "@by": {
-    "description": "by"
-  },
-  "synced": "Gesynchroniseerd",
-  "@synced": {
-    "description": "synced"
-  },
-  "plain": "Vlak",
-  "@plain": {
-    "description": "plain"
-  },
-  "cancelTimerAlert": "Slaap timer geannuleerd",
-  "@cancelTimerAlert": {
-    "description": "cancelTimerAlert"
-  },
-  "sleepTimeSetAlert": "Je slaap timer is ingezet",
-  "@sleepTimeSetAlert": {
-    "description": "sleepTimeSetAlert"
-  },
-  "songRemovedAlert": "Verwijderd van",
-  "@songRemovedAlert": {
-    "description": "songRemovedAlert"
-  },
-  "results": "Resultaten",
-  "@results": {
-    "description": "results"
-  },
-  "downloads": "Downloads",
-  "@downloads": {
-    "description": "downloads"
-  },
-  "goToAlbum": "Ga naar album",
-  "@goToAlbum": {
-    "description": "goToAlbum"
-  },
-  "quickpicks": "Snelle keuzes",
-  "@quickpicks": {
-    "description": "quickpicks"
-  },
-  "topmusicvideos": "Top muziek videos",
-  "@topmusicvideos": {
-    "description": "topmusicvideos"
-  },
-  "streamingQuality": "Streaming kwaliteit",
-  "@streamingQuality": {
-    "description": "streamingQuality"
-  },
-  "equalizer": "Equalizer",
-  "@equalizer": {
-    "description": "equalizer"
-  },
-  "equalizerDes": "Open systeem equalizer",
-  "@equalizerDes": {
-    "description": "equalizerDes"
-  },
-  "ignoreBatOpt": "Negeer batterij optimalisatie",
-  "@ignoreBatOpt": {
-    "description": "ignoreBatOpt"
-  },
-  "ignoreBatOptDes": "Als u meldingsproblemen ondervindt of het afspelen is gestopt door systeemoptimalisatie, schakel deze optie in",
-  "@ignoreBatOptDes": {
-    "description": "ignoreBatOptDes"
-  },
-  "disabled": "Uit",
-  "@disabled": {
-    "description": "disabled"
-  },
-  "for1": "voor",
-  "@for1": {
-    "description": "for1"
-  },
-  "songRemovedfromQueue": "Verwijder van wachtrij!",
-  "@songRemovedfromQueue": {
-    "description": "songRemovedfromQueue"
-  },
-  "songAlreadyExists": "Liedje bestaat al!",
-  "@songAlreadyExists": {
-    "description": "songAlreadyExists"
-  },
-  "songAlreadyOfflineAlert": "Liedje is al offline in cache",
-  "@songAlreadyOfflineAlert": {
-    "description": "songAlreadyOfflineAlert"
-  },
-  "songEnqueueAlert": "Liedje toegevoegd aan wachtrij!",
-  "@songEnqueueAlert": {
-    "description": "songEnqueueAlert"
-  },
-  "blacklistPlstResetAlert": "Successvolle reset!",
-  "@blacklistPlstResetAlert": {
-    "description": "blacklistPlstResetAlert"
-  },
-  "password": "Wachtwoord",
-  "@password": {
-    "description": "password"
-  },
-  "linkAlert": "Successvol gelinked!",
-  "@linkAlert": {
-    "description": "linkAlert"
-  },
-  "home": "Home",
-  "@home": {
-    "description": "home"
-  },
-  "songs": "Liedjes",
-  "@songs": {
-    "description": "songs"
-  },
-  "libAlbums": "Bibliotheek Albums",
-  "@libAlbums": {
-    "description": "libAlbums"
-  },
-  "libArtists": "Bibliotheek Artiesten",
-  "@libArtists": {
-    "description": "libArtists"
-  },
-  "settings": "Instellingen",
-  "@settings": {
-    "description": "settings"
-  },
-  "libSongs": "Bibliotheek liedjes",
-  "@libSongs": {
-    "description": "libSongs"
-  },
-  "albums": "Albums",
-  "@albums": {
-    "description": "albums"
-  },
-  "artists": "Artiesten",
-  "@artists": {
-    "description": "artists"
-  },
-  "playlists": "Afspeellijsten",
-  "@playlists": {
-    "description": "playlists"
-  },
-  "libPlaylists": "Bibliotheek Afspeellijsten",
-  "@libPlaylists": {
-    "description": "libPlaylists"
-  },
-  "renamePlaylist": "Hernoem Afspeellijst",
-  "@renamePlaylist": {
-    "description": "renamePlaylist"
-  },
-  "create": "Creëer",
-  "@create": {
-    "description": "create"
-  },
-  "CreateNewPlaylist": "Creëer nieuwe afspeellijst",
-  "@CreateNewPlaylist": {
-    "description": "CreateNewPlaylist"
-  },
-  "cancel": "Annuleer",
-  "@cancel": {
-    "description": "cancel"
-  },
-  "discover": "Ontdek",
-  "@discover": {
-    "description": "discover"
-  },
-  "trending": "Trending",
-  "@trending": {
-    "description": "trending"
-  },
-  "basedOnLast": "Gebaseerd op laatste interactie",
-  "@basedOnLast": {
-    "description": "basedOnLast"
-  },
-  "cacheSongs": "Cache Liedjes",
-  "@cacheSongs": {
-    "description": "cacheSongs"
-  },
-  "subscribers": "abonnees",
-  "@subscribers": {
-    "description": "subscribers"
-  },
-  "unlinkAlert": "Successvol unlink!",
-  "@unlinkAlert": {
-    "description": "unlinkAlert"
-  },
-  "reset": "Reset",
-  "@reset": {
-    "description": "reset"
-  },
-  "communityplaylists": "Community Playlists",
-  "@communityplaylists": {
-    "description": "communityplaylists"
-  },
-  "featuredplaylists": "Aanbevolen Afspeellijsten",
-  "@featuredplaylists": {
-    "description": "featuredplaylists"
-  },
-  "items": "items",
-  "@items": {
-    "description": "items"
-  },
-  "startRadio": "Start radio",
-  "@startRadio": {
-    "description": "startRadio"
-  },
-  "singles": "Singles",
-  "@singles": {
-    "description": "singles"
-  },
-  "viewArtist": "Bekijk Artiest",
-  "@viewArtist": {
-    "description": "viewArtist"
-  },
-  "shareSong": "Deel dit liedje",
-  "@shareSong": {
-    "description": "shareSong"
-  },
-  "rename": "Hernoem",
-  "@rename": {
-    "description": "rename"
-  },
-  "noBookmarks": "Geen bladwijzers!",
-  "@noBookmarks": {
-    "description": "noBookmarks"
-  },
-  "enqueueSong": "Voeg dit liedje toe aan wachtrij",
-  "@enqueueSong": {
-    "description": "enqueueSong"
-  },
-  "removeFromPlaylist": "Verwijder van afspeellijst",
-  "@removeFromPlaylist": {
-    "description": "removeFromPlaylist"
-  },
-  "dark": "Donker",
-  "@dark": {
-    "description": "dark"
-  },
-  "radioNotAvailable": "Radio is niet beschikbaar voor deze artiest!",
-  "@radioNotAvailable": {
-    "description": "radioNotAvailable"
-  },
-  "songRemovedfromQueueCurrSong": "Je kunt niet het liedje dat nu afspeelt verwijderen",
-  "@songRemovedfromQueueCurrSong": {
-    "description": "songRemovedfromQueueCurrSong"
-  },
-  "songAddedToPlaylistAlert": "Liedje toegevoegd aan afspeellijst!",
-  "@songAddedToPlaylistAlert": {
-    "description": "songAddedToPlaylistAlert"
-  },
-  "stopMusicOnTaskClear": "Stop muziek wanneer taak duidelijk is",
-  "@stopMusicOnTaskClear": {
-    "description": "stopMusicOnTaskClear"
-  },
-  "light": "Licht",
-  "@light": {
-    "description": "light"
-  },
-  "dynamic": "Dynamisch",
-  "@dynamic": {
-    "description": "dynamic"
-  },
-  "upNext": "Volgende",
-  "@upNext": {
-    "description": "upNext"
-  },
-  "themeMode": "Thema modus",
-  "@themeMode": {
-    "description": "themeMode"
-  },
-  "link": "Link",
-  "@link": {
-    "description": "link"
-  },
-  "stopMusicOnTaskClearDes": "Het afspelen van muziek stopt wanneer de App uit Taakbeheer wordt weggeveegd",
-  "@stopMusicOnTaskClearDes": {
-    "description": "stopMusicOnTaskClearDes"
-  },
-  "backgroundPlayDes": "Aanzetten/uitzetten achtergrondmuziek (App is toegankelijk door systeemtray wanneer de app in de achtergrond actief is)",
-  "@backgroundPlayDes": {
-    "description": "backgroundPlayDes"
-  },
-  "downloadingFormat": "Bestandsformaat aan het downloaden",
-  "@downloadingFormat": {
-    "description": "downloadingFormat"
-  },
-  "downloadingFormatDes": "Selecteer bestandsformaat downloaden. \"Opus\" geeft de beste kwaliteit",
-  "@downloadingFormatDes": {
-    "description": "downloadingFormatDes"
-  },
-  "clearImgCache": "Verwijder afbeeldingen cache",
-  "@clearImgCache": {
-    "description": "clearImgCache"
-  },
-  "clearImgCacheDes": "Klik hier om de thumbnail/afbeeldingen cache te verwijderen. (Niet aangeraden tenzij je afbeelding cache wilt verversen)",
-  "@clearImgCacheDes": {
-    "description": "clearImgCacheDes"
-  },
-  "status": "Status",
-  "@status": {
-    "description": "status"
-  },
-  "enabled": "Aan",
-  "@enabled": {
-    "description": "enabled"
-  },
-  "github": "GitHub",
-  "@github": {
-    "description": "github"
-  },
-  "search": "Zoek",
-  "@search": {
-    "description": "search"
-  },
-  "errorOccuredAlert": "Er is een fout opgetreden!",
-  "@errorOccuredAlert": {
-    "description": "errorOccuredAlert"
-  },
-  "pipedplstSyncAlert": "Piped afspeellijst gesynchroniseerd!",
-  "@pipedplstSyncAlert": {
-    "description": "pipedplstSyncAlert"
-  },
-  "playlistCreatedAlert": "Afspeellijst gecreëerd!",
-  "@playlistCreatedAlert": {
-    "description": "playlistCreatedAlert"
-  },
-  "playlistCreatednsongAddedAlert": "Afspeellijst gecreëerd en liedje toegevoegd!",
-  "@playlistCreatednsongAddedAlert": {
-    "description": "playlistCreatednsongAddedAlert"
-  },
-  "playlistRenameAlert": "Successvol hernoemd!",
-  "@playlistRenameAlert": {
-    "description": "playlistRenameAlert"
-  },
-  "playlistRemovedAlert": "Afspeellijst verwijderd!",
-  "@playlistRemovedAlert": {
-    "description": "playlistRemovedAlert"
-  },
-  "playlistBookmarkAddAlert": "Afspeellijst gebladwijzerd!",
-  "@playlistBookmarkAddAlert": {
-    "description": "playlistBookmarkAddAlert"
-  },
-  "playlistBookmarkRemoveAlert": "Afspeellijst bladwijzer verwijderd!",
-  "@playlistBookmarkRemoveAlert": {
-    "description": "playlistBookmarkRemoveAlert"
+  "addMultipleSongs": "Voeg liedjes toe aan afspeellijst",
+  "@addMultipleSongs": {
+    "description": "addMultipleSongs"
+  },
+  "addToLibrary": "Toevoegen aan bibliotheek",
+  "@addToLibrary": {
+    "description": "addToLibrary"
+  },
+  "addToPlaylist": "Voeg toe aan afspeellijst",
+  "@addToPlaylist": {
+    "description": "addToPlaylist"
+  },
+  "album": "Album",
+  "@album": {
+    "description": "album"
   },
   "albumBookmarkAddAlert": "Album gebladwijzerd!",
   "@albumBookmarkAddAlert": {
@@ -576,209 +40,85 @@
   "@albumBookmarkRemoveAlert": {
     "description": "albumBookmarkRemoveAlert"
   },
-  "artistBookmarkRemoveAlert": "Artiest bladwijzer verwijderd!",
-  "@artistBookmarkRemoveAlert": {
-    "description": "artistBookmarkRemoveAlert"
+  "albums": "Albums",
+  "@albums": {
+    "description": "albums"
   },
-  "lyricsNotAvailable": "Tekst niet beschikbaar!",
-  "@lyricsNotAvailable": {
-    "description": "lyricsNotAvailable"
+  "albumsByTaste": "Volgens jouw smaak",
+  "@albumsByTaste": {
+    "description": "albumsByTaste"
   },
-  "newVersionAvailable": "Nieuwe versie beschikbaar!",
-  "@newVersionAvailable": {
-    "description": "newVersionAvailable"
+  "allFieldsReqMsg": "Alle velden zijn vereist",
+  "@allFieldsReqMsg": {
+    "description": "allFieldsReqMsg"
   },
-  "dontShowInfoAgain": "Niet opnieuw deze info laten zien",
-  "@dontShowInfoAgain": {
-    "description": "dontShowInfoAgain"
+  "androidBackupWarning": "Niet getest: als u het selectievakje inschakelt nadat u meer dan 60 bestanden hebt gedownload, kan het proces een grote hoeveelheid geheugen in beslag nemen en kan de telefoon of app crashen. Ga verder op eigen risico.",
+  "@androidBackupWarning": {
+    "description": "androidBackupWarning"
   },
-  "goToDownloadPage": "Klik hier om naar de downloadpagina te gaan",
-  "@goToDownloadPage": {
-    "description": "goToDownloadPage"
-  },
-  "local": "Lokaal",
-  "@local": {
-    "description": "local"
-  },
-  "Piped": "Piped",
-  "@Piped": {
-    "description": "Piped"
-  },
-  "reArrangePlaylist": "Afspeellijst herschikken",
-  "@reArrangePlaylist": {
-    "description": "reArrangePlaylist"
-  },
-  "removeMultiple": "Verwijder meerdere liedjes",
-  "@removeMultiple": {
-    "description": "removeMultiple"
-  },
-  "addMultipleSongs": "Voeg liedjes toe aan afspeellijst",
-  "@addMultipleSongs": {
-    "description": "addMultipleSongs"
-  },
-  "addToPlaylist": "Voeg toe aan afspeellijst",
-  "@addToPlaylist": {
-    "description": "addToPlaylist"
-  },
-  "removeFromQueue": "Verwijder van wachtrij",
-  "@removeFromQueue": {
-    "description": "removeFromQueue"
-  },
-  "removeFromLib": "Verwijder van bibliotheek Liedjes",
-  "@removeFromLib": {
-    "description": "removeFromLib"
-  },
-  "languageDes": "Zet App taal",
-  "@languageDes": {
-    "description": "languageDes"
-  },
-  "setDiscoverContent": "Zet ontdekkingsinhoud",
-  "@setDiscoverContent": {
-    "description": "setDiscoverContent"
-  },
-  "restoreLastPlaybackSession": "Herstel van vorige afspeelsessie",
-  "@restoreLastPlaybackSession": {
-    "description": "restoreLastPlaybackSession"
-  },
-  "cacheSongsDes": "Caching Liedjes tijdens het luisteren voor toekomstig/offline afluisteren, dit neemt extra ruimte in op je apparaat",
-  "@cacheSongsDes": {
-    "description": "cacheSongsDes"
-  },
-  "skipSilenceDes": "Stilte wordt overgeslagen in muziek afspeling",
-  "@skipSilenceDes": {
-    "description": "skipSilenceDes"
-  },
-  "streamingQualityDes": "Kwaliteit van muziekstream",
-  "@streamingQualityDes": {
-    "description": "streamingQualityDes"
-  },
-  "cacheHomeScreenDataDes": "Zet Caching homescherm inhoud data aan, homescherm laad meteen als deze optie aanstaat",
-  "@cacheHomeScreenDataDes": {
-    "description": "cacheHomeScreenDataDes"
+  "appInfo": "Applicatie-informatie",
+  "@appInfo": {
+    "description": "appInfo"
   },
   "artistBookmarkAddAlert": "Artiest gebladwijzerd!",
   "@artistBookmarkAddAlert": {
     "description": "artistBookmarkAddAlert"
   },
-  "syncedLyricsNotAvailable": "Gesynchroniseerde teksten niet beschikbaar!",
-  "@syncedLyricsNotAvailable": {
-    "description": "syncedLyricsNotAvailable"
+  "artistBookmarkRemoveAlert": "Artiest bladwijzer verwijderd!",
+  "@artistBookmarkRemoveAlert": {
+    "description": "artistBookmarkRemoveAlert"
   },
-  "cacheHomeScreenData": "Cahce homescherm inhoud data",
-  "@cacheHomeScreenData": {
-    "description": "cacheHomeScreenData"
+  "artistDesNotAvailable": "Beschrijving niet beschikbaar!",
+  "@artistDesNotAvailable": {
+    "description": "artistDesNotAvailable"
   },
-  "disableTransitionAnimation": "Zet transitie-animatie uit",
-  "@disableTransitionAnimation": {
-    "description": "disableTransitionAnimation"
+  "artists": "Artiesten",
+  "@artists": {
+    "description": "artists"
   },
-  "disableTransitionAnimationDes": "Schakel deze optie in om de tabtransitie-animatie uit te zetten",
-  "@disableTransitionAnimationDes": {
-    "description": "disableTransitionAnimationDes"
+  "artistsByTaste": "Volgens jouw smaak",
+  "@artistsByTaste": {
+    "description": "artistsByTaste"
   },
-  "exportDowloadedFiles": "Exporteer gedownloade bestanden",
-  "@exportDowloadedFiles": {
-    "description": "exportDowloadedFiles"
+  "audioCodec": "Audiocodec",
+  "@audioCodec": {
+    "description": "audioCodec"
   },
-  "exportDowloadedFilesDes": "Klik hier om gedownloade bestanden van inApp dir naar externe dir te exporteren",
-  "@exportDowloadedFilesDes": {
-    "description": "exportDowloadedFilesDes"
+  "auth_2fa_code": "Authenticatiecode",
+  "@auth_2fa_code": {
+    "description": "auth_2fa_code"
   },
-  "scanning": "Scannen...",
-  "@scanning": {
-    "description": "scanning"
+  "auth_2fa_invalid": "Voer een geldige 6-cijferige code in of log opnieuw in.",
+  "@auth_2fa_invalid": {
+    "description": "auth_2fa_invalid"
   },
-  "downFilesFound": "gedownloade bestanden gevonden",
-  "@downFilesFound": {
-    "description": "downFilesFound"
+  "auth_2fa_subtitle": "Voer de 6-cijferige code van uw authenticator-app in. Deze toegang vervalt over 5 minuten.",
+  "@auth_2fa_subtitle": {
+    "description": "auth_2fa_subtitle"
   },
-  "close": "Dichtbij",
-  "@close": {
-    "description": "close"
+  "auth_2fa_title": "Tweefactorauthenticatie",
+  "@auth_2fa_title": {
+    "description": "auth_2fa_title"
   },
-  "exportMsg": "Bestanden successvol geëxporteerd",
-  "@exportMsg": {
-    "description": "exportMsg"
+  "auth_2fa_verify": "Controleer en ga verder",
+  "@auth_2fa_verify": {
+    "description": "auth_2fa_verify"
   },
-  "clearImgCacheAlert": "Afbeeldingen cache is successvol verwijderd",
-  "@clearImgCacheAlert": {
-    "description": "clearImgCacheAlert"
+  "auth_agree_personal_data": "Gebruik verkeerde gegevens...",
+  "@auth_agree_personal_data": {
+    "description": "auth_agree_personal_data"
   },
-  "selectAuthInsMsg": "Selecteer Authenticatie instantie!",
-  "@selectAuthInsMsg": {
-    "description": "selectAuthInsMsg"
+  "auth_brand_description_1": "We hebben de login, registratie en wachtwoordherstel van het vorige project meegenomen, aangepast voor deze muziekapp.",
+  "@auth_brand_description_1": {
+    "description": "auth_brand_description_1"
   },
-  "openIn": "Openen in",
-  "@openIn": {
-    "description": "openIn"
+  "auth_brand_description_2": "Uw sessie bevindt zich in een beveiligde opslag en wordt gevalideerd met dezelfde backend die u al gebruikte.",
+  "@auth_brand_description_2": {
+    "description": "auth_brand_description_2"
   },
-  "backupSettingsAndPlaylists": "Back-up instellingen en afspeellijsten",
-  "@backupSettingsAndPlaylists": {
-    "description": "backupSettingsAndPlaylists"
-  },
-  "backupSettingsAndPlaylistsDes": "Bewaart alle instellingen, afspeellijsten en aanmeldgegevens in een back-up bestand",
-  "@backupSettingsAndPlaylistsDes": {
-    "description": "backupSettingsAndPlaylistsDes"
-  },
-  "restoreSettingsAndPlaylistsDes": "Herstelt alle instellingen, aanmeldgegevens en afspeellijsten van een back-up bestand. Overschrijft alle huidige gegevens",
-  "@restoreSettingsAndPlaylistsDes": {
-    "description": "restoreSettingsAndPlaylistsDes"
-  },
-  "restoreSettingsAndPlaylists": "Herstel instellingen en afspeellijsten",
-  "@restoreSettingsAndPlaylists": {
-    "description": "restoreSettingsAndPlaylists"
-  },
-  "album": "Album",
-  "@album": {
-    "description": "album"
-  },
-  "selectSongs": "Selecteer liedjes",
-  "@selectSongs": {
-    "description": "selectSongs"
-  },
-  "selectAll": "Selecteer alle",
-  "@selectAll": {
-    "description": "selectAll"
-  },
-  "keepScreenOnWhilePlaying": "Scherm aanhouden tijdens afspelen",
-  "@keepScreenOnWhilePlaying": {
-    "description": "keepScreenOnWhilePlaying"
-  },
-  "keepScreenOnWhilePlayingDes": "Indien ingeschakeld blijft het scherm van het apparaat ingeschakeld tijdens het afspelen van muziek",
-  "@keepScreenOnWhilePlayingDes": {
-    "description": "keepScreenOnWhilePlayingDes"
-  },
-  "auth_login_success": "Succesvol ingelogd",
-  "@auth_login_success": {
-    "description": "auth_login_success"
-  },
-  "settings_cloud_backup": "Cloud-back-up",
-  "@settings_cloud_backup": {
-    "description": "settings_cloud_backup"
-  },
-  "settings_migration_title": "Migreren van Joss Music Kotlin",
-  "@settings_migration_title": {
-    "description": "settings_migration_title"
-  },
-  "backup_confirm_question": "Wilt u een back-up uitvoeren?",
-  "@backup_confirm_question": {
-    "description": "backup_confirm_question"
-  },
-  "backup_selection_prompt": "Kies welke gegevens u wilt back-uppen",
-  "@backup_selection_prompt": {
-    "description": "backup_selection_prompt"
-  },
-  "search_recent_title": "Recente zoekopdrachten",
-  "@search_recent_title": {
-    "description": "search_recent_title"
-  },
-  "back": "Opbrengst",
-  "@back": {
-    "description": "back"
-  },
-  "auth_forgot_password": "Ik ben mijn wachtwoord vergeten",
-  "@auth_forgot_password": {
-    "description": "auth_forgot_password"
+  "auth_brand_not_configured": "Het .env-bestand moet worden geconfigureerd om verbinding te maken met de authenticatie-backend.",
+  "@auth_brand_not_configured": {
+    "description": "auth_brand_not_configured"
   },
   "auth_btn_login": "Login",
   "@auth_btn_login": {
@@ -788,53 +128,141 @@
   "@auth_btn_register": {
     "description": "auth_btn_register"
   },
-  "email": "E-mail",
-  "@email": {
-    "description": "email"
-  },
-  "password_text": "Wachtwoord",
-  "@password_text": {
-    "description": "Contraseña texto traducido"
+  "auth_btn_send_email": "Stuur e-mail",
+  "@auth_btn_send_email": {
+    "description": "auth_btn_send_email"
   },
   "auth_confirm_password": "Bevestig wachtwoord",
   "@auth_confirm_password": {
     "description": "auth_confirm_password"
   },
-  "auth_welcome_title": "Welkom bij Estrella Muziek",
-  "@auth_welcome_title": {
-    "description": "auth_welcome_title"
+  "auth_error_invalid_credentials": "Onjuist e-mailadres of wachtwoord.",
+  "@auth_error_invalid_credentials": {
+    "description": "auth_error_invalid_credentials"
   },
-  "auth_welcome_subtitle": "Welkom bij Estrella Muziek",
-  "@auth_welcome_subtitle": {
-    "description": "auth_welcome_subtitle"
+  "auth_error_invalid_email": "Voer een geldig e-mailadres in.",
+  "@auth_error_invalid_email": {
+    "description": "auth_error_invalid_email"
+  },
+  "auth_error_not_configured": "De authenticatie-backend ontbreekt om te worden geconfigureerd in het .env-bestand.",
+  "@auth_error_not_configured": {
+    "description": "auth_error_not_configured"
+  },
+  "auth_error_not_verified": "Uw account is nog niet geverifieerd.",
+  "@auth_error_not_verified": {
+    "description": "auth_error_not_verified"
+  },
+  "auth_error_unknown": "Het was niet mogelijk de operatie te voltooien.",
+  "@auth_error_unknown": {
+    "description": "auth_error_unknown"
   },
   "auth_first_name": "Voornaam",
   "@auth_first_name": {
     "description": "auth_first_name"
   },
+  "auth_forgot_password": "Ik ben mijn wachtwoord vergeten",
+  "@auth_forgot_password": {
+    "description": "auth_forgot_password"
+  },
+  "auth_forgot_password_subtitle": "We sturen u de instructies naar uw account-e-mailadres.",
+  "@auth_forgot_password_subtitle": {
+    "description": "auth_forgot_password_subtitle"
+  },
+  "auth_hint_email": "naam@mail.com",
+  "@auth_hint_email": {
+    "description": "auth_hint_email"
+  },
   "auth_last_name": "Achternaam",
   "@auth_last_name": {
     "description": "auth_last_name"
   },
-  "auth_agree_personal_data": "Gebruik verkeerde gegevens...",
-  "@auth_agree_personal_data": {
-    "description": "auth_agree_personal_data"
+  "auth_login_success": "Succesvol ingelogd",
+  "@auth_login_success": {
+    "description": "auth_login_success"
   },
-  "settings_general_section": "Algemeen",
-  "@settings_general_section": {
-    "description": "settings_general_section"
+  "auth_recovery_email_error": "Het was niet mogelijk om de e-mail te verzenden.",
+  "@auth_recovery_email_error": {
+    "description": "auth_recovery_email_error"
   },
-  "settings_logout": "Uitloggen",
-  "@settings_logout": {
-    "description": "settings_logout"
+  "auth_recovery_email_sent": "E-mail verzonden.",
+  "@auth_recovery_email_sent": {
+    "description": "auth_recovery_email_sent"
   },
-  "settings_cloud_backup_desc": "Uploaden, herstellen en beheren...",
-  "@settings_cloud_backup_desc": {
-    "description": "settings_cloud_backup_desc"
+  "auth_register_error": "Het account kon niet worden aangemaakt.",
+  "@auth_register_error": {
+    "description": "auth_register_error"
   },
-  "settings_migration_desc": "Importeer afspeellijsten, nummers...",
-  "@settings_migration_desc": {
-    "description": "settings_migration_desc"
+  "auth_register_success": "Account aangemaakt.",
+  "@auth_register_success": {
+    "description": "auth_register_success"
+  },
+  "auth_welcome_subtitle": "Welkom bij Estrella Muziek",
+  "@auth_welcome_subtitle": {
+    "description": "auth_welcome_subtitle"
+  },
+  "auth_welcome_title": "Welkom bij Estrella Muziek",
+  "@auth_welcome_title": {
+    "description": "auth_welcome_title"
+  },
+  "autoDownFavSong": "Automatisch downloaden van favoriete nummers",
+  "@autoDownFavSong": {
+    "description": "autoDownFavSong"
+  },
+  "autoDownFavSongDes": "Download automatisch favoriete nummers wanneer ze aan favorieten worden toegevoegd",
+  "@autoDownFavSongDes": {
+    "description": "autoDownFavSongDes"
+  },
+  "autoOpenPlayer": "Automatisch spelersscherm openen",
+  "@autoOpenPlayer": {
+    "description": "autoOpenPlayer"
+  },
+  "autoOpenPlayerDes": "Activeer/deactiveer het automatisch openen van de speler naar volledig scherm bij het selecteren van een nummer om af te spelen",
+  "@autoOpenPlayerDes": {
+    "description": "autoOpenPlayerDes"
+  },
+  "back": "Opbrengst",
+  "@back": {
+    "description": "back"
+  },
+  "backFilesFound": "databanken gevonden",
+  "@backFilesFound": {
+    "description": "backFilesFound"
+  },
+  "backgroundPlay": "Achtergrond muziek spelen",
+  "@backgroundPlay": {
+    "description": "backgroundPlay"
+  },
+  "backgroundPlayDes": "Aanzetten/uitzetten achtergrondmuziek (App is toegankelijk door systeemtray wanneer de app in de achtergrond actief is)",
+  "@backgroundPlayDes": {
+    "description": "backgroundPlayDes"
+  },
+  "backup": "Back-up",
+  "@backup": {
+    "description": "backup"
+  },
+  "backupAppData": "Maak een back-up van app-gegevens",
+  "@backupAppData": {
+    "description": "backupAppData"
+  },
+  "backupInProgress": "Back-up wordt uitgevoerd...",
+  "@backupInProgress": {
+    "description": "backupInProgress"
+  },
+  "backupMsg": "Back-up succesvol opgeslagen!",
+  "@backupMsg": {
+    "description": "backupMsg"
+  },
+  "backupSettingsAndPlaylists": "Back-up instellingen en afspeellijsten",
+  "@backupSettingsAndPlaylists": {
+    "description": "backupSettingsAndPlaylists"
+  },
+  "backupSettingsAndPlaylistsDes": "Bewaart alle instellingen, afspeellijsten en aanmeldgegevens in een back-up bestand",
+  "@backupSettingsAndPlaylistsDes": {
+    "description": "backupSettingsAndPlaylistsDes"
+  },
+  "backup_auth_required": "Je hebt een actieve sessie nodig...",
+  "@backup_auth_required": {
+    "description": "backup_auth_required"
   },
   "backup_btn_restart": "Start de app opnieuw",
   "@backup_btn_restart": {
@@ -844,217 +272,117 @@
   "@backup_btn_upload": {
     "description": "backup_btn_upload"
   },
-  "backup_no_backups": "Er zijn nog geen back-ups...",
-  "@backup_no_backups": {
-    "description": "backup_no_backups"
-  },
-  "backup_auth_required": "Je hebt een actieve sessie nodig...",
-  "@backup_auth_required": {
-    "description": "backup_auth_required"
-  },
-  "backup_upload_success": "Back-up correct geüpload.",
-  "@backup_upload_success": {
-    "description": "backup_upload_success"
-  },
-  "backup_restore_success": "Back-up hersteld. Start de app opnieuw.",
-  "@backup_restore_success": {
-    "description": "backup_restore_success"
+  "backup_confirm_question": "Wilt u een back-up uitvoeren?",
+  "@backup_confirm_question": {
+    "description": "backup_confirm_question"
   },
   "backup_delete_success": "Back-up verwijderd.",
   "@backup_delete_success": {
     "description": "backup_delete_success"
   },
-  "genre_pop": "Knal",
-  "@genre_pop": {
-    "description": "genre_pop"
+  "backup_no_backups": "Er zijn nog geen back-ups...",
+  "@backup_no_backups": {
+    "description": "backup_no_backups"
   },
-  "genre_rock": "Steen",
-  "@genre_rock": {
-    "description": "genre_rock"
+  "backup_restore_success": "Back-up hersteld. Start de app opnieuw.",
+  "@backup_restore_success": {
+    "description": "backup_restore_success"
   },
-  "genre_hiphop": "hiphop",
-  "@genre_hiphop": {
-    "description": "genre_hiphop"
+  "backup_select_folder_dialog": "Selecteer de map voor back-up",
+  "@backup_select_folder_dialog": {
+    "description": "backup_select_folder_dialog"
   },
-  "genre_electronic": "Elektronica",
-  "@genre_electronic": {
-    "description": "genre_electronic"
+  "backup_selection_prompt": "Kies welke gegevens u wilt back-uppen",
+  "@backup_selection_prompt": {
+    "description": "backup_selection_prompt"
   },
-  "genre_jazz": "Jazz",
-  "@genre_jazz": {
-    "description": "genre_jazz"
+  "backup_upload_success": "Back-up correct geüpload.",
+  "@backup_upload_success": {
+    "description": "backup_upload_success"
   },
-  "genre_latin": "Latijns",
-  "@genre_latin": {
-    "description": "genre_latin"
+  "basedOnLast": "Gebaseerd op laatste interactie",
+  "@basedOnLast": {
+    "description": "basedOnLast"
   },
-  "migration_btn_select": "Bestand selecteren en importeren",
-  "@migration_btn_select": {
-    "description": "migration_btn_select"
+  "bitrate": "Bitsnelheid",
+  "@bitrate": {
+    "description": "bitrate"
   },
-  "forgottenFavorites": "vergeten favorieten",
-  "@forgottenFavorites": {
-    "description": "forgottenFavorites"
+  "blacklistPipedPlaylist": "Zwarte lijst voor afspeellijsten",
+  "@blacklistPipedPlaylist": {
+    "description": "blacklistPipedPlaylist"
   },
-  "mostListenedSong": "Het meest beluisterde nummer",
-  "@mostListenedSong": {
-    "description": "mostListenedSong"
+  "blacklistPlstResetAlert": "Successvolle reset!",
+  "@blacklistPlstResetAlert": {
+    "description": "blacklistPlstResetAlert"
   },
-  "reproducedBy": "Gereproduceerd door",
-  "@reproducedBy": {
-    "description": "reproducedBy"
+  "by": "door",
+  "@by": {
+    "description": "by"
   },
-  "recentSearches": "Recente zoekopdrachten",
-  "@recentSearches": {
-    "description": "recentSearches"
+  "cacheHomeScreenData": "Cahce homescherm inhoud data",
+  "@cacheHomeScreenData": {
+    "description": "cacheHomeScreenData"
   },
-  "popularTracks": "Populaire nummers",
-  "@popularTracks": {
-    "description": "popularTracks"
+  "cacheHomeScreenDataDes": "Zet Caching homescherm inhoud data aan, homescherm laad meteen als deze optie aanstaat",
+  "@cacheHomeScreenDataDes": {
+    "description": "cacheHomeScreenDataDes"
   },
-  "latestRelease": "Nieuwste uitgave",
-  "@latestRelease": {
-    "description": "latestRelease"
+  "cacheSongs": "Cache Liedjes",
+  "@cacheSongs": {
+    "description": "cacheSongs"
   },
-  "follow": "Doorgaan",
-  "@follow": {
-    "description": "follow"
+  "cacheSongsDes": "Caching Liedjes tijdens het luisteren voor toekomstig/offline afluisteren, dit neemt extra ruimte in op je apparaat",
+  "@cacheSongsDes": {
+    "description": "cacheSongsDes"
   },
-  "following": "Volgende",
-  "@following": {
-    "description": "following"
+  "cachedOrOffline": "Cached/Offline",
+  "@cachedOrOffline": {
+    "description": "cachedOrOffline"
   },
-  "listenNow": "Luister nu",
-  "@listenNow": {
-    "description": "listenNow"
+  "cancel": "Annuleer",
+  "@cancel": {
+    "description": "cancel"
   },
-  "video": "Video",
-  "@video": {
-    "description": "video"
+  "cancelTimer": "Annuleer timer",
+  "@cancelTimer": {
+    "description": "cancelTimer"
   },
-  "about": "Over",
-  "@about": {
-    "description": "about"
+  "cancelTimerAlert": "Slaap timer geannuleerd",
+  "@cancelTimerAlert": {
+    "description": "cancelTimerAlert"
   },
-  "readMore": "Lees meer",
-  "@readMore": {
-    "description": "readMore"
+  "clearImgCache": "Verwijder afbeeldingen cache",
+  "@clearImgCache": {
+    "description": "clearImgCache"
   },
-  "speedAndPitch": "Snelheid en toonhoogte",
-  "@speedAndPitch": {
-    "description": "speedAndPitch"
+  "clearImgCacheAlert": "Afbeeldingen cache is successvol verwijderd",
+  "@clearImgCacheAlert": {
+    "description": "clearImgCacheAlert"
   },
-  "playbackSpeed": "Afspeelsnelheid",
-  "@playbackSpeed": {
-    "description": "playbackSpeed"
+  "clearImgCacheDes": "Klik hier om de thumbnail/afbeeldingen cache te verwijderen. (Niet aangeraden tenzij je afbeelding cache wilt verversen)",
+  "@clearImgCacheDes": {
+    "description": "clearImgCacheDes"
   },
-  "songPitch": "toon van het lied",
-  "@songPitch": {
-    "description": "songPitch"
+  "close": "Dichtbij",
+  "@close": {
+    "description": "close"
   },
-  "musicRecognition": "Muziekherkenning",
-  "@musicRecognition": {
-    "description": "musicRecognition"
+  "closeApp": "Sluit de applicatie",
+  "@closeApp": {
+    "description": "closeApp"
   },
-  "listeningToEnvironment": "Luisteren naar de omgeving...",
-  "@listeningToEnvironment": {
-    "description": "listeningToEnvironment"
+  "cloudLibraryFound": "Cloudbibliotheek gevonden.",
+  "@cloudLibraryFound": {
+    "description": "cloudLibraryFound"
   },
-  "micInstruction": "Zorg ervoor dat de muziek luid genoeg staat in de buurt van uw microfoon.",
-  "@micInstruction": {
-    "description": "micInstruction"
+  "cloudLibraryFoundDeviceWillDownload": "Er is een cloudbibliotheek gevonden. Dit apparaat downloadt het zonder het te overschrijven.",
+  "@cloudLibraryFoundDeviceWillDownload": {
+    "description": "cloudLibraryFoundDeviceWillDownload"
   },
-  "processingAudio": "Het geluid verwerken...",
-  "@processingAudio": {
-    "description": "processingAudio"
-  },
-  "shazamSearching": "Zoeken in de Shazam-database naar overeenkomsten...",
-  "@shazamSearching": {
-    "description": "shazamSearching"
-  },
-  "songFound": "Lied gevonden!",
-  "@songFound": {
-    "description": "songFound"
-  },
-  "playNow": "Speel nu",
-  "@playNow": {
-    "description": "playNow"
-  },
-  "searchInLibrary": "Zoek in Bibliotheek",
-  "@searchInLibrary": {
-    "description": "searchInLibrary"
-  },
-  "noMatchesFound": "Geen overeenkomsten",
-  "@noMatchesFound": {
-    "description": "noMatchesFound"
-  },
-  "noMatchInstruction": "Kon geen nummers vinden in de opgenomen audio",
-  "@noMatchInstruction": {
-    "description": "noMatchInstruction"
-  },
-  "errorOccurred": "Er is een fout opgetreden",
-  "@errorOccurred": {
-    "description": "errorOccurred"
-  },
-  "playingRecognizedTrack": "Spelen:",
-  "@playingRecognizedTrack": {
-    "description": "playingRecognizedTrack"
-  },
-  "errorPlayingTrack": "Fout bij het afspelen:",
-  "@errorPlayingTrack": {
-    "description": "errorPlayingTrack"
-  },
-  "welcome_title": "Jouw muziek, jouw manier",
-  "@welcome_title": {
-    "description": "welcome_title"
-  },
-  "welcome_subtitle": "Kies zelf hoe jij Estrella Music voortaan wilt beleven.",
-  "@welcome_subtitle": {
-    "description": "welcome_subtitle"
-  },
-  "welcome_intro": "We hebben ons platform gemoderniseerd. Het oude systeem voor het uploaden van handmatige back-ups is uitgeschakeld. Je hebt nu twee duidelijke manieren om je muziekbibliotheek te beheren.",
-  "@welcome_intro": {
-    "description": "welcome_intro"
-  },
-  "recommend_cloud": "Voor een Spotify-achtige ervaring raden wij aan om de Cloud Mode te activeren: real-time synchronisatie tussen al je apparaten en automatische back-up zonder dat je er iets voor hoeft te doen.",
-  "@recommend_cloud": {
-    "description": "recommend_cloud"
-  },
-  "swipe_prompt": "Veeg om opties te verkennen ➔",
-  "@swipe_prompt": {
-    "description": "swipe_prompt"
-  },
-  "local_title": "Lokale modus",
-  "@local_title": {
-    "description": "local_title"
-  },
-  "local_subtitle": "Absolute privacy op uw apparaat",
-  "@local_subtitle": {
-    "description": "local_subtitle"
-  },
-  "local_b1": "Het werkt zonder dat je hoeft in te loggen.",
-  "@local_b1": {
-    "description": "local_b1"
-  },
-  "local_b2": "Uw hele bibliotheek blijft strikt op deze computer.",
-  "@local_b2": {
-    "description": "local_b2"
-  },
-  "local_b3": "Let op: Geen handmatige cloudback-ups. Als u uw apparaat kwijtraakt of de app verwijdert, kunnen uw gegevens niet worden hersteld.",
-  "@local_b3": {
-    "description": "local_b3"
-  },
-  "local_btn": "Alleen op dit apparaat gebruiken",
-  "@local_btn": {
-    "description": "local_btn"
-  },
-  "cloud_title": "Cloudmodus (aanbevolen)",
-  "@cloud_title": {
-    "description": "cloud_title"
-  },
-  "cloud_subtitle": "Realtime synchronisatie met Joss Red",
-  "@cloud_subtitle": {
-    "description": "cloud_subtitle"
+  "cloudModeReadyOfflineCache": "Cloudmodus is klaar. Dit apparaat werkt als een offline cache.",
+  "@cloudModeReadyOfflineCache": {
+    "description": "cloudModeReadyOfflineCache"
   },
   "cloud_b1": "Log veilig in met uw Joss Red-account.",
   "@cloud_b1": {
@@ -1072,511 +400,137 @@
   "@cloud_btn": {
     "description": "cloud_btn"
   },
-  "slide_indicator": "Stap {current} van 3",
-  "@slide_indicator": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      }
-    },
-    "description": "slide_indicator"
+  "cloud_subtitle": "Realtime synchronisatie met Joss Red",
+  "@cloud_subtitle": {
+    "description": "cloud_subtitle"
   },
-  "news_card_title": "Estrella Muziek is geëvolueerd!",
-  "@news_card_title": {
-    "description": "news_card_title"
-  },
-  "news_card_subtitle": "100% synchronisatie met Joss Red, afspeellijsten met vrienden en nog veel meer. Tik om te zien wat er nieuw is.",
-  "@news_card_subtitle": {
-    "description": "news_card_subtitle"
-  },
-  "news_dialog_title": "Estrella Muzieknieuws",
-  "@news_dialog_title": {
-    "description": "news_dialog_title"
-  },
-  "news_item_sync_title": "Volledige integratie met Joss Red",
-  "@news_item_sync_title": {
-    "description": "news_item_sync_title"
-  },
-  "news_item_sync_desc": "Uw afspeellijsten en favorieten worden nu automatisch in de cloud opgeslagen en gesynchroniseerd met uw hoofdaccount van Joss Red.",
-  "@news_item_sync_desc": {
-    "description": "news_item_sync_desc"
-  },
-  "news_item_collab_title": "Gezamenlijke afspeellijsten",
-  "@news_item_collab_title": {
-    "description": "news_item_collab_title"
-  },
-  "news_item_collab_desc": "Maak afspeellijsten met je vrienden! Wanneer u een afspeellijst maakt, selecteert u het selectievakje Samenwerken en kiest u uw vrienden om samen te bewerken.",
-  "@news_item_collab_desc": {
-    "description": "news_item_collab_desc"
-  },
-  "news_item_trans_title": "Transparante synchronisatie",
-  "@news_item_trans_title": {
-    "description": "news_item_trans_title"
-  },
-  "news_item_trans_desc": "U hoeft niet langer op handmatige synchronisatieknoppen te klikken; De nieuwe motor is verantwoordelijk voor het automatisch op- en terugschakelen.",
-  "@news_item_trans_desc": {
-    "description": "news_item_trans_desc"
-  },
-  "news_dialog_section_friends": "Vrienden- en accountbeheer:",
-  "@news_dialog_section_friends": {
-    "description": "news_dialog_section_friends"
-  },
-  "news_dialog_friends_desc": "Om vrienden toe te voegen, verzoeken te accepteren of uw beveiligingsprofiel te beheren, gebruikt u Joss Red op zijn officiële platforms:",
-  "@news_dialog_friends_desc": {
-    "description": "news_dialog_friends_desc"
-  },
-  "news_btn_app": "Joss Red-app (Play Store)",
-  "@news_btn_app": {
-    "description": "news_btn_app"
-  },
-  "news_btn_web": "Joss Rood Web",
-  "@news_btn_web": {
-    "description": "news_btn_web"
-  },
-  "news_btn_dismiss": "Begrepen",
-  "@news_btn_dismiss": {
-    "description": "news_btn_dismiss"
-  },
-  "settings_appearance_desc": "Thema-, taal- en interface-animaties.",
-  "@settings_appearance_desc": {
-    "description": "settings_appearance_desc"
-  },
-  "settings_content_desc": "Ontdek filters, integratie met Piped en caches.",
-  "@settings_content_desc": {
-    "description": "settings_content_desc"
-  },
-  "settings_playback_desc": "Streamingkwaliteit, normalisatie, stiltes en batterij.",
-  "@settings_playback_desc": {
-    "description": "settings_playback_desc"
-  },
-  "settings_downloads_desc": "Downloads en opslag",
-  "@settings_downloads_desc": {
-    "description": "settings_downloads_desc"
-  },
-  "settings_downloads_sub": "Audioformaten, mappen en automatische downloads.",
-  "@settings_downloads_sub": {
-    "description": "settings_downloads_sub"
-  },
-  "settings_account_desc": "Account en synchronisatie",
-  "@settings_account_desc": {
-    "description": "settings_account_desc"
-  },
-  "settings_account_sub": "Cloudmodus, back-ups, vriendenlijst en migraties.",
-  "@settings_account_sub": {
-    "description": "settings_account_sub"
-  },
-  "settings_about_desc": "Over Estrella-muziek",
-  "@settings_about_desc": {
-    "description": "settings_about_desc"
-  },
-  "settings_about_sub": "Versie, open source project en GitHub.",
-  "@settings_about_sub": {
-    "description": "settings_about_sub"
-  },
-  "settings_local_cloud_title": "Lokale modus / EMusic Cloud",
-  "@settings_local_cloud_title": {
-    "description": "settings_local_cloud_title"
-  },
-  "settings_local_cloud_desc": "Kies, migreer of bekijk de synchronisatiestatus met Joss Red.",
-  "@settings_local_cloud_desc": {
-    "description": "settings_local_cloud_desc"
-  },
-  "settings_my_friends": "mijn vrienden",
-  "@settings_my_friends": {
-    "description": "settings_my_friends"
-  },
-  "settings_my_friends_desc": "Beheer uw Joss Red-vrienden rechtstreeks.",
-  "@settings_my_friends_desc": {
-    "description": "settings_my_friends_desc"
-  },
-  "settings_refresh_visitor_title": "Vernieuwings-ID (bezoekers-ID)",
-  "@settings_refresh_visitor_title": {
-    "description": "settings_refresh_visitor_title"
-  },
-  "settings_refresh_visitor_desc": "Genereer je Online Music-ID opnieuw als Discover-content niet wordt geladen.",
-  "@settings_refresh_visitor_desc": {
-    "description": "settings_refresh_visitor_desc"
-  },
-  "settings_visitor_updated": "Bijgewerkte identificatie",
-  "@settings_visitor_updated": {
-    "description": "settings_visitor_updated"
-  },
-  "settings_visitor_updated_desc": "Er is met succes een nieuwe bezoekers-ID gegenereerd.",
-  "@settings_visitor_updated_desc": {
-    "description": "settings_visitor_updated_desc"
-  },
-  "settings_visitor_error": "Fout",
-  "@settings_visitor_error": {
-    "description": "settings_visitor_error"
-  },
-  "settings_visitor_error_desc": "Er kan geen nieuwe ID worden gegenereerd. Probeer het later opnieuw.",
-  "@settings_visitor_error_desc": {
-    "description": "settings_visitor_error_desc"
-  },
-  "settings_visitor_exception": "Er is een fout opgetreden tijdens het regenereren van: {error}",
-  "@settings_visitor_exception": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    },
-    "description": "settings_visitor_exception"
-  },
-  "migratedLibrary": "Gemigreerde bibliotheek",
-  "@migratedLibrary": {
-    "description": "migratedLibrary"
-  },
-  "noSongsInCollection": "Er zijn geen nummers in deze collectie",
-  "@noSongsInCollection": {
-    "description": "noSongsInCollection"
-  },
-  "startupScreen": "Openen bij opstarten",
-  "@startupScreen": {
-    "description": "startupScreen"
-  },
-  "startupScreenDescription": "Kies de sectie die Estrella Music als eerste opent",
-  "@startupScreenDescription": {
-    "description": "startupScreenDescription"
-  },
-  "friends": "Vrienden",
-  "@friends": {
-    "description": "friends"
-  },
-  "dailyDiscover": "Dagelijkse ontdekking",
-  "@dailyDiscover": {
-    "description": "dailyDiscover"
-  },
-  "keepListening": "blijf luisteren",
-  "@keepListening": {
-    "description": "keepListening"
-  },
-  "similarToTitle": "gelijk aan {title}",
-  "@similarToTitle": {
-    "placeholders": {
-      "title": {
-        "type": "String"
-      }
-    },
-    "description": "similarToTitle"
-  },
-  "pipedPlaylistDescription": "Doorgesluisde afspeellijst",
-  "@pipedPlaylistDescription": {
-    "description": "pipedPlaylistDescription"
+  "cloud_title": "Cloudmodus (aanbevolen)",
+  "@cloud_title": {
+    "description": "cloud_title"
   },
   "collaborativePlaylistDescription": "Gezamenlijke afspeellijst",
   "@collaborativePlaylistDescription": {
     "description": "collaborativePlaylistDescription"
   },
-  "libraryPlaylistDescription": "Bibliotheek-afspeellijst",
-  "@libraryPlaylistDescription": {
-    "description": "libraryPlaylistDescription"
-  },
-  "untitledSong": "Titelloos nummer",
-  "@untitledSong": {
-    "description": "untitledSong"
-  },
-  "migratedPlaylist": "Gemigreerde afspeellijst",
-  "@migratedPlaylist": {
-    "description": "migratedPlaylist"
-  },
-  "migratedAlbum": "Gemigreerd album",
-  "@migratedAlbum": {
-    "description": "migratedAlbum"
-  },
-  "songsImportedFromJossMusic": "Nummers geïmporteerd uit Joss Music Kotlin",
-  "@songsImportedFromJossMusic": {
-    "description": "songsImportedFromJossMusic"
-  },
-  "importedFromJossMusic": "Geïmporteerd van Joss Music Kotlin",
-  "@importedFromJossMusic": {
-    "description": "importedFromJossMusic"
-  },
-  "syncLocalModeActive": "Lokale modus actief",
-  "@syncLocalModeActive": {
-    "description": "syncLocalModeActive"
-  },
-  "syncCloudPending": "Cloudmodus actief. Synchronisatie in behandeling.",
-  "@syncCloudPending": {
-    "description": "syncCloudPending"
-  },
-  "syncCloudDownloadingExisting": "Cloudmodus geactiveerd. De bestaande bibliotheek downloaden.",
-  "@syncCloudDownloadingExisting": {
-    "description": "syncCloudDownloadingExisting"
-  },
-  "syncCloudMigrationComplete": "Cloudmodus geactiveerd. Gemigreerde bibliotheek.",
-  "@syncCloudMigrationComplete": {
-    "description": "syncCloudMigrationComplete"
-  },
-  "syncLocalDeviceOnly": "Uw gegevens worden alleen op dit apparaat bewaard.",
-  "@syncLocalDeviceOnly": {
-    "description": "syncLocalDeviceOnly"
-  },
-  "syncDownloading": "EMusic-wijzigingen downloaden...",
-  "@syncDownloading": {
-    "description": "syncDownloading"
-  },
-  "syncDownloadFailed": "Kan de synchronisatie niet downloaden.",
-  "@syncDownloadFailed": {
-    "description": "syncDownloadFailed"
-  },
-  "syncLocalChangesFirst": "Er zijn nieuwe lokale veranderingen. Ze worden geüpload voordat ze worden gedownload.",
-  "@syncLocalChangesFirst": {
-    "description": "syncLocalChangesFirst"
-  },
-  "syncLibrarySynced": "Gesynchroniseerde bibliotheek.",
-  "@syncLibrarySynced": {
-    "description": "syncLibrarySynced"
-  },
-  "syncOfflinePending": "Offline. Er zijn wijzigingen in voorbereiding.",
-  "@syncOfflinePending": {
-    "description": "syncOfflinePending"
-  },
-  "syncLibraryUpToDate": "Bibliotheek up-to-date.",
-  "@syncLibraryUpToDate": {
-    "description": "syncLibraryUpToDate"
-  },
-  "syncChangesSynced": "{count} gesynchroniseerde wijzigingen.",
-  "@syncChangesSynced": {
-    "placeholders": {
-      "count": {
-        "type": "String"
-      }
-    },
-    "description": "syncChangesSynced"
-  },
-  "syncUploading": "Wijzigingen uploaden naar EMusic...",
-  "@syncUploading": {
-    "description": "syncUploading"
-  },
-  "syncUploadSuccessWs": "Wijzigingen zijn succesvol geüpload (WS).",
-  "@syncUploadSuccessWs": {
-    "description": "syncUploadSuccessWs"
-  },
-  "syncUploadWsRetry": "Kan niet uploaden met WS. Het wordt later opnieuw geprobeerd.",
-  "@syncUploadWsRetry": {
-    "description": "syncUploadWsRetry"
-  },
-  "syncUploadSuccess": "Wijzigingen correct geüpload.",
-  "@syncUploadSuccess": {
-    "description": "syncUploadSuccess"
-  },
-  "syncUploadRetry": "Kon niet opstaan. Het wordt later opnieuw geprobeerd.",
-  "@syncUploadRetry": {
-    "description": "syncUploadRetry"
-  },
-  "syncOfflineRetry": "Offline. Wijzigingen opgeslagen voor opnieuw proberen.",
-  "@syncOfflineRetry": {
-    "description": "syncOfflineRetry"
-  },
-  "syncUnconfirmedRetry": "EMusic heeft niet alle wijzigingen bevestigd. Ze zullen opnieuw worden geprobeerd.",
-  "@syncUnconfirmedRetry": {
-    "description": "syncUnconfirmedRetry"
-  },
-  "syncChangesConfirmed": "{count} wijzigingen vastgelegd.",
-  "@syncChangesConfirmed": {
-    "placeholders": {
-      "count": {
-        "type": "String"
-      }
-    },
-    "description": "syncChangesConfirmed"
-  },
-  "migrationAlreadyRunning": "Er is al een migratie gaande.",
-  "@migrationAlreadyRunning": {
-    "description": "migrationAlreadyRunning"
-  },
-  "migrationLoginRequired": "Meld u aan bij Joss Red voordat u migreert.",
-  "@migrationLoginRequired": {
-    "description": "migrationLoginRequired"
-  },
-  "migrationCheckingCloud": "Controleren of EMusic Cloud al een bibliotheek heeft...",
-  "@migrationCheckingCloud": {
-    "description": "migrationCheckingCloud"
-  },
-  "cloudLibraryFoundDeviceWillDownload": "Er is een cloudbibliotheek gevonden. Dit apparaat downloadt het zonder het te overschrijven.",
-  "@cloudLibraryFoundDeviceWillDownload": {
-    "description": "cloudLibraryFoundDeviceWillDownload"
-  },
-  "cloudLibraryFound": "Cloudbibliotheek gevonden.",
-  "@cloudLibraryFound": {
-    "description": "cloudLibraryFound"
-  },
-  "migrationCreatingBackup": "Een lokale back-up maken voordat u verbinding maakt met de cloud...",
-  "@migrationCreatingBackup": {
-    "description": "migrationCreatingBackup"
-  },
-  "migrationAnalyzingLocal": "Analyse van de plaatselijke bibliotheek...",
-  "@migrationAnalyzingLocal": {
-    "description": "migrationAnalyzingLocal"
-  },
-  "migrationPreparingCloud": "De migratie voorbereiden in EMusic Cloud...",
-  "@migrationPreparingCloud": {
-    "description": "migrationPreparingCloud"
-  },
-  "migrationStartFailed": "EMusic Cloud kon de migratie niet starten.",
-  "@migrationStartFailed": {
-    "description": "migrationStartFailed"
-  },
-  "migrationUploadingData": "Afspeellijsten, favorieten en geschiedenis uploaden...",
-  "@migrationUploadingData": {
-    "description": "migrationUploadingData"
-  },
-  "migrationUploadIncomplete": "Niet alle gegevens konden worden geüpload. Wij behouden uw lokale steun.",
-  "@migrationUploadIncomplete": {
-    "description": "migrationUploadIncomplete"
-  },
-  "migrationVerifyingIntegrity": "Integriteit verifiëren in EMusic Cloud...",
-  "@migrationVerifyingIntegrity": {
-    "description": "migrationVerifyingIntegrity"
-  },
-  "migrationValidationFailed": "EMusic Cloud kon de migratie niet valideren.",
-  "@migrationValidationFailed": {
-    "description": "migrationValidationFailed"
-  },
-  "cloudModeReadyOfflineCache": "Cloudmodus is klaar. Dit apparaat werkt als een offline cache.",
-  "@cloudModeReadyOfflineCache": {
-    "description": "cloudModeReadyOfflineCache"
-  },
-  "migrationCompleted": "Migratie voltooid.",
-  "@migrationCompleted": {
-    "description": "migrationCompleted"
-  },
-  "migrationFailedLocalPreserved": "De migratie is mislukt. Uw lokale gegevens zijn niet gewijzigd.",
-  "@migrationFailedLocalPreserved": {
-    "description": "migrationFailedLocalPreserved"
-  },
-  "sessionExpiredLoginAgain": "Uw sessie is verlopen. Meld u opnieuw aan.",
-  "@sessionExpiredLoginAgain": {
-    "description": "sessionExpiredLoginAgain"
-  },
-  "selectedFileNotFound": "Het geselecteerde bestand is niet gevonden.",
-  "@selectedFileNotFound": {
-    "description": "selectedFileNotFound"
-  },
-  "genericAlbum": "Album",
-  "@genericAlbum": {
-    "description": "genericAlbum"
-  },
-  "friendsLoginRequired": "Log in om vrienden te vinden.",
-  "@friendsLoginRequired": {
-    "description": "friendsLoginRequired"
-  },
-  "invalidSessionToken": "De sessie bevat geen geldig token.",
-  "@invalidSessionToken": {
-    "description": "invalidSessionToken"
-  },
-  "userSearchFailed": "Kan niet zoeken naar gebruikers ({statusCode}).",
-  "@userSearchFailed": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    },
-    "description": "userSearchFailed"
-  },
-  "invalidServerResponse": "Ongeldige serverreactie.",
-  "@invalidServerResponse": {
-    "description": "invalidServerResponse"
-  },
-  "userListMissing": "Het antwoord bevat geen lijst met gebruikers.",
-  "@userListMissing": {
-    "description": "userListMissing"
-  },
-  "playlistCollaboratorsTitle": "Bijdragers van afspeellijsten",
-  "@playlistCollaboratorsTitle": {
-    "description": "playlistCollaboratorsTitle"
-  },
   "collaboratorsInstruction": "Selecteer de vrienden die deze afspeellijst kunnen zien en bewerken:",
   "@collaboratorsInstruction": {
     "description": "collaboratorsInstruction"
-  },
-  "noJossRedFriends": "Je hebt geen toegevoegde vrienden op Joss Red.",
-  "@noJossRedFriends": {
-    "description": "noJossRedFriends"
-  },
-  "friendFallback": "Vriend",
-  "@friendFallback": {
-    "description": "friendFallback"
   },
   "collaboratorsUpdated": "Bijdragers zijn correct bijgewerkt.",
   "@collaboratorsUpdated": {
     "description": "collaboratorsUpdated"
   },
-  "save": "Houden",
-  "@save": {
-    "description": "save"
+  "communityplaylists": "Community Playlists",
+  "@communityplaylists": {
+    "description": "communityplaylists"
   },
-  "manageCollaborators": "Beheer bijdragers (vrienden)",
-  "@manageCollaborators": {
-    "description": "manageCollaborators"
+  "content": "Inhoud",
+  "@content": {
+    "description": "content"
+  },
+  "copyrightNotice": "© 2026 JOSPROX. GPL-licentie v3.0",
+  "@copyrightNotice": {
+    "description": "copyrightNotice"
+  },
+  "create": "Creëer",
+  "@create": {
+    "description": "create"
+  },
+  "createnAdd": "Creëer & voeg toe",
+  "@createnAdd": {
+    "description": "createnAdd"
+  },
+  "customIns": "Aangepaste Instantie",
+  "@customIns": {
+    "description": "customIns"
+  },
+  "customInsSelectMsg": "Selecteer Aangepaste Instantie",
+  "@customInsSelectMsg": {
+    "description": "customInsSelectMsg"
+  },
+  "dailyDiscover": "Dagelijkse ontdekking",
+  "@dailyDiscover": {
+    "description": "dailyDiscover"
+  },
+  "dark": "Donker",
+  "@dark": {
+    "description": "dark"
+  },
+  "delete": "Verwijderen",
+  "@delete": {
+    "description": "delete"
+  },
+  "deleteDownloadData": "Verwijder van downloads",
+  "@deleteDownloadData": {
+    "description": "deleteDownloadData"
+  },
+  "deleteDownloadedDataAlert": "Successvol verwijderd van downloads!",
+  "@deleteDownloadedDataAlert": {
+    "description": "deleteDownloadedDataAlert"
+  },
+  "developedBy": "Ontwikkeld en onderhouden door Joss Estrada (JOSPROX)",
+  "@developedBy": {
+    "description": "developedBy"
+  },
+  "disableTransitionAnimation": "Zet transitie-animatie uit",
+  "@disableTransitionAnimation": {
+    "description": "disableTransitionAnimation"
+  },
+  "disableTransitionAnimationDes": "Schakel deze optie in om de tabtransitie-animatie uit te zetten",
+  "@disableTransitionAnimationDes": {
+    "description": "disableTransitionAnimationDes"
+  },
+  "disabled": "Uit",
+  "@disabled": {
+    "description": "disabled"
+  },
+  "discover": "Ontdek",
+  "@discover": {
+    "description": "discover"
+  },
+  "dismiss": "Afwijzen",
+  "@dismiss": {
+    "description": "dismiss"
   },
   "done": "Klaar",
   "@done": {
     "description": "done"
   },
-  "notAuthenticated": "Niet geauthenticeerd",
-  "@notAuthenticated": {
-    "description": "notAuthenticated"
+  "dontShowInfoAgain": "Niet opnieuw deze info laten zien",
+  "@dontShowInfoAgain": {
+    "description": "dontShowInfoAgain"
   },
-  "genericError": "Fout",
-  "@genericError": {
-    "description": "genericError"
+  "downFilesFound": "gedownloade bestanden gevonden",
+  "@downFilesFound": {
+    "description": "downFilesFound"
   },
-  "friendRequestSent": "Vriendschapsverzoek verzonden",
-  "@friendRequestSent": {
-    "description": "friendRequestSent"
+  "download": "Downloaden",
+  "@download": {
+    "description": "download"
   },
-  "friendRequestAccepted": "Vriendschapsverzoek geaccepteerd",
-  "@friendRequestAccepted": {
-    "description": "friendRequestAccepted"
+  "downloadAlbumSongs": "Download nummers van het album",
+  "@downloadAlbumSongs": {
+    "description": "downloadAlbumSongs"
   },
-  "friendshipRemoved": "Vriendschap verwijderd",
-  "@friendshipRemoved": {
-    "description": "friendshipRemoved"
+  "downloadError2": "Het opgevraagde nummer kan niet worden gedownload vanwege serverbeperkingen. Je kunt het opnieuw proberen",
+  "@downloadError2": {
+    "description": "downloadError2"
   },
-  "userBlocked": "Geblokkeerde gebruiker",
-  "@userBlocked": {
-    "description": "userBlocked"
+  "downloadError3": "Downloaden mislukt vanwege netwerk-/transmissiefout! Probeer het opnieuw",
+  "@downloadError3": {
+    "description": "downloadError3"
   },
-  "userUnblocked": "Ontgrendelde gebruiker",
-  "@userUnblocked": {
-    "description": "userUnblocked"
-  },
-  "artistsByTaste": "Volgens jouw smaak",
-  "@artistsByTaste": {
-    "description": "artistsByTaste"
-  },
-  "followedArtists": "gevolgd",
-  "@followedArtists": {
-    "description": "followedArtists"
-  },
-  "recommendedArtists": "Aanbevolen",
-  "@recommendedArtists": {
-    "description": "recommendedArtists"
-  },
-  "albumsByTaste": "Volgens jouw smaak",
-  "@albumsByTaste": {
-    "description": "albumsByTaste"
-  },
-  "savedAlbums": "Opgeslagen",
-  "@savedAlbums": {
-    "description": "savedAlbums"
-  },
-  "recommendedAlbums": "Aanbevolen",
-  "@recommendedAlbums": {
-    "description": "recommendedAlbums"
-  },
-  "downloadNotificationChannelName": "muziek downloaden",
-  "@downloadNotificationChannelName": {
-    "description": "downloadNotificationChannelName"
+  "downloadLocation": "Downloadlocatie",
+  "@downloadLocation": {
+    "description": "downloadLocation"
   },
   "downloadNotificationChannelDescription": "Houdt uw muziekdownloads actief op de achtergrond.",
   "@downloadNotificationChannelDescription": {
     "description": "downloadNotificationChannelDescription"
   },
-  "downloadNotificationTitle": "Muziek downloaden",
-  "@downloadNotificationTitle": {
-    "description": "downloadNotificationTitle"
+  "downloadNotificationChannelName": "muziek downloaden",
+  "@downloadNotificationChannelName": {
+    "description": "downloadNotificationChannelName"
   },
   "downloadNotificationPreparing": "Uw downloads voorbereiden…",
   "@downloadNotificationPreparing": {
@@ -1591,229 +545,49 @@
     },
     "description": "downloadNotificationSong"
   },
-  "syncCloudModeActive": "Cloudmodus actief",
-  "@syncCloudModeActive": {
-    "description": "syncCloudModeActive"
+  "downloadNotificationTitle": "Muziek downloaden",
+  "@downloadNotificationTitle": {
+    "description": "downloadNotificationTitle"
   },
-  "permissionsConsentTitle": "Machtigingen om aan de slag te gaan",
-  "@permissionsConsentTitle": {
-    "description": "permissionsConsentTitle"
+  "downloadPlaylist": "Speellijst downloaden",
+  "@downloadPlaylist": {
+    "description": "downloadPlaylist"
   },
-  "permissionsConsentDescription": "Estrella Music heeft deze machtigingen nodig om je muziek te beheren en alle afspeelfuncties aan te bieden.",
-  "@permissionsConsentDescription": {
-    "description": "permissionsConsentDescription"
+  "downloadingFormat": "Bestandsformaat aan het downloaden",
+  "@downloadingFormat": {
+    "description": "downloadingFormat"
   },
-  "permissionsStorageTitle": "Muziek en opslag",
-  "@permissionsStorageTitle": {
-    "description": "permissionsStorageTitle"
+  "downloadingFormatDes": "Selecteer bestandsformaat downloaden. \"Opus\" geeft de beste kwaliteit",
+  "@downloadingFormatDes": {
+    "description": "downloadingFormatDes"
   },
-  "permissionsStorageDescription": "Hiermee kunt u muziek afspelen, downloads opslaan, afspeellijsten exporteren en updates voorbereiden.",
-  "@permissionsStorageDescription": {
-    "description": "permissionsStorageDescription"
+  "downloads": "Downloads",
+  "@downloads": {
+    "description": "downloads"
   },
-  "permissionsNotificationsTitle": "Meldingen",
-  "@permissionsNotificationsTitle": {
-    "description": "permissionsNotificationsTitle"
+  "duration": "Duur",
+  "@duration": {
+    "description": "duration"
   },
-  "permissionsNotificationsDescription": "Toont afspeelknoppen, downloadvoortgang en belangrijke app-meldingen.",
-  "@permissionsNotificationsDescription": {
-    "description": "permissionsNotificationsDescription"
+  "dynamic": "Dynamisch",
+  "@dynamic": {
+    "description": "dynamic"
   },
-  "permissionsMicrophoneTitle": "Microfoon",
-  "@permissionsMicrophoneTitle": {
-    "description": "permissionsMicrophoneTitle"
+  "email": "E-mail",
+  "@email": {
+    "description": "email"
   },
-  "permissionsMicrophoneDescription": "Het wordt alleen gebruikt als u ervoor kiest een nummer te identificeren dat om u heen wordt afgespeeld.",
-  "@permissionsMicrophoneDescription": {
-    "description": "permissionsMicrophoneDescription"
+  "emptyPlaylist": "Lege Afspeellijst!",
+  "@emptyPlaylist": {
+    "description": "emptyPlaylist"
   },
-  "permissionsContinueButton": "Verleen de vereiste machtigingen",
-  "@permissionsContinueButton": {
-    "description": "permissionsContinueButton"
+  "enableBottomNav": "Onderste navigatiebalk",
+  "@enableBottomNav": {
+    "description": "enableBottomNav"
   },
-  "permissionsRequiredNotice": "Alle drie de vergunningen zijn vereist om door te kunnen gaan. U kunt ze later wijzigen in de systeeminstellingen.",
-  "@permissionsRequiredNotice": {
-    "description": "permissionsRequiredNotice"
-  },
-  "permissionsAllow": "Toestaan",
-  "@permissionsAllow": {
-    "description": "permissionsAllow"
-  },
-  "permissionsOpenSettings": "Instellingen",
-  "@permissionsOpenSettings": {
-    "description": "permissionsOpenSettings"
-  },
-  "auth_2fa_title": "Tweefactorauthenticatie",
-  "@auth_2fa_title": {
-    "description": "auth_2fa_title"
-  },
-  "auth_2fa_subtitle": "Voer de 6-cijferige code van uw authenticator-app in. Deze toegang vervalt over 5 minuten.",
-  "@auth_2fa_subtitle": {
-    "description": "auth_2fa_subtitle"
-  },
-  "auth_2fa_code": "Authenticatiecode",
-  "@auth_2fa_code": {
-    "description": "auth_2fa_code"
-  },
-  "auth_2fa_verify": "Controleer en ga verder",
-  "@auth_2fa_verify": {
-    "description": "auth_2fa_verify"
-  },
-  "auth_2fa_invalid": "Voer een geldige 6-cijferige code in of log opnieuw in.",
-  "@auth_2fa_invalid": {
-    "description": "auth_2fa_invalid"
-  },
-  "backupMsg": "Back-up succesvol opgeslagen!",
-  "@backupMsg": {
-    "description": "backupMsg"
-  },
-  "backFilesFound": "databanken gevonden",
-  "@backFilesFound": {
-    "description": "backFilesFound"
-  },
-  "restoreMsg": "Succesvol hersteld!\nWijzigingen worden toegepast bij het opnieuw opstarten",
-  "@restoreMsg": {
-    "description": "restoreMsg"
-  },
-  "restoring": "Herstellen...",
-  "@restoring": {
-    "description": "restoring"
-  },
-  "restore": "Herstellen",
-  "@restore": {
-    "description": "restore"
-  },
-  "closeApp": "Sluit de applicatie",
-  "@closeApp": {
-    "description": "closeApp"
-  },
-  "standard": "Standaard",
-  "@standard": {
-    "description": "standard"
-  },
-  "gesture": "Gebaar",
-  "@gesture": {
-    "description": "gesture"
-  },
-  "audioCodec": "Audiocodec",
-  "@audioCodec": {
-    "description": "audioCodec"
-  },
-  "autoDownFavSongDes": "Download automatisch favoriete nummers wanneer ze aan favorieten worden toegevoegd",
-  "@autoDownFavSongDes": {
-    "description": "autoDownFavSongDes"
-  },
-  "loudnessNormalization": "Normalisatie van de luidheid",
-  "@loudnessNormalization": {
-    "description": "loudnessNormalization"
-  },
-  "playerUi": "Speler-UI",
-  "@playerUi": {
-    "description": "playerUi"
-  },
-  "songNotPlayable": "Het nummer kan niet worden afgespeeld vanwege serverbeperkingen!",
-  "@songNotPlayable": {
-    "description": "songNotPlayable"
-  },
-  "loudnessDb": "LuidheidDb",
-  "@loudnessDb": {
-    "description": "loudnessDb"
-  },
-  "restoreAppData": "App-gegevens herstellen",
-  "@restoreAppData": {
-    "description": "restoreAppData"
-  },
-  "queueShufflingDeniedMsg": "De willekeurige modus is geactiveerd. U kunt de wachtrij niet handmatig mixen.",
-  "@queueShufflingDeniedMsg": {
-    "description": "queueShufflingDeniedMsg"
-  },
-  "includeDownloadedFiles": "Inclusief gedownloade songbestanden",
-  "@includeDownloadedFiles": {
-    "description": "includeDownloadedFiles"
-  },
-  "backupInProgress": "Back-up wordt uitgevoerd...",
-  "@backupInProgress": {
-    "description": "backupInProgress"
-  },
-  "queuerearrangingDeniedMsg": "De wachtrij kan niet opnieuw worden gerangschikt als de shuffle-modus is ingeschakeld",
-  "@queuerearrangingDeniedMsg": {
-    "description": "queuerearrangingDeniedMsg"
-  },
-  "content": "Inhoud",
-  "@content": {
-    "description": "content"
-  },
-  "downloadError3": "Downloaden mislukt vanwege netwerk-/transmissiefout! Probeer het opnieuw",
-  "@downloadError3": {
-    "description": "downloadError3"
-  },
-  "personalisation": "Personalisatie",
-  "@personalisation": {
-    "description": "personalisation"
-  },
-  "playerUiDes": "Selecteer de gebruikersinterface van de speler",
-  "@playerUiDes": {
-    "description": "playerUiDes"
-  },
-  "musicAndPlayback": "Muziek en afspelen",
-  "@musicAndPlayback": {
-    "description": "musicAndPlayback"
-  },
-  "appInfo": "Applicatie-informatie",
-  "@appInfo": {
-    "description": "appInfo"
-  },
-  "networkError": "Netwerkfout! Controleer uw internetverbinding.",
-  "@networkError": {
-    "description": "networkError"
-  },
-  "download": "Downloaden",
-  "@download": {
-    "description": "download"
-  },
-  "downloadError2": "Het opgevraagde nummer kan niet worden gedownload vanwege serverbeperkingen. Je kunt het opnieuw proberen",
-  "@downloadError2": {
-    "description": "downloadError2"
-  },
-  "letsStrart": "Laten we beginnen..",
-  "@letsStrart": {
-    "description": "letsStrart"
-  },
-  "processFiles": "Bestanden verwerken...",
-  "@processFiles": {
-    "description": "processFiles"
-  },
-  "backupAppData": "Maak een back-up van app-gegevens",
-  "@backupAppData": {
-    "description": "backupAppData"
-  },
-  "backup": "Back-up",
-  "@backup": {
-    "description": "backup"
-  },
-  "playnextMsg": "Binnenkort beschikbaar",
-  "@playnextMsg": {
-    "description": "playnextMsg"
-  },
-  "shuffleQueue": "gemengde staart",
-  "@shuffleQueue": {
-    "description": "shuffleQueue"
-  },
-  "queueLoop": "staart lus",
-  "@queueLoop": {
-    "description": "queueLoop"
-  },
-  "queueLoopNotDisMsg1": "De wachtrijlusmodus kan niet worden uitgeschakeld als de shuffle-modus is ingeschakeld.",
-  "@queueLoopNotDisMsg1": {
-    "description": "queueLoopNotDisMsg1"
-  },
-  "queueLoopNotDisMsg2": "De staartlusmodus kan niet worden geactiveerd in de radiomodus.",
-  "@queueLoopNotDisMsg2": {
-    "description": "queueLoopNotDisMsg2"
-  },
-  "loudnessNormalizationDes": "Stelt hetzelfde luidheidsniveau in voor alle nummers (experimenteel) (werkt niet op nummers die zijn gedownload in oudere versies (< v1.10.0))",
-  "@loudnessNormalizationDes": {
-    "description": "loudnessNormalizationDes"
+  "enableBottomNavDes": "Schakel naar onderste navigatiebalk",
+  "@enableBottomNavDes": {
+    "description": "enableBottomNavDes"
   },
   "enableSlidableAction": "Activeer schuifacties",
   "@enableSlidableAction": {
@@ -1823,129 +597,65 @@
   "@enableSlidableActionDes": {
     "description": "enableSlidableActionDes"
   },
-  "bitrate": "Bitsnelheid",
-  "@bitrate": {
-    "description": "bitrate"
+  "enabled": "Aan",
+  "@enabled": {
+    "description": "enabled"
   },
-  "androidBackupWarning": "Niet getest: als u het selectievakje inschakelt nadat u meer dan 60 bestanden hebt gedownload, kan het proces een grote hoeveelheid geheugen in beslag nemen en kan de telefoon of app crashen. Ga verder op eigen risico.",
-  "@androidBackupWarning": {
-    "description": "androidBackupWarning"
+  "endOfThisSong": "Einde van dit liedje",
+  "@endOfThisSong": {
+    "description": "endOfThisSong"
   },
-  "songInfo": "Informatie over het nummer",
-  "@songInfo": {
-    "description": "songInfo"
+  "enqueueAlbumSongs": "Voeg albumnummers toe aan de wachtrij",
+  "@enqueueAlbumSongs": {
+    "description": "enqueueAlbumSongs"
   },
-  "id": "Identiteitskaart",
-  "@id": {
-    "description": "id"
+  "enqueueAll": "Alles in wachtrij",
+  "@enqueueAll": {
+    "description": "enqueueAll"
   },
-  "title": "Titel",
-  "@title": {
-    "description": "title"
+  "enqueueSong": "Voeg dit liedje toe aan wachtrij",
+  "@enqueueSong": {
+    "description": "enqueueSong"
   },
-  "restartApp": "Start de applicatie opnieuw",
-  "@restartApp": {
-    "description": "restartApp"
+  "enqueueSongs": "Voeg nummers toe aan de wachtrij",
+  "@enqueueSongs": {
+    "description": "enqueueSongs"
   },
-  "autoDownFavSong": "Automatisch downloaden van favoriete nummers",
-  "@autoDownFavSong": {
-    "description": "autoDownFavSong"
+  "episodes": "Afleveringen",
+  "@episodes": {
+    "description": "episodes"
   },
-  "duration": "Duur",
-  "@duration": {
-    "description": "duration"
+  "equalizer": "Equalizer",
+  "@equalizer": {
+    "description": "equalizer"
   },
-  "urlSearchDes": "Gedetecteerde URL klik erop om de bijbehorende inhoud te openen/af te spelen",
-  "@urlSearchDes": {
-    "description": "urlSearchDes"
+  "equalizerDes": "Open systeem equalizer",
+  "@equalizerDes": {
+    "description": "equalizerDes"
   },
-  "reArrangeSongs": "Nummers opnieuw ordenen",
-  "@reArrangeSongs": {
-    "description": "reArrangeSongs"
+  "errorOccuredAlert": "Er is een fout opgetreden!",
+  "@errorOccuredAlert": {
+    "description": "errorOccuredAlert"
   },
-  "playingfromAlbum": "SPELEN VAN ALBUM",
-  "@playingfromAlbum": {
-    "description": "playingfromAlbum"
+  "errorOccurred": "Er is een fout opgetreden",
+  "@errorOccurred": {
+    "description": "errorOccurred"
   },
-  "playingfromPlaylist": "AFSPELEN VANUIT AFSPEELLIJST",
-  "@playingfromPlaylist": {
-    "description": "playingfromPlaylist"
+  "errorPlayingTrack": "Fout bij het afspelen:",
+  "@errorPlayingTrack": {
+    "description": "errorPlayingTrack"
   },
-  "playingfromSelection": "SPELEN VANUIT SELECTIE",
-  "@playingfromSelection": {
-    "description": "playingfromSelection"
+  "export": "Exporteer",
+  "@export": {
+    "description": "export"
   },
-  "resetToDefaultMsg": "Het terugzetten van de instellingen naar de standaardinstellingen is voltooid. Start de app opnieuw",
-  "@resetToDefaultMsg": {
-    "description": "resetToDefaultMsg"
+  "exportDowloadedFiles": "Exporteer gedownloade bestanden",
+  "@exportDowloadedFiles": {
+    "description": "exportDowloadedFiles"
   },
-  "resetToDefaultDes": "App-instellingen terugzetten naar standaard (herstart vereist)",
-  "@resetToDefaultDes": {
-    "description": "resetToDefaultDes"
-  },
-  "misc": "Diversen",
-  "@misc": {
-    "description": "misc"
-  },
-  "resetToDefault": "Standaardinstellingen herstellen",
-  "@resetToDefault": {
-    "description": "resetToDefault"
-  },
-  "autoOpenPlayer": "Automatisch spelersscherm openen",
-  "@autoOpenPlayer": {
-    "description": "autoOpenPlayer"
-  },
-  "autoOpenPlayerDes": "Activeer/deactiveer het automatisch openen van de speler naar volledig scherm bij het selecteren van een nummer om af te spelen",
-  "@autoOpenPlayerDes": {
-    "description": "autoOpenPlayerDes"
-  },
-  "playingfromArtist": "SPELEN VAN KUNSTENAAR",
-  "@playingfromArtist": {
-    "description": "playingfromArtist"
-  },
-  "randomSelection": "Willekeurige selectie",
-  "@randomSelection": {
-    "description": "randomSelection"
-  },
-  "randomRadio": "Willekeurige radio",
-  "@randomRadio": {
-    "description": "randomRadio"
-  },
-  "exportPlaylist": "Afspeellijst exporteren",
-  "@exportPlaylist": {
-    "description": "exportPlaylist"
-  },
-  "importPlaylistDesc": "Selecteer een eerder geëxporteerd afspeellijst-JSON-bestand om te importeren",
-  "@importPlaylistDesc": {
-    "description": "importPlaylistDesc"
-  },
-  "invalidPlaylistFile": "Ongeldige bestandsstructuur van afspeellijst",
-  "@invalidPlaylistFile": {
-    "description": "invalidPlaylistFile"
-  },
-  "fileNotFound": "Bestand niet gevonden",
-  "@fileNotFound": {
-    "description": "fileNotFound"
-  },
-  "exportErrorPermission": "Toestemming geweigerd bij exporteren",
-  "@exportErrorPermission": {
-    "description": "exportErrorPermission"
-  },
-  "importingPlaylist": "Afspeellijst importeren...",
-  "@importingPlaylist": {
-    "description": "importingPlaylist"
-  },
-  "exportErrorStorage": "Onvoldoende opslagruimte",
-  "@exportErrorStorage": {
-    "description": "exportErrorStorage"
-  },
-  "exportingPlaylist": "Afspeellijst exporteren...",
-  "@exportingPlaylist": {
-    "description": "exportingPlaylist"
-  },
-  "playlistExportedMsg": "Afspeellijst succesvol geëxporteerd naar",
-  "@playlistExportedMsg": {
-    "description": "playlistExportedMsg"
+  "exportDowloadedFilesDes": "Klik hier om gedownloade bestanden van inApp dir naar externe dir te exporteren",
+  "@exportDowloadedFilesDes": {
+    "description": "exportDowloadedFilesDes"
   },
   "exportError": "Fout bij exporteren van afspeellijst",
   "@exportError": {
@@ -1955,41 +665,29 @@
   "@exportErrorFormat": {
     "description": "exportErrorFormat"
   },
-  "importPlaylist": "Importeer afspeellijst",
-  "@importPlaylist": {
-    "description": "importPlaylist"
+  "exportErrorPermission": "Toestemming geweigerd bij exporteren",
+  "@exportErrorPermission": {
+    "description": "exportErrorPermission"
   },
-  "selectFile": "Selecteer Bestand",
-  "@selectFile": {
-    "description": "selectFile"
+  "exportErrorStorage": "Onvoldoende opslagruimte",
+  "@exportErrorStorage": {
+    "description": "exportErrorStorage"
   },
-  "playlistImportedMsg": "Afspeellijst geïmporteerd",
-  "@playlistImportedMsg": {
-    "description": "playlistImportedMsg"
+  "exportMsg": "Bestanden successvol geëxporteerd",
+  "@exportMsg": {
+    "description": "exportMsg"
   },
-  "importError": "Fout bij importeren van afspeellijst",
-  "@importError": {
-    "description": "importError"
-  },
-  "importErrorFileAccess": "Het geselecteerde bestand kon niet worden geopend",
-  "@importErrorFileAccess": {
-    "description": "importErrorFileAccess"
-  },
-  "importErrorFormat": "Ongeldig bestandsformaat",
-  "@importErrorFormat": {
-    "description": "importErrorFormat"
-  },
-  "importErrorDatabase": "Fout bij opslaan in database",
-  "@importErrorDatabase": {
-    "description": "importErrorDatabase"
-  },
-  "importLargeFileNote": "Opmerking: het importeren van grote afspeellijsten kan langer duren",
-  "@importLargeFileNote": {
-    "description": "importLargeFileNote"
+  "exportPlaylist": "Afspeellijst exporteren",
+  "@exportPlaylist": {
+    "description": "exportPlaylist"
   },
   "exportPlaylistCsv": "Exporteer afspeellijst als CSV",
   "@exportPlaylistCsv": {
     "description": "exportPlaylistCsv"
+  },
+  "exportPlaylistCsvSubtitle": "Kan hier niet importeren",
+  "@exportPlaylistCsvSubtitle": {
+    "description": "exportPlaylistCsvSubtitle"
   },
   "exportPlaylistJson": "Exporteer afspeellijst naar JSON",
   "@exportPlaylistJson": {
@@ -1999,10 +697,6 @@
   "@exportPlaylistJsonSubtitle": {
     "description": "exportPlaylistJsonSubtitle"
   },
-  "exportPlaylistCsvSubtitle": "Kan hier niet importeren",
-  "@exportPlaylistCsvSubtitle": {
-    "description": "exportPlaylistCsvSubtitle"
-  },
   "exportToOnlineMusic": "Exporteren naar Online-muziek",
   "@exportToOnlineMusic": {
     "description": "exportToOnlineMusic"
@@ -2011,145 +705,489 @@
   "@exportToOnlineMusicSubtitle": {
     "description": "exportToOnlineMusicSubtitle"
   },
-  "linkCopied": "Link gekopieerd naar klembord",
-  "@linkCopied": {
-    "description": "linkCopied"
+  "exportedFileLocation": "Gedownload bestand exporteerlocatie",
+  "@exportedFileLocation": {
+    "description": "exportedFileLocation"
   },
-  "lyrics": "Brieven",
-  "@lyrics": {
-    "description": "lyrics"
+  "exporting": "Exporteren...",
+  "@exporting": {
+    "description": "exporting"
   },
-  "no": "Nee",
-  "@no": {
-    "description": "no"
+  "exportingPlaylist": "Afspeellijst exporteren...",
+  "@exportingPlaylist": {
+    "description": "exportingPlaylist"
   },
-  "podcasts": "Podcasts",
-  "@podcasts": {
-    "description": "podcasts"
+  "favorites": "Favorieten",
+  "@favorites": {
+    "description": "favorites"
   },
-  "episodes": "Afleveringen",
-  "@episodes": {
-    "description": "episodes"
+  "featuredplaylists": "Aanbevolen Afspeellijsten",
+  "@featuredplaylists": {
+    "description": "featuredplaylists"
   },
-  "profiles": "Profielen",
-  "@profiles": {
-    "description": "profiles"
+  "fileNotFound": "Bestand niet gevonden",
+  "@fileNotFound": {
+    "description": "fileNotFound"
   },
-  "addToLibrary": "Toevoegen aan bibliotheek",
-  "@addToLibrary": {
-    "description": "addToLibrary"
+  "follow": "Doorgaan",
+  "@follow": {
+    "description": "follow"
   },
-  "removeFromLibrary": "Verwijderen uit bibliotheek",
-  "@removeFromLibrary": {
-    "description": "removeFromLibrary"
+  "followedArtists": "gevolgd",
+  "@followedArtists": {
+    "description": "followedArtists"
   },
-  "play": "Spelen",
-  "@play": {
-    "description": "play"
+  "following": "Volgende",
+  "@following": {
+    "description": "following"
   },
-  "enqueueAlbumSongs": "Voeg albumnummers toe aan de wachtrij",
-  "@enqueueAlbumSongs": {
-    "description": "enqueueAlbumSongs"
+  "for1": "voor",
+  "@for1": {
+    "description": "for1"
   },
-  "downloadAlbumSongs": "Download nummers van het album",
-  "@downloadAlbumSongs": {
-    "description": "downloadAlbumSongs"
+  "forgottenFavorites": "vergeten favorieten",
+  "@forgottenFavorites": {
+    "description": "forgottenFavorites"
   },
-  "shareAlbum": "Album delen",
-  "@shareAlbum": {
-    "description": "shareAlbum"
+  "friendFallback": "Vriend",
+  "@friendFallback": {
+    "description": "friendFallback"
+  },
+  "friendRequestAccepted": "Vriendschapsverzoek geaccepteerd",
+  "@friendRequestAccepted": {
+    "description": "friendRequestAccepted"
+  },
+  "friendRequestSent": "Vriendschapsverzoek verzonden",
+  "@friendRequestSent": {
+    "description": "friendRequestSent"
+  },
+  "friends": "Vrienden",
+  "@friends": {
+    "description": "friends"
+  },
+  "friendsLoginRequired": "Log in om vrienden te vinden.",
+  "@friendsLoginRequired": {
+    "description": "friendsLoginRequired"
+  },
+  "friendshipRemoved": "Vriendschap verwijderd",
+  "@friendshipRemoved": {
+    "description": "friendshipRemoved"
+  },
+  "genericAlbum": "Album",
+  "@genericAlbum": {
+    "description": "genericAlbum"
+  },
+  "genericError": "Fout",
+  "@genericError": {
+    "description": "genericError"
+  },
+  "genre_electronic": "Elektronica",
+  "@genre_electronic": {
+    "description": "genre_electronic"
+  },
+  "genre_hiphop": "hiphop",
+  "@genre_hiphop": {
+    "description": "genre_hiphop"
+  },
+  "genre_jazz": "Jazz",
+  "@genre_jazz": {
+    "description": "genre_jazz"
+  },
+  "genre_latin": "Latijns",
+  "@genre_latin": {
+    "description": "genre_latin"
+  },
+  "genre_pop": "Knal",
+  "@genre_pop": {
+    "description": "genre_pop"
+  },
+  "genre_rock": "Steen",
+  "@genre_rock": {
+    "description": "genre_rock"
+  },
+  "gesture": "Gebaar",
+  "@gesture": {
+    "description": "gesture"
+  },
+  "github": "GitHub",
+  "@github": {
+    "description": "github"
+  },
+  "githubDes": "Bekijk GitHub-broncode\nals je dit project leuk vindt, vergeet dan niet een ⭐ te geven",
+  "@githubDes": {
+    "description": "githubDes"
+  },
+  "goToAlbum": "Ga naar album",
+  "@goToAlbum": {
+    "description": "goToAlbum"
+  },
+  "goToDownloadPage": "Klik hier om naar de downloadpagina te gaan",
+  "@goToDownloadPage": {
+    "description": "goToDownloadPage"
+  },
+  "helloWorld": "Hallo wereld",
+  "@helloWorld": {
+    "description": "Este texto es opcional"
+  },
+  "high": "Hoog",
+  "@high": {
+    "description": "high"
+  },
+  "hintApiUrl": "API URL naar Piped instantie",
+  "@hintApiUrl": {
+    "description": "hintApiUrl"
+  },
+  "home": "Home",
+  "@home": {
+    "description": "home"
+  },
+  "homeContentCount": "Home inhoudsaantal",
+  "@homeContentCount": {
+    "description": "homeContentCount"
+  },
+  "homeContentCountDes": "Selecteer het nummer van initiële homescherminhoud(gemiddeld). Minder resultaten sneller laden",
+  "@homeContentCountDes": {
+    "description": "homeContentCountDes"
+  },
+  "id": "Identiteitskaart",
+  "@id": {
+    "description": "id"
+  },
+  "identifySongMetadata": "Metadata identificeren",
+  "@identifySongMetadata": {
+    "description": "Action that searches and embeds metadata for a local song"
+  },
+  "ignoreBatOpt": "Negeer batterij optimalisatie",
+  "@ignoreBatOpt": {
+    "description": "ignoreBatOpt"
+  },
+  "ignoreBatOptDes": "Als u meldingsproblemen ondervindt of het afspelen is gestopt door systeemoptimalisatie, schakel deze optie in",
+  "@ignoreBatOptDes": {
+    "description": "ignoreBatOptDes"
+  },
+  "importError": "Fout bij importeren van afspeellijst",
+  "@importError": {
+    "description": "importError"
+  },
+  "importErrorDatabase": "Fout bij opslaan in database",
+  "@importErrorDatabase": {
+    "description": "importErrorDatabase"
+  },
+  "importErrorFileAccess": "Het geselecteerde bestand kon niet worden geopend",
+  "@importErrorFileAccess": {
+    "description": "importErrorFileAccess"
+  },
+  "importErrorFormat": "Ongeldig bestandsformaat",
+  "@importErrorFormat": {
+    "description": "importErrorFormat"
+  },
+  "importLargeFileNote": "Opmerking: het importeren van grote afspeellijsten kan langer duren",
+  "@importLargeFileNote": {
+    "description": "importLargeFileNote"
+  },
+  "importPlaylist": "Importeer afspeellijst",
+  "@importPlaylist": {
+    "description": "importPlaylist"
+  },
+  "importPlaylistDesc": "Selecteer een eerder geëxporteerd afspeellijst-JSON-bestand om te importeren",
+  "@importPlaylistDesc": {
+    "description": "importPlaylistDesc"
   },
   "imported": "Geïmporteerd",
   "@imported": {
     "description": "imported"
   },
+  "importedFromJossMusic": "Geïmporteerd van Joss Music Kotlin",
+  "@importedFromJossMusic": {
+    "description": "importedFromJossMusic"
+  },
   "importedPlaylist": "Geïmporteerde afspeellijst",
   "@importedPlaylist": {
     "description": "importedPlaylist"
   },
-  "permissionDenied": "Toestemming geweigerd",
-  "@permissionDenied": {
-    "description": "permissionDenied"
+  "importingPlaylist": "Afspeellijst importeren...",
+  "@importingPlaylist": {
+    "description": "importingPlaylist"
   },
-  "enqueueSongs": "Voeg nummers toe aan de wachtrij",
-  "@enqueueSongs": {
-    "description": "enqueueSongs"
+  "in_app_storage": "Interne opslagmap",
+  "@in_app_storage": {
+    "description": "in_app_storage"
   },
-  "shuffle": "Willekeurig",
-  "@shuffle": {
-    "description": "shuffle"
+  "includeDownloadedFiles": "Inclusief gedownloade songbestanden",
+  "@includeDownloadedFiles": {
+    "description": "includeDownloadedFiles"
   },
-  "downloadPlaylist": "Speellijst downloaden",
-  "@downloadPlaylist": {
-    "description": "downloadPlaylist"
+  "infoNotAvailable": "Informatie niet beschikbaar",
+  "@infoNotAvailable": {
+    "description": "infoNotAvailable"
   },
-  "syncPlaylistSongs": "Synchroniseer afspeellijstnummers",
-  "@syncPlaylistSongs": {
-    "description": "syncPlaylistSongs"
+  "invalidPlaylistFile": "Ongeldige bestandsstructuur van afspeellijst",
+  "@invalidPlaylistFile": {
+    "description": "invalidPlaylistFile"
   },
-  "blacklistPipedPlaylist": "Zwarte lijst voor afspeellijsten",
-  "@blacklistPipedPlaylist": {
-    "description": "blacklistPipedPlaylist"
+  "invalidServerResponse": "Ongeldige serverreactie.",
+  "@invalidServerResponse": {
+    "description": "invalidServerResponse"
   },
-  "sharePlaylist": "Deel afspeellijst",
-  "@sharePlaylist": {
-    "description": "sharePlaylist"
+  "invalidSessionToken": "De sessie bevat geen geldig token.",
+  "@invalidSessionToken": {
+    "description": "invalidSessionToken"
   },
-  "playlist": "Afspeellijst",
-  "@playlist": {
-    "description": "playlist"
+  "items": "items",
+  "@items": {
+    "description": "items"
   },
-  "sortByName": "Sorteer op naam",
-  "@sortByName": {
-    "description": "sortByName"
+  "keepListening": "blijf luisteren",
+  "@keepListening": {
+    "description": "keepListening"
   },
-  "sortByDate": "Sorteer op datum",
-  "@sortByDate": {
-    "description": "sortByDate"
+  "keepScreenOnWhilePlaying": "Scherm aanhouden tijdens afspelen",
+  "@keepScreenOnWhilePlaying": {
+    "description": "keepScreenOnWhilePlaying"
   },
-  "sortByDuration": "Sorteer op duur",
-  "@sortByDuration": {
-    "description": "sortByDuration"
+  "keepScreenOnWhilePlayingDes": "Indien ingeschakeld blijft het scherm van het apparaat ingeschakeld tijdens het afspelen van muziek",
+  "@keepScreenOnWhilePlayingDes": {
+    "description": "keepScreenOnWhilePlayingDes"
   },
-  "sortAscendNDescend": "Sorteer oplopend/aflopend",
-  "@sortAscendNDescend": {
-    "description": "sortAscendNDescend"
+  "language": "Taal",
+  "@language": {
+    "description": "language"
   },
-  "migration_summary_start": "Migratie voltooid vanaf {source}.",
-  "@migration_summary_start": {
-    "placeholders": {
-      "source": {
-        "type": "String"
-      }
-    },
-    "description": "migration_summary_start"
+  "languageDes": "Zet App taal",
+  "@languageDes": {
+    "description": "languageDes"
   },
-  "migration_summary_playlists": "Afspeellijsten: {count}",
-  "@migration_summary_playlists": {
-    "placeholders": {
-      "count": {
-        "type": "num"
-      }
-    },
-    "description": "migration_summary_playlists"
+  "latestRelease": "Nieuwste uitgave",
+  "@latestRelease": {
+    "description": "latestRelease"
   },
-  "migration_summary_songs": "Nummers: {count}",
-  "@migration_summary_songs": {
-    "placeholders": {
-      "count": {
-        "type": "num"
-      }
-    },
-    "description": "migration_summary_songs"
+  "latestVersion": "Nieuwste versie beschikbaar",
+  "@latestVersion": {
+    "description": "latestVersion"
   },
-  "migration_summary_favorites": "Favorieten: {count}",
-  "@migration_summary_favorites": {
-    "placeholders": {
-      "count": {
-        "type": "num"
-      }
-    },
-    "description": "migration_summary_favorites"
+  "letsStrart": "Laten we beginnen..",
+  "@letsStrart": {
+    "description": "letsStrart"
+  },
+  "libAlbums": "Bibliotheek Albums",
+  "@libAlbums": {
+    "description": "libAlbums"
+  },
+  "libArtists": "Bibliotheek Artiesten",
+  "@libArtists": {
+    "description": "libArtists"
+  },
+  "libPlaylists": "Bibliotheek Afspeellijsten",
+  "@libPlaylists": {
+    "description": "libPlaylists"
+  },
+  "libSongs": "Bibliotheek liedjes",
+  "@libSongs": {
+    "description": "libSongs"
+  },
+  "library": "Bibliotheek",
+  "@library": {
+    "description": "library"
+  },
+  "libraryPlaylistDescription": "Bibliotheek-afspeellijst",
+  "@libraryPlaylistDescription": {
+    "description": "libraryPlaylistDescription"
+  },
+  "light": "Licht",
+  "@light": {
+    "description": "light"
+  },
+  "link": "Link",
+  "@link": {
+    "description": "link"
+  },
+  "linkAlert": "Successvol gelinked!",
+  "@linkAlert": {
+    "description": "linkAlert"
+  },
+  "linkCopied": "Link gekopieerd naar klembord",
+  "@linkCopied": {
+    "description": "linkCopied"
+  },
+  "linkPipedDes": "Link met piped voor afspeellijsten",
+  "@linkPipedDes": {
+    "description": "linkPipedDes"
+  },
+  "listenNow": "Luister nu",
+  "@listenNow": {
+    "description": "listenNow"
+  },
+  "listeningToEnvironment": "Luisteren naar de omgeving...",
+  "@listeningToEnvironment": {
+    "description": "listeningToEnvironment"
+  },
+  "loadInfoUpdate": "Kan update-informatie niet laden",
+  "@loadInfoUpdate": {
+    "description": "loadInfoUpdate"
+  },
+  "local": "Lokaal",
+  "@local": {
+    "description": "local"
+  },
+  "local_b1": "Het werkt zonder dat je hoeft in te loggen.",
+  "@local_b1": {
+    "description": "local_b1"
+  },
+  "local_b2": "Uw hele bibliotheek blijft strikt op deze computer.",
+  "@local_b2": {
+    "description": "local_b2"
+  },
+  "local_b3": "Let op: Geen handmatige cloudback-ups. Als u uw apparaat kwijtraakt of de app verwijdert, kunnen uw gegevens niet worden hersteld.",
+  "@local_b3": {
+    "description": "local_b3"
+  },
+  "local_btn": "Alleen op dit apparaat gebruiken",
+  "@local_btn": {
+    "description": "local_btn"
+  },
+  "local_subtitle": "Absolute privacy op uw apparaat",
+  "@local_subtitle": {
+    "description": "local_subtitle"
+  },
+  "local_title": "Lokale modus",
+  "@local_title": {
+    "description": "local_title"
+  },
+  "loudnessDb": "LuidheidDb",
+  "@loudnessDb": {
+    "description": "loudnessDb"
+  },
+  "loudnessNormalization": "Normalisatie van de luidheid",
+  "@loudnessNormalization": {
+    "description": "loudnessNormalization"
+  },
+  "loudnessNormalizationDes": "Stelt hetzelfde luidheidsniveau in voor alle nummers (experimenteel) (werkt niet op nummers die zijn gedownload in oudere versies (< v1.10.0))",
+  "@loudnessNormalizationDes": {
+    "description": "loudnessNormalizationDes"
+  },
+  "low": "Laag",
+  "@low": {
+    "description": "low"
+  },
+  "lyrics": "Brieven",
+  "@lyrics": {
+    "description": "lyrics"
+  },
+  "lyricsNotAvailable": "Tekst niet beschikbaar!",
+  "@lyricsNotAvailable": {
+    "description": "lyricsNotAvailable"
+  },
+  "manageCollaborators": "Beheer bijdragers (vrienden)",
+  "@manageCollaborators": {
+    "description": "manageCollaborators"
+  },
+  "metadataApplySuccess": "Metadata werd ingebed in het lokale bestand.",
+  "@metadataApplySuccess": {
+    "description": "Success message after writing local tags"
+  },
+  "metadataNoResults": "Geen overeenkomsten gevonden. Probeer een andere zoektocht.",
+  "@metadataNoResults": {
+    "description": "Empty state for metadata search"
+  },
+  "metadataOperationFailed": "De metadata-operatie is mislukt.",
+  "@metadataOperationFailed": {
+    "description": "Generic metadata lookup or write error"
+  },
+  "metadataOverwriteWarning": "Dit zal de embedded titel, artiest, album en cover overschrijven met behoud van alle velden die de match niet biedt.",
+  "@metadataOverwriteWarning": {
+    "description": "Confirmation before writing tags to a local audio file"
+  },
+  "metadataSearchDescription": "Kies de juiste match om de titel, artiest, album en cover in het lokale bestand in te sluiten.",
+  "@metadataSearchDescription": {
+    "description": "Explanation shown above metadata search results"
+  },
+  "metadataSearchHint": "Naam nummer of artiest",
+  "@metadataSearchHint": {
+    "description": "Hint for the metadata search field"
+  },
+  "metadataSearchTitle": "Nummer identificeren",
+  "@metadataSearchTitle": {
+    "description": "Title of the local song metadata search dialog"
+  },
+  "micInstruction": "Zorg ervoor dat de muziek luid genoeg staat in de buurt van uw microfoon.",
+  "@micInstruction": {
+    "description": "micInstruction"
+  },
+  "migratedAlbum": "Gemigreerd album",
+  "@migratedAlbum": {
+    "description": "migratedAlbum"
+  },
+  "migratedLibrary": "Gemigreerde bibliotheek",
+  "@migratedLibrary": {
+    "description": "migratedLibrary"
+  },
+  "migratedPlaylist": "Gemigreerde afspeellijst",
+  "@migratedPlaylist": {
+    "description": "migratedPlaylist"
+  },
+  "migrationAlreadyRunning": "Er is al een migratie gaande.",
+  "@migrationAlreadyRunning": {
+    "description": "migrationAlreadyRunning"
+  },
+  "migrationAnalyzingLocal": "Analyse van de plaatselijke bibliotheek...",
+  "@migrationAnalyzingLocal": {
+    "description": "migrationAnalyzingLocal"
+  },
+  "migrationCheckingCloud": "Controleren of EMusic Cloud al een bibliotheek heeft...",
+  "@migrationCheckingCloud": {
+    "description": "migrationCheckingCloud"
+  },
+  "migrationCompleted": "Migratie voltooid.",
+  "@migrationCompleted": {
+    "description": "migrationCompleted"
+  },
+  "migrationCreatingBackup": "Een lokale back-up maken voordat u verbinding maakt met de cloud...",
+  "@migrationCreatingBackup": {
+    "description": "migrationCreatingBackup"
+  },
+  "migrationFailedLocalPreserved": "De migratie is mislukt. Uw lokale gegevens zijn niet gewijzigd.",
+  "@migrationFailedLocalPreserved": {
+    "description": "migrationFailedLocalPreserved"
+  },
+  "migrationLoginRequired": "Meld u aan bij Joss Red voordat u migreert.",
+  "@migrationLoginRequired": {
+    "description": "migrationLoginRequired"
+  },
+  "migrationPreparingCloud": "De migratie voorbereiden in EMusic Cloud...",
+  "@migrationPreparingCloud": {
+    "description": "migrationPreparingCloud"
+  },
+  "migrationStartFailed": "EMusic Cloud kon de migratie niet starten.",
+  "@migrationStartFailed": {
+    "description": "migrationStartFailed"
+  },
+  "migrationUploadIncomplete": "Niet alle gegevens konden worden geüpload. Wij behouden uw lokale steun.",
+  "@migrationUploadIncomplete": {
+    "description": "migrationUploadIncomplete"
+  },
+  "migrationUploadingData": "Afspeellijsten, favorieten en geschiedenis uploaden...",
+  "@migrationUploadingData": {
+    "description": "migrationUploadingData"
+  },
+  "migrationValidationFailed": "EMusic Cloud kon de migratie niet valideren.",
+  "@migrationValidationFailed": {
+    "description": "migrationValidationFailed"
+  },
+  "migrationVerifyingIntegrity": "Integriteit verifiëren in EMusic Cloud...",
+  "@migrationVerifyingIntegrity": {
+    "description": "migrationVerifyingIntegrity"
+  },
+  "migration_btn_select": "Bestand selecteren en importeren",
+  "@migration_btn_select": {
+    "description": "migration_btn_select"
+  },
+  "migration_select_file_dialog": "Selecteer song.db of een back-up .backup",
+  "@migration_select_file_dialog": {
+    "description": "migration_select_file_dialog"
+  },
+  "migration_success": "Migratie succesvol afgerond.",
+  "@migration_success": {
+    "description": "migration_success"
   },
   "migration_summary_albums": "Albums: {count}",
   "@migration_summary_albums": {
@@ -2169,137 +1207,1166 @@
     },
     "description": "migration_summary_artists"
   },
-  "migration_select_file_dialog": "Selecteer song.db of een back-up .backup",
-  "@migration_select_file_dialog": {
-    "description": "migration_select_file_dialog"
+  "migration_summary_favorites": "Favorieten: {count}",
+  "@migration_summary_favorites": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_favorites"
   },
-  "migration_success": "Migratie succesvol afgerond.",
-  "@migration_success": {
-    "description": "migration_success"
+  "migration_summary_playlists": "Afspeellijsten: {count}",
+  "@migration_summary_playlists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_playlists"
   },
-  "backup_select_folder_dialog": "Selecteer de map voor back-up",
-  "@backup_select_folder_dialog": {
-    "description": "backup_select_folder_dialog"
+  "migration_summary_songs": "Nummers: {count}",
+  "@migration_summary_songs": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_songs"
   },
-  "restore_select_file_dialog": "Selecteer het back-upbestand",
-  "@restore_select_file_dialog": {
-    "description": "restore_select_file_dialog"
+  "migration_summary_start": "Migratie voltooid vanaf {source}.",
+  "@migration_summary_start": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      }
+    },
+    "description": "migration_summary_start"
   },
-  "auth_hint_email": "naam@mail.com",
-  "@auth_hint_email": {
-    "description": "auth_hint_email"
+  "minutes": "minuten",
+  "@minutes": {
+    "description": "minutes"
   },
-  "auth_error_invalid_email": "Voer een geldig e-mailadres in.",
-  "@auth_error_invalid_email": {
-    "description": "auth_error_invalid_email"
+  "misc": "Diversen",
+  "@misc": {
+    "description": "misc"
   },
-  "settings_cloud_backup_dialog_desc": "Upload een .hmb-back-up van de app naar de server en herstel indien nodig een van de opgeslagen back-ups.",
-  "@settings_cloud_backup_dialog_desc": {
-    "description": "settings_cloud_backup_dialog_desc"
+  "mostListenedSong": "Het meest beluisterde nummer",
+  "@mostListenedSong": {
+    "description": "mostListenedSong"
   },
-  "delete": "Verwijderen",
-  "@delete": {
-    "description": "delete"
+  "musicAndPlayback": "Muziek en afspelen",
+  "@musicAndPlayback": {
+    "description": "musicAndPlayback"
   },
-  "in_app_storage": "Interne opslagmap",
-  "@in_app_storage": {
-    "description": "in_app_storage"
+  "musicRecognition": "Muziekherkenning",
+  "@musicRecognition": {
+    "description": "musicRecognition"
   },
-  "auth_brand_description_1": "We hebben de login, registratie en wachtwoordherstel van het vorige project meegenomen, aangepast voor deze muziekapp.",
-  "@auth_brand_description_1": {
-    "description": "auth_brand_description_1"
+  "networkError": "Netwerkfout! Controleer uw internetverbinding.",
+  "@networkError": {
+    "description": "networkError"
   },
-  "auth_brand_description_2": "Uw sessie bevindt zich in een beveiligde opslag en wordt gevalideerd met dezelfde backend die u al gebruikte.",
-  "@auth_brand_description_2": {
-    "description": "auth_brand_description_2"
+  "networkError1": "Oops netwerk error!",
+  "@networkError1": {
+    "description": "networkError1"
   },
-  "auth_brand_not_configured": "Het .env-bestand moet worden geconfigureerd om verbinding te maken met de authenticatie-backend.",
-  "@auth_brand_not_configured": {
-    "description": "auth_brand_not_configured"
+  "newVersionAvailable": "Nieuwe versie beschikbaar!",
+  "@newVersionAvailable": {
+    "description": "newVersionAvailable"
   },
-  "auth_forgot_password_subtitle": "We sturen u de instructies naar uw account-e-mailadres.",
-  "@auth_forgot_password_subtitle": {
-    "description": "auth_forgot_password_subtitle"
+  "news_btn_app": "Joss Red-app (Play Store)",
+  "@news_btn_app": {
+    "description": "news_btn_app"
   },
-  "auth_btn_send_email": "Stuur e-mail",
-  "@auth_btn_send_email": {
-    "description": "auth_btn_send_email"
+  "news_btn_dismiss": "Begrepen",
+  "@news_btn_dismiss": {
+    "description": "news_btn_dismiss"
   },
-  "auth_error_not_configured": "De authenticatie-backend ontbreekt om te worden geconfigureerd in het .env-bestand.",
-  "@auth_error_not_configured": {
-    "description": "auth_error_not_configured"
+  "news_btn_web": "Joss Rood Web",
+  "@news_btn_web": {
+    "description": "news_btn_web"
   },
-  "auth_error_invalid_credentials": "Onjuist e-mailadres of wachtwoord.",
-  "@auth_error_invalid_credentials": {
-    "description": "auth_error_invalid_credentials"
+  "news_card_subtitle": "100% synchronisatie met Joss Red, afspeellijsten met vrienden en nog veel meer. Tik om te zien wat er nieuw is.",
+  "@news_card_subtitle": {
+    "description": "news_card_subtitle"
   },
-  "auth_error_not_verified": "Uw account is nog niet geverifieerd.",
-  "@auth_error_not_verified": {
-    "description": "auth_error_not_verified"
+  "news_card_title": "Estrella Muziek is geëvolueerd!",
+  "@news_card_title": {
+    "description": "news_card_title"
   },
-  "auth_error_unknown": "Het was niet mogelijk de operatie te voltooien.",
-  "@auth_error_unknown": {
-    "description": "auth_error_unknown"
+  "news_dialog_friends_desc": "Om vrienden toe te voegen, verzoeken te accepteren of uw beveiligingsprofiel te beheren, gebruikt u Joss Red op zijn officiële platforms:",
+  "@news_dialog_friends_desc": {
+    "description": "news_dialog_friends_desc"
   },
-  "auth_register_success": "Account aangemaakt.",
-  "@auth_register_success": {
-    "description": "auth_register_success"
+  "news_dialog_section_friends": "Vrienden- en accountbeheer:",
+  "@news_dialog_section_friends": {
+    "description": "news_dialog_section_friends"
   },
-  "auth_register_error": "Het account kon niet worden aangemaakt.",
-  "@auth_register_error": {
-    "description": "auth_register_error"
+  "news_dialog_title": "Estrella Muzieknieuws",
+  "@news_dialog_title": {
+    "description": "news_dialog_title"
   },
-  "auth_recovery_email_sent": "E-mail verzonden.",
-  "@auth_recovery_email_sent": {
-    "description": "auth_recovery_email_sent"
+  "news_item_collab_desc": "Maak afspeellijsten met je vrienden! Wanneer u een afspeellijst maakt, selecteert u het selectievakje Samenwerken en kiest u uw vrienden om samen te bewerken.",
+  "@news_item_collab_desc": {
+    "description": "news_item_collab_desc"
   },
-  "auth_recovery_email_error": "Het was niet mogelijk om de e-mail te verzenden.",
-  "@auth_recovery_email_error": {
-    "description": "auth_recovery_email_error"
+  "news_item_collab_title": "Gezamenlijke afspeellijsten",
+  "@news_item_collab_title": {
+    "description": "news_item_collab_title"
   },
-  "latestVersion": "Nieuwste versie beschikbaar",
-  "@latestVersion": {
-    "description": "latestVersion"
+  "news_item_sync_desc": "Uw afspeellijsten en favorieten worden nu automatisch in de cloud opgeslagen en gesynchroniseerd met uw hoofdaccount van Joss Red.",
+  "@news_item_sync_desc": {
+    "description": "news_item_sync_desc"
   },
-  "updateApp": "Applicatie bijwerken",
-  "@updateApp": {
-    "description": "updateApp"
+  "news_item_sync_title": "Volledige integratie met Joss Red",
+  "@news_item_sync_title": {
+    "description": "news_item_sync_title"
   },
-  "loadInfoUpdate": "Kan update-informatie niet laden",
-  "@loadInfoUpdate": {
-    "description": "loadInfoUpdate"
+  "news_item_trans_desc": "U hoeft niet langer op handmatige synchronisatieknoppen te klikken; De nieuwe motor is verantwoordelijk voor het automatisch op- en terugschakelen.",
+  "@news_item_trans_desc": {
+    "description": "news_item_trans_desc"
   },
-  "infoNotAvailable": "Informatie niet beschikbaar",
-  "@infoNotAvailable": {
-    "description": "infoNotAvailable"
+  "news_item_trans_title": "Transparante synchronisatie",
+  "@news_item_trans_title": {
+    "description": "news_item_trans_title"
   },
-  "developedBy": "Ontwikkeld en onderhouden door Joss Estrada (JOSPROX)",
-  "@developedBy": {
-    "description": "developedBy"
+  "no": "Nee",
+  "@no": {
+    "description": "no"
   },
-  "copyrightNotice": "© 2026 JOSPROX. GPL-licentie v3.0",
-  "@copyrightNotice": {
-    "description": "copyrightNotice"
+  "noBookmarks": "Geen bladwijzers!",
+  "@noBookmarks": {
+    "description": "noBookmarks"
   },
-  "helloWorld": "Hallo wereld",
-  "@helloWorld": {
-    "description": "Este texto es opcional"
+  "noJossRedFriends": "Je hebt geen toegevoegde vrienden op Joss Red.",
+  "@noJossRedFriends": {
+    "description": "noJossRedFriends"
   },
-  "removeFromCache": "Verwijderen uit cache",
-  "@removeFromCache": {
-    "description": "removeFromCache"
+  "noLibPlaylist": "Je hebt geen lib afspeellijsten!",
+  "@noLibPlaylist": {
+    "description": "noLibPlaylist"
+  },
+  "noMatchInstruction": "Kon geen nummers vinden in de opgenomen audio",
+  "@noMatchInstruction": {
+    "description": "noMatchInstruction"
+  },
+  "noMatchesFound": "Geen overeenkomsten",
+  "@noMatchesFound": {
+    "description": "noMatchesFound"
+  },
+  "noOfflineSong": "Geen offline liedjes!",
+  "@noOfflineSong": {
+    "description": "noOfflineSong"
+  },
+  "noSongsInCollection": "Er zijn geen nummers in deze collectie",
+  "@noSongsInCollection": {
+    "description": "noSongsInCollection"
+  },
+  "nomatch": "Geen overeenkomst gevonden",
+  "@nomatch": {
+    "description": "nomatch"
+  },
+  "notAuthenticated": "Niet geauthenticeerd",
+  "@notAuthenticated": {
+    "description": "notAuthenticated"
+  },
+  "notaSongVideo": "Niet een Liedje/Muziekvideo!",
+  "@notaSongVideo": {
+    "description": "notaSongVideo"
+  },
+  "notaValidLink": "Niet een valide link!",
+  "@notaValidLink": {
+    "description": "notaValidLink"
+  },
+  "openIn": "Openen in",
+  "@openIn": {
+    "description": "openIn"
+  },
+  "operationFailed": "Operatie gefaald",
+  "@operationFailed": {
+    "description": "operationFailed"
+  },
+  "password": "Wachtwoord",
+  "@password": {
+    "description": "password"
+  },
+  "password_text": "Wachtwoord",
+  "@password_text": {
+    "description": "Contraseña texto traducido"
+  },
+  "permissionDenied": "Toestemming geweigerd",
+  "@permissionDenied": {
+    "description": "permissionDenied"
+  },
+  "permissionsAllow": "Toestaan",
+  "@permissionsAllow": {
+    "description": "permissionsAllow"
+  },
+  "permissionsConsentDescription": "Estrella Music heeft deze machtigingen nodig om je muziek te beheren en alle afspeelfuncties aan te bieden.",
+  "@permissionsConsentDescription": {
+    "description": "permissionsConsentDescription"
+  },
+  "permissionsConsentTitle": "Machtigingen om aan de slag te gaan",
+  "@permissionsConsentTitle": {
+    "description": "permissionsConsentTitle"
+  },
+  "permissionsContinueButton": "Verleen de vereiste machtigingen",
+  "@permissionsContinueButton": {
+    "description": "permissionsContinueButton"
+  },
+  "permissionsMicrophoneDescription": "Het wordt alleen gebruikt als u ervoor kiest een nummer te identificeren dat om u heen wordt afgespeeld.",
+  "@permissionsMicrophoneDescription": {
+    "description": "permissionsMicrophoneDescription"
+  },
+  "permissionsMicrophoneTitle": "Microfoon",
+  "@permissionsMicrophoneTitle": {
+    "description": "permissionsMicrophoneTitle"
+  },
+  "permissionsNotificationsDescription": "Toont afspeelknoppen, downloadvoortgang en belangrijke app-meldingen.",
+  "@permissionsNotificationsDescription": {
+    "description": "permissionsNotificationsDescription"
+  },
+  "permissionsNotificationsTitle": "Meldingen",
+  "@permissionsNotificationsTitle": {
+    "description": "permissionsNotificationsTitle"
+  },
+  "permissionsOpenSettings": "Instellingen",
+  "@permissionsOpenSettings": {
+    "description": "permissionsOpenSettings"
+  },
+  "permissionsRequiredNotice": "Alle drie de vergunningen zijn vereist om door te kunnen gaan. U kunt ze later wijzigen in de systeeminstellingen.",
+  "@permissionsRequiredNotice": {
+    "description": "permissionsRequiredNotice"
+  },
+  "permissionsStorageDescription": "Hiermee kunt u muziek afspelen, downloads opslaan, afspeellijsten exporteren en updates voorbereiden.",
+  "@permissionsStorageDescription": {
+    "description": "permissionsStorageDescription"
+  },
+  "permissionsStorageTitle": "Muziek en opslag",
+  "@permissionsStorageTitle": {
+    "description": "permissionsStorageTitle"
+  },
+  "personalisation": "Personalisatie",
+  "@personalisation": {
+    "description": "personalisation"
+  },
+  "pipedPlaylistDescription": "Doorgesluisde afspeellijst",
+  "@pipedPlaylistDescription": {
+    "description": "pipedPlaylistDescription"
+  },
+  "pipedplstSyncAlert": "Piped afspeellijst gesynchroniseerd!",
+  "@pipedplstSyncAlert": {
+    "description": "pipedplstSyncAlert"
+  },
+  "plain": "Vlak",
+  "@plain": {
+    "description": "plain"
+  },
+  "play": "Spelen",
+  "@play": {
+    "description": "play"
+  },
+  "playNext": "Speel volgende",
+  "@playNext": {
+    "description": "playNext"
+  },
+  "playNow": "Speel nu",
+  "@playNow": {
+    "description": "playNow"
+  },
+  "playbackSpeed": "Afspeelsnelheid",
+  "@playbackSpeed": {
+    "description": "playbackSpeed"
+  },
+  "playerUi": "Speler-UI",
+  "@playerUi": {
+    "description": "playerUi"
+  },
+  "playerUiDes": "Selecteer de gebruikersinterface van de speler",
+  "@playerUiDes": {
+    "description": "playerUiDes"
+  },
+  "playingRecognizedTrack": "Spelen:",
+  "@playingRecognizedTrack": {
+    "description": "playingRecognizedTrack"
+  },
+  "playingfromAlbum": "SPELEN VAN ALBUM",
+  "@playingfromAlbum": {
+    "description": "playingfromAlbum"
+  },
+  "playingfromArtist": "SPELEN VAN KUNSTENAAR",
+  "@playingfromArtist": {
+    "description": "playingfromArtist"
+  },
+  "playingfromPlaylist": "AFSPELEN VANUIT AFSPEELLIJST",
+  "@playingfromPlaylist": {
+    "description": "playingfromPlaylist"
+  },
+  "playingfromSelection": "SPELEN VANUIT SELECTIE",
+  "@playingfromSelection": {
+    "description": "playingfromSelection"
+  },
+  "playlist": "Afspeellijst",
+  "@playlist": {
+    "description": "playlist"
+  },
+  "playlistBlacklistAlert": "Afspeellijst op zwarte lijst gezet!",
+  "@playlistBlacklistAlert": {
+    "description": "playlistBlacklistAlert"
+  },
+  "playlistBookmarkAddAlert": "Afspeellijst gebladwijzerd!",
+  "@playlistBookmarkAddAlert": {
+    "description": "playlistBookmarkAddAlert"
+  },
+  "playlistBookmarkRemoveAlert": "Afspeellijst bladwijzer verwijderd!",
+  "@playlistBookmarkRemoveAlert": {
+    "description": "playlistBookmarkRemoveAlert"
+  },
+  "playlistCollaboratorsTitle": "Bijdragers van afspeellijsten",
+  "@playlistCollaboratorsTitle": {
+    "description": "playlistCollaboratorsTitle"
+  },
+  "playlistCreatedAlert": "Afspeellijst gecreëerd!",
+  "@playlistCreatedAlert": {
+    "description": "playlistCreatedAlert"
+  },
+  "playlistCreatednsongAddedAlert": "Afspeellijst gecreëerd en liedje toegevoegd!",
+  "@playlistCreatednsongAddedAlert": {
+    "description": "playlistCreatednsongAddedAlert"
+  },
+  "playlistExportedMsg": "Afspeellijst succesvol geëxporteerd naar",
+  "@playlistExportedMsg": {
+    "description": "playlistExportedMsg"
+  },
+  "playlistImportedMsg": "Afspeellijst geïmporteerd",
+  "@playlistImportedMsg": {
+    "description": "playlistImportedMsg"
+  },
+  "playlistRemovedAlert": "Afspeellijst verwijderd!",
+  "@playlistRemovedAlert": {
+    "description": "playlistRemovedAlert"
+  },
+  "playlistRenameAlert": "Successvol hernoemd!",
+  "@playlistRenameAlert": {
+    "description": "playlistRenameAlert"
+  },
+  "playlists": "Afspeellijsten",
+  "@playlists": {
+    "description": "playlists"
+  },
+  "playnextMsg": "Binnenkort beschikbaar",
+  "@playnextMsg": {
+    "description": "playnextMsg"
+  },
+  "podcasts": "Podcasts",
+  "@podcasts": {
+    "description": "podcasts"
+  },
+  "popularTracks": "Populaire nummers",
+  "@popularTracks": {
+    "description": "popularTracks"
+  },
+  "processFiles": "Bestanden verwerken...",
+  "@processFiles": {
+    "description": "processFiles"
+  },
+  "processingAudio": "Het geluid verwerken...",
+  "@processingAudio": {
+    "description": "processingAudio"
+  },
+  "profiles": "Profielen",
+  "@profiles": {
+    "description": "profiles"
+  },
+  "queueLoop": "staart lus",
+  "@queueLoop": {
+    "description": "queueLoop"
+  },
+  "queueLoopNotDisMsg1": "De wachtrijlusmodus kan niet worden uitgeschakeld als de shuffle-modus is ingeschakeld.",
+  "@queueLoopNotDisMsg1": {
+    "description": "queueLoopNotDisMsg1"
+  },
+  "queueLoopNotDisMsg2": "De staartlusmodus kan niet worden geactiveerd in de radiomodus.",
+  "@queueLoopNotDisMsg2": {
+    "description": "queueLoopNotDisMsg2"
+  },
+  "queueShufflingDeniedMsg": "De willekeurige modus is geactiveerd. U kunt de wachtrij niet handmatig mixen.",
+  "@queueShufflingDeniedMsg": {
+    "description": "queueShufflingDeniedMsg"
+  },
+  "queuerearrangingDeniedMsg": "De wachtrij kan niet opnieuw worden gerangschikt als de shuffle-modus is ingeschakeld",
+  "@queuerearrangingDeniedMsg": {
+    "description": "queuerearrangingDeniedMsg"
   },
   "quickPics": "Snelle selectie",
   "@quickPics": {
     "description": "quickPics"
   },
+  "quickpicks": "Snelle keuzes",
+  "@quickpicks": {
+    "description": "quickpicks"
+  },
+  "radioNotAvailable": "Radio is niet beschikbaar voor deze artiest!",
+  "@radioNotAvailable": {
+    "description": "radioNotAvailable"
+  },
+  "randomRadio": "Willekeurige radio",
+  "@randomRadio": {
+    "description": "randomRadio"
+  },
+  "randomSelection": "Willekeurige selectie",
+  "@randomSelection": {
+    "description": "randomSelection"
+  },
+  "reArrangePlaylist": "Afspeellijst herschikken",
+  "@reArrangePlaylist": {
+    "description": "reArrangePlaylist"
+  },
+  "reArrangeSongs": "Nummers opnieuw ordenen",
+  "@reArrangeSongs": {
+    "description": "reArrangeSongs"
+  },
+  "readMore": "Lees meer",
+  "@readMore": {
+    "description": "readMore"
+  },
+  "recentSearches": "Recente zoekopdrachten",
+  "@recentSearches": {
+    "description": "recentSearches"
+  },
+  "recentlyPlayed": "Onlangs Gespeeld",
+  "@recentlyPlayed": {
+    "description": "recentlyPlayed"
+  },
+  "recommend_cloud": "Voor een Spotify-achtige ervaring raden wij aan om de Cloud Mode te activeren: real-time synchronisatie tussen al je apparaten en automatische back-up zonder dat je er iets voor hoeft te doen.",
+  "@recommend_cloud": {
+    "description": "recommend_cloud"
+  },
+  "recommendedAlbums": "Aanbevolen",
+  "@recommendedAlbums": {
+    "description": "recommendedAlbums"
+  },
+  "recommendedArtists": "Aanbevolen",
+  "@recommendedArtists": {
+    "description": "recommendedArtists"
+  },
+  "removeFromCache": "Verwijderen uit cache",
+  "@removeFromCache": {
+    "description": "removeFromCache"
+  },
+  "removeFromLib": "Verwijder van bibliotheek Liedjes",
+  "@removeFromLib": {
+    "description": "removeFromLib"
+  },
+  "removeFromLibrary": "Verwijderen uit bibliotheek",
+  "@removeFromLibrary": {
+    "description": "removeFromLibrary"
+  },
+  "removeFromPlaylist": "Verwijder van afspeellijst",
+  "@removeFromPlaylist": {
+    "description": "removeFromPlaylist"
+  },
+  "removeFromQueue": "Verwijder van wachtrij",
+  "@removeFromQueue": {
+    "description": "removeFromQueue"
+  },
+  "removeMultiple": "Verwijder meerdere liedjes",
+  "@removeMultiple": {
+    "description": "removeMultiple"
+  },
+  "removePlaylist": "Verwijder Afspeellijst",
+  "@removePlaylist": {
+    "description": "removePlaylist"
+  },
+  "rename": "Hernoem",
+  "@rename": {
+    "description": "rename"
+  },
+  "renamePlaylist": "Hernoem Afspeellijst",
+  "@renamePlaylist": {
+    "description": "renamePlaylist"
+  },
+  "reproducedBy": "Gereproduceerd door",
+  "@reproducedBy": {
+    "description": "reproducedBy"
+  },
+  "reset": "Reset",
+  "@reset": {
+    "description": "reset"
+  },
+  "resetToDefault": "Standaardinstellingen herstellen",
+  "@resetToDefault": {
+    "description": "resetToDefault"
+  },
+  "resetToDefaultDes": "App-instellingen terugzetten naar standaard (herstart vereist)",
+  "@resetToDefaultDes": {
+    "description": "resetToDefaultDes"
+  },
+  "resetToDefaultMsg": "Het terugzetten van de instellingen naar de standaardinstellingen is voltooid. Start de app opnieuw",
+  "@resetToDefaultMsg": {
+    "description": "resetToDefaultMsg"
+  },
+  "resetblacklistedplaylist": "Reset op de zwarte lijst gezette afspeellijsten",
+  "@resetblacklistedplaylist": {
+    "description": "resetblacklistedplaylist"
+  },
+  "resetblacklistedplaylistDes": "Reset alle piped, op de zwarte lijst gezette afspeellijsten",
+  "@resetblacklistedplaylistDes": {
+    "description": "resetblacklistedplaylistDes"
+  },
+  "restartApp": "Start de applicatie opnieuw",
+  "@restartApp": {
+    "description": "restartApp"
+  },
+  "restore": "Herstellen",
+  "@restore": {
+    "description": "restore"
+  },
+  "restoreAppData": "App-gegevens herstellen",
+  "@restoreAppData": {
+    "description": "restoreAppData"
+  },
+  "restoreLastPlaybackSession": "Herstel van vorige afspeelsessie",
+  "@restoreLastPlaybackSession": {
+    "description": "restoreLastPlaybackSession"
+  },
+  "restoreLastPlaybackSessionDes": "Herstel automatisch de laatste afspeelsessie wanneer de app start",
+  "@restoreLastPlaybackSessionDes": {
+    "description": "restoreLastPlaybackSessionDes"
+  },
+  "restoreMsg": "Succesvol hersteld!\nWijzigingen worden toegepast bij het opnieuw opstarten",
+  "@restoreMsg": {
+    "description": "restoreMsg"
+  },
+  "restoreSettingsAndPlaylists": "Herstel instellingen en afspeellijsten",
+  "@restoreSettingsAndPlaylists": {
+    "description": "restoreSettingsAndPlaylists"
+  },
+  "restoreSettingsAndPlaylistsDes": "Herstelt alle instellingen, aanmeldgegevens en afspeellijsten van een back-up bestand. Overschrijft alle huidige gegevens",
+  "@restoreSettingsAndPlaylistsDes": {
+    "description": "restoreSettingsAndPlaylistsDes"
+  },
+  "restore_select_file_dialog": "Selecteer het back-upbestand",
+  "@restore_select_file_dialog": {
+    "description": "restore_select_file_dialog"
+  },
+  "restoring": "Herstellen...",
+  "@restoring": {
+    "description": "restoring"
+  },
+  "results": "Resultaten",
+  "@results": {
+    "description": "results"
+  },
+  "retry": "Probeer opnieuw!",
+  "@retry": {
+    "description": "retry"
+  },
+  "save": "Houden",
+  "@save": {
+    "description": "save"
+  },
+  "savedAlbums": "Opgeslagen",
+  "@savedAlbums": {
+    "description": "savedAlbums"
+  },
+  "scanning": "Scannen...",
+  "@scanning": {
+    "description": "scanning"
+  },
+  "search": "Zoek",
+  "@search": {
+    "description": "search"
+  },
+  "searchDes": "Liedjes, Afspeelijst, Album of Artiest",
+  "@searchDes": {
+    "description": "searchDes"
+  },
+  "searchInLibrary": "Zoek in Bibliotheek",
+  "@searchInLibrary": {
+    "description": "searchInLibrary"
+  },
+  "searchRes": "Zoek resultaten",
+  "@searchRes": {
+    "description": "searchRes"
+  },
+  "search_recent_title": "Recente zoekopdrachten",
+  "@search_recent_title": {
+    "description": "search_recent_title"
+  },
+  "selectAll": "Selecteer alle",
+  "@selectAll": {
+    "description": "selectAll"
+  },
+  "selectAuthIns": "Selecteer Auth Instantie",
+  "@selectAuthIns": {
+    "description": "selectAuthIns"
+  },
+  "selectAuthInsMsg": "Selecteer Authenticatie instantie!",
+  "@selectAuthInsMsg": {
+    "description": "selectAuthInsMsg"
+  },
+  "selectFile": "Selecteer Bestand",
+  "@selectFile": {
+    "description": "selectFile"
+  },
+  "selectSongs": "Selecteer liedjes",
+  "@selectSongs": {
+    "description": "selectSongs"
+  },
+  "selectedFileNotFound": "Het geselecteerde bestand is niet gevonden.",
+  "@selectedFileNotFound": {
+    "description": "selectedFileNotFound"
+  },
+  "sessionExpiredLoginAgain": "Uw sessie is verlopen. Meld u opnieuw aan.",
+  "@sessionExpiredLoginAgain": {
+    "description": "sessionExpiredLoginAgain"
+  },
+  "setDiscoverContent": "Zet ontdekkingsinhoud",
+  "@setDiscoverContent": {
+    "description": "setDiscoverContent"
+  },
+  "settings": "Instellingen",
+  "@settings": {
+    "description": "settings"
+  },
+  "settings_about_desc": "Over Estrella-muziek",
+  "@settings_about_desc": {
+    "description": "settings_about_desc"
+  },
+  "settings_about_sub": "Versie, open source project en GitHub.",
+  "@settings_about_sub": {
+    "description": "settings_about_sub"
+  },
+  "settings_account_desc": "Account en synchronisatie",
+  "@settings_account_desc": {
+    "description": "settings_account_desc"
+  },
+  "settings_account_sub": "Cloudmodus, back-ups, vriendenlijst en migraties.",
+  "@settings_account_sub": {
+    "description": "settings_account_sub"
+  },
+  "settings_appearance_desc": "Thema-, taal- en interface-animaties.",
+  "@settings_appearance_desc": {
+    "description": "settings_appearance_desc"
+  },
+  "settings_cloud_backup": "Cloud-back-up",
+  "@settings_cloud_backup": {
+    "description": "settings_cloud_backup"
+  },
+  "settings_cloud_backup_desc": "Uploaden, herstellen en beheren...",
+  "@settings_cloud_backup_desc": {
+    "description": "settings_cloud_backup_desc"
+  },
+  "settings_cloud_backup_dialog_desc": "Upload een .hmb-back-up van de app naar de server en herstel indien nodig een van de opgeslagen back-ups.",
+  "@settings_cloud_backup_dialog_desc": {
+    "description": "settings_cloud_backup_dialog_desc"
+  },
+  "settings_content_desc": "Ontdek filters, integratie met Piped en caches.",
+  "@settings_content_desc": {
+    "description": "settings_content_desc"
+  },
+  "settings_downloads_desc": "Downloads en opslag",
+  "@settings_downloads_desc": {
+    "description": "settings_downloads_desc"
+  },
+  "settings_downloads_sub": "Audioformaten, mappen en automatische downloads.",
+  "@settings_downloads_sub": {
+    "description": "settings_downloads_sub"
+  },
+  "settings_general_section": "Algemeen",
+  "@settings_general_section": {
+    "description": "settings_general_section"
+  },
+  "settings_local_cloud_desc": "Kies, migreer of bekijk de synchronisatiestatus met Joss Red.",
+  "@settings_local_cloud_desc": {
+    "description": "settings_local_cloud_desc"
+  },
+  "settings_local_cloud_title": "Lokale modus / EMusic Cloud",
+  "@settings_local_cloud_title": {
+    "description": "settings_local_cloud_title"
+  },
+  "settings_logout": "Uitloggen",
+  "@settings_logout": {
+    "description": "settings_logout"
+  },
+  "settings_migration_desc": "Importeer afspeellijsten, nummers...",
+  "@settings_migration_desc": {
+    "description": "settings_migration_desc"
+  },
+  "settings_migration_title": "Migreren van Joss Music Kotlin",
+  "@settings_migration_title": {
+    "description": "settings_migration_title"
+  },
+  "settings_my_friends": "mijn vrienden",
+  "@settings_my_friends": {
+    "description": "settings_my_friends"
+  },
+  "settings_my_friends_desc": "Beheer uw Joss Red-vrienden rechtstreeks.",
+  "@settings_my_friends_desc": {
+    "description": "settings_my_friends_desc"
+  },
+  "settings_playback_desc": "Streamingkwaliteit, normalisatie, stiltes en batterij.",
+  "@settings_playback_desc": {
+    "description": "settings_playback_desc"
+  },
+  "settings_refresh_visitor_desc": "Genereer je Online Music-ID opnieuw als Discover-content niet wordt geladen.",
+  "@settings_refresh_visitor_desc": {
+    "description": "settings_refresh_visitor_desc"
+  },
+  "settings_refresh_visitor_title": "Vernieuwings-ID (bezoekers-ID)",
+  "@settings_refresh_visitor_title": {
+    "description": "settings_refresh_visitor_title"
+  },
+  "settings_visitor_error": "Fout",
+  "@settings_visitor_error": {
+    "description": "settings_visitor_error"
+  },
+  "settings_visitor_error_desc": "Er kan geen nieuwe ID worden gegenereerd. Probeer het later opnieuw.",
+  "@settings_visitor_error_desc": {
+    "description": "settings_visitor_error_desc"
+  },
+  "settings_visitor_exception": "Er is een fout opgetreden tijdens het regenereren van: {error}",
+  "@settings_visitor_exception": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    },
+    "description": "settings_visitor_exception"
+  },
+  "settings_visitor_updated": "Bijgewerkte identificatie",
+  "@settings_visitor_updated": {
+    "description": "settings_visitor_updated"
+  },
+  "settings_visitor_updated_desc": "Er is met succes een nieuwe bezoekers-ID gegenereerd.",
+  "@settings_visitor_updated_desc": {
+    "description": "settings_visitor_updated_desc"
+  },
+  "shareAlbum": "Album delen",
+  "@shareAlbum": {
+    "description": "shareAlbum"
+  },
+  "sharePlaylist": "Deel afspeellijst",
+  "@sharePlaylist": {
+    "description": "sharePlaylist"
+  },
+  "shareSong": "Deel dit liedje",
+  "@shareSong": {
+    "description": "shareSong"
+  },
+  "shazamSearching": "Zoeken in de Shazam-database naar overeenkomsten...",
+  "@shazamSearching": {
+    "description": "shazamSearching"
+  },
+  "shuffle": "Willekeurig",
+  "@shuffle": {
+    "description": "shuffle"
+  },
+  "shuffleQueue": "gemengde staart",
+  "@shuffleQueue": {
+    "description": "shuffleQueue"
+  },
+  "similarToTitle": "gelijk aan {title}",
+  "@similarToTitle": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    },
+    "description": "similarToTitle"
+  },
+  "singles": "Singles",
+  "@singles": {
+    "description": "singles"
+  },
+  "skipSilence": "Stilte overslaan",
+  "@skipSilence": {
+    "description": "skipSilence"
+  },
+  "skipSilenceDes": "Stilte wordt overgeslagen in muziek afspeling",
+  "@skipSilenceDes": {
+    "description": "skipSilenceDes"
+  },
+  "sleepTimeSetAlert": "Je slaap timer is ingezet",
+  "@sleepTimeSetAlert": {
+    "description": "sleepTimeSetAlert"
+  },
+  "sleepTimer": "Slaap timer",
+  "@sleepTimer": {
+    "description": "sleepTimer"
+  },
+  "slide_indicator": "Stap {current} van 3",
+  "@slide_indicator": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      }
+    },
+    "description": "slide_indicator"
+  },
+  "songAddedToPlaylistAlert": "Liedje toegevoegd aan afspeellijst!",
+  "@songAddedToPlaylistAlert": {
+    "description": "songAddedToPlaylistAlert"
+  },
+  "songAlreadyExists": "Liedje bestaat al!",
+  "@songAlreadyExists": {
+    "description": "songAlreadyExists"
+  },
+  "songAlreadyOfflineAlert": "Liedje is al offline in cache",
+  "@songAlreadyOfflineAlert": {
+    "description": "songAlreadyOfflineAlert"
+  },
+  "songEnqueueAlert": "Liedje toegevoegd aan wachtrij!",
+  "@songEnqueueAlert": {
+    "description": "songEnqueueAlert"
+  },
+  "songFound": "Lied gevonden!",
+  "@songFound": {
+    "description": "songFound"
+  },
+  "songInfo": "Informatie over het nummer",
+  "@songInfo": {
+    "description": "songInfo"
+  },
+  "songNotPlayable": "Het nummer kan niet worden afgespeeld vanwege serverbeperkingen!",
+  "@songNotPlayable": {
+    "description": "songNotPlayable"
+  },
+  "songPitch": "toon van het lied",
+  "@songPitch": {
+    "description": "songPitch"
+  },
+  "songRemovedAlert": "Verwijderd van",
+  "@songRemovedAlert": {
+    "description": "songRemovedAlert"
+  },
+  "songRemovedfromQueue": "Verwijder van wachtrij!",
+  "@songRemovedfromQueue": {
+    "description": "songRemovedfromQueue"
+  },
+  "songRemovedfromQueueCurrSong": "Je kunt niet het liedje dat nu afspeelt verwijderen",
+  "@songRemovedfromQueueCurrSong": {
+    "description": "songRemovedfromQueueCurrSong"
+  },
+  "songs": "Liedjes",
+  "@songs": {
+    "description": "songs"
+  },
+  "songsImportedFromJossMusic": "Nummers geïmporteerd uit Joss Music Kotlin",
+  "@songsImportedFromJossMusic": {
+    "description": "songsImportedFromJossMusic"
+  },
+  "sortAscendNDescend": "Sorteer oplopend/aflopend",
+  "@sortAscendNDescend": {
+    "description": "sortAscendNDescend"
+  },
+  "sortByDate": "Sorteer op datum",
+  "@sortByDate": {
+    "description": "sortByDate"
+  },
+  "sortByDuration": "Sorteer op duur",
+  "@sortByDuration": {
+    "description": "sortByDuration"
+  },
+  "sortByName": "Sorteer op naam",
+  "@sortByName": {
+    "description": "sortByName"
+  },
+  "speedAndPitch": "Snelheid en toonhoogte",
+  "@speedAndPitch": {
+    "description": "speedAndPitch"
+  },
+  "standard": "Standaard",
+  "@standard": {
+    "description": "standard"
+  },
+  "startRadio": "Start radio",
+  "@startRadio": {
+    "description": "startRadio"
+  },
+  "startupScreen": "Openen bij opstarten",
+  "@startupScreen": {
+    "description": "startupScreen"
+  },
+  "startupScreenDescription": "Kies de sectie die Estrella Music als eerste opent",
+  "@startupScreenDescription": {
+    "description": "startupScreenDescription"
+  },
+  "status": "Status",
+  "@status": {
+    "description": "status"
+  },
+  "stopMusicOnTaskClear": "Stop muziek wanneer taak duidelijk is",
+  "@stopMusicOnTaskClear": {
+    "description": "stopMusicOnTaskClear"
+  },
+  "stopMusicOnTaskClearDes": "Het afspelen van muziek stopt wanneer de App uit Taakbeheer wordt weggeveegd",
+  "@stopMusicOnTaskClearDes": {
+    "description": "stopMusicOnTaskClearDes"
+  },
+  "streamingQuality": "Streaming kwaliteit",
+  "@streamingQuality": {
+    "description": "streamingQuality"
+  },
+  "streamingQualityDes": "Kwaliteit van muziekstream",
+  "@streamingQualityDes": {
+    "description": "streamingQualityDes"
+  },
+  "subscribers": "abonnees",
+  "@subscribers": {
+    "description": "subscribers"
+  },
+  "swipe_prompt": "Veeg om opties te verkennen ➔",
+  "@swipe_prompt": {
+    "description": "swipe_prompt"
+  },
+  "syncChangesConfirmed": "{count} wijzigingen vastgelegd.",
+  "@syncChangesConfirmed": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    },
+    "description": "syncChangesConfirmed"
+  },
+  "syncChangesSynced": "{count} gesynchroniseerde wijzigingen.",
+  "@syncChangesSynced": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    },
+    "description": "syncChangesSynced"
+  },
+  "syncCloudDownloadingExisting": "Cloudmodus geactiveerd. De bestaande bibliotheek downloaden.",
+  "@syncCloudDownloadingExisting": {
+    "description": "syncCloudDownloadingExisting"
+  },
+  "syncCloudMigrationComplete": "Cloudmodus geactiveerd. Gemigreerde bibliotheek.",
+  "@syncCloudMigrationComplete": {
+    "description": "syncCloudMigrationComplete"
+  },
+  "syncCloudModeActive": "Cloudmodus actief",
+  "@syncCloudModeActive": {
+    "description": "syncCloudModeActive"
+  },
+  "syncCloudPending": "Cloudmodus actief. Synchronisatie in behandeling.",
+  "@syncCloudPending": {
+    "description": "syncCloudPending"
+  },
+  "syncDownloadFailed": "Kan de synchronisatie niet downloaden.",
+  "@syncDownloadFailed": {
+    "description": "syncDownloadFailed"
+  },
+  "syncDownloading": "EMusic-wijzigingen downloaden...",
+  "@syncDownloading": {
+    "description": "syncDownloading"
+  },
+  "syncForceReplaceBackupSaved": "Herstel back-up: {path}",
+  "@syncForceReplaceBackupSaved": {
+    "placeholders": {
+      "path": {}
+    }
+  },
+  "syncForceReplaceConfirmAction": "Reemplazar y subir",
+  "@syncForceReplaceConfirmAction": {},
+  "syncForceReplaceConfirmBody": "Primero se creará un respaldo de recuperación. Después, las playlists, favoritos, historial, álbumes, artistas y ajustes musicales de EMusic Cloud se reemplazarán con los datos actuales de este dispositivo. No se puede deshacer desde el servidor.",
+  "@syncForceReplaceConfirmBody": {},
+  "syncForceReplaceConfirmTitle": "¿Reemplazar la biblioteca muzikale remota?",
+  "@syncForceReplaceConfirmTitle": {},
+  "syncForceReplaceCountMismatch": "De geüploade nummers komen niet overeen met de lokale bibliotheek. Vervanging op afstand kon niet worden bevestigd.",
+  "@syncForceReplaceCountMismatch": {},
+  "syncForceReplaceCreatingBackup": "Een reservekopie maken voor het vervangen van cloudgegevens...",
+  "@syncForceReplaceCreatingBackup": {},
+  "syncForceReplaceDescription": "Pausa la sincronización pendiente y reemplaza a la fuerza tu biblioteca musical remota con los datos actuales de este dispositivo. Las descargas permanecen locales.",
+  "@syncForceReplaceDescription": {},
+  "syncForceReplaceFailed": "EMusic Cloud kon de externe bibliotheek niet vervangen.",
+  "@syncForceReplaceFailed": {},
+  "syncForceReplaceFailedLocalPreserved": "De remote vervanging is mislukt. Uw lokale gegevens en herstel back-up werden bewaard.",
+  "@syncForceReplaceFailedLocalPreserved": {},
+  "syncForceReplaceFailedTitle": "Upload niet voltooid",
+  "@syncForceReplaceFailedTitle": {},
+  "syncForceReplaceInProgress": "Sync pauzeren, een back-up maken en de lokale bibliotheek uploaden...",
+  "@syncForceReplaceInProgress": {},
+  "syncForceReplacePauseFailed": "De huidige synchronisatie kon niet veilig worden gepauzeerd. Probeer het zo nog eens.",
+  "@syncForceReplacePauseFailed": {},
+  "syncForceReplaceSuccess": "De externe muziekbibliotheek werd vervangen door de huidige gegevens van dit apparaat.",
+  "@syncForceReplaceSuccess": {},
+  "syncForceReplaceSuccessTitle": "Upload voltooid",
+  "@syncForceReplaceSuccessTitle": {},
+  "syncForceReplaceTitle": "Cancelar sincronización y subir ESTA base",
+  "@syncForceReplaceTitle": {},
+  "syncForceReplaceValidating": "De geüploade bibliotheek valideren voordat de cloudgegevens worden vervangen...",
+  "@syncForceReplaceValidating": {},
+  "syncLibrarySynced": "Gesynchroniseerde bibliotheek.",
+  "@syncLibrarySynced": {
+    "description": "syncLibrarySynced"
+  },
+  "syncLibraryUpToDate": "Bibliotheek up-to-date.",
+  "@syncLibraryUpToDate": {
+    "description": "syncLibraryUpToDate"
+  },
+  "syncLocalChangesFirst": "Er zijn nieuwe lokale veranderingen. Ze worden geüpload voordat ze worden gedownload.",
+  "@syncLocalChangesFirst": {
+    "description": "syncLocalChangesFirst"
+  },
+  "syncLocalDeviceOnly": "Uw gegevens worden alleen op dit apparaat bewaard.",
+  "@syncLocalDeviceOnly": {
+    "description": "syncLocalDeviceOnly"
+  },
+  "syncLocalModeActive": "Lokale modus actief",
+  "@syncLocalModeActive": {
+    "description": "syncLocalModeActive"
+  },
+  "syncOfflinePending": "Offline. Er zijn wijzigingen in voorbereiding.",
+  "@syncOfflinePending": {
+    "description": "syncOfflinePending"
+  },
+  "syncOfflineRetry": "Offline. Wijzigingen opgeslagen voor opnieuw proberen.",
+  "@syncOfflineRetry": {
+    "description": "syncOfflineRetry"
+  },
+  "syncPlaylistSongs": "Synchroniseer afspeellijstnummers",
+  "@syncPlaylistSongs": {
+    "description": "syncPlaylistSongs"
+  },
+  "syncUnconfirmedRetry": "EMusic heeft niet alle wijzigingen bevestigd. Ze zullen opnieuw worden geprobeerd.",
+  "@syncUnconfirmedRetry": {
+    "description": "syncUnconfirmedRetry"
+  },
+  "syncUploadRetry": "Kon niet opstaan. Het wordt later opnieuw geprobeerd.",
+  "@syncUploadRetry": {
+    "description": "syncUploadRetry"
+  },
+  "syncUploadSuccess": "Wijzigingen correct geüpload.",
+  "@syncUploadSuccess": {
+    "description": "syncUploadSuccess"
+  },
+  "syncUploadSuccessWs": "Wijzigingen zijn succesvol geüpload (WS).",
+  "@syncUploadSuccessWs": {
+    "description": "syncUploadSuccessWs"
+  },
+  "syncUploadWsRetry": "Kan niet uploaden met WS. Het wordt later opnieuw geprobeerd.",
+  "@syncUploadWsRetry": {
+    "description": "syncUploadWsRetry"
+  },
+  "syncUploading": "Wijzigingen uploaden naar EMusic...",
+  "@syncUploading": {
+    "description": "syncUploading"
+  },
+  "synced": "Gesynchroniseerd",
+  "@synced": {
+    "description": "synced"
+  },
+  "syncedLyricsNotAvailable": "Gesynchroniseerde teksten niet beschikbaar!",
+  "@syncedLyricsNotAvailable": {
+    "description": "syncedLyricsNotAvailable"
+  },
+  "systemDefault": "Systeem standaard",
+  "@systemDefault": {
+    "description": "systemDefault"
+  },
+  "themeMode": "Thema modus",
+  "@themeMode": {
+    "description": "themeMode"
+  },
+  "title": "Titel",
+  "@title": {
+    "description": "title"
+  },
   "topMusicVid": "Topmuziekvideo's",
   "@topMusicVid": {
     "description": "topMusicVid"
   },
-  "syncForceReplaceTitle": "Cancelar sincronización y subir ESTA base",
-  "syncForceReplaceConfirmAction": "Reemplazar y subir",
-  "syncForceReplaceDescription": "Pausa la sincronización pendiente y reemplaza a la fuerza tu biblioteca musical remota con los datos actuales de este dispositivo. Las descargas permanecen locales.",
-  "syncForceReplaceConfirmBody": "Primero se creará un respaldo de recuperación. Después, las playlists, favoritos, historial, álbumes, artistas y ajustes musicales de EMusic Cloud se reemplazarán con los datos actuales de este dispositivo. No se puede deshacer desde el servidor.",
-  "syncForceReplaceConfirmTitle": "¿Reemplazar la biblioteca muzikale remota?"
+  "topmusicvideos": "Top muziek videos",
+  "@topmusicvideos": {
+    "description": "topmusicvideos"
+  },
+  "trending": "Trending",
+  "@trending": {
+    "description": "trending"
+  },
+  "unLink": "Unlink",
+  "@unLink": {
+    "description": "unLink"
+  },
+  "unlinkAlert": "Successvol unlink!",
+  "@unlinkAlert": {
+    "description": "unlinkAlert"
+  },
+  "untitledSong": "Titelloos nummer",
+  "@untitledSong": {
+    "description": "untitledSong"
+  },
+  "upNext": "Volgende",
+  "@upNext": {
+    "description": "upNext"
+  },
+  "updateApp": "Applicatie bijwerken",
+  "@updateApp": {
+    "description": "updateApp"
+  },
+  "urlSearchDes": "Gedetecteerde URL klik erop om de bijbehorende inhoud te openen/af te spelen",
+  "@urlSearchDes": {
+    "description": "urlSearchDes"
+  },
+  "useThisMetadata": "Gebruik deze metadata",
+  "@useThisMetadata": {
+    "description": "Button for selecting a metadata candidate"
+  },
+  "userBlocked": "Geblokkeerde gebruiker",
+  "@userBlocked": {
+    "description": "userBlocked"
+  },
+  "userListMissing": "Het antwoord bevat geen lijst met gebruikers.",
+  "@userListMissing": {
+    "description": "userListMissing"
+  },
+  "userSearchFailed": "Kan niet zoeken naar gebruikers ({statusCode}).",
+  "@userSearchFailed": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    },
+    "description": "userSearchFailed"
+  },
+  "userUnblocked": "Ontgrendelde gebruiker",
+  "@userUnblocked": {
+    "description": "userUnblocked"
+  },
+  "username": "Gebruikersnaam",
+  "@username": {
+    "description": "username"
+  },
+  "video": "Video",
+  "@video": {
+    "description": "video"
+  },
+  "videos": "Videos",
+  "@videos": {
+    "description": "videos"
+  },
+  "viewAll": "Bekijk alles",
+  "@viewAll": {
+    "description": "viewAll"
+  },
+  "viewArtist": "Bekijk Artiest",
+  "@viewArtist": {
+    "description": "viewArtist"
+  },
+  "welcome_intro": "We hebben ons platform gemoderniseerd. Het oude systeem voor het uploaden van handmatige back-ups is uitgeschakeld. Je hebt nu twee duidelijke manieren om je muziekbibliotheek te beheren.",
+  "@welcome_intro": {
+    "description": "welcome_intro"
+  },
+  "welcome_subtitle": "Kies zelf hoe jij Estrella Music voortaan wilt beleven.",
+  "@welcome_subtitle": {
+    "description": "welcome_subtitle"
+  },
+  "welcome_title": "Jouw muziek, jouw manier",
+  "@welcome_title": {
+    "description": "welcome_title"
+  }
 }

@@ -44,9 +44,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m11(count) => "${count} synchronized changes.";
 
-  static String m13(path) => "Recovery backup: ${path}";
+  static String m12(path) => "Recovery backup: ${path}";
 
-  static String m12(statusCode) =>
+  static String m13(statusCode) =>
       "Could not search for users (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -522,6 +522,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Select the number of initial homescreen-content(approx). Lesser results faster loading",
     ),
     "id": MessageLookupByLibrary.simpleMessage("Id"),
+    "identifySongMetadata": MessageLookupByLibrary.simpleMessage(
+      "Identify metadata",
+    ),
     "ignoreBatOpt": MessageLookupByLibrary.simpleMessage(
       "Ignore battery optimization",
     ),
@@ -645,6 +648,27 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "manageCollaborators": MessageLookupByLibrary.simpleMessage(
       "Manage collaborators (friends)",
+    ),
+    "metadataApplySuccess": MessageLookupByLibrary.simpleMessage(
+      "Metadata was saved for this song.",
+    ),
+    "metadataNoResults": MessageLookupByLibrary.simpleMessage(
+      "No matches found. Try a different search.",
+    ),
+    "metadataOperationFailed": MessageLookupByLibrary.simpleMessage(
+      "The metadata operation failed.",
+    ),
+    "metadataOverwriteWarning": MessageLookupByLibrary.simpleMessage(
+      "This will replace the title, artist, album and cover shown in the local profile while preserving fields the match does not provide.",
+    ),
+    "metadataSearchDescription": MessageLookupByLibrary.simpleMessage(
+      "Choose the correct match to save its title, artist, album and cover. The audio file will not be modified.",
+    ),
+    "metadataSearchHint": MessageLookupByLibrary.simpleMessage(
+      "Song or artist name",
+    ),
+    "metadataSearchTitle": MessageLookupByLibrary.simpleMessage(
+      "Identify song",
     ),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
       "Make sure the music is playing loud enough near your microphone.",
@@ -1192,7 +1216,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncDownloading": MessageLookupByLibrary.simpleMessage(
       "Downloading EMusic changes...",
     ),
-    "syncForceReplaceBackupSaved": m13,
+    "syncForceReplaceBackupSaved": m12,
     "syncForceReplaceConfirmAction": MessageLookupByLibrary.simpleMessage(
       "Replace and upload",
     ),
@@ -1214,9 +1238,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
       "EMusic Cloud could not replace the remote library.",
     ),
-    "syncForceReplaceFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
-      "The remote replacement failed. Your local data and recovery backup were preserved.",
-    ),
+    "syncForceReplaceFailedLocalPreserved":
+        MessageLookupByLibrary.simpleMessage(
+          "The remote replacement failed. Your local data and recovery backup were preserved.",
+        ),
     "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
       "Upload not completed",
     ),
@@ -1296,11 +1321,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "Url detected click on it to open/play associated content",
     ),
+    "useThisMetadata": MessageLookupByLibrary.simpleMessage(
+      "Use this metadata",
+    ),
     "userBlocked": MessageLookupByLibrary.simpleMessage("Blocked user"),
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "The response does not contain a list of users.",
     ),
-    "userSearchFailed": m12,
+    "userSearchFailed": m13,
     "userUnblocked": MessageLookupByLibrary.simpleMessage("Unlocked user"),
     "username": MessageLookupByLibrary.simpleMessage("Username"),
     "video": MessageLookupByLibrary.simpleMessage("Video"),

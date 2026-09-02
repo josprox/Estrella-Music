@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
+import 'package:estrella_music/music_provider/providers/local_song_metadata_store.dart';
 import 'package:estrella_music/profiles/profile_storage_namespace.dart';
 import 'package:estrella_music/services/storage/sqlite_store.dart';
 
@@ -71,6 +72,39 @@ void main() {
       providerId: ProfileStorageNamespace.localProviderId,
     );
     expect(SqliteStore.box('SongDownloads').containsKey('track'), isFalse);
+  });
+
+  test('local song metadata overrides are profile-scoped Hive data', () async {
+    await ProfileStorageNamespace.activateAndOpen(
+      profileId: 'personal',
+      providerId: ProfileStorageNamespace.localProviderId,
+    );
+    final personalStore = HiveLocalSongMetadataStore();
+    await personalStore.initialize('personal');
+    await personalStore.write('file-1', {
+      'source': 'manual',
+      'title': 'Personal title',
+    });
+    expect(
+      SqliteStore.box(HiveLocalSongMetadataStore.boxName).backend,
+      MusicStoreBackend.hive,
+    );
+
+    await ProfileStorageNamespace.activateAndOpen(
+      profileId: 'work',
+      providerId: ProfileStorageNamespace.localProviderId,
+    );
+    final workStore = HiveLocalSongMetadataStore();
+    await workStore.initialize('work');
+    expect(await workStore.read('file-1'), isNull);
+
+    await ProfileStorageNamespace.activateAndOpen(
+      profileId: 'personal',
+      providerId: ProfileStorageNamespace.localProviderId,
+    );
+    final reloaded = HiveLocalSongMetadataStore();
+    await reloaded.initialize('personal');
+    expect((await reloaded.read('file-1'))?['title'], 'Personal title');
   });
 
   test('eMusic profile uses SQLite while local data remains in Hive', () async {

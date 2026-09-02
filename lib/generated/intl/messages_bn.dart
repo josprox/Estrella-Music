@@ -44,7 +44,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m11(count) => "${count} সিঙ্ক্রোনাইজ করা পরিবর্তন।";
 
-  static String m12(statusCode) =>
+  static String m12(path) => "ব্যাক-আপ থেকে পুনরুদ্ধার করা হবে: ${path}";
+
+  static String m13(statusCode) =>
       "ব্যবহারকারীদের জন্য অনুসন্ধান করা যায়নি (${statusCode})।";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -538,6 +540,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "প্রাথমিক হোমস্ক্রিন-কন্টেন্টের সংখ্যা (প্রায়) নির্বাচন করুন। কম ফলাফল দ্রুত লোড হচ্ছে",
     ),
     "id": MessageLookupByLibrary.simpleMessage("আইডি"),
+    "identifySongMetadata": MessageLookupByLibrary.simpleMessage(
+      "মিটা-ডাটা সনাক্ত করুন",
+    ),
     "ignoreBatOpt": MessageLookupByLibrary.simpleMessage(
       "ব্যাটারি অপ্টিমাইজেশন উপেক্ষা করুন",
     ),
@@ -667,6 +672,27 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "manageCollaborators": MessageLookupByLibrary.simpleMessage(
       "সহযোগীদের পরিচালনা করুন (বন্ধু)",
+    ),
+    "metadataApplySuccess": MessageLookupByLibrary.simpleMessage(
+      "স্থানীয় ফাইলের মধ্যে মিটা-ডাটা উপস্থিত রয়েছে ।",
+    ),
+    "metadataNoResults": MessageLookupByLibrary.simpleMessage(
+      "কোনো মিল পাওয়া যায়নি। ভিন্ন অনুসন্ধানের প্রচেষ্টা করুন।",
+    ),
+    "metadataOperationFailed": MessageLookupByLibrary.simpleMessage(
+      "মিটা-ডাটা কর্ম বিফল।",
+    ),
+    "metadataOverwriteWarning": MessageLookupByLibrary.simpleMessage(
+      "এর ফলে প্রাথমিক শিরোনাম, শিল্পী, অ্যালবাম এবং ঢেকে দেওয়া হবে, যে কোন ক্ষেত্রে খেলা সংরক্ষণ করে না।",
+    ),
+    "metadataSearchDescription": MessageLookupByLibrary.simpleMessage(
+      "শিরোনাম, শিল্পী, অ্যালবাম ও স্থানীয় ফাইলের মধ্যে সঠিক মিল স্থাপন করা হবে ।",
+    ),
+    "metadataSearchHint": MessageLookupByLibrary.simpleMessage(
+      "গান অথবা শিল্পীর নাম",
+    ),
+    "metadataSearchTitle": MessageLookupByLibrary.simpleMessage(
+      "গান সনাক্ত করুন",
     ),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
       "আপনার মাইক্রোফোনের কাছে সঙ্গীত যথেষ্ট জোরে বাজছে তা নিশ্চিত করুন।",
@@ -1226,6 +1252,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncDownloading": MessageLookupByLibrary.simpleMessage(
       "ইমিউজিক পরিবর্তনগুলি ডাউনলোড করা হচ্ছে...",
     ),
+    "syncForceReplaceBackupSaved": m12,
     "syncForceReplaceConfirmAction": MessageLookupByLibrary.simpleMessage(
       "Reemplazar y subir",
     ),
@@ -1235,11 +1262,42 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceConfirmTitle": MessageLookupByLibrary.simpleMessage(
       "¿Reemplazar la biblioteca মিউজিকাল রিমোটা?",
     ),
+    "syncForceReplaceCountMismatch": MessageLookupByLibrary.simpleMessage(
+      "আপলোড করা আপলোডকৃত স্থানীয় লাইব্রেরিগুলোর সাথে মেলে না। দূরবর্তী প্রতিস্থাপন নিশ্চিত করা যায়নি।",
+    ),
+    "syncForceReplaceCreatingBackup": MessageLookupByLibrary.simpleMessage(
+      "তথ্য ব্যাক-আপ করা হচ্ছে...",
+    ),
     "syncForceReplaceDescription": MessageLookupByLibrary.simpleMessage(
       "Pausa la sincronización pendiente y reemplaza a la fuerza tu biblioteca musical remota con los datos actuales de este dispositivo. Las descargas স্থায়ীভাবে স্থানীয়করণ ।",
     ),
+    "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
+      "Internet দ্বারা দূরবর্তী লাইব্রেরি পরিবর্তন করা সম্ভব হয়নি।",
+    ),
+    "syncForceReplaceFailedLocalPreserved":
+        MessageLookupByLibrary.simpleMessage(
+          "দূরবর্তী প্রতিস্থাপন ব্যবস্থা ব্যর্থ । আপনার স্থানীয় তথ্য এবং পুনরুদ্ধার পুনরুদ্ধার সংরক্ষিত হয়েছে।",
+        ),
+    "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
+      "আপলোড সমাপ্ত হয়নি",
+    ),
+    "syncForceReplaceInProgress": MessageLookupByLibrary.simpleMessage(
+      "অনুমতি দিন, ব্যাকআপ, এবং স্থানীয় লাইব্রেরি আপলোড করুন...",
+    ),
+    "syncForceReplacePauseFailed": MessageLookupByLibrary.simpleMessage(
+      "বর্তমান সুসংগতির জন্য স্থগিত রাখা যায়নি। আবার চেষ্টা করো।",
+    ),
+    "syncForceReplaceSuccess": MessageLookupByLibrary.simpleMessage(
+      "দূরবর্তী সংগীত লাইব্রেরি এই ডিভাইসের পরিবর্তে বর্তমান তথ্য প্রয়োগ করা হয়েছে।",
+    ),
+    "syncForceReplaceSuccessTitle": MessageLookupByLibrary.simpleMessage(
+      "আপলোড সমাপ্ত হয়েছে",
+    ),
     "syncForceReplaceTitle": MessageLookupByLibrary.simpleMessage(
       "Cancelar sincronización y subir esta base",
+    ),
+    "syncForceReplaceValidating": MessageLookupByLibrary.simpleMessage(
+      "তথ্য একত্রিত করার পূর্বে, লাইব্রেরি দ্বারা অনুকরণ করা হচ্ছে...",
     ),
     "syncLibrarySynced": MessageLookupByLibrary.simpleMessage(
       "সিঙ্ক্রোনাইজড লাইব্রেরি।",
@@ -1305,11 +1363,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "ইউআরএল সনাক্ত করেছে যে সংশ্লিষ্ট কন্টেন্ট খুলতে/চালাতে এটিতে ক্লিক করুন",
     ),
+    "useThisMetadata": MessageLookupByLibrary.simpleMessage(
+      "এই মিটা-ডাটা ব্যবহার করা হবে",
+    ),
     "userBlocked": MessageLookupByLibrary.simpleMessage("অবরুদ্ধ ব্যবহারকারী"),
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "প্রতিক্রিয়া ব্যবহারকারীদের একটি তালিকা ধারণ করে না.",
     ),
-    "userSearchFailed": m12,
+    "userSearchFailed": m13,
     "userUnblocked": MessageLookupByLibrary.simpleMessage(
       "আনলক করা ব্যবহারকারী",
     ),

@@ -44,7 +44,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m11(count) => "${count} синхронизирани промени.";
 
-  static String m12(statusCode) =>
+  static String m12(path) => "Възстановяване подкрепление: ${path}";
+
+  static String m13(statusCode) =>
       "Не може да се търсят потребители (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -548,6 +550,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Изберете броя на първоначалното съдържание на началния екран (приблизително). По-малко резултати, по-бързо зареждане",
     ),
     "id": MessageLookupByLibrary.simpleMessage("Идентификация"),
+    "identifySongMetadata": MessageLookupByLibrary.simpleMessage(
+      "Идентифициране на метаданни",
+    ),
     "ignoreBatOpt": MessageLookupByLibrary.simpleMessage(
       "Игнорирай оптимизация на батерията",
     ),
@@ -681,6 +686,27 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "manageCollaborators": MessageLookupByLibrary.simpleMessage(
       "Управление на сътрудници (приятели)",
+    ),
+    "metadataApplySuccess": MessageLookupByLibrary.simpleMessage(
+      "Метаданните бяха включени в местния файл.",
+    ),
+    "metadataNoResults": MessageLookupByLibrary.simpleMessage(
+      "Няма съвпадение. Опитай друго търсене.",
+    ),
+    "metadataOperationFailed": MessageLookupByLibrary.simpleMessage(
+      "Операцията с метаданните се провали.",
+    ),
+    "metadataOverwriteWarning": MessageLookupByLibrary.simpleMessage(
+      "Това ще презапише вграденото заглавие, творец, албум и корица, докато запазва всички полета, които мачът не предоставя.",
+    ),
+    "metadataSearchDescription": MessageLookupByLibrary.simpleMessage(
+      "Изберете правилния мач, за да вградите заглавието си, художник, албум и капак в местния файл.",
+    ),
+    "metadataSearchHint": MessageLookupByLibrary.simpleMessage(
+      "Име на песен или художник",
+    ),
+    "metadataSearchTitle": MessageLookupByLibrary.simpleMessage(
+      "Идентифициране на песен",
     ),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
       "Уверете се, че музиката се възпроизвежда достатъчно силно близо до вашия микрофон.",
@@ -1258,6 +1284,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncDownloading": MessageLookupByLibrary.simpleMessage(
       "Промените в EMusic се изтеглят...",
     ),
+    "syncForceReplaceBackupSaved": m12,
     "syncForceReplaceConfirmAction": MessageLookupByLibrary.simpleMessage(
       "Reemplazar y subir",
     ),
@@ -1267,14 +1294,42 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceConfirmTitle": MessageLookupByLibrary.simpleMessage(
       "Reemplazar la biblioteca music remota?",
     ),
+    "syncForceReplaceCountMismatch": MessageLookupByLibrary.simpleMessage(
+      "Качваните сметки не съвпадат с местната библиотека. Дистанционното заместване не може да бъде потвърдено.",
+    ),
+    "syncForceReplaceCreatingBackup": MessageLookupByLibrary.simpleMessage(
+      "Създаване на резервно копие преди замяна на облачни данни...",
+    ),
     "syncForceReplaceDescription": MessageLookupByLibrary.simpleMessage(
       "Pausa la sincronización pendiente y reemplaza a la fuerza tu biblioteca music remota con los datos actuales de este dispositivo. Las descargas permanentecen locales.",
+    ),
+    "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
+      "Emusic Cloud не може да замени отдалечената библиотека.",
+    ),
+    "syncForceReplaceFailedLocalPreserved":
+        MessageLookupByLibrary.simpleMessage(
+          "Дистанционното заместване се провали. Вашите местни данни и възстановяването са запазени.",
+        ),
+    "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
+      "Качването не е завършено",
     ),
     "syncForceReplaceInProgress": MessageLookupByLibrary.simpleMessage(
       "Pausando la sincronización, creando el respaldo y subiendo la biblioteca local...",
     ),
+    "syncForceReplacePauseFailed": MessageLookupByLibrary.simpleMessage(
+      "Текущата синхронизация не може да бъде спряна безопасно. Опитай пак след малко.",
+    ),
+    "syncForceReplaceSuccess": MessageLookupByLibrary.simpleMessage(
+      "Дистанционната музикална библиотека е заменена с текущите данни на това устройство.",
+    ),
+    "syncForceReplaceSuccessTitle": MessageLookupByLibrary.simpleMessage(
+      "Качването завършено",
+    ),
     "syncForceReplaceTitle": MessageLookupByLibrary.simpleMessage(
       "Отмяна на sincronización y subir esta base",
+    ),
+    "syncForceReplaceValidating": MessageLookupByLibrary.simpleMessage(
+      "Валидиране на качената библиотека преди замяна на облачните данни...",
     ),
     "syncLibrarySynced": MessageLookupByLibrary.simpleMessage(
       "Синхронизирана библиотека.",
@@ -1346,11 +1401,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "Открит URL адрес натиснете върху него, за да отворите/изпълните свързано съдържание",
     ),
+    "useThisMetadata": MessageLookupByLibrary.simpleMessage(
+      "Използване на метаданните",
+    ),
     "userBlocked": MessageLookupByLibrary.simpleMessage("Блокиран потребител"),
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "Отговорът не съдържа списък с потребители.",
     ),
-    "userSearchFailed": m12,
+    "userSearchFailed": m13,
     "userUnblocked": MessageLookupByLibrary.simpleMessage(
       "Отключен потребител",
     ),

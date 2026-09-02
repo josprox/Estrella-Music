@@ -45,7 +45,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m11(count) => "${count} modifiche sincronizzate.";
 
-  static String m12(statusCode) =>
+  static String m12(path) => "Backup di recupero: ${path}";
+
+  static String m13(statusCode) =>
       "Impossibile cercare gli utenti (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -545,6 +547,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Seleziona il numero di contenuti nella Home (approssimativo). Meno contenuti porterà ad avere un loading più veloce",
     ),
     "id": MessageLookupByLibrary.simpleMessage("Id"),
+    "identifySongMetadata": MessageLookupByLibrary.simpleMessage(
+      "Identificare i metadati",
+    ),
     "ignoreBatOpt": MessageLookupByLibrary.simpleMessage(
       "Ignora ottimizzazioni batteria",
     ),
@@ -676,6 +681,27 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "manageCollaborators": MessageLookupByLibrary.simpleMessage(
       "Gestire i collaboratori (amici)",
+    ),
+    "metadataApplySuccess": MessageLookupByLibrary.simpleMessage(
+      "I metadati sono stati incorporati nel file locale.",
+    ),
+    "metadataNoResults": MessageLookupByLibrary.simpleMessage(
+      "Nessun riscontro trovato. Prova una ricerca diversa.",
+    ),
+    "metadataOperationFailed": MessageLookupByLibrary.simpleMessage(
+      "L\'operazione dei metadati è fallita.",
+    ),
+    "metadataOverwriteWarning": MessageLookupByLibrary.simpleMessage(
+      "Questo sovrascriverà il titolo, l\'artista, l\'album e coprirà pur mantenendo tutti i campi che la partita non fornisce.",
+    ),
+    "metadataSearchDescription": MessageLookupByLibrary.simpleMessage(
+      "Scegliere la corrispondenza corretta per incorporare il suo titolo, artista, album e copertina nel file locale.",
+    ),
+    "metadataSearchHint": MessageLookupByLibrary.simpleMessage(
+      "Nome di canzone o artista",
+    ),
+    "metadataSearchTitle": MessageLookupByLibrary.simpleMessage(
+      "Identificare la canzone",
     ),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
       "Assicurati che la musica venga riprodotta a un volume sufficientemente alto vicino al microfono.",
@@ -1249,6 +1275,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncDownloading": MessageLookupByLibrary.simpleMessage(
       "Il download di EMusic cambia...",
     ),
+    "syncForceReplaceBackupSaved": m12,
     "syncForceReplaceConfirmAction": MessageLookupByLibrary.simpleMessage(
       "Reemplazar y subir",
     ),
@@ -1258,11 +1285,42 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceConfirmTitle": MessageLookupByLibrary.simpleMessage(
       "¿Reemplazar la biblioteca musical remota?",
     ),
+    "syncForceReplaceCountMismatch": MessageLookupByLibrary.simpleMessage(
+      "I conti caricati non corrispondono alla biblioteca locale. La sostituzione remota non potrebbe essere confermata.",
+    ),
+    "syncForceReplaceCreatingBackup": MessageLookupByLibrary.simpleMessage(
+      "Creazione di un backup di recupero prima di sostituire i dati cloud...",
+    ),
     "syncForceReplaceDescription": MessageLookupByLibrary.simpleMessage(
       "Pausa la sincronización pendiente y reemplaza a la fuerza tu biblioteca musical remota con los datos actuales de este dispositivo. Las descargas permanecen locales.",
     ),
+    "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud non poteva sostituire la libreria remota.",
+    ),
+    "syncForceReplaceFailedLocalPreserved":
+        MessageLookupByLibrary.simpleMessage(
+          "La sostituzione remota non è riuscita. I dati locali e il backup di recupero sono stati conservati.",
+        ),
+    "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
+      "Caricamento non completato",
+    ),
+    "syncForceReplaceInProgress": MessageLookupByLibrary.simpleMessage(
+      "Pausing sync, creare un backup e caricare la libreria locale...",
+    ),
+    "syncForceReplacePauseFailed": MessageLookupByLibrary.simpleMessage(
+      "La sincronizzazione attuale non poteva essere sospesa in modo sicuro. Riprova tra un attimo.",
+    ),
+    "syncForceReplaceSuccess": MessageLookupByLibrary.simpleMessage(
+      "La libreria musicale remota è stata sostituita con i dati attuali di questo dispositivo.",
+    ),
+    "syncForceReplaceSuccessTitle": MessageLookupByLibrary.simpleMessage(
+      "Caricamento completato",
+    ),
     "syncForceReplaceTitle": MessageLookupByLibrary.simpleMessage(
       "Cancelar sincronización y subir ESTA base",
+    ),
+    "syncForceReplaceValidating": MessageLookupByLibrary.simpleMessage(
+      "Convalida della libreria caricata prima di sostituire i dati cloud...",
     ),
     "syncLibrarySynced": MessageLookupByLibrary.simpleMessage(
       "Libreria sincronizzata.",
@@ -1332,11 +1390,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "Url rilevato Cliccando su di esso si apre/riproduce il contenuto associato",
     ),
+    "useThisMetadata": MessageLookupByLibrary.simpleMessage(
+      "Utilizzare questi metadati",
+    ),
     "userBlocked": MessageLookupByLibrary.simpleMessage("Utente bloccato"),
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "La risposta non contiene un elenco di utenti.",
     ),
-    "userSearchFailed": m12,
+    "userSearchFailed": m13,
     "userUnblocked": MessageLookupByLibrary.simpleMessage("Utente sbloccato"),
     "username": MessageLookupByLibrary.simpleMessage("Nome utente"),
     "video": MessageLookupByLibrary.simpleMessage("Video"),

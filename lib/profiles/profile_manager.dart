@@ -104,14 +104,14 @@ class ProfileManager extends GetxService {
       return false;
     }
     try {
+      await ProfileStorageNamespace.activateAndOpen(
+        profileId: profile.id,
+        providerId: profile.providerId,
+      );
       await _providerManager.activate(
         profileId: profile.id,
         providerId: profile.providerId,
         settings: profile.settings,
-      );
-      await ProfileStorageNamespace.activateAndOpen(
-        profileId: profile.id,
-        providerId: profile.providerId,
       );
       final available = profile.copyWith(
         availability: MusicProfileAvailability.available,
@@ -210,14 +210,14 @@ class ProfileManager extends GetxService {
         final state = await _lifecycle.deactivate(previous);
         await _persistence.saveState(previous.id, state);
       }
+      await ProfileStorageNamespace.activateAndOpen(
+        profileId: next.id,
+        providerId: next.providerId,
+      );
       await _providerManager.activate(
         profileId: next.id,
         providerId: next.providerId,
         settings: next.settings,
-      );
-      await ProfileStorageNamespace.activateAndOpen(
-        profileId: next.id,
-        providerId: next.providerId,
       );
       final available = next.copyWith(
         availability: MusicProfileAvailability.available,
@@ -247,14 +247,14 @@ class ProfileManager extends GetxService {
         error.toString(),
       );
       if (previous != null) {
+        await ProfileStorageNamespace.activateAndOpen(
+          profileId: previous.id,
+          providerId: previous.providerId,
+        );
         await _providerManager.activate(
           profileId: previous.id,
           providerId: previous.providerId,
           settings: previous.settings,
-        );
-        await ProfileStorageNamespace.activateAndOpen(
-          profileId: previous.id,
-          providerId: previous.providerId,
         );
         activeProfile.value = previous;
         await _lifecycle.activate(

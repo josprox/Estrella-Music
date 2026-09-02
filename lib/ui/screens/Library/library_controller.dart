@@ -29,6 +29,7 @@ enum LibraryAlbumCollection { tastes, saved, recommended }
 enum LibraryArtistCollection { tastes, followed, recommended }
 
 class LibrarySongsController extends GetxController {
+  final MusicCatalogService _musicServices = Get.find<MusicCatalogService>();
   late RxList<MediaItem> librarySongsList = RxList();
   final isSongFetched = false.obs;
   final selectedCollection = LibrarySongCollection.downloads.obs;
@@ -37,11 +38,17 @@ class LibrarySongsController extends GetxController {
   SortWidgetController? sortWidgetController;
   final additionalOperationMode = OperationMode.none.obs;
   final List<StreamSubscription<dynamic>> _collectionSubscriptions = [];
+  late final Worker _metadataRefreshWorker;
   int _collectionLoadRevision = 0;
 
   @override
   void onInit() {
     super.onInit();
+    _metadataRefreshWorker = interval(
+      _musicServices.automaticMetadataRevision,
+      (_) => refreshCollections(),
+      time: const Duration(seconds: 2),
+    );
     init();
   }
 
@@ -312,6 +319,7 @@ class LibrarySongsController extends GetxController {
 
   @override
   void onClose() {
+    _metadataRefreshWorker.dispose();
     for (final subscription in _collectionSubscriptions) {
       subscription.cancel();
     }
@@ -654,11 +662,17 @@ class LibraryAlbumsController extends GetxController {
   final List<StreamSubscription<dynamic>> _subscriptions = [];
   List<Album> tempListContainer = [];
   Timer? _recommendationRefreshDebounce;
+  late final Worker _metadataRefreshWorker;
   int _recommendationRevision = 0;
 
   @override
   void onInit() {
     super.onInit();
+    _metadataRefreshWorker = interval(
+      _musicServices.automaticMetadataRevision,
+      (_) => refreshLib(),
+      time: const Duration(seconds: 2),
+    );
     refreshLib();
     _watchSources();
   }
@@ -910,6 +924,7 @@ class LibraryAlbumsController extends GetxController {
 
   @override
   void onClose() {
+    _metadataRefreshWorker.dispose();
     _recommendationRefreshDebounce?.cancel();
     for (final subscription in _subscriptions) {
       subscription.cancel();
@@ -932,10 +947,16 @@ class LibraryArtistsController extends GetxController {
   Timer? _recommendationRefreshDebounce;
   int _recommendationRevision = 0;
   int _tastePhotoRevision = 0;
+  late final Worker _metadataRefreshWorker;
 
   @override
   void onInit() {
     super.onInit();
+    _metadataRefreshWorker = interval(
+      _musicServices.automaticMetadataRevision,
+      (_) => refreshLib(),
+      time: const Duration(seconds: 2),
+    );
     refreshLib();
     _watchSources();
   }
@@ -1210,6 +1231,7 @@ class LibraryArtistsController extends GetxController {
 
   @override
   void onClose() {
+    _metadataRefreshWorker.dispose();
     _recommendationRefreshDebounce?.cancel();
     for (final subscription in _subscriptions) {
       subscription.cancel();

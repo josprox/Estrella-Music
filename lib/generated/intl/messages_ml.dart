@@ -45,7 +45,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m11(count) => "${count} സമന്വയിപ്പിച്ച മാറ്റങ്ങൾ.";
 
-  static String m12(statusCode) =>
+  static String m12(path) => "റിക്കവറി ബാക്കപ്പ്:${path}";
+
+  static String m13(statusCode) =>
       "ഉപയോക്താക്കൾക്കായി തിരയാൻ കഴിഞ്ഞില്ല (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -559,6 +561,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "പ്രാരംഭ ഹോം സ്‌ക്രീൻ ഉള്ളടക്കങ്ങളുടെ എണ്ണം തിരഞ്ഞെടുക്കുക (ഏകദേശം.). കുറച്ച് ഫലങ്ങൾ വേഗത്തിൽ ലോഡ് ചെയ്യുന്നു",
     ),
     "id": MessageLookupByLibrary.simpleMessage("ഐഡി"),
+    "identifySongMetadata": MessageLookupByLibrary.simpleMessage(
+      "മെറ്റാഡാറ്റ തിരിച്ചറിയുക",
+    ),
     "ignoreBatOpt": MessageLookupByLibrary.simpleMessage(
       "ബാറ്ററി ഒപ്റ്റിമൈസേഷൻ അവഗണിക്കുക",
     ),
@@ -694,6 +699,27 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "manageCollaborators": MessageLookupByLibrary.simpleMessage(
       "സഹകാരികളെ നിയന്ത്രിക്കുക (സുഹൃത്തുക്കൾ)",
+    ),
+    "metadataApplySuccess": MessageLookupByLibrary.simpleMessage(
+      "മെറ്റാഡാറ്റ ലോക്കൽ ഫയലിൽ ഉൾച്ചേർത്തതാണ്.",
+    ),
+    "metadataNoResults": MessageLookupByLibrary.simpleMessage(
+      "പൊരുത്തങ്ങളൊന്നും കണ്ടെത്തിയില്ല. മറ്റൊരു തിരയൽ ശ്രമിക്കുക.",
+    ),
+    "metadataOperationFailed": MessageLookupByLibrary.simpleMessage(
+      "മെറ്റാഡാറ്റ പ്രവർത്തനം പരാജയപ്പെട്ടു.",
+    ),
+    "metadataOverwriteWarning": MessageLookupByLibrary.simpleMessage(
+      "പൊരുത്തം നൽകാത്ത ഏതെങ്കിലും ഫീൽഡുകൾ സംരക്ഷിക്കുമ്പോൾ ഇത് ഉൾച്ചേർത്ത ശീർഷകം, കലാകാരൻ, ആൽബം, കവർ എന്നിവ തിരുത്തിയെഴുതും.",
+    ),
+    "metadataSearchDescription": MessageLookupByLibrary.simpleMessage(
+      "പ്രാദേശിക ഫയലിൽ അതിന്റെ ശീർഷകം, കലാകാരൻ, ആൽബം, കവർ എന്നിവ ഉൾച്ചേർക്കാൻ ശരിയായ പൊരുത്തം തിരഞ്ഞെടുക്കുക.",
+    ),
+    "metadataSearchHint": MessageLookupByLibrary.simpleMessage(
+      "പാട്ടിന്റെയോ ആർട്ടിസ്റ്റിന്റെയോ പേര്",
+    ),
+    "metadataSearchTitle": MessageLookupByLibrary.simpleMessage(
+      "പാട്ട് തിരിച്ചറിയുക",
     ),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
       "നിങ്ങളുടെ മൈക്രോഫോണിന് സമീപം സംഗീതം വേണ്ടത്ര ഉച്ചത്തിൽ പ്ലേ ചെയ്യുന്നുണ്ടെന്ന് ഉറപ്പാക്കുക.",
@@ -1291,6 +1317,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncDownloading": MessageLookupByLibrary.simpleMessage(
       "EMusic മാറ്റങ്ങൾ ഡൗൺലോഡ് ചെയ്യുന്നു...",
     ),
+    "syncForceReplaceBackupSaved": m12,
     "syncForceReplaceConfirmAction": MessageLookupByLibrary.simpleMessage(
       "റീംപ്ലാസർ വൈ സുബീർ",
     ),
@@ -1300,11 +1327,42 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceConfirmTitle": MessageLookupByLibrary.simpleMessage(
       "Reemplazar la biblioteca music remota?",
     ),
+    "syncForceReplaceCountMismatch": MessageLookupByLibrary.simpleMessage(
+      "അപ്‌ലോഡ് ചെയ്ത എണ്ണങ്ങൾ പ്രാദേശിക ലൈബ്രറിയുമായി പൊരുത്തപ്പെടുന്നില്ല. റിമോട്ട് മാറ്റിസ്ഥാപിക്കൽ സ്ഥിരീകരിക്കാൻ കഴിഞ്ഞില്ല.",
+    ),
+    "syncForceReplaceCreatingBackup": MessageLookupByLibrary.simpleMessage(
+      "ക്ലൗഡ് ഡാറ്റ മാറ്റിസ്ഥാപിക്കുന്നതിന് മുമ്പ് ഒരു റിക്കവറി ബാക്കപ്പ് സൃഷ്ടിക്കുന്നു...",
+    ),
     "syncForceReplaceDescription": MessageLookupByLibrary.simpleMessage(
       "Pausa la sincronización pendiente y reemplaza a la fuerza tu biblioteca music remota con los datos actuales de este dispositivo. Las descargas permanentecen locales.",
     ),
+    "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
+      "EMusic ക്ലൗഡിന് റിമോട്ട് ലൈബ്രറി മാറ്റിസ്ഥാപിക്കാൻ കഴിഞ്ഞില്ല.",
+    ),
+    "syncForceReplaceFailedLocalPreserved":
+        MessageLookupByLibrary.simpleMessage(
+          "റിമോട്ട് മാറ്റിസ്ഥാപിക്കൽ പരാജയപ്പെട്ടു. നിങ്ങളുടെ പ്രാദേശിക ഡാറ്റയും വീണ്ടെടുക്കൽ ബാക്കപ്പും സംരക്ഷിച്ചു.",
+        ),
+    "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
+      "അപ്‌ലോഡ് പൂർത്തിയായിട്ടില്ല",
+    ),
+    "syncForceReplaceInProgress": MessageLookupByLibrary.simpleMessage(
+      "സമന്വയം താൽക്കാലികമായി നിർത്തുന്നു, ഒരു ബാക്കപ്പ് സൃഷ്ടിക്കുന്നു, പ്രാദേശിക ലൈബ്രറി അപ്‌ലോഡ് ചെയ്യുന്നു...",
+    ),
+    "syncForceReplacePauseFailed": MessageLookupByLibrary.simpleMessage(
+      "നിലവിലെ സമന്വയം സുരക്ഷിതമായി താൽക്കാലികമായി നിർത്താൻ കഴിഞ്ഞില്ല. ഒരു നിമിഷത്തിനുള്ളിൽ വീണ്ടും ശ്രമിക്കുക.",
+    ),
+    "syncForceReplaceSuccess": MessageLookupByLibrary.simpleMessage(
+      "ഈ ഉപകരണത്തിന്റെ നിലവിലെ ഡാറ്റ ഉപയോഗിച്ച് റിമോട്ട് മ്യൂസിക് ലൈബ്രറി മാറ്റിസ്ഥാപിച്ചു.",
+    ),
+    "syncForceReplaceSuccessTitle": MessageLookupByLibrary.simpleMessage(
+      "അപ്‌ലോഡ് പൂർത്തിയായി",
+    ),
     "syncForceReplaceTitle": MessageLookupByLibrary.simpleMessage(
       "Cancelar sincronización y subir esta base",
+    ),
+    "syncForceReplaceValidating": MessageLookupByLibrary.simpleMessage(
+      "ക്ലൗഡ് ഡാറ്റ മാറ്റിസ്ഥാപിക്കുന്നതിന് മുമ്പ് അപ്‌ലോഡ് ചെയ്ത ലൈബ്രറി സാധൂകരിക്കുന്നു...",
     ),
     "syncLibrarySynced": MessageLookupByLibrary.simpleMessage(
       "സമന്വയിപ്പിച്ച ലൈബ്രറി.",
@@ -1372,11 +1430,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "ബന്ധപ്പെട്ട ഉള്ളടക്കം തുറക്കാൻ/പ്ലേ ചെയ്യാൻ കണ്ടെത്തിയ URL അതിൽ ക്ലിക്ക് ചെയ്യുക",
     ),
+    "useThisMetadata": MessageLookupByLibrary.simpleMessage(
+      "ഈ മെറ്റാഡാറ്റ ഉപയോഗിക്കുക",
+    ),
     "userBlocked": MessageLookupByLibrary.simpleMessage("തടഞ്ഞ ഉപയോക്താവ്"),
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "പ്രതികരണത്തിൽ ഉപയോക്താക്കളുടെ ഒരു ലിസ്റ്റ് അടങ്ങിയിട്ടില്ല.",
     ),
-    "userSearchFailed": m12,
+    "userSearchFailed": m13,
     "userUnblocked": MessageLookupByLibrary.simpleMessage(
       "അൺലോക്ക് ചെയ്ത ഉപയോക്താവ്",
     ),

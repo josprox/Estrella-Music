@@ -62,7 +62,7 @@ class _PermissionConsentGateState extends State<PermissionConsentGate>
         if (Get.isRegistered<MusicCatalogService>()) {
           final catalog = Get.find<MusicCatalogService>();
           try {
-            await catalog.provider.refresh();
+            await catalog.refresh();
           } catch (_) {}
         }
         await ProfileSwitcher.refreshActiveContext();

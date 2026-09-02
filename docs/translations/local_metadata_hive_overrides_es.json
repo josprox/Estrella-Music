@@ -1,0 +1,5 @@
+{
+  "metadataApplySuccess": "Los metadatos se guardaron para esta canción.",
+  "metadataOverwriteWarning": "Esto reemplazará el título, artista, álbum y portada mostrados en el perfil local, conservando los campos que la coincidencia no proporcione.",
+  "metadataSearchDescription": "Elige la coincidencia correcta para guardar su título, artista, álbum y portada. El archivo de audio no se modificará."
+}

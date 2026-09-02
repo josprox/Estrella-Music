@@ -8,6 +8,7 @@ import 'package:estrella_music/music_provider/models/provider_capabilities.dart'
 import 'package:estrella_music/music_provider/models/provider_entities.dart';
 import 'package:estrella_music/music_provider/music_catalog_service.dart';
 import 'package:estrella_music/music_provider/music_download_provider.dart';
+import 'package:estrella_music/music_provider/music_metadata_editor.dart';
 import 'package:estrella_music/music_provider/music_provider.dart';
 import 'package:estrella_music/music_provider/music_provider_manager.dart';
 import 'package:estrella_music/profiles/music_profile.dart';
@@ -102,6 +103,7 @@ Future<_CatalogFixture> _catalogFixture() async {
     catalog: MusicCatalogService(
       providerManager: manager,
       profileManager: profiles,
+      metadataProvider: _CountingProvider('metadata.public'),
     ),
   );
 }
@@ -128,7 +130,11 @@ class _CatalogFixture {
   final MusicCatalogService catalog;
 }
 
-class _CountingProvider implements MusicProvider, MusicDownloadProvider {
+class _CountingProvider
+    implements
+        MusicProvider,
+        MusicDownloadProvider,
+        MusicMetadataSearchProvider {
   _CountingProvider(this.id);
 
   @override
@@ -203,6 +209,13 @@ class _CountingProvider implements MusicProvider, MusicDownloadProvider {
   @override
   Future<ProviderSearchResults> search(String query) async =>
       const ProviderSearchResults();
+
+  @override
+  Future<List<TrackMetadataCandidate>> searchMetadata(
+    String query, {
+    int limit = 20,
+  }) async =>
+      const [];
 }
 
 class _MemoryProfilePersistence implements ProfilePersistence {

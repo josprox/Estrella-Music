@@ -44,9 +44,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m11(count) => "${count} cambios sincronizados.";
 
-  static String m13(path) => "Respaldo de recuperación: ${path}";
+  static String m12(path) => "Respaldo de recuperación: ${path}";
 
-  static String m12(statusCode) =>
+  static String m13(statusCode) =>
       "No se pudo buscar usuarios (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -558,6 +558,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Selecciona el número de contenidos iniciales de la pantalla de inicio (aprox.). Menos resultados cargan más rápido",
     ),
     "id": MessageLookupByLibrary.simpleMessage("Id"),
+    "identifySongMetadata": MessageLookupByLibrary.simpleMessage(
+      "Identificar metadatos",
+    ),
     "ignoreBatOpt": MessageLookupByLibrary.simpleMessage(
       "Ignorar optimización de batería",
     ),
@@ -695,6 +698,27 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "manageCollaborators": MessageLookupByLibrary.simpleMessage(
       "Gestionar colaboradores (amigos)",
+    ),
+    "metadataApplySuccess": MessageLookupByLibrary.simpleMessage(
+      "Los metadatos se guardaron para esta canción.",
+    ),
+    "metadataNoResults": MessageLookupByLibrary.simpleMessage(
+      "No se encontraron coincidencias. Intenta otra búsqueda.",
+    ),
+    "metadataOperationFailed": MessageLookupByLibrary.simpleMessage(
+      "No se pudo completar la operación de metadatos.",
+    ),
+    "metadataOverwriteWarning": MessageLookupByLibrary.simpleMessage(
+      "Esto reemplazará el título, artista, álbum y portada mostrados en el perfil local, conservando los campos que la coincidencia no proporcione.",
+    ),
+    "metadataSearchDescription": MessageLookupByLibrary.simpleMessage(
+      "Elige la coincidencia correcta para guardar su título, artista, álbum y portada. El archivo de audio no se modificará.",
+    ),
+    "metadataSearchHint": MessageLookupByLibrary.simpleMessage(
+      "Nombre de la canción o artista",
+    ),
+    "metadataSearchTitle": MessageLookupByLibrary.simpleMessage(
+      "Identificar canción",
     ),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
       "Asegúrate de que la música suene con suficiente volumen cerca de tu micrófono.",
@@ -1282,7 +1306,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncDownloading": MessageLookupByLibrary.simpleMessage(
       "Descargando cambios de EMusic...",
     ),
-    "syncForceReplaceBackupSaved": m13,
+    "syncForceReplaceBackupSaved": m12,
     "syncForceReplaceConfirmAction": MessageLookupByLibrary.simpleMessage(
       "Reemplazar y subir",
     ),
@@ -1304,9 +1328,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
       "EMusic Cloud no pudo reemplazar la biblioteca remota.",
     ),
-    "syncForceReplaceFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
-      "Falló el reemplazo remoto. Tus datos locales y el respaldo de recuperación se conservaron.",
-    ),
+    "syncForceReplaceFailedLocalPreserved":
+        MessageLookupByLibrary.simpleMessage(
+          "Falló el reemplazo remoto. Tus datos locales y el respaldo de recuperación se conservaron.",
+        ),
     "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
       "No se completó la subida",
     ),
@@ -1396,11 +1421,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "URL detectada haz clic en ella para abrir/reproducir el contenido asociado",
     ),
+    "useThisMetadata": MessageLookupByLibrary.simpleMessage(
+      "Usar estos metadatos",
+    ),
     "userBlocked": MessageLookupByLibrary.simpleMessage("Usuario bloqueado"),
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "La respuesta no contiene una lista de usuarios.",
     ),
-    "userSearchFailed": m12,
+    "userSearchFailed": m13,
     "userUnblocked": MessageLookupByLibrary.simpleMessage(
       "Usuario desbloqueado",
     ),

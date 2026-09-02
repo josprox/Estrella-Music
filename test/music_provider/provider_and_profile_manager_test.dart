@@ -10,6 +10,7 @@ import 'package:estrella_music/music_provider/providers/local_music_provider.dar
 import 'package:estrella_music/profiles/music_profile.dart';
 import 'package:estrella_music/profiles/profile_manager.dart';
 import 'package:estrella_music/profiles/profile_persistence.dart';
+import 'package:estrella_music/profiles/profile_storage_namespace.dart';
 
 void main() {
   tearDown(Get.reset);
@@ -31,6 +32,17 @@ void main() {
     await profiles.initialize();
     expect(profiles.activeProfile.value?.providerId,
         LocalMusicProvider.providerId);
+    final localProvider = providers
+        .instanceForProfile(ProfileManager.defaultLocalProfileId)!
+        .provider as _FakeProvider;
+    expect(
+      localProvider.storageProfileIdAtInitialize,
+      ProfileManager.defaultLocalProfileId,
+    );
+    expect(
+      localProvider.storageProviderIdAtInitialize,
+      LocalMusicProvider.providerId,
+    );
     expect(providers.availableProviderIds,
         containsAll(['estrella.local', 'joss.emusic']));
 
@@ -45,6 +57,10 @@ void main() {
     expect(
         providers.instanceForProfile(personal.id)?.capabilities.search, isTrue);
     expect(profiles.activeProfileMaySync, isTrue);
+    final personalProvider =
+        providers.instanceForProfile(personal.id)!.provider as _FakeProvider;
+    expect(personalProvider.storageProfileIdAtInitialize, personal.id);
+    expect(personalProvider.storageProviderIdAtInitialize, 'joss.emusic');
     expect(
         lifecycle.deactivated, contains(ProfileManager.defaultLocalProfileId));
 
@@ -175,6 +191,8 @@ class _FakeProvider implements MusicProvider {
   final bool sync;
   final bool fail;
   String profileId = '';
+  String? storageProfileIdAtInitialize;
+  String? storageProviderIdAtInitialize;
 
   @override
   String get displayName => id;
@@ -189,6 +207,8 @@ class _FakeProvider implements MusicProvider {
   Future<void> initialize(MusicProviderContext context) async {
     if (fail) throw StateError('failed');
     profileId = context.profileId;
+    storageProfileIdAtInitialize = ProfileStorageNamespace.activeProfileId;
+    storageProviderIdAtInitialize = ProfileStorageNamespace.activeProviderId;
   }
 
   @override

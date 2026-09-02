@@ -177,6 +177,9 @@ class FcmNotificationService {
 
   static Future<bool> _registerCurrentToken({required bool force}) async {
     try {
+      if (Firebase.apps.isEmpty) {
+        return false;
+      }
       final jwt = await SafeSecureStorage.read('jwt_token');
       var base = dotenv.env['JOSSRED']?.trim();
       final deviceToken = await FirebaseMessaging.instance.getToken();
@@ -239,6 +242,9 @@ class FcmNotificationService {
 
   static Future<void> unregisterCurrentToken() async {
     try {
+      if (Firebase.apps.isEmpty) {
+        return;
+      }
       final jwt = await SafeSecureStorage.read('jwt_token');
       var base = dotenv.env['JOSSRED']?.trim();
       final deviceToken = await FirebaseMessaging.instance.getToken();

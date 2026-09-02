@@ -44,7 +44,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m11(count) => "${count} synkronoidut muutokset.";
 
-  static String m12(statusCode) => "Käyttäjiä ei voitu etsiä (${statusCode}).";
+  static String m12(path) => "Palautusapu: ${path}";
+
+  static String m13(statusCode) => "Käyttäjiä ei voitu etsiä (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -537,6 +539,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Valitse lähtökohtainen aloitusnäkymän sisällön määrä. Pienempi määrä latautuu nopeammin",
     ),
     "id": MessageLookupByLibrary.simpleMessage("ID"),
+    "identifySongMetadata": MessageLookupByLibrary.simpleMessage(
+      "Tunnista metatiedot",
+    ),
     "ignoreBatOpt": MessageLookupByLibrary.simpleMessage(
       "Poista akun optimointi käytöstä",
     ),
@@ -666,6 +671,27 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "manageCollaborators": MessageLookupByLibrary.simpleMessage(
       "Hallinnoi yhteistyökumppaneita (ystäviä)",
+    ),
+    "metadataApplySuccess": MessageLookupByLibrary.simpleMessage(
+      "Metadata oli upotettu paikalliseen tiedostoon.",
+    ),
+    "metadataNoResults": MessageLookupByLibrary.simpleMessage(
+      "Ei osumia. Kokeile toista etsintää.",
+    ),
+    "metadataOperationFailed": MessageLookupByLibrary.simpleMessage(
+      "Metatiedot epäonnistuivat.",
+    ),
+    "metadataOverwriteWarning": MessageLookupByLibrary.simpleMessage(
+      "Tämä korvaa sulautettu otsikko, taiteilija, albumi ja kattaa samalla säilyttäen kaikki kentät ottelu ei tarjoa.",
+    ),
+    "metadataSearchDescription": MessageLookupByLibrary.simpleMessage(
+      "Valitse oikea ottelu upottaa otsikko, taiteilija, albumi ja kansi paikalliseen tiedostoon.",
+    ),
+    "metadataSearchHint": MessageLookupByLibrary.simpleMessage(
+      "Kappaleen tai esittäjän nimi",
+    ),
+    "metadataSearchTitle": MessageLookupByLibrary.simpleMessage(
+      "Tunnista kappale",
     ),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
       "Varmista, että musiikki soi tarpeeksi kovaa mikrofonin lähellä.",
@@ -1245,17 +1271,51 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncDownloading": MessageLookupByLibrary.simpleMessage(
       "Ladataan EMusic-muutoksia...",
     ),
+    "syncForceReplaceBackupSaved": m12,
     "syncForceReplaceConfirmAction": MessageLookupByLibrary.simpleMessage(
       "Reemplazar y subir",
     ),
     "syncForceReplaceConfirmBody": MessageLookupByLibrary.simpleMessage(
       "Primero se creará un respaldo de recuperación. Después, las playlists, favoritos, historical, álbumes, artistas y ajustes musicales de EMusic Cloud se reemplazarán con los datos actuales de este dispositivo. No se puede deshacer desde el servidor.",
     ),
+    "syncForceReplaceConfirmTitle": MessageLookupByLibrary.simpleMessage(
+      "Korvaatko etämusiikkikirjaston?",
+    ),
+    "syncForceReplaceCountMismatch": MessageLookupByLibrary.simpleMessage(
+      "Ladatut määrät eivät täsmää paikalliseen kirjastoon. Kaukovaihtoa ei voitu vahvistaa.",
+    ),
+    "syncForceReplaceCreatingBackup": MessageLookupByLibrary.simpleMessage(
+      "Luodaan varmuuskopio ennen pilvitietojen korvaamista...",
+    ),
     "syncForceReplaceDescription": MessageLookupByLibrary.simpleMessage(
       "Pausa la sincronización pendiente y reemplaza a la fuerza tu biblioteca musical remota con los datos actuales de este dispositivo. Las descargas permanecen locales.",
     ),
+    "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
+      "Emusic Cloud ei voinut korvata etäkirjastoa.",
+    ),
+    "syncForceReplaceFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
+      "Kauko-ohjain epäonnistui. Paikalliset tietosi ja apujoukkosi säilyivät.",
+    ),
+    "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
+      "Lataa ei ole valmis",
+    ),
+    "syncForceReplaceInProgress": MessageLookupByLibrary.simpleMessage(
+      "Pysäytä synkronointi, luo varmuuskopio ja lataa paikallinen kirjasto...",
+    ),
+    "syncForceReplacePauseFailed": MessageLookupByLibrary.simpleMessage(
+      "Nykyinen synkronointi ei voinut pysähtyä turvallisesti. Yritä uudelleen hetken päästä.",
+    ),
+    "syncForceReplaceSuccess": MessageLookupByLibrary.simpleMessage(
+      "Etämusiikkikirjasto korvattiin tämän laitteen nykyisillä tiedoilla.",
+    ),
+    "syncForceReplaceSuccessTitle": MessageLookupByLibrary.simpleMessage(
+      "Lähetys valmis",
+    ),
     "syncForceReplaceTitle": MessageLookupByLibrary.simpleMessage(
       "Cancelar sincronización y subir esta base",
+    ),
+    "syncForceReplaceValidating": MessageLookupByLibrary.simpleMessage(
+      "Ladatun kirjaston validointi ennen pilvitietojen korvaamista...",
     ),
     "syncLibrarySynced": MessageLookupByLibrary.simpleMessage(
       "Synkronoitu kirjasto.",
@@ -1323,11 +1383,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "Havaittu URL-osoite napsauttamalla sitä avataksesi tai toistaaksesi siihen liittyvän sisällön",
     ),
+    "useThisMetadata": MessageLookupByLibrary.simpleMessage(
+      "Käytä tätä metadataa",
+    ),
     "userBlocked": MessageLookupByLibrary.simpleMessage("Estetty käyttäjä"),
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "Vastaus ei sisällä luetteloa käyttäjistä.",
     ),
-    "userSearchFailed": m12,
+    "userSearchFailed": m13,
     "userUnblocked": MessageLookupByLibrary.simpleMessage("Avattu käyttäjä"),
     "username": MessageLookupByLibrary.simpleMessage("Käyttäjätunnus"),
     "video": MessageLookupByLibrary.simpleMessage("Video"),

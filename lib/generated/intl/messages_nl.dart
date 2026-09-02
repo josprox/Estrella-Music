@@ -45,7 +45,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m11(count) => "${count} gesynchroniseerde wijzigingen.";
 
-  static String m12(statusCode) =>
+  static String m12(path) => "Herstel back-up: ${path}";
+
+  static String m13(statusCode) =>
       "Kan niet zoeken naar gebruikers (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -543,6 +545,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Selecteer het nummer van initiële homescherminhoud(gemiddeld). Minder resultaten sneller laden",
     ),
     "id": MessageLookupByLibrary.simpleMessage("Identiteitskaart"),
+    "identifySongMetadata": MessageLookupByLibrary.simpleMessage(
+      "Metadata identificeren",
+    ),
     "ignoreBatOpt": MessageLookupByLibrary.simpleMessage(
       "Negeer batterij optimalisatie",
     ),
@@ -668,6 +673,27 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "manageCollaborators": MessageLookupByLibrary.simpleMessage(
       "Beheer bijdragers (vrienden)",
+    ),
+    "metadataApplySuccess": MessageLookupByLibrary.simpleMessage(
+      "Metadata werd ingebed in het lokale bestand.",
+    ),
+    "metadataNoResults": MessageLookupByLibrary.simpleMessage(
+      "Geen overeenkomsten gevonden. Probeer een andere zoektocht.",
+    ),
+    "metadataOperationFailed": MessageLookupByLibrary.simpleMessage(
+      "De metadata-operatie is mislukt.",
+    ),
+    "metadataOverwriteWarning": MessageLookupByLibrary.simpleMessage(
+      "Dit zal de embedded titel, artiest, album en cover overschrijven met behoud van alle velden die de match niet biedt.",
+    ),
+    "metadataSearchDescription": MessageLookupByLibrary.simpleMessage(
+      "Kies de juiste match om de titel, artiest, album en cover in het lokale bestand in te sluiten.",
+    ),
+    "metadataSearchHint": MessageLookupByLibrary.simpleMessage(
+      "Naam nummer of artiest",
+    ),
+    "metadataSearchTitle": MessageLookupByLibrary.simpleMessage(
+      "Nummer identificeren",
     ),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
       "Zorg ervoor dat de muziek luid genoeg staat in de buurt van uw microfoon.",
@@ -1257,6 +1283,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncDownloading": MessageLookupByLibrary.simpleMessage(
       "EMusic-wijzigingen downloaden...",
     ),
+    "syncForceReplaceBackupSaved": m12,
     "syncForceReplaceConfirmAction": MessageLookupByLibrary.simpleMessage(
       "Reemplazar y subir",
     ),
@@ -1266,11 +1293,42 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceConfirmTitle": MessageLookupByLibrary.simpleMessage(
       "¿Reemplazar la biblioteca muzikale remota?",
     ),
+    "syncForceReplaceCountMismatch": MessageLookupByLibrary.simpleMessage(
+      "De geüploade nummers komen niet overeen met de lokale bibliotheek. Vervanging op afstand kon niet worden bevestigd.",
+    ),
+    "syncForceReplaceCreatingBackup": MessageLookupByLibrary.simpleMessage(
+      "Een reservekopie maken voor het vervangen van cloudgegevens...",
+    ),
     "syncForceReplaceDescription": MessageLookupByLibrary.simpleMessage(
       "Pausa la sincronización pendiente y reemplaza a la fuerza tu biblioteca musical remota con los datos actuales de este dispositivo. Las descargas permanecen locales.",
     ),
+    "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud kon de externe bibliotheek niet vervangen.",
+    ),
+    "syncForceReplaceFailedLocalPreserved":
+        MessageLookupByLibrary.simpleMessage(
+          "De remote vervanging is mislukt. Uw lokale gegevens en herstel back-up werden bewaard.",
+        ),
+    "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
+      "Upload niet voltooid",
+    ),
+    "syncForceReplaceInProgress": MessageLookupByLibrary.simpleMessage(
+      "Sync pauzeren, een back-up maken en de lokale bibliotheek uploaden...",
+    ),
+    "syncForceReplacePauseFailed": MessageLookupByLibrary.simpleMessage(
+      "De huidige synchronisatie kon niet veilig worden gepauzeerd. Probeer het zo nog eens.",
+    ),
+    "syncForceReplaceSuccess": MessageLookupByLibrary.simpleMessage(
+      "De externe muziekbibliotheek werd vervangen door de huidige gegevens van dit apparaat.",
+    ),
+    "syncForceReplaceSuccessTitle": MessageLookupByLibrary.simpleMessage(
+      "Upload voltooid",
+    ),
     "syncForceReplaceTitle": MessageLookupByLibrary.simpleMessage(
       "Cancelar sincronización y subir ESTA base",
+    ),
+    "syncForceReplaceValidating": MessageLookupByLibrary.simpleMessage(
+      "De geüploade bibliotheek valideren voordat de cloudgegevens worden vervangen...",
     ),
     "syncLibrarySynced": MessageLookupByLibrary.simpleMessage(
       "Gesynchroniseerde bibliotheek.",
@@ -1332,13 +1390,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "Gedetecteerde URL klik erop om de bijbehorende inhoud te openen/af te spelen",
     ),
+    "useThisMetadata": MessageLookupByLibrary.simpleMessage(
+      "Gebruik deze metadata",
+    ),
     "userBlocked": MessageLookupByLibrary.simpleMessage(
       "Geblokkeerde gebruiker",
     ),
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "Het antwoord bevat geen lijst met gebruikers.",
     ),
-    "userSearchFailed": m12,
+    "userSearchFailed": m13,
     "userUnblocked": MessageLookupByLibrary.simpleMessage(
       "Ontgrendelde gebruiker",
     ),

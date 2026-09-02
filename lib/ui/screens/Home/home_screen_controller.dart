@@ -53,6 +53,7 @@ class HomeScreenController extends GetxController {
 
   final exploreNetworkError = false.obs;
   final List<StreamSubscription<dynamic>> _localSectionSubscriptions = [];
+  late final Worker _metadataRefreshWorker;
   Timer? _localSectionsRefreshDebounce;
   Timer? _recommendationsDelay;
   Future<void>? _activeContentLoad;
@@ -61,6 +62,15 @@ class HomeScreenController extends GetxController {
   @override
   onInit() {
     super.onInit();
+    _metadataRefreshWorker = interval(
+      _musicServices.automaticMetadataRevision,
+      (_) {
+        final title = quickPicks.value.title;
+        quickPicks.value = QuickPicks([], title: title);
+        unawaited(loadLocalCustomSections());
+      },
+      time: const Duration(seconds: 5),
+    );
     _watchLocalSections();
     _initAndLoad();
   }
@@ -114,6 +124,17 @@ class HomeScreenController extends GetxController {
         }),
       );
     }
+  }
+
+  @override
+  void onClose() {
+    _metadataRefreshWorker.dispose();
+    _localSectionsRefreshDebounce?.cancel();
+    _recommendationsDelay?.cancel();
+    for (final subscription in _localSectionSubscriptions) {
+      subscription.cancel();
+    }
+    super.onClose();
   }
 
   Future<void> _loadDailyDiscover() async {

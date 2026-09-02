@@ -46,7 +46,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m11(count) => "${count} senkronize edilmiş değişiklikler.";
 
-  static String m12(statusCode) => "Kullanıcılar aranamadı (${statusCode}).";
+  static String m12(path) => "Kurtarma yedekleme: ${path}";
+
+  static String m13(statusCode) => "Kullanıcılar aranamadı (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -539,6 +541,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Ana sayfadaki içerik sayısını seçin (yaklaşık olarak). Daha az içerik daha hızlı yükleme sağlar",
     ),
     "id": MessageLookupByLibrary.simpleMessage("Kimlik"),
+    "identifySongMetadata": MessageLookupByLibrary.simpleMessage("Metadata"),
     "ignoreBatOpt": MessageLookupByLibrary.simpleMessage(
       "Pil iyileştirmesine aldırma",
     ),
@@ -666,6 +669,27 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "manageCollaborators": MessageLookupByLibrary.simpleMessage(
       "Ortak çalışanları (arkadaşlar) yönetin",
+    ),
+    "metadataApplySuccess": MessageLookupByLibrary.simpleMessage(
+      "Metadata yerel dosyada gömüldü.",
+    ),
+    "metadataNoResults": MessageLookupByLibrary.simpleMessage(
+      "Hiçbir maç bulunamadı. Farklı bir arama deneyin.",
+    ),
+    "metadataOperationFailed": MessageLookupByLibrary.simpleMessage(
+      "Metadata operasyonu başarısız oldu.",
+    ),
+    "metadataOverwriteWarning": MessageLookupByLibrary.simpleMessage(
+      "Bu, gömülü başlığı, sanatçı, albümünü yazacak ve maçın sağlamadığı herhangi bir alanı korurken kapsayacak.",
+    ),
+    "metadataSearchDescription": MessageLookupByLibrary.simpleMessage(
+      "Adına, sanatçıya, albüme sahip olmak için doğru maçı seçin.",
+    ),
+    "metadataSearchHint": MessageLookupByLibrary.simpleMessage(
+      "Song or artist name",
+    ),
+    "metadataSearchTitle": MessageLookupByLibrary.simpleMessage(
+      "Şarkıyı tanımlamak",
     ),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
       "Müziğin mikrofonunuzun yakınında yeterince yüksek sesle çalındığından emin olun.",
@@ -1223,6 +1247,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncDownloading": MessageLookupByLibrary.simpleMessage(
       "EMusic değişiklikleri indiriliyor...",
     ),
+    "syncForceReplaceBackupSaved": m12,
     "syncForceReplaceConfirmAction": MessageLookupByLibrary.simpleMessage(
       "Reemplazar y subir",
     ),
@@ -1232,11 +1257,42 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceConfirmTitle": MessageLookupByLibrary.simpleMessage(
       "¿Reemplazar la biblioteca müzikal remota?",
     ),
+    "syncForceReplaceCountMismatch": MessageLookupByLibrary.simpleMessage(
+      "Yüklenen sayılar yerel kütüphaneyle eşleşmez. Uzaktan yedek onaylanmadı.",
+    ),
+    "syncForceReplaceCreatingBackup": MessageLookupByLibrary.simpleMessage(
+      "Bulut verilerini değiştirmeden önce bir kurtarma yedeklemesi oluşturmak...",
+    ),
     "syncForceReplaceDescription": MessageLookupByLibrary.simpleMessage(
       "Pausa la sincronización pendiente y reemplaza a la fuerza tu biblioteca musical remota con los datos actuales de este dispositivo. Las descargas permanentecen locales.",
     ),
+    "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
+      "EMüzik Bulut uzak kütüphaneyi değiştiremedi.",
+    ),
+    "syncForceReplaceFailedLocalPreserved":
+        MessageLookupByLibrary.simpleMessage(
+          "Uzak yedek başarısız oldu. Yerel verileriniz ve kurtarma yedeklemeniz korunmuştu.",
+        ),
+    "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
+      "Yükleme tamamlanmadı",
+    ),
+    "syncForceReplaceInProgress": MessageLookupByLibrary.simpleMessage(
+      "Pausing senkronizasyonu, bir yedek oluşturmak ve yerel kütüphaneyi yüklemek...",
+    ),
+    "syncForceReplacePauseFailed": MessageLookupByLibrary.simpleMessage(
+      "Mevcut senkronizasyon güvenli bir şekilde durdurulamadı. Bir anda tekrar deneyin.",
+    ),
+    "syncForceReplaceSuccess": MessageLookupByLibrary.simpleMessage(
+      "Uzak müzik kütüphanesi bu cihazın mevcut verileri ile değiştirildi.",
+    ),
+    "syncForceReplaceSuccessTitle": MessageLookupByLibrary.simpleMessage(
+      "Yükleme tamamlandı",
+    ),
     "syncForceReplaceTitle": MessageLookupByLibrary.simpleMessage(
       "Cancelar sincronización y subir esta üssü",
+    ),
+    "syncForceReplaceValidating": MessageLookupByLibrary.simpleMessage(
+      "Bulut verilerini değiştirmeden önce yüklenen kütüphaneyi doğrulamak...",
     ),
     "syncLibrarySynced": MessageLookupByLibrary.simpleMessage(
       "Senkronize kütüphane.",
@@ -1304,11 +1360,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "URL algılandı, ilgili içeriği açmak/oynatmak için üzerine tıklayın",
     ),
+    "useThisMetadata": MessageLookupByLibrary.simpleMessage(
+      "Bu metadata kullanın",
+    ),
     "userBlocked": MessageLookupByLibrary.simpleMessage("Kullanıcı engellendi"),
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "Yanıt, kullanıcıların listesini içermiyor.",
     ),
-    "userSearchFailed": m12,
+    "userSearchFailed": m13,
     "userUnblocked": MessageLookupByLibrary.simpleMessage(
       "Kilidi açılmış kullanıcı",
     ),

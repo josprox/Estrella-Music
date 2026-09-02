@@ -44,7 +44,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m11(count) => "${count} تغییرات همگام شده.";
 
-  static String m12(statusCode) =>
+  static String m12(path) => "پشتیبان گیری بازیابی: ${path}";
+
+  static String m13(statusCode) =>
       "جستجو برای کاربران امکان‌پذیر نیست (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -528,6 +530,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "تعداد محتوای اولیه خانه را مشخص کنید (حدودی). عدد کمتر باعث بارگذاری سریعتر می‌شود",
     ),
     "id": MessageLookupByLibrary.simpleMessage("شناسه"),
+    "identifySongMetadata": MessageLookupByLibrary.simpleMessage(
+      "شناسایی metadata",
+    ),
     "ignoreBatOpt": MessageLookupByLibrary.simpleMessage(
       "بهینه سازی باتری را نادیده بگیرید",
     ),
@@ -656,6 +661,25 @@ class MessageLookup extends MessageLookupByLibrary {
     "manageCollaborators": MessageLookupByLibrary.simpleMessage(
       "مدیریت همکاران (دوستان)",
     ),
+    "metadataApplySuccess": MessageLookupByLibrary.simpleMessage(
+      "متاداده در فایل محلی جاسازی شده است.",
+    ),
+    "metadataNoResults": MessageLookupByLibrary.simpleMessage(
+      "هیچ مسابقه ای پیدا نشد. یک جستجوی متفاوت را امتحان کنید.",
+    ),
+    "metadataOperationFailed": MessageLookupByLibrary.simpleMessage(
+      "عملیات ابرداده شکست خورد.",
+    ),
+    "metadataOverwriteWarning": MessageLookupByLibrary.simpleMessage(
+      "این عنوان جاسازی شده، هنرمند، آلبوم و پوشش را در حالی که حفظ هر زمینه ای که بازی ارائه نمی دهد، بازنویسی می کند.",
+    ),
+    "metadataSearchDescription": MessageLookupByLibrary.simpleMessage(
+      "بازی صحیح را برای جاسازی عنوان، هنرمند، آلبوم و پوشش در فایل محلی انتخاب کنید.",
+    ),
+    "metadataSearchHint": MessageLookupByLibrary.simpleMessage(
+      "نام آهنگ یا هنرمند",
+    ),
+    "metadataSearchTitle": MessageLookupByLibrary.simpleMessage("نام آهنگ"),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
       "مطمئن شوید که موسیقی با صدای کافی در نزدیکی میکروفون شما پخش می شود.",
     ),
@@ -1220,6 +1244,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncDownloading": MessageLookupByLibrary.simpleMessage(
       "در حال دانلود تغییرات EMusic...",
     ),
+    "syncForceReplaceBackupSaved": m12,
     "syncForceReplaceConfirmAction": MessageLookupByLibrary.simpleMessage(
       "ریمپلازار و سابیر",
     ),
@@ -1229,11 +1254,42 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceConfirmTitle": MessageLookupByLibrary.simpleMessage(
       "¿Reemplazar la biblioteca musical remota؟",
     ),
+    "syncForceReplaceCountMismatch": MessageLookupByLibrary.simpleMessage(
+      "تعداد آپلود شده با کتابخانه محلی مطابقت ندارد. جایگزینی از راه دور را نمی توان تایید کرد.",
+    ),
+    "syncForceReplaceCreatingBackup": MessageLookupByLibrary.simpleMessage(
+      "ایجاد یک پشتیبان بازیابی قبل از جایگزینی داده های ابر",
+    ),
     "syncForceReplaceDescription": MessageLookupByLibrary.simpleMessage(
       "Pausa la sincronización pendiente y reemplaza a la fuerza tu biblioteca musical remota con los datos actuales de este dispositivo. Las descargas permanecen locales.",
     ),
+    "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud نمی تواند جایگزین کتابخانه از راه دور شود.",
+    ),
+    "syncForceReplaceFailedLocalPreserved":
+        MessageLookupByLibrary.simpleMessage(
+          "جایگزینی از راه دور شکست خورد. اطلاعات محلی و پشتیبان گیری بازیابی شما حفظ شده است.",
+        ),
+    "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
+      "آپلود نکردن تکمیل نشده",
+    ),
+    "syncForceReplaceInProgress": MessageLookupByLibrary.simpleMessage(
+      "استفاده از همگام سازی، ایجاد پشتیبان و آپلود کتابخانه محلی",
+    ),
+    "syncForceReplacePauseFailed": MessageLookupByLibrary.simpleMessage(
+      "هماهنگی فعلی نمی تواند با خیال راحت متوقف شود. دوباره در یک لحظه امتحان کنید.",
+    ),
+    "syncForceReplaceSuccess": MessageLookupByLibrary.simpleMessage(
+      "کتابخانه موسیقی از راه دور با داده های فعلی این دستگاه جایگزین شد.",
+    ),
+    "syncForceReplaceSuccessTitle": MessageLookupByLibrary.simpleMessage(
+      "آپلود تکمیل شده",
+    ),
     "syncForceReplaceTitle": MessageLookupByLibrary.simpleMessage(
       "لغو sincronización y subir esta base",
+    ),
+    "syncForceReplaceValidating": MessageLookupByLibrary.simpleMessage(
+      "اعتبار کتابخانه آپلود شده قبل از جایگزینی داده های ابر",
     ),
     "syncLibrarySynced": MessageLookupByLibrary.simpleMessage(
       "کتابخانه همگام شده",
@@ -1295,11 +1351,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "URL شناسایی شده روی آن کلیک کنید تا محتوای مرتبط باز شود/باز شود",
     ),
+    "useThisMetadata": MessageLookupByLibrary.simpleMessage(
+      "استفاده از این متاداده",
+    ),
     "userBlocked": MessageLookupByLibrary.simpleMessage("کاربر مسدود شده"),
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "پاسخ شامل لیستی از کاربران نیست.",
     ),
-    "userSearchFailed": m12,
+    "userSearchFailed": m13,
     "userUnblocked": MessageLookupByLibrary.simpleMessage("کاربر آنلاک شده"),
     "username": MessageLookupByLibrary.simpleMessage("نام کاربری"),
     "video": MessageLookupByLibrary.simpleMessage("ویدئو"),

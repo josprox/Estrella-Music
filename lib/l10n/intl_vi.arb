@@ -1,788 +1,56 @@
 {
   "@@locale": "vi",
-  "home": "Trang chủ",
-  "@home": {
-    "description": "home"
-  },
-  "songs": "Bài hát",
-  "@songs": {
-    "description": "songs"
-  },
-  "create": "Tạo",
-  "@create": {
-    "description": "create"
-  },
-  "rename": "Đổi tên",
-  "@rename": {
-    "description": "rename"
-  },
-  "downloads": "Tải về",
-  "@downloads": {
-    "description": "downloads"
-  },
-  "retry": "Thử lại!",
-  "@retry": {
-    "description": "retry"
-  },
-  "cancel": "Hủy",
-  "@cancel": {
-    "description": "cancel"
-  },
-  "settings": "Cài đặt",
-  "@settings": {
-    "description": "settings"
-  },
-  "noOfflineSong": "Không có bài hát ngoại tuyến!",
-  "@noOfflineSong": {
-    "description": "noOfflineSong"
-  },
-  "removeFromQueue": "Xóa khỏi hàng đợi",
-  "@removeFromQueue": {
-    "description": "removeFromQueue"
-  },
-  "discover": "Khám phá",
-  "@discover": {
-    "description": "discover"
-  },
-  "trending": "Xu hướng",
-  "@trending": {
-    "description": "trending"
-  },
-  "topmusicvideos": "Video âm nhạc hàng đầu",
-  "@topmusicvideos": {
-    "description": "topmusicvideos"
-  },
-  "setDiscoverContent": "Cài đặt nội dung khám phá",
-  "@setDiscoverContent": {
-    "description": "setDiscoverContent"
-  },
-  "quickpicks": "Chọn nhanh",
-  "@quickpicks": {
-    "description": "quickpicks"
-  },
-  "skipSilenceDes": "Khoảng lặng sẽ bị bỏ qua khi chơi nhạc",
-  "@skipSilenceDes": {
-    "description": "skipSilenceDes"
-  },
-  "streamingQuality": "Chất lượng truyền tải",
-  "@streamingQuality": {
-    "description": "streamingQuality"
-  },
-  "cacheSongs": "Lưu nhạc vào bộ nhớ đệm",
-  "@cacheSongs": {
-    "description": "cacheSongs"
-  },
-  "cacheSongsDes": "Lưu bài hát vào bộ nhớ đệm trong khi phát để phát trong tương lai/ngoại tuyến, nó sẽ chiếm thêm bộ nhớ trên thiết bị",
-  "@cacheSongsDes": {
-    "description": "cacheSongsDes"
-  },
-  "low": "Thấp",
-  "@low": {
-    "description": "low"
-  },
-  "equalizer": "Bộ chỉnh âm",
-  "@equalizer": {
-    "description": "equalizer"
-  },
-  "clearImgCache": "Xóa hình trong bộ nhớ đệm",
-  "@clearImgCache": {
-    "description": "clearImgCache"
-  },
-  "backgroundPlay": "Phát nhạc dưới nền",
-  "@backgroundPlay": {
-    "description": "backgroundPlay"
-  },
-  "backgroundPlayDes": "Cho phép/Không cho phép chơi nhạc dưới nền (Ứng dụng có thể được truy cập từ khay hệ thống khi ứng dụng đang chạy ở chế độ nền)",
-  "@backgroundPlayDes": {
-    "description": "backgroundPlayDes"
-  },
-  "downloadingFormatDes": "Chọn định dạng tệp tải về. \"Opus\" sẽ cho chất lượng âm thanh tốt nhất",
-  "@downloadingFormatDes": {
-    "description": "downloadingFormatDes"
-  },
-  "videos": "Phim ảnh",
-  "@videos": {
-    "description": "videos"
-  },
-  "deleteDownloadedDataAlert": "Đã xóa thành công khỏi nội dung tải xuống!",
-  "@deleteDownloadedDataAlert": {
-    "description": "deleteDownloadedDataAlert"
-  },
-  "clearImgCacheDes": "Bấm vào đây để xóa hình trong bộ nhớ đệm. (Không khuyến khích trừ khi bạn muốn làm mới dữ liệu hình ảnh)",
-  "@clearImgCacheDes": {
-    "description": "clearImgCacheDes"
-  },
-  "status": "Trạng thái",
-  "@status": {
-    "description": "status"
-  },
-  "search": "Tìm kiếm",
-  "@search": {
-    "description": "search"
-  },
-  "for1": "cho",
-  "@for1": {
-    "description": "for1"
-  },
-  "lyricsNotAvailable": "Lời bài hát không có sẵn!",
-  "@lyricsNotAvailable": {
-    "description": "lyricsNotAvailable"
-  },
-  "songAlreadyExists": "Bài hát đã tồn tại!",
-  "@songAlreadyExists": {
-    "description": "songAlreadyExists"
-  },
-  "songEnqueueAlert": "Đã thêm bài hát vào hàng đợi!",
-  "@songEnqueueAlert": {
-    "description": "songEnqueueAlert"
-  },
-  "songRemovedAlert": "Xóa khỏi",
-  "@songRemovedAlert": {
-    "description": "songRemovedAlert"
-  },
-  "errorOccuredAlert": "Có vài lỗi xảy ra!",
-  "@errorOccuredAlert": {
-    "description": "errorOccuredAlert"
-  },
-  "syncedLyricsNotAvailable": "Lời bài hát được đồng bộ hóa không có!",
-  "@syncedLyricsNotAvailable": {
-    "description": "syncedLyricsNotAvailable"
-  },
-  "notaSongVideo": "Không phải bài hát/Videos âm nhạc!",
-  "@notaSongVideo": {
-    "description": "notaSongVideo"
-  },
-  "notaValidLink": "Không phải là liên kết hợp lệ!",
-  "@notaValidLink": {
-    "description": "notaValidLink"
-  },
-  "operationFailed": "Lỗi hệ thống",
-  "@operationFailed": {
-    "description": "operationFailed"
-  },
-  "items": "danh mục",
-  "@items": {
-    "description": "items"
-  },
-  "library": "Thư viện",
-  "@library": {
-    "description": "library"
-  },
-  "networkError1": "Kết nối mạng bị lỗi!",
-  "@networkError1": {
-    "description": "networkError1"
-  },
-  "favorites": "Yêu thích",
-  "@favorites": {
-    "description": "favorites"
-  },
-  "recentlyPlayed": "Đã phát gần đây",
-  "@recentlyPlayed": {
-    "description": "recentlyPlayed"
-  },
-  "cachedOrOffline": "Bộ nhớ đệm",
-  "@cachedOrOffline": {
-    "description": "cachedOrOffline"
-  },
-  "emptyPlaylist": "Danh sách phát trống!",
-  "@emptyPlaylist": {
-    "description": "emptyPlaylist"
-  },
-  "enqueueAll": "Thêm tất cả vào hàng đợi",
-  "@enqueueAll": {
-    "description": "enqueueAll"
-  },
-  "renamePlaylist": "Đổi tên danh sách phát",
-  "@renamePlaylist": {
-    "description": "renamePlaylist"
-  },
-  "removePlaylist": "Xóa danh sách phát",
-  "@removePlaylist": {
-    "description": "removePlaylist"
-  },
   "CreateNewPlaylist": "Tạo danh sách phát mới",
   "@CreateNewPlaylist": {
     "description": "CreateNewPlaylist"
-  },
-  "sleepTimer": "Hẹn giờ tắt",
-  "@sleepTimer": {
-    "description": "sleepTimer"
-  },
-  "createnAdd": "Tạo & Thêm",
-  "@createnAdd": {
-    "description": "createnAdd"
-  },
-  "add5Minutes": "Thêm 5 phút",
-  "@add5Minutes": {
-    "description": "add5Minutes"
-  },
-  "minutes": "phút",
-  "@minutes": {
-    "description": "minutes"
-  },
-  "endOfThisSong": "Kết thúc bài hát",
-  "@endOfThisSong": {
-    "description": "endOfThisSong"
-  },
-  "light": "Sáng",
-  "@light": {
-    "description": "light"
-  },
-  "homeContentCount": "Số lượng nội dung trên trang chủ",
-  "@homeContentCount": {
-    "description": "homeContentCount"
-  },
-  "homeContentCountDes": "Chọn số lượng nội dung trên màn hình chính (tương đối). Số lượng ít sẽ tải nhanh hơn",
-  "@homeContentCountDes": {
-    "description": "homeContentCountDes"
-  },
-  "enableBottomNav": "Thanh điều hướng ở dưới cùng",
-  "@enableBottomNav": {
-    "description": "enableBottomNav"
-  },
-  "enableBottomNavDes": "Chuyển thanh điều hướng xuống dưới cùng",
-  "@enableBottomNavDes": {
-    "description": "enableBottomNavDes"
-  },
-  "skipSilence": "Bỏ qua khoảng lặng",
-  "@skipSilence": {
-    "description": "skipSilence"
-  },
-  "equalizerDes": "Mở bộ chỉnh âm của hệ thống",
-  "@equalizerDes": {
-    "description": "equalizerDes"
-  },
-  "ignoreBatOpt": "Bỏ qua tối ưu hóa pin",
-  "@ignoreBatOpt": {
-    "description": "ignoreBatOpt"
-  },
-  "nomatch": "Không tìm thấy kết quả cho",
-  "@nomatch": {
-    "description": "nomatch"
-  },
-  "synced": "Đã đồng bộ hóa",
-  "@synced": {
-    "description": "synced"
-  },
-  "plain": "Lời",
-  "@plain": {
-    "description": "plain"
-  },
-  "dontShowInfoAgain": "Không hiển thị thông tin này lần nữa",
-  "@dontShowInfoAgain": {
-    "description": "dontShowInfoAgain"
-  },
-  "playNext": "Phát kế tiếp",
-  "@playNext": {
-    "description": "playNext"
-  },
-  "addToPlaylist": "Thêm vào danh sách phát",
-  "@addToPlaylist": {
-    "description": "addToPlaylist"
-  },
-  "noLibPlaylist": "Bạn không có danh sách phát nào!",
-  "@noLibPlaylist": {
-    "description": "noLibPlaylist"
-  },
-  "enqueueSong": "Thêm bài hát vào hàng đợi",
-  "@enqueueSong": {
-    "description": "enqueueSong"
-  },
-  "startRadio": "Bắt đầu đài phát",
-  "@startRadio": {
-    "description": "startRadio"
-  },
-  "goToAlbum": "Đi đến tập nhạc",
-  "@goToAlbum": {
-    "description": "goToAlbum"
-  },
-  "removeFromLib": "Xóa khỏi thư viện bài hát",
-  "@removeFromLib": {
-    "description": "removeFromLib"
-  },
-  "themeMode": "Chủ đề",
-  "@themeMode": {
-    "description": "themeMode"
-  },
-  "downloadingFormat": "Định dạng tệp tải về",
-  "@downloadingFormat": {
-    "description": "downloadingFormat"
-  },
-  "ignoreBatOptDes": "Nếu bạn đang gặp phải sự cố thông báo hoặc quá trình phát lại bị dừng do tối ưu hóa hệ thống, vui lòng bật tùy chọn này",
-  "@ignoreBatOptDes": {
-    "description": "ignoreBatOptDes"
-  },
-  "downloadLocation": "Vị trí tải xuống",
-  "@downloadLocation": {
-    "description": "downloadLocation"
-  },
-  "github": "Github",
-  "@github": {
-    "description": "github"
-  },
-  "enabled": "Đã bật",
-  "@enabled": {
-    "description": "enabled"
-  },
-  "disabled": "Đã tắt",
-  "@disabled": {
-    "description": "disabled"
-  },
-  "githubDes": "Xem mã nguồn GitHub.\nNếu bạn thích dự án này, đừng quên cho một ⭐",
-  "@githubDes": {
-    "description": "githubDes"
-  },
-  "viewAll": "Xem tất cả",
-  "@viewAll": {
-    "description": "viewAll"
-  },
-  "results": "Kết quả",
-  "@results": {
-    "description": "results"
-  },
-  "subscribers": "người đăng ký",
-  "@subscribers": {
-    "description": "subscribers"
-  },
-  "selectAuthInsMsg": "Vui lòng chọn phiên bản xác thực!",
-  "@selectAuthInsMsg": {
-    "description": "selectAuthInsMsg"
-  },
-  "allFieldsReqMsg": "Tất cả các trường bắt buộc",
-  "@allFieldsReqMsg": {
-    "description": "allFieldsReqMsg"
-  },
-  "linkPipedDes": "Liên kết với đường ống cho danh sách phát",
-  "@linkPipedDes": {
-    "description": "linkPipedDes"
-  },
-  "resetblacklistedplaylistDes": "Đặt lại tất cả danh sách phát trong danh sách đen",
-  "@resetblacklistedplaylistDes": {
-    "description": "resetblacklistedplaylistDes"
-  },
-  "stopMusicOnTaskClear": "Dừng nhạc khi xóa khỏi tác vụ gần đây",
-  "@stopMusicOnTaskClear": {
-    "description": "stopMusicOnTaskClear"
-  },
-  "libArtists": "Thư viện nghệ sỹ",
-  "@libArtists": {
-    "description": "libArtists"
-  },
-  "playlists": "Danh sách phát",
-  "@playlists": {
-    "description": "playlists"
-  },
-  "albums": "Tập nhạc",
-  "@albums": {
-    "description": "albums"
-  },
-  "artists": "Nghệ sỹ",
-  "@artists": {
-    "description": "artists"
-  },
-  "libSongs": "Thư viện bài hát",
-  "@libSongs": {
-    "description": "libSongs"
-  },
-  "libPlaylists": "Thư viện danh sách phát",
-  "@libPlaylists": {
-    "description": "libPlaylists"
-  },
-  "libAlbums": "Thư viện tập nhạc",
-  "@libAlbums": {
-    "description": "libAlbums"
-  },
-  "viewArtist": "Xem Nghệ sĩ",
-  "@viewArtist": {
-    "description": "viewArtist"
-  },
-  "songRemovedfromQueue": "Đã xóa khỏi hàng đợi!",
-  "@songRemovedfromQueue": {
-    "description": "songRemovedfromQueue"
-  },
-  "songRemovedfromQueueCurrSong": "Bạn không thể xóa bài hát đang phát",
-  "@songRemovedfromQueueCurrSong": {
-    "description": "songRemovedfromQueueCurrSong"
-  },
-  "songAlreadyOfflineAlert": "Bài hát đã ngoại tuyến trong bộ nhớ đệm",
-  "@songAlreadyOfflineAlert": {
-    "description": "songAlreadyOfflineAlert"
-  },
-  "newVersionAvailable": "Đã có phiên bản mới!",
-  "@newVersionAvailable": {
-    "description": "newVersionAvailable"
-  },
-  "dismiss": "Hủy",
-  "@dismiss": {
-    "description": "dismiss"
-  },
-  "artistDesNotAvailable": "Mô tả không có sẵn!",
-  "@artistDesNotAvailable": {
-    "description": "artistDesNotAvailable"
-  },
-  "selectAuthIns": "Chọn phiên bản xác thực",
-  "@selectAuthIns": {
-    "description": "selectAuthIns"
-  },
-  "featuredplaylists": "Danh sách phát nổi bật",
-  "@featuredplaylists": {
-    "description": "featuredplaylists"
-  },
-  "removeFromPlaylist": "Xóa khỏi danh sách phát",
-  "@removeFromPlaylist": {
-    "description": "removeFromPlaylist"
-  },
-  "communityplaylists": "Danh sách phát cộng đồng",
-  "@communityplaylists": {
-    "description": "communityplaylists"
-  },
-  "streamingQualityDes": "Chất lượng truyền tải nhạc qua internet",
-  "@streamingQualityDes": {
-    "description": "streamingQualityDes"
-  },
-  "high": "Cao",
-  "@high": {
-    "description": "high"
-  },
-  "by": "bởi",
-  "@by": {
-    "description": "by"
-  },
-  "local": "Địa phương",
-  "@local": {
-    "description": "local"
-  },
-  "linkAlert": "Liên kết thành công!",
-  "@linkAlert": {
-    "description": "linkAlert"
-  },
-  "singles": "Đĩa đơn",
-  "@singles": {
-    "description": "singles"
-  },
-  "noBookmarks": "Không có đánh dấu!",
-  "@noBookmarks": {
-    "description": "noBookmarks"
-  },
-  "upNext": "Kế tiếp",
-  "@upNext": {
-    "description": "upNext"
-  },
-  "dynamic": "Động",
-  "@dynamic": {
-    "description": "dynamic"
-  },
-  "searchDes": "Bài hát, Danh sách phát, Tập nhạc hoặc Nghệ sỹ",
-  "@searchDes": {
-    "description": "searchDes"
-  },
-  "searchRes": "Kết quả tìm kiếm",
-  "@searchRes": {
-    "description": "searchRes"
-  },
-  "pipedplstSyncAlert": "Danh sách phát đã được đồng bộ hóa!",
-  "@pipedplstSyncAlert": {
-    "description": "pipedplstSyncAlert"
-  },
-  "playlistCreatednsongAddedAlert": "Danh sách phát được tạo và thêm bài hát!",
-  "@playlistCreatednsongAddedAlert": {
-    "description": "playlistCreatednsongAddedAlert"
-  },
-  "playlistRenameAlert": "Đổi tên thành công!",
-  "@playlistRenameAlert": {
-    "description": "playlistRenameAlert"
-  },
-  "playlistRemovedAlert": "Đã xóa dánh sách phát!",
-  "@playlistRemovedAlert": {
-    "description": "playlistRemovedAlert"
-  },
-  "albumBookmarkAddAlert": "Đã đánh dấu tập nhạc!",
-  "@albumBookmarkAddAlert": {
-    "description": "albumBookmarkAddAlert"
-  },
-  "artistBookmarkAddAlert": "Đã đánh dấu nghệ sỹ!",
-  "@artistBookmarkAddAlert": {
-    "description": "artistBookmarkAddAlert"
-  },
-  "artistBookmarkRemoveAlert": "Đã xóa đánh dấu nghệ sỹ!",
-  "@artistBookmarkRemoveAlert": {
-    "description": "artistBookmarkRemoveAlert"
-  },
-  "albumBookmarkRemoveAlert": "Đã xóa đánh dấu tập nhạc!",
-  "@albumBookmarkRemoveAlert": {
-    "description": "albumBookmarkRemoveAlert"
-  },
-  "goToDownloadPage": "Bấm vào đây để đến trang tải về",
-  "@goToDownloadPage": {
-    "description": "goToDownloadPage"
-  },
-  "username": "Tên người dùng",
-  "@username": {
-    "description": "username"
-  },
-  "password": "Mật khẩu",
-  "@password": {
-    "description": "password"
-  },
-  "playlistBlacklistAlert": "Danh sách phát bị liệt vào danh sách đen!",
-  "@playlistBlacklistAlert": {
-    "description": "playlistBlacklistAlert"
-  },
-  "reset": "Cài lại",
-  "@reset": {
-    "description": "reset"
-  },
-  "blacklistPlstResetAlert": "Cài lại thành công!",
-  "@blacklistPlstResetAlert": {
-    "description": "blacklistPlstResetAlert"
-  },
-  "resetblacklistedplaylist": "Đặt lại danh sách phát bị liệt vào danh sách đen",
-  "@resetblacklistedplaylist": {
-    "description": "resetblacklistedplaylist"
-  },
-  "unlinkAlert": "Hủy liên kết thành công!",
-  "@unlinkAlert": {
-    "description": "unlinkAlert"
-  },
-  "stopMusicOnTaskClearDes": "Quá trình phát nhạc sẽ dừng khi ứng dụng bị xóa khỏi trình quản lý tác vụ",
-  "@stopMusicOnTaskClearDes": {
-    "description": "stopMusicOnTaskClearDes"
-  },
-  "reArrangePlaylist": "Sắp xếp lại danh sách phát",
-  "@reArrangePlaylist": {
-    "description": "reArrangePlaylist"
-  },
-  "removeMultiple": "Xóa nhiều bài",
-  "@removeMultiple": {
-    "description": "removeMultiple"
-  },
-  "addMultipleSongs": "Thêm bài hát vào danh sách phát",
-  "@addMultipleSongs": {
-    "description": "addMultipleSongs"
-  },
-  "shareSong": "Chia sẻ bài hát này",
-  "@shareSong": {
-    "description": "shareSong"
-  },
-  "cancelTimer": "Hủy hẹn giờ",
-  "@cancelTimer": {
-    "description": "cancelTimer"
-  },
-  "deleteDownloadData": "Xóa khỏi tải về",
-  "@deleteDownloadData": {
-    "description": "deleteDownloadData"
-  },
-  "systemDefault": "Theo hệ thống",
-  "@systemDefault": {
-    "description": "systemDefault"
-  },
-  "dark": "Tối",
-  "@dark": {
-    "description": "dark"
-  },
-  "language": "Ngôn ngữ",
-  "@language": {
-    "description": "language"
-  },
-  "languageDes": "Cài đặt ngôn ngữ ứng dụng",
-  "@languageDes": {
-    "description": "languageDes"
-  },
-  "basedOnLast": "Dựa vào tương tác gần nhất",
-  "@basedOnLast": {
-    "description": "basedOnLast"
-  },
-  "restoreLastPlaybackSession": "Khôi phục lần phát gần nhất",
-  "@restoreLastPlaybackSession": {
-    "description": "restoreLastPlaybackSession"
-  },
-  "restoreLastPlaybackSessionDes": "Tự khôi phục lần phát gần nhất khi mở ứng dụng",
-  "@restoreLastPlaybackSessionDes": {
-    "description": "restoreLastPlaybackSessionDes"
-  },
-  "cacheHomeScreenData": "Lưu nội dung màn hình chính và bộ nhớ đệm",
-  "@cacheHomeScreenData": {
-    "description": "cacheHomeScreenData"
-  },
-  "customInsSelectMsg": "Vui lòng chọn Phiên bản tùy chỉnh",
-  "@customInsSelectMsg": {
-    "description": "customInsSelectMsg"
-  },
-  "cacheHomeScreenDataDes": "Bật tính năng lưu nội dung màn hình chính vào bộ nhớ đệm, màn hình chính sẽ hiện thị ngay lập tức khi bật tính năng này",
-  "@cacheHomeScreenDataDes": {
-    "description": "cacheHomeScreenDataDes"
-  },
-  "exportDowloadedFiles": "Xuất bài hát đã tải xuống",
-  "@exportDowloadedFiles": {
-    "description": "exportDowloadedFiles"
-  },
-  "exportedFileLocation": "Vị trí xuất tệp đã tải về",
-  "@exportedFileLocation": {
-    "description": "exportedFileLocation"
-  },
-  "export": "Xuất",
-  "@export": {
-    "description": "export"
-  },
-  "exporting": "Đang xuất...",
-  "@exporting": {
-    "description": "exporting"
-  },
-  "scanning": "Đang quét...",
-  "@scanning": {
-    "description": "scanning"
-  },
-  "close": "Đóng",
-  "@close": {
-    "description": "close"
-  },
-  "downFilesFound": "bài hát tải về đã được tìm thấy",
-  "@downFilesFound": {
-    "description": "downFilesFound"
-  },
-  "exportMsg": "Tệp đã được xuất thành công",
-  "@exportMsg": {
-    "description": "exportMsg"
-  },
-  "clearImgCacheAlert": "Xóa hình trong bộ nhớ đệm thành công",
-  "@clearImgCacheAlert": {
-    "description": "clearImgCacheAlert"
-  },
-  "songAddedToPlaylistAlert": "Bài hát đã được thêm vào danh sách phát!",
-  "@songAddedToPlaylistAlert": {
-    "description": "songAddedToPlaylistAlert"
-  },
-  "playlistCreatedAlert": "Danh sách phát đã được tạo!",
-  "@playlistCreatedAlert": {
-    "description": "playlistCreatedAlert"
-  },
-  "playlistBookmarkAddAlert": "Đã đánh dấu danh sách phát!",
-  "@playlistBookmarkAddAlert": {
-    "description": "playlistBookmarkAddAlert"
   },
   "Piped": "Kết nối Piped",
   "@Piped": {
     "description": "Piped"
   },
-  "link": "Liên kết",
-  "@link": {
-    "description": "link"
+  "about": "Về",
+  "@about": {
+    "description": "about"
   },
-  "unLink": "Hủy liên kết",
-  "@unLink": {
-    "description": "unLink"
+  "add5Minutes": "Thêm 5 phút",
+  "@add5Minutes": {
+    "description": "add5Minutes"
   },
-  "hintApiUrl": "URL API tới phiên bản đường ống",
-  "@hintApiUrl": {
-    "description": "hintApiUrl"
+  "addMultipleSongs": "Thêm bài hát vào danh sách phát",
+  "@addMultipleSongs": {
+    "description": "addMultipleSongs"
   },
-  "customIns": "Phiên bản tùy chỉnh",
-  "@customIns": {
-    "description": "customIns"
+  "addToLibrary": "Thêm vào thư viện",
+  "@addToLibrary": {
+    "description": "addToLibrary"
   },
-  "exportDowloadedFilesDes": "Bấm vào đây để sao chép tệp đã tải về sang thư mục khác",
-  "@exportDowloadedFilesDes": {
-    "description": "exportDowloadedFilesDes"
+  "addToPlaylist": "Thêm vào danh sách phát",
+  "@addToPlaylist": {
+    "description": "addToPlaylist"
   },
-  "cancelTimerAlert": "Đã hủy hẹn giờ tắt",
-  "@cancelTimerAlert": {
-    "description": "cancelTimerAlert"
+  "album": "Tập nhạc",
+  "@album": {
+    "description": "album"
   },
-  "sleepTimeSetAlert": "Bộ hẹn giờ tắt của bạn đã được đặt",
-  "@sleepTimeSetAlert": {
-    "description": "sleepTimeSetAlert"
+  "albumBookmarkAddAlert": "Đã đánh dấu tập nhạc!",
+  "@albumBookmarkAddAlert": {
+    "description": "albumBookmarkAddAlert"
   },
-  "radioNotAvailable": "Radio không có sẵn cho nghệ sĩ này!",
-  "@radioNotAvailable": {
-    "description": "radioNotAvailable"
+  "albumBookmarkRemoveAlert": "Đã xóa đánh dấu tập nhạc!",
+  "@albumBookmarkRemoveAlert": {
+    "description": "albumBookmarkRemoveAlert"
   },
-  "playlistBookmarkRemoveAlert": "Đã xóa đánh dấu trang danh sách phát!",
-  "@playlistBookmarkRemoveAlert": {
-    "description": "playlistBookmarkRemoveAlert"
+  "albums": "Tập nhạc",
+  "@albums": {
+    "description": "albums"
   },
-  "disableTransitionAnimation": "Tắt hoạt ảnh chuyển tiếp",
-  "@disableTransitionAnimation": {
-    "description": "disableTransitionAnimation"
+  "albumsByTaste": "Theo sở thích của bạn",
+  "@albumsByTaste": {
+    "description": "albumsByTaste"
   },
-  "disableTransitionAnimationDes": "Bật tùy chọn này để tắt hoạt ảnh chuyển tiếp trang",
-  "@disableTransitionAnimationDes": {
-    "description": "disableTransitionAnimationDes"
-  },
-  "openIn": "Mở trong",
-  "@openIn": {
-    "description": "openIn"
-  },
-  "backupSettingsAndPlaylists": "Sao lưu cài đặt và đánh sách phát",
-  "@backupSettingsAndPlaylists": {
-    "description": "backupSettingsAndPlaylists"
-  },
-  "backupSettingsAndPlaylistsDes": "Lưu tất cả cài đặt, đánh sách phát, và dữ liệu đăng nhập vào một tệp sao lưu",
-  "@backupSettingsAndPlaylistsDes": {
-    "description": "backupSettingsAndPlaylistsDes"
-  },
-  "restoreSettingsAndPlaylists": "Khôi phục cài đặt và đánh sách phát",
-  "@restoreSettingsAndPlaylists": {
-    "description": "restoreSettingsAndPlaylists"
-  },
-  "backFilesFound": "Tìm thấy cơ sở dữ liệu",
-  "@backFilesFound": {
-    "description": "backFilesFound"
-  },
-  "restoreMsg": "Khôi phục thành công! \nThay đổi sẽ có hiệu lực khi khởi động lại ứng dụng",
-  "@restoreMsg": {
-    "description": "restoreMsg"
-  },
-  "restoring": "Đang khôi phục...",
-  "@restoring": {
-    "description": "restoring"
-  },
-  "closeApp": "Đóng ứng dụng",
-  "@closeApp": {
-    "description": "closeApp"
-  },
-  "restoreSettingsAndPlaylistsDes": "Khôi phục tất cả cài đặt, dữ liệu đăng nhập và đánh sách phát từ file sao lưu. Ghi đè tất cả dữ liệu hiện tại",
-  "@restoreSettingsAndPlaylistsDes": {
-    "description": "restoreSettingsAndPlaylistsDes"
-  },
-  "backupMsg": "Bản sao lưu được lưu thành công!",
-  "@backupMsg": {
-    "description": "backupMsg"
-  },
-  "restore": "Khôi phục",
-  "@restore": {
-    "description": "restore"
-  },
-  "backupAppData": "Sao lưu dữ liệu ứng dụng",
-  "@backupAppData": {
-    "description": "backupAppData"
-  },
-  "letsStrart": "Bắt đầu..",
-  "@letsStrart": {
-    "description": "letsStrart"
-  },
-  "processFiles": "Đang xử lý tập tin...",
-  "@processFiles": {
-    "description": "processFiles"
-  },
-  "includeDownloadedFiles": "Bao gồm các bài hát đã tải về",
-  "@includeDownloadedFiles": {
-    "description": "includeDownloadedFiles"
-  },
-  "backupInProgress": "Đang sao lưu...",
-  "@backupInProgress": {
-    "description": "backupInProgress"
-  },
-  "restoreAppData": "Khôi phục dữ liệu ứng dụng",
-  "@restoreAppData": {
-    "description": "restoreAppData"
-  },
-  "restartApp": "Khởi động lại ứng dụng",
-  "@restartApp": {
-    "description": "restartApp"
-  },
-  "backup": "Sao lưu",
-  "@backup": {
-    "description": "backup"
+  "allFieldsReqMsg": "Tất cả các trường bắt buộc",
+  "@allFieldsReqMsg": {
+    "description": "allFieldsReqMsg"
   },
   "androidBackupWarning": "Chưa thử nghiệm: Chọn hộp kiểm sau khi tải xuống hơn 60 tệp, quá trình này có thể tiêu tốn một lượng lớn bộ nhớ và có thể khiến điện thoại hoặc ứng dụng bị sập. Tiến hành theo rủi ro của riêng bạn.",
   "@androidBackupWarning": {
@@ -792,345 +60,65 @@
   "@appInfo": {
     "description": "appInfo"
   },
-  "download": "Tải về",
-  "@download": {
-    "description": "download"
+  "artistBookmarkAddAlert": "Đã đánh dấu nghệ sỹ!",
+  "@artistBookmarkAddAlert": {
+    "description": "artistBookmarkAddAlert"
   },
-  "downloadError2": "Bài hát bạn yêu cầu không thể tải xuống được vì giới hạn của máy chủ. Bạn có thể thử lại",
-  "@downloadError2": {
-    "description": "downloadError2"
+  "artistBookmarkRemoveAlert": "Đã xóa đánh dấu nghệ sỹ!",
+  "@artistBookmarkRemoveAlert": {
+    "description": "artistBookmarkRemoveAlert"
   },
-  "downloadError3": "Tải xuống thất bại do lỗi mạng/truyền phát. Vui lòng thử lại",
-  "@downloadError3": {
-    "description": "downloadError3"
+  "artistDesNotAvailable": "Mô tả không có sẵn!",
+  "@artistDesNotAvailable": {
+    "description": "artistDesNotAvailable"
   },
-  "content": "Nội dung",
-  "@content": {
-    "description": "content"
+  "artists": "Nghệ sỹ",
+  "@artists": {
+    "description": "artists"
   },
-  "loudnessNormalization": "Cân bằng âm lượng",
-  "@loudnessNormalization": {
-    "description": "loudnessNormalization"
-  },
-  "urlSearchDes": "Nhấn vào liên kết được phát hiện để mở nội dung",
-  "@urlSearchDes": {
-    "description": "urlSearchDes"
-  },
-  "songInfo": "Thông tin bài hát",
-  "@songInfo": {
-    "description": "songInfo"
-  },
-  "bitrate": "Thông số bit",
-  "@bitrate": {
-    "description": "bitrate"
-  },
-  "queueShufflingDeniedMsg": "Không thể xáo trộn ngẫu nhiên hàng đợi khi chế độ ngẫu nhiên được bật",
-  "@queueShufflingDeniedMsg": {
-    "description": "queueShufflingDeniedMsg"
-  },
-  "queuerearrangingDeniedMsg": "Không thể sắp xếp lại hàng đợi khi chế độ ngẫu nhiên được bật",
-  "@queuerearrangingDeniedMsg": {
-    "description": "queuerearrangingDeniedMsg"
-  },
-  "id": "Khoá",
-  "@id": {
-    "description": "id"
-  },
-  "title": "Tiêu đề",
-  "@title": {
-    "description": "title"
-  },
-  "songNotPlayable": "Bài hát không thể phát vì giới hạn của máy chủ!",
-  "@songNotPlayable": {
-    "description": "songNotPlayable"
-  },
-  "networkError": "Lỗi mạng! Kiểm tra kết nối mạng của bạn.",
-  "@networkError": {
-    "description": "networkError"
-  },
-  "personalisation": "Cá nhân hoá",
-  "@personalisation": {
-    "description": "personalisation"
-  },
-  "musicAndPlayback": "Âm nhạc & Phát nhạc",
-  "@musicAndPlayback": {
-    "description": "musicAndPlayback"
-  },
-  "loudnessNormalizationDes": "Cài đặt cùng một mức độ lớn cho tất cả bài hát (Thử nghiệm) (Không hoạt động đối với các bài hát đã tải về trong phiên bản trước (< v1.10.0))",
-  "@loudnessNormalizationDes": {
-    "description": "loudnessNormalizationDes"
-  },
-  "duration": "Thời gian bài hát",
-  "@duration": {
-    "description": "duration"
+  "artistsByTaste": "Theo sở thích của bạn",
+  "@artistsByTaste": {
+    "description": "artistsByTaste"
   },
   "audioCodec": "Mã hoá tiếng",
   "@audioCodec": {
     "description": "audioCodec"
   },
-  "loudnessDb": "Độ ồn Db",
-  "@loudnessDb": {
-    "description": "loudnessDb"
-  },
-  "playerUi": "Giao diện phát nhạc",
-  "@playerUi": {
-    "description": "playerUi"
-  },
-  "playerUiDes": "Chọn giao diện phát nhạc",
-  "@playerUiDes": {
-    "description": "playerUiDes"
-  },
-  "standard": "Tiêu Chuẩn",
-  "@standard": {
-    "description": "standard"
-  },
-  "gesture": "Cử chỉ",
-  "@gesture": {
-    "description": "gesture"
-  },
-  "shuffleQueue": "Xáo trộn hàng đợi",
-  "@shuffleQueue": {
-    "description": "shuffleQueue"
-  },
-  "queueLoop": "Lặp lại hàng đợi",
-  "@queueLoop": {
-    "description": "queueLoop"
-  },
-  "enableSlidableAction": "Bật hành động trượt",
-  "@enableSlidableAction": {
-    "description": "enableSlidableAction"
-  },
-  "playnextMsg": "Tiếp theo",
-  "@playnextMsg": {
-    "description": "playnextMsg"
-  },
-  "queueLoopNotDisMsg1": "Không thể tắt lặp lại hàng đợi khi chế độ ngẫu nhiên được bật.",
-  "@queueLoopNotDisMsg1": {
-    "description": "queueLoopNotDisMsg1"
-  },
-  "queueLoopNotDisMsg2": "Không thể bật lặp lại hàng đợi trong chế độ đài phát.",
-  "@queueLoopNotDisMsg2": {
-    "description": "queueLoopNotDisMsg2"
-  },
-  "enableSlidableActionDes": "Bật chế độ trượt trên tiêu đề bài hát",
-  "@enableSlidableActionDes": {
-    "description": "enableSlidableActionDes"
-  },
-  "autoDownFavSongDes": "Tự động tải xuống bài hát khi được thêm vào danh sách yêu thích",
-  "@autoDownFavSongDes": {
-    "description": "autoDownFavSongDes"
-  },
-  "autoDownFavSong": "Tự động tải xuống những bài hát được thích",
-  "@autoDownFavSong": {
-    "description": "autoDownFavSong"
-  },
-  "misc": "Khác",
-  "@misc": {
-    "description": "misc"
-  },
-  "resetToDefault": "Khôi phục cài đặt mặc định",
-  "@resetToDefault": {
-    "description": "resetToDefault"
-  },
-  "resetToDefaultDes": "Khôi phục cài đặt ứng dụng về mặc định ( cần khởi động lại ứng dụng)",
-  "@resetToDefaultDes": {
-    "description": "resetToDefaultDes"
-  },
-  "resetToDefaultMsg": "Hoàn tất khôi phục cài đặt ứng dụng về mặc định, vui lòng khởi động lại ứng dụng",
-  "@resetToDefaultMsg": {
-    "description": "resetToDefaultMsg"
-  },
-  "album": "Tập nhạc",
-  "@album": {
-    "description": "album"
-  },
-  "playingfromAlbum": "Phát từ tập nhạc",
-  "@playingfromAlbum": {
-    "description": "playingfromAlbum"
-  },
-  "playingfromPlaylist": "Phát từ danh sách phát",
-  "@playingfromPlaylist": {
-    "description": "playingfromPlaylist"
-  },
-  "playingfromSelection": "Phát từ danh sách chọn",
-  "@playingfromSelection": {
-    "description": "playingfromSelection"
-  },
-  "playingfromArtist": "Phát theo nghệ sỹ",
-  "@playingfromArtist": {
-    "description": "playingfromArtist"
-  },
-  "randomSelection": "Chọn ngẫu nhiên",
-  "@randomSelection": {
-    "description": "randomSelection"
-  },
-  "randomRadio": "Đài phát ngẫu nhiên",
-  "@randomRadio": {
-    "description": "randomRadio"
-  },
-  "autoOpenPlayer": "Tự động mở màn hình phát nhạc",
-  "@autoOpenPlayer": {
-    "description": "autoOpenPlayer"
-  },
-  "autoOpenPlayerDes": "Bật/Tắt chức năng tự động mở màn hình phát nhạc sau khi chọn bài hát",
-  "@autoOpenPlayerDes": {
-    "description": "autoOpenPlayerDes"
-  },
-  "selectSongs": "Chọn bài hát",
-  "@selectSongs": {
-    "description": "selectSongs"
-  },
-  "reArrangeSongs": "Sắp xếp lại bài hát",
-  "@reArrangeSongs": {
-    "description": "reArrangeSongs"
-  },
-  "selectAll": "Chọn tất cả",
-  "@selectAll": {
-    "description": "selectAll"
-  },
-  "playlistExportedMsg": "Danh sách phát đã được xuất thành công đến",
-  "@playlistExportedMsg": {
-    "description": "playlistExportedMsg"
-  },
-  "invalidPlaylistFile": "Cấu trúc tệp danh sách phát không hợp lệ",
-  "@invalidPlaylistFile": {
-    "description": "invalidPlaylistFile"
-  },
-  "exportPlaylist": "Xuất danh sách phát",
-  "@exportPlaylist": {
-    "description": "exportPlaylist"
-  },
-  "exportingPlaylist": "Đang xuất danh sách phát...",
-  "@exportingPlaylist": {
-    "description": "exportingPlaylist"
-  },
-  "exportError": "Lỗi khi xuất danh sách phát",
-  "@exportError": {
-    "description": "exportError"
-  },
-  "exportErrorPermission": "Quyền bị từ chối khi xuất",
-  "@exportErrorPermission": {
-    "description": "exportErrorPermission"
-  },
-  "exportErrorStorage": "Không đủ bộ nhớ",
-  "@exportErrorStorage": {
-    "description": "exportErrorStorage"
-  },
-  "exportErrorFormat": "Lỗi định dạng dữ liệu danh sách phát",
-  "@exportErrorFormat": {
-    "description": "exportErrorFormat"
-  },
-  "importPlaylist": "Nhập danh sách phát",
-  "@importPlaylist": {
-    "description": "importPlaylist"
-  },
-  "importingPlaylist": "Đang nhập danh sách phát...",
-  "@importingPlaylist": {
-    "description": "importingPlaylist"
-  },
-  "importPlaylistDesc": "Chọn một tệp JSON danh sách phát đã xuất để nhập",
-  "@importPlaylistDesc": {
-    "description": "importPlaylistDesc"
-  },
-  "selectFile": "Chọn tệp",
-  "@selectFile": {
-    "description": "selectFile"
-  },
-  "playlistImportedMsg": "Danh sách phát được nhập thành công",
-  "@playlistImportedMsg": {
-    "description": "playlistImportedMsg"
-  },
-  "importError": "Lỗi khi nhập danh sách phát",
-  "@importError": {
-    "description": "importError"
-  },
-  "importErrorFileAccess": "Không thể truy cập tệp đã chọn",
-  "@importErrorFileAccess": {
-    "description": "importErrorFileAccess"
-  },
-  "importErrorFormat": "Định dạng tệp không hợp lệ",
-  "@importErrorFormat": {
-    "description": "importErrorFormat"
-  },
-  "importErrorDatabase": "Lỗi khi lưu vào cơ sở dữ liệu",
-  "@importErrorDatabase": {
-    "description": "importErrorDatabase"
-  },
-  "fileNotFound": "Không tìm thấy tệp",
-  "@fileNotFound": {
-    "description": "fileNotFound"
-  },
-  "importLargeFileNote": "Lưu ý: Danh sách phát lớn có thể tốn nhiều thời gian hơn để nhập",
-  "@importLargeFileNote": {
-    "description": "importLargeFileNote"
-  },
-  "exportPlaylistCsv": "Xuất danh sách phát dạng CSV",
-  "@exportPlaylistCsv": {
-    "description": "exportPlaylistCsv"
-  },
-  "exportPlaylistJson": "Xuất danh sách phát dạng JSON",
-  "@exportPlaylistJson": {
-    "description": "exportPlaylistJson"
-  },
-  "exportPlaylistJsonSubtitle": "Không thể nhập bằng định dạng này",
-  "@exportPlaylistJsonSubtitle": {
-    "description": "exportPlaylistJsonSubtitle"
-  },
-  "exportPlaylistCsvSubtitle": "Không thể nhập ở đây",
-  "@exportPlaylistCsvSubtitle": {
-    "description": "exportPlaylistCsvSubtitle"
-  },
-  "exportToOnlineMusic": "Xuất ra Online Nhạc",
-  "@exportToOnlineMusic": {
-    "description": "exportToOnlineMusic"
-  },
-  "exportToOnlineMusicSubtitle": "Nó sẽ đẩy danh sách phát của bạn (bài hát < 50) vào hàng đợi hiện tại, đừng quên thêm vào danh sách phát/lưu sau khi mở trong MusicService",
-  "@exportToOnlineMusicSubtitle": {
-    "description": "exportToOnlineMusicSubtitle"
-  },
-  "linkCopied": "Liên kết đã được sao chép vào bảng tạm",
-  "@linkCopied": {
-    "description": "linkCopied"
-  },
-  "keepScreenOnWhilePlaying": "Giữ màn hình sáng khi phát nhạc",
-  "@keepScreenOnWhilePlaying": {
-    "description": "keepScreenOnWhilePlaying"
-  },
-  "keepScreenOnWhilePlayingDes": "Nếu được bật, màn hình thiết bị sẽ giữ sáng trong khi nhạc đang phát",
-  "@keepScreenOnWhilePlayingDes": {
-    "description": "keepScreenOnWhilePlayingDes"
-  },
-  "auth_login_success": "Đăng nhập thành công",
-  "@auth_login_success": {
-    "description": "auth_login_success"
-  },
-  "settings_cloud_backup": "Sao lưu đám mây",
-  "@settings_cloud_backup": {
-    "description": "settings_cloud_backup"
-  },
-  "settings_migration_title": "Di chuyển từ Joss Music Kotlin",
-  "@settings_migration_title": {
-    "description": "settings_migration_title"
-  },
-  "backup_confirm_question": "Bạn có muốn thực hiện sao lưu?",
-  "@backup_confirm_question": {
-    "description": "backup_confirm_question"
-  },
-  "backup_selection_prompt": "Chọn dữ liệu để sao lưu",
-  "@backup_selection_prompt": {
-    "description": "backup_selection_prompt"
-  },
-  "search_recent_title": "Tìm kiếm gần đây",
-  "@search_recent_title": {
-    "description": "search_recent_title"
-  },
-  "back": "Trở lại",
-  "@back": {
-    "description": "back"
-  },
-  "auth_forgot_password": "Tôi quên mật khẩu",
-  "@auth_forgot_password": {
-    "description": "auth_forgot_password"
+  "auth_2fa_code": "Mã xác thực",
+  "@auth_2fa_code": {
+    "description": "auth_2fa_code"
+  },
+  "auth_2fa_invalid": "Nhập mã gồm 6 chữ số hợp lệ hoặc đăng nhập lại.",
+  "@auth_2fa_invalid": {
+    "description": "auth_2fa_invalid"
+  },
+  "auth_2fa_subtitle": "Nhập mã gồm 6 chữ số từ ứng dụng xác thực của bạn. Quyền truy cập này sẽ hết hạn sau 5 phút.",
+  "@auth_2fa_subtitle": {
+    "description": "auth_2fa_subtitle"
+  },
+  "auth_2fa_title": "Xác thực hai yếu tố",
+  "@auth_2fa_title": {
+    "description": "auth_2fa_title"
+  },
+  "auth_2fa_verify": "Kiểm tra và tiếp tục",
+  "@auth_2fa_verify": {
+    "description": "auth_2fa_verify"
+  },
+  "auth_agree_personal_data": "Chấp nhận sử dụng dữ liệu sai...",
+  "@auth_agree_personal_data": {
+    "description": "auth_agree_personal_data"
+  },
+  "auth_brand_description_1": "Chúng tôi đã mang thông tin đăng nhập, đăng ký và khôi phục mật khẩu từ dự án trước, được điều chỉnh cho ứng dụng âm nhạc này.",
+  "@auth_brand_description_1": {
+    "description": "auth_brand_description_1"
+  },
+  "auth_brand_description_2": "Phiên của bạn được lưu trữ an toàn và được xác thực bằng chính chương trình phụ trợ mà bạn đang sử dụng.",
+  "@auth_brand_description_2": {
+    "description": "auth_brand_description_2"
+  },
+  "auth_brand_not_configured": "Tệp .env cần được cấu hình để kết nối phần phụ trợ xác thực.",
+  "@auth_brand_not_configured": {
+    "description": "auth_brand_not_configured"
   },
   "auth_btn_login": "Đăng nhập",
   "@auth_btn_login": {
@@ -1140,53 +128,141 @@
   "@auth_btn_register": {
     "description": "auth_btn_register"
   },
-  "email": "E-mail",
-  "@email": {
-    "description": "email"
-  },
-  "password_text": "Mật khẩu",
-  "@password_text": {
-    "description": "Contraseña texto traducido"
+  "auth_btn_send_email": "Gửi thư",
+  "@auth_btn_send_email": {
+    "description": "auth_btn_send_email"
   },
   "auth_confirm_password": "Xác nhận mật khẩu",
   "@auth_confirm_password": {
     "description": "auth_confirm_password"
   },
-  "auth_welcome_title": "Chào mừng đến với Estrella Music",
-  "@auth_welcome_title": {
-    "description": "auth_welcome_title"
+  "auth_error_invalid_credentials": "Email hoặc mật khẩu không chính xác.",
+  "@auth_error_invalid_credentials": {
+    "description": "auth_error_invalid_credentials"
   },
-  "auth_welcome_subtitle": "Chào mừng đến với Estrella Music",
-  "@auth_welcome_subtitle": {
-    "description": "auth_welcome_subtitle"
+  "auth_error_invalid_email": "Nhập một email hợp lệ.",
+  "@auth_error_invalid_email": {
+    "description": "auth_error_invalid_email"
+  },
+  "auth_error_not_configured": "Thiếu phần phụ trợ xác thực để định cấu hình trong tệp .env.",
+  "@auth_error_not_configured": {
+    "description": "auth_error_not_configured"
+  },
+  "auth_error_not_verified": "Tài khoản của bạn chưa được xác minh.",
+  "@auth_error_not_verified": {
+    "description": "auth_error_not_verified"
+  },
+  "auth_error_unknown": "Không thể hoàn thành hoạt động.",
+  "@auth_error_unknown": {
+    "description": "auth_error_unknown"
   },
   "auth_first_name": "Tên",
   "@auth_first_name": {
     "description": "auth_first_name"
   },
+  "auth_forgot_password": "Tôi quên mật khẩu",
+  "@auth_forgot_password": {
+    "description": "auth_forgot_password"
+  },
+  "auth_forgot_password_subtitle": "Chúng tôi sẽ gửi cho bạn hướng dẫn tới email tài khoản của bạn.",
+  "@auth_forgot_password_subtitle": {
+    "description": "auth_forgot_password_subtitle"
+  },
+  "auth_hint_email": "tên@mail.com",
+  "@auth_hint_email": {
+    "description": "auth_hint_email"
+  },
   "auth_last_name": "Họ",
   "@auth_last_name": {
     "description": "auth_last_name"
   },
-  "auth_agree_personal_data": "Chấp nhận sử dụng dữ liệu sai...",
-  "@auth_agree_personal_data": {
-    "description": "auth_agree_personal_data"
+  "auth_login_success": "Đăng nhập thành công",
+  "@auth_login_success": {
+    "description": "auth_login_success"
   },
-  "settings_general_section": "Tổng quan",
-  "@settings_general_section": {
-    "description": "settings_general_section"
+  "auth_recovery_email_error": "Không thể gửi email.",
+  "@auth_recovery_email_error": {
+    "description": "auth_recovery_email_error"
   },
-  "settings_logout": "Đăng xuất",
-  "@settings_logout": {
-    "description": "settings_logout"
+  "auth_recovery_email_sent": "Đã gửi email.",
+  "@auth_recovery_email_sent": {
+    "description": "auth_recovery_email_sent"
   },
-  "settings_cloud_backup_desc": "Tải lên, khôi phục và quản lý...",
-  "@settings_cloud_backup_desc": {
-    "description": "settings_cloud_backup_desc"
+  "auth_register_error": "Không thể tạo tài khoản.",
+  "@auth_register_error": {
+    "description": "auth_register_error"
   },
-  "settings_migration_desc": "Nhập danh sách phát, bài hát...",
-  "@settings_migration_desc": {
-    "description": "settings_migration_desc"
+  "auth_register_success": "Tài khoản được tạo thành công.",
+  "@auth_register_success": {
+    "description": "auth_register_success"
+  },
+  "auth_welcome_subtitle": "Chào mừng đến với Estrella Music",
+  "@auth_welcome_subtitle": {
+    "description": "auth_welcome_subtitle"
+  },
+  "auth_welcome_title": "Chào mừng đến với Estrella Music",
+  "@auth_welcome_title": {
+    "description": "auth_welcome_title"
+  },
+  "autoDownFavSong": "Tự động tải xuống những bài hát được thích",
+  "@autoDownFavSong": {
+    "description": "autoDownFavSong"
+  },
+  "autoDownFavSongDes": "Tự động tải xuống bài hát khi được thêm vào danh sách yêu thích",
+  "@autoDownFavSongDes": {
+    "description": "autoDownFavSongDes"
+  },
+  "autoOpenPlayer": "Tự động mở màn hình phát nhạc",
+  "@autoOpenPlayer": {
+    "description": "autoOpenPlayer"
+  },
+  "autoOpenPlayerDes": "Bật/Tắt chức năng tự động mở màn hình phát nhạc sau khi chọn bài hát",
+  "@autoOpenPlayerDes": {
+    "description": "autoOpenPlayerDes"
+  },
+  "back": "Trở lại",
+  "@back": {
+    "description": "back"
+  },
+  "backFilesFound": "Tìm thấy cơ sở dữ liệu",
+  "@backFilesFound": {
+    "description": "backFilesFound"
+  },
+  "backgroundPlay": "Phát nhạc dưới nền",
+  "@backgroundPlay": {
+    "description": "backgroundPlay"
+  },
+  "backgroundPlayDes": "Cho phép/Không cho phép chơi nhạc dưới nền (Ứng dụng có thể được truy cập từ khay hệ thống khi ứng dụng đang chạy ở chế độ nền)",
+  "@backgroundPlayDes": {
+    "description": "backgroundPlayDes"
+  },
+  "backup": "Sao lưu",
+  "@backup": {
+    "description": "backup"
+  },
+  "backupAppData": "Sao lưu dữ liệu ứng dụng",
+  "@backupAppData": {
+    "description": "backupAppData"
+  },
+  "backupInProgress": "Đang sao lưu...",
+  "@backupInProgress": {
+    "description": "backupInProgress"
+  },
+  "backupMsg": "Bản sao lưu được lưu thành công!",
+  "@backupMsg": {
+    "description": "backupMsg"
+  },
+  "backupSettingsAndPlaylists": "Sao lưu cài đặt và đánh sách phát",
+  "@backupSettingsAndPlaylists": {
+    "description": "backupSettingsAndPlaylists"
+  },
+  "backupSettingsAndPlaylistsDes": "Lưu tất cả cài đặt, đánh sách phát, và dữ liệu đăng nhập vào một tệp sao lưu",
+  "@backupSettingsAndPlaylistsDes": {
+    "description": "backupSettingsAndPlaylistsDes"
+  },
+  "backup_auth_required": "Bạn cần một phiên hoạt động...",
+  "@backup_auth_required": {
+    "description": "backup_auth_required"
   },
   "backup_btn_restart": "Khởi động lại ứng dụng",
   "@backup_btn_restart": {
@@ -1196,217 +272,117 @@
   "@backup_btn_upload": {
     "description": "backup_btn_upload"
   },
-  "backup_no_backups": "Chưa có bản sao lưu nào...",
-  "@backup_no_backups": {
-    "description": "backup_no_backups"
-  },
-  "backup_auth_required": "Bạn cần một phiên hoạt động...",
-  "@backup_auth_required": {
-    "description": "backup_auth_required"
-  },
-  "backup_upload_success": "Bản sao lưu được tải lên chính xác.",
-  "@backup_upload_success": {
-    "description": "backup_upload_success"
-  },
-  "backup_restore_success": "Đã khôi phục bản sao lưu. Khởi động lại ứng dụng.",
-  "@backup_restore_success": {
-    "description": "backup_restore_success"
+  "backup_confirm_question": "Bạn có muốn thực hiện sao lưu?",
+  "@backup_confirm_question": {
+    "description": "backup_confirm_question"
   },
   "backup_delete_success": "Đã xóa bản sao lưu.",
   "@backup_delete_success": {
     "description": "backup_delete_success"
   },
-  "genre_pop": "Nhạc pop",
-  "@genre_pop": {
-    "description": "genre_pop"
+  "backup_no_backups": "Chưa có bản sao lưu nào...",
+  "@backup_no_backups": {
+    "description": "backup_no_backups"
   },
-  "genre_rock": "Đá",
-  "@genre_rock": {
-    "description": "genre_rock"
+  "backup_restore_success": "Đã khôi phục bản sao lưu. Khởi động lại ứng dụng.",
+  "@backup_restore_success": {
+    "description": "backup_restore_success"
   },
-  "genre_hiphop": "hip hop",
-  "@genre_hiphop": {
-    "description": "genre_hiphop"
+  "backup_select_folder_dialog": "Chọn thư mục để sao lưu",
+  "@backup_select_folder_dialog": {
+    "description": "backup_select_folder_dialog"
   },
-  "genre_electronic": "Điện tử",
-  "@genre_electronic": {
-    "description": "genre_electronic"
+  "backup_selection_prompt": "Chọn dữ liệu để sao lưu",
+  "@backup_selection_prompt": {
+    "description": "backup_selection_prompt"
   },
-  "genre_jazz": "nhạc jazz",
-  "@genre_jazz": {
-    "description": "genre_jazz"
+  "backup_upload_success": "Bản sao lưu được tải lên chính xác.",
+  "@backup_upload_success": {
+    "description": "backup_upload_success"
   },
-  "genre_latin": "tiếng Latinh",
-  "@genre_latin": {
-    "description": "genre_latin"
+  "basedOnLast": "Dựa vào tương tác gần nhất",
+  "@basedOnLast": {
+    "description": "basedOnLast"
   },
-  "migration_btn_select": "Chọn tệp và nhập",
-  "@migration_btn_select": {
-    "description": "migration_btn_select"
+  "bitrate": "Thông số bit",
+  "@bitrate": {
+    "description": "bitrate"
   },
-  "forgottenFavorites": "lãng quên yêu thích",
-  "@forgottenFavorites": {
-    "description": "forgottenFavorites"
+  "blacklistPipedPlaylist": "Danh sách đen danh sách phát",
+  "@blacklistPipedPlaylist": {
+    "description": "blacklistPipedPlaylist"
   },
-  "mostListenedSong": "Bài hát được nghe nhiều nhất",
-  "@mostListenedSong": {
-    "description": "mostListenedSong"
+  "blacklistPlstResetAlert": "Cài lại thành công!",
+  "@blacklistPlstResetAlert": {
+    "description": "blacklistPlstResetAlert"
   },
-  "reproducedBy": "Được sao chép bởi",
-  "@reproducedBy": {
-    "description": "reproducedBy"
+  "by": "bởi",
+  "@by": {
+    "description": "by"
   },
-  "recentSearches": "Tìm kiếm gần đây",
-  "@recentSearches": {
-    "description": "recentSearches"
+  "cacheHomeScreenData": "Lưu nội dung màn hình chính và bộ nhớ đệm",
+  "@cacheHomeScreenData": {
+    "description": "cacheHomeScreenData"
   },
-  "popularTracks": "Bài hát phổ biến",
-  "@popularTracks": {
-    "description": "popularTracks"
+  "cacheHomeScreenDataDes": "Bật tính năng lưu nội dung màn hình chính vào bộ nhớ đệm, màn hình chính sẽ hiện thị ngay lập tức khi bật tính năng này",
+  "@cacheHomeScreenDataDes": {
+    "description": "cacheHomeScreenDataDes"
   },
-  "latestRelease": "Bản phát hành mới nhất",
-  "@latestRelease": {
-    "description": "latestRelease"
+  "cacheSongs": "Lưu nhạc vào bộ nhớ đệm",
+  "@cacheSongs": {
+    "description": "cacheSongs"
   },
-  "follow": "Tiếp tục",
-  "@follow": {
-    "description": "follow"
+  "cacheSongsDes": "Lưu bài hát vào bộ nhớ đệm trong khi phát để phát trong tương lai/ngoại tuyến, nó sẽ chiếm thêm bộ nhớ trên thiết bị",
+  "@cacheSongsDes": {
+    "description": "cacheSongsDes"
   },
-  "following": "Tiếp theo",
-  "@following": {
-    "description": "following"
+  "cachedOrOffline": "Bộ nhớ đệm",
+  "@cachedOrOffline": {
+    "description": "cachedOrOffline"
   },
-  "listenNow": "Nghe bây giờ",
-  "@listenNow": {
-    "description": "listenNow"
+  "cancel": "Hủy",
+  "@cancel": {
+    "description": "cancel"
   },
-  "video": "Băng hình",
-  "@video": {
-    "description": "video"
+  "cancelTimer": "Hủy hẹn giờ",
+  "@cancelTimer": {
+    "description": "cancelTimer"
   },
-  "about": "Về",
-  "@about": {
-    "description": "about"
+  "cancelTimerAlert": "Đã hủy hẹn giờ tắt",
+  "@cancelTimerAlert": {
+    "description": "cancelTimerAlert"
   },
-  "readMore": "Đọc thêm",
-  "@readMore": {
-    "description": "readMore"
+  "clearImgCache": "Xóa hình trong bộ nhớ đệm",
+  "@clearImgCache": {
+    "description": "clearImgCache"
   },
-  "speedAndPitch": "Tốc độ và cao độ",
-  "@speedAndPitch": {
-    "description": "speedAndPitch"
+  "clearImgCacheAlert": "Xóa hình trong bộ nhớ đệm thành công",
+  "@clearImgCacheAlert": {
+    "description": "clearImgCacheAlert"
   },
-  "playbackSpeed": "Tốc độ phát lại",
-  "@playbackSpeed": {
-    "description": "playbackSpeed"
+  "clearImgCacheDes": "Bấm vào đây để xóa hình trong bộ nhớ đệm. (Không khuyến khích trừ khi bạn muốn làm mới dữ liệu hình ảnh)",
+  "@clearImgCacheDes": {
+    "description": "clearImgCacheDes"
   },
-  "songPitch": "giai điệu bài hát",
-  "@songPitch": {
-    "description": "songPitch"
+  "close": "Đóng",
+  "@close": {
+    "description": "close"
   },
-  "musicRecognition": "Nhận dạng âm nhạc",
-  "@musicRecognition": {
-    "description": "musicRecognition"
+  "closeApp": "Đóng ứng dụng",
+  "@closeApp": {
+    "description": "closeApp"
   },
-  "listeningToEnvironment": "Lắng nghe môi trường...",
-  "@listeningToEnvironment": {
-    "description": "listeningToEnvironment"
+  "cloudLibraryFound": "Đã tìm thấy thư viện đám mây.",
+  "@cloudLibraryFound": {
+    "description": "cloudLibraryFound"
   },
-  "micInstruction": "Đảm bảo nhạc đang phát đủ lớn ở gần micrô của bạn.",
-  "@micInstruction": {
-    "description": "micInstruction"
+  "cloudLibraryFoundDeviceWillDownload": "Một thư viện đám mây đã được tìm thấy. Thiết bị này sẽ tải xuống mà không ghi đè lên.",
+  "@cloudLibraryFoundDeviceWillDownload": {
+    "description": "cloudLibraryFoundDeviceWillDownload"
   },
-  "processingAudio": "Đang xử lý âm thanh...",
-  "@processingAudio": {
-    "description": "processingAudio"
-  },
-  "shazamSearching": "Đang tìm kiếm cơ sở dữ liệu Shazam để tìm kết quả phù hợp...",
-  "@shazamSearching": {
-    "description": "shazamSearching"
-  },
-  "songFound": "Đã tìm thấy bài hát!",
-  "@songFound": {
-    "description": "songFound"
-  },
-  "playNow": "Chơi ngay",
-  "@playNow": {
-    "description": "playNow"
-  },
-  "searchInLibrary": "Tìm kiếm trong Thư viện",
-  "@searchInLibrary": {
-    "description": "searchInLibrary"
-  },
-  "noMatchesFound": "Không có kết quả phù hợp",
-  "@noMatchesFound": {
-    "description": "noMatchesFound"
-  },
-  "noMatchInstruction": "Không thể tìm thấy bất kỳ bài hát nào trong âm thanh đã ghi",
-  "@noMatchInstruction": {
-    "description": "noMatchInstruction"
-  },
-  "errorOccurred": "Đã xảy ra lỗi",
-  "@errorOccurred": {
-    "description": "errorOccurred"
-  },
-  "playingRecognizedTrack": "Đang chơi:",
-  "@playingRecognizedTrack": {
-    "description": "playingRecognizedTrack"
-  },
-  "errorPlayingTrack": "Lỗi khi chơi:",
-  "@errorPlayingTrack": {
-    "description": "errorPlayingTrack"
-  },
-  "welcome_title": "Âm nhạc của bạn, theo cách của bạn",
-  "@welcome_title": {
-    "description": "welcome_title"
-  },
-  "welcome_subtitle": "Chọn cách bạn muốn trải nghiệm Estrella Music kể từ bây giờ.",
-  "@welcome_subtitle": {
-    "description": "welcome_subtitle"
-  },
-  "welcome_intro": "Chúng tôi đã hiện đại hóa nền tảng của mình. Hệ thống tải lên bản sao lưu thủ công cũ đã bị vô hiệu hóa. Bây giờ bạn có hai cách rõ ràng để quản lý thư viện nhạc của mình.",
-  "@welcome_intro": {
-    "description": "welcome_intro"
-  },
-  "recommend_cloud": "Chúng tôi khuyên bạn nên kích hoạt Chế độ đám mây để có trải nghiệm giống như Spotify: đồng bộ hóa thời gian thực giữa tất cả các thiết bị của bạn và sao lưu tự động mà bạn không cần phải làm gì cả.",
-  "@recommend_cloud": {
-    "description": "recommend_cloud"
-  },
-  "swipe_prompt": "Vuốt để khám phá các tùy chọn ➔",
-  "@swipe_prompt": {
-    "description": "swipe_prompt"
-  },
-  "local_title": "Chế độ cục bộ",
-  "@local_title": {
-    "description": "local_title"
-  },
-  "local_subtitle": "Quyền riêng tư tuyệt đối trên thiết bị của bạn",
-  "@local_subtitle": {
-    "description": "local_subtitle"
-  },
-  "local_b1": "Nó hoạt động mà không cần phải đăng nhập.",
-  "@local_b1": {
-    "description": "local_b1"
-  },
-  "local_b2": "Toàn bộ thư viện của bạn nằm hoàn toàn trên máy tính này.",
-  "@local_b2": {
-    "description": "local_b2"
-  },
-  "local_b3": "Lưu ý: Không sao lưu đám mây thủ công. Nếu bạn mất thiết bị hoặc gỡ cài đặt ứng dụng, dữ liệu của bạn sẽ không thể khôi phục được.",
-  "@local_b3": {
-    "description": "local_b3"
-  },
-  "local_btn": "Chỉ sử dụng trên thiết bị này",
-  "@local_btn": {
-    "description": "local_btn"
-  },
-  "cloud_title": "Chế độ đám mây (Được khuyến nghị)",
-  "@cloud_title": {
-    "description": "cloud_title"
-  },
-  "cloud_subtitle": "Đồng bộ hóa thời gian thực với Joss Red",
-  "@cloud_subtitle": {
-    "description": "cloud_subtitle"
+  "cloudModeReadyOfflineCache": "Chế độ đám mây đã sẵn sàng. Thiết bị này sẽ hoạt động như một bộ nhớ đệm ngoại tuyến.",
+  "@cloudModeReadyOfflineCache": {
+    "description": "cloudModeReadyOfflineCache"
   },
   "cloud_b1": "Đăng nhập an toàn bằng tài khoản Joss Red của bạn.",
   "@cloud_b1": {
@@ -1424,511 +400,137 @@
   "@cloud_btn": {
     "description": "cloud_btn"
   },
-  "slide_indicator": "Bước {current} trên 3",
-  "@slide_indicator": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      }
-    },
-    "description": "slide_indicator"
+  "cloud_subtitle": "Đồng bộ hóa thời gian thực với Joss Red",
+  "@cloud_subtitle": {
+    "description": "cloud_subtitle"
   },
-  "news_card_title": "Âm nhạc Estrella đã phát triển!",
-  "@news_card_title": {
-    "description": "news_card_title"
-  },
-  "news_card_subtitle": "Đồng bộ hóa 100% với Joss Red, danh sách phát với bạn bè và hơn thế nữa. Nhấn để xem có gì mới.",
-  "@news_card_subtitle": {
-    "description": "news_card_subtitle"
-  },
-  "news_dialog_title": "Tin tức âm nhạc Estrella",
-  "@news_dialog_title": {
-    "description": "news_dialog_title"
-  },
-  "news_item_sync_title": "Tích hợp đầy đủ với Joss Red",
-  "@news_item_sync_title": {
-    "description": "news_item_sync_title"
-  },
-  "news_item_sync_desc": "Danh sách phát và mục yêu thích của bạn hiện được lưu và đồng bộ hóa tự động trên đám mây với tài khoản Joss Red chính của bạn.",
-  "@news_item_sync_desc": {
-    "description": "news_item_sync_desc"
-  },
-  "news_item_collab_title": "Danh sách phát cộng tác",
-  "@news_item_collab_title": {
-    "description": "news_item_collab_title"
-  },
-  "news_item_collab_desc": "Tạo danh sách phát với bạn bè của bạn! Khi tạo danh sách phát, hãy chọn hộp kiểm Cộng tác và chọn bạn bè của bạn để cùng chỉnh sửa.",
-  "@news_item_collab_desc": {
-    "description": "news_item_collab_desc"
-  },
-  "news_item_trans_title": "Đồng bộ hóa minh bạch",
-  "@news_item_trans_title": {
-    "description": "news_item_trans_title"
-  },
-  "news_item_trans_desc": "Bạn không cần phải nhấp vào nút đồng bộ hóa thủ công nữa; Động cơ mới có nhiệm vụ chuyển số lên xuống tự động.",
-  "@news_item_trans_desc": {
-    "description": "news_item_trans_desc"
-  },
-  "news_dialog_section_friends": "Quản lý bạn bè và tài khoản:",
-  "@news_dialog_section_friends": {
-    "description": "news_dialog_section_friends"
-  },
-  "news_dialog_friends_desc": "Để thêm bạn bè, chấp nhận yêu cầu hoặc quản lý hồ sơ bảo mật của bạn, vui lòng sử dụng Joss Red trên các nền tảng chính thức của nó:",
-  "@news_dialog_friends_desc": {
-    "description": "news_dialog_friends_desc"
-  },
-  "news_btn_app": "Ứng dụng Joss Red (Cửa hàng Play)",
-  "@news_btn_app": {
-    "description": "news_btn_app"
-  },
-  "news_btn_web": "Web đỏ Joss",
-  "@news_btn_web": {
-    "description": "news_btn_web"
-  },
-  "news_btn_dismiss": "đã hiểu",
-  "@news_btn_dismiss": {
-    "description": "news_btn_dismiss"
-  },
-  "settings_appearance_desc": "Hình ảnh động chủ đề, ngôn ngữ và giao diện.",
-  "@settings_appearance_desc": {
-    "description": "settings_appearance_desc"
-  },
-  "settings_content_desc": "Khám phá các bộ lọc, tích hợp với Piped và bộ nhớ đệm.",
-  "@settings_content_desc": {
-    "description": "settings_content_desc"
-  },
-  "settings_playback_desc": "Chất lượng phát trực tuyến, chuẩn hóa, im lặng và pin.",
-  "@settings_playback_desc": {
-    "description": "settings_playback_desc"
-  },
-  "settings_downloads_desc": "Tải xuống và lưu trữ",
-  "@settings_downloads_desc": {
-    "description": "settings_downloads_desc"
-  },
-  "settings_downloads_sub": "Định dạng âm thanh, thư mục và tải xuống tự động.",
-  "@settings_downloads_sub": {
-    "description": "settings_downloads_sub"
-  },
-  "settings_account_desc": "Tài khoản và đồng bộ hóa",
-  "@settings_account_desc": {
-    "description": "settings_account_desc"
-  },
-  "settings_account_sub": "Chế độ đám mây, sao lưu, danh sách bạn bè và di chuyển.",
-  "@settings_account_sub": {
-    "description": "settings_account_sub"
-  },
-  "settings_about_desc": "Giới thiệu về Estrella Music",
-  "@settings_about_desc": {
-    "description": "settings_about_desc"
-  },
-  "settings_about_sub": "Phiên bản, dự án nguồn mở và GitHub.",
-  "@settings_about_sub": {
-    "description": "settings_about_sub"
-  },
-  "settings_local_cloud_title": "Chế độ cục bộ / Đám mây EMusic",
-  "@settings_local_cloud_title": {
-    "description": "settings_local_cloud_title"
-  },
-  "settings_local_cloud_desc": "Chọn, di chuyển hoặc xem lại trạng thái đồng bộ hóa với Joss Red.",
-  "@settings_local_cloud_desc": {
-    "description": "settings_local_cloud_desc"
-  },
-  "settings_my_friends": "bạn bè của tôi",
-  "@settings_my_friends": {
-    "description": "settings_my_friends"
-  },
-  "settings_my_friends_desc": "Quản lý trực tiếp bạn bè Joss Red của bạn.",
-  "@settings_my_friends_desc": {
-    "description": "settings_my_friends_desc"
-  },
-  "settings_refresh_visitor_title": "Làm mới ID (ID khách truy cập)",
-  "@settings_refresh_visitor_title": {
-    "description": "settings_refresh_visitor_title"
-  },
-  "settings_refresh_visitor_desc": "Tạo lại ID nhạc Online của bạn nếu nội dung Khám phá không tải.",
-  "@settings_refresh_visitor_desc": {
-    "description": "settings_refresh_visitor_desc"
-  },
-  "settings_visitor_updated": "Mã định danh đã cập nhật",
-  "@settings_visitor_updated": {
-    "description": "settings_visitor_updated"
-  },
-  "settings_visitor_updated_desc": "ID khách truy cập mới đã được tạo thành công.",
-  "@settings_visitor_updated_desc": {
-    "description": "settings_visitor_updated_desc"
-  },
-  "settings_visitor_error": "Sai lầm",
-  "@settings_visitor_error": {
-    "description": "settings_visitor_error"
-  },
-  "settings_visitor_error_desc": "Không thể tạo mã định danh mới. Vui lòng thử lại sau.",
-  "@settings_visitor_error_desc": {
-    "description": "settings_visitor_error_desc"
-  },
-  "settings_visitor_exception": "Đã xảy ra lỗi khi tạo lại: {error}",
-  "@settings_visitor_exception": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    },
-    "description": "settings_visitor_exception"
-  },
-  "migratedLibrary": "Thư viện đã di chuyển",
-  "@migratedLibrary": {
-    "description": "migratedLibrary"
-  },
-  "noSongsInCollection": "Không có bài hát nào trong bộ sưu tập này",
-  "@noSongsInCollection": {
-    "description": "noSongsInCollection"
-  },
-  "startupScreen": "Mở khi khởi động",
-  "@startupScreen": {
-    "description": "startupScreen"
-  },
-  "startupScreenDescription": "Chọn phần Estrella Music mở đầu tiên",
-  "@startupScreenDescription": {
-    "description": "startupScreenDescription"
-  },
-  "friends": "Bạn",
-  "@friends": {
-    "description": "friends"
-  },
-  "dailyDiscover": "Khám phá hàng ngày",
-  "@dailyDiscover": {
-    "description": "dailyDiscover"
-  },
-  "keepListening": "tiếp tục lắng nghe",
-  "@keepListening": {
-    "description": "keepListening"
-  },
-  "similarToTitle": "Tương tự như {title}",
-  "@similarToTitle": {
-    "placeholders": {
-      "title": {
-        "type": "String"
-      }
-    },
-    "description": "similarToTitle"
-  },
-  "pipedPlaylistDescription": "Danh sách phát theo đường ống",
-  "@pipedPlaylistDescription": {
-    "description": "pipedPlaylistDescription"
+  "cloud_title": "Chế độ đám mây (Được khuyến nghị)",
+  "@cloud_title": {
+    "description": "cloud_title"
   },
   "collaborativePlaylistDescription": "Danh sách phát cộng tác",
   "@collaborativePlaylistDescription": {
     "description": "collaborativePlaylistDescription"
   },
-  "libraryPlaylistDescription": "Danh sách phát thư viện",
-  "@libraryPlaylistDescription": {
-    "description": "libraryPlaylistDescription"
-  },
-  "untitledSong": "Bài hát không tên",
-  "@untitledSong": {
-    "description": "untitledSong"
-  },
-  "migratedPlaylist": "Danh sách phát đã di chuyển",
-  "@migratedPlaylist": {
-    "description": "migratedPlaylist"
-  },
-  "migratedAlbum": "Album đã di chuyển",
-  "@migratedAlbum": {
-    "description": "migratedAlbum"
-  },
-  "songsImportedFromJossMusic": "Bài hát được nhập từ Joss Music Kotlin",
-  "@songsImportedFromJossMusic": {
-    "description": "songsImportedFromJossMusic"
-  },
-  "importedFromJossMusic": "Được nhập từ Joss Music Kotlin",
-  "@importedFromJossMusic": {
-    "description": "importedFromJossMusic"
-  },
-  "syncLocalModeActive": "Chế độ cục bộ đang hoạt động",
-  "@syncLocalModeActive": {
-    "description": "syncLocalModeActive"
-  },
-  "syncCloudPending": "Chế độ đám mây đang hoạt động. Đang chờ đồng bộ hóa.",
-  "@syncCloudPending": {
-    "description": "syncCloudPending"
-  },
-  "syncCloudDownloadingExisting": "Đã kích hoạt chế độ đám mây. Đang tải xuống thư viện hiện có.",
-  "@syncCloudDownloadingExisting": {
-    "description": "syncCloudDownloadingExisting"
-  },
-  "syncCloudMigrationComplete": "Đã kích hoạt chế độ đám mây. Thư viện đã di chuyển.",
-  "@syncCloudMigrationComplete": {
-    "description": "syncCloudMigrationComplete"
-  },
-  "syncLocalDeviceOnly": "Dữ liệu của bạn chỉ được lưu giữ trên thiết bị này.",
-  "@syncLocalDeviceOnly": {
-    "description": "syncLocalDeviceOnly"
-  },
-  "syncDownloading": "Đang tải xuống các thay đổi của EMusic...",
-  "@syncDownloading": {
-    "description": "syncDownloading"
-  },
-  "syncDownloadFailed": "Không thể tải xuống đồng bộ hóa.",
-  "@syncDownloadFailed": {
-    "description": "syncDownloadFailed"
-  },
-  "syncLocalChangesFirst": "Có những thay đổi mới ở địa phương. Chúng sẽ được tải lên trước khi tải xuống.",
-  "@syncLocalChangesFirst": {
-    "description": "syncLocalChangesFirst"
-  },
-  "syncLibrarySynced": "Thư viện đồng bộ.",
-  "@syncLibrarySynced": {
-    "description": "syncLibrarySynced"
-  },
-  "syncOfflinePending": "Ngoại tuyến. Những thay đổi đang chờ xử lý.",
-  "@syncOfflinePending": {
-    "description": "syncOfflinePending"
-  },
-  "syncLibraryUpToDate": "Thư viện cập nhật.",
-  "@syncLibraryUpToDate": {
-    "description": "syncLibraryUpToDate"
-  },
-  "syncChangesSynced": "{count} thay đổi được đồng bộ hóa.",
-  "@syncChangesSynced": {
-    "placeholders": {
-      "count": {
-        "type": "String"
-      }
-    },
-    "description": "syncChangesSynced"
-  },
-  "syncUploading": "Đang tải các thay đổi lên EMusic...",
-  "@syncUploading": {
-    "description": "syncUploading"
-  },
-  "syncUploadSuccessWs": "Các thay đổi đã được tải lên thành công (WS).",
-  "@syncUploadSuccessWs": {
-    "description": "syncUploadSuccessWs"
-  },
-  "syncUploadWsRetry": "Không thể tải lên bằng WS. Nó sẽ được thử lại sau.",
-  "@syncUploadWsRetry": {
-    "description": "syncUploadWsRetry"
-  },
-  "syncUploadSuccess": "Các thay đổi được tải lên chính xác.",
-  "@syncUploadSuccess": {
-    "description": "syncUploadSuccess"
-  },
-  "syncUploadRetry": "Không thể đứng dậy được. Nó sẽ được thử lại sau.",
-  "@syncUploadRetry": {
-    "description": "syncUploadRetry"
-  },
-  "syncOfflineRetry": "Ngoại tuyến. Đã lưu các thay đổi để thử lại.",
-  "@syncOfflineRetry": {
-    "description": "syncOfflineRetry"
-  },
-  "syncUnconfirmedRetry": "EMusic không xác nhận tất cả những thay đổi. Họ sẽ được thử lại.",
-  "@syncUnconfirmedRetry": {
-    "description": "syncUnconfirmedRetry"
-  },
-  "syncChangesConfirmed": "{count} thay đổi đã được cam kết.",
-  "@syncChangesConfirmed": {
-    "placeholders": {
-      "count": {
-        "type": "String"
-      }
-    },
-    "description": "syncChangesConfirmed"
-  },
-  "migrationAlreadyRunning": "Hiện đã có quá trình di chuyển đang diễn ra.",
-  "@migrationAlreadyRunning": {
-    "description": "migrationAlreadyRunning"
-  },
-  "migrationLoginRequired": "Đăng nhập vào Joss Red trước khi di chuyển.",
-  "@migrationLoginRequired": {
-    "description": "migrationLoginRequired"
-  },
-  "migrationCheckingCloud": "Kiểm tra xem EMusic Cloud đã có thư viện chưa...",
-  "@migrationCheckingCloud": {
-    "description": "migrationCheckingCloud"
-  },
-  "cloudLibraryFoundDeviceWillDownload": "Một thư viện đám mây đã được tìm thấy. Thiết bị này sẽ tải xuống mà không ghi đè lên.",
-  "@cloudLibraryFoundDeviceWillDownload": {
-    "description": "cloudLibraryFoundDeviceWillDownload"
-  },
-  "cloudLibraryFound": "Đã tìm thấy thư viện đám mây.",
-  "@cloudLibraryFound": {
-    "description": "cloudLibraryFound"
-  },
-  "migrationCreatingBackup": "Tạo bản sao lưu cục bộ trước khi kết nối đám mây...",
-  "@migrationCreatingBackup": {
-    "description": "migrationCreatingBackup"
-  },
-  "migrationAnalyzingLocal": "Phân tích thư viện địa phương...",
-  "@migrationAnalyzingLocal": {
-    "description": "migrationAnalyzingLocal"
-  },
-  "migrationPreparingCloud": "Đang chuẩn bị di chuyển trong EMusic Cloud...",
-  "@migrationPreparingCloud": {
-    "description": "migrationPreparingCloud"
-  },
-  "migrationStartFailed": "EMusic Cloud không thể bắt đầu di chuyển.",
-  "@migrationStartFailed": {
-    "description": "migrationStartFailed"
-  },
-  "migrationUploadingData": "Đang tải lên danh sách phát, mục yêu thích và lịch sử...",
-  "@migrationUploadingData": {
-    "description": "migrationUploadingData"
-  },
-  "migrationUploadIncomplete": "Không phải tất cả dữ liệu có thể được tải lên. Chúng tôi giữ sự hỗ trợ địa phương của bạn.",
-  "@migrationUploadIncomplete": {
-    "description": "migrationUploadIncomplete"
-  },
-  "migrationVerifyingIntegrity": "Đang xác minh tính toàn vẹn trong EMusic Cloud...",
-  "@migrationVerifyingIntegrity": {
-    "description": "migrationVerifyingIntegrity"
-  },
-  "migrationValidationFailed": "EMusic Cloud không thể xác thực quá trình di chuyển.",
-  "@migrationValidationFailed": {
-    "description": "migrationValidationFailed"
-  },
-  "cloudModeReadyOfflineCache": "Chế độ đám mây đã sẵn sàng. Thiết bị này sẽ hoạt động như một bộ nhớ đệm ngoại tuyến.",
-  "@cloudModeReadyOfflineCache": {
-    "description": "cloudModeReadyOfflineCache"
-  },
-  "migrationCompleted": "Quá trình di chuyển đã hoàn tất.",
-  "@migrationCompleted": {
-    "description": "migrationCompleted"
-  },
-  "migrationFailedLocalPreserved": "Việc di chuyển không thành công. Dữ liệu cục bộ của bạn không được sửa đổi.",
-  "@migrationFailedLocalPreserved": {
-    "description": "migrationFailedLocalPreserved"
-  },
-  "sessionExpiredLoginAgain": "Phiên của bạn đã hết hạn. Đăng nhập lại.",
-  "@sessionExpiredLoginAgain": {
-    "description": "sessionExpiredLoginAgain"
-  },
-  "selectedFileNotFound": "Không tìm thấy tập tin đã chọn.",
-  "@selectedFileNotFound": {
-    "description": "selectedFileNotFound"
-  },
-  "genericAlbum": "Album",
-  "@genericAlbum": {
-    "description": "genericAlbum"
-  },
-  "friendsLoginRequired": "Đăng nhập để tìm bạn bè.",
-  "@friendsLoginRequired": {
-    "description": "friendsLoginRequired"
-  },
-  "invalidSessionToken": "Phiên không chứa mã thông báo hợp lệ.",
-  "@invalidSessionToken": {
-    "description": "invalidSessionToken"
-  },
-  "userSearchFailed": "Không thể tìm kiếm người dùng ({statusCode}).",
-  "@userSearchFailed": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    },
-    "description": "userSearchFailed"
-  },
-  "invalidServerResponse": "Phản hồi của máy chủ không hợp lệ.",
-  "@invalidServerResponse": {
-    "description": "invalidServerResponse"
-  },
-  "userListMissing": "Phản hồi không chứa danh sách người dùng.",
-  "@userListMissing": {
-    "description": "userListMissing"
-  },
-  "playlistCollaboratorsTitle": "Người đóng góp danh sách phát",
-  "@playlistCollaboratorsTitle": {
-    "description": "playlistCollaboratorsTitle"
-  },
   "collaboratorsInstruction": "Chọn những người bạn có thể xem và chỉnh sửa danh sách phát này:",
   "@collaboratorsInstruction": {
     "description": "collaboratorsInstruction"
-  },
-  "noJossRedFriends": "Bạn chưa có thêm bạn bè nào trên Joss Red.",
-  "@noJossRedFriends": {
-    "description": "noJossRedFriends"
-  },
-  "friendFallback": "Bạn bè",
-  "@friendFallback": {
-    "description": "friendFallback"
   },
   "collaboratorsUpdated": "Cộng tác viên được cập nhật chính xác.",
   "@collaboratorsUpdated": {
     "description": "collaboratorsUpdated"
   },
-  "save": "Giữ",
-  "@save": {
-    "description": "save"
+  "communityplaylists": "Danh sách phát cộng đồng",
+  "@communityplaylists": {
+    "description": "communityplaylists"
   },
-  "manageCollaborators": "Quản lý cộng tác viên (bạn bè)",
-  "@manageCollaborators": {
-    "description": "manageCollaborators"
+  "content": "Nội dung",
+  "@content": {
+    "description": "content"
+  },
+  "copyrightNotice": "© 2026 JOSPROX. Giấy phép GPL v3.0",
+  "@copyrightNotice": {
+    "description": "copyrightNotice"
+  },
+  "create": "Tạo",
+  "@create": {
+    "description": "create"
+  },
+  "createnAdd": "Tạo & Thêm",
+  "@createnAdd": {
+    "description": "createnAdd"
+  },
+  "customIns": "Phiên bản tùy chỉnh",
+  "@customIns": {
+    "description": "customIns"
+  },
+  "customInsSelectMsg": "Vui lòng chọn Phiên bản tùy chỉnh",
+  "@customInsSelectMsg": {
+    "description": "customInsSelectMsg"
+  },
+  "dailyDiscover": "Khám phá hàng ngày",
+  "@dailyDiscover": {
+    "description": "dailyDiscover"
+  },
+  "dark": "Tối",
+  "@dark": {
+    "description": "dark"
+  },
+  "delete": "Xóa",
+  "@delete": {
+    "description": "delete"
+  },
+  "deleteDownloadData": "Xóa khỏi tải về",
+  "@deleteDownloadData": {
+    "description": "deleteDownloadData"
+  },
+  "deleteDownloadedDataAlert": "Đã xóa thành công khỏi nội dung tải xuống!",
+  "@deleteDownloadedDataAlert": {
+    "description": "deleteDownloadedDataAlert"
+  },
+  "developedBy": "Được phát triển và duy trì bởi Joss Estrada (JOSPROX)",
+  "@developedBy": {
+    "description": "developedBy"
+  },
+  "disableTransitionAnimation": "Tắt hoạt ảnh chuyển tiếp",
+  "@disableTransitionAnimation": {
+    "description": "disableTransitionAnimation"
+  },
+  "disableTransitionAnimationDes": "Bật tùy chọn này để tắt hoạt ảnh chuyển tiếp trang",
+  "@disableTransitionAnimationDes": {
+    "description": "disableTransitionAnimationDes"
+  },
+  "disabled": "Đã tắt",
+  "@disabled": {
+    "description": "disabled"
+  },
+  "discover": "Khám phá",
+  "@discover": {
+    "description": "discover"
+  },
+  "dismiss": "Hủy",
+  "@dismiss": {
+    "description": "dismiss"
   },
   "done": "Sẵn sàng",
   "@done": {
     "description": "done"
   },
-  "notAuthenticated": "Chưa được xác thực",
-  "@notAuthenticated": {
-    "description": "notAuthenticated"
+  "dontShowInfoAgain": "Không hiển thị thông tin này lần nữa",
+  "@dontShowInfoAgain": {
+    "description": "dontShowInfoAgain"
   },
-  "genericError": "Sai lầm",
-  "@genericError": {
-    "description": "genericError"
+  "downFilesFound": "bài hát tải về đã được tìm thấy",
+  "@downFilesFound": {
+    "description": "downFilesFound"
   },
-  "friendRequestSent": "Đã gửi yêu cầu kết bạn",
-  "@friendRequestSent": {
-    "description": "friendRequestSent"
+  "download": "Tải về",
+  "@download": {
+    "description": "download"
   },
-  "friendRequestAccepted": "Yêu cầu kết bạn đã được chấp nhận",
-  "@friendRequestAccepted": {
-    "description": "friendRequestAccepted"
+  "downloadAlbumSongs": "Tải bài hát từ album",
+  "@downloadAlbumSongs": {
+    "description": "downloadAlbumSongs"
   },
-  "friendshipRemoved": "Đã xóa tình bạn",
-  "@friendshipRemoved": {
-    "description": "friendshipRemoved"
+  "downloadError2": "Bài hát bạn yêu cầu không thể tải xuống được vì giới hạn của máy chủ. Bạn có thể thử lại",
+  "@downloadError2": {
+    "description": "downloadError2"
   },
-  "userBlocked": "Người dùng bị chặn",
-  "@userBlocked": {
-    "description": "userBlocked"
+  "downloadError3": "Tải xuống thất bại do lỗi mạng/truyền phát. Vui lòng thử lại",
+  "@downloadError3": {
+    "description": "downloadError3"
   },
-  "userUnblocked": "Người dùng đã được mở khóa",
-  "@userUnblocked": {
-    "description": "userUnblocked"
-  },
-  "artistsByTaste": "Theo sở thích của bạn",
-  "@artistsByTaste": {
-    "description": "artistsByTaste"
-  },
-  "followedArtists": "đã theo dõi",
-  "@followedArtists": {
-    "description": "followedArtists"
-  },
-  "recommendedArtists": "Khuyến khích",
-  "@recommendedArtists": {
-    "description": "recommendedArtists"
-  },
-  "albumsByTaste": "Theo sở thích của bạn",
-  "@albumsByTaste": {
-    "description": "albumsByTaste"
-  },
-  "savedAlbums": "Đã lưu",
-  "@savedAlbums": {
-    "description": "savedAlbums"
-  },
-  "recommendedAlbums": "Khuyến khích",
-  "@recommendedAlbums": {
-    "description": "recommendedAlbums"
-  },
-  "downloadNotificationChannelName": "tải nhạc",
-  "@downloadNotificationChannelName": {
-    "description": "downloadNotificationChannelName"
+  "downloadLocation": "Vị trí tải xuống",
+  "@downloadLocation": {
+    "description": "downloadLocation"
   },
   "downloadNotificationChannelDescription": "Giữ tải nhạc của bạn hoạt động trong nền.",
   "@downloadNotificationChannelDescription": {
     "description": "downloadNotificationChannelDescription"
   },
-  "downloadNotificationTitle": "Đang tải nhạc",
-  "@downloadNotificationTitle": {
-    "description": "downloadNotificationTitle"
+  "downloadNotificationChannelName": "tải nhạc",
+  "@downloadNotificationChannelName": {
+    "description": "downloadNotificationChannelName"
   },
   "downloadNotificationPreparing": "Đang chuẩn bị nội dung tải xuống của bạn…",
   "@downloadNotificationPreparing": {
@@ -1943,229 +545,649 @@
     },
     "description": "downloadNotificationSong"
   },
-  "syncCloudModeActive": "Chế độ đám mây đang hoạt động",
-  "@syncCloudModeActive": {
-    "description": "syncCloudModeActive"
-  },
-  "permissionsConsentTitle": "Quyền để bắt đầu",
-  "@permissionsConsentTitle": {
-    "description": "permissionsConsentTitle"
-  },
-  "permissionsConsentDescription": "Estrella Music cần những quyền này để quản lý nhạc của bạn và cung cấp tất cả các tính năng phát lại.",
-  "@permissionsConsentDescription": {
-    "description": "permissionsConsentDescription"
-  },
-  "permissionsStorageTitle": "Âm nhạc và lưu trữ",
-  "@permissionsStorageTitle": {
-    "description": "permissionsStorageTitle"
-  },
-  "permissionsStorageDescription": "Nó cho phép bạn phát nhạc, lưu tải xuống, xuất danh sách phát và chuẩn bị cập nhật.",
-  "@permissionsStorageDescription": {
-    "description": "permissionsStorageDescription"
-  },
-  "permissionsNotificationsTitle": "Thông báo",
-  "@permissionsNotificationsTitle": {
-    "description": "permissionsNotificationsTitle"
-  },
-  "permissionsNotificationsDescription": "Hiển thị các điều khiển phát lại, tiến trình tải xuống và các thông báo ứng dụng quan trọng.",
-  "@permissionsNotificationsDescription": {
-    "description": "permissionsNotificationsDescription"
-  },
-  "permissionsMicrophoneTitle": "Micrô",
-  "@permissionsMicrophoneTitle": {
-    "description": "permissionsMicrophoneTitle"
-  },
-  "permissionsMicrophoneDescription": "Nó chỉ được sử dụng khi bạn chọn xác định một bài hát đang phát xung quanh bạn.",
-  "@permissionsMicrophoneDescription": {
-    "description": "permissionsMicrophoneDescription"
-  },
-  "permissionsContinueButton": "Cấp quyền cần thiết",
-  "@permissionsContinueButton": {
-    "description": "permissionsContinueButton"
-  },
-  "permissionsRequiredNotice": "Tất cả ba giấy phép được yêu cầu để tiếp tục. Bạn có thể thay đổi chúng sau trong cài đặt hệ thống.",
-  "@permissionsRequiredNotice": {
-    "description": "permissionsRequiredNotice"
-  },
-  "permissionsAllow": "Cho phép",
-  "@permissionsAllow": {
-    "description": "permissionsAllow"
-  },
-  "permissionsOpenSettings": "Cài đặt",
-  "@permissionsOpenSettings": {
-    "description": "permissionsOpenSettings"
-  },
-  "auth_2fa_title": "Xác thực hai yếu tố",
-  "@auth_2fa_title": {
-    "description": "auth_2fa_title"
-  },
-  "auth_2fa_subtitle": "Nhập mã gồm 6 chữ số từ ứng dụng xác thực của bạn. Quyền truy cập này sẽ hết hạn sau 5 phút.",
-  "@auth_2fa_subtitle": {
-    "description": "auth_2fa_subtitle"
-  },
-  "auth_2fa_code": "Mã xác thực",
-  "@auth_2fa_code": {
-    "description": "auth_2fa_code"
-  },
-  "auth_2fa_verify": "Kiểm tra và tiếp tục",
-  "@auth_2fa_verify": {
-    "description": "auth_2fa_verify"
-  },
-  "auth_2fa_invalid": "Nhập mã gồm 6 chữ số hợp lệ hoặc đăng nhập lại.",
-  "@auth_2fa_invalid": {
-    "description": "auth_2fa_invalid"
-  },
-  "helloWorld": "Xin chào thế giới",
-  "@helloWorld": {
-    "description": "Este texto es opcional"
-  },
-  "removeFromCache": "Xóa khỏi bộ nhớ đệm",
-  "@removeFromCache": {
-    "description": "removeFromCache"
-  },
-  "quickPics": "Lựa chọn nhanh",
-  "@quickPics": {
-    "description": "quickPics"
-  },
-  "topMusicVid": "Video ca nhạc hàng đầu",
-  "@topMusicVid": {
-    "description": "topMusicVid"
-  },
-  "lyrics": "chữ cái",
-  "@lyrics": {
-    "description": "lyrics"
-  },
-  "no": "Không",
-  "@no": {
-    "description": "no"
-  },
-  "podcasts": "Podcast",
-  "@podcasts": {
-    "description": "podcasts"
-  },
-  "episodes": "tập phim",
-  "@episodes": {
-    "description": "episodes"
-  },
-  "profiles": "Hồ sơ",
-  "@profiles": {
-    "description": "profiles"
-  },
-  "addToLibrary": "Thêm vào thư viện",
-  "@addToLibrary": {
-    "description": "addToLibrary"
-  },
-  "removeFromLibrary": "Xóa khỏi thư viện",
-  "@removeFromLibrary": {
-    "description": "removeFromLibrary"
-  },
-  "play": "Chơi",
-  "@play": {
-    "description": "play"
-  },
-  "enqueueAlbumSongs": "Thêm bài hát trong album vào hàng đợi",
-  "@enqueueAlbumSongs": {
-    "description": "enqueueAlbumSongs"
-  },
-  "downloadAlbumSongs": "Tải bài hát từ album",
-  "@downloadAlbumSongs": {
-    "description": "downloadAlbumSongs"
-  },
-  "shareAlbum": "Chia sẻ album",
-  "@shareAlbum": {
-    "description": "shareAlbum"
-  },
-  "imported": "Đã nhập",
-  "@imported": {
-    "description": "imported"
-  },
-  "importedPlaylist": "Danh sách phát đã nhập",
-  "@importedPlaylist": {
-    "description": "importedPlaylist"
-  },
-  "permissionDenied": "Quyền bị từ chối",
-  "@permissionDenied": {
-    "description": "permissionDenied"
-  },
-  "enqueueSongs": "Thêm bài hát vào hàng đợi",
-  "@enqueueSongs": {
-    "description": "enqueueSongs"
-  },
-  "shuffle": "Ngẫu nhiên",
-  "@shuffle": {
-    "description": "shuffle"
+  "downloadNotificationTitle": "Đang tải nhạc",
+  "@downloadNotificationTitle": {
+    "description": "downloadNotificationTitle"
   },
   "downloadPlaylist": "Tải xuống danh sách phát",
   "@downloadPlaylist": {
     "description": "downloadPlaylist"
   },
-  "syncPlaylistSongs": "Đồng bộ danh sách bài hát",
-  "@syncPlaylistSongs": {
-    "description": "syncPlaylistSongs"
+  "downloadingFormat": "Định dạng tệp tải về",
+  "@downloadingFormat": {
+    "description": "downloadingFormat"
   },
-  "blacklistPipedPlaylist": "Danh sách đen danh sách phát",
-  "@blacklistPipedPlaylist": {
-    "description": "blacklistPipedPlaylist"
+  "downloadingFormatDes": "Chọn định dạng tệp tải về. \"Opus\" sẽ cho chất lượng âm thanh tốt nhất",
+  "@downloadingFormatDes": {
+    "description": "downloadingFormatDes"
   },
-  "sharePlaylist": "Chia sẻ danh sách phát",
-  "@sharePlaylist": {
-    "description": "sharePlaylist"
+  "downloads": "Tải về",
+  "@downloads": {
+    "description": "downloads"
   },
-  "playlist": "Danh sách phát",
-  "@playlist": {
-    "description": "playlist"
+  "duration": "Thời gian bài hát",
+  "@duration": {
+    "description": "duration"
   },
-  "sortByName": "Sắp xếp theo tên",
-  "@sortByName": {
-    "description": "sortByName"
+  "dynamic": "Động",
+  "@dynamic": {
+    "description": "dynamic"
   },
-  "sortByDate": "Sắp xếp theo ngày",
-  "@sortByDate": {
-    "description": "sortByDate"
+  "email": "E-mail",
+  "@email": {
+    "description": "email"
   },
-  "sortByDuration": "Sắp xếp theo thời lượng",
-  "@sortByDuration": {
-    "description": "sortByDuration"
+  "emptyPlaylist": "Danh sách phát trống!",
+  "@emptyPlaylist": {
+    "description": "emptyPlaylist"
   },
-  "sortAscendNDescend": "Sắp xếp tăng dần/giảm dần",
-  "@sortAscendNDescend": {
-    "description": "sortAscendNDescend"
+  "enableBottomNav": "Thanh điều hướng ở dưới cùng",
+  "@enableBottomNav": {
+    "description": "enableBottomNav"
   },
-  "migration_summary_start": "Quá trình di chuyển đã hoàn tất từ {source}.",
-  "@migration_summary_start": {
-    "placeholders": {
-      "source": {
-        "type": "String"
-      }
-    },
-    "description": "migration_summary_start"
+  "enableBottomNavDes": "Chuyển thanh điều hướng xuống dưới cùng",
+  "@enableBottomNavDes": {
+    "description": "enableBottomNavDes"
   },
-  "migration_summary_playlists": "Danh sách phát: {count}",
-  "@migration_summary_playlists": {
-    "placeholders": {
-      "count": {
-        "type": "num"
-      }
-    },
-    "description": "migration_summary_playlists"
+  "enableSlidableAction": "Bật hành động trượt",
+  "@enableSlidableAction": {
+    "description": "enableSlidableAction"
   },
-  "migration_summary_songs": "Bài hát: {count}",
-  "@migration_summary_songs": {
-    "placeholders": {
-      "count": {
-        "type": "num"
-      }
-    },
-    "description": "migration_summary_songs"
+  "enableSlidableActionDes": "Bật chế độ trượt trên tiêu đề bài hát",
+  "@enableSlidableActionDes": {
+    "description": "enableSlidableActionDes"
   },
-  "migration_summary_favorites": "Yêu thích: {count}",
-  "@migration_summary_favorites": {
-    "placeholders": {
-      "count": {
-        "type": "num"
-      }
-    },
-    "description": "migration_summary_favorites"
+  "enabled": "Đã bật",
+  "@enabled": {
+    "description": "enabled"
+  },
+  "endOfThisSong": "Kết thúc bài hát",
+  "@endOfThisSong": {
+    "description": "endOfThisSong"
+  },
+  "enqueueAlbumSongs": "Thêm bài hát trong album vào hàng đợi",
+  "@enqueueAlbumSongs": {
+    "description": "enqueueAlbumSongs"
+  },
+  "enqueueAll": "Thêm tất cả vào hàng đợi",
+  "@enqueueAll": {
+    "description": "enqueueAll"
+  },
+  "enqueueSong": "Thêm bài hát vào hàng đợi",
+  "@enqueueSong": {
+    "description": "enqueueSong"
+  },
+  "enqueueSongs": "Thêm bài hát vào hàng đợi",
+  "@enqueueSongs": {
+    "description": "enqueueSongs"
+  },
+  "episodes": "tập phim",
+  "@episodes": {
+    "description": "episodes"
+  },
+  "equalizer": "Bộ chỉnh âm",
+  "@equalizer": {
+    "description": "equalizer"
+  },
+  "equalizerDes": "Mở bộ chỉnh âm của hệ thống",
+  "@equalizerDes": {
+    "description": "equalizerDes"
+  },
+  "errorOccuredAlert": "Có vài lỗi xảy ra!",
+  "@errorOccuredAlert": {
+    "description": "errorOccuredAlert"
+  },
+  "errorOccurred": "Đã xảy ra lỗi",
+  "@errorOccurred": {
+    "description": "errorOccurred"
+  },
+  "errorPlayingTrack": "Lỗi khi chơi:",
+  "@errorPlayingTrack": {
+    "description": "errorPlayingTrack"
+  },
+  "export": "Xuất",
+  "@export": {
+    "description": "export"
+  },
+  "exportDowloadedFiles": "Xuất bài hát đã tải xuống",
+  "@exportDowloadedFiles": {
+    "description": "exportDowloadedFiles"
+  },
+  "exportDowloadedFilesDes": "Bấm vào đây để sao chép tệp đã tải về sang thư mục khác",
+  "@exportDowloadedFilesDes": {
+    "description": "exportDowloadedFilesDes"
+  },
+  "exportError": "Lỗi khi xuất danh sách phát",
+  "@exportError": {
+    "description": "exportError"
+  },
+  "exportErrorFormat": "Lỗi định dạng dữ liệu danh sách phát",
+  "@exportErrorFormat": {
+    "description": "exportErrorFormat"
+  },
+  "exportErrorPermission": "Quyền bị từ chối khi xuất",
+  "@exportErrorPermission": {
+    "description": "exportErrorPermission"
+  },
+  "exportErrorStorage": "Không đủ bộ nhớ",
+  "@exportErrorStorage": {
+    "description": "exportErrorStorage"
+  },
+  "exportMsg": "Tệp đã được xuất thành công",
+  "@exportMsg": {
+    "description": "exportMsg"
+  },
+  "exportPlaylist": "Xuất danh sách phát",
+  "@exportPlaylist": {
+    "description": "exportPlaylist"
+  },
+  "exportPlaylistCsv": "Xuất danh sách phát dạng CSV",
+  "@exportPlaylistCsv": {
+    "description": "exportPlaylistCsv"
+  },
+  "exportPlaylistCsvSubtitle": "Không thể nhập ở đây",
+  "@exportPlaylistCsvSubtitle": {
+    "description": "exportPlaylistCsvSubtitle"
+  },
+  "exportPlaylistJson": "Xuất danh sách phát dạng JSON",
+  "@exportPlaylistJson": {
+    "description": "exportPlaylistJson"
+  },
+  "exportPlaylistJsonSubtitle": "Không thể nhập bằng định dạng này",
+  "@exportPlaylistJsonSubtitle": {
+    "description": "exportPlaylistJsonSubtitle"
+  },
+  "exportToOnlineMusic": "Xuất ra Online Nhạc",
+  "@exportToOnlineMusic": {
+    "description": "exportToOnlineMusic"
+  },
+  "exportToOnlineMusicSubtitle": "Nó sẽ đẩy danh sách phát của bạn (bài hát < 50) vào hàng đợi hiện tại, đừng quên thêm vào danh sách phát/lưu sau khi mở trong MusicService",
+  "@exportToOnlineMusicSubtitle": {
+    "description": "exportToOnlineMusicSubtitle"
+  },
+  "exportedFileLocation": "Vị trí xuất tệp đã tải về",
+  "@exportedFileLocation": {
+    "description": "exportedFileLocation"
+  },
+  "exporting": "Đang xuất...",
+  "@exporting": {
+    "description": "exporting"
+  },
+  "exportingPlaylist": "Đang xuất danh sách phát...",
+  "@exportingPlaylist": {
+    "description": "exportingPlaylist"
+  },
+  "favorites": "Yêu thích",
+  "@favorites": {
+    "description": "favorites"
+  },
+  "featuredplaylists": "Danh sách phát nổi bật",
+  "@featuredplaylists": {
+    "description": "featuredplaylists"
+  },
+  "fileNotFound": "Không tìm thấy tệp",
+  "@fileNotFound": {
+    "description": "fileNotFound"
+  },
+  "follow": "Tiếp tục",
+  "@follow": {
+    "description": "follow"
+  },
+  "followedArtists": "đã theo dõi",
+  "@followedArtists": {
+    "description": "followedArtists"
+  },
+  "following": "Tiếp theo",
+  "@following": {
+    "description": "following"
+  },
+  "for1": "cho",
+  "@for1": {
+    "description": "for1"
+  },
+  "forgottenFavorites": "lãng quên yêu thích",
+  "@forgottenFavorites": {
+    "description": "forgottenFavorites"
+  },
+  "friendFallback": "Bạn bè",
+  "@friendFallback": {
+    "description": "friendFallback"
+  },
+  "friendRequestAccepted": "Yêu cầu kết bạn đã được chấp nhận",
+  "@friendRequestAccepted": {
+    "description": "friendRequestAccepted"
+  },
+  "friendRequestSent": "Đã gửi yêu cầu kết bạn",
+  "@friendRequestSent": {
+    "description": "friendRequestSent"
+  },
+  "friends": "Bạn",
+  "@friends": {
+    "description": "friends"
+  },
+  "friendsLoginRequired": "Đăng nhập để tìm bạn bè.",
+  "@friendsLoginRequired": {
+    "description": "friendsLoginRequired"
+  },
+  "friendshipRemoved": "Đã xóa tình bạn",
+  "@friendshipRemoved": {
+    "description": "friendshipRemoved"
+  },
+  "genericAlbum": "Album",
+  "@genericAlbum": {
+    "description": "genericAlbum"
+  },
+  "genericError": "Sai lầm",
+  "@genericError": {
+    "description": "genericError"
+  },
+  "genre_electronic": "Điện tử",
+  "@genre_electronic": {
+    "description": "genre_electronic"
+  },
+  "genre_hiphop": "hip hop",
+  "@genre_hiphop": {
+    "description": "genre_hiphop"
+  },
+  "genre_jazz": "nhạc jazz",
+  "@genre_jazz": {
+    "description": "genre_jazz"
+  },
+  "genre_latin": "tiếng Latinh",
+  "@genre_latin": {
+    "description": "genre_latin"
+  },
+  "genre_pop": "Nhạc pop",
+  "@genre_pop": {
+    "description": "genre_pop"
+  },
+  "genre_rock": "Đá",
+  "@genre_rock": {
+    "description": "genre_rock"
+  },
+  "gesture": "Cử chỉ",
+  "@gesture": {
+    "description": "gesture"
+  },
+  "github": "Github",
+  "@github": {
+    "description": "github"
+  },
+  "githubDes": "Xem mã nguồn GitHub.\nNếu bạn thích dự án này, đừng quên cho một ⭐",
+  "@githubDes": {
+    "description": "githubDes"
+  },
+  "goToAlbum": "Đi đến tập nhạc",
+  "@goToAlbum": {
+    "description": "goToAlbum"
+  },
+  "goToDownloadPage": "Bấm vào đây để đến trang tải về",
+  "@goToDownloadPage": {
+    "description": "goToDownloadPage"
+  },
+  "helloWorld": "Xin chào thế giới",
+  "@helloWorld": {
+    "description": "Este texto es opcional"
+  },
+  "high": "Cao",
+  "@high": {
+    "description": "high"
+  },
+  "hintApiUrl": "URL API tới phiên bản đường ống",
+  "@hintApiUrl": {
+    "description": "hintApiUrl"
+  },
+  "home": "Trang chủ",
+  "@home": {
+    "description": "home"
+  },
+  "homeContentCount": "Số lượng nội dung trên trang chủ",
+  "@homeContentCount": {
+    "description": "homeContentCount"
+  },
+  "homeContentCountDes": "Chọn số lượng nội dung trên màn hình chính (tương đối). Số lượng ít sẽ tải nhanh hơn",
+  "@homeContentCountDes": {
+    "description": "homeContentCountDes"
+  },
+  "id": "Khoá",
+  "@id": {
+    "description": "id"
+  },
+  "identifySongMetadata": "Xác định siêu dữ liệu",
+  "@identifySongMetadata": {
+    "description": "Action that searches and embeds metadata for a local song"
+  },
+  "ignoreBatOpt": "Bỏ qua tối ưu hóa pin",
+  "@ignoreBatOpt": {
+    "description": "ignoreBatOpt"
+  },
+  "ignoreBatOptDes": "Nếu bạn đang gặp phải sự cố thông báo hoặc quá trình phát lại bị dừng do tối ưu hóa hệ thống, vui lòng bật tùy chọn này",
+  "@ignoreBatOptDes": {
+    "description": "ignoreBatOptDes"
+  },
+  "importError": "Lỗi khi nhập danh sách phát",
+  "@importError": {
+    "description": "importError"
+  },
+  "importErrorDatabase": "Lỗi khi lưu vào cơ sở dữ liệu",
+  "@importErrorDatabase": {
+    "description": "importErrorDatabase"
+  },
+  "importErrorFileAccess": "Không thể truy cập tệp đã chọn",
+  "@importErrorFileAccess": {
+    "description": "importErrorFileAccess"
+  },
+  "importErrorFormat": "Định dạng tệp không hợp lệ",
+  "@importErrorFormat": {
+    "description": "importErrorFormat"
+  },
+  "importLargeFileNote": "Lưu ý: Danh sách phát lớn có thể tốn nhiều thời gian hơn để nhập",
+  "@importLargeFileNote": {
+    "description": "importLargeFileNote"
+  },
+  "importPlaylist": "Nhập danh sách phát",
+  "@importPlaylist": {
+    "description": "importPlaylist"
+  },
+  "importPlaylistDesc": "Chọn một tệp JSON danh sách phát đã xuất để nhập",
+  "@importPlaylistDesc": {
+    "description": "importPlaylistDesc"
+  },
+  "imported": "Đã nhập",
+  "@imported": {
+    "description": "imported"
+  },
+  "importedFromJossMusic": "Được nhập từ Joss Music Kotlin",
+  "@importedFromJossMusic": {
+    "description": "importedFromJossMusic"
+  },
+  "importedPlaylist": "Danh sách phát đã nhập",
+  "@importedPlaylist": {
+    "description": "importedPlaylist"
+  },
+  "importingPlaylist": "Đang nhập danh sách phát...",
+  "@importingPlaylist": {
+    "description": "importingPlaylist"
+  },
+  "in_app_storage": "Thư mục lưu trữ nội bộ",
+  "@in_app_storage": {
+    "description": "in_app_storage"
+  },
+  "includeDownloadedFiles": "Bao gồm các bài hát đã tải về",
+  "@includeDownloadedFiles": {
+    "description": "includeDownloadedFiles"
+  },
+  "infoNotAvailable": "Thông tin không có sẵn",
+  "@infoNotAvailable": {
+    "description": "infoNotAvailable"
+  },
+  "invalidPlaylistFile": "Cấu trúc tệp danh sách phát không hợp lệ",
+  "@invalidPlaylistFile": {
+    "description": "invalidPlaylistFile"
+  },
+  "invalidServerResponse": "Phản hồi của máy chủ không hợp lệ.",
+  "@invalidServerResponse": {
+    "description": "invalidServerResponse"
+  },
+  "invalidSessionToken": "Phiên không chứa mã thông báo hợp lệ.",
+  "@invalidSessionToken": {
+    "description": "invalidSessionToken"
+  },
+  "items": "danh mục",
+  "@items": {
+    "description": "items"
+  },
+  "keepListening": "tiếp tục lắng nghe",
+  "@keepListening": {
+    "description": "keepListening"
+  },
+  "keepScreenOnWhilePlaying": "Giữ màn hình sáng khi phát nhạc",
+  "@keepScreenOnWhilePlaying": {
+    "description": "keepScreenOnWhilePlaying"
+  },
+  "keepScreenOnWhilePlayingDes": "Nếu được bật, màn hình thiết bị sẽ giữ sáng trong khi nhạc đang phát",
+  "@keepScreenOnWhilePlayingDes": {
+    "description": "keepScreenOnWhilePlayingDes"
+  },
+  "language": "Ngôn ngữ",
+  "@language": {
+    "description": "language"
+  },
+  "languageDes": "Cài đặt ngôn ngữ ứng dụng",
+  "@languageDes": {
+    "description": "languageDes"
+  },
+  "latestRelease": "Bản phát hành mới nhất",
+  "@latestRelease": {
+    "description": "latestRelease"
+  },
+  "latestVersion": "Phiên bản mới nhất có sẵn",
+  "@latestVersion": {
+    "description": "latestVersion"
+  },
+  "letsStrart": "Bắt đầu..",
+  "@letsStrart": {
+    "description": "letsStrart"
+  },
+  "libAlbums": "Thư viện tập nhạc",
+  "@libAlbums": {
+    "description": "libAlbums"
+  },
+  "libArtists": "Thư viện nghệ sỹ",
+  "@libArtists": {
+    "description": "libArtists"
+  },
+  "libPlaylists": "Thư viện danh sách phát",
+  "@libPlaylists": {
+    "description": "libPlaylists"
+  },
+  "libSongs": "Thư viện bài hát",
+  "@libSongs": {
+    "description": "libSongs"
+  },
+  "library": "Thư viện",
+  "@library": {
+    "description": "library"
+  },
+  "libraryPlaylistDescription": "Danh sách phát thư viện",
+  "@libraryPlaylistDescription": {
+    "description": "libraryPlaylistDescription"
+  },
+  "light": "Sáng",
+  "@light": {
+    "description": "light"
+  },
+  "link": "Liên kết",
+  "@link": {
+    "description": "link"
+  },
+  "linkAlert": "Liên kết thành công!",
+  "@linkAlert": {
+    "description": "linkAlert"
+  },
+  "linkCopied": "Liên kết đã được sao chép vào bảng tạm",
+  "@linkCopied": {
+    "description": "linkCopied"
+  },
+  "linkPipedDes": "Liên kết với đường ống cho danh sách phát",
+  "@linkPipedDes": {
+    "description": "linkPipedDes"
+  },
+  "listenNow": "Nghe bây giờ",
+  "@listenNow": {
+    "description": "listenNow"
+  },
+  "listeningToEnvironment": "Lắng nghe môi trường...",
+  "@listeningToEnvironment": {
+    "description": "listeningToEnvironment"
+  },
+  "loadInfoUpdate": "Không thể tải thông tin cập nhật",
+  "@loadInfoUpdate": {
+    "description": "loadInfoUpdate"
+  },
+  "local": "Địa phương",
+  "@local": {
+    "description": "local"
+  },
+  "local_b1": "Nó hoạt động mà không cần phải đăng nhập.",
+  "@local_b1": {
+    "description": "local_b1"
+  },
+  "local_b2": "Toàn bộ thư viện của bạn nằm hoàn toàn trên máy tính này.",
+  "@local_b2": {
+    "description": "local_b2"
+  },
+  "local_b3": "Lưu ý: Không sao lưu đám mây thủ công. Nếu bạn mất thiết bị hoặc gỡ cài đặt ứng dụng, dữ liệu của bạn sẽ không thể khôi phục được.",
+  "@local_b3": {
+    "description": "local_b3"
+  },
+  "local_btn": "Chỉ sử dụng trên thiết bị này",
+  "@local_btn": {
+    "description": "local_btn"
+  },
+  "local_subtitle": "Quyền riêng tư tuyệt đối trên thiết bị của bạn",
+  "@local_subtitle": {
+    "description": "local_subtitle"
+  },
+  "local_title": "Chế độ cục bộ",
+  "@local_title": {
+    "description": "local_title"
+  },
+  "loudnessDb": "Độ ồn Db",
+  "@loudnessDb": {
+    "description": "loudnessDb"
+  },
+  "loudnessNormalization": "Cân bằng âm lượng",
+  "@loudnessNormalization": {
+    "description": "loudnessNormalization"
+  },
+  "loudnessNormalizationDes": "Cài đặt cùng một mức độ lớn cho tất cả bài hát (Thử nghiệm) (Không hoạt động đối với các bài hát đã tải về trong phiên bản trước (< v1.10.0))",
+  "@loudnessNormalizationDes": {
+    "description": "loudnessNormalizationDes"
+  },
+  "low": "Thấp",
+  "@low": {
+    "description": "low"
+  },
+  "lyrics": "chữ cái",
+  "@lyrics": {
+    "description": "lyrics"
+  },
+  "lyricsNotAvailable": "Lời bài hát không có sẵn!",
+  "@lyricsNotAvailable": {
+    "description": "lyricsNotAvailable"
+  },
+  "manageCollaborators": "Quản lý cộng tác viên (bạn bè)",
+  "@manageCollaborators": {
+    "description": "manageCollaborators"
+  },
+  "metadataApplySuccess": "Siêu dữ liệu đã được nhúng vào tập tin cục bộ.",
+  "@metadataApplySuccess": {
+    "description": "Success message after writing local tags"
+  },
+  "metadataNoResults": "Không tìm thấy trùng khớp. Thử tìm kiếm khác xem.",
+  "@metadataNoResults": {
+    "description": "Empty state for metadata search"
+  },
+  "metadataOperationFailed": "Thao tác siêu dữ liệu thất bại.",
+  "@metadataOperationFailed": {
+    "description": "Generic metadata lookup or write error"
+  },
+  "metadataOverwriteWarning": "Điều này sẽ ghi đè lên tiêu đề, họa sĩ, album và trang bìa trong khi lưu giữ các lĩnh vực không cung cấp.",
+  "@metadataOverwriteWarning": {
+    "description": "Confirmation before writing tags to a local audio file"
+  },
+  "metadataSearchDescription": "Chọn đúng khớp để nhúng tiêu đề, họa sĩ, album và trang bìa trong tập tin địa phương.",
+  "@metadataSearchDescription": {
+    "description": "Explanation shown above metadata search results"
+  },
+  "metadataSearchHint": "Bài hát hay tên nghệ sĩ",
+  "@metadataSearchHint": {
+    "description": "Hint for the metadata search field"
+  },
+  "metadataSearchTitle": "Nhận diện bài hát",
+  "@metadataSearchTitle": {
+    "description": "Title of the local song metadata search dialog"
+  },
+  "micInstruction": "Đảm bảo nhạc đang phát đủ lớn ở gần micrô của bạn.",
+  "@micInstruction": {
+    "description": "micInstruction"
+  },
+  "migratedAlbum": "Album đã di chuyển",
+  "@migratedAlbum": {
+    "description": "migratedAlbum"
+  },
+  "migratedLibrary": "Thư viện đã di chuyển",
+  "@migratedLibrary": {
+    "description": "migratedLibrary"
+  },
+  "migratedPlaylist": "Danh sách phát đã di chuyển",
+  "@migratedPlaylist": {
+    "description": "migratedPlaylist"
+  },
+  "migrationAlreadyRunning": "Hiện đã có quá trình di chuyển đang diễn ra.",
+  "@migrationAlreadyRunning": {
+    "description": "migrationAlreadyRunning"
+  },
+  "migrationAnalyzingLocal": "Phân tích thư viện địa phương...",
+  "@migrationAnalyzingLocal": {
+    "description": "migrationAnalyzingLocal"
+  },
+  "migrationCheckingCloud": "Kiểm tra xem EMusic Cloud đã có thư viện chưa...",
+  "@migrationCheckingCloud": {
+    "description": "migrationCheckingCloud"
+  },
+  "migrationCompleted": "Quá trình di chuyển đã hoàn tất.",
+  "@migrationCompleted": {
+    "description": "migrationCompleted"
+  },
+  "migrationCreatingBackup": "Tạo bản sao lưu cục bộ trước khi kết nối đám mây...",
+  "@migrationCreatingBackup": {
+    "description": "migrationCreatingBackup"
+  },
+  "migrationFailedLocalPreserved": "Việc di chuyển không thành công. Dữ liệu cục bộ của bạn không được sửa đổi.",
+  "@migrationFailedLocalPreserved": {
+    "description": "migrationFailedLocalPreserved"
+  },
+  "migrationLoginRequired": "Đăng nhập vào Joss Red trước khi di chuyển.",
+  "@migrationLoginRequired": {
+    "description": "migrationLoginRequired"
+  },
+  "migrationPreparingCloud": "Đang chuẩn bị di chuyển trong EMusic Cloud...",
+  "@migrationPreparingCloud": {
+    "description": "migrationPreparingCloud"
+  },
+  "migrationStartFailed": "EMusic Cloud không thể bắt đầu di chuyển.",
+  "@migrationStartFailed": {
+    "description": "migrationStartFailed"
+  },
+  "migrationUploadIncomplete": "Không phải tất cả dữ liệu có thể được tải lên. Chúng tôi giữ sự hỗ trợ địa phương của bạn.",
+  "@migrationUploadIncomplete": {
+    "description": "migrationUploadIncomplete"
+  },
+  "migrationUploadingData": "Đang tải lên danh sách phát, mục yêu thích và lịch sử...",
+  "@migrationUploadingData": {
+    "description": "migrationUploadingData"
+  },
+  "migrationValidationFailed": "EMusic Cloud không thể xác thực quá trình di chuyển.",
+  "@migrationValidationFailed": {
+    "description": "migrationValidationFailed"
+  },
+  "migrationVerifyingIntegrity": "Đang xác minh tính toàn vẹn trong EMusic Cloud...",
+  "@migrationVerifyingIntegrity": {
+    "description": "migrationVerifyingIntegrity"
+  },
+  "migration_btn_select": "Chọn tệp và nhập",
+  "@migration_btn_select": {
+    "description": "migration_btn_select"
+  },
+  "migration_select_file_dialog": "Chọn song.db hoặc bản sao lưu .backup",
+  "@migration_select_file_dialog": {
+    "description": "migration_select_file_dialog"
+  },
+  "migration_success": "Quá trình di chuyển đã hoàn tất thành công.",
+  "@migration_success": {
+    "description": "migration_success"
   },
   "migration_summary_albums": "Album: {count}",
   "@migration_summary_albums": {
@@ -2185,121 +1207,1166 @@
     },
     "description": "migration_summary_artists"
   },
-  "migration_select_file_dialog": "Chọn song.db hoặc bản sao lưu .backup",
-  "@migration_select_file_dialog": {
-    "description": "migration_select_file_dialog"
+  "migration_summary_favorites": "Yêu thích: {count}",
+  "@migration_summary_favorites": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_favorites"
   },
-  "migration_success": "Quá trình di chuyển đã hoàn tất thành công.",
-  "@migration_success": {
-    "description": "migration_success"
+  "migration_summary_playlists": "Danh sách phát: {count}",
+  "@migration_summary_playlists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_playlists"
   },
-  "backup_select_folder_dialog": "Chọn thư mục để sao lưu",
-  "@backup_select_folder_dialog": {
-    "description": "backup_select_folder_dialog"
+  "migration_summary_songs": "Bài hát: {count}",
+  "@migration_summary_songs": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_songs"
+  },
+  "migration_summary_start": "Quá trình di chuyển đã hoàn tất từ {source}.",
+  "@migration_summary_start": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      }
+    },
+    "description": "migration_summary_start"
+  },
+  "minutes": "phút",
+  "@minutes": {
+    "description": "minutes"
+  },
+  "misc": "Khác",
+  "@misc": {
+    "description": "misc"
+  },
+  "mostListenedSong": "Bài hát được nghe nhiều nhất",
+  "@mostListenedSong": {
+    "description": "mostListenedSong"
+  },
+  "musicAndPlayback": "Âm nhạc & Phát nhạc",
+  "@musicAndPlayback": {
+    "description": "musicAndPlayback"
+  },
+  "musicRecognition": "Nhận dạng âm nhạc",
+  "@musicRecognition": {
+    "description": "musicRecognition"
+  },
+  "networkError": "Lỗi mạng! Kiểm tra kết nối mạng của bạn.",
+  "@networkError": {
+    "description": "networkError"
+  },
+  "networkError1": "Kết nối mạng bị lỗi!",
+  "@networkError1": {
+    "description": "networkError1"
+  },
+  "newVersionAvailable": "Đã có phiên bản mới!",
+  "@newVersionAvailable": {
+    "description": "newVersionAvailable"
+  },
+  "news_btn_app": "Ứng dụng Joss Red (Cửa hàng Play)",
+  "@news_btn_app": {
+    "description": "news_btn_app"
+  },
+  "news_btn_dismiss": "đã hiểu",
+  "@news_btn_dismiss": {
+    "description": "news_btn_dismiss"
+  },
+  "news_btn_web": "Web đỏ Joss",
+  "@news_btn_web": {
+    "description": "news_btn_web"
+  },
+  "news_card_subtitle": "Đồng bộ hóa 100% với Joss Red, danh sách phát với bạn bè và hơn thế nữa. Nhấn để xem có gì mới.",
+  "@news_card_subtitle": {
+    "description": "news_card_subtitle"
+  },
+  "news_card_title": "Âm nhạc Estrella đã phát triển!",
+  "@news_card_title": {
+    "description": "news_card_title"
+  },
+  "news_dialog_friends_desc": "Để thêm bạn bè, chấp nhận yêu cầu hoặc quản lý hồ sơ bảo mật của bạn, vui lòng sử dụng Joss Red trên các nền tảng chính thức của nó:",
+  "@news_dialog_friends_desc": {
+    "description": "news_dialog_friends_desc"
+  },
+  "news_dialog_section_friends": "Quản lý bạn bè và tài khoản:",
+  "@news_dialog_section_friends": {
+    "description": "news_dialog_section_friends"
+  },
+  "news_dialog_title": "Tin tức âm nhạc Estrella",
+  "@news_dialog_title": {
+    "description": "news_dialog_title"
+  },
+  "news_item_collab_desc": "Tạo danh sách phát với bạn bè của bạn! Khi tạo danh sách phát, hãy chọn hộp kiểm Cộng tác và chọn bạn bè của bạn để cùng chỉnh sửa.",
+  "@news_item_collab_desc": {
+    "description": "news_item_collab_desc"
+  },
+  "news_item_collab_title": "Danh sách phát cộng tác",
+  "@news_item_collab_title": {
+    "description": "news_item_collab_title"
+  },
+  "news_item_sync_desc": "Danh sách phát và mục yêu thích của bạn hiện được lưu và đồng bộ hóa tự động trên đám mây với tài khoản Joss Red chính của bạn.",
+  "@news_item_sync_desc": {
+    "description": "news_item_sync_desc"
+  },
+  "news_item_sync_title": "Tích hợp đầy đủ với Joss Red",
+  "@news_item_sync_title": {
+    "description": "news_item_sync_title"
+  },
+  "news_item_trans_desc": "Bạn không cần phải nhấp vào nút đồng bộ hóa thủ công nữa; Động cơ mới có nhiệm vụ chuyển số lên xuống tự động.",
+  "@news_item_trans_desc": {
+    "description": "news_item_trans_desc"
+  },
+  "news_item_trans_title": "Đồng bộ hóa minh bạch",
+  "@news_item_trans_title": {
+    "description": "news_item_trans_title"
+  },
+  "no": "Không",
+  "@no": {
+    "description": "no"
+  },
+  "noBookmarks": "Không có đánh dấu!",
+  "@noBookmarks": {
+    "description": "noBookmarks"
+  },
+  "noJossRedFriends": "Bạn chưa có thêm bạn bè nào trên Joss Red.",
+  "@noJossRedFriends": {
+    "description": "noJossRedFriends"
+  },
+  "noLibPlaylist": "Bạn không có danh sách phát nào!",
+  "@noLibPlaylist": {
+    "description": "noLibPlaylist"
+  },
+  "noMatchInstruction": "Không thể tìm thấy bất kỳ bài hát nào trong âm thanh đã ghi",
+  "@noMatchInstruction": {
+    "description": "noMatchInstruction"
+  },
+  "noMatchesFound": "Không có kết quả phù hợp",
+  "@noMatchesFound": {
+    "description": "noMatchesFound"
+  },
+  "noOfflineSong": "Không có bài hát ngoại tuyến!",
+  "@noOfflineSong": {
+    "description": "noOfflineSong"
+  },
+  "noSongsInCollection": "Không có bài hát nào trong bộ sưu tập này",
+  "@noSongsInCollection": {
+    "description": "noSongsInCollection"
+  },
+  "nomatch": "Không tìm thấy kết quả cho",
+  "@nomatch": {
+    "description": "nomatch"
+  },
+  "notAuthenticated": "Chưa được xác thực",
+  "@notAuthenticated": {
+    "description": "notAuthenticated"
+  },
+  "notaSongVideo": "Không phải bài hát/Videos âm nhạc!",
+  "@notaSongVideo": {
+    "description": "notaSongVideo"
+  },
+  "notaValidLink": "Không phải là liên kết hợp lệ!",
+  "@notaValidLink": {
+    "description": "notaValidLink"
+  },
+  "openIn": "Mở trong",
+  "@openIn": {
+    "description": "openIn"
+  },
+  "operationFailed": "Lỗi hệ thống",
+  "@operationFailed": {
+    "description": "operationFailed"
+  },
+  "password": "Mật khẩu",
+  "@password": {
+    "description": "password"
+  },
+  "password_text": "Mật khẩu",
+  "@password_text": {
+    "description": "Contraseña texto traducido"
+  },
+  "permissionDenied": "Quyền bị từ chối",
+  "@permissionDenied": {
+    "description": "permissionDenied"
+  },
+  "permissionsAllow": "Cho phép",
+  "@permissionsAllow": {
+    "description": "permissionsAllow"
+  },
+  "permissionsConsentDescription": "Estrella Music cần những quyền này để quản lý nhạc của bạn và cung cấp tất cả các tính năng phát lại.",
+  "@permissionsConsentDescription": {
+    "description": "permissionsConsentDescription"
+  },
+  "permissionsConsentTitle": "Quyền để bắt đầu",
+  "@permissionsConsentTitle": {
+    "description": "permissionsConsentTitle"
+  },
+  "permissionsContinueButton": "Cấp quyền cần thiết",
+  "@permissionsContinueButton": {
+    "description": "permissionsContinueButton"
+  },
+  "permissionsMicrophoneDescription": "Nó chỉ được sử dụng khi bạn chọn xác định một bài hát đang phát xung quanh bạn.",
+  "@permissionsMicrophoneDescription": {
+    "description": "permissionsMicrophoneDescription"
+  },
+  "permissionsMicrophoneTitle": "Micrô",
+  "@permissionsMicrophoneTitle": {
+    "description": "permissionsMicrophoneTitle"
+  },
+  "permissionsNotificationsDescription": "Hiển thị các điều khiển phát lại, tiến trình tải xuống và các thông báo ứng dụng quan trọng.",
+  "@permissionsNotificationsDescription": {
+    "description": "permissionsNotificationsDescription"
+  },
+  "permissionsNotificationsTitle": "Thông báo",
+  "@permissionsNotificationsTitle": {
+    "description": "permissionsNotificationsTitle"
+  },
+  "permissionsOpenSettings": "Cài đặt",
+  "@permissionsOpenSettings": {
+    "description": "permissionsOpenSettings"
+  },
+  "permissionsRequiredNotice": "Tất cả ba giấy phép được yêu cầu để tiếp tục. Bạn có thể thay đổi chúng sau trong cài đặt hệ thống.",
+  "@permissionsRequiredNotice": {
+    "description": "permissionsRequiredNotice"
+  },
+  "permissionsStorageDescription": "Nó cho phép bạn phát nhạc, lưu tải xuống, xuất danh sách phát và chuẩn bị cập nhật.",
+  "@permissionsStorageDescription": {
+    "description": "permissionsStorageDescription"
+  },
+  "permissionsStorageTitle": "Âm nhạc và lưu trữ",
+  "@permissionsStorageTitle": {
+    "description": "permissionsStorageTitle"
+  },
+  "personalisation": "Cá nhân hoá",
+  "@personalisation": {
+    "description": "personalisation"
+  },
+  "pipedPlaylistDescription": "Danh sách phát theo đường ống",
+  "@pipedPlaylistDescription": {
+    "description": "pipedPlaylistDescription"
+  },
+  "pipedplstSyncAlert": "Danh sách phát đã được đồng bộ hóa!",
+  "@pipedplstSyncAlert": {
+    "description": "pipedplstSyncAlert"
+  },
+  "plain": "Lời",
+  "@plain": {
+    "description": "plain"
+  },
+  "play": "Chơi",
+  "@play": {
+    "description": "play"
+  },
+  "playNext": "Phát kế tiếp",
+  "@playNext": {
+    "description": "playNext"
+  },
+  "playNow": "Chơi ngay",
+  "@playNow": {
+    "description": "playNow"
+  },
+  "playbackSpeed": "Tốc độ phát lại",
+  "@playbackSpeed": {
+    "description": "playbackSpeed"
+  },
+  "playerUi": "Giao diện phát nhạc",
+  "@playerUi": {
+    "description": "playerUi"
+  },
+  "playerUiDes": "Chọn giao diện phát nhạc",
+  "@playerUiDes": {
+    "description": "playerUiDes"
+  },
+  "playingRecognizedTrack": "Đang chơi:",
+  "@playingRecognizedTrack": {
+    "description": "playingRecognizedTrack"
+  },
+  "playingfromAlbum": "Phát từ tập nhạc",
+  "@playingfromAlbum": {
+    "description": "playingfromAlbum"
+  },
+  "playingfromArtist": "Phát theo nghệ sỹ",
+  "@playingfromArtist": {
+    "description": "playingfromArtist"
+  },
+  "playingfromPlaylist": "Phát từ danh sách phát",
+  "@playingfromPlaylist": {
+    "description": "playingfromPlaylist"
+  },
+  "playingfromSelection": "Phát từ danh sách chọn",
+  "@playingfromSelection": {
+    "description": "playingfromSelection"
+  },
+  "playlist": "Danh sách phát",
+  "@playlist": {
+    "description": "playlist"
+  },
+  "playlistBlacklistAlert": "Danh sách phát bị liệt vào danh sách đen!",
+  "@playlistBlacklistAlert": {
+    "description": "playlistBlacklistAlert"
+  },
+  "playlistBookmarkAddAlert": "Đã đánh dấu danh sách phát!",
+  "@playlistBookmarkAddAlert": {
+    "description": "playlistBookmarkAddAlert"
+  },
+  "playlistBookmarkRemoveAlert": "Đã xóa đánh dấu trang danh sách phát!",
+  "@playlistBookmarkRemoveAlert": {
+    "description": "playlistBookmarkRemoveAlert"
+  },
+  "playlistCollaboratorsTitle": "Người đóng góp danh sách phát",
+  "@playlistCollaboratorsTitle": {
+    "description": "playlistCollaboratorsTitle"
+  },
+  "playlistCreatedAlert": "Danh sách phát đã được tạo!",
+  "@playlistCreatedAlert": {
+    "description": "playlistCreatedAlert"
+  },
+  "playlistCreatednsongAddedAlert": "Danh sách phát được tạo và thêm bài hát!",
+  "@playlistCreatednsongAddedAlert": {
+    "description": "playlistCreatednsongAddedAlert"
+  },
+  "playlistExportedMsg": "Danh sách phát đã được xuất thành công đến",
+  "@playlistExportedMsg": {
+    "description": "playlistExportedMsg"
+  },
+  "playlistImportedMsg": "Danh sách phát được nhập thành công",
+  "@playlistImportedMsg": {
+    "description": "playlistImportedMsg"
+  },
+  "playlistRemovedAlert": "Đã xóa dánh sách phát!",
+  "@playlistRemovedAlert": {
+    "description": "playlistRemovedAlert"
+  },
+  "playlistRenameAlert": "Đổi tên thành công!",
+  "@playlistRenameAlert": {
+    "description": "playlistRenameAlert"
+  },
+  "playlists": "Danh sách phát",
+  "@playlists": {
+    "description": "playlists"
+  },
+  "playnextMsg": "Tiếp theo",
+  "@playnextMsg": {
+    "description": "playnextMsg"
+  },
+  "podcasts": "Podcast",
+  "@podcasts": {
+    "description": "podcasts"
+  },
+  "popularTracks": "Bài hát phổ biến",
+  "@popularTracks": {
+    "description": "popularTracks"
+  },
+  "processFiles": "Đang xử lý tập tin...",
+  "@processFiles": {
+    "description": "processFiles"
+  },
+  "processingAudio": "Đang xử lý âm thanh...",
+  "@processingAudio": {
+    "description": "processingAudio"
+  },
+  "profiles": "Hồ sơ",
+  "@profiles": {
+    "description": "profiles"
+  },
+  "queueLoop": "Lặp lại hàng đợi",
+  "@queueLoop": {
+    "description": "queueLoop"
+  },
+  "queueLoopNotDisMsg1": "Không thể tắt lặp lại hàng đợi khi chế độ ngẫu nhiên được bật.",
+  "@queueLoopNotDisMsg1": {
+    "description": "queueLoopNotDisMsg1"
+  },
+  "queueLoopNotDisMsg2": "Không thể bật lặp lại hàng đợi trong chế độ đài phát.",
+  "@queueLoopNotDisMsg2": {
+    "description": "queueLoopNotDisMsg2"
+  },
+  "queueShufflingDeniedMsg": "Không thể xáo trộn ngẫu nhiên hàng đợi khi chế độ ngẫu nhiên được bật",
+  "@queueShufflingDeniedMsg": {
+    "description": "queueShufflingDeniedMsg"
+  },
+  "queuerearrangingDeniedMsg": "Không thể sắp xếp lại hàng đợi khi chế độ ngẫu nhiên được bật",
+  "@queuerearrangingDeniedMsg": {
+    "description": "queuerearrangingDeniedMsg"
+  },
+  "quickPics": "Lựa chọn nhanh",
+  "@quickPics": {
+    "description": "quickPics"
+  },
+  "quickpicks": "Chọn nhanh",
+  "@quickpicks": {
+    "description": "quickpicks"
+  },
+  "radioNotAvailable": "Radio không có sẵn cho nghệ sĩ này!",
+  "@radioNotAvailable": {
+    "description": "radioNotAvailable"
+  },
+  "randomRadio": "Đài phát ngẫu nhiên",
+  "@randomRadio": {
+    "description": "randomRadio"
+  },
+  "randomSelection": "Chọn ngẫu nhiên",
+  "@randomSelection": {
+    "description": "randomSelection"
+  },
+  "reArrangePlaylist": "Sắp xếp lại danh sách phát",
+  "@reArrangePlaylist": {
+    "description": "reArrangePlaylist"
+  },
+  "reArrangeSongs": "Sắp xếp lại bài hát",
+  "@reArrangeSongs": {
+    "description": "reArrangeSongs"
+  },
+  "readMore": "Đọc thêm",
+  "@readMore": {
+    "description": "readMore"
+  },
+  "recentSearches": "Tìm kiếm gần đây",
+  "@recentSearches": {
+    "description": "recentSearches"
+  },
+  "recentlyPlayed": "Đã phát gần đây",
+  "@recentlyPlayed": {
+    "description": "recentlyPlayed"
+  },
+  "recommend_cloud": "Chúng tôi khuyên bạn nên kích hoạt Chế độ đám mây để có trải nghiệm giống như Spotify: đồng bộ hóa thời gian thực giữa tất cả các thiết bị của bạn và sao lưu tự động mà bạn không cần phải làm gì cả.",
+  "@recommend_cloud": {
+    "description": "recommend_cloud"
+  },
+  "recommendedAlbums": "Khuyến khích",
+  "@recommendedAlbums": {
+    "description": "recommendedAlbums"
+  },
+  "recommendedArtists": "Khuyến khích",
+  "@recommendedArtists": {
+    "description": "recommendedArtists"
+  },
+  "removeFromCache": "Xóa khỏi bộ nhớ đệm",
+  "@removeFromCache": {
+    "description": "removeFromCache"
+  },
+  "removeFromLib": "Xóa khỏi thư viện bài hát",
+  "@removeFromLib": {
+    "description": "removeFromLib"
+  },
+  "removeFromLibrary": "Xóa khỏi thư viện",
+  "@removeFromLibrary": {
+    "description": "removeFromLibrary"
+  },
+  "removeFromPlaylist": "Xóa khỏi danh sách phát",
+  "@removeFromPlaylist": {
+    "description": "removeFromPlaylist"
+  },
+  "removeFromQueue": "Xóa khỏi hàng đợi",
+  "@removeFromQueue": {
+    "description": "removeFromQueue"
+  },
+  "removeMultiple": "Xóa nhiều bài",
+  "@removeMultiple": {
+    "description": "removeMultiple"
+  },
+  "removePlaylist": "Xóa danh sách phát",
+  "@removePlaylist": {
+    "description": "removePlaylist"
+  },
+  "rename": "Đổi tên",
+  "@rename": {
+    "description": "rename"
+  },
+  "renamePlaylist": "Đổi tên danh sách phát",
+  "@renamePlaylist": {
+    "description": "renamePlaylist"
+  },
+  "reproducedBy": "Được sao chép bởi",
+  "@reproducedBy": {
+    "description": "reproducedBy"
+  },
+  "reset": "Cài lại",
+  "@reset": {
+    "description": "reset"
+  },
+  "resetToDefault": "Khôi phục cài đặt mặc định",
+  "@resetToDefault": {
+    "description": "resetToDefault"
+  },
+  "resetToDefaultDes": "Khôi phục cài đặt ứng dụng về mặc định ( cần khởi động lại ứng dụng)",
+  "@resetToDefaultDes": {
+    "description": "resetToDefaultDes"
+  },
+  "resetToDefaultMsg": "Hoàn tất khôi phục cài đặt ứng dụng về mặc định, vui lòng khởi động lại ứng dụng",
+  "@resetToDefaultMsg": {
+    "description": "resetToDefaultMsg"
+  },
+  "resetblacklistedplaylist": "Đặt lại danh sách phát bị liệt vào danh sách đen",
+  "@resetblacklistedplaylist": {
+    "description": "resetblacklistedplaylist"
+  },
+  "resetblacklistedplaylistDes": "Đặt lại tất cả danh sách phát trong danh sách đen",
+  "@resetblacklistedplaylistDes": {
+    "description": "resetblacklistedplaylistDes"
+  },
+  "restartApp": "Khởi động lại ứng dụng",
+  "@restartApp": {
+    "description": "restartApp"
+  },
+  "restore": "Khôi phục",
+  "@restore": {
+    "description": "restore"
+  },
+  "restoreAppData": "Khôi phục dữ liệu ứng dụng",
+  "@restoreAppData": {
+    "description": "restoreAppData"
+  },
+  "restoreLastPlaybackSession": "Khôi phục lần phát gần nhất",
+  "@restoreLastPlaybackSession": {
+    "description": "restoreLastPlaybackSession"
+  },
+  "restoreLastPlaybackSessionDes": "Tự khôi phục lần phát gần nhất khi mở ứng dụng",
+  "@restoreLastPlaybackSessionDes": {
+    "description": "restoreLastPlaybackSessionDes"
+  },
+  "restoreMsg": "Khôi phục thành công! \nThay đổi sẽ có hiệu lực khi khởi động lại ứng dụng",
+  "@restoreMsg": {
+    "description": "restoreMsg"
+  },
+  "restoreSettingsAndPlaylists": "Khôi phục cài đặt và đánh sách phát",
+  "@restoreSettingsAndPlaylists": {
+    "description": "restoreSettingsAndPlaylists"
+  },
+  "restoreSettingsAndPlaylistsDes": "Khôi phục tất cả cài đặt, dữ liệu đăng nhập và đánh sách phát từ file sao lưu. Ghi đè tất cả dữ liệu hiện tại",
+  "@restoreSettingsAndPlaylistsDes": {
+    "description": "restoreSettingsAndPlaylistsDes"
   },
   "restore_select_file_dialog": "Chọn tập tin sao lưu",
   "@restore_select_file_dialog": {
     "description": "restore_select_file_dialog"
   },
-  "auth_hint_email": "tên@mail.com",
-  "@auth_hint_email": {
-    "description": "auth_hint_email"
+  "restoring": "Đang khôi phục...",
+  "@restoring": {
+    "description": "restoring"
   },
-  "auth_error_invalid_email": "Nhập một email hợp lệ.",
-  "@auth_error_invalid_email": {
-    "description": "auth_error_invalid_email"
+  "results": "Kết quả",
+  "@results": {
+    "description": "results"
+  },
+  "retry": "Thử lại!",
+  "@retry": {
+    "description": "retry"
+  },
+  "save": "Giữ",
+  "@save": {
+    "description": "save"
+  },
+  "savedAlbums": "Đã lưu",
+  "@savedAlbums": {
+    "description": "savedAlbums"
+  },
+  "scanning": "Đang quét...",
+  "@scanning": {
+    "description": "scanning"
+  },
+  "search": "Tìm kiếm",
+  "@search": {
+    "description": "search"
+  },
+  "searchDes": "Bài hát, Danh sách phát, Tập nhạc hoặc Nghệ sỹ",
+  "@searchDes": {
+    "description": "searchDes"
+  },
+  "searchInLibrary": "Tìm kiếm trong Thư viện",
+  "@searchInLibrary": {
+    "description": "searchInLibrary"
+  },
+  "searchRes": "Kết quả tìm kiếm",
+  "@searchRes": {
+    "description": "searchRes"
+  },
+  "search_recent_title": "Tìm kiếm gần đây",
+  "@search_recent_title": {
+    "description": "search_recent_title"
+  },
+  "selectAll": "Chọn tất cả",
+  "@selectAll": {
+    "description": "selectAll"
+  },
+  "selectAuthIns": "Chọn phiên bản xác thực",
+  "@selectAuthIns": {
+    "description": "selectAuthIns"
+  },
+  "selectAuthInsMsg": "Vui lòng chọn phiên bản xác thực!",
+  "@selectAuthInsMsg": {
+    "description": "selectAuthInsMsg"
+  },
+  "selectFile": "Chọn tệp",
+  "@selectFile": {
+    "description": "selectFile"
+  },
+  "selectSongs": "Chọn bài hát",
+  "@selectSongs": {
+    "description": "selectSongs"
+  },
+  "selectedFileNotFound": "Không tìm thấy tập tin đã chọn.",
+  "@selectedFileNotFound": {
+    "description": "selectedFileNotFound"
+  },
+  "sessionExpiredLoginAgain": "Phiên của bạn đã hết hạn. Đăng nhập lại.",
+  "@sessionExpiredLoginAgain": {
+    "description": "sessionExpiredLoginAgain"
+  },
+  "setDiscoverContent": "Cài đặt nội dung khám phá",
+  "@setDiscoverContent": {
+    "description": "setDiscoverContent"
+  },
+  "settings": "Cài đặt",
+  "@settings": {
+    "description": "settings"
+  },
+  "settings_about_desc": "Giới thiệu về Estrella Music",
+  "@settings_about_desc": {
+    "description": "settings_about_desc"
+  },
+  "settings_about_sub": "Phiên bản, dự án nguồn mở và GitHub.",
+  "@settings_about_sub": {
+    "description": "settings_about_sub"
+  },
+  "settings_account_desc": "Tài khoản và đồng bộ hóa",
+  "@settings_account_desc": {
+    "description": "settings_account_desc"
+  },
+  "settings_account_sub": "Chế độ đám mây, sao lưu, danh sách bạn bè và di chuyển.",
+  "@settings_account_sub": {
+    "description": "settings_account_sub"
+  },
+  "settings_appearance_desc": "Hình ảnh động chủ đề, ngôn ngữ và giao diện.",
+  "@settings_appearance_desc": {
+    "description": "settings_appearance_desc"
+  },
+  "settings_cloud_backup": "Sao lưu đám mây",
+  "@settings_cloud_backup": {
+    "description": "settings_cloud_backup"
+  },
+  "settings_cloud_backup_desc": "Tải lên, khôi phục và quản lý...",
+  "@settings_cloud_backup_desc": {
+    "description": "settings_cloud_backup_desc"
   },
   "settings_cloud_backup_dialog_desc": "Tải bản sao lưu .hmb của ứng dụng lên máy chủ và nếu cần, hãy khôi phục mọi bản sao lưu đã lưu.",
   "@settings_cloud_backup_dialog_desc": {
     "description": "settings_cloud_backup_dialog_desc"
   },
-  "delete": "Xóa",
-  "@delete": {
-    "description": "delete"
+  "settings_content_desc": "Khám phá các bộ lọc, tích hợp với Piped và bộ nhớ đệm.",
+  "@settings_content_desc": {
+    "description": "settings_content_desc"
   },
-  "in_app_storage": "Thư mục lưu trữ nội bộ",
-  "@in_app_storage": {
-    "description": "in_app_storage"
+  "settings_downloads_desc": "Tải xuống và lưu trữ",
+  "@settings_downloads_desc": {
+    "description": "settings_downloads_desc"
   },
-  "auth_brand_description_1": "Chúng tôi đã mang thông tin đăng nhập, đăng ký và khôi phục mật khẩu từ dự án trước, được điều chỉnh cho ứng dụng âm nhạc này.",
-  "@auth_brand_description_1": {
-    "description": "auth_brand_description_1"
+  "settings_downloads_sub": "Định dạng âm thanh, thư mục và tải xuống tự động.",
+  "@settings_downloads_sub": {
+    "description": "settings_downloads_sub"
   },
-  "auth_brand_description_2": "Phiên của bạn được lưu trữ an toàn và được xác thực bằng chính chương trình phụ trợ mà bạn đang sử dụng.",
-  "@auth_brand_description_2": {
-    "description": "auth_brand_description_2"
+  "settings_general_section": "Tổng quan",
+  "@settings_general_section": {
+    "description": "settings_general_section"
   },
-  "auth_brand_not_configured": "Tệp .env cần được cấu hình để kết nối phần phụ trợ xác thực.",
-  "@auth_brand_not_configured": {
-    "description": "auth_brand_not_configured"
+  "settings_local_cloud_desc": "Chọn, di chuyển hoặc xem lại trạng thái đồng bộ hóa với Joss Red.",
+  "@settings_local_cloud_desc": {
+    "description": "settings_local_cloud_desc"
   },
-  "auth_forgot_password_subtitle": "Chúng tôi sẽ gửi cho bạn hướng dẫn tới email tài khoản của bạn.",
-  "@auth_forgot_password_subtitle": {
-    "description": "auth_forgot_password_subtitle"
+  "settings_local_cloud_title": "Chế độ cục bộ / Đám mây EMusic",
+  "@settings_local_cloud_title": {
+    "description": "settings_local_cloud_title"
   },
-  "auth_btn_send_email": "Gửi thư",
-  "@auth_btn_send_email": {
-    "description": "auth_btn_send_email"
+  "settings_logout": "Đăng xuất",
+  "@settings_logout": {
+    "description": "settings_logout"
   },
-  "auth_error_not_configured": "Thiếu phần phụ trợ xác thực để định cấu hình trong tệp .env.",
-  "@auth_error_not_configured": {
-    "description": "auth_error_not_configured"
+  "settings_migration_desc": "Nhập danh sách phát, bài hát...",
+  "@settings_migration_desc": {
+    "description": "settings_migration_desc"
   },
-  "auth_error_invalid_credentials": "Email hoặc mật khẩu không chính xác.",
-  "@auth_error_invalid_credentials": {
-    "description": "auth_error_invalid_credentials"
+  "settings_migration_title": "Di chuyển từ Joss Music Kotlin",
+  "@settings_migration_title": {
+    "description": "settings_migration_title"
   },
-  "auth_error_not_verified": "Tài khoản của bạn chưa được xác minh.",
-  "@auth_error_not_verified": {
-    "description": "auth_error_not_verified"
+  "settings_my_friends": "bạn bè của tôi",
+  "@settings_my_friends": {
+    "description": "settings_my_friends"
   },
-  "auth_error_unknown": "Không thể hoàn thành hoạt động.",
-  "@auth_error_unknown": {
-    "description": "auth_error_unknown"
+  "settings_my_friends_desc": "Quản lý trực tiếp bạn bè Joss Red của bạn.",
+  "@settings_my_friends_desc": {
+    "description": "settings_my_friends_desc"
   },
-  "auth_register_success": "Tài khoản được tạo thành công.",
-  "@auth_register_success": {
-    "description": "auth_register_success"
+  "settings_playback_desc": "Chất lượng phát trực tuyến, chuẩn hóa, im lặng và pin.",
+  "@settings_playback_desc": {
+    "description": "settings_playback_desc"
   },
-  "auth_register_error": "Không thể tạo tài khoản.",
-  "@auth_register_error": {
-    "description": "auth_register_error"
+  "settings_refresh_visitor_desc": "Tạo lại ID nhạc Online của bạn nếu nội dung Khám phá không tải.",
+  "@settings_refresh_visitor_desc": {
+    "description": "settings_refresh_visitor_desc"
   },
-  "auth_recovery_email_sent": "Đã gửi email.",
-  "@auth_recovery_email_sent": {
-    "description": "auth_recovery_email_sent"
+  "settings_refresh_visitor_title": "Làm mới ID (ID khách truy cập)",
+  "@settings_refresh_visitor_title": {
+    "description": "settings_refresh_visitor_title"
   },
-  "auth_recovery_email_error": "Không thể gửi email.",
-  "@auth_recovery_email_error": {
-    "description": "auth_recovery_email_error"
+  "settings_visitor_error": "Sai lầm",
+  "@settings_visitor_error": {
+    "description": "settings_visitor_error"
   },
-  "latestVersion": "Phiên bản mới nhất có sẵn",
-  "@latestVersion": {
-    "description": "latestVersion"
+  "settings_visitor_error_desc": "Không thể tạo mã định danh mới. Vui lòng thử lại sau.",
+  "@settings_visitor_error_desc": {
+    "description": "settings_visitor_error_desc"
+  },
+  "settings_visitor_exception": "Đã xảy ra lỗi khi tạo lại: {error}",
+  "@settings_visitor_exception": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    },
+    "description": "settings_visitor_exception"
+  },
+  "settings_visitor_updated": "Mã định danh đã cập nhật",
+  "@settings_visitor_updated": {
+    "description": "settings_visitor_updated"
+  },
+  "settings_visitor_updated_desc": "ID khách truy cập mới đã được tạo thành công.",
+  "@settings_visitor_updated_desc": {
+    "description": "settings_visitor_updated_desc"
+  },
+  "shareAlbum": "Chia sẻ album",
+  "@shareAlbum": {
+    "description": "shareAlbum"
+  },
+  "sharePlaylist": "Chia sẻ danh sách phát",
+  "@sharePlaylist": {
+    "description": "sharePlaylist"
+  },
+  "shareSong": "Chia sẻ bài hát này",
+  "@shareSong": {
+    "description": "shareSong"
+  },
+  "shazamSearching": "Đang tìm kiếm cơ sở dữ liệu Shazam để tìm kết quả phù hợp...",
+  "@shazamSearching": {
+    "description": "shazamSearching"
+  },
+  "shuffle": "Ngẫu nhiên",
+  "@shuffle": {
+    "description": "shuffle"
+  },
+  "shuffleQueue": "Xáo trộn hàng đợi",
+  "@shuffleQueue": {
+    "description": "shuffleQueue"
+  },
+  "similarToTitle": "Tương tự như {title}",
+  "@similarToTitle": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    },
+    "description": "similarToTitle"
+  },
+  "singles": "Đĩa đơn",
+  "@singles": {
+    "description": "singles"
+  },
+  "skipSilence": "Bỏ qua khoảng lặng",
+  "@skipSilence": {
+    "description": "skipSilence"
+  },
+  "skipSilenceDes": "Khoảng lặng sẽ bị bỏ qua khi chơi nhạc",
+  "@skipSilenceDes": {
+    "description": "skipSilenceDes"
+  },
+  "sleepTimeSetAlert": "Bộ hẹn giờ tắt của bạn đã được đặt",
+  "@sleepTimeSetAlert": {
+    "description": "sleepTimeSetAlert"
+  },
+  "sleepTimer": "Hẹn giờ tắt",
+  "@sleepTimer": {
+    "description": "sleepTimer"
+  },
+  "slide_indicator": "Bước {current} trên 3",
+  "@slide_indicator": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      }
+    },
+    "description": "slide_indicator"
+  },
+  "songAddedToPlaylistAlert": "Bài hát đã được thêm vào danh sách phát!",
+  "@songAddedToPlaylistAlert": {
+    "description": "songAddedToPlaylistAlert"
+  },
+  "songAlreadyExists": "Bài hát đã tồn tại!",
+  "@songAlreadyExists": {
+    "description": "songAlreadyExists"
+  },
+  "songAlreadyOfflineAlert": "Bài hát đã ngoại tuyến trong bộ nhớ đệm",
+  "@songAlreadyOfflineAlert": {
+    "description": "songAlreadyOfflineAlert"
+  },
+  "songEnqueueAlert": "Đã thêm bài hát vào hàng đợi!",
+  "@songEnqueueAlert": {
+    "description": "songEnqueueAlert"
+  },
+  "songFound": "Đã tìm thấy bài hát!",
+  "@songFound": {
+    "description": "songFound"
+  },
+  "songInfo": "Thông tin bài hát",
+  "@songInfo": {
+    "description": "songInfo"
+  },
+  "songNotPlayable": "Bài hát không thể phát vì giới hạn của máy chủ!",
+  "@songNotPlayable": {
+    "description": "songNotPlayable"
+  },
+  "songPitch": "giai điệu bài hát",
+  "@songPitch": {
+    "description": "songPitch"
+  },
+  "songRemovedAlert": "Xóa khỏi",
+  "@songRemovedAlert": {
+    "description": "songRemovedAlert"
+  },
+  "songRemovedfromQueue": "Đã xóa khỏi hàng đợi!",
+  "@songRemovedfromQueue": {
+    "description": "songRemovedfromQueue"
+  },
+  "songRemovedfromQueueCurrSong": "Bạn không thể xóa bài hát đang phát",
+  "@songRemovedfromQueueCurrSong": {
+    "description": "songRemovedfromQueueCurrSong"
+  },
+  "songs": "Bài hát",
+  "@songs": {
+    "description": "songs"
+  },
+  "songsImportedFromJossMusic": "Bài hát được nhập từ Joss Music Kotlin",
+  "@songsImportedFromJossMusic": {
+    "description": "songsImportedFromJossMusic"
+  },
+  "sortAscendNDescend": "Sắp xếp tăng dần/giảm dần",
+  "@sortAscendNDescend": {
+    "description": "sortAscendNDescend"
+  },
+  "sortByDate": "Sắp xếp theo ngày",
+  "@sortByDate": {
+    "description": "sortByDate"
+  },
+  "sortByDuration": "Sắp xếp theo thời lượng",
+  "@sortByDuration": {
+    "description": "sortByDuration"
+  },
+  "sortByName": "Sắp xếp theo tên",
+  "@sortByName": {
+    "description": "sortByName"
+  },
+  "speedAndPitch": "Tốc độ và cao độ",
+  "@speedAndPitch": {
+    "description": "speedAndPitch"
+  },
+  "standard": "Tiêu Chuẩn",
+  "@standard": {
+    "description": "standard"
+  },
+  "startRadio": "Bắt đầu đài phát",
+  "@startRadio": {
+    "description": "startRadio"
+  },
+  "startupScreen": "Mở khi khởi động",
+  "@startupScreen": {
+    "description": "startupScreen"
+  },
+  "startupScreenDescription": "Chọn phần Estrella Music mở đầu tiên",
+  "@startupScreenDescription": {
+    "description": "startupScreenDescription"
+  },
+  "status": "Trạng thái",
+  "@status": {
+    "description": "status"
+  },
+  "stopMusicOnTaskClear": "Dừng nhạc khi xóa khỏi tác vụ gần đây",
+  "@stopMusicOnTaskClear": {
+    "description": "stopMusicOnTaskClear"
+  },
+  "stopMusicOnTaskClearDes": "Quá trình phát nhạc sẽ dừng khi ứng dụng bị xóa khỏi trình quản lý tác vụ",
+  "@stopMusicOnTaskClearDes": {
+    "description": "stopMusicOnTaskClearDes"
+  },
+  "streamingQuality": "Chất lượng truyền tải",
+  "@streamingQuality": {
+    "description": "streamingQuality"
+  },
+  "streamingQualityDes": "Chất lượng truyền tải nhạc qua internet",
+  "@streamingQualityDes": {
+    "description": "streamingQualityDes"
+  },
+  "subscribers": "người đăng ký",
+  "@subscribers": {
+    "description": "subscribers"
+  },
+  "swipe_prompt": "Vuốt để khám phá các tùy chọn ➔",
+  "@swipe_prompt": {
+    "description": "swipe_prompt"
+  },
+  "syncChangesConfirmed": "{count} thay đổi đã được cam kết.",
+  "@syncChangesConfirmed": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    },
+    "description": "syncChangesConfirmed"
+  },
+  "syncChangesSynced": "{count} thay đổi được đồng bộ hóa.",
+  "@syncChangesSynced": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    },
+    "description": "syncChangesSynced"
+  },
+  "syncCloudDownloadingExisting": "Đã kích hoạt chế độ đám mây. Đang tải xuống thư viện hiện có.",
+  "@syncCloudDownloadingExisting": {
+    "description": "syncCloudDownloadingExisting"
+  },
+  "syncCloudMigrationComplete": "Đã kích hoạt chế độ đám mây. Thư viện đã di chuyển.",
+  "@syncCloudMigrationComplete": {
+    "description": "syncCloudMigrationComplete"
+  },
+  "syncCloudModeActive": "Chế độ đám mây đang hoạt động",
+  "@syncCloudModeActive": {
+    "description": "syncCloudModeActive"
+  },
+  "syncCloudPending": "Chế độ đám mây đang hoạt động. Đang chờ đồng bộ hóa.",
+  "@syncCloudPending": {
+    "description": "syncCloudPending"
+  },
+  "syncDownloadFailed": "Không thể tải xuống đồng bộ hóa.",
+  "@syncDownloadFailed": {
+    "description": "syncDownloadFailed"
+  },
+  "syncDownloading": "Đang tải xuống các thay đổi của EMusic...",
+  "@syncDownloading": {
+    "description": "syncDownloading"
+  },
+  "syncForceReplaceBackupSaved": "Sao lưu phục hồi: {path}",
+  "@syncForceReplaceBackupSaved": {
+    "placeholders": {
+      "path": {}
+    }
+  },
+  "syncForceReplaceConfirmAction": "Reemplazar y subir",
+  "@syncForceReplaceConfirmAction": {},
+  "syncForceReplaceConfirmBody": "Primero se creará un respaldo de recuperación. Después, las playlists, favoritos, historial, álbumes, artistas y ajustes musicales de EMusic Cloud se reemplazarán con los datos actuales de este dispositivo. No se puede deshacer desde el servidor.",
+  "@syncForceReplaceConfirmBody": {},
+  "syncForceReplaceConfirmTitle": "¿Reemplazar la biblioteca âm nhạc remota?",
+  "@syncForceReplaceConfirmTitle": {},
+  "syncForceReplaceCountMismatch": "Số đếm được tải lên không khớp với thư viện cục bộ. Không thể xác nhận việc thay thế từ xa.",
+  "@syncForceReplaceCountMismatch": {},
+  "syncForceReplaceCreatingBackup": "Đang tạo bản sao lưu trước khi thay thế dữ liệu đám mây...",
+  "@syncForceReplaceCreatingBackup": {},
+  "syncForceReplaceDescription": "Pausa laruxureronización pendiente y reemplaza a la fuerza tu biblioteca musical remota con los datos actuales de este dispositivo. Las descargas permanecen locales.",
+  "@syncForceReplaceDescription": {},
+  "syncForceReplaceFailed": "E Music Cloud không thể thay thế thư viện từ xa.",
+  "@syncForceReplaceFailed": {},
+  "syncForceReplaceFailedLocalPreserved": "Việc thay thế từ xa bị lỗi. Dữ liệu và bản sao lưu của anh đã được bảo quản.",
+  "@syncForceReplaceFailedLocalPreserved": {},
+  "syncForceReplaceFailedTitle": "Tải lên chưa xong",
+  "@syncForceReplaceFailedTitle": {},
+  "syncForceReplaceInProgress": "Đồng bộ hoá, tạo bản sao lưu, và tải lên thư viện địa phương...",
+  "@syncForceReplaceInProgress": {},
+  "syncForceReplacePauseFailed": "Sự đồng bộ hóa hiện thời không thể tạm dừng một cách an toàn. Hãy thử lại lần nữa.",
+  "@syncForceReplacePauseFailed": {},
+  "syncForceReplaceSuccess": "Thư viện âm nhạc từ xa đã được thay thế bằng dữ liệu hiện tại của thiết bị này.",
+  "@syncForceReplaceSuccess": {},
+  "syncForceReplaceSuccessTitle": "Tải lên hoàn tất",
+  "@syncForceReplaceSuccessTitle": {},
+  "syncForceReplaceTitle": "Cơ sở Cancelarruxureronización y subir esta",
+  "@syncForceReplaceTitle": {},
+  "syncForceReplaceValidating": "Kiểm tra thư viện đã tải lên trước khi thay thế dữ liệu đám mây...",
+  "@syncForceReplaceValidating": {},
+  "syncLibrarySynced": "Thư viện đồng bộ.",
+  "@syncLibrarySynced": {
+    "description": "syncLibrarySynced"
+  },
+  "syncLibraryUpToDate": "Thư viện cập nhật.",
+  "@syncLibraryUpToDate": {
+    "description": "syncLibraryUpToDate"
+  },
+  "syncLocalChangesFirst": "Có những thay đổi mới ở địa phương. Chúng sẽ được tải lên trước khi tải xuống.",
+  "@syncLocalChangesFirst": {
+    "description": "syncLocalChangesFirst"
+  },
+  "syncLocalDeviceOnly": "Dữ liệu của bạn chỉ được lưu giữ trên thiết bị này.",
+  "@syncLocalDeviceOnly": {
+    "description": "syncLocalDeviceOnly"
+  },
+  "syncLocalModeActive": "Chế độ cục bộ đang hoạt động",
+  "@syncLocalModeActive": {
+    "description": "syncLocalModeActive"
+  },
+  "syncOfflinePending": "Ngoại tuyến. Những thay đổi đang chờ xử lý.",
+  "@syncOfflinePending": {
+    "description": "syncOfflinePending"
+  },
+  "syncOfflineRetry": "Ngoại tuyến. Đã lưu các thay đổi để thử lại.",
+  "@syncOfflineRetry": {
+    "description": "syncOfflineRetry"
+  },
+  "syncPlaylistSongs": "Đồng bộ danh sách bài hát",
+  "@syncPlaylistSongs": {
+    "description": "syncPlaylistSongs"
+  },
+  "syncUnconfirmedRetry": "EMusic không xác nhận tất cả những thay đổi. Họ sẽ được thử lại.",
+  "@syncUnconfirmedRetry": {
+    "description": "syncUnconfirmedRetry"
+  },
+  "syncUploadRetry": "Không thể đứng dậy được. Nó sẽ được thử lại sau.",
+  "@syncUploadRetry": {
+    "description": "syncUploadRetry"
+  },
+  "syncUploadSuccess": "Các thay đổi được tải lên chính xác.",
+  "@syncUploadSuccess": {
+    "description": "syncUploadSuccess"
+  },
+  "syncUploadSuccessWs": "Các thay đổi đã được tải lên thành công (WS).",
+  "@syncUploadSuccessWs": {
+    "description": "syncUploadSuccessWs"
+  },
+  "syncUploadWsRetry": "Không thể tải lên bằng WS. Nó sẽ được thử lại sau.",
+  "@syncUploadWsRetry": {
+    "description": "syncUploadWsRetry"
+  },
+  "syncUploading": "Đang tải các thay đổi lên EMusic...",
+  "@syncUploading": {
+    "description": "syncUploading"
+  },
+  "synced": "Đã đồng bộ hóa",
+  "@synced": {
+    "description": "synced"
+  },
+  "syncedLyricsNotAvailable": "Lời bài hát được đồng bộ hóa không có!",
+  "@syncedLyricsNotAvailable": {
+    "description": "syncedLyricsNotAvailable"
+  },
+  "systemDefault": "Theo hệ thống",
+  "@systemDefault": {
+    "description": "systemDefault"
+  },
+  "themeMode": "Chủ đề",
+  "@themeMode": {
+    "description": "themeMode"
+  },
+  "title": "Tiêu đề",
+  "@title": {
+    "description": "title"
+  },
+  "topMusicVid": "Video ca nhạc hàng đầu",
+  "@topMusicVid": {
+    "description": "topMusicVid"
+  },
+  "topmusicvideos": "Video âm nhạc hàng đầu",
+  "@topmusicvideos": {
+    "description": "topmusicvideos"
+  },
+  "trending": "Xu hướng",
+  "@trending": {
+    "description": "trending"
+  },
+  "unLink": "Hủy liên kết",
+  "@unLink": {
+    "description": "unLink"
+  },
+  "unlinkAlert": "Hủy liên kết thành công!",
+  "@unlinkAlert": {
+    "description": "unlinkAlert"
+  },
+  "untitledSong": "Bài hát không tên",
+  "@untitledSong": {
+    "description": "untitledSong"
+  },
+  "upNext": "Kế tiếp",
+  "@upNext": {
+    "description": "upNext"
   },
   "updateApp": "Cập nhật ứng dụng",
   "@updateApp": {
     "description": "updateApp"
   },
-  "loadInfoUpdate": "Không thể tải thông tin cập nhật",
-  "@loadInfoUpdate": {
-    "description": "loadInfoUpdate"
+  "urlSearchDes": "Nhấn vào liên kết được phát hiện để mở nội dung",
+  "@urlSearchDes": {
+    "description": "urlSearchDes"
   },
-  "infoNotAvailable": "Thông tin không có sẵn",
-  "@infoNotAvailable": {
-    "description": "infoNotAvailable"
+  "useThisMetadata": "Dùng siêu dữ liệu này",
+  "@useThisMetadata": {
+    "description": "Button for selecting a metadata candidate"
   },
-  "developedBy": "Được phát triển và duy trì bởi Joss Estrada (JOSPROX)",
-  "@developedBy": {
-    "description": "developedBy"
+  "userBlocked": "Người dùng bị chặn",
+  "@userBlocked": {
+    "description": "userBlocked"
   },
-  "copyrightNotice": "© 2026 JOSPROX. Giấy phép GPL v3.0",
-  "@copyrightNotice": {
-    "description": "copyrightNotice"
+  "userListMissing": "Phản hồi không chứa danh sách người dùng.",
+  "@userListMissing": {
+    "description": "userListMissing"
   },
-  "syncForceReplaceTitle": "Cơ sở Cancelarruxureronización y subir esta",
-  "syncForceReplaceConfirmAction": "Reemplazar y subir",
-  "syncForceReplaceDescription": "Pausa laruxureronización pendiente y reemplaza a la fuerza tu biblioteca musical remota con los datos actuales de este dispositivo. Las descargas permanecen locales.",
-  "syncForceReplaceConfirmBody": "Primero se creará un respaldo de recuperación. Después, las playlists, favoritos, historial, álbumes, artistas y ajustes musicales de EMusic Cloud se reemplazarán con los datos actuales de este dispositivo. No se puede deshacer desde el servidor.",
-  "syncForceReplaceConfirmTitle": "¿Reemplazar la biblioteca âm nhạc remota?"
+  "userSearchFailed": "Không thể tìm kiếm người dùng ({statusCode}).",
+  "@userSearchFailed": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    },
+    "description": "userSearchFailed"
+  },
+  "userUnblocked": "Người dùng đã được mở khóa",
+  "@userUnblocked": {
+    "description": "userUnblocked"
+  },
+  "username": "Tên người dùng",
+  "@username": {
+    "description": "username"
+  },
+  "video": "Băng hình",
+  "@video": {
+    "description": "video"
+  },
+  "videos": "Phim ảnh",
+  "@videos": {
+    "description": "videos"
+  },
+  "viewAll": "Xem tất cả",
+  "@viewAll": {
+    "description": "viewAll"
+  },
+  "viewArtist": "Xem Nghệ sĩ",
+  "@viewArtist": {
+    "description": "viewArtist"
+  },
+  "welcome_intro": "Chúng tôi đã hiện đại hóa nền tảng của mình. Hệ thống tải lên bản sao lưu thủ công cũ đã bị vô hiệu hóa. Bây giờ bạn có hai cách rõ ràng để quản lý thư viện nhạc của mình.",
+  "@welcome_intro": {
+    "description": "welcome_intro"
+  },
+  "welcome_subtitle": "Chọn cách bạn muốn trải nghiệm Estrella Music kể từ bây giờ.",
+  "@welcome_subtitle": {
+    "description": "welcome_subtitle"
+  },
+  "welcome_title": "Âm nhạc của bạn, theo cách của bạn",
+  "@welcome_title": {
+    "description": "welcome_title"
+  }
 }

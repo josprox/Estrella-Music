@@ -1,4 +1,7 @@
+import 'dart:async';
+
 import 'package:audio_service/audio_service.dart';
+import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 
 import 'package:estrella_music/models/album.dart';
@@ -13,6 +16,7 @@ import 'package:estrella_music/services/storage/sqlite_store.dart';
 import 'music_provider.dart';
 import 'music_download_provider.dart';
 import 'music_discovery_provider.dart';
+import 'music_metadata_editor.dart';
 import 'music_provider_manager.dart';
 import 'music_source_cache_control.dart';
 
@@ -21,11 +25,31 @@ class MusicCatalogService extends GetxService {
   MusicCatalogService({
     required MusicProviderManager providerManager,
     required ProfileManager profileManager,
+    required MusicMetadataSearchProvider metadataProvider,
   })  : _providerManager = providerManager,
-        _profileManager = profileManager;
+        _profileManager = profileManager,
+        _metadataProvider = metadataProvider;
 
   final MusicProviderManager _providerManager;
   final ProfileManager _profileManager;
+  final MusicMetadataSearchProvider _metadataProvider;
+  Future<void>? _metadataProviderReady;
+  Worker? _activeProfileWorker;
+  int _automaticLookupGeneration = 0;
+
+  final automaticMetadataRevision = 0.obs;
+  final isAutomaticallyIdentifyingMetadata = false.obs;
+  final automaticMetadataProgress = 0.0.obs;
+
+  @override
+  void onInit() {
+    super.onInit();
+    _activeProfileWorker = ever(
+      _profileManager.activeProfile,
+      (_) => _scheduleAutomaticMetadataLookup(),
+    );
+    _scheduleAutomaticMetadataLookup();
+  }
 
   MusicProvider get provider {
     final profile = _profileManager.activeProfile.value;
@@ -52,11 +76,311 @@ class MusicCatalogService extends GetxService {
 
   Future<void> init() async {}
 
+  Future<void> refresh() async {
+    await provider.refresh();
+    _scheduleAutomaticMetadataLookup();
+  }
+
+  void _scheduleAutomaticMetadataLookup() {
+    final generation = ++_automaticLookupGeneration;
+    Future<void>.microtask(
+      () => _runAutomaticMetadataLookup(generation),
+    );
+  }
+
+  Future<void> runAutomaticMetadataLookup() async {
+    final generation = ++_automaticLookupGeneration;
+    await _runAutomaticMetadataLookup(generation);
+  }
+
+  Future<void> _runAutomaticMetadataLookup(int generation) async {
+    MusicProvider active;
+    String profileId;
+    try {
+      active = provider;
+      profileId = activeProfileId;
+    } catch (_) {
+      return;
+    }
+    if (active is! AutomaticMusicMetadataEditor ||
+        active is! MusicMetadataEditor) {
+      return;
+    }
+    final automaticEditor = active as AutomaticMusicMetadataEditor;
+    final metadataEditor = active as MusicMetadataEditor;
+    final tracks = await active.getTracks();
+    final pending = tracks
+        .where(automaticEditor.shouldLookupMetadataAutomatically)
+        .toList(growable: false);
+    if (pending.isEmpty || generation != _automaticLookupGeneration) return;
+
+    isAutomaticallyIdentifyingMetadata.value = true;
+    automaticMetadataProgress.value = 0;
+    var completed = 0;
+    var consecutiveErrors = 0;
+    var matched = 0;
+    var noMatches = 0;
+    var errors = 0;
+    debugPrint(
+      '[LocalMetadata] Starting automatic lookup for ${pending.length} songs',
+    );
+    try {
+      await (_metadataProviderReady ??= _metadataProvider.initialize(
+        const MusicProviderContext(profileId: 'public-metadata'),
+      ));
+      for (final track in pending) {
+        if (generation != _automaticLookupGeneration ||
+            activeProfileId != profileId ||
+            !identical(provider, active)) {
+          return;
+        }
+        try {
+          final query = metadataEditor.suggestedMetadataQuery(track).trim();
+          if (query.isEmpty) {
+            noMatches++;
+            await automaticEditor.recordAutomaticMetadataLookup(
+              track,
+              AutomaticMetadataLookupOutcome.noMatch,
+            );
+          } else {
+            final candidates = await _metadataProvider.searchMetadata(
+              query,
+              limit: 8,
+            );
+            consecutiveErrors = 0;
+            if (generation != _automaticLookupGeneration) return;
+            final latestTrack =
+                await active.getTrack(track.identity.sourceId) ?? track;
+            if (!automaticEditor
+                .shouldLookupMetadataAutomatically(latestTrack)) {
+              continue;
+            }
+            final match = _confidentAutomaticMatch(latestTrack, candidates);
+            if (match == null) {
+              noMatches++;
+              await automaticEditor.recordAutomaticMetadataLookup(
+                latestTrack,
+                AutomaticMetadataLookupOutcome.noMatch,
+              );
+            } else {
+              final updated = await automaticEditor.applyAutomaticMetadata(
+                latestTrack,
+                match,
+              );
+              matched++;
+              automaticMetadataRevision.value++;
+              consecutiveErrors = 0;
+              debugPrint(
+                '[LocalMetadata] Identified "${track.title}" as '
+                '"${updated.title}" by ${updated.artist}',
+              );
+            }
+          }
+        } catch (error, stack) {
+          consecutiveErrors++;
+          errors++;
+          debugPrint(
+            '[LocalMetadata] Automatic lookup failed for ${track.title}: '
+            '$error\n$stack',
+          );
+          try {
+            await automaticEditor.recordAutomaticMetadataLookup(
+              track,
+              AutomaticMetadataLookupOutcome.error,
+            );
+          } catch (_) {}
+          if (consecutiveErrors >= 3) {
+            debugPrint(
+              '[LocalMetadata] Automatic lookup paused after repeated errors',
+            );
+            break;
+          }
+        } finally {
+          completed++;
+          automaticMetadataProgress.value = completed / pending.length;
+        }
+      }
+    } finally {
+      if (generation == _automaticLookupGeneration) {
+        isAutomaticallyIdentifyingMetadata.value = false;
+      }
+      debugPrint(
+        '[LocalMetadata] Automatic lookup finished: '
+        '$matched matched, $noMatches without a confident match, '
+        '$errors errors',
+      );
+    }
+  }
+
+  TrackMetadataCandidate? _confidentAutomaticMatch(
+    ProviderTrack local,
+    List<TrackMetadataCandidate> candidates,
+  ) {
+    final ranked = candidates.toList()
+      ..sort((a, b) => _metadataScore(
+            mediaItemFromTrack(local),
+            b,
+          ).compareTo(_metadataScore(mediaItemFromTrack(local), a)));
+    final localTitle = _metadataComparable(local.title);
+    final localArtist = _metadataComparable(local.artist);
+    for (final candidate in ranked) {
+      if (_metadataComparable(candidate.title) != localTitle) continue;
+      final durationMatches = local.duration == null ||
+          candidate.duration == null ||
+          (local.duration! - candidate.duration!).inSeconds.abs() <= 12;
+      if (!durationMatches) continue;
+
+      if (_isUnknownMetadataArtist(localArtist)) {
+        if (local.duration != null && candidate.duration != null) {
+          return candidate;
+        }
+        continue;
+      }
+      if (_artistsOverlap(localArtist, candidate.artist)) return candidate;
+    }
+    return null;
+  }
+
+  bool _isUnknownMetadataArtist(String value) =>
+      value.isEmpty ||
+      value == 'unknown artist' ||
+      value == 'artista desconocido';
+
+  bool _artistsOverlap(String localArtist, String candidateArtist) {
+    final localTokens = _metadataComparable(localArtist)
+        .split(' ')
+        .where((token) => token.length >= 3)
+        .toSet();
+    final candidateTokens = _metadataComparable(candidateArtist)
+        .split(' ')
+        .where((token) => token.length >= 3)
+        .toSet();
+    return localTokens.intersection(candidateTokens).isNotEmpty;
+  }
+
   Future<List<ProviderTrack>> tracks() => provider.getTracks();
   Future<List<ProviderAlbum>> albums() => provider.getAlbums();
   Future<List<ProviderArtist>> artists() => provider.getArtists();
   Future<ProviderSearchResults> searchTyped(String query) =>
       provider.search(query);
+
+  bool canEditMetadata(MediaItem item) {
+    final active = provider;
+    if (active is! MusicMetadataEditor) return false;
+    final identity = identityFromMediaItem(item);
+    return identity.providerId == activeProviderId &&
+        identity.profileId == activeProfileId &&
+        (item.extras?['url']?.toString().isNotEmpty ?? false);
+  }
+
+  Future<String> suggestedMetadataQuery(MediaItem item) async {
+    final active = provider;
+    if (active is! MusicMetadataEditor) {
+      throw const MusicProviderException(
+        'The active provider cannot edit metadata',
+      );
+    }
+    final editor = active as MusicMetadataEditor;
+    final identity = identityFromMediaItem(item);
+    _assertActiveIdentity(identity);
+    final track = await active.getTrack(identity.sourceId) ??
+        _trackFromMediaItem(item, identity);
+    return editor.suggestedMetadataQuery(track);
+  }
+
+  /// Searches an account-free public catalog. The metadata provider is kept
+  /// outside profile registration and never receives Joss Red credentials.
+  Future<List<TrackMetadataCandidate>> searchTrackMetadata(
+    MediaItem localItem,
+    String query,
+  ) async {
+    if (!canEditMetadata(localItem)) {
+      throw const MusicProviderException(
+        'Metadata identification is unavailable for this track',
+      );
+    }
+    final normalized = query.trim();
+    if (normalized.isEmpty) return const [];
+    await (_metadataProviderReady ??= _metadataProvider.initialize(
+      const MusicProviderContext(profileId: 'public-metadata'),
+    ));
+    final candidates = await _metadataProvider.searchMetadata(
+      normalized,
+      limit: 20,
+    );
+    return _rankMetadataCandidates(localItem, candidates);
+  }
+
+  Future<MediaItem> applyTrackMetadata(
+    MediaItem item,
+    TrackMetadataCandidate candidate,
+  ) async {
+    final active = provider;
+    if (active is! MusicMetadataEditor) {
+      throw const MusicProviderException(
+        'The active provider cannot edit metadata',
+      );
+    }
+    final editor = active as MusicMetadataEditor;
+    final identity = identityFromMediaItem(item);
+    _assertActiveIdentity(identity);
+    final track = await active.getTrack(identity.sourceId) ??
+        _trackFromMediaItem(item, identity);
+    final updated = await editor.applyMetadata(track, candidate);
+    automaticMetadataRevision.value++;
+    return mediaItemFromTrack(updated);
+  }
+
+  ProviderTrack _trackFromMediaItem(
+    MediaItem item,
+    MusicIdentity identity,
+  ) =>
+      ProviderTrack(
+        identity: identity,
+        title: item.title,
+        artist: item.artist ?? 'Unknown artist',
+        album: item.album ?? 'Unknown album',
+        duration: item.duration,
+        artworkUri: item.artUri,
+        filePath: item.extras?['url']?.toString(),
+        metadata: item.extras ?? const {},
+      );
+
+  List<TrackMetadataCandidate> _rankMetadataCandidates(
+    MediaItem localItem,
+    List<TrackMetadataCandidate> candidates,
+  ) {
+    final ranked = candidates.toList();
+    ranked.sort((a, b) =>
+        _metadataScore(localItem, b).compareTo(_metadataScore(localItem, a)));
+    return ranked;
+  }
+
+  int _metadataScore(MediaItem local, TrackMetadataCandidate candidate) {
+    final localTitle = _metadataComparable(local.title);
+    final candidateTitle = _metadataComparable(candidate.title);
+    var score = localTitle == candidateTitle
+        ? 100
+        : (candidateTitle.contains(localTitle) ||
+                localTitle.contains(candidateTitle)
+            ? 50
+            : 0);
+    final localArtist = _metadataComparable(local.artist ?? '');
+    final candidateArtist = _metadataComparable(candidate.artist);
+    if (localArtist.isNotEmpty && localArtist == candidateArtist) score += 50;
+    if (local.duration != null && candidate.duration != null) {
+      final difference =
+          (local.duration! - candidate.duration!).inSeconds.abs();
+      if (difference <= 3) score += 25;
+    }
+    return score;
+  }
+
+  String _metadataComparable(String value) => value
+      .toLowerCase()
+      .replaceAll(RegExp(r'[^a-z0-9áéíóúüñ]+'), ' ')
+      .replaceAll(RegExp(r'\s+'), ' ')
+      .trim();
 
   MediaItem mediaItemFromTrack(ProviderTrack track) => MediaItem(
         id: track.identity.sourceId,
@@ -568,5 +892,13 @@ class MusicCatalogService extends GetxService {
     final minutes = duration.inMinutes;
     final seconds = duration.inSeconds.remainder(60).toString().padLeft(2, '0');
     return '$minutes:$seconds';
+  }
+
+  @override
+  void onClose() {
+    _automaticLookupGeneration++;
+    _activeProfileWorker?.dispose();
+    unawaited(_metadataProvider.dispose());
+    super.onClose();
   }
 }

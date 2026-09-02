@@ -1,1100 +1,124 @@
 {
   "@@locale": "id",
-  "playlistCreatednsongAddedAlert": "Daftar Putar dibuat & lagu ditambahkan!",
-  "@playlistCreatednsongAddedAlert": {
-    "description": "playlistCreatednsongAddedAlert"
-  },
-  "dismiss": "Biarkan",
-  "@dismiss": {
-    "description": "dismiss"
-  },
-  "goToDownloadPage": "Klik di sini untuk pergi ke halaman unduh",
-  "@goToDownloadPage": {
-    "description": "goToDownloadPage"
-  },
-  "songEnqueueAlert": "Lagu masuk dalam antrean!",
-  "@songEnqueueAlert": {
-    "description": "songEnqueueAlert"
-  },
-  "renamePlaylist": "Ganti Nama Daftar Putar",
-  "@renamePlaylist": {
-    "description": "renamePlaylist"
-  },
-  "songAddedToPlaylistAlert": "Lagu ditambahkan ke daftar putar!",
-  "@songAddedToPlaylistAlert": {
-    "description": "songAddedToPlaylistAlert"
-  },
-  "unlinkAlert": "Tautan berhasil dibatalkan!",
-  "@unlinkAlert": {
-    "description": "unlinkAlert"
-  },
-  "playlistCreatedAlert": "Daftar Putar dibuat!",
-  "@playlistCreatedAlert": {
-    "description": "playlistCreatedAlert"
-  },
-  "reset": "Setel ulang",
-  "@reset": {
-    "description": "reset"
-  },
-  "unLink": "Putuskan tautan",
-  "@unLink": {
-    "description": "unLink"
-  },
-  "trending": "Sedang tren",
-  "@trending": {
-    "description": "trending"
-  },
-  "searchRes": "Hasil pencarian",
-  "@searchRes": {
-    "description": "searchRes"
-  },
-  "cacheSongsDes": "Menyimpan lagu sementara saat diputar untuk pemutaran di masa depan/offline, ini akan memakan ruang tambahan di perangkat Anda",
-  "@cacheSongsDes": {
-    "description": "cacheSongsDes"
-  },
-  "password": "Sandi",
-  "@password": {
-    "description": "password"
-  },
-  "noLibPlaylist": "Anda tidak memiliki pustaka daftar putar!",
-  "@noLibPlaylist": {
-    "description": "noLibPlaylist"
-  },
-  "setDiscoverContent": "Tetapkan konten yang dapat ditemukan",
-  "@setDiscoverContent": {
-    "description": "setDiscoverContent"
-  },
-  "networkError1": "Ups, ada kesalahan jaringan!",
-  "@networkError1": {
-    "description": "networkError1"
-  },
-  "songRemovedfromQueue": "Dihapus dari antrean!",
-  "@songRemovedfromQueue": {
-    "description": "songRemovedfromQueue"
-  },
-  "libSongs": "Pustaka Lagu",
-  "@libSongs": {
-    "description": "libSongs"
-  },
-  "githubDes": "Lihat kode sumber GitHub \njika anda suka proyek ini, jangan lupa berikan⭐",
-  "@githubDes": {
-    "description": "githubDes"
-  },
-  "communityplaylists": "Daftar Putar Komunitas",
-  "@communityplaylists": {
-    "description": "communityplaylists"
-  },
-  "playlistRemovedAlert": "Daftar Putar di hapus!",
-  "@playlistRemovedAlert": {
-    "description": "playlistRemovedAlert"
-  },
-  "libAlbums": "Pustaka Album",
-  "@libAlbums": {
-    "description": "libAlbums"
-  },
-  "albumBookmarkRemoveAlert": "Penanda album dihapus!",
-  "@albumBookmarkRemoveAlert": {
-    "description": "albumBookmarkRemoveAlert"
-  },
-  "notaSongVideo": "Bukan Lagu/Video Musik!",
-  "@notaSongVideo": {
-    "description": "notaSongVideo"
-  },
-  "ignoreBatOptDes": "Jika Anda menghadapi masalah notifikasi atau pemutaran dihentikan karena pengoptimalan sistem, aktifkan opsi ini",
-  "@ignoreBatOptDes": {
-    "description": "ignoreBatOptDes"
-  },
-  "for1": "Untuk",
-  "@for1": {
-    "description": "for1"
-  },
-  "low": "Rendah",
-  "@low": {
-    "description": "low"
-  },
-  "link": "Tautan",
-  "@link": {
-    "description": "link"
-  },
-  "selectAuthIns": "Pilih Instans Auth",
-  "@selectAuthIns": {
-    "description": "selectAuthIns"
-  },
-  "languageDes": "Setel bahasa Aplikasi",
-  "@languageDes": {
-    "description": "languageDes"
-  },
-  "stopMusicOnTaskClear": "Hentikan musik saat tugas selesai",
-  "@stopMusicOnTaskClear": {
-    "description": "stopMusicOnTaskClear"
-  },
-  "enqueueAll": "Antrikan semua",
-  "@enqueueAll": {
-    "description": "enqueueAll"
-  },
-  "customInsSelectMsg": "Silakan pilih Instans Khusus",
-  "@customInsSelectMsg": {
-    "description": "customInsSelectMsg"
-  },
-  "skipSilence": "Lewati keheningan",
-  "@skipSilence": {
-    "description": "skipSilence"
-  },
-  "create": "Buat",
-  "@create": {
-    "description": "create"
-  },
-  "equalizer": "Ekualizer",
-  "@equalizer": {
-    "description": "equalizer"
-  },
-  "enqueueSong": "Tambahkan lagu ini ke antrian",
-  "@enqueueSong": {
-    "description": "enqueueSong"
-  },
-  "noBookmarks": "Tidak ada penanda!",
-  "@noBookmarks": {
-    "description": "noBookmarks"
-  },
-  "playlists": "Daftar Putar",
-  "@playlists": {
-    "description": "playlists"
-  },
-  "videos": "Video",
-  "@videos": {
-    "description": "videos"
-  },
-  "enabled": "Diaktifkan",
-  "@enabled": {
-    "description": "enabled"
-  },
-  "allFieldsReqMsg": "Semua bidang wajib diisi",
-  "@allFieldsReqMsg": {
-    "description": "allFieldsReqMsg"
-  },
-  "artistBookmarkAddAlert": "Artis ditandai!",
-  "@artistBookmarkAddAlert": {
-    "description": "artistBookmarkAddAlert"
-  },
-  "rename": "Ganti Nama",
-  "@rename": {
-    "description": "rename"
-  },
-  "viewAll": "Lihat semua",
-  "@viewAll": {
-    "description": "viewAll"
-  },
-  "github": "Github",
-  "@github": {
-    "description": "github"
-  },
-  "newVersionAvailable": "Versi baru tersedia!",
-  "@newVersionAvailable": {
-    "description": "newVersionAvailable"
-  },
-  "items": "Item",
-  "@items": {
-    "description": "items"
-  },
-  "subscribers": "pelanggan",
-  "@subscribers": {
-    "description": "subscribers"
-  },
-  "startRadio": "Mulai radio",
-  "@startRadio": {
-    "description": "startRadio"
-  },
-  "discover": "Temukan",
-  "@discover": {
-    "description": "discover"
-  },
-  "cacheSongs": "Cache lagu",
-  "@cacheSongs": {
-    "description": "cacheSongs"
-  },
-  "downloads": "Unduhan",
-  "@downloads": {
-    "description": "downloads"
-  },
-  "removeFromLib": "Hapus dari Pustaka Lagu",
-  "@removeFromLib": {
-    "description": "removeFromLib"
-  },
-  "songAlreadyExists": "Lagu sudah ada!",
-  "@songAlreadyExists": {
-    "description": "songAlreadyExists"
-  },
-  "libArtists": "Pustaka Artis",
-  "@libArtists": {
-    "description": "libArtists"
-  },
-  "downloadingFormat": "Mengunduh Format File",
-  "@downloadingFormat": {
-    "description": "downloadingFormat"
-  },
-  "username": "Nama belakang",
-  "@username": {
-    "description": "username"
-  },
-  "light": "Terang",
-  "@light": {
-    "description": "light"
-  },
-  "resetblacklistedplaylist": "Setel ulang daftar putar yang masuk daftar hitam",
-  "@resetblacklistedplaylist": {
-    "description": "resetblacklistedplaylist"
-  },
-  "dynamic": "Dinamis",
-  "@dynamic": {
-    "description": "dynamic"
-  },
-  "selectAuthInsMsg": "Silakan pilih Contoh autentikasi!",
-  "@selectAuthInsMsg": {
-    "description": "selectAuthInsMsg"
-  },
-  "equalizerDes": "Buka ekualizer sistem",
-  "@equalizerDes": {
-    "description": "equalizerDes"
-  },
-  "removePlaylist": "Hapus Daftar Putar",
-  "@removePlaylist": {
-    "description": "removePlaylist"
-  },
-  "customIns": "Mesin Virtual Khusus",
-  "@customIns": {
-    "description": "customIns"
+  "CreateNewPlaylist": "Buat Daftar Putar Baru",
+  "@CreateNewPlaylist": {
+    "description": "CreateNewPlaylist"
   },
   "Piped": "Disalurkan",
   "@Piped": {
     "description": "Piped"
   },
-  "addToPlaylist": "Tambah ke daftar putar",
-  "@addToPlaylist": {
-    "description": "addToPlaylist"
-  },
-  "stopMusicOnTaskClearDes": "Pemutaran musik akan berhenti ketika Aplikasi dihapus dari pengelola tugas",
-  "@stopMusicOnTaskClearDes": {
-    "description": "stopMusicOnTaskClearDes"
-  },
-  "cachedOrOffline": "Di-cache/Offline",
-  "@cachedOrOffline": {
-    "description": "cachedOrOffline"
-  },
-  "retry": "Coba Lagi!",
-  "@retry": {
-    "description": "retry"
-  },
-  "artists": "Artis",
-  "@artists": {
-    "description": "artists"
-  },
-  "playlistBookmarkAddAlert": "Daftar putar ditandai!",
-  "@playlistBookmarkAddAlert": {
-    "description": "playlistBookmarkAddAlert"
-  },
-  "albums": "Album",
-  "@albums": {
-    "description": "albums"
-  },
-  "radioNotAvailable": "Radio tidak tersedia untuk artis ini!",
-  "@radioNotAvailable": {
-    "description": "radioNotAvailable"
-  },
-  "recentlyPlayed": "Baru Dimainkan",
-  "@recentlyPlayed": {
-    "description": "recentlyPlayed"
-  },
-  "viewArtist": "Lihat Artis",
-  "@viewArtist": {
-    "description": "viewArtist"
-  },
-  "createnAdd": "Buat & Tambah",
-  "@createnAdd": {
-    "description": "createnAdd"
-  },
-  "topmusicvideos": "Video Musik Teratas",
-  "@topmusicvideos": {
-    "description": "topmusicvideos"
-  },
-  "playlistBookmarkRemoveAlert": "Bookmark daftar putar dihapus!",
-  "@playlistBookmarkRemoveAlert": {
-    "description": "playlistBookmarkRemoveAlert"
-  },
-  "systemDefault": "Bawaan sistem",
-  "@systemDefault": {
-    "description": "systemDefault"
-  },
-  "local": "Lokal",
-  "@local": {
-    "description": "local"
-  },
-  "ignoreBatOpt": "Abaikan pengoptimalan baterai",
-  "@ignoreBatOpt": {
-    "description": "ignoreBatOpt"
-  },
-  "singles": "Single",
-  "@singles": {
-    "description": "singles"
-  },
-  "linkAlert": "Berhasil ditautkan!",
-  "@linkAlert": {
-    "description": "linkAlert"
-  },
-  "status": "Status",
-  "@status": {
-    "description": "status"
-  },
-  "themeMode": "Mode Tema",
-  "@themeMode": {
-    "description": "themeMode"
-  },
-  "streamingQualityDes": "Kualitas streaming musik",
-  "@streamingQualityDes": {
-    "description": "streamingQualityDes"
-  },
-  "nomatch": "Tidak ditemukan kecocokan untuk",
-  "@nomatch": {
-    "description": "nomatch"
-  },
-  "notaValidLink": "Bukan tautan yang valid!",
-  "@notaValidLink": {
-    "description": "notaValidLink"
-  },
-  "emptyPlaylist": "Daftar Putar Kosong!",
-  "@emptyPlaylist": {
-    "description": "emptyPlaylist"
-  },
-  "favorites": "Favorit",
-  "@favorites": {
-    "description": "favorites"
-  },
-  "dark": "Gelap",
-  "@dark": {
-    "description": "dark"
-  },
-  "home": "Beranda",
-  "@home": {
-    "description": "home"
-  },
-  "cancel": "Batal",
-  "@cancel": {
-    "description": "cancel"
-  },
-  "by": "Oleh",
-  "@by": {
-    "description": "by"
-  },
-  "streamingQuality": "Kualitas streaming",
-  "@streamingQuality": {
-    "description": "streamingQuality"
-  },
-  "linkPipedDes": "Tautan dengan saluran untuk daftar putar",
-  "@linkPipedDes": {
-    "description": "linkPipedDes"
-  },
-  "libPlaylists": "Pustaka Daftar Putar",
-  "@libPlaylists": {
-    "description": "libPlaylists"
-  },
-  "disabled": "Dimatikan",
-  "@disabled": {
-    "description": "disabled"
-  },
-  "CreateNewPlaylist": "Buat Daftar Putar Baru",
-  "@CreateNewPlaylist": {
-    "description": "CreateNewPlaylist"
-  },
-  "blacklistPlstResetAlert": "Setel ulang berhasil!",
-  "@blacklistPlstResetAlert": {
-    "description": "blacklistPlstResetAlert"
-  },
-  "language": "Bahasa",
-  "@language": {
-    "description": "language"
-  },
-  "search": "Cari",
-  "@search": {
-    "description": "search"
-  },
-  "songAlreadyOfflineAlert": "Lagu sudah offline di cache",
-  "@songAlreadyOfflineAlert": {
-    "description": "songAlreadyOfflineAlert"
-  },
-  "skipSilenceDes": "Keheningan akan dilewati dalam pemutaran musik",
-  "@skipSilenceDes": {
-    "description": "skipSilenceDes"
-  },
-  "playNext": "Putar berikutnya",
-  "@playNext": {
-    "description": "playNext"
-  },
-  "errorOccuredAlert": "Terjadi kesalahan!",
-  "@errorOccuredAlert": {
-    "description": "errorOccuredAlert"
-  },
-  "songs": "Lagu",
-  "@songs": {
-    "description": "songs"
-  },
-  "high": "Tinggi",
-  "@high": {
-    "description": "high"
-  },
-  "searchDes": "Lagu, Daftar Putar, Album atau Artis",
-  "@searchDes": {
-    "description": "searchDes"
-  },
-  "results": "Hasil",
-  "@results": {
-    "description": "results"
-  },
-  "playlistBlacklistAlert": "Daftar putar masuk daftar hitam!",
-  "@playlistBlacklistAlert": {
-    "description": "playlistBlacklistAlert"
-  },
-  "artistDesNotAvailable": "Deskripsi tidak tersedia!",
-  "@artistDesNotAvailable": {
-    "description": "artistDesNotAvailable"
-  },
-  "resetblacklistedplaylistDes": "Setel ulang semua daftar putar yang masuk daftar hitam",
-  "@resetblacklistedplaylistDes": {
-    "description": "resetblacklistedplaylistDes"
-  },
-  "downloadLocation": "Lokasi download",
-  "@downloadLocation": {
-    "description": "downloadLocation"
-  },
-  "songRemovedfromQueueCurrSong": "Anda tidak dapat menghapus lagu yang sedang diputar",
-  "@songRemovedfromQueueCurrSong": {
-    "description": "songRemovedfromQueueCurrSong"
-  },
-  "settings": "Pengaturan",
-  "@settings": {
-    "description": "settings"
-  },
-  "basedOnLast": "Berdasarkan interaksi terakhir",
-  "@basedOnLast": {
-    "description": "basedOnLast"
-  },
-  "hintApiUrl": "URL API ke instance yang disalurkan",
-  "@hintApiUrl": {
-    "description": "hintApiUrl"
-  },
-  "playlistRenameAlert": "Berhasil mengganti nama!",
-  "@playlistRenameAlert": {
-    "description": "playlistRenameAlert"
-  },
-  "downloadingFormatDes": "Pilih format file pengunduhan. \"Opus\" akan memberikan kualitas terbaik",
-  "@downloadingFormatDes": {
-    "description": "downloadingFormatDes"
-  },
-  "albumBookmarkAddAlert": "Album ditandai!",
-  "@albumBookmarkAddAlert": {
-    "description": "albumBookmarkAddAlert"
-  },
-  "removeFromPlaylist": "Hapus dari daftar putar",
-  "@removeFromPlaylist": {
-    "description": "removeFromPlaylist"
-  },
-  "lyricsNotAvailable": "Lirik tidak tersedia!",
-  "@lyricsNotAvailable": {
-    "description": "lyricsNotAvailable"
-  },
-  "dontShowInfoAgain": "Jangan tampilkan info ini lagi",
-  "@dontShowInfoAgain": {
-    "description": "dontShowInfoAgain"
-  },
-  "noOfflineSong": "Tidak ada lagu offline!",
-  "@noOfflineSong": {
-    "description": "noOfflineSong"
-  },
-  "featuredplaylists": "Daftar Putar yang Difiturkan",
-  "@featuredplaylists": {
-    "description": "featuredplaylists"
-  },
-  "quickpicks": "Pilihan Cepat",
-  "@quickpicks": {
-    "description": "quickpicks"
-  },
-  "artistBookmarkRemoveAlert": "Bookmark artis dihapus!",
-  "@artistBookmarkRemoveAlert": {
-    "description": "artistBookmarkRemoveAlert"
-  },
-  "operationFailed": "Operasi gagal",
-  "@operationFailed": {
-    "description": "operationFailed"
-  },
-  "goToAlbum": "Ke album",
-  "@goToAlbum": {
-    "description": "goToAlbum"
-  },
-  "removeFromQueue": "Hapus dari antrian",
-  "@removeFromQueue": {
-    "description": "removeFromQueue"
-  },
-  "shareSong": "Bagikan lagu ini",
-  "@shareSong": {
-    "description": "shareSong"
-  },
-  "songRemovedAlert": "Dihapus dari",
-  "@songRemovedAlert": {
-    "description": "songRemovedAlert"
-  },
-  "library": "Pustaka",
-  "@library": {
-    "description": "library"
-  },
-  "sleepTimer": "Pengatur Waktu Tidur",
-  "@sleepTimer": {
-    "description": "sleepTimer"
-  },
-  "minutes": "menit",
-  "@minutes": {
-    "description": "minutes"
+  "about": "Tentang",
+  "@about": {
+    "description": "about"
   },
   "add5Minutes": "Tambah 5 menit",
   "@add5Minutes": {
     "description": "add5Minutes"
   },
-  "endOfThisSong": "Akhir dari lagu ini",
-  "@endOfThisSong": {
-    "description": "endOfThisSong"
-  },
-  "synced": "Tersinkronkan",
-  "@synced": {
-    "description": "synced"
-  },
-  "scanning": "Memindai...",
-  "@scanning": {
-    "description": "scanning"
-  },
-  "clearImgCache": "Bersihkan cache gambar",
-  "@clearImgCache": {
-    "description": "clearImgCache"
-  },
-  "openIn": "Buka di",
-  "@openIn": {
-    "description": "openIn"
-  },
-  "homeContentCount": "Jumlah konten beranda",
-  "@homeContentCount": {
-    "description": "homeContentCount"
-  },
-  "restoreLastPlaybackSessionDes": "Secara otomatis memulihkan sesi pemutaran terakhir saat aplikasi dibuka",
-  "@restoreLastPlaybackSessionDes": {
-    "description": "restoreLastPlaybackSessionDes"
-  },
-  "loudnessNormalization": "Normalisasi kekerasan suara",
-  "@loudnessNormalization": {
-    "description": "loudnessNormalization"
-  },
-  "disableTransitionAnimation": "Matikan animasi transisi",
-  "@disableTransitionAnimation": {
-    "description": "disableTransitionAnimation"
-  },
-  "exportDowloadedFiles": "Ekspor file yang diunduh",
-  "@exportDowloadedFiles": {
-    "description": "exportDowloadedFiles"
-  },
-  "cancelTimerAlert": "Timer tidur dibatalkan",
-  "@cancelTimerAlert": {
-    "description": "cancelTimerAlert"
-  },
-  "syncedLyricsNotAvailable": "lirik yang tersinkron tidak ada!",
-  "@syncedLyricsNotAvailable": {
-    "description": "syncedLyricsNotAvailable"
-  },
-  "letsStrart": "Mari mulai..",
-  "@letsStrart": {
-    "description": "letsStrart"
-  },
-  "includeDownloadedFiles": "Sertakan file lagu-lagu yang diunduh",
-  "@includeDownloadedFiles": {
-    "description": "includeDownloadedFiles"
-  },
-  "bitrate": "Bitrate",
-  "@bitrate": {
-    "description": "bitrate"
-  },
-  "enableBottomNavDes": "Ganti ke bar navigasi bawah",
-  "@enableBottomNavDes": {
-    "description": "enableBottomNavDes"
-  },
-  "close": "Menutup",
-  "@close": {
-    "description": "close"
-  },
-  "exporting": "Mengekspor...",
-  "@exporting": {
-    "description": "exporting"
-  },
-  "cancelTimer": "Batalkan pengatur waktu",
-  "@cancelTimer": {
-    "description": "cancelTimer"
-  },
-  "enableBottomNav": "Bar navigasi bawah",
-  "@enableBottomNav": {
-    "description": "enableBottomNav"
-  },
-  "removeMultiple": "Hapus beberapa lagu",
-  "@removeMultiple": {
-    "description": "removeMultiple"
-  },
-  "pipedplstSyncAlert": "Daftar putar yang disalurkan tersinkronkan!",
-  "@pipedplstSyncAlert": {
-    "description": "pipedplstSyncAlert"
-  },
-  "processFiles": "Memproses file...",
-  "@processFiles": {
-    "description": "processFiles"
-  },
-  "deleteDownloadedDataAlert": "Berhasil dihapus dari unduhan!",
-  "@deleteDownloadedDataAlert": {
-    "description": "deleteDownloadedDataAlert"
-  },
-  "downFilesFound": "file yang terunduh ditemukan",
-  "@downFilesFound": {
-    "description": "downFilesFound"
-  },
-  "sleepTimeSetAlert": "Timer tidur Anda telah diatur",
-  "@sleepTimeSetAlert": {
-    "description": "sleepTimeSetAlert"
-  },
-  "disableTransitionAnimationDes": "Aktifkan opsi ini untuk menonaktifkan animasi transisi antar tab",
-  "@disableTransitionAnimationDes": {
-    "description": "disableTransitionAnimationDes"
-  },
-  "queuerearrangingDeniedMsg": "Antrian tidak bisa diatur ulang ketika mode acak diaktifkan",
-  "@queuerearrangingDeniedMsg": {
-    "description": "queuerearrangingDeniedMsg"
-  },
-  "export": "Ekspor",
-  "@export": {
-    "description": "export"
-  },
-  "backupInProgress": "Pencadangan diproses...",
-  "@backupInProgress": {
-    "description": "backupInProgress"
-  },
-  "id": "Id",
-  "@id": {
-    "description": "id"
-  },
-  "title": "Judul",
-  "@title": {
-    "description": "title"
-  },
-  "songInfo": "Info Lagu",
-  "@songInfo": {
-    "description": "songInfo"
-  },
-  "reArrangePlaylist": "Menyusun ulang daftar putar",
-  "@reArrangePlaylist": {
-    "description": "reArrangePlaylist"
-  },
   "addMultipleSongs": "Tambahkan ke daftar putar",
   "@addMultipleSongs": {
     "description": "addMultipleSongs"
   },
-  "queueShufflingDeniedMsg": "Antrian tidak bisa diacak ketika mode acak diaktifkan",
-  "@queueShufflingDeniedMsg": {
-    "description": "queueShufflingDeniedMsg"
+  "addToLibrary": "Tambahkan ke perpustakaan",
+  "@addToLibrary": {
+    "description": "addToLibrary"
   },
-  "duration": "Durasi",
-  "@duration": {
-    "description": "duration"
-  },
-  "audioCodec": "Codec Audio",
-  "@audioCodec": {
-    "description": "audioCodec"
-  },
-  "clearImgCacheAlert": "Cache gambar telah dibersihkan",
-  "@clearImgCacheAlert": {
-    "description": "clearImgCacheAlert"
-  },
-  "backgroundPlay": "Pemutaran lagu di latar belakang",
-  "@backgroundPlay": {
-    "description": "backgroundPlay"
-  },
-  "backupAppData": "Cadangkan data Aplikasi",
-  "@backupAppData": {
-    "description": "backupAppData"
-  },
-  "backupSettingsAndPlaylistsDes": "Menyimpan semua pengaturan, daftar putar, dan data masuk ke file cadangan",
-  "@backupSettingsAndPlaylistsDes": {
-    "description": "backupSettingsAndPlaylistsDes"
-  },
-  "backFilesFound": "Database ditemukan",
-  "@backFilesFound": {
-    "description": "backFilesFound"
-  },
-  "restoreMsg": "Berhasil dipulihkan!\nPerubahan akan diterapkan setelah dimulai ulang",
-  "@restoreMsg": {
-    "description": "restoreMsg"
-  },
-  "songNotPlayable": "Lagu ini tidak dapat diputar karena pembatasan server!",
-  "@songNotPlayable": {
-    "description": "songNotPlayable"
-  },
-  "appInfo": "Informasi Aplikasi",
-  "@appInfo": {
-    "description": "appInfo"
-  },
-  "download": "Unduh",
-  "@download": {
-    "description": "download"
-  },
-  "personalisation": "Personalisasi",
-  "@personalisation": {
-    "description": "personalisation"
-  },
-  "upNext": "Selanjutnya",
-  "@upNext": {
-    "description": "upNext"
-  },
-  "downloadError3": "Unduhan gagal karena jaringan/stream sedang gangguan! Silakan coba periksa kembali.",
-  "@downloadError3": {
-    "description": "downloadError3"
-  },
-  "musicAndPlayback": "Musik & Pemutaran",
-  "@musicAndPlayback": {
-    "description": "musicAndPlayback"
-  },
-  "content": "Konten",
-  "@content": {
-    "description": "content"
-  },
-  "restoreLastPlaybackSession": "Pulihkan sesi pemutaran terakhir",
-  "@restoreLastPlaybackSession": {
-    "description": "restoreLastPlaybackSession"
-  },
-  "deleteDownloadData": "Hapus dari unduhan",
-  "@deleteDownloadData": {
-    "description": "deleteDownloadData"
-  },
-  "networkError": "Jaringan bermasalah! Periksa koneksi jaringan anda.",
-  "@networkError": {
-    "description": "networkError"
-  },
-  "downloadError2": "Lagu yang diminta tidak dapat diunduh karena pembatasan server. Anda bisa mencoba lagi",
-  "@downloadError2": {
-    "description": "downloadError2"
-  },
-  "androidBackupWarning": "Belum dites: Memilih kotak centang setelah mengunduh lebih dari 60 file, prosesnya mungkin dapat menghabiskan banyak memori dan bisa menyebabkan perangkat seluler atau aplikasi crash. Lanjutkan dengan risiko Anda sendiri.",
-  "@androidBackupWarning": {
-    "description": "androidBackupWarning"
-  },
-  "backup": "Cadangan",
-  "@backup": {
-    "description": "backup"
-  },
-  "loudnessNormalizationDes": "Atur level kekerasan suara yang sama untuk semua lagu (Eksperimental) (Tidak akan berfungsi pada lagu yang diunduh di versi sebelumnya (< v1.10.0))",
-  "@loudnessNormalizationDes": {
-    "description": "loudnessNormalizationDes"
-  },
-  "backgroundPlayDes": "Nyalakan/Matikan pemutaran musik di latar belakang (Aplikasi bisa diakses dari baki sistem ketika aplikasi sedang berjalan di latar belakang)",
-  "@backgroundPlayDes": {
-    "description": "backgroundPlayDes"
-  },
-  "cacheHomeScreenData": "Buat cache untuk data konten Beranda",
-  "@cacheHomeScreenData": {
-    "description": "cacheHomeScreenData"
-  },
-  "exportDowloadedFilesDes": "Klik disini untuk mengekspor file yang diunduh dari direktori inApp menuju direktori eksternal",
-  "@exportDowloadedFilesDes": {
-    "description": "exportDowloadedFilesDes"
-  },
-  "cacheHomeScreenDataDes": "Aktifkan pembuatan cache data konten layar Beranda, layar Beranda bisa memuat lebih cepat jika opsi ini diaktifkan",
-  "@cacheHomeScreenDataDes": {
-    "description": "cacheHomeScreenDataDes"
-  },
-  "exportedFileLocation": "Lokasi ekspor file yang terunduh",
-  "@exportedFileLocation": {
-    "description": "exportedFileLocation"
-  },
-  "exportMsg": "Ekspor file telah sukses",
-  "@exportMsg": {
-    "description": "exportMsg"
-  },
-  "restoreAppData": "Pulihkan data Aplikasi",
-  "@restoreAppData": {
-    "description": "restoreAppData"
-  },
-  "restartApp": "Mulai ulang Aplikasi",
-  "@restartApp": {
-    "description": "restartApp"
-  },
-  "restoreSettingsAndPlaylistsDes": "Pulihkan semua pengaturan, data masuk, dan daftar putar dari file cadangan. Akan menimpa seluruh data saat ini",
-  "@restoreSettingsAndPlaylistsDes": {
-    "description": "restoreSettingsAndPlaylistsDes"
-  },
-  "backupMsg": "Cadangan berhasil disimpan!",
-  "@backupMsg": {
-    "description": "backupMsg"
-  },
-  "restoring": "Memulihkan...",
-  "@restoring": {
-    "description": "restoring"
-  },
-  "restore": "Pulihkan",
-  "@restore": {
-    "description": "restore"
-  },
-  "closeApp": "Tutup Aplikasi",
-  "@closeApp": {
-    "description": "closeApp"
-  },
-  "loudnessDb": "Kekerasan Suara dB",
-  "@loudnessDb": {
-    "description": "loudnessDb"
-  },
-  "clearImgCacheDes": "Klik disini untuk menghapus cache dari thumbnail/gambar. (Tidak direkomendasikan kecuali ingin memperbahaui data cache dari gambar)",
-  "@clearImgCacheDes": {
-    "description": "clearImgCacheDes"
-  },
-  "plain": "Polos",
-  "@plain": {
-    "description": "plain"
-  },
-  "urlSearchDes": "Url terdeteksi, klik untuk membuka/memutar konten terkait",
-  "@urlSearchDes": {
-    "description": "urlSearchDes"
-  },
-  "homeContentCountDes": "Pilih jumlah konten beranda awal (perkiraan). Hasil yang lebih sedikit mempercepat pemuatan",
-  "@homeContentCountDes": {
-    "description": "homeContentCountDes"
-  },
-  "playerUi": "Antarmuka Pengguna",
-  "@playerUi": {
-    "description": "playerUi"
-  },
-  "playerUiDes": "Pilih antarmuka pengguna",
-  "@playerUiDes": {
-    "description": "playerUiDes"
-  },
-  "standard": "Standar",
-  "@standard": {
-    "description": "standard"
-  },
-  "gesture": "Gerakan",
-  "@gesture": {
-    "description": "gesture"
-  },
-  "queueLoopNotDisMsg2": "Mode ulangi antrean tidak dapat diaktifkan dalam mode radio.",
-  "@queueLoopNotDisMsg2": {
-    "description": "queueLoopNotDisMsg2"
-  },
-  "enableSlidableAction": "Aktifkan aksi geser",
-  "@enableSlidableAction": {
-    "description": "enableSlidableAction"
-  },
-  "shuffleQueue": "Acak Antrean",
-  "@shuffleQueue": {
-    "description": "shuffleQueue"
-  },
-  "queueLoop": "Ulangi Antrean",
-  "@queueLoop": {
-    "description": "queueLoop"
-  },
-  "queueLoopNotDisMsg1": "Mode ulangi antrean tidak dapat dinonaktifkan saat mode acak diaktifkan.",
-  "@queueLoopNotDisMsg1": {
-    "description": "queueLoopNotDisMsg1"
-  },
-  "enableSlidableActionDes": "Aktifkan aksi geser pada ubin lagu",
-  "@enableSlidableActionDes": {
-    "description": "enableSlidableActionDes"
-  },
-  "autoDownFavSong": "Unduh otomatis lagu favorit",
-  "@autoDownFavSong": {
-    "description": "autoDownFavSong"
-  },
-  "autoDownFavSongDes": "Unduh lagu favorit secara otomatis saat ditambahkan ke favorit",
-  "@autoDownFavSongDes": {
-    "description": "autoDownFavSongDes"
-  },
-  "playnextMsg": "Selanjutnya",
-  "@playnextMsg": {
-    "description": "playnextMsg"
-  },
-  "misc": "Lain-lain",
-  "@misc": {
-    "description": "misc"
-  },
-  "resetToDefault": "Kembalikan pengaturan ke semula",
-  "@resetToDefault": {
-    "description": "resetToDefault"
-  },
-  "resetToDefaultMsg": "Pengaturan telah direset ke semula, silakan restart aplikasi",
-  "@resetToDefaultMsg": {
-    "description": "resetToDefaultMsg"
-  },
-  "resetToDefaultDes": "Setel ulang pengaturan aplikasi ke semula (Diperlukan restart)",
-  "@resetToDefaultDes": {
-    "description": "resetToDefaultDes"
-  },
-  "playingfromPlaylist": "MEMUTAR LAGU DARI DAFTAR PUTAR",
-  "@playingfromPlaylist": {
-    "description": "playingfromPlaylist"
-  },
-  "autoOpenPlayer": "Otomatis membuka layar pemutaran",
-  "@autoOpenPlayer": {
-    "description": "autoOpenPlayer"
-  },
-  "autoOpenPlayerDes": "Mengaktifkan/menonaktifkan pembukaan otomatis layar pemutaran secara penuh pada pilihan lagu yang akan diputar",
-  "@autoOpenPlayerDes": {
-    "description": "autoOpenPlayerDes"
+  "addToPlaylist": "Tambah ke daftar putar",
+  "@addToPlaylist": {
+    "description": "addToPlaylist"
   },
   "album": "Album",
   "@album": {
     "description": "album"
   },
-  "playingfromSelection": "MEMUTAR LAGU YANG DI-SELEKSI",
-  "@playingfromSelection": {
-    "description": "playingfromSelection"
+  "albumBookmarkAddAlert": "Album ditandai!",
+  "@albumBookmarkAddAlert": {
+    "description": "albumBookmarkAddAlert"
   },
-  "playingfromArtist": "MEMUTAR LAGU DARI ARTIS",
-  "@playingfromArtist": {
-    "description": "playingfromArtist"
+  "albumBookmarkRemoveAlert": "Penanda album dihapus!",
+  "@albumBookmarkRemoveAlert": {
+    "description": "albumBookmarkRemoveAlert"
   },
-  "playingfromAlbum": "MEMUTAR LAGU DARI ALBUM",
-  "@playingfromAlbum": {
-    "description": "playingfromAlbum"
+  "albums": "Album",
+  "@albums": {
+    "description": "albums"
   },
-  "randomSelection": "Pilihan acak",
-  "@randomSelection": {
-    "description": "randomSelection"
+  "albumsByTaste": "Sesuai selera Anda",
+  "@albumsByTaste": {
+    "description": "albumsByTaste"
   },
-  "randomRadio": "Radio acak",
-  "@randomRadio": {
-    "description": "randomRadio"
+  "allFieldsReqMsg": "Semua bidang wajib diisi",
+  "@allFieldsReqMsg": {
+    "description": "allFieldsReqMsg"
   },
-  "reArrangeSongs": "Atur ulang lagu",
-  "@reArrangeSongs": {
-    "description": "reArrangeSongs"
+  "androidBackupWarning": "Belum dites: Memilih kotak centang setelah mengunduh lebih dari 60 file, prosesnya mungkin dapat menghabiskan banyak memori dan bisa menyebabkan perangkat seluler atau aplikasi crash. Lanjutkan dengan risiko Anda sendiri.",
+  "@androidBackupWarning": {
+    "description": "androidBackupWarning"
   },
-  "selectSongs": "Pilih lagu",
-  "@selectSongs": {
-    "description": "selectSongs"
+  "appInfo": "Informasi Aplikasi",
+  "@appInfo": {
+    "description": "appInfo"
   },
-  "selectAll": "Pilih semua",
-  "@selectAll": {
-    "description": "selectAll"
+  "artistBookmarkAddAlert": "Artis ditandai!",
+  "@artistBookmarkAddAlert": {
+    "description": "artistBookmarkAddAlert"
   },
-  "exportPlaylist": "Ekspor Daftar Putar",
-  "@exportPlaylist": {
-    "description": "exportPlaylist"
+  "artistBookmarkRemoveAlert": "Bookmark artis dihapus!",
+  "@artistBookmarkRemoveAlert": {
+    "description": "artistBookmarkRemoveAlert"
   },
-  "exportingPlaylist": "Mengekspor Daftar Putar...",
-  "@exportingPlaylist": {
-    "description": "exportingPlaylist"
+  "artistDesNotAvailable": "Deskripsi tidak tersedia!",
+  "@artistDesNotAvailable": {
+    "description": "artistDesNotAvailable"
   },
-  "playlistExportedMsg": "Daftar Putar sukses diekspor ke",
-  "@playlistExportedMsg": {
-    "description": "playlistExportedMsg"
+  "artists": "Artis",
+  "@artists": {
+    "description": "artists"
   },
-  "exportErrorPermission": "Perizinan dilarang ketika mengekspor",
-  "@exportErrorPermission": {
-    "description": "exportErrorPermission"
+  "artistsByTaste": "Sesuai selera Anda",
+  "@artistsByTaste": {
+    "description": "artistsByTaste"
   },
-  "exportErrorStorage": "Ruang penyimpanan tidak cukup",
-  "@exportErrorStorage": {
-    "description": "exportErrorStorage"
+  "audioCodec": "Codec Audio",
+  "@audioCodec": {
+    "description": "audioCodec"
   },
-  "selectFile": "Pilih File",
-  "@selectFile": {
-    "description": "selectFile"
+  "auth_2fa_code": "Kode otentikasi",
+  "@auth_2fa_code": {
+    "description": "auth_2fa_code"
   },
-  "importErrorFileAccess": "Tidak dapat mengakses file yang dipilih",
-  "@importErrorFileAccess": {
-    "description": "importErrorFileAccess"
+  "auth_2fa_invalid": "Masukkan kode 6 digit yang valid atau masuk lagi.",
+  "@auth_2fa_invalid": {
+    "description": "auth_2fa_invalid"
   },
-  "importErrorFormat": "format file tidak valid",
-  "@importErrorFormat": {
-    "description": "importErrorFormat"
+  "auth_2fa_subtitle": "Masukkan kode 6 digit dari aplikasi autentikator Anda. Akses ini berakhir dalam 5 menit.",
+  "@auth_2fa_subtitle": {
+    "description": "auth_2fa_subtitle"
   },
-  "importErrorDatabase": "Kesalahan menyimpan ke database",
-  "@importErrorDatabase": {
-    "description": "importErrorDatabase"
+  "auth_2fa_title": "Otentikasi dua faktor",
+  "@auth_2fa_title": {
+    "description": "auth_2fa_title"
   },
-  "fileNotFound": "File tidak ditemukan",
-  "@fileNotFound": {
-    "description": "fileNotFound"
+  "auth_2fa_verify": "Periksa dan lanjutkan",
+  "@auth_2fa_verify": {
+    "description": "auth_2fa_verify"
   },
-  "exportError": "Kesalahan saat mengekspor daftar putar",
-  "@exportError": {
-    "description": "exportError"
+  "auth_agree_personal_data": "Terima penggunaan data yang salah...",
+  "@auth_agree_personal_data": {
+    "description": "auth_agree_personal_data"
   },
-  "exportErrorFormat": "Kesalahan pemformatan data daftar putar",
-  "@exportErrorFormat": {
-    "description": "exportErrorFormat"
+  "auth_brand_description_1": "Kami menghadirkan login, registrasi, dan pemulihan kata sandi dari proyek sebelumnya, yang diadaptasi untuk aplikasi musik ini.",
+  "@auth_brand_description_1": {
+    "description": "auth_brand_description_1"
   },
-  "importPlaylist": "Impor Daftar Putar",
-  "@importPlaylist": {
-    "description": "importPlaylist"
+  "auth_brand_description_2": "Sesi Anda berada di penyimpanan aman dan divalidasi dengan backend yang sama dengan yang sudah Anda gunakan.",
+  "@auth_brand_description_2": {
+    "description": "auth_brand_description_2"
   },
-  "importingPlaylist": "Mengimpor daftar putar...",
-  "@importingPlaylist": {
-    "description": "importingPlaylist"
-  },
-  "importPlaylistDesc": "Pilih file JSON daftar putar yang diekspor sebelumnya untuk diimpor",
-  "@importPlaylistDesc": {
-    "description": "importPlaylistDesc"
-  },
-  "playlistImportedMsg": "Daftar putar sukses diimpor",
-  "@playlistImportedMsg": {
-    "description": "playlistImportedMsg"
-  },
-  "importError": "Kesalahan saat mengimpor daftar putar",
-  "@importError": {
-    "description": "importError"
-  },
-  "invalidPlaylistFile": "struktur file daftar putar tidak valid",
-  "@invalidPlaylistFile": {
-    "description": "invalidPlaylistFile"
-  },
-  "importLargeFileNote": "Catatan: Daftar putar berukuran besar mungkin akan memakan waktu lama saat mengimpor",
-  "@importLargeFileNote": {
-    "description": "importLargeFileNote"
-  },
-  "keepScreenOnWhilePlaying": "Pertahankan layar tetap hidup saat memutar",
-  "@keepScreenOnWhilePlaying": {
-    "description": "keepScreenOnWhilePlaying"
-  },
-  "keepScreenOnWhilePlayingDes": "Jika diaktifkan, layar perangkat akan tetap menyala saat musik sedang diputar",
-  "@keepScreenOnWhilePlayingDes": {
-    "description": "keepScreenOnWhilePlayingDes"
-  },
-  "auth_login_success": "Berhasil masuk",
-  "@auth_login_success": {
-    "description": "auth_login_success"
-  },
-  "settings_cloud_backup": "Cadangan awan",
-  "@settings_cloud_backup": {
-    "description": "settings_cloud_backup"
-  },
-  "settings_migration_title": "Bermigrasi dari Joss Music Kotlin",
-  "@settings_migration_title": {
-    "description": "settings_migration_title"
-  },
-  "backup_confirm_question": "Apakah Anda ingin melakukan pencadangan?",
-  "@backup_confirm_question": {
-    "description": "backup_confirm_question"
-  },
-  "backup_selection_prompt": "Pilih data mana yang akan dicadangkan",
-  "@backup_selection_prompt": {
-    "description": "backup_selection_prompt"
-  },
-  "search_recent_title": "Pencarian terkini",
-  "@search_recent_title": {
-    "description": "search_recent_title"
-  },
-  "back": "Kembali",
-  "@back": {
-    "description": "back"
-  },
-  "auth_forgot_password": "Saya lupa kata sandi saya",
-  "@auth_forgot_password": {
-    "description": "auth_forgot_password"
+  "auth_brand_not_configured": "File .env perlu dikonfigurasi untuk menghubungkan backend otentikasi.",
+  "@auth_brand_not_configured": {
+    "description": "auth_brand_not_configured"
   },
   "auth_btn_login": "Login",
   "@auth_btn_login": {
@@ -1104,53 +128,141 @@
   "@auth_btn_register": {
     "description": "auth_btn_register"
   },
-  "email": "E-mail",
-  "@email": {
-    "description": "email"
-  },
-  "password_text": "Kata sandi",
-  "@password_text": {
-    "description": "Contraseña texto traducido"
+  "auth_btn_send_email": "Kirim email",
+  "@auth_btn_send_email": {
+    "description": "auth_btn_send_email"
   },
   "auth_confirm_password": "Konfirmasi Kata Sandi",
   "@auth_confirm_password": {
     "description": "auth_confirm_password"
   },
-  "auth_welcome_title": "Selamat datang di Musik Estrella",
-  "@auth_welcome_title": {
-    "description": "auth_welcome_title"
+  "auth_error_invalid_credentials": "Email atau kata sandi salah.",
+  "@auth_error_invalid_credentials": {
+    "description": "auth_error_invalid_credentials"
   },
-  "auth_welcome_subtitle": "Selamat datang di Musik Estrella",
-  "@auth_welcome_subtitle": {
-    "description": "auth_welcome_subtitle"
+  "auth_error_invalid_email": "Masukkan email yang valid.",
+  "@auth_error_invalid_email": {
+    "description": "auth_error_invalid_email"
+  },
+  "auth_error_not_configured": "Backend autentikasi tidak ada untuk dikonfigurasi dalam file .env.",
+  "@auth_error_not_configured": {
+    "description": "auth_error_not_configured"
+  },
+  "auth_error_not_verified": "Akun Anda belum diverifikasi.",
+  "@auth_error_not_verified": {
+    "description": "auth_error_not_verified"
+  },
+  "auth_error_unknown": "Operasi tersebut tidak dapat diselesaikan.",
+  "@auth_error_unknown": {
+    "description": "auth_error_unknown"
   },
   "auth_first_name": "Nama depan",
   "@auth_first_name": {
     "description": "auth_first_name"
   },
+  "auth_forgot_password": "Saya lupa kata sandi saya",
+  "@auth_forgot_password": {
+    "description": "auth_forgot_password"
+  },
+  "auth_forgot_password_subtitle": "Kami akan mengirimkan petunjuknya ke email akun Anda.",
+  "@auth_forgot_password_subtitle": {
+    "description": "auth_forgot_password_subtitle"
+  },
+  "auth_hint_email": "nama@mail.com",
+  "@auth_hint_email": {
+    "description": "auth_hint_email"
+  },
   "auth_last_name": "Nama belakang",
   "@auth_last_name": {
     "description": "auth_last_name"
   },
-  "auth_agree_personal_data": "Terima penggunaan data yang salah...",
-  "@auth_agree_personal_data": {
-    "description": "auth_agree_personal_data"
+  "auth_login_success": "Berhasil masuk",
+  "@auth_login_success": {
+    "description": "auth_login_success"
   },
-  "settings_general_section": "Umum",
-  "@settings_general_section": {
-    "description": "settings_general_section"
+  "auth_recovery_email_error": "Tidak mungkin mengirim email.",
+  "@auth_recovery_email_error": {
+    "description": "auth_recovery_email_error"
   },
-  "settings_logout": "Keluar",
-  "@settings_logout": {
-    "description": "settings_logout"
+  "auth_recovery_email_sent": "Email terkirim.",
+  "@auth_recovery_email_sent": {
+    "description": "auth_recovery_email_sent"
   },
-  "settings_cloud_backup_desc": "Unggah, pulihkan, dan kelola...",
-  "@settings_cloud_backup_desc": {
-    "description": "settings_cloud_backup_desc"
+  "auth_register_error": "Akun tidak dapat dibuat.",
+  "@auth_register_error": {
+    "description": "auth_register_error"
   },
-  "settings_migration_desc": "Impor daftar putar, lagu...",
-  "@settings_migration_desc": {
-    "description": "settings_migration_desc"
+  "auth_register_success": "Akun berhasil dibuat.",
+  "@auth_register_success": {
+    "description": "auth_register_success"
+  },
+  "auth_welcome_subtitle": "Selamat datang di Musik Estrella",
+  "@auth_welcome_subtitle": {
+    "description": "auth_welcome_subtitle"
+  },
+  "auth_welcome_title": "Selamat datang di Musik Estrella",
+  "@auth_welcome_title": {
+    "description": "auth_welcome_title"
+  },
+  "autoDownFavSong": "Unduh otomatis lagu favorit",
+  "@autoDownFavSong": {
+    "description": "autoDownFavSong"
+  },
+  "autoDownFavSongDes": "Unduh lagu favorit secara otomatis saat ditambahkan ke favorit",
+  "@autoDownFavSongDes": {
+    "description": "autoDownFavSongDes"
+  },
+  "autoOpenPlayer": "Otomatis membuka layar pemutaran",
+  "@autoOpenPlayer": {
+    "description": "autoOpenPlayer"
+  },
+  "autoOpenPlayerDes": "Mengaktifkan/menonaktifkan pembukaan otomatis layar pemutaran secara penuh pada pilihan lagu yang akan diputar",
+  "@autoOpenPlayerDes": {
+    "description": "autoOpenPlayerDes"
+  },
+  "back": "Kembali",
+  "@back": {
+    "description": "back"
+  },
+  "backFilesFound": "Database ditemukan",
+  "@backFilesFound": {
+    "description": "backFilesFound"
+  },
+  "backgroundPlay": "Pemutaran lagu di latar belakang",
+  "@backgroundPlay": {
+    "description": "backgroundPlay"
+  },
+  "backgroundPlayDes": "Nyalakan/Matikan pemutaran musik di latar belakang (Aplikasi bisa diakses dari baki sistem ketika aplikasi sedang berjalan di latar belakang)",
+  "@backgroundPlayDes": {
+    "description": "backgroundPlayDes"
+  },
+  "backup": "Cadangan",
+  "@backup": {
+    "description": "backup"
+  },
+  "backupAppData": "Cadangkan data Aplikasi",
+  "@backupAppData": {
+    "description": "backupAppData"
+  },
+  "backupInProgress": "Pencadangan diproses...",
+  "@backupInProgress": {
+    "description": "backupInProgress"
+  },
+  "backupMsg": "Cadangan berhasil disimpan!",
+  "@backupMsg": {
+    "description": "backupMsg"
+  },
+  "backupSettingsAndPlaylists": "Pengaturan cadangan dan daftar putar",
+  "@backupSettingsAndPlaylists": {
+    "description": "backupSettingsAndPlaylists"
+  },
+  "backupSettingsAndPlaylistsDes": "Menyimpan semua pengaturan, daftar putar, dan data masuk ke file cadangan",
+  "@backupSettingsAndPlaylistsDes": {
+    "description": "backupSettingsAndPlaylistsDes"
+  },
+  "backup_auth_required": "Anda memerlukan sesi aktif...",
+  "@backup_auth_required": {
+    "description": "backup_auth_required"
   },
   "backup_btn_restart": "Mulai ulang aplikasi",
   "@backup_btn_restart": {
@@ -1160,217 +272,117 @@
   "@backup_btn_upload": {
     "description": "backup_btn_upload"
   },
-  "backup_no_backups": "Belum ada cadangan...",
-  "@backup_no_backups": {
-    "description": "backup_no_backups"
-  },
-  "backup_auth_required": "Anda memerlukan sesi aktif...",
-  "@backup_auth_required": {
-    "description": "backup_auth_required"
-  },
-  "backup_upload_success": "Cadangan diunggah dengan benar.",
-  "@backup_upload_success": {
-    "description": "backup_upload_success"
-  },
-  "backup_restore_success": "Cadangan dipulihkan. Mulai ulang aplikasi.",
-  "@backup_restore_success": {
-    "description": "backup_restore_success"
+  "backup_confirm_question": "Apakah Anda ingin melakukan pencadangan?",
+  "@backup_confirm_question": {
+    "description": "backup_confirm_question"
   },
   "backup_delete_success": "Cadangan dihapus.",
   "@backup_delete_success": {
     "description": "backup_delete_success"
   },
-  "genre_pop": "Pop",
-  "@genre_pop": {
-    "description": "genre_pop"
+  "backup_no_backups": "Belum ada cadangan...",
+  "@backup_no_backups": {
+    "description": "backup_no_backups"
   },
-  "genre_rock": "Batu",
-  "@genre_rock": {
-    "description": "genre_rock"
+  "backup_restore_success": "Cadangan dipulihkan. Mulai ulang aplikasi.",
+  "@backup_restore_success": {
+    "description": "backup_restore_success"
   },
-  "genre_hiphop": "hip hop",
-  "@genre_hiphop": {
-    "description": "genre_hiphop"
+  "backup_select_folder_dialog": "Pilih folder untuk cadangan",
+  "@backup_select_folder_dialog": {
+    "description": "backup_select_folder_dialog"
   },
-  "genre_electronic": "Elektronik",
-  "@genre_electronic": {
-    "description": "genre_electronic"
+  "backup_selection_prompt": "Pilih data mana yang akan dicadangkan",
+  "@backup_selection_prompt": {
+    "description": "backup_selection_prompt"
   },
-  "genre_jazz": "Jazz",
-  "@genre_jazz": {
-    "description": "genre_jazz"
+  "backup_upload_success": "Cadangan diunggah dengan benar.",
+  "@backup_upload_success": {
+    "description": "backup_upload_success"
   },
-  "genre_latin": "Latin",
-  "@genre_latin": {
-    "description": "genre_latin"
+  "basedOnLast": "Berdasarkan interaksi terakhir",
+  "@basedOnLast": {
+    "description": "basedOnLast"
   },
-  "migration_btn_select": "Pilih file dan impor",
-  "@migration_btn_select": {
-    "description": "migration_btn_select"
+  "bitrate": "Bitrate",
+  "@bitrate": {
+    "description": "bitrate"
   },
-  "forgottenFavorites": "favorit yang terlupakan",
-  "@forgottenFavorites": {
-    "description": "forgottenFavorites"
+  "blacklistPipedPlaylist": "Daftar hitam daftar putar",
+  "@blacklistPipedPlaylist": {
+    "description": "blacklistPipedPlaylist"
   },
-  "mostListenedSong": "Lagu yang paling banyak didengarkan",
-  "@mostListenedSong": {
-    "description": "mostListenedSong"
+  "blacklistPlstResetAlert": "Setel ulang berhasil!",
+  "@blacklistPlstResetAlert": {
+    "description": "blacklistPlstResetAlert"
   },
-  "reproducedBy": "Direproduksi oleh",
-  "@reproducedBy": {
-    "description": "reproducedBy"
+  "by": "Oleh",
+  "@by": {
+    "description": "by"
   },
-  "recentSearches": "Pencarian terkini",
-  "@recentSearches": {
-    "description": "recentSearches"
+  "cacheHomeScreenData": "Buat cache untuk data konten Beranda",
+  "@cacheHomeScreenData": {
+    "description": "cacheHomeScreenData"
   },
-  "popularTracks": "Lagu populer",
-  "@popularTracks": {
-    "description": "popularTracks"
+  "cacheHomeScreenDataDes": "Aktifkan pembuatan cache data konten layar Beranda, layar Beranda bisa memuat lebih cepat jika opsi ini diaktifkan",
+  "@cacheHomeScreenDataDes": {
+    "description": "cacheHomeScreenDataDes"
   },
-  "latestRelease": "Rilis terbaru",
-  "@latestRelease": {
-    "description": "latestRelease"
+  "cacheSongs": "Cache lagu",
+  "@cacheSongs": {
+    "description": "cacheSongs"
   },
-  "follow": "Melanjutkan",
-  "@follow": {
-    "description": "follow"
+  "cacheSongsDes": "Menyimpan lagu sementara saat diputar untuk pemutaran di masa depan/offline, ini akan memakan ruang tambahan di perangkat Anda",
+  "@cacheSongsDes": {
+    "description": "cacheSongsDes"
   },
-  "following": "Mengikuti",
-  "@following": {
-    "description": "following"
+  "cachedOrOffline": "Di-cache/Offline",
+  "@cachedOrOffline": {
+    "description": "cachedOrOffline"
   },
-  "listenNow": "Dengarkan sekarang",
-  "@listenNow": {
-    "description": "listenNow"
+  "cancel": "Batal",
+  "@cancel": {
+    "description": "cancel"
   },
-  "video": "Video",
-  "@video": {
-    "description": "video"
+  "cancelTimer": "Batalkan pengatur waktu",
+  "@cancelTimer": {
+    "description": "cancelTimer"
   },
-  "about": "Tentang",
-  "@about": {
-    "description": "about"
+  "cancelTimerAlert": "Timer tidur dibatalkan",
+  "@cancelTimerAlert": {
+    "description": "cancelTimerAlert"
   },
-  "readMore": "Baca selengkapnya",
-  "@readMore": {
-    "description": "readMore"
+  "clearImgCache": "Bersihkan cache gambar",
+  "@clearImgCache": {
+    "description": "clearImgCache"
   },
-  "speedAndPitch": "Kecepatan dan Pitch",
-  "@speedAndPitch": {
-    "description": "speedAndPitch"
+  "clearImgCacheAlert": "Cache gambar telah dibersihkan",
+  "@clearImgCacheAlert": {
+    "description": "clearImgCacheAlert"
   },
-  "playbackSpeed": "Kecepatan pemutaran",
-  "@playbackSpeed": {
-    "description": "playbackSpeed"
+  "clearImgCacheDes": "Klik disini untuk menghapus cache dari thumbnail/gambar. (Tidak direkomendasikan kecuali ingin memperbahaui data cache dari gambar)",
+  "@clearImgCacheDes": {
+    "description": "clearImgCacheDes"
   },
-  "songPitch": "nada lagu",
-  "@songPitch": {
-    "description": "songPitch"
+  "close": "Menutup",
+  "@close": {
+    "description": "close"
   },
-  "musicRecognition": "Pengenalan Musik",
-  "@musicRecognition": {
-    "description": "musicRecognition"
+  "closeApp": "Tutup Aplikasi",
+  "@closeApp": {
+    "description": "closeApp"
   },
-  "listeningToEnvironment": "Mendengarkan lingkungan...",
-  "@listeningToEnvironment": {
-    "description": "listeningToEnvironment"
+  "cloudLibraryFound": "Perpustakaan awan ditemukan.",
+  "@cloudLibraryFound": {
+    "description": "cloudLibraryFound"
   },
-  "micInstruction": "Pastikan musik diputar cukup keras di dekat mikrofon Anda.",
-  "@micInstruction": {
-    "description": "micInstruction"
+  "cloudLibraryFoundDeviceWillDownload": "Perpustakaan cloud ditemukan. Perangkat ini akan mengunduhnya tanpa menimpanya.",
+  "@cloudLibraryFoundDeviceWillDownload": {
+    "description": "cloudLibraryFoundDeviceWillDownload"
   },
-  "processingAudio": "Memproses audio...",
-  "@processingAudio": {
-    "description": "processingAudio"
-  },
-  "shazamSearching": "Mencari kecocokan di database Shazam...",
-  "@shazamSearching": {
-    "description": "shazamSearching"
-  },
-  "songFound": "Lagu Ditemukan!",
-  "@songFound": {
-    "description": "songFound"
-  },
-  "playNow": "Mainkan Sekarang",
-  "@playNow": {
-    "description": "playNow"
-  },
-  "searchInLibrary": "Cari di Perpustakaan",
-  "@searchInLibrary": {
-    "description": "searchInLibrary"
-  },
-  "noMatchesFound": "Tidak Ada Kecocokan",
-  "@noMatchesFound": {
-    "description": "noMatchesFound"
-  },
-  "noMatchInstruction": "Tidak dapat menemukan lagu apa pun dalam rekaman audio",
-  "@noMatchInstruction": {
-    "description": "noMatchInstruction"
-  },
-  "errorOccurred": "Terjadi kesalahan",
-  "@errorOccurred": {
-    "description": "errorOccurred"
-  },
-  "playingRecognizedTrack": "Bermain:",
-  "@playingRecognizedTrack": {
-    "description": "playingRecognizedTrack"
-  },
-  "errorPlayingTrack": "Kesalahan saat bermain:",
-  "@errorPlayingTrack": {
-    "description": "errorPlayingTrack"
-  },
-  "welcome_title": "Musik Anda, cara Anda",
-  "@welcome_title": {
-    "description": "welcome_title"
-  },
-  "welcome_subtitle": "Pilih bagaimana Anda ingin menikmati Estrella Music mulai sekarang.",
-  "@welcome_subtitle": {
-    "description": "welcome_subtitle"
-  },
-  "welcome_intro": "Kami telah memodernisasi platform kami. Sistem lama yang mengunggah cadangan manual telah dinonaktifkan. Anda sekarang memiliki dua cara yang jelas untuk mengelola perpustakaan musik Anda.",
-  "@welcome_intro": {
-    "description": "welcome_intro"
-  },
-  "recommend_cloud": "Kami merekomendasikan untuk mengaktifkan Mode Cloud untuk pengalaman seperti Spotify: sinkronisasi waktu nyata antara semua perangkat Anda dan pencadangan otomatis tanpa Anda harus melakukan apa pun.",
-  "@recommend_cloud": {
-    "description": "recommend_cloud"
-  },
-  "swipe_prompt": "Geser untuk menjelajahi opsi ➔",
-  "@swipe_prompt": {
-    "description": "swipe_prompt"
-  },
-  "local_title": "Modus Lokal",
-  "@local_title": {
-    "description": "local_title"
-  },
-  "local_subtitle": "Privasi mutlak di perangkat Anda",
-  "@local_subtitle": {
-    "description": "local_subtitle"
-  },
-  "local_b1": "Ini berfungsi tanpa perlu masuk.",
-  "@local_b1": {
-    "description": "local_b1"
-  },
-  "local_b2": "Seluruh perpustakaan Anda tetap ada di komputer ini.",
-  "@local_b2": {
-    "description": "local_b2"
-  },
-  "local_b3": "Catatan: Tidak ada pencadangan cloud manual. Jika Anda kehilangan perangkat atau mencopot pemasangan aplikasi, data Anda tidak dapat dipulihkan.",
-  "@local_b3": {
-    "description": "local_b3"
-  },
-  "local_btn": "Gunakan hanya di perangkat ini",
-  "@local_btn": {
-    "description": "local_btn"
-  },
-  "cloud_title": "Mode Cloud (Disarankan)",
-  "@cloud_title": {
-    "description": "cloud_title"
-  },
-  "cloud_subtitle": "Sinkronisasi waktu nyata dengan Joss Red",
-  "@cloud_subtitle": {
-    "description": "cloud_subtitle"
+  "cloudModeReadyOfflineCache": "Mode awan sudah siap. Perangkat ini akan berfungsi sebagai cache offline.",
+  "@cloudModeReadyOfflineCache": {
+    "description": "cloudModeReadyOfflineCache"
   },
   "cloud_b1": "Masuk dengan aman menggunakan akun Joss Red Anda.",
   "@cloud_b1": {
@@ -1388,511 +400,137 @@
   "@cloud_btn": {
     "description": "cloud_btn"
   },
-  "slide_indicator": "Langkah _{current} dari 3",
-  "@slide_indicator": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      }
-    },
-    "description": "slide_indicator"
+  "cloud_subtitle": "Sinkronisasi waktu nyata dengan Joss Red",
+  "@cloud_subtitle": {
+    "description": "cloud_subtitle"
   },
-  "news_card_title": "Musik Estrella telah berevolusi!",
-  "@news_card_title": {
-    "description": "news_card_title"
-  },
-  "news_card_subtitle": "Sinkronisasi 100% dengan Joss Red, playlist dengan teman, dan banyak lagi. Ketuk untuk melihat apa yang baru.",
-  "@news_card_subtitle": {
-    "description": "news_card_subtitle"
-  },
-  "news_dialog_title": "Berita Musik Estrella",
-  "@news_dialog_title": {
-    "description": "news_dialog_title"
-  },
-  "news_item_sync_title": "Integrasi Penuh dengan Joss Red",
-  "@news_item_sync_title": {
-    "description": "news_item_sync_title"
-  },
-  "news_item_sync_desc": "Daftar putar dan favorit Anda kini disimpan dan disinkronkan di cloud secara otomatis dengan akun utama Joss Red Anda.",
-  "@news_item_sync_desc": {
-    "description": "news_item_sync_desc"
-  },
-  "news_item_collab_title": "Daftar Putar Kolaboratif",
-  "@news_item_collab_title": {
-    "description": "news_item_collab_title"
-  },
-  "news_item_collab_desc": "Buat daftar putar dengan teman-teman Anda! Saat membuat daftar putar, pilih kotak centang Kolaboratif dan pilih teman Anda untuk diedit bersama.",
-  "@news_item_collab_desc": {
-    "description": "news_item_collab_desc"
-  },
-  "news_item_trans_title": "Sinkronisasi Transparan",
-  "@news_item_trans_title": {
-    "description": "news_item_trans_title"
-  },
-  "news_item_trans_desc": "Anda tidak perlu lagi mengklik tombol sinkronisasi manual; Motor baru bertanggung jawab untuk berpindah ke atas dan ke bawah secara otomatis.",
-  "@news_item_trans_desc": {
-    "description": "news_item_trans_desc"
-  },
-  "news_dialog_section_friends": "Teman dan Manajemen Akun:",
-  "@news_dialog_section_friends": {
-    "description": "news_dialog_section_friends"
-  },
-  "news_dialog_friends_desc": "Untuk menambah teman, menerima permintaan, atau mengelola profil keamanan Anda, silakan gunakan Joss Red di platform resminya:",
-  "@news_dialog_friends_desc": {
-    "description": "news_dialog_friends_desc"
-  },
-  "news_btn_app": "Aplikasi Joss Red (Play Store)",
-  "@news_btn_app": {
-    "description": "news_btn_app"
-  },
-  "news_btn_web": "Joss Web Merah",
-  "@news_btn_web": {
-    "description": "news_btn_web"
-  },
-  "news_btn_dismiss": "Dipahami",
-  "@news_btn_dismiss": {
-    "description": "news_btn_dismiss"
-  },
-  "settings_appearance_desc": "Animasi tema, bahasa, dan antarmuka.",
-  "@settings_appearance_desc": {
-    "description": "settings_appearance_desc"
-  },
-  "settings_content_desc": "Temukan filter, integrasi dengan Piped dan cache.",
-  "@settings_content_desc": {
-    "description": "settings_content_desc"
-  },
-  "settings_playback_desc": "Kualitas streaming, normalisasi, senyap, dan baterai.",
-  "@settings_playback_desc": {
-    "description": "settings_playback_desc"
-  },
-  "settings_downloads_desc": "Unduhan dan Penyimpanan",
-  "@settings_downloads_desc": {
-    "description": "settings_downloads_desc"
-  },
-  "settings_downloads_sub": "Format audio, folder dan unduhan otomatis.",
-  "@settings_downloads_sub": {
-    "description": "settings_downloads_sub"
-  },
-  "settings_account_desc": "Akun dan Sinkronisasi",
-  "@settings_account_desc": {
-    "description": "settings_account_desc"
-  },
-  "settings_account_sub": "Mode cloud, pencadangan, daftar teman, dan migrasi.",
-  "@settings_account_sub": {
-    "description": "settings_account_sub"
-  },
-  "settings_about_desc": "Tentang Musik Estrella",
-  "@settings_about_desc": {
-    "description": "settings_about_desc"
-  },
-  "settings_about_sub": "Versi, proyek sumber terbuka, dan GitHub.",
-  "@settings_about_sub": {
-    "description": "settings_about_sub"
-  },
-  "settings_local_cloud_title": "Mode Lokal / EMusic Cloud",
-  "@settings_local_cloud_title": {
-    "description": "settings_local_cloud_title"
-  },
-  "settings_local_cloud_desc": "Pilih, migrasikan, atau tinjau status sinkronisasi dengan Joss Red.",
-  "@settings_local_cloud_desc": {
-    "description": "settings_local_cloud_desc"
-  },
-  "settings_my_friends": "teman-teman saya",
-  "@settings_my_friends": {
-    "description": "settings_my_friends"
-  },
-  "settings_my_friends_desc": "Kelola teman Joss Red Anda secara langsung.",
-  "@settings_my_friends_desc": {
-    "description": "settings_my_friends_desc"
-  },
-  "settings_refresh_visitor_title": "Segarkan ID (ID Pengunjung)",
-  "@settings_refresh_visitor_title": {
-    "description": "settings_refresh_visitor_title"
-  },
-  "settings_refresh_visitor_desc": "Buat ulang ID Online Music Anda jika konten Discover tidak dapat dimuat.",
-  "@settings_refresh_visitor_desc": {
-    "description": "settings_refresh_visitor_desc"
-  },
-  "settings_visitor_updated": "Pengidentifikasi yang diperbarui",
-  "@settings_visitor_updated": {
-    "description": "settings_visitor_updated"
-  },
-  "settings_visitor_updated_desc": "ID Pengunjung baru berhasil dibuat.",
-  "@settings_visitor_updated_desc": {
-    "description": "settings_visitor_updated_desc"
-  },
-  "settings_visitor_error": "Kesalahan",
-  "@settings_visitor_error": {
-    "description": "settings_visitor_error"
-  },
-  "settings_visitor_error_desc": "Pengidentifikasi baru tidak dapat dibuat. Silakan coba lagi nanti.",
-  "@settings_visitor_error_desc": {
-    "description": "settings_visitor_error_desc"
-  },
-  "settings_visitor_exception": "Terjadi kesalahan saat membuat ulang: {error}",
-  "@settings_visitor_exception": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    },
-    "description": "settings_visitor_exception"
-  },
-  "migratedLibrary": "Perpustakaan yang dimigrasi",
-  "@migratedLibrary": {
-    "description": "migratedLibrary"
-  },
-  "noSongsInCollection": "Tidak ada lagu dalam koleksi ini",
-  "@noSongsInCollection": {
-    "description": "noSongsInCollection"
-  },
-  "startupScreen": "Buka saat startup",
-  "@startupScreen": {
-    "description": "startupScreen"
-  },
-  "startupScreenDescription": "Pilih bagian yang pertama kali dibuka oleh Estrella Music",
-  "@startupScreenDescription": {
-    "description": "startupScreenDescription"
-  },
-  "friends": "Teman-teman",
-  "@friends": {
-    "description": "friends"
-  },
-  "dailyDiscover": "Penemuan harian",
-  "@dailyDiscover": {
-    "description": "dailyDiscover"
-  },
-  "keepListening": "terus mendengarkan",
-  "@keepListening": {
-    "description": "keepListening"
-  },
-  "similarToTitle": "Mirip dengan _{title}",
-  "@similarToTitle": {
-    "placeholders": {
-      "title": {
-        "type": "String"
-      }
-    },
-    "description": "similarToTitle"
-  },
-  "pipedPlaylistDescription": "Daftar Putar yang Disalurkan",
-  "@pipedPlaylistDescription": {
-    "description": "pipedPlaylistDescription"
+  "cloud_title": "Mode Cloud (Disarankan)",
+  "@cloud_title": {
+    "description": "cloud_title"
   },
   "collaborativePlaylistDescription": "Daftar Putar Kolaboratif",
   "@collaborativePlaylistDescription": {
     "description": "collaborativePlaylistDescription"
   },
-  "libraryPlaylistDescription": "Daftar Putar Perpustakaan",
-  "@libraryPlaylistDescription": {
-    "description": "libraryPlaylistDescription"
-  },
-  "untitledSong": "Lagu tanpa judul",
-  "@untitledSong": {
-    "description": "untitledSong"
-  },
-  "migratedPlaylist": "Daftar Putar yang Dimigrasi",
-  "@migratedPlaylist": {
-    "description": "migratedPlaylist"
-  },
-  "migratedAlbum": "Album yang dimigrasi",
-  "@migratedAlbum": {
-    "description": "migratedAlbum"
-  },
-  "songsImportedFromJossMusic": "Lagu diimpor dari Joss Music Kotlin",
-  "@songsImportedFromJossMusic": {
-    "description": "songsImportedFromJossMusic"
-  },
-  "importedFromJossMusic": "Diimpor dari Joss Music Kotlin",
-  "@importedFromJossMusic": {
-    "description": "importedFromJossMusic"
-  },
-  "syncLocalModeActive": "Mode lokal aktif",
-  "@syncLocalModeActive": {
-    "description": "syncLocalModeActive"
-  },
-  "syncCloudPending": "Mode awan aktif. Sinkronisasi tertunda.",
-  "@syncCloudPending": {
-    "description": "syncCloudPending"
-  },
-  "syncCloudDownloadingExisting": "Mode awan diaktifkan. Mengunduh perpustakaan yang ada.",
-  "@syncCloudDownloadingExisting": {
-    "description": "syncCloudDownloadingExisting"
-  },
-  "syncCloudMigrationComplete": "Mode awan diaktifkan. Perpustakaan yang dimigrasi.",
-  "@syncCloudMigrationComplete": {
-    "description": "syncCloudMigrationComplete"
-  },
-  "syncLocalDeviceOnly": "Data Anda hanya disimpan di perangkat ini.",
-  "@syncLocalDeviceOnly": {
-    "description": "syncLocalDeviceOnly"
-  },
-  "syncDownloading": "Mengunduh perubahan EMusic...",
-  "@syncDownloading": {
-    "description": "syncDownloading"
-  },
-  "syncDownloadFailed": "Gagal mengunduh sinkronisasi.",
-  "@syncDownloadFailed": {
-    "description": "syncDownloadFailed"
-  },
-  "syncLocalChangesFirst": "Ada perubahan lokal baru. Mereka akan diunggah sebelum diunduh.",
-  "@syncLocalChangesFirst": {
-    "description": "syncLocalChangesFirst"
-  },
-  "syncLibrarySynced": "Perpustakaan yang disinkronkan.",
-  "@syncLibrarySynced": {
-    "description": "syncLibrarySynced"
-  },
-  "syncOfflinePending": "Luring. Perubahan masih menunggu keputusan.",
-  "@syncOfflinePending": {
-    "description": "syncOfflinePending"
-  },
-  "syncLibraryUpToDate": "Perpustakaan terkini.",
-  "@syncLibraryUpToDate": {
-    "description": "syncLibraryUpToDate"
-  },
-  "syncChangesSynced": "_{count} perubahan yang disinkronkan.",
-  "@syncChangesSynced": {
-    "placeholders": {
-      "count": {
-        "type": "String"
-      }
-    },
-    "description": "syncChangesSynced"
-  },
-  "syncUploading": "Mengunggah perubahan ke EMusic...",
-  "@syncUploading": {
-    "description": "syncUploading"
-  },
-  "syncUploadSuccessWs": "Perubahan berhasil diunggah (WS).",
-  "@syncUploadSuccessWs": {
-    "description": "syncUploadSuccessWs"
-  },
-  "syncUploadWsRetry": "Tidak dapat mengunggah menggunakan WS. Ini akan dicoba lagi nanti.",
-  "@syncUploadWsRetry": {
-    "description": "syncUploadWsRetry"
-  },
-  "syncUploadSuccess": "Perubahan diunggah dengan benar.",
-  "@syncUploadSuccess": {
-    "description": "syncUploadSuccess"
-  },
-  "syncUploadRetry": "Tidak bisa bangun. Ini akan dicoba lagi nanti.",
-  "@syncUploadRetry": {
-    "description": "syncUploadRetry"
-  },
-  "syncOfflineRetry": "Luring. Perubahan disimpan untuk dicoba lagi.",
-  "@syncOfflineRetry": {
-    "description": "syncOfflineRetry"
-  },
-  "syncUnconfirmedRetry": "EMusic tidak mengkonfirmasi semua perubahan tersebut. Mereka akan diadili ulang.",
-  "@syncUnconfirmedRetry": {
-    "description": "syncUnconfirmedRetry"
-  },
-  "syncChangesConfirmed": "_{count} perubahan dilakukan.",
-  "@syncChangesConfirmed": {
-    "placeholders": {
-      "count": {
-        "type": "String"
-      }
-    },
-    "description": "syncChangesConfirmed"
-  },
-  "migrationAlreadyRunning": "Sudah ada migrasi yang sedang berlangsung.",
-  "@migrationAlreadyRunning": {
-    "description": "migrationAlreadyRunning"
-  },
-  "migrationLoginRequired": "Masuk ke Joss Red sebelum bermigrasi.",
-  "@migrationLoginRequired": {
-    "description": "migrationLoginRequired"
-  },
-  "migrationCheckingCloud": "Memeriksa apakah EMusic Cloud sudah memiliki perpustakaan...",
-  "@migrationCheckingCloud": {
-    "description": "migrationCheckingCloud"
-  },
-  "cloudLibraryFoundDeviceWillDownload": "Perpustakaan cloud ditemukan. Perangkat ini akan mengunduhnya tanpa menimpanya.",
-  "@cloudLibraryFoundDeviceWillDownload": {
-    "description": "cloudLibraryFoundDeviceWillDownload"
-  },
-  "cloudLibraryFound": "Perpustakaan awan ditemukan.",
-  "@cloudLibraryFound": {
-    "description": "cloudLibraryFound"
-  },
-  "migrationCreatingBackup": "Membuat cadangan lokal sebelum menghubungkan cloud...",
-  "@migrationCreatingBackup": {
-    "description": "migrationCreatingBackup"
-  },
-  "migrationAnalyzingLocal": "Menganalisis perpustakaan lokal...",
-  "@migrationAnalyzingLocal": {
-    "description": "migrationAnalyzingLocal"
-  },
-  "migrationPreparingCloud": "Mempersiapkan migrasi di EMusic Cloud...",
-  "@migrationPreparingCloud": {
-    "description": "migrationPreparingCloud"
-  },
-  "migrationStartFailed": "EMusic Cloud tidak dapat memulai migrasi.",
-  "@migrationStartFailed": {
-    "description": "migrationStartFailed"
-  },
-  "migrationUploadingData": "Mengunggah daftar putar, favorit, dan riwayat...",
-  "@migrationUploadingData": {
-    "description": "migrationUploadingData"
-  },
-  "migrationUploadIncomplete": "Tidak semua data dapat diunggah. Kami menjaga dukungan lokal Anda.",
-  "@migrationUploadIncomplete": {
-    "description": "migrationUploadIncomplete"
-  },
-  "migrationVerifyingIntegrity": "Memverifikasi integritas di EMusic Cloud...",
-  "@migrationVerifyingIntegrity": {
-    "description": "migrationVerifyingIntegrity"
-  },
-  "migrationValidationFailed": "EMusic Cloud tidak dapat memvalidasi migrasi.",
-  "@migrationValidationFailed": {
-    "description": "migrationValidationFailed"
-  },
-  "cloudModeReadyOfflineCache": "Mode awan sudah siap. Perangkat ini akan berfungsi sebagai cache offline.",
-  "@cloudModeReadyOfflineCache": {
-    "description": "cloudModeReadyOfflineCache"
-  },
-  "migrationCompleted": "Migrasi selesai.",
-  "@migrationCompleted": {
-    "description": "migrationCompleted"
-  },
-  "migrationFailedLocalPreserved": "Migrasi gagal. Data lokal Anda tidak diubah.",
-  "@migrationFailedLocalPreserved": {
-    "description": "migrationFailedLocalPreserved"
-  },
-  "sessionExpiredLoginAgain": "Sesi Anda telah berakhir. Masuk lagi.",
-  "@sessionExpiredLoginAgain": {
-    "description": "sessionExpiredLoginAgain"
-  },
-  "selectedFileNotFound": "File yang dipilih tidak ditemukan.",
-  "@selectedFileNotFound": {
-    "description": "selectedFileNotFound"
-  },
-  "genericAlbum": "Album",
-  "@genericAlbum": {
-    "description": "genericAlbum"
-  },
-  "friendsLoginRequired": "Masuk untuk mencari teman.",
-  "@friendsLoginRequired": {
-    "description": "friendsLoginRequired"
-  },
-  "invalidSessionToken": "Sesi ini tidak berisi token yang valid.",
-  "@invalidSessionToken": {
-    "description": "invalidSessionToken"
-  },
-  "userSearchFailed": "Tidak dapat mencari pengguna ({statusCode}).",
-  "@userSearchFailed": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    },
-    "description": "userSearchFailed"
-  },
-  "invalidServerResponse": "Respons server tidak valid.",
-  "@invalidServerResponse": {
-    "description": "invalidServerResponse"
-  },
-  "userListMissing": "Responsnya tidak berisi daftar pengguna.",
-  "@userListMissing": {
-    "description": "userListMissing"
-  },
-  "playlistCollaboratorsTitle": "Kontributor daftar putar",
-  "@playlistCollaboratorsTitle": {
-    "description": "playlistCollaboratorsTitle"
-  },
   "collaboratorsInstruction": "Pilih teman yang dapat melihat dan mengedit playlist ini:",
   "@collaboratorsInstruction": {
     "description": "collaboratorsInstruction"
-  },
-  "noJossRedFriends": "Anda tidak memiliki teman tambahan di Joss Red.",
-  "@noJossRedFriends": {
-    "description": "noJossRedFriends"
-  },
-  "friendFallback": "Teman",
-  "@friendFallback": {
-    "description": "friendFallback"
   },
   "collaboratorsUpdated": "Kolaborator diperbarui dengan benar.",
   "@collaboratorsUpdated": {
     "description": "collaboratorsUpdated"
   },
-  "save": "Menyimpan",
-  "@save": {
-    "description": "save"
+  "communityplaylists": "Daftar Putar Komunitas",
+  "@communityplaylists": {
+    "description": "communityplaylists"
   },
-  "manageCollaborators": "Kelola kolaborator (teman)",
-  "@manageCollaborators": {
-    "description": "manageCollaborators"
+  "content": "Konten",
+  "@content": {
+    "description": "content"
+  },
+  "copyrightNotice": "© 2026JOSPROX. Lisensi GPL v3.0",
+  "@copyrightNotice": {
+    "description": "copyrightNotice"
+  },
+  "create": "Buat",
+  "@create": {
+    "description": "create"
+  },
+  "createnAdd": "Buat & Tambah",
+  "@createnAdd": {
+    "description": "createnAdd"
+  },
+  "customIns": "Mesin Virtual Khusus",
+  "@customIns": {
+    "description": "customIns"
+  },
+  "customInsSelectMsg": "Silakan pilih Instans Khusus",
+  "@customInsSelectMsg": {
+    "description": "customInsSelectMsg"
+  },
+  "dailyDiscover": "Penemuan harian",
+  "@dailyDiscover": {
+    "description": "dailyDiscover"
+  },
+  "dark": "Gelap",
+  "@dark": {
+    "description": "dark"
+  },
+  "delete": "Hapus",
+  "@delete": {
+    "description": "delete"
+  },
+  "deleteDownloadData": "Hapus dari unduhan",
+  "@deleteDownloadData": {
+    "description": "deleteDownloadData"
+  },
+  "deleteDownloadedDataAlert": "Berhasil dihapus dari unduhan!",
+  "@deleteDownloadedDataAlert": {
+    "description": "deleteDownloadedDataAlert"
+  },
+  "developedBy": "Dikembangkan dan Dikelola oleh Joss Estrada (JOSPROX)",
+  "@developedBy": {
+    "description": "developedBy"
+  },
+  "disableTransitionAnimation": "Matikan animasi transisi",
+  "@disableTransitionAnimation": {
+    "description": "disableTransitionAnimation"
+  },
+  "disableTransitionAnimationDes": "Aktifkan opsi ini untuk menonaktifkan animasi transisi antar tab",
+  "@disableTransitionAnimationDes": {
+    "description": "disableTransitionAnimationDes"
+  },
+  "disabled": "Dimatikan",
+  "@disabled": {
+    "description": "disabled"
+  },
+  "discover": "Temukan",
+  "@discover": {
+    "description": "discover"
+  },
+  "dismiss": "Biarkan",
+  "@dismiss": {
+    "description": "dismiss"
   },
   "done": "Siap",
   "@done": {
     "description": "done"
   },
-  "notAuthenticated": "Tidak diautentikasi",
-  "@notAuthenticated": {
-    "description": "notAuthenticated"
+  "dontShowInfoAgain": "Jangan tampilkan info ini lagi",
+  "@dontShowInfoAgain": {
+    "description": "dontShowInfoAgain"
   },
-  "genericError": "Kesalahan",
-  "@genericError": {
-    "description": "genericError"
+  "downFilesFound": "file yang terunduh ditemukan",
+  "@downFilesFound": {
+    "description": "downFilesFound"
   },
-  "friendRequestSent": "Permintaan pertemanan terkirim",
-  "@friendRequestSent": {
-    "description": "friendRequestSent"
+  "download": "Unduh",
+  "@download": {
+    "description": "download"
   },
-  "friendRequestAccepted": "Permintaan pertemanan diterima",
-  "@friendRequestAccepted": {
-    "description": "friendRequestAccepted"
+  "downloadAlbumSongs": "Unduh lagu dari album",
+  "@downloadAlbumSongs": {
+    "description": "downloadAlbumSongs"
   },
-  "friendshipRemoved": "Persahabatan dihapus",
-  "@friendshipRemoved": {
-    "description": "friendshipRemoved"
+  "downloadError2": "Lagu yang diminta tidak dapat diunduh karena pembatasan server. Anda bisa mencoba lagi",
+  "@downloadError2": {
+    "description": "downloadError2"
   },
-  "userBlocked": "Pengguna yang diblokir",
-  "@userBlocked": {
-    "description": "userBlocked"
+  "downloadError3": "Unduhan gagal karena jaringan/stream sedang gangguan! Silakan coba periksa kembali.",
+  "@downloadError3": {
+    "description": "downloadError3"
   },
-  "userUnblocked": "Pengguna tidak terkunci",
-  "@userUnblocked": {
-    "description": "userUnblocked"
-  },
-  "artistsByTaste": "Sesuai selera Anda",
-  "@artistsByTaste": {
-    "description": "artistsByTaste"
-  },
-  "followedArtists": "diikuti",
-  "@followedArtists": {
-    "description": "followedArtists"
-  },
-  "recommendedArtists": "Direkomendasikan",
-  "@recommendedArtists": {
-    "description": "recommendedArtists"
-  },
-  "albumsByTaste": "Sesuai selera Anda",
-  "@albumsByTaste": {
-    "description": "albumsByTaste"
-  },
-  "savedAlbums": "Disimpan",
-  "@savedAlbums": {
-    "description": "savedAlbums"
-  },
-  "recommendedAlbums": "Direkomendasikan",
-  "@recommendedAlbums": {
-    "description": "recommendedAlbums"
-  },
-  "downloadNotificationChannelName": "unduhan musik",
-  "@downloadNotificationChannelName": {
-    "description": "downloadNotificationChannelName"
+  "downloadLocation": "Lokasi download",
+  "@downloadLocation": {
+    "description": "downloadLocation"
   },
   "downloadNotificationChannelDescription": "Menjaga unduhan musik Anda tetap aktif di latar belakang.",
   "@downloadNotificationChannelDescription": {
     "description": "downloadNotificationChannelDescription"
   },
-  "downloadNotificationTitle": "Mengunduh musik",
-  "@downloadNotificationTitle": {
-    "description": "downloadNotificationTitle"
+  "downloadNotificationChannelName": "unduhan musik",
+  "@downloadNotificationChannelName": {
+    "description": "downloadNotificationChannelName"
   },
   "downloadNotificationPreparing": "Mempersiapkan unduhan Anda…",
   "@downloadNotificationPreparing": {
@@ -1907,105 +545,149 @@
     },
     "description": "downloadNotificationSong"
   },
-  "syncCloudModeActive": "Mode awan aktif",
-  "@syncCloudModeActive": {
-    "description": "syncCloudModeActive"
+  "downloadNotificationTitle": "Mengunduh musik",
+  "@downloadNotificationTitle": {
+    "description": "downloadNotificationTitle"
   },
-  "permissionsConsentTitle": "Izin untuk memulai",
-  "@permissionsConsentTitle": {
-    "description": "permissionsConsentTitle"
+  "downloadPlaylist": "Unduh daftar putar",
+  "@downloadPlaylist": {
+    "description": "downloadPlaylist"
   },
-  "permissionsConsentDescription": "Estrella Music memerlukan izin ini untuk mengelola musik Anda dan menawarkan semua fitur pemutaran.",
-  "@permissionsConsentDescription": {
-    "description": "permissionsConsentDescription"
+  "downloadingFormat": "Mengunduh Format File",
+  "@downloadingFormat": {
+    "description": "downloadingFormat"
   },
-  "permissionsStorageTitle": "Musik dan penyimpanan",
-  "@permissionsStorageTitle": {
-    "description": "permissionsStorageTitle"
+  "downloadingFormatDes": "Pilih format file pengunduhan. \"Opus\" akan memberikan kualitas terbaik",
+  "@downloadingFormatDes": {
+    "description": "downloadingFormatDes"
   },
-  "permissionsStorageDescription": "Ini memungkinkan Anda memutar musik, menyimpan unduhan, mengekspor daftar putar, dan menyiapkan pembaruan.",
-  "@permissionsStorageDescription": {
-    "description": "permissionsStorageDescription"
+  "downloads": "Unduhan",
+  "@downloads": {
+    "description": "downloads"
   },
-  "permissionsNotificationsTitle": "Pemberitahuan",
-  "@permissionsNotificationsTitle": {
-    "description": "permissionsNotificationsTitle"
+  "duration": "Durasi",
+  "@duration": {
+    "description": "duration"
   },
-  "permissionsNotificationsDescription": "Menampilkan kontrol pemutaran, kemajuan pengunduhan, dan pemberitahuan aplikasi penting.",
-  "@permissionsNotificationsDescription": {
-    "description": "permissionsNotificationsDescription"
+  "dynamic": "Dinamis",
+  "@dynamic": {
+    "description": "dynamic"
   },
-  "permissionsMicrophoneTitle": "Mikropon",
-  "@permissionsMicrophoneTitle": {
-    "description": "permissionsMicrophoneTitle"
+  "email": "E-mail",
+  "@email": {
+    "description": "email"
   },
-  "permissionsMicrophoneDescription": "Ini hanya digunakan ketika Anda memilih untuk mengidentifikasi lagu yang diputar di sekitar Anda.",
-  "@permissionsMicrophoneDescription": {
-    "description": "permissionsMicrophoneDescription"
+  "emptyPlaylist": "Daftar Putar Kosong!",
+  "@emptyPlaylist": {
+    "description": "emptyPlaylist"
   },
-  "permissionsContinueButton": "Berikan izin yang diperlukan",
-  "@permissionsContinueButton": {
-    "description": "permissionsContinueButton"
+  "enableBottomNav": "Bar navigasi bawah",
+  "@enableBottomNav": {
+    "description": "enableBottomNav"
   },
-  "permissionsRequiredNotice": "Ketiga izin tersebut diperlukan untuk melanjutkan. Anda dapat mengubahnya nanti di pengaturan sistem.",
-  "@permissionsRequiredNotice": {
-    "description": "permissionsRequiredNotice"
+  "enableBottomNavDes": "Ganti ke bar navigasi bawah",
+  "@enableBottomNavDes": {
+    "description": "enableBottomNavDes"
   },
-  "permissionsAllow": "Mengizinkan",
-  "@permissionsAllow": {
-    "description": "permissionsAllow"
+  "enableSlidableAction": "Aktifkan aksi geser",
+  "@enableSlidableAction": {
+    "description": "enableSlidableAction"
   },
-  "permissionsOpenSettings": "Pengaturan",
-  "@permissionsOpenSettings": {
-    "description": "permissionsOpenSettings"
+  "enableSlidableActionDes": "Aktifkan aksi geser pada ubin lagu",
+  "@enableSlidableActionDes": {
+    "description": "enableSlidableActionDes"
   },
-  "auth_2fa_title": "Otentikasi dua faktor",
-  "@auth_2fa_title": {
-    "description": "auth_2fa_title"
+  "enabled": "Diaktifkan",
+  "@enabled": {
+    "description": "enabled"
   },
-  "auth_2fa_subtitle": "Masukkan kode 6 digit dari aplikasi autentikator Anda. Akses ini berakhir dalam 5 menit.",
-  "@auth_2fa_subtitle": {
-    "description": "auth_2fa_subtitle"
+  "endOfThisSong": "Akhir dari lagu ini",
+  "@endOfThisSong": {
+    "description": "endOfThisSong"
   },
-  "auth_2fa_code": "Kode otentikasi",
-  "@auth_2fa_code": {
-    "description": "auth_2fa_code"
+  "enqueueAlbumSongs": "Tambahkan lagu album ke antrean",
+  "@enqueueAlbumSongs": {
+    "description": "enqueueAlbumSongs"
   },
-  "auth_2fa_verify": "Periksa dan lanjutkan",
-  "@auth_2fa_verify": {
-    "description": "auth_2fa_verify"
+  "enqueueAll": "Antrikan semua",
+  "@enqueueAll": {
+    "description": "enqueueAll"
   },
-  "auth_2fa_invalid": "Masukkan kode 6 digit yang valid atau masuk lagi.",
-  "@auth_2fa_invalid": {
-    "description": "auth_2fa_invalid"
+  "enqueueSong": "Tambahkan lagu ini ke antrian",
+  "@enqueueSong": {
+    "description": "enqueueSong"
   },
-  "backupSettingsAndPlaylists": "Pengaturan cadangan dan daftar putar",
-  "@backupSettingsAndPlaylists": {
-    "description": "backupSettingsAndPlaylists"
+  "enqueueSongs": "Tambahkan lagu ke antrean",
+  "@enqueueSongs": {
+    "description": "enqueueSongs"
   },
-  "restoreSettingsAndPlaylists": "Pulihkan pengaturan dan daftar putar",
-  "@restoreSettingsAndPlaylists": {
-    "description": "restoreSettingsAndPlaylists"
+  "episodes": "Episode",
+  "@episodes": {
+    "description": "episodes"
   },
-  "helloWorld": "Halo dunia",
-  "@helloWorld": {
-    "description": "Este texto es opcional"
+  "equalizer": "Ekualizer",
+  "@equalizer": {
+    "description": "equalizer"
   },
-  "removeFromCache": "Hapus dari cache",
-  "@removeFromCache": {
-    "description": "removeFromCache"
+  "equalizerDes": "Buka ekualizer sistem",
+  "@equalizerDes": {
+    "description": "equalizerDes"
   },
-  "quickPics": "Seleksi cepat",
-  "@quickPics": {
-    "description": "quickPics"
+  "errorOccuredAlert": "Terjadi kesalahan!",
+  "@errorOccuredAlert": {
+    "description": "errorOccuredAlert"
   },
-  "topMusicVid": "Video musik teratas",
-  "@topMusicVid": {
-    "description": "topMusicVid"
+  "errorOccurred": "Terjadi kesalahan",
+  "@errorOccurred": {
+    "description": "errorOccurred"
+  },
+  "errorPlayingTrack": "Kesalahan saat bermain:",
+  "@errorPlayingTrack": {
+    "description": "errorPlayingTrack"
+  },
+  "export": "Ekspor",
+  "@export": {
+    "description": "export"
+  },
+  "exportDowloadedFiles": "Ekspor file yang diunduh",
+  "@exportDowloadedFiles": {
+    "description": "exportDowloadedFiles"
+  },
+  "exportDowloadedFilesDes": "Klik disini untuk mengekspor file yang diunduh dari direktori inApp menuju direktori eksternal",
+  "@exportDowloadedFilesDes": {
+    "description": "exportDowloadedFilesDes"
+  },
+  "exportError": "Kesalahan saat mengekspor daftar putar",
+  "@exportError": {
+    "description": "exportError"
+  },
+  "exportErrorFormat": "Kesalahan pemformatan data daftar putar",
+  "@exportErrorFormat": {
+    "description": "exportErrorFormat"
+  },
+  "exportErrorPermission": "Perizinan dilarang ketika mengekspor",
+  "@exportErrorPermission": {
+    "description": "exportErrorPermission"
+  },
+  "exportErrorStorage": "Ruang penyimpanan tidak cukup",
+  "@exportErrorStorage": {
+    "description": "exportErrorStorage"
+  },
+  "exportMsg": "Ekspor file telah sukses",
+  "@exportMsg": {
+    "description": "exportMsg"
+  },
+  "exportPlaylist": "Ekspor Daftar Putar",
+  "@exportPlaylist": {
+    "description": "exportPlaylist"
   },
   "exportPlaylistCsv": "Ekspor daftar putar sebagai CSV",
   "@exportPlaylistCsv": {
     "description": "exportPlaylistCsv"
+  },
+  "exportPlaylistCsvSubtitle": "Tidak dapat mengimpor ke sini",
+  "@exportPlaylistCsvSubtitle": {
+    "description": "exportPlaylistCsvSubtitle"
   },
   "exportPlaylistJson": "Ekspor daftar putar ke JSON",
   "@exportPlaylistJson": {
@@ -2015,10 +697,6 @@
   "@exportPlaylistJsonSubtitle": {
     "description": "exportPlaylistJsonSubtitle"
   },
-  "exportPlaylistCsvSubtitle": "Tidak dapat mengimpor ke sini",
-  "@exportPlaylistCsvSubtitle": {
-    "description": "exportPlaylistCsvSubtitle"
-  },
   "exportToOnlineMusic": "Ekspor ke musik Online",
   "@exportToOnlineMusic": {
     "description": "exportToOnlineMusic"
@@ -2027,145 +705,489 @@
   "@exportToOnlineMusicSubtitle": {
     "description": "exportToOnlineMusicSubtitle"
   },
-  "linkCopied": "Tautan disalin ke papan klip",
-  "@linkCopied": {
-    "description": "linkCopied"
+  "exportedFileLocation": "Lokasi ekspor file yang terunduh",
+  "@exportedFileLocation": {
+    "description": "exportedFileLocation"
   },
-  "lyrics": "Surat",
-  "@lyrics": {
-    "description": "lyrics"
+  "exporting": "Mengekspor...",
+  "@exporting": {
+    "description": "exporting"
   },
-  "no": "Tidak",
-  "@no": {
-    "description": "no"
+  "exportingPlaylist": "Mengekspor Daftar Putar...",
+  "@exportingPlaylist": {
+    "description": "exportingPlaylist"
   },
-  "podcasts": "Podcast",
-  "@podcasts": {
-    "description": "podcasts"
+  "favorites": "Favorit",
+  "@favorites": {
+    "description": "favorites"
   },
-  "episodes": "Episode",
-  "@episodes": {
-    "description": "episodes"
+  "featuredplaylists": "Daftar Putar yang Difiturkan",
+  "@featuredplaylists": {
+    "description": "featuredplaylists"
   },
-  "profiles": "Profil",
-  "@profiles": {
-    "description": "profiles"
+  "fileNotFound": "File tidak ditemukan",
+  "@fileNotFound": {
+    "description": "fileNotFound"
   },
-  "addToLibrary": "Tambahkan ke perpustakaan",
-  "@addToLibrary": {
-    "description": "addToLibrary"
+  "follow": "Melanjutkan",
+  "@follow": {
+    "description": "follow"
   },
-  "removeFromLibrary": "Hapus dari perpustakaan",
-  "@removeFromLibrary": {
-    "description": "removeFromLibrary"
+  "followedArtists": "diikuti",
+  "@followedArtists": {
+    "description": "followedArtists"
   },
-  "play": "Mainkan",
-  "@play": {
-    "description": "play"
+  "following": "Mengikuti",
+  "@following": {
+    "description": "following"
   },
-  "enqueueAlbumSongs": "Tambahkan lagu album ke antrean",
-  "@enqueueAlbumSongs": {
-    "description": "enqueueAlbumSongs"
+  "for1": "Untuk",
+  "@for1": {
+    "description": "for1"
   },
-  "downloadAlbumSongs": "Unduh lagu dari album",
-  "@downloadAlbumSongs": {
-    "description": "downloadAlbumSongs"
+  "forgottenFavorites": "favorit yang terlupakan",
+  "@forgottenFavorites": {
+    "description": "forgottenFavorites"
   },
-  "shareAlbum": "Bagikan album",
-  "@shareAlbum": {
-    "description": "shareAlbum"
+  "friendFallback": "Teman",
+  "@friendFallback": {
+    "description": "friendFallback"
+  },
+  "friendRequestAccepted": "Permintaan pertemanan diterima",
+  "@friendRequestAccepted": {
+    "description": "friendRequestAccepted"
+  },
+  "friendRequestSent": "Permintaan pertemanan terkirim",
+  "@friendRequestSent": {
+    "description": "friendRequestSent"
+  },
+  "friends": "Teman-teman",
+  "@friends": {
+    "description": "friends"
+  },
+  "friendsLoginRequired": "Masuk untuk mencari teman.",
+  "@friendsLoginRequired": {
+    "description": "friendsLoginRequired"
+  },
+  "friendshipRemoved": "Persahabatan dihapus",
+  "@friendshipRemoved": {
+    "description": "friendshipRemoved"
+  },
+  "genericAlbum": "Album",
+  "@genericAlbum": {
+    "description": "genericAlbum"
+  },
+  "genericError": "Kesalahan",
+  "@genericError": {
+    "description": "genericError"
+  },
+  "genre_electronic": "Elektronik",
+  "@genre_electronic": {
+    "description": "genre_electronic"
+  },
+  "genre_hiphop": "hip hop",
+  "@genre_hiphop": {
+    "description": "genre_hiphop"
+  },
+  "genre_jazz": "Jazz",
+  "@genre_jazz": {
+    "description": "genre_jazz"
+  },
+  "genre_latin": "Latin",
+  "@genre_latin": {
+    "description": "genre_latin"
+  },
+  "genre_pop": "Pop",
+  "@genre_pop": {
+    "description": "genre_pop"
+  },
+  "genre_rock": "Batu",
+  "@genre_rock": {
+    "description": "genre_rock"
+  },
+  "gesture": "Gerakan",
+  "@gesture": {
+    "description": "gesture"
+  },
+  "github": "Github",
+  "@github": {
+    "description": "github"
+  },
+  "githubDes": "Lihat kode sumber GitHub \njika anda suka proyek ini, jangan lupa berikan⭐",
+  "@githubDes": {
+    "description": "githubDes"
+  },
+  "goToAlbum": "Ke album",
+  "@goToAlbum": {
+    "description": "goToAlbum"
+  },
+  "goToDownloadPage": "Klik di sini untuk pergi ke halaman unduh",
+  "@goToDownloadPage": {
+    "description": "goToDownloadPage"
+  },
+  "helloWorld": "Halo dunia",
+  "@helloWorld": {
+    "description": "Este texto es opcional"
+  },
+  "high": "Tinggi",
+  "@high": {
+    "description": "high"
+  },
+  "hintApiUrl": "URL API ke instance yang disalurkan",
+  "@hintApiUrl": {
+    "description": "hintApiUrl"
+  },
+  "home": "Beranda",
+  "@home": {
+    "description": "home"
+  },
+  "homeContentCount": "Jumlah konten beranda",
+  "@homeContentCount": {
+    "description": "homeContentCount"
+  },
+  "homeContentCountDes": "Pilih jumlah konten beranda awal (perkiraan). Hasil yang lebih sedikit mempercepat pemuatan",
+  "@homeContentCountDes": {
+    "description": "homeContentCountDes"
+  },
+  "id": "Id",
+  "@id": {
+    "description": "id"
+  },
+  "identifySongMetadata": "Mengidentifikasi metadata",
+  "@identifySongMetadata": {
+    "description": "Action that searches and embeds metadata for a local song"
+  },
+  "ignoreBatOpt": "Abaikan pengoptimalan baterai",
+  "@ignoreBatOpt": {
+    "description": "ignoreBatOpt"
+  },
+  "ignoreBatOptDes": "Jika Anda menghadapi masalah notifikasi atau pemutaran dihentikan karena pengoptimalan sistem, aktifkan opsi ini",
+  "@ignoreBatOptDes": {
+    "description": "ignoreBatOptDes"
+  },
+  "importError": "Kesalahan saat mengimpor daftar putar",
+  "@importError": {
+    "description": "importError"
+  },
+  "importErrorDatabase": "Kesalahan menyimpan ke database",
+  "@importErrorDatabase": {
+    "description": "importErrorDatabase"
+  },
+  "importErrorFileAccess": "Tidak dapat mengakses file yang dipilih",
+  "@importErrorFileAccess": {
+    "description": "importErrorFileAccess"
+  },
+  "importErrorFormat": "format file tidak valid",
+  "@importErrorFormat": {
+    "description": "importErrorFormat"
+  },
+  "importLargeFileNote": "Catatan: Daftar putar berukuran besar mungkin akan memakan waktu lama saat mengimpor",
+  "@importLargeFileNote": {
+    "description": "importLargeFileNote"
+  },
+  "importPlaylist": "Impor Daftar Putar",
+  "@importPlaylist": {
+    "description": "importPlaylist"
+  },
+  "importPlaylistDesc": "Pilih file JSON daftar putar yang diekspor sebelumnya untuk diimpor",
+  "@importPlaylistDesc": {
+    "description": "importPlaylistDesc"
   },
   "imported": "Diimpor",
   "@imported": {
     "description": "imported"
   },
+  "importedFromJossMusic": "Diimpor dari Joss Music Kotlin",
+  "@importedFromJossMusic": {
+    "description": "importedFromJossMusic"
+  },
   "importedPlaylist": "Daftar putar yang diimpor",
   "@importedPlaylist": {
     "description": "importedPlaylist"
   },
-  "permissionDenied": "Izin ditolak",
-  "@permissionDenied": {
-    "description": "permissionDenied"
+  "importingPlaylist": "Mengimpor daftar putar...",
+  "@importingPlaylist": {
+    "description": "importingPlaylist"
   },
-  "enqueueSongs": "Tambahkan lagu ke antrean",
-  "@enqueueSongs": {
-    "description": "enqueueSongs"
+  "in_app_storage": "Direktori penyimpanan internal",
+  "@in_app_storage": {
+    "description": "in_app_storage"
   },
-  "shuffle": "Acak",
-  "@shuffle": {
-    "description": "shuffle"
+  "includeDownloadedFiles": "Sertakan file lagu-lagu yang diunduh",
+  "@includeDownloadedFiles": {
+    "description": "includeDownloadedFiles"
   },
-  "downloadPlaylist": "Unduh daftar putar",
-  "@downloadPlaylist": {
-    "description": "downloadPlaylist"
+  "infoNotAvailable": "Informasi tidak tersedia",
+  "@infoNotAvailable": {
+    "description": "infoNotAvailable"
   },
-  "syncPlaylistSongs": "Sinkronkan lagu daftar putar",
-  "@syncPlaylistSongs": {
-    "description": "syncPlaylistSongs"
+  "invalidPlaylistFile": "struktur file daftar putar tidak valid",
+  "@invalidPlaylistFile": {
+    "description": "invalidPlaylistFile"
   },
-  "blacklistPipedPlaylist": "Daftar hitam daftar putar",
-  "@blacklistPipedPlaylist": {
-    "description": "blacklistPipedPlaylist"
+  "invalidServerResponse": "Respons server tidak valid.",
+  "@invalidServerResponse": {
+    "description": "invalidServerResponse"
   },
-  "sharePlaylist": "Bagikan daftar putar",
-  "@sharePlaylist": {
-    "description": "sharePlaylist"
+  "invalidSessionToken": "Sesi ini tidak berisi token yang valid.",
+  "@invalidSessionToken": {
+    "description": "invalidSessionToken"
   },
-  "playlist": "Daftar putar",
-  "@playlist": {
-    "description": "playlist"
+  "items": "Item",
+  "@items": {
+    "description": "items"
   },
-  "sortByName": "Urutkan berdasarkan nama",
-  "@sortByName": {
-    "description": "sortByName"
+  "keepListening": "terus mendengarkan",
+  "@keepListening": {
+    "description": "keepListening"
   },
-  "sortByDate": "Urutkan berdasarkan tanggal",
-  "@sortByDate": {
-    "description": "sortByDate"
+  "keepScreenOnWhilePlaying": "Pertahankan layar tetap hidup saat memutar",
+  "@keepScreenOnWhilePlaying": {
+    "description": "keepScreenOnWhilePlaying"
   },
-  "sortByDuration": "Urutkan berdasarkan durasi",
-  "@sortByDuration": {
-    "description": "sortByDuration"
+  "keepScreenOnWhilePlayingDes": "Jika diaktifkan, layar perangkat akan tetap menyala saat musik sedang diputar",
+  "@keepScreenOnWhilePlayingDes": {
+    "description": "keepScreenOnWhilePlayingDes"
   },
-  "sortAscendNDescend": "Urutkan naik/turun",
-  "@sortAscendNDescend": {
-    "description": "sortAscendNDescend"
+  "language": "Bahasa",
+  "@language": {
+    "description": "language"
   },
-  "migration_summary_start": "Migrasi selesai dari {source}.",
-  "@migration_summary_start": {
-    "placeholders": {
-      "source": {
-        "type": "String"
-      }
-    },
-    "description": "migration_summary_start"
+  "languageDes": "Setel bahasa Aplikasi",
+  "@languageDes": {
+    "description": "languageDes"
   },
-  "migration_summary_playlists": "Daftar Putar: {count}",
-  "@migration_summary_playlists": {
-    "placeholders": {
-      "count": {
-        "type": "num"
-      }
-    },
-    "description": "migration_summary_playlists"
+  "latestRelease": "Rilis terbaru",
+  "@latestRelease": {
+    "description": "latestRelease"
   },
-  "migration_summary_songs": "Lagu: {count}",
-  "@migration_summary_songs": {
-    "placeholders": {
-      "count": {
-        "type": "num"
-      }
-    },
-    "description": "migration_summary_songs"
+  "latestVersion": "Versi Terbaru Tersedia",
+  "@latestVersion": {
+    "description": "latestVersion"
   },
-  "migration_summary_favorites": "Favorit: {count}",
-  "@migration_summary_favorites": {
-    "placeholders": {
-      "count": {
-        "type": "num"
-      }
-    },
-    "description": "migration_summary_favorites"
+  "letsStrart": "Mari mulai..",
+  "@letsStrart": {
+    "description": "letsStrart"
+  },
+  "libAlbums": "Pustaka Album",
+  "@libAlbums": {
+    "description": "libAlbums"
+  },
+  "libArtists": "Pustaka Artis",
+  "@libArtists": {
+    "description": "libArtists"
+  },
+  "libPlaylists": "Pustaka Daftar Putar",
+  "@libPlaylists": {
+    "description": "libPlaylists"
+  },
+  "libSongs": "Pustaka Lagu",
+  "@libSongs": {
+    "description": "libSongs"
+  },
+  "library": "Pustaka",
+  "@library": {
+    "description": "library"
+  },
+  "libraryPlaylistDescription": "Daftar Putar Perpustakaan",
+  "@libraryPlaylistDescription": {
+    "description": "libraryPlaylistDescription"
+  },
+  "light": "Terang",
+  "@light": {
+    "description": "light"
+  },
+  "link": "Tautan",
+  "@link": {
+    "description": "link"
+  },
+  "linkAlert": "Berhasil ditautkan!",
+  "@linkAlert": {
+    "description": "linkAlert"
+  },
+  "linkCopied": "Tautan disalin ke papan klip",
+  "@linkCopied": {
+    "description": "linkCopied"
+  },
+  "linkPipedDes": "Tautan dengan saluran untuk daftar putar",
+  "@linkPipedDes": {
+    "description": "linkPipedDes"
+  },
+  "listenNow": "Dengarkan sekarang",
+  "@listenNow": {
+    "description": "listenNow"
+  },
+  "listeningToEnvironment": "Mendengarkan lingkungan...",
+  "@listeningToEnvironment": {
+    "description": "listeningToEnvironment"
+  },
+  "loadInfoUpdate": "Tidak dapat memuat informasi pembaruan",
+  "@loadInfoUpdate": {
+    "description": "loadInfoUpdate"
+  },
+  "local": "Lokal",
+  "@local": {
+    "description": "local"
+  },
+  "local_b1": "Ini berfungsi tanpa perlu masuk.",
+  "@local_b1": {
+    "description": "local_b1"
+  },
+  "local_b2": "Seluruh perpustakaan Anda tetap ada di komputer ini.",
+  "@local_b2": {
+    "description": "local_b2"
+  },
+  "local_b3": "Catatan: Tidak ada pencadangan cloud manual. Jika Anda kehilangan perangkat atau mencopot pemasangan aplikasi, data Anda tidak dapat dipulihkan.",
+  "@local_b3": {
+    "description": "local_b3"
+  },
+  "local_btn": "Gunakan hanya di perangkat ini",
+  "@local_btn": {
+    "description": "local_btn"
+  },
+  "local_subtitle": "Privasi mutlak di perangkat Anda",
+  "@local_subtitle": {
+    "description": "local_subtitle"
+  },
+  "local_title": "Modus Lokal",
+  "@local_title": {
+    "description": "local_title"
+  },
+  "loudnessDb": "Kekerasan Suara dB",
+  "@loudnessDb": {
+    "description": "loudnessDb"
+  },
+  "loudnessNormalization": "Normalisasi kekerasan suara",
+  "@loudnessNormalization": {
+    "description": "loudnessNormalization"
+  },
+  "loudnessNormalizationDes": "Atur level kekerasan suara yang sama untuk semua lagu (Eksperimental) (Tidak akan berfungsi pada lagu yang diunduh di versi sebelumnya (< v1.10.0))",
+  "@loudnessNormalizationDes": {
+    "description": "loudnessNormalizationDes"
+  },
+  "low": "Rendah",
+  "@low": {
+    "description": "low"
+  },
+  "lyrics": "Surat",
+  "@lyrics": {
+    "description": "lyrics"
+  },
+  "lyricsNotAvailable": "Lirik tidak tersedia!",
+  "@lyricsNotAvailable": {
+    "description": "lyricsNotAvailable"
+  },
+  "manageCollaborators": "Kelola kolaborator (teman)",
+  "@manageCollaborators": {
+    "description": "manageCollaborators"
+  },
+  "metadataApplySuccess": "Metadata tertanam dalam berkas lokal.",
+  "@metadataApplySuccess": {
+    "description": "Success message after writing local tags"
+  },
+  "metadataNoResults": "Tak ada yang cocok. Cobalah pencarian yang berbeda.",
+  "@metadataNoResults": {
+    "description": "Empty state for metadata search"
+  },
+  "metadataOperationFailed": "Operasi metadata gagal.",
+  "@metadataOperationFailed": {
+    "description": "Generic metadata lookup or write error"
+  },
+  "metadataOverwriteWarning": "Ini akan menimpa judul, artis, dan sampul yang tertanam saat mempertahankan ruas yang cocok tidak menyediakan.",
+  "@metadataOverwriteWarning": {
+    "description": "Confirmation before writing tags to a local audio file"
+  },
+  "metadataSearchDescription": "Pilih yang benar untuk memasukkan judul, artis, album, dan sampul dalam berkas lokal.",
+  "@metadataSearchDescription": {
+    "description": "Explanation shown above metadata search results"
+  },
+  "metadataSearchHint": "Nama artis atau lagu",
+  "@metadataSearchHint": {
+    "description": "Hint for the metadata search field"
+  },
+  "metadataSearchTitle": "Identifikasi lagu",
+  "@metadataSearchTitle": {
+    "description": "Title of the local song metadata search dialog"
+  },
+  "micInstruction": "Pastikan musik diputar cukup keras di dekat mikrofon Anda.",
+  "@micInstruction": {
+    "description": "micInstruction"
+  },
+  "migratedAlbum": "Album yang dimigrasi",
+  "@migratedAlbum": {
+    "description": "migratedAlbum"
+  },
+  "migratedLibrary": "Perpustakaan yang dimigrasi",
+  "@migratedLibrary": {
+    "description": "migratedLibrary"
+  },
+  "migratedPlaylist": "Daftar Putar yang Dimigrasi",
+  "@migratedPlaylist": {
+    "description": "migratedPlaylist"
+  },
+  "migrationAlreadyRunning": "Sudah ada migrasi yang sedang berlangsung.",
+  "@migrationAlreadyRunning": {
+    "description": "migrationAlreadyRunning"
+  },
+  "migrationAnalyzingLocal": "Menganalisis perpustakaan lokal...",
+  "@migrationAnalyzingLocal": {
+    "description": "migrationAnalyzingLocal"
+  },
+  "migrationCheckingCloud": "Memeriksa apakah EMusic Cloud sudah memiliki perpustakaan...",
+  "@migrationCheckingCloud": {
+    "description": "migrationCheckingCloud"
+  },
+  "migrationCompleted": "Migrasi selesai.",
+  "@migrationCompleted": {
+    "description": "migrationCompleted"
+  },
+  "migrationCreatingBackup": "Membuat cadangan lokal sebelum menghubungkan cloud...",
+  "@migrationCreatingBackup": {
+    "description": "migrationCreatingBackup"
+  },
+  "migrationFailedLocalPreserved": "Migrasi gagal. Data lokal Anda tidak diubah.",
+  "@migrationFailedLocalPreserved": {
+    "description": "migrationFailedLocalPreserved"
+  },
+  "migrationLoginRequired": "Masuk ke Joss Red sebelum bermigrasi.",
+  "@migrationLoginRequired": {
+    "description": "migrationLoginRequired"
+  },
+  "migrationPreparingCloud": "Mempersiapkan migrasi di EMusic Cloud...",
+  "@migrationPreparingCloud": {
+    "description": "migrationPreparingCloud"
+  },
+  "migrationStartFailed": "EMusic Cloud tidak dapat memulai migrasi.",
+  "@migrationStartFailed": {
+    "description": "migrationStartFailed"
+  },
+  "migrationUploadIncomplete": "Tidak semua data dapat diunggah. Kami menjaga dukungan lokal Anda.",
+  "@migrationUploadIncomplete": {
+    "description": "migrationUploadIncomplete"
+  },
+  "migrationUploadingData": "Mengunggah daftar putar, favorit, dan riwayat...",
+  "@migrationUploadingData": {
+    "description": "migrationUploadingData"
+  },
+  "migrationValidationFailed": "EMusic Cloud tidak dapat memvalidasi migrasi.",
+  "@migrationValidationFailed": {
+    "description": "migrationValidationFailed"
+  },
+  "migrationVerifyingIntegrity": "Memverifikasi integritas di EMusic Cloud...",
+  "@migrationVerifyingIntegrity": {
+    "description": "migrationVerifyingIntegrity"
+  },
+  "migration_btn_select": "Pilih file dan impor",
+  "@migration_btn_select": {
+    "description": "migration_btn_select"
+  },
+  "migration_select_file_dialog": "Pilih song.db atau cadangan .backup",
+  "@migration_select_file_dialog": {
+    "description": "migration_select_file_dialog"
+  },
+  "migration_success": "Migrasi berhasil diselesaikan.",
+  "@migration_success": {
+    "description": "migration_success"
   },
   "migration_summary_albums": "Album: {count}",
   "@migration_summary_albums": {
@@ -2185,121 +1207,1166 @@
     },
     "description": "migration_summary_artists"
   },
-  "migration_select_file_dialog": "Pilih song.db atau cadangan .backup",
-  "@migration_select_file_dialog": {
-    "description": "migration_select_file_dialog"
+  "migration_summary_favorites": "Favorit: {count}",
+  "@migration_summary_favorites": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_favorites"
   },
-  "migration_success": "Migrasi berhasil diselesaikan.",
-  "@migration_success": {
-    "description": "migration_success"
+  "migration_summary_playlists": "Daftar Putar: {count}",
+  "@migration_summary_playlists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_playlists"
   },
-  "backup_select_folder_dialog": "Pilih folder untuk cadangan",
-  "@backup_select_folder_dialog": {
-    "description": "backup_select_folder_dialog"
+  "migration_summary_songs": "Lagu: {count}",
+  "@migration_summary_songs": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_songs"
+  },
+  "migration_summary_start": "Migrasi selesai dari {source}.",
+  "@migration_summary_start": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      }
+    },
+    "description": "migration_summary_start"
+  },
+  "minutes": "menit",
+  "@minutes": {
+    "description": "minutes"
+  },
+  "misc": "Lain-lain",
+  "@misc": {
+    "description": "misc"
+  },
+  "mostListenedSong": "Lagu yang paling banyak didengarkan",
+  "@mostListenedSong": {
+    "description": "mostListenedSong"
+  },
+  "musicAndPlayback": "Musik & Pemutaran",
+  "@musicAndPlayback": {
+    "description": "musicAndPlayback"
+  },
+  "musicRecognition": "Pengenalan Musik",
+  "@musicRecognition": {
+    "description": "musicRecognition"
+  },
+  "networkError": "Jaringan bermasalah! Periksa koneksi jaringan anda.",
+  "@networkError": {
+    "description": "networkError"
+  },
+  "networkError1": "Ups, ada kesalahan jaringan!",
+  "@networkError1": {
+    "description": "networkError1"
+  },
+  "newVersionAvailable": "Versi baru tersedia!",
+  "@newVersionAvailable": {
+    "description": "newVersionAvailable"
+  },
+  "news_btn_app": "Aplikasi Joss Red (Play Store)",
+  "@news_btn_app": {
+    "description": "news_btn_app"
+  },
+  "news_btn_dismiss": "Dipahami",
+  "@news_btn_dismiss": {
+    "description": "news_btn_dismiss"
+  },
+  "news_btn_web": "Joss Web Merah",
+  "@news_btn_web": {
+    "description": "news_btn_web"
+  },
+  "news_card_subtitle": "Sinkronisasi 100% dengan Joss Red, playlist dengan teman, dan banyak lagi. Ketuk untuk melihat apa yang baru.",
+  "@news_card_subtitle": {
+    "description": "news_card_subtitle"
+  },
+  "news_card_title": "Musik Estrella telah berevolusi!",
+  "@news_card_title": {
+    "description": "news_card_title"
+  },
+  "news_dialog_friends_desc": "Untuk menambah teman, menerima permintaan, atau mengelola profil keamanan Anda, silakan gunakan Joss Red di platform resminya:",
+  "@news_dialog_friends_desc": {
+    "description": "news_dialog_friends_desc"
+  },
+  "news_dialog_section_friends": "Teman dan Manajemen Akun:",
+  "@news_dialog_section_friends": {
+    "description": "news_dialog_section_friends"
+  },
+  "news_dialog_title": "Berita Musik Estrella",
+  "@news_dialog_title": {
+    "description": "news_dialog_title"
+  },
+  "news_item_collab_desc": "Buat daftar putar dengan teman-teman Anda! Saat membuat daftar putar, pilih kotak centang Kolaboratif dan pilih teman Anda untuk diedit bersama.",
+  "@news_item_collab_desc": {
+    "description": "news_item_collab_desc"
+  },
+  "news_item_collab_title": "Daftar Putar Kolaboratif",
+  "@news_item_collab_title": {
+    "description": "news_item_collab_title"
+  },
+  "news_item_sync_desc": "Daftar putar dan favorit Anda kini disimpan dan disinkronkan di cloud secara otomatis dengan akun utama Joss Red Anda.",
+  "@news_item_sync_desc": {
+    "description": "news_item_sync_desc"
+  },
+  "news_item_sync_title": "Integrasi Penuh dengan Joss Red",
+  "@news_item_sync_title": {
+    "description": "news_item_sync_title"
+  },
+  "news_item_trans_desc": "Anda tidak perlu lagi mengklik tombol sinkronisasi manual; Motor baru bertanggung jawab untuk berpindah ke atas dan ke bawah secara otomatis.",
+  "@news_item_trans_desc": {
+    "description": "news_item_trans_desc"
+  },
+  "news_item_trans_title": "Sinkronisasi Transparan",
+  "@news_item_trans_title": {
+    "description": "news_item_trans_title"
+  },
+  "no": "Tidak",
+  "@no": {
+    "description": "no"
+  },
+  "noBookmarks": "Tidak ada penanda!",
+  "@noBookmarks": {
+    "description": "noBookmarks"
+  },
+  "noJossRedFriends": "Anda tidak memiliki teman tambahan di Joss Red.",
+  "@noJossRedFriends": {
+    "description": "noJossRedFriends"
+  },
+  "noLibPlaylist": "Anda tidak memiliki pustaka daftar putar!",
+  "@noLibPlaylist": {
+    "description": "noLibPlaylist"
+  },
+  "noMatchInstruction": "Tidak dapat menemukan lagu apa pun dalam rekaman audio",
+  "@noMatchInstruction": {
+    "description": "noMatchInstruction"
+  },
+  "noMatchesFound": "Tidak Ada Kecocokan",
+  "@noMatchesFound": {
+    "description": "noMatchesFound"
+  },
+  "noOfflineSong": "Tidak ada lagu offline!",
+  "@noOfflineSong": {
+    "description": "noOfflineSong"
+  },
+  "noSongsInCollection": "Tidak ada lagu dalam koleksi ini",
+  "@noSongsInCollection": {
+    "description": "noSongsInCollection"
+  },
+  "nomatch": "Tidak ditemukan kecocokan untuk",
+  "@nomatch": {
+    "description": "nomatch"
+  },
+  "notAuthenticated": "Tidak diautentikasi",
+  "@notAuthenticated": {
+    "description": "notAuthenticated"
+  },
+  "notaSongVideo": "Bukan Lagu/Video Musik!",
+  "@notaSongVideo": {
+    "description": "notaSongVideo"
+  },
+  "notaValidLink": "Bukan tautan yang valid!",
+  "@notaValidLink": {
+    "description": "notaValidLink"
+  },
+  "openIn": "Buka di",
+  "@openIn": {
+    "description": "openIn"
+  },
+  "operationFailed": "Operasi gagal",
+  "@operationFailed": {
+    "description": "operationFailed"
+  },
+  "password": "Sandi",
+  "@password": {
+    "description": "password"
+  },
+  "password_text": "Kata sandi",
+  "@password_text": {
+    "description": "Contraseña texto traducido"
+  },
+  "permissionDenied": "Izin ditolak",
+  "@permissionDenied": {
+    "description": "permissionDenied"
+  },
+  "permissionsAllow": "Mengizinkan",
+  "@permissionsAllow": {
+    "description": "permissionsAllow"
+  },
+  "permissionsConsentDescription": "Estrella Music memerlukan izin ini untuk mengelola musik Anda dan menawarkan semua fitur pemutaran.",
+  "@permissionsConsentDescription": {
+    "description": "permissionsConsentDescription"
+  },
+  "permissionsConsentTitle": "Izin untuk memulai",
+  "@permissionsConsentTitle": {
+    "description": "permissionsConsentTitle"
+  },
+  "permissionsContinueButton": "Berikan izin yang diperlukan",
+  "@permissionsContinueButton": {
+    "description": "permissionsContinueButton"
+  },
+  "permissionsMicrophoneDescription": "Ini hanya digunakan ketika Anda memilih untuk mengidentifikasi lagu yang diputar di sekitar Anda.",
+  "@permissionsMicrophoneDescription": {
+    "description": "permissionsMicrophoneDescription"
+  },
+  "permissionsMicrophoneTitle": "Mikropon",
+  "@permissionsMicrophoneTitle": {
+    "description": "permissionsMicrophoneTitle"
+  },
+  "permissionsNotificationsDescription": "Menampilkan kontrol pemutaran, kemajuan pengunduhan, dan pemberitahuan aplikasi penting.",
+  "@permissionsNotificationsDescription": {
+    "description": "permissionsNotificationsDescription"
+  },
+  "permissionsNotificationsTitle": "Pemberitahuan",
+  "@permissionsNotificationsTitle": {
+    "description": "permissionsNotificationsTitle"
+  },
+  "permissionsOpenSettings": "Pengaturan",
+  "@permissionsOpenSettings": {
+    "description": "permissionsOpenSettings"
+  },
+  "permissionsRequiredNotice": "Ketiga izin tersebut diperlukan untuk melanjutkan. Anda dapat mengubahnya nanti di pengaturan sistem.",
+  "@permissionsRequiredNotice": {
+    "description": "permissionsRequiredNotice"
+  },
+  "permissionsStorageDescription": "Ini memungkinkan Anda memutar musik, menyimpan unduhan, mengekspor daftar putar, dan menyiapkan pembaruan.",
+  "@permissionsStorageDescription": {
+    "description": "permissionsStorageDescription"
+  },
+  "permissionsStorageTitle": "Musik dan penyimpanan",
+  "@permissionsStorageTitle": {
+    "description": "permissionsStorageTitle"
+  },
+  "personalisation": "Personalisasi",
+  "@personalisation": {
+    "description": "personalisation"
+  },
+  "pipedPlaylistDescription": "Daftar Putar yang Disalurkan",
+  "@pipedPlaylistDescription": {
+    "description": "pipedPlaylistDescription"
+  },
+  "pipedplstSyncAlert": "Daftar putar yang disalurkan tersinkronkan!",
+  "@pipedplstSyncAlert": {
+    "description": "pipedplstSyncAlert"
+  },
+  "plain": "Polos",
+  "@plain": {
+    "description": "plain"
+  },
+  "play": "Mainkan",
+  "@play": {
+    "description": "play"
+  },
+  "playNext": "Putar berikutnya",
+  "@playNext": {
+    "description": "playNext"
+  },
+  "playNow": "Mainkan Sekarang",
+  "@playNow": {
+    "description": "playNow"
+  },
+  "playbackSpeed": "Kecepatan pemutaran",
+  "@playbackSpeed": {
+    "description": "playbackSpeed"
+  },
+  "playerUi": "Antarmuka Pengguna",
+  "@playerUi": {
+    "description": "playerUi"
+  },
+  "playerUiDes": "Pilih antarmuka pengguna",
+  "@playerUiDes": {
+    "description": "playerUiDes"
+  },
+  "playingRecognizedTrack": "Bermain:",
+  "@playingRecognizedTrack": {
+    "description": "playingRecognizedTrack"
+  },
+  "playingfromAlbum": "MEMUTAR LAGU DARI ALBUM",
+  "@playingfromAlbum": {
+    "description": "playingfromAlbum"
+  },
+  "playingfromArtist": "MEMUTAR LAGU DARI ARTIS",
+  "@playingfromArtist": {
+    "description": "playingfromArtist"
+  },
+  "playingfromPlaylist": "MEMUTAR LAGU DARI DAFTAR PUTAR",
+  "@playingfromPlaylist": {
+    "description": "playingfromPlaylist"
+  },
+  "playingfromSelection": "MEMUTAR LAGU YANG DI-SELEKSI",
+  "@playingfromSelection": {
+    "description": "playingfromSelection"
+  },
+  "playlist": "Daftar putar",
+  "@playlist": {
+    "description": "playlist"
+  },
+  "playlistBlacklistAlert": "Daftar putar masuk daftar hitam!",
+  "@playlistBlacklistAlert": {
+    "description": "playlistBlacklistAlert"
+  },
+  "playlistBookmarkAddAlert": "Daftar putar ditandai!",
+  "@playlistBookmarkAddAlert": {
+    "description": "playlistBookmarkAddAlert"
+  },
+  "playlistBookmarkRemoveAlert": "Bookmark daftar putar dihapus!",
+  "@playlistBookmarkRemoveAlert": {
+    "description": "playlistBookmarkRemoveAlert"
+  },
+  "playlistCollaboratorsTitle": "Kontributor daftar putar",
+  "@playlistCollaboratorsTitle": {
+    "description": "playlistCollaboratorsTitle"
+  },
+  "playlistCreatedAlert": "Daftar Putar dibuat!",
+  "@playlistCreatedAlert": {
+    "description": "playlistCreatedAlert"
+  },
+  "playlistCreatednsongAddedAlert": "Daftar Putar dibuat & lagu ditambahkan!",
+  "@playlistCreatednsongAddedAlert": {
+    "description": "playlistCreatednsongAddedAlert"
+  },
+  "playlistExportedMsg": "Daftar Putar sukses diekspor ke",
+  "@playlistExportedMsg": {
+    "description": "playlistExportedMsg"
+  },
+  "playlistImportedMsg": "Daftar putar sukses diimpor",
+  "@playlistImportedMsg": {
+    "description": "playlistImportedMsg"
+  },
+  "playlistRemovedAlert": "Daftar Putar di hapus!",
+  "@playlistRemovedAlert": {
+    "description": "playlistRemovedAlert"
+  },
+  "playlistRenameAlert": "Berhasil mengganti nama!",
+  "@playlistRenameAlert": {
+    "description": "playlistRenameAlert"
+  },
+  "playlists": "Daftar Putar",
+  "@playlists": {
+    "description": "playlists"
+  },
+  "playnextMsg": "Selanjutnya",
+  "@playnextMsg": {
+    "description": "playnextMsg"
+  },
+  "podcasts": "Podcast",
+  "@podcasts": {
+    "description": "podcasts"
+  },
+  "popularTracks": "Lagu populer",
+  "@popularTracks": {
+    "description": "popularTracks"
+  },
+  "processFiles": "Memproses file...",
+  "@processFiles": {
+    "description": "processFiles"
+  },
+  "processingAudio": "Memproses audio...",
+  "@processingAudio": {
+    "description": "processingAudio"
+  },
+  "profiles": "Profil",
+  "@profiles": {
+    "description": "profiles"
+  },
+  "queueLoop": "Ulangi Antrean",
+  "@queueLoop": {
+    "description": "queueLoop"
+  },
+  "queueLoopNotDisMsg1": "Mode ulangi antrean tidak dapat dinonaktifkan saat mode acak diaktifkan.",
+  "@queueLoopNotDisMsg1": {
+    "description": "queueLoopNotDisMsg1"
+  },
+  "queueLoopNotDisMsg2": "Mode ulangi antrean tidak dapat diaktifkan dalam mode radio.",
+  "@queueLoopNotDisMsg2": {
+    "description": "queueLoopNotDisMsg2"
+  },
+  "queueShufflingDeniedMsg": "Antrian tidak bisa diacak ketika mode acak diaktifkan",
+  "@queueShufflingDeniedMsg": {
+    "description": "queueShufflingDeniedMsg"
+  },
+  "queuerearrangingDeniedMsg": "Antrian tidak bisa diatur ulang ketika mode acak diaktifkan",
+  "@queuerearrangingDeniedMsg": {
+    "description": "queuerearrangingDeniedMsg"
+  },
+  "quickPics": "Seleksi cepat",
+  "@quickPics": {
+    "description": "quickPics"
+  },
+  "quickpicks": "Pilihan Cepat",
+  "@quickpicks": {
+    "description": "quickpicks"
+  },
+  "radioNotAvailable": "Radio tidak tersedia untuk artis ini!",
+  "@radioNotAvailable": {
+    "description": "radioNotAvailable"
+  },
+  "randomRadio": "Radio acak",
+  "@randomRadio": {
+    "description": "randomRadio"
+  },
+  "randomSelection": "Pilihan acak",
+  "@randomSelection": {
+    "description": "randomSelection"
+  },
+  "reArrangePlaylist": "Menyusun ulang daftar putar",
+  "@reArrangePlaylist": {
+    "description": "reArrangePlaylist"
+  },
+  "reArrangeSongs": "Atur ulang lagu",
+  "@reArrangeSongs": {
+    "description": "reArrangeSongs"
+  },
+  "readMore": "Baca selengkapnya",
+  "@readMore": {
+    "description": "readMore"
+  },
+  "recentSearches": "Pencarian terkini",
+  "@recentSearches": {
+    "description": "recentSearches"
+  },
+  "recentlyPlayed": "Baru Dimainkan",
+  "@recentlyPlayed": {
+    "description": "recentlyPlayed"
+  },
+  "recommend_cloud": "Kami merekomendasikan untuk mengaktifkan Mode Cloud untuk pengalaman seperti Spotify: sinkronisasi waktu nyata antara semua perangkat Anda dan pencadangan otomatis tanpa Anda harus melakukan apa pun.",
+  "@recommend_cloud": {
+    "description": "recommend_cloud"
+  },
+  "recommendedAlbums": "Direkomendasikan",
+  "@recommendedAlbums": {
+    "description": "recommendedAlbums"
+  },
+  "recommendedArtists": "Direkomendasikan",
+  "@recommendedArtists": {
+    "description": "recommendedArtists"
+  },
+  "removeFromCache": "Hapus dari cache",
+  "@removeFromCache": {
+    "description": "removeFromCache"
+  },
+  "removeFromLib": "Hapus dari Pustaka Lagu",
+  "@removeFromLib": {
+    "description": "removeFromLib"
+  },
+  "removeFromLibrary": "Hapus dari perpustakaan",
+  "@removeFromLibrary": {
+    "description": "removeFromLibrary"
+  },
+  "removeFromPlaylist": "Hapus dari daftar putar",
+  "@removeFromPlaylist": {
+    "description": "removeFromPlaylist"
+  },
+  "removeFromQueue": "Hapus dari antrian",
+  "@removeFromQueue": {
+    "description": "removeFromQueue"
+  },
+  "removeMultiple": "Hapus beberapa lagu",
+  "@removeMultiple": {
+    "description": "removeMultiple"
+  },
+  "removePlaylist": "Hapus Daftar Putar",
+  "@removePlaylist": {
+    "description": "removePlaylist"
+  },
+  "rename": "Ganti Nama",
+  "@rename": {
+    "description": "rename"
+  },
+  "renamePlaylist": "Ganti Nama Daftar Putar",
+  "@renamePlaylist": {
+    "description": "renamePlaylist"
+  },
+  "reproducedBy": "Direproduksi oleh",
+  "@reproducedBy": {
+    "description": "reproducedBy"
+  },
+  "reset": "Setel ulang",
+  "@reset": {
+    "description": "reset"
+  },
+  "resetToDefault": "Kembalikan pengaturan ke semula",
+  "@resetToDefault": {
+    "description": "resetToDefault"
+  },
+  "resetToDefaultDes": "Setel ulang pengaturan aplikasi ke semula (Diperlukan restart)",
+  "@resetToDefaultDes": {
+    "description": "resetToDefaultDes"
+  },
+  "resetToDefaultMsg": "Pengaturan telah direset ke semula, silakan restart aplikasi",
+  "@resetToDefaultMsg": {
+    "description": "resetToDefaultMsg"
+  },
+  "resetblacklistedplaylist": "Setel ulang daftar putar yang masuk daftar hitam",
+  "@resetblacklistedplaylist": {
+    "description": "resetblacklistedplaylist"
+  },
+  "resetblacklistedplaylistDes": "Setel ulang semua daftar putar yang masuk daftar hitam",
+  "@resetblacklistedplaylistDes": {
+    "description": "resetblacklistedplaylistDes"
+  },
+  "restartApp": "Mulai ulang Aplikasi",
+  "@restartApp": {
+    "description": "restartApp"
+  },
+  "restore": "Pulihkan",
+  "@restore": {
+    "description": "restore"
+  },
+  "restoreAppData": "Pulihkan data Aplikasi",
+  "@restoreAppData": {
+    "description": "restoreAppData"
+  },
+  "restoreLastPlaybackSession": "Pulihkan sesi pemutaran terakhir",
+  "@restoreLastPlaybackSession": {
+    "description": "restoreLastPlaybackSession"
+  },
+  "restoreLastPlaybackSessionDes": "Secara otomatis memulihkan sesi pemutaran terakhir saat aplikasi dibuka",
+  "@restoreLastPlaybackSessionDes": {
+    "description": "restoreLastPlaybackSessionDes"
+  },
+  "restoreMsg": "Berhasil dipulihkan!\nPerubahan akan diterapkan setelah dimulai ulang",
+  "@restoreMsg": {
+    "description": "restoreMsg"
+  },
+  "restoreSettingsAndPlaylists": "Pulihkan pengaturan dan daftar putar",
+  "@restoreSettingsAndPlaylists": {
+    "description": "restoreSettingsAndPlaylists"
+  },
+  "restoreSettingsAndPlaylistsDes": "Pulihkan semua pengaturan, data masuk, dan daftar putar dari file cadangan. Akan menimpa seluruh data saat ini",
+  "@restoreSettingsAndPlaylistsDes": {
+    "description": "restoreSettingsAndPlaylistsDes"
   },
   "restore_select_file_dialog": "Pilih file cadangan",
   "@restore_select_file_dialog": {
     "description": "restore_select_file_dialog"
   },
-  "auth_hint_email": "nama@mail.com",
-  "@auth_hint_email": {
-    "description": "auth_hint_email"
+  "restoring": "Memulihkan...",
+  "@restoring": {
+    "description": "restoring"
   },
-  "auth_error_invalid_email": "Masukkan email yang valid.",
-  "@auth_error_invalid_email": {
-    "description": "auth_error_invalid_email"
+  "results": "Hasil",
+  "@results": {
+    "description": "results"
+  },
+  "retry": "Coba Lagi!",
+  "@retry": {
+    "description": "retry"
+  },
+  "save": "Menyimpan",
+  "@save": {
+    "description": "save"
+  },
+  "savedAlbums": "Disimpan",
+  "@savedAlbums": {
+    "description": "savedAlbums"
+  },
+  "scanning": "Memindai...",
+  "@scanning": {
+    "description": "scanning"
+  },
+  "search": "Cari",
+  "@search": {
+    "description": "search"
+  },
+  "searchDes": "Lagu, Daftar Putar, Album atau Artis",
+  "@searchDes": {
+    "description": "searchDes"
+  },
+  "searchInLibrary": "Cari di Perpustakaan",
+  "@searchInLibrary": {
+    "description": "searchInLibrary"
+  },
+  "searchRes": "Hasil pencarian",
+  "@searchRes": {
+    "description": "searchRes"
+  },
+  "search_recent_title": "Pencarian terkini",
+  "@search_recent_title": {
+    "description": "search_recent_title"
+  },
+  "selectAll": "Pilih semua",
+  "@selectAll": {
+    "description": "selectAll"
+  },
+  "selectAuthIns": "Pilih Instans Auth",
+  "@selectAuthIns": {
+    "description": "selectAuthIns"
+  },
+  "selectAuthInsMsg": "Silakan pilih Contoh autentikasi!",
+  "@selectAuthInsMsg": {
+    "description": "selectAuthInsMsg"
+  },
+  "selectFile": "Pilih File",
+  "@selectFile": {
+    "description": "selectFile"
+  },
+  "selectSongs": "Pilih lagu",
+  "@selectSongs": {
+    "description": "selectSongs"
+  },
+  "selectedFileNotFound": "File yang dipilih tidak ditemukan.",
+  "@selectedFileNotFound": {
+    "description": "selectedFileNotFound"
+  },
+  "sessionExpiredLoginAgain": "Sesi Anda telah berakhir. Masuk lagi.",
+  "@sessionExpiredLoginAgain": {
+    "description": "sessionExpiredLoginAgain"
+  },
+  "setDiscoverContent": "Tetapkan konten yang dapat ditemukan",
+  "@setDiscoverContent": {
+    "description": "setDiscoverContent"
+  },
+  "settings": "Pengaturan",
+  "@settings": {
+    "description": "settings"
+  },
+  "settings_about_desc": "Tentang Musik Estrella",
+  "@settings_about_desc": {
+    "description": "settings_about_desc"
+  },
+  "settings_about_sub": "Versi, proyek sumber terbuka, dan GitHub.",
+  "@settings_about_sub": {
+    "description": "settings_about_sub"
+  },
+  "settings_account_desc": "Akun dan Sinkronisasi",
+  "@settings_account_desc": {
+    "description": "settings_account_desc"
+  },
+  "settings_account_sub": "Mode cloud, pencadangan, daftar teman, dan migrasi.",
+  "@settings_account_sub": {
+    "description": "settings_account_sub"
+  },
+  "settings_appearance_desc": "Animasi tema, bahasa, dan antarmuka.",
+  "@settings_appearance_desc": {
+    "description": "settings_appearance_desc"
+  },
+  "settings_cloud_backup": "Cadangan awan",
+  "@settings_cloud_backup": {
+    "description": "settings_cloud_backup"
+  },
+  "settings_cloud_backup_desc": "Unggah, pulihkan, dan kelola...",
+  "@settings_cloud_backup_desc": {
+    "description": "settings_cloud_backup_desc"
   },
   "settings_cloud_backup_dialog_desc": "Unggah cadangan aplikasi .hmb ke server dan, jika perlu, pulihkan cadangan yang disimpan.",
   "@settings_cloud_backup_dialog_desc": {
     "description": "settings_cloud_backup_dialog_desc"
   },
-  "delete": "Hapus",
-  "@delete": {
-    "description": "delete"
+  "settings_content_desc": "Temukan filter, integrasi dengan Piped dan cache.",
+  "@settings_content_desc": {
+    "description": "settings_content_desc"
   },
-  "in_app_storage": "Direktori penyimpanan internal",
-  "@in_app_storage": {
-    "description": "in_app_storage"
+  "settings_downloads_desc": "Unduhan dan Penyimpanan",
+  "@settings_downloads_desc": {
+    "description": "settings_downloads_desc"
   },
-  "auth_brand_description_1": "Kami menghadirkan login, registrasi, dan pemulihan kata sandi dari proyek sebelumnya, yang diadaptasi untuk aplikasi musik ini.",
-  "@auth_brand_description_1": {
-    "description": "auth_brand_description_1"
+  "settings_downloads_sub": "Format audio, folder dan unduhan otomatis.",
+  "@settings_downloads_sub": {
+    "description": "settings_downloads_sub"
   },
-  "auth_brand_description_2": "Sesi Anda berada di penyimpanan aman dan divalidasi dengan backend yang sama dengan yang sudah Anda gunakan.",
-  "@auth_brand_description_2": {
-    "description": "auth_brand_description_2"
+  "settings_general_section": "Umum",
+  "@settings_general_section": {
+    "description": "settings_general_section"
   },
-  "auth_brand_not_configured": "File .env perlu dikonfigurasi untuk menghubungkan backend otentikasi.",
-  "@auth_brand_not_configured": {
-    "description": "auth_brand_not_configured"
+  "settings_local_cloud_desc": "Pilih, migrasikan, atau tinjau status sinkronisasi dengan Joss Red.",
+  "@settings_local_cloud_desc": {
+    "description": "settings_local_cloud_desc"
   },
-  "auth_forgot_password_subtitle": "Kami akan mengirimkan petunjuknya ke email akun Anda.",
-  "@auth_forgot_password_subtitle": {
-    "description": "auth_forgot_password_subtitle"
+  "settings_local_cloud_title": "Mode Lokal / EMusic Cloud",
+  "@settings_local_cloud_title": {
+    "description": "settings_local_cloud_title"
   },
-  "auth_btn_send_email": "Kirim email",
-  "@auth_btn_send_email": {
-    "description": "auth_btn_send_email"
+  "settings_logout": "Keluar",
+  "@settings_logout": {
+    "description": "settings_logout"
   },
-  "auth_error_not_configured": "Backend autentikasi tidak ada untuk dikonfigurasi dalam file .env.",
-  "@auth_error_not_configured": {
-    "description": "auth_error_not_configured"
+  "settings_migration_desc": "Impor daftar putar, lagu...",
+  "@settings_migration_desc": {
+    "description": "settings_migration_desc"
   },
-  "auth_error_invalid_credentials": "Email atau kata sandi salah.",
-  "@auth_error_invalid_credentials": {
-    "description": "auth_error_invalid_credentials"
+  "settings_migration_title": "Bermigrasi dari Joss Music Kotlin",
+  "@settings_migration_title": {
+    "description": "settings_migration_title"
   },
-  "auth_error_not_verified": "Akun Anda belum diverifikasi.",
-  "@auth_error_not_verified": {
-    "description": "auth_error_not_verified"
+  "settings_my_friends": "teman-teman saya",
+  "@settings_my_friends": {
+    "description": "settings_my_friends"
   },
-  "auth_error_unknown": "Operasi tersebut tidak dapat diselesaikan.",
-  "@auth_error_unknown": {
-    "description": "auth_error_unknown"
+  "settings_my_friends_desc": "Kelola teman Joss Red Anda secara langsung.",
+  "@settings_my_friends_desc": {
+    "description": "settings_my_friends_desc"
   },
-  "auth_register_success": "Akun berhasil dibuat.",
-  "@auth_register_success": {
-    "description": "auth_register_success"
+  "settings_playback_desc": "Kualitas streaming, normalisasi, senyap, dan baterai.",
+  "@settings_playback_desc": {
+    "description": "settings_playback_desc"
   },
-  "auth_register_error": "Akun tidak dapat dibuat.",
-  "@auth_register_error": {
-    "description": "auth_register_error"
+  "settings_refresh_visitor_desc": "Buat ulang ID Online Music Anda jika konten Discover tidak dapat dimuat.",
+  "@settings_refresh_visitor_desc": {
+    "description": "settings_refresh_visitor_desc"
   },
-  "auth_recovery_email_sent": "Email terkirim.",
-  "@auth_recovery_email_sent": {
-    "description": "auth_recovery_email_sent"
+  "settings_refresh_visitor_title": "Segarkan ID (ID Pengunjung)",
+  "@settings_refresh_visitor_title": {
+    "description": "settings_refresh_visitor_title"
   },
-  "auth_recovery_email_error": "Tidak mungkin mengirim email.",
-  "@auth_recovery_email_error": {
-    "description": "auth_recovery_email_error"
+  "settings_visitor_error": "Kesalahan",
+  "@settings_visitor_error": {
+    "description": "settings_visitor_error"
   },
-  "latestVersion": "Versi Terbaru Tersedia",
-  "@latestVersion": {
-    "description": "latestVersion"
+  "settings_visitor_error_desc": "Pengidentifikasi baru tidak dapat dibuat. Silakan coba lagi nanti.",
+  "@settings_visitor_error_desc": {
+    "description": "settings_visitor_error_desc"
+  },
+  "settings_visitor_exception": "Terjadi kesalahan saat membuat ulang: {error}",
+  "@settings_visitor_exception": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    },
+    "description": "settings_visitor_exception"
+  },
+  "settings_visitor_updated": "Pengidentifikasi yang diperbarui",
+  "@settings_visitor_updated": {
+    "description": "settings_visitor_updated"
+  },
+  "settings_visitor_updated_desc": "ID Pengunjung baru berhasil dibuat.",
+  "@settings_visitor_updated_desc": {
+    "description": "settings_visitor_updated_desc"
+  },
+  "shareAlbum": "Bagikan album",
+  "@shareAlbum": {
+    "description": "shareAlbum"
+  },
+  "sharePlaylist": "Bagikan daftar putar",
+  "@sharePlaylist": {
+    "description": "sharePlaylist"
+  },
+  "shareSong": "Bagikan lagu ini",
+  "@shareSong": {
+    "description": "shareSong"
+  },
+  "shazamSearching": "Mencari kecocokan di database Shazam...",
+  "@shazamSearching": {
+    "description": "shazamSearching"
+  },
+  "shuffle": "Acak",
+  "@shuffle": {
+    "description": "shuffle"
+  },
+  "shuffleQueue": "Acak Antrean",
+  "@shuffleQueue": {
+    "description": "shuffleQueue"
+  },
+  "similarToTitle": "Mirip dengan _{title}",
+  "@similarToTitle": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    },
+    "description": "similarToTitle"
+  },
+  "singles": "Single",
+  "@singles": {
+    "description": "singles"
+  },
+  "skipSilence": "Lewati keheningan",
+  "@skipSilence": {
+    "description": "skipSilence"
+  },
+  "skipSilenceDes": "Keheningan akan dilewati dalam pemutaran musik",
+  "@skipSilenceDes": {
+    "description": "skipSilenceDes"
+  },
+  "sleepTimeSetAlert": "Timer tidur Anda telah diatur",
+  "@sleepTimeSetAlert": {
+    "description": "sleepTimeSetAlert"
+  },
+  "sleepTimer": "Pengatur Waktu Tidur",
+  "@sleepTimer": {
+    "description": "sleepTimer"
+  },
+  "slide_indicator": "Langkah _{current} dari 3",
+  "@slide_indicator": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      }
+    },
+    "description": "slide_indicator"
+  },
+  "songAddedToPlaylistAlert": "Lagu ditambahkan ke daftar putar!",
+  "@songAddedToPlaylistAlert": {
+    "description": "songAddedToPlaylistAlert"
+  },
+  "songAlreadyExists": "Lagu sudah ada!",
+  "@songAlreadyExists": {
+    "description": "songAlreadyExists"
+  },
+  "songAlreadyOfflineAlert": "Lagu sudah offline di cache",
+  "@songAlreadyOfflineAlert": {
+    "description": "songAlreadyOfflineAlert"
+  },
+  "songEnqueueAlert": "Lagu masuk dalam antrean!",
+  "@songEnqueueAlert": {
+    "description": "songEnqueueAlert"
+  },
+  "songFound": "Lagu Ditemukan!",
+  "@songFound": {
+    "description": "songFound"
+  },
+  "songInfo": "Info Lagu",
+  "@songInfo": {
+    "description": "songInfo"
+  },
+  "songNotPlayable": "Lagu ini tidak dapat diputar karena pembatasan server!",
+  "@songNotPlayable": {
+    "description": "songNotPlayable"
+  },
+  "songPitch": "nada lagu",
+  "@songPitch": {
+    "description": "songPitch"
+  },
+  "songRemovedAlert": "Dihapus dari",
+  "@songRemovedAlert": {
+    "description": "songRemovedAlert"
+  },
+  "songRemovedfromQueue": "Dihapus dari antrean!",
+  "@songRemovedfromQueue": {
+    "description": "songRemovedfromQueue"
+  },
+  "songRemovedfromQueueCurrSong": "Anda tidak dapat menghapus lagu yang sedang diputar",
+  "@songRemovedfromQueueCurrSong": {
+    "description": "songRemovedfromQueueCurrSong"
+  },
+  "songs": "Lagu",
+  "@songs": {
+    "description": "songs"
+  },
+  "songsImportedFromJossMusic": "Lagu diimpor dari Joss Music Kotlin",
+  "@songsImportedFromJossMusic": {
+    "description": "songsImportedFromJossMusic"
+  },
+  "sortAscendNDescend": "Urutkan naik/turun",
+  "@sortAscendNDescend": {
+    "description": "sortAscendNDescend"
+  },
+  "sortByDate": "Urutkan berdasarkan tanggal",
+  "@sortByDate": {
+    "description": "sortByDate"
+  },
+  "sortByDuration": "Urutkan berdasarkan durasi",
+  "@sortByDuration": {
+    "description": "sortByDuration"
+  },
+  "sortByName": "Urutkan berdasarkan nama",
+  "@sortByName": {
+    "description": "sortByName"
+  },
+  "speedAndPitch": "Kecepatan dan Pitch",
+  "@speedAndPitch": {
+    "description": "speedAndPitch"
+  },
+  "standard": "Standar",
+  "@standard": {
+    "description": "standard"
+  },
+  "startRadio": "Mulai radio",
+  "@startRadio": {
+    "description": "startRadio"
+  },
+  "startupScreen": "Buka saat startup",
+  "@startupScreen": {
+    "description": "startupScreen"
+  },
+  "startupScreenDescription": "Pilih bagian yang pertama kali dibuka oleh Estrella Music",
+  "@startupScreenDescription": {
+    "description": "startupScreenDescription"
+  },
+  "status": "Status",
+  "@status": {
+    "description": "status"
+  },
+  "stopMusicOnTaskClear": "Hentikan musik saat tugas selesai",
+  "@stopMusicOnTaskClear": {
+    "description": "stopMusicOnTaskClear"
+  },
+  "stopMusicOnTaskClearDes": "Pemutaran musik akan berhenti ketika Aplikasi dihapus dari pengelola tugas",
+  "@stopMusicOnTaskClearDes": {
+    "description": "stopMusicOnTaskClearDes"
+  },
+  "streamingQuality": "Kualitas streaming",
+  "@streamingQuality": {
+    "description": "streamingQuality"
+  },
+  "streamingQualityDes": "Kualitas streaming musik",
+  "@streamingQualityDes": {
+    "description": "streamingQualityDes"
+  },
+  "subscribers": "pelanggan",
+  "@subscribers": {
+    "description": "subscribers"
+  },
+  "swipe_prompt": "Geser untuk menjelajahi opsi ➔",
+  "@swipe_prompt": {
+    "description": "swipe_prompt"
+  },
+  "syncChangesConfirmed": "_{count} perubahan dilakukan.",
+  "@syncChangesConfirmed": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    },
+    "description": "syncChangesConfirmed"
+  },
+  "syncChangesSynced": "_{count} perubahan yang disinkronkan.",
+  "@syncChangesSynced": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    },
+    "description": "syncChangesSynced"
+  },
+  "syncCloudDownloadingExisting": "Mode awan diaktifkan. Mengunduh perpustakaan yang ada.",
+  "@syncCloudDownloadingExisting": {
+    "description": "syncCloudDownloadingExisting"
+  },
+  "syncCloudMigrationComplete": "Mode awan diaktifkan. Perpustakaan yang dimigrasi.",
+  "@syncCloudMigrationComplete": {
+    "description": "syncCloudMigrationComplete"
+  },
+  "syncCloudModeActive": "Mode awan aktif",
+  "@syncCloudModeActive": {
+    "description": "syncCloudModeActive"
+  },
+  "syncCloudPending": "Mode awan aktif. Sinkronisasi tertunda.",
+  "@syncCloudPending": {
+    "description": "syncCloudPending"
+  },
+  "syncDownloadFailed": "Gagal mengunduh sinkronisasi.",
+  "@syncDownloadFailed": {
+    "description": "syncDownloadFailed"
+  },
+  "syncDownloading": "Mengunduh perubahan EMusic...",
+  "@syncDownloading": {
+    "description": "syncDownloading"
+  },
+  "syncForceReplaceBackupSaved": "Backup Pemulihan: {path}",
+  "@syncForceReplaceBackupSaved": {
+    "placeholders": {
+      "path": {}
+    }
+  },
+  "syncForceReplaceConfirmAction": "Reemplazar y subir",
+  "@syncForceReplaceConfirmAction": {},
+  "syncForceReplaceConfirmBody": "Primero se creará un respaldo de recuperación. Después, las playlist, favoritos, historial, álbumes, artistas y ajustes musicales de EMusic Cloud se reemplazarán con los datos actuales de este dispositivo. No se puede deshacer desde el servidor.",
+  "@syncForceReplaceConfirmBody": {},
+  "syncForceReplaceConfirmTitle": "¿Remota musikal Reemplazar la biblioteca?",
+  "@syncForceReplaceConfirmTitle": {},
+  "syncForceReplaceCountMismatch": "Jumlah yang diunggah tidak cocok dengan perpustakaan lokal. Pengganti jarak jauh tidak dapat dikonfirmasi.",
+  "@syncForceReplaceCountMismatch": {},
+  "syncForceReplaceCreatingBackup": "Membuat backup pemulihan sebelum mengganti data awan...",
+  "@syncForceReplaceCreatingBackup": {},
+  "syncForceReplaceDescription": "Pausa laầronización pendiente y reemplaza a la fuerza tu biblioteca musical remota con los datos actuales de este dispositivo. Las descargas permanecen locales.",
+  "@syncForceReplaceDescription": {},
+  "syncForceReplaceFailed": "Awan EMusic tidak dapat menggantikan pustaka jarak jauh.",
+  "@syncForceReplaceFailed": {},
+  "syncForceReplaceFailedLocalPreserved": "Pengganti remote gagal. Data lokal dan bala bantuan pemulihanmu dijaga.",
+  "@syncForceReplaceFailedLocalPreserved": {},
+  "syncForceReplaceFailedTitle": "Upload tidak selesai",
+  "@syncForceReplaceFailedTitle": {},
+  "syncForceReplaceInProgress": "Menahan sinkronisasi, membuat cadangan, dan mengunggah pustaka lokal...",
+  "@syncForceReplaceInProgress": {},
+  "syncForceReplacePauseFailed": "Sinkronisasi saat ini tidak dapat diistirahatkan dengan aman. Coba lagi sebentar lagi.",
+  "@syncForceReplacePauseFailed": {},
+  "syncForceReplaceSuccess": "Pustaka musik jauh diganti dengan data perangkat saat ini.",
+  "@syncForceReplaceSuccess": {},
+  "syncForceReplaceSuccessTitle": "Upload selesai",
+  "@syncForceReplaceSuccessTitle": {},
+  "syncForceReplaceTitle": "Basis Cancelar;ronización y subir esta",
+  "@syncForceReplaceTitle": {},
+  "syncForceReplaceValidating": "Validasi perpustakaan upload sebelum mengganti data awan...",
+  "@syncForceReplaceValidating": {},
+  "syncLibrarySynced": "Perpustakaan yang disinkronkan.",
+  "@syncLibrarySynced": {
+    "description": "syncLibrarySynced"
+  },
+  "syncLibraryUpToDate": "Perpustakaan terkini.",
+  "@syncLibraryUpToDate": {
+    "description": "syncLibraryUpToDate"
+  },
+  "syncLocalChangesFirst": "Ada perubahan lokal baru. Mereka akan diunggah sebelum diunduh.",
+  "@syncLocalChangesFirst": {
+    "description": "syncLocalChangesFirst"
+  },
+  "syncLocalDeviceOnly": "Data Anda hanya disimpan di perangkat ini.",
+  "@syncLocalDeviceOnly": {
+    "description": "syncLocalDeviceOnly"
+  },
+  "syncLocalModeActive": "Mode lokal aktif",
+  "@syncLocalModeActive": {
+    "description": "syncLocalModeActive"
+  },
+  "syncOfflinePending": "Luring. Perubahan masih menunggu keputusan.",
+  "@syncOfflinePending": {
+    "description": "syncOfflinePending"
+  },
+  "syncOfflineRetry": "Luring. Perubahan disimpan untuk dicoba lagi.",
+  "@syncOfflineRetry": {
+    "description": "syncOfflineRetry"
+  },
+  "syncPlaylistSongs": "Sinkronkan lagu daftar putar",
+  "@syncPlaylistSongs": {
+    "description": "syncPlaylistSongs"
+  },
+  "syncUnconfirmedRetry": "EMusic tidak mengkonfirmasi semua perubahan tersebut. Mereka akan diadili ulang.",
+  "@syncUnconfirmedRetry": {
+    "description": "syncUnconfirmedRetry"
+  },
+  "syncUploadRetry": "Tidak bisa bangun. Ini akan dicoba lagi nanti.",
+  "@syncUploadRetry": {
+    "description": "syncUploadRetry"
+  },
+  "syncUploadSuccess": "Perubahan diunggah dengan benar.",
+  "@syncUploadSuccess": {
+    "description": "syncUploadSuccess"
+  },
+  "syncUploadSuccessWs": "Perubahan berhasil diunggah (WS).",
+  "@syncUploadSuccessWs": {
+    "description": "syncUploadSuccessWs"
+  },
+  "syncUploadWsRetry": "Tidak dapat mengunggah menggunakan WS. Ini akan dicoba lagi nanti.",
+  "@syncUploadWsRetry": {
+    "description": "syncUploadWsRetry"
+  },
+  "syncUploading": "Mengunggah perubahan ke EMusic...",
+  "@syncUploading": {
+    "description": "syncUploading"
+  },
+  "synced": "Tersinkronkan",
+  "@synced": {
+    "description": "synced"
+  },
+  "syncedLyricsNotAvailable": "lirik yang tersinkron tidak ada!",
+  "@syncedLyricsNotAvailable": {
+    "description": "syncedLyricsNotAvailable"
+  },
+  "systemDefault": "Bawaan sistem",
+  "@systemDefault": {
+    "description": "systemDefault"
+  },
+  "themeMode": "Mode Tema",
+  "@themeMode": {
+    "description": "themeMode"
+  },
+  "title": "Judul",
+  "@title": {
+    "description": "title"
+  },
+  "topMusicVid": "Video musik teratas",
+  "@topMusicVid": {
+    "description": "topMusicVid"
+  },
+  "topmusicvideos": "Video Musik Teratas",
+  "@topmusicvideos": {
+    "description": "topmusicvideos"
+  },
+  "trending": "Sedang tren",
+  "@trending": {
+    "description": "trending"
+  },
+  "unLink": "Putuskan tautan",
+  "@unLink": {
+    "description": "unLink"
+  },
+  "unlinkAlert": "Tautan berhasil dibatalkan!",
+  "@unlinkAlert": {
+    "description": "unlinkAlert"
+  },
+  "untitledSong": "Lagu tanpa judul",
+  "@untitledSong": {
+    "description": "untitledSong"
+  },
+  "upNext": "Selanjutnya",
+  "@upNext": {
+    "description": "upNext"
   },
   "updateApp": "Perbarui Aplikasi",
   "@updateApp": {
     "description": "updateApp"
   },
-  "loadInfoUpdate": "Tidak dapat memuat informasi pembaruan",
-  "@loadInfoUpdate": {
-    "description": "loadInfoUpdate"
+  "urlSearchDes": "Url terdeteksi, klik untuk membuka/memutar konten terkait",
+  "@urlSearchDes": {
+    "description": "urlSearchDes"
   },
-  "infoNotAvailable": "Informasi tidak tersedia",
-  "@infoNotAvailable": {
-    "description": "infoNotAvailable"
+  "useThisMetadata": "Gunakan metadata ini",
+  "@useThisMetadata": {
+    "description": "Button for selecting a metadata candidate"
   },
-  "developedBy": "Dikembangkan dan Dikelola oleh Joss Estrada (JOSPROX)",
-  "@developedBy": {
-    "description": "developedBy"
+  "userBlocked": "Pengguna yang diblokir",
+  "@userBlocked": {
+    "description": "userBlocked"
   },
-  "copyrightNotice": "© 2026JOSPROX. Lisensi GPL v3.0",
-  "@copyrightNotice": {
-    "description": "copyrightNotice"
+  "userListMissing": "Responsnya tidak berisi daftar pengguna.",
+  "@userListMissing": {
+    "description": "userListMissing"
   },
-  "syncForceReplaceTitle": "Basis Cancelar;ronización y subir esta",
-  "syncForceReplaceConfirmAction": "Reemplazar y subir",
-  "syncForceReplaceDescription": "Pausa laầronización pendiente y reemplaza a la fuerza tu biblioteca musical remota con los datos actuales de este dispositivo. Las descargas permanecen locales.",
-  "syncForceReplaceConfirmBody": "Primero se creará un respaldo de recuperación. Después, las playlist, favoritos, historial, álbumes, artistas y ajustes musicales de EMusic Cloud se reemplazarán con los datos actuales de este dispositivo. No se puede deshacer desde el servidor.",
-  "syncForceReplaceConfirmTitle": "¿Remota musikal Reemplazar la biblioteca?"
+  "userSearchFailed": "Tidak dapat mencari pengguna ({statusCode}).",
+  "@userSearchFailed": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    },
+    "description": "userSearchFailed"
+  },
+  "userUnblocked": "Pengguna tidak terkunci",
+  "@userUnblocked": {
+    "description": "userUnblocked"
+  },
+  "username": "Nama belakang",
+  "@username": {
+    "description": "username"
+  },
+  "video": "Video",
+  "@video": {
+    "description": "video"
+  },
+  "videos": "Video",
+  "@videos": {
+    "description": "videos"
+  },
+  "viewAll": "Lihat semua",
+  "@viewAll": {
+    "description": "viewAll"
+  },
+  "viewArtist": "Lihat Artis",
+  "@viewArtist": {
+    "description": "viewArtist"
+  },
+  "welcome_intro": "Kami telah memodernisasi platform kami. Sistem lama yang mengunggah cadangan manual telah dinonaktifkan. Anda sekarang memiliki dua cara yang jelas untuk mengelola perpustakaan musik Anda.",
+  "@welcome_intro": {
+    "description": "welcome_intro"
+  },
+  "welcome_subtitle": "Pilih bagaimana Anda ingin menikmati Estrella Music mulai sekarang.",
+  "@welcome_subtitle": {
+    "description": "welcome_subtitle"
+  },
+  "welcome_title": "Musik Anda, cara Anda",
+  "@welcome_title": {
+    "description": "welcome_title"
+  }
 }

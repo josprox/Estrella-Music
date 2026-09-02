@@ -44,7 +44,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m11(count) => "${count} 個の変更が同期されました。";
 
-  static String m12(statusCode) => "ユーザーを検索できませんでした (${statusCode})。";
+  static String m12(path) => "回復バックアップ:${path}";
+
+  static String m13(statusCode) => "ユーザーを検索できませんでした (${statusCode})。";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -437,6 +439,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "最初のホーム画面のコンテンツ数 (およそ) を選択します。少ないほど読み込みが速いです",
     ),
     "id": MessageLookupByLibrary.simpleMessage("ID"),
+    "identifySongMetadata": MessageLookupByLibrary.simpleMessage("メタデータの特定"),
     "ignoreBatOpt": MessageLookupByLibrary.simpleMessage("充電の最適化を無視"),
     "ignoreBatOptDes": MessageLookupByLibrary.simpleMessage(
       "通知やシステムの最適化により再生が止まる場合に有効化します",
@@ -535,6 +538,23 @@ class MessageLookup extends MessageLookupByLibrary {
     "manageCollaborators": MessageLookupByLibrary.simpleMessage(
       "コラボレーター（友達）を管理する",
     ),
+    "metadataApplySuccess": MessageLookupByLibrary.simpleMessage(
+      "ローカルファイルにメタデータが埋め込まれました。",
+    ),
+    "metadataNoResults": MessageLookupByLibrary.simpleMessage(
+      "マッチが見つかりません。 別の検索をお試しください。",
+    ),
+    "metadataOperationFailed": MessageLookupByLibrary.simpleMessage(
+      "メタデータ処理が失敗しました。",
+    ),
+    "metadataOverwriteWarning": MessageLookupByLibrary.simpleMessage(
+      "これにより、埋め込まれたタイトル、アーティスト、アルバム、カバーを上書きし、マッチが提供されないフィールドを保存します。",
+    ),
+    "metadataSearchDescription": MessageLookupByLibrary.simpleMessage(
+      "ローカルファイルにタイトル、アーティスト、アルバム、カバーを埋め込むための正しい一致を選択します。",
+    ),
+    "metadataSearchHint": MessageLookupByLibrary.simpleMessage("歌やアーティスト名"),
+    "metadataSearchTitle": MessageLookupByLibrary.simpleMessage("歌を識別する"),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
       "マイクの近くで音楽が十分な音量で再生されていることを確認してください。",
     ),
@@ -987,6 +1007,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncDownloading": MessageLookupByLibrary.simpleMessage(
       "EMusic の変更をダウンロードしています...",
     ),
+    "syncForceReplaceBackupSaved": m12,
     "syncForceReplaceConfirmAction": MessageLookupByLibrary.simpleMessage(
       "Reemplazar y subir",
     ),
@@ -996,11 +1017,42 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceConfirmTitle": MessageLookupByLibrary.simpleMessage(
       "¿Reemplazar la biblioteca musical remota?",
     ),
+    "syncForceReplaceCountMismatch": MessageLookupByLibrary.simpleMessage(
+      "アップロードされたカウントはローカルライブラリと一致しません。 リモート交換は確認できません。",
+    ),
+    "syncForceReplaceCreatingBackup": MessageLookupByLibrary.simpleMessage(
+      "クラウドデータを交換する前に回復バックアップを作成する...",
+    ),
     "syncForceReplaceDescription": MessageLookupByLibrary.simpleMessage(
       "Pausa la sincronización pendiente y reemplaza a la fuerza tu biblioteca musical remota con los datos actuales de este dispositivo. Las descargas permanecen loces.",
     ),
+    "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud はリモートライブラリを交換できません。",
+    ),
+    "syncForceReplaceFailedLocalPreserved":
+        MessageLookupByLibrary.simpleMessage(
+          "リモート交換が失敗しました。 ローカルデータとリカバリバックアップが保存されました。",
+        ),
+    "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
+      "アップロード完了していない",
+    ),
+    "syncForceReplaceInProgress": MessageLookupByLibrary.simpleMessage(
+      "ローカルライブラリの同期、バックアップの作成、およびアップロード",
+    ),
+    "syncForceReplacePauseFailed": MessageLookupByLibrary.simpleMessage(
+      "現行の同期は安全に使用できませんでした。 もう一度お試しください。",
+    ),
+    "syncForceReplaceSuccess": MessageLookupByLibrary.simpleMessage(
+      "リモートミュージックライブラリは、このデバイスの現在のデータに置き換えられました。",
+    ),
+    "syncForceReplaceSuccessTitle": MessageLookupByLibrary.simpleMessage(
+      "アップロード完了",
+    ),
     "syncForceReplaceTitle": MessageLookupByLibrary.simpleMessage(
       "キャンセルsincronización y subir esta base",
+    ),
+    "syncForceReplaceValidating": MessageLookupByLibrary.simpleMessage(
+      "アップロードされたライブラリを検証して、クラウドデータを交換する前に...",
     ),
     "syncLibrarySynced": MessageLookupByLibrary.simpleMessage("同期されたライブラリ。"),
     "syncLibraryUpToDate": MessageLookupByLibrary.simpleMessage("ライブラリは最新です。"),
@@ -1056,11 +1108,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "URLをクリックして、関連コンテンツを開く/再生",
     ),
+    "useThisMetadata": MessageLookupByLibrary.simpleMessage("このメタデータを使用する"),
     "userBlocked": MessageLookupByLibrary.simpleMessage("ブロックされたユーザー"),
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "応答にはユーザーのリストは含まれません。",
     ),
-    "userSearchFailed": m12,
+    "userSearchFailed": m13,
     "userUnblocked": MessageLookupByLibrary.simpleMessage("ロック解除されたユーザー"),
     "username": MessageLookupByLibrary.simpleMessage("ユーザー名"),
     "video": MessageLookupByLibrary.simpleMessage("ビデオ"),

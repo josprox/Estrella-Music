@@ -44,7 +44,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m11(count) => "${count} التغييرات المتزامنة.";
 
-  static String m12(statusCode) =>
+  static String m12(path) => "الاسترداد الاحتياطي: ${path}";
+
+  static String m13(statusCode) =>
       "تعذر البحث عن المستخدمين (_${statusCode}_).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -524,6 +526,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "حدد عدد محتوى الشاشة الرئيسية الأولي (تقريبًا). عدد أقل تحميل أسرع",
     ),
     "id": MessageLookupByLibrary.simpleMessage("رقم"),
+    "identifySongMetadata": MessageLookupByLibrary.simpleMessage(
+      "تحديد البيانات الوصفية",
+    ),
     "ignoreBatOpt": MessageLookupByLibrary.simpleMessage(
       "تجاهل تحسين البطارية",
     ),
@@ -648,6 +653,25 @@ class MessageLookup extends MessageLookupByLibrary {
     "manageCollaborators": MessageLookupByLibrary.simpleMessage(
       "إدارة المتعاونين (الأصدقاء)",
     ),
+    "metadataApplySuccess": MessageLookupByLibrary.simpleMessage(
+      "(ميتاداتا) كانت مدمجة في الملف المحلي",
+    ),
+    "metadataNoResults": MessageLookupByLibrary.simpleMessage(
+      "لا يوجد تطابق حاول بحث مختلف",
+    ),
+    "metadataOperationFailed": MessageLookupByLibrary.simpleMessage(
+      "عملية البيانات الفوقية فشلت",
+    ),
+    "metadataOverwriteWarning": MessageLookupByLibrary.simpleMessage(
+      "وهذا سيلغي اللقب المضمون، والفنان، والألبوم، والغطاء مع الحفاظ على أي حقول لا توفرها المباراة.",
+    ),
+    "metadataSearchDescription": MessageLookupByLibrary.simpleMessage(
+      "اختر المباراه الصحيحه لتنصت لقبها وفنانها وألبومها وغطائها في الملف المحلي",
+    ),
+    "metadataSearchHint": MessageLookupByLibrary.simpleMessage(
+      "اسم أغنية أو فنان",
+    ),
+    "metadataSearchTitle": MessageLookupByLibrary.simpleMessage("اغنية"),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
       "تأكد من تشغيل الموسيقى بصوت عالٍ بدرجة كافية بالقرب من الميكروفون.",
     ),
@@ -1200,6 +1224,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncDownloading": MessageLookupByLibrary.simpleMessage(
       "جارٍ تنزيل تغييرات EMusic...",
     ),
+    "syncForceReplaceBackupSaved": m12,
     "syncForceReplaceConfirmAction": MessageLookupByLibrary.simpleMessage(
       "Reemplazar y subir",
     ),
@@ -1209,14 +1234,42 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceConfirmTitle": MessageLookupByLibrary.simpleMessage(
       "¿Reemplazar la biblioteca musical remota ؟",
     ),
+    "syncForceReplaceCountMismatch": MessageLookupByLibrary.simpleMessage(
+      "الحسابات المحملة لا تتطابق مع المكتبة المحلية ولا يمكن تأكيد الاستبدال عن بعد.",
+    ),
+    "syncForceReplaceCreatingBackup": MessageLookupByLibrary.simpleMessage(
+      "إنشاء احتياطي للاسترداد قبل استبدال البيانات السحابية...",
+    ),
     "syncForceReplaceDescription": MessageLookupByLibrary.simpleMessage(
       "Pausa la sincronización pendiente y reemplaza a la fuerza tu biblioteca musical remota con los datos actuales de este dispositivo. Las descargas permanecen locales.",
+    ),
+    "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
+      "(إيموسيك كلود) لم يستطع استبدال المكتبة النائية",
+    ),
+    "syncForceReplaceFailedLocalPreserved":
+        MessageLookupByLibrary.simpleMessage(
+          "الاستبدال عن بعد فشل بياناتك المحلية و دعم الإنعاش تم حفظها",
+        ),
+    "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
+      "لم يكتمل",
     ),
     "syncForceReplaceInProgress": MessageLookupByLibrary.simpleMessage(
       "Pausando la sincronización, creando el respaldo y subiendo la biblioteca local...",
     ),
+    "syncForceReplacePauseFailed": MessageLookupByLibrary.simpleMessage(
+      "ولا يمكن تمهيد التزامن الحالي بأمان. حاول مرة أخرى في لحظة.",
+    ),
+    "syncForceReplaceSuccess": MessageLookupByLibrary.simpleMessage(
+      "تم استبدال مكتبة الموسيقى النائية مع البيانات الحالية لهذا الجهاز.",
+    ),
+    "syncForceReplaceSuccessTitle": MessageLookupByLibrary.simpleMessage(
+      "تم الانتهاء من تحديثها",
+    ),
     "syncForceReplaceTitle": MessageLookupByLibrary.simpleMessage(
       "إلغاء sincronización y subir esta base",
+    ),
+    "syncForceReplaceValidating": MessageLookupByLibrary.simpleMessage(
+      "تقييم المكتبة المحملة قبل استبدال البيانات السحابية",
     ),
     "syncLibrarySynced": MessageLookupByLibrary.simpleMessage("مكتبة متزامنة"),
     "syncLibraryUpToDate": MessageLookupByLibrary.simpleMessage(
@@ -1282,11 +1335,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "تم العثور على رابط، انقر عليه لفتح/تشغيل المحتوى المرتبط",
     ),
+    "useThisMetadata": MessageLookupByLibrary.simpleMessage(
+      "استخدم هذه البيانات",
+    ),
     "userBlocked": MessageLookupByLibrary.simpleMessage("مستخدم محظور"),
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "لا يحتوي الرد على قائمة المستخدمين.",
     ),
-    "userSearchFailed": m12,
+    "userSearchFailed": m13,
     "userUnblocked": MessageLookupByLibrary.simpleMessage("مستخدم غير مقفل"),
     "username": MessageLookupByLibrary.simpleMessage("اسم المستخدم"),
     "video": MessageLookupByLibrary.simpleMessage("فيديو"),

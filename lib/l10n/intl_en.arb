@@ -1,652 +1,208 @@
 {
   "@@locale": "en",
-  "home": "Home",
-  "@home": {
-    "description": "home"
-  },
-  "songs": "Songs",
-  "@songs": {
-    "description": "songs"
-  },
-  "playlists": "Playlists",
-  "@playlists": {
-    "description": "playlists"
-  },
-  "albums": "Albums",
-  "@albums": {
-    "description": "albums"
-  },
-  "album": "Album",
-  "@album": {
-    "description": "album"
-  },
-  "singles": "Singles",
-  "@singles": {
-    "description": "singles"
-  },
-  "artists": "Artists",
-  "@artists": {
-    "description": "artists"
-  },
-  "settings": "Settings",
-  "@settings": {
-    "description": "settings"
-  },
-  "library": "Library",
-  "@library": {
-    "description": "library"
-  },
-  "libSongs": "Library Songs",
-  "@libSongs": {
-    "description": "libSongs"
-  },
-  "migratedLibrary": "Migrated library",
-  "@migratedLibrary": {
-    "description": "migratedLibrary"
-  },
-  "noSongsInCollection": "There are no songs in this collection",
-  "@noSongsInCollection": {
-    "description": "noSongsInCollection"
-  },
-  "startupScreen": "Open on startup",
-  "@startupScreen": {
-    "description": "startupScreen"
-  },
-  "startupScreenDescription": "Choose the section that Estrella Music opens first",
-  "@startupScreenDescription": {
-    "description": "startupScreenDescription"
-  },
-  "friends": "Friends",
-  "@friends": {
-    "description": "friends"
-  },
-  "dailyDiscover": "Daily discovery",
-  "@dailyDiscover": {
-    "description": "dailyDiscover"
-  },
-  "keepListening": "keep listening",
-  "@keepListening": {
-    "description": "keepListening"
-  },
-  "similarToTitle": "Similar to {title}",
-  "@similarToTitle": {
-    "placeholders": {
-      "title": {
-        "type": "String"
-      }
-    },
-    "description": "similarToTitle"
-  },
-  "pipedPlaylistDescription": "Piped Playlist",
-  "@pipedPlaylistDescription": {
-    "description": "pipedPlaylistDescription"
-  },
-  "collaborativePlaylistDescription": "Collaborative Playlist",
-  "@collaborativePlaylistDescription": {
-    "description": "collaborativePlaylistDescription"
-  },
-  "libraryPlaylistDescription": "Library Playlist",
-  "@libraryPlaylistDescription": {
-    "description": "libraryPlaylistDescription"
-  },
-  "untitledSong": "Untitled song",
-  "@untitledSong": {
-    "description": "untitledSong"
-  },
-  "migratedPlaylist": "Migrated Playlist",
-  "@migratedPlaylist": {
-    "description": "migratedPlaylist"
-  },
-  "migratedAlbum": "Migrated album",
-  "@migratedAlbum": {
-    "description": "migratedAlbum"
-  },
-  "songsImportedFromJossMusic": "Songs imported from Joss Music Kotlin",
-  "@songsImportedFromJossMusic": {
-    "description": "songsImportedFromJossMusic"
-  },
-  "importedFromJossMusic": "Imported from Joss Music Kotlin",
-  "@importedFromJossMusic": {
-    "description": "importedFromJossMusic"
-  },
-  "syncLocalModeActive": "Local mode active",
-  "@syncLocalModeActive": {
-    "description": "syncLocalModeActive"
-  },
-  "syncCloudModeActive": "Cloud mode active",
-  "@syncCloudModeActive": {
-    "description": "syncCloudModeActive"
-  },
-  "syncCloudPending": "Cloud mode active. ",
-  "@syncCloudPending": {
-    "description": "syncCloudPending"
-  },
-  "syncCloudDownloadingExisting": "Cloud mode activated. ",
-  "@syncCloudDownloadingExisting": {
-    "description": "syncCloudDownloadingExisting"
-  },
-  "syncCloudMigrationComplete": "Cloud mode activated. ",
-  "@syncCloudMigrationComplete": {
-    "description": "syncCloudMigrationComplete"
-  },
-  "syncLocalDeviceOnly": "Your data is kept only on this device.",
-  "@syncLocalDeviceOnly": {
-    "description": "syncLocalDeviceOnly"
-  },
-  "syncDownloading": "Downloading EMusic changes...",
-  "@syncDownloading": {
-    "description": "syncDownloading"
-  },
-  "syncDownloadFailed": "Failed to download sync.",
-  "@syncDownloadFailed": {
-    "description": "syncDownloadFailed"
-  },
-  "syncLocalChangesFirst": "There are new local changes. ",
-  "@syncLocalChangesFirst": {
-    "description": "syncLocalChangesFirst"
-  },
-  "syncLibrarySynced": "Synchronized library.",
-  "@syncLibrarySynced": {
-    "description": "syncLibrarySynced"
-  },
-  "syncOfflinePending": "Offline. ",
-  "@syncOfflinePending": {
-    "description": "syncOfflinePending"
-  },
-  "syncLibraryUpToDate": "Library up to date.",
-  "@syncLibraryUpToDate": {
-    "description": "syncLibraryUpToDate"
-  },
-  "syncChangesSynced": "{count} synchronized changes.",
-  "@syncChangesSynced": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    },
-    "description": "syncChangesSynced"
-  },
-  "syncUploading": "Uploading changes to EMusic...",
-  "@syncUploading": {
-    "description": "syncUploading"
-  },
-  "syncUploadSuccessWs": "Changes uploaded successfully (WS).",
-  "@syncUploadSuccessWs": {
-    "description": "syncUploadSuccessWs"
-  },
-  "syncUploadWsRetry": "Could not upload using WS. ",
-  "@syncUploadWsRetry": {
-    "description": "syncUploadWsRetry"
-  },
-  "syncUploadSuccess": "Changes uploaded correctly.",
-  "@syncUploadSuccess": {
-    "description": "syncUploadSuccess"
-  },
-  "syncUploadRetry": "Could not get up. ",
-  "@syncUploadRetry": {
-    "description": "syncUploadRetry"
-  },
-  "syncOfflineRetry": "Offline. ",
-  "@syncOfflineRetry": {
-    "description": "syncOfflineRetry"
-  },
-  "syncUnconfirmedRetry": "EMusic did not confirm all the changes. ",
-  "@syncUnconfirmedRetry": {
-    "description": "syncUnconfirmedRetry"
-  },
-  "syncChangesConfirmed": "{count} changes committed.",
-  "@syncChangesConfirmed": {
-    "placeholders": {
-      "count": {
-        "type": "int"
-      }
-    },
-    "description": "syncChangesConfirmed"
-  },
-  "migrationAlreadyRunning": "There is already a migration in progress.",
-  "@migrationAlreadyRunning": {
-    "description": "migrationAlreadyRunning"
-  },
-  "migrationLoginRequired": "Log in to Joss Red before migrating.",
-  "@migrationLoginRequired": {
-    "description": "migrationLoginRequired"
-  },
-  "migrationCheckingCloud": "Checking if EMusic Cloud already has a library...",
-  "@migrationCheckingCloud": {
-    "description": "migrationCheckingCloud"
-  },
-  "cloudLibraryFoundDeviceWillDownload": "A cloud library was found. ",
-  "@cloudLibraryFoundDeviceWillDownload": {
-    "description": "cloudLibraryFoundDeviceWillDownload"
-  },
-  "cloudLibraryFound": "Cloud library found.",
-  "@cloudLibraryFound": {
-    "description": "cloudLibraryFound"
-  },
-  "migrationCreatingBackup": "Creating a local backup before connecting cloud...",
-  "@migrationCreatingBackup": {
-    "description": "migrationCreatingBackup"
-  },
-  "migrationAnalyzingLocal": "Analyzing the local library...",
-  "@migrationAnalyzingLocal": {
-    "description": "migrationAnalyzingLocal"
-  },
-  "migrationPreparingCloud": "Preparing the migration in EMusic Cloud...",
-  "@migrationPreparingCloud": {
-    "description": "migrationPreparingCloud"
-  },
-  "migrationStartFailed": "EMusic Cloud could not start the migration.",
-  "@migrationStartFailed": {
-    "description": "migrationStartFailed"
-  },
-  "migrationUploadingData": "Uploading playlists, favorites and history...",
-  "@migrationUploadingData": {
-    "description": "migrationUploadingData"
-  },
-  "migrationUploadIncomplete": "Not all data could be uploaded. ",
-  "@migrationUploadIncomplete": {
-    "description": "migrationUploadIncomplete"
-  },
-  "migrationVerifyingIntegrity": "Verifying integrity in EMusic Cloud...",
-  "@migrationVerifyingIntegrity": {
-    "description": "migrationVerifyingIntegrity"
-  },
-  "migrationValidationFailed": "EMusic Cloud could not validate the migration.",
-  "@migrationValidationFailed": {
-    "description": "migrationValidationFailed"
-  },
-  "cloudModeReadyOfflineCache": "Cloud mode is ready. ",
-  "@cloudModeReadyOfflineCache": {
-    "description": "cloudModeReadyOfflineCache"
-  },
-  "migrationCompleted": "Migration completed.",
-  "@migrationCompleted": {
-    "description": "migrationCompleted"
-  },
-  "migrationFailedLocalPreserved": "The migration failed. ",
-  "@migrationFailedLocalPreserved": {
-    "description": "migrationFailedLocalPreserved"
-  },
-  "sessionExpiredLoginAgain": "Your session has expired. ",
-  "@sessionExpiredLoginAgain": {
-    "description": "sessionExpiredLoginAgain"
-  },
-  "selectedFileNotFound": "The selected file was not found.",
-  "@selectedFileNotFound": {
-    "description": "selectedFileNotFound"
-  },
-  "genericAlbum": "Album",
-  "@genericAlbum": {
-    "description": "genericAlbum"
-  },
-  "friendsLoginRequired": "Sign in to find friends.",
-  "@friendsLoginRequired": {
-    "description": "friendsLoginRequired"
-  },
-  "invalidSessionToken": "The session does not contain a valid token.",
-  "@invalidSessionToken": {
-    "description": "invalidSessionToken"
-  },
-  "userSearchFailed": "Could not search for users ({statusCode}).",
-  "@userSearchFailed": {
-    "placeholders": {
-      "statusCode": {
-        "type": "int"
-      }
-    },
-    "description": "userSearchFailed"
-  },
-  "invalidServerResponse": "Invalid server response.",
-  "@invalidServerResponse": {
-    "description": "invalidServerResponse"
-  },
-  "userListMissing": "The response does not contain a list of users.",
-  "@userListMissing": {
-    "description": "userListMissing"
-  },
-  "playlistCollaboratorsTitle": "Playlist contributors",
-  "@playlistCollaboratorsTitle": {
-    "description": "playlistCollaboratorsTitle"
-  },
-  "collaboratorsInstruction": "Select the friends who will be able to see and edit this playlist:",
-  "@collaboratorsInstruction": {
-    "description": "collaboratorsInstruction"
-  },
-  "noJossRedFriends": "You have no added friends on Joss Red.",
-  "@noJossRedFriends": {
-    "description": "noJossRedFriends"
-  },
-  "friendFallback": "Friend",
-  "@friendFallback": {
-    "description": "friendFallback"
-  },
-  "collaboratorsUpdated": "Collaborators updated correctly.",
-  "@collaboratorsUpdated": {
-    "description": "collaboratorsUpdated"
-  },
-  "save": "Keep",
-  "@save": {
-    "description": "save"
-  },
-  "manageCollaborators": "Manage collaborators (friends)",
-  "@manageCollaborators": {
-    "description": "manageCollaborators"
-  },
-  "done": "Ready",
-  "@done": {
-    "description": "done"
-  },
-  "notAuthenticated": "Not authenticated",
-  "@notAuthenticated": {
-    "description": "notAuthenticated"
-  },
-  "genericError": "Mistake",
-  "@genericError": {
-    "description": "genericError"
-  },
-  "friendRequestSent": "Friend request sent",
-  "@friendRequestSent": {
-    "description": "friendRequestSent"
-  },
-  "friendRequestAccepted": "Friend request accepted",
-  "@friendRequestAccepted": {
-    "description": "friendRequestAccepted"
-  },
-  "friendshipRemoved": "Friendship removed",
-  "@friendshipRemoved": {
-    "description": "friendshipRemoved"
-  },
-  "userBlocked": "Blocked user",
-  "@userBlocked": {
-    "description": "userBlocked"
-  },
-  "userUnblocked": "Unlocked user",
-  "@userUnblocked": {
-    "description": "userUnblocked"
-  },
-  "artistsByTaste": "According to your tastes",
-  "@artistsByTaste": {
-    "description": "artistsByTaste"
-  },
-  "followedArtists": "followed",
-  "@followedArtists": {
-    "description": "followedArtists"
-  },
-  "recommendedArtists": "Recommended",
-  "@recommendedArtists": {
-    "description": "recommendedArtists"
-  },
-  "albumsByTaste": "According to your tastes",
-  "@albumsByTaste": {
-    "description": "albumsByTaste"
-  },
-  "savedAlbums": "Saved",
-  "@savedAlbums": {
-    "description": "savedAlbums"
-  },
-  "recommendedAlbums": "Recommended",
-  "@recommendedAlbums": {
-    "description": "recommendedAlbums"
-  },
-  "libPlaylists": "Library Playlists",
-  "@libPlaylists": {
-    "description": "libPlaylists"
-  },
-  "libAlbums": "Library Albums",
-  "@libAlbums": {
-    "description": "libAlbums"
-  },
-  "libArtists": "Library Artists",
-  "@libArtists": {
-    "description": "libArtists"
-  },
-  "communityplaylists": "Community Playlists",
-  "@communityplaylists": {
-    "description": "communityplaylists"
-  },
-  "featuredplaylists": "Featured Playlists",
-  "@featuredplaylists": {
-    "description": "featuredplaylists"
-  },
-  "items": "items",
-  "@items": {
-    "description": "items"
-  },
-  "networkError1": "Oops network error!",
-  "@networkError1": {
-    "description": "networkError1"
-  },
-  "retry": "Retry!",
-  "@retry": {
-    "description": "retry"
-  },
-  "noOfflineSong": "No offline songs!",
-  "@noOfflineSong": {
-    "description": "noOfflineSong"
-  },
-  "recentlyPlayed": "Recently Played",
-  "@recentlyPlayed": {
-    "description": "recentlyPlayed"
-  },
-  "favorites": "Favorites",
-  "@favorites": {
-    "description": "favorites"
-  },
-  "cachedOrOffline": "Cached/Offline",
-  "@cachedOrOffline": {
-    "description": "cachedOrOffline"
-  },
-  "downloads": "Downloads",
-  "@downloads": {
-    "description": "downloads"
-  },
-  "emptyPlaylist": "Empty playlist!",
-  "@emptyPlaylist": {
-    "description": "emptyPlaylist"
-  },
-  "enqueueAll": "Enqueue all",
-  "@enqueueAll": {
-    "description": "enqueueAll"
-  },
-  "renamePlaylist": "Rename Playlist",
-  "@renamePlaylist": {
-    "description": "renamePlaylist"
-  },
-  "removePlaylist": "Remove playlist",
-  "@removePlaylist": {
-    "description": "removePlaylist"
-  },
   "CreateNewPlaylist": "Create new playlist",
   "@CreateNewPlaylist": {
     "description": "CreateNewPlaylist"
   },
-  "reArrangePlaylist": "Rearrange playlist",
-  "@reArrangePlaylist": {
-    "description": "reArrangePlaylist"
+  "Piped": "Piped",
+  "@Piped": {
+    "description": "Piped"
   },
-  "reArrangeSongs": "Rearrange songs",
-  "@reArrangeSongs": {
-    "description": "reArrangeSongs"
-  },
-  "selectSongs": "Select songs",
-  "@selectSongs": {
-    "description": "selectSongs"
-  },
-  "selectAll": "Select All",
-  "@selectAll": {
-    "description": "selectAll"
-  },
-  "removeMultiple": "Remove multiple songs",
-  "@removeMultiple": {
-    "description": "removeMultiple"
-  },
-  "addMultipleSongs": "Add songs to playlist",
-  "@addMultipleSongs": {
-    "description": "addMultipleSongs"
-  },
-  "cancel": "Cancel",
-  "@cancel": {
-    "description": "cancel"
-  },
-  "create": "Create",
-  "@create": {
-    "description": "create"
-  },
-  "rename": "Rename",
-  "@rename": {
-    "description": "rename"
-  },
-  "createnAdd": "Create & add",
-  "@createnAdd": {
-    "description": "createnAdd"
-  },
-  "noBookmarks": "No bookmarks!",
-  "@noBookmarks": {
-    "description": "noBookmarks"
-  },
-  "startRadio": "Start radio",
-  "@startRadio": {
-    "description": "startRadio"
-  },
-  "playNext": "Play next",
-  "@playNext": {
-    "description": "playNext"
-  },
-  "addToPlaylist": "Add to playlist",
-  "@addToPlaylist": {
-    "description": "addToPlaylist"
-  },
-  "noLibPlaylist": "You don't have any lib playlist!",
-  "@noLibPlaylist": {
-    "description": "noLibPlaylist"
-  },
-  "enqueueSong": "Enqueue this song",
-  "@enqueueSong": {
-    "description": "enqueueSong"
-  },
-  "goToAlbum": "Go to album",
-  "@goToAlbum": {
-    "description": "goToAlbum"
-  },
-  "viewArtist": "View Artist",
-  "@viewArtist": {
-    "description": "viewArtist"
-  },
-  "openIn": "Open in",
-  "@openIn": {
-    "description": "openIn"
-  },
-  "shareSong": "Share this song",
-  "@shareSong": {
-    "description": "shareSong"
-  },
-  "removeFromPlaylist": "Remove from playlist",
-  "@removeFromPlaylist": {
-    "description": "removeFromPlaylist"
-  },
-  "removeFromQueue": "Remove from queue",
-  "@removeFromQueue": {
-    "description": "removeFromQueue"
-  },
-  "queueShufflingDeniedMsg": "Queue can't be shuffled when shuffle mode is enabled",
-  "@queueShufflingDeniedMsg": {
-    "description": "queueShufflingDeniedMsg"
-  },
-  "queuerearrangingDeniedMsg": "Queue can't be rearranged when shuffle mode is enabled",
-  "@queuerearrangingDeniedMsg": {
-    "description": "queuerearrangingDeniedMsg"
-  },
-  "songNotPlayable": "Song is not playable due to server restriction!",
-  "@songNotPlayable": {
-    "description": "songNotPlayable"
-  },
-  "upNext": "Up Next",
-  "@upNext": {
-    "description": "upNext"
-  },
-  "playingfromAlbum": "PLAYING FROM ÁLBUM",
-  "@playingfromAlbum": {
-    "description": "playingfromAlbum"
-  },
-  "playingfromPlaylist": "PLAYING FROM PLAYLIST",
-  "@playingfromPlaylist": {
-    "description": "playingfromPlaylist"
-  },
-  "playingfromSelection": "PLAYING FROM SELECTION",
-  "@playingfromSelection": {
-    "description": "playingfromSelection"
-  },
-  "playingfromArtist": "PLAYING FROM ARTIST",
-  "@playingfromArtist": {
-    "description": "playingfromArtist"
-  },
-  "randomSelection": "Random Selection",
-  "@randomSelection": {
-    "description": "randomSelection"
-  },
-  "randomRadio": "Random Radio",
-  "@randomRadio": {
-    "description": "randomRadio"
-  },
-  "playnextMsg": "Upcoming",
-  "@playnextMsg": {
-    "description": "playnextMsg"
-  },
-  "shuffleQueue": "Shuffle Queue",
-  "@shuffleQueue": {
-    "description": "shuffleQueue"
-  },
-  "queueLoop": "Queue loop",
-  "@queueLoop": {
-    "description": "queueLoop"
-  },
-  "queueLoopNotDisMsg1": "Queue loop mode cannot be disabled when shuffle mode is enabled.",
-  "@queueLoopNotDisMsg1": {
-    "description": "queueLoopNotDisMsg1"
-  },
-  "queueLoopNotDisMsg2": "Queue loop mode cannot be enabled in radio mode.",
-  "@queueLoopNotDisMsg2": {
-    "description": "queueLoopNotDisMsg2"
-  },
-  "removeFromLib": "Remove from Library Songs",
-  "@removeFromLib": {
-    "description": "removeFromLib"
-  },
-  "sleepTimer": "Sleep Timer",
-  "@sleepTimer": {
-    "description": "sleepTimer"
+  "about": "About",
+  "@about": {
+    "description": "about"
   },
   "add5Minutes": "Add 5 minutes",
   "@add5Minutes": {
     "description": "add5Minutes"
   },
-  "cancelTimer": "Cancel timer",
-  "@cancelTimer": {
-    "description": "cancelTimer"
+  "addMultipleSongs": "Add songs to playlist",
+  "@addMultipleSongs": {
+    "description": "addMultipleSongs"
   },
-  "deleteDownloadData": "Remove from downloads",
-  "@deleteDownloadData": {
-    "description": "deleteDownloadData"
+  "addToLibrary": "Add to Library",
+  "@addToLibrary": {
+    "description": "addToLibrary"
   },
-  "minutes": "minutes",
-  "@minutes": {
-    "description": "minutes"
+  "addToPlaylist": "Add to playlist",
+  "@addToPlaylist": {
+    "description": "addToPlaylist"
   },
-  "endOfThisSong": "End of this song",
-  "@endOfThisSong": {
-    "description": "endOfThisSong"
+  "album": "Album",
+  "@album": {
+    "description": "album"
+  },
+  "albumBookmarkAddAlert": "Album bookmarked!",
+  "@albumBookmarkAddAlert": {
+    "description": "albumBookmarkAddAlert"
+  },
+  "albumBookmarkRemoveAlert": "Album bookmark removed!",
+  "@albumBookmarkRemoveAlert": {
+    "description": "albumBookmarkRemoveAlert"
+  },
+  "albums": "Albums",
+  "@albums": {
+    "description": "albums"
+  },
+  "albumsByTaste": "According to your tastes",
+  "@albumsByTaste": {
+    "description": "albumsByTaste"
+  },
+  "allFieldsReqMsg": "All fields required",
+  "@allFieldsReqMsg": {
+    "description": "allFieldsReqMsg"
+  },
+  "androidBackupWarning": "Not tested: Selecting the checkbox after downloading more than 60 files, process may consume a large amount of memory and could cause the phone or app to crash. Proceed at your own risk.",
+  "@androidBackupWarning": {
+    "description": "androidBackupWarning"
   },
   "appInfo": "App Info",
   "@appInfo": {
     "description": "appInfo"
   },
-  "download": "Download",
-  "@download": {
-    "description": "download"
+  "artistBookmarkAddAlert": "Artist bookmarked!",
+  "@artistBookmarkAddAlert": {
+    "description": "artistBookmarkAddAlert"
   },
-  "misc": "Misc",
-  "@misc": {
-    "description": "misc"
+  "artistBookmarkRemoveAlert": "Artist bookmark removed!",
+  "@artistBookmarkRemoveAlert": {
+    "description": "artistBookmarkRemoveAlert"
+  },
+  "artistDesNotAvailable": "Description not available!",
+  "@artistDesNotAvailable": {
+    "description": "artistDesNotAvailable"
+  },
+  "artists": "Artists",
+  "@artists": {
+    "description": "artists"
+  },
+  "artistsByTaste": "According to your tastes",
+  "@artistsByTaste": {
+    "description": "artistsByTaste"
+  },
+  "audioCodec": "Audio Codec",
+  "@audioCodec": {
+    "description": "audioCodec"
+  },
+  "auth_2fa_code": "Authentication code",
+  "@auth_2fa_code": {
+    "description": "auth_2fa_code"
+  },
+  "auth_2fa_invalid": "Enter a valid 6-digit code or sign in again.",
+  "@auth_2fa_invalid": {
+    "description": "auth_2fa_invalid"
+  },
+  "auth_2fa_subtitle": "Enter the 6-digit code from your authenticator app. ",
+  "@auth_2fa_subtitle": {
+    "description": "auth_2fa_subtitle"
+  },
+  "auth_2fa_title": "Two-factor authentication",
+  "@auth_2fa_title": {
+    "description": "auth_2fa_title"
+  },
+  "auth_2fa_verify": "Check and continue",
+  "@auth_2fa_verify": {
+    "description": "auth_2fa_verify"
+  },
+  "auth_agree_personal_data": "Acepto usar mis datos...",
+  "@auth_agree_personal_data": {
+    "description": "auth_agree_personal_data"
+  },
+  "auth_brand_description_1": "We brought the login, registration, and password recovery from the previous project, adapted for this music app.",
+  "@auth_brand_description_1": {
+    "description": "auth_brand_description_1"
+  },
+  "auth_brand_description_2": "Your session lives in secure storage and is validated with the same backend you already used.",
+  "@auth_brand_description_2": {
+    "description": "auth_brand_description_2"
+  },
+  "auth_brand_not_configured": "The .env file needs to be configured to connect the authentication backend.",
+  "@auth_brand_not_configured": {
+    "description": "auth_brand_not_configured"
+  },
+  "auth_btn_login": "Login",
+  "@auth_btn_login": {
+    "description": "auth_btn_login"
+  },
+  "auth_btn_register": "Register",
+  "@auth_btn_register": {
+    "description": "auth_btn_register"
+  },
+  "auth_btn_send_email": "Send email",
+  "@auth_btn_send_email": {
+    "description": "auth_btn_send_email"
+  },
+  "auth_confirm_password": "Confirm Password",
+  "@auth_confirm_password": {
+    "description": "auth_confirm_password"
+  },
+  "auth_error_invalid_credentials": "Incorrect email or password.",
+  "@auth_error_invalid_credentials": {
+    "description": "auth_error_invalid_credentials"
+  },
+  "auth_error_invalid_email": "Enter a valid email.",
+  "@auth_error_invalid_email": {
+    "description": "auth_error_invalid_email"
+  },
+  "auth_error_not_configured": "Backend authentication is not configured in the .env file.",
+  "@auth_error_not_configured": {
+    "description": "auth_error_not_configured"
+  },
+  "auth_error_not_verified": "Your account is not yet verified.",
+  "@auth_error_not_verified": {
+    "description": "auth_error_not_verified"
+  },
+  "auth_error_unknown": "Could not complete the operation.",
+  "@auth_error_unknown": {
+    "description": "auth_error_unknown"
+  },
+  "auth_first_name": "First name",
+  "@auth_first_name": {
+    "description": "auth_first_name"
+  },
+  "auth_forgot_password": "I forgot my password",
+  "@auth_forgot_password": {
+    "description": "auth_forgot_password"
+  },
+  "auth_forgot_password_subtitle": "We will send instructions to your account email.",
+  "@auth_forgot_password_subtitle": {
+    "description": "auth_forgot_password_subtitle"
+  },
+  "auth_hint_email": "name@email.com",
+  "@auth_hint_email": {
+    "description": "auth_hint_email"
+  },
+  "auth_last_name": "Last name",
+  "@auth_last_name": {
+    "description": "auth_last_name"
+  },
+  "auth_login_success": "Successfully logged in",
+  "@auth_login_success": {
+    "description": "auth_login_success"
+  },
+  "auth_recovery_email_error": "Could not send email.",
+  "@auth_recovery_email_error": {
+    "description": "auth_recovery_email_error"
+  },
+  "auth_recovery_email_sent": "Email sent.",
+  "@auth_recovery_email_sent": {
+    "description": "auth_recovery_email_sent"
+  },
+  "auth_register_error": "Could not create account.",
+  "@auth_register_error": {
+    "description": "auth_register_error"
+  },
+  "auth_register_success": "Account created successfully.",
+  "@auth_register_success": {
+    "description": "auth_register_success"
+  },
+  "auth_welcome_subtitle": "Welcome to Estrella Music",
+  "@auth_welcome_subtitle": {
+    "description": "auth_welcome_subtitle"
+  },
+  "auth_welcome_title": "Welcome to Estrella Music",
+  "@auth_welcome_title": {
+    "description": "auth_welcome_title"
   },
   "autoDownFavSong": "Auto download favorite songs",
   "@autoDownFavSong": {
@@ -656,106 +212,6 @@
   "@autoDownFavSongDes": {
     "description": "autoDownFavSongDes"
   },
-  "networkError": "Network error! Check your network connection.",
-  "@networkError": {
-    "description": "networkError"
-  },
-  "downloadError2": "Requested song is not downloadable due to server restriction. You may try again",
-  "@downloadError2": {
-    "description": "downloadError2"
-  },
-  "downloadError3": "Downloading failed due to network/stream error! Please try again",
-  "@downloadError3": {
-    "description": "downloadError3"
-  },
-  "musicAndPlayback": "Music & Playback",
-  "@musicAndPlayback": {
-    "description": "musicAndPlayback"
-  },
-  "content": "Content",
-  "@content": {
-    "description": "content"
-  },
-  "personalisation": "Personalisation",
-  "@personalisation": {
-    "description": "personalisation"
-  },
-  "themeMode": "Theme Mode",
-  "@themeMode": {
-    "description": "themeMode"
-  },
-  "dynamic": "Dynamic",
-  "@dynamic": {
-    "description": "dynamic"
-  },
-  "systemDefault": "System default",
-  "@systemDefault": {
-    "description": "systemDefault"
-  },
-  "dark": "Dark",
-  "@dark": {
-    "description": "dark"
-  },
-  "light": "Light",
-  "@light": {
-    "description": "light"
-  },
-  "language": "Language",
-  "@language": {
-    "description": "language"
-  },
-  "playerUi": "Player Ui",
-  "@playerUi": {
-    "description": "playerUi"
-  },
-  "playerUiDes": "Select player user interface",
-  "@playerUiDes": {
-    "description": "playerUiDes"
-  },
-  "standard": "Standard",
-  "@standard": {
-    "description": "standard"
-  },
-  "gesture": "Gesture",
-  "@gesture": {
-    "description": "gesture"
-  },
-  "languageDes": "Set App language",
-  "@languageDes": {
-    "description": "languageDes"
-  },
-  "setDiscoverContent": "Set discover content",
-  "@setDiscoverContent": {
-    "description": "setDiscoverContent"
-  },
-  "quickpicks": "Quick Picks",
-  "@quickpicks": {
-    "description": "quickpicks"
-  },
-  "discover": "Discover",
-  "@discover": {
-    "description": "discover"
-  },
-  "trending": "Trending",
-  "@trending": {
-    "description": "trending"
-  },
-  "topmusicvideos": "Top Music Videos",
-  "@topmusicvideos": {
-    "description": "topmusicvideos"
-  },
-  "basedOnLast": "Based on last interaction",
-  "@basedOnLast": {
-    "description": "basedOnLast"
-  },
-  "restoreLastPlaybackSession": "Restore last playback session",
-  "@restoreLastPlaybackSession": {
-    "description": "restoreLastPlaybackSession"
-  },
-  "restoreLastPlaybackSessionDes": "Automatically restore the last playback session on app start",
-  "@restoreLastPlaybackSessionDes": {
-    "description": "restoreLastPlaybackSessionDes"
-  },
   "autoOpenPlayer": "Auto open player screen",
   "@autoOpenPlayer": {
     "description": "autoOpenPlayer"
@@ -764,77 +220,13 @@
   "@autoOpenPlayerDes": {
     "description": "autoOpenPlayerDes"
   },
-  "homeContentCount": "Home content count",
-  "@homeContentCount": {
-    "description": "homeContentCount"
+  "back": "Return",
+  "@back": {
+    "description": "back"
   },
-  "homeContentCountDes": "Select the number of initial homescreen-content(approx). Lesser results faster loading",
-  "@homeContentCountDes": {
-    "description": "homeContentCountDes"
-  },
-  "enableBottomNav": "Bottom navigation bar",
-  "@enableBottomNav": {
-    "description": "enableBottomNav"
-  },
-  "enableBottomNavDes": "Switch to bottom navigation bar",
-  "@enableBottomNavDes": {
-    "description": "enableBottomNavDes"
-  },
-  "cacheSongs": "Cache Songs",
-  "@cacheSongs": {
-    "description": "cacheSongs"
-  },
-  "cacheSongsDes": "Caching songs while playing for future/offline playback, it will take additional space on your device",
-  "@cacheSongsDes": {
-    "description": "cacheSongsDes"
-  },
-  "skipSilence": "Skip silence",
-  "@skipSilence": {
-    "description": "skipSilence"
-  },
-  "skipSilenceDes": "Silence will be skipped in music playback",
-  "@skipSilenceDes": {
-    "description": "skipSilenceDes"
-  },
-  "loudnessNormalization": "Loudness normalization",
-  "@loudnessNormalization": {
-    "description": "loudnessNormalization"
-  },
-  "loudnessNormalizationDes": "Sets same lavel of loudness for all songs (Experimental) (Will not work on songs downloaded on previous version(< v1.10.0))",
-  "@loudnessNormalizationDes": {
-    "description": "loudnessNormalizationDes"
-  },
-  "streamingQuality": "Streaming quality",
-  "@streamingQuality": {
-    "description": "streamingQuality"
-  },
-  "streamingQualityDes": "Quality of music stream",
-  "@streamingQualityDes": {
-    "description": "streamingQualityDes"
-  },
-  "disableTransitionAnimation": "Disable transition animation",
-  "@disableTransitionAnimation": {
-    "description": "disableTransitionAnimation"
-  },
-  "disableTransitionAnimationDes": "Enable this option to disable tab transition animation",
-  "@disableTransitionAnimationDes": {
-    "description": "disableTransitionAnimationDes"
-  },
-  "enableSlidableAction": "Enable slidable actions",
-  "@enableSlidableAction": {
-    "description": "enableSlidableAction"
-  },
-  "enableSlidableActionDes": "Enable slidable actions on song tile",
-  "@enableSlidableActionDes": {
-    "description": "enableSlidableActionDes"
-  },
-  "high": "High",
-  "@high": {
-    "description": "high"
-  },
-  "low": "Low",
-  "@low": {
-    "description": "low"
+  "backFilesFound": "databases found",
+  "@backFilesFound": {
+    "description": "backFilesFound"
   },
   "backgroundPlay": "Background music play",
   "@backgroundPlay": {
@@ -844,9 +236,89 @@
   "@backgroundPlayDes": {
     "description": "backgroundPlayDes"
   },
-  "downloadLocation": "Download Location",
-  "@downloadLocation": {
-    "description": "downloadLocation"
+  "backup": "Backup",
+  "@backup": {
+    "description": "backup"
+  },
+  "backupAppData": "Backup App data",
+  "@backupAppData": {
+    "description": "backupAppData"
+  },
+  "backupInProgress": "Backup in progress...",
+  "@backupInProgress": {
+    "description": "backupInProgress"
+  },
+  "backupMsg": "Backup successfully saved!",
+  "@backupMsg": {
+    "description": "backupMsg"
+  },
+  "backupSettingsAndPlaylists": "Backup settings and playlists",
+  "@backupSettingsAndPlaylists": {
+    "description": "backupSettingsAndPlaylists"
+  },
+  "backupSettingsAndPlaylistsDes": "Saves all settings, playlists and login data in a backup file",
+  "@backupSettingsAndPlaylistsDes": {
+    "description": "backupSettingsAndPlaylistsDes"
+  },
+  "backup_auth_required": "You need an active session...",
+  "@backup_auth_required": {
+    "description": "backup_auth_required"
+  },
+  "backup_btn_restart": "Restart app",
+  "@backup_btn_restart": {
+    "description": "backup_btn_restart"
+  },
+  "backup_btn_upload": "Upload backup now",
+  "@backup_btn_upload": {
+    "description": "backup_btn_upload"
+  },
+  "backup_confirm_question": "Do you want to perform a backup?",
+  "@backup_confirm_question": {
+    "description": "backup_confirm_question"
+  },
+  "backup_delete_success": "Backup deleted.",
+  "@backup_delete_success": {
+    "description": "backup_delete_success"
+  },
+  "backup_no_backups": "There are no backups yet...",
+  "@backup_no_backups": {
+    "description": "backup_no_backups"
+  },
+  "backup_restore_success": "Backup restored. ",
+  "@backup_restore_success": {
+    "description": "backup_restore_success"
+  },
+  "backup_select_folder_dialog": "Select backup file folder",
+  "@backup_select_folder_dialog": {
+    "description": "backup_select_folder_dialog"
+  },
+  "backup_selection_prompt": "Choose which data to backup",
+  "@backup_selection_prompt": {
+    "description": "backup_selection_prompt"
+  },
+  "backup_upload_success": "Backup uploaded correctly.",
+  "@backup_upload_success": {
+    "description": "backup_upload_success"
+  },
+  "basedOnLast": "Based on last interaction",
+  "@basedOnLast": {
+    "description": "basedOnLast"
+  },
+  "bitrate": "Bitrate",
+  "@bitrate": {
+    "description": "bitrate"
+  },
+  "blacklistPipedPlaylist": "Blacklist playlist",
+  "@blacklistPipedPlaylist": {
+    "description": "blacklistPipedPlaylist"
+  },
+  "blacklistPlstResetAlert": "Reset successfully!",
+  "@blacklistPlstResetAlert": {
+    "description": "blacklistPlstResetAlert"
+  },
+  "by": "by",
+  "@by": {
+    "description": "by"
   },
   "cacheHomeScreenData": "Cache home screen content data",
   "@cacheHomeScreenData": {
@@ -856,57 +328,29 @@
   "@cacheHomeScreenDataDes": {
     "description": "cacheHomeScreenDataDes"
   },
-  "downloadingFormat": "Downloading File Format",
-  "@downloadingFormat": {
-    "description": "downloadingFormat"
+  "cacheSongs": "Cache Songs",
+  "@cacheSongs": {
+    "description": "cacheSongs"
   },
-  "downloadingFormatDes": "Select downloading file format. \"Opus\" will provide best quality",
-  "@downloadingFormatDes": {
-    "description": "downloadingFormatDes"
+  "cacheSongsDes": "Caching songs while playing for future/offline playback, it will take additional space on your device",
+  "@cacheSongsDes": {
+    "description": "cacheSongsDes"
   },
-  "exportDowloadedFiles": "Export downloaded files",
-  "@exportDowloadedFiles": {
-    "description": "exportDowloadedFiles"
+  "cachedOrOffline": "Cached/Offline",
+  "@cachedOrOffline": {
+    "description": "cachedOrOffline"
   },
-  "exportDowloadedFilesDes": "Click here to export downloaded file from inApp dir to external dir",
-  "@exportDowloadedFilesDes": {
-    "description": "exportDowloadedFilesDes"
+  "cancel": "Cancel",
+  "@cancel": {
+    "description": "cancel"
   },
-  "exportedFileLocation": "Downloaded file export location",
-  "@exportedFileLocation": {
-    "description": "exportedFileLocation"
+  "cancelTimer": "Cancel timer",
+  "@cancelTimer": {
+    "description": "cancelTimer"
   },
-  "export": "Export",
-  "@export": {
-    "description": "export"
-  },
-  "exporting": "Exporting...",
-  "@exporting": {
-    "description": "exporting"
-  },
-  "scanning": "Scanning...",
-  "@scanning": {
-    "description": "scanning"
-  },
-  "downFilesFound": "downloaded files found",
-  "@downFilesFound": {
-    "description": "downFilesFound"
-  },
-  "close": "Close",
-  "@close": {
-    "description": "close"
-  },
-  "exportMsg": "Files successfully exported",
-  "@exportMsg": {
-    "description": "exportMsg"
-  },
-  "equalizer": "Equalizer",
-  "@equalizer": {
-    "description": "equalizer"
-  },
-  "equalizerDes": "Open system equalizer",
-  "@equalizerDes": {
-    "description": "equalizerDes"
+  "cancelTimerAlert": "Sleep timer cancelled",
+  "@cancelTimerAlert": {
+    "description": "cancelTimerAlert"
   },
   "clearImgCache": "Clear images cache",
   "@clearImgCache": {
@@ -920,277 +364,81 @@
   "@clearImgCacheDes": {
     "description": "clearImgCacheDes"
   },
-  "ignoreBatOpt": "Ignore battery optimization",
-  "@ignoreBatOpt": {
-    "description": "ignoreBatOpt"
-  },
-  "ignoreBatOptDes": "If you are facing notification issues or playback stopped by system optimization, please enable this option",
-  "@ignoreBatOptDes": {
-    "description": "ignoreBatOptDes"
-  },
-  "status": "Status",
-  "@status": {
-    "description": "status"
-  },
-  "enabled": "Enabled",
-  "@enabled": {
-    "description": "enabled"
-  },
-  "disabled": "Disabled",
-  "@disabled": {
-    "description": "disabled"
-  },
-  "resetToDefault": "Restore default settings",
-  "@resetToDefault": {
-    "description": "resetToDefault"
-  },
-  "resetToDefaultDes": "Reset app settings to default (Restart required)",
-  "@resetToDefaultDes": {
-    "description": "resetToDefaultDes"
-  },
-  "resetToDefaultMsg": "Settings reset to default completed, Please restart app",
-  "@resetToDefaultMsg": {
-    "description": "resetToDefaultMsg"
-  },
-  "github": "GitHub",
-  "@github": {
-    "description": "github"
-  },
-  "githubDes": "View GitHub source code \nif you like this project, don't forget to give a ⭐",
-  "@githubDes": {
-    "description": "githubDes"
-  },
-  "by": "by",
-  "@by": {
-    "description": "by"
-  },
-  "urlSearchDes": "Url detected click on it to open/play associated content",
-  "@urlSearchDes": {
-    "description": "urlSearchDes"
-  },
-  "search": "Search",
-  "@search": {
-    "description": "search"
-  },
-  "searchDes": "Songs, Playlist, Album or Artist",
-  "@searchDes": {
-    "description": "searchDes"
-  },
-  "searchRes": "Search results",
-  "@searchRes": {
-    "description": "searchRes"
-  },
-  "for1": "for",
-  "@for1": {
-    "description": "for1"
-  },
-  "videos": "Videos",
-  "@videos": {
-    "description": "videos"
-  },
-  "viewAll": "View all",
-  "@viewAll": {
-    "description": "viewAll"
-  },
-  "results": "Results",
-  "@results": {
-    "description": "results"
-  },
-  "nomatch": "No Match found for",
-  "@nomatch": {
-    "description": "nomatch"
-  },
-  "subscribers": "subscribers",
-  "@subscribers": {
-    "description": "subscribers"
-  },
-  "synced": "Synced",
-  "@synced": {
-    "description": "synced"
-  },
-  "plain": "Plain",
-  "@plain": {
-    "description": "plain"
-  },
-  "songInfo": "Song Info",
-  "@songInfo": {
-    "description": "songInfo"
-  },
-  "id": "Id",
-  "@id": {
-    "description": "id"
-  },
-  "title": "Title",
-  "@title": {
-    "description": "title"
-  },
-  "duration": "Duration",
-  "@duration": {
-    "description": "duration"
-  },
-  "audioCodec": "Audio Codec",
-  "@audioCodec": {
-    "description": "audioCodec"
-  },
-  "bitrate": "Bitrate",
-  "@bitrate": {
-    "description": "bitrate"
-  },
-  "loudnessDb": "LoudnessDb",
-  "@loudnessDb": {
-    "description": "loudnessDb"
-  },
-  "deleteDownloadedDataAlert": "Successfully removed from downloads!",
-  "@deleteDownloadedDataAlert": {
-    "description": "deleteDownloadedDataAlert"
-  },
-  "cancelTimerAlert": "Sleep timer cancelled",
-  "@cancelTimerAlert": {
-    "description": "cancelTimerAlert"
-  },
-  "sleepTimeSetAlert": "Your sleep timer is set",
-  "@sleepTimeSetAlert": {
-    "description": "sleepTimeSetAlert"
-  },
-  "radioNotAvailable": "Radio not available for this artist!",
-  "@radioNotAvailable": {
-    "description": "radioNotAvailable"
-  },
-  "songRemovedfromQueue": "Removed from queue!",
-  "@songRemovedfromQueue": {
-    "description": "songRemovedfromQueue"
-  },
-  "songRemovedfromQueueCurrSong": "You can't remove currently playing song",
-  "@songRemovedfromQueueCurrSong": {
-    "description": "songRemovedfromQueueCurrSong"
-  },
-  "songAddedToPlaylistAlert": "Song added to playlist!",
-  "@songAddedToPlaylistAlert": {
-    "description": "songAddedToPlaylistAlert"
-  },
-  "songAlreadyExists": "Song already exists!",
-  "@songAlreadyExists": {
-    "description": "songAlreadyExists"
-  },
-  "songAlreadyOfflineAlert": "Song already offline in cache",
-  "@songAlreadyOfflineAlert": {
-    "description": "songAlreadyOfflineAlert"
-  },
-  "songEnqueueAlert": "Song enqueued!",
-  "@songEnqueueAlert": {
-    "description": "songEnqueueAlert"
-  },
-  "songRemovedAlert": "Removed from",
-  "@songRemovedAlert": {
-    "description": "songRemovedAlert"
-  },
-  "errorOccuredAlert": "Some error occured!",
-  "@errorOccuredAlert": {
-    "description": "errorOccuredAlert"
-  },
-  "pipedplstSyncAlert": "Piped playlist synced!",
-  "@pipedplstSyncAlert": {
-    "description": "pipedplstSyncAlert"
-  },
-  "playlistCreatedAlert": "Playlist created!",
-  "@playlistCreatedAlert": {
-    "description": "playlistCreatedAlert"
-  },
-  "playlistCreatednsongAddedAlert": "Playlist created & song added!",
-  "@playlistCreatednsongAddedAlert": {
-    "description": "playlistCreatednsongAddedAlert"
-  },
-  "playlistRenameAlert": "Renamed successfully!",
-  "@playlistRenameAlert": {
-    "description": "playlistRenameAlert"
-  },
-  "playlistRemovedAlert": "Playlist removed!",
-  "@playlistRemovedAlert": {
-    "description": "playlistRemovedAlert"
-  },
-  "playlistBookmarkAddAlert": "Playlist bookmarked!",
-  "@playlistBookmarkAddAlert": {
-    "description": "playlistBookmarkAddAlert"
-  },
-  "playlistBookmarkRemoveAlert": "Playlist bookmark removed!",
-  "@playlistBookmarkRemoveAlert": {
-    "description": "playlistBookmarkRemoveAlert"
-  },
-  "albumBookmarkAddAlert": "Album bookmarked!",
-  "@albumBookmarkAddAlert": {
-    "description": "albumBookmarkAddAlert"
-  },
-  "albumBookmarkRemoveAlert": "Album bookmark removed!",
-  "@albumBookmarkRemoveAlert": {
-    "description": "albumBookmarkRemoveAlert"
-  },
-  "artistBookmarkAddAlert": "Artist bookmarked!",
-  "@artistBookmarkAddAlert": {
-    "description": "artistBookmarkAddAlert"
-  },
-  "artistBookmarkRemoveAlert": "Artist bookmark removed!",
-  "@artistBookmarkRemoveAlert": {
-    "description": "artistBookmarkRemoveAlert"
-  },
-  "lyricsNotAvailable": "Lyrics not available!",
-  "@lyricsNotAvailable": {
-    "description": "lyricsNotAvailable"
-  },
-  "syncedLyricsNotAvailable": "Synced lyrics not available!",
-  "@syncedLyricsNotAvailable": {
-    "description": "syncedLyricsNotAvailable"
-  },
-  "artistDesNotAvailable": "Description not available!",
-  "@artistDesNotAvailable": {
-    "description": "artistDesNotAvailable"
-  },
-  "newVersionAvailable": "New version available!",
-  "@newVersionAvailable": {
-    "description": "newVersionAvailable"
-  },
-  "dontShowInfoAgain": "Don't show this info again",
-  "@dontShowInfoAgain": {
-    "description": "dontShowInfoAgain"
-  },
-  "dismiss": "Dismiss",
-  "@dismiss": {
-    "description": "dismiss"
-  },
-  "notaSongVideo": "Not a Song/Music-Video!",
-  "@notaSongVideo": {
-    "description": "notaSongVideo"
-  },
-  "notaValidLink": "Not a valid link!",
-  "@notaValidLink": {
-    "description": "notaValidLink"
-  },
-  "operationFailed": "Operation failed",
-  "@operationFailed": {
-    "description": "operationFailed"
-  },
-  "goToDownloadPage": "Click here to go to download page",
-  "@goToDownloadPage": {
-    "description": "goToDownloadPage"
-  },
-  "local": "Local",
-  "@local": {
-    "description": "local"
-  },
-  "Piped": "Piped",
-  "@Piped": {
-    "description": "Piped"
-  },
-  "link": "Link",
-  "@link": {
-    "description": "link"
-  },
-  "unLink": "Unlink",
-  "@unLink": {
-    "description": "unLink"
-  },
-  "hintApiUrl": "API URL to Piped instance",
-  "@hintApiUrl": {
-    "description": "hintApiUrl"
+  "close": "Close",
+  "@close": {
+    "description": "close"
+  },
+  "closeApp": "Close App",
+  "@closeApp": {
+    "description": "closeApp"
+  },
+  "cloudLibraryFound": "Cloud library found.",
+  "@cloudLibraryFound": {
+    "description": "cloudLibraryFound"
+  },
+  "cloudLibraryFoundDeviceWillDownload": "A cloud library was found. ",
+  "@cloudLibraryFoundDeviceWillDownload": {
+    "description": "cloudLibraryFoundDeviceWillDownload"
+  },
+  "cloudModeReadyOfflineCache": "Cloud mode is ready. ",
+  "@cloudModeReadyOfflineCache": {
+    "description": "cloudModeReadyOfflineCache"
+  },
+  "cloud_b1": "Log in securely using your Joss Red account.",
+  "@cloud_b1": {
+    "description": "cloud_b1"
+  },
+  "cloud_b2": "Access your playlists, favorites and history from any device (Windows, Android, etc.) instantly.",
+  "@cloud_b2": {
+    "description": "cloud_b2"
+  },
+  "cloud_b3": "Smart Sync: Work offline and upload changes automatically when you recover internet.",
+  "@cloud_b3": {
+    "description": "cloud_b3"
+  },
+  "cloud_btn": "Activate Cloud sync",
+  "@cloud_btn": {
+    "description": "cloud_btn"
+  },
+  "cloud_subtitle": "Real-time synchronization with Joss Red",
+  "@cloud_subtitle": {
+    "description": "cloud_subtitle"
+  },
+  "cloud_title": "Cloud Mode (Recommended)",
+  "@cloud_title": {
+    "description": "cloud_title"
+  },
+  "collaborativePlaylistDescription": "Collaborative Playlist",
+  "@collaborativePlaylistDescription": {
+    "description": "collaborativePlaylistDescription"
+  },
+  "collaboratorsInstruction": "Select the friends who will be able to see and edit this playlist:",
+  "@collaboratorsInstruction": {
+    "description": "collaboratorsInstruction"
+  },
+  "collaboratorsUpdated": "Collaborators updated correctly.",
+  "@collaboratorsUpdated": {
+    "description": "collaboratorsUpdated"
+  },
+  "communityplaylists": "Community Playlists",
+  "@communityplaylists": {
+    "description": "communityplaylists"
+  },
+  "content": "Content",
+  "@content": {
+    "description": "content"
+  },
+  "copyrightNotice": "© 2026 JOSPROX. License GPL v3.0",
+  "@copyrightNotice": {
+    "description": "copyrightNotice"
+  },
+  "create": "Create",
+  "@create": {
+    "description": "create"
+  },
+  "createnAdd": "Create & add",
+  "@createnAdd": {
+    "description": "createnAdd"
   },
   "customIns": "Custom Instance",
   "@customIns": {
@@ -1200,157 +448,222 @@
   "@customInsSelectMsg": {
     "description": "customInsSelectMsg"
   },
-  "selectAuthInsMsg": "Please select Authentication instance!",
-  "@selectAuthInsMsg": {
-    "description": "selectAuthInsMsg"
+  "dailyDiscover": "Daily discovery",
+  "@dailyDiscover": {
+    "description": "dailyDiscover"
   },
-  "allFieldsReqMsg": "All fields required",
-  "@allFieldsReqMsg": {
-    "description": "allFieldsReqMsg"
+  "dark": "Dark",
+  "@dark": {
+    "description": "dark"
   },
-  "linkPipedDes": "Link with piped for playlists",
-  "@linkPipedDes": {
-    "description": "linkPipedDes"
+  "delete": "Delete",
+  "@delete": {
+    "description": "delete"
   },
-  "selectAuthIns": "Select Auth Instance",
-  "@selectAuthIns": {
-    "description": "selectAuthIns"
+  "deleteDownloadData": "Remove from downloads",
+  "@deleteDownloadData": {
+    "description": "deleteDownloadData"
   },
-  "username": "Username",
-  "@username": {
-    "description": "username"
+  "deleteDownloadedDataAlert": "Successfully removed from downloads!",
+  "@deleteDownloadedDataAlert": {
+    "description": "deleteDownloadedDataAlert"
   },
-  "password": "Password",
-  "@password": {
-    "description": "password"
+  "developedBy": "Developed and Maintained by Joss Estrada (JOSPROX)",
+  "@developedBy": {
+    "description": "developedBy"
   },
-  "linkAlert": "Linked successfully!",
-  "@linkAlert": {
-    "description": "linkAlert"
+  "disableTransitionAnimation": "Disable transition animation",
+  "@disableTransitionAnimation": {
+    "description": "disableTransitionAnimation"
   },
-  "unlinkAlert": "Unlinked successfully!",
-  "@unlinkAlert": {
-    "description": "unlinkAlert"
+  "disableTransitionAnimationDes": "Enable this option to disable tab transition animation",
+  "@disableTransitionAnimationDes": {
+    "description": "disableTransitionAnimationDes"
   },
-  "playlistBlacklistAlert": "Playlist blacklisted!",
-  "@playlistBlacklistAlert": {
-    "description": "playlistBlacklistAlert"
+  "disabled": "Disabled",
+  "@disabled": {
+    "description": "disabled"
   },
-  "reset": "Reset",
-  "@reset": {
-    "description": "reset"
+  "discover": "Discover",
+  "@discover": {
+    "description": "discover"
   },
-  "blacklistPlstResetAlert": "Reset successfully!",
-  "@blacklistPlstResetAlert": {
-    "description": "blacklistPlstResetAlert"
+  "dismiss": "Dismiss",
+  "@dismiss": {
+    "description": "dismiss"
   },
-  "resetblacklistedplaylist": "Reset blacklisted playlists",
-  "@resetblacklistedplaylist": {
-    "description": "resetblacklistedplaylist"
+  "done": "Ready",
+  "@done": {
+    "description": "done"
   },
-  "resetblacklistedplaylistDes": "Reset all the piped blacklisted playlists",
-  "@resetblacklistedplaylistDes": {
-    "description": "resetblacklistedplaylistDes"
+  "dontShowInfoAgain": "Don't show this info again",
+  "@dontShowInfoAgain": {
+    "description": "dontShowInfoAgain"
   },
-  "stopMusicOnTaskClear": "Stop music on task clear",
-  "@stopMusicOnTaskClear": {
-    "description": "stopMusicOnTaskClear"
+  "downFilesFound": "downloaded files found",
+  "@downFilesFound": {
+    "description": "downFilesFound"
   },
-  "stopMusicOnTaskClearDes": "Music playback will stop when App being swiped away from the task manager",
-  "@stopMusicOnTaskClearDes": {
-    "description": "stopMusicOnTaskClearDes"
+  "download": "Download",
+  "@download": {
+    "description": "download"
   },
-  "backupAppData": "Backup App data",
-  "@backupAppData": {
-    "description": "backupAppData"
+  "downloadAlbumSongs": "Download album songs",
+  "@downloadAlbumSongs": {
+    "description": "downloadAlbumSongs"
   },
-  "androidBackupWarning": "Not tested: Selecting the checkbox after downloading more than 60 files, process may consume a large amount of memory and could cause the phone or app to crash. Proceed at your own risk.",
-  "@androidBackupWarning": {
-    "description": "androidBackupWarning"
+  "downloadError2": "Requested song is not downloadable due to server restriction. You may try again",
+  "@downloadError2": {
+    "description": "downloadError2"
   },
-  "backupSettingsAndPlaylistsDes": "Saves all settings, playlists and login data in a backup file",
-  "@backupSettingsAndPlaylistsDes": {
-    "description": "backupSettingsAndPlaylistsDes"
+  "downloadError3": "Downloading failed due to network/stream error! Please try again",
+  "@downloadError3": {
+    "description": "downloadError3"
   },
-  "backup": "Backup",
-  "@backup": {
-    "description": "backup"
+  "downloadLocation": "Download Location",
+  "@downloadLocation": {
+    "description": "downloadLocation"
   },
-  "letsStrart": "Let's start..",
-  "@letsStrart": {
-    "description": "letsStrart"
+  "downloadNotificationChannelDescription": "Keeps your music downloads active in the background.",
+  "@downloadNotificationChannelDescription": {
+    "description": "downloadNotificationChannelDescription"
   },
-  "processFiles": "Processing files...",
-  "@processFiles": {
-    "description": "processFiles"
+  "downloadNotificationChannelName": "music downloads",
+  "@downloadNotificationChannelName": {
+    "description": "downloadNotificationChannelName"
   },
-  "includeDownloadedFiles": "Include downloded songs files",
-  "@includeDownloadedFiles": {
-    "description": "includeDownloadedFiles"
+  "downloadNotificationPreparing": "Preparing your downloads…",
+  "@downloadNotificationPreparing": {
+    "description": "downloadNotificationPreparing"
   },
-  "backupInProgress": "Backup in progress...",
-  "@backupInProgress": {
-    "description": "backupInProgress"
+  "downloadNotificationSong": "Downloading: {songTitle}",
+  "@downloadNotificationSong": {
+    "placeholders": {
+      "songTitle": {
+        "type": "String"
+      }
+    },
+    "description": "downloadNotificationSong"
   },
-  "restoreAppData": "Restore App data",
-  "@restoreAppData": {
-    "description": "restoreAppData"
+  "downloadNotificationTitle": "Downloading music",
+  "@downloadNotificationTitle": {
+    "description": "downloadNotificationTitle"
   },
-  "restoreSettingsAndPlaylistsDes": "Restores all settings, login data and playlists from a backup file. Overwrites all current data",
-  "@restoreSettingsAndPlaylistsDes": {
-    "description": "restoreSettingsAndPlaylistsDes"
+  "downloadPlaylist": "Download playlist",
+  "@downloadPlaylist": {
+    "description": "downloadPlaylist"
   },
-  "backupMsg": "Backup successfully saved!",
-  "@backupMsg": {
-    "description": "backupMsg"
+  "downloadingFormat": "Downloading File Format",
+  "@downloadingFormat": {
+    "description": "downloadingFormat"
   },
-  "backFilesFound": "databases found",
-  "@backFilesFound": {
-    "description": "backFilesFound"
+  "downloadingFormatDes": "Select downloading file format. \"Opus\" will provide best quality",
+  "@downloadingFormatDes": {
+    "description": "downloadingFormatDes"
   },
-  "restoreMsg": "Successfully restored!\nChanges are applied on restart",
-  "@restoreMsg": {
-    "description": "restoreMsg"
+  "downloads": "Downloads",
+  "@downloads": {
+    "description": "downloads"
   },
-  "restoring": "Restoring...",
-  "@restoring": {
-    "description": "restoring"
+  "duration": "Duration",
+  "@duration": {
+    "description": "duration"
   },
-  "restore": "Restore",
-  "@restore": {
-    "description": "restore"
+  "dynamic": "Dynamic",
+  "@dynamic": {
+    "description": "dynamic"
   },
-  "closeApp": "Close App",
-  "@closeApp": {
-    "description": "closeApp"
+  "email": "E-mail",
+  "@email": {
+    "description": "email"
   },
-  "restartApp": "Restart App",
-  "@restartApp": {
-    "description": "restartApp"
+  "emptyPlaylist": "Empty playlist!",
+  "@emptyPlaylist": {
+    "description": "emptyPlaylist"
   },
-  "lyrics": "Lyrics",
-  "@lyrics": {
-    "description": "lyrics"
+  "enableBottomNav": "Bottom navigation bar",
+  "@enableBottomNav": {
+    "description": "enableBottomNav"
   },
-  "exportPlaylist": "Export Playlist",
-  "@exportPlaylist": {
-    "description": "exportPlaylist"
+  "enableBottomNavDes": "Switch to bottom navigation bar",
+  "@enableBottomNavDes": {
+    "description": "enableBottomNavDes"
   },
-  "exportPlaylistCsv": "Export Playlist as CSV",
-  "@exportPlaylistCsv": {
-    "description": "exportPlaylistCsv"
+  "enableSlidableAction": "Enable slidable actions",
+  "@enableSlidableAction": {
+    "description": "enableSlidableAction"
   },
-  "exportingPlaylist": "Exporting playlist...",
-  "@exportingPlaylist": {
-    "description": "exportingPlaylist"
+  "enableSlidableActionDes": "Enable slidable actions on song tile",
+  "@enableSlidableActionDes": {
+    "description": "enableSlidableActionDes"
   },
-  "playlistExportedMsg": "Playlist exported successfully to",
-  "@playlistExportedMsg": {
-    "description": "playlistExportedMsg"
+  "enabled": "Enabled",
+  "@enabled": {
+    "description": "enabled"
+  },
+  "endOfThisSong": "End of this song",
+  "@endOfThisSong": {
+    "description": "endOfThisSong"
+  },
+  "enqueueAlbumSongs": "Enqueue album songs",
+  "@enqueueAlbumSongs": {
+    "description": "enqueueAlbumSongs"
+  },
+  "enqueueAll": "Enqueue all",
+  "@enqueueAll": {
+    "description": "enqueueAll"
+  },
+  "enqueueSong": "Enqueue this song",
+  "@enqueueSong": {
+    "description": "enqueueSong"
+  },
+  "enqueueSongs": "Enqueue songs",
+  "@enqueueSongs": {
+    "description": "enqueueSongs"
+  },
+  "episodes": "Episodes",
+  "@episodes": {
+    "description": "episodes"
+  },
+  "equalizer": "Equalizer",
+  "@equalizer": {
+    "description": "equalizer"
+  },
+  "equalizerDes": "Open system equalizer",
+  "@equalizerDes": {
+    "description": "equalizerDes"
+  },
+  "errorOccuredAlert": "Some error occured!",
+  "@errorOccuredAlert": {
+    "description": "errorOccuredAlert"
+  },
+  "errorOccurred": "An error occurred",
+  "@errorOccurred": {
+    "description": "errorOccurred"
+  },
+  "errorPlayingTrack": "Error when playing:",
+  "@errorPlayingTrack": {
+    "description": "errorPlayingTrack"
+  },
+  "export": "Export",
+  "@export": {
+    "description": "export"
+  },
+  "exportDowloadedFiles": "Export downloaded files",
+  "@exportDowloadedFiles": {
+    "description": "exportDowloadedFiles"
+  },
+  "exportDowloadedFilesDes": "Click here to export downloaded file from inApp dir to external dir",
+  "@exportDowloadedFilesDes": {
+    "description": "exportDowloadedFilesDes"
   },
   "exportError": "Error exporting playlist",
   "@exportError": {
     "description": "exportError"
+  },
+  "exportErrorFormat": "Error formatting playlist data",
+  "@exportErrorFormat": {
+    "description": "exportErrorFormat"
   },
   "exportErrorPermission": "Permission denied while exporting",
   "@exportErrorPermission": {
@@ -1360,57 +673,21 @@
   "@exportErrorStorage": {
     "description": "exportErrorStorage"
   },
-  "exportErrorFormat": "Error formatting playlist data",
-  "@exportErrorFormat": {
-    "description": "exportErrorFormat"
+  "exportMsg": "Files successfully exported",
+  "@exportMsg": {
+    "description": "exportMsg"
   },
-  "importPlaylist": "Import Playlist",
-  "@importPlaylist": {
-    "description": "importPlaylist"
+  "exportPlaylist": "Export Playlist",
+  "@exportPlaylist": {
+    "description": "exportPlaylist"
   },
-  "importingPlaylist": "Importing playlist...",
-  "@importingPlaylist": {
-    "description": "importingPlaylist"
+  "exportPlaylistCsv": "Export Playlist as CSV",
+  "@exportPlaylistCsv": {
+    "description": "exportPlaylistCsv"
   },
-  "importPlaylistDesc": "Select a previously exported playlist JSON file to import",
-  "@importPlaylistDesc": {
-    "description": "importPlaylistDesc"
-  },
-  "selectFile": "Select File",
-  "@selectFile": {
-    "description": "selectFile"
-  },
-  "playlistImportedMsg": "Playlist imported successfully",
-  "@playlistImportedMsg": {
-    "description": "playlistImportedMsg"
-  },
-  "importError": "Error importing playlist",
-  "@importError": {
-    "description": "importError"
-  },
-  "importErrorFileAccess": "Could not access the selected file",
-  "@importErrorFileAccess": {
-    "description": "importErrorFileAccess"
-  },
-  "importErrorFormat": "Invalid file format",
-  "@importErrorFormat": {
-    "description": "importErrorFormat"
-  },
-  "invalidPlaylistFile": "Invalid playlist file structure",
-  "@invalidPlaylistFile": {
-    "description": "invalidPlaylistFile"
-  },
-  "importErrorDatabase": "Error saving to database",
-  "@importErrorDatabase": {
-    "description": "importErrorDatabase"
-  },
-  "fileNotFound": "File not found",
-  "@fileNotFound": {
-    "description": "fileNotFound"
-  },
-  "importLargeFileNote": "Note: Large playlists may take longer to import",
-  "@importLargeFileNote": {
-    "description": "importLargeFileNote"
+  "exportPlaylistCsvSubtitle": "Can't be imported here",
+  "@exportPlaylistCsvSubtitle": {
+    "description": "exportPlaylistCsvSubtitle"
   },
   "exportPlaylistJson": "Export playlist to JSON",
   "@exportPlaylistJson": {
@@ -1420,10 +697,6 @@
   "@exportPlaylistJsonSubtitle": {
     "description": "exportPlaylistJsonSubtitle"
   },
-  "exportPlaylistCsvSubtitle": "Can't be imported here",
-  "@exportPlaylistCsvSubtitle": {
-    "description": "exportPlaylistCsvSubtitle"
-  },
   "exportToOnlineMusic": "Export to Online music",
   "@exportToOnlineMusic": {
     "description": "exportToOnlineMusic"
@@ -1432,9 +705,241 @@
   "@exportToOnlineMusicSubtitle": {
     "description": "exportToOnlineMusicSubtitle"
   },
-  "linkCopied": "Link copied to clipboard",
-  "@linkCopied": {
-    "description": "linkCopied"
+  "exportedFileLocation": "Downloaded file export location",
+  "@exportedFileLocation": {
+    "description": "exportedFileLocation"
+  },
+  "exporting": "Exporting...",
+  "@exporting": {
+    "description": "exporting"
+  },
+  "exportingPlaylist": "Exporting playlist...",
+  "@exportingPlaylist": {
+    "description": "exportingPlaylist"
+  },
+  "favorites": "Favorites",
+  "@favorites": {
+    "description": "favorites"
+  },
+  "featuredplaylists": "Featured Playlists",
+  "@featuredplaylists": {
+    "description": "featuredplaylists"
+  },
+  "fileNotFound": "File not found",
+  "@fileNotFound": {
+    "description": "fileNotFound"
+  },
+  "follow": "Continue",
+  "@follow": {
+    "description": "follow"
+  },
+  "followedArtists": "followed",
+  "@followedArtists": {
+    "description": "followedArtists"
+  },
+  "following": "Following",
+  "@following": {
+    "description": "following"
+  },
+  "for1": "for",
+  "@for1": {
+    "description": "for1"
+  },
+  "forgottenFavorites": "forgotten favorites",
+  "@forgottenFavorites": {
+    "description": "forgottenFavorites"
+  },
+  "friendFallback": "Friend",
+  "@friendFallback": {
+    "description": "friendFallback"
+  },
+  "friendRequestAccepted": "Friend request accepted",
+  "@friendRequestAccepted": {
+    "description": "friendRequestAccepted"
+  },
+  "friendRequestSent": "Friend request sent",
+  "@friendRequestSent": {
+    "description": "friendRequestSent"
+  },
+  "friends": "Friends",
+  "@friends": {
+    "description": "friends"
+  },
+  "friendsLoginRequired": "Sign in to find friends.",
+  "@friendsLoginRequired": {
+    "description": "friendsLoginRequired"
+  },
+  "friendshipRemoved": "Friendship removed",
+  "@friendshipRemoved": {
+    "description": "friendshipRemoved"
+  },
+  "genericAlbum": "Album",
+  "@genericAlbum": {
+    "description": "genericAlbum"
+  },
+  "genericError": "Mistake",
+  "@genericError": {
+    "description": "genericError"
+  },
+  "genre_electronic": "Electronics",
+  "@genre_electronic": {
+    "description": "genre_electronic"
+  },
+  "genre_hiphop": "hip hop",
+  "@genre_hiphop": {
+    "description": "genre_hiphop"
+  },
+  "genre_jazz": "Jazz",
+  "@genre_jazz": {
+    "description": "genre_jazz"
+  },
+  "genre_latin": "Latin",
+  "@genre_latin": {
+    "description": "genre_latin"
+  },
+  "genre_pop": "Pop",
+  "@genre_pop": {
+    "description": "genre_pop"
+  },
+  "genre_rock": "Rock",
+  "@genre_rock": {
+    "description": "genre_rock"
+  },
+  "gesture": "Gesture",
+  "@gesture": {
+    "description": "gesture"
+  },
+  "github": "GitHub",
+  "@github": {
+    "description": "github"
+  },
+  "githubDes": "View GitHub source code \nif you like this project, don't forget to give a ⭐",
+  "@githubDes": {
+    "description": "githubDes"
+  },
+  "goToAlbum": "Go to album",
+  "@goToAlbum": {
+    "description": "goToAlbum"
+  },
+  "goToDownloadPage": "Click here to go to download page",
+  "@goToDownloadPage": {
+    "description": "goToDownloadPage"
+  },
+  "helloWorld": "Hello world",
+  "@helloWorld": {
+    "description": "Este texto es opcional"
+  },
+  "high": "High",
+  "@high": {
+    "description": "high"
+  },
+  "hintApiUrl": "API URL to Piped instance",
+  "@hintApiUrl": {
+    "description": "hintApiUrl"
+  },
+  "home": "Home",
+  "@home": {
+    "description": "home"
+  },
+  "homeContentCount": "Home content count",
+  "@homeContentCount": {
+    "description": "homeContentCount"
+  },
+  "homeContentCountDes": "Select the number of initial homescreen-content(approx). Lesser results faster loading",
+  "@homeContentCountDes": {
+    "description": "homeContentCountDes"
+  },
+  "id": "Id",
+  "@id": {
+    "description": "id"
+  },
+  "identifySongMetadata": "Identify metadata",
+  "@identifySongMetadata": {
+    "description": "Action that searches and stores metadata for a local song"
+  },
+  "ignoreBatOpt": "Ignore battery optimization",
+  "@ignoreBatOpt": {
+    "description": "ignoreBatOpt"
+  },
+  "ignoreBatOptDes": "If you are facing notification issues or playback stopped by system optimization, please enable this option",
+  "@ignoreBatOptDes": {
+    "description": "ignoreBatOptDes"
+  },
+  "importError": "Error importing playlist",
+  "@importError": {
+    "description": "importError"
+  },
+  "importErrorDatabase": "Error saving to database",
+  "@importErrorDatabase": {
+    "description": "importErrorDatabase"
+  },
+  "importErrorFileAccess": "Could not access the selected file",
+  "@importErrorFileAccess": {
+    "description": "importErrorFileAccess"
+  },
+  "importErrorFormat": "Invalid file format",
+  "@importErrorFormat": {
+    "description": "importErrorFormat"
+  },
+  "importLargeFileNote": "Note: Large playlists may take longer to import",
+  "@importLargeFileNote": {
+    "description": "importLargeFileNote"
+  },
+  "importPlaylist": "Import Playlist",
+  "@importPlaylist": {
+    "description": "importPlaylist"
+  },
+  "importPlaylistDesc": "Select a previously exported playlist JSON file to import",
+  "@importPlaylistDesc": {
+    "description": "importPlaylistDesc"
+  },
+  "imported": "Imported",
+  "@imported": {
+    "description": "imported"
+  },
+  "importedFromJossMusic": "Imported from Joss Music Kotlin",
+  "@importedFromJossMusic": {
+    "description": "importedFromJossMusic"
+  },
+  "importedPlaylist": "Imported Playlist",
+  "@importedPlaylist": {
+    "description": "importedPlaylist"
+  },
+  "importingPlaylist": "Importing playlist...",
+  "@importingPlaylist": {
+    "description": "importingPlaylist"
+  },
+  "in_app_storage": "In App storage directory",
+  "@in_app_storage": {
+    "description": "in_app_storage"
+  },
+  "includeDownloadedFiles": "Include downloded songs files",
+  "@includeDownloadedFiles": {
+    "description": "includeDownloadedFiles"
+  },
+  "infoNotAvailable": "Information not available",
+  "@infoNotAvailable": {
+    "description": "infoNotAvailable"
+  },
+  "invalidPlaylistFile": "Invalid playlist file structure",
+  "@invalidPlaylistFile": {
+    "description": "invalidPlaylistFile"
+  },
+  "invalidServerResponse": "Invalid server response.",
+  "@invalidServerResponse": {
+    "description": "invalidServerResponse"
+  },
+  "invalidSessionToken": "The session does not contain a valid token.",
+  "@invalidSessionToken": {
+    "description": "invalidSessionToken"
+  },
+  "items": "items",
+  "@items": {
+    "description": "items"
+  },
+  "keepListening": "keep listening",
+  "@keepListening": {
+    "description": "keepListening"
   },
   "keepScreenOnWhilePlaying": "Keep screen on while playing",
   "@keepScreenOnWhilePlaying": {
@@ -1444,225 +949,245 @@
   "@keepScreenOnWhilePlayingDes": {
     "description": "keepScreenOnWhilePlayingDes"
   },
-  "no": "No",
-  "@no": {
-    "description": "no"
+  "language": "Language",
+  "@language": {
+    "description": "language"
   },
-  "podcasts": "Podcasts",
-  "@podcasts": {
-    "description": "podcasts"
+  "languageDes": "Set App language",
+  "@languageDes": {
+    "description": "languageDes"
   },
-  "episodes": "Episodes",
-  "@episodes": {
-    "description": "episodes"
+  "latestRelease": "Latest release",
+  "@latestRelease": {
+    "description": "latestRelease"
   },
-  "profiles": "Profiles",
-  "@profiles": {
-    "description": "profiles"
+  "latestVersion": "Latest Version Available",
+  "@latestVersion": {
+    "description": "latestVersion"
   },
-  "back": "Return",
-  "@back": {
-    "description": "back"
+  "letsStrart": "Let's start..",
+  "@letsStrart": {
+    "description": "letsStrart"
   },
-  "addToLibrary": "Add to Library",
-  "@addToLibrary": {
-    "description": "addToLibrary"
+  "libAlbums": "Library Albums",
+  "@libAlbums": {
+    "description": "libAlbums"
   },
-  "removeFromLibrary": "Remove from Library",
-  "@removeFromLibrary": {
-    "description": "removeFromLibrary"
+  "libArtists": "Library Artists",
+  "@libArtists": {
+    "description": "libArtists"
   },
-  "play": "Play",
-  "@play": {
-    "description": "play"
+  "libPlaylists": "Library Playlists",
+  "@libPlaylists": {
+    "description": "libPlaylists"
   },
-  "enqueueAlbumSongs": "Enqueue album songs",
-  "@enqueueAlbumSongs": {
-    "description": "enqueueAlbumSongs"
+  "libSongs": "Library Songs",
+  "@libSongs": {
+    "description": "libSongs"
   },
-  "downloadAlbumSongs": "Download album songs",
-  "@downloadAlbumSongs": {
-    "description": "downloadAlbumSongs"
+  "library": "Library",
+  "@library": {
+    "description": "library"
   },
-  "shareAlbum": "Share album",
-  "@shareAlbum": {
-    "description": "shareAlbum"
+  "libraryPlaylistDescription": "Library Playlist",
+  "@libraryPlaylistDescription": {
+    "description": "libraryPlaylistDescription"
   },
-  "imported": "Imported",
-  "@imported": {
-    "description": "imported"
+  "light": "Light",
+  "@light": {
+    "description": "light"
   },
-  "importedPlaylist": "Imported Playlist",
-  "@importedPlaylist": {
-    "description": "importedPlaylist"
+  "link": "Link",
+  "@link": {
+    "description": "link"
   },
-  "permissionDenied": "Permission denied",
-  "@permissionDenied": {
-    "description": "permissionDenied"
+  "linkAlert": "Linked successfully!",
+  "@linkAlert": {
+    "description": "linkAlert"
   },
-  "enqueueSongs": "Enqueue songs",
-  "@enqueueSongs": {
-    "description": "enqueueSongs"
+  "linkCopied": "Link copied to clipboard",
+  "@linkCopied": {
+    "description": "linkCopied"
   },
-  "shuffle": "Shuffle",
-  "@shuffle": {
-    "description": "shuffle"
+  "linkPipedDes": "Link with piped for playlists",
+  "@linkPipedDes": {
+    "description": "linkPipedDes"
   },
-  "downloadPlaylist": "Download playlist",
-  "@downloadPlaylist": {
-    "description": "downloadPlaylist"
+  "listenNow": "Listen now",
+  "@listenNow": {
+    "description": "listenNow"
   },
-  "syncPlaylistSongs": "Sync playlist songs",
-  "@syncPlaylistSongs": {
-    "description": "syncPlaylistSongs"
+  "listeningToEnvironment": "Listening to the environment...",
+  "@listeningToEnvironment": {
+    "description": "listeningToEnvironment"
   },
-  "blacklistPipedPlaylist": "Blacklist playlist",
-  "@blacklistPipedPlaylist": {
-    "description": "blacklistPipedPlaylist"
+  "loadInfoUpdate": "Could not load update information",
+  "@loadInfoUpdate": {
+    "description": "loadInfoUpdate"
   },
-  "sharePlaylist": "Share playlist",
-  "@sharePlaylist": {
-    "description": "sharePlaylist"
+  "local": "Local",
+  "@local": {
+    "description": "local"
   },
-  "playlist": "Playlist",
-  "@playlist": {
-    "description": "playlist"
+  "local_b1": "It works without the need to log in.",
+  "@local_b1": {
+    "description": "local_b1"
   },
-  "sortByName": "Sort by Name",
-  "@sortByName": {
-    "description": "sortByName"
+  "local_b2": "Your entire library stays strictly on this computer.",
+  "@local_b2": {
+    "description": "local_b2"
   },
-  "sortByDate": "Sort by Date",
-  "@sortByDate": {
-    "description": "sortByDate"
+  "local_b3": "Note: No manual cloud backups. ",
+  "@local_b3": {
+    "description": "local_b3"
   },
-  "sortByDuration": "Sort by Duration",
-  "@sortByDuration": {
-    "description": "sortByDuration"
+  "local_btn": "Use only on this device",
+  "@local_btn": {
+    "description": "local_btn"
   },
-  "sortAscendNDescend": "Sort ascending/descending",
-  "@sortAscendNDescend": {
-    "description": "sortAscendNDescend"
+  "local_subtitle": "Absolute privacy on your device",
+  "@local_subtitle": {
+    "description": "local_subtitle"
   },
-  "auth_login_success": "Successfully logged in",
-  "@auth_login_success": {
-    "description": "auth_login_success"
+  "local_title": "Local Mode",
+  "@local_title": {
+    "description": "local_title"
   },
-  "settings_cloud_backup": "Cloud backup",
-  "@settings_cloud_backup": {
-    "description": "settings_cloud_backup"
+  "loudnessDb": "LoudnessDb",
+  "@loudnessDb": {
+    "description": "loudnessDb"
   },
-  "settings_migration_title": "Migrate from Joss Music Kotlin",
-  "@settings_migration_title": {
-    "description": "settings_migration_title"
+  "loudnessNormalization": "Loudness normalization",
+  "@loudnessNormalization": {
+    "description": "loudnessNormalization"
   },
-  "backup_confirm_question": "Do you want to perform a backup?",
-  "@backup_confirm_question": {
-    "description": "backup_confirm_question"
+  "loudnessNormalizationDes": "Sets same lavel of loudness for all songs (Experimental) (Will not work on songs downloaded on previous version(< v1.10.0))",
+  "@loudnessNormalizationDes": {
+    "description": "loudnessNormalizationDes"
   },
-  "backup_selection_prompt": "Choose which data to backup",
-  "@backup_selection_prompt": {
-    "description": "backup_selection_prompt"
+  "low": "Low",
+  "@low": {
+    "description": "low"
   },
-  "search_recent_title": "Recent searches",
-  "@search_recent_title": {
-    "description": "search_recent_title"
+  "lyrics": "Lyrics",
+  "@lyrics": {
+    "description": "lyrics"
   },
-  "auth_forgot_password": "I forgot my password",
-  "@auth_forgot_password": {
-    "description": "auth_forgot_password"
+  "lyricsNotAvailable": "Lyrics not available!",
+  "@lyricsNotAvailable": {
+    "description": "lyricsNotAvailable"
   },
-  "auth_btn_login": "Login",
-  "@auth_btn_login": {
-    "description": "auth_btn_login"
+  "manageCollaborators": "Manage collaborators (friends)",
+  "@manageCollaborators": {
+    "description": "manageCollaborators"
   },
-  "auth_btn_register": "Register",
-  "@auth_btn_register": {
-    "description": "auth_btn_register"
+  "metadataApplySuccess": "Metadata was saved for this song.",
+  "@metadataApplySuccess": {
+    "description": "Success message after saving local metadata"
   },
-  "email": "E-mail",
-  "@email": {
-    "description": "email"
+  "metadataNoResults": "No matches found. Try a different search.",
+  "@metadataNoResults": {
+    "description": "Empty state for metadata search"
   },
-  "password_text": "Password",
-  "@password_text": {
-    "description": "Contraseña texto traducido"
+  "metadataOperationFailed": "The metadata operation failed.",
+  "@metadataOperationFailed": {
+    "description": "Generic metadata lookup or write error"
   },
-  "auth_confirm_password": "Confirm Password",
-  "@auth_confirm_password": {
-    "description": "auth_confirm_password"
+  "metadataOverwriteWarning": "This will replace the title, artist, album and cover shown in the local profile while preserving fields the match does not provide.",
+  "@metadataOverwriteWarning": {
+    "description": "Confirmation before storing metadata for a local song"
   },
-  "auth_welcome_title": "Welcome to Estrella Music",
-  "@auth_welcome_title": {
-    "description": "auth_welcome_title"
+  "metadataSearchDescription": "Choose the correct match to save its title, artist, album and cover. The audio file will not be modified.",
+  "@metadataSearchDescription": {
+    "description": "Explanation shown above metadata search results"
   },
-  "auth_welcome_subtitle": "Welcome to Estrella Music",
-  "@auth_welcome_subtitle": {
-    "description": "auth_welcome_subtitle"
+  "metadataSearchHint": "Song or artist name",
+  "@metadataSearchHint": {
+    "description": "Hint for the metadata search field"
   },
-  "auth_first_name": "First name",
-  "@auth_first_name": {
-    "description": "auth_first_name"
+  "metadataSearchTitle": "Identify song",
+  "@metadataSearchTitle": {
+    "description": "Title of the local song metadata search dialog"
   },
-  "auth_last_name": "Last name",
-  "@auth_last_name": {
-    "description": "auth_last_name"
+  "micInstruction": "Make sure the music is playing loud enough near your microphone.",
+  "@micInstruction": {
+    "description": "micInstruction"
   },
-  "auth_agree_personal_data": "Acepto usar mis datos...",
-  "@auth_agree_personal_data": {
-    "description": "auth_agree_personal_data"
+  "migratedAlbum": "Migrated album",
+  "@migratedAlbum": {
+    "description": "migratedAlbum"
   },
-  "settings_general_section": "General",
-  "@settings_general_section": {
-    "description": "settings_general_section"
+  "migratedLibrary": "Migrated library",
+  "@migratedLibrary": {
+    "description": "migratedLibrary"
   },
-  "settings_logout": "Log out",
-  "@settings_logout": {
-    "description": "settings_logout"
+  "migratedPlaylist": "Migrated Playlist",
+  "@migratedPlaylist": {
+    "description": "migratedPlaylist"
   },
-  "settings_cloud_backup_desc": "Upload, restore and manage...",
-  "@settings_cloud_backup_desc": {
-    "description": "settings_cloud_backup_desc"
+  "migrationAlreadyRunning": "There is already a migration in progress.",
+  "@migrationAlreadyRunning": {
+    "description": "migrationAlreadyRunning"
   },
-  "settings_migration_desc": "Import playlists, songs...",
-  "@settings_migration_desc": {
-    "description": "settings_migration_desc"
+  "migrationAnalyzingLocal": "Analyzing the local library...",
+  "@migrationAnalyzingLocal": {
+    "description": "migrationAnalyzingLocal"
   },
-  "migration_summary_start": "Migration completed from {source}.",
-  "@migration_summary_start": {
-    "placeholders": {
-      "source": {
-        "type": "String"
-      }
-    },
-    "description": "migration_summary_start"
+  "migrationCheckingCloud": "Checking if EMusic Cloud already has a library...",
+  "@migrationCheckingCloud": {
+    "description": "migrationCheckingCloud"
   },
-  "migration_summary_playlists": "Playlists: {count}",
-  "@migration_summary_playlists": {
-    "placeholders": {
-      "count": {
-        "type": "num"
-      }
-    },
-    "description": "migration_summary_playlists"
+  "migrationCompleted": "Migration completed.",
+  "@migrationCompleted": {
+    "description": "migrationCompleted"
   },
-  "migration_summary_songs": "Songs: {count}",
-  "@migration_summary_songs": {
-    "placeholders": {
-      "count": {
-        "type": "num"
-      }
-    },
-    "description": "migration_summary_songs"
+  "migrationCreatingBackup": "Creating a local backup before connecting cloud...",
+  "@migrationCreatingBackup": {
+    "description": "migrationCreatingBackup"
   },
-  "migration_summary_favorites": "Favorites: {count}",
-  "@migration_summary_favorites": {
-    "placeholders": {
-      "count": {
-        "type": "num"
-      }
-    },
-    "description": "migration_summary_favorites"
+  "migrationFailedLocalPreserved": "The migration failed. ",
+  "@migrationFailedLocalPreserved": {
+    "description": "migrationFailedLocalPreserved"
+  },
+  "migrationLoginRequired": "Log in to Joss Red before migrating.",
+  "@migrationLoginRequired": {
+    "description": "migrationLoginRequired"
+  },
+  "migrationPreparingCloud": "Preparing the migration in EMusic Cloud...",
+  "@migrationPreparingCloud": {
+    "description": "migrationPreparingCloud"
+  },
+  "migrationStartFailed": "EMusic Cloud could not start the migration.",
+  "@migrationStartFailed": {
+    "description": "migrationStartFailed"
+  },
+  "migrationUploadIncomplete": "Not all data could be uploaded. ",
+  "@migrationUploadIncomplete": {
+    "description": "migrationUploadIncomplete"
+  },
+  "migrationUploadingData": "Uploading playlists, favorites and history...",
+  "@migrationUploadingData": {
+    "description": "migrationUploadingData"
+  },
+  "migrationValidationFailed": "EMusic Cloud could not validate the migration.",
+  "@migrationValidationFailed": {
+    "description": "migrationValidationFailed"
+  },
+  "migrationVerifyingIntegrity": "Verifying integrity in EMusic Cloud...",
+  "@migrationVerifyingIntegrity": {
+    "description": "migrationVerifyingIntegrity"
+  },
+  "migration_btn_select": "Select file and import",
+  "@migration_btn_select": {
+    "description": "migration_btn_select"
+  },
+  "migration_select_file_dialog": "Select song.db or a .backup file",
+  "@migration_select_file_dialog": {
+    "description": "migration_select_file_dialog"
+  },
+  "migration_success": "Migration completed successfully.",
+  "@migration_success": {
+    "description": "migration_success"
   },
   "migration_summary_albums": "Albums: {count}",
   "@migration_summary_albums": {
@@ -1682,446 +1207,629 @@
     },
     "description": "migration_summary_artists"
   },
-  "migration_select_file_dialog": "Select song.db or a .backup file",
-  "@migration_select_file_dialog": {
-    "description": "migration_select_file_dialog"
+  "migration_summary_favorites": "Favorites: {count}",
+  "@migration_summary_favorites": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_favorites"
   },
-  "migration_success": "Migration completed successfully.",
-  "@migration_success": {
-    "description": "migration_success"
+  "migration_summary_playlists": "Playlists: {count}",
+  "@migration_summary_playlists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_playlists"
   },
-  "backup_select_folder_dialog": "Select backup file folder",
-  "@backup_select_folder_dialog": {
-    "description": "backup_select_folder_dialog"
+  "migration_summary_songs": "Songs: {count}",
+  "@migration_summary_songs": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_songs"
   },
-  "restore_select_file_dialog": "Select backup file",
-  "@restore_select_file_dialog": {
-    "description": "restore_select_file_dialog"
+  "migration_summary_start": "Migration completed from {source}.",
+  "@migration_summary_start": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      }
+    },
+    "description": "migration_summary_start"
   },
-  "auth_hint_email": "name@email.com",
-  "@auth_hint_email": {
-    "description": "auth_hint_email"
+  "minutes": "minutes",
+  "@minutes": {
+    "description": "minutes"
   },
-  "auth_error_invalid_email": "Enter a valid email.",
-  "@auth_error_invalid_email": {
-    "description": "auth_error_invalid_email"
-  },
-  "settings_cloud_backup_dialog_desc": "Upload a .hmb backup to the server and restore any saved backups if needed.",
-  "@settings_cloud_backup_dialog_desc": {
-    "description": "settings_cloud_backup_dialog_desc"
-  },
-  "delete": "Delete",
-  "@delete": {
-    "description": "delete"
-  },
-  "in_app_storage": "In App storage directory",
-  "@in_app_storage": {
-    "description": "in_app_storage"
-  },
-  "auth_brand_description_1": "We brought the login, registration, and password recovery from the previous project, adapted for this music app.",
-  "@auth_brand_description_1": {
-    "description": "auth_brand_description_1"
-  },
-  "auth_brand_description_2": "Your session lives in secure storage and is validated with the same backend you already used.",
-  "@auth_brand_description_2": {
-    "description": "auth_brand_description_2"
-  },
-  "auth_brand_not_configured": "The .env file needs to be configured to connect the authentication backend.",
-  "@auth_brand_not_configured": {
-    "description": "auth_brand_not_configured"
-  },
-  "backup_btn_restart": "Restart app",
-  "@backup_btn_restart": {
-    "description": "backup_btn_restart"
-  },
-  "backup_btn_upload": "Upload backup now",
-  "@backup_btn_upload": {
-    "description": "backup_btn_upload"
-  },
-  "backup_no_backups": "There are no backups yet...",
-  "@backup_no_backups": {
-    "description": "backup_no_backups"
-  },
-  "backup_auth_required": "You need an active session...",
-  "@backup_auth_required": {
-    "description": "backup_auth_required"
-  },
-  "backup_upload_success": "Backup uploaded correctly.",
-  "@backup_upload_success": {
-    "description": "backup_upload_success"
-  },
-  "backup_restore_success": "Backup restored. ",
-  "@backup_restore_success": {
-    "description": "backup_restore_success"
-  },
-  "backup_delete_success": "Backup deleted.",
-  "@backup_delete_success": {
-    "description": "backup_delete_success"
-  },
-  "genre_pop": "Pop",
-  "@genre_pop": {
-    "description": "genre_pop"
-  },
-  "genre_rock": "Rock",
-  "@genre_rock": {
-    "description": "genre_rock"
-  },
-  "genre_hiphop": "hip hop",
-  "@genre_hiphop": {
-    "description": "genre_hiphop"
-  },
-  "genre_electronic": "Electronics",
-  "@genre_electronic": {
-    "description": "genre_electronic"
-  },
-  "genre_jazz": "Jazz",
-  "@genre_jazz": {
-    "description": "genre_jazz"
-  },
-  "genre_latin": "Latin",
-  "@genre_latin": {
-    "description": "genre_latin"
-  },
-  "migration_btn_select": "Select file and import",
-  "@migration_btn_select": {
-    "description": "migration_btn_select"
-  },
-  "auth_forgot_password_subtitle": "We will send instructions to your account email.",
-  "@auth_forgot_password_subtitle": {
-    "description": "auth_forgot_password_subtitle"
-  },
-  "auth_btn_send_email": "Send email",
-  "@auth_btn_send_email": {
-    "description": "auth_btn_send_email"
-  },
-  "auth_error_not_configured": "Backend authentication is not configured in the .env file.",
-  "@auth_error_not_configured": {
-    "description": "auth_error_not_configured"
-  },
-  "auth_error_invalid_credentials": "Incorrect email or password.",
-  "@auth_error_invalid_credentials": {
-    "description": "auth_error_invalid_credentials"
-  },
-  "auth_error_not_verified": "Your account is not yet verified.",
-  "@auth_error_not_verified": {
-    "description": "auth_error_not_verified"
-  },
-  "auth_error_unknown": "Could not complete the operation.",
-  "@auth_error_unknown": {
-    "description": "auth_error_unknown"
-  },
-  "auth_register_success": "Account created successfully.",
-  "@auth_register_success": {
-    "description": "auth_register_success"
-  },
-  "auth_register_error": "Could not create account.",
-  "@auth_register_error": {
-    "description": "auth_register_error"
-  },
-  "auth_recovery_email_sent": "Email sent.",
-  "@auth_recovery_email_sent": {
-    "description": "auth_recovery_email_sent"
-  },
-  "auth_recovery_email_error": "Could not send email.",
-  "@auth_recovery_email_error": {
-    "description": "auth_recovery_email_error"
-  },
-  "latestVersion": "Latest Version Available",
-  "@latestVersion": {
-    "description": "latestVersion"
-  },
-  "updateApp": "Update Application",
-  "@updateApp": {
-    "description": "updateApp"
-  },
-  "loadInfoUpdate": "Could not load update information",
-  "@loadInfoUpdate": {
-    "description": "loadInfoUpdate"
-  },
-  "infoNotAvailable": "Information not available",
-  "@infoNotAvailable": {
-    "description": "infoNotAvailable"
-  },
-  "developedBy": "Developed and Maintained by Joss Estrada (JOSPROX)",
-  "@developedBy": {
-    "description": "developedBy"
-  },
-  "copyrightNotice": "© 2026 JOSPROX. License GPL v3.0",
-  "@copyrightNotice": {
-    "description": "copyrightNotice"
-  },
-  "forgottenFavorites": "forgotten favorites",
-  "@forgottenFavorites": {
-    "description": "forgottenFavorites"
+  "misc": "Misc",
+  "@misc": {
+    "description": "misc"
   },
   "mostListenedSong": "The most listened to song",
   "@mostListenedSong": {
     "description": "mostListenedSong"
   },
-  "reproducedBy": "Reproduced by",
-  "@reproducedBy": {
-    "description": "reproducedBy"
-  },
-  "recentSearches": "Recent searches",
-  "@recentSearches": {
-    "description": "recentSearches"
-  },
-  "popularTracks": "Popular tracks",
-  "@popularTracks": {
-    "description": "popularTracks"
-  },
-  "latestRelease": "Latest release",
-  "@latestRelease": {
-    "description": "latestRelease"
-  },
-  "follow": "Continue",
-  "@follow": {
-    "description": "follow"
-  },
-  "following": "Following",
-  "@following": {
-    "description": "following"
-  },
-  "listenNow": "Listen now",
-  "@listenNow": {
-    "description": "listenNow"
-  },
-  "video": "Video",
-  "@video": {
-    "description": "video"
-  },
-  "about": "About",
-  "@about": {
-    "description": "about"
-  },
-  "readMore": "Read more",
-  "@readMore": {
-    "description": "readMore"
-  },
-  "speedAndPitch": "Speed ​​and Pitch",
-  "@speedAndPitch": {
-    "description": "speedAndPitch"
-  },
-  "playbackSpeed": "Playback speed",
-  "@playbackSpeed": {
-    "description": "playbackSpeed"
-  },
-  "songPitch": "song tone",
-  "@songPitch": {
-    "description": "songPitch"
+  "musicAndPlayback": "Music & Playback",
+  "@musicAndPlayback": {
+    "description": "musicAndPlayback"
   },
   "musicRecognition": "Music Recognition",
   "@musicRecognition": {
     "description": "musicRecognition"
   },
-  "listeningToEnvironment": "Listening to the environment...",
-  "@listeningToEnvironment": {
-    "description": "listeningToEnvironment"
+  "networkError": "Network error! Check your network connection.",
+  "@networkError": {
+    "description": "networkError"
   },
-  "micInstruction": "Make sure the music is playing loud enough near your microphone.",
-  "@micInstruction": {
-    "description": "micInstruction"
+  "networkError1": "Oops network error!",
+  "@networkError1": {
+    "description": "networkError1"
   },
-  "processingAudio": "Processing the audio...",
-  "@processingAudio": {
-    "description": "processingAudio"
-  },
-  "shazamSearching": "Searching the Shazam database for matches...",
-  "@shazamSearching": {
-    "description": "shazamSearching"
-  },
-  "songFound": "Song Found!",
-  "@songFound": {
-    "description": "songFound"
-  },
-  "playNow": "Play Now",
-  "@playNow": {
-    "description": "playNow"
-  },
-  "searchInLibrary": "Search in Library",
-  "@searchInLibrary": {
-    "description": "searchInLibrary"
-  },
-  "noMatchesFound": "No Matches",
-  "@noMatchesFound": {
-    "description": "noMatchesFound"
-  },
-  "noMatchInstruction": "Could not find any songs in the recorded audio",
-  "@noMatchInstruction": {
-    "description": "noMatchInstruction"
-  },
-  "errorOccurred": "An error occurred",
-  "@errorOccurred": {
-    "description": "errorOccurred"
-  },
-  "playingRecognizedTrack": "Playing:",
-  "@playingRecognizedTrack": {
-    "description": "playingRecognizedTrack"
-  },
-  "errorPlayingTrack": "Error when playing:",
-  "@errorPlayingTrack": {
-    "description": "errorPlayingTrack"
-  },
-  "welcome_title": "Your music, your way",
-  "@welcome_title": {
-    "description": "welcome_title"
-  },
-  "welcome_subtitle": "Choose how you want to experience Estrella Music from now on.",
-  "@welcome_subtitle": {
-    "description": "welcome_subtitle"
-  },
-  "welcome_intro": "We have modernized our platform. ",
-  "@welcome_intro": {
-    "description": "welcome_intro"
-  },
-  "recommend_cloud": "We recommend activating Cloud Mode for a Spotify-like experience: real-time synchronization between all your devices and automatic backup without you having to do anything.",
-  "@recommend_cloud": {
-    "description": "recommend_cloud"
-  },
-  "swipe_prompt": "Swipe to explore options",
-  "@swipe_prompt": {
-    "description": "swipe_prompt"
-  },
-  "local_title": "Local Mode",
-  "@local_title": {
-    "description": "local_title"
-  },
-  "local_subtitle": "Absolute privacy on your device",
-  "@local_subtitle": {
-    "description": "local_subtitle"
-  },
-  "local_b1": "It works without the need to log in.",
-  "@local_b1": {
-    "description": "local_b1"
-  },
-  "local_b2": "Your entire library stays strictly on this computer.",
-  "@local_b2": {
-    "description": "local_b2"
-  },
-  "local_b3": "Note: No manual cloud backups. ",
-  "@local_b3": {
-    "description": "local_b3"
-  },
-  "local_btn": "Use only on this device",
-  "@local_btn": {
-    "description": "local_btn"
-  },
-  "cloud_title": "Cloud Mode (Recommended)",
-  "@cloud_title": {
-    "description": "cloud_title"
-  },
-  "cloud_subtitle": "Real-time synchronization with Joss Red",
-  "@cloud_subtitle": {
-    "description": "cloud_subtitle"
-  },
-  "cloud_b1": "Log in securely using your Joss Red account.",
-  "@cloud_b1": {
-    "description": "cloud_b1"
-  },
-  "cloud_b2": "Access your playlists, favorites and history from any device (Windows, Android, etc.) instantly.",
-  "@cloud_b2": {
-    "description": "cloud_b2"
-  },
-  "cloud_b3": "Smart Sync: Work offline and upload changes automatically when you recover internet.",
-  "@cloud_b3": {
-    "description": "cloud_b3"
-  },
-  "cloud_btn": "Activate Cloud sync",
-  "@cloud_btn": {
-    "description": "cloud_btn"
-  },
-  "slide_indicator": "Step {current} of 3",
-  "@slide_indicator": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      }
-    },
-    "description": "slide_indicator"
-  },
-  "news_card_title": "Estrella Music has evolved!",
-  "@news_card_title": {
-    "description": "news_card_title"
-  },
-  "news_card_subtitle": "100% synchronization with Joss Red, playlists with friends and much more. ",
-  "@news_card_subtitle": {
-    "description": "news_card_subtitle"
-  },
-  "news_dialog_title": "Estrella Music News",
-  "@news_dialog_title": {
-    "description": "news_dialog_title"
-  },
-  "news_item_sync_title": "Full Integration with Joss Red",
-  "@news_item_sync_title": {
-    "description": "news_item_sync_title"
-  },
-  "news_item_sync_desc": "Your playlists and favorites are now saved and synced in the cloud automatically with your main Joss Red account.",
-  "@news_item_sync_desc": {
-    "description": "news_item_sync_desc"
-  },
-  "news_item_collab_title": "Collaborative Playlists",
-  "@news_item_collab_title": {
-    "description": "news_item_collab_title"
-  },
-  "news_item_collab_desc": "Create playlists with your friends! ",
-  "@news_item_collab_desc": {
-    "description": "news_item_collab_desc"
-  },
-  "news_item_trans_title": "Transparent Synchronization",
-  "@news_item_trans_title": {
-    "description": "news_item_trans_title"
-  },
-  "news_item_trans_desc": "You no longer need to click manual sync buttons; ",
-  "@news_item_trans_desc": {
-    "description": "news_item_trans_desc"
-  },
-  "news_dialog_section_friends": "Friends and Account Management:",
-  "@news_dialog_section_friends": {
-    "description": "news_dialog_section_friends"
-  },
-  "news_dialog_friends_desc": "To add friends, accept requests or manage your security profile, please use Joss Red on its official platforms:",
-  "@news_dialog_friends_desc": {
-    "description": "news_dialog_friends_desc"
+  "newVersionAvailable": "New version available!",
+  "@newVersionAvailable": {
+    "description": "newVersionAvailable"
   },
   "news_btn_app": "Joss Red App (Play Store)",
   "@news_btn_app": {
     "description": "news_btn_app"
   },
-  "news_btn_web": "Joss Red Web",
-  "@news_btn_web": {
-    "description": "news_btn_web"
-  },
   "news_btn_dismiss": "Understood",
   "@news_btn_dismiss": {
     "description": "news_btn_dismiss"
   },
-  "settings_appearance_desc": "Theme, language and interface animations.",
-  "@settings_appearance_desc": {
-    "description": "settings_appearance_desc"
+  "news_btn_web": "Joss Red Web",
+  "@news_btn_web": {
+    "description": "news_btn_web"
   },
-  "settings_content_desc": "Discover filters, integration with Piped and caches.",
-  "@settings_content_desc": {
-    "description": "settings_content_desc"
+  "news_card_subtitle": "100% synchronization with Joss Red, playlists with friends and much more. ",
+  "@news_card_subtitle": {
+    "description": "news_card_subtitle"
   },
-  "settings_playback_desc": "Streaming quality, normalization, silences and battery.",
-  "@settings_playback_desc": {
-    "description": "settings_playback_desc"
+  "news_card_title": "Estrella Music has evolved!",
+  "@news_card_title": {
+    "description": "news_card_title"
   },
-  "settings_downloads_desc": "Downloads and Storage",
-  "@settings_downloads_desc": {
-    "description": "settings_downloads_desc"
+  "news_dialog_friends_desc": "To add friends, accept requests or manage your security profile, please use Joss Red on its official platforms:",
+  "@news_dialog_friends_desc": {
+    "description": "news_dialog_friends_desc"
   },
-  "settings_downloads_sub": "Audio formats, folders and automatic downloads.",
-  "@settings_downloads_sub": {
-    "description": "settings_downloads_sub"
+  "news_dialog_section_friends": "Friends and Account Management:",
+  "@news_dialog_section_friends": {
+    "description": "news_dialog_section_friends"
   },
-  "settings_account_desc": "Account and Sync",
-  "@settings_account_desc": {
-    "description": "settings_account_desc"
+  "news_dialog_title": "Estrella Music News",
+  "@news_dialog_title": {
+    "description": "news_dialog_title"
   },
-  "settings_account_sub": "Cloud mode, backups, friends list and migrations.",
-  "@settings_account_sub": {
-    "description": "settings_account_sub"
+  "news_item_collab_desc": "Create playlists with your friends! ",
+  "@news_item_collab_desc": {
+    "description": "news_item_collab_desc"
+  },
+  "news_item_collab_title": "Collaborative Playlists",
+  "@news_item_collab_title": {
+    "description": "news_item_collab_title"
+  },
+  "news_item_sync_desc": "Your playlists and favorites are now saved and synced in the cloud automatically with your main Joss Red account.",
+  "@news_item_sync_desc": {
+    "description": "news_item_sync_desc"
+  },
+  "news_item_sync_title": "Full Integration with Joss Red",
+  "@news_item_sync_title": {
+    "description": "news_item_sync_title"
+  },
+  "news_item_trans_desc": "You no longer need to click manual sync buttons; ",
+  "@news_item_trans_desc": {
+    "description": "news_item_trans_desc"
+  },
+  "news_item_trans_title": "Transparent Synchronization",
+  "@news_item_trans_title": {
+    "description": "news_item_trans_title"
+  },
+  "no": "No",
+  "@no": {
+    "description": "no"
+  },
+  "noBookmarks": "No bookmarks!",
+  "@noBookmarks": {
+    "description": "noBookmarks"
+  },
+  "noJossRedFriends": "You have no added friends on Joss Red.",
+  "@noJossRedFriends": {
+    "description": "noJossRedFriends"
+  },
+  "noLibPlaylist": "You don't have any lib playlist!",
+  "@noLibPlaylist": {
+    "description": "noLibPlaylist"
+  },
+  "noMatchInstruction": "Could not find any songs in the recorded audio",
+  "@noMatchInstruction": {
+    "description": "noMatchInstruction"
+  },
+  "noMatchesFound": "No Matches",
+  "@noMatchesFound": {
+    "description": "noMatchesFound"
+  },
+  "noOfflineSong": "No offline songs!",
+  "@noOfflineSong": {
+    "description": "noOfflineSong"
+  },
+  "noSongsInCollection": "There are no songs in this collection",
+  "@noSongsInCollection": {
+    "description": "noSongsInCollection"
+  },
+  "nomatch": "No Match found for",
+  "@nomatch": {
+    "description": "nomatch"
+  },
+  "notAuthenticated": "Not authenticated",
+  "@notAuthenticated": {
+    "description": "notAuthenticated"
+  },
+  "notaSongVideo": "Not a Song/Music-Video!",
+  "@notaSongVideo": {
+    "description": "notaSongVideo"
+  },
+  "notaValidLink": "Not a valid link!",
+  "@notaValidLink": {
+    "description": "notaValidLink"
+  },
+  "openIn": "Open in",
+  "@openIn": {
+    "description": "openIn"
+  },
+  "operationFailed": "Operation failed",
+  "@operationFailed": {
+    "description": "operationFailed"
+  },
+  "password": "Password",
+  "@password": {
+    "description": "password"
+  },
+  "password_text": "Password",
+  "@password_text": {
+    "description": "Contraseña texto traducido"
+  },
+  "permissionDenied": "Permission denied",
+  "@permissionDenied": {
+    "description": "permissionDenied"
+  },
+  "permissionsAllow": "Allow",
+  "@permissionsAllow": {
+    "description": "permissionsAllow"
+  },
+  "permissionsConsentDescription": "Estrella Music needs these permissions to manage your music and offer all playback features.",
+  "@permissionsConsentDescription": {
+    "description": "permissionsConsentDescription"
+  },
+  "permissionsConsentTitle": "Permissions to get started",
+  "@permissionsConsentTitle": {
+    "description": "permissionsConsentTitle"
+  },
+  "permissionsContinueButton": "Grant required permissions",
+  "@permissionsContinueButton": {
+    "description": "permissionsContinueButton"
+  },
+  "permissionsMicrophoneDescription": "It is used only when you choose to identify a song that is playing around you.",
+  "@permissionsMicrophoneDescription": {
+    "description": "permissionsMicrophoneDescription"
+  },
+  "permissionsMicrophoneTitle": "Microphone",
+  "@permissionsMicrophoneTitle": {
+    "description": "permissionsMicrophoneTitle"
+  },
+  "permissionsNotificationsDescription": "Shows playback controls, download progress, and important app notices.",
+  "@permissionsNotificationsDescription": {
+    "description": "permissionsNotificationsDescription"
+  },
+  "permissionsNotificationsTitle": "Notifications",
+  "@permissionsNotificationsTitle": {
+    "description": "permissionsNotificationsTitle"
+  },
+  "permissionsOpenSettings": "Settings",
+  "@permissionsOpenSettings": {
+    "description": "permissionsOpenSettings"
+  },
+  "permissionsRequiredNotice": "All three permits are required to continue. ",
+  "@permissionsRequiredNotice": {
+    "description": "permissionsRequiredNotice"
+  },
+  "permissionsStorageDescription": "It allows you to play music, save downloads, export playlists and prepare updates.",
+  "@permissionsStorageDescription": {
+    "description": "permissionsStorageDescription"
+  },
+  "permissionsStorageTitle": "Music and storage",
+  "@permissionsStorageTitle": {
+    "description": "permissionsStorageTitle"
+  },
+  "personalisation": "Personalisation",
+  "@personalisation": {
+    "description": "personalisation"
+  },
+  "pipedPlaylistDescription": "Piped Playlist",
+  "@pipedPlaylistDescription": {
+    "description": "pipedPlaylistDescription"
+  },
+  "pipedplstSyncAlert": "Piped playlist synced!",
+  "@pipedplstSyncAlert": {
+    "description": "pipedplstSyncAlert"
+  },
+  "plain": "Plain",
+  "@plain": {
+    "description": "plain"
+  },
+  "play": "Play",
+  "@play": {
+    "description": "play"
+  },
+  "playNext": "Play next",
+  "@playNext": {
+    "description": "playNext"
+  },
+  "playNow": "Play Now",
+  "@playNow": {
+    "description": "playNow"
+  },
+  "playbackSpeed": "Playback speed",
+  "@playbackSpeed": {
+    "description": "playbackSpeed"
+  },
+  "playerUi": "Player Ui",
+  "@playerUi": {
+    "description": "playerUi"
+  },
+  "playerUiDes": "Select player user interface",
+  "@playerUiDes": {
+    "description": "playerUiDes"
+  },
+  "playingRecognizedTrack": "Playing:",
+  "@playingRecognizedTrack": {
+    "description": "playingRecognizedTrack"
+  },
+  "playingfromAlbum": "PLAYING FROM ÁLBUM",
+  "@playingfromAlbum": {
+    "description": "playingfromAlbum"
+  },
+  "playingfromArtist": "PLAYING FROM ARTIST",
+  "@playingfromArtist": {
+    "description": "playingfromArtist"
+  },
+  "playingfromPlaylist": "PLAYING FROM PLAYLIST",
+  "@playingfromPlaylist": {
+    "description": "playingfromPlaylist"
+  },
+  "playingfromSelection": "PLAYING FROM SELECTION",
+  "@playingfromSelection": {
+    "description": "playingfromSelection"
+  },
+  "playlist": "Playlist",
+  "@playlist": {
+    "description": "playlist"
+  },
+  "playlistBlacklistAlert": "Playlist blacklisted!",
+  "@playlistBlacklistAlert": {
+    "description": "playlistBlacklistAlert"
+  },
+  "playlistBookmarkAddAlert": "Playlist bookmarked!",
+  "@playlistBookmarkAddAlert": {
+    "description": "playlistBookmarkAddAlert"
+  },
+  "playlistBookmarkRemoveAlert": "Playlist bookmark removed!",
+  "@playlistBookmarkRemoveAlert": {
+    "description": "playlistBookmarkRemoveAlert"
+  },
+  "playlistCollaboratorsTitle": "Playlist contributors",
+  "@playlistCollaboratorsTitle": {
+    "description": "playlistCollaboratorsTitle"
+  },
+  "playlistCreatedAlert": "Playlist created!",
+  "@playlistCreatedAlert": {
+    "description": "playlistCreatedAlert"
+  },
+  "playlistCreatednsongAddedAlert": "Playlist created & song added!",
+  "@playlistCreatednsongAddedAlert": {
+    "description": "playlistCreatednsongAddedAlert"
+  },
+  "playlistExportedMsg": "Playlist exported successfully to",
+  "@playlistExportedMsg": {
+    "description": "playlistExportedMsg"
+  },
+  "playlistImportedMsg": "Playlist imported successfully",
+  "@playlistImportedMsg": {
+    "description": "playlistImportedMsg"
+  },
+  "playlistRemovedAlert": "Playlist removed!",
+  "@playlistRemovedAlert": {
+    "description": "playlistRemovedAlert"
+  },
+  "playlistRenameAlert": "Renamed successfully!",
+  "@playlistRenameAlert": {
+    "description": "playlistRenameAlert"
+  },
+  "playlists": "Playlists",
+  "@playlists": {
+    "description": "playlists"
+  },
+  "playnextMsg": "Upcoming",
+  "@playnextMsg": {
+    "description": "playnextMsg"
+  },
+  "podcasts": "Podcasts",
+  "@podcasts": {
+    "description": "podcasts"
+  },
+  "popularTracks": "Popular tracks",
+  "@popularTracks": {
+    "description": "popularTracks"
+  },
+  "processFiles": "Processing files...",
+  "@processFiles": {
+    "description": "processFiles"
+  },
+  "processingAudio": "Processing the audio...",
+  "@processingAudio": {
+    "description": "processingAudio"
+  },
+  "profiles": "Profiles",
+  "@profiles": {
+    "description": "profiles"
+  },
+  "queueLoop": "Queue loop",
+  "@queueLoop": {
+    "description": "queueLoop"
+  },
+  "queueLoopNotDisMsg1": "Queue loop mode cannot be disabled when shuffle mode is enabled.",
+  "@queueLoopNotDisMsg1": {
+    "description": "queueLoopNotDisMsg1"
+  },
+  "queueLoopNotDisMsg2": "Queue loop mode cannot be enabled in radio mode.",
+  "@queueLoopNotDisMsg2": {
+    "description": "queueLoopNotDisMsg2"
+  },
+  "queueShufflingDeniedMsg": "Queue can't be shuffled when shuffle mode is enabled",
+  "@queueShufflingDeniedMsg": {
+    "description": "queueShufflingDeniedMsg"
+  },
+  "queuerearrangingDeniedMsg": "Queue can't be rearranged when shuffle mode is enabled",
+  "@queuerearrangingDeniedMsg": {
+    "description": "queuerearrangingDeniedMsg"
+  },
+  "quickPics": "Quick selection",
+  "@quickPics": {
+    "description": "quickPics"
+  },
+  "quickpicks": "Quick Picks",
+  "@quickpicks": {
+    "description": "quickpicks"
+  },
+  "radioNotAvailable": "Radio not available for this artist!",
+  "@radioNotAvailable": {
+    "description": "radioNotAvailable"
+  },
+  "randomRadio": "Random Radio",
+  "@randomRadio": {
+    "description": "randomRadio"
+  },
+  "randomSelection": "Random Selection",
+  "@randomSelection": {
+    "description": "randomSelection"
+  },
+  "reArrangePlaylist": "Rearrange playlist",
+  "@reArrangePlaylist": {
+    "description": "reArrangePlaylist"
+  },
+  "reArrangeSongs": "Rearrange songs",
+  "@reArrangeSongs": {
+    "description": "reArrangeSongs"
+  },
+  "readMore": "Read more",
+  "@readMore": {
+    "description": "readMore"
+  },
+  "recentSearches": "Recent searches",
+  "@recentSearches": {
+    "description": "recentSearches"
+  },
+  "recentlyPlayed": "Recently Played",
+  "@recentlyPlayed": {
+    "description": "recentlyPlayed"
+  },
+  "recommend_cloud": "We recommend activating Cloud Mode for a Spotify-like experience: real-time synchronization between all your devices and automatic backup without you having to do anything.",
+  "@recommend_cloud": {
+    "description": "recommend_cloud"
+  },
+  "recommendedAlbums": "Recommended",
+  "@recommendedAlbums": {
+    "description": "recommendedAlbums"
+  },
+  "recommendedArtists": "Recommended",
+  "@recommendedArtists": {
+    "description": "recommendedArtists"
+  },
+  "removeFromCache": "Remove from cache",
+  "@removeFromCache": {
+    "description": "removeFromCache"
+  },
+  "removeFromLib": "Remove from Library Songs",
+  "@removeFromLib": {
+    "description": "removeFromLib"
+  },
+  "removeFromLibrary": "Remove from Library",
+  "@removeFromLibrary": {
+    "description": "removeFromLibrary"
+  },
+  "removeFromPlaylist": "Remove from playlist",
+  "@removeFromPlaylist": {
+    "description": "removeFromPlaylist"
+  },
+  "removeFromQueue": "Remove from queue",
+  "@removeFromQueue": {
+    "description": "removeFromQueue"
+  },
+  "removeMultiple": "Remove multiple songs",
+  "@removeMultiple": {
+    "description": "removeMultiple"
+  },
+  "removePlaylist": "Remove playlist",
+  "@removePlaylist": {
+    "description": "removePlaylist"
+  },
+  "rename": "Rename",
+  "@rename": {
+    "description": "rename"
+  },
+  "renamePlaylist": "Rename Playlist",
+  "@renamePlaylist": {
+    "description": "renamePlaylist"
+  },
+  "reproducedBy": "Reproduced by",
+  "@reproducedBy": {
+    "description": "reproducedBy"
+  },
+  "reset": "Reset",
+  "@reset": {
+    "description": "reset"
+  },
+  "resetToDefault": "Restore default settings",
+  "@resetToDefault": {
+    "description": "resetToDefault"
+  },
+  "resetToDefaultDes": "Reset app settings to default (Restart required)",
+  "@resetToDefaultDes": {
+    "description": "resetToDefaultDes"
+  },
+  "resetToDefaultMsg": "Settings reset to default completed, Please restart app",
+  "@resetToDefaultMsg": {
+    "description": "resetToDefaultMsg"
+  },
+  "resetblacklistedplaylist": "Reset blacklisted playlists",
+  "@resetblacklistedplaylist": {
+    "description": "resetblacklistedplaylist"
+  },
+  "resetblacklistedplaylistDes": "Reset all the piped blacklisted playlists",
+  "@resetblacklistedplaylistDes": {
+    "description": "resetblacklistedplaylistDes"
+  },
+  "restartApp": "Restart App",
+  "@restartApp": {
+    "description": "restartApp"
+  },
+  "restore": "Restore",
+  "@restore": {
+    "description": "restore"
+  },
+  "restoreAppData": "Restore App data",
+  "@restoreAppData": {
+    "description": "restoreAppData"
+  },
+  "restoreLastPlaybackSession": "Restore last playback session",
+  "@restoreLastPlaybackSession": {
+    "description": "restoreLastPlaybackSession"
+  },
+  "restoreLastPlaybackSessionDes": "Automatically restore the last playback session on app start",
+  "@restoreLastPlaybackSessionDes": {
+    "description": "restoreLastPlaybackSessionDes"
+  },
+  "restoreMsg": "Successfully restored!\nChanges are applied on restart",
+  "@restoreMsg": {
+    "description": "restoreMsg"
+  },
+  "restoreSettingsAndPlaylists": "Restore settings and playlists",
+  "@restoreSettingsAndPlaylists": {
+    "description": "restoreSettingsAndPlaylists"
+  },
+  "restoreSettingsAndPlaylistsDes": "Restores all settings, login data and playlists from a backup file. Overwrites all current data",
+  "@restoreSettingsAndPlaylistsDes": {
+    "description": "restoreSettingsAndPlaylistsDes"
+  },
+  "restore_select_file_dialog": "Select backup file",
+  "@restore_select_file_dialog": {
+    "description": "restore_select_file_dialog"
+  },
+  "restoring": "Restoring...",
+  "@restoring": {
+    "description": "restoring"
+  },
+  "results": "Results",
+  "@results": {
+    "description": "results"
+  },
+  "retry": "Retry!",
+  "@retry": {
+    "description": "retry"
+  },
+  "save": "Keep",
+  "@save": {
+    "description": "save"
+  },
+  "savedAlbums": "Saved",
+  "@savedAlbums": {
+    "description": "savedAlbums"
+  },
+  "scanning": "Scanning...",
+  "@scanning": {
+    "description": "scanning"
+  },
+  "search": "Search",
+  "@search": {
+    "description": "search"
+  },
+  "searchDes": "Songs, Playlist, Album or Artist",
+  "@searchDes": {
+    "description": "searchDes"
+  },
+  "searchInLibrary": "Search in Library",
+  "@searchInLibrary": {
+    "description": "searchInLibrary"
+  },
+  "searchRes": "Search results",
+  "@searchRes": {
+    "description": "searchRes"
+  },
+  "search_recent_title": "Recent searches",
+  "@search_recent_title": {
+    "description": "search_recent_title"
+  },
+  "selectAll": "Select All",
+  "@selectAll": {
+    "description": "selectAll"
+  },
+  "selectAuthIns": "Select Auth Instance",
+  "@selectAuthIns": {
+    "description": "selectAuthIns"
+  },
+  "selectAuthInsMsg": "Please select Authentication instance!",
+  "@selectAuthInsMsg": {
+    "description": "selectAuthInsMsg"
+  },
+  "selectFile": "Select File",
+  "@selectFile": {
+    "description": "selectFile"
+  },
+  "selectSongs": "Select songs",
+  "@selectSongs": {
+    "description": "selectSongs"
+  },
+  "selectedFileNotFound": "The selected file was not found.",
+  "@selectedFileNotFound": {
+    "description": "selectedFileNotFound"
+  },
+  "sessionExpiredLoginAgain": "Your session has expired. ",
+  "@sessionExpiredLoginAgain": {
+    "description": "sessionExpiredLoginAgain"
+  },
+  "setDiscoverContent": "Set discover content",
+  "@setDiscoverContent": {
+    "description": "setDiscoverContent"
+  },
+  "settings": "Settings",
+  "@settings": {
+    "description": "settings"
   },
   "settings_about_desc": "About Estrella Music",
   "@settings_about_desc": {
@@ -2131,13 +1839,65 @@
   "@settings_about_sub": {
     "description": "settings_about_sub"
   },
-  "settings_local_cloud_title": "Local Mode / EMusic Cloud",
-  "@settings_local_cloud_title": {
-    "description": "settings_local_cloud_title"
+  "settings_account_desc": "Account and Sync",
+  "@settings_account_desc": {
+    "description": "settings_account_desc"
+  },
+  "settings_account_sub": "Cloud mode, backups, friends list and migrations.",
+  "@settings_account_sub": {
+    "description": "settings_account_sub"
+  },
+  "settings_appearance_desc": "Theme, language and interface animations.",
+  "@settings_appearance_desc": {
+    "description": "settings_appearance_desc"
+  },
+  "settings_cloud_backup": "Cloud backup",
+  "@settings_cloud_backup": {
+    "description": "settings_cloud_backup"
+  },
+  "settings_cloud_backup_desc": "Upload, restore and manage...",
+  "@settings_cloud_backup_desc": {
+    "description": "settings_cloud_backup_desc"
+  },
+  "settings_cloud_backup_dialog_desc": "Upload a .hmb backup to the server and restore any saved backups if needed.",
+  "@settings_cloud_backup_dialog_desc": {
+    "description": "settings_cloud_backup_dialog_desc"
+  },
+  "settings_content_desc": "Discover filters, integration with Piped and caches.",
+  "@settings_content_desc": {
+    "description": "settings_content_desc"
+  },
+  "settings_downloads_desc": "Downloads and Storage",
+  "@settings_downloads_desc": {
+    "description": "settings_downloads_desc"
+  },
+  "settings_downloads_sub": "Audio formats, folders and automatic downloads.",
+  "@settings_downloads_sub": {
+    "description": "settings_downloads_sub"
+  },
+  "settings_general_section": "General",
+  "@settings_general_section": {
+    "description": "settings_general_section"
   },
   "settings_local_cloud_desc": "Choose, migrate or review the synchronization status with Joss Red.",
   "@settings_local_cloud_desc": {
     "description": "settings_local_cloud_desc"
+  },
+  "settings_local_cloud_title": "Local Mode / EMusic Cloud",
+  "@settings_local_cloud_title": {
+    "description": "settings_local_cloud_title"
+  },
+  "settings_logout": "Log out",
+  "@settings_logout": {
+    "description": "settings_logout"
+  },
+  "settings_migration_desc": "Import playlists, songs...",
+  "@settings_migration_desc": {
+    "description": "settings_migration_desc"
+  },
+  "settings_migration_title": "Migrate from Joss Music Kotlin",
+  "@settings_migration_title": {
+    "description": "settings_migration_title"
   },
   "settings_my_friends": "my friends",
   "@settings_my_friends": {
@@ -2147,21 +1907,17 @@
   "@settings_my_friends_desc": {
     "description": "settings_my_friends_desc"
   },
-  "settings_refresh_visitor_title": "Refresh ID (Visitor ID)",
-  "@settings_refresh_visitor_title": {
-    "description": "settings_refresh_visitor_title"
+  "settings_playback_desc": "Streaming quality, normalization, silences and battery.",
+  "@settings_playback_desc": {
+    "description": "settings_playback_desc"
   },
   "settings_refresh_visitor_desc": "Regenerate your Online Music ID if Discover content doesn't load.",
   "@settings_refresh_visitor_desc": {
     "description": "settings_refresh_visitor_desc"
   },
-  "settings_visitor_updated": "Updated identifier",
-  "@settings_visitor_updated": {
-    "description": "settings_visitor_updated"
-  },
-  "settings_visitor_updated_desc": "A new Visitor ID was generated successfully.",
-  "@settings_visitor_updated_desc": {
-    "description": "settings_visitor_updated_desc"
+  "settings_refresh_visitor_title": "Refresh ID (Visitor ID)",
+  "@settings_refresh_visitor_title": {
+    "description": "settings_refresh_visitor_title"
   },
   "settings_visitor_error": "Mistake",
   "@settings_visitor_error": {
@@ -2180,138 +1936,234 @@
     },
     "description": "settings_visitor_exception"
   },
-  "downloadNotificationChannelName": "music downloads",
-  "@downloadNotificationChannelName": {
-    "description": "downloadNotificationChannelName"
+  "settings_visitor_updated": "Updated identifier",
+  "@settings_visitor_updated": {
+    "description": "settings_visitor_updated"
   },
-  "downloadNotificationChannelDescription": "Keeps your music downloads active in the background.",
-  "@downloadNotificationChannelDescription": {
-    "description": "downloadNotificationChannelDescription"
+  "settings_visitor_updated_desc": "A new Visitor ID was generated successfully.",
+  "@settings_visitor_updated_desc": {
+    "description": "settings_visitor_updated_desc"
   },
-  "downloadNotificationTitle": "Downloading music",
-  "@downloadNotificationTitle": {
-    "description": "downloadNotificationTitle"
+  "shareAlbum": "Share album",
+  "@shareAlbum": {
+    "description": "shareAlbum"
   },
-  "downloadNotificationPreparing": "Preparing your downloads…",
-  "@downloadNotificationPreparing": {
-    "description": "downloadNotificationPreparing"
+  "sharePlaylist": "Share playlist",
+  "@sharePlaylist": {
+    "description": "sharePlaylist"
   },
-  "downloadNotificationSong": "Downloading: {songTitle}",
-  "@downloadNotificationSong": {
+  "shareSong": "Share this song",
+  "@shareSong": {
+    "description": "shareSong"
+  },
+  "shazamSearching": "Searching the Shazam database for matches...",
+  "@shazamSearching": {
+    "description": "shazamSearching"
+  },
+  "shuffle": "Shuffle",
+  "@shuffle": {
+    "description": "shuffle"
+  },
+  "shuffleQueue": "Shuffle Queue",
+  "@shuffleQueue": {
+    "description": "shuffleQueue"
+  },
+  "similarToTitle": "Similar to {title}",
+  "@similarToTitle": {
     "placeholders": {
-      "songTitle": {
+      "title": {
         "type": "String"
       }
     },
-    "description": "downloadNotificationSong"
+    "description": "similarToTitle"
   },
-  "permissionsConsentTitle": "Permissions to get started",
-  "@permissionsConsentTitle": {
-    "description": "permissionsConsentTitle"
+  "singles": "Singles",
+  "@singles": {
+    "description": "singles"
   },
-  "permissionsConsentDescription": "Estrella Music needs these permissions to manage your music and offer all playback features.",
-  "@permissionsConsentDescription": {
-    "description": "permissionsConsentDescription"
+  "skipSilence": "Skip silence",
+  "@skipSilence": {
+    "description": "skipSilence"
   },
-  "permissionsStorageTitle": "Music and storage",
-  "@permissionsStorageTitle": {
-    "description": "permissionsStorageTitle"
+  "skipSilenceDes": "Silence will be skipped in music playback",
+  "@skipSilenceDes": {
+    "description": "skipSilenceDes"
   },
-  "permissionsStorageDescription": "It allows you to play music, save downloads, export playlists and prepare updates.",
-  "@permissionsStorageDescription": {
-    "description": "permissionsStorageDescription"
+  "sleepTimeSetAlert": "Your sleep timer is set",
+  "@sleepTimeSetAlert": {
+    "description": "sleepTimeSetAlert"
   },
-  "permissionsNotificationsTitle": "Notifications",
-  "@permissionsNotificationsTitle": {
-    "description": "permissionsNotificationsTitle"
+  "sleepTimer": "Sleep Timer",
+  "@sleepTimer": {
+    "description": "sleepTimer"
   },
-  "permissionsNotificationsDescription": "Shows playback controls, download progress, and important app notices.",
-  "@permissionsNotificationsDescription": {
-    "description": "permissionsNotificationsDescription"
+  "slide_indicator": "Step {current} of 3",
+  "@slide_indicator": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      }
+    },
+    "description": "slide_indicator"
   },
-  "permissionsMicrophoneTitle": "Microphone",
-  "@permissionsMicrophoneTitle": {
-    "description": "permissionsMicrophoneTitle"
+  "songAddedToPlaylistAlert": "Song added to playlist!",
+  "@songAddedToPlaylistAlert": {
+    "description": "songAddedToPlaylistAlert"
   },
-  "permissionsMicrophoneDescription": "It is used only when you choose to identify a song that is playing around you.",
-  "@permissionsMicrophoneDescription": {
-    "description": "permissionsMicrophoneDescription"
+  "songAlreadyExists": "Song already exists!",
+  "@songAlreadyExists": {
+    "description": "songAlreadyExists"
   },
-  "permissionsContinueButton": "Grant required permissions",
-  "@permissionsContinueButton": {
-    "description": "permissionsContinueButton"
+  "songAlreadyOfflineAlert": "Song already offline in cache",
+  "@songAlreadyOfflineAlert": {
+    "description": "songAlreadyOfflineAlert"
   },
-  "permissionsRequiredNotice": "All three permits are required to continue. ",
-  "@permissionsRequiredNotice": {
-    "description": "permissionsRequiredNotice"
+  "songEnqueueAlert": "Song enqueued!",
+  "@songEnqueueAlert": {
+    "description": "songEnqueueAlert"
   },
-  "permissionsAllow": "Allow",
-  "@permissionsAllow": {
-    "description": "permissionsAllow"
+  "songFound": "Song Found!",
+  "@songFound": {
+    "description": "songFound"
   },
-  "permissionsOpenSettings": "Settings",
-  "@permissionsOpenSettings": {
-    "description": "permissionsOpenSettings"
+  "songInfo": "Song Info",
+  "@songInfo": {
+    "description": "songInfo"
   },
-  "auth_2fa_title": "Two-factor authentication",
-  "@auth_2fa_title": {
-    "description": "auth_2fa_title"
+  "songNotPlayable": "Song is not playable due to server restriction!",
+  "@songNotPlayable": {
+    "description": "songNotPlayable"
   },
-  "auth_2fa_subtitle": "Enter the 6-digit code from your authenticator app. ",
-  "@auth_2fa_subtitle": {
-    "description": "auth_2fa_subtitle"
+  "songPitch": "song tone",
+  "@songPitch": {
+    "description": "songPitch"
   },
-  "auth_2fa_code": "Authentication code",
-  "@auth_2fa_code": {
-    "description": "auth_2fa_code"
+  "songRemovedAlert": "Removed from",
+  "@songRemovedAlert": {
+    "description": "songRemovedAlert"
   },
-  "auth_2fa_verify": "Check and continue",
-  "@auth_2fa_verify": {
-    "description": "auth_2fa_verify"
+  "songRemovedfromQueue": "Removed from queue!",
+  "@songRemovedfromQueue": {
+    "description": "songRemovedfromQueue"
   },
-  "auth_2fa_invalid": "Enter a valid 6-digit code or sign in again.",
-  "@auth_2fa_invalid": {
-    "description": "auth_2fa_invalid"
+  "songRemovedfromQueueCurrSong": "You can't remove currently playing song",
+  "@songRemovedfromQueueCurrSong": {
+    "description": "songRemovedfromQueueCurrSong"
   },
-  "backupSettingsAndPlaylists": "Backup settings and playlists",
-  "@backupSettingsAndPlaylists": {
-    "description": "backupSettingsAndPlaylists"
+  "songs": "Songs",
+  "@songs": {
+    "description": "songs"
   },
-  "restoreSettingsAndPlaylists": "Restore settings and playlists",
-  "@restoreSettingsAndPlaylists": {
-    "description": "restoreSettingsAndPlaylists"
+  "songsImportedFromJossMusic": "Songs imported from Joss Music Kotlin",
+  "@songsImportedFromJossMusic": {
+    "description": "songsImportedFromJossMusic"
   },
-  "helloWorld": "Hello world",
-  "@helloWorld": {
-    "description": "Este texto es opcional"
+  "sortAscendNDescend": "Sort ascending/descending",
+  "@sortAscendNDescend": {
+    "description": "sortAscendNDescend"
   },
-  "removeFromCache": "Remove from cache",
-  "@removeFromCache": {
-    "description": "removeFromCache"
+  "sortByDate": "Sort by Date",
+  "@sortByDate": {
+    "description": "sortByDate"
   },
-  "quickPics": "Quick selection",
-  "@quickPics": {
-    "description": "quickPics"
+  "sortByDuration": "Sort by Duration",
+  "@sortByDuration": {
+    "description": "sortByDuration"
   },
-  "topMusicVid": "Top music videos",
-  "@topMusicVid": {
-    "description": "topMusicVid"
+  "sortByName": "Sort by Name",
+  "@sortByName": {
+    "description": "sortByName"
   },
-  "syncForceReplaceTitle": "Cancel sync and upload this database",
-  "syncForceReplaceDescription": "Pauses pending sync and forcefully replaces your remote music library with the data currently on this device. Downloads stay local.",
-  "syncForceReplaceConfirmTitle": "Replace the remote music library?",
-  "syncForceReplaceConfirmBody": "A recovery backup will be created first. Then playlists, favorites, history, albums, artists, and music settings in EMusic Cloud will be replaced with this device's current data. This cannot be undone from the server.",
-  "syncForceReplaceConfirmAction": "Replace and upload",
-  "syncForceReplaceInProgress": "Pausing sync, creating a backup, and uploading the local library...",
-  "syncForceReplaceCreatingBackup": "Creating a recovery backup before replacing cloud data...",
-  "syncForceReplaceValidating": "Validating the uploaded library before replacing cloud data...",
-  "syncForceReplaceFailed": "EMusic Cloud could not replace the remote library.",
-  "syncForceReplaceCountMismatch": "The uploaded counts do not match the local library. Remote replacement could not be confirmed.",
-  "syncForceReplaceSuccess": "The remote music library was replaced with this device's current data.",
-  "syncForceReplaceSuccessTitle": "Upload completed",
-  "syncForceReplaceFailedTitle": "Upload not completed",
-  "syncForceReplaceFailedLocalPreserved": "The remote replacement failed. Your local data and recovery backup were preserved.",
-  "syncForceReplacePauseFailed": "Current synchronization could not be paused safely. Try again in a moment.",
+  "speedAndPitch": "Speed ​​and Pitch",
+  "@speedAndPitch": {
+    "description": "speedAndPitch"
+  },
+  "standard": "Standard",
+  "@standard": {
+    "description": "standard"
+  },
+  "startRadio": "Start radio",
+  "@startRadio": {
+    "description": "startRadio"
+  },
+  "startupScreen": "Open on startup",
+  "@startupScreen": {
+    "description": "startupScreen"
+  },
+  "startupScreenDescription": "Choose the section that Estrella Music opens first",
+  "@startupScreenDescription": {
+    "description": "startupScreenDescription"
+  },
+  "status": "Status",
+  "@status": {
+    "description": "status"
+  },
+  "stopMusicOnTaskClear": "Stop music on task clear",
+  "@stopMusicOnTaskClear": {
+    "description": "stopMusicOnTaskClear"
+  },
+  "stopMusicOnTaskClearDes": "Music playback will stop when App being swiped away from the task manager",
+  "@stopMusicOnTaskClearDes": {
+    "description": "stopMusicOnTaskClearDes"
+  },
+  "streamingQuality": "Streaming quality",
+  "@streamingQuality": {
+    "description": "streamingQuality"
+  },
+  "streamingQualityDes": "Quality of music stream",
+  "@streamingQualityDes": {
+    "description": "streamingQualityDes"
+  },
+  "subscribers": "subscribers",
+  "@subscribers": {
+    "description": "subscribers"
+  },
+  "swipe_prompt": "Swipe to explore options",
+  "@swipe_prompt": {
+    "description": "swipe_prompt"
+  },
+  "syncChangesConfirmed": "{count} changes committed.",
+  "@syncChangesConfirmed": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    },
+    "description": "syncChangesConfirmed"
+  },
+  "syncChangesSynced": "{count} synchronized changes.",
+  "@syncChangesSynced": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    },
+    "description": "syncChangesSynced"
+  },
+  "syncCloudDownloadingExisting": "Cloud mode activated. ",
+  "@syncCloudDownloadingExisting": {
+    "description": "syncCloudDownloadingExisting"
+  },
+  "syncCloudMigrationComplete": "Cloud mode activated. ",
+  "@syncCloudMigrationComplete": {
+    "description": "syncCloudMigrationComplete"
+  },
+  "syncCloudModeActive": "Cloud mode active",
+  "@syncCloudModeActive": {
+    "description": "syncCloudModeActive"
+  },
+  "syncCloudPending": "Cloud mode active. ",
+  "@syncCloudPending": {
+    "description": "syncCloudPending"
+  },
+  "syncDownloadFailed": "Failed to download sync.",
+  "@syncDownloadFailed": {
+    "description": "syncDownloadFailed"
+  },
+  "syncDownloading": "Downloading EMusic changes...",
+  "@syncDownloading": {
+    "description": "syncDownloading"
+  },
   "syncForceReplaceBackupSaved": "Recovery backup: {path}",
   "@syncForceReplaceBackupSaved": {
     "placeholders": {
@@ -2319,5 +2171,204 @@
         "type": "String"
       }
     }
+  },
+  "syncForceReplaceConfirmAction": "Replace and upload",
+  "@syncForceReplaceConfirmAction": {},
+  "syncForceReplaceConfirmBody": "A recovery backup will be created first. Then playlists, favorites, history, albums, artists, and music settings in EMusic Cloud will be replaced with this device's current data. This cannot be undone from the server.",
+  "@syncForceReplaceConfirmBody": {},
+  "syncForceReplaceConfirmTitle": "Replace the remote music library?",
+  "@syncForceReplaceConfirmTitle": {},
+  "syncForceReplaceCountMismatch": "The uploaded counts do not match the local library. Remote replacement could not be confirmed.",
+  "@syncForceReplaceCountMismatch": {},
+  "syncForceReplaceCreatingBackup": "Creating a recovery backup before replacing cloud data...",
+  "@syncForceReplaceCreatingBackup": {},
+  "syncForceReplaceDescription": "Pauses pending sync and forcefully replaces your remote music library with the data currently on this device. Downloads stay local.",
+  "@syncForceReplaceDescription": {},
+  "syncForceReplaceFailed": "EMusic Cloud could not replace the remote library.",
+  "@syncForceReplaceFailed": {},
+  "syncForceReplaceFailedLocalPreserved": "The remote replacement failed. Your local data and recovery backup were preserved.",
+  "@syncForceReplaceFailedLocalPreserved": {},
+  "syncForceReplaceFailedTitle": "Upload not completed",
+  "@syncForceReplaceFailedTitle": {},
+  "syncForceReplaceInProgress": "Pausing sync, creating a backup, and uploading the local library...",
+  "@syncForceReplaceInProgress": {},
+  "syncForceReplacePauseFailed": "Current synchronization could not be paused safely. Try again in a moment.",
+  "@syncForceReplacePauseFailed": {},
+  "syncForceReplaceSuccess": "The remote music library was replaced with this device's current data.",
+  "@syncForceReplaceSuccess": {},
+  "syncForceReplaceSuccessTitle": "Upload completed",
+  "@syncForceReplaceSuccessTitle": {},
+  "syncForceReplaceTitle": "Cancel sync and upload this database",
+  "@syncForceReplaceTitle": {},
+  "syncForceReplaceValidating": "Validating the uploaded library before replacing cloud data...",
+  "@syncForceReplaceValidating": {},
+  "syncLibrarySynced": "Synchronized library.",
+  "@syncLibrarySynced": {
+    "description": "syncLibrarySynced"
+  },
+  "syncLibraryUpToDate": "Library up to date.",
+  "@syncLibraryUpToDate": {
+    "description": "syncLibraryUpToDate"
+  },
+  "syncLocalChangesFirst": "There are new local changes. ",
+  "@syncLocalChangesFirst": {
+    "description": "syncLocalChangesFirst"
+  },
+  "syncLocalDeviceOnly": "Your data is kept only on this device.",
+  "@syncLocalDeviceOnly": {
+    "description": "syncLocalDeviceOnly"
+  },
+  "syncLocalModeActive": "Local mode active",
+  "@syncLocalModeActive": {
+    "description": "syncLocalModeActive"
+  },
+  "syncOfflinePending": "Offline. ",
+  "@syncOfflinePending": {
+    "description": "syncOfflinePending"
+  },
+  "syncOfflineRetry": "Offline. ",
+  "@syncOfflineRetry": {
+    "description": "syncOfflineRetry"
+  },
+  "syncPlaylistSongs": "Sync playlist songs",
+  "@syncPlaylistSongs": {
+    "description": "syncPlaylistSongs"
+  },
+  "syncUnconfirmedRetry": "EMusic did not confirm all the changes. ",
+  "@syncUnconfirmedRetry": {
+    "description": "syncUnconfirmedRetry"
+  },
+  "syncUploadRetry": "Could not get up. ",
+  "@syncUploadRetry": {
+    "description": "syncUploadRetry"
+  },
+  "syncUploadSuccess": "Changes uploaded correctly.",
+  "@syncUploadSuccess": {
+    "description": "syncUploadSuccess"
+  },
+  "syncUploadSuccessWs": "Changes uploaded successfully (WS).",
+  "@syncUploadSuccessWs": {
+    "description": "syncUploadSuccessWs"
+  },
+  "syncUploadWsRetry": "Could not upload using WS. ",
+  "@syncUploadWsRetry": {
+    "description": "syncUploadWsRetry"
+  },
+  "syncUploading": "Uploading changes to EMusic...",
+  "@syncUploading": {
+    "description": "syncUploading"
+  },
+  "synced": "Synced",
+  "@synced": {
+    "description": "synced"
+  },
+  "syncedLyricsNotAvailable": "Synced lyrics not available!",
+  "@syncedLyricsNotAvailable": {
+    "description": "syncedLyricsNotAvailable"
+  },
+  "systemDefault": "System default",
+  "@systemDefault": {
+    "description": "systemDefault"
+  },
+  "themeMode": "Theme Mode",
+  "@themeMode": {
+    "description": "themeMode"
+  },
+  "title": "Title",
+  "@title": {
+    "description": "title"
+  },
+  "topMusicVid": "Top music videos",
+  "@topMusicVid": {
+    "description": "topMusicVid"
+  },
+  "topmusicvideos": "Top Music Videos",
+  "@topmusicvideos": {
+    "description": "topmusicvideos"
+  },
+  "trending": "Trending",
+  "@trending": {
+    "description": "trending"
+  },
+  "unLink": "Unlink",
+  "@unLink": {
+    "description": "unLink"
+  },
+  "unlinkAlert": "Unlinked successfully!",
+  "@unlinkAlert": {
+    "description": "unlinkAlert"
+  },
+  "untitledSong": "Untitled song",
+  "@untitledSong": {
+    "description": "untitledSong"
+  },
+  "upNext": "Up Next",
+  "@upNext": {
+    "description": "upNext"
+  },
+  "updateApp": "Update Application",
+  "@updateApp": {
+    "description": "updateApp"
+  },
+  "urlSearchDes": "Url detected click on it to open/play associated content",
+  "@urlSearchDes": {
+    "description": "urlSearchDes"
+  },
+  "useThisMetadata": "Use this metadata",
+  "@useThisMetadata": {
+    "description": "Button for selecting a metadata candidate"
+  },
+  "userBlocked": "Blocked user",
+  "@userBlocked": {
+    "description": "userBlocked"
+  },
+  "userListMissing": "The response does not contain a list of users.",
+  "@userListMissing": {
+    "description": "userListMissing"
+  },
+  "userSearchFailed": "Could not search for users ({statusCode}).",
+  "@userSearchFailed": {
+    "placeholders": {
+      "statusCode": {
+        "type": "int"
+      }
+    },
+    "description": "userSearchFailed"
+  },
+  "userUnblocked": "Unlocked user",
+  "@userUnblocked": {
+    "description": "userUnblocked"
+  },
+  "username": "Username",
+  "@username": {
+    "description": "username"
+  },
+  "video": "Video",
+  "@video": {
+    "description": "video"
+  },
+  "videos": "Videos",
+  "@videos": {
+    "description": "videos"
+  },
+  "viewAll": "View all",
+  "@viewAll": {
+    "description": "viewAll"
+  },
+  "viewArtist": "View Artist",
+  "@viewArtist": {
+    "description": "viewArtist"
+  },
+  "welcome_intro": "We have modernized our platform. ",
+  "@welcome_intro": {
+    "description": "welcome_intro"
+  },
+  "welcome_subtitle": "Choose how you want to experience Estrella Music from now on.",
+  "@welcome_subtitle": {
+    "description": "welcome_subtitle"
+  },
+  "welcome_title": "Your music, your way",
+  "@welcome_title": {
+    "description": "welcome_title"
   }
 }

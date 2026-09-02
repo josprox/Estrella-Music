@@ -1,40 +1,124 @@
 {
   "@@locale": "el",
-  "helloWorld": "Γεια σου κόσμο",
-  "@helloWorld": {
-    "description": "Este texto es opcional"
+  "CreateNewPlaylist": "Δημιουργία νέας λίστας αναπαραγωγής",
+  "@CreateNewPlaylist": {
+    "description": "CreateNewPlaylist"
   },
-  "auth_login_success": "Έγινε επιτυχής σύνδεση",
-  "@auth_login_success": {
-    "description": "auth_login_success"
+  "Piped": "Σωληνώσεις",
+  "@Piped": {
+    "description": "Piped"
   },
-  "settings_cloud_backup": "Δημιουργία αντιγράφων ασφαλείας στο cloud",
-  "@settings_cloud_backup": {
-    "description": "settings_cloud_backup"
+  "about": "Για",
+  "@about": {
+    "description": "about"
   },
-  "settings_migration_title": "Μετανάστευση από την Joss Music Kotlin",
-  "@settings_migration_title": {
-    "description": "settings_migration_title"
+  "add5Minutes": "Προσθέστε 5 λεπτά",
+  "@add5Minutes": {
+    "description": "add5Minutes"
   },
-  "backup_confirm_question": "Θέλετε να δημιουργήσετε αντίγραφο ασφαλείας;",
-  "@backup_confirm_question": {
-    "description": "backup_confirm_question"
+  "addMultipleSongs": "Προσθήκη τραγουδιών στη λίστα αναπαραγωγής",
+  "@addMultipleSongs": {
+    "description": "addMultipleSongs"
   },
-  "backup_selection_prompt": "Επιλέξτε ποια δεδομένα θέλετε να δημιουργήσετε αντίγραφα ασφαλείας",
-  "@backup_selection_prompt": {
-    "description": "backup_selection_prompt"
+  "addToLibrary": "Προσθήκη στη βιβλιοθήκη",
+  "@addToLibrary": {
+    "description": "addToLibrary"
   },
-  "search_recent_title": "Πρόσφατες αναζητήσεις",
-  "@search_recent_title": {
-    "description": "search_recent_title"
+  "addToPlaylist": "Προσθήκη στη λίστα αναπαραγωγής",
+  "@addToPlaylist": {
+    "description": "addToPlaylist"
   },
-  "back": "Απόδοση",
-  "@back": {
-    "description": "back"
+  "album": "Άλμπουμ",
+  "@album": {
+    "description": "album"
   },
-  "auth_forgot_password": "Ξέχασα τον κωδικό πρόσβασής μου",
-  "@auth_forgot_password": {
-    "description": "auth_forgot_password"
+  "albumBookmarkAddAlert": "Το άλμπουμ προστέθηκε στους σελιδοδείκτες!",
+  "@albumBookmarkAddAlert": {
+    "description": "albumBookmarkAddAlert"
+  },
+  "albumBookmarkRemoveAlert": "Ο σελιδοδείκτης του άλμπουμ καταργήθηκε!",
+  "@albumBookmarkRemoveAlert": {
+    "description": "albumBookmarkRemoveAlert"
+  },
+  "albums": "Άλμπουμ",
+  "@albums": {
+    "description": "albums"
+  },
+  "albumsByTaste": "Σύμφωνα με τα γούστα σας",
+  "@albumsByTaste": {
+    "description": "albumsByTaste"
+  },
+  "allFieldsReqMsg": "Όλα τα πεδία είναι υποχρεωτικά",
+  "@allFieldsReqMsg": {
+    "description": "allFieldsReqMsg"
+  },
+  "androidBackupWarning": "Δεν έχει δοκιμαστεί: Η επιλογή του πλαισίου ελέγχου μετά τη λήψη περισσότερων από 60 αρχείων μπορεί να προκαλέσει τη διαδικασία να καταναλώσει μεγάλη ποσότητα μνήμης και να προκαλέσει διακοπή λειτουργίας του τηλεφώνου ή της εφαρμογής. Προχωρήστε με δική σας ευθύνη.",
+  "@androidBackupWarning": {
+    "description": "androidBackupWarning"
+  },
+  "appInfo": "Πληροφορίες εφαρμογής",
+  "@appInfo": {
+    "description": "appInfo"
+  },
+  "artistBookmarkAddAlert": "Ο καλλιτέχνης προστέθηκε στους σελιδοδείκτες!",
+  "@artistBookmarkAddAlert": {
+    "description": "artistBookmarkAddAlert"
+  },
+  "artistBookmarkRemoveAlert": "Καταργήθηκε ο δείκτης καλλιτέχνη!",
+  "@artistBookmarkRemoveAlert": {
+    "description": "artistBookmarkRemoveAlert"
+  },
+  "artistDesNotAvailable": "Η περιγραφή δεν είναι διαθέσιμη!",
+  "@artistDesNotAvailable": {
+    "description": "artistDesNotAvailable"
+  },
+  "artists": "Καλλιτέχνες",
+  "@artists": {
+    "description": "artists"
+  },
+  "artistsByTaste": "Σύμφωνα με τα γούστα σας",
+  "@artistsByTaste": {
+    "description": "artistsByTaste"
+  },
+  "audioCodec": "Κωδικοποιητής ήχου",
+  "@audioCodec": {
+    "description": "audioCodec"
+  },
+  "auth_2fa_code": "Κωδικός ελέγχου ταυτότητας",
+  "@auth_2fa_code": {
+    "description": "auth_2fa_code"
+  },
+  "auth_2fa_invalid": "Εισαγάγετε έναν έγκυρο 6ψήφιο κωδικό ή συνδεθείτε ξανά.",
+  "@auth_2fa_invalid": {
+    "description": "auth_2fa_invalid"
+  },
+  "auth_2fa_subtitle": "Εισαγάγετε τον 6ψήφιο κωδικό από την εφαρμογή ελέγχου ταυτότητας. Αυτή η πρόσβαση λήγει σε 5 λεπτά.",
+  "@auth_2fa_subtitle": {
+    "description": "auth_2fa_subtitle"
+  },
+  "auth_2fa_title": "Έλεγχος ταυτότητας δύο παραγόντων",
+  "@auth_2fa_title": {
+    "description": "auth_2fa_title"
+  },
+  "auth_2fa_verify": "Ελέγξτε και συνεχίστε",
+  "@auth_2fa_verify": {
+    "description": "auth_2fa_verify"
+  },
+  "auth_agree_personal_data": "Acepto usar mis datas...",
+  "@auth_agree_personal_data": {
+    "description": "auth_agree_personal_data"
+  },
+  "auth_brand_description_1": "Φέραμε τη σύνδεση, την εγγραφή και την ανάκτηση κωδικού πρόσβασης από το προηγούμενο έργο, προσαρμοσμένο για αυτήν την εφαρμογή μουσικής.",
+  "@auth_brand_description_1": {
+    "description": "auth_brand_description_1"
+  },
+  "auth_brand_description_2": "Η συνεδρία σας ζει σε ασφαλή χώρο αποθήκευσης και επικυρώνεται με το ίδιο backend που χρησιμοποιούσατε ήδη.",
+  "@auth_brand_description_2": {
+    "description": "auth_brand_description_2"
+  },
+  "auth_brand_not_configured": "Το αρχείο .env πρέπει να ρυθμιστεί για τη σύνδεση του συστήματος υποστήριξης ελέγχου ταυτότητας.",
+  "@auth_brand_not_configured": {
+    "description": "auth_brand_not_configured"
   },
   "auth_btn_login": "Σύνδεση",
   "@auth_btn_login": {
@@ -44,57 +128,141 @@
   "@auth_btn_register": {
     "description": "auth_btn_register"
   },
-  "email": "E-mail",
-  "@email": {
-    "description": "email"
-  },
-  "password_text": "Σύνθημα",
-  "@password_text": {
-    "description": "Contraseña texto traducido"
+  "auth_btn_send_email": "Αποστολή αλληλογραφίας",
+  "@auth_btn_send_email": {
+    "description": "auth_btn_send_email"
   },
   "auth_confirm_password": "Επιβεβαίωση κωδικού πρόσβασης",
   "@auth_confirm_password": {
     "description": "auth_confirm_password"
   },
-  "auth_welcome_title": "Καλώς ήρθατε στο Estrella Music",
-  "@auth_welcome_title": {
-    "description": "auth_welcome_title"
+  "auth_error_invalid_credentials": "Λάθος email ή κωδικός πρόσβασης.",
+  "@auth_error_invalid_credentials": {
+    "description": "auth_error_invalid_credentials"
   },
-  "auth_welcome_subtitle": "Καλώς ήρθατε στο Estrella Music",
-  "@auth_welcome_subtitle": {
-    "description": "auth_welcome_subtitle"
+  "auth_error_invalid_email": "Εισαγάγετε ένα έγκυρο email.",
+  "@auth_error_invalid_email": {
+    "description": "auth_error_invalid_email"
   },
-  "username": "Όνομα χρήστη",
-  "@username": {
-    "description": "username"
+  "auth_error_not_configured": "Το backend ελέγχου ταυτότητας λείπει για να διαμορφωθεί στο αρχείο .env.",
+  "@auth_error_not_configured": {
+    "description": "auth_error_not_configured"
+  },
+  "auth_error_not_verified": "Ο λογαριασμός σας δεν έχει επαληθευτεί ακόμα.",
+  "@auth_error_not_verified": {
+    "description": "auth_error_not_verified"
+  },
+  "auth_error_unknown": "Δεν ήταν δυνατό να ολοκληρωθεί η επέμβαση.",
+  "@auth_error_unknown": {
+    "description": "auth_error_unknown"
   },
   "auth_first_name": "Ονομα",
   "@auth_first_name": {
     "description": "auth_first_name"
   },
+  "auth_forgot_password": "Ξέχασα τον κωδικό πρόσβασής μου",
+  "@auth_forgot_password": {
+    "description": "auth_forgot_password"
+  },
+  "auth_forgot_password_subtitle": "Θα σας στείλουμε τις οδηγίες στο email του λογαριασμού σας.",
+  "@auth_forgot_password_subtitle": {
+    "description": "auth_forgot_password_subtitle"
+  },
+  "auth_hint_email": "name@mail.com",
+  "@auth_hint_email": {
+    "description": "auth_hint_email"
+  },
   "auth_last_name": "Επώνυμο",
   "@auth_last_name": {
     "description": "auth_last_name"
   },
-  "auth_agree_personal_data": "Acepto usar mis datas...",
-  "@auth_agree_personal_data": {
-    "description": "auth_agree_personal_data"
+  "auth_login_success": "Έγινε επιτυχής σύνδεση",
+  "@auth_login_success": {
+    "description": "auth_login_success"
   },
-  "settings_general_section": "Γενικός",
-  "@settings_general_section": {
-    "description": "settings_general_section"
+  "auth_recovery_email_error": "Δεν ήταν δυνατή η αποστολή του email.",
+  "@auth_recovery_email_error": {
+    "description": "auth_recovery_email_error"
   },
-  "settings_logout": "Αποσυνδεθείτε",
-  "@settings_logout": {
-    "description": "settings_logout"
+  "auth_recovery_email_sent": "Το email εστάλη.",
+  "@auth_recovery_email_sent": {
+    "description": "auth_recovery_email_sent"
   },
-  "settings_cloud_backup_desc": "Μεταφόρτωση, επαναφορά και διαχείριση...",
-  "@settings_cloud_backup_desc": {
-    "description": "settings_cloud_backup_desc"
+  "auth_register_error": "Δεν ήταν δυνατή η δημιουργία του λογαριασμού.",
+  "@auth_register_error": {
+    "description": "auth_register_error"
   },
-  "settings_migration_desc": "Εισαγωγή λιστών αναπαραγωγής, τραγουδιών...",
-  "@settings_migration_desc": {
-    "description": "settings_migration_desc"
+  "auth_register_success": "Ο λογαριασμός δημιουργήθηκε με επιτυχία.",
+  "@auth_register_success": {
+    "description": "auth_register_success"
+  },
+  "auth_welcome_subtitle": "Καλώς ήρθατε στο Estrella Music",
+  "@auth_welcome_subtitle": {
+    "description": "auth_welcome_subtitle"
+  },
+  "auth_welcome_title": "Καλώς ήρθατε στο Estrella Music",
+  "@auth_welcome_title": {
+    "description": "auth_welcome_title"
+  },
+  "autoDownFavSong": "Αυτόματη λήψη αγαπημένων τραγουδιών",
+  "@autoDownFavSong": {
+    "description": "autoDownFavSong"
+  },
+  "autoDownFavSongDes": "Αυτόματη λήψη αγαπημένων τραγουδιών όταν προστεθούν στα αγαπημένα",
+  "@autoDownFavSongDes": {
+    "description": "autoDownFavSongDes"
+  },
+  "autoOpenPlayer": "Αυτόματο άνοιγμα της οθόνης του προγράμματος αναπαραγωγής",
+  "@autoOpenPlayer": {
+    "description": "autoOpenPlayer"
+  },
+  "autoOpenPlayerDes": "Ενεργοποίηση/απενεργοποίηση του αυτόματου ανοίγματος της συσκευής αναπαραγωγής σε πλήρη οθόνη όταν επιλέγετε ένα τραγούδι για αναπαραγωγή",
+  "@autoOpenPlayerDes": {
+    "description": "autoOpenPlayerDes"
+  },
+  "back": "Απόδοση",
+  "@back": {
+    "description": "back"
+  },
+  "backFilesFound": "βρέθηκαν βάσεις δεδομένων",
+  "@backFilesFound": {
+    "description": "backFilesFound"
+  },
+  "backgroundPlay": "Αναπαραγωγή μουσικής στο παρασκήνιο",
+  "@backgroundPlay": {
+    "description": "backgroundPlay"
+  },
+  "backgroundPlayDes": "Ενεργοποίηση/απενεργοποίηση αναπαραγωγής μουσικής στο παρασκήνιο (Η εφαρμογή είναι προσβάσιμη από το δίσκο συστήματος όταν η εφαρμογή εκτελείται στο παρασκήνιο)",
+  "@backgroundPlayDes": {
+    "description": "backgroundPlayDes"
+  },
+  "backup": "Δημιουργία αντιγράφων ασφαλείας",
+  "@backup": {
+    "description": "backup"
+  },
+  "backupAppData": "Δημιουργία αντιγράφων ασφαλείας δεδομένων εφαρμογής",
+  "@backupAppData": {
+    "description": "backupAppData"
+  },
+  "backupInProgress": "Δημιουργία αντιγράφων ασφαλείας σε εξέλιξη...",
+  "@backupInProgress": {
+    "description": "backupInProgress"
+  },
+  "backupMsg": "Το αντίγραφο ασφαλείας αποθηκεύτηκε με επιτυχία!",
+  "@backupMsg": {
+    "description": "backupMsg"
+  },
+  "backupSettingsAndPlaylists": "Δημιουργία αντιγράφων ασφαλείας ρυθμίσεων και λιστών αναπαραγωγής",
+  "@backupSettingsAndPlaylists": {
+    "description": "backupSettingsAndPlaylists"
+  },
+  "backupSettingsAndPlaylistsDes": "Αποθηκεύστε όλες τις ρυθμίσεις, τις λίστες αναπαραγωγής και τα δεδομένα σύνδεσης σε ένα αρχείο αντιγράφου ασφαλείας",
+  "@backupSettingsAndPlaylistsDes": {
+    "description": "backupSettingsAndPlaylistsDes"
+  },
+  "backup_auth_required": "Χρειάζεστε μια ενεργή συνεδρία...",
+  "@backup_auth_required": {
+    "description": "backup_auth_required"
   },
   "backup_btn_restart": "Επανεκκινήστε την εφαρμογή",
   "@backup_btn_restart": {
@@ -104,221 +272,117 @@
   "@backup_btn_upload": {
     "description": "backup_btn_upload"
   },
-  "backup_no_backups": "Δεν υπάρχουν ακόμα αντίγραφα ασφαλείας...",
-  "@backup_no_backups": {
-    "description": "backup_no_backups"
-  },
-  "backup_auth_required": "Χρειάζεστε μια ενεργή συνεδρία...",
-  "@backup_auth_required": {
-    "description": "backup_auth_required"
-  },
-  "backup_upload_success": "Το αντίγραφο ασφαλείας ανέβηκε σωστά.",
-  "@backup_upload_success": {
-    "description": "backup_upload_success"
-  },
-  "backup_restore_success": "Έγινε επαναφορά του αντιγράφου ασφαλείας. Επανεκκινήστε την εφαρμογή.",
-  "@backup_restore_success": {
-    "description": "backup_restore_success"
+  "backup_confirm_question": "Θέλετε να δημιουργήσετε αντίγραφο ασφαλείας;",
+  "@backup_confirm_question": {
+    "description": "backup_confirm_question"
   },
   "backup_delete_success": "Το αντίγραφο ασφαλείας διαγράφηκε.",
   "@backup_delete_success": {
     "description": "backup_delete_success"
   },
-  "genre_pop": "Κρότος",
-  "@genre_pop": {
-    "description": "genre_pop"
+  "backup_no_backups": "Δεν υπάρχουν ακόμα αντίγραφα ασφαλείας...",
+  "@backup_no_backups": {
+    "description": "backup_no_backups"
   },
-  "genre_rock": "Βράχος",
-  "@genre_rock": {
-    "description": "genre_rock"
+  "backup_restore_success": "Έγινε επαναφορά του αντιγράφου ασφαλείας. Επανεκκινήστε την εφαρμογή.",
+  "@backup_restore_success": {
+    "description": "backup_restore_success"
   },
-  "genre_hiphop": "χιπ χοπ",
-  "@genre_hiphop": {
-    "description": "genre_hiphop"
+  "backup_select_folder_dialog": "Επιλέξτε το φάκελο για δημιουργία αντιγράφων ασφαλείας",
+  "@backup_select_folder_dialog": {
+    "description": "backup_select_folder_dialog"
   },
-  "genre_electronic": "Ηλεκτρονική",
-  "@genre_electronic": {
-    "description": "genre_electronic"
+  "backup_selection_prompt": "Επιλέξτε ποια δεδομένα θέλετε να δημιουργήσετε αντίγραφα ασφαλείας",
+  "@backup_selection_prompt": {
+    "description": "backup_selection_prompt"
   },
-  "genre_jazz": "Τζαζ",
-  "@genre_jazz": {
-    "description": "genre_jazz"
+  "backup_upload_success": "Το αντίγραφο ασφαλείας ανέβηκε σωστά.",
+  "@backup_upload_success": {
+    "description": "backup_upload_success"
   },
-  "genre_latin": "λατινικά",
-  "@genre_latin": {
-    "description": "genre_latin"
+  "basedOnLast": "Με βάση την τελευταία αλληλεπίδραση",
+  "@basedOnLast": {
+    "description": "basedOnLast"
   },
-  "migration_btn_select": "Επιλέξτε αρχείο και εισαγωγή",
-  "@migration_btn_select": {
-    "description": "migration_btn_select"
+  "bitrate": "Ρυθμός bit",
+  "@bitrate": {
+    "description": "bitrate"
+  },
+  "blacklistPipedPlaylist": "Μαύρη λίστα αναπαραγωγής",
+  "@blacklistPipedPlaylist": {
+    "description": "blacklistPipedPlaylist"
+  },
+  "blacklistPlstResetAlert": "Επιτυχής επαναφορά!",
+  "@blacklistPlstResetAlert": {
+    "description": "blacklistPlstResetAlert"
+  },
+  "by": "από",
+  "@by": {
+    "description": "by"
+  },
+  "cacheHomeScreenData": "Αποθηκεύστε δεδομένα περιεχομένου αρχικής οθόνης",
+  "@cacheHomeScreenData": {
+    "description": "cacheHomeScreenData"
+  },
+  "cacheHomeScreenDataDes": "Ενεργοποιήστε την αποθήκευση δεδομένων περιεχομένου της αρχικής οθόνης, η αρχική οθόνη θα φορτώσει αμέσως εάν αυτή η επιλογή είναι ενεργοποιημένη",
+  "@cacheHomeScreenDataDes": {
+    "description": "cacheHomeScreenDataDes"
+  },
+  "cacheSongs": "Αποθήκευση τραγουδιών",
+  "@cacheSongs": {
+    "description": "cacheSongs"
+  },
+  "cacheSongsDes": "Η προσωρινή αποθήκευση τραγουδιών κατά την αναπαραγωγή τους για μελλοντική/εκτός σύνδεσης αναπαραγωγή θα καταλαμβάνει επιπλέον χώρο στη συσκευή σας",
+  "@cacheSongsDes": {
+    "description": "cacheSongsDes"
+  },
+  "cachedOrOffline": "Προσωρινή μνήμη/Εκτός σύνδεσης",
+  "@cachedOrOffline": {
+    "description": "cachedOrOffline"
+  },
+  "cancel": "Ακύρωση",
+  "@cancel": {
+    "description": "cancel"
+  },
+  "cancelTimer": "Ακύρωση χρονοδιακόπτη",
+  "@cancelTimer": {
+    "description": "cancelTimer"
+  },
+  "cancelTimerAlert": "Ο χρονοδιακόπτης ύπνου ακυρώθηκε",
+  "@cancelTimerAlert": {
+    "description": "cancelTimerAlert"
+  },
+  "clearImgCache": "Εκκαθάριση προσωρινής μνήμης εικόνας",
+  "@clearImgCache": {
+    "description": "clearImgCache"
+  },
+  "clearImgCacheAlert": "Η προσωρινή μνήμη εικόνων διαγράφηκε με επιτυχία",
+  "@clearImgCacheAlert": {
+    "description": "clearImgCacheAlert"
+  },
+  "clearImgCacheDes": "Κάντε κλικ εδώ για να διαγράψετε τις μικρογραφίες/εικόνες που έχουν αποθηκευτεί στην προσωρινή μνήμη. (Δεν συνιστάται, εκτός εάν θέλετε να ενημερώσετε τα δεδομένα αποθηκευμένης εικόνας)",
+  "@clearImgCacheDes": {
+    "description": "clearImgCacheDes"
   },
   "close": "Κοντά",
   "@close": {
     "description": "close"
   },
-  "forgottenFavorites": "ξεχασμένα αγαπημένα",
-  "@forgottenFavorites": {
-    "description": "forgottenFavorites"
+  "closeApp": "Κλείσιμο εφαρμογής",
+  "@closeApp": {
+    "description": "closeApp"
   },
-  "mostListenedSong": "Το πιο πολυακουσμένο τραγούδι",
-  "@mostListenedSong": {
-    "description": "mostListenedSong"
+  "cloudLibraryFound": "Βρέθηκε βιβλιοθήκη cloud.",
+  "@cloudLibraryFound": {
+    "description": "cloudLibraryFound"
   },
-  "reproducedBy": "Αναπαράγεται από",
-  "@reproducedBy": {
-    "description": "reproducedBy"
+  "cloudLibraryFoundDeviceWillDownload": "Βρέθηκε μια βιβλιοθήκη cloud. Αυτή η συσκευή θα το κατεβάσει χωρίς να το αντικαταστήσει.",
+  "@cloudLibraryFoundDeviceWillDownload": {
+    "description": "cloudLibraryFoundDeviceWillDownload"
   },
-  "recentSearches": "Πρόσφατες αναζητήσεις",
-  "@recentSearches": {
-    "description": "recentSearches"
-  },
-  "popularTracks": "Δημοφιλή κομμάτια",
-  "@popularTracks": {
-    "description": "popularTracks"
-  },
-  "latestRelease": "Τελευταία έκδοση",
-  "@latestRelease": {
-    "description": "latestRelease"
-  },
-  "follow": "Συνεχίζω",
-  "@follow": {
-    "description": "follow"
-  },
-  "following": "Εξής",
-  "@following": {
-    "description": "following"
-  },
-  "listenNow": "Άκου τώρα",
-  "@listenNow": {
-    "description": "listenNow"
-  },
-  "video": "Βίντεο",
-  "@video": {
-    "description": "video"
-  },
-  "about": "Για",
-  "@about": {
-    "description": "about"
-  },
-  "readMore": "Διαβάστε περισσότερα",
-  "@readMore": {
-    "description": "readMore"
-  },
-  "speedAndPitch": "Ταχύτητα και Βήμα",
-  "@speedAndPitch": {
-    "description": "speedAndPitch"
-  },
-  "playbackSpeed": "Ταχύτητα αναπαραγωγής",
-  "@playbackSpeed": {
-    "description": "playbackSpeed"
-  },
-  "songPitch": "τόνο τραγουδιού",
-  "@songPitch": {
-    "description": "songPitch"
-  },
-  "musicRecognition": "Αναγνώριση μουσικής",
-  "@musicRecognition": {
-    "description": "musicRecognition"
-  },
-  "listeningToEnvironment": "Ακούγοντας το περιβάλλον...",
-  "@listeningToEnvironment": {
-    "description": "listeningToEnvironment"
-  },
-  "micInstruction": "Βεβαιωθείτε ότι η μουσική παίζει αρκετά δυνατά κοντά στο μικρόφωνό σας.",
-  "@micInstruction": {
-    "description": "micInstruction"
-  },
-  "processingAudio": "Επεξεργασία του ήχου...",
-  "@processingAudio": {
-    "description": "processingAudio"
-  },
-  "shazamSearching": "Αναζήτηση στη βάση δεδομένων Shazam για αγώνες...",
-  "@shazamSearching": {
-    "description": "shazamSearching"
-  },
-  "songFound": "Το τραγούδι βρέθηκε!",
-  "@songFound": {
-    "description": "songFound"
-  },
-  "playNow": "Παίξτε Τώρα",
-  "@playNow": {
-    "description": "playNow"
-  },
-  "searchInLibrary": "Αναζήτηση στη Βιβλιοθήκη",
-  "@searchInLibrary": {
-    "description": "searchInLibrary"
-  },
-  "noMatchesFound": "Χωρίς αγώνες",
-  "@noMatchesFound": {
-    "description": "noMatchesFound"
-  },
-  "noMatchInstruction": "Δεν ήταν δυνατή η εύρεση τραγουδιών στον ηχογραφημένο ήχο",
-  "@noMatchInstruction": {
-    "description": "noMatchInstruction"
-  },
-  "errorOccurred": "Παρουσιάστηκε σφάλμα",
-  "@errorOccurred": {
-    "description": "errorOccurred"
-  },
-  "playingRecognizedTrack": "Παιχνίδι:",
-  "@playingRecognizedTrack": {
-    "description": "playingRecognizedTrack"
-  },
-  "errorPlayingTrack": "Σφάλμα κατά την αναπαραγωγή:",
-  "@errorPlayingTrack": {
-    "description": "errorPlayingTrack"
-  },
-  "welcome_title": "Η μουσική σου, ο τρόπος σου",
-  "@welcome_title": {
-    "description": "welcome_title"
-  },
-  "welcome_subtitle": "Επιλέξτε πώς θέλετε να ζήσετε την εμπειρία της Estrella Music από τώρα και στο εξής.",
-  "@welcome_subtitle": {
-    "description": "welcome_subtitle"
-  },
-  "welcome_intro": "Έχουμε εκσυγχρονίσει την πλατφόρμα μας. Το παλιό σύστημα μη αυτόματης μεταφόρτωσης αντιγράφων ασφαλείας έχει απενεργοποιηθεί. Τώρα έχετε δύο ξεκάθαρους τρόπους διαχείρισης της μουσικής σας βιβλιοθήκης.",
-  "@welcome_intro": {
-    "description": "welcome_intro"
-  },
-  "recommend_cloud": "Συνιστούμε να ενεργοποιήσετε τη λειτουργία Cloud για μια εμπειρία παρόμοια με το Spotify: συγχρονισμός σε πραγματικό χρόνο μεταξύ όλων των συσκευών σας και αυτόματη δημιουργία αντιγράφων ασφαλείας χωρίς να χρειάζεται να κάνετε τίποτα.",
-  "@recommend_cloud": {
-    "description": "recommend_cloud"
-  },
-  "swipe_prompt": "Σύρετε για να εξερευνήσετε τις επιλογές ➔",
-  "@swipe_prompt": {
-    "description": "swipe_prompt"
-  },
-  "local_title": "Τοπική λειτουργία",
-  "@local_title": {
-    "description": "local_title"
-  },
-  "local_subtitle": "Απόλυτο απόρρητο στη συσκευή σας",
-  "@local_subtitle": {
-    "description": "local_subtitle"
-  },
-  "local_b1": "Λειτουργεί χωρίς να χρειάζεται να συνδεθείτε.",
-  "@local_b1": {
-    "description": "local_b1"
-  },
-  "local_b2": "Ολόκληρη η βιβλιοθήκη σας παραμένει αυστηρά σε αυτόν τον υπολογιστή.",
-  "@local_b2": {
-    "description": "local_b2"
-  },
-  "local_b3": "Σημείωση: Δεν υπάρχουν μη αυτόματα αντίγραφα ασφαλείας στο cloud. Εάν χάσετε τη συσκευή σας ή απεγκαταστήσετε την εφαρμογή, τα δεδομένα σας δεν μπορούν να ανακτηθούν.",
-  "@local_b3": {
-    "description": "local_b3"
-  },
-  "local_btn": "Χρησιμοποιήστε μόνο σε αυτήν τη συσκευή",
-  "@local_btn": {
-    "description": "local_btn"
-  },
-  "cloud_title": "Λειτουργία Cloud (Συνιστάται)",
-  "@cloud_title": {
-    "description": "cloud_title"
-  },
-  "cloud_subtitle": "Συγχρονισμός σε πραγματικό χρόνο με τον Joss Red",
-  "@cloud_subtitle": {
-    "description": "cloud_subtitle"
+  "cloudModeReadyOfflineCache": "Η λειτουργία cloud είναι έτοιμη. Αυτή η συσκευή θα λειτουργεί ως προσωρινή μνήμη εκτός σύνδεσης.",
+  "@cloudModeReadyOfflineCache": {
+    "description": "cloudModeReadyOfflineCache"
   },
   "cloud_b1": "Συνδεθείτε με ασφάλεια χρησιμοποιώντας τον λογαριασμό σας Joss Red.",
   "@cloud_b1": {
@@ -336,511 +400,137 @@
   "@cloud_btn": {
     "description": "cloud_btn"
   },
-  "slide_indicator": "Βήμα {current} από 3",
-  "@slide_indicator": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      }
-    },
-    "description": "slide_indicator"
+  "cloud_subtitle": "Συγχρονισμός σε πραγματικό χρόνο με τον Joss Red",
+  "@cloud_subtitle": {
+    "description": "cloud_subtitle"
   },
-  "news_card_title": "Η Estrella Music έχει εξελιχθεί!",
-  "@news_card_title": {
-    "description": "news_card_title"
-  },
-  "news_card_subtitle": "100% συγχρονισμός με τον Joss Red, playlist με φίλους και πολλά άλλα. Πατήστε για να δείτε τι νέο υπάρχει.",
-  "@news_card_subtitle": {
-    "description": "news_card_subtitle"
-  },
-  "news_dialog_title": "Estrella Music News",
-  "@news_dialog_title": {
-    "description": "news_dialog_title"
-  },
-  "news_item_sync_title": "Πλήρης ενσωμάτωση με τον Joss Red",
-  "@news_item_sync_title": {
-    "description": "news_item_sync_title"
-  },
-  "news_item_sync_desc": "Οι λίστες αναπαραγωγής και τα αγαπημένα σας αποθηκεύονται και συγχρονίζονται αυτόματα στο cloud με τον κύριο λογαριασμό σας Joss Red.",
-  "@news_item_sync_desc": {
-    "description": "news_item_sync_desc"
-  },
-  "news_item_collab_title": "Συνεργατικές λίστες αναπαραγωγής",
-  "@news_item_collab_title": {
-    "description": "news_item_collab_title"
-  },
-  "news_item_collab_desc": "Δημιουργήστε λίστες αναπαραγωγής με τους φίλους σας! Όταν δημιουργείτε μια λίστα αναπαραγωγής, επιλέξτε το πλαίσιο ελέγχου Συνεργασία και επιλέξτε τους φίλους σας για επεξεργασία μαζί.",
-  "@news_item_collab_desc": {
-    "description": "news_item_collab_desc"
-  },
-  "news_item_trans_title": "Διαφανής συγχρονισμός",
-  "@news_item_trans_title": {
-    "description": "news_item_trans_title"
-  },
-  "news_item_trans_desc": "Δεν χρειάζεται πλέον να κάνετε κλικ στα κουμπιά μη αυτόματου συγχρονισμού. Ο νέος κινητήρας είναι υπεύθυνος για την αυτόματη αλλαγή ταχυτήτων πάνω-κάτω.",
-  "@news_item_trans_desc": {
-    "description": "news_item_trans_desc"
-  },
-  "news_dialog_section_friends": "Διαχείριση φίλων και λογαριασμού:",
-  "@news_dialog_section_friends": {
-    "description": "news_dialog_section_friends"
-  },
-  "news_dialog_friends_desc": "Για να προσθέσετε φίλους, να αποδεχτείτε αιτήματα ή να διαχειριστείτε το προφίλ ασφαλείας σας, χρησιμοποιήστε το Joss Red στις επίσημες πλατφόρμες του:",
-  "@news_dialog_friends_desc": {
-    "description": "news_dialog_friends_desc"
-  },
-  "news_btn_app": "Joss Red App (Play Store)",
-  "@news_btn_app": {
-    "description": "news_btn_app"
-  },
-  "news_btn_web": "Joss Red Web",
-  "@news_btn_web": {
-    "description": "news_btn_web"
-  },
-  "news_btn_dismiss": "Κατανοητό",
-  "@news_btn_dismiss": {
-    "description": "news_btn_dismiss"
-  },
-  "settings_appearance_desc": "Θέμα, γλώσσα και κινούμενα σχέδια διεπαφής.",
-  "@settings_appearance_desc": {
-    "description": "settings_appearance_desc"
-  },
-  "settings_content_desc": "Ανακαλύψτε φίλτρα, ενσωμάτωση με Piped και κρυφές μνήμες.",
-  "@settings_content_desc": {
-    "description": "settings_content_desc"
-  },
-  "settings_playback_desc": "Ποιότητα ροής, κανονικοποίηση, σιωπές και μπαταρία.",
-  "@settings_playback_desc": {
-    "description": "settings_playback_desc"
-  },
-  "settings_downloads_desc": "Λήψεις και αποθήκευση",
-  "@settings_downloads_desc": {
-    "description": "settings_downloads_desc"
-  },
-  "settings_downloads_sub": "Μορφές ήχου, φάκελοι και αυτόματες λήψεις.",
-  "@settings_downloads_sub": {
-    "description": "settings_downloads_sub"
-  },
-  "settings_account_desc": "Λογαριασμός και Συγχρονισμός",
-  "@settings_account_desc": {
-    "description": "settings_account_desc"
-  },
-  "settings_account_sub": "Λειτουργία cloud, αντίγραφα ασφαλείας, λίστα φίλων και μετεγκαταστάσεις.",
-  "@settings_account_sub": {
-    "description": "settings_account_sub"
-  },
-  "settings_about_desc": "Σχετικά με την Estrella Music",
-  "@settings_about_desc": {
-    "description": "settings_about_desc"
-  },
-  "settings_about_sub": "Έκδοση, έργο ανοιχτού κώδικα και GitHub.",
-  "@settings_about_sub": {
-    "description": "settings_about_sub"
-  },
-  "settings_local_cloud_title": "Τοπική λειτουργία / EMusic Cloud",
-  "@settings_local_cloud_title": {
-    "description": "settings_local_cloud_title"
-  },
-  "settings_local_cloud_desc": "Επιλέξτε, μετεγκαταστήστε ή ελέγξτε την κατάσταση συγχρονισμού με τον Joss Red.",
-  "@settings_local_cloud_desc": {
-    "description": "settings_local_cloud_desc"
-  },
-  "settings_my_friends": "φίλοι μου",
-  "@settings_my_friends": {
-    "description": "settings_my_friends"
-  },
-  "settings_my_friends_desc": "Διαχειριστείτε απευθείας τους φίλους σας Joss Red.",
-  "@settings_my_friends_desc": {
-    "description": "settings_my_friends_desc"
-  },
-  "settings_refresh_visitor_title": "Αναγνωριστικό ανανέωσης (αναγνωριστικό επισκέπτη)",
-  "@settings_refresh_visitor_title": {
-    "description": "settings_refresh_visitor_title"
-  },
-  "settings_refresh_visitor_desc": "Ανανεώστε το Online Music ID σας εάν δεν φορτωθεί το περιεχόμενο του Discover.",
-  "@settings_refresh_visitor_desc": {
-    "description": "settings_refresh_visitor_desc"
-  },
-  "settings_visitor_updated": "Ενημερώθηκε το αναγνωριστικό",
-  "@settings_visitor_updated": {
-    "description": "settings_visitor_updated"
-  },
-  "settings_visitor_updated_desc": "Ένα νέο αναγνωριστικό επισκέπτη δημιουργήθηκε με επιτυχία.",
-  "@settings_visitor_updated_desc": {
-    "description": "settings_visitor_updated_desc"
-  },
-  "settings_visitor_error": "Λάθος",
-  "@settings_visitor_error": {
-    "description": "settings_visitor_error"
-  },
-  "settings_visitor_error_desc": "Δεν ήταν δυνατή η δημιουργία νέου αναγνωριστικού. Δοκιμάστε ξανά αργότερα.",
-  "@settings_visitor_error_desc": {
-    "description": "settings_visitor_error_desc"
-  },
-  "settings_visitor_exception": "Παρουσιάστηκε σφάλμα κατά την αναγέννηση: {error}",
-  "@settings_visitor_exception": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    },
-    "description": "settings_visitor_exception"
-  },
-  "migratedLibrary": "Βιβλιοθήκη μετεγκατάστασης",
-  "@migratedLibrary": {
-    "description": "migratedLibrary"
-  },
-  "noSongsInCollection": "Δεν υπάρχουν τραγούδια σε αυτή τη συλλογή",
-  "@noSongsInCollection": {
-    "description": "noSongsInCollection"
-  },
-  "startupScreen": "Άνοιγμα κατά την εκκίνηση",
-  "@startupScreen": {
-    "description": "startupScreen"
-  },
-  "startupScreenDescription": "Επιλέξτε την ενότητα που ανοίγει πρώτα το Estrella Music",
-  "@startupScreenDescription": {
-    "description": "startupScreenDescription"
-  },
-  "friends": "Φίλοι",
-  "@friends": {
-    "description": "friends"
-  },
-  "dailyDiscover": "Καθημερινή ανακάλυψη",
-  "@dailyDiscover": {
-    "description": "dailyDiscover"
-  },
-  "keepListening": "συνέχισε να ακούς",
-  "@keepListening": {
-    "description": "keepListening"
-  },
-  "similarToTitle": "Παρόμοιο με {title}",
-  "@similarToTitle": {
-    "placeholders": {
-      "title": {
-        "type": "String"
-      }
-    },
-    "description": "similarToTitle"
-  },
-  "pipedPlaylistDescription": "Λίστα αναπαραγωγής με σωλήνες",
-  "@pipedPlaylistDescription": {
-    "description": "pipedPlaylistDescription"
+  "cloud_title": "Λειτουργία Cloud (Συνιστάται)",
+  "@cloud_title": {
+    "description": "cloud_title"
   },
   "collaborativePlaylistDescription": "Συνεργατική λίστα αναπαραγωγής",
   "@collaborativePlaylistDescription": {
     "description": "collaborativePlaylistDescription"
   },
-  "libraryPlaylistDescription": "Λίστα αναπαραγωγής βιβλιοθήκης",
-  "@libraryPlaylistDescription": {
-    "description": "libraryPlaylistDescription"
-  },
-  "untitledSong": "Τραγούδι χωρίς τίτλο",
-  "@untitledSong": {
-    "description": "untitledSong"
-  },
-  "migratedPlaylist": "Μετεγκατάσταση λίστας αναπαραγωγής",
-  "@migratedPlaylist": {
-    "description": "migratedPlaylist"
-  },
-  "migratedAlbum": "Λεύκωμα μετεγκατάστασης",
-  "@migratedAlbum": {
-    "description": "migratedAlbum"
-  },
-  "songsImportedFromJossMusic": "Τραγούδια που εισάγονται από την Joss Music Kotlin",
-  "@songsImportedFromJossMusic": {
-    "description": "songsImportedFromJossMusic"
-  },
-  "importedFromJossMusic": "Εισαγωγή από την Joss Music Kotlin",
-  "@importedFromJossMusic": {
-    "description": "importedFromJossMusic"
-  },
-  "syncLocalModeActive": "Η τοπική λειτουργία είναι ενεργή",
-  "@syncLocalModeActive": {
-    "description": "syncLocalModeActive"
-  },
-  "syncCloudPending": "Η λειτουργία cloud είναι ενεργή. Εκκρεμεί συγχρονισμός.",
-  "@syncCloudPending": {
-    "description": "syncCloudPending"
-  },
-  "syncCloudDownloadingExisting": "Η λειτουργία cloud ενεργοποιήθηκε. Λήψη της υπάρχουσας βιβλιοθήκης.",
-  "@syncCloudDownloadingExisting": {
-    "description": "syncCloudDownloadingExisting"
-  },
-  "syncCloudMigrationComplete": "Η λειτουργία cloud ενεργοποιήθηκε. Βιβλιοθήκη μετεγκατάστασης.",
-  "@syncCloudMigrationComplete": {
-    "description": "syncCloudMigrationComplete"
-  },
-  "syncLocalDeviceOnly": "Τα δεδομένα σας διατηρούνται μόνο σε αυτήν τη συσκευή.",
-  "@syncLocalDeviceOnly": {
-    "description": "syncLocalDeviceOnly"
-  },
-  "syncDownloading": "Λήψη αλλαγών EMusic...",
-  "@syncDownloading": {
-    "description": "syncDownloading"
-  },
-  "syncDownloadFailed": "Αποτυχία λήψης συγχρονισμού.",
-  "@syncDownloadFailed": {
-    "description": "syncDownloadFailed"
-  },
-  "syncLocalChangesFirst": "Υπάρχουν νέες τοπικές αλλαγές. Θα μεταφορτωθούν πριν από τη λήψη.",
-  "@syncLocalChangesFirst": {
-    "description": "syncLocalChangesFirst"
-  },
-  "syncLibrarySynced": "Συγχρονισμένη βιβλιοθήκη.",
-  "@syncLibrarySynced": {
-    "description": "syncLibrarySynced"
-  },
-  "syncOfflinePending": "Εκτός σύνδεσης. Εκκρεμούν αλλαγές.",
-  "@syncOfflinePending": {
-    "description": "syncOfflinePending"
-  },
-  "syncLibraryUpToDate": "Βιβλιοθήκη ενημερωμένη.",
-  "@syncLibraryUpToDate": {
-    "description": "syncLibraryUpToDate"
-  },
-  "syncChangesSynced": "{count} συγχρονισμένες αλλαγές.",
-  "@syncChangesSynced": {
-    "placeholders": {
-      "count": {
-        "type": "String"
-      }
-    },
-    "description": "syncChangesSynced"
-  },
-  "syncUploading": "Μεταφόρτωση αλλαγών στο EMusic...",
-  "@syncUploading": {
-    "description": "syncUploading"
-  },
-  "syncUploadSuccessWs": "Οι αλλαγές μεταφορτώθηκαν με επιτυχία (WS).",
-  "@syncUploadSuccessWs": {
-    "description": "syncUploadSuccessWs"
-  },
-  "syncUploadWsRetry": "Δεν ήταν δυνατή η μεταφόρτωση με χρήση WS. Θα δοκιμαστεί ξανά αργότερα.",
-  "@syncUploadWsRetry": {
-    "description": "syncUploadWsRetry"
-  },
-  "syncUploadSuccess": "Οι αλλαγές ανέβηκαν σωστά.",
-  "@syncUploadSuccess": {
-    "description": "syncUploadSuccess"
-  },
-  "syncUploadRetry": "Δεν μπορούσα να σηκωθώ. Θα δοκιμαστεί ξανά αργότερα.",
-  "@syncUploadRetry": {
-    "description": "syncUploadRetry"
-  },
-  "syncOfflineRetry": "Εκτός σύνδεσης. Οι αλλαγές αποθηκεύτηκαν για επανάληψη.",
-  "@syncOfflineRetry": {
-    "description": "syncOfflineRetry"
-  },
-  "syncUnconfirmedRetry": "Το EMusic δεν επιβεβαίωσε όλες τις αλλαγές. Θα δοκιμαστούν ξανά.",
-  "@syncUnconfirmedRetry": {
-    "description": "syncUnconfirmedRetry"
-  },
-  "syncChangesConfirmed": "{count} πραγματοποιήθηκαν αλλαγές.",
-  "@syncChangesConfirmed": {
-    "placeholders": {
-      "count": {
-        "type": "String"
-      }
-    },
-    "description": "syncChangesConfirmed"
-  },
-  "migrationAlreadyRunning": "Υπάρχει ήδη μια μετεγκατάσταση σε εξέλιξη.",
-  "@migrationAlreadyRunning": {
-    "description": "migrationAlreadyRunning"
-  },
-  "migrationLoginRequired": "Συνδεθείτε στο Joss Red πριν από τη μετεγκατάσταση.",
-  "@migrationLoginRequired": {
-    "description": "migrationLoginRequired"
-  },
-  "migrationCheckingCloud": "Έλεγχος εάν το EMusic Cloud διαθέτει ήδη βιβλιοθήκη...",
-  "@migrationCheckingCloud": {
-    "description": "migrationCheckingCloud"
-  },
-  "cloudLibraryFoundDeviceWillDownload": "Βρέθηκε μια βιβλιοθήκη cloud. Αυτή η συσκευή θα το κατεβάσει χωρίς να το αντικαταστήσει.",
-  "@cloudLibraryFoundDeviceWillDownload": {
-    "description": "cloudLibraryFoundDeviceWillDownload"
-  },
-  "cloudLibraryFound": "Βρέθηκε βιβλιοθήκη cloud.",
-  "@cloudLibraryFound": {
-    "description": "cloudLibraryFound"
-  },
-  "migrationCreatingBackup": "Δημιουργία τοπικού αντιγράφου ασφαλείας πριν από τη σύνδεση στο cloud...",
-  "@migrationCreatingBackup": {
-    "description": "migrationCreatingBackup"
-  },
-  "migrationAnalyzingLocal": "Αναλύοντας την τοπική βιβλιοθήκη...",
-  "@migrationAnalyzingLocal": {
-    "description": "migrationAnalyzingLocal"
-  },
-  "migrationPreparingCloud": "Προετοιμασία της μετεγκατάστασης στο EMusic Cloud...",
-  "@migrationPreparingCloud": {
-    "description": "migrationPreparingCloud"
-  },
-  "migrationStartFailed": "Το EMusic Cloud δεν μπόρεσε να ξεκινήσει τη μετεγκατάσταση.",
-  "@migrationStartFailed": {
-    "description": "migrationStartFailed"
-  },
-  "migrationUploadingData": "Μεταφόρτωση λιστών αναπαραγωγής, αγαπημένων και ιστορικού...",
-  "@migrationUploadingData": {
-    "description": "migrationUploadingData"
-  },
-  "migrationUploadIncomplete": "Δεν ήταν δυνατή η μεταφόρτωση όλων των δεδομένων. Διατηρούμε την τοπική σας υποστήριξη.",
-  "@migrationUploadIncomplete": {
-    "description": "migrationUploadIncomplete"
-  },
-  "migrationVerifyingIntegrity": "Επαλήθευση ακεραιότητας στο EMusic Cloud...",
-  "@migrationVerifyingIntegrity": {
-    "description": "migrationVerifyingIntegrity"
-  },
-  "migrationValidationFailed": "Το EMusic Cloud δεν μπόρεσε να επικυρώσει τη μετεγκατάσταση.",
-  "@migrationValidationFailed": {
-    "description": "migrationValidationFailed"
-  },
-  "cloudModeReadyOfflineCache": "Η λειτουργία cloud είναι έτοιμη. Αυτή η συσκευή θα λειτουργεί ως προσωρινή μνήμη εκτός σύνδεσης.",
-  "@cloudModeReadyOfflineCache": {
-    "description": "cloudModeReadyOfflineCache"
-  },
-  "migrationCompleted": "Η μετανάστευση ολοκληρώθηκε.",
-  "@migrationCompleted": {
-    "description": "migrationCompleted"
-  },
-  "migrationFailedLocalPreserved": "Η μετεγκατάσταση απέτυχε. Τα τοπικά σας δεδομένα δεν τροποποιήθηκαν.",
-  "@migrationFailedLocalPreserved": {
-    "description": "migrationFailedLocalPreserved"
-  },
-  "sessionExpiredLoginAgain": "Η συνεδρία σας έχει λήξει. Συνδεθείτε ξανά.",
-  "@sessionExpiredLoginAgain": {
-    "description": "sessionExpiredLoginAgain"
-  },
-  "selectedFileNotFound": "Το επιλεγμένο αρχείο δεν βρέθηκε.",
-  "@selectedFileNotFound": {
-    "description": "selectedFileNotFound"
-  },
-  "genericAlbum": "Αλμπουμ",
-  "@genericAlbum": {
-    "description": "genericAlbum"
-  },
-  "friendsLoginRequired": "Συνδεθείτε για να βρείτε φίλους.",
-  "@friendsLoginRequired": {
-    "description": "friendsLoginRequired"
-  },
-  "invalidSessionToken": "Η συνεδρία δεν περιέχει έγκυρο διακριτικό.",
-  "@invalidSessionToken": {
-    "description": "invalidSessionToken"
-  },
-  "userSearchFailed": "Δεν ήταν δυνατή η αναζήτηση για χρήστες ({statusCode}).",
-  "@userSearchFailed": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    },
-    "description": "userSearchFailed"
-  },
-  "invalidServerResponse": "Μη έγκυρη απάντηση διακομιστή.",
-  "@invalidServerResponse": {
-    "description": "invalidServerResponse"
-  },
-  "userListMissing": "Η απάντηση δεν περιέχει λίστα χρηστών.",
-  "@userListMissing": {
-    "description": "userListMissing"
-  },
-  "playlistCollaboratorsTitle": "Συνεισφέροντες playlist",
-  "@playlistCollaboratorsTitle": {
-    "description": "playlistCollaboratorsTitle"
-  },
   "collaboratorsInstruction": "Επιλέξτε τους φίλους που θα μπορούν να δουν και να επεξεργαστούν αυτήν τη λίστα αναπαραγωγής:",
   "@collaboratorsInstruction": {
     "description": "collaboratorsInstruction"
-  },
-  "noJossRedFriends": "Δεν έχετε προσθέσει φίλους στο Joss Red.",
-  "@noJossRedFriends": {
-    "description": "noJossRedFriends"
-  },
-  "friendFallback": "Φίλε",
-  "@friendFallback": {
-    "description": "friendFallback"
   },
   "collaboratorsUpdated": "Οι συνεργάτες ενημερώθηκαν σωστά.",
   "@collaboratorsUpdated": {
     "description": "collaboratorsUpdated"
   },
-  "save": "Διατήρηση",
-  "@save": {
-    "description": "save"
+  "communityplaylists": "Λίστες αναπαραγωγής κοινότητας",
+  "@communityplaylists": {
+    "description": "communityplaylists"
   },
-  "manageCollaborators": "Διαχείριση συνεργατών (φίλων)",
-  "@manageCollaborators": {
-    "description": "manageCollaborators"
+  "content": "περιεχόμενο",
+  "@content": {
+    "description": "content"
+  },
+  "copyrightNotice": "© 2026 JOSPROX. Άδεια GPL v3.0",
+  "@copyrightNotice": {
+    "description": "copyrightNotice"
+  },
+  "create": "Δημιουργία",
+  "@create": {
+    "description": "create"
+  },
+  "createnAdd": "Δημιουργία και προσθήκη",
+  "@createnAdd": {
+    "description": "createnAdd"
+  },
+  "customIns": "Προσαρμοσμένη περίπτωση",
+  "@customIns": {
+    "description": "customIns"
+  },
+  "customInsSelectMsg": "Επιλέξτε μια προσαρμοσμένη παρουσία",
+  "@customInsSelectMsg": {
+    "description": "customInsSelectMsg"
+  },
+  "dailyDiscover": "Καθημερινή ανακάλυψη",
+  "@dailyDiscover": {
+    "description": "dailyDiscover"
+  },
+  "dark": "σκοτεινός",
+  "@dark": {
+    "description": "dark"
+  },
+  "delete": "Διαγραφή",
+  "@delete": {
+    "description": "delete"
+  },
+  "deleteDownloadData": "Κατάργηση από τις λήψεις",
+  "@deleteDownloadData": {
+    "description": "deleteDownloadData"
+  },
+  "deleteDownloadedDataAlert": "Καταργήθηκε με επιτυχία από τις λήψεις!",
+  "@deleteDownloadedDataAlert": {
+    "description": "deleteDownloadedDataAlert"
+  },
+  "developedBy": "Αναπτύχθηκε και συντηρήθηκε από τον Joss Estrada (JOSPROX)",
+  "@developedBy": {
+    "description": "developedBy"
+  },
+  "disableTransitionAnimation": "Απενεργοποίηση κίνησης μετάβασης",
+  "@disableTransitionAnimation": {
+    "description": "disableTransitionAnimation"
+  },
+  "disableTransitionAnimationDes": "Ενεργοποιήστε αυτήν την επιλογή για να απενεργοποιήσετε την κίνηση μετάβασης καρτελών",
+  "@disableTransitionAnimationDes": {
+    "description": "disableTransitionAnimationDes"
+  },
+  "disabled": "ΑμεΑ",
+  "@disabled": {
+    "description": "disabled"
+  },
+  "discover": "Ανακαλύψτε",
+  "@discover": {
+    "description": "discover"
+  },
+  "dismiss": "Απορρίψτε",
+  "@dismiss": {
+    "description": "dismiss"
   },
   "done": "Ετοιμος",
   "@done": {
     "description": "done"
   },
-  "notAuthenticated": "Δεν έχει επικυρωθεί",
-  "@notAuthenticated": {
-    "description": "notAuthenticated"
+  "dontShowInfoAgain": "Μην εμφανίσετε ξανά αυτές τις πληροφορίες",
+  "@dontShowInfoAgain": {
+    "description": "dontShowInfoAgain"
   },
-  "genericError": "Λάθος",
-  "@genericError": {
-    "description": "genericError"
+  "downFilesFound": "βρέθηκαν ληφθέντα αρχεία",
+  "@downFilesFound": {
+    "description": "downFilesFound"
   },
-  "friendRequestSent": "Το αίτημα φιλίας εστάλη",
-  "@friendRequestSent": {
-    "description": "friendRequestSent"
+  "download": "Λήψη",
+  "@download": {
+    "description": "download"
   },
-  "friendRequestAccepted": "Αίτημα φιλίας δεκτό",
-  "@friendRequestAccepted": {
-    "description": "friendRequestAccepted"
+  "downloadAlbumSongs": "Κατεβάστε τραγούδια από το άλμπουμ",
+  "@downloadAlbumSongs": {
+    "description": "downloadAlbumSongs"
   },
-  "friendshipRemoved": "Η φιλία καταργήθηκε",
-  "@friendshipRemoved": {
-    "description": "friendshipRemoved"
+  "downloadError2": "Δεν είναι δυνατή η λήψη του τραγουδιού που ζητήσατε λόγω περιορισμών διακομιστή. Μπορείτε να προσπαθήσετε ξανά",
+  "@downloadError2": {
+    "description": "downloadError2"
   },
-  "userBlocked": "Αποκλεισμένος χρήστης",
-  "@userBlocked": {
-    "description": "userBlocked"
+  "downloadError3": "Η λήψη απέτυχε λόγω σφάλματος δικτύου/μετάδοσης! Δοκιμάστε ξανά",
+  "@downloadError3": {
+    "description": "downloadError3"
   },
-  "userUnblocked": "Ξεκλείδωτος χρήστης",
-  "@userUnblocked": {
-    "description": "userUnblocked"
-  },
-  "artistsByTaste": "Σύμφωνα με τα γούστα σας",
-  "@artistsByTaste": {
-    "description": "artistsByTaste"
-  },
-  "followedArtists": "ακολούθησε",
-  "@followedArtists": {
-    "description": "followedArtists"
-  },
-  "recommendedArtists": "Συνιστάται",
-  "@recommendedArtists": {
-    "description": "recommendedArtists"
-  },
-  "albumsByTaste": "Σύμφωνα με τα γούστα σας",
-  "@albumsByTaste": {
-    "description": "albumsByTaste"
-  },
-  "savedAlbums": "Αποθηκεύτηκε",
-  "@savedAlbums": {
-    "description": "savedAlbums"
-  },
-  "recommendedAlbums": "Συνιστάται",
-  "@recommendedAlbums": {
-    "description": "recommendedAlbums"
-  },
-  "downloadNotificationChannelName": "λήψεις μουσικής",
-  "@downloadNotificationChannelName": {
-    "description": "downloadNotificationChannelName"
+  "downloadLocation": "Λήψη τοποθεσίας",
+  "@downloadLocation": {
+    "description": "downloadLocation"
   },
   "downloadNotificationChannelDescription": "Διατηρεί ενεργές τις λήψεις μουσικής σας στο παρασκήνιο.",
   "@downloadNotificationChannelDescription": {
     "description": "downloadNotificationChannelDescription"
   },
-  "downloadNotificationTitle": "Λήψη μουσικής",
-  "@downloadNotificationTitle": {
-    "description": "downloadNotificationTitle"
+  "downloadNotificationChannelName": "λήψεις μουσικής",
+  "@downloadNotificationChannelName": {
+    "description": "downloadNotificationChannelName"
   },
   "downloadNotificationPreparing": "Προετοιμασία των λήψεών σας…",
   "@downloadNotificationPreparing": {
@@ -855,941 +545,49 @@
     },
     "description": "downloadNotificationSong"
   },
-  "syncCloudModeActive": "Η λειτουργία cloud είναι ενεργή",
-  "@syncCloudModeActive": {
-    "description": "syncCloudModeActive"
-  },
-  "permissionsConsentTitle": "Άδειες για να ξεκινήσετε",
-  "@permissionsConsentTitle": {
-    "description": "permissionsConsentTitle"
-  },
-  "permissionsConsentDescription": "Η Estrella Music χρειάζεται αυτές τις άδειες για να διαχειριστεί τη μουσική σας και να προσφέρει όλες τις δυνατότητες αναπαραγωγής.",
-  "@permissionsConsentDescription": {
-    "description": "permissionsConsentDescription"
-  },
-  "permissionsStorageTitle": "Μουσική και αποθήκευση",
-  "@permissionsStorageTitle": {
-    "description": "permissionsStorageTitle"
-  },
-  "permissionsStorageDescription": "Σας επιτρέπει να αναπαράγετε μουσική, να αποθηκεύετε λήψεις, να εξάγετε λίστες αναπαραγωγής και να προετοιμάζετε ενημερώσεις.",
-  "@permissionsStorageDescription": {
-    "description": "permissionsStorageDescription"
-  },
-  "permissionsNotificationsTitle": "Ειδοποιήσεις",
-  "@permissionsNotificationsTitle": {
-    "description": "permissionsNotificationsTitle"
-  },
-  "permissionsNotificationsDescription": "Εμφανίζει στοιχεία ελέγχου αναπαραγωγής, πρόοδο λήψης και σημαντικές ειδοποιήσεις εφαρμογών.",
-  "@permissionsNotificationsDescription": {
-    "description": "permissionsNotificationsDescription"
-  },
-  "permissionsMicrophoneTitle": "Μικρόφωνο",
-  "@permissionsMicrophoneTitle": {
-    "description": "permissionsMicrophoneTitle"
-  },
-  "permissionsMicrophoneDescription": "Χρησιμοποιείται μόνο όταν επιλέγετε να προσδιορίσετε ένα τραγούδι που παίζει γύρω σας.",
-  "@permissionsMicrophoneDescription": {
-    "description": "permissionsMicrophoneDescription"
-  },
-  "permissionsContinueButton": "Εκχώρηση απαιτούμενων αδειών",
-  "@permissionsContinueButton": {
-    "description": "permissionsContinueButton"
-  },
-  "permissionsRequiredNotice": "Απαιτούνται και οι τρεις άδειες για να συνεχιστεί. Μπορείτε να τα αλλάξετε αργότερα στις ρυθμίσεις συστήματος.",
-  "@permissionsRequiredNotice": {
-    "description": "permissionsRequiredNotice"
-  },
-  "permissionsAllow": "Επιτρέπω",
-  "@permissionsAllow": {
-    "description": "permissionsAllow"
-  },
-  "permissionsOpenSettings": "Ρυθμίσεις",
-  "@permissionsOpenSettings": {
-    "description": "permissionsOpenSettings"
-  },
-  "auth_2fa_title": "Έλεγχος ταυτότητας δύο παραγόντων",
-  "@auth_2fa_title": {
-    "description": "auth_2fa_title"
-  },
-  "auth_2fa_subtitle": "Εισαγάγετε τον 6ψήφιο κωδικό από την εφαρμογή ελέγχου ταυτότητας. Αυτή η πρόσβαση λήγει σε 5 λεπτά.",
-  "@auth_2fa_subtitle": {
-    "description": "auth_2fa_subtitle"
-  },
-  "auth_2fa_code": "Κωδικός ελέγχου ταυτότητας",
-  "@auth_2fa_code": {
-    "description": "auth_2fa_code"
-  },
-  "auth_2fa_verify": "Ελέγξτε και συνεχίστε",
-  "@auth_2fa_verify": {
-    "description": "auth_2fa_verify"
-  },
-  "auth_2fa_invalid": "Εισαγάγετε έναν έγκυρο 6ψήφιο κωδικό ή συνδεθείτε ξανά.",
-  "@auth_2fa_invalid": {
-    "description": "auth_2fa_invalid"
-  },
-  "library": "Βιβλιοθήκη",
-  "@library": {
-    "description": "library"
-  },
-  "libPlaylists": "Λίστες αναπαραγωγής βιβλιοθήκης",
-  "@libPlaylists": {
-    "description": "libPlaylists"
-  },
-  "libAlbums": "Λευκώματα βιβλιοθήκης",
-  "@libAlbums": {
-    "description": "libAlbums"
-  },
-  "libArtists": "Καλλιτέχνες της βιβλιοθήκης",
-  "@libArtists": {
-    "description": "libArtists"
-  },
-  "items": "στοιχεία",
-  "@items": {
-    "description": "items"
-  },
-  "networkError1": "Ωχ, σφάλμα δικτύου!",
-  "@networkError1": {
-    "description": "networkError1"
-  },
-  "retry": "Δοκιμάστε ξανά!",
-  "@retry": {
-    "description": "retry"
-  },
-  "home": "Σπίτι",
-  "@home": {
-    "description": "home"
-  },
-  "playlists": "Λίστες αναπαραγωγής",
-  "@playlists": {
-    "description": "playlists"
-  },
-  "albums": "Άλμπουμ",
-  "@albums": {
-    "description": "albums"
-  },
-  "artists": "Καλλιτέχνες",
-  "@artists": {
-    "description": "artists"
-  },
-  "settings": "Ρυθμίσεις",
-  "@settings": {
-    "description": "settings"
-  },
-  "libSongs": "Τραγούδια της Βιβλιοθήκης",
-  "@libSongs": {
-    "description": "libSongs"
-  },
-  "communityplaylists": "Λίστες αναπαραγωγής κοινότητας",
-  "@communityplaylists": {
-    "description": "communityplaylists"
-  },
-  "singles": "Απλό",
-  "@singles": {
-    "description": "singles"
-  },
-  "recentlyPlayed": "Παίχτηκε πρόσφατα",
-  "@recentlyPlayed": {
-    "description": "recentlyPlayed"
-  },
-  "songs": "Τραγούδια",
-  "@songs": {
-    "description": "songs"
-  },
-  "favorites": "Αγαπημένα",
-  "@favorites": {
-    "description": "favorites"
-  },
-  "cachedOrOffline": "Προσωρινή μνήμη/Εκτός σύνδεσης",
-  "@cachedOrOffline": {
-    "description": "cachedOrOffline"
-  },
-  "downloads": "Λήψεις",
-  "@downloads": {
-    "description": "downloads"
-  },
-  "emptyPlaylist": "Άδειο playlist!",
-  "@emptyPlaylist": {
-    "description": "emptyPlaylist"
-  },
-  "featuredplaylists": "Επιλεγμένες λίστες αναπαραγωγής",
-  "@featuredplaylists": {
-    "description": "featuredplaylists"
-  },
-  "noOfflineSong": "Χωρίς τραγούδια εκτός σύνδεσης!",
-  "@noOfflineSong": {
-    "description": "noOfflineSong"
-  },
-  "enableBottomNavDes": "Μετάβαση στην κάτω γραμμή πλοήγησης",
-  "@enableBottomNavDes": {
-    "description": "enableBottomNavDes"
-  },
-  "homeContentCount": "Πλήθος περιεχομένου εκκίνησης",
-  "@homeContentCount": {
-    "description": "homeContentCount"
-  },
-  "playlistCreatednsongAddedAlert": "Δημιουργήθηκε η λίστα αναπαραγωγής και προστέθηκε τραγούδι!",
-  "@playlistCreatednsongAddedAlert": {
-    "description": "playlistCreatednsongAddedAlert"
-  },
-  "songAlreadyOfflineAlert": "Το τραγούδι βρίσκεται ήδη στην κρυφή μνήμη",
-  "@songAlreadyOfflineAlert": {
-    "description": "songAlreadyOfflineAlert"
-  },
-  "sleepTimer": "Χρονοδιακόπτης ύπνου",
-  "@sleepTimer": {
-    "description": "sleepTimer"
-  },
-  "upNext": "Επόμενο",
-  "@upNext": {
-    "description": "upNext"
-  },
-  "plain": "απλό",
-  "@plain": {
-    "description": "plain"
-  },
-  "addMultipleSongs": "Προσθήκη τραγουδιών στη λίστα αναπαραγωγής",
-  "@addMultipleSongs": {
-    "description": "addMultipleSongs"
-  },
-  "renamePlaylist": "Μετονομασία λίστας αναπαραγωγής",
-  "@renamePlaylist": {
-    "description": "renamePlaylist"
-  },
-  "videos": "Βίντεο",
-  "@videos": {
-    "description": "videos"
-  },
-  "enqueueAll": "Προσθήκη όλων στην ουρά",
-  "@enqueueAll": {
-    "description": "enqueueAll"
-  },
-  "removePlaylist": "Διαγραφή λίστας αναπαραγωγής",
-  "@removePlaylist": {
-    "description": "removePlaylist"
-  },
-  "CreateNewPlaylist": "Δημιουργία νέας λίστας αναπαραγωγής",
-  "@CreateNewPlaylist": {
-    "description": "CreateNewPlaylist"
-  },
-  "createnAdd": "Δημιουργία και προσθήκη",
-  "@createnAdd": {
-    "description": "createnAdd"
-  },
-  "noBookmarks": "Χωρίς σελιδοδείκτες!",
-  "@noBookmarks": {
-    "description": "noBookmarks"
-  },
-  "startRadio": "Έναρξη ραδιοφώνου",
-  "@startRadio": {
-    "description": "startRadio"
-  },
-  "playNext": "Παίξτε το επόμενο",
-  "@playNext": {
-    "description": "playNext"
-  },
-  "noLibPlaylist": "Δεν έχετε playlist στη βιβλιοθήκη σας!",
-  "@noLibPlaylist": {
-    "description": "noLibPlaylist"
-  },
-  "enqueueSong": "Προσθέστε αυτό το τραγούδι στην ουρά",
-  "@enqueueSong": {
-    "description": "enqueueSong"
-  },
-  "themeMode": "Λειτουργία θέματος",
-  "@themeMode": {
-    "description": "themeMode"
-  },
-  "systemDefault": "Προεπιλογή συστήματος",
-  "@systemDefault": {
-    "description": "systemDefault"
-  },
-  "setDiscoverContent": "Ορισμός περιεχομένου ανακάλυψης",
-  "@setDiscoverContent": {
-    "description": "setDiscoverContent"
-  },
-  "discover": "Ανακαλύψτε",
-  "@discover": {
-    "description": "discover"
-  },
-  "equalizerDes": "Ανοίξτε τον ισοσταθμιστή συστήματος",
-  "@equalizerDes": {
-    "description": "equalizerDes"
-  },
-  "basedOnLast": "Με βάση την τελευταία αλληλεπίδραση",
-  "@basedOnLast": {
-    "description": "basedOnLast"
-  },
-  "notaSongVideo": "Δεν είναι τραγούδι/μουσικό βίντεο!",
-  "@notaSongVideo": {
-    "description": "notaSongVideo"
-  },
-  "linkPipedDes": "Σύνδεση με το Piped για λίστες αναπαραγωγής",
-  "@linkPipedDes": {
-    "description": "linkPipedDes"
-  },
-  "selectAuthIns": "Επιλέξτε την περίπτωση ελέγχου ταυτότητας",
-  "@selectAuthIns": {
-    "description": "selectAuthIns"
-  },
-  "password": "Κωδικός πρόσβασης",
-  "@password": {
-    "description": "password"
-  },
-  "rename": "Μετονομασία",
-  "@rename": {
-    "description": "rename"
-  },
-  "removeMultiple": "Διαγραφή πολλών τραγουδιών",
-  "@removeMultiple": {
-    "description": "removeMultiple"
-  },
-  "restoreLastPlaybackSession": "Επαναφέρετε την τελευταία περίοδο λειτουργίας αναπαραγωγής",
-  "@restoreLastPlaybackSession": {
-    "description": "restoreLastPlaybackSession"
-  },
-  "clearImgCacheAlert": "Η προσωρινή μνήμη εικόνων διαγράφηκε με επιτυχία",
-  "@clearImgCacheAlert": {
-    "description": "clearImgCacheAlert"
-  },
-  "dynamic": "Δυναμική",
-  "@dynamic": {
-    "description": "dynamic"
-  },
-  "results": "Αποτελέσματα",
-  "@results": {
-    "description": "results"
-  },
-  "albumBookmarkRemoveAlert": "Ο σελιδοδείκτης του άλμπουμ καταργήθηκε!",
-  "@albumBookmarkRemoveAlert": {
-    "description": "albumBookmarkRemoveAlert"
-  },
-  "reArrangePlaylist": "Αναδιάταξη λίστας αναπαραγωγής",
-  "@reArrangePlaylist": {
-    "description": "reArrangePlaylist"
-  },
-  "cancel": "Ακύρωση",
-  "@cancel": {
-    "description": "cancel"
-  },
-  "create": "Δημιουργία",
-  "@create": {
-    "description": "create"
-  },
-  "disableTransitionAnimationDes": "Ενεργοποιήστε αυτήν την επιλογή για να απενεργοποιήσετε την κίνηση μετάβασης καρτελών",
-  "@disableTransitionAnimationDes": {
-    "description": "disableTransitionAnimationDes"
-  },
-  "openIn": "Ανοίξτε μέσα",
-  "@openIn": {
-    "description": "openIn"
-  },
-  "removeFromLib": "Κατάργηση τραγουδιών από τη βιβλιοθήκη",
-  "@removeFromLib": {
-    "description": "removeFromLib"
-  },
-  "add5Minutes": "Προσθέστε 5 λεπτά",
-  "@add5Minutes": {
-    "description": "add5Minutes"
-  },
-  "cancelTimer": "Ακύρωση χρονοδιακόπτη",
-  "@cancelTimer": {
-    "description": "cancelTimer"
-  },
-  "deleteDownloadData": "Κατάργηση από τις λήψεις",
-  "@deleteDownloadData": {
-    "description": "deleteDownloadData"
-  },
-  "minutes": "λεπτά",
-  "@minutes": {
-    "description": "minutes"
-  },
-  "endOfThisSong": "Τέλος αυτού του τραγουδιού",
-  "@endOfThisSong": {
-    "description": "endOfThisSong"
-  },
-  "dark": "σκοτεινός",
-  "@dark": {
-    "description": "dark"
-  },
-  "light": "Σίγουρα",
-  "@light": {
-    "description": "light"
-  },
-  "language": "Γλώσσα",
-  "@language": {
-    "description": "language"
-  },
-  "languageDes": "Ορίστε τη γλώσσα της εφαρμογής",
-  "@languageDes": {
-    "description": "languageDes"
-  },
-  "quickpicks": "Γρήγορες επιλογές",
-  "@quickpicks": {
-    "description": "quickpicks"
-  },
-  "homeContentCountDes": "Επιλέξτε τον αριθμό των αρχικών περιεχομένων της αρχικής οθόνης (περίπου). Λιγότερα αποτελέσματα φορτώνονται πιο γρήγορα",
-  "@homeContentCountDes": {
-    "description": "homeContentCountDes"
-  },
-  "cacheSongsDes": "Η προσωρινή αποθήκευση τραγουδιών κατά την αναπαραγωγή τους για μελλοντική/εκτός σύνδεσης αναπαραγωγή θα καταλαμβάνει επιπλέον χώρο στη συσκευή σας",
-  "@cacheSongsDes": {
-    "description": "cacheSongsDes"
-  },
-  "skipSilence": "Παράλειψη σιωπής",
-  "@skipSilence": {
-    "description": "skipSilence"
-  },
-  "skipSilenceDes": "Η σιωπή θα παραλειφθεί κατά την αναπαραγωγή μουσικής",
-  "@skipSilenceDes": {
-    "description": "skipSilenceDes"
-  },
-  "streamingQuality": "Ποιότητα ροής",
-  "@streamingQuality": {
-    "description": "streamingQuality"
-  },
-  "high": "Ψηλά",
-  "@high": {
-    "description": "high"
-  },
-  "backgroundPlay": "Αναπαραγωγή μουσικής στο παρασκήνιο",
-  "@backgroundPlay": {
-    "description": "backgroundPlay"
-  },
-  "cacheHomeScreenData": "Αποθηκεύστε δεδομένα περιεχομένου αρχικής οθόνης",
-  "@cacheHomeScreenData": {
-    "description": "cacheHomeScreenData"
-  },
-  "cacheHomeScreenDataDes": "Ενεργοποιήστε την αποθήκευση δεδομένων περιεχομένου της αρχικής οθόνης, η αρχική οθόνη θα φορτώσει αμέσως εάν αυτή η επιλογή είναι ενεργοποιημένη",
-  "@cacheHomeScreenDataDes": {
-    "description": "cacheHomeScreenDataDes"
-  },
-  "downloadingFormatDes": "Επιλέξτε τη μορφή αρχείου λήψης. Το \"Opus\" θα προσφέρει την καλύτερη ποιότητα",
-  "@downloadingFormatDes": {
-    "description": "downloadingFormatDes"
-  },
-  "exportDowloadedFiles": "Εξαγωγή ληφθέντων αρχείων",
-  "@exportDowloadedFiles": {
-    "description": "exportDowloadedFiles"
-  },
-  "exportedFileLocation": "Εξαγωγή τοποθεσίας των ληφθέντων αρχείων",
-  "@exportedFileLocation": {
-    "description": "exportedFileLocation"
-  },
-  "exporting": "Εξαγωγή...",
-  "@exporting": {
-    "description": "exporting"
-  },
-  "scanning": "Σάρωση...",
-  "@scanning": {
-    "description": "scanning"
-  },
-  "downFilesFound": "βρέθηκαν ληφθέντα αρχεία",
-  "@downFilesFound": {
-    "description": "downFilesFound"
-  },
-  "exportMsg": "Τα αρχεία εξήχθησαν με επιτυχία",
-  "@exportMsg": {
-    "description": "exportMsg"
-  },
-  "equalizer": "Ισοσταθμιστής",
-  "@equalizer": {
-    "description": "equalizer"
-  },
-  "clearImgCache": "Εκκαθάριση προσωρινής μνήμης εικόνας",
-  "@clearImgCache": {
-    "description": "clearImgCache"
-  },
-  "clearImgCacheDes": "Κάντε κλικ εδώ για να διαγράψετε τις μικρογραφίες/εικόνες που έχουν αποθηκευτεί στην προσωρινή μνήμη. (Δεν συνιστάται, εκτός εάν θέλετε να ενημερώσετε τα δεδομένα αποθηκευμένης εικόνας)",
-  "@clearImgCacheDes": {
-    "description": "clearImgCacheDes"
-  },
-  "disabled": "ΑμεΑ",
-  "@disabled": {
-    "description": "disabled"
-  },
-  "ignoreBatOpt": "Αγνοήστε τη βελτιστοποίηση της μπαταρίας",
-  "@ignoreBatOpt": {
-    "description": "ignoreBatOpt"
-  },
-  "enabled": "Ενεργοποιήθηκε",
-  "@enabled": {
-    "description": "enabled"
-  },
-  "github": "GitHub",
-  "@github": {
-    "description": "github"
-  },
-  "githubDes": "Δείτε τον πηγαίο κώδικα του GitHub \nΑν σας αρέσει αυτό το έργο, μην ξεχάσετε να του δώσετε ένα ⭐!",
-  "@githubDes": {
-    "description": "githubDes"
-  },
-  "by": "από",
-  "@by": {
-    "description": "by"
-  },
-  "searchDes": "Τραγούδια, λίστες αναπαραγωγής, άλμπουμ ή καλλιτέχνες",
-  "@searchDes": {
-    "description": "searchDes"
-  },
-  "searchRes": "Αποτελέσματα αναζήτησης",
-  "@searchRes": {
-    "description": "searchRes"
-  },
-  "for1": "για",
-  "@for1": {
-    "description": "for1"
-  },
-  "viewAll": "Δείτε όλα",
-  "@viewAll": {
-    "description": "viewAll"
-  },
-  "nomatch": "Δεν βρέθηκαν αντιστοιχίες για",
-  "@nomatch": {
-    "description": "nomatch"
-  },
-  "subscribers": "συνδρομητές",
-  "@subscribers": {
-    "description": "subscribers"
-  },
-  "synced": "Συγχρονισμένη",
-  "@synced": {
-    "description": "synced"
-  },
-  "deleteDownloadedDataAlert": "Καταργήθηκε με επιτυχία από τις λήψεις!",
-  "@deleteDownloadedDataAlert": {
-    "description": "deleteDownloadedDataAlert"
-  },
-  "cancelTimerAlert": "Ο χρονοδιακόπτης ύπνου ακυρώθηκε",
-  "@cancelTimerAlert": {
-    "description": "cancelTimerAlert"
-  },
-  "sleepTimeSetAlert": "Ο χρονοδιακόπτης ύπνου έχει ρυθμιστεί",
-  "@sleepTimeSetAlert": {
-    "description": "sleepTimeSetAlert"
-  },
-  "songRemovedfromQueueCurrSong": "Δεν μπορείτε να διαγράψετε το τραγούδι που αναπαράγεται αυτήν τη στιγμή",
-  "@songRemovedfromQueueCurrSong": {
-    "description": "songRemovedfromQueueCurrSong"
-  },
-  "songRemovedAlert": "αφαιρέθηκε από",
-  "@songRemovedAlert": {
-    "description": "songRemovedAlert"
-  },
-  "pipedplstSyncAlert": "Συγχρονίστηκε το playlist με σωλήνες!",
-  "@pipedplstSyncAlert": {
-    "description": "pipedplstSyncAlert"
-  },
-  "playlistRenameAlert": "Με επιτυχία μετονομάστηκε!",
-  "@playlistRenameAlert": {
-    "description": "playlistRenameAlert"
-  },
-  "playlistRemovedAlert": "Η λίστα αναπαραγωγής διαγράφηκε!",
-  "@playlistRemovedAlert": {
-    "description": "playlistRemovedAlert"
-  },
-  "playlistBookmarkAddAlert": "Η λίστα αναπαραγωγής προστέθηκε στους σελιδοδείκτες!",
-  "@playlistBookmarkAddAlert": {
-    "description": "playlistBookmarkAddAlert"
-  },
-  "playlistBookmarkRemoveAlert": "Ο σελιδοδείκτης λίστας αναπαραγωγής καταργήθηκε!",
-  "@playlistBookmarkRemoveAlert": {
-    "description": "playlistBookmarkRemoveAlert"
-  },
-  "albumBookmarkAddAlert": "Το άλμπουμ προστέθηκε στους σελιδοδείκτες!",
-  "@albumBookmarkAddAlert": {
-    "description": "albumBookmarkAddAlert"
-  },
-  "lyricsNotAvailable": "Οι στίχοι δεν είναι διαθέσιμοι!",
-  "@lyricsNotAvailable": {
-    "description": "lyricsNotAvailable"
-  },
-  "newVersionAvailable": "Νέα έκδοση διαθέσιμη!",
-  "@newVersionAvailable": {
-    "description": "newVersionAvailable"
-  },
-  "dontShowInfoAgain": "Μην εμφανίσετε ξανά αυτές τις πληροφορίες",
-  "@dontShowInfoAgain": {
-    "description": "dontShowInfoAgain"
-  },
-  "notaValidLink": "Αυτός ο σύνδεσμος δεν είναι έγκυρος!",
-  "@notaValidLink": {
-    "description": "notaValidLink"
-  },
-  "operationFailed": "Αποτυχία λειτουργίας",
-  "@operationFailed": {
-    "description": "operationFailed"
-  },
-  "Piped": "Σωληνώσεις",
-  "@Piped": {
-    "description": "Piped"
-  },
-  "link": "Σύνδεσμος",
-  "@link": {
-    "description": "link"
-  },
-  "unLink": "Αποσύνδεση",
-  "@unLink": {
-    "description": "unLink"
-  },
-  "hintApiUrl": "URL API στην παρουσία Piped",
-  "@hintApiUrl": {
-    "description": "hintApiUrl"
-  },
-  "customIns": "Προσαρμοσμένη περίπτωση",
-  "@customIns": {
-    "description": "customIns"
-  },
-  "linkAlert": "Συνδέθηκε με επιτυχία!",
-  "@linkAlert": {
-    "description": "linkAlert"
-  },
-  "unlinkAlert": "Αποσυνδέθηκε με επιτυχία!",
-  "@unlinkAlert": {
-    "description": "unlinkAlert"
-  },
-  "stopMusicOnTaskClear": "Σταματήστε τη μουσική όταν κλείνετε την εφαρμογή",
-  "@stopMusicOnTaskClear": {
-    "description": "stopMusicOnTaskClear"
-  },
-  "goToAlbum": "Μετάβαση στο άλμπουμ",
-  "@goToAlbum": {
-    "description": "goToAlbum"
-  },
-  "downloadLocation": "Λήψη τοποθεσίας",
-  "@downloadLocation": {
-    "description": "downloadLocation"
-  },
-  "low": "Χαμηλό",
-  "@low": {
-    "description": "low"
+  "downloadNotificationTitle": "Λήψη μουσικής",
+  "@downloadNotificationTitle": {
+    "description": "downloadNotificationTitle"
+  },
+  "downloadPlaylist": "Λήψη λίστας αναπαραγωγής",
+  "@downloadPlaylist": {
+    "description": "downloadPlaylist"
   },
   "downloadingFormat": "Λήψη μορφή αρχείου",
   "@downloadingFormat": {
     "description": "downloadingFormat"
   },
-  "ignoreBatOptDes": "Εάν αντιμετωπίζετε προβλήματα με τις ειδοποιήσεις ή τη διακοπή της αναπαραγωγής λόγω βελτιστοποίησης του συστήματος, ενεργοποιήστε αυτήν την επιλογή",
-  "@ignoreBatOptDes": {
-    "description": "ignoreBatOptDes"
+  "downloadingFormatDes": "Επιλέξτε τη μορφή αρχείου λήψης. Το \"Opus\" θα προσφέρει την καλύτερη ποιότητα",
+  "@downloadingFormatDes": {
+    "description": "downloadingFormatDes"
   },
-  "status": "Κατάσταση",
-  "@status": {
-    "description": "status"
+  "downloads": "Λήψεις",
+  "@downloads": {
+    "description": "downloads"
   },
-  "radioNotAvailable": "Το ραδιόφωνο δεν είναι διαθέσιμο για αυτόν τον καλλιτέχνη!",
-  "@radioNotAvailable": {
-    "description": "radioNotAvailable"
+  "duration": "Διάρκεια",
+  "@duration": {
+    "description": "duration"
   },
-  "songRemovedfromQueue": "Αφαιρέθηκε από την ουρά!",
-  "@songRemovedfromQueue": {
-    "description": "songRemovedfromQueue"
+  "dynamic": "Δυναμική",
+  "@dynamic": {
+    "description": "dynamic"
   },
-  "artistBookmarkRemoveAlert": "Καταργήθηκε ο δείκτης καλλιτέχνη!",
-  "@artistBookmarkRemoveAlert": {
-    "description": "artistBookmarkRemoveAlert"
+  "email": "E-mail",
+  "@email": {
+    "description": "email"
   },
-  "dismiss": "Απορρίψτε",
-  "@dismiss": {
-    "description": "dismiss"
-  },
-  "goToDownloadPage": "Κάντε κλικ εδώ για να μεταβείτε στη σελίδα λήψης",
-  "@goToDownloadPage": {
-    "description": "goToDownloadPage"
-  },
-  "local": "Τοπικό",
-  "@local": {
-    "description": "local"
-  },
-  "addToPlaylist": "Προσθήκη στη λίστα αναπαραγωγής",
-  "@addToPlaylist": {
-    "description": "addToPlaylist"
-  },
-  "cacheSongs": "Αποθήκευση τραγουδιών",
-  "@cacheSongs": {
-    "description": "cacheSongs"
-  },
-  "disableTransitionAnimation": "Απενεργοποίηση κίνησης μετάβασης",
-  "@disableTransitionAnimation": {
-    "description": "disableTransitionAnimation"
-  },
-  "exportDowloadedFilesDes": "Κάντε κλικ εδώ για να εξαγάγετε τα ληφθέντα αρχεία από τον κατάλογο της εφαρμογής στον εξωτερικό κατάλογο",
-  "@exportDowloadedFilesDes": {
-    "description": "exportDowloadedFilesDes"
-  },
-  "export": "Εξαγωγή",
-  "@export": {
-    "description": "export"
-  },
-  "backgroundPlayDes": "Ενεργοποίηση/απενεργοποίηση αναπαραγωγής μουσικής στο παρασκήνιο (Η εφαρμογή είναι προσβάσιμη από το δίσκο συστήματος όταν η εφαρμογή εκτελείται στο παρασκήνιο)",
-  "@backgroundPlayDes": {
-    "description": "backgroundPlayDes"
-  },
-  "search": "Αναζήτηση",
-  "@search": {
-    "description": "search"
-  },
-  "songAddedToPlaylistAlert": "Το τραγούδι προστέθηκε στη λίστα αναπαραγωγής!",
-  "@songAddedToPlaylistAlert": {
-    "description": "songAddedToPlaylistAlert"
-  },
-  "songAlreadyExists": "Το τραγούδι υπάρχει ήδη!",
-  "@songAlreadyExists": {
-    "description": "songAlreadyExists"
-  },
-  "topmusicvideos": "Τα καλύτερα μουσικά βίντεο",
-  "@topmusicvideos": {
-    "description": "topmusicvideos"
-  },
-  "restoreLastPlaybackSessionDes": "Αυτόματη επαναφορά της τελευταίας περιόδου λειτουργίας αναπαραγωγής κατά την εκκίνηση της εφαρμογής",
-  "@restoreLastPlaybackSessionDes": {
-    "description": "restoreLastPlaybackSessionDes"
+  "emptyPlaylist": "Άδειο playlist!",
+  "@emptyPlaylist": {
+    "description": "emptyPlaylist"
   },
   "enableBottomNav": "Κάτω γραμμή πλοήγησης",
   "@enableBottomNav": {
     "description": "enableBottomNav"
   },
-  "songEnqueueAlert": "Το τραγούδι προστέθηκε στην ουρά!",
-  "@songEnqueueAlert": {
-    "description": "songEnqueueAlert"
-  },
-  "artistBookmarkAddAlert": "Ο καλλιτέχνης προστέθηκε στους σελιδοδείκτες!",
-  "@artistBookmarkAddAlert": {
-    "description": "artistBookmarkAddAlert"
-  },
-  "syncedLyricsNotAvailable": "Οι συγχρονισμένοι στίχοι δεν είναι διαθέσιμοι!",
-  "@syncedLyricsNotAvailable": {
-    "description": "syncedLyricsNotAvailable"
-  },
-  "artistDesNotAvailable": "Η περιγραφή δεν είναι διαθέσιμη!",
-  "@artistDesNotAvailable": {
-    "description": "artistDesNotAvailable"
-  },
-  "selectAuthInsMsg": "Επιλέξτε την περίπτωση ελέγχου ταυτότητας!",
-  "@selectAuthInsMsg": {
-    "description": "selectAuthInsMsg"
-  },
-  "allFieldsReqMsg": "Όλα τα πεδία είναι υποχρεωτικά",
-  "@allFieldsReqMsg": {
-    "description": "allFieldsReqMsg"
-  },
-  "playlistBlacklistAlert": "Στη μαύρη λίστα αναπαραγωγής!",
-  "@playlistBlacklistAlert": {
-    "description": "playlistBlacklistAlert"
-  },
-  "blacklistPlstResetAlert": "Επιτυχής επαναφορά!",
-  "@blacklistPlstResetAlert": {
-    "description": "blacklistPlstResetAlert"
-  },
-  "resetblacklistedplaylist": "Επαναφορά λιστών αναπαραγωγής στη μαύρη λίστα",
-  "@resetblacklistedplaylist": {
-    "description": "resetblacklistedplaylist"
-  },
-  "resetblacklistedplaylistDes": "Επαναφέρετε όλες τις λίστες αναπαραγωγής Piped που περιλαμβάνονται στη μαύρη λίστα",
-  "@resetblacklistedplaylistDes": {
-    "description": "resetblacklistedplaylistDes"
-  },
-  "restoreSettingsAndPlaylistsDes": "Επαναφέρει όλες τις ρυθμίσεις, τα δεδομένα σύνδεσης και τις λίστες αναπαραγωγής από ένα αρχείο αντιγράφου ασφαλείας. Αντικαθιστά όλα τα τρέχοντα δεδομένα",
-  "@restoreSettingsAndPlaylistsDes": {
-    "description": "restoreSettingsAndPlaylistsDes"
-  },
-  "errorOccuredAlert": "Παρουσιάστηκε σφάλμα!",
-  "@errorOccuredAlert": {
-    "description": "errorOccuredAlert"
-  },
-  "playlistCreatedAlert": "Η λίστα αναπαραγωγής δημιουργήθηκε!",
-  "@playlistCreatedAlert": {
-    "description": "playlistCreatedAlert"
-  },
-  "shareSong": "Μοιραστείτε αυτό το τραγούδι",
-  "@shareSong": {
-    "description": "shareSong"
-  },
-  "trending": "Τάσεις",
-  "@trending": {
-    "description": "trending"
-  },
-  "reset": "Επαναφορά",
-  "@reset": {
-    "description": "reset"
-  },
-  "viewArtist": "Προβολή Καλλιτέχνη",
-  "@viewArtist": {
-    "description": "viewArtist"
-  },
-  "removeFromPlaylist": "Κατάργηση από τη λίστα αναπαραγωγής",
-  "@removeFromPlaylist": {
-    "description": "removeFromPlaylist"
-  },
-  "removeFromQueue": "Αφαίρεση από την ουρά",
-  "@removeFromQueue": {
-    "description": "removeFromQueue"
-  },
-  "streamingQualityDes": "Ποιότητα ροής μουσικής",
-  "@streamingQualityDes": {
-    "description": "streamingQualityDes"
-  },
-  "customInsSelectMsg": "Επιλέξτε μια προσαρμοσμένη παρουσία",
-  "@customInsSelectMsg": {
-    "description": "customInsSelectMsg"
-  },
-  "stopMusicOnTaskClearDes": "Η αναπαραγωγή μουσικής θα σταματήσει όταν η εφαρμογή κλείσει από τη διαχείριση εργασιών",
-  "@stopMusicOnTaskClearDes": {
-    "description": "stopMusicOnTaskClearDes"
-  },
-  "backupSettingsAndPlaylistsDes": "Αποθηκεύστε όλες τις ρυθμίσεις, τις λίστες αναπαραγωγής και τα δεδομένα σύνδεσης σε ένα αρχείο αντιγράφου ασφαλείας",
-  "@backupSettingsAndPlaylistsDes": {
-    "description": "backupSettingsAndPlaylistsDes"
-  },
-  "backupMsg": "Το αντίγραφο ασφαλείας αποθηκεύτηκε με επιτυχία!",
-  "@backupMsg": {
-    "description": "backupMsg"
-  },
-  "backFilesFound": "βρέθηκαν βάσεις δεδομένων",
-  "@backFilesFound": {
-    "description": "backFilesFound"
-  },
-  "restoreMsg": "Αποκαταστάθηκε με επιτυχία!\nΟι αλλαγές εφαρμόζονται κατά την επανεκκίνηση",
-  "@restoreMsg": {
-    "description": "restoreMsg"
-  },
-  "restoring": "Επαναφορά...",
-  "@restoring": {
-    "description": "restoring"
-  },
-  "restore": "Επαναφορά",
-  "@restore": {
-    "description": "restore"
-  },
-  "closeApp": "Κλείσιμο εφαρμογής",
-  "@closeApp": {
-    "description": "closeApp"
-  },
-  "standard": "Τυπικό",
-  "@standard": {
-    "description": "standard"
-  },
-  "gesture": "χειρονομία",
-  "@gesture": {
-    "description": "gesture"
-  },
-  "audioCodec": "Κωδικοποιητής ήχου",
-  "@audioCodec": {
-    "description": "audioCodec"
-  },
-  "autoDownFavSongDes": "Αυτόματη λήψη αγαπημένων τραγουδιών όταν προστεθούν στα αγαπημένα",
-  "@autoDownFavSongDes": {
-    "description": "autoDownFavSongDes"
-  },
-  "loudnessNormalization": "Ομαλοποίηση έντασης",
-  "@loudnessNormalization": {
-    "description": "loudnessNormalization"
-  },
-  "playerUi": "UI προγράμματος αναπαραγωγής",
-  "@playerUi": {
-    "description": "playerUi"
-  },
-  "songNotPlayable": "Το τραγούδι δεν μπορεί να αναπαραχθεί λόγω περιορισμών διακομιστή!",
-  "@songNotPlayable": {
-    "description": "songNotPlayable"
-  },
-  "loudnessDb": "LoudnessDb",
-  "@loudnessDb": {
-    "description": "loudnessDb"
-  },
-  "restoreAppData": "Επαναφορά δεδομένων εφαρμογής",
-  "@restoreAppData": {
-    "description": "restoreAppData"
-  },
-  "queueShufflingDeniedMsg": "Η τυχαία λειτουργία είναι ενεργοποιημένη. Δεν μπορείτε να αναμίξετε την ουρά με μη αυτόματο τρόπο.",
-  "@queueShufflingDeniedMsg": {
-    "description": "queueShufflingDeniedMsg"
-  },
-  "includeDownloadedFiles": "Συμπεριλάβετε αρχεία τραγουδιών που έχετε κατεβάσει",
-  "@includeDownloadedFiles": {
-    "description": "includeDownloadedFiles"
-  },
-  "backupInProgress": "Δημιουργία αντιγράφων ασφαλείας σε εξέλιξη...",
-  "@backupInProgress": {
-    "description": "backupInProgress"
-  },
-  "queuerearrangingDeniedMsg": "Δεν είναι δυνατή η αναδιάταξη της ουράς όταν η λειτουργία τυχαίας αναπαραγωγής είναι ενεργοποιημένη",
-  "@queuerearrangingDeniedMsg": {
-    "description": "queuerearrangingDeniedMsg"
-  },
-  "content": "περιεχόμενο",
-  "@content": {
-    "description": "content"
-  },
-  "downloadError3": "Η λήψη απέτυχε λόγω σφάλματος δικτύου/μετάδοσης! Δοκιμάστε ξανά",
-  "@downloadError3": {
-    "description": "downloadError3"
-  },
-  "personalisation": "Εξατομίκευση",
-  "@personalisation": {
-    "description": "personalisation"
-  },
-  "playerUiDes": "Επιλέξτε τη διεπαφή χρήστη του προγράμματος αναπαραγωγής",
-  "@playerUiDes": {
-    "description": "playerUiDes"
-  },
-  "musicAndPlayback": "Μουσική και αναπαραγωγή",
-  "@musicAndPlayback": {
-    "description": "musicAndPlayback"
-  },
-  "appInfo": "Πληροφορίες εφαρμογής",
-  "@appInfo": {
-    "description": "appInfo"
-  },
-  "networkError": "Σφάλμα δικτύου! Ελέγξτε τη σύνδεσή σας στο Διαδίκτυο.",
-  "@networkError": {
-    "description": "networkError"
-  },
-  "download": "Λήψη",
-  "@download": {
-    "description": "download"
-  },
-  "downloadError2": "Δεν είναι δυνατή η λήψη του τραγουδιού που ζητήσατε λόγω περιορισμών διακομιστή. Μπορείτε να προσπαθήσετε ξανά",
-  "@downloadError2": {
-    "description": "downloadError2"
-  },
-  "letsStrart": "Ας ξεκινήσουμε..",
-  "@letsStrart": {
-    "description": "letsStrart"
-  },
-  "processFiles": "Επεξεργασία αρχείων...",
-  "@processFiles": {
-    "description": "processFiles"
-  },
-  "backupAppData": "Δημιουργία αντιγράφων ασφαλείας δεδομένων εφαρμογής",
-  "@backupAppData": {
-    "description": "backupAppData"
-  },
-  "backup": "Δημιουργία αντιγράφων ασφαλείας",
-  "@backup": {
-    "description": "backup"
-  },
-  "playnextMsg": "Προσεχώς",
-  "@playnextMsg": {
-    "description": "playnextMsg"
-  },
-  "shuffleQueue": "ανακατέψτε την ουρά",
-  "@shuffleQueue": {
-    "description": "shuffleQueue"
-  },
-  "queueLoop": "βρόχος ουράς",
-  "@queueLoop": {
-    "description": "queueLoop"
-  },
-  "queueLoopNotDisMsg1": "Η λειτουργία βρόχου ουράς δεν μπορεί να απενεργοποιηθεί όταν είναι ενεργοποιημένη η λειτουργία τυχαίας αναπαραγωγής.",
-  "@queueLoopNotDisMsg1": {
-    "description": "queueLoopNotDisMsg1"
-  },
-  "queueLoopNotDisMsg2": "Η λειτουργία βρόχου ουράς δεν μπορεί να ενεργοποιηθεί σε λειτουργία ραδιοφώνου.",
-  "@queueLoopNotDisMsg2": {
-    "description": "queueLoopNotDisMsg2"
-  },
-  "loudnessNormalizationDes": "Ορίζει το ίδιο επίπεδο έντασης για όλα τα τραγούδια (Πειραματικό) (Δεν θα λειτουργεί σε τραγούδια που έχουν ληφθεί σε παλαιότερες εκδόσεις (< v1.10.0))",
-  "@loudnessNormalizationDes": {
-    "description": "loudnessNormalizationDes"
+  "enableBottomNavDes": "Μετάβαση στην κάτω γραμμή πλοήγησης",
+  "@enableBottomNavDes": {
+    "description": "enableBottomNavDes"
   },
   "enableSlidableAction": "Ενεργοποίηση ενεργειών ρυθμιστικού",
   "@enableSlidableAction": {
@@ -1799,149 +597,65 @@
   "@enableSlidableActionDes": {
     "description": "enableSlidableActionDes"
   },
-  "bitrate": "Ρυθμός bit",
-  "@bitrate": {
-    "description": "bitrate"
+  "enabled": "Ενεργοποιήθηκε",
+  "@enabled": {
+    "description": "enabled"
   },
-  "androidBackupWarning": "Δεν έχει δοκιμαστεί: Η επιλογή του πλαισίου ελέγχου μετά τη λήψη περισσότερων από 60 αρχείων μπορεί να προκαλέσει τη διαδικασία να καταναλώσει μεγάλη ποσότητα μνήμης και να προκαλέσει διακοπή λειτουργίας του τηλεφώνου ή της εφαρμογής. Προχωρήστε με δική σας ευθύνη.",
-  "@androidBackupWarning": {
-    "description": "androidBackupWarning"
+  "endOfThisSong": "Τέλος αυτού του τραγουδιού",
+  "@endOfThisSong": {
+    "description": "endOfThisSong"
   },
-  "songInfo": "Πληροφορίες τραγουδιού",
-  "@songInfo": {
-    "description": "songInfo"
+  "enqueueAlbumSongs": "Προσθήκη τραγουδιών άλμπουμ στην ουρά",
+  "@enqueueAlbumSongs": {
+    "description": "enqueueAlbumSongs"
   },
-  "id": "ID",
-  "@id": {
-    "description": "id"
+  "enqueueAll": "Προσθήκη όλων στην ουρά",
+  "@enqueueAll": {
+    "description": "enqueueAll"
   },
-  "title": "Τίτλος",
-  "@title": {
-    "description": "title"
+  "enqueueSong": "Προσθέστε αυτό το τραγούδι στην ουρά",
+  "@enqueueSong": {
+    "description": "enqueueSong"
   },
-  "restartApp": "Επανεκκινήστε την εφαρμογή",
-  "@restartApp": {
-    "description": "restartApp"
+  "enqueueSongs": "Προσθήκη τραγουδιών στην ουρά",
+  "@enqueueSongs": {
+    "description": "enqueueSongs"
   },
-  "autoDownFavSong": "Αυτόματη λήψη αγαπημένων τραγουδιών",
-  "@autoDownFavSong": {
-    "description": "autoDownFavSong"
+  "episodes": "Επεισόδια",
+  "@episodes": {
+    "description": "episodes"
   },
-  "duration": "Διάρκεια",
-  "@duration": {
-    "description": "duration"
+  "equalizer": "Ισοσταθμιστής",
+  "@equalizer": {
+    "description": "equalizer"
   },
-  "urlSearchDes": "Η διεύθυνση URL που εντοπίστηκε κάντε κλικ σε αυτήν για να ανοίξετε/να παίξετε το σχετικό περιεχόμενο",
-  "@urlSearchDes": {
-    "description": "urlSearchDes"
+  "equalizerDes": "Ανοίξτε τον ισοσταθμιστή συστήματος",
+  "@equalizerDes": {
+    "description": "equalizerDes"
   },
-  "album": "Άλμπουμ",
-  "@album": {
-    "description": "album"
+  "errorOccuredAlert": "Παρουσιάστηκε σφάλμα!",
+  "@errorOccuredAlert": {
+    "description": "errorOccuredAlert"
   },
-  "reArrangeSongs": "Αναδιάταξη τραγουδιών",
-  "@reArrangeSongs": {
-    "description": "reArrangeSongs"
+  "errorOccurred": "Παρουσιάστηκε σφάλμα",
+  "@errorOccurred": {
+    "description": "errorOccurred"
   },
-  "selectSongs": "Επιλέξτε τραγούδια",
-  "@selectSongs": {
-    "description": "selectSongs"
+  "errorPlayingTrack": "Σφάλμα κατά την αναπαραγωγή:",
+  "@errorPlayingTrack": {
+    "description": "errorPlayingTrack"
   },
-  "selectAll": "Επιλέξτε όλα",
-  "@selectAll": {
-    "description": "selectAll"
+  "export": "Εξαγωγή",
+  "@export": {
+    "description": "export"
   },
-  "playingfromAlbum": "ΠΑΙΖΕΙ ΑΠΟ ΑΛΜΠΟΥΜ",
-  "@playingfromAlbum": {
-    "description": "playingfromAlbum"
+  "exportDowloadedFiles": "Εξαγωγή ληφθέντων αρχείων",
+  "@exportDowloadedFiles": {
+    "description": "exportDowloadedFiles"
   },
-  "playingfromPlaylist": "ΠΑΙΖΟΝΤΑΣ ΑΠΟ ΤΟ PLAYLIST",
-  "@playingfromPlaylist": {
-    "description": "playingfromPlaylist"
-  },
-  "playingfromSelection": "ΠΑΙΖΟΝΤΑΣ ΑΠΟ ΕΠΙΛΟΓΗ",
-  "@playingfromSelection": {
-    "description": "playingfromSelection"
-  },
-  "keepScreenOnWhilePlaying": "Διατηρήστε την οθόνη ενεργοποιημένη κατά την αναπαραγωγή",
-  "@keepScreenOnWhilePlaying": {
-    "description": "keepScreenOnWhilePlaying"
-  },
-  "keepScreenOnWhilePlayingDes": "Εάν είναι ενεργοποιημένη, η οθόνη της συσκευής θα παραμείνει ξύπνια κατά την αναπαραγωγή μουσικής",
-  "@keepScreenOnWhilePlayingDes": {
-    "description": "keepScreenOnWhilePlayingDes"
-  },
-  "resetToDefaultMsg": "Η επαναφορά των ρυθμίσεων στις προεπιλογές ολοκληρώθηκε, επανεκκινήστε την εφαρμογή",
-  "@resetToDefaultMsg": {
-    "description": "resetToDefaultMsg"
-  },
-  "resetToDefaultDes": "Επαναφορά των ρυθμίσεων της εφαρμογής στις προεπιλογές (Απαιτείται επανεκκίνηση)",
-  "@resetToDefaultDes": {
-    "description": "resetToDefaultDes"
-  },
-  "misc": "Διάφορα",
-  "@misc": {
-    "description": "misc"
-  },
-  "resetToDefault": "Επαναφορά προεπιλεγμένων ρυθμίσεων",
-  "@resetToDefault": {
-    "description": "resetToDefault"
-  },
-  "autoOpenPlayer": "Αυτόματο άνοιγμα της οθόνης του προγράμματος αναπαραγωγής",
-  "@autoOpenPlayer": {
-    "description": "autoOpenPlayer"
-  },
-  "autoOpenPlayerDes": "Ενεργοποίηση/απενεργοποίηση του αυτόματου ανοίγματος της συσκευής αναπαραγωγής σε πλήρη οθόνη όταν επιλέγετε ένα τραγούδι για αναπαραγωγή",
-  "@autoOpenPlayerDes": {
-    "description": "autoOpenPlayerDes"
-  },
-  "playingfromArtist": "ΠΑΙΖΕΙ ΑΠΟ ΚΑΛΛΙΤΕΧΝΗ",
-  "@playingfromArtist": {
-    "description": "playingfromArtist"
-  },
-  "randomSelection": "Τυχαία επιλογή",
-  "@randomSelection": {
-    "description": "randomSelection"
-  },
-  "randomRadio": "Τυχαίο Ραδιόφωνο",
-  "@randomRadio": {
-    "description": "randomRadio"
-  },
-  "exportPlaylist": "Εξαγωγή λίστας αναπαραγωγής",
-  "@exportPlaylist": {
-    "description": "exportPlaylist"
-  },
-  "importPlaylistDesc": "Επιλέξτε ένα αρχείο JSON λίστας αναπαραγωγής που έχει εξαχθεί προηγουμένως για εισαγωγή",
-  "@importPlaylistDesc": {
-    "description": "importPlaylistDesc"
-  },
-  "invalidPlaylistFile": "Μη έγκυρη δομή αρχείου λίστας αναπαραγωγής",
-  "@invalidPlaylistFile": {
-    "description": "invalidPlaylistFile"
-  },
-  "fileNotFound": "Το αρχείο δεν βρέθηκε",
-  "@fileNotFound": {
-    "description": "fileNotFound"
-  },
-  "exportErrorPermission": "Η άδεια δεν επιτρέπεται κατά την εξαγωγή",
-  "@exportErrorPermission": {
-    "description": "exportErrorPermission"
-  },
-  "importingPlaylist": "Εισαγωγή playlist...",
-  "@importingPlaylist": {
-    "description": "importingPlaylist"
-  },
-  "exportErrorStorage": "Ανεπαρκής χώρος αποθήκευσης",
-  "@exportErrorStorage": {
-    "description": "exportErrorStorage"
-  },
-  "exportingPlaylist": "Εξαγωγή playlist...",
-  "@exportingPlaylist": {
-    "description": "exportingPlaylist"
-  },
-  "playlistExportedMsg": "Η λίστα αναπαραγωγής έγινε με επιτυχία",
-  "@playlistExportedMsg": {
-    "description": "playlistExportedMsg"
+  "exportDowloadedFilesDes": "Κάντε κλικ εδώ για να εξαγάγετε τα ληφθέντα αρχεία από τον κατάλογο της εφαρμογής στον εξωτερικό κατάλογο",
+  "@exportDowloadedFilesDes": {
+    "description": "exportDowloadedFilesDes"
   },
   "exportError": "Σφάλμα κατά την εξαγωγή λίστας αναπαραγωγής",
   "@exportError": {
@@ -1951,41 +665,29 @@
   "@exportErrorFormat": {
     "description": "exportErrorFormat"
   },
-  "importPlaylist": "Εισαγωγή λίστας αναπαραγωγής",
-  "@importPlaylist": {
-    "description": "importPlaylist"
+  "exportErrorPermission": "Η άδεια δεν επιτρέπεται κατά την εξαγωγή",
+  "@exportErrorPermission": {
+    "description": "exportErrorPermission"
   },
-  "selectFile": "Επιλέξτε Αρχείο",
-  "@selectFile": {
-    "description": "selectFile"
+  "exportErrorStorage": "Ανεπαρκής χώρος αποθήκευσης",
+  "@exportErrorStorage": {
+    "description": "exportErrorStorage"
   },
-  "playlistImportedMsg": "Η λίστα αναπαραγωγής εισήχθη με επιτυχία",
-  "@playlistImportedMsg": {
-    "description": "playlistImportedMsg"
+  "exportMsg": "Τα αρχεία εξήχθησαν με επιτυχία",
+  "@exportMsg": {
+    "description": "exportMsg"
   },
-  "importError": "Σφάλμα κατά την εισαγωγή της λίστας αναπαραγωγής",
-  "@importError": {
-    "description": "importError"
-  },
-  "importErrorFileAccess": "Δεν ήταν δυνατή η πρόσβαση στο επιλεγμένο αρχείο",
-  "@importErrorFileAccess": {
-    "description": "importErrorFileAccess"
-  },
-  "importErrorFormat": "Μη έγκυρη μορφή αρχείου",
-  "@importErrorFormat": {
-    "description": "importErrorFormat"
-  },
-  "importErrorDatabase": "Σφάλμα αποθήκευσης στη βάση δεδομένων",
-  "@importErrorDatabase": {
-    "description": "importErrorDatabase"
-  },
-  "importLargeFileNote": "Σημείωση: Η εισαγωγή μεγάλων λιστών αναπαραγωγής ενδέχεται να χρειαστεί περισσότερο χρόνο",
-  "@importLargeFileNote": {
-    "description": "importLargeFileNote"
+  "exportPlaylist": "Εξαγωγή λίστας αναπαραγωγής",
+  "@exportPlaylist": {
+    "description": "exportPlaylist"
   },
   "exportPlaylistCsv": "Εξαγωγή λίστας αναπαραγωγής ως CSV",
   "@exportPlaylistCsv": {
     "description": "exportPlaylistCsv"
+  },
+  "exportPlaylistCsvSubtitle": "Δεν είναι δυνατή η εισαγωγή εδώ",
+  "@exportPlaylistCsvSubtitle": {
+    "description": "exportPlaylistCsvSubtitle"
   },
   "exportPlaylistJson": "Εξαγωγή λίστας αναπαραγωγής σε JSON",
   "@exportPlaylistJson": {
@@ -1995,10 +697,6 @@
   "@exportPlaylistJsonSubtitle": {
     "description": "exportPlaylistJsonSubtitle"
   },
-  "exportPlaylistCsvSubtitle": "Δεν είναι δυνατή η εισαγωγή εδώ",
-  "@exportPlaylistCsvSubtitle": {
-    "description": "exportPlaylistCsvSubtitle"
-  },
   "exportToOnlineMusic": "Εξαγωγή σε μουσική Online",
   "@exportToOnlineMusic": {
     "description": "exportToOnlineMusic"
@@ -2007,145 +705,489 @@
   "@exportToOnlineMusicSubtitle": {
     "description": "exportToOnlineMusicSubtitle"
   },
-  "linkCopied": "Ο σύνδεσμος αντιγράφηκε στο πρόχειρο",
-  "@linkCopied": {
-    "description": "linkCopied"
+  "exportedFileLocation": "Εξαγωγή τοποθεσίας των ληφθέντων αρχείων",
+  "@exportedFileLocation": {
+    "description": "exportedFileLocation"
   },
-  "lyrics": "Γράμματα",
-  "@lyrics": {
-    "description": "lyrics"
+  "exporting": "Εξαγωγή...",
+  "@exporting": {
+    "description": "exporting"
   },
-  "no": "Όχι",
-  "@no": {
-    "description": "no"
+  "exportingPlaylist": "Εξαγωγή playlist...",
+  "@exportingPlaylist": {
+    "description": "exportingPlaylist"
   },
-  "podcasts": "Podcast",
-  "@podcasts": {
-    "description": "podcasts"
+  "favorites": "Αγαπημένα",
+  "@favorites": {
+    "description": "favorites"
   },
-  "episodes": "Επεισόδια",
-  "@episodes": {
-    "description": "episodes"
+  "featuredplaylists": "Επιλεγμένες λίστες αναπαραγωγής",
+  "@featuredplaylists": {
+    "description": "featuredplaylists"
   },
-  "profiles": "Προφίλ",
-  "@profiles": {
-    "description": "profiles"
+  "fileNotFound": "Το αρχείο δεν βρέθηκε",
+  "@fileNotFound": {
+    "description": "fileNotFound"
   },
-  "addToLibrary": "Προσθήκη στη βιβλιοθήκη",
-  "@addToLibrary": {
-    "description": "addToLibrary"
+  "follow": "Συνεχίζω",
+  "@follow": {
+    "description": "follow"
   },
-  "removeFromLibrary": "Διαγραφή από τη βιβλιοθήκη",
-  "@removeFromLibrary": {
-    "description": "removeFromLibrary"
+  "followedArtists": "ακολούθησε",
+  "@followedArtists": {
+    "description": "followedArtists"
   },
-  "play": "Παίξτε",
-  "@play": {
-    "description": "play"
+  "following": "Εξής",
+  "@following": {
+    "description": "following"
   },
-  "enqueueAlbumSongs": "Προσθήκη τραγουδιών άλμπουμ στην ουρά",
-  "@enqueueAlbumSongs": {
-    "description": "enqueueAlbumSongs"
+  "for1": "για",
+  "@for1": {
+    "description": "for1"
   },
-  "downloadAlbumSongs": "Κατεβάστε τραγούδια από το άλμπουμ",
-  "@downloadAlbumSongs": {
-    "description": "downloadAlbumSongs"
+  "forgottenFavorites": "ξεχασμένα αγαπημένα",
+  "@forgottenFavorites": {
+    "description": "forgottenFavorites"
   },
-  "shareAlbum": "Κοινή χρήση λευκώματος",
-  "@shareAlbum": {
-    "description": "shareAlbum"
+  "friendFallback": "Φίλε",
+  "@friendFallback": {
+    "description": "friendFallback"
+  },
+  "friendRequestAccepted": "Αίτημα φιλίας δεκτό",
+  "@friendRequestAccepted": {
+    "description": "friendRequestAccepted"
+  },
+  "friendRequestSent": "Το αίτημα φιλίας εστάλη",
+  "@friendRequestSent": {
+    "description": "friendRequestSent"
+  },
+  "friends": "Φίλοι",
+  "@friends": {
+    "description": "friends"
+  },
+  "friendsLoginRequired": "Συνδεθείτε για να βρείτε φίλους.",
+  "@friendsLoginRequired": {
+    "description": "friendsLoginRequired"
+  },
+  "friendshipRemoved": "Η φιλία καταργήθηκε",
+  "@friendshipRemoved": {
+    "description": "friendshipRemoved"
+  },
+  "genericAlbum": "Αλμπουμ",
+  "@genericAlbum": {
+    "description": "genericAlbum"
+  },
+  "genericError": "Λάθος",
+  "@genericError": {
+    "description": "genericError"
+  },
+  "genre_electronic": "Ηλεκτρονική",
+  "@genre_electronic": {
+    "description": "genre_electronic"
+  },
+  "genre_hiphop": "χιπ χοπ",
+  "@genre_hiphop": {
+    "description": "genre_hiphop"
+  },
+  "genre_jazz": "Τζαζ",
+  "@genre_jazz": {
+    "description": "genre_jazz"
+  },
+  "genre_latin": "λατινικά",
+  "@genre_latin": {
+    "description": "genre_latin"
+  },
+  "genre_pop": "Κρότος",
+  "@genre_pop": {
+    "description": "genre_pop"
+  },
+  "genre_rock": "Βράχος",
+  "@genre_rock": {
+    "description": "genre_rock"
+  },
+  "gesture": "χειρονομία",
+  "@gesture": {
+    "description": "gesture"
+  },
+  "github": "GitHub",
+  "@github": {
+    "description": "github"
+  },
+  "githubDes": "Δείτε τον πηγαίο κώδικα του GitHub \nΑν σας αρέσει αυτό το έργο, μην ξεχάσετε να του δώσετε ένα ⭐!",
+  "@githubDes": {
+    "description": "githubDes"
+  },
+  "goToAlbum": "Μετάβαση στο άλμπουμ",
+  "@goToAlbum": {
+    "description": "goToAlbum"
+  },
+  "goToDownloadPage": "Κάντε κλικ εδώ για να μεταβείτε στη σελίδα λήψης",
+  "@goToDownloadPage": {
+    "description": "goToDownloadPage"
+  },
+  "helloWorld": "Γεια σου κόσμο",
+  "@helloWorld": {
+    "description": "Este texto es opcional"
+  },
+  "high": "Ψηλά",
+  "@high": {
+    "description": "high"
+  },
+  "hintApiUrl": "URL API στην παρουσία Piped",
+  "@hintApiUrl": {
+    "description": "hintApiUrl"
+  },
+  "home": "Σπίτι",
+  "@home": {
+    "description": "home"
+  },
+  "homeContentCount": "Πλήθος περιεχομένου εκκίνησης",
+  "@homeContentCount": {
+    "description": "homeContentCount"
+  },
+  "homeContentCountDes": "Επιλέξτε τον αριθμό των αρχικών περιεχομένων της αρχικής οθόνης (περίπου). Λιγότερα αποτελέσματα φορτώνονται πιο γρήγορα",
+  "@homeContentCountDes": {
+    "description": "homeContentCountDes"
+  },
+  "id": "ID",
+  "@id": {
+    "description": "id"
+  },
+  "identifySongMetadata": "Προσδιορισμός μεταδεδομένων",
+  "@identifySongMetadata": {
+    "description": "Action that searches and embeds metadata for a local song"
+  },
+  "ignoreBatOpt": "Αγνοήστε τη βελτιστοποίηση της μπαταρίας",
+  "@ignoreBatOpt": {
+    "description": "ignoreBatOpt"
+  },
+  "ignoreBatOptDes": "Εάν αντιμετωπίζετε προβλήματα με τις ειδοποιήσεις ή τη διακοπή της αναπαραγωγής λόγω βελτιστοποίησης του συστήματος, ενεργοποιήστε αυτήν την επιλογή",
+  "@ignoreBatOptDes": {
+    "description": "ignoreBatOptDes"
+  },
+  "importError": "Σφάλμα κατά την εισαγωγή της λίστας αναπαραγωγής",
+  "@importError": {
+    "description": "importError"
+  },
+  "importErrorDatabase": "Σφάλμα αποθήκευσης στη βάση δεδομένων",
+  "@importErrorDatabase": {
+    "description": "importErrorDatabase"
+  },
+  "importErrorFileAccess": "Δεν ήταν δυνατή η πρόσβαση στο επιλεγμένο αρχείο",
+  "@importErrorFileAccess": {
+    "description": "importErrorFileAccess"
+  },
+  "importErrorFormat": "Μη έγκυρη μορφή αρχείου",
+  "@importErrorFormat": {
+    "description": "importErrorFormat"
+  },
+  "importLargeFileNote": "Σημείωση: Η εισαγωγή μεγάλων λιστών αναπαραγωγής ενδέχεται να χρειαστεί περισσότερο χρόνο",
+  "@importLargeFileNote": {
+    "description": "importLargeFileNote"
+  },
+  "importPlaylist": "Εισαγωγή λίστας αναπαραγωγής",
+  "@importPlaylist": {
+    "description": "importPlaylist"
+  },
+  "importPlaylistDesc": "Επιλέξτε ένα αρχείο JSON λίστας αναπαραγωγής που έχει εξαχθεί προηγουμένως για εισαγωγή",
+  "@importPlaylistDesc": {
+    "description": "importPlaylistDesc"
   },
   "imported": "Εισαγόμενο",
   "@imported": {
     "description": "imported"
   },
+  "importedFromJossMusic": "Εισαγωγή από την Joss Music Kotlin",
+  "@importedFromJossMusic": {
+    "description": "importedFromJossMusic"
+  },
   "importedPlaylist": "Εισαγόμενη λίστα αναπαραγωγής",
   "@importedPlaylist": {
     "description": "importedPlaylist"
   },
-  "permissionDenied": "Η άδεια απορρίφθηκε",
-  "@permissionDenied": {
-    "description": "permissionDenied"
+  "importingPlaylist": "Εισαγωγή playlist...",
+  "@importingPlaylist": {
+    "description": "importingPlaylist"
   },
-  "enqueueSongs": "Προσθήκη τραγουδιών στην ουρά",
-  "@enqueueSongs": {
-    "description": "enqueueSongs"
+  "in_app_storage": "Κατάλογος εσωτερικής αποθήκευσης",
+  "@in_app_storage": {
+    "description": "in_app_storage"
   },
-  "shuffle": "Τυχαίο",
-  "@shuffle": {
-    "description": "shuffle"
+  "includeDownloadedFiles": "Συμπεριλάβετε αρχεία τραγουδιών που έχετε κατεβάσει",
+  "@includeDownloadedFiles": {
+    "description": "includeDownloadedFiles"
   },
-  "downloadPlaylist": "Λήψη λίστας αναπαραγωγής",
-  "@downloadPlaylist": {
-    "description": "downloadPlaylist"
+  "infoNotAvailable": "Οι πληροφορίες δεν είναι διαθέσιμες",
+  "@infoNotAvailable": {
+    "description": "infoNotAvailable"
   },
-  "syncPlaylistSongs": "Συγχρονισμός τραγουδιών λίστας αναπαραγωγής",
-  "@syncPlaylistSongs": {
-    "description": "syncPlaylistSongs"
+  "invalidPlaylistFile": "Μη έγκυρη δομή αρχείου λίστας αναπαραγωγής",
+  "@invalidPlaylistFile": {
+    "description": "invalidPlaylistFile"
   },
-  "blacklistPipedPlaylist": "Μαύρη λίστα αναπαραγωγής",
-  "@blacklistPipedPlaylist": {
-    "description": "blacklistPipedPlaylist"
+  "invalidServerResponse": "Μη έγκυρη απάντηση διακομιστή.",
+  "@invalidServerResponse": {
+    "description": "invalidServerResponse"
   },
-  "sharePlaylist": "Κοινή χρήση λίστας αναπαραγωγής",
-  "@sharePlaylist": {
-    "description": "sharePlaylist"
+  "invalidSessionToken": "Η συνεδρία δεν περιέχει έγκυρο διακριτικό.",
+  "@invalidSessionToken": {
+    "description": "invalidSessionToken"
   },
-  "playlist": "Λίστα αναπαραγωγής",
-  "@playlist": {
-    "description": "playlist"
+  "items": "στοιχεία",
+  "@items": {
+    "description": "items"
   },
-  "sortByName": "Ταξινόμηση κατά όνομα",
-  "@sortByName": {
-    "description": "sortByName"
+  "keepListening": "συνέχισε να ακούς",
+  "@keepListening": {
+    "description": "keepListening"
   },
-  "sortByDate": "Ταξινόμηση κατά ημερομηνία",
-  "@sortByDate": {
-    "description": "sortByDate"
+  "keepScreenOnWhilePlaying": "Διατηρήστε την οθόνη ενεργοποιημένη κατά την αναπαραγωγή",
+  "@keepScreenOnWhilePlaying": {
+    "description": "keepScreenOnWhilePlaying"
   },
-  "sortByDuration": "Ταξινόμηση κατά διάρκεια",
-  "@sortByDuration": {
-    "description": "sortByDuration"
+  "keepScreenOnWhilePlayingDes": "Εάν είναι ενεργοποιημένη, η οθόνη της συσκευής θα παραμείνει ξύπνια κατά την αναπαραγωγή μουσικής",
+  "@keepScreenOnWhilePlayingDes": {
+    "description": "keepScreenOnWhilePlayingDes"
   },
-  "sortAscendNDescend": "Ταξινόμηση αύξουσα/φθίνουσα",
-  "@sortAscendNDescend": {
-    "description": "sortAscendNDescend"
+  "language": "Γλώσσα",
+  "@language": {
+    "description": "language"
   },
-  "migration_summary_start": "Η μετεγκατάσταση ολοκληρώθηκε από {source}.",
-  "@migration_summary_start": {
-    "placeholders": {
-      "source": {
-        "type": "String"
-      }
-    },
-    "description": "migration_summary_start"
+  "languageDes": "Ορίστε τη γλώσσα της εφαρμογής",
+  "@languageDes": {
+    "description": "languageDes"
   },
-  "migration_summary_playlists": "Λίστες αναπαραγωγής: {count}",
-  "@migration_summary_playlists": {
-    "placeholders": {
-      "count": {
-        "type": "num"
-      }
-    },
-    "description": "migration_summary_playlists"
+  "latestRelease": "Τελευταία έκδοση",
+  "@latestRelease": {
+    "description": "latestRelease"
   },
-  "migration_summary_songs": "Τραγούδια: {count}",
-  "@migration_summary_songs": {
-    "placeholders": {
-      "count": {
-        "type": "num"
-      }
-    },
-    "description": "migration_summary_songs"
+  "latestVersion": "Τελευταία διαθέσιμη έκδοση",
+  "@latestVersion": {
+    "description": "latestVersion"
   },
-  "migration_summary_favorites": "Αγαπημένα: {count}",
-  "@migration_summary_favorites": {
-    "placeholders": {
-      "count": {
-        "type": "num"
-      }
-    },
-    "description": "migration_summary_favorites"
+  "letsStrart": "Ας ξεκινήσουμε..",
+  "@letsStrart": {
+    "description": "letsStrart"
+  },
+  "libAlbums": "Λευκώματα βιβλιοθήκης",
+  "@libAlbums": {
+    "description": "libAlbums"
+  },
+  "libArtists": "Καλλιτέχνες της βιβλιοθήκης",
+  "@libArtists": {
+    "description": "libArtists"
+  },
+  "libPlaylists": "Λίστες αναπαραγωγής βιβλιοθήκης",
+  "@libPlaylists": {
+    "description": "libPlaylists"
+  },
+  "libSongs": "Τραγούδια της Βιβλιοθήκης",
+  "@libSongs": {
+    "description": "libSongs"
+  },
+  "library": "Βιβλιοθήκη",
+  "@library": {
+    "description": "library"
+  },
+  "libraryPlaylistDescription": "Λίστα αναπαραγωγής βιβλιοθήκης",
+  "@libraryPlaylistDescription": {
+    "description": "libraryPlaylistDescription"
+  },
+  "light": "Σίγουρα",
+  "@light": {
+    "description": "light"
+  },
+  "link": "Σύνδεσμος",
+  "@link": {
+    "description": "link"
+  },
+  "linkAlert": "Συνδέθηκε με επιτυχία!",
+  "@linkAlert": {
+    "description": "linkAlert"
+  },
+  "linkCopied": "Ο σύνδεσμος αντιγράφηκε στο πρόχειρο",
+  "@linkCopied": {
+    "description": "linkCopied"
+  },
+  "linkPipedDes": "Σύνδεση με το Piped για λίστες αναπαραγωγής",
+  "@linkPipedDes": {
+    "description": "linkPipedDes"
+  },
+  "listenNow": "Άκου τώρα",
+  "@listenNow": {
+    "description": "listenNow"
+  },
+  "listeningToEnvironment": "Ακούγοντας το περιβάλλον...",
+  "@listeningToEnvironment": {
+    "description": "listeningToEnvironment"
+  },
+  "loadInfoUpdate": "Δεν ήταν δυνατή η φόρτωση των πληροφοριών ενημέρωσης",
+  "@loadInfoUpdate": {
+    "description": "loadInfoUpdate"
+  },
+  "local": "Τοπικό",
+  "@local": {
+    "description": "local"
+  },
+  "local_b1": "Λειτουργεί χωρίς να χρειάζεται να συνδεθείτε.",
+  "@local_b1": {
+    "description": "local_b1"
+  },
+  "local_b2": "Ολόκληρη η βιβλιοθήκη σας παραμένει αυστηρά σε αυτόν τον υπολογιστή.",
+  "@local_b2": {
+    "description": "local_b2"
+  },
+  "local_b3": "Σημείωση: Δεν υπάρχουν μη αυτόματα αντίγραφα ασφαλείας στο cloud. Εάν χάσετε τη συσκευή σας ή απεγκαταστήσετε την εφαρμογή, τα δεδομένα σας δεν μπορούν να ανακτηθούν.",
+  "@local_b3": {
+    "description": "local_b3"
+  },
+  "local_btn": "Χρησιμοποιήστε μόνο σε αυτήν τη συσκευή",
+  "@local_btn": {
+    "description": "local_btn"
+  },
+  "local_subtitle": "Απόλυτο απόρρητο στη συσκευή σας",
+  "@local_subtitle": {
+    "description": "local_subtitle"
+  },
+  "local_title": "Τοπική λειτουργία",
+  "@local_title": {
+    "description": "local_title"
+  },
+  "loudnessDb": "LoudnessDb",
+  "@loudnessDb": {
+    "description": "loudnessDb"
+  },
+  "loudnessNormalization": "Ομαλοποίηση έντασης",
+  "@loudnessNormalization": {
+    "description": "loudnessNormalization"
+  },
+  "loudnessNormalizationDes": "Ορίζει το ίδιο επίπεδο έντασης για όλα τα τραγούδια (Πειραματικό) (Δεν θα λειτουργεί σε τραγούδια που έχουν ληφθεί σε παλαιότερες εκδόσεις (< v1.10.0))",
+  "@loudnessNormalizationDes": {
+    "description": "loudnessNormalizationDes"
+  },
+  "low": "Χαμηλό",
+  "@low": {
+    "description": "low"
+  },
+  "lyrics": "Γράμματα",
+  "@lyrics": {
+    "description": "lyrics"
+  },
+  "lyricsNotAvailable": "Οι στίχοι δεν είναι διαθέσιμοι!",
+  "@lyricsNotAvailable": {
+    "description": "lyricsNotAvailable"
+  },
+  "manageCollaborators": "Διαχείριση συνεργατών (φίλων)",
+  "@manageCollaborators": {
+    "description": "manageCollaborators"
+  },
+  "metadataApplySuccess": "Τα μεταδεδομένα ενσωματώθηκαν στο τοπικό αρχείο.",
+  "@metadataApplySuccess": {
+    "description": "Success message after writing local tags"
+  },
+  "metadataNoResults": "Δε βρέθηκαν σπίρτα. Δοκίμασε άλλη έρευνα.",
+  "@metadataNoResults": {
+    "description": "Empty state for metadata search"
+  },
+  "metadataOperationFailed": "Η λειτουργία μεταδεδομένων απέτυχε.",
+  "@metadataOperationFailed": {
+    "description": "Generic metadata lookup or write error"
+  },
+  "metadataOverwriteWarning": "Αυτό θα αντικαταστήσει τον ενσωματωμένο τίτλο, τον καλλιτέχνη, το άλμπουμ και το εξώφυλλο, ενώ παράλληλα θα διατηρεί οποιαδήποτε πεδία ο αγώνας δεν παρέχει.",
+  "@metadataOverwriteWarning": {
+    "description": "Confirmation before writing tags to a local audio file"
+  },
+  "metadataSearchDescription": "Επιλέξτε το σωστό ταίριασμα για να ενσωματώσετε τον τίτλο, τον καλλιτέχνη, το άλμπουμ και το εξώφυλλο στο τοπικό αρχείο.",
+  "@metadataSearchDescription": {
+    "description": "Explanation shown above metadata search results"
+  },
+  "metadataSearchHint": "Τραγούδι ή όνομα καλλιτέχνη",
+  "@metadataSearchHint": {
+    "description": "Hint for the metadata search field"
+  },
+  "metadataSearchTitle": "Αναγνώριση τραγουδιού",
+  "@metadataSearchTitle": {
+    "description": "Title of the local song metadata search dialog"
+  },
+  "micInstruction": "Βεβαιωθείτε ότι η μουσική παίζει αρκετά δυνατά κοντά στο μικρόφωνό σας.",
+  "@micInstruction": {
+    "description": "micInstruction"
+  },
+  "migratedAlbum": "Λεύκωμα μετεγκατάστασης",
+  "@migratedAlbum": {
+    "description": "migratedAlbum"
+  },
+  "migratedLibrary": "Βιβλιοθήκη μετεγκατάστασης",
+  "@migratedLibrary": {
+    "description": "migratedLibrary"
+  },
+  "migratedPlaylist": "Μετεγκατάσταση λίστας αναπαραγωγής",
+  "@migratedPlaylist": {
+    "description": "migratedPlaylist"
+  },
+  "migrationAlreadyRunning": "Υπάρχει ήδη μια μετεγκατάσταση σε εξέλιξη.",
+  "@migrationAlreadyRunning": {
+    "description": "migrationAlreadyRunning"
+  },
+  "migrationAnalyzingLocal": "Αναλύοντας την τοπική βιβλιοθήκη...",
+  "@migrationAnalyzingLocal": {
+    "description": "migrationAnalyzingLocal"
+  },
+  "migrationCheckingCloud": "Έλεγχος εάν το EMusic Cloud διαθέτει ήδη βιβλιοθήκη...",
+  "@migrationCheckingCloud": {
+    "description": "migrationCheckingCloud"
+  },
+  "migrationCompleted": "Η μετανάστευση ολοκληρώθηκε.",
+  "@migrationCompleted": {
+    "description": "migrationCompleted"
+  },
+  "migrationCreatingBackup": "Δημιουργία τοπικού αντιγράφου ασφαλείας πριν από τη σύνδεση στο cloud...",
+  "@migrationCreatingBackup": {
+    "description": "migrationCreatingBackup"
+  },
+  "migrationFailedLocalPreserved": "Η μετεγκατάσταση απέτυχε. Τα τοπικά σας δεδομένα δεν τροποποιήθηκαν.",
+  "@migrationFailedLocalPreserved": {
+    "description": "migrationFailedLocalPreserved"
+  },
+  "migrationLoginRequired": "Συνδεθείτε στο Joss Red πριν από τη μετεγκατάσταση.",
+  "@migrationLoginRequired": {
+    "description": "migrationLoginRequired"
+  },
+  "migrationPreparingCloud": "Προετοιμασία της μετεγκατάστασης στο EMusic Cloud...",
+  "@migrationPreparingCloud": {
+    "description": "migrationPreparingCloud"
+  },
+  "migrationStartFailed": "Το EMusic Cloud δεν μπόρεσε να ξεκινήσει τη μετεγκατάσταση.",
+  "@migrationStartFailed": {
+    "description": "migrationStartFailed"
+  },
+  "migrationUploadIncomplete": "Δεν ήταν δυνατή η μεταφόρτωση όλων των δεδομένων. Διατηρούμε την τοπική σας υποστήριξη.",
+  "@migrationUploadIncomplete": {
+    "description": "migrationUploadIncomplete"
+  },
+  "migrationUploadingData": "Μεταφόρτωση λιστών αναπαραγωγής, αγαπημένων και ιστορικού...",
+  "@migrationUploadingData": {
+    "description": "migrationUploadingData"
+  },
+  "migrationValidationFailed": "Το EMusic Cloud δεν μπόρεσε να επικυρώσει τη μετεγκατάσταση.",
+  "@migrationValidationFailed": {
+    "description": "migrationValidationFailed"
+  },
+  "migrationVerifyingIntegrity": "Επαλήθευση ακεραιότητας στο EMusic Cloud...",
+  "@migrationVerifyingIntegrity": {
+    "description": "migrationVerifyingIntegrity"
+  },
+  "migration_btn_select": "Επιλέξτε αρχείο και εισαγωγή",
+  "@migration_btn_select": {
+    "description": "migration_btn_select"
+  },
+  "migration_select_file_dialog": "Επιλέξτε song.db ή ένα αντίγραφο ασφαλείας .backup",
+  "@migration_select_file_dialog": {
+    "description": "migration_select_file_dialog"
+  },
+  "migration_success": "Η μετεγκατάσταση ολοκληρώθηκε με επιτυχία.",
+  "@migration_success": {
+    "description": "migration_success"
   },
   "migration_summary_albums": "Άλμπουμ: {count}",
   "@migration_summary_albums": {
@@ -2165,141 +1207,1166 @@
     },
     "description": "migration_summary_artists"
   },
-  "migration_select_file_dialog": "Επιλέξτε song.db ή ένα αντίγραφο ασφαλείας .backup",
-  "@migration_select_file_dialog": {
-    "description": "migration_select_file_dialog"
+  "migration_summary_favorites": "Αγαπημένα: {count}",
+  "@migration_summary_favorites": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_favorites"
   },
-  "migration_success": "Η μετεγκατάσταση ολοκληρώθηκε με επιτυχία.",
-  "@migration_success": {
-    "description": "migration_success"
+  "migration_summary_playlists": "Λίστες αναπαραγωγής: {count}",
+  "@migration_summary_playlists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_playlists"
   },
-  "backup_select_folder_dialog": "Επιλέξτε το φάκελο για δημιουργία αντιγράφων ασφαλείας",
-  "@backup_select_folder_dialog": {
-    "description": "backup_select_folder_dialog"
+  "migration_summary_songs": "Τραγούδια: {count}",
+  "@migration_summary_songs": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_songs"
   },
-  "restore_select_file_dialog": "Επιλέξτε το αρχείο αντιγράφου ασφαλείας",
-  "@restore_select_file_dialog": {
-    "description": "restore_select_file_dialog"
+  "migration_summary_start": "Η μετεγκατάσταση ολοκληρώθηκε από {source}.",
+  "@migration_summary_start": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      }
+    },
+    "description": "migration_summary_start"
   },
-  "auth_hint_email": "name@mail.com",
-  "@auth_hint_email": {
-    "description": "auth_hint_email"
+  "minutes": "λεπτά",
+  "@minutes": {
+    "description": "minutes"
   },
-  "auth_error_invalid_email": "Εισαγάγετε ένα έγκυρο email.",
-  "@auth_error_invalid_email": {
-    "description": "auth_error_invalid_email"
+  "misc": "Διάφορα",
+  "@misc": {
+    "description": "misc"
   },
-  "settings_cloud_backup_dialog_desc": "Ανεβάστε ένα αντίγραφο ασφαλείας .hmb της εφαρμογής στον διακομιστή και, εάν χρειάζεται, επαναφέρετε οποιοδήποτε από τα αποθηκευμένα αντίγραφα ασφαλείας.",
-  "@settings_cloud_backup_dialog_desc": {
-    "description": "settings_cloud_backup_dialog_desc"
+  "mostListenedSong": "Το πιο πολυακουσμένο τραγούδι",
+  "@mostListenedSong": {
+    "description": "mostListenedSong"
   },
-  "delete": "Διαγραφή",
-  "@delete": {
-    "description": "delete"
+  "musicAndPlayback": "Μουσική και αναπαραγωγή",
+  "@musicAndPlayback": {
+    "description": "musicAndPlayback"
   },
-  "in_app_storage": "Κατάλογος εσωτερικής αποθήκευσης",
-  "@in_app_storage": {
-    "description": "in_app_storage"
+  "musicRecognition": "Αναγνώριση μουσικής",
+  "@musicRecognition": {
+    "description": "musicRecognition"
   },
-  "auth_brand_description_1": "Φέραμε τη σύνδεση, την εγγραφή και την ανάκτηση κωδικού πρόσβασης από το προηγούμενο έργο, προσαρμοσμένο για αυτήν την εφαρμογή μουσικής.",
-  "@auth_brand_description_1": {
-    "description": "auth_brand_description_1"
+  "networkError": "Σφάλμα δικτύου! Ελέγξτε τη σύνδεσή σας στο Διαδίκτυο.",
+  "@networkError": {
+    "description": "networkError"
   },
-  "auth_brand_description_2": "Η συνεδρία σας ζει σε ασφαλή χώρο αποθήκευσης και επικυρώνεται με το ίδιο backend που χρησιμοποιούσατε ήδη.",
-  "@auth_brand_description_2": {
-    "description": "auth_brand_description_2"
+  "networkError1": "Ωχ, σφάλμα δικτύου!",
+  "@networkError1": {
+    "description": "networkError1"
   },
-  "auth_brand_not_configured": "Το αρχείο .env πρέπει να ρυθμιστεί για τη σύνδεση του συστήματος υποστήριξης ελέγχου ταυτότητας.",
-  "@auth_brand_not_configured": {
-    "description": "auth_brand_not_configured"
+  "newVersionAvailable": "Νέα έκδοση διαθέσιμη!",
+  "@newVersionAvailable": {
+    "description": "newVersionAvailable"
   },
-  "auth_forgot_password_subtitle": "Θα σας στείλουμε τις οδηγίες στο email του λογαριασμού σας.",
-  "@auth_forgot_password_subtitle": {
-    "description": "auth_forgot_password_subtitle"
+  "news_btn_app": "Joss Red App (Play Store)",
+  "@news_btn_app": {
+    "description": "news_btn_app"
   },
-  "auth_btn_send_email": "Αποστολή αλληλογραφίας",
-  "@auth_btn_send_email": {
-    "description": "auth_btn_send_email"
+  "news_btn_dismiss": "Κατανοητό",
+  "@news_btn_dismiss": {
+    "description": "news_btn_dismiss"
   },
-  "auth_error_not_configured": "Το backend ελέγχου ταυτότητας λείπει για να διαμορφωθεί στο αρχείο .env.",
-  "@auth_error_not_configured": {
-    "description": "auth_error_not_configured"
+  "news_btn_web": "Joss Red Web",
+  "@news_btn_web": {
+    "description": "news_btn_web"
   },
-  "auth_error_invalid_credentials": "Λάθος email ή κωδικός πρόσβασης.",
-  "@auth_error_invalid_credentials": {
-    "description": "auth_error_invalid_credentials"
+  "news_card_subtitle": "100% συγχρονισμός με τον Joss Red, playlist με φίλους και πολλά άλλα. Πατήστε για να δείτε τι νέο υπάρχει.",
+  "@news_card_subtitle": {
+    "description": "news_card_subtitle"
   },
-  "auth_error_not_verified": "Ο λογαριασμός σας δεν έχει επαληθευτεί ακόμα.",
-  "@auth_error_not_verified": {
-    "description": "auth_error_not_verified"
+  "news_card_title": "Η Estrella Music έχει εξελιχθεί!",
+  "@news_card_title": {
+    "description": "news_card_title"
   },
-  "auth_error_unknown": "Δεν ήταν δυνατό να ολοκληρωθεί η επέμβαση.",
-  "@auth_error_unknown": {
-    "description": "auth_error_unknown"
+  "news_dialog_friends_desc": "Για να προσθέσετε φίλους, να αποδεχτείτε αιτήματα ή να διαχειριστείτε το προφίλ ασφαλείας σας, χρησιμοποιήστε το Joss Red στις επίσημες πλατφόρμες του:",
+  "@news_dialog_friends_desc": {
+    "description": "news_dialog_friends_desc"
   },
-  "auth_register_success": "Ο λογαριασμός δημιουργήθηκε με επιτυχία.",
-  "@auth_register_success": {
-    "description": "auth_register_success"
+  "news_dialog_section_friends": "Διαχείριση φίλων και λογαριασμού:",
+  "@news_dialog_section_friends": {
+    "description": "news_dialog_section_friends"
   },
-  "auth_register_error": "Δεν ήταν δυνατή η δημιουργία του λογαριασμού.",
-  "@auth_register_error": {
-    "description": "auth_register_error"
+  "news_dialog_title": "Estrella Music News",
+  "@news_dialog_title": {
+    "description": "news_dialog_title"
   },
-  "auth_recovery_email_sent": "Το email εστάλη.",
-  "@auth_recovery_email_sent": {
-    "description": "auth_recovery_email_sent"
+  "news_item_collab_desc": "Δημιουργήστε λίστες αναπαραγωγής με τους φίλους σας! Όταν δημιουργείτε μια λίστα αναπαραγωγής, επιλέξτε το πλαίσιο ελέγχου Συνεργασία και επιλέξτε τους φίλους σας για επεξεργασία μαζί.",
+  "@news_item_collab_desc": {
+    "description": "news_item_collab_desc"
   },
-  "auth_recovery_email_error": "Δεν ήταν δυνατή η αποστολή του email.",
-  "@auth_recovery_email_error": {
-    "description": "auth_recovery_email_error"
+  "news_item_collab_title": "Συνεργατικές λίστες αναπαραγωγής",
+  "@news_item_collab_title": {
+    "description": "news_item_collab_title"
   },
-  "latestVersion": "Τελευταία διαθέσιμη έκδοση",
-  "@latestVersion": {
-    "description": "latestVersion"
+  "news_item_sync_desc": "Οι λίστες αναπαραγωγής και τα αγαπημένα σας αποθηκεύονται και συγχρονίζονται αυτόματα στο cloud με τον κύριο λογαριασμό σας Joss Red.",
+  "@news_item_sync_desc": {
+    "description": "news_item_sync_desc"
   },
-  "updateApp": "Ενημέρωση εφαρμογής",
-  "@updateApp": {
-    "description": "updateApp"
+  "news_item_sync_title": "Πλήρης ενσωμάτωση με τον Joss Red",
+  "@news_item_sync_title": {
+    "description": "news_item_sync_title"
   },
-  "loadInfoUpdate": "Δεν ήταν δυνατή η φόρτωση των πληροφοριών ενημέρωσης",
-  "@loadInfoUpdate": {
-    "description": "loadInfoUpdate"
+  "news_item_trans_desc": "Δεν χρειάζεται πλέον να κάνετε κλικ στα κουμπιά μη αυτόματου συγχρονισμού. Ο νέος κινητήρας είναι υπεύθυνος για την αυτόματη αλλαγή ταχυτήτων πάνω-κάτω.",
+  "@news_item_trans_desc": {
+    "description": "news_item_trans_desc"
   },
-  "infoNotAvailable": "Οι πληροφορίες δεν είναι διαθέσιμες",
-  "@infoNotAvailable": {
-    "description": "infoNotAvailable"
+  "news_item_trans_title": "Διαφανής συγχρονισμός",
+  "@news_item_trans_title": {
+    "description": "news_item_trans_title"
   },
-  "developedBy": "Αναπτύχθηκε και συντηρήθηκε από τον Joss Estrada (JOSPROX)",
-  "@developedBy": {
-    "description": "developedBy"
+  "no": "Όχι",
+  "@no": {
+    "description": "no"
   },
-  "copyrightNotice": "© 2026 JOSPROX. Άδεια GPL v3.0",
-  "@copyrightNotice": {
-    "description": "copyrightNotice"
+  "noBookmarks": "Χωρίς σελιδοδείκτες!",
+  "@noBookmarks": {
+    "description": "noBookmarks"
   },
-  "backupSettingsAndPlaylists": "Δημιουργία αντιγράφων ασφαλείας ρυθμίσεων και λιστών αναπαραγωγής",
-  "@backupSettingsAndPlaylists": {
-    "description": "backupSettingsAndPlaylists"
+  "noJossRedFriends": "Δεν έχετε προσθέσει φίλους στο Joss Red.",
+  "@noJossRedFriends": {
+    "description": "noJossRedFriends"
   },
-  "restoreSettingsAndPlaylists": "Επαναφορά ρυθμίσεων και λιστών αναπαραγωγής",
-  "@restoreSettingsAndPlaylists": {
-    "description": "restoreSettingsAndPlaylists"
+  "noLibPlaylist": "Δεν έχετε playlist στη βιβλιοθήκη σας!",
+  "@noLibPlaylist": {
+    "description": "noLibPlaylist"
   },
-  "removeFromCache": "Αφαίρεση από την προσωρινή μνήμη",
-  "@removeFromCache": {
-    "description": "removeFromCache"
+  "noMatchInstruction": "Δεν ήταν δυνατή η εύρεση τραγουδιών στον ηχογραφημένο ήχο",
+  "@noMatchInstruction": {
+    "description": "noMatchInstruction"
+  },
+  "noMatchesFound": "Χωρίς αγώνες",
+  "@noMatchesFound": {
+    "description": "noMatchesFound"
+  },
+  "noOfflineSong": "Χωρίς τραγούδια εκτός σύνδεσης!",
+  "@noOfflineSong": {
+    "description": "noOfflineSong"
+  },
+  "noSongsInCollection": "Δεν υπάρχουν τραγούδια σε αυτή τη συλλογή",
+  "@noSongsInCollection": {
+    "description": "noSongsInCollection"
+  },
+  "nomatch": "Δεν βρέθηκαν αντιστοιχίες για",
+  "@nomatch": {
+    "description": "nomatch"
+  },
+  "notAuthenticated": "Δεν έχει επικυρωθεί",
+  "@notAuthenticated": {
+    "description": "notAuthenticated"
+  },
+  "notaSongVideo": "Δεν είναι τραγούδι/μουσικό βίντεο!",
+  "@notaSongVideo": {
+    "description": "notaSongVideo"
+  },
+  "notaValidLink": "Αυτός ο σύνδεσμος δεν είναι έγκυρος!",
+  "@notaValidLink": {
+    "description": "notaValidLink"
+  },
+  "openIn": "Ανοίξτε μέσα",
+  "@openIn": {
+    "description": "openIn"
+  },
+  "operationFailed": "Αποτυχία λειτουργίας",
+  "@operationFailed": {
+    "description": "operationFailed"
+  },
+  "password": "Κωδικός πρόσβασης",
+  "@password": {
+    "description": "password"
+  },
+  "password_text": "Σύνθημα",
+  "@password_text": {
+    "description": "Contraseña texto traducido"
+  },
+  "permissionDenied": "Η άδεια απορρίφθηκε",
+  "@permissionDenied": {
+    "description": "permissionDenied"
+  },
+  "permissionsAllow": "Επιτρέπω",
+  "@permissionsAllow": {
+    "description": "permissionsAllow"
+  },
+  "permissionsConsentDescription": "Η Estrella Music χρειάζεται αυτές τις άδειες για να διαχειριστεί τη μουσική σας και να προσφέρει όλες τις δυνατότητες αναπαραγωγής.",
+  "@permissionsConsentDescription": {
+    "description": "permissionsConsentDescription"
+  },
+  "permissionsConsentTitle": "Άδειες για να ξεκινήσετε",
+  "@permissionsConsentTitle": {
+    "description": "permissionsConsentTitle"
+  },
+  "permissionsContinueButton": "Εκχώρηση απαιτούμενων αδειών",
+  "@permissionsContinueButton": {
+    "description": "permissionsContinueButton"
+  },
+  "permissionsMicrophoneDescription": "Χρησιμοποιείται μόνο όταν επιλέγετε να προσδιορίσετε ένα τραγούδι που παίζει γύρω σας.",
+  "@permissionsMicrophoneDescription": {
+    "description": "permissionsMicrophoneDescription"
+  },
+  "permissionsMicrophoneTitle": "Μικρόφωνο",
+  "@permissionsMicrophoneTitle": {
+    "description": "permissionsMicrophoneTitle"
+  },
+  "permissionsNotificationsDescription": "Εμφανίζει στοιχεία ελέγχου αναπαραγωγής, πρόοδο λήψης και σημαντικές ειδοποιήσεις εφαρμογών.",
+  "@permissionsNotificationsDescription": {
+    "description": "permissionsNotificationsDescription"
+  },
+  "permissionsNotificationsTitle": "Ειδοποιήσεις",
+  "@permissionsNotificationsTitle": {
+    "description": "permissionsNotificationsTitle"
+  },
+  "permissionsOpenSettings": "Ρυθμίσεις",
+  "@permissionsOpenSettings": {
+    "description": "permissionsOpenSettings"
+  },
+  "permissionsRequiredNotice": "Απαιτούνται και οι τρεις άδειες για να συνεχιστεί. Μπορείτε να τα αλλάξετε αργότερα στις ρυθμίσεις συστήματος.",
+  "@permissionsRequiredNotice": {
+    "description": "permissionsRequiredNotice"
+  },
+  "permissionsStorageDescription": "Σας επιτρέπει να αναπαράγετε μουσική, να αποθηκεύετε λήψεις, να εξάγετε λίστες αναπαραγωγής και να προετοιμάζετε ενημερώσεις.",
+  "@permissionsStorageDescription": {
+    "description": "permissionsStorageDescription"
+  },
+  "permissionsStorageTitle": "Μουσική και αποθήκευση",
+  "@permissionsStorageTitle": {
+    "description": "permissionsStorageTitle"
+  },
+  "personalisation": "Εξατομίκευση",
+  "@personalisation": {
+    "description": "personalisation"
+  },
+  "pipedPlaylistDescription": "Λίστα αναπαραγωγής με σωλήνες",
+  "@pipedPlaylistDescription": {
+    "description": "pipedPlaylistDescription"
+  },
+  "pipedplstSyncAlert": "Συγχρονίστηκε το playlist με σωλήνες!",
+  "@pipedplstSyncAlert": {
+    "description": "pipedplstSyncAlert"
+  },
+  "plain": "απλό",
+  "@plain": {
+    "description": "plain"
+  },
+  "play": "Παίξτε",
+  "@play": {
+    "description": "play"
+  },
+  "playNext": "Παίξτε το επόμενο",
+  "@playNext": {
+    "description": "playNext"
+  },
+  "playNow": "Παίξτε Τώρα",
+  "@playNow": {
+    "description": "playNow"
+  },
+  "playbackSpeed": "Ταχύτητα αναπαραγωγής",
+  "@playbackSpeed": {
+    "description": "playbackSpeed"
+  },
+  "playerUi": "UI προγράμματος αναπαραγωγής",
+  "@playerUi": {
+    "description": "playerUi"
+  },
+  "playerUiDes": "Επιλέξτε τη διεπαφή χρήστη του προγράμματος αναπαραγωγής",
+  "@playerUiDes": {
+    "description": "playerUiDes"
+  },
+  "playingRecognizedTrack": "Παιχνίδι:",
+  "@playingRecognizedTrack": {
+    "description": "playingRecognizedTrack"
+  },
+  "playingfromAlbum": "ΠΑΙΖΕΙ ΑΠΟ ΑΛΜΠΟΥΜ",
+  "@playingfromAlbum": {
+    "description": "playingfromAlbum"
+  },
+  "playingfromArtist": "ΠΑΙΖΕΙ ΑΠΟ ΚΑΛΛΙΤΕΧΝΗ",
+  "@playingfromArtist": {
+    "description": "playingfromArtist"
+  },
+  "playingfromPlaylist": "ΠΑΙΖΟΝΤΑΣ ΑΠΟ ΤΟ PLAYLIST",
+  "@playingfromPlaylist": {
+    "description": "playingfromPlaylist"
+  },
+  "playingfromSelection": "ΠΑΙΖΟΝΤΑΣ ΑΠΟ ΕΠΙΛΟΓΗ",
+  "@playingfromSelection": {
+    "description": "playingfromSelection"
+  },
+  "playlist": "Λίστα αναπαραγωγής",
+  "@playlist": {
+    "description": "playlist"
+  },
+  "playlistBlacklistAlert": "Στη μαύρη λίστα αναπαραγωγής!",
+  "@playlistBlacklistAlert": {
+    "description": "playlistBlacklistAlert"
+  },
+  "playlistBookmarkAddAlert": "Η λίστα αναπαραγωγής προστέθηκε στους σελιδοδείκτες!",
+  "@playlistBookmarkAddAlert": {
+    "description": "playlistBookmarkAddAlert"
+  },
+  "playlistBookmarkRemoveAlert": "Ο σελιδοδείκτης λίστας αναπαραγωγής καταργήθηκε!",
+  "@playlistBookmarkRemoveAlert": {
+    "description": "playlistBookmarkRemoveAlert"
+  },
+  "playlistCollaboratorsTitle": "Συνεισφέροντες playlist",
+  "@playlistCollaboratorsTitle": {
+    "description": "playlistCollaboratorsTitle"
+  },
+  "playlistCreatedAlert": "Η λίστα αναπαραγωγής δημιουργήθηκε!",
+  "@playlistCreatedAlert": {
+    "description": "playlistCreatedAlert"
+  },
+  "playlistCreatednsongAddedAlert": "Δημιουργήθηκε η λίστα αναπαραγωγής και προστέθηκε τραγούδι!",
+  "@playlistCreatednsongAddedAlert": {
+    "description": "playlistCreatednsongAddedAlert"
+  },
+  "playlistExportedMsg": "Η λίστα αναπαραγωγής έγινε με επιτυχία",
+  "@playlistExportedMsg": {
+    "description": "playlistExportedMsg"
+  },
+  "playlistImportedMsg": "Η λίστα αναπαραγωγής εισήχθη με επιτυχία",
+  "@playlistImportedMsg": {
+    "description": "playlistImportedMsg"
+  },
+  "playlistRemovedAlert": "Η λίστα αναπαραγωγής διαγράφηκε!",
+  "@playlistRemovedAlert": {
+    "description": "playlistRemovedAlert"
+  },
+  "playlistRenameAlert": "Με επιτυχία μετονομάστηκε!",
+  "@playlistRenameAlert": {
+    "description": "playlistRenameAlert"
+  },
+  "playlists": "Λίστες αναπαραγωγής",
+  "@playlists": {
+    "description": "playlists"
+  },
+  "playnextMsg": "Προσεχώς",
+  "@playnextMsg": {
+    "description": "playnextMsg"
+  },
+  "podcasts": "Podcast",
+  "@podcasts": {
+    "description": "podcasts"
+  },
+  "popularTracks": "Δημοφιλή κομμάτια",
+  "@popularTracks": {
+    "description": "popularTracks"
+  },
+  "processFiles": "Επεξεργασία αρχείων...",
+  "@processFiles": {
+    "description": "processFiles"
+  },
+  "processingAudio": "Επεξεργασία του ήχου...",
+  "@processingAudio": {
+    "description": "processingAudio"
+  },
+  "profiles": "Προφίλ",
+  "@profiles": {
+    "description": "profiles"
+  },
+  "queueLoop": "βρόχος ουράς",
+  "@queueLoop": {
+    "description": "queueLoop"
+  },
+  "queueLoopNotDisMsg1": "Η λειτουργία βρόχου ουράς δεν μπορεί να απενεργοποιηθεί όταν είναι ενεργοποιημένη η λειτουργία τυχαίας αναπαραγωγής.",
+  "@queueLoopNotDisMsg1": {
+    "description": "queueLoopNotDisMsg1"
+  },
+  "queueLoopNotDisMsg2": "Η λειτουργία βρόχου ουράς δεν μπορεί να ενεργοποιηθεί σε λειτουργία ραδιοφώνου.",
+  "@queueLoopNotDisMsg2": {
+    "description": "queueLoopNotDisMsg2"
+  },
+  "queueShufflingDeniedMsg": "Η τυχαία λειτουργία είναι ενεργοποιημένη. Δεν μπορείτε να αναμίξετε την ουρά με μη αυτόματο τρόπο.",
+  "@queueShufflingDeniedMsg": {
+    "description": "queueShufflingDeniedMsg"
+  },
+  "queuerearrangingDeniedMsg": "Δεν είναι δυνατή η αναδιάταξη της ουράς όταν η λειτουργία τυχαίας αναπαραγωγής είναι ενεργοποιημένη",
+  "@queuerearrangingDeniedMsg": {
+    "description": "queuerearrangingDeniedMsg"
   },
   "quickPics": "Γρήγορη επιλογή",
   "@quickPics": {
     "description": "quickPics"
   },
+  "quickpicks": "Γρήγορες επιλογές",
+  "@quickpicks": {
+    "description": "quickpicks"
+  },
+  "radioNotAvailable": "Το ραδιόφωνο δεν είναι διαθέσιμο για αυτόν τον καλλιτέχνη!",
+  "@radioNotAvailable": {
+    "description": "radioNotAvailable"
+  },
+  "randomRadio": "Τυχαίο Ραδιόφωνο",
+  "@randomRadio": {
+    "description": "randomRadio"
+  },
+  "randomSelection": "Τυχαία επιλογή",
+  "@randomSelection": {
+    "description": "randomSelection"
+  },
+  "reArrangePlaylist": "Αναδιάταξη λίστας αναπαραγωγής",
+  "@reArrangePlaylist": {
+    "description": "reArrangePlaylist"
+  },
+  "reArrangeSongs": "Αναδιάταξη τραγουδιών",
+  "@reArrangeSongs": {
+    "description": "reArrangeSongs"
+  },
+  "readMore": "Διαβάστε περισσότερα",
+  "@readMore": {
+    "description": "readMore"
+  },
+  "recentSearches": "Πρόσφατες αναζητήσεις",
+  "@recentSearches": {
+    "description": "recentSearches"
+  },
+  "recentlyPlayed": "Παίχτηκε πρόσφατα",
+  "@recentlyPlayed": {
+    "description": "recentlyPlayed"
+  },
+  "recommend_cloud": "Συνιστούμε να ενεργοποιήσετε τη λειτουργία Cloud για μια εμπειρία παρόμοια με το Spotify: συγχρονισμός σε πραγματικό χρόνο μεταξύ όλων των συσκευών σας και αυτόματη δημιουργία αντιγράφων ασφαλείας χωρίς να χρειάζεται να κάνετε τίποτα.",
+  "@recommend_cloud": {
+    "description": "recommend_cloud"
+  },
+  "recommendedAlbums": "Συνιστάται",
+  "@recommendedAlbums": {
+    "description": "recommendedAlbums"
+  },
+  "recommendedArtists": "Συνιστάται",
+  "@recommendedArtists": {
+    "description": "recommendedArtists"
+  },
+  "removeFromCache": "Αφαίρεση από την προσωρινή μνήμη",
+  "@removeFromCache": {
+    "description": "removeFromCache"
+  },
+  "removeFromLib": "Κατάργηση τραγουδιών από τη βιβλιοθήκη",
+  "@removeFromLib": {
+    "description": "removeFromLib"
+  },
+  "removeFromLibrary": "Διαγραφή από τη βιβλιοθήκη",
+  "@removeFromLibrary": {
+    "description": "removeFromLibrary"
+  },
+  "removeFromPlaylist": "Κατάργηση από τη λίστα αναπαραγωγής",
+  "@removeFromPlaylist": {
+    "description": "removeFromPlaylist"
+  },
+  "removeFromQueue": "Αφαίρεση από την ουρά",
+  "@removeFromQueue": {
+    "description": "removeFromQueue"
+  },
+  "removeMultiple": "Διαγραφή πολλών τραγουδιών",
+  "@removeMultiple": {
+    "description": "removeMultiple"
+  },
+  "removePlaylist": "Διαγραφή λίστας αναπαραγωγής",
+  "@removePlaylist": {
+    "description": "removePlaylist"
+  },
+  "rename": "Μετονομασία",
+  "@rename": {
+    "description": "rename"
+  },
+  "renamePlaylist": "Μετονομασία λίστας αναπαραγωγής",
+  "@renamePlaylist": {
+    "description": "renamePlaylist"
+  },
+  "reproducedBy": "Αναπαράγεται από",
+  "@reproducedBy": {
+    "description": "reproducedBy"
+  },
+  "reset": "Επαναφορά",
+  "@reset": {
+    "description": "reset"
+  },
+  "resetToDefault": "Επαναφορά προεπιλεγμένων ρυθμίσεων",
+  "@resetToDefault": {
+    "description": "resetToDefault"
+  },
+  "resetToDefaultDes": "Επαναφορά των ρυθμίσεων της εφαρμογής στις προεπιλογές (Απαιτείται επανεκκίνηση)",
+  "@resetToDefaultDes": {
+    "description": "resetToDefaultDes"
+  },
+  "resetToDefaultMsg": "Η επαναφορά των ρυθμίσεων στις προεπιλογές ολοκληρώθηκε, επανεκκινήστε την εφαρμογή",
+  "@resetToDefaultMsg": {
+    "description": "resetToDefaultMsg"
+  },
+  "resetblacklistedplaylist": "Επαναφορά λιστών αναπαραγωγής στη μαύρη λίστα",
+  "@resetblacklistedplaylist": {
+    "description": "resetblacklistedplaylist"
+  },
+  "resetblacklistedplaylistDes": "Επαναφέρετε όλες τις λίστες αναπαραγωγής Piped που περιλαμβάνονται στη μαύρη λίστα",
+  "@resetblacklistedplaylistDes": {
+    "description": "resetblacklistedplaylistDes"
+  },
+  "restartApp": "Επανεκκινήστε την εφαρμογή",
+  "@restartApp": {
+    "description": "restartApp"
+  },
+  "restore": "Επαναφορά",
+  "@restore": {
+    "description": "restore"
+  },
+  "restoreAppData": "Επαναφορά δεδομένων εφαρμογής",
+  "@restoreAppData": {
+    "description": "restoreAppData"
+  },
+  "restoreLastPlaybackSession": "Επαναφέρετε την τελευταία περίοδο λειτουργίας αναπαραγωγής",
+  "@restoreLastPlaybackSession": {
+    "description": "restoreLastPlaybackSession"
+  },
+  "restoreLastPlaybackSessionDes": "Αυτόματη επαναφορά της τελευταίας περιόδου λειτουργίας αναπαραγωγής κατά την εκκίνηση της εφαρμογής",
+  "@restoreLastPlaybackSessionDes": {
+    "description": "restoreLastPlaybackSessionDes"
+  },
+  "restoreMsg": "Αποκαταστάθηκε με επιτυχία!\nΟι αλλαγές εφαρμόζονται κατά την επανεκκίνηση",
+  "@restoreMsg": {
+    "description": "restoreMsg"
+  },
+  "restoreSettingsAndPlaylists": "Επαναφορά ρυθμίσεων και λιστών αναπαραγωγής",
+  "@restoreSettingsAndPlaylists": {
+    "description": "restoreSettingsAndPlaylists"
+  },
+  "restoreSettingsAndPlaylistsDes": "Επαναφέρει όλες τις ρυθμίσεις, τα δεδομένα σύνδεσης και τις λίστες αναπαραγωγής από ένα αρχείο αντιγράφου ασφαλείας. Αντικαθιστά όλα τα τρέχοντα δεδομένα",
+  "@restoreSettingsAndPlaylistsDes": {
+    "description": "restoreSettingsAndPlaylistsDes"
+  },
+  "restore_select_file_dialog": "Επιλέξτε το αρχείο αντιγράφου ασφαλείας",
+  "@restore_select_file_dialog": {
+    "description": "restore_select_file_dialog"
+  },
+  "restoring": "Επαναφορά...",
+  "@restoring": {
+    "description": "restoring"
+  },
+  "results": "Αποτελέσματα",
+  "@results": {
+    "description": "results"
+  },
+  "retry": "Δοκιμάστε ξανά!",
+  "@retry": {
+    "description": "retry"
+  },
+  "save": "Διατήρηση",
+  "@save": {
+    "description": "save"
+  },
+  "savedAlbums": "Αποθηκεύτηκε",
+  "@savedAlbums": {
+    "description": "savedAlbums"
+  },
+  "scanning": "Σάρωση...",
+  "@scanning": {
+    "description": "scanning"
+  },
+  "search": "Αναζήτηση",
+  "@search": {
+    "description": "search"
+  },
+  "searchDes": "Τραγούδια, λίστες αναπαραγωγής, άλμπουμ ή καλλιτέχνες",
+  "@searchDes": {
+    "description": "searchDes"
+  },
+  "searchInLibrary": "Αναζήτηση στη Βιβλιοθήκη",
+  "@searchInLibrary": {
+    "description": "searchInLibrary"
+  },
+  "searchRes": "Αποτελέσματα αναζήτησης",
+  "@searchRes": {
+    "description": "searchRes"
+  },
+  "search_recent_title": "Πρόσφατες αναζητήσεις",
+  "@search_recent_title": {
+    "description": "search_recent_title"
+  },
+  "selectAll": "Επιλέξτε όλα",
+  "@selectAll": {
+    "description": "selectAll"
+  },
+  "selectAuthIns": "Επιλέξτε την περίπτωση ελέγχου ταυτότητας",
+  "@selectAuthIns": {
+    "description": "selectAuthIns"
+  },
+  "selectAuthInsMsg": "Επιλέξτε την περίπτωση ελέγχου ταυτότητας!",
+  "@selectAuthInsMsg": {
+    "description": "selectAuthInsMsg"
+  },
+  "selectFile": "Επιλέξτε Αρχείο",
+  "@selectFile": {
+    "description": "selectFile"
+  },
+  "selectSongs": "Επιλέξτε τραγούδια",
+  "@selectSongs": {
+    "description": "selectSongs"
+  },
+  "selectedFileNotFound": "Το επιλεγμένο αρχείο δεν βρέθηκε.",
+  "@selectedFileNotFound": {
+    "description": "selectedFileNotFound"
+  },
+  "sessionExpiredLoginAgain": "Η συνεδρία σας έχει λήξει. Συνδεθείτε ξανά.",
+  "@sessionExpiredLoginAgain": {
+    "description": "sessionExpiredLoginAgain"
+  },
+  "setDiscoverContent": "Ορισμός περιεχομένου ανακάλυψης",
+  "@setDiscoverContent": {
+    "description": "setDiscoverContent"
+  },
+  "settings": "Ρυθμίσεις",
+  "@settings": {
+    "description": "settings"
+  },
+  "settings_about_desc": "Σχετικά με την Estrella Music",
+  "@settings_about_desc": {
+    "description": "settings_about_desc"
+  },
+  "settings_about_sub": "Έκδοση, έργο ανοιχτού κώδικα και GitHub.",
+  "@settings_about_sub": {
+    "description": "settings_about_sub"
+  },
+  "settings_account_desc": "Λογαριασμός και Συγχρονισμός",
+  "@settings_account_desc": {
+    "description": "settings_account_desc"
+  },
+  "settings_account_sub": "Λειτουργία cloud, αντίγραφα ασφαλείας, λίστα φίλων και μετεγκαταστάσεις.",
+  "@settings_account_sub": {
+    "description": "settings_account_sub"
+  },
+  "settings_appearance_desc": "Θέμα, γλώσσα και κινούμενα σχέδια διεπαφής.",
+  "@settings_appearance_desc": {
+    "description": "settings_appearance_desc"
+  },
+  "settings_cloud_backup": "Δημιουργία αντιγράφων ασφαλείας στο cloud",
+  "@settings_cloud_backup": {
+    "description": "settings_cloud_backup"
+  },
+  "settings_cloud_backup_desc": "Μεταφόρτωση, επαναφορά και διαχείριση...",
+  "@settings_cloud_backup_desc": {
+    "description": "settings_cloud_backup_desc"
+  },
+  "settings_cloud_backup_dialog_desc": "Ανεβάστε ένα αντίγραφο ασφαλείας .hmb της εφαρμογής στον διακομιστή και, εάν χρειάζεται, επαναφέρετε οποιοδήποτε από τα αποθηκευμένα αντίγραφα ασφαλείας.",
+  "@settings_cloud_backup_dialog_desc": {
+    "description": "settings_cloud_backup_dialog_desc"
+  },
+  "settings_content_desc": "Ανακαλύψτε φίλτρα, ενσωμάτωση με Piped και κρυφές μνήμες.",
+  "@settings_content_desc": {
+    "description": "settings_content_desc"
+  },
+  "settings_downloads_desc": "Λήψεις και αποθήκευση",
+  "@settings_downloads_desc": {
+    "description": "settings_downloads_desc"
+  },
+  "settings_downloads_sub": "Μορφές ήχου, φάκελοι και αυτόματες λήψεις.",
+  "@settings_downloads_sub": {
+    "description": "settings_downloads_sub"
+  },
+  "settings_general_section": "Γενικός",
+  "@settings_general_section": {
+    "description": "settings_general_section"
+  },
+  "settings_local_cloud_desc": "Επιλέξτε, μετεγκαταστήστε ή ελέγξτε την κατάσταση συγχρονισμού με τον Joss Red.",
+  "@settings_local_cloud_desc": {
+    "description": "settings_local_cloud_desc"
+  },
+  "settings_local_cloud_title": "Τοπική λειτουργία / EMusic Cloud",
+  "@settings_local_cloud_title": {
+    "description": "settings_local_cloud_title"
+  },
+  "settings_logout": "Αποσυνδεθείτε",
+  "@settings_logout": {
+    "description": "settings_logout"
+  },
+  "settings_migration_desc": "Εισαγωγή λιστών αναπαραγωγής, τραγουδιών...",
+  "@settings_migration_desc": {
+    "description": "settings_migration_desc"
+  },
+  "settings_migration_title": "Μετανάστευση από την Joss Music Kotlin",
+  "@settings_migration_title": {
+    "description": "settings_migration_title"
+  },
+  "settings_my_friends": "φίλοι μου",
+  "@settings_my_friends": {
+    "description": "settings_my_friends"
+  },
+  "settings_my_friends_desc": "Διαχειριστείτε απευθείας τους φίλους σας Joss Red.",
+  "@settings_my_friends_desc": {
+    "description": "settings_my_friends_desc"
+  },
+  "settings_playback_desc": "Ποιότητα ροής, κανονικοποίηση, σιωπές και μπαταρία.",
+  "@settings_playback_desc": {
+    "description": "settings_playback_desc"
+  },
+  "settings_refresh_visitor_desc": "Ανανεώστε το Online Music ID σας εάν δεν φορτωθεί το περιεχόμενο του Discover.",
+  "@settings_refresh_visitor_desc": {
+    "description": "settings_refresh_visitor_desc"
+  },
+  "settings_refresh_visitor_title": "Αναγνωριστικό ανανέωσης (αναγνωριστικό επισκέπτη)",
+  "@settings_refresh_visitor_title": {
+    "description": "settings_refresh_visitor_title"
+  },
+  "settings_visitor_error": "Λάθος",
+  "@settings_visitor_error": {
+    "description": "settings_visitor_error"
+  },
+  "settings_visitor_error_desc": "Δεν ήταν δυνατή η δημιουργία νέου αναγνωριστικού. Δοκιμάστε ξανά αργότερα.",
+  "@settings_visitor_error_desc": {
+    "description": "settings_visitor_error_desc"
+  },
+  "settings_visitor_exception": "Παρουσιάστηκε σφάλμα κατά την αναγέννηση: {error}",
+  "@settings_visitor_exception": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    },
+    "description": "settings_visitor_exception"
+  },
+  "settings_visitor_updated": "Ενημερώθηκε το αναγνωριστικό",
+  "@settings_visitor_updated": {
+    "description": "settings_visitor_updated"
+  },
+  "settings_visitor_updated_desc": "Ένα νέο αναγνωριστικό επισκέπτη δημιουργήθηκε με επιτυχία.",
+  "@settings_visitor_updated_desc": {
+    "description": "settings_visitor_updated_desc"
+  },
+  "shareAlbum": "Κοινή χρήση λευκώματος",
+  "@shareAlbum": {
+    "description": "shareAlbum"
+  },
+  "sharePlaylist": "Κοινή χρήση λίστας αναπαραγωγής",
+  "@sharePlaylist": {
+    "description": "sharePlaylist"
+  },
+  "shareSong": "Μοιραστείτε αυτό το τραγούδι",
+  "@shareSong": {
+    "description": "shareSong"
+  },
+  "shazamSearching": "Αναζήτηση στη βάση δεδομένων Shazam για αγώνες...",
+  "@shazamSearching": {
+    "description": "shazamSearching"
+  },
+  "shuffle": "Τυχαίο",
+  "@shuffle": {
+    "description": "shuffle"
+  },
+  "shuffleQueue": "ανακατέψτε την ουρά",
+  "@shuffleQueue": {
+    "description": "shuffleQueue"
+  },
+  "similarToTitle": "Παρόμοιο με {title}",
+  "@similarToTitle": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    },
+    "description": "similarToTitle"
+  },
+  "singles": "Απλό",
+  "@singles": {
+    "description": "singles"
+  },
+  "skipSilence": "Παράλειψη σιωπής",
+  "@skipSilence": {
+    "description": "skipSilence"
+  },
+  "skipSilenceDes": "Η σιωπή θα παραλειφθεί κατά την αναπαραγωγή μουσικής",
+  "@skipSilenceDes": {
+    "description": "skipSilenceDes"
+  },
+  "sleepTimeSetAlert": "Ο χρονοδιακόπτης ύπνου έχει ρυθμιστεί",
+  "@sleepTimeSetAlert": {
+    "description": "sleepTimeSetAlert"
+  },
+  "sleepTimer": "Χρονοδιακόπτης ύπνου",
+  "@sleepTimer": {
+    "description": "sleepTimer"
+  },
+  "slide_indicator": "Βήμα {current} από 3",
+  "@slide_indicator": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      }
+    },
+    "description": "slide_indicator"
+  },
+  "songAddedToPlaylistAlert": "Το τραγούδι προστέθηκε στη λίστα αναπαραγωγής!",
+  "@songAddedToPlaylistAlert": {
+    "description": "songAddedToPlaylistAlert"
+  },
+  "songAlreadyExists": "Το τραγούδι υπάρχει ήδη!",
+  "@songAlreadyExists": {
+    "description": "songAlreadyExists"
+  },
+  "songAlreadyOfflineAlert": "Το τραγούδι βρίσκεται ήδη στην κρυφή μνήμη",
+  "@songAlreadyOfflineAlert": {
+    "description": "songAlreadyOfflineAlert"
+  },
+  "songEnqueueAlert": "Το τραγούδι προστέθηκε στην ουρά!",
+  "@songEnqueueAlert": {
+    "description": "songEnqueueAlert"
+  },
+  "songFound": "Το τραγούδι βρέθηκε!",
+  "@songFound": {
+    "description": "songFound"
+  },
+  "songInfo": "Πληροφορίες τραγουδιού",
+  "@songInfo": {
+    "description": "songInfo"
+  },
+  "songNotPlayable": "Το τραγούδι δεν μπορεί να αναπαραχθεί λόγω περιορισμών διακομιστή!",
+  "@songNotPlayable": {
+    "description": "songNotPlayable"
+  },
+  "songPitch": "τόνο τραγουδιού",
+  "@songPitch": {
+    "description": "songPitch"
+  },
+  "songRemovedAlert": "αφαιρέθηκε από",
+  "@songRemovedAlert": {
+    "description": "songRemovedAlert"
+  },
+  "songRemovedfromQueue": "Αφαιρέθηκε από την ουρά!",
+  "@songRemovedfromQueue": {
+    "description": "songRemovedfromQueue"
+  },
+  "songRemovedfromQueueCurrSong": "Δεν μπορείτε να διαγράψετε το τραγούδι που αναπαράγεται αυτήν τη στιγμή",
+  "@songRemovedfromQueueCurrSong": {
+    "description": "songRemovedfromQueueCurrSong"
+  },
+  "songs": "Τραγούδια",
+  "@songs": {
+    "description": "songs"
+  },
+  "songsImportedFromJossMusic": "Τραγούδια που εισάγονται από την Joss Music Kotlin",
+  "@songsImportedFromJossMusic": {
+    "description": "songsImportedFromJossMusic"
+  },
+  "sortAscendNDescend": "Ταξινόμηση αύξουσα/φθίνουσα",
+  "@sortAscendNDescend": {
+    "description": "sortAscendNDescend"
+  },
+  "sortByDate": "Ταξινόμηση κατά ημερομηνία",
+  "@sortByDate": {
+    "description": "sortByDate"
+  },
+  "sortByDuration": "Ταξινόμηση κατά διάρκεια",
+  "@sortByDuration": {
+    "description": "sortByDuration"
+  },
+  "sortByName": "Ταξινόμηση κατά όνομα",
+  "@sortByName": {
+    "description": "sortByName"
+  },
+  "speedAndPitch": "Ταχύτητα και Βήμα",
+  "@speedAndPitch": {
+    "description": "speedAndPitch"
+  },
+  "standard": "Τυπικό",
+  "@standard": {
+    "description": "standard"
+  },
+  "startRadio": "Έναρξη ραδιοφώνου",
+  "@startRadio": {
+    "description": "startRadio"
+  },
+  "startupScreen": "Άνοιγμα κατά την εκκίνηση",
+  "@startupScreen": {
+    "description": "startupScreen"
+  },
+  "startupScreenDescription": "Επιλέξτε την ενότητα που ανοίγει πρώτα το Estrella Music",
+  "@startupScreenDescription": {
+    "description": "startupScreenDescription"
+  },
+  "status": "Κατάσταση",
+  "@status": {
+    "description": "status"
+  },
+  "stopMusicOnTaskClear": "Σταματήστε τη μουσική όταν κλείνετε την εφαρμογή",
+  "@stopMusicOnTaskClear": {
+    "description": "stopMusicOnTaskClear"
+  },
+  "stopMusicOnTaskClearDes": "Η αναπαραγωγή μουσικής θα σταματήσει όταν η εφαρμογή κλείσει από τη διαχείριση εργασιών",
+  "@stopMusicOnTaskClearDes": {
+    "description": "stopMusicOnTaskClearDes"
+  },
+  "streamingQuality": "Ποιότητα ροής",
+  "@streamingQuality": {
+    "description": "streamingQuality"
+  },
+  "streamingQualityDes": "Ποιότητα ροής μουσικής",
+  "@streamingQualityDes": {
+    "description": "streamingQualityDes"
+  },
+  "subscribers": "συνδρομητές",
+  "@subscribers": {
+    "description": "subscribers"
+  },
+  "swipe_prompt": "Σύρετε για να εξερευνήσετε τις επιλογές ➔",
+  "@swipe_prompt": {
+    "description": "swipe_prompt"
+  },
+  "syncChangesConfirmed": "{count} πραγματοποιήθηκαν αλλαγές.",
+  "@syncChangesConfirmed": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    },
+    "description": "syncChangesConfirmed"
+  },
+  "syncChangesSynced": "{count} συγχρονισμένες αλλαγές.",
+  "@syncChangesSynced": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    },
+    "description": "syncChangesSynced"
+  },
+  "syncCloudDownloadingExisting": "Η λειτουργία cloud ενεργοποιήθηκε. Λήψη της υπάρχουσας βιβλιοθήκης.",
+  "@syncCloudDownloadingExisting": {
+    "description": "syncCloudDownloadingExisting"
+  },
+  "syncCloudMigrationComplete": "Η λειτουργία cloud ενεργοποιήθηκε. Βιβλιοθήκη μετεγκατάστασης.",
+  "@syncCloudMigrationComplete": {
+    "description": "syncCloudMigrationComplete"
+  },
+  "syncCloudModeActive": "Η λειτουργία cloud είναι ενεργή",
+  "@syncCloudModeActive": {
+    "description": "syncCloudModeActive"
+  },
+  "syncCloudPending": "Η λειτουργία cloud είναι ενεργή. Εκκρεμεί συγχρονισμός.",
+  "@syncCloudPending": {
+    "description": "syncCloudPending"
+  },
+  "syncDownloadFailed": "Αποτυχία λήψης συγχρονισμού.",
+  "@syncDownloadFailed": {
+    "description": "syncDownloadFailed"
+  },
+  "syncDownloading": "Λήψη αλλαγών EMusic...",
+  "@syncDownloading": {
+    "description": "syncDownloading"
+  },
+  "syncForceReplaceBackupSaved": "Ανάκτηση αντιγράφων ασφαλείας: {path}",
+  "@syncForceReplaceBackupSaved": {
+    "placeholders": {
+      "path": {}
+    }
+  },
+  "syncForceReplaceConfirmAction": "Reemplazar y subir",
+  "@syncForceReplaceConfirmAction": {},
+  "syncForceReplaceConfirmBody": "Primero se creará un respaldo de recuperación. Después, las playlists, favoritos, historical, álbumes, artistas y ajustes musicales de EMusic Cloud se reemplazarán con los datos actuales de este dispositivo. No se puede deshacer desde el servidor.",
+  "@syncForceReplaceConfirmBody": {},
+  "syncForceReplaceConfirmTitle": "¿Reemplazar la biblioteca musical remota?",
+  "@syncForceReplaceConfirmTitle": {},
+  "syncForceReplaceCountMismatch": "Οι ανεβασμένες μετρήσεις δεν ταιριάζουν με την τοπική βιβλιοθήκη. Η απομακρυσμένη αντικατάσταση δεν μπορεί να επιβεβαιωθεί.",
+  "@syncForceReplaceCountMismatch": {},
+  "syncForceReplaceCreatingBackup": "Δημιουργία ενός αντιγράφου ασφαλείας αποκατάστασης πριν την αντικατάσταση δεδομένων cloud...",
+  "@syncForceReplaceCreatingBackup": {},
+  "syncForceReplaceDescription": "Pausa la sincronización pendiente y reemplaza a la fuerza tu biblioteca musical remota con los datos actuales de este dispositivo. Las descargas-monecen locales.",
+  "@syncForceReplaceDescription": {},
+  "syncForceReplaceFailed": "Το EMusic Cloud δεν μπόρεσε να αντικαταστήσει την απομακρυσμένη βιβλιοθήκη.",
+  "@syncForceReplaceFailed": {},
+  "syncForceReplaceFailedLocalPreserved": "Ο απομακρυσμένος αντικαταστάτης απέτυχε. Τα τοπικά δεδομένα και οι ενισχύσεις αποκατάστασης διατηρήθηκαν.",
+  "@syncForceReplaceFailedLocalPreserved": {},
+  "syncForceReplaceFailedTitle": "Η αποστολή δεν ολοκληρώθηκε",
+  "@syncForceReplaceFailedTitle": {},
+  "syncForceReplaceInProgress": "Παύση συγχρονισμού, δημιουργία αντιγράφων ασφαλείας και αποστολή της τοπικής βιβλιοθήκης...",
+  "@syncForceReplaceInProgress": {},
+  "syncForceReplacePauseFailed": "Ο τρέχων συγχρονισμός δεν μπορούσε να διακοπεί με ασφάλεια. Προσπάθησε ξανά σε ένα λεπτό.",
+  "@syncForceReplacePauseFailed": {},
+  "syncForceReplaceSuccess": "Η απομακρυσμένη μουσική βιβλιοθήκη αντικαταστάθηκε με τα τρέχοντα δεδομένα αυτής της συσκευής.",
+  "@syncForceReplaceSuccess": {},
+  "syncForceReplaceSuccessTitle": "Η αποστολή ολοκληρώθηκε",
+  "@syncForceReplaceSuccessTitle": {},
+  "syncForceReplaceTitle": "Βάση esta Cancelar sincronización y subir",
+  "@syncForceReplaceTitle": {},
+  "syncForceReplaceValidating": "Επικύρωση της αναρτημένης βιβλιοθήκης πριν την αντικατάσταση δεδομένων cloud...",
+  "@syncForceReplaceValidating": {},
+  "syncLibrarySynced": "Συγχρονισμένη βιβλιοθήκη.",
+  "@syncLibrarySynced": {
+    "description": "syncLibrarySynced"
+  },
+  "syncLibraryUpToDate": "Βιβλιοθήκη ενημερωμένη.",
+  "@syncLibraryUpToDate": {
+    "description": "syncLibraryUpToDate"
+  },
+  "syncLocalChangesFirst": "Υπάρχουν νέες τοπικές αλλαγές. Θα μεταφορτωθούν πριν από τη λήψη.",
+  "@syncLocalChangesFirst": {
+    "description": "syncLocalChangesFirst"
+  },
+  "syncLocalDeviceOnly": "Τα δεδομένα σας διατηρούνται μόνο σε αυτήν τη συσκευή.",
+  "@syncLocalDeviceOnly": {
+    "description": "syncLocalDeviceOnly"
+  },
+  "syncLocalModeActive": "Η τοπική λειτουργία είναι ενεργή",
+  "@syncLocalModeActive": {
+    "description": "syncLocalModeActive"
+  },
+  "syncOfflinePending": "Εκτός σύνδεσης. Εκκρεμούν αλλαγές.",
+  "@syncOfflinePending": {
+    "description": "syncOfflinePending"
+  },
+  "syncOfflineRetry": "Εκτός σύνδεσης. Οι αλλαγές αποθηκεύτηκαν για επανάληψη.",
+  "@syncOfflineRetry": {
+    "description": "syncOfflineRetry"
+  },
+  "syncPlaylistSongs": "Συγχρονισμός τραγουδιών λίστας αναπαραγωγής",
+  "@syncPlaylistSongs": {
+    "description": "syncPlaylistSongs"
+  },
+  "syncUnconfirmedRetry": "Το EMusic δεν επιβεβαίωσε όλες τις αλλαγές. Θα δοκιμαστούν ξανά.",
+  "@syncUnconfirmedRetry": {
+    "description": "syncUnconfirmedRetry"
+  },
+  "syncUploadRetry": "Δεν μπορούσα να σηκωθώ. Θα δοκιμαστεί ξανά αργότερα.",
+  "@syncUploadRetry": {
+    "description": "syncUploadRetry"
+  },
+  "syncUploadSuccess": "Οι αλλαγές ανέβηκαν σωστά.",
+  "@syncUploadSuccess": {
+    "description": "syncUploadSuccess"
+  },
+  "syncUploadSuccessWs": "Οι αλλαγές μεταφορτώθηκαν με επιτυχία (WS).",
+  "@syncUploadSuccessWs": {
+    "description": "syncUploadSuccessWs"
+  },
+  "syncUploadWsRetry": "Δεν ήταν δυνατή η μεταφόρτωση με χρήση WS. Θα δοκιμαστεί ξανά αργότερα.",
+  "@syncUploadWsRetry": {
+    "description": "syncUploadWsRetry"
+  },
+  "syncUploading": "Μεταφόρτωση αλλαγών στο EMusic...",
+  "@syncUploading": {
+    "description": "syncUploading"
+  },
+  "synced": "Συγχρονισμένη",
+  "@synced": {
+    "description": "synced"
+  },
+  "syncedLyricsNotAvailable": "Οι συγχρονισμένοι στίχοι δεν είναι διαθέσιμοι!",
+  "@syncedLyricsNotAvailable": {
+    "description": "syncedLyricsNotAvailable"
+  },
+  "systemDefault": "Προεπιλογή συστήματος",
+  "@systemDefault": {
+    "description": "systemDefault"
+  },
+  "themeMode": "Λειτουργία θέματος",
+  "@themeMode": {
+    "description": "themeMode"
+  },
+  "title": "Τίτλος",
+  "@title": {
+    "description": "title"
+  },
   "topMusicVid": "Κορυφαία μουσικά βίντεο",
   "@topMusicVid": {
     "description": "topMusicVid"
   },
-  "syncForceReplaceTitle": "Βάση esta Cancelar sincronización y subir",
-  "syncForceReplaceConfirmAction": "Reemplazar y subir",
-  "syncForceReplaceDescription": "Pausa la sincronización pendiente y reemplaza a la fuerza tu biblioteca musical remota con los datos actuales de este dispositivo. Las descargas-monecen locales.",
-  "syncForceReplaceConfirmBody": "Primero se creará un respaldo de recuperación. Después, las playlists, favoritos, historical, álbumes, artistas y ajustes musicales de EMusic Cloud se reemplazarán con los datos actuales de este dispositivo. No se puede deshacer desde el servidor.",
-  "syncForceReplaceConfirmTitle": "¿Reemplazar la biblioteca musical remota?"
+  "topmusicvideos": "Τα καλύτερα μουσικά βίντεο",
+  "@topmusicvideos": {
+    "description": "topmusicvideos"
+  },
+  "trending": "Τάσεις",
+  "@trending": {
+    "description": "trending"
+  },
+  "unLink": "Αποσύνδεση",
+  "@unLink": {
+    "description": "unLink"
+  },
+  "unlinkAlert": "Αποσυνδέθηκε με επιτυχία!",
+  "@unlinkAlert": {
+    "description": "unlinkAlert"
+  },
+  "untitledSong": "Τραγούδι χωρίς τίτλο",
+  "@untitledSong": {
+    "description": "untitledSong"
+  },
+  "upNext": "Επόμενο",
+  "@upNext": {
+    "description": "upNext"
+  },
+  "updateApp": "Ενημέρωση εφαρμογής",
+  "@updateApp": {
+    "description": "updateApp"
+  },
+  "urlSearchDes": "Η διεύθυνση URL που εντοπίστηκε κάντε κλικ σε αυτήν για να ανοίξετε/να παίξετε το σχετικό περιεχόμενο",
+  "@urlSearchDes": {
+    "description": "urlSearchDes"
+  },
+  "useThisMetadata": "Χρήση αυτών των μεταδεδομένων",
+  "@useThisMetadata": {
+    "description": "Button for selecting a metadata candidate"
+  },
+  "userBlocked": "Αποκλεισμένος χρήστης",
+  "@userBlocked": {
+    "description": "userBlocked"
+  },
+  "userListMissing": "Η απάντηση δεν περιέχει λίστα χρηστών.",
+  "@userListMissing": {
+    "description": "userListMissing"
+  },
+  "userSearchFailed": "Δεν ήταν δυνατή η αναζήτηση για χρήστες ({statusCode}).",
+  "@userSearchFailed": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    },
+    "description": "userSearchFailed"
+  },
+  "userUnblocked": "Ξεκλείδωτος χρήστης",
+  "@userUnblocked": {
+    "description": "userUnblocked"
+  },
+  "username": "Όνομα χρήστη",
+  "@username": {
+    "description": "username"
+  },
+  "video": "Βίντεο",
+  "@video": {
+    "description": "video"
+  },
+  "videos": "Βίντεο",
+  "@videos": {
+    "description": "videos"
+  },
+  "viewAll": "Δείτε όλα",
+  "@viewAll": {
+    "description": "viewAll"
+  },
+  "viewArtist": "Προβολή Καλλιτέχνη",
+  "@viewArtist": {
+    "description": "viewArtist"
+  },
+  "welcome_intro": "Έχουμε εκσυγχρονίσει την πλατφόρμα μας. Το παλιό σύστημα μη αυτόματης μεταφόρτωσης αντιγράφων ασφαλείας έχει απενεργοποιηθεί. Τώρα έχετε δύο ξεκάθαρους τρόπους διαχείρισης της μουσικής σας βιβλιοθήκης.",
+  "@welcome_intro": {
+    "description": "welcome_intro"
+  },
+  "welcome_subtitle": "Επιλέξτε πώς θέλετε να ζήσετε την εμπειρία της Estrella Music από τώρα και στο εξής.",
+  "@welcome_subtitle": {
+    "description": "welcome_subtitle"
+  },
+  "welcome_title": "Η μουσική σου, ο τρόπος σου",
+  "@welcome_title": {
+    "description": "welcome_title"
+  }
 }

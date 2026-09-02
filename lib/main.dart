@@ -34,6 +34,7 @@ import 'package:estrella_music/music_provider/music_catalog_service.dart';
 import 'package:estrella_music/music_provider/music_provider_manager.dart';
 import 'package:estrella_music/music_provider/providers/emusic_provider.dart';
 import 'package:estrella_music/music_provider/providers/local_music_provider.dart';
+import 'package:estrella_music/music_provider/providers/musicbrainz_metadata_provider.dart';
 import 'package:estrella_music/profiles/app_profile_lifecycle_coordinator.dart';
 import 'package:estrella_music/profiles/profile_manager.dart';
 import 'package:estrella_music/profiles/profile_persistence.dart';
@@ -92,6 +93,7 @@ Future<void> main() async {
     MusicCatalogService(
       providerManager: providerManager,
       profileManager: profileManager,
+      metadataProvider: MusicBrainzMetadataProvider(),
     ),
     permanent: true,
   );

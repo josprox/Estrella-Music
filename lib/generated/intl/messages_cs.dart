@@ -44,7 +44,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m11(count) => "${count} synchronizovaných změn.";
 
-  static String m12(statusCode) => "Nelze vyhledat uživatele (${statusCode}).";
+  static String m12(path) => "Zálohování recovery: ${path}";
+
+  static String m13(statusCode) => "Nelze vyhledat uživatele (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -535,6 +537,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Vyber si počet zobrazených položek na domovské obrazovce. Menší počet = Rychlejší načítání",
     ),
     "id": MessageLookupByLibrary.simpleMessage("ID"),
+    "identifySongMetadata": MessageLookupByLibrary.simpleMessage(
+      "Identifikovat metadata",
+    ),
     "ignoreBatOpt": MessageLookupByLibrary.simpleMessage(
       "Ignorovat optimalizaci baterie",
     ),
@@ -662,6 +667,27 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "manageCollaborators": MessageLookupByLibrary.simpleMessage(
       "Správa spolupracovníků (přátel)",
+    ),
+    "metadataApplySuccess": MessageLookupByLibrary.simpleMessage(
+      "Metadata byla vložena do místního souboru.",
+    ),
+    "metadataNoResults": MessageLookupByLibrary.simpleMessage(
+      "Nenašli jsme žádnou shodu. Zkuste jiné hledání.",
+    ),
+    "metadataOperationFailed": MessageLookupByLibrary.simpleMessage(
+      "Operace metadat selhala.",
+    ),
+    "metadataOverwriteWarning": MessageLookupByLibrary.simpleMessage(
+      "To přepíše vložený titul, umělec, album a obal při zachování libovolného pole, které zápas neposkytuje.",
+    ),
+    "metadataSearchDescription": MessageLookupByLibrary.simpleMessage(
+      "Vyberte si správný zápas pro vložení názvu, umělce, alba a pokrytí do místního souboru.",
+    ),
+    "metadataSearchHint": MessageLookupByLibrary.simpleMessage(
+      "Název písně nebo umělce",
+    ),
+    "metadataSearchTitle": MessageLookupByLibrary.simpleMessage(
+      "Identifikovat píseň",
     ),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
       "Ujistěte se, že hudba hraje v blízkosti mikrofonu dostatečně hlasitě.",
@@ -1235,6 +1261,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncDownloading": MessageLookupByLibrary.simpleMessage(
       "Stahování změn EMusic...",
     ),
+    "syncForceReplaceBackupSaved": m12,
     "syncForceReplaceConfirmAction": MessageLookupByLibrary.simpleMessage(
       "Reemplazar y subir",
     ),
@@ -1244,11 +1271,42 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceConfirmTitle": MessageLookupByLibrary.simpleMessage(
       "¿Reemplazar la biblioteca hudební remota?",
     ),
+    "syncForceReplaceCountMismatch": MessageLookupByLibrary.simpleMessage(
+      "Nahrané počty se neshodují s místní knihovnou. Výměna na dálku nebyla potvrzena.",
+    ),
+    "syncForceReplaceCreatingBackup": MessageLookupByLibrary.simpleMessage(
+      "Vytvoření zálohování obnovy před nahrazením cloudových dat...",
+    ),
     "syncForceReplaceDescription": MessageLookupByLibrary.simpleMessage(
       "Pausa la sincronización pendiente y reemplaza a la fuerza tu biblioteca musical remota con los datos actuales de este dispositivo. Las descargas permanentecen locales.",
     ),
+    "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud nemohl nahradit vzdálenou knihovnu.",
+    ),
+    "syncForceReplaceFailedLocalPreserved":
+        MessageLookupByLibrary.simpleMessage(
+          "Výměna na dálku selhala. Vaše lokální data a obnovovací zálohy byly zachovány.",
+        ),
+    "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
+      "Odeslání není dokončeno",
+    ),
+    "syncForceReplaceInProgress": MessageLookupByLibrary.simpleMessage(
+      "Zastavení synchronizace, vytvoření zálohy a nahrání místní knihovny...",
+    ),
+    "syncForceReplacePauseFailed": MessageLookupByLibrary.simpleMessage(
+      "Současnou synchronizaci nelze bezpečně zastavit. Zkuste to za chvíli znovu.",
+    ),
+    "syncForceReplaceSuccess": MessageLookupByLibrary.simpleMessage(
+      "Vzdálená hudební knihovna byla nahrazena aktuálními daty tohoto zařízení.",
+    ),
+    "syncForceReplaceSuccessTitle": MessageLookupByLibrary.simpleMessage(
+      "Odeslání dokončeno",
+    ),
     "syncForceReplaceTitle": MessageLookupByLibrary.simpleMessage(
       "Zrušit sincronización y subir ESTA základnu",
+    ),
+    "syncForceReplaceValidating": MessageLookupByLibrary.simpleMessage(
+      "Ověření nahrané knihovny před výměnou cloudových dat...",
     ),
     "syncLibrarySynced": MessageLookupByLibrary.simpleMessage(
       "Synchronizovaná knihovna.",
@@ -1314,11 +1372,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "Zjištěná URL Kliknutím na ni otevřete/přehrajete související obsah",
     ),
+    "useThisMetadata": MessageLookupByLibrary.simpleMessage(
+      "Použít tato metadata",
+    ),
     "userBlocked": MessageLookupByLibrary.simpleMessage("Blokovaný uživatel"),
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "Odpověď neobsahuje seznam uživatelů.",
     ),
-    "userSearchFailed": m12,
+    "userSearchFailed": m13,
     "userUnblocked": MessageLookupByLibrary.simpleMessage("Odemčený uživatel"),
     "username": MessageLookupByLibrary.simpleMessage("Uživatelské jméno"),
     "video": MessageLookupByLibrary.simpleMessage("Video"),

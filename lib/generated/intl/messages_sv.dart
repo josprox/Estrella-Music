@@ -44,7 +44,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m11(count) => "${count} synkroniserade ändringar.";
 
-  static String m12(statusCode) =>
+  static String m12(path) => "Återställning backup: ${path}";
+
+  static String m13(statusCode) =>
       "Det gick inte att söka efter användare (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -524,6 +526,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Välj mängden innehåll som ska visas på startsidan (Ungefärligt). Mindre innehåll resulterar i snabbare laddning",
     ),
     "id": MessageLookupByLibrary.simpleMessage("ID"),
+    "identifySongMetadata": MessageLookupByLibrary.simpleMessage(
+      "Identifiera metadata",
+    ),
     "ignoreBatOpt": MessageLookupByLibrary.simpleMessage(
       "Ignorera batterioptimering",
     ),
@@ -653,6 +658,27 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "manageCollaborators": MessageLookupByLibrary.simpleMessage(
       "Hantera medarbetare (vänner)",
+    ),
+    "metadataApplySuccess": MessageLookupByLibrary.simpleMessage(
+      "Metadata inbäddades i den lokala filen.",
+    ),
+    "metadataNoResults": MessageLookupByLibrary.simpleMessage(
+      "Inga matcher hittades. Prova en annan sökning.",
+    ),
+    "metadataOperationFailed": MessageLookupByLibrary.simpleMessage(
+      "Metadataoperationen misslyckades.",
+    ),
+    "metadataOverwriteWarning": MessageLookupByLibrary.simpleMessage(
+      "Detta kommer att skriva över den inbäddade titeln, artisten, albumet och omslaget medan du bevarar några fält som matchen inte ger.",
+    ),
+    "metadataSearchDescription": MessageLookupByLibrary.simpleMessage(
+      "Välj rätt match för att bädda in sin titel, artist, album och cover i den lokala filen.",
+    ),
+    "metadataSearchHint": MessageLookupByLibrary.simpleMessage(
+      "Sång eller artistnamn",
+    ),
+    "metadataSearchTitle": MessageLookupByLibrary.simpleMessage(
+      "Identifiera sång",
     ),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
       "Se till att musiken spelar tillräckligt högt nära din mikrofon.",
@@ -1210,6 +1236,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncDownloading": MessageLookupByLibrary.simpleMessage(
       "Laddar ned EMusic-ändringar...",
     ),
+    "syncForceReplaceBackupSaved": m12,
     "syncForceReplaceConfirmAction": MessageLookupByLibrary.simpleMessage(
       "Reemplazar y subir",
     ),
@@ -1219,11 +1246,42 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceConfirmTitle": MessageLookupByLibrary.simpleMessage(
       "¿Reemplazar la biblioteca musikalisk remota?",
     ),
+    "syncForceReplaceCountMismatch": MessageLookupByLibrary.simpleMessage(
+      "De uppladdade räkningarna matchar inte det lokala biblioteket. Fjärrbyte kunde inte bekräftas.",
+    ),
+    "syncForceReplaceCreatingBackup": MessageLookupByLibrary.simpleMessage(
+      "Skapa en återställning backup innan du ersätter molndata ...",
+    ),
     "syncForceReplaceDescription": MessageLookupByLibrary.simpleMessage(
       "Pausa la sincronización pendiente y reemplaza a la fuerza tu biblioteca musical remota con los datos actuales de este dispositivo. Las descargas permanecen locales.",
     ),
+    "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud kan inte ersätta fjärrbiblioteket.",
+    ),
+    "syncForceReplaceFailedLocalPreserved":
+        MessageLookupByLibrary.simpleMessage(
+          "Den avlägsna ersättningen misslyckades. Din lokala data- och återställningsbackup bevarades.",
+        ),
+    "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
+      "Upload inte färdigställd",
+    ),
+    "syncForceReplaceInProgress": MessageLookupByLibrary.simpleMessage(
+      "Pausa synkronisering, skapa en backup och ladda upp det lokala biblioteket.",
+    ),
+    "syncForceReplacePauseFailed": MessageLookupByLibrary.simpleMessage(
+      "Nuvarande synkronisering kan inte pausas säkert. Försök igen i ett ögonblick.",
+    ),
+    "syncForceReplaceSuccess": MessageLookupByLibrary.simpleMessage(
+      "Det avlägsna musikbiblioteket ersattes med den här enhetens aktuella data.",
+    ),
+    "syncForceReplaceSuccessTitle": MessageLookupByLibrary.simpleMessage(
+      "Upload slutförd",
+    ),
     "syncForceReplaceTitle": MessageLookupByLibrary.simpleMessage(
       "Cancelar sincronización y subir ESTA bas",
+    ),
+    "syncForceReplaceValidating": MessageLookupByLibrary.simpleMessage(
+      "Validera det uppladdade biblioteket innan du ersätter molndata ...",
     ),
     "syncLibrarySynced": MessageLookupByLibrary.simpleMessage(
       "Synkroniserat bibliotek.",
@@ -1289,11 +1347,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "Upptäckt URL klicka på den för att öppna/spela upp det associerade innehållet",
     ),
+    "useThisMetadata": MessageLookupByLibrary.simpleMessage(
+      "Använd denna metadata",
+    ),
     "userBlocked": MessageLookupByLibrary.simpleMessage("Blockerad användare"),
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "Svaret innehåller ingen lista över användare.",
     ),
-    "userSearchFailed": m12,
+    "userSearchFailed": m13,
     "userUnblocked": MessageLookupByLibrary.simpleMessage("Olåst användare"),
     "username": MessageLookupByLibrary.simpleMessage("Användarnamn"),
     "video": MessageLookupByLibrary.simpleMessage("Video"),

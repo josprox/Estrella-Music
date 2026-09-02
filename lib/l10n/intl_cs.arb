@@ -1,1140 +1,124 @@
 {
   "@@locale": "cs",
-  "home": "Domů",
-  "@home": {
-    "description": "home"
-  },
-  "playlistCreatednsongAddedAlert": "Playlist vytvořen a skladba přidána!",
-  "@playlistCreatednsongAddedAlert": {
-    "description": "playlistCreatednsongAddedAlert"
-  },
-  "dismiss": "Odmítnout",
-  "@dismiss": {
-    "description": "dismiss"
-  },
-  "goToDownloadPage": "Kliknutím sem přejdete na stránku ke stažení",
-  "@goToDownloadPage": {
-    "description": "goToDownloadPage"
-  },
-  "songEnqueueAlert": "Skladba zařazena!",
-  "@songEnqueueAlert": {
-    "description": "songEnqueueAlert"
-  },
-  "renamePlaylist": "Přejmenovat playlist",
-  "@renamePlaylist": {
-    "description": "renamePlaylist"
-  },
-  "songAddedToPlaylistAlert": "Skladba přidána do playlistu!",
-  "@songAddedToPlaylistAlert": {
-    "description": "songAddedToPlaylistAlert"
-  },
-  "unlinkAlert": "Úspěšně odpojeno!",
-  "@unlinkAlert": {
-    "description": "unlinkAlert"
-  },
-  "playlistCreatedAlert": "Playlist vytvořen!",
-  "@playlistCreatedAlert": {
-    "description": "playlistCreatedAlert"
-  },
-  "reset": "Resetovat",
-  "@reset": {
-    "description": "reset"
-  },
-  "unLink": "Odstranit odkaz",
-  "@unLink": {
-    "description": "unLink"
-  },
-  "trending": "Trendy",
-  "@trending": {
-    "description": "trending"
-  },
-  "searchRes": "Výsledky vyhledávání",
-  "@searchRes": {
-    "description": "searchRes"
-  },
-  "cacheSongsDes": "Ukládání skladeb do mezipaměti během přehrávání pro budoucí/offline přehrávání zabere v zařízení další místo",
-  "@cacheSongsDes": {
-    "description": "cacheSongsDes"
-  },
-  "password": "Heslo",
-  "@password": {
-    "description": "password"
-  },
-  "noLibPlaylist": "Nemáte žádný playlist v knihovně!",
-  "@noLibPlaylist": {
-    "description": "noLibPlaylist"
-  },
-  "setDiscoverContent": "Nastav si domovskou stránku",
-  "@setDiscoverContent": {
-    "description": "setDiscoverContent"
-  },
-  "networkError1": "Ups chyba sítě!",
-  "@networkError1": {
-    "description": "networkError1"
-  },
-  "songRemovedfromQueue": "Odstraněno z fronty!",
-  "@songRemovedfromQueue": {
-    "description": "songRemovedfromQueue"
-  },
-  "libSongs": "Knihovna skladeb",
-  "@libSongs": {
-    "description": "libSongs"
-  },
-  "githubDes": "Zobrazit zdrojový kód GitHub\nPokud se vám tento projekt líbí, nezapomeňte dát ⭐",
-  "@githubDes": {
-    "description": "githubDes"
-  },
-  "communityplaylists": "Komunitní playlisty",
-  "@communityplaylists": {
-    "description": "communityplaylists"
-  },
-  "playlistRemovedAlert": "Playlist odstraněn!",
-  "@playlistRemovedAlert": {
-    "description": "playlistRemovedAlert"
-  },
-  "libAlbums": "Knihovna alb",
-  "@libAlbums": {
-    "description": "libAlbums"
-  },
-  "albumBookmarkRemoveAlert": "Album odstraněno ze záložek!",
-  "@albumBookmarkRemoveAlert": {
-    "description": "albumBookmarkRemoveAlert"
-  },
-  "notaSongVideo": "Není to skladba/hudební video!",
-  "@notaSongVideo": {
-    "description": "notaSongVideo"
-  },
-  "ignoreBatOptDes": "Pokud se potýkáte s problémy s oznámeními nebo se přehrávání zastavilo kvůli optimalizaci systému, povolte tuto možnost",
-  "@ignoreBatOptDes": {
-    "description": "ignoreBatOptDes"
-  },
-  "for1": "pro",
-  "@for1": {
-    "description": "for1"
-  },
-  "low": "Nízká 🪨",
-  "@low": {
-    "description": "low"
-  },
-  "link": "Odkaz",
-  "@link": {
-    "description": "link"
-  },
-  "selectAuthIns": "Vyberte Instanci ověření",
-  "@selectAuthIns": {
-    "description": "selectAuthIns"
-  },
-  "languageDes": "Nastavení jazyka aplikace",
-  "@languageDes": {
-    "description": "languageDes"
-  },
-  "stopMusicOnTaskClear": "Zastavení hudby při vymazání správce úloh",
-  "@stopMusicOnTaskClear": {
-    "description": "stopMusicOnTaskClear"
-  },
-  "enqueueAll": "Zařadit vše do fronty",
-  "@enqueueAll": {
-    "description": "enqueueAll"
-  },
-  "customInsSelectMsg": "Prosím, vyberte možnost Vlastní instance",
-  "@customInsSelectMsg": {
-    "description": "customInsSelectMsg"
-  },
-  "skipSilence": "Přeskočit ticho",
-  "@skipSilence": {
-    "description": "skipSilence"
-  },
-  "create": "Vytvořit",
-  "@create": {
-    "description": "create"
-  },
-  "equalizer": "Ekvalizér",
-  "@equalizer": {
-    "description": "equalizer"
-  },
-  "enqueueSong": "Zařadit tuto skladbu do fronty",
-  "@enqueueSong": {
-    "description": "enqueueSong"
-  },
-  "noBookmarks": "Žádné záložky!",
-  "@noBookmarks": {
-    "description": "noBookmarks"
-  },
-  "playlists": "Playlisty",
-  "@playlists": {
-    "description": "playlists"
-  },
-  "videos": "Videa",
-  "@videos": {
-    "description": "videos"
-  },
-  "enabled": "Povoleno",
-  "@enabled": {
-    "description": "enabled"
-  },
-  "allFieldsReqMsg": "Všechna pole jsou povinná",
-  "@allFieldsReqMsg": {
-    "description": "allFieldsReqMsg"
-  },
-  "artistBookmarkAddAlert": "Interpret přidán do záložek!",
-  "@artistBookmarkAddAlert": {
-    "description": "artistBookmarkAddAlert"
-  },
-  "removeFromCache": "Odstranit z mezipaměti",
-  "@removeFromCache": {
-    "description": "removeFromCache"
-  },
-  "rename": "Přejmenovat",
-  "@rename": {
-    "description": "rename"
-  },
-  "viewAll": "Zobrazit vše",
-  "@viewAll": {
-    "description": "viewAll"
-  },
-  "github": "GitHub",
-  "@github": {
-    "description": "github"
-  },
-  "newVersionAvailable": "K dispozici je nová verze!",
-  "@newVersionAvailable": {
-    "description": "newVersionAvailable"
-  },
-  "items": "položky",
-  "@items": {
-    "description": "items"
-  },
-  "subscribers": "odběratelé",
-  "@subscribers": {
-    "description": "subscribers"
-  },
-  "startRadio": "Spustit rádio",
-  "@startRadio": {
-    "description": "startRadio"
-  },
-  "discover": "Doporučené skladby",
-  "@discover": {
-    "description": "discover"
-  },
-  "cacheSongs": "Skladby mezipaměti",
-  "@cacheSongs": {
-    "description": "cacheSongs"
-  },
-  "songAlreadyExists": "Skladba už existuje!",
-  "@songAlreadyExists": {
-    "description": "songAlreadyExists"
-  },
-  "libArtists": "Knihovna interpretů",
-  "@libArtists": {
-    "description": "libArtists"
-  },
-  "username": "Uživatelské jméno",
-  "@username": {
-    "description": "username"
-  },
-  "light": "Světlý",
-  "@light": {
-    "description": "light"
-  },
-  "resetblacklistedplaylist": "Resetovat playlisty na černé listině",
-  "@resetblacklistedplaylist": {
-    "description": "resetblacklistedplaylist"
-  },
-  "dynamic": "Dynamický",
-  "@dynamic": {
-    "description": "dynamic"
-  },
-  "selectAuthInsMsg": "Prosím, vyberte instanci ověřování!",
-  "@selectAuthInsMsg": {
-    "description": "selectAuthInsMsg"
-  },
-  "equalizerDes": "Otevřete systémový ekvalizér",
-  "@equalizerDes": {
-    "description": "equalizerDes"
-  },
-  "removePlaylist": "Odstranit playlist",
-  "@removePlaylist": {
-    "description": "removePlaylist"
-  },
-  "customIns": "Vlastní instance",
-  "@customIns": {
-    "description": "customIns"
+  "CreateNewPlaylist": "Vytvořit nový playlist",
+  "@CreateNewPlaylist": {
+    "description": "CreateNewPlaylist"
   },
   "Piped": "Piped",
   "@Piped": {
     "description": "Piped"
   },
-  "addToPlaylist": "Přidat do playlistu",
-  "@addToPlaylist": {
-    "description": "addToPlaylist"
-  },
-  "stopMusicOnTaskClearDes": "Přehrávání hudby se zastaví, když se přejede prstem po aplikaci ze správce úloh",
-  "@stopMusicOnTaskClearDes": {
-    "description": "stopMusicOnTaskClearDes"
-  },
-  "cachedOrOffline": "Uloženo do mezipaměti / Dostupné Offline",
-  "@cachedOrOffline": {
-    "description": "cachedOrOffline"
-  },
-  "retry": "Zkuste to znovu!",
-  "@retry": {
-    "description": "retry"
-  },
-  "artists": "Interpreti",
-  "@artists": {
-    "description": "artists"
-  },
-  "playlistBookmarkAddAlert": "Playlist přidán do záložek!",
-  "@playlistBookmarkAddAlert": {
-    "description": "playlistBookmarkAddAlert"
-  },
-  "albums": "Alba",
-  "@albums": {
-    "description": "albums"
-  },
-  "radioNotAvailable": "Rádio pro tohoto interpreta není k dispozici!",
-  "@radioNotAvailable": {
-    "description": "radioNotAvailable"
-  },
-  "recentlyPlayed": "Nedávno přehrané",
-  "@recentlyPlayed": {
-    "description": "recentlyPlayed"
-  },
-  "viewArtist": "Zobrazit interpreta",
-  "@viewArtist": {
-    "description": "viewArtist"
-  },
-  "createnAdd": "Vytvořit a přidat",
-  "@createnAdd": {
-    "description": "createnAdd"
-  },
-  "topmusicvideos": "Topovky",
-  "@topmusicvideos": {
-    "description": "topmusicvideos"
-  },
-  "playlistBookmarkRemoveAlert": "Playlist odstraněn ze záložek!",
-  "@playlistBookmarkRemoveAlert": {
-    "description": "playlistBookmarkRemoveAlert"
-  },
-  "systemDefault": "Výchozí nastavení systému",
-  "@systemDefault": {
-    "description": "systemDefault"
-  },
-  "local": "Místní",
-  "@local": {
-    "description": "local"
-  },
-  "ignoreBatOpt": "Ignorovat optimalizaci baterie",
-  "@ignoreBatOpt": {
-    "description": "ignoreBatOpt"
-  },
-  "singles": "Singly",
-  "@singles": {
-    "description": "singles"
-  },
-  "linkAlert": "Úspěšně propojeno!",
-  "@linkAlert": {
-    "description": "linkAlert"
-  },
-  "status": "Stav",
-  "@status": {
-    "description": "status"
-  },
-  "themeMode": "Vzhled",
-  "@themeMode": {
-    "description": "themeMode"
-  },
-  "streamingQualityDes": "Kvalita hudebního streamu",
-  "@streamingQualityDes": {
-    "description": "streamingQualityDes"
-  },
-  "nomatch": "Nebyla nalezena shoda pro",
-  "@nomatch": {
-    "description": "nomatch"
-  },
-  "notaValidLink": "Neplatný odkaz!",
-  "@notaValidLink": {
-    "description": "notaValidLink"
-  },
-  "emptyPlaylist": "Prázdný playlist!",
-  "@emptyPlaylist": {
-    "description": "emptyPlaylist"
-  },
-  "favorites": "Oblíbené",
-  "@favorites": {
-    "description": "favorites"
-  },
-  "dark": "Tmavý",
-  "@dark": {
-    "description": "dark"
-  },
-  "cancel": "Zrušit",
-  "@cancel": {
-    "description": "cancel"
-  },
-  "by": "od",
-  "@by": {
-    "description": "by"
-  },
-  "streamingQuality": "Kvalita streamu",
-  "@streamingQuality": {
-    "description": "streamingQuality"
-  },
-  "linkPipedDes": "Odkaz s Piped pro playlisty",
-  "@linkPipedDes": {
-    "description": "linkPipedDes"
-  },
-  "libPlaylists": "Knihovna playlistů",
-  "@libPlaylists": {
-    "description": "libPlaylists"
-  },
-  "disabled": "Zakázáno",
-  "@disabled": {
-    "description": "disabled"
-  },
-  "CreateNewPlaylist": "Vytvořit nový playlist",
-  "@CreateNewPlaylist": {
-    "description": "CreateNewPlaylist"
-  },
-  "blacklistPlstResetAlert": "Resetování proběhlo úspěšně!",
-  "@blacklistPlstResetAlert": {
-    "description": "blacklistPlstResetAlert"
-  },
-  "language": "Jazyk",
-  "@language": {
-    "description": "language"
-  },
-  "search": "Hledat",
-  "@search": {
-    "description": "search"
-  },
-  "skipSilenceDes": "Při přehrávání hudby se přeskočí ticho",
-  "@skipSilenceDes": {
-    "description": "skipSilenceDes"
-  },
-  "playNext": "Přehrát jako další",
-  "@playNext": {
-    "description": "playNext"
-  },
-  "errorOccuredAlert": "Došlo k nějaké chybě!",
-  "@errorOccuredAlert": {
-    "description": "errorOccuredAlert"
-  },
-  "songs": "Skladby",
-  "@songs": {
-    "description": "songs"
-  },
-  "high": "Vysoká 🔥",
-  "@high": {
-    "description": "high"
-  },
-  "searchDes": "Skladby, playlisty, alba, interprety",
-  "@searchDes": {
-    "description": "searchDes"
-  },
-  "results": "Výsledky",
-  "@results": {
-    "description": "results"
-  },
-  "playlistBlacklistAlert": "Playlist na černé listině!",
-  "@playlistBlacklistAlert": {
-    "description": "playlistBlacklistAlert"
-  },
-  "artistDesNotAvailable": "Popis není k dispozici!",
-  "@artistDesNotAvailable": {
-    "description": "artistDesNotAvailable"
-  },
-  "resetblacklistedplaylistDes": "Resetování všech playlistů zařazených na černou listinu",
-  "@resetblacklistedplaylistDes": {
-    "description": "resetblacklistedplaylistDes"
-  },
-  "songRemovedfromQueueCurrSong": "Aktuálně přehrávanou skladbu nelze odebrat",
-  "@songRemovedfromQueueCurrSong": {
-    "description": "songRemovedfromQueueCurrSong"
-  },
-  "settings": "Nastavení",
-  "@settings": {
-    "description": "settings"
-  },
-  "basedOnLast": "Podle poslední akce",
-  "@basedOnLast": {
-    "description": "basedOnLast"
-  },
-  "hintApiUrl": "Adresa URL rozhraní API na instanci Piped",
-  "@hintApiUrl": {
-    "description": "hintApiUrl"
-  },
-  "playlistRenameAlert": "Úspěšně přejmenováno!",
-  "@playlistRenameAlert": {
-    "description": "playlistRenameAlert"
-  },
-  "albumBookmarkAddAlert": "Album přidáno do záložek!",
-  "@albumBookmarkAddAlert": {
-    "description": "albumBookmarkAddAlert"
-  },
-  "removeFromPlaylist": "Odstranit z playlistu",
-  "@removeFromPlaylist": {
-    "description": "removeFromPlaylist"
-  },
-  "lyricsNotAvailable": "Text není k dispozici!",
-  "@lyricsNotAvailable": {
-    "description": "lyricsNotAvailable"
-  },
-  "dontShowInfoAgain": "Tuto informaci již nezobrazujte",
-  "@dontShowInfoAgain": {
-    "description": "dontShowInfoAgain"
-  },
-  "noOfflineSong": "Žádné skladby offline!",
-  "@noOfflineSong": {
-    "description": "noOfflineSong"
-  },
-  "featuredplaylists": "Doporučené playlisty",
-  "@featuredplaylists": {
-    "description": "featuredplaylists"
-  },
-  "quickpicks": "Rychlý výběr",
-  "@quickpicks": {
-    "description": "quickpicks"
-  },
-  "artistBookmarkRemoveAlert": "Interpret odstraněn ze záložek!",
-  "@artistBookmarkRemoveAlert": {
-    "description": "artistBookmarkRemoveAlert"
-  },
-  "operationFailed": "Operace selhala",
-  "@operationFailed": {
-    "description": "operationFailed"
-  },
-  "goToAlbum": "Přejít do alba",
-  "@goToAlbum": {
-    "description": "goToAlbum"
-  },
-  "removeFromQueue": "Odstranit z fronty",
-  "@removeFromQueue": {
-    "description": "removeFromQueue"
-  },
-  "shareSong": "Sdílet tuto skladbu",
-  "@shareSong": {
-    "description": "shareSong"
-  },
-  "songRemovedAlert": "Odstraněno z",
-  "@songRemovedAlert": {
-    "description": "songRemovedAlert"
-  },
-  "downloads": "Stažené",
-  "@downloads": {
-    "description": "downloads"
-  },
-  "removeFromLib": "Odebrat z knihovny skladeb",
-  "@removeFromLib": {
-    "description": "removeFromLib"
-  },
-  "downloadingFormat": "Formát stahovaného souboru",
-  "@downloadingFormat": {
-    "description": "downloadingFormat"
-  },
-  "songAlreadyOfflineAlert": "Skladba je již offline v mezipaměti",
-  "@songAlreadyOfflineAlert": {
-    "description": "songAlreadyOfflineAlert"
-  },
-  "downloadLocation": "Umístění stažených písniček",
-  "@downloadLocation": {
-    "description": "downloadLocation"
-  },
-  "downloadingFormatDes": "Vyberte formát stahovaného souboru. \"Opus\" poskytne nejlepší kvalitu",
-  "@downloadingFormatDes": {
-    "description": "downloadingFormatDes"
-  },
-  "sleepTimer": "Časovač spánku",
-  "@sleepTimer": {
-    "description": "sleepTimer"
-  },
-  "minutes": "minut",
-  "@minutes": {
-    "description": "minutes"
-  },
-  "synced": "Synchronizovaný",
-  "@synced": {
-    "description": "synced"
-  },
-  "library": "Knihovna",
-  "@library": {
-    "description": "library"
-  },
-  "backgroundPlayDes": "Zapni/Vypni přehrávání hudby na pozadí (Hudba se potom dá ovládat v horní liště a na zamčené obrazovce)",
-  "@backgroundPlayDes": {
-    "description": "backgroundPlayDes"
+  "about": "O",
+  "@about": {
+    "description": "about"
   },
   "add5Minutes": "Ještě 5 minut",
   "@add5Minutes": {
     "description": "add5Minutes"
   },
-  "cancelTimer": "Zruš časovač",
-  "@cancelTimer": {
-    "description": "cancelTimer"
-  },
-  "enableBottomNav": "Dolní navigační lišta",
-  "@enableBottomNav": {
-    "description": "enableBottomNav"
-  },
-  "homeContentCountDes": "Vyber si počet zobrazených položek na domovské obrazovce. Menší počet = Rychlejší načítání",
-  "@homeContentCountDes": {
-    "description": "homeContentCountDes"
-  },
-  "enableBottomNavDes": "Přejdí na dolní lištu",
-  "@enableBottomNavDes": {
-    "description": "enableBottomNavDes"
-  },
-  "plain": "Prostý",
-  "@plain": {
-    "description": "plain"
-  },
-  "cancelTimerAlert": "Časovač spánku byl zrušen",
-  "@cancelTimerAlert": {
-    "description": "cancelTimerAlert"
-  },
-  "sleepTimeSetAlert": "Váš časovač spánku byl spuštěn",
-  "@sleepTimeSetAlert": {
-    "description": "sleepTimeSetAlert"
-  },
-  "syncedLyricsNotAvailable": "Synchronizovaný text není k dispozici!",
-  "@syncedLyricsNotAvailable": {
-    "description": "syncedLyricsNotAvailable"
-  },
-  "clearImgCache": "Vyčisti cache obrázků",
-  "@clearImgCache": {
-    "description": "clearImgCache"
-  },
-  "clearImgCacheDes": "Klikni sem aby si vyčistil cache obrázků (Není doporučeno ale může se hodit při obnově zachovaného data z obrázků)",
-  "@clearImgCacheDes": {
-    "description": "clearImgCacheDes"
-  },
-  "pipedplstSyncAlert": "Piped playlist synchronizován!",
-  "@pipedplstSyncAlert": {
-    "description": "pipedplstSyncAlert"
-  },
-  "upNext": "Další skladba",
-  "@upNext": {
-    "description": "upNext"
-  },
-  "endOfThisSong": "Konec skladby",
-  "@endOfThisSong": {
-    "description": "endOfThisSong"
-  },
-  "homeContentCount": "Počet položek v domovské stránce",
-  "@homeContentCount": {
-    "description": "homeContentCount"
-  },
-  "backgroundPlay": "Přehrávání na pozadí",
-  "@backgroundPlay": {
-    "description": "backgroundPlay"
-  },
-  "openIn": "Otevřít v",
-  "@openIn": {
-    "description": "openIn"
-  },
-  "deleteDownloadData": "Odstranit ze stažených",
-  "@deleteDownloadData": {
-    "description": "deleteDownloadData"
-  },
-  "restoreLastPlaybackSession": "Obnovit poslední relaci přehrávání",
-  "@restoreLastPlaybackSession": {
-    "description": "restoreLastPlaybackSession"
-  },
-  "restoreLastPlaybackSessionDes": "Automaticky obnoví poslední relaci přehrávání při spuštění aplikace",
-  "@restoreLastPlaybackSessionDes": {
-    "description": "restoreLastPlaybackSessionDes"
-  },
-  "cacheHomeScreenData": "Data obsahu domovské obrazovky v mezipaměti",
-  "@cacheHomeScreenData": {
-    "description": "cacheHomeScreenData"
-  },
-  "downFilesFound": "stažené soubory nalezeny",
-  "@downFilesFound": {
-    "description": "downFilesFound"
-  },
-  "close": "Blízko",
-  "@close": {
-    "description": "close"
-  },
-  "exportMsg": "Soubory byly úspěšně exportovány",
-  "@exportMsg": {
-    "description": "exportMsg"
-  },
-  "clearImgCacheAlert": "Vymazání mezipaměti obrázků proběhlo úspěšně",
-  "@clearImgCacheAlert": {
-    "description": "clearImgCacheAlert"
-  },
-  "removeMultiple": "Odstranit více skladeb",
-  "@removeMultiple": {
-    "description": "removeMultiple"
-  },
-  "reArrangePlaylist": "Přeskupit playlist",
-  "@reArrangePlaylist": {
-    "description": "reArrangePlaylist"
-  },
   "addMultipleSongs": "Přidat skladby do playlistu",
   "@addMultipleSongs": {
     "description": "addMultipleSongs"
   },
-  "backupSettingsAndPlaylistsDes": "Uloží všechna nastavení, playlisty a přihlašovací údaje do záložního souboru",
-  "@backupSettingsAndPlaylistsDes": {
-    "description": "backupSettingsAndPlaylistsDes"
-  },
-  "restoreSettingsAndPlaylists": "Obnovit nastavení a playlisty",
-  "@restoreSettingsAndPlaylists": {
-    "description": "restoreSettingsAndPlaylists"
-  },
-  "restoreSettingsAndPlaylistsDes": "Obnoví všechna nastavení, přihlašovací údaje a playlisty ze záložního souboru. Přepíše všechna aktuální data",
-  "@restoreSettingsAndPlaylistsDes": {
-    "description": "restoreSettingsAndPlaylistsDes"
-  },
-  "backupMsg": "Záloha úspěšně uložena!",
-  "@backupMsg": {
-    "description": "backupMsg"
-  },
-  "backFilesFound": "databáze nalezené",
-  "@backFilesFound": {
-    "description": "backFilesFound"
-  },
-  "restoreMsg": "Úspěšně obnoveno!\nZměny se aplikují po restartu",
-  "@restoreMsg": {
-    "description": "restoreMsg"
-  },
-  "restore": "Obnovit",
-  "@restore": {
-    "description": "restore"
-  },
-  "restoring": "Obnovování...",
-  "@restoring": {
-    "description": "restoring"
-  },
-  "backupSettingsAndPlaylists": "Zálohovat nastavení a playlisty",
-  "@backupSettingsAndPlaylists": {
-    "description": "backupSettingsAndPlaylists"
-  },
-  "closeApp": "Zavřít aplikaci",
-  "@closeApp": {
-    "description": "closeApp"
-  },
-  "disableTransitionAnimation": "Vypnout přechodovou animaci",
-  "@disableTransitionAnimation": {
-    "description": "disableTransitionAnimation"
-  },
-  "disableTransitionAnimationDes": "Zapnutím této možnosti zakážete přechodovou animaci mezi kartami",
-  "@disableTransitionAnimationDes": {
-    "description": "disableTransitionAnimationDes"
-  },
-  "cacheHomeScreenDataDes": "Zapněte ukládání dat obsahu domovské obrazovky do mezipaměti. Pokud je tato možnost povolena, domovská obrazovka se načte okamžitě",
-  "@cacheHomeScreenDataDes": {
-    "description": "cacheHomeScreenDataDes"
-  },
-  "exportDowloadedFiles": "Exportovat stažené soubory",
-  "@exportDowloadedFiles": {
-    "description": "exportDowloadedFiles"
-  },
-  "exportDowloadedFilesDes": "Klikněte zde pro export staženého souboru z adresáře aplikace do externího adresáře",
-  "@exportDowloadedFilesDes": {
-    "description": "exportDowloadedFilesDes"
-  },
-  "exportedFileLocation": "Umístění exportu staženého souboru",
-  "@exportedFileLocation": {
-    "description": "exportedFileLocation"
-  },
-  "export": "Exportovat",
-  "@export": {
-    "description": "export"
-  },
-  "exporting": "Exportování...",
-  "@exporting": {
-    "description": "exporting"
-  },
-  "scanning": "Skenování...",
-  "@scanning": {
-    "description": "scanning"
-  },
-  "deleteDownloadedDataAlert": "Úspěšně odstraněno ze stažených!",
-  "@deleteDownloadedDataAlert": {
-    "description": "deleteDownloadedDataAlert"
-  },
-  "songInfo": "Informace skladby",
-  "@songInfo": {
-    "description": "songInfo"
-  },
-  "id": "ID",
-  "@id": {
-    "description": "id"
-  },
-  "title": "Název",
-  "@title": {
-    "description": "title"
-  },
-  "duration": "Délka",
-  "@duration": {
-    "description": "duration"
-  },
-  "audioCodec": "Audio kodek",
-  "@audioCodec": {
-    "description": "audioCodec"
-  },
-  "bitrate": "Bitrate",
-  "@bitrate": {
-    "description": "bitrate"
-  },
-  "loudnessDb": "Hlasitost (Db)",
-  "@loudnessDb": {
-    "description": "loudnessDb"
-  },
-  "backupAppData": "Zálohovat data aplikace",
-  "@backupAppData": {
-    "description": "backupAppData"
-  },
-  "backup": "Zálohovat",
-  "@backup": {
-    "description": "backup"
-  },
-  "letsStrart": "Začínáme...",
-  "@letsStrart": {
-    "description": "letsStrart"
-  },
-  "processFiles": "Zpracování souborů...",
-  "@processFiles": {
-    "description": "processFiles"
-  },
-  "includeDownloadedFiles": "Zahrnout stažené skladby",
-  "@includeDownloadedFiles": {
-    "description": "includeDownloadedFiles"
-  },
-  "backupInProgress": "Probíhá zálohování...",
-  "@backupInProgress": {
-    "description": "backupInProgress"
-  },
-  "restoreAppData": "Obnovit data aplikace",
-  "@restoreAppData": {
-    "description": "restoreAppData"
-  },
-  "restartApp": "Restartovat aplikaci",
-  "@restartApp": {
-    "description": "restartApp"
-  },
-  "songNotPlayable": "Skladbu nelze přehrát z důvodu omezení serveru!",
-  "@songNotPlayable": {
-    "description": "songNotPlayable"
-  },
-  "appInfo": "Informace o aplikaci",
-  "@appInfo": {
-    "description": "appInfo"
-  },
-  "download": "Stáhnout",
-  "@download": {
-    "description": "download"
-  },
-  "networkError": "Chyba sítě! Zkontrolujte připojení k internetu.",
-  "@networkError": {
-    "description": "networkError"
-  },
-  "downloadError2": "Požadovanou skladbu nelze stáhnout z důvodu omezení serveru. Můžete to zkusit znovu",
-  "@downloadError2": {
-    "description": "downloadError2"
-  },
-  "downloadError3": "Stažení se nezdařilo kvůli chybě sítě/streamu! Zkuste to prosím znovu",
-  "@downloadError3": {
-    "description": "downloadError3"
-  },
-  "musicAndPlayback": "Hudba a přehrávání",
-  "@musicAndPlayback": {
-    "description": "musicAndPlayback"
-  },
-  "content": "Obsah",
-  "@content": {
-    "description": "content"
-  },
-  "personalisation": "Přizpůsobení",
-  "@personalisation": {
-    "description": "personalisation"
-  },
-  "loudnessNormalization": "Normalizace hlasitosti",
-  "@loudnessNormalization": {
-    "description": "loudnessNormalization"
-  },
-  "queueShufflingDeniedMsg": "Frontu nelze zamíchat, když je povolen režim náhodného výběru",
-  "@queueShufflingDeniedMsg": {
-    "description": "queueShufflingDeniedMsg"
-  },
-  "queuerearrangingDeniedMsg": "Frontu nelze měnit, když je povolen režim promíchání",
-  "@queuerearrangingDeniedMsg": {
-    "description": "queuerearrangingDeniedMsg"
-  },
-  "loudnessNormalizationDes": "Nastaví stejnou úroveň hlasitosti pro všechny skladby (Experimentální) (Nebude fungovat u skladeb stažených v předchozí verzi(< v1.10.0))",
-  "@loudnessNormalizationDes": {
-    "description": "loudnessNormalizationDes"
-  },
-  "urlSearchDes": "Zjištěná URL Kliknutím na ni otevřete/přehrajete související obsah",
-  "@urlSearchDes": {
-    "description": "urlSearchDes"
-  },
-  "androidBackupWarning": "Netestováno: Zaškrtnutím políčka po stažení více než 60 souborů může proces spotřebovat velké množství paměti a může způsobit pád telefonu nebo aplikace. Pokračujte na vlastní nebezpečí.",
-  "@androidBackupWarning": {
-    "description": "androidBackupWarning"
-  },
-  "playerUi": "Rozhraní přehrávače",
-  "@playerUi": {
-    "description": "playerUi"
-  },
-  "standard": "Standard",
-  "@standard": {
-    "description": "standard"
-  },
-  "gesture": "Gesta",
-  "@gesture": {
-    "description": "gesture"
-  },
-  "playerUiDes": "Vybrat uživatelské rozhraní přehrávače",
-  "@playerUiDes": {
-    "description": "playerUiDes"
-  },
-  "playnextMsg": "Následuje",
-  "@playnextMsg": {
-    "description": "playnextMsg"
-  },
-  "shuffleQueue": "Promíchat",
-  "@shuffleQueue": {
-    "description": "shuffleQueue"
-  },
-  "queueLoop": "Opakovat",
-  "@queueLoop": {
-    "description": "queueLoop"
-  },
-  "queueLoopNotDisMsg1": "Režim opakování nelze vypnout, pokud je povoleno promíchání.",
-  "@queueLoopNotDisMsg1": {
-    "description": "queueLoopNotDisMsg1"
-  },
-  "queueLoopNotDisMsg2": "Opakování nelze povolit v režimu rádia.",
-  "@queueLoopNotDisMsg2": {
-    "description": "queueLoopNotDisMsg2"
-  },
-  "enableSlidableAction": "Povolit akce gesty",
-  "@enableSlidableAction": {
-    "description": "enableSlidableAction"
-  },
-  "enableSlidableActionDes": "Povolit akce gesty na dlaždici skladby",
-  "@enableSlidableActionDes": {
-    "description": "enableSlidableActionDes"
-  },
-  "autoDownFavSong": "Automaticky stáhnout oblíbené skladby",
-  "@autoDownFavSong": {
-    "description": "autoDownFavSong"
-  },
-  "autoDownFavSongDes": "Automaticky stáhne oblíbené skladby po přidání do oblíbených položek",
-  "@autoDownFavSongDes": {
-    "description": "autoDownFavSongDes"
-  },
-  "misc": "Různé",
-  "@misc": {
-    "description": "misc"
-  },
-  "resetToDefault": "Obnovit výchozí nastavení",
-  "@resetToDefault": {
-    "description": "resetToDefault"
-  },
-  "resetToDefaultDes": "Obnovit výchozí nastavení aplikace (nutný restart)",
-  "@resetToDefaultDes": {
-    "description": "resetToDefaultDes"
-  },
-  "resetToDefaultMsg": "Obnovení výchozího nastavení bylo dokončeno, restartujte aplikaci",
-  "@resetToDefaultMsg": {
-    "description": "resetToDefaultMsg"
+  "addToLibrary": "Přidat do knihovny",
+  "@addToLibrary": {
+    "description": "addToLibrary"
+  },
+  "addToPlaylist": "Přidat do playlistu",
+  "@addToPlaylist": {
+    "description": "addToPlaylist"
   },
   "album": "Album",
   "@album": {
     "description": "album"
   },
-  "playingfromAlbum": "Přehrávání z albumu",
-  "@playingfromAlbum": {
-    "description": "playingfromAlbum"
+  "albumBookmarkAddAlert": "Album přidáno do záložek!",
+  "@albumBookmarkAddAlert": {
+    "description": "albumBookmarkAddAlert"
   },
-  "playingfromPlaylist": "Přehrávání z playlistu",
-  "@playingfromPlaylist": {
-    "description": "playingfromPlaylist"
+  "albumBookmarkRemoveAlert": "Album odstraněno ze záložek!",
+  "@albumBookmarkRemoveAlert": {
+    "description": "albumBookmarkRemoveAlert"
   },
-  "playingfromSelection": "Přehrávání z výběru",
-  "@playingfromSelection": {
-    "description": "playingfromSelection"
+  "albums": "Alba",
+  "@albums": {
+    "description": "albums"
   },
-  "playingfromArtist": "Přehrávání od umělce",
-  "@playingfromArtist": {
-    "description": "playingfromArtist"
+  "albumsByTaste": "Podle vašich chutí",
+  "@albumsByTaste": {
+    "description": "albumsByTaste"
   },
-  "randomSelection": "Náhodný výběr",
-  "@randomSelection": {
-    "description": "randomSelection"
+  "allFieldsReqMsg": "Všechna pole jsou povinná",
+  "@allFieldsReqMsg": {
+    "description": "allFieldsReqMsg"
   },
-  "randomRadio": "Náhodné rádio",
-  "@randomRadio": {
-    "description": "randomRadio"
+  "androidBackupWarning": "Netestováno: Zaškrtnutím políčka po stažení více než 60 souborů může proces spotřebovat velké množství paměti a může způsobit pád telefonu nebo aplikace. Pokračujte na vlastní nebezpečí.",
+  "@androidBackupWarning": {
+    "description": "androidBackupWarning"
   },
-  "autoOpenPlayer": "Automaticky otevřít obrazovku přehrávače",
-  "@autoOpenPlayer": {
-    "description": "autoOpenPlayer"
+  "appInfo": "Informace o aplikaci",
+  "@appInfo": {
+    "description": "appInfo"
   },
-  "autoOpenPlayerDes": "Povolí/zakáže automatické otevření přehrávače na celou obrazovku při výběru skladby pro přehrávání",
-  "@autoOpenPlayerDes": {
-    "description": "autoOpenPlayerDes"
+  "artistBookmarkAddAlert": "Interpret přidán do záložek!",
+  "@artistBookmarkAddAlert": {
+    "description": "artistBookmarkAddAlert"
   },
-  "selectSongs": "Vybrat skladby",
-  "@selectSongs": {
-    "description": "selectSongs"
+  "artistBookmarkRemoveAlert": "Interpret odstraněn ze záložek!",
+  "@artistBookmarkRemoveAlert": {
+    "description": "artistBookmarkRemoveAlert"
   },
-  "selectAll": "Vybrat všechno",
-  "@selectAll": {
-    "description": "selectAll"
+  "artistDesNotAvailable": "Popis není k dispozici!",
+  "@artistDesNotAvailable": {
+    "description": "artistDesNotAvailable"
   },
-  "reArrangeSongs": "Přeskupit skladby",
-  "@reArrangeSongs": {
-    "description": "reArrangeSongs"
+  "artists": "Interpreti",
+  "@artists": {
+    "description": "artists"
   },
-  "exportingPlaylist": "Exportování playlistu...",
-  "@exportingPlaylist": {
-    "description": "exportingPlaylist"
+  "artistsByTaste": "Podle vašich chutí",
+  "@artistsByTaste": {
+    "description": "artistsByTaste"
   },
-  "playlistExportedMsg": "Playlist úspěšně exportován do",
-  "@playlistExportedMsg": {
-    "description": "playlistExportedMsg"
+  "audioCodec": "Audio kodek",
+  "@audioCodec": {
+    "description": "audioCodec"
   },
-  "exportError": "Chyba při exportování playlistu",
-  "@exportError": {
-    "description": "exportError"
+  "auth_2fa_code": "Autentizační kód",
+  "@auth_2fa_code": {
+    "description": "auth_2fa_code"
   },
-  "exportErrorPermission": "Oprávnění odepřeno při exportování",
-  "@exportErrorPermission": {
-    "description": "exportErrorPermission"
+  "auth_2fa_invalid": "Zadejte platný 6místný kód nebo se znovu přihlaste.",
+  "@auth_2fa_invalid": {
+    "description": "auth_2fa_invalid"
   },
-  "exportErrorFormat": "Chyba formátování dat playlistu",
-  "@exportErrorFormat": {
-    "description": "exportErrorFormat"
+  "auth_2fa_subtitle": "Zadejte 6místný kód z aplikace pro ověřování. Tento přístup vyprší za 5 minut.",
+  "@auth_2fa_subtitle": {
+    "description": "auth_2fa_subtitle"
   },
-  "importPlaylist": "Importovat playlist",
-  "@importPlaylist": {
-    "description": "importPlaylist"
+  "auth_2fa_title": "Dvoufaktorová autentizace",
+  "@auth_2fa_title": {
+    "description": "auth_2fa_title"
   },
-  "importPlaylistDesc": "Výběr dříve exportovaného souboru JSON s playlistem k importu",
-  "@importPlaylistDesc": {
-    "description": "importPlaylistDesc"
+  "auth_2fa_verify": "Zkontrolujte a pokračujte",
+  "@auth_2fa_verify": {
+    "description": "auth_2fa_verify"
   },
-  "selectFile": "Vybrat soubor",
-  "@selectFile": {
-    "description": "selectFile"
+  "auth_agree_personal_data": "Přijímáme nesprávné údaje...",
+  "@auth_agree_personal_data": {
+    "description": "auth_agree_personal_data"
   },
-  "playlistImportedMsg": "Playlist úspěšně importován",
-  "@playlistImportedMsg": {
-    "description": "playlistImportedMsg"
+  "auth_brand_description_1": "Přinesli jsme přihlášení, registraci a obnovení hesla z předchozího projektu, přizpůsobené pro tuto hudební aplikaci.",
+  "@auth_brand_description_1": {
+    "description": "auth_brand_description_1"
   },
-  "importError": "Chyba při importování playlistu",
-  "@importError": {
-    "description": "importError"
+  "auth_brand_description_2": "Vaše relace žije v zabezpečeném úložišti a je ověřena stejným backendem, který jste již používali.",
+  "@auth_brand_description_2": {
+    "description": "auth_brand_description_2"
   },
-  "importErrorFormat": "Nesprávný formát souboru",
-  "@importErrorFormat": {
-    "description": "importErrorFormat"
-  },
-  "invalidPlaylistFile": "Nesprávná struktura souboru playlistu",
-  "@invalidPlaylistFile": {
-    "description": "invalidPlaylistFile"
-  },
-  "importErrorDatabase": "Chyba při ukládání do databáze",
-  "@importErrorDatabase": {
-    "description": "importErrorDatabase"
-  },
-  "fileNotFound": "Soubor nebyl nalezen",
-  "@fileNotFound": {
-    "description": "fileNotFound"
-  },
-  "importLargeFileNote": "Poznámka: Import velkých playlistů může trvat déle",
-  "@importLargeFileNote": {
-    "description": "importLargeFileNote"
-  },
-  "importingPlaylist": "Importování playlistu...",
-  "@importingPlaylist": {
-    "description": "importingPlaylist"
-  },
-  "exportPlaylist": "Exportovat playlist",
-  "@exportPlaylist": {
-    "description": "exportPlaylist"
-  },
-  "exportErrorStorage": "Nedostatek úložného místa",
-  "@exportErrorStorage": {
-    "description": "exportErrorStorage"
-  },
-  "importErrorFileAccess": "Nepodařilo se získat přístup k vybranému souboru",
-  "@importErrorFileAccess": {
-    "description": "importErrorFileAccess"
-  },
-  "exportPlaylistCsv": "Exportovat playlist jako CSV",
-  "@exportPlaylistCsv": {
-    "description": "exportPlaylistCsv"
-  },
-  "exportPlaylistJson": "Exportovat playlist do JSON",
-  "@exportPlaylistJson": {
-    "description": "exportPlaylistJson"
-  },
-  "exportPlaylistJsonSubtitle": "Tento formát lze importovat",
-  "@exportPlaylistJsonSubtitle": {
-    "description": "exportPlaylistJsonSubtitle"
-  },
-  "exportPlaylistCsvSubtitle": "Nelze importovat sem",
-  "@exportPlaylistCsvSubtitle": {
-    "description": "exportPlaylistCsvSubtitle"
-  },
-  "exportToOnlineMusic": "Exportovat na Online Music",
-  "@exportToOnlineMusic": {
-    "description": "exportToOnlineMusic"
-  },
-  "exportToOnlineMusicSubtitle": "Vaše playlisty (s méně než 50 skladbami) se přesunou do aktuální fronty. Nezapomeňte je po otevření v MusicService přidat do playlistu/uložit",
-  "@exportToOnlineMusicSubtitle": {
-    "description": "exportToOnlineMusicSubtitle"
-  },
-  "linkCopied": "Odkaz zkopírován do schránky",
-  "@linkCopied": {
-    "description": "linkCopied"
-  },
-  "keepScreenOnWhilePlaying": "Nechat obrazovku zapnutou během přehrávání",
-  "@keepScreenOnWhilePlaying": {
-    "description": "keepScreenOnWhilePlaying"
-  },
-  "keepScreenOnWhilePlayingDes": "Pokud je povoleno, obrazovka zařízení zůstane během přehrávání hudby zapnutá",
-  "@keepScreenOnWhilePlayingDes": {
-    "description": "keepScreenOnWhilePlayingDes"
-  },
-  "auth_login_success": "Úspěšně přihlášeni",
-  "@auth_login_success": {
-    "description": "auth_login_success"
-  },
-  "settings_cloud_backup": "Cloudové zálohování",
-  "@settings_cloud_backup": {
-    "description": "settings_cloud_backup"
-  },
-  "settings_migration_title": "Migrujte z Joss Music Kotlin",
-  "@settings_migration_title": {
-    "description": "settings_migration_title"
-  },
-  "backup_confirm_question": "Chcete provést zálohu?",
-  "@backup_confirm_question": {
-    "description": "backup_confirm_question"
-  },
-  "backup_selection_prompt": "Vyberte, která data chcete zálohovat",
-  "@backup_selection_prompt": {
-    "description": "backup_selection_prompt"
-  },
-  "search_recent_title": "Nedávná vyhledávání",
-  "@search_recent_title": {
-    "description": "search_recent_title"
-  },
-  "back": "Návrat",
-  "@back": {
-    "description": "back"
-  },
-  "auth_forgot_password": "Zapomněl jsem heslo",
-  "@auth_forgot_password": {
-    "description": "auth_forgot_password"
+  "auth_brand_not_configured": "Soubor .env musí být nakonfigurován pro připojení ověřovacího backendu.",
+  "@auth_brand_not_configured": {
+    "description": "auth_brand_not_configured"
   },
   "auth_btn_login": "Přihlášení",
   "@auth_btn_login": {
@@ -1144,53 +128,141 @@
   "@auth_btn_register": {
     "description": "auth_btn_register"
   },
-  "email": "E-mail",
-  "@email": {
-    "description": "email"
-  },
-  "password_text": "Heslo",
-  "@password_text": {
-    "description": "Contraseña texto traducido"
+  "auth_btn_send_email": "Odeslat poštu",
+  "@auth_btn_send_email": {
+    "description": "auth_btn_send_email"
   },
   "auth_confirm_password": "Potvrďte heslo",
   "@auth_confirm_password": {
     "description": "auth_confirm_password"
   },
-  "auth_welcome_title": "Vítejte v Estrella Music",
-  "@auth_welcome_title": {
-    "description": "auth_welcome_title"
+  "auth_error_invalid_credentials": "Nesprávný e-mail nebo heslo.",
+  "@auth_error_invalid_credentials": {
+    "description": "auth_error_invalid_credentials"
   },
-  "auth_welcome_subtitle": "Vítejte v Estrella Music",
-  "@auth_welcome_subtitle": {
-    "description": "auth_welcome_subtitle"
+  "auth_error_invalid_email": "Zadejte platný e-mail.",
+  "@auth_error_invalid_email": {
+    "description": "auth_error_invalid_email"
+  },
+  "auth_error_not_configured": "V souboru .env chybí ověřovací backend pro konfiguraci.",
+  "@auth_error_not_configured": {
+    "description": "auth_error_not_configured"
+  },
+  "auth_error_not_verified": "Váš účet ještě není ověřen.",
+  "@auth_error_not_verified": {
+    "description": "auth_error_not_verified"
+  },
+  "auth_error_unknown": "Operaci nebylo možné dokončit.",
+  "@auth_error_unknown": {
+    "description": "auth_error_unknown"
   },
   "auth_first_name": "Křestní jméno",
   "@auth_first_name": {
     "description": "auth_first_name"
   },
+  "auth_forgot_password": "Zapomněl jsem heslo",
+  "@auth_forgot_password": {
+    "description": "auth_forgot_password"
+  },
+  "auth_forgot_password_subtitle": "Pokyny vám zašleme na e-mail vašeho účtu.",
+  "@auth_forgot_password_subtitle": {
+    "description": "auth_forgot_password_subtitle"
+  },
+  "auth_hint_email": "jmeno@mail.com",
+  "@auth_hint_email": {
+    "description": "auth_hint_email"
+  },
   "auth_last_name": "Příjmení",
   "@auth_last_name": {
     "description": "auth_last_name"
   },
-  "auth_agree_personal_data": "Přijímáme nesprávné údaje...",
-  "@auth_agree_personal_data": {
-    "description": "auth_agree_personal_data"
+  "auth_login_success": "Úspěšně přihlášeni",
+  "@auth_login_success": {
+    "description": "auth_login_success"
   },
-  "settings_general_section": "Generál",
-  "@settings_general_section": {
-    "description": "settings_general_section"
+  "auth_recovery_email_error": "E-mail nebylo možné odeslat.",
+  "@auth_recovery_email_error": {
+    "description": "auth_recovery_email_error"
   },
-  "settings_logout": "Odhlaste se",
-  "@settings_logout": {
-    "description": "settings_logout"
+  "auth_recovery_email_sent": "Email odeslán.",
+  "@auth_recovery_email_sent": {
+    "description": "auth_recovery_email_sent"
   },
-  "settings_cloud_backup_desc": "Nahrát, obnovit a spravovat...",
-  "@settings_cloud_backup_desc": {
-    "description": "settings_cloud_backup_desc"
+  "auth_register_error": "Účet se nepodařilo vytvořit.",
+  "@auth_register_error": {
+    "description": "auth_register_error"
   },
-  "settings_migration_desc": "Importujte seznamy skladeb, skladby...",
-  "@settings_migration_desc": {
-    "description": "settings_migration_desc"
+  "auth_register_success": "Účet byl úspěšně vytvořen.",
+  "@auth_register_success": {
+    "description": "auth_register_success"
+  },
+  "auth_welcome_subtitle": "Vítejte v Estrella Music",
+  "@auth_welcome_subtitle": {
+    "description": "auth_welcome_subtitle"
+  },
+  "auth_welcome_title": "Vítejte v Estrella Music",
+  "@auth_welcome_title": {
+    "description": "auth_welcome_title"
+  },
+  "autoDownFavSong": "Automaticky stáhnout oblíbené skladby",
+  "@autoDownFavSong": {
+    "description": "autoDownFavSong"
+  },
+  "autoDownFavSongDes": "Automaticky stáhne oblíbené skladby po přidání do oblíbených položek",
+  "@autoDownFavSongDes": {
+    "description": "autoDownFavSongDes"
+  },
+  "autoOpenPlayer": "Automaticky otevřít obrazovku přehrávače",
+  "@autoOpenPlayer": {
+    "description": "autoOpenPlayer"
+  },
+  "autoOpenPlayerDes": "Povolí/zakáže automatické otevření přehrávače na celou obrazovku při výběru skladby pro přehrávání",
+  "@autoOpenPlayerDes": {
+    "description": "autoOpenPlayerDes"
+  },
+  "back": "Návrat",
+  "@back": {
+    "description": "back"
+  },
+  "backFilesFound": "databáze nalezené",
+  "@backFilesFound": {
+    "description": "backFilesFound"
+  },
+  "backgroundPlay": "Přehrávání na pozadí",
+  "@backgroundPlay": {
+    "description": "backgroundPlay"
+  },
+  "backgroundPlayDes": "Zapni/Vypni přehrávání hudby na pozadí (Hudba se potom dá ovládat v horní liště a na zamčené obrazovce)",
+  "@backgroundPlayDes": {
+    "description": "backgroundPlayDes"
+  },
+  "backup": "Zálohovat",
+  "@backup": {
+    "description": "backup"
+  },
+  "backupAppData": "Zálohovat data aplikace",
+  "@backupAppData": {
+    "description": "backupAppData"
+  },
+  "backupInProgress": "Probíhá zálohování...",
+  "@backupInProgress": {
+    "description": "backupInProgress"
+  },
+  "backupMsg": "Záloha úspěšně uložena!",
+  "@backupMsg": {
+    "description": "backupMsg"
+  },
+  "backupSettingsAndPlaylists": "Zálohovat nastavení a playlisty",
+  "@backupSettingsAndPlaylists": {
+    "description": "backupSettingsAndPlaylists"
+  },
+  "backupSettingsAndPlaylistsDes": "Uloží všechna nastavení, playlisty a přihlašovací údaje do záložního souboru",
+  "@backupSettingsAndPlaylistsDes": {
+    "description": "backupSettingsAndPlaylistsDes"
+  },
+  "backup_auth_required": "Potřebujete aktivní relaci...",
+  "@backup_auth_required": {
+    "description": "backup_auth_required"
   },
   "backup_btn_restart": "Restartujte aplikaci",
   "@backup_btn_restart": {
@@ -1200,217 +272,117 @@
   "@backup_btn_upload": {
     "description": "backup_btn_upload"
   },
-  "backup_no_backups": "Zatím nejsou žádné zálohy...",
-  "@backup_no_backups": {
-    "description": "backup_no_backups"
-  },
-  "backup_auth_required": "Potřebujete aktivní relaci...",
-  "@backup_auth_required": {
-    "description": "backup_auth_required"
-  },
-  "backup_upload_success": "Záloha byla nahrána správně.",
-  "@backup_upload_success": {
-    "description": "backup_upload_success"
-  },
-  "backup_restore_success": "Záloha obnovena. Restartujte aplikaci.",
-  "@backup_restore_success": {
-    "description": "backup_restore_success"
+  "backup_confirm_question": "Chcete provést zálohu?",
+  "@backup_confirm_question": {
+    "description": "backup_confirm_question"
   },
   "backup_delete_success": "Záloha byla smazána.",
   "@backup_delete_success": {
     "description": "backup_delete_success"
   },
-  "genre_pop": "Pop",
-  "@genre_pop": {
-    "description": "genre_pop"
+  "backup_no_backups": "Zatím nejsou žádné zálohy...",
+  "@backup_no_backups": {
+    "description": "backup_no_backups"
   },
-  "genre_rock": "Rock",
-  "@genre_rock": {
-    "description": "genre_rock"
+  "backup_restore_success": "Záloha obnovena. Restartujte aplikaci.",
+  "@backup_restore_success": {
+    "description": "backup_restore_success"
   },
-  "genre_hiphop": "hip hop",
-  "@genre_hiphop": {
-    "description": "genre_hiphop"
+  "backup_select_folder_dialog": "Vyberte složku pro zálohování",
+  "@backup_select_folder_dialog": {
+    "description": "backup_select_folder_dialog"
   },
-  "genre_electronic": "Elektronika",
-  "@genre_electronic": {
-    "description": "genre_electronic"
+  "backup_selection_prompt": "Vyberte, která data chcete zálohovat",
+  "@backup_selection_prompt": {
+    "description": "backup_selection_prompt"
   },
-  "genre_jazz": "Jazz",
-  "@genre_jazz": {
-    "description": "genre_jazz"
+  "backup_upload_success": "Záloha byla nahrána správně.",
+  "@backup_upload_success": {
+    "description": "backup_upload_success"
   },
-  "genre_latin": "latinský",
-  "@genre_latin": {
-    "description": "genre_latin"
+  "basedOnLast": "Podle poslední akce",
+  "@basedOnLast": {
+    "description": "basedOnLast"
   },
-  "migration_btn_select": "Vyberte soubor a importujte",
-  "@migration_btn_select": {
-    "description": "migration_btn_select"
+  "bitrate": "Bitrate",
+  "@bitrate": {
+    "description": "bitrate"
   },
-  "forgottenFavorites": "zapomenuté oblíbené",
-  "@forgottenFavorites": {
-    "description": "forgottenFavorites"
+  "blacklistPipedPlaylist": "Seznam zakázaných skladeb",
+  "@blacklistPipedPlaylist": {
+    "description": "blacklistPipedPlaylist"
   },
-  "mostListenedSong": "Nejposlouchanější písnička",
-  "@mostListenedSong": {
-    "description": "mostListenedSong"
+  "blacklistPlstResetAlert": "Resetování proběhlo úspěšně!",
+  "@blacklistPlstResetAlert": {
+    "description": "blacklistPlstResetAlert"
   },
-  "reproducedBy": "Reprodukováno uživatelem",
-  "@reproducedBy": {
-    "description": "reproducedBy"
+  "by": "od",
+  "@by": {
+    "description": "by"
   },
-  "recentSearches": "Nedávná vyhledávání",
-  "@recentSearches": {
-    "description": "recentSearches"
+  "cacheHomeScreenData": "Data obsahu domovské obrazovky v mezipaměti",
+  "@cacheHomeScreenData": {
+    "description": "cacheHomeScreenData"
   },
-  "popularTracks": "Populární skladby",
-  "@popularTracks": {
-    "description": "popularTracks"
+  "cacheHomeScreenDataDes": "Zapněte ukládání dat obsahu domovské obrazovky do mezipaměti. Pokud je tato možnost povolena, domovská obrazovka se načte okamžitě",
+  "@cacheHomeScreenDataDes": {
+    "description": "cacheHomeScreenDataDes"
   },
-  "latestRelease": "Nejnovější vydání",
-  "@latestRelease": {
-    "description": "latestRelease"
+  "cacheSongs": "Skladby mezipaměti",
+  "@cacheSongs": {
+    "description": "cacheSongs"
   },
-  "follow": "Pokračovat",
-  "@follow": {
-    "description": "follow"
+  "cacheSongsDes": "Ukládání skladeb do mezipaměti během přehrávání pro budoucí/offline přehrávání zabere v zařízení další místo",
+  "@cacheSongsDes": {
+    "description": "cacheSongsDes"
   },
-  "following": "Následující",
-  "@following": {
-    "description": "following"
+  "cachedOrOffline": "Uloženo do mezipaměti / Dostupné Offline",
+  "@cachedOrOffline": {
+    "description": "cachedOrOffline"
   },
-  "listenNow": "Poslouchej teď",
-  "@listenNow": {
-    "description": "listenNow"
+  "cancel": "Zrušit",
+  "@cancel": {
+    "description": "cancel"
   },
-  "video": "Video",
-  "@video": {
-    "description": "video"
+  "cancelTimer": "Zruš časovač",
+  "@cancelTimer": {
+    "description": "cancelTimer"
   },
-  "about": "O",
-  "@about": {
-    "description": "about"
+  "cancelTimerAlert": "Časovač spánku byl zrušen",
+  "@cancelTimerAlert": {
+    "description": "cancelTimerAlert"
   },
-  "readMore": "Přečtěte si více",
-  "@readMore": {
-    "description": "readMore"
+  "clearImgCache": "Vyčisti cache obrázků",
+  "@clearImgCache": {
+    "description": "clearImgCache"
   },
-  "speedAndPitch": "Rychlost a rozteč",
-  "@speedAndPitch": {
-    "description": "speedAndPitch"
+  "clearImgCacheAlert": "Vymazání mezipaměti obrázků proběhlo úspěšně",
+  "@clearImgCacheAlert": {
+    "description": "clearImgCacheAlert"
   },
-  "playbackSpeed": "Rychlost přehrávání",
-  "@playbackSpeed": {
-    "description": "playbackSpeed"
+  "clearImgCacheDes": "Klikni sem aby si vyčistil cache obrázků (Není doporučeno ale může se hodit při obnově zachovaného data z obrázků)",
+  "@clearImgCacheDes": {
+    "description": "clearImgCacheDes"
   },
-  "songPitch": "tón písně",
-  "@songPitch": {
-    "description": "songPitch"
+  "close": "Blízko",
+  "@close": {
+    "description": "close"
   },
-  "musicRecognition": "Rozpoznávání hudby",
-  "@musicRecognition": {
-    "description": "musicRecognition"
+  "closeApp": "Zavřít aplikaci",
+  "@closeApp": {
+    "description": "closeApp"
   },
-  "listeningToEnvironment": "Naslouchat prostředí...",
-  "@listeningToEnvironment": {
-    "description": "listeningToEnvironment"
+  "cloudLibraryFound": "Byla nalezena cloudová knihovna.",
+  "@cloudLibraryFound": {
+    "description": "cloudLibraryFound"
   },
-  "micInstruction": "Ujistěte se, že hudba hraje v blízkosti mikrofonu dostatečně hlasitě.",
-  "@micInstruction": {
-    "description": "micInstruction"
+  "cloudLibraryFoundDeviceWillDownload": "Byla nalezena cloudová knihovna. Toto zařízení jej stáhne, aniž by jej přepsalo.",
+  "@cloudLibraryFoundDeviceWillDownload": {
+    "description": "cloudLibraryFoundDeviceWillDownload"
   },
-  "processingAudio": "Zpracování zvuku...",
-  "@processingAudio": {
-    "description": "processingAudio"
-  },
-  "shazamSearching": "Hledání shod v databázi Shazam...",
-  "@shazamSearching": {
-    "description": "shazamSearching"
-  },
-  "songFound": "Píseň nalezena!",
-  "@songFound": {
-    "description": "songFound"
-  },
-  "playNow": "Hrát hned",
-  "@playNow": {
-    "description": "playNow"
-  },
-  "searchInLibrary": "Hledat v knihovně",
-  "@searchInLibrary": {
-    "description": "searchInLibrary"
-  },
-  "noMatchesFound": "Žádné shody",
-  "@noMatchesFound": {
-    "description": "noMatchesFound"
-  },
-  "noMatchInstruction": "V nahraném zvuku nelze najít žádné skladby",
-  "@noMatchInstruction": {
-    "description": "noMatchInstruction"
-  },
-  "errorOccurred": "Došlo k chybě",
-  "@errorOccurred": {
-    "description": "errorOccurred"
-  },
-  "playingRecognizedTrack": "Přehrávání:",
-  "@playingRecognizedTrack": {
-    "description": "playingRecognizedTrack"
-  },
-  "errorPlayingTrack": "Chyba při přehrávání:",
-  "@errorPlayingTrack": {
-    "description": "errorPlayingTrack"
-  },
-  "welcome_title": "Vaše hudba, vaše cesta",
-  "@welcome_title": {
-    "description": "welcome_title"
-  },
-  "welcome_subtitle": "Vyberte si, jak chcete od této chvíle zažít Estrella Music.",
-  "@welcome_subtitle": {
-    "description": "welcome_subtitle"
-  },
-  "welcome_intro": "Modernizovali jsme naši platformu. Starý systém nahrávání ručních záloh byl deaktivován. Nyní máte dva jasné způsoby, jak spravovat svou hudební knihovnu.",
-  "@welcome_intro": {
-    "description": "welcome_intro"
-  },
-  "recommend_cloud": "Pro zážitek podobný Spotify doporučujeme aktivovat Cloud Mode: synchronizace mezi všemi vašimi zařízeními v reálném čase a automatické zálohování, aniž byste museli cokoli dělat.",
-  "@recommend_cloud": {
-    "description": "recommend_cloud"
-  },
-  "swipe_prompt": "Přejetím prozkoumejte možnosti ➔",
-  "@swipe_prompt": {
-    "description": "swipe_prompt"
-  },
-  "local_title": "Místní režim",
-  "@local_title": {
-    "description": "local_title"
-  },
-  "local_subtitle": "Absolutní soukromí na vašem zařízení",
-  "@local_subtitle": {
-    "description": "local_subtitle"
-  },
-  "local_b1": "Funguje bez nutnosti přihlášení.",
-  "@local_b1": {
-    "description": "local_b1"
-  },
-  "local_b2": "Celá vaše knihovna zůstává výhradně na tomto počítači.",
-  "@local_b2": {
-    "description": "local_b2"
-  },
-  "local_b3": "Poznámka: Žádné ruční cloudové zálohy. Pokud ztratíte zařízení nebo odinstalujete aplikaci, vaše data nebude možné obnovit.",
-  "@local_b3": {
-    "description": "local_b3"
-  },
-  "local_btn": "Používejte pouze na tomto zařízení",
-  "@local_btn": {
-    "description": "local_btn"
-  },
-  "cloud_title": "Cloudový režim (doporučeno)",
-  "@cloud_title": {
-    "description": "cloud_title"
-  },
-  "cloud_subtitle": "Synchronizace v reálném čase s Joss Red",
-  "@cloud_subtitle": {
-    "description": "cloud_subtitle"
+  "cloudModeReadyOfflineCache": "Cloudový režim je připraven. Toto zařízení bude fungovat jako offline mezipaměť.",
+  "@cloudModeReadyOfflineCache": {
+    "description": "cloudModeReadyOfflineCache"
   },
   "cloud_b1": "Přihlaste se bezpečně pomocí svého účtu Joss Red.",
   "@cloud_b1": {
@@ -1428,511 +400,137 @@
   "@cloud_btn": {
     "description": "cloud_btn"
   },
-  "slide_indicator": "Krok {current} ze 3",
-  "@slide_indicator": {
-    "placeholders": {
-      "current": {
-        "type": "String"
-      }
-    },
-    "description": "slide_indicator"
+  "cloud_subtitle": "Synchronizace v reálném čase s Joss Red",
+  "@cloud_subtitle": {
+    "description": "cloud_subtitle"
   },
-  "news_card_title": "Estrella Music se vyvinula!",
-  "@news_card_title": {
-    "description": "news_card_title"
-  },
-  "news_card_subtitle": "100% synchronizace s Joss Red, seznamy skladeb s přáteli a mnoho dalšího. Klepnutím zobrazíte, co je nového.",
-  "@news_card_subtitle": {
-    "description": "news_card_subtitle"
-  },
-  "news_dialog_title": "Estrella Music News",
-  "@news_dialog_title": {
-    "description": "news_dialog_title"
-  },
-  "news_item_sync_title": "Plná integrace s Joss Red",
-  "@news_item_sync_title": {
-    "description": "news_item_sync_title"
-  },
-  "news_item_sync_desc": "Vaše seznamy skladeb a oblíbené položky se nyní ukládají a automaticky synchronizují v cloudu s vaším hlavním účtem Joss Red.",
-  "@news_item_sync_desc": {
-    "description": "news_item_sync_desc"
-  },
-  "news_item_collab_title": "Seznamy skladeb pro spolupráci",
-  "@news_item_collab_title": {
-    "description": "news_item_collab_title"
-  },
-  "news_item_collab_desc": "Vytvářejte seznamy skladeb se svými přáteli! Při vytváření seznamu skladeb zaškrtněte políčko Spolupráce a vyberte přátele, které chcete společně upravovat.",
-  "@news_item_collab_desc": {
-    "description": "news_item_collab_desc"
-  },
-  "news_item_trans_title": "Transparentní synchronizace",
-  "@news_item_trans_title": {
-    "description": "news_item_trans_title"
-  },
-  "news_item_trans_desc": "Již nemusíte klikat na tlačítka ruční synchronizace; Nový motor je zodpovědný za automatické řazení nahoru a dolů.",
-  "@news_item_trans_desc": {
-    "description": "news_item_trans_desc"
-  },
-  "news_dialog_section_friends": "Přátelé a správa účtu:",
-  "@news_dialog_section_friends": {
-    "description": "news_dialog_section_friends"
-  },
-  "news_dialog_friends_desc": "Chcete-li přidat přátele, přijímat žádosti nebo spravovat svůj bezpečnostní profil, použijte Joss Red na jeho oficiálních platformách:",
-  "@news_dialog_friends_desc": {
-    "description": "news_dialog_friends_desc"
-  },
-  "news_btn_app": "Aplikace Joss Red (Obchod Play)",
-  "@news_btn_app": {
-    "description": "news_btn_app"
-  },
-  "news_btn_web": "Joss Red Web",
-  "@news_btn_web": {
-    "description": "news_btn_web"
-  },
-  "news_btn_dismiss": "Rozuměl",
-  "@news_btn_dismiss": {
-    "description": "news_btn_dismiss"
-  },
-  "settings_appearance_desc": "Téma, jazyk a animace rozhraní.",
-  "@settings_appearance_desc": {
-    "description": "settings_appearance_desc"
-  },
-  "settings_content_desc": "Objevte filtry, integraci s Piped a mezipaměti.",
-  "@settings_content_desc": {
-    "description": "settings_content_desc"
-  },
-  "settings_playback_desc": "Kvalita streamování, normalizace, ztišení a baterie.",
-  "@settings_playback_desc": {
-    "description": "settings_playback_desc"
-  },
-  "settings_downloads_desc": "Stahování a ukládání",
-  "@settings_downloads_desc": {
-    "description": "settings_downloads_desc"
-  },
-  "settings_downloads_sub": "Zvukové formáty, složky a automatické stahování.",
-  "@settings_downloads_sub": {
-    "description": "settings_downloads_sub"
-  },
-  "settings_account_desc": "Účet a synchronizace",
-  "@settings_account_desc": {
-    "description": "settings_account_desc"
-  },
-  "settings_account_sub": "Cloudový režim, zálohy, seznam přátel a migrace.",
-  "@settings_account_sub": {
-    "description": "settings_account_sub"
-  },
-  "settings_about_desc": "O Estrella Music",
-  "@settings_about_desc": {
-    "description": "settings_about_desc"
-  },
-  "settings_about_sub": "Verze, open source projekt a GitHub.",
-  "@settings_about_sub": {
-    "description": "settings_about_sub"
-  },
-  "settings_local_cloud_title": "Místní režim / EMusic Cloud",
-  "@settings_local_cloud_title": {
-    "description": "settings_local_cloud_title"
-  },
-  "settings_local_cloud_desc": "Vyberte, migrujte nebo zkontrolujte stav synchronizace pomocí Joss Red.",
-  "@settings_local_cloud_desc": {
-    "description": "settings_local_cloud_desc"
-  },
-  "settings_my_friends": "moji přátelé",
-  "@settings_my_friends": {
-    "description": "settings_my_friends"
-  },
-  "settings_my_friends_desc": "Spravujte své přátele Joss Red přímo.",
-  "@settings_my_friends_desc": {
-    "description": "settings_my_friends_desc"
-  },
-  "settings_refresh_visitor_title": "Obnovit ID (ID návštěvníka)",
-  "@settings_refresh_visitor_title": {
-    "description": "settings_refresh_visitor_title"
-  },
-  "settings_refresh_visitor_desc": "Pokud se obsah kanálu Objevit nenačte, znovu vygenerujte své ID Online Music.",
-  "@settings_refresh_visitor_desc": {
-    "description": "settings_refresh_visitor_desc"
-  },
-  "settings_visitor_updated": "Aktualizovaný identifikátor",
-  "@settings_visitor_updated": {
-    "description": "settings_visitor_updated"
-  },
-  "settings_visitor_updated_desc": "Nové ID návštěvníka bylo úspěšně vygenerováno.",
-  "@settings_visitor_updated_desc": {
-    "description": "settings_visitor_updated_desc"
-  },
-  "settings_visitor_error": "Chyba",
-  "@settings_visitor_error": {
-    "description": "settings_visitor_error"
-  },
-  "settings_visitor_error_desc": "Nepodařilo se vygenerovat nový identifikátor. Zkuste to znovu později.",
-  "@settings_visitor_error_desc": {
-    "description": "settings_visitor_error_desc"
-  },
-  "settings_visitor_exception": "Při regeneraci došlo k chybě: {error}",
-  "@settings_visitor_exception": {
-    "placeholders": {
-      "error": {
-        "type": "String"
-      }
-    },
-    "description": "settings_visitor_exception"
-  },
-  "migratedLibrary": "Migrovaná knihovna",
-  "@migratedLibrary": {
-    "description": "migratedLibrary"
-  },
-  "noSongsInCollection": "V této sbírce nejsou žádné skladby",
-  "@noSongsInCollection": {
-    "description": "noSongsInCollection"
-  },
-  "startupScreen": "Otevřete při spuštění",
-  "@startupScreen": {
-    "description": "startupScreen"
-  },
-  "startupScreenDescription": "Vyberte sekci, kterou Estrella Music otevře jako první",
-  "@startupScreenDescription": {
-    "description": "startupScreenDescription"
-  },
-  "friends": "Přátelé",
-  "@friends": {
-    "description": "friends"
-  },
-  "dailyDiscover": "Denní objevování",
-  "@dailyDiscover": {
-    "description": "dailyDiscover"
-  },
-  "keepListening": "poslouchejte dál",
-  "@keepListening": {
-    "description": "keepListening"
-  },
-  "similarToTitle": "Podobné jako {title}",
-  "@similarToTitle": {
-    "placeholders": {
-      "title": {
-        "type": "String"
-      }
-    },
-    "description": "similarToTitle"
-  },
-  "pipedPlaylistDescription": "Piped Playlist",
-  "@pipedPlaylistDescription": {
-    "description": "pipedPlaylistDescription"
+  "cloud_title": "Cloudový režim (doporučeno)",
+  "@cloud_title": {
+    "description": "cloud_title"
   },
   "collaborativePlaylistDescription": "Seznam skladeb pro spolupráci",
   "@collaborativePlaylistDescription": {
     "description": "collaborativePlaylistDescription"
   },
-  "libraryPlaylistDescription": "Knihovna Playlist",
-  "@libraryPlaylistDescription": {
-    "description": "libraryPlaylistDescription"
-  },
-  "untitledSong": "Píseň bez názvu",
-  "@untitledSong": {
-    "description": "untitledSong"
-  },
-  "migratedPlaylist": "Migrovaný seznam skladeb",
-  "@migratedPlaylist": {
-    "description": "migratedPlaylist"
-  },
-  "migratedAlbum": "Migrované album",
-  "@migratedAlbum": {
-    "description": "migratedAlbum"
-  },
-  "songsImportedFromJossMusic": "Skladby importované z Joss Music Kotlin",
-  "@songsImportedFromJossMusic": {
-    "description": "songsImportedFromJossMusic"
-  },
-  "importedFromJossMusic": "Dovezeno z Joss Music Kotlin",
-  "@importedFromJossMusic": {
-    "description": "importedFromJossMusic"
-  },
-  "syncLocalModeActive": "Místní režim je aktivní",
-  "@syncLocalModeActive": {
-    "description": "syncLocalModeActive"
-  },
-  "syncCloudPending": "Cloudový režim je aktivní. Čeká na synchronizaci.",
-  "@syncCloudPending": {
-    "description": "syncCloudPending"
-  },
-  "syncCloudDownloadingExisting": "Aktivován cloudový režim. Stahování stávající knihovny.",
-  "@syncCloudDownloadingExisting": {
-    "description": "syncCloudDownloadingExisting"
-  },
-  "syncCloudMigrationComplete": "Aktivován cloudový režim. Migrovaná knihovna.",
-  "@syncCloudMigrationComplete": {
-    "description": "syncCloudMigrationComplete"
-  },
-  "syncLocalDeviceOnly": "Vaše data jsou uchovávána pouze v tomto zařízení.",
-  "@syncLocalDeviceOnly": {
-    "description": "syncLocalDeviceOnly"
-  },
-  "syncDownloading": "Stahování změn EMusic...",
-  "@syncDownloading": {
-    "description": "syncDownloading"
-  },
-  "syncDownloadFailed": "Stažení synchronizace se nezdařilo.",
-  "@syncDownloadFailed": {
-    "description": "syncDownloadFailed"
-  },
-  "syncLocalChangesFirst": "Došlo k novým místním změnám. Před stažením budou nahrány.",
-  "@syncLocalChangesFirst": {
-    "description": "syncLocalChangesFirst"
-  },
-  "syncLibrarySynced": "Synchronizovaná knihovna.",
-  "@syncLibrarySynced": {
-    "description": "syncLibrarySynced"
-  },
-  "syncOfflinePending": "Offline. Změny čekají na vyřízení.",
-  "@syncOfflinePending": {
-    "description": "syncOfflinePending"
-  },
-  "syncLibraryUpToDate": "Knihovna aktuální.",
-  "@syncLibraryUpToDate": {
-    "description": "syncLibraryUpToDate"
-  },
-  "syncChangesSynced": "{count} synchronizovaných změn.",
-  "@syncChangesSynced": {
-    "placeholders": {
-      "count": {
-        "type": "String"
-      }
-    },
-    "description": "syncChangesSynced"
-  },
-  "syncUploading": "Nahrávání změn do EMusic...",
-  "@syncUploading": {
-    "description": "syncUploading"
-  },
-  "syncUploadSuccessWs": "Změny byly úspěšně nahrány (WS).",
-  "@syncUploadSuccessWs": {
-    "description": "syncUploadSuccessWs"
-  },
-  "syncUploadWsRetry": "Nelze nahrát pomocí WS. Bude to zopakováno později.",
-  "@syncUploadWsRetry": {
-    "description": "syncUploadWsRetry"
-  },
-  "syncUploadSuccess": "Změny byly nahrány správně.",
-  "@syncUploadSuccess": {
-    "description": "syncUploadSuccess"
-  },
-  "syncUploadRetry": "Nedalo se vstát. Bude to zopakováno později.",
-  "@syncUploadRetry": {
-    "description": "syncUploadRetry"
-  },
-  "syncOfflineRetry": "Offline. Změny uloženy pro opakování.",
-  "@syncOfflineRetry": {
-    "description": "syncOfflineRetry"
-  },
-  "syncUnconfirmedRetry": "EMusic nepotvrdila všechny změny. Budou znovu souzeni.",
-  "@syncUnconfirmedRetry": {
-    "description": "syncUnconfirmedRetry"
-  },
-  "syncChangesConfirmed": "{count} změny potvrzeny.",
-  "@syncChangesConfirmed": {
-    "placeholders": {
-      "count": {
-        "type": "String"
-      }
-    },
-    "description": "syncChangesConfirmed"
-  },
-  "migrationAlreadyRunning": "Migrace již probíhá.",
-  "@migrationAlreadyRunning": {
-    "description": "migrationAlreadyRunning"
-  },
-  "migrationLoginRequired": "Před migrací se přihlaste k Joss Red.",
-  "@migrationLoginRequired": {
-    "description": "migrationLoginRequired"
-  },
-  "migrationCheckingCloud": "Kontrola, zda EMusic Cloud již má knihovnu...",
-  "@migrationCheckingCloud": {
-    "description": "migrationCheckingCloud"
-  },
-  "cloudLibraryFoundDeviceWillDownload": "Byla nalezena cloudová knihovna. Toto zařízení jej stáhne, aniž by jej přepsalo.",
-  "@cloudLibraryFoundDeviceWillDownload": {
-    "description": "cloudLibraryFoundDeviceWillDownload"
-  },
-  "cloudLibraryFound": "Byla nalezena cloudová knihovna.",
-  "@cloudLibraryFound": {
-    "description": "cloudLibraryFound"
-  },
-  "migrationCreatingBackup": "Před připojením cloudu se vytváří místní záloha...",
-  "@migrationCreatingBackup": {
-    "description": "migrationCreatingBackup"
-  },
-  "migrationAnalyzingLocal": "Analýza místní knihovny...",
-  "@migrationAnalyzingLocal": {
-    "description": "migrationAnalyzingLocal"
-  },
-  "migrationPreparingCloud": "Příprava migrace v EMusic Cloud...",
-  "@migrationPreparingCloud": {
-    "description": "migrationPreparingCloud"
-  },
-  "migrationStartFailed": "EMusic Cloud nemohl spustit migraci.",
-  "@migrationStartFailed": {
-    "description": "migrationStartFailed"
-  },
-  "migrationUploadingData": "Nahrávání seznamů skladeb, oblíbených položek a historie...",
-  "@migrationUploadingData": {
-    "description": "migrationUploadingData"
-  },
-  "migrationUploadIncomplete": "Ne všechna data bylo možné nahrát. Udržujeme vaši místní podporu.",
-  "@migrationUploadIncomplete": {
-    "description": "migrationUploadIncomplete"
-  },
-  "migrationVerifyingIntegrity": "Ověřování integrity v EMusic Cloud...",
-  "@migrationVerifyingIntegrity": {
-    "description": "migrationVerifyingIntegrity"
-  },
-  "migrationValidationFailed": "EMusic Cloud nemohl ověřit migraci.",
-  "@migrationValidationFailed": {
-    "description": "migrationValidationFailed"
-  },
-  "cloudModeReadyOfflineCache": "Cloudový režim je připraven. Toto zařízení bude fungovat jako offline mezipaměť.",
-  "@cloudModeReadyOfflineCache": {
-    "description": "cloudModeReadyOfflineCache"
-  },
-  "migrationCompleted": "Migrace dokončena.",
-  "@migrationCompleted": {
-    "description": "migrationCompleted"
-  },
-  "migrationFailedLocalPreserved": "Migrace se nezdařila. Vaše místní data nebyla změněna.",
-  "@migrationFailedLocalPreserved": {
-    "description": "migrationFailedLocalPreserved"
-  },
-  "sessionExpiredLoginAgain": "Vaše relace vypršela. Znovu se přihlaste.",
-  "@sessionExpiredLoginAgain": {
-    "description": "sessionExpiredLoginAgain"
-  },
-  "selectedFileNotFound": "Vybraný soubor nebyl nalezen.",
-  "@selectedFileNotFound": {
-    "description": "selectedFileNotFound"
-  },
-  "genericAlbum": "Album",
-  "@genericAlbum": {
-    "description": "genericAlbum"
-  },
-  "friendsLoginRequired": "Chcete-li najít přátele, přihlaste se.",
-  "@friendsLoginRequired": {
-    "description": "friendsLoginRequired"
-  },
-  "invalidSessionToken": "Relace neobsahuje platný token.",
-  "@invalidSessionToken": {
-    "description": "invalidSessionToken"
-  },
-  "userSearchFailed": "Nelze vyhledat uživatele ({statusCode}).",
-  "@userSearchFailed": {
-    "placeholders": {
-      "statusCode": {
-        "type": "String"
-      }
-    },
-    "description": "userSearchFailed"
-  },
-  "invalidServerResponse": "Neplatná odpověď serveru.",
-  "@invalidServerResponse": {
-    "description": "invalidServerResponse"
-  },
-  "userListMissing": "Odpověď neobsahuje seznam uživatelů.",
-  "@userListMissing": {
-    "description": "userListMissing"
-  },
-  "playlistCollaboratorsTitle": "Přispěvatelé seznamu videí",
-  "@playlistCollaboratorsTitle": {
-    "description": "playlistCollaboratorsTitle"
-  },
   "collaboratorsInstruction": "Vyberte přátele, kteří budou moci zobrazit a upravovat tento seznam skladeb:",
   "@collaboratorsInstruction": {
     "description": "collaboratorsInstruction"
-  },
-  "noJossRedFriends": "Nemáte žádné přidané přátele na Joss Red.",
-  "@noJossRedFriends": {
-    "description": "noJossRedFriends"
-  },
-  "friendFallback": "příteli",
-  "@friendFallback": {
-    "description": "friendFallback"
   },
   "collaboratorsUpdated": "Spolupracovníci byli správně aktualizováni.",
   "@collaboratorsUpdated": {
     "description": "collaboratorsUpdated"
   },
-  "save": "Nechat",
-  "@save": {
-    "description": "save"
+  "communityplaylists": "Komunitní playlisty",
+  "@communityplaylists": {
+    "description": "communityplaylists"
   },
-  "manageCollaborators": "Správa spolupracovníků (přátel)",
-  "@manageCollaborators": {
-    "description": "manageCollaborators"
+  "content": "Obsah",
+  "@content": {
+    "description": "content"
+  },
+  "copyrightNotice": "© 2026 JOSPROX. Licence GPL v3.0",
+  "@copyrightNotice": {
+    "description": "copyrightNotice"
+  },
+  "create": "Vytvořit",
+  "@create": {
+    "description": "create"
+  },
+  "createnAdd": "Vytvořit a přidat",
+  "@createnAdd": {
+    "description": "createnAdd"
+  },
+  "customIns": "Vlastní instance",
+  "@customIns": {
+    "description": "customIns"
+  },
+  "customInsSelectMsg": "Prosím, vyberte možnost Vlastní instance",
+  "@customInsSelectMsg": {
+    "description": "customInsSelectMsg"
+  },
+  "dailyDiscover": "Denní objevování",
+  "@dailyDiscover": {
+    "description": "dailyDiscover"
+  },
+  "dark": "Tmavý",
+  "@dark": {
+    "description": "dark"
+  },
+  "delete": "Smazat",
+  "@delete": {
+    "description": "delete"
+  },
+  "deleteDownloadData": "Odstranit ze stažených",
+  "@deleteDownloadData": {
+    "description": "deleteDownloadData"
+  },
+  "deleteDownloadedDataAlert": "Úspěšně odstraněno ze stažených!",
+  "@deleteDownloadedDataAlert": {
+    "description": "deleteDownloadedDataAlert"
+  },
+  "developedBy": "Vyvinul a spravuje Joss Estrada (JOSPROX)",
+  "@developedBy": {
+    "description": "developedBy"
+  },
+  "disableTransitionAnimation": "Vypnout přechodovou animaci",
+  "@disableTransitionAnimation": {
+    "description": "disableTransitionAnimation"
+  },
+  "disableTransitionAnimationDes": "Zapnutím této možnosti zakážete přechodovou animaci mezi kartami",
+  "@disableTransitionAnimationDes": {
+    "description": "disableTransitionAnimationDes"
+  },
+  "disabled": "Zakázáno",
+  "@disabled": {
+    "description": "disabled"
+  },
+  "discover": "Doporučené skladby",
+  "@discover": {
+    "description": "discover"
+  },
+  "dismiss": "Odmítnout",
+  "@dismiss": {
+    "description": "dismiss"
   },
   "done": "Připraveno",
   "@done": {
     "description": "done"
   },
-  "notAuthenticated": "Neověřeno",
-  "@notAuthenticated": {
-    "description": "notAuthenticated"
+  "dontShowInfoAgain": "Tuto informaci již nezobrazujte",
+  "@dontShowInfoAgain": {
+    "description": "dontShowInfoAgain"
   },
-  "genericError": "Chyba",
-  "@genericError": {
-    "description": "genericError"
+  "downFilesFound": "stažené soubory nalezeny",
+  "@downFilesFound": {
+    "description": "downFilesFound"
   },
-  "friendRequestSent": "Žádost o přátelství odeslána",
-  "@friendRequestSent": {
-    "description": "friendRequestSent"
+  "download": "Stáhnout",
+  "@download": {
+    "description": "download"
   },
-  "friendRequestAccepted": "Žádost o přátelství přijata",
-  "@friendRequestAccepted": {
-    "description": "friendRequestAccepted"
+  "downloadAlbumSongs": "Stáhněte si písně z alba",
+  "@downloadAlbumSongs": {
+    "description": "downloadAlbumSongs"
   },
-  "friendshipRemoved": "Přátelství odstraněno",
-  "@friendshipRemoved": {
-    "description": "friendshipRemoved"
+  "downloadError2": "Požadovanou skladbu nelze stáhnout z důvodu omezení serveru. Můžete to zkusit znovu",
+  "@downloadError2": {
+    "description": "downloadError2"
   },
-  "userBlocked": "Blokovaný uživatel",
-  "@userBlocked": {
-    "description": "userBlocked"
+  "downloadError3": "Stažení se nezdařilo kvůli chybě sítě/streamu! Zkuste to prosím znovu",
+  "@downloadError3": {
+    "description": "downloadError3"
   },
-  "userUnblocked": "Odemčený uživatel",
-  "@userUnblocked": {
-    "description": "userUnblocked"
-  },
-  "artistsByTaste": "Podle vašich chutí",
-  "@artistsByTaste": {
-    "description": "artistsByTaste"
-  },
-  "followedArtists": "následoval",
-  "@followedArtists": {
-    "description": "followedArtists"
-  },
-  "recommendedArtists": "Doporučeno",
-  "@recommendedArtists": {
-    "description": "recommendedArtists"
-  },
-  "albumsByTaste": "Podle vašich chutí",
-  "@albumsByTaste": {
-    "description": "albumsByTaste"
-  },
-  "savedAlbums": "Uloženo",
-  "@savedAlbums": {
-    "description": "savedAlbums"
-  },
-  "recommendedAlbums": "Doporučeno",
-  "@recommendedAlbums": {
-    "description": "recommendedAlbums"
-  },
-  "downloadNotificationChannelName": "stahování hudby",
-  "@downloadNotificationChannelName": {
-    "description": "downloadNotificationChannelName"
+  "downloadLocation": "Umístění stažených písniček",
+  "@downloadLocation": {
+    "description": "downloadLocation"
   },
   "downloadNotificationChannelDescription": "Udržuje stahování hudby aktivní na pozadí.",
   "@downloadNotificationChannelDescription": {
     "description": "downloadNotificationChannelDescription"
   },
-  "downloadNotificationTitle": "Stahování hudby",
-  "@downloadNotificationTitle": {
-    "description": "downloadNotificationTitle"
+  "downloadNotificationChannelName": "stahování hudby",
+  "@downloadNotificationChannelName": {
+    "description": "downloadNotificationChannelName"
   },
   "downloadNotificationPreparing": "Příprava stahování…",
   "@downloadNotificationPreparing": {
@@ -1947,225 +545,649 @@
     },
     "description": "downloadNotificationSong"
   },
-  "syncCloudModeActive": "Cloudový režim je aktivní",
-  "@syncCloudModeActive": {
-    "description": "syncCloudModeActive"
-  },
-  "permissionsConsentTitle": "Oprávnění začít",
-  "@permissionsConsentTitle": {
-    "description": "permissionsConsentTitle"
-  },
-  "permissionsConsentDescription": "Estrella Music potřebuje tato oprávnění, aby mohla spravovat vaši hudbu a nabízet všechny funkce přehrávání.",
-  "@permissionsConsentDescription": {
-    "description": "permissionsConsentDescription"
-  },
-  "permissionsStorageTitle": "Hudba a úložiště",
-  "@permissionsStorageTitle": {
-    "description": "permissionsStorageTitle"
-  },
-  "permissionsStorageDescription": "Umožňuje přehrávat hudbu, ukládat stažené soubory, exportovat seznamy skladeb a připravovat aktualizace.",
-  "@permissionsStorageDescription": {
-    "description": "permissionsStorageDescription"
-  },
-  "permissionsNotificationsTitle": "Oznámení",
-  "@permissionsNotificationsTitle": {
-    "description": "permissionsNotificationsTitle"
-  },
-  "permissionsNotificationsDescription": "Zobrazuje ovládací prvky přehrávání, průběh stahování a důležitá upozornění aplikací.",
-  "@permissionsNotificationsDescription": {
-    "description": "permissionsNotificationsDescription"
-  },
-  "permissionsMicrophoneTitle": "Mikrofon",
-  "@permissionsMicrophoneTitle": {
-    "description": "permissionsMicrophoneTitle"
-  },
-  "permissionsMicrophoneDescription": "Používá se pouze v případě, že se rozhodnete identifikovat skladbu, která hraje kolem vás.",
-  "@permissionsMicrophoneDescription": {
-    "description": "permissionsMicrophoneDescription"
-  },
-  "permissionsContinueButton": "Udělte požadovaná oprávnění",
-  "@permissionsContinueButton": {
-    "description": "permissionsContinueButton"
-  },
-  "permissionsRequiredNotice": "K pokračování jsou potřeba všechna tři povolení. Později je můžete změnit v nastavení systému.",
-  "@permissionsRequiredNotice": {
-    "description": "permissionsRequiredNotice"
-  },
-  "permissionsAllow": "Povolit",
-  "@permissionsAllow": {
-    "description": "permissionsAllow"
-  },
-  "permissionsOpenSettings": "Nastavení",
-  "@permissionsOpenSettings": {
-    "description": "permissionsOpenSettings"
-  },
-  "auth_2fa_title": "Dvoufaktorová autentizace",
-  "@auth_2fa_title": {
-    "description": "auth_2fa_title"
-  },
-  "auth_2fa_subtitle": "Zadejte 6místný kód z aplikace pro ověřování. Tento přístup vyprší za 5 minut.",
-  "@auth_2fa_subtitle": {
-    "description": "auth_2fa_subtitle"
-  },
-  "auth_2fa_code": "Autentizační kód",
-  "@auth_2fa_code": {
-    "description": "auth_2fa_code"
-  },
-  "auth_2fa_verify": "Zkontrolujte a pokračujte",
-  "@auth_2fa_verify": {
-    "description": "auth_2fa_verify"
-  },
-  "auth_2fa_invalid": "Zadejte platný 6místný kód nebo se znovu přihlaste.",
-  "@auth_2fa_invalid": {
-    "description": "auth_2fa_invalid"
-  },
-  "helloWorld": "Ahoj světe",
-  "@helloWorld": {
-    "description": "Este texto es opcional"
-  },
-  "quickPics": "Rychlý výběr",
-  "@quickPics": {
-    "description": "quickPics"
-  },
-  "topMusicVid": "Nejlepší hudební videa",
-  "@topMusicVid": {
-    "description": "topMusicVid"
-  },
-  "lyrics": "Dopisy",
-  "@lyrics": {
-    "description": "lyrics"
-  },
-  "no": "Ne",
-  "@no": {
-    "description": "no"
-  },
-  "podcasts": "podcasty",
-  "@podcasts": {
-    "description": "podcasts"
-  },
-  "episodes": "Epizody",
-  "@episodes": {
-    "description": "episodes"
-  },
-  "profiles": "Profily",
-  "@profiles": {
-    "description": "profiles"
-  },
-  "addToLibrary": "Přidat do knihovny",
-  "@addToLibrary": {
-    "description": "addToLibrary"
-  },
-  "removeFromLibrary": "Smazat z knihovny",
-  "@removeFromLibrary": {
-    "description": "removeFromLibrary"
-  },
-  "play": "hrát",
-  "@play": {
-    "description": "play"
-  },
-  "enqueueAlbumSongs": "Přidejte skladby z alba do fronty",
-  "@enqueueAlbumSongs": {
-    "description": "enqueueAlbumSongs"
-  },
-  "downloadAlbumSongs": "Stáhněte si písně z alba",
-  "@downloadAlbumSongs": {
-    "description": "downloadAlbumSongs"
-  },
-  "shareAlbum": "Sdílejte album",
-  "@shareAlbum": {
-    "description": "shareAlbum"
-  },
-  "imported": "Importováno",
-  "@imported": {
-    "description": "imported"
-  },
-  "importedPlaylist": "Importovaný seznam skladeb",
-  "@importedPlaylist": {
-    "description": "importedPlaylist"
-  },
-  "permissionDenied": "Povolení odepřeno",
-  "@permissionDenied": {
-    "description": "permissionDenied"
-  },
-  "enqueueSongs": "Přidejte skladby do fronty",
-  "@enqueueSongs": {
-    "description": "enqueueSongs"
-  },
-  "shuffle": "Náhodné",
-  "@shuffle": {
-    "description": "shuffle"
+  "downloadNotificationTitle": "Stahování hudby",
+  "@downloadNotificationTitle": {
+    "description": "downloadNotificationTitle"
   },
   "downloadPlaylist": "Stáhnout playlist",
   "@downloadPlaylist": {
     "description": "downloadPlaylist"
   },
-  "syncPlaylistSongs": "Synchronizujte skladby ze seznamu skladeb",
-  "@syncPlaylistSongs": {
-    "description": "syncPlaylistSongs"
+  "downloadingFormat": "Formát stahovaného souboru",
+  "@downloadingFormat": {
+    "description": "downloadingFormat"
   },
-  "blacklistPipedPlaylist": "Seznam zakázaných skladeb",
-  "@blacklistPipedPlaylist": {
-    "description": "blacklistPipedPlaylist"
+  "downloadingFormatDes": "Vyberte formát stahovaného souboru. \"Opus\" poskytne nejlepší kvalitu",
+  "@downloadingFormatDes": {
+    "description": "downloadingFormatDes"
   },
-  "sharePlaylist": "Sdílejte seznam skladeb",
-  "@sharePlaylist": {
-    "description": "sharePlaylist"
+  "downloads": "Stažené",
+  "@downloads": {
+    "description": "downloads"
   },
-  "playlist": "Seznam skladeb",
-  "@playlist": {
-    "description": "playlist"
+  "duration": "Délka",
+  "@duration": {
+    "description": "duration"
   },
-  "sortByName": "Seřadit podle názvu",
-  "@sortByName": {
-    "description": "sortByName"
+  "dynamic": "Dynamický",
+  "@dynamic": {
+    "description": "dynamic"
   },
-  "sortByDate": "Seřadit podle data",
-  "@sortByDate": {
-    "description": "sortByDate"
+  "email": "E-mail",
+  "@email": {
+    "description": "email"
   },
-  "sortByDuration": "Seřadit podle trvání",
-  "@sortByDuration": {
-    "description": "sortByDuration"
+  "emptyPlaylist": "Prázdný playlist!",
+  "@emptyPlaylist": {
+    "description": "emptyPlaylist"
   },
-  "sortAscendNDescend": "Seřadit vzestupně/sestupně",
-  "@sortAscendNDescend": {
-    "description": "sortAscendNDescend"
+  "enableBottomNav": "Dolní navigační lišta",
+  "@enableBottomNav": {
+    "description": "enableBottomNav"
   },
-  "migration_summary_start": "Migrace dokončena z {source}.",
-  "@migration_summary_start": {
-    "placeholders": {
-      "source": {
-        "type": "String"
-      }
-    },
-    "description": "migration_summary_start"
+  "enableBottomNavDes": "Přejdí na dolní lištu",
+  "@enableBottomNavDes": {
+    "description": "enableBottomNavDes"
   },
-  "migration_summary_playlists": "Seznamy videí: {count}",
-  "@migration_summary_playlists": {
-    "placeholders": {
-      "count": {
-        "type": "num"
-      }
-    },
-    "description": "migration_summary_playlists"
+  "enableSlidableAction": "Povolit akce gesty",
+  "@enableSlidableAction": {
+    "description": "enableSlidableAction"
   },
-  "migration_summary_songs": "Skladby: {count}",
-  "@migration_summary_songs": {
-    "placeholders": {
-      "count": {
-        "type": "num"
-      }
-    },
-    "description": "migration_summary_songs"
+  "enableSlidableActionDes": "Povolit akce gesty na dlaždici skladby",
+  "@enableSlidableActionDes": {
+    "description": "enableSlidableActionDes"
   },
-  "migration_summary_favorites": "Oblíbené: {count}",
-  "@migration_summary_favorites": {
-    "placeholders": {
-      "count": {
-        "type": "num"
-      }
-    },
-    "description": "migration_summary_favorites"
+  "enabled": "Povoleno",
+  "@enabled": {
+    "description": "enabled"
+  },
+  "endOfThisSong": "Konec skladby",
+  "@endOfThisSong": {
+    "description": "endOfThisSong"
+  },
+  "enqueueAlbumSongs": "Přidejte skladby z alba do fronty",
+  "@enqueueAlbumSongs": {
+    "description": "enqueueAlbumSongs"
+  },
+  "enqueueAll": "Zařadit vše do fronty",
+  "@enqueueAll": {
+    "description": "enqueueAll"
+  },
+  "enqueueSong": "Zařadit tuto skladbu do fronty",
+  "@enqueueSong": {
+    "description": "enqueueSong"
+  },
+  "enqueueSongs": "Přidejte skladby do fronty",
+  "@enqueueSongs": {
+    "description": "enqueueSongs"
+  },
+  "episodes": "Epizody",
+  "@episodes": {
+    "description": "episodes"
+  },
+  "equalizer": "Ekvalizér",
+  "@equalizer": {
+    "description": "equalizer"
+  },
+  "equalizerDes": "Otevřete systémový ekvalizér",
+  "@equalizerDes": {
+    "description": "equalizerDes"
+  },
+  "errorOccuredAlert": "Došlo k nějaké chybě!",
+  "@errorOccuredAlert": {
+    "description": "errorOccuredAlert"
+  },
+  "errorOccurred": "Došlo k chybě",
+  "@errorOccurred": {
+    "description": "errorOccurred"
+  },
+  "errorPlayingTrack": "Chyba při přehrávání:",
+  "@errorPlayingTrack": {
+    "description": "errorPlayingTrack"
+  },
+  "export": "Exportovat",
+  "@export": {
+    "description": "export"
+  },
+  "exportDowloadedFiles": "Exportovat stažené soubory",
+  "@exportDowloadedFiles": {
+    "description": "exportDowloadedFiles"
+  },
+  "exportDowloadedFilesDes": "Klikněte zde pro export staženého souboru z adresáře aplikace do externího adresáře",
+  "@exportDowloadedFilesDes": {
+    "description": "exportDowloadedFilesDes"
+  },
+  "exportError": "Chyba při exportování playlistu",
+  "@exportError": {
+    "description": "exportError"
+  },
+  "exportErrorFormat": "Chyba formátování dat playlistu",
+  "@exportErrorFormat": {
+    "description": "exportErrorFormat"
+  },
+  "exportErrorPermission": "Oprávnění odepřeno při exportování",
+  "@exportErrorPermission": {
+    "description": "exportErrorPermission"
+  },
+  "exportErrorStorage": "Nedostatek úložného místa",
+  "@exportErrorStorage": {
+    "description": "exportErrorStorage"
+  },
+  "exportMsg": "Soubory byly úspěšně exportovány",
+  "@exportMsg": {
+    "description": "exportMsg"
+  },
+  "exportPlaylist": "Exportovat playlist",
+  "@exportPlaylist": {
+    "description": "exportPlaylist"
+  },
+  "exportPlaylistCsv": "Exportovat playlist jako CSV",
+  "@exportPlaylistCsv": {
+    "description": "exportPlaylistCsv"
+  },
+  "exportPlaylistCsvSubtitle": "Nelze importovat sem",
+  "@exportPlaylistCsvSubtitle": {
+    "description": "exportPlaylistCsvSubtitle"
+  },
+  "exportPlaylistJson": "Exportovat playlist do JSON",
+  "@exportPlaylistJson": {
+    "description": "exportPlaylistJson"
+  },
+  "exportPlaylistJsonSubtitle": "Tento formát lze importovat",
+  "@exportPlaylistJsonSubtitle": {
+    "description": "exportPlaylistJsonSubtitle"
+  },
+  "exportToOnlineMusic": "Exportovat na Online Music",
+  "@exportToOnlineMusic": {
+    "description": "exportToOnlineMusic"
+  },
+  "exportToOnlineMusicSubtitle": "Vaše playlisty (s méně než 50 skladbami) se přesunou do aktuální fronty. Nezapomeňte je po otevření v MusicService přidat do playlistu/uložit",
+  "@exportToOnlineMusicSubtitle": {
+    "description": "exportToOnlineMusicSubtitle"
+  },
+  "exportedFileLocation": "Umístění exportu staženého souboru",
+  "@exportedFileLocation": {
+    "description": "exportedFileLocation"
+  },
+  "exporting": "Exportování...",
+  "@exporting": {
+    "description": "exporting"
+  },
+  "exportingPlaylist": "Exportování playlistu...",
+  "@exportingPlaylist": {
+    "description": "exportingPlaylist"
+  },
+  "favorites": "Oblíbené",
+  "@favorites": {
+    "description": "favorites"
+  },
+  "featuredplaylists": "Doporučené playlisty",
+  "@featuredplaylists": {
+    "description": "featuredplaylists"
+  },
+  "fileNotFound": "Soubor nebyl nalezen",
+  "@fileNotFound": {
+    "description": "fileNotFound"
+  },
+  "follow": "Pokračovat",
+  "@follow": {
+    "description": "follow"
+  },
+  "followedArtists": "následoval",
+  "@followedArtists": {
+    "description": "followedArtists"
+  },
+  "following": "Následující",
+  "@following": {
+    "description": "following"
+  },
+  "for1": "pro",
+  "@for1": {
+    "description": "for1"
+  },
+  "forgottenFavorites": "zapomenuté oblíbené",
+  "@forgottenFavorites": {
+    "description": "forgottenFavorites"
+  },
+  "friendFallback": "příteli",
+  "@friendFallback": {
+    "description": "friendFallback"
+  },
+  "friendRequestAccepted": "Žádost o přátelství přijata",
+  "@friendRequestAccepted": {
+    "description": "friendRequestAccepted"
+  },
+  "friendRequestSent": "Žádost o přátelství odeslána",
+  "@friendRequestSent": {
+    "description": "friendRequestSent"
+  },
+  "friends": "Přátelé",
+  "@friends": {
+    "description": "friends"
+  },
+  "friendsLoginRequired": "Chcete-li najít přátele, přihlaste se.",
+  "@friendsLoginRequired": {
+    "description": "friendsLoginRequired"
+  },
+  "friendshipRemoved": "Přátelství odstraněno",
+  "@friendshipRemoved": {
+    "description": "friendshipRemoved"
+  },
+  "genericAlbum": "Album",
+  "@genericAlbum": {
+    "description": "genericAlbum"
+  },
+  "genericError": "Chyba",
+  "@genericError": {
+    "description": "genericError"
+  },
+  "genre_electronic": "Elektronika",
+  "@genre_electronic": {
+    "description": "genre_electronic"
+  },
+  "genre_hiphop": "hip hop",
+  "@genre_hiphop": {
+    "description": "genre_hiphop"
+  },
+  "genre_jazz": "Jazz",
+  "@genre_jazz": {
+    "description": "genre_jazz"
+  },
+  "genre_latin": "latinský",
+  "@genre_latin": {
+    "description": "genre_latin"
+  },
+  "genre_pop": "Pop",
+  "@genre_pop": {
+    "description": "genre_pop"
+  },
+  "genre_rock": "Rock",
+  "@genre_rock": {
+    "description": "genre_rock"
+  },
+  "gesture": "Gesta",
+  "@gesture": {
+    "description": "gesture"
+  },
+  "github": "GitHub",
+  "@github": {
+    "description": "github"
+  },
+  "githubDes": "Zobrazit zdrojový kód GitHub\nPokud se vám tento projekt líbí, nezapomeňte dát ⭐",
+  "@githubDes": {
+    "description": "githubDes"
+  },
+  "goToAlbum": "Přejít do alba",
+  "@goToAlbum": {
+    "description": "goToAlbum"
+  },
+  "goToDownloadPage": "Kliknutím sem přejdete na stránku ke stažení",
+  "@goToDownloadPage": {
+    "description": "goToDownloadPage"
+  },
+  "helloWorld": "Ahoj světe",
+  "@helloWorld": {
+    "description": "Este texto es opcional"
+  },
+  "high": "Vysoká 🔥",
+  "@high": {
+    "description": "high"
+  },
+  "hintApiUrl": "Adresa URL rozhraní API na instanci Piped",
+  "@hintApiUrl": {
+    "description": "hintApiUrl"
+  },
+  "home": "Domů",
+  "@home": {
+    "description": "home"
+  },
+  "homeContentCount": "Počet položek v domovské stránce",
+  "@homeContentCount": {
+    "description": "homeContentCount"
+  },
+  "homeContentCountDes": "Vyber si počet zobrazených položek na domovské obrazovce. Menší počet = Rychlejší načítání",
+  "@homeContentCountDes": {
+    "description": "homeContentCountDes"
+  },
+  "id": "ID",
+  "@id": {
+    "description": "id"
+  },
+  "identifySongMetadata": "Identifikovat metadata",
+  "@identifySongMetadata": {
+    "description": "Action that searches and embeds metadata for a local song"
+  },
+  "ignoreBatOpt": "Ignorovat optimalizaci baterie",
+  "@ignoreBatOpt": {
+    "description": "ignoreBatOpt"
+  },
+  "ignoreBatOptDes": "Pokud se potýkáte s problémy s oznámeními nebo se přehrávání zastavilo kvůli optimalizaci systému, povolte tuto možnost",
+  "@ignoreBatOptDes": {
+    "description": "ignoreBatOptDes"
+  },
+  "importError": "Chyba při importování playlistu",
+  "@importError": {
+    "description": "importError"
+  },
+  "importErrorDatabase": "Chyba při ukládání do databáze",
+  "@importErrorDatabase": {
+    "description": "importErrorDatabase"
+  },
+  "importErrorFileAccess": "Nepodařilo se získat přístup k vybranému souboru",
+  "@importErrorFileAccess": {
+    "description": "importErrorFileAccess"
+  },
+  "importErrorFormat": "Nesprávný formát souboru",
+  "@importErrorFormat": {
+    "description": "importErrorFormat"
+  },
+  "importLargeFileNote": "Poznámka: Import velkých playlistů může trvat déle",
+  "@importLargeFileNote": {
+    "description": "importLargeFileNote"
+  },
+  "importPlaylist": "Importovat playlist",
+  "@importPlaylist": {
+    "description": "importPlaylist"
+  },
+  "importPlaylistDesc": "Výběr dříve exportovaného souboru JSON s playlistem k importu",
+  "@importPlaylistDesc": {
+    "description": "importPlaylistDesc"
+  },
+  "imported": "Importováno",
+  "@imported": {
+    "description": "imported"
+  },
+  "importedFromJossMusic": "Dovezeno z Joss Music Kotlin",
+  "@importedFromJossMusic": {
+    "description": "importedFromJossMusic"
+  },
+  "importedPlaylist": "Importovaný seznam skladeb",
+  "@importedPlaylist": {
+    "description": "importedPlaylist"
+  },
+  "importingPlaylist": "Importování playlistu...",
+  "@importingPlaylist": {
+    "description": "importingPlaylist"
+  },
+  "in_app_storage": "Adresář interního úložiště",
+  "@in_app_storage": {
+    "description": "in_app_storage"
+  },
+  "includeDownloadedFiles": "Zahrnout stažené skladby",
+  "@includeDownloadedFiles": {
+    "description": "includeDownloadedFiles"
+  },
+  "infoNotAvailable": "Informace nejsou k dispozici",
+  "@infoNotAvailable": {
+    "description": "infoNotAvailable"
+  },
+  "invalidPlaylistFile": "Nesprávná struktura souboru playlistu",
+  "@invalidPlaylistFile": {
+    "description": "invalidPlaylistFile"
+  },
+  "invalidServerResponse": "Neplatná odpověď serveru.",
+  "@invalidServerResponse": {
+    "description": "invalidServerResponse"
+  },
+  "invalidSessionToken": "Relace neobsahuje platný token.",
+  "@invalidSessionToken": {
+    "description": "invalidSessionToken"
+  },
+  "items": "položky",
+  "@items": {
+    "description": "items"
+  },
+  "keepListening": "poslouchejte dál",
+  "@keepListening": {
+    "description": "keepListening"
+  },
+  "keepScreenOnWhilePlaying": "Nechat obrazovku zapnutou během přehrávání",
+  "@keepScreenOnWhilePlaying": {
+    "description": "keepScreenOnWhilePlaying"
+  },
+  "keepScreenOnWhilePlayingDes": "Pokud je povoleno, obrazovka zařízení zůstane během přehrávání hudby zapnutá",
+  "@keepScreenOnWhilePlayingDes": {
+    "description": "keepScreenOnWhilePlayingDes"
+  },
+  "language": "Jazyk",
+  "@language": {
+    "description": "language"
+  },
+  "languageDes": "Nastavení jazyka aplikace",
+  "@languageDes": {
+    "description": "languageDes"
+  },
+  "latestRelease": "Nejnovější vydání",
+  "@latestRelease": {
+    "description": "latestRelease"
+  },
+  "latestVersion": "Nejnovější dostupná verze",
+  "@latestVersion": {
+    "description": "latestVersion"
+  },
+  "letsStrart": "Začínáme...",
+  "@letsStrart": {
+    "description": "letsStrart"
+  },
+  "libAlbums": "Knihovna alb",
+  "@libAlbums": {
+    "description": "libAlbums"
+  },
+  "libArtists": "Knihovna interpretů",
+  "@libArtists": {
+    "description": "libArtists"
+  },
+  "libPlaylists": "Knihovna playlistů",
+  "@libPlaylists": {
+    "description": "libPlaylists"
+  },
+  "libSongs": "Knihovna skladeb",
+  "@libSongs": {
+    "description": "libSongs"
+  },
+  "library": "Knihovna",
+  "@library": {
+    "description": "library"
+  },
+  "libraryPlaylistDescription": "Knihovna Playlist",
+  "@libraryPlaylistDescription": {
+    "description": "libraryPlaylistDescription"
+  },
+  "light": "Světlý",
+  "@light": {
+    "description": "light"
+  },
+  "link": "Odkaz",
+  "@link": {
+    "description": "link"
+  },
+  "linkAlert": "Úspěšně propojeno!",
+  "@linkAlert": {
+    "description": "linkAlert"
+  },
+  "linkCopied": "Odkaz zkopírován do schránky",
+  "@linkCopied": {
+    "description": "linkCopied"
+  },
+  "linkPipedDes": "Odkaz s Piped pro playlisty",
+  "@linkPipedDes": {
+    "description": "linkPipedDes"
+  },
+  "listenNow": "Poslouchej teď",
+  "@listenNow": {
+    "description": "listenNow"
+  },
+  "listeningToEnvironment": "Naslouchat prostředí...",
+  "@listeningToEnvironment": {
+    "description": "listeningToEnvironment"
+  },
+  "loadInfoUpdate": "Nelze načíst informace o aktualizaci",
+  "@loadInfoUpdate": {
+    "description": "loadInfoUpdate"
+  },
+  "local": "Místní",
+  "@local": {
+    "description": "local"
+  },
+  "local_b1": "Funguje bez nutnosti přihlášení.",
+  "@local_b1": {
+    "description": "local_b1"
+  },
+  "local_b2": "Celá vaše knihovna zůstává výhradně na tomto počítači.",
+  "@local_b2": {
+    "description": "local_b2"
+  },
+  "local_b3": "Poznámka: Žádné ruční cloudové zálohy. Pokud ztratíte zařízení nebo odinstalujete aplikaci, vaše data nebude možné obnovit.",
+  "@local_b3": {
+    "description": "local_b3"
+  },
+  "local_btn": "Používejte pouze na tomto zařízení",
+  "@local_btn": {
+    "description": "local_btn"
+  },
+  "local_subtitle": "Absolutní soukromí na vašem zařízení",
+  "@local_subtitle": {
+    "description": "local_subtitle"
+  },
+  "local_title": "Místní režim",
+  "@local_title": {
+    "description": "local_title"
+  },
+  "loudnessDb": "Hlasitost (Db)",
+  "@loudnessDb": {
+    "description": "loudnessDb"
+  },
+  "loudnessNormalization": "Normalizace hlasitosti",
+  "@loudnessNormalization": {
+    "description": "loudnessNormalization"
+  },
+  "loudnessNormalizationDes": "Nastaví stejnou úroveň hlasitosti pro všechny skladby (Experimentální) (Nebude fungovat u skladeb stažených v předchozí verzi(< v1.10.0))",
+  "@loudnessNormalizationDes": {
+    "description": "loudnessNormalizationDes"
+  },
+  "low": "Nízká 🪨",
+  "@low": {
+    "description": "low"
+  },
+  "lyrics": "Dopisy",
+  "@lyrics": {
+    "description": "lyrics"
+  },
+  "lyricsNotAvailable": "Text není k dispozici!",
+  "@lyricsNotAvailable": {
+    "description": "lyricsNotAvailable"
+  },
+  "manageCollaborators": "Správa spolupracovníků (přátel)",
+  "@manageCollaborators": {
+    "description": "manageCollaborators"
+  },
+  "metadataApplySuccess": "Metadata byla vložena do místního souboru.",
+  "@metadataApplySuccess": {
+    "description": "Success message after writing local tags"
+  },
+  "metadataNoResults": "Nenašli jsme žádnou shodu. Zkuste jiné hledání.",
+  "@metadataNoResults": {
+    "description": "Empty state for metadata search"
+  },
+  "metadataOperationFailed": "Operace metadat selhala.",
+  "@metadataOperationFailed": {
+    "description": "Generic metadata lookup or write error"
+  },
+  "metadataOverwriteWarning": "To přepíše vložený titul, umělec, album a obal při zachování libovolného pole, které zápas neposkytuje.",
+  "@metadataOverwriteWarning": {
+    "description": "Confirmation before writing tags to a local audio file"
+  },
+  "metadataSearchDescription": "Vyberte si správný zápas pro vložení názvu, umělce, alba a pokrytí do místního souboru.",
+  "@metadataSearchDescription": {
+    "description": "Explanation shown above metadata search results"
+  },
+  "metadataSearchHint": "Název písně nebo umělce",
+  "@metadataSearchHint": {
+    "description": "Hint for the metadata search field"
+  },
+  "metadataSearchTitle": "Identifikovat píseň",
+  "@metadataSearchTitle": {
+    "description": "Title of the local song metadata search dialog"
+  },
+  "micInstruction": "Ujistěte se, že hudba hraje v blízkosti mikrofonu dostatečně hlasitě.",
+  "@micInstruction": {
+    "description": "micInstruction"
+  },
+  "migratedAlbum": "Migrované album",
+  "@migratedAlbum": {
+    "description": "migratedAlbum"
+  },
+  "migratedLibrary": "Migrovaná knihovna",
+  "@migratedLibrary": {
+    "description": "migratedLibrary"
+  },
+  "migratedPlaylist": "Migrovaný seznam skladeb",
+  "@migratedPlaylist": {
+    "description": "migratedPlaylist"
+  },
+  "migrationAlreadyRunning": "Migrace již probíhá.",
+  "@migrationAlreadyRunning": {
+    "description": "migrationAlreadyRunning"
+  },
+  "migrationAnalyzingLocal": "Analýza místní knihovny...",
+  "@migrationAnalyzingLocal": {
+    "description": "migrationAnalyzingLocal"
+  },
+  "migrationCheckingCloud": "Kontrola, zda EMusic Cloud již má knihovnu...",
+  "@migrationCheckingCloud": {
+    "description": "migrationCheckingCloud"
+  },
+  "migrationCompleted": "Migrace dokončena.",
+  "@migrationCompleted": {
+    "description": "migrationCompleted"
+  },
+  "migrationCreatingBackup": "Před připojením cloudu se vytváří místní záloha...",
+  "@migrationCreatingBackup": {
+    "description": "migrationCreatingBackup"
+  },
+  "migrationFailedLocalPreserved": "Migrace se nezdařila. Vaše místní data nebyla změněna.",
+  "@migrationFailedLocalPreserved": {
+    "description": "migrationFailedLocalPreserved"
+  },
+  "migrationLoginRequired": "Před migrací se přihlaste k Joss Red.",
+  "@migrationLoginRequired": {
+    "description": "migrationLoginRequired"
+  },
+  "migrationPreparingCloud": "Příprava migrace v EMusic Cloud...",
+  "@migrationPreparingCloud": {
+    "description": "migrationPreparingCloud"
+  },
+  "migrationStartFailed": "EMusic Cloud nemohl spustit migraci.",
+  "@migrationStartFailed": {
+    "description": "migrationStartFailed"
+  },
+  "migrationUploadIncomplete": "Ne všechna data bylo možné nahrát. Udržujeme vaši místní podporu.",
+  "@migrationUploadIncomplete": {
+    "description": "migrationUploadIncomplete"
+  },
+  "migrationUploadingData": "Nahrávání seznamů skladeb, oblíbených položek a historie...",
+  "@migrationUploadingData": {
+    "description": "migrationUploadingData"
+  },
+  "migrationValidationFailed": "EMusic Cloud nemohl ověřit migraci.",
+  "@migrationValidationFailed": {
+    "description": "migrationValidationFailed"
+  },
+  "migrationVerifyingIntegrity": "Ověřování integrity v EMusic Cloud...",
+  "@migrationVerifyingIntegrity": {
+    "description": "migrationVerifyingIntegrity"
+  },
+  "migration_btn_select": "Vyberte soubor a importujte",
+  "@migration_btn_select": {
+    "description": "migration_btn_select"
+  },
+  "migration_select_file_dialog": "Vyberte song.db nebo záložní .backup",
+  "@migration_select_file_dialog": {
+    "description": "migration_select_file_dialog"
+  },
+  "migration_success": "Migrace byla úspěšně dokončena.",
+  "@migration_success": {
+    "description": "migration_success"
   },
   "migration_summary_albums": "Alba: {count}",
   "@migration_summary_albums": {
@@ -2185,121 +1207,1166 @@
     },
     "description": "migration_summary_artists"
   },
-  "migration_select_file_dialog": "Vyberte song.db nebo záložní .backup",
-  "@migration_select_file_dialog": {
-    "description": "migration_select_file_dialog"
+  "migration_summary_favorites": "Oblíbené: {count}",
+  "@migration_summary_favorites": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_favorites"
   },
-  "migration_success": "Migrace byla úspěšně dokončena.",
-  "@migration_success": {
-    "description": "migration_success"
+  "migration_summary_playlists": "Seznamy videí: {count}",
+  "@migration_summary_playlists": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_playlists"
   },
-  "backup_select_folder_dialog": "Vyberte složku pro zálohování",
-  "@backup_select_folder_dialog": {
-    "description": "backup_select_folder_dialog"
+  "migration_summary_songs": "Skladby: {count}",
+  "@migration_summary_songs": {
+    "placeholders": {
+      "count": {
+        "type": "num"
+      }
+    },
+    "description": "migration_summary_songs"
+  },
+  "migration_summary_start": "Migrace dokončena z {source}.",
+  "@migration_summary_start": {
+    "placeholders": {
+      "source": {
+        "type": "String"
+      }
+    },
+    "description": "migration_summary_start"
+  },
+  "minutes": "minut",
+  "@minutes": {
+    "description": "minutes"
+  },
+  "misc": "Různé",
+  "@misc": {
+    "description": "misc"
+  },
+  "mostListenedSong": "Nejposlouchanější písnička",
+  "@mostListenedSong": {
+    "description": "mostListenedSong"
+  },
+  "musicAndPlayback": "Hudba a přehrávání",
+  "@musicAndPlayback": {
+    "description": "musicAndPlayback"
+  },
+  "musicRecognition": "Rozpoznávání hudby",
+  "@musicRecognition": {
+    "description": "musicRecognition"
+  },
+  "networkError": "Chyba sítě! Zkontrolujte připojení k internetu.",
+  "@networkError": {
+    "description": "networkError"
+  },
+  "networkError1": "Ups chyba sítě!",
+  "@networkError1": {
+    "description": "networkError1"
+  },
+  "newVersionAvailable": "K dispozici je nová verze!",
+  "@newVersionAvailable": {
+    "description": "newVersionAvailable"
+  },
+  "news_btn_app": "Aplikace Joss Red (Obchod Play)",
+  "@news_btn_app": {
+    "description": "news_btn_app"
+  },
+  "news_btn_dismiss": "Rozuměl",
+  "@news_btn_dismiss": {
+    "description": "news_btn_dismiss"
+  },
+  "news_btn_web": "Joss Red Web",
+  "@news_btn_web": {
+    "description": "news_btn_web"
+  },
+  "news_card_subtitle": "100% synchronizace s Joss Red, seznamy skladeb s přáteli a mnoho dalšího. Klepnutím zobrazíte, co je nového.",
+  "@news_card_subtitle": {
+    "description": "news_card_subtitle"
+  },
+  "news_card_title": "Estrella Music se vyvinula!",
+  "@news_card_title": {
+    "description": "news_card_title"
+  },
+  "news_dialog_friends_desc": "Chcete-li přidat přátele, přijímat žádosti nebo spravovat svůj bezpečnostní profil, použijte Joss Red na jeho oficiálních platformách:",
+  "@news_dialog_friends_desc": {
+    "description": "news_dialog_friends_desc"
+  },
+  "news_dialog_section_friends": "Přátelé a správa účtu:",
+  "@news_dialog_section_friends": {
+    "description": "news_dialog_section_friends"
+  },
+  "news_dialog_title": "Estrella Music News",
+  "@news_dialog_title": {
+    "description": "news_dialog_title"
+  },
+  "news_item_collab_desc": "Vytvářejte seznamy skladeb se svými přáteli! Při vytváření seznamu skladeb zaškrtněte políčko Spolupráce a vyberte přátele, které chcete společně upravovat.",
+  "@news_item_collab_desc": {
+    "description": "news_item_collab_desc"
+  },
+  "news_item_collab_title": "Seznamy skladeb pro spolupráci",
+  "@news_item_collab_title": {
+    "description": "news_item_collab_title"
+  },
+  "news_item_sync_desc": "Vaše seznamy skladeb a oblíbené položky se nyní ukládají a automaticky synchronizují v cloudu s vaším hlavním účtem Joss Red.",
+  "@news_item_sync_desc": {
+    "description": "news_item_sync_desc"
+  },
+  "news_item_sync_title": "Plná integrace s Joss Red",
+  "@news_item_sync_title": {
+    "description": "news_item_sync_title"
+  },
+  "news_item_trans_desc": "Již nemusíte klikat na tlačítka ruční synchronizace; Nový motor je zodpovědný za automatické řazení nahoru a dolů.",
+  "@news_item_trans_desc": {
+    "description": "news_item_trans_desc"
+  },
+  "news_item_trans_title": "Transparentní synchronizace",
+  "@news_item_trans_title": {
+    "description": "news_item_trans_title"
+  },
+  "no": "Ne",
+  "@no": {
+    "description": "no"
+  },
+  "noBookmarks": "Žádné záložky!",
+  "@noBookmarks": {
+    "description": "noBookmarks"
+  },
+  "noJossRedFriends": "Nemáte žádné přidané přátele na Joss Red.",
+  "@noJossRedFriends": {
+    "description": "noJossRedFriends"
+  },
+  "noLibPlaylist": "Nemáte žádný playlist v knihovně!",
+  "@noLibPlaylist": {
+    "description": "noLibPlaylist"
+  },
+  "noMatchInstruction": "V nahraném zvuku nelze najít žádné skladby",
+  "@noMatchInstruction": {
+    "description": "noMatchInstruction"
+  },
+  "noMatchesFound": "Žádné shody",
+  "@noMatchesFound": {
+    "description": "noMatchesFound"
+  },
+  "noOfflineSong": "Žádné skladby offline!",
+  "@noOfflineSong": {
+    "description": "noOfflineSong"
+  },
+  "noSongsInCollection": "V této sbírce nejsou žádné skladby",
+  "@noSongsInCollection": {
+    "description": "noSongsInCollection"
+  },
+  "nomatch": "Nebyla nalezena shoda pro",
+  "@nomatch": {
+    "description": "nomatch"
+  },
+  "notAuthenticated": "Neověřeno",
+  "@notAuthenticated": {
+    "description": "notAuthenticated"
+  },
+  "notaSongVideo": "Není to skladba/hudební video!",
+  "@notaSongVideo": {
+    "description": "notaSongVideo"
+  },
+  "notaValidLink": "Neplatný odkaz!",
+  "@notaValidLink": {
+    "description": "notaValidLink"
+  },
+  "openIn": "Otevřít v",
+  "@openIn": {
+    "description": "openIn"
+  },
+  "operationFailed": "Operace selhala",
+  "@operationFailed": {
+    "description": "operationFailed"
+  },
+  "password": "Heslo",
+  "@password": {
+    "description": "password"
+  },
+  "password_text": "Heslo",
+  "@password_text": {
+    "description": "Contraseña texto traducido"
+  },
+  "permissionDenied": "Povolení odepřeno",
+  "@permissionDenied": {
+    "description": "permissionDenied"
+  },
+  "permissionsAllow": "Povolit",
+  "@permissionsAllow": {
+    "description": "permissionsAllow"
+  },
+  "permissionsConsentDescription": "Estrella Music potřebuje tato oprávnění, aby mohla spravovat vaši hudbu a nabízet všechny funkce přehrávání.",
+  "@permissionsConsentDescription": {
+    "description": "permissionsConsentDescription"
+  },
+  "permissionsConsentTitle": "Oprávnění začít",
+  "@permissionsConsentTitle": {
+    "description": "permissionsConsentTitle"
+  },
+  "permissionsContinueButton": "Udělte požadovaná oprávnění",
+  "@permissionsContinueButton": {
+    "description": "permissionsContinueButton"
+  },
+  "permissionsMicrophoneDescription": "Používá se pouze v případě, že se rozhodnete identifikovat skladbu, která hraje kolem vás.",
+  "@permissionsMicrophoneDescription": {
+    "description": "permissionsMicrophoneDescription"
+  },
+  "permissionsMicrophoneTitle": "Mikrofon",
+  "@permissionsMicrophoneTitle": {
+    "description": "permissionsMicrophoneTitle"
+  },
+  "permissionsNotificationsDescription": "Zobrazuje ovládací prvky přehrávání, průběh stahování a důležitá upozornění aplikací.",
+  "@permissionsNotificationsDescription": {
+    "description": "permissionsNotificationsDescription"
+  },
+  "permissionsNotificationsTitle": "Oznámení",
+  "@permissionsNotificationsTitle": {
+    "description": "permissionsNotificationsTitle"
+  },
+  "permissionsOpenSettings": "Nastavení",
+  "@permissionsOpenSettings": {
+    "description": "permissionsOpenSettings"
+  },
+  "permissionsRequiredNotice": "K pokračování jsou potřeba všechna tři povolení. Později je můžete změnit v nastavení systému.",
+  "@permissionsRequiredNotice": {
+    "description": "permissionsRequiredNotice"
+  },
+  "permissionsStorageDescription": "Umožňuje přehrávat hudbu, ukládat stažené soubory, exportovat seznamy skladeb a připravovat aktualizace.",
+  "@permissionsStorageDescription": {
+    "description": "permissionsStorageDescription"
+  },
+  "permissionsStorageTitle": "Hudba a úložiště",
+  "@permissionsStorageTitle": {
+    "description": "permissionsStorageTitle"
+  },
+  "personalisation": "Přizpůsobení",
+  "@personalisation": {
+    "description": "personalisation"
+  },
+  "pipedPlaylistDescription": "Piped Playlist",
+  "@pipedPlaylistDescription": {
+    "description": "pipedPlaylistDescription"
+  },
+  "pipedplstSyncAlert": "Piped playlist synchronizován!",
+  "@pipedplstSyncAlert": {
+    "description": "pipedplstSyncAlert"
+  },
+  "plain": "Prostý",
+  "@plain": {
+    "description": "plain"
+  },
+  "play": "hrát",
+  "@play": {
+    "description": "play"
+  },
+  "playNext": "Přehrát jako další",
+  "@playNext": {
+    "description": "playNext"
+  },
+  "playNow": "Hrát hned",
+  "@playNow": {
+    "description": "playNow"
+  },
+  "playbackSpeed": "Rychlost přehrávání",
+  "@playbackSpeed": {
+    "description": "playbackSpeed"
+  },
+  "playerUi": "Rozhraní přehrávače",
+  "@playerUi": {
+    "description": "playerUi"
+  },
+  "playerUiDes": "Vybrat uživatelské rozhraní přehrávače",
+  "@playerUiDes": {
+    "description": "playerUiDes"
+  },
+  "playingRecognizedTrack": "Přehrávání:",
+  "@playingRecognizedTrack": {
+    "description": "playingRecognizedTrack"
+  },
+  "playingfromAlbum": "Přehrávání z albumu",
+  "@playingfromAlbum": {
+    "description": "playingfromAlbum"
+  },
+  "playingfromArtist": "Přehrávání od umělce",
+  "@playingfromArtist": {
+    "description": "playingfromArtist"
+  },
+  "playingfromPlaylist": "Přehrávání z playlistu",
+  "@playingfromPlaylist": {
+    "description": "playingfromPlaylist"
+  },
+  "playingfromSelection": "Přehrávání z výběru",
+  "@playingfromSelection": {
+    "description": "playingfromSelection"
+  },
+  "playlist": "Seznam skladeb",
+  "@playlist": {
+    "description": "playlist"
+  },
+  "playlistBlacklistAlert": "Playlist na černé listině!",
+  "@playlistBlacklistAlert": {
+    "description": "playlistBlacklistAlert"
+  },
+  "playlistBookmarkAddAlert": "Playlist přidán do záložek!",
+  "@playlistBookmarkAddAlert": {
+    "description": "playlistBookmarkAddAlert"
+  },
+  "playlistBookmarkRemoveAlert": "Playlist odstraněn ze záložek!",
+  "@playlistBookmarkRemoveAlert": {
+    "description": "playlistBookmarkRemoveAlert"
+  },
+  "playlistCollaboratorsTitle": "Přispěvatelé seznamu videí",
+  "@playlistCollaboratorsTitle": {
+    "description": "playlistCollaboratorsTitle"
+  },
+  "playlistCreatedAlert": "Playlist vytvořen!",
+  "@playlistCreatedAlert": {
+    "description": "playlistCreatedAlert"
+  },
+  "playlistCreatednsongAddedAlert": "Playlist vytvořen a skladba přidána!",
+  "@playlistCreatednsongAddedAlert": {
+    "description": "playlistCreatednsongAddedAlert"
+  },
+  "playlistExportedMsg": "Playlist úspěšně exportován do",
+  "@playlistExportedMsg": {
+    "description": "playlistExportedMsg"
+  },
+  "playlistImportedMsg": "Playlist úspěšně importován",
+  "@playlistImportedMsg": {
+    "description": "playlistImportedMsg"
+  },
+  "playlistRemovedAlert": "Playlist odstraněn!",
+  "@playlistRemovedAlert": {
+    "description": "playlistRemovedAlert"
+  },
+  "playlistRenameAlert": "Úspěšně přejmenováno!",
+  "@playlistRenameAlert": {
+    "description": "playlistRenameAlert"
+  },
+  "playlists": "Playlisty",
+  "@playlists": {
+    "description": "playlists"
+  },
+  "playnextMsg": "Následuje",
+  "@playnextMsg": {
+    "description": "playnextMsg"
+  },
+  "podcasts": "podcasty",
+  "@podcasts": {
+    "description": "podcasts"
+  },
+  "popularTracks": "Populární skladby",
+  "@popularTracks": {
+    "description": "popularTracks"
+  },
+  "processFiles": "Zpracování souborů...",
+  "@processFiles": {
+    "description": "processFiles"
+  },
+  "processingAudio": "Zpracování zvuku...",
+  "@processingAudio": {
+    "description": "processingAudio"
+  },
+  "profiles": "Profily",
+  "@profiles": {
+    "description": "profiles"
+  },
+  "queueLoop": "Opakovat",
+  "@queueLoop": {
+    "description": "queueLoop"
+  },
+  "queueLoopNotDisMsg1": "Režim opakování nelze vypnout, pokud je povoleno promíchání.",
+  "@queueLoopNotDisMsg1": {
+    "description": "queueLoopNotDisMsg1"
+  },
+  "queueLoopNotDisMsg2": "Opakování nelze povolit v režimu rádia.",
+  "@queueLoopNotDisMsg2": {
+    "description": "queueLoopNotDisMsg2"
+  },
+  "queueShufflingDeniedMsg": "Frontu nelze zamíchat, když je povolen režim náhodného výběru",
+  "@queueShufflingDeniedMsg": {
+    "description": "queueShufflingDeniedMsg"
+  },
+  "queuerearrangingDeniedMsg": "Frontu nelze měnit, když je povolen režim promíchání",
+  "@queuerearrangingDeniedMsg": {
+    "description": "queuerearrangingDeniedMsg"
+  },
+  "quickPics": "Rychlý výběr",
+  "@quickPics": {
+    "description": "quickPics"
+  },
+  "quickpicks": "Rychlý výběr",
+  "@quickpicks": {
+    "description": "quickpicks"
+  },
+  "radioNotAvailable": "Rádio pro tohoto interpreta není k dispozici!",
+  "@radioNotAvailable": {
+    "description": "radioNotAvailable"
+  },
+  "randomRadio": "Náhodné rádio",
+  "@randomRadio": {
+    "description": "randomRadio"
+  },
+  "randomSelection": "Náhodný výběr",
+  "@randomSelection": {
+    "description": "randomSelection"
+  },
+  "reArrangePlaylist": "Přeskupit playlist",
+  "@reArrangePlaylist": {
+    "description": "reArrangePlaylist"
+  },
+  "reArrangeSongs": "Přeskupit skladby",
+  "@reArrangeSongs": {
+    "description": "reArrangeSongs"
+  },
+  "readMore": "Přečtěte si více",
+  "@readMore": {
+    "description": "readMore"
+  },
+  "recentSearches": "Nedávná vyhledávání",
+  "@recentSearches": {
+    "description": "recentSearches"
+  },
+  "recentlyPlayed": "Nedávno přehrané",
+  "@recentlyPlayed": {
+    "description": "recentlyPlayed"
+  },
+  "recommend_cloud": "Pro zážitek podobný Spotify doporučujeme aktivovat Cloud Mode: synchronizace mezi všemi vašimi zařízeními v reálném čase a automatické zálohování, aniž byste museli cokoli dělat.",
+  "@recommend_cloud": {
+    "description": "recommend_cloud"
+  },
+  "recommendedAlbums": "Doporučeno",
+  "@recommendedAlbums": {
+    "description": "recommendedAlbums"
+  },
+  "recommendedArtists": "Doporučeno",
+  "@recommendedArtists": {
+    "description": "recommendedArtists"
+  },
+  "removeFromCache": "Odstranit z mezipaměti",
+  "@removeFromCache": {
+    "description": "removeFromCache"
+  },
+  "removeFromLib": "Odebrat z knihovny skladeb",
+  "@removeFromLib": {
+    "description": "removeFromLib"
+  },
+  "removeFromLibrary": "Smazat z knihovny",
+  "@removeFromLibrary": {
+    "description": "removeFromLibrary"
+  },
+  "removeFromPlaylist": "Odstranit z playlistu",
+  "@removeFromPlaylist": {
+    "description": "removeFromPlaylist"
+  },
+  "removeFromQueue": "Odstranit z fronty",
+  "@removeFromQueue": {
+    "description": "removeFromQueue"
+  },
+  "removeMultiple": "Odstranit více skladeb",
+  "@removeMultiple": {
+    "description": "removeMultiple"
+  },
+  "removePlaylist": "Odstranit playlist",
+  "@removePlaylist": {
+    "description": "removePlaylist"
+  },
+  "rename": "Přejmenovat",
+  "@rename": {
+    "description": "rename"
+  },
+  "renamePlaylist": "Přejmenovat playlist",
+  "@renamePlaylist": {
+    "description": "renamePlaylist"
+  },
+  "reproducedBy": "Reprodukováno uživatelem",
+  "@reproducedBy": {
+    "description": "reproducedBy"
+  },
+  "reset": "Resetovat",
+  "@reset": {
+    "description": "reset"
+  },
+  "resetToDefault": "Obnovit výchozí nastavení",
+  "@resetToDefault": {
+    "description": "resetToDefault"
+  },
+  "resetToDefaultDes": "Obnovit výchozí nastavení aplikace (nutný restart)",
+  "@resetToDefaultDes": {
+    "description": "resetToDefaultDes"
+  },
+  "resetToDefaultMsg": "Obnovení výchozího nastavení bylo dokončeno, restartujte aplikaci",
+  "@resetToDefaultMsg": {
+    "description": "resetToDefaultMsg"
+  },
+  "resetblacklistedplaylist": "Resetovat playlisty na černé listině",
+  "@resetblacklistedplaylist": {
+    "description": "resetblacklistedplaylist"
+  },
+  "resetblacklistedplaylistDes": "Resetování všech playlistů zařazených na černou listinu",
+  "@resetblacklistedplaylistDes": {
+    "description": "resetblacklistedplaylistDes"
+  },
+  "restartApp": "Restartovat aplikaci",
+  "@restartApp": {
+    "description": "restartApp"
+  },
+  "restore": "Obnovit",
+  "@restore": {
+    "description": "restore"
+  },
+  "restoreAppData": "Obnovit data aplikace",
+  "@restoreAppData": {
+    "description": "restoreAppData"
+  },
+  "restoreLastPlaybackSession": "Obnovit poslední relaci přehrávání",
+  "@restoreLastPlaybackSession": {
+    "description": "restoreLastPlaybackSession"
+  },
+  "restoreLastPlaybackSessionDes": "Automaticky obnoví poslední relaci přehrávání při spuštění aplikace",
+  "@restoreLastPlaybackSessionDes": {
+    "description": "restoreLastPlaybackSessionDes"
+  },
+  "restoreMsg": "Úspěšně obnoveno!\nZměny se aplikují po restartu",
+  "@restoreMsg": {
+    "description": "restoreMsg"
+  },
+  "restoreSettingsAndPlaylists": "Obnovit nastavení a playlisty",
+  "@restoreSettingsAndPlaylists": {
+    "description": "restoreSettingsAndPlaylists"
+  },
+  "restoreSettingsAndPlaylistsDes": "Obnoví všechna nastavení, přihlašovací údaje a playlisty ze záložního souboru. Přepíše všechna aktuální data",
+  "@restoreSettingsAndPlaylistsDes": {
+    "description": "restoreSettingsAndPlaylistsDes"
   },
   "restore_select_file_dialog": "Vyberte záložní soubor",
   "@restore_select_file_dialog": {
     "description": "restore_select_file_dialog"
   },
-  "auth_hint_email": "jmeno@mail.com",
-  "@auth_hint_email": {
-    "description": "auth_hint_email"
+  "restoring": "Obnovování...",
+  "@restoring": {
+    "description": "restoring"
   },
-  "auth_error_invalid_email": "Zadejte platný e-mail.",
-  "@auth_error_invalid_email": {
-    "description": "auth_error_invalid_email"
+  "results": "Výsledky",
+  "@results": {
+    "description": "results"
+  },
+  "retry": "Zkuste to znovu!",
+  "@retry": {
+    "description": "retry"
+  },
+  "save": "Nechat",
+  "@save": {
+    "description": "save"
+  },
+  "savedAlbums": "Uloženo",
+  "@savedAlbums": {
+    "description": "savedAlbums"
+  },
+  "scanning": "Skenování...",
+  "@scanning": {
+    "description": "scanning"
+  },
+  "search": "Hledat",
+  "@search": {
+    "description": "search"
+  },
+  "searchDes": "Skladby, playlisty, alba, interprety",
+  "@searchDes": {
+    "description": "searchDes"
+  },
+  "searchInLibrary": "Hledat v knihovně",
+  "@searchInLibrary": {
+    "description": "searchInLibrary"
+  },
+  "searchRes": "Výsledky vyhledávání",
+  "@searchRes": {
+    "description": "searchRes"
+  },
+  "search_recent_title": "Nedávná vyhledávání",
+  "@search_recent_title": {
+    "description": "search_recent_title"
+  },
+  "selectAll": "Vybrat všechno",
+  "@selectAll": {
+    "description": "selectAll"
+  },
+  "selectAuthIns": "Vyberte Instanci ověření",
+  "@selectAuthIns": {
+    "description": "selectAuthIns"
+  },
+  "selectAuthInsMsg": "Prosím, vyberte instanci ověřování!",
+  "@selectAuthInsMsg": {
+    "description": "selectAuthInsMsg"
+  },
+  "selectFile": "Vybrat soubor",
+  "@selectFile": {
+    "description": "selectFile"
+  },
+  "selectSongs": "Vybrat skladby",
+  "@selectSongs": {
+    "description": "selectSongs"
+  },
+  "selectedFileNotFound": "Vybraný soubor nebyl nalezen.",
+  "@selectedFileNotFound": {
+    "description": "selectedFileNotFound"
+  },
+  "sessionExpiredLoginAgain": "Vaše relace vypršela. Znovu se přihlaste.",
+  "@sessionExpiredLoginAgain": {
+    "description": "sessionExpiredLoginAgain"
+  },
+  "setDiscoverContent": "Nastav si domovskou stránku",
+  "@setDiscoverContent": {
+    "description": "setDiscoverContent"
+  },
+  "settings": "Nastavení",
+  "@settings": {
+    "description": "settings"
+  },
+  "settings_about_desc": "O Estrella Music",
+  "@settings_about_desc": {
+    "description": "settings_about_desc"
+  },
+  "settings_about_sub": "Verze, open source projekt a GitHub.",
+  "@settings_about_sub": {
+    "description": "settings_about_sub"
+  },
+  "settings_account_desc": "Účet a synchronizace",
+  "@settings_account_desc": {
+    "description": "settings_account_desc"
+  },
+  "settings_account_sub": "Cloudový režim, zálohy, seznam přátel a migrace.",
+  "@settings_account_sub": {
+    "description": "settings_account_sub"
+  },
+  "settings_appearance_desc": "Téma, jazyk a animace rozhraní.",
+  "@settings_appearance_desc": {
+    "description": "settings_appearance_desc"
+  },
+  "settings_cloud_backup": "Cloudové zálohování",
+  "@settings_cloud_backup": {
+    "description": "settings_cloud_backup"
+  },
+  "settings_cloud_backup_desc": "Nahrát, obnovit a spravovat...",
+  "@settings_cloud_backup_desc": {
+    "description": "settings_cloud_backup_desc"
   },
   "settings_cloud_backup_dialog_desc": "Nahrajte zálohu aplikace .hmb na server a v případě potřeby obnovte kteroukoli z uložených záloh.",
   "@settings_cloud_backup_dialog_desc": {
     "description": "settings_cloud_backup_dialog_desc"
   },
-  "delete": "Smazat",
-  "@delete": {
-    "description": "delete"
+  "settings_content_desc": "Objevte filtry, integraci s Piped a mezipaměti.",
+  "@settings_content_desc": {
+    "description": "settings_content_desc"
   },
-  "in_app_storage": "Adresář interního úložiště",
-  "@in_app_storage": {
-    "description": "in_app_storage"
+  "settings_downloads_desc": "Stahování a ukládání",
+  "@settings_downloads_desc": {
+    "description": "settings_downloads_desc"
   },
-  "auth_brand_description_1": "Přinesli jsme přihlášení, registraci a obnovení hesla z předchozího projektu, přizpůsobené pro tuto hudební aplikaci.",
-  "@auth_brand_description_1": {
-    "description": "auth_brand_description_1"
+  "settings_downloads_sub": "Zvukové formáty, složky a automatické stahování.",
+  "@settings_downloads_sub": {
+    "description": "settings_downloads_sub"
   },
-  "auth_brand_description_2": "Vaše relace žije v zabezpečeném úložišti a je ověřena stejným backendem, který jste již používali.",
-  "@auth_brand_description_2": {
-    "description": "auth_brand_description_2"
+  "settings_general_section": "Generál",
+  "@settings_general_section": {
+    "description": "settings_general_section"
   },
-  "auth_brand_not_configured": "Soubor .env musí být nakonfigurován pro připojení ověřovacího backendu.",
-  "@auth_brand_not_configured": {
-    "description": "auth_brand_not_configured"
+  "settings_local_cloud_desc": "Vyberte, migrujte nebo zkontrolujte stav synchronizace pomocí Joss Red.",
+  "@settings_local_cloud_desc": {
+    "description": "settings_local_cloud_desc"
   },
-  "auth_forgot_password_subtitle": "Pokyny vám zašleme na e-mail vašeho účtu.",
-  "@auth_forgot_password_subtitle": {
-    "description": "auth_forgot_password_subtitle"
+  "settings_local_cloud_title": "Místní režim / EMusic Cloud",
+  "@settings_local_cloud_title": {
+    "description": "settings_local_cloud_title"
   },
-  "auth_btn_send_email": "Odeslat poštu",
-  "@auth_btn_send_email": {
-    "description": "auth_btn_send_email"
+  "settings_logout": "Odhlaste se",
+  "@settings_logout": {
+    "description": "settings_logout"
   },
-  "auth_error_not_configured": "V souboru .env chybí ověřovací backend pro konfiguraci.",
-  "@auth_error_not_configured": {
-    "description": "auth_error_not_configured"
+  "settings_migration_desc": "Importujte seznamy skladeb, skladby...",
+  "@settings_migration_desc": {
+    "description": "settings_migration_desc"
   },
-  "auth_error_invalid_credentials": "Nesprávný e-mail nebo heslo.",
-  "@auth_error_invalid_credentials": {
-    "description": "auth_error_invalid_credentials"
+  "settings_migration_title": "Migrujte z Joss Music Kotlin",
+  "@settings_migration_title": {
+    "description": "settings_migration_title"
   },
-  "auth_error_not_verified": "Váš účet ještě není ověřen.",
-  "@auth_error_not_verified": {
-    "description": "auth_error_not_verified"
+  "settings_my_friends": "moji přátelé",
+  "@settings_my_friends": {
+    "description": "settings_my_friends"
   },
-  "auth_error_unknown": "Operaci nebylo možné dokončit.",
-  "@auth_error_unknown": {
-    "description": "auth_error_unknown"
+  "settings_my_friends_desc": "Spravujte své přátele Joss Red přímo.",
+  "@settings_my_friends_desc": {
+    "description": "settings_my_friends_desc"
   },
-  "auth_register_success": "Účet byl úspěšně vytvořen.",
-  "@auth_register_success": {
-    "description": "auth_register_success"
+  "settings_playback_desc": "Kvalita streamování, normalizace, ztišení a baterie.",
+  "@settings_playback_desc": {
+    "description": "settings_playback_desc"
   },
-  "auth_register_error": "Účet se nepodařilo vytvořit.",
-  "@auth_register_error": {
-    "description": "auth_register_error"
+  "settings_refresh_visitor_desc": "Pokud se obsah kanálu Objevit nenačte, znovu vygenerujte své ID Online Music.",
+  "@settings_refresh_visitor_desc": {
+    "description": "settings_refresh_visitor_desc"
   },
-  "auth_recovery_email_sent": "Email odeslán.",
-  "@auth_recovery_email_sent": {
-    "description": "auth_recovery_email_sent"
+  "settings_refresh_visitor_title": "Obnovit ID (ID návštěvníka)",
+  "@settings_refresh_visitor_title": {
+    "description": "settings_refresh_visitor_title"
   },
-  "auth_recovery_email_error": "E-mail nebylo možné odeslat.",
-  "@auth_recovery_email_error": {
-    "description": "auth_recovery_email_error"
+  "settings_visitor_error": "Chyba",
+  "@settings_visitor_error": {
+    "description": "settings_visitor_error"
   },
-  "latestVersion": "Nejnovější dostupná verze",
-  "@latestVersion": {
-    "description": "latestVersion"
+  "settings_visitor_error_desc": "Nepodařilo se vygenerovat nový identifikátor. Zkuste to znovu později.",
+  "@settings_visitor_error_desc": {
+    "description": "settings_visitor_error_desc"
+  },
+  "settings_visitor_exception": "Při regeneraci došlo k chybě: {error}",
+  "@settings_visitor_exception": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    },
+    "description": "settings_visitor_exception"
+  },
+  "settings_visitor_updated": "Aktualizovaný identifikátor",
+  "@settings_visitor_updated": {
+    "description": "settings_visitor_updated"
+  },
+  "settings_visitor_updated_desc": "Nové ID návštěvníka bylo úspěšně vygenerováno.",
+  "@settings_visitor_updated_desc": {
+    "description": "settings_visitor_updated_desc"
+  },
+  "shareAlbum": "Sdílejte album",
+  "@shareAlbum": {
+    "description": "shareAlbum"
+  },
+  "sharePlaylist": "Sdílejte seznam skladeb",
+  "@sharePlaylist": {
+    "description": "sharePlaylist"
+  },
+  "shareSong": "Sdílet tuto skladbu",
+  "@shareSong": {
+    "description": "shareSong"
+  },
+  "shazamSearching": "Hledání shod v databázi Shazam...",
+  "@shazamSearching": {
+    "description": "shazamSearching"
+  },
+  "shuffle": "Náhodné",
+  "@shuffle": {
+    "description": "shuffle"
+  },
+  "shuffleQueue": "Promíchat",
+  "@shuffleQueue": {
+    "description": "shuffleQueue"
+  },
+  "similarToTitle": "Podobné jako {title}",
+  "@similarToTitle": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    },
+    "description": "similarToTitle"
+  },
+  "singles": "Singly",
+  "@singles": {
+    "description": "singles"
+  },
+  "skipSilence": "Přeskočit ticho",
+  "@skipSilence": {
+    "description": "skipSilence"
+  },
+  "skipSilenceDes": "Při přehrávání hudby se přeskočí ticho",
+  "@skipSilenceDes": {
+    "description": "skipSilenceDes"
+  },
+  "sleepTimeSetAlert": "Váš časovač spánku byl spuštěn",
+  "@sleepTimeSetAlert": {
+    "description": "sleepTimeSetAlert"
+  },
+  "sleepTimer": "Časovač spánku",
+  "@sleepTimer": {
+    "description": "sleepTimer"
+  },
+  "slide_indicator": "Krok {current} ze 3",
+  "@slide_indicator": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      }
+    },
+    "description": "slide_indicator"
+  },
+  "songAddedToPlaylistAlert": "Skladba přidána do playlistu!",
+  "@songAddedToPlaylistAlert": {
+    "description": "songAddedToPlaylistAlert"
+  },
+  "songAlreadyExists": "Skladba už existuje!",
+  "@songAlreadyExists": {
+    "description": "songAlreadyExists"
+  },
+  "songAlreadyOfflineAlert": "Skladba je již offline v mezipaměti",
+  "@songAlreadyOfflineAlert": {
+    "description": "songAlreadyOfflineAlert"
+  },
+  "songEnqueueAlert": "Skladba zařazena!",
+  "@songEnqueueAlert": {
+    "description": "songEnqueueAlert"
+  },
+  "songFound": "Píseň nalezena!",
+  "@songFound": {
+    "description": "songFound"
+  },
+  "songInfo": "Informace skladby",
+  "@songInfo": {
+    "description": "songInfo"
+  },
+  "songNotPlayable": "Skladbu nelze přehrát z důvodu omezení serveru!",
+  "@songNotPlayable": {
+    "description": "songNotPlayable"
+  },
+  "songPitch": "tón písně",
+  "@songPitch": {
+    "description": "songPitch"
+  },
+  "songRemovedAlert": "Odstraněno z",
+  "@songRemovedAlert": {
+    "description": "songRemovedAlert"
+  },
+  "songRemovedfromQueue": "Odstraněno z fronty!",
+  "@songRemovedfromQueue": {
+    "description": "songRemovedfromQueue"
+  },
+  "songRemovedfromQueueCurrSong": "Aktuálně přehrávanou skladbu nelze odebrat",
+  "@songRemovedfromQueueCurrSong": {
+    "description": "songRemovedfromQueueCurrSong"
+  },
+  "songs": "Skladby",
+  "@songs": {
+    "description": "songs"
+  },
+  "songsImportedFromJossMusic": "Skladby importované z Joss Music Kotlin",
+  "@songsImportedFromJossMusic": {
+    "description": "songsImportedFromJossMusic"
+  },
+  "sortAscendNDescend": "Seřadit vzestupně/sestupně",
+  "@sortAscendNDescend": {
+    "description": "sortAscendNDescend"
+  },
+  "sortByDate": "Seřadit podle data",
+  "@sortByDate": {
+    "description": "sortByDate"
+  },
+  "sortByDuration": "Seřadit podle trvání",
+  "@sortByDuration": {
+    "description": "sortByDuration"
+  },
+  "sortByName": "Seřadit podle názvu",
+  "@sortByName": {
+    "description": "sortByName"
+  },
+  "speedAndPitch": "Rychlost a rozteč",
+  "@speedAndPitch": {
+    "description": "speedAndPitch"
+  },
+  "standard": "Standard",
+  "@standard": {
+    "description": "standard"
+  },
+  "startRadio": "Spustit rádio",
+  "@startRadio": {
+    "description": "startRadio"
+  },
+  "startupScreen": "Otevřete při spuštění",
+  "@startupScreen": {
+    "description": "startupScreen"
+  },
+  "startupScreenDescription": "Vyberte sekci, kterou Estrella Music otevře jako první",
+  "@startupScreenDescription": {
+    "description": "startupScreenDescription"
+  },
+  "status": "Stav",
+  "@status": {
+    "description": "status"
+  },
+  "stopMusicOnTaskClear": "Zastavení hudby při vymazání správce úloh",
+  "@stopMusicOnTaskClear": {
+    "description": "stopMusicOnTaskClear"
+  },
+  "stopMusicOnTaskClearDes": "Přehrávání hudby se zastaví, když se přejede prstem po aplikaci ze správce úloh",
+  "@stopMusicOnTaskClearDes": {
+    "description": "stopMusicOnTaskClearDes"
+  },
+  "streamingQuality": "Kvalita streamu",
+  "@streamingQuality": {
+    "description": "streamingQuality"
+  },
+  "streamingQualityDes": "Kvalita hudebního streamu",
+  "@streamingQualityDes": {
+    "description": "streamingQualityDes"
+  },
+  "subscribers": "odběratelé",
+  "@subscribers": {
+    "description": "subscribers"
+  },
+  "swipe_prompt": "Přejetím prozkoumejte možnosti ➔",
+  "@swipe_prompt": {
+    "description": "swipe_prompt"
+  },
+  "syncChangesConfirmed": "{count} změny potvrzeny.",
+  "@syncChangesConfirmed": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    },
+    "description": "syncChangesConfirmed"
+  },
+  "syncChangesSynced": "{count} synchronizovaných změn.",
+  "@syncChangesSynced": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    },
+    "description": "syncChangesSynced"
+  },
+  "syncCloudDownloadingExisting": "Aktivován cloudový režim. Stahování stávající knihovny.",
+  "@syncCloudDownloadingExisting": {
+    "description": "syncCloudDownloadingExisting"
+  },
+  "syncCloudMigrationComplete": "Aktivován cloudový režim. Migrovaná knihovna.",
+  "@syncCloudMigrationComplete": {
+    "description": "syncCloudMigrationComplete"
+  },
+  "syncCloudModeActive": "Cloudový režim je aktivní",
+  "@syncCloudModeActive": {
+    "description": "syncCloudModeActive"
+  },
+  "syncCloudPending": "Cloudový režim je aktivní. Čeká na synchronizaci.",
+  "@syncCloudPending": {
+    "description": "syncCloudPending"
+  },
+  "syncDownloadFailed": "Stažení synchronizace se nezdařilo.",
+  "@syncDownloadFailed": {
+    "description": "syncDownloadFailed"
+  },
+  "syncDownloading": "Stahování změn EMusic...",
+  "@syncDownloading": {
+    "description": "syncDownloading"
+  },
+  "syncForceReplaceBackupSaved": "Zálohování recovery: {path}",
+  "@syncForceReplaceBackupSaved": {
+    "placeholders": {
+      "path": {}
+    }
+  },
+  "syncForceReplaceConfirmAction": "Reemplazar y subir",
+  "@syncForceReplaceConfirmAction": {},
+  "syncForceReplaceConfirmBody": "Primero se creará un respaldo de recuperación. Después, las playlists, favoritos, historial, álbumes, artistas y ajustes musicales de EMusic Cloud se reemplazarán con los datos actuales de este dispositivo. No se puede deshacer desde el servidor.",
+  "@syncForceReplaceConfirmBody": {},
+  "syncForceReplaceConfirmTitle": "¿Reemplazar la biblioteca hudební remota?",
+  "@syncForceReplaceConfirmTitle": {},
+  "syncForceReplaceCountMismatch": "Nahrané počty se neshodují s místní knihovnou. Výměna na dálku nebyla potvrzena.",
+  "@syncForceReplaceCountMismatch": {},
+  "syncForceReplaceCreatingBackup": "Vytvoření zálohování obnovy před nahrazením cloudových dat...",
+  "@syncForceReplaceCreatingBackup": {},
+  "syncForceReplaceDescription": "Pausa la sincronización pendiente y reemplaza a la fuerza tu biblioteca musical remota con los datos actuales de este dispositivo. Las descargas permanentecen locales.",
+  "@syncForceReplaceDescription": {},
+  "syncForceReplaceFailed": "EMusic Cloud nemohl nahradit vzdálenou knihovnu.",
+  "@syncForceReplaceFailed": {},
+  "syncForceReplaceFailedLocalPreserved": "Výměna na dálku selhala. Vaše lokální data a obnovovací zálohy byly zachovány.",
+  "@syncForceReplaceFailedLocalPreserved": {},
+  "syncForceReplaceFailedTitle": "Odeslání není dokončeno",
+  "@syncForceReplaceFailedTitle": {},
+  "syncForceReplaceInProgress": "Zastavení synchronizace, vytvoření zálohy a nahrání místní knihovny...",
+  "@syncForceReplaceInProgress": {},
+  "syncForceReplacePauseFailed": "Současnou synchronizaci nelze bezpečně zastavit. Zkuste to za chvíli znovu.",
+  "@syncForceReplacePauseFailed": {},
+  "syncForceReplaceSuccess": "Vzdálená hudební knihovna byla nahrazena aktuálními daty tohoto zařízení.",
+  "@syncForceReplaceSuccess": {},
+  "syncForceReplaceSuccessTitle": "Odeslání dokončeno",
+  "@syncForceReplaceSuccessTitle": {},
+  "syncForceReplaceTitle": "Zrušit sincronización y subir ESTA základnu",
+  "@syncForceReplaceTitle": {},
+  "syncForceReplaceValidating": "Ověření nahrané knihovny před výměnou cloudových dat...",
+  "@syncForceReplaceValidating": {},
+  "syncLibrarySynced": "Synchronizovaná knihovna.",
+  "@syncLibrarySynced": {
+    "description": "syncLibrarySynced"
+  },
+  "syncLibraryUpToDate": "Knihovna aktuální.",
+  "@syncLibraryUpToDate": {
+    "description": "syncLibraryUpToDate"
+  },
+  "syncLocalChangesFirst": "Došlo k novým místním změnám. Před stažením budou nahrány.",
+  "@syncLocalChangesFirst": {
+    "description": "syncLocalChangesFirst"
+  },
+  "syncLocalDeviceOnly": "Vaše data jsou uchovávána pouze v tomto zařízení.",
+  "@syncLocalDeviceOnly": {
+    "description": "syncLocalDeviceOnly"
+  },
+  "syncLocalModeActive": "Místní režim je aktivní",
+  "@syncLocalModeActive": {
+    "description": "syncLocalModeActive"
+  },
+  "syncOfflinePending": "Offline. Změny čekají na vyřízení.",
+  "@syncOfflinePending": {
+    "description": "syncOfflinePending"
+  },
+  "syncOfflineRetry": "Offline. Změny uloženy pro opakování.",
+  "@syncOfflineRetry": {
+    "description": "syncOfflineRetry"
+  },
+  "syncPlaylistSongs": "Synchronizujte skladby ze seznamu skladeb",
+  "@syncPlaylistSongs": {
+    "description": "syncPlaylistSongs"
+  },
+  "syncUnconfirmedRetry": "EMusic nepotvrdila všechny změny. Budou znovu souzeni.",
+  "@syncUnconfirmedRetry": {
+    "description": "syncUnconfirmedRetry"
+  },
+  "syncUploadRetry": "Nedalo se vstát. Bude to zopakováno později.",
+  "@syncUploadRetry": {
+    "description": "syncUploadRetry"
+  },
+  "syncUploadSuccess": "Změny byly nahrány správně.",
+  "@syncUploadSuccess": {
+    "description": "syncUploadSuccess"
+  },
+  "syncUploadSuccessWs": "Změny byly úspěšně nahrány (WS).",
+  "@syncUploadSuccessWs": {
+    "description": "syncUploadSuccessWs"
+  },
+  "syncUploadWsRetry": "Nelze nahrát pomocí WS. Bude to zopakováno později.",
+  "@syncUploadWsRetry": {
+    "description": "syncUploadWsRetry"
+  },
+  "syncUploading": "Nahrávání změn do EMusic...",
+  "@syncUploading": {
+    "description": "syncUploading"
+  },
+  "synced": "Synchronizovaný",
+  "@synced": {
+    "description": "synced"
+  },
+  "syncedLyricsNotAvailable": "Synchronizovaný text není k dispozici!",
+  "@syncedLyricsNotAvailable": {
+    "description": "syncedLyricsNotAvailable"
+  },
+  "systemDefault": "Výchozí nastavení systému",
+  "@systemDefault": {
+    "description": "systemDefault"
+  },
+  "themeMode": "Vzhled",
+  "@themeMode": {
+    "description": "themeMode"
+  },
+  "title": "Název",
+  "@title": {
+    "description": "title"
+  },
+  "topMusicVid": "Nejlepší hudební videa",
+  "@topMusicVid": {
+    "description": "topMusicVid"
+  },
+  "topmusicvideos": "Topovky",
+  "@topmusicvideos": {
+    "description": "topmusicvideos"
+  },
+  "trending": "Trendy",
+  "@trending": {
+    "description": "trending"
+  },
+  "unLink": "Odstranit odkaz",
+  "@unLink": {
+    "description": "unLink"
+  },
+  "unlinkAlert": "Úspěšně odpojeno!",
+  "@unlinkAlert": {
+    "description": "unlinkAlert"
+  },
+  "untitledSong": "Píseň bez názvu",
+  "@untitledSong": {
+    "description": "untitledSong"
+  },
+  "upNext": "Další skladba",
+  "@upNext": {
+    "description": "upNext"
   },
   "updateApp": "Aktualizovat aplikaci",
   "@updateApp": {
     "description": "updateApp"
   },
-  "loadInfoUpdate": "Nelze načíst informace o aktualizaci",
-  "@loadInfoUpdate": {
-    "description": "loadInfoUpdate"
+  "urlSearchDes": "Zjištěná URL Kliknutím na ni otevřete/přehrajete související obsah",
+  "@urlSearchDes": {
+    "description": "urlSearchDes"
   },
-  "infoNotAvailable": "Informace nejsou k dispozici",
-  "@infoNotAvailable": {
-    "description": "infoNotAvailable"
+  "useThisMetadata": "Použít tato metadata",
+  "@useThisMetadata": {
+    "description": "Button for selecting a metadata candidate"
   },
-  "developedBy": "Vyvinul a spravuje Joss Estrada (JOSPROX)",
-  "@developedBy": {
-    "description": "developedBy"
+  "userBlocked": "Blokovaný uživatel",
+  "@userBlocked": {
+    "description": "userBlocked"
   },
-  "copyrightNotice": "© 2026 JOSPROX. Licence GPL v3.0",
-  "@copyrightNotice": {
-    "description": "copyrightNotice"
+  "userListMissing": "Odpověď neobsahuje seznam uživatelů.",
+  "@userListMissing": {
+    "description": "userListMissing"
   },
-  "syncForceReplaceTitle": "Zrušit sincronización y subir ESTA základnu",
-  "syncForceReplaceConfirmAction": "Reemplazar y subir",
-  "syncForceReplaceDescription": "Pausa la sincronización pendiente y reemplaza a la fuerza tu biblioteca musical remota con los datos actuales de este dispositivo. Las descargas permanentecen locales.",
-  "syncForceReplaceConfirmBody": "Primero se creará un respaldo de recuperación. Después, las playlists, favoritos, historial, álbumes, artistas y ajustes musicales de EMusic Cloud se reemplazarán con los datos actuales de este dispositivo. No se puede deshacer desde el servidor.",
-  "syncForceReplaceConfirmTitle": "¿Reemplazar la biblioteca hudební remota?"
+  "userSearchFailed": "Nelze vyhledat uživatele ({statusCode}).",
+  "@userSearchFailed": {
+    "placeholders": {
+      "statusCode": {
+        "type": "String"
+      }
+    },
+    "description": "userSearchFailed"
+  },
+  "userUnblocked": "Odemčený uživatel",
+  "@userUnblocked": {
+    "description": "userUnblocked"
+  },
+  "username": "Uživatelské jméno",
+  "@username": {
+    "description": "username"
+  },
+  "video": "Video",
+  "@video": {
+    "description": "video"
+  },
+  "videos": "Videa",
+  "@videos": {
+    "description": "videos"
+  },
+  "viewAll": "Zobrazit vše",
+  "@viewAll": {
+    "description": "viewAll"
+  },
+  "viewArtist": "Zobrazit interpreta",
+  "@viewArtist": {
+    "description": "viewArtist"
+  },
+  "welcome_intro": "Modernizovali jsme naši platformu. Starý systém nahrávání ručních záloh byl deaktivován. Nyní máte dva jasné způsoby, jak spravovat svou hudební knihovnu.",
+  "@welcome_intro": {
+    "description": "welcome_intro"
+  },
+  "welcome_subtitle": "Vyberte si, jak chcete od této chvíle zažít Estrella Music.",
+  "@welcome_subtitle": {
+    "description": "welcome_subtitle"
+  },
+  "welcome_title": "Vaše hudba, vaše cesta",
+  "@welcome_title": {
+    "description": "welcome_title"
+  }
 }

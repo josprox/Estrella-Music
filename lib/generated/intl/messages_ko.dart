@@ -44,7 +44,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m11(count) => "_${count} 변경사항이 동기화되었습니다.";
 
-  static String m12(statusCode) => "사용자(${statusCode})를 검색할 수 없습니다.";
+  static String m12(path) => "복구 백업: ${path}";
+
+  static String m13(statusCode) => "사용자(${statusCode})를 검색할 수 없습니다.";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -433,6 +435,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "홈스크린에서 보여줄 컨텐츠의 대략적인 수를 정해주세요. 수가 적을수록 빨리 불러와집니다",
     ),
     "id": MessageLookupByLibrary.simpleMessage("아이디"),
+    "identifySongMetadata": MessageLookupByLibrary.simpleMessage("메타데이터를 식별"),
     "ignoreBatOpt": MessageLookupByLibrary.simpleMessage("배터리 최적화 무시"),
     "ignoreBatOptDes": MessageLookupByLibrary.simpleMessage(
       "만약 배터리 최적화 기능 때문에 푸시 알림이 오지 않거나 음악이 멈춘다면, 이 설정을 활성화해주세요",
@@ -533,6 +536,23 @@ class MessageLookup extends MessageLookupByLibrary {
     "lyrics": MessageLookupByLibrary.simpleMessage("편지"),
     "lyricsNotAvailable": MessageLookupByLibrary.simpleMessage("가사를 찾지 못했습니다!"),
     "manageCollaborators": MessageLookupByLibrary.simpleMessage("공동작업자(친구) 관리"),
+    "metadataApplySuccess": MessageLookupByLibrary.simpleMessage(
+      "Metadata는 로컬 파일에 삽입되었습니다.",
+    ),
+    "metadataNoResults": MessageLookupByLibrary.simpleMessage(
+      "인기 상품 다른 검색을 시도하십시오.",
+    ),
+    "metadataOperationFailed": MessageLookupByLibrary.simpleMessage(
+      "metadata 동작이 실패했습니다.",
+    ),
+    "metadataOverwriteWarning": MessageLookupByLibrary.simpleMessage(
+      "이 임베디드 제목, 아티스트, 앨범 및 커버를 덮어 어떤 필드를 보존하지 않습니다.",
+    ),
+    "metadataSearchDescription": MessageLookupByLibrary.simpleMessage(
+      "제목, 아티스트, 앨범 및 현지 파일에 맞는 일치를 선택하십시오.",
+    ),
+    "metadataSearchHint": MessageLookupByLibrary.simpleMessage("송 또는 아티스트 이름"),
+    "metadataSearchTitle": MessageLookupByLibrary.simpleMessage("노래를 식별"),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
       "마이크 근처에서 음악이 충분히 크게 재생되는지 확인하세요.",
     ),
@@ -987,6 +1007,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncDownloading": MessageLookupByLibrary.simpleMessage(
       "EMusic 변경사항 다운로드 중...",
     ),
+    "syncForceReplaceBackupSaved": m12,
     "syncForceReplaceConfirmAction": MessageLookupByLibrary.simpleMessage(
       "Reemplazar y subir",
     ),
@@ -996,11 +1017,42 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceConfirmTitle": MessageLookupByLibrary.simpleMessage(
       "¿Reemplazar la biblioteca musical remota?",
     ),
+    "syncForceReplaceCountMismatch": MessageLookupByLibrary.simpleMessage(
+      "업로드 된 수는 로컬 라이브러리와 일치하지 않습니다. 먼 보충은 확인될 수 있었습니다.",
+    ),
+    "syncForceReplaceCreatingBackup": MessageLookupByLibrary.simpleMessage(
+      "클라우드 데이터를 대체하기 전에 복구 백업 만들기 ...",
+    ),
     "syncForceReplaceDescription": MessageLookupByLibrary.simpleMessage(
       "Pausa la sincronización pendiente y reemplaza a la fuerza tu biblioteca musical remota con los datos actuales de este dispositivo. Las descargas permanecen 지역.",
     ),
+    "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud는 원격 라이브러리를 대체 할 수 없습니다.",
+    ),
+    "syncForceReplaceFailedLocalPreserved":
+        MessageLookupByLibrary.simpleMessage(
+          "원격 교체 실패. 현지 데이터 및 복구 백업이 보존되었습니다.",
+        ),
+    "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
+      "완료되지 않음",
+    ),
+    "syncForceReplaceInProgress": MessageLookupByLibrary.simpleMessage(
+      "Pausing sync, 백업 생성 및 로컬 라이브러리 업로드 ...",
+    ),
+    "syncForceReplacePauseFailed": MessageLookupByLibrary.simpleMessage(
+      "현재 동기화는 안전하게 일시 중지 할 수 없습니다. 한 순간에 다시 시도하십시오.",
+    ),
+    "syncForceReplaceSuccess": MessageLookupByLibrary.simpleMessage(
+      "먼 음악 도서관은 이 장치의 현재 자료로 대체되었습니다.",
+    ),
+    "syncForceReplaceSuccessTitle": MessageLookupByLibrary.simpleMessage(
+      "첨부파일",
+    ),
     "syncForceReplaceTitle": MessageLookupByLibrary.simpleMessage(
       "Cancelar sincronización y subir esta base",
+    ),
+    "syncForceReplaceValidating": MessageLookupByLibrary.simpleMessage(
+      "클라우드 데이터를 대체하기 전에 업로드 된 라이브러리를 검증 ...",
     ),
     "syncLibrarySynced": MessageLookupByLibrary.simpleMessage("동기화된 라이브러리."),
     "syncLibraryUpToDate": MessageLookupByLibrary.simpleMessage(
@@ -1056,11 +1108,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "감지된 URL을 클릭하면 관련 콘텐츠가 열리거나 재생됩니다.",
     ),
+    "useThisMetadata": MessageLookupByLibrary.simpleMessage("이 메타데이터 사용"),
     "userBlocked": MessageLookupByLibrary.simpleMessage("차단된 사용자"),
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "응답에는 사용자 목록이 포함되어 있지 않습니다.",
     ),
-    "userSearchFailed": m12,
+    "userSearchFailed": m13,
     "userUnblocked": MessageLookupByLibrary.simpleMessage("잠금 해제된 사용자"),
     "username": MessageLookupByLibrary.simpleMessage("사용자 이름"),
     "video": MessageLookupByLibrary.simpleMessage("동영상"),

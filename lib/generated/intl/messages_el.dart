@@ -45,7 +45,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m11(count) => "${count} συγχρονισμένες αλλαγές.";
 
-  static String m12(statusCode) =>
+  static String m12(path) => "Ανάκτηση αντιγράφων ασφαλείας: ${path}";
+
+  static String m13(statusCode) =>
       "Δεν ήταν δυνατή η αναζήτηση για χρήστες (${statusCode}).";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -561,6 +563,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Επιλέξτε τον αριθμό των αρχικών περιεχομένων της αρχικής οθόνης (περίπου). Λιγότερα αποτελέσματα φορτώνονται πιο γρήγορα",
     ),
     "id": MessageLookupByLibrary.simpleMessage("ID"),
+    "identifySongMetadata": MessageLookupByLibrary.simpleMessage(
+      "Προσδιορισμός μεταδεδομένων",
+    ),
     "ignoreBatOpt": MessageLookupByLibrary.simpleMessage(
       "Αγνοήστε τη βελτιστοποίηση της μπαταρίας",
     ),
@@ -694,6 +699,27 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "manageCollaborators": MessageLookupByLibrary.simpleMessage(
       "Διαχείριση συνεργατών (φίλων)",
+    ),
+    "metadataApplySuccess": MessageLookupByLibrary.simpleMessage(
+      "Τα μεταδεδομένα ενσωματώθηκαν στο τοπικό αρχείο.",
+    ),
+    "metadataNoResults": MessageLookupByLibrary.simpleMessage(
+      "Δε βρέθηκαν σπίρτα. Δοκίμασε άλλη έρευνα.",
+    ),
+    "metadataOperationFailed": MessageLookupByLibrary.simpleMessage(
+      "Η λειτουργία μεταδεδομένων απέτυχε.",
+    ),
+    "metadataOverwriteWarning": MessageLookupByLibrary.simpleMessage(
+      "Αυτό θα αντικαταστήσει τον ενσωματωμένο τίτλο, τον καλλιτέχνη, το άλμπουμ και το εξώφυλλο, ενώ παράλληλα θα διατηρεί οποιαδήποτε πεδία ο αγώνας δεν παρέχει.",
+    ),
+    "metadataSearchDescription": MessageLookupByLibrary.simpleMessage(
+      "Επιλέξτε το σωστό ταίριασμα για να ενσωματώσετε τον τίτλο, τον καλλιτέχνη, το άλμπουμ και το εξώφυλλο στο τοπικό αρχείο.",
+    ),
+    "metadataSearchHint": MessageLookupByLibrary.simpleMessage(
+      "Τραγούδι ή όνομα καλλιτέχνη",
+    ),
+    "metadataSearchTitle": MessageLookupByLibrary.simpleMessage(
+      "Αναγνώριση τραγουδιού",
     ),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
       "Βεβαιωθείτε ότι η μουσική παίζει αρκετά δυνατά κοντά στο μικρόφωνό σας.",
@@ -1287,6 +1313,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncDownloading": MessageLookupByLibrary.simpleMessage(
       "Λήψη αλλαγών EMusic...",
     ),
+    "syncForceReplaceBackupSaved": m12,
     "syncForceReplaceConfirmAction": MessageLookupByLibrary.simpleMessage(
       "Reemplazar y subir",
     ),
@@ -1296,11 +1323,42 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceConfirmTitle": MessageLookupByLibrary.simpleMessage(
       "¿Reemplazar la biblioteca musical remota?",
     ),
+    "syncForceReplaceCountMismatch": MessageLookupByLibrary.simpleMessage(
+      "Οι ανεβασμένες μετρήσεις δεν ταιριάζουν με την τοπική βιβλιοθήκη. Η απομακρυσμένη αντικατάσταση δεν μπορεί να επιβεβαιωθεί.",
+    ),
+    "syncForceReplaceCreatingBackup": MessageLookupByLibrary.simpleMessage(
+      "Δημιουργία ενός αντιγράφου ασφαλείας αποκατάστασης πριν την αντικατάσταση δεδομένων cloud...",
+    ),
     "syncForceReplaceDescription": MessageLookupByLibrary.simpleMessage(
       "Pausa la sincronización pendiente y reemplaza a la fuerza tu biblioteca musical remota con los datos actuales de este dispositivo. Las descargas-monecen locales.",
     ),
+    "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
+      "Το EMusic Cloud δεν μπόρεσε να αντικαταστήσει την απομακρυσμένη βιβλιοθήκη.",
+    ),
+    "syncForceReplaceFailedLocalPreserved":
+        MessageLookupByLibrary.simpleMessage(
+          "Ο απομακρυσμένος αντικαταστάτης απέτυχε. Τα τοπικά δεδομένα και οι ενισχύσεις αποκατάστασης διατηρήθηκαν.",
+        ),
+    "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
+      "Η αποστολή δεν ολοκληρώθηκε",
+    ),
+    "syncForceReplaceInProgress": MessageLookupByLibrary.simpleMessage(
+      "Παύση συγχρονισμού, δημιουργία αντιγράφων ασφαλείας και αποστολή της τοπικής βιβλιοθήκης...",
+    ),
+    "syncForceReplacePauseFailed": MessageLookupByLibrary.simpleMessage(
+      "Ο τρέχων συγχρονισμός δεν μπορούσε να διακοπεί με ασφάλεια. Προσπάθησε ξανά σε ένα λεπτό.",
+    ),
+    "syncForceReplaceSuccess": MessageLookupByLibrary.simpleMessage(
+      "Η απομακρυσμένη μουσική βιβλιοθήκη αντικαταστάθηκε με τα τρέχοντα δεδομένα αυτής της συσκευής.",
+    ),
+    "syncForceReplaceSuccessTitle": MessageLookupByLibrary.simpleMessage(
+      "Η αποστολή ολοκληρώθηκε",
+    ),
     "syncForceReplaceTitle": MessageLookupByLibrary.simpleMessage(
       "Βάση esta Cancelar sincronización y subir",
+    ),
+    "syncForceReplaceValidating": MessageLookupByLibrary.simpleMessage(
+      "Επικύρωση της αναρτημένης βιβλιοθήκης πριν την αντικατάσταση δεδομένων cloud...",
     ),
     "syncLibrarySynced": MessageLookupByLibrary.simpleMessage(
       "Συγχρονισμένη βιβλιοθήκη.",
@@ -1372,13 +1430,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "Η διεύθυνση URL που εντοπίστηκε κάντε κλικ σε αυτήν για να ανοίξετε/να παίξετε το σχετικό περιεχόμενο",
     ),
+    "useThisMetadata": MessageLookupByLibrary.simpleMessage(
+      "Χρήση αυτών των μεταδεδομένων",
+    ),
     "userBlocked": MessageLookupByLibrary.simpleMessage(
       "Αποκλεισμένος χρήστης",
     ),
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "Η απάντηση δεν περιέχει λίστα χρηστών.",
     ),
-    "userSearchFailed": m12,
+    "userSearchFailed": m13,
     "userUnblocked": MessageLookupByLibrary.simpleMessage(
       "Ξεκλείδωτος χρήστης",
     ),

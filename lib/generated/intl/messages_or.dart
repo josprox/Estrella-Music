@@ -44,7 +44,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m11(count) => "${count} ସିଙ୍କ୍ରୋନାଇଜଡ୍ ପରିବର୍ତ୍ତନଗୁଡିକ |";
 
-  static String m12(statusCode) =>
+  static String m12(path) => "ପୁନରୁଦ୍ଧାର ବ୍ୟାକଅପ: ${path}";
+
+  static String m13(statusCode) =>
       "ଉପଭୋକ୍ତାମାନଙ୍କ ପାଇଁ ସନ୍ଧାନ କରିପାରିଲା ନାହିଁ (${statusCode}) |";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -548,6 +550,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "ପ୍ରାରମ୍ଭିକ ହୋମ ସ୍କ୍ରିନ ବିଷୟବସ୍ତୁ ସଂଖ୍ୟା (ପାଖାପାଖି) ଚୟନ କରନ୍ତୁ | କମ୍ ଫଳାଫଳ ଶୀଘ୍ର ଲୋଡ୍ ହୁଏ |",
     ),
     "id": MessageLookupByLibrary.simpleMessage("ID"),
+    "identifySongMetadata": MessageLookupByLibrary.simpleMessage(
+      "ମେଟାଡାଟା ଚିହ୍ନଟ କରନ୍ତୁ",
+    ),
     "ignoreBatOpt": MessageLookupByLibrary.simpleMessage(
       "ବ୍ୟାଟେରୀ ଅପ୍ଟିମାଇଜେସନ୍ କୁ ଅଗ୍ରାହ୍ୟ କରନ୍ତୁ",
     ),
@@ -679,6 +684,27 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "manageCollaborators": MessageLookupByLibrary.simpleMessage(
       "ସହଯୋଗୀ (ବନ୍ଧୁ) ପରିଚାଳନା କରନ୍ତୁ |",
+    ),
+    "metadataApplySuccess": MessageLookupByLibrary.simpleMessage(
+      "ସ୍ଥାନୀୟ ଫାଇଲରେ ମେଟାଡାଟା ସଂଲଗ୍ନ ଥିଲା ।",
+    ),
+    "metadataNoResults": MessageLookupByLibrary.simpleMessage(
+      "କୌଣସି ମେଳକ ମିଳିଲା ନାହିଁ । ଗୋଟିଏ ଭିନ୍ନ ସନ୍ଧାନକୁ ଚେଷ୍ଟା କରନ୍ତୁ ।",
+    ),
+    "metadataOperationFailed": MessageLookupByLibrary.simpleMessage(
+      "ମେଟାଡାଟା ପ୍ରୟୋଗ ବିଫଳ ହୋଇଛି ।",
+    ),
+    "metadataOverwriteWarning": MessageLookupByLibrary.simpleMessage(
+      "ଏହା ମେଳକ ପ୍ରଦାନ କରୁନଥିବା କୌଣସି କ୍ଷେତ୍ରକୁ ସଂରକ୍ଷଣ କରିବା ସମୟରେ ସଂଲଗ୍ନ ଶୀର୍ଷକ, କଳାକାର, ଆଲବମ ଏବଂ ଆବରଣକୁ ନବଲିଖନ କରିବ ।",
+    ),
+    "metadataSearchDescription": MessageLookupByLibrary.simpleMessage(
+      "ଏହାର ଶୀର୍ଷକ, କଳାକାର, ଆଲବମ ଏବଂ ସ୍ଥାନୀୟ ଫାଇଲରେ ଆଚ୍ଛାଦନ କରିବା ପାଇଁ ସଠିକ ମେଳକକୁ ବାଛନ୍ତୁ ।",
+    ),
+    "metadataSearchHint": MessageLookupByLibrary.simpleMessage(
+      "ଗୀତ କିମ୍ବା କଳାକାର ନାମ",
+    ),
+    "metadataSearchTitle": MessageLookupByLibrary.simpleMessage(
+      "ଗୀତକୁ ଚିହ୍ନଟ କରନ୍ତୁ",
     ),
     "micInstruction": MessageLookupByLibrary.simpleMessage(
       "ନିଶ୍ଚିତ କର ଯେ ତୁମର ମାଇକ୍ରୋଫୋନ୍ ନିକଟରେ ସଂଗୀତ ଯଥେଷ୍ଟ ଉଚ୍ଚରେ ବାଜୁଛି |",
@@ -1276,6 +1302,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncDownloading": MessageLookupByLibrary.simpleMessage(
       "EMusic ପରିବର୍ତ୍ତନଗୁଡ଼ିକୁ ଡାଉନଲୋଡ୍ କରୁଛି ...",
     ),
+    "syncForceReplaceBackupSaved": m12,
     "syncForceReplaceConfirmAction": MessageLookupByLibrary.simpleMessage(
       "ଏଲିନା କହିଲ",
     ),
@@ -1285,11 +1312,42 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceConfirmTitle": MessageLookupByLibrary.simpleMessage(
       "ଓଡ଼ିଆ ଉଇକିପିଡ଼ିଆର ସମ୍ପାଦକ କିଏ?",
     ),
+    "syncForceReplaceCountMismatch": MessageLookupByLibrary.simpleMessage(
+      "ଅପଲୋଡ ହୋଇଥିବା ଗଣନାଗୁଡ଼ିକ ସ୍ଥାନୀୟ ଲାଇବ୍ରେରୀ ସହିତ ମେଳ ଖାଉନାହିଁ । ସୁଦୂର ପ୍ରତିସ୍ଥାପନକୁ ନିଶ୍ଚିତ କରାଯାଇପାରିଲା ନାହିଁ ।",
+    ),
+    "syncForceReplaceCreatingBackup": MessageLookupByLibrary.simpleMessage(
+      "ମେଘ ତଥ୍ୟକୁ ବଦଳାଇବା ପୂର୍ବରୁ ଗୋଟିଏ ପୁନରୁଦ୍ଧାର ସଂରକ୍ଷଣ ନିର୍ମାଣ କରୁଅଛି...",
+    ),
     "syncForceReplaceDescription": MessageLookupByLibrary.simpleMessage(
       "ଓଡ଼ିଆ ବାକ୍ୟ (Odia Sentence) ଓଡ଼ିଆ ସାହିତ୍ୟ (Odia Sentence). Las descargas ସ୍ଥାୟୀ ଭାବରେ ସ୍ଥାନଗୁଡ଼ିକୁ ସ୍ଥାୟୀ କରିଥାଏ ।",
     ),
+    "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
+      "EMusic Cloud ସୁଦୂର ଲାଇବ୍ରେରୀକୁ ବଦଳାଇ ପାରିଲା ନାହିଁ ।",
+    ),
+    "syncForceReplaceFailedLocalPreserved":
+        MessageLookupByLibrary.simpleMessage(
+          "ସୁଦୂର ପ୍ରତିସ୍ଥାପନ ବିଫଳ ହୋଇଛି । ଆପଣଙ୍କର ସ୍ଥାନୀୟ ତଥ୍ୟ ଏବଂ ପୁନରୁଦ୍ଧାର ସଂରକ୍ଷଣ କରାଯାଇଛି ।",
+        ),
+    "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
+      "ଅପଲୋଡ ସମ୍ପୂର୍ଣ୍ଣ ହୋଇନାହିଁ",
+    ),
+    "syncForceReplaceInProgress": MessageLookupByLibrary.simpleMessage(
+      "ସମକାଳୀନ ବିରତି, ଗୋଟିଏ ସଂରକ୍ଷଣ ନିର୍ମାଣ, ଏବଂ ସ୍ଥାନୀୟ ଲାଇବ୍ରେରୀକୁ ଅପଲୋଡ କରୁଅଛି...",
+    ),
+    "syncForceReplacePauseFailed": MessageLookupByLibrary.simpleMessage(
+      "ସାମ୍ପ୍ରତିକ ସମକାଳୀନକରଣକୁ ସୁରକ୍ଷିତ ଭାବରେ ସ୍ଥଗିତ କରାଯାଇପାରିଲା ନାହିଁ । କିଛି ସମୟ ପରେ ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ ।",
+    ),
+    "syncForceReplaceSuccess": MessageLookupByLibrary.simpleMessage(
+      "ସୁଦୂର ସଙ୍ଗୀତ ଲାଇବ୍ରେରୀକୁ ଏହି ଉପକରଣର ସାମ୍ପ୍ରତିକ ତଥ୍ୟ ସହିତ ପ୍ରତିସ୍ଥାପନ କରାଯାଇଛି ।",
+    ),
+    "syncForceReplaceSuccessTitle": MessageLookupByLibrary.simpleMessage(
+      "ଅପଲୋଡ ସମ୍ପୂର୍ଣ୍ଣ ହୋଇଛି",
+    ),
     "syncForceReplaceTitle": MessageLookupByLibrary.simpleMessage(
       "Cancelar sincronización y subir esta base",
+    ),
+    "syncForceReplaceValidating": MessageLookupByLibrary.simpleMessage(
+      "କ୍ଲାଉଡ ତଥ୍ୟକୁ ବଦଳାଇବା ପୂର୍ବରୁ ଅପଲୋଡ ଲାଇବ୍ରେରୀକୁ ବୈଧକରଣ କରୁଅଛି...",
     ),
     "syncLibrarySynced": MessageLookupByLibrary.simpleMessage(
       "ସିଙ୍କ୍ରୋନାଇଜଡ୍ ଲାଇବ୍ରେରୀ |",
@@ -1359,11 +1417,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "ସଂପୃକ୍ତ ବିଷୟବସ୍ତୁ ଖୋଲିବା / ଖେଳିବା ପାଇଁ ଚିହ୍ନଟ URL ଏଥିରେ କ୍ଲିକ୍ କରନ୍ତୁ |",
     ),
+    "useThisMetadata": MessageLookupByLibrary.simpleMessage(
+      "ଏହି ମେଟାଡାଟା ବ୍ୟବହାର କରନ୍ତୁ",
+    ),
     "userBlocked": MessageLookupByLibrary.simpleMessage("ଅବରୋଧିତ ଉପଭୋକ୍ତା |"),
     "userListMissing": MessageLookupByLibrary.simpleMessage(
       "ପ୍ରତିକ୍ରିୟାରେ ଉପଭୋକ୍ତାମାନଙ୍କର ଏକ ତାଲିକା ନାହିଁ |",
     ),
-    "userSearchFailed": m12,
+    "userSearchFailed": m13,
     "userUnblocked": MessageLookupByLibrary.simpleMessage(
       "ଅନଲକ୍ ହୋଇଥିବା ଉପଭୋକ୍ତା |",
     ),
