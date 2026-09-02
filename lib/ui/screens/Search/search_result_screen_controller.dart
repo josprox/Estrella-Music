@@ -87,7 +87,7 @@ class SearchResultScreenController extends GetxController {
           limit: itemCount,
           filterParams: filterMap[filterName]);
 
-      // En este modo, resultContent solo tendrÃ¡ la llave del filtro (ej. "Songs") y "params"
+      // En este modo, resultContent solo tendrá la llave del filtro (ej. "Songs") y "params"
       resultContent.value = x;
       if (x['params'] != null) {
         additionalParamNext.value = x['params'];

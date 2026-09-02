@@ -1294,10 +1294,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
       "E Music Cloud không thể thay thế thư viện từ xa.",
     ),
-    "syncForceReplaceFailedLocalPreserved":
-        MessageLookupByLibrary.simpleMessage(
-          "Việc thay thế từ xa bị lỗi. Dữ liệu và bản sao lưu của anh đã được bảo quản.",
-        ),
+    "syncForceReplaceFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
+      "Việc thay thế từ xa bị lỗi. Dữ liệu và bản sao lưu của anh đã được bảo quản.",
+    ),
     "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
       "Tải lên chưa xong",
     ),

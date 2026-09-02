@@ -4,9 +4,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get/get.dart';
-import 'package:open_file/open_file.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:permission_handler/permission_handler.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 /// Estados posibles del proceso de descarga/instalación.
@@ -142,53 +140,34 @@ class UpdateController extends GetxController {
   // ──────────────────────────────────────────────
 
   Future<void> startUpdate() async {
-    // iOS → abre guía de instalación en el navegador
-    if (GetPlatform.isIOS) {
+    // Android e iOS → abre el navegador o tienda de aplicaciones
+    if (GetPlatform.isAndroid || GetPlatform.isIOS) {
       final data = updateInfo.value;
       final url = data?['Descarga'] as String? ??
-          'https://emusic.josprox.com/ios-setup';
+          'https://github.com/josprox/Estrella-Music/releases/latest';
       await _openBrowser(url);
       return;
     }
 
-    // Linux / macOS → descarga desde el navegador (no hay instalador universal)
+    // Linux / macOS → descarga desde el navegador
     if (GetPlatform.isLinux || GetPlatform.isMacOS) {
       final url = platformDownloadUrl;
       if (url != null) await _openBrowser(url);
       return;
     }
 
-    // Android / Windows → descarga dentro de la app con barra de progreso
+    // Windows → descarga dentro de la app
     await _downloadInApp();
   }
 
-  /// Lanza la instalación del archivo ya descargado (solo Android y Windows).
+  /// Lanza la instalación del archivo ya descargado (Windows).
   Future<void> installUpdate() async {
     if (_localFilePath == null) return;
 
     try {
       downloadState.value = DownloadState.installing;
 
-      if (GetPlatform.isAndroid) {
-        // Android 8+ requiere permiso explícito para instalar APKs de fuentes desconocidas
-        final installPerm = await Permission.requestInstallPackages.request();
-        if (!installPerm.isGranted) {
-          downloadError(
-              'Se necesita permiso para instalar apps. Actívalo en Ajustes → Instalar apps desconocidas.');
-          downloadState.value = DownloadState.error;
-          return;
-        }
-
-        final result = await OpenFile.open(_localFilePath!);
-        if (result.type != ResultType.done) {
-          downloadError('No se pudo abrir el instalador: ${result.message}');
-          downloadState.value = DownloadState.error;
-        }
-        // Si el instalador abre bien, volvemos a idle para no quedar en estado raro
-        else {
-          downloadState.value = DownloadState.idle;
-        }
-      } else if (GetPlatform.isWindows) {
+      if (GetPlatform.isWindows) {
         // En Windows ejecutamos directamente el .exe descargado
         await Process.start(
           _localFilePath!,

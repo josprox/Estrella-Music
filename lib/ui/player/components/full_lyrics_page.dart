@@ -658,7 +658,7 @@ class FullLyricsPage extends StatelessWidget {
                     ctrl.lyricsTextScale.value -= 0.1;
                   }
                 },
-                tooltip: "Reducir tamaÃ±o",
+                tooltip: "Reducir tamaño",
                 icon: Icon(Icons.text_fields_rounded,
                     size: 14, color: colorScheme.onSurfaceVariant),
                 style: IconButton.styleFrom(
@@ -679,7 +679,7 @@ class FullLyricsPage extends StatelessWidget {
                     ctrl.lyricsTextScale.value += 0.1;
                   }
                 },
-                tooltip: "Aumentar tamaÃ±o",
+                tooltip: "Aumentar tamaño",
                 icon: Icon(Icons.text_fields_rounded,
                     size: 20, color: colorScheme.onSurfaceVariant),
                 style: IconButton.styleFrom(

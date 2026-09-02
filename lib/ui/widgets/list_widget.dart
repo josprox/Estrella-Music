@@ -189,7 +189,7 @@ class ListWidget extends StatelessWidget with RemoveSongFromPlaylistMixin {
                 subtitle: artistName,
                 subtitle2: albums[index].artists.isEmpty
                     ? "${albums[index].year}"
-                    : "${(albums[index].artists[0]['name'])} â€¢ ${albums[index].year}");
+                    : "${(albums[index].artists[0]['name'])} • ${albums[index].year}");
           }),
     );
   }

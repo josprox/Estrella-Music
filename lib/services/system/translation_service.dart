@@ -79,7 +79,7 @@ class TranslationService {
 
       // Step 1: Search song on NetEase to get the song ID
       final searchUrl =
-          "http://music.163.com/api/search/get/web?type=1&limit=5&s=${Uri.encodeComponent(query)}";
+          "https://music.163.com/api/search/get/web?type=1&limit=5&s=${Uri.encodeComponent(query)}";
       final searchRes = await _dio.get(searchUrl);
 
       if (searchRes.statusCode == 200 && searchRes.data != null) {
@@ -93,7 +93,7 @@ class TranslationService {
             if (songId != null) {
               // Step 2: Fetch lyrics details (contains translation in 'tlyric')
               final lyricUrl =
-                  "http://music.163.com/api/song/lyric?os=pc&id=$songId&lv=-1&kv=-1&tv=-1";
+                  "https://music.163.com/api/song/lyric?os=pc&id=$songId&lv=-1&kv=-1&tv=-1";
               final lyricRes = await _dio.get(lyricUrl);
 
               if (lyricRes.statusCode == 200 && lyricRes.data != null) {

@@ -46,7 +46,7 @@ class ContentListItem extends StatelessWidget {
             (content.artists != null && content.artists!.isNotEmpty)
                 ? content.artists![0]['name'] ?? ""
                 : "";
-        subtitle = artistName.isNotEmpty ? "Ãlbum â€¢ $artistName" : "Ãlbum";
+        subtitle = artistName.isNotEmpty ? "Álbum • $artistName" : "Álbum";
       } else {
         final count = SqliteStore.isBoxOpen(content.playlistId)
             ? SqliteStore.box(content.playlistId).length
@@ -56,7 +56,7 @@ class ContentListItem extends StatelessWidget {
                     0
                 : 0);
         subtitle = count > 0
-            ? "Playlist â€¢ $count ${count == 1 ? 'canciÃ³n' : 'canciones'}"
+            ? "Playlist • $count ${count == 1 ? 'canción' : 'canciones'}"
             : "Playlist";
       }
     } else {
@@ -166,7 +166,7 @@ class ContentListItem extends StatelessWidget {
                         printERROR("Failed to hover-play: $e");
                         scaffoldMessenger.showSnackBar(
                           const SnackBar(
-                            content: Text('Error al cargar la mÃºsica.'),
+                            content: Text('Error al cargar la música.'),
                           ),
                         );
                       }

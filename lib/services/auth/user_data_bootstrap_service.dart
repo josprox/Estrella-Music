@@ -131,14 +131,14 @@ class UserDataBootstrapService extends GetxService {
               fileId: latest.fileId,
             ) &&
             hasLocalData) {
-          statusMessage.value = 'Tu biblioteca ya estÃ¡ sincronizada.';
+          statusMessage.value = 'Tu biblioteca ya está sincronizada.';
           await _confirmBootstrap(userKey);
           return;
         }
 
         foundBackups.assignAll(allRecentBackups);
         requiresUserConfirmation.value = true;
-        statusMessage.value = 'Â¡Encontramos respaldos de tu cuenta!';
+        statusMessage.value = '¡Encontramos respaldos de tu cuenta!';
         // Wait for user input via requiresUserConfirmation flow
         return;
       }
@@ -150,7 +150,7 @@ class UserDataBootstrapService extends GetxService {
     } catch (e) {
       lastError.value = e.toString().replaceFirst('Bad state: ', '');
       statusMessage.value = willReplaceLocalData.value
-          ? 'No se pudo completar la bÃºsqueda de respaldos. Entrando...'
+          ? 'No se pudo completar la búsqueda de respaldos. Entrando...'
           : 'No se pudo recuperar tu backup. Entrando...';
       printERROR('Bootstrap de usuario fallo: $e');
       await _confirmBootstrap(userKey);
@@ -208,12 +208,12 @@ class UserDataBootstrapService extends GetxService {
       );
 
       _applyLocaleFromAppPrefs();
-      statusMessage.value = 'Â¡Tu biblioteca ha sido restaurada!';
+      statusMessage.value = '¡Tu biblioteca ha sido restaurada!';
       await _confirmBootstrap(userKey);
     } catch (e) {
       lastError.value = e.toString().replaceFirst('Bad state: ', '');
-      statusMessage.value = 'La restauraciÃ³n fallÃ³. Entrando a la app...';
-      printERROR('RestauraciÃ³n manual fallÃ³: $e');
+      statusMessage.value = 'La restauración falló. Entrando a la app...';
+      printERROR('Restauración manual falló: $e');
       await _confirmBootstrap(userKey);
     } finally {
       isPreparing.value = false;

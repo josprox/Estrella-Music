@@ -164,15 +164,6 @@ class _PermissionConsentGateState extends State<PermissionConsentGate>
                     onPressed: () =>
                         _requestPermission(RequiredAppPermission.notifications),
                   ),
-                  const SizedBox(height: 12),
-                  _PermissionCard(
-                    icon: Icons.mic_rounded,
-                    title: S.current.permissionsMicrophoneTitle,
-                    description: S.current.permissionsMicrophoneDescription,
-                    status: status?.microphone,
-                    onPressed: () =>
-                        _requestPermission(RequiredAppPermission.microphone),
-                  ),
                   const SizedBox(height: 24),
                   FilledButton.icon(
                     onPressed: _requesting ? null : _requestMissingPermissions,

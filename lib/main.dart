@@ -32,7 +32,7 @@ import 'package:estrella_music/utils/desktop/app_link_controller.dart';
 import 'package:estrella_music/services/music/audio_handler.dart';
 import 'package:estrella_music/music_provider/music_catalog_service.dart';
 import 'package:estrella_music/music_provider/music_provider_manager.dart';
-import 'package:estrella_music/music_provider/providers/emusic_provider.dart';
+import 'package:estrella_music/music_provider/providers/streaming_provider.dart';
 import 'package:estrella_music/music_provider/providers/local_music_provider.dart';
 import 'package:estrella_music/music_provider/providers/composite_metadata_provider.dart';
 import 'package:estrella_music/profiles/app_profile_lifecycle_coordinator.dart';
@@ -72,12 +72,22 @@ Future<void> main() async {
     trust: ProviderTrust.local,
   ));
   providerManager.register(ProviderRegistration(
-    id: EMusicProvider.providerId,
+    id: StreamingProvider.providerId,
     displayName: 'Streaming Externo',
-    factory: () => EMusicProvider(
+    factory: () => StreamingProvider(
       baseUrl: () => dotenv.env['EMUSICWEB'] ?? authService.baseUrl ?? '',
       tokenLoader: authService.getAccessToken,
-      playbackContextLoader: _loadEMusicPlaybackContext,
+      playbackContextLoader: _loadStreamingPlaybackContext,
+    ),
+    trust: ProviderTrust.jossRedAuthorized,
+  ));
+  providerManager.register(ProviderRegistration(
+    id: StreamingProvider.legacyProviderId,
+    displayName: 'Streaming Externo',
+    factory: () => StreamingProvider(
+      baseUrl: () => dotenv.env['EMUSICWEB'] ?? authService.baseUrl ?? '',
+      tokenLoader: authService.getAccessToken,
+      playbackContextLoader: _loadStreamingPlaybackContext,
     ),
     trust: ProviderTrust.jossRedAuthorized,
   ));
@@ -133,7 +143,7 @@ Future<void> main() async {
   ));
 }
 
-Future<EMusicPlaybackContext> _loadEMusicPlaybackContext() async {
+Future<StreamingPlaybackContext> _loadStreamingPlaybackContext() async {
   final prefs = SqliteStore.box('AppPrefs');
   final visitorEntry = prefs.get('visitorId');
   final visitorData = visitorEntry is Map
@@ -147,10 +157,9 @@ Future<EMusicPlaybackContext> _loadEMusicPlaybackContext() async {
     return null;
   }
 
-  return EMusicPlaybackContext(
+  return StreamingPlaybackContext(
     clientIp: firstString(const ['clientIp', 'clientIP', 'streamClientIp']),
     visitorData: visitorData,
-    poToken: firstString(const ['poToken', 'po_token', 'streamPoToken']),
   );
 }
 

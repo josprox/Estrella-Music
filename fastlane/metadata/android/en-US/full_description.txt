@@ -1,22 +1,12 @@
-Features:
+Estrella Music is a powerful, elegant, and modern music player designed for high-quality audio playback and library management.
 
-- Ability to play song from Ytube/Ytube Music.
-- Song cache while playing
-- Radio feature support
-- Background music
-- Playlist creation & bookmark support
-- Artist & Album bookmark support
-- Import song,Playlist,Album,Artist via sharing from Ytube/Ytube Music.
-- Streaming quality control
-- Song downloading support
-- Language support
-- Skip silence
-- Dynamic Theme
-- Flexibility to switch between Bottom & Side Nav bar
-- Equalizer support
-- Synced & Plain Lyrics support
-- Sleep Timer
-- Android Auto support
-- No Advertisment
-- No Login required
-- Piped playlist integration
+Key Features:
+- Local-First Music Player: Seamlessly scans, indexes, and plays your local audio files (MP3, M4A, FLAC, OGG, OPUS).
+- Rich Metadata & ID3 Tag Extraction: Automatic artwork and tag display for tracks, albums, and artists.
+- Synced & Plain Lyrics: Sing along with real-time synchronized and translated lyrics.
+- Smart Audio Engine: Built-in equalizer, sleep timer, silence skipping, and smooth gapless playback.
+- Offline Downloads & Smart Caching: Keep your favorite tracks available on your device.
+- Multi-Profile & External Streaming: Configure your personal music streaming server and profiles.
+- Clean & Customizable UI: Dynamic Material You themes, bottom or side navigation bar, and dark mode support.
+- Android Auto Support: Enjoy your music safely while driving.
+- Privacy & Ad-Free: Pure music experience with no advertisements.

@@ -375,7 +375,7 @@ class _TopBar extends StatelessWidget {
                 children: [
                   if (colistening.currentRoomCode.isEmpty) ...[
                     const Text(
-                      "Comparte un cÃ³digo de sala para escuchar la misma canciÃ³n al mismo tiempo con amigos.",
+                      "Comparte un código de sala para escuchar la misma canción al mismo tiempo con amigos.",
                       style: TextStyle(fontSize: 13),
                       textAlign: TextAlign.center,
                     ),
@@ -387,7 +387,7 @@ class _TopBar extends StatelessWidget {
                           ? colistening.createRoom
                           : null,
                       style: ElevatedButton.styleFrom(
-                        minimumSize: const Size(double.infinity, 45),
+                         minimumSize: const Size(double.infinity, 45),
                         backgroundColor: Theme.of(context).colorScheme.primary,
                         foregroundColor:
                             Theme.of(context).colorScheme.onPrimary,
@@ -401,7 +401,7 @@ class _TopBar extends StatelessWidget {
                     TextField(
                       controller: roomController,
                       decoration: const InputDecoration(
-                        hintText: "CÃ³digo de 6 dÃ­gitos",
+                        hintText: "Código de 6 dígitos",
                         border: OutlineInputBorder(),
                         contentPadding:
                             EdgeInsets.symmetric(horizontal: 12, vertical: 8),
@@ -459,7 +459,7 @@ class _TopBar extends StatelessWidget {
                         style: const TextStyle(fontSize: 14),
                       )
                     else
-                      const Text("Sincronizando mÃºsica...",
+                      const Text("Sincronizando música...",
                           style: TextStyle(fontSize: 14)),
                     const SizedBox(height: 24),
                     ElevatedButton.icon(
@@ -603,7 +603,7 @@ class _SongInfo extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // â”€â”€ Song title Ã¢â€ â€™ navigate to album â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+              // ── Song title -> navigate to album ─────────────────────────────────
               GestureDetector(
                 behavior: HitTestBehavior.opaque,
                 onTap: albumId != null && albumId.isNotEmpty
@@ -635,7 +635,7 @@ class _SongInfo extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 4),
-              // â”€â”€ Artist name Ã¢â€ â€™ navigate to artist â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+              // ── Artist name -> navigate to artist ───────────────────────────────
               GestureDetector(
                 behavior: HitTestBehavior.opaque,
                 onTap: artistId != null && artistId.isNotEmpty

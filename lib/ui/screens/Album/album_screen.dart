@@ -132,7 +132,7 @@ class AlbumScreen extends StatelessWidget {
                             ? const Padding(
                                 padding: EdgeInsets.only(right: 8),
                                 child: Chip(
-                                  label: Text('Sin conexiÃ³n',
+                                  label: Text('Sin conexión',
                                       style: TextStyle(
                                           fontSize: 11,
                                           fontWeight: FontWeight.w600)),

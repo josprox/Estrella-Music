@@ -36,7 +36,7 @@ class CombinedLibrary extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      // â”€â”€ Fila tÃ­tulo + acciones â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+                      // ── Fila título + acciones ──────────────────────────────
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
@@ -60,7 +60,7 @@ class CombinedLibrary extends StatelessWidget {
                             ),
                           ),
                           const Spacer(),
-                          // BotÃ³n crear playlist
+                          // Botón crear playlist
                           FilledButton.tonalIcon(
                             onPressed: () => showDialog(
                               context: context,

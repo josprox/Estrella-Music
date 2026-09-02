@@ -497,8 +497,9 @@ class ThemeController extends GetxController {
       // ── Switch ────────────────────────────────────────────────────────────
       switchTheme: SwitchThemeData(
         thumbColor: WidgetStateProperty.resolveWith((states) {
-          if (states.contains(WidgetState.selected))
+          if (states.contains(WidgetState.selected)) {
             return colorScheme.onPrimary;
+          }
           return colorScheme.outline;
         }),
         trackColor: WidgetStateProperty.resolveWith((states) {

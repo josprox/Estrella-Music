@@ -111,7 +111,7 @@ class SearchScreenController extends GetxController with ProcessLink {
     urlPasted.value = false;
   }
 
-  // LÃ³gica de combinaciÃ³n: filtra historial local que coincida y aÃ±ade sugerencias de API
+  // Lógica de combinación: filtra historial local que coincida y añade sugerencias de API
   List<String> get filteredHistory {
     final query = searchText.value.trim().toLowerCase();
     if (query.isEmpty) return historyQuerylist.take(8).cast<String>().toList();

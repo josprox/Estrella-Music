@@ -3,27 +3,23 @@ import 'package:permission_handler/permission_handler.dart';
 
 import '/native_bindings/andrid_utils.dart' show SDKInt;
 
-enum RequiredAppPermission { storage, notifications, microphone }
+enum RequiredAppPermission { storage, notifications }
 
 class RequiredPermissionStatus {
   const RequiredPermissionStatus({
     required this.storage,
     required this.notifications,
-    required this.microphone,
   });
 
   final PermissionStatus storage;
   final PermissionStatus notifications;
-  final PermissionStatus microphone;
 
-  bool get allGranted =>
-      storage.isGranted && notifications.isGranted && microphone.isGranted;
+  bool get allGranted => storage.isGranted;
 
   PermissionStatus statusOf(RequiredAppPermission permission) {
     return switch (permission) {
       RequiredAppPermission.storage => storage,
       RequiredAppPermission.notifications => notifications,
-      RequiredAppPermission.microphone => microphone,
     };
   }
 }
@@ -34,7 +30,6 @@ class PermissionService {
   static Permission get _storagePermission {
     if (!GetPlatform.isAndroid) return Permission.mediaLibrary;
     if (_androidSdk >= 33) return Permission.audio;
-    if (_androidSdk >= 30) return Permission.manageExternalStorage;
     return Permission.storage;
   }
 
@@ -43,14 +38,12 @@ class PermissionService {
       return const RequiredPermissionStatus(
         storage: PermissionStatus.granted,
         notifications: PermissionStatus.granted,
-        microphone: PermissionStatus.granted,
       );
     }
 
     return RequiredPermissionStatus(
       storage: await _storagePermission.status,
       notifications: await Permission.notification.status,
-      microphone: await Permission.microphone.status,
     );
   }
 
@@ -60,7 +53,6 @@ class PermissionService {
     return switch (permission) {
       RequiredAppPermission.storage => _storagePermission.request(),
       RequiredAppPermission.notifications => Permission.notification.request(),
-      RequiredAppPermission.microphone => Permission.microphone.request(),
     };
   }
 

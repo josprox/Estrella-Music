@@ -435,7 +435,7 @@ class _SpotifyArtistScreen extends StatelessWidget {
                                           .showSnackBar(
                                         const SnackBar(
                                             content: Text(
-                                                "Todas las favoritas ya estÃ¡n descargadas")),
+                                                "Todas las favoritas ya están descargadas")),
                                       );
                                     }
                                   },
@@ -1375,7 +1375,7 @@ class _SpotifyArtistScreen extends StatelessWidget {
                                                 .showSnackBar(
                                               const SnackBar(
                                                   content: Text(
-                                                      "Todas las favoritas ya estÃ¡n descargadas")),
+                                                      "Todas las favoritas ya están descargadas")),
                                             );
                                           }
                                         },
@@ -2166,7 +2166,7 @@ class _AlbumCard extends StatelessWidget {
             ),
             const SizedBox(height: 4),
             Text(
-              '$type${year.isNotEmpty ? ' Ã‚Â· $year' : ''}',
+              '$type${year.isNotEmpty ? ' · $year' : ''}',
               style: TextStyle(
                 color: Theme.of(context).colorScheme.onSurface.withAlpha(138),
                 fontSize: 12,
@@ -2353,7 +2353,7 @@ class _OfflineArtistView extends StatelessWidget {
                     const SizedBox(height: 8),
                     const Chip(
                       label: Text(
-                        'Sin conexiÃ³n',
+                        'Sin conexión',
                         style: TextStyle(
                             fontSize: 12, fontWeight: FontWeight.w600),
                       ),

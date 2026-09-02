@@ -1306,10 +1306,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
       "Emusic Cloud не може да замени отдалечената библиотека.",
     ),
-    "syncForceReplaceFailedLocalPreserved":
-        MessageLookupByLibrary.simpleMessage(
-          "Дистанционното заместване се провали. Вашите местни данни и възстановяването са запазени.",
-        ),
+    "syncForceReplaceFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
+      "Дистанционното заместване се провали. Вашите местни данни и възстановяването са запазени.",
+    ),
     "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
       "Качването не е завършено",
     ),

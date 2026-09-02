@@ -245,12 +245,15 @@ class ArtistScreenController extends GetxController
     artistData["Songs"] = artistData["Songs"] ??
         artistData["Top songs"] ??
         artistData["Canciones populares"];
-    artistData["Albums"] = artistData["Albums"] ?? artistData["ÃƒÂlbumes"];
+    artistData["Albums"] = artistData["Albums"] ??
+        artistData["Álbumes"] ??
+        artistData["Albumes"];
     artistData["Videos"] = artistData["Videos"] ??
         artistData["Popular music videos"] ??
-        artistData["VÃ­deos"];
+        artistData["Vídeos"] ??
+        artistData["Videos"];
     artistData["Playlists"] =
-        artistData["Playlists"] ?? artistData["Listas de reproducciÃ³n"];
+        artistData["Playlists"] ?? artistData["Listas de reproducción"];
     artistData["Podcasts"] = artistData["Podcasts"] ??
         artistData["Podcast shows"] ??
         artistData["Podcasts"];

@@ -94,7 +94,7 @@ class _CreateNRenamePlaylistPopupState
                     style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
                   ),
                   subtitle: const Text(
-                    "Tus amigos seleccionados podrÃ¡n ver y editar esta playlist",
+                    "Tus amigos seleccionados podrán ver y editar esta playlist",
                     style: TextStyle(fontSize: 12),
                   ),
                   value: _isCollaborative,
@@ -125,7 +125,7 @@ class _CreateNRenamePlaylistPopupState
                         return const Padding(
                           padding: EdgeInsets.symmetric(vertical: 8.0),
                           child: Text(
-                            "No tienes amigos agregados aÃºn para colaborar.",
+                            "No tienes amigos agregados aún para colaborar.",
                             style:
                                 TextStyle(fontSize: 12, color: Colors.white54),
                           ),

@@ -768,7 +768,7 @@ class _LegacySong {
     if (thumbnailUrl != null && thumbnailUrl!.trim().isNotEmpty) {
       return thumbnailUrl!.trim();
     }
-    return 'https://i.ytimg.com/vi/$id/hqdefault.jpg';
+    return '';
   }
 
   Map<String, dynamic> toLegacyJson() {

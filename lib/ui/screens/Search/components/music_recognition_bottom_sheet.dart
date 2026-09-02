@@ -125,7 +125,7 @@ class _MusicRecognitionBottomSheetState
           }
         } else {
           throw Exception(
-              "No se encontrÃ³ el tema en los servidores de reproducciÃ³n.");
+              "No se encontró el tema en los servidores de reproducción.");
         }
       }
     } catch (e) {

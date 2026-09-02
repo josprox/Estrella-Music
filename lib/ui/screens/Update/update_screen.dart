@@ -543,8 +543,9 @@ class _BottomActionArea extends StatelessWidget {
   IconData get _platformIcon {
     if (GetPlatform.isAndroid) return Icons.download_rounded;
     if (GetPlatform.isWindows) return Icons.download_rounded;
-    if (GetPlatform.isLinux || GetPlatform.isMacOS)
+    if (GetPlatform.isLinux || GetPlatform.isMacOS) {
       return Icons.open_in_browser_rounded;
+    }
     if (GetPlatform.isIOS) return Icons.info_outline_rounded;
     return Icons.download_rounded;
   }

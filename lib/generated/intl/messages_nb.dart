@@ -1276,10 +1276,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
       "EMusic Cloud kan ikke erstatte fjernbiblioteket.",
     ),
-    "syncForceReplaceFailedLocalPreserved":
-        MessageLookupByLibrary.simpleMessage(
-          "Fjernutskiftingen mislyktes. Dine lokale data og gjenoppretting backup ble bevart.",
-        ),
+    "syncForceReplaceFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
+      "Fjernutskiftingen mislyktes. Dine lokale data og gjenoppretting backup ble bevart.",
+    ),
     "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
       "Last opp ikke fullført",
     ),

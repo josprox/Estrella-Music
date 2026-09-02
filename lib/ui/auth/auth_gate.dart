@@ -97,11 +97,7 @@ class _AuthGateState extends State<AuthGate> {
         );
       }
 
-      if (authService.isAuthenticated.isTrue) {
-        return const Home();
-      }
-
-      return const MusicAuthScreen();
+      return const Home();
     });
   }
 }

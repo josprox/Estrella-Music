@@ -1324,10 +1324,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
       "EMusic Cloud ସୁଦୂର ଲାଇବ୍ରେରୀକୁ ବଦଳାଇ ପାରିଲା ନାହିଁ ।",
     ),
-    "syncForceReplaceFailedLocalPreserved":
-        MessageLookupByLibrary.simpleMessage(
-          "ସୁଦୂର ପ୍ରତିସ୍ଥାପନ ବିଫଳ ହୋଇଛି । ଆପଣଙ୍କର ସ୍ଥାନୀୟ ତଥ୍ୟ ଏବଂ ପୁନରୁଦ୍ଧାର ସଂରକ୍ଷଣ କରାଯାଇଛି ।",
-        ),
+    "syncForceReplaceFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
+      "ସୁଦୂର ପ୍ରତିସ୍ଥାପନ ବିଫଳ ହୋଇଛି । ଆପଣଙ୍କର ସ୍ଥାନୀୟ ତଥ୍ୟ ଏବଂ ପୁନରୁଦ୍ଧାର ସଂରକ୍ଷଣ କରାଯାଇଛି ।",
+    ),
     "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
       "ଅପଲୋଡ ସମ୍ପୂର୍ଣ୍ଣ ହୋଇନାହିଁ",
     ),
