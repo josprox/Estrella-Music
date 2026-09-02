@@ -186,9 +186,34 @@ class LocalMusicProvider
         }
       } catch (_) {}
     }
-    discovered
+
+    // Share album artwork across tracks in the same known album
+    final albumArtworks = <String, Uri>{};
+    for (final track in discovered) {
+      if (track.artworkUri != null &&
+          track.album != 'Unknown album' &&
+          track.album.trim().isNotEmpty) {
+        final key = _albumGroupKey(track);
+        albumArtworks.putIfAbsent(key, () => track.artworkUri!);
+      }
+    }
+
+    final enriched = discovered.map((track) {
+      if (track.artworkUri == null &&
+          track.album != 'Unknown album' &&
+          track.album.trim().isNotEmpty) {
+        final key = _albumGroupKey(track);
+        final sharedArt = albumArtworks[key];
+        if (sharedArt != null) {
+          return track.copyWith(artworkUri: sharedArt);
+        }
+      }
+      return track;
+    }).toList();
+
+    enriched
         .sort((a, b) => a.title.toLowerCase().compareTo(b.title.toLowerCase()));
-    _tracks = List.unmodifiable(discovered);
+    _tracks = List.unmodifiable(enriched);
   }
 
   Future<ProviderTrack> _readTrack(File file) async {
@@ -261,6 +286,9 @@ class LocalMusicProvider
         artworkUri = File(artworkPath).uri;
       } else if (await File(pngArtworkPath).exists()) {
         artworkUri = File(pngArtworkPath).uri;
+      } else {
+        artworkUri = await _findDirectoryArtwork(file);
+        artworkUri ??= await _findCachedAlbumArtwork(album, artist);
       }
     }
 
@@ -423,14 +451,23 @@ class LocalMusicProvider
         await thumbFile.writeAsBytes(picture.bytes, flush: true);
       }
 
-      if (album != 'Unknown album') {
+      if (album != 'Unknown album' && album.trim().isNotEmpty) {
         final albumId = 'album-${_stableTextHash("$album\u0000$artist")}';
         final albumThumb = File('${thumbDir.path}/$albumId.png');
         if (overwrite || !await albumThumb.exists()) {
           await albumThumb.writeAsBytes(picture.bytes, flush: true);
         }
+        final primaryArt = _primaryArtist(artist);
+        if (primaryArt != artist && primaryArt != 'Unknown artist') {
+          final primaryAlbumId =
+              'album-${_stableTextHash("$album\u0000$primaryArt")}';
+          final primaryAlbumThumb = File('${thumbDir.path}/$primaryAlbumId.png');
+          if (overwrite || !await primaryAlbumThumb.exists()) {
+            await primaryAlbumThumb.writeAsBytes(picture.bytes, flush: true);
+          }
+        }
       }
-      if (artist != 'Unknown artist') {
+      if (artist != 'Unknown artist' && artist.trim().isNotEmpty) {
         final artistId = 'artist-${_stableTextHash(artist)}';
         final artistThumb = File('${thumbDir.path}/$artistId.png');
         if (overwrite || !await artistThumb.exists()) {
@@ -441,6 +478,71 @@ class LocalMusicProvider
     } catch (_) {
       return null;
     }
+  }
+
+  Future<Uri?> _findDirectoryArtwork(File file) async {
+    try {
+      final parentDir = file.parent;
+      if (!await parentDir.exists()) return null;
+      final normalizedParent =
+          parentDir.path.replaceAll('\\', '/').toLowerCase();
+      final isGenericDownloadOrRootDir =
+          normalizedParent.endsWith('/download') ||
+          normalizedParent.endsWith('/downloads') ||
+          normalizedParent.endsWith('/storage/emulated/0') ||
+          normalizedParent.endsWith('/telegram') ||
+          normalizedParent.endsWith('/snaptube') ||
+          normalizedParent == '/storage/emulated/0';
+      if (isGenericDownloadOrRootDir) {
+        return null;
+      }
+      const candidates = [
+        'cover.jpg',
+        'cover.png',
+        'cover.jpeg',
+        'folder.jpg',
+        'folder.png',
+        'folder.jpeg',
+        'album.jpg',
+        'album.png',
+        'album.jpeg',
+        'albumart.jpg',
+        'albumart.png',
+        'front.jpg',
+        'front.png',
+        'front.jpeg',
+        'artwork.jpg',
+        'artwork.png',
+      ];
+      for (final name in candidates) {
+        final candidate = File(path.join(parentDir.path, name));
+        if (await candidate.exists()) {
+          return candidate.uri;
+        }
+      }
+    } catch (_) {}
+    return null;
+  }
+
+  Future<Uri?> _findCachedAlbumArtwork(String album, String artist) async {
+    if (album == 'Unknown album' || album.trim().isEmpty) return null;
+    try {
+      final supportDir = (await getApplicationSupportDirectory()).path;
+      if (supportDir.isEmpty) return null;
+      final thumbDir = Directory('$supportDir/thumbnails');
+      if (!await thumbDir.exists()) return null;
+
+      final primaryArt = _primaryArtist(artist);
+      final primaryAlbumId =
+          'album-${_stableTextHash("$album\u0000$primaryArt")}';
+      final primaryThumb = File('${thumbDir.path}/$primaryAlbumId.png');
+      if (await primaryThumb.exists()) return primaryThumb.uri;
+
+      final albumId = 'album-${_stableTextHash("$album\u0000$artist")}';
+      final albumThumb = File('${thumbDir.path}/$albumId.png');
+      if (await albumThumb.exists()) return albumThumb.uri;
+    } catch (_) {}
+    return null;
   }
 
   String get _requireProfileId {
@@ -500,27 +602,73 @@ class LocalMusicProvider
     );
   }
 
+  String _albumGroupKey(ProviderTrack track) {
+    final rawAlbum = track.album.trim();
+    final normalizedAlbum = _normalizedText(rawAlbum);
+    if (normalizedAlbum.isEmpty || normalizedAlbum == 'unknown album') {
+      return 'track:${track.identity.sourceId}';
+    }
+
+    final rawArtist = track.artist.trim();
+    final explicitAlbumArtist =
+        _nonEmpty(track.metadata['albumArtist']?.toString());
+    final effectiveArtist = explicitAlbumArtist ?? _primaryArtist(rawArtist);
+    final normalizedArtist = _normalizedText(effectiveArtist);
+
+    return 'album:$normalizedAlbum|artist:$normalizedArtist';
+  }
+
+  String _primaryArtist(String artist) {
+    if (_isUnknownArtist(artist)) return 'Unknown artist';
+    final match = RegExp(
+      r'^(.*?)(?:\s+(?:feat\.?|ft\.?|featuring|with|&|\/|,)\s+.*)$',
+      caseSensitive: false,
+    ).firstMatch(artist.trim());
+    if (match != null && match.group(1)!.trim().isNotEmpty) {
+      return match.group(1)!.trim();
+    }
+    return artist.trim();
+  }
+
   @override
   Future<List<ProviderAlbum>> getAlbums() async {
     final grouped = <String, List<ProviderTrack>>{};
     for (final track in _tracks) {
-      grouped
-          .putIfAbsent('${track.album}\u0000${track.artist}', () => [])
-          .add(track);
+      grouped.putIfAbsent(_albumGroupKey(track), () => []).add(track);
     }
     return grouped.entries.map((entry) {
-      final parts = entry.key.split('\u0000');
-      final first = entry.value.first;
+      final tracks = entry.value;
+      final firstWithAlbum = tracks.firstWhere(
+        (t) => t.album != 'Unknown album',
+        orElse: () => tracks.first,
+      );
+      final title = firstWithAlbum.album;
+
+      final explicitAlbumArtist = tracks
+          .map((t) => _nonEmpty(t.metadata['albumArtist']?.toString()))
+          .firstWhere((a) => a != null, orElse: () => null);
+
+      final artist = explicitAlbumArtist ??
+          (tracks.every((t) =>
+                  _normalizedText(t.artist) ==
+                  _normalizedText(tracks.first.artist))
+              ? tracks.first.artist
+              : _primaryArtist(firstWithAlbum.artist));
+
+      final artworkUri = tracks
+          .map((t) => t.artworkUri)
+          .firstWhere((uri) => uri != null, orElse: () => null);
+
       return ProviderAlbum(
         identity: MusicIdentity(
           providerId: providerId,
           profileId: _requireProfileId,
           sourceId: 'album-${_stableTextHash(entry.key)}',
         ),
-        title: parts.first,
-        artist: parts.last,
-        artworkUri: first.artworkUri,
-        tracks: List.unmodifiable(entry.value),
+        title: title,
+        artist: artist,
+        artworkUri: artworkUri,
+        tracks: List.unmodifiable(tracks),
       );
     }).toList(growable: false);
   }
@@ -661,7 +809,12 @@ class LocalMusicProvider
         _nonEmpty(embedded?.album) ??
         _candidateValue(track.album, 'Unknown album') ??
         'Unknown album';
-    final downloadedPicture = await _downloadArtwork(candidate.artworkUri);
+    var downloadedPicture = await _downloadArtwork(candidate.artworkUri);
+    downloadedPicture ??= await _searchAndDownloadFallbackArtwork(
+      artist: artist,
+      album: album,
+      title: title,
+    );
     var artworkPath = _recordString(current, 'artworkPath') ??
         _localArtworkPath(track.artworkUri);
     if (downloadedPicture != null) {
@@ -716,6 +869,21 @@ class LocalMusicProvider
     } else {
       values[index] = refreshed;
     }
+
+    // Share artwork with sibling tracks from the same known album if they lack artwork
+    if (refreshed.artworkUri != null &&
+        refreshed.album != 'Unknown album' &&
+        refreshed.album.trim().isNotEmpty) {
+      final key = _albumGroupKey(refreshed);
+      for (var i = 0; i < values.length; i++) {
+        if (values[i].artworkUri == null &&
+            values[i].album != 'Unknown album' &&
+            _albumGroupKey(values[i]) == key) {
+          values[i] = values[i].copyWith(artworkUri: refreshed.artworkUri);
+        }
+      }
+    }
+
     values
         .sort((a, b) => a.title.toLowerCase().compareTo(b.title.toLowerCase()));
     _tracks = List.unmodifiable(values);
@@ -724,8 +892,13 @@ class LocalMusicProvider
   @override
   bool shouldLookupMetadataAutomatically(ProviderTrack track) {
     final source = track.metadata['metadataSource']?.toString();
-    if (source == 'manual' || source == 'automatic') return false;
-    if (track.metadata['needsMetadataReview'] != true) return false;
+    if (source == 'manual') return false;
+
+    final hasNoArtwork = track.artworkUri == null;
+    final needsReview =
+        track.metadata['needsMetadataReview'] == true || hasNoArtwork;
+    if (!needsReview) return false;
+    if (source == 'automatic' && !hasNoArtwork) return false;
 
     final attemptedAt = DateTime.tryParse(
       track.metadata['automaticLookupAt']?.toString() ?? '',
@@ -733,9 +906,61 @@ class LocalMusicProvider
     if (attemptedAt == null) return true;
     final status = track.metadata['automaticLookupStatus']?.toString();
     final retryAfter = status == 'no_match'
-        ? const Duration(days: 30)
-        : const Duration(hours: 6);
+        ? const Duration(minutes: 5)
+        : const Duration(seconds: 30);
     return DateTime.now().toUtc().difference(attemptedAt.toUtc()) >= retryAfter;
+  }
+
+  Future<Picture?> _searchAndDownloadFallbackArtwork({
+    required String artist,
+    required String album,
+    required String title,
+  }) async {
+    try {
+      final terms = <String>[
+        if (!_isUnknownArtist(artist) && album != 'Unknown album')
+          '$artist $album',
+        if (!_isUnknownArtist(artist)) '$artist $title',
+        title,
+      ];
+      for (final term in terms) {
+        final query = term.trim();
+        if (query.isEmpty) continue;
+        final response = await _artworkClient.get<dynamic>(
+          'https://itunes.apple.com/search',
+          queryParameters: {
+            'term': query,
+            'entity': 'song',
+            'limit': 1,
+          },
+          options: Options(
+            headers: const {
+              'Accept': 'application/json',
+              'User-Agent': 'EstrellaMusic/2.4.0',
+            },
+            sendTimeout: const Duration(seconds: 6),
+            receiveTimeout: const Duration(seconds: 6),
+          ),
+        );
+        final data = response.data;
+        if (data is Map &&
+            data['results'] is List &&
+            (data['results'] as List).isNotEmpty) {
+          final first = data['results'][0];
+          final rawArt = first['artworkUrl100']?.toString() ??
+              first['artworkUrl60']?.toString();
+          if (rawArt != null && rawArt.isNotEmpty) {
+            final highRes = rawArt
+                .replaceAll('100x100bb.jpg', '600x600bb.jpg')
+                .replaceAll('100x100bb.png', '600x600bb.png')
+                .replaceAll('100x100', '600x600');
+            final pic = await _downloadArtwork(Uri.tryParse(highRes));
+            if (pic != null) return pic;
+          }
+        }
+      }
+    } catch (_) {}
+    return null;
   }
 
   @override

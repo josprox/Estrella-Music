@@ -310,6 +310,178 @@ void main() {
     expect(refreshed!.metadata['automaticLookupStatus'], 'no_match');
     expect(provider.shouldLookupMetadataAutomatically(refreshed), isFalse);
   });
+
+  test('discovers directory sidecar artwork like cover.jpg', () async {
+    final albumDir = Directory('${root.path}${Platform.pathSeparator}AlbumFolder');
+    await albumDir.create(recursive: true);
+    final songFile = File('${albumDir.path}${Platform.pathSeparator}song.mp3');
+    await songFile.writeAsBytes([0]);
+    final coverFile = File('${albumDir.path}${Platform.pathSeparator}cover.jpg');
+    await coverFile.writeAsBytes([1, 2, 3, 4]);
+
+    final provider = LocalMusicProvider(
+      metadataReader: (_) async => const Tag(
+        title: 'Sidecar Song',
+        trackArtist: 'Artist',
+        album: 'Album With Cover',
+        pictures: [],
+      ),
+    );
+    await provider.initialize(MusicProviderContext(
+      profileId: 'local',
+      settings: {
+        'libraryRoots': [albumDir.path]
+      },
+    ));
+
+    final tracks = await provider.getTracks();
+    expect(tracks.single.artworkUri, isNotNull);
+    expect(tracks.single.artworkUri!.toFilePath(), coverFile.path);
+  });
+
+  test('groups multiple tracks with featuring artists from the same album together',
+      () async {
+    final albumDir = Directory('${root.path}${Platform.pathSeparator}Thriller');
+    await albumDir.create(recursive: true);
+    await File('${albumDir.path}${Platform.pathSeparator}01.mp3').writeAsBytes([0]);
+    await File('${albumDir.path}${Platform.pathSeparator}02.mp3').writeAsBytes([0]);
+    await File('${albumDir.path}${Platform.pathSeparator}03.mp3').writeAsBytes([0]);
+
+    final provider = LocalMusicProvider(
+      metadataReader: (filePath) async {
+        if (filePath.endsWith('01.mp3')) {
+          return const Tag(
+            title: 'Wanna Be Startin Somethin',
+            trackArtist: 'Michael Jackson',
+            album: 'Thriller',
+            pictures: [],
+          );
+        } else if (filePath.endsWith('02.mp3')) {
+          return const Tag(
+            title: 'The Girl Is Mine',
+            trackArtist: 'Michael Jackson feat. Paul McCartney',
+            album: 'Thriller',
+            pictures: [],
+          );
+        } else {
+          return const Tag(
+            title: 'Beat It',
+            trackArtist: 'Michael Jackson & Eddie Van Halen',
+            album: 'Thriller',
+            pictures: [],
+          );
+        }
+      },
+    );
+    await provider.initialize(MusicProviderContext(
+      profileId: 'local',
+      settings: {
+        'libraryRoots': [albumDir.path]
+      },
+    ));
+
+    final albums = await provider.getAlbums();
+    expect(albums.length, 1);
+    expect(albums.single.title, 'Thriller');
+    expect(albums.single.tracks.length, 3);
+  });
+
+  test('allows retry when automatic metadata match is missing artwork', () async {
+    final metadataStore = _MemoryLocalSongMetadataStore();
+    final provider = LocalMusicProvider(
+      metadataReader: (_) async => const Tag(
+        title: 'Song No Art',
+        trackArtist: 'Artist',
+        duration: 180000,
+        pictures: [],
+      ),
+      metadataStore: metadataStore,
+    );
+    await provider.initialize(MusicProviderContext(
+      profileId: 'local',
+      settings: {
+        'libraryRoots': [root.path]
+      },
+    ));
+    final original = (await provider.getTracks()).single;
+
+    // Simulate an automatic match that had no artwork
+    final updated = await provider.applyAutomaticMetadata(
+      original,
+      const TrackMetadataCandidate(
+        sourceId: 'itunes:123',
+        title: 'Song No Art',
+        artist: 'Artist',
+        album: 'Album',
+        artworkUri: null,
+      ),
+    );
+
+    expect(updated.metadata['metadataSource'], 'automatic');
+    expect(updated.artworkUri, isNull);
+
+    // Immediately after match, cooldown is active (30s)
+    expect(provider.shouldLookupMetadataAutomatically(updated), isFalse);
+
+    // Once cooldown passes, missing artwork triggers retry
+    final record = metadataStore.records[original.identity.sourceId]!;
+    record['automaticLookupAt'] = DateTime.now()
+        .toUtc()
+        .subtract(const Duration(seconds: 35))
+        .toIso8601String();
+    await metadataStore.write(original.identity.sourceId, record);
+    await provider.refresh();
+    final reloaded = await provider.getTrack(original.identity.sourceId);
+    expect(provider.shouldLookupMetadataAutomatically(reloaded!), isTrue);
+  });
+
+  test('does not pollute artwork across unrelated songs in the same download directory',
+      () async {
+    final downloadsDir = Directory('${root.path}${Platform.pathSeparator}Downloads');
+    await downloadsDir.create(recursive: true);
+    await File('${downloadsDir.path}${Platform.pathSeparator}8 AM.opus').writeAsBytes([0]);
+    await File('${downloadsDir.path}${Platform.pathSeparator}1TRAGO.opus').writeAsBytes([0]);
+
+    final provider = LocalMusicProvider(
+      metadataReader: (filePath) async {
+        if (filePath.contains('8 AM')) {
+          return Tag(
+            title: '8 AM',
+            trackArtist: 'Nicki Nicole & Young Miko',
+            pictures: [
+              Picture(
+                pictureType: PictureType.coverFront,
+                mimeType: MimeType.png,
+                bytes: Uint8List.fromList([8, 8, 8]),
+              ),
+            ],
+          );
+        } else {
+          return const Tag(
+            title: '1TRAGO',
+            trackArtist: 'Danna',
+            pictures: [],
+          );
+        }
+      },
+    );
+
+    await provider.initialize(MusicProviderContext(
+      profileId: 'local',
+      settings: {
+        'libraryRoots': [downloadsDir.path]
+      },
+    ));
+
+    final tracks = await provider.getTracks();
+    expect(tracks.length, 2);
+    final song8am = tracks.firstWhere((t) => t.title == '8 AM');
+    final song1trago = tracks.firstWhere((t) => t.title == '1TRAGO');
+
+    expect(song8am.artworkUri, isNotNull);
+    // 1TRAGO has no artwork and must NOT borrow 8 AM's artwork
+    expect(song1trago.artworkUri, isNull);
+  });
 }
 
 class _MemoryLocalSongMetadataStore implements LocalSongMetadataStore {

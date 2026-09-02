@@ -24,6 +24,27 @@ class ProviderTrack {
   final String? filePath;
   final Map<String, dynamic> metadata;
 
+  ProviderTrack copyWith({
+    MusicIdentity? identity,
+    String? title,
+    String? artist,
+    String? album,
+    Duration? duration,
+    Uri? artworkUri,
+    String? filePath,
+    Map<String, dynamic>? metadata,
+  }) =>
+      ProviderTrack(
+        identity: identity ?? this.identity,
+        title: title ?? this.title,
+        artist: artist ?? this.artist,
+        album: album ?? this.album,
+        duration: duration ?? this.duration,
+        artworkUri: artworkUri ?? this.artworkUri,
+        filePath: filePath ?? this.filePath,
+        metadata: metadata ?? this.metadata,
+      );
+
   Map<String, dynamic> toJson() => {
         'providerId': identity.providerId,
         'profileId': identity.profileId,

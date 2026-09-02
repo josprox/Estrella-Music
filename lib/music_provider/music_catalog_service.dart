@@ -189,7 +189,7 @@ class MusicCatalogService extends GetxService {
               AutomaticMetadataLookupOutcome.error,
             );
           } catch (_) {}
-          if (consecutiveErrors >= 3) {
+          if (consecutiveErrors >= 6) {
             debugPrint(
               '[LocalMetadata] Automatic lookup paused after repeated errors',
             );
@@ -224,14 +224,23 @@ class MusicCatalogService extends GetxService {
     final localTitle = _metadataComparable(local.title);
     final localArtist = _metadataComparable(local.artist);
     for (final candidate in ranked) {
-      if (_metadataComparable(candidate.title) != localTitle) continue;
+      final candTitle = _metadataComparable(candidate.title);
+      final titleExact = candTitle == localTitle;
+      final titleClose = titleExact ||
+          candTitle.startsWith(localTitle) ||
+          localTitle.startsWith(candTitle);
+      if (!titleClose) continue;
+
       final durationMatches = local.duration == null ||
           candidate.duration == null ||
           (local.duration! - candidate.duration!).inSeconds.abs() <= 12;
       if (!durationMatches) continue;
 
       if (_isUnknownMetadataArtist(localArtist)) {
-        if (local.duration != null && candidate.duration != null) {
+        if (titleExact ||
+            (local.duration != null &&
+                candidate.duration != null &&
+                (local.duration! - candidate.duration!).inSeconds.abs() <= 5)) {
           return candidate;
         }
         continue;
