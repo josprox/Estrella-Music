@@ -1116,7 +1116,7 @@ dynamic parseSearchResult(Map<String, dynamic> data,
 
 //parse album Header
 Map<String, dynamic> parseAlbumHeader(Map<String, dynamic> response) {
-  Map<String, dynamic> header = nav(response, [
+  final header = nav(response, [
         'contents',
         "twoColumnBrowseResultsRenderer",
         'tabs',
@@ -1128,13 +1128,25 @@ Map<String, dynamic> parseAlbumHeader(Map<String, dynamic> response) {
         0,
         "musicResponsiveHeaderRenderer"
       ]) ??
-      nav(response, ["header", "musicDetailHeaderRenderer"]);
+      nav(response, ["header", "musicDetailHeaderRenderer"]) ??
+      nav(response, ["header", "musicResponsiveHeaderRenderer"]);
+
+  if (header == null || header is! Map) {
+    return {
+      'title': nav(response, ['header', 'title', 'runs', 0, 'text']) ?? '',
+      'description': '',
+      'thumbnails': [],
+      'tracks': [],
+    };
+  }
+
   Map<String, dynamic> album = {
-    'title': nav(header, title_text),
-    'type': nav(header, subtitle),
+    'title': nav(header, title_text) ?? '',
+    'type': nav(header, subtitle) ?? 'Album',
     'thumbnails': nav(header, thumnail_cropped) ??
         nav(header,
-            ["thumbnail", "musicThumbnailRenderer", "thumbnail", "thumbnails"])
+            ["thumbnail", "musicThumbnailRenderer", "thumbnail", "thumbnails"]) ??
+        []
   };
 
   album["description"] = nav(header, [
@@ -1174,15 +1186,19 @@ Map<String, dynamic> parseAlbumHeader(Map<String, dynamic> response) {
   } catch (e) {}
   album.addAll(albumInfo);
 
-  if (header['secondSubtitle']['runs'].length > 1) {
-    album['trackCount'] = (header['secondSubtitle']['runs'][0]['text']);
-    album['duration'] = header['secondSubtitle']['runs'][2]['text'];
-  } else {
-    album['duration'] = header['secondSubtitle']['runs'][0]['text'];
+  final secondSubtitleRuns = nav(header, ['secondSubtitle', 'runs']) as List?;
+  if (secondSubtitleRuns != null && secondSubtitleRuns.isNotEmpty) {
+    if (secondSubtitleRuns.length > 1) {
+      album['trackCount'] = secondSubtitleRuns[0]['text'];
+      album['duration'] = secondSubtitleRuns.length > 2
+          ? secondSubtitleRuns[2]['text']
+          : secondSubtitleRuns[1]['text'];
+    } else {
+      album['duration'] = secondSubtitleRuns[0]['text'];
+    }
   }
 
   // add to library/uploaded
-
   final canonicalUrl =
       nav(response, ['microformat', "microformatDataRenderer", "urlCanonical"])
           ?.toString();

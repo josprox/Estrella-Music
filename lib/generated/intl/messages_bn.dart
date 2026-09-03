@@ -1274,9 +1274,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
       "Internet দ্বারা দূরবর্তী লাইব্রেরি পরিবর্তন করা সম্ভব হয়নি।",
     ),
-    "syncForceReplaceFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
-      "দূরবর্তী প্রতিস্থাপন ব্যবস্থা ব্যর্থ । আপনার স্থানীয় তথ্য এবং পুনরুদ্ধার পুনরুদ্ধার সংরক্ষিত হয়েছে।",
-    ),
+    "syncForceReplaceFailedLocalPreserved":
+        MessageLookupByLibrary.simpleMessage(
+          "দূরবর্তী প্রতিস্থাপন ব্যবস্থা ব্যর্থ । আপনার স্থানীয় তথ্য এবং পুনরুদ্ধার পুনরুদ্ধার সংরক্ষিত হয়েছে।",
+        ),
     "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
       "আপলোড সমাপ্ত হয়নি",
     ),

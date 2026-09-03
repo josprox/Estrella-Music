@@ -10,7 +10,6 @@ import 'package:url_launcher/url_launcher.dart';
 
 import 'package:estrella_music/ui/widgets/common_dialog_widget.dart';
 import 'package:estrella_music/ui/widgets/cust_switch.dart';
-import 'package:estrella_music/ui/widgets/export_file_dialog.dart';
 import 'package:estrella_music/ui/widgets/backup_dialog.dart';
 import 'package:estrella_music/ui/widgets/cloud_backup_dialog.dart';
 import 'package:estrella_music/ui/widgets/cloud_sync_status_dialog.dart';
@@ -774,7 +773,6 @@ class SettingsDownloadsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final ctrl = Get.find<SettingsScreenController>();
     final cs = Theme.of(context).colorScheme;
-    final tt = Theme.of(context).textTheme;
 
     return Scaffold(
       backgroundColor: cs.surface,
@@ -810,36 +808,6 @@ class SettingsDownloadsScreen extends StatelessWidget {
                   onChanged: ctrl.changeDownloadingFormat,
                 )),
           ),
-          SettingsTile(
-            title: S.current.downloadLocation,
-            leadingIcon: Icons.folder_rounded,
-            subtitle: null,
-            onTap: ctrl.setDownloadLocation,
-            trailing: TextButton(
-                onPressed: ctrl.resetDownloadLocation,
-                child: Text(S.current.reset,
-                    style: const TextStyle(fontWeight: FontWeight.bold))),
-          ),
-          if (GetPlatform.isAndroid)
-            SettingsTile(
-              title: S.current.exportDowloadedFiles,
-              subtitle: S.current.exportDowloadedFilesDes,
-              leadingIcon: Icons.ios_share_rounded,
-              isThreeLine: true,
-              onTap: () => showDialog(
-                      context: context,
-                      builder: (_) => const ExportFileDialog())
-                  .whenComplete(() => Get.delete<ExportFileDialogController>()),
-            ),
-          if (GetPlatform.isAndroid)
-            SettingsTile(
-              title: S.current.exportedFileLocation,
-              leadingIcon: Icons.drive_folder_upload_rounded,
-              subtitle: null,
-              onTap: ctrl.setExportedLocation,
-              trailing: Obx(() => Text(ctrl.exportLocationPath.value,
-                  style: tt.bodySmall?.copyWith(color: cs.onSurfaceVariant))),
-            ),
         ],
       ),
     );
@@ -890,6 +858,43 @@ class SettingsAccountScreen extends StatelessWidget {
                       style: const TextStyle(fontWeight: FontWeight.bold)),
                 ),
               )),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+            child: OutlinedButton.icon(
+              style: OutlinedButton.styleFrom(
+                foregroundColor: cs.error,
+                side: BorderSide(color: cs.error.withValues(alpha: 0.5)),
+              ),
+              icon: const Icon(Icons.delete_forever_rounded),
+              label: const Text('Eliminar cuenta'),
+              onPressed: () => showDialog<void>(
+                context: context,
+                builder: (dialogCtx) => AlertDialog(
+                  title: const Text('Eliminar cuenta'),
+                  content: const Text(
+                    'La eliminación definitiva de tu cuenta y datos personales se gestiona de forma segura a través del portal de tu perfil en Joss Red.\n\n¿Deseas abrir tu perfil en joss.red para solicitar la baja?',
+                  ),
+                  actions: [
+                    TextButton(
+                      onPressed: () => Navigator.of(dialogCtx).pop(),
+                      child: const Text('Cancelar'),
+                    ),
+                    FilledButton(
+                      style: FilledButton.styleFrom(backgroundColor: cs.error),
+                      onPressed: () async {
+                        Navigator.of(dialogCtx).pop();
+                        final uri = Uri.parse('https://joss.red/profile');
+                        if (await canLaunchUrl(uri)) {
+                          await launchUrl(uri, mode: LaunchMode.externalApplication);
+                        }
+                      },
+                      child: const Text('Continuar a joss.red'),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
             child: ProfileSwitcher(),

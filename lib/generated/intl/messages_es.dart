@@ -1022,7 +1022,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Reproducido recientemente",
     ),
     "recommend_cloud": MessageLookupByLibrary.simpleMessage(
-      "Te recomendamos activar el Modo Cloud para una experiencia Spotify-like: sincronización en tiempo real entre todos tus dispositivos y respaldo automático sin que tengas que hacer nada.",
+      "Te recomendamos activar el Modo Cloud para una experiencia moderna en la nube: sincronización en tiempo real entre todos tus dispositivos y respaldo automático sin que tengas que hacer nada.",
     ),
     "recommendedAlbums": MessageLookupByLibrary.simpleMessage("Recomendados"),
     "recommendedArtists": MessageLookupByLibrary.simpleMessage("Recomendados"),
@@ -1328,9 +1328,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
       "EMusic Cloud no pudo reemplazar la biblioteca remota.",
     ),
-    "syncForceReplaceFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
-      "Falló el reemplazo remoto. Tus datos locales y el respaldo de recuperación se conservaron.",
-    ),
+    "syncForceReplaceFailedLocalPreserved":
+        MessageLookupByLibrary.simpleMessage(
+          "Falló el reemplazo remoto. Tus datos locales y el respaldo de recuperación se conservaron.",
+        ),
     "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
       "No se completó la subida",
     ),

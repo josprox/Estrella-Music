@@ -259,6 +259,12 @@ class SyncService extends GetxService {
   bool get isCloudMode => Get.find<ProfileManager>().activeProfileMaySync;
 
   String? get syncBaseUrl {
+    final active = Get.find<ProfileManager>().activeProfile.value;
+    final profileServerUrl = active?.settings['serverUrl']?.toString().trim();
+    if (profileServerUrl != null && profileServerUrl.isNotEmpty) {
+      return profileServerUrl;
+    }
+
     final isDebugEnv = dotenv.env['DEBUG']?.toLowerCase() == 'true';
     if (kDebugMode && isDebugEnv) {
       if (GetPlatform.isWindows) {

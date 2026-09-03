@@ -140,8 +140,20 @@ class UpdateController extends GetxController {
   // ──────────────────────────────────────────────
 
   Future<void> startUpdate() async {
-    // Android e iOS → abre el navegador o tienda de aplicaciones
-    if (GetPlatform.isAndroid || GetPlatform.isIOS) {
+    // Android e iOS → abre Google Play o la tienda de aplicaciones oficial
+    if (GetPlatform.isAndroid) {
+      const playStoreUrl = 'market://details?id=com.josprox.emusic';
+      const webPlayStoreUrl = 'https://play.google.com/store/apps/details?id=com.josprox.emusic';
+      final playUri = Uri.parse(playStoreUrl);
+      if (await canLaunchUrl(playUri)) {
+        await launchUrl(playUri, mode: LaunchMode.externalApplication);
+      } else {
+        await _openBrowser(webPlayStoreUrl);
+      }
+      return;
+    }
+
+    if (GetPlatform.isIOS) {
       final data = updateInfo.value;
       final url = data?['Descarga'] as String? ??
           'https://github.com/josprox/Estrella-Music/releases/latest';

@@ -1266,9 +1266,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
       "EMusic Cloud نمی تواند جایگزین کتابخانه از راه دور شود.",
     ),
-    "syncForceReplaceFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
-      "جایگزینی از راه دور شکست خورد. اطلاعات محلی و پشتیبان گیری بازیابی شما حفظ شده است.",
-    ),
+    "syncForceReplaceFailedLocalPreserved":
+        MessageLookupByLibrary.simpleMessage(
+          "جایگزینی از راه دور شکست خورد. اطلاعات محلی و پشتیبان گیری بازیابی شما حفظ شده است.",
+        ),
     "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
       "آپلود نکردن تکمیل نشده",
     ),

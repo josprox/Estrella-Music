@@ -429,6 +429,7 @@ class _SlidingUpPanelState extends State<SlidingUpPanel>
 
   @override
   void dispose() {
+    widget.controller?._removeState(this);
     _ac.dispose();
     super.dispose();
   }
@@ -680,6 +681,12 @@ class PanelController {
 
   void _addState(_SlidingUpPanelState panelState) {
     _panelState = panelState;
+  }
+
+  void _removeState(_SlidingUpPanelState panelState) {
+    if (_panelState == panelState) {
+      _panelState = null;
+    }
   }
 
   /// Determine if the panelController is attached to an instance

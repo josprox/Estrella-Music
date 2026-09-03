@@ -1290,9 +1290,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
       "EMusic Cloud не можа замяніць выдаленую бібліятэку.",
     ),
-    "syncForceReplaceFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
-      "Выдаленая замена не ўдалася. Вашы лакальныя дадзеныя і рэзервовая копія аднаўлення былі захаваны.",
-    ),
+    "syncForceReplaceFailedLocalPreserved":
+        MessageLookupByLibrary.simpleMessage(
+          "Выдаленая замена не ўдалася. Вашы лакальныя дадзеныя і рэзервовая копія аднаўлення былі захаваны.",
+        ),
     "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
       "Загрузка не завершана",
     ),

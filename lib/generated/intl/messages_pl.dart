@@ -1308,9 +1308,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
       "Emusic Cloud nie mógł zastąpić zdalnej biblioteki.",
     ),
-    "syncForceReplaceFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
-      "Zdalna wymiana nie powiodła się. Twoje lokalne dane i kopie zapasowe zostały zachowane.",
-    ),
+    "syncForceReplaceFailedLocalPreserved":
+        MessageLookupByLibrary.simpleMessage(
+          "Zdalna wymiana nie powiodła się. Twoje lokalne dane i kopie zapasowe zostały zachowane.",
+        ),
     "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
       "Wysyłanie nie zakończone",
     ),

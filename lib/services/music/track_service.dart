@@ -75,19 +75,26 @@ class TrackService {
         };
       }
 
-      results.addAll(nav(watchNextRenderer, [
+      final panelRenderer = nav(watchNextRenderer, [
         ...tab_content,
         'musicQueueRenderer',
         'content',
         'playlistPanelRenderer'
-      ]));
-      playlist = results['contents']
-          .map((content) => nav(content,
-              ['playlistPanelVideoRenderer', ...navigation_playlist_id]))
-          .where((e) => e != null)
-          .toList()
-          .first;
-      tracks.addAll(parseWatchPlaylist(results['contents']));
+      ]);
+      if (panelRenderer is Map) {
+        results.addAll(panelRenderer);
+        if (results['contents'] is List) {
+          final playlistIds = (results['contents'] as List)
+              .map((content) => nav(content,
+                  ['playlistPanelVideoRenderer', ...navigation_playlist_id]))
+              .where((e) => e != null)
+              .toList();
+          if (playlistIds.isNotEmpty) {
+            playlist = playlistIds.first;
+          }
+          tracks.addAll(parseWatchPlaylist(results['contents']));
+        }
+      }
     }
 
     dynamic additionalParamsForNext;

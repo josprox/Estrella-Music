@@ -128,15 +128,11 @@ class SettingsScreenController extends GetxController {
     backgroundPlayEnabled.value = setBox.get("backgroundPlayEnabled") ?? true;
     keepScreenAwake.value =
         setBox.get("keepScreenAwake") ?? GetPlatform.isDesktop ? true : false;
-    final downloadPath =
-        setBox.get('downloadLocationPath') ?? await _createInAppSongDownDir();
-    downloadLocationPath.value =
-        (isDesktop && downloadPath.contains("emulated"))
-            ? await _createInAppSongDownDir()
-            : downloadPath;
+    final defaultInAppDir = await _createInAppSongDownDir();
+    downloadLocationPath.value = defaultInAppDir;
+    setBox.put('downloadLocationPath', defaultInAppDir);
 
-    exportLocationPath.value =
-        setBox.get("exportLocationPath") ?? "/storage/emulated/0/Music";
+    exportLocationPath.value = defaultInAppDir;
     // Opus/Ogg is the default for new profiles. Existing explicit selections
     // are respected, so users who deliberately chose M4A are not migrated.
     downloadingFormat.value = setBox.get('downloadingFormat') ?? "opus";

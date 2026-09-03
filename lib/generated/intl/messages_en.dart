@@ -950,7 +950,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "recentSearches": MessageLookupByLibrary.simpleMessage("Recent searches"),
     "recentlyPlayed": MessageLookupByLibrary.simpleMessage("Recently Played"),
     "recommend_cloud": MessageLookupByLibrary.simpleMessage(
-      "We recommend activating Cloud Mode for a Spotify-like experience: real-time synchronization between all your devices and automatic backup without you having to do anything.",
+      "We recommend activating Cloud Mode for a modern cloud experience: real-time synchronization between all your devices and automatic backup without you having to do anything.",
     ),
     "recommendedAlbums": MessageLookupByLibrary.simpleMessage("Recommended"),
     "recommendedArtists": MessageLookupByLibrary.simpleMessage("Recommended"),
@@ -1238,9 +1238,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
       "EMusic Cloud could not replace the remote library.",
     ),
-    "syncForceReplaceFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
-      "The remote replacement failed. Your local data and recovery backup were preserved.",
-    ),
+    "syncForceReplaceFailedLocalPreserved":
+        MessageLookupByLibrary.simpleMessage(
+          "The remote replacement failed. Your local data and recovery backup were preserved.",
+        ),
     "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
       "Upload not completed",
     ),

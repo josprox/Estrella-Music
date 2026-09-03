@@ -154,6 +154,9 @@ class StreamingProvider
     final inFlight = _catalogInFlight[cacheKey];
     if (inFlight != null) return inFlight;
 
+    final playbackContext = await _playbackContextLoader?.call() ??
+        const StreamingPlaybackContext();
+
     final request = _request(
       'POST',
       'catalog',
@@ -161,6 +164,12 @@ class StreamingProvider
         'action': action,
         'payload': payload,
         'additionalParams': additionalParams,
+        if (playbackContext.visitorData != null &&
+            playbackContext.visitorData!.isNotEmpty)
+          'visitorData': playbackContext.visitorData,
+        if (playbackContext.clientIp != null &&
+            playbackContext.clientIp!.isNotEmpty)
+          'clientIp': playbackContext.clientIp,
       },
     );
     _catalogInFlight[cacheKey] = request;
@@ -858,12 +867,9 @@ class StreamingProvider
       throw const MusicProviderException(
           'No se ha configurado la URL del servidor para este perfil.');
     }
-    final isCustomExternal =
-        _customServerUrl != null && !_customServerUrl!.contains('joss.red');
 
-    // Only send the Joss Red JWT token to official joss.red endpoints to prevent token leakage
-    final token = isCustomExternal ? null : await _tokenLoader();
-    if (!isCustomExternal && (token == null || token.isEmpty)) {
+    final token = await _tokenLoader();
+    if (token == null || token.isEmpty) {
       throw const MusicProviderException(
           'A valid Joss Red session is required');
     }
@@ -881,8 +887,7 @@ class StreamingProvider
         options: Options(
           method: method,
           headers: {
-            if (token != null && token.isNotEmpty)
-              'Authorization': 'Bearer $token',
+            if (token.isNotEmpty) 'Authorization': 'Bearer $token',
             'Accept': 'application/json',
             'X-Music-Profile-Id': _requireProfileId,
           },

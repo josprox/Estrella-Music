@@ -15,11 +15,11 @@ class HomeService {
     data["browseId"] = "FEmusic_home";
     final response = await _musicServices.sendRequest("browse", data);
     final results = nav(response.data, single_column_tab + section_list);
-    final home = [...parseMixedContent(results)];
+    final home = results is List ? [...parseMixedContent(results)] : <Map<String, dynamic>>[];
 
     final sectionList =
         nav(response.data, single_column_tab + ['sectionListRenderer']);
-    if (sectionList.containsKey('continuations')) {
+    if (sectionList is Map && sectionList.containsKey('continuations')) {
       requestFunc(additionalParams) async {
         return (await _musicServices.sendRequest("browse", data,
                 additionalParams: additionalParams))

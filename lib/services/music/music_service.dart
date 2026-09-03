@@ -33,7 +33,7 @@ class MusicServices {
   }) : _request = request {
     final date = DateTime.now();
     _context['context']['client']['clientName'] =
-        clientName ?? 'GENERIC_MUSIC_CLIENT';
+        clientName ?? 'WEB_REMIX';
     _context['context']['client']['clientVersion'] =
         '1.${date.year}${date.month.toString().padLeft(2, '0')}${date.day.toString().padLeft(2, '0')}.01.00';
     _context['context']['client']['hl'] = languageCode;
@@ -53,7 +53,7 @@ class MusicServices {
   final Map<String, dynamic> _context = {
     'context': {
       'client': {
-        "clientName": "GENERIC_MUSIC_CLIENT",
+        "clientName": "WEB_REMIX",
         "clientVersion": "1.20230213.01.00",
         "visitorData": null,
       },

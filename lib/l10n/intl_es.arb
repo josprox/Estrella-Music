@@ -1639,7 +1639,7 @@
   "@recentlyPlayed": {
     "description": "recentlyPlayed"
   },
-  "recommend_cloud": "Te recomendamos activar el Modo Cloud para una experiencia Spotify-like: sincronización en tiempo real entre todos tus dispositivos y respaldo automático sin que tengas que hacer nada.",
+  "recommend_cloud": "Te recomendamos activar el Modo Cloud para una experiencia moderna en la nube: sincronización en tiempo real entre todos tus dispositivos y respaldo automático sin que tengas que hacer nada.",
   "@recommend_cloud": {
     "description": "recommend_cloud"
   },

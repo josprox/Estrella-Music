@@ -1,6 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+
 import 'intl/messages_all.dart';
 
 // **************************************************************************
@@ -3839,10 +3840,10 @@ class S {
     );
   }
 
-  /// `We recommend activating Cloud Mode for a Spotify-like experience: real-time synchronization between all your devices and automatic backup without you having to do anything.`
+  /// `We recommend activating Cloud Mode for a modern cloud experience: real-time synchronization between all your devices and automatic backup without you having to do anything.`
   String get recommend_cloud {
     return Intl.message(
-      'We recommend activating Cloud Mode for a Spotify-like experience: real-time synchronization between all your devices and automatic backup without you having to do anything.',
+      'We recommend activating Cloud Mode for a modern cloud experience: real-time synchronization between all your devices and automatic backup without you having to do anything.',
       name: 'recommend_cloud',
       desc: 'recommend_cloud',
       args: [],
