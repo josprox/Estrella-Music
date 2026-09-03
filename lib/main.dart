@@ -75,7 +75,9 @@ Future<void> main() async {
     id: StreamingProvider.providerId,
     displayName: 'Streaming Externo',
     factory: () => StreamingProvider(
-      baseUrl: () => dotenv.env['EMUSICWEB'] ?? authService.baseUrl ?? '',
+      baseUrl: () => (dotenv.env['EMUSICWEB']?.trim().isNotEmpty ?? false)
+          ? dotenv.env['EMUSICWEB']!.trim()
+          : '',
       tokenLoader: authService.getAccessToken,
       playbackContextLoader: _loadStreamingPlaybackContext,
     ),
@@ -85,7 +87,9 @@ Future<void> main() async {
     id: StreamingProvider.legacyProviderId,
     displayName: 'Streaming Externo',
     factory: () => StreamingProvider(
-      baseUrl: () => dotenv.env['EMUSICWEB'] ?? authService.baseUrl ?? '',
+      baseUrl: () => (dotenv.env['EMUSICWEB']?.trim().isNotEmpty ?? false)
+          ? dotenv.env['EMUSICWEB']!.trim()
+          : '',
       tokenLoader: authService.getAccessToken,
       playbackContextLoader: _loadStreamingPlaybackContext,
     ),

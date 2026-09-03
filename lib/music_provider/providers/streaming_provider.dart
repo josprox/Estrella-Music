@@ -95,10 +95,12 @@ class StreamingProvider
         : null;
     final playbackContext = await _playbackContextLoader?.call() ??
         const StreamingPlaybackContext();
+    final clientName = context.settings['clientName']?.toString().trim();
     _catalog = MusicServices(
       request: _catalogRequest,
       visitorData: playbackContext.visitorData,
       languageCode: context.settings['languageCode']?.toString() ?? 'en',
+      clientName: (clientName != null && clientName.isNotEmpty) ? clientName : null,
     );
     try {
       final response = await _request('GET', 'capabilities');
@@ -852,6 +854,10 @@ class StreamingProvider
   }) async {
     final base =
         (_customServerUrl ?? _baseUrl()).replaceAll(RegExp(r'/+$'), '');
+    if (base.isEmpty) {
+      throw const MusicProviderException(
+          'No se ha configurado la URL del servidor para este perfil.');
+    }
     final isCustomExternal =
         _customServerUrl != null && !_customServerUrl!.contains('joss.red');
 
