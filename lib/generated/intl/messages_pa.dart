@@ -1260,10 +1260,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
       "EMusic ਕਲਾਉਡ ਰਿਮੋਟ ਲਾਇਬਰੇਰੀ ਨੂੰ ਤਬਦੀਲ ਨਹੀਂ ਕਰ ਸਕਿਆ ।",
     ),
-    "syncForceReplaceFailedLocalPreserved":
-        MessageLookupByLibrary.simpleMessage(
-          "ਰਿਮੋਟ ਰਿਪਲੇਸਮੈਂਟ ਫੇਲ੍ਹ ਹੈ । ਤੁਹਾਡਾ ਸਥਾਨਕ ਡੇਟਾ ਅਤੇ ਰਿਕਵਰੀ ਬੈਕਅਪ ਸੁਰੱਖਿਅਤ ਕੀਤਾ ਗਿਆ ਸੀ.",
-        ),
+    "syncForceReplaceFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
+      "ਰਿਮੋਟ ਰਿਪਲੇਸਮੈਂਟ ਫੇਲ੍ਹ ਹੈ । ਤੁਹਾਡਾ ਸਥਾਨਕ ਡੇਟਾ ਅਤੇ ਰਿਕਵਰੀ ਬੈਕਅਪ ਸੁਰੱਖਿਅਤ ਕੀਤਾ ਗਿਆ ਸੀ.",
+    ),
     "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
       "ਅੱਪਲੋਡ ਪੂਰਾ ਨਹੀਂ ਹੋਇਆ",
     ),

@@ -1339,10 +1339,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
       "EMusic ക്ലൗഡിന് റിമോട്ട് ലൈബ്രറി മാറ്റിസ്ഥാപിക്കാൻ കഴിഞ്ഞില്ല.",
     ),
-    "syncForceReplaceFailedLocalPreserved":
-        MessageLookupByLibrary.simpleMessage(
-          "റിമോട്ട് മാറ്റിസ്ഥാപിക്കൽ പരാജയപ്പെട്ടു. നിങ്ങളുടെ പ്രാദേശിക ഡാറ്റയും വീണ്ടെടുക്കൽ ബാക്കപ്പും സംരക്ഷിച്ചു.",
-        ),
+    "syncForceReplaceFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
+      "റിമോട്ട് മാറ്റിസ്ഥാപിക്കൽ പരാജയപ്പെട്ടു. നിങ്ങളുടെ പ്രാദേശിക ഡാറ്റയും വീണ്ടെടുക്കൽ ബാക്കപ്പും സംരക്ഷിച്ചു.",
+    ),
     "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
       "അപ്‌ലോഡ് പൂർത്തിയായിട്ടില്ല",
     ),
