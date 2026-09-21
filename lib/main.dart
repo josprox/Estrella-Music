@@ -83,18 +83,6 @@ Future<void> main() async {
     ),
     trust: ProviderTrust.jossRedAuthorized,
   ));
-  providerManager.register(ProviderRegistration(
-    id: StreamingProvider.legacyProviderId,
-    displayName: 'Streaming Externo',
-    factory: () => StreamingProvider(
-      baseUrl: () => (dotenv.env['EMUSICWEB']?.trim().isNotEmpty ?? false)
-          ? dotenv.env['EMUSICWEB']!.trim()
-          : '',
-      tokenLoader: authService.getAccessToken,
-      playbackContextLoader: _loadStreamingPlaybackContext,
-    ),
-    trust: ProviderTrust.jossRedAuthorized,
-  ));
   Get.put(providerManager, permanent: true);
   final profileManager = ProfileManager(
     providerManager: providerManager,
