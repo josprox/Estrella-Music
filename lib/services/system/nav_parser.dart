@@ -382,11 +382,20 @@ Playlist parsePlaylist(Map<String, dynamic> data) {
 List<dynamic> parseSongArtistsRuns(List<dynamic> runs) {
   //print(runs);
   List<Map<String, dynamic>> artists = [];
+  final viewRegex = RegExp(r'^\s*[\d,.]+\s*(k|m|b)?(\s*(views?|vistas?|visualizaciones|plays?|reproducciones))?\s*$', caseSensitive: false);
+  final durationRegex = RegExp(r"^(\d+:)*\d+:\d+$");
   for (var j = 0; j < runs.length; j += 2) {
+    final name = runs[j]['text']?.toString().trim() ?? '';
+    final id = nav(runs[j], navigation_browse_id,
+        noneIfAbsent: false, funName: "parseSongArtistsRuns");
+    if (name.isEmpty) continue;
+    // Si no tiene browseId y coincide con conteo de vistas o duracion, no es un artista
+    if (id == null && (viewRegex.hasMatch(name) || durationRegex.hasMatch(name))) {
+      continue;
+    }
     artists.add({
-      'name': runs[j]['text'],
-      'id': nav(runs[j], navigation_browse_id,
-          noneIfAbsent: false, funName: "parseSongArtistsRuns"),
+      'name': name,
+      'id': id,
     });
   }
   return artists;
@@ -442,6 +451,12 @@ List<dynamic>? parseSongArtists(Map<String, dynamic> data, int index) {
     return null;
   } else {
     var runs = flexItem['text']['runs'];
+    if (runs is List) {
+      final split = splitBySeparator(runs);
+      if (split.isNotEmpty) {
+        return parseSongArtistsRuns(split[0]);
+      }
+    }
     return parseSongArtistsRuns(runs);
   }
 }

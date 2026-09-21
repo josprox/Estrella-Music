@@ -140,15 +140,35 @@ class HomeScreenController extends GetxController {
   Future<void> _loadDailyDiscover() async {
     try {
       final favBox = await SqliteStore.openBox('LIBFAV');
-      if (favBox.isEmpty) {
-        printINFO("Daily Discover: No favorites found in LIBFAV");
+      final rpBox = await SqliteStore.openBox('LIBRP');
+      final songsCacheBox = await SqliteStore.openBox('SongsCache');
+
+      List<MediaItem> allSeeds = [];
+      if (favBox.isNotEmpty) {
+        allSeeds.addAll(
+            favBox.values.map((e) => MediaItemBuilder.fromJson(e)));
+      }
+      if (rpBox.isNotEmpty) {
+        allSeeds.addAll(
+            rpBox.values.map((e) => MediaItemBuilder.fromJson(e)));
+      }
+      if (allSeeds.isEmpty && songsCacheBox.isNotEmpty) {
+        allSeeds.addAll(
+            songsCacheBox.values.map((e) => MediaItemBuilder.fromJson(e)));
+      }
+
+      if (allSeeds.isEmpty) {
+        printINFO("Daily Discover: No seeds found in local storage");
         return;
       }
 
-      final allFavs =
-          favBox.values.map((e) => MediaItemBuilder.fromJson(e)).toList();
-      allFavs.shuffle();
-      final seeds = allFavs.take(2).toList();
+      // Deduplicate seeds by ID and shuffle
+      final uniqueSeedsMap = <String, MediaItem>{};
+      for (final s in allSeeds) {
+        if (s.id.isNotEmpty) uniqueSeedsMap[s.id] = s;
+      }
+      final seedList = uniqueSeedsMap.values.toList()..shuffle();
+      final seeds = seedList.take(4).toList();
 
       List<MediaItem> recommendations = [];
 
@@ -156,7 +176,7 @@ class HomeScreenController extends GetxController {
         final items = await _relatedOrCatalogSongs(seed, limit: 8);
         if (items.isNotEmpty) {
           items.shuffle();
-          recommendations.add(items.first);
+          recommendations.addAll(items.take(4));
         }
       }
 
@@ -168,7 +188,7 @@ class HomeScreenController extends GetxController {
         var finalRecs = uniqueRecs.values.toList();
         finalRecs.shuffle();
         dailyDiscover.value =
-            QuickPicks(finalRecs, title: S.current.dailyDiscover);
+            QuickPicks(finalRecs.take(16).toList(), title: S.current.dailyDiscover);
         printINFO("Daily Discover: Loaded ${finalRecs.length} recommendations");
       } else {
         printWarning(
@@ -236,20 +256,31 @@ class HomeScreenController extends GetxController {
 
   Future<void> _loadKeepListening() async {
     try {
+      final rpBox = await SqliteStore.openBox('LIBRP');
       final favBox = await SqliteStore.openBox('LIBFAV');
-      if (favBox.isEmpty) return;
 
-      final allFavs =
-          favBox.values.map((e) => MediaItemBuilder.fromJson(e)).toList();
-      // Sort by lastPlayed descending to get most recently played
-      final keepList = List<MediaItem>.from(allFavs)
-        ..sort((a, b) {
+      List<MediaItem> recentSongs = [];
+      if (rpBox.isNotEmpty) {
+        // LIBRP contains items in recent playback order
+        recentSongs =
+            rpBox.values.map((e) => MediaItemBuilder.fromJson(e)).toList().reversed.toList();
+      }
+
+      if (recentSongs.isEmpty && favBox.isNotEmpty) {
+        final allFavs =
+            favBox.values.map((e) => MediaItemBuilder.fromJson(e)).toList();
+        allFavs.sort((a, b) {
           final lastA = a.extras?['lastPlayed'] as int? ?? 0;
           final lastB = b.extras?['lastPlayed'] as int? ?? 0;
           return lastB.compareTo(lastA);
         });
+        recentSongs = allFavs;
+      }
 
-      final seeds = keepList.take(1).toList();
+      if (recentSongs.isEmpty) return;
+
+      // Take top 3 recent songs as seeds
+      final seeds = recentSongs.take(3).toList();
       List<MediaItem> recommendations = [];
       recommendations.addAll(seeds);
 
@@ -257,19 +288,21 @@ class HomeScreenController extends GetxController {
         final items = await _relatedOrCatalogSongs(seed, limit: 8);
         if (items.isNotEmpty) {
           items.shuffle();
-          recommendations.add(items.first);
+          recommendations.addAll(items.take(4));
         }
       }
 
       if (recommendations.isNotEmpty) {
         final uniqueRecs = <String, MediaItem>{};
         for (var rec in recommendations) {
-          uniqueRecs[rec.id] = rec;
+          if (rec.id.isNotEmpty) {
+            uniqueRecs[rec.id] = rec;
+          }
         }
         var finalRecs = uniqueRecs.values.toList();
-        finalRecs.shuffle();
         keepListening.value =
-            QuickPicks(finalRecs, title: S.current.keepListening);
+            QuickPicks(finalRecs.take(16).toList(), title: S.current.keepListening);
+        printINFO("Keep Listening: Loaded ${finalRecs.length} recommendations");
       }
     } catch (e) {
       printERROR("Keep Listening failed: $e");

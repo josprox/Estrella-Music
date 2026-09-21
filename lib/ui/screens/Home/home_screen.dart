@@ -165,7 +165,7 @@ class Body extends StatelessWidget {
                                 Obx(() =>
                                     homeScreenController.dailyDiscover.value !=
                                             null
-                                        ? QuickPicksWidget(
+                                        ? SuggestedPlaylistCarousel(
                                             content: homeScreenController
                                                 .dailyDiscover.value!)
                                         : const SizedBox.shrink()),
@@ -173,7 +173,7 @@ class Body extends StatelessWidget {
                                 Obx(() =>
                                     homeScreenController.keepListening.value !=
                                             null
-                                        ? QuickPicksWidget(
+                                        ? SuggestedPlaylistCarousel(
                                             content: homeScreenController
                                                 .keepListening.value!)
                                         : const SizedBox.shrink()),
