@@ -2368,5 +2368,17 @@
   "welcome_title": "നിങ്ങളുടെ സംഗീതം, നിങ്ങളുടെ വഴി",
   "@welcome_title": {
     "description": "welcome_title"
-  }
+  },
+  "updateChannel": "അപ്ഡേറ്റർ തിരഞ്ഞെടുക്കൽ",
+  "@updateChannel": {},
+  "channelRelease": "സ്ഥിരം (റിലീസ്)",
+  "@channelRelease": {},
+  "channelReleaseDes": "പൊതുജനങ്ങൾക്ക് സ്ഥിരതയുള്ളതും ശുപാർശ ചെയ്യപ്പെട്ടതുമായ പതിപ്പുകൾ",
+  "@channelReleaseDes": {},
+  "updateChannelDes": "ആപ്പിന്റെ അപ്ഡേറ്റുകൾ നിങ്ങൾക്ക് ലഭിക്കേണ്ട ചാനൽ",
+  "@updateChannelDes": {},
+  "channelPrerelease": "പ്രി-ലോഞ്ച് (Prerelease)",
+  "@channelPrerelease": {},
+  "channelPrereleaseDes": "അധികൃത റിലീസിന് മുമ്പ് ഏറ്റവും പുതിയ സവിശേഷതകളുള്ള പരീക്ഷണ പതിപ്പുകൾ",
+  "@channelPrereleaseDes": {}
 }

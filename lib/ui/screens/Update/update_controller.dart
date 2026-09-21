@@ -6,6 +6,7 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get/get.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:estrella_music/services/storage/sqlite_store.dart';
 
 /// Estados posibles del proceso de descarga/instalación.
 enum DownloadState { idle, downloading, done, installing, error }
@@ -61,7 +62,13 @@ class UpdateController extends GetxController {
       }
 
       final dio = Dio();
-      final response = await dio.get(checkUpdates);
+      final channel =
+          (SqliteStore.box('AppPrefs').get('updateChannel') as String?) ??
+              'release';
+      final response = await dio.get(
+        checkUpdates,
+        queryParameters: {'channel': channel},
+      );
 
       if (response.statusCode == 200) {
         updateInfo.value = Map<String, dynamic>.from(response.data as Map);

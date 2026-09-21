@@ -148,13 +148,13 @@ class HomeProfileCard extends StatelessWidget {
                     if (index == profiles.length) {
                       return ActionChip(
                         avatar: const Icon(Icons.add_rounded,
-                            size: 16, color: Colors.white70),
-                        label: const Text('Nuevo',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 12,
-                                fontWeight: FontWeight.w600)),
-                        backgroundColor: Colors.white.withValues(alpha: 0.12),
+                            size: 16),
+                        label: const Text('Nuevo'),
+                        labelStyle: const TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w600,
+                        ),
+                        backgroundColor: Colors.white.withValues(alpha: 0.18),
                         side: BorderSide.none,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(12)),
@@ -167,8 +167,6 @@ class HomeProfileCard extends StatelessWidget {
 
                     return ChoiceChip(
                       selected: isCurrent,
-                      selectedColor: Colors.white,
-                      backgroundColor: Colors.white.withValues(alpha: 0.15),
                       showCheckmark: false,
                       side: BorderSide.none,
                       shape: RoundedRectangleBorder(
@@ -182,20 +180,12 @@ class HomeProfileCard extends StatelessWidget {
                             ? Icons.folder_rounded
                             : Icons.cloud_rounded,
                         size: 16,
-                        color: isCurrent
-                            ? const Color(0xFF14213D)
-                            : Colors.white70,
                       ),
-                      label: Text(
-                        profile.name,
-                        style: TextStyle(
-                          color: isCurrent
-                              ? const Color(0xFF14213D)
-                              : Colors.white,
-                          fontSize: 12.5,
-                          fontWeight:
-                              isCurrent ? FontWeight.bold : FontWeight.w500,
-                        ),
+                      label: Text(profile.name),
+                      labelStyle: TextStyle(
+                        fontSize: 12.5,
+                        fontWeight:
+                            isCurrent ? FontWeight.bold : FontWeight.w600,
                       ),
                       onSelected: (selected) async {
                         if (!isCurrent) {

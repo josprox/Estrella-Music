@@ -2370,5 +2370,29 @@
   "welcome_title": "Your music, your way",
   "@welcome_title": {
     "description": "welcome_title"
+  },
+  "updateChannel": "Update Channel Selection",
+  "@updateChannel": {
+    "description": "updateChannel"
+  },
+  "updateChannelDes": "Channel from which you want to receive application updates",
+  "@updateChannelDes": {
+    "description": "updateChannelDes"
+  },
+  "channelRelease": "Stable (Release)",
+  "@channelRelease": {
+    "description": "channelRelease"
+  },
+  "channelReleaseDes": "Tested, stable versions recommended for general use",
+  "@channelReleaseDes": {
+    "description": "channelReleaseDes"
+  },
+  "channelPrerelease": "Pre-release (Prerelease)",
+  "@channelPrerelease": {
+    "description": "channelPrerelease"
+  },
+  "channelPrereleaseDes": "Preview versions with latest features before official release",
+  "@channelPrereleaseDes": {
+    "description": "channelPrereleaseDes"
   }
 }

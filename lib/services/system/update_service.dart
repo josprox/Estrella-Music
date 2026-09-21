@@ -2,9 +2,10 @@ import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:package_info_plus/package_info_plus.dart';
+import 'package:estrella_music/services/storage/sqlite_store.dart';
 
 class UpdateService {
-  static Future<bool> checkForUpdate() async {
+  static Future<bool> checkForUpdate({String? channel}) async {
     try {
       final String? checkUpdates = dotenv.env["UPDATE_CHECK_URL"];
       if (checkUpdates == null) {
@@ -12,8 +13,15 @@ class UpdateService {
         return false;
       }
 
+      final activeChannel = channel ??
+          (SqliteStore.box("AppPrefs").get('updateChannel') as String?) ??
+          'release';
+
       final dio = Dio();
-      final response = await dio.get(checkUpdates);
+      final response = await dio.get(
+        checkUpdates,
+        queryParameters: {'channel': activeChannel},
+      );
 
       if (response.statusCode != 200) return false;
 

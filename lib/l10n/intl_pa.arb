@@ -2368,5 +2368,17 @@
   "welcome_title": "ਤੁਹਾਡਾ ਸੰਗੀਤ, ਤੁਹਾਡਾ ਤਰੀਕਾ",
   "@welcome_title": {
     "description": "welcome_title"
-  }
+  },
+  "updateChannel": "ਅਪਡੇਟਰ ਚੋਣ",
+  "@updateChannel": {},
+  "channelRelease": "ਸਥਿਰ (ਰਿਲੀਜ਼)",
+  "@channelRelease": {},
+  "channelReleaseDes": "ਆਮ ਜਨਤਾ ਲਈ ਸਥਿਰ ਅਤੇ ਸਿਫਾਰਸ਼ੀ ਵਰਜਨ",
+  "@channelReleaseDes": {},
+  "updateChannelDes": "ਜੋ ਚੈਨਲ ਤੋਂ ਤੁਸੀਂ ਐਪ ਅਪਡੇਟਸ ਪ੍ਰਾਪਤ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ",
+  "@updateChannelDes": {},
+  "channelPrerelease": "ਪ੍ਰੀ-ਲਾਂਚ (Prerelease)",
+  "@channelPrerelease": {},
+  "channelPrereleaseDes": "ਅਧਿਕਾਰਿਕ ਲਾਂਚ ਤੋਂ ਪਹਿਲਾਂ ਸਭ ਤੋਂ ਨਵੀਆਂ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਨਾਲ ਟੈਸਟ ਵਰਜਨ",
+  "@channelPrereleaseDes": {}
 }

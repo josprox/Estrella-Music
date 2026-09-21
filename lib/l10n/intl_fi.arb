@@ -2368,5 +2368,17 @@
   "welcome_title": "Sinun musiikkisi, sinun tapasi",
   "@welcome_title": {
     "description": "welcome_title"
-  }
+  },
+  "updateChannel": "Päivitysohjelman valinta",
+  "@updateChannel": {},
+  "channelRelease": "Vakaa (Julkaisu)",
+  "@channelRelease": {},
+  "channelReleaseDes": "Vakaat ja suositellut versiot yleisölle",
+  "@channelReleaseDes": {},
+  "updateChannelDes": "Kanava, josta haluat vastaanottaa sovelluksen päivitykset",
+  "@updateChannelDes": {},
+  "channelPrerelease": "Ennakkojulkaisu (Prerelease)",
+  "@channelPrerelease": {},
+  "channelPrereleaseDes": "Testiversiot uusimmilla ominaisuuksilla ennen virallista julkaisua",
+  "@channelPrereleaseDes": {}
 }

@@ -1335,9 +1335,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
       "Το EMusic Cloud δεν μπόρεσε να αντικαταστήσει την απομακρυσμένη βιβλιοθήκη.",
     ),
-    "syncForceReplaceFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
-      "Ο απομακρυσμένος αντικαταστάτης απέτυχε. Τα τοπικά δεδομένα και οι ενισχύσεις αποκατάστασης διατηρήθηκαν.",
-    ),
+    "syncForceReplaceFailedLocalPreserved":
+        MessageLookupByLibrary.simpleMessage(
+          "Ο απομακρυσμένος αντικαταστάτης απέτυχε. Τα τοπικά δεδομένα και οι ενισχύσεις αποκατάστασης διατηρήθηκαν.",
+        ),
     "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
       "Η αποστολή δεν ολοκληρώθηκε",
     ),

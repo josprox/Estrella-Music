@@ -1269,9 +1269,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
       "EMüzik Bulut uzak kütüphaneyi değiştiremedi.",
     ),
-    "syncForceReplaceFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
-      "Uzak yedek başarısız oldu. Yerel verileriniz ve kurtarma yedeklemeniz korunmuştu.",
-    ),
+    "syncForceReplaceFailedLocalPreserved":
+        MessageLookupByLibrary.simpleMessage(
+          "Uzak yedek başarısız oldu. Yerel verileriniz ve kurtarma yedeklemeniz korunmuştu.",
+        ),
     "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
       "Yükleme tamamlanmadı",
     ),

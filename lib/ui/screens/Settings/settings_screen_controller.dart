@@ -51,6 +51,8 @@ class SettingsScreenController extends GetxController {
   final playbackSpeed = 1.0.obs;
   final playbackPitch = 1.0.obs;
   final currentVersion = "".obs;
+  final updateChannel = "release".obs;
+  final isGooglePlayBuild = false.obs;
 
   @override
   void onInit() {
@@ -65,6 +67,11 @@ class SettingsScreenController extends GetxController {
     try {
       final pInfo = await PackageInfo.fromPlatform();
       currentVersion.value = "V${pInfo.version}";
+      final store = pInfo.installerStore?.toLowerCase() ?? "";
+      // Builds from Google Play Store (appbundle) or package installer
+      if (store.contains("vending") || store.contains("google")) {
+        isGooglePlayBuild.value = true;
+      }
     } catch (_) {
       currentVersion.value = "V1.0.0";
     }
@@ -79,6 +86,13 @@ class SettingsScreenController extends GetxController {
   _checkNewVersion() {
     newVersionCheck(currentVersion.value)
         .then((value) => isNewVersionAvailable.value = value);
+  }
+
+  void setUpdateChannel(String? channel) {
+    if (channel == null || channel == updateChannel.value) return;
+    updateChannel.value = channel;
+    setBox.put('updateChannel', channel);
+    _checkNewVersion();
   }
 
   Future<String> _createInAppSongDownDir() async {
@@ -150,6 +164,7 @@ class SettingsScreenController extends GetxController {
         ((setBox.get("playbackSpeed") ?? 1.0) as num).toDouble();
     playbackPitch.value =
         ((setBox.get("playbackPitch") ?? 1.0) as num).toDouble();
+    updateChannel.value = setBox.get('updateChannel') ?? "release";
   }
 
   Future<void> setAppLanguage(String? val) async {

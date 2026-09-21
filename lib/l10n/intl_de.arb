@@ -2368,5 +2368,17 @@
   "welcome_title": "Deine Musik, dein Weg",
   "@welcome_title": {
     "description": "welcome_title"
-  }
+  },
+  "updateChannel": "Auswahl des Aktualisierers",
+  "@updateChannel": {},
+  "channelRelease": "Stabil (Release)",
+  "@channelRelease": {},
+  "channelReleaseDes": "Stabile und empfohlene Versionen für die breite Öffentlichkeit",
+  "@channelReleaseDes": {},
+  "updateChannelDes": "Kanal, von dem Sie App-Updates erhalten möchten",
+  "@updateChannelDes": {},
+  "channelPrerelease": "Vorabveröffentlichung (Prerelease)",
+  "@channelPrerelease": {},
+  "channelPrereleaseDes": "Testversionen mit den neuesten Funktionen vor dem offiziellen Start",
+  "@channelPrereleaseDes": {}
 }

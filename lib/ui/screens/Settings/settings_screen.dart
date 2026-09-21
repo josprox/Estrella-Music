@@ -380,6 +380,144 @@ class DiscoverContentSelectorDialog extends StatelessWidget {
   }
 }
 
+class UpdateChannelSelectorDialog extends StatelessWidget {
+  const UpdateChannelSelectorDialog({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final settingsController = Get.find<SettingsScreenController>();
+    final cs = Theme.of(context).colorScheme;
+
+    return CommonDialog(
+      child: Container(
+        padding: const EdgeInsets.fromLTRB(16, 24, 16, 16),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  S.current.updateChannel,
+                  style: Theme.of(context)
+                      .textTheme
+                      .titleLarge
+                      ?.copyWith(fontWeight: FontWeight.bold),
+                ),
+              ),
+            ),
+            const SizedBox(height: 8),
+            Obx(() {
+              final currentChannel = settingsController.updateChannel.value;
+              final isRelease = currentChannel == "release";
+              final isPrerelease = currentChannel == "prerelease";
+
+              return Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 2.0, horizontal: 8.0),
+                    child: ListTile(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12)),
+                      tileColor: isRelease
+                          ? cs.primaryContainer.withValues(alpha: 0.4)
+                          : Colors.transparent,
+                      leading: RadioGroup<String>(
+                        groupValue: currentChannel,
+                        onChanged: (val) {
+                          settingsController.setUpdateChannel(val);
+                          Navigator.of(context).pop();
+                        },
+                        child: Radio<String>(
+                          value: "release",
+                          activeColor: cs.primary,
+                        ),
+                      ),
+                      title: Text(
+                        S.current.channelRelease,
+                        style: TextStyle(
+                          fontWeight:
+                              isRelease ? FontWeight.bold : FontWeight.normal,
+                          color:
+                              isRelease ? cs.onPrimaryContainer : cs.onSurface,
+                        ),
+                      ),
+                      subtitle: Text(
+                        S.current.channelReleaseDes,
+                        style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                              color: cs.onSurfaceVariant.withValues(alpha: 0.8),
+                            ),
+                      ),
+                      onTap: () {
+                        settingsController.setUpdateChannel("release");
+                        Navigator.of(context).pop();
+                      },
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 2.0, horizontal: 8.0),
+                    child: ListTile(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12)),
+                      tileColor: isPrerelease
+                          ? cs.primaryContainer.withValues(alpha: 0.4)
+                          : Colors.transparent,
+                      leading: RadioGroup<String>(
+                        groupValue: currentChannel,
+                        onChanged: (val) {
+                          settingsController.setUpdateChannel(val);
+                          Navigator.of(context).pop();
+                        },
+                        child: Radio<String>(
+                          value: "prerelease",
+                          activeColor: cs.primary,
+                        ),
+                      ),
+                      title: Text(
+                        S.current.channelPrerelease,
+                        style: TextStyle(
+                          fontWeight: isPrerelease
+                              ? FontWeight.bold
+                              : FontWeight.normal,
+                          color: isPrerelease
+                              ? cs.onPrimaryContainer
+                              : cs.onSurface,
+                        ),
+                      ),
+                      subtitle: Text(
+                        S.current.channelPrereleaseDes,
+                        style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                              color: cs.onSurfaceVariant.withValues(alpha: 0.8),
+                            ),
+                      ),
+                      onTap: () {
+                        settingsController.setUpdateChannel("prerelease");
+                        Navigator.of(context).pop();
+                      },
+                    ),
+                  ),
+                ],
+              );
+            }),
+            const SizedBox(height: 12),
+            Align(
+              alignment: Alignment.centerRight,
+              child: TextButton(
+                onPressed: () => Navigator.of(context).pop(),
+                child: Text(S.current.cancel),
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
+
 Widget radioWidget(
     {required String label,
     required SettingsScreenController controller,
@@ -977,6 +1115,7 @@ class SettingsAboutScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final ctrl = Get.find<SettingsScreenController>();
     final cs = Theme.of(context).colorScheme;
 
     return Scaffold(
@@ -989,6 +1128,44 @@ class SettingsAboutScreen extends StatelessWidget {
       body: ListView(
         physics: const BouncingScrollPhysics(),
         children: [
+          Obx(() {
+            if (ctrl.isGooglePlayBuild.value) {
+              return const SizedBox.shrink();
+            }
+            return SettingsTile(
+              title: S.current.updateChannel,
+              subtitle: S.current.updateChannelDes,
+              leadingIcon: Icons.system_update_alt_rounded,
+              isThreeLine: true,
+              onTap: () => showDialog(
+                context: context,
+                builder: (_) => const UpdateChannelSelectorDialog(),
+              ),
+              trailing: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  ConstrainedBox(
+                    constraints: const BoxConstraints(maxWidth: 110),
+                    child: Text(
+                      ctrl.updateChannel.value == "prerelease"
+                          ? S.current.channelPrerelease
+                          : S.current.channelRelease,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                        color: cs.primary,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 13,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 4),
+                  Icon(Icons.chevron_right_rounded,
+                      color: cs.onSurfaceVariant.withValues(alpha: 0.7)),
+                ],
+              ),
+            );
+          }),
           SettingsTile(
             title: S.current.github,
             subtitle: S.current.githubDes,

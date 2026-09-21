@@ -1,6 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+
 import 'intl/messages_all.dart';
 
 // **************************************************************************
@@ -5565,6 +5566,66 @@ class S {
       'Your music, your way',
       name: 'welcome_title',
       desc: 'welcome_title',
+      args: [],
+    );
+  }
+
+  /// `Update Channel Selection`
+  String get updateChannel {
+    return Intl.message(
+      'Update Channel Selection',
+      name: 'updateChannel',
+      desc: 'updateChannel',
+      args: [],
+    );
+  }
+
+  /// `Channel from which you want to receive application updates`
+  String get updateChannelDes {
+    return Intl.message(
+      'Channel from which you want to receive application updates',
+      name: 'updateChannelDes',
+      desc: 'updateChannelDes',
+      args: [],
+    );
+  }
+
+  /// `Stable (Release)`
+  String get channelRelease {
+    return Intl.message(
+      'Stable (Release)',
+      name: 'channelRelease',
+      desc: 'channelRelease',
+      args: [],
+    );
+  }
+
+  /// `Tested, stable versions recommended for general use`
+  String get channelReleaseDes {
+    return Intl.message(
+      'Tested, stable versions recommended for general use',
+      name: 'channelReleaseDes',
+      desc: 'channelReleaseDes',
+      args: [],
+    );
+  }
+
+  /// `Pre-release (Prerelease)`
+  String get channelPrerelease {
+    return Intl.message(
+      'Pre-release (Prerelease)',
+      name: 'channelPrerelease',
+      desc: 'channelPrerelease',
+      args: [],
+    );
+  }
+
+  /// `Preview versions with latest features before official release`
+  String get channelPrereleaseDes {
+    return Intl.message(
+      'Preview versions with latest features before official release',
+      name: 'channelPrereleaseDes',
+      desc: 'channelPrereleaseDes',
       args: [],
     );
   }

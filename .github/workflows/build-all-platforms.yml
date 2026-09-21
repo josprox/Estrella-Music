@@ -4,6 +4,25 @@ on:
   release:
     types: [created]
   workflow_dispatch:
+    inputs:
+      create_release:
+        description: 'Publicar o actualizar los archivos generados en GitHub Release'
+        required: true
+        default: true
+        type: boolean
+      release_type:
+        description: 'Tipo de release a crear (draft, prerelease, published)'
+        required: true
+        default: draft
+        type: choice
+        options:
+          - draft
+          - prerelease
+          - published
+      release_tag:
+        description: 'Etiqueta de versión (ej. v3.6.5). Si se omite, se lee de pubspec.yaml'
+        required: false
+        type: string
 
 permissions:
   contents: write
@@ -21,6 +40,8 @@ jobs:
       version: ${{ steps.version.outputs.version }}
       build_number: ${{ steps.version.outputs.build_number }}
       release_tag: ${{ steps.version.outputs.release_tag }}
+      release_type: ${{ steps.version.outputs.release_type }}
+      create_release: ${{ steps.version.outputs.create_release }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -39,21 +60,43 @@ jobs:
           version="${current_full%%+*}"
           build_number="${current_full##*+}"
           
-          # Si fue disparado por release, usar el tag del release
-          if [[ "${{ github.event_name }}" == "release" ]]; then
+          # Determinar release_tag
+          custom_tag="${{ inputs.release_tag }}"
+          if [[ -n "$custom_tag" ]]; then
+            tag_name="$custom_tag"
+          elif [[ "${{ github.event_name }}" == "release" ]]; then
             tag_name="${{ github.event.release.tag_name }}"
           else
             tag_name="v$version"
+          fi
+
+          # Determinar release_type y create_release
+          if [[ "${{ github.event_name }}" == "release" ]]; then
+            create_rel="true"
+            if [[ "${{ github.event.release.prerelease }}" == "true" ]]; then
+              rel_type="prerelease"
+            elif [[ "${{ github.event.release.draft }}" == "true" ]]; then
+              rel_type="draft"
+            else
+              rel_type="published"
+            fi
+          else
+            create_rel="${{ inputs.create_release != false }}"
+            rel_type="${{ inputs.release_type || 'draft' }}"
           fi
 
           {
             echo "version=$version"
             echo "build_number=$build_number"
             echo "release_tag=$tag_name"
+            echo "release_type=$rel_type"
+            echo "create_release=$create_rel"
           } >> "$GITHUB_OUTPUT"
 
           echo "Current version: $current_full"
           echo "Release tag: $tag_name"
+          echo "Release type: $rel_type"
+          echo "Create release: $create_rel"
 
   validate:
     name: Analyze project
@@ -289,6 +332,7 @@ jobs:
 
   upload-assets:
     name: Upload assets to release
+    if: ${{ needs.detect-version.outputs.create_release == 'true' }}
     needs: [detect-version, android, linux, windows, apple]
     runs-on: ubuntu-latest
     steps:
@@ -297,12 +341,57 @@ jobs:
         with:
           path: release-assets
           merge-multiple: true
-      
-      - name: Upload binaries to Release
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: ${{ needs.detect-version.outputs.release_tag }}
-          draft: true
-          files: release-assets/*
+
+      - name: Publish or update GitHub Release
+        shell: bash
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_TAG: ${{ needs.detect-version.outputs.release_tag }}
+          RELEASE_TYPE: ${{ needs.detect-version.outputs.release_type }}
+        run: |
+          set -euo pipefail
+
+          files=(release-assets/*)
+          if [ ! -e "${files[0]}" ]; then
+            echo "::error::No se encontraron archivos en la carpeta release-assets."
+            exit 1
+          fi
+
+          echo "Archivos para la release:"
+          printf ' - %s\n' "${files[@]}"
+
+          # Comprobar si la release ya existe (draft, prerelease o published)
+          if gh release view "$RELEASE_TAG" --repo "$GH_REPO" --json tagName >/dev/null 2>&1; then
+            echo "La release '$RELEASE_TAG' ya existe. Actualizando archivos y estado..."
+
+            # Subir o reemplazar los archivos existentes con --clobber
+            gh release upload "$RELEASE_TAG" "${files[@]}" --repo "$GH_REPO" --clobber
+
+            # Actualizar el tipo de release segun el input/evento
+            edit_flags=(release edit "$RELEASE_TAG" --repo "$GH_REPO")
+            if [ "$RELEASE_TYPE" = "draft" ]; then
+              edit_flags+=(--draft=true --prerelease=false)
+            elif [ "$RELEASE_TYPE" = "prerelease" ]; then
+              edit_flags+=(--draft=false --prerelease=true)
+            else
+              # published
+              edit_flags+=(--draft=false --prerelease=false)
+            fi
+
+            gh "${edit_flags[@]}" || echo "::warning::No se pudo actualizar el estado de la release, pero los archivos si fueron subidos."
+            echo "✨ Release '$RELEASE_TAG' actualizada correctamente ($RELEASE_TYPE)."
+          else
+            echo "Creando nueva release '$RELEASE_TAG' (tipo: $RELEASE_TYPE)..."
+            create_flags=("$RELEASE_TAG" --repo "$GH_REPO" --title "Estrella Music $RELEASE_TAG" --generate-notes)
+            if [ "$RELEASE_TYPE" = "draft" ]; then
+              create_flags+=(--draft)
+            elif [ "$RELEASE_TYPE" = "prerelease" ]; then
+              create_flags+=(--prerelease)
+            fi
+
+            # Adjuntar archivos
+            create_flags+=("${files[@]}")
+            gh release create "${create_flags[@]}"
+            echo "✨ Release '$RELEASE_TAG' creada exitosamente ($RELEASE_TYPE)."
+          fi

@@ -2368,5 +2368,17 @@
   "welcome_title": "موسیقی شما، روش شما",
   "@welcome_title": {
     "description": "welcome_title"
-  }
+  },
+  "updateChannel": "انتخاب به‌روزرسان",
+  "@updateChannel": {},
+  "channelRelease": "پایدار (انتشار)",
+  "@channelRelease": {},
+  "channelReleaseDes": "نسخه‌های پایدار و توصیه‌شده برای عموم مردم",
+  "@channelReleaseDes": {},
+  "updateChannelDes": "کانالی که می‌خواهید به‌روزرسانی‌های برنامه را از آن دریافت کنید",
+  "@updateChannelDes": {},
+  "channelPrerelease": "پیش‌انتشار (Prerelease)",
+  "@channelPrerelease": {},
+  "channelPrereleaseDes": "نسخه‌های آزمایشی با جدیدترین ویژگی‌ها قبل از انتشار رسمی",
+  "@channelPrereleaseDes": {}
 }

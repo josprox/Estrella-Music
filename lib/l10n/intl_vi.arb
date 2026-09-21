@@ -2368,5 +2368,17 @@
   "welcome_title": "Âm nhạc của bạn, theo cách của bạn",
   "@welcome_title": {
     "description": "welcome_title"
-  }
+  },
+  "updateChannel": "Lựa chọn trình cập nhật",
+  "@updateChannel": {},
+  "channelRelease": "Ổn định (Bản phát hành)",
+  "@channelRelease": {},
+  "channelReleaseDes": "Các phiên bản ổn định và được khuyến nghị cho công chúng",
+  "@channelReleaseDes": {},
+  "updateChannelDes": "Kênh mà bạn muốn nhận cập nhật ứng dụng",
+  "@updateChannelDes": {},
+  "channelPrerelease": "Tiền phát hành (Prerelease)",
+  "@channelPrerelease": {},
+  "channelPrereleaseDes": "Phiên bản thử nghiệm với các tính năng mới nhất trước khi ra mắt chính thức",
+  "@channelPrereleaseDes": {}
 }

@@ -2368,5 +2368,17 @@
   "welcome_title": "Ваша музика, ваш шлях",
   "@welcome_title": {
     "description": "welcome_title"
-  }
+  },
+  "updateChannel": "Вибір оновлювача",
+  "@updateChannel": {},
+  "channelRelease": "Стабільний (Випуск)",
+  "@channelRelease": {},
+  "channelReleaseDes": "Стабільні та рекомендовані версії для широкої публіки",
+  "@channelReleaseDes": {},
+  "updateChannelDes": "Канал, з якого ви хочете отримувати оновлення програми",
+  "@updateChannelDes": {},
+  "channelPrerelease": "Попередній випуск (Prerelease)",
+  "@channelPrerelease": {},
+  "channelPrereleaseDes": "Тестові версії з найновішими функціями перед офіційним запуском",
+  "@channelPrereleaseDes": {}
 }

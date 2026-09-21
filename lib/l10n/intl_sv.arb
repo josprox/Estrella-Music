@@ -2368,5 +2368,17 @@
   "welcome_title": "Din musik, på ditt sätt",
   "@welcome_title": {
     "description": "welcome_title"
-  }
+  },
+  "updateChannel": "Val av uppdaterare",
+  "@updateChannel": {},
+  "channelRelease": "Stabil (Version)",
+  "@channelRelease": {},
+  "channelReleaseDes": "Stabila och rekommenderade versioner för allmänheten",
+  "@channelReleaseDes": {},
+  "updateChannelDes": "Kanal som du vill ta emot app-uppdateringar från",
+  "@updateChannelDes": {},
+  "channelPrerelease": "Förhandslansering (Prerelease)",
+  "@channelPrerelease": {},
+  "channelPrereleaseDes": "Testversioner med de senaste funktionerna före den officiella lanseringen",
+  "@channelPrereleaseDes": {}
 }

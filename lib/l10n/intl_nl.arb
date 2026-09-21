@@ -2368,5 +2368,17 @@
   "welcome_title": "Jouw muziek, jouw manier",
   "@welcome_title": {
     "description": "welcome_title"
-  }
+  },
+  "updateChannel": "Selectie van updater",
+  "@updateChannel": {},
+  "channelRelease": "Stabiel (Release)",
+  "@channelRelease": {},
+  "channelReleaseDes": "Stabiele en aanbevolen versies voor het algemene publiek",
+  "@channelReleaseDes": {},
+  "updateChannelDes": "Kanaal waarvan je de app-updates wilt ontvangen",
+  "@updateChannelDes": {},
+  "channelPrerelease": "Pre-lancering (Prerelease)",
+  "@channelPrerelease": {},
+  "channelPrereleaseDes": "Testversies met de nieuwste functies vóór de officiële lancering",
+  "@channelPrereleaseDes": {}
 }

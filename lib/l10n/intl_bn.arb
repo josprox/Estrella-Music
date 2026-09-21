@@ -2368,5 +2368,17 @@
   "welcome_title": "আপনার সঙ্গীত, আপনার উপায়",
   "@welcome_title": {
     "description": "welcome_title"
-  }
+  },
+  "updateChannel": "আপডেটার নির্বাচন",
+  "@updateChannel": {},
+  "channelRelease": "স্থিতিশীল (রিলিজ)",
+  "@channelRelease": {},
+  "channelReleaseDes": "সাধারণ জনগণের জন্য স্থিতিশীল এবং সুপারিশকৃত সংস্করণগুলি",
+  "@channelReleaseDes": {},
+  "updateChannelDes": "যে চ্যানেল থেকে আপনি অ্যাপ আপডেট পেতে চান",
+  "@updateChannelDes": {},
+  "channelPrerelease": "প্রি-লঞ্চ (Prerelease)",
+  "@channelPrerelease": {},
+  "channelPrereleaseDes": "আধিকৃত লঞ্চের আগে সর্বশেষ ফিচারসহ পরীক্ষামূলক সংস্করণগুলি",
+  "@channelPrereleaseDes": {}
 }

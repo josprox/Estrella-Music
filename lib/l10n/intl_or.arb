@@ -2368,5 +2368,17 @@
   "welcome_title": "ତୁମର ସଙ୍ଗୀତ, ତୁମର ପଥ",
   "@welcome_title": {
     "description": "welcome_title"
-  }
+  },
+  "updateChannel": "ଅପଡେଟର୍ ଚୟନ",
+  "@updateChannel": {},
+  "channelRelease": "ସ୍ଥିର (ରିଲିଜ୍)",
+  "@channelRelease": {},
+  "channelReleaseDes": "ସାଧାରଣ ଜନସାଧାରଣ ପାଇଁ ସ୍ଥିର ଏବଂ ସୁପାରିଶିତ ସଂସ୍କରଣଗୁଡିକ",
+  "@channelReleaseDes": {},
+  "updateChannelDes": "ଆପଣ ଯେଉଁ ଚ୍ୟାନେଲ୍‌ରୁ ଆପ୍‌ ଅପଡେଟ୍‌ଗୁଡିକ ପାଇବାକୁ ଚାହୁଁଛନ୍ତି",
+  "@updateChannelDes": {},
+  "channelPrerelease": "ପ୍ରି-ଲଞ୍ଚ (Prerelease)",
+  "@channelPrerelease": {},
+  "channelPrereleaseDes": "ଔପଚାରିକ ଲଞ୍ଚ ପୂର୍ବରୁ ସବୁଠୁ ନୂତନ ବିଶେଷତା ସହିତ ପରୀକ୍ଷା ସଂସ୍କରଣଗୁଡିକ",
+  "@channelPrereleaseDes": {}
 }

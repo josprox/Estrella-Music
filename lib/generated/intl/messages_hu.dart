@@ -1316,9 +1316,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
       "Az emusztikus felhő nem helyettesíthette a távoli könyvtárat.",
     ),
-    "syncForceReplaceFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
-      "A távoli csere nem sikerült. Megőrizték a helyi adatokat és a helyreállítást.",
-    ),
+    "syncForceReplaceFailedLocalPreserved":
+        MessageLookupByLibrary.simpleMessage(
+          "A távoli csere nem sikerült. Megőrizték a helyi adatokat és a helyreállítást.",
+        ),
     "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
       "A feltöltés nem fejeződött be",
     ),

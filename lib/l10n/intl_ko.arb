@@ -2368,5 +2368,17 @@
   "welcome_title": "나만의 음악, 나만의 방식",
   "@welcome_title": {
     "description": "welcome_title"
-  }
+  },
+  "updateChannel": "업데이트 선택",
+  "@updateChannel": {},
+  "channelRelease": "안정 (릴리스)",
+  "@channelRelease": {},
+  "channelReleaseDes": "일반 대중을 위한 안정적이고 권장되는 버전",
+  "@channelReleaseDes": {},
+  "updateChannelDes": "앱 업데이트를 받고 싶은 채널",
+  "@updateChannelDes": {},
+  "channelPrerelease": "사전 출시 (Prerelease)",
+  "@channelPrerelease": {},
+  "channelPrereleaseDes": "공식 출시 전 최신 기능이 포함된 테스트 버전",
+  "@channelPrereleaseDes": {}
 }

@@ -2368,5 +2368,17 @@
   "welcome_title": "Vaše hudba, vaše cesta",
   "@welcome_title": {
     "description": "welcome_title"
-  }
+  },
+  "updateChannel": "Výběr aktualizátoru",
+  "@updateChannel": {},
+  "channelRelease": "Stabilní (vydání)",
+  "@channelRelease": {},
+  "channelReleaseDes": "Stabilní a doporučené verze pro širokou veřejnost",
+  "@channelReleaseDes": {},
+  "updateChannelDes": "Kanál, ze kterého chcete přijímat aktualizace aplikace",
+  "@updateChannelDes": {},
+  "channelPrerelease": "Předběžné vydání (Prerelease)",
+  "@channelPrerelease": {},
+  "channelPrereleaseDes": "Testovací verze s nejnovějšími funkcemi před oficiálním vydáním",
+  "@channelPrereleaseDes": {}
 }

@@ -2368,5 +2368,17 @@
   "welcome_title": "Musik Anda, cara Anda",
   "@welcome_title": {
     "description": "welcome_title"
-  }
+  },
+  "updateChannel": "Pemilihan pembaruan",
+  "@updateChannel": {},
+  "channelRelease": "Stabil (Rilis)",
+  "@channelRelease": {},
+  "channelReleaseDes": "Versi stabil dan direkomendasikan untuk publik umum",
+  "@channelReleaseDes": {},
+  "updateChannelDes": "Saluran tempat Anda ingin menerima pembaruan aplikasi",
+  "@updateChannelDes": {},
+  "channelPrerelease": "Pra-peluncuran (Prerelease)",
+  "@channelPrerelease": {},
+  "channelPrereleaseDes": "Versi percobaan dengan fitur terbaru sebelum peluncuran resmi",
+  "@channelPrereleaseDes": {}
 }

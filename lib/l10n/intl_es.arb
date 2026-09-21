@@ -2370,5 +2370,29 @@
   "welcome_title": "Tu música, a tu manera",
   "@welcome_title": {
     "description": "welcome_title"
+  },
+  "updateChannel": "Selección de actualizador",
+  "@updateChannel": {
+    "description": "updateChannel"
+  },
+  "updateChannelDes": "Canal del que deseas recibir las actualizaciones de la aplicación",
+  "@updateChannelDes": {
+    "description": "updateChannelDes"
+  },
+  "channelRelease": "Estable (Release)",
+  "@channelRelease": {
+    "description": "channelRelease"
+  },
+  "channelReleaseDes": "Versiones estables y recomendadas para el público en general",
+  "@channelReleaseDes": {
+    "description": "channelReleaseDes"
+  },
+  "channelPrerelease": "Pre-lanzamiento (Prerelease)",
+  "@channelPrerelease": {
+    "description": "channelPrerelease"
+  },
+  "channelPrereleaseDes": "Versiones de prueba con las funciones más recientes antes del lanzamiento oficial",
+  "@channelPrereleaseDes": {
+    "description": "channelPrereleaseDes"
   }
 }

@@ -2368,5 +2368,17 @@
   "welcome_title": "A te zenéd, a te módszered",
   "@welcome_title": {
     "description": "welcome_title"
-  }
+  },
+  "updateChannel": "Frissítő kiválasztása",
+  "@updateChannel": {},
+  "channelRelease": "Stabil (Kiadás)",
+  "@channelRelease": {},
+  "channelReleaseDes": "Stabil és ajánlott verziók a nagyközönség számára",
+  "@channelReleaseDes": {},
+  "updateChannelDes": "Az a csatorna, amelyről szeretné megkapni az alkalmazás frissítéseit",
+  "@updateChannelDes": {},
+  "channelPrerelease": "Előzetes kiadás (Prerelease)",
+  "@channelPrerelease": {},
+  "channelPrereleaseDes": "Tesztverziók a legújabb funkciókkal a hivatalos megjelenés előtt",
+  "@channelPrereleaseDes": {}
 }

@@ -2368,5 +2368,17 @@
   "welcome_title": "Η μουσική σου, ο τρόπος σου",
   "@welcome_title": {
     "description": "welcome_title"
-  }
+  },
+  "updateChannel": "Επιλογή ενημερωτή",
+  "@updateChannel": {},
+  "channelRelease": "Σταθερό (Έκδοση)",
+  "@channelRelease": {},
+  "channelReleaseDes": "Σταθερές και συνιστώμενες εκδόσεις για το ευρύ κοινό",
+  "@channelReleaseDes": {},
+  "updateChannelDes": "Κανάλι από το οποίο θέλετε να λαμβάνετε ενημερώσεις της εφαρμογής",
+  "@updateChannelDes": {},
+  "channelPrerelease": "Προ-κυκλοφορία (Prerelease)",
+  "@channelPrerelease": {},
+  "channelPrereleaseDes": "Δοκιμαστικές εκδόσεις με τις πιο πρόσφατες λειτουργίες πριν την επίσημη κυκλοφορία",
+  "@channelPrereleaseDes": {}
 }

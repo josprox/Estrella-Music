@@ -2368,5 +2368,17 @@
   "welcome_title": "Sizin müziğiniz, sizin tarzınız",
   "@welcome_title": {
     "description": "welcome_title"
-  }
+  },
+  "updateChannel": "Güncelleyici seçimi",
+  "@updateChannel": {},
+  "channelRelease": "Kararlı (Sürüm)",
+  "@channelRelease": {},
+  "channelReleaseDes": "Genel halk için kararlı ve önerilen sürümler",
+  "@channelReleaseDes": {},
+  "updateChannelDes": "Uygulama güncellemelerini almak istediğiniz kanal",
+  "@updateChannelDes": {},
+  "channelPrerelease": "Ön sürüm (Prerelease)",
+  "@channelPrerelease": {},
+  "channelPrereleaseDes": "Resmi lansmandan önce en yeni özelliklere sahip test sürümleri",
+  "@channelPrereleaseDes": {}
 }

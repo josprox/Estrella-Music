@@ -2368,5 +2368,17 @@
   "welcome_title": "الموسيقى الخاصة بك، طريقك",
   "@welcome_title": {
     "description": "welcome_title"
-  }
+  },
+  "updateChannel": "اختيار المحدث",
+  "@updateChannel": {},
+  "channelRelease": "ثابت (إصدار)",
+  "@channelRelease": {},
+  "channelReleaseDes": "الإصدارات المستقرة والموصى بها للجمهور العام",
+  "@channelReleaseDes": {},
+  "updateChannelDes": "القناة التي تريد تلقي تحديثات التطبيق منها",
+  "@updateChannelDes": {},
+  "channelPrerelease": "ما قبل الإطلاق (Prerelease)",
+  "@channelPrerelease": {},
+  "channelPrereleaseDes": "إصدارات تجريبية مع أحدث الميزات قبل الإطلاق الرسمي",
+  "@channelPrereleaseDes": {}
 }

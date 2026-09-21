@@ -2368,5 +2368,17 @@
   "welcome_title": "你的音乐，你的方式",
   "@welcome_title": {
     "description": "welcome_title"
-  }
+  },
+  "updateChannel": "更新程序选择",
+  "@updateChannel": {},
+  "channelRelease": "稳定 (发布)",
+  "@channelRelease": {},
+  "channelReleaseDes": "面向大众的稳定且推荐的版本",
+  "@channelReleaseDes": {},
+  "updateChannelDes": "您希望接收应用更新的频道",
+  "@updateChannelDes": {},
+  "channelPrerelease": "预发行 (Prerelease)",
+  "@channelPrerelease": {},
+  "channelPrereleaseDes": "正式发布前的最新功能测试版",
+  "@channelPrereleaseDes": {}
 }
