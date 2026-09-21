@@ -1072,29 +1072,157 @@ class LibraryArtistsController extends GetxController {
   }
 
   Future<void> _hydrateTasteArtistPhotos(int revision) async {
-    final cache = await SqliteStore.openBox('ArtistProfileCache');
+    final profileCache = await SqliteStore.openBox('ArtistProfileCache');
+    final thumbBox = await SqliteStore.openBox('ArtistThumbnails');
+
+    // Fase 1: Resolución instantánea desde cachés locales (ArtistProfileCache y ArtistThumbnails)
+    bool updatedInPhase1 = false;
     for (var index = 0; index < _tasteArtists.length; index++) {
       if (revision != _tastePhotoRevision) return;
       final artist = _tasteArtists[index];
+      if (artist.thumbnailUrl.isNotEmpty) continue;
+
       final cacheKey = artist.browseId.startsWith('LOCAL_ARTIST_')
           ? artist.name.toLowerCase()
           : artist.browseId;
-      Artist? resolved;
-      final cached = cache.get(cacheKey);
+
+      String foundThumbnail = '';
+
+      final cached = profileCache.get(cacheKey);
       if (cached is Map) {
         try {
-          resolved = Artist.fromJson(Map<dynamic, dynamic>.from(cached));
+          final resolved = Artist.fromJson(Map<dynamic, dynamic>.from(cached));
+          if (resolved.thumbnailUrl.isNotEmpty) {
+            foundThumbnail = resolved.thumbnailUrl;
+          }
         } catch (_) {}
       }
-      // Library hydration is cache-only. Artist lookup belongs to the artist
-      // detail screen; doing it here previously created a request per row and
-      // competed with direct stream downloads.
-      if (resolved != null && resolved.thumbnailUrl.isNotEmpty) {
-        _tasteArtists[index] = resolved;
-        if (selectedCollection.value == LibraryArtistCollection.tastes &&
-            tempListContainer.isEmpty) {
-          libraryArtists.assignAll(_tasteArtists);
+
+      if (foundThumbnail.isEmpty) {
+        final cachedThumb = thumbBox.get(artist.browseId) ?? thumbBox.get(cacheKey);
+        if (cachedThumb is String && cachedThumb.isNotEmpty) {
+          foundThumbnail = cachedThumb;
         }
+      }
+
+      if (foundThumbnail.isNotEmpty) {
+        _tasteArtists[index] = Artist(
+          browseId: artist.browseId,
+          name: artist.name,
+          thumbnailUrl: foundThumbnail,
+          subscribers: artist.subscribers,
+          radioId: artist.radioId,
+          shuffleId: artist.shuffleId,
+          providerId: artist.providerId,
+          profileId: artist.profileId,
+          sourceId: artist.sourceId,
+        );
+        updatedInPhase1 = true;
+      }
+    }
+
+    if (updatedInPhase1 &&
+        selectedCollection.value == LibraryArtistCollection.tastes &&
+        tempListContainer.isEmpty) {
+      libraryArtists.assignAll(_tasteArtists);
+    }
+
+    // Fase 2: Para los artistas que aún no tengan imagen, resolverlos en paralelo
+    final pendingIndices = <int>[];
+    for (var i = 0; i < _tasteArtists.length; i++) {
+      if (_tasteArtists[i].thumbnailUrl.isEmpty) {
+        pendingIndices.add(i);
+      }
+    }
+
+    if (pendingIndices.isEmpty) return;
+
+    Future<void> resolveArtistPhoto(int index) async {
+      if (revision != _tastePhotoRevision) return;
+      final artist = _tasteArtists[index];
+      if (artist.thumbnailUrl.isNotEmpty) return;
+
+      try {
+        String foundThumbnail = '';
+        String resolvedBrowseId = artist.browseId;
+
+        // 1. Si tenemos un browseId real de artista (UC... o similar), consultar directamente
+        if (!artist.browseId.startsWith('LOCAL_ARTIST_') &&
+            artist.browseId.isNotEmpty) {
+          try {
+            final details = await _musicServices.getArtist(artist.browseId);
+            final thumbs = details['thumbnails'] as List?;
+            if (thumbs != null && thumbs.isNotEmpty) {
+              foundThumbnail = thumbs[0]['url']?.toString() ?? '';
+            }
+          } catch (_) {}
+        }
+
+        // 2. Si aún no se encontró, buscar el artista por nombre en el catálogo
+        if (foundThumbnail.isEmpty && artist.name.trim().isNotEmpty) {
+          final results = await _musicServices.search(artist.name, filter: 'artists');
+          for (final value in results.values) {
+            if (value is! List) continue;
+            for (final item in value.whereType<Artist>()) {
+              if (item.name.toLowerCase() == artist.name.toLowerCase() &&
+                  item.thumbnailUrl.isNotEmpty) {
+                foundThumbnail = item.thumbnailUrl;
+                if (item.browseId.isNotEmpty && resolvedBrowseId.startsWith('LOCAL_ARTIST_')) {
+                  resolvedBrowseId = item.browseId;
+                }
+                break;
+              }
+            }
+            if (foundThumbnail.isNotEmpty) break;
+          }
+        }
+
+        if (foundThumbnail.isNotEmpty && revision == _tastePhotoRevision) {
+          final updatedArtist = Artist(
+            browseId: resolvedBrowseId,
+            name: artist.name,
+            thumbnailUrl: foundThumbnail,
+            subscribers: artist.subscribers,
+            radioId: artist.radioId,
+            shuffleId: artist.shuffleId,
+            providerId: artist.providerId,
+            profileId: artist.profileId,
+            sourceId: artist.sourceId,
+          );
+
+          _tasteArtists[index] = updatedArtist;
+
+          // Guardar en cachés locales de inmediato
+          unawaited(thumbBox.put(artist.browseId, foundThumbnail));
+          if (resolvedBrowseId != artist.browseId) {
+            unawaited(thumbBox.put(resolvedBrowseId, foundThumbnail));
+          }
+          unawaited(profileCache.put(
+            artist.browseId.startsWith('LOCAL_ARTIST_')
+                ? artist.name.toLowerCase()
+                : artist.browseId,
+            updatedArtist.toJson(),
+          ));
+        }
+      } catch (e) {
+        debugPrint('Error hydrating taste artist image for ${artist.name}: $e');
+      }
+    }
+
+    // Ejecutar en paralelo en bloques de hasta 6 peticiones simultáneas para máxima velocidad
+    const chunkSize = 6;
+    for (var i = 0; i < pendingIndices.length; i += chunkSize) {
+      if (revision != _tastePhotoRevision) return;
+      final end = (i + chunkSize < pendingIndices.length) ? i + chunkSize : pendingIndices.length;
+      final chunk = pendingIndices.sublist(i, end);
+
+      await Future.wait(chunk.map((idx) => resolveArtistPhoto(idx)));
+
+      // Refrescar la UI después de cada bloque completado para que el usuario vea progreso instantáneo
+      if (revision == _tastePhotoRevision &&
+          selectedCollection.value == LibraryArtistCollection.tastes &&
+          tempListContainer.isEmpty) {
+        libraryArtists.assignAll(_tasteArtists);
       }
     }
   }
