@@ -41,7 +41,7 @@ class SongListTile extends StatelessWidget with RemoveSongFromPlaylistMixin {
     return Listener(
       onPointerDown: (PointerDownEvent event) {
         if (event.buttons == kSecondaryMouseButton) {
-          _openInfoSheet(context, playerController, null);
+          _openInfoSheet(context, playerController, playlist);
         }
       },
       child: Slidable(
@@ -172,7 +172,7 @@ class SongListTile extends StatelessWidget with RemoveSongFromPlaylistMixin {
                   style: tt.bodySmall,
                 ),
                 trailing: SizedBox(
-                  width: Get.size.width > 800 ? 80 : 42,
+                  width: 80,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
@@ -191,13 +191,12 @@ class SongListTile extends StatelessWidget with RemoveSongFromPlaylistMixin {
                           ),
                         ],
                       ),
-                      if (GetPlatform.isDesktop)
-                        IconButton(
-                          splashRadius: 20,
-                          onPressed: () => _openInfoSheet(
-                              context, playerController, playlist),
-                          icon: const Icon(Icons.more_vert_rounded, size: 18),
-                        ),
+                      IconButton(
+                        splashRadius: 20,
+                        onPressed: () => _openInfoSheet(
+                            context, playerController, playlist),
+                        icon: const Icon(Icons.more_vert_rounded, size: 18),
+                      ),
                     ],
                   ),
                 ),

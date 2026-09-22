@@ -27,7 +27,7 @@ import 'package:estrella_music/ui/widgets/sort_widget.dart';
 import 'package:estrella_music/ui/screens/Playlist/playlist_screen_controller.dart';
 import 'package:estrella_music/generated/l10n.dart';
 
-class PlaylistScreen extends StatelessWidget {
+class PlaylistScreen extends StatelessWidget with RemoveSongFromPlaylistMixin {
   const PlaylistScreen({super.key});
 
   @override
@@ -485,6 +485,38 @@ class PlaylistScreen extends StatelessWidget {
                                         icon: const Icon(Icons.file_upload),
                                         tooltip: S.current.exportPlaylist,
                                       ),
+                                      if (!playlistController
+                                              .playlist.value.isCloudPlaylist &&
+                                          playlistController
+                                                  .playlist.value.playlistId !=
+                                              "LIBRP" &&
+                                          playlistController
+                                                  .playlist.value.playlistId !=
+                                              "SongDownloads" &&
+                                          playlistController
+                                                  .playlist.value.playlistId !=
+                                              "SongsCache")
+                                        Obx(() => IconButton(
+                                              onPressed: () {
+                                                playlistController
+                                                        .isArranging.value =
+                                                    !playlistController
+                                                        .isArranging.value;
+                                              },
+                                              icon: Icon(
+                                                playlistController
+                                                        .isArranging.value
+                                                    ? Icons.check_circle_outline_rounded
+                                                    : Icons.swap_vert_rounded,
+                                                color: playlistController
+                                                        .isArranging.value
+                                                    ? Theme.of(context)
+                                                        .colorScheme
+                                                        .secondary
+                                                    : null,
+                                              ),
+                                              tooltip: S.current.reArrangePlaylist,
+                                            )),
                                     ],
                                   ),
                                 ),
@@ -709,6 +741,20 @@ class PlaylistScreen extends StatelessWidget {
                                     ),
                                   ),
                                   Expanded(child: child),
+                                  if (!playlistController
+                                      .playlist.value.isCloudPlaylist)
+                                    IconButton(
+                                      icon: Icon(
+                                        Icons.remove_circle_outline_rounded,
+                                        color: Theme.of(context).colorScheme.error,
+                                        size: 22,
+                                      ),
+                                      tooltip: S.current.removeFromPlaylist,
+                                      onPressed: () => removeSongFromPlaylist(
+                                        song,
+                                        playlistController.playlist.value,
+                                      ),
+                                    ),
                                 ],
                               ),
                             );

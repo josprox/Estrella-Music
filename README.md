@@ -1,4 +1,4 @@
-<div align="center">
+﻿<div align="center">
 
 <img src="icon.png" width="120" height="120" alt="Estrella Music" style="border-radius:28px"/>
 
@@ -232,3 +232,11 @@ Licensed under the **[GNU General Public License v3.0](LICENSE)**.
 Made with ❤️ by **[JOSPROX](https://github.com/josprox)**
 
 </div>
+
+---
+
+## ☕ Apoya el proyecto / Support
+
+Si este proyecto te ha sido de utilidad o deseas apoyar mi trabajo, ¡puedes invitarme un café!
+
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Fitted?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black&color=FFDD00)](https://buymeacoffee.com/jossestrely)
