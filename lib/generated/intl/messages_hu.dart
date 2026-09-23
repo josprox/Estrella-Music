@@ -275,6 +275,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "cancelTimerAlert": MessageLookupByLibrary.simpleMessage(
       "Az elalvási időzítő törölve",
     ),
+    "channelPrerelease": MessageLookupByLibrary.simpleMessage(
+      "Előzetes kiadás (Prerelease)",
+    ),
+    "channelPrereleaseDes": MessageLookupByLibrary.simpleMessage(
+      "Tesztverziók a legújabb funkciókkal a hivatalos megjelenés előtt",
+    ),
+    "channelRelease": MessageLookupByLibrary.simpleMessage("Stabil (Kiadás)"),
+    "channelReleaseDes": MessageLookupByLibrary.simpleMessage(
+      "Stabil és ajánlott verziók a nagyközönség számára",
+    ),
     "clearImgCache": MessageLookupByLibrary.simpleMessage(
       "Kép-gyorsítótár törlése",
     ),
@@ -1316,10 +1326,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
       "Az emusztikus felhő nem helyettesíthette a távoli könyvtárat.",
     ),
-    "syncForceReplaceFailedLocalPreserved":
-        MessageLookupByLibrary.simpleMessage(
-          "A távoli csere nem sikerült. Megőrizték a helyi adatokat és a helyreállítást.",
-        ),
+    "syncForceReplaceFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
+      "A távoli csere nem sikerült. Megőrizték a helyi adatokat és a helyreállítást.",
+    ),
     "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
       "A feltöltés nem fejeződött be",
     ),
@@ -1404,6 +1413,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "untitledSong": MessageLookupByLibrary.simpleMessage("Névtelen dal"),
     "upNext": MessageLookupByLibrary.simpleMessage("Következő"),
     "updateApp": MessageLookupByLibrary.simpleMessage("Alkalmazás frissítése"),
+    "updateChannel": MessageLookupByLibrary.simpleMessage(
+      "Frissítő kiválasztása",
+    ),
+    "updateChannelDes": MessageLookupByLibrary.simpleMessage(
+      "Az a csatorna, amelyről szeretné megkapni az alkalmazás frissítéseit",
+    ),
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "Az észlelt URL kattintson rá a kapcsolódó tartalom megnyitásához/lejátszásához",
     ),

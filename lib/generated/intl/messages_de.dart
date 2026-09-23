@@ -274,6 +274,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "cancelTimerAlert": MessageLookupByLibrary.simpleMessage(
       "Sleep-Timer abgebrochen",
     ),
+    "channelPrerelease": MessageLookupByLibrary.simpleMessage(
+      "Vorabveröffentlichung (Prerelease)",
+    ),
+    "channelPrereleaseDes": MessageLookupByLibrary.simpleMessage(
+      "Testversionen mit den neuesten Funktionen vor dem offiziellen Start",
+    ),
+    "channelRelease": MessageLookupByLibrary.simpleMessage("Stabil (Release)"),
+    "channelReleaseDes": MessageLookupByLibrary.simpleMessage(
+      "Stabile und empfohlene Versionen für die breite Öffentlichkeit",
+    ),
     "clearImgCache": MessageLookupByLibrary.simpleMessage(
       "Lösche Bildspeicher",
     ),
@@ -1323,10 +1333,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
       "EMusic Cloud konnte die Remote-Bibliothek nicht ersetzen.",
     ),
-    "syncForceReplaceFailedLocalPreserved":
-        MessageLookupByLibrary.simpleMessage(
-          "Der Fernersatz ist fehlgeschlagen. Ihre lokalen Daten und Recovery-Backups wurden beibehalten.",
-        ),
+    "syncForceReplaceFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
+      "Der Fernersatz ist fehlgeschlagen. Ihre lokalen Daten und Recovery-Backups wurden beibehalten.",
+    ),
     "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
       "Upload nicht abgeschlossen",
     ),
@@ -1408,6 +1417,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "upNext": MessageLookupByLibrary.simpleMessage("Als Nächstes"),
     "updateApp": MessageLookupByLibrary.simpleMessage(
       "Anwendung aktualisieren",
+    ),
+    "updateChannel": MessageLookupByLibrary.simpleMessage(
+      "Auswahl des Aktualisierers",
+    ),
+    "updateChannelDes": MessageLookupByLibrary.simpleMessage(
+      "Kanal, von dem Sie App-Updates erhalten möchten",
     ),
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "URL erkannt. Tippe darauf, um den zugehörigen Inhalt zu öffnen/abzuspielen",

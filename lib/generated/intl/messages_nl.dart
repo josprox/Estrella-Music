@@ -268,6 +268,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "cancelTimerAlert": MessageLookupByLibrary.simpleMessage(
       "Slaap timer geannuleerd",
     ),
+    "channelPrerelease": MessageLookupByLibrary.simpleMessage(
+      "Pre-lancering (Prerelease)",
+    ),
+    "channelPrereleaseDes": MessageLookupByLibrary.simpleMessage(
+      "Testversies met de nieuwste functies vóór de officiële lancering",
+    ),
+    "channelRelease": MessageLookupByLibrary.simpleMessage("Stabiel (Release)"),
+    "channelReleaseDes": MessageLookupByLibrary.simpleMessage(
+      "Stabiele en aanbevolen versies voor het algemene publiek",
+    ),
     "clearImgCache": MessageLookupByLibrary.simpleMessage(
       "Verwijder afbeeldingen cache",
     ),
@@ -1305,10 +1315,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
       "EMusic Cloud kon de externe bibliotheek niet vervangen.",
     ),
-    "syncForceReplaceFailedLocalPreserved":
-        MessageLookupByLibrary.simpleMessage(
-          "De remote vervanging is mislukt. Uw lokale gegevens en herstel back-up werden bewaard.",
-        ),
+    "syncForceReplaceFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
+      "De remote vervanging is mislukt. Uw lokale gegevens en herstel back-up werden bewaard.",
+    ),
     "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
       "Upload niet voltooid",
     ),
@@ -1387,6 +1396,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "untitledSong": MessageLookupByLibrary.simpleMessage("Titelloos nummer"),
     "upNext": MessageLookupByLibrary.simpleMessage("Volgende"),
     "updateApp": MessageLookupByLibrary.simpleMessage("Applicatie bijwerken"),
+    "updateChannel": MessageLookupByLibrary.simpleMessage(
+      "Selectie van updater",
+    ),
+    "updateChannelDes": MessageLookupByLibrary.simpleMessage(
+      "Kanaal waarvan je de app-updates wilt ontvangen",
+    ),
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "Gedetecteerde URL klik erop om de bijbehorende inhoud te openen/af te spelen",
     ),

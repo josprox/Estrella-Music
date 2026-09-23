@@ -261,6 +261,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "cancelTimerAlert": MessageLookupByLibrary.simpleMessage(
       "تم إلغاء مؤقت النوم",
     ),
+    "channelPrerelease": MessageLookupByLibrary.simpleMessage(
+      "ما قبل الإطلاق (Prerelease)",
+    ),
+    "channelPrereleaseDes": MessageLookupByLibrary.simpleMessage(
+      "إصدارات تجريبية مع أحدث الميزات قبل الإطلاق الرسمي",
+    ),
+    "channelRelease": MessageLookupByLibrary.simpleMessage("ثابت (إصدار)"),
+    "channelReleaseDes": MessageLookupByLibrary.simpleMessage(
+      "الإصدارات المستقرة والموصى بها للجمهور العام",
+    ),
     "clearImgCache": MessageLookupByLibrary.simpleMessage(
       "مسح ذاكرة التخزين المؤقت للصور",
     ),
@@ -1332,6 +1342,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "untitledSong": MessageLookupByLibrary.simpleMessage("أغنية بلا عنوان"),
     "upNext": MessageLookupByLibrary.simpleMessage("التالي"),
     "updateApp": MessageLookupByLibrary.simpleMessage("تحديث التطبيق"),
+    "updateChannel": MessageLookupByLibrary.simpleMessage("اختيار المحدث"),
+    "updateChannelDes": MessageLookupByLibrary.simpleMessage(
+      "القناة التي تريد تلقي تحديثات التطبيق منها",
+    ),
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "تم العثور على رابط، انقر عليه لفتح/تشغيل المحتوى المرتبط",
     ),

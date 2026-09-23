@@ -267,6 +267,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "cancelTimerAlert": MessageLookupByLibrary.simpleMessage(
       "تایمر خواب لغو شد",
     ),
+    "channelPrerelease": MessageLookupByLibrary.simpleMessage(
+      "پیش‌انتشار (Prerelease)",
+    ),
+    "channelPrereleaseDes": MessageLookupByLibrary.simpleMessage(
+      "نسخه‌های آزمایشی با جدیدترین ویژگی‌ها قبل از انتشار رسمی",
+    ),
+    "channelRelease": MessageLookupByLibrary.simpleMessage("پایدار (انتشار)"),
+    "channelReleaseDes": MessageLookupByLibrary.simpleMessage(
+      "نسخه‌های پایدار و توصیه‌شده برای عموم مردم",
+    ),
     "clearImgCache": MessageLookupByLibrary.simpleMessage(
       "کش تصویر را پاک کنید",
     ),
@@ -1266,10 +1276,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
       "EMusic Cloud نمی تواند جایگزین کتابخانه از راه دور شود.",
     ),
-    "syncForceReplaceFailedLocalPreserved":
-        MessageLookupByLibrary.simpleMessage(
-          "جایگزینی از راه دور شکست خورد. اطلاعات محلی و پشتیبان گیری بازیابی شما حفظ شده است.",
-        ),
+    "syncForceReplaceFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
+      "جایگزینی از راه دور شکست خورد. اطلاعات محلی و پشتیبان گیری بازیابی شما حفظ شده است.",
+    ),
     "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
       "آپلود نکردن تکمیل نشده",
     ),
@@ -1348,6 +1357,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "untitledSong": MessageLookupByLibrary.simpleMessage("آهنگ بدون عنوان"),
     "upNext": MessageLookupByLibrary.simpleMessage("بعد از این"),
     "updateApp": MessageLookupByLibrary.simpleMessage("به روز رسانی برنامه"),
+    "updateChannel": MessageLookupByLibrary.simpleMessage("انتخاب به‌روزرسان"),
+    "updateChannelDes": MessageLookupByLibrary.simpleMessage(
+      "کانالی که می‌خواهید به‌روزرسانی‌های برنامه را از آن دریافت کنید",
+    ),
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "URL شناسایی شده روی آن کلیک کنید تا محتوای مرتبط باز شود/باز شود",
     ),

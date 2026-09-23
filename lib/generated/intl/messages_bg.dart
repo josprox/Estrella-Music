@@ -277,6 +277,18 @@ class MessageLookup extends MessageLookupByLibrary {
     "cancelTimerAlert": MessageLookupByLibrary.simpleMessage(
       "Таймерът за заспиване е отменен",
     ),
+    "channelPrerelease": MessageLookupByLibrary.simpleMessage(
+      "Предварително издание (Prerelease)",
+    ),
+    "channelPrereleaseDes": MessageLookupByLibrary.simpleMessage(
+      "Тестови версии с най-новите функции преди официалното пускане",
+    ),
+    "channelRelease": MessageLookupByLibrary.simpleMessage(
+      "Стабилно (Издание)",
+    ),
+    "channelReleaseDes": MessageLookupByLibrary.simpleMessage(
+      "Стабилни и препоръчани версии за широката публика",
+    ),
     "clearImgCache": MessageLookupByLibrary.simpleMessage(
       "Изчисти кеша на изображения",
     ),
@@ -1306,10 +1318,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
       "Emusic Cloud не може да замени отдалечената библиотека.",
     ),
-    "syncForceReplaceFailedLocalPreserved":
-        MessageLookupByLibrary.simpleMessage(
-          "Дистанционното заместване се провали. Вашите местни данни и възстановяването са запазени.",
-        ),
+    "syncForceReplaceFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
+      "Дистанционното заместване се провали. Вашите местни данни и възстановяването са запазени.",
+    ),
     "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
       "Качването не е завършено",
     ),
@@ -1397,6 +1408,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "upNext": MessageLookupByLibrary.simpleMessage("Следва"),
     "updateApp": MessageLookupByLibrary.simpleMessage(
       "Актуализиране на приложението",
+    ),
+    "updateChannel": MessageLookupByLibrary.simpleMessage(
+      "Избор на актуализатор",
+    ),
+    "updateChannelDes": MessageLookupByLibrary.simpleMessage(
+      "Каналът, от който искате да получавате актуализации на приложението",
     ),
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "Открит URL адрес натиснете върху него, за да отворите/изпълните свързано съдържание",

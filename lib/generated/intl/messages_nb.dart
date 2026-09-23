@@ -263,6 +263,18 @@ class MessageLookup extends MessageLookupByLibrary {
     "cancelTimerAlert": MessageLookupByLibrary.simpleMessage(
       "Innsovningstimeren er avbrutt",
     ),
+    "channelPrerelease": MessageLookupByLibrary.simpleMessage(
+      "Forhåndslansering (Prerelease)",
+    ),
+    "channelPrereleaseDes": MessageLookupByLibrary.simpleMessage(
+      "Testversjoner med de nyeste funksjonene før den offisielle lanseringen",
+    ),
+    "channelRelease": MessageLookupByLibrary.simpleMessage(
+      "Stabil (Utgivelse)",
+    ),
+    "channelReleaseDes": MessageLookupByLibrary.simpleMessage(
+      "Stabile og anbefalte versjoner for allmennheten",
+    ),
     "clearImgCache": MessageLookupByLibrary.simpleMessage("Tøm bildebufferen"),
     "clearImgCacheAlert": MessageLookupByLibrary.simpleMessage(
       "Bildebufferen ble tømt",
@@ -1276,10 +1288,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
       "EMusic Cloud kan ikke erstatte fjernbiblioteket.",
     ),
-    "syncForceReplaceFailedLocalPreserved":
-        MessageLookupByLibrary.simpleMessage(
-          "Fjernutskiftingen mislyktes. Dine lokale data og gjenoppretting backup ble bevart.",
-        ),
+    "syncForceReplaceFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
+      "Fjernutskiftingen mislyktes. Dine lokale data og gjenoppretting backup ble bevart.",
+    ),
     "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
       "Last opp ikke fullført",
     ),
@@ -1360,6 +1371,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "untitledSong": MessageLookupByLibrary.simpleMessage("Unavngitt sang"),
     "upNext": MessageLookupByLibrary.simpleMessage("Neste"),
     "updateApp": MessageLookupByLibrary.simpleMessage("Oppdater applikasjon"),
+    "updateChannel": MessageLookupByLibrary.simpleMessage("Valg av oppdaterer"),
+    "updateChannelDes": MessageLookupByLibrary.simpleMessage(
+      "Kanalen du vil motta app-oppdateringer fra",
+    ),
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "Oppdaget URL klikk på den for å åpne/spille av det tilknyttede innholdet",
     ),

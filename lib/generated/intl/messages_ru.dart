@@ -271,6 +271,18 @@ class MessageLookup extends MessageLookupByLibrary {
     "cancelTimerAlert": MessageLookupByLibrary.simpleMessage(
       "Таймер сна отключен",
     ),
+    "channelPrerelease": MessageLookupByLibrary.simpleMessage(
+      "Предрелиз (Prerelease)",
+    ),
+    "channelPrereleaseDes": MessageLookupByLibrary.simpleMessage(
+      "Тестовые версии с новейшими функциями перед официальным запуском",
+    ),
+    "channelRelease": MessageLookupByLibrary.simpleMessage(
+      "Стабильный (Выпуск)",
+    ),
+    "channelReleaseDes": MessageLookupByLibrary.simpleMessage(
+      "Стабильные и рекомендуемые версии для широкой публики",
+    ),
     "clearImgCache": MessageLookupByLibrary.simpleMessage(
       "Очистить кэш изображений",
     ),
@@ -1288,10 +1300,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
       "EMusic Cloud не может заменить удаленную библиотеку.",
     ),
-    "syncForceReplaceFailedLocalPreserved":
-        MessageLookupByLibrary.simpleMessage(
-          "Удаленная замена не удалась. Ваши локальные данные и резервное копирование были сохранены.",
-        ),
+    "syncForceReplaceFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
+      "Удаленная замена не удалась. Ваши локальные данные и резервное копирование были сохранены.",
+    ),
     "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
       "Загрузка не завершена",
     ),
@@ -1376,6 +1387,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "untitledSong": MessageLookupByLibrary.simpleMessage("Песня без названия"),
     "upNext": MessageLookupByLibrary.simpleMessage("Следующий"),
     "updateApp": MessageLookupByLibrary.simpleMessage("Обновить приложение"),
+    "updateChannel": MessageLookupByLibrary.simpleMessage("Выбор обновления"),
+    "updateChannelDes": MessageLookupByLibrary.simpleMessage(
+      "Канал, из которого вы хотите получать обновления приложения",
+    ),
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "Клик по Url открывает\\проигрывает контент",
     ),

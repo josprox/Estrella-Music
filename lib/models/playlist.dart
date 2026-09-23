@@ -54,6 +54,21 @@ class Playlist {
   static const thumbPlaceholderUrl =
       "https://raw.githubusercontent.com/josprox/Estrella-Music/main/assets/icons/song.png";
 
+  /// Returns true if this playlist is a user-editable custom playlist (either local or cloud-synced)
+  /// and not a system-managed playlist like recently played (LIBRP) or downloads/cache.
+  bool get isEditable {
+    if (playlistId == "LIBRP" ||
+        playlistId == "SongDownloads" ||
+        playlistId == "SongsCache") {
+      return false;
+    }
+    // Local custom playlists (LIB...) or user playlists
+    if (!isCloudPlaylist || playlistId.startsWith("LIB") || isCollaborative || ownerId != null) {
+      return true;
+    }
+    return false;
+  }
+
   factory Playlist.fromJson(Map<dynamic, dynamic> json) {
     final thumbnailUrl = _thumbnailUrlFromJson(json);
     return Playlist(

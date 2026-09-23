@@ -267,6 +267,18 @@ class MessageLookup extends MessageLookupByLibrary {
     "cancelTimerAlert": MessageLookupByLibrary.simpleMessage(
       "Đã hủy hẹn giờ tắt",
     ),
+    "channelPrerelease": MessageLookupByLibrary.simpleMessage(
+      "Tiền phát hành (Prerelease)",
+    ),
+    "channelPrereleaseDes": MessageLookupByLibrary.simpleMessage(
+      "Phiên bản thử nghiệm với các tính năng mới nhất trước khi ra mắt chính thức",
+    ),
+    "channelRelease": MessageLookupByLibrary.simpleMessage(
+      "Ổn định (Bản phát hành)",
+    ),
+    "channelReleaseDes": MessageLookupByLibrary.simpleMessage(
+      "Các phiên bản ổn định và được khuyến nghị cho công chúng",
+    ),
     "clearImgCache": MessageLookupByLibrary.simpleMessage(
       "Xóa hình trong bộ nhớ đệm",
     ),
@@ -1294,10 +1306,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
       "E Music Cloud không thể thay thế thư viện từ xa.",
     ),
-    "syncForceReplaceFailedLocalPreserved":
-        MessageLookupByLibrary.simpleMessage(
-          "Việc thay thế từ xa bị lỗi. Dữ liệu và bản sao lưu của anh đã được bảo quản.",
-        ),
+    "syncForceReplaceFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
+      "Việc thay thế từ xa bị lỗi. Dữ liệu và bản sao lưu của anh đã được bảo quản.",
+    ),
     "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
       "Tải lên chưa xong",
     ),
@@ -1382,6 +1393,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "untitledSong": MessageLookupByLibrary.simpleMessage("Bài hát không tên"),
     "upNext": MessageLookupByLibrary.simpleMessage("Kế tiếp"),
     "updateApp": MessageLookupByLibrary.simpleMessage("Cập nhật ứng dụng"),
+    "updateChannel": MessageLookupByLibrary.simpleMessage(
+      "Lựa chọn trình cập nhật",
+    ),
+    "updateChannelDes": MessageLookupByLibrary.simpleMessage(
+      "Kênh mà bạn muốn nhận cập nhật ứng dụng",
+    ),
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "Nhấn vào liên kết được phát hiện để mở nội dung",
     ),

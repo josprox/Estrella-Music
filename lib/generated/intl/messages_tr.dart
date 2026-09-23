@@ -272,6 +272,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "cancelTimerAlert": MessageLookupByLibrary.simpleMessage(
       "Uyku zamanlayıcısı iptal edildi",
     ),
+    "channelPrerelease": MessageLookupByLibrary.simpleMessage(
+      "Ön sürüm (Prerelease)",
+    ),
+    "channelPrereleaseDes": MessageLookupByLibrary.simpleMessage(
+      "Resmi lansmandan önce en yeni özelliklere sahip test sürümleri",
+    ),
+    "channelRelease": MessageLookupByLibrary.simpleMessage("Kararlı (Sürüm)"),
+    "channelReleaseDes": MessageLookupByLibrary.simpleMessage(
+      "Genel halk için kararlı ve önerilen sürümler",
+    ),
     "clearImgCache": MessageLookupByLibrary.simpleMessage(
       "Resim önbelleğini temizle",
     ),
@@ -1269,10 +1279,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
       "EMüzik Bulut uzak kütüphaneyi değiştiremedi.",
     ),
-    "syncForceReplaceFailedLocalPreserved":
-        MessageLookupByLibrary.simpleMessage(
-          "Uzak yedek başarısız oldu. Yerel verileriniz ve kurtarma yedeklemeniz korunmuştu.",
-        ),
+    "syncForceReplaceFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
+      "Uzak yedek başarısız oldu. Yerel verileriniz ve kurtarma yedeklemeniz korunmuştu.",
+    ),
     "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
       "Yükleme tamamlanmadı",
     ),
@@ -1357,6 +1366,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "untitledSong": MessageLookupByLibrary.simpleMessage("İsimsiz şarkı"),
     "upNext": MessageLookupByLibrary.simpleMessage("Sıradaki"),
     "updateApp": MessageLookupByLibrary.simpleMessage("Uygulamayı Güncelle"),
+    "updateChannel": MessageLookupByLibrary.simpleMessage(
+      "Güncelleyici seçimi",
+    ),
+    "updateChannelDes": MessageLookupByLibrary.simpleMessage(
+      "Uygulama güncellemelerini almak istediğiniz kanal",
+    ),
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "URL algılandı, ilgili içeriği açmak/oynatmak için üzerine tıklayın",
     ),

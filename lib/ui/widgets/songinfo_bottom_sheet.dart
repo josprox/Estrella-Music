@@ -209,9 +209,10 @@ class SongInfoBottomSheet extends StatelessWidget {
                   : const SizedBox.shrink(),
               ...artistWidgetList(song, context),
               (playlist != null &&
-                          !playlist!.isCloudPlaylist &&
-                          !(playlist!.playlistId == "LIBRP")) ||
-                      (playlist != null && playlist!.isPipedPlaylist)
+                      (playlist!.isEditable ||
+                          playlist!.isPipedPlaylist ||
+                          playlist!.playlistId == "SongDownloads" ||
+                          playlist!.playlistId == "SongsCache"))
                   ? ListTile(
                       visualDensity: const VisualDensity(vertical: -1),
                       leading: const Icon(Icons.delete),

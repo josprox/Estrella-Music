@@ -226,6 +226,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "cancelTimerAlert": MessageLookupByLibrary.simpleMessage(
       "スリープタイマーをキャンセルしました",
     ),
+    "channelPrerelease": MessageLookupByLibrary.simpleMessage(
+      "プレリリース (Prerelease)",
+    ),
+    "channelPrereleaseDes": MessageLookupByLibrary.simpleMessage(
+      "公式リリース前の最新機能を備えたテスト版",
+    ),
+    "channelRelease": MessageLookupByLibrary.simpleMessage("安定 (リリース)"),
+    "channelReleaseDes": MessageLookupByLibrary.simpleMessage("一般向けの安定版および推奨版"),
     "clearImgCache": MessageLookupByLibrary.simpleMessage("画像キャッシュを消去"),
     "clearImgCacheAlert": MessageLookupByLibrary.simpleMessage(
       "画像キャッシュを消去しました",
@@ -1105,6 +1113,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "untitledSong": MessageLookupByLibrary.simpleMessage("タイトルのない曲"),
     "upNext": MessageLookupByLibrary.simpleMessage("次に再生"),
     "updateApp": MessageLookupByLibrary.simpleMessage("アプリケーションを更新する"),
+    "updateChannel": MessageLookupByLibrary.simpleMessage("アップデーターの選択"),
+    "updateChannelDes": MessageLookupByLibrary.simpleMessage(
+      "アプリの更新を受け取りたいチャンネル",
+    ),
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "URLをクリックして、関連コンテンツを開く/再生",
     ),

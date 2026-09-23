@@ -273,6 +273,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "cancelTimerAlert": MessageLookupByLibrary.simpleMessage(
       "ଶୋଇବା ସମୟ ବାତିଲ ହୋଇଛି |",
     ),
+    "channelPrerelease": MessageLookupByLibrary.simpleMessage(
+      "ପ୍ରି-ଲଞ୍ଚ (Prerelease)",
+    ),
+    "channelPrereleaseDes": MessageLookupByLibrary.simpleMessage(
+      "ଔପଚାରିକ ଲଞ୍ଚ ପୂର୍ବରୁ ସବୁଠୁ ନୂତନ ବିଶେଷତା ସହିତ ପରୀକ୍ଷା ସଂସ୍କରଣଗୁଡିକ",
+    ),
+    "channelRelease": MessageLookupByLibrary.simpleMessage("ସ୍ଥିର (ରିଲିଜ୍)"),
+    "channelReleaseDes": MessageLookupByLibrary.simpleMessage(
+      "ସାଧାରଣ ଜନସାଧାରଣ ପାଇଁ ସ୍ଥିର ଏବଂ ସୁପାରିଶିତ ସଂସ୍କରଣଗୁଡିକ",
+    ),
     "clearImgCache": MessageLookupByLibrary.simpleMessage(
       "ପ୍ରତିଛବି କ୍ୟାଚ୍ ସଫା କରନ୍ତୁ |",
     ),
@@ -1324,10 +1334,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
       "EMusic Cloud ସୁଦୂର ଲାଇବ୍ରେରୀକୁ ବଦଳାଇ ପାରିଲା ନାହିଁ ।",
     ),
-    "syncForceReplaceFailedLocalPreserved":
-        MessageLookupByLibrary.simpleMessage(
-          "ସୁଦୂର ପ୍ରତିସ୍ଥାପନ ବିଫଳ ହୋଇଛି । ଆପଣଙ୍କର ସ୍ଥାନୀୟ ତଥ୍ୟ ଏବଂ ପୁନରୁଦ୍ଧାର ସଂରକ୍ଷଣ କରାଯାଇଛି ।",
-        ),
+    "syncForceReplaceFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
+      "ସୁଦୂର ପ୍ରତିସ୍ଥାପନ ବିଫଳ ହୋଇଛି । ଆପଣଙ୍କର ସ୍ଥାନୀୟ ତଥ୍ୟ ଏବଂ ପୁନରୁଦ୍ଧାର ସଂରକ୍ଷଣ କରାଯାଇଛି ।",
+    ),
     "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
       "ଅପଲୋଡ ସମ୍ପୂର୍ଣ୍ଣ ହୋଇନାହିଁ",
     ),
@@ -1414,6 +1423,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "untitledSong": MessageLookupByLibrary.simpleMessage("ଆଖ୍ୟାବିହୀନ ଗୀତ |"),
     "upNext": MessageLookupByLibrary.simpleMessage("ପରବର୍ତ୍ତୀ"),
     "updateApp": MessageLookupByLibrary.simpleMessage("ଆବେଦନ ଅଦ୍ୟତନ କରନ୍ତୁ |"),
+    "updateChannel": MessageLookupByLibrary.simpleMessage("ଅପଡେଟର୍ ଚୟନ"),
+    "updateChannelDes": MessageLookupByLibrary.simpleMessage(
+      "ଆପଣ ଯେଉଁ ଚ୍ୟାନେଲ୍‌ରୁ ଆପ୍‌ ଅପଡେଟ୍‌ଗୁଡିକ ପାଇବାକୁ ଚାହୁଁଛନ୍ତି",
+    ),
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "ସଂପୃକ୍ତ ବିଷୟବସ୍ତୁ ଖୋଲିବା / ଖେଳିବା ପାଇଁ ଚିହ୍ନଟ URL ଏଥିରେ କ୍ଲିକ୍ କରନ୍ତୁ |",
     ),

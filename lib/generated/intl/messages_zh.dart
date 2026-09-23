@@ -194,6 +194,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "cancel": MessageLookupByLibrary.simpleMessage("取消"),
     "cancelTimer": MessageLookupByLibrary.simpleMessage("取消定时器"),
     "cancelTimerAlert": MessageLookupByLibrary.simpleMessage("睡眠定时器已取消"),
+    "channelPrerelease": MessageLookupByLibrary.simpleMessage(
+      "预发行 (Prerelease)",
+    ),
+    "channelPrereleaseDes": MessageLookupByLibrary.simpleMessage(
+      "正式发布前的最新功能测试版",
+    ),
+    "channelRelease": MessageLookupByLibrary.simpleMessage("稳定 (发布)"),
+    "channelReleaseDes": MessageLookupByLibrary.simpleMessage("面向大众的稳定且推荐的版本"),
     "clearImgCache": MessageLookupByLibrary.simpleMessage("清除图像缓存"),
     "clearImgCacheAlert": MessageLookupByLibrary.simpleMessage("图片缓存清除成功"),
     "clearImgCacheDes": MessageLookupByLibrary.simpleMessage(
@@ -941,6 +949,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "untitledSong": MessageLookupByLibrary.simpleMessage("无题歌曲"),
     "upNext": MessageLookupByLibrary.simpleMessage("下一页"),
     "updateApp": MessageLookupByLibrary.simpleMessage("更新应用程序"),
+    "updateChannel": MessageLookupByLibrary.simpleMessage("更新程序选择"),
+    "updateChannelDes": MessageLookupByLibrary.simpleMessage("您希望接收应用更新的频道"),
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "检测到的 URL 单击它可打开/播放相关内容",
     ),

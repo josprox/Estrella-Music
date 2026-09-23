@@ -265,6 +265,18 @@ class MessageLookup extends MessageLookupByLibrary {
     "cancelTimerAlert": MessageLookupByLibrary.simpleMessage(
       "Таймер сну адменены",
     ),
+    "channelPrerelease": MessageLookupByLibrary.simpleMessage(
+      "Папярэдні запуск (Prerelease)",
+    ),
+    "channelPrereleaseDes": MessageLookupByLibrary.simpleMessage(
+      "Тэставыя версіі з найноўшымі функцыямі перад афіцыйным запуском",
+    ),
+    "channelRelease": MessageLookupByLibrary.simpleMessage(
+      "Стабільны (Выпуск)",
+    ),
+    "channelReleaseDes": MessageLookupByLibrary.simpleMessage(
+      "Стабільныя і рэкамендаваныя версіі для шырокай публікі",
+    ),
     "clearImgCache": MessageLookupByLibrary.simpleMessage(
       "Ачысціць кэш малюнкаў",
     ),
@@ -1290,10 +1302,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
       "EMusic Cloud не можа замяніць выдаленую бібліятэку.",
     ),
-    "syncForceReplaceFailedLocalPreserved":
-        MessageLookupByLibrary.simpleMessage(
-          "Выдаленая замена не ўдалася. Вашы лакальныя дадзеныя і рэзервовая копія аднаўлення былі захаваны.",
-        ),
+    "syncForceReplaceFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
+      "Выдаленая замена не ўдалася. Вашы лакальныя дадзеныя і рэзервовая копія аднаўлення былі захаваны.",
+    ),
     "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
       "Загрузка не завершана",
     ),
@@ -1380,6 +1391,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "untitledSong": MessageLookupByLibrary.simpleMessage("Песня без назвы"),
     "upNext": MessageLookupByLibrary.simpleMessage("Далей"),
     "updateApp": MessageLookupByLibrary.simpleMessage("Абнавіць прыкладанне"),
+    "updateChannel": MessageLookupByLibrary.simpleMessage(
+      "Выбар абнаўляльніка",
+    ),
+    "updateChannelDes": MessageLookupByLibrary.simpleMessage(
+      "Канал, з якога вы хочаце атрымліваць абнаўленні прыкладання",
+    ),
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "Выяўлены URL, націсніце на яго, каб адкрыць/прайграць звязаны кантэнт",
     ),

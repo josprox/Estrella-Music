@@ -19,7 +19,6 @@ import 'package:estrella_music/ui/navigator.dart';
 import 'package:estrella_music/ui/player/player_controller.dart';
 import 'package:estrella_music/ui/widgets/create_playlist_dialog.dart';
 import 'package:estrella_music/ui/widgets/loader.dart';
-import 'package:estrella_music/ui/widgets/playlist_export_dialog.dart';
 import 'package:estrella_music/ui/widgets/snackbar.dart';
 import 'package:estrella_music/ui/widgets/song_list_tile.dart';
 import 'package:estrella_music/ui/widgets/songinfo_bottom_sheet.dart';
@@ -153,9 +152,10 @@ class PlaylistScreen extends StatelessWidget with RemoveSongFromPlaylistMixin {
                                     builder: (context) {
                                       final isCloud = playlistController
                                           .playlist.value.isCloudPlaylist;
-                                      return SizedBox(
-                                        height: isCloud ? 200 : 140,
-                                        child: Column(
+                                      final canRearrange = playlistController
+                                          .playlist.value.isEditable;
+                                      return SafeArea(
+                                        child: Wrap(
                                           children: [
                                             ListTile(
                                               leading: const Icon(Icons.edit),
@@ -175,6 +175,15 @@ class PlaylistScreen extends StatelessWidget with RemoveSongFromPlaylistMixin {
                                                 );
                                               },
                                             ),
+                                            if (canRearrange)
+                                              ListTile(
+                                                leading: const Icon(Icons.swap_vert_rounded),
+                                                title: Text(S.current.reArrangePlaylist),
+                                                onTap: () {
+                                                  Navigator.of(context).pop();
+                                                  playlistController.isArranging.value = true;
+                                                },
+                                              ),
                                             if (isCloud)
                                               ListTile(
                                                 leading:
@@ -470,32 +479,8 @@ class PlaylistScreen extends StatelessWidget with RemoveSongFromPlaylistMixin {
                                             size: 20,
                                           ),
                                         ),
-                                      // Export button - opens export dialog
-                                      IconButton(
-                                        onPressed: () {
-                                          showDialog(
-                                            context: context,
-                                            builder: (dialogContext) =>
-                                                PlaylistExportDialog(
-                                              controller: playlistController,
-                                              parentContext: context,
-                                            ),
-                                          );
-                                        },
-                                        icon: const Icon(Icons.file_upload),
-                                        tooltip: S.current.exportPlaylist,
-                                      ),
-                                      if (!playlistController
-                                              .playlist.value.isCloudPlaylist &&
-                                          playlistController
-                                                  .playlist.value.playlistId !=
-                                              "LIBRP" &&
-                                          playlistController
-                                                  .playlist.value.playlistId !=
-                                              "SongDownloads" &&
-                                          playlistController
-                                                  .playlist.value.playlistId !=
-                                              "SongsCache")
+                                      if (playlistController
+                                          .playlist.value.isEditable)
                                         Obx(() => IconButton(
                                               onPressed: () {
                                                 playlistController
@@ -644,20 +629,11 @@ class PlaylistScreen extends StatelessWidget with RemoveSongFromPlaylistMixin {
                                       screenController: playlistController,
                                       isSearchFeatureRequired: true,
                                       isPlaylistRearrageFeatureRequired:
-                                          !playlistController.playlist.value
-                                                  .isCloudPlaylist &&
-                                              playlistController.playlist.value
-                                                      .playlistId !=
-                                                  "LIBRP" &&
-                                              playlistController.playlist.value
-                                                      .playlistId !=
-                                                  "SongDownloads" &&
-                                              playlistController.playlist.value
-                                                      .playlistId !=
-                                                  "SongsCache",
+                                          playlistController.playlist.value
+                                              .isEditable,
                                       isSongDeletetioFeatureRequired:
-                                          !playlistController
-                                              .playlist.value.isCloudPlaylist,
+                                          playlistController
+                                              .playlist.value.isEditable,
                                       itemCountTitle:
                                           "${playlistController.songList.length}",
                                       itemIcon: Icons.music_note,
@@ -741,8 +717,8 @@ class PlaylistScreen extends StatelessWidget with RemoveSongFromPlaylistMixin {
                                     ),
                                   ),
                                   Expanded(child: child),
-                                  if (!playlistController
-                                      .playlist.value.isCloudPlaylist)
+                                  if (playlistController
+                                      .playlist.value.isEditable)
                                     IconButton(
                                       icon: Icon(
                                         Icons.remove_circle_outline_rounded,

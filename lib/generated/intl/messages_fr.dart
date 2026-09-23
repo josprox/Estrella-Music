@@ -274,6 +274,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "cancelTimerAlert": MessageLookupByLibrary.simpleMessage(
       "Minuteur de veille désactivé",
     ),
+    "channelPrerelease": MessageLookupByLibrary.simpleMessage(
+      "Pré-lancement (Prerelease)",
+    ),
+    "channelPrereleaseDes": MessageLookupByLibrary.simpleMessage(
+      "Versions bêta avec les dernières fonctionnalités avant le lancement officiel",
+    ),
+    "channelRelease": MessageLookupByLibrary.simpleMessage("Stable (Version)"),
+    "channelReleaseDes": MessageLookupByLibrary.simpleMessage(
+      "Versions stables et recommandées pour le grand public",
+    ),
     "clearImgCache": MessageLookupByLibrary.simpleMessage(
       "Nettoyer le cache des images",
     ),
@@ -1327,10 +1337,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
       "EMusic Cloud ne pouvait pas remplacer la bibliothèque distante.",
     ),
-    "syncForceReplaceFailedLocalPreserved":
-        MessageLookupByLibrary.simpleMessage(
-          "Le remplacement à distance a échoué. Vos données locales et sauvegarde de récupération ont été conservées.",
-        ),
+    "syncForceReplaceFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
+      "Le remplacement à distance a échoué. Vos données locales et sauvegarde de récupération ont été conservées.",
+    ),
     "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
       "Téléchargement non terminé",
     ),
@@ -1414,6 +1423,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "upNext": MessageLookupByLibrary.simpleMessage("À suivre"),
     "updateApp": MessageLookupByLibrary.simpleMessage(
       "Mettre à jour l\'application",
+    ),
+    "updateChannel": MessageLookupByLibrary.simpleMessage(
+      "Sélection du mise à jour",
+    ),
+    "updateChannelDes": MessageLookupByLibrary.simpleMessage(
+      "Canal dont vous souhaitez recevoir les mises à jour de l\'application",
     ),
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "URL détectée. Cliquez dessus pour ouvrir / lire le contenu associé",

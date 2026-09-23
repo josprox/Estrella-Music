@@ -280,6 +280,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "cancelTimerAlert": MessageLookupByLibrary.simpleMessage(
       "സ്ലീപ്പ് ടൈമർ റദ്ദാക്കി",
     ),
+    "channelPrerelease": MessageLookupByLibrary.simpleMessage(
+      "പ്രി-ലോഞ്ച് (Prerelease)",
+    ),
+    "channelPrereleaseDes": MessageLookupByLibrary.simpleMessage(
+      "അധികൃത റിലീസിന് മുമ്പ് ഏറ്റവും പുതിയ സവിശേഷതകളുള്ള പരീക്ഷണ പതിപ്പുകൾ",
+    ),
+    "channelRelease": MessageLookupByLibrary.simpleMessage("സ്ഥിരം (റിലീസ്)"),
+    "channelReleaseDes": MessageLookupByLibrary.simpleMessage(
+      "പൊതുജനങ്ങൾക്ക് സ്ഥിരതയുള്ളതും ശുപാർശ ചെയ്യപ്പെട്ടതുമായ പതിപ്പുകൾ",
+    ),
     "clearImgCache": MessageLookupByLibrary.simpleMessage(
       "ഇമേജ് കാഷെ മായ്‌ക്കുക",
     ),
@@ -1339,10 +1349,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
       "EMusic ക്ലൗഡിന് റിമോട്ട് ലൈബ്രറി മാറ്റിസ്ഥാപിക്കാൻ കഴിഞ്ഞില്ല.",
     ),
-    "syncForceReplaceFailedLocalPreserved":
-        MessageLookupByLibrary.simpleMessage(
-          "റിമോട്ട് മാറ്റിസ്ഥാപിക്കൽ പരാജയപ്പെട്ടു. നിങ്ങളുടെ പ്രാദേശിക ഡാറ്റയും വീണ്ടെടുക്കൽ ബാക്കപ്പും സംരക്ഷിച്ചു.",
-        ),
+    "syncForceReplaceFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
+      "റിമോട്ട് മാറ്റിസ്ഥാപിക്കൽ പരാജയപ്പെട്ടു. നിങ്ങളുടെ പ്രാദേശിക ഡാറ്റയും വീണ്ടെടുക്കൽ ബാക്കപ്പും സംരക്ഷിച്ചു.",
+    ),
     "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
       "അപ്‌ലോഡ് പൂർത്തിയായിട്ടില്ല",
     ),
@@ -1426,6 +1435,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "upNext": MessageLookupByLibrary.simpleMessage("അടുത്തത്"),
     "updateApp": MessageLookupByLibrary.simpleMessage(
       "ആപ്ലിക്കേഷൻ അപ്ഡേറ്റ് ചെയ്യുക",
+    ),
+    "updateChannel": MessageLookupByLibrary.simpleMessage(
+      "അപ്ഡേറ്റർ തിരഞ്ഞെടുക്കൽ",
+    ),
+    "updateChannelDes": MessageLookupByLibrary.simpleMessage(
+      "ആപ്പിന്റെ അപ്ഡേറ്റുകൾ നിങ്ങൾക്ക് ലഭിക്കേണ്ട ചാനൽ",
     ),
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "ബന്ധപ്പെട്ട ഉള്ളടക്കം തുറക്കാൻ/പ്ലേ ചെയ്യാൻ കണ്ടെത്തിയ URL അതിൽ ക്ലിക്ക് ചെയ്യുക",

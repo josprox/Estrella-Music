@@ -58,7 +58,10 @@ class SongListTile extends StatelessWidget with RemoveSongFromPlaylistMixin {
             icon: Icons.playlist_add_rounded,
             borderRadius: BorderRadius.circular(AppSpacing.radiusMd),
           ),
-          if (playlist != null && !playlist!.isCloudPlaylist)
+          if (playlist != null &&
+              (playlist!.isEditable ||
+                  playlist!.playlistId == "SongDownloads" ||
+                  playlist!.playlistId == "SongsCache"))
             SlidableAction(
               onPressed: (_) => removeSongFromPlaylist(song, playlist!),
               backgroundColor: cs.errorContainer,

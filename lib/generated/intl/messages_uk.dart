@@ -277,6 +277,18 @@ class MessageLookup extends MessageLookupByLibrary {
     "cancelTimerAlert": MessageLookupByLibrary.simpleMessage(
       "Таймер сну скасовано",
     ),
+    "channelPrerelease": MessageLookupByLibrary.simpleMessage(
+      "Попередній випуск (Prerelease)",
+    ),
+    "channelPrereleaseDes": MessageLookupByLibrary.simpleMessage(
+      "Тестові версії з найновішими функціями перед офіційним запуском",
+    ),
+    "channelRelease": MessageLookupByLibrary.simpleMessage(
+      "Стабільний (Випуск)",
+    ),
+    "channelReleaseDes": MessageLookupByLibrary.simpleMessage(
+      "Стабільні та рекомендовані версії для широкої публіки",
+    ),
     "clearImgCache": MessageLookupByLibrary.simpleMessage(
       "Очистити кеш зображень",
     ),
@@ -1292,10 +1304,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
       "EMusic Cloud не може замінити віддалену бібліотеку.",
     ),
-    "syncForceReplaceFailedLocalPreserved":
-        MessageLookupByLibrary.simpleMessage(
-          "Віддалена заміна не вдалося. Збережені ваші локальні дані та резервні копії.",
-        ),
+    "syncForceReplaceFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
+      "Віддалена заміна не вдалося. Збережені ваші локальні дані та резервні копії.",
+    ),
     "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
       "Завантаження не завершено",
     ),
@@ -1376,6 +1387,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "untitledSong": MessageLookupByLibrary.simpleMessage("Пісня без назви"),
     "upNext": MessageLookupByLibrary.simpleMessage("Наступне"),
     "updateApp": MessageLookupByLibrary.simpleMessage("Оновлення програми"),
+    "updateChannel": MessageLookupByLibrary.simpleMessage("Вибір оновлювача"),
+    "updateChannelDes": MessageLookupByLibrary.simpleMessage(
+      "Канал, з якого ви хочете отримувати оновлення програми",
+    ),
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "Виявлено URL-адресу, натисніть на неї, щоб відкрити/відтворити пов\'язаний вміст",
     ),

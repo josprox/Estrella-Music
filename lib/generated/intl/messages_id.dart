@@ -269,6 +269,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "cancelTimerAlert": MessageLookupByLibrary.simpleMessage(
       "Timer tidur dibatalkan",
     ),
+    "channelPrerelease": MessageLookupByLibrary.simpleMessage(
+      "Pra-peluncuran (Prerelease)",
+    ),
+    "channelPrereleaseDes": MessageLookupByLibrary.simpleMessage(
+      "Versi percobaan dengan fitur terbaru sebelum peluncuran resmi",
+    ),
+    "channelRelease": MessageLookupByLibrary.simpleMessage("Stabil (Rilis)"),
+    "channelReleaseDes": MessageLookupByLibrary.simpleMessage(
+      "Versi stabil dan direkomendasikan untuk publik umum",
+    ),
     "clearImgCache": MessageLookupByLibrary.simpleMessage(
       "Bersihkan cache gambar",
     ),
@@ -1385,6 +1395,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "untitledSong": MessageLookupByLibrary.simpleMessage("Lagu tanpa judul"),
     "upNext": MessageLookupByLibrary.simpleMessage("Selanjutnya"),
     "updateApp": MessageLookupByLibrary.simpleMessage("Perbarui Aplikasi"),
+    "updateChannel": MessageLookupByLibrary.simpleMessage(
+      "Pemilihan pembaruan",
+    ),
+    "updateChannelDes": MessageLookupByLibrary.simpleMessage(
+      "Saluran tempat Anda ingin menerima pembaruan aplikasi",
+    ),
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "Url terdeteksi, klik untuk membuka/memutar konten terkait",
     ),

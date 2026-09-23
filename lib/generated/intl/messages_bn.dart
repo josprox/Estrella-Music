@@ -267,6 +267,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "cancelTimerAlert": MessageLookupByLibrary.simpleMessage(
       "ঘুমানোর টাইমার বাতিল করা হয়েছে",
     ),
+    "channelPrerelease": MessageLookupByLibrary.simpleMessage(
+      "প্রি-লঞ্চ (Prerelease)",
+    ),
+    "channelPrereleaseDes": MessageLookupByLibrary.simpleMessage(
+      "আধিকৃত লঞ্চের আগে সর্বশেষ ফিচারসহ পরীক্ষামূলক সংস্করণগুলি",
+    ),
+    "channelRelease": MessageLookupByLibrary.simpleMessage("স্থিতিশীল (রিলিজ)"),
+    "channelReleaseDes": MessageLookupByLibrary.simpleMessage(
+      "সাধারণ জনগণের জন্য স্থিতিশীল এবং সুপারিশকৃত সংস্করণগুলি",
+    ),
     "clearImgCache": MessageLookupByLibrary.simpleMessage(
       "ছবির ক্যাশে সাফ করুন",
     ),
@@ -1274,10 +1284,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
       "Internet দ্বারা দূরবর্তী লাইব্রেরি পরিবর্তন করা সম্ভব হয়নি।",
     ),
-    "syncForceReplaceFailedLocalPreserved":
-        MessageLookupByLibrary.simpleMessage(
-          "দূরবর্তী প্রতিস্থাপন ব্যবস্থা ব্যর্থ । আপনার স্থানীয় তথ্য এবং পুনরুদ্ধার পুনরুদ্ধার সংরক্ষিত হয়েছে।",
-        ),
+    "syncForceReplaceFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
+      "দূরবর্তী প্রতিস্থাপন ব্যবস্থা ব্যর্থ । আপনার স্থানীয় তথ্য এবং পুনরুদ্ধার পুনরুদ্ধার সংরক্ষিত হয়েছে।",
+    ),
     "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
       "আপলোড সমাপ্ত হয়নি",
     ),
@@ -1359,6 +1368,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "upNext": MessageLookupByLibrary.simpleMessage("পরবর্তী"),
     "updateApp": MessageLookupByLibrary.simpleMessage(
       "অ্যাপ্লিকেশন আপডেট করুন",
+    ),
+    "updateChannel": MessageLookupByLibrary.simpleMessage("আপডেটার নির্বাচন"),
+    "updateChannelDes": MessageLookupByLibrary.simpleMessage(
+      "যে চ্যানেল থেকে আপনি অ্যাপ আপডেট পেতে চান",
     ),
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "ইউআরএল সনাক্ত করেছে যে সংশ্লিষ্ট কন্টেন্ট খুলতে/চালাতে এটিতে ক্লিক করুন",

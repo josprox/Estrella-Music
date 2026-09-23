@@ -264,6 +264,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "cancelTimerAlert": MessageLookupByLibrary.simpleMessage(
       "Časovač spánku byl zrušen",
     ),
+    "channelPrerelease": MessageLookupByLibrary.simpleMessage(
+      "Předběžné vydání (Prerelease)",
+    ),
+    "channelPrereleaseDes": MessageLookupByLibrary.simpleMessage(
+      "Testovací verze s nejnovějšími funkcemi před oficiálním vydáním",
+    ),
+    "channelRelease": MessageLookupByLibrary.simpleMessage("Stabilní (vydání)"),
+    "channelReleaseDes": MessageLookupByLibrary.simpleMessage(
+      "Stabilní a doporučené verze pro širokou veřejnost",
+    ),
     "clearImgCache": MessageLookupByLibrary.simpleMessage(
       "Vyčisti cache obrázků",
     ),
@@ -1283,10 +1293,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
       "EMusic Cloud nemohl nahradit vzdálenou knihovnu.",
     ),
-    "syncForceReplaceFailedLocalPreserved":
-        MessageLookupByLibrary.simpleMessage(
-          "Výměna na dálku selhala. Vaše lokální data a obnovovací zálohy byly zachovány.",
-        ),
+    "syncForceReplaceFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
+      "Výměna na dálku selhala. Vaše lokální data a obnovovací zálohy byly zachovány.",
+    ),
     "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
       "Odeslání není dokončeno",
     ),
@@ -1369,6 +1378,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "untitledSong": MessageLookupByLibrary.simpleMessage("Píseň bez názvu"),
     "upNext": MessageLookupByLibrary.simpleMessage("Další skladba"),
     "updateApp": MessageLookupByLibrary.simpleMessage("Aktualizovat aplikaci"),
+    "updateChannel": MessageLookupByLibrary.simpleMessage(
+      "Výběr aktualizátoru",
+    ),
+    "updateChannelDes": MessageLookupByLibrary.simpleMessage(
+      "Kanál, ze kterého chcete přijímat aktualizace aplikace",
+    ),
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "Zjištěná URL Kliknutím na ni otevřete/přehrajete související obsah",
     ),

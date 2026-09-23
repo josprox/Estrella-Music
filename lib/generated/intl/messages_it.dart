@@ -274,6 +274,18 @@ class MessageLookup extends MessageLookupByLibrary {
     "cancelTimerAlert": MessageLookupByLibrary.simpleMessage(
       "Timer di riposo annullato",
     ),
+    "channelPrerelease": MessageLookupByLibrary.simpleMessage(
+      "Pre-lancio (Prerelease)",
+    ),
+    "channelPrereleaseDes": MessageLookupByLibrary.simpleMessage(
+      "Versioni di prova con le funzionalità più recenti prima del lancio ufficiale",
+    ),
+    "channelRelease": MessageLookupByLibrary.simpleMessage(
+      "Stabile (Rilascio)",
+    ),
+    "channelReleaseDes": MessageLookupByLibrary.simpleMessage(
+      "Versioni stabili e consigliate per il pubblico generale",
+    ),
     "clearImgCache": MessageLookupByLibrary.simpleMessage(
       "Elimina cache immagini",
     ),
@@ -1297,10 +1309,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
       "EMusic Cloud non poteva sostituire la libreria remota.",
     ),
-    "syncForceReplaceFailedLocalPreserved":
-        MessageLookupByLibrary.simpleMessage(
-          "La sostituzione remota non è riuscita. I dati locali e il backup di recupero sono stati conservati.",
-        ),
+    "syncForceReplaceFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
+      "La sostituzione remota non è riuscita. I dati locali e il backup di recupero sono stati conservati.",
+    ),
     "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
       "Caricamento non completato",
     ),
@@ -1387,6 +1398,12 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "upNext": MessageLookupByLibrary.simpleMessage("Successive"),
     "updateApp": MessageLookupByLibrary.simpleMessage("Aggiorna applicazione"),
+    "updateChannel": MessageLookupByLibrary.simpleMessage(
+      "Selezione dell\'aggiornatore",
+    ),
+    "updateChannelDes": MessageLookupByLibrary.simpleMessage(
+      "Canale da cui desideri ricevere gli aggiornamenti dell\'app",
+    ),
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "Url rilevato Cliccando su di esso si apre/riproduce il contenuto associato",
     ),

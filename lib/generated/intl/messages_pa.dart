@@ -261,6 +261,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "cancelTimerAlert": MessageLookupByLibrary.simpleMessage(
       "ਸਲੀਪ ਟਾਈਮਰ ਰੱਦ ਕੀਤਾ ਗਿਆ",
     ),
+    "channelPrerelease": MessageLookupByLibrary.simpleMessage(
+      "ਪ੍ਰੀ-ਲਾਂਚ (Prerelease)",
+    ),
+    "channelPrereleaseDes": MessageLookupByLibrary.simpleMessage(
+      "ਅਧਿਕਾਰਿਕ ਲਾਂਚ ਤੋਂ ਪਹਿਲਾਂ ਸਭ ਤੋਂ ਨਵੀਆਂ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਨਾਲ ਟੈਸਟ ਵਰਜਨ",
+    ),
+    "channelRelease": MessageLookupByLibrary.simpleMessage("ਸਥਿਰ (ਰਿਲੀਜ਼)"),
+    "channelReleaseDes": MessageLookupByLibrary.simpleMessage(
+      "ਆਮ ਜਨਤਾ ਲਈ ਸਥਿਰ ਅਤੇ ਸਿਫਾਰਸ਼ੀ ਵਰਜਨ",
+    ),
     "clearImgCache": MessageLookupByLibrary.simpleMessage(
       "ਚਿੱਤਰ ਕੈਸ਼ ਸਾਫ਼ ਕਰੋ",
     ),
@@ -1260,10 +1270,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
       "EMusic ਕਲਾਉਡ ਰਿਮੋਟ ਲਾਇਬਰੇਰੀ ਨੂੰ ਤਬਦੀਲ ਨਹੀਂ ਕਰ ਸਕਿਆ ।",
     ),
-    "syncForceReplaceFailedLocalPreserved":
-        MessageLookupByLibrary.simpleMessage(
-          "ਰਿਮੋਟ ਰਿਪਲੇਸਮੈਂਟ ਫੇਲ੍ਹ ਹੈ । ਤੁਹਾਡਾ ਸਥਾਨਕ ਡੇਟਾ ਅਤੇ ਰਿਕਵਰੀ ਬੈਕਅਪ ਸੁਰੱਖਿਅਤ ਕੀਤਾ ਗਿਆ ਸੀ.",
-        ),
+    "syncForceReplaceFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
+      "ਰਿਮੋਟ ਰਿਪਲੇਸਮੈਂਟ ਫੇਲ੍ਹ ਹੈ । ਤੁਹਾਡਾ ਸਥਾਨਕ ਡੇਟਾ ਅਤੇ ਰਿਕਵਰੀ ਬੈਕਅਪ ਸੁਰੱਖਿਅਤ ਕੀਤਾ ਗਿਆ ਸੀ.",
+    ),
     "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
       "ਅੱਪਲੋਡ ਪੂਰਾ ਨਹੀਂ ਹੋਇਆ",
     ),
@@ -1351,6 +1360,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "upNext": MessageLookupByLibrary.simpleMessage("ਅਗਲਾ ਗੀਤ"),
     "updateApp": MessageLookupByLibrary.simpleMessage(
       "ਐਪਲੀਕੇਸ਼ਨ ਨੂੰ ਅੱਪਡੇਟ ਕਰੋ",
+    ),
+    "updateChannel": MessageLookupByLibrary.simpleMessage("ਅਪਡੇਟਰ ਚੋਣ"),
+    "updateChannelDes": MessageLookupByLibrary.simpleMessage(
+      "ਜੋ ਚੈਨਲ ਤੋਂ ਤੁਸੀਂ ਐਪ ਅਪਡੇਟਸ ਪ੍ਰਾਪਤ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ",
     ),
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "url ਖੋਜਿਆ ਗਿਆ ਸੰਬੰਧਿਤ ਸਮੱਗਰੀ ਨੂੰ ਖੋਲ੍ਹਣ/ਪਲੇ ਕਰਨ ਲਈ ਇਸ \'ਤੇ ਕਲਿੱਕ ਕਰੋ",

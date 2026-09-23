@@ -280,6 +280,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "cancelTimerAlert": MessageLookupByLibrary.simpleMessage(
       "Ο χρονοδιακόπτης ύπνου ακυρώθηκε",
     ),
+    "channelPrerelease": MessageLookupByLibrary.simpleMessage(
+      "Προ-κυκλοφορία (Prerelease)",
+    ),
+    "channelPrereleaseDes": MessageLookupByLibrary.simpleMessage(
+      "Δοκιμαστικές εκδόσεις με τις πιο πρόσφατες λειτουργίες πριν την επίσημη κυκλοφορία",
+    ),
+    "channelRelease": MessageLookupByLibrary.simpleMessage("Σταθερό (Έκδοση)"),
+    "channelReleaseDes": MessageLookupByLibrary.simpleMessage(
+      "Σταθερές και συνιστώμενες εκδόσεις για το ευρύ κοινό",
+    ),
     "clearImgCache": MessageLookupByLibrary.simpleMessage(
       "Εκκαθάριση προσωρινής μνήμης εικόνας",
     ),
@@ -1335,10 +1345,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "syncForceReplaceFailed": MessageLookupByLibrary.simpleMessage(
       "Το EMusic Cloud δεν μπόρεσε να αντικαταστήσει την απομακρυσμένη βιβλιοθήκη.",
     ),
-    "syncForceReplaceFailedLocalPreserved":
-        MessageLookupByLibrary.simpleMessage(
-          "Ο απομακρυσμένος αντικαταστάτης απέτυχε. Τα τοπικά δεδομένα και οι ενισχύσεις αποκατάστασης διατηρήθηκαν.",
-        ),
+    "syncForceReplaceFailedLocalPreserved": MessageLookupByLibrary.simpleMessage(
+      "Ο απομακρυσμένος αντικαταστάτης απέτυχε. Τα τοπικά δεδομένα και οι ενισχύσεις αποκατάστασης διατηρήθηκαν.",
+    ),
     "syncForceReplaceFailedTitle": MessageLookupByLibrary.simpleMessage(
       "Η αποστολή δεν ολοκληρώθηκε",
     ),
@@ -1427,6 +1436,10 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "upNext": MessageLookupByLibrary.simpleMessage("Επόμενο"),
     "updateApp": MessageLookupByLibrary.simpleMessage("Ενημέρωση εφαρμογής"),
+    "updateChannel": MessageLookupByLibrary.simpleMessage("Επιλογή ενημερωτή"),
+    "updateChannelDes": MessageLookupByLibrary.simpleMessage(
+      "Κανάλι από το οποίο θέλετε να λαμβάνετε ενημερώσεις της εφαρμογής",
+    ),
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "Η διεύθυνση URL που εντοπίστηκε κάντε κλικ σε αυτήν για να ανοίξετε/να παίξετε το σχετικό περιεχόμενο",
     ),

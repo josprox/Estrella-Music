@@ -272,6 +272,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "cancelTimerAlert": MessageLookupByLibrary.simpleMessage(
       "Uniajastin peruutettu",
     ),
+    "channelPrerelease": MessageLookupByLibrary.simpleMessage(
+      "Ennakkojulkaisu (Prerelease)",
+    ),
+    "channelPrereleaseDes": MessageLookupByLibrary.simpleMessage(
+      "Testiversiot uusimmilla ominaisuuksilla ennen virallista julkaisua",
+    ),
+    "channelRelease": MessageLookupByLibrary.simpleMessage("Vakaa (Julkaisu)"),
+    "channelReleaseDes": MessageLookupByLibrary.simpleMessage(
+      "Vakaat ja suositellut versiot yleisölle",
+    ),
     "clearImgCache": MessageLookupByLibrary.simpleMessage(
       "Tyhjennä kuvavälimuisti",
     ),
@@ -1380,6 +1390,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "untitledSong": MessageLookupByLibrary.simpleMessage("Nimetön kappale"),
     "upNext": MessageLookupByLibrary.simpleMessage("Seuraavaksi"),
     "updateApp": MessageLookupByLibrary.simpleMessage("Päivitä sovellus"),
+    "updateChannel": MessageLookupByLibrary.simpleMessage(
+      "Päivitysohjelman valinta",
+    ),
+    "updateChannelDes": MessageLookupByLibrary.simpleMessage(
+      "Kanava, josta haluat vastaanottaa sovelluksen päivitykset",
+    ),
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "Havaittu URL-osoite napsauttamalla sitä avataksesi tai toistaaksesi siihen liittyvän sisällön",
     ),

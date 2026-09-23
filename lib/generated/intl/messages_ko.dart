@@ -222,6 +222,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "cancel": MessageLookupByLibrary.simpleMessage("취소"),
     "cancelTimer": MessageLookupByLibrary.simpleMessage("타이머 취소"),
     "cancelTimerAlert": MessageLookupByLibrary.simpleMessage("취침 타이머 취소됨"),
+    "channelPrerelease": MessageLookupByLibrary.simpleMessage(
+      "사전 출시 (Prerelease)",
+    ),
+    "channelPrereleaseDes": MessageLookupByLibrary.simpleMessage(
+      "공식 출시 전 최신 기능이 포함된 테스트 버전",
+    ),
+    "channelRelease": MessageLookupByLibrary.simpleMessage("안정 (릴리스)"),
+    "channelReleaseDes": MessageLookupByLibrary.simpleMessage(
+      "일반 대중을 위한 안정적이고 권장되는 버전",
+    ),
     "clearImgCache": MessageLookupByLibrary.simpleMessage("이미지 캐시 비우기"),
     "clearImgCacheAlert": MessageLookupByLibrary.simpleMessage(
       "이미지 캐시를 성공적으로 비웠습니다",
@@ -1105,6 +1115,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "untitledSong": MessageLookupByLibrary.simpleMessage("제목 없는 노래"),
     "upNext": MessageLookupByLibrary.simpleMessage("재생 예정"),
     "updateApp": MessageLookupByLibrary.simpleMessage("애플리케이션 업데이트"),
+    "updateChannel": MessageLookupByLibrary.simpleMessage("업데이트 선택"),
+    "updateChannelDes": MessageLookupByLibrary.simpleMessage(
+      "앱 업데이트를 받고 싶은 채널",
+    ),
     "urlSearchDes": MessageLookupByLibrary.simpleMessage(
       "감지된 URL을 클릭하면 관련 콘텐츠가 열리거나 재생됩니다.",
     ),
