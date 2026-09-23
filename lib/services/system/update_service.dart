@@ -17,7 +17,12 @@ class UpdateService {
           (SqliteStore.box("AppPrefs").get('updateChannel') as String?) ??
           'release';
 
-      final dio = Dio();
+      final dio = Dio(
+        BaseOptions(
+          connectTimeout: const Duration(seconds: 4),
+          receiveTimeout: const Duration(seconds: 4),
+        ),
+      );
       final response = await dio.get(
         checkUpdates,
         queryParameters: {'channel': activeChannel},

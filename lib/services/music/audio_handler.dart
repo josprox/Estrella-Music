@@ -64,7 +64,7 @@ class MyAudioHandler extends BaseAudioHandler with GetxServiceMixin {
   bool isSongLoading = true;
   final Map<String, int> _playbackRecoveryAttempts = {};
 
-  bool get _supportsPitchControl => !GetPlatform.isDesktop;
+  bool get _supportsPitchControl => GetPlatform.isAndroid;
 
   // list of shuffled queue songs ids
   List<String> shuffledQueue = [];

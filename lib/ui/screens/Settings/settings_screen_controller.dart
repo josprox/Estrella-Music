@@ -81,7 +81,7 @@ class SettingsScreenController extends GetxController {
   get isCurrentPathsupportDownDir =>
       "$_supportDir/Music" == downloadLocationPath.toString();
   String get supportDirPath => _supportDir;
-  bool get supportsPlaybackPitch => !GetPlatform.isDesktop;
+  bool get supportsPlaybackPitch => GetPlatform.isAndroid;
 
   _checkNewVersion() {
     newVersionCheck(currentVersion.value)

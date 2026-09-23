@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:dio/dio.dart';
+import 'package:get/get.dart';
 
 import '../models/music_identity.dart';
 import '../models/playback_source.dart';
@@ -600,6 +601,12 @@ class StreamingProvider
               continue;
             }
 
+            final isWebm = mime.contains('webm') || mime.contains('opus');
+            // iOS (AVPlayer) does not support WebM/Opus streaming natively.
+            if (GetPlatform.isIOS && isWebm && requestedCodec != 'opus') {
+              continue;
+            }
+
             final bitrate = _int(fmt['bitrate']) ?? 0;
             if (fallback == null ||
                 bitrate > (_int(fallback['bitrate']) ?? 0)) {
@@ -657,6 +664,7 @@ class StreamingProvider
 
     final recipeSource = await _resolveViaRecipe(
       track.identity.sourceId,
+      requestedFormat: GetPlatform.isIOS ? 'm4a' : null,
       context: playbackContext,
     );
     if (recipeSource != null) {
