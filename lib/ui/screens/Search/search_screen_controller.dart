@@ -92,7 +92,7 @@ class SearchScreenController extends GetxController with ProcessLink {
     }, time: const Duration(milliseconds: 300));
   }
 
-  _init() async {
+  Future<void> _init() async {
     if (GetPlatform.isDesktop) {
       focusNode.addListener(() {
         isSearchBarInFocus.value = focusNode.hasFocus;

@@ -8,18 +8,26 @@ class MusicShareManager {
       {String? title, String? artist}) async {
     final url = '$_emusicShareDomain/share/song/$songId';
     if (title != null && artist != null) {
-      await Share.share('Escucha $title de $artist en $url');
+      await SharePlus.instance.share(
+        ShareParams(text: 'Escucha $title de $artist en $url'),
+      );
     } else {
-      await Share.share(url);
+      await SharePlus.instance.share(
+        ShareParams(uri: Uri.parse(url)),
+      );
     }
   }
 
   static Future<void> shareAlbum(String albumId, {String? albumTitle}) async {
     final url = '$_emusicShareDomain/share/album/$albumId';
     if (albumTitle != null) {
-      await Share.share('Escucha el álbum $albumTitle en $url');
+      await SharePlus.instance.share(
+        ShareParams(text: 'Escucha el álbum $albumTitle en $url'),
+      );
     } else {
-      await Share.share(url);
+      await SharePlus.instance.share(
+        ShareParams(uri: Uri.parse(url)),
+      );
     }
   }
 
@@ -27,18 +35,26 @@ class MusicShareManager {
       {String? playlistTitle}) async {
     final url = '$_emusicShareDomain/share/playlist/$playlistId';
     if (playlistTitle != null) {
-      await Share.share('Escucha la lista $playlistTitle en $url');
+      await SharePlus.instance.share(
+        ShareParams(text: 'Escucha la lista $playlistTitle en $url'),
+      );
     } else {
-      await Share.share(url);
+      await SharePlus.instance.share(
+        ShareParams(uri: Uri.parse(url)),
+      );
     }
   }
 
   static Future<void> shareArtist(String artistId, {String? artistName}) async {
     final url = '$_emusicShareDomain/share/artist/$artistId';
     if (artistName != null) {
-      await Share.share('Escucha a $artistName en $url');
+      await SharePlus.instance.share(
+        ShareParams(text: 'Escucha a $artistName en $url'),
+      );
     } else {
-      await Share.share(url);
+      await SharePlus.instance.share(
+        ShareParams(uri: Uri.parse(url)),
+      );
     }
   }
 }

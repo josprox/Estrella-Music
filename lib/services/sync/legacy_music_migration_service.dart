@@ -109,7 +109,7 @@ class LegacyMusicMigrationService extends GetxService {
         artistCount: artists.length,
       );
     } finally {
-      database.dispose();
+      database.close();
       if (resolved.cleanupDirectory != null &&
           await resolved.cleanupDirectory!.exists()) {
         await resolved.cleanupDirectory!.delete(recursive: true);

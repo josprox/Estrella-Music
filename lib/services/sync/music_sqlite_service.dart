@@ -206,7 +206,7 @@ class MusicSqliteService extends GetxService {
   }
 
   Future<void> closeDatabase() async {
-    _database?.dispose();
+    _database?.close();
     _database = null;
   }
 
@@ -620,7 +620,7 @@ class MusicSqliteService extends GetxService {
 
   @override
   void onClose() {
-    _database?.dispose();
+    _database?.close();
     _database = null;
     super.onClose();
   }

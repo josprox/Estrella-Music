@@ -117,7 +117,7 @@ void main() {
          VALUES ('user-1', 'bootstrap_complete', 'true')''',
     );
     legacyDatabase.execute('PRAGMA user_version = 1');
-    legacyDatabase.dispose();
+    legacyDatabase.close();
 
     final service = MusicSqliteService();
     addTearDown(service.closeDatabase);

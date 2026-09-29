@@ -1342,7 +1342,7 @@ List<dynamic> _parseShelfContents(List<dynamic> contentList,
       .toList();
 }
 
-dynamic parseContentList(results, Function parseFunc) {
+dynamic parseContentList(dynamic results, Function parseFunc) {
   var contents = [];
   for (dynamic result in results) {
     contents.add(parseFunc(result['musicTwoRowItemRenderer']));

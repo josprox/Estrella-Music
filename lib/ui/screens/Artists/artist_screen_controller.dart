@@ -473,7 +473,7 @@ class ArtistScreenController extends GetxController
     isSeparatedArtistContentFetced.value = true;
   }
 
-  Future<void> getContinuationContents(browseEndpoint, tabName) async {
+  Future<void> getContinuationContents(dynamic browseEndpoint, String tabName) async {
     final x = await musicServices.getArtistRealtedContent(
         browseEndpoint, tabName,
         additionalParams: sepataredContent[tabName]['additionalParams']);

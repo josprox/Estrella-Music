@@ -929,8 +929,7 @@ class PlayerController extends GetxController
     }
   }
 
-  // ignore: prefer_typing_uninitialized_variables
-  var recentItem;
+  MediaItem? recentItem;
 
   /// This function is used to add a mediaItem/Song to Recently played playlist
   Future<void> _addToRP(MediaItem mediaItem) async {

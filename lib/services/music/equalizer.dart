@@ -1,3 +1,5 @@
+// ignore_for_file: invalid_use_of_internal_member
+
 import 'dart:ffi' as ffi;
 import 'package:estrella_music/native_bindings/andrid_utils.dart';
 import 'package:jni/_internal.dart';

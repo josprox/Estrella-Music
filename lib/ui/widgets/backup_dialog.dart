@@ -177,12 +177,14 @@ class BackupDialogController extends GetxController {
         // suele arrojar Errno = 1 (Operation not permitted). Creamos el archivo temporalmente y permitimos guardarlo/compartirlo.
         final tempFile =
             await Get.find<AppBackupService>().createTemporaryBackupArchive();
-        await Share.shareXFiles(
-          [
-            XFile(tempFile.path,
-                name: fileName, mimeType: 'application/octet-stream')
-          ],
-          subject: 'Estrella Music Backup',
+        await SharePlus.instance.share(
+          ShareParams(
+            files: [
+              XFile(tempFile.path,
+                  name: fileName, mimeType: 'application/octet-stream')
+            ],
+            subject: 'Estrella Music Backup',
+          ),
         );
         isbackupCompleted.value = true;
       } else {
@@ -257,7 +259,7 @@ void _compressFiles(Map<String, dynamic> params) {
 
   final encoder = ZipEncoder();
   final zipFile = File(zipFilePath);
-  zipFile.writeAsBytesSync(encoder.encode(archive)!);
+  zipFile.writeAsBytesSync(encoder.encode(archive));
 }
 
 // Example usage

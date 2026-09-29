@@ -8,7 +8,7 @@ class PlaylingFrom {
 
   PlaylingFrom({required this.type, this.name = ""});
 
-  get typeString {
+  String get typeString {
     switch (type) {
       case PlaylingFromType.ALBUM:
         return S.current.playingfromAlbum;
@@ -21,7 +21,7 @@ class PlaylingFrom {
     }
   }
 
-  get nameString {
+  String get nameString {
     if (type == PlaylingFromType.SELECTION) return S.current.randomSelection;
     return name;
   }

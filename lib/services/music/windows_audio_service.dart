@@ -14,7 +14,7 @@ class WindowsAudioService extends GetxService {
     super.onInit();
   }
 
-  _initService() {
+  void _initService() {
     smtc = SMTCWindows(
       enabled: false,
     );

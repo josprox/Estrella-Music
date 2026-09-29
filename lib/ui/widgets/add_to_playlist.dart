@@ -243,7 +243,7 @@ class AddToPlaylistController extends GetxController {
     localPlaylists = playlists.toList();
   }
 
-  void changePlaylistType(val) {
+  void changePlaylistType(String val) {
     playlistType.value = val;
     playlists.value = localPlaylists;
   }

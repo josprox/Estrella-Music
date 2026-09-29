@@ -1,5 +1,5 @@
 // Manual clean bindings for com.josprox.emusic.Equalizer and SDKInt for jni 1.0+
-// ignore_for_file: camel_case_types
+// ignore_for_file: camel_case_types, invalid_use_of_internal_member, non_constant_identifier_names, library_prefixes, use_super_parameters, no_leading_underscores_for_local_identifiers
 
 import 'dart:core' as core$_;
 import 'package:jni/_internal.dart' as jni$_;

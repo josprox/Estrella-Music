@@ -67,13 +67,13 @@ class HMStreamingData {
     this.highQualityAudio,
   });
 
-  setQualityIndex(int index) {
+  void setQualityIndex(int index) {
     qualityIndex = index;
   }
 
   Audio? get audio => qualityIndex == 0 ? lowQualityAudio : highQualityAudio;
 
-  factory HMStreamingData.fromJson(json) {
+  factory HMStreamingData.fromJson(Map<String, dynamic> json) {
     if (!json['playable']) {
       return HMStreamingData(
         playable: false,

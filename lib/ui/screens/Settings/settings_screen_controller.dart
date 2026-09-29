@@ -77,13 +77,13 @@ class SettingsScreenController extends GetxController {
     }
   }
 
-  get currentVision => currentVersion.value;
-  get isCurrentPathsupportDownDir =>
+  String get currentVision => currentVersion.value;
+  bool get isCurrentPathsupportDownDir =>
       "$_supportDir/Music" == downloadLocationPath.toString();
   String get supportDirPath => _supportDir;
   bool get supportsPlaybackPitch => GetPlatform.isAndroid;
 
-  _checkNewVersion() {
+  void _checkNewVersion() {
     newVersionCheck(currentVersion.value)
         .then((value) => isNewVersionAvailable.value = value);
   }

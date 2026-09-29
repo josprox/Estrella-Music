@@ -230,7 +230,7 @@ class SqliteStore {
     }
     _boxes.clear();
     await hive.Hive.close();
-    _database?.dispose();
+    _database?.close();
     _database = null;
   }
 
