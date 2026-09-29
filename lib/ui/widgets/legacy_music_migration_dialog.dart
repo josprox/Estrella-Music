@@ -117,7 +117,7 @@ class LegacyMusicMigrationDialogController extends GetxController {
     isImporting.value = true;
     errorMessage.value = '';
     try {
-      final result = await FilePicker.platform.pickFiles(
+      final result = await FilePicker.pickFiles(
         allowMultiple: false,
         type: FileType.custom,
         allowedExtensions: const ['db', 'backup'],

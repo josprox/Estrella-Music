@@ -43,7 +43,7 @@ class AppLinksController extends GetxController with ProcessLink {
       },
     );
 
-    final appLink = await _appLinks.getInitialAppLink();
+    final appLink = await _appLinks.getInitialLink();
     if (appLink != null) {
       _queueLink(appLink);
     }

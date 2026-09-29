@@ -43,7 +43,7 @@ class UpdateController extends GetxController {
       android: androidInit,
       iOS: darwinInit,
     );
-    await _notifications.initialize(initSettings);
+    await _notifications.initialize(settings: initSettings);
   }
 
   // ──────────────────────────────────────────────
@@ -284,10 +284,11 @@ class UpdateController extends GetxController {
     );
     const notifDetails = NotificationDetails(android: androidDetails);
     await _notifications.show(
-      1001,
-      '¡Actualización lista!',
-      'Toca "Instalar" en la app para completar la actualización de Estrella Music.',
-      notifDetails,
+      id: 1001,
+      title: '¡Actualización lista!',
+      body:
+          'Toca "Instalar" en la app para completar la actualización de Estrella Music.',
+      notificationDetails: notifDetails,
     );
   }
 

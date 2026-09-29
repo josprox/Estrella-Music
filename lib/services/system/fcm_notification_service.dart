@@ -46,7 +46,7 @@ Future<void> estrellaFcmBackgroundHandler(RemoteMessage remoteMessage) async {
 Future<FlutterLocalNotificationsPlugin> _initializeLocalNotifications() async {
   final notifications = FlutterLocalNotificationsPlugin();
   await notifications.initialize(
-    const InitializationSettings(
+    settings: const InitializationSettings(
       android: AndroidInitializationSettings('@mipmap/launcher_icon'),
       iOS: DarwinInitializationSettings(),
     ),
@@ -72,10 +72,10 @@ Future<void> _showLocalNotification(
   final id = int.tryParse(data['id']?.toString() ?? '') ??
       DateTime.now().millisecondsSinceEpoch.remainder(2147483647);
   await notifications.show(
-    id,
-    data['title']?.toString() ?? 'Nueva notificacion',
-    data['message']?.toString() ?? '',
-    const NotificationDetails(
+    id: id,
+    title: data['title']?.toString() ?? 'Nueva notificacion',
+    body: data['message']?.toString() ?? '',
+    notificationDetails: const NotificationDetails(
       android: AndroidNotificationDetails(
         _channelId,
         _channelName,

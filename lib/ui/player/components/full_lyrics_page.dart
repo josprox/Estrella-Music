@@ -3,7 +3,6 @@ import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter_lyric/lyrics_reader.dart';
 import 'package:estrella_music/ui/player/player_controller.dart';
 import '/ui/utils/theme_controller.dart';
 import 'package:estrella_music/ui/widgets/search_lyrics_dialog.dart';
@@ -696,11 +695,11 @@ class FullLyricsPage extends StatelessWidget {
                 ),
               ),
               Obx(() {
-                final isLeft = ctrl.lyricsAlignment.value == LyricAlign.LEFT;
+                final isLeft = ctrl.lyricsAlignment.value == LyricAlign.left;
                 return IconButton(
                   onPressed: () {
                     ctrl.lyricsAlignment.value =
-                        isLeft ? LyricAlign.CENTER : LyricAlign.LEFT;
+                        isLeft ? LyricAlign.center : LyricAlign.left;
                   },
                   tooltip: isLeft ? "Centrar" : "Alinear izquierda",
                   icon: Icon(

@@ -382,7 +382,7 @@ class _WelcomeProfileSetupScreenState extends State<WelcomeProfileSetupScreen> {
                           OutlinedButton.icon(
                             onPressed: () async {
                               final folder =
-                                  await FilePicker.platform.getDirectoryPath();
+                                  await FilePicker.getDirectoryPath();
                               if (folder != null) {
                                 setState(() => _customFolder = folder);
                               }

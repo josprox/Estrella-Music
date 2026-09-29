@@ -287,7 +287,7 @@ class HomeProfileCard extends StatelessWidget {
                     OutlinedButton.icon(
                       onPressed: () async {
                         final selected =
-                            await FilePicker.platform.getDirectoryPath();
+                            await FilePicker.getDirectoryPath();
                         if (selected != null) {
                           setState(() => folder = selected);
                         }

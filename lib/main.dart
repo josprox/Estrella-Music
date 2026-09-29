@@ -222,7 +222,37 @@ class MyApp extends StatelessWidget {
                 if (dynamicScheme != null) {
                   controller.changeThemeModeType(
                       SqliteStore.box("AppPrefs").get("themeModeType"),
-                      dynamicColors: dynamicScheme);
+                      dynamicColors: ColorScheme(
+                        brightness: dynamicScheme.brightness,
+                        primary: dynamicScheme.primary,
+                        onPrimary: dynamicScheme.onPrimary,
+                        primaryContainer: dynamicScheme.primaryContainer,
+                        onPrimaryContainer: dynamicScheme.onPrimaryContainer,
+                        secondary: dynamicScheme.secondary,
+                        onSecondary: dynamicScheme.onSecondary,
+                        secondaryContainer: dynamicScheme.secondaryContainer,
+                        onSecondaryContainer: dynamicScheme.onSecondaryContainer,
+                        tertiary: dynamicScheme.tertiary,
+                        onTertiary: dynamicScheme.onTertiary,
+                        tertiaryContainer: dynamicScheme.tertiaryContainer,
+                        onTertiaryContainer: dynamicScheme.onTertiaryContainer,
+                        error: dynamicScheme.error,
+                        onError: dynamicScheme.onError,
+                        errorContainer: dynamicScheme.errorContainer,
+                        onErrorContainer: dynamicScheme.onErrorContainer,
+                        surface: dynamicScheme.surface,
+                        onSurface: dynamicScheme.onSurface,
+                        surfaceContainerHighest: dynamicScheme.surfaceContainerHighest,
+                        onSurfaceVariant: dynamicScheme.onSurfaceVariant,
+                        outline: dynamicScheme.outline,
+                        outlineVariant: dynamicScheme.outlineVariant,
+                        shadow: dynamicScheme.shadow,
+                        scrim: dynamicScheme.scrim,
+                        inverseSurface: dynamicScheme.inverseSurface,
+                        onInverseSurface: dynamicScheme.onInverseSurface,
+                        inversePrimary: dynamicScheme.inversePrimary,
+                        surfaceTint: dynamicScheme.surfaceTint,
+                      ));
                 }
               });
 

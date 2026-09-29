@@ -490,7 +490,7 @@ class LibraryPlaylistsController extends GetxController
       }
 
       // Use file_picker to select JSON file
-      final result = await FilePicker.platform.pickFiles(
+      final result = await FilePicker.pickFiles(
         type: FileType.custom,
         allowedExtensions: ['json'],
         dialogTitle: S.current.importPlaylist,

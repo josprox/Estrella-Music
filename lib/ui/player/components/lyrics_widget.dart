@@ -1,15 +1,38 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_lyric/lyrics_reader.dart';
+import 'package:flutter_lyric/flutter_lyric.dart';
 import 'package:get/get.dart';
 
 import 'package:estrella_music/ui/widgets/loader.dart';
 import 'package:estrella_music/ui/player/player_controller.dart';
 import 'package:estrella_music/generated/l10n.dart';
 
-class LyricsWidget extends StatelessWidget {
+class LyricsWidget extends StatefulWidget {
   final EdgeInsetsGeometry padding;
   final bool isFull;
   const LyricsWidget({super.key, required this.padding, this.isFull = false});
+
+  @override
+  State<LyricsWidget> createState() => _LyricsWidgetState();
+}
+
+class _LyricsWidgetState extends State<LyricsWidget> {
+  final LyricController _lyricController = LyricController();
+  String? _lastSynced;
+  String? _lastTranslation;
+
+  @override
+  void dispose() {
+    _lyricController.dispose();
+    super.dispose();
+  }
+
+  void _syncLyrics(String synced, String? translation) {
+    if (_lastSynced != synced || _lastTranslation != translation) {
+      _lastSynced = synced;
+      _lastTranslation = translation;
+      _lyricController.loadLyric(synced, translationLyric: translation);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -43,20 +66,44 @@ class LyricsWidget extends StatelessWidget {
       Widget content;
 
       if (showSynced) {
-        var model = LyricsModelBuilder.create().bindLyricToMain(synced);
-        if (showTranslation && tSynced.isNotEmpty) {
-          model = model.bindLyricToExt(tSynced);
-        }
+        _syncLyrics(synced, (showTranslation && tSynced.isNotEmpty) ? tSynced : null);
+        _lyricController.setProgress(playerController.progressBarStatus.value.current);
+
+        final align = currentAlign == LyricAlign.left ? TextAlign.left : TextAlign.center;
+        final crossAlign = currentAlign == LyricAlign.left ? CrossAxisAlignment.start : CrossAxisAlignment.center;
+
+        final lyricStyle = LyricStyles.default1.copyWith(
+          textStyle: TextStyle(
+            color: colorScheme.onSurface.withValues(alpha: 0.42),
+            fontSize: 18 * currentScale,
+            fontWeight: FontWeight.w600,
+          ),
+          activeStyle: TextStyle(
+            color: colorScheme.onSurface,
+            fontSize: 24 * currentScale,
+            fontWeight: FontWeight.w900,
+          ),
+          translationStyle: TextStyle(
+            color: colorScheme.onSurface.withValues(alpha: 0.5),
+            fontSize: 14 * currentScale,
+            fontWeight: FontWeight.w500,
+          ),
+          translationActiveColor: colorScheme.onSurface.withValues(alpha: 0.8),
+          textAlign: align,
+          contentAlignment: crossAlign,
+          lineGap: 24 * currentScale,
+          selectedColor: colorScheme.onSurface,
+          selectedTranslationColor: colorScheme.onSurface.withValues(alpha: 0.8),
+        );
 
         content = IgnorePointer(
-          ignoring: !isFull,
-          child: LyricsReader(
+          ignoring: !widget.isFull,
+          child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
-            lyricUi: playerController.lyricUi,
-            position:
-                playerController.progressBarStatus.value.current.inMilliseconds,
-            model: model.getModel(),
-            emptyBuilder: () => _buildNoLyrics(context, playerController),
+            child: LyricView(
+              controller: _lyricController,
+              style: lyricStyle,
+            ),
           ),
         );
       } else if (hasPlain || (mode == 1 && !hasSynced)) {
@@ -120,7 +167,7 @@ class LyricsWidget extends StatelessWidget {
 
           childWidget = SelectableText.rich(
             TextSpan(children: spans),
-            textAlign: currentAlign == LyricAlign.LEFT
+            textAlign: currentAlign == LyricAlign.left
                 ? TextAlign.left
                 : TextAlign.center,
           );
@@ -129,7 +176,7 @@ class LyricsWidget extends StatelessWidget {
               hasPlain ? plain : S.current.lyricsNotAvailable;
           childWidget = SelectableText(
             displayedText,
-            textAlign: currentAlign == LyricAlign.LEFT
+            textAlign: currentAlign == LyricAlign.left
                 ? TextAlign.left
                 : TextAlign.center,
             style: playerController.isDesktopLyricsDialogOpen
@@ -151,7 +198,7 @@ class LyricsWidget extends StatelessWidget {
         content = Center(
           child: SingleChildScrollView(
             physics: const BouncingScrollPhysics(),
-            padding: padding,
+            padding: widget.padding,
             child: TextSelectionTheme(
               data: Theme.of(context).textSelectionTheme,
               child: childWidget,

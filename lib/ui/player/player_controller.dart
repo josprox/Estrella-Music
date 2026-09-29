@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'dart:io';
-import 'package:flutter_lyric/lyrics_reader.dart';
 import 'package:dio/dio.dart';
 import 'package:estrella_music/services/system/translation_service.dart';
 import 'package:estrella_music/services/storage/sqlite_store.dart';
@@ -36,83 +35,7 @@ import 'package:estrella_music/ui/widgets/up_next_queue.dart';
 
 enum PlayButtonState { paused, playing, loading }
 
-class CustomLyricUI extends UINetease {
-  Color get foregroundColor {
-    final context = Get.context;
-    return context == null
-        ? Colors.white
-        : Theme.of(context).colorScheme.onSurface;
-  }
-
-  double get lyricsTextScale {
-    try {
-      return Get.find<PlayerController>().lyricsTextScale.value;
-    } catch (_) {
-      return 1.0;
-    }
-  }
-
-  LyricAlign get lyricAlignConfig {
-    try {
-      return Get.find<PlayerController>().lyricsAlignment.value;
-    } catch (_) {
-      return LyricAlign.LEFT;
-    }
-  }
-
-  CustomLyricUI({
-    super.defaultSize,
-    super.defaultExtSize,
-    super.otherMainSize,
-    super.bias,
-    super.lineGap,
-    super.inlineGap,
-    super.lyricAlign,
-    super.lyricBaseLine,
-    super.highlight,
-    super.highlightDirection,
-  });
-
-  @override
-  TextStyle getPlayingMainTextStyle() => TextStyle(
-        color: foregroundColor,
-        fontSize: defaultSize * lyricsTextScale,
-        fontWeight: FontWeight.w900,
-      );
-
-  @override
-  TextStyle getOtherMainTextStyle() => TextStyle(
-        color: foregroundColor.withValues(alpha: 0.42),
-        fontSize: otherMainSize * lyricsTextScale,
-        fontWeight: FontWeight.w600,
-      );
-
-  @override
-  TextStyle getPlayingExtTextStyle() => TextStyle(
-        color: foregroundColor.withValues(alpha: 0.75),
-        fontSize: (defaultExtSize == 0 ? 14 : defaultExtSize) * lyricsTextScale,
-        fontWeight: FontWeight.w700,
-      );
-
-  @override
-  TextStyle getOtherExtTextStyle() => TextStyle(
-        color: foregroundColor.withValues(alpha: 0.35),
-        fontSize: (defaultExtSize == 0 ? 14 : defaultExtSize) * lyricsTextScale,
-        fontWeight: FontWeight.w500,
-      );
-
-  @override
-  double getLineSpace() => lineGap * lyricsTextScale;
-
-  @override
-  double getPlayingLineBias() => bias;
-
-  @override
-  Color getLyricHightlightColor() => foregroundColor;
-
-  @override
-  LyricAlign get lyricAlign => lyricAlignConfig;
-}
+enum LyricAlign { left, center }
 
 class PlayerController extends GetxController
     with GetSingleTickerProviderStateMixin {
@@ -168,7 +91,7 @@ class PlayerController extends GetxController
   final isLyricsLoading = false.obs;
   final lyricsMode = 0.obs;
   final lyricsTextScale = (1.0).obs;
-  final lyricsAlignment = (LyricAlign.LEFT).obs;
+  final lyricsAlignment = (LyricAlign.left).obs;
   final isTranslationEnabled = false.obs;
   final isTranslationLoading = false.obs;
   final translatedLyrics =
@@ -176,15 +99,6 @@ class PlayerController extends GetxController
   bool isDesktopLyricsDialogOpen = false;
   // 0 for play, 1 for pause, 2 for blank
   final gesturePlayerVisibleState = 2.obs;
-  final lyricUi = CustomLyricUI(
-    highlight: true,
-    defaultSize: 24, // Active line size
-    otherMainSize: 18, // Inactive lines size
-    defaultExtSize: 14,
-    lineGap: 28, // More space between lines
-    inlineGap: 10,
-    bias: 0.45, // Keep active line centered
-  );
   RxMap<String, dynamic> lyrics =
       <String, dynamic>{"synced": "", "plainLyrics": ""}.obs;
   ScrollController scrollController = ScrollController();
