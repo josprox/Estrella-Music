@@ -7,6 +7,7 @@ import 'package:estrella_music/services/storage/sqlite_store.dart';
 
 import '/models/media_item_builder.dart';
 import 'package:estrella_music/ui/player/player_controller.dart';
+import 'package:estrella_music/services/system/update_service.dart';
 import 'package:estrella_music/utils/helpers/update_check_flag_file.dart';
 import 'package:estrella_music/utils/helpers/helper.dart';
 import '/models/album.dart';
@@ -844,10 +845,14 @@ class HomeScreenController extends GetxController {
   }
 
   void _checkNewVersion() {
+    final settingsCtrl = Get.find<SettingsScreenController>();
+    if (settingsCtrl.isGooglePlayBuild.value || UpdateService.isAppBundleBuild) {
+      return;
+    }
     showVersionDialog.value =
         SqliteStore.box("AppPrefs").get("newVersionVisibility") ?? true;
     if (showVersionDialog.isTrue) {
-      newVersionCheck(Get.find<SettingsScreenController>().currentVersion.value)
+      newVersionCheck(settingsCtrl.currentVersion.value)
           .then((value) {
         if (value) {
           showDialog(

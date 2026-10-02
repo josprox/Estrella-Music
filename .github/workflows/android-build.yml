@@ -101,7 +101,7 @@ jobs:
       - name: Build App Bundle (AAB)
         run: |
           flutter clean
-          flutter build appbundle --release
+          flutter build appbundle --release --dart-define=APP_BUNDLE=true
           cp build/app/outputs/bundle/release/app-release.aab build-artifacts/
 
       - name: Upload Split APKs

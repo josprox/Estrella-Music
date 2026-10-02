@@ -194,7 +194,7 @@ jobs:
           cp build/app/outputs/flutter-apk/*-release.apk distribution/android/
           flutter build apk --release
           cp build/app/outputs/flutter-apk/app-release.apk distribution/android/EstrellaMusic-android-universal.apk
-          flutter build appbundle --release
+          flutter build appbundle --release --dart-define=APP_BUNDLE=true
           cp build/app/outputs/bundle/release/app-release.aab distribution/android/EstrellaMusic-android.aab
       - uses: actions/upload-artifact@v4
         with:

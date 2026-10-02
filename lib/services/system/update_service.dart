@@ -5,8 +5,31 @@ import 'package:package_info_plus/package_info_plus.dart';
 import 'package:estrella_music/services/storage/sqlite_store.dart';
 
 class UpdateService {
+  static const bool isAppBundleBuild =
+      bool.fromEnvironment('APP_BUNDLE', defaultValue: false) ||
+      bool.fromEnvironment('IS_APPBUNDLE', defaultValue: false);
+
+  static Future<bool> isAppBundleOrStoreBuild() async {
+    if (isAppBundleBuild) return true;
+    try {
+      final pInfo = await PackageInfo.fromPlatform();
+      final store = pInfo.installerStore?.toLowerCase() ?? '';
+      if (store.contains('vending') || store.contains('google')) {
+        return true;
+      }
+    } catch (_) {}
+    return false;
+  }
+
   static Future<bool> checkForUpdate({String? channel}) async {
     try {
+      // In appbundle/Google Play builds, updates are managed by the store,
+      // so we avoid showing the custom update screen or checking for updates.
+      if (await isAppBundleOrStoreBuild()) {
+        if (kDebugMode) print("Appbundle / Google Play build detected. Skipping update check.");
+        return false;
+      }
+
       final String? checkUpdates = dotenv.env["UPDATE_CHECK_URL"];
       if (checkUpdates == null) {
         if (kDebugMode) print("Update check URL not found in .env");

@@ -10,7 +10,7 @@ import 'package:estrella_music/services/storage/sqlite_store.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:permission_handler/permission_handler.dart';
-
+import 'package:estrella_music/services/system/update_service.dart';
 import 'package:estrella_music/utils/helpers/update_check_flag_file.dart';
 import 'package:estrella_music/utils/helpers/helper.dart';
 import 'package:estrella_music/music_provider/music_catalog_service.dart';
@@ -64,6 +64,9 @@ class SettingsScreenController extends GetxController {
   }
 
   Future<void> _fetchVersion() async {
+    if (UpdateService.isAppBundleBuild) {
+      isGooglePlayBuild.value = true;
+    }
     try {
       final pInfo = await PackageInfo.fromPlatform();
       currentVersion.value = "V${pInfo.version}";
@@ -84,6 +87,7 @@ class SettingsScreenController extends GetxController {
   bool get supportsPlaybackPitch => GetPlatform.isAndroid;
 
   void _checkNewVersion() {
+    if (isGooglePlayBuild.value || UpdateService.isAppBundleBuild) return;
     newVersionCheck(currentVersion.value)
         .then((value) => isNewVersionAvailable.value = value);
   }
