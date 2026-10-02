@@ -1,7 +1,9 @@
+import 'package:device_info_plus/device_info_plus.dart';
 import 'package:get/get.dart';
 import 'package:permission_handler/permission_handler.dart';
 
-import '/native_bindings/andrid_utils.dart' show SDKInt;
+export 'package:permission_handler/permission_handler.dart'
+    show PermissionStatus, openAppSettings;
 
 enum RequiredAppPermission { storage, notifications }
 
@@ -25,12 +27,19 @@ class RequiredPermissionStatus {
 }
 
 class PermissionService {
-  static int get _androidSdk => SDKInt.Companion.getSDKInt();
+  static final _deviceInfo = DeviceInfoPlugin();
 
-  static Permission get _storagePermission {
+  /// Devuelve el SDK de Android, o 0 en otras plataformas.
+  static Future<int> _androidSdk() async {
+    if (!GetPlatform.isAndroid) return 0;
+    final info = await _deviceInfo.androidInfo;
+    return info.version.sdkInt;
+  }
+
+  static Future<Permission> get _storagePermission async {
     if (!GetPlatform.isAndroid) return Permission.mediaLibrary;
-    if (_androidSdk >= 33) return Permission.audio;
-    return Permission.storage;
+    final sdk = await _androidSdk();
+    return sdk >= 33 ? Permission.audio : Permission.storage;
   }
 
   static Future<RequiredPermissionStatus> requiredPermissionStatus() async {
@@ -41,8 +50,9 @@ class PermissionService {
       );
     }
 
+    final perm = await _storagePermission;
     return RequiredPermissionStatus(
-      storage: await _storagePermission.status,
+      storage: await perm.status,
       notifications: await Permission.notification.status,
     );
   }
@@ -51,18 +61,21 @@ class PermissionService {
     RequiredAppPermission permission,
   ) async {
     return switch (permission) {
-      RequiredAppPermission.storage => _storagePermission.request(),
-      RequiredAppPermission.notifications => Permission.notification.request(),
+      RequiredAppPermission.storage =>
+        (await _storagePermission).request(),
+      RequiredAppPermission.notifications =>
+        Permission.notification.request(),
     };
   }
 
   static Future<bool> getExtStoragePermission() async {
     if (GetPlatform.isDesktop || GetPlatform.isIOS) return true;
 
-    final status = await _storagePermission.status;
+    final perm = await _storagePermission;
+    final status = await perm.status;
     if (status.isGranted) return true;
 
-    final requested = await _storagePermission.request();
+    final requested = await perm.request();
     if (requested.isPermanentlyDenied) {
       await openAppSettings();
     }

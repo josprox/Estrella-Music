@@ -21,6 +21,16 @@ class _LyricsWidgetState extends State<LyricsWidget> {
   String? _lastTranslation;
 
   @override
+  void initState() {
+    super.initState();
+    if (widget.isFull) {
+      _lyricController.setOnTapLineCallback((position) {
+        Get.find<PlayerController>().seek(position);
+      });
+    }
+  }
+
+  @override
   void dispose() {
     _lyricController.dispose();
     super.dispose();
@@ -66,44 +76,70 @@ class _LyricsWidgetState extends State<LyricsWidget> {
       Widget content;
 
       if (showSynced) {
-        _syncLyrics(synced, (showTranslation && tSynced.isNotEmpty) ? tSynced : null);
-        _lyricController.setProgress(playerController.progressBarStatus.value.current);
+        _syncLyrics(
+            synced, (showTranslation && tSynced.isNotEmpty) ? tSynced : null);
+        _lyricController
+            .setProgress(playerController.progressBarStatus.value.current);
 
-        final align = currentAlign == LyricAlign.left ? TextAlign.left : TextAlign.center;
-        final crossAlign = currentAlign == LyricAlign.left ? CrossAxisAlignment.start : CrossAxisAlignment.center;
+        final align = currentAlign == LyricAlign.left
+            ? TextAlign.left
+            : TextAlign.center;
+        final crossAlign = currentAlign == LyricAlign.left
+            ? CrossAxisAlignment.start
+            : CrossAxisAlignment.center;
 
         final lyricStyle = LyricStyles.default1.copyWith(
           textStyle: TextStyle(
-            color: colorScheme.onSurface.withValues(alpha: 0.42),
+            color: colorScheme.onSurface.withValues(alpha: 0.40),
             fontSize: 18 * currentScale,
             fontWeight: FontWeight.w600,
+            letterSpacing: 0.2,
           ),
           activeStyle: TextStyle(
             color: colorScheme.onSurface,
-            fontSize: 24 * currentScale,
+            fontSize: 25 * currentScale,
             fontWeight: FontWeight.w900,
+            letterSpacing: 0.2,
+            shadows: [
+              Shadow(
+                color: colorScheme.primary.withValues(alpha: 0.25),
+                blurRadius: 16,
+              ),
+            ],
           ),
           translationStyle: TextStyle(
             color: colorScheme.onSurface.withValues(alpha: 0.5),
             fontSize: 14 * currentScale,
             fontWeight: FontWeight.w500,
           ),
-          translationActiveColor: colorScheme.onSurface.withValues(alpha: 0.8),
+          translationActiveColor: colorScheme.onSurface.withValues(alpha: 0.85),
           textAlign: align,
           contentAlignment: crossAlign,
-          lineGap: 24 * currentScale,
+          lineGap: widget.isFull ? 28 * currentScale : 20 * currentScale,
+          contentPadding: widget.isFull
+              ? const EdgeInsets.only(top: 80, bottom: 80, left: 16, right: 16)
+              : const EdgeInsets.symmetric(vertical: 24, horizontal: 16),
+          anchorPosition: 0.48,
+          activeAnchorPosition: 0.48,
+          fadeRange: FadeRange(top: 0, bottom: 0),
           selectedColor: colorScheme.onSurface,
-          selectedTranslationColor: colorScheme.onSurface.withValues(alpha: 0.8),
+          selectedTranslationColor:
+              colorScheme.onSurface.withValues(alpha: 0.85),
+          activeHighlightColor: null,
+          enableSwitchAnimation: true,
+          switchEnterDuration: const Duration(milliseconds: 320),
+          switchExitDuration: const Duration(milliseconds: 320),
+          switchEnterCurve: Curves.easeOutCubic,
+          switchExitCurve: Curves.easeInCubic,
+          scrollDuration: const Duration(milliseconds: 400),
+          scrollCurve: Curves.easeOutCubic,
         );
 
-        content = IgnorePointer(
-          ignoring: !widget.isFull,
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: LyricView(
-              controller: _lyricController,
-              style: lyricStyle,
-            ),
+        content = Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: LyricView(
+            controller: _lyricController,
+            style: lyricStyle,
           ),
         );
       } else if (hasPlain || (mode == 1 && !hasSynced)) {

@@ -70,4 +70,17 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     <uses-permission android:name="android.permission.VIBRATE"/>
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+    <queries>
+        <intent>
+            <action android:name="android.media.action.DISPLAY_AUDIO_EFFECT_CONTROL_PANEL" />
+        </intent>
+        <intent>
+            <action android:name="android.settings.SOUND_SETTINGS" />
+        </intent>
+        <package android:name="com.android.settings" />
+        <package android:name="com.samsung.android.soundalive" />
+        <package android:name="com.miui.audioeffect" />
+        <package android:name="com.oneplus.sound.tuner" />
+    </queries>
 </manifest>

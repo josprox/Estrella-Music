@@ -112,9 +112,8 @@ class MyAudioHandler extends BaseAudioHandler with GetxServiceMixin {
     _player.setSpeed(initialSpeed);
     _setPitchIfSupported(initialPitch, isInitialValue: true);
     _listenForDurationChanges();
-    if (GetPlatform.isAndroid) {
-      _listenSessionIdStream();
-    }
+
+
     try {
       SqliteStore.box("SongsUrlCache").clear();
     } catch (_) {}
@@ -135,13 +134,7 @@ class MyAudioHandler extends BaseAudioHandler with GetxServiceMixin {
     }
   }
 
-  void _listenSessionIdStream() {
-    _player.androidAudioSessionIdStream.listen((int? id) {
-      if (id != null) {
-        EqualizerService.initAudioEffect(id);
-      }
-    });
-  }
+
 
   void _notifyAudioHandlerAboutPlaybackEvents() {
     _player.playbackEventStream.listen((PlaybackEvent event) {
@@ -744,7 +737,7 @@ class MyAudioHandler extends BaseAudioHandler with GetxServiceMixin {
         break;
 
       case 'openEqualizer':
-        EqualizerService.openEqualizer(_player.androidAudioSessionId!);
+        await EqualizerService.openEqualizer(_player.androidAudioSessionId ?? 0);
         break;
 
       case 'saveSession':

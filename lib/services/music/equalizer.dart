@@ -1,56 +1,98 @@
-// ignore_for_file: invalid_use_of_internal_member
+import 'package:android_intent_plus/android_intent.dart';
+import 'package:android_intent_plus/flag.dart';
+import 'package:get/get.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 
-import 'dart:ffi' as ffi;
-import 'package:estrella_music/native_bindings/andrid_utils.dart';
-import 'package:jni/_internal.dart';
-import 'package:jni/jni.dart';
+/// Constantes de AudioEffect del SDK de Android.
+/// Los valores son estables y no cambian entre versiones.
+const _actionDisplayAudioEffectControlPanel =
+    'android.media.action.DISPLAY_AUDIO_EFFECT_CONTROL_PANEL';
+const _extraAudioSession = 'android.media.extra.AUDIO_SESSION';
+const _extraPackageName = 'android.media.extra.PACKAGE_NAME';
+const _extraContentType = 'android.media.extra.CONTENT_TYPE';
+const _contentTypeMusic = 2; // AudioEffect.CONTENT_TYPE_MUSIC
 
-final class _AndroidBindings {
-  static final _getApplicationContextPtr = ProtectedJniExtensions.lookup<
-      ffi.NativeFunction<JObjectPtr Function()>>('GetApplicationContext');
-  static final _getApplicationContext =
-      _getApplicationContextPtr.asFunction<JObjectPtr Function()>();
-
-  static final _getCurrentActivityPtr = ProtectedJniExtensions.lookup<
-      ffi.NativeFunction<JObjectPtr Function()>>('GetCurrentActivity');
-  static final _getCurrentActivity =
-      _getCurrentActivityPtr.asFunction<JObjectPtr Function()>();
-
-  static JObject? get applicationContext {
-    final ptr = _getApplicationContext();
-    if (ptr == ffi.nullptr) return null;
-    return JObject.fromReference(JGlobalReference(ptr));
-  }
-
-  static JObject? get currentActivity {
-    final ptr = _getCurrentActivity();
-    if (ptr == ffi.nullptr) return null;
-    return JObject.fromReference(JGlobalReference(ptr));
-  }
-}
-
+/// Servicio para abrir el ecualizador del sistema Android.
+/// Usa [android_intent_plus] — sin JNI, sin Kotlin personalizado.
 class EqualizerService {
-  static bool openEqualizer(int sessionId) {
-    final activity = _AndroidBindings.currentActivity;
-    final context = _AndroidBindings.applicationContext;
-    if (activity == null || context == null) return false;
-    final success = Equalizer().openEqualizer(sessionId, context, activity);
-    activity.release();
-    context.release();
-    return success;
-  }
+  /// Abre el ecualizador del sistema para el [sessionId] dado.
+  /// Devuelve true si se encontró y lanzó algún ecualizador.
+  static Future<bool> openEqualizer(int sessionId) async {
+    if (!GetPlatform.isAndroid) return false;
 
-  static void initAudioEffect(int sessionId) {
-    final context = _AndroidBindings.applicationContext;
-    if (context == null) return;
-    Equalizer().initAudioEffect(sessionId, context);
-    context.release();
-  }
+    final info = await PackageInfo.fromPlatform();
+    final appPackage = info.packageName;
 
-  static void endAudioEffect(int sessionId) {
-    final context = _AndroidBindings.applicationContext;
-    if (context == null) return;
-    Equalizer().endAudioEffect(sessionId, context);
-    context.release();
+    // Intento principal: ecualizador estándar de Android
+    try {
+      final intent = AndroidIntent(
+        action: _actionDisplayAudioEffectControlPanel,
+        arguments: {
+          _extraPackageName: appPackage,
+          _extraAudioSession: sessionId,
+          _extraContentType: _contentTypeMusic,
+        },
+        flags: <int>[Flag.FLAG_ACTIVITY_NEW_TASK],
+      );
+      await intent.launch();
+      return true;
+    } catch (_) {
+      // No hay ecualizador estándar; intentamos fabricantes
+    }
+
+    // Fallback: actividades y ecualizadores de fabricantes conocidos
+    final fallbackIntents = [
+      // Xiaomi / MIUI / HyperOS Audio Effects
+      const AndroidIntent(
+        action: 'android.intent.action.MAIN',
+        package: 'com.miui.audioeffect',
+        componentName: 'com.miui.audioeffect.AudioEffectActivity',
+        flags: <int>[Flag.FLAG_ACTIVITY_NEW_TASK],
+      ),
+      const AndroidIntent(
+        action: 'android.intent.action.MAIN',
+        package: 'com.miui.audioeffect',
+        flags: <int>[Flag.FLAG_ACTIVITY_NEW_TASK],
+      ),
+      // Samsung SoundAlive
+      const AndroidIntent(
+        action: 'android.intent.action.MAIN',
+        package: 'com.samsung.android.soundalive',
+        flags: <int>[Flag.FLAG_ACTIVITY_NEW_TASK],
+      ),
+      // OnePlus Audio Tuner
+      const AndroidIntent(
+        action: 'android.intent.action.MAIN',
+        package: 'com.oneplus.sound.tuner',
+        flags: <int>[Flag.FLAG_ACTIVITY_NEW_TASK],
+      ),
+      // Android Settings -> Sound Settings Activity
+      const AndroidIntent(
+        action: 'android.intent.action.MAIN',
+        package: 'com.android.settings',
+        componentName: 'com.android.settings.Settings\$SoundSettingsActivity',
+        flags: <int>[Flag.FLAG_ACTIVITY_NEW_TASK],
+      ),
+    ];
+
+    for (final intent in fallbackIntents) {
+      try {
+        await intent.launch();
+        return true;
+      } catch (_) {
+        continue;
+      }
+    }
+
+    // Último recurso: ajustes de sonido del sistema
+    try {
+      await AndroidIntent(
+        action: 'android.settings.SOUND_SETTINGS',
+        flags: <int>[Flag.FLAG_ACTIVITY_NEW_TASK],
+      ).launch();
+      return true;
+    } catch (_) {
+      return false;
+    }
   }
 }
