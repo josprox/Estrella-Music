@@ -110,6 +110,7 @@ class PlayerController extends GetxController
   bool _wakelockActive = false;
 
   var _newSongFlag = true;
+  int _queueRequestId = 0;
   final isCurrentSongBuffered = false.obs;
   final isPlayerVisible = false.obs;
 
@@ -146,6 +147,15 @@ class PlayerController extends GetxController
     isShuffleModeEnabled.value = appPrefs.get("isShuffleModeEnabled") ?? false;
     isQueueLoopModeEnabled.value =
         appPrefs.get("queueLoopModeEnabled") ?? false;
+    _audioHandler.setRepeatMode(
+      isLoopModeEnabled.value
+          ? AudioServiceRepeatMode.one
+          : AudioServiceRepeatMode.none,
+    );
+    _audioHandler.customAction(
+      "toggleQueueLoopMode",
+      {"enable": isQueueLoopModeEnabled.value},
+    );
 
     if (GetPlatform.isDesktop) {
       setVolume(appPrefs.get("volume") ?? 100);
@@ -222,8 +232,7 @@ class PlayerController extends GetxController
       } else if (processingState != AudioProcessingState.completed) {
         buttonState.value = PlayButtonState.playing;
       } else {
-        _audioHandler.seek(Duration.zero);
-        _audioHandler.pause();
+        buttonState.value = PlayButtonState.paused;
       }
 
       final settings = Get.find<SettingsScreenController>();
@@ -386,8 +395,28 @@ class PlayerController extends GetxController
 
   /// Restores the queue stored in the currently active profile namespace.
   Future<void> restoreProfilePlaybackState() async {
+    ++_queueRequestId;
     await _audioHandler.stop();
     await _audioHandler.updateQueue(const []);
+    final appPrefs = SqliteStore.box("AppPrefs");
+    isLoopModeEnabled.value = appPrefs.get("isLoopModeEnabled") ?? false;
+    isShuffleModeEnabled.value = appPrefs.get("isShuffleModeEnabled") ?? false;
+    isQueueLoopModeEnabled.value =
+        appPrefs.get("queueLoopModeEnabled") ?? false;
+    await _audioHandler.setRepeatMode(
+      isLoopModeEnabled.value
+          ? AudioServiceRepeatMode.one
+          : AudioServiceRepeatMode.none,
+    );
+    await _audioHandler.setShuffleMode(
+      isShuffleModeEnabled.value
+          ? AudioServiceShuffleMode.all
+          : AudioServiceShuffleMode.none,
+    );
+    await _audioHandler.customAction(
+      "toggleQueueLoopMode",
+      {"enable": isQueueLoopModeEnabled.value},
+    );
     await _restorePrevSession();
   }
 
@@ -422,10 +451,43 @@ class PlayerController extends GetxController
     });
   }
 
+  List<MediaItem> _mergeSeedIntoWatchTracks(
+    List<MediaItem> tracks,
+    MediaItem? seedSong, {
+    required bool hasPlaylistId,
+  }) {
+    if (hasPlaylistId || tracks.isEmpty) {
+      return List<MediaItem>.from(tracks);
+    }
+    final activeSong = _audioHandler.mediaItem.value ?? seedSong;
+    if (activeSong == null) {
+      return List<MediaItem>.from(tracks);
+    }
+    final merged = List<MediaItem>.from(tracks);
+    final existingIndex = merged.indexWhere(
+      (item) =>
+          item.id == activeSong.id ||
+          (seedSong != null && item.id == seedSong.id),
+    );
+    if (existingIndex == 0) {
+      merged[0] = activeSong;
+    } else if (existingIndex > 0) {
+      merged.removeAt(existingIndex);
+      merged.insert(0, activeSong);
+    } else if (seedSong != null &&
+        (activeSong.id == seedSong.id ||
+            _audioHandler.mediaItem.value?.id == activeSong.id)) {
+      merged.insert(0, activeSong);
+    }
+    return merged;
+  }
+
   ///pushSongToPlaylist method clear previous song queue, plays the tapped song and push related
   ///songs into Queue
   Future<void> pushSongToQueue(MediaItem? mediaItem,
       {String? playlistid, bool radio = false}) async {
+    final int requestId = ++_queueRequestId;
+
     /// update playing from value
     playinfrom.value = PlaylingFrom(
         type: PlaylingFromType.SELECTION,
@@ -445,13 +507,21 @@ class PlayerController extends GetxController
             radio: radio,
             playlistId: playlistid,
           );
+          if (requestId != _queueRequestId) {
+            return;
+          }
           radioContinuationParam = content['additionalParamsForNext'];
           final tracks = (content['tracks'] as List?)
                   ?.whereType<MediaItem>()
                   .toList() ??
               const <MediaItem>[];
           if (tracks.isNotEmpty) {
-            await _audioHandler.updateQueue(tracks);
+            final mergedTracks = _mergeSeedIntoWatchTracks(
+              tracks,
+              queueSeedSong,
+              hasPlaylistId: playlistid != null,
+            );
+            await _audioHandler.updateQueue(mergedTracks);
             if (isShuffleModeEnabled.isTrue) {
               await _audioHandler.customAction("shuffleCmd", {"index": 0});
             }
@@ -465,8 +535,11 @@ class PlayerController extends GetxController
           }
         } on MusicProviderException catch (error) {
           printERROR("Error resolving queue for song: $error");
+          if (requestId != _queueRequestId) {
+            return;
+          }
           final recoveredSong = await _recoverQueueSeedSong(queueSeedSong);
-          if (recoveredSong == null) {
+          if (recoveredSong == null || requestId != _queueRequestId) {
             return;
           }
           queueSeedSong = recoveredSong;
@@ -475,13 +548,21 @@ class PlayerController extends GetxController
             radio: radio,
             playlistId: playlistid,
           );
+          if (requestId != _queueRequestId) {
+            return;
+          }
           radioContinuationParam = content['additionalParamsForNext'];
           final recTracks = (content['tracks'] as List?)
                   ?.whereType<MediaItem>()
                   .toList() ??
               const <MediaItem>[];
           if (recTracks.isNotEmpty) {
-            await _audioHandler.updateQueue(recTracks);
+            final mergedTracks = _mergeSeedIntoWatchTracks(
+              recTracks,
+              recoveredSong,
+              hasPlaylistId: playlistid != null,
+            );
+            await _audioHandler.updateQueue(mergedTracks);
             if (isShuffleModeEnabled.isTrue) {
               await _audioHandler.customAction("shuffleCmd", {"index": 0});
             }
@@ -495,6 +576,9 @@ class PlayerController extends GetxController
         }
       },
     ).then((value) async {
+      if (requestId != _queueRequestId) {
+        return;
+      }
       if (playlistid != null) {
         _playerPanelCheck();
         await _audioHandler.customAction("playByIndex", {"index": 0});
@@ -526,6 +610,7 @@ class PlayerController extends GetxController
 
   Future<void> playPlayListSong(List<MediaItem> mediaItems, int index,
       {PlaylingFrom? playfrom}) async {
+    ++_queueRequestId;
     isRadioModeOn = false;
     //open player pane,set current song and push first song into playing list,
 
@@ -830,12 +915,12 @@ class PlayerController extends GetxController
   }
 
   Future<void> toggleLoopMode() async {
-    isLoopModeEnabled.isFalse
-        ? _audioHandler.setRepeatMode(AudioServiceRepeatMode.one)
-        : _audioHandler.setRepeatMode(AudioServiceRepeatMode.none);
-    isLoopModeEnabled.value = !isLoopModeEnabled.value;
-    await SqliteStore.box("AppPrefs")
-        .put("isLoopModeEnabled", isLoopModeEnabled.value);
+    final enable = !isLoopModeEnabled.value;
+    isLoopModeEnabled.value = enable;
+    await _audioHandler.setRepeatMode(
+      enable ? AudioServiceRepeatMode.one : AudioServiceRepeatMode.none,
+    );
+    await SqliteStore.box("AppPrefs").put("isLoopModeEnabled", enable);
   }
 
   Future<void> toggleQueueLoopMode({bool showMessage = true}) async {

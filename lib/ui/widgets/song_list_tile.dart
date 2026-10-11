@@ -110,15 +110,17 @@ class SongListTile extends StatelessWidget with RemoveSongFromPlaylistMixin {
                     ? cs.primary.withValues(alpha: 0.10)
                     : Colors.transparent,
               ),
-              child: ListTile(
-                onTap: onTap,
-                onLongPress: () =>
-                    _openInfoSheet(context, playerController, playlist),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(AppSpacing.radiusMd),
-                ),
-                contentPadding: const EdgeInsets.only(
-                    top: 0, left: AppSpacing.md, right: AppSpacing.xl),
+              child: Material(
+                type: MaterialType.transparency,
+                child: ListTile(
+                  onTap: onTap,
+                  onLongPress: () =>
+                      _openInfoSheet(context, playerController, playlist),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(AppSpacing.radiusMd),
+                  ),
+                  contentPadding: const EdgeInsets.only(
+                      top: 0, left: AppSpacing.md, right: AppSpacing.xl),
                 leading: thumbReplacementWithIndex
                     ? SizedBox(
                         width: 28,
@@ -204,8 +206,9 @@ class SongListTile extends StatelessWidget with RemoveSongFromPlaylistMixin {
                   ),
                 ),
               ),
-            );
-          },
+            ),
+          );
+        },
         ),
       ),
     );
