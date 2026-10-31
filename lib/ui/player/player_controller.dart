@@ -10,6 +10,7 @@ import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
 import 'package:estrella_music/models/playling_from.dart';
+import 'package:estrella_music/models/playback_intent.dart';
 import 'package:estrella_music/services/auth/catalog_recovery_service.dart';
 import 'package:estrella_music/services/download/downloader.dart';
 import 'package:estrella_music/ui/screens/Playlist/playlist_screen_controller.dart';
@@ -223,7 +224,9 @@ class PlayerController extends GetxController
     _audioHandler.playbackState.listen((playerState) {
       final isPlaying = playerState.playing;
       final processingState = playerState.processingState;
-      if (processingState == AudioProcessingState.loading) {
+      if (isPlaying && processingState != AudioProcessingState.buffering) {
+        buttonState.value = PlayButtonState.playing;
+      } else if (processingState == AudioProcessingState.loading) {
         buttonState.value = PlayButtonState.loading;
       } else if (processingState == AudioProcessingState.buffering) {
         buttonState.value = PlayButtonState.loading;
@@ -322,7 +325,10 @@ class PlayerController extends GetxController
         await _addToRP(currentSong.value!);
         _updateDiscordRPC(
             mediaItem, buttonState.value == PlayButtonState.playing);
-        if (isRadioModeOn && (currentSong.value!.id == currentQueue.last.id)) {
+        if (isRadioModeOn &&
+            radioInitiatorItem != null &&
+            currentQueue.isNotEmpty &&
+            (currentSong.value!.id == currentQueue.last.id)) {
           await _addRadioContinuation(radioInitiatorItem!);
         }
         lyrics.value = {"synced": "", "plainLyrics": ""};
@@ -595,7 +601,7 @@ class PlayerController extends GetxController
       return;
     }
 
-    //currentSong.value = mediaItem;
+    if (requestId != _queueRequestId) return;
     _playerPanelCheck();
     await _audioHandler
         .customAction("setSourceNPlay", {'mediaItem': mediaItem});
@@ -610,8 +616,10 @@ class PlayerController extends GetxController
 
   Future<void> playPlayListSong(List<MediaItem> mediaItems, int index,
       {PlaylingFrom? playfrom}) async {
-    ++_queueRequestId;
+    final int requestId = ++_queueRequestId;
     isRadioModeOn = false;
+    radioContinuationParam = null;
+    radioInitiatorItem = null;
     //open player pane,set current song and push first song into playing list,
 
     /// update playing from value
@@ -627,11 +635,32 @@ class PlayerController extends GetxController
     });
 
     _playerPanelCheck();
-    await _audioHandler.updateQueue(mediaItems);
-    if (isShuffleModeEnabled.value) {
-      await _audioHandler.customAction("shuffleCmd", {"index": index});
+    await _audioHandler.customAction("setQueueAndPlay", {
+      "queue": mediaItems,
+      "index": index,
+    });
+    // atomic setQueueAndPlay handles queue, shuffle and playback
+  }
+
+  /// Dispatches a type-safe playback intention.
+  Future<void> playIntent(PlaybackIntent intent) async {
+    switch (intent) {
+      case PlayAlbumIntent(:final tracks, :final startIndex, :final playFrom):
+        await playPlayListSong(tracks, startIndex, playfrom: playFrom);
+        break;
+      case PlayPlaylistIntent(:final tracks, :final startIndex, :final playFrom):
+        await playPlayListSong(tracks, startIndex, playfrom: playFrom);
+        break;
+      case StartRadioIntent(:final seedTrack, :final playlistId):
+        await startRadio(seedTrack, playlistid: playlistId);
+        break;
+      case PlayTrackListIntent(:final tracks, :final startIndex, :final playFrom):
+        await playPlayListSong(tracks, startIndex, playfrom: playFrom);
+        break;
+      case PlayTrackStandaloneIntent(:final track):
+        await pushSongToQueue(track);
+        break;
     }
-    await _audioHandler.customAction("playByIndex", {"index": index});
   }
 
   Future<void> startRadio(MediaItem? mediaItem, {String? playlistid}) async {

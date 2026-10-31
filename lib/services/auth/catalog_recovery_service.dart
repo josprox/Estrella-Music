@@ -166,14 +166,16 @@ class CatalogRecoveryService extends GetxService {
       }
 
       // If we found a good enough candidate, return early.
-      if (bestOverallScore >= 0.55) {
+      if (bestOverallScore >= 0.65) {
         return bestOverall;
       }
     }
 
     // Fallback: If we couldn't find any candidate matching >= 0.55, but we
     // found at least one candidate (score > 0), return the best one.
-    if (bestOverall != null && bestOverallScore > 0.0) {
+    // Never fall back to mismatched candidates with low score (< 0.60)
+    // Return null so the original song metadata is not corrupted with a different track.
+    if (bestOverall != null && bestOverallScore >= 0.60) {
       printINFO(
         'No candidate met the 0.55 threshold. Falling back to best match: '
         '"${bestOverall.title}" by ${bestOverall.artist} (${bestOverall.id}) with score=$bestOverallScore',
