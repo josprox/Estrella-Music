@@ -616,7 +616,7 @@ class PlayerController extends GetxController
 
   Future<void> playPlayListSong(List<MediaItem> mediaItems, int index,
       {PlaylingFrom? playfrom}) async {
-    final int requestId = ++_queueRequestId;
+    ++_queueRequestId;
     isRadioModeOn = false;
     radioContinuationParam = null;
     radioInitiatorItem = null;

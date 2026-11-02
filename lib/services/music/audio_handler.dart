@@ -15,16 +15,12 @@ import 'package:rxdart/rxdart.dart';
 
 import '/models/album.dart';
 import 'package:estrella_music/services/auth/catalog_recovery_service.dart';
-import 'package:estrella_music/services/download/download_integrity_service.dart';
 import 'package:estrella_music/models/playlist.dart';
 import 'package:estrella_music/services/music/equalizer.dart';
 import 'package:estrella_music/services/music/playback_source_resolver.dart';
-import 'package:estrella_music/music_provider/music_catalog_service.dart';
-import 'package:estrella_music/music_provider/models/playback_source.dart';
 import '/models/hm_streaming_data.dart';
 import 'package:estrella_music/ui/player/player_controller.dart';
 import 'package:estrella_music/ui/screens/Home/home_screen_controller.dart';
-import 'package:estrella_music/services/system/permission_service.dart';
 import 'package:estrella_music/utils/helpers/queue_reorder.dart';
 import 'package:estrella_music/utils/helpers/helper.dart';
 import '/models/media_item_builder.dart';
@@ -1195,9 +1191,6 @@ class MyAudioHandler extends BaseAudioHandler with GetxServiceMixin {
       offlineReplacementUrl: offlineReplacementUrl,
     );
   }
-
-  Audio _audioFromPlaybackSource(PlaybackSource source) =>
-      PlaybackSourceResolver.audioFromPlaybackSource(source);
 
   Future<_ResolvedSongPlayback> _resolveSongPlayback(
     MediaItem song, {
